@@ -5,23 +5,23 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 require = fn;
 const re3 = /\.(png|jpe?g|jfif|webp|gif|heic|heif|dng|avif)$/i;
 const re4 = /\.(webp|gif|avif)$/i;
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 if (PlatformUtils.isIOS()) {
   let tmp2 = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i;
 } else {
-  tmp2 = fn(1363).isAndroid() ? /\.(mp3|m4a|wav|ogg|opus|flac)$/i : /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i;
-  let obj2 = fn(1363);
+  tmp2 = fn(1364).isAndroid() ? /\.(mp3|m4a|wav|ogg|opus|flac)$/i : /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i;
+  let obj2 = fn(1364);
 }
 const regex = tmp2;
 const re6 = /\.(webm)$/i;
 const re7 = /\.(riv)$/i;
-PlatformUtils = fn(1363);
+PlatformUtils = fn(1364);
 if (PlatformUtils.isIOS()) {
   let tmp4 = /\.(mp4|mov|qt)$/i;
 } else {
-  fn(1363).isAndroid();
+  fn(1364).isAndroid();
   tmp4 = /\.(mp4|webm|mov|qt)$/i;
-  const obj4 = fn(1363);
+  const obj4 = fn(1364);
 }
 const re8 = tmp4;
 function urlMatchesFileExtension(sourceURI, GIF_RE_IOS) {

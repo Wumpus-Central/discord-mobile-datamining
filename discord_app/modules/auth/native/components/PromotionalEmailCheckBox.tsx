@@ -6,11 +6,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6695);
+const PromoEmailConsentStore = fn(6699);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({
   checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
   checkboxLabel: { flex: 1 },
@@ -35,19 +35,19 @@ export default function PromotionalEmailCheckBox(style) {
       style: null,
       children: null,
     };
-    const intl = tmp4(1114).intl;
-    obj3.accessibilityLabel = intl.string(tmp4(1114).t.ylFCLt);
+    const intl = tmp4(1115).intl;
+    obj3.accessibilityLabel = intl.string(tmp4(1115).t.ylFCLt);
     obj3.accessibilityState = tmp8;
     obj3.onPress = function onPress() {
       return hasOwnProperty(!closure_0);
     };
     obj3.style = tmp.checkboxRow;
     const obj4 = { checked: tmp3 };
-    const items = [closure_6(tmp4(5698).FormCheckbox, obj4)];
+    const items = [closure_6(tmp4(5702).FormCheckbox, obj4)];
     const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
-    const intl2 = tmp4(1114).intl;
-    obj5.children = intl2.string(tmp4(1114).t.ylFCLt);
-    items[1] = closure_6(tmp4(4632).Text, obj5);
+    const intl2 = tmp4(1115).intl;
+    obj5.children = intl2.string(tmp4(1115).t.ylFCLt);
+    items[1] = closure_6(tmp4(4635).Text, obj5);
     obj3.children = items;
     obj2.children = closure_7(closure_3, obj3);
     tmp9 = closure_6(closure_2, obj2);

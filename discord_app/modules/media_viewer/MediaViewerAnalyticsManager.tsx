@@ -26,8 +26,8 @@ let obj2 = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "call",
-  source: "D",
-  incrementableActions: "tasks",
+  source: "DateToSystemTimezoneSetter",
+  incrementableActions: "HIPER",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

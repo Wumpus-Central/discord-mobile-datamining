@@ -3,8 +3,8 @@ import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BuildOverrideConstants from "BuildOverrideConstants.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import UrlAll from "../../../_runtime/01367_Url.js";
-import _modDef1370 from "../../../_runtime/metro/01370__.js";
+import UrlAll from "../../../_runtime/01368_Url.js";
+import _modDef1371 from "../../../_runtime/metro/01371__.js";
 import ClientInfoUtils_mod from "../../utils/native/ClientInfoUtils.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -137,7 +137,7 @@ export const probablyHasBuildOverride = function probablyHasBuildOverride() {
 export const getBuildOverrideExperiments = function getBuildOverrideExperiments() {
   try {
     const _window = window;
-    const tmp5 = _modDef1370.parse(window.document.cookie)[closure_4];
+    const tmp5 = _modDef1371.parse(window.document.cookie)[closure_4];
     if (null == tmp5) {
       let obj2 = {};
     } else {

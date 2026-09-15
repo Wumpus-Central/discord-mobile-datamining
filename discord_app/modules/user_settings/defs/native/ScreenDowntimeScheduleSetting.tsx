@@ -1,9 +1,7 @@
 // discord_app/modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
-import FamilyCenterV3Experiment from "../../../parent_tools/FamilyCenterV3Experiment.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
-import useUserLinks from "../../../parent_tools/hooks/useUserLinks.tsx";
 import useUserIsTeenAgeGroupDefault from "../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -24,18 +22,11 @@ const toggle = SettingBuilders.createToggle({
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = FamilyCenterV3Experiment.useIsFamilyCenterV3Enabled({
-      location: "ScreenDowntimeScheduleSetting",
-    });
-    const tmp2 = useUserIsTeenAgeGroupDefault();
-    const hasActiveParentLinks = useUserLinks.useHasActiveParentLinks();
-    if (isFamilyCenterV3Enabled) {
-      isFamilyCenterV3Enabled = tmp2;
+    let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+    if (hasActiveParentLinks) {
+      hasActiveParentLinks = obj.useHasActiveParentLinks();
     }
-    if (isFamilyCenterV3Enabled) {
-      isFamilyCenterV3Enabled = hasActiveParentLinks;
-    }
-    return isFamilyCenterV3Enabled;
+    return hasActiveParentLinks;
   },
 });
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx");

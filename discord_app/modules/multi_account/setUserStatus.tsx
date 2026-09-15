@@ -19,7 +19,7 @@ let closure_7 = async function _setUserStatus() {
   await PreloadedUserSettingsActionCreators.updateAsync(
     "status",
     async (statusCreatedAtMs) => {
-      const StringValue = value(1216).StringValue;
+      const StringValue = value(1217).StringValue;
       statusCreatedAtMs.status = StringValue.create({ value });
       statusCreatedAtMs.statusExpiresAtMs = statusExpiresAtMs;
       if (closure_1_1 === value) {
@@ -28,7 +28,7 @@ let closure_7 = async function _setUserStatus() {
         }
         statusCreatedAtMs.statusCreatedAtMs = statusCreatedAtMs;
       }
-      const UInt64Value = value(1216).UInt64Value;
+      const UInt64Value = value(1217).UInt64Value;
       statusCreatedAtMs = UInt64Value.create({ value: "" + Date.now() });
       const obj = { value };
       const obj2 = { value: "" + Date.now() };
@@ -36,26 +36,26 @@ let closure_7 = async function _setUserStatus() {
     closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
   closure_129_6 = (function getStatusUpdateAnnouncement(DND, arg1) {
-    const humanizeStatusResult = value(4481).humanizeStatus(DND);
+    const humanizeStatusResult = value(4484).humanizeStatus(DND);
     if ("0" === arg1) {
-      const intl3 = value(1114).intl;
+      const intl3 = value(1115).intl;
       const obj2 = { statusLabel: humanizeStatusResult };
-      return intl3.formatToPlainString(value(1114).t.dO2aLi, obj2);
+      return intl3.formatToPlainString(value(1115).t.dO2aLi, obj2);
     } else {
-      const statusExpiryParts = value(10221).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(10223).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
-        const intl2 = value(1114).intl;
+        const intl2 = value(1115).intl;
         const obj3 = { statusLabel: humanizeStatusResult, timeString };
-        let formatToPlainStringResult = intl2.formatToPlainString(value(1114).t["r50t/S"], obj3);
+        let formatToPlainStringResult = intl2.formatToPlainString(value(1115).t["r50t/S"], obj3);
       } else {
-        const intl = value(1114).intl;
+        const intl = value(1115).intl;
         const obj4 = { statusLabel: humanizeStatusResult, dateString: tmp6, timeString };
-        formatToPlainStringResult = intl.formatToPlainString(value(1114).t["J+GJHv"], obj4);
+        formatToPlainStringResult = intl.formatToPlainString(value(1115).t["J+GJHv"], obj4);
       }
       return formatToPlainStringResult;
     }
-    const obj = value(4481);
+    const obj = value(4484);
   })(closure_129_0, closure_129_5);
   const AccessibilityAnnouncer = closure_130_0(closure_130_2[9]).AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(closure_129_6);

@@ -1,7 +1,7 @@
 // discord_app/modules/game_detection/GameDetectionTypes.tsx
 import Record from "../../lib/Record.tsx";
 
-const createExecutable = fn(1918).createExecutable;
+const createExecutable = fn(1919).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
 class DetectableGameRecord extends tmp2 {

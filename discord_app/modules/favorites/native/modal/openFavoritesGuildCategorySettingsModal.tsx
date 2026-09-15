@@ -1,10 +1,10 @@
 // discord_app/modules/favorites/native/modal/openFavoritesGuildCategorySettingsModal.tsx
-import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/favorites/native/modal/openFavoritesGuildCategorySettingsModal.tsx");
 
 export default function openFavoritesGuildCategorySettingsModal(categoryId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16209, dependencyMap.paths), { categoryId });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16222, dependencyMap.paths), { categoryId });
 }

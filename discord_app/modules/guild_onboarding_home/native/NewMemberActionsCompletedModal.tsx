@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   screen: {
     flex: 1,
@@ -49,22 +49,22 @@ export default function NewMemberActionsCompleted(arg0) {
   let sharedValue;
   ({ initialPercent, numActions } = arg0);
   const tmp = closure_7();
-  sharedValue = sharedValue(4373).useSharedValue(initialPercent);
+  sharedValue = sharedValue(4376).useSharedValue(initialPercent);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(4373);
+  let obj = sharedValue(4376);
   const fn = function b() {
     const obj = { width: null };
     const obj2 = ReanimatedRexport;
     obj.width = obj2.withDelay(500, timing.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
     return obj;
   };
-  let obj2 = sharedValue(4373);
+  let obj2 = sharedValue(4376);
   fn.__closure = {
-    withDelay: sharedValue(4373).withDelay,
-    withTiming: sharedValue(4637).withTiming,
+    withDelay: sharedValue(4376).withDelay,
+    withTiming: sharedValue(4640).withTiming,
     barWidth: sharedValue,
   };
   fn.__workletHash = 7643178959760;
@@ -72,15 +72,15 @@ export default function NewMemberActionsCompleted(arg0) {
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => closure_1_1(4839).popWithKey(sharedValue(12415).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => closure_1_1(4842).popWithKey(sharedValue(12420).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);
   const obj4 = { style: tmp.screen, children: null };
   const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
-  const intl = sharedValue(1114).intl;
-  obj5.children = intl.format(sharedValue(1114).t.pGj5u2, { count: numActions });
-  const items1 = [closure_5(sharedValue(4632).Text, obj5)];
+  const intl = sharedValue(1115).intl;
+  obj5.children = intl.format(sharedValue(1115).t.pGj5u2, { count: numActions });
+  const items1 = [closure_5(sharedValue(4635).Text, obj5)];
   const obj6 = { style: tmp.progressBackground, children: null };
   const obj7 = { style: null };
   const items2 = [tmp.progressForeground, animatedStyle];

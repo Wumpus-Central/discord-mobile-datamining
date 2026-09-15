@@ -639,4 +639,5 @@ export default {
   CROISSANT_REWARD_MODAL: "xgpp reward modal",
   XBOX_PERKS_CONNECTION_FOOTER: "xbox perks connection footer",
   XBOX_PERKS_MODAL: "xbox perks modal",
+  YOUTUBE_NITRO_TAB_POPOVER: "youtube nitro tab popover",
 };

@@ -16,8 +16,8 @@ export default function ChatGDMCustomizeActionSheet(channelId) {
   ({ onGoBack: c1, ref: c2 } = useNavigatorConfirmChangesOnBackDefault());
   const obj = { screenKey: "kick", title: null, render: null };
   const tmp = useNavigatorConfirmChangesOnBackDefault();
-  const intl = channelId(1114).intl;
-  obj.title = intl.string(channelId(1114).t["1r5E+m"]);
+  const intl = channelId(1115).intl;
+  obj.title = intl.string(channelId(1115).t["1r5E+m"]);
   obj.render = function render() {
     return jsx(ChatGDMCustomizeDefault, { ref, onFinish, channelId });
   };

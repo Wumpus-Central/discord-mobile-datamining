@@ -34,13 +34,13 @@ function GuildTemplatesJoinFooter(trigger) {
   trigger = trigger.trigger;
   const onHeightChange = trigger.onHeightChange;
   const tmp = closure_16();
-  dependencyMap = trigger(1483).useNavigation();
+  dependencyMap = trigger(1484).useNavigation();
   if (trigger === constants3.NUF) {
-    const intl2 = tmp2(1114).intl;
-    let stringResult = intl2.string(tmp2(1114).t.INo2NK);
+    const intl2 = tmp2(1115).intl;
+    let stringResult = intl2.string(tmp2(1115).t.INo2NK);
   } else {
-    const intl = tmp2(1114).intl;
-    stringResult = intl.string(tmp2(1114).t.riOUtB);
+    const intl = tmp2(1115).intl;
+    stringResult = intl.string(tmp2(1115).t.riOUtB);
   }
   const items = [onHeightChange];
   let obj2 = {
@@ -50,7 +50,7 @@ function GuildTemplatesJoinFooter(trigger) {
     }, items),
     children: null,
   };
-  const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1611)().bottom }];
+  const items1 = [tmp.footerSafeAreaContainer, { paddingBottom: onHeightChange(1612)().bottom }];
   obj2.style = items1;
   let obj3 = { style: tmp.footerContainer, children: null };
   let obj4 = {
@@ -59,11 +59,11 @@ function GuildTemplatesJoinFooter(trigger) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl3 = tmp2(1114).intl;
-  obj4.children = intl3.string(trigger(1114).t["N+Mi/U"]);
+  const intl3 = tmp2(1115).intl;
+  obj4.children = intl3.string(trigger(1115).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(4632).Text, obj4),
-    closure_14(trigger(5056).Button, {
+    closure_14(trigger(4635).Text, obj4),
+    closure_14(trigger(5059).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -99,9 +99,9 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12837);
+let CreateGuildConstants = fn(12842);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(7081);
+CreateGuildConstants = fn(7085);
 ({
   CreateGuildModalStates: closure_9,
   GuildTemplateTriggers: c10,
@@ -111,10 +111,10 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   flex: { flex: 1 },
-  contentContainer: { marginTop: fn(5763).NAV_BAR_HEIGHT },
+  contentContainer: { marginTop: fn(5767).NAV_BAR_HEIGHT },
   scrollContainer: null,
   sections: null,
   headerContainer: null,
@@ -124,7 +124,7 @@ let obj2 = {
   footerContainer: null,
   footerTitle: null,
 };
-let obj3 = { marginTop: fn(5763).NAV_BAR_HEIGHT };
+let obj3 = { marginTop: fn(5767).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };

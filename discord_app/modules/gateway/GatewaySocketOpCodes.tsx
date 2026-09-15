@@ -192,4 +192,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
 
 export default GatewaySocketOpCodes;
-export const Opcode = fn(1906).Opcode;
+export const Opcode = fn(1907).Opcode;

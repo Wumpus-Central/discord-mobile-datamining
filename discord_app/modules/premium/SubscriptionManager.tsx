@@ -7,7 +7,7 @@ import EntitlementStore from "../../stores/game_store/EntitlementStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PREMIUM_SUBSCRIPTION_APPLICATION: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
 const prototype = function SubscriptionManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -55,7 +55,7 @@ const prototype = function SubscriptionManager() {
               if (!isSubscriptionFetching) {
                 c2 = 1;
                 currentUser = 1;
-                const obj6 = { value: tmp2(4960).fetchSubscriptions(), done: false };
+                const obj6 = { value: tmp2(4963).fetchSubscriptions(), done: false };
                 return obj6;
               }
             }
@@ -92,7 +92,7 @@ const prototype = function SubscriptionManager() {
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
-          const obj8 = { value: tmp2(7503).fetchUserEntitlementsForApplication(closure_1_7), done: false };
+          const obj8 = { value: tmp2(7507).fetchUserEntitlementsForApplication(closure_1_7), done: false };
           return obj8;
         }
       } catch (tmp22) {
@@ -211,7 +211,7 @@ const prototype = function SubscriptionManager() {
             applyArgumentsResult = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            const obj6 = { value: applyArgumentsResult(4960).fetchIpCountryCode(), done: false };
+            const obj6 = { value: applyArgumentsResult(4963).fetchIpCountryCode(), done: false };
             return obj6;
           }
         } else {
@@ -226,7 +226,7 @@ const prototype = function SubscriptionManager() {
             } else if (null != ipCountryCode.ipCountryCode) {
               dependencyMap = 2;
               c2 = 1;
-              const obj8 = { value: applyArgumentsResult(4960).fetchPaymentSources(), done: false };
+              const obj8 = { value: applyArgumentsResult(4963).fetchPaymentSources(), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {

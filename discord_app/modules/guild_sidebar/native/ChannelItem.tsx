@@ -6,7 +6,7 @@ import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import _modDef16214 from "../../../../_runtime/metro/16214__.js";
+import _modDef16227 from "../../../../_runtime/metro/16227__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -63,7 +63,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef16214;
+      let tmp12 = _modDef16227;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -87,7 +87,7 @@ function ChannelIcon(arg0) {
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return map1(tmp9(12509).BaseChannelIcon, obj10);
+    return map1(tmp9(12514).BaseChannelIcon, obj10);
   }
 }
 function DMChannelIcon(userId) {
@@ -113,12 +113,12 @@ function DMChannelIcon(userId) {
   const obj3 = {
     user: stateFromStores,
     guildId: "o",
-    size: userId(1176).AvatarSizes.XSMALL_20,
+    size: userId(1177).AvatarSizes.XSMALL_20,
     style: tmp.dmAvatar,
     status,
     isMobileOnline,
     isVROnline,
-    statusStyle: "plant",
+    statusStyle: "hash",
   };
   const items4 = [tmp.avatarStatus];
   if (avatarStatusSelected) {
@@ -126,21 +126,21 @@ function DMChannelIcon(userId) {
   }
   items4[1] = avatarStatusSelected;
   obj3.statusStyle = items4;
-  return closure_13(userId(1176).Avatar, obj3);
+  return closure_13(userId(1177).Avatar, obj3);
 }
 let closure_3 = ["channel", "subtitle", "hideIcon", "children", "textStyle", "channelInfo", "onPress"];
 const View = fn(17).View;
 const Constants = fn(1074);
 const ChannelTypes = Constants.ChannelTypes;
 const Routes = Constants.Routes;
-const StaticChannelRoute = fn(1964).StaticChannelRoute;
-const UnreadSetting = fn(4818).UnreadSetting;
+const StaticChannelRoute = fn(1965).StaticChannelRoute;
+const UnreadSetting = fn(4821).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [,];
 ({ GUILD_VOICE: arr[0], GUILD_STAGE_VOICE: arr[1] } = ChannelTypes);
 const set = new Set(items);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   channelIconLive: { tintColor: nativeDefault.unsafe_rawColors.GREEN_360 },
   dmAvatar: { marginRight: 8 },
@@ -154,9 +154,9 @@ obj.avatarStatus = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }
 obj.groupDmAvatar = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
 obj.channelInfoContainer = { paddingStart: 4 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.avatarStatusSelected = { backgroundColor: fn(5522).DARK_393C42_LIGHT_DEE0E4 };
+obj.avatarStatusSelected = { backgroundColor: fn(5526).DARK_393C42_LIGHT_DEE0E4 };
 let closure_16 = createStyles.createStyles(obj);
-let obj5 = { backgroundColor: fn(5522).DARK_393C42_LIGHT_DEE0E4 };
+let obj5 = { backgroundColor: fn(5526).DARK_393C42_LIGHT_DEE0E4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
 

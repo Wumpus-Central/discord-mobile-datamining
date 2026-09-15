@@ -1,5 +1,5 @@
 // discord_app/modules/payments/utils/BillingStandaloneUtils.tsx
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import Constants from "../../../Constants.tsx";

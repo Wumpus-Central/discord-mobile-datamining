@@ -13,7 +13,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 let obj2 = fn;
 const RPCErrors = fn(1074).RPCErrors;
-const Constants = fn(4661);
+const Constants = fn(4664);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 class VibegrationsVoiceSessionCoordinator {
@@ -170,7 +170,7 @@ prototype["start"] = function start(id) {
         focusSequence = num;
       }
       const obj = {
-        id: obj2(1254).v4(),
+        id: obj2(1255).v4(),
         socketId: id.id,
         frameId,
         applicationId,
@@ -200,7 +200,7 @@ prototype["start"] = function start(id) {
         const tmp19 = new RPCErrorDefault(obj2, "The voice connection is unavailable");
         throw tmp19;
       }
-      const obj3 = obj2(1254);
+      const obj3 = obj2(1255);
     }
   }
   const obj5 = { errorCode: RPCErrors.INVALID_CHANNEL };
@@ -331,7 +331,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14550).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(14559).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

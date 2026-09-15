@@ -192,7 +192,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
               closure_1_1(9).setTTICallback(() => true);
               closure_1_27();
               c25 = null;
-            }, 15 * closure_1_1(1090).Millis.SECOND);
+            }, 15 * closure_1_1(1091).Millis.SECOND);
             closure_1_1(9).setTTICallback(() => {
               const tmp = closure_1_21();
               let flag = false;
@@ -602,10 +602,10 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7773).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(1964).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7776).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(1965).StaticChannelRoutes;
 const jsx = fn(21).jsx;
-const v1 = fn(1254);
+const v1 = fn(1255);
 const load_id = v1.v4();
 const Manifest = ClientInfoUtils.getConstants().Manifest;
 let c18 = false;

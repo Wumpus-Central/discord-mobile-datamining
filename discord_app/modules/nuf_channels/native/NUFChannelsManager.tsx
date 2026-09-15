@@ -1,7 +1,7 @@
 // discord_app/modules/nuf_channels/native/NUFChannelsManager.tsx
 import Storage3 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import UserUtils from "../../../utils/UserUtils.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
@@ -14,7 +14,7 @@ import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.ts
 
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
-const GuildMemberFlags = fn(4262).GuildMemberFlags;
+const GuildMemberFlags = fn(4265).GuildMemberFlags;
 let c9 = "2020_02_nuf_channels";
 let c10 = "2020_02_nuf_voice_channels";
 class NUFChannelsManager extends tmp2 {
@@ -83,7 +83,7 @@ class NUFChannelsManager extends tmp2 {
           }
           if (isNewUserResult) {
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(13857, dependencyMap.paths),
+              asyncRequireImpl(13862, dependencyMap.paths),
               "NUFChannelsActionSheet",
             );
             const Storage2 = Storage3.Storage;
@@ -99,8 +99,8 @@ class NUFChannelsManager extends tmp2 {
       value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
-        isNewUserResult = applyArgumentsResult(4481).isNewUser(currentUser.getCurrentUser());
-        const tmpResult = applyArgumentsResult(4481);
+        isNewUserResult = applyArgumentsResult(4484).isNewUser(currentUser.getCurrentUser());
+        const tmpResult = applyArgumentsResult(4484);
       }
       return isNewUserResult;
     };

@@ -1,6 +1,6 @@
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesActionCreators.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
-import _modDef1471 from "../../../../_runtime/metro/01471__.js";
+import _modDef1472 from "../../../../_runtime/metro/01472__.js";
 import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
 import Backoff from "../../../../discord_common/js/packages/backoff/Backoff.tsx";
 import Dispatcher from "../../../Dispatcher.tsx";
@@ -25,7 +25,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
     num = 20;
   }
   const HTTP = require("HTTPUtils").HTTP;
-  const request = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: _modDef1471.stringify({ game_ids: gameIdsForDetectedGames, limit: num, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
+  const request = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: _modDef1472.stringify({ game_ids: gameIdsForDetectedGames, limit: num, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
   value = HTTP.get(request);
   return value.then((body) => {
     pending.succeed();
@@ -59,7 +59,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
               let value = HTTP.get(request);
               let obj2 = closure_1(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F124196 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F124447 */ function() { ... });
             });
           }
           let obj = closure_1_1(dependencyMap[4]);
@@ -83,10 +83,10 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
       if (items === undefined) {
         items = [];
       }
-      const HTTP = game_ids(1270).HTTP;
+      const HTTP = game_ids(1271).HTTP;
       const request = { url: Endpoints.MOBILE_GAME_COMMUNITIES, query: null, oldFormErrors: true, rejectWithError: true };
       const obj2 = { game_ids, limit: 20, ignored_guild_ids: items };
-      request.query = _modDef1471.stringify(obj2);
+      request.query = _modDef1472.stringify(obj2);
       value = HTTP.get(request);
       return value.then((body) => {
         pending.succeed();
@@ -120,7 +120,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
                   let value = HTTP.get(request);
                   let obj2 = closure_1(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F124196 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F124447 */ function() { ... });
                 });
               }
               let obj = closure_1_1(dependencyMap[4]);

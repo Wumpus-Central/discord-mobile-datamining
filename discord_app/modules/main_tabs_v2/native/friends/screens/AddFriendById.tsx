@@ -30,7 +30,7 @@ const Constants = fn(1074);
 ({ PLACEHOLDER_TAG: closure_7, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -171,8 +171,8 @@ export default noop.forwardRef((arg0, ref) => {
     const trimmed1 = first2.trim();
     if (trimmed.length <= 0) {
       let obj2 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: null };
-      let intl = sourcePage(1114).intl;
-      obj2.message = intl.string(sourcePage(1114).t.mxnceg);
+      let intl = sourcePage(1115).intl;
+      obj2.message = intl.string(sourcePage(1115).t.mxnceg);
       closure_6(obj2);
     } else {
       const hasItem = trimmed.includes("#");
@@ -185,7 +185,7 @@ export default noop.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(9175).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(9178).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
@@ -195,7 +195,7 @@ export default noop.forwardRef((arg0, ref) => {
         const obj6 = {
           discordTag: tmp2,
           context: { location: "Search - Add Friend Search" },
-          errorUxConfig: sourcePage(9171).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+          errorUxConfig: sourcePage(9174).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
           note: null,
         };
         let tmp9;
@@ -203,8 +203,8 @@ export default noop.forwardRef((arg0, ref) => {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(9171);
-        ref(9171)
+        const obj5 = ref(9174);
+        ref(9174)
           .sendRequest(obj6)
           .then(
             () => {
@@ -263,9 +263,9 @@ export default noop.forwardRef((arg0, ref) => {
               closure_6(obj3);
             },
           );
-        const sendRequestResult = ref(9171).sendRequest(obj6);
+        const sendRequestResult = ref(9174).sendRequest(obj6);
       }
-      let obj = sourcePage(9175);
+      let obj = sourcePage(9178);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText } = arg0);
@@ -275,8 +275,8 @@ export default noop.forwardRef((arg0, ref) => {
   let tmp2 = textState(
     noop.useState(() => {
       const obj = { validatedText: "", hint: null };
-      const intl = sourcePage(1114).intl;
-      obj.hint = intl.string(sourcePage(1114).t["6p7Mhh"]);
+      const intl = sourcePage(1115).intl;
+      obj.hint = intl.string(sourcePage(1115).t["6p7Mhh"]);
       return obj;
     }),
     2,
@@ -379,12 +379,12 @@ export default noop.forwardRef((arg0, ref) => {
     let obj6 = { style: tmp.redesignGrow };
     items6[1] = closure_9(tmp16, obj6);
     const obj7 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
-    const intl3 = sourcePage(1114).intl;
-    obj7.text = intl3.string(sourcePage(1114).t["PMsq/b"]);
+    const intl3 = sourcePage(1115).intl;
+    obj7.text = intl3.string(sourcePage(1115).t["PMsq/b"]);
     obj7.disabled = str.trim().length <= 0;
     obj7.onPress = handleSubmitEditing;
     obj7.loading = first1.status === constants2.LOADING;
-    items6[2] = closure_9(sourcePage(5056).Button, obj7);
+    items6[2] = closure_9(sourcePage(5059).Button, obj7);
     obj5.children = items6;
     return closure_10(closure_11, obj5);
   } else {
@@ -394,9 +394,9 @@ export default noop.forwardRef((arg0, ref) => {
     ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
     items7[2] = headerTextStyle;
     obj9.style = items7;
-    let intl = sourcePage(1114).intl;
-    obj9.children = intl.string(sourcePage(1114).t.Yi6Mpu);
-    const items8 = [closure_9(sourcePage(4632).Text, obj9), ,];
+    let intl = sourcePage(1115).intl;
+    obj9.children = intl.string(sourcePage(1115).t.Yi6Mpu);
+    const items8 = [closure_9(sourcePage(4635).Text, obj9), ,];
     const obj10 = {
       returnKeyType: "done",
       submitBehavior: "submit",
@@ -413,12 +413,12 @@ export default noop.forwardRef((arg0, ref) => {
       }
     }
     obj10.status = str2;
-    items8[1] = closure_9(sourcePage(7188).TextArea, obj10);
+    items8[1] = closure_9(sourcePage(7192).TextArea, obj10);
     if (first1.status !== constants2.ERROR) {
       const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
-      let intl2 = sourcePage(1114).intl;
-      obj11.children = intl2.string(sourcePage(1114).t.UtfQNw);
-      let tmp17Result = closure_9(sourcePage(4632).Text, obj11);
+      let intl2 = sourcePage(1115).intl;
+      obj11.children = intl2.string(sourcePage(1115).t.UtfQNw);
+      let tmp17Result = closure_9(sourcePage(4635).Text, obj11);
       items8[2] = tmp17Result;
       obj8.children = items8;
       closure_10(tmp16, obj8);

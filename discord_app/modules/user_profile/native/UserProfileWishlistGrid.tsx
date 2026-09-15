@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileWishlistGrid.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../../collectibles/CollectiblesActionCreators.tsx";
@@ -88,14 +88,14 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_9 = fn(8906).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(8904).getWishlistProductLines;
-let Constants = fn(8300);
+let closure_9 = fn(8909).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(8907).getWishlistProductLines;
+let Constants = fn(8303);
 ({ TrackUserProfileWishlistActions: closure_14, UserProfileSections: closure_15 } = Constants);
 Constants = fn(1074);
 ({ Routes: closure_16, SKUProductLines: closure_17 } = Constants);
 let closure_18 = fn(1076).CollectiblesMobileShopScreen;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({
   GiftingOrigin: closure_19,
   PremiumSubscriptionSKUToPremiumType: closure_20,
@@ -104,7 +104,7 @@ const PremiumConstants = fn(1373);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 let closure_25 = new LoggerDefault("UserProfileWishlistGrid");
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let dependencyMap = createStyles.createStyles(() => {
   let flag = arg0;
   if (arg0 === undefined) {
@@ -408,7 +408,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                 obj7.analyticsSource = c1(context[25]).USER_PROFILE_WISHLIST;
                                 obj7.screen = constants3.FEATURED_PAGE;
                                 obj7.onNavigateAway = function onNavigateAway() {
-                                  closure_1(8296)({ userId: user.id, initialSection: constants2.WISHLIST });
+                                  closure_1(8299)({ userId: user.id, initialSection: constants2.WISHLIST });
                                 };
                                 const result = wishlistId(context[24]).openCollectiblesShopMobile(obj7);
                                 const obj28 = wishlistId(context[24]);
@@ -534,7 +534,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                             obj29.lockedRecipientUser = lockedRecipientUser;
                             obj29.giftingOrigin = constants4.USER_PROFILE_WISHLIST;
                             obj29.onGiftModalDismiss = function onGiftModalDismiss() {
-                              closure_1(8296)({ userId: user.id, initialSection: constants2.WISHLIST });
+                              closure_1(8299)({ userId: user.id, initialSection: constants2.WISHLIST });
                             };
                             const result4 = wishlistId(context[49]).openSocialLayerStorefrontGiftModal(obj29);
                             const obj55 = wishlistId(context[49]);
@@ -701,7 +701,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13227, dependencyMap.paths),
+      asyncRequireImpl(13232, dependencyMap.paths),
       "EditWishlistActionSheet",
       { wishlistId, analyticsContext: context, analyticsLocations },
       "stack",

@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardV2.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openProductDetailsActionSheet from "openProductDetailsActionSheet.tsx";
@@ -362,7 +362,7 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   card: null,
   topRowOverlay: null,

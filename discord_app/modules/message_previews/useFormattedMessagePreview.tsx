@@ -399,8 +399,8 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
   if (message.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
     stringResult = nick;
     if (message.author.id === stateFromStores) {
-      const intl = tmp(1114).intl;
-      stringResult = intl.string(tmp(1114).t.LuZzxn);
+      const intl = tmp(1115).intl;
+      stringResult = intl.string(tmp(1115).t.LuZzxn);
     }
   }
   const obj2 = require("initialize");

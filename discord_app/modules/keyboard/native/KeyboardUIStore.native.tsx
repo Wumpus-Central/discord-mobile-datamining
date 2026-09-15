@@ -9,7 +9,7 @@ import KeyboardTypes from "KeyboardTypes.tsx";
 import ChatInputFocused from "ChatInputFocused.tsx";
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NativeSafeAreaInsetsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
-import KeyboardChatScrollView from "../../../../_runtime/01625_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01626_KeyboardChatScrollView.js";
 import KeyboardStateDebuggingDefault from "../KeyboardStateDebugging.tsx";
 import PlatformUtils_mod from "../../../utils/PlatformUtils.tsx";
 import 00560__ from "../../../../_runtime/metro/00560__.js";

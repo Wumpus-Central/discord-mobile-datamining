@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import DevSettingsStore from "../../../../modules/devtools/dev_settings/DevSettingsStore.tsx";
 
 const require = fn;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { highlight: { borderWidth: 1, borderColor: nativeDefault.colors.STATUS_DANGER } };
 let closure_3 = createStyles.createStyles(obj2);
 const size = fn(2);

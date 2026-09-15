@@ -1,11 +1,11 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalInstantInvites.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef5678 from "../../../../_runtime/metro/05678__.js";
+import _modDef5682 from "../../../../_runtime/metro/05682__.js";
 import TableCheckboxRow from "../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
 import TableRowIcon from "../../../design/components/TableRow/native/TableRowIcon.native.tsx";
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
@@ -168,7 +168,7 @@ function GuildSettingsModalInstantInvites(invites) {
         };
         const obj4 = { guild, analyticsData: obj };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(11960, dependencyMap.paths),
+          asyncRequireImpl(11964, dependencyMap.paths),
           "GuildIncidentActionsActionSheet",
           obj4,
         );
@@ -222,7 +222,7 @@ const Constants = fn(1074);
 ({ GuildFeatures: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_15 = createStyles.createStyles({
   list: { paddingTop: 8 },
   content: { padding: 16, gap: 24 },
@@ -249,7 +249,7 @@ export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
       contentContainerStyle: guildId.contentContainerStyle,
       showChannel: true,
     };
-    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(7143).NavScrim, {})];
+    const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(7147).NavScrim, {})];
     obj2.children = items1;
     tmp6 = closure_14(closure_13, obj2);
   }

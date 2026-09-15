@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettingsKeys from "UserSettingsKeys.tsx";
-import keysSorter from "../../../_runtime/05537_keysSorter.js";
+import keysSorter from "../../../_runtime/05541_keysSorter.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -45,8 +45,8 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
   const joined = found.join("/");
   const obj = {
     [closure_1_4.ACCOUNT]: UserSettingsKeys.WebUserSettings.ACCOUNT_PANEL,
-    [ACCOUNT_STANDING]: UserSettingsKeys.WebUserSettings.ACCOUNT_STANDING_CATEGORY,
-    [ACCOUNT_ACCOUNT_STANDING]: UserSettingsKeys.WebUserSettings.ACCOUNT_STANDING_CATEGORY,
+    [ACCOUNT_STANDING]: UserSettingsKeys.WebUserSettings.ACCOUNT_STANDING_PANEL,
+    [ACCOUNT_ACCOUNT_STANDING]: UserSettingsKeys.WebUserSettings.ACCOUNT_STANDING_PANEL,
     [PROFILE_CUSTOMIZATION]: UserSettingsKeys.WebUserSettings.PROFILE_PANEL,
     [CONTENT_AND_SOCIAL]: UserSettingsKeys.WebUserSettings.MESSAGING_PERMISSIONS_PANEL,
     [CONNECTED_GAMES]: UserSettingsKeys.WebUserSettings.CONNECTED_GAMES_CATEGORY,

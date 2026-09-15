@@ -11,7 +11,6 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import ContextualOptInNudgeHoldoutExperimentDefault from "../../../nuf/native/ContextualOptInNudgeHoldoutExperiment.tsx";
 import SettingsNotificationUtils from "SettingsNotificationUtils.tsx";
 import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader.tsx";
-import FamilyCenterAgeGroupPrefetch from "../../../parent_tools/FamilyCenterAgeGroupPrefetch.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -57,11 +56,11 @@ function SystemNotificationsSubLabel() {
   return React6(React7, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(15567).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(8079).MobileUserSettings;
+let closure_5 = fn(15577).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(8082).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   card: {
     marginBottom: 8,
@@ -83,14 +82,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 
 export default noop.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7696).useIsFamilyCenterV3Enabled({
-    location: "SettingsNotificationsScreen",
-  });
-  const obj = isFamilyCenterV3Enabled(7696);
-  let tmp2 = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" })
+  const tmp = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" })
     .inHoldout;
-  importDefault = tmp2;
-  let items = [tmp2];
+  closure_0 = tmp;
+  let items = [tmp];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };
     const obj3 = { label: null, settings: null };
@@ -192,7 +187,7 @@ export default noop.memo(() => {
     items1[18] = obj21;
     obj2.sections = items1;
     let tmp2;
-    if (closure_1) {
+    if (closure_0) {
       tmp2 = NotificationPermissionSettingsHeaderDefault;
     }
     obj2.ListHeaderComponent = tmp2;
@@ -201,9 +196,8 @@ export default noop.memo(() => {
   const effect = noop.useEffect(() => {
     closure_1_5();
   }, []);
-  let items1 = [isFamilyCenterV3Enabled];
   const effect1 = noop.useEffect(() => {
-    const result = FamilyCenterAgeGroupPrefetch.prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled);
-  }, items1);
+    const result = closure_0(dependencyMap[17]).prefetchFamilyCenterAgeGroup();
+  }, []);
   return closure_7(SettingLayoutDefault, { node });
 });

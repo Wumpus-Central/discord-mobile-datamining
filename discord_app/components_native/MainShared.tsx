@@ -1,6 +1,7 @@
 // discord_app/components_native/MainShared.tsx
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import util from "../intl/index.native.tsx";
+import PlatformUtils from "../utils/PlatformUtils.tsx";
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import usePipVideoOrStream from "../modules/video_calls/native/usePipVideoOrStream.tsx";
 import VoicePanelUtils from "../modules/voice_panel/VoicePanelUtils.native.tsx";
@@ -54,19 +55,23 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
 };
 export const useAppKeyCommands = function useAppKeyCommands() {
   const memo = noop.useMemo(() => {
-    const obj = {
+    const KeyModifierFlags = KeyCommands.KeyModifierFlags;
+    const obj2 = {
       input: "k",
-      modifierFlags: KeyCommands.KeyModifierFlags.keyModifierCommand,
+      modifierFlags: PlatformUtils.isAndroid()
+        ? KeyModifierFlags.keyModifierControl
+        : KeyModifierFlags.keyModifierCommand,
       eventName: "keyCommandShowQuickSwitcher",
       discoverabilityTitle: null,
       onKeyCommand: null,
     };
     const intl = util.intl;
-    obj.discoverabilityTitle = intl.string(util.t.yYsRlD);
-    obj.onKeyCommand = function onKeyCommand() {
-      closure_1_1(dependencyMap[11])();
+    obj2.discoverabilityTitle = intl.string(util.t.yYsRlD);
+    obj2.onKeyCommand = function onKeyCommand() {
+      closure_1_1(dependencyMap[12])();
+      return true;
     };
-    const items = [obj];
+    const items = [obj2];
     return items;
   }, []);
   const keyCommands = KeyCommands.useKeyCommands(memo);

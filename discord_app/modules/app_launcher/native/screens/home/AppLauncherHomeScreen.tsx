@@ -190,11 +190,11 @@ function ActivityRow(section) {
     bot = application.bot;
   }
   obj2.bot = bot;
-  const applicationIconSource = onPress(1396).getApplicationIconSource(obj2);
+  const applicationIconSource = onPress(1397).getApplicationIconSource(obj2);
   let tmp5 = null != applicationIconSource;
   if (tmp5) {
     const obj3 = { iconSource: applicationIconSource };
-    tmp5 = closure_19(onPress(12186), obj3);
+    tmp5 = closure_19(onPress(12190), obj3);
   }
   const items = [section];
   const items1 = [section, onPress];
@@ -218,7 +218,7 @@ function ActivityRow(section) {
   const callback = noop.useCallback(() => {
     onPress(section);
   }, items1);
-  return closure_19(section(5686).TableRow, {
+  return closure_19(section(5690).TableRow, {
     icon: tmp5,
     label: section.application.name,
     subLabel: memo,
@@ -645,20 +645,20 @@ function getRecommendationItemsWithViewAll(found1, in_this_server, stringResult)
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(9419);
+const ApplicationCommandIndexStore = fn(9422);
 ({ useContextIndexState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1482);
+const AppLauncherNativeConstants = fn(1483);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 let closure_15 = AppLauncherNativeConstants.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_16, Permissions: closure_17 } = Constants);
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 let c22 = 1.7777777777777777;
 let closure_23 = [];
-const APP_LAUNCHER_IN_TEXT = fn(12207).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
-const createStyles = fn(4636);
+const APP_LAUNCHER_IN_TEXT = fn(12211).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
+const createStyles = fn(4639);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 },
   topBackgroundFill: null,
@@ -1046,7 +1046,7 @@ export default function AppLauncherHomeScreen(route) {
             isLastTuple: false,
           };
           const diff1 = arr.length - 1;
-          obj2.type = tmp8(12218).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj2.type = tmp8(12222).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj2.shelfItem1 = arr[arr.length - 1];
           obj2.shelfItem2 = undefined;
           obj2.shelfItem1SectionPosition = diff1;
@@ -1055,14 +1055,14 @@ export default function AppLauncherHomeScreen(route) {
         }
         items[items.length - 1].isLastTuple = true;
         const obj5 = {
-          type: tmp8(12218).AppLauncherHomeListItemType.SECTION_HEADER,
+          type: tmp8(12222).AppLauncherHomeListItemType.SECTION_HEADER,
           section: null,
           sectionName: "activities",
           numItems: null,
           numVisibleItems: null,
         };
-        const intl = tmp8(1114).intl;
-        obj5.section = intl.string(tmp8(1114).t.aeuOoh);
+        const intl = tmp8(1115).intl;
+        obj5.section = intl.string(tmp8(1115).t.aeuOoh);
         ({ length: obj3.numItems, length: obj3.numVisibleItems } = arr);
         const items1 = [obj5];
         HermesBuiltin.arraySpread(items, 1);
@@ -1214,17 +1214,17 @@ export default function AppLauncherHomeScreen(route) {
           obj.numVisibleItems = bound;
           items.push(obj);
           const mapped = application_directory_collection_items.map((type, sectionPosition) => {
-            if (type.type === found1(9547).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(9549).ApplicationDirectoryCollectionItemType.APPLICATION) {
               let collectionItemAssetUrl;
               if (tmp4) {
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
-                collectionItemAssetUrl = found1(12254).getCollectionItemAssetUrl({ itemId: null, hash: null });
+                collectionItemAssetUrl = found1(12258).getCollectionItemAssetUrl({ itemId: null, hash: null });
                 const obj = { itemId: null, hash: null };
-                const tmpResult = found1(12254);
+                const tmpResult = found1(12258);
               }
               const obj3 = {
                 application: type.application,
-                showsPromoted: found1(1384).hasFlag(type.flags, found1(12255).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1385).hasFlag(type.flags, found1(12259).ApplicationCollectionItemFlags.PROMOTED),
                 overrideImageUrl: collectionItemAssetUrl,
                 sectionPosition,
               };
@@ -1253,10 +1253,10 @@ export default function AppLauncherHomeScreen(route) {
         } else if (type === ApplicationDirectoryCollectionType.ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
-            if (type.type === found1(9547).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(9549).ApplicationDirectoryCollectionItemType.APPLICATION) {
               const obj = {
                 application: type.application,
-                showsPromoted: found1(1384).hasFlag(type.flags, found1(12255).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1385).hasFlag(type.flags, found1(12259).ApplicationCollectionItemFlags.PROMOTED),
               };
               return obj;
             }
@@ -1762,7 +1762,7 @@ export default function AppLauncherHomeScreen(route) {
       items: memo,
       onAppSelected: callback3,
       onViewAllSelected() {
-        const found = memo.find((type) => type.type === context(12218).AppLauncherHomeListItemType.VIEW_ALL);
+        const found = memo.find((type) => type.type === context(12222).AppLauncherHomeListItemType.VIEW_ALL);
         let mapped;
         if (found != null) {
           const applications = found.applications;
@@ -1779,7 +1779,7 @@ export default function AppLauncherHomeScreen(route) {
             applications: mapped,
             sectionItemType: FrecencySection.SectionItemType.APPS,
             commands: [],
-            sectionDescriptors: mapped.map((item) => context(7624).getApplicationCommandSection(item)),
+            sectionDescriptors: mapped.map((item) => context(7628).getApplicationCommandSection(item)),
             title: null,
           };
           const intl = util.intl;

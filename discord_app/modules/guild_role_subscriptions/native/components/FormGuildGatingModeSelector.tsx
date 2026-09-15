@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({
   container: { padding: 16 },
   space: { height: 8 },
@@ -24,7 +24,7 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
   const onChange = isFullServerGating.onChange;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const roleSubscriptionSettingsDisabled = isFullServerGating(17841).useRoleSubscriptionSettingsDisabled();
+  const roleSubscriptionSettingsDisabled = isFullServerGating(17879).useRoleSubscriptionSettingsDisabled();
   let items = [onChange];
   const items1 = [onChange, isFullServerGating, tmp];
   const callback = noop.useCallback(() => {
@@ -62,28 +62,28 @@ export default function FormGuildGatingModeSelector(isFullServerGating) {
     onChange(true);
   }, items1);
   let obj3 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
-  let obj = isFullServerGating(17841);
-  obj3.icon = onChange(11935);
-  let intl = isFullServerGating(1114).intl;
-  obj3.title = intl.string(isFullServerGating(1114).t.rXqxhF);
-  let intl2 = isFullServerGating(1114).intl;
-  obj3.description = intl2.string(isFullServerGating(1114).t.yQiJne);
+  let obj = isFullServerGating(17879);
+  obj3.icon = onChange(11939);
+  let intl = isFullServerGating(1115).intl;
+  obj3.title = intl.string(isFullServerGating(1115).t.rXqxhF);
+  let intl2 = isFullServerGating(1115).intl;
+  obj3.description = intl2.string(isFullServerGating(1115).t.yQiJne);
   obj3.selected = !isFullServerGating;
   obj3.onPress = callback;
   obj3.disabled = roleSubscriptionSettingsDisabled;
-  const items2 = [closure_5(onChange(17843), obj3), closure_5(View, { style: tmp.space })];
+  const items2 = [closure_5(onChange(17881), obj3), closure_5(View, { style: tmp.space })];
   let obj5 = { icon: null, title: null, description: null, selected: null, onPress: null, disabled: null };
   let obj4 = { style: tmp.space };
-  const tmp5 = onChange(17843);
-  obj5.icon = onChange(17844);
-  let intl3 = isFullServerGating(1114).intl;
-  obj5.title = intl3.string(isFullServerGating(1114).t.WzC9s6);
-  const intl4 = isFullServerGating(1114).intl;
-  obj5.description = intl4.string(isFullServerGating(1114).t.WmagiB);
+  const tmp5 = onChange(17881);
+  obj5.icon = onChange(17882);
+  let intl3 = isFullServerGating(1115).intl;
+  obj5.title = intl3.string(isFullServerGating(1115).t.WzC9s6);
+  const intl4 = isFullServerGating(1115).intl;
+  obj5.description = intl4.string(isFullServerGating(1115).t.WmagiB);
   obj5.selected = isFullServerGating;
   obj5.onPress = callback1;
   obj5.disabled = roleSubscriptionSettingsDisabled;
-  items2[2] = closure_5(onChange(17843), obj5);
+  items2[2] = closure_5(onChange(17881), obj5);
   obj2.children = items2;
   return closure_7(View, obj2);
 }

@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
@@ -61,9 +61,9 @@ export default function VibegrationsSecretRequestCard(projectId) {
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items);
   let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-  const intl = projectId(1114).intl;
-  obj2.children = intl.string(request(3590)["/e28TK"]);
-  const items1 = [closure_5(projectId(4632).Text, obj2), , ,];
+  const intl = projectId(1115).intl;
+  obj2.children = intl.string(request(3591)["/e28TK"]);
+  const items1 = [closure_5(projectId(4635).Text, obj2), , ,];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -85,12 +85,12 @@ export default function VibegrationsSecretRequestCard(projectId) {
     });
     items1[2] = closure_5(View, obj4);
     const obj5 = { variant: "secondary", size: "sm", onPress: callback, text: null };
-    const intl3 = tmp6(1114).intl;
-    obj5.text = intl3.string(tmp8(3590)["gVV+HX"]);
-    items1[3] = closure_5(tmp6(5056).Button, obj5);
+    const intl3 = tmp6(1115).intl;
+    obj5.text = intl3.string(tmp8(3591)["gVV+HX"]);
+    items1[3] = closure_5(tmp6(5059).Button, obj5);
     obj.children = items1;
     return closure_6(View, obj);
   }
-  const intl2 = tmp6(1114).intl;
-  note = intl2.string(tmp8(3590).jxvtin);
+  const intl2 = tmp6(1115).intl;
+  note = intl2.string(tmp8(3591).jxvtin);
 }

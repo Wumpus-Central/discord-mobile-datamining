@@ -24,13 +24,13 @@ const forwardRefResult = noop.forwardRef((enabled, arg1) => {
               tmp = controlsSpecs;
             }
             if (tmp) {
-              tmp = dependencyMap !== flag(1609).KeyboardTypes.SYSTEM;
+              tmp = dependencyMap !== flag(1610).KeyboardTypes.SYSTEM;
             }
             if (tmp) {
               tmp = closure_1_3;
             }
             if (tmp) {
-              const obj = { type: flag(1609).KeyboardTypes.SYSTEM };
+              const obj = { type: flag(1610).KeyboardTypes.SYSTEM };
               closure_1_2(obj);
             }
           },

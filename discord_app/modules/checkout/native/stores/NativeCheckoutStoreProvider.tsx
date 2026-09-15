@@ -1,7 +1,7 @@
 // discord_app/modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../../_runtime/01254_v1.js";
+import v1 from "../../../../../_runtime/01255_v1.js";
 import PaymentFlowStartedTriggerPoint from "../../../experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -20,7 +20,7 @@ function NativeCheckoutStoreProvider(children) {
     checkoutAnalyticsFields: View,
     analyticsInitialStep: closure_7,
   } = children);
-  const contextMetadata = order(5679)(() => {
+  const contextMetadata = order(5683)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -33,7 +33,7 @@ function NativeCheckoutStoreProvider(children) {
     const obj3 = { message: "Checkout session ID: " + id };
     return { loadId: id, startTime: Date.now() };
   });
-  redux = order(5679)(() => {
+  redux = order(5683)(() => {
     const obj = {};
     const merged = Object.assign(View);
     obj.load_id = contextMetadata.loadId;
@@ -55,7 +55,7 @@ function NativeCheckoutStoreProvider(children) {
     ),
     1,
   )[0];
-  order(5073)(() => {
+  order(5076)(() => {
     if (null != View) {
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
       const obj3 = {};
@@ -72,8 +72,8 @@ function NativeCheckoutStoreProvider(children) {
           checkoutSucceeded = purchaseInFlight;
         }
         if (!checkoutSucceeded) {
-          order(1240).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
-          const obj = order(1240);
+          order(1241).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
+          const obj = order(1241);
         }
       };
     }
@@ -100,8 +100,8 @@ function NativeCheckoutStoreProvider(children) {
         const obj2 = { checkoutSucceeded: tmp2, order: null };
         ({ id: obj3.id, status: obj3.status } = orderRecord);
         obj2.order = { id: null, status: null };
-        checkoutInitParameters(10941).discardDraftOrder(obj2);
-        const obj = checkoutInitParameters(10941);
+        checkoutInitParameters(10945).discardDraftOrder(obj2);
+        const obj = checkoutInitParameters(10945);
         const obj5 = { id: null, status: null };
       }
     },
@@ -114,16 +114,16 @@ function NativeCheckoutStoreProvider(children) {
   );
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7527);
+const NativeCheckoutStore = fn(7531);
 ({
   createNativeStore: closure_7,
   NativeCheckoutStoreContext: closure_8,
   NativeCheckoutStoreContextOrNull: closure_9,
 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ItemPurchaseType = fn(4618).ItemPurchaseType;
+const ItemPurchaseType = fn(4621).ItemPurchaseType;
 let jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_13 = createStyles.createStyles({
   loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" },
 });

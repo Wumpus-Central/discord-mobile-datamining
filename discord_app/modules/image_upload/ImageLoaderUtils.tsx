@@ -2,8 +2,8 @@
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import AttachmentImageLadderExperiment from "AttachmentImageLadderExperiment.tsx";
 import AttachmentImageLadder from "AttachmentImageLadder.tsx";
-import privDefault from "../../../_runtime/01437_priv.js";
-import _modDef1471 from "../../../_runtime/metro/01471__.js";
+import privDefault from "../../../_runtime/01438_priv.js";
+import _modDef1472 from "../../../_runtime/metro/01472__.js";
 import ImageUtils from "../../utils/ImageUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -42,8 +42,8 @@ function getSrcWithWidthAndHeight(quality) {
       const items = [, ];
       [arr[0], tmp6] = src.split("?");
       let tmp5 = _slicedToArray(src.split("?"), 2);
-      items[1] = _modDef1471.parse(tmp6);
-      const tmp2Result = _modDef1471;
+      items[1] = _modDef1472.parse(tmp6);
+      const tmp2Result = _modDef1472;
       [tmp8, tmp9] = items;
       if (null != format) {
         tmp9.format = format;
@@ -101,7 +101,7 @@ function getSrcWithWidthAndHeight(quality) {
       const fitResult = ImageUtils.fit(size1);
       let text = tmp8;
       if (!tmp2Result3.isEmpty(tmp9)) {
-        _modDef1471;
+        _modDef1472;
         text = `${tmp8}?${obj9.stringify(tmp9)}`;
       }
       return text;
@@ -259,7 +259,7 @@ export const loadImage = function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F108945 */ function() { ... });
+                            image.onerror = closure_2_4(/* F109171 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

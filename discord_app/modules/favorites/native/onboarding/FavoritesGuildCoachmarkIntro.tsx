@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3236 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3237 from "../../intl/FavoritesGuild.messages.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import FavoritesGuildAnalytics from "../../analytics/FavoritesGuildAnalytics.tsx";
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "../../../guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
@@ -10,7 +10,7 @@ import GuildsBarDnDStore from "../../../guilds_bar/native/GuildsBarDnDStore.tsx"
 
 require = fn;
 const FAVORITES = fn(1074).FAVORITES;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}",
@@ -72,15 +72,15 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
       onButtonPress: null,
     };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3236["bu/mLv"]);
+    obj.title = intl.string(_modDef3237["bu/mLv"]);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef3236.kxQJ7q);
+    obj.description = intl2.string(_modDef3237.kxQJ7q);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return closure_1_8(scrollPosition(visible[11]), {});
     };
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(_modDef3236["vN/KQ9"]);
+    obj.buttonLabel = intl3.string(_modDef3237["vN/KQ9"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items2);

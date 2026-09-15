@@ -2,13 +2,13 @@
 import VideoQualityManager from "VideoQualityManager.tsx";
 import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer.tsx";
 import discord_common_BaseConnectionEvent from "BaseConnectionEvent.tsx";
-import cloneDeepDefault from "../../../../_runtime/04708_cloneDeep.js";
-import flatRestDefault from "../../../../_runtime/04737_flatRest.js";
+import cloneDeepDefault from "../../../../_runtime/04711_cloneDeep.js";
+import flatRestDefault from "../../../../_runtime/04740_flatRest.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import TypedEventEmitter from "../../shared/utils/TypedEventEmitter.tsx";
 
 require = fn;
-const Constants = fn(4661);
+const Constants = fn(4664);
 ({
   ConnectionStates: closure_4,
   DEFAULT_VOICE_BITRATE: hasOwnProperty,
@@ -393,8 +393,12 @@ prototype["setSpatialAudioEnabled"] = function setSpatialAudioEnabled(arg0) {
 prototype["setCalcMaxBitrateFunc"] = function setCalcMaxBitrateFunc(calcMaxBitrateFunc) {
   this.calcMaxBitrateFunc = calcMaxBitrateFunc;
 };
+prototype["setFakeGoLiveEncodePixelCount"] = function setFakeGoLiveEncodePixelCount(arg0) {
+  const videoQualityManager = this.videoQualityManager;
+  const result = videoQualityManager.setFakeGoLiveEncodePixelCount(arg0);
+};
 let size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
-export const BaseConnectionEvent = fn(4707).BaseConnectionEvent;
+export const BaseConnectionEvent = fn(4710).BaseConnectionEvent;

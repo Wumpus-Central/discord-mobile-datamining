@@ -1,9 +1,9 @@
 // discord_common/js/packages/protos/google/protobuf/wrappers.tsx
-import _mod1186 from "../../../../../../_runtime/metro/01186__.js";
+import _mod1187 from "../../../../../../_runtime/metro/01187__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const MessageType = fn(1186).MessageType;
+const MessageType = fn(1187).MessageType;
 class DoubleValue$Type extends MessageType {
   constructor() {
     items = [];
@@ -30,10 +30,10 @@ prototype["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
 prototype["create"] = function create(arr) {
   const obj = { value: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -67,7 +67,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -79,13 +79,13 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if (0 !== value.value) {
-    tag.tag(1, _mod1186.WireType.Bit64).double(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.Bit64);
+    tag.tag(1, _mod1187.WireType.Bit64).double(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.Bit64);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);
@@ -100,7 +100,7 @@ const defineProperty1 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-const MessageType2 = fn(1186).MessageType;
+const MessageType2 = fn(1187).MessageType;
 class FloatValue$Type extends MessageType2 {
   constructor() {
     items = [];
@@ -127,10 +127,10 @@ prototype2["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
 prototype2["create"] = function create(arr) {
   const obj = { value: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -164,7 +164,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -176,13 +176,13 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype2["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if (0 !== value.value) {
-    tag.tag(1, _mod1186.WireType.Bit32).float(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.Bit32);
+    tag.tag(1, _mod1187.WireType.Bit32).float(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.Bit32);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);
@@ -197,7 +197,7 @@ const defineProperty2 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-const MessageType3 = fn(1186).MessageType;
+const MessageType3 = fn(1187).MessageType;
 class Int64Value$Type extends MessageType3 {
   constructor() {
     items = [];
@@ -209,7 +209,7 @@ class Int64Value$Type extends MessageType3 {
 const prototype3 = Int64Value$Type.prototype;
 prototype3["internalJsonWrite"] = function internalJsonWrite(value) {
   const refJsonWriter = this.refJsonWriter;
-  return refJsonWriter.scalar(_mod1186.ScalarType.INT64, value.value, "value", false, true);
+  return refJsonWriter.scalar(_mod1187.ScalarType.INT64, value.value, "value", false, true);
 };
 prototype3["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   const self = this;
@@ -218,16 +218,16 @@ prototype3["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
     obj = self.create();
   }
   const refJsonReader = self.refJsonReader;
-  obj.value = refJsonReader.scalar(arg0, _mod1186.ScalarType.INT64, _mod1186.LongType.STRING, "value");
+  obj.value = refJsonReader.scalar(arg0, _mod1187.ScalarType.INT64, _mod1187.LongType.STRING, "value");
   return obj;
 };
 prototype3["create"] = function create(arr) {
   const obj = { value: "0" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -262,7 +262,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -274,13 +274,13 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype3["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if ("0" !== value.value) {
-    tag.tag(1, _mod1186.WireType.Varint).int64(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).int64(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);
@@ -295,7 +295,7 @@ const defineProperty3 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-const MessageType4 = fn(1186).MessageType;
+const MessageType4 = fn(1187).MessageType;
 class UInt64Value$Type extends MessageType4 {
   constructor() {
     items = [];
@@ -307,7 +307,7 @@ class UInt64Value$Type extends MessageType4 {
 const prototype4 = UInt64Value$Type.prototype;
 prototype4["internalJsonWrite"] = function internalJsonWrite(value) {
   const refJsonWriter = this.refJsonWriter;
-  return refJsonWriter.scalar(_mod1186.ScalarType.UINT64, value.value, "value", false, true);
+  return refJsonWriter.scalar(_mod1187.ScalarType.UINT64, value.value, "value", false, true);
 };
 prototype4["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
   const self = this;
@@ -316,16 +316,16 @@ prototype4["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
     obj = self.create();
   }
   const refJsonReader = self.refJsonReader;
-  obj.value = refJsonReader.scalar(arg0, _mod1186.ScalarType.UINT64, _mod1186.LongType.STRING, "value");
+  obj.value = refJsonReader.scalar(arg0, _mod1187.ScalarType.UINT64, _mod1187.LongType.STRING, "value");
   return obj;
 };
 prototype4["create"] = function create(arr) {
   const obj = { value: "0" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -360,7 +360,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -372,13 +372,13 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype4["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if ("0" !== value.value) {
-    tag.tag(1, _mod1186.WireType.Varint).uint64(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).uint64(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);
@@ -393,7 +393,7 @@ const defineProperty4 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-const MessageType5 = fn(1186).MessageType;
+const MessageType5 = fn(1187).MessageType;
 class Int32Value$Type extends MessageType5 {
   constructor() {
     items = [];
@@ -420,10 +420,10 @@ prototype5["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
 prototype5["create"] = function create(arr) {
   const obj = { value: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -457,7 +457,7 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -469,13 +469,13 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype5["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if (0 !== value.value) {
-    tag.tag(1, _mod1186.WireType.Varint).int32(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).int32(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);
@@ -490,7 +490,7 @@ const defineProperty5 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-const MessageType6 = fn(1186).MessageType;
+const MessageType6 = fn(1187).MessageType;
 class UInt32Value$Type extends MessageType6 {
   constructor() {
     items = [];
@@ -517,10 +517,10 @@ prototype6["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
 prototype6["create"] = function create(arr) {
   const obj = { value: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -554,7 +554,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -566,13 +566,13 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype6["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if (0 !== value.value) {
-    tag.tag(1, _mod1186.WireType.Varint).uint32(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).uint32(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);
@@ -587,7 +587,7 @@ const defineProperty6 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-const MessageType7 = fn(1186).MessageType;
+const MessageType7 = fn(1187).MessageType;
 class BoolValue$Type extends MessageType7 {
   constructor() {
     items = [];
@@ -613,10 +613,10 @@ prototype7["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
 prototype7["create"] = function create(arr) {
   const obj = { value: false };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -650,7 +650,7 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -662,13 +662,13 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype7["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if (false !== value.value) {
-    tag.tag(1, _mod1186.WireType.Varint).bool(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).bool(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);
@@ -683,7 +683,7 @@ const defineProperty7 = new defineProperty(
   "internalJsonWrite",
   "internalJsonRead",
 );
-const MessageType8 = fn(1186).MessageType;
+const MessageType8 = fn(1187).MessageType;
 class StringValue$Type extends MessageType8 {
   constructor() {
     items = [];
@@ -709,10 +709,10 @@ prototype8["internalJsonRead"] = function internalJsonRead(arg0, arg1, arg2) {
 prototype8["create"] = function create(arr) {
   const obj = { value: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -746,7 +746,7 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -758,13 +758,13 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype8["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if ("" !== value.value) {
-    tag.tag(1, _mod1186.WireType.LengthDelimited).string(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
+    tag.tag(1, _mod1187.WireType.LengthDelimited).string(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);
@@ -772,7 +772,7 @@ prototype8["internalBinaryWrite"] = function internalBinaryWrite(value, tag, wri
   return tag;
 };
 const items7 = [{ no: 1, name: "value", kind: "scalar", T: 9 }];
-const MessageType9 = fn(1186).MessageType;
+const MessageType9 = fn(1187).MessageType;
 class BytesValue$Type extends MessageType9 {
   constructor() {
     items = [];
@@ -801,10 +801,10 @@ prototype9["create"] = function create(arr) {
   const uint8Array = new Uint8Array(0);
   obj.value = uint8Array;
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmp2Result = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmp2Result = _mod1187;
   }
   return obj;
 };
@@ -838,7 +838,7 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -850,13 +850,13 @@ prototype9["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype9["internalBinaryWrite"] = function internalBinaryWrite(value, tag, writeUnknownFields) {
   if (value.value.length) {
-    tag.tag(1, _mod1186.WireType.LengthDelimited).bytes(value.value);
-    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
+    tag.tag(1, _mod1187.WireType.LengthDelimited).bytes(value.value);
+    const tagResult = tag.tag(1, _mod1187.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, value, tag);

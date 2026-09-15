@@ -45,7 +45,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               );
             } else {
               [arr, tmp41] = result;
-              tmp4(2008)(arr);
+              tmp4(2009)(arr);
               if (Full !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -506,7 +506,7 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(1961);
+const ChannelRecord = fn(1962);
 ({
   createChannelRecordFromServer: closure_7,
   isPrivate: closure_8,
@@ -555,7 +555,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1369).isNotNullish);
+  found = items.filter(found(1370).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -565,7 +565,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_31;
-      return tmp(2006).tryLoadOrResetCacheGatewayAsync(
+      return tmp(2007).tryLoadOrResetCacheGatewayAsync(
         "loadChannels",
         asyncGeneratorStep(async () => {
           if (c7 === 2) {
@@ -616,7 +616,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                       return obj2;
                     }
                   });
-                  found = mapped.filter(closure_0(1369).isNotNullish);
+                  found = mapped.filter(closure_0(1370).isNotNullish);
                   closure_130_0 = found;
                   c5 = 1;
                   let _Promise = Promise;

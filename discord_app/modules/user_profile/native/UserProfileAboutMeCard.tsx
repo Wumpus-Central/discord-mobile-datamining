@@ -122,28 +122,28 @@ function MemberJoinDates(userId) {
     return member;
   });
   const obj3 = userId(504);
-  const obj4 = userId(5488);
+  const obj4 = userId(5492);
   const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
-  const createdAtDate1 = userId(5488).getCreatedAtDate(joinedAt, stateFromStores);
+  const createdAtDate1 = userId(5492).getCreatedAtDate(joinedAt, stateFromStores);
   const obj7 = { themeType, children: null };
-  const intl = tmp4(1114).intl;
-  obj7.children = intl.string(userId(1114).t.a6XYD9);
+  const intl = tmp4(1115).intl;
+  obj7.children = intl.string(userId(1115).t.a6XYD9);
   const items3 = [closure_11(Heading, obj7)];
   const obj8 = { style: null, children: null };
   const items4 = [tmp.memberJoinDates, { columnGap }];
   obj8.style = items4;
   const obj9 = {
     themeType,
-    icon: closure_11(userId(10947).ClydeIcon, { size: "xs" }),
+    icon: closure_11(userId(10951).ClydeIcon, { size: "xs" }),
     accessibilityLabel: null,
     children: null,
   };
-  const intl2 = tmp4(1114).intl;
-  obj9.accessibilityLabel = intl2.formatToPlainString(userId(1114).t["9t7w53"], { date: createdAtDate });
+  const intl2 = tmp4(1115).intl;
+  obj9.accessibilityLabel = intl2.formatToPlainString(userId(1115).t["9t7w53"], { date: createdAtDate });
   obj9.children = createdAtDate;
   const items5 = [closure_11(TextWithIcon, obj9)];
   let tmp13Result = null != stateFromStores1 && null != createdAtDate1;
@@ -156,13 +156,13 @@ function MemberJoinDates(userId) {
       importantForAccessibility: "no-hide-descendants",
       children,
     };
-    const items6 = [closure_11(tmp4(4632).Text, obj11)];
+    const items6 = [closure_11(tmp4(4635).Text, obj11)];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    const obj13 = { guild: stateFromStores1, size: tmp4(5665).GuildIconSizes.XXSMALL };
+    const obj13 = { guild: stateFromStores1, size: tmp4(5669).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);
-    const intl3 = tmp4(1114).intl;
+    const intl3 = tmp4(1115).intl;
     const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
-    obj12.accessibilityLabel = intl3.formatToPlainString(tmp4(1114).t.FdLNDK, obj14);
+    obj12.accessibilityLabel = intl3.formatToPlainString(tmp4(1115).t.FdLNDK, obj14);
     obj12.children = createdAtDate1;
     items6[1] = closure_11(TextWithIcon, obj12);
     obj10.children = items6;
@@ -300,10 +300,10 @@ function BotSlashCommands(channel) {
   return tmp8Result;
 }
 const View = fn(17).View;
-const Constants = fn(7311);
+const Constants = fn(7315);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1074).Routes;
-const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1483).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = {
@@ -322,7 +322,7 @@ const dependencyMap = {
     columnGap: 3,
   },
 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_16 = createStyles.createStyles({
   card: { flexDirection: "column" },
   textWithIcon: { flexDirection: "row", alignItems: "center" },

@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
-import _modDef12298 from "../../../../../_runtime/metro/12298__.js";
+import _modDef12302 from "../../../../../_runtime/metro/12302__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_6 = createStyles.createStyles({
   searchBarContainer: { marginBottom: 16 },
   emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" },
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/base_comp
 
 export const AppLauncherList = noop.forwardRef((contentContainerStyle, arg1) => {
   _require = arg1;
-  const bottom = appLauncherFlashListProps(1611)().bottom;
+  const bottom = appLauncherFlashListProps(1612)().bottom;
   appLauncherFlashListProps = require("AppLauncherFlashList").useAppLauncherFlashListProps();
   const items = [appLauncherFlashListProps.scrollerRef, arg1];
   const memo = noop.useMemo(() => mergeProps.mergeRefs(appLauncherFlashListProps.scrollerRef, closure_0), items);
@@ -36,7 +36,7 @@ export const AppLauncherList = noop.forwardRef((contentContainerStyle, arg1) => 
     gestureRef: obj2.simultaneousHandlers,
     animatedProps: obj2.animatedProps,
   } = appLauncherFlashListProps);
-  return jsx(appLauncherFlashListProps(12232), {
+  return jsx(appLauncherFlashListProps(12236), {
     contentContainerStyle: null,
     scrollIndicatorInsets: { bottom },
     ref: memo,
@@ -47,8 +47,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   const obj = {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12298,
-    darkSource: _modDef12298,
+    lightSource: _modDef12302,
+    darkSource: _modDef12302,
     title: null,
     body: null,
   };
@@ -59,8 +59,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   return jsx(native.EmptyState, {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12298,
-    darkSource: _modDef12298,
+    lightSource: _modDef12302,
+    darkSource: _modDef12302,
     title: null,
     body: null,
   });

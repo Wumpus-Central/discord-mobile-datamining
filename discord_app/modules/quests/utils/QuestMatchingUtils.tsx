@@ -74,14 +74,14 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(5525);
+const QuestConstants = fn(5529);
 ({
   DISCORD_APPLICATION_ID: metroRequire,
   PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: closure_7,
   PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8,
 } = QuestConstants);
 const ActivityGamePlatforms = fn(1074).ActivityGamePlatforms;
-let closure_10 = fn(1920).XBOX_ACTIVITY_APPLICATION_ID;
+let closure_10 = fn(1921).XBOX_ACTIVITY_APPLICATION_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 

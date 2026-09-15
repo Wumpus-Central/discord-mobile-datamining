@@ -133,7 +133,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7303).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7307).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -187,7 +187,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(17754).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(17792).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -195,9 +195,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(17754);
-  const tmpResult = metadataField(17754);
-  str1 = metadataField(17754).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(17792);
+  const tmpResult = metadataField(17792);
+  str1 = metadataField(17792).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -221,10 +221,10 @@ function NumericalConfigRule(existingPendingConfiguration) {
   }
   closure_11 = tmp14;
   if (undefined !== fieldTextHook) {
-    closure_13 = metadataField(1363).isIOS()
+    closure_13 = metadataField(1364).isIOS()
       ? map.numericalInputContainerIOSInline
       : map.numericalInputContainerAndroidInline;
-    const intl = metadataField(1114).intl;
+    const intl = metadataField(1115).intl;
     let obj2 = {
       metadataHook() {
         const obj = { style: null, children: null };
@@ -252,7 +252,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       },
     };
     const obj3 = { style: map.metadataRow, children: null };
-    const tmpResult2 = metadataField(1363);
+    const tmpResult2 = metadataField(1364);
     fieldTextHook = mapped.Children;
     map = fieldTextHook.map;
     mapped = map(intl.format(fieldTextHook, obj2), (children, arg1) => {
@@ -283,10 +283,10 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj6.editable = !tmp14;
       obj6.value = value;
       obj6.onChangeText = onInputValueChange;
-      obj5.children = onInputValueChange(metadataField(1176).TextInput, obj6, metadataField);
+      obj5.children = onInputValueChange(metadataField(1177).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer")];
       const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(4632).Text, obj7);
+      items1[1] = onInputValueChange(metadataField(4635).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -328,9 +328,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
         _slicedToArray(tmp3, num);
       },
     };
-    return onInputValueChange(metadataField(7303).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(7307).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(17754).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(17792).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
@@ -858,7 +858,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1074).PlatformTypes;
-const Constants = fn(5489);
+const Constants = fn(5493);
 ({
   MetadataFields: closure_7,
   OperatorTypes: closure_8,
@@ -868,7 +868,7 @@ const Constants = fn(5489);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   numericalInputContainerIOSInline: { marginTop: -2 },
   numericalInputContainerAndroidInline: null,

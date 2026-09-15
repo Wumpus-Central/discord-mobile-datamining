@@ -13,10 +13,10 @@ export default function useProfileFrameLayerAsset(width) {
   width = width.width;
   let collectiblesItemAssetUrl;
   ({ skuId, layer } = width);
-  const obj = collectiblesItemAssetUrl(1883);
+  const obj = collectiblesItemAssetUrl(1884);
   collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({
     skuId,
-    assetFormat: collectiblesItemAssetUrl(1883).CollectiblesItemAssetFormat.STATIC,
+    assetFormat: collectiblesItemAssetUrl(1884).CollectiblesItemAssetFormat.STATIC,
     assetId: layer.id,
   });
   dependencyMap = _slicedToArray(

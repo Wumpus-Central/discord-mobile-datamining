@@ -79,7 +79,7 @@ function handlePaymentSourceChange() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({
   ANNUAL_DISCOUNT_IDS: closure_9,
   DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: c10,
@@ -95,7 +95,7 @@ let obj = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F469}\u{1F3FE}\u200D\u{1F9B1}",
+  userDiscounts: "\u{1F468}\u{1F3FB}\u200D\u{1F9B1}",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 11,

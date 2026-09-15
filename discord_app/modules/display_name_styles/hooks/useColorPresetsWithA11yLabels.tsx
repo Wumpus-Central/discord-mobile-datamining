@@ -2,7 +2,7 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const getColorPresetsForEffect = fn(1389).getColorPresetsForEffect;
+const getColorPresetsForEffect = fn(1390).getColorPresetsForEffect;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");
 
@@ -13,11 +13,11 @@ export default function useColorPresetsWithA11yLabels(arg0) {
     () =>
       getColorPresetsForEffect(closure_0).map((colors, index) => {
         const obj = { colors, a11yLabel: null };
-        const intl = closure_1_0(1114).intl;
+        const intl = closure_1_0(1115).intl;
         const obj2 = { number: index + 1, hexList: null };
-        const mapped = colors.map(closure_1_0(1091).int2hex);
+        const mapped = colors.map(closure_1_0(1092).int2hex);
         obj2.hexList = mapped.join(", ");
-        obj.a11yLabel = intl.formatToPlainString(closure_1_1(2786).FHfTsV, obj2);
+        obj.a11yLabel = intl.formatToPlainString(closure_1_1(2787).FHfTsV, obj2);
         return obj;
       }),
     items,

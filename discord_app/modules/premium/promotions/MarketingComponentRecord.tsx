@@ -1,7 +1,7 @@
 // discord_app/modules/premium/promotions/MarketingComponentRecord.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
 import ProtoUtils from "../../../utils/ProtoUtils.tsx";
-import MurmurHashV3Default from "../../../../_runtime/01239_MurmurHashV3.js";
+import MurmurHashV3Default from "../../../../_runtime/01240_MurmurHashV3.js";
 import premium_marketing_component_properties from "../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/premium_marketing_component_properties.tsx";
 import Record from "../../../lib/Record.tsx";
 

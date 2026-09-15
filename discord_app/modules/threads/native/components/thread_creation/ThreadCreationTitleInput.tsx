@@ -19,7 +19,7 @@ export default noop.memo(
     const optional = chatInputRef.optional;
     ref = undefined;
     dependencyMap = ref;
-    let obj = chatInputRef(16728);
+    let obj = chatInputRef(16766);
     let obj2 = { content: threadSettingsDraft.name };
     ref = ref.useRef(threadSettingsDraft.name);
     const items = [threadSettingsDraft.parentChannelId];
@@ -69,7 +69,7 @@ export default noop.memo(
         }
       }
     }, items3);
-    const renderErrorResult = chatInputRef(16728).renderError(chatInputRef.threadNameError, {
+    const renderErrorResult = chatInputRef(16766).renderError(chatInputRef.threadNameError, {
       content: threadSettingsDraft.name,
     });
     const items4 = [ChannelStore];
@@ -78,19 +78,19 @@ export default noop.memo(
     );
     let str = "";
     if (null != stateFromStores) {
-      str = tmp(9434).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
-      const tmpResult = tmp(9434);
+      str = tmp(9437).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
+      const tmpResult = tmp(9437);
     }
-    const intl = tmp(1114).intl;
+    const intl = tmp(1115).intl;
     const string = intl.string;
-    const t = tmp(1114).t;
+    const t = tmp(1115).t;
     if (optional) {
       let stringResult = string(t.JPvIiL);
     } else {
       stringResult = string(t.j3XWjD);
     }
     const obj4 = {
-      defaultValue: threadSettingsDraft(5667)(ref),
+      defaultValue: threadSettingsDraft(5671)(ref),
       errorMessage: renderErrorResult,
       label: stringResult,
       accessibilityHint: null,
@@ -109,8 +109,8 @@ export default noop.memo(
     };
     let stringResult1;
     if (!optional) {
-      const intl2 = tmp(1114).intl;
-      stringResult1 = intl2.string(tmp(1114).t["/+VEZN"]);
+      const intl2 = tmp(1115).intl;
+      stringResult1 = intl2.string(tmp(1115).t["/+VEZN"]);
     }
     obj4.accessibilityHint = stringResult1;
     obj4.required = !optional;
@@ -120,13 +120,13 @@ export default noop.memo(
     obj4.onBlur = callback1;
     obj4.onChange = callback;
     if ("" === str) {
-      const intl3 = tmp(1114).intl;
-      str = intl3.string(tmp(1114).t["Nb2/RE"]);
+      const intl3 = tmp(1115).intl;
+      str = intl3.string(tmp(1115).t["Nb2/RE"]);
     }
     obj4.placeholder = str;
     obj4.ref = ref;
-    return jsx(chatInputRef(6707).TextInput, {
-      defaultValue: threadSettingsDraft(5667)(ref),
+    return jsx(chatInputRef(6711).TextInput, {
+      defaultValue: threadSettingsDraft(5671)(ref),
       errorMessage: renderErrorResult,
       label: stringResult,
       accessibilityHint: null,

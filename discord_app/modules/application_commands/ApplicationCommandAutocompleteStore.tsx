@@ -44,7 +44,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 let closure_7 = PlatformUtils.isDesktop();
 const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {}
@@ -67,7 +67,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "accessible",
+      lastResponseNonce: "call",
     };
     const _Map = Map;
     map = new Map();
@@ -100,7 +100,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "accessible",
+      lastResponseNonce: "call",
     };
     const _Map = Map;
     map = new Map();
@@ -139,7 +139,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "accessible",
+      lastResponseNonce: "call",
     };
     const _Map = Map;
     map = new Map();
@@ -172,7 +172,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "accessible",
+      lastResponseNonce: "call",
     };
     const _Map = Map;
     map = new Map();
@@ -211,7 +211,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
         optionNameToNonce: null,
         optionNameToLastQuery: null,
         lastErrored: false,
-        lastResponseNonce: "accessible",
+        lastResponseNonce: "call",
       };
       const _Map = Map;
       map = new Map();
@@ -289,7 +289,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
           optionNameToNonce: null,
           optionNameToLastQuery: null,
           lastErrored: false,
-          lastResponseNonce: "accessible",
+          lastResponseNonce: "call",
         };
         const _Map = Map;
         map = new Map();
@@ -412,7 +412,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
             optionNameToNonce: null,
             optionNameToLastQuery: null,
             lastErrored: false,
-            lastResponseNonce: "accessible",
+            lastResponseNonce: "call",
           };
           const _Map = Map;
           map = new Map();

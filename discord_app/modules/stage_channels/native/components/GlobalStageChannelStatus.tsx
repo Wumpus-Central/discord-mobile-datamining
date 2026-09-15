@@ -49,18 +49,18 @@ class StageChannelRaiseHandAck {
               channel = tmp7;
               if (null != id) {
                 if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                  const obj5 = { entryPoint: tmp41(8531).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                  const result = tmp3(8529).showAgeVerificationGetStartedModal(obj5);
-                  const obj4 = tmp3(8529);
+                  const obj5 = { entryPoint: tmp41(8534).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                  const result = tmp3(8532).showAgeVerificationGetStartedModal(obj5);
+                  const obj4 = tmp3(8532);
                 } else {
                   dependencyMap(true);
                   dependencyMap = 1;
                   c4 = 2;
                   c5 = 1;
-                  const obj6 = { value: tmp41(8516).audienceAckRequestToSpeak(id, false), done: false };
+                  const obj6 = { value: tmp41(8519).audienceAckRequestToSpeak(id, false), done: false };
                   return obj6;
                 }
-                obj9 = channel(5503);
+                obj9 = channel(5507);
               }
               c5 = 3;
             }
@@ -76,8 +76,8 @@ class StageChannelRaiseHandAck {
             dependencyMap = 0;
             closure_129_3(false);
             if (null == key.getKey()) {
-              tmp27(8512).openStageChannel(closure_129_0);
-              const obj8 = tmp27(8512);
+              tmp27(8515).openStageChannel(closure_129_0);
+              const obj8 = tmp27(8515);
             }
           }
           dependencyMap = 0;
@@ -252,7 +252,7 @@ const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   invitedContainer: { paddingHorizontal: nativeDefault.space.PX_8 },
   icon: null,
@@ -325,8 +325,8 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   let stringResult = useChannelNameDefault(channel);
   if (stringResult == null) {
-    const intl = id(1114).intl;
-    stringResult = intl.string(id(1114).t["/YzI63"]);
+    const intl = id(1115).intl;
+    stringResult = intl.string(id(1115).t["/YzI63"]);
   }
   const tmp7 = useIsInvitedToSpeakDefault();
   let invitedHeaderText = useCanSpeakInChannelDefault(id);
@@ -344,7 +344,7 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   if (!invitedHeaderText) {
     if (!tmp7) {
-      tmp8(4345);
+      tmp8(4348);
       let str = "dark-content";
     }
     if (null != channel) {
@@ -368,10 +368,10 @@ export default function GlobalStageChannelStatus(arg0) {
           const items2 = [closure_10(StatusBarDefault, obj4), ,];
           const obj5 = {
             style: activeSpeakerIcon,
-            size: tmp8(1176).Icon.Sizes.REFRESH_SMALL_16,
-            source: tmp8(5109).getChannelIconWithGuild(channel, guild),
+            size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16,
+            source: tmp8(5112).getChannelIconWithGuild(channel, guild),
           };
-          items2[1] = closure_10(tmp8(1176).Icon, obj5);
+          items2[1] = closure_10(tmp8(1177).Icon, obj5);
           let tmp13Result = "" !== str2;
           if (tmp13Result) {
             const items3 = [tmp.topic];
@@ -388,7 +388,7 @@ export default function GlobalStageChannelStatus(arg0) {
             }
             items4[1] = tmp17;
             obj6.children = items4;
-            tmp13Result = closure_11(tmp8(1176).LegacyText, obj6);
+            tmp13Result = closure_11(tmp8(1177).LegacyText, obj6);
           }
           const items5 = [tmp13Result];
           let tmp15Result = !tmp12;
@@ -401,15 +401,15 @@ export default function GlobalStageChannelStatus(arg0) {
             items6[1] = invitedHeaderText;
             obj7.style = items6;
             obj7.children = combined;
-            tmp15Result = closure_10(tmp8(1176).LegacyText, obj7);
+            tmp15Result = closure_10(tmp8(1177).LegacyText, obj7);
           }
           const obj8 = { numberOfLines: 1, children: null };
           items5[1] = tmp15Result;
           obj8.children = items5;
-          items2[2] = closure_11(tmp8(1176).LegacyText, obj8);
+          items2[2] = closure_11(tmp8(1177).LegacyText, obj8);
           obj3.children = items2;
           tmp13Result2 = closure_11(View, obj3);
-          const tmp8Result2 = tmp8(5109);
+          const tmp8Result2 = tmp8(5112);
         }
         return tmp13Result2;
       }

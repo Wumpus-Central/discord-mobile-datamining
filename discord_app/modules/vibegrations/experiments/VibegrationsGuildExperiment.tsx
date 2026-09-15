@@ -26,7 +26,7 @@ function hasVibegrationsGuild(arg0, location) {
   return false;
 }
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1433);
+const ApexExperiment = fn(1434);
 let closure_4 = ApexExperiment.createApexExperiment({
   name: "2026-07-vibegrations-guild",
   kind: "guild",

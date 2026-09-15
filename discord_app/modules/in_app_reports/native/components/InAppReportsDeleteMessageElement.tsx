@@ -49,16 +49,16 @@ export default function DeleteMessageElement(message) {
     icon: null,
   };
   let obj = message(504);
-  const intl = message(1114).intl;
-  obj2.title = intl.string(message(1114).t.c9BHL9);
-  const intl2 = message(1114).intl;
-  obj2.disabledTitle = intl2.string(message(1114).t.AT2KSd);
-  const intl3 = message(1114).intl;
-  obj2.description = intl3.string(message(1114).t.dK8S0w);
+  const intl = message(1115).intl;
+  obj2.title = intl.string(message(1115).t.c9BHL9);
+  const intl2 = message(1115).intl;
+  obj2.disabledTitle = intl2.string(message(1115).t.AT2KSd);
+  const intl3 = message(1115).intl;
+  obj2.description = intl3.string(message(1115).t.dK8S0w);
   obj2.disabled = tmp[0];
   obj2.onPress = callback;
-  obj2.icon = jsx(message(4594).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(9180), {
+  obj2.icon = jsx(message(4597).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(9183), {
     title: null,
     disabledTitle: null,
     description: null,

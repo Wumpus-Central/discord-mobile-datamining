@@ -259,11 +259,11 @@ let closure_3 = [
 ];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11603);
+const SettingRendererConstants = fn(11607);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 },
   sliderTitle: { flexDirection: "row", justifyContent: "space-between" },
@@ -279,8 +279,8 @@ obj.defaultIcon = {
   alignItems: "center",
 };
 let size = {
-  width: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.REFRESH_MEDIUM_32],
-  height: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.REFRESH_MEDIUM_32],
+  width: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.REFRESH_MEDIUM_32],
+  height: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.REFRESH_MEDIUM_32],
   borderRadius: nativeDefault.radii.xl,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
@@ -393,16 +393,16 @@ let closure_20 = noop.memo((useSelectedGuildId) => {
   const items1 = [GuildStore];
   const stateFromStores = selectedGuildId(504).useStateFromStores(items1, () => GuildStore.getGuild(selectedGuildId));
   if (selectedGuildId === closure_12) {
-    const intl2 = tmp3(1114).intl;
-    let stringResult = intl2.string(tmp3(1114).t.OMVg25);
+    const intl2 = tmp3(1115).intl;
+    let stringResult = intl2.string(tmp3(1115).t.OMVg25);
   } else {
     stringResult = undefined;
     if (stateFromStores != null) {
       stringResult = stateFromStores.name;
     }
     if (stringResult == null) {
-      const intl = tmp3(1114).intl;
-      stringResult = intl.string(tmp3(1114).t["XBwns+"]);
+      const intl = tmp3(1115).intl;
+      stringResult = intl.string(tmp3(1115).t["XBwns+"]);
     }
   }
   dependencyMap = stringResult;
@@ -594,7 +594,7 @@ let closure_26 = noop.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(14782).useHighlightSettingItem(setting);
+  let highlightSettingItem = trailing(14792).useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
   if (useTrailing != null) {
@@ -636,18 +636,18 @@ let closure_26 = noop.memo((arg0) => {
   let tmp11Result = null;
   if (null != IconComponent) {
     const obj3 = { IconComponent, variant };
-    tmp11Result = closure_14(tmp(5686).TableRow.Icon, obj3);
+    tmp11Result = closure_14(tmp(5690).TableRow.Icon, obj3);
   }
   obj2.icon = tmp11Result;
   let tmp11Result2 = null;
   if (null != trailing) {
     const obj4 = { text: trailing };
-    tmp11Result2 = closure_14(tmp(5686).TableRow.TrailingText, obj4);
+    tmp11Result2 = closure_14(tmp(5690).TableRow.TrailingText, obj4);
   }
   obj2.trailing = tmp11Result2;
   obj2.start = start;
   obj2.end = end;
-  const children = [closure_14(trailing(5686).TableRow, obj2)];
+  const children = [closure_14(trailing(5690).TableRow, obj2)];
   if (highlightSettingItem) {
     const obj5 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj5);

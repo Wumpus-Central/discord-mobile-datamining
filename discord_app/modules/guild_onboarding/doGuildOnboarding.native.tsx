@@ -1,9 +1,9 @@
 // discord_app/modules/guild_onboarding/doGuildOnboarding.native.tsx
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
-import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import _mod7201 from "../../../_runtime/metro/07201__.js";
+import _mod7205 from "../../../_runtime/metro/07205__.js";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
@@ -11,7 +11,7 @@ import GuildOnboardingStore from "GuildOnboardingStore.tsx";
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod7201));
+  return JSON.parse(JSON.stringify(_mod7205));
 }
 let closure_13 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
@@ -216,7 +216,7 @@ function openAndWaitForOnboarding(guildId) {
       isFirstOpen: true,
     };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7224, dependencyMap.paths),
+      asyncRequireImpl(7228, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -232,7 +232,7 @@ function openAndWaitForOnboarding(guildId) {
       }
     });
     const pushLazyResult = ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7224, dependencyMap.paths),
+      asyncRequireImpl(7228, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -245,7 +245,7 @@ function openAndWaitForOnboarding(guildId) {
   });
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(7200).GUILD_ONBOARDING_MODAL_KEY;
+let closure_7 = fn(7204).GUILD_ONBOARDING_MODAL_KEY;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_8, Routes: closure_9 } = Constants);
 let closure_11 = {};

@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/native/components/DevToolsLazy.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import DeveloperExperimentStore from "../../../../stores/DeveloperExperimentStore.tsx";
 import DevToolsSettingsStore from "../../DevToolsSettingsStore.tsx";
@@ -11,58 +11,14 @@ const jsx = fn(21).jsx;
 let items = [
   {
     input: "o",
-    modifierFlags: fn(14667).KeyModifierFlags.keyModifierControl,
+    modifierFlags: fn(14677).KeyModifierFlags.keyModifierControl,
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      return (async () => {
-        if (c0 === 2) {
-          c0 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c0 = 2;
-            if (0 === c1) {
-              if (arg0 === 1) {
-                c0 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c0 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                c1 = 1;
-                c0 = 1;
-                const obj4 = { value: require("asyncRequireImpl")(paths[7], paths.paths), done: false };
-                return obj4;
-              }
-            } else if (arg0 === 1) {
-              c0 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c0 = 3;
-              const obj = { value, done: true };
-              return obj;
-            } else {
-              value.navigateToDevTools();
-              c0 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } catch (tmp8) {
-            c0 = tmp;
-            throw tmp8;
-          }
-        }
-      })();
+      asyncRequireImpl(14679, dependencyMap.paths).then((navigateToDevTools) => {
+        navigateToDevTools.navigateToDevTools();
+      });
+      return true;
     },
   },
 ];
@@ -88,10 +44,10 @@ export default function DevToolsLazy() {
     obj = PlatformUtils;
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(14667).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14677).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(16022).default, {});
+      return jsx(tmp(16035).default, {});
     }
   }
   return null;

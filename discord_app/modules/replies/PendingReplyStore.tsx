@@ -38,8 +38,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getPendingReply"] = function getPendingReply(id) {
   return dependencyMap[id];
 };
-prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(channelId) {
-  return closure_7[channelId];
+prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(c0) {
+  return closure_7[c0];
 };
 PendingReplyStore.displayName = "PendingReplyStore";
 PendingReplyStore.persistKey = "PendingReplyStore";

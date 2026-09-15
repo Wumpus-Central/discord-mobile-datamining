@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_5 = createStyles.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");
@@ -17,8 +17,8 @@ export default function CustomTypingIndicatorGlyph(config) {
   let obj = dependencyMap;
   const tmp = closure_5();
   const tmp2 = map;
-  dependencyMap = map(1392).getEffectiveCustomTypingIndicatorAnimation(map);
-  const obj2 = map(1392);
+  dependencyMap = map(1393).getEffectiveCustomTypingIndicatorAnimation(map);
+  const obj2 = map(1393);
   if (obj3.hasCustomTypingIndicatorEmojis(map.emojis)) {
     let items = [tmp.emojiRow];
     if (null == size) {
@@ -41,7 +41,7 @@ export default function CustomTypingIndicatorGlyph(config) {
     );
     <View style={null}>{null}</View>;
   } else {
-    return jsx(tmp2(1176).Ellipsis, {});
+    return jsx(tmp2(1177).Ellipsis, {});
   }
-  obj3 = map(1392);
+  obj3 = map(1393);
 }

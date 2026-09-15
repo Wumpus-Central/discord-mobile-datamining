@@ -1,13 +1,13 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationUtils.tsx
 import _mod12 from "../../../../_runtime/metro/00012__.js";
 import DurationsDefault from "../../../utils/Durations.tsx";
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(10224).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(10226).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1074);
 ({
   AnalyticEvents: hasOwnProperty,

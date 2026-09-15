@@ -9,8 +9,8 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
-const PlatformUtils = fn(1363);
+const createStyles = fn(4639);
+const PlatformUtils = fn(1364);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -52,7 +52,7 @@ export default function MessageGameIconActionSheet(applicationId) {
     const obj5 = { startExpanded: true, children: null };
     const obj6 = { uri: str };
     obj4.source = obj6;
-    const items1 = [closure_6(tmp2(1176).Icon, obj4)];
+    const items1 = [closure_6(tmp2(1177).Icon, obj4)];
     const obj7 = { style: tmp.gameDescriptionWrapper, children: null };
     const obj8 = {
       style: tmp.timestamp,
@@ -60,22 +60,22 @@ export default function MessageGameIconActionSheet(applicationId) {
       color: "text-muted",
       children: applicationId.messageTimestamp,
     };
-    const items2 = [closure_6(tmp2(4632).Text, obj8)];
+    const items2 = [closure_6(tmp2(4635).Text, obj8)];
     const obj9 = { variant: "text-sm/medium", children: null };
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1115).intl;
     const obj10 = { applicationName: stateFromStores.name };
-    const items3 = [intl.format(tmp2(1114).t.J3s8JP, obj10), " "];
-    const intl2 = tmp2(1114).intl;
+    const items3 = [intl.format(tmp2(1115).t.J3s8JP, obj10), " "];
+    const intl2 = tmp2(1115).intl;
     const obj11 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
-    items3[2] = intl2.format(tmp2(1114).t.BPDKoA, obj11);
+    items3[2] = intl2.format(tmp2(1115).t.BPDKoA, obj11);
     obj9.children = items3;
-    items2[1] = closure_7(tmp2(4632).Text, obj9);
+    items2[1] = closure_7(tmp2(4635).Text, obj9);
     obj7.children = items2;
     items1[1] = closure_7(View, obj7);
     obj3.children = items1;
     obj2.children = closure_7(View, obj3);
     obj5.children = closure_6(View, obj2);
-    tmp5Result = closure_6(tmp2(7253).BottomSheet, obj5);
+    tmp5Result = closure_6(tmp2(7257).BottomSheet, obj5);
   }
   return tmp5Result;
 }

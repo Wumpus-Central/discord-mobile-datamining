@@ -116,10 +116,10 @@ class BotTag {
   }
 }
 const View = fn(17).View;
-const BotTagTypes = fn(1348).BotTagTypes;
+const BotTagTypes = fn(1349).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   tag: {
     paddingLeft: 4,

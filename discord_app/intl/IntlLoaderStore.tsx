@@ -1,6 +1,6 @@
 // discord_app/intl/IntlLoaderStore.tsx
 import util from "index.native.tsx";
-import _modDef2027 from "../../_runtime/metro/02027__.js";
+import _modDef2028 from "../../_runtime/metro/02028__.js";
 import bg from "locale-data/date-fns.tsx";
 import formatjs from "locale-data/formatjs.tsx";
 import moment from "locale-data/moment.tsx";
@@ -71,7 +71,7 @@ let closure_5 = async function _setAppLocale(arg0) {
                       closure_0 = tmp4;
                       c1 = 1;
                       dependencyMap = 1;
-                      const obj6 = { value: closure_0(2037).preloadAllIntlMessageFiles(), done: false };
+                      const obj6 = { value: closure_0(2038).preloadAllIntlMessageFiles(), done: false };
                       return obj6;
                     }
                   } else if (1 === tmp4) {
@@ -85,7 +85,7 @@ let closure_5 = async function _setAppLocale(arg0) {
                     } else {
                       c1 = 2;
                       dependencyMap = 1;
-                      const obj8 = { value: closure_0(1153).loadAllMessagesInLocale(closure_128_0), done: false };
+                      const obj8 = { value: closure_0(1154).loadAllMessagesInLocale(closure_128_0), done: false };
                       return obj8;
                     }
                   } else if (arg0 === 1) {
@@ -211,7 +211,7 @@ let closure_6 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2027);
+            state.setLocaleData(_modDef2028);
             c3 = 3;
           }
         }
@@ -350,15 +350,15 @@ let closure_8 = async function _setMomentLocale(arg0) {
     }
   }
 };
-const identity = fn(1242);
+const identity = fn(1243);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  let obj = {
+  return {
     isLoading: false,
     inProgressLocale: "Boolean",
     error: "accessible",
-    localeData: _modDef2027,
+    localeData: _modDef2028,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
@@ -377,7 +377,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     },
   };
-  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/IntlLoaderStore.tsx");
@@ -408,7 +407,7 @@ export const setAppLocale = function setAppLocale() {
 export const useLocaleData = function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2027;
+    tmp = _modDef2028;
   }
   return tmp;
 };

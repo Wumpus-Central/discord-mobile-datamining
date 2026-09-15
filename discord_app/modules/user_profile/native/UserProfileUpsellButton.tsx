@@ -11,9 +11,9 @@ const Constants = fn(1074);
   AnalyticsSections: metroRequire,
   AnalyticEvents: closure_7,
 } = Constants);
-const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_10 = createStyles.createStyles({ nitroWheel: { marginRight: 2 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellButton.tsx");
@@ -21,9 +21,9 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default function UserProfileUpsellButton(analyticsObject) {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7265)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7269)().analyticsLocations;
   const tmp = closure_10();
-  let label = analyticsObject(7549).useNitroTrialCtaOverride("user_profile_upsell_button");
+  let label = analyticsObject(7553).useNitroTrialCtaOverride("user_profile_upsell_button");
   const items = [analyticsLocations, analyticsObject];
   const effect = noop.useEffect(() => {
     const obj2 = {
@@ -51,12 +51,12 @@ export default function UserProfileUpsellButton(analyticsObject) {
     label = analyticsObject.label;
   }
   if (label == null) {
-    const intl = tmp3(1114).intl;
-    label = intl.string(tmp3(1114).t.pj0XBN);
+    const intl = tmp3(1115).intl;
+    label = intl.string(tmp3(1115).t.pj0XBN);
   }
   obj2.text = label;
-  obj2.icon = jsx(analyticsObject(8785).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
-  return jsx(analyticsObject(5056).Button, {
+  obj2.icon = jsx(analyticsObject(8788).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
+  return jsx(analyticsObject(5059).Button, {
     onPress() {
       const obj2 = {
         initialUpsellKey: constants2.CUSTOM_PROFILES,

@@ -63,7 +63,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
           const obj3 = closure_132_1(closure_132_2[9]);
         } else if (closure_131_3 !== closure_132_10.AUTHORIZED) {
           const permission = closure_132_1(closure_132_2[11]).requestPermission((permission_granted) => {
-            action_location(1240).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
+            action_location(1241).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
               action_type,
               action_location,
               permission_granted,
@@ -154,9 +154,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(12540).EventActionType;
+const EventActionType = fn(12545).EventActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_10 = fn(4846).NotificationAuthorizationStatus;
+let closure_10 = fn(4849).NotificationAuthorizationStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NotificationPermissionUtil.tsx");
 

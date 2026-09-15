@@ -72,7 +72,7 @@ export default {
     },
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(4541).RPC_LOCAL_SCOPE,
+    scope: fn(4544).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {

@@ -14,7 +14,7 @@ import GuildSettingsRolesStore from "../../GuildSettingsRolesStore.tsx";
 
 require = fn;
 const UPLOAD_SMALL_SIZE = fn(1074).UPLOAD_SMALL_SIZE;
-const EmojiIntention = fn(1374).EmojiIntention;
+const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ["image/png", "image/jpeg"];
@@ -180,27 +180,27 @@ export default function RoleIconActionSheet(arg0) {
                   surrogates = closure_0.surrogates;
                 }
                 if (null != surrogates) {
-                  closure_0(17739).updateRoleIcon(surrogates, null, tmp26);
-                  const obj5 = closure_0(17739);
+                  closure_0(17777).updateRoleIcon(surrogates, null, tmp26);
+                  const obj5 = closure_0(17777);
                 }
               } else {
                 c6 = 1;
-                const tmp22 = closure_0(17739);
+                const tmp22 = closure_0(17777);
                 closure_4 = tmp22;
                 const updateRoleIcon = tmp22.updateRoleIcon;
                 closure_2 = surrogates;
                 c7 = 2;
                 c8 = 1;
-                const obj7 = { value: closure_0(17743).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
+                const obj7 = { value: closure_0(17781).fetchCustomEmojiAsPngDataUri(closure_0.id), done: false };
                 return obj7;
               }
             }
           } else {
             if (1 === tmp7) {
               c6 = 0;
-              const intl = closure_0(1114).intl;
-              closure_0(4334).presentError(intl.string(closure_0(1114).t.R0RpRX));
-              const obj2 = closure_0(4334);
+              const intl = closure_0(1115).intl;
+              closure_0(4337).presentError(intl.string(closure_0(1115).t.R0RpRX));
+              const obj2 = closure_0(4337);
             } else if (arg0 === 1) {
               c8 = 3;
               throw value;
@@ -234,7 +234,7 @@ export default function RoleIconActionSheet(arg0) {
       }
       return applyArgumentsResult;
     };
-    const result = guildId(11256).openEmojiPickerActionSheet(obj2, "stack");
+    const result = guildId(11260).openEmojiPickerActionSheet(obj2, "stack");
   };
   items3[1] = closure_7(TableRow.TableRow, obj5);
   let tmp5Result = null;

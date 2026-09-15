@@ -83,6 +83,14 @@ export const ClipSignalTypes = {
   SPEAKING: "speaking",
   SOUNDBOARD: "soundboard",
 };
+export const AutoclipsCapability = {
+  LAUGHTER: 1,
+  [1]: "LAUGHTER",
+  SHOUTING: 2,
+  [2]: "SHOUTING",
+  GAME_EVENTS: 4,
+  [4]: "GAME_EVENTS",
+};
 export const ClipsHardwareClassification = {
   UNKNOWN: "unknown",
   BELOW_MINIMUM: "below_minimum",

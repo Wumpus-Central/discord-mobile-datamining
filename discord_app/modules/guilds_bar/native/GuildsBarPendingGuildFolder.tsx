@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(16391);
+  let obj = id(16404);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(16391).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(16404).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -48,13 +48,13 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   ({ accessibilityActions, onAccessibilityAction } = memo);
   const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(4373).useSharedValue("" + id);
+  const sharedValue = id(4376).useSharedValue("" + id);
   const memo1 = noop.useMemo(
     () => ({
       onPress() {
-        const result = id(4604).triggerHapticFeedback(id(4604).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = id(4604);
-        const result1 = closure_1(5601).toggleGuildFolderExpand(closure_1_0);
+        const result = id(4607).triggerHapticFeedback(id(4607).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = id(4607);
+        const result1 = closure_1(5605).toggleGuildFolderExpand(closure_1_0);
       },
     }),
     items2,
@@ -71,27 +71,27 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "a",
     overState: "call",
-    config: 18971375874236673000000000000000000000000000000000000000000000000000000000000000000,
-    externalChildren: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007294274314011598,
-    children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009920482953812904,
+    config: true,
+    externalChildren: true,
+    children: true,
   };
-  const obj3 = id(4373);
+  const obj3 = id(4376);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
   obj4.onAccessibilityAction = onAccessibilityAction;
   obj4.selected = stateFromStores;
   obj4.styles = guildsBarAnimatedWrapperStyles;
-  const intl = id(1114).intl;
-  obj4.label = intl.string(id(1114).t["scsU+l"]);
+  const intl = id(1115).intl;
+  obj4.label = intl.string(id(1115).t["scsU+l"]);
   obj4.sharedId = sharedValue;
   obj4.config = memo1;
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(16390).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(16403).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(9159).HourglassIcon, {});
+  obj4.children = jsx(id(9162).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -104,8 +104,8 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     sharedId: null,
     cutouts: "a",
     overState: "call",
-    config: 18971375874236673000000000000000000000000000000000000000000000000000000000000000000,
-    externalChildren: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007294274314011598,
-    children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009920482953812904,
+    config: true,
+    externalChildren: true,
+    children: true,
   });
 });

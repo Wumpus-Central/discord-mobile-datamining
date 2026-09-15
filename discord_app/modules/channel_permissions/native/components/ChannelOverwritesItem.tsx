@@ -8,8 +8,8 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
 import ChannelPermissionsUtilsAll from "../../ChannelPermissionsUtils.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import _modDef9883 from "../../../../../_runtime/metro/09883__.js";
-import _modDef9884 from "../../../../../_runtime/metro/09884__.js";
+import _modDef9885 from "../../../../../_runtime/metro/09885__.js";
+import _modDef9886 from "../../../../../_runtime/metro/09886__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -27,8 +27,8 @@ function RemoveIcon(item) {
       onPress: null,
       children: null,
     };
-    let intl = item(1114).intl;
-    obj.accessibilityLabel = intl.string(item(1114).t.N86XcP);
+    let intl = item(1115).intl;
+    obj.accessibilityLabel = intl.string(item(1115).t.N86XcP);
     obj.onPress = function onPress() {
       if (null != onRemove) {
         return tmp(item);
@@ -59,8 +59,8 @@ function RemoveIcon(item) {
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_7(item(6717).CircleXIcon, obj2);
-    tmp3Result = closure_7(item(5204).PressableOpacity, obj);
+    obj.children = closure_7(item(6721).CircleXIcon, obj2);
+    tmp3Result = closure_7(item(5207).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -141,7 +141,7 @@ function MemberItem(arg0) {
   if (item.rowType === RowType.OWNER) {
     const obj3 = {
       size: native.Icon.Sizes.REFRESH_SMALL_16,
-      source: _modDef9883,
+      source: _modDef9885,
       disableColor: true,
       style: tmp.ownerIcon,
     };
@@ -190,7 +190,7 @@ function EmptyRoleItem(item) {
   const obj = { icon: null, label: null };
   const tmp = closure_9();
   obj.icon = React5(native.Icon, {
-    source: _modDef9884,
+    source: _modDef9886,
     color: item.colorString,
     size: native.IconSizes.MEDIUM,
     style: closure_9().roleIcon,
@@ -240,10 +240,10 @@ class ChannelOverwritesItem {
   }
 }
 const View = fn(17).View;
-const RowType = fn(8519).RowType;
+const RowType = fn(8522).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles({
   nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 },
   name: { paddingRight: 4 },

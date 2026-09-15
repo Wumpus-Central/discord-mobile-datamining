@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/CreditCardIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod12054 from "../../../../../../../_runtime/metro/12054__.js";
+import _mod12058 from "../../../../../../../_runtime/metro/12058__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const CreditCardIcon = function CreditCardIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12054, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12058, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

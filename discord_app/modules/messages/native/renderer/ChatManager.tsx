@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/renderer/ChatManager.tsx
-import _modDef1330 from "../../../../../_runtime/metro/01330__.js";
+import _modDef1331 from "../../../../../_runtime/metro/01331__.js";
 import getEmbeddedActivityKeyDefault from "../getEmbeddedActivityKey.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -158,7 +158,7 @@ prototype["determineChangeType"] = function determineChangeType(forceRender) {
             hasItem = updateMessageIds.has(message.id);
           }
           if (!hasItem) {
-            INSERT = _modDef1330(tmp, message) ? constants.NOOP : constants.UPDATE;
+            INSERT = _modDef1331(tmp, message) ? constants.NOOP : constants.UPDATE;
           }
         }
         INSERT = constants.UPDATE;

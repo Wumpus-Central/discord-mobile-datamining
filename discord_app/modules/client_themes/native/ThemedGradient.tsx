@@ -12,7 +12,7 @@ import GuildThemePresets from "../../guild_themes/GuildThemePresets.tsx";
 import useRoutedActiveGuildThemeDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05068_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05071_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
 
@@ -211,7 +211,7 @@ function CustomThemesGradient(arg0) {
   closure_129_2 = undefined;
   closure_129_3 = undefined;
   closure_129_0 = baseMix;
-  ({ width, height } = reduced(1477)());
+  ({ width, height } = reduced(1478)());
   if (mixAmount === undefined) {
     mixAmount = {};
   }
@@ -339,8 +339,8 @@ function CustomThemesGradient(arg0) {
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_6(reduced(5068), obj);
-    const tmp2Result = reduced(5068);
+    tmp10Result = closure_6(reduced(5071), obj);
+    const tmp2Result = reduced(5071);
   }
   return tmp10Result;
 }
@@ -380,7 +380,7 @@ function ActiveGuildThemeGradient(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({
   softenGradient: { flex: 1 },
   linearGradient: { flex: 1 },

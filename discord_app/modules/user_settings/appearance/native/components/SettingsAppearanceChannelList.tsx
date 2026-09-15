@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { channelPreviewGradient: null, channelPreviewCardContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -71,8 +71,8 @@ export default function ChannelListPreview(useGradientBackground) {
   }
   let obj = { style: items1, accessible: true, accessibilityRole: "image", accessibilityLabel: null, children: null };
   items1[2] = bgSurfaceHigh;
-  const intl = animatedStyles(1114).intl;
-  obj.accessibilityLabel = intl.string(animatedStyles(1114).t.iGxm3x);
+  const intl = animatedStyles(1115).intl;
+  obj.accessibilityLabel = intl.string(animatedStyles(1115).t.iGxm3x);
   let tmp7 = null;
   if (useGradientBackground) {
     let obj2 = { style: tmp.channelPreviewGradient, children: null };
@@ -92,7 +92,7 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants",
   };
-  items2[1] = closure_5(animatedStyles(9003).FlashList, obj4);
+  items2[1] = closure_5(animatedStyles(9006).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, {
     visible: isNitroLocked,
     theme: themes[themeIndex],

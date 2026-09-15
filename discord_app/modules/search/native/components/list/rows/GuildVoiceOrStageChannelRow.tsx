@@ -168,9 +168,9 @@ function GuildVoiceChannelExtras(arg0) {
   return <View style={tmp.subtitle}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(7982).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(7985).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({
   users: { marginTop: 4 },
   subtitle: { marginEnd: 16 },

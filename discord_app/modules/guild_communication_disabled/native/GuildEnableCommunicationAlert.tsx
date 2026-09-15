@@ -8,14 +8,14 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const GuildDisableCommunicationConstants = fn(2023);
+const GuildDisableCommunicationConstants = fn(2024);
 ({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: closure_7, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8 } =
   GuildDisableCommunicationConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_12 = createStyles.createStyles({
   wrapper: { padding: 16 },
   body: { paddingTop: 16 },
@@ -59,7 +59,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: v1(11973).setCommunicationDisabledDuration(guildId, userId), done: false };
+            const obj5 = { value: v1(11977).setCommunicationDisabledDuration(guildId, userId), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -71,10 +71,10 @@ export default function GuildEnableCommunicationAlert(guildId) {
           return obj;
         } else {
           const obj7 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
-          const intl = tmp4(1114).intl;
-          obj7.content = intl.string(tmp4(1114).t["/Mmbfv"]);
-          obj7.icon = v1(9696);
-          v1(4335).open(obj7);
+          const intl = tmp4(1115).intl;
+          obj7.content = intl.string(tmp4(1115).t["/Mmbfv"]);
+          obj7.icon = v1(9698);
+          v1(4338).open(obj7);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -86,25 +86,25 @@ export default function GuildEnableCommunicationAlert(guildId) {
   };
   const tmp2 = closure_12();
   dependencyMap = tmp2;
-  closure_3 = _slicedToArray(userId(8081)(userId, guildId), 1)[0];
-  userId(5073)(() => {
+  closure_3 = _slicedToArray(userId(8084)(userId, guildId), 1)[0];
+  userId(5076)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type, guild_id: guildId, other_user_id: userId });
   });
   let obj = {};
   const merged1 = Object.assign(merged);
-  let intl = guildId(1114).intl;
-  obj.title = intl.string(guildId(1114).t["+ZD3ou"]);
+  let intl = guildId(1115).intl;
+  obj.title = intl.string(guildId(1115).t["+ZD3ou"]);
   obj.style = tmp2.wrapper;
-  const intl2 = guildId(1114).intl;
-  obj.cancelText = intl2.string(guildId(1114).t["ETE/oC"]);
+  const intl2 = guildId(1115).intl;
+  obj.cancelText = intl2.string(guildId(1115).t["ETE/oC"]);
   let onClose;
   if (merged != null) {
     onClose = merged.onClose;
   }
   obj.onClose = onClose;
   obj.onCancel = guildId.onCancel;
-  const intl3 = tmp9(1114).intl;
-  obj.confirmText = intl3.string(guildId(1114).t.qXtNtS);
+  const intl3 = tmp9(1115).intl;
+  obj.confirmText = intl3.string(guildId(1115).t.qXtNtS);
   obj.onConfirm = function handleConfirmRemoveTimeout() {
     const self = this;
     const apply = closure_4.apply;
@@ -117,14 +117,14 @@ export default function GuildEnableCommunicationAlert(guildId) {
   };
   const obj2 = { style: tmp2.body, children: null };
   let obj3 = { style: tmp2.description, variant: "text-sm/medium", children: null };
-  const intl4 = tmp9(1114).intl;
+  const intl4 = tmp9(1115).intl;
   const user = UserStore.getUser(userId);
-  const tmp7 = userId(5075);
-  let str = userId(4788).getName(guildId, null, user);
+  const tmp7 = userId(5078);
+  let str = userId(4791).getName(guildId, null, user);
   if (str == null) {
     str = "";
   }
-  obj3.children = intl4.format(guildId(1114).t["t+abNU"], {
+  obj3.children = intl4.format(guildId(1115).t["t+abNU"], {
     username: str,
     countdown(arg0) {
       let num = 0;
@@ -135,14 +135,14 @@ export default function GuildEnableCommunicationAlert(guildId) {
       return closure_2_10(CountDownDefault, { style: countdown.countdown, deadline: num, withUnits: true });
     },
   });
-  const items = [closure_10(guildId(4632).Text, obj3)];
+  const items = [closure_10(guildId(4635).Text, obj3)];
   let obj5 = { style: null, variant: "text-sm/medium", children: null };
   const items1 = [,];
   ({ cta: arr2[0], description: arr2[1] } = tmp2);
   obj5.style = items1;
-  const intl5 = tmp9(1114).intl;
-  obj5.children = intl5.format(guildId(1114).t.KtENkK, { link });
-  items[1] = closure_10(guildId(4632).Text, obj5);
+  const intl5 = tmp9(1115).intl;
+  obj5.children = intl5.format(guildId(1115).t.KtENkK, { link });
+  items[1] = closure_10(guildId(4635).Text, obj5);
   obj2.children = items;
   obj.children = closure_11(View, obj2);
   return closure_10(tmp7, obj);

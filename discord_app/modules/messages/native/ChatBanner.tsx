@@ -79,7 +79,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let canUnarchiveThread = channel(7372).useCanUnarchiveThread(channel);
+  let canUnarchiveThread = channel(7376).useCanUnarchiveThread(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = {
     lineClamp: 4,
@@ -88,22 +88,22 @@ function ArchivedLockedThreadChatBanner(channel) {
     color: "text-default",
     children: null,
   };
-  let obj = channel(7372);
-  const intl = channel(1114).intl;
+  let obj = channel(7376);
+  const intl = channel(1115).intl;
   const string = intl.string;
-  const t = channel(1114).t;
+  const t = channel(1115).t;
   if (isForumPostResult) {
     let stringResult = string(t["833FDn"]);
   } else {
     stringResult = string(t.rEeodK);
   }
   obj3.children = stringResult;
-  const items1 = [closure_12(channel(4632).Text, obj3)];
+  const items1 = [closure_12(channel(4635).Text, obj3)];
   if (canUnarchiveThread) {
     let obj4 = { style: tmp.threadBannerButton, children: null };
     const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl2 = tmp3(1114).intl;
-    obj5.text = intl2.string(tmp3(1114).t["0dvvEi"]);
+    const intl2 = tmp3(1115).intl;
+    obj5.text = intl2.string(tmp3(1115).t["0dvvEi"]);
     obj5.onPress = function onPress() {
       const obj2 = {};
       const obj = AnalyticsUtilsDefault;
@@ -114,7 +114,7 @@ function ArchivedLockedThreadChatBanner(channel) {
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj2);
       ThreadActionCreatorsDefault.unarchiveThread(channel, false);
     };
-    obj4.children = closure_12(tmp3(5056).Button, obj5);
+    obj4.children = closure_12(tmp3(5059).Button, obj5);
     canUnarchiveThread = closure_12(closure_4, obj4);
   }
   items1[1] = canUnarchiveThread;
@@ -133,7 +133,7 @@ function LockedThreadChatBanner(channel) {
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let isThreadModerator = channel(7372).useIsThreadModerator(channel);
+  let isThreadModerator = channel(7376).useIsThreadModerator(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = {
     lineClamp: 4,
@@ -142,22 +142,22 @@ function LockedThreadChatBanner(channel) {
     color: "text-default",
     children: null,
   };
-  let obj = channel(7372);
-  const intl = channel(1114).intl;
+  let obj = channel(7376);
+  const intl = channel(1115).intl;
   const string = intl.string;
-  const t = channel(1114).t;
+  const t = channel(1115).t;
   if (isForumPostResult) {
     let stringResult = string(t.E7oO8u);
   } else {
     stringResult = string(t["V/JF2N"]);
   }
   obj3.children = stringResult;
-  const items1 = [closure_12(channel(4632).Text, obj3)];
+  const items1 = [closure_12(channel(4635).Text, obj3)];
   if (isThreadModerator) {
     let obj4 = { style: tmp.threadBannerButton, children: null };
     const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
-    const intl2 = tmp3(1114).intl;
-    obj5.text = intl2.string(tmp3(1114).t.zA9d1J);
+    const intl2 = tmp3(1115).intl;
+    obj5.text = intl2.string(tmp3(1115).t.zA9d1J);
     obj5.onPress = function onPress() {
       const obj2 = {};
       const obj = AnalyticsUtilsDefault;
@@ -168,7 +168,7 @@ function LockedThreadChatBanner(channel) {
       obj.track(constants3.CHANNEL_BANNER_CTA_CLICKED, obj2);
       ThreadActionCreatorsDefault.unlockThread(channel);
     };
-    obj4.children = closure_12(tmp3(5056).Button, obj5);
+    obj4.children = closure_12(tmp3(5059).Button, obj5);
     isThreadModerator = closure_12(closure_4, obj4);
   }
   items1[1] = isThreadModerator;
@@ -187,7 +187,7 @@ function NewMessagesChatBar(channel) {
     if (unreadCount <= 0) {
       tmp2 = null;
     } else {
-      XSmallBoldIcon(1114).t;
+      XSmallBoldIcon(1115).t;
       const isEstimatedResult = ReadStateStore.isEstimated(channel.id);
       const t = { style: stringResult.newMessageBar, children: null };
       const obj2 = {
@@ -197,12 +197,12 @@ function NewMessagesChatBar(channel) {
         children: null,
       };
       const obj3 = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
-      const intl = XSmallBoldIcon(1114).intl;
+      const intl = XSmallBoldIcon(1115).intl;
       const obj4 = { count: unreadCount, timestamp: channel.oldestUnreadTimestamp };
       obj3.children = intl.format(ReadStateStore.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"], obj4);
-      obj2.children = closure_12(XSmallBoldIcon(4632).Text, obj3);
-      const items1 = [closure_12(XSmallBoldIcon(5204).PressableOpacity, obj2)];
-      handleScrollToNewMessages = XSmallBoldIcon(5204).PressableOpacity;
+      obj2.children = closure_12(XSmallBoldIcon(4635).Text, obj3);
+      const items1 = [closure_12(XSmallBoldIcon(5207).PressableOpacity, obj2)];
+      handleScrollToNewMessages = XSmallBoldIcon(5207).PressableOpacity;
       const obj5 = {
         style: stringResult.newMessageBarCloseButton,
         accessibilityRole: "button",
@@ -210,8 +210,8 @@ function NewMessagesChatBar(channel) {
         onPress: null,
         children: null,
       };
-      const intl2 = XSmallBoldIcon(1114).intl;
-      stringResult = intl2.string(XSmallBoldIcon(1114).t.e6RscS);
+      const intl2 = XSmallBoldIcon(1115).intl;
+      stringResult = intl2.string(XSmallBoldIcon(1115).t.e6RscS);
       obj5.accessibilityLabel = stringResult;
       obj5.onPress = function onPress() {
         return ReadStateActionCreators.ack(channel.id, {
@@ -220,7 +220,7 @@ function NewMessagesChatBar(channel) {
           objectType: constants.ACK_MANUAL,
         });
       };
-      XSmallBoldIcon = XSmallBoldIcon(8077).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(8080).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;
@@ -235,7 +235,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11555).ChatOverlays;
+const ChatOverlays = fn(11559).ChatOverlays;
 const Constants = fn(1074);
 ({
   AnalyticsObjectTypes: closure_8,
@@ -245,7 +245,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   threadBannerContainer: {
     alignSelf: "stretch",

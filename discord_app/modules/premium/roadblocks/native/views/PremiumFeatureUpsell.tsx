@@ -5,7 +5,7 @@ import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05068_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05071_LinearGradient.js";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -19,64 +19,64 @@ function PremiumFeatureUpsellPill(featureName) {
     flag = true;
   }
   let loading;
-  let obj = featureName(9443);
-  const premiumUpsellConfig = obj.usePremiumUpsellConfig(featureName(10095).getUpsellType(featureName));
+  let obj = featureName(9445);
+  const premiumUpsellConfig = obj.usePremiumUpsellConfig(featureName(10097).getUpsellType(featureName));
   const useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = closure_14(useTier0UpsellContent);
   dependencyMap = tmp4;
-  let obj2 = featureName(10095);
+  let obj2 = featureName(10097);
   let mobileEmojiPickerUpsellRestyleEnabledForFeature = featureName(
-    7959,
+    7962,
   ).getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
   if (!mobileEmojiPickerUpsellRestyleEnabledForFeature) {
-    mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp(9451).getMobileStickerPickerUpsellRestyleEnabledForFeature(
+    mobileEmojiPickerUpsellRestyleEnabledForFeature = tmp(9453).getMobileStickerPickerUpsellRestyleEnabledForFeature(
       featureName,
       "native.PremiumFeatureUpsell",
     );
-    let tmpResult = tmp(9451);
+    let tmpResult = tmp(9453);
   }
   const tmp7 = useTier0UpsellContent ? closure_7.TIER_0 : closure_7.TIER_2;
   const fn = () => openPremiumUpsellActionSheetDefault(featureName);
-  const obj3 = featureName(7959);
-  const premiumTypeDisplayName = featureName(4294).getPremiumTypeDisplayName(tmp7);
-  if (featureName(7955).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
-    const intl5 = tmp(1114).intl;
+  const obj3 = featureName(7962);
+  const premiumTypeDisplayName = featureName(4297).getPremiumTypeDisplayName(tmp7);
+  if (featureName(7958).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+    const intl5 = tmp(1115).intl;
     const obj4 = { nitroTierName: premiumTypeDisplayName, onClick: fn };
-    let formatResult = intl5.format(tmp(1114).t["tw/SSq"], obj4);
-  } else if (tmp(7955).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
-    const intl4 = tmp(1114).intl;
+    let formatResult = intl5.format(tmp(1115).t["tw/SSq"], obj4);
+  } else if (tmp(7958).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+    const intl4 = tmp(1115).intl;
     const obj5 = { nitroTierName: premiumTypeDisplayName, onClick: fn };
-    formatResult = intl4.format(tmp(1114).t.gMVjeS, obj5);
-  } else if (tmp(7955).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
-    const intl3 = tmp(1114).intl;
+    formatResult = intl4.format(tmp(1115).t.gMVjeS, obj5);
+  } else if (tmp(7958).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
+    const intl3 = tmp(1115).intl;
     const obj6 = { nitroTierName: premiumTypeDisplayName, onClick: fn };
-    formatResult = intl3.format(tmp(1114).t.eontIh, obj6);
-  } else if (tmp(7955).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
-    const intl2 = tmp(1114).intl;
+    formatResult = intl3.format(tmp(1115).t.eontIh, obj6);
+  } else if (tmp(7958).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+    const intl2 = tmp(1115).intl;
     const obj7 = {
-      maxFileSize: tmp(4294).getMaxFileSizeForPremiumType(tmp7),
+      maxFileSize: tmp(4297).getMaxFileSizeForPremiumType(tmp7),
       nitroTierName: premiumTypeDisplayName,
       onClick: fn,
     };
-    formatResult = intl2.format(tmp(1114).t.zzyLEK, obj7);
-    const tmpResult4 = tmp(4294);
-  } else if (tmp(7955).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
-    const intl = tmp(1114).intl;
+    formatResult = intl2.format(tmp(1115).t.zzyLEK, obj7);
+    const tmpResult4 = tmp(4297);
+  } else if (tmp(7958).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+    const intl = tmp(1115).intl;
     const obj8 = { nitroTierName: premiumTypeDisplayName, onClick: fn };
-    formatResult = intl.format(tmp(1114).t.lyxfbj, obj8);
-  } else if (tmp(7955).EntitlementFeatureNames.APP_ICONS === featureName) {
-    const intl7 = tmp(1114).intl;
+    formatResult = intl.format(tmp(1115).t.lyxfbj, obj8);
+  } else if (tmp(7958).EntitlementFeatureNames.APP_ICONS === featureName) {
+    const intl7 = tmp(1115).intl;
     const obj9 = { onClick: fn };
-    formatResult = intl7.format(tmp(1114).t.x2dQxN, obj9);
+    formatResult = intl7.format(tmp(1115).t.x2dQxN, obj9);
   }
   const tmp10 = useTier0UpsellContent;
-  const tmpResult3 = featureName(4294);
-  if (featureName === featureName(7955).EntitlementFeatureNames.STICKERS_EVERYWHERE) {
+  const tmpResult3 = featureName(4297);
+  if (featureName === featureName(7958).EntitlementFeatureNames.STICKERS_EVERYWHERE) {
     let PREMIUM_UPSELL_FILE_UPLOAD = constants3.PREMIUM_UPSELL_STICKERS_EVERYWHERE;
   } else {
     PREMIUM_UPSELL_FILE_UPLOAD = constants3.PREMIUM_UPSELL_FILE_UPLOAD;
   }
-  const tmp11Result = useTier0UpsellContent(10096)(
+  const tmp11Result = useTier0UpsellContent(10098)(
     useTier0UpsellContent,
     premiumUpsellConfig.onViewAllPerks,
     PREMIUM_UPSELL_FILE_UPLOAD,
@@ -93,30 +93,30 @@ function PremiumFeatureUpsellPill(featureName) {
   if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
     let items1 = [tmp17];
     const obj12 = { style: tmp4.text, variant: "text-sm/medium", children: formatResult };
-    items1[1] = closure_12(tmp(4632).Text, obj12);
+    items1[1] = closure_12(tmp(4635).Text, obj12);
     obj11.children = items1;
     const items2 = [closure_13(closure_5, obj11)];
     const obj13 = {
       disabled: loading,
       shrink: true,
       style: tmp4.button,
-      size: tmp(1176).ButtonSizes.XSMALL,
+      size: tmp(1177).ButtonSizes.XSMALL,
       onPress: tmp11Result.onPress,
       text: null,
       color: null,
       renderIcon: null,
       renderLinearGradient: null,
     };
-    const intl6 = tmp(1114).intl;
+    const intl6 = tmp(1115).intl;
     const string = intl6.string;
-    const t = tmp(1114).t;
+    const t = tmp(1115).t;
     if (useTier0UpsellContent) {
       let stringResult = string(t.cM8bbx);
     } else {
       stringResult = string(t["8x0jKT"]);
     }
     obj13.text = stringResult;
-    obj13.color = tmp(1176).ButtonColors.GREEN;
+    obj13.color = tmp(1177).ButtonColors.GREEN;
     obj13.renderIcon = function renderIcon() {
       if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
         const obj2 = { size: "xxs", color: nativeDefault.colors.WHITE, style: null };
@@ -150,25 +150,25 @@ function PremiumFeatureUpsellPill(featureName) {
       };
       return closure_2_12(LinearGradientDefault, obj);
     };
-    items2[1] = closure_12(tmp(1176).ShinyButton, obj13);
+    items2[1] = closure_12(tmp(1177).ShinyButton, obj13);
     obj10.children = items2;
     return closure_13(closure_5, obj10);
   } else {
-    const obj14 = { source: tmp10(useTier0UpsellContent ? 10097 : 10093), style: tmp4.nitroWheel, disableColor: true };
-    closure_12(tmp(1176).Icon, obj14);
+    const obj14 = { source: tmp10(useTier0UpsellContent ? 10099 : 10095), style: tmp4.nitroWheel, disableColor: true };
+    closure_12(tmp(1177).Icon, obj14);
   }
-  const tmp11 = useTier0UpsellContent(10096);
+  const tmp11 = useTier0UpsellContent(10098);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: metroRequire, PremiumTypes: closure_7, PremiumUpsellTypes: closure_8 } = PremiumConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsPages: c10 } = Constants);
-const Gradients = fn(7535).Gradients;
+const Gradients = fn(7539).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -238,7 +238,7 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5055).withSpring, springStandard: fn(5059).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5058).withSpring, springStandard: fn(5062).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = {
   code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",
@@ -274,15 +274,15 @@ export default function PremiumFeatureUpsell(shouldShow) {
       let tmp6 = require;
       if (EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
         let APP_ICON_INLINE_UPSELL = constants.SOUNDBOARD_EVERYWHERE_INLINE_UPSELL;
-      } else if (tmp6(7955).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+      } else if (tmp6(7958).EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
         APP_ICON_INLINE_UPSELL = constants.EMOJI_EVERYWHERE_INLINE_UPSELL;
-      } else if (tmp6(7955).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
+      } else if (tmp6(7958).EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
         APP_ICON_INLINE_UPSELL = constants.STICKERS_EVERYWHERE_INLINE_UPSELL;
       } else {
-        if (tmp6(7955).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+        if (tmp6(7958).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
           APP_ICON_INLINE_UPSELL = constants.LARGER_FILE_UPLOAD_INLINE_UPSELL;
-        } else if (tmp6(7955).EntitlementFeatureNames.APP_ICONS !== featureName) {
-          if (tmp6(7955).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+        } else if (tmp6(7958).EntitlementFeatureNames.APP_ICONS !== featureName) {
+          if (tmp6(7958).EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
             APP_ICON_INLINE_UPSELL = constants.STREAM_QUALITY_UPSELL;
           }
         }
@@ -294,7 +294,7 @@ export default function PremiumFeatureUpsell(shouldShow) {
         location_stack: analyticsLocations,
         sku_id: null,
       };
-      tmp6 = tmp6(4294);
+      tmp6 = tmp6(4297);
       castPremiumSubscriptionAsSkuId = tmp6.castPremiumSubscriptionAsSkuId;
       obj2.sku_id = castPremiumSubscriptionAsSkuId(TIER_2.TIER_2);
       AnalyticsUtilsDefault.track(constants2.PREMIUM_UPSELL_VIEWED, obj2);

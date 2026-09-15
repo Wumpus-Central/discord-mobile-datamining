@@ -60,7 +60,7 @@ import ActivityLauncherStore from "../../../stores/views/ActivityLauncherStore.t
 import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
 
 require = fn;
-const PollsInteractionStore = fn(11561);
+const PollsInteractionStore = fn(11565);
 ({ useChannelPollInteractions: closure_27, useMessagePollInteractions: closure_28 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({
@@ -70,7 +70,7 @@ const Constants = fn(1074);
   MessageTypes: closure_61,
   Permissions: closure_62,
 } = Constants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_63, PremiumTypes: closure_64 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_65, jsxs: closure_66 } = jsxProd);

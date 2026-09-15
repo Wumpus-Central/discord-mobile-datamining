@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef14193 from "../../../../../_runtime/metro/14193__.js";
-import _modDef14194 from "../../../../../_runtime/metro/14194__.js";
-import _modDef14195 from "../../../../../_runtime/metro/14195__.js";
-import _modDef14196 from "../../../../../_runtime/metro/14196__.js";
-import _modDef14197 from "../../../../../_runtime/metro/14197__.js";
 import _modDef14198 from "../../../../../_runtime/metro/14198__.js";
 import _modDef14199 from "../../../../../_runtime/metro/14199__.js";
+import _modDef14200 from "../../../../../_runtime/metro/14200__.js";
+import _modDef14201 from "../../../../../_runtime/metro/14201__.js";
+import _modDef14202 from "../../../../../_runtime/metro/14202__.js";
+import _modDef14203 from "../../../../../_runtime/metro/14203__.js";
+import _modDef14204 from "../../../../../_runtime/metro/14204__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,15 +18,15 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const STATUS_PADDING = fn(1177).STATUS_PADDING;
+const STATUS_PADDING = fn(1178).STATUS_PADDING;
 const StatusTypes = fn(1074).StatusTypes;
-const ChannelAnimationConstants = fn(13160);
+const ChannelAnimationConstants = fn(13165);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: closure_9, CHANNEL_SPRING_CONFIG: c10 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let closure_13 = createStyles.createStyles({ statusIcon: { width: "100%", height: "100%" } });
-createStyles = fn(4636);
+createStyles = fn(4639);
 let closure_14 = createStyles.createStyles((items, arg1) => {
   const statusTypingDimensions = Status_StatusUtils.getStatusTypingDimensions(items);
   ({ height, dotSize } = statusTypingDimensions);
@@ -94,23 +94,23 @@ export default function Status(isMobileOnline) {
   obj.style = items;
   const obj2 = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = _modDef14193;
+    let tmp4Result = _modDef14198;
   } else if (flag2) {
-    tmp4Result = _modDef14194;
+    tmp4Result = _modDef14199;
   } else if (flag) {
-    tmp4Result = _modDef14195;
+    tmp4Result = _modDef14200;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef14196;
+    tmp4Result = _modDef14201;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef14197;
+    tmp4Result = _modDef14202;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef14199;
+        tmp4Result = _modDef14204;
       }
     }
-    tmp4Result = _modDef14198;
+    tmp4Result = _modDef14203;
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_11(React4, obj2);

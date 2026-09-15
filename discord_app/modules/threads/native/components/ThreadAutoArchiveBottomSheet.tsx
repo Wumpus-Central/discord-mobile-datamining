@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelFlags = fn(1964).ChannelFlags;
+const ChannelFlags = fn(1965).ChannelFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx");
@@ -29,7 +29,7 @@ export const AutoArchiveDurationOptions = noop.memo((channel) => {
     hasIcons: false,
     children: null,
   };
-  const intl = tmp(1114).intl;
+  const intl = tmp(1115).intl;
   obj2.accessibilityLabel = intl.string(require("util").t.H4mGfI);
   obj2.onChange = onSelectDuration;
   obj2.children = autoArchiveOptions.map((value) =>

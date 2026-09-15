@@ -82,7 +82,7 @@ export default function useCreateChannelSubmit(arg0) {
             if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
               const obj6 = {
                 id: closure_131_4,
-                type: closure_0(1894).PermissionOverwriteType.ROLE,
+                type: closure_0(1895).PermissionOverwriteType.ROLE,
                 deny: constants2.VIEW_CHANNEL,
                 allow: closure_2(1086).getFlag(0),
               };
@@ -120,9 +120,9 @@ export default function useCreateChannelSubmit(arg0) {
           if (3 === tmp8) {
             c6 = 1;
             closure_131_13 = closure_5;
-            const AccessibilityAnnouncer = closure_0(4488).AccessibilityAnnouncer;
-            const intl = closure_0(1114).intl;
-            AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t["0SbUzm"]));
+            const AccessibilityAnnouncer = closure_0(4491).AccessibilityAnnouncer;
+            const intl = closure_0(1115).intl;
+            AccessibilityAnnouncer.announce(intl.string(closure_0(1115).t["0SbUzm"]));
             const body = closure_131_13.body;
             let errors;
             if (body != null) {
@@ -151,10 +151,10 @@ export default function useCreateChannelSubmit(arg0) {
               id = closure_131_10.id;
               guild_id = closure_131_10.guild_id;
               if (null != id) {
-                const AccessibilityAnnouncer2 = closure_0(4488).AccessibilityAnnouncer;
-                const intl2 = closure_0(1114).intl;
+                const AccessibilityAnnouncer2 = closure_0(4491).AccessibilityAnnouncer;
+                const intl2 = closure_0(1115).intl;
                 const obj9 = { name: closure_131_5 };
-                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1114).t.Wke70b, obj9));
+                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1115).t.Wke70b, obj9));
                 if (closure_0 != null) {
                   tmp86(id, guild_id);
                 }

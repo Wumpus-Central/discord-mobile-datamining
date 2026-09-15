@@ -10,14 +10,14 @@ function OneWayToTwoWayNewTag(markAsDismissed) {
   const items = [markAsDismissed];
   const effect = noop.useEffect(() => markAsDismissed(ContentDismissActionType.UNKNOWN), items);
   const tmp = closure_8();
-  return closure_6(markAsDismissed(1176).NewTag, { containerStyle: closure_8().newContainer, variant: "text-xs/bold" });
+  return closure_6(markAsDismissed(1177).NewTag, { containerStyle: closure_8().newContainer, variant: "text-xs/bold" });
 }
 const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
@@ -68,7 +68,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   obj4.contentTypes = items;
   const items1 = [
     closure_6(SelectedDismissibleContentDefault, obj4),
-    closure_6(newIndicatorDismissibleContent(4632).Text, {
+    closure_6(newIndicatorDismissibleContent(4635).Text, {
       style: tmp.title,
       variant: "text-md/semibold",
       children: title,
@@ -79,7 +79,7 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   obj2.children = items2;
   const items3 = [
     closure_7(View, obj2),
-    closure_6(newIndicatorDismissibleContent(4632).Text, {
+    closure_6(newIndicatorDismissibleContent(4635).Text, {
       style: tmp.body,
       variant: "text-sm/medium",
       children: body,
@@ -87,10 +87,10 @@ export const OneWayToTwoWayLinkUpsell = function OneWayToTwoWayLinkUpsell(newInd
   ];
   const obj7 = { style: tmp.reconnectButton, children: null };
   const obj8 = { text: null, onPress: null };
-  const intl = newIndicatorDismissibleContent(1114).intl;
-  obj8.text = intl.string(newIndicatorDismissibleContent(1114).t.vD60Pv);
+  const intl = newIndicatorDismissibleContent(1115).intl;
+  obj8.text = intl.string(newIndicatorDismissibleContent(1115).t.vD60Pv);
   obj8.onPress = onPress;
-  obj7.children = closure_6(newIndicatorDismissibleContent(5056).Button, obj8);
+  obj7.children = closure_6(newIndicatorDismissibleContent(5059).Button, obj8);
   items3[2] = closure_6(View, obj7);
   obj.children = items3;
   return closure_7(View, obj);

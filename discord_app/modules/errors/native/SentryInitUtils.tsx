@@ -561,8 +561,8 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1230).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1230);
+    tmp25(1231).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1231);
   }
   const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
@@ -573,8 +573,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(7704).increment(obj6, true);
-  const tmp26Result = tmp26(7704);
+  tmp26(7707).increment(obj6, true);
+  const tmp26Result = tmp26(7707);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
@@ -599,7 +599,7 @@ let closure_11 = [
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1356);
+const CommonSentryInitUtils = fn(1357);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -666,13 +666,13 @@ export const initSentry = function initSentry() {
             tunnel: `/error-reporting-proxy/${str2}`,
             autoInitializeNativeSdk: false,
             beforeSend,
-            dist: "6417",
+            dist: "6425",
             dsn: SentryStaffDsn,
             environment: ReleaseChannel,
             tracesSampleRate: 0,
             sampleRate: 1,
             ignoreErrors,
-            release: "discord_android@347.0.0-2+347200",
+            release: "discord_android@347.1.0-2+347201",
             tracePropagationTargets: null,
             integrations: null,
             beforeBreadcrumb: null,
@@ -707,7 +707,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result10.init(obj3);
           const tmp14Result13 = _mod675;
-          _mod675.setTag("buildNumber", "6417");
+          _mod675.setTag("buildNumber", "6425");
           const tmp14Result14 = _mod675;
           _mod675.setTag("appVersion", constants.Version);
           const tmp14Result15 = _mod675;

@@ -8,9 +8,9 @@ import RowGeneratorStyleSheet from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import BuildOverrideStore2 from "../../../../../../build_overrides/BuildOverrideStore.tsx";
 import build_overrides_BuildOverrideUtils from "../../../../../../build_overrides/native/BuildOverrideUtils.tsx";
-import _modDef11939 from "../../../../../../../../_runtime/metro/11939__.js";
-import _modDef11940 from "../../../../../../../../_runtime/metro/11940__.js";
-import _modDef13350 from "../../../../../../../../_runtime/metro/13350__.js";
+import _modDef11943 from "../../../../../../../../_runtime/metro/11943__.js";
+import _modDef11944 from "../../../../../../../../_runtime/metro/11944__.js";
+import _modDef13355 from "../../../../../../../../_runtime/metro/13355__.js";
 import validateBuildOverrideDefault from "../../../../../../build_overrides/validateBuildOverride.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 
@@ -94,7 +94,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj3.titleColor = colors.titleColor;
               obj3.subtitle = id;
               obj3.subtitleColor = colors.subtitleColor;
-              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef13350).uri;
+              obj3.thumbnailUrl = Image.resolveAssetSource(_modDef13355).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";
@@ -139,9 +139,9 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     }
     obj5.subtitleColor = subtitleColor;
     if (tmp20Result.isThemeDark(theme)) {
-      let tmpResult2 = _modDef11939;
+      let tmpResult2 = _modDef11943;
     } else {
-      tmpResult2 = _modDef11940;
+      tmpResult2 = _modDef11944;
     }
     obj5.thumbnailUrl = Image.resolveAssetSource(tmpResult2).uri;
     obj5.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

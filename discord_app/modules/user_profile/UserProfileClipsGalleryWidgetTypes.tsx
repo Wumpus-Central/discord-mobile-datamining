@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx
-import _modDef1330 from "../../../_runtime/metro/01330__.js";
+import _modDef1331 from "../../../_runtime/metro/01331__.js";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -50,7 +50,7 @@ prototype["isEqual"] = function isEqual(clips) {
   let tmp = clips instanceof ClipsGalleryWidget;
   if (tmp) {
     const self = this;
-    tmp = _modDef1330(this.clips, clips.clips);
+    tmp = _modDef1331(this.clips, clips.clips);
   }
   return tmp;
 };

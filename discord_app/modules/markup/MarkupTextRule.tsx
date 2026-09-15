@@ -1,10 +1,10 @@
 // discord_app/modules/markup/MarkupTextRule.tsx
-import _modDef4333 from "../../../_runtime/metro/04333__.js";
+import _modDef4336 from "../../../_runtime/metro/04336__.js";
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;
 const obj = {};
-const merged = Object.assign(_modDef4333.defaultRules.text);
-const t = fn(4333);
+const merged = Object.assign(_modDef4336.defaultRules.text);
+const t = fn(4336);
 obj.match = t.anyScopeRegex(tmp2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/MarkupTextRule.tsx");

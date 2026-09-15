@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/InviteActivityButton.tsx
-import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import getCurrentUserPresenceActivityDefault from "../../utils/getCurrentUserPresenceActivity.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -26,12 +26,12 @@ export default noop.memo(function InviteActivityButton(applicationId) {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(17138, dependencyMap.paths),
+          asyncRequireImpl(17176, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           { activity: stateFromStores },
         );
       },
-      icon: stateFromStores(10160),
+      icon: stateFromStores(10162),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",
@@ -39,20 +39,20 @@ export default noop.memo(function InviteActivityButton(applicationId) {
       shrink: true,
       maxFontSizeMultiplier: 1,
     };
-    const intl = tmp(1114).intl;
-    obj2.text = intl.string(tmp(1114).t["OzOM/q"]);
-    const intl2 = tmp(1114).intl;
-    obj2.accessibilityLabel = intl2.string(tmp(1114).t["OzOM/q"]);
-    tmp4 = jsx(tmp(5056).Button, {
+    const intl = tmp(1115).intl;
+    obj2.text = intl.string(tmp(1115).t["OzOM/q"]);
+    const intl2 = tmp(1115).intl;
+    obj2.accessibilityLabel = intl2.string(tmp(1115).t["OzOM/q"]);
+    tmp4 = jsx(tmp(5059).Button, {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(17138, dependencyMap.paths),
+          asyncRequireImpl(17176, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           { activity: stateFromStores },
         );
       },
-      icon: stateFromStores(10160),
+      icon: stateFromStores(10162),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",

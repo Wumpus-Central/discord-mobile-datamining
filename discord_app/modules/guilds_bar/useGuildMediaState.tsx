@@ -34,7 +34,7 @@ function canConnectToChannel(type, afkChannelId) {
   }
   return canBasicChannelResult;
 }
-const isVoiceChannel = fn(1961).isVoiceChannel;
+const isVoiceChannel = fn(1962).isVoiceChannel;
 const BasicPermissions = fn(1074).BasicPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/useGuildMediaState.tsx");

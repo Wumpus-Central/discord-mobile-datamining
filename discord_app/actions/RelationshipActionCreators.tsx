@@ -87,7 +87,7 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(9172).ClearFriendRequestFilters;
+const ClearFriendRequestFilters = fn(9175).ClearFriendRequestFilters;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -103,7 +103,7 @@ let obj2 = {
       errorUxConfig = body.SHOW_ALWAYS;
     }
     [tmp3, tmp4] = str.split("#");
-    const HTTP = str(1270).HTTP;
+    const HTTP = str(1271).HTTP;
     const request = {
       url: closure_6.USER_RELATIONSHIPS(),
       body: null,
@@ -116,8 +116,8 @@ let obj2 = {
     request.body = body;
     request.context = context;
     const tmp2 = _slicedToArray(str.split("#"), 2);
-    request.rejectWithError = str(1270).rejectWithMigratedError();
-    const obj3 = str(1270);
+    request.rejectWithError = str(1271).rejectWithMigratedError();
+    const obj3 = str(1271);
     return HTTP.post(request).catch((error) => {
       handleRelationshipAddError(error, errorUxConfig, str);
     });
@@ -209,9 +209,9 @@ let obj2 = {
         }
       })
       .catch(() => {
-        const AccessibilityAnnouncer = closure_0(4488).AccessibilityAnnouncer;
-        const intl = closure_0(1114).intl;
-        AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t.n6Jo3E));
+        const AccessibilityAnnouncer = closure_0(4491).AccessibilityAnnouncer;
+        const intl = closure_0(1115).intl;
+        AccessibilityAnnouncer.announce(intl.string(closure_0(1115).t.n6Jo3E));
       });
   },
   updateRelationship(userId, c0) {
@@ -303,10 +303,10 @@ let obj2 = {
         obj2.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
       })
       .catch(() => {
-        channelId(8522).showFailedToast();
-        const AccessibilityAnnouncer = userId(4488).AccessibilityAnnouncer;
-        const intl = userId(1114).intl;
-        AccessibilityAnnouncer.announce(intl.string(userId(1114).t.n6Jo3E));
+        channelId(8525).showFailedToast();
+        const AccessibilityAnnouncer = userId(4491).AccessibilityAnnouncer;
+        const intl = userId(1115).intl;
+        AccessibilityAnnouncer.announce(intl.string(userId(1115).t.n6Jo3E));
       });
   },
   unignoreUser(id, newestAnalyticsLocation, id2) {
@@ -328,10 +328,10 @@ let obj2 = {
         AccessibilityAnnouncer.announce(intl.string(util.t.QlH5w6));
       })
       .catch(() => {
-        id2(8522).showFailedToast();
-        const AccessibilityAnnouncer = id(4488).AccessibilityAnnouncer;
-        const intl = id(1114).intl;
-        AccessibilityAnnouncer.announce(intl.string(id(1114).t.n6Jo3E));
+        id2(8525).showFailedToast();
+        const AccessibilityAnnouncer = id(4491).AccessibilityAnnouncer;
+        const intl = id(1115).intl;
+        AccessibilityAnnouncer.announce(intl.string(id(1115).t.n6Jo3E));
       });
   },
 };

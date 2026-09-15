@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import _mod675 from "../../../../_runtime/metro/00675__.js";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import Link from "../../../../_runtime/01484_Link.js";
+import Link from "../../../../_runtime/01485_Link.js";
 import parseURLDefault from "../../../utils/native/parseURL.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CustomMarkupAll from "../../markup/CustomMarkup.native.tsx";
@@ -65,14 +65,14 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = closure_29();
   let SMALL = dependencyMap;
-  const notifCenterV2MessagePreviewParser = message_channel_id(5076).getNotifCenterV2MessagePreviewParser(
+  const notifCenterV2MessagePreviewParser = message_channel_id(5079).getNotifCenterV2MessagePreviewParser(
     closure_27(),
     closure_28,
     roleStyle,
   );
-  const intl = item(1114).intl;
-  const stringResult = intl.string(item(1114).t.BOi07B);
-  const obj = message_channel_id(5076);
+  const intl = item(1115).intl;
+  const stringResult = intl.string(item(1115).t.BOi07B);
+  const obj = message_channel_id(5079);
   let message = item.message;
   let num;
   if (message != null) {
@@ -83,7 +83,7 @@ function ForYouMessagePreviewV2(item) {
   }
   let message2 = item.message;
   let type;
-  const obj2 = item(1384);
+  const obj2 = item(1385);
   if (message2 != null) {
     type = message2.type;
   }
@@ -124,22 +124,22 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(8147)(first);
+    const tmp15 = guild_id(8150)(first);
     let result = stringResult;
     if (null != tmp15) {
-      result = tmp2(7863).formatPollResultNotificationCenterText(tmp15);
-      const tmp2Result = tmp2(7863);
+      result = tmp2(7866).formatPollResultNotificationCenterText(tmp15);
+      const tmp2Result = tmp2(7866);
     }
   } else if (stickers.length > 0) {
-    const intl6 = tmp2(1114).intl;
-    result = intl6.string(tmp2(1114).t["7K5Lma"]);
+    const intl6 = tmp2(1115).intl;
+    result = intl6.string(tmp2(1115).t["7K5Lma"]);
     let ATTACHMENT = constants4.STICKER;
   } else if (tmp7) {
-    const intl5 = tmp2(1114).intl;
-    result = intl5.string(tmp2(1114).t["2v7kfl"]);
+    const intl5 = tmp2(1115).intl;
+    result = intl5.string(tmp2(1115).t["2v7kfl"]);
   } else if (hasFlagResult) {
-    const intl4 = tmp2(1114).intl;
-    result = intl4.string(tmp2(1114).t["6bhHrc"]);
+    const intl4 = tmp2(1115).intl;
+    result = intl4.string(tmp2(1115).t["6bhHrc"]);
     ATTACHMENT = constants4.VOICE_MESSAGE;
   } else {
     const message7 = item.message;
@@ -151,18 +151,18 @@ function ForYouMessagePreviewV2(item) {
       num2 = 0;
     }
     if (tmp2Result6.hasFlag(num2, constants2.IS_COMPONENTS_V2)) {
-      const intl3 = tmp2(1114).intl;
-      result = intl3.string(tmp2(1114).t.Xxm5i3);
+      const intl3 = tmp2(1115).intl;
+      result = intl3.string(tmp2(1115).t.Xxm5i3);
     } else {
       result = stringResult;
       if (tmp8) {
-        const intl2 = tmp2(1114).intl;
-        result = intl2.string(tmp2(1114).t.JAKsM8);
+        const intl2 = tmp2(1115).intl;
+        result = intl2.string(tmp2(1115).t.JAKsM8);
         ATTACHMENT = constants4.ATTACHMENT;
       }
       tmp8 = attachments.length > 0 || embeds1.length > 0;
     }
-    tmp2Result6 = tmp2(1384);
+    tmp2Result6 = tmp2(1385);
   }
   const message9 = item.message;
   let content;
@@ -178,7 +178,7 @@ function ForYouMessagePreviewV2(item) {
   }
   guild_id = item.guild_id;
   message_channel_id = item.message_channel_id;
-  hasFlagResult = item(1384).hasFlag(num, constants2.IS_VOICE_MESSAGE);
+  hasFlagResult = item(1385).hasFlag(num, constants2.IS_VOICE_MESSAGE);
   let items = [GuildStore];
   const stateFromStores = item(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
   const tmp2Result7 = item(504);
@@ -242,19 +242,19 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(7992).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
+  const items5 = [item(7995).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj6, { textColor: str2 })];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj5.children = items5;
-    items3[1] = closure_22(tmp2(4632).Text, obj5);
+    items3[1] = closure_22(tmp2(4635).Text, obj5);
     obj3.children = items3;
     return closure_22(closure_7, obj3);
   } else {
     const obj7 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11379);
+      let tmp29 = guild_id(11383);
       const obj8 = { source: tmp29, size: null, style: null };
-      SMALL = tmp2(1176).IconSizes.SMALL;
+      SMALL = tmp2(1177).IconSizes.SMALL;
       obj8.size = SMALL;
       messagePreviewIconV2 = messagePreviewIconV2.messagePreviewIconV2;
       obj8.style = messagePreviewIconV2;
@@ -263,12 +263,12 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8742);
+        tmp29 = guild_id(8745);
       }
     }
-    tmp29 = guild_id(10549);
+    tmp29 = guild_id(10553);
   }
-  const tmp2Result10 = item(7992);
+  const tmp2Result10 = item(7995);
 }
 function ApplicationName(applicationId) {
   applicationId = applicationId.applicationId;
@@ -322,36 +322,36 @@ const Constants = fn(1074);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(6697).NotificationTypes;
+const NotificationTypes = fn(6701).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(4632).TextStyleSheet["text-md/medium"]);
+const merged = Object.assign(fn(4635).TextStyleSheet["text-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(4632).TextStyleSheet["text-md/medium"]);
+const merged1 = Object.assign(fn(4635).TextStyleSheet["text-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj7 = {
   mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND },
 };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
 let closure_27 = createStyles.createStyles(obj10);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj13 = {
   container: { flex: 1 },
   row: null,
@@ -604,15 +604,15 @@ let closure_35 = noop.memo((item) => {
       obj3.icon = tmp6(notificationCenterItemAcked[42]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16511).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16524).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
-          const intl = tmp3(1114).intl;
-          obj7.content = intl.string(tmp3(1114).t.WDxhvB);
-          rowIndex(4335).open(obj7);
+          const intl = tmp3(1115).intl;
+          obj7.content = intl.string(tmp3(1115).t.WDxhvB);
+          rowIndex(4338).open(obj7);
           c4 = 3;
-          rowIndex(4335);
+          rowIndex(4338);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

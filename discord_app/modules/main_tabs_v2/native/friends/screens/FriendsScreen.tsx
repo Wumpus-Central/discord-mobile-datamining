@@ -8,7 +8,7 @@ import TableRow from "../../../../../design/components/TableRow/native/TableRow.
 import native from "../../../../../design/assets/native.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
-import _modDef16541 from "../../../../../../_runtime/metro/16541__.js";
+import _modDef16554 from "../../../../../../_runtime/metro/16554__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, flex: 1 },
   requestsButtonContainer: null,
@@ -91,7 +91,7 @@ export default function FriendsScreen() {
     const items = [];
     if (tmp2) {
       const obj = {
-        icon: _modDef16541,
+        icon: _modDef16554,
         IconComponent: SendMessageIcon.SendMessageIcon,
         iconVariant: "default",
         label: null,
@@ -140,20 +140,20 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj9 = dependencyMap;
       let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj8 = { source: _modDef16541 };
+      const obj8 = { source: _modDef16554 };
       obj7.icon = React5(TableRow.TableRow.Icon, obj8);
       obj7.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;
       obj7.label = intl5.string(util.t.fyA115);
       if (incoming + outgoing > 0) {
-        const intl2 = v1IEawz(1114).intl;
-        v1IEawz = v1IEawz(1114).t["1IEawz"];
+        const intl2 = v1IEawz(1115).intl;
+        v1IEawz = v1IEawz(1115).t["1IEawz"];
         obj9 = { incoming, outgoing };
         let formatToPlainStringResult = intl2.formatToPlainString(v1IEawz, obj9);
       } else {
-        const intl = v1IEawz(1114).intl;
+        const intl = v1IEawz(1115).intl;
         const obj10 = { spam: tmp6 };
-        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1114).t.e6BtLq, obj10);
+        formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1115).t.e6BtLq, obj10);
       }
       obj7.subLabel = formatToPlainStringResult;
       obj7.onPress = function onPress() {

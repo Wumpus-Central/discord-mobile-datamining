@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import router_utils from "../../routing/router_utils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import Link from "../../../../_runtime/01484_Link.js";
+import Link from "../../../../_runtime/01485_Link.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import ContactSyncUtils from "../../contact_sync/native/ContactSyncUtils.tsx";
@@ -235,8 +235,8 @@ let closure_18 = async function _getNextOnboardingStep() {
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
-const ContactPermissions = fn(12808).ContactPermissions;
-let closure_11 = fn(4846).NotificationAuthorizationStatus;
+const ContactPermissions = fn(12813).ContactPermissions;
+let closure_11 = fn(4849).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_13 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
@@ -401,7 +401,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9950).hasDeferredInvite,
+    shouldShowStep: fn(9952).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

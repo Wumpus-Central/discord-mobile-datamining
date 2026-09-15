@@ -5,7 +5,7 @@ import ReadStateStore from "../../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ReadState = fn(4651).ReadState;
+const ReadState = fn(4654).ReadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/markChannelUnread.tsx");
 

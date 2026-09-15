@@ -7,24 +7,24 @@ import SentryInitUtils from "../modules/errors/native/SentryInitUtils.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import AppEntryKeyContext from "../modules/window/native/AppEntryKeyContext.tsx";
-import Link from "../../_runtime/01484_Link.js";
+import Link from "../../_runtime/01485_Link.js";
 import ManaContext from "../../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx";
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import getInitialNavigationStateDefault from "../modules/main_tabs_v2/native/getInitialNavigationState.tsx";
-import Portal from "../../_runtime/04509_Portal.js";
+import Portal from "../../_runtime/04512_Portal.js";
 import useThemeDefault from "../hooks/useTheme.tsx";
 import ModalDispatchQueueDefault from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
 import useIsScreenLandscape from "../modules/screen/useIsScreenLandscape.native.tsx";
 import useNavigationTheme from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
 import WebViewContext from "../modules/activities/native/WebViewContext.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
-import MemoryRouter from "../../_runtime/12913_MemoryRouter.js";
+import MemoryRouter from "../../_runtime/12918_MemoryRouter.js";
 import RouteManagerDefault from "../modules/routing/RouteManager.tsx";
 import DiscordGestureHandlerRootViewDefault from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
 import getChannelDetailsFromRouteDefault from "../modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx";
 import MainNavigationLoggerDefault from "../modules/main_tabs_v2/helpers/MainNavigationLogger.tsx";
-import ReanimatedScreenProvider from "../../_runtime/14650_ReanimatedScreenProvider.js";
+import ReanimatedScreenProvider from "../../_runtime/14660_ReanimatedScreenProvider.js";
 import RootThemeContextProvider from "../modules/themes/RootThemeContextProvider.native.tsx";
 import AccessibilityPreferencesContextProviderDefault from "../modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx";
 import ErrorBoundaryDefault from "ErrorBoundary.tsx";
@@ -173,35 +173,35 @@ function AppNavigationContainerOrEmpty(arg0) {
   }
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(7431).handleHistoryStoreNavigationChange;
+let closure_7 = fn(7435).handleHistoryStoreNavigationChange;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, Routes: closure_12 } = Constants);
-const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
+const isStaticChannelRoute = fn(1965).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   flex: { flex: 1 },
   rootBackgroundColor: { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND },
 };
 let closure_16 = createStyles.createStyles(obj2);
-const ReanimatedRexport = fn(4373);
+const ReanimatedRexport = fn(4376);
 let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
-let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4373).ReanimatedLogLevel.error, strict: false });
+let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4376).ReanimatedLogLevel.error, strict: false });
 try {
-  fn(4988).enableFreeze();
-  let obj6 = fn(4988);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(14646).useTrackNavigatorScreenImpression };
-  fn(7139).setDesignConfig(obj8);
+  fn(4991).enableFreeze();
+  let obj6 = fn(4991);
+  let obj8 = { useTrackNavigatorScreenImpression: fn(14656).useTrackNavigatorScreenImpression };
+  fn(7143).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = {
     code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}",
   };
-  let obj7 = fn(7139);
+  let obj7 = fn(7143);
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(14649).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(14659).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -212,13 +212,13 @@ try {
         fn.__closure = obj2;
         fn.__workletHash = 8891274578898;
         fn.__initData = __initData;
-        appEntryKey(4373).runOnUI(fn)();
+        appEntryKey(4376).runOnUI(fn)();
         c22 = true;
-        const obj = appEntryKey(4373);
+        const obj = appEntryKey(4376);
       }
     }, []);
     const effect1 = noop.useEffect(() => {
-      let SplashScreenManager = appEntryKey(1363).isIOS();
+      let SplashScreenManager = appEntryKey(1364).isIOS();
       if (SplashScreenManager) {
         SplashScreenManager = NativeModules.SplashScreenManager;
       }
@@ -226,10 +226,10 @@ try {
         const SplashScreenManager2 = NativeModules.SplashScreenManager;
         SplashScreenManager2.hideSplashScreen();
       }
-      const obj = appEntryKey(1363);
+      const obj = appEntryKey(1364);
     }, []);
-    let obj = appEntryKey(14649);
-    const riveAppStatePlaybackExperiment = appEntryKey(16036).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(14659);
+    const riveAppStatePlaybackExperiment = appEntryKey(16049).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     let items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

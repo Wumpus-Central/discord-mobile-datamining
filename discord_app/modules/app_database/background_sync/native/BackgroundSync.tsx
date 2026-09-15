@@ -1093,14 +1093,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(1961);
+const ChannelRecord = fn(1962);
 ({ isPrivate: hasOwnProperty, isThread: metroRequire } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(5583);
-const ChannelStore = fn(1957);
-const EmojiStore = fn(5540);
-const GuildStore = fn(1979);
+const StickersStore = fn(5587);
+const ChannelStore = fn(1958);
+const EmojiStore = fn(5544);
+const GuildStore = fn(1980);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

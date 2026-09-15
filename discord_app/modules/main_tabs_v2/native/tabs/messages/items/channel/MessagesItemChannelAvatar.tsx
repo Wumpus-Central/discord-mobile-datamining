@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(10246).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(10248).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -48,7 +48,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
     muted = !channelSelected;
   }
   const tmpResult = closure_10(muted);
-  const REFRESH_MEDIUM_32 = channel(1176).AvatarSizes.REFRESH_MEDIUM_32;
+  const REFRESH_MEDIUM_32 = channel(1177).AvatarSizes.REFRESH_MEDIUM_32;
   dependencyMap = AuthenticationStore.getId();
   const items = [TypingStore];
   stateFromStores = channel(504).useStateFromStores(items, () => {
@@ -125,11 +125,11 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isVROnline: stateFromStores4,
         status: true,
         streaming: true,
-        style: "danger",
-        size: null,
+        style: "no-hide-descendants",
+        size: "redux.action",
         animate: null,
-        typing: null,
-        autoStatusCutout: "redux.action",
+        typing: "info",
+        autoStatusCutout: null,
       };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
@@ -141,7 +141,7 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
       obj7.size = REFRESH_MEDIUM_32;
       obj7.animate = stateFromStores1;
       obj7.typing = stateFromStores;
-      tmp11Result = jsx(tmp3(1176).Avatar, {
+      tmp11Result = jsx(tmp3(1177).Avatar, {
         user: stateFromStores2,
         avatarDecoration: stateFromStores2.avatarDecoration,
         guildId: "e",
@@ -149,11 +149,11 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isVROnline: stateFromStores4,
         status: true,
         streaming: true,
-        style: "danger",
-        size: null,
+        style: "no-hide-descendants",
+        size: "redux.action",
         animate: null,
-        typing: null,
-        autoStatusCutout: "redux.action",
+        typing: "info",
+        autoStatusCutout: null,
       });
     }
   }

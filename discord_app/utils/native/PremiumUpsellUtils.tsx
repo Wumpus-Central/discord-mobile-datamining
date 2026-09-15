@@ -1,16 +1,16 @@
 // discord_app/utils/native/PremiumUpsellUtils.tsx
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
 import PremiumUtils from "../PremiumUtils.tsx";
 import ChatInputUtils from "ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef9444 from "../../../_runtime/metro/09444__.js";
-import _modDef9445 from "../../../_runtime/metro/09445__.js";
 import _modDef9446 from "../../../_runtime/metro/09446__.js";
 import _modDef9447 from "../../../_runtime/metro/09447__.js";
 import _modDef9448 from "../../../_runtime/metro/09448__.js";
 import _modDef9449 from "../../../_runtime/metro/09449__.js";
+import _modDef9450 from "../../../_runtime/metro/09450__.js";
+import _modDef9451 from "../../../_runtime/metro/09451__.js";
 import PremiumFeaturesCards from "../../modules/user_settings/premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../components_native/premium/openPremiumModal.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -125,7 +125,7 @@ function usePremiumUpsellConfig(upsellType, analyticsLocations, analyticsLocatio
 }
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsObjects: metroRequire, UpsellTypes: closure_7 } = Constants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumTypes: closure_9 } = PremiumConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -205,7 +205,7 @@ export default {
       if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
         let obj = {
           importer() {
-            return asyncRequireImpl(9452, dependencyMap.paths).then((result) => {
+            return asyncRequireImpl(9454, dependencyMap.paths).then((result) => {
               closure_0 = result.default;
               return (arg0) => {
                 const obj = {};
@@ -235,7 +235,7 @@ export default {
 export const getUpsellItems = function getUpsellItems() {
   const obj = {
     key: constants3.GLOBAL_EMOJI,
-    image: _modDef9444,
+    image: _modDef9446,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -249,7 +249,7 @@ export const getUpsellItems = function getUpsellItems() {
   const items = [obj, , , , ,];
   const obj2 = {
     key: constants3.ANIMATED_EMOJI,
-    image: _modDef9445,
+    image: _modDef9447,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -263,7 +263,7 @@ export const getUpsellItems = function getUpsellItems() {
   items[1] = obj2;
   const obj3 = {
     key: constants3.ANIMATED_AVATAR,
-    image: _modDef9446,
+    image: _modDef9448,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -275,7 +275,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl9 = util.intl;
   obj3.description = intl9.format(util.t["Tso/Fn"], {});
   items[2] = obj3;
-  const obj4 = { key: constants3.UPLOAD, image: _modDef9447, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = { key: constants3.UPLOAD, image: _modDef9449, activeTitle: null, passiveTitle: null, description: null };
   const intl10 = util.intl;
   obj4.activeTitle = intl10.string(util.t["1EOZqw"]);
   const intl11 = util.intl;
@@ -287,7 +287,7 @@ export const getUpsellItems = function getUpsellItems() {
   obj5.maxUploadPremium = PremiumUtils.getMaxFileSizeForPremiumType(React7.TIER_2);
   obj4.description = intl12.format(util.t.DUT5IC, obj5);
   items[3] = obj4;
-  const obj7 = { key: constants3.BADGE, image: _modDef9448, activeTitle: null, passiveTitle: null, description: null };
+  const obj7 = { key: constants3.BADGE, image: _modDef9450, activeTitle: null, passiveTitle: null, description: null };
   const intl14 = util.intl;
   obj7.activeTitle = intl14.string(util.t["602BK4"]);
   const intl15 = util.intl;
@@ -297,7 +297,7 @@ export const getUpsellItems = function getUpsellItems() {
   items[4] = obj7;
   const obj8 = {
     key: constants3.APP_ICONS,
-    image: _modDef9449,
+    image: _modDef9451,
     activeTitle: null,
     passiveTitle: null,
     description: null,

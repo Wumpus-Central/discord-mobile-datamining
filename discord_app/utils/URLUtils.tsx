@@ -2,9 +2,9 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import Constants from "../Constants.tsx";
 import URLUtilsDefault from "URLUtils.tsx";
-import UrlAll from "../../_runtime/01367_Url.js";
+import UrlAll from "../../_runtime/01368_Url.js";
 import GlobalUtils from "GlobalUtils.tsx";
-import ip from "../../_runtime/01366_ip.js";
+import ip from "../../_runtime/01367_ip.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function isDiscordProxiedAssetUrl(url, arg1, arg2) {

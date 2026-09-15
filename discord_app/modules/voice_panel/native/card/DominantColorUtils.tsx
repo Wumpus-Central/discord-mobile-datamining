@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/card/DominantColorUtils.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import privDefault from "../../../../../_runtime/01437_priv.js";
+import privDefault from "../../../../../_runtime/01438_priv.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

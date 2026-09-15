@@ -5,11 +5,11 @@ import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05068_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05071_LinearGradient.js";
 import common_AlertDefault from "../../common/Alert.tsx";
 import actions_BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _mod13713 from "../../../../_runtime/metro/13713__.js";
+import _mod13718 from "../../../../_runtime/metro/13718__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -27,10 +27,10 @@ class PremiumPaymentGuildAnimation {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const Gradients = fn(7535).Gradients;
+const Gradients = fn(7539).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" },
   animation: { width: "auto", height: 112, alignSelf: "center" },
@@ -87,8 +87,8 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(4981).close();
-    const obj = closure_1(4981);
+    closure_1(4984).close();
+    const obj = closure_1(4984);
     actions_BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
@@ -124,9 +124,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj6 = { style: tmp.activatedImage, source: null };
   const tmp14 = LinearGradientDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13714);
+    let tmp8Result = tmp8(13719);
   } else {
-    tmp8Result = tmp8(13715);
+    tmp8Result = tmp8(13720);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_9(closure_6, obj6);

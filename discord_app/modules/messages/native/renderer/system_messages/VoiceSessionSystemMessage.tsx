@@ -26,13 +26,13 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
     return obj;
   });
   if (null == tmp3) {
-    const intl = tmp4(1114).intl;
+    const intl = tmp4(1115).intl;
     const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
     const obj4 = { message, author: messageAuthorWithProcessedColor, roleStyle };
     obj3.usernameOnClick = formatUsernameOnClickDefault(obj4);
-    let formatToPartsResult = intl.formatToParts(tmp4(1114).t.HzBfIN, obj3);
+    let formatToPartsResult = intl.formatToParts(tmp4(1115).t.HzBfIN, obj3);
   } else {
-    const intl2 = tmp4(1114).intl;
+    const intl2 = tmp4(1115).intl;
     const obj5 = {
       userCount: mapped.length + 1,
       username: messageAuthorWithProcessedColor.nick,
@@ -71,7 +71,7 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
     obj5.username3OnClick = tmp10;
     obj5.otherCount = mapped.length - 1;
     obj5.duration = tmp3;
-    formatToPartsResult = intl2.formatToParts(tmp4(1114).t.atbXuX, obj5);
+    formatToPartsResult = intl2.formatToParts(tmp4(1115).t.atbXuX, obj5);
   }
   const merged = Object.assign(createCommonMessageDefault(message));
   return { content: formatToPartsResult };

@@ -293,7 +293,7 @@ let closure_14 = async function _fetchChurnDiscountOffer() {
   }
   return value;
 };
-let closure_7 = fn(1373).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
+let closure_7 = fn(1374).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, PaymentGateways: c10 } = Constants);
 const size = fn(2);
@@ -416,7 +416,7 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1363);
+      postResultResult = postResult(1364);
     }
     const obj5 = {
       payment_gateway: GOOGLE,
@@ -428,7 +428,7 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
     _JSON = JSON;
     obj5.trigger_metadata = JSON.stringify(tmp5);
     obj5.trigger_uptime_app = UserOfferStore.getUptimeForTrigger();
-    const HTTP = postResult(1270).HTTP;
+    const HTTP = postResult(1271).HTTP;
     const request = { url: constants.USER_OFFER_TRIGGER, body: obj5, rejectWithError: true };
     postResult = HTTP.post(request);
     then = postResult.then;

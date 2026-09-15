@@ -58,7 +58,7 @@ function NotificationWrapper(notification) {
   }
 }
 const StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(10224);
+const InAppNotificationConstants = fn(10226);
 ({
   DEFAULT_ANIMATION_TIMING: closure_7,
   extrapolateConfig: closure_8,
@@ -71,9 +71,9 @@ const Constants = fn(1074);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = Constants);
 const jsx = fn(21).jsx;
 let obj = { duration: 200, easing: null };
-const Easing = fn(4373).Easing;
-obj.easing = Easing.in(fn(4373).Easing.ease);
-const createStyles = fn(4636);
+const Easing = fn(4376).Easing;
+obj.easing = Easing.in(fn(4376).Easing.ease);
+const createStyles = fn(4639);
 let closure_16 = createStyles.createStyles({
   safeAreaContainer: {
     position: "absolute",

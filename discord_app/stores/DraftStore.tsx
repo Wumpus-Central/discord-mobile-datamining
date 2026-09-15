@@ -281,8 +281,8 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };
-prototype["getDraft"] = function getDraft(id, ChannelMessage) {
-  id = AuthenticationStore.getId();
+prototype["getDraft"] = function getDraft(arg0, arg1) {
+  const id = AuthenticationStore.getId();
   if (null == id) {
     return "";
   } else {
@@ -292,8 +292,8 @@ prototype["getDraft"] = function getDraft(id, ChannelMessage) {
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
-    if (null != tmp3[id]) {
-      if (null != tmp6[ChannelMessage]) {
+    if (null != tmp3[arg0]) {
+      if (null != tmp6[arg1]) {
         return tmp8.draft;
       }
     }

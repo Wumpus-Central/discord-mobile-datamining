@@ -368,11 +368,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(1961);
+const ChannelRecord = fn(1962);
 ({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(1975);
+const GuildRecord = fn(1976);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
-const hasPermission = fn(2016).hasPermission;
+const hasPermission = fn(2017).hasPermission;
 const Constants = fn(1074);
 const Permissions = Constants.Permissions;
 ({
@@ -563,7 +563,7 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
           if (null == obj2[guild_id]) {
             let obj = {
               id: guild_id,
-              type: obj2(1894).PermissionOverwriteType.ROLE,
+              type: obj2(1895).PermissionOverwriteType.ROLE,
               allow: deserializeResult,
               deny: deserializeResult,
             };

@@ -166,46 +166,46 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   encrypted_nonce = closure_129_1.encrypted_nonce;
                   c3 = 2;
                   c4 = 1;
-                  let obj5 = { value: info(16087).decryptNonce(closure_130_8(), encrypted_nonce), done: false };
+                  let obj5 = { value: info(16100).decryptNonce(closure_130_8(), encrypted_nonce), done: false };
                   return obj5;
                 } else if ("pending_remote_init" === op) {
                   closure_1_9.succeed();
-                  const ComponentDispatch2 = closure_2_0(1109).ComponentDispatch;
+                  const ComponentDispatch2 = closure_2_0(1110).ComponentDispatch;
                   ComponentDispatch2.dispatch(constants.WAVE_EMPHASIZE);
                   c3 = 3;
                   c4 = 1;
-                  const obj6 = { value: info(16087).publicKeyFingerprint(closure_130_8()), done: false };
+                  const obj6 = { value: info(16100).publicKeyFingerprint(closure_130_8()), done: false };
                   return obj6;
                 } else if ("pending_login" === op) {
                   ticket = closure_129_1.ticket;
                   if (null == ticket) {
                     closure_1_11();
                   } else {
-                    let obj7 = { step: closure_2_0(16085).RemoteAuthStep.PENDING_LOGIN, ticket };
+                    let obj7 = { step: closure_2_0(16098).RemoteAuthStep.PENDING_LOGIN, ticket };
                     c7(obj7);
-                    const HTTP = closure_2_0(1270).HTTP;
+                    const HTTP = closure_2_0(1271).HTTP;
                     const request = { url: constants2.REMOTE_AUTH_LOGIN, body: null, oldFormErrors: true, rejectWithError: true };
                     let obj8 = { ticket };
                     request.body = obj8;
                     const postResult = HTTP.post(request);
                     HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F126456 */ function() { ... });
+                      closure_0 = closure_1_3(/* F126707 */ function() { ... });
                       return () => { ... };
                     })()).catch(() => closure_1_11());
                     const nextPromise = HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F126456 */ function() { ... });
+                      closure_0 = closure_1_3(/* F126707 */ function() { ... });
                       return () => { ... };
                     })());
                   }
                   c4 = 3;
                 } else if ("pending_ticket" === op) {
-                  const ComponentDispatch = closure_2_0(1109).ComponentDispatch;
+                  const ComponentDispatch = closure_2_0(1110).ComponentDispatch;
                   ComponentDispatch.dispatch(constants.WAVE_EMPHASIZE);
                   closure_130_1("remote auth handshake started, awaiting ticket/cancel.");
                   closure_129_6 = closure_129_1.encrypted_user_payload;
                   c3 = 4;
                   c4 = 1;
-                  const obj9 = { value: closure_2_0(16089).decodeEncodedUserRecord(closure_130_8(), closure_129_6), done: false };
+                  const obj9 = { value: closure_2_0(16102).decodeEncodedUserRecord(closure_130_8(), closure_129_6), done: false };
                   return obj9;
                 } else if ("cancel" === op) {
                   closure_130_1("remote auth handshake cancelled.");
@@ -285,7 +285,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   throw error;
                 } else {
                   closure_130_1("handshake complete awaiting remote auth.");
-                  const obj19 = { step: closure_2_0(16085).RemoteAuthStep.PENDING_REMOTE_INIT, fingerprint: closure_129_4 };
+                  const obj19 = { step: closure_2_0(16098).RemoteAuthStep.PENDING_REMOTE_INIT, fingerprint: closure_129_4 };
                   c7(obj19);
                   c4 = 3;
                   const obj20 = { value: undefined, done: true };
@@ -301,7 +301,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
               return obj21;
             } else {
               closure_129_7 = value;
-              let obj = { step: closure_2_0(16085).RemoteAuthStep.PENDING_TICKET, user: closure_129_7 };
+              let obj = { step: closure_2_0(16098).RemoteAuthStep.PENDING_TICKET, user: closure_129_7 };
               c7(obj);
               c4 = 3;
               const obj22 = { value: undefined, done: true };
@@ -354,7 +354,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
               closure_1 = tmp4;
               c2 = 1;
               c3 = 1;
-              const obj6 = { value: info(16087).generateRsaKeyPair(), done: false };
+              const obj6 = { value: info(16100).generateRsaKeyPair(), done: false };
               return obj6;
             }
           } else if (1 === tmp4) {
@@ -369,7 +369,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
               closure_129_3 = value;
               c2 = 2;
               c3 = 1;
-              const obj9 = { value: info(16087).serializePublicKey(closure_129_3), done: false };
+              const obj9 = { value: info(16100).serializePublicKey(closure_129_3), done: false };
               return obj9;
             }
           } else if (2 === tmp4) {
@@ -385,7 +385,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
               closure_0 = closure_129_1;
               c2 = 3;
               c3 = 1;
-              const obj11 = { value: info(16087).publicKeyFingerprint(closure_129_3), done: false };
+              const obj11 = { value: info(16100).publicKeyFingerprint(closure_129_3), done: false };
               return obj11;
             }
           } else if (arg0 === 1) {

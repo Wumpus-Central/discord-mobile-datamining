@@ -10,9 +10,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Platform = fn(17).Platform;
-const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: null };
   const size = {
@@ -27,7 +27,7 @@ let closure_6 = createStyles.createStyles((width) => {
   obj.emojiContainer = size;
   return obj;
 });
-createStyles = fn(4636);
+createStyles = fn(4639);
 let closure_7 = createStyles.createStyles((width, fontSize, lineHeight) => {
   const obj = { emojiImage: { width, height: width }, emojiText: null };
   const size = {
@@ -131,7 +131,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
     }
     obj5.name = str;
     if (null != animated.id) {
-      const emojiURL = getEmojiURL(1396);
+      const emojiURL = getEmojiURL(1397);
       getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj.id, animated } = animated);

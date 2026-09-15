@@ -20,9 +20,9 @@ function DoubleTapErrorToastIcon() {
   );
 }
 const View = fn(17).View;
-const EmojiDisabledReasons = fn(1374).EmojiDisabledReasons;
+const EmojiDisabledReasons = fn(1375).EmojiDisabledReasons;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   icon: {
     backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,

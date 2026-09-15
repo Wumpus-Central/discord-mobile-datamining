@@ -9,7 +9,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 
 require = fn;
-const GuildScheduledEventsConstants = fn(1963);
+const GuildScheduledEventsConstants = fn(1964);
 ({
   ENTITY_TYPES_REQUIRED_CHANNEL_ID: metroRequire,
   ENTITY_TYPES_REQUIRED_ENTITY_METADATA: closure_7,
@@ -97,9 +97,9 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     return (async () => {
-      await tmp5(4878).httpGetWithCountryCodeQuery({
+      await tmp5(4881).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENT(tmp5, tmp2),
-        rejectWithError: tmp5(1270).rejectWithMigratedError(),
+        rejectWithError: tmp5(1271).rejectWithMigratedError(),
       });
       const body = value.body;
       tmp2(573).dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: body });
@@ -109,9 +109,9 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(4878).httpGetWithCountryCodeQuery({
+      await tmp5(4881).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5),
-        rejectWithError: tmp5(1270).rejectWithMigratedError(),
+        rejectWithError: tmp5(1271).rejectWithMigratedError(),
       });
       const body = value.body;
       tmp2(573).dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: closure_129_0, guildScheduledEvents: body });
@@ -186,13 +186,13 @@ export default {
               return obj3;
             } else {
               let body;
-              const HTTP = tmp5(1270).HTTP;
+              const HTTP = tmp5(1271).HTTP;
               const request = { url: constants.USER_GUILD_EVENTS, query: null, rejectWithError: null };
               const obj4 = { guild_ids: null };
               const items = [tmp5];
               obj4.guild_ids = items;
               request.query = obj4;
-              request.rejectWithError = tmp5(1270).rejectWithMigratedError();
+              request.rejectWithError = tmp5(1271).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj5 = { value: HTTP.get(request), done: false };
@@ -569,7 +569,7 @@ export default {
               closure_128_0 = undefined;
               if (null != tmp5) {
                 if (null != closure_2) {
-                  const HTTP = tmp5(1270).HTTP;
+                  const HTTP = tmp5(1271).HTTP;
                   const request = {
                     url: closure_1_10.GUILD_EVENT_USERS(closure_2, tmp5, tmp2),
                     query: null,
@@ -577,7 +577,7 @@ export default {
                   };
                   const obj4 = { limit, with_member: true };
                   request.query = obj4;
-                  request.rejectWithError = tmp5(1270).rejectWithMigratedError();
+                  request.rejectWithError = tmp5(1271).rejectWithMigratedError();
                   dependencyMap = 1;
                   c3 = 1;
                   const obj5 = { value: HTTP.get(request), done: false };

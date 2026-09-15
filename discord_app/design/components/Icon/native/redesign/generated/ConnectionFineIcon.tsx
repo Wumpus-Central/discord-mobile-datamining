@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod16497 from "../../../../../../../_runtime/metro/16497__.js";
+import _mod16510 from "../../../../../../../_runtime/metro/16510__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ConnectionFineIcon = function ConnectionFineIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16497, color: ICON_FEEDBACK_POSITIVE, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16510, color: ICON_FEEDBACK_POSITIVE, style: color.style });
 };

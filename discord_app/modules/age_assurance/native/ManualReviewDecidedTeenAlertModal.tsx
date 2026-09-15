@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2978 from "../ManualReview.messages.js";
+import _modDef2979 from "../ManualReview.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,9 +13,9 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/ManualRe
 export default function ManualReviewDecidedTeenAlertModal() {
   let obj = { title: null, content: null, actions: null };
   let intl = util.intl;
-  obj.title = intl.string(_modDef2978.AA3xYb);
+  obj.title = intl.string(_modDef2979.AA3xYb);
   const intl2 = util.intl;
-  obj.content = intl2.format(_modDef2978["2+f8w1"], {
+  obj.content = intl2.format(_modDef2979["2+f8w1"], {
     contentAndSettingsHook(children, key) {
       return jsx(
         Text_Text.Text,
@@ -23,9 +23,9 @@ export default function ManualReviewDecidedTeenAlertModal() {
           variant: "text-md/normal",
           color: "text-link",
           onPress() {
-            const obj = closure_1_1(8529);
-            const intl = closure_1_0(1114).intl;
-            return obj.openUrl(closure_1_1(2024).getArticleURL(intl.string(closure_1_1(2978).agiNYw)));
+            const obj = closure_1_1(8532);
+            const intl = closure_1_0(1115).intl;
+            return obj.openUrl(closure_1_1(2025).getArticleURL(intl.string(closure_1_1(2979).agiNYw)));
           },
           children,
         },

@@ -1,5 +1,5 @@
 // discord_app/modules/application_commands/native/showExecutedApplicationCommandPopout.tsx
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -9,5 +9,5 @@ const result = size.fileFinishedImporting(
 
 export default function showExecutedApplicationCommandPopout(messageId) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(11751, dependencyMap.paths), "ExecutedCommandPopout:" + messageId.messageId, messageId);
+  obj.openLazy(asyncRequireImpl(11755, dependencyMap.paths), "ExecutedCommandPopout:" + messageId.messageId, messageId);
 }

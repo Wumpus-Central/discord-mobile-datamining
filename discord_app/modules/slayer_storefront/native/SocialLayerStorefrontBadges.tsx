@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = {
   exclusiveBadge: {
     flexDirection: "row",
@@ -24,7 +24,7 @@ const obj2 = {
   exclusiveBadgeText: null,
 };
 const obj4 = { textTransform: "uppercase", fontSize: nativeDefault.space.PX_12, lineHeight: null };
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;

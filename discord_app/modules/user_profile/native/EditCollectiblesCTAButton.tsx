@@ -12,9 +12,9 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 let closure_5 = fn(1076).CollectiblesMobileShopScreen;
-let closure_6 = fn(1607).MEDIA_PICKER_SEND_BUTTON_SPRING;
+let closure_6 = fn(1608).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({
   buttonRowContainer: {
     flexGrow: 0,

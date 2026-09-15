@@ -22,9 +22,9 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(1920);
+const Constants = fn(1921);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
-const ApplicationTypes = fn(1348).ApplicationTypes;
+const ApplicationTypes = fn(1349).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };
 let BasicApplicationRecord;
 class BasicApplicationRecord extends tmp2 {

@@ -12,23 +12,23 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {};
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.XSMALL_20] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1177).AvatarSizes.XSMALL_20] = {
   padding: nativeDefault.space.PX_4,
   avatarMarginRight: nativeDefault.space.PX_4,
   placeholderBarHeight: 6,
 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.XSMALL] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1177).AvatarSizes.XSMALL] = {
   padding: 6,
   avatarMarginRight: 6,
   placeholderBarHeight: 8,
 };
 let obj2 = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.NORMAL] = {
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1177).AvatarSizes.NORMAL] = {
   padding: nativeDefault.space.PX_8,
   avatarMarginRight: nativeDefault.space.PX_8,
   placeholderBarHeight: 14,
 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   obj = {
     container: {
@@ -113,7 +113,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   const obj4 = { style: tmp3.avatarContainer, children: null };
   const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
   obj4.children = hasOwnProperty(native.Avatar, {
-    source: importDefault(stateFromStores ? 8947 : 8948),
+    source: importDefault(stateFromStores ? 8950 : 8951),
     size: NORMAL,
     "aria-hidden": true,
     style: tmp3.avatar,

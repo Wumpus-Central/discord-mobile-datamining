@@ -37,16 +37,16 @@ let closure_5 = async function _readFile(arg0) {
           const tmp41 = (function getBaseDirectory(arg0) {
             if ("shared" === arg0) {
               if (!obj.isAndroid()) {
-                return closure_1_1(1150).getConstants().SharedDirPath;
+                return closure_1_1(1151).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1363);
+              obj = closure_1_0(1364);
             }
             if ("cache" === arg0) {
-              let DocumentsDirPath = closure_1_1(1150).getConstants().CacheDirPath;
-              const obj4 = closure_1_1(1150);
+              let DocumentsDirPath = closure_1_1(1151).getConstants().CacheDirPath;
+              const obj4 = closure_1_1(1151);
             } else {
-              DocumentsDirPath = closure_1_1(1150).getConstants().DocumentsDirPath;
-              const obj3 = closure_1_1(1150);
+              DocumentsDirPath = closure_1_1(1151).getConstants().DocumentsDirPath;
+              const obj3 = closure_1_1(1151);
             }
           })(closure_0);
           closure_131_2 = tmp41;

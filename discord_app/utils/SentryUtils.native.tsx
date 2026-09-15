@@ -213,7 +213,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: "A general error has occurred with Cardinal. See description for more information.",
+                  tags: "transport",
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

@@ -45,10 +45,10 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = { title, body, confirmText, confirmColor: tmp2(1176).ButtonColors.RED };
+            const obj4 = { title, body, confirmText, confirmColor: tmp2(1177).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj5 = { value: v2(4981).confirm(obj4), done: false };
+            const obj5 = { value: v2(4984).confirm(obj4), done: false };
             return obj5;
           }
         } else {
@@ -138,18 +138,18 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
   }
   if (true !== archived) {
     if (!tmp9) {
-      let intl = tmp(1114).intl;
+      let intl = tmp(1115).intl;
       let obj6 = { tierName: first };
-      const intl2 = tmp(1114).intl;
-      const formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.OuuIOY, obj6);
-      const intl3 = tmp(1114).intl;
-      const stringResult = intl2.string(tmp(1114).t.RL0wjm);
-      const intl4 = tmp(1114).intl;
-      closure_4 = intl4.string(tmp(1114).t.N5AIuE);
-      const intl5 = tmp(1114).intl;
-      _slicedToArray = intl5.string(tmp(1114).t.TEKiiP);
-      const intl6 = tmp(1114).intl;
-      stringResult3 = intl6.string(tmp(1114).t["170XOL"]);
+      const intl2 = tmp(1115).intl;
+      const formatToPlainStringResult = intl.formatToPlainString(tmp(1115).t.OuuIOY, obj6);
+      const intl3 = tmp(1115).intl;
+      const stringResult = intl2.string(tmp(1115).t.RL0wjm);
+      const intl4 = tmp(1115).intl;
+      closure_4 = intl4.string(tmp(1115).t.N5AIuE);
+      const intl5 = tmp(1115).intl;
+      _slicedToArray = intl5.string(tmp(1115).t.TEKiiP);
+      const intl6 = tmp(1115).intl;
+      stringResult3 = intl6.string(tmp(1115).t["170XOL"]);
       const items = [error];
       stringResult3(() => {
         let tmp2;
@@ -165,7 +165,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
       let obj7 = {
         headerText: formatToPlainStringResult,
         buttonText: stringResult,
-        descriptionText: intl3.string(tmp(1114).t["5/Jeg2"]),
+        descriptionText: intl3.string(tmp(1115).t["5/Jeg2"]),
         handleArchiveOrDelete() {
           const self = this;
           const apply = closure_14.apply;
@@ -182,23 +182,23 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
       return obj7;
     }
   }
-  const intl7 = tmp(1114).intl;
+  const intl7 = tmp(1115).intl;
   intl7.formatToPlainString(require("util").t.x2qwWL, { tierName: first });
-  const intl8 = tmp(1114).intl;
+  const intl8 = tmp(1115).intl;
   intl8.string(require("util").t.GMtG6p);
-  let intl9 = tmp(1114).intl;
+  let intl9 = tmp(1115).intl;
   let intl10 = intl9.string;
-  let string = tmp(1114).t;
+  let string = tmp(1115).t;
   if (undefined === subscriptionListing) {
     intl10(string.DHWKJS);
   } else {
     intl10(string.Y4KjUN);
   }
-  const intl11 = tmp(1114).intl;
-  closure_4 = intl11.string(tmp(1114).t["4H6RLl"]);
-  intl9 = tmp(1114).intl;
-  _slicedToArray = intl9.string(tmp(1114).t.uG6b1w);
-  intl10 = tmp(1114).intl;
+  const intl11 = tmp(1115).intl;
+  closure_4 = intl11.string(tmp(1115).t["4H6RLl"]);
+  intl9 = tmp(1115).intl;
+  _slicedToArray = intl9.string(tmp(1115).t.uG6b1w);
+  intl10 = tmp(1115).intl;
   string = intl10.string;
-  stringResult3 = string(tmp(1114).t.JoCdPC);
+  stringResult3 = string(tmp(1115).t.JoCdPC);
 }

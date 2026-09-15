@@ -13,8 +13,8 @@ const prototype = function InstantInviteManager() {
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
     const obj2 = { key: "GROUP_DM_ADD_ERROR", content: null };
-    const intl = applyArgumentsResult(1114).intl;
-    obj2.content = intl.string(applyArgumentsResult(1114).t["N/9OFy"]);
+    const intl = applyArgumentsResult(1115).intl;
+    obj2.content = intl.string(applyArgumentsResult(1115).t["N/9OFy"]);
     ToastActionCreatorsDefault.open(obj2);
   };
   return applyArgumentsResult;

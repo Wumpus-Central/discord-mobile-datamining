@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   scroll: { flex: 1 },
@@ -124,18 +124,18 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items8 = [closure_10(tmp2(17011), obj6)];
+      const items8 = [closure_10(tmp2(17049), obj6)];
       const obj7 = { channelId };
-      items8[1] = closure_10(tmp2(17013), obj7);
+      items8[1] = closure_10(tmp2(17051), obj7);
       obj5.children = items8;
       const items9 = [closure_11(closure_5, obj5)];
       const obj8 = { style: null, children: null };
       const items10 = [tmp.footer];
-      const obj9 = { paddingBottom: tmp2(576).space.PX_8 + ref(1611)().bottom };
+      const obj9 = { paddingBottom: tmp2(576).space.PX_8 + ref(1612)().bottom };
       items10[1] = obj9;
       obj8.style = items10;
       const obj10 = { channel: stateFromStores };
-      obj8.children = closure_10(tmp2(12569), obj10);
+      obj8.children = closure_10(tmp2(12574), obj10);
       items9[1] = closure_10(first1, obj8);
       obj4.children = items9;
       tmp13Result = closure_11(tmp14, obj4);

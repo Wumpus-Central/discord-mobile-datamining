@@ -43,19 +43,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8307).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8310).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7265)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7269)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8307);
+  let obj = user(8310);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(13194).useGameFriendsForUser(user.id);
-  const tmp3Result = user(13194);
+  const gameFriendsForUser = user(13199).useGameFriendsForUser(user.id);
+  const tmp3Result = user(13199);
   const items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(4481).useName(user);
+  userDisplayName = tmp(4484).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -64,21 +64,21 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13259).UserClockIcon;
+          let UserPlusIcon = tmp3(13264).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4573).UserPlusIcon;
+          UserPlusIcon = tmp3(4576).UserPlusIcon;
         }
-        const intl = tmp3(1114).intl;
+        const intl = tmp3(1115).intl;
         const string = intl.string;
-        const t = tmp3(1114).t;
+        const t = tmp3(1115).t;
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let stringResult = string(t["fMm5q/"]);
         } else {
           stringResult = string(t["7815ae"]);
         }
-        const intl2 = tmp3(1114).intl;
+        const intl2 = tmp3(1115).intl;
         const string2 = intl2.string;
-        const t2 = tmp3(1114).t;
+        const t2 = tmp3(1115).t;
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
           let string2Result = string2(t2.H0Ql7N);
         } else {
@@ -117,7 +117,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   flexGrow: { flex: 1 },

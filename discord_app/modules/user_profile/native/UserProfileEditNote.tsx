@@ -8,7 +8,7 @@ const ScrollView = fn(17).ScrollView;
 const NOTE_MAX_LENGTH = fn(1074).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditNote.tsx");
@@ -56,10 +56,10 @@ export default function UserProfileEditNote(userId) {
             if (closure_5 == null) {
               str = "";
             }
-            const tmp2 = closure_1_1(11055);
+            const tmp2 = closure_1_1(11059);
             tmp2({
               hasEdits: str !== closure_6,
-              onHasEdits: closure_1_0(4502).dismissKeyboard,
+              onHasEdits: closure_1_0(4505).dismissKeyboard,
               resetPending() {
                 let str = closure_1_5;
                 if (closure_1_5 == null) {
@@ -76,7 +76,7 @@ export default function UserProfileEditNote(userId) {
             });
             const obj = {
               hasEdits: str !== closure_6,
-              onHasEdits: closure_1_0(4502).dismissKeyboard,
+              onHasEdits: closure_1_0(4505).dismissKeyboard,
               resetPending() {
                 let str = closure_1_5;
                 if (closure_1_5 == null) {

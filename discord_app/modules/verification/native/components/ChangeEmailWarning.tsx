@@ -8,11 +8,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(5765).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const hcArticle = fn(5769).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = {
   container: { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" },
   title: null,
@@ -32,8 +32,8 @@ const result = size.fileFinishedImporting("modules/verification/native/component
 export default function ChangeEmailWarning(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
   const tmp = closure_11();
-  const navigation = changeEmailReason(1483).useNavigation();
-  const obj = changeEmailReason(1483);
+  const navigation = changeEmailReason(1484).useNavigation();
+  const obj = changeEmailReason(1484);
   const items = [UserStore];
   const items1 = [navigation, changeEmailReason];
   const stateFromStores = changeEmailReason(504).useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -41,7 +41,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
   if (null != stateFromStores) {
     const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj4 = { style: tmp.container, children: null };
-    const items2 = [closure_9(tmp2(5773).TrafficConeSpotIllustration, {}), , ,];
+    const items2 = [closure_9(tmp2(5777).TrafficConeSpotIllustration, {}), , ,];
     const obj5 = {
       style: tmp.title,
       accessibilityRole: "header",
@@ -49,9 +49,9 @@ export default function ChangeEmailWarning(changeEmailReason) {
       color: "mobile-text-heading-primary",
       children: null,
     };
-    const intl = tmp2(1114).intl;
-    obj5.children = intl.string(tmp2(1114).t.hhR7gX);
-    items2[1] = closure_9(tmp2(4632).Text, obj5);
+    const intl = tmp2(1115).intl;
+    obj5.children = intl.string(tmp2(1115).t.hhR7gX);
+    items2[1] = closure_9(tmp2(4635).Text, obj5);
     const obj6 = {
       style: tmp.body,
       accessibilityRole: "header",
@@ -59,26 +59,26 @@ export default function ChangeEmailWarning(changeEmailReason) {
       color: "mobile-text-heading-primary",
       children: null,
     };
-    const intl2 = tmp2(1114).intl;
+    const intl2 = tmp2(1115).intl;
     const obj7 = { hcArticle };
-    const items3 = [intl2.format(tmp2(1114).t.rqWXUf, obj7), "\n\n"];
-    const intl3 = tmp2(1114).intl;
-    items3[2] = intl3.string(tmp2(1114).t["3LW10C"]);
+    const items3 = [intl2.format(tmp2(1115).t.rqWXUf, obj7), "\n\n"];
+    const intl3 = tmp2(1115).intl;
+    items3[2] = intl3.string(tmp2(1115).t["3LW10C"]);
     obj6.children = items3;
-    items2[2] = closure_10(tmp2(4632).Text, obj6);
+    items2[2] = closure_10(tmp2(4635).Text, obj6);
     const obj8 = { style: tmp.buttonContainer, children: null };
     const obj9 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
-    const intl4 = tmp2(1114).intl;
-    obj9.text = intl4.string(tmp2(1114).t.rwTBFs);
+    const intl4 = tmp2(1115).intl;
+    obj9.text = intl4.string(tmp2(1115).t.rwTBFs);
     obj9.onPress = tmp6;
-    const items4 = [closure_9(tmp2(5056).Button, obj9)];
+    const items4 = [closure_9(tmp2(5059).Button, obj9)];
     const obj10 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
-    const intl5 = tmp2(1114).intl;
-    obj10.text = intl5.string(tmp2(1114).t["ETE/oC"]);
+    const intl5 = tmp2(1115).intl;
+    obj10.text = intl5.string(tmp2(1115).t["ETE/oC"]);
     obj10.onPress = function onPress() {
       return navigation(dependencyMap[16]).close();
     };
-    items4[1] = closure_9(tmp2(5056).Button, obj10);
+    items4[1] = closure_9(tmp2(5059).Button, obj10);
     obj8.children = items4;
     items2[3] = closure_10(closure_4, obj8);
     obj4.children = items2;

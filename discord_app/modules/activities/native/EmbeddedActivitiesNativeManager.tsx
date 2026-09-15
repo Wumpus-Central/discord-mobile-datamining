@@ -3,7 +3,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
@@ -12,7 +12,7 @@ import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packa
 import getPostMessageJavaScriptDefault from "getPostMessageJavaScript.tsx";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
 import WebViewPostMessageTransportDefault from "../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
-import _modDef9696 from "../../../../_runtime/metro/09696__.js";
+import _modDef9698 from "../../../../_runtime/metro/09698__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
@@ -47,13 +47,13 @@ let closure_14 = async function _postMessageToWebView(arg0) {
   }
   return value;
 };
-let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+let closure_7 = fn(1921).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9 } = Constants);
-const TransportTypes = fn(4541).TransportTypes;
-const WebView = fn(8416);
+const TransportTypes = fn(4544).TransportTypes;
+const WebView = fn(8419);
 const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
@@ -267,7 +267,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   };
   const intl = util.intl;
   obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef9696;
+  obj2.icon = _modDef9698;
   ToastActionCreatorsDefault.open(obj2);
 };
 prototype["releaseWebView"] = function releaseWebView() {

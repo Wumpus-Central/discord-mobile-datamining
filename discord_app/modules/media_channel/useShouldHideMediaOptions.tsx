@@ -4,7 +4,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(1964).ChannelFlags;
+const ChannelFlags = fn(1965).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
 

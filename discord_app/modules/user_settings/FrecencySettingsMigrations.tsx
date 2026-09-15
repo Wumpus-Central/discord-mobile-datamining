@@ -432,6 +432,31 @@ let items = [
     },
     cleanup() {},
   },
+  {
+    version: 12,
+    run(favoriteSoundboardSounds) {
+      if (null == favoriteSoundboardSounds.favoriteSoundboardSounds) {
+        return false;
+      } else {
+        favoriteSoundboardSounds = favoriteSoundboardSounds.favoriteSoundboardSounds;
+        const soundIds = favoriteSoundboardSounds.soundIds;
+        let tmp3 = 0 === _modDef12.size(soundIds);
+        if (!tmp3) {
+          tmp3 = _modDef12.size(favoriteSoundboardSounds.orderedSoundIds) > 0;
+          const tmpResult = _modDef12;
+        }
+        let flag = !tmp3;
+        if (!tmp3) {
+          const items = [];
+          HermesBuiltin.arraySpread(soundIds, 0);
+          favoriteSoundboardSounds.favoriteSoundboardSounds.orderedSoundIds = items;
+          flag = true;
+        }
+        return flag;
+      }
+    },
+    cleanup() {},
+  },
 ];
 const result = size.fileFinishedImporting("modules/user_settings/FrecencySettingsMigrations.tsx");
 

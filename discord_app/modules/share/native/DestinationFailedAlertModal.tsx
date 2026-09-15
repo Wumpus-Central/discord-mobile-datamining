@@ -56,11 +56,11 @@ function FailedUserRow(user) {
       user,
       guildId: "Boolean",
       status: true,
-      isMobileOnline: null,
-      isVROnline: null,
-      size: 200.75,
-      avatarDecoration: null,
-      autoStatusCutout: "\u{1F9D1}\u{1F3FE}\u200D\u{1F3EB}",
+      isMobileOnline: "done",
+      isVROnline: true,
+      size: null,
+      avatarDecoration: "primary",
+      autoStatusCutout: null,
     };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
@@ -69,15 +69,15 @@ function FailedUserRow(user) {
     obj4.status = tmp13;
     obj4.isMobileOnline = tmp6;
     obj4.isVROnline = tmp7;
-    obj4.size = tmp2(1176).AvatarSizes.XSMALL;
+    obj4.size = tmp2(1177).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1176).Avatar, obj4)];
+    const items2 = [closure_10(tmp2(1177).Avatar, obj4)];
     const obj5 = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(4632).Text, obj5);
+    items2[1] = closure_10(tmp2(4635).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -98,13 +98,13 @@ function FailedChannelRow(channel) {
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
   const items1 = [
-    closure_10(channel(11134).GuildIconWithChannelType, {
+    closure_10(channel(11138).GuildIconWithChannelType, {
       "aria-label": "",
       guild: stateFromStores,
       channel,
-      size: channel(11134).GuildIconWithChannelTypeSizes.SMALL_32,
+      size: channel(11138).GuildIconWithChannelTypeSizes.SMALL_32,
     }),
-    closure_10(channel(4632).Text, {
+    closure_10(channel(4635).Text, {
       style: tmp.label,
       variant: "text-md/medium",
       lineClamp: 1,
@@ -155,7 +155,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     borderWidth: 1,

@@ -1,6 +1,6 @@
 // discord_app/modules/markup/BioMarkupUtils.tsx
-import privDefault from "../../../_runtime/01437_priv.js";
-import _modDef4333 from "../../../_runtime/metro/04333__.js";
+import privDefault from "../../../_runtime/01438_priv.js";
+import _modDef4336 from "../../../_runtime/metro/04336__.js";
 import MarkupReactRulesDefault from "MarkupReactRules.native.tsx";
 import MarkupRulesDefault from "MarkupRules.tsx";
 import combineMarkupRules_mod from "combineMarkupRules.tsx";
@@ -13,7 +13,7 @@ const items = [
   MarkupRulesDefault.PROFILE_BIO_RULES,
   MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }),
 ];
-const MarkupReactRules = fn(4627);
+const MarkupReactRules = fn(4630);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;
@@ -69,8 +69,8 @@ export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(de
       const result = closure_3.set(description, tmp4);
       value = tmp4;
     }
-    const obj2 = _modDef4333;
-    return obj2.reactFor(_modDef4333.ruleOutput(importDefaultResultResult, "react"))(value);
+    const obj2 = _modDef4336;
+    return obj2.reactFor(_modDef4336.ruleOutput(importDefaultResultResult, "react"))(value);
   }
 };
 export const parseBioReactWithoutScrolling = MarkupParser.reactParserFor(combineMarkupRules(items1));

@@ -135,7 +135,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(1952).BatchInvocationManager(
+const batchInvocationManager = new fn(1953).BatchInvocationManager(
   function () {
     const self = this;
     const apply = closure_0.apply;

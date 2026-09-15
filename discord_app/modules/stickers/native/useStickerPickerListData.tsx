@@ -5,8 +5,8 @@ import age_gate_AgeGateUtils from "../../age_gate/native/AgeGateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let useStickerPickerStore = fn(10519).useStickerPickerStore;
-const StickerPickerConstants = fn(10402);
+let useStickerPickerStore = fn(10522).useStickerPickerStore;
+const StickerPickerConstants = fn(10404);
 ({
   MIN_MARGIN: hasOwnProperty,
   ROW_HEIGHT: metroRequire,
@@ -14,8 +14,8 @@ const StickerPickerConstants = fn(10402);
   LABEL_HEIGHT,
 } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
-let closure_9 = LABEL_HEIGHT + 2 * fn(1217).PADDING_VERTICAL;
-let closure_10 = fn(10435).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10435).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
+let closure_9 = LABEL_HEIGHT + 2 * fn(1218).PADDING_VERTICAL;
+let closure_10 = fn(10437).PREMIUM_UPSELL_SECTION_DIVIDER_HEIGHT + fn(10437).PREMIUM_UPSELL_SECTION_DIVIDER_MARGIN;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/native/useStickerPickerListData.tsx");
 
@@ -27,9 +27,20 @@ export default function useStickerPickerListData(containerWidth) {
   const stickerCategories = containerWidth(stickerFormats[5]).useStickerCategories(containerWidth.channel);
   const tmp2 = useStickerPickerStore((packToScrollTo) => packToScrollTo.packToScrollTo);
   useStickerPickerStore = tmp2;
-  let items = [containerWidth, stickerCategories, stickerFormats, searchResults, tmp2];
+  let obj = containerWidth(stickerFormats[5]);
+  const mobileStickerPickerUpsellRestyleEnabled = containerWidth(
+    stickerFormats[6],
+  ).useMobileStickerPickerUpsellRestyleEnabled("native.useStickerPickerListData");
+  let items = [
+    containerWidth,
+    stickerCategories,
+    stickerFormats,
+    searchResults,
+    tmp2,
+    mobileStickerPickerUpsellRestyleEnabled,
+  ];
   return stickerCategories.useMemo(() => {
-    function pushCategory(arr) {
+    function pushCategory(nitroLocked) {
       let str = intl;
       if (intl === undefined) {
         str = "";
@@ -42,10 +53,10 @@ export default function useStickerPickerListData(containerWidth) {
         const obj = { type: null, stickersByRow: null };
         obj.type = obj.NSFW;
         obj.stickersByRow = [];
-        arr = items3.push(obj);
+        items3.push(obj);
         num2.push(1);
       } else {
-        const found = arr.filter((format_type) => items1.includes(format_type.format_type));
+        const found = nitroLocked.filter((format_type) => items1.includes(format_type.format_type));
         const chunkResult = _modDef12.chunk(found, mapped2);
         const obj3 = { type: obj.STICKERS, stickersByRow: chunkResult };
         items3.push(obj3);
@@ -54,7 +65,9 @@ export default function useStickerPickerListData(containerWidth) {
       items1.push(str);
       items2.push(flag);
     }
-    const rounded = Math.floor((mapped2 - closure_1_5) / (closure_1_7 + closure_1_5));
+    const rounded = Math.floor(
+      (mapped2 - mobileStickerPickerUpsellRestyleEnabled) / (closure_1_7 + mobileStickerPickerUpsellRestyleEnabled),
+    );
     mapped2 = rounded;
     const items = [];
     let num2 = items;
@@ -63,8 +76,18 @@ export default function useStickerPickerListData(containerWidth) {
     const items3 = [];
     packToScrollToIndex = undefined;
     if (null != num2) {
-      const intl = containerWidth(stickerFormats[7]).intl;
-      pushCategory(tmp2, intl.string(containerWidth(stickerFormats[7]).t["zkoeq/"]));
+      let str = "";
+      if (!packToScrollToIndex) {
+        const intl = containerWidth(stickerFormats[8]).intl;
+        str = intl.string(containerWidth(stickerFormats[8]).t["zkoeq/"]);
+      }
+      if (tmp2.rest.length > 0) {
+        pushCategory(tmp2.rest, str);
+      }
+      if (tmp2.nitroLocked.length > 0) {
+        const intl2 = containerWidth(stickerFormats[8]).intl;
+        pushCategory(tmp2.nitroLocked, intl2.string(containerWidth(stickerFormats[8]).t.pAF6xE));
+      }
     } else {
       const mapped = items2.map((id, index) => {
         if (closure_4 === id.id) {

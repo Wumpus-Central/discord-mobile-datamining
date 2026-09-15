@@ -8,7 +8,7 @@ import ForumSearchStore from "../ForumSearchStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({
   inputContainer: { flexGrow: 1, marginLeft: 8 },
   cancelButtonContainer: { paddingLeft: 8 },
@@ -56,8 +56,8 @@ export const ForumChannelSearchInput = noop.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   const tmp = closure_8();
-  const canSearchForumPostsByChannelId = channelId(13390).useCanSearchForumPostsByChannelId(channelId);
-  let obj = channelId(13390);
+  const canSearchForumPostsByChannelId = channelId(13395).useCanSearchForumPostsByChannelId(channelId);
+  let obj = channelId(13395);
   const items = [ForumSearchStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(
@@ -110,8 +110,8 @@ export const ForumChannelSearchInput = noop.memo((channelId) => {
         obj3.children = <tmp10 {...obj4} />;
         tmp8Result = <View {...obj3} />;
       } else {
-        const intl = tmp2(1114).intl;
-        const t = tmp2(1114).t;
+        const intl = tmp2(1115).intl;
+        const t = tmp2(1115).t;
         intl.string(tmp6 ? t["5h0QOP"] : t.Iy2gnS);
       }
     }

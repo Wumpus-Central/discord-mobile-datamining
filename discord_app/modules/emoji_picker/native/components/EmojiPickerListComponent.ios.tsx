@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(10419);
+const EmojiPickerListConstants = fn(10421);
 ({
   ROW_HEIGHT: closure_4,
   LABEL_HEIGHT: hasOwnProperty,
@@ -36,7 +36,7 @@ export default noop.forwardRef((paddingTop, arg1) => {
       if (require("useEmojiPickerData").EmojiPickerItemType.EMOJI_ROW !== type) {
         if (require("useEmojiPickerData").EmojiPickerItemType.EMOJI_ROW_NSFW !== type) {
           if (require("useEmojiPickerData").EmojiPickerItemType.FOOTER_UPSELL === type) {
-            arg0.size = require("EmojiPickerPremiumSearchUpsell").EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT;
+            arg0.size = require("PremiumExpressionPickerSearchUpsell").PREMIUM_EXPRESSION_PICKER_SEARCH_UPSELL_HEIGHT;
           }
         }
       }

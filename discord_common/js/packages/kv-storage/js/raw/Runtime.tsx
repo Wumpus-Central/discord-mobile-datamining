@@ -98,7 +98,7 @@ prototype["completeOperation"] = function completeOperation(value, timings, nowR
 prototype["initialize"] = function initialize() {
   const self = this;
   if (!this.initialized) {
-    const KV_RAW = self(1988).KV_RAW;
+    const KV_RAW = self(1989).KV_RAW;
     const obj = {
       status(handle) {
         return self.onStatus(handle);

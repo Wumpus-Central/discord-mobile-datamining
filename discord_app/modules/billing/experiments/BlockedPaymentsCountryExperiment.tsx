@@ -1,47 +1,24 @@
 // discord_app/modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx
-import useGeoForUserDefault from "../../premium/hooks/useGeoForUser.native.tsx";
-import createExperiment from "../../experiments/index.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = {
-  kind: "user",
-  id: "2022-03_block_russian_purchases",
-  label: "Block purchases based on country",
-  defaultConfig: { paymentsBlocked: false },
-  treatments: null,
-};
-const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];
-obj.treatments = items;
-let closure_2 = createExperiment.createExperiment(obj);
-const obj2 = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };
-const obj3 = { 1: null };
-obj3[1] = { enabled: true };
-obj2.variations = obj3;
-let closure_3 = ApexExperiment.createApexExperiment(obj2);
+const obj = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj.variations = obj2;
+let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
 
 export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
-  let enabled = closure_2.useExperiment({ location: "c519a9_1" }, { autoTrackExposure: false }).paymentsBlocked;
+  let enabled = closure_2.useConfig({ location: "c519a9_1" }).enabled;
   if (!enabled) {
-    enabled = closure_3.useConfig({ location: "c519a9_1" }).enabled;
-  }
-  if (!enabled) {
-    enabled = "RU" === useGeoForUserDefault().defaultBillingCountryCode;
+    enabled = "RU" === tmp;
   }
   return enabled;
 };
 export const useIsPaymentsBlocked = function useIsPaymentsBlocked() {
-  let enabled = closure_2.useExperiment({ location: "dc120b_3" }, { autoTrackExposure: false }).paymentsBlocked;
-  if (!enabled) {
-    enabled = closure_3.useConfig({ location: "dc120b_3" }).enabled;
-  }
-  return enabled;
+  return closure_2.useConfig({ location: "dc120b_3" }).enabled;
 };
 export const getIsPaymentsBlocked = function getIsPaymentsBlocked() {
-  let enabled = closure_2.getCurrentConfig({ location: "1ee357_1" }, { autoTrackExposure: false }).paymentsBlocked;
-  if (!enabled) {
-    enabled = closure_3.getConfig({ location: "1ee357_1" }).enabled;
-  }
-  return enabled;
+  return closure_2.getConfig({ location: "1ee357_1" }).enabled;
 };

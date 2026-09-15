@@ -8,7 +8,7 @@ import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = {
   width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT,

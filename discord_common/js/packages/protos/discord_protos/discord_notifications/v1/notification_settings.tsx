@@ -1,12 +1,12 @@
 // discord_common/js/packages/protos/discord_protos/discord_notifications/v1/notification_settings.tsx
-import _mod1186 from "../../../../../../../_runtime/metro/01186__.js";
+import _mod1187 from "../../../../../../../_runtime/metro/01187__.js";
 import user_settings_shared from "../../discord_users/v1/user_settings_shared.tsx";
 import wrappers from "../../../google/protobuf/wrappers.tsx";
 import mute from "../../common/v1/mute.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const MessageType = fn(1186).MessageType;
+const MessageType = fn(1187).MessageType;
 class UserNotificationSettings$Type extends MessageType {
   constructor() {
     items = [, , , , ,];
@@ -54,10 +54,10 @@ const prototype = UserNotificationSettings$Type.prototype;
 prototype["create"] = function create(arr) {
   const obj = { userId: "0", guilds: {}, version: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -103,7 +103,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -152,35 +152,35 @@ prototype["binaryReadMap4"] = function binaryReadMap4(guilds, pos, readUnknownFi
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(userId, tag, writeUnknownFields) {
   if ("0" !== userId.userId) {
-    tag.tag(1, _mod1186.WireType.Bit64).fixed64(userId.userId);
-    const tagResult = tag.tag(1, _mod1186.WireType.Bit64);
+    tag.tag(1, _mod1187.WireType.Bit64).fixed64(userId.userId);
+    const tagResult = tag.tag(1, _mod1187.WireType.Bit64);
   }
   if (userId.emailSettings) {
-    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
+    const tagResult1 = tag.tag(2, _mod1187.WireType.LengthDelimited);
     const joined = closure_3
       .internalBinaryWrite(
         userId.emailSettings,
-        tag.tag(2, _mod1186.WireType.LengthDelimited).fork(),
+        tag.tag(2, _mod1187.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
     const internalBinaryWriteResult = closure_3.internalBinaryWrite(
       userId.emailSettings,
-      tag.tag(2, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(2, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (userId.flags) {
     const UInt64Value = wrappers.UInt64Value;
-    const tagResult2 = tag.tag(6, _mod1186.WireType.LengthDelimited);
+    const tagResult2 = tag.tag(6, _mod1187.WireType.LengthDelimited);
     const joined1 = UInt64Value.internalBinaryWrite(
       userId.flags,
-      tag.tag(6, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(6, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult1 = UInt64Value.internalBinaryWrite(
       userId.flags,
-      tag.tag(6, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(6, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
@@ -188,11 +188,11 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(userId, tag, wri
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult3 = tag.tag(4, _mod1186.WireType.LengthDelimited);
+    let tagResult3 = tag.tag(4, _mod1187.WireType.LengthDelimited);
     let forkResult = tagResult3.fork();
-    let tagResult4 = forkResult.tag(1, _mod1186.WireType.Bit64);
+    let tagResult4 = forkResult.tag(1, _mod1187.WireType.Bit64);
     let fixed64Result1 = tagResult4.fixed64(nextResult);
-    let tagResult5 = tag.tag(2, _mod1186.WireType.LengthDelimited);
+    let tagResult5 = tag.tag(2, _mod1187.WireType.LengthDelimited);
     let forkResult1 = tagResult5.fork();
     let internalBinaryWriteResult2 = declarativeNotifSettingType.internalBinaryWrite(
       userId.guilds[nextResult],
@@ -204,24 +204,24 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(userId, tag, wri
     continue;
   }
   if (0 !== userId.version) {
-    tag.tag(5, _mod1186.WireType.Varint).uint32(userId.version);
-    const tagResult6 = tag.tag(5, _mod1186.WireType.Varint);
+    tag.tag(5, _mod1187.WireType.Varint).uint32(userId.version);
+    const tagResult6 = tag.tag(5, _mod1187.WireType.Varint);
   }
   if (userId.data) {
-    const tagResult7 = tag.tag(7, _mod1186.WireType.LengthDelimited);
+    const tagResult7 = tag.tag(7, _mod1187.WireType.LengthDelimited);
     const joined4 = items11
-      .internalBinaryWrite(userId.data, tag.tag(7, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields)
+      .internalBinaryWrite(userId.data, tag.tag(7, _mod1187.WireType.LengthDelimited).fork(), writeUnknownFields)
       .join();
     const internalBinaryWriteResult3 = items11.internalBinaryWrite(
       userId.data,
-      tag.tag(7, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(7, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, userId, tag);
@@ -269,7 +269,7 @@ class T {
 obj2.T = T;
 items[5] = obj2;
 let tmp6 = new "binaryReadMap4"("discord_protos.discord_notifications.v1.UserNotificationSettings", items, tmp4, tmp3);
-const MessageType2 = fn(1186).MessageType;
+const MessageType2 = fn(1187).MessageType;
 class EmailNotificationSettings$Type extends MessageType2 {
   constructor() {
     items = [];
@@ -282,10 +282,10 @@ const prototype2 = EmailNotificationSettings$Type.prototype;
 prototype2["create"] = function create(arr) {
   const obj = { categories: {} };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -319,7 +319,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -370,11 +370,11 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(categories, tag
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1187.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1186.WireType.LengthDelimited);
+    let tagResult1 = forkResult.tag(1, _mod1187.WireType.LengthDelimited);
     let stringResult = tagResult1.string(nextResult);
-    let tagResult2 = stringResult.tag(2, _mod1186.WireType.Varint);
+    let tagResult2 = stringResult.tag(2, _mod1187.WireType.Varint);
     let boolResult = tagResult2.bool(categories.categories[nextResult]);
     let joined = boolResult.join();
     continue;
@@ -382,7 +382,7 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(categories, tag
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, categories, tag);
@@ -399,7 +399,7 @@ const t = new T(
   tmp2,
 );
 let closure_3 = t;
-const MessageType3 = fn(1186).MessageType;
+const MessageType3 = fn(1187).MessageType;
 class UserNotificationSettingsData$Type extends MessageType3 {
   constructor() {
     items = [,];
@@ -420,10 +420,10 @@ const prototype3 = UserNotificationSettingsData$Type.prototype;
 prototype3["create"] = function create(arr) {
   const obj = { mutedGames: {} };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -464,7 +464,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -516,34 +516,34 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(mutedGames, tag
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
+    let tagResult = tag.tag(1, _mod1187.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
-    let tagResult1 = forkResult.tag(1, _mod1186.WireType.Bit64);
+    let tagResult1 = forkResult.tag(1, _mod1187.WireType.Bit64);
     let fixed64Result = tagResult1.fixed64(nextResult);
-    let tagResult2 = fixed64Result.tag(2, _mod1186.WireType.Varint);
+    let tagResult2 = fixed64Result.tag(2, _mod1187.WireType.Varint);
     let boolResult = tagResult2.bool(mutedGames.mutedGames[nextResult]);
     let joined = boolResult.join();
     continue;
   }
   if (mutedGames.declarativeSettings) {
-    const tagResult3 = tag.tag(2, _mod1186.WireType.LengthDelimited);
+    const tagResult3 = tag.tag(2, _mod1187.WireType.LengthDelimited);
     const joined1 = items12
       .internalBinaryWrite(
         mutedGames.declarativeSettings,
-        tag.tag(2, _mod1186.WireType.LengthDelimited).fork(),
+        tag.tag(2, _mod1187.WireType.LengthDelimited).fork(),
         writeUnknownFields,
       )
       .join();
     const internalBinaryWriteResult = items12.internalBinaryWrite(
       mutedGames.declarativeSettings,
-      tag.tag(2, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(2, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, mutedGames, tag);
@@ -568,7 +568,7 @@ const items11 = new items1(
   tmp3,
   "create",
 );
-const MessageType4 = fn(1186).MessageType;
+const MessageType4 = fn(1187).MessageType;
 class DeclarativeSettings$Type extends MessageType4 {
   constructor() {
     obj = {
@@ -599,10 +599,10 @@ const prototype4 = DeclarativeSettings$Type.prototype;
 prototype4["create"] = function create(arr) {
   const obj = { values: {} };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -639,7 +639,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -688,15 +688,15 @@ prototype4["binaryReadMap2"] = function binaryReadMap2(arg0, pos, arg2) {
 prototype4["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, writeUnknownFields) {
   if (versions.versions) {
     const Versions = user_settings_shared.Versions;
-    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
+    const tagResult = tag.tag(1, _mod1187.WireType.LengthDelimited);
     const joined = Versions.internalBinaryWrite(
       versions.versions,
-      tag.tag(1, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = Versions.internalBinaryWrite(
       versions.versions,
-      tag.tag(1, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
@@ -704,12 +704,12 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
+    let tagResult1 = tag.tag(2, _mod1187.WireType.LengthDelimited);
     let forkResult = tagResult1.fork();
-    let tagResult2 = forkResult.tag(1, _mod1186.WireType.Varint);
+    let tagResult2 = forkResult.tag(1, _mod1187.WireType.Varint);
     let _parseInt = parseInt;
     let uint32Result = tagResult2.uint32(parseInt(nextResult));
-    let tagResult3 = tag.tag(2, _mod1186.WireType.LengthDelimited);
+    let tagResult3 = tag.tag(2, _mod1187.WireType.LengthDelimited);
     let forkResult1 = tagResult3.fork();
     let internalBinaryWriteResult1 = declarativeSettingsType.internalBinaryWrite(
       versions.values[nextResult],
@@ -723,7 +723,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, 
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, versions, tag);
@@ -765,7 +765,7 @@ const items12 = new items1(
   fn,
   dependencyMap,
 );
-const MessageType5 = fn(1186).MessageType;
+const MessageType5 = fn(1187).MessageType;
 class DeclarativeNotifSetting$Type extends MessageType5 {
   constructor() {
     items = [,];
@@ -779,10 +779,10 @@ const prototype5 = DeclarativeNotifSetting$Type.prototype;
 prototype5["create"] = function create(arr) {
   const obj = { toggle: false, radio: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -818,7 +818,7 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -830,17 +830,17 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype5["internalBinaryWrite"] = function internalBinaryWrite(toggle, tag, writeUnknownFields) {
   if (false !== toggle.toggle) {
-    tag.tag(1, _mod1186.WireType.Varint).bool(toggle.toggle);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).bool(toggle.toggle);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   if (0 !== toggle.radio) {
-    tag.tag(2, _mod1186.WireType.Varint).uint32(toggle.radio);
-    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
+    tag.tag(2, _mod1187.WireType.Varint).uint32(toggle.radio);
+    const tagResult1 = tag.tag(2, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, toggle, tag);
@@ -869,7 +869,7 @@ const declarativeSettingsType = new DeclarativeSettings$Type(
   tmp6,
   t,
 );
-const MessageType6 = fn(1186).MessageType;
+const MessageType6 = fn(1187).MessageType;
 class GuildNotificationSettings$Type extends MessageType6 {
   constructor() {
     items = [, , , , , , , , ,];
@@ -916,10 +916,10 @@ prototype6["create"] = function create(arr) {
     notifyHighlights: 0,
   };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -938,35 +938,35 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, 
 prototype6["internalBinaryWrite"] = function internalBinaryWrite(suppressEveryone, tag, writeUnknownFields) {
   let length;
   if (false !== suppressEveryone.suppressEveryone) {
-    tag.tag(1, _mod1186.WireType.Varint).bool(suppressEveryone.suppressEveryone);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).bool(suppressEveryone.suppressEveryone);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   if (0 !== suppressEveryone.messageNotifications) {
-    tag.tag(2, _mod1186.WireType.Varint).uint32(suppressEveryone.messageNotifications);
-    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
+    tag.tag(2, _mod1187.WireType.Varint).uint32(suppressEveryone.messageNotifications);
+    const tagResult1 = tag.tag(2, _mod1187.WireType.Varint);
   }
   if (false !== suppressEveryone.mobilePush) {
-    tag.tag(3, _mod1186.WireType.Varint).bool(suppressEveryone.mobilePush);
-    const tagResult2 = tag.tag(3, _mod1186.WireType.Varint);
+    tag.tag(3, _mod1187.WireType.Varint).bool(suppressEveryone.mobilePush);
+    const tagResult2 = tag.tag(3, _mod1187.WireType.Varint);
   }
   if (suppressEveryone.mute) {
     const MuteNotificationSettings = mute.MuteNotificationSettings;
-    const tagResult3 = tag.tag(4, _mod1186.WireType.LengthDelimited);
+    const tagResult3 = tag.tag(4, _mod1187.WireType.LengthDelimited);
     const joined = MuteNotificationSettings.internalBinaryWrite(
       suppressEveryone.mute,
-      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = MuteNotificationSettings.internalBinaryWrite(
       suppressEveryone.mute,
-      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let num5 = 0;
   if (0 < suppressEveryone.channelOverrides.length) {
     do {
-      let tagResult4 = tag.tag(5, _mod1186.WireType.LengthDelimited);
+      let tagResult4 = tag.tag(5, _mod1187.WireType.LengthDelimited);
       let internalBinaryWriteResult1 = closure_8.internalBinaryWrite(
         suppressEveryone.channelOverrides[num5],
         tagResult4.fork(),
@@ -978,29 +978,29 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(suppressEveryon
     } while (num5 < length);
   }
   if (false !== suppressEveryone.suppressRoles) {
-    tag.tag(6, _mod1186.WireType.Varint).bool(suppressEveryone.suppressRoles);
-    const tagResult5 = tag.tag(6, _mod1186.WireType.Varint);
+    tag.tag(6, _mod1187.WireType.Varint).bool(suppressEveryone.suppressRoles);
+    const tagResult5 = tag.tag(6, _mod1187.WireType.Varint);
   }
   if (0 !== suppressEveryone.version) {
-    tag.tag(7, _mod1186.WireType.Varint).uint32(suppressEveryone.version);
-    const tagResult6 = tag.tag(7, _mod1186.WireType.Varint);
+    tag.tag(7, _mod1187.WireType.Varint).uint32(suppressEveryone.version);
+    const tagResult6 = tag.tag(7, _mod1187.WireType.Varint);
   }
   if (false !== suppressEveryone.hideMutedChannels) {
-    tag.tag(8, _mod1186.WireType.Varint).bool(suppressEveryone.hideMutedChannels);
-    const tagResult7 = tag.tag(8, _mod1186.WireType.Varint);
+    tag.tag(8, _mod1187.WireType.Varint).bool(suppressEveryone.hideMutedChannels);
+    const tagResult7 = tag.tag(8, _mod1187.WireType.Varint);
   }
   if (false !== suppressEveryone.muteScheduledEvents) {
-    tag.tag(9, _mod1186.WireType.Varint).bool(suppressEveryone.muteScheduledEvents);
-    const tagResult8 = tag.tag(9, _mod1186.WireType.Varint);
+    tag.tag(9, _mod1187.WireType.Varint).bool(suppressEveryone.muteScheduledEvents);
+    const tagResult8 = tag.tag(9, _mod1187.WireType.Varint);
   }
   if (0 !== suppressEveryone.notifyHighlights) {
-    tag.tag(10, _mod1186.WireType.Varint).uint32(suppressEveryone.notifyHighlights);
-    const tagResult9 = tag.tag(10, _mod1186.WireType.Varint);
+    tag.tag(10, _mod1187.WireType.Varint).uint32(suppressEveryone.notifyHighlights);
+    const tagResult9 = tag.tag(10, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, suppressEveryone, tag);
@@ -1054,7 +1054,7 @@ const declarativeNotifSettingType = new DeclarativeNotifSetting$Type(
   items11,
   items12,
 );
-const MessageType7 = fn(1186).MessageType;
+const MessageType7 = fn(1187).MessageType;
 class ChannelNotificationSettings$Type extends MessageType7 {
   constructor() {
     items = [, , ,];
@@ -1077,10 +1077,10 @@ const prototype7 = ChannelNotificationSettings$Type.prototype;
 prototype7["create"] = function create(arr) {
   const obj = { channelId: "0", messageNotifications: 0, collapsed: false };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -1122,7 +1122,7 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -1134,35 +1134,35 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype7["internalBinaryWrite"] = function internalBinaryWrite(channelId, tag, writeUnknownFields) {
   if ("0" !== channelId.channelId) {
-    tag.tag(1, _mod1186.WireType.Bit64).fixed64(channelId.channelId);
-    const tagResult = tag.tag(1, _mod1186.WireType.Bit64);
+    tag.tag(1, _mod1187.WireType.Bit64).fixed64(channelId.channelId);
+    const tagResult = tag.tag(1, _mod1187.WireType.Bit64);
   }
   if (0 !== channelId.messageNotifications) {
-    tag.tag(7, _mod1186.WireType.Varint).uint32(channelId.messageNotifications);
-    const tagResult1 = tag.tag(7, _mod1186.WireType.Varint);
+    tag.tag(7, _mod1187.WireType.Varint).uint32(channelId.messageNotifications);
+    const tagResult1 = tag.tag(7, _mod1187.WireType.Varint);
   }
   if (channelId.mute) {
     const MuteNotificationSettings = mute.MuteNotificationSettings;
-    const tagResult2 = tag.tag(3, _mod1186.WireType.LengthDelimited);
+    const tagResult2 = tag.tag(3, _mod1187.WireType.LengthDelimited);
     const joined = MuteNotificationSettings.internalBinaryWrite(
       channelId.mute,
-      tag.tag(3, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(3, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = MuteNotificationSettings.internalBinaryWrite(
       channelId.mute,
-      tag.tag(3, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(3, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (false !== channelId.collapsed) {
-    tag.tag(4, _mod1186.WireType.Varint).bool(channelId.collapsed);
-    const tagResult3 = tag.tag(4, _mod1186.WireType.Varint);
+    tag.tag(4, _mod1187.WireType.Varint).bool(channelId.collapsed);
+    const tagResult3 = tag.tag(4, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, channelId, tag);

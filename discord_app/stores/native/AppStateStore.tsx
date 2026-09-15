@@ -3,7 +3,7 @@ import _mod17 from "../../../_runtime/metro/00017__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
-import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const AppStates = Constants.AppStates;
@@ -19,7 +19,7 @@ prototype["getLastActiveTime"] = function getLastActiveTime() {
   return closure_2;
 };
 AppStateStore.displayName = "AppStateStore";
-asyncRequireImpl(1240, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
+asyncRequireImpl(1241, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
   const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator((arg0) => {
     arg0.client_app_state = client_app_state;
   });

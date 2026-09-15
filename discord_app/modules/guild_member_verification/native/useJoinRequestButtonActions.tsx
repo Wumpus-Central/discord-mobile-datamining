@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/native/useJoinRequestButtonActions.tsx
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -251,7 +251,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
               const intl = tmp4(tmp44[7]).intl;
               obj10.content = intl.string(tmp4(tmp44[7]).t.WXHcq5);
               obj10.icon = function icon() {
-                return closure_1_8(closure_1_0(4596).CircleCheckIcon, {
+                return closure_1_8(closure_1_0(4599).CircleCheckIcon, {
                   color: closure_1_1(576).colors.STATUS_POSITIVE_BACKGROUND,
                   secondaryColor: closure_1_1(576).colors.STATUS_POSITIVE_TEXT,
                 });
@@ -299,8 +299,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(12764, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(12764, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(12769, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(12769, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

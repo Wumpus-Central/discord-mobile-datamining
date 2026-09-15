@@ -216,7 +216,7 @@ function handleLogout(isSwitchingAccount) {
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, LoginStates } = Constants);
 ({ Platforms: c10, Routes: closure_11, TOKEN_KEY: closure_12 } = Constants);
-const AgeGateConstants = fn(1098);
+const AgeGateConstants = fn(1099);
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY, NEW_USER_AGE_GATE_MODAL_KEY } = AgeGateConstants);
 let closure_13 = new LoggerDefault("AuthenticationStore");
 let fingerprint = "fingerprint";

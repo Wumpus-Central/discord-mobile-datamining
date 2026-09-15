@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/options/channel/AppLauncherChannelOption.tsx
-import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -74,7 +74,7 @@ export default function AppLauncherChannelOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12321, dependencyMap.paths),
+      asyncRequireImpl(12325, dependencyMap.paths),
       AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY,
       {
         option,

@@ -6,10 +6,10 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = fn;
 let set = new Set();
 let obj = {
-  layoutType: fn(1967).ForumLayout.LIST,
-  sortOrder: fn(1966).ThreadSortOrder.CREATION_DATE,
+  layoutType: fn(1968).ForumLayout.LIST,
+  sortOrder: fn(1967).ThreadSortOrder.CREATION_DATE,
   tagFilter: set,
-  tagSetting: fn(1968).ThreadSearchTagSetting.MATCH_SOME,
+  tagSetting: fn(1969).ThreadSearchTagSetting.MATCH_SOME,
 };
 let closure_6 = function ForumChannelStoreState(set, get) {
   obj = Object.create(new.target.prototype);

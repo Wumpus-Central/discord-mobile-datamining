@@ -5,21 +5,21 @@ import PlatformUtils2 from "../../utils/PlatformUtils.tsx";
 import useToken from "../../design/tokens/native/useToken.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _modDef8396 from "../../../_runtime/metro/08396__.js";
+import _modDef8399 from "../../../_runtime/metro/08399__.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(4661).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_4 = fn(4664).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({
   volumerSlider: { flexDirection: "row", alignItems: "center" },
   leftIcon: { marginRight: num },
@@ -73,7 +73,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   };
   obj = useToken;
   const obj3 = { style: tmp4.leftIcon };
-  const tmp7Result = _modDef8396;
+  const tmp7Result = _modDef8399;
   obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
   obj4.maximumValue = maxVolume;
   obj4.minimumTrackTintColor = minTrackColor;

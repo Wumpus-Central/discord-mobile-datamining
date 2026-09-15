@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef4228 from "../../../_runtime/metro/04228__.js";
+import _modDef4231 from "../../../_runtime/metro/04231__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx";
 import getTimestampStringDefault from "getTimestampString.tsx";
@@ -22,7 +22,7 @@ function getAccessibilityLabelFormatter() {
   return time;
 }
 let closure_3 = ["can_send_message", "parent_channel_type"];
-const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
+const ThreadMemberFlags = fn(1114).ThreadMemberFlags;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UserNotificationSettings: c10 } = Constants);
 const size = fn(2);
@@ -130,8 +130,8 @@ export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) 
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef4228(createTimestamp).valueOf();
-    const obj3 = _modDef4228(createTimestamp);
+    valueOfResult = _modDef4231(createTimestamp).valueOf();
+    const obj3 = _modDef4231(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

@@ -209,6 +209,7 @@ import DesignSystemPileSettingDefault from "../../defs/native/DesignSystemPileSe
 import DesignSystemSheetsSettingDefault from "../../defs/native/DesignSystemSheetsSetting.tsx";
 import DesignSystemFormPrimitivesSettingDefault from "../../defs/native/DesignSystemFormPrimitivesSetting.tsx";
 import DesignSystemHapticsSettingDefault from "../../defs/native/DesignSystemHapticsSetting.tsx";
+import DesignSystemAILoaderSettingDefault from "../../defs/native/DesignSystemAILoaderSetting.tsx";
 import PremiumProfileCustomizationTryItOutSettingDefault from "../../defs/native/PremiumProfileCustomizationTryItOutSetting.tsx";
 import CollectiblesShopSettingDefault from "../../defs/native/CollectiblesShopSetting.tsx";
 import CollectiblesShopViewAllCategoryItemsSettingDefault from "../../defs/native/CollectiblesShopViewAllCategoryItemsSetting.tsx";
@@ -268,6 +269,7 @@ const InAppMessageSoundsSettingDefault = InAppMessageSoundsSetting;
 const UseDataForQuestsSettingDefault = UseDataForQuestsSetting;
 const UseDataForQuests3PSettingDefault = UseDataForQuests3PSetting;
 
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
 ({
   PROFILE_CUSTOMIZATION,
   ACCOUNT,
@@ -486,6 +488,7 @@ const UseDataForQuests3PSettingDefault = UseDataForQuests3PSetting;
   DESIGN_SYSTEM_SHEETS,
   DESIGN_SYSTEM_FORM_PRIMITIVES,
   DESIGN_SYSTEM_HAPTICS,
+  DESIGN_SYSTEM_AI_LOADER,
   PREMIUM_PROFILE_CUSTOMIZATION_TRY_IT_OUT,
   COLLECTIBLES_SHOP,
   COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
@@ -533,8 +536,7 @@ const UseDataForQuests3PSettingDefault = UseDataForQuests3PSetting;
   ACTIVITY_PRIVACY_DEFAULT_SHARING,
   FRIEND_REQUEST_NOTES,
   NOTIFY_FRIENDS_ON_COME_ONLINE,
-  NOTIFY_FRIENDS_ON_PROFILE_UPDATE,
-} = SettingsConstants.MobileUserSettings);
+} = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
   [PROFILE_CUSTOMIZATION]: ProfileCustomizationSettingDefault,
@@ -756,6 +758,7 @@ const frozen = Object.freeze({
   [DESIGN_SYSTEM_SHEETS]: DesignSystemSheetsSettingDefault,
   [DESIGN_SYSTEM_FORM_PRIMITIVES]: DesignSystemFormPrimitivesSettingDefault,
   [DESIGN_SYSTEM_HAPTICS]: DesignSystemHapticsSettingDefault,
+  [DESIGN_SYSTEM_AI_LOADER]: DesignSystemAILoaderSettingDefault,
   [PREMIUM_PROFILE_CUSTOMIZATION_TRY_IT_OUT]: PremiumProfileCustomizationTryItOutSettingDefault,
   [COLLECTIBLES_SHOP]: CollectiblesShopSettingDefault,
   [COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS]: CollectiblesShopViewAllCategoryItemsSettingDefault,
@@ -804,7 +807,7 @@ const frozen = Object.freeze({
   [ACTIVITY_PRIVACY_DEFAULT_SHARING]: ActivityPrivacyDefaultSharingSettingDefault,
   [FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,
   [NOTIFY_FRIENDS_ON_COME_ONLINE]: NotifyFriendsOnComeOnlineSettingDefault,
-  [NOTIFY_FRIENDS_ON_PROFILE_UPDATE]: NotifyFriendsOnProfileUpdateSettingDefault,
+  [MobileUserSettings.NOTIFY_FRIENDS_ON_PROFILE_UPDATE]: NotifyFriendsOnProfileUpdateSettingDefault,
 });
 const result = size.fileFinishedImporting("modules/user_settings/core/native/SettingsRendererConfig.tsx");
 

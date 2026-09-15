@@ -2,7 +2,7 @@
 import matchPathCompat from "matchPathCompat.tsx";
 import RouteUtils from "RouteUtils.tsx";
 import Constants from "../../Constants.tsx";
-import identity from "../../../_runtime/metro/01242__.js";
+import identity from "../../../_runtime/metro/01243__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getMatchData(pathname) {
@@ -58,13 +58,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     updatePath(path) {
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(path));
       const tmp = getMatchData(path);
-      path(1247).batchUpdates(() => path({ path, guildId, channelId }));
+      path(1248).batchUpdates(() => path({ path, guildId, channelId }));
     },
     resetPath(pathname) {
       const basePath = pathname;
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(pathname));
       const tmp = getMatchData(pathname);
-      basePath(1247).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
+      basePath(1248).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
     },
   };
 });

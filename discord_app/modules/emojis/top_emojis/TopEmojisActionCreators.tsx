@@ -13,7 +13,7 @@ export const fetchTopEmojis = function fetchTopEmojis(guildId) {
   if (!obj.isPseudoGuildId(guildId)) {
     const obj3 = { type: "TOP_EMOJIS_FETCH", guildId };
     DispatcherDefault.dispatch(obj3);
-    const HTTP = tmp(1270).HTTP;
+    const HTTP = tmp(1271).HTTP;
     const obj4 = { url: Endpoints.TOP_EMOJIS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
     value = HTTP.get(obj4);
     value.then(

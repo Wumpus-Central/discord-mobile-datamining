@@ -34,11 +34,11 @@ const obj2 = {
   paddingPanels: { paddingVertical: 8 },
   paddingThread: { paddingVertical: 6, paddingLeft: 8 },
 };
-obj.voiceOrStageSummaryRow = { size: 32, avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32 };
-const obj3 = { size: 32, avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32 };
+obj.voiceOrStageSummaryRow = { size: 32, avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32 };
+const obj3 = { size: 32, avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32 };
 obj.messagePreview = {
   text: { variant: "redesign/message-preview/medium" },
-  messageTypeIconSize: fn(1176).IconSizes.REFRESH_SMALL_16,
+  messageTypeIconSize: fn(1177).IconSizes.REFRESH_SMALL_16,
   messageTypeIconSizeNew: "xs",
   height: 18,
   margin: { marginTop: 2 },
@@ -46,15 +46,15 @@ obj.messagePreview = {
 obj.inviteRow = { text: { variant: "text-md/semibold" } };
 const obj4 = {
   text: { variant: "redesign/message-preview/medium" },
-  messageTypeIconSize: fn(1176).IconSizes.REFRESH_SMALL_16,
+  messageTypeIconSize: fn(1177).IconSizes.REFRESH_SMALL_16,
   messageTypeIconSizeNew: "xs",
   height: 18,
   margin: { marginTop: 2 },
 };
 obj.icon = {
-  avatarSize: fn(1176).AvatarSizes.LARGE_48,
-  guildIconSize: fn(5665).GuildIconSizes.LARGE,
-  guildBadgeIconSize: fn(5665).GuildIconSizes.XSMALL_20,
+  avatarSize: fn(1177).AvatarSizes.LARGE_48,
+  guildIconSize: fn(5669).GuildIconSizes.LARGE,
+  guildBadgeIconSize: fn(5669).GuildIconSizes.XSMALL_20,
   wrapper: { size: 48 },
   channelIcon: { size: 24 },
   margin: { marginRight: 12 },
@@ -68,15 +68,15 @@ const obj6 = {
   icon: null,
 };
 const obj5 = {
-  avatarSize: fn(1176).AvatarSizes.LARGE_48,
-  guildIconSize: fn(5665).GuildIconSizes.LARGE,
-  guildBadgeIconSize: fn(5665).GuildIconSizes.XSMALL_20,
+  avatarSize: fn(1177).AvatarSizes.LARGE_48,
+  guildIconSize: fn(5669).GuildIconSizes.LARGE,
+  guildBadgeIconSize: fn(5669).GuildIconSizes.XSMALL_20,
   wrapper: { size: 48 },
   channelIcon: { size: 24 },
   margin: { marginRight: 12 },
   emoji: { size: 24, lineHeight: 32 },
 };
-obj6.icon = { size: fn(1176).IconSizes.REFRESH_SMALL_16, gameSize: fn(7275).GameIconSizes.SMALL };
+obj6.icon = { size: fn(1177).IconSizes.REFRESH_SMALL_16, gameSize: fn(7279).GameIconSizes.SMALL };
 obj.joinVoiceButton = obj6;
 const obj8 = { left: 48, startAndEndHeight: 16, transform: null, topOffset: -6 };
 const items = [{ translateY: 0 }];
@@ -89,14 +89,14 @@ obj.typing = {
   typingIndicator: { position: { top: 25, left: 11 } },
 };
 obj.separator = { margin: { marginVertical: 20 } };
-const importDefaultResultResult = deepmerge(fn(10252).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(10254).CHANNEL_LIST_STYLES_COMPACT, obj);
 const obj10 = {
   layout: { marginThread: { marginLeft: 0 } },
   container: { paddingThread: { paddingLeft: 20 } },
   unreadBadge: { positionThread: { left: 4 } },
   mentionBadge: { positionThread: { top: 34 } },
 };
-const obj7 = { size: fn(1176).IconSizes.REFRESH_SMALL_16, gameSize: fn(7275).GameIconSizes.SMALL };
+const obj7 = { size: fn(1177).IconSizes.REFRESH_SMALL_16, gameSize: fn(7279).GameIconSizes.SMALL };
 const obj9 = {
   position: { top: 12, left: 12 },
   positionThread: { top: 3, left: -17 },

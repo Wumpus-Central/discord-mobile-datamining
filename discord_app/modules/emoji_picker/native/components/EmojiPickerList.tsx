@@ -18,7 +18,7 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const IMAGE_SIZE = fn(10419).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10421).IMAGE_SIZE;
 const Constants = fn(1074);
 ({
   AnalyticsObjects: hasOwnProperty,
@@ -26,10 +26,10 @@ const Constants = fn(1074);
   AnalyticsSections: closure_7,
   UpsellTypes: closure_8,
 } = Constants);
-const EmojiConstants = fn(1374);
+const EmojiConstants = fn(1375);
 ({ EmojiDisabledReasons: closure_9, EmojiIntention: c10 } = EmojiConstants);
-const MIN_MARGIN = fn(1217).MIN_MARGIN;
-const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const MIN_MARGIN = fn(1218).MIN_MARGIN;
+const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);

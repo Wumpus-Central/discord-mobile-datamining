@@ -6,8 +6,8 @@ import GuildStore from "GuildStore.tsx";
 import UserStore from "UserStore.tsx";
 
 require = fn;
-const ExperimentBuckets = fn(4553).ExperimentBuckets;
-const Environments = fn(1383).Environments;
+const ExperimentBuckets = fn(4556).ExperimentBuckets;
+const Environments = fn(1384).Environments;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {
   const _window = window;
@@ -33,7 +33,7 @@ prototype["initialize"] = function initialize() {
     },
   };
   Object.defineProperties(this, obj);
-  closure_5 = self(1382).isStaffEnv(UserStore.getCurrentUser());
+  closure_5 = self(1383).isStaffEnv(UserStore.getCurrentUser());
   const timerId = setTimeout(() => Object.freeze(self));
 };
 prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {

@@ -30,7 +30,7 @@ const obj2 = {
 };
 obj.messagePreview = {
   text: { variant: "text-xs/medium" },
-  messageTypeIconSize: fn(1176).IconSizes.EXTRA_SMALL,
+  messageTypeIconSize: fn(1177).IconSizes.EXTRA_SMALL,
   messageTypeIconSizeNew: "xs",
   height: 18,
   margin: { marginTop: 0 },
@@ -38,15 +38,15 @@ obj.messagePreview = {
 obj.inviteRow = { text: { variant: "text-md/semibold" } };
 const obj3 = {
   text: { variant: "text-xs/medium" },
-  messageTypeIconSize: fn(1176).IconSizes.EXTRA_SMALL,
+  messageTypeIconSize: fn(1177).IconSizes.EXTRA_SMALL,
   messageTypeIconSizeNew: "xs",
   height: 18,
   margin: { marginTop: 0 },
 };
 obj.icon = {
-  avatarSize: fn(1176).AvatarSizes.NORMAL,
-  guildIconSize: fn(5665).GuildIconSizes.NORMAL,
-  guildBadgeIconSize: fn(5665).GuildIconSizes.XXSMALL,
+  avatarSize: fn(1177).AvatarSizes.NORMAL,
+  guildIconSize: fn(5669).GuildIconSizes.NORMAL,
+  guildBadgeIconSize: fn(5669).GuildIconSizes.XXSMALL,
   wrapper: { size: 40 },
   channelIcon: { size: 40 },
   margin: { marginRight: 8 },
@@ -60,15 +60,15 @@ const obj5 = {
   icon: null,
 };
 const obj4 = {
-  avatarSize: fn(1176).AvatarSizes.NORMAL,
-  guildIconSize: fn(5665).GuildIconSizes.NORMAL,
-  guildBadgeIconSize: fn(5665).GuildIconSizes.XXSMALL,
+  avatarSize: fn(1177).AvatarSizes.NORMAL,
+  guildIconSize: fn(5669).GuildIconSizes.NORMAL,
+  guildBadgeIconSize: fn(5669).GuildIconSizes.XXSMALL,
   wrapper: { size: 40 },
   channelIcon: { size: 40 },
   margin: { marginRight: 8 },
   emoji: { size: 24, lineHeight: 32 },
 };
-obj5.icon = { size: fn(1176).IconSizes.REFRESH_SMALL_16, gameSize: fn(7275).GameIconSizes.SMALL };
+obj5.icon = { size: fn(1177).IconSizes.REFRESH_SMALL_16, gameSize: fn(7279).GameIconSizes.SMALL };
 obj.joinVoiceButton = obj5;
 const obj7 = { left: 48, startAndEndHeight: 16, transform: null, topOffset: -6 };
 const items = [{ translateY: 0 }];
@@ -81,20 +81,20 @@ obj.typing = {
   typingIndicator: { position: { top: 25, left: 11 } },
 };
 obj.separator = { margin: { marginVertical: 20 } };
-const obj6 = { size: fn(1176).IconSizes.REFRESH_SMALL_16, gameSize: fn(7275).GameIconSizes.SMALL };
+const obj6 = { size: fn(1177).IconSizes.REFRESH_SMALL_16, gameSize: fn(7279).GameIconSizes.SMALL };
 const obj8 = {
   position: { top: 12, left: 12 },
   positionThread: { top: 3, left: -17 },
   typingIndicator: { position: { top: 25, left: 11 } },
 };
 const obj9 = { container: { paddingPanels: { paddingVertical: 8 } }, icon: null };
-const importDefaultResultResult = deepmerge(fn(10252).CHANNEL_LIST_STYLES_COMPACT, obj);
-obj9.icon = { avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32 };
-const obj10 = { avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32 };
+const importDefaultResultResult = deepmerge(fn(10254).CHANNEL_LIST_STYLES_COMPACT, obj);
+obj9.icon = { avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32 };
+const obj10 = { avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx",
 );
 
 export const CHANNEL_LIST_STYLES_COZY_DRAWER = importDefaultResultResult;
-export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(10252).CHANNEL_LIST_STYLES_COMPACT, obj9);
+export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(10254).CHANNEL_LIST_STYLES_COMPACT, obj9);

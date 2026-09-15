@@ -1,7 +1,7 @@
 // discord_app/modules/toast/native/ToastUtils.tsx
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ToastActionCreatorsDefault from "ToastActionCreators.tsx";
 import FriendsIcon from "../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
@@ -44,13 +44,13 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
   obj.open({
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(4573).UserPlusIcon,
+    IconComponent: tmp2(4576).UserPlusIcon,
     iconColor: "status-positive",
   });
   const obj3 = {
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(4573).UserPlusIcon,
+    IconComponent: tmp2(4576).UserPlusIcon,
     iconColor: "status-positive",
   };
 };
@@ -186,9 +186,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   const obj2 = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4587).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4590).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4589).XLargeIcon;
+    XLargeIcon = tmp4(4592).XLargeIcon;
   }
   obj2.IconComponent = XLargeIcon;
   let str = "icon-feedback-critical";

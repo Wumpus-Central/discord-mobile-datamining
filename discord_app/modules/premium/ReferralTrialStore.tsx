@@ -12,7 +12,7 @@ function handleLoadMessages(messages) {
   messages = messages.messages;
   const item = messages.forEach((type) => {
     let content = null;
-    if (type.type === content(1089).MessageTypes.PREMIUM_REFERRAL) {
+    if (type.type === content(1090).MessageTypes.PREMIUM_REFERRAL) {
       content = type.content;
     }
     if (null != content) {
@@ -138,8 +138,8 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(7556).fetchReferralsRemaining();
-      const obj = userTrialOfferId(7556);
+      const referralsRemaining = userTrialOfferId(7560).fetchReferralsRemaining();
+      const obj = userTrialOfferId(7560);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);
@@ -233,7 +233,7 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   MESSAGE_CREATE: function handleMessage(message) {
     message = message.message;
     let content = null;
-    if (message.type === content(1089).MessageTypes.PREMIUM_REFERRAL) {
+    if (message.type === content(1090).MessageTypes.PREMIUM_REFERRAL) {
       content = message.content;
     }
     if (null != content) {

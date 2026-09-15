@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
 import util from "../../../intl/index.native.tsx";
 import OpenCriticTier from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
-import _modDef8852 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
-import _modDef8853 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
-import _modDef8854 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
-import _modDef8855 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
+import _modDef8855 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
+import _modDef8856 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
+import _modDef8857 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
+import _modDef8858 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
@@ -26,13 +26,13 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    return _modDef8852;
-  } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
-    return _modDef8853;
-  } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
-    return _modDef8854;
-  } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
     return _modDef8855;
+  } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
+    return _modDef8856;
+  } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
+    return _modDef8857;
+  } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
+    return _modDef8858;
   }
 };
 export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {

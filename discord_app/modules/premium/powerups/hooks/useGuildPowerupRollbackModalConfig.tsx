@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx
 import util from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef2428 from "../GuildPowerups.messages.js";
+import _modDef2429 from "../GuildPowerups.messages.js";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -63,11 +63,11 @@ export default function useGuildPowerupRollbackModalConfig(guildId, location) {
             const intl = util.intl;
             const obj2 = { dateString: tmp6 };
             const _HermesInternal = HermesInternal;
-            obj.header = "" + title.title + " " + intl.formatToPlainString(_modDef2428["6e2ry1"], obj2);
+            obj.header = "" + title.title + " " + intl.formatToPlainString(_modDef2429["6e2ry1"], obj2);
             const intl2 = util.intl;
             const obj5 = { startDate: tmp6, endDate: tmp6, perkName: null, boostCount: null };
             ({ title: obj3.perkName, cost: obj3.boostCount } = title);
-            const items = [intl2.formatToPlainString(_modDef2428.jd8fki, obj5)];
+            const items = [intl2.formatToPlainString(_modDef2429.jd8fki, obj5)];
             obj.bodies = items;
             return obj;
           }

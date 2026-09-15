@@ -14,7 +14,7 @@ class FastImageAndroid {
 get_ActivityIndicator = fn(17);
 ({ Image: c2, NativeModules: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
 let merged = Object.assign(
   noop.memo((fade) => {
@@ -89,7 +89,7 @@ FastImageAndroid.preload = (arg0, arg1) => {
   }
   return racePromise;
 };
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {
   merged = FastImageAndroid;
 }

@@ -32,8 +32,8 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     flag = false;
   }
   const tmp = closure_5();
-  closure_3 = bounty(11620).useGetQuestImpressionId();
-  let obj = bounty(11620);
+  closure_3 = bounty(11624).useGetQuestImpressionId();
+  let obj = bounty(11624);
   const fn = function y() {
     let num = 0;
     if (visible) {
@@ -41,12 +41,12 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     }
     return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  let obj2 = bounty(4373);
-  fn.__closure = { withTiming: bounty(4637).withTiming, visible, timingStandard: bounty(4640).timingStandard };
+  let obj2 = bounty(4376);
+  fn.__closure = { withTiming: bounty(4640).withTiming, visible, timingStandard: bounty(4643).timingStandard };
   fn.__workletHash = 11417131685254;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  bounty(15129);
+  bounty(15139);
   if (visible) {
     const obj4 = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
@@ -67,19 +67,19 @@ export default function BountiesModalEndedCtaButtons(bounty) {
         });
       },
     };
-    const items1 = [closure_3(tmp2(5056).Button, obj5)];
+    const items1 = [closure_3(tmp2(5059).Button, obj5)];
     let tmp9Result = null;
     if (showCloseButton) {
       const obj6 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
-      const intl = tmp2(1114).intl;
-      obj6.text = intl.string(tmp2(1114).t.cpT0Cq);
+      const intl = tmp2(1115).intl;
+      obj6.text = intl.string(tmp2(1115).t.cpT0Cq);
       obj6.disabled = flag;
       obj6.onPress = bounty.onClose;
-      tmp9Result = tmp9(tmp2(5056).Button, obj6);
+      tmp9Result = tmp9(tmp2(5059).Button, obj6);
     }
     items1[1] = tmp9Result;
     obj4.children = items1;
-    visible = closure_4(visible(4373).View, obj4);
+    visible = closure_4(visible(4376).View, obj4);
     tmp9 = closure_3;
   }
   return visible;

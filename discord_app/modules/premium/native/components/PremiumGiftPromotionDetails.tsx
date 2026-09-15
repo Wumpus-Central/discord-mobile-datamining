@@ -105,7 +105,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
@@ -117,7 +117,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1 };
   return obj;
 });
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj3 = { preview: null };
 let size = {
   width: PX_40,
@@ -176,7 +176,7 @@ export const PremiumGiftPromotionCollectibleRewardDetails = function PremiumGift
       let rounded = Math.floor(1.2 * PX_40);
     } else {
       rounded = PX_40;
-      if (memo.item.type === tmp8(1889).CollectiblesItemType.AVATAR_DECORATION) {
+      if (memo.item.type === tmp8(1890).CollectiblesItemType.AVATAR_DECORATION) {
         const _Math = Math;
         rounded = Math.floor(1.5 * PX_40);
       }

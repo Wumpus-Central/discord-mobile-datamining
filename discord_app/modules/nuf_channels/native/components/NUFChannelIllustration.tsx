@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     width: "100%",
@@ -94,12 +94,12 @@ export default function NUFChannelIllustration() {
       () =>
         closure_1_2((arg0) => {
           const items = [...arg0];
-          const intl = closure_1_0(1114).intl;
+          const intl = closure_1_0(1115).intl;
           const obj = { name: null, avatar: null, message: null };
-          const intl2 = closure_1_0(1114).intl;
-          obj.name = intl2.string(closure_1_0(1114).t["9m/HsX"]);
-          obj.avatar = closure_1_1(13860);
-          obj.message = intl.string(closure_1_0(1114).t["5alrl0"]);
+          const intl2 = closure_1_0(1115).intl;
+          obj.name = intl2.string(closure_1_0(1115).t["9m/HsX"]);
+          obj.avatar = closure_1_1(13865);
+          obj.message = intl.string(closure_1_0(1115).t["5alrl0"]);
           items[tmp] = obj;
           return items;
         }),
@@ -109,12 +109,12 @@ export default function NUFChannelIllustration() {
       () =>
         closure_1_2((arg0) => {
           const items = [...arg0];
-          const intl = closure_1_0(1114).intl;
+          const intl = closure_1_0(1115).intl;
           const obj = { name: null, avatar: null, message: null };
-          const intl2 = closure_1_0(1114).intl;
-          obj.name = intl2.string(closure_1_0(1114).t["AW1kM+"]);
-          obj.avatar = closure_1_1(13861);
-          obj.message = intl.string(closure_1_0(1114).t["5Oo+vS"]);
+          const intl2 = closure_1_0(1115).intl;
+          obj.name = intl2.string(closure_1_0(1115).t["AW1kM+"]);
+          obj.avatar = closure_1_1(13866);
+          obj.message = intl.string(closure_1_0(1115).t["5Oo+vS"]);
           items[tmp] = obj;
           return items;
         }),
@@ -151,22 +151,22 @@ export default function NUFChannelIllustration() {
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { source: null, style: null };
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  obj6.source = first(13862);
+  obj6.source = first(13867);
   const items2 = [,];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
   obj6.style = items2;
   const items3 = [closure_7(closure_6, obj6), , , , ,];
-  const obj7 = { source: first(13863), style: null };
+  const obj7 = { source: first(13868), style: null };
   const items4 = [,];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
   obj7.style = items4;
   items3[1] = closure_7(closure_6, obj7);
-  const obj8 = { source: first(13864), style: null };
+  const obj8 = { source: first(13869), style: null };
   const items5 = [,];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
   obj8.style = items5;
   items3[2] = closure_7(closure_6, obj8);
-  const obj9 = { source: first(13865), style: null };
+  const obj9 = { source: first(13870), style: null };
   const items6 = [,];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
   obj9.style = items6;
@@ -185,7 +185,7 @@ export default function NUFChannelIllustration() {
   const obj14 = { style: tmp.content, children: null };
   const obj10 = { style: tmp.cardBackground };
   const obj4 = { interpolate: require("ReanimatedRexport").interpolate, messageListAnimation: sharedValue };
-  obj14.children = closure_7(first(4373).View, {
+  obj14.children = closure_7(first(4376).View, {
     style: animatedStyle,
     children: first.map((children) => {
       const obj = { style: closure_0.message, children: null };

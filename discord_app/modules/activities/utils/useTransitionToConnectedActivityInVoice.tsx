@@ -74,14 +74,14 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  embeddedActivityLocationChannelId = handler(4265).getEmbeddedActivityLocationChannelId(_location2);
+                  embeddedActivityLocationChannelId = handler(4268).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(9658)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(9660)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(9675)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(9677)(obj5), done: false };
                         return obj6;
                       }
                     }
@@ -105,7 +105,7 @@ export default function useTransitionToConnectedActivityInVoice(onTransition) {
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(9665)(closure_1_3, _location);
+                closure_3_1(9667)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

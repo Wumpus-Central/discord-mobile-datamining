@@ -20,23 +20,23 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8768).getActiveLinkUserIds();
-  let obj = activeLinkUserIds(8768);
+  activeLinkUserIds = activeLinkUserIds(8771).getActiveLinkUserIds();
+  let obj = activeLinkUserIds(8771);
   const obj3 = { title: null, body: null, isDismissable: true };
-  const intl = activeLinkUserIds(1114).intl;
-  obj3.title = intl.string(activeLinkUserIds(1114).t.QJKKrT);
-  const intl2 = activeLinkUserIds(1114).intl;
-  obj3.body = intl2.string(activeLinkUserIds(1114).t["73Islf"]);
+  const intl = activeLinkUserIds(1115).intl;
+  obj3.title = intl.string(activeLinkUserIds(1115).t.QJKKrT);
+  const intl2 = activeLinkUserIds(1115).intl;
+  obj3.body = intl2.string(activeLinkUserIds(1115).t["73Islf"]);
   if (activeLinkUserIds.length > 0) {
     const obj4 = { confirmText: null, onConfirm: null, cancelText: null };
-    const intl3 = tmp(1114).intl;
-    obj4.confirmText = intl3.string(tmp(1114).t.GF9RCX);
+    const intl3 = tmp(1115).intl;
+    obj4.confirmText = intl3.string(tmp(1115).t.GF9RCX);
     obj4.onConfirm = function onConfirm() {
       LayerActionCreators.popLayer();
       ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: activeLinkUserIds });
     };
-    const intl4 = tmp(1114).intl;
-    obj4.cancelText = intl4.string(tmp(1114).t.L5eIZ2);
+    const intl4 = tmp(1115).intl;
+    obj4.cancelText = intl4.string(tmp(1115).t.L5eIZ2);
     let obj5 = obj4;
   } else {
     obj5 = {};

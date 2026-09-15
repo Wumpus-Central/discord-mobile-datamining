@@ -19,10 +19,10 @@ function EducationCoachmarkImg() {
   );
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let closure_9 = fn(1943).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
-const createStyles = fn(4636);
+let closure_9 = fn(1944).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
+const createStyles = fn(4639);
 let obj2 = { upsellImageContainer: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
@@ -48,8 +48,8 @@ export default function useBurstToggleCoachmark(targetRef) {
   } else {
     items2 = [];
   }
-  obj2 = first(4294);
-  const tmp5 = _slicedToArray(first(7491).useSelectedDismissibleContent(items2), 2);
+  obj2 = first(4297);
+  const tmp5 = _slicedToArray(first(7495).useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
   const items3 = [first, tmp5[1]];
@@ -75,7 +75,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  const tmpResult = first(7491);
-  const coachmark = first(11262).useCoachmark(targetRef, memo);
+  const tmpResult = first(7495);
+  const coachmark = first(11266).useCoachmark(targetRef, memo);
   return tmp5[1];
 }

@@ -4,7 +4,7 @@ import FastestListPropsPlaceholder from "../props/FastestListPropsPlaceholder.ts
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   placeholder: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT },
   placeholderAvatar: null,
@@ -12,8 +12,8 @@ let obj2 = {
   placeholderDivider: null,
 };
 let size = {
-  width: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.REFRESH_MEDIUM_32],
-  height: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.REFRESH_MEDIUM_32],
+  width: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.REFRESH_MEDIUM_32],
+  height: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.REFRESH_MEDIUM_32],
   borderRadius: nativeDefault.radii.xl,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
@@ -29,7 +29,7 @@ const obj4 = {
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-obj2.placeholderDivider = { backgroundColor: fn(5522).DIVIDER_BACKGROUND };
+obj2.placeholderDivider = { backgroundColor: fn(5526).DIVIDER_BACKGROUND };
 const styles = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting(

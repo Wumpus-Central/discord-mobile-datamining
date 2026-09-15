@@ -13,13 +13,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1482);
+const AppLauncherNativeConstants = fn(1483);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 let closure_6 = AppLauncherNativeConstants.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = { bottom: 4 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     height: "100%",
@@ -59,8 +59,8 @@ let obj4 = {
 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
 let size = {
-  width: fn(12261).BACK_BUTTON_SIZE,
-  height: fn(12261).BACK_BUTTON_SIZE,
+  width: fn(12265).BACK_BUTTON_SIZE,
+  height: fn(12265).BACK_BUTTON_SIZE,
   alignItems: "center",
   justifyContent: "center",
 };

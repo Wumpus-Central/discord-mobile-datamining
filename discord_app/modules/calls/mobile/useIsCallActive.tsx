@@ -5,7 +5,7 @@ import ChannelRTCStore from "../ChannelRTCStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ParticipantTypes = fn(4657).ParticipantTypes;
+const ParticipantTypes = fn(4660).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
 

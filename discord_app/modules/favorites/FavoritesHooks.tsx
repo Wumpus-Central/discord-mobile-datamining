@@ -50,8 +50,8 @@ function useFavoritesAccess() {
   } else if (isPremiumExactlyResult) {
   }
 }
-const MAX_FAVORITE_CHANNELS = fn(1970).MAX_FAVORITE_CHANNELS;
-const PremiumTypes = fn(1373).PremiumTypes;
+const MAX_FAVORITE_CHANNELS = fn(1971).MAX_FAVORITE_CHANNELS;
+const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
 

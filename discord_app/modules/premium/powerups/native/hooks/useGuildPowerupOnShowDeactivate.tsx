@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx
-import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01897_asyncRequireImpl.js";
 import useAlertStore from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_4 = noop.lazy(() => asyncRequireImpl(12670, dependencyMap.paths));
+let closure_4 = noop.lazy(() => asyncRequireImpl(12675, dependencyMap.paths));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowDeactivate.tsx");
 

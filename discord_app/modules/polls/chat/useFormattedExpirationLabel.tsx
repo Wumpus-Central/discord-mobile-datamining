@@ -1,10 +1,10 @@
 // discord_app/modules/polls/chat/useFormattedExpirationLabel.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef4228 from "../../../../_runtime/metro/04228__.js";
+import _modDef4231 from "../../../../_runtime/metro/04231__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function formatExpirationLabel(expiry) {
-  const tmp2 = _modDef4228();
+  const tmp2 = _modDef4231();
   if (expiry > tmp2) {
     const diffResult = expiry.diff(tmp2, "days");
     if (diffResult > 1) {

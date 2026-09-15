@@ -4,7 +4,7 @@ import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PRICE_PLACEHOLDER = fn(1373).PRICE_PLACEHOLDER;
+const PRICE_PLACEHOLDER = fn(1374).PRICE_PLACEHOLDER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 

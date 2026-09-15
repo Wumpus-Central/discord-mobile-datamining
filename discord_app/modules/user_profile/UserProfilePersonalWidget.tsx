@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/UserProfilePersonalWidget.tsx
-import _modDef1330 from "../../../_runtime/metro/01330__.js";
+import _modDef1331 from "../../../_runtime/metro/01331__.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
@@ -143,7 +143,7 @@ function serializeSection(type) {
     return type;
   }
 }
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 let closure_5 = 0;
 let UserProfilePersonalWidget;
 class UserProfilePersonalWidget {
@@ -242,7 +242,7 @@ prototype["isEqual"] = function isEqual(header) {
             if (tmp13) {
               image2 = image2.image;
               image = image.image;
-              tmp13 = _modDef1330(image2, image);
+              tmp13 = _modDef1331(image2, image);
             }
             sum = sum + 1;
             num2 = sum;
@@ -262,7 +262,7 @@ prototype["isEqual"] = function isEqual(header) {
                 tmp8 = tmp6.description === tmp7.description;
               }
               if (tmp8) {
-                tmp8 = _modDef1330(tmp6.image, tmp7.image);
+                tmp8 = _modDef1331(tmp6.image, tmp7.image);
               }
               let flag2 = false;
               if (!tmp8) {

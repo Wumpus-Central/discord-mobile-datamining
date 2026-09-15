@@ -1,6 +1,6 @@
 // discord_app/modules/app_analytics/ImpressionStore.tsx
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import identity from "../../../_runtime/metro/01242__.js";
+import identity from "../../../_runtime/metro/01243__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;

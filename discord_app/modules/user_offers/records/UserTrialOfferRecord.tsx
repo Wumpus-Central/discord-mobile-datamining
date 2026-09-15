@@ -2,7 +2,7 @@
 import Record from "../../../lib/Record.tsx";
 import SubscriptionTrialRecord from "../../billing/records/SubscriptionTrialRecord.tsx";
 
-let closure_1 = fn(1373).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+let closure_1 = fn(1374).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 let UserTrialOfferRecord;
 class UserTrialOfferRecord extends tmp2 {
   constructor(arg0) {

@@ -2,8 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
 import FamilyCenterModels from "FamilyCenterModels.tsx";
-import _modDef2396 from "FamilyCenter.messages.js";
-import FamilyCenterV3Experiment from "FamilyCenterV3Experiment.tsx";
+import _modDef2397 from "FamilyCenter.messages.js";
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils.tsx";
 import RestrictedHoursActionCreators from "RestrictedHoursActionCreators.native.tsx";
 import NotificationSettingsStore from "../../stores/NotificationSettingsStore.tsx";
@@ -19,52 +18,47 @@ function scheduleUpcomingWarning() {
     timeout = null;
   }
   const date = new Date();
-  let tmp7 = null;
-  if (obj.getIsFamilyCenterV3Enabled({ location: "RestrictedHoursManager" })) {
-    tmp7 = null;
-    if (NotificationSettingsStore.screenDowntimeReminder) {
-      const currentUser = UserStore.getCurrentUser();
-      let restrictedSchedule;
-      if (currentUser != null) {
-        restrictedSchedule = currentUser.restrictedSchedule;
+  let tmp5 = null;
+  if (NotificationSettingsStore.screenDowntimeReminder) {
+    const currentUser = UserStore.getCurrentUser();
+    let restrictedSchedule;
+    if (currentUser != null) {
+      restrictedSchedule = currentUser.restrictedSchedule;
+    }
+    tmp5 = null;
+    if (null != restrictedSchedule) {
+      const nextStartInfo = restrictedSchedule.getNextStartInfo(date);
+      let tmp11 = null;
+      if (null != nextStartInfo) {
+        const obj = { minutesUntil: nextStartInfo.minutesUntil, startAtMs: null, rule: null };
+        const _Date = Date;
+        const date1 = new Date(tmp9);
+        obj.startAtMs = date1.setSeconds(0, 0) + 60 * nextStartInfo.minutesUntil * 1000;
+        obj.rule = nextStartInfo.rule;
+        tmp11 = obj;
       }
-      tmp7 = null;
-      if (null != restrictedSchedule) {
-        const nextStartInfo = restrictedSchedule.getNextStartInfo(date);
-        let tmp14 = null;
-        if (null != nextStartInfo) {
-          const obj2 = { minutesUntil: nextStartInfo.minutesUntil, startAtMs: null, rule: null };
-          const _Date = Date;
-          const date1 = new Date(tmp12);
-          obj2.startAtMs = date1.setSeconds(0, 0) + 60 * nextStartInfo.minutesUntil * 1000;
-          obj2.rule = nextStartInfo.rule;
-          tmp14 = obj2;
-        }
-        tmp7 = tmp14;
-        tmp12 = date;
-      }
+      tmp5 = tmp11;
+      tmp9 = date;
     }
   }
-  if (null != tmp7) {
-    if (tmp7.minutesUntil <= 16) {
+  if (null != tmp5) {
+    if (tmp5.minutesUntil <= 16) {
       const _HermesInternal = HermesInternal;
-      const combined = "" + tmp7.rule.ruleId + ":" + tmp7.startAtMs;
+      const combined = "" + tmp5.rule.ruleId + ":" + tmp5.startAtMs;
       if (combined !== c9) {
-        ({ startAtMs, rule } = tmp7);
+        const startAtMs = tmp5.startAtMs;
         const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        const stringResult = intl.string(_modDef2396["0JlDg0"]);
+        const stringResult = intl.string(_modDef2397["0JlDg0"]);
         const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
-        const tmp5Result = FamilyCenterRestrictedHoursUtils;
         const formatDaysResult = FamilyCenterRestrictedHoursUtils.formatDays(items);
         const _HermesInternal2 = HermesInternal;
-        const tmp5Result2 = FamilyCenterRestrictedHoursUtils;
         const trimmed =
-          "" + formatDaysResult + " " + FamilyCenterRestrictedHoursUtils.getScheduleRuleDateRange(rule).trim();
-        const str4 = "" + formatDaysResult + " " + FamilyCenterRestrictedHoursUtils.getScheduleRuleDateRange(rule);
-        const obj3 = { type: "RESTRICTED_HOURS_WARNING", title: stringResult, subtitle: trimmed };
-        DispatcherDefault.dispatch(obj3);
+          "" + formatDaysResult + " " + FamilyCenterRestrictedHoursUtils.getScheduleRuleDateRange(tmp5.rule).trim();
+        const str4 = "" + formatDaysResult + " " + FamilyCenterRestrictedHoursUtils.getScheduleRuleDateRange(tmp5.rule);
+        const obj2 = { type: "RESTRICTED_HOURS_WARNING", title: stringResult, subtitle: trimmed };
+        DispatcherDefault.dispatch(obj2);
         c9 = combined;
       }
       const _setTimeout2 = setTimeout;
@@ -80,11 +74,10 @@ function scheduleUpcomingWarning() {
           c8 = null;
           scheduleUpcomingWarning();
         },
-        Math.max(0, 60 * (tmp7.minutesUntil - 16) * 1000),
+        Math.max(0, 60 * (tmp5.minutesUntil - 16) * 1000),
       );
     }
   }
-  obj = FamilyCenterV3Experiment;
 }
 function checkAndUpdateModal() {
   const result = FamilyCenterStore.isCurrentUserInRestrictedHours();

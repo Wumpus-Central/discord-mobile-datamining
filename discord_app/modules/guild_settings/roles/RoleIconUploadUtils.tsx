@@ -21,7 +21,7 @@ let closure_5 = async function _fetchCustomEmojiAsPngDataUri() {
   })();
 };
 const Base64PNGPrefix = fn(1074).Base64PNGPrefix;
-const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/RoleIconUploadUtils.tsx");
 

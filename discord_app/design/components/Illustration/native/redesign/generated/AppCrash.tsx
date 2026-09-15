@@ -1,6 +1,6 @@
 // discord_app/design/components/Illustration/native/redesign/generated/AppCrash.tsx
 import shared from "../../../../../shared.tsx";
-import _mod8349 from "../../index.tsx";
+import _mod8352 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -12,44 +12,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/AppCrash.tsx");
 
 export const getAppCrashSource = function getAppCrashSource(theme) {
-  return _mod8349.getIllustrationSource(theme, {
+  return _mod8352.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/09980__.js");
+      return require("../../../../../../../_runtime/metro/09982__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09981__.js");
+      return require("../../../../../../../_runtime/metro/09983__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/09982__.js");
+      return require("../../../../../../../_runtime/metro/09984__.js");
     },
   });
 };
 export const useAppCrashSource = function useAppCrashSource() {
   const obj = shared;
-  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8352.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/09980__.js");
+      return require("../../../../../../../_runtime/metro/09982__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09981__.js");
+      return require("../../../../../../../_runtime/metro/09983__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/09982__.js");
+      return require("../../../../../../../_runtime/metro/09984__.js");
     },
   });
 };
 export const AppCrash = function AppCrash(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8352.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/09980__.js");
+      return require("../../../../../../../_runtime/metro/09982__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09981__.js");
+      return require("../../../../../../../_runtime/metro/09983__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/09982__.js");
+      return require("../../../../../../../_runtime/metro/09984__.js");
     },
   });
   const merged = Object.assign(arg0);

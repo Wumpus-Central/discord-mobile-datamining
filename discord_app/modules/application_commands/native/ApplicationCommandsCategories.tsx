@@ -10,10 +10,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
-const ApplicationCommandsCategoriesConstants = fn(12525);
+const ApplicationCommandsCategoriesConstants = fn(12530);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND,
@@ -85,9 +85,9 @@ let closure_10 = noop.memo((section) => {
     accessibilityLabel: null,
     children: null,
   };
-  const intl = tmp2(1114).intl;
+  const intl = tmp2(1115).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp2(1114).t;
+  const t = tmp2(1115).t;
   if (active) {
     const obj4 = { applicationName: section.name };
     let formatToPlainStringResult = formatToPlainString(t.yl24Gd, obj4);
@@ -99,7 +99,7 @@ let closure_10 = noop.memo((section) => {
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
   return jsx(
-    section(5204).PressableOpacity,
+    section(5207).PressableOpacity,
     {
       onPress() {
         return importDefault(dependencyMap);

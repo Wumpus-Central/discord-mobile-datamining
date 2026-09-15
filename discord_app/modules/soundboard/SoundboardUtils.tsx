@@ -179,9 +179,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(7441).playSoundLocally(id, sound);
-                  const obj = closure_1_0(7441);
-                  const result = closure_1_0(7449).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(7445).playSoundLocally(id, sound);
+                  const obj = closure_1_0(7445);
+                  const result = closure_1_0(7453).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }
@@ -199,12 +199,12 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
     }
   }
 };
-let closure_5 = fn(1961).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
-const SoundboardConstants = fn(5095);
+let closure_5 = fn(1962).SILENT_JOIN_LEAVE_CHANNEL_TYPES;
+const SoundboardConstants = fn(5098);
 ({ CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: closure_9, DEFAULT_SOUND_GUILD_ID: c10 } = SoundboardConstants);
 const Constants = fn(1074);
 ({ Permissions: closure_11, AnalyticEvents: closure_12 } = Constants);
-const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1218).ExpressionPickerViewType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/SoundboardUtils.tsx");
 
@@ -330,9 +330,9 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
         tmp6 = require;
       }
       if (null != joinSound.joinSound) {
-        let ADDED = tmp6(5101).AnalyticsChangeType.UPDATED;
+        let ADDED = tmp6(5104).AnalyticsChangeType.UPDATED;
       } else {
-        ADDED = tmp6(5101).AnalyticsChangeType.ADDED;
+        ADDED = tmp6(5104).AnalyticsChangeType.ADDED;
       }
       joinSound.joinSound = {
         soundId: guildId.soundId,
@@ -346,7 +346,7 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
       }
       obj2.guild_id = num;
       obj2.change_type = ADDED;
-      obj2.sound_type = tmp6(5101).AnalyticsSoundType.ENTRY;
+      obj2.sound_type = tmp6(5104).AnalyticsSoundType.ENTRY;
       obj2.sound_source = CUSTOM;
       AnalyticsUtilsDefault.track(constants2.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, obj2);
     },

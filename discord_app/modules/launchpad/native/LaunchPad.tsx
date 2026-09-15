@@ -76,17 +76,17 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(7431);
+let NavigationHistoryStore = fn(7435);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
-const ChannelRecord = fn(1961);
+const ChannelRecord = fn(1962);
 ({ isGuildSelectableChannelType: map1, isGuildVocalChannelType: closure_14 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_25, GuildFeatures: closure_26 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   wrapper: {
     flexGrow: 0,
@@ -370,11 +370,11 @@ let closure_35 = noop.memo((tab) => {
 });
 const results = [];
 let items = [
-  fn(9965).AutocompleterResultTypes.GUILD,
-  fn(9965).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(9965).AutocompleterResultTypes.GROUP_DM,
-  fn(9965).AutocompleterResultTypes.VOICE_CHANNEL,
-  fn(9965).AutocompleterResultTypes.USER,
+  fn(9967).AutocompleterResultTypes.GUILD,
+  fn(9967).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(9967).AutocompleterResultTypes.GROUP_DM,
+  fn(9967).AutocompleterResultTypes.VOICE_CHANNEL,
+  fn(9967).AutocompleterResultTypes.USER,
 ];
 const __initData3 = {
   code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}",

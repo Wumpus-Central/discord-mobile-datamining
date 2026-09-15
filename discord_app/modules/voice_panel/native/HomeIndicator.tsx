@@ -63,19 +63,19 @@ HomeIndicator["_updatePropsStack"] = function _updatePropsStack() {
     const prefersHidden = obj.prefersHidden;
     const autoHideHomeIndicator = tmp;
     const prefersDeferringSystemGestures = obj.prefersDeferringSystemGestures;
-    autoHideHomeIndicator(1247).batchUpdates(() => state.setState({ autoHideHomeIndicator }));
-    const obj2 = autoHideHomeIndicator(1247);
+    autoHideHomeIndicator(1248).batchUpdates(() => state.setState({ autoHideHomeIndicator }));
+    const obj2 = autoHideHomeIndicator(1248);
     const tmp2 = undefined !== prefersDeferringSystemGestures && prefersDeferringSystemGestures;
     if (obj3.isAndroid()) {
-      const result = closure_1(1623).setNavigationBarVisible(!tmp);
-      const obj4 = closure_1(1623);
+      const result = closure_1(1624).setNavigationBarVisible(!tmp);
+      const obj4 = closure_1(1624);
     } else if (DCDHomeIndicator.DCDHomeIndicator) {
       DCDHomeIndicator = tmp5.DCDHomeIndicator;
       DCDHomeIndicator.setPrefersAutoHidden(tmp);
       const DCDHomeIndicator2 = tmp5.DCDHomeIndicator;
       const result1 = DCDHomeIndicator2.setPrefersDeferringSystemGestures(tmp2);
     }
-    obj3 = autoHideHomeIndicator(1363);
+    obj3 = autoHideHomeIndicator(1364);
   });
 };
 prototype["componentDidMount"] = function componentDidMount() {

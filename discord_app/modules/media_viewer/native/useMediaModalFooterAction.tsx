@@ -17,5 +17,5 @@ export const setMediaModalFooterAction = function setMediaModalFooterAction(foot
   });
 };
 export const clearMediaModalFooterAction = function clearMediaModalFooterAction() {
-  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "r" }));
+  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "Array" }));
 };

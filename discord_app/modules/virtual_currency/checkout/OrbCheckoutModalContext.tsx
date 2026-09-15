@@ -4,7 +4,7 @@ import CollectiblesProductUtils from "../../collectibles/utils/CollectiblesProdu
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import SKUStore from "../../../stores/game_store/SKUStore.tsx";
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function useOrbCheckoutModalContextProvider(skuId) {

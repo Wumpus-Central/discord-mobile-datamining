@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -157,7 +157,7 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   const items3 = [markAsDismissed];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12511, dependencyMap.paths),
+      asyncRequireImpl(12516, dependencyMap.paths),
       "DoubleTapToReactActionSheet",
       { emoji },
     );
@@ -219,12 +219,12 @@ function DoubleTapToReactChatInputBannerAnimationContainer(channel) {
   return closure_10(closure_11, obj7);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const androidRippleConfig = { cornerRadius: 0 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   animatedContainer: {
     borderTopWidth: 1,
@@ -263,13 +263,13 @@ obj2.emojiContainer = {
   padding: 12,
 };
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 let num = 22;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
 let obj7 = { fontSize: num, textAlign: "center", lineHeight: null, color: null };
-PlatformUtils = fn(1363);
+PlatformUtils = fn(1364);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;

@@ -14,7 +14,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_10 = createStyles.createStyles({
   container: { position: "relative" },
   bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" },
@@ -26,11 +26,11 @@ let result = size.fileFinishedImporting("modules/collectibles/native/FeaturedCat
 export default function _default(subblock) {
   subblock = subblock.subblock;
   const tmp = closure_10();
-  importDefault = subblock(1483).useNavigation();
-  let obj = subblock(1483);
-  dependencyMap = subblock(8893).useCollectiblesAnalyticsContext();
+  importDefault = subblock(1484).useNavigation();
+  let obj = subblock(1484);
+  dependencyMap = subblock(8896).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(8893);
+  let obj2 = subblock(8896);
   let items = [CollectiblesCategoryStore];
   const stateFromStores = subblock(504).useStateFromStores(items, () =>
     CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
@@ -50,14 +50,14 @@ export default function _default(subblock) {
     date = new Date(unpublishedAt);
   }
   let obj5 = {
-    onChange: subblock(15911).useTrackProductCardImpression(
+    onChange: subblock(15924).useTrackProductCardImpression(
       subblock.categoryStoreListingId,
       "mobile_home",
       "featured_block",
     ).handleCardVisibilityChange,
     children: null,
   };
-  let obj4 = subblock(15911);
+  let obj4 = subblock(15924);
   const obj6 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -69,10 +69,10 @@ export default function _default(subblock) {
     style: null,
     children: null,
   };
-  const intl = tmp2(1114).intl;
-  obj6.accessibilityLabel = intl.formatToPlainString(subblock(1114).t.FNtLb3, { category: subblock.name });
-  const intl2 = tmp2(1114).intl;
-  obj6.accessibilityHint = intl2.string(subblock(1114).t.F8ma9x);
+  const intl = tmp2(1115).intl;
+  obj6.accessibilityLabel = intl.formatToPlainString(subblock(1115).t.FNtLb3, { category: subblock.name });
+  const intl2 = tmp2(1115).intl;
+  obj6.accessibilityHint = intl2.string(subblock(1115).t.F8ma9x);
   const obj7 = { category: subblock.name };
   const tmp12 = VisibilitySensorDefault;
   obj6.androidRippleConfig = { radius: nativeDefault.radii.lg };
@@ -132,13 +132,13 @@ export default function _default(subblock) {
   }
   const items1 = [tmp11Result];
   const obj8 = { radius: nativeDefault.radii.lg };
-  let result = subblock(7657).shouldShowLimitedTimeBadge(date);
+  let result = subblock(7661).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj11 = { style: tmp.limitedTimeBadge };
-    result = closure_8(tmp2(8957).LimitedTimeBadge, obj11);
+    result = closure_8(tmp2(8960).LimitedTimeBadge, obj11);
   }
   items1[1] = result;
   obj6.children = items1;
-  obj5.children = closure_9(subblock(5204).PressableOpacity, obj6);
+  obj5.children = closure_9(subblock(5207).PressableOpacity, obj6);
   return closure_8(tmp12, obj5);
 }

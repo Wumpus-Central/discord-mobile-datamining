@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import utils_ImageUtilsDefault from "../../../utils/native/ImageUtils.tsx";
 import Server from "../../../flow/Server.tsx";
-import _modDef2914 from "../../checkpoint/Checkpoint.messages.js";
+import _modDef2915 from "../../checkpoint/Checkpoint.messages.js";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ImageIcon from "../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
@@ -33,7 +33,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(576).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(4636).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(4639).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -82,7 +82,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(4636);
+  let obj = attachmentCount(4639);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -92,7 +92,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   quote: null,
@@ -297,7 +297,7 @@ export const ForwardPreview = function ForwardPreview(message) {
   if (tmp36Result) {
     const obj22 = { variant: "text-md/medium", children: null };
     const intl5 = util.intl;
-    obj22.children = intl5.string(_modDef2914.goiR2u);
+    obj22.children = intl5.string(_modDef2915.goiR2u);
     tmp36Result = hasOwnProperty(Text_Text.Text, obj22);
   }
   const items6 = [tmp36Result, ,];

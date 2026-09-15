@@ -98,15 +98,15 @@ let closure_9 = async function _combineStatuses(arg0) {
 };
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
-const NativePermissionConstants = fn(4846);
+const NativePermissionConstants = fn(4849);
 ({ NativePermissionTypes, NativePermissionStatus: metroRequire } = NativePermissionConstants);
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
   PlatformUtils = get_ActivityIndicator.Platform.constants.Version <= 28;
 }
-let MetaQuestUtils = fn(1608);
+let MetaQuestUtils = fn(1609);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 if (PlatformUtils) {
   let items = [NativeModules.NativePermissionManager.requestExternalStorageAuthorization];
@@ -139,7 +139,7 @@ if (MetaQuestUtils) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(5224).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(5227).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {}
 const prototype = NativePermissionIOSUtils.prototype;
 prototype["requestPermissionCore"] = function requestPermissionCore(arg0, arg1) {
@@ -181,7 +181,7 @@ let obj3 = {
   [NativePermissionTypes.CAMERA]: () => combineStatuses(items2),
   [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.requestHeadsetCameraAuthorization,
 };
-PlatformUtils = fn(1363);
+PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {
   fn = () => {
     const items = [
@@ -202,7 +202,7 @@ let obj5 = {
   [NativePermissionTypes.CAMERA]: () => combineStatuses(items7),
   [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.hasHeadsetCameraAuthorization,
 };
-PlatformUtils = fn(1363);
+PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {
   let fn2 = () => {
     const items = [

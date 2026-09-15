@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/defs/native/AccountPhoneSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PhoneActionCreators from "../../../phone/PhoneActionCreators.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_4 = fn(7146).PHONE_VERIFICATION_MODAL_KEY;
-const SettingBuilders = fn(11602);
+let closure_4 = fn(7150).PHONE_VERIFICATION_MODAL_KEY;
+const SettingBuilders = fn(11606);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
   },
-  parent: fn(8079).MobileUserSettings.ACCOUNT,
+  parent: fn(8082).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
@@ -30,7 +30,7 @@ const pressable = SettingBuilders.createPressable({
     const obj2 = { allowDeletePhone: true, reason: null };
     const obj = ModalActionCreatorsDefault;
     obj2.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(7145, dependencyMap.paths), obj2, closure_4);
+    obj.pushLazy(asyncRequireImpl(7149, dependencyMap.paths), obj2, closure_4);
   },
   withArrow: true,
 });

@@ -1,6 +1,6 @@
 // discord_app/modules/webauthn/native/nav_steps/PasskeyInitStep.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import WebAuthnActionCreators from "../../WebAuthnActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -22,17 +22,17 @@ function CredentialList(navigation) {
   [c2, c3] = noop.useState(false);
   if (0 === credentials.length) {
     let obj2 = { style: tmp3.upsellContainer, children: null };
-    const items1 = [closure_8(tmp(5773).PasskeysSpotIllustration, { scale: 0.6 })];
+    const items1 = [closure_8(tmp(5777).PasskeysSpotIllustration, { scale: 0.6 })];
     let obj3 = { variant: "text-md/normal", style: tmp3.upsellText, children: null };
-    let intl2 = tmp(1114).intl;
-    obj3.children = intl2.string(tmp(1114).t.FSNwFW);
-    items1[1] = closure_8(tmp(4632).Text, obj3);
+    let intl2 = tmp(1115).intl;
+    obj3.children = intl2.string(tmp(1115).t.FSNwFW);
+    items1[1] = closure_8(tmp(4635).Text, obj3);
     obj2.children = items1;
     return closure_9(View, obj2);
   } else {
     const obj4 = { title: null, hasIcons: false, children: null };
-    let intl = tmp(1114).intl;
-    obj4.title = intl.string(tmp(1114).t["4RIqrQ"]);
+    let intl = tmp(1115).intl;
+    obj4.title = intl.string(tmp(1115).t["4RIqrQ"]);
     obj4.children = credentials.map((label) => {
       const obj = { label: label.name, trailing: null, subLabel: null };
       const credential = label;
@@ -54,7 +54,7 @@ function CredentialList(navigation) {
       obj3.loading = _undefined;
       obj3.onPress = function onPress() {
         return ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14757, dependencyMap.paths),
+          asyncRequireImpl(14767, dependencyMap.paths),
           "WEBAUTHN_DELETE_SHEET_KEY",
           { credential, deleting, setDeleting },
         );
@@ -89,15 +89,15 @@ function CredentialList(navigation) {
       obj.subLabel = formatResult;
       return closure_1_8(navigation(_undefined[20]).TableRow, obj, label.id);
     });
-    return closure_8(tmp(5768).TableRowGroup, obj4);
+    return closure_8(tmp(5772).TableRowGroup, obj4);
   }
   const tmp4 = _slicedToArray(noop.useState(false), 2);
 }
 const View = fn(17).View;
-const WebAuthnScreens = fn(14745).WebAuthnScreens;
+const WebAuthnScreens = fn(14755).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     flex: 1,

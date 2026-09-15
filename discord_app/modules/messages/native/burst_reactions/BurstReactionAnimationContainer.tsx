@@ -27,7 +27,7 @@ function BurstReactionAnimationContainerInner() {
       dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
       closure_1_4(true);
       ref.current = true;
-      const result = handleEffectReceived(4604).triggerHapticFeedback(first(4605).IMPACT_HEAVY);
+      const result = handleEffectReceived(4607).triggerHapticFeedback(first(4608).IMPACT_HEAVY);
     }
     const subscription = first(573).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
@@ -77,7 +77,7 @@ function BurstReactionAnimationContainerInner() {
   let tmp8 = null;
   if (null != animationData) {
     let obj3 = { contentTypes: null, children: null };
-    let items = [tmp6(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    let items = [tmp6(1944).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
     obj3.contentTypes = items;
     obj3.children = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
@@ -86,7 +86,7 @@ function BurstReactionAnimationContainerInner() {
       const items = [markAsDismissed.fill, closure_7];
       obj2.style = items;
       const obj3 = {
-        activeOpacity: closure_0(7886).BACKDROP_OPACITY,
+        activeOpacity: closure_0(7889).BACKDROP_OPACITY,
         onPress() {
           closure_4(false);
           closure_5.current = false;
@@ -115,19 +115,19 @@ function BurstReactionAnimationContainerInner() {
             ref.current = false;
           }
         };
-        tmpResult = closure_1_8(first(7928), obj7);
+        tmpResult = closure_1_8(first(7931), obj7);
       }
       obj5.children = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj5);
       let tmp6Result =
         markAsDismissed.visibleContent ===
-        closure_0(1943).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+        closure_0(1944).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj8 = { children: null };
         const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
-        const intl = closure_0(1114).intl;
-        obj9.children = intl.string(closure_0(1114).t.QpPMih);
-        const items2 = [closure_1_8(closure_0(4632).Text, obj9)];
+        const intl = closure_0(1115).intl;
+        obj9.children = intl.string(closure_0(1115).t.QpPMih);
+        const items2 = [closure_1_8(closure_0(4635).Text, obj9)];
         const obj17 = { style: tmp4.dismissTextBackground };
         items2[1] = closure_1_8(handleComponentFinish, obj17);
         obj8.children = items2;
@@ -136,25 +136,25 @@ function BurstReactionAnimationContainerInner() {
       items1[2] = tmp6Result;
       obj3.children = items1;
       obj2.children = closure_1_10(closure_5, obj3);
-      obj.children = closure_1_8(first(4373).View, obj2);
-      return closure_1_8(closure_0(1176).OverlayView, obj);
+      obj.children = closure_1_8(first(4376).View, obj2);
+      return closure_1_8(closure_0(1177).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10754), obj3);
-    let tmp11 = animationData(10754);
+    tmp8 = closure_8(animationData(10758), obj3);
+    let tmp11 = animationData(10758);
   }
   return tmp8;
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
-obj3.opacity = fn(7886).BACKDROP_OPACITY;
+obj3.opacity = fn(7889).BACKDROP_OPACITY;
 obj2.background = obj3;
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);

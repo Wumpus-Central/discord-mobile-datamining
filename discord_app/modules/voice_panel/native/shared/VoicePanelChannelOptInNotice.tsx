@@ -16,14 +16,14 @@ export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   }, items);
   const obj = { style: channel.style, children: null };
   const obj2 = { label: null, subLabel: null, icon: null, onPress: null, start: true, end: true, arrow: true };
-  const intl = channel(1114).intl;
-  obj2.label = intl.string(channel(1114).t["9mysCh"]);
-  const intl2 = channel(1114).intl;
-  obj2.subLabel = intl2.string(channel(1114).t.PDUCIN);
-  const tmp2 = analyticsSection(5670);
-  obj2.icon = jsx(channel(5692).TableRowIcon, { IconComponent: channel(13932).ChannelListMagnifyingGlassIcon });
+  const intl = channel(1115).intl;
+  obj2.label = intl.string(channel(1115).t["9mysCh"]);
+  const intl2 = channel(1115).intl;
+  obj2.subLabel = intl2.string(channel(1115).t.PDUCIN);
+  const tmp2 = analyticsSection(5674);
+  obj2.icon = jsx(channel(5696).TableRowIcon, { IconComponent: channel(13937).ChannelListMagnifyingGlassIcon });
   obj2.onPress = callback;
-  obj.children = jsx(channel(5686).TableRow, {
+  obj.children = jsx(channel(5690).TableRow, {
     label: null,
     subLabel: null,
     icon: null,

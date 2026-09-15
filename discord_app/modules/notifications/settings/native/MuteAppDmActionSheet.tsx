@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   iconContainer: { alignItems: "center", marginBottom: 8 },
   iconBackground: null,
@@ -96,8 +96,8 @@ export default function MuteAppDMActionSheet(channel) {
     obj4.icon = function icon() {
       const obj = {
         style: closure_1_0.mutedNotificationContainer,
-        children: closure_2_4(closure_0(1176).Icon, {
-          source: channel(8053),
+        children: closure_2_4(closure_0(1177).Icon, {
+          source: channel(8056),
           color: channel(576).unsafe_rawColors.WHITE,
           style: closure_1_0.mutedNotification,
         }),
@@ -112,7 +112,7 @@ export default function MuteAppDMActionSheet(channel) {
   const intl4 = require("util").intl;
   obj9.text = intl4.string(require("util").t.WAI6xu);
   obj9.onPress = function onPress() {
-    channel(4603).hideActionSheet();
+    channel(4606).hideActionSheet();
   };
   obj8.children = closure_4(require("components/Button/Button").Button, obj9);
   items[4] = closure_4(View, obj8);

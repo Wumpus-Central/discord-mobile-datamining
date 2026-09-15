@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, FlatList: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   informationContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -42,8 +42,8 @@ export default function StickerPackInformationPopout(stickerPack) {
   let items = [];
   if (obj.isStickerPackAnimated(stickerPack)) {
     const obj2 = { key: "animated", description: null };
-    const intl = tmp2(1114).intl;
-    obj2.description = intl.string(tmp2(1114).t.W11rMa);
+    const intl = tmp2(1115).intl;
+    obj2.description = intl.string(tmp2(1115).t.W11rMa);
     items.push(obj2);
   }
   let obj3 = { style: null, children: null };
@@ -56,14 +56,14 @@ export default function StickerPackInformationPopout(stickerPack) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl2 = tmp2(1114).intl;
+  const intl2 = tmp2(1115).intl;
   obj5.children = intl2.format(require("util").t.XDm6yN, { stickerPackName: stickerPack.name });
   const items2 = [closure_4(require("Text/Text").Text, obj5)];
   const obj7 = { onPress: onClose, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const intl3 = tmp2(1114).intl;
+  const intl3 = tmp2(1115).intl;
   obj7.accessibilityLabel = intl3.string(require("util").t.cpT0Cq);
   const obj8 = { variant: "text-md/bold", color: "text-brand", children: null };
-  const intl4 = tmp2(1114).intl;
+  const intl4 = tmp2(1115).intl;
   obj8.children = intl4.string(require("util").t.cpT0Cq);
   obj7.children = closure_4(require("Text/Text").Text, obj8);
   items2[1] = closure_4(require("Pressables").PressableOpacity, obj7);

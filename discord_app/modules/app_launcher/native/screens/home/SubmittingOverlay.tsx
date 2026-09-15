@@ -34,8 +34,8 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
       return obj1;
     }
   }
-  let obj = submitting(4373);
-  S.__closure = { withSpring: submitting(5055).withSpring, submitting, SUBTLE_SPRING: submitting(5059).SUBTLE_SPRING };
+  let obj = submitting(4376);
+  S.__closure = { withSpring: submitting(5058).withSpring, submitting, SUBTLE_SPRING: submitting(5062).SUBTLE_SPRING };
   S.__workletHash = 492443733468;
   S.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(S);
@@ -43,7 +43,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   const items = [submitting.style, tmp.ellipsis, animatedStyle];
   obj3.style = items;
   if (submitting) {
-    submitting = jsx(tmp2(5072).Ellipsis, { variant: "active", size: "md" });
+    submitting = jsx(tmp2(5075).Ellipsis, { variant: "active", size: "md" });
   }
   obj3.children = submitting;
   return jsx(ReanimatedRexportDefault.View, { style: null, children: null });

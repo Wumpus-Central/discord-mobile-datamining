@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({
   rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 },
 });
@@ -38,16 +38,16 @@ export default function InviteRolesList(invite) {
     if (0 !== memo.length) {
       const obj = { spacing: 4, style: invite.style, children: null };
       const obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
-      const intl = guild(1114).intl;
-      obj2.children = intl.string(guild(1114).t.stcSfI);
-      const items1 = [closure_5(guild(4632).Text, obj2)];
+      const intl = guild(1115).intl;
+      obj2.children = intl.string(guild(1115).t.stcSfI);
+      const items1 = [closure_5(guild(4635).Text, obj2)];
       const obj3 = {
         style: tmp.rolesRow,
         children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)),
       };
       items1[1] = closure_5(View, obj3);
       obj.children = items1;
-      tmp2 = closure_6(guild(5054).Stack, obj);
+      tmp2 = closure_6(guild(5057).Stack, obj);
     }
   }
   return tmp2;

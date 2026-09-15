@@ -4,7 +4,7 @@ import guild_automod_ExperimentUtils from "ExperimentUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(11993);
+const Constants = fn(11997);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -228,7 +228,7 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }
 };
 export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) {
-  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16948).useIsUserProfileRuleEnabled(arg0);
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16986).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
   return noop.useMemo(() => {
     const keys = Object.keys(obj12);

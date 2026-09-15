@@ -126,7 +126,7 @@ function Content() {
   obj15.children = items;
   return closure_1_11(closure_1_10, obj15);
 }
-const GuildRoleSubscriptionsConstants = fn(15289);
+const GuildRoleSubscriptionsConstants = fn(15299);
 ({
   GuildRoleSubscriptionsTierScenes: hasOwnProperty,
   MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire,
@@ -156,7 +156,7 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   if (tmp3) {
     tmp3 = null != _slicedToArray(obj3.useImage(editStateId), 1)[0];
   }
-  const obj6 = { title: null, description: null, canProceedToNextStep: null, nextStep: null, scrollable: false };
+  const obj6 = { title: null, description: null, canProceedToNextStep: null, nextStep: null };
   obj5 = GuildRoleSubscriptionListingEditStateUtilsAll;
   const intl = util.intl;
   obj6.title = intl.string(util.t.o3pHas);

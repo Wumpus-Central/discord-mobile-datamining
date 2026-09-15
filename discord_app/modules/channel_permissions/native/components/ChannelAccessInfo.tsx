@@ -10,11 +10,11 @@ import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const isGuildOwner = fn(1975).isGuildOwner;
+const isGuildOwner = fn(1976).isGuildOwner;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let c11 = 100;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   section: {
     alignItems: "center",
@@ -41,8 +41,8 @@ export default function ChannelAccessInfo(guild) {
   const channel = guild.channel;
   const tmp = closure_12();
   dependencyMap = tmp;
-  let intl = guild(1114).intl;
-  const stringResult = intl.string(guild(1114).t.li1wKf);
+  let intl = guild(1115).intl;
+  const stringResult = intl.string(guild(1115).t.li1wKf);
   let items = [GuildRoleStore];
   const items1 = [guild, channel];
   const stateFromStoresArray = guild(504).useStateFromStoresArray(
@@ -62,7 +62,7 @@ export default function ChannelAccessInfo(guild) {
   }
   const memberIds = GuildMemberStore.getMemberIds(id);
   let obj = guild(504);
-  const existingMembers = guild(9868).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
+  const existingMembers = guild(9870).getExistingMembers(memberIds, channel, guild, channel.accessPermissions);
   let tmp8 = 0 === stateFromStoresArray.length;
   if (tmp8) {
     tmp8 = 1 === existingMembers.length;
@@ -74,7 +74,7 @@ export default function ChannelAccessInfo(guild) {
   if (tmp8) {
     first = existingMembers[0];
   }
-  const items2 = [closure_8(guild(4632).Text, { variant: "eyebrow", children: stringResult })];
+  const items2 = [closure_8(guild(4635).Text, { variant: "eyebrow", children: stringResult })];
   let obj2 = {
     accessibilityLabel: stringResult,
     accessibilityRole: "button",
@@ -90,15 +90,15 @@ export default function ChannelAccessInfo(guild) {
   let obj3 = { style: tmp.sectionContent, children: null };
   if (null != first) {
     let obj4 = { children: null };
-    let obj5 = { style: tmp.avatar, user: first, guildId: guild.id, size: tmp2(1176).AvatarSizes.XSMALL };
-    const items3 = [closure_8(tmp2(1176).Avatar, obj5)];
+    let obj5 = { style: tmp.avatar, user: first, guildId: guild.id, size: tmp2(1177).AvatarSizes.XSMALL };
+    const items3 = [closure_8(tmp2(1177).Avatar, obj5)];
     let obj6 = { children: null };
     let obj7 = { variant: "text-sm/semibold", children: first.tag };
-    const items4 = [closure_8(tmp2(4632).Text, obj7)];
+    const items4 = [closure_8(tmp2(4635).Text, obj7)];
     let obj8 = { variant: "text-xs/medium", children: null };
-    let intl2 = tmp2(1114).intl;
-    obj8.children = intl2.string(tmp2(1114).t.rt0ERW);
-    items4[1] = closure_8(tmp2(4632).Text, obj8);
+    let intl2 = tmp2(1115).intl;
+    obj8.children = intl2.string(tmp2(1115).t.rt0ERW);
+    items4[1] = closure_8(tmp2(4635).Text, obj8);
     obj6.children = items4;
     items3[1] = closure_9(View, obj6);
     obj4.children = items3;
@@ -140,27 +140,27 @@ export default function ChannelAccessInfo(guild) {
         const obj7 = { size: "sm", style: closure_2.sectionIcon };
         const items = [React6(GroupIcon, obj7)];
         const obj8 = { style: closure_2.labelDetail, variant: "text-sm/medium", children: tmp5 };
-        items[1] = React6(tmp4(4632).Text, obj8);
+        items[1] = React6(tmp4(4635).Text, obj8);
         obj6.children = items;
         return React7(noop.Fragment, obj6);
       }
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(12600);
-    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(5170).GroupIcon)];
+    channel(12605);
+    const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(5173).GroupIcon)];
     const ROLES = constants.ROLES;
-    channel(9884);
-    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9882).ShieldUserIcon);
+    channel(9886);
+    items5[1] = renderCounts(ROLES, stateFromStoresArray.length, 0, tmp2(9884).ShieldUserIcon);
     obj9.children = items5;
   }
   const obj10 = { children: null };
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3)];
-  const tmp2Result = guild(9868);
-  items6[1] = closure_8(guild(1176).Icon, { source: channel(10069), size: guild(1176).Icon.Sizes.SMALL });
+  const tmp2Result = guild(9870);
+  items6[1] = closure_8(guild(1177).Icon, { source: channel(10071), size: guild(1177).Icon.Sizes.SMALL });
   obj2.children = items6;
-  items2[1] = closure_9(guild(5204).PressableOpacity, obj2);
+  items2[1] = closure_9(guild(5207).PressableOpacity, obj2);
   obj10.children = items2;
   return closure_9(closure_10, obj10);
 }

@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   fill: StyleSheet.absoluteFillObject,
   backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM },

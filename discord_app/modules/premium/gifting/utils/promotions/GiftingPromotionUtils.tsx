@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import PromotionsStore from "../../../promotions/PromotionsStore.tsx";
 
 require = fn;
-const SubscriptionPlans = fn(1373).SubscriptionPlans;
+const SubscriptionPlans = fn(1374).SubscriptionPlans;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
@@ -22,7 +22,7 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     hasPreviouslyFetched.getGiftPromotionRewardSkuIds(),
   );
   const obj = first(504);
-  const fetchPurchases = first(10863).useFetchPurchases();
+  const fetchPurchases = first(10867).useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
@@ -44,10 +44,10 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     }
   }, items1);
   const someResult = stateFromStoresArray.some(
-    (item) => item === first(10867).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
+    (item) => item === first(10871).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
   );
-  const obj3 = first(10863);
-  const fetchSummer2026GogoPromoEligibility = first(10868).useFetchSummer2026GogoPromoEligibility(someResult);
+  const obj3 = first(10867);
+  const fetchSummer2026GogoPromoEligibility = first(10872).useFetchSummer2026GogoPromoEligibility(someResult);
   const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
   const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
   const items2 = [first, isEligible, hasFetched, someResult];

@@ -8,11 +8,11 @@ import size from "../../_runtime/metro/00002__.js";
 
 const UserFlags = Constants.UserFlags;
 function refreshSourceMapCookie() {
-  const HTTP = url(1270).HTTP;
+  const HTTP = url(1271).HTTP;
   obj = { url, headers: null, oldFormErrors: true, rejectWithError: true };
-  const obj2 = { Authorization: importDefaultResult1(1099).getToken() };
+  const obj2 = { Authorization: importDefaultResult1(1100).getToken() };
   obj.headers = obj2;
-  const obj3 = importDefaultResult1(1099);
+  const obj3 = importDefaultResult1(1100);
   HTTP.put(obj).then(
     (status) => {
       if (401 !== status.status) {
@@ -53,12 +53,12 @@ let closure_5 = {
         const _clearTimeout = clearTimeout;
         clearTimeout(timeout);
         timeout = null;
-        const HTTP = url(1270).HTTP;
+        const HTTP = url(1271).HTTP;
         obj = { url, headers: null, oldFormErrors: true, rejectWithError: true };
-        const obj2 = { Authorization: importDefaultResult1(1099).getToken() };
+        const obj2 = { Authorization: importDefaultResult1(1100).getToken() };
         obj.headers = obj2;
         HTTP.del(obj);
-        const obj3 = importDefaultResult1(1099);
+        const obj3 = importDefaultResult1(1100);
       }
     }
   },

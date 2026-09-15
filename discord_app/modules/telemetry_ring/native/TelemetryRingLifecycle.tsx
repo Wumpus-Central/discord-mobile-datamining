@@ -18,9 +18,9 @@ class TelemetryRingLifecycleImpl extends tmp2 {
       const result = applyArgumentsResult._updateZoomedInExport();
     };
     applyArgumentsResult._handleLogout = function _handleLogout() {
-      applyArgumentsResult(1903).clear();
-      const obj = applyArgumentsResult(1903);
-      applyArgumentsResult(1899).reset();
+      applyArgumentsResult(1904).clear();
+      const obj = applyArgumentsResult(1904);
+      applyArgumentsResult(1900).reset();
     };
     return applyArgumentsResult;
   }
@@ -53,9 +53,9 @@ prototype["_initialize"] = function _initialize() {
       ApexExperimentStore.removeChangeListener(self._handleEligibilityChange);
     };
     const obj = self(573);
-    self(1899).initialize();
+    self(1900).initialize();
     const result = self._updateZoomedInExport();
-    const obj2 = self(1899);
+    const obj2 = self(1900);
   }
 };
 prototype["_terminate"] = function _terminate() {

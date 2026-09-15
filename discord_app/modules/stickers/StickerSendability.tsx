@@ -6,23 +6,23 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import StickersPackStore from "StickersPackStore.tsx";
 
 require = fn;
-function getStickerSendability(stickerById, currentUser, channel) {
+function getStickerSendability(item10030, currentUser, channel) {
   if (null == currentUser) {
     return obj.NONSENDABLE;
   } else {
     const result = PremiumUtilsDefault.canUseCustomStickersEverywhere(currentUser);
-    if (obj5.isStandardSticker(stickerById)) {
-      if (null == StickersPackStore.getStickerPack(stickerById.pack_id)) {
+    if (obj5.isStandardSticker(item10030)) {
+      if (null == StickersPackStore.getStickerPack(item10030.pack_id)) {
         let SENDABLE2 = obj.NONSENDABLE;
       } else {
         SENDABLE2 = obj.SENDABLE;
       }
     } else {
-      if (tmp22Result.isGuildSticker(stickerById)) {
+      if (tmp22Result.isGuildSticker(item10030)) {
         if (null != channel) {
-          if (null == GuildMemberStore.getSelfMember(stickerById.guild_id)) {
+          if (null == GuildMemberStore.getSelfMember(item10030.guild_id)) {
             let SENDABLE_WITH_BOOSTED_GUILD = obj.NONSENDABLE;
-          } else if (stickerById.available) {
+          } else if (item10030.available) {
             if (null != channel.guild_id) {
               if ("" !== channel.guild_id) {
                 const SENDABLE = obj.SENDABLE;

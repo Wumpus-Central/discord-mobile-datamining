@@ -33,7 +33,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
     tmp5 = subscription.status === SubscriptionStatusTypes.ACTIVE;
   }
   if (tmp5) {
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1115).intl;
     let obj3 = { renewalDate: subscriptionPeriodStart.subscriptionPeriodStart, onSubscriptionManagementClick: null };
     _require = asyncGeneratorStep(async () => {
       if (v3 === 2) {
@@ -92,7 +92,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
       }
       return applyArgumentsResult;
     };
-    billingInformationString = intl.format(tmp2(1114).t.gknRR3, obj3);
+    billingInformationString = intl.format(tmp2(1115).t.gknRR3, obj3);
   }
   return billingInformationString;
 };

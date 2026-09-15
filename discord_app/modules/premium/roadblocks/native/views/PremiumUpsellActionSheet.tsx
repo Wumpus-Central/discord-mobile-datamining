@@ -8,7 +8,7 @@ import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05068_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05071_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import openPremiumUpsellActionSheet from "../utils/openPremiumUpsellActionSheet.tsx";
@@ -111,7 +111,7 @@ function PremiumUpsellHero(arg0) {
   return tmp13;
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: closure_11, PremiumTypes: closure_12, PremiumUpsellTypes: map1 } = PremiumConstants);
 const Constants = fn(1074);
 ({
@@ -120,13 +120,13 @@ const Constants = fn(1074);
   HelpdeskArticles: closure_16,
   ThemeTypes: closure_17,
 } = Constants);
-const ApplicationStreamFPS = fn(4683).ApplicationStreamFPS;
-const SavedMessagesConstants = fn(7954);
+const ApplicationStreamFPS = fn(4686).ApplicationStreamFPS;
+const SavedMessagesConstants = fn(7957);
 ({ SAVED_BOOKMARKS_MAX: closure_19, SAVED_REMINDERS_MAX: closure_20 } = SavedMessagesConstants);
-const premiumMax = fn(7948).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(7951).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_22, Fragment: closure_23, jsxs: closure_24 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 },
   image: { width: 240, height: 144 },
@@ -295,8 +295,8 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj8.analyticsPage = constants3.PREMIUM_UPSELL_STICKERS_EVERYWHERE;
   obj8.upsellType = constants.STICKERS_EVERYWHERE_UPSELL;
   obj8.illustration = closure_22(legacyProps(tmp3[24]).StickersSpotIllustration, {
-    width: 188,
-    height: 106,
+    width: 235,
+    height: 132,
     accessible: false,
   });
   obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.STICKERS_EVERYWHERE] = obj8;

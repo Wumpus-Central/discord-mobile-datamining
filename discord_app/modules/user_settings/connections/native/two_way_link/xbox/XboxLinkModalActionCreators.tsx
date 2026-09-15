@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 
 export default {
   showModal(locationStack) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9347, dependencyMap.paths), { locationStack }, c3);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9350, dependencyMap.paths), { locationStack }, c3);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(c3);

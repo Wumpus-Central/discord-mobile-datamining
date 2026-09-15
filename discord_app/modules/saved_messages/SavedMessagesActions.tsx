@@ -33,10 +33,10 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
   closure_128_1 = results.map((message) => {
     let messageRecord = null;
     if (null != message.message) {
-      messageRecord = closure_1_0(4859).createMessageRecord(message.message);
-      const obj = closure_1_0(4859);
+      messageRecord = closure_1_0(4862).createMessageRecord(message.message);
+      const obj = closure_1_0(4862);
     }
-    const obj2 = { message: messageRecord, saveData: closure_1_0(7963).savedMessageDataToClient(message.save_data) };
+    const obj2 = { message: messageRecord, saveData: closure_1_0(7966).savedMessageDataToClient(message.save_data) };
     return obj2;
   });
   await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 });

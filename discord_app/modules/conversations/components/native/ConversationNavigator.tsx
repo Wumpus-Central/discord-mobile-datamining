@@ -21,7 +21,7 @@ function HeaderWithBorder(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const NativeStackNavigator = fn(8017);
+const NativeStackNavigator = fn(8020);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
@@ -31,15 +31,15 @@ export default function ConversationNavigator(route) {
   const channelId = params.channelId;
   let obj2 = {
     id: "conversation-navigator",
-    screenOptions: channelId(7103).useAccessibilityNativeStackOptions(),
+    screenOptions: channelId(7107).useAccessibilityNativeStackOptions(),
     children: null,
   };
-  let obj = channelId(7103);
+  let obj = channelId(7107);
   ({ Navigator, Screen } = Screen);
   const items = [
     closure_3(Screen, {
       initialParams: { channelId, guildId: params.guildId },
-      name: channelId(8027).ConversationNavigatorScreens.LIST,
+      name: channelId(8030).ConversationNavigatorScreens.LIST,
       options(navigation) {
         let obj = {
           header(arg0) {
@@ -55,20 +55,20 @@ export default function ConversationNavigator(route) {
         });
         obj.headerTitle = function headerTitle() {
           const obj = { channelId, title: null };
-          const intl = channelId(1114).intl;
-          obj.title = intl.string(channelId(1114).t.T3WBRp);
+          const intl = channelId(1115).intl;
+          obj.title = intl.string(channelId(1115).t.T3WBRp);
           return closure_2_3(ConversationNavigatorHeaderDefault, obj);
         };
         return obj;
       },
       getComponent() {
-        return channelId(8029).default;
+        return channelId(8032).default;
       },
     }),
   ];
   const obj3 = {
     initialParams: { channelId, guildId: params.guildId },
-    name: channelId(8027).ConversationNavigatorScreens.LIST,
+    name: channelId(8030).ConversationNavigatorScreens.LIST,
     options(navigation) {
       let obj = {
         header(arg0) {
@@ -84,18 +84,18 @@ export default function ConversationNavigator(route) {
       });
       obj.headerTitle = function headerTitle() {
         const obj = { channelId, title: null };
-        const intl = channelId(1114).intl;
-        obj.title = intl.string(channelId(1114).t.T3WBRp);
+        const intl = channelId(1115).intl;
+        obj.title = intl.string(channelId(1115).t.T3WBRp);
         return closure_2_3(ConversationNavigatorHeaderDefault, obj);
       };
       return obj;
     },
     getComponent() {
-      return channelId(8029).default;
+      return channelId(8032).default;
     },
   };
   items[1] = closure_3(Screen.Screen, {
-    name: channelId(8027).ConversationNavigatorScreens.FOCUS,
+    name: channelId(8030).ConversationNavigatorScreens.FOCUS,
     options(route) {
       route = route.route;
       const obj = {
@@ -107,7 +107,7 @@ export default function ConversationNavigator(route) {
         headerTitle: null,
         headerRight: null,
       };
-      const obj2 = route(7966);
+      const obj2 = route(7969);
       obj.headerLeft = obj2.getRenderBackImage(route.navigation, {
         badgeCutoutColor: closure_1(576).colors.MOBILE_ACTIONSHEET_BACKGROUND,
       });
@@ -127,7 +127,7 @@ export default function ConversationNavigator(route) {
       return obj;
     },
     getComponent() {
-      return channelId(13382).default;
+      return channelId(13387).default;
     },
   });
   obj2.children = items;

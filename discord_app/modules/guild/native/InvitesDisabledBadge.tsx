@@ -1,13 +1,13 @@
 // discord_app/modules/guild/native/InvitesDisabledBadge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef12855 from "../../../../_runtime/metro/12855__.js";
+import _modDef12860 from "../../../../_runtime/metro/12860__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   pause: { alignContent: "center", justifyContent: "center", width: 10, height: 10 },
   pauseBackground: null,
@@ -16,7 +16,7 @@ let obj = {
 let size = {
   borderRadius: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
-  padding: fn(1176).BADGE_PADDING,
+  padding: fn(1177).BADGE_PADDING,
   height: 16,
   width: 16,
   alignContent: "center",
@@ -27,9 +27,9 @@ const size1 = {
   borderRadius: 20,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   position: "absolute",
-  bottom: -fn(1176).BADGE_PADDING,
-  right: -fn(1176).BADGE_PADDING,
-  padding: fn(1176).BADGE_PADDING,
+  bottom: -fn(1177).BADGE_PADDING,
+  right: -fn(1177).BADGE_PADDING,
+  padding: fn(1177).BADGE_PADDING,
   height: 22,
   width: 22,
   alignContent: "center",
@@ -50,7 +50,7 @@ export default noop.memo(function InvitesDisabledBadge(style) {
     children: jsx(native.ThemedIcon, {
       style: tmp.pause,
       themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-      source: _modDef12855,
+      source: _modDef12860,
     }),
   };
   obj.children = (
@@ -58,7 +58,7 @@ export default noop.memo(function InvitesDisabledBadge(style) {
       {jsx(native.ThemedIcon, {
         style: tmp.pause,
         themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-        source: _modDef12855,
+        source: _modDef12860,
       })}
     </View>
   );

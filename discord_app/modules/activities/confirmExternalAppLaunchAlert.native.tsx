@@ -4,14 +4,14 @@ import LinkingDefault from "../../lib/native/Linking.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import _modDef9674 from "../../../_runtime/metro/09674__.js";
+import _modDef9676 from "../../../_runtime/metro/09676__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_8();
   const obj = { style: tmp.alertContainer, children: null };
-  const items = [timestampProducer(React3, { source: _modDef9674, style: tmp.announcementBirb }), , ,];
+  const items = [timestampProducer(React3, { source: _modDef9676, style: tmp.announcementBirb }), , ,];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["06YebE"]);
@@ -44,10 +44,10 @@ function LinkButton() {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const PRIVATE_APPS_HELP_ARTICLE = fn(1920).PRIVATE_APPS_HELP_ARTICLE;
+const PRIVATE_APPS_HELP_ARTICLE = fn(1921).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertEyebrowText: { marginTop: 40, textAlign: "center" },

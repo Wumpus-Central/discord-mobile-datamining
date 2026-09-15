@@ -1,7 +1,7 @@
 // discord_app/modules/safety_flows/native/tasks/AppStoreParentalRevocationScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2690 from "../../SafetyFlows.messages.js";
+import _modDef2691 from "../../SafetyFlows.messages.js";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   content: { flexGrow: 1, width: "100%" },
   upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" },
@@ -47,16 +47,16 @@ export default function AppStoreParentalRevocationScreen() {
     children: null,
   };
   const intl = util.intl;
-  obj6.children = intl.string(_modDef2690.Z87TFb);
+  obj6.children = intl.string(_modDef2691.Z87TFb);
   const items = [hasOwnProperty(Text_Text.Text, obj6)];
   const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: null };
   const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj8.children = intl2.string(_modDef2690.VS98dM);
+  obj8.children = intl2.string(_modDef2691.VS98dM);
   const items1 = [hasOwnProperty(Text_Text.Text, obj8)];
   const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl3 = util.intl;
-  obj9.children = intl3.string(_modDef2690.BaI6L4);
+  obj9.children = intl3.string(_modDef2691.BaI6L4);
   items1[1] = hasOwnProperty(Text_Text.Text, obj9);
   obj7.children = items1;
   items[1] = timestampProducer(Stack_Stack.Stack, obj7);
@@ -70,7 +70,7 @@ export default function AppStoreParentalRevocationScreen() {
   const items4 = [hasOwnProperty(LogOutDisclaimerDefault, {})];
   const obj12 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
   const intl4 = util.intl;
-  obj12.text = intl4.string(_modDef2690["6FXIU6"]);
+  obj12.text = intl4.string(_modDef2691["6FXIU6"]);
   obj12.icon = hasOwnProperty(LinkExternalSmallIcon.LinkExternalSmallIcon, { color: nativeDefault.colors.WHITE });
   obj12.onPress = callback;
   items4[1] = hasOwnProperty(ModalActionButton.ModalActionButton, obj12);

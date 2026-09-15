@@ -1,10 +1,10 @@
 // discord_app/modules/coded_links/findCodedLinks.tsx
 import BuildOverrideUtils from "../build_overrides/BuildOverrideUtils.tsx";
-import Url from "../../../_runtime/01367_Url.js";
+import Url from "../../../_runtime/01368_Url.js";
 import InviteCodeUtils from "../instant_invite/InviteCodeUtils.tsx";
 import CodedLink from "CodedLink.tsx";
 import findCodedLinkUrlsDefault from "findCodedLinkUrls.native.tsx";
-import keysSorter from "../../../_runtime/05537_keysSorter.js";
+import keysSorter from "../../../_runtime/05541_keysSorter.js";
 import storefrontMessageEmbedCodedLink from "../application_storefront/storefrontMessageEmbedCodedLink.tsx";
 import InviteTypeUtils from "../instant_invite/InviteTypeUtils.tsx";
 import ExperimentEmbedUtils from "../experiments/ExperimentEmbedUtils.tsx";
@@ -236,10 +236,10 @@ const re21 = tmp3;
 if (null == INVITE_HOST) {
   let obj = { host: null, pathPrefix: null };
 } else if (INVITE_HOST.indexOf("/") >= 0) {
-  let parsed = fn(1367).parse(INVITE_HOST, undefined, true);
+  let parsed = fn(1368).parse(INVITE_HOST, undefined, true);
   ({ host: obj3.host, pathname: obj3.pathPrefix } = parsed);
   obj = { host: null, pathPrefix: null };
-  const obj2 = fn(1367);
+  const obj2 = fn(1368);
   let obj4 = { host: null, pathPrefix: null };
 } else {
   obj = { host: INVITE_HOST, pathPrefix: null };
@@ -247,11 +247,11 @@ if (null == INVITE_HOST) {
 if (null == GUILD_TEMPLATE_HOST) {
   let obj7 = { host: null, pathPrefix: null };
 } else if (GUILD_TEMPLATE_HOST.indexOf("/") >= 0) {
-  const parsed1 = fn(1367).parse(GUILD_TEMPLATE_HOST, undefined, true);
+  const parsed1 = fn(1368).parse(GUILD_TEMPLATE_HOST, undefined, true);
   ({ host: obj6.host, pathname: obj6.pathPrefix } = parsed1);
   obj7 = { host: null, pathPrefix: null };
   let obj10 = { host: null, pathPrefix: null };
-  const obj5 = fn(1367);
+  const obj5 = fn(1368);
 } else {
   obj7 = { host: GUILD_TEMPLATE_HOST, pathPrefix: null };
 }
@@ -262,11 +262,11 @@ if (WEBAPP_ENDPOINT == null) {
 if (null == WEBAPP_ENDPOINT) {
   let obj13 = { host: null, pathPrefix: null };
 } else if (WEBAPP_ENDPOINT.indexOf("/") >= 0) {
-  const parsed2 = fn(1367).parse(WEBAPP_ENDPOINT, undefined, true);
+  const parsed2 = fn(1368).parse(WEBAPP_ENDPOINT, undefined, true);
   ({ host: obj9.host, pathname: obj9.pathPrefix } = parsed2);
   obj13 = { host: null, pathPrefix: null };
   const obj16 = { host: null, pathPrefix: null };
-  const obj8 = fn(1367);
+  const obj8 = fn(1368);
 } else {
   obj13 = { host: WEBAPP_ENDPOINT, pathPrefix: null };
 }
@@ -274,10 +274,10 @@ let combined = "//canary." + PRIMARY_DOMAIN;
 if (null == combined) {
   let obj19 = { host: null, pathPrefix: null };
 } else if (combined.indexOf("/") >= 0) {
-  const parsed3 = fn(1367).parse(combined, undefined, true);
+  const parsed3 = fn(1368).parse(combined, undefined, true);
   ({ host: obj12.host, pathname: obj12.pathPrefix } = parsed3);
   obj19 = { host: null, pathPrefix: null };
-  let obj11 = fn(1367);
+  let obj11 = fn(1368);
   let obj22 = { host: null, pathPrefix: null };
 } else {
   obj19 = { host: combined, pathPrefix: null };
@@ -286,28 +286,28 @@ let combined1 = "//ptb." + PRIMARY_DOMAIN;
 if (null == combined1) {
   let obj23 = { host: null, pathPrefix: null };
 } else if (combined1.indexOf("/") >= 0) {
-  const parsed4 = fn(1367).parse(combined1, undefined, true);
+  const parsed4 = fn(1368).parse(combined1, undefined, true);
   ({ host: obj15.host, pathname: obj15.pathPrefix } = parsed4);
   obj23 = { host: null, pathPrefix: null };
-  const obj14 = fn(1367);
+  const obj14 = fn(1368);
   let obj24 = { host: null, pathPrefix: null };
 } else {
   obj23 = { host: combined1, pathPrefix: null };
 }
 if ("discordapp.com".indexOf("/") >= 0) {
-  const parsed5 = fn(1367).parse("discordapp.com", undefined, true);
+  const parsed5 = fn(1368).parse("discordapp.com", undefined, true);
   ({ host: obj18.host, pathname: obj18.pathPrefix } = parsed5);
   let obj26 = { host: null, pathPrefix: null };
-  let obj17 = fn(1367);
+  let obj17 = fn(1368);
   let obj25 = { host: null, pathPrefix: null };
 } else {
   obj26 = { host: "discordapp.com", pathPrefix: null };
 }
 if ("discord.com".indexOf("/") >= 0) {
-  const parsed6 = fn(1367).parse("discord.com", undefined, true);
+  const parsed6 = fn(1368).parse("discord.com", undefined, true);
   ({ host: obj21.host, pathname: obj21.pathPrefix } = parsed6);
   let obj41 = { host: null, pathPrefix: null };
-  let obj20 = fn(1367);
+  let obj20 = fn(1368);
   let obj27 = { host: null, pathPrefix: null };
 } else {
   obj41 = { host: "discord.com", pathPrefix: null };

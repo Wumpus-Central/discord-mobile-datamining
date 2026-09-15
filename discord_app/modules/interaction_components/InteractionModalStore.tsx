@@ -55,11 +55,11 @@ const interactionModalStore = new InteractionModalStore(DispatcherDefault, {
     ({ data, preflight } = nonce);
     let startTimeout;
     const interactionType = data.interactionType;
-    if (nonce(1894).InteractionTypes.APPLICATION_COMMAND === interactionType) {
+    if (nonce(1895).InteractionTypes.APPLICATION_COMMAND === interactionType) {
       const messageId = nonce.messageId;
       const channelId = data.channelId;
       return false;
-    } else if (tmp(1894).InteractionTypes.MODAL_SUBMIT === interactionType) {
+    } else if (tmp(1895).InteractionTypes.MODAL_SUBMIT === interactionType) {
       let tmp7 = null == nonce;
       if (!tmp7) {
         tmp7 = IN_FLIGHT === obj.ERRORED;
@@ -81,7 +81,7 @@ const interactionModalStore = new InteractionModalStore(DispatcherDefault, {
             nonce(dependencyMap[2]).setFailed(closure_1_0);
             const obj = nonce(dependencyMap[2]);
           }
-        }, 2 * tmp3(1090).Millis.MINUTE);
+        }, 2 * tmp3(1091).Millis.MINUTE);
         preflight
           .then(() => {
             if (typeof startTimeout === "function") {
@@ -129,7 +129,7 @@ const interactionModalStore = new InteractionModalStore(DispatcherDefault, {
             nonce(dependencyMap[2]).setFailed(closure_1_0);
             const obj = nonce(dependencyMap[2]);
           }
-        }, 10 * tmp3(1090).Millis.SECOND);
+        }, 10 * tmp3(1091).Millis.SECOND);
       }
       return true;
     } else {

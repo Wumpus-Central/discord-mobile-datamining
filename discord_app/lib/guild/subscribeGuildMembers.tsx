@@ -48,12 +48,12 @@ export default function subscribeGuildMembers(arg0) {
         if (!isEqualResult) {
           if (null != self._subscriptions) {
             const item = _modDef12.forEach(self._subscriptions, (userIds, guildId) =>
-              displayName(7415).unsubscribeMembers(guildId, userIds),
+              displayName(7419).unsubscribeMembers(guildId, userIds),
             );
             const tmpResult3 = _modDef12;
           }
           const item1 = _modDef12.forEach(tmp4, (userIds, guildId) =>
-            displayName(7415).subscribeMembers(guildId, userIds),
+            displayName(7419).subscribeMembers(guildId, userIds),
           );
           self._subscriptions = tmp4;
           const tmpResult4 = _modDef12;
@@ -100,11 +100,11 @@ export const useSubscribeGuildMembers = function useSubscribeGuildMembers(memo, 
         const obj2 = { extra: null };
         const obj3 = { count: userIds.length, guildId, reason };
         obj2.extra = obj3;
-        reason(1230).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
-        const obj = reason(1230);
+        reason(1231).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
+        const obj = reason(1231);
       }
-      closure_0(7415).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7415);
+      closure_0(7419).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7419);
     });
     return () => {
       const item = reason(12).forEach(memo, (userIds, guildId) =>

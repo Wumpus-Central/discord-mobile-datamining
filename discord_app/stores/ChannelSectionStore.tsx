@@ -113,10 +113,10 @@ function setIsSearchSidebarOpen() {
     c24 = hasSearchStateResult;
   }
 }
-const isChannelChatInSidebar = fn(1961).isChannelChatInSidebar;
+const isChannelChatInSidebar = fn(1962).isChannelChatInSidebar;
 const Constants = fn(1074);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(1964);
+const ChannelConstants = fn(1965);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1085).Permissions;
 let c17 = false;

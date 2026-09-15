@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../tokens/native/useToken.tsx";
-import _modDef6011 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscordQuestsLockupLogo-2x.png.js";
+import _modDef6015 from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscordQuestsLockupLogo-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -49,7 +49,7 @@ export const DiscordQuestsLockupLogo = function DiscordQuestsLockupLogo(color) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj4.source = { uri: _modDef6011 };
+  obj4.source = { uri: _modDef6015 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

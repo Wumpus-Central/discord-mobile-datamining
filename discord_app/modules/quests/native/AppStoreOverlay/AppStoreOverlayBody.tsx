@@ -12,10 +12,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1074).VerticalGradient;
-let closure_6 = fn(7254).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_6 = fn(7258).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     paddingTop: nativeDefault.space.PX_16,
@@ -162,8 +162,8 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   let token;
   ({ onInstallPress, onLayout } = arg0);
   const tmp = closure_10();
-  const bottom = token(1611)().bottom;
-  token = bottom(4338).useToken(token(576).colors.MOBILE_ACTIONSHEET_BACKGROUND);
+  const bottom = token(1612)().bottom;
+  token = bottom(4341).useToken(token(576).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   const items1 = [bottom];
   const memo = noop.useMemo(() => {
@@ -174,7 +174,7 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   const obj2 = { style: tmp.footer, onLayout, children: null };
   const memo1 = noop.useMemo(() => ({ paddingBottom: Math.max(bottom, closure_6) }), items1);
   const items2 = [
-    closure_7(token(5068), {
+    closure_7(token(5071), {
       pointerEvents: "none",
       style: tmp.footerGradient,
       colors: memo,
@@ -184,10 +184,10 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   ];
   const obj4 = { style: memo1, children: null };
   const obj5 = { size: "lg", text: null, onPress: null };
-  const intl = bottom(1114).intl;
-  obj5.text = intl.string(bottom(1114).t.lwQdjB);
+  const intl = bottom(1115).intl;
+  obj5.text = intl.string(bottom(1115).t.lwQdjB);
   obj5.onPress = onInstallPress;
-  obj4.children = closure_7(bottom(5056).Button, obj5);
+  obj4.children = closure_7(bottom(5059).Button, obj5);
   items2[1] = closure_7(View, obj4);
   obj2.children = items2;
   return closure_8(View, obj2);

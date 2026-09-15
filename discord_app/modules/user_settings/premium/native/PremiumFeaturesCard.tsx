@@ -2,7 +2,7 @@
 import _modDef38 from "../../../../../_runtime/metro/00038__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3074 from "../../../premium/premium_group/PremiumGroup.messages.js";
+import _modDef3075 from "../../../premium/premium_group/PremiumGroup.messages.js";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLocations.tsx";
@@ -31,7 +31,7 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticsPages, AnalyticsSections, AnalyticsObjectTypes } = Constants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({
   ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK: closure_8,
   DISCOUNT_DURATION_FALLBACK: closure_9,
@@ -53,7 +53,7 @@ const jsxProd = fn(21);
 let items = [,];
 ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
 const set = new Set(items);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   containerWrapper: { position: "relative" },
   card: {
@@ -223,7 +223,7 @@ function PriceText(fractionalPremiumInfo) {
             priceString1 = closure_1_12;
           }
           obj7.regularPrice = priceString1;
-          formatResult = intl6.format(_modDef3074.FwjZzr, obj7);
+          formatResult = intl6.format(_modDef3075.FwjZzr, obj7);
           const tmp7Result6 = PremiumGroupUtils;
         }
       }
@@ -356,7 +356,7 @@ export default function PremiumFeaturesCard(premiumType) {
   }
   let UNSPECIFIED = premiumType.premiumGroupRole;
   if (UNSPECIFIED === undefined) {
-    UNSPECIFIED = premiumType(1379).PremiumSubscriptionGroupRole.UNSPECIFIED;
+    UNSPECIFIED = premiumType(1380).PremiumSubscriptionGroupRole.UNSPECIFIED;
   }
   let analyticsLocations;
   let useReducedMotion;
@@ -364,19 +364,19 @@ export default function PremiumFeaturesCard(premiumType) {
   let premiumBundleWithPredicate;
   const tmp3 = closure_22();
   _modDef38(set.has(premiumType), "only Tier 0 and Tier 2 are supported");
-  const premiumTrialOffer = premiumType(7550).usePremiumTrialOffer();
-  const obj = premiumType(7550);
-  const premiumDiscountOffer = premiumType(8165).usePremiumDiscountOffer();
-  const obj2 = premiumType(8165);
-  const activeDiscountInfo = premiumType(8163).useActiveDiscountInfo();
-  const obj3 = premiumType(8163);
+  const premiumTrialOffer = premiumType(7554).usePremiumTrialOffer();
+  const obj = premiumType(7554);
+  const premiumDiscountOffer = premiumType(8168).usePremiumDiscountOffer();
+  const obj2 = premiumType(8168);
+  const activeDiscountInfo = premiumType(8166).useActiveDiscountInfo();
+  const obj3 = premiumType(8166);
   const tmp12 = useFractionalPremiumInfoDefault();
   let subscriptionTrial;
-  const premiumTrialOfferPremiumType = premiumType(7549).usePremiumTrialOfferPremiumType();
+  const premiumTrialOfferPremiumType = premiumType(7553).usePremiumTrialOfferPremiumType();
   if (premiumTrialOffer != null) {
     subscriptionTrial = premiumTrialOffer.subscriptionTrial;
   }
-  const obj4 = premiumType(7549);
+  const obj4 = premiumType(7553);
   let interval;
   if (subscriptionTrial != null) {
     interval = subscriptionTrial.interval;
@@ -387,11 +387,11 @@ export default function PremiumFeaturesCard(premiumType) {
     intervalCount = subscriptionTrial.intervalCount;
   }
   obj5.intervalCount = intervalCount;
-  const result = premiumType(4294).formatIntervalDuration(obj5);
-  const intl = tmp8(1114).intl;
-  const stringResult = intl.string(premiumType(1114).t.J61px0);
+  const result = premiumType(4297).formatIntervalDuration(obj5);
+  const intl = tmp8(1115).intl;
+  const stringResult = intl.string(premiumType(1115).t.J61px0);
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  const tmp8Result = premiumType(4294);
+  const tmp8Result = premiumType(4297);
   let items = [premiumBundleWithPredicate];
   const tmp19 = _slicedToArray(
     premiumType(504).useStateFromStoresArray(items, () => {
@@ -420,8 +420,8 @@ export default function PremiumFeaturesCard(premiumType) {
     isBoostOnly = first.isBoostOnly;
   }
   if (isBoostOnly) {
-    isBoostOnly = tmp8(1608).isMetaQuest();
-    const tmp8Result11 = tmp8(1608);
+    isBoostOnly = tmp8(1609).isMetaQuest();
+    const tmp8Result11 = tmp8(1609);
   }
   let tmp25 = null;
   if (null != first) {
@@ -438,7 +438,7 @@ export default function PremiumFeaturesCard(premiumType) {
     interval1 = constants.MONTH;
   }
   const tmp23 = usePremiumFeaturesDefault(premiumType, flag, UNSPECIFIED);
-  premiumBundleWithPredicate = premiumType(7512).getPremiumBundleWithPredicate((additionalPlans) => {
+  premiumBundleWithPredicate = premiumType(7516).getPremiumBundleWithPredicate((additionalPlans) => {
     let tmp = 0 === additionalPlans.additionalPlans.length;
     ({ numPremiumGuild, premiumTier, interval } = additionalPlans);
     if (tmp) {
@@ -456,9 +456,9 @@ export default function PremiumFeaturesCard(premiumType) {
     return tmp;
   });
   _modDef38(null != premiumBundleWithPredicate, "could not find a premium item");
-  const tmp8Result12 = premiumType(7512);
+  const tmp8Result12 = premiumType(7516);
   const items3 = [premiumBundleWithPredicate];
-  const discountedPriceString = premiumType(9509).useDiscountedPremiumProductInfo(
+  const discountedPriceString = premiumType(9511).useDiscountedPremiumProductInfo(
     premiumDiscountOffer,
     items3,
   ).discountedPriceString;
@@ -469,8 +469,8 @@ export default function PremiumFeaturesCard(premiumType) {
       const planIdFromItems = first.planIdFromItems;
       let tmp33 = null != planIdFromItems;
       if (tmp33) {
-        tmp33 = tmp8(4294).getPremiumType(planIdFromItems) === premiumType;
-        const tmp8Result14 = tmp8(4294);
+        tmp33 = tmp8(4297).getPremiumType(planIdFromItems) === premiumType;
+        const tmp8Result14 = tmp8(4297);
       }
       flag4 = tmp33;
     }
@@ -479,7 +479,7 @@ export default function PremiumFeaturesCard(premiumType) {
   const tmp34 = usePremiumPlanPriceDefault(premiumBundleWithPredicate.basePlanId);
   const obj6 = { style: tmp3.containerWrapper, onLayout, children: null };
   const items4 = [
-    closure_19(premiumType(7541).PremiumPill, {
+    closure_19(premiumType(7545).PremiumPill, {
       style: tmp3.pill,
       discountOffer: premiumDiscountOffer,
       isActiveDiscount: null != activeDiscountInfo,
@@ -499,7 +499,7 @@ export default function PremiumFeaturesCard(premiumType) {
     premiumType,
     trialOffer: premiumTrialOffer,
   };
-  const tmp8Result13 = premiumType(9509);
+  const tmp8Result13 = premiumType(9511);
   if (flag3) {
     let tmp37Result = closure_19(PremiumGroupWordmarkDefault, { width: 185, height: 20, alwaysWhite: true });
   } else {
@@ -552,7 +552,7 @@ export default function PremiumFeaturesCard(premiumType) {
     if (tmp37Result6) {
       const obj14 = { accessible: true, style: tmp3.trialSubTextContainer, children: null };
       const obj15 = { variant: "text-md/normal", style: tmp3.trialSubText, children: null };
-      const intl6 = tmp8(1114).intl;
+      const intl6 = tmp8(1115).intl;
       const obj16 = { trialPeriod: result, price: null };
       let priceString;
       if (tmp34 != null) {
@@ -562,8 +562,8 @@ export default function PremiumFeaturesCard(premiumType) {
         priceString = closure_12;
       }
       obj16.price = priceString;
-      obj15.children = intl6.format(tmp8(1114).t.pC4tcv, obj16);
-      obj14.children = closure_19(tmp8(4632).Text, obj15);
+      obj15.children = intl6.format(tmp8(1115).t.pC4tcv, obj16);
+      obj14.children = closure_19(tmp8(4635).Text, obj15);
       tmp37Result6 = closure_19(tmp36, obj14);
     }
     items6[1] = tmp37Result6;
@@ -575,9 +575,9 @@ export default function PremiumFeaturesCard(premiumType) {
     if (tmp32) {
       const obj17 = { style: tmp3.currentPlanLabel, accessible: true, accessibilityRole: "text", children: null };
       const obj18 = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
-      const intl5 = tmp8(1114).intl;
-      obj18.children = intl5.string(tmp8(1114).t["j+wlhy"]);
-      obj17.children = closure_19(tmp8(4632).Text, obj18);
+      const intl5 = tmp8(1115).intl;
+      obj18.children = intl5.string(tmp8(1115).t["j+wlhy"]);
+      obj17.children = closure_19(tmp8(4635).Text, obj18);
       let obj19 = obj17;
     } else {
       obj19 = { style: tmp3.button, children: null };
@@ -599,7 +599,7 @@ export default function PremiumFeaturesCard(premiumType) {
             color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
             size: "sm",
           };
-          const tmp37Result7 = closure_19(tmp8(8785).NitroWheelIcon, obj21);
+          const tmp37Result7 = closure_19(tmp8(8788).NitroWheelIcon, obj21);
         }
         obj20.icon = tmp37Result7;
         let str;
@@ -627,15 +627,15 @@ export default function PremiumFeaturesCard(premiumType) {
         };
         obj19.children = closure_19(tmp43, obj20);
       } else if (tmp31) {
-        const intl4 = tmp8(1114).intl;
+        const intl4 = tmp8(1115).intl;
         const obj22 = { percent: premiumDiscountOffer.discount.amount };
-        let formatToPlainStringResult = intl4.formatToPlainString(tmp8(1114).t.bkQ4bH, obj22);
+        let formatToPlainStringResult = intl4.formatToPlainString(tmp8(1115).t.bkQ4bH, obj22);
       } else if (premiumType === PremiumTypes.TIER_0) {
-        const intl3 = tmp8(1114).intl;
-        formatToPlainStringResult = intl3.string(tmp8(1114).t.cM8bbx);
+        const intl3 = tmp8(1115).intl;
+        formatToPlainStringResult = intl3.string(tmp8(1115).t.cM8bbx);
       } else {
-        const intl2 = tmp8(1114).intl;
-        formatToPlainStringResult = intl2.string(tmp8(1114).t["8x0jKT"]);
+        const intl2 = tmp8(1115).intl;
+        formatToPlainStringResult = intl2.string(tmp8(1115).t["8x0jKT"]);
       }
     }
     closure_19(tmp36, obj19);

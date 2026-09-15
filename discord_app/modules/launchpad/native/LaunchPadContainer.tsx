@@ -6,11 +6,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11598);
+const LaunchPadConstants = fn(11602);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { wrapper: null, container: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -36,11 +36,11 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadCon
 export default function LaunchPadContainer(children) {
   updaters = undefined;
   const tmp = closure_8();
-  const tmp4 = updaters(11599)();
-  const tmp5 = updaters(17078)();
+  const tmp4 = updaters(11603)();
+  const tmp5 = updaters(17116)();
   const launchPadSharedState = tmp5.launchPadSharedState;
   ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
-  ({ gesture, gestureRef } = updaters(17080)({
+  ({ gesture, gestureRef } = updaters(17118)({
     launchPadType: tmp4,
     launchPadSharedState,
     launchPadPullTabState,
@@ -48,10 +48,10 @@ export default function LaunchPadContainer(children) {
     gestureState,
     updaters,
   }));
-  const tmp7 = updaters(12163)();
+  const tmp7 = updaters(12167)();
   dependencyMap = tmp7;
   const tmp2 = updaters;
-  const tmp6 = updaters(17080)({
+  const tmp6 = updaters(17118)({
     launchPadType: tmp4,
     launchPadSharedState,
     launchPadPullTabState,
@@ -75,8 +75,8 @@ export default function LaunchPadContainer(children) {
   fn2.__closure = { updaters };
   fn2.__workletHash = 418963589215;
   fn2.__initData = __initData2;
-  const animatedReaction = launchPadSharedState(4373).useAnimatedReaction(fn, fn2);
-  let obj = launchPadSharedState(4373);
+  const animatedReaction = launchPadSharedState(4376).useAnimatedReaction(fn, fn2);
+  let obj = launchPadSharedState(4376);
   const fn3 = function v() {
     const obj = {
       borderRadius: ReanimatedRexport.interpolate(launchPadSharedState.get(), [0, 1], [0, 16]),
@@ -104,25 +104,25 @@ export default function LaunchPadContainer(children) {
     obj.transform = items1;
     return obj;
   };
-  let obj2 = launchPadSharedState(4373);
+  let obj2 = launchPadSharedState(4376);
   fn3.__closure = {
-    interpolate: launchPadSharedState(4373).interpolate,
+    interpolate: launchPadSharedState(4376).interpolate,
     launchPadSharedState,
-    withSpring: launchPadSharedState(5055).withSpring,
+    withSpring: launchPadSharedState(5058).withSpring,
     windowDimensions: tmp7,
     LAUNCH_PAD_SPRING_CONFIG,
   };
   fn3.__workletHash = 13886247172712;
   fn3.__initData = __initData3;
   const animatedStyle = obj2.useAnimatedStyle(fn3);
-  const MobileHomeDrawerExperiment = launchPadSharedState(4500).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = launchPadSharedState(4503).MobileHomeDrawerExperiment;
   let obj4 = { value: gestureRef, children: null };
   let obj5 = { gesture, children: null };
   let obj6 = { style: tmp.wrapper, children: null };
   let obj7 = { style: null, children: children.children };
   let items = [tmp.container, animatedStyle];
   obj7.style = items;
-  let items1 = [closure_6(updaters(4373).View, obj7)];
+  let items1 = [closure_6(updaters(4376).View, obj7)];
   if (tmp4 !== constants.DISABLED) {
     const obj8 = {
       launchPadType: tmp4,
@@ -132,11 +132,11 @@ export default function LaunchPadContainer(children) {
       launchPadPullTabState,
       updaters,
     };
-    const tmp10Result = closure_6(tmp2(17081), obj8);
+    const tmp10Result = closure_6(tmp2(17119), obj8);
   }
   items1[1] = tmp10Result;
   obj6.children = items1;
   obj5.children = closure_7(closure_3, obj6);
-  obj4.children = closure_6(launchPadSharedState(6756).GestureDetector, obj5);
-  return closure_6(updaters(16105).Provider, obj4);
+  obj4.children = closure_6(launchPadSharedState(6760).GestureDetector, obj5);
+  return closure_6(updaters(16118).Provider, obj4);
 }

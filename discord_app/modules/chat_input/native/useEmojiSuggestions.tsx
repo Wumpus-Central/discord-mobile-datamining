@@ -47,9 +47,9 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(5540).LoadState;
-const EMOJI_SENTINEL = fn(5081).EMOJI_SENTINEL;
-const EmojiIntention = fn(1374).EmojiIntention;
+const LoadState = fn(5544).LoadState;
+const EMOJI_SENTINEL = fn(5084).EMOJI_SENTINEL;
+const EmojiIntention = fn(1375).EmojiIntention;
 const re9 = /(\S+)\s$/;
 let closure_10 = { unlockedEmojis: [], lockedEmojis: [], queryStart: 0, queryEnd: 0 };
 const size = fn(2);

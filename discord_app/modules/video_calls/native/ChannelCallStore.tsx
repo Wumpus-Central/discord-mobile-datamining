@@ -13,11 +13,11 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(9598);
+const ChannelCallConstants = fn(9600);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const OrientationLockState = fn(1920).OrientationLockState;
-const ParticipantTypes = fn(4657).ParticipantTypes;
-const timeout = new fn(1952).Timeout();
+const OrientationLockState = fn(1921).OrientationLockState;
+const ParticipantTypes = fn(4660).ParticipantTypes;
+const timeout = new fn(1953).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -31,7 +31,7 @@ let size = {
   y: "flexDirection",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8450).OrientationType.PORTRAIT,
+  screenOrientation: fn(8453).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,
@@ -42,7 +42,7 @@ const size1 = {
   y: "flexDirection",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8450).OrientationType.PORTRAIT,
+  screenOrientation: fn(8453).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,
@@ -62,7 +62,7 @@ export const setFocus = function setFocus(focus) {
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1247).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1248).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 };
 export const resetFocusTimer = function resetFocusTimer() {
   timeout.stop();
@@ -97,7 +97,7 @@ export const setVoiceChatDrawerState = function setVoiceChatDrawerState(embedded
 };
 export const togglePipFocus = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1247).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1248).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 export const useIsVoiceChatFocused = function useIsVoiceChatFocused() {
   const voiceChatDrawerState = obj3().voiceChatDrawerState;

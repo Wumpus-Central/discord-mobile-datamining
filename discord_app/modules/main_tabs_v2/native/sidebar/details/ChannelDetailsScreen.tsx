@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsScreen.tsx
-import Link from "../../../../../../_runtime/01484_Link.js";
+import Link from "../../../../../../_runtime/01485_Link.js";
 import useBaseAppContainerDimensionsDefault from "../../../../screen/native/useBaseAppContainerDimensions.tsx";
 import ChannelDetailsDefault from "ChannelDetails.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";

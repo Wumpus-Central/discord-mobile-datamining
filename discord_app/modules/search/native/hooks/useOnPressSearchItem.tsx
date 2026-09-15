@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/hooks/useOnPressSearchItem.tsx
 import util from "../../../../intl/index.native.tsx";
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
@@ -102,13 +102,13 @@ let closure_18 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   })();
 };
-const SearchConstants = fn(7982);
+const SearchConstants = fn(7985);
 ({ SearchMediaTypes: closure_7, SearchHistoryItemTypes: closure_8, SearchQueryTagTypes: closure_9 } = SearchConstants);
-const SearchNavigatorScreens = fn(16752).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(7981).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(16790).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(7984).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ Routes: closure_12, ComponentActions: map1, ME: closure_14, SearchTypes: closure_15 } = Constants);
-const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const StaticChannelRoute = fn(1965).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useOnPressSearchItem.tsx");
 
@@ -307,7 +307,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
 };
 export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1483).useNavigation();
+  const navigation = searchContext(1484).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((channelId) => {
     closure_0 = searchContext;
@@ -330,7 +330,7 @@ export const useOnPressGroupDMItem = function useOnPressGroupDMItem(searchContex
 };
 export const useOnPressDMItem = function useOnPressDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1483).useNavigation();
+  const navigation = searchContext(1484).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((userId, arg1) => {
     closure_0 = searchContext;
@@ -456,11 +456,11 @@ export const useOnPressSearchHistoryText = function useOnPressSearchHistoryText(
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(12468).delayUntilNavigationComplete(() => {
+      const result = searchContext(12473).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(12468);
+      let obj2 = searchContext(12473);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

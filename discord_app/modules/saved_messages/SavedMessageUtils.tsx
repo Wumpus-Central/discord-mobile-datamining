@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef4228 from "../../../_runtime/metro/04228__.js";
+import _modDef4231 from "../../../_runtime/metro/04231__.js";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -127,7 +127,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const UnknownChannelRecord = fn(1961).UnknownChannelRecord;
+const UnknownChannelRecord = fn(1962).UnknownChannelRecord;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
@@ -148,19 +148,19 @@ export const useDueInString = function useDueInString(arg0) {
       H4gnX9 = util.t.H4gnX9;
     }
     if (type === tmp9.LONG) {
-      let haia16 = tmp(1114).t.haia16;
+      let haia16 = tmp(1115).t.haia16;
     } else {
-      haia16 = tmp(1114).t["Uq7Y+7"];
+      haia16 = tmp(1115).t["Uq7Y+7"];
     }
     if (now > dueAt) {
       H4gnX9 = haia16;
     }
     obj = { dueInText: null, isOverdue: null };
-    const intl = tmp(1114).intl;
+    const intl = tmp(1115).intl;
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef4228.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef4231.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;

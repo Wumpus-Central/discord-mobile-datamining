@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   image: { alignSelf: "center", justifySelf: "center" },
   tips: {
@@ -26,20 +26,20 @@ export default function SafetyTipsContainer(children) {
   let showHeader = children.showHeader;
   const tmp = closure_6();
   const items = [
-    closure_4(View, { style: tmp.image, children: closure_4(safetyTips(5773).SafetyBookletSpotIllustration, {}) }),
+    closure_4(View, { style: tmp.image, children: closure_4(safetyTips(5777).SafetyBookletSpotIllustration, {}) }),
     ,
   ];
   if (showHeader) {
     const obj2 = { style: tmp.text, variant: "heading-xl/semibold", children: null };
-    const intl = tmp3(1114).intl;
-    obj2.children = intl.string(tmp3(1114).t.eAbVfS);
-    showHeader = closure_4(tmp3(4632).Text, obj2);
+    const intl = tmp3(1115).intl;
+    obj2.children = intl.string(tmp3(1115).t.eAbVfS);
+    showHeader = closure_4(tmp3(4635).Text, obj2);
   }
   const obj3 = { spacing: 16, children: null };
   const obj4 = { spacing: 8, align: "center", justify: "center", children: null };
   const items1 = [
     showHeader,
-    closure_4(safetyTips(4632).Text, {
+    closure_4(safetyTips(4635).Text, {
       style: tmp.text,
       accessibilityRole: "header",
       variant: "text-md/medium",
@@ -48,8 +48,8 @@ export default function SafetyTipsContainer(children) {
     }),
   ];
   obj4.children = items1;
-  items[1] = closure_5(safetyTips(5054).Stack, obj4);
-  const obj = { style: tmp.image, children: closure_4(safetyTips(5773).SafetyBookletSpotIllustration, {}) };
+  items[1] = closure_5(safetyTips(5057).Stack, obj4);
+  const obj = { style: tmp.image, children: closure_4(safetyTips(5777).SafetyBookletSpotIllustration, {}) };
   const obj5 = {
     style: tmp.text,
     accessibilityRole: "header",
@@ -64,5 +64,5 @@ export default function SafetyTipsContainer(children) {
     ),
   });
   obj3.children = items;
-  return closure_5(safetyTips(5054).Stack, obj3);
+  return closure_5(safetyTips(5057).Stack, obj3);
 }

@@ -5,9 +5,9 @@ import BackoffDefault from "../../discord_common/js/packages/backoff/Backoff.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import MurmurHashV3Default from "../../_runtime/01239_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01240_MurmurHashV3.js";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
-import v1 from "../../_runtime/01254_v1.js";
+import v1 from "../../_runtime/01255_v1.js";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -21,6 +21,7 @@ import RTCConnectionEvent from "RTCConnectionEvent.tsx";
 import getFrontierTuningConfigIfEligibleDefault from "../modules/go_live/utils/getFrontierTuningConfigIfEligible.tsx";
 import AlertActionCreatorsDefault from "../actions/AlertActionCreators.tsx";
 import ProportionalVadIndicatorExperimentDefault from "../modules/calls/ProportionalVadIndicatorExperiment.tsx";
+import RTCBandwidthMonitorDefault from "RTCBandwidthMonitor.tsx";
 import getMediaPerformanceClassDefault from "../modules/device/getMediaPerformanceClass.android.tsx";
 import SystemResourcesDefault from "SystemResources.tsx";
 import AVError from "../modules/errors/av_errors/AVError.tsx";
@@ -59,7 +60,6 @@ import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEm
 const RTCControlSocketDefault = RTCControlSocket;
 const VoiceQualityDefault = VoiceQuality;
 
-const RTCBandwidthMonitorDefault = tmp19(7577);
 require = fn;
 function getEventHistoryString() {
   const items = [];
@@ -81,10 +81,10 @@ let Constants = fn(1074);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(4683);
+const StreamSettingsConstants = fn(4686);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13891).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(4661);
+let closure_24 = fn(13896).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(4664);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -1868,7 +1868,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     if (tmp) {
       tmp = height <= 720;
     }
-    if (height === RESOLUTION_1080.RESOLUTION_1080) {
+    if (height === __initData3.RESOLUTION_1080) {
       if (framerate === FPS_30.FPS_30) {
         const tmp6Result = getFrontierTuningConfigIfEligibleDefault(
           "RTCConnection",
@@ -1909,12 +1909,27 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     bitrate = bitrate1;
     tmp2 = framerate <= 30;
   });
+  if (self.context === constants6.STREAM) {
+    if ("streamer" === self.getVoiceParticipantType()) {
+      const tmp19ResultResult = tmp19(4777)("RTCConnection", UserStore.getCurrentUser(), self.guildId);
+      let maxResolution;
+      if (tmp19ResultResult != null) {
+        maxResolution = tmp19ResultResult.maxResolution;
+      }
+      let num = null;
+      if (maxResolution === RESOLUTION_1080.RESOLUTION_1080) {
+        num = 921600;
+      }
+      const result1 = connectResult.setFakeGoLiveEncodePixelCount(num);
+      const tmp19Result = tmp19(4777);
+    }
+  }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const result1 = connectResult.setVideoQualityMeasurement(
+    const result2 = connectResult.setVideoQualityMeasurement(
       "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec",
     );
   }
-  const result2 = connectResult.setVideoEncoderExperiments(
+  const result3 = connectResult.setVideoEncoderExperiments(
     MediaEngineStore.getVideoEncoderExperiments(self.context, self.getVoiceParticipantType()),
   );
   connectResult.on(
@@ -2263,11 +2278,11 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   );
   const _handleMLSFailure = self._handleMLSFailure;
   connectResult.on(require("BaseConnectionEvent").BaseConnectionEvent.MLSFailure, _handleMLSFailure.bind(self));
-  const result3 = connectResult.setRemoteVideoSinkWants(self._remoteVideoSinkWants);
+  const result4 = connectResult.setRemoteVideoSinkWants(self._remoteVideoSinkWants);
   self._connection = connectResult;
   self._hasCodecs = false;
   self._mediaEngineConnectionId = connectResult.mediaEngineConnectionId;
-  const tmp19Result = RTCBandwidthMonitorDefault;
+  const tmp19Result2 = RTCBandwidthMonitorDefault;
 };
 prototype["_handleSfuUpdate"] = function _handleSfuUpdate(arg0, primary) {
   const self = this;
@@ -3427,7 +3442,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   const byteLength = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  dependencyMap = _connection(4665).now();
+  dependencyMap = _connection(4668).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3464,7 +3479,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   const byteLength = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  dependencyMap = _connection(4665).now();
+  dependencyMap = _connection(4668).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

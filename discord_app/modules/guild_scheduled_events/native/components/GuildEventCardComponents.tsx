@@ -354,17 +354,17 @@ class GuildEventCardDescription {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-let GuildScheduledEventStore = fn(7629);
+let GuildScheduledEventStore = fn(7633);
 ({ isGuildEventEnded: closure_15, isGuildScheduledEventActive: closure_16 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const constants = fn(1963).GuildScheduledEventEntityTypes;
+const constants = fn(1964).GuildScheduledEventEntityTypes;
 let Constants = fn(1074);
 ({ Permissions: closure_19, JoinGuildSources: closure_20 } = Constants);
 Constants = fn(1085);
 ({ Fonts, NOOP: closure_21 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   imageHeaderContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   imageHeaderBanner: { width: "100%", aspectRatio: 2.5 },
@@ -465,10 +465,10 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
   event = event.event;
   const tmp3 = useCanInviteForGuildEventDefault(event);
   importDefault = tmp3;
-  dependencyMap = event(9905).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
+  dependencyMap = event(9907).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
   const obj3 = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
-  const intl = event(1114).intl;
-  obj3.accessibilityLabel = "" + intl.string(event(1114).t.RDE0Sc) + ", " + event.name;
+  const intl = event(1115).intl;
+  obj3.accessibilityLabel = "" + intl.string(event(1115).t.RDE0Sc) + ", " + event.name;
   obj3.onPress = function onPress() {
     if (closure_1) {
       GuildScheduledEventModalActionCreators.openShareEvent(event);
@@ -479,8 +479,8 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
       ToastUtils.presentLinkCopied();
     }
   };
-  obj3.icon = importDefault(tmp3 ? 9183 : 4580);
-  return closure_22(event(8202).IconButton, obj3);
+  obj3.icon = importDefault(tmp3 ? 9186 : 4583);
+  return closure_22(event(8205).IconButton, obj3);
 };
 export const GuildEventModeratorAction = function GuildEventModeratorAction(event) {
   event = event.event;
@@ -549,9 +549,9 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
     str = "tertiary";
   }
   if (first) {
-    let BellIcon = tmp(4587).CheckmarkLargeIcon;
+    let BellIcon = tmp(4590).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(9906).BellIcon;
+    BellIcon = tmp(9908).BellIcon;
   }
   const obj2 = {
     accessibilityRole: "togglebutton",
@@ -564,12 +564,12 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
     grow: true,
   };
   const obj = event(504);
-  const intl = tmp(1114).intl;
-  obj2.accessibilityLabel = "" + intl.string(event(1114).t.DlcqlU) + ", " + event.name;
+  const intl = tmp(1115).intl;
+  obj2.accessibilityLabel = "" + intl.string(event(1115).t.DlcqlU) + ", " + event.name;
   obj2.variant = str;
   obj2.icon = closure_22(BellIcon, { size: "sm" });
-  const intl2 = tmp(1114).intl;
-  obj2.text = intl2.string(event(1114).t.DlcqlU);
+  const intl2 = tmp(1115).intl;
+  obj2.text = intl2.string(event(1115).t.DlcqlU);
   return closure_22(ThrottledButtonDefault, obj2);
 };
 export const PrimaryActionType = obj15;
@@ -981,17 +981,17 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     },
     items3,
   );
-  let tmp7 = stateFromStores(4789)(stateFromStores);
+  let tmp7 = stateFromStores(4792)(stateFromStores);
   const obj2 = channel_id(504);
   const tmp6 = stateFromStores;
-  const locationFromEvent = channel_id(9835).getLocationFromEvent(event);
+  const locationFromEvent = channel_id(9837).getLocationFromEvent(event);
   if (null == stateFromStores) {
     if (null == locationFromEvent) {
       return null;
     }
   }
-  const obj3 = channel_id(9835);
-  const eventLocationIconComponent = channel_id(9899).getEventLocationIconComponent(
+  const obj3 = channel_id(9837);
+  const eventLocationIconComponent = channel_id(9901).getEventLocationIconComponent(
     event,
     stateFromStores,
     stateFromStores1,
@@ -1012,24 +1012,24 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   };
   if (null != stateFromStores) {
     const obj7 = { channel: stateFromStores };
-    let combined = tmp6(9900)(obj7);
+    let combined = tmp6(9902)(obj7);
   } else if (null != locationFromEvent) {
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1115).intl;
     const _HermesInternal = HermesInternal;
-    combined = "" + intl.string(tmp2(1114).t.gwSn4I) + ", " + locationFromEvent;
+    combined = "" + intl.string(tmp2(1115).t.gwSn4I) + ", " + locationFromEvent;
   }
   obj6.accessibilityLabel = combined;
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
       const obj8 = { guildId: event.guild_id };
-      result = tmp2(9901).guildEventLocationParser(locationFromEvent, true, obj8);
-      const tmp2Result2 = tmp2(9901);
+      result = tmp2(9903).guildEventLocationParser(locationFromEvent, true, obj8);
+      const tmp2Result2 = tmp2(9903);
     }
     tmp7 = result;
   }
   obj6.children = tmp7;
-  items4[1] = closure_22(channel_id(4632).Text, obj6);
+  items4[1] = closure_22(channel_id(4635).Text, obj6);
   obj4.children = items4;
   return closure_23(closure_6, obj4);
 };
@@ -1045,11 +1045,11 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     const obj2 = { style: null, children: null };
     const items2 = [tmp.guildInfoContainer, style];
     obj2.style = items2;
-    const obj3 = { guild: stateFromStores, size: tmp2(5665).GuildIconSizes.XSMALL_20, style: tmp.guildIcon };
+    const obj3 = { guild: stateFromStores, size: tmp2(5669).GuildIconSizes.XSMALL_20, style: tmp.guildIcon };
     const items3 = [closure_22(GuildIconDefault, obj3)];
     const obj4 = { style: tmp.guildInfo, children: null };
     const obj5 = { variant: "text-sm/semibold", style: textStyle, children: stateFromStores.name };
-    obj4.children = closure_22(tmp2(4632).Text, obj5);
+    obj4.children = closure_22(tmp2(4635).Text, obj5);
     items3[1] = closure_22(closure_6, obj4);
     obj2.children = items3;
     tmp5 = closure_23(closure_6, obj2);
@@ -1097,59 +1097,65 @@ export const GuildEventCardGuildInfo = function GuildEventCardGuildInfo(event) {
     return null;
   } else {
     const locationFromEvent = tmp2(tmp3[56]).getLocationFromEvent(event);
-    let tmp12Result = null != stateFromStores || null != locationFromEvent;
+    let tmp13Result = null != stateFromStores || null != locationFromEvent;
     let tmp10 = tmp8;
     if (tmp8 == null) {
-      tmp10 = locationFromEvent;
+      let result = null;
+      if (null != locationFromEvent) {
+        const obj4 = { guildId: guild_id };
+        result = tmp2(tmp3[54]).guildEventLocationParser(locationFromEvent, true, obj4);
+        const tmp2Result3 = tmp2(tmp3[54]);
+      }
+      tmp10 = result;
     }
     const tmp2Result = tmp2(tmp3[56]);
     const eventLocationIconSource = tmp2(tmp3[57]).getEventLocationIconSource(event, stateFromStores, stateFromStores2);
-    const obj4 = { style: tmp.guildInfoContainer, children: null };
-    const obj5 = { guild: stateFromStores1, size: null, style: null };
-    const tmp2Result2 = tmp2(tmp3[57]);
-    obj5.size = tmp2(tmp3[59]).GuildIconSizes.SMALL;
-    obj5.style = tmp.guildIcon;
-    const items6 = [closure_22(tmp7(tmp3[59]), obj5)];
-    const obj6 = { style: tmp.guildInfo, children: null };
-    const obj7 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: stateFromStores1.name };
-    const items7 = [closure_22(tmp2(tmp3[52]).Text, obj7)];
-    if (tmp12Result) {
-      const obj8 = { style: tmp.guildInfoChannelContainer, accessible: true, accessibilityLabel: null, children: null };
+    const obj5 = { style: tmp.guildInfoContainer, children: null };
+    const obj6 = { guild: stateFromStores1, size: null, style: null };
+    const tmp2Result4 = tmp2(tmp3[57]);
+    obj6.size = tmp2(tmp3[59]).GuildIconSizes.SMALL;
+    obj6.style = tmp.guildIcon;
+    const items6 = [closure_22(tmp7(tmp3[59]), obj6)];
+    const obj7 = { style: tmp.guildInfo, children: null };
+    const obj8 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: stateFromStores1.name };
+    const items7 = [closure_22(tmp2(tmp3[52]).Text, obj8)];
+    if (tmp13Result) {
+      const obj9 = { style: tmp.guildInfoChannelContainer, accessible: true, accessibilityLabel: null, children: null };
       if (null != stateFromStores) {
-        const obj9 = { channel: stateFromStores };
-        let combined = tmp7(tmp3[58])(obj9);
+        const obj10 = { channel: stateFromStores };
+        let combined = tmp7(tmp3[58])(obj10);
       } else if (null != locationFromEvent) {
         const intl = tmp2(tmp3[20]).intl;
         const _HermesInternal = HermesInternal;
         combined = "" + intl.string(tmp2(tmp3[20]).t.gwSn4I) + ", " + locationFromEvent;
       }
-      obj8.accessibilityLabel = combined;
-      let tmp14Result = null != eventLocationIconSource;
-      if (tmp14Result) {
-        const obj10 = {
+      obj9.accessibilityLabel = combined;
+      let tmp15Result = null != eventLocationIconSource;
+      if (tmp15Result) {
+        const obj11 = {
           source: eventLocationIconSource,
           size: tmp2(tmp3[45]).Icon.Sizes.EXTRA_SMALL,
           style: tmp.channelIcon,
           disableColor: true,
         };
-        tmp14Result = closure_22(tmp2(tmp3[45]).Icon, obj10);
+        tmp15Result = closure_22(tmp2(tmp3[45]).Icon, obj11);
       }
-      const items8 = [tmp14Result];
-      const obj11 = {
+      const items8 = [tmp15Result];
+      const obj12 = {
         style: tmp.guildInfoChannelText,
         variant: "text-xs/medium",
         color: "text-default",
         children: tmp10,
       };
-      items8[1] = closure_22(tmp2(tmp3[52]).Text, obj11);
-      obj8.children = items8;
-      tmp12Result = closure_23(closure_6, obj8);
+      items8[1] = closure_22(tmp2(tmp3[52]).Text, obj12);
+      obj9.children = items8;
+      tmp13Result = closure_23(closure_6, obj9);
     }
-    items7[1] = tmp12Result;
-    obj6.children = items7;
-    items6[1] = closure_23(closure_6, obj6);
-    obj4.children = items6;
-    return closure_23(closure_6, obj4);
+    items7[1] = tmp13Result;
+    obj7.children = items7;
+    items6[1] = closure_23(closure_6, obj7);
+    obj5.children = items6;
+    return closure_23(closure_6, obj5);
   }
   const obj3 = channel_id(stateFromStores[26]);
 };

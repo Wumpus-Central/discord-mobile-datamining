@@ -1,12 +1,12 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeConstants.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import _modDef1606 from "../../../../_runtime/metro/01606__.js";
+import _modDef1607 from "../../../../_runtime/metro/01607__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
-export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1606;
+export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1607;
 export const AppLauncherRouteName = {
   HOME: "home",
   APPLICATION_VIEW: "application_view",

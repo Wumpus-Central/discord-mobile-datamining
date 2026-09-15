@@ -5,8 +5,8 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef2978 from "../../age_assurance/ManualReview.messages.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import _modDef2979 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -74,7 +74,7 @@ function ManualOrAutomatedReviewBanner() {
   obj2.onPress = handleRetryClick;
   obj.button = closure_1_12(components_Button_Button.Button, obj2);
   const intl2 = util.intl;
-  obj.children = intl2.format(_modDef2978.vPoM8y, {
+  obj.children = intl2.format(_modDef2979.vPoM8y, {
     manualReviewHook(children, arg1) {
       return closure_1_12(Text_Text.Text, { onPress, variant: "text-sm/normal", color: "text-link", children }, arg1);
     },
@@ -181,12 +181,12 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8537).AgeCheckStatus;
+const AgeCheckStatus = fn(8540).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -225,7 +225,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14859, dependencyMap.paths),
+          asyncRequireImpl(14869, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

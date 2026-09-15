@@ -16,19 +16,19 @@ function handlePress() {
   obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open(obj2);
 }
-const UnreadSetting = fn(4818).UnreadSetting;
+const UnreadSetting = fn(4821).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   container: {
-    marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(10248).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = {
-  marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10248).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -55,8 +55,8 @@ export default noop.memo((channel) => {
     resolvedUnreadSetting: null,
   };
   const tmp2 = useChannelNameDefault(channel);
-  const intl = channel(1114).intl;
-  obj.accessibilityLabel = intl.formatToPlainString(channel(1114).t.yjQ9P8, { channelName: tmp2 });
+  const intl = channel(1115).intl;
+  obj.accessibilityLabel = intl.formatToPlainString(channel(1115).t.yjQ9P8, { channelName: tmp2 });
   obj.accessibilityState = { selected };
   obj.channel = channel;
   obj.selected = selected;

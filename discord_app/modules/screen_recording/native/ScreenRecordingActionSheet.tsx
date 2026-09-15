@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const useScreenRecordingStore = fn(16029).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16042).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     justifyContent: "center",
@@ -154,5 +154,5 @@ export default function ScreenRecordingActionSheet() {
   if (tmp3) {
     children = tmp11;
   }
-  return closure_5(tmp9(7300).ActionSheet, { children });
+  return closure_5(tmp9(7304).ActionSheet, { children });
 }

@@ -129,7 +129,7 @@ function pruneNewChannels() {
     );
   });
 }
-let closure_7 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();

@@ -190,7 +190,7 @@ class ImagePickerIcon {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 },
   buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 },
@@ -236,24 +236,24 @@ export default function FormImagePicker(children) {
   );
   const tmp2 = closure_8();
   if (null == image) {
-    const intl2 = imageUploadSize(1114).intl;
-    let stringResult = intl2.string(imageUploadSize(1114).t.bGPfSp);
+    const intl2 = imageUploadSize(1115).intl;
+    let stringResult = intl2.string(imageUploadSize(1115).t.bGPfSp);
     let tmp6 = imageUploadSize;
   } else {
-    const intl = imageUploadSize(1114).intl;
-    stringResult = intl.string(imageUploadSize(1114).t["0KOido"]);
+    const intl = imageUploadSize(1115).intl;
+    stringResult = intl.string(imageUploadSize(1115).t["0KOido"]);
     tmp6 = imageUploadSize;
   }
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   const items = [
-    closure_6(tmp6(4632).Text, {
+    closure_6(tmp6(4635).Text, {
       style: tmp2.imageDescription,
       variant: "text-sm/medium",
       color: "text-default",
       children: children.description,
     }),
-    closure_6(tmp6(5056).Button, {
+    closure_6(tmp6(5059).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

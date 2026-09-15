@@ -5,7 +5,7 @@ import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod14881 from "../../../../../../_runtime/metro/14881__.js";
+import _mod14891 from "../../../../../../_runtime/metro/14891__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -123,12 +123,12 @@ export default function TwoFASetupSuccess() {
               return obj4;
             } else {
               c4 = 1;
-              const intl = setRegistering(1114).intl;
+              const intl = setRegistering(1115).intl;
               c5 = 3;
               c6 = 1;
               const obj5 = {
-                value: setRegistering(6698).finishRegisterWebAuthnCredential(
-                  intl.string(setRegistering(1114).t["8H5RmH"]),
+                value: setRegistering(6702).finishRegisterWebAuthnCredential(
+                  intl.string(setRegistering(1115).t["8H5RmH"]),
                   closure_129_0,
                   closure_129_1,
                 ),
@@ -145,9 +145,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(14870).close();
+              setError(14880).close();
               c4 = 0;
-              const obj = setError(14870);
+              const obj = setError(14880);
             }
             c4 = 0;
             c6 = 3;
@@ -184,7 +184,7 @@ export default function TwoFASetupSuccess() {
   const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , ,];
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  items[1] = closure_8(closure_7, { source: _mod14881, style: tmp.image });
+  items[1] = closure_8(closure_7, { source: _mod14891, style: tmp.image });
   let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);

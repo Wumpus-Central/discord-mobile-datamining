@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3236 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3237 from "../../intl/FavoritesGuild.messages.js";
 import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FavoriteStore from "../../FavoriteStore.tsx";
@@ -39,11 +39,12 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       description: null,
       onDismiss: null,
       renderImgComponent: "r",
-      buttonLabel: "M15 2V1H9v1h6ZM9 3V2H5v1h4Z",
-      onButtonPress: "#fff",
+      buttonLabel: "DESKTOP",
+      onButtonPress:
+        "M7 2v1h2V2H7ZM9 1v1h4V1H9ZM13 2v1h1V2h-1ZM14 3v1h1V3h-1ZM15 4v5h1V4h-1ZM14 9v2h1V9h-1ZM13 11v1h1v-1h-1ZM11 12v1h2v-1h-2ZM9 13v1h2v-1H9ZM7 14v1h2v-1H7Z",
     };
     const intl = util.intl;
-    const tmp4 = _modDef3236;
+    const tmp4 = _modDef3237;
     if (stateFromStores) {
       let TWuDTt = tmp4.TWuDTt;
       let tmp6 = importDefault;
@@ -53,10 +54,10 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
     }
     obj.title = intl.string(TWuDTt);
     const intl2 = util.intl;
-    obj.description = intl2.string(tmp6(3236).Ztl9ht);
+    obj.description = intl2.string(tmp6(3237).Ztl9ht);
     obj.onDismiss = onDismiss;
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(tmp6(3236)["+h9aza"]);
+    obj.buttonLabel = intl3.string(tmp6(3237)["+h9aza"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items3);
@@ -64,7 +65,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   const coachmark = stateFromStores(markPopoverAsDismissed[10]).useCoachmark(targetRef, memo);
   return null;
 }
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [, ,];
 ({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = fn(1074).ChannelTypes);

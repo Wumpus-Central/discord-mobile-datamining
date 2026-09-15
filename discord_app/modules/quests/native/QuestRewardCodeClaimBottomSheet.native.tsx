@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef5678 from "../../../../_runtime/metro/05678__.js";
+import _modDef5682 from "../../../../_runtime/metro/05682__.js";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -45,7 +45,7 @@ function QuestRewardCodeClaimBottomSheet(quest) {
       const obj2 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
       const intl = util.intl;
       obj2.content = intl.string(util.t.CKsXk3);
-      obj2.icon = _modDef5678;
+      obj2.icon = _modDef5682;
       ToastActionCreatorsDefault.open(obj2);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     }
@@ -119,12 +119,12 @@ function QuestRewardCodeClaimBottomSheet(quest) {
     if (null != rewardCode) {
       ClipboardUtils.copy(tmp.code, () => {
         const obj2 = { key: "TOAST_QUEST_REWARD_CODE_COPIED", content: null, icon: null };
-        const intl = quest(1114).intl;
-        obj2.content = intl.string(quest(1114).t.MSaeTe);
+        const intl = quest(1115).intl;
+        obj2.content = intl.string(quest(1115).t.MSaeTe);
         obj2.icon = function icon() {
           return closure_1_8(closure_1_0(dependencyMap[16]).CopyIcon, {});
         };
-        return rewardCode(4335).open(obj2);
+        return rewardCode(4338).open(obj2);
       });
     }
   }, items4);
@@ -246,10 +246,10 @@ function QuestRewardCodeClaimBottomSheet(quest) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5525).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(5529).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },

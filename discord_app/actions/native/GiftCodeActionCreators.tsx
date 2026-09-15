@@ -1,5 +1,5 @@
 // discord_app/actions/native/GiftCodeActionCreators.tsx
-import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -160,7 +160,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
 };
 function openGiftCodeRedeemModal(code) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(11572, dependencyMap.paths),
+    asyncRequireImpl(11576, dependencyMap.paths),
     { code },
     "GIFT_CODE_REDEEM_MODAL_KEY",
   );

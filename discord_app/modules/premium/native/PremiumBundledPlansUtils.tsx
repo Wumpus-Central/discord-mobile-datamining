@@ -84,7 +84,7 @@ function getProductIdFromSubscriptionItems(subscriptionItemsForProduct) {
   const error = new Error("No App Store bundled product matches the subscription items");
   throw error;
 }
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({
   PREMIUM_GUILD_SUBSCRIPTION_PLANS: c3,
   PremiumTypes: closure_4,
@@ -251,11 +251,11 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
   productId,
   subscription,
 ) {
-  if (productId in found(7343).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(7343).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(7347).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(7347).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
-        const itemsWithUpsertedPremiumPlanId = tmp(4294).getItemsWithUpsertedPremiumPlanId(
+        const itemsWithUpsertedPremiumPlanId = tmp(4297).getItemsWithUpsertedPremiumPlanId(
           subscription,
           tmp8.basePlanId,
         );
@@ -277,7 +277,7 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
         }
         return mapped;
       }
-      tmpResult = tmp(4294);
+      tmpResult = tmp(4297);
     }
     return getSubscriptionItemsForProduct(productId);
   } else {

@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     width: "100%",
@@ -70,7 +70,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12301, dependencyMap.paths),
+      asyncRequireImpl(12305, dependencyMap.paths),
       "AppLauncherAutocompleteActionSheet",
       {
         option,

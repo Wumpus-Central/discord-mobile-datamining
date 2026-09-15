@@ -1,12 +1,12 @@
 // discord_app/records/GiftCodeRecord.tsx
-import _modDef4228 from "../../_runtime/metro/04228__.js";
+import _modDef4231 from "../../_runtime/metro/04231__.js";
 import Record from "../lib/Record.tsx";
 import SubscriptionTrialRecord from "../modules/billing/records/SubscriptionTrialRecord.tsx";
 import PromotionRecord from "PromotionRecord.tsx";
 import SubscriptionPlanRecord from "SubscriptionPlanRecord.tsx";
 
 const require = fn;
-let closure_6 = fn(1373).PremiumSubscriptionSKUToPremiumType;
+let closure_6 = fn(1374).PremiumSubscriptionSKUToPremiumType;
 const frozen = Object.freeze({
   PAYMENT_SOURCE_REQUIRED: 1,
   EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
@@ -51,7 +51,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp5 = null;
   if (null != user.expires_at) {
-    tmp5 = _modDef4228(user.expires_at);
+    tmp5 = _modDef4231(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -127,8 +127,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = _modDef4228().isAfter(expiresAt);
-    const obj = _modDef4228();
+    isAfterResult = _modDef4231().isAfter(expiresAt);
+    const obj = _modDef4231();
   }
   return isAfterResult;
 };

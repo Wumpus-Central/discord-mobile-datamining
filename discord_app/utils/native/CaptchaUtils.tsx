@@ -5,7 +5,7 @@ import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import SharedCaptchaUtils from "../../modules/captcha/SharedCaptchaUtils.tsx";
-import siteKeyDefault from "../../../_runtime/17404_siteKey.js";
+import siteKeyDefault from "../../../_runtime/17442_siteKey.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import ThemeStore from "../../modules/user_settings/ThemeStore.tsx";
@@ -122,10 +122,10 @@ export default {
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      const v4Result = self(1254).v4();
+      const v4Result = self(1255).v4();
       closure_2 = v4Result;
-      const HCAPTCHA = self(1324).CaptchaTypes.HCAPTCHA;
-      let obj = self(1254);
+      const HCAPTCHA = self(1325).CaptchaTypes.HCAPTCHA;
+      let obj = self(1255);
       AnalyticsUtilsDefault.track(constants2.CAPTCHA_EVENT, {
         captcha_event_name: "initial-load",
         captcha_service: HCAPTCHA,
@@ -133,7 +133,7 @@ export default {
         captcha_flow_key: v4Result,
       });
       let obj3 = { captcha_event_name: "initial-load", captcha_service: HCAPTCHA, sitekey, captcha_flow_key: v4Result };
-      const obj5 = { name: self(7709).MetricEvents.CAPTCHA_EVENT, tags: null };
+      const obj5 = { name: self(7712).MetricEvents.CAPTCHA_EVENT, tags: null };
       let items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
       obj5.tags = items;
       MonitoringAgentDefault.increment(obj5);
@@ -182,7 +182,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
   let items = [LocaleStore];
   const stateFromStores = siteKey(504).useStateFromStores(items, () => locale.locale);
   let obj = siteKey(504);
-  const v4Result = siteKey(1254).v4();
+  const v4Result = siteKey(1255).v4();
   noop = v4Result;
   let items1 = [v4Result, siteKey];
   const effect = noop.useEffect(() => {
@@ -199,7 +199,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
     obj4.tags = items;
     MonitoringAgentDefault.increment(obj4);
   }, items1);
-  let obj2 = siteKey(1254);
+  let obj2 = siteKey(1255);
   let obj3 = {
     siteKey,
     onMessage(nativeEvent) {

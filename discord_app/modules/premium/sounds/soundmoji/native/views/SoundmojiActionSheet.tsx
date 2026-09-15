@@ -7,14 +7,14 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_16 },
   soundmojiContainer: { flexDirection: "row", alignItems: "center" },
   emoji: null,
   textContainer: null,
 };
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 32;

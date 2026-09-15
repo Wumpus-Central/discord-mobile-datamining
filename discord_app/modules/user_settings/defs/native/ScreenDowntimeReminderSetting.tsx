@@ -1,14 +1,12 @@
 // discord_app/modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
-import FamilyCenterV3Experiment from "../../../parent_tools/FamilyCenterV3Experiment.tsx";
-import useUserLinks from "../../../parent_tools/hooks/useUserLinks.tsx";
 import useUserIsTeenAgeGroupDefault from "../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx";
 import NotificationActionCreatorsDefault from "../../../../actions/NotificationActionCreators.tsx";
 import NotificationSettingsStore from "../../../../stores/NotificationSettingsStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -18,7 +16,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(8079).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8082).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);
@@ -27,18 +25,11 @@ const toggle = SettingBuilders.createToggle({
     return NotificationActionCreatorsDefault.setScreenDowntimeReminder(screen_downtime_reminder);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = FamilyCenterV3Experiment.useIsFamilyCenterV3Enabled({
-      location: "ScreenDowntimeReminderSetting",
-    });
-    const tmp2 = useUserIsTeenAgeGroupDefault();
-    const hasActiveParentLinks = useUserLinks.useHasActiveParentLinks();
-    if (isFamilyCenterV3Enabled) {
-      isFamilyCenterV3Enabled = tmp2;
+    let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+    if (hasActiveParentLinks) {
+      hasActiveParentLinks = obj.useHasActiveParentLinks();
     }
-    if (isFamilyCenterV3Enabled) {
-      isFamilyCenterV3Enabled = hasActiveParentLinks;
-    }
-    return isFamilyCenterV3Enabled;
+    return hasActiveParentLinks;
   },
 });
 const size = fn(2);

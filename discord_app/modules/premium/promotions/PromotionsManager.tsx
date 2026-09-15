@@ -10,7 +10,7 @@ import PromotionsStore from "PromotionsStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const EntitlementTypes = fn(1074).EntitlementTypes;
 const SubscriptionTypes = fn(1085).SubscriptionTypes;
 class PromotionsManager extends tmp2 {

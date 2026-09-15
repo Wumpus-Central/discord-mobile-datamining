@@ -8,10 +8,10 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const helpdeskUrl = fn(1920).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
+const helpdeskUrl = fn(1921).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 const TIMING_CONFIG = { duration: 500 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   arrow: null,
   tooltip: { padding: 16 },
@@ -68,11 +68,11 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
       return obj;
     }
   }
-  const tmp2Result = num(4373);
+  const tmp2Result = num(4376);
   T.__closure = {
-    withRepeat: num(4373).withRepeat,
-    withSequence: num(4373).withSequence,
-    withTiming: num(4637).withTiming,
+    withRepeat: num(4376).withRepeat,
+    withSequence: num(4376).withSequence,
+    withTiming: num(4640).withTiming,
     OFFSET: 40,
     translateBounceOffset: num,
     TIMING_CONFIG,
@@ -93,18 +93,18 @@ export default function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   };
   const items2 = [tmp.arrow];
   obj4.arrowStyle = items2;
-  const intl = tmp2(1114).intl;
-  obj4.label = intl.format(num(1114).t.xAW71b, { helpdeskUrl });
-  const intl2 = tmp2(1114).intl;
-  obj4.title = intl2.string(num(1114).t.HOPqzR);
+  const intl = tmp2(1115).intl;
+  obj4.label = intl.format(num(1115).t.xAW71b, { helpdeskUrl });
+  const intl2 = tmp2(1115).intl;
+  obj4.title = intl2.string(num(1115).t.HOPqzR);
   let obj6 = { style: tmp.closeButtonWrapper, children: null };
   const obj7 = { text: null, onPress: null, variant: "secondary", size: "sm", grow: true };
-  const intl3 = tmp2(1114).intl;
-  obj7.text = intl3.string(num(1114).t["NX+WJN"]);
+  const intl3 = tmp2(1115).intl;
+  obj7.text = intl3.string(num(1115).t["NX+WJN"]);
   obj7.onPress = onClosePress.onClosePress;
-  obj6.children = jsx(num(5056).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj6.children = jsx(num(5059).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj4.children = <View style={tmp.closeButtonWrapper}>{null}</View>;
-  obj3.children = jsx(num(1176).Tooltip, {
+  obj3.children = jsx(num(1177).Tooltip, {
     containerStyle: tmp.tooltip,
     labelStyle: tmp.tooltipText,
     arrowStyle: null,

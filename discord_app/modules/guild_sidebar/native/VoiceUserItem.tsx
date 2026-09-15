@@ -18,8 +18,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-sm/medium";
 let c10 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1176).AvatarSizes.XSMALL_20;
-const createStyles = fn(4636);
+const XSMALL_20 = fn(1177).AvatarSizes.XSMALL_20;
+const createStyles = fn(4639);
 let obj = {
   voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
   disabled: { opacity: 0.5 },
@@ -40,7 +40,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(10249);
+const ChannelListLayout = fn(10251);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

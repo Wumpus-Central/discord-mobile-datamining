@@ -4,7 +4,7 @@ import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import SafetyHubStore from "../safety_hub/SafetyHubStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1433);
+const ApexExperiment = fn(1434);
 let obj2 = {
   kind: "user",
   name: "2026-08-show-expressive-modal-subtitle-alt",

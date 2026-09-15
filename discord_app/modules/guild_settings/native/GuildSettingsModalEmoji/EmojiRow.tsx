@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   flex: { flex: 1 },
   flexCenterRow: { flexDirection: "row", alignItems: "center" },
@@ -31,7 +31,7 @@ let obj2 = {
   emojiImage: null,
   overflowIcon: null,
 };
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 let num = 4;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -44,7 +44,7 @@ obj2.activeNameContainer = {
   flexDirection: "row",
 };
 obj2.usernameContainer = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
-PlatformUtils = fn(1363);
+PlatformUtils = fn(1364);
 let num2;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;

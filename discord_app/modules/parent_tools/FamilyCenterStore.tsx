@@ -1,12 +1,11 @@
 // discord_app/modules/parent_tools/FamilyCenterStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators.tsx";
-import FamilyCenterV3Experiment from "FamilyCenterV3Experiment.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import MobileCacheSnapshotStore from "../../stores/MobileCacheSnapshotStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-require = fn;
+const require = fn;
 function freshTeenActivityWithMap() {
   const map = new Map();
   const result = map.set(TeenActionDisplayType.USER_ADD, new Map());
@@ -60,7 +59,7 @@ function handleInitialLoad(arg0) {
     const merged = Object.assign(acc);
     const obj2 = {};
     const merged1 = Object.assign(
-      closure_0(1971).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+      closure_0(1972).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
     );
     let num = approximate_member_count.approximate_member_count;
     if (num == null) {
@@ -194,7 +193,7 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
       const merged = Object.assign(acc);
       const obj2 = {};
       const merged1 = Object.assign(
-        closure_0(1971).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+        closure_0(1972).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
       );
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
@@ -257,7 +256,7 @@ function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
     const merged = Object.assign(acc);
     const obj2 = {};
     const merged1 = Object.assign(
-      closure_0(1971).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+      closure_0(1972).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
     );
     let num = approximate_member_count.approximate_member_count;
     if (num == null) {
@@ -425,8 +424,8 @@ function reset() {
   c31 = null;
   c19 = false;
 }
-const getCountryCodeByAlpha2 = fn(4852).getCountryCodeByAlpha2;
-const FamilyCenterConstants = fn(7641);
+const getCountryCodeByAlpha2 = fn(4855).getCountryCodeByAlpha2;
+const FamilyCenterConstants = fn(7645);
 ({ FAMILY_CENTER_REFETCH_COOLDOWN: metroRequire, FAMILY_CENTER_SUB_ROUTES } = FamilyCenterConstants);
 const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
 const TeenActionDisplayType = FamilyCenterConstants.TeenActionDisplayType;
@@ -543,7 +542,7 @@ prototype["loadCache"] = function loadCache() {
       const merged = Object.assign(acc);
       const obj2 = {};
       const merged1 = Object.assign(
-        closure_0(1971).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
+        closure_0(1972).dangerouslyConstructGuildRecordFromUntypedObject(approximate_member_count),
       );
       let num = approximate_member_count.approximate_member_count;
       if (num == null) {
@@ -576,7 +575,7 @@ prototype["loadCache"] = function loadCache() {
     snapshot = teenActivityTotals.reduce((acc, item) => {
       [tmp2, tmp3] = item.split(":");
       const tmp = _slicedToArray(item.split(":"), 2);
-      const result = closure_0(7695).displayTypeFromString(tmp2);
+      const result = closure_0(7699).displayTypeFromString(tmp2);
       let tmp5 = acc;
       if (undefined !== result) {
         const obj2 = {};
@@ -735,23 +734,18 @@ prototype["canRefetch"] = function canRefetch() {
   return tmp;
 };
 prototype["isCurrentUserInRestrictedHours"] = function isCurrentUserInRestrictedHours() {
-  if (obj.getIsFamilyCenterV3Enabled({ location: "isInRestrictedHours" })) {
-    const currentUser = UserStore.getCurrentUser();
-    let flag2;
-    if (currentUser != null) {
-      const restrictedSchedule = currentUser.restrictedSchedule;
-      if (restrictedSchedule != null) {
-        flag2 = restrictedSchedule.isInRestrictedHours();
-      }
+  const currentUser = UserStore.getCurrentUser();
+  let flag;
+  if (currentUser != null) {
+    const restrictedSchedule = currentUser.restrictedSchedule;
+    if (restrictedSchedule != null) {
+      flag = restrictedSchedule.isInRestrictedHours();
     }
-    if (flag2 == null) {
-      flag2 = false;
-    }
-    return flag2;
-  } else {
-    return false;
   }
-  obj = FamilyCenterV3Experiment;
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
 };
 FamilyCenterStore.displayName = "FamilyCenterStore";
 FamilyCenterStore.LATEST_SNAPSHOT_VERSION = 3;

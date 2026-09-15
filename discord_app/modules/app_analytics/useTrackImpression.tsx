@@ -2,9 +2,9 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtils2 from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef1330 from "../../../_runtime/metro/01330__.js";
+import _modDef1331 from "../../../_runtime/metro/01331__.js";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
-import uniqueIdDefault from "../../../_runtime/04840_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/04843_uniqueId.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -63,7 +63,7 @@ function trackImpression(type) {
   }
   const tmpResult5 = AppAnalyticsUtils;
 }
-const ImpressionStore = fn(1241);
+const ImpressionStore = fn(1242);
 ({
   setCurrentImpression: closure_7,
   cleanupImpression: closure_8,
@@ -71,9 +71,9 @@ const ImpressionStore = fn(1241);
   getLocation: c10,
   getImpressionStack: closure_11,
 } = ImpressionStore);
-const AnalyticsUtils = fn(1248);
+const AnalyticsUtils = fn(1249);
 let closure_12 = AnalyticsUtils.trackMaker({
-  analyticEventConfigs: fn(1240).AnalyticEventConfigs,
+  analyticEventConfigs: fn(1241).AnalyticEventConfigs,
   dispatcher: DispatcherDefault,
   TRACK_ACTION_NAME: "TRACK",
 });
@@ -89,13 +89,13 @@ export default function useTrackImpression(current, arg1) {
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5073)(() => {
+  obj(5076)(() => {
     if (obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1330(ref.current, current);
+      const tmp6 = _modDef1331(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1330(ref2.current, current2);
+      const tmp10 = _modDef1331(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }
@@ -115,11 +115,11 @@ export default function useTrackImpression(current, arg1) {
   });
   const effect = noop.useEffect(() => {
     if (!obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1330(ref.current, current);
+      const tmp6 = _modDef1331(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1330(ref2.current, current2);
+      const tmp10 = _modDef1331(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }

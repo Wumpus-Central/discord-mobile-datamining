@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/utils/openFavoritesGuildAddChannelModal.native.tsx
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import showSearchableDestinationListModalDefault from "../../share/native/showSearchableDestinationListModal.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/favorites/utils/openFavorites
 export default function openFavoritesGuildAddChannelModal(arg0) {
   ({ parentId, source } = arg0);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(11111, dependencyMap.paths),
+    asyncRequireImpl(11115, dependencyMap.paths),
     { parentId, source },
     FavoritesGuildAddChannelModal,
   );

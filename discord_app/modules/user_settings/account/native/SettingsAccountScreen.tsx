@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
@@ -26,7 +26,7 @@ function PasswordlessUpsell() {
   const obj5 = { style: { width: 70, height: 70 }, children: null };
   const obj6 = { source: null, resizeMode: "contain", style: null };
   const obj = require("useNavigation");
-  obj6.source = require("../../../../../_runtime/metro/14746__.js");
+  obj6.source = require("../../../../../_runtime/metro/14756__.js");
   obj6.style = tmp.upsellImagePasswordless;
   obj5.children = closure_10(FastImageDefault, obj6);
   const items = [closure_10(View, obj5)];
@@ -45,7 +45,7 @@ function PasswordlessUpsell() {
   const intl3 = require("util").intl;
   obj12.text = intl3.string(require("util").t.piGf5c);
   obj12.onPress = function onPress() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14747, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14757, dependencyMap.paths), {
       navigation,
       initialRouteName: WebAuthnScreens.REGISTER,
       showNav: true,
@@ -74,7 +74,7 @@ function AccountTwoFALabel() {
   first = tmp3[0];
   closure_1 = tmp5;
   let obj = first(504);
-  const isUserVerified = first(14768).useIsUserVerified();
+  const isUserVerified = first(14778).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = noop.useMemo(() => {
     let tmp = MFAUtils.hasWebAuthn && isUserVerified && closure_1;
@@ -96,9 +96,9 @@ function AccountTwoFALabel() {
   const obj3 = { children: null };
   const items3 = [tmp11];
   const obj4 = { title: null };
-  const intl = tmp(1114).intl;
-  obj4.title = intl.string(first(1114).t.fuTmEJ);
-  items3[1] = closure_10(first(5768).TableRowGroupTitle, obj4);
+  const intl = tmp(1115).intl;
+  obj4.title = intl.string(first(1115).t.fuTmEJ);
+  items3[1] = closure_10(first(5772).TableRowGroupTitle, obj4);
   obj3.children = items3;
   return closure_11(closure_12, obj3);
 }
@@ -159,11 +159,11 @@ function AccountSecurityPage() {
   return closure_1_10(SettingLayoutDefault, { node });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8079).MobileUserSettings;
-const WebAuthnScreens = fn(14745).WebAuthnScreens;
+const MobileUserSettings = fn(8082).MobileUserSettings;
+const WebAuthnScreens = fn(14755).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   upsellPasswordless: {
     marginBottom: 16,

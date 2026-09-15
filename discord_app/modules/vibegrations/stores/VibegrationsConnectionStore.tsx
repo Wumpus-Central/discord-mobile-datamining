@@ -439,7 +439,7 @@ function handleEvent(projectId, pendingEvents, type) {
         const obj62 = attachment_id(573);
       } else {
         const intl2 = require("util").intl;
-        sendFailedStep(projectId, intl2.string(attachment_id(3590).Z8Eo8I), obj2);
+        sendFailedStep(projectId, intl2.string(attachment_id(3591).Z8Eo8I), obj2);
       }
     } else if ("announcement" === type.kind) {
       let str29 = type.message;
@@ -579,7 +579,7 @@ function handleEvent(projectId, pendingEvents, type) {
         const obj45 = attachment_id(573);
       } else {
         const intl = require("util").intl;
-        sendFailedStep(projectId, intl.string(attachment_id(3590).IHCafX), obj2);
+        sendFailedStep(projectId, intl.string(attachment_id(3591).IHCafX), obj2);
       }
     } else if ("ideas" === type.kind) {
       let tmp100 = null != type.ideas;
@@ -845,11 +845,11 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            const result3 = attachment_id(16691).beginPreviewOperation(projectId);
-            const obj18 = attachment_id(16691);
+            const result3 = attachment_id(16704).beginPreviewOperation(projectId);
+            const obj18 = attachment_id(16704);
           } else {
-            attachment_id(16691).endPreviewOperation(projectId);
-            const obj17 = attachment_id(16691);
+            attachment_id(16704).endPreviewOperation(projectId);
+            const obj17 = attachment_id(16704);
           }
         } else if ("model_settings" === type.type) {
           const obj96 = { type: "VIBEGRATIONS_MODEL_SETTINGS_SET", projectId, settings: null, choices: null };
@@ -976,9 +976,9 @@ function handleEvent(projectId, pendingEvents, type) {
                     value.add(combined);
                     ({ location: obj3.location, code: obj3.code } = tmp2);
                     ({ message: obj3.message, source: obj3.details } = historical);
-                    const result1 = pendingEvents(16693).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
+                    const result1 = pendingEvents(16706).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
                     const obj = { location: null, code: null, message: null, details: null };
-                    obj2 = pendingEvents(16693);
+                    obj2 = pendingEvents(16706);
                   }
                 }
               }
@@ -2811,27 +2811,27 @@ function closeAllConnections() {
   map8.clear();
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
 }
-const getOlderHistoryCursor = fn(16689).getOlderHistoryCursor;
+const getOlderHistoryCursor = fn(16702).getOlderHistoryCursor;
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let set = new Set();
 const map3 = new Map();
 const map4 = new Map();
-let value = { location: "connection", code: fn(16693).VibegrationErrorCodes.SEND_FAILED };
-let obj2 = { location: "agent", code: fn(16693).VibegrationErrorCodes.AGENT_ERROR };
+let value = { location: "connection", code: fn(16706).VibegrationErrorCodes.SEND_FAILED };
+let obj2 = { location: "agent", code: fn(16706).VibegrationErrorCodes.AGENT_ERROR };
 const map5 = new Map();
 let closure_24 = { steered: true, queued: true, restarting: true, answered: true };
-let obj3 = { build_error: { location: "build", code: fn(16693).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
-let obj4 = { location: "build", code: fn(16693).VibegrationErrorCodes.BUILD_FAILED };
-obj3.healthcheck_failed = { location: "healthcheck", code: fn(16693).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-let obj5 = { location: "healthcheck", code: fn(16693).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-obj3.error = { location: "agent", code: fn(16693).VibegrationErrorCodes.AGENT_ERROR };
+let obj3 = { build_error: { location: "build", code: fn(16706).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
+let obj4 = { location: "build", code: fn(16706).VibegrationErrorCodes.BUILD_FAILED };
+obj3.healthcheck_failed = { location: "healthcheck", code: fn(16706).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+let obj5 = { location: "healthcheck", code: fn(16706).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+obj3.error = { location: "agent", code: fn(16706).VibegrationErrorCodes.AGENT_ERROR };
 let obj7 = { web: null, preview: null };
-let obj6 = { location: "agent", code: fn(16693).VibegrationErrorCodes.AGENT_ERROR };
-obj7.web = { location: "runtime_frame", code: fn(16693).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-let obj8 = { location: "runtime_frame", code: fn(16693).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-obj7.preview = { location: "runtime_worker", code: fn(16693).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
+let obj6 = { location: "agent", code: fn(16706).VibegrationErrorCodes.AGENT_ERROR };
+obj7.web = { location: "runtime_frame", code: fn(16706).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+let obj8 = { location: "runtime_frame", code: fn(16706).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+obj7.preview = { location: "runtime_worker", code: fn(16706).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
 const map6 = new Map();
 const map7 = new Map();
 const map8 = new Map();
@@ -2864,8 +2864,8 @@ prototype3["getConnState"] = function getConnState(projectId) {
   }
   return str;
 };
-prototype3["isChatStopped"] = function isChatStopped(arg0) {
-  let flag = map2.get(arg0);
+prototype3["isChatStopped"] = function isChatStopped(projectId) {
+  let flag = map2.get(projectId);
   if (flag == null) {
     flag = false;
   }

@@ -4,7 +4,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 import ReferralTrialStore from "../../ReferralTrialStore.tsx";
 
 const require = fn;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PremiumTypes: metroRequire, FractionalPremiumStates: closure_7 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
@@ -18,18 +18,18 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
   let tmp = flag;
-  const hasDiscountApplied = flag(8163).useHasDiscountApplied();
-  const obj2 = flag(8163);
-  const hasActiveTrial = flag(8164).useHasActiveTrial();
-  const tmp6 = fetched(7496)();
+  const hasDiscountApplied = flag(8166).useHasDiscountApplied();
+  const obj2 = flag(8166);
+  const hasActiveTrial = flag(8167).useHasActiveTrial();
+  const tmp6 = fetched(7500)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
   }
   fetched = true === verified;
   if (fetched) {
-    fetched = tmp(1885).isPremiumExactly(stateFromStores, TIER_2.TIER_2);
-    const tmpResult = tmp(1885);
+    fetched = tmp(1886).isPremiumExactly(stateFromStores, TIER_2.TIER_2);
+    const tmpResult = tmp(1886);
   }
   if (fetched) {
     fetched = tmp6.fetched;
@@ -53,5 +53,5 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
       const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
-  const obj3 = flag(8164);
+  const obj3 = flag(8167);
 };

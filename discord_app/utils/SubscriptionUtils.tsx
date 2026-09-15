@@ -1,6 +1,6 @@
 // discord_app/utils/SubscriptionUtils.tsx
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import _modDef4228 from "../../_runtime/metro/04228__.js";
+import _modDef4231 from "../../_runtime/metro/04231__.js";
 import PremiumUtils from "PremiumUtils.tsx";
 import SubscriptionPlanActionCreators from "../actions/SubscriptionPlanActionCreators.tsx";
 import CheckoutError from "../modules/checkout/CheckoutError.tsx";
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1074);
 ({ SubscriptionStatusTypes: metroRequire, SubscriptionTypes: closure_7 } = Constants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ SubscriptionPlans: closure_8, SubscriptionPlanInfo: closure_9 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/SubscriptionUtils.tsx");
@@ -156,9 +156,9 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
     const obj3 = { durations: found, currentDaysPaused: 0 };
     return obj3;
   } else if (null != status.pauseEndsAt) {
-    const tmp6 = _modDef4228(status.currentPeriodStart);
+    const tmp6 = _modDef4231(status.currentPeriodStart);
     const _Math = Math;
-    const rounded = Math.round(_modDef4228(status.pauseEndsAt).diff(tmp6, "days", true));
+    const rounded = Math.round(_modDef4231(status.pauseEndsAt).diff(tmp6, "days", true));
     const items = [];
     for (const item10042 of found) {
       if (PauseDuration.PauseDuration[item10042] > rounded) {
@@ -176,10 +176,10 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
 export const didBeginPurchaseFlowOnFractionalPremium = function didBeginPurchaseFlowOnFractionalPremium(isSameOrAfter) {
   let isMomentResult = null != isSameOrAfter;
   if (isMomentResult) {
-    isMomentResult = _modDef4228.isMoment(isSameOrAfter);
+    isMomentResult = _modDef4231.isMoment(isSameOrAfter);
   }
   if (isMomentResult) {
-    isMomentResult = isSameOrAfter.isSameOrAfter(_modDef4228());
+    isMomentResult = isSameOrAfter.isSameOrAfter(_modDef4231());
   }
   return isMomentResult;
 };

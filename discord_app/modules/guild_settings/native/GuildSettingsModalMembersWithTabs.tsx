@@ -18,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   content: { flex: 1 },
@@ -123,12 +123,12 @@ export default noop.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9930), accessibilityLabel: null, ref: null };
-        const intl = guildId(1114).intl;
-        obj.accessibilityLabel = intl.string(guildId(1114).t.ogxXGq);
+        const obj = { source: closure_1_1(9932), accessibilityLabel: null, ref: null };
+        const intl = guildId(1115).intl;
+        obj.accessibilityLabel = intl.string(guildId(1115).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(7480).HeaderActionButton, obj);
+        return closure_1_9(guildId(7484).HeaderActionButton, obj);
       },
     });
   }, items5);

@@ -3,21 +3,21 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef2070 from "../../../ads/SponsoredContentPreferences.messages.js";
+import _modDef2071 from "../../../ads/SponsoredContentPreferences.messages.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(1935).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(1936).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
-  const intl = adTopic(1114).intl;
+  const intl = adTopic(1115).intl;
   obj.label = intl.string(obj[adTopic]);
-  const intl2 = adTopic(1114).intl;
-  const tmp3 = _modDef2070;
+  const intl2 = adTopic(1115).intl;
+  const tmp3 = _modDef2071;
   obj.subLabel = intl2.string(hasItem ? tmp3.B9PPxE : tmp3.Y9ZOp8);
   obj.value = !hasItem;
   obj.onValueChange = function onValueChange(arg0) {
@@ -32,17 +32,17 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7303).TableSwitchRow, obj);
+  return closure_5(adTopic(7307).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1185).AdTopic.REAL_MONEY_GAMING] = _modDef2070.pmIitA;
+obj[fn(1186).AdTopic.REAL_MONEY_GAMING] = _modDef2071.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj3 = {
   content: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -61,11 +61,11 @@ export default function ManageSponsoredContentScreen() {
   const obj2 = { hasIcons: false, description: null };
   const intl = util.intl;
   const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.MANAGE_SPONSORED_CONTENT) };
-  obj2.description = intl.format(_modDef2070["z/MfaY"], obj3);
+  obj2.description = intl.format(_modDef2071["z/MfaY"], obj3);
   const items = [hasOwnProperty(TableRowGroup.TableRowGroup, obj2)];
   const obj5 = { hasIcons: false, title: null, children: null };
   const intl2 = util.intl;
-  obj5.title = intl2.string(_modDef2070.OkmBx0);
+  obj5.title = intl2.string(_modDef2071.OkmBx0);
   obj5.children = closure_8.map((adTopic) => closure_1_5(AdTopicRow, { adTopic }, adTopic));
   items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj5);
   obj.children = items;

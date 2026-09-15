@@ -23,8 +23,8 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   const now = _slicedToArray(
     noop.useState(() => {
       const timestamp = Date.now();
-      const rounded = Math.floor(timestamp / _undefined(1090).Millis.SECOND);
-      return rounded * _undefined(1090).Millis.SECOND;
+      const rounded = Math.floor(timestamp / _undefined(1091).Millis.SECOND);
+      return rounded * _undefined(1091).Millis.SECOND;
     }),
     2,
   );
@@ -47,11 +47,11 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   importDefault = result;
   const items1 = [result];
   const effect = noop.useEffect(() => {
-    const interval = new closure_0(1952).Interval();
+    const interval = new closure_0(1953).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
-      const rounded = Math.floor(timestamp / c1(1090).Millis.SECOND);
-      interval(rounded * c1(1090).Millis.SECOND);
+      const rounded = Math.floor(timestamp / c1(1091).Millis.SECOND);
+      interval(rounded * c1(1091).Millis.SECOND);
     });
     return () => interval.stop();
   }, items1);

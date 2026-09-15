@@ -6,8 +6,8 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const OrientationLockState = fn(1920).OrientationLockState;
-const CallConstants = fn(4657);
+const OrientationLockState = fn(1921).OrientationLockState;
+const CallConstants = fn(4660);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -78,17 +78,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_7(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8450).OrientationType.LANDSCAPE;
+        return tmp2(8453).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8450).OrientationType;
+    OrientationType = tmp2(8453).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(8450).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8453).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

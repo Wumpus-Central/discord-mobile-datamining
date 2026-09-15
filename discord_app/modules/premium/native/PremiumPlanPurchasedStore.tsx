@@ -7,7 +7,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
 const module_560 = fn(560);
 const obj3 = module_560.create(() => ({
@@ -93,7 +93,7 @@ export const reset = function reset() {
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
       onPaymentSuccess: "accessible",
-      onPaymentDismiss: "skuId",
+      onPaymentDismiss: "useRef",
     });
   });
 };

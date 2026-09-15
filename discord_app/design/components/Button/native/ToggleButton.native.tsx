@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const obj = { Icon: fn(5057).BaseTextButton.Icon };
+const obj = { Icon: fn(5060).BaseTextButton.Icon };
 let merged = Object.assign(
   noop.forwardRef((pressed, ref) => {
     pressed = pressed.pressed;

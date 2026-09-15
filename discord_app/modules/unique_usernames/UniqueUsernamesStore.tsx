@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01437_priv.js";
+import privDefault from "../../../_runtime/01438_priv.js";
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
 let obj = {
@@ -10,8 +10,12 @@ let obj = {
   currentUsernameInvalid: false,
   retryAfterTime: null,
   suggestions: {
-    migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false },
-    registration: { suggestion: { username: "r" }, source: "PX_16", fetched: true },
+    migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false },
+    registration: {
+      suggestion: { username: "Array" },
+      source: "PX_16",
+      fetched: "2026-03-icymi-staff-debugging-utility",
+    },
   },
 };
 const Store = initializeDefault.Store;
@@ -85,8 +89,12 @@ const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, {
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
-    obj.suggestions.migration = { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = { suggestion: { username: "r" }, source: "PX_16", fetched: true };
+    obj.suggestions.migration = { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false };
+    obj.suggestions.registration = {
+      suggestion: { username: "Array" },
+      source: "PX_16",
+      fetched: "2026-03-icymi-staff-debugging-utility",
+    };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

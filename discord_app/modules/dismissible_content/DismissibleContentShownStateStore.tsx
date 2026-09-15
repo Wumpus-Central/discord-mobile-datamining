@@ -161,7 +161,7 @@ function withUpdateWinner(candidates, content) {
   }
 }
 const NOOP = fn(1074).NOOP;
-const identity = fn(1242);
+const identity = fn(1243);
 let closure_6 = identity.createWithEqualityFn(function initState() {
   const obj = {
     candidates: new Map(),
@@ -180,7 +180,7 @@ let closure_6 = identity.createWithEqualityFn(function initState() {
   return obj;
 });
 let closure_7 = false;
-const batchInvocationManager = new fn(1952).BatchInvocationManager(
+const batchInvocationManager = new fn(1953).BatchInvocationManager(
   (arg0) => {
     const resolved = Promise.resolve(arg0);
     return resolved.then((result) => {

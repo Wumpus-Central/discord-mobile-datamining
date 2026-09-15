@@ -11,7 +11,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_12,
@@ -41,19 +41,19 @@ export default function RemediatedUserNotice(user) {
     obj2.style = items1;
     if (isBlocked) {
       const obj3 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
-      const intl = tmp4(1114).intl;
-      obj3.children = intl.string(tmp4(1114).t["oC/fU6"]);
-      isBlocked = closure_6(tmp4(4632).Text, obj3);
+      const intl = tmp4(1115).intl;
+      obj3.children = intl.string(tmp4(1115).t["oC/fU6"]);
+      isBlocked = closure_6(tmp4(4635).Text, obj3);
     }
     const items2 = [isBlocked];
     if (isIgnored) {
       const obj4 = { children: null };
       const obj5 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
-      const intl2 = tmp4(1114).intl;
-      obj5.children = intl2.string(tmp4(1114).t.HXz5An);
+      const intl2 = tmp4(1115).intl;
+      obj5.children = intl2.string(tmp4(1115).t.HXz5An);
       const items3 = [
-        closure_6(tmp4(4632).Text, obj5),
-        closure_6(tmp4(4632).Text, {
+        closure_6(tmp4(4635).Text, obj5),
+        closure_6(tmp4(4635).Text, {
           variant: "text-sm/semibold",
           color: "text-default",
           accessibilityElementsHidden: true,
@@ -61,7 +61,7 @@ export default function RemediatedUserNotice(user) {
           children: "\u2022",
         }),
       ];
-      const intl3 = tmp4(1114).intl;
+      const intl3 = tmp4(1115).intl;
       const obj6 = {
         unignoreHook(children) {
           return timestampProducer(Text_Text.Text, {
@@ -75,7 +75,7 @@ export default function RemediatedUserNotice(user) {
           });
         },
       };
-      items3[2] = intl3.format(tmp4(1114).t.PrtAqy, obj6);
+      items3[2] = intl3.format(tmp4(1115).t.PrtAqy, obj6);
       obj4.children = items3;
       isIgnored = closure_8(closure_7, obj4);
     }

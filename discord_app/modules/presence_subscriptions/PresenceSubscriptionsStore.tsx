@@ -9,10 +9,10 @@ function handleConnectionOpenOrResumed() {
   closure_5 = {};
   closure_6 = {};
 }
-const INVITE_EXPIRATION_MS = fn(1920).INVITE_EXPIRATION_MS;
+const INVITE_EXPIRATION_MS = fn(1921).INVITE_EXPIRATION_MS;
 let closure_5 = {};
 let closure_6 = {};
-const delayedCall = new fn(1952).DelayedCall(3000, function flush() {
+const delayedCall = new fn(1953).DelayedCall(3000, function flush() {
   const items = [];
   const entries = Object.entries(closure_6);
   while (tmp4 !== undefined) {

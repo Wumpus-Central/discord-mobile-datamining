@@ -20,25 +20,25 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
   dependencyMap = tmp[1];
   const items = [timestamp, flag];
   const effect = noop.useEffect(() => {
-    dependencyMap(timestamp(7743).getRelativeTimestamp(interval, flag));
+    dependencyMap(timestamp(7746).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
-    if (diff <= flag(1090).Millis.DAY) {
-      if (diff >= flag(1090).Millis.HOUR) {
-        let MINUTE = flag(1090).Millis.HOUR;
+    if (diff <= flag(1091).Millis.DAY) {
+      if (diff >= flag(1091).Millis.HOUR) {
+        let MINUTE = flag(1091).Millis.HOUR;
       } else {
-        MINUTE = flag(1090).Millis.MINUTE;
+        MINUTE = flag(1091).Millis.MINUTE;
       }
       const _setInterval = setInterval;
       interval = setInterval(
         () => {
-          dependencyMap(timestamp(7743).getRelativeTimestamp(closure_0, flag));
+          dependencyMap(timestamp(7746).getRelativeTimestamp(closure_0, flag));
         },
         MINUTE,
         MINUTE - (diff % MINUTE),
       );
       return () => clearInterval(closure_0);
     }
-    const obj = timestamp(7743);
+    const obj = timestamp(7746);
   }, items);
   return tmp[0];
 };

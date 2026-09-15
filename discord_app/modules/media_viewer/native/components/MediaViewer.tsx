@@ -19,16 +19,16 @@ function MediaViewer(arg0) {
   __initData = undefined;
   ({ onLongPress, originLayout, renderMedia, renderOverlay, swipeVelocityThreshold } = arg0);
   ({ useViewerProps, zoomed } = syncer);
-  value = [height(7285).MEDIA_VIEWER];
+  value = [height(7289).MEDIA_VIEWER];
   let tmp = height;
-  const tmp3 = height(7265);
+  const tmp3 = height(7269);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   const _require = tmp6;
   const tmp4 = sharedValue(sharedValue1.useState(true), 2);
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13117)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13122)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -260,9 +260,9 @@ function MediaViewer(arg0) {
   const obj16 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const obj15 = require("DeviceOrientation");
   const items5 = [
-    translatePos(height(9611), { barStyle: "light-content", hidden: !tmp5 }),
-    translatePos(height(4373).View, { style: animatedStyle }),
-    translatePos(height(4374), {
+    translatePos(height(9613), { barStyle: "light-content", hidden: !tmp5 }),
+    translatePos(height(4376).View, { style: animatedStyle }),
+    translatePos(height(4377), {
       ref: animatedRef,
       style: animatedStyle2,
       children: translatePos(ref, {
@@ -312,17 +312,17 @@ function MediaViewer(arg0) {
   }
   obj18.pointerEvents = str;
   obj18.children = renderOverlay(dismiss, overlayEnabled);
-  items5[3] = translatePos(height(4374), obj18);
-  items5[4] = translatePos(tmp(9613), {});
+  items5[3] = translatePos(height(4377), obj18);
+  items5[4] = translatePos(tmp(9615), {});
   obj16.children = items5;
   const children = tmp28(tmp29, obj16);
-  return translatePos(tmp7(7265).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+  return translatePos(tmp7(7269).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 let closure_9 = PlatformUtils.isAndroid();
 let closure_10 = {
   code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}",

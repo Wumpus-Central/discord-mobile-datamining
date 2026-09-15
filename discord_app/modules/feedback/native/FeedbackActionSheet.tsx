@@ -1,7 +1,7 @@
 // discord_app/modules/feedback/native/FeedbackActionSheet.tsx
 import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import FeedbackUtils from "../FeedbackUtils.tsx";
@@ -13,10 +13,10 @@ function closeActionSheet() {
   ActionSheetActionCreatorsDefault.hideActionSheet();
 }
 const View = fn(17).View;
-const FeedbackRating = fn(11756).FeedbackRating;
+const FeedbackRating = fn(11760).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   ratingsHeader: { textAlign: "center" },
@@ -78,8 +78,8 @@ export default function FeedbackActionSheet(feedbackReasons) {
         tmp14 = View(reason);
       }
       obj3.descriptionLabel = tmp14;
-      obj2.pushLazy(asyncRequireImpl(11778, dependencyMap.paths), obj3);
-      const tmp9 = asyncRequireImpl(11778, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(11782, dependencyMap.paths), obj3);
+      const tmp9 = asyncRequireImpl(11782, dependencyMap.paths);
     } else {
       const obj = { rating, reason, dontShowAgain: first1 };
       trackReport(obj);

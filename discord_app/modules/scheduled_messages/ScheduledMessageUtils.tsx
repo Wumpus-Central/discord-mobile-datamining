@@ -8,7 +8,7 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
-import _modDef4228 from "../../../_runtime/metro/04228__.js";
+import _modDef4231 from "../../../_runtime/metro/04231__.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import parseContentForSuppressNotifications from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
 import ScheduledMessageTypes from "ScheduledMessageTypes.tsx";
@@ -22,8 +22,8 @@ const parseContentForSuppressNotificationsDefault = parseContentForSuppressNotif
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, MessageFlags: closure_7, Permissions: closure_8 } = Constants);
-const PremiumTypes = fn(1373).PremiumTypes;
-const ScheduledMessagesConstants = fn(7948);
+const PremiumTypes = fn(1374).PremiumTypes;
+const ScheduledMessagesConstants = fn(7951);
 ({
   MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: c10,
   MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_11,
@@ -39,7 +39,7 @@ class ScheduledMessagesConfig {
     return merged;
   }
 }
-const ApexExperiment = fn(1433);
+const ApexExperiment = fn(1434);
 let obj2 = { name: "2026-08-scheduled-messages", kind: "user", defaultConfig: null, variations: null };
 let merged = Object.assign({ enabled: false, limit: 0 });
 _modDef38(true, "Config is missing scheduled message limit");
@@ -158,9 +158,9 @@ export const canSendScheduledMessagesInChannel = function canSendScheduledMessag
   return enabled;
 };
 export const getDefaultScheduledTime = function getDefaultScheduledTime() {
-  const obj = _modDef4228();
-  const addResult = _modDef4228().startOf("hour").add(1, "hour");
-  const startOfResult = _modDef4228().startOf("hour");
+  const obj = _modDef4231();
+  const addResult = _modDef4231().startOf("hour").add(1, "hour");
+  const startOfResult = _modDef4231().startOf("hour");
   let addResult1 = addResult;
   if (addResult.isBefore(obj4.add(map1, "seconds"))) {
     addResult1 = addResult.add(1, "hour");
@@ -172,38 +172,38 @@ export const getScheduledTimeError = function getScheduledTimeError(isBefore, de
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t["w/fgvh"]);
   } else {
-    const addResult = _modDef4228().add(closure_1_11, "seconds");
+    const addResult = _modDef4231().add(closure_1_11, "seconds");
     let minResult = addResult;
     if (null != dependencyMap) {
-      const tmpResult = _modDef4228;
+      const tmpResult = _modDef4231;
       const tmpResult3 = SnowflakeUtilsDefault;
       const tmpResultResult = tmpResult(SnowflakeUtilsDefault.extractTimestamp(dependencyMap));
-      minResult = _modDef4228.min(addResult, tmpResultResult.add(closure_1_10, "seconds"));
-      const tmpResult4 = _modDef4228;
+      minResult = _modDef4231.min(addResult, tmpResultResult.add(closure_1_10, "seconds"));
+      const tmpResult4 = _modDef4231;
     }
     stringResult = null;
     if (isBefore.isAfter(minResult)) {
       const intl = util.intl;
       stringResult = intl.string(util.t.Nt0tz7);
     }
-    const obj2 = _modDef4228();
+    const obj2 = _modDef4231();
   }
   return stringResult;
 };
 export const getEarliestScheduledTime = function getEarliestScheduledTime() {
-  return _modDef4228().add(map1, "seconds");
+  return _modDef4231().add(map1, "seconds");
 };
 export const getLatestScheduledTime = function getLatestScheduledTime(arg0) {
-  const addResult = _modDef4228().add(closure_1_11, "seconds");
+  const addResult = _modDef4231().add(closure_1_11, "seconds");
   if (null == arg0) {
     return addResult;
   } else {
-    const tmpResult = _modDef4228;
+    const tmpResult = _modDef4231;
     const tmpResult3 = SnowflakeUtilsDefault;
     const tmpResultResult = tmpResult(SnowflakeUtilsDefault.extractTimestamp(arg0));
-    return _modDef4228.min(addResult, tmpResultResult.add(closure_1_10, "seconds"));
+    return _modDef4231.min(addResult, tmpResultResult.add(closure_1_10, "seconds"));
   }
-  const obj = _modDef4228();
+  const obj = _modDef4231();
 };
 export const getScheduledMessagesLimit = function getScheduledMessagesLimit(ScheduledMessagesCreateRoadblock) {
   const obj2 = { location: ScheduledMessagesCreateRoadblock };

@@ -1,10 +1,10 @@
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
-import Link from "../../../../../_runtime/01484_Link.js";
+import Link from "../../../../../_runtime/01485_Link.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAppLauncherNavigation = fn(1482).useAppLauncherNavigation;
+const useAppLauncherNavigation = fn(1483).useAppLauncherNavigation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 

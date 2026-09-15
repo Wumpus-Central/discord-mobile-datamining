@@ -2,7 +2,7 @@
 import logger_Logger from "../logger/Logger.tsx";
 import discord_common_IdGenerator from "../id-generator/IdGenerator.tsx";
 import FingerprintUtils from "../fingerprint-utils/FingerprintUtils.tsx";
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import HTTPUtils from "../http-utils/HTTPUtils.tsx";
 import Constants from "../../shared/Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -59,7 +59,7 @@ let closure_31 = [];
 let c32 = null;
 let c33 = false;
 function defaultGetSessionId() {
-  return Promise.resolve({ sessionId: "r" });
+  return Promise.resolve({ sessionId: "Array" });
 }
 let result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 

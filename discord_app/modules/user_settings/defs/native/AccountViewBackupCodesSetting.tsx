@@ -6,14 +6,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Constants = fn(1074);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(8079).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14768).useIs2FAEnabled,
+  parent: fn(8082).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(14778).useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
     return noop.useCallback((arg0) => {
       closure_0 = arg0;
@@ -35,17 +35,17 @@ const route = SettingBuilders.createRoute({
               confirmColor: null,
               useKeyboardAwareWrapper: true,
             };
-            const intl = onSuccess(1114).intl;
-            obj.title = intl.string(onSuccess(1114).t["mGppp/"]);
-            const intl2 = onSuccess(1114).intl;
-            obj.helpText = intl2.string(onSuccess(1114).t["37S9yU"]);
-            const intl3 = onSuccess(1114).intl;
-            obj.inputLabel = intl3.string(onSuccess(1114).t.TjGb4Q);
+            const intl = onSuccess(1115).intl;
+            obj.title = intl.string(onSuccess(1115).t["mGppp/"]);
+            const intl2 = onSuccess(1115).intl;
+            obj.helpText = intl2.string(onSuccess(1115).t["37S9yU"]);
+            const intl3 = onSuccess(1115).intl;
+            obj.inputLabel = intl3.string(onSuccess(1115).t.TjGb4Q);
             obj.onSuccess = onSuccess;
-            const intl4 = onSuccess(1114).intl;
-            obj.actionText = intl4.string(onSuccess(1114).t.geKm7t);
-            obj.confirmColor = onSuccess(1176).ButtonColors.BRAND;
-            closure_2_1(14885)(obj);
+            const intl4 = onSuccess(1115).intl;
+            obj.actionText = intl4.string(onSuccess(1115).t.geKm7t);
+            obj.confirmColor = onSuccess(1177).ButtonColors.BRAND;
+            closure_2_1(14895)(obj);
           });
         },
         onSuccess,
@@ -56,14 +56,14 @@ const route = SettingBuilders.createRoute({
         confirmColor: null,
         useKeyboardAwareWrapper: true,
       };
-      let intl = closure_0(1114).intl;
-      obj.title = intl.string(closure_0(1114).t.PsQmzU);
-      let intl2 = closure_0(1114).intl;
-      obj.inputLabel = intl2.string(closure_0(1114).t["CIGa+7"]);
-      let intl3 = closure_0(1114).intl;
-      obj.actionText = intl3.string(closure_0(1114).t.PDTjLN);
-      obj.confirmColor = closure_0(1176).ButtonColors.BRAND;
-      closure_1(14885)(obj);
+      let intl = closure_0(1115).intl;
+      obj.title = intl.string(closure_0(1115).t.PsQmzU);
+      let intl2 = closure_0(1115).intl;
+      obj.inputLabel = intl2.string(closure_0(1115).t["CIGa+7"]);
+      let intl3 = closure_0(1115).intl;
+      obj.actionText = intl3.string(closure_0(1115).t.PDTjLN);
+      obj.confirmColor = closure_0(1177).ButtonColors.BRAND;
+      closure_1(14895)(obj);
       return false;
     }, []);
   },

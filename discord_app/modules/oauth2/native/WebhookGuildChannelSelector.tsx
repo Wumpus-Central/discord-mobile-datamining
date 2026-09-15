@@ -1,7 +1,7 @@
 // discord_app/modules/oauth2/native/WebhookGuildChannelSelector.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -11,10 +11,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const createChannelRecord = fn(1961).createChannelRecord;
+const createChannelRecord = fn(1962).createChannelRecord;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   selectorGroup: { flexDirection: "column", gap: 8 },
   select: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs },
@@ -56,7 +56,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const channels = first.channels;
       obj2.items = channels.map((id) => {
         const obj = {
-          label: selectedGuildId(4789).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
+          label: selectedGuildId(4792).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
           value: id.id,
         };
         return obj;
@@ -66,8 +66,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
       obj2.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(9556, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
-      const tmp7 = asyncRequireImpl(9556, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(9558, dependencyMap.paths), WebhookGuildChannelSelector, obj2);
+      const tmp7 = asyncRequireImpl(9558, dependencyMap.paths);
     }
   }, items);
   const effect = noop.useEffect(() => {

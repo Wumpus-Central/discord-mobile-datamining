@@ -33,7 +33,7 @@ export const transformNativeLink = function transformNativeLink(value, channelId
       }
       return obj;
     }
-    obj = { type: MarkupTypes.AST_KEY.LINK, content: null, target: null, title: "Array" };
+    obj = { type: MarkupTypes.AST_KEY.LINK, content: null, target: null, title: "a" };
     const obj3 = { type: MarkupTypes.AST_KEY.TEXT, content: stripCredentialsForDisplay(url) };
     const items = [obj3];
     obj.content = items;

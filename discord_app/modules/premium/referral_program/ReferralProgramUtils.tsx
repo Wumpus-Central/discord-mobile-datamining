@@ -10,7 +10,7 @@ import useIsEligibleSenderForReferralProgram from "hooks/useIsEligibleSenderForR
 import ReferralTrialStore from "../ReferralTrialStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 

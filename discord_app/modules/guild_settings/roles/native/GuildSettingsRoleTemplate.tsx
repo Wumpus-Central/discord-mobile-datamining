@@ -8,9 +8,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef8396 from "../../../../../_runtime/metro/08396__.js";
-import PaginationDefault from "../../../../../_runtime/10886_Pagination.js";
-import _modDef11694 from "../../../../../_runtime/metro/11694__.js";
+import _modDef8399 from "../../../../../_runtime/metro/08399__.js";
+import PaginationDefault from "../../../../../_runtime/10890_Pagination.js";
+import _modDef11698 from "../../../../../_runtime/metro/11698__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,7 +21,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17724);
+const GuildSettingsRoleConstants = fn(17762);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
@@ -32,7 +32,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   carousel: { flex: 1 },
@@ -186,7 +186,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
     accessible: false,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
-    children: closure_14(_modDef8396, {
+    children: closure_14(_modDef8399, {
       maximumValue: values.length - 1,
       minimumTrackTintColor: values[value].color,
       minimumValue: constants.COSMETIC,
@@ -303,7 +303,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
           const obj = { style: closure_3.templateContent, children: null };
           const items = [
             closure_3_14(native.Icon, {
-              source: _modDef11694,
+              source: _modDef11698,
               size: native.IconSizes.MEDIUM,
               color: nativeDefault.unsafe_rawColors.GREEN_360,
             }),

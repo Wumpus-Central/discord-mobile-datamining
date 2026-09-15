@@ -72,13 +72,13 @@ export default function useShouldOpenGameProfileModal(applicationId) {
         }
         tmp19Result = utils;
       }
-      track = track(1240).track;
+      track = track(1241).track;
       GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
       obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
       track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
       flag = true;
       ref.current = true;
-      const trackResult = track(1240);
+      const trackResult = track(1241);
     }
   }, items);
   return { shouldOpenGameProfile, gameId: gameId2.gameId };

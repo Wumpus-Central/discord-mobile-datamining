@@ -8,7 +8,7 @@ import InstantInviteActionCreatorsDefault from "../../../../actions/InstantInvit
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
-import getCurrentEmbeddedActivityChannelDefault from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
+import getCurrentEmbeddedChannelDefault from "../../helpers/getCurrentEmbeddedChannel.tsx";
 import ChannelRecord from "../../../../records/ChannelRecord.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -91,8 +91,8 @@ const obj6 = {};
 const items1 = [OAuth2Scopes.OAuth2Scopes.GUILDS_MEMBERS_READ, OAuth2Scopes.OAuth2Scopes.GUILDS_CHANNELS_READ];
 obj6[RPC_SCOPE_CONFIG.ANY] = items1;
 obj5.scope = obj6;
-obj5.handler = function handler() {
-  const tmp3 = getCurrentEmbeddedActivityChannelDefault();
+obj5.handler = function handler(socket) {
+  const tmp3 = getCurrentEmbeddedChannelDefault(socket.socket);
   if (null == tmp3) {
     const obj2 = { errorCode: constants2.INVALID_CHANNEL };
     const tmp9 = new RPCErrorDefault(obj2, "Invalid channel");
@@ -286,7 +286,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
       const catchPromise = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9684)(
+          throw new channel_id(9686)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -294,7 +294,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
       let nextPromise1 = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9684)(
+          throw new channel_id(9686)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -324,23 +324,23 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
           if (tmp2.guild_id) {
             if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
               const obj = { errorCode: constants2.INVALID_CHANNEL };
-              const tmp11 = new channel_id(9684)(obj, "No permission to see channel");
+              const tmp11 = new channel_id(9686)(obj, "No permission to see channel");
               throw tmp11;
             }
           }
           if (tmp2.guild_id) {
-            socket(1100).replaceWith(closure_1_10.CHANNEL(tmp2.guild_id, tmp.id));
-            const obj3 = socket(1100);
+            socket(1101).replaceWith(closure_1_10.CHANNEL(tmp2.guild_id, tmp.id));
+            const obj3 = socket(1101);
           } else {
-            const privateChannel = channel_id(5492).selectPrivateChannel(tmp.id);
-            const obj2 = channel_id(5492);
+            const privateChannel = channel_id(5496).selectPrivateChannel(tmp.id);
+            const obj2 = channel_id(5496);
           }
           return tmp2;
         });
       const nextPromise = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9684)(
+          throw new channel_id(9686)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -366,9 +366,9 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
           }
         });
     } else {
-      socket(1100).transitionTo(closure_10.ME);
+      socket(1101).transitionTo(closure_10.ME);
       nextPromise1 = null;
-      let obj = socket(1100);
+      let obj = socket(1101);
     }
     return nextPromise1;
   },
@@ -398,7 +398,7 @@ const obj11 = {
       const catchPromise = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9684)(
+          throw new channel_id(9686)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -406,7 +406,7 @@ const obj11 = {
       let nextPromise1 = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9684)(
+          throw new channel_id(9686)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -436,23 +436,23 @@ const obj11 = {
           if (tmp2.guild_id) {
             if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
               const obj = { errorCode: constants2.INVALID_CHANNEL };
-              const tmp11 = new channel_id(9684)(obj, "No permission to see channel");
+              const tmp11 = new channel_id(9686)(obj, "No permission to see channel");
               throw tmp11;
             }
           }
           if (tmp2.guild_id) {
-            socket(1100).replaceWith(closure_1_10.CHANNEL(tmp2.guild_id, tmp.id));
-            const obj3 = socket(1100);
+            socket(1101).replaceWith(closure_1_10.CHANNEL(tmp2.guild_id, tmp.id));
+            const obj3 = socket(1101);
           } else {
-            const privateChannel = channel_id(5492).selectPrivateChannel(tmp.id);
-            const obj2 = channel_id(5492);
+            const privateChannel = channel_id(5496).selectPrivateChannel(tmp.id);
+            const obj2 = channel_id(5496);
           }
           return tmp2;
         });
       const nextPromise = server
         .storeWait(socket, () => ChannelStore.getChannel(channel_id), num)
         .catch(() => {
-          throw new channel_id(9684)(
+          throw new channel_id(9686)(
             { errorCode: constants2.SELECT_CHANNEL_TIMED_OUT },
             "Request to select text channel timed out.",
           );
@@ -478,9 +478,9 @@ const obj11 = {
           }
         });
     } else {
-      socket(1100).transitionTo(closure_10.ME);
+      socket(1101).transitionTo(closure_10.ME);
       nextPromise1 = null;
-      let obj = socket(1100);
+      let obj = socket(1101);
     }
     return nextPromise1;
   },

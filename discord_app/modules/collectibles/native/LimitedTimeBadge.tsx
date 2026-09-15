@@ -12,7 +12,7 @@ import ThemeStore from "../../user_settings/ThemeStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 },
   backgroundDarkMode: null,
@@ -58,7 +58,7 @@ export default function LimitedTimeBadge(unpublishedAt) {
     if (days <= 1) {
       if (days > 1) {
         const intl3 = util.intl;
-        sum1 = `0${tmp9(tmp2(1114).t["1LyF1h"])}`;
+        sum1 = `0${tmp9(tmp2(1115).t["1LyF1h"])}`;
       }
       sum = sum1;
     }

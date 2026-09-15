@@ -5,7 +5,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_3 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");
 

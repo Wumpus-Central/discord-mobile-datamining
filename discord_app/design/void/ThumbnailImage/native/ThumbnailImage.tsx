@@ -3,9 +3,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 let _default = fn(17).Image;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {
-  _default = fn(14187).default;
+  _default = fn(14192).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/ThumbnailImage/native/ThumbnailImage.tsx");

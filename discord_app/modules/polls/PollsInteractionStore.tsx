@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollsInteractionStore.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import identity from "../../../_runtime/metro/01242__.js";
+import identity from "../../../_runtime/metro/01243__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;

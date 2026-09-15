@@ -3,7 +3,7 @@ import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
-  name: "2026-08-guild-members-in-mobile-vc-invites",
+  name: "2026-09-guild-members-in-mobile-vc-invites",
   kind: "guild",
   defaultConfig: { enabled: false },
   variations: null,

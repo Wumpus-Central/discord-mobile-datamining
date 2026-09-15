@@ -5,7 +5,7 @@ import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const UnreadSetting = fn(4818).UnreadSetting;
+const UnreadSetting = fn(4821).UnreadSetting;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");
 

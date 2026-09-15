@@ -29,7 +29,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
           if (!tmp9Result.isPseudoGuildId(id)) {
             const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: id };
             DispatcherDefault.dispatch(obj);
-            const HTTP = tmp9(1270).HTTP;
+            const HTTP = tmp9(1271).HTTP;
             const obj3 = {
               url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id),
               oldFormErrors: true,
@@ -47,7 +47,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
               () => DispatcherDefault.dispatch({ type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId }),
             );
           }
-          tmp9Result = tmp9(4476);
+          tmp9Result = tmp9(4479);
         }
       }
     }
@@ -58,7 +58,7 @@ export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildI
   if (!obj.isPseudoGuildId(guildId)) {
     const obj3 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
     DispatcherDefault.dispatch(obj3);
-    const HTTP = tmp(1270).HTTP;
+    const HTTP = tmp(1271).HTTP;
     const obj4 = {
       url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(guildId),
       oldFormErrors: true,

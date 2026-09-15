@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { actionBarCTAContainer: { marginVertical: 4 }, iconStyle: null, iconContainerStyle: null, greenIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20 };
 obj2.iconStyle = size;
@@ -34,7 +34,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(closure_1_0, { channel });
       },
-      iconSource: channel(9913),
+      iconSource: channel(9915),
       iconStyle: null,
       iconContainerStyle: null,
       completed: null,
@@ -52,7 +52,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(closure_1_0, { channel });
       },
-      iconSource: channel(9913),
+      iconSource: channel(9915),
       iconStyle: null,
       iconContainerStyle: null,
       completed: null,
@@ -75,7 +75,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
       },
-      iconSource: recurrenceId(9913),
+      iconSource: recurrenceId(9915),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -86,25 +86,25 @@ export const StartEventPrompt = function StartEventPrompt(event) {
     ({ iconContainerStyle: arr[0], greenIcon: arr[1] } = tmp);
     obj2.iconContainerStyle = items;
     obj2.completed = isLive;
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1115).intl;
     const obj3 = { eventName: name };
-    obj2.title = intl.formatToPlainString(tmp2(1114).t["1vGXqM"], obj3);
-    const intl2 = tmp2(1114).intl;
-    const obj4 = { startTime: tmp2(4318).calendarFormat(recurrenceId(4228)(scheduled_start_time)) };
-    obj2.subtitle = intl2.formatToPlainString(tmp2(1114).t.PTebCR, obj4);
-    tmp4 = jsx(tmp2(8716).FormCTA, {
+    obj2.title = intl.formatToPlainString(tmp2(1115).t["1vGXqM"], obj3);
+    const intl2 = tmp2(1115).intl;
+    const obj4 = { startTime: tmp2(4321).calendarFormat(recurrenceId(4231)(scheduled_start_time)) };
+    obj2.subtitle = intl2.formatToPlainString(tmp2(1115).t.PTebCR, obj4);
+    tmp4 = jsx(tmp2(8719).FormCTA, {
       style: tmp.actionBarCTAContainer,
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
       },
-      iconSource: recurrenceId(9913),
+      iconSource: recurrenceId(9915),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
       title: null,
       subtitle: null,
     });
-    const tmp2Result = tmp2(4318);
+    const tmp2Result = tmp2(4321);
   }
   return tmp4;
 };

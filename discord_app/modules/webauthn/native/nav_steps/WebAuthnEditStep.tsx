@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { inputField: { marginBottom: nativeDefault.space.PX_16 }, form: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.form = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -22,8 +22,8 @@ export default function EditCredentialModal(credential) {
   value = undefined;
   noop = undefined;
   const tmp = closure_7();
-  const navigation = credential(1483).useNavigation();
-  let obj = credential(1483);
+  const navigation = credential(1484).useNavigation();
+  let obj = credential(1484);
   [tmp6, c2] = value(noop.useState(false), 2);
   const tmp7 = value(noop.useState(""), 2);
   value = tmp7[0];
@@ -54,12 +54,12 @@ export default function EditCredentialModal(credential) {
     required: true,
     large: true,
   };
-  let intl = credential(1114).intl;
-  obj3.title = intl.string(credential(1114).t["Jzd+z/"]);
+  let intl = credential(1115).intl;
+  obj3.title = intl.string(credential(1115).t["Jzd+z/"]);
   obj3.placeholder = credential.name;
   obj3.disabled = tmp6;
-  obj3.clearButtonVisibility = credential(1176).ClearButtonVisibility.WITH_CONTENT;
-  const items1 = [closure_5(credential(8716).FormInput, obj3), closure_5(credential(8716).FormDivider, {})];
+  obj3.clearButtonVisibility = credential(1177).ClearButtonVisibility.WITH_CONTENT;
+  const items1 = [closure_5(credential(8719).FormInput, obj3), closure_5(credential(8719).FormDivider, {})];
   const obj4 = {
     onPress() {
       _undefined(true);
@@ -73,11 +73,11 @@ export default function EditCredentialModal(credential) {
           IconComponent: null,
           iconColor: "status-positive",
         };
-        const intl = credential(1114).intl;
-        obj2.content = intl.string(credential(1114).t.IV13mH);
-        obj2.icon = navigation(10781);
-        obj2.IconComponent = credential(4596).CircleCheckIcon;
-        navigation(4335).open(obj2);
+        const intl = credential(1115).intl;
+        obj2.content = intl.string(credential(1115).t.IV13mH);
+        obj2.icon = navigation(10785);
+        obj2.IconComponent = credential(4599).CircleCheckIcon;
+        navigation(4338).open(obj2);
         closure_1_1.popToTop();
       });
       result
@@ -89,11 +89,11 @@ export default function EditCredentialModal(credential) {
             IconComponent: null,
             iconColor: "status-positive",
           };
-          const intl = credential(1114).intl;
-          obj2.content = intl.string(credential(1114).t.IV13mH);
-          obj2.icon = navigation(10781);
-          obj2.IconComponent = credential(4596).CircleCheckIcon;
-          navigation(4335).open(obj2);
+          const intl = credential(1115).intl;
+          obj2.content = intl.string(credential(1115).t.IV13mH);
+          obj2.icon = navigation(10785);
+          obj2.IconComponent = credential(4599).CircleCheckIcon;
+          navigation(4338).open(obj2);
           closure_1_1.popToTop();
         })
         .catch((error) => {
@@ -115,9 +115,9 @@ export default function EditCredentialModal(credential) {
   }
   obj4.disabled = tmp13;
   obj4.loading = tmp6;
-  const intl2 = tmp2(1114).intl;
-  obj4.text = intl2.string(credential(1114).t["7asiR3"]);
-  items1[2] = closure_5(credential(5056).Button, obj4);
+  const intl2 = tmp2(1115).intl;
+  obj4.text = intl2.string(credential(1115).t["7asiR3"]);
+  items1[2] = closure_5(credential(5059).Button, obj4);
   obj2.children = items1;
-  return closure_6(credential(8716).Form, obj2);
+  return closure_6(credential(8719).Form, obj2);
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/ads/analytics/captureAdUserAction.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import getDeviceMetadataDefault from "../../device/getDeviceMetadata.native.tsx";

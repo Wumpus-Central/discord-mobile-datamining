@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   headerPanel: {
     position: "relative",
@@ -43,7 +43,7 @@ let obj4 = {
   justifyContent: "space-between",
 };
 obj.headerPanelButtons = {
-  height: fn(5061).SMALL_BUTTON_HEIGHT,
+  height: fn(5064).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -59,7 +59,7 @@ const __initData = {
   code: "function MessagesHeaderTsx1(){const{withSpring,scrollPosition}=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0)};}",
 };
 let obj5 = {
-  height: fn(5061).SMALL_BUTTON_HEIGHT,
+  height: fn(5064).SMALL_BUTTON_HEIGHT,
   gap: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP,
   flexDirection: nativeDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT,
   alignItems: "center",
@@ -84,13 +84,13 @@ export default noop.memo(function MessagesHeader(height) {
     }
     return { opacity: spring.withSpring(num) };
   };
-  let obj = height(4373);
-  fn.__closure = { withSpring: height(5055).withSpring, scrollPosition };
+  let obj = height(4376);
+  fn.__closure = { withSpring: height(5058).withSpring, scrollPosition };
   fn.__workletHash = 17233409273245;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { withSpring: height(5055).withSpring, scrollPosition };
-  const isHomeDrawerEnabled = height(16117).useIsHomeDrawerEnabled();
+  let obj2 = { withSpring: height(5058).withSpring, scrollPosition };
+  const isHomeDrawerEnabled = height(16130).useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -123,25 +123,25 @@ export default noop.memo(function MessagesHeader(height) {
       }
     }
   }, []);
-  let obj3 = height(16117);
+  let obj3 = height(16130);
   const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-  const tmp12 = scrollPosition(5706)("bespoke");
-  obj4.icon = closure_6(height(11083).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
-  const intl = height(1114).intl;
-  obj4.accessibilityLabel = intl.string(height(1114).t.jD1qzM);
+  const tmp12 = scrollPosition(5710)("bespoke");
+  obj4.icon = closure_6(height(11087).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
+  const intl = height(1115).intl;
+  obj4.accessibilityLabel = intl.string(height(1115).t.jD1qzM);
   obj4.onPress = callback3;
   const obj6 = { style: memo, children: null };
   const obj7 = { style: tmp.headerPanelTitle, children: null };
   const obj5 = { size: "sm", color: scrollPosition(576).colors.WHITE };
-  const intl2 = height(1114).intl;
+  const intl2 = height(1115).intl;
   const string = intl2.string;
-  const t = height(1114).t;
+  const t = height(1115).t;
   if (isHomeDrawerEnabled) {
     let stringResult = string(t.YUU0RF);
   } else {
     stringResult = string(t.OIgYlQ);
   }
-  obj7.children = closure_6(height(4632).Text, {
+  obj7.children = closure_6(height(4635).Text, {
     color: "mobile-text-heading-primary",
     variant: "heading-lg/semibold",
     maxFontSizeMultiplier: 1.75,
@@ -154,14 +154,14 @@ export default noop.memo(function MessagesHeader(height) {
     onPress: callback2,
     variant: "secondary",
     size: "sm",
-    icon: scrollPosition(7155),
+    icon: scrollPosition(7159),
     accessibilityLabel: null,
   };
-  const intl3 = tmp3(1114).intl;
-  obj9.accessibilityLabel = intl3.string(height(1114).t["5h0QOP"]);
+  const intl3 = tmp3(1115).intl;
+  obj9.accessibilityLabel = intl3.string(height(1115).t["5h0QOP"]);
   const items2 = [
-    closure_6(height(8202).IconButton, obj9),
-    closure_6(scrollPosition(16125), { noMargin: true, onPress: callback, alternateVariant: true }),
+    closure_6(height(8205).IconButton, obj9),
+    closure_6(scrollPosition(16138), { noMargin: true, onPress: callback, alternateVariant: true }),
     ,
   ];
   const obj10 = {
@@ -169,21 +169,21 @@ export default noop.memo(function MessagesHeader(height) {
     grow: true,
     shrink: true,
     size: "sm",
-    icon: scrollPosition(4574),
+    icon: scrollPosition(4577),
     onPress: callback1,
     maxFontSizeMultiplier: 1,
     text: null,
   };
-  const intl4 = tmp3(1114).intl;
-  obj10.text = intl4.string(height(1114).t.zIJnA6);
-  items2[2] = closure_6(height(5056).Button, obj10);
-  items2[3] = closure_6(height(8202).IconButton, obj4);
+  const intl4 = tmp3(1115).intl;
+  obj10.text = intl4.string(height(1115).t.zIJnA6);
+  items2[2] = closure_6(height(5059).Button, obj10);
+  items2[3] = closure_6(height(8205).IconButton, obj4);
   obj8.children = items2;
   items1[1] = closure_7(closure_4, obj8);
   const obj11 = { style: null };
   const items3 = [tmp.headerBorder, animatedStyle];
   obj11.style = items3;
-  items1[2] = closure_6(scrollPosition(4373).View, obj11);
+  items1[2] = closure_6(scrollPosition(4376).View, obj11);
   items1[3] = tmp12;
   obj6.children = items1;
   return closure_7(closure_4, obj6);

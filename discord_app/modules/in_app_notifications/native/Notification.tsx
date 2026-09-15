@@ -8,7 +8,7 @@ import InAppNotificationUtils from "InAppNotificationUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const InAppNotificationConstants = fn(10224);
+const InAppNotificationConstants = fn(10226);
 ({
   MIN_SWIPE_VELOCITY: closure_4,
   STARTED_SWIPE_THRESHOLD: hasOwnProperty,
@@ -17,7 +17,7 @@ const InAppNotificationConstants = fn(10224);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { shadow: null, container: null };
 let obj3 = {};
 let merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2428 from "../GuildPowerups.messages.js";
+import _modDef2429 from "../GuildPowerups.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PowerupActiveStatusType = fn(4526).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4529).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 
@@ -41,12 +41,12 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
         }
         const obj4 = { type: "active", statusText: null };
         const obj5 = { perkName: title };
-        obj4.statusText = intl2.formatToPlainString(_modDef2428.WRRYUT, obj5);
+        obj4.statusText = intl2.formatToPlainString(_modDef2429.WRRYUT, obj5);
         tmp5 = obj4;
       } else if (tmp.type !== tmp4.INACTIVE) {
         const obj = { type: "active", statusText: null };
         const intl = util.intl;
-        obj.statusText = intl.string(_modDef2428.FFLkmx);
+        obj.statusText = intl.string(_modDef2429.FFLkmx);
         tmp5 = obj;
       }
     }

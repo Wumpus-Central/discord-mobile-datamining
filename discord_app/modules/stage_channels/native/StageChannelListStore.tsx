@@ -1,20 +1,20 @@
 // discord_app/modules/stage_channels/native/StageChannelListStore.tsx
-import _mod4259 from "../../../../_runtime/metro/04259__.js";
+import _mod4262 from "../../../../_runtime/metro/04262__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const identity = fn(1242);
+const identity = fn(1243);
 let closure_4 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   return {
     showActiveSpeakerPill: false,
     setShowActiveSpeakerPill(showActiveSpeakerPill) {
-      return showActiveSpeakerPill(1247).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
+      return showActiveSpeakerPill(1248).batchUpdates(() => showActiveSpeakerPill({ showActiveSpeakerPill }));
     },
     listRef: null,
     setListRef(listRef) {
-      return listRef(1247).batchUpdates(() => listRef({ listRef }));
+      return listRef(1248).batchUpdates(() => listRef({ listRef }));
     },
   };
 });
@@ -27,7 +27,7 @@ export const useActiveSpeakerPillScrollHandler = function useActiveSpeakerPillSc
       const items = [,];
       ({ listRef: arr[0], setListRef: arr[1] } = arg0);
       return items;
-    }, _mod4259.shallow),
+    }, _mod4262.shallow),
     2,
   );
   const first = tmp[0];
@@ -51,5 +51,5 @@ export const useActiveSpeakerPillState = function useActiveSpeakerPillState() {
     const items = [,];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, _mod4259.shallow);
+  }, _mod4262.shallow);
 };

@@ -1607,6 +1607,9 @@ const frozen2 = Object.freeze({
   BUG_REPORTS: "/private/bug-reports",
   CLIP_FEEDBACK: "/private/clip-feedback",
   CLIPS_MODULE_ASSETS: "/clips/module-assets",
+  CLIPS_AUTOCLIPS_GAME_CAPABILITIES(arg0) {
+    return "/clips/autoclips/game-capabilities/" + arg0;
+  },
   PAYMENT_PAYOUT_GROUPS(arg0) {
     return "/applications/" + arg0 + "/payment-payout-groups";
   },
@@ -3628,6 +3631,9 @@ const obj2 = {
   BUG_REPORTS: "/private/bug-reports",
   CLIP_FEEDBACK: "/private/clip-feedback",
   CLIPS_MODULE_ASSETS: "/clips/module-assets",
+  CLIPS_AUTOCLIPS_GAME_CAPABILITIES(arg0) {
+    return "/clips/autoclips/game-capabilities/" + arg0;
+  },
   PAYMENT_PAYOUT_GROUPS(arg0) {
     return "/applications/" + arg0 + "/payment-payout-groups";
   },
@@ -4463,6 +4469,7 @@ const obj6 = {
   DESIGN_SYSTEM_FORM_PRIMITIVES: "Design Systems (Form Primitives)",
   DESIGN_SYSTEM_LEGACY_BUTTON: "Design System (Legacy Button)",
   DESIGN_SYSTEM_HAPTICS: "Design Systems (Haptics)",
+  DESIGN_SYSTEM_AI_LOADER: "Design Systems (AI Loader)",
   SETTINGS_ADVANCED: "Advanced",
   SETTINGS_REVENUE_STORYBOOK: "Revenue Storybook",
   SETTINGS_SESSIONS: "Sessions",
@@ -4843,6 +4850,7 @@ const obj7 = {
   DESIGN_SYSTEM_FORM_PRIMITIVES: obj10.DESIGN_SYSTEM_FORM_PRIMITIVES,
   DESIGN_SYSTEM_LEGACY_BUTTON: obj10.DESIGN_SYSTEM_LEGACY_BUTTON,
   DESIGN_SYSTEM_HAPTICS: obj10.DESIGN_SYSTEM_HAPTICS,
+  DESIGN_SYSTEM_AI_LOADER: obj10.DESIGN_SYSTEM_AI_LOADER,
   SETTINGS_ADVANCED: obj10.ADVANCED,
   SETTINGS_CUSTOMIZE_PROFILE: obj10.PROFILE_CUSTOMIZATION,
   SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT: obj10.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
@@ -7028,6 +7036,7 @@ export const InstantInviteSources = {
   ADD_FRIENDS_MODAL: "Add Friends Modal",
   ADD_FRIENDS_WIDGET: "Add Friends Widget",
   ADD_FRIENDS_MODAL_SEARCH: "Add Friends Modal Search",
+  ADD_FRIENDS_POPOUT: "Add Friends Popout",
   PROFILE_CTA: "Profile CTA",
   CHAT_SIDEBAR: "Chat Sidebar",
   VOICE_CHANNEL: "Voice Channel",

@@ -46,11 +46,11 @@ function getStatusSize(arg0) {
 }
 const View = fn(17).View;
 const StatusTypes = fn(1074).StatusTypes;
-const StatusConstants = fn(1177);
+const StatusConstants = fn(1178);
 ({ STATUS_PADDING: metroRequire, StatusSizes: closure_7 } = StatusConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_10 = createStyles.createStyles((NORMAL) => {
   const obj = {
     status: { position: "absolute", right: -3, bottom: -3 },
@@ -366,5 +366,5 @@ export default noop.memo((isMobileOnline) => {
     }
   }
 });
-export const AvatarSizes = fn(13159).AvatarSizes;
+export const AvatarSizes = fn(13164).AvatarSizes;
 export { getStatusSize };

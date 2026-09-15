@@ -8,10 +8,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5495).EXPLICIT_END_STAGE_SHEET_KEY;
+let closure_4 = fn(5499).EXPLICIT_END_STAGE_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" },
   title: {
@@ -34,33 +34,33 @@ export default function EndStageActionSheet(channel) {
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.title, accessibilityRole: "header", children: null };
-  const intl = channel(1114).intl;
-  obj3.children = intl.string(channel(1114).t.pADdJu);
-  const items = [closure_5(channel(1176).LegacyText, obj3), , ,];
+  const intl = channel(1115).intl;
+  obj3.children = intl.string(channel(1115).t.pADdJu);
+  const items = [closure_5(channel(1177).LegacyText, obj3), , ,];
   const obj4 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
-  const intl2 = channel(1114).intl;
-  obj4.children = intl2.string(channel(1114).t.mT7jwN);
-  items[1] = closure_5(channel(4632).Text, obj4);
+  const intl2 = channel(1115).intl;
+  obj4.children = intl2.string(channel(1115).t.mT7jwN);
+  items[1] = closure_5(channel(4635).Text, obj4);
   const obj5 = { style: tmp.cancelButton, children: null };
   const obj6 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = channel(1114).intl;
-  obj6.text = intl3.string(channel(1114).t.xTwqz2);
+  const intl3 = channel(1115).intl;
+  obj6.text = intl3.string(channel(1115).t.xTwqz2);
   obj6.onPress = function handleClose() {
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj5.children = closure_5(channel(5056).Button, obj6);
+  obj5.children = closure_5(channel(5059).Button, obj6);
   items[2] = closure_5(View, obj5);
   const obj7 = { style: tmp.confirmButton, children: null };
   const obj8 = { variant: "destructive", text: null, onPress: null };
-  const intl4 = channel(1114).intl;
-  obj8.text = intl4.string(channel(1114).t.wnWqGg);
+  const intl4 = channel(1115).intl;
+  obj8.text = intl4.string(channel(1115).t.wnWqGg);
   obj8.onPress = function onPress() {
     StageChannelActionCreators.endStage(channel);
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj7.children = closure_5(channel(5056).Button, obj8);
+  obj7.children = closure_5(channel(5059).Button, obj8);
   items[3] = closure_5(View, obj7);
   obj2.children = items;
   obj.children = closure_6(View, obj2);

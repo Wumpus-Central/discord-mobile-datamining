@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import _modDef12899 from "../../../../_runtime/metro/12899__.js";
+import _modDef12904 from "../../../../_runtime/metro/12904__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { padding: 8, margin: 8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   textContainer: { flexDirection: "row" },
@@ -28,30 +28,30 @@ export default function SubscriptionAccountHoldNotice(subscription) {
   if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
     const obj = { style: tmp.container, children: null };
     const obj2 = { style: tmp.textContainer, children: null };
-    const obj3 = { size: subscription(1176).IconSizes.MEDIUM, style: tmp.icon, source: _modDef12899 };
-    const items = [closure_6(subscription(1176).Icon, obj3)];
+    const obj3 = { size: subscription(1177).IconSizes.MEDIUM, style: tmp.icon, source: _modDef12904 };
+    const items = [closure_6(subscription(1177).Icon, obj3)];
     const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
-    const intl = subscription(1114).intl;
+    const intl = subscription(1115).intl;
     const obj5 = {
       endDate: subscription.currentPeriodEnd,
-      planDescription: subscription(4294).getDisplayName(subscription.planId),
+      planDescription: subscription(4297).getDisplayName(subscription.planId),
     };
-    obj4.children = intl.format(subscription(1114).t["7I21Iz"], obj5);
-    items[1] = closure_6(subscription(4632).Text, obj4);
+    obj4.children = intl.format(subscription(1115).t["7I21Iz"], obj5);
+    items[1] = closure_6(subscription(4635).Text, obj4);
     obj2.children = items;
     const items1 = [closure_7(closure_4, obj2)];
     const obj7 = { size: "sm", text: null, onPress: null };
-    const intl2 = subscription(1114).intl;
-    obj7.text = intl2.string(subscription(1114).t.VJmUNy);
+    const intl2 = subscription(1115).intl;
+    obj7.text = intl2.string(subscription(1115).t.VJmUNy);
     obj7.onPress = function onPress() {
       return React3.openURL(
         PremiumUtils.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"),
       );
     };
-    items1[1] = closure_6(subscription(5056).Button, obj7);
+    items1[1] = closure_6(subscription(5059).Button, obj7);
     obj.children = items1;
     tmp2 = closure_7(closure_4, obj);
-    const obj6 = subscription(4294);
+    const obj6 = subscription(4297);
   }
   return tmp2;
 }

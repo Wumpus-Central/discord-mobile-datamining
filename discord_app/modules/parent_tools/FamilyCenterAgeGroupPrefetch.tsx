@@ -5,12 +5,8 @@ import FamilyCenterStore from "FamilyCenterStore.tsx";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx");
 
-export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled) {
-  let tmp = isFamilyCenterV3Enabled;
-  if (isFamilyCenterV3Enabled) {
-    tmp = null == FamilyCenterStore.getAgeGroup();
-  }
-  if (tmp) {
+export const prefetchFamilyCenterAgeGroup = function prefetchFamilyCenterAgeGroup() {
+  if (null == FamilyCenterStore.getAgeGroup()) {
     if (!FamilyCenterStore.isLoading()) {
       if (FamilyCenterStore.canRefetch()) {
         FamilyCenterActionCreatorsDefault.initialPageLoad();

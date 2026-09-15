@@ -10,10 +10,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const TwoFAModalSetupSections = fn(14872).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(14882).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   floatingButton: { position: "absolute", bottom: 12, left: 12, right: 12 },
@@ -35,24 +35,24 @@ export default function TwoFASetupModal(initialRouteName) {
   let obj = {
     initialRouteName: LANDING,
     screens: useInitialValueDefault(() => {
-      totpSecret = totpSecret(7052).generateTotpSecret();
+      totpSecret = totpSecret(7056).generateTotpSecret();
       const obj2 = {};
       const obj3 = { headerLeft: null, headerTitle: null, render: null };
-      const obj = totpSecret(7052);
-      obj3.headerLeft = totpSecret(5705).getHeaderCloseButton(closure_1(14870).close);
+      const obj = totpSecret(7056);
+      obj3.headerLeft = totpSecret(5709).getHeaderCloseButton(closure_1(14880).close);
       obj3.headerTitle = function headerTitle() {
-        return closure_1_6(totpSecret(14873).PageMarker, {
+        return closure_1_6(totpSecret(14883).PageMarker, {
           currentPage: dependencyMap2[constants.LANDING],
           numMarkers: Object.keys(dependencyMap2).length - 1,
         });
       };
       obj3.render = function render() {
-        return closure_1_6(closure_1_1(14874), {});
+        return closure_1_6(closure_1_1(14884), {});
       };
       obj2[constants.LANDING] = obj3;
       obj2[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(14873).PageMarker, {
+          return closure_1_6(totpSecret(14883).PageMarker, {
             currentPage: dependencyMap2[constants.SCAN],
             numMarkers: Object.keys(dependencyMap2).length - 1,
           });
@@ -63,7 +63,7 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       obj2[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(14873).PageMarker, {
+          return closure_1_6(totpSecret(14883).PageMarker, {
             currentPage: dependencyMap2[constants.ENTER_CODE],
             numMarkers: Object.keys(dependencyMap2).length - 1,
           });
@@ -73,13 +73,13 @@ export default function TwoFASetupModal(initialRouteName) {
         },
       };
       const obj5 = { headerLeft: null, headerTitle: null, render: null };
-      const obj4 = totpSecret(5705);
-      obj5.headerLeft = totpSecret(5705).getHeaderCloseButton(closure_1(14870).close);
+      const obj4 = totpSecret(5709);
+      obj5.headerLeft = totpSecret(5709).getHeaderCloseButton(closure_1(14880).close);
       obj5.headerTitle = function headerTitle() {
         return null;
       };
       obj5.render = function render() {
-        return closure_1_6(closure_1_1(14880), {});
+        return closure_1_6(closure_1_1(14890), {});
       };
       obj2[constants.SUCCESS] = obj5;
       return obj2;
@@ -95,7 +95,7 @@ export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
   let navigation;
   const tmp = closure_8();
   let i4jeWR = dependencyMap;
-  navigation = navigation(1483).useNavigation();
+  navigation = navigation(1484).useNavigation();
   const name = navigation.getState().routes[navigation.getState(navigation).routes.length - 1].name;
   const items = [navigation, name];
   const obj2 = { style: tmp.container, children: null };
@@ -108,17 +108,17 @@ export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
     const obj3 = { bottom: true, style: tmp.floatingButton, children: null };
     let obj4 = { onPress: tmp5, text: null };
     if (name === TwoFAModalSetupSections.SUCCESS) {
-      const intl2 = tmp2(1114).intl;
-      i4jeWR = tmp2(1114).t.i4jeWR;
+      const intl2 = tmp2(1115).intl;
+      i4jeWR = tmp2(1115).t.i4jeWR;
       let stringResult = intl2.string(i4jeWR);
     } else {
-      const intl = tmp2(1114).intl;
-      stringResult = intl.string(tmp2(1114).t.XiOHRX);
+      const intl = tmp2(1115).intl;
+      stringResult = intl.string(tmp2(1115).t.XiOHRX);
     }
     obj4.text = stringResult;
-    obj4 = closure_6(tmp2(5056).Button, obj4);
+    obj4 = closure_6(tmp2(5059).Button, obj4);
     obj3.children = obj4;
-    closure_6(tmp2(7226).SafeAreaPaddingView, obj3);
+    closure_6(tmp2(7230).SafeAreaPaddingView, obj3);
   }
-  let obj = navigation(1483);
+  let obj = navigation(1484);
 };

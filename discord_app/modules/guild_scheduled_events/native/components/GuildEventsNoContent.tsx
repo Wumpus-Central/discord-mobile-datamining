@@ -12,7 +12,7 @@ const Constants = fn(1085);
 ({ Permissions: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     display: "flex",
@@ -50,9 +50,9 @@ export default function GuildEventsNoContent(guild) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { icon: null, IconComponent: null };
   const obj = guild(504);
-  obj3.icon = onClose(9913);
-  obj3.IconComponent = guild(9915).CalendarIcon;
-  const items2 = [closure_7(onClose(8525), obj3), , ,];
+  obj3.icon = onClose(9915);
+  obj3.IconComponent = guild(9917).CalendarIcon;
+  const items2 = [closure_7(onClose(8528), obj3), , ,];
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
@@ -60,24 +60,24 @@ export default function GuildEventsNoContent(guild) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl = guild(1114).intl;
-  obj4.children = intl.string(guild(1114).t["WgZ+3D"]);
-  items2[1] = closure_7(guild(4632).Text, obj4);
+  const intl = guild(1115).intl;
+  obj4.children = intl.string(guild(1115).t["WgZ+3D"]);
+  items2[1] = closure_7(guild(4635).Text, obj4);
   const obj5 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = guild(1114).intl;
-  obj5.children = intl2.string(guild(1114).t["v/S/PG"]);
-  items2[2] = closure_7(guild(4632).Text, obj5);
+  const intl2 = guild(1115).intl;
+  obj5.children = intl2.string(guild(1115).t["v/S/PG"]);
+  items2[2] = closure_7(guild(4635).Text, obj5);
   if (stateFromStores) {
     const obj6 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
-    const intl3 = tmp2(1114).intl;
+    const intl3 = tmp2(1115).intl;
     const obj7 = {
       onClick() {
         onClose();
         GuildSettingsActionCreatorsDefault.open(guild.id, GuildSettingsSections.ROLES);
       },
     };
-    obj6.children = intl3.format(tmp2(1114).t["K+DH2o"], obj7);
-    stateFromStores = closure_7(tmp2(4632).Text, obj6);
+    obj6.children = intl3.format(tmp2(1115).t["K+DH2o"], obj7);
+    stateFromStores = closure_7(tmp2(4635).Text, obj6);
   }
   items2[3] = stateFromStores;
   obj2.children = items2;

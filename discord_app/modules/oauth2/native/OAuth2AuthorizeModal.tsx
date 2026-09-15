@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: { flex: 1 },
@@ -44,7 +44,7 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(9364)(arg0);
+  const tmp4 = sharedValue(9367)(arg0);
   _require = tmp4;
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
   let obj = require("ReanimatedRexport");
@@ -64,7 +64,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const obj4 = { style: null, children: null };
   const items1 = [tmp.titleContainer];
   const obj2 = require("ReanimatedRexport");
-  items1[1] = { paddingTop: sharedValue(1611)().top + 16 };
+  items1[1] = { paddingTop: sharedValue(1612)().top + 16 };
   obj4.style = items1;
   const callback = noop.useCallback((nativeEvent) => {
     let num = 0;
@@ -74,11 +74,11 @@ export default function OAuth2AuthorizeModal(arg0) {
     const result = sharedValue.set(spring.withSpring(num, closure_7));
   }, items);
   if (null != tmp4.backStep) {
-    const intl2 = tmp5(1114).intl;
-    let stringResult = intl2.string(tmp5(1114).t["13/7kX"]);
+    const intl2 = tmp5(1115).intl;
+    let stringResult = intl2.string(tmp5(1115).t["13/7kX"]);
   } else {
-    const intl = tmp5(1114).intl;
-    stringResult = intl.string(tmp5(1114).t.cpT0Cq);
+    const intl = tmp5(1115).intl;
+    stringResult = intl.string(tmp5(1115).t.cpT0Cq);
   }
   const obj6 = {
     accessibilityRole: "button",
@@ -95,32 +95,32 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj7 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp11Result = closure_5(tmp5(9709).ArrowSmallLeftIcon, obj7);
+    let tmp11Result = closure_5(tmp5(9711).ArrowSmallLeftIcon, obj7);
   } else {
     const obj8 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp11Result = closure_5(tmp5(5761).XSmallIcon, obj8);
+    tmp11Result = closure_5(tmp5(5765).XSmallIcon, obj8);
   }
   obj6.children = tmp11Result;
   const items2 = [closure_5(require("Pressables").PressableOpacity, obj6), ,];
   const obj9 = { style: tmp.title, children: null };
   const obj10 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
-  const intl3 = tmp5(1114).intl;
+  const intl3 = tmp5(1115).intl;
   obj10.children = intl3.string(require("util").t["y+/PE9"]);
   obj9.children = closure_5(require("Text/Text").Text, obj10);
   items2[1] = closure_5(View, obj9);
   const obj11 = { style: null };
   const items3 = [tmp.titleContainerBorder, animatedStyle];
   obj11.style = items3;
-  items2[2] = closure_5(sharedValue(4373).View, obj11);
+  items2[2] = closure_5(sharedValue(4376).View, obj11);
   obj4.children = items2;
   const items4 = [closure_6(View, obj4)];
   const obj12 = { bottom: true, style: tmp.contentContainer, children: null };
   const obj13 = {};
-  const obj5 = { paddingTop: sharedValue(1611)().top + 16 };
+  const obj5 = { paddingTop: sharedValue(1612)().top + 16 };
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(9711), obj13);
+  obj12.children = closure_5(sharedValue(9713), obj13);
   items4[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items4;
   return closure_6(View, obj3);

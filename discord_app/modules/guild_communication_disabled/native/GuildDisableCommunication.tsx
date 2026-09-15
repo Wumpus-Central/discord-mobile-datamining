@@ -17,7 +17,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(2023);
+const GuildDisableCommunicationConstants = fn(2024);
 ({
   DisableCommunicationDuration,
   GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8,
@@ -70,7 +70,7 @@ let items = [
     },
   },
 ];
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   reasonTextArea: null,
@@ -122,7 +122,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(11973);
+            const obj4 = tmp4(11977);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = {
@@ -144,17 +144,17 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          const intl = user(1114).intl;
-          const obj8 = tmp4(4335);
-          const name = tmp4(4788).getName(closure_129_1, null, closure_129_0);
+          const intl = user(1115).intl;
+          const obj8 = tmp4(4338);
+          const name = tmp4(4791).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
           }
           const obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
           const obj7 = { user };
-          obj.content = intl.formatToPlainString(user(1114).t.O9C3Nt, obj7);
-          obj.icon = tmp4(9696);
+          obj.content = intl.formatToPlainString(user(1115).t.O9C3Nt, obj7);
+          obj.icon = tmp4(9698);
           obj8.open(obj);
           closure_129_2();
           c3 = 3;

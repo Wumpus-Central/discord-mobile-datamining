@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -31,7 +31,7 @@ export default noop.memo(function MediaModalOverlayAltTextButton(description) {
   if (str == null) {
     str = "";
   }
-  const ViewImageDescriptions = str(1935).ViewImageDescriptions;
+  const ViewImageDescriptions = str(1936).ViewImageDescriptions;
   let tmp4 = null;
   if (ViewImageDescriptions.useSetting()) {
     tmp4 = null;
@@ -48,10 +48,10 @@ export default noop.memo(function MediaModalOverlayAltTextButton(description) {
         children: null,
       };
       const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-      const intl = tmp3(1114).intl;
-      obj2.children = intl.string(tmp3(1114).t.Q5VqrN);
-      obj.children = jsx(tmp3(4632).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5204).PressableOpacity, {
+      const intl = tmp3(1115).intl;
+      obj2.children = intl.string(tmp3(1115).t.Q5VqrN);
+      obj.children = jsx(tmp3(4635).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
+      tmp4 = jsx(tmp3(5207).PressableOpacity, {
         style: tmp2.container,
         onPress() {
           if (str == null) {

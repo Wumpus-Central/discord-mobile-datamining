@@ -9,10 +9,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { cardShadow: null, flaggedContent: null, sectionContainer: null };
-const native = fn(1176);
-obj2.cardShadow = native.generateBoxShadowStyle(fn(1176).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1177);
+obj2.cardShadow = native.generateBoxShadowStyle(fn(1177).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.flaggedContent = {
   borderWidth: 1,
   borderRadius: nativeDefault.radii.sm,

@@ -3,7 +3,7 @@ import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
-import privDefault from "../../../_runtime/01437_priv.js";
+import privDefault from "../../../_runtime/01438_priv.js";
 import AnalyticsLocationDefault from "../app_analytics/AnalyticsLocation.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../_runtime/metro/00002__.js";

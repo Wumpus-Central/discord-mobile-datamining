@@ -5,7 +5,7 @@ import DisplayNameStylesSeenStore from "../DisplayNameStylesSeenStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const DisplayNameStylesConstants = fn(1389);
+const DisplayNameStylesConstants = fn(1390);
 ({ FLYWHEEL_EFFECTS: closure_4, FLYWHEEL_FONTS: hasOwnProperty } = DisplayNameStylesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesNewItems.tsx");

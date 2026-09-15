@@ -73,6 +73,13 @@ let closure_8 = async function _getOrders(arg0) {
           if (null != isGift) {
             obj5.is_gift = _require.isGift;
           }
+          let recipientUserId;
+          if (_require != null) {
+            recipientUserId = _require.recipientUserId;
+          }
+          if (null != recipientUserId) {
+            obj5.recipient_id = _require.recipientUserId;
+          }
           let paymentGateway;
           if (_require != null) {
             paymentGateway = _require.paymentGateway;
@@ -115,11 +122,11 @@ let closure_8 = async function _getOrders(arg0) {
         const obj = { value: body, done: true };
         return obj;
       }
-    } catch (tmp31) {
-      closure_3 = tmp31;
+    } catch (tmp32) {
+      closure_3 = tmp32;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp31;
+        throw tmp32;
       } else {
         c5 = tmp;
       }
@@ -402,6 +409,7 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
             status: closure_130_4.DRAFT,
             skuId: closure_129_0,
             createdAfter: closure_129_6,
+            recipientUserId: closure_129_2,
           };
           c3 = 2;
           c4 = 1;
@@ -461,9 +469,9 @@ let closure_12 = async function _getOrCreateOrder(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp20) {
+    } catch (tmp21) {
       c4 = tmp;
-      throw tmp20;
+      throw tmp21;
     }
   }
 };
@@ -1385,7 +1393,7 @@ let closure_22 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(4618).OrderStatus;
+const OrderStatus = fn(4621).OrderStatus;
 const Endpoints = fn(1074).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

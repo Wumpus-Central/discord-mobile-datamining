@@ -3,7 +3,6 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AgeGateUtils from "../../AgeGateUtils.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import native from "../../../../design/assets/native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
@@ -13,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_16,
@@ -36,7 +35,6 @@ export default function AgeGateVerify(source) {
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
   const obj2 = { top: true, style: tmp.container, children: null };
   const items = [
-    React4(native.ShieldSpotIllustration, {}),
     React4(Text_Text.Text, {
       style: tmp.header,
       variant: "heading-xl/extrabold",
@@ -66,7 +64,7 @@ export default function AgeGateVerify(source) {
     obj5.children = React4(components_Button_Button.Button, obj6);
     tmp6Result = React4(View, obj5);
   }
-  items[3] = tmp6Result;
+  items[2] = tmp6Result;
   obj2.children = items;
   return hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj2);
 }

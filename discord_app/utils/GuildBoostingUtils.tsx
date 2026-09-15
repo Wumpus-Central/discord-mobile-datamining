@@ -3,8 +3,8 @@ import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
-import _modDef3074 from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import _modDef4228 from "../../_runtime/metro/04228__.js";
+import _modDef3075 from "../modules/premium/premium_group/PremiumGroup.messages.js";
+import _modDef4231 from "../../_runtime/metro/04231__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
 import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
@@ -38,9 +38,9 @@ const BoostedGuildTiers = Constants.BoostedGuildTiers;
   MAX_STAGE_VIDEO_USER_LIMIT_TIER3: closure_14,
   SubscriptionStatusTypes: closure_15,
 } = Constants);
-const EmojiConstants = fn(1374);
+const EmojiConstants = fn(1375);
 ({ DEFAULT_EMOJI_SLOTS: closure_16, EMOJI_MAX_SLOTS_MORE: closure_17 } = EmojiConstants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({
   BoostedGuildFeatures: closure_18,
   DEFAULT_SOUND_SLOTS: closure_19,
@@ -50,7 +50,7 @@ const PremiumConstants = fn(1373);
   TotalSoundboardSoundCountsByTier: closure_23,
   TotalStickerCountsByTier: closure_24,
 } = PremiumConstants);
-let closure_25 = fn(4308).getPremiumGroupProductName;
+let closure_25 = fn(4311).getPremiumGroupProductName;
 let obj = {
   LEVEL_1: 1,
   [1]: "LEVEL_1",
@@ -569,7 +569,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = _modDef4228().diff(_modDef4228(arg0), "months");
+  let num = _modDef4231().diff(_modDef4231(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -577,7 +577,7 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef4228();
+  const obj = _modDef4231();
   const keys = Object.keys(closure_26);
   for (const item10021 of keys) {
     if (diffResult >= closure_26[item10021]) {
@@ -637,7 +637,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
     const obj = { premiumGroupProductName: closure_25() };
-    return intl7.formatToPlainString(_modDef3074["5xN/C1"], obj);
+    return intl7.formatToPlainString(_modDef3075["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(GuildBoostSlotStore.boostSlots);
@@ -927,7 +927,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj4;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4561).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(4564).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

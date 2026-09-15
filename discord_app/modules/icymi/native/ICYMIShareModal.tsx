@@ -14,7 +14,7 @@ import ClientThemesOverrides from "../../client_themes/native/ClientThemesOverri
 import ShareEventUtils from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
 import useShareChatInputActions from "../../share/native/useShareChatInputActions.tsx";
 import ShareChatInputDefault from "../../share/native/ShareChatInput.tsx";
-import _modDef16601 from "../../../../_runtime/metro/16601__.js";
+import _modDef16614 from "../../../../_runtime/metro/16614__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -55,7 +55,7 @@ function Screenshot(setUri) {
   const obj5 = { style: tmp.base, children: null };
   const obj6 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj7 = { dark: null, light: null };
-  const tmp6 = _modDef16601;
+  const tmp6 = _modDef16614;
   obj7.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
   obj7.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
   obj6.mixAmount = obj7;
@@ -404,13 +404,13 @@ class ICYMIShareModal {
   }
 }
 const View = fn(17).View;
-const DraftType = fn(4977).DraftType;
+const DraftType = fn(4980).DraftType;
 const AbortCodes = fn(1074).AbortCodes;
-const UserRowModes = fn(10989).UserRowModes;
-const MessageSendLocation = fn(4629).MessageSendLocation;
+const UserRowModes = fn(10993).UserRowModes;
+const MessageSendLocation = fn(4632).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
   headerRightContainer: null,
@@ -512,7 +512,7 @@ export const GameShareModal = function GameShareModal(content) {
             };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(16600).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(16613).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {
@@ -523,9 +523,9 @@ export const GameShareModal = function GameShareModal(content) {
             tmp12 = closure_129_1.body.code === constants.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
           }
           closure_129_0 = tmp12;
-          const intl = entry(1114).intl;
+          const intl = entry(1115).intl;
           const string = intl.string;
-          let t = entry(1114).t;
+          let t = entry(1115).t;
           if (closure_129_0) {
             let stringResult = string(t.BC5vfD);
           } else {

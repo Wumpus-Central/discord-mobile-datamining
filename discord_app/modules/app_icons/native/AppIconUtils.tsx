@@ -130,7 +130,7 @@ let closure_16 = async function _setAppIcon(arg0) {
   }
   return value;
 };
-const AppIconConstants = fn(9453);
+const AppIconConstants = fn(9455);
 ({
   getDefaultIcon: metroRequire,
   getOfficialAlternateIcons: closure_7,
@@ -138,11 +138,11 @@ const AppIconConstants = fn(9453);
 } = AppIconConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 let closure_12 = new LoggerDefault("AppIconUtils");
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 if (PlatformUtils.isAndroid()) {
-  let DCDIconManager = fn(13538).default;
+  let DCDIconManager = fn(13543).default;
 } else {
   DCDIconManager = fn(17).NativeModules.DCDIconManager;
 }

@@ -3,10 +3,10 @@ import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchAp
 import ApplicationIconAndNameDefault from "ApplicationIconAndName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const UserProfileCardDefault = tmp2(7310);
+const UserProfileCardDefault = tmp2(7314);
 const require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_4 = createStyles.createStyles({ card: { flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
@@ -23,16 +23,16 @@ export default function UserProfileGameFriendsCard(arg0) {
   } else {
     importDefault = "text-md/normal";
     if (1 === found.length) {
-      const intl2 = found(1114).intl;
+      const intl2 = found(1115).intl;
       const obj2 = {
         applicationName() {
           return jsx(ApplicationIconAndNameDefault, { application: found[0], textVariant, iconSize: 16 }, found[0].id);
         },
       };
-      let formatResult = intl2.format(found(1114).t.wQ6urw, obj2);
+      let formatResult = intl2.format(found(1115).t.wQ6urw, obj2);
       let tmp6 = found;
     } else if (2 === found.length) {
-      const intl = found(1114).intl;
+      const intl = found(1115).intl;
       const obj = {
         applicationName() {
           return jsx(ApplicationIconAndNameDefault, { application: found[0], textVariant, iconSize: 16 }, found[0].id);
@@ -41,12 +41,12 @@ export default function UserProfileGameFriendsCard(arg0) {
           return jsx(ApplicationIconAndNameDefault, { application: found[1], textVariant, iconSize: 16 }, found[1].id);
         },
       };
-      formatResult = intl.format(found(1114).t.C98CSN, obj);
+      formatResult = intl.format(found(1115).t.C98CSN, obj);
       tmp6 = found;
     } else {
       dependencyMap = found[found.length - 1];
       jsx = found.slice(0, -1);
-      const intl4 = found(1114).intl;
+      const intl4 = found(1115).intl;
       const obj3 = {
         applications() {
           return closure_3.map((application) =>
@@ -61,16 +61,16 @@ export default function UserProfileGameFriendsCard(arg0) {
           return jsx(ApplicationIconAndNameDefault, { application, textVariant, iconSize: 16 });
         },
       };
-      formatResult = intl4.format(found(1114).t.UxpwAh, obj3);
+      formatResult = intl4.format(found(1115).t.UxpwAh, obj3);
       tmp6 = found;
     }
     const obj4 = { style: null, title: null, children: null };
     const items = [tmp.card, style];
     obj4.style = items;
-    const intl3 = tmp6(1114).intl;
-    obj4.title = intl3.string(tmp6(1114).t["Uv/eTx"]);
+    const intl3 = tmp6(1115).intl;
+    obj4.title = intl3.string(tmp6(1115).t["Uv/eTx"]);
     const obj5 = { variant: "text-md/normal", color: "text-default", children: formatResult };
-    obj4.children = jsx(tmp6(4632).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
+    obj4.children = jsx(tmp6(4635).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
     return jsx(UserProfileCardDefault, { style: null, title: null, children: null });
   }
   const arr = useGetOrFetchApplicationsDefault(applicationIds);

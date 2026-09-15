@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: closure_4, Appearance: hasOwnProperty } = get_ActivityIndicator);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SystemTheme = fn(1184).SystemTheme;
+const SystemTheme = fn(1185).SystemTheme;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 

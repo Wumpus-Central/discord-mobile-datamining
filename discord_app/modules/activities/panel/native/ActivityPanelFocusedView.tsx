@@ -269,25 +269,25 @@ class BaseActivityPanelFocusedView {
     return tmp13(transitionState(closure_2[19]).ThemeContextProvider, obj13);
   }
 }
-const ActivityLayoutMode = fn(1920).ActivityLayoutMode;
-const ActivityPanelConstants = fn(9635);
+const ActivityLayoutMode = fn(1921).ActivityLayoutMode;
+const ActivityPanelConstants = fn(9637);
 ({
   ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9,
   ActivityPanelModes: c10,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17129);
+const ActivityPanelNativeConstants = fn(17167);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1,
 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1074).ThemeTypes;
-const IS_IOS = fn(12403).IS_IOS;
+const IS_IOS = fn(12407).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   wrapper: {
     position: "absolute",
@@ -409,7 +409,7 @@ export default noop.memo((transitionState) => {
 });
 export const useBaseActivityPanelFocusedView = function useBaseActivityPanelFocusedView(context) {
   let isWindowLandscape;
-  const tmp = isWindowLandscape(1611)();
+  const tmp = isWindowLandscape(1612)();
   closure_0 = tmp;
   const wrapperDimensions = noop.useContext(context.context).wrapperDimensions;
   const isLandscape = wrapperDimensions.isLandscape;

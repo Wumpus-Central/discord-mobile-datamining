@@ -13,7 +13,7 @@ import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
 const require = globalThis.__r;
 
-const GuildVoiceRingingExperimentDefault = tmp4(9304);
+const GuildVoiceRingingExperimentDefault = tmp4(9307);
 const require = fn;
 function useCanRingToGuildVoiceChannel(user) {
   _require = user;

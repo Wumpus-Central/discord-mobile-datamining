@@ -126,4 +126,4 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
 
 export default apexExperimentStore;
-export const ExperimentAssignment = fn(1235).ExperimentAssignment;
+export const ExperimentAssignment = fn(1236).ExperimentAssignment;

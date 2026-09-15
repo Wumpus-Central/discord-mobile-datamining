@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef8870 from "../../../../../_runtime/metro/08870__.js";
 import _modDef8873 from "../../../../../_runtime/metro/08873__.js";
+import _modDef8876 from "../../../../../_runtime/metro/08876__.js";
 import GuildPopoutActionCreators from "../../../guild_profile/GuildPopoutActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPopoutStore from "../../../guild_profile/GuildPopoutStore.tsx";
@@ -16,14 +16,14 @@ require = fn;
 function CommunityPill(guildVisibility) {
   let GlobeEarthIcon;
   const tmp = closure_12();
-  const intl = GlobeEarthIcon(1114).intl;
-  importDefault = intl.string(GlobeEarthIcon(1114).t.TME4LJ);
-  let tmp4Result = _modDef8870;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(8869).GuildVisibility.PUBLIC) {
-    const intl2 = tmp2(1114).intl;
-    importDefault = intl2.string(tmp2(1114).t.op2cJ6);
-    GlobeEarthIcon = tmp2(9015).GlobeEarthIcon;
-    tmp4Result = _modDef8873;
+  const intl = GlobeEarthIcon(1115).intl;
+  importDefault = intl.string(GlobeEarthIcon(1115).t.TME4LJ);
+  let tmp4Result = _modDef8873;
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(8872).GuildVisibility.PUBLIC) {
+    const intl2 = tmp2(1115).intl;
+    importDefault = intl2.string(tmp2(1115).t.op2cJ6);
+    GlobeEarthIcon = tmp2(9018).GlobeEarthIcon;
+    tmp4Result = _modDef8876;
   }
   const obj = {
     style: tmp.communityPill,
@@ -38,21 +38,21 @@ function CommunityPill(guildVisibility) {
     children: null,
   };
   const items = [
-    closure_10(GlobeEarthIcon(1176).Icon, { style: tmp.communityPillIcon, source: tmp4Result, disableColor: true }),
+    closure_10(GlobeEarthIcon(1177).Icon, { style: tmp.communityPillIcon, source: tmp4Result, disableColor: true }),
   ];
   const obj3 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
-  const intl3 = tmp2(1114).intl;
-  obj3.children = intl3.string(GlobeEarthIcon(1114).t.K7iRig);
-  items[1] = closure_10(GlobeEarthIcon(4632).Text, obj3);
+  const intl3 = tmp2(1115).intl;
+  obj3.children = intl3.string(GlobeEarthIcon(1115).t.K7iRig);
+  items[1] = closure_10(GlobeEarthIcon(4635).Text, obj3);
   obj.children = items;
-  return closure_11(GlobeEarthIcon(5204).PressableOpacity, obj);
+  return closure_11(GlobeEarthIcon(5207).PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   content: { padding: 16 },
   avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 },
@@ -93,7 +93,7 @@ obj2.communityPill = {
   borderRadius: nativeDefault.radii.round,
 };
 obj2.communityPillIcon = { width: 16, height: 16, marginRight: 6 };
-const PlatformUtils = fn(1364);
+const PlatformUtils = fn(1365);
 let num;
 if (PlatformUtils.isAndroid()) {
   num = 14;

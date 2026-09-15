@@ -10,11 +10,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7311);
+const Constants = fn(7315);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   statusPreviewContainer: {
     flexDirection: "row",
@@ -58,12 +58,12 @@ export default function UserProfileCustomStatusActionSheet(user) {
   const obj = user(504);
   const tmp6 = useCustomStatusActivityForUserDefault(user.id);
   const name = NicknameUtilsDefault.useName(guildId, channelId, user);
-  const intl = user(1114).intl;
+  const intl = user(1115).intl;
   if (stateFromStores) {
-    let stringResult = intl.string(tmp2(1114).t.AHoLf4);
+    let stringResult = intl.string(tmp2(1115).t.AHoLf4);
   } else {
     const obj3 = { username: name };
-    stringResult = intl.formatToPlainString(tmp2(1114).t["pP5Aa+"], obj3);
+    stringResult = intl.formatToPlainString(tmp2(1115).t["pP5Aa+"], obj3);
   }
   const obj4 = { title: stringResult, children: null };
   const obj5 = { style: tmp.statusPreviewContainer, children: null };

@@ -54,10 +54,10 @@ function showLurkingAlert(guildId) {
   guildId = guildId.guildId;
   ({ title, body } = guildId);
   const obj2 = { title, body, confirmText: null, cancelText: null, onConfirm: null };
-  const intl = guildId(1114).intl;
-  obj2.confirmText = intl.string(guildId(1114).t["9VLmlZ"]);
-  const intl2 = guildId(1114).intl;
-  obj2.cancelText = intl2.string(guildId(1114).t["2m+Sqk"]);
+  const intl = guildId(1115).intl;
+  obj2.confirmText = intl.string(guildId(1115).t["9VLmlZ"]);
+  const intl2 = guildId(1115).intl;
+  obj2.cancelText = intl2.string(guildId(1115).t["2m+Sqk"]);
   obj2.onConfirm = function onConfirm() {
     GuildActionCreatorsDefault.joinGuild(guild_id, { source: constants2.POLL_ALERT });
   };
@@ -68,16 +68,16 @@ function handleShowVotesForAnswer(messageId) {
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     if (LurkingStore.isLurking(channel.guild_id)) {
-      const intl = guild_id(1114).intl;
-      const intl2 = guild_id(1114).intl;
+      const intl = guild_id(1115).intl;
+      const intl2 = guild_id(1115).intl;
       guild_id = channel.guild_id;
-      const stringResult = intl.string(guild_id(1114).t["7LpysO"]);
-      const stringResult1 = intl2.string(guild_id(1114).t["5sHHoy"]);
+      const stringResult = intl.string(guild_id(1115).t["7LpysO"]);
+      const stringResult1 = intl2.string(guild_id(1115).t["5sHHoy"]);
       const obj2 = { title: stringResult, body: stringResult1, confirmText: null, cancelText: null, onConfirm: null };
-      const intl3 = guild_id(1114).intl;
-      obj2.confirmText = intl3.string(guild_id(1114).t["9VLmlZ"]);
-      const intl4 = guild_id(1114).intl;
-      obj2.cancelText = intl4.string(guild_id(1114).t["2m+Sqk"]);
+      const intl3 = guild_id(1115).intl;
+      obj2.confirmText = intl3.string(guild_id(1115).t["9VLmlZ"]);
+      const intl4 = guild_id(1115).intl;
+      obj2.cancelText = intl4.string(guild_id(1115).t["2m+Sqk"]);
       obj2.onConfirm = function onConfirm() {
         GuildActionCreatorsDefault.joinGuild(guild_id, { source: constants2.POLL_ALERT });
       };
@@ -185,7 +185,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           let obj3 = { id, name: id };
           obj2.emoji = obj3;
           obj2.userId = userId;
-          obj2.reactionType = channelId(7865).ReactionTypes.VOTE;
+          obj2.reactionType = channelId(7868).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj2);
           continue;
         }
@@ -747,7 +747,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11850).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(11854).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -783,7 +783,7 @@ let closure_28 = async function _createPoll(arg0) {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-              const obj = guildId(9439);
+              const obj = guildId(9441);
               const result = obj.handleUploadMessageAttachmentsErrors({
                 file,
                 guildId: guildId.getGuildId(),
@@ -883,8 +883,8 @@ let closure_29 = async function _endPollEarly(arg0) {
   ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
   return "PX_16";
 };
-const DraftType = fn(4977).DraftType;
-const PollsInteractionStore = fn(11561);
+const DraftType = fn(4980).DraftType;
+const PollsInteractionStore = fn(11565);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

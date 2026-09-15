@@ -867,11 +867,11 @@ let closure_23 = async function _removeReaction(arg0) {
                     if (burst != null) {
                       burst = burst.burst;
                     }
-                    const AccessibilityAnnouncer = channelId(4488).AccessibilityAnnouncer;
-                    intl = channelId(1114).intl;
+                    const AccessibilityAnnouncer = channelId(4491).AccessibilityAnnouncer;
+                    intl = channelId(1115).intl;
                     if (!burst) {
                       const obj6 = { name: tmp2.name };
-                      AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1114).t["tD9+b+"], obj6));
+                      AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1115).t["tD9+b+"], obj6));
                     }
                   }
                   const obj7 = { name: tmp2.name };

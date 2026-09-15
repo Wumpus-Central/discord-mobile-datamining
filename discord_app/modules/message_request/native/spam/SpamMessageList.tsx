@@ -10,7 +10,7 @@ import MetricEvents from "../../../../../discord_common/js/shared/shared-constan
 import useSortedSpamMessageRequestsDefault from "../../hooks/useSortedSpamMessageRequests.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const MessageRequestEmptyDefault = tmp2(17001);
+const MessageRequestEmptyDefault = tmp2(17039);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -203,7 +203,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -267,10 +267,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  dependencyMap = goToMessageRequestPreview(17000).useSpamMessageRequestCount();
+  dependencyMap = goToMessageRequestPreview(17038).useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj = goToMessageRequestPreview(17000);
-  const hasSingleMessageRequest = goToMessageRequestPreview(16998).useListHasSingleSpamMessageRequest();
+  let obj = goToMessageRequestPreview(17038);
+  const hasSingleMessageRequest = goToMessageRequestPreview(17036).useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
     const obj2 = { num_spam_message_requests };
@@ -279,8 +279,8 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   });
   if (0 === arr.length) {
     let obj3 = { bodyText: null };
-    let intl = tmp4(1114).intl;
-    obj3.bodyText = intl.string(tmp4(1114).t.hasFPQ);
+    let intl = tmp4(1115).intl;
+    obj3.bodyText = intl.string(tmp4(1115).t.hasFPQ);
     return closure_8(MessageRequestEmptyDefault, obj3);
   } else {
     const items = ["header-section"];
@@ -329,5 +329,5 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     obj4.data = items;
     return closure_8(closure_6, obj4);
   }
-  let obj2 = goToMessageRequestPreview(16998);
+  let obj2 = goToMessageRequestPreview(17036);
 }

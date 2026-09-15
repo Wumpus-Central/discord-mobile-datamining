@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05598_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05602_fuzzysearch.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
@@ -93,11 +93,11 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10989).UserRowModes;
+const UserRowModes = fn(10993).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { searchBarRowContainer: { paddingTop: nativeDefault.space.PX_8 }, noResults: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_8 };
 obj2.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -249,8 +249,8 @@ export default function NewMessageUserList(selectedUserIds) {
       obj2.title = intl.string(util.t.qGlQrW);
       obj2.items = _undefined2.map((data) => ({ type: "GroupDMChannelRecord", data }));
       const findIndexResult = closure_6.findIndex((title) => {
-        const intl = selectedUserIds(1114).intl;
-        return title.title === intl.string(selectedUserIds(1114).t.y29JXs);
+        const intl = selectedUserIds(1115).intl;
+        return title.title === intl.string(selectedUserIds(1115).t.y29JXs);
       });
       if (-1 === findIndexResult) {
         let items = [];

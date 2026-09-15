@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import utils from "../../collectibles/nameplates/utils.tsx";
-import _modDef2786 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2787 from "../intl/DisplayNameStyles.messages.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ProfileCustomizationUtils from "../../profile_customization/ProfileCustomizationUtils.tsx";
@@ -53,7 +53,7 @@ function ChatPreview(arg0) {
   const items2 = [timestampProducer(View, obj4)];
   const obj7 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
   const intl = util.intl;
-  obj7.children = intl.string(_modDef2786.h5Cuej);
+  obj7.children = intl.string(_modDef2787.h5Cuej);
   items2[1] = hasOwnProperty(Text_Text.Text, obj7);
   obj3.children = items2;
   items[1] = timestampProducer(View, obj3);
@@ -63,7 +63,7 @@ function ChatPreview(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   previewSection: {
     marginBottom: nativeDefault.space.PX_24,
@@ -149,7 +149,7 @@ export default function DisplayNameStylesEditPreview(selectedEffectId) {
     accessibilityLabel: null,
   };
   const intl = util.intl;
-  obj4.accessibilityLabel = intl.string(_modDef2786.zoh6MT);
+  obj4.accessibilityLabel = intl.string(_modDef2787.zoh6MT);
   const items1 = [hasOwnProperty(UserProfilePreviewDefault, obj4), ,];
   items1[1] = hasOwnProperty(View, {
     style: tmp.chatPreviewWrapper,

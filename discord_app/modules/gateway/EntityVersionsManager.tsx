@@ -98,20 +98,20 @@ function handleConnectionOpen() {
           closure_2_8.fileOnly("requesting deleted guild entities (id: " + closure_0 + ", name: " + name + ")");
           const keys = Object.keys(mutableBasicGuildChannelsForGuild.getMutableBasicGuildChannelsForGuild(closure_0));
           const sorted = keys.sort();
-          const obj2 = closure_2_0(1239);
-          const str = closure_2_0(1239).v3(sorted.join(","));
+          const obj2 = closure_2_0(1240);
+          const str = closure_2_0(1240).v3(sorted.join(","));
           sortedRoles = sortedRoles.getSortedRoles(closure_0);
           const mapped = sortedRoles.map((id) => id.id);
-          const str1 = closure_2_0(1239).v3(sorted.join(",")).toString();
+          const str1 = closure_2_0(1240).v3(sorted.join(",")).toString();
           const sorted1 = mapped.sort();
-          const obj5 = closure_2_0(1239);
-          const str2 = closure_2_0(1239).v3(sorted1.join(","));
+          const obj5 = closure_2_0(1240);
+          const str2 = closure_2_0(1240).v3(sorted1.join(","));
           guildEmoji = guildEmoji.getGuildEmoji(closure_0);
           const mapped1 = guildEmoji.map((id) => id.id);
-          const str5 = closure_2_0(1239).v3(sorted1.join(",")).toString();
+          const str5 = closure_2_0(1240).v3(sorted1.join(",")).toString();
           const sorted2 = mapped1.sort();
-          const obj8 = closure_2_0(1239);
-          const str3 = closure_2_0(1239).v3(sorted2.join(","));
+          const obj8 = closure_2_0(1240);
+          const str3 = closure_2_0(1240).v3(sorted2.join(","));
           stickersByGuildId = stickersByGuildId.getStickersByGuildId(closure_0);
           let mapped2;
           if (stickersByGuildId != null) {
@@ -120,19 +120,19 @@ function handleConnectionOpen() {
           if (mapped2 == null) {
             mapped2 = [];
           }
-          const str6 = closure_2_0(1239).v3(sorted2.join(",")).toString();
+          const str6 = closure_2_0(1240).v3(sorted2.join(",")).toString();
           const sorted3 = mapped2.sort();
-          const tmp5Result = closure_2_0(1239);
-          const str4 = closure_2_0(1239).v3(sorted3.join(","));
+          const tmp5Result = closure_2_0(1240);
+          const str4 = closure_2_0(1240).v3(sorted3.join(","));
           socket = socket.getSocket();
           const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(
             closure_0,
             str1,
             str5,
             str6,
-            closure_2_0(1239).v3(sorted3.join(",")).toString(),
+            closure_2_0(1240).v3(sorted3.join(",")).toString(),
           );
-          const str7 = closure_2_0(1239).v3(sorted3.join(",")).toString();
+          const str7 = closure_2_0(1240).v3(sorted3.join(",")).toString();
         },
         Math.ceil(2000 * Math.random()),
       );
@@ -156,20 +156,20 @@ function handleGuildCreate(guild) {
         closure_2_8.fileOnly("requesting deleted guild entities (id: " + closure_0 + ", name: " + name + ")");
         const keys = Object.keys(mutableBasicGuildChannelsForGuild.getMutableBasicGuildChannelsForGuild(closure_0));
         const sorted = keys.sort();
-        const obj2 = closure_2_0(1239);
-        const str = closure_2_0(1239).v3(sorted.join(","));
+        const obj2 = closure_2_0(1240);
+        const str = closure_2_0(1240).v3(sorted.join(","));
         sortedRoles = sortedRoles.getSortedRoles(closure_0);
         const mapped = sortedRoles.map((id) => id.id);
-        const str1 = closure_2_0(1239).v3(sorted.join(",")).toString();
+        const str1 = closure_2_0(1240).v3(sorted.join(",")).toString();
         const sorted1 = mapped.sort();
-        const obj5 = closure_2_0(1239);
-        const str2 = closure_2_0(1239).v3(sorted1.join(","));
+        const obj5 = closure_2_0(1240);
+        const str2 = closure_2_0(1240).v3(sorted1.join(","));
         guildEmoji = guildEmoji.getGuildEmoji(closure_0);
         const mapped1 = guildEmoji.map((id) => id.id);
-        const str5 = closure_2_0(1239).v3(sorted1.join(",")).toString();
+        const str5 = closure_2_0(1240).v3(sorted1.join(",")).toString();
         const sorted2 = mapped1.sort();
-        const obj8 = closure_2_0(1239);
-        const str3 = closure_2_0(1239).v3(sorted2.join(","));
+        const obj8 = closure_2_0(1240);
+        const str3 = closure_2_0(1240).v3(sorted2.join(","));
         stickersByGuildId = stickersByGuildId.getStickersByGuildId(closure_0);
         let mapped2;
         if (stickersByGuildId != null) {
@@ -178,19 +178,19 @@ function handleGuildCreate(guild) {
         if (mapped2 == null) {
           mapped2 = [];
         }
-        const str6 = closure_2_0(1239).v3(sorted2.join(",")).toString();
+        const str6 = closure_2_0(1240).v3(sorted2.join(",")).toString();
         const sorted3 = mapped2.sort();
-        const tmp5Result = closure_2_0(1239);
-        const str4 = closure_2_0(1239).v3(sorted3.join(","));
+        const tmp5Result = closure_2_0(1240);
+        const str4 = closure_2_0(1240).v3(sorted3.join(","));
         socket = socket.getSocket();
         const deletedEntityIdsNotMatchingHash = socket.getDeletedEntityIdsNotMatchingHash(
           closure_0,
           str1,
           str5,
           str6,
-          closure_2_0(1239).v3(sorted3.join(",")).toString(),
+          closure_2_0(1240).v3(sorted3.join(",")).toString(),
         );
-        const str7 = closure_2_0(1239).v3(sorted3.join(",")).toString();
+        const str7 = closure_2_0(1240).v3(sorted3.join(",")).toString();
       },
       Math.ceil(2000 * Math.random()),
     );

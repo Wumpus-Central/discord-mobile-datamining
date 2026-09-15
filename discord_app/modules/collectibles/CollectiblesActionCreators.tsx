@@ -19,7 +19,8 @@ import CollectiblesPurchaseRecord from "records/CollectiblesPurchaseRecord.tsx";
 
 require = fn;
 function openCollectiblesShop(arg0) {
-  openCollectiblesShopMobile(Object.assign(arg0, Object.assign({ tab: 0 })));
+  ({ tab, initialCollectionId } = arg0);
+  openCollectiblesShopMobile(Object.assign(arg0, Object.assign({ tab: 0, initialCollectionId: 0 })));
 }
 function openCollectiblesShopMobile(screen) {
   const merged = Object.assign(screen);
@@ -1050,15 +1051,15 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
     }
   }
 };
-const addDebugLog = fn(7659).addDebugLog;
-let closure_10 = fn(7662).CollectiblesCategoriesRecord;
-let closure_11 = fn(7666).CollectiblesMarketingsRecord;
-let closure_14 = fn(7673).CollectiblesShopHomeRecord;
+const addDebugLog = fn(7663).addDebugLog;
+let closure_10 = fn(7666).CollectiblesCategoriesRecord;
+let closure_11 = fn(7670).CollectiblesMarketingsRecord;
+let closure_14 = fn(7677).CollectiblesShopHomeRecord;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const Constants = fn(1074);
 ({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = Constants);
-const CollectiblesMarketingsStore = fn(7687);
-const CollectiblesShopHomeStore = fn(7688);
+const CollectiblesMarketingsStore = fn(7691);
+const CollectiblesShopHomeStore = fn(7692);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
@@ -1066,7 +1067,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4495).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4498).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

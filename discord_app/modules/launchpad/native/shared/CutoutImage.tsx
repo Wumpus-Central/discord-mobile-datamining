@@ -1,10 +1,10 @@
 // discord_app/modules/launchpad/native/shared/CutoutImage.tsx
-import v1 from "../../../../../_runtime/01254_v1.js";
-import inlineStylesDefault from "../../../../../_runtime/08574_inlineStyles.js";
+import v1 from "../../../../../_runtime/01255_v1.js";
+import inlineStylesDefault from "../../../../../_runtime/08577_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const getReactNativeSVGImageSourceDefault = tmp13(13162);
+const getReactNativeSVGImageSourceDefault = tmp13(13167);
 require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);
@@ -76,16 +76,16 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
   }
   const borderStroke = cutoutTopLeftSize.borderStroke;
   importDefault = undefined;
-  const obj2 = imageTintColor(1254);
-  [tmp4, c1] = noop.useState(imageTintColor(1254).v4());
+  const obj2 = imageTintColor(1255);
+  [tmp4, c1] = noop.useState(imageTintColor(1255).v4());
   if (null != tmp4) {
     const _HermesInternal = HermesInternal;
     const combined = "url(#" + tmp4 + ")";
   }
   let v4Result;
   if (num15 > 0) {
-    v4Result = imageTintColor(1254).v4();
-    const tmpResult = imageTintColor(1254);
+    v4Result = imageTintColor(1255).v4();
+    const tmpResult = imageTintColor(1255);
   }
   if (null != v4Result) {
     const _HermesInternal2 = HermesInternal;
@@ -101,11 +101,11 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
     }
   }, items);
   const size = { style: cutoutTopLeftSize.style, height: imageSize, width: imageSize, children: null };
-  const tmp3 = _slicedToArray(noop.useState(imageTintColor(1254).v4()), 2);
+  const tmp3 = _slicedToArray(noop.useState(imageTintColor(1255).v4()), 2);
   const size1 = { width: imageSize, height: imageSize, id: tmp4, children: null };
   if (imageBorderRadius === imageSize / 2) {
     const obj3 = { cx: imageSize / 2, cy: imageSize / 2, r: imageSize / 2, fill: "white" };
-    let tmp16 = closure_6(imageTintColor(8574).Circle, obj3);
+    let tmp16 = closure_6(imageTintColor(8577).Circle, obj3);
     let tmp15 = closure_6;
   } else {
     tmp15 = closure_6;
@@ -118,42 +118,42 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
       ry: imageBorderRadius,
       fill: "white",
     };
-    tmp16 = closure_6(imageTintColor(8574).Rect, size2);
+    tmp16 = closure_6(imageTintColor(8577).Rect, size2);
   }
   const items1 = [tmp16, , , , ,];
   let tmp15Result = null;
   if (num > 0) {
     const obj4 = { cx: num2, cy: num3, r: num, fill: "black" };
-    tmp15Result = tmp15(imageTintColor(8574).Circle, obj4);
+    tmp15Result = tmp15(imageTintColor(8577).Circle, obj4);
   }
   items1[1] = tmp15Result;
   let tmp15Result10 = null;
   if (num4 > 0) {
     const obj5 = { cx: imageSize - num5, cy: num6, r: num4, fill: "black" };
-    tmp15Result10 = tmp15(imageTintColor(8574).Circle, obj5);
+    tmp15Result10 = tmp15(imageTintColor(8577).Circle, obj5);
   }
   items1[2] = tmp15Result10;
   let tmp15Result11 = null;
   if (num7 > 0) {
     const obj6 = { cx: num8, cy: imageSize - num9, r: num7, fill: "black" };
-    tmp15Result11 = tmp15(imageTintColor(8574).Circle, obj6);
+    tmp15Result11 = tmp15(imageTintColor(8577).Circle, obj6);
   }
   items1[3] = tmp15Result11;
   let tmp15Result12 = null;
   if (num10 > 0) {
     const obj7 = { cx: imageSize - num11, cy: imageSize - num12, r: num10, fill: "black" };
-    tmp15Result12 = tmp15(imageTintColor(8574).Circle, obj7);
+    tmp15Result12 = tmp15(imageTintColor(8577).Circle, obj7);
   }
   items1[4] = tmp15Result12;
   if (num14 <= 0) {
     items1[5] = null;
     size1.children = items1;
-    const items2 = [closure_7(imageTintColor(8574).Mask, size1)];
+    const items2 = [closure_7(imageTintColor(8577).Mask, size1)];
     if (null == v4Result) {
       const obj8 = { children: null };
       items2[1] = null;
       obj8.children = items2;
-      const items3 = [closure_7(imageTintColor(8574).Defs, obj8), , ,];
+      const items3 = [closure_7(imageTintColor(8577).Defs, obj8), , ,];
       let tmp15Result13 = null;
       if (null != imageBackgroundColor) {
         const size3 = {
@@ -163,7 +163,7 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
           mask: combined,
           clipPath: combined1,
         };
-        tmp15Result13 = tmp15(imageTintColor(8574).Rect, size3);
+        tmp15Result13 = tmp15(imageTintColor(8577).Rect, size3);
       }
       items3[1] = tmp15Result13;
       if (null == imageSource) {
@@ -181,7 +181,7 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
             rx: imageBorderRadius,
             ry: imageBorderRadius,
           };
-          tmp15Result14 = tmp15(imageTintColor(8574).Rect, size4);
+          tmp15Result14 = tmp15(imageTintColor(8577).Rect, size4);
         }
         items3[3] = tmp15Result14;
         size.children = items3;
@@ -195,7 +195,7 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
             mask: combined,
             clipPath: combined1,
           };
-          let tmp15Result15 = tmp15(imageTintColor(8574).Image, size5);
+          let tmp15Result15 = tmp15(imageTintColor(8577).Image, size5);
         }
         const size6 = { height: imageSize, width: imageSize, mask: combined, clipPath: combined1, children: null };
         const obj9 = { style: null, source: null, onLoad: null };
@@ -204,13 +204,13 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
         obj9.source = imageSource;
         obj9.onLoad = callback;
         size6.children = tmp15(Image, obj9);
-        tmp15Result15 = tmp15(imageTintColor(8574).ForeignObject, size6);
+        tmp15Result15 = tmp15(imageTintColor(8577).ForeignObject, size6);
       }
     } else {
       const obj10 = { id: v4Result, children: null };
       if (imageBorderRadius === imageSize / 2) {
         const obj11 = { cx: imageSize / 2, cy: imageSize / 2, r: imageSize / 4, fill: "white" };
-        let tmp15Result16 = tmp15(imageTintColor(8574).Circle, obj11);
+        let tmp15Result16 = tmp15(imageTintColor(8577).Circle, obj11);
       } else {
         const size8 = {
           x: num15,
@@ -221,14 +221,14 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
           ry: imageBorderRadius * ((imageSize - 2 * num15) / imageSize),
           fill: "white",
         };
-        tmp15Result16 = tmp15(imageTintColor(8574).Rect, size8);
+        tmp15Result16 = tmp15(imageTintColor(8577).Rect, size8);
       }
       obj10.children = tmp15Result16;
-      tmp15(imageTintColor(8574).ClipPath, obj10);
+      tmp15(imageTintColor(8577).ClipPath, obj10);
     }
   } else if (imageBorderRadius === imageSize / 2) {
     const obj12 = { cx: imageSize / 2, cy: imageSize / 2, r: num14 / 2, fill: "black" };
-    let tmp15Result18 = tmp15(imageTintColor(8574).Circle, obj12);
+    let tmp15Result18 = tmp15(imageTintColor(8577).Circle, obj12);
   } else {
     const size9 = {
       x: (imageSize - num14) / 2,
@@ -239,7 +239,7 @@ export default noop.memo(function CutoutImage(cutoutTopLeftSize) {
       ry: imageBorderRadius * (num14 / imageSize),
       fill: "black",
     };
-    tmp15Result18 = tmp15(imageTintColor(8574).Rect, size9);
+    tmp15Result18 = tmp15(imageTintColor(8577).Rect, size9);
   }
   tmp14 = inlineStylesDefault;
 });

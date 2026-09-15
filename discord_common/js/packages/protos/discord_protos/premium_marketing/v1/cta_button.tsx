@@ -1,5 +1,5 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/cta_button.tsx
-import _mod1186 from "../../../../../../../_runtime/metro/01186__.js";
+import _mod1187 from "../../../../../../../_runtime/metro/01187__.js";
 import wrappers from "../../../google/protobuf/wrappers.tsx";
 import localized_string from "../../common/v1/localized_string.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -25,7 +25,7 @@ const ButtonAction = {
   OPEN_GUILD_BOOST_CHECKOUT: 8,
   [8]: "OPEN_GUILD_BOOST_CHECKOUT",
 };
-const MessageType = fn(1186).MessageType;
+const MessageType = fn(1187).MessageType;
 class CTAButton$Type extends MessageType {
   constructor() {
     items = [, , , ,];
@@ -64,10 +64,10 @@ const prototype = CTAButton$Type.prototype;
 prototype["create"] = function create(arr) {
   const obj = { copy: "", buttonAction: 0, deeplinkSection: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -116,7 +116,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -128,49 +128,49 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(copy, tag, writeUnknownFields) {
   if ("" !== copy.copy) {
-    tag.tag(1, _mod1186.WireType.LengthDelimited).string(copy.copy);
-    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
+    tag.tag(1, _mod1187.WireType.LengthDelimited).string(copy.copy);
+    const tagResult = tag.tag(1, _mod1187.WireType.LengthDelimited);
   }
   if (0 !== copy.buttonAction) {
-    tag.tag(2, _mod1186.WireType.Varint).int32(copy.buttonAction);
-    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
+    tag.tag(2, _mod1187.WireType.Varint).int32(copy.buttonAction);
+    const tagResult1 = tag.tag(2, _mod1187.WireType.Varint);
   }
   if ("" !== copy.deeplinkSection) {
-    tag.tag(3, _mod1186.WireType.LengthDelimited).string(copy.deeplinkSection);
-    const tagResult2 = tag.tag(3, _mod1186.WireType.LengthDelimited);
+    tag.tag(3, _mod1187.WireType.LengthDelimited).string(copy.deeplinkSection);
+    const tagResult2 = tag.tag(3, _mod1187.WireType.LengthDelimited);
   }
   if (copy.copyLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult3 = tag.tag(4, _mod1186.WireType.LengthDelimited);
+    const tagResult3 = tag.tag(4, _mod1187.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(
       copy.copyLocalized,
-      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(
       copy.copyLocalized,
-      tag.tag(4, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (copy.navigableStorefrontApplicationId) {
     const UInt64Value = wrappers.UInt64Value;
-    const tagResult4 = tag.tag(5, _mod1186.WireType.LengthDelimited);
+    const tagResult4 = tag.tag(5, _mod1187.WireType.LengthDelimited);
     const joined1 = UInt64Value.internalBinaryWrite(
       copy.navigableStorefrontApplicationId,
-      tag.tag(5, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(5, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult1 = UInt64Value.internalBinaryWrite(
       copy.navigableStorefrontApplicationId,
-      tag.tag(5, _mod1186.WireType.LengthDelimited).fork(),
+      tag.tag(5, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, copy, tag);

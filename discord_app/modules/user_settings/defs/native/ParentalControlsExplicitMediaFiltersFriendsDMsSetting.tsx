@@ -6,13 +6,13 @@ import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCen
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
     const intl = util.intl;
     return intl.string(util.t["+uI23H"]);
   },
-  parent: fn(8079).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8082).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
     const parentalControlledExplicitContentSettings =
       useParentalControlSettings.useParentalControlledExplicitContentSettings();
@@ -30,22 +30,22 @@ const pressable = SettingBuilders.createPressable({
   onPress: function onObscuredContentFriendsDmOnPress() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const intl = selectedTeenId(1114).intl;
-      const obj = selectedTeenId(14918);
-      const stringResult = intl.string(selectedTeenId(1114).t.GYpoAq);
+      const intl = selectedTeenId(1115).intl;
+      const obj = selectedTeenId(14928);
+      const stringResult = intl.string(selectedTeenId(1115).t.GYpoAq);
       const obj3 = { title: stringResult, subtitle: null, handlePress: null, currentValue: null, excluded: null };
-      const intl2 = selectedTeenId(1114).intl;
-      obj3.subtitle = intl2.string(selectedTeenId(1114).t["+uI23H"]);
+      const intl2 = selectedTeenId(1115).intl;
+      obj3.subtitle = intl2.string(selectedTeenId(1115).t["+uI23H"]);
       obj3.handlePress = function handlePress(explicitContentFriendDm) {
         return FamilyCenterControlledSettingsUtils.updateExplicitContentSetting(selectedTeenId, {
           explicitContentFriendDm,
         });
       };
       obj3.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
-      const items = [selectedTeenId(1185).ExplicitContentRedaction.SHOW];
+      const items = [selectedTeenId(1186).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(14911).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(14911);
+      const result = selectedTeenId(14921).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(14921);
     }
   },
   unsearchable: true,

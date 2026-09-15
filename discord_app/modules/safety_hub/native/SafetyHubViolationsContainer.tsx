@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import SafetyHubUtils from "../SafetyHubUtils.tsx";
@@ -145,8 +145,8 @@ function ClassificationDetail(classification) {
       let Lb0HVv = require;
       let obj = dependencyMap;
       if (member_type === SafetyHubModels.MemberType.OWNER) {
-        const intl3 = Lb0HVv(1114).intl;
-        Lb0HVv = Lb0HVv(1114).t.Lb0HVv;
+        const intl3 = Lb0HVv(1115).intl;
+        Lb0HVv = Lb0HVv(1115).t.Lb0HVv;
         obj = {};
         const merged = Object.assign(obj2);
         tmp4 = guild_metadata == tmp4;
@@ -157,14 +157,14 @@ function ClassificationDetail(classification) {
         obj.guildName = obj2;
         let formatResult = intl3.format(Lb0HVv, obj);
       } else {
-        const intl2 = Lb0HVv(1114).intl;
+        const intl2 = Lb0HVv(1115).intl;
         const obj4 = { classification_type: tmp2, classificationHook: hook, guildName: null };
         let name;
         if (guild_metadata != tmp4) {
           name = guild_metadata.name;
         }
         obj4.guildName = name;
-        formatResult = intl2.format(Lb0HVv(1114).t.rmpEPD, obj4);
+        formatResult = intl2.format(Lb0HVv(1115).t.rmpEPD, obj4);
       }
     } else {
       const intl = util.intl;
@@ -178,7 +178,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12009, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12013, dependencyMap.paths), {
         classificationId: id,
         source: React6.StandingTab,
       });
@@ -356,12 +356,12 @@ class SafetyHubViolationsContainer {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8537);
+const SafetyHubConstants = fn(8540);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   connectedContainer: {
     display: "flex",

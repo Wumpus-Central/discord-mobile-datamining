@@ -5,14 +5,14 @@ import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.na
 import TabsPerformanceTracker from "../TabsPerformanceTracker.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const useWindowDimensionsDefault = tmp(1477);
-const useChatLayoutDefault = tmp(4497);
-const YouScreenDefault = tmp(16897);
+const useWindowDimensionsDefault = tmp(1478);
+const useChatLayoutDefault = tmp(4500);
+const YouScreenDefault = tmp(16935);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11219).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11223).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   container: {
     flex: 1,

@@ -7,7 +7,7 @@ import native from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import useWindowDimensions from "../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -15,7 +15,7 @@ import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import BottomSheetModal from "../../../../_runtime/06728_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06732_BottomSheetModal.js";
 import FastListDefault from "../../../lib/native/FastList.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -331,14 +331,14 @@ function EmojiOptionsButton(channelId) {
   const items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(11394)(stateFromStores);
+  const tmp3 = messageId(11398)(stateFromStores);
   const canRemoveReactions = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
   const obj2 = {
     onPress: noop.useCallback(() => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11395, dependencyMap.paths),
+        asyncRequireImpl(11399, dependencyMap.paths),
         "ReactionEmojiOptionsActionSheet",
         { channelId, messageId, reaction, canRemoveReactions },
         "replaceTopSheet",
@@ -348,11 +348,11 @@ function EmojiOptionsButton(channelId) {
     children: null,
   };
   const obj3 = { variant: "text-xs/semibold", color: "text-subtle", children: null };
-  const intl = channelId(1114).intl;
-  obj3.children = intl.string(channelId(1114).t.pCaYID);
-  const items3 = [closure_17(channelId(4632).Text, obj3)];
+  const intl = channelId(1115).intl;
+  obj3.children = intl.string(channelId(1115).t.pCaYID);
+  const items3 = [closure_17(channelId(4635).Text, obj3)];
   const obj = channelId(504);
-  items3[1] = closure_17(channelId(7312).ChevronSmallRightIcon, {
+  items3[1] = closure_17(channelId(7316).ChevronSmallRightIcon, {
     color: messageId(576).colors.ICON_SUBTLE,
     size: "xs",
   });
@@ -373,7 +373,7 @@ function ReactionTabs(setReactionSelectedIndex) {
     onSelect: null,
     initialNumTabsToRender: null,
   };
-  const obj = setReactionSelectedIndex(7291);
+  const obj = setReactionSelectedIndex(7295);
   obj4.tabs = reactions.map((reaction, index) => {
     let str = reaction.emoji.id;
     if (str == null) {
@@ -391,18 +391,18 @@ function ReactionTabs(setReactionSelectedIndex) {
     const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
     setReactionSelectedIndex(arg0);
   };
-  obj4.initialNumTabsToRender = reactionSelectedIndex(4287).MAX_REACTIONS;
+  obj4.initialNumTabsToRender = reactionSelectedIndex(4290).MAX_REACTIONS;
   const items = [
-    closure_17(setReactionSelectedIndex(11396), obj4),
-    closure_17(setReactionSelectedIndex(8722), { outer: true }),
+    closure_17(setReactionSelectedIndex(11400), obj4),
+    closure_17(setReactionSelectedIndex(8725), { outer: true }),
   ];
   const obj5 = { style: tmp.removeButtonContainer, children: null };
   const obj7 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
-  const tmp5 = setReactionSelectedIndex(11396);
-  obj7.children = reactionSelectedIndex(4287).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
-  const items1 = [closure_17(reactionSelectedIndex(4632).Text, obj7)];
+  const tmp5 = setReactionSelectedIndex(11400);
+  obj7.children = reactionSelectedIndex(4290).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
+  const items1 = [closure_17(reactionSelectedIndex(4635).Text, obj7)];
   const obj12 = {};
-  const obj6 = reactionSelectedIndex(4287);
+  const obj6 = reactionSelectedIndex(4290);
   const merged = Object.assign(setReactionSelectedIndex);
   items1[1] = closure_17(
     obj.useExperiment({ location: "ReactionTabs" }, { autoTrackExposure: false }).tidaWebformEnabled
@@ -427,8 +427,8 @@ const Constants = fn(1074);
 ({ DEFAULT_NUM_REACTION_USERS: closure_15, Permissions: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(4632).Text);
-const createStyles = fn(4636);
+let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(4635).Text);
+const createStyles = fn(4639);
 let obj = {
   container: { flex: 1 },
   containerEmpty: {
@@ -610,15 +610,15 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   );
   const bound = Math.min(tmp3[0], reactions.length - 1);
   if (null != reactions[bound].me_vote) {
-    let NORMAL = channelId(7865).ReactionTypes.VOTE;
+    let NORMAL = channelId(7868).ReactionTypes.VOTE;
     let tmp8 = channelId;
     let tmp10 = channelId;
   } else if (tmp5.burst_count > 0) {
-    NORMAL = channelId(7865).ReactionTypes.BURST;
+    NORMAL = channelId(7868).ReactionTypes.BURST;
     tmp8 = channelId;
     tmp10 = channelId;
   } else {
-    NORMAL = channelId(7865).ReactionTypes.NORMAL;
+    NORMAL = channelId(7868).ReactionTypes.NORMAL;
     tmp8 = channelId;
     tmp10 = channelId;
   }
@@ -634,9 +634,9 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
   const items1 = [channelId];
   const stateFromStores = tmp10(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
   let tmp10Result = tmp10(504);
-  const isActiveChannelOrUnarchivableThread = tmp10(7372).useIsActiveChannelOrUnarchivableThread(stateFromStores);
+  const isActiveChannelOrUnarchivableThread = tmp10(7376).useIsActiveChannelOrUnarchivableThread(stateFromStores);
   closure_130_0 = channelId;
-  const tmp10Result3 = tmp10(7372);
+  const tmp10Result3 = tmp10(7376);
   const tmp20 = useSafeAreaInsetsDefault();
   const items2 = [PermissionStore];
   const items3 = [channelId];
@@ -664,8 +664,8 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     sections: null,
     style: null,
   };
-  let intl = tmp10(1114).intl;
-  obj2.accessibilityLabel = intl.string(tmp10(1114).t.gHp0C4);
+  let intl = tmp10(1115).intl;
+  obj2.accessibilityLabel = intl.string(tmp10(1115).t.gHp0C4);
   obj2.insetBottom = tmp20.bottom;
   obj2.onScroll = useReactorsOnScrollNative({
     channelId,
@@ -850,16 +850,16 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     const result = Storage.set(MessageReactionsContent_SwipableBounced, true);
   }, []);
   const tmp19Result = ReactionToProfileExperimentDefault;
-  const tmp10Result4 = tmp10(1363);
+  const tmp10Result4 = tmp10(1364);
   let obj3 = {
     scrollable: true,
-    backdropOpacity: tmp10(7886).BACKDROP_OPACITY,
+    backdropOpacity: tmp10(7889).BACKDROP_OPACITY,
     backdropChildren: null,
     header: null,
     children: null,
   };
   let tmp27Result = null;
-  if (NORMAL === tmp10(7865).ReactionTypes.BURST) {
+  if (NORMAL === tmp10(7868).ReactionTypes.BURST) {
     let obj4 = { style: closure_8.absoluteFill, pointerEvents: "none", children: null };
     let obj5 = { emoji: tmp5.emoji, reactionType: NORMAL, messageId, channelId };
     obj4.children = closure_17(BurstReactionAnimationPreviewDefault, obj5);
@@ -884,5 +884,5 @@ export const MessageReactionsContent = function MessageReactionsContent(channelI
     const tmp19Result4 = FastListDefault;
   }
   obj3.children = tmp27Result4;
-  return closure_17(tmp10(7253).BottomSheet, obj3);
+  return closure_17(tmp10(7257).BottomSheet, obj3);
 };

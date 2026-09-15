@@ -6,7 +6,7 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef8302 from "../../../../_runtime/metro/08302__.js";
+import _modDef8305 from "../../../../_runtime/metro/08305__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -16,21 +16,21 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function InformationTable(speedBumpType) {
   let items;
-  let obj = { icon: _modDef8302, text: null };
-  const intl = items(1114).intl;
-  obj.text = intl.string(items(1114).t.kcuWva);
+  let obj = { icon: _modDef8305, text: null };
+  const intl = items(1115).intl;
+  obj.text = intl.string(items(1115).t.kcuWva);
   items = [obj];
-  const obj2 = { icon: _modDef8302, text: null };
+  const obj2 = { icon: _modDef8305, text: null };
   if ("block" === speedBumpType.speedBumpType) {
-    const intl3 = tmp2(1114).intl;
-    let stringResult = intl3.string(tmp2(1114).t.QxrDY1);
+    const intl3 = tmp2(1115).intl;
+    let stringResult = intl3.string(tmp2(1115).t.QxrDY1);
   } else {
-    const intl2 = tmp2(1114).intl;
-    stringResult = intl2.string(tmp2(1114).t.W6fjkS);
+    const intl2 = tmp2(1115).intl;
+    stringResult = intl2.string(tmp2(1115).t.W6fjkS);
   }
   obj2.text = stringResult;
   items[1] = obj2;
-  return closure_12(items(5768).TableRowGroup, {
+  return closure_12(items(5772).TableRowGroup, {
     hasIcons: true,
     children: items.map((icon, index) => {
       const obj = {
@@ -44,12 +44,12 @@ function InformationTable(speedBumpType) {
   });
 }
 const View = fn(17).View;
-const UserProfileAnalyticsTypes = fn(8300).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8303).UserProfileAnalyticsTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 },
   tableContainer: null,

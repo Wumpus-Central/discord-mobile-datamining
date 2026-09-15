@@ -2,7 +2,7 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import Dispatcher2 from "../../../Dispatcher.tsx";
-import _mod1987 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
+import _mod1988 from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import StartupDataAll from "StartupData.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -163,7 +163,7 @@ prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
             }
           }
         })(50, () => {
-          const Database = _mod1987.Database;
+          const Database = _mod1988.Database;
           return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
         });
         const _HermesInternal3 = HermesInternal;
@@ -231,7 +231,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== _mod1987.DatabaseState.Open;
+    tmp3 = stateResult !== _mod1988.DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);

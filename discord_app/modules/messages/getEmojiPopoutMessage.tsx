@@ -56,8 +56,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
         if (isPremium3) {
           if (isDiscoverable3) {
             const obj3 = { type: obj.JOIN_GUILD, text: null, description: null };
-            const intl10 = tmp6(1114).intl;
-            obj3.text = intl10.string(tmp6(1114).t.riu2R5);
+            const intl10 = tmp6(1115).intl;
+            obj3.text = intl10.string(tmp6(1115).t.riu2R5);
             let obj5 = obj3;
           }
           const obj4 = {};
@@ -68,8 +68,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
         }
         if (!isPremium3) {
           obj5 = { type: obj.GET_PREMIUM, text: null, description: null };
-          const intl9 = tmp6(1114).intl;
-          obj5.text = intl9.string(tmp6(1114).t["gl/XHJ"]);
+          const intl9 = tmp6(1115).intl;
+          obj5.text = intl9.string(tmp6(1115).t["gl/XHJ"]);
         }
         const obj6 = { type: obj.UNAVAILABLE, text: null, description: null };
         obj5 = obj6;

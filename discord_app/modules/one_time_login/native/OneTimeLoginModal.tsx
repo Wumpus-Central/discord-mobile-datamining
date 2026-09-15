@@ -18,10 +18,10 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ Routes: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(1228).BACKGROUND_GRADIENT_PRESETS_MOBILE;
+let closure_12 = fn(1229).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: {
     padding: 24,
@@ -238,33 +238,33 @@ export default function OneTimeLoginModal(token) {
     angleOverride: 0,
     mixAmount: null,
   };
-  let obj3 = { dark: token(4455).OverlayOpacity.LEVEL_1 };
+  let obj3 = { dark: token(4458).OverlayOpacity.LEVEL_1 };
   obj2.mixAmount = obj3;
   const items6 = [closure_13(ThemedGradientDefault, obj2)];
   let obj4 = { style: tmp.container, children: null };
   let obj5 = { style: tmp.centerContent, children: null };
-  const items7 = [closure_13(callback3, { source: token(13951), style: tmp.logo })];
+  const items7 = [closure_13(callback3, { source: token(13956), style: tmp.logo })];
   const obj7 = { style: tmp.loadingContainer, children: null };
   const items8 = [closure_13(callback2, {})];
   const obj8 = { variant: "text-lg/semibold", children: null };
-  let intl = token(1114).intl;
-  obj8.children = intl.string(token(1114).t.W9uNdG);
-  items8[1] = closure_13(token(4632).Text, obj8);
+  let intl = token(1115).intl;
+  obj8.children = intl.string(token(1115).t.W9uNdG);
+  items8[1] = closure_13(token(4635).Text, obj8);
   obj7.children = items8;
   items7[1] = closure_14(callback1, obj7);
   obj5.children = items7;
   const items9 = [closure_14(callback1, obj5)];
   const obj9 = { style: tmp.bottomContent, children: null };
   const obj10 = { variant: "text-sm/normal", children: null };
-  let intl2 = token(1114).intl;
-  obj10.children = intl2.string(token(1114).t["ZXe5/Y"]);
-  const items10 = [closure_13(token(4632).Text, obj10)];
+  let intl2 = token(1115).intl;
+  obj10.children = intl2.string(token(1115).t["ZXe5/Y"]);
+  const items10 = [closure_13(token(4635).Text, obj10)];
   const obj11 = { textColor: "text-default", text: null, variant: "text-sm/medium", onPress: null, textStyle: null };
-  let intl3 = token(1114).intl;
-  obj11.text = intl3.string(token(1114).t.FIEwfG);
+  let intl3 = token(1115).intl;
+  obj11.text = intl3.string(token(1115).t.FIEwfG);
   obj11.onPress = onPress;
   obj11.textStyle = tmp.link;
-  items10[1] = closure_13(token(7043).LinkButton, obj11);
+  items10[1] = closure_13(token(7047).LinkButton, obj11);
   obj9.children = items10;
   items9[1] = closure_14(callback1, obj9);
   obj4.children = items9;

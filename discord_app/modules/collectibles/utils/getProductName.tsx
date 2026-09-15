@@ -26,8 +26,8 @@ export const getCardProductName = function getCardProductName(product) {
     let obj = dependencyMap;
     const string = util.intl.string;
     if ("baseVariantName" in product) {
-      const intl = BZN5k2(1114).intl;
-      BZN5k2 = BZN5k2(1114).t.BZN5k2;
+      const intl = BZN5k2(1115).intl;
+      BZN5k2 = BZN5k2(1115).t.BZN5k2;
       obj = { baseVariantName: null, variantLabel: null };
       ({ baseVariantName: obj.baseVariantName, variantLabel: obj.variantLabel } = product);
       let name = intl.formatToPlainString(BZN5k2, obj);
@@ -98,8 +98,8 @@ export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(pr
     let obj = dependencyMap;
     const string = util.intl.string;
     if ("baseVariantName" in product) {
-      const intl = BZN5k2(1114).intl;
-      BZN5k2 = BZN5k2(1114).t.BZN5k2;
+      const intl = BZN5k2(1115).intl;
+      BZN5k2 = BZN5k2(1115).t.BZN5k2;
       obj = { baseVariantName: null, variantLabel: null };
       ({ baseVariantName: obj.baseVariantName, variantLabel: obj.variantLabel } = product);
       let name = intl.formatToPlainString(BZN5k2, obj);

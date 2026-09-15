@@ -1,13 +1,13 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01484_Link.js";
+import Link from "../../../../../_runtime/01485_Link.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11588 from "../../../../../_runtime/metro/11588__.js";
-import _modDef11589 from "../../../../../_runtime/metro/11589__.js";
+import _modDef11592 from "../../../../../_runtime/metro/11592__.js";
+import _modDef11593 from "../../../../../_runtime/metro/11593__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -40,9 +40,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = _modDef11588;
+    let tmp9Result = _modDef11592;
   } else {
-    tmp9Result = _modDef11589;
+    tmp9Result = _modDef11593;
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), ,];
   const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../intl/index.native.tsx";
 import ClientThemesTypes from "../ClientThemesTypes.tsx";
-import _modDef2626 from "../intl/ClientThemes.messages.js";
+import _modDef2627 from "../intl/ClientThemes.messages.js";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import SavedCustomThemeStore from "../SavedCustomThemeStore.tsx";
@@ -13,9 +13,9 @@ const require = globalThis.__r;
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2626.yl1iMm);
+  return intl.string(_modDef2627.yl1iMm);
 }
-const ClientThemesConstants = fn(1228);
+const ClientThemesConstants = fn(1229);
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: metroRequire, REFRESH_STANDARD_BACKGROUND_THEMES: closure_7 } =
   ClientThemesConstants);
 const size = fn(2);
@@ -117,7 +117,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
   let stateFromStores1 = null;
   if (undefined !== customThemeDisplaySettings) {
     const obj2 = {
-      type: tmp(1229).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
+      type: tmp(1230).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT,
       getName: getCustomThemesName,
       theme: null,
       customThemeSettings: null,

@@ -7,7 +7,7 @@ import SettingsDefaultFeature from "../../../../discord_common/js/shared/shared-
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_3 = fn(1937).ExplicitContentFilterToDmSpamFilterV2;
+let closure_3 = fn(1938).ExplicitContentFilterToDmSpamFilterV2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 

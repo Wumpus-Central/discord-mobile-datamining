@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { containerWithPadding: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -28,11 +28,11 @@ export default function Modal(route) {
   ({ impressionName, impressionProperties } = props);
   const tmp = closure_11();
   const callback = noop.useCallback(() => {
-    closure_1(4839).pop();
+    closure_1(4842).pop();
   }, []);
   const obj = { type: null, name: null, properties: null };
   const tmp2 = _objectWithoutProperties(props, closure_3);
-  obj.type = modal(1248).ImpressionTypes.MODAL;
+  obj.type = modal(1249).ImpressionTypes.MODAL;
   obj.name = impressionName;
   obj.properties = impressionProperties;
   useTrackImpressionDefault(obj);
@@ -61,7 +61,7 @@ export default function Modal(route) {
     },
     [],
   );
-  const layoutEffect = noop.useLayoutEffect(() => modal(7578).trackAppUIViewed("ModalScreen"), []);
+  const layoutEffect = noop.useLayoutEffect(() => modal(7582).trackAppUIViewed("ModalScreen"), []);
   ({ left, right } = useSafeAreaInsetsDefault());
   const tmp13 = useSafeAreaInsetsDefault();
   const items = [absoluteFillObject.absoluteFillObject];
@@ -75,7 +75,7 @@ export default function Modal(route) {
   const obj4 = { style: items, onAccessibilityEscape: null, children: null };
   items[1] = tmp16;
   if (modal.closable) {
-    let pop = tmp4(4839).pop;
+    let pop = tmp4(4842).pop;
   } else {
     pop = NOOP;
   }
@@ -86,10 +86,10 @@ export default function Modal(route) {
   obj5.transitionState = null;
   obj5.onClose = callback;
   const items2 = [<modal.modal />];
-  tmp7Result = modal(16987);
-  let isIOSResult = modal(1363).isIOS();
+  tmp7Result = modal(17025);
+  let isIOSResult = modal(1364).isIOS();
   if (isIOSResult) {
-    isIOSResult = closure_9(tmp7(16870).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_9(tmp7(16908).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj4.children = items2;

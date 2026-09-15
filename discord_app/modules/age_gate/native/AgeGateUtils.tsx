@@ -1,6 +1,6 @@
 // discord_app/modules/age_gate/native/AgeGateUtils.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import AgeRestrictedContentSettingsUtils from "../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -64,9 +64,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
         }
       }
       const obj3 = { guildId: id1 };
-      obj2.pushLazy(asyncRequireImpl(10424, dependencyMap.paths), obj3);
+      obj2.pushLazy(asyncRequireImpl(10426, dependencyMap.paths), obj3);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(10424, dependencyMap.paths);
+      const tmp12 = asyncRequireImpl(10426, dependencyMap.paths);
     }
     return flag2;
   } else {

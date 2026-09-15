@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Clear override",
+      animate: "secondary",
     };
     obj12.animate = animate;
     if (null == users) {
@@ -108,15 +108,15 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1176).AvatarSizes.LARGE_48] = fn(1176).AvatarSizes.SMALL;
-obj[fn(1176).AvatarSizes.XLARGE] = fn(1176).AvatarSizes.NORMAL;
-obj[fn(1176).AvatarSizes.XXLARGE] = fn(1176).AvatarSizes.LARGE;
-obj[fn(1176).AvatarSizes.PROFILE] = fn(1176).AvatarSizes.XXLARGE;
-obj[fn(1176).AvatarSizes.REFRESH_MEDIUM_32] = fn(1176).AvatarSizes.XSMALL_20;
-obj[fn(1176).AvatarSizes.XSMALL] = fn(1176).AvatarSizes.SIZE_16;
-obj[fn(1176).AvatarSizes.SIZE_16] = fn(1176).AvatarSizes.XXSMALL_10;
-obj[fn(1176).AvatarSizes.NORMAL] = fn(1176).AvatarSizes.XSMALL;
-const createStyles = fn(4636);
+obj[fn(1177).AvatarSizes.LARGE_48] = fn(1177).AvatarSizes.SMALL;
+obj[fn(1177).AvatarSizes.XLARGE] = fn(1177).AvatarSizes.NORMAL;
+obj[fn(1177).AvatarSizes.XXLARGE] = fn(1177).AvatarSizes.LARGE;
+obj[fn(1177).AvatarSizes.PROFILE] = fn(1177).AvatarSizes.XXLARGE;
+obj[fn(1177).AvatarSizes.REFRESH_MEDIUM_32] = fn(1177).AvatarSizes.XSMALL_20;
+obj[fn(1177).AvatarSizes.XSMALL] = fn(1177).AvatarSizes.SIZE_16;
+obj[fn(1177).AvatarSizes.SIZE_16] = fn(1177).AvatarSizes.XXSMALL_10;
+obj[fn(1177).AvatarSizes.NORMAL] = fn(1177).AvatarSizes.XSMALL;
+const createStyles = fn(4639);
 const React6 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },
@@ -148,7 +148,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
             accessible,
             accessibilityLabel,
           };
-          let tmp5 = closure_5(channel(1176).Avatar, obj2);
+          let tmp5 = closure_5(channel(1177).Avatar, obj2);
         } else {
           const obj3 = {
             status,
@@ -166,7 +166,7 @@ export default function GroupDMAvatar(pileSizeOverride) {
       return tmp5;
     }
   }
-  tmp5 = closure_5(channel(1176).Avatar, {
+  tmp5 = closure_5(channel(1177).Avatar, {
     autoStatusCutout: true,
     status,
     style,

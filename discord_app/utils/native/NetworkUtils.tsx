@@ -1,7 +1,7 @@
 // discord_app/utils/native/NetworkUtils.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import Constants from "../../Constants.tsx";
-import configure_mod from "../../../_runtime/01463_configure.js";
+import configure_mod from "../../../_runtime/01464_configure.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function notifyListeners(isConnected) {

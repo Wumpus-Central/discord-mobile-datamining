@@ -13,10 +13,10 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 
-const HTTPUtils = obj(1270);
-const AppAnalyticsUtils = obj(4816);
-const useStageSpeakingForCurrentUser = obj(5503);
-const StageChannelUtils = obj(8518);
+const HTTPUtils = obj(1271);
+const AppAnalyticsUtils = obj(4819);
+const useStageSpeakingForCurrentUser = obj(5507);
+const StageChannelUtils = obj(8521);
 require = fn;
 function audienceAckRequestToSpeak(channel, suppress) {
   let flag = arg2;
@@ -241,7 +241,7 @@ let closure_14 = async function _endStage(arg0) {
 };
 const Constants = fn(1074);
 ({ AbortCodes: closure_7, AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
-const SafetyToastType = fn(8517).SafetyToastType;
+const SafetyToastType = fn(8520).SafetyToastType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreators.tsx");
 

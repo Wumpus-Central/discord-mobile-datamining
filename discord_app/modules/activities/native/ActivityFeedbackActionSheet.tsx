@@ -8,9 +8,9 @@ import trackActivityProblemDefault from "../trackActivityProblem.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityFeedbackReasons = fn(1920).ActivityFeedbackReasons;
+const ActivityFeedbackReasons = fn(1921).ActivityFeedbackReasons;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const FeedbackType = fn(11756).FeedbackType;
+const FeedbackType = fn(11760).FeedbackType;
 const jsx = fn(21).jsx;
 const items = [, ,];
 ({ OTHER: arr[0], ADS: arr[1], NOT_FUN: arr[2] } = ActivityFeedbackReasons);
@@ -41,14 +41,14 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
     trackReport: null,
   };
   const tmp2 = getActivityReportOptionsDefault(true, true === prop);
-  const intl = activityApplication(1114).intl;
-  obj.headerLabel = intl.formatToPlainString(activityApplication(1114).t.QXYwoD, {
+  const intl = activityApplication(1115).intl;
+  obj.headerLabel = intl.formatToPlainString(activityApplication(1115).t.QXYwoD, {
     applicationName: activityApplication.name,
   });
-  const intl2 = activityApplication(1114).intl;
-  obj.ratingsBodyLabel = intl2.string(activityApplication(1114).t["9hk2KF"]);
-  const intl3 = activityApplication(1114).intl;
-  obj.reasonsHeaderLabel = intl3.string(activityApplication(1114).t.g1q5fr);
+  const intl2 = activityApplication(1115).intl;
+  obj.ratingsBodyLabel = intl2.string(activityApplication(1115).t["9hk2KF"]);
+  const intl3 = activityApplication(1115).intl;
+  obj.reasonsHeaderLabel = intl3.string(activityApplication(1115).t.g1q5fr);
   obj.reasons = tmp2;
   obj.feedbackReasons = items;
   obj.otherKey = ActivityFeedbackReasons.OTHER;

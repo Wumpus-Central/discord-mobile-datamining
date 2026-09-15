@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ChannelTypes from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
 import useColorThemeBackgroundDefault from "../../client_themes/native/useColorThemeBackground.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
@@ -38,11 +38,11 @@ import ICYMIStore from "../ICYMIStore.tsx";
 
 const require = globalThis.__r;
 
-const util = LeftBackIconWithBadge(1114);
-const Pressables = LeftBackIconWithBadge(5204);
-const XSmallIcon = LeftBackIconWithBadge(5761);
-const notifications_Notifications = LeftBackIconWithBadge(16498);
-const BackIconWithBadge = LeftBackIconWithBadge(16500);
+const util = LeftBackIconWithBadge(1115);
+const Pressables = LeftBackIconWithBadge(5207);
+const XSmallIcon = LeftBackIconWithBadge(5765);
+const notifications_Notifications = LeftBackIconWithBadge(16511);
+const BackIconWithBadge = LeftBackIconWithBadge(16513);
 require = fn;
 function SettingsButton() {
   return closure_1_14(IconButton.IconButton, {
@@ -182,7 +182,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16572, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16585, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -228,7 +228,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-          isFocused(7962).showForLaterModal(isFocused(7963).SavedMessageSortTypes.BOOKMARK);
+          isFocused(7965).showForLaterModal(isFocused(7966).SavedMessageSortTypes.BOOKMARK);
         },
       };
       ref1.current = obj;
@@ -412,11 +412,11 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: metroRequire } = get_ActivityIndicator);
-let closure_12 = fn(16548).NUM_GUILDS_EXTENDED_ONBOARDING;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+let closure_12 = fn(16561).NUM_GUILDS_EXTENDED_ONBOARDING;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_17 = createStyles.createStyles((paddingTop) => {
   const obj = {
     containerOuterTablet: {
@@ -429,7 +429,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(16549);
+const createICYMIStyles = fn(16562);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },

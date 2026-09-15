@@ -70,7 +70,7 @@ let closure_8 = async function _stopLurkingAll() {
                           _null = null;
                         }
                         closure_130_1 = _null;
-                        const HTTP = closure_0(1270).HTTP;
+                        const HTTP = closure_0(1271).HTTP;
                         const request = {
                           url: closure_2_6.GUILD_LEAVE(closure_0),
                           body: { lurking: true },

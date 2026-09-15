@@ -11,8 +11,8 @@ require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(11468), fn(11469), fn(11470)];
-let items1 = [fn(11471), fn(11472), fn(11473)];
+let items = [fn(11472), fn(11473), fn(11474)];
+let items1 = [fn(11475), fn(11476), fn(11477)];
 const items2 = [
   () => {
     const intl = util.intl;
@@ -55,7 +55,7 @@ const items2 = [
     return intl.string(util.t.jgC65t);
   },
 ];
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles({
   text: { marginTop: 16, lineHeight: 20, textAlign: "center" },
   header: { textAlign: "center" },
@@ -77,7 +77,7 @@ export default function ChannelFollowSuccessAlert(arg0) {
   const obj2 = {};
   const tmp5Result2 = require("areHookInputsEqual");
   const merged = Object.assign(arg0);
-  const intl = tmp5(1114).intl;
+  const intl = tmp5(1115).intl;
   obj2.confirmText = intl.string(require("util").t["+IrDzN"]);
   items1 = [closure_4(Image, { source: stableMemo, style: tmp.image }), ,];
   const obj3 = { source: stableMemo, style: tmp.image };
@@ -89,7 +89,7 @@ export default function ChannelFollowSuccessAlert(arg0) {
     children: stableMemo1(),
   });
   const obj5 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = tmp5(1114).intl;
+  const intl2 = tmp5(1115).intl;
   obj5.children = intl2.string(require("util").t["2QbSea"]);
   items1[2] = closure_4(require("Text/Text").Text, obj5);
   obj2.children = items1;

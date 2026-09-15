@@ -26,16 +26,16 @@ function MediaKeyboardBackground(arg0) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const MediaKeyboardConstants = fn(1607);
+const MediaKeyboardConstants = fn(1608);
 ({ HEADER_HANDLE_HEIGHT: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const MetaQuestUtils = fn(1608);
+const MetaQuestUtils = fn(1609);
 let closure_11 = MetaQuestUtils.isMetaQuest();
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   background: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,

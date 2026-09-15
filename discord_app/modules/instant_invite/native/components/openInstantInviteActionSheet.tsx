@@ -1,6 +1,6 @@
 // discord_app/modules/instant_invite/native/components/openInstantInviteActionSheet.tsx
 import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -20,6 +20,6 @@ export default function openInstantInviteActionSheet(invite_channel_id) {
     invite_channel_id: invite_channel_id.channel.id,
     invite_guild_id: invite_channel_id.channel.guild_id,
   };
-  obj.openLazy(asyncRequireImpl(9958, dependencyMap.paths), combined, obj2, invite_channel_id.stackingBehavior);
-  const tmp3 = asyncRequireImpl(9958, dependencyMap.paths);
+  obj.openLazy(asyncRequireImpl(9960, dependencyMap.paths), combined, obj2, invite_channel_id.stackingBehavior);
+  const tmp3 = asyncRequireImpl(9960, dependencyMap.paths);
 }

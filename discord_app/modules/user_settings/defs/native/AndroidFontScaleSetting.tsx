@@ -5,16 +5,16 @@ import CircleMinusIcon from "../../../../design/components/Icon/native/redesign/
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useFontScaleStore = fn(15349).useFontScaleStore;
+const useFontScaleStore = fn(15359).useFontScaleStore;
 const FontScales = fn(1084).FontScales;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.i19n5L);
   },
-  parent: fn(8079).MobileUserSettings.APPEARANCE,
+  parent: fn(8082).MobileUserSettings.APPEARANCE,
   useProps: function useFontScaleSliderProps() {
     const tmp = useFontScaleStore();
     closure_0 = tmp;
@@ -50,7 +50,7 @@ const slider = SettingBuilders.createSlider({
       return obj;
     }, items);
   },
-  usePredicate: fn(1363).isAndroid,
+  usePredicate: fn(1364).isAndroid,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidFontScaleSetting.tsx");

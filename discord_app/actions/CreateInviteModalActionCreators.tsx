@@ -85,8 +85,8 @@ export default {
           DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId });
         },
         (message) => {
-          const intl = channelId(1114).intl;
-          message = intl.string(channelId(1114).t.WB1ip6);
+          const intl = channelId(1115).intl;
+          message = intl.string(channelId(1115).t.WB1ip6);
           let message1;
           if (message != null) {
             message1 = message.message;

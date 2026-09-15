@@ -34,11 +34,11 @@ class OrSeparator {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7081);
+const CreateGuildConstants = fn(7085);
 ({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: metroRequire, CreateGuildModalStates: closure_7 } = CreateGuildConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   growSpacing: { flexGrow: 2, minHeight: nativeDefault.space.PX_24 },
   container: null,
@@ -77,7 +77,7 @@ export default function JoinServer(arg0) {
   let navigation;
   ({ error, inviteString, onInviteChange } = arg0);
   const tmp = closure_11();
-  navigation = navigation(1483).useNavigation();
+  navigation = navigation(1484).useNavigation();
   items = [navigation];
   const obj2 = { keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items1 = [tmp.container];
@@ -98,13 +98,13 @@ export default function JoinServer(arg0) {
       color: "mobile-text-heading-primary",
       children: null,
     };
-    const intl = tmp4(1114).intl;
-    obj5.children = intl.string(tmp4(1114).t.jlfuFW);
-    const items2 = [closure_8(tmp4(4632).Text, obj5)];
+    const intl = tmp4(1115).intl;
+    obj5.children = intl.string(tmp4(1115).t.jlfuFW);
+    const items2 = [closure_8(tmp4(4635).Text, obj5)];
     const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-    const intl2 = tmp4(1114).intl;
-    obj6.children = intl2.string(tmp4(1114).t.lVvN3A);
-    items2[1] = closure_8(tmp4(4632).Text, obj6);
+    const intl2 = tmp4(1115).intl;
+    obj6.children = intl2.string(tmp4(1115).t.lVvN3A);
+    items2[1] = closure_8(tmp4(4635).Text, obj6);
     obj4.children = items2;
     tmp7Result = closure_9(closure_10, obj4);
   }
@@ -124,21 +124,21 @@ export default function JoinServer(arg0) {
     textStyle: null,
     onSubmitEditing: null,
   };
-  const obj = navigation(1483);
-  const intl3 = tmp4(1114).intl;
-  obj8.label = intl3.string(navigation(1114).t.qreV25);
+  const obj = navigation(1484);
+  const intl3 = tmp4(1115).intl;
+  obj8.label = intl3.string(navigation(1115).t.qreV25);
   obj8.error = error;
   obj8.value = inviteString;
   obj8.onChangeText = onInviteChange;
   obj8.placeholder = placeholder;
-  const intl4 = tmp4(1114).intl;
-  obj8.accessibilityLabel = intl4.string(navigation(1114).t.qreV25);
+  const intl4 = tmp4(1115).intl;
+  obj8.accessibilityLabel = intl4.string(navigation(1115).t.qreV25);
   obj8.textStyle = tmp.textInput;
   obj8.onSubmitEditing = onDone;
   items3[1] = closure_8(FreeFormInputGroupDefault, obj8);
   const obj9 = { style: tmp.exampleText, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl5 = tmp4(1114).intl;
-  obj9.children = intl5.format(navigation(1114).t.vwWaTe, {
+  const intl5 = tmp4(1115).intl;
+  obj9.children = intl5.format(navigation(1115).t.vwWaTe, {
     example1: items[0],
     example2: items[1],
     example3: items[2],
@@ -150,28 +150,28 @@ export default function JoinServer(arg0) {
       );
     },
   });
-  items3[2] = closure_8(navigation(4632).Text, obj9);
+  items3[2] = closure_8(navigation(4635).Text, obj9);
   obj7.children = items3;
   const items4 = [closure_9(closure_4, obj7)];
   const obj11 = { children: null };
   const items5 = [closure_8(closure_4, { style: tmp.growSpacing }), , ,];
   const obj13 = { size: "lg", text: null, accessibilityLabel: null, loading: null, disabled: null, onPress: null };
-  const intl6 = tmp4(1114).intl;
-  obj13.text = intl6.string(navigation(1114).t["+H/coT"]);
-  const intl7 = tmp4(1114).intl;
-  obj13.accessibilityLabel = intl7.string(navigation(1114).t["+H/coT"]);
+  const intl6 = tmp4(1115).intl;
+  obj13.text = intl6.string(navigation(1115).t["+H/coT"]);
+  const intl7 = tmp4(1115).intl;
+  obj13.accessibilityLabel = intl7.string(navigation(1115).t["+H/coT"]);
   obj13.loading = submitting;
   obj13.disabled = submitting;
   obj13.onPress = onDone;
-  items5[1] = closure_8(navigation(5056).Button, obj13);
+  items5[1] = closure_8(navigation(5059).Button, obj13);
   items5[2] = closure_8(OrSeparator, {});
   const obj14 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
-  const intl8 = tmp4(1114).intl;
-  obj14.text = intl8.string(navigation(1114).t["MOqX/G"]);
-  const intl9 = tmp4(1114).intl;
-  obj14.accessibilityLabel = intl9.string(navigation(1114).t["MOqX/G"]);
+  const intl8 = tmp4(1115).intl;
+  obj14.text = intl8.string(navigation(1115).t["MOqX/G"]);
+  const intl9 = tmp4(1115).intl;
+  obj14.accessibilityLabel = intl9.string(navigation(1115).t["MOqX/G"]);
   obj14.onPress = callback;
-  items5[3] = closure_8(navigation(5056).Button, obj14);
+  items5[3] = closure_8(navigation(5059).Button, obj14);
   obj11.children = items5;
   items4[1] = closure_9(closure_10, obj11);
   obj2.children = items4;

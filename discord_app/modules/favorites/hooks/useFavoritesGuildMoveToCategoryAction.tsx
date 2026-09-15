@@ -7,10 +7,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildMoveToCategoryAction.tsx");
 
 export default function useFavoritesGuildMoveToCategoryAction(id) {
-  const isFavoritesGuildSelected = favorite(10353).useIsFavoritesGuildSelected();
-  let obj = favorite(10353);
-  favorite = favorite(10353).useFavorite(id.id);
-  const obj2 = favorite(10353);
+  const isFavoritesGuildSelected = favorite(10355).useIsFavoritesGuildSelected();
+  let obj = favorite(10355);
+  favorite = favorite(10355).useFavorite(id.id);
+  const obj2 = favorite(10355);
   id = undefined;
   if (favorite != null) {
     id = favorite.id;
@@ -28,13 +28,13 @@ export default function useFavoritesGuildMoveToCategoryAction(id) {
       const mapped = found.map((id) => ({ id: id.id, label: id.name }));
       if (null != favorite.parentId) {
         const obj3 = { label: null, destinations: null, perform: null };
-        const intl = tmp(1114).intl;
-        obj3.label = intl.string(tmp(1114).t.FAplms);
+        const intl = tmp(1115).intl;
+        obj3.label = intl.string(tmp(1115).t.FAplms);
         let tmp8 = mapped;
         if (tmp12) {
           const obj4 = { id: null, label: null };
-          const intl2 = tmp(1114).intl;
-          obj4.label = intl2.string(tmp(1114).t.GSfOoo);
+          const intl2 = tmp(1115).intl;
+          obj4.label = intl2.string(tmp(1115).t.GSfOoo);
           const items = [obj4];
           HermesBuiltin.arraySpread(mapped, 1);
           tmp8 = items;

@@ -10,16 +10,16 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 const InstantInviteDefault = InstantInvite;
 
-const FastestListDefault = tmp2(7158);
-const _modDef11081 = tmp2(11081);
-const _modDef11082 = tmp2(11082);
-const InstantInviteSelfMeasurerDefault = tmp2(16935);
+const FastestListDefault = tmp2(7162);
+const _modDef11085 = tmp2(11085);
+const _modDef11086 = tmp2(11086);
+const InstantInviteSelfMeasurerDefault = tmp2(16973);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   content: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -117,12 +117,12 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      const obj5 = { lightSource: _modDef11081, darkSource: _modDef11082, title: null, body: null };
-      const intl = tmpResult(1114).intl;
-      obj5.title = intl.string(tmpResult(1114).t["+nLJkZ"]);
-      const intl2 = tmpResult(1114).intl;
-      obj5.body = intl2.string(tmpResult(1114).t.F53CAc);
-      return closure_9(tmpResult(1176).EmptyState, obj5);
+      const obj5 = { lightSource: _modDef11085, darkSource: _modDef11086, title: null, body: null };
+      const intl = tmpResult(1115).intl;
+      obj5.title = intl.string(tmpResult(1115).t["+nLJkZ"]);
+      const intl2 = tmpResult(1115).intl;
+      obj5.body = intl2.string(tmpResult(1115).t.F53CAc);
+      return closure_9(tmpResult(1177).EmptyState, obj5);
     }
   }
   if (!loading) {
@@ -142,7 +142,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }
   const obj8 = { style: tmp.content, children: null };
   tmp = closure_9;
-  const items8 = [closure_9(tmpResult(7142).SceneLoadingIndicator, {})];
+  const items8 = [closure_9(tmpResult(7146).SceneLoadingIndicator, {})];
   tmpResult = null;
   if (memo1.length > 0) {
     tmp2 = InstantInviteSelfMeasurerDefault;

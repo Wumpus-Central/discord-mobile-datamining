@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/RoleSubscriptionUpsellUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ export default {
     guildId = guildId.guildId;
     actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return asyncRequireImpl(10428, dependencyMap.paths).then((result) => {
+        return asyncRequireImpl(10430, dependencyMap.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             const obj = {};

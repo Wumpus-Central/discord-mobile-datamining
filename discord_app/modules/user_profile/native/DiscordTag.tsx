@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { flexGrow: 1, alignItems: "center", flexDirection: "row" },
   botTag: { marginLeft: nativeDefault.space.PX_4 },

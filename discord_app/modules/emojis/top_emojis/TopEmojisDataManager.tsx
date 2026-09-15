@@ -4,7 +4,7 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const EmojiInteractionPoint = fn(1374).EmojiInteractionPoint;
+const EmojiInteractionPoint = fn(1375).EmojiInteractionPoint;
 class TopEmojisDataManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

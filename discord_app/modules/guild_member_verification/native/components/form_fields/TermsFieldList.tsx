@@ -35,7 +35,7 @@ function TermsFieldListItem(rowNumber) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   termsContainer: {
     padding: 16,
@@ -86,10 +86,10 @@ export default function TermsFieldList(rules) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  const intl = rules(1114).intl;
-  obj2.children = intl.string(rules(1114).t.prJqwT);
+  const intl = rules(1115).intl;
+  obj2.children = intl.string(rules(1115).t.prJqwT);
   let items = [
-    closure_5(rules(4632).Text, obj2),
+    closure_5(rules(4635).Text, obj2),
     closure_5(View, {
       accessibilityRole: "list",
       children: rules.map((rule, index) => {

@@ -14,7 +14,7 @@ export const transitionToGuild = function transitionToGuild(guildId, arg1) {
     duration: 0,
     create: "r",
     update: "WireType",
-    delete: "bottom",
+    delete: "style",
   });
   const obj3 = router_utils;
   const obj4 = { navigationReplace: true };

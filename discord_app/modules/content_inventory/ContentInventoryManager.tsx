@@ -360,12 +360,21 @@ function handleSpotifyNewTrack(connectionId) {
   }
 }
 function handleFetchGameProfileFeed() {
-  fetchInventory({
-    feedId: ContentInventoryFeedKey.GLOBAL_FEED,
-    feature: ContentInventoryFeature.ContentInventoryFeature.GAME_PROFILE,
-  });
+  const feed = ContentInventoryStore.getFeed(GLOBAL_FEED);
+  let tmp3 = null != feed;
+  if (tmp3) {
+    const _Date = Date;
+    const date = new Date(feed.expired_at);
+    const _Date2 = Date;
+    const time = date.getTime();
+    tmp3 = time > Date.now();
+  }
+  if (!tmp3) {
+    const obj = { feedId: GLOBAL_FEED, feature: ContentInventoryFeature.ContentInventoryFeature.GAME_PROFILE };
+    fetchInventory(obj);
+  }
 }
-const ContentInventoryFeedKey = fn(8476).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8479).ContentInventoryFeedKey;
 const PlatformTypes = fn(1074).PlatformTypes;
 let closure_11 = 2 * DurationsDefault.Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;
@@ -375,7 +384,7 @@ const set = new Set();
 const map1 = new Map();
 let closure_17 = null;
 let apply = fn(12);
-let closure_18 = apply.debounce(fn(13199).postTrackToContentInventory, 3000, { trailing: true });
+let closure_18 = apply.debounce(fn(13204).postTrackToContentInventory, 3000, { trailing: true });
 const prototype = function ContentInventoryManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

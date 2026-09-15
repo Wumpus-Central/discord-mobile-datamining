@@ -55,8 +55,8 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   obj3.disabled = tmp8;
   let stringResult;
   if (stateFromStores) {
-    const intl = tmp3(1114).intl;
-    stringResult = intl.string(tmp3(1114).t.X1lQli);
+    const intl = tmp3(1115).intl;
+    stringResult = intl.string(tmp3(1115).t.X1lQli);
   }
   obj3.disabledAccessibilityHint = stringResult;
   obj3.showIndicator = !require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(

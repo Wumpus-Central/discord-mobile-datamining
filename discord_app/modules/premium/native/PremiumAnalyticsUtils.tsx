@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../_runtime/01254_v1.js";
+import v1 from "../../../../_runtime/01255_v1.js";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

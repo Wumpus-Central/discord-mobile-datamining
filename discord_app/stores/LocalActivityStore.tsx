@@ -2,7 +2,7 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1330 from "../../_runtime/metro/01330__.js";
+import _modDef1331 from "../../_runtime/metro/01331__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import RobloxSubgameUtils from "../modules/roblox_subgame_detection/RobloxSubgameUtils.tsx";
@@ -286,12 +286,12 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
       let tmp17 = null == dependencyMap[socketId];
     } else {
       items = [pid, activity, partyPrivacy];
-      tmp17 = _modDef1330(dependencyMap[socketId], items);
+      tmp17 = _modDef1331(dependencyMap[socketId], items);
     }
     let tmp19 = null == applicationId;
     if (!tmp19) {
       const items1 = [pid, applicationId];
-      tmp19 = _modDef1330(closure_21[socketId], items1);
+      tmp19 = _modDef1331(closure_21[socketId], items1);
     }
     if (tmp17) {
       if (tmp19) {

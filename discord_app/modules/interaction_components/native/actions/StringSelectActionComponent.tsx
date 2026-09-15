@@ -1,5 +1,5 @@
 // discord_app/modules/interaction_components/native/actions/StringSelectActionComponent.tsx
-import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import InteractionComponentUtils from "../../InteractionComponentUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -91,7 +91,7 @@ export default function StringSelectActionComponent(type) {
       allowEmpty: null,
     };
     const combined = "StringSelectComponentActionSheet:" + customId;
-    const tmp = asyncRequireImpl(11952, dependencyMap.paths);
+    const tmp = asyncRequireImpl(11956, dependencyMap.paths);
     obj2.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
     obj.openLazy(tmp, combined, obj2);
   };

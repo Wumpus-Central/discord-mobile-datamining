@@ -31,7 +31,7 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { sectionTitle: { textTransform: "uppercase" }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
 obj2.separator = size;
@@ -57,12 +57,12 @@ export const Content = function Content(arg0) {
   };
   const obj6 = { children: null };
   const obj7 = { children: null };
-  const intl = guildId(1114).intl;
-  obj7.children = intl.string(guildId(1114).t["DJ+bGu"]);
+  const intl = guildId(1115).intl;
+  obj7.children = intl.string(guildId(1115).t["DJ+bGu"]);
   const items = [
     closure_6(SectionTitle, obj7),
-    closure_6(guildId(1176).Spacer, { size: 8 }),
-    closure_6(guildId(15322).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(guildId(1177).Spacer, { size: 8 }),
+    closure_6(guildId(15332).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , ,];
@@ -70,10 +70,10 @@ export const Content = function Content(arg0) {
   if (first.size > 0) {
     const obj8 = { children: null };
     const obj9 = { children: null };
-    const intl2 = guildId(1114).intl;
+    const intl2 = guildId(1115).intl;
     const obj10 = { numEmojis: first.size };
-    obj9.children = intl2.format(guildId(1114).t.oDeFmv, obj10);
-    const items2 = [closure_6(SectionTitle, obj9), closure_6(guildId(1176).Spacer, { size: 14 })];
+    obj9.children = intl2.format(guildId(1115).t.oDeFmv, obj10);
+    const items2 = [closure_6(SectionTitle, obj9), closure_6(guildId(1177).Spacer, { size: 14 })];
     const obj11 = { emojiIds: null, guildId: null };
     const items3 = [];
     HermesBuiltin.arraySpread(first, 0);
@@ -88,17 +88,17 @@ export const Content = function Content(arg0) {
   if (first1.length > 0) {
     const obj12 = { children: null };
     const obj13 = { children: null };
-    const intl3 = guildId(1114).intl;
+    const intl3 = guildId(1115).intl;
     const obj14 = { numChannels: length };
-    obj13.children = intl3.format(guildId(1114).t.l40GUu, obj14);
-    const items4 = [closure_6(SectionTitle, obj13), closure_6(guildId(1176).Spacer, { size: 14 })];
+    obj13.children = intl3.format(guildId(1115).t.l40GUu, obj14);
+    const items4 = [closure_6(SectionTitle, obj13), closure_6(guildId(1177).Spacer, { size: 14 })];
     const obj15 = {
       gap: 14,
       children: first1.map((benefit) =>
         timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id),
       ),
     };
-    items4[2] = closure_6(guildId(10475).GappedList, obj15);
+    items4[2] = closure_6(guildId(10478).GappedList, obj15);
     obj12.children = items4;
     tmp4Result3 = closure_8(closure_7, obj12);
   }
@@ -107,21 +107,21 @@ export const Content = function Content(arg0) {
   if (first2.length > 0) {
     const obj16 = { children: null };
     const obj17 = { children: null };
-    const intl4 = guildId(1114).intl;
+    const intl4 = guildId(1115).intl;
     const obj18 = { numIntangibles: length2 };
-    obj17.children = intl4.format(guildId(1114).t["4V/Mfi"], obj18);
-    const items5 = [closure_6(SectionTitle, obj17), closure_6(guildId(1176).Spacer, { size: 14 })];
+    obj17.children = intl4.format(guildId(1115).t["4V/Mfi"], obj18);
+    const items5 = [closure_6(SectionTitle, obj17), closure_6(guildId(1177).Spacer, { size: 14 })];
     const obj19 = {
       gap: 14,
       children: first2.map((benefit, index) =>
         timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index),
       ),
     };
-    items5[2] = closure_6(guildId(10475).GappedList, obj19);
+    items5[2] = closure_6(guildId(10478).GappedList, obj19);
     obj16.children = items5;
     tmp4Result4 = closure_8(closure_7, obj16);
   }
   items1[3] = tmp4Result4;
   obj5.children = items1;
-  return closure_8(guildId(10475).GappedList, obj5);
+  return closure_8(guildId(10478).GappedList, obj5);
 };

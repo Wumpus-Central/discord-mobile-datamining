@@ -142,8 +142,8 @@ function trackOnEmojiPickerOpened(current) {
   };
 }
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const EmojiIntention = fn(1374).EmojiIntention;
-const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
+const EmojiIntention = fn(1375).EmojiIntention;
+const ExpressionPickerViewType = fn(1218).ExpressionPickerViewType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/analytics/trackOnEmojiPickerOpened.tsx");
 

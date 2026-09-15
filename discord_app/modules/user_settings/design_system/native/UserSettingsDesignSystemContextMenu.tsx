@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemContextMenu.tsx
 import _mod12 from "../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4600 from "../../../../../_runtime/metro/04600__.js";
+import _modDef4603 from "../../../../../_runtime/metro/04603__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import _modDef7197 from "../../../../../_runtime/metro/07197__.js";
-import _modDef8070 from "../../../../../_runtime/metro/08070__.js";
-import _modDef11387 from "../../../../../_runtime/metro/11387__.js";
-import _modDef11694 from "../../../../../_runtime/metro/11694__.js";
-import _modDef12903 from "../../../../../_runtime/metro/12903__.js";
-import _modDef15871 from "../../../../../_runtime/metro/15871__.js";
-import _modDef15872 from "../../../../../_runtime/metro/15872__.js";
+import _modDef7201 from "../../../../../_runtime/metro/07201__.js";
+import _modDef8073 from "../../../../../_runtime/metro/08073__.js";
+import _modDef11391 from "../../../../../_runtime/metro/11391__.js";
+import _modDef11698 from "../../../../../_runtime/metro/11698__.js";
+import _modDef12908 from "../../../../../_runtime/metro/12908__.js";
+import _modDef15882 from "../../../../../_runtime/metro/15882__.js";
+import _modDef15883 from "../../../../../_runtime/metro/15883__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -110,14 +110,14 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [
-  _modDef12903,
-  _modDef7197,
-  _modDef8070,
-  _modDef11387,
-  _modDef4600,
-  _modDef15871,
-  _modDef15872,
-  _modDef11694,
+  _modDef12908,
+  _modDef7201,
+  _modDef8073,
+  _modDef11391,
+  _modDef4603,
+  _modDef15882,
+  _modDef15883,
+  _modDef11698,
 ];
 let closure_8 = [
   "Launch Probe!",
@@ -132,7 +132,7 @@ let closure_8 = [
   "Unleash Space Vortex",
   "Activate Cloaking Device",
 ];
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { flexDirection: "column", gap: 12, padding: 16 },
   card: { gap: 12 },

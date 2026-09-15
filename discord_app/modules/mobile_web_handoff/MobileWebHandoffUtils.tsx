@@ -1,5 +1,5 @@
 // discord_app/modules/mobile_web_handoff/MobileWebHandoffUtils.tsx
-import v1 from "../../../_runtime/01254_v1.js";
+import v1 from "../../../_runtime/01255_v1.js";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 

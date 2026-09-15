@@ -29,14 +29,14 @@ function ExternalPipViewVideoUnavailable(wasStream) {
   }
   const items = [tmp4Result];
   const obj3 = { variant: "text-md/semibold", style: tmp.unavailableText, lineClamp: 1, children: null };
-  const intl = tmp10(1114).intl;
+  const intl = tmp10(1115).intl;
   if (wasStream) {
-    let result = intl.formatToMarkdownString(tmp10(1114).t["1Ww0Hi"], {});
+    let result = intl.formatToMarkdownString(tmp10(1115).t["1Ww0Hi"], {});
   } else {
-    result = intl.string(tmp10(1114).t.Nzo5nz);
+    result = intl.string(tmp10(1115).t.Nzo5nz);
   }
   obj3.children = result;
-  items[1] = tmp8(tmp10(4632).Text, obj3);
+  items[1] = tmp8(tmp10(4635).Text, obj3);
   obj.children = items;
   return closure_1_12(timestampProducer, obj);
 }
@@ -68,7 +68,7 @@ function ExternalPipViewVideoStream(streamId) {
   first = 300;
   _slicedToArray = undefined;
   noop = undefined;
-  const surfaceDirectRendererExperiment = streamId(9735).useSurfaceDirectRendererExperiment(streamId.userId, {
+  const surfaceDirectRendererExperiment = streamId(9737).useSurfaceDirectRendererExperiment(streamId.userId, {
     location: "ExternalPipViewVideoStream",
   });
   [first, _slicedToArray] = noop.useState(undefined);
@@ -102,8 +102,8 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items2);
-  let obj = streamId(9735);
-  const token = streamId(4338).useToken(first(576).colors.TEXT_FEEDBACK_INFO);
+  let obj = streamId(9737);
+  const token = streamId(4341).useToken(first(576).colors.TEXT_FEEDBACK_INFO);
   value = closure_7.get();
   _slicedToArray = value;
   const items3 = [streamId, value];
@@ -115,7 +115,7 @@ function ExternalPipViewVideoStream(streamId) {
     }
   }, items3);
   const children = [
-    closure_11(first(9746), {
+    closure_11(first(9748), {
       useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
       style: memo,
       streamId,
@@ -138,10 +138,10 @@ function ExternalPipViewVideoStream(streamId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, StyleSheet, View: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const ParticipantTypes = fn(4657).ParticipantTypes;
+const ParticipantTypes = fn(4660).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = {
   container: null,
   video: null,

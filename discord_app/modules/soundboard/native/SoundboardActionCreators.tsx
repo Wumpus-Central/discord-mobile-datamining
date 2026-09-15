@@ -1,7 +1,7 @@
 // discord_app/modules/soundboard/native/SoundboardActionCreators.tsx
 import Constants from "../../../Constants.tsx";
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardAct
 export const openSoundboardSoundPickerActionSheet = function openSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, initialScrollLocation } = arg0);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(17171, dependencyMap.paths),
+    asyncRequireImpl(17209, dependencyMap.paths),
     "SoundboardSoundPickerActionSheet",
     { channel, analyticsSource, initialScrollLocation },
   );
@@ -28,7 +28,7 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = { channel, analyticsSource });
   const obj2 = { channel, analyticsSource };
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(17171, dependencyMap.paths),
+    asyncRequireImpl(17209, dependencyMap.paths),
     "SoundboardSoundPickerActionSheet",
     { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation },
   );

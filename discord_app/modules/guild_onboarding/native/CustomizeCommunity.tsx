@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding/native/CustomizeCommunity.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -25,31 +25,31 @@ function EmptyCustomizeCommunity(setTab) {
   setTab = setTab.setTab;
   importDefault = undefined;
   const tmp = closure_19();
-  const obj = setTab(4345);
+  const obj = setTab(4348);
   const tmp4 = importDefault;
-  const isThemeDarkResult = setTab(4345).isThemeDark(useThemeDefault());
+  const isThemeDarkResult = setTab(4348).isThemeDark(useThemeDefault());
   const items = [SelectedGuildStore];
   importDefault = setTab(504).useStateFromStores(items, () => guildId.getGuildId());
   const obj3 = { style: tmp.emptyContainer, children: null };
   const obj2 = setTab(504);
   const items1 = [
-    closure_16(closure_5, { style: tmp.emptyContainerImage, source: tmp4(isThemeDarkResult ? 11681 : 11682) }),
+    closure_16(closure_5, { style: tmp.emptyContainerImage, source: tmp4(isThemeDarkResult ? 11685 : 11686) }),
     ,
   ];
   const obj5 = { style: tmp.emptyContainerHeader, children: null };
-  const intl = tmp2(1114).intl;
-  obj5.children = intl.string(setTab(1114).t.leKHQz);
-  items1[1] = closure_16(setTab(1176).LegacyText, obj5);
+  const intl = tmp2(1115).intl;
+  obj5.children = intl.string(setTab(1115).t.leKHQz);
+  items1[1] = closure_16(setTab(1177).LegacyText, obj5);
   const obj6 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-  const intl2 = tmp2(1114).intl;
-  obj6.children = intl2.format(setTab(1114).t["jH+ktB"], {
+  const intl2 = tmp2(1115).intl;
+  obj6.children = intl2.format(setTab(1115).t["jH+ktB"], {
     onBrowseChannels() {
       if (null != closure_1) {
         setTab(constants.BROWSE);
       }
     },
   });
-  items1[2] = closure_16(setTab(4632).Text, obj6);
+  items1[2] = closure_16(setTab(4635).Text, obj6);
   obj3.children = items1;
   return closure_17(closure_4, obj3);
 }
@@ -155,13 +155,13 @@ function ConnectionsPrompt(guildId) {
       color: "mobile-text-heading-primary",
       children: null,
     };
-    const intl = tmp2(1114).intl;
-    obj3.children = intl.string(tmp2(1114).t.eDVMrA);
-    const items1 = [closure_16(tmp2(4632).Text, obj3), ,];
+    const intl = tmp2(1115).intl;
+    obj3.children = intl.string(tmp2(1115).t.eDVMrA);
+    const items1 = [closure_16(tmp2(4635).Text, obj3), ,];
     const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const intl2 = tmp2(1114).intl;
-    obj4.children = intl2.string(tmp2(1114).t.BozOXu);
-    items1[1] = closure_16(tmp2(4632).Text, obj4);
+    const intl2 = tmp2(1115).intl;
+    obj4.children = intl2.string(tmp2(1115).t.BozOXu);
+    items1[1] = closure_16(tmp2(4635).Text, obj4);
     const obj5 = {
       style: tmp.connectionsContainer,
       children: stateFromStores.map((connection, index) => {
@@ -236,7 +236,7 @@ function DropdownOption(option) {
     obj3.children = closure_16(EmojiDefault, obj5);
     tmp10Result = closure_16(closure_4, obj3);
   }
-  const items1 = [tmp10Result, closure_16(option(4632).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [tmp10Result, closure_16(option(4635).Text, { variant: "text-md/semibold", children: option.title })];
   obj2.children = items1;
   return closure_17(closure_4, obj2);
 }
@@ -296,7 +296,7 @@ function DropdownPrompt(guildId) {
   const handleSelectOption = _prompt(isNew[38])(guildId).handleSelectOption;
   const items1 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = stateFromStoresArray.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7238, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7242, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: _prompt.id,
       onSelect(arg0, arg1) {
@@ -450,13 +450,13 @@ function MultipleChoicePrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(7204);
+const GuildOnboardingPromptsConstants = fn(7208);
 ({ GuildOnboardingTab: closure_12, OnboardingPromptType: map1 } = GuildOnboardingPromptsConstants);
-const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
-const ReadStateTypes = fn(4818).ReadStateTypes;
+const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
+const ReadStateTypes = fn(4821).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   sheetTitle: null,
@@ -602,7 +602,7 @@ export default function CustomizeCommunity(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
   const tmp = closure_19();
-  const bottom = stateFromStores(1611)().bottom;
+  const bottom = stateFromStores(1612)().bottom;
   const items = [ReadStateStore];
   stateFromStores = guildId(504).useStateFromStores(items, () =>
     ReadStateStore.hasUnread(guildId, ReadStateTypes.GUILD_ONBOARDING_QUESTION),
@@ -617,7 +617,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11683)(guildId);
+  const tmp7 = stateFromStores(11687)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -636,13 +636,13 @@ export default function CustomizeCommunity(guildId) {
     () =>
       null != guildId
         ? () => {
-            guildId(7213).ackGuildFeature(
+            guildId(7217).ackGuildFeature(
               closure_1_0,
               constants.GUILD_ONBOARDING_QUESTION,
               GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0),
             );
-            const obj = guildId(7213);
-            const result = stateFromStores(7208).updateOnboardingResponses(closure_1_0);
+            const obj = guildId(7217);
+            const result = stateFromStores(7212).updateOnboardingResponses(closure_1_0);
           }
         : undefined,
     items3,
@@ -678,11 +678,11 @@ export default function CustomizeCommunity(guildId) {
         color: "mobile-text-heading-primary",
         children: null,
       };
-      const intl = tmp4(1114).intl;
+      const intl = tmp4(1115).intl;
       const obj10 = { count: newOnboardingPrompts.length + newAnswersCount };
-      obj9.children = intl.format(tmp4(1114).t.iB5Gqe, obj10);
+      obj9.children = intl.format(tmp4(1115).t.iB5Gqe, obj10);
       const items5 = [
-        closure_16(tmp4(4632).Text, obj9),
+        closure_16(tmp4(4635).Text, obj9),
         newOnboardingPrompts.map(callback),
         onboardingPromptsWithNewAnswers.map(callback),
       ];
@@ -701,13 +701,13 @@ export default function CustomizeCommunity(guildId) {
         color: "mobile-text-heading-primary",
         children: null,
       };
-      const intl2 = tmp4(1114).intl;
-      obj13.children = intl2.string(tmp4(1114).t.BGkaer);
-      const items7 = [closure_16(tmp4(4632).Text, obj13), ,];
+      const intl2 = tmp4(1115).intl;
+      obj13.children = intl2.string(tmp4(1115).t.BGkaer);
+      const items7 = [closure_16(tmp4(4635).Text, obj13), ,];
       const obj14 = { variant: "text-xs/medium", color: "text-muted", children: null };
-      const intl3 = tmp4(1114).intl;
-      obj14.children = intl3.string(tmp4(1114).t.r6Vm8T);
-      items7[1] = closure_16(tmp4(4632).Text, obj14);
+      const intl3 = tmp4(1115).intl;
+      obj14.children = intl3.string(tmp4(1115).t.r6Vm8T);
+      items7[1] = closure_16(tmp4(4635).Text, obj14);
       items7[2] = onboardingPrompts.map(callback);
       obj12.children = items7;
       tmp24Result3 = closure_17(closure_18, obj12);

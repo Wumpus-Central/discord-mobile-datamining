@@ -5,7 +5,7 @@ import timingPresets from "../../../../design/animation/reanimated/timing/timing
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-let TIMING_CONFIG = { duration: 1300, easing: fn(1176).STANDARD_EASING };
+let TIMING_CONFIG = { duration: 1300, easing: fn(1177).STANDARD_EASING };
 const __initData = {
   code: "function useChatPlaceholderAnimatedStylesTsx1(){const{visible,animated,useReducedMotion,withRepeat,withSequence,withTiming,timingNone,TIMING_CONFIG}=this.__closure;if(!visible){return{opacity:0};}else if(!animated||useReducedMotion){return{opacity:0.7};}return{opacity:withRepeat(withSequence(withTiming(0.3,timingNone),withTiming(0.7,TIMING_CONFIG),withTiming(0.3,TIMING_CONFIG)),-1)};}",
 };

@@ -30,7 +30,7 @@ import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import tracking_Tracking from "../../forums/tracking/Tracking.tsx";
-import _modDef11387 from "../../../../_runtime/metro/11387__.js";
+import _modDef11391 from "../../../../_runtime/metro/11391__.js";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
@@ -214,8 +214,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9615).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8037);
+let closure_5 = fn(9617).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8040);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1074);
 ({
@@ -286,7 +286,13 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "o" };
+          const obj3 = {
+            sourceType: "embed",
+            source: tmp8,
+            mediaType: "image",
+            mediaUrl: tmp8.url,
+            contentType: "Array",
+          };
           return obj3;
         }
       }
@@ -434,7 +440,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef11387;
+    tmp36Result = _modDef11391;
     obj3.icon = tmp36Result;
     t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();

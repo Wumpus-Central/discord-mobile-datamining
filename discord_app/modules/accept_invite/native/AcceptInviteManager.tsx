@@ -1,7 +1,7 @@
 // discord_app/modules/accept_invite/native/AcceptInviteManager.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import router_utils from "../../routing/router_utils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
@@ -15,7 +15,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7773).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7776).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1074);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -84,7 +84,7 @@ const prototype = function AcceptInviteManager() {
               }
               const obj = { location: str };
               FriendInviteUtils.acceptFriendInvite(invite, obj);
-              DispatcherDefault.wait(() => set(8864).clearDisplayedInvite());
+              DispatcherDefault.wait(() => set(8867).clearDisplayedInvite());
               flag = false;
             }
           }
@@ -138,7 +138,7 @@ const prototype = function AcceptInviteManager() {
           obj9 = InviteTypeUtils;
         }
         if (flag2) {
-          DispatcherDefault.wait(() => set(8864).clearDisplayedInvite());
+          DispatcherDefault.wait(() => set(8867).clearDisplayedInvite());
           flag = false;
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -149,7 +149,7 @@ const prototype = function AcceptInviteManager() {
             inviteInstanceId,
           };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(17416, dependencyMap.paths),
+            asyncRequireImpl(17454, dependencyMap.paths),
             obj4,
             ACCEPT_INVITE_MODAL_KEY,
           );

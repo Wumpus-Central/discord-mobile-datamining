@@ -1,6 +1,6 @@
 // discord_app/modules/safety_hub/native/AppealIngestionModalActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -12,7 +12,7 @@ export default {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId });
     const obj2 = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(12017, dependencyMap.paths),
+      asyncRequireImpl(12021, dependencyMap.paths),
       classificationId,
       APPEAL_INGESTION_MODAL_KEY,
     );

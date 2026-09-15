@@ -45,7 +45,7 @@ function getSubscriptionPlansLoaded() {
   }
   return obj.isLoadedForSKUs(tmp);
 }
-const ACTIVE_PREMIUM_SKUS = fn(1373).ACTIVE_PREMIUM_SKUS;
+const ACTIVE_PREMIUM_SKUS = fn(1374).ACTIVE_PREMIUM_SKUS;
 new LoggerDefault("useSubscriptionPlansLoaded");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/hooks/useSubscriptionPlansLoaded.tsx");

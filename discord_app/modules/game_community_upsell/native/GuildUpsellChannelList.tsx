@@ -11,11 +11,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(16362).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_8 = fn(16375).MAX_DISPLAYED_UPSELL_GUILDS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG },
   header: null,
@@ -70,35 +70,35 @@ const obj13 = { gap: nativeDefault.space.PX_4 };
 let items = [
   {
     id: "hangout",
-    title: fn(1114).t.ScXySs,
-    description: fn(1114).t.DSCqxM,
-    Icon: fn(5773).BumpingFistsSpotIllustration,
+    title: fn(1115).t.ScXySs,
+    description: fn(1115).t.DSCqxM,
+    Icon: fn(5777).BumpingFistsSpotIllustration,
   },
   ,
 ];
 const obj14 = {
   id: "hangout",
-  title: fn(1114).t.ScXySs,
-  description: fn(1114).t.DSCqxM,
-  Icon: fn(5773).BumpingFistsSpotIllustration,
+  title: fn(1115).t.ScXySs,
+  description: fn(1115).t.DSCqxM,
+  Icon: fn(5777).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",
-  title: fn(1114).t["F+MTAZ"],
-  description: fn(1114).t.srNlJw,
-  Icon: fn(5773).ChatControllersSpotIllustration,
+  title: fn(1115).t["F+MTAZ"],
+  description: fn(1115).t.srNlJw,
+  Icon: fn(5777).ChatControllersSpotIllustration,
 };
 const obj15 = {
   id: "gaming",
-  title: fn(1114).t["F+MTAZ"],
-  description: fn(1114).t.srNlJw,
-  Icon: fn(5773).ChatControllersSpotIllustration,
+  title: fn(1115).t["F+MTAZ"],
+  description: fn(1115).t.srNlJw,
+  Icon: fn(5777).ChatControllersSpotIllustration,
 };
 items[2] = {
   id: "hobbies",
-  title: fn(1114).t["0Ka6B5"],
-  description: fn(1114).t["5oGAp/"],
-  Icon: fn(5773).MiniaturesSpotIllustration,
+  title: fn(1115).t["0Ka6B5"],
+  description: fn(1115).t["5oGAp/"],
+  Icon: fn(5777).MiniaturesSpotIllustration,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");

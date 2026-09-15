@@ -37,13 +37,13 @@ function openIncodeAgeVerificationModal(arg0) {
   if (flag) {
     (async () => {
       closure_0 = tmp3;
-      await tmp3(5220).requestPermission(constants.CAMERA, { showAuthorizationError: true });
+      await tmp3(5223).requestPermission(constants.CAMERA, { showAuthorizationError: true });
       if (1 === tmp7) {
         dependencyMap = 0;
-        tmp3(8522).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
+        tmp3(8525).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
         closure_129_0();
         c4 = 3;
-        tmp3(8522);
+        tmp3(8525);
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c4 = 3;
@@ -56,7 +56,7 @@ function openIncodeAgeVerificationModal(arg0) {
           const v3 = 3;
           c4 = 1;
           return {
-            value: tmp3(4839).pushLazy(
+            value: tmp3(4842).pushLazy(
               v3(async () => {
                 await tmp2(paths[10])(paths[9], paths.paths);
                 closure_128_0 = value.default;
@@ -189,7 +189,7 @@ function showManualReviewFallbackModal(AUTOMATED_UNDERAGE_APPEALS, arg1) {
     const obj = require("useAlertStore");
   }
 }
-const AgeVerificationConstants = fn(8530);
+const AgeVerificationConstants = fn(8533);
 ({
   AGE_VERIFICATION_MODAL_KEY: hasOwnProperty,
   AGE_VERIFICATION_GET_STARTED_MODAL_KEY: metroRequire,
@@ -198,9 +198,9 @@ const AgeVerificationConstants = fn(8530);
   MANUAL_REVIEW_FALLBACK_ALERT_KEY: closure_9,
   VerificationVendorName: c10,
 } = AgeVerificationConstants);
-let closure_11 = fn(8532).AGE_VERIFICATION_INCODE_PATH;
-const NativePermissionTypes = fn(4846).NativePermissionTypes;
-const SafetyToastType = fn(8517).SafetyToastType;
+let closure_11 = fn(8535).AGE_VERIFICATION_INCODE_PATH;
+const NativePermissionTypes = fn(4849).NativePermissionTypes;
+const SafetyToastType = fn(8520).SafetyToastType;
 const jsx = fn(21).jsx;
 let c17 = false;
 const size = fn(2);
@@ -215,16 +215,16 @@ export default {
     let prop;
     UserStore = undefined;
     if (obj.isMetaQuest()) {
-      tmp(4982).openAlert(closure_7, jsx(onClose(8544), {}), onClose);
-      const tmpResult = tmp(4982);
+      tmp(4985).openAlert(closure_7, jsx(onClose(8547), {}), onClose);
+      const tmpResult = tmp(4985);
     } else {
-      let isAgeVerifiedResult = tmp(4849).isAgeVerified();
+      let isAgeVerifiedResult = tmp(4852).isAgeVerified();
       if (isAgeVerifiedResult) {
-        isAgeVerifiedResult = tmp(5504).hasAgeGatedFeatures();
-        const tmpResult7 = tmp(5504);
+        isAgeVerifiedResult = tmp(5508).hasAgeGatedFeatures();
+        const tmpResult7 = tmp(5508);
       }
       dependencyMap = isAgeVerifiedResult;
-      const tmpResult6 = tmp(4849);
+      const tmpResult6 = tmp(4852);
       if (tmpResult8.isAgeVerificationIncodeEnabled(entryPoint)) {
         const currentUser = UserStore.getCurrentUser();
         prop = undefined;
@@ -283,7 +283,7 @@ export default {
                     entryPoint = tmp4;
                     dependencyMap = 1;
                     v3 = 1;
-                    const obj5 = { value: entryPoint(8553).shouldShowManualReviewFallback(entryPoint), done: false };
+                    const obj5 = { value: entryPoint(8556).shouldShowManualReviewFallback(entryPoint), done: false };
                     return obj5;
                   }
                 } else if (arg0 === 1) {
@@ -297,7 +297,7 @@ export default {
                   if (value) {
                     showManualReviewFallbackModal(closure_129_0, closure_129_1);
                   } else {
-                    onClose(4839).pushLazy(
+                    onClose(4842).pushLazy(
                       v3(function* () {
                         yield tmp2(paths[10])(paths[26], paths.paths);
                         closure_128_0 = value.default;
@@ -316,7 +316,7 @@ export default {
                       {},
                       closure_1_6,
                     );
-                    const obj = onClose(4839);
+                    const obj = onClose(4842);
                   }
                   v3 = 3;
                 }
@@ -327,9 +327,9 @@ export default {
             }
           })();
         } else {
-          UserStore = tmp(8696).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
-          const tmpResult10 = tmp(8696);
-          onClose(4839).pushLazy(
+          UserStore = tmp(8699).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
+          const tmpResult10 = tmp(8699);
+          onClose(4842).pushLazy(
             prop(function* () {
               yield tmp2(paths[10])(paths[28], paths.paths);
               closure_128_0 = value.default;
@@ -340,13 +340,13 @@ export default {
             {},
             closure_6,
           );
-          const obj7 = onClose(4839);
+          const obj7 = onClose(4842);
         }
-        tmpResult9 = tmp(8547);
+        tmpResult9 = tmp(8550);
       }
-      tmpResult8 = tmp(8545);
+      tmpResult8 = tmp(8548);
     }
-    obj = entryPoint(1608);
+    obj = entryPoint(1609);
   },
   showManualReviewWebview(verification_webview_url) {
     return showAgeVerification({

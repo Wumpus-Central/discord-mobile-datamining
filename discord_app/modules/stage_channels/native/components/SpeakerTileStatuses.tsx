@@ -1,8 +1,8 @@
 // discord_app/modules/stage_channels/native/components/SpeakerTileStatuses.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef7070 from "../../../../../_runtime/metro/07070__.js";
-import _modDef10181 from "../../../../../_runtime/metro/10181__.js";
+import _modDef7074 from "../../../../../_runtime/metro/07074__.js";
+import _modDef10183 from "../../../../../_runtime/metro/10183__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
@@ -11,7 +11,7 @@ import StageChannelRoleStore from "../../StageChannelRoleStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
 let size = {
   position: "absolute",
@@ -70,15 +70,15 @@ const memoResult = noop.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10136);
+    let tmp5 = channelId(10138);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9756);
+    tmp5 = channelId(9758);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9757);
+      tmp5 = channelId(9759);
       flag3 = false;
     }
   }
@@ -89,13 +89,13 @@ const memoResult = noop.memo((userId) => {
     obj3.style = items4;
     const obj4 = {
       source: tmp5,
-      size: tmp2(1176).Icon.Sizes.SMALL,
+      size: tmp2(1177).Icon.Sizes.SMALL,
       color: channelId(576).unsafe_rawColors.BLACK,
       disableColor: flag3,
     };
-    obj3.children = jsx(tmp2(1176).Icon, {
+    obj3.children = jsx(tmp2(1177).Icon, {
       source: tmp5,
-      size: tmp2(1176).Icon.Sizes.SMALL,
+      size: tmp2(1177).Icon.Sizes.SMALL,
       color: channelId(576).unsafe_rawColors.BLACK,
       disableColor: flag3,
     });
@@ -115,17 +115,17 @@ export const ModeratorStatus = noop.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10180);
+    tmp4 = channelId(10182);
   }
   let tmp6 = null;
   if (null != tmp4) {
     const obj2 = { style: null, children: null };
     const items2 = [tmp.moderatorStatusWrapper, userId.style];
     obj2.style = items2;
-    const obj3 = { source: tmp4, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
-    obj2.children = jsx(tmp2(1176).Icon, {
+    const obj3 = { source: tmp4, size: tmp2(1177).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
+    obj2.children = jsx(tmp2(1177).Icon, {
       source: tmp4,
-      size: tmp2(1176).Icon.Sizes.SMALL,
+      size: tmp2(1177).Icon.Sizes.SMALL,
       color: channelId(576).unsafe_rawColors.BLACK,
     });
     tmp6 = <View style={null}>{null}</View>;
@@ -136,12 +136,12 @@ export const BlockedStatus = function BlockedStatus() {
   const tmp = closure_8();
   return jsx(native.Icon, {
     style: closure_8().restricted,
-    source: _modDef10181,
+    source: _modDef10183,
     size: native.Icon.Sizes.EXTRA_SMALL,
     color: nativeDefault.unsafe_rawColors.RED_400,
   });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef7070, size: native.Icon.Sizes.EXTRA_SMALL });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef7074, size: native.Icon.Sizes.EXTRA_SMALL });
 };

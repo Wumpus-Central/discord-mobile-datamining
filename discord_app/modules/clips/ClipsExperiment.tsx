@@ -6,8 +6,8 @@ import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1373).PremiumTypes;
-const ApexExperiment = fn(1433);
+const PremiumTypes = fn(1374).PremiumTypes;
+const ApexExperiment = fn(1434);
 const obj2 = {
   kind: "user",
   name: "2026-03-clips-experiment",

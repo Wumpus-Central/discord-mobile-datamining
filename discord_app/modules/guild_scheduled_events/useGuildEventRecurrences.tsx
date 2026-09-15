@@ -25,12 +25,12 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(9795);
+      const tmpResult = tmp(9797);
       let _Date = Date;
-      let rRule = tmp(9795).getRRule(byWeekday);
+      let rRule = tmp(9797).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(9795);
+      const tmpResult2 = tmp(9797);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];
@@ -56,8 +56,8 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
       if (null != closure_1) {
         const mapped = first.map((getTime) => {
           const time = getTime.getTime();
-          const rounded = Math.floor(time / closure_1_1(1090).Millis.SECOND);
-          return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1090).Millis.SECOND);
+          const rounded = Math.floor(time / closure_1_1(1091).Millis.SECOND);
+          return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1091).Millis.SECOND);
         });
         const guildEventUserCounts = GuildScheduledEventManagerDefault.getGuildEventUserCounts(tmp, closure_0, mapped);
       }

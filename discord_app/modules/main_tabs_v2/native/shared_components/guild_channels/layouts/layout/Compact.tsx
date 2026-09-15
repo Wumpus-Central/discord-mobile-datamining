@@ -38,11 +38,11 @@ const obj2 = {
   paddingPanels: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 },
   paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 },
 };
-CHANNEL_LIST_STYLES_COMPACT.voiceOrStageSummaryRow = { size: 24, avatarSize: fn(1176).AvatarSizes.XSMALL };
+CHANNEL_LIST_STYLES_COMPACT.voiceOrStageSummaryRow = { size: 24, avatarSize: fn(1177).AvatarSizes.XSMALL };
 CHANNEL_LIST_STYLES_COMPACT.channelName = { height: 20, text: { variant: "redesign/channel-title/semibold" } };
-const obj3 = { size: 24, avatarSize: fn(1176).AvatarSizes.XSMALL };
+const obj3 = { size: 24, avatarSize: fn(1177).AvatarSizes.XSMALL };
 CHANNEL_LIST_STYLES_COMPACT.messagePreview = {
-  messageTypeIconSize: fn(1176).IconSizes.EXTRA_SMALL,
+  messageTypeIconSize: fn(1177).IconSizes.EXTRA_SMALL,
   messageTypeIconSizeNew: "xxs",
   height: 16,
   text: { variant: "text-xs/medium" },
@@ -51,16 +51,16 @@ CHANNEL_LIST_STYLES_COMPACT.messagePreview = {
 CHANNEL_LIST_STYLES_COMPACT.timestamp = { text: { variant: "text-xs/medium" } };
 CHANNEL_LIST_STYLES_COMPACT.inviteRow = { text: { variant: "text-sm/semibold" } };
 const obj4 = {
-  messageTypeIconSize: fn(1176).IconSizes.EXTRA_SMALL,
+  messageTypeIconSize: fn(1177).IconSizes.EXTRA_SMALL,
   messageTypeIconSizeNew: "xxs",
   height: 16,
   text: { variant: "text-xs/medium" },
   margin: { marginTop: 0 },
 };
 CHANNEL_LIST_STYLES_COMPACT.icon = {
-  avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(5665).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(5665).GuildIconSizes.XXSMALL_12,
+  avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32,
+  guildIconSize: fn(5669).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(5669).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -70,9 +70,9 @@ CHANNEL_LIST_STYLES_COMPACT.unreadBadge = { size: 8, position: { left: 4 }, posi
 CHANNEL_LIST_STYLES_COMPACT.mentionBadge = { position: { top: 28 }, positionThread: { top: 20 } };
 CHANNEL_LIST_STYLES_COMPACT.category = { height: 30, margin: { marginTop: 16 }, text: { size: 14 } };
 const obj5 = {
-  avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(5665).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(5665).GuildIconSizes.XXSMALL_12,
+  avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32,
+  guildIconSize: fn(5669).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(5669).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -82,7 +82,7 @@ CHANNEL_LIST_STYLES_COMPACT.typing = {
   position: { top: 3, left: 3 },
   positionThread: { top: -5, left: -16 },
   typingIndicator: { position: { top: 20, left: 10 } },
-  avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32,
+  avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32,
 };
 CHANNEL_LIST_STYLES_COMPACT.activeThreadCount = { text: { variant: "text-xs/bold" } };
 const obj7 = {
@@ -94,9 +94,9 @@ const obj6 = {
   position: { top: 3, left: 3 },
   positionThread: { top: -5, left: -16 },
   typingIndicator: { position: { top: 20, left: 10 } },
-  avatarSize: fn(1176).AvatarSizes.REFRESH_MEDIUM_32,
+  avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32,
 };
-obj7.icon = { size: fn(1176).IconSizes.EXTRA_SMALL, gameSize: fn(7275).GameIconSizes.SIZE_24 };
+obj7.icon = { size: fn(1177).IconSizes.EXTRA_SMALL, gameSize: fn(7279).GameIconSizes.SIZE_24 };
 CHANNEL_LIST_STYLES_COMPACT.joinVoiceButton = obj7;
 const obj9 = { left: 38, startAndEndHeight: 15, transform: null, topOffset: -2 };
 const items = [{ translateY: 10 }];
@@ -110,7 +110,7 @@ const obj10 = {
   container: { paddingThread: { paddingLeft: 8 } },
   unreadBadge: { positionThread: { left: 4 } },
 };
-const obj8 = { size: fn(1176).IconSizes.EXTRA_SMALL, gameSize: fn(7275).GameIconSizes.SIZE_24 };
+const obj8 = { size: fn(1177).IconSizes.EXTRA_SMALL, gameSize: fn(7279).GameIconSizes.SIZE_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Compact.tsx",

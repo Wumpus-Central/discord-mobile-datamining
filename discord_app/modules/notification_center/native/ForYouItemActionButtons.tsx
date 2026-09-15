@@ -27,7 +27,7 @@ function focusChatInput(channelId) {
   }
   obj = tmp;
   const timerId = setTimeout(() => {
-    const ComponentDispatch = other_user(1109).ComponentDispatch;
+    const ComponentDispatch = other_user(1110).ComponentDispatch;
     return ComponentDispatch.dispatch(constants.TEXTAREA_FOCUS, obj);
   }, 0);
 }
@@ -278,7 +278,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let value = createStyles.createStyles({
   buttonsContainer: { flexDirection: "row", marginTop: 8 },
   actionButtonsContainer: { flexDirection: "row", position: "absolute", left: 0 },
@@ -360,7 +360,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
     onSoftAckItem(closure_0);
   }, items1);
   let obj2 = require("canReplyToMessage");
-  sharedValue = tmp2(4373).useSharedValue(false);
+  sharedValue = tmp2(4376).useSharedValue(false);
   const items2 = [forceHoistItem, sharedValue, other_user, id, arg6];
   const callback1 = noop.useCallback(() => {
     const obj2 = { userId: id, applicationId: null, location: null, onConfirm: null };
@@ -373,13 +373,13 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
     obj2.onConfirm = function onConfirm() {
       const user = notification_center_v2.getUser(id);
       if (null != user) {
-        const intl = closure_0(1114).intl;
+        const intl = closure_0(1115).intl;
         let username = user.globalName;
         if (username == null) {
           username = user.username;
         }
         const obj = { username };
-        closure_1_5(intl.format(closure_0(1114).t["5Uzkdp"], obj));
+        closure_1_5(intl.format(closure_0(1115).t["5Uzkdp"], obj));
       }
       const result = sharedValue.set(true);
       other_user.enableBadge = false;
@@ -410,8 +410,8 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(13939)({
-        payload: closure_1(4616)("https://discord.com/channels/@me/" + channelId).payload,
+      closure_1(13944)({
+        payload: closure_1(4619)("https://discord.com/channels/@me/" + channelId).payload,
         safe: true,
         navigationReplace: false,
       });
@@ -423,7 +423,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
       }
       obj = tmp3;
       const timerId = setTimeout(() => {
-        const ComponentDispatch = other_user(1109).ComponentDispatch;
+        const ComponentDispatch = other_user(1110).ComponentDispatch;
         return ComponentDispatch.dispatch(constants.TEXTAREA_FOCUS, obj);
       }, 0);
     });
@@ -515,7 +515,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
     }
     obj = tmp2;
     const timerId = setTimeout(() => {
-      const ComponentDispatch = other_user(1109).ComponentDispatch;
+      const ComponentDispatch = other_user(1110).ComponentDispatch;
       return ComponentDispatch.dispatch(constants.TEXTAREA_FOCUS, obj);
     }, 0);
   }, items8);
@@ -523,94 +523,94 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
     let obj3 = { actionButtons: [] };
     return obj3;
   } else {
-    if (other_user.type !== tmp2(7742).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
-      if (other_user.type !== tmp2(7742).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-        if (other_user.type !== tmp2(7742).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
-          if (other_user.type === tmp2(7742).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
+    if (other_user.type !== tmp2(7745).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
+      if (other_user.type !== tmp2(7745).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+        if (other_user.type !== tmp2(7745).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
+          if (other_user.type === tmp2(7745).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
             let obj4 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             let obj5 = { id: "view_friend_requests", text: null, variant: "secondary", size: "md", onPress: null };
-            const intl14 = tmp2(1114).intl;
-            obj5.text = intl14.string(tmp2(1114).t["lMR96+"]);
+            const intl14 = tmp2(1115).intl;
+            obj5.text = intl14.string(tmp2(1115).t["lMR96+"]);
             obj5.onPress = callback3;
             const items9 = [obj5];
             obj4.actionButtons = items9;
             let obj6 = { name: constants2.ACTION, label: null };
-            const intl15 = tmp2(1114).intl;
-            obj6.label = intl15.string(tmp2(1114).t["lMR96+"]);
+            const intl15 = tmp2(1115).intl;
+            obj6.label = intl15.string(tmp2(1115).t["lMR96+"]);
             const items10 = [obj6];
             obj4.accessibilityActions = items10;
             obj4.onAccessibilityAction = callback3;
             return obj4;
-          } else if (other_user.type === tmp2(7742).NotificationCenterItems.GO_LIVE_PUSH) {
+          } else if (other_user.type === tmp2(7745).NotificationCenterItems.GO_LIVE_PUSH) {
             const obj7 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             const obj8 = { id: "join_stream", text: null, variant: "secondary", size: "md", onPress: null };
-            const intl12 = tmp2(1114).intl;
-            obj8.text = intl12.string(tmp2(1114).t["Pqj7h+"]);
+            const intl12 = tmp2(1115).intl;
+            obj8.text = intl12.string(tmp2(1115).t["Pqj7h+"]);
             obj8.onPress = callback;
             const items11 = [obj8];
             obj7.actionButtons = items11;
             const obj9 = { name: constants2.ACTION, label: null };
-            const intl13 = tmp2(1114).intl;
-            obj9.label = intl13.string(tmp2(1114).t["Pqj7h+"]);
+            const intl13 = tmp2(1115).intl;
+            obj9.label = intl13.string(tmp2(1115).t["Pqj7h+"]);
             const items12 = [obj9];
             obj7.accessibilityActions = items12;
             obj7.onAccessibilityAction = callback;
             return obj7;
           } else {
-            if (other_user.type !== tmp2(7742).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-              if (other_user.type !== tmp2(7742).NotificationCenterItems.DM_FRIEND_NUDGE) {
-                if (other_user.type !== tmp2(7742).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
-                  if (other_user.type !== tmp2(7742).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
-                    if (other_user.type === tmp2(7742).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
+            if (other_user.type !== tmp2(7745).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+              if (other_user.type !== tmp2(7745).NotificationCenterItems.DM_FRIEND_NUDGE) {
+                if (other_user.type !== tmp2(7745).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
+                  if (other_user.type !== tmp2(7745).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
+                    if (other_user.type === tmp2(7745).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
                       const obj10 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                       const obj11 = { id: "add_friend", text: null, variant: "secondary", size: "md", onPress: null };
-                      const intl8 = tmp2(1114).intl;
-                      obj11.text = intl8.string(tmp2(1114).t["boL/YX"]);
+                      const intl8 = tmp2(1115).intl;
+                      obj11.text = intl8.string(tmp2(1115).t["boL/YX"]);
                       obj11.onPress = callback5;
                       const items13 = [obj11];
                       obj10.actionButtons = items13;
                       const obj12 = { name: constants2.ACTION, label: null };
-                      const intl9 = tmp2(1114).intl;
-                      obj12.label = intl9.string(tmp2(1114).t["boL/YX"]);
+                      const intl9 = tmp2(1115).intl;
+                      obj12.label = intl9.string(tmp2(1115).t["boL/YX"]);
                       const items14 = [obj12];
                       obj10.accessibilityActions = items14;
                       obj10.onAccessibilityAction = callback5;
                       return obj10;
-                    } else if (other_user.type === tmp2(7742).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+                    } else if (other_user.type === tmp2(7745).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
                       const obj13 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
                       const obj14 = { id: "join_event", text: null, variant: "secondary", size: "md", onPress: null };
-                      const intl6 = tmp2(1114).intl;
-                      obj14.text = intl6.string(tmp2(1114).t.hRKdcn);
+                      const intl6 = tmp2(1115).intl;
+                      obj14.text = intl6.string(tmp2(1115).t.hRKdcn);
                       obj14.onPress = callback;
                       const items15 = [obj14];
                       obj13.actionButtons = items15;
                       const obj15 = { name: constants2.ACTION, label: null };
-                      const intl7 = tmp2(1114).intl;
-                      obj15.label = intl7.string(tmp2(1114).t.hRKdcn);
+                      const intl7 = tmp2(1115).intl;
+                      obj15.label = intl7.string(tmp2(1115).t.hRKdcn);
                       const items16 = [obj15];
                       obj13.accessibilityActions = items16;
                       obj13.onAccessibilityAction = callback;
                       return obj13;
-                    } else if (other_user.type === tmp2(7742).NotificationCenterItems.LIFECYCLE_ITEM) {
+                    } else if (other_user.type === tmp2(7745).NotificationCenterItems.LIFECYCLE_ITEM) {
                       const item_enum = other_user.item_enum;
-                      if (tmp2(7742).ItemEnum.UPDATE_PROFILE === item_enum) {
-                        const intl5 = tmp2(1114).intl;
-                        let stringResult = intl5.string(tmp2(1114).t.zMRcWL);
+                      if (tmp2(7745).ItemEnum.UPDATE_PROFILE === item_enum) {
+                        const intl5 = tmp2(1115).intl;
+                        let stringResult = intl5.string(tmp2(1115).t.zMRcWL);
                         let str = "update_profile";
-                      } else if (tmp2(7742).ItemEnum.FIND_FRIENDS === item_enum) {
-                        const intl4 = tmp2(1114).intl;
-                        stringResult = intl4.string(tmp2(1114).t["vwL/4s"]);
+                      } else if (tmp2(7745).ItemEnum.FIND_FRIENDS === item_enum) {
+                        const intl4 = tmp2(1115).intl;
+                        stringResult = intl4.string(tmp2(1115).t["vwL/4s"]);
                         str = "find_friends";
-                      } else if (tmp2(7742).ItemEnum.ADD_FRIEND === item_enum) {
-                        const intl3 = tmp2(1114).intl;
-                        stringResult = intl3.string(tmp2(1114).t["boL/YX"]);
+                      } else if (tmp2(7745).ItemEnum.ADD_FRIEND === item_enum) {
+                        const intl3 = tmp2(1115).intl;
+                        stringResult = intl3.string(tmp2(1115).t["boL/YX"]);
                         str = "add_friend";
                       } else {
                         str = null;
                         stringResult = null;
-                        if (tmp2(7742).ItemEnum.FIRST_MESSAGE === item_enum) {
-                          const intl19 = tmp2(1114).intl;
-                          stringResult = intl19.string(tmp2(1114).t["GuUH7/"]);
+                        if (tmp2(7745).ItemEnum.FIRST_MESSAGE === item_enum) {
+                          const intl19 = tmp2(1115).intl;
+                          stringResult = intl19.string(tmp2(1115).t["GuUH7/"]);
                           str = "send_message";
                         }
                       }
@@ -636,9 +636,9 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
                       const obj19 = { actionButtons: [] };
                       obj16 = obj19;
                     } else {
-                      if (other_user.type !== tmp2(7742).NotificationCenterItems.RECENT_MENTION) {
-                        if (other_user.type !== tmp2(7742).NotificationCenterItems.REPLY_MENTION) {
-                          if (other_user.type === tmp2(7742).NotificationCenterItems.TRENDING_CONTENT) {
+                      if (other_user.type !== tmp2(7745).NotificationCenterItems.RECENT_MENTION) {
+                        if (other_user.type !== tmp2(7745).NotificationCenterItems.REPLY_MENTION) {
+                          if (other_user.type === tmp2(7745).NotificationCenterItems.TRENDING_CONTENT) {
                             const obj20 = {
                               actionButtons: null,
                               accessibilityActions: null,
@@ -651,14 +651,14 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
                               size: "md",
                               onPress: null,
                             };
-                            let intl = tmp2(1114).intl;
-                            obj21.text = intl.string(tmp2(1114).t.k0Q31F);
+                            let intl = tmp2(1115).intl;
+                            obj21.text = intl.string(tmp2(1115).t.k0Q31F);
                             obj21.onPress = callback7;
                             const items19 = [obj21];
                             obj20.actionButtons = items19;
                             const obj22 = { name: constants2.ACTION, label: null };
-                            const intl2 = tmp2(1114).intl;
-                            obj22.label = intl2.string(tmp2(1114).t.k0Q31F);
+                            const intl2 = tmp2(1115).intl;
+                            obj22.label = intl2.string(tmp2(1115).t.k0Q31F);
                             const items20 = [obj22];
                             obj20.accessibilityActions = items20;
                             obj20.onAccessibilityAction = callback7;
@@ -679,14 +679,14 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
                             size: "md",
                             onPress: null,
                           };
-                          const intl17 = tmp2(1114).intl;
-                          obj25.text = intl17.string(tmp2(1114).t.vBq3iT);
+                          const intl17 = tmp2(1115).intl;
+                          obj25.text = intl17.string(tmp2(1115).t.vBq3iT);
                           obj25.onPress = callback6;
                           const items21 = [obj25];
                           obj24.actionButtons = items21;
                           const obj26 = { name: constants2.ACTION, label: null };
-                          const intl18 = tmp2(1114).intl;
-                          obj26.label = intl18.string(tmp2(1114).t.vBq3iT);
+                          const intl18 = tmp2(1115).intl;
+                          obj26.label = intl18.string(tmp2(1115).t.vBq3iT);
                           const items22 = [obj26];
                           obj24.accessibilityActions = items22;
                           obj24.onAccessibilityAction = callback6;
@@ -701,14 +701,14 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
             }
             const obj28 = { actionButtons: null, accessibilityActions: null, onAccessibilityAction: null };
             const obj29 = { id: "send_message", text: null, variant: "secondary", size: "md", onPress: null };
-            const intl10 = tmp2(1114).intl;
-            obj29.text = intl10.string(tmp2(1114).t["GuUH7/"]);
+            const intl10 = tmp2(1115).intl;
+            obj29.text = intl10.string(tmp2(1115).t["GuUH7/"]);
             obj29.onPress = callback4;
             const items23 = [obj29];
             obj28.actionButtons = items23;
             const obj30 = { name: constants2.ACTION, label: null };
-            const intl11 = tmp2(1114).intl;
-            obj30.label = intl11.string(tmp2(1114).t["GuUH7/"]);
+            const intl11 = tmp2(1115).intl;
+            obj30.label = intl11.string(tmp2(1115).t["GuUH7/"]);
             const items24 = [obj30];
             obj28.accessibilityActions = items24;
             obj28.onAccessibilityAction = callback4;
@@ -726,20 +726,20 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
       compactMode,
     };
     obj31.actionsNode = callback2(IncomingFriendRequestActions, obj32);
-    if (other_user.type === tmp2(7742).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+    if (other_user.type === tmp2(7745).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
       const obj33 = { name: constants2.WAVE, label: null };
-      const intl16 = tmp2(1114).intl;
-      obj33.label = intl16.string(tmp2(1114).t.n8nU4W);
+      const intl16 = tmp2(1115).intl;
+      obj33.label = intl16.string(tmp2(1115).t.n8nU4W);
       const items25 = [obj33];
       let items26 = items25;
     } else {
       const obj34 = { name: constants2.ACCEPT, label: null };
-      const intl20 = tmp2(1114).intl;
-      obj34.label = intl20.string(tmp2(1114).t.zf5jU5);
+      const intl20 = tmp2(1115).intl;
+      obj34.label = intl20.string(tmp2(1115).t.zf5jU5);
       items26 = [obj34];
       const obj35 = { name: constants2.IGNORE, label: null };
-      const intl21 = tmp2(1114).intl;
-      obj35.label = intl21.string(tmp2(1114).t.EBN847);
+      const intl21 = tmp2(1115).intl;
+      obj35.label = intl21.string(tmp2(1115).t.EBN847);
       items26[1] = obj35;
     }
     obj31.accessibilityActions = items26;
@@ -755,7 +755,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
     };
     return obj31;
   }
-  const tmp2Result = tmp2(4373);
+  const tmp2Result = tmp2(4376);
 };
 export const ForYouItemActionButtons = function ForYouItemActionButtons(arg0) {
   ({

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Powerups from "../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import LinearGradientDefault from "../../../../_runtime/05068_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05071_LinearGradient.js";
 import GuildPowerupsActionCreators from "../../premium/powerups/GuildPowerupsActionCreators.tsx";
 import useGetGuildPowerupBannerImageDefault from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
 import GuildPowerupsImageDefault from "../../premium/powerups/native/GuildPowerupsImage.tsx";
@@ -18,7 +18,7 @@ const end = { x: 1, y: 0.5 };
 const colors = ["rgba(88, 101, 242, 0.3)", "rgba(22, 26, 138, 0.3)"];
 const colors2 = ["rgba(151, 151, 159, 0.04)", "rgba(151, 151, 159, 0.04)"];
 let c12 = "#29292D";
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = {
   card: {
     borderRadius: nativeDefault.radii.xl,
@@ -103,26 +103,26 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   const items5 = [closure_6(closure_4, obj7), ,];
   const obj9 = { spacing: nativeDefault.space.PX_8, style: tmp.textBlock, children: null };
   const obj10 = { variant: "heading-xl/semibold", color: "text-strong", style: tmp.centerText, children: null };
-  const intl = tmp2(1114).intl;
-  obj10.children = intl.string(guildId(1114).t["2QmKZ2"]);
-  const items6 = [closure_6(guildId(4632).Text, obj10)];
+  const intl = tmp2(1115).intl;
+  obj10.children = intl.string(guildId(1115).t["2QmKZ2"]);
+  const items6 = [closure_6(guildId(4635).Text, obj10)];
   const obj11 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
   const items7 = [,];
   ({ centerText: arr8[0], body: arr8[1] } = tmp);
   obj11.style = items7;
-  const intl2 = tmp2(1114).intl;
-  obj11.children = intl2.string(guildId(1114).t.Tg0fDm);
-  items6[1] = closure_6(guildId(4632).Text, obj11);
+  const intl2 = tmp2(1115).intl;
+  obj11.children = intl2.string(guildId(1115).t.Tg0fDm);
+  items6[1] = closure_6(guildId(4635).Text, obj11);
   obj9.children = items6;
-  items5[1] = closure_7(guildId(5054).Stack, obj9);
+  items5[1] = closure_7(guildId(5057).Stack, obj9);
   const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
-  const intl3 = tmp2(1114).intl;
-  obj12.text = intl3.string(guildId(1114).t.kMRDWs);
-  obj12.icon = closure_6(guildId(16315).BoostTier2Icon, { color: "white" });
+  const intl3 = tmp2(1115).intl;
+  obj12.text = intl3.string(guildId(1115).t.kMRDWs);
+  obj12.icon = closure_6(guildId(16328).BoostTier2Icon, { color: "white" });
   obj12.onPress = guildId.onUnlockPress;
-  items5[2] = closure_6(guildId(5056).Button, obj12);
+  items5[2] = closure_6(guildId(5059).Button, obj12);
   obj6.children = items5;
-  items4[3] = closure_7(guildId(5054).Stack, obj6);
+  items4[3] = closure_7(guildId(5057).Stack, obj6);
   obj2.children = items4;
   return closure_7(closure_4, obj2);
 }

@@ -1,5 +1,5 @@
 // discord_app/modules/reactions/native/ReactionUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ReactionUtils from "../ReactionUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
@@ -7,8 +7,8 @@ import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackType
 import AppAnalyticsUtilsDefault from "../../app_analytics/AppAnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import ReactionActionCreators from "../ReactionActionCreators.tsx";
-import _modDef11402 from "../../../../_runtime/metro/11402__.js";
-import _modDef11403 from "../../../../_runtime/metro/11403__.js";
+import _modDef11406 from "../../../../_runtime/metro/11406__.js";
+import _modDef11407 from "../../../../_runtime/metro/11407__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -19,14 +19,14 @@ const require = globalThis.__r;
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, AnalyticsPages: closure_8, AnalyticsSections: closure_9 } = Constants);
-const EmojiIntention = fn(1374).EmojiIntention;
+const EmojiIntention = fn(1375).EmojiIntention;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(7865).ReactionTypes.NORMAL] = _modDef11402;
-obj[fn(7865).ReactionTypes.BURST] = _modDef11403;
+obj[fn(7868).ReactionTypes.NORMAL] = _modDef11406;
+obj[fn(7868).ReactionTypes.BURST] = _modDef11407;
 let obj2 = {};
-obj2[fn(7865).ReactionTypes.NORMAL] = fn(8883).ReactionIcon;
-obj2[fn(7865).ReactionTypes.BURST] = fn(9503).SuperReactionIcon;
+obj2[fn(7868).ReactionTypes.NORMAL] = fn(8886).ReactionIcon;
+obj2[fn(7868).ReactionTypes.BURST] = fn(9505).SuperReactionIcon;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 
@@ -37,7 +37,7 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(onDi
     if (!obj.isPremium(currentUser)) {
       const obj3 = { onDismiss };
       openLazyResult = ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11271, dependencyMap.paths),
+        asyncRequireImpl(11275, dependencyMap.paths),
         "SuperReactionUpsellActionSheet",
         obj3,
       );
@@ -69,7 +69,7 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id)
           require("ActionSheetActionCreators").openLazy(
             tmp13(ReactionTypes[14])(ReactionTypes[13], ReactionTypes.paths),
             "SuperReactionUpsellActionSheet",
-            { onDismiss: "r" },
+            { onDismiss: "Array" },
           );
           const obj3 = require("ActionSheetActionCreators");
         }
@@ -159,14 +159,14 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     const obj4 = { messageId, channelId, emoji: isPoll.emoji };
     const obj6 = ActionSheetActionCreatorsDefault;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl(11389, dependencyMap.paths), "MessageReactions", obj4);
-    const tmp19 = asyncRequireImpl(11389, dependencyMap.paths);
+    obj6.openLazy(asyncRequireImpl(11393, dependencyMap.paths), "MessageReactions", obj4);
+    const tmp19 = asyncRequireImpl(11393, dependencyMap.paths);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
   tmp4 = isPrivateResult ? React6.DM_CHANNEL : React6.GUILD_CHANNEL;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11401, dependencyMap.paths), "MessagePreviewReactions", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11405, dependencyMap.paths), "MessagePreviewReactions", {
     messageId: id2,
     channelId: id,
     emoji,

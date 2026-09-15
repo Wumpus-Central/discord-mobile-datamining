@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/openPremiumPlanSelectionActionSheet.tsx
 import PremiumConstants from "../PremiumConstants.tsx";
-import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -11,5 +11,5 @@ export default function openPremiumPlanSelectionActionSheet(arg0, arg1) {
   if (null == arg1) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7526, dependencyMap.paths), closure_3, arg0, arg1);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7530, dependencyMap.paths), closure_3, arg0, arg1);
 }

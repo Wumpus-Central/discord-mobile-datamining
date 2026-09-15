@@ -198,9 +198,9 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  const obj = replaced(1254);
-  replaced = replaced(1254).v4().replace(closure_12, "");
-  const str = replaced(1254).v4();
+  const obj = replaced(1255);
+  replaced = replaced(1255).v4().replace(closure_12, "");
+  const str = replaced(1255).v4();
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_OPENED, {
     search_type: constants3.GIF,
     load_id: replaced,

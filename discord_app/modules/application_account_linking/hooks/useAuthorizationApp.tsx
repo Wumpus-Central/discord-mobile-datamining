@@ -6,7 +6,7 @@ import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ApplicationTypes = fn(1348).ApplicationTypes;
+const ApplicationTypes = fn(1349).ApplicationTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 

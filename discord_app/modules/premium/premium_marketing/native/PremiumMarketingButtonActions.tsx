@@ -9,7 +9,7 @@ import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const Constants = fn(1074);
 ({
   AnalyticsSections: hasOwnProperty,

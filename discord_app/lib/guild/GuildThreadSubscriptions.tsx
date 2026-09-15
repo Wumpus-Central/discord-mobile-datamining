@@ -1,5 +1,5 @@
 // discord_app/lib/guild/GuildThreadSubscriptions.tsx
-import privDefault from "../../../_runtime/01437_priv.js";
+import privDefault from "../../../_runtime/01438_priv.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");

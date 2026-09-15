@@ -1,5 +1,5 @@
 // discord_app/lib/uploader/imagePreConvert.tsx
-import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
 import Upload from "Upload.tsx";
 import imageFilename from "imageFilename.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";

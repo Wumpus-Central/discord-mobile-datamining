@@ -58,8 +58,8 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
         children: menuItems.map((item, index) => {
           const obj = { children: null };
           const merged = Object.assign(item);
-          obj.children = offset(menuItems(14219).MenuItem, { showIconFirst: true });
-          return offset(menuItems(14218).MenuGroup, obj, "chat-context-menu-group-" + index);
+          obj.children = offset(menuItems(14224).MenuItem, { showIconFirst: true });
+          return offset(menuItems(14223).MenuGroup, obj, "chat-context-menu-group-" + index);
         }),
       }),
     items1,

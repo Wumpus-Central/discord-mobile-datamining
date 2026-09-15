@@ -48,9 +48,9 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(handleGatewayChange);
       let result1 = CacheStore.addReactChangeListener(handleCacheChange);
-      let ComponentDispatch = first(1109).ComponentDispatch;
+      let ComponentDispatch = first(1110).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(4495).getRootNavigationRef();
+      let rootNavigationRef = first(4498).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }

@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AgeVerificationStore from "../AgeVerificationStore.tsx";
 
 require = fn;
-const AgeVerificationConstants = fn(8530);
+const AgeVerificationConstants = fn(8533);
 ({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
@@ -81,9 +81,9 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
           } else {
             let obj = { id, title: null, description: null, onClick: null };
             ({ title, description } = tmp);
-            const intl = onGoogleWalletSelect(1114).intl;
+            const intl = onGoogleWalletSelect(1115).intl;
             obj.title = intl.string(title);
-            const intl2 = onGoogleWalletSelect(1114).intl;
+            const intl2 = onGoogleWalletSelect(1115).intl;
             obj.description = intl2.string(description);
             closure_1 = first(function* (arg0) {
               if (c1 === 2) {
@@ -110,11 +110,11 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(8531);
+                      const obj5 = id(8534);
                       const result = obj5.trackAgeVerificationModalClicked(
                         id,
-                        id(8531).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                        id(8531).AgeVerificationModalCta.METHOD_SELECT,
+                        id(8534).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                        id(8534).AgeVerificationModalCta.METHOD_SELECT,
                         id,
                       );
                       v1 = 1;

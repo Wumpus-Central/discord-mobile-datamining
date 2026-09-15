@@ -2,7 +2,7 @@
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01254_v1.js";
+import v1 from "../../../_runtime/01255_v1.js";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
 import AppAnalyticsUtilsDefault from "../app_analytics/AppAnalyticsUtils.tsx";
@@ -16,7 +16,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const EmojiPickerConstants = fn(5544);
+const EmojiPickerConstants = fn(5548);
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: c10 } = EmojiPickerConstants);
 const Constants = fn(1074);
 ({
@@ -26,14 +26,14 @@ const Constants = fn(1074);
   AutoCompleteResultTypes: closure_14,
   SearchTypes: closure_15,
 } = Constants);
-const EmojiConstants = fn(1374);
+const EmojiConstants = fn(1375);
 ({
   isExternalEmojiAllowedForIntention: closure_16,
   EmojiDisabledReasons: closure_17,
   EmojiIntention: closure_18,
 } = EmojiConstants);
-const ExpressionPickerViewType = fn(1217).ExpressionPickerViewType;
-const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
+const ExpressionPickerViewType = fn(1218).ExpressionPickerViewType;
+const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const re21 = /-/g;
 const apply = fn(12);
 const size = fn(2);

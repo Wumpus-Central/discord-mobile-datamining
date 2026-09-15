@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterRequestsPage.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2396 from "../FamilyCenter.messages.js";
+import _modDef2397 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
@@ -20,7 +20,7 @@ function FamilyCenterMaxConnectionsBlurb() {
   const hasMaxConnections = useUserLinks.useHasMaxConnections();
   useAgeSpecificText;
   const intl = util.intl;
-  intl.formatToPlainString(_modDef2396["1/PzIj"], {
+  intl.formatToPlainString(_modDef2397["1/PzIj"], {
     maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer,
   });
   const intl2 = util.intl;
@@ -39,7 +39,7 @@ function FamilyCenterHelpLineInfo() {
   useHelpLineVisibility;
   if (shouldShowHelplineLink) {
     const intl2 = util.intl;
-    let formatResult = intl2.format(_modDef2396["KOwsf/"], {
+    let formatResult = intl2.format(_modDef2397["KOwsf/"], {
       helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
     });
   } else {
@@ -47,7 +47,7 @@ function FamilyCenterHelpLineInfo() {
     if (tmp6) {
       const intl = util.intl;
       const obj2 = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2396["6tsC8u"], obj2);
+      formatResult = intl.format(_modDef2397["6tsC8u"], obj2);
     }
   }
   let tmp11 = null;
@@ -55,7 +55,7 @@ function FamilyCenterHelpLineInfo() {
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
     const intl3 = util.intl;
-    obj4.children = intl3.string(_modDef2396["7/tVhv"]);
+    obj4.children = intl3.string(_modDef2397["7/tVhv"]);
     const items = [React6(Text_Text.Text, obj4)];
     const obj5 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
     items[1] = React6(Text_Text.Text, obj5);
@@ -66,13 +66,13 @@ function FamilyCenterHelpLineInfo() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7641);
+const FamilyCenterConstants = fn(7645);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } =
   FamilyCenterConstants);
-const THROUGHLINE_URL = fn(11497).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(11501).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let obj2 = {
   container: {
     display: "flex",
@@ -83,7 +83,7 @@ let obj2 = {
   },
 };
 let closure_10 = createStyles.createStyles(obj2);
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj5 = { container: null, supportHeader: null };
 let obj3 = {
   display: "flex",
@@ -96,7 +96,7 @@ obj5.container = { display: "flex", marginTop: nativeDefault.space.PX_16 };
 const obj6 = { display: "flex", marginTop: nativeDefault.space.PX_16 };
 obj5.supportHeader = { marginBottom: nativeDefault.space.PX_4 };
 let closure_12 = createStyles.createStyles(obj5);
-createStyles = fn(4636);
+createStyles = fn(4639);
 const obj9 = { scrollView: { flex: 1 }, container: null };
 const obj7 = { marginBottom: nativeDefault.space.PX_4 };
 obj9.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };

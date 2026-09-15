@@ -1,5 +1,5 @@
 // discord_app/modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx
-import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -21,7 +21,7 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
   let obj = require("ChatInputUtils");
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(13920, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(13925, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -34,7 +34,7 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
   });
   const obj2 = {
     importer() {
-      return asyncRequireImpl(13920, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(13925, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
