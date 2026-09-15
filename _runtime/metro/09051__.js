@@ -1,5 +1,5 @@
 // _runtime/metro/09051__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "78e18d727d8c0a3ff78e647d73ffb0be",
-  name: "QuoteIcon",
+  hash: "dc76a43601a93031b91e3ad463d63b85",
+  name: "ThumbsDownIcon",
   type: "png",
 });

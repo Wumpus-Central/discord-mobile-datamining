@@ -1,13 +1,13 @@
 // _runtime/metro/09916__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "08fd133b0b292a14ea2a09a50dd4618e",
-  name: "CalendarIcon",
+  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
+  width: 20,
+  height: 20,
+  scales: [1, 2, 3],
+  hash: "e955954d3b070442dffa061da0dc1d1a",
+  name: "ic_clock",
   type: "png",
 });

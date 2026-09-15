@@ -1,13 +1,13 @@
 // _runtime/metro/15370__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/main_tabs",
-  width: 216,
-  height: 216,
-  scales: [1],
-  hash: "e8cc96dfc04f2226c8870fdf46cc16af",
-  name: "ExampleVoiceChatActivity",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16.5,
+  scales: [2, 3],
+  hash: "5854380fa0e0fd8bc925e2e46e9e8246",
+  name: "ic_lock_short_16px",
   type: "png",
 });

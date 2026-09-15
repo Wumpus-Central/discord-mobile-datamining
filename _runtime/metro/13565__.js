@@ -1,13 +1,13 @@
 // _runtime/metro/13565__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 18,
-  height: 18,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 250,
+  height: 175,
   scales: [2, 3],
-  hash: "5df78f325bc8d637c2d3b01b683e170b",
-  name: "ic_close_18px",
+  hash: "286d809a177e5dc702067fdd57e25871",
+  name: "img_marketing_uploads_light_border",
   type: "png",
 });

@@ -1,107 +1,132 @@
 // _runtime/metro/01512__.js
-import get_getKey from "../01500_get_getKey.js";
-import NavigationBuilderContext from "../01513_NavigationBuilderContext.js";
 import noop from "00019__.js";
 
-require = arg1;
-
-export const useOptionsGetters = function useOptionsGetters(key) {
-  key = key.key;
-  const options = key.options;
-  const navigation = key.navigation;
-  noop.useRef(options);
-  closure_4 = noop.useRef({});
-  const onOptionsChange = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).onOptionsChange;
-  const addOptionsGetter = noop.useContext(get_getKey.NavigationStateContext).addOptionsGetter;
-  const items = [navigation, onOptionsChange];
-  const callback = noop.useCallback(() => {
-    let flag;
-    if (navigation != null) {
-      flag = navigation.isFocused();
-    }
-    if (flag == null) {
-      flag = true;
-    }
-    if (flag) {
-      flag = !Object.keys(closure_4.current).length;
-    }
-    if (flag) {
-      let current = ref.current;
-      if (current == null) {
-        current = {};
-      }
-      onOptionsChange(current);
-    }
-  }, items);
-  const items1 = [options];
+export const useEventEmitter = function useEventEmitter(current, onEmitEvent) {
+  let current2 = onEmitEvent;
+  noop.useRef(current);
+  noop.useRef(onEmitEvent);
   const insertionEffect = noop.useInsertionEffect(() => {
-    closure_3.current = options;
-  }, items1);
-  const items2 = [navigation, options, callback];
-  const effect = noop.useEffect(() => {
-    callback();
-    let addListenerResult;
-    if (navigation != null) {
-      addListenerResult = navigation.addListener("focus", callback);
-    }
-    return addListenerResult;
-  }, items2);
-  const callback1 = noop.useCallback(() => {
-    for (const key10004 in closure_4.current) {
-      if (!(key10004 in closure_4.current)) {
-        continue;
-      } else {
-        let current = tmp4.current;
-        let tmp = current[key10004];
-        let tmpResult;
-        if (tmp != null) {
-          tmpResult = tmp();
-        }
-        if (null === tmpResult) {
-          continue;
-        } else {
-          return tmpResult;
-        }
-      }
-      continue;
-    }
-    return null;
-  }, []);
-  const items3 = [navigation, callback1];
-  const callback2 = noop.useCallback(() => {
-    let isFocusedResult;
-    if (navigation != null) {
-      isFocusedResult = navigation.isFocused();
-    }
-    if (isFocusedResult != null) {
-      if (!isFocusedResult) {
-        return null;
-      }
-    }
-    let current = callback1();
-    if (null === current) {
-      current = ref.current;
-    }
-    return current;
-  }, items3);
-  const items4 = [callback2, addOptionsGetter, key];
-  const effect1 = noop.useEffect(() => {
-    let tmpResult;
-    if (addOptionsGetter != null) {
-      tmpResult = tmp(key, callback2);
-    }
-    return tmpResult;
-  }, items4);
-  const obj = { addOptionsGetter: null, getCurrentOptions: callback2 };
-  const items5 = [callback];
-  obj.addOptionsGetter = noop.useCallback((arg0, arg1) => {
+    closure_2.current = current;
+    closure_3.current = current2;
+  });
+  noop.useRef(Object.create(null));
+  const create = noop.useCallback((arg0) => {
     closure_0 = arg0;
-    closure_4.current[arg0] = arg1;
-    callback();
-    return () => {
-      delete tmp2[tmp];
-      callback();
+    return {
+      addListener(arg0, arg1) {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        let obj = ref3.current[arg0];
+        if (!obj) {
+          obj = {};
+        }
+        ref3.current[arg0] = obj;
+        let items = ref3.current[arg0][closure_0];
+        if (!items) {
+          items = [];
+        }
+        ref3.current[arg0][closure_0] = items;
+        ref3.current[arg0][closure_0].push(arg1);
+        c2 = false;
+        return () => {
+          if (!c2) {
+            c2 = true;
+            let tmp3;
+            if (ref.current[closure_0]) {
+              tmp3 = ref.current[tmp][closure_0];
+            }
+            if (tmp3) {
+              const index = tmp3.indexOf(closure_1);
+              if (index > -1) {
+                tmp3.splice(index, 1);
+              }
+            }
+          }
+        };
+      },
+      removeListener(arg0, arg1) {
+        let tmp;
+        if (ref.current[arg0]) {
+          tmp = ref.current[arg0][closure_0];
+        }
+        if (tmp) {
+          const index = tmp.indexOf(arg1);
+          if (index > -1) {
+            tmp.splice(index, 1);
+          }
+        }
+      },
     };
-  }, items5);
-  return obj;
+  }, []);
+  const callback1 = noop.useCallback((arg0) => {
+    ({ type, data, target } = arg0);
+    c1 = undefined;
+    c2 = undefined;
+    let substr = ref3.current[type];
+    if (undefined === substr) {
+      const obj = { type: null };
+      const obj2 = { enumerable: true, value: type };
+      obj.type = obj2;
+      if (undefined !== target) {
+        const obj3 = { enumerable: true, value: target };
+        obj.target = obj3;
+      }
+      if (undefined !== data) {
+        const obj4 = { enumerable: true, value: data };
+        obj.data = obj4;
+      }
+      c1 = false;
+      if (tmp) {
+        const obj5 = {
+          enumerable: true,
+          get() {
+            return c1;
+          },
+        };
+        obj.defaultPrevented = obj5;
+        const obj6 = {
+          enumerable: true,
+          value() {
+            c1 = true;
+          },
+        };
+        obj.preventDefault = obj6;
+      }
+      const _Object2 = Object;
+      const definePropertiesResult = Object.defineProperties({}, obj);
+      c2 = definePropertiesResult;
+      current = ref.current;
+      if (current != null) {
+        current(definePropertiesResult);
+      }
+      if (undefined != null) {
+        const item = undefined.forEach((fn) => fn(c2));
+      }
+      current2 = ref2.current;
+      if (current2 != null) {
+        current2(definePropertiesResult);
+      }
+      return definePropertiesResult;
+    } else if (undefined !== target) {
+      substr = undefined;
+      if (substr[target] != null) {
+        substr = arr5.slice();
+      }
+      let found = substr;
+    } else {
+      const items = [];
+      const concat = items.concat;
+      const _Object = Object;
+      const keys = Object.keys(substr);
+      const items1 = [];
+      HermesBuiltin.arraySpread(
+        keys.map((item) => substr[item]),
+        0,
+      );
+      found = HermesBuiltin.apply(items1, items).filter((item, index, arr) => arr.lastIndexOf(item) === index);
+      const applyResult = HermesBuiltin.apply(items1, items);
+    }
+  }, []);
+  let items = [create, callback1];
+  return noop.useMemo(() => ({ create, emit: callback1 }), items);
 };

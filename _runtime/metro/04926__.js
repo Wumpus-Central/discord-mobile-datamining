@@ -1,3 +1,4 @@
 // _runtime/metro/04926__.js
+import _mod4927 from "04927__.js";
 
-export default 4294967295;
+export default _mod4927;

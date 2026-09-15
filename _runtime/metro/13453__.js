@@ -1,5 +1,5 @@
 // _runtime/metro/13453__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 51,
   height: 36,
   scales: [2, 3],
-  hash: "eedc171301ae1180a08c85018b5d2811",
-  name: "img_boost_mobile",
+  hash: "6a44051f0a6b82f14b7f681cb1af8576",
+  name: "img_classic_mobile",
   type: "png",
 });

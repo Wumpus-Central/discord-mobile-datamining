@@ -1,13 +1,13 @@
 // _runtime/metro/13328__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/seasonal",
-  width: 144,
-  height: 150,
-  scales: [1],
-  hash: "ccdfa582cc7b9c2866cdcd81d25dbd3c",
-  name: "box_idle",
+  httpServerLocation: "/assets/images/native/gifting",
+  width: 132,
+  height: 145,
+  scales: [1, 2, 3],
+  hash: "79c6466cf28ca8f6510b4a84fb435a2a",
+  name: "wumpus_snowglobe_premium120",
   type: "png",
 });

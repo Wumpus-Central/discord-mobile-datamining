@@ -1,13 +1,13 @@
 // _runtime/metro/10845__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 106,
-  height: 80,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 411,
+  height: 134,
   scales: [2, 3],
-  hash: "f9a535d371ee710b8f1909e45896c667",
-  name: "img_wumpus_nitro_rev",
+  hash: "44a779cd60ac7d5dac850e6fc886896f",
+  name: "img_nitro_subheader_mobile",
   type: "png",
 });

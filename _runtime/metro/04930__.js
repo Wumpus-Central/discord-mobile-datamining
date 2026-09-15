@@ -1,41 +1,30 @@
 // _runtime/metro/04930__.js
-import _mod1281 from "01281__.js";
 import _mod1282 from "01282__.js";
-import callBindBasic from "../01291_callBindBasic.js";
+import _mod4931 from "04931__.js";
+import _mod4932 from "04932__.js";
+import _mod4933 from "04933__.js";
 
-const obj = {};
-try {
-  obj.__proto__ = null;
-  let _module = _mod1282;
-  if (_module) {
-    const _Object = Object;
-    _module = _mod1282(Object.prototype, "__proto__");
+if (_mod4931) {
+  function setProto(arg0, arg1) {
+    if (_mod4931(arg0, arg1)) {
+      return arg0;
+    } else {
+      const tmp5 = new _mod1282("Reflect.setPrototypeOf: failed to set [[Prototype]]");
+      throw tmp5;
+    }
   }
-  let tmp6 = !("toString" in obj);
-  if (tmp6) {
-    let setDunder = _module;
-    if (setDunder) {
-      setDunder = typeof _module.set === "function";
-    }
-    if (setDunder) {
-      const items = [_module.set];
-      setDunder = callBindBasic(items);
-    }
-    if (!setDunder) {
-      setDunder = function setDunder(arg0, arg1) {
-        if (null == arg0) {
-          const tmp6 = new _mod1281("set Object.prototype.__proto__ called on null or undefined");
-          throw tmp6;
-        } else {
-          arg0.__proto__ = arg1;
-          return arg1;
-        }
+} else {
+  setProto = _mod4932;
+  if (!setProto) {
+    let setProto2 = null;
+    if (_mod4933) {
+      setProto2 = function setProto(arg0, arg1) {
+        _mod4933(arg0, arg1);
+        return arg0;
       };
     }
-    tmp6 = setDunder;
+    setProto = setProto2;
   }
-  module.exports = tmp6;
-  const tmp3 = "toString" in obj;
-} catch (tmp2) {
-  throw tmp2;
 }
+
+export default setProto;

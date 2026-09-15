@@ -1,13 +1,13 @@
 // _runtime/metro/12860__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
+  httpServerLocation: "/assets/images/native",
   width: 48,
   height: 48,
   scales: [1, 2, 3],
-  hash: "2d94b588ee7f10b120a153b69fc9d641",
-  name: "conversation",
+  hash: "079f1f5099b5396d01af5ed23e7bac76",
+  name: "ic_invites_disabled",
   type: "png",
 });

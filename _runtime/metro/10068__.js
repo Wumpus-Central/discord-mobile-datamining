@@ -1,13 +1,13 @@
 // _runtime/metro/10068__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "456f425cbb5592c677bebe2b3b5f83ae",
-  name: "ic_text_in_voice_24px",
+  hash: "f9f36b748bcc7c6393cf056bc860ba1e",
+  name: "HandRequestSpeakIcon",
   type: "png",
 });

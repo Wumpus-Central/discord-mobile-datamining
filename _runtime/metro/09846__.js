@@ -1,13 +1,13 @@
 // _runtime/metro/09846__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "be0495259d7800ba5ff04ac01243104d",
-  name: "LocationIcon",
+  scales: [1, 2, 3],
+  hash: "60c832d89b9f9ddf8ba9ba1f90955760",
+  name: "ic-location",
   type: "png",
 });

@@ -1,3 +1,7 @@
 // _runtime/metro/06836__.js
+import noop from "00019__.js";
 
-export function useNativeGestureRole(arg0, children) {}
+({ useEffect, useRef } = noop);
+new Map();
+
+export function useDetectorAttachmentGuard(tmp8Result5) {}

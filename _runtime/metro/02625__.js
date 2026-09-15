@@ -1,11 +1,11 @@
 // _runtime/metro/02625__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/notifications/profile_updates/sender",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25zL3Byb2ZpbGVfdXBkYXRlcy9zZW5kZXI=",
   scales: [1],
-  hash: "7f05ad73b5da2adbe55e7968cf15ccf8",
-  name: "NotifyFriendsOnProfileUpdate.compiled.messages",
+  hash: "878e6c643aff428059b1d636e9bbbe87",
+  name: "zh-TW.messages.878e6c643aff428059b1d636e9bbbe87.compiled.messages",
   type: "jsona",
 });

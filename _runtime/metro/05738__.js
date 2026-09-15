@@ -1,4 +1,13 @@
 // _runtime/metro/05738__.js
-import _mod5739 from "05739__.js";
 
-export default _mod5739;
+export const getHeaderTitle = function getHeaderTitle(options, name) {
+  if (typeof options.headerTitle === "string") {
+    let title = options.headerTitle;
+  } else {
+    title = name;
+    if (undefined !== options.title) {
+      title = options.title;
+    }
+  }
+  return title;
+};

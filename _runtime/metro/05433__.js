@@ -1,13 +1,13 @@
 // _runtime/metro/05433__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 628,
+  height: 167,
   scales: [1],
-  hash: "1e0df3230db3924611b6f5b8d19fe029",
-  name: "img_account_sync_github_white",
+  hash: "87dcaca9679ceb1e78d3b15aba4c2917",
+  name: "img_account_sync_samsung_white",
   type: "svg",
 });

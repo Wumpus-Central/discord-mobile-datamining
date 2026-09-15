@@ -1,13 +1,13 @@
 // _runtime/metro/15366__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 160,
-  scales: [1],
-  hash: "539778d237b9fff9f8baff59e260a9fa",
-  name: "breaddog_1",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "45bf3d60b04cc6fd9a97d07a70a73cd6",
+  name: "ThemeMidnightIcon",
   type: "png",
 });

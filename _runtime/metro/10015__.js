@@ -1,13 +1,13 @@
 // _runtime/metro/10015__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "032ba055130436392254ce3ba39e9456",
-  name: "gmail",
+  hash: "31fe21f79423d8afd3dcadd61d04938b",
+  name: "ic_mail",
   type: "png",
 });

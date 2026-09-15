@@ -1,5 +1,5 @@
 // _runtime/metro/10104__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c9f854c83b9079fe0ab040df65e3caf2",
-  name: "nav_header_disconnect",
+  hash: "087f40a4e6d31afa070d07d1130d4217",
+  name: "screenshare",
   type: "png",
 });

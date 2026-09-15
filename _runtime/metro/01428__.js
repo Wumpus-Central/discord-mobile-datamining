@@ -1,13 +1,13 @@
 // _runtime/metro/01428__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/auto_moderation",
-  width: 256,
-  height: 256,
+  httpServerLocation: "/assets/images",
+  width: 400,
+  height: 400,
   scales: [1],
-  hash: "424407a78216a455f8fc1ac2080855a1",
-  name: "auto_moderation_avatar",
+  hash: "212a10d1e3da5ff0492c97f7e14e9d29",
+  name: "nitro_wumpus_avatar",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/05443__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "a3f3002b04ef160e95cf684a02c6531a",
-  name: "img_account_sync_riot_white",
+  hash: "f0c9d04e77af1368c39d93a975075c0b",
+  name: "img_account_sync_epic_dark_and_white",
   type: "png",
 });

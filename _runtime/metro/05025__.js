@@ -1,9 +1,9 @@
 // _runtime/metro/05025__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-const jsxProd = fn(21);
-({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
-const context = noop.createContext((children) => framebus(React, { children: children.children }));
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContainer", validAttributes: {} };
 
-export const GHContext = context;
-export const RNSScreensRefContext = noop.createContext(null);
+export default module_65.get("RNSScreenContainer", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

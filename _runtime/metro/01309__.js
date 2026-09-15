@@ -1,3 +1,3 @@
 // _runtime/metro/01309__.js
 
-export default Math.pow;
+export default Math.min;

@@ -1,31 +1,21 @@
 // _runtime/metro/13754__.js
+import _mod13746 from "13746__.js";
 
-export default {
-  Z_NO_FLUSH: 0,
-  Z_PARTIAL_FLUSH: 1,
-  Z_SYNC_FLUSH: 2,
-  Z_FULL_FLUSH: 3,
-  Z_FINISH: 4,
-  Z_BLOCK: 5,
-  Z_TREES: 6,
-  Z_OK: 0,
-  Z_STREAM_END: 1,
-  Z_NEED_DICT: 2,
-  Z_ERRNO: -1,
-  Z_STREAM_ERROR: -2,
-  Z_DATA_ERROR: -3,
-  Z_BUF_ERROR: -5,
-  Z_NO_COMPRESSION: 0,
-  Z_BEST_SPEED: 1,
-  Z_BEST_COMPRESSION: 9,
-  Z_DEFAULT_COMPRESSION: -1,
-  Z_FILTERED: 1,
-  Z_HUFFMAN_ONLY: 2,
-  Z_RLE: 3,
-  Z_FIXED: 4,
-  Z_DEFAULT_STRATEGY: 0,
-  Z_BINARY: 0,
-  Z_TEXT: 1,
-  Z_UNKNOWN: 2,
-  Z_DEFLATED: 8,
-};
+let c2 = true;
+let c3 = true;
+try {
+  const _String = String;
+  fromCharCode.apply(null, [0]);
+  try {
+    const _String2 = String;
+    const _Uint8Array = Uint8Array;
+    const uint8Array = new Uint8Array(1);
+    fromCharCode2.apply(null, uint8Array);
+    const buf8 = new _mod13746.Buf8(256);
+    require = 252;
+  } catch (err) {
+    c3 = false;
+  }
+} catch (err) {
+  c2 = false;
+}

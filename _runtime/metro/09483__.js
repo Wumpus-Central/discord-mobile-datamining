@@ -1,13 +1,13 @@
 // _runtime/metro/09483__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
-  width: 77.5,
-  height: 72,
+  httpServerLocation: "/assets/modules/guild_identity/images",
+  width: 303,
+  height: 198,
   scales: [2, 3],
-  hash: "215c6cf6cc2b74cad508b12b0e602266",
-  name: "empty",
+  hash: "af6f5b1f2e3f6f41820436ec96e0f065",
+  name: "guild_identity_education_light",
   type: "png",
 });

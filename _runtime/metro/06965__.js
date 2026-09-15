@@ -1,31 +1,30 @@
 // _runtime/metro/06965__.js
+import _mod6966 from "06966__.js";
 
-export default function _objectWithoutPropertiesLoose(obj, arr) {
-  if (null == obj) {
-    return {};
-  } else {
-    obj = {};
-    for (const key10007 in arg0) {
-      hasOwnProperty = {}.hasOwnProperty;
-      let call = hasOwnProperty.call;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(key10007);
-      } else {
-        hasOwnPropertyResult = call(arg0, key10007);
+export default function _unsupportedIterableToArray(str, arg1) {
+  if (str) {
+    if (typeof str === "string") {
+      return _mod6966(str, arg1);
+    } else {
+      const toString = {}.toString;
+      const call = toString.call;
+      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
+      let name = substr;
+      if (tmp3) {
+        name = str.constructor.name;
       }
-      if (!hasOwnPropertyResult) {
-        continue;
-      } else {
-        if (-1 !== arg1.indexOf(key10007)) {
-          continue;
-        } else {
-          obj[key10007] = arg0[key10007];
-          continue;
+      if ("Map" !== name) {
+        if ("Set" !== name) {
+          if ("Arguments" === name) {
+            let arr2 = _mod6966(str, arg1);
+          }
         }
-        continue;
+        return arr2;
       }
-      continue;
+      const _Array = Array;
+      arr2 = Array.from(str);
+      const arr = typeof call === "unknown" ? toString() : call(str);
+      tmp3 = "Object" === substr && "Object".constructor;
     }
-    return obj;
   }
 }

@@ -1,13 +1,13 @@
 // _runtime/metro/13960__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/build_overrides/native/images",
-  width: 60,
-  height: 46,
-  scales: [2, 3],
-  hash: "cca9165d24749fb9aec98d0d9c04f23f",
-  name: "code-illustration-light",
+  httpServerLocation: "/assets/images/native",
+  width: 120,
+  height: 108,
+  scales: [1, 2, 3],
+  hash: "3ec4fb1a4fcdb736c4c87e7591f26daf",
+  name: "img_remote_auth_succeeded",
   type: "png",
 });

@@ -3,7 +3,6 @@ import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
 function _isNativeReflectConstruct() {
@@ -26,22 +25,14 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-function changeEventCalculator(arg0, arg1) {
-  return arg0;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 12945462865583;
-changeEventCalculator.__initData = {
-  code: "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}",
-};
-class ManualGesture {
+class FlingGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, ManualGesture);
+    tmp = closure_0(this, FlingGesture);
     tmp2 = c2;
-    obj = c2(ManualGesture);
+    obj = c2(FlingGesture);
     tmp3 = closure_1;
-    if (closure_4()) {
+    if (closure_3()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -49,25 +40,29 @@ class ManualGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "ManualGestureHandler";
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "FlingGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = ManualGesture;
-_inherits(ManualGesture, fn(6777).ContinousBaseGesture);
+_classCallCheck = FlingGesture;
+_inherits(FlingGesture, fn(6781).BaseGesture);
 const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    const items = [arg0];
-    return fn(items);
+  key: "numberOfPointers",
+  value: function numberOfPointers(numberOfPointers) {
+    this.config.numberOfPointers = numberOfPointers;
+    return this;
   },
 };
-let items = [entry];
+const items = [
+  entry,
+  {
+    key: "direction",
+    value: function direction(dependencyMap) {
+      this.config.direction = dependencyMap;
+      return this;
+    },
+  },
+];
 
-export const ManualGesture = _createClass(ManualGesture, items);
+export const FlingGesture = _createClass(FlingGesture, items);

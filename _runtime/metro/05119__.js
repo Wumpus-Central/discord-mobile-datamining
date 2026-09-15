@@ -1,5 +1,5 @@
 // _runtime/metro/05119__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1cfdcaa3b94766eef2db25157ec0c919",
-  name: "VoiceNormalIcon",
+  hash: "3cca2566d6ada925d540d64d7940bca5",
+  name: "AtIcon",
   type: "png",
 });

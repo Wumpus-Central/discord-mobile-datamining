@@ -1,3 +1,3 @@
 // _runtime/metro/01307__.js
 
-export default Math.max;
+export default Math.floor;

@@ -1,13 +1,13 @@
 // _runtime/metro/09518__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 271,
-  height: 163,
+  width: 188.5,
+  height: 121,
   scales: [2, 3],
-  hash: "37b687db1cd86ac8059d1a0342f2319c",
-  name: "img_tier_2_clouds_bigger",
+  hash: "a1c720960ae9ac46d7d61ad850607231",
+  name: "img_tier_0_clouds_bigger",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/14198__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 16,
   height: 16,
   scales: [2, 3],
-  hash: "7730e55139737e3f08bf4e9540ae6591",
-  name: "StatusOffline",
+  hash: "12a800ef241b26f28e2697e2835bd1ab",
+  name: "StatusStreaming",
   type: "png",
 });

@@ -1,74 +1,15 @@
 // _runtime/metro/14144__.js
-import _mod14117 from "14117__.js";
-import _slicedToArray from "00032__.js";
+import _mod14137 from "14137__.js";
 
-const require = globalThis.__r;
-
-export default (arr, arg1, arg2) => {
-  let tmp = arg1;
-  _require = arg2;
-  const items = [];
-  let tmp2 = null;
-  let tmp3 = null;
-  const sorted = arr.sort((arg0, arg1) => _mod14117(arg0, arg1, closure_0));
-  for (const item10017 of sorted) {
-    if (require("14134__.js")(item10017, tmp, arg2)) {
-      tmp3 = item10017;
-      if (!tmp2) {
-        tmp2 = item10017;
-      }
-    } else {
-      if (tmp3) {
-        let items1 = [tmp2];
-        items1[1] = tmp3;
-        arr = items.push(items1);
-      }
-      tmp3 = null;
-      tmp2 = null;
+export default (arg0, arg1) => {
+  try {
+    const tmp8 = new _mod14137(arg0, arg1);
+    let str = tmp8.range;
+    if (!str) {
+      str = "*";
     }
-    continue;
+    return str;
+  } catch (err) {
+    return null;
   }
-  if (tmp2) {
-    const items2 = [tmp2, null];
-    items.push(items2);
-  }
-  const items3 = [];
-  while (tmp15 !== undefined) {
-    [first, tmp21] = tmp16;
-    let tmp20 = first;
-    let tmp22 = tmp21;
-    if (first === tmp21) {
-      let arr3 = items3.push(tmp20);
-    } else {
-      if (!tmp22) {
-        if (tmp20 === sorted[0]) {
-          let arr4 = items3.push("*");
-        }
-      }
-      if (tmp22) {
-        if (tmp20 === sorted[0]) {
-          let _HermesInternal3 = HermesInternal;
-          let arr5 = items3.push("<=" + tmp22);
-        } else {
-          let _HermesInternal2 = HermesInternal;
-          let arr6 = items3.push("" + tmp20 + " - " + tmp22);
-        }
-      } else {
-        let _HermesInternal = HermesInternal;
-        let arr13 = items3.push(">=" + tmp20);
-      }
-    }
-    continue;
-  }
-  const joined = items3.join(" || ");
-  if (typeof tmp.raw === "string") {
-    let raw = tmp.raw;
-  } else {
-    const _String = String;
-    raw = String(tmp);
-  }
-  if (joined.length < raw.length) {
-    tmp = joined;
-  }
-  return tmp;
 };

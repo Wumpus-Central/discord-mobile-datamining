@@ -1,105 +1,84 @@
 // _runtime/metro/10646__.js
-import repeatedTimeunitPattern from "../10561_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10568_AbstractParserWithWordBoundaryChecking.js";
-import _mod10642 from "10642__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-const PTMonthNameLittleEndianParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const regExp = new RegExp(
-  "([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?(?:\\s*(?:desde|de|\\-|\\\u2013|ao?|\\s)\\s*([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10642.MONTH_DICTIONARY) +
-    ")(?:\\s*(?:de|,)?\\s*(" +
-    _mod10642.YEAR_PATTERN +
-    "))?(?=\\W|$)",
-  "i",
-);
-class PTMonthNameLittleEndianParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, PTMonthNameLittleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(PTMonthNameLittleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(PTMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = PTMonthNameLittleEndianParser(10642).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const parsed = parseInt(index[1]);
-      if (parsed > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", parsed);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", PTMonthNameLittleEndianParser(10642).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply(
-            "year",
-            PTMonthNameLittleEndianParser(10562).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4),
-          );
-        }
-        if (index[2]) {
-          const _parseInt = parseInt;
-          const start3 = parsingResult.start;
-          const parsed1 = parseInt(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", parsed1);
-        }
-        return parsingResult;
+export const parseYear = function parseYear(match) {
+  if (match.match(/^[0-9]{1,4}$/)) {
+    const _parseInt3 = parseInt;
+    const parsed = parseInt(match);
+    let sum = parsed;
+    if (parsed < 100) {
+      let num3 = 2000;
+      if (parsed > 50) {
+        num3 = 1900;
       }
-    },
-  },
-];
-
-export default _createClass(PTMonthNameLittleEndianParser, items);
+      sum = parsed + num3;
+    }
+    return sum;
+  } else if (match.match(/a\.?\s*c\.?/i)) {
+    const _parseInt2 = parseInt;
+    return -parseInt(match.replace(/a\.?\s*c\.?/i, ""));
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(match);
+  }
+};
+export const WEEKDAY_DICTIONARY = {
+  domingo: 0,
+  dom: 0,
+  segunda: 1,
+  "segunda-feira": 1,
+  seg: 1,
+  terça: 2,
+  "terça-feira": 2,
+  ter: 2,
+  quarta: 3,
+  "quarta-feira": 3,
+  qua: 3,
+  quinta: 4,
+  "quinta-feira": 4,
+  qui: 4,
+  sexta: 5,
+  "sexta-feira": 5,
+  sex: 5,
+  sábado: 6,
+  sabado: 6,
+  sab: 6,
+};
+export const MONTH_DICTIONARY = {
+  janeiro: 1,
+  jan: 1,
+  "jan.": 1,
+  fevereiro: 2,
+  fev: 2,
+  "fev.": 2,
+  março: 3,
+  mar: 3,
+  "mar.": 3,
+  abril: 4,
+  abr: 4,
+  "abr.": 4,
+  maio: 5,
+  mai: 5,
+  "mai.": 5,
+  junho: 6,
+  jun: 6,
+  "jun.": 6,
+  julho: 7,
+  jul: 7,
+  "jul.": 7,
+  agosto: 8,
+  ago: 8,
+  "ago.": 8,
+  setembro: 9,
+  set: 9,
+  "set.": 9,
+  outubro: 10,
+  out: 10,
+  "out.": 10,
+  novembro: 11,
+  nov: 11,
+  "nov.": 11,
+  dezembro: 12,
+  dez: 12,
+  "dez.": 12,
+};
+export const YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";

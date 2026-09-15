@@ -1,24 +1,12 @@
 // _runtime/metro/13047__.js
-import _mod12928 from "12928__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const vercelWaitUntil = function vercelWaitUntil(arg0) {
-  const obj = _mod12928.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-  if (obj) {
-    if (obj.get) {
-      if (obj.get()) {
-        let obj1 = obj.get();
-      }
-      let waitUntil = obj1;
-      if (obj1) {
-        waitUntil = obj1.waitUntil;
-      }
-      if (waitUntil) {
-        obj1.waitUntil(arg0);
-      }
-    }
+export function getSDKSource() {
+  return "npm";
+}
+export const isBrowserBundle = function isBrowserBundle() {
+  let prop = typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined";
+  if (typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined") {
+    prop = globalThis.__SENTRY_BROWSER_BUNDLE__;
   }
-  obj1 = {};
+  return prop;
 };

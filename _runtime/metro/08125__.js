@@ -1,13 +1,13 @@
 // _runtime/metro/08125__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/auto_moderation",
-  width: 12,
-  height: 12,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "78a34aca822219efd275dbb2e470061d",
-  name: "ic_closed_lock",
+  hash: "421762234dc1c14955fde3d3dd6a6217",
+  name: "ChatWarningIcon",
   type: "png",
 });

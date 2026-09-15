@@ -1,5 +1,5 @@
 // _runtime/metro/11095__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4a26dcaa59eb2e8051daf1439ff56b26",
-  name: "ChannelNotificationIcon",
+  hash: "abe3edaf4092c8b2f7e822b6a96655d7",
+  name: "InboxIcon",
   type: "png",
 });

@@ -1,11 +1,11 @@
 // _runtime/metro/02527__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/file_upload",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2ZpbGVfdXBsb2Fk",
   scales: [1],
-  hash: "23b8cc9c9f2f7ce0243fa024f7324767",
-  name: "NitroFileUpload.compiled.messages",
+  hash: "090cf9b7482c3866f80eef4565789ffc",
+  name: "zh-TW.messages.090cf9b7482c3866f80eef4565789ffc.compiled.messages",
   type: "jsona",
 });

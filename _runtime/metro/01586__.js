@@ -1,128 +1,116 @@
 // _runtime/metro/01586__.js
-import _slicedToArray from "00032__.js";
+import BaseNavigationContainer from "../01487_BaseNavigationContainer.js";
 import noop from "00019__.js";
 
-const require = fn;
-const I18nManager = fn(17).I18nManager;
+require = fn;
 const jsx = fn(21).jsx;
-const weakMap = new WeakMap();
-globalThis.REACT_NAVIGATION_DEVTOOLS = weakMap;
 
-export const NavigationContainer = noop.forwardRef(function NavigationContainerInner(direction, arg1) {
-  direction = direction.direction;
-  if (direction === undefined) {
-    let str = "ltr";
-    if (I18nManager.getConstants().isRTL) {
-      str = "rtl";
+export const createStaticNavigation = function createStaticNavigation(getComponent) {
+  const component = getComponent.getComponent();
+  return noop.forwardRef(function Navigation(linking, ref) {
+    linking = linking.linking;
+    let merged = Object.assign(linking, Object.assign({ linking: 0 }));
+    let memo;
+    let enabled;
+    if (linking != null) {
+      enabled = linking.enabled;
     }
-    direction = str;
-  }
-  let DefaultTheme = direction.theme;
-  if (DefaultTheme === undefined) {
-    DefaultTheme = linking(1587).DefaultTheme;
-  }
-  linking = direction.linking;
-  let fallback = direction.fallback;
-  if (fallback === undefined) {
-    fallback = null;
-  }
-  let merged = Object.assign(
-    direction,
-    Object.assign({ direction: 0, theme: 0, linking: 0, fallback: 0, documentTitle: 0 }),
-  );
-  dependencyMap = undefined;
-  let ref;
-  let tmp6 = linking;
-  if (tmp6) {
-    tmp6 = false !== linking.enabled;
-  }
-  dependencyMap = tmp6;
-  let config;
-  if (linking != null) {
-    config = linking.config;
-  }
-  if (config) {
-    linking(1486).validatePathConfig(linking.config);
-    let obj = linking(1486);
-  }
-  ref = noop.useRef(null);
-  const backButton = linking(1589).useBackButton(ref);
-  const obj2 = linking(1589);
-  const documentTitle = linking(1590).useDocumentTitle(ref, direction.documentTitle);
-  const obj3 = linking(1590);
-  const merged1 = Object.assign(linking);
-  const items = [linking];
-  const memo = noop.useMemo(() => ({ options: linking }), items);
-  const effect = noop.useEffect(() => {
-    if (ref.current) {
-      let obj = {};
-      Object.defineProperty(obj, "linking", {
-        get: () => {
-          const obj = {};
-          const merged = Object.assign(closure_1_0);
-          obj.enabled = enabled;
-          let prefixes;
-          if (closure_1_0 != null) {
-            prefixes = closure_1_0.prefixes;
-          }
-          if (prefixes == null) {
-            prefixes = [];
-          }
-          obj.prefixes = prefixes;
-          let getStateFromPath;
-          if (closure_1_0 != null) {
-            getStateFromPath = closure_1_0.getStateFromPath;
-          }
-          if (getStateFromPath == null) {
-            getStateFromPath = linking(enabled[5]).getStateFromPath;
-          }
-          obj.getStateFromPath = getStateFromPath;
-          let getPathFromState;
-          if (closure_1_0 != null) {
-            getPathFromState = closure_1_0.getPathFromState;
-          }
-          if (getPathFromState == null) {
-            getPathFromState = linking(enabled[5]).getPathFromState;
-          }
-          obj.getPathFromState = getPathFromState;
-          let getActionFromState;
-          if (closure_1_0 != null) {
-            getActionFromState = closure_1_0.getActionFromState;
-          }
-          if (getActionFromState == null) {
-            getActionFromState = linking(enabled[5]).getActionFromState;
-          }
-          obj.getActionFromState = getActionFromState;
-          return obj;
-        },
-        set: undefined,
-      });
-      const result = globalThis.REACT_NAVIGATION_DEVTOOLS.set(tmp.current, obj);
+    const items = [enabled, ,];
+    let path;
+    if (linking != null) {
+      let config = linking.config;
+      if (config != null) {
+        path = config.path;
+      }
     }
+    items[1] = path;
+    let initialRouteName;
+    if (linking != null) {
+      let config2 = linking.config;
+      if (config2 != null) {
+        initialRouteName = config2.initialRouteName;
+      }
+    }
+    items[2] = initialRouteName;
+    memo = React.useMemo(() => {
+      let initialRouteName;
+      if (linking != null) {
+        const config = linking.config;
+        if (config != null) {
+          initialRouteName = config.initialRouteName;
+        }
+      }
+      let enabled;
+      if (linking != null) {
+        enabled = linking.enabled;
+      }
+      const pathConfigForStaticNavigation = BaseNavigationContainer.createPathConfigForStaticNavigation(
+        closure_0,
+        { initialRouteName },
+        "auto" === enabled,
+      );
+      if (pathConfigForStaticNavigation) {
+        let path;
+        if (linking != null) {
+          const config2 = linking.config;
+          if (config2 != null) {
+            path = config2.path;
+          }
+        }
+        const obj2 = { path, initialRouteName: null, screens: null };
+        let initialRouteName1;
+        if (linking != null) {
+          const config3 = linking.config;
+          if (config3 != null) {
+            initialRouteName1 = config3.initialRouteName;
+          }
+        }
+        obj2.initialRouteName = initialRouteName1;
+        obj2.screens = pathConfigForStaticNavigation;
+        return obj2;
+      }
+    }, items);
+    const items1 = [linking, memo];
+    let enabled1;
+    const memo1 = React.useMemo(() => {
+      if (linking) {
+        if (typeof linking.enabled === "boolean") {
+          let enabled = linking.enabled;
+        } else {
+          let screens;
+          if (memo != null) {
+            screens = memo.screens;
+          }
+          enabled = null != screens;
+        }
+        const obj = {};
+        const merged = Object.assign(linking);
+        obj.enabled = enabled;
+        obj.config = memo;
+        return obj;
+      }
+    }, items1);
+    if (linking != null) {
+      enabled1 = linking.enabled;
+    }
+    if (true === enabled1) {
+      let screens;
+      if (memo != null) {
+        screens = memo.screens;
+      }
+      if (null == screens) {
+        const _Error = Error;
+        const error = new Error(
+          "Linking is enabled but no linking configuration was found for the screens.\n\nTo solve this:\n- Specify a 'linking' property for the screens you want to link to.\n- Or set 'linking.enabled' to 'auto' to generate paths automatically.\n\nSee usage guide: https://reactnavigation.org/docs/static-configuration#linking",
+        );
+        throw error;
+      }
+    }
+    let obj2 = {};
+    const merged1 = Object.assign(merged);
+    obj2.ref = ref;
+    obj2.linking = memo1;
+    obj2.children = <memo />;
+    return jsx(getComponent(closure_1[3]).NavigationContainer, {});
   });
-  const obj4 = linking(1591);
-  const obj5 = { enabled: tmp6, prefixes: [] };
-  const obj6 = linking(1593);
-  [tmp20, initialState] = ref(linking(1593).useThenable(obj4.useLinking(ref, obj5).getInitialState), 2);
-  const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current);
-  const obj7 = { value: direction, children: null };
-  if (tmp22) {
-    const obj8 = { value: memo, children: null };
-    const obj9 = {};
-    const merged2 = Object.assign(merged);
-    obj9.theme = DefaultTheme;
-    if (null != merged.initialState) {
-      initialState = merged.initialState;
-    }
-    obj9.initialState = initialState;
-    obj9.ref = ref;
-    obj8.children = jsx(tmp12(1486).BaseNavigationContainer, {});
-    obj7.children = jsx(tmp12(1583).LinkingContext.Provider, { value: memo, children: null });
-    let tmp24 = obj7;
-  } else {
-    const obj10 = { value: DefaultTheme, children: fallback };
-    obj7.children = jsx(tmp12(1486).ThemeProvider, { value: DefaultTheme, children: fallback });
-    tmp24 = obj7;
-  }
-  return jsx(linking(1594).LocaleDirContext.Provider, tmp24);
-});
+};

@@ -1,14 +1,9 @@
 // _runtime/metro/05038__.js
-import _modDef5013 from "05013__.js";
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default function useTransitionProgress() {
-  const context = noop.useContext(_modDef5013);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-}
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
+
+export default module_65.get("RNSScreenFooter", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

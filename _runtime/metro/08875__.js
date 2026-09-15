@@ -1,5 +1,5 @@
 // _runtime/metro/08875__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4f276c9d37ed9e072482570ea4ab1799",
-  name: "ic_discoverable_guild_badge_premium_24px",
+  hash: "aadd4fcf699494399b151b52e5493160",
+  name: "ic_community_guild_badge_premium_24px",
   type: "png",
 });

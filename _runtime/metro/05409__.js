@@ -1,5 +1,5 @@
 // _runtime/metro/05409__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "51c56027f271f175240f0fff23cdb627",
-  name: "img_account_sync_twitter_light_and_dark",
+  hash: "1c6c58beca1fec7f3c53119b27e0466a",
+  name: "img_account_sync_facebook_light_and_dark",
   type: "svg",
 });

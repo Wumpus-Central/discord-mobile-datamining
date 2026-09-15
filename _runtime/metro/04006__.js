@@ -1,48 +1,26 @@
 // _runtime/metro/04006__.js
-import startOfWeek_mod from "../03884_startOfWeek.js";
-import startOfWeekYear_mod from "../04007_startOfWeekYear.js";
-import _typeof_mod from "03725__.js";
-import requiredArgs_mod from "../03726_requiredArgs.js";
+import _typeof_mod from "03728__.js";
+import requiredArgs_mod from "../03729_requiredArgs.js";
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
-  let tmp3 = obj;
-} else {
-  tmp3 = startOfWeek;
-}
-startOfWeek = tmp3;
-let startOfWeekYear = startOfWeekYear_mod;
-if (!startOfWeekYear) {
-  const obj2 = { default: startOfWeekYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfWeekYear;
-}
-startOfWeekYear = tmp5;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj3 = { default: _typeof };
-  let tmp7 = obj3;
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp7 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp7;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp5;
 
-export default function getWeek(arg0, arg1) {
+export default function getSeconds(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
+  return _typeof.default(arg0).getSeconds();
 };
 export default exports.default;

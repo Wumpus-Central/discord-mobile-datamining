@@ -1,13 +1,13 @@
 // _runtime/metro/08126__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/auto_moderation",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "9fc7a06bd709251a424bf9095d4f7ecf",
-  name: "ic_auto_moderation_shield",
+  hash: "cf48a47923589f64877ce012e03ba342",
+  name: "SettingsInfoIcon",
   type: "png",
 });

@@ -1,11 +1,11 @@
 // _runtime/metro/02753__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/notifications",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25z",
   scales: [1],
-  hash: "0048348a6c7e0009789fbf925b49e62d",
-  name: "NotificationSettings.compiled.messages",
+  hash: "5e2f62fcce05c6d719755c8215af5ed8",
+  name: "zh-TW.messages.5e2f62fcce05c6d719755c8215af5ed8.compiled.messages",
   type: "jsona",
 });

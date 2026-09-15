@@ -1,14 +1,7 @@
 // _runtime/metro/14404__.js
-import prop_mod from "14405__.js";
+import _mod14402 from "14402__.js";
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
+let closure_0 = _mod14402({}.toString);
+let closure_1 = _mod14402("".slice);
 
-export default prop;
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

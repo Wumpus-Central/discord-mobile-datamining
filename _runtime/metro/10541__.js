@@ -1,13 +1,13 @@
 // _runtime/metro/10541__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
-  width: 250,
-  height: 120,
+  httpServerLocation: "/assets/images/native/premium/perks",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "97335968179b868ec33c96b39450902f",
-  name: "img_premium_canvas_mobile",
+  hash: "e1a87d01a93be51b22f843cb3d1f52e8",
+  name: "img_nitro_sticker_yellow_24px",
   type: "png",
 });

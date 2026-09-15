@@ -1,13 +1,13 @@
 // _runtime/metro/13868__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/nuf_channels/native/images",
-  width: 275.5,
-  height: 78,
-  scales: [2, 3],
-  hash: "b55be157bc31f9c933d8fe113de3e547",
-  name: "voice_channels",
+  width: 40,
+  height: 77,
+  scales: [1],
+  hash: "a22d4ac6a3cb3a331ce2730f706e3d95",
+  name: "star_pink",
   type: "png",
 });

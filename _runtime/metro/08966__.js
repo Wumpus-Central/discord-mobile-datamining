@@ -1,5 +1,5 @@
 // _runtime/metro/08966__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9037a70d8faa972c462f54c8bc0bf00a",
-  name: "HeartOutlineIcon",
+  hash: "2a494bf31a8fce454d9a34e7b4733430",
+  name: "OrbsIcon",
   type: "png",
 });

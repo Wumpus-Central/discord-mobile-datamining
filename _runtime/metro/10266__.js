@@ -1,5 +1,5 @@
 // _runtime/metro/10266__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4d46cb9270219102b4f9e899fd51586c",
-  name: "FileIcon",
+  hash: "07392a850e043822a5c8062588fbfbb4",
+  name: "WaveformIcon",
   type: "png",
 });

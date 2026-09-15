@@ -1,13 +1,13 @@
 // _runtime/metro/13702__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
-  width: 24,
-  height: 23,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting",
+  width: 160,
+  height: 82,
   scales: [2, 3],
-  hash: "ded314673e0e4bafd84df14bbd2dcfb3",
-  name: "tier_1_24px",
+  hash: "0d2c2c590995b34f0429dc331d39457b",
+  name: "subscribe_confirm",
   type: "png",
 });

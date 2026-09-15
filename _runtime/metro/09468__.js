@@ -1,13 +1,13 @@
 // _runtime/metro/09468__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/CamoIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "2bb189919203a7299ceda12e2b9f8582",
-  name: "GalaxyIcon",
+  hash: "4e81188cb8befe97a7c2fb2d0b3c1c42",
+  name: "CamoIcon",
   type: "png",
 });

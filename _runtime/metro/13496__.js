@@ -1,5 +1,5 @@
 // _runtime/metro/13496__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "9fd167b3326279649df94a86f059e292",
-  name: "large_uploads",
+  hash: "337f717407aa04f32bdedf504de7310b",
+  name: "emoji",
   type: "png",
 });

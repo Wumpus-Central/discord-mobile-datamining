@@ -1,13 +1,13 @@
 // _runtime/metro/10194__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 18,
+  height: 18,
   scales: [2, 3],
-  hash: "436501dcf3af209f85edbd0cde1cf184",
-  name: "ic_vr_headset_24px",
+  hash: "ade8732f10573e5215aa029a138cb853",
+  name: "watch",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/16571__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 77,
-  height: 95.5,
+  width: 24.5,
+  height: 24,
   scales: [2, 3],
-  hash: "ebbb7db0461de915440e3bdd6a8249c9",
-  name: "flash",
+  hash: "684bf0782561b9ed2466dcb8144cf582",
+  name: "emoji-neutral",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/13450__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
+  width: 52,
+  height: 46,
   scales: [2, 3],
-  hash: "24a795d24a7018dbf13e204b38f24588",
-  name: "img_classic_resubscribe_mobile",
+  hash: "5dd914546a21d2f37ba762b2209e8ec8",
+  name: "img_bundle_mobile",
   type: "png",
 });

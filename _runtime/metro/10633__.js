@@ -1,147 +1,97 @@
 // _runtime/metro/10633__.js
-import now from "../10585_now.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import includeCommonConfiguration from "../10601_includeCommonConfiguration.js";
+import _mod10607 from "10607__.js";
+import JPStandardParser2 from "../10634_JPStandardParser.js";
+import _mod10636 from "10636__.js";
+import _mod10637 from "10637__.js";
+import _mod10638 from "10638__.js";
+import _mod10639 from "10639__.js";
+import _mod10640 from "10640__.js";
+import _mod10641 from "10641__.js";
+import _mod10642 from "10642__.js";
+import _mod10643 from "10643__.js";
 
-const self = this;
-const JPCasualDateParser = require;
-let self2 = this;
+const require = globalThis.__r;
+
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
+  }
+  const obj = { parsers: null, refiners: null };
+  const items = [new JPStandardParser.default(), , , ,];
+  const _default = new JPStandardParser.default();
+  items[1] = new regExp.default();
+  const _default1 = new regExp.default();
+  items[2] = new regExp.default();
+  const _default2 = new regExp.default();
+  items[3] = new regExp.default();
+  const _default3 = new regExp.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default4 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ,];
+  const _default5 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  const _default6 = new _isNativeReflectConstruct.default();
+  items1[2] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  const result = includeCommonConfiguration.includeCommonConfiguration(obj, flag);
+  const refiners = result.refiners;
+  result.refiners = refiners.filter((item) => !(item instanceof _isNativeReflectConstruct.default));
+  return result;
+}
+let fn = this;
 if (this) {
-  self2 = self.__createBinding;
+  fn = this.__importDefault;
 }
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
     }
-    if (!fn) {
-      fn = function t(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_6 = fn(now);
-    const re7 = /今日|きょう|本日|ほんじつ|昨日|きのう|明日|あした|今夜|こんや|今夕|こんゆう|今晩|こんばん|今朝|けさ/i;
-    class JPCasualDateParser {
-      constructor() {
-        tmp = closure_3(this, JPCasualDateParser);
-        return;
-      }
-    }
-    const entry = {
-      key: "pattern",
-      value: function pattern() {
-        return re7;
-      },
-    };
-    let items = [entry];
-    const entry1 = {
-      key: "extract",
-      value: function extract(createParsingComponents, arg1) {
-        const first = arg1[0];
-        if ("\u304D\u3087\u3046" === first) {
-          let str6 = "\u4ECA\u65E5";
-        } else if ("\u307B\u3093\u3058\u3064" === first) {
-          str6 = "\u672C\u65E5";
-        } else if ("\u304D\u306E\u3046" === first) {
-          str6 = "\u6628\u65E5";
-        } else if ("\u3042\u3057\u305F" === first) {
-          str6 = "\u660E\u65E5";
-        } else if ("\u3053\u3093\u3084" === first) {
-          str6 = "\u4ECA\u591C";
-        } else if ("\u3053\u3093\u3086\u3046" === first) {
-          str6 = "\u4ECA\u5915";
-        } else if ("\u3053\u3093\u3070\u3093" === first) {
-          str6 = "\u4ECA\u6669";
-        } else {
-          str6 = "\u4ECA\u671D";
-          if ("\u3051\u3055" !== first) {
-            str6 = first;
-          }
-        }
-        const parsingComponents = createParsingComponents.createParsingComponents();
-        if ("\u6628\u65E5" === str6) {
-          return closure_6.yesterday(createParsingComponents.reference);
-        } else if ("\u660E\u65E5" === str6) {
-          return closure_6.tomorrow(createParsingComponents.reference);
-        } else {
-          if ("\u672C\u65E5" !== str6) {
-            if ("\u4ECA\u65E5" !== str6) {
-              if ("\u4ECA\u591C" != str6) {
-                if ("\u4ECA\u5915" != str6) {
-                  if ("\u4ECA\u6669" != str6) {
-                    if (str6.match("\u4ECA\u671D")) {
-                      parsingComponents.imply("hour", 6);
-                      parsingComponents.assign("meridiem", JPCasualDateParser(10566).Meridiem.AM);
-                    }
-                  }
-                  const refDate = createParsingComponents.refDate;
-                  parsingComponents.assign("day", refDate.getDate());
-                  parsingComponents.assign("month", refDate.getMonth() + 1);
-                  parsingComponents.assign("year", refDate.getFullYear());
-                  return parsingComponents;
-                }
-              }
-              parsingComponents.imply("hour", 22);
-              parsingComponents.assign("meridiem", JPCasualDateParser(10566).Meridiem.PM);
-            }
-          }
-          return closure_6.today(createParsingComponents.reference);
-        }
-      },
-    };
-    items[1] = entry1;
-    exports.default = _createClass(JPCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
-  }
-} else {
-  let _Object = Object;
+    return tmp;
+  };
 }
+function createCasualConfiguration() {
+  const tmp = createConfiguration(false);
+  const parsers = tmp.parsers;
+  parsers.unshift(new module_10637.default());
+  return tmp;
+}
+const JPStandardParser = fn(JPStandardParser2);
+fn(_mod10636);
+const module_10637 = fn(_mod10637);
+fn(_mod10638);
+fn(_mod10639);
+fn(_mod10640);
+fn(_mod10641);
+fn(_mod10642);
+const regExp = fn(_mod10643);
+const _isNativeReflectConstruct = fn(_mod10607);
+const configuration = createConfiguration(false);
+let parsers = configuration.parsers;
+parsers.unshift(new module_10637.default());
+const chrono = new require("10561__.js").Chrono(configuration);
+const chrono1 = new require("10561__.js").Chrono(createConfiguration(true));
+
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("10561__.js").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

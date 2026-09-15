@@ -1,9 +1,12 @@
 // _runtime/metro/08422__.js
-import _modDef8423 from "08423__.js";
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default function getWebViewProxy(EMBEDDED_ACTIVITY_WEB_VIEW_KEY) {
-  return new _modDef8423(EMBEDDED_ACTIVITY_WEB_VIEW_KEY);
-}
+export default (str) => {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
+  }
+};

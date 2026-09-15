@@ -1,10 +1,13 @@
 // _runtime/metro/05328__.js
-
-export default {
-  get() {
-    if (typeof TextDecoder !== "undefined") {
-      const _TextDecoder = TextDecoder;
-      return TextDecoder;
-    }
+const obj = {
+  0: {
+    name: "PentaxVersion",
+    description(join) {
+      return join.join(".");
+    },
   },
+  5: "PentaxModelID",
+  555: "LevelInfo",
 };
+
+export default obj;

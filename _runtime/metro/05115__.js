@@ -1,5 +1,5 @@
 // _runtime/metro/05115__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "45e56b0ad20f9774b74dbe6cbb00fca0",
-  name: "GroupIcon",
+  hash: "8aacc7898585bec38aca6cf682c01533",
+  name: "FolderIcon",
   type: "png",
 });

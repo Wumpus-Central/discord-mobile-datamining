@@ -1,34 +1,11 @@
 // _runtime/metro/06917__.js
 import _mod17 from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import _mod6918 from "06918__.js";
-import noop_mod from "00019__.js";
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
 const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  let items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    const items = [_mod6918.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
-  }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(6919).BottomSheetBackground;
-  }
-  return (
-    <backgroundComponent
-      pointerEvents="none"
-      animatedIndex={animatedIndex}
-      animatedPosition={animatedPosition}
-      style={style}
-    />
-  );
-});
-memoResult.displayName = "BottomSheetBackgroundContainer";
+const obj = { container: null };
+const obj2 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.pointerEvents = "box-none";
+obj.container = obj2;
 
-export const BottomSheetBackgroundContainer = memoResult;
+export const styles = StyleSheet.create(obj);

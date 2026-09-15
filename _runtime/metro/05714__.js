@@ -1,14 +1,13 @@
 // _runtime/metro/05714__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation:
-    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_m3fwxdj57yeglodw7rxv3p74au/node_modules/@react-navigation/elements/lib/module/assets",
-  width: 50,
-  height: 85,
-  scales: [1],
-  hash: "0a328cd9c1afd0afe8e3b1ec5165b1b4",
-  name: "back-icon-mask",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "24def842b7fc85d108b018aef0f23eb6",
+  name: "ArrowLargeLeftIcon",
   type: "png",
 });

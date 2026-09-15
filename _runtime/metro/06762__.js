@@ -1,3 +1,9 @@
 // _runtime/metro/06762__.js
+import _mod6763 from "06763__.js";
 
-export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };
+require = arg1;
+const dependencyMap = arg6;
+
+export const initialize = function initialize() {
+  _mod6763.startListening();
+};

@@ -1,13 +1,13 @@
 // _runtime/metro/13613__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 375,
+  height: 301,
   scales: [2, 3],
-  hash: "2e0d6978350694e35552111153599c69",
-  name: "BoostTier3Icon",
+  hash: "7326675c9312971f0f528c74fa69a335",
+  name: "img_top_pattern_darker",
   type: "png",
 });

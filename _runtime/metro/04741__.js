@@ -1,15 +1,9 @@
 // _runtime/metro/04741__.js
-import identity from "../00549_identity.js";
-import _mod669 from "00669__.js";
-import constant from "../04742_constant.js";
+import shortOut from "../04742_shortOut.js";
+import overRest from "../04746_overRest.js";
+import flatten from "../04748_flatten.js";
 
-if (_mod669) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod669(arg0, "toString", obj);
-  };
-} else {
-  fn = identity;
+export default function flatRest(arg0) {
+  const tmp = shortOut;
+  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
 }
-
-export default fn;

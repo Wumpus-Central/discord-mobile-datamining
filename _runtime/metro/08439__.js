@@ -1,41 +1,89 @@
 // _runtime/metro/08439__.js
-import colorPropType from "../08432_colorPropType.js";
-import _mod8440 from "08440__.js";
-import merged12 from "../08441_merged1.js";
-import merged22 from "../08442_merged2.js";
-import emptyFunction_mod from "04466__.js";
+import _mod8437 from "08437__.js";
+import _mod8442 from "08442__.js";
+import _mod8446 from "08446__.js";
+import flattenStyle from "08440__.js";
+import emptyFunction_mod from "04469__.js";
 
-const obj = {};
-const size = Object.assign(_mod8440);
-const merged1 = Object.assign(merged12);
-const merged2 = Object.assign(merged22);
+const obj = {
+  accessible: null,
+  accessibilityLabel: null,
+  accessibilityHint: null,
+  accessibilityActions: null,
+  accessibilityIgnoresInvertColors: null,
+  accessibilityRole: null,
+  accessibilityState: null,
+  accessibilityValue: null,
+  accessibilityLiveRegion: null,
+  importantForAccessibility: null,
+  accessibilityViewIsModal: null,
+  accessibilityElementsHidden: null,
+  onAccessibilityAction: null,
+  onAccessibilityTap: null,
+  onMagicTap: null,
+  testID: null,
+  nativeID: null,
+  onResponderGrant: null,
+  onResponderMove: null,
+  onResponderReject: null,
+  onResponderRelease: null,
+  onResponderTerminate: null,
+  onResponderTerminationRequest: null,
+  onStartShouldSetResponder: null,
+  onStartShouldSetResponderCapture: null,
+  onMoveShouldSetResponder: null,
+  onMoveShouldSetResponderCapture: null,
+  hitSlop: null,
+  onLayout: null,
+  pointerEvents: null,
+  style: null,
+  removeClippedSubviews: null,
+  renderToHardwareTextureAndroid: null,
+  shouldRasterizeIOS: null,
+  collapsable: null,
+  needsOffscreenAlphaCompositing: null,
+};
+const module_8442 = flattenStyle(_mod8442);
+obj.accessible = emptyFunction.bool;
+obj.accessibilityLabel = emptyFunction.node;
+obj.accessibilityHint = emptyFunction.string;
 let emptyFunction = emptyFunction_mod;
-obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
-obj.backgroundColor = colorPropType;
-obj.borderColor = colorPropType;
-obj.borderTopColor = colorPropType;
-obj.borderRightColor = colorPropType;
-obj.borderBottomColor = colorPropType;
-obj.borderLeftColor = colorPropType;
-obj.borderStartColor = colorPropType;
-obj.borderEndColor = colorPropType;
-obj.borderRadius = emptyFunction.number;
-obj.borderTopLeftRadius = emptyFunction.number;
-obj.borderTopRightRadius = emptyFunction.number;
-obj.borderTopStartRadius = emptyFunction.number;
-obj.borderTopEndRadius = emptyFunction.number;
-obj.borderBottomLeftRadius = emptyFunction.number;
-obj.borderBottomRightRadius = emptyFunction.number;
-obj.borderBottomStartRadius = emptyFunction.number;
-obj.borderBottomEndRadius = emptyFunction.number;
+obj.accessibilityActions = emptyFunction.arrayOf(emptyFunction.string);
+obj.accessibilityIgnoresInvertColors = emptyFunction.bool;
 let emptyFunction = emptyFunction_mod;
-obj.borderStyle = emptyFunction.oneOf(["solid", "dotted", "dashed"]);
-obj.borderWidth = emptyFunction.number;
-obj.borderTopWidth = emptyFunction.number;
-obj.borderRightWidth = emptyFunction.number;
-obj.borderBottomWidth = emptyFunction.number;
-obj.borderLeftWidth = emptyFunction.number;
-obj.opacity = emptyFunction.number;
-obj.elevation = emptyFunction.number;
+obj.accessibilityRole = emptyFunction.oneOf(_mod8446.DeprecatedAccessibilityRoles);
+obj.accessibilityState = emptyFunction.object;
+obj.accessibilityValue = emptyFunction.object;
+let emptyFunction = emptyFunction_mod;
+obj.accessibilityLiveRegion = emptyFunction.oneOf(["none", "polite", "assertive"]);
+let emptyFunction = emptyFunction_mod;
+obj.importantForAccessibility = emptyFunction.oneOf(["auto", "yes", "no", "no-hide-descendants"]);
+obj.accessibilityViewIsModal = emptyFunction.bool;
+obj.accessibilityElementsHidden = emptyFunction.bool;
+obj.onAccessibilityAction = emptyFunction.func;
+obj.onAccessibilityTap = emptyFunction.func;
+obj.onMagicTap = emptyFunction.func;
+obj.testID = emptyFunction.string;
+obj.nativeID = emptyFunction.string;
+obj.onResponderGrant = emptyFunction.func;
+obj.onResponderMove = emptyFunction.func;
+obj.onResponderReject = emptyFunction.func;
+obj.onResponderRelease = emptyFunction.func;
+obj.onResponderTerminate = emptyFunction.func;
+obj.onResponderTerminationRequest = emptyFunction.func;
+obj.onStartShouldSetResponder = emptyFunction.func;
+obj.onStartShouldSetResponderCapture = emptyFunction.func;
+obj.onMoveShouldSetResponder = emptyFunction.func;
+obj.onMoveShouldSetResponderCapture = emptyFunction.func;
+obj.hitSlop = _mod8437;
+obj.onLayout = emptyFunction.func;
+let emptyFunction = emptyFunction_mod;
+obj.pointerEvents = emptyFunction.oneOf(["box-none", "none", "box-only", "auto"]);
+obj.style = module_8442;
+obj.removeClippedSubviews = emptyFunction.bool;
+obj.renderToHardwareTextureAndroid = emptyFunction.bool;
+obj.shouldRasterizeIOS = emptyFunction.bool;
+obj.collapsable = emptyFunction.bool;
+obj.needsOffscreenAlphaCompositing = emptyFunction.bool;
 
 export default obj;

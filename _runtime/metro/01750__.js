@@ -1,50 +1,73 @@
 // _runtime/metro/01750__.js
-import 01639__ from "01639__.js";
 
-let closure_0 = require;
-let closure_1 = dependencyMap;
-if (module_1639.shouldBeUseWeb()) {
-  let fn = function t() {
-
-  };
-} else {
-  closure_0 = [];
-  closure_1 = [];
-  let obj = {
-    update(arg0, arg1) {
-        if (arg1) {
-          closure_1.push(arg0);
-        } else {
-          closure_0.push(arg0);
+export const getViewInfo = function getViewInfo(findHostInstanceResult) {
+  if (undefined !== findHostInstanceResult._nativeTag) {
+    if (null !== findHostInstanceResult.__nativeTag) {
+      let uiViewClassName;
+      if (findHostInstanceResult != null) {
+        const viewConfig2 = findHostInstanceResult.viewConfig;
+        if (viewConfig2 != null) {
+          uiViewClassName = viewConfig2.uiViewClassName;
         }
-        if (closure_0.length + closure_1.length === 1) {
-          const self = this;
-          if (obj.isFabric()) {
-            self.flush();
-          } else {
-            const _setImmediate = setImmediate;
-            setImmediate(self.flush);
-          }
-          obj = closure_0(closure_1[0]);
-        }
-      },
-    flush() {
-        const result = closure_0(closure_1[1]).configureLayoutAnimationBatch(closure_0.concat(closure_1));
-        closure_0.length = 0;
-        closure_1.length = 0;
       }
-  };
-  fn = function t(viewTag, type, arg2, sharedTransitionTag, arg4) {
-    obj = { viewTag, type, config: null, sharedTransitionTag: null };
-    let shareableCloneRecursive;
-    if (arg2) {
-      shareableCloneRecursive = closure_0(closure_1[1]).makeShareableCloneRecursive(arg2);
-      const obj2 = closure_0(closure_1[1]);
+      const obj2 = { viewName: uiViewClassName, viewTag: null, viewConfig: null };
+      let _nativeTag;
+      if (findHostInstanceResult != null) {
+        _nativeTag = findHostInstanceResult._nativeTag;
+      }
+      obj2.viewTag = _nativeTag;
+      let viewConfig1;
+      if (findHostInstanceResult != null) {
+        viewConfig1 = findHostInstanceResult.viewConfig;
+      }
+      obj2.viewConfig = viewConfig1;
+      let obj = obj2;
     }
-    obj.config = shareableCloneRecursive;
-    obj.sharedTransitionTag = sharedTransitionTag;
-    return obj.update(obj, arg4);
-  };
-}
-
-export const updateLayoutAnimations = fn;
+    return obj;
+  }
+  if (undefined !== findHostInstanceResult.__nativeTag) {
+    if (null !== findHostInstanceResult.__nativeTag) {
+      let __viewConfig;
+      if (findHostInstanceResult != null) {
+        __viewConfig = findHostInstanceResult.__viewConfig;
+      }
+      if (__viewConfig == null) {
+        let _viewConfig;
+        if (findHostInstanceResult != null) {
+          _viewConfig = findHostInstanceResult._viewConfig;
+        }
+        __viewConfig = _viewConfig;
+      }
+      let uiViewClassName1;
+      if (__viewConfig != null) {
+        uiViewClassName1 = __viewConfig.uiViewClassName;
+      }
+      const obj3 = { viewName: uiViewClassName1, viewTag: null, viewConfig: null };
+      let __nativeTag;
+      if (findHostInstanceResult != null) {
+        __nativeTag = findHostInstanceResult.__nativeTag;
+      }
+      obj3.viewTag = __nativeTag;
+      obj3.viewConfig = __viewConfig;
+      obj = obj3;
+    }
+  }
+  let uiViewClassName2;
+  if (findHostInstanceResult != null) {
+    const viewConfig = findHostInstanceResult.viewConfig;
+    if (viewConfig != null) {
+      uiViewClassName2 = viewConfig.uiViewClassName;
+    }
+  }
+  obj = { viewName: uiViewClassName2, viewTag: null, viewConfig: null };
+  let _nativeTag1;
+  if (findHostInstanceResult != null) {
+    _nativeTag1 = findHostInstanceResult._nativeTag;
+  }
+  obj.viewTag = _nativeTag1;
+  let viewConfig3;
+  if (findHostInstanceResult != null) {
+    viewConfig3 = findHostInstanceResult.viewConfig;
+  }
+  obj.viewConfig = viewConfig3;
+};

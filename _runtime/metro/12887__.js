@@ -1,13 +1,13 @@
 // _runtime/metro/12887__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/directory_channels/native/images",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 48,
+  height: 48,
   scales: [2, 3],
-  hash: "cf9fbd33b5f8251873e494b446828ceb",
-  name: "invite",
+  hash: "c0ad0e7adefed3e2ebad52c7f4beb394",
+  name: "progress-setup",
   type: "png",
 });

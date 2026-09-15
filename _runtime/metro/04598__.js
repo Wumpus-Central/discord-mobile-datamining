@@ -1,5 +1,5 @@
 // _runtime/metro/04598__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dd2bf1474590dee83bbb5fea2b4f182c",
-  name: "CircleCheckIcon-primary",
+  hash: "11be77dcd70d75753c8cf2c079b0771e",
+  name: "TrashIcon",
   type: "png",
 });

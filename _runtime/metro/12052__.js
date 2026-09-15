@@ -1,13 +1,13 @@
 // _runtime/metro/12052__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "5b00e6abae27bddaf8498fd271ace686",
-  name: "PhoneIcon",
+  httpServerLocation: "/assets/modules/parent_tools/images",
+  width: 240,
+  height: 150,
+  scales: [1, 2, 3],
+  hash: "c4741f3af333f4c01fe224682f3a547f",
+  name: "family_center_activity_checklist_image",
   type: "png",
 });

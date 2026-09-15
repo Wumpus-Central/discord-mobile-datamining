@@ -1,13 +1,13 @@
 // _runtime/metro/13322__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting",
-  width: 120,
-  height: 125,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 25,
+  height: 24,
   scales: [1, 2, 3],
-  hash: "c43124de927c4f7db7d60a63938625a8",
-  name: "wumpus_cup_premium120",
+  hash: "495d1e3b5fc10bbfc9830f32405f0c83",
+  name: "ic_feedback_dark",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/11869__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6adfcc7a553215ee3085ec15a5a3e3a4",
-  name: "ClockXIcon",
+  hash: "4efa5140d546996fe7cb2ba013410d48",
+  name: "ArrowAngleLeftUpIcon",
   type: "png",
 });

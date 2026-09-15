@@ -1,13 +1,32 @@
 // _runtime/metro/04898__.js
+import callBoundIntrinsic from "../01315_callBoundIntrinsic.js";
+import _mod1445 from "01445__.js";
 
-export default function isPrimitive(fn) {
-  let tmp = null === fn;
-  if (!tmp) {
-    let tmp2 = typeof fn !== "function";
-    if (typeof fn !== "function") {
-      tmp2 = typeof fn !== "object";
+let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1445();
+
+export default function isString(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    let tmp2 = !str;
+    if (str) {
+      tmp2 = typeof str !== "object";
     }
-    tmp = tmp2;
+    if (tmp2) {
+      tmp = !tmp2;
+    } else if (closure_2) {
+      let tmp5 = (function tryStringObject(arg0) {
+        try {
+          closure_1_0(arg0);
+          return true;
+        } catch (err) {
+          return false;
+        }
+      })(str);
+    } else {
+      tmp5 = "[object String]" === closure_1(str);
+    }
   }
   return tmp;
 }

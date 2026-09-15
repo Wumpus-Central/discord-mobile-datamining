@@ -1,13 +1,13 @@
 // _runtime/metro/17673__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 272,
-  height: 130,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5caead087954d63c5b0957a35bf9e208",
-  name: "empty_server_settings_audit_log_darker",
+  hash: "44367cf78a4a6bf3f05d89256b2c8ccd",
+  name: "ModerationIcon",
   type: "png",
 });

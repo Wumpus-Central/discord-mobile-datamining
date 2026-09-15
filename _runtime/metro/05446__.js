@@ -1,13 +1,13 @@
 // _runtime/metro/05446__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "21e0409db9760997b50efbaba2c83c02",
-  name: "img_account_sync_riot_black",
-  type: "svg",
+  hash: "eb232cce91e81121373a2c7b4cc58581",
+  name: "img_account_sync_riot_light_and_dark",
+  type: "png",
 });

@@ -1,79 +1,176 @@
 // _runtime/metro/05338__.js
-import _mod5294 from "05294__.js";
-import _modDef5299 from "05299__.js";
-import get0thIfdOffset from "../05314_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../05315_IFD_TYPE_0TH.js";
+import _mod5298 from "05298__.js";
+import _modDef5315 from "05315__.js";
+import _slicedToArray from "00032__.js";
 
 require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-const MODEL_ID = { K3_III: 78420 };
-let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
-
-export default {
-  read(byteLength, arg1, arg2, arg3) {
-    const obj = _modDef5299;
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    let LevelInfo = ifd.PentaxModelID;
-    if (LevelInfo) {
-      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
+function parseBezierKnot(dataView, arg1) {
+  const items = [];
+  let num = 0;
+  do {
+    let sum = arg1 + num;
+    let obj = _modDef5315;
+    let longAt = obj.getLongAt(dataView, sum);
+    let num2 = -1;
+    if (longAt >>> 31 === 0) {
+      num2 = 1;
     }
-    if (LevelInfo) {
-      LevelInfo = ifd.LevelInfo;
+    let str = (2130706432 & longAt) >>> 24;
+    let _parseInt = parseInt;
+    let obj2 = _mod5298;
+    let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
+    let obj3 = _mod5298;
+    let text = `${str.toString(2)}.`;
+    let obj4 = _mod5298;
+    let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
+    let tmp2Result = _modDef5315;
+    let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
+    let num3 = -1;
+    if (longAt1 >>> 31 === 0) {
+      num3 = 1;
     }
-    let tmp10 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
-      const obj3 = {};
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
-        const obj4 = { value: int8, description: null };
-        let str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
-            }
-            str = str2;
-          }
-          str6 = str;
+    let str3 = (2130706432 & longAt1) >>> 24;
+    let _parseInt2 = parseInt;
+    let tmp6Result = _mod5298;
+    let str4 = longAt1 & parseInt(tmp6Result.strRepeat("1", 24), 2);
+    let tmp6Result3 = _mod5298;
+    let text1 = `${str3.toString(2)}.`;
+    let tmp6Result4 = _mod5298;
+    let items1 = [num3 * tmp6Result3.parseFloatRadix(`${str3.toString(2)}.` + tmp6Result4.padStart(str4.toString(2), 24, "0"), 2), result];
+    let arr = items.push(items1);
+    num = num + 8;
+  } while (num < 24);
+  return items;
+}
+let obj = { CLOSED_SUBPATH_LENGTH: 0, CLOSED_SUBPATH_BEZIER_LINKED: 1, CLOSED_SUBPATH_BEZIER_UNLINKED: 2, OPEN_SUBPATH_LENGTH: 3, OPEN_SUBPATH_BEZIER_LINKED: 4, OPEN_SUBPATH_BEZIER_UNLINKED: 5, FILL_RULE: 6, CLIPBOARD: 7, INITIAL_FILL_RULE: 8 };
+let obj2 = { 2000: null, 2999: null };
+obj2[2000] = {
+  name: "PathInformation",
+  description: function pathResource(byteLength) {
+    const types = {};
+    const paths = [];
+    for (let num = 0; num < byteLength.byteLength; num = num + 26) {
+      let obj2 = _modDef5315;
+      let shortAt = obj2.getShortAt(byteLength, num);
+      if (dependencyMap[shortAt]) {
+        if (!types[shortAt]) {
+          types[shortAt] = dependencyMap[shortAt].description;
         }
-        obj4.description = str6;
-        obj3.CameraOrientation = obj4;
-        const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef5299.LITTLE_ENDIAN);
-        const obj5 = { value: int16, description: "" + -0.5 * int16 };
-        obj3.RollAngle = obj5;
-        const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef5299.LITTLE_ENDIAN);
-        const obj6 = { value: int161, description: "" + -0.5 * int161 };
-        obj3.PitchAngle = obj6;
+        let obj = { type: shortAt, path: null };
+        let obj4 = dependencyMap[shortAt];
+        obj.path = obj4.path(byteLength, num + 2);
+        let arr = paths.push(obj);
       }
-      const tmp7Result = _mod5294;
-      delete tmp[tmp2];
-      tmp10 = _mod5294.objectAssign({}, ifd, obj3);
-      const objectAssignResult = _mod5294.objectAssign({}, ifd, obj3);
     }
-    return tmp10;
-  },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID,
-  LIK3III: obj2,
+    return JSON.stringify({ types, paths });
+  }
 };
+obj2[2999] = {
+  name: "ClippingPathName",
+  description(getUint8) {
+    return _slicedToArray(_mod5298.getPascalStringFromDataView(getUint8, 0), 2)[1];
+  }
+};
+const dependencyMap = {
+  [obj.CLOSED_SUBPATH_LENGTH]: {
+    description: "Closed subpath length",
+    path(dataView, sum) {
+      const items = [_modDef5315.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.CLOSED_SUBPATH_BEZIER_LINKED]: { description: "Closed subpath Bezier knot, linked", path: parseBezierKnot },
+  [obj.CLOSED_SUBPATH_BEZIER_UNLINKED]: { description: "Closed subpath Bezier knot, unlinked", path: parseBezierKnot },
+  [obj.OPEN_SUBPATH_LENGTH]: {
+    description: "Open subpath length",
+    path(dataView, sum) {
+      const items = [_modDef5315.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.OPEN_SUBPATH_BEZIER_LINKED]: { description: "Open subpath Bezier knot, linked", path: parseBezierKnot },
+  [obj.OPEN_SUBPATH_BEZIER_UNLINKED]: { description: "Open subpath Bezier knot, unlinked", path: parseBezierKnot },
+  [obj.FILL_RULE]: {
+    description: "Path fill rule",
+    path() {
+      return [];
+    }
+  },
+  [obj.INITIAL_FILL_RULE]: {
+    description: "Initial fill rule",
+    path(dataView, sum) {
+      const items = [_modDef5315.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.CLIPBOARD]: {
+    description: "Clipboard",
+    path: function parseClipboard(dataView, sum) {
+      const longAt = _modDef5315.getLongAt(dataView, sum);
+      let num = -1;
+      let num2 = -1;
+      if (longAt >>> 31 === 0) {
+        num2 = 1;
+      }
+      const str2 = longAt & parseInt(_mod5298.strRepeat("1", 24), 2);
+      const text = `${str.toString(2)}.`;
+      const obj3 = _mod5298;
+      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + _mod5298.padStart(str2.toString(2), 24, "0"), 2), , , ];
+      sum = sum + 4;
+      const longAt1 = _modDef5315.getLongAt(dataView, sum);
+      let num3 = num;
+      if (longAt1 >>> 31 === 0) {
+        num3 = 1;
+      }
+      const tmpResult = _modDef5315;
+      const tmp4Result = _mod5298;
+      const str4 = longAt1 & parseInt(_mod5298.strRepeat("1", 24), 2);
+      const text1 = `${str3.toString(2)}.`;
+      const tmp4Result12 = _mod5298;
+      items[1] = num3 * tmp4Result12.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + _mod5298.padStart(str4.toString(2), 24, "0"), 2);
+      const sum1 = sum + 8;
+      const tmp4Result13 = _mod5298;
+      const longAt2 = _modDef5315.getLongAt(dataView, sum1);
+      let num4 = num;
+      if (longAt2 >>> 31 === 0) {
+        num4 = 1;
+      }
+      const tmpResult4 = _modDef5315;
+      const tmp4Result14 = _mod5298;
+      const str6 = longAt2 & parseInt(_mod5298.strRepeat("1", 24), 2);
+      const text2 = `${str5.toString(2)}.`;
+      const tmp4Result15 = _mod5298;
+      items[2] = num4 * tmp4Result15.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + _mod5298.padStart(str6.toString(2), 24, "0"), 2);
+      const sum2 = sum + 12;
+      const tmp4Result16 = _mod5298;
+      const longAt3 = _modDef5315.getLongAt(dataView, sum2);
+      let num5 = num;
+      if (longAt3 >>> 31 === 0) {
+        num5 = 1;
+      }
+      const tmpResult5 = _modDef5315;
+      const tmp4Result17 = _mod5298;
+      const str8 = longAt3 & parseInt(_mod5298.strRepeat("1", 24), 2);
+      const text3 = `${str7.toString(2)}.`;
+      const tmp4Result18 = _mod5298;
+      items[3] = num5 * tmp4Result18.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + _mod5298.padStart(str8.toString(2), 24, "0"), 2);
+      const items1 = [items, ];
+      const sum3 = sum + 16;
+      const tmp4Result19 = _mod5298;
+      const longAt4 = _modDef5315.getLongAt(dataView, sum3);
+      if (longAt4 >>> 31 === 0) {
+        num = 1;
+      }
+      const tmpResult6 = _modDef5315;
+      const tmp4Result20 = _mod5298;
+      const str10 = longAt4 & parseInt(_mod5298.strRepeat("1", 24), 2);
+      const text4 = `${str9.toString(2)}.`;
+      const tmp4Result21 = _mod5298;
+      items1[1] = num * tmp4Result21.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + _mod5298.padStart(str10.toString(2), 24, "0"), 2);
+      return items1;
+    }
+  }
+};
+
+export default obj2;
+export const PathRecordTypes = obj;

@@ -1,28 +1,11 @@
 // _runtime/metro/06903__.js
-import noop from "00019__.js";
-
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
-
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(
-    () => () => {
-      ref.current = undefined;
-    },
-    [],
-  );
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
-    }
-    return applyResult;
-  }, []);
+const fn = function n(sum1, initialPosition, value3) {
+  return Math.min(Math.max(initialPosition, sum1), value3);
 };
+fn.__closure = {};
+fn.__workletHash = 4405247003092;
+fn.__initData = {
+  code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}",
+};
+
+export const clamp = fn;

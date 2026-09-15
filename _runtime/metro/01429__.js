@@ -1,13 +1,13 @@
 // _runtime/metro/01429__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
+  httpServerLocation: "/assets/images/native/auto_moderation",
   width: 256,
   height: 256,
   scales: [1],
-  hash: "c3359f2e4aef01a86f637754d719562b",
-  name: "icon-group",
+  hash: "424407a78216a455f8fc1ac2080855a1",
+  name: "auto_moderation_avatar",
   type: "png",
 });

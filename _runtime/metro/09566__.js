@@ -1,5 +1,5 @@
 // _runtime/metro/09566__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "21db92a27b93246affffebffc643fa50",
-  name: "RobotIcon",
+  hash: "9efbede8b87c94f401364acf34876922",
+  name: "HammerIcon",
   type: "png",
 });

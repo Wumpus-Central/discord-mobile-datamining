@@ -1,0 +1,46 @@
+// _runtime/01495_TabActions.js
+import SwitchRouter from "01496_SwitchRouter.js";
+
+require = arg1;
+const dependencyMap = arg6;
+const TabActions = {
+  jumpTo(name, params) {
+    const action = { type: "JUMP_TO", payload: null };
+    const payload = { name, params };
+    action.payload = payload;
+    return action;
+  },
+};
+
+export { TabActions };
+export const TabRouter = function TabRouter(merged) {
+  const actionCreators = SwitchRouter;
+  const SwitchRouterResult = actionCreators.SwitchRouter(merged);
+  require = SwitchRouterResult;
+  const obj2 = {};
+  merged = Object.assign(SwitchRouterResult);
+  obj2.type = "tab";
+  obj2.getInitialState = function getInitialState(arg0) {
+    const initialState = SwitchRouterResult.getInitialState(arg0);
+    obj = {};
+    const merged = Object.assign(initialState);
+    obj.type = "tab";
+    obj.key = "tab-" + initialState.key;
+    return obj;
+  };
+  obj2.getRehydratedState = function getRehydratedState(stale, arg1) {
+    if (false === stale.stale) {
+      return stale;
+    } else {
+      const rehydratedState = SwitchRouterResult.getRehydratedState(stale, arg1);
+      obj = {};
+      const merged = Object.assign(rehydratedState);
+      obj.type = "tab";
+      const _HermesInternal = HermesInternal;
+      obj.key = "tab-" + rehydratedState.key;
+      return obj;
+    }
+  };
+  obj2.actionCreators = actionCreators;
+  return obj2;
+};

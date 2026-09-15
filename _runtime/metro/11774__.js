@@ -1,13 +1,13 @@
 // _runtime/metro/11774__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 48,
-  height: 48,
+  httpServerLocation: "/assets/images/native/stream_feedback/light-theme-desaturated",
+  width: 64,
+  height: 64,
   scales: [2, 3],
-  hash: "4b534b4720ff304cea2a2b72b308859f",
-  name: "feedback-modal-happy-desaturated_darker",
+  hash: "69e9e79e44fff2fca6c7a210e9bf5b9f",
+  name: "feedback-modal-neutral-desaturated",
   type: "png",
 });

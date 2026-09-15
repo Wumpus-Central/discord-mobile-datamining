@@ -1,5 +1,5 @@
 // _runtime/metro/08258__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "24b237fc943d3bc35a4b3cb04c57b99f",
-  name: "CrunchyrollNeutralIcon",
+  hash: "f675dc68337355a0cf14fc6856097557",
+  name: "GameControllerIcon",
   type: "png",
 });

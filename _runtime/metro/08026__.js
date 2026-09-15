@@ -1,41 +1,16 @@
 // _runtime/metro/08026__.js
+import noop from "00019__.js";
 
-export const getModalRouteKeys = (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.reduce((arr, key) => {
-    let options;
-    if (closure_0[key.key] != null) {
-      options = tmp.options;
-    }
-    if (options == null) {
-      options = {};
-    }
-    const presentation = options.presentation;
-    let tmp2 = arr.length && !presentation;
-    if (!tmp2) {
-      tmp2 = "modal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "transparentModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "containedModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "containedTransparentModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "fullScreenModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "formSheet" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "pageSheet" === presentation;
-    }
-    if (tmp2) {
-      arr = arr.push(key.key);
-    }
-    return arr;
-  }, []);
+let context = noop.createContext(undefined);
+
+export const AnimatedHeaderHeightContext = context;
+export const useAnimatedHeaderHeight = function useAnimatedHeaderHeight() {
+  context = noop.useContext(context);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
+    throw error;
+  } else {
+    return context;
+  }
 };

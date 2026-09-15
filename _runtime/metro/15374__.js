@@ -1,13 +1,13 @@
 // _runtime/metro/15374__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 161,
+  httpServerLocation: "/assets/images/native/main_tabs",
+  width: 192,
+  height: 144,
   scales: [1],
-  hash: "f06539dd2236c72b26d5b18fa1a5f589",
-  name: "amanda_2",
+  hash: "2bbd6220afd7d7de1fa25c481ae56a3d",
+  name: "ExampleSketchheadsActivity",
   type: "png",
 });

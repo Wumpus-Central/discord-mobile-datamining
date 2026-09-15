@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class FlingGesture {
+class TapGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, FlingGesture);
+    tmp = closure_0(this, TapGesture);
     tmp2 = c2;
-    obj = c2(FlingGesture);
+    obj = c2(TapGesture);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -41,28 +41,64 @@ class FlingGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "FlingGestureHandler";
+    tmp3Result.handlerName = "TapGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_classCallCheck = FlingGesture;
-_inherits(FlingGesture, fn(6777).BaseGesture);
+_classCallCheck = TapGesture;
+_inherits(TapGesture, fn(6781).BaseGesture);
 const entry = {
-  key: "numberOfPointers",
-  value: function numberOfPointers(numberOfPointers) {
-    this.config.numberOfPointers = numberOfPointers;
+  key: "minPointers",
+  value: function minPointers(minPointers) {
+    this.config.minPointers = minPointers;
     return this;
   },
 };
 const items = [
   entry,
   {
-    key: "direction",
-    value: function direction(dependencyMap) {
-      this.config.direction = dependencyMap;
+    key: "numberOfTaps",
+    value: function numberOfTaps(numberOfTaps) {
+      this.config.numberOfTaps = numberOfTaps;
+      return this;
+    },
+  },
+  {
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    },
+  },
+  {
+    key: "maxDuration",
+    value: function maxDuration(maxDurationMs) {
+      this.config.maxDurationMs = maxDurationMs;
+      return this;
+    },
+  },
+  {
+    key: "maxDelay",
+    value: function maxDelay(maxDelayMs) {
+      this.config.maxDelayMs = maxDelayMs;
+      return this;
+    },
+  },
+  {
+    key: "maxDeltaX",
+    value: function maxDeltaX(maxDeltaX) {
+      this.config.maxDeltaX = maxDeltaX;
+      return this;
+    },
+  },
+  {
+    key: "maxDeltaY",
+    value: function maxDeltaY(maxDeltaY) {
+      this.config.maxDeltaY = maxDeltaY;
       return this;
     },
   },
 ];
 
-export const FlingGesture = _createClass(FlingGesture, items);
+export const TapGesture = _createClass(TapGesture, items);

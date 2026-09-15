@@ -1,244 +1,65 @@
 // _runtime/metro/08578__.js
-import extractOpacityDefault from "../08580_extractOpacity.js";
-import extractResponderDefault from "../08581_extractResponder.js";
-import _modDef8586 from "08586__.js";
-import reducedDefault from "../08587_reduced.js";
-import _modDef8588 from "08588__.js";
-import _modDef8598 from "08598__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import metroRequire from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import CircleDefault from "../08580_Circle.js";
+import _modDef8601 from "08601__.js";
+import showErrorCSS from "../08683_showErrorCSS.js";
+import _mod8684 from "08684__.js";
+import _fetchText from "../08686__fetchText.js";
+import RNSVGCircle from "../08687_RNSVGCircle.js";
 
-const Svg = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let closure_3 = ["style", "opacity", "viewBox", "children", "onLayout", "preserveAspectRatio"];
-get_ActivityIndicator = fn(17);
-({ findNodeHandle: closure_8, Platform, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const svg = StyleSheet.create({ svg: { backgroundColor: "transparent", borderWidth: 0 } }).svg;
-class Svg {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = hasOwnProperty(this, Svg);
-    items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(Svg);
-    tmp3 = metroRequire;
-    if (closure_11()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.measureInWindow = (arg0) => {
-      const root = closure_0.root;
-      if (root) {
-        root.measureInWindow(arg0);
-      }
-    };
-    tmp3Result.measure = (arg0) => {
-      const root = closure_0.root;
-      if (root) {
-        root.measure(arg0);
-      }
-    };
-    tmp3Result.measureLayout = (arg0, arg1, arg2) => {
-      const root = closure_0.root;
-      if (root) {
-        root.measureLayout(arg0, arg1, arg2);
-      }
-    };
-    tmp3Result.setNativeProps = (arg0) => {
-      const root = closure_0.root;
-      if (root) {
-        root.setNativeProps(arg0);
-      }
-    };
-    tmp3Result.toDataURL = (arg0, arg1) => {
-      if (arg0) {
-        const tmp4 = React6(closure_0.root);
-        Svg(8579).default.toDataURL(tmp4, arg1, arg0);
-        const _default = Svg(8579).default;
-      }
-    };
-    return tmp3Result;
-  }
-}
-_inherits(Svg, _modDef8598);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ style, opacity } = props);
-    ({ viewBox, children, onLayout, preserveAspectRatio } = props);
-    const tmp = _objectWithoutProperties(props, closure_3);
-    let applyResult = style;
-    if (Array.isArray(style)) {
-      const _Object = Object;
-      const items = [{}];
-      HermesBuiltin.arraySpread(style, 1);
-      const _Object2 = Object;
-      applyResult = HermesBuiltin.apply(items, Object);
-    }
-    const obj = {};
-    const merged = Object.assign(applyResult);
-    const merged1 = Object.assign(tmp);
-    ({ width, height, focusable } = obj);
-    let tmp10 = undefined === width;
-    ({
-      transform,
-      font,
-      fill,
-      fillOpacity,
-      fillRule,
-      stroke,
-      strokeWidth,
-      strokeOpacity,
-      strokeDasharray,
-      strokeDashoffset,
-      strokeLinecap,
-      strokeLinejoin,
-      strokeMiterlimit,
-      position,
-    } = obj);
-    if (tmp10) {
-      tmp10 = undefined === height;
-    }
-    if (tmp10) {
-      tmp10 = "absolute" !== position;
-    }
-    if (tmp10) {
-      height = "100%";
-      width = "100%";
-    }
-    let BooleanResult = Boolean(focusable);
-    if (BooleanResult) {
-      BooleanResult = "false" !== focusable;
-    }
-    tmp.focusable = BooleanResult;
-    let items1 = [svg];
-    if (style) {
-      items1.push(style);
-    }
-    let num2 = NaN;
-    if (null != opacity) {
-      num2 = extractOpacityDefault(opacity);
-    }
-    const obj2 = {};
-    let flag = false;
-    if (!isNaN(num2)) {
-      obj2.opacity = num2;
-      flag = true;
-    }
-    let flag2 = flag;
-    if (width) {
-      flag2 = flag;
-      if (height) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(width, 10);
-        const _parseInt2 = parseInt;
-        let parsed1 = parseInt(height, 10);
-        const _isNaN = isNaN;
-        let isNaNResult = isNaN(parsed);
-        if (!isNaNResult) {
-          isNaNResult = "%" === width[width.length - 1];
-        }
-        const _isNaN2 = isNaN;
-        let isNaNResult1 = isNaN(parsed1);
-        if (!isNaNResult1) {
-          isNaNResult1 = "%" === height[height.length - 1];
-        }
-        if (isNaNResult) {
-          parsed = width;
-        }
-        obj2.width = parsed;
-        if (isNaNResult1) {
-          parsed1 = height;
-        }
-        obj2.height = parsed1;
-        obj2.flex = 0;
-        flag2 = true;
-      }
-    }
-    if (flag2) {
-      items1.push(obj2);
-    }
-    if (items1.length <= 1) {
-      items1 = svg;
-    }
-    tmp.style = items1;
-    if (null != width) {
-      tmp.bbWidth = width;
-    }
-    if (null != height) {
-      tmp.bbHeight = height;
-    }
-    extractResponderDefault(tmp, tmp, this);
-    const merged2 = Object.assign({}, StyleSheet.flatten(style));
-    if (transform) {
-      if (merged2.transform) {
-        tmp.transform = merged2.transform;
-        merged2.transform = undefined;
-      }
-      tmp.transform = Svg(8582).extractTransformSvgView(tmp);
-      const obj3 = Svg(8582);
-    }
-    const obj4 = {};
-    const merged3 = Object.assign(tmp);
-    obj4.ref = function ref(arg0) {
-      return self.refMethod(arg0);
-    };
-    const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
-    obj4.children = jsx(_modDef8588, {
-      children,
-      style: merged2,
-      font,
-      fill,
-      fillOpacity,
-      fillRule,
-      stroke,
-      strokeWidth,
-      strokeOpacity,
-      strokeDasharray,
-      strokeDashoffset,
-      strokeLinecap,
-      strokeLinejoin,
-      strokeMiterlimit,
-      onLayout,
-    });
-    return jsx(_modDef8586, {});
-  },
-};
-let items = [entry];
-const importDefaultResultResult = _createClass(Svg, items);
-importDefaultResultResult.displayName = "Svg";
-importDefaultResultResult.defaultProps = { preserveAspectRatio: "xMidYMid meet" };
+const require = globalThis.__r;
 
-export default importDefaultResultResult;
+for (const key10013 in require("08579__.js")) {
+  arg5[key10013] = require("08579__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("Circle")) {
+  arg5[key10017] = require("Circle")[key10017];
+  continue;
+}
+
+export const inlineStyles = showErrorCSS.inlineStyles;
+export const loadLocalRawResource = showErrorCSS.loadLocalRawResource;
+export const LocalSvg = showErrorCSS.LocalSvg;
+export const SvgCss = showErrorCSS.SvgCss;
+export const SvgCssUri = showErrorCSS.SvgCssUri;
+export const SvgWithCss = showErrorCSS.SvgWithCss;
+export const SvgWithCssUri = showErrorCSS.SvgWithCssUri;
+export const WithLocalSvg = showErrorCSS.WithLocalSvg;
+export const camelCase = _mod8684.camelCase;
+export const fetchText = _fetchText.fetchText;
+export const parse = _mod8684.parse;
+export const RNSVGCircle = RNSVGCircle.RNSVGCircle;
+export const RNSVGClipPath = RNSVGCircle.RNSVGClipPath;
+export const RNSVGDefs = RNSVGCircle.RNSVGDefs;
+export const RNSVGEllipse = RNSVGCircle.RNSVGEllipse;
+export const RNSVGFeColorMatrix = RNSVGCircle.RNSVGFeColorMatrix;
+export const RNSVGFeComposite = RNSVGCircle.RNSVGFeComposite;
+export const RNSVGFeGaussianBlur = RNSVGCircle.RNSVGFeGaussianBlur;
+export const RNSVGFeMerge = RNSVGCircle.RNSVGFeMerge;
+export const RNSVGFeOffset = RNSVGCircle.RNSVGFeOffset;
+export const RNSVGFilter = RNSVGCircle.RNSVGFilter;
+export const RNSVGForeignObject = RNSVGCircle.RNSVGForeignObject;
+export const RNSVGGroup = RNSVGCircle.RNSVGGroup;
+export const RNSVGImage = RNSVGCircle.RNSVGImage;
+export const RNSVGLine = RNSVGCircle.RNSVGLine;
+export const RNSVGLinearGradient = RNSVGCircle.RNSVGLinearGradient;
+export const RNSVGMarker = RNSVGCircle.RNSVGMarker;
+export const RNSVGMask = RNSVGCircle.RNSVGMask;
+export const RNSVGPath = RNSVGCircle.RNSVGPath;
+export const RNSVGPattern = RNSVGCircle.RNSVGPattern;
+export const RNSVGRadialGradient = RNSVGCircle.RNSVGRadialGradient;
+export const RNSVGRect = RNSVGCircle.RNSVGRect;
+export const RNSVGSvgAndroid = RNSVGCircle.RNSVGSvgAndroid;
+export const RNSVGSvgIOS = RNSVGCircle.RNSVGSvgIOS;
+export const RNSVGSymbol = RNSVGCircle.RNSVGSymbol;
+export const RNSVGText = RNSVGCircle.RNSVGText;
+export const RNSVGTextPath = RNSVGCircle.RNSVGTextPath;
+export const RNSVGTSpan = RNSVGCircle.RNSVGTSpan;
+export const RNSVGUse = RNSVGCircle.RNSVGUse;
+export const Shape = _modDef8601;
+export const SvgAst = _mod8684.SvgAst;
+export const SvgFromUri = _mod8684.SvgFromUri;
+export const SvgFromXml = _mod8684.SvgFromXml;
+export const SvgUri = _mod8684.SvgUri;
+export const SvgXml = _mod8684.SvgXml;
+export default CircleDefault;

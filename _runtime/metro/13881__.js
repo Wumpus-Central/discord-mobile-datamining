@@ -1,13 +1,13 @@
 // _runtime/metro/13881__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "e75d6cb3291053e29f69fac93519aa0b",
-  name: "spectator",
+  hash: "81937e526a0dd862a80691425a7cb222",
+  name: "ic_mic_muted_dark_24px",
   type: "png",
 });

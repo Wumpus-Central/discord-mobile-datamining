@@ -1,24 +1,71 @@
 // _runtime/metro/13040__.js
-import _mod12928 from "12928__.js";
-import _mod13041 from "13041__.js";
+import _mod12959 from "12959__.js";
+import _flush from "../12980__flush.js";
+import _mod13005 from "13005__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-
-export const isBrowser = function isBrowser() {
-  let tmp = typeof window !== "undefined";
-  if (typeof window !== "undefined") {
-    const isNodeEnvResult = _mod13041.isNodeEnv();
-    let tmp3 = !isNodeEnvResult;
-    if (isNodeEnvResult) {
-      const _process = _mod12928.GLOBAL_OBJ.process;
-      let tmp2 = _process;
-      if (tmp2) {
-        tmp2 = "renderer" === _process.type;
+function getCurrentHubShim() {
+  return {
+    bindClient(arg0) {
+      const currentScope = _mod12959.getCurrentScope();
+      currentScope.setClient(arg0);
+    },
+    withScope: _mod12959.withScope,
+    getClient() {
+      return _mod12959.getClient();
+    },
+    getScope: _mod12959.getCurrentScope,
+    getIsolationScope: _mod12959.getIsolationScope,
+    captureException(arg0, arg1) {
+      const currentScope = _mod12959.getCurrentScope();
+      return currentScope.captureException(arg0, arg1);
+    },
+    captureMessage(arg0, arg1, arg2) {
+      const currentScope = _mod12959.getCurrentScope();
+      return currentScope.captureMessage(arg0, arg1, arg2);
+    },
+    captureEvent: _flush.captureEvent,
+    addBreadcrumb: _mod13005.addBreadcrumb,
+    setUser: _flush.setUser,
+    setTags: _flush.setTags,
+    setTag: _flush.setTag,
+    setExtra: _flush.setExtra,
+    setExtras: _flush.setExtras,
+    setContext: _flush.setContext,
+    getIntegration(id) {
+      const client = _mod12959.getClient();
+      let integrationByName = client;
+      if (client) {
+        integrationByName = client.getIntegrationByName(id.id);
       }
-      tmp3 = tmp2;
-    }
-    tmp = tmp3;
-  }
-  return tmp;
-};
+      if (!integrationByName) {
+        integrationByName = null;
+      }
+      return integrationByName;
+    },
+    startSession: _flush.startSession,
+    endSession: _flush.endSession,
+    captureSession(arg0) {
+      if (arg0) {
+        return _flush.endSession();
+      } else {
+        const currentScope = _mod12959.getCurrentScope();
+        const tmpResult3 = _mod12959;
+        const client = _mod12959.getClient();
+        const session = currentScope.getSession();
+        let tmp4 = client;
+        if (client) {
+          tmp4 = session;
+        }
+        if (tmp4) {
+          client.captureSession(session);
+        }
+        const tmpResult4 = _mod12959;
+      }
+    },
+  };
+}
+
+export const getCurrentHub = getCurrentHubShim;
+export { getCurrentHubShim };

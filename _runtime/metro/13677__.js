@@ -1,13 +1,13 @@
 // _runtime/metro/13677__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "ffb75c82f97e39285286ef89f1767a3c",
-  name: "ServerGridIcon",
+  hash: "b352e1ffa0afe53b75c17fb675b513d6",
+  name: "tier_1_32px",
   type: "png",
 });

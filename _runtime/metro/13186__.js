@@ -1,5 +1,5 @@
 // _runtime/metro/13186__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "275bd5b71554351f2696bfdcf78e312a",
-  name: "PaperPlusIcon",
+  hash: "ef42f58d92ae3022fbec5decb610cbf2",
+  name: "ThreadMinusIcon",
   type: "png",
 });

@@ -1,13 +1,13 @@
 // _runtime/metro/13591__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 420,
-  height: 112,
-  scales: [1, 2, 3],
-  hash: "ac80f7b470e8847053e22e988a30fa87",
-  name: "subscription_placeholder_pattern_dark",
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 351,
+  height: 100,
+  scales: [2, 3],
+  hash: "4890b29f84548b0e4f661e3894e1136c",
+  name: "img_subheader_error_mobile_v2",
   type: "png",
 });

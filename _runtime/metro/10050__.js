@@ -1,5 +1,5 @@
 // _runtime/metro/10050__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c00f2cf86b7ac758e128c274c6adc688",
-  name: "MicrophoneArrowRightIcon",
+  hash: "e535ea871b8155df08d1e92a6b532c6c",
+  name: "GroupArrowDownIcon",
   type: "png",
 });

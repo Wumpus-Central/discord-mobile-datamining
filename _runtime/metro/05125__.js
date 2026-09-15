@@ -1,5 +1,5 @@
 // _runtime/metro/05125__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4f055c482a5386d393f6b9bf8363f15e",
-  name: "TextWarningIcon",
+  hash: "55dfae0c7ba72f2b92f72dd1258be0b7",
+  name: "VoiceWarningIcon",
   type: "png",
 });

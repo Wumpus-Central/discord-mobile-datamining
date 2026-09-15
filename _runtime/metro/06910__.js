@@ -1,50 +1,50 @@
 // _runtime/metro/06910__.js
-import cancelAnimation from "../01636_cancelAnimation.js";
-import value2 from "../06729_value2.js";
-import _mod6733 from "06733__.js";
-import BottomSheetContext from "../06739_BottomSheetContext.js";
 import noop from "00019__.js";
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const jsx = fn(21).jsx;
+const require = globalThis.__r;
 
-export default function _default(children) {
-  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
-  if (useGestureEventsHandlersDefault === undefined) {
-    useGestureEventsHandlersDefault = _mod6733.useGestureEventsHandlersDefault;
+({ useEffect: c2, useRef: c3 } = noop);
+
+export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
   }
-  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
-  const bottomSheetInternal = _mod6733.useBottomSheetInternal();
-  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
-  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
-  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
-  const gestureHandler = _mod6733.useGestureHandler(
-    value2.GESTURE_SOURCE.CONTENT,
-    animatedContentGestureState,
-    sharedValue,
-    handleOnStart,
-    handleOnChange,
-    handleOnEnd,
-    handleOnFinalize,
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("cancelAnimation").makeMutable(obj2);
+        let obj = require("cancelAnimation");
+      } else {
+        mutable = require("cancelAnimation").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("cancelAnimation");
+      }
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+    }
+  }
+  closure_2(
+    () => () => {
+      if (ref.current) {
+        ref(dependencyMap[1]).cancelAnimation(tmp.current);
+        const obj = ref(dependencyMap[1]);
+      }
+    },
+    [],
   );
-  const gestureHandler1 = _mod6733.useGestureHandler(
-    value2.GESTURE_SOURCE.HANDLE,
-    animatedHandleGestureState,
-    sharedValue,
-    handleOnStart,
-    handleOnChange,
-    handleOnEnd,
-    handleOnFinalize,
-  );
-  const items = [gestureHandler, gestureHandler1, sharedValue];
-  value = useMemo(
-    () => ({
-      contentPanGestureHandler: gestureHandler,
-      handlePanGestureHandler: gestureHandler1,
-      animatedGestureSource: sharedValue,
-    }),
-    items,
-  );
-  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
-}
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
+};

@@ -1,6 +1,9 @@
 // _runtime/metro/05028__.js
-import _mod17 from "00017__.js";
+import noop from "00019__.js";
 
-const Platform = _mod17.Platform;
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
+const context = noop.createContext((children) => framebus(React, { children: children.children }));
 
-export const isIOS26OrHigher = false;
+export const GHContext = context;
+export const RNSScreensRefContext = noop.createContext(null);

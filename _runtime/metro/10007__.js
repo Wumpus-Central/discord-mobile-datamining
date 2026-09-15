@@ -1,3 +1,4 @@
 // _runtime/metro/10007__.js
+import _mod10008 from "10008__.js";
 
-export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
+export default _mod10008();

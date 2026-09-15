@@ -1,13 +1,13 @@
 // _runtime/metro/09984__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 160.5,
-  height: 140,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 251,
+  height: 147,
   scales: [2, 3],
-  hash: "ad61eda1bea496e5c4dfb770ef28c56b",
-  name: "server-invite-envelope",
+  hash: "c013c533d835389917bf422e9978d1be",
+  name: "img_app_crash_light",
   type: "png",
 });

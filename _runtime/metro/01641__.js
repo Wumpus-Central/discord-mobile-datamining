@@ -1,16 +1,11 @@
 // _runtime/metro/01641__.js
-import _mod17 from "00017__.js";
+const require = globalThis.__r;
 
-const LogBox = _mod17.LogBox;
-let fn;
-if (LogBox != null) {
-  const addLog = LogBox.addLog;
-  if (addLog != null) {
-    fn = addLog.bind(LogBox);
-  }
+for (const key10013 in require("01642__.js")) {
+  arg5[key10013] = require("01642__.js")[key10013];
+  continue;
 }
-if (fn == null) {
-  fn = () => {};
+for (const key10017 in require("logToConsole")) {
+  arg5[key10017] = require("logToConsole")[key10017];
+  continue;
 }
-
-export const addLogBoxLog = fn;

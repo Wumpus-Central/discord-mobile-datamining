@@ -1,13 +1,45 @@
 // _runtime/metro/17410__.js
-import registerAsset from "01120__.js";
-
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/parent_tools/images",
-  width: 1080,
-  height: 2400,
-  scales: [1],
-  hash: "98ba52ca11c0740336b7f6cfc50c1516",
-  name: "sunbeam_gradient_mobile",
-  type: "png",
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "pl",
+  pluralRuleFunction(arg0, arg1) {
+    const parts = String(arg0).split(".");
+    [arr, tmp2] = parts;
+    const substr = arr.slice(-1);
+    const substr1 = arr.slice(-2);
+    let str2 = "other";
+    if (!arg1) {
+      if (1 != arg0) {
+        if (!tmp2) {
+          if (substr >= 2) {
+            if (substr <= 4) {
+              let str5 = "few";
+              if (substr1 >= 12) {
+                str5 = "few";
+              }
+            }
+            let str3 = str5;
+          }
+        }
+        if (!tmp2) {
+          if (1 != arr) {
+            if (0 != substr) {
+              str5 = str6;
+            }
+          }
+          str6 = "many";
+        }
+        str6 = "other";
+        if (!tmp2) {
+          str6 = "other";
+          if (substr1 >= 12) {
+            str6 = "other";
+          }
+        }
+      } else {
+        str3 = "one";
+      }
+      str2 = str3;
+    }
+    return str2;
+  },
 });

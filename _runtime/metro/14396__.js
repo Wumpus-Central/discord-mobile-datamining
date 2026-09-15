@@ -1,11 +1,12 @@
 // _runtime/metro/14396__.js
-import _mod14397 from "14397__.js";
+import _mod14395 from "14395__.js";
 
-export default (arg0) => {
-  if (_mod14397(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod14395, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod14395[tmp2] = tmp;
   }
 };

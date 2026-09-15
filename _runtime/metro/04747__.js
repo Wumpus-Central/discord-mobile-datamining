@@ -1,24 +1,27 @@
 // _runtime/metro/04747__.js
-import _mod514 from "00514__.js";
-import _mod523 from "00523__.js";
-import baseIsArguments from "../00533_baseIsArguments.js";
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
-
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
+export default function apply(call, arg1, arg2) {
+  if (0 === arg2.length) {
+    const call4 = call.call;
+    return typeof call4 === "unknown" ? call() : call4(arg1);
+  } else if (1 === length) {
+    const call3 = call.call;
+    const first = arg2[0];
+    return typeof call3 === "unknown" ? call(first) : call3(arg1, first);
+  } else if (2 === length) {
+    const call2 = call.call;
+    [tmp5, tmp6] = arg2;
+    return typeof call2 === "unknown" ? call(tmp5, tmp6) : call2(arg1, tmp5, tmp6);
+  } else if (3 === length) {
+    call = call.call;
+    [tmp, tmp2, tmp3] = arg2;
+    if (typeof call === "unknown") {
+      let callResult = call(tmp, tmp2, tmp3);
+    } else {
+      callResult = call(arg1, tmp, tmp2, tmp3);
     }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
-    }
-    tmp3 = tmp5;
+    return callResult;
+  } else {
+    return call.apply(arg1, arg2);
   }
-  return tmp3;
 }

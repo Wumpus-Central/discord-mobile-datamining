@@ -1,5 +1,5 @@
 // _runtime/metro/10264__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "07392a850e043822a5c8062588fbfbb4",
-  name: "WaveformIcon",
+  hash: "4ff7b09e67486edcd0ad75a5131670be",
+  name: "CirclePlayIcon-primary",
   type: "png",
 });

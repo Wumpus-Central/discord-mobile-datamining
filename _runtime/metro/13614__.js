@@ -1,13 +1,13 @@
 // _runtime/metro/13614__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 375,
+  height: 301,
   scales: [2, 3],
-  hash: "fb3286cfe401333b68936fe15653c8b9",
-  name: "role",
+  hash: "66755272db25a38d2c195d1bf5a25e70",
+  name: "img_top_pattern_light",
   type: "png",
 });

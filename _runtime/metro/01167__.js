@@ -1,6 +1,6 @@
 // _runtime/metro/01167__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod1157 from "01157__.js";
+import _mod1168 from "01168__.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -24,22 +24,47 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-function formatToPlainString(k2UNz_, time) {
-  let first = k2UNz_;
-  if (typeof k2UNz_ !== "string") {
+function formatToMarkdownString(_1Ww0Hi, arg1) {
+  let tmp = arg2;
+  if (arg2 === undefined) {
+    tmp = _moduleResult;
+  }
+  let first = _1Ww0Hi;
+  if (typeof _1Ww0Hi !== "string") {
     const self = this;
-    first = this.bindFormatValues(_moduleResult, k2UNz_, time)[0];
+    first = this.bindFormatValues(tmp, _1Ww0Hi, arg1)[0];
   }
   return first;
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-class StringBuilder {
+const dependencyMap = {
+  $b(join) {
+    return "**" + join.join("") + "**";
+  },
+  $i(join) {
+    return "*" + join.join("") + "*";
+  },
+  $del(join) {
+    return "~~" + join.join("") + "~~";
+  },
+  $code(join) {
+    return "`" + join.join("") + "`";
+  },
+  $link(join, arg1, arg2) {
+    [tmp] = arg2;
+    return "[" + join.join("") + "](" + tmp + ")";
+  },
+  $p(join) {
+    return join.join("") + "\n\n";
+  },
+};
+class MarkdownBuilder {
   constructor() {
     self = this;
-    tmp = closure_0(this, StringBuilder);
+    tmp = closure_0(this, MarkdownBuilder);
     tmp2 = c2;
-    obj = c2(StringBuilder);
+    obj = c2(MarkdownBuilder);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -56,49 +81,17 @@ class StringBuilder {
     return tmp3Result;
   }
 }
-_classCallCheck = StringBuilder;
-_inherits(StringBuilder, _mod1157.FormatBuilder);
+_classCallCheck = MarkdownBuilder;
+_inherits(MarkdownBuilder, _mod1168.StringBuilder);
 const entry = {
   key: "pushRichTextTag",
   value: function pushRichTextTag(arg0, arg1, arg2) {
-    const self = this;
-    while (tmp !== undefined) {
-      self.result = self.result + tmp2;
-      continue;
-    }
+    this.result = this.result + dependencyMap[arg0](arg1, "", arg2);
   },
 };
-let items = [
-  entry,
-  {
-    key: "pushLiteralText",
-    value: function pushLiteralText(arg0) {
-      this.result = this.result + arg0;
-    },
-  },
-  {
-    key: "pushObject",
-    value: function pushObject(arg0) {
-      let tmp = null != arg0;
-      if (tmp) {
-        tmp = "toString" in arg0;
-      }
-      if (tmp) {
-        const self = this;
-        this.result = this.result + arg0.toString();
-      }
-    },
-  },
-  {
-    key: "finish",
-    value: function finish() {
-      const items = [this.result];
-      return items;
-    },
-  },
-];
-const _moduleResult = _createClass(StringBuilder, items);
+const items = [entry];
+const _moduleResult = _createClass(MarkdownBuilder, items);
+const hasOwnProperty = _moduleResult;
 
-export { formatToPlainString };
-export const StringBuilder = _moduleResult;
-export const stringFormatter = { format: formatToPlainString, builder: _moduleResult };
+export { formatToMarkdownString };
+export const markdownFormatter = { format: formatToMarkdownString, builder: _moduleResult };

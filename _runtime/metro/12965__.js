@@ -1,93 +1,99 @@
 // _runtime/metro/12965__.js
-import _mod12927 from "12927__.js";
-import spanTimeInputToSeconds from "../12932_spanTimeInputToSeconds.js";
-import _mod12955 from "12955__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const SentryNonRecordingSpan = require;
+class SentryNonRecordingSpan {
+  constructor() {
+    obj = global;
+    if (global === undefined) {
+      obj = {};
+    }
+    self = this;
+    tmp = c2(this, SentryNonRecordingSpan);
+    traceId = obj.traceId;
+    if (!traceId) {
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      obj2 = closure_0(closure_1[2]);
+      traceId = obj2.generateTraceId();
+    }
+    self._traceId = traceId;
+    spanId = obj.spanId;
+    if (!spanId) {
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj3 = closure_0(closure_1[2]);
+      spanId = obj3.generateSpanId();
+    }
+    self._spanId = spanId;
+    return;
+  }
+}
+const entry = {
+  key: "spanContext",
+  value: function spanContext() {
+    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(12937).TRACE_FLAG_NONE };
+  },
+};
+const items = [
+  entry,
+  {
+    key: "end",
+    value: function end(arg0) {},
+  },
+  {
+    key: "setAttribute",
+    value: function setAttribute(arg0, arg1) {
+      return this;
+    },
+  },
+  {
+    key: "setAttributes",
+    value: function setAttributes(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "setStatus",
+    value: function setStatus(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "updateName",
+    value: function updateName(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "isRecording",
+    value: function isRecording() {
+      return false;
+    },
+  },
+  {
+    key: "addEvent",
+    value: function addEvent(arg0, arg1, arg2) {
+      return this;
+    },
+  },
+  {
+    key: "addLink",
+    value: function addLink(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "addLinks",
+    value: function addLinks(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "recordException",
+    value: function recordException(arg0, arg1) {},
+  },
+];
 
-export const logSpanEnd = function logSpanEnd(spanContext) {
-  if (_mod12955.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
-    }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const spanId = spanContext.spanContext().spanId;
-    const tmpResult = spanTimeInputToSeconds;
-    let str3 = "";
-    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
-      str3 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const combined = '[Tracing] Finishing "' + str2 + '" ' + str3 + 'span "' + str + '" with ID ' + spanId;
-    const logger = _mod12927.logger;
-    logger.log(combined);
-    tmpResult2 = spanTimeInputToSeconds;
-  }
-};
-export const logSpanStart = function logSpanStart(spanContext) {
-  if (_mod12955.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
-    }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const parent_span_id = spanToJSONResult.parent_span_id;
-    const tmpResult = spanTimeInputToSeconds;
-    const tmpResult4 = spanTimeInputToSeconds;
-    const spanIsSampledResult = spanTimeInputToSeconds.spanIsSampled(spanContext);
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
-    let str3 = "unsampled";
-    if (spanIsSampledResult) {
-      str3 = "sampled";
-    }
-    let str5 = "";
-    if (rootSpan === spanContext) {
-      str5 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const _HermesInternal2 = HermesInternal;
-    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
-    const items = ["op: " + str2, ,];
-    const _HermesInternal3 = HermesInternal;
-    items[1] = "name: " + str;
-    const _HermesInternal4 = HermesInternal;
-    items[2] = "ID: " + spanContext.spanContext().spanId;
-    if (parent_span_id) {
-      const _HermesInternal5 = HermesInternal;
-      items.push("parent ID: " + parent_span_id);
-    }
-    if (rootSpan !== spanContext) {
-      const tmpResult6 = spanTimeInputToSeconds;
-      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
-      const _HermesInternal6 = HermesInternal;
-      items.push("root ID: " + rootSpan.spanContext().spanId);
-      if (op2) {
-        const _HermesInternal7 = HermesInternal;
-        items.push("root op: " + op2);
-      }
-      if (description2) {
-        const _HermesInternal8 = HermesInternal;
-        items.push("root description: " + description2);
-      }
-      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
-    }
-    const logger = _mod12927.logger;
-    const _HermesInternal9 = HermesInternal;
-    logger.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult5 = spanTimeInputToSeconds;
-  }
-};
+export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);

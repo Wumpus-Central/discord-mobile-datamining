@@ -1,13 +1,13 @@
 // _runtime/metro/09487__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
+  width: 261.5,
   height: 152,
   scales: [2, 3],
-  hash: "1c56c6a8d7541177ea8c3d88699db89c",
-  name: "img_guild_cap_upsell_light",
+  hash: "5691c33dd2c3544121435e1c3a569b50",
+  name: "img_nitro_longer_message_upsell_light",
   type: "png",
 });

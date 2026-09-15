@@ -1,13 +1,13 @@
 // _runtime/metro/15372__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 161,
-  scales: [1],
-  hash: "1b6a1fd726ebdfc69d47b037085b4f19",
-  name: "graggle_2",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "feb0699dba8bf9a96f37b026eba6ef56",
+  name: "arrow-sm-down",
   type: "png",
 });

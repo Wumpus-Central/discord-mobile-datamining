@@ -1,5 +1,5 @@
 // _runtime/metro/09016__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1d8ebef8a3957ec5bd51e54121ce2c75",
-  name: "GlobeEarthIcon",
+  hash: "3460a8c2a85f7dbc9f38e8345c6f5a9e",
+  name: "NintendoSwitchNeutralIcon",
   type: "png",
 });

@@ -1,11 +1,11 @@
 // _runtime/metro/02491__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/gifting",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=",
   scales: [1],
-  hash: "c91aaf2e607c53b6c817fc29b41e11bb",
-  name: "PremiumGifting.compiled.messages",
+  hash: "cea08700b0fcabd279548c2bc1de8629",
+  name: "zh-TW.messages.cea08700b0fcabd279548c2bc1de8629.compiled.messages",
   type: "jsona",
 });

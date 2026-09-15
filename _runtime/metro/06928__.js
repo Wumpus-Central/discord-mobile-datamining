@@ -1,67 +1,81 @@
 // _runtime/metro/06928__.js
-import _mod6930 from "06930__.js";
-import noop_mod from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
 import jsxProd from "../react/00021_jsxProd.js";
+import value22 from "../06733_value2.js";
+import _mod6929 from "06929__.js";
+import noop_mod from "00019__.js";
 
 let noop = noop_mod;
-const useMemo = noop.useMemo;
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
 let noop = noop_mod;
-({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
-  style = style.style;
-  const indicatorStyle = style.indicatorStyle;
-  let DEFAULT_ACCESSIBLE = style.accessible;
-  if (DEFAULT_ACCESSIBLE === undefined) {
-    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
+const jsx = jsxProd.jsx;
+const __initData = {
+  code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}",
+};
+const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
+  animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
+  let num = animatedFooterPosition.bottomInset;
+  if (num === undefined) {
+    num = 0;
   }
-  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
-  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
-    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
-  }
-  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
-  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
-    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
-  }
-  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
-  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
-    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
-  }
-  let items = [style];
-  const items1 = [indicatorStyle];
-  const obj = {
-    style: useMemo(() => {
-      const items = [_mod6930.styles.container, React3.flatten(style)];
-      return items;
-    }, items),
-    accessible: null,
-    accessibilityRole: null,
-    accessibilityLabel: null,
-    accessibilityHint: null,
-    collapsable: true,
-    children: null,
+  const style = animatedFooterPosition.style;
+  const children = animatedFooterPosition.children;
+  let animatedStyle;
+  const tmp = animatedStyle(null);
+  const bottomSheetInternal = animatedFooterPosition(style[2]).useBottomSheetInternal();
+  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  let obj = animatedFooterPosition(style[2]);
+  const tmp2 = style;
+  const fn = function c() {
+    value = animatedFooterPosition.get();
+    value2 = animatedKeyboardState.get();
+    let diff = value;
+    if (value2 !== value22.KEYBOARD_STATE.SHOWN) {
+      diff = value - num;
+    }
+    const obj = { transform: null };
+    const items = [{ translateY: Math.max(0, diff) }];
+    obj.transform = items;
+    return obj;
   };
-  const tmp9 = useMemo(() => {
-    const items = [_mod6930.styles.container, React3.flatten(style)];
+  const obj2 = animatedFooterPosition(style[3]);
+  fn.__closure = {
+    animatedFooterPosition,
+    animatedKeyboardState,
+    KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE,
+    bottomInset: num,
+  };
+  fn.__workletHash = 5322275157644;
+  fn.__initData = __initData;
+  let items = [num, animatedKeyboardState, animatedFooterPosition];
+  animatedStyle = obj2.useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  const items2 = [animatedFooterHeight];
+  const obj3 = {
+    animatedFooterPosition,
+    animatedKeyboardState,
+    KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE,
+    bottomInset: num,
+  };
+  const items3 = [animatedFooterHeight];
+  const tmp5 = animatedKeyboardState(() => {
+    const items = [_mod6929.styles.container, style, animatedStyle];
     return items;
-  }, items);
-  obj.accessible = DEFAULT_ACCESSIBLE;
-  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
-  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
-  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
-  const items2 = [
-    closure_5(closure_4, {
-      style: useMemo(() => {
-        const items = [_mod6930.styles.indicator, React3.flatten(indicatorStyle)];
-        return items;
-      }, items1),
-    }),
-    style.children,
-  ];
-  obj.children = items2;
-  return closure_6(closure_4, obj);
+  }, items1);
+  const tmp6 = animatedFooterHeight((nativeEvent) => {
+    const result = animatedFooterHeight.set(nativeEvent.nativeEvent.layout.height);
+  }, items2);
+  const tmp7 = animatedFooterHeight((height) => {
+    const result = animatedFooterHeight.set(height.height);
+  }, items3);
+  const boundingClientRect = animatedFooterPosition(style[2]).useBoundingClientRect(tmp, tmp7);
+  let tmp9 = null;
+  if (null !== children) {
+    const obj5 = { ref: tmp, onLayout: tmp6, style: tmp5, children };
+    tmp9 = jsx(num(tmp2[3]).View, { ref: tmp, onLayout: tmp6, style: tmp5, children });
+  }
+  return tmp9;
 });
-memoResult.displayName = "BottomSheetHandle";
+memoResult.displayName = "BottomSheetFooter";
 
-export default memoResult;
+export const BottomSheetFooter = memoResult;

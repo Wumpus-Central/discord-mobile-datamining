@@ -1,13 +1,13 @@
 // _runtime/metro/10011__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
-  scales: [2, 3],
-  hash: "1d1181e321dc8059ed1b1ce7cbbde121",
-  name: "ic_chat_bubble_32px",
+  httpServerLocation: "/assets/images/auth",
+  width: 100,
+  height: 100,
+  scales: [1],
+  hash: "2466a8cae3eebcc6d13072f6ff1957c4",
+  name: "img-auth-qrcode-overlay",
   type: "png",
 });

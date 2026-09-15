@@ -1,13 +1,13 @@
 // _runtime/metro/09990__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "6745f221b3e662876db35721a519454b",
-  name: "copy",
+  hash: "59ef37b759831ec882fc480e1d1185da",
+  name: "ic_share_ios",
   type: "png",
 });

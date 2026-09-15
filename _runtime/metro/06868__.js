@@ -1,105 +1,75 @@
 // _runtime/metro/06868__.js
-import tagMessage from "../06761_tagMessage.js";
-import _mod6762 from "06762__.js";
-
-require = fn;
+const require = arg1;
 const dependencyMap = arg6;
-const setGestureState = function t(arg0, arg1) {
-  const _globalThis = globalThis;
-  if (globalThis._setGestureStateSync) {
-    _globalThis._setGestureStateSync(arg0, arg1);
-  } else if (_globalThis._setGestureStateAsync) {
-    const _globalThis2 = globalThis;
-    const result = globalThis._setGestureStateAsync(arg0, arg1);
-  } else {
-    const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-    throw error;
-  }
-};
-setGestureState.__closure = { tagMessage: fn(6761).tagMessage };
-setGestureState.__workletHash = 727405139747;
-setGestureState.__initData = {
-  code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}",
-};
-const obj2 = { activate: null, fail: null, deactivate: null };
-const fn2 = function _(arg0) {
-  const ACTIVE = _mod6762.State.ACTIVE;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, ACTIVE);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj = { tagMessage: fn(6761).tagMessage };
-fn2.__closure = { setGestureState, State: fn(6762).State };
-fn2.__workletHash = 14928129771754;
-fn2.__initData = {
-  code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}",
-};
-obj2.activate = fn2;
-const fn3 = function n(arg0) {
-  const FAILED = _mod6762.State.FAILED;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, FAILED);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, FAILED);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj3 = { setGestureState, State: fn(6762).State };
-fn3.__closure = { setGestureState, State: fn(6762).State };
-fn3.__workletHash = 1703030189599;
-fn3.__initData = {
-  code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}",
-};
-obj2.fail = fn3;
-const fn4 = function s(arg0) {
-  const END = _mod6762.State.END;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, END);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, END);
-    } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-const obj4 = { setGestureState, State: fn(6762).State };
-fn4.__closure = { setGestureState, State: fn(6762).State };
-fn4.__workletHash = 5511283927342;
-fn4.__initData = {
-  code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}",
-};
-obj2.deactivate = fn4;
 
-export const GestureStateManager = obj2;
+export const useComposedGesture = function useComposedGesture(type) {
+  const substr = [...arguments].slice();
+  const flatMapResult = substr.flatMap((handlerTags) => {
+    if (obj.isComposedGesture(handlerTags)) {
+      handlerTags = handlerTags.handlerTags;
+    } else {
+      handlerTags = [];
+      handlerTags[0] = handlerTags.handlerTag;
+    }
+    return handlerTags;
+  });
+  if (obj.containsDuplicates(flatMapResult)) {
+    const _Error2 = Error;
+    const error = new Error(tmp2(6765).tagMessage("Each gesture can be used only once in the gesture composition."));
+    throw error;
+  } else {
+    const obj2 = {
+      shouldUseReanimatedDetector: substr.some((config) => config.config.shouldUseReanimatedDetector),
+      dispatchesAnimatedEvents: substr.some((config) => config.config.dispatchesAnimatedEvents),
+    };
+    if (obj2.shouldUseReanimatedDetector) {
+      if (obj2.dispatchesAnimatedEvents) {
+        const _Error = Error;
+        const error1 = new Error(
+          tmp2(6765).tagMessage("Composed gestures cannot use both Reanimated and Animated events at the same time."),
+        );
+        throw error1;
+      }
+    }
+    const Reanimated = tmp2(6803).Reanimated;
+    let composedEventHandler;
+    if (Reanimated != null) {
+      composedEventHandler = Reanimated.useComposedEventHandler(
+        substr.map((detectorCallbacks) => detectorCallbacks.detectorCallbacks.reanimatedEventHandler || null),
+      );
+    }
+    const found = substr.filter(
+      (detectorCallbacks) => undefined !== detectorCallbacks.detectorCallbacks.animatedEventHandler,
+    );
+    let animatedEventHandler;
+    if (found.length > 0) {
+      animatedEventHandler = found[0].detectorCallbacks.animatedEventHandler;
+    }
+    const obj3 = {
+      handlerTags: flatMapResult,
+      type,
+      config: obj2,
+      detectorCallbacks: null,
+      externalSimultaneousHandlers: null,
+      gestures: null,
+    };
+    const obj4 = {
+      jsEventHandler(arg0) {
+        for (const item10007 of substr) {
+          if (item10007.detectorCallbacks.jsEventHandler) {
+            let detectorCallbacks = tmp.detectorCallbacks;
+            let jsEventHandlerResult = detectorCallbacks.jsEventHandler(arg0);
+          }
+          continue;
+        }
+      },
+      reanimatedEventHandler: composedEventHandler,
+      animatedEventHandler,
+    };
+    obj3.detectorCallbacks = obj4;
+    obj3.externalSimultaneousHandlers = [];
+    obj3.gestures = substr;
+    return obj3;
+  }
+  obj = substr(6828);
+};

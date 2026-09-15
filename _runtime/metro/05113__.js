@@ -1,5 +1,5 @@
 // _runtime/metro/05113__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "fee15a76bef55eb0f2b368d5439c39b9",
-  name: "TextIcon",
+  hash: "e06e2e681624b5a052b477a4af8dc512",
+  name: "ThreadLockIcon",
   type: "png",
 });

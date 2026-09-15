@@ -1,13 +1,4 @@
 // _runtime/metro/06795__.js
-import get_ActivityIndicator from "00017__.js";
+import _mod17 from "00017__.js";
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let PlatformConstants;
-if (NativeModules != null) {
-  PlatformConstants = NativeModules.PlatformConstants;
-}
-if (PlatformConstants == null) {
-  PlatformConstants = get_ActivityIndicator.Platform.constants;
-}
-
-export default PlatformConstants;
+export default _mod17.findNodeHandle;

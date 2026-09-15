@@ -1,84 +1,75 @@
 // _runtime/metro/03982__.js
-import requiredArgs_mod from "../03726_requiredArgs.js";
+import _mod3733 from "03733__.js";
+import code_mod from "03974__.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+let code = code_mod;
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = code;
 }
-requiredArgs = tmp3;
+code = tmp3;
+let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
 
-export default function formatISODuration(years) {
-  requiredArgs.default(1, arguments);
-  if ("object" !== _typeof(years)) {
-    const _Error = Error;
-    const error = new Error("Duration must be an object");
-    throw error;
+export default function formatDuration(arg0, locale) {
+  closure_0 = arg0;
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
+    throw typeError;
   } else {
-    years = years.years;
-    let num = 0;
-    if (undefined !== years) {
-      num = years;
+    locale = undefined;
+    const defaultOptions = _mod3733.getDefaultOptions();
+    if (null != locale) {
+      locale = locale.locale;
     }
-    const months = years.months;
-    let num2 = 0;
-    if (undefined !== months) {
-      num2 = months;
+    if (null === locale) {
+      locale = defaultOptions.locale;
     }
-    const days = years.days;
-    let num3 = 0;
-    if (undefined !== days) {
-      num3 = days;
+    if (null === locale) {
+      locale = code.default;
     }
-    const hours = years.hours;
-    let num4 = 0;
-    if (undefined !== hours) {
-      num4 = hours;
+    let format;
+    if (null != locale) {
+      format = locale.format;
     }
-    const minutes = years.minutes;
-    let num5 = 0;
-    if (undefined !== minutes) {
-      num5 = minutes;
+    if (null === format) {
+      format = closure_3;
     }
-    const seconds = years.seconds;
-    let num6 = 0;
-    if (undefined !== seconds) {
-      num6 = seconds;
+    let zero;
+    if (null != locale) {
+      zero = locale.zero;
     }
-    const concat = "P".concat;
-    const combined = "P".concat(num, "Y");
-    const combined1 = combined.concat(num2, "M");
-    const combined2 = combined1.concat(num3, "DT");
-    const combined3 = combined2.concat(num4, "H");
-    const combined4 = combined3.concat(num5, "M");
-    return combined4.concat(num6, "S");
+    closure_2 = null !== zero && undefined !== zero && zero;
+    let delimiter;
+    if (null != locale) {
+      delimiter = locale.delimiter;
+    }
+    let str2 = " ";
+    if (null !== delimiter) {
+      str2 = " ";
+      if (undefined !== delimiter) {
+        str2 = delimiter;
+      }
+    }
+    if (locale.formatDistance) {
+      const reduced = format.reduce((arr, item) => {
+        let combined = arr;
+        if (typeof closure_0[item] === "number") {
+          if (closure_2) {
+            combined = arr.concat(locale.formatDistance(tmp, tmp3));
+          } else {
+            combined = arr;
+          }
+        }
+        return combined;
+      }, []);
+      return reduced.join(str2);
+    } else {
+      return "";
+    }
   }
 };
 export default exports.default;

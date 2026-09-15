@@ -1,5 +1,5 @@
 // _runtime/metro/05132__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "50398ad483a7c69d1d35b3cb9c9b7bde",
-  name: "ForumSpoilerIcon",
+  hash: "d91139b8e746209ecc3e711216b338c8",
+  name: "ChatIcon",
   type: "png",
 });

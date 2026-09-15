@@ -266,7 +266,7 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F126017 */ function*() { ... })();
+            return (/* F126270 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -357,7 +357,7 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F126017 */ function*() { ... })();
+            return (/* F126270 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;

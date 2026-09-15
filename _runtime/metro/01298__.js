@@ -1,3 +1,3 @@
 // _runtime/metro/01298__.js
 
-export default Error;
+export default Function.prototype.apply;

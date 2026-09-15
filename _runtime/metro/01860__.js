@@ -1,84 +1,17 @@
 // _runtime/metro/01860__.js
-import _mod1828 from "01828__.js";
-import "module_19";
+import TEST_ID_KEYBOARD_TOOLBAR from "../01855_TEST_ID_KEYBOARD_TOOLBAR.js";
+import noop from "00019__.js";
 
 require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4 } = noop);
 get_ActivityIndicator = fn(17);
-({ StyleSheet, Text: hasOwnProperty } = get_ActivityIndicator);
+({ StyleSheet, View: c2 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const doneButtonContainer = StyleSheet.create({
-  doneButton: { fontWeight: "600", fontSize: 15 },
-  doneButtonContainer: { marginRight: 16, marginLeft: 8 },
-});
+const styles = StyleSheet.create({ flex: { flex: 1 } });
 
-export default function _default(rippleRadius) {
-  ({ children, onPress } = rippleRadius);
-  let num = rippleRadius.rippleRadius;
-  if (num === undefined) {
-    num = 28;
-  }
-  ({ button, text } = rippleRadius);
-  if (button === undefined) {
-    button = keyboardState(theme[3]);
-  }
-  theme = undefined;
-  keyboardState = onPress(theme[4]).useKeyboardState((appearance) => appearance.appearance);
-  const obj = onPress(theme[4]);
-  theme = onPress(theme[5]).useToolbarContext().theme;
-  let items = [keyboardState, theme];
-  const items1 = [onPress];
-  const obj2 = onPress(theme[5]);
-  const obj3 = {
-    accessibilityHint: "Closes the keyboard",
-    accessibilityLabel: "Done",
-    rippleRadius: num,
-    style: doneButtonContainer.doneButtonContainer,
-    testID: null,
-    theme: null,
-    onPress: null,
-    children: null,
-  };
-  const tmp4 = closure_4(() => {
-    const items = [doneButton.doneButton, { color: theme[keyboardState].primary }];
-    return items;
-  }, items);
-  obj3.testID = onPress(theme[7]).TEST_ID_KEYBOARD_TOOLBAR_DONE;
-  obj3.theme = theme;
-  obj3.onPress = closure_3((isDefaultPrevented) => {
-    if (onPress != null) {
-      tmp(isDefaultPrevented);
-    }
-    if (!isDefaultPrevented.isDefaultPrevented()) {
-      const KeyboardController = _mod1828.KeyboardController;
-      KeyboardController.dismiss();
-    }
-  }, items1);
-  const obj4 = { maxFontSizeMultiplier: 1.3, style: tmp4, children: null };
-  if (children == null) {
-    children = text;
-  }
-  if (children == null) {
-    children = "Done";
-  }
-  obj4.children = children;
-  obj3.children = (
-    <closure_5 maxFontSizeMultiplier={1.3} style={tmp4}>
-      {null}
-    </closure_5>
-  );
+export default function _default(children) {
   return (
-    <button
-      accessibilityHint="Closes the keyboard"
-      accessibilityLabel="Done"
-      rippleRadius={num}
-      style={doneButtonContainer.doneButtonContainer}
-      testID={null}
-      theme={null}
-      onPress={null}
-    >
-      {null}
-    </button>
+    <React2 style={styles.flex} testID={TEST_ID_KEYBOARD_TOOLBAR.TEST_ID_KEYBOARD_TOOLBAR_CONTENT}>
+      {children.children}
+    </React2>
   );
 }

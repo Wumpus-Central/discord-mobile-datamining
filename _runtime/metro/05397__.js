@@ -1,5 +1,5 @@
 // _runtime/metro/05397__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "98be8451aca35f74c79e6384bee97580",
-  name: "img_account_sync_steam_light",
+  hash: "07d32c275cec4eea23627ed6a4c37375",
+  name: "img_account_sync_league_of_legends_light_and_dark",
   type: "svg",
 });

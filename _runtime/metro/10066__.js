@@ -1,5 +1,5 @@
 // _runtime/metro/10066__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f9f36b748bcc7c6393cf056bc860ba1e",
-  name: "HandRequestSpeakIcon",
+  hash: "9bcd40cb62b748b314b1aa933da9be99",
+  name: "HandRequestDenyIcon",
   type: "png",
 });

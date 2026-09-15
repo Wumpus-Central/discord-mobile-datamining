@@ -1,13 +1,13 @@
 // _runtime/metro/05456__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 267,
+  height: 267,
   scales: [1],
-  hash: "6cc805e0c42759b2e2dd9cbde8874a15",
-  name: "img_account_sync_paypal_white",
+  hash: "898dc79e0285b8e9855531eeca36bf84",
+  name: "img_roblox_white",
   type: "svg",
 });

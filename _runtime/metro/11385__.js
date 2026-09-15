@@ -1,5 +1,5 @@
 // _runtime/metro/11385__.js
-import registerAsset from "01120__.js";
+import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0b3282394dfcf9fe9a8a6e6a7e39fa15",
-  name: "TagsIcon",
+  hash: "3446a422668528039c87de87a6054a15",
+  name: "KeyboardIcon",
   type: "png",
 });

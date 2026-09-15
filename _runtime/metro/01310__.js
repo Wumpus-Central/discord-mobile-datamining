@@ -1,3 +1,3 @@
 // _runtime/metro/01310__.js
 
-export default Math.round;
+export default Math.pow;
