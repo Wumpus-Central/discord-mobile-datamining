@@ -1,33 +1,67 @@
 // === Module 5004: ? ===
 
 // Module 5004
-import get_ActivityIndicator from "module_17" /* 17 */;
+import RNSLog2 from "RNSLog" /* 4996 */;
+import noop from "module_19" /* 19 */;
 
-({ Platform, UIManager: closure_0 } = get_ActivityIndicator);
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
 
-export const isNativePlatformSupported = true;
-export const enableScreens = function enableScreens() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
+export const useTabsScreen = function useTabsScreen(componentNodeRef) {
+  componentNodeRef = componentNodeRef.componentNodeRef;
+  const onDidAppear = componentNodeRef.onDidAppear;
+  const onDidDisappear = componentNodeRef.onDidDisappear;
+  const onWillAppear = componentNodeRef.onWillAppear;
+  const onWillDisappear = componentNodeRef.onWillDisappear;
+  const ref = onDidDisappear.useRef(-1);
+  const effect = onDidDisappear.useEffect(() => {
+    if (null != componentNodeRef.current) {
+      let num2 = findNodeHandle(tmp.current);
+      if (num2 == null) {
+        num2 = -1;
+      }
+      ref.current = num2;
+    } else {
+      ref.current = -1;
+    }
+  }, []);
+  const items = [onWillAppear];
+  const items1 = [onDidAppear];
+  const callback = onDidDisappear.useCallback((arg0) => {
+    const RNSLog = RNSLog2.RNSLog;
+    RNSLog.log("TabsScreen [" + ref.current + "] onWillAppear received");
+    if (onWillAppear != null) {
+      tmp2(arg0);
+    }
+  }, items);
+  const items2 = [onWillDisappear];
+  const callback1 = onDidDisappear.useCallback((arg0) => {
+    const RNSLog = RNSLog2.RNSLog;
+    RNSLog.log("TabsScreen [" + ref.current + "] onDidAppear received");
+    if (onDidAppear != null) {
+      tmp2(arg0);
+    }
+  }, items1);
+  const items3 = [onDidDisappear];
+  const callback2 = onDidDisappear.useCallback((arg0) => {
+    const RNSLog = RNSLog2.RNSLog;
+    RNSLog.log("TabsScreen [" + ref.current + "] onWillDisappear received");
+    if (onWillDisappear != null) {
+      tmp2(arg0);
+    }
+  }, items2);
+  const callback3 = onDidDisappear.useCallback((arg0) => {
+    const RNSLog = RNSLog2.RNSLog;
+    RNSLog.log("TabsScreen [" + ref.current + "] onDidDisappear received");
+    if (onDidDisappear != null) {
+      tmp2(arg0);
+    }
+  }, items3);
+  let RNSLog = componentNodeRef(onDidAppear[2]).RNSLog;
+  let num = ref.current;
+  if (num == null) {
+    num = -1;
   }
-  if (flag) {
-    flag = !viewManagerConfig.getViewManagerConfig("RNSScreen");
-  }
-  if (flag) {
-    const _console = console;
-    console.error("Screen native module hasn't been linked. Please check the react-native-screens README for more details");
-  }
+  RNSLog.log("TabsScreen [" + num + "] render; screenKey: " + componentNodeRef.screenKey);
+  return { componentNodeRef, lifecycleCallbacks: { onWillAppear: callback, onDidAppear: callback1, onWillDisappear: callback2, onDidDisappear: callback3 } };
 };
-export function enableFreeze() {
-  flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-}
-export function screensEnabled() {
-  return flag;
-}
-export function freezeEnabled() {
-  return flag;
-}

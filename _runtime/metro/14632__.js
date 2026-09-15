@@ -1,0 +1,7 @@
+// === Module 14632: ? ===
+
+// Module 14632
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "72603ac548e054665a7efcd4a8c834e5", name: "disconnect", type: "png" });

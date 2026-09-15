@@ -1,51 +1,41 @@
 // === Module 14517: ? ===
 
 // Module 14517
-import noop from "module_19" /* 19 */;
-import module_14499_mod from "module_14499" /* 14499 */;
-import _isNativeReflectConstruct_mod from "module_14518" /* 14518 */;
-import jsxProd from "jsxProd" /* 21 */;
 
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-let module_14499 = module_14499_mod;
-if (!module_14499) {
-  let obj = { default: module_14499 };
-  let tmp4 = obj;
-} else {
-  tmp4 = module_14499;
-}
-module_14499 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
-
-export default () => () => {
-  closure_0 = closure_0.default();
+export default () => (startTimer) => {
+  closure_0 = startTimer;
+  startTimer = startTimer.startTimer;
   return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
-      }
-    },
     features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
-            const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>{null}</_isNativeReflectConstruct.default>;
-          };
-        };
+      benchmark(title) {
+        const items = [];
+        closure_2 = items();
+        function step(title) {
+          let num = 0;
+          if (0 !== items.length) {
+            num = items[items.length - 1].time;
+          }
+          const tmp = closure_2();
+          items.push({ title, time: tmp, delta: tmp - num });
+          const obj = { title, time: tmp, delta: tmp - num };
+        }
+        items.push({ title, time: 0, delta: 0 });
+        function stop(title) {
+          if (typeof step === "function") {
+            let num = 0;
+            if (0 !== items.length) {
+              num = items[items.length - 1].time;
+            }
+            const tmp3 = closure_2();
+            const obj = { title, time: tmp3, delta: tmp3 - num };
+            items.push(obj);
+            const obj2 = { title, steps: items };
+            title.send("benchmark.report", obj2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        return { step, stop, last: stop };
       }
     }
   };

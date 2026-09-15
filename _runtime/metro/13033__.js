@@ -1,224 +1,102 @@
 // === Module 13033: ? ===
 
 // Module 13033
-import errorCallback from "errorCallback" /* 12923 */;
-import _mod12951 from "module_12951" /* 12951 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import "module_12926";
-import consoleSandbox from "module_12927" /* 12927 */;
-import __SENTRY_DEBUG__ from "module_12955" /* 12955 */;
-import dateTimestampInSeconds from "module_12941" /* 12941 */;
+import _mod12938 from "module_12938" /* 12938 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-errorCallback;
-_mod12951;
-let obj = { mechanism: { handled: false, data: { function: "trpcMiddleware" } } };
+let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
 
-export const trpcMiddleware = function trpcMiddleware() {
-  closure_0 = asyncGeneratorStep(async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp7 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            let obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_2 = tmp3;
-            closure_1 = tmp5;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
-            const path = closure_0.path;
-            closure_129_0 = path;
-            ({ next: closure_129_1, rawInput, getRawInput } = closure_0);
-            const client = closure_0(12954).getClient();
-            let options = client;
-            if (client) {
-              options = client.getOptions();
-            }
-            let obj5 = { procedure_path: path, procedure_type: closure_0.type };
-            closure_129_2 = obj5;
-            if (undefined !== closure_0.attachRpcInput) {
-              let sendDefaultPii = closure_0.attachRpcInput;
-            } else {
-              sendDefaultPii = options;
-              if (options) {
-                sendDefaultPii = options.sendDefaultPii;
-              }
-            }
-            if (sendDefaultPii) {
-              if (undefined !== rawInput) {
-                const normalizer2 = closure_0(12972);
-                obj5.input = normalizer2.normalize(rawInput);
-              }
-              if (undefined !== getRawInput) {
-                if (typeof getRawInput === "function") {
-                  c4 = 1;
-                  c5 = 2;
-                  c6 = 1;
-                  let obj6 = { value: getRawInput(), done: false };
-                  return obj6;
-                }
-              }
-            }
-            const obj7 = closure_0(12954);
-          }
-        } else {
-          if (1 === tmp8) {
-            c4 = 0;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_3 = value;
-            const normalizer = closure_0(12972);
-            closure_129_2.input = normalizer.normalize(closure_129_3);
-            c4 = 0;
-          }
-          c4 = 0;
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        }
-        closure_0(12954).withScope((setContext) => {
-          setContext.setContext("trpc", closure_2);
-          obj = closure_1_0(dependencyMap[10]);
-          closure_0 = closure_1_2(function*(arg0) {
-            if (c6 === 2) {
-              c6 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp6 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c6 = 2;
-                if (0 === c5) {
-                  if (arg0 === 1) {
-                    c6 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c6 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else {
-                    closure_2 = tmp3;
-                    closure_1 = tmp7;
-                    closure_129_0 = closure_0;
-                    closure_129_1 = undefined;
-                    c4 = 1;
-                    c5 = 2;
-                    c6 = 1;
-                    const obj5 = { value: closure_1(), done: false };
-                    return obj5;
-                  }
-                } else if (1 === tmp7) {
-                  c4 = 0;
-                  closure_129_2 = closure_3;
-                  closure_0(dependencyMap[7]).captureException(closure_129_2, closure_2_3);
-                  closure_129_0.end();
-                  throw closure_129_2;
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 0;
-                  c6 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                } else {
-                  closure_129_1 = value;
-                  (function captureIfError(ok) {
-                    let tmp = typeof ok === "object";
-                    if (typeof ok === "object") {
-                      tmp = null !== ok;
-                    }
-                    if (tmp) {
-                      tmp = "ok" in ok;
-                    }
-                    if (tmp) {
-                      tmp = !ok.ok;
-                    }
-                    if (tmp) {
-                      tmp = "error" in ok;
-                    }
-                    if (tmp) {
-                      closure_1_0(dependencyMap[7]).captureException(ok.error, closure_1_3);
-                      obj = closure_1_0(dependencyMap[7]);
-                    }
-                  })(closure_129_1);
-                  closure_129_0.end();
-                  c4 = 0;
-                  c6 = 3;
-                  obj = { value: closure_129_1, done: true };
-                  return obj;
-                }
-              } catch (tmp27) {
-                closure_3 = tmp27;
-                if (tmp4 === c4) {
-                  c6 = tmp2;
-                  throw tmp27;
-                } else {
-                  c5 = tmp;
-                }
-              }
-            }
-          });
-          return obj.startSpanManual({ name: "trpc/" + closure_0, op: "rpc.server", attributes: { [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route", [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc" } }, function(arg0) {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          });
-        });
-        c6 = 3;
-        const obj3 = closure_0(12954);
-      } catch (tmp24) {
-        closure_3 = tmp24;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp24;
-        } else {
-          c5 = tmp;
-        }
-      }
-    }
+export const getBucketKey = function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
+  const entries = Object.entries(_mod12938.dropUndefinedKeys(sanitizeTagsResult));
+  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
+    const first = arg0[0];
+    return first.localeCompare(arg1[0]);
   });
-  return function(arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+};
+export const sanitizeMetricKey = function sanitizeMetricKey(str) {
+  return str.replace(/[^\w\-.]+/gi, "_");
+};
+export const sanitizeTags = function sanitizeTags(tags) {
+  let obj = {};
+  for (const key10007 in arg0) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10007);
     } else {
-      applyArgumentsResult = apply(self, arguments);
+      hasOwnPropertyResult = call(arg0, key10007);
     }
-    return applyArgumentsResult;
-  };
+    if (!hasOwnPropertyResult) {
+      continue;
+    } else {
+      let _String = String;
+      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
+      items = [];
+      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
+      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
+        const obj = dependencyMap[Symbol.iterator]();
+        while (obj !== undefined) {
+          let tmp4 = closure_1_2(tmp2, 2);
+          if (item === tmp4[0]) {
+            obj.return();
+            return tmp5;
+          }
+        }
+        return item;
+      })(item), "");
+      continue;
+    }
+    continue;
+  }
+  return obj;
+};
+export const sanitizeUnit = function sanitizeUnit(none) {
+  return none.replace(/[^\w]+/gi, "_");
+};
+export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
+  let str = "";
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let _Object = Object;
+    let entries = Object.entries(nextResult.tags);
+    let arr2 = entries;
+    let str2 = "";
+    if (entries.length > 0) {
+      let mapped = arr2.map((item) => {
+        [tmp, tmp2] = item;
+        return "" + tmp + ":" + tmp2;
+      });
+      let _HermesInternal = HermesInternal;
+      str2 = "|#" + mapped.join(",");
+    }
+    let _HermesInternal2 = HermesInternal;
+    let str3 = "";
+    let str4 = "@";
+    let str5 = ":";
+    let str6 = "|";
+    let str7 = "|T";
+    let str8 = "\n";
+    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
+    continue;
+  }
+  return str;
+};
+export const simpleHash = function simpleHash(item) {
+  let length;
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < item.length) {
+    do {
+      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
+      num2 = sum & sum;
+      num = num + 1;
+      num3 = num2;
+      length = item.length;
+    } while (num < length);
+  }
+  return num3 >>> 0;
 };

@@ -1,5 +1,12 @@
 // === Module 13745: ? ===
 
 // Module 13745
+import _mod13759 from "module_13759" /* 13759 */;
+import assign from "module_13746" /* 13746 */;
+import Deflate from "Deflate" /* 13747 */;
+import Inflate from "Inflate" /* 13755 */;
 
-export default { 2: "need dictionary", 1: "stream end", 0: "", "-1": "file error", "-2": "stream error", "-3": "data error", "-4": "insufficient memory", "-5": "buffer error", "-6": "incompatible version" };
+const obj = {};
+assign.assign(obj, Deflate, Inflate, _mod13759);
+
+export default obj;

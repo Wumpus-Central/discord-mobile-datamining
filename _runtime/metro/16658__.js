@@ -1,7 +1,7 @@
 // === Module 16658: ? ===
 
 // Module 16658
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_home/native/images", width: 1100, height: 275, scales: [2, 3], hash: "2350a6e29ab96dbf4682611d6fbf7bcc", name: "light_home_header_placeholder", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 18, height: 18, scales: [2, 3], hash: "ac1d1ee38d369222a757b30c5d2c8ed6", name: "arrow", type: "png" });

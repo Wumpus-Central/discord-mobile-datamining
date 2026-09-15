@@ -1,7 +1,7 @@
 // === Module 13460: ? ===
 
 // Module 13460
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 155, height: 16, scales: [2, 3], hash: "f1a4755bd0ec77fe9aa6ee1c38735df7", name: "img_logo_nitro_classic_horizontal_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "048133a782a00bf1ceee354227e49996", name: "img_boost_resubscribe_mobile", type: "png" });

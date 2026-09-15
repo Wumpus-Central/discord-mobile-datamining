@@ -1,29 +1,16 @@
 // === Module 4025: ? ===
 
 // Module 4025
-import _typeof_mod from "module_3725" /* 3725 */;
-import requiredArgs_mod from "requiredArgs" /* 3726 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function isFuture(arg0) {
-  requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
-  return time > Date.now();
+export default function isExists(arg0, arg1, arg2) {
+  if (arguments.length < 3) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("3 argument required, but only " + arguments.length + " present");
+    throw typeError;
+  } else {
+    const _Date = Date;
+    const date = new Date(arg0, arg1, arg2);
+    return date.getFullYear() === arg0 && date.getMonth() === arg1 && date.getDate() === arg2;
+  }
 };
 export default exports.default;

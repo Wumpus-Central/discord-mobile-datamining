@@ -1,5 +1,20 @@
 // === Module 5297: ? ===
 
 // Module 5297
+class MetadataMissingError {
+  constructor(arg0) {
+    obj = { name: "MetadataMissingError" };
+    str = arg0;
+    if (!arg0) {
+      str = "No Exif data";
+    }
+    obj.message = str;
+    error = new Error();
+    obj.stack = error.stack;
+    return;
+  }
+}
+let error = new Error();
+MetadataMissingError.prototype = error;
 
-export default { USE_FILE: true, USE_JFIF: true, USE_PNG_FILE: true, USE_EXIF: true, USE_IPTC: true, USE_XMP: true, USE_ICC: true, USE_MPF: true, USE_PHOTOSHOP: true, USE_THUMBNAIL: true, USE_TIFF: true, USE_JPEG: true, USE_PNG: true, USE_HEIC: true, USE_AVIF: true, USE_WEBP: true, USE_GIF: true, USE_MAKER_NOTES: true };
+export default { MetadataMissingError };

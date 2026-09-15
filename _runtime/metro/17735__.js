@@ -1,7 +1,7 @@
 // === Module 17735: ? ===
 
 // Module 17735
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_settings/roles/native/images", width: 375, height: 280, scales: [2, 3], hash: "385febe027093418da10e0784f3891bd", name: "illustration-dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "6d9d454b0d30ca95b55c7977c96de9cb", name: "StickerPlusIcon", type: "png" });

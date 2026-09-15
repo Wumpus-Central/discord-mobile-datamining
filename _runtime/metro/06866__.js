@@ -1,14 +1,11 @@
 // === Module 6866: ? ===
 
 // Module 6866
-import ComposedGestureName from "ComposedGestureName" /* 6815 */;
-import _mod6864 from "module_6864" /* 6864 */;
+import _mod6867 from "module_6867" /* 6867 */;
+import _mod6869 from "module_6869" /* 6869 */;
+import _mod6870 from "module_6870" /* 6870 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const useSimultaneousGestures = function useSimultaneousGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
-  return _mod6864.useComposedGesture.apply(items1);
-};
+export const useCompetingGestures = _mod6867.useCompetingGestures;
+export const useExclusiveGestures = _mod6869.useExclusiveGestures;
+export const useSimultaneousGestures = _mod6870.useSimultaneousGestures;

@@ -1,306 +1,326 @@
 // === Module 13043: ? ===
 
 // Module 13043
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12930 */;
+import _mod12930 from "module_12930" /* 12930 */;
+import _mod12933 from "module_12933" /* 12933 */;
+import _mod12938 from "module_12938" /* 12938 */;
+import _mod12946 from "module_12946" /* 12946 */;
+import supportsFetch from "supportsFetch" /* 13044 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
 
-export const filenameIsInApp = function filenameIsInApp(str) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (!flag) {
-    let tmp = str;
-    if (str) {
-      tmp = !str.startsWith("/");
+let closure_4 = async function _resolveResponse(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
     }
-    if (tmp) {
-      tmp = !str.match(/^[A-Z]:/);
-    }
-    if (tmp) {
-      tmp = !str.startsWith(".");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-    }
-    flag = tmp;
-  }
-  let tmp2 = !flag;
-  if (!flag) {
-    tmp2 = undefined !== str;
-  }
-  if (tmp2) {
-    tmp2 = !str.includes("node_modules/");
-  }
-  return tmp2;
-};
-export function node(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  return (filename) => {
-    const match = filename.match(re2);
-    if (match) {
-      let tmp3;
-      let tmp4;
-      if (match[1]) {
-        const lastIndexOfResult = match[1].lastIndexOf(".");
-        let diff = lastIndexOfResult;
-        if ("." === match[1][lastIndexOfResult - 1]) {
-          diff = lastIndexOfResult - 1;
-        }
-        let substr2 = arr;
-        let tmp9;
-        let substr3;
-        if (diff > 0) {
-          const substr = arr.slice(0, diff);
-          const substr1 = arr.slice(diff + 1);
-          const index = substr.indexOf(".Module");
-          substr2 = arr;
-          tmp9 = substr1;
-          substr3 = substr;
-          if (index > 0) {
-            substr2 = arr.slice(index + 1);
-            substr3 = substr.slice(0, index);
-            tmp9 = substr1;
-          }
-        }
-        tmp3 = substr2;
-        tmp4 = tmp9;
-      }
-      if (tmp4) {
-        let UNKNOWN_FUNCTION = tmp4;
-      }
-      if (undefined === tmp3) {
-        if (!UNKNOWN_FUNCTION) {
-          UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-        }
-        let combined = UNKNOWN_FUNCTION;
-        if (tmp13) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-        }
-        tmp3 = combined;
-      }
-      if (match[2]) {
-        if (obj2.startsWith("file://")) {
-          let str7 = match[2].slice(7);
-        }
-        let match1 = str7;
-        if (str7) {
-          match1 = str7.match(/\/[A-Z]:/);
-        }
-        let substr4 = str7;
-        if (match1) {
-          substr4 = str7.slice(1);
-        }
-        let tmp20 = substr4;
-        if (!substr4) {
-          tmp20 = !match[5];
-        }
-        let tmp21 = "native" === match[5];
-        if (!tmp20) {
-          tmp20 = tmp21;
-        }
-        if (!tmp20) {
-          substr4 = match[5];
-        }
-        let decodeURIResult;
-        if (substr4) {
-          const _decodeURI = decodeURI;
-          decodeURIResult = decodeURI(substr4);
-        }
-        const obj3 = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
-        let tmp24;
-        if (closure_0) {
-          tmp24 = closure_0(substr4);
-        }
-        obj3.module = tmp24;
-        obj3.function = tmp3;
-        let str9 = match[3];
-        if (!str9) {
-          str9 = "";
-        }
-        obj3.lineno = parseInt(str9, 10) || undefined;
-        let str10 = match[4];
-        if (!str10) {
-          str10 = "";
-        }
-        obj2 = match[2];
-        const tmp26 = parseInt(str9, 10) || undefined;
-        obj3.colno = parseInt(str10, 10) || undefined;
-        let str11 = substr4;
-        if (!substr4) {
-          str11 = "";
-        }
-        if (!tmp21) {
-          let tmp28 = str11;
-          if (str11) {
-            tmp28 = !str11.startsWith("/");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[A-Z]:/);
-          }
-          if (tmp28) {
-            tmp28 = !str11.startsWith(".");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-          }
-          tmp21 = tmp28;
-        }
-        let tmp29 = !tmp21;
-        if (!tmp21) {
-          tmp29 = undefined !== str11;
-        }
-        if (tmp29) {
-          tmp29 = !str11.includes("node_modules/");
-        }
-        obj3.in_app = tmp29;
-        return obj3;
-      }
-      str7 = match[2];
-    } else if (filename.match(re1)) {
-      const obj = { filename };
-      return obj;
-    }
-  };
-}
-export function nodeStackLineParser(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  const items = [
-    90,
-    (filename) => {
-      const match = filename.match(re2);
-      if (match) {
-        let tmp3;
-        let tmp4;
-        if (match[1]) {
-          const lastIndexOfResult = match[1].lastIndexOf(".");
-          let diff = lastIndexOfResult;
-          if ("." === match[1][lastIndexOfResult - 1]) {
-            diff = lastIndexOfResult - 1;
-          }
-          let substr2 = arr;
-          let tmp9;
-          let substr3;
-          if (diff > 0) {
-            const substr = arr.slice(0, diff);
-            const substr1 = arr.slice(diff + 1);
-            const index = substr.indexOf(".Module");
-            substr2 = arr;
-            tmp9 = substr1;
-            substr3 = substr;
-            if (index > 0) {
-              substr2 = arr.slice(index + 1);
-              substr3 = substr.slice(0, index);
-              tmp9 = substr1;
-            }
-          }
-          tmp3 = substr2;
-          tmp4 = tmp9;
-        }
-        if (tmp4) {
-          let UNKNOWN_FUNCTION = tmp4;
-        }
-        if (undefined === tmp3) {
-          if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-          }
-          let combined = UNKNOWN_FUNCTION;
-          if (tmp13) {
-            const _HermesInternal = HermesInternal;
-            combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-          }
-          tmp3 = combined;
-        }
-        if (match[2]) {
-          if (obj2.startsWith("file://")) {
-            let str7 = match[2].slice(7);
-          }
-          let match1 = str7;
-          if (str7) {
-            match1 = str7.match(/\/[A-Z]:/);
-          }
-          let substr4 = str7;
-          if (match1) {
-            substr4 = str7.slice(1);
-          }
-          let tmp20 = substr4;
-          if (!substr4) {
-            tmp20 = !match[5];
-          }
-          let tmp21 = "native" === match[5];
-          if (!tmp20) {
-            tmp20 = tmp21;
-          }
-          if (!tmp20) {
-            substr4 = match[5];
-          }
-          let decodeURIResult;
-          if (substr4) {
-            const _decodeURI = decodeURI;
-            decodeURIResult = decodeURI(substr4);
-          }
-          const obj3 = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
-          let tmp24;
-          if (closure_0) {
-            tmp24 = closure_0(substr4);
-          }
-          obj3.module = tmp24;
-          obj3.function = tmp3;
-          let str9 = match[3];
-          if (!str9) {
-            str9 = "";
-          }
-          obj3.lineno = parseInt(str9, 10) || undefined;
-          let str10 = match[4];
-          if (!str10) {
-            str10 = "";
-          }
-          obj2 = match[2];
-          const tmp26 = parseInt(str9, 10) || undefined;
-          obj3.colno = parseInt(str10, 10) || undefined;
-          let str11 = substr4;
-          if (!substr4) {
-            str11 = "";
-          }
-          if (!tmp21) {
-            let tmp28 = str11;
-            if (str11) {
-              tmp28 = !str11.startsWith("/");
-            }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[A-Z]:/);
-            }
-            if (tmp28) {
-              tmp28 = !str11.startsWith(".");
-            }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-            }
-            tmp21 = tmp28;
-          }
-          let tmp29 = !tmp21;
-          if (!tmp21) {
-            tmp29 = undefined !== str11;
-          }
-          if (tmp29) {
-            tmp29 = !str11.includes("node_modules/");
-          }
-          obj3.in_app = tmp29;
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
           return obj3;
+        } else {
+          closure_2 = tmp7;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          let reader;
+          let timeout;
+          closure_130_4 = undefined;
+          let timeout2;
+          let done;
+          if (_require) {
+            if (_require.body) {
+              const body = _require.body;
+              closure_130_1 = body;
+              reader = body.getReader();
+              const _setTimeout = setTimeout;
+              timeout = setTimeout(() => {
+                closure_1_1.cancel().then(null, () => {
+
+                });
+              }, 90000);
+              closure_130_4 = true;
+              if (closure_130_4) {
+                timeout2 = undefined;
+                c5 = 2;
+                const _setTimeout2 = setTimeout;
+                timeout2 = setTimeout(() => {
+                  closure_1_1.cancel().then(null, () => {
+
+                  });
+                }, 5000);
+                c3 = 3;
+                c6 = 1;
+                const obj4 = { value: reader.read(), done: false };
+                return obj4;
+              } else {
+                const _clearTimeout5 = clearTimeout;
+                clearTimeout(timeout);
+                reader.releaseLock();
+                closure_130_1.cancel().then(null, () => {
+
+                });
+                const cancelResult = closure_130_1.cancel();
+              }
+            }
+          }
+          c6 = 3;
+          return { value: "HermesInternal", done: null };
         }
-        str7 = match[2];
-      } else if (filename.match(re1)) {
-        const obj = { filename };
-        return obj;
+      } else if (1 !== tmp7) {
+        if (2 === tmp7) {
+          c5 = 1;
+          closure_130_4 = false;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          const _clearTimeout2 = clearTimeout;
+          clearTimeout(timeout2);
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          done = value.done;
+          const _clearTimeout = clearTimeout;
+          clearTimeout(timeout2);
+          if (done) {
+            closure_130_0();
+            closure_130_4 = false;
+          }
+          c5 = 1;
+        }
+        c5 = 0;
+        const _clearTimeout3 = clearTimeout;
+        clearTimeout(timeout2);
+      }
+      c5 = 0;
+      const _clearTimeout4 = clearTimeout;
+      clearTimeout(timeout2);
+      throw closure_4;
+    } catch (tmp40) {
+      closure_4 = tmp40;
+      if (tmp4 === c5) {
+        c6 = tmp3;
+        throw tmp40;
+      } else if (tmp2 === tmp42) {
+        c3 = tmp2;
+      } else {
+        c3 = tmp;
       }
     }
-  ];
-  return items;
+  }
+};
+function streamHandler(clone) {
+  const response = clone;
+  try {
+    !(function resolveResponse(clone, arg1) {
+      const self = this;
+      const apply = closure_1_4.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    })(clone.clone(), () => {
+      const obj2 = { endTimestamp: null, response: null };
+      const obj = _mod12930;
+      obj2.endTimestamp = 1000 * _mod12946.timestampInSeconds();
+      obj2.response = response;
+      obj.triggerHandlers("fetch-body-resolved", obj2);
+    });
+  } catch (err) {
+    return tmp;
+  }
 }
+function parseFetchArgs(arg0) {
+  if (0 === arg0.length) {
+    return { method: "GET", url: "" };
+  } else if (2 === arg0.length) {
+    [str4, tmp8] = arg0;
+    let tmp9 = str4;
+    if (typeof str4 !== "string") {
+      let str5 = "";
+      if (!str4) {
+        tmp9 = str5;
+      } else {
+        if (tmp10) {
+          str5 = str4.url;
+        } else if (str4.toString) {
+          str5 = str4.toString();
+        }
+        tmp10 = str4 && typeof str4 === "object" && str4.url;
+      }
+    }
+    const request = { url: tmp9, method: null };
+    let str6 = "GET";
+    if (tmp12) {
+      const _String2 = String;
+      str6 = String(tmp8.method).toUpperCase();
+      const str7 = String(tmp8.method);
+    }
+    request.method = str6;
+    return request;
+  } else {
+    let tmp3 = str8;
+    if (typeof arg0[0] !== "string") {
+      let str = "";
+      if (!str8) {
+        tmp3 = str;
+      } else {
+        if (tmp) {
+          str = str8.url;
+        } else if (str8.toString) {
+          str = str8.toString();
+        }
+        tmp = str8 && typeof str8 === "object" && str8.url;
+      }
+    }
+    const request1 = { url: tmp3, method: null };
+    let str2 = "GET";
+    if (tmp4) {
+      const _String = String;
+      str2 = String(str8.method).toUpperCase();
+      const str3 = String(str8.method);
+    }
+    request1.method = str2;
+    return request1;
+  }
+}
+
+export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(errorCallback) {
+  _mod12930.addHandler("fetch-body-resolved", errorCallback);
+  _mod12930.maybeInstrument("fetch-body-resolved", () => {
+    closure_0 = closure_5;
+    {
+      closure_0(12938).fill(closure_0(12933).GLOBAL_OBJ, "fetch", (arg0) => {
+        closure_0 = arg0;
+        return () => {
+          const items = [...arguments];
+          const error = new Error();
+          let stack = error;
+          const request = parseFetchArgs(items);
+          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
+          if (!closure_2_0) {
+            let obj3 = {};
+            let merged = Object.assign(obj);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
+            const tmp2Result = tmp2(dependencyMap[2]);
+          }
+          let obj2 = stack(dependencyMap[6]);
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F126533 */ function*() { ... })();
+          });
+          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }, (error) => {
+            obj = closure_3_0(12930);
+            const obj2 = {};
+            const merged = Object.assign(obj);
+            obj2.endTimestamp = 1000 * closure_3_0(12946).timestampInSeconds();
+            obj2.error = error;
+            obj.triggerHandlers("fetch", obj2);
+            const obj3 = closure_3_0(12946);
+            const obj4 = closure_3_0(12939);
+            if (tmp5) {
+              error.stack = stack.stack;
+              const result = closure_3_0(12938).addNonEnumerableProperty(error, "framesToPop", 1);
+              const tmpResult = closure_3_0(12938);
+            }
+            throw error;
+          });
+        };
+      });
+      const obj = closure_0(12938);
+    }
+  });
+};
+export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(errorCallback, arg1) {
+  _require = arg1;
+  require("module_12930").addHandler("fetch", errorCallback);
+  let obj = require("module_12930");
+  require("module_12930").maybeInstrument("fetch", () => {
+    let flag = closure_0;
+    if (closure_0 === undefined) {
+      flag = false;
+    }
+    if (flag) {
+      flag = !supportsFetch.supportsNativeFetch();
+    }
+    if (!flag) {
+      _mod12938.fill(_mod12933.GLOBAL_OBJ, "fetch", (arg0) => {
+        closure_0 = arg0;
+        return () => {
+          const items = [...arguments];
+          const error = new Error();
+          let stack = error;
+          const request = parseFetchArgs(items);
+          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error };
+          if (!closure_2_0) {
+            let obj3 = {};
+            let merged = Object.assign(obj);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj3);
+            const tmp2Result = tmp2(dependencyMap[2]);
+          }
+          let obj2 = stack(dependencyMap[6]);
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F126533 */ function*() { ... })();
+          });
+          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }, (error) => {
+            obj = closure_3_0(12930);
+            const obj2 = {};
+            const merged = Object.assign(obj);
+            obj2.endTimestamp = 1000 * closure_3_0(12946).timestampInSeconds();
+            obj2.error = error;
+            obj.triggerHandlers("fetch", obj2);
+            const obj3 = closure_3_0(12946);
+            const obj4 = closure_3_0(12939);
+            if (tmp5) {
+              error.stack = stack.stack;
+              const result = closure_3_0(12938).addNonEnumerableProperty(error, "framesToPop", 1);
+              const tmpResult = closure_3_0(12938);
+            }
+            throw error;
+          });
+        };
+      });
+    }
+  });
+};
+export { parseFetchArgs };

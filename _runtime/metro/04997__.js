@@ -1,39 +1,50 @@
 // === Module 4997: ? ===
 
 // Module 4997
-import RNSLog2 from "RNSLog" /* 4993 */;
-import noop from "module_19" /* 19 */;
+import get_synchronousScreenUpdatesEnabled from "get synchronousScreenUpdatesEnabled" /* 4998 */;
 
-require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
+require = arg1;
+const dependencyMap = arg6;
 
-export const useTabsHost = function useTabsHost(arg0) {
-  ({ componentNodeRef: require, onTabSelected } = arg0);
-  noop = undefined;
-  noop = noop.useRef(-1);
-  const effect = noop.useEffect(() => {
-    if (null != ref.current) {
-      let num2 = findNodeHandle(tmp.current);
-      if (num2 == null) {
-        num2 = -1;
-      }
-      closure_2.current = num2;
-    } else {
-      closure_2.current = -1;
+export const RNSLog = {
+  log(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
     }
-  }, []);
-  const obj = { onTabSelected: null };
-  const items = [onTabSelected];
-  obj.onTabSelected = noop.useCallback((nativeEvent) => {
-    const RNSLog = RNSLog2.RNSLog;
-    let num = ref2.current;
-    if (num == null) {
-      num = -1;
+  },
+  warn(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
     }
-    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
-    if (onTabSelected != null) {
-      onTabSelected(nativeEvent);
+  },
+  error(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
     }
-  }, items);
-  return obj;
+  },
+  info(arg0) {
+    const substr = [...arguments].slice();
+    if (get_synchronousScreenUpdatesEnabled.featureFlags.stable.debugLogging) {
+      const _console = console;
+      const items = [arg0];
+      HermesBuiltin.arraySpread(substr, 1);
+      const _console2 = console;
+      HermesBuiltin.apply(items, console);
+    }
+  }
 };

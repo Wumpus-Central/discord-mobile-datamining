@@ -2,65 +2,146 @@
 
 // Module 9852
 import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop_mod from "module_19" /* 19 */;
+import module_9853_mod from "module_9853" /* 9853 */;
 
 const require = globalThis.__r;
 
-const Platform = _mod17.Platform;
-const obj = { ios: null, android: null };
-const obj2 = { expo: null, nonExpo: null };
-const items = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
-const arraySpreadResult = HermesBuiltin.arraySpread(["1. Have rebuilt your app (with for instance 'npx expo run:ios')", "2. Are not using Expo Go (Expo Go is unsupported). See README for more info: ", "https://github.com/henninghall/react-native-date-picker"], 2);
-items[arraySpreadResult] = "";
-const sum = arraySpreadResult + 1;
-items[sum] = "Please reply in this thread if this solved your issue or not: ";
-const sum1 = sum + 1;
-items[sum1] = "https://github.com/henninghall/react-native-date-picker/issues/404";
-const sum2 = sum1 + 1;
-items[sum2] = "";
-items[sum2 + 1] = "To ignore this warning, add 'global.ignoreDatePickerWarning = true' to the top of your index file.";
-obj2.expo = items.join("\n");
-const items1 = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
-const arraySpreadResult4 = HermesBuiltin.arraySpread(["1. Installed pods (by for instance running 'cd ios && pod install')", "2. Rebuilt the app (by for instance 'npx react-native run-ios')"], 2);
-items1[arraySpreadResult4] = "";
-const sum3 = arraySpreadResult4 + 1;
-items1[sum3] = "Please reply in this thread if this solved your issue or not: ";
-const sum4 = sum3 + 1;
-items1[sum4] = "https://github.com/henninghall/react-native-date-picker/issues/404";
-const sum5 = sum4 + 1;
-items1[sum5] = "";
-items1[sum5 + 1] = "To ignore this warning, add 'global.ignoreDatePickerWarning = true' to the top of your index file.";
-obj2.nonExpo = items1.join("\n");
-obj.ios = obj2;
-const obj3 = { expo: null, nonExpo: null };
-const items2 = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
-const arraySpreadResult5 = HermesBuiltin.arraySpread(["1. Have rebuilt your app (with for instance 'npx expo run:android')", "2. Are not using Expo Go (Expo Go is unsupported). See README for more info: ", "https://github.com/henninghall/react-native-date-picker"], 2);
-items2[arraySpreadResult5] = "";
-const sum6 = arraySpreadResult5 + 1;
-items2[sum6] = "Please reply in this thread if this solved your issue or not: ";
-const sum7 = sum6 + 1;
-items2[sum7] = "https://github.com/henninghall/react-native-date-picker/issues/404";
-const sum8 = sum7 + 1;
-items2[sum8] = "";
-items2[sum8 + 1] = "To ignore this warning, add 'global.ignoreDatePickerWarning = true' to the top of your index file.";
-obj3.expo = items2.join("\n");
-const items3 = ["react-native-date-picker is not installed correctly. Make sure you: ", ""];
-const arraySpreadResult6 = HermesBuiltin.arraySpread(["1. Rebuilt the app (by for instance 'npx react-native run-ios')"], 2);
-items3[arraySpreadResult6] = "";
-const sum9 = arraySpreadResult6 + 1;
-items3[sum9] = "Please reply in this thread if this solved your issue or not: ";
-const sum10 = sum9 + 1;
-items3[sum10] = "https://github.com/henninghall/react-native-date-picker/issues/404";
-const sum11 = sum10 + 1;
-items3[sum11] = "";
-items3[sum11 + 1] = "To ignore this warning, add 'global.ignoreDatePickerWarning = true' to the top of your index file.";
-obj3.nonExpo = items3.join("\n");
-obj.android = obj3;
-
-export const getInstallationErrorMessage = () => {
-  try {
-    require(dependencyMap[1]).default;
-    return obj.android.expo;
-  } catch (err) {
-    return obj.android.nonExpo;
+let noop = noop_mod;
+({ useCallback: c2, useEffect: c3, useRef: closure_4 } = noop);
+let noop = noop_mod;
+const NativeEventEmitter = _mod17.NativeEventEmitter;
+const jsx = jsxProd.jsx;
+let module_9853 = module_9853_mod;
+const nativeComponent = module_9853.getNativeComponent();
+let module_9853 = module_9853_mod;
+const nativeModule = module_9853.getNativeModule();
+const memoResult = noop.memo((date) => {
+  _require = date;
+  const current = closure_4(Math.random().toString()).current;
+  const items = [date, current];
+  let tmp = closure_2((nativeEvent) => {
+    nativeEvent = nativeEvent.nativeEvent;
+    ({ date, id } = nativeEvent);
+    if (null === id) {
+      if (typeof fromIsoWithTimeZoneOffset === "function") {
+        const _Date = Date;
+        const date1 = new Date(date);
+        if (date.onDateChange) {
+          date.onDateChange(date1);
+        }
+        if (date.onDateStringChange) {
+          date.onDateStringChange(tmp);
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+  }, items);
+  closure_2 = tmp;
+  const items1 = [date, current];
+  const tmp2 = closure_2((nativeEvent) => {
+    nativeEvent = nativeEvent.nativeEvent;
+    const id = nativeEvent.id;
+    let tmp = null !== id;
+    if (tmp) {
+      tmp = id !== current;
+    }
+    if (!tmp) {
+      if (date.onStateChange) {
+        date.onStateChange(nativeEvent.spinnerState);
+      }
+    }
+  }, items1);
+  closure_3 = tmp2;
+  const items2 = [tmp, tmp2];
+  closure_3(() => {
+    const obj = new NativeEventEmitter(closure_8);
+    obj.addListener("dateChange", closure_2);
+    obj.addListener("spinnerStateChange", closure_3);
+    return () => {
+      obj.removeAllListeners("dateChange");
+      obj.removeAllListeners("spinnerStateChange");
+    };
+  }, items2);
+  let obj = {};
+  const merged = Object.assign(date);
+  if (typeof toIsoWithTimeZoneOffset === "function") {
+    let toISOStringResult;
+    if (date) {
+      toISOStringResult = date.toISOString();
+    }
+    obj.date = toISOStringResult;
+    obj.id = current;
+    const minimumDate = date.minimumDate;
+    if (typeof toIsoWithTimeZoneOffset === "function") {
+      let toISOStringResult1;
+      if (minimumDate) {
+        toISOStringResult1 = minimumDate.toISOString();
+      }
+      obj.minimumDate = toISOStringResult1;
+      const maximumDate = date.maximumDate;
+      if (typeof toIsoWithTimeZoneOffset === "function") {
+        let toISOStringResult2;
+        if (maximumDate) {
+          toISOStringResult2 = maximumDate.toISOString();
+        }
+        obj.maximumDate = toISOStringResult2;
+        if (typeof getTimezoneOffsetInMinutes === "function") {
+          let prop;
+          if (null != date.timeZoneOffsetInMinutes) {
+            prop = date.timeZoneOffsetInMinutes;
+          }
+          obj.timezoneOffsetInMinutes = prop;
+          if (typeof getStyle === "function") {
+            let num = 310;
+            if ("time" === date.mode) {
+              num = 240;
+            }
+            const size = { width: num, height: 180 };
+            const items3 = [size, date.style];
+            obj.style = items3;
+            obj.onChange = tmp;
+            obj.onStateChange = tmp2;
+            const obj2 = { props: obj, id: current };
+            const modal = require("module_9855").useModal(obj2);
+            let tmp16 = null;
+            if (!date.modal) {
+              const obj4 = {};
+              const merged1 = Object.assign(obj);
+              tmp16 = <closure_7 />;
+            }
+            return tmp16;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-};
+  const str = Math.random();
+});
+function getStyle(arg0) {
+
+}
+function getTimezoneOffsetInMinutes(arg0) {
+
+}
+function toIsoWithTimeZoneOffset(arg0) {
+
+}
+function fromIsoWithTimeZoneOffset(arg0) {
+
+}
+
+export default memoResult;
+export const DatePickerAndroid = memoResult;

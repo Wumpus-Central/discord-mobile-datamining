@@ -1,7 +1,7 @@
 // === Module 12870: ? ===
 
 // Module 12870
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 119, height: 83, scales: [2, 3], hash: "0b100afac52015c470ea1ec3ef8acf50", name: "redesign_email_header", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 88, height: 80, scales: [2, 3], hash: "d719145f0510a722efd9724a4e3cf026", name: "verify-email", type: "png" });

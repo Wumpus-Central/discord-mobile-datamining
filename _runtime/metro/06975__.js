@@ -1,12 +1,30 @@
 // === Module 6975: ? ===
 
 // Module 6975
-import PlatformConfig2 from "PlatformConfig" /* 6973 */;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      exports = (arg0) => typeof arg0;
+    }
+    module.exports = exports;
+    return exports(arg0);
+  }
+  exports = (arg0) => {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let exports = _typeof;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = PlatformConfig2.PlatformConfig;
-  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
-};
+export default _typeof;

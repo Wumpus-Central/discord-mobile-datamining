@@ -1,71 +1,110 @@
 // === Module 13012: ? ===
 
 // Module 13012
-import _mod12954 from "module_12954" /* 12954 */;
-import _mod13014 from "module_13014" /* 13014 */;
-import setupIntegration from "module_12983" /* 12983 */;
+import extractRequestData from "extractRequestData" /* 13013 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import setupIntegration from "module_12988" /* 12988 */;
 
+let closure_4 = ["ip", "user"];
+let obj = { include: { cookies: true, data: true, headers: true, ip: false, query_string: true, url: true, user: { id: true, username: true, email: true } }, transactionNamingScheme: "methodPath" };
 
-export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
+export const requestDataIntegration = setupIntegration.defineIntegration(() => {
+  obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let handled;
-  let CONSOLE_LEVELS = obj.levels;
-  if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
-  }
-  handled = obj.handled;
-  return {
-    name: "CaptureConsole",
-    setup(arg0) {
-      closure_0 = arg0;
-      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
-          ({ args, level } = arg0);
-          let hasItem = _mod12954.getClient() === args;
-          if (hasItem) {
-            hasItem = CONSOLE_LEVELS.includes(level);
-          }
-          if (hasItem) {
-            closure_2 = handled;
-            let obj2 = { level: _mod13014.severityLevelFromString(level), extra: null };
-            const obj3 = { arguments: args };
-            obj2.extra = obj3;
-            const tmpResult = _mod13014;
-            _mod12954.withScope((addEventProcessor) => {
-              addEventProcessor.addEventProcessor((arg0) => {
-                arg0.logger = "console";
-                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
-                return arg0;
-              });
-              if ("assert" !== level) {
-                const found = args.find((item) => item instanceof Error);
-                if (found) {
-                  args(12975).captureException(found, obj2);
-                  const tmp14Result = args(12975);
-                } else {
-                  const tmp14Result2 = args(12936);
-                  const safeJoinResult = args(12936).safeJoin(args, " ");
-                  args(12975).captureMessage(safeJoinResult, obj2);
-                  const obj4 = args(12975);
-                }
-              } else if (!args[0]) {
-                const obj = args(12936);
-                const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + args(12936).safeJoin(args.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = args(12975);
-                obj2.captureMessage(combined, obj2);
-                const tmp4 = args(12936).safeJoin(args.slice(1), " ") || "console.assert";
-              }
-            });
-            const tmpResult2 = _mod12954;
-          }
-        });
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
-      }
+  let obj2 = {};
+  const merged = Object.assign(obj);
+  const merged1 = Object.assign(obj);
+  let obj3 = {};
+  const merged2 = Object.assign(obj.include);
+  const merged3 = Object.assign(obj.include);
+  if (obj.include) {
+    if (typeof obj.include.user === "boolean") {
+      let user = obj.include.user;
     }
-  };
+    obj3.user = user;
+    obj2.include = obj3;
+    const obj4 = {
+      name: "RequestData",
+      processEvent(sdkProcessingMetadata) {
+          let prop = sdkProcessingMetadata.sdkProcessingMetadata;
+          if (undefined === prop) {
+            prop = {};
+          }
+          ({ request, normalizedRequest } = prop);
+          const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
+            include = include.include;
+            const user = include.user;
+            const items = ["method"];
+            const entries = Object.entries(closure_1_3(include, closure_1_4));
+            while (tmp2 !== undefined) {
+              let tmp5 = closure_1_2(tmp3, 2);
+              let first = tmp5[0];
+              if (tmp5[1]) {
+                let arr = items.push(first);
+              }
+              continue;
+            }
+            let flag = true;
+            if (undefined !== user) {
+              flag = user;
+              if (typeof user !== "boolean") {
+                const items1 = [];
+                const _Object = Object;
+                const entries1 = Object.entries(user);
+                flag = items1;
+                for (const item10032 of entries1) {
+                  let tmp11 = closure_1_2(item10032, 2);
+                  let first1 = tmp11[0];
+                  if (tmp11[1]) {
+                    let arr2 = items1.push(first1);
+                  }
+                  continue;
+                }
+              }
+            }
+            const include2 = { ip: include.ip, user: flag, request: null, transaction: null };
+            let tmp15;
+            if (0 !== items.length) {
+              tmp15 = items;
+            }
+            include2.request = tmp15;
+            include2.transaction = include.transactionNamingScheme;
+            return { include: include2 };
+          })(obj2);
+          if (normalizedRequest) {
+            let tmp5;
+            if (request) {
+              let ip = request.ip;
+              if (!ip) {
+                ip = request.socket && request.socket.remoteAddress;
+                const tmp6 = request.socket && request.socket.remoteAddress;
+              }
+              tmp5 = ip;
+            }
+            let user;
+            if (request) {
+              user = request.user;
+            }
+            const obj3 = extractRequestData;
+            obj = { ipAddress: tmp5, user };
+            const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
+            return sdkProcessingMetadata;
+          } else {
+            let result1 = sdkProcessingMetadata;
+            if (request) {
+              obj2 = extractRequestData;
+              result1 = obj2.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
+            }
+            return result1;
+          }
+        }
+    };
+    return obj4;
+  }
+  user = {};
+  const merged4 = Object.assign(obj.include.user);
+  const merged5 = Object.assign(obj.include || {}.user);
 });

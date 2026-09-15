@@ -1,7 +1,7 @@
 // === Module 13622: ? ===
 
 // Module 13622
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 177, height: 112, scales: [2, 3], hash: "ca47b5bc4b94bd1dd969b5ea6e31ef36", name: "guild_subscription_no_guilds_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 24, height: 24, scales: [2, 3], hash: "3301eac470d1db4f813dc4b19265d85e", name: "audio", type: "png" });

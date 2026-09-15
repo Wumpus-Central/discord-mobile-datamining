@@ -1,229 +1,154 @@
 // === Module 1850: ? ===
 
 // Module 1850
-import cancelAnimation2 from "cancelAnimation" /* 1636 */;
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
+import cancelAnimation from "cancelAnimation" /* 1637 */;
 
-const cancelAnimation = cancelAnimation2;
+const require = globalThis.__r;
 
-require = fn;
-const Platform = fn(17).Platform;
-const jsx = fn(21).jsx;
-let closure_4 = cancelAnimation.createAnimatedComponent(fn(1626).ClippingScrollView);
-let closure_5 = { code: "function pnpm_indexTsx1(){const{inverted,bottomPadding,contentInset}=this.__closure;var _contentInset,_contentInset2,_contentInset3,_contentInset4;const dynamicTop=inverted?bottomPadding.value:0;const dynamicBottom=!inverted?bottomPadding.value:0;return{dynamic:{top:dynamicTop,bottom:dynamicBottom},effective:{top:dynamicTop+(((_contentInset=contentInset)===null||_contentInset===void 0?void 0:_contentInset.top)||0),bottom:dynamicBottom+(((_contentInset2=contentInset)===null||_contentInset2===void 0?void 0:_contentInset2.bottom)||0),left:((_contentInset3=contentInset)===null||_contentInset3===void 0?void 0:_contentInset3.left)||0,right:((_contentInset4=contentInset)===null||_contentInset4===void 0?void 0:_contentInset4.right)||0}};}" };
-let closure_6 = { code: "function pnpm_indexTsx2(){const{insets}=this.__closure;return insets.value.effective;}" };
-let closure_7 = { code: "function pnpm_indexTsx3(current,previous){const{onContentInsetChange,runOnJS}=this.__closure;if(!onContentInsetChange){return;}if(previous&&current.top===previous.top&&current.bottom===previous.bottom&&current.left===previous.left&&current.right===previous.right){return;}runOnJS(onContentInsetChange)(current);}" };
-let value = { code: "function pnpm_indexTsx4(){const{insets,scrollIndicatorPadding,bottomPadding,inverted,scrollIndicatorInsets,contentOffsetY,prevContentOffsetY}=this.__closure;var _scrollIndicatorPaddi,_scrollIndicatorInset,_scrollIndicatorInset2,_scrollIndicatorInset3,_scrollIndicatorInset4;const{dynamic:dynamic,effective:effective}=insets.value;const indicatorPadding=(_scrollIndicatorPaddi=scrollIndicatorPadding)!==null&&_scrollIndicatorPaddi!==void 0?_scrollIndicatorPaddi:bottomPadding;const indicatorTop=(inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset=scrollIndicatorInsets)===null||_scrollIndicatorInset===void 0?void 0:_scrollIndicatorInset.top)||0);const indicatorBottom=(!inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset2=scrollIndicatorInsets)===null||_scrollIndicatorInset2===void 0?void 0:_scrollIndicatorInset2.bottom)||0);const result={contentInset:effective,scrollIndicatorInsets:{bottom:indicatorBottom,top:indicatorTop,right:(_scrollIndicatorInset3=scrollIndicatorInsets)===null||_scrollIndicatorInset3===void 0?void 0:_scrollIndicatorInset3.right,left:(_scrollIndicatorInset4=scrollIndicatorInsets)===null||_scrollIndicatorInset4===void 0?void 0:_scrollIndicatorInset4.left},contentInsetBottom:dynamic.bottom,contentInsetTop:dynamic.top};if(contentOffsetY){const curr=contentOffsetY.value;if(curr!==prevContentOffsetY.value){prevContentOffsetY.value=curr;result.contentOffset={x:0,y:curr};}}return result;}" };
+const value = _mod17.Platform.Version >= 30 || false;
+let obj = { duration: 250, easing: null };
+const Easing = cancelAnimation.Easing;
+obj.easing = Easing.bezier(0.19919472913616398, 0.010644531250000006, 0.27920937042459737, 0.91025390625);
+let closure_4 = { code: "function pnpm_useSmoothKeyboardHandlerTs1(){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,persistedHeight,TELEGRAM_ANDROID_TIMING_CONFIG,target,animatedKeyboardHeight}=this.__closure;if(IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){return;}if(persistedHeight.value===0){return;}const event={duration:TELEGRAM_ANDROID_TIMING_CONFIG.duration,target:target.value,height:animatedKeyboardHeight.value,progress:animatedKeyboardHeight.value/persistedHeight.value};return event;}" };
+const __initData = { code: "function pnpm_useSmoothKeyboardHandlerTs2(evt){const{handler,height,persistedHeight}=this.__closure;var _handler$onMove,_handler;if(!evt){return;}(_handler$onMove=(_handler=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler,evt);if(evt.height===height.value){var _handler$onEnd,_handler2;(_handler$onEnd=(_handler2=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler2,evt);persistedHeight.value=height.value;}}" };
+const __initData2 = { code: "function pnpm_useSmoothKeyboardHandlerTs3(e){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,persistedHeight,handler,target,height,animatedKeyboardHeight,withTiming,TELEGRAM_ANDROID_TIMING_CONFIG}=this.__closure;var _handler$onStart2,_handler3;if(!IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS&&e.height===persistedHeight.value){var _handler$onStart,_handler,_handler$onEnd,_handler2;(_handler$onStart=(_handler=handler).onStart)===null||_handler$onStart===void 0||_handler$onStart.call(_handler,e);(_handler$onEnd=(_handler2=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler2,e);return;}target.value=e.target;height.value=e.height;if(e.height>0){persistedHeight.value=e.height;}if(!IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){animatedKeyboardHeight.value=withTiming(e.height,TELEGRAM_ANDROID_TIMING_CONFIG);}(_handler$onStart2=(_handler3=handler).onStart)===null||_handler$onStart2===void 0||_handler$onStart2.call(_handler3,{...e,duration:IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS?e.duration:TELEGRAM_ANDROID_TIMING_CONFIG.duration});}" };
+const __initData3 = { code: "function pnpm_useSmoothKeyboardHandlerTs4(e){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,handler}=this.__closure;if(IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){var _handler$onMove,_handler;(_handler$onMove=(_handler=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler,e);}}" };
+const __initData4 = { code: "function pnpm_useSmoothKeyboardHandlerTs5(e){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,handler}=this.__closure;if(IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){var _handler$onEnd,_handler;(_handler$onEnd=(_handler=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler,e);}}" };
 
-export default fn(19).forwardRef((bottomPadding, ref) => {
-  bottomPadding = bottomPadding.bottomPadding;
-  const scrollIndicatorPadding = bottomPadding.scrollIndicatorPadding;
-  const contentInset = bottomPadding.contentInset;
-  const scrollIndicatorInsets = bottomPadding.scrollIndicatorInsets;
-  const inverted = bottomPadding.inverted;
-  const contentOffsetY = bottomPadding.contentOffsetY;
-  const onContentInsetChange = bottomPadding.onContentInsetChange;
-  ({ ScrollViewComponent, applyWorkaroundForContentInsetHitTestBug, children } = bottomPadding);
-  const merged = Object.assign(bottomPadding, Object.assign({ ScrollViewComponent: 0, bottomPadding: 0, scrollIndicatorPadding: 0, contentInset: 0, scrollIndicatorInsets: 0, inverted: 0, contentOffsetY: 0, applyWorkaroundForContentInsetHitTestBug: 0, onContentInsetChange: 0, children: 0 }));
-  let derivedValue;
-  const sharedValue = bottomPadding(contentInset[3]).useSharedValue(null);
-  let obj = bottomPadding(contentInset[3]);
-  class T {
-    constructor() {
-      num = 0;
-      tmp = inverted;
-      if (inverted) {
-        tmp2 = bottomPadding;
-        num = bottomPadding.value;
-      }
-      num2 = 0;
-      if (!tmp) {
-        tmp3 = bottomPadding;
-        num2 = bottomPadding.value;
-      }
-      obj = { dynamic: { top: num, bottom: num2 }, effective: null };
-      rect = contentInset;
-      num3 = undefined;
-      if (contentInset != null) {
-        num3 = rect.top;
-      }
-      if (!num3) {
-        num3 = 0;
-      }
-      rect1 = { top: num + num3, bottom: null, left: null, right: null };
-      num4 = undefined;
-      if (rect != null) {
-        num4 = rect.bottom;
-      }
-      if (!num4) {
-        num4 = 0;
-      }
-      rect1.bottom = num2 + num4;
-      num5 = undefined;
-      if (rect != null) {
-        num5 = rect.left;
-      }
-      if (!num5) {
-        num5 = 0;
-      }
-      rect1.left = num5;
-      num6 = undefined;
-      if (rect != null) {
-        num6 = rect.right;
-      }
-      if (!num6) {
-        num6 = 0;
-      }
-      rect1.right = num6;
-      obj.effective = rect1;
-      return obj;
-    }
-  }
-  T.__closure = { inverted, bottomPadding, contentInset };
-  T.__workletHash = 788035152099;
-  T.__initData = contentOffsetY;
-  const items = [inverted, , , , ];
-  let top;
-  if (contentInset != null) {
-    top = contentInset.top;
-  }
-  items[1] = top;
-  let bottom;
-  if (contentInset != null) {
-    bottom = contentInset.bottom;
-  }
-  items[2] = bottom;
-  let left;
-  if (contentInset != null) {
-    left = contentInset.left;
-  }
-  items[3] = left;
-  let right;
-  if (contentInset != null) {
-    right = contentInset.right;
-  }
-  items[4] = right;
-  derivedValue = bottomPadding(contentInset[3]).useDerivedValue(T, items);
-  const obj2 = bottomPadding(contentInset[3]);
-  class B {
-    constructor() {
-      return closure_8.value.effective;
-    }
-  }
-  B.__closure = { insets: derivedValue };
-  B.__workletHash = 3359315898790;
-  B.__initData = onContentInsetChange;
-  const fn = function x(top, top2) {
-    if (onContentInsetChange) {
-      let tmp4 = top2;
-      if (top2) {
-        tmp4 = top.top === top2.top;
-      }
-      if (tmp4) {
-        tmp4 = top.bottom === top2.bottom;
-      }
-      if (tmp4) {
-        tmp4 = top.left === top2.left;
-      }
-      if (tmp4) {
-        tmp4 = top.right === top2.right;
-      }
-      if (!tmp4) {
-        cancelAnimation2.runOnJS(tmp)(top);
+export const useSmoothKeyboardHandler = (handler, items11) => {
+  _require = handler;
+  sharedValue = require("cancelAnimation").useSharedValue(-1);
+  obj = require("cancelAnimation");
+  const sharedValue1 = require("cancelAnimation").useSharedValue(0);
+  let obj2 = require("cancelAnimation");
+  const sharedValue2 = require("cancelAnimation").useSharedValue(0);
+  const obj3 = require("cancelAnimation");
+  const sharedValue3 = require("cancelAnimation").useSharedValue(0);
+  const obj4 = require("cancelAnimation");
+  const fn = function s() {
+    if (!closure_2) {
+      if (0 !== sharedValue2.value) {
+        obj = { duration: null, target: null, height: null, progress: null };
+        obj.duration = obj.duration;
+        obj.target = sharedValue.value;
+        obj.height = sharedValue3.value;
+        obj.progress = sharedValue3.value / iter.value;
+        return obj;
       }
     }
   };
-  const tmp2Result = bottomPadding(contentInset[3]);
-  fn.__closure = { onContentInsetChange, runOnJS: bottomPadding(contentInset[3]).runOnJS };
-  fn.__workletHash = 12461544130657;
-  fn.__initData = sharedValue;
-  const items1 = [onContentInsetChange];
-  const animatedReaction = tmp2Result.useAnimatedReaction(B, fn, items1);
-  const obj3 = { onContentInsetChange, runOnJS: bottomPadding(contentInset[3]).runOnJS };
-  const fn2 = function w() {
-    value = derivedValue.value;
-    let iter = scrollIndicatorPadding;
-    if (scrollIndicatorPadding == null) {
-      iter = bottomPadding;
+  fn.__closure = { IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1, persistedHeight: sharedValue2, TELEGRAM_ANDROID_TIMING_CONFIG: sharedValue2, target: sharedValue, animatedKeyboardHeight: sharedValue3 };
+  fn.__workletHash = 4217597553195;
+  fn.__initData = sharedValue3;
+  class I {
+    constructor(arg0) {
+      if (handler) {
+        tmp = closure_0;
+        onMove = closure_0.onMove;
+        tmp2 = null;
+        if (onMove != null) {
+          onMoveResult = onMove(handler);
+        }
+        if (handler.height === closure_2.value) {
+          onEnd = tmp.onEnd;
+          if (onEnd != null) {
+            onEndResult = onEnd(handler);
+          }
+          tmp5 = closure_3;
+          closure_3.value = iter.value;
+        }
+      }
+      return;
     }
-    let num = 0;
-    if (inverted) {
-      num = iter.value;
-    }
-    const rect = scrollIndicatorInsets;
-    let num2;
-    if (scrollIndicatorInsets != null) {
-      num2 = rect.top;
-    }
-    if (!num2) {
-      num2 = 0;
-    }
-    const obj = { contentInset: value.effective, scrollIndicatorInsets: null, contentInsetBottom: null, contentInsetTop: null };
-    let num3 = 0;
-    const sum = num + num2;
-    if (!inverted) {
-      num3 = iter.value;
-    }
-    let num4;
-    if (rect != null) {
-      num4 = rect.bottom;
-    }
-    if (!num4) {
-      num4 = 0;
-    }
-    const rect1 = { bottom: num3 + num4, top: sum, right: null, left: null };
-    let right;
-    if (rect != null) {
-      right = rect.right;
-    }
-    rect1.right = right;
-    let left;
-    if (rect != null) {
-      left = rect.left;
-    }
-    rect1.left = left;
-    obj.scrollIndicatorInsets = rect1;
-    ({ bottom: obj.contentInsetBottom, top: obj.contentInsetTop } = value.dynamic);
-    if (contentOffsetY) {
-      value2 = contentOffsetY.value;
-      if (value2 !== sharedValue.value) {
-        sharedValue.value = value2;
-        const point = { x: 0, y: value2 };
-        obj.contentOffset = point;
+  }
+  I.__closure = { handler, height: sharedValue1, persistedHeight: sharedValue2 };
+  I.__workletHash = 1186520959152;
+  I.__initData = __initData;
+  let tmp9 = items11;
+  if (items11) {
+    const items = [];
+    HermesBuiltin.arraySpread(items11, 0);
+    tmp9 = items;
+  }
+  const animatedReaction = require("cancelAnimation").useAnimatedReaction(fn, I, tmp9);
+  const obj5 = require("cancelAnimation");
+  const obj6 = { IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1, persistedHeight: sharedValue2, TELEGRAM_ANDROID_TIMING_CONFIG: sharedValue2, target: sharedValue, animatedKeyboardHeight: sharedValue3 };
+  const tmp8 = sharedValue2;
+  const obj7 = { onStart: null, onMove: null, onEnd: null };
+  const fn2 = function v(height) {
+    if (!closure_2) {
+      if (height.height === sharedValue2.value) {
+        const onStart = handler.onStart;
+        if (onStart != null) {
+          onStart(height);
+        }
+        const onEnd = handler.onEnd;
+        if (onEnd != null) {
+          onEnd(height);
+        }
       }
     }
-    return obj;
+    sharedValue.value = height.target;
+    sharedValue1.value = height.height;
+    if (height.height > 0) {
+      sharedValue2.value = height.height;
+    }
+    if (!closure_2) {
+      obj = cancelAnimation;
+      sharedValue3.value = obj.withTiming(height.height, obj);
+    }
+    const onStart2 = handler.onStart;
+    if (onStart2 != null) {
+      let obj2 = {};
+      const merged = Object.assign(height);
+      if (closure_2) {
+        let duration = height.duration;
+      } else {
+        duration = obj.duration;
+      }
+      obj2.duration = duration;
+      obj2 = onStart2(obj2);
+    }
   };
-  fn2.__closure = { insets: derivedValue, scrollIndicatorPadding, bottomPadding, inverted, scrollIndicatorInsets, contentOffsetY, prevContentOffsetY: sharedValue };
-  fn2.__workletHash = 909305568735;
-  fn2.__initData = derivedValue;
-  let bottom1;
-  if (scrollIndicatorInsets != null) {
-    bottom1 = scrollIndicatorInsets.bottom;
+  const tmpResult = require("module_1831");
+  fn2.__closure = { IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1, persistedHeight: sharedValue2, handler, target: sharedValue, height: sharedValue1, animatedKeyboardHeight: sharedValue3, withTiming: require("cancelAnimation").withTiming, TELEGRAM_ANDROID_TIMING_CONFIG: tmp8 };
+  fn2.__workletHash = 2049629670138;
+  fn2.__initData = __initData2;
+  obj7.onStart = fn2;
+  class R {
+    constructor(arg0) {
+      if (c2) {
+        onMove = closure_0.onMove;
+        tmp2 = null;
+        if (onMove != null) {
+          tmp3 = handler;
+          onMoveResult = onMove(handler);
+        }
+      }
+      return;
+    }
   }
-  const items2 = [bottom1, , , , , ];
-  let top1;
-  if (scrollIndicatorInsets != null) {
-    top1 = scrollIndicatorInsets.top;
+  R.__closure = { IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1, handler };
+  R.__workletHash = 16381726355375;
+  R.__initData = __initData3;
+  obj7.onMove = R;
+  class O {
+    constructor(arg0) {
+      if (c2) {
+        onEnd = closure_0.onEnd;
+        tmp2 = null;
+        if (onEnd != null) {
+          tmp3 = handler;
+          onEndResult = onEnd(handler);
+        }
+      }
+      return;
+    }
   }
-  items2[1] = top1;
-  let right1;
-  if (scrollIndicatorInsets != null) {
-    right1 = scrollIndicatorInsets.right;
-  }
-  items2[2] = right1;
-  let left1;
-  if (scrollIndicatorInsets != null) {
-    left1 = scrollIndicatorInsets.left;
-  }
-  items2[3] = left1;
-  items2[4] = inverted;
-  items2[5] = contentOffsetY;
-  const animatedProps = bottomPadding(contentInset[3]).useAnimatedProps(fn2, items2);
-  const obj4 = { animatedProps, applyWorkaroundForContentInsetHitTestBug, style: scrollIndicatorPadding(contentInset[5]).container, children: null };
-  const obj5 = { ref, animatedProps };
-  const merged1 = Object.assign(merged);
-  obj5.children = children;
-  obj4.children = scrollIndicatorInsets(ScrollViewComponent, obj5);
-  return scrollIndicatorInsets(inverted, obj4);
-});
+  O.__closure = { IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS: sharedValue1, handler };
+  O.__workletHash = 9348108811600;
+  O.__initData = __initData4;
+  obj7.onEnd = O;
+  tmpResult.useKeyboardHandler(obj7, items11);
+};

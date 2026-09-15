@@ -1,7 +1,7 @@
 // === Module 8745: ? ===
 
 // Module 8745
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "c08dbe4e409a6c5d300d5c847a8685e2", name: "ic_stage_channel_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "0da6e85b52f6338da38daa05a2b6d1cc", name: "ic_mic_24px", type: "png" });

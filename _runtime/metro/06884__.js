@@ -5,6 +5,7 @@ import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -28,14 +29,28 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class NativeGesture {
+function changeEventCalculator(rotation, rotation2) {
+  if (undefined === rotation2) {
+    const obj2 = { rotationChange: rotation.rotation };
+    let obj = obj2;
+  } else {
+    obj = { rotationChange: rotation.rotation - rotation2.rotation };
+  }
+  const merged = Object.assign(rotation);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 11988645380499;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}" };
+class RotationGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, NativeGesture);
+    tmp = closure_0(this, RotationGesture);
     tmp2 = c2;
-    obj = c2(NativeGesture);
+    obj = c2(RotationGesture);
     tmp3 = closure_1;
-    if (closure_3()) {
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -43,29 +58,25 @@ class NativeGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
+    tmp3Result.handlerName = "RotationGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = NativeGesture;
-_inherits(NativeGesture, fn(6777).BaseGesture);
+_classCallCheck = RotationGesture;
+_inherits(RotationGesture, fn(6781).ContinousBaseGesture);
 const entry = {
-  key: "shouldActivateOnStart",
-  value: function shouldActivateOnStart(shouldActivateOnStart) {
-    this.config.shouldActivateOnStart = shouldActivateOnStart;
-    return this;
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    const items = [arg0];
+    return fn(items);
   }
 };
-const items = [
-  entry,
-  {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
-      return this;
-    }
-  }
-];
+let items = [entry];
 
-export const NativeGesture = _createClass(NativeGesture, items);
+export const RotationGesture = _createClass(RotationGesture, items);

@@ -1,158 +1,211 @@
 // === Module 10604: ? ===
 
 // Module 10604
-import _mod10590 from "module_10590" /* 10590 */;
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10597 */;
-import _mod10602 from "module_10602" /* 10602 */;
-import _mod10605 from "module_10605" /* 10605 */;
-import _mod10606 from "module_10606" /* 10606 */;
-import _mod10608 from "module_10608" /* 10608 */;
-import _mod10609 from "module_10609" /* 10609 */;
-import _mod10610 from "module_10610" /* 10610 */;
-import _mod10611 from "module_10611" /* 10611 */;
-import _mod10612 from "module_10612" /* 10612 */;
-import _mod10613 from "module_10613" /* 10613 */;
-import _mod10614 from "module_10614" /* 10614 */;
-import _mod10615 from "module_10615" /* 10615 */;
+import assignSimilarDate from "assignSimilarDate" /* 10571 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
-  }
-  let flag2 = arg1;
-  if (arg1 === undefined) {
-    flag2 = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new _isNativeReflectConstruct.default(), , , , , , ];
-  const _default = new _isNativeReflectConstruct.default();
-  items[1] = new regExp.default(flag2);
-  const _default1 = new regExp.default(flag2);
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new regExp.default();
-  const _default3 = new regExp.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  const _default4 = new _isNativeReflectConstruct.default();
-  items[5] = new _isNativeReflectConstruct.default();
-  const _default5 = new _isNativeReflectConstruct.default();
-  items[6] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default6 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ];
-  const _default7 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-}
-let fn = this;
+let self = this;
+const ForwardDateRefiner = require;
+let self2 = this;
 if (this) {
-  fn = this.__importDefault;
+  self2 = self.__createBinding;
 }
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
     }
-    return tmp;
-  };
+    if (!fn) {
+      fn = function t(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_6 = fn(assignSimilarDate);
+    class ForwardDateRefiner {
+      constructor() {
+        tmp = closure_3(this, ForwardDateRefiner);
+        return;
+      }
+    }
+    const entry = {
+      key: "refine",
+      value: function refine(option, arr) {
+            const self = this;
+            if (option.option.forwardDate) {
+              const item = arr.forEach((start) => {
+                option = start;
+                const reference = option.reference;
+                const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+                start = start.start;
+                if (start.isOnlyTime()) {
+                  const start2 = start.start;
+                  if (obj.reference.instant > start2.date()) {
+                    const reference2 = obj.reference;
+                    const dateWithAdjustedTimezone1 = reference2.getDateWithAdjustedTimezone();
+                    const _Date = Date;
+                    const date = new Date(dateWithAdjustedTimezone1);
+                    date.setDate(date.getDate() + 1);
+                    closure_1_6.implySimilarDate(start.start, date);
+                    obj.debug(() => {
+                      console.log("" + self.constructor.name + " adjusted " + closure_0 + " time from the ref date (" + dateWithAdjustedTimezone1 + ") to the following day (" + date + ")");
+                    });
+                    let end2 = start.end;
+                    if (end2) {
+                      const end = start.end;
+                      end2 = end.isOnlyTime();
+                    }
+                    if (end2) {
+                      closure_1_6.implySimilarDate(start.end, date);
+                      ({ start: start3, end: end3 } = start);
+                      if (dateResult > end3.date()) {
+                        date.setDate(date.getDate() + 1);
+                        closure_1_6.implySimilarDate(start.end, date);
+                      }
+                      dateResult = start3.date();
+                    }
+                  }
+                }
+                const start4 = start.start;
+                let tmp5 = dateWithAdjustedTimezone;
+                if (start4.isOnlyWeekdayComponent()) {
+                  const start5 = start.start;
+                  tmp5 = dateWithAdjustedTimezone;
+                  if (dateWithAdjustedTimezone > start5.date()) {
+                    const start11 = start.start;
+                    value = start11.get("weekday");
+                    const diff = value - dateWithAdjustedTimezone.getDay();
+                    let sum = diff;
+                    if (diff <= 0) {
+                      sum = diff + 7;
+                    }
+                    const obj2 = { day: sum };
+                    const addDurationResult = option(self[3]).addDuration(dateWithAdjustedTimezone, obj2);
+                    option(self[2]).implySimilarDate(start.start, addDurationResult);
+                    obj.debug(() => {
+                      console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.start + ")");
+                    });
+                    tmp5 = addDurationResult;
+                    if (start.end) {
+                      const end4 = start.end;
+                      tmp5 = addDurationResult;
+                      if (end4.isOnlyWeekdayComponent()) {
+                        const end5 = start.end;
+                        value2 = end5.get("weekday");
+                        const diff1 = value2 - addDurationResult.getDay();
+                        let sum1 = diff1;
+                        if (diff1 <= 0) {
+                          sum1 = diff1 + 7;
+                        }
+                        const obj3 = { day: sum1 };
+                        const addDurationResult1 = tmp7(self[3]).addDuration(addDurationResult, obj3);
+                        tmp7(self[2]).implySimilarDate(start.end, addDurationResult1);
+                        obj.debug(() => {
+                          console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.end + ")");
+                        });
+                        tmp5 = addDurationResult1;
+                      }
+                    }
+                  }
+                }
+                const start6 = start.start;
+                if (start6.isDateWithUnknownYear()) {
+                  const start7 = start.start;
+                  if (tmp5 > start7.date()) {
+                    const start12 = start.start;
+                    let num3 = 0;
+                    if (tmp5 > start12.date()) {
+                      while (true) {
+                        ({ start: start8, start: start9 } = start);
+                        let implyResult = start8.imply("year", start9.get("year") + 1);
+                        let obj6 = option;
+                        let debugResult3 = option.debug(() => {
+                          console.log("" + self.constructor.name + " adjusted " + start + " year (" + start.start + ")");
+                        });
+                        let end6 = start.end;
+                        if (end6) {
+                          let end7 = start.end;
+                          end6 = !end7.isCertain("year");
+                        }
+                        if (end6) {
+                          ({ end: end8, end: end9 } = start);
+                          let implyResult1 = end8.imply("year", end9.get("year") + 1);
+                          let debugResult4 = obj6.debug(() => {
+                            console.log("" + self.constructor.name + " adjusted " + start + " month (" + start.start + ")");
+                          });
+                        }
+                        let sum2 = num3 + 1;
+                        if (sum2 >= 3) {
+                          break;
+                        } else {
+                          let start10 = start.start;
+                          num3 = sum2;
+                          if (tmp5 <= start10.date()) {
+                            break;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              });
+            }
+            return arr;
+          }
+    };
+    let items = [entry];
+    exports.default = _createClass(ForwardDateRefiner, items);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
 }
-function createCasualConfiguration() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  const tmp = createConfiguration(false, flag);
-  const parsers = tmp.parsers;
-  parsers.unshift(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.unshift(new _isNativeReflectConstruct.default());
-  const parsers2 = tmp.parsers;
-  const _default1 = new _isNativeReflectConstruct.default();
-  parsers2.unshift(new _isNativeReflectConstruct.default());
-  return tmp;
-}
-fn(_mod10590);
-fn(_mod10602);
-fn(_mod10605);
-fn(_mod10606);
-const regExp = fn(_mod10608);
-fn(_mod10609);
-fn(_mod10610);
-fn(_mod10611);
-fn(_mod10612);
-fn(_mod10613);
-fn(_mod10614);
-const _isNativeReflectConstruct = fn(_mod10615);
-const configuration = createConfiguration(false, true);
-let parsers = configuration.parsers;
-parsers.unshift(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-let obj = {
-  enumerable: true,
-  get() {
-    return require("module_10557").Chrono;
-  }
-};
-const obj2 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingResult;
-  }
-};
-const obj3 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingComponents;
-  }
-};
-const obj4 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ReferenceWithTimezone;
-  }
-};
-const obj5 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Meridiem;
-  }
-};
-const obj6 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Weekday;
-  }
-};
-parsers1.unshift(new _isNativeReflectConstruct.default());
-let parsers2 = configuration.parsers;
-let _default1 = new _isNativeReflectConstruct.default();
-parsers2.unshift(new _isNativeReflectConstruct.default());
-const chrono = new require("module_10557").Chrono(configuration);
-const chrono1 = new require("module_10557").Chrono(createConfiguration(true));
-
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("module_10557").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;

@@ -1,21 +1,13 @@
 // === Module 6838: ? ===
 
 // Module 6838
-import ComposedGestureName from "ComposedGestureName" /* 6815 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6824 */;
-import _mod6839 from "module_6839" /* 6839 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const items = [["maxDistance", "maxDist"], ["maxDuration", "maxDurationMs"], ["maxDelay", "maxDelayMs"]];
-const map = new Map(items);
-let closure_3 = {};
+const use = noop.use;
+const context = noop.createContext(null);
 
-export const useTapGesture = function useTapGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_3;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
-  return _mod6839.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+export const InterceptingDetectorMode = { DEFAULT: 0, [0]: "DEFAULT", ANIMATED: 1, [1]: "ANIMATED", REANIMATED: 2, [2]: "REANIMATED" };
+export const InterceptingDetectorContext = context;
+export const useInterceptingDetectorContext = function useInterceptingDetectorContext() {
+  return use(context);
 };

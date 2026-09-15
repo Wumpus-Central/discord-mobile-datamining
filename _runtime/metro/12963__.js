@@ -1,107 +1,325 @@
 // === Module 12963: ? ===
 
 // Module 12963
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12932 */;
-import _mod12933 from "module_12933" /* 12933 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12940 */;
-import _mod12942 from "module_12942" /* 12942 */;
-import _mod12954 from "module_12954" /* 12954 */;
-import _mod12964 from "module_12964" /* 12964 */;
+import _mod12932 from "module_12932" /* 12932 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12937 */;
+import _mod12946 from "module_12946" /* 12946 */;
+import _mod12949 from "module_12949" /* 12949 */;
+import _mod12960 from "module_12960" /* 12960 */;
+import _toArray from "_toArray" /* 718 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getDynamicSamplingContextFromSpan(spanContext) {
-  const client = _mod12954.getClient();
+const require = globalThis.__r;
+
+const TRACING_DEFAULTS = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
+
+export { TRACING_DEFAULTS };
+export const startIdleSpan = function startIdleSpan(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  _require = undefined;
+  let finalTimeout;
+  let childSpanTimeout;
+  let beforeSpanEnd;
+  let currentScope;
+  let activeSpan;
+  c12 = undefined;
+  function onIdleSpanEnded(arg0) {
+    closure_0 = arg0;
+    c2 = true;
+    map.clear();
+    const item = items.forEach((fn) => fn());
+    closure_0(map[6])._setSpanForScope(closure_10, closure_11);
+    let obj = closure_0(map[6]);
+    let spanToJSONResult = closure_0(map[4]).spanToJSON(c12);
+    if (spanToJSONResult.start_timestamp) {
+      if (!tmp7[tmp3(undefined, tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
+        const attr = c12.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
+      }
+      let logger = tmp3(tmp4[8]).logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("[Tracing] Idle span \"" + spanToJSONResult.op + "\" finished");
+      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(c12);
+      const found = spanDescendants.filter((item) => item !== _undefined);
+      const item1 = found.forEach((isRecording) => {
+        if (isRecording.isRecording()) {
+          const obj = { code: _mod12949.SPAN_STATUS_ERROR, message: "cancelled" };
+          isRecording.setStatus(obj);
+          isRecording.end(closure_0);
+          if (_mod12960.DEBUG_BUILD) {
+            const logger = _mod12932.logger;
+            const _JSON = JSON;
+            logger.log("[Tracing] Cancelling span since span ended early", JSON.stringify(isRecording, undefined, 2));
+          }
+        }
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(isRecording);
+        const timestamp = spanToJSONResult.timestamp;
+        let num2 = 0;
+        if (undefined !== timestamp) {
+          num2 = timestamp;
+        }
+        const start_timestamp = spanToJSONResult.start_timestamp;
+        let num3 = 0;
+        if (undefined !== start_timestamp) {
+          num3 = start_timestamp;
+        }
+        let tmp14 = num2 - num3 <= (finalTimeout + idleTimeout) / 1000;
+        if (_mod12960.DEBUG_BUILD) {
+          const _JSON2 = JSON;
+          const json = JSON.stringify(isRecording, undefined, 2);
+          if (tmp13) {
+            if (!tmp14) {
+              const logger3 = _mod12932.logger;
+              logger3.log("[Tracing] Discarding span since it finished after idle span final timeout", json);
+            }
+          } else {
+            const logger2 = _mod12932.logger;
+            logger2.log("[Tracing] Discarding span since it happened after idle span was finished", json);
+          }
+        }
+        if (tmp14) {
+          tmp14 = tmp13;
+        }
+        if (!tmp14) {
+          const result = spanTimeInputToSeconds.removeChildSpanFromSpan(c12, isRecording);
+          closure_1 = closure_1 + 1;
+        }
+      });
+      if (0 > 0) {
+        const attr1 = c12.setAttribute("sentry.idle_span_discarded_spans", map);
+      }
+      const tmp3Result = tmp3(tmp4[4]);
+      tmp7 = spanToJSONResult.data || {};
+    }
+    let obj2 = closure_0(map[4]);
+  }
+  const map = new Map();
+  c2 = false;
+  let heartbeatFailed = "externalFinish";
+  closure_4 = !obj.disableAutoFinish;
+  let items = [];
+  let idleTimeout = obj.idleTimeout;
+  if (undefined === idleTimeout) {
+    idleTimeout = heartbeatFailed.idleTimeout;
+  }
+  finalTimeout = obj.finalTimeout;
+  if (undefined === finalTimeout) {
+    finalTimeout = heartbeatFailed.finalTimeout;
+  }
+  childSpanTimeout = obj.childSpanTimeout;
+  if (undefined === childSpanTimeout) {
+    childSpanTimeout = heartbeatFailed.childSpanTimeout;
+  }
+  beforeSpanEnd = obj.beforeSpanEnd;
+  const client = require("module_12959").getClient();
   if (client) {
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
-    if (rootSpan[_frozenDsc]) {
-      return tmp5;
-    } else {
-      const traceState = rootSpan.spanContext().traceState;
-      value = traceState;
-      if (traceState) {
-        value = traceState.get("sentry.dsc");
+    if (tmp5Result.hasTracingEnabled()) {
+      currentScope = tmp5(tmp6[1]).getCurrentScope();
+      const tmp5Result6 = tmp5(tmp6[1]);
+      activeSpan = tmp5(tmp6[4]).getActiveSpan();
+      const tmp5Result7 = tmp5(tmp6[4]);
+      const startInactiveSpanResult = tmp5(tmp6[11]).startInactiveSpan(arg0);
+      const tmp5Result8 = tmp5(tmp6[11]);
+      const tmp5Result9 = tmp5(tmp6[6]);
+      tmp5Result9._setSpanForScope(tmp5(tmp6[1]).getCurrentScope(), startInactiveSpanResult);
+      if (tmp5(tmp6[10]).DEBUG_BUILD) {
+        let logger = tmp5(tmp6[8]).logger;
+        logger.log("[Tracing] Started span is an idle span");
       }
-      let result = value;
-      if (value) {
-        result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(value);
-        const tmpResult6 = BAGGAGE_HEADER_NAME;
+      c12 = startInactiveSpanResult;
+      const _Proxy = Proxy;
+      let obj3 = {
+        apply(arg0, arg1, current) {
+              if (beforeSpanEnd) {
+                tmp(c12);
+              }
+              const arr = _toArray(current);
+              let first = arr[0];
+              const substr = arr.slice(1);
+              if (!first) {
+                first = _mod12946.timestampInSeconds();
+              }
+              const result = spanTimeInputToSeconds.spanTimeInputToSeconds(first);
+              const spanDescendants = spanTimeInputToSeconds.getSpanDescendants(c12);
+              const found = spanDescendants.filter((item) => item !== _undefined);
+              if (found.length) {
+                const mapped = found.map((item) => closure_1_0(map[4]).spanToJSON(item).timestamp);
+                const found1 = mapped.filter((item) => item);
+                let num2;
+                if (found1.length) {
+                  const _Math = Math;
+                  items = [];
+                  HermesBuiltin.arraySpread(found1, 0);
+                  const _Math2 = Math;
+                  num2 = HermesBuiltin.apply(items, Math);
+                }
+                let num4 = spanTimeInputToSeconds.spanToJSON(c12).start_timestamp;
+                let num6 = Infinity;
+                if (num4) {
+                  num6 = num4 + finalTimeout / 1000;
+                }
+                if (!num4) {
+                  num4 = -Infinity;
+                }
+                if (!num2) {
+                  num2 = Infinity;
+                }
+                const bound = Math.min(num6, Math.max(num4, Math.min(result, num2)));
+                onIdleSpanEnded(bound);
+                const _Reflect2 = Reflect;
+                const items1 = [bound];
+                HermesBuiltin.arraySpread(substr, 1);
+                return Reflect.apply(arg0, arg1, items1);
+              } else {
+                onIdleSpanEnded(result);
+                const _Reflect = Reflect;
+                const items2 = [result];
+                HermesBuiltin.arraySpread(substr, 1);
+                return Reflect.apply(arg0, arg1, items2);
+              }
+            }
+      };
+      const proxy = new Proxy(startInactiveSpanResult.end, obj3);
+      startInactiveSpanResult.end = proxy;
+      items.push(client.on("spanStart", (spanContext) => {
+        let timestamp = c2;
+        if (!c2) {
+          timestamp = spanContext === c12;
+        }
+        if (!timestamp) {
+          timestamp = timeout(map[4]).spanToJSON(spanContext).timestamp;
+          const obj = timeout(map[4]);
+        }
+        if (!timestamp) {
+          const spanDescendants = timeout(map[4]).getSpanDescendants(c12);
+          if (spanDescendants.includes(spanContext)) {
+            if (timeout) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(timeout);
+              timeout = undefined;
+            }
+            const result = map.set(spanContext.spanContext().spanId, true);
+            timeout(map[5]).timestampInSeconds() + childSpanTimeout / 1000;
+            const _setTimeout = setTimeout;
+            timeout = setTimeout(() => {
+              let tmp = !c2;
+              if (!c2) {
+                tmp = closure_4;
+              }
+              if (tmp) {
+                heartbeatFailed = "heartbeatFailed";
+                c12.end(closure_0);
+              }
+            }, childSpanTimeout);
+            const obj4 = timeout(map[5]);
+          }
+          const obj2 = timeout(map[4]);
+        }
+      }));
+      items.push(client.on("spanEnd", (spanContext) => {
+        if (!c2) {
+          const spanId = spanContext.spanContext().spanId;
+          if (map.has(spanId)) {
+            map.delete(spanId);
+          }
+          if (0 === map.size) {
+            timeout = timeout(map[5]).timestampInSeconds() + idleTimeout / 1000;
+            if (timeout) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(timeout);
+              timeout = undefined;
+            }
+            const _setTimeout = setTimeout;
+            timeout = setTimeout(() => {
+              let tmp = !c2;
+              if (!c2) {
+                tmp = 0 === map.size;
+              }
+              if (tmp) {
+                tmp = closure_4;
+              }
+              if (tmp) {
+                heartbeatFailed = "idleTimeout";
+                c12.end(closure_0);
+              }
+            }, idleTimeout);
+            const obj2 = timeout(map[5]);
+          }
+        }
+      }));
+      items.push(client.on("idleSpanEnableAutoFinish", (arg0) => {
+        if (arg0 === c12) {
+          c4 = true;
+          let timeout;
+          if (timeout) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(timeout);
+            timeout = undefined;
+          }
+          const _setTimeout = setTimeout;
+          timeout = setTimeout(() => {
+            let tmp = !c2;
+            if (!c2) {
+              tmp = 0 === map.size;
+            }
+            if (tmp) {
+              tmp = closure_4;
+            }
+            if (tmp) {
+              heartbeatFailed = "idleTimeout";
+              c12.end(closure_0);
+            }
+          }, idleTimeout);
+          if (map.size) {
+            const _setTimeout2 = setTimeout;
+            timeout = setTimeout(() => {
+              let tmp = !c2;
+              if (!c2) {
+                tmp = closure_4;
+              }
+              if (tmp) {
+                heartbeatFailed = "heartbeatFailed";
+                c12.end(closure_0);
+              }
+            }, childSpanTimeout);
+          }
+        }
+      }));
+      if (!obj.disableAutoFinish) {
+        if (_require) {
+          let _clearTimeout = clearTimeout;
+          clearTimeout(_require);
+          _require = undefined;
+        }
+        let _setTimeout = setTimeout;
+        _require = setTimeout(() => {
+          let tmp = !c2;
+          if (!c2) {
+            tmp = 0 === map.size;
+          }
+          if (tmp) {
+            tmp = closure_4;
+          }
+          if (tmp) {
+            heartbeatFailed = "idleTimeout";
+            c12.end(closure_0);
+          }
+        }, idleTimeout);
       }
-      if (result) {
-        return result;
-      } else {
-        const options = client.getOptions();
-        const tmp9 = client.getDsn() || {};
-        let DEFAULT_ENVIRONMENT = options.environment;
-        if (!DEFAULT_ENVIRONMENT) {
-          DEFAULT_ENVIRONMENT = _mod12964.DEFAULT_ENVIRONMENT;
+      let _setTimeout2 = setTimeout;
+      const timerId = setTimeout(() => {
+        if (!c2) {
+          const obj = { code: _mod12949.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
+          _undefined.setStatus(obj);
+          heartbeatFailed = "finalTimeout";
+          _undefined.end();
         }
-        const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp9.publicKey, trace_id: spanContext.spanContext().traceId };
-        const dropUndefinedKeysResult = _mod12933.dropUndefinedKeys(obj2);
-        client.emit("createDsc", dropUndefinedKeysResult);
-        const tmpResult7 = _mod12933;
-        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
-        const tmp13 = spanToJSONResult.data || {};
-        const tmp14 = tmp13[_mod12942.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
-        if (null != tmp14) {
-          const _HermesInternal = HermesInternal;
-          dropUndefinedKeysResult.sample_rate = "" + tmp14;
-        }
-        const description = spanToJSONResult.description;
-        const tmpResult8 = spanTimeInputToSeconds;
-        if (tmp17) {
-          dropUndefinedKeysResult.transaction = description;
-        }
-        tmp17 = "url" !== tmp13[_mod12942.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
-        if (tmpResult9.hasTracingEnabled()) {
-          const _String = String;
-          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
-          const tmpResult10 = spanTimeInputToSeconds;
-        }
-        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
-        return dropUndefinedKeysResult;
-      }
+      }, finalTimeout);
+      return startInactiveSpanResult;
     }
-    const tmpResult = spanTimeInputToSeconds;
-  } else {
-    return {};
+    tmp5Result = tmp5(tmp6[2]);
   }
-}
-const _frozenDsc = "_frozenDsc";
-
-export const freezeDscOnSpan = function freezeDscOnSpan(arg0, dsc) {
-  const result = _mod12933.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
-};
-export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
-  const options = getOptions.getOptions();
-  const tmp2 = getOptions.getDsn() || {};
-  let DEFAULT_ENVIRONMENT = options.environment;
-  if (!DEFAULT_ENVIRONMENT) {
-    DEFAULT_ENVIRONMENT = _mod12964.DEFAULT_ENVIRONMENT;
-  }
-  const dropUndefinedKeysResult = _mod12933.dropUndefinedKeys({ environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp2.publicKey, trace_id });
-  getOptions.emit("createDsc", dropUndefinedKeysResult);
-  return dropUndefinedKeysResult;
-};
-export const getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(getOptions, getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  let dsc = propagationContext.dsc;
-  if (!dsc) {
-    const options = getOptions.getOptions();
-    const tmp4 = getOptions.getDsn() || {};
-    let DEFAULT_ENVIRONMENT = options.environment;
-    if (!DEFAULT_ENVIRONMENT) {
-      DEFAULT_ENVIRONMENT = _mod12964.DEFAULT_ENVIRONMENT;
-    }
-    const obj2 = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: tmp4.publicKey, trace_id: propagationContext.traceId };
-    const dropUndefinedKeysResult = _mod12933.dropUndefinedKeys(obj2);
-    getOptions.emit("createDsc", dropUndefinedKeysResult);
-    dsc = dropUndefinedKeysResult;
-  }
-  return dsc;
-};
-export { getDynamicSamplingContextFromSpan };
-export const spanToBaggageHeader = function spanToBaggageHeader(arg0) {
-  const tmp = getDynamicSamplingContextFromSpan(arg0);
-  return BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(tmp);
+  const sentryNonRecordingSpan = new tmp5(tmp6[3]).SentryNonRecordingSpan();
+  return sentryNonRecordingSpan;
 };

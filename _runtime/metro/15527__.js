@@ -1,7 +1,7 @@
 // === Module 15527: ? ===
 
 // Module 15527
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "ab02db863b7edeaa46bf4cd49b6646a9", name: "ko", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "e6d6b255259ac878d00819a9555072ad", name: "en-US", type: "png" });

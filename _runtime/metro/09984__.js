@@ -1,7 +1,7 @@
 // === Module 9984: ? ===
 
 // Module 9984
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 160.5, height: 140, scales: [2, 3], hash: "ad61eda1bea496e5c4dfb770ef28c56b", name: "server-invite-envelope", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 251, height: 147, scales: [2, 3], hash: "c013c533d835389917bf422e9978d1be", name: "img_app_crash_light", type: "png" });

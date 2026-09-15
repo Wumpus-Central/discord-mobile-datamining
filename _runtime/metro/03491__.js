@@ -1,7 +1,7 @@
 // === Module 3491: ? ===
 
 // Module 3491
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/slayer_storefront/intl", scales: [1], hash: "13d999a4ca0ff842bcf12fdb922afdec", name: "SlayerStorefront.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zbGF5ZXJfc3RvcmVmcm9udC9pbnRs", scales: [1], hash: "651fb537e51fe89379a3b6716a280d9a", name: "zh-TW.messages.651fb537e51fe89379a3b6716a280d9a.compiled.messages", type: "jsona" });

@@ -1,7 +1,7 @@
 // === Module 8875: ? ===
 
 // Module 8875
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "4f276c9d37ed9e072482570ea4ab1799", name: "ic_discoverable_guild_badge_premium_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "aadd4fcf699494399b151b52e5493160", name: "ic_community_guild_badge_premium_24px", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 13959: ? ===
 
 // Module 13959
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/build_overrides/native/images", width: 60, height: 46, scales: [2, 3], hash: "43446a28e1d529de720e6c778c814b1c", name: "code-illustration-dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 120, height: 100, scales: [1, 2, 3], hash: "0abf9581567470a391d7233deb0a4631", name: "img_remote_auth_loaded", type: "png" });

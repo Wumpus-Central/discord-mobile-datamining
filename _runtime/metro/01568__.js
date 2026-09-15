@@ -1,53 +1,38 @@
 // === Module 1568: ? ===
 
 // Module 1568
+import NavigationBuilderContext from "NavigationBuilderContext" /* 1514 */;
 import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = arg1;
 
-export const useOnGetState = function useOnGetState(getState) {
-  getState = getState.getState;
-  const getStateListeners = getState.getStateListeners;
-  let addKeyedListener;
-  let callback;
-  addKeyedListener = addKeyedListener.useContext(getState(getStateListeners[1]).NavigationBuilderContext).addKeyedListener;
-  const context = addKeyedListener.useContext(getState(getStateListeners[2]).NavigationRouteContext);
-  let str = "root";
-  if (context) {
-    str = context.key;
-  }
-  const items = [getState, getStateListeners];
-  callback = obj.useCallback(() => {
-    const tmp = getState();
-    const routes = tmp.routes;
-    const mapped = routes.map((state) => {
-      let tmpResult;
-      if (getStateListeners[state.key] != null) {
-        tmpResult = tmp();
+export const useFocusedListenersChildrenAdapter = function useFocusedListenersChildrenAdapter(navigation) {
+  navigation = navigation.navigation;
+  const focusedListeners = navigation.focusedListeners;
+  const addListener = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).addListener;
+  const items = [focusedListeners, navigation];
+  const callback = noop.useCallback((fn) => {
+    if (navigation.isFocused()) {
+      for (const item10012 of focusedListeners) {
+        let item10012Result = item10012(arg0);
+        let handled = item10012Result.handled;
+        if (handled) {
+          let obj2 = { handled, result: tmp5 };
+          obj.return();
+          return obj2;
+        }
       }
-      let tmp3 = state;
-      if (state.state !== tmpResult) {
-        const obj = {};
-        const merged = Object.assign(state);
-        obj.state = tmpResult;
-        tmp3 = obj;
-      }
-      return tmp3;
-    });
-    let tmp3 = tmp;
-    if (!obj.isArrayEqual(tmp.routes, mapped)) {
-      const obj2 = {};
-      let merged = Object.assign(tmp);
-      obj2.routes = mapped;
-      tmp3 = obj2;
+      const obj3 = { handled: true, result: fn(navigation) };
+      return obj3;
+    } else {
+      return { handled: false, result: null };
     }
-    return tmp3;
   }, items);
-  const items1 = [addKeyedListener, callback, str];
-  const effect = obj.useEffect(() => {
+  const items1 = [addListener, callback];
+  const effect = noop.useEffect(() => {
     let tmpResult;
-    if (addKeyedListener != null) {
-      tmpResult = tmp("getState", str, callback);
+    if (addListener != null) {
+      tmpResult = tmp("focus", callback);
     }
     return tmpResult;
   }, items1);

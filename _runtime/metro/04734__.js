@@ -1,15 +1,22 @@
 // === Module 4734: ? ===
 
 // Module 4734
-import _process from "_process" /* 539 */;
-import baseUnary from "baseUnary" /* 540 */;
-import baseIsMap from "baseIsMap" /* 4735 */;
+import _mod523 from "module_523" /* 523 */;
 
-const tmp = _process && _process.isMap;
-if (tmp) {
-  let _module = baseUnary(tmp);
-} else {
-  _module = baseIsMap;
+let prototype;
+if (_mod523) {
+  prototype = _mod523.prototype;
+}
+let valueOf;
+if (prototype) {
+  valueOf = prototype.valueOf;
 }
 
-export default _module;
+export default function cloneSymbol(arg0) {
+  if (valueOf) {
+    const call = valueOf.call;
+    Object(typeof call === "unknown" ? valueOf() : call(arg0));
+  } else {
+    return {};
+  }
+};

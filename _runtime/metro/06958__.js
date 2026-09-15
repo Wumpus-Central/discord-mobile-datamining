@@ -1,12 +1,33 @@
 // === Module 6958: ? ===
 
 // Module 6958
-import _mod6959 from "module_6959" /* 6959 */;
-import _mod6960 from "module_6960" /* 6960 */;
-import _mod6961 from "module_6961" /* 6961 */;
-import _mod6963 from "module_6963" /* 6963 */;
+import _mod17 from "module_17" /* 17 */;
 
+const Platform = _mod17.Platform;
 
-export default function _slicedToArray(arg0, arg1) {
-  return _mod6959(arg0) || _mod6960(arg0, arg1) || _mod6961(arg0, arg1) || _mod6963();
+export const isNewArch = function isNewArch() {
+  if (undefined !== c1) {
+    return c1;
+  } else {
+    try {
+      let prop;
+      if (global != null) {
+        prop = global.nativeFabricUIManager;
+      }
+      let flag = Boolean(prop);
+      if (global != null) {
+        const __turboModuleProxy = global.__turboModuleProxy;
+      }
+      if (!flag) {
+        flag = Boolean(__turboModuleProxy);
+      }
+      if (!flag) {
+        flag = false;
+      }
+      c1 = flag;
+      return c1;
+    } catch (err) {
+      c1 = true;
+    }
+  }
 };

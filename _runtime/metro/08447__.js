@@ -1,36 +1,32 @@
 // === Module 8447: ? ===
 
 // Module 8447
-import colorPropType from "colorPropType" /* 8432 */;
-import _mod8434 from "module_8434" /* 8434 */;
-import _mod8448 from "module_8448" /* 8448 */;
-import flattenStyle from "module_8437" /* 8437 */;
-import emptyFunction_mod from "module_4466" /* 4466 */;
+import colorPropType from "colorPropType" /* 8435 */;
+import _mod8443 from "module_8443" /* 8443 */;
+import merged12 from "merged1" /* 8444 */;
+import merged22 from "merged2" /* 8445 */;
+import emptyFunction_mod from "module_4469" /* 4469 */;
 
-const obj = { ellipsizeMode: null, numberOfLines: null, textBreakStrategy: null, onLayout: null, onPress: null, onLongPress: null, pressRetentionOffset: null, selectable: null, selectionColor: null, suppressHighlighting: null, style: null, testID: null, nativeID: null, allowFontScaling: null, maxFontSizeMultiplier: null, accessible: null, adjustsFontSizeToFit: null, minimumFontScale: null, disabled: null, dataDetectorType: null };
-const module_8448 = flattenStyle(_mod8448);
+const obj = {};
+const size = Object.assign(_mod8443);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
 let emptyFunction = emptyFunction_mod;
-obj.ellipsizeMode = emptyFunction.oneOf(["head", "middle", "tail", "clip"]);
-obj.numberOfLines = emptyFunction.number;
+obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
 let emptyFunction = emptyFunction_mod;
-obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
-obj.onLayout = emptyFunction.func;
-obj.onPress = emptyFunction.func;
-obj.onLongPress = emptyFunction.func;
-obj.pressRetentionOffset = _mod8434;
-obj.selectable = emptyFunction.bool;
-obj.selectionColor = colorPropType;
-obj.suppressHighlighting = emptyFunction.bool;
-obj.style = module_8448;
-obj.testID = emptyFunction.string;
-obj.nativeID = emptyFunction.string;
-obj.allowFontScaling = emptyFunction.bool;
-obj.maxFontSizeMultiplier = emptyFunction.number;
-obj.accessible = emptyFunction.bool;
-obj.adjustsFontSizeToFit = emptyFunction.bool;
-obj.minimumFontScale = emptyFunction.number;
-obj.disabled = emptyFunction.bool;
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderWidth = emptyFunction.number;
+obj.borderRadius = emptyFunction.number;
 let emptyFunction = emptyFunction_mod;
-obj.dataDetectorType = emptyFunction.oneOf(["phoneNumber", "link", "email", "none", "all"]);
+obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
+obj.tintColor = colorPropType;
+obj.opacity = emptyFunction.number;
+obj.overlayColor = emptyFunction.string;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
 
 export default obj;

@@ -1,159 +1,49 @@
 // === Module 1864: ? ===
 
 // Module 1864
-import _mod17 from "module_17" /* 17 */;
-import noop_mod from "module_19" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import cancelAnimation_mod from "cancelAnimation" /* 1636 */;
+import _mod1829 from "module_1829" /* 1829 */;
+import disabledDefault from "disabled" /* 1856 */;
+import _modDef1857 from "module_1857" /* 1857 */;
+import noop from "module_19" /* 19 */;
 
-let noop = noop_mod;
-({ useCallback: c3, useMemo: closure_4, forwardRef } = noop);
-let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
-({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-let cancelAnimation = cancelAnimation_mod;
-let closure_8 = cancelAnimation.makeMutable(0);
-let cancelAnimation = cancelAnimation_mod;
-let closure_9 = cancelAnimation.makeMutable(0);
-const __initData = { code: "function pnpm_indexTsx1(){const{freeze}=this.__closure;return typeof freeze===\"boolean\"?freeze:freeze.value;}" };
-const __initData2 = { code: "function pnpm_indexTsx2(){const{blankSpace,padding,extraContentPadding}=this.__closure;return Math.max(blankSpace.value,padding.value+extraContentPadding.value);}" };
-const __initData3 = { code: "function pnpm_indexTsx3(){const{padding,extraContentPadding}=this.__closure;return padding.value+extraContentPadding.value;}" };
-const __initData4 = { code: "function pnpm_indexTsx4(){const{currentHeight}=this.__closure;return{transform:[{translateY:-currentHeight.value}]};}" };
-const styles = StyleSheet.create({ commitView: { display: "none", position: "absolute" } });
+require = fn;
+fn(19).useCallback;
+const jsx = fn(21).jsx;
 
-export default forwardRef((onEndVisible, arg1) => {
-  let ScrollView = onEndVisible.ScrollViewComponent;
-  if (ScrollView === undefined) {
-    ScrollView = extraContentPadding(blankSpace[3]).ScrollView;
+export default function _default(icon) {
+  ({ children, onPress } = icon);
+  ({ disabled, button } = icon);
+  ({ rippleRadius, style } = icon);
+  if (button === undefined) {
+    button = disabledDefault;
   }
-  let flag = onEndVisible.inverted;
-  if (flag === undefined) {
-    flag = false;
+  icon = icon.icon;
+  if (icon === undefined) {
+    icon = _modDef1857;
   }
-  let str = onEndVisible.keyboardLiftBehavior;
-  if (str === undefined) {
-    str = "always";
+  const toolbarContext = onPress(1862).useToolbarContext();
+  const theme = toolbarContext.theme;
+  if (disabled == null) {
+    disabled = toolbarContext.isPrevDisabled;
   }
-  let flag2 = onEndVisible.freeze;
-  if (flag2 === undefined) {
-    flag2 = false;
-  }
-  let num = onEndVisible.offset;
-  if (num === undefined) {
-    num = 0;
-  }
-  extraContentPadding = onEndVisible.extraContentPadding;
-  if (extraContentPadding === undefined) {
-    extraContentPadding = onContentSizeChange2;
-  }
-  blankSpace = onEndVisible.blankSpace;
-  if (blankSpace === undefined) {
-    blankSpace = animatedStyle;
-  }
-  let flag3 = onEndVisible.applyWorkaroundForContentInsetHitTestBug;
-  if (flag3 === undefined) {
-    flag3 = false;
-  }
-  const onLayout = onEndVisible.onLayout;
-  const onContentSizeChange = onEndVisible.onContentSizeChange;
-  const merged = Object.assign(onEndVisible, Object.assign({ children: 0, ScrollViewComponent: 0, inverted: 0, keyboardLiftBehavior: 0, freeze: 0, offset: 0, extraContentPadding: 0, blankSpace: 0, applyWorkaroundForContentInsetHitTestBug: 0, onLayout: 0, onContentSizeChange: 0, onEndVisible: 0 }));
-  let padding;
-  let currentHeight;
-  onLayout2 = undefined;
-  onContentSizeChange2 = undefined;
-  animatedStyle = undefined;
-  const animatedRef = flag2(blankSpace[3]).useAnimatedRef();
-  let obj = flag2(blankSpace[3]);
-  const tmp5 = extraContentPadding(blankSpace[4])(arg1, animatedRef);
-  class M {
-    constructor() {
-      value = c0;
-      if (typeof c0 !== "boolean") {
-        value = c0.value;
-      }
-      return value;
+  const items = [onPress];
+  const obj2 = { accessibilityHint: "Moves focus to the previous field", accessibilityLabel: "Previous", disabled, rippleRadius, style, testID: null, theme: null, onPress: null, children: null };
+  const obj = onPress(1862);
+  obj2.testID = onPress(1855).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS;
+  obj2.theme = theme;
+  obj2.onPress = useCallback((isDefaultPrevented) => {
+    if (onPress != null) {
+      tmp(isDefaultPrevented);
     }
-  }
-  M.__closure = { freeze: flag2 };
-  M.__workletHash = 1441280506731;
-  M.__initData = __initData;
-  const derivedValue = flag2(blankSpace[3]).useDerivedValue(M);
-  const obj2 = flag2(blankSpace[3]);
-  const chatKeyboard = flag2(blankSpace[5]).useChatKeyboard(animatedRef, { inverted: flag, keyboardLiftBehavior: str, freeze: derivedValue, offset: num, blankSpace, extraContentPadding });
-  padding = chatKeyboard.padding;
-  currentHeight = chatKeyboard.currentHeight;
-  ({ contentOffsetY, scroll, layout, size, onLayout: onLayout2 } = chatKeyboard);
-  onContentSizeChange2 = chatKeyboard.onContentSizeChange;
-  const obj3 = flag2(blankSpace[5]);
-  const extraContentPadding1 = flag2(blankSpace[6]).useExtraContentPadding({ scrollViewRef: animatedRef, extraContentPadding, keyboardPadding: padding, blankSpace, scroll, layout, size, contentOffsetY, inverted: flag, keyboardLiftBehavior: str, freeze: derivedValue });
-  const obj4 = flag2(blankSpace[6]);
-  const endVisible = flag2(blankSpace[7]).useEndVisible({ scroll, layout, size, inverted: flag, onEndVisible: onEndVisible.onEndVisible });
-  const obj5 = flag2(blankSpace[7]);
-  const fn = function q() {
-    return Math.max(blankSpace.value, padding.value + extraContentPadding.value);
-  };
-  fn.__closure = { blankSpace, padding, extraContentPadding };
-  fn.__workletHash = 5812718828105;
-  fn.__initData = __initData2;
-  const derivedValue1 = flag2(blankSpace[3]).useDerivedValue(fn);
-  const obj6 = flag2(blankSpace[3]);
-  class G {
-    constructor() {
-      return padding.value + closure_1.value;
-    }
-  }
-  G.__closure = { padding, extraContentPadding };
-  G.__workletHash = 17005251423398;
-  G.__initData = __initData3;
-  let items = [onLayout2, onLayout];
-  const derivedValue2 = flag2(blankSpace[3]).useDerivedValue(G);
-  const items1 = [onContentSizeChange2, onContentSizeChange];
-  const obj7 = flag2(blankSpace[3]);
-  const tmp12 = onLayout((arg0) => {
-    onLayout2(arg0);
-    if (onLayout != null) {
-      onLayout(arg0);
+    if (!isDefaultPrevented.isDefaultPrevented()) {
+      const KeyboardController = _mod1829.KeyboardController;
+      KeyboardController.setFocusTo("prev");
     }
   }, items);
-  const tmp13 = onLayout((arg0, arg1) => {
-    onContentSizeChange2(arg0, arg1);
-    if (onContentSizeChange != null) {
-      onContentSizeChange(arg0, arg1);
-    }
-  }, items1);
-  class J {
-    constructor() {
-      obj = { transform: null };
-      obj1 = { translateY: -currentHeight.value };
-      items = [];
-      items[0] = obj1;
-      obj.transform = items;
-      return obj;
-    }
+  if (children == null) {
+    const obj3 = { disabled, theme, type: "prev" };
+    children = <icon disabled={disabled} theme={theme} type="prev" />;
   }
-  J.__closure = { currentHeight };
-  J.__workletHash = 2509855764315;
-  J.__initData = __initData4;
-  animatedStyle = flag2(blankSpace[3]).useAnimatedStyle(J, []);
-  const items2 = [animatedStyle];
-  const obj9 = { children: null };
-  const obj8 = flag2(blankSpace[3]);
-  const obj10 = { ref: tmp5 };
-  const tmp15 = onContentSizeChange(() => {
-    const items = [commitView.commitView, animatedStyle];
-    return items;
-  }, items2);
-  const merged1 = Object.assign(merged);
-  obj10.applyWorkaroundForContentInsetHitTestBug = flag3;
-  obj10.bottomPadding = derivedValue1;
-  obj10.contentOffsetY = contentOffsetY;
-  obj10.inverted = flag;
-  obj10.scrollIndicatorPadding = derivedValue2;
-  obj10.ScrollViewComponent = ScrollView;
-  obj10.onContentSizeChange = tmp13;
-  obj10.onLayout = tmp12;
-  obj10.children = onEndVisible.children;
-  const items3 = [padding(extraContentPadding(blankSpace[8]), obj10), padding(extraContentPadding(blankSpace[3]).View, { style: tmp15 })];
-  obj9.children = items3;
-  return onLayout2(currentHeight, obj9);
-});
+  obj2.children = children;
+  return <button accessibilityHint="Moves focus to the previous field" accessibilityLabel="Previous" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={null} theme={null} onPress={null}>{null}</button>;
+};

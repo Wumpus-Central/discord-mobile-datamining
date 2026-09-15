@@ -1,102 +1,173 @@
 // === Module 13028: ? ===
 
 // Module 13028
+import errorCallback from "errorCallback" /* 12928 */;
+import _mod12932 from "module_12932" /* 12932 */;
 import _mod12933 from "module_12933" /* 12933 */;
-import _slicedToArray from "module_32" /* 32 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12937 */;
+import _mod12946 from "module_12946" /* 12946 */;
+import _mod12959 from "module_12959" /* 12959 */;
+import _mod12960 from "module_12960" /* 12960 */;
+import COUNTER_METRIC_TYPE from "COUNTER_METRIC_TYPE" /* 13029 */;
+import __SENTRY_DEBUG__ from "module_12931" /* 12931 */;
 
-let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
+const require = globalThis.__r;
 
-export const getBucketKey = function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const entries = Object.entries(_mod12933.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
-    const first = arg0[0];
-    return first.localeCompare(arg1[0]);
-  });
-};
-export const sanitizeMetricKey = function sanitizeMetricKey(str) {
-  return str.replace(/[^\w\-.]+/gi, "_");
-};
-export const sanitizeTags = function sanitizeTags(tags) {
-  let obj = {};
-  for (const key10007 in arg0) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10007);
-    } else {
-      hasOwnPropertyResult = call(arg0, key10007);
+function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
+  let obj = arg4;
+  if (arg4 === undefined) {
+    obj = {};
+  }
+  let client = obj.client;
+  if (!client) {
+    client = _mod12959.getClient();
+  }
+  if (client) {
+    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
+    let rootSpan;
+    if (activeSpan) {
+      rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+      const tmp3Result = spanTimeInputToSeconds;
     }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      let _String = String;
-      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
-      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
-        const obj = dependencyMap[Symbol.iterator]();
-        while (obj !== undefined) {
-          let tmp4 = closure_1_2(tmp2, 2);
-          if (item === tmp4[0]) {
-            obj.return();
-            return tmp5;
+    let description = rootSpan;
+    if (rootSpan) {
+      description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
+      const tmp3Result3 = spanTimeInputToSeconds;
+    }
+    ({ unit, tags, timestamp } = obj);
+    const options = client.getOptions();
+    ({ release, environment } = options);
+    const obj4 = {};
+    if (release) {
+      obj4.release = release;
+    }
+    if (environment) {
+      obj4.environment = environment;
+    }
+    if (description) {
+      obj4.transaction = description;
+    }
+    if (_mod12960.DEBUG_BUILD) {
+      const logger = _mod12932.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
+    }
+    const globalSingleton = _mod12933.getGlobalSingleton("globalMetricsAggregators", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    value = globalSingleton.get(client);
+    if (!value) {
+      const tmp20 = new arg0(client);
+      closure_0 = tmp20;
+      client.on("flush", () => closure_0.flush());
+      client.on("close", () => closure_0.close());
+      const result = globalSingleton.set(client, tmp20);
+      value = tmp20;
+    }
+    const obj5 = {};
+    const merged = Object.assign(obj4);
+    const merged1 = Object.assign(tags);
+    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj5, timestamp);
+    const tmp3Result4 = _mod12933;
+  }
+}
+errorCallback;
+
+export const metrics = {
+  increment(arg0, arg1) {
+    let num = match;
+    if (match === undefined) {
+      num = 1;
+    }
+    let parsed = num;
+    if (typeof num === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(num);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  distribution(arg0, arg1, match, arg3) {
+    let parsed = match;
+    if (typeof match === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(match);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  set(arg0, arg1, parsed, arg3) {
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  gauge(arg0, arg1, match, arg3) {
+    let parsed = match;
+    if (typeof match === "string") {
+      const _parseInt = parseInt;
+      parsed = parseInt(match);
+    }
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
+  },
+  timing(arg0, name, fn) {
+    _require = arg0;
+    dependencyMap = name;
+    addToMetricsAggregator = fn;
+    let str = arg3;
+    if (arg3 === undefined) {
+      str = "second";
+    }
+    closure_3 = arg4;
+    c4 = undefined;
+    if (typeof fn === "function") {
+      let timestampInSecondsResult = require("module_12946").timestampInSeconds();
+      c4 = timestampInSecondsResult;
+      let obj = require("module_12946");
+      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
+      return require("module_12966").startSpanManual(obj3, (arg0) => {
+        closure_0 = arg0;
+        return closure_0(name[10]).handleCallbackErrors(() => fn(), () => {
+
+        }, () => {
+          const timestampInSecondsResult = _mod12946.timestampInSeconds();
+          const diff = timestampInSecondsResult - c4;
+          const obj2 = {};
+          const merged = Object.assign(closure_3);
+          obj2.unit = "second";
+          let parsed = diff;
+          if (typeof diff === "string") {
+            const _parseInt = parseInt;
+            parsed = parseInt(diff);
           }
-        }
-        return item;
-      })(item), "");
-      continue;
-    }
-    continue;
-  }
-  return obj;
-};
-export const sanitizeUnit = function sanitizeUnit(none) {
-  return none.replace(/[^\w]+/gi, "_");
-};
-export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
-  let str = "";
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let _Object = Object;
-    let entries = Object.entries(nextResult.tags);
-    let arr2 = entries;
-    let str2 = "";
-    if (entries.length > 0) {
-      let mapped = arr2.map((item) => {
-        [tmp, tmp2] = item;
-        return "" + tmp + ":" + tmp2;
+          addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
+          closure_0.end(timestampInSecondsResult);
+        });
       });
-      let _HermesInternal = HermesInternal;
-      str2 = "|#" + mapped.join(",");
+    } else {
+      const obj4 = {};
+      let merged = Object.assign(arg4);
+      obj4.unit = str;
+      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
+      let parsed = fn;
+      if (typeof fn === "string") {
+        let _parseInt = parseInt;
+        parsed = parseInt(fn);
+      }
+      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
     }
-    let _HermesInternal2 = HermesInternal;
-    let str3 = "";
-    let str4 = "@";
-    let str5 = ":";
-    let str6 = "|";
-    let str7 = "|T";
-    let str8 = "\n";
-    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
-    continue;
+  },
+  getMetricsAggregatorForClient(on, arg1) {
+    const globalSingleton = _mod12933.getGlobalSingleton("globalMetricsAggregators", () => {
+      const weakMap = new WeakMap();
+      return weakMap;
+    });
+    value = globalSingleton.get(on);
+    if (value) {
+      return value;
+    } else {
+      const tmp6 = new arg1(on);
+      closure_0 = tmp6;
+      on.on("flush", () => closure_0.flush());
+      on.on("close", () => closure_0.close());
+      const result = globalSingleton.set(on, tmp6);
+      return tmp6;
+    }
   }
-  return str;
-};
-export const simpleHash = function simpleHash(item) {
-  let length;
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < item.length) {
-    do {
-      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
-      num2 = sum & sum;
-      num = num + 1;
-      num3 = num2;
-      length = item.length;
-    } while (num < length);
-  }
-  return num3 >>> 0;
 };

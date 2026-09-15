@@ -1,12 +1,47 @@
 // === Module 9070: ? ===
 
 // Module 9070
-import _mod9065 from "module_9065" /* 9065 */;
 import _mod9068 from "module_9068" /* 9068 */;
 import _mod9071 from "module_9071" /* 9071 */;
-import _slicedToArray from "module_32" /* 32 */;
 
 const self = this;
+function toDotPath(path) {
+  const items = [];
+  const mapped = path.map((key) => {
+    if (typeof key === "object") {
+      key = key.key;
+    }
+    return key;
+  });
+  const iter = mapped[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp3 = nextResult;
+    if (typeof nextResult === "number") {
+      let _HermesInternal3 = HermesInternal;
+      let arr = items.push("[" + tmp3 + "]");
+    } else if (typeof tmp3 === "symbol") {
+      let _JSON2 = JSON;
+      let _String = String;
+      let _HermesInternal2 = HermesInternal;
+      let arr6 = items.push("[" + JSON.stringify(String(tmp3)) + "]");
+    } else {
+      let obj = /[^\w$]/;
+      if (obj.test(tmp3)) {
+        let _JSON = JSON;
+        let _HermesInternal = HermesInternal;
+        let arr7 = items.push("[" + JSON.stringify(tmp3) + "]");
+      } else {
+        if (items.length) {
+          let arr8 = items.push(".");
+        }
+        let arr9 = items.push(tmp3);
+      }
+    }
+    continue;
+  }
+  return items.join("");
+}
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -57,730 +92,241 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.$ZodCheck = undefined;
-    exports.$ZodCheckLessThan = undefined;
-    exports.$ZodCheckGreaterThan = undefined;
-    exports.$ZodCheckMultipleOf = undefined;
-    exports.$ZodCheckNumberFormat = undefined;
-    exports.$ZodCheckBigIntFormat = undefined;
-    exports.$ZodCheckMaxSize = undefined;
-    exports.$ZodCheckMinSize = undefined;
-    exports.$ZodCheckSizeEquals = undefined;
-    exports.$ZodCheckMaxLength = undefined;
-    exports.$ZodCheckMinLength = undefined;
-    exports.$ZodCheckLengthEquals = undefined;
-    exports.$ZodCheckStringFormat = undefined;
-    exports.$ZodCheckRegex = undefined;
-    exports.$ZodCheckLowerCase = undefined;
-    exports.$ZodCheckUpperCase = undefined;
-    exports.$ZodCheckIncludes = undefined;
-    exports.$ZodCheckStartsWith = undefined;
-    exports.$ZodCheckEndsWith = undefined;
-    exports.$ZodCheckProperty = undefined;
-    exports.$ZodCheckMimeType = undefined;
-    exports.$ZodCheckOverwrite = undefined;
-    const fnResult = fn(_mod9065);
-    let closure_4 = fn(_mod9071);
-    let closure_5 = fn(_mod9068);
-    exports.$ZodCheck = fnResult.$constructor("$ZodCheck", (_zod, def) => {
-      if (_zod._zod == null) {
-        _zod._zod = {};
+    exports.$ZodError = undefined;
+    exports.$ZodRealError = undefined;
+    exports.flattenError = function flattenError(arg0, arg1) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
+        };
       }
-      _zod._zod.def = def;
-      _zod = _zod._zod;
-      if (_zod.onattach == null) {
-        _zod.onattach = [];
-      }
-    });
-    const dependencyMap = { number: "number", bigint: "bigint", object: "date" };
-    exports.$ZodCheckLessThan = fnResult.$constructor("$ZodCheckLessThan", (_zod, arg1) => {
-      const inst = _zod;
-      closure_1 = arg1;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const origin = dependencyMap[typeof arg1.value];
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        let POSITIVE_INFINITY = closure_1.inclusive ? bag.maximum : bag.exclusiveMaximum;
-        if (POSITIVE_INFINITY == null) {
-          const _Number = Number;
-          POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
-        }
-        if (closure_1.value < POSITIVE_INFINITY) {
-          value = closure_1.value;
-          if (closure_1.inclusive) {
-            bag.maximum = value;
-          } else {
-            bag.exclusiveMaximum = value;
+      const fieldErrors = {};
+      const formErrors = [];
+      const iter = arg0.issues[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp2 = nextResult;
+        if (nextResult.path.length > 0) {
+          let items1 = fieldErrors[tmp2.path[0]];
+          if (!items1) {
+            items1 = [];
           }
-        }
-      });
-      _zod._zod.check = (value) => {
-        let iter = value;
-        let iter2 = closure_1;
-        value = value.value;
-        value2 = closure_1.value;
-        if (!(closure_1.inclusive ? value <= value2 : value < value2)) {
-          const issues = iter.issues;
-          let obj = { origin, code: "too_big", maximum: null, input: null, inclusive: null, inst: null, continue: null };
-          if (typeof iter2.value === "object") {
-            const value3 = iter2.value;
-            let time = value3.getTime();
-          } else {
-            time = iter2.value;
-          }
-          obj.maximum = time;
-          obj.input = iter.value;
-          iter = iter2.inclusive;
-          obj.inclusive = iter;
-          obj.inst = inst;
-          iter2 = iter2.abort;
-          obj.continue = !iter2;
-          obj = issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckGreaterThan = fnResult.$constructor("$ZodCheckGreaterThan", (_zod, arg1) => {
-      const inst = _zod;
-      closure_1 = arg1;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const origin = dependencyMap[typeof arg1.value];
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        let NEGATIVE_INFINITY = closure_1.inclusive ? bag.minimum : bag.exclusiveMinimum;
-        if (NEGATIVE_INFINITY == null) {
-          const _Number = Number;
-          NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY;
-        }
-        if (closure_1.value > NEGATIVE_INFINITY) {
-          value = closure_1.value;
-          if (closure_1.inclusive) {
-            bag.minimum = value;
-          } else {
-            bag.exclusiveMinimum = value;
-          }
-        }
-      });
-      _zod._zod.check = (value) => {
-        let iter = value;
-        let iter2 = closure_1;
-        value = value.value;
-        value2 = closure_1.value;
-        if (!(closure_1.inclusive ? value >= value2 : value > value2)) {
-          const issues = iter.issues;
-          let obj = { origin, code: "too_small", minimum: null, input: null, inclusive: null, inst: null, continue: null };
-          if (typeof iter2.value === "object") {
-            const value3 = iter2.value;
-            let time = value3.getTime();
-          } else {
-            time = iter2.value;
-          }
-          obj.minimum = time;
-          obj.input = iter.value;
-          iter = iter2.inclusive;
-          obj.inclusive = iter;
-          obj.inst = inst;
-          iter2 = iter2.abort;
-          obj.continue = !iter2;
-          obj = issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckMultipleOf = fnResult.$constructor("$ZodCheckMultipleOf", (_zod, arg1) => {
-      _exports = _zod;
-      closure_1 = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        if (bag.multipleOf == null) {
-          bag.multipleOf = closure_1.value;
-        }
-      });
-      _zod._zod.check = (value) => {
-        if (typeof value.value !== typeof closure_1.value) {
-          const _Error = Error;
-          const error = new Error("Cannot mix number and bigint in multiple_of check.");
-          throw error;
+          fieldErrors[tmp2.path[0]] = items1;
+          let arr3 = fieldErrors[tmp2.path[0]];
+          let arr = arr3.push(fn(tmp2));
         } else {
-          if (typeof value.value === "bigint") {
-            const _BigInt = BigInt;
-            const result = value.value % closure_1.value;
-            let tmp3 = result === BigInt(0);
+          let arr2 = formErrors.push(fn(tmp2));
+        }
+        continue;
+      }
+      return { formErrors, fieldErrors };
+    };
+    exports.formatError = function formatError(arg0, arg1) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
+        };
+      }
+      let obj = { _errors: [] };
+      function processError(arg0) {
+        const iter = arg0.issues[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp2 = nextResult;
+          if ("invalid_union" === nextResult.code) {
+            if (tmp2.errors.length) {
+              let errors = tmp2.errors;
+              let mapped = errors.map((issues) => {
+                processError({ issues });
+              });
+              continue;
+            }
+          }
+          if ("invalid_key" === tmp2.code) {
+            let obj2 = { issues: null };
+            obj2.issues = tmp2.issues;
+            let tmp34 = processError(obj2);
+          } else if ("invalid_element" === tmp2.code) {
+            let obj3 = { issues: null };
+            obj3.issues = tmp2.issues;
+            let tmp31 = processError(obj3);
+          } else if (0 === tmp2.path.length) {
+            let _errors = obj._errors;
+            let arr = _errors.push(fn(tmp2));
           } else {
-            tmp3 = 0 === closure_5.floatSafeRemainder(value.value, closure_1.value);
-          }
-          if (!tmp3) {
-            const issues = value.issues;
-            const obj = { origin: typeof value.value, code: "not_multiple_of", divisor: closure_1.value, input: value.value, inst, continue: !closure_1.abort };
-            issues.push(obj);
+            let tmp21 = obj;
+            let num = 0;
+            if (0 < tmp2.path.length) {
+              do {
+                let tmp7 = tmp2.path[num];
+                if (num === tmp2.path.length - 1) {
+                  let tmp13 = tmp21[tmp7];
+                  if (!tmp13) {
+                    let obj4 = { _errors: [] };
+                    tmp13 = obj4;
+                  }
+                  tmp21[tmp7] = tmp13;
+                  let _errors1 = tmp21[tmp7]._errors;
+                  let arr2 = _errors1.push(fn(tmp2));
+                } else {
+                  let tmp10 = tmp21[tmp7];
+                  if (!tmp10) {
+                    obj = { _errors: [] };
+                    tmp10 = obj;
+                  }
+                  tmp21[tmp7] = tmp10;
+                }
+                tmp21 = tmp21[tmp7];
+                sum = num + 1;
+                num = sum;
+              } while (sum < tmp2.path.length);
+            }
           }
         }
-      };
-    });
-    exports.$ZodCheckNumberFormat = fnResult.$constructor("$ZodCheckNumberFormat", (_zod, format) => {
-      _exports = _zod;
-      _slicedToArray = format;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, format);
-      format.format = format.format || "float64";
-      format = format.format;
-      let hasItem;
-      if (format != null) {
-        hasItem = format.includes("int");
       }
-      let str2 = "number";
-      if (hasItem) {
-        str2 = "int";
+      processError(arg0);
+      return obj;
+    };
+    exports.treeifyError = function treeifyError(arg0) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
+        };
       }
-      [closure_4, closure_5] = maximum.NUMBER_FORMAT_RANGES[format.format];
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        bag.format = closure_1.format;
-        bag.minimum = minimum;
-        bag.maximum = maximum;
-        if (hasItem) {
-          bag.pattern = minimum.integer;
+      let obj = { errors: [] };
+      function processError(arg0) {
+        let items = arg1;
+        if (arg1 === undefined) {
+          items = [];
         }
-      });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (hasItem) {
-          const _Number = Number;
-          if (Number.isInteger(value)) {
-            const _Number2 = Number;
-            if (!Number.isSafeInteger(value)) {
-              if (value > 0) {
-                const issues = value.issues;
-                const obj2 = { input: value, code: "too_big", maximum: null, note: "Integers must be within the safe integer range.", inst: null, origin: null, inclusive: true, continue: null };
-                const _Number4 = Number;
-                obj2.maximum = Number.MAX_SAFE_INTEGER;
-                obj2.inst = inst;
-                obj2.origin = str2;
-                obj2.continue = !closure_1.abort;
-                issues.push(obj2);
-              } else {
-                const issues1 = value.issues;
-                const obj3 = { input: value, code: "too_small", minimum: null, note: "Integers must be within the safe integer range.", inst: null, origin: null, inclusive: true, continue: null };
-                const _Number3 = Number;
-                obj3.minimum = Number.MIN_SAFE_INTEGER;
-                obj3.inst = inst;
-                obj3.origin = str2;
-                obj3.continue = !closure_1.abort;
-                issues1.push(obj3);
+        let properties;
+        items = undefined;
+        function _loop(iter) {
+          if ("invalid_union" === iter.code) {
+            if (iter.errors.length) {
+              const errors = iter.errors;
+              const mapped = errors.map((issues) => {
+                items({ issues }, iter.path);
+              });
+            }
+          }
+          if ("invalid_key" === iter.code) {
+            const obj2 = { issues: iter.issues };
+            processError(obj2, iter.path);
+          } else if ("invalid_element" === iter.code) {
+            const obj3 = { issues: iter.issues };
+            processError(obj3, iter.path);
+          } else {
+            const items1 = [];
+            HermesBuiltin.arraySpread(iter.path, HermesBuiltin.arraySpread(items, 0));
+            if (0 === items1.length) {
+              const errors1 = obj.errors;
+              errors1.push(fn(iter));
+              return 1;
+            } else {
+              let tmp10 = obj;
+              let num = 0;
+              if (0 < items1.length) {
+                do {
+                  let tmp = items1[num];
+                  let diff = items1.length - 1;
+                  if (typeof tmp === "string") {
+                    if (tmp10.properties == null) {
+                      tmp10.properties = {};
+                    }
+                    properties = tmp10.properties;
+                    if (properties[tmp] == null) {
+                      let obj4 = { errors: [] };
+                      properties[tmp] = obj4;
+                    }
+                    let tmp6 = tmp10.properties[tmp];
+                  } else {
+                    if (tmp10.items == null) {
+                      tmp10.items = [];
+                    }
+                    items = tmp10.items;
+                    if (items[tmp] == null) {
+                      obj = { errors: [] };
+                      items[tmp] = obj;
+                    }
+                    tmp6 = tmp10.items[tmp];
+                  }
+                  if (num === diff) {
+                    let errors2 = tmp6.errors;
+                    let arr2 = errors2.push(fn(iter));
+                  }
+                  num = num + 1;
+                  tmp10 = tmp6;
+                } while (num < items1.length);
               }
             }
-          } else {
-            const issues2 = value.issues;
-            const obj = { expected: str2, format: closure_1.format, code: "invalid_type", continue: false, input: value, inst };
-            issues2.push(obj);
           }
         }
-        if (value < minimum) {
-          const issues3 = value.issues;
-          const obj4 = { origin: "number", input: value, code: "too_small", minimum: tmp14, inclusive: true, inst, continue: !closure_1.abort };
-          issues3.push(obj4);
+        const iter = arg0.issues[Symbol.iterator]();
+        while (iter !== undefined) {
+          let _loopResult = _loop(iter.next());
+          continue;
         }
-        if (value > maximum) {
-          const issues4 = value.issues;
-          const obj5 = { origin: "number", input: value, code: "too_big", maximum: tmp18, inclusive: true, inst, continue: !closure_1.abort };
-          issues4.push(obj5);
-        }
-      };
-    });
-    exports.$ZodCheckBigIntFormat = fnResult.$constructor("$ZodCheckBigIntFormat", (_zod, arg1) => {
-      const inst = _zod;
-      closure_1 = arg1;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      [self2, __setModuleDefault] = closure_5.BIGINT_FORMAT_RANGES[arg1.format];
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        bag.format = closure_1.format;
-        bag.minimum = minimum;
-        bag.maximum = maximum;
-      });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (value < minimum) {
-          const issues = value.issues;
-          const obj = { origin: "bigint", input: value, code: "too_small", minimum: tmp, inclusive: true, inst, continue: !closure_1.abort };
-          issues.push(obj);
-        }
-        if (value > maximum) {
-          const issues1 = value.issues;
-          const obj2 = { origin: "bigint", input: value, code: "too_big", maximum: tmp5, inclusive: true, inst, continue: !closure_1.abort };
-          issues1.push(obj2);
-        }
-      };
-    });
-    exports.$ZodCheckMaxSize = fnResult.$constructor("$ZodCheckMaxSize", (_zod, arg1) => {
-      _exports = _zod;
-      closure_1 = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const def = _zod._zod.def;
-      if (def.when == null) {
-        def.when = (value) => {
-          value = value.value;
-          const nullishResult = closure_1_5.nullish(value);
-          let tmp2 = !nullishResult;
-          if (!nullishResult) {
-            tmp2 = undefined !== value.size;
-          }
-          return tmp2;
-        };
       }
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        let POSITIVE_INFINITY = _zod._zod.bag.maximum;
-        if (POSITIVE_INFINITY == null) {
-          const _Number = Number;
-          POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
+      processError(arg0);
+      return obj;
+    };
+    exports.toDotPath = toDotPath;
+    exports.prettifyError = function prettifyError(issues) {
+      const items = [];
+      const items1 = [...issues.issues];
+      const sorted = items1.sort((path, path2) => {
+        path = path.path;
+        if (path == null) {
+          path = [];
         }
-        if (closure_1.maximum < POSITIVE_INFINITY) {
-          _zod._zod.bag.maximum = tmp2.maximum;
+        let path1 = path2.path;
+        if (path1 == null) {
+          path1 = [];
         }
+        return path.length - path1.length;
       });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (value.size > closure_1.maximum) {
-          const issues = value.issues;
-          const obj = { origin: closure_5.getSizableOrigin(value), code: "too_big", maximum: closure_1.maximum, inclusive: true, input: value, inst, continue: !closure_1.abort };
-          issues.push(obj);
+      const iter = sorted[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let _HermesInternal = HermesInternal;
+        let tmp3 = nextResult;
+        let arr = items.push("\u2716 " + nextResult.message);
+        let path = nextResult.path;
+        let length;
+        if (path != null) {
+          length = path.length;
         }
-      };
-    });
-    exports.$ZodCheckMinSize = fnResult.$constructor("$ZodCheckMinSize", (_zod, arg1) => {
-      _exports = _zod;
-      closure_1 = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const def = _zod._zod.def;
-      if (def.when == null) {
-        def.when = (value) => {
-          value = value.value;
-          const nullishResult = closure_1_5.nullish(value);
-          let tmp2 = !nullishResult;
-          if (!nullishResult) {
-            tmp2 = undefined !== value.size;
-          }
-          return tmp2;
-        };
+        if (length) {
+          let _HermesInternal2 = HermesInternal;
+          let arr2 = items.push("  \u2192 at " + toDotPath(tmp3.path));
+        }
+        continue;
       }
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        let NEGATIVE_INFINITY = _zod._zod.bag.minimum;
-        if (NEGATIVE_INFINITY == null) {
-          const _Number = Number;
-          NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY;
-        }
-        if (closure_1.minimum > NEGATIVE_INFINITY) {
-          _zod._zod.bag.minimum = tmp2.minimum;
-        }
+      return items.join("\n");
+    };
+    let closure_2 = fn(_mod9071);
+    function initializer(_zod, value) {
+      const message = _zod;
+      _zod.name = "$ZodError";
+      Object.defineProperty(_zod, "_zod", { value: _zod._zod, enumerable: false });
+      Object.defineProperty(_zod, "issues", { value, enumerable: false });
+      _zod.message = JSON.stringify(value, closure_2.jsonStringifyReplacer, 2);
+      Object.defineProperty(_zod, "toString", {
+        value() {
+          return message.message;
+        },
+        enumerable: false
       });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (value.size < closure_1.minimum) {
-          const issues = value.issues;
-          const obj = { origin: closure_5.getSizableOrigin(value), code: "too_small", minimum: closure_1.minimum, inclusive: true, input: value, inst, continue: !closure_1.abort };
-          issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckSizeEquals = fnResult.$constructor("$ZodCheckSizeEquals", (_zod, arg1) => {
-      _exports = _zod;
-      let size = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const def = _zod._zod.def;
-      if (def.when == null) {
-        def.when = (value) => {
-          value = value.value;
-          const nullishResult = closure_1_5.nullish(value);
-          let tmp2 = !nullishResult;
-          if (!nullishResult) {
-            tmp2 = undefined !== value.size;
-          }
-          return tmp2;
-        };
-      }
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        ({ size: bag.minimum, size: bag.maximum, size: bag.size } = closure_1);
-      });
-      _zod._zod.check = (value) => {
-        let iter = value;
-        value = value.value;
-        size = value.size;
-        let abort = size;
-        if (size !== size.size) {
-          const issues = iter.issues;
-          let obj2 = { origin: closure_5.getSizableOrigin(value) };
-          if (tmp5) {
-            const obj3 = { code: "too_big", maximum: abort.size };
-            let obj = obj3;
-          } else {
-            obj = { code: "too_small", minimum: abort.size };
-          }
-          const merged = Object.assign(obj);
-          obj2.inclusive = true;
-          obj2.exact = true;
-          iter = iter.value;
-          obj2.input = iter;
-          obj2.inst = inst;
-          abort = abort.abort;
-          obj2.continue = !abort;
-          obj2 = issues.push(obj2);
-          tmp5 = size > abort.size;
-        }
-      };
-    });
-    exports.$ZodCheckMaxLength = fnResult.$constructor("$ZodCheckMaxLength", (_zod, arg1) => {
-      _exports = _zod;
-      closure_1 = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const def = _zod._zod.def;
-      if (def.when == null) {
-        def.when = (value) => {
-          value = value.value;
-          const nullishResult = closure_1_5.nullish(value);
-          let tmp2 = !nullishResult;
-          if (!nullishResult) {
-            tmp2 = undefined !== value.length;
-          }
-          return tmp2;
-        };
-      }
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        let POSITIVE_INFINITY = _zod._zod.bag.maximum;
-        if (POSITIVE_INFINITY == null) {
-          const _Number = Number;
-          POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
-        }
-        if (closure_1.maximum < POSITIVE_INFINITY) {
-          _zod._zod.bag.maximum = tmp2.maximum;
-        }
-      });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (value.length > closure_1.maximum) {
-          const issues = value.issues;
-          const obj = { origin: closure_5.getLengthableOrigin(value), code: "too_big", maximum: closure_1.maximum, inclusive: true, input: value, inst, continue: !closure_1.abort };
-          issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckMinLength = fnResult.$constructor("$ZodCheckMinLength", (_zod, arg1) => {
-      _exports = _zod;
-      closure_1 = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const def = _zod._zod.def;
-      if (def.when == null) {
-        def.when = (value) => {
-          value = value.value;
-          const nullishResult = closure_1_5.nullish(value);
-          let tmp2 = !nullishResult;
-          if (!nullishResult) {
-            tmp2 = undefined !== value.length;
-          }
-          return tmp2;
-        };
-      }
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        let NEGATIVE_INFINITY = _zod._zod.bag.minimum;
-        if (NEGATIVE_INFINITY == null) {
-          const _Number = Number;
-          NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY;
-        }
-        if (closure_1.minimum > NEGATIVE_INFINITY) {
-          _zod._zod.bag.minimum = tmp2.minimum;
-        }
-      });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (value.length < closure_1.minimum) {
-          const issues = value.issues;
-          const obj = { origin: closure_5.getLengthableOrigin(value), code: "too_small", minimum: closure_1.minimum, inclusive: true, input: value, inst, continue: !closure_1.abort };
-          issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckLengthEquals = fnResult.$constructor("$ZodCheckLengthEquals", (_zod, arg1) => {
-      _exports = _zod;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      const def = _zod._zod.def;
-      if (def.when == null) {
-        def.when = (value) => {
-          value = value.value;
-          const nullishResult = closure_1_5.nullish(value);
-          let tmp2 = !nullishResult;
-          if (!nullishResult) {
-            tmp2 = undefined !== value.length;
-          }
-          return tmp2;
-        };
-      }
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        ({ length: bag.minimum, length: bag.maximum, length: bag.length } = closure_1);
-      });
-      _zod._zod.check = (value) => {
-        let iter = value;
-        value = value.value;
-        let abort = length;
-        if (value.length !== value.length.length) {
-          const issues = iter.issues;
-          let obj2 = { origin: closure_5.getLengthableOrigin(value) };
-          if (length > abort.length) {
-            const obj3 = { code: "too_big", maximum: abort.length };
-            let obj = obj3;
-          } else {
-            obj = { code: "too_small", minimum: abort.length };
-          }
-          const merged = Object.assign(obj);
-          obj2.inclusive = true;
-          obj2.exact = true;
-          iter = iter.value;
-          obj2.input = iter;
-          obj2.inst = inst;
-          abort = abort.abort;
-          obj2.continue = !abort;
-          obj2 = issues.push(obj2);
-        }
-      };
-    });
-    exports.$ZodCheckStringFormat = fnResult.$constructor("$ZodCheckStringFormat", (_zod, pattern) => {
-      const inst = _zod;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, pattern);
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        bag.format = pattern.format;
-        if (pattern.pattern) {
-          if (bag.patterns == null) {
-            const _Set = Set;
-            const set = new Set();
-            bag.patterns = set;
-          }
-          const patterns = bag.patterns;
-          patterns.add(tmp.pattern);
-        }
-      });
-      _zod = _zod._zod;
-      const check = _zod.check;
-      if (pattern.pattern) {
-        if (check == null) {
-          _zod.check = (value) => {
-            let abort = pattern;
-            pattern.pattern.lastIndex = 0;
-            pattern = pattern.pattern;
-            if (!pattern.test(value.value)) {
-              const issues = value.issues;
-              let obj = { origin: "string", code: "invalid_format", format: abort.format, input: value.value };
-              if (abort.pattern) {
-                const obj2 = { pattern: abort.pattern.toString() };
-                let obj3 = obj2;
-              } else {
-                obj3 = {};
-              }
-              const merged = Object.assign(obj3);
-              obj.inst = inst;
-              abort = abort.abort;
-              obj.continue = !abort;
-              obj = issues.push(obj);
-            }
-          };
-        }
-      } else if (check == null) {
-        _zod.check = () => {
-
-        };
-      }
-    });
-    exports.$ZodCheckRegex = fnResult.$constructor("$ZodCheckRegex", (_zod, arg1) => {
-      const inst = _zod;
-      closure_1 = arg1;
-      const $ZodCheckStringFormat = exports.$ZodCheckStringFormat;
-      $ZodCheckStringFormat.init(_zod, arg1);
-      _zod._zod.check = (value) => {
-        closure_1.pattern.lastIndex = 0;
-        const pattern = closure_1.pattern;
-        if (!pattern.test(value.value)) {
-          const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "regex", input: value.value, pattern: closure_1.pattern.toString(), inst, continue: !closure_1.abort };
-          issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckLowerCase = fnResult.$constructor("$ZodCheckLowerCase", (arg0, pattern) => {
-      if (pattern.pattern == null) {
-        pattern.pattern = closure_4.lowercase;
-      }
-      const $ZodCheckStringFormat = exports.$ZodCheckStringFormat;
-      $ZodCheckStringFormat.init(arg0, pattern);
-    });
-    exports.$ZodCheckUpperCase = fnResult.$constructor("$ZodCheckUpperCase", (arg0, pattern) => {
-      if (pattern.pattern == null) {
-        pattern.pattern = closure_4.uppercase;
-      }
-      const $ZodCheckStringFormat = exports.$ZodCheckStringFormat;
-      $ZodCheckStringFormat.init(arg0, pattern);
-    });
-    exports.$ZodCheckIncludes = fnResult.$constructor("$ZodCheckIncludes", (_zod, position) => {
-      const inst = _zod;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, position);
-      const escapeRegexResult = closure_5.escapeRegex(position.includes);
-      let combined = escapeRegexResult;
-      if (typeof position.position === "number") {
-        const _HermesInternal = HermesInternal;
-        combined = "^.{" + position.position + "}" + escapeRegexResult;
-      }
-      const regExp = new RegExp(combined);
-      position.pattern = regExp;
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        if (bag.patterns == null) {
-          const _Set = Set;
-          const set = new Set();
-          bag.patterns = set;
-        }
-        const patterns = bag.patterns;
-        patterns.add(regExp);
-      });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (!value.includes(position.includes, position.position)) {
-          const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "includes", includes: position.includes, input: value.value, inst, continue: !position.abort };
-          issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckStartsWith = fnResult.$constructor("$ZodCheckStartsWith", (_zod, prefix) => {
-      const inst = _zod;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, prefix);
-      const regExp = new RegExp("^" + closure_5.escapeRegex(prefix.prefix) + ".*");
-      if (prefix.pattern == null) {
-        prefix.pattern = regExp;
-      }
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        if (bag.patterns == null) {
-          const _Set = Set;
-          const set = new Set();
-          bag.patterns = set;
-        }
-        const patterns = bag.patterns;
-        patterns.add(regExp);
-      });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (!value.startsWith(prefix.prefix)) {
-          const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "starts_with", prefix: prefix.prefix, input: value.value, inst, continue: !prefix.abort };
-          issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckEndsWith = fnResult.$constructor("$ZodCheckEndsWith", (_zod, suffix) => {
-      const inst = _zod;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, suffix);
-      const regExp = new RegExp(".*" + closure_5.escapeRegex(suffix.suffix) + "$");
-      if (suffix.pattern == null) {
-        suffix.pattern = regExp;
-      }
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        const bag = _zod._zod.bag;
-        if (bag.patterns == null) {
-          const _Set = Set;
-          const set = new Set();
-          bag.patterns = set;
-        }
-        const patterns = bag.patterns;
-        patterns.add(regExp);
-      });
-      _zod._zod.check = (value) => {
-        value = value.value;
-        if (!value.endsWith(suffix.suffix)) {
-          const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "ends_with", suffix: suffix.suffix, input: value.value, inst, continue: !suffix.abort };
-          issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckProperty = fnResult.$constructor("$ZodCheckProperty", (_zod, arg1) => {
-      _exports = arg1;
-      const $ZodCheck = _exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      _zod._zod.check = (issues) => {
-        const _zod = issues.schema._zod;
-        const runResult = _zod.run({ value: issues.value[issues.property], issues: [] }, {});
-        if (runResult instanceof Promise) {
-          return runResult.then((issues) => {
-            if (issues.issues.length) {
-              issues = issues.issues;
-              const push = issues.push;
-              const items = [];
-              HermesBuiltin.arraySpread(closure_5.prefixIssues(tmp, issues.issues), 0);
-              HermesBuiltin.apply(items, issues);
-            }
-          });
-        } else if (runResult.issues.length) {
-          issues = issues.issues;
-          let push = issues.push;
-          let items = [];
-          HermesBuiltin.arraySpread(closure_1_5.prefixIssues(tmp, runResult.issues), 0);
-          HermesBuiltin.apply(items, issues);
-        }
-        const obj = { value: issues.value[issues.property], issues: [] };
-      };
-    });
-    exports.$ZodCheckMimeType = fnResult.$constructor("$ZodCheckMimeType", (_zod, mime) => {
-      const inst = _zod;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, mime);
-      const set = new Set(mime.mime);
-      const onattach = _zod._zod.onattach;
-      onattach.push((_zod) => {
-        _zod._zod.bag.mime = mime.mime;
-      });
-      _zod._zod.check = (value) => {
-        if (!set.has(value.value.type)) {
-          const issues = value.issues;
-          const obj = { code: "invalid_value", values: mime.mime, input: value.value.type, inst, continue: !mime.abort };
-          issues.push(obj);
-        }
-      };
-    });
-    exports.$ZodCheckOverwrite = fnResult.$constructor("$ZodCheckOverwrite", (_zod, arg1) => {
-      closure_0 = arg1;
-      const $ZodCheck = exports.$ZodCheck;
-      $ZodCheck.init(_zod, arg1);
-      _zod._zod.check = (value) => {
-        value.value = closure_0.tx(value.value);
-      };
-    });
+    }
+    exports.$ZodError = _mod9068.$constructor("$ZodError", initializer);
+    let obj = { Parent: null };
+    const _Error = Error;
+    obj.Parent = Error;
+    exports.$ZodRealError = _mod9068.$constructor("$ZodError", initializer, obj);
   } else {
     const _Object2 = Object;
   }

@@ -1,7 +1,7 @@
 // === Module 10192: ? ===
 
 // Module 10192
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 18, height: 18, scales: [2, 3], hash: "ade8732f10573e5215aa029a138cb853", name: "watch", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/application_streaming", width: 310, height: 124, scales: [2, 3], hash: "727e4438447317963db343e286b23476", name: "img_preview_not_available_light", type: "png" });

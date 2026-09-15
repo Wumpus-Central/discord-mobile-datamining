@@ -1,171 +1,79 @@
 // === Module 1808: ? ===
 
 // Module 1808
-const channelFromLrgb = function r() {
-  let num = arg0;
-  if (arg0 === undefined) {
-    num = 0;
-  }
-  const absolute = Math.abs(num);
-  if (absolute > 0.0031308) {
-    const _Math = Math;
-    const _Math2 = Math;
-    let result = (Math.sign(num) || 1) * (1.055 * Math.pow(absolute, 0.4166666666666667) - 0.055);
-    const tmp3 = Math.sign(num) || 1;
-  } else {
-    result = 12.92 * num;
-  }
-  return result;
-};
-channelFromLrgb.__closure = {};
-channelFromLrgb.__workletHash = 9046778946531;
-channelFromLrgb.__initData = { code: "function pnpm_lrgbTs1(c=0){const abs=Math.abs(c);if(abs>0.0031308){return(Math.sign(c)||1)*(1.055*Math.pow(abs,1/2.4)-0.055);}return c*12.92;}" };
-const fn2 = function n(arg0) {
-  ({ r, g, b } = arg0);
-  if (typeof fn === "function") {
-    if (r === undefined) {
-      r = 0;
-    }
-    const _Math = Math;
-    const absolute = Math.abs(r);
-    if (absolute > 0.0031308) {
-      const _Math2 = Math;
-      const _Math3 = Math;
-      let result = (Math.sign(r) || 1) * (1.055 * Math.pow(absolute, 0.4166666666666667) - 0.055);
-      const tmp7 = Math.sign(r) || 1;
-    } else {
-      result = 12.92 * r;
-    }
-    const obj = { r: result, g: null, b: null, alpha: null };
-    if (typeof fn === "function") {
-      if (g === undefined) {
-        g = 0;
-      }
-      const _Math4 = Math;
-      const absolute1 = Math.abs(g);
-      if (absolute1 > 0.0031308) {
-        const _Math5 = Math;
-        const _Math6 = Math;
-        let result1 = (Math.sign(g) || 1) * (1.055 * Math.pow(absolute1, 0.4166666666666667) - 0.055);
-        const tmp11 = Math.sign(g) || 1;
-      } else {
-        result1 = 12.92 * g;
-      }
-      obj.g = result1;
-      if (typeof fn === "function") {
-        if (b === undefined) {
-          b = 0;
-        }
-        const _Math7 = Math;
-        const absolute2 = Math.abs(b);
-        if (absolute2 > 0.0031308) {
-          const _Math8 = Math;
-          const _Math9 = Math;
-          let result2 = (Math.sign(b) || 1) * (1.055 * Math.pow(absolute2, 0.4166666666666667) - 0.055);
-          const tmp15 = Math.sign(b) || 1;
-        } else {
-          result2 = 12.92 * b;
-        }
-        obj.b = result2;
-        obj.alpha = tmp;
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-fn2.__closure = { channelFromLrgb };
-fn2.__workletHash = 2514333579516;
-fn2.__initData = { code: "function pnpm_lrgbTs2({r:r,g:g,b:b,alpha:alpha}){const{channelFromLrgb}=this.__closure;return{r:channelFromLrgb(r),g:channelFromLrgb(g),b:channelFromLrgb(b),alpha:alpha};}" };
-const fn3 = function t() {
-  let num = arg0;
-  if (arg0 === undefined) {
-    num = 0;
-  }
-  const absolute = Math.abs(num);
-  if (absolute <= 0.04045) {
-    let result = num / 12.92;
-  } else {
-    const _Math = Math;
-    const _Math2 = Math;
-    result = (Math.sign(num) || 1) * Math.pow((absolute + 0.055) / 1.055, 2.4);
-    const tmp2 = Math.sign(num) || 1;
-  }
-  return result;
-};
-fn3.__closure = {};
-fn3.__workletHash = 7878321042954;
-fn3.__initData = { code: "function pnpm_lrgbTs3(c=0){const abs=Math.abs(c);if(abs<=0.04045){return c/12.92;}return(Math.sign(c)||1)*Math.pow((abs+0.055)/1.055,2.4);}" };
-let obj = { convert: null };
-const obj2 = { fromRgb: null, toRgb: fn2 };
-const fn4 = function o(arg0) {
-  ({ r, g, b } = arg0);
-  if (typeof fn3 === "function") {
-    if (r === undefined) {
-      r = 0;
-    }
-    const _Math = Math;
-    const absolute = Math.abs(r);
-    if (absolute <= 0.04045) {
-      let result = r / 12.92;
-    } else {
-      const _Math2 = Math;
-      const _Math3 = Math;
-      result = (Math.sign(r) || 1) * Math.pow((absolute + 0.055) / 1.055, 2.4);
-      const tmp5 = Math.sign(r) || 1;
-    }
-    const obj = { r: result, g: null, b: null, alpha: null };
-    if (typeof fn3 === "function") {
-      if (g === undefined) {
-        g = 0;
-      }
-      const _Math4 = Math;
-      const absolute1 = Math.abs(g);
-      if (absolute1 <= 0.04045) {
-        let result1 = g / 12.92;
-      } else {
-        const _Math5 = Math;
-        const _Math6 = Math;
-        result1 = (Math.sign(g) || 1) * Math.pow((absolute1 + 0.055) / 1.055, 2.4);
-        const tmp9 = Math.sign(g) || 1;
-      }
-      obj.g = result1;
-      if (typeof fn3 === "function") {
-        if (b === undefined) {
-          b = 0;
-        }
-        const _Math7 = Math;
-        const absolute2 = Math.abs(b);
-        if (absolute2 <= 0.04045) {
-          let result2 = b / 12.92;
-        } else {
-          const _Math8 = Math;
-          const _Math9 = Math;
-          result2 = (Math.sign(b) || 1) * Math.pow((absolute2 + 0.055) / 1.055, 2.4);
-          const tmp12 = Math.sign(b) || 1;
-        }
-        obj.b = result2;
-        obj.alpha = tmp;
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      throw new TypeError("Trying to call a non-function");
-    }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
-};
-fn4.__closure = { channelToLrgb: fn3 };
-fn4.__workletHash = 7438857771706;
-fn4.__initData = { code: "function pnpm_lrgbTs4({r:r,g:g,b:b,alpha:alpha}){const{channelToLrgb}=this.__closure;return{r:channelToLrgb(r),g:channelToLrgb(g),b:channelToLrgb(b),alpha:alpha};}" };
-obj2.fromRgb = fn4;
-obj.convert = obj2;
+import _modDef1809 from "module_1809" /* 1809 */;
 
-export default obj;
+importDefault = fn;
+const dependencyMap = arg6;
+function convertLrgbToOklab(convert) {
+  let num = convert.r;
+  if (num === undefined) {
+    num = 0;
+  }
+  let num2 = convert.g;
+  if (num2 === undefined) {
+    num2 = 0;
+  }
+  let num3 = convert.b;
+  if (num3 === undefined) {
+    num3 = 0;
+  }
+  const cbrtResult = Math.cbrt(0.41222147079999993 * num + 0.5363325363 * num2 + 0.0514459929 * num3);
+  const cbrtResult1 = Math.cbrt(0.2119034981999999 * num + 0.6806995450999999 * num2 + 0.1073969566 * num3);
+  const cbrtResult2 = Math.cbrt(0.08830246189999998 * num + 0.2817188376 * num2 + 0.6299787005000002 * num3);
+  return { l: 0.2104542553 * cbrtResult + 0.793617785 * cbrtResult1 - 0.0040720468 * cbrtResult2, a: 1.9779984951 * cbrtResult - 2.428592205 * cbrtResult1 + 0.4505937099 * cbrtResult2, b: 0.0259040371 * cbrtResult + 0.7827717662 * cbrtResult1 - 0.808675766 * cbrtResult2, alpha: convert.alpha };
+}
+convertLrgbToOklab.__closure = {};
+convertLrgbToOklab.__workletHash = 12620455378469;
+convertLrgbToOklab.__initData = { code: "function convertLrgbToOklab_Pnpm_oklabTs1({r=0,g=0,b=0,alpha:alpha}){const L=Math.cbrt(0.41222147079999993*r+0.5363325363*g+0.0514459929*b);const M=Math.cbrt(0.2119034981999999*r+0.6806995450999999*g+0.1073969566*b);const S=Math.cbrt(0.08830246189999998*r+0.2817188376*g+0.6299787005000002*b);return{l:0.2104542553*L+0.793617785*M-0.0040720468*S,a:1.9779984951*L-2.428592205*M+0.4505937099*S,b:0.0259040371*L+0.7827717662*M-0.808675766*S,alpha:alpha};}" };
+function convertRgbToOklab(arg0) {
+  const convert = _modDef1809.convert;
+  const tmp = convertLrgbToOklab(convert.fromRgb(arg0));
+  if (tmp2) {
+    tmp.b = 0;
+    tmp.a = 0;
+  }
+  return tmp;
+}
+convertRgbToOklab.__closure = { lrgb: fn(1809), convertLrgbToOklab };
+convertRgbToOklab.__workletHash = 16743889557677;
+convertRgbToOklab.__initData = { code: "function convertRgbToOklab_Pnpm_oklabTs2(rgb){const{lrgb,convertLrgbToOklab}=this.__closure;const lrgbColor=lrgb.convert.fromRgb(rgb);const result=convertLrgbToOklab(lrgbColor);if(rgb.r===rgb.b&&rgb.b===rgb.g){result.a=result.b=0;}return result;}" };
+function convertOklabToLrgb(alpha) {
+  let num = alpha.l;
+  if (num === undefined) {
+    num = 0;
+  }
+  let num2 = alpha.a;
+  if (num2 === undefined) {
+    num2 = 0;
+  }
+  let num3 = alpha.b;
+  if (num3 === undefined) {
+    num3 = 0;
+  }
+  const powResult = Math.pow(0.9999999984505198 * num + 0.39633779217376786 * num2 + 0.2158037580607588 * num3, 3);
+  const powResult1 = Math.pow(1.0000000088817609 * num - 0.10556134232365635 * num2 - 0.06385417477170591 * num3, 3);
+  const powResult2 = Math.pow(1.0000000546724108 * num - 0.08948418209496575 * num2 - 1.2914855378640917 * num3, 3);
+  return { r: 4.076741661347994 * powResult - 3.307711590408193 * powResult1 + 0.230969928729428 * powResult2, g: -1.2684380040921763 * powResult + 2.6097574006633715 * powResult1 - 0.3413193963102197 * powResult2, b: -0.004196086541837188 * powResult - 0.7034186144594493 * powResult1 + 1.7076147009309444 * powResult2, alpha: alpha.alpha };
+}
+convertOklabToLrgb.__closure = {};
+convertOklabToLrgb.__workletHash = 14870197803884;
+convertOklabToLrgb.__initData = { code: "function convertOklabToLrgb_Pnpm_oklabTs3({l=0,a=0,b=0,alpha:alpha}){const L=Math.pow(l*0.99999999845051981432+0.39633779217376785678*a+0.21580375806075880339*b,3);const M=Math.pow(l*1.0000000088817607767-0.1055613423236563494*a-0.063854174771705903402*b,3);const S=Math.pow(l*1.0000000546724109177-0.089484182094965759684*a-1.2914855378640917399*b,3);return{r:+4.076741661347994*L-3.307711590408193*M+0.230969928729428*S,g:-1.2684380040921763*L+2.6097574006633715*M-0.3413193963102197*S,b:-0.004196086541837188*L-0.7034186144594493*M+1.7076147009309444*S,alpha:alpha};}" };
+const obj2 = { convert: null };
+const obj3 = { fromRgb: convertRgbToOklab, toRgb: null };
+function convertOklabToRgb(alpha) {
+  const convert = _modDef1809.convert;
+  const toRgbResult = convert.toRgb(convertOklabToLrgb(alpha));
+  toRgbResult.r = Math.ceil(100000 * toRgbResult.r) / 100000;
+  toRgbResult.g = Math.ceil(100000 * toRgbResult.g) / 100000;
+  toRgbResult.b = Math.ceil(100000 * toRgbResult.b) / 100000;
+  return toRgbResult;
+}
+const obj = { lrgb: fn(1809), convertLrgbToOklab };
+convertOklabToRgb.__closure = { convertOklabToLrgb, lrgb: fn(1809) };
+convertOklabToRgb.__workletHash = 14795767520122;
+convertOklabToRgb.__initData = { code: "function convertOklabToRgb_Pnpm_oklabTs4(labColor){const{convertOklabToLrgb,lrgb}=this.__closure;const roundChannel=function(channel){return Math.ceil(channel*100_000)/100_000;};const lrgbColor=convertOklabToLrgb(labColor);const rgbColor=lrgb.convert.toRgb(lrgbColor);rgbColor.r=roundChannel(rgbColor.r);rgbColor.g=roundChannel(rgbColor.g);rgbColor.b=roundChannel(rgbColor.b);return rgbColor;}" };
+obj3.toRgb = convertOklabToRgb;
+obj2.convert = obj3;
+
+export default obj2;

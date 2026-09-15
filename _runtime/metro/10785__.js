@@ -1,7 +1,7 @@
 // === Module 10785: ? ===
 
 // Module 10785
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_keyboard/native/images", width: 200, height: 72, scales: [2, 3], hash: "86035f94bc8c78da758eed4788f623cf", name: "empty_castle", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 40, height: 40, scales: [2, 3], hash: "d4d023fcd230d5f7401c0e512db37851", name: "ic_checkmark", type: "png" });

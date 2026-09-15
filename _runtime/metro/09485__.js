@@ -1,7 +1,7 @@
 // === Module 9485: ? ===
 
 // Module 9485
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 261.5, height: 152, scales: [2, 3], hash: "5691c33dd2c3544121435e1c3a569b50", name: "img_nitro_longer_message_upsell_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 77.5, height: 72, scales: [2, 3], hash: "215c6cf6cc2b74cad508b12b0e602266", name: "empty", type: "png" });

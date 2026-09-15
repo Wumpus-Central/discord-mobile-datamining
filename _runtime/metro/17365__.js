@@ -1,22 +1,7 @@
 // === Module 17365: ? ===
 
 // Module 17365
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hu",
-  pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
-      if (1 == arg0) {
-        let str2 = "one";
-      } else {
-        str2 = "other";
-      }
-      let str = str2;
-    } else {
-      str = "other";
-      if (1 == arg0) {
-        str = "one";
-      }
-    }
-    return str;
-  }
-});
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "2b649615a70a14244330a855517175bb", name: "report", type: "png" });

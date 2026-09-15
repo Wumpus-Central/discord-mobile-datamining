@@ -1,94 +1,149 @@
 // === Module 10732: ? ===
 
 // Module 10732
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10561 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10568 */;
-import _mod10730 from "module_10730" /* 10730 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod10561 from "module_10561" /* 10561 */;
+import _mod10594 from "module_10594" /* 10594 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10601 */;
+import _mod10733 from "module_10733" /* 10733 */;
+import _mod10735 from "module_10735" /* 10735 */;
+import _mod10736 from "module_10736" /* 10736 */;
+import _mod10737 from "module_10737" /* 10737 */;
+import _mod10738 from "module_10738" /* 10738 */;
+import _mod10739 from "module_10739" /* 10739 */;
+import _mod10740 from "module_10740" /* 10740 */;
+import _mod10741 from "module_10741" /* 10741 */;
+import _mod10742 from "module_10742" /* 10742 */;
+import _mod10743 from "module_10743" /* 10743 */;
+import _mod10744 from "module_10744" /* 10744 */;
+import _mod10745 from "module_10745" /* 10745 */;
+import _mod10746 from "module_10746" /* 10746 */;
+import _mod10747 from "module_10747" /* 10747 */;
+import _mod10748 from "module_10748" /* 10748 */;
+import _mod10749 from "module_10749" /* 10749 */;
+import _mod10750 from "module_10750" /* 10750 */;
 
-const ENMonthNameMiddleEndianParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
   }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = false;
+  }
+  const obj = { parsers: null, refiners: null };
+  const items = [new regExp.default(flag2), , , , , , , , , ];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  const _default4 = new _isNativeReflectConstruct.default();
+  items[5] = new _isNativeReflectConstruct.default();
+  const _default5 = new _isNativeReflectConstruct.default();
+  items[6] = new _isNativeReflectConstruct.default();
+  const _default6 = new _isNativeReflectConstruct.default();
+  items[7] = new _isNativeReflectConstruct.default(flag);
+  const _default7 = new _isNativeReflectConstruct.default(flag);
+  items[8] = new _isNativeReflectConstruct.default(flag);
+  const _default8 = new _isNativeReflectConstruct.default(flag);
+  items[9] = new _isNativeReflectConstruct.default(flag);
+  obj.parsers = items;
+  const _default9 = new _isNativeReflectConstruct.default(flag);
+  const items1 = [new _isNativeReflectConstruct.default(), , ];
+  const _default10 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  const _default11 = new _isNativeReflectConstruct.default();
+  items1[2] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-const regExp = new RegExp("(" + repeatedTimeunitPattern.matchAnyPattern(_mod10730.MONTH_DICTIONARY) + ")(?:-|/|\\s*,?\\s*)(" + _mod10730.ORDINAL_NUMBER_PATTERN + ")(?!\\s*(?:am|pm))\\s*(?:(?:al|\\-|\\alle|\\del|\\s)\\s*(" + _mod10730.ORDINAL_NUMBER_PATTERN + ")\\s*)?(?:(?:-|/|\\s*,?\\s*)(" + _mod10730.YEAR_PATTERN + "))?(?=\\W|$)(?!\\:\\d)", "i");
-class ENMonthNameMiddleEndianParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ENMonthNameMiddleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENMonthNameMiddleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
 }
-_inherits(ENMonthNameMiddleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = false;
   }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.unshift(new _isNativeReflectConstruct.default());
+  const parsers2 = tmp.parsers;
+  const _default1 = new _isNativeReflectConstruct.default();
+  parsers2.unshift(new _isNativeReflectConstruct.default());
+  const parsers3 = tmp.parsers;
+  const _default2 = new _isNativeReflectConstruct.default();
+  parsers3.unshift(new _isNativeReflectConstruct.default());
+  const parsers4 = tmp.parsers;
+  const _default3 = new _isNativeReflectConstruct.default();
+  parsers4.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+fn(_mod10733);
+fn(_mod10735);
+fn(_mod10736);
+fn(_mod10737);
+fn(_mod10738);
+fn(_mod10739);
+fn(_mod10740);
+fn(_mod10741);
+fn(_mod10742);
+fn(_mod10743);
+fn(_mod10744);
+fn(_mod10745);
+fn(_mod10746);
+fn(_mod10747);
+fn(_mod10748);
+const regExp = fn(_mod10594);
+fn(_mod10749);
+const _isNativeReflectConstruct = fn(_mod10750);
+const configuration = createConfiguration(false, false);
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+parsers1.unshift(new _isNativeReflectConstruct.default());
+let parsers2 = configuration.parsers;
+let _default1 = new _isNativeReflectConstruct.default();
+parsers2.unshift(new _isNativeReflectConstruct.default());
+let parsers3 = configuration.parsers;
+let _default2 = new _isNativeReflectConstruct.default();
+parsers3.unshift(new _isNativeReflectConstruct.default());
+let parsers4 = configuration.parsers;
+let _default3 = new _isNativeReflectConstruct.default();
+parsers4.unshift(new _isNativeReflectConstruct.default());
+const chrono = new _mod10561.Chrono(configuration);
+const chrono1 = new _mod10561.Chrono(createConfiguration(true, false));
+const chrono2 = new _mod10561.Chrono(createConfiguration(false, true));
+
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, index) {
-      const tmp3 = ENMonthNameMiddleEndianParser(10730).MONTH_DICTIONARY[index[1].toLowerCase(index[1])];
-      const result = ENMonthNameMiddleEndianParser(10730).parseOrdinalNumberPattern(index[2]);
-      if (result > 31) {
-        return null;
-      } else {
-        const date = { day: result, month: tmp3 };
-        const parsingComponents = createParsingComponents.createParsingComponents(date);
-        if (index[4]) {
-          parsingComponents.assign("year", ENMonthNameMiddleEndianParser(10730).parseYear(index[4]));
-        } else {
-          parsingComponents.imply("year", ENMonthNameMiddleEndianParser(10562).findYearClosestToRef(createParsingComponents.refDate, result, tmp3));
-        }
-        if (index[3]) {
-          const result1 = ENMonthNameMiddleEndianParser(10730).parseOrdinalNumberPattern(index[3]);
-          const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
-          parsingResult.start = parsingComponents;
-          parsingResult.end = parsingComponents.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-          return parsingResult;
-        } else {
-          return parsingComponents;
-        }
-      }
-    }
-  }
-];
-
-export default _createClass(ENMonthNameMiddleEndianParser, items);
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const casual = chrono;
+export const strict = chrono1;
+export const GB = chrono2;

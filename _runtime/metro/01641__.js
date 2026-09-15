@@ -1,20 +1,13 @@
 // === Module 1641: ? ===
 
 // Module 1641
-import _mod17 from "module_17" /* 17 */;
+const require = globalThis.__r;
 
-const LogBox = _mod17.LogBox;
-let fn;
-if (LogBox != null) {
-  const addLog = LogBox.addLog;
-  if (addLog != null) {
-    fn = addLog.bind(LogBox);
-  }
+for (const key10013 in require("module_1642")) {
+  arg5[key10013] = require("module_1642")[key10013];
+  continue;
 }
-if (fn == null) {
-  fn = () => {
-
-  };
+for (const key10017 in require("logToConsole")) {
+  arg5[key10017] = require("logToConsole")[key10017];
+  continue;
 }
-
-export const addLogBoxLog = fn;

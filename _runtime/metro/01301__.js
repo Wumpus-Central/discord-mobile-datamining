@@ -2,4 +2,4 @@
 
 // Module 1301
 
-export default ReferenceError;
+export default RangeError;

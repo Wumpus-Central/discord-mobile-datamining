@@ -2,4 +2,4 @@
 
 // Module 1298
 
-export default Error;
+export default Function.prototype.apply;

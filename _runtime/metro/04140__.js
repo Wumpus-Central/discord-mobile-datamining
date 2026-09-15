@@ -1,36 +1,60 @@
 // === Module 4140: ? ===
 
 // Module 4140
-import _mod3730 from "module_3730" /* 3730 */;
-import module_3873_mod from "module_3873" /* 3873 */;
-import _typeof_mod from "module_3725" /* 3725 */;
-import module_3729_mod from "module_3729" /* 3729 */;
-import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import _typeof_mod from "module_3728" /* 3728 */;
+import module_4141_mod from "module_4141" /* 4141 */;
+import module_3732_mod from "module_3732" /* 3732 */;
+import requiredArgs_mod from "requiredArgs" /* 3729 */;
 
-let module_3873 = module_3873_mod;
-if (!module_3873) {
-  const obj = { default: module_3873 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3873;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
 }
-module_3873 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+let module_4141 = module_4141_mod;
+if (!module_4141) {
+  const obj2 = { default: module_4141 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4141;
 }
-_typeof = tmp5;
-let module_3729 = module_3729_mod;
-if (!module_3729) {
-  const obj3 = { default: module_3729 };
+module_4141 = tmp5;
+let module_3732 = module_3732_mod;
+if (!module_3732) {
+  const obj3 = { default: module_3732 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_3729;
+  tmp7 = module_3732;
 }
-module_3729 = tmp7;
+module_3732 = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -40,72 +64,44 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp9;
 
-export default function setDay(arg0, arg1, weekStartsOn) {
+export default function set(arg0, year) {
   requiredArgs.default(2, arguments);
-  const defaultOptions = _mod3730.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
-            }
-          }
+  if ("object" === _typeof(year)) {
+    if (null !== year) {
+      const defaultResult1 = _typeof.default(arg0);
+      const _isNaN = isNaN;
+      if (isNaN(defaultResult1.getTime())) {
+        const _Date = Date;
+        const date = new Date(NaN);
+        return date;
+      } else {
+        if (null != year.year) {
+          defaultResult1.setFullYear(year.year);
         }
+        let defaultResult2 = defaultResult1;
+        if (null != year.month) {
+          defaultResult2 = module_4141.default(defaultResult1, year.month);
+        }
+        if (null != year.date) {
+          defaultResult2.setDate(module_3732.default(year.date));
+        }
+        if (null != year.hours) {
+          defaultResult2.setHours(module_3732.default(year.hours));
+        }
+        if (null != year.minutes) {
+          defaultResult2.setMinutes(module_3732.default(year.minutes));
+        }
+        if (null != year.seconds) {
+          defaultResult2.setSeconds(module_3732.default(year.seconds));
+        }
+        if (null != year.milliseconds) {
+          defaultResult2.setMilliseconds(module_3732.default(year.milliseconds));
+        }
+        return defaultResult2;
       }
     }
-    weekStartsOn = weekStartsOn1;
   }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult1 = module_3729.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = _typeof.default(arg0);
-      const defaultResult3 = module_3729.default(arg1);
-      const day = defaultResult2.getDay();
-      const diff = 7 - defaultResult1;
-      if (defaultResult3 >= 0) {
-        if (defaultResult3 <= 6) {
-          let diff1 = ((defaultResult3 % 7 + 7) % 7 + diff) % 7 - (day + diff) % 7;
-        }
-        return module_3873.default(defaultResult2, diff1);
-      }
-      diff1 = defaultResult3 - (day + diff) % 7;
-    }
-  }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  const rangeError = new RangeError("values parameter must be an object");
   throw rangeError;
 };
 export default exports.default;

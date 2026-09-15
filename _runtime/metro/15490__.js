@@ -1,7 +1,7 @@
 // === Module 15490: ? ===
 
 // Module 15490
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ff4cda738b093bde991020eaaa4e76a1", name: "EmojiSmilingFaceWithHeartsIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "db35345983d690e62cbfaf36e7ceaebb", name: "EmojiSquintingFaceWithTongueIcon", type: "png" });

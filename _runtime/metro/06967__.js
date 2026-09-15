@@ -2,10 +2,7 @@
 
 // Module 6967
 
-export default function _classCallCheck(arg0, arg1) {
-  if (!(arg0 instanceof arg1)) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Cannot call a class as a function");
-    throw typeError;
-  }
+export default function _nonIterableRest() {
+  const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  throw typeError;
 };

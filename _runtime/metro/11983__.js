@@ -1,7 +1,7 @@
 // === Module 11983: ? ===
 
 // Module 11983
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 184, height: 152, scales: [2, 3], hash: "55e19295e229a1848ac31993707c2b78", name: "img_ban", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 78, height: 15, scales: [2, 3], hash: "6686c0dca54e6176e93ab454fcbd7545", name: "img_transfer_arrow", type: "png" });

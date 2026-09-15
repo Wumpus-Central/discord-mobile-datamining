@@ -2,40 +2,49 @@
 
 // Module 14508
 
-export default () => (startTimer) => {
-  closure_0 = startTimer;
-  startTimer = startTimer.startTimer;
+export default (arg0) => {
+  let map = arg0;
+  if (!arg0) {
+    const _Map = Map;
+    map = new Map();
+  }
   return {
-    features: {
-      benchmark(title) {
-        const items = [];
-        closure_2 = items();
-        function step(title) {
-          let num = 0;
-          if (0 !== items.length) {
-            num = items[items.length - 1].time;
-          }
-          const tmp = closure_2();
-          items.push({ title, time: tmp, delta: tmp - num });
-          const obj = { title, time: tmp, delta: tmp - num };
+    all: map,
+    on(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        value.push(arg1);
+      } else {
+        const items = [arg1];
+        const result = map.set(arg0, items);
+      }
+    },
+    off(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        if (arg1) {
+          value.splice(value.indexOf(arg1) >>> 0, 1);
+        } else {
+          const result = map.set(arg0, []);
         }
-        items.push({ title, time: 0, delta: 0 });
-        function stop(title) {
-          if (typeof step === "function") {
-            let num = 0;
-            if (0 !== items.length) {
-              num = items[items.length - 1].time;
-            }
-            const tmp3 = closure_2();
-            const obj = { title, time: tmp3, delta: tmp3 - num };
-            items.push(obj);
-            const obj2 = { title, steps: items };
-            title.send("benchmark.report", obj2);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        return { step, stop, last: stop };
+      }
+    },
+    emit(arg0, arg1) {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      value = map.get(arg0);
+      if (value) {
+        const substr = value.slice();
+        const mapped = substr.map((fn) => {
+          fn(closure_1);
+        });
+      }
+      value2 = map.get("*");
+      if (value2) {
+        const substr1 = value2.slice();
+        const mapped1 = substr1.map((fn) => {
+          fn(closure_0, closure_1);
+        });
       }
     }
   };

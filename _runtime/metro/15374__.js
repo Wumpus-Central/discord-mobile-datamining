@@ -1,7 +1,7 @@
 // === Module 15374: ? ===
 
 // Module 15374
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "f06539dd2236c72b26d5b18fa1a5f589", name: "amanda_2", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 192, height: 144, scales: [1], hash: "2bbd6220afd7d7de1fa25c481ae56a3d", name: "ExampleSketchheadsActivity", type: "png" });

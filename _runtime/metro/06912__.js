@@ -1,82 +1,96 @@
 // === Module 6912: ? ===
 
 // Module 6912
-import jsxProd from "jsxProd" /* 21 */;
-import value2 from "value2" /* 6729 */;
-import _mod6913 from "module_6913" /* 6913 */;
-import noop_mod from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import cancelAnimation from "cancelAnimation" /* 1637 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let noop = noop_mod;
-({ useMemo: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
-  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
-  if (topInset === undefined) {
-    topInset = 0;
-  }
-  let num = bottomInset.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  let flag = bottomInset.shouldCalculateHeight;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const detached = bottomInset.detached;
-  const style = bottomInset.style;
-  const tmp = num(null);
-  const ref = tmp;
-  let items = [style, detached, topInset, num];
-  const tmp2 = topInset(() => {
-    const items = [style, _mod6913.styles.container, ];
-    const rect = { top: topInset, bottom: num, overflow: null };
-    let str = "hidden";
-    if (detached) {
-      str = "visible";
-    }
-    rect.overflow = str;
-    items[2] = rect;
-    return items;
-  }, items);
-  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
-  let stableCallback;
-  if (flag) {
-    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
-      const height = nativeEvent.nativeEvent.layout.height;
-      height.value = height;
-      const current = ref.current;
-      if (current != null) {
-        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (value.value) {
-            num = arg5;
-            let num2 = arg5;
-            if (arg5 == null) {
-              num2 = 0;
-            }
-            const rect = { top: num2, left: 0, right: 0, bottom: null };
-            if (num == null) {
-              num = 0;
-            }
-            let num3 = currentHeight.currentHeight;
-            const sum = num + height;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
-            tmp.value = rect;
-          }
-        });
+const require = globalThis.__r;
+
+require = fn;
+const noop = fn(19);
+({ useMemo: c3, useState: closure_4 } = noop);
+get_ActivityIndicator = fn(17);
+({ Platform: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const __initData = { code: "function pnpm_useBottomSheetContentContainerStyleTs1(){const{animatedFooterHeight}=this.__closure;return animatedFooterHeight.get();}" };
+const __initData2 = { code: "function pnpm_useBottomSheetContentContainerStyleTs2(result,previousFooterHeight){const{enableFooterMarginAdjustment,runOnJS,setFooterHeight,Platform,animatedContentHeight}=this.__closure;if(!enableFooterMarginAdjustment){return;}runOnJS(setFooterHeight)(result);if(Platform.OS==='web'){if(result&&!previousFooterHeight){const contentHeight=animatedContentHeight.get();animatedContentHeight.set(contentHeight+result);}}}" };
+
+export const useBottomSheetContentContainerStyle = function useBottomSheetContentContainerStyle(flag, contentContainerStyle) {
+  _require = flag;
+  dependencyMap = contentContainerStyle;
+  const tmp = first(animatedFooterHeight(0), 2);
+  first = tmp[0];
+  closure_3 = tmp3;
+  const bottomSheetInternal = require("module_6740").useBottomSheetInternal();
+  animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  let items = [contentContainerStyle];
+  const tmp5 = closure_3(() => {
+    if (closure_1) {
+      const _Array = Array;
+      let applyResult = closure_1;
+      if (Array.isArray(closure_1)) {
+        compose = compose.compose;
+        const items = [];
+        HermesBuiltin.arraySpread(closure_1, 0);
+        applyResult = HermesBuiltin.apply(items, compose);
       }
-    });
+      let obj = applyResult;
+    } else {
+      obj = {};
+    }
+    return obj;
+  }, items);
+  Platform = tmp5;
+  const items1 = [first, flag, tmp5];
+  let obj = require("module_6740");
+  const tmp6 = closure_3(() => {
+    if (closure_0) {
+      let num = 0;
+      if (closure_5) {
+        num = 0;
+        if (typeof closure_5 === "object") {
+          ({ paddingBottom, padding, paddingVertical } = closure_5);
+          if (undefined === paddingBottom) {
+            if (undefined === paddingVertical) {
+              num = 0;
+              if (tmp2) {
+                num = padding;
+              }
+              tmp2 = undefined !== padding && typeof padding === "number";
+            } else {
+              num = paddingVertical;
+            }
+          } else {
+            num = paddingBottom;
+          }
+        }
+      }
+      const items = [closure_5, ];
+      const obj = { paddingBottom: num + first, overflow: "visible" };
+      items[1] = obj;
+      return items;
+    } else {
+      return closure_5;
+    }
+  }, items1);
+  class H {
+    constructor() {
+      return animatedFooterHeight.get();
+    }
   }
-  obj2.onLayout = stableCallback;
-  obj2.style = tmp2;
-  obj2.children = bottomInset.children;
-  return ref(style, obj2);
-});
-memoResult.displayName = "BottomSheetHostingContainer";
-
-export const BottomSheetHostingContainer = memoResult;
+  H.__closure = { animatedFooterHeight };
+  H.__workletHash = 10172145694310;
+  H.__initData = __initData;
+  const fn = function f(arg0, arg1) {
+    if (closure_0) {
+      cancelAnimation.runOnJS(closure_3)(arg0);
+    }
+  };
+  const obj2 = require("cancelAnimation");
+  fn.__closure = { enableFooterMarginAdjustment: flag, runOnJS: require("cancelAnimation").runOnJS, setFooterHeight: tmp[1], Platform, animatedContentHeight };
+  fn.__workletHash = 1149497927090;
+  fn.__initData = __initData2;
+  const items2 = [animatedFooterHeight, animatedContentHeight, flag];
+  const animatedReaction = obj2.useAnimatedReaction(H, fn, items2);
+  return tmp6;
+};

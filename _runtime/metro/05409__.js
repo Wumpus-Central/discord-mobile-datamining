@@ -1,7 +1,7 @@
 // === Module 5409: ? ===
 
 // Module 5409
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "51c56027f271f175240f0fff23cdb627", name: "img_account_sync_twitter_light_and_dark", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "1c6c58beca1fec7f3c53119b27e0466a", name: "img_account_sync_facebook_light_and_dark", type: "svg" });

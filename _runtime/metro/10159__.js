@@ -1,7 +1,7 @@
 // === Module 10159: ? ===
 
 // Module 10159
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_home/native/images", width: 24, height: 24, scales: [2, 3], hash: "993926a8b2d3f46d31ad06ea07adc917", name: "ic_feed_more", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 20, height: 20, scales: [1, 2, 3], hash: "e0680d70864324adcf08b4b59ecd7a41", name: "ic_minimize", type: "png" });

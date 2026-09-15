@@ -1,16 +1,14 @@
 // === Module 10639: ? ===
 
 // Module 10639
-import alphaNum from "alphaNum" /* 10631 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const JPWeekdayWithParenthesesParser = require;
-const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?:\\(|\\\uFF08)(?<weekday>" + keys.join("|") + ")(?:\\)|\\\uFF09)", "i");
-class JPWeekdayWithParenthesesParser {
+const JPSlashDateFormatParser = require;
+const regExp = new RegExp("([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))", "i");
+class JPSlashDateFormatParser {
   constructor() {
-    tmp = c2(this, JPWeekdayWithParenthesesParser);
+    tmp = c2(this, JPSlashDateFormatParser);
     return;
   }
 }
@@ -24,15 +22,32 @@ const items = [
   entry,
   {
     key: "extract",
-    value: function extract(reference, arg1) {
-      const tmp3 = JPWeekdayWithParenthesesParser(10631).WEEKDAY_OFFSET[arg1.groups.weekday];
-      let parsingComponentsAtWeekday = null;
-      if (undefined !== tmp3) {
-        parsingComponentsAtWeekday = JPWeekdayWithParenthesesParser(10588).createParsingComponentsAtWeekday(reference.reference, tmp3);
+    value: function extract(createParsingComponents, arg1) {
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const parsed = parseInt(JPSlashDateFormatParser(10635).toHankaku(arg1[2]));
+      const parsed1 = parseInt(JPSlashDateFormatParser(10635).toHankaku(arg1[3]));
+      if (parsed >= 1) {
+        if (parsed <= 12) {
+          if (parsed1 >= 1) {
+            if (parsed1 <= 31) {
+              parsingComponents.assign("day", parsed1);
+              parsingComponents.assign("month", parsed);
+              if (arg1[1]) {
+                const _parseInt = parseInt;
+                const parsed2 = parseInt(JPSlashDateFormatParser(10635).toHankaku(arg1[1]));
+                parsingComponents.assign("year", JPSlashDateFormatParser(10566).findMostLikelyADYear(parsed2));
+              } else {
+                parsingComponents.imply("year", JPSlashDateFormatParser(10566).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
+              }
+              return parsingComponents;
+            }
+          }
+          return null;
+        }
       }
-      return parsingComponentsAtWeekday;
+      return null;
     }
   }
 ];
 
-export default _createClass(JPWeekdayWithParenthesesParser, items);
+export default _createClass(JPSlashDateFormatParser, items);

@@ -1,19 +1,23 @@
 // === Module 6992: ? ===
 
 // Module 6992
-function _setPrototypeOf(arg0, arg1) {
+function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
-    const _Object = Object;
-    exports = setPrototypeOf.bind();
+    let _Object = Object;
+    exports = getPrototypeOf.bind();
   } else {
-    exports = (arg0, arg1) => {
-      arg0.__proto__ = arg1;
-      return arg0;
+    exports = (arg0) => {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
     };
   }
   module.exports = exports;
-  return exports(arg0, arg1);
+  return exports(arg0);
 }
-let exports = _setPrototypeOf;
+let exports = _getPrototypeOf;
 
-export default _setPrototypeOf;
+export default _getPrototypeOf;

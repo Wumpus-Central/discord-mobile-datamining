@@ -1,176 +1,194 @@
 // === Module 13021: ? ===
 
 // Module 13021
-import _mod12934 from "module_12934" /* 12934 */;
-import _mod12936 from "module_12936" /* 12936 */;
-import setupIntegration from "module_12983" /* 12983 */;
+import _mod12932 from "module_12932" /* 12932 */;
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12935 */;
+import _mod12960 from "module_12960" /* 12960 */;
+import setupIntegration from "module_12988" /* 12988 */;
 
-function flattenIssue(path) {
-  const obj = {};
-  const merged = Object.assign(path);
-  let joined;
-  if ("path" in path) {
-    const _Array = Array;
-    if (Array.isArray(path.path)) {
-      path = path.path;
-      joined = path.join(".");
-    }
-  }
-  obj.path = joined;
-  let json;
-  if ("keys" in path) {
-    const _JSON = JSON;
-    json = JSON.stringify(path.keys);
-  }
-  obj.keys = json;
-  let json1;
-  if ("unionErrors" in path) {
-    const _JSON2 = JSON;
-    json1 = JSON.stringify(path.unionErrors);
-  }
-  obj.unionErrors = json1;
-  return obj;
-}
-function flattenIssuePath(arr) {
-  const mapped = arr.map((item) => {
-    let str = "<array>";
-    if (typeof item !== "number") {
-      str = item;
-    }
-    return str;
-  });
-  return mapped.join(".");
-}
-function formatIssueMessage(issues) {
-  const set = new Set();
-  while (tmp !== undefined) {
-    let arr = flattenIssuePath(tmp2.path);
-    if (arr.length > 0) {
-      let addResult = set.add(tmp4);
-    }
-    continue;
-  }
-  const arr2 = Array.from(set);
-  if (0 === arr2.length) {
-    let str4 = "variable";
-    if (issues.issues.length > 0) {
-      const first = issues.issues[0];
-      let tmp10 = undefined !== first;
-      if (tmp10) {
-        tmp10 = "expected" in first;
-      }
-      if (tmp10) {
-        tmp10 = typeof first.expected === "string";
-      }
-      str4 = "variable";
-      if (tmp10) {
-        str4 = first.expected;
-      }
-    }
-    const _HermesInternal2 = HermesInternal;
-    return "Failed to validate " + str4;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "Failed to validate keys: " + _mod12936.truncate(arr2.join(", "), 100);
-  }
-  tmp = issues.issues[Symbol.iterator]();
-}
-function applyZodErrorsToEvent(arg0, arg1) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        if (originalException.originalException) {
-          if ((function originalExceptionIsZodError(originalException) {
-            let isErrorResult = _mod12934.isError(originalException);
-            if (isErrorResult) {
-              isErrorResult = "ZodError" === originalException.name;
-            }
-            if (isErrorResult) {
-              const _Array = Array;
-              isErrorResult = Array.isArray(originalException.issues);
-            }
-            return isErrorResult;
-          })(originalException.originalException)) {
-            if (0 !== originalException.originalException.issues.length) {
-              try {
-                const issues = originalException.originalException.issues;
-                if (flag) {
-                  let substr = issues;
-                } else {
-                  substr = issues.slice(0, arg0);
-                }
-                const mapped = substr.map(flattenIssue);
-                if (flag) {
-                  let _Array = Array;
-                  if (!Array.isArray(originalException.attachments)) {
-                    originalException.attachments = [];
+function _shouldDropEvent(message, message2) {
+  let tmp = message2;
+  if (tmp) {
+    message = message.message;
+    message2 = message2.message;
+    if (message) {
+      if (!message) {
+        if (message) {
+          let flag = false;
+          if (message === message2) {
+            flag = false;
+            if (_isSameFingerprint(message, message2)) {
+              const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(message);
+              const framesFromEvent1 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
+              if (framesFromEvent) {
+                if (!framesFromEvent) {
+                  if (framesFromEvent) {
+                    let flag2 = false;
+                    if (framesFromEvent1.length === framesFromEvent.length) {
+                      let num = 0;
+                      flag2 = true;
+                      if (0 < framesFromEvent1.length) {
+                        flag2 = false;
+                        while (framesFromEvent1[num].filename === framesFromEvent[num].filename) {
+                          flag2 = false;
+                          if (tmp5.lineno !== tmp6.lineno) {
+                            break;
+                          } else {
+                            flag2 = false;
+                            if (tmp5.colno !== tmp6.colno) {
+                              break;
+                            } else {
+                              flag2 = false;
+                              if (tmp5.function !== tmp6.function) {
+                                break;
+                              } else {
+                                let sum = num + 1;
+                                num = sum;
+                                flag2 = true;
+                                if (sum >= framesFromEvent1.length) {
+                                  break;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    flag2 = false;
                   }
-                  const attachments = originalException.attachments;
-                  const obj = { filename: "zod_issues.json", data: null };
-                  const _JSON = JSON;
-                  const obj2 = { issues: mapped };
-                  obj.data = JSON.stringify(obj2);
-                  attachments.push(obj);
+                } else {
+                  flag2 = false;
                 }
-                const obj3 = {};
-                const merged = Object.assign(exception);
-                const obj4 = {};
-                const merged1 = Object.assign(exception.exception);
-                const obj5 = {};
-                const merged2 = Object.assign(exception.exception.values[0]);
-                obj5.value = formatIssueMessage(originalException.originalException);
-                const items = [obj5];
-                const values = exception.exception.values;
-                HermesBuiltin.arraySpread(values.slice(1), 1);
-                obj4.values = items;
-                obj3.exception = obj4;
-                const obj6 = {};
-                const merged3 = Object.assign(exception.extra);
-                obj6["zoderror.issues"] = mapped.slice(0, arg0);
-                obj3.extra = obj6;
-                return obj3;
-              } catch (error) {
-                const obj7 = {};
-                const merged4 = Object.assign(tmp);
-                const obj8 = {};
-                const merged5 = Object.assign(tmp.extra);
-                const _Error = Error;
-                let str = "unknown";
-                if (error instanceof Error) {
-                  const _HermesInternal = HermesInternal;
-                  str = "" + error.name + ": " + error.message + "\n" + error.stack;
+              } else {
+                flag2 = true;
+              }
+              flag = false;
+              if (flag2) {
+                flag = true;
+              }
+            }
+          }
+        } else {
+          flag = false;
+        }
+      } else {
+        flag = false;
+      }
+    } else {
+      flag = false;
+    }
+    let tmp9 = flag;
+    if (!tmp9) {
+      let flag3 = false;
+      if (message2.exception && message2.exception.values && message2.exception.values[0]) {
+        flag3 = false;
+        if (iter2) {
+          flag3 = false;
+          if (iter.type === iter2.type) {
+            flag3 = false;
+            if (iter.value === iter2.value) {
+              flag3 = false;
+              if (_isSameFingerprint(message, message2)) {
+                const framesFromEvent2 = stackParserFromStackParserOptions.getFramesFromEvent(message);
+                const framesFromEvent3 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
+                if (framesFromEvent2) {
+                  if (!framesFromEvent2) {
+                    if (framesFromEvent2) {
+                      let flag4 = false;
+                      if (framesFromEvent3.length === framesFromEvent2.length) {
+                        let num2 = 0;
+                        flag4 = true;
+                        if (0 < framesFromEvent3.length) {
+                          flag4 = false;
+                          while (framesFromEvent3[num2].filename === framesFromEvent2[num2].filename) {
+                            flag4 = false;
+                            if (tmp12.lineno !== tmp13.lineno) {
+                              break;
+                            } else {
+                              flag4 = false;
+                              if (tmp12.colno !== tmp13.colno) {
+                                break;
+                              } else {
+                                flag4 = false;
+                                if (tmp12.function !== tmp13.function) {
+                                  break;
+                                } else {
+                                  let sum1 = num2 + 1;
+                                  num2 = sum1;
+                                  flag4 = true;
+                                  if (sum1 >= framesFromEvent3.length) {
+                                    break;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    } else {
+                      flag4 = false;
+                    }
+                  } else {
+                    flag4 = false;
+                  }
+                } else {
+                  flag4 = true;
                 }
-                const obj9 = { message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()", error: str };
-                obj8["zoderrors sentry integration parse error"] = obj9;
-                obj7.extra = obj8;
-                return obj7;
+                flag3 = false;
+                if (flag4) {
+                  flag3 = true;
+                }
               }
             }
           }
         }
       }
+      tmp9 = flag3;
+    }
+    tmp = tmp9;
+  }
+  return tmp;
+}
+function _isSameFingerprint(fingerprint, fingerprint2) {
+  fingerprint = fingerprint.fingerprint;
+  fingerprint2 = fingerprint2.fingerprint;
+  if (!fingerprint) {
+    if (!fingerprint2) {
+      return true;
     }
   }
-  return exception;
+  if (!fingerprint) {
+    try {
+      const joined = fingerprint.join("");
+      return joined === fingerprint2.join("");
+    } catch (err) {
+      return false;
+    }
+  }
+  return false;
 }
 
-export { applyZodErrorsToEvent };
-export { flattenIssue };
-export { flattenIssuePath };
-export { formatIssueMessage };
-export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  return {
-    name: "ZodErrors",
-    processEvent(arg0, arg1) {
-      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
+export { _shouldDropEvent };
+export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
+  name: "Dedupe",
+  processEvent(type) {
+    if (type.type) {
+      return type;
+    } else {
+      try {
+        if (_shouldDropEvent(type, closure_0)) {
+          if (_mod12960.DEBUG_BUILD) {
+            const logger = _mod12932.logger;
+            logger.warn("Event dropped due to being a duplicate of previously captured event.");
+          }
+          return null;
+        } else {
+          closure_0 = type;
+          return type;
+        }
+      } catch (err) {
+      }
     }
-  };
-});
+  }
+}));

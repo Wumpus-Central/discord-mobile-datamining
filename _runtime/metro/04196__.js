@@ -1,26 +1,9 @@
 // === Module 4196: ? ===
 
 // Module 4196
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "bg" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = { long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" } };
-    obj3.conjunction = obj4;
-    const obj5 = { long: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" } };
-    obj3.disjunction = obj5;
-    const obj6 = { long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" } };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
-  }
-}
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
-}
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: { conjunction: { long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" }, short: { end: "{0} \u0438\u043B\u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438\u043B\u0438 {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" }, short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" } } }, locale: "bg" };
-prop.push(obj);
+let closure_0 = { lastWeek: "'\u092A\u093F\u091B\u0932\u0947' eeee p", yesterday: "'\u0915\u0932' p", today: "'\u0906\u091C' p", tomorrow: "'\u0915\u0932' p", nextWeek: "eeee '\u0915\u094B' p", other: "P" };
+
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
+};
+export default exports.default;

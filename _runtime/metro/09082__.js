@@ -1,7 +1,7 @@
 // === Module 9082: ? ===
 
 // Module 9082
-import _mod9068 from "module_9068" /* 9068 */;
+import _mod9071 from "module_9071" /* 9071 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         const obj = { localeError: null };
-        const obj2 = { string: { unit: "Zeichen", verb: "zu haben" }, file: { unit: "Bytes", verb: "zu haben" }, array: { unit: "Elemente", verb: "zu haben" }, set: { unit: "Elemente", verb: "zu haben" } };
-        closure_1 = { regex: "Eingabe", email: "E-Mail-Adresse", url: "URL", emoji: "Emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-Datum und -Uhrzeit", date: "ISO-Datum", time: "ISO-Uhrzeit", duration: "ISO-Dauer", ipv4: "IPv4-Adresse", ipv6: "IPv6-Adresse", cidrv4: "IPv4-Bereich", cidrv6: "IPv6-Bereich", base64: "Base64-codierter String", base64url: "Base64-URL-codierter String", json_string: "JSON-String", e164: "E.164-Nummer", jwt: "JWT", template_literal: "Eingabe" };
-        closure_2 = { nan: "NaN", number: "Zahl", array: "Array" };
+        const obj2 = { string: { unit: "car\u00E0cters", verb: "contenir" }, file: { unit: "bytes", verb: "contenir" }, array: { unit: "elements", verb: "contenir" }, set: { unit: "elements", verb: "contenir" } };
+        closure_1 = { regex: "entrada", email: "adre\u00E7a electr\u00F2nica", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data i hora ISO", date: "data ISO", time: "hora ISO", duration: "durada ISO", ipv4: "adre\u00E7a IPv4", ipv6: "adre\u00E7a IPv6", cidrv4: "rang IPv4", cidrv6: "rang IPv6", base64: "cadena codificada en base64", base64url: "cadena codificada en base64url", json_string: "cadena JSON", e164: "n\u00FAmero E.164", jwt: "JWT", template_literal: "entrada" };
+        closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -68,118 +68,122 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
-              if (tmp48 == null) {
-                tmp48 = parsedTypeResult;
+              let tmp50 = closure_2[parsedTypeResult];
+              if (tmp50 == null) {
+                tmp50 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Ung\u00FCltige Eingabe: erwartet instanceof " + code.expected + ", erhalten " + tmp48;
+                let combined = "Tipus inv\u00E0lid: s'esperava instanceof " + code.expected + ", s'ha rebut " + tmp50;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Ung\u00FCltige Eingabe: erwartet " + expected + ", erhalten " + tmp48;
+                combined = "Tipus inv\u00E0lid: s'esperava " + expected + ", s'ha rebut " + tmp50;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Ung\u00FCltige Eingabe: erwartet " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Valor inv\u00E0lid: s'esperava " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Ung\u00FCltige Option: erwartet eine von " + closure_2.joinValues(code.values, "|");
+                combined1 = "Opci\u00F3 inv\u00E0lida: s'esperava una de " + closure_2.joinValues(code.values, " o ");
               }
               return combined1;
             case "too_big":
-              let str29 = "<";
+              let str29 = "menys de";
               if (code.inclusive) {
-                str29 = "<=";
+                str29 = "com a m\u00E0xim";
               }
-              let tmp27 = obj2[code.origin];
-              if (tmp27 == null) {
-                tmp27 = null;
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
               }
               let str30 = code.origin;
-              if (tmp27) {
+              if (tmp29) {
                 if (str30 == null) {
-                  str30 = "Wert";
+                  str30 = "el valor";
                 }
                 const str1 = code.maximum.toString();
-                let str37 = tmp27.unit;
+                let str37 = tmp29.unit;
                 if (str37 == null) {
-                  str37 = "Elemente";
+                  str37 = "elements";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Zu gro\u00DF: erwartet, dass " + str30 + " " + str29 + str1 + " " + str37 + " hat";
+                let combined2 = "Massa gran: s'esperava que " + str30 + " contingu\u00E9s " + str29 + " " + str1 + " " + str37;
               } else {
                 let str31 = str30;
                 if (str30 == null) {
-                  str31 = "Wert";
+                  str31 = "el valor";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Zu gro\u00DF: erwartet, dass " + str31 + " " + str29 + code.maximum.toString() + " ist";
+                combined2 = "Massa gran: s'esperava que " + str31 + " fos " + str29 + " " + code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str20 = ">";
+              let str20 = "m\u00E9s de";
               if (code.inclusive) {
-                str20 = ">=";
+                str20 = "com a m\u00EDnim";
               }
-              let tmp15 = obj2[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
+              let tmp17 = obj2[code.origin];
+              if (tmp17 == null) {
+                tmp17 = null;
               }
               ({ origin, minimum } = code);
               const str53 = minimum.toString();
-              if (tmp15) {
+              if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str53 + " " + tmp15.unit + " hat";
+                let combined3 = "Massa petit: s'esperava que " + origin + " contingu\u00E9s " + str20 + " " + str53 + " " + tmp17.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Zu klein: erwartet, dass " + origin + " " + str20 + str53 + " ist";
+                combined3 = "Massa petit: s'esperava que " + origin + " fos " + str20 + " " + str53;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "Ung\u00FCltiger String: muss mit \"" + code.prefix + "\" beginnen";
+                let combined4 = "Format inv\u00E0lid: ha de comen\u00E7ar amb \"" + code.prefix + "\"";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "Ung\u00FCltiger String: muss mit \"" + code.suffix + "\" enden";
+                combined4 = "Format inv\u00E0lid: ha d'acabar amb \"" + code.suffix + "\"";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "Ung\u00FCltiger String: muss \"" + code.includes + "\" enthalten";
+                combined4 = "Format inv\u00E0lid: ha d'incloure \"" + code.includes + "\"";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Ung\u00FCltiger String: muss dem Muster " + code.pattern + " entsprechen";
+                combined4 = "Format inv\u00E0lid: ha de coincidir amb el patr\u00F3 " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Ung\u00FCltig: " + format;
+                combined4 = "Format inv\u00E0lid per a " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Ung\u00FCltige Zahl: muss ein Vielfaches von " + code.divisor + " sein";
+              return "N\u00FAmero inv\u00E0lid: ha de ser m\u00FAltiple de " + code.divisor;
             case "unrecognized_keys":
-              let str3 = "Unbekannter Schl\u00FCssel";
+              let str3 = "";
+              let str4 = "";
               if (code.keys.length > 1) {
-                str3 = "Unbekannte Schl\u00FCssel";
+                str4 = "s";
+              }
+              if (code.keys.length > 1) {
+                str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Clau" + str4 + " no reconeguda" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Ung\u00FCltiger Schl\u00FCssel in " + code.origin;
+              return "Clau inv\u00E0lida a " + code.origin;
             case "invalid_union":
-              return "Ung\u00FCltige Eingabe";
+              return "Entrada inv\u00E0lida";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Ung\u00FCltiger Wert in " + code.origin;
+              return "Element inv\u00E0lid a " + code.origin;
             default:
-              return "Ung\u00FCltige Eingabe";
+              return "Entrada inv\u00E0lida";
           }
         };
         return obj;
@@ -187,7 +191,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod9068);
+    let closure_2 = fn(_mod9071);
     function error() {
 
     }

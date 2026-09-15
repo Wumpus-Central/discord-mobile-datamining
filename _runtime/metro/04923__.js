@@ -1,7 +1,7 @@
 // === Module 4923: ? ===
 
 // Module 4923
-import _mod4924 from "module_4924" /* 4924 */;
+import _mod1454 from "module_1454" /* 1454 */;
 
 
-export default _mod4924;
+export default _mod1454;

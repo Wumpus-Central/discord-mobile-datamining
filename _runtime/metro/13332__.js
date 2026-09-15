@@ -1,7 +1,7 @@
 // === Module 13332: ? ===
 
 // Module 13332
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting", width: 50, height: 50, scales: [1, 2, 3], hash: "6e2864dc237547922e1825f7b5583cf2", name: "img_premium_basic_icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/standard", width: 144, height: 150, scales: [1], hash: "8ea6c899915dc4dfb91fde69307aaf42", name: "chest_idle", type: "png" });

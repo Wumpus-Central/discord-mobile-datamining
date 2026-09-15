@@ -1,17 +1,17 @@
 // === Module 4073: ? ===
 
 // Module 4073
-import startOfWeek_mod from "startOfWeek" /* 3884 */;
-import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import startOfHour_mod from "startOfHour" /* 4074 */;
+import requiredArgs_mod from "requiredArgs" /* 3729 */;
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
+let startOfHour = startOfHour_mod;
+if (!startOfHour) {
+  const obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfWeek;
+  tmp3 = startOfHour;
 }
-startOfWeek = tmp3;
+startOfHour = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameWeek(arg0, arg1, arg2) {
+export default function isSameHour(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const defaultResult1 = startOfHour.default(arg0);
   const time = defaultResult1.getTime();
-  return time === startOfWeek.default(arg1, arg2).getTime();
+  return time === startOfHour.default(arg1).getTime();
 };
 export default exports.default;

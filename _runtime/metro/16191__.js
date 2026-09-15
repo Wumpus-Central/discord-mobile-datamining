@@ -1,7 +1,7 @@
 // === Module 16191: ? ===
 
 // Module 16191
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 21, height: 18, scales: [1, 2, 3], hash: "f19353ccef9be27782bf69aac76f0908", name: "ic_invite", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1b172806bdf2366bf9d2dd1881f3c7ff", name: "SpotifyNeutralIcon", type: "png" });

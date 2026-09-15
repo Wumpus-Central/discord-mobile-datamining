@@ -1,14 +1,14 @@
 // === Module 8640: ? ===
 
 // Module 8640
-import _modDef8613 from "module_8613" /* 8613 */;
+import _modDef8616 from "module_8616" /* 8616 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeTurbulence = arg1;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTurbulence {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = c2(this, FeTurbulence);
+    tmp = c2(this, FeSpecularLighting);
     tmp2 = closure_4;
-    obj = closure_4(FeTurbulence);
+    obj = closure_4(FeSpecularLighting);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,17 +48,17 @@ class FeTurbulence {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTurbulence, _modDef8613);
+_inherits(FeSpecularLighting, _modDef8616);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTurbulence(8590).warnUnimplementedFilter();
+    const result = FeSpecularLighting(8593).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTurbulence, items);
-importDefaultResultResult.displayName = "FeTurbulence";
+const importDefaultResultResult = _createClass(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

@@ -1,60 +1,23 @@
 // === Module 5015: ? ===
 
 // Module 5015
-import get_synchronousScreenUpdatesEnabled from "get synchronousScreenUpdatesEnabled" /* 4995 */;
-import noop from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-require = arg1;
-let context = noop.createContext({ topAlreadyApplied: false, leftDisabled: false, rightDisabled: false, bottomDisabled: false });
+({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
+const items = ["ios", "android"];
 
-export const EdgeInsetApplicationContext = context;
-export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
-  context = noop.useContext(context);
-  const topAlreadyApplied = context.topAlreadyApplied;
-  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
-  const experiment = get_synchronousScreenUpdatesEnabled.featureFlags.experiment;
-  flag = undefined;
-  if (experiment != null) {
-    flag = experiment.androidLegacyTopInsetBehavior;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  let tmp2 = flag;
-  if (!flag) {
-    let tmp3 = !topAlreadyApplied;
-    if (!topAlreadyApplied) {
-      tmp3 = arg0;
-    }
-    tmp2 = tmp3;
-  }
-  closure_1 = tmp2;
-  let tmp4 = tmp2;
-  if (tmp2) {
-    tmp4 = !flag;
-  }
-  if (!leftDisabled) {
-    leftDisabled = flag2;
-  }
-  if (!rightDisabled) {
-    rightDisabled = flag3;
-  }
-  if (!bottomDisabled) {
-    bottomDisabled = flag4;
-  }
-  const items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
-  return {
-    appliesTopInset: tmp4,
-    consumeLeftInset: !leftDisabled,
-    consumeRightInset: !rightDisabled,
-    consumeBottomInset: !bottomDisabled,
-    useLegacyBehavior: flag,
-    nextContextValue: noop.useMemo(() => {
-      let tmp = topAlreadyApplied;
-      if (!topAlreadyApplied) {
-        tmp = closure_1;
-      }
-      return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
-    }, items)
-  };
+export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
+export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
+export const executeNativeBackPress = function executeNativeBackPress() {
+  React.exitApp();
+  return true;
 };
+export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
+  if (undefined === fullScreenSwipeEnabled) {
+    return "undefined";
+  } else if (true === fullScreenSwipeEnabled) {
+    return "true";
+  } else if (false === fullScreenSwipeEnabled) {
+    return "false";
+  }
+}

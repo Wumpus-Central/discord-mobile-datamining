@@ -1,7 +1,7 @@
 // === Module 10843: ? ===
 
 // Module 10843
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "1d763efda0bb805b92a463188135a32f", name: "img_boost_subheader_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "d8c3e4c6e3c94e3724597aef8c906754", name: "img_tier_0_subheader_mobile", type: "png" });

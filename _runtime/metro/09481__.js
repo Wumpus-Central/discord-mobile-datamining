@@ -1,7 +1,7 @@
 // === Module 9481: ? ===
 
 // Module 9481
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_identity/images", width: 303, height: 198, scales: [2, 3], hash: "af6f5b1f2e3f6f41820436ec96e0f065", name: "guild_identity_education_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MushroomIcon", width: 60, height: 60, scales: [2, 3], hash: "d0258153ad64bd0da42bc5243da496aa", name: "MushroomIcon", type: "png" });

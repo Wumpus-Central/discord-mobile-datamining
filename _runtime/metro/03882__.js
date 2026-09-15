@@ -1,26 +1,26 @@
 // === Module 3882: ? ===
 
 // Module 3882
-import _typeof_mod from "module_3725" /* 3725 */;
-import startOfISOWeek_mod from "startOfISOWeek" /* 3883 */;
-import requiredArgs_mod from "requiredArgs" /* 3726 */;
+import module_3732_mod from "module_3732" /* 3732 */;
+import module_3883_mod from "module_3883" /* 3883 */;
+import requiredArgs_mod from "requiredArgs" /* 3729 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_3732 = module_3732_mod;
+if (!module_3732) {
+  const obj = { default: module_3732 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3732;
 }
-_typeof = tmp3;
-let startOfISOWeek = startOfISOWeek_mod;
-if (!startOfISOWeek) {
-  const obj2 = { default: startOfISOWeek };
+module_3732 = tmp3;
+let module_3883 = module_3883_mod;
+if (!module_3883) {
+  const obj2 = { default: module_3883 };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfISOWeek;
+  tmp5 = module_3883;
 }
-startOfISOWeek = tmp5;
+module_3883 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -29,28 +29,10 @@ if (!requiredArgs) {
   tmp7 = requiredArgs;
 }
 requiredArgs = tmp7;
+let c3 = 3600000;
 
-export default function getISOWeekYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const date = new Date(0);
-  date.setFullYear(fullYear + 1, 0, 4);
-  date.setHours(0, 0, 0, 0);
-  const date1 = new Date(0);
-  date1.setFullYear(fullYear, 0, 4);
-  date1.setHours(0, 0, 0, 0);
-  const defaultResult2 = startOfISOWeek.default(date);
-  const time = defaultResult1.getTime();
-  if (time >= defaultResult2.getTime()) {
-    let sum = fullYear + 1;
-  } else {
-    const time1 = defaultResult1.getTime();
-    sum = fullYear;
-    if (time1 < defaultResult3.getTime()) {
-      sum = fullYear - 1;
-    }
-  }
-  return sum;
+export default function addHours(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_3883.default(interval, module_3732.default(arg1) * c3);
 };
 export default exports.default;

@@ -3,13 +3,18 @@
 // Module 7133
 import _mod17 from "module_17" /* 17 */;
 
-const Platform = _mod17.Platform;
-
-export const getShadowStyle = function getShadowStyle(color) {
-  let shadowColor = color.color;
-  ({ offset, radius, opacity } = color);
-  if (shadowColor === undefined) {
-    shadowColor = "#000";
+const constants = _mod17.Platform.constants;
+if (constants != null) {
+  const reactNativeVersion = constants.reactNativeVersion;
+}
+try {
+  let major;
+  if (reactNativeVersion != null) {
+    major = reactNativeVersion.major;
   }
-  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
-};
+  if (0 !== major) {
+    const InteractionManager = _mod17.InteractionManager;
+  }
+  exports.InteractionManager = InteractionManager;
+} catch (err) {
+}

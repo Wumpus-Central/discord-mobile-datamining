@@ -1,7 +1,7 @@
 // === Module 2945: ? ===
 
 // Module 2945
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/checkpoint", scales: [1], hash: "b12f864e6ef57f14618e22f2b6960161", name: "Checkpoint.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jaGVja3BvaW50", scales: [1], hash: "e3a7238b6e2365100304b95af2a39266", name: "zh-TW.messages.e3a7238b6e2365100304b95af2a39266.compiled.messages", type: "jsona" });

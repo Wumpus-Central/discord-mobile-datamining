@@ -2,11 +2,15 @@
 
 // Module 8613
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8614 from "module_8614" /* 8614 */;
+import _modDef8616 from "module_8616" /* 8616 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
+const FeBlend = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,43 +30,54 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class FilterPrimitive {
+const jsx = fn(21).jsx;
+class FeBlend {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, FilterPrimitive);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FilterPrimitive);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = closure_3(this, FeBlend);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeBlend);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.root = null;
-    tmp3Result.refMethod = (root) => {
-      closure_0.root = root;
-    };
-    tmp3Result.setNativeProps = (arg0) => {
-      root = root.root;
-      if (root != null) {
-        root.setNativeProps(arg0);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FilterPrimitive;
-_inherits(FilterPrimitive, fn(19).Component);
-const importDefaultResultResult = _createClass(FilterPrimitive);
-importDefaultResultResult.defaultPrimitiveProps = {};
+_inherits(FeBlend, _modDef8616);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeBlend(8615).extractFilter(this.props));
+    const obj2 = FeBlend(8615);
+    const merged1 = Object.assign(FeBlend(8615).extractIn(this.props));
+    const obj3 = FeBlend(8615);
+    const merged2 = Object.assign(FeBlend(8615).extractFeBlend(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
+  }
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.mode = "normal";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

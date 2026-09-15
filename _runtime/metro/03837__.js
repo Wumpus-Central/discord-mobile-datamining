@@ -1,44 +1,28 @@
 // === Module 3837: ? ===
 
 // Module 3837
-import module_3838 from "module_3838" /* 3838 */;
-import module_3839 from "module_3839" /* 3839 */;
-import module_3840 from "module_3840" /* 3840 */;
-import date_mod from "module_3841" /* 3841 */;
-import date_mod from "module_3842" /* 3842 */;
+let closure_0 = {
+  lastWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      let str = "\u00FAltimo";
+    } else {
+      str = "\u00FAltima";
+    }
+    return "'" + str + "' eeee '\u00E0s' p";
+  },
+  yesterday: "'ontem \u00E0s' p",
+  today: "'hoje \u00E0s' p",
+  tomorrow: "'amanh\u00E3 \u00E0s' p",
+  nextWeek: "eeee '\u00E0s' p",
+  other: "P"
+};
 
-if (!module_3838) {
-  const obj = { default: module_3838 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3838;
-}
-if (!module_3839) {
-  const obj2 = { default: module_3839 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3839;
-}
-if (!module_3840) {
-  const obj3 = { default: module_3840 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3840;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
+};
 export default exports.default;

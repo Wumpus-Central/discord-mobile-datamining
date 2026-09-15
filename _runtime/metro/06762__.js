@@ -1,5 +1,11 @@
 // === Module 6762: ? ===
 
 // Module 6762
+import _mod6763 from "module_6763" /* 6763 */;
 
-export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };
+require = arg1;
+const dependencyMap = arg6;
+
+export const initialize = function initialize() {
+  _mod6763.startListening();
+};

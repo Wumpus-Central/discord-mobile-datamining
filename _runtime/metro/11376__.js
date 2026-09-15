@@ -1,7 +1,7 @@
 // === Module 11376: ? ===
 
 // Module 11376
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8d2a9da7873a6a1912be7bfb3d52eaf6", name: "SpoilerIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "07355a598097545c3503439dcc045f96", name: "ImageFileIcon", type: "png" });

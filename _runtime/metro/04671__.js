@@ -1,26 +1,36 @@
 // === Module 4671: ? ===
 
 // Module 4671
-import _mod552 from "module_552" /* 552 */;
+import _mod518 from "module_518" /* 518 */;
+import _mod531 from "module_531" /* 531 */;
+import baseIteratee from "baseIteratee" /* 584 */;
 
 
-export default function toFinite(arg0) {
-  if (arg0) {
-    const tmp3 = _mod552(arg0);
-    if (tmp3 !== Infinity) {
-      if (tmp3 !== -Infinity) {
+export default function createFind(arg0) {
+  closure_0 = arg0;
+  return (arg0, arg1, arg2) => {
+    const ObjectResult = Object(arg0);
+    closure_0 = ObjectResult;
+    let fn = arg1;
+    let tmp5 = arg0;
+    if (!_mod518(arg0)) {
+      const tmp6 = baseIteratee(arg1, 3);
+      closure_1 = tmp6;
+      tmp5 = _mod531(arg0);
+      fn = function u(arg0) {
+        return closure_1(ObjectResult[arg0], arg0, ObjectResult);
+      };
+      const tmp4 = tmp6;
+    }
+    const tmp7 = closure_0(tmp5, fn, arg2);
+    let tmp8;
+    if (tmp7 > -1) {
+      let tmp9 = tmp7;
+      if (tmp4) {
+        tmp9 = tmp5[tmp7];
       }
+      tmp8 = ObjectResult[tmp9];
     }
-    let num6 = 1;
-    if (tmp3 < 0) {
-      num6 = -1;
-    }
-    const num4 = 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 * num6;
-  } else {
-    let num = 0;
-    if (0 === arg0) {
-      num = arg0;
-    }
-    return num;
-  }
+    return tmp8;
+  };
 };

@@ -6,13 +6,13 @@ import nullthrowsDefault from "nullthrows" /* 70 */;
 const RN$LegacyInterop_UIManager_getConstants = global.RN$LegacyInterop_UIManager_getConstants;
 let c3 = false;
 let dependencyMap = {};
-const f18465 = () => {
+const f18503 = () => {
 
 };
 ({ RN$LegacyInterop_UIManager_getConstantsForViewManager: closure_7, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8 } = global);
 let c0 = false;
 let c1 = null;
-const f69459 = () => {
+const f69581 = () => {
 
 };
 let obj = {};
@@ -47,7 +47,7 @@ const merged1 = Object.assign({
   },
   getDefaultEventTypes() {
     if (React6) {
-      if (typeof f69459 === "function") {
+      if (typeof f69581 === "function") {
         if (!closure_137_0) {
           closure_137_1 = _null(70)(React6)();
           closure_137_0 = true;
@@ -117,7 +117,7 @@ const merged2 = Object.assign({
 });
 obj.getViewManagerConfig = function getViewManagerConfig(arg0) {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f18465 === "function") {
+    if (typeof f18503 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(tmp)();
         c3 = true;
@@ -154,7 +154,7 @@ obj.hasViewManagerConfig = function hasViewManagerConfig(arg0) {
 };
 obj.getConstants = function getConstants() {
   if (RN$LegacyInterop_UIManager_getConstants) {
-    if (typeof f18465 === "function") {
+    if (typeof f18503 === "function") {
       if (!c3) {
         closure_4 = _null(70)(tmp)();
         c3 = true;
@@ -233,7 +233,7 @@ if (RN$LegacyInterop_UIManager_getConstants) {
   }
   const keys = Object.keys(dependencyMap);
   const item = keys.forEach((item) => {
-    if (typeof f18465 === "function") {
+    if (typeof f18503 === "function") {
       if (!c3) {
         dependencyMap = _null(70)(RN$LegacyInterop_UIManager_getConstants)();
         c3 = true;

@@ -1,7 +1,7 @@
 // === Module 10544: ? ===
 
 // Module 10544
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 16, height: 16, scales: [2, 3], hash: "494d75fe739ed4a36d195ab8193847fa", name: "alert", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 250, height: 120, scales: [2, 3], hash: "97335968179b868ec33c96b39450902f", name: "img_premium_canvas_mobile", type: "png" });

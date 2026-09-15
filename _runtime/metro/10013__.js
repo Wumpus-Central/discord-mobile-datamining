@@ -1,7 +1,7 @@
 // === Module 10013: ? ===
 
 // Module 10013
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "31fe21f79423d8afd3dcadd61d04938b", name: "ic_mail", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 32, height: 32, scales: [2, 3], hash: "1d1181e321dc8059ed1b1ce7cbbde121", name: "ic_chat_bubble_32px", type: "png" });

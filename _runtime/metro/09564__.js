@@ -1,7 +1,7 @@
 // === Module 9564: ? ===
 
 // Module 9564
-import registerAsset from "module_1120" /* 1120 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9efbede8b87c94f401364acf34876922", name: "HammerIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "231cc2e45d7613cf5eb4ce4ba6961f0d", name: "EmbedIcon", type: "png" });

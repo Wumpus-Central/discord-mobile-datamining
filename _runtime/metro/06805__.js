@@ -1,72 +1,41 @@
 // === Module 6805: ? ===
 
 // Module 6805
-import handlerIDToTag from "handlerIDToTag" /* 6760 */;
-import convertToHandlerTag from "convertToHandlerTag" /* 6780 */;
-import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 6785 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6787 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef6795 from "module_6795" /* 6795 */;
+import needsToReattach from "needsToReattach" /* 6806 */;
+import dropHandlers from "dropHandlers" /* 6807 */;
+import attachHandlers from "attachHandlers" /* 6808 */;
+import _mod6809 from "module_6809" /* 6809 */;
 
 const require = globalThis.__r;
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
+_mod19.useCallback;
 
-export const updateHandlers = function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
-  _require = attachedGestures;
-  prepare.prepare();
-  for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
-    let tmp2 = attachedGestures.attachedGestures[num];
-    let obj = require("convertToHandlerTag");
-    let result = obj.checkGestureCallbacksForWorklets(tmp2);
-    if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
-      ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
-    }
-  }
-  attachedGestures = attachedGestures.attachedGestures;
-  require("ghQueueMicrotask").ghQueueMicrotask(() => {
-    if (attachedGestures.isMounted) {
-      let arr = attachedGestures;
-      if (attachedGestures === tmp.attachedGestures) {
-        let tmp21 = arr.length !== gesturesToAttach.length;
-        let num = 0;
-        let tmp22 = tmp21;
-        if (0 < gesturesToAttach.length) {
-          do {
-            let tmp3 = attachedGestures[num];
-            let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
-            let flag = tmp21;
-            if (tmp4) {
-              let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
-              tmp4 = tmp6;
-            }
-            if (tmp4) {
-              flag = true;
-            }
-            tmp3.config = gesturesToAttach[num].config;
-            tmp3.handlers = gesturesToAttach[num].handlers;
-            let obj = RNGestureHandlerModuleDefault;
-            let obj2 = transformIntoHandlerTags;
-            let result = obj.setGestureHandlerConfig(tmp3.handlerTag, obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS));
-            let obj3 = RNGestureHandlerModuleDefault;
-            let obj4 = convertToHandlerTag;
-            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
-            let obj5 = handlerIDToTag;
-            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
-            num = num + 1;
-            tmp21 = flag;
-            tmp22 = flag;
-            arr = attachedGestures;
-          } while (num < gesturesToAttach.length);
+export const useDetectorUpdater = function useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers) {
+  _require = current;
+  const preparedGesture = current2;
+  dependencyMap = gesturesToAttach;
+  const forceRender = require("convertToHandlerTag").useForceRender();
+  const items = [forceRender, gesture, gesturesToAttach, current2, current, webEventHandlers];
+  return gesture((arg0) => {
+    const tmp3 = _modDef6795(current.viewRef);
+    if (tmp3 === current.previousViewTag) {
+      if (!obj.needsToReattach(preparedGesture, gesturesToAttach)) {
+        if (!arg0) {
+          _mod6809.updateHandlers(preparedGesture, gestureConfig, gesturesToAttach);
+          const tmp5Result = _mod6809;
         }
-        if (attachedGestures.animatedHandlers) {
-          if (tmp22) {
-            const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-            tmp23.animatedHandlers.value = found.map((handlers) => handlers.handlers);
-          }
-        }
-        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
       }
+      obj = needsToReattach;
     }
-  });
+    dropHandlers.dropHandlers(preparedGesture);
+    attachHandlers.attachHandlers({ preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 });
+    if (tmp3 !== current.previousViewTag) {
+      current.previousViewTag = tmp3;
+      current.forceRebuildReanimatedEvent = true;
+      forceRender();
+    }
+    const obj2 = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
+  }, items);
 };

@@ -1,46 +1,43 @@
 // === Module 4933: ? ===
 
 // Module 4933
-import _mod4934 from "module_4934" /* 4934 */;
-import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 4935 */;
+import _mod1282 from "module_1282" /* 1282 */;
+import _mod1283 from "module_1283" /* 1283 */;
+import callBindBasic from "callBindBasic" /* 1292 */;
 
-const tmp = _mod4934("%Reflect.construct%", true);
-let closure_0 = tmp;
+const obj = {};
 try {
-  const obj = {
-    () => {
-
-      }
-  };
-  DefinePropertyOrThrow({}, "", obj);
-  let tmp4 = DefinePropertyOrThrow;
-  if (tmp4) {
-    if (tmp) {
-      let closure_1 = {};
-      const obj3 = {
-        () => {
-                throw closure_1;
-              },
-        "[[Enumerable]]": true
-      };
-      tmp4({}, "length", obj3);
-      module.exports = function IsConstructor(arg0) {
-        try {
-          closure_0(arg0, obj2);
-        } catch (tmp5) {
-          return tmp5 === closure_1;
+  obj.__proto__ = null;
+  let _module = _mod1283;
+  if (_module) {
+    const _Object = Object;
+    _module = _mod1283(Object.prototype, "__proto__");
+  }
+  let tmp6 = !("toString" in obj);
+  if (tmp6) {
+    let setDunder = _module;
+    if (setDunder) {
+      setDunder = typeof _module.set === "function";
+    }
+    if (setDunder) {
+      const items = [_module.set];
+      setDunder = callBindBasic(items);
+    }
+    if (!setDunder) {
+      setDunder = function setDunder(arg0, arg1) {
+        if (null == arg0) {
+          const tmp6 = new _mod1282("set Object.prototype.__proto__ called on null or undefined");
+          throw tmp6;
+        } else {
+          arg0.__proto__ = arg1;
+          return arg1;
         }
       };
-      const obj2 = {};
     }
+    tmp6 = setDunder;
   }
-  module.exports = function IsConstructor(fn) {
-    let prototype = typeof fn === "function";
-    if (typeof fn === "function") {
-      prototype = fn.prototype;
-    }
-    return prototype;
-  };
-} catch (err) {
-  tmp4 = null;
+  module.exports = tmp6;
+  const tmp3 = "toString" in obj;
+} catch (tmp2) {
+  throw tmp2;
 }

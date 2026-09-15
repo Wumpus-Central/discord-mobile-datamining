@@ -1,7 +1,11 @@
 // === Module 6836: ? ===
 
 // Module 6836
+import noop from "module_19" /* 19 */;
 
-export function useNativeGestureRole(arg0, children) {
+({ useEffect, useRef } = noop);
+new Map();
+
+export function useDetectorAttachmentGuard(tmp8Result5) {
 
 }
