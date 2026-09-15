@@ -1,22 +1,22 @@
-// === Module 17190: SoundboardSoundPickerCategories ===
+// === Module 17228: SoundboardSoundPickerCategories ===
 
-// Module 17190 (SoundboardSoundPickerCategories)
+// Module 17228 (SoundboardSoundPickerCategories)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import ClockIcon from "ClockIcon" /* 4599 */;
-import HapticUtils from "HapticUtils" /* 4604 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4605 */;
-import SoundboardTypes from "SoundboardTypes" /* 5101 */;
-import LockIcon from "LockIcon" /* 5176 */;
-import Pressables from "Pressables" /* 5204 */;
-import GuildIconDefault from "GuildIcon" /* 5665 */;
-import TrophyIcon from "TrophyIcon" /* 8842 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10095 */;
-import _modDef10520 from "module_10520" /* 10520 */;
-import _modDef17188 from "module_17188" /* 17188 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import ClockIcon from "ClockIcon" /* 4602 */;
+import HapticUtils from "HapticUtils" /* 4607 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4608 */;
+import SoundboardTypes from "SoundboardTypes" /* 5104 */;
+import LockIcon from "LockIcon" /* 5179 */;
+import Pressables from "Pressables" /* 5207 */;
+import GuildIconDefault from "GuildIcon" /* 5669 */;
+import TrophyIcon from "TrophyIcon" /* 8845 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10097 */;
+import _modDef10523 from "module_10523" /* 10523 */;
+import _modDef17226 from "module_17226" /* 17226 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function SoundCategoryItem(style) {
@@ -36,7 +36,7 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10520;
+    tmp6 = _modDef10523;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -49,13 +49,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef17188;
+    tmp6 = _modDef17226;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef17188;
+    tmp6 = _modDef17226;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -109,12 +109,12 @@ function getItemLayout(arg0, index) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const setSearchQuery = fn(17172).setSearchQuery;
+const setSearchQuery = fn(17210).setSearchQuery;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_9, NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, item: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
 let size = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
 obj.item = size;

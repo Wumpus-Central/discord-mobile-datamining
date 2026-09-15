@@ -1,11 +1,11 @@
-// === Module 5225: NativePermissionStore ===
+// === Module 5228: NativePermissionStore ===
 
-// Module 5225 (NativePermissionStore)
+// Module 5228 (NativePermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 4846 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 4849 */;
 import size from "module_2" /* 2 */;
 
 const NativePermissionStates = NativePermissionConstants.NativePermissionStates;

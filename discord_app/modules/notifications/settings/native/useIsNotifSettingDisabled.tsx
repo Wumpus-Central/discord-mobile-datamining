@@ -1,10 +1,10 @@
-// === Module 16021: useIsNotifSettingDisabled ===
+// === Module 16034: useIsNotifSettingDisabled ===
 
-// Module 16021 (useIsNotifSettingDisabled)
-import _modDef2722 from "module_2722" /* 2722 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 16013 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 16014 */;
-import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 16012 */;
+// Module 16034 (useIsNotifSettingDisabled)
+import _modDef2723 from "module_2723" /* 2723 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 16026 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 16027 */;
+import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 16025 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ export default function useIsNotifSettingDisabled(GAMING_DEFAULT) {
   if (!tmp4) {
     const obj2 = { label: null, onPress: null };
     const intl = require("util").intl;
-    obj2.label = intl.string(_modDef2722.TVZ0Fm);
+    obj2.label = intl.string(_modDef2723.TVZ0Fm);
     obj2.onPress = function handleOpenSystem() {
       const result = DeclarativeSystemNotifPermissionAnalytics.trackSystemNotifSettingsOpened(closure_0);
       const openSystemNotifSettings = DeclarativeSystemNotifPermissionHelpersDefault.openSystemNotifSettings;

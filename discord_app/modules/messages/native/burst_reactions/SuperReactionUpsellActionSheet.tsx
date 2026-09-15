@@ -1,16 +1,16 @@
-// === Module 11271: SuperReactionUpsellActionSheet ===
+// === Module 11275: SuperReactionUpsellActionSheet ===
 
-// Module 11271 (SuperReactionUpsellActionSheet)
+// Module 11275 (SuperReactionUpsellActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import _mod7897 from "module_7897" /* 7897 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9492 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9522 */;
-import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 11279 */;
+import native from "native" /* 1177 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import _mod7900 from "module_7900" /* 7900 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9494 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9524 */;
+import SuperReactionLocalImageAnimationDefault from "SuperReactionLocalImageAnimation" /* 11283 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
@@ -19,9 +19,9 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const AnalyticsPages = fn(1074).AnalyticsPages;
 const jsx = fn(21).jsx;
-const dismissibleContent = fn(1943).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
-let items = [fn(11272), fn(11273), fn(11274), fn(11275), fn(11273), fn(11276), fn(11277), fn(11278)];
-const createStyles = fn(4636);
+const dismissibleContent = fn(1944).DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
+let items = [fn(11276), fn(11277), fn(11278), fn(11279), fn(11277), fn(11280), fn(11281), fn(11282)];
+const createStyles = fn(4639);
 let obj2 = { fill: null, nitroIcon: null, description: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,21 +1,21 @@
-// === Module 16112: MainChannels ===
+// === Module 16125: MainChannels ===
 
-// Module 16112 (MainChannels)
+// Module 16125 (MainChannels)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import useChatLayoutDefault from "useChatLayout" /* 4497 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4500 */;
-import useRefValueDefault from "useRefValue" /* 5667 */;
-import StartupProfiler from "StartupProfiler" /* 11663 */;
-import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16113 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 16114 */;
-import NativeFreezeScreens from "NativeFreezeScreens" /* 16115 */;
-import messages_MessagesDefault from "messages/Messages" /* 16116 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16117 */;
-import RedesignChannelListDefault from "RedesignChannelList" /* 16200 */;
-import HomePanelContent from "HomePanelContent" /* 16378 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16459 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import useChatLayoutDefault from "useChatLayout" /* 4500 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4503 */;
+import useRefValueDefault from "useRefValue" /* 5671 */;
+import StartupProfiler from "StartupProfiler" /* 11667 */;
+import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16126 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 16127 */;
+import NativeFreezeScreens from "NativeFreezeScreens" /* 16128 */;
+import messages_MessagesDefault from "messages/Messages" /* 16129 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16130 */;
+import RedesignChannelListDefault from "RedesignChannelList" /* 16213 */;
+import HomePanelContent from "HomePanelContent" /* 16391 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16472 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -104,7 +104,7 @@ const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: nativeDefault.radii.xl };
 obj.sideContainer = rect;

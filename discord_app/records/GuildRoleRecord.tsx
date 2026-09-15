@@ -1,9 +1,9 @@
-// === Module 2016: GuildRoleRecord ===
+// === Module 2017: GuildRoleRecord ===
 
-// Module 2016 (GuildRoleRecord)
+// Module 2017 (GuildRoleRecord)
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
-import PlainRecord from "PlainRecord" /* 1972 */;
+import PlainRecord from "PlainRecord" /* 1973 */;
 import size from "module_2" /* 2 */;
 
 const TypeTag = PlainRecord.TypeTag;

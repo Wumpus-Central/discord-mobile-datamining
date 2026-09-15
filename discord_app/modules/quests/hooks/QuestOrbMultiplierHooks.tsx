@@ -1,10 +1,10 @@
-// === Module 11426: QuestOrbMultiplierHooks ===
+// === Module 11430: QuestOrbMultiplierHooks ===
 
-// Module 11426 (QuestOrbMultiplierHooks)
+// Module 11430 (QuestOrbMultiplierHooks)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11427 */;
-import UserStore from "UserStore" /* 1371 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11431 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub) {

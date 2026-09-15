@@ -1,20 +1,20 @@
-// === Module 6705: ConfirmEmailCode ===
+// === Module 6709: ConfirmEmailCode ===
 
-// Module 6705 (ConfirmEmailCode)
+// Module 6709 (ConfirmEmailCode)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(5704);
+const ChangeEmailStore = fn(5708);
 ({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: null, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.input = { marginTop: nativeDefault.space.PX_24 };

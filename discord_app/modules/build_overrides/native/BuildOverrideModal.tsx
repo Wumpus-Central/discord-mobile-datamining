@@ -1,17 +1,17 @@
-// === Module 13958: BuildOverrideModal ===
+// === Module 13963: BuildOverrideModal ===
 
-// Module 13958 (BuildOverrideModal)
+// Module 13963 (BuildOverrideModal)
 import nativeDefault from "native" /* 576 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11920 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11924 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11563 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, height: "100%", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 }, content: { marginTop: 160, flex: 1, alignItems: "center" }, imageWrapper: null, text: null, buildOverrideName: null, buildOverrideExpiration: null, buildOverrideInvalid: null, buttonWrapper: null, actionButton: null };
 let size = { width: 100, height: 100, borderRadius: nativeDefault.radii.round, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, alignItems: "center", justifyContent: "center" };
 obj2.imageWrapper = size;
@@ -32,13 +32,13 @@ export default function BuildOverrideModal(overrideUrl) {
   }
   let stateFromStores;
   const tmp = closure_9();
-  const tmp4 = stateFromStores(4571)();
+  const tmp4 = stateFromStores(4574)();
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13959);
+    let tmp2Result = tmp2(13964);
   } else {
-    tmp2Result = tmp2(13960);
+    tmp2Result = tmp2(13965);
   }
-  obj = str(4488);
+  obj = str(4491);
   const items = [BuildOverrideStore];
   const items1 = [str];
   stateFromStores = str(504).useStateFromStores(items, () => BuildOverrideStore.getBuildOverride(str), items1);
@@ -47,44 +47,44 @@ export default function BuildOverrideModal(overrideUrl) {
   if (override != null) {
     const targetBuildOverride = override.targetBuildOverride;
     if (targetBuildOverride != null) {
-      const tmp9 = targetBuildOverride[tmp5(undefined, 11920).DEVICE_FIELD];
+      const tmp9 = targetBuildOverride[tmp5(undefined, 11924).DEVICE_FIELD];
       if (tmp9 != null) {
         id = tmp9.id;
       }
     }
   }
   const tmp5Result = str(504);
-  const tmp2Result2 = stateFromStores(4228);
+  const tmp2Result2 = stateFromStores(4231);
   let expiresAt;
   if (override != null) {
     expiresAt = override.expiresAt;
   }
-  const obj4 = stateFromStores(4228)();
-  const durationResult = tmp2Result2.duration(stateFromStores(4228)().diff(expiresAt));
+  const obj4 = stateFromStores(4231)();
+  const durationResult = tmp2Result2.duration(stateFromStores(4231)().diff(expiresAt));
   const rect = { top: true, bottom: true, style: tmp.container, children: null };
   const obj2 = { style: tmp.content, children: null };
-  const humanizeResult = tmp2Result2.duration(stateFromStores(4228)().diff(expiresAt)).humanize();
+  const humanizeResult = tmp2Result2.duration(stateFromStores(4231)().diff(expiresAt)).humanize();
   const items2 = [closure_6(closure_4, { style: tmp.imageWrapper, children: closure_6(closure_3, { source: tmp2Result }) }), , ];
   const obj5 = { style: tmp.text, variant: "text-md/medium", children: null };
-  const intl = tmp5(1114).intl;
-  obj5.children = intl.string(str(1114).t["6ILkNN"]);
-  items2[1] = closure_6(str(4632).Text, obj5);
+  const intl = tmp5(1115).intl;
+  obj5.children = intl.string(str(1115).t["6ILkNN"]);
+  items2[1] = closure_6(str(4635).Text, obj5);
   if (null != id) {
     const obj6 = { children: null };
     const obj7 = { style: tmp.buildOverrideName, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: id };
-    const items3 = [closure_6(tmp5(4632).Text, obj7), ];
+    const items3 = [closure_6(tmp5(4635).Text, obj7), ];
     const obj8 = { style: tmp.buildOverrideExpiration, variant: "text-md/medium", color: "text-default", children: null };
-    const intl3 = tmp5(1114).intl;
+    const intl3 = tmp5(1115).intl;
     const obj9 = { expirationDuration: humanizeResult };
-    obj8.children = intl3.format(tmp5(1114).t.lOsPpu, obj9);
-    items3[1] = closure_6(tmp5(4632).Text, obj8);
+    obj8.children = intl3.format(tmp5(1115).t.lOsPpu, obj9);
+    items3[1] = closure_6(tmp5(4635).Text, obj8);
     obj6.children = items3;
     let tmp14Result = closure_8(closure_7, obj6);
   } else {
     const obj10 = { style: tmp.buildOverrideInvalid, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-    const intl2 = tmp5(1114).intl;
-    obj10.children = intl2.string(tmp5(1114).t["cz+sue"]);
-    tmp14Result = closure_6(tmp5(4632).Text, obj10);
+    const intl2 = tmp5(1115).intl;
+    obj10.children = intl2.string(tmp5(1115).t["cz+sue"]);
+    tmp14Result = closure_6(tmp5(4635).Text, obj10);
   }
   items2[2] = tmp14Result;
   obj2.children = items2;
@@ -94,8 +94,8 @@ export default function BuildOverrideModal(overrideUrl) {
     const obj12 = { children: null };
     const obj13 = { style: tmp.actionButton, children: null };
     const obj14 = { text: null, grow: true, onPress: null };
-    const intl5 = tmp5(1114).intl;
-    obj14.text = intl5.string(tmp5(1114).t.v0MBqF);
+    const intl5 = tmp5(1115).intl;
+    obj14.text = intl5.string(tmp5(1115).t.v0MBqF);
     obj14.onPress = function onPress() {
       str = stateFromStores.validatedURL;
       if (str == null) {
@@ -103,28 +103,28 @@ export default function BuildOverrideModal(overrideUrl) {
       }
       const result = build_overrides_BuildOverrideUtils.setBuildOverrideFromLink(str);
     };
-    obj13.children = closure_6(tmp5(5056).Button, obj14);
+    obj13.children = closure_6(tmp5(5059).Button, obj14);
     const items5 = [closure_6(closure_4, obj13), ];
     const obj15 = { text: null, variant: "secondary", grow: true, onPress: null };
-    const intl6 = tmp5(1114).intl;
-    obj15.text = intl6.string(tmp5(1114).t.b5KKph);
+    const intl6 = tmp5(1115).intl;
+    obj15.text = intl6.string(tmp5(1115).t.b5KKph);
     obj15.onPress = function onPress() {
-      return stateFromStores(4839).pop();
+      return stateFromStores(4842).pop();
     };
-    items5[1] = closure_6(tmp5(5056).Button, obj15);
+    items5[1] = closure_6(tmp5(5059).Button, obj15);
     obj12.children = items5;
     let tmp12Result2 = closure_8(closure_7, obj12);
   } else {
     const obj16 = { text: null, grow: true, onPress: null };
-    const intl4 = tmp5(1114).intl;
-    obj16.text = intl4.string(tmp5(1114).t.WRkdCQ);
+    const intl4 = tmp5(1115).intl;
+    obj16.text = intl4.string(tmp5(1115).t.WRkdCQ);
     obj16.onPress = function onPress() {
-      return stateFromStores(4839).pop();
+      return stateFromStores(4842).pop();
     };
-    tmp12Result2 = closure_6(tmp5(5056).Button, obj16);
+    tmp12Result2 = closure_6(tmp5(5059).Button, obj16);
   }
   obj11.children = tmp12Result2;
   items4[1] = closure_6(closure_4, obj11);
   rect.children = items4;
-  return closure_8(str(7226).SafeAreaPaddingView, rect);
+  return closure_8(str(7230).SafeAreaPaddingView, rect);
 };

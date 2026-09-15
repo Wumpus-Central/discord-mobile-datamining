@@ -1,6 +1,6 @@
-// === Module 6471: ? ===
+// === Module 6475: ? ===
 
-// Module 6471
+// Module 6475
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PsychicIllocon-2x.png.js");

@@ -1,7 +1,7 @@
-// === Module 16323: getChannelSubtitleData ===
+// === Module 16336: getChannelSubtitleData ===
 
-// Module 16323 (getChannelSubtitleData)
-import util from "util" /* 1114 */;
+// Module 16336 (getChannelSubtitleData)
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");

@@ -1,9 +1,9 @@
-// === Module 7319: HotspotActionCreators ===
+// === Module 7323: HotspotActionCreators ===
 
-// Module 7319 (HotspotActionCreators)
+// Module 7323 (HotspotActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

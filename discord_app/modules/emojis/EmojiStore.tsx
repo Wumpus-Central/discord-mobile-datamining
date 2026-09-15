@@ -1,33 +1,33 @@
-// === Module 5540: EmojiStore ===
+// === Module 5544: EmojiStore ===
 
-// Module 5540 (EmojiStore)
+// Module 5544 (EmojiStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
-import _modDef4228 from "module_4228" /* 4228 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4293 */;
-import RegexUtilsDefault from "RegexUtils" /* 4623 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5547 */;
-import EmojiTermsDefault from "EmojiTerms" /* 5548 */;
+import DurationsDefault from "Durations" /* 1091 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
+import _modDef4231 from "module_4231" /* 4231 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4296 */;
+import RegexUtilsDefault from "RegexUtils" /* 4626 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5551 */;
+import EmojiTermsDefault from "EmojiTerms" /* 5552 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 4552 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5541 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 1959 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import SortedGuildStore from "SortedGuildStore" /* 5519 */;
-import UserStore from "UserStore" /* 1371 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5542 */;
-import TopEmojiStore from "TopEmojiStore" /* 5543 */;
-import UnicodeEmojis from "UnicodeEmojis" /* 4289 */;
+import ExperimentStore from "ExperimentStore" /* 4555 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5545 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 1960 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import SortedGuildStore from "SortedGuildStore" /* 5523 */;
+import UserStore from "UserStore" /* 1372 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5546 */;
+import TopEmojiStore from "TopEmojiStore" /* 5547 */;
+import UnicodeEmojis from "UnicodeEmojis" /* 4292 */;
 import SnowflakeUtils from "SnowflakeUtils" /* 11 */;
-import Frecency_mod from "Frecency" /* 4673 */;
+import Frecency_mod from "Frecency" /* 4676 */;
 
 const require = globalThis.__r;
 
@@ -93,7 +93,7 @@ let closure_37 = async function _loadSavedEmojis() {
               Loading = __initData8.Loading;
               c2 = 1;
               c3 = 1;
-              const obj6 = { value: React(2006).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () => closure_2_1(5546).getAsync(closure_1_0))), done: false };
+              const obj6 = { value: React(2007).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () => closure_2_1(5550).getAsync(closure_1_0))), done: false };
               return obj6;
             }
           }
@@ -144,7 +144,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let flag = closure_0(5580).canUseRoleSubscriptionIAP(guildId);
+      let flag = closure_0(5584).canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis === "function") {
         if (flag === undefined) {
           flag = false;
@@ -158,7 +158,7 @@ function updateGuildEmoji(guildId) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj = closure_0(5580);
+      obj = closure_0(5584);
     }
   }
 }
@@ -286,14 +286,14 @@ function handleRoleUpdate(guildId) {
         importDefaultResult31.compute();
       }
     }
-    obj = closure_0(4266);
+    obj = closure_0(4269);
   }
   return false;
 }
-const EmojiConstants = fn(1374);
+const EmojiConstants = fn(1375);
 ({ EmojiDisabledReasons: closure_17, EmojiIntention: closure_18 } = EmojiConstants);
 const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
-const EmojiCategories = fn(5544).EmojiCategories;
+const EmojiCategories = fn(5548).EmojiCategories;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 let items = [EmojiCategories.TOP_GUILD_EMOJI.toString(), EmojiCategories.FAVORITES.toString(), EmojiCategories.RECENT.toString(), EmojiCategories.CUSTOM.toString()];
 let combined = items.concat(UnicodeEmojis.getCategories());
@@ -341,7 +341,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(item);
       });
       if (!someResult) {
-        let result = emoji(5545).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = emoji(5549).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -350,7 +350,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = emoji(5545);
+        obj = emoji(5549);
       }
       tmp6 = someResult;
     }
@@ -705,7 +705,7 @@ prototype2["getFrequentlyUsedEmojisWithoutFetchingLatest"] = function getFrequen
       }
       return byId;
     });
-    const found = mapped.filter(self(1369).isNotNullish);
+    const found = mapped.filter(self(1370).isNotNullish);
     const items = [];
     HermesBuiltin.arraySpread(dedupeEmojisByNameOrIdDefault(found).values(), 0);
     self.frequentlyUsed = items;
@@ -730,7 +730,7 @@ prototype2["rebuildFrequentlyUsedReactionsEmojisWithoutFetchingLatest"] = functi
     }
     return byId;
   });
-  const found = mapped.filter(self(1369).isNotNullish);
+  const found = mapped.filter(self(1370).isNotNullish);
   obj = dedupeEmojisByNameOrIdDefault(found);
   const items = [...obj.values()];
   self.frequentlyUsedReactionEmojis = items;
@@ -776,7 +776,7 @@ prototype2["rebuildFavoriteEmojisWithoutFetchingLatest"] = function rebuildFavor
     }
     return byId;
   });
-  const found = mapped.filter(self(1369).isNotNullish);
+  const found = mapped.filter(self(1370).isNotNullish);
   obj = dedupeEmojisByNameOrIdDefault(found);
   const items = [...obj.values()];
   self.favorites = items;
@@ -1082,7 +1082,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(4623).escape(formatted);
+  const escapeResult = formatted(4626).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;
@@ -1200,7 +1200,7 @@ prototype3["searchWithoutFetchingLatest"] = function searchWithoutFetchingLatest
     if (!tmp5) {
       let tmp6 = _slicedToArray;
       if (_slicedToArray) {
-        tmp6 = emoji.type !== channel(4292).EmojiTypes.UNICODE;
+        tmp6 = emoji.type !== channel(4295).EmojiTypes.UNICODE;
       }
       tmp5 = tmp6;
     }
@@ -1470,8 +1470,8 @@ const emojiStore = new EmojiStore(DispatcherDefault, {
   TOP_EMOJIS_FETCH_SUCCESS: function handleTopEmojisLoaded(topEmojisMetadata) {
     topEmojisMetadata = topEmojisMetadata.topEmojisMetadata;
     obj = { emojiIds: topEmojisMetadata.map((emojiId) => emojiId.emojiId), topEmojisTTL: null };
-    const tmpResult = _modDef4228(_modDef4228());
-    obj.topEmojisTTL = _modDef4228(_modDef4228()).add(1, "days").valueOf();
+    const tmpResult = _modDef4231(_modDef4231());
+    obj.topEmojisTTL = _modDef4231(_modDef4231()).add(1, "days").valueOf();
     const result = map.set(topEmojisMetadata.guildId, obj);
   },
   TOGGLE_GUILD_EXPANDED_STATE: function toggleGuildExpandedState(guildId) {

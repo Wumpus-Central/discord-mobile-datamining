@@ -1,6 +1,6 @@
-// === Module 1878: getDevicePixelRatio ===
+// === Module 1879: getDevicePixelRatio ===
 
-// Module 1878 (getDevicePixelRatio)
+// Module 1879 (getDevicePixelRatio)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

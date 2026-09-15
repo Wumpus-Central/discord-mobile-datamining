@@ -1,10 +1,10 @@
-// === Module 13993: ShareScreenFooter ===
+// === Module 13998: ShareScreenFooter ===
 
-// Module 13993 (ShareScreenFooter)
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11822 */;
-import ShareFooterLayoutDefault from "ShareFooterLayout" /* 11823 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11831 */;
+// Module 13998 (ShareScreenFooter)
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11826 */;
+import ShareFooterLayoutDefault from "ShareFooterLayout" /* 11827 */;
+import ShareChatInputDefault from "ShareChatInput" /* 11835 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

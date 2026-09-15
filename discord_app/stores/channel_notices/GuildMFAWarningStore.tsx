@@ -1,10 +1,10 @@
-// === Module 13847: GuildMFAWarningStore ===
+// === Module 13852: GuildMFAWarningStore ===
 
-// Module 13847 (GuildMFAWarningStore)
+// Module 13852 (GuildMFAWarningStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import UserStore from "UserStore" /* 1371 */;
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
+import UserStore from "UserStore" /* 1372 */;
 
 function handleUserStoreUpdates() {
   const currentUser = UserStore.getCurrentUser();

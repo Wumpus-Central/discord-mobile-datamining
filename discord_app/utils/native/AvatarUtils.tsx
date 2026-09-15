@@ -1,7 +1,6 @@
-// === Module 1399: utils/AvatarUtils ===
+// === Module 1400: utils/AvatarUtils ===
 
-// Module 1399 (utils/AvatarUtils)
-import _modDef1400 from "module_1400" /* 1400 */;
+// Module 1400 (utils/AvatarUtils)
 import _modDef1401 from "module_1401" /* 1401 */;
 import _modDef1402 from "module_1402" /* 1402 */;
 import _modDef1403 from "module_1403" /* 1403 */;
@@ -29,7 +28,8 @@ import _modDef1424 from "module_1424" /* 1424 */;
 import _modDef1425 from "module_1425" /* 1425 */;
 import _modDef1426 from "module_1426" /* 1426 */;
 import _modDef1427 from "module_1427" /* 1427 */;
-import _modDef1429 from "module_1429" /* 1429 */;
+import _modDef1428 from "module_1428" /* 1428 */;
+import _modDef1430 from "module_1430" /* 1430 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 
@@ -45,10 +45,10 @@ function ensureAvatarSource(source) {
   return assetSource;
 }
 ({ Image: c2, NativeModules } = get_ActivityIndicator);
-const items = [_modDef1400, _modDef1401, _modDef1402, _modDef1403, _modDef1404, _modDef1405];
-const items1 = [_modDef1406, _modDef1407, _modDef1408, _modDef1409, _modDef1410, _modDef1411];
-const items2 = [_modDef1412, _modDef1413, _modDef1414, _modDef1415, _modDef1416, _modDef1417];
-const items3 = [_modDef1418, _modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423, _modDef1424, _modDef1425];
+const items = [_modDef1401, _modDef1402, _modDef1403, _modDef1404, _modDef1405, _modDef1406];
+const items1 = [_modDef1407, _modDef1408, _modDef1409, _modDef1410, _modDef1411, _modDef1412];
+const items2 = [_modDef1413, _modDef1414, _modDef1415, _modDef1416, _modDef1417, _modDef1418];
+const items3 = [_modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423, _modDef1424, _modDef1425, _modDef1426];
 const MediaManager = NativeModules.MediaManager;
 const set = new Set(MediaManager.getConstants().supportedExtensions);
 const obj = {
@@ -57,8 +57,8 @@ const obj = {
   DEFAULT_AVATARS_SMALL_MAX_SIZE: 24,
   DEFAULT_PROVISIONAL_AVATARS: items2,
   DEFAULT_GROUP_DM_AVATARS: items3,
-  BOT_AVATARS: { clyde: _modDef1426, nitro_wumpus: _modDef1427 },
-  DEFAULT_CHANNEL_ICON: _modDef1429,
+  BOT_AVATARS: { clyde: _modDef1427, nitro_wumpus: _modDef1428 },
+  DEFAULT_CHANNEL_ICON: _modDef1430,
   ensureAvatarSource,
   canUseWebp() {
     return set.has("webp");
@@ -73,5 +73,5 @@ export const DEFAULT_AVATARS_SMALL_MAX_SIZE = 24;
 export const DEFAULT_PROVISIONAL_AVATARS = items2;
 export { ensureAvatarSource };
 export const getAutomodAvatarURL = function getAutomodAvatarURL() {
-  return require("module_1428");
+  return require("module_1429");
 };

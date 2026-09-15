@@ -1,7 +1,7 @@
-// === Module 14913: useSensitiveMediaSettingDisabled ===
+// === Module 14923: useSensitiveMediaSettingDisabled ===
 
-// Module 14913 (useSensitiveMediaSettingDisabled)
-import useParentalControlSettings from "useParentalControlSettings" /* 14914 */;
+// Module 14923 (useSensitiveMediaSettingDisabled)
+import useParentalControlSettings from "useParentalControlSettings" /* 14924 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx");

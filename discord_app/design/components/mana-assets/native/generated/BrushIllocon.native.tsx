@@ -1,9 +1,9 @@
-// === Module 5912: BrushIllocon ===
+// === Module 5916: BrushIllocon ===
 
-// Module 5912 (BrushIllocon)
+// Module 5916 (BrushIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5913 from "module_5913" /* 5913 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5917 from "module_5917" /* 5917 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const BrushIllocon = function BrushIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5913 };
+  const obj2 = { uri: _modDef5917 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

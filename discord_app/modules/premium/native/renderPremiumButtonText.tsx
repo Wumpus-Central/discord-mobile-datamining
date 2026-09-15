@@ -1,10 +1,10 @@
-// === Module 13655: renderPremiumButtonText ===
+// === Module 13660: renderPremiumButtonText ===
 
-// Module 13655 (renderPremiumButtonText)
+// Module 13660 (renderPremiumButtonText)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -75,14 +75,14 @@ function PremiumText(basePlanId) {
   }
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: closure_4, PRICE_PLACEHOLDER: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { discount: null, premiumText: null };
 let obj3 = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-const ColorUtils = fn(4486);
+const ColorUtils = fn(4489);
 obj3.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.3);
 obj2.discount = obj3;
 obj2.premiumText = { flexDirection: "row" };

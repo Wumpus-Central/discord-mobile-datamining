@@ -1,6 +1,6 @@
-// === Module 13367: useJoinFromSupportedPlatformsIconKeys ===
+// === Module 13372: useJoinFromSupportedPlatformsIconKeys ===
 
-// Module 13367 (useJoinFromSupportedPlatformsIconKeys)
+// Module 13372 (useJoinFromSupportedPlatformsIconKeys)
 import noop from "module_19" /* 19 */;
 
 function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {

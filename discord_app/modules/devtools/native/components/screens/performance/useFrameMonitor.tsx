@@ -1,7 +1,7 @@
-// === Module 15823: useFrameMonitor ===
+// === Module 15834: useFrameMonitor ===
 
-// Module 15823 (useFrameMonitor)
-import startFrameMonitor from "startFrameMonitor" /* 15821 */;
+// Module 15834 (useFrameMonitor)
+import startFrameMonitor from "startFrameMonitor" /* 15832 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

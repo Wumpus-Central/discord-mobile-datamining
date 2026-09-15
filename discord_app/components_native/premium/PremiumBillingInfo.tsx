@@ -1,15 +1,15 @@
-// === Module 13477: PremiumBillingInfo ===
+// === Module 13482: PremiumBillingInfo ===
 
-// Module 13477 (PremiumBillingInfo)
+// Module 13482 (PremiumBillingInfo)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4294 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7265 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 7507 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13474 */;
-import BillingInformation from "BillingInformation" /* 13478 */;
+import util from "util" /* 1115 */;
+import PremiumUtils from "PremiumUtils" /* 4297 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7269 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7511 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13479 */;
+import BillingInformation from "BillingInformation" /* 13483 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ const Constants = fn(1074);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, billingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 }, billingRenewalInfo: { marginTop: 4 }, billingManageGoogle: { marginTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

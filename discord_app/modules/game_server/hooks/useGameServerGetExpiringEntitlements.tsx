@@ -1,9 +1,9 @@
-// === Module 12689: useGameServerGetExpiringEntitlements ===
+// === Module 12694: useGameServerGetExpiringEntitlements ===
 
-// Module 12689 (useGameServerGetExpiringEntitlements)
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12623 */;
+// Module 12694 (useGameServerGetExpiringEntitlements)
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12628 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 4546 */;
+import GameServerStore from "GameServerStore" /* 4549 */;
 
 const require = globalThis.__r;
 

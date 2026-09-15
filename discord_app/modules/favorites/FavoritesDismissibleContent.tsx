@@ -1,23 +1,23 @@
-// === Module 10369: FavoritesDismissibleContent ===
+// === Module 10371: FavoritesDismissibleContent ===
 
-// Module 10369 (FavoritesDismissibleContent)
-import dismissible_content from "dismissible_content" /* 1943 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7491 */;
-import useGetDismissibleContent from "useGetDismissibleContent" /* 7492 */;
-import FavoritesHooks from "FavoritesHooks" /* 10353 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10355 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10367 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10368 */;
+// Module 10371 (FavoritesDismissibleContent)
+import dismissible_content from "dismissible_content" /* 1944 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7495 */;
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7496 */;
+import FavoritesHooks from "FavoritesHooks" /* 10355 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10357 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10369 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
-let items = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, fn(1943).DismissibleContent.FAVORITES_GUILD_NEW_BADGE, fn(1943).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
-const items1 = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
-const items2 = [fn(1943).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
+let items = [fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, fn(1944).DismissibleContent.FAVORITES_GUILD_NEW_BADGE, fn(1944).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+const items1 = [fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+const items2 = [fn(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
 

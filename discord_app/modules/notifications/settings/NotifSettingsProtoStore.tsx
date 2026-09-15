@@ -1,10 +1,10 @@
-// === Module 13770: NotifSettingsProtoStore ===
+// === Module 13775: NotifSettingsProtoStore ===
 
-// Module 13770 (NotifSettingsProtoStore)
+// Module 13775 (NotifSettingsProtoStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1221 */;
-import notification_settings from "notification_settings" /* 13771 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1222 */;
+import notification_settings from "notification_settings" /* 13776 */;
 import size from "module_2" /* 2 */;
 
 let DeclarativeSettings = notification_settings.DeclarativeSettings;

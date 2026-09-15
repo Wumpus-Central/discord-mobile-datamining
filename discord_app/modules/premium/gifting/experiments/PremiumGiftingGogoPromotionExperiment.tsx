@@ -1,7 +1,7 @@
-// === Module 10869: PremiumGiftingGogoPromotionExperiment ===
+// === Module 10873: PremiumGiftingGogoPromotionExperiment ===
 
-// Module 10869 (PremiumGiftingGogoPromotionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 10873 (PremiumGiftingGogoPromotionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-premium-gifting-gogo-promotion", kind: "user", defaultConfig: { enabled: false }, variations: null };

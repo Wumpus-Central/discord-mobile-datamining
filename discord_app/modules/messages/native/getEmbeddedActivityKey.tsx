@@ -1,6 +1,6 @@
-// === Module 11669: getEmbeddedActivityKey ===
+// === Module 11673: getEmbeddedActivityKey ===
 
-// Module 11669 (getEmbeddedActivityKey)
+// Module 11673 (getEmbeddedActivityKey)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");

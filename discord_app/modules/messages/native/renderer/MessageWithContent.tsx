@@ -1,13 +1,13 @@
-// === Module 8041: MessageWithContent ===
+// === Module 8044: MessageWithContent ===
 
-// Module 8041 (MessageWithContent)
-import util from "util" /* 1114 */;
-import createMessageContentDefault from "createMessageContent" /* 8044 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8225 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8042 */;
+// Module 8044 (MessageWithContent)
+import util from "util" /* 1115 */;
+import createMessageContentDefault from "createMessageContent" /* 8047 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8228 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 8045 */;
 
 require = fn;
-const RowType = fn(8037).RowType;
+const RowType = fn(8040).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 

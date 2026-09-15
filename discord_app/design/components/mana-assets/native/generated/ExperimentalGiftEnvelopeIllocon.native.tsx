@@ -1,9 +1,9 @@
-// === Module 6080: ExperimentalGiftEnvelopeIllocon ===
+// === Module 6084: ExperimentalGiftEnvelopeIllocon ===
 
-// Module 6080 (ExperimentalGiftEnvelopeIllocon)
+// Module 6084 (ExperimentalGiftEnvelopeIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6081 from "module_6081" /* 6081 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6085 from "module_6085" /* 6085 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const ExperimentalGiftEnvelopeIllocon = function ExperimentalGiftEnvelope
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6081 };
+  const obj2 = { uri: _modDef6085 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,9 +1,9 @@
-// === Module 11529: useInappropriateConversationSafetyToolsWarningForChannel ===
+// === Module 11533: useInappropriateConversationSafetyToolsWarningForChannel ===
 
-// Module 11529 (useInappropriateConversationSafetyToolsWarningForChannel)
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11101 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11103 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11105 */;
+// Module 11533 (useInappropriateConversationSafetyToolsWarningForChannel)
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11105 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11107 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11109 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx");

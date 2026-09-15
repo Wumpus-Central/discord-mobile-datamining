@@ -1,11 +1,11 @@
-// === Module 12154: useNativeForumPostContent ===
+// === Module 12158: useNativeForumPostContent ===
 
-// Module 12154 (useNativeForumPostContent)
+// Module 12158 (useNativeForumPostContent)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import StickersUtils from "StickersUtils" /* 4975 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7373 */;
-import createStyles from "createStyles" /* 4636 */;
+import util from "util" /* 1115 */;
+import StickersUtils from "StickersUtils" /* 4978 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7377 */;
+import createStyles from "createStyles" /* 4639 */;
 import size from "module_2" /* 2 */;
 
 const MessageFlags = Constants.MessageFlags;

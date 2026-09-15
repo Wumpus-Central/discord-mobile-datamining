@@ -1,8 +1,8 @@
-// === Module 6716: useInputClearButton ===
+// === Module 6720: useInputClearButton ===
 
-// Module 6716 (useInputClearButton)
-import util from "util" /* 1114 */;
-import CircleXIcon from "CircleXIcon" /* 6717 */;
+// Module 6720 (useInputClearButton)
+import util from "util" /* 1115 */;
+import CircleXIcon from "CircleXIcon" /* 6721 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// === Module 12142: MessageAttachmentUtils ===
+// === Module 12146: MessageAttachmentUtils ===
 
-// Module 12142 (MessageAttachmentUtils)
-import util from "util" /* 1114 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7395 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 7399 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7400 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8001 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8389 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+// Module 12146 (MessageAttachmentUtils)
+import util from "util" /* 1115 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7399 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7403 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7404 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8004 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8392 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChannelType) {
@@ -149,10 +149,10 @@ export const useShouldObscure = function useShouldObscure(channel) {
     }
     return canResult;
   });
-  const RenderSpoilers = channel(1935).RenderSpoilers;
+  const RenderSpoilers = channel(1936).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(7395).getEnabledHarmTypesBitmaskForChannelType(channel(7400).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(7399).getEnabledHarmTypesBitmaskForChannelType(channel(7404).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 };
 export const getObscuredAlt = function getObscuredAlt(arg0) {

@@ -1,21 +1,21 @@
-// === Module 7320: getChannelIdForGuildTransition ===
+// === Module 7324: getChannelIdForGuildTransition ===
 
-// Module 7320 (getChannelIdForGuildTransition)
-import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7325 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7329 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 7347 */;
-import FavoriteStore from "FavoriteStore" /* 1960 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7199 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7321 */;
+// Module 7324 (getChannelIdForGuildTransition)
+import FavoritesUtils from "FavoritesUtils" /* 1983 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7329 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7333 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 7351 */;
+import FavoriteStore from "FavoriteStore" /* 1961 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7203 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7325 */;
 
 require = fn;
 const ME = fn(1074).ME;
-const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const StaticChannelRoute = fn(1965).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
 

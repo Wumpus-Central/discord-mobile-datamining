@@ -1,29 +1,29 @@
-// === Module 16733: ChannelDetails ===
+// === Module 16771: ChannelDetails ===
 
-// Module 16733 (ChannelDetails)
+// Module 16771 (ChannelDetails)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import timing from "timing" /* 4637 */;
-import timingPresets from "timingPresets" /* 4640 */;
-import spring from "spring" /* 5055 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12477 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12491 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import timing from "timing" /* 4640 */;
+import timingPresets from "timingPresets" /* 4643 */;
+import spring from "spring" /* 5058 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12473 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12482 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12496 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12469 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import SearchQueryStore from "SearchQueryStore" /* 12474 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ChannelDetailsStore = fn(7980);
+const ChannelDetailsStore = fn(7983);
 ({ deleteChannelDetailsSearchState: closure_7, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: closure_9 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(11048);
+const ChannelDetailsConstants = fn(11052);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

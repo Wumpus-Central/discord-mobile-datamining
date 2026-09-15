@@ -1,7 +1,7 @@
-// === Module 11001: FriendRequestAlertsV2 ===
+// === Module 11005: FriendRequestAlertsV2 ===
 
-// Module 11001 (FriendRequestAlertsV2)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 11005 (FriendRequestAlertsV2)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2025-10-friend-request-alerts-v2", defaultConfig: { enabled: false }, variations: null };

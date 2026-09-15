@@ -1,6 +1,6 @@
-// === Module 1891: types ===
+// === Module 1892: types ===
 
-// Module 1891 (types)
+// Module 1892 (types)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/nameplates/types.tsx");

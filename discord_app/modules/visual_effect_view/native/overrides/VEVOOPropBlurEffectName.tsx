@@ -1,17 +1,17 @@
-// === Module 16027: VEVOOPropBlurEffectName ===
+// === Module 16040: VEVOOPropBlurEffectName ===
 
-// Module 16027 (VEVOOPropBlurEffectName)
+// Module 16040 (VEVOOPropBlurEffectName)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const VEVOOStore = fn(5047);
+const VEVOOStore = fn(5050);
 ({ getVisualEffectViewOverrides: closure_4, setVisualEffectViewOverides: hasOwnProperty } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles({ radio: { fontSize: 14 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOPropBlurEffectName.tsx");

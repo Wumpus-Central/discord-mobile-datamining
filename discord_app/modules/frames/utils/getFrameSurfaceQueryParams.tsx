@@ -1,7 +1,7 @@
-// === Module 16725: getFrameSurfaceQueryParams ===
+// === Module 16763: getFrameSurfaceQueryParams ===
 
-// Module 16725 (getFrameSurfaceQueryParams)
-import FramesConstants from "FramesConstants" /* 9641 */;
+// Module 16763 (getFrameSurfaceQueryParams)
+import FramesConstants from "FramesConstants" /* 9643 */;
 import size from "module_2" /* 2 */;
 
 const EmbeddedSurfaceType = FramesConstants.EmbeddedSurfaceType;

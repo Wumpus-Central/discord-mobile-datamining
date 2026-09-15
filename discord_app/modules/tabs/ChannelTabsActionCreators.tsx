@@ -1,14 +1,14 @@
-// === Module 11122: ChannelTabsActionCreators ===
+// === Module 11126: ChannelTabsActionCreators ===
 
-// Module 11122 (ChannelTabsActionCreators)
+// Module 11126 (ChannelTabsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import router_utils from "router_utils" /* 1100 */;
-import transitionToChannel from "transitionToChannel" /* 4647 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
-import ChannelTabsStore from "ChannelTabsStore" /* 11123 */;
+import router_utils from "router_utils" /* 1101 */;
+import transitionToChannel from "transitionToChannel" /* 4650 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4840 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import ChannelTabsStore from "ChannelTabsStore" /* 11127 */;
 
 require = fn;
 function navigateToTabLocation(found) {
@@ -127,7 +127,7 @@ function navigateActiveTabHistory(arg0) {
   }
 }
 const Routes = fn(1074).Routes;
-const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
+const isStaticChannelRoute = fn(1965).isStaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");

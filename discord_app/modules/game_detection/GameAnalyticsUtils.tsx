@@ -1,9 +1,9 @@
-// === Module 4765: GameAnalyticsUtils ===
+// === Module 4768: GameAnalyticsUtils ===
 
-// Module 4765 (GameAnalyticsUtils)
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4766 */;
-import DetectableGameStore from "DetectableGameStore" /* 1931 */;
+// Module 4768 (GameAnalyticsUtils)
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4769 */;
+import DetectableGameStore from "DetectableGameStore" /* 1932 */;
 
 require = fn;
 const size = fn(2);
@@ -21,7 +21,7 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 };
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
-    return { gameName: "call", gameId: "methodobject", exe: "count", distributor: "r", sku: "accessible", gameMetadata: "to", rawExePath: "variant" };
+    return { gameName: "Array", gameId: "call", exe: "duration", distributor: "window", sku: "HermesInternal", gameMetadata: "w", rawExePath: "__closure" };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     const id = streamApplication.id;

@@ -1,18 +1,18 @@
-// === Module 17584: PromotionsManager ===
+// === Module 17622: PromotionsManager ===
 
-// Module 17584 (PromotionsManager)
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import PromotionsActionCreators from "PromotionsActionCreators" /* 13506 */;
-import PremiumBogoPromotionUtilsCommon from "PremiumBogoPromotionUtilsCommon" /* 13549 */;
+// Module 17622 (PromotionsManager)
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import PromotionsActionCreators from "PromotionsActionCreators" /* 13511 */;
+import PremiumBogoPromotionUtilsCommon from "PremiumBogoPromotionUtilsCommon" /* 13554 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import PromotionsStore from "PromotionsStore" /* 10794 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import UserStore from "UserStore" /* 1372 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import PromotionsStore from "PromotionsStore" /* 10798 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 require = fn;
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const EntitlementTypes = fn(1074).EntitlementTypes;
 const SubscriptionTypes = fn(1085).SubscriptionTypes;
 class PromotionsManager extends tmp2 {

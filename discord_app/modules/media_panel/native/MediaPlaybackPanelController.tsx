@@ -1,17 +1,17 @@
-// === Module 17333: MediaPlaybackPanelController ===
+// === Module 17371: MediaPlaybackPanelController ===
 
-// Module 17333 (MediaPlaybackPanelController)
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14625 */;
+// Module 17371 (MediaPlaybackPanelController)
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import VoicePanelStore from "VoicePanelStore" /* 4844 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import VoicePanelStore from "VoicePanelStore" /* 4847 */;
 
 const require = fn;
-const MediaPlaybackPanelModes = fn(14626).MediaPlaybackPanelModes;
-const ActivityPanelModes = fn(9635).ActivityPanelModes;
-let MorphablePanelModes = fn(12404).MorphablePanelModes;
+const MediaPlaybackPanelModes = fn(14636).MediaPlaybackPanelModes;
+const ActivityPanelModes = fn(9637).ActivityPanelModes;
+let MorphablePanelModes = fn(12408).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let __initData = { code: "function MediaPlaybackPanelControllerTsx1(){const{mode,MediaPlaybackPanelModes,MorphablePanelModes}=this.__closure;switch(mode.get()){case MediaPlaybackPanelModes.PIP:{return MorphablePanelModes.PIP;}default:{return MorphablePanelModes.UNDEFINED;}}}" };
 const size = fn(2);

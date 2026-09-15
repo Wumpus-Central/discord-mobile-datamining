@@ -1,10 +1,10 @@
-// === Module 8101: useIsStickerReplyEnabled ===
+// === Module 8104: useIsStickerReplyEnabled ===
 
-// Module 8101 (useIsStickerReplyEnabled)
-import ThreadHooks from "ThreadHooks" /* 7372 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 8104 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 7376 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;

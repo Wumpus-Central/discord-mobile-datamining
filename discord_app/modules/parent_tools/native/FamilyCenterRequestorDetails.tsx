@@ -1,20 +1,20 @@
-// === Module 15010: FamilyCenterRequestorDetails ===
+// === Module 15020: FamilyCenterRequestorDetails ===
 
-// Module 15010 (FamilyCenterRequestorDetails)
+// Module 15020 (FamilyCenterRequestorDetails)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import useUserLinks from "useUserLinks" /* 8768 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14982 */;
+import native from "native" /* 1177 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import useUserLinks from "useUserLinks" /* 8771 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 14992 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
-let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
-let obj3 = { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createStyles = fn(4639);
+let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
+let obj3 = { borderRadius: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.detailsContainer = { paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

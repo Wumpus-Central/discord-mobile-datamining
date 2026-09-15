@@ -1,7 +1,7 @@
-// === Module 11124: TabsExperiment ===
+// === Module 11128: TabsExperiment ===
 
-// Module 11124 (TabsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 11128 (TabsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { CONTROL: 0, [0]: "CONTROL", ENABLED: 1, [1]: "ENABLED" };

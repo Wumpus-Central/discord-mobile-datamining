@@ -1,25 +1,25 @@
-// === Module 7863: PollsUtils ===
+// === Module 7866: PollsUtils ===
 
-// Module 7863 (PollsUtils)
-import DurationsDefault from "Durations" /* 1090 */;
-import util from "util" /* 1114 */;
-import v1 from "v1" /* 1254 */;
-import utils_StringUtils from "utils/StringUtils" /* 1926 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
-import useMessageAuthor from "useMessageAuthor" /* 4869 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7324 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7864 */;
-import MessageStore from "MessageStore" /* 4857 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
+// Module 7866 (PollsUtils)
+import DurationsDefault from "Durations" /* 1091 */;
+import util from "util" /* 1115 */;
+import v1 from "v1" /* 1255 */;
+import utils_StringUtils from "utils/StringUtils" /* 1927 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4791 */;
+import useMessageAuthor from "useMessageAuthor" /* 4872 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7328 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7867 */;
+import MessageStore from "MessageStore" /* 4860 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7865).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7868).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -94,7 +94,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(7931);
+const PollsConstants = fn(7934);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1074);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);

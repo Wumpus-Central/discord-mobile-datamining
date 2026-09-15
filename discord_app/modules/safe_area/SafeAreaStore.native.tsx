@@ -1,7 +1,7 @@
-// === Module 1612: SafeAreaStore ===
+// === Module 1613: SafeAreaStore ===
 
-// Module 1612 (SafeAreaStore)
-import SafeAreaConstants from "SafeAreaConstants" /* 1613 */;
+// Module 1613 (SafeAreaStore)
+import SafeAreaConstants from "SafeAreaConstants" /* 1614 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 5872: AvatarMoatmonsturrExample ===
+// === Module 5876: AvatarMoatmonsturrExample ===
 
-// Module 5872 (AvatarMoatmonsturrExample)
+// Module 5876 (AvatarMoatmonsturrExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5873 from "module_5873" /* 5873 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5877 from "module_5877" /* 5877 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarMoatmonsturrExample = function AvatarMoatmonsturrExample(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5873 };
+  const obj2 = { uri: _modDef5877 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

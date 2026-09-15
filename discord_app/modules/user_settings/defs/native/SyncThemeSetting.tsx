@@ -1,24 +1,24 @@
-// === Module 15394: SyncThemeSetting ===
+// === Module 15404: SyncThemeSetting ===
 
-// Module 15394 (SyncThemeSetting)
+// Module 15404 (SyncThemeSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9488 */;
-import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 15395 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4456 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1182 */;
-import ThemeStore from "ThemeStore" /* 1181 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
+import util from "util" /* 1115 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9490 */;
+import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 15405 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4459 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
+import ThemeStore from "ThemeStore" /* 1182 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(8079).MobileUserSettings.APPEARANCE,
+  parent: fn(8082).MobileUserSettings.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
     const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());

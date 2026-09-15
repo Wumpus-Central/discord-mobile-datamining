@@ -1,8 +1,8 @@
-// === Module 7712: ExplicitMediaRedactionActionCreators ===
+// === Module 7715: ExplicitMediaRedactionActionCreators ===
 
-// Module 7712 (ExplicitMediaRedactionActionCreators)
+// Module 7715 (ExplicitMediaRedactionActionCreators)
 import Constants from "Constants" /* 1074 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

@@ -1,6 +1,6 @@
-// === Module 16714: VibegrationsSecretsSheet ===
+// === Module 16745: VibegrationsSecretsSheet ===
 
-// Module 16714 (VibegrationsSecretsSheet)
+// Module 16745 (VibegrationsSecretsSheet)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -10,12 +10,12 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(16692);
+const VibegrationsConnectionStore = fn(16705);
 ({ sendUserMessage: closure_7, submitProjectSecrets: closure_8 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const VibegrationsSecretsSheet = "VibegrationsSecretsSheet";
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, copyRow: null, copyInfo: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -166,7 +166,7 @@ export default function VibegrationsSecretsSheet(projectId) {
   let obj = { startExpanded: true, header: null, children: null };
   let obj2 = { title: null };
   let intl = projectId(first[10]).intl;
-  obj2.title = intl.string(require("module_3590").ACvhVC);
+  obj2.title = intl.string(require("module_3591").ACvhVC);
   obj.header = closure_9(projectId(first[14]).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp3.container, children: null };
   let tmp13Result = null;
@@ -180,7 +180,7 @@ export default function VibegrationsSecretsSheet(projectId) {
   let items1 = [tmp13Result, , , , , , ];
   let obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl2 = tmp14(tmp2[10]).intl;
-  obj5.children = intl2.string(require("module_3590").p0Ay4J);
+  obj5.children = intl2.string(require("module_3591").p0Ay4J);
   items1[1] = closure_9(projectId(first[15]).Text, obj5);
   let tmp13Result3 = null;
   if (request.fields.length > 1) {
@@ -249,7 +249,7 @@ export default function VibegrationsSecretsSheet(projectId) {
   items1[5] = tmp13Result4;
   const obj8 = { text: null, variant: "primary", loading: null, disabled: null, onPress: null };
   const intl5 = tmp14(tmp2[10]).intl;
-  obj8.text = intl5.string(require("module_3590")["8SWZaW"]);
+  obj8.text = intl5.string(require("module_3591")["8SWZaW"]);
   obj8.loading = first1;
   obj8.disabled = found.length <= 0;
   obj8.onPress = callback;

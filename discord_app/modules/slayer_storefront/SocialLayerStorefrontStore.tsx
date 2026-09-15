@@ -1,9 +1,9 @@
-// === Module 7331: SocialLayerStorefrontStore ===
+// === Module 7335: SocialLayerStorefrontStore ===
 
-// Module 7331 (SocialLayerStorefrontStore)
+// Module 7335 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function handleUserSettingsStoreUpdate() {
@@ -391,7 +391,7 @@ obj = {
       const merged7 = Object.assign(obj12);
       obj12 = obj8;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "r" };
+      obj = { state: "error", fetchedAt: null, storefront: "o" };
       const _Date = Date;
       obj.fetchedAt = Date.now();
       if (null != guildId) {

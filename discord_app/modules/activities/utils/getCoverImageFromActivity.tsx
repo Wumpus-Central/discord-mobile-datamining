@@ -1,8 +1,8 @@
-// === Module 13365: getCoverImageFromActivity ===
+// === Module 13370: getCoverImageFromActivity ===
 
-// Module 13365 (getCoverImageFromActivity)
-import Constants from "Constants" /* 1920 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8256 */;
+// Module 13370 (getCoverImageFromActivity)
+import Constants from "Constants" /* 1921 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8259 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Constants.ACTIVITY_INVITE_COVER_IMAGE_SIZE;

@@ -1,27 +1,27 @@
-// === Module 13830: BlockedUserInVoiceChannelActionSheet ===
+// === Module 13835: BlockedUserInVoiceChannelActionSheet ===
 
-// Module 13830 (BlockedUserInVoiceChannelActionSheet)
+// Module 13835 (BlockedUserInVoiceChannelActionSheet)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5492 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5496 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const setDismissalTimeForUser = fn(13824).setDismissalTimeForUser;
-const SharedSpaceWarningConstants = fn(13827);
+const setDismissalTimeForUser = fn(13829).setDismissalTimeForUser;
+const SharedSpaceWarningConstants = fn(13832);
 ({ BlockWarningEngagements: closure_9, VoiceChannelWarningSurfaces: c10 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_12, jsxs: map1, jsx: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, headerImage: { alignSelf: "center", width: 73, height: 86 }, headerText: null, centerText: null, buttonGroup: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.headerText = { gap: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };

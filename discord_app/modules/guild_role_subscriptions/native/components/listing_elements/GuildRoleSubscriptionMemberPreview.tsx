@@ -1,25 +1,25 @@
-// === Module 15322: GuildRoleSubscriptionMemberPreview ===
+// === Module 15332: GuildRoleSubscriptionMemberPreview ===
 
-// Module 15322 (GuildRoleSubscriptionMemberPreview)
+// Module 15332 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import RoleIconUtils from "RoleIconUtils" /* 7290 */;
-import RoleIconDefault from "RoleIcon" /* 7308 */;
+import utils_ColorUtilsAll from "utils/ColorUtils" /* 1092 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4791 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import RoleIconUtils from "RoleIconUtils" /* 7294 */;
+import RoleIconDefault from "RoleIcon" /* 7312 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: { marginStart: 16 }, contextRow: { flexDirection: "row", alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

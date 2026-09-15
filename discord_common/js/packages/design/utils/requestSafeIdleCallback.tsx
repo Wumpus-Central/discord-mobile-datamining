@@ -1,7 +1,7 @@
-// === Module 7575: requestSafeIdleCallback ===
+// === Module 7579: requestSafeIdleCallback ===
 
-// Module 7575 (requestSafeIdleCallback)
-import GlobalUtils from "utils/GlobalUtils" /* 1355 */;
+// Module 7579 (requestSafeIdleCallback)
+import GlobalUtils from "utils/GlobalUtils" /* 1356 */;
 import size from "module_2" /* 2 */;
 
 let global = GlobalUtils.getGlobalObject();

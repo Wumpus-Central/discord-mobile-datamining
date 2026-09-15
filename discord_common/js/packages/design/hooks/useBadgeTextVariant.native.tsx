@@ -1,7 +1,7 @@
-// === Module 4353: useBadgeTextVariant ===
+// === Module 4356: useBadgeTextVariant ===
 
-// Module 4353 (useBadgeTextVariant)
-import ThemeContext from "ThemeContext" /* 4354 */;
+// Module 4356 (useBadgeTextVariant)
+import ThemeContext from "ThemeContext" /* 4357 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/hooks/useBadgeTextVariant.native.tsx");

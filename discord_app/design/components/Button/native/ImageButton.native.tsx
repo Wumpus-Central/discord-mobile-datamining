@@ -1,10 +1,10 @@
-// === Module 10020: ImageButton ===
+// === Module 10022: ImageButton ===
 
-// Module 10020 (ImageButton)
+// Module 10022 (ImageButton)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5055 */;
-import springPresets from "springPresets" /* 5059 */;
-import ButtonConstants from "ButtonConstants" /* 5061 */;
+import spring from "spring" /* 5058 */;
+import springPresets from "springPresets" /* 5062 */;
+import ButtonConstants from "ButtonConstants" /* 5064 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles((arg0, arg1, arg2) => {
   let MEDIUM_BUTTON_PADDING = ButtonConstants.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {

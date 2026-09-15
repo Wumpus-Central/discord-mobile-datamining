@@ -1,25 +1,25 @@
-// === Module 14532: NotificationTokenManager ===
+// === Module 14541: NotificationTokenManager ===
 
-// Module 14532 (NotificationTokenManager)
+// Module 14541 (NotificationTokenManager)
 import _mod17 from "module_17" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import SentryUtilsDefault from "SentryUtils" /* 1230 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import _modDef2722 from "module_2722" /* 2722 */;
-import PushNotificationDefault from "PushNotification" /* 9817 */;
-import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12542 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14533 */;
-import NotifSettingsExperiments from "NotifSettingsExperiments" /* 14536 */;
-import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 14537 */;
-import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14538 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
-import MultiAccountStore from "MultiAccountStore" /* 12543 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13719 */;
+import util from "util" /* 1115 */;
+import SentryUtilsDefault from "SentryUtils" /* 1231 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import _modDef2723 from "module_2723" /* 2723 */;
+import PushNotificationDefault from "PushNotification" /* 9819 */;
+import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12547 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14542 */;
+import NotifSettingsExperiments from "NotifSettingsExperiments" /* 14545 */;
+import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 14546 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 14547 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
+import MultiAccountStore from "MultiAccountStore" /* 12548 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13724 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import LifecycleManager from "LifecycleManager" /* 1898 */;
+import LifecycleManager from "LifecycleManager" /* 1899 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -171,44 +171,44 @@ prototype["registerLegacyNotificationCategories"] = function registerLegacyNotif
   if (null != registerNotificationCategoriesAndGroups) {
     const obj = { calls: null, mediaConnections: null, messages: null, directMessages: null, friendRequests: null, polls: null, social: null, stageLive: null, guildEventLive: null, guildHighlights: null, forumThreadCreated: null, systemMessages: null, other: null, default: null, reactions: null };
     const intl = util.intl;
-    obj.calls = intl.string(_modDef2722["IUH/Oe"]);
+    obj.calls = intl.string(_modDef2723["IUH/Oe"]);
     const intl2 = util.intl;
-    obj.mediaConnections = intl2.string(_modDef2722.VeBD1N);
+    obj.mediaConnections = intl2.string(_modDef2723.VeBD1N);
     const intl3 = util.intl;
-    obj.messages = intl3.string(_modDef2722["4qWUAO"]);
+    obj.messages = intl3.string(_modDef2723["4qWUAO"]);
     const intl4 = util.intl;
-    obj.directMessages = intl4.string(_modDef2722.NGdNZb);
+    obj.directMessages = intl4.string(_modDef2723.NGdNZb);
     const intl5 = util.intl;
-    obj.friendRequests = intl5.string(_modDef2722.NxgGZA);
+    obj.friendRequests = intl5.string(_modDef2723.NxgGZA);
     const intl6 = util.intl;
-    obj.polls = intl6.string(_modDef2722.MOjygY);
+    obj.polls = intl6.string(_modDef2723.MOjygY);
     const intl7 = util.intl;
-    obj.social = intl7.string(_modDef2722["UzRF+8"]);
+    obj.social = intl7.string(_modDef2723["UzRF+8"]);
     const intl8 = util.intl;
-    obj.stageLive = intl8.string(_modDef2722["4n388K"]);
+    obj.stageLive = intl8.string(_modDef2723["4n388K"]);
     const intl9 = util.intl;
-    obj.guildEventLive = intl9.string(_modDef2722["40TIqW"]);
+    obj.guildEventLive = intl9.string(_modDef2723["40TIqW"]);
     const intl10 = util.intl;
     obj.guildHighlights = intl10.string(util.t.p5jg9S);
     const intl11 = util.intl;
-    obj.forumThreadCreated = intl11.string(_modDef2722.HibKoy);
+    obj.forumThreadCreated = intl11.string(_modDef2723.HibKoy);
     const intl12 = util.intl;
-    obj.systemMessages = intl12.string(_modDef2722.zJlwvV);
+    obj.systemMessages = intl12.string(_modDef2723.zJlwvV);
     const intl13 = util.intl;
-    obj.other = intl13.string(_modDef2722.kIrLfg);
+    obj.other = intl13.string(_modDef2723.kIrLfg);
     const intl14 = util.intl;
-    obj.default = intl14.string(_modDef2722["T+79Eo"]);
+    obj.default = intl14.string(_modDef2723["T+79Eo"]);
     const intl15 = util.intl;
     obj.reactions = intl15.string(util.t.gHp0C4);
     const obj2 = { realtime: null, social: null, server: null, other: null };
     const intl16 = util.intl;
-    obj2.realtime = intl16.string(_modDef2722.S5cB9e);
+    obj2.realtime = intl16.string(_modDef2723.S5cB9e);
     const intl17 = util.intl;
-    obj2.social = intl17.string(_modDef2722["UzRF+8"]);
+    obj2.social = intl17.string(_modDef2723["UzRF+8"]);
     const intl18 = util.intl;
-    obj2.server = intl18.string(_modDef2722.zRKbpz);
+    obj2.server = intl18.string(_modDef2723.zRKbpz);
     const intl19 = util.intl;
-    obj2.other = intl19.string(_modDef2722.q5M7HV);
+    obj2.other = intl19.string(_modDef2723.q5M7HV);
     const result = registerNotificationCategoriesAndGroups(obj, obj2);
   } else if (null != registerNotificationCategories) {
     const obj3 = { calls: null, mediaConnections: null, messages: null, directMessages: null, social: null, gameDetection: null, stageLive: null, guildEventLive: null, guildHighlights: null, forumThreadCreated: null, other: null, otherHighPriority: null };

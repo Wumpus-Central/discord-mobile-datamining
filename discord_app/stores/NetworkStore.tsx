@@ -1,9 +1,9 @@
-// === Module 4685: NetworkStore ===
+// === Module 4688: NetworkStore ===
 
-// Module 4685 (NetworkStore)
+// Module 4688 (NetworkStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
+import NetworkUtilsDefault from "NetworkUtils" /* 1462 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

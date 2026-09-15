@@ -1,6 +1,6 @@
-// === Module 1369: GlobalUtils ===
+// === Module 1370: GlobalUtils ===
 
-// Module 1369 (GlobalUtils)
+// Module 1370 (GlobalUtils)
 import size from "module_2" /* 2 */;
 
 let closure_0 = "development" === window.GLOBAL_ENV.PROJECT_ENV;

@@ -1,11 +1,11 @@
-// === Module 10866: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 10870: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 10866 (useMaybeFetchCollectiblesCategoriesShared)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7644 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7691 */;
+// Module 10870 (useMaybeFetchCollectiblesCategoriesShared)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7648 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7695 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4552 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+import ExperimentStore from "ExperimentStore" /* 4555 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7649 */;
 
 const require = globalThis.__r;
 

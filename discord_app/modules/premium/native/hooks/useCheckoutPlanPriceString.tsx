@@ -1,13 +1,13 @@
-// === Module 13432: useCheckoutPlanPriceString ===
+// === Module 13437: useCheckoutPlanPriceString ===
 
-// Module 13432 (useCheckoutPlanPriceString)
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7512 */;
+// Module 13437 (useCheckoutPlanPriceString)
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7516 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const useNativeCheckoutStore = fn(7527).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7531).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
 
@@ -39,7 +39,7 @@ export const useCheckoutPlanDiscountPrices = function useCheckoutPlanDiscountPri
   let memo = productId;
   const tmp2 = regularPriceString((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   const tmp = regularPriceString((orderRequired) => orderRequired.orderRequired);
-  let tmp3 = memo(1363).isIOS() && tmp;
+  let tmp3 = memo(1364).isIOS() && tmp;
   discountedPriceString = tmp3;
   const items = [tmp2, productId, tmp3];
   memo = discountedPriceString.useMemo(() => {

@@ -1,8 +1,8 @@
-// === Module 13361: getRemoteJoinFooterLabel ===
+// === Module 13366: getRemoteJoinFooterLabel ===
 
-// Module 13361 (getRemoteJoinFooterLabel)
+// Module 13366 (getRemoteJoinFooterLabel)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const ActivityGamePlatforms = Constants.ActivityGamePlatforms;

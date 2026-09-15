@@ -1,17 +1,17 @@
-// === Module 4287: ReactionUtils ===
+// === Module 4290: ReactionUtils ===
 
-// Module 4287 (ReactionUtils)
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
+// Module 4290 (ReactionUtils)
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7868 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const constants3 = fn(4288).NotificationSettingsUpdateType;
+const constants3 = fn(4291).NotificationSettingsUpdateType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 
@@ -41,7 +41,7 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
       PirBBE = t.PirBBE;
       tmp5 = require;
     }
-    const intl = tmp5(1114).intl;
+    const intl = tmp5(1115).intl;
     const obj = { reactions: count, emojiName: null };
     if (null == emoji.id) {
       let str2 = UnicodeEmojisDefault.convertSurrogateToName(emoji.name);

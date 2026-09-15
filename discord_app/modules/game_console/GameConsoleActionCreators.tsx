@@ -1,17 +1,17 @@
-// === Module 9578: GameConsoleActionCreators ===
+// === Module 9580: GameConsoleActionCreators ===
 
-// Module 9578 (GameConsoleActionCreators)
+// Module 9580 (GameConsoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 9221 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 9579 */;
-import ConsoleCommands from "ConsoleCommands" /* 9580 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9581 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 9224 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 9581 */;
+import ConsoleCommands from "ConsoleCommands" /* 9582 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9583 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
-import SessionsStore from "SessionsStore" /* 4654 */;
-import GameConsoleStore from "GameConsoleStore" /* 4653 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import SessionsStore from "SessionsStore" /* 4657 */;
+import GameConsoleStore from "GameConsoleStore" /* 4656 */;
 
 require = fn;
 function disconnectRemote() {
@@ -128,7 +128,7 @@ let closure_13 = async function _getConnectNonce() {
             CREATE_NEW_CALL = ConsoleHandoffType.ConsoleHandoffType.CREATE_NEW_CALL;
             tmp21 = require;
           }
-          const HTTP = tmp21(1270).HTTP;
+          const HTTP = tmp21(1271).HTTP;
           const request = { url: constants.CONNECT_REQUEST_CREATE, body: null, rejectWithError: false };
           const obj5 = { analytics_properties: null };
           const obj6 = { handoff_type: CREATE_NEW_CALL };

@@ -1,8 +1,8 @@
-// === Module 14641: GatewayAltEndpointExperiment ===
+// === Module 14651: GatewayAltEndpointExperiment ===
 
-// Module 14641 (GatewayAltEndpointExperiment)
-import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14642 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 14651 (GatewayAltEndpointExperiment)
+import GatewayAltEndpointCache from "GatewayAltEndpointCache" /* 14652 */;
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-07-aws-gateway", kind: "user", defaultConfig: { enableAltGateway: false }, variations: null };

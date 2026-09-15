@@ -1,9 +1,9 @@
-// === Module 12756: UserProfileConfirmThreadRemove ===
+// === Module 12761: UserProfileConfirmThreadRemove ===
 
-// Module 12756 (UserProfileConfirmThreadRemove)
-import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import AlertModal from "AlertModal" /* 4986 */;
+// Module 12761 (UserProfileConfirmThreadRemove)
+import util from "util" /* 1115 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import AlertModal from "AlertModal" /* 4989 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

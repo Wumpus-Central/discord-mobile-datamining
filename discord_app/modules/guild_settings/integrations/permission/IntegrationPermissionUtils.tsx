@@ -1,8 +1,8 @@
-// === Module 7625: IntegrationPermissionUtils ===
+// === Module 7629: IntegrationPermissionUtils ===
 
-// Module 7625 (IntegrationPermissionUtils)
-import Server from "Server" /* 1894 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
+// Module 7629 (IntegrationPermissionUtils)
+import Server from "Server" /* 1895 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7630 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

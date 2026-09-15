@@ -1,6 +1,6 @@
-// === Module 6261: ? ===
+// === Module 6265: ? ===
 
-// Module 6261
+// Module 6265
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftingTier2SmallBadge-2x.png.js");

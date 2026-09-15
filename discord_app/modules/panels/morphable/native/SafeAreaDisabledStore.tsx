@@ -1,6 +1,6 @@
-// === Module 9788: SafeAreaDisabledStore ===
+// === Module 9790: SafeAreaDisabledStore ===
 
-// Module 9788 (SafeAreaDisabledStore)
+// Module 9790 (SafeAreaDisabledStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ export default module_560.create((arg0, arg1) => {
     },
     requestSafeAreaDisableLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      closure_0(1247).batchUpdates(() => {
+      closure_0(1248).batchUpdates(() => {
         closure_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
           const hasItem = lockKeys.has(closure_1_0);

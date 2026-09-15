@@ -1,14 +1,14 @@
-// === Module 15491: FloatingApplyButton ===
+// === Module 15501: FloatingApplyButton ===
 
-// Module 15491 (FloatingApplyButton)
+// Module 15501 (FloatingApplyButton)
 import nativeDefault from "native" /* 576 */;
-import HapticUtils from "HapticUtils" /* 4604 */;
-import spring from "spring" /* 5055 */;
+import HapticUtils from "HapticUtils" /* 4607 */;
+import spring from "spring" /* 5058 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 require = fn;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1607).MEDIA_PICKER_SEND_BUTTON_SPRING;
+const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1608).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
 const __initData = { code: "function FloatingApplyButtonTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}" };
 const __initData2 = { code: "function FloatingApplyButtonTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}" };

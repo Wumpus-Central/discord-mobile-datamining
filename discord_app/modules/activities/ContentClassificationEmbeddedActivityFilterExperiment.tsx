@@ -1,7 +1,7 @@
-// === Module 9609: ContentClassificationEmbeddedActivityFilterExperiment ===
+// === Module 9611: ContentClassificationEmbeddedActivityFilterExperiment ===
 
-// Module 9609 (ContentClassificationEmbeddedActivityFilterExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 9611 (ContentClassificationEmbeddedActivityFilterExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-06-content-classification-embedded-activity-filter", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

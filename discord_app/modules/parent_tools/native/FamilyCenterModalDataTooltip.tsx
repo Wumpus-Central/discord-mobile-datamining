@@ -1,13 +1,13 @@
-// === Module 14981: FamilyCenterModalDataTooltip ===
+// === Module 14991: FamilyCenterModalDataTooltip ===
 
-// Module 14981 (FamilyCenterModalDataTooltip)
+// Module 14991 (FamilyCenterModalDataTooltip)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import _modDef2396 from "module_2396" /* 2396 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8769 */;
-import Modal from "Modal" /* 12059 */;
+import util from "util" /* 1115 */;
+import _modDef2397 from "module_2397" /* 2397 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8772 */;
+import Modal from "Modal" /* 12063 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -31,9 +31,9 @@ function FamilyCenterModalDataTooltipScreen() {
   const intl = require("util").intl;
   obj = require("useAgeSpecificText");
   const intl2 = require("util").intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2396.n6LOrh), intl2.string(_modDef2396.JNLpDZ));
+  const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2397.n6LOrh), intl2.string(_modDef2397.JNLpDZ));
   _require = useIsInAdultAgeGroupDefault();
-  const stringResult = intl.string(_modDef2396.n6LOrh);
+  const stringResult = intl.string(_modDef2397.n6LOrh);
   const sortedActivityTypeConfigs = require("FamilyCenterUtils").getSortedActivityTypeConfigs();
   const obj3 = { children: null };
   const obj4 = { children: null };
@@ -62,9 +62,9 @@ function FamilyCenterModalDataTooltipScreen() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(5152).ChatIcon, [USER_CALLED]: fn(12051).PhoneIcon, [USER_ADD]: fn(4336).FriendsIcon, [GUILD_ADD]: fn(13676).ServerGridIcon, [GUILD_INTERACTION]: fn(5154).ThreadIcon, [PURCHASES]: fn(12053).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(4599).ClockIcon, [GIFTS]: fn(11165).GiftIcon };
-({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7641).TeenActionDisplayType);
-let createStyles = fn(4636);
+let obj = { [USER_INTERACTION]: fn(5155).ChatIcon, [USER_CALLED]: fn(12055).PhoneIcon, [USER_ADD]: fn(4339).FriendsIcon, [GUILD_ADD]: fn(13681).ServerGridIcon, [GUILD_INTERACTION]: fn(5157).ThreadIcon, [PURCHASES]: fn(12057).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(4602).ClockIcon, [GIFTS]: fn(11169).GiftIcon };
+({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7645).TeenActionDisplayType);
+let createStyles = fn(4639);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
 let size = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, flexShrink: 0, marginRight: nativeDefault.space.PX_12 };
 obj3.iconContainer = size;
@@ -73,7 +73,7 @@ obj3.header = { marginBottom: nativeDefault.space.PX_4 };
 let obj5 = { marginBottom: nativeDefault.space.PX_4 };
 obj3.icon = { tintColor: nativeDefault.colors.TEXT_BRAND };
 let closure_8 = createStyles.createStyles(obj3);
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj7 = { container: null, groupHeader: null };
 const obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };

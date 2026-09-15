@@ -1,7 +1,7 @@
-// === Module 17681: EmojiOverflowActionSheet ===
+// === Module 17719: EmojiOverflowActionSheet ===
 
-// Module 17681 (EmojiOverflowActionSheet)
-import EmojiActionCreators from "EmojiActionCreators" /* 10465 */;
+// Module 17719 (EmojiOverflowActionSheet)
+import EmojiActionCreators from "EmojiActionCreators" /* 10468 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({ header: { paddingHorizontal: 8, flexDirection: "row", alignItems: "center", gap: 16 }, emojiImage: { width: 30, height: 30, resizeMode: "contain" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/EmojiOverflowActionSheet.tsx");

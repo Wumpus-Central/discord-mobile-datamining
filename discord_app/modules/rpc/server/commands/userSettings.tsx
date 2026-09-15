@@ -1,11 +1,11 @@
-// === Module 14594: userSettings ===
+// === Module 14604: userSettings ===
 
-// Module 14594 (userSettings)
-import LocaleStore from "LocaleStore" /* 2025 */;
+// Module 14604 (userSettings)
+import LocaleStore from "LocaleStore" /* 2026 */;
 
 const obj = {};
 obj[fn(1074).RPCCommands.USER_SETTINGS_GET_LOCALE] = {
-  scope: fn(8457).OAuth2Scopes.IDENTIFY,
+  scope: fn(8460).OAuth2Scopes.IDENTIFY,
   handler() {
     return { locale: LocaleStore.locale };
   }

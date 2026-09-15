@@ -1,6 +1,6 @@
-// === Module 7177: ReanimatedHelperTypes ===
+// === Module 7181: ReanimatedHelperTypes ===
 
-// Module 7177 (ReanimatedHelperTypes)
+// Module 7181 (ReanimatedHelperTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/reanimated/ReanimatedHelperTypes.tsx");

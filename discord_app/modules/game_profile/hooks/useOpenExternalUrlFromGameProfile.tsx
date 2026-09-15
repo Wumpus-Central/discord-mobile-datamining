@@ -1,7 +1,7 @@
-// === Module 8806: useOpenExternalUrlFromGameProfile ===
+// === Module 8809: useOpenExternalUrlFromGameProfile ===
 
-// Module 8806 (useOpenExternalUrlFromGameProfile)
-import GameUtilsDefault from "GameUtils" /* 8807 */;
+// Module 8809 (useOpenExternalUrlFromGameProfile)
+import GameUtilsDefault from "GameUtils" /* 8810 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;

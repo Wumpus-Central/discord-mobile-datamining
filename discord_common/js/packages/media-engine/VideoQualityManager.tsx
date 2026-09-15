@@ -1,8 +1,8 @@
-// === Module 4704: VideoQualityManager ===
+// === Module 4707: VideoQualityManager ===
 
-// Module 4704 (VideoQualityManager)
-import MediaSinkWantsLadder from "MediaSinkWantsLadder" /* 4705 */;
-import Constants from "Constants" /* 4661 */;
+// Module 4707 (VideoQualityManager)
+import MediaSinkWantsLadder from "MediaSinkWantsLadder" /* 4708 */;
+import Constants from "Constants" /* 4664 */;
 import size from "module_2" /* 2 */;
 
 ({ defaultVideoQualityOptions: c2, MediaEngineContextTypes: c3, VideoQualityMode, VIDEO_QUALITY_FRAMERATE: closure_4, BIT_FLOOR_PER_PIXEL: hasOwnProperty } = Constants);
@@ -132,7 +132,7 @@ class VideoQualityManager {
     if (importDefault === undefined) {
       tmp = closure_2;
     }
-    merged = Object.assign({ isMuted: false });
+    merged = Object.assign({ isMuted: false, fakeGoLiveEncodePixelCount: null });
     merged.contextType = global;
     merged.connection = require;
     merged.options = tmp;
@@ -264,6 +264,9 @@ prototype2["getVideoQuality"] = function getVideoQuality(localWant) {
   obj.localWant = localWant;
   return new WantsVideoQuality(obj);
 };
+prototype2["setFakeGoLiveEncodePixelCount"] = function setFakeGoLiveEncodePixelCount(fakeGoLiveEncodePixelCount) {
+  this.fakeGoLiveEncodePixelCount = fakeGoLiveEncodePixelCount;
+};
 prototype2["scaleLinearly"] = function scaleLinearly(arg0, pixelCount, bitrateMax) {
   let num = 0;
   if (0 !== pixelCount) {
@@ -274,31 +277,39 @@ prototype2["scaleLinearly"] = function scaleLinearly(arg0, pixelCount, bitrateMa
 prototype2["getGoliveQuality"] = function getGoliveQuality(localWant, arg1) {
   const self = this;
   const encode = this.goliveMaxQuality.encode;
-  let pixelCount;
+  let pixelCount1;
   if (encode != null) {
-    pixelCount = encode.pixelCount;
+    pixelCount1 = encode.pixelCount;
   }
-  if (undefined !== pixelCount) {
-    if (arg1 < self.goliveMaxQuality.encode.pixelCount) {
-      if (arg1 > 0) {
-        const _Math7 = Math;
+  if (undefined !== pixelCount1) {
+    if (arg1 > 0) {
+      if (null !== self.fakeGoLiveEncodePixelCount) {
+        const _Math = Math;
+        let pixelCount = Math.min(self.fakeGoLiveEncodePixelCount, self.goliveMaxQuality.encode.pixelCount);
+      } else {
+        pixelCount = self.goliveMaxQuality.encode.pixelCount;
+      }
+      if (arg1 >= pixelCount) {
+        return self.goliveMaxQuality;
+      } else {
+        const _Math8 = Math;
         const bound = Math.min(hasOwnProperty * self.goliveMaxQuality.encode.pixelCount * self.goliveMaxQuality.encode.framerate, self.goliveMaxQuality.bitrateMax);
         let scaleLinearlyResult2;
-        const scaleLinearlyResult = self.scaleLinearly(arg1, self.goliveMaxQuality.encode.pixelCount, self.goliveMaxQuality.bitrateMin);
+        const scaleLinearlyResult = self.scaleLinearly(arg1, pixelCount, self.goliveMaxQuality.bitrateMin);
         if (null != self.goliveMaxQuality.bitrateTarget) {
-          scaleLinearlyResult2 = self.scaleLinearly(arg1, self.goliveMaxQuality.encode.pixelCount, self.goliveMaxQuality.bitrateTarget);
+          scaleLinearlyResult2 = self.scaleLinearly(arg1, pixelCount, self.goliveMaxQuality.bitrateTarget);
         }
         const obj = { encode: self.goliveMaxQuality.encode, capture: self.goliveMaxQuality.capture, bitrateMin: null, bitrateMax: null, bitrateTarget: null, localWant: null };
-        const _Math = Math;
         const _Math2 = Math;
-        obj.bitrateMin = Math.max(Math.ceil(scaleLinearlyResult), self.options.videoBitrateFloor);
         const _Math3 = Math;
+        obj.bitrateMin = Math.max(Math.ceil(scaleLinearlyResult), self.options.videoBitrateFloor);
         const _Math4 = Math;
-        obj.bitrateMax = Math.max(Math.ceil(self.scaleLinearly(arg1, self.goliveMaxQuality.encode.pixelCount, self.goliveMaxQuality.bitrateMax)), bound);
+        const _Math5 = Math;
+        obj.bitrateMax = Math.max(Math.ceil(self.scaleLinearly(arg1, pixelCount, self.goliveMaxQuality.bitrateMax)), bound);
         let bound1;
         if (null != scaleLinearlyResult2) {
-          const _Math5 = Math;
           const _Math6 = Math;
+          const _Math7 = Math;
           bound1 = Math.max(Math.ceil(scaleLinearlyResult2), self.options.videoBitrateFloor);
         }
         obj.bitrateTarget = bound1;

@@ -1,7 +1,7 @@
-// === Module 11417: BountiesMobileQuestBarExperiment ===
+// === Module 11421: BountiesMobileQuestBarExperiment ===
 
-// Module 11417 (BountiesMobileQuestBarExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 11421 (BountiesMobileQuestBarExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-bounties-mobile-quest-bar", kind: "user", defaultConfig: { enabled: false }, variations: null };

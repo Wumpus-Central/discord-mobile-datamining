@@ -1,27 +1,27 @@
-// === Module 11287: UserProfilePrimaryInfo ===
+// === Module 11291: UserProfilePrimaryInfo ===
 
-// Module 11287 (UserProfilePrimaryInfo)
+// Module 11291 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import StringUtils from "StringUtils" /* 1925 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import Pressables from "Pressables" /* 5204 */;
-import QuestTypes from "QuestTypes" /* 5528 */;
-import openUserSettings from "openUserSettings" /* 7485 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import GuildTagUtils from "GuildTagUtils" /* 8282 */;
-import BadgeId from "BadgeId" /* 8301 */;
-import useBadges from "useBadges" /* 8358 */;
-import GuildTagDefault from "GuildTag" /* 9313 */;
-import BotTagDefault from "BotTag" /* 9568 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11028 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11326 */;
-import captureAdUserAction from "captureAdUserAction" /* 11327 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11331 */;
-import BadgeUtils from "BadgeUtils" /* 11333 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import StringUtils from "StringUtils" /* 1926 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import Pressables from "Pressables" /* 5207 */;
+import QuestTypes from "QuestTypes" /* 5532 */;
+import openUserSettings from "openUserSettings" /* 7489 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7833 */;
+import GuildTagUtils from "GuildTagUtils" /* 8285 */;
+import BadgeId from "BadgeId" /* 8304 */;
+import useBadges from "useBadges" /* 8361 */;
+import GuildTagDefault from "GuildTag" /* 9316 */;
+import BotTagDefault from "BotTag" /* 9570 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11032 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11330 */;
+import captureAdUserAction from "captureAdUserAction" /* 11331 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11335 */;
+import BadgeUtils from "BadgeUtils" /* 11337 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -613,16 +613,16 @@ function GuildTag(style) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8300).getBadgeName;
-let Constants = fn(7311);
+const getBadgeName = fn(8303).getBadgeName;
+let Constants = fn(7315);
 ({ DIVIDER_DOT: closure_7, PROFILE_SIDE_PADDING: closure_8, UserProfileThemeTypes } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
-const GuildTagBadgeSize = fn(8048).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8311).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8051).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8314).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 }, transparentBackground: { backgroundColor: "transparent" }, badge: { resizeMode: "contain" }, badges: { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 }, badgeRow: null, limitedBadgeRow: null };
 let obj3 = { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 };
 obj2.badgeRow = { borderRadius: nativeDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };

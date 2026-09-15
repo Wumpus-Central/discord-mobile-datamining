@@ -1,8 +1,8 @@
-// === Module 5242: VideoUploadUtils ===
+// === Module 5245: VideoUploadUtils ===
 
-// Module 5242 (VideoUploadUtils)
+// Module 5245 (VideoUploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import size from "module_2" /* 2 */;
 
 const VideoCompressionQuality = UnsyncedUserSettingsStore.VideoCompressionQuality;

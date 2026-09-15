@@ -1,17 +1,17 @@
-// === Module 17055: ConnectionDeprecationBottomSheet ===
+// === Module 17093: ConnectionDeprecationBottomSheet ===
 
-// Module 17055 (ConnectionDeprecationBottomSheet)
+// Module 17093 (ConnectionDeprecationBottomSheet)
 import nativeDefault from "native" /* 576 */;
-import AvatarUtils from "AvatarUtils" /* 1396 */;
-import themes from "themes" /* 4345 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import Icon from "Icon" /* 5058 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 7268 */;
-import GameIcon from "GameIcon" /* 7275 */;
-import AccountLinkManager from "AccountLinkManager" /* 17056 */;
+import AvatarUtils from "AvatarUtils" /* 1397 */;
+import themes from "themes" /* 4348 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import Icon from "Icon" /* 5061 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 7272 */;
+import GameIcon from "GameIcon" /* 7279 */;
+import AccountLinkManager from "AccountLinkManager" /* 17094 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4864 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5362 */;
+import ApplicationStore from "ApplicationStore" /* 4867 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5366 */;
 
 const require = globalThis.__r;
 const IconDefault = Icon;
@@ -44,10 +44,10 @@ function ApplicationIcon(application) {
   return React6(View, obj);
 }
 const View = fn(17).View;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, content: { paddingHorizontal: nativeDefault.space.PX_16 }, text: { textAlign: "center" }, connectionIcon: { height: 48, width: 48 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -197,7 +197,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(7271).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(7275).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

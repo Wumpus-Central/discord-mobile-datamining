@@ -1,18 +1,18 @@
-// === Module 10300: MessageNotificationHeader ===
+// === Module 10302: MessageNotificationHeader ===
 
-// Module 10300 (MessageNotificationHeader)
+// Module 10302 (MessageNotificationHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import ChannelTypes from "ChannelTypes" /* 1094 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import useChannelName from "useChannelName" /* 4789 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5109 */;
-import ChatIcon2 from "ChatIcon" /* 5152 */;
-import ThreadIcon2 from "ThreadIcon" /* 5154 */;
+import ChannelTypes from "ChannelTypes" /* 1095 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import useChannelName from "useChannelName" /* 4792 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5112 */;
+import ChatIcon2 from "ChatIcon" /* 5155 */;
+import ThreadIcon2 from "ThreadIcon" /* 5157 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function LocationText(channel) {
@@ -61,7 +61,7 @@ function LocationText(channel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, headerContent: { flex: 1, flexDirection: "row", alignItems: "center" }, primaryText: { flexShrink: 1, marginRight: 2 }, secondaryTextContainer: { flexDirection: "row", alignItems: "center", gap: 2, flex: 1, overflow: "hidden" }, separator: { marginHorizontal: 2 }, icon: { width: 16, height: 16 }, secondaryText: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,18 +1,18 @@
-// === Module 8001: ForumPostMediaUtils ===
+// === Module 8004: ForumPostMediaUtils ===
 
-// Module 8001 (ForumPostMediaUtils)
+// Module 8004 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import URLUtilsDefault from "URLUtils" /* 1365 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import FlagUtils from "FlagUtils" /* 1384 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4786 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4861 */;
+import URLUtilsDefault from "URLUtils" /* 1366 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import FlagUtils from "FlagUtils" /* 1385 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4789 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4864 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7409 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4857 */;
-import UserStore from "UserStore" /* 1371 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7413 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MessageStore from "MessageStore" /* 4860 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
@@ -203,7 +203,7 @@ function useForumPostEmbeds(embeds, flag) {
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1369).isNotNullish);
+          let found = mapped.filter(tmp(1370).isNotNullish);
         }
         return found;
       }

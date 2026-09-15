@@ -1,16 +1,16 @@
-// === Module 12126: LegacyCommands ===
+// === Module 12130: LegacyCommands ===
 
-// Module 12126 (LegacyCommands)
-import UserSettings from "UserSettings" /* 1935 */;
-import ReactionUtils from "ReactionUtils" /* 4287 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7559 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7866 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9432 */;
+// Module 12130 (LegacyCommands)
+import UserSettings from "UserSettings" /* 1936 */;
+import ReactionUtils from "ReactionUtils" /* 4290 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7563 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7869 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9435 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 5540 */;
-import MessageStore from "MessageStore" /* 4857 */;
-import t_mod from "module_4333" /* 4333 */;
+import EmojiStore from "EmojiStore" /* 5544 */;
+import MessageStore from "MessageStore" /* 4860 */;
+import t_mod from "module_4336" /* 4336 */;
 
 require = fn;
 const Constants = fn(1074);

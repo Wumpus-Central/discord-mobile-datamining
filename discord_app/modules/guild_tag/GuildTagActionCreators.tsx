@@ -1,9 +1,9 @@
-// === Module 14002: GuildTagActionCreators ===
+// === Module 14007: GuildTagActionCreators ===
 
-// Module 14002 (GuildTagActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+// Module 14007 (GuildTagActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 let closure_6 = async function _adoptGuildIdentity() {

@@ -1,7 +1,7 @@
-// === Module 5089: markup/ChannelUtils ===
+// === Module 5092: markup/ChannelUtils ===
 
-// Module 5089 (markup/ChannelUtils)
-import ChannelRecord from "ChannelRecord" /* 1961 */;
+// Module 5092 (markup/ChannelUtils)
+import ChannelRecord from "ChannelRecord" /* 1962 */;
 import size from "module_2" /* 2 */;
 
 ({ isGuildSelectableChannelType: closure_0, isGuildVocalChannelType: closure_1 } = ChannelRecord);

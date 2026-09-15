@@ -1,30 +1,30 @@
-// === Module 18014: receiveNotification ===
+// === Module 18052: receiveNotification ===
 
-// Module 18014 (receiveNotification)
+// Module 18052 (receiveNotification)
 import LoggerDefault from "Logger" /* 3 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import router_utils from "router_utils" /* 1100 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import parseURLDefault from "parseURL" /* 4616 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
-import MessageManagerDefault from "MessageManager" /* 10071 */;
-import _modDef11387 from "module_11387" /* 11387 */;
+import router_utils from "router_utils" /* 1101 */;
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import parseURLDefault from "parseURL" /* 4619 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8472 */;
+import MessageManagerDefault from "MessageManager" /* 10073 */;
+import _modDef11391 from "module_11391" /* 11391 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7629 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7633 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function onStageConnectionError() {
   const obj2 = { key: "STAGE_DISCOVERY_CONNECTION_ERROR_GENERIC", content: null, icon: null };
   const intl = util.intl;
   obj2.content = intl.string(util.t.ah3RLk);
-  obj2.icon = _modDef11387;
+  obj2.icon = _modDef11391;
   ToastActionCreatorsDefault.open(obj2);
 }
 function waitForConnection() {
@@ -314,10 +314,10 @@ let closure_28 = async function _handleGuildEventNotification(arg0) {
             if (null == channel_id) {
               (function onVoiceConnectionError() {
                 const obj2 = { key: "VOICE_CONNECTION_ERROR_GENERIC", content: null, icon: null };
-                const intl = closure_1_0(1114).intl;
-                obj2.content = intl.string(closure_1_0(1114).t.S69lJR);
-                obj2.icon = closure_1_1(11387);
-                closure_1_1(4335).open(obj2);
+                const intl = closure_1_0(1115).intl;
+                obj2.content = intl.string(closure_1_0(1115).t.S69lJR);
+                obj2.icon = closure_1_1(11391);
+                closure_1_1(4338).open(obj2);
               })();
               c4 = 3;
               c4 = 3;
@@ -801,7 +801,7 @@ function receiveNotification_(data) {
         flag2 = false;
         if ("" !== data.deeplink) {
           const payload = parseURLDefault(data.deeplink).payload;
-          if (payload.type === tmp(1093).LinkingTypes.MESSAGE) {
+          if (payload.type === tmp(1094).LinkingTypes.MESSAGE) {
             let tracking_type;
             if (data != null) {
               tracking_type = data.tracking_type;
@@ -810,8 +810,8 @@ function receiveNotification_(data) {
               tracking_type = data.type;
             }
             if (tmp8) {
-              tmp(11757).receivedNotification(payload.messageId, payload.channelId, tracking_type);
-              const tmpResult = tmp(11757);
+              tmp(11761).receivedNotification(payload.messageId, payload.channelId, tracking_type);
+              const tmpResult = tmp(11761);
             }
             ({ guildId: obj8.guildId, channelId: obj8.channelId, messageId: obj8.messageId } = payload);
             const messages1 = MessageManagerDefault.fetchMessages({ guildId: null, channelId: null, messageId: null, isPreload: true });
@@ -821,7 +821,7 @@ function receiveNotification_(data) {
             tmp8 = null != tracking_type && null != payload.messageId && null != payload.channelId;
             const tmp80Result = MessageManagerDefault;
           } else {
-            if (payload.type === tmp(1093).LinkingTypes.ICYMI) {
+            if (payload.type === tmp(1094).LinkingTypes.ICYMI) {
               if (null != data.channel_id) {
                 if (null != data.message_id) {
                   const forNotification = ICYMIActionCreatorsDefault.fetchForNotification(data.channel_id, data.message_id);
@@ -833,7 +833,7 @@ function receiveNotification_(data) {
             }
             flag = false;
             flag2 = false;
-            if (payload.type === tmp(1093).LinkingTypes.ICYMI) {
+            if (payload.type === tmp(1094).LinkingTypes.ICYMI) {
               flag = false;
               flag2 = false;
               if (null != data.user_id) {
@@ -847,7 +847,7 @@ function receiveNotification_(data) {
                       status_emoji_id = data.status_emoji_id;
                     }
                   }
-                  const obj5 = { id: data.notification_center_id, type: tmp(8466).ICYMIItemTypes.CUSTOM_STATUS, score: 1000, data: null };
+                  const obj5 = { id: data.notification_center_id, type: tmp(8469).ICYMIItemTypes.CUSTOM_STATUS, score: 1000, data: null };
                   const obj6 = { user_id: null, text: null, emoji_id: null, emoji_name: null, emoji_animated: null };
                   ({ user_id: obj3.user_id, status_text: obj3.text } = data);
                   obj6.emoji_id = status_emoji_id;
@@ -984,9 +984,9 @@ function receiveNotification_(data) {
             let obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          let tmp19Result5 = tmp19(4839);
+          let tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          let tmpResult2 = tmp(1100);
+          let tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           let CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           let obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -1055,7 +1055,7 @@ function receiveNotification_(data) {
           let result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          let tmp19Result6 = tmp19(4838);
+          let tmp19Result6 = tmp19(4841);
           let obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -1088,9 +1088,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              let tmp19Result7 = tmp19(4616);
+              let tmp19Result7 = tmp19(4619);
               let tmp19Result3Result = tmp19Result7(data.deeplink);
-              let tmp19Result8 = tmp19(13939);
+              let tmp19Result8 = tmp19(13944);
               let obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -1213,9 +1213,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -1284,7 +1284,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -1317,9 +1317,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -1442,9 +1442,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -1513,7 +1513,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -1546,9 +1546,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -1671,9 +1671,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -1742,7 +1742,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -1775,9 +1775,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -1900,9 +1900,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -1971,7 +1971,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -2004,9 +2004,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2129,9 +2129,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -2200,7 +2200,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -2233,9 +2233,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2358,9 +2358,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -2429,7 +2429,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -2462,9 +2462,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2587,9 +2587,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -2658,7 +2658,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -2691,9 +2691,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -2816,9 +2816,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -2887,7 +2887,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -2920,9 +2920,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -3045,9 +3045,9 @@ function receiveNotification_(data) {
             obj14 = { type: "MESSAGE_CREATE", channelId: data.message.channel_id, message: data.message, optimistic: true, isPushNotification: true };
             tmp19Result.dispatch(obj14);
           }
-          tmp19Result5 = tmp19(4839);
+          tmp19Result5 = tmp19(4842);
           tmp19Result5.popAll();
-          tmpResult2 = tmp(1100);
+          tmpResult2 = tmp(1101);
           ({ guild_id, channel_id, message_id } = data);
           CHANNELResult = closure_14.CHANNEL(guild_id, channel_id, message_id);
           obj15 = { navigationReplace: true, openChannel: true, skipMessageFetch: flag };
@@ -3116,7 +3116,7 @@ function receiveNotification_(data) {
           result5 = handleFriendSuggestionCreateNotification(data);
         break;
         case "GUILD_STREAM_START":
-          tmp19Result6 = tmp19(4838);
+          tmp19Result6 = tmp19(4841);
           obj16 = { streamType: StreamTypes.GUILD, ownerId: data.user_id, guildId: data.guild_id, channelId: data.channel_id };
           tmp19Result6(obj16);
         break;
@@ -3149,9 +3149,9 @@ function receiveNotification_(data) {
         case "GENERIC_PUSH_NOTIFICATION_SENT":
           if (null != data.deeplink) {
             if ("" !== data.deeplink) {
-              tmp19Result7 = tmp19(4616);
+              tmp19Result7 = tmp19(4619);
               tmp19Result3Result = tmp19Result7(data.deeplink);
-              tmp19Result8 = tmp19(13939);
+              tmp19Result8 = tmp19(13944);
               obj17 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result8(obj17);
             }
@@ -3164,13 +3164,13 @@ function receiveNotification_(data) {
   }
   const obj = require("RouteManagerUtils");
 }
-fn(5639).addPostConnectionCallback;
-const NotificationTypes = fn(6697).NotificationTypes;
+fn(5643).addPostConnectionCallback;
+const NotificationTypes = fn(6701).NotificationTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12, RelationshipTypes: map1, Routes: closure_14 } = Constants);
-const StreamTypes = fn(4678).StreamTypes;
-let closure_16 = fn(1963).GuildScheduledEventEntityTypes;
-const constants = fn(12544).MultiAccountSwitchLocation;
+const StreamTypes = fn(4681).StreamTypes;
+let closure_16 = fn(1964).GuildScheduledEventEntityTypes;
+const constants = fn(12549).MultiAccountSwitchLocation;
 const logger = new LoggerDefault("receiveNotification");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/push_notifications/native/receiveNotification.tsx");
@@ -3179,24 +3179,24 @@ export default function receiveNotification(getData, arg1) {
   if (null == getData.getData) {
     return false;
   } else {
-    data(7578).trackAppOpened("notification");
+    data(7582).trackAppOpened("notification");
     data = getData.getData();
-    const obj3 = data(7578);
+    const obj3 = data(7582);
     const _HermesInternal = HermesInternal;
     AppStartPerformanceDefault.mark("\u2757", "Receive notification " + data.type);
     if (null != data.receiving_user_id) {
       if (null != AuthenticationStore.getId()) {
         if (data.receiving_user_id !== AuthenticationStore.getId()) {
-          tmp7(7579);
-          tmp7(5358);
-          tmp7(13719);
+          tmp7(7583);
+          tmp7(5362);
+          tmp7(13724);
           let receiving_user_id = data.receiving_user_id;
-          receiving_user_id = tmp7(12547).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
+          receiving_user_id = tmp7(12552).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {
             const Emitter = initializeDefault.Emitter;
             Emitter.batched(() => receiveNotification_(data));
           });
-          const tmp7Result6 = tmp7(12547);
+          const tmp7Result6 = tmp7(12552);
         }
       }
     }

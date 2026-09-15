@@ -1,7 +1,7 @@
-// === Module 16036: RiveAppStatePlaybackExperiment ===
+// === Module 16049: RiveAppStatePlaybackExperiment ===
 
-// Module 16036 (RiveAppStatePlaybackExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 16049 (RiveAppStatePlaybackExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-rive-app-state-playback", kind: "user", defaultConfig: { enabled: false }, variations: null };

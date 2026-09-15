@@ -1,7 +1,7 @@
-// === Module 13523: PremiumReferralIncentivesExperiment ===
+// === Module 13528: PremiumReferralIncentivesExperiment ===
 
-// Module 13523 (PremiumReferralIncentivesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 13528 (PremiumReferralIncentivesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { ORBS: "orbs", DISCOUNT: "discount" };

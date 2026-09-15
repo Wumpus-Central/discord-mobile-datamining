@@ -1,6 +1,6 @@
-// === Module 1329: AnalyticsTrackingActionCreators ===
+// === Module 1330: AnalyticsTrackingActionCreators ===
 
-// Module 1329 (AnalyticsTrackingActionCreators)
+// Module 1330 (AnalyticsTrackingActionCreators)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingActionCreators.tsx");

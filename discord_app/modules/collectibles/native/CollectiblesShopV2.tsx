@@ -1,21 +1,21 @@
-// === Module 15900: CollectiblesShopV2 ===
+// === Module 15913: CollectiblesShopV2 ===
 
-// Module 15900 (CollectiblesShopV2)
-import SentryUtilsDefault from "SentryUtils" /* 1230 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7692 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8973 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9496 */;
-import ShopCategory from "ShopCategory" /* 15905 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15907 */;
+// Module 15913 (CollectiblesShopV2)
+import SentryUtilsDefault from "SentryUtils" /* 1231 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7696 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8307 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8976 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9498 */;
+import ShopCategory from "ShopCategory" /* 15918 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15920 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4635 */;
-import ThemeStore from "ThemeStore" /* 1181 */;
-import UserStore from "UserStore" /* 1371 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7645 */;
+import DevSettingsStore from "DevSettingsStore" /* 4638 */;
+import ThemeStore from "ThemeStore" /* 1182 */;
+import UserStore from "UserStore" /* 1372 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7649 */;
 
 require = fn;
 class CollectiblesShopV2 {
@@ -96,7 +96,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, PaymentGateways: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const collapsedCategories = createStyles.createStyles({ rootContainer: { height: "100%", width: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 } });
 function CollectiblesShopInternal(analyticsSource) {
   analyticsSource = analyticsSource.analyticsSource;

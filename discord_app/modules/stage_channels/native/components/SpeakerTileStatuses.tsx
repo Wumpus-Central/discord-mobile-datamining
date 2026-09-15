@@ -1,19 +1,19 @@
-// === Module 10179: SpeakerTileStatuses ===
+// === Module 10181: SpeakerTileStatuses ===
 
-// Module 10179 (SpeakerTileStatuses)
+// Module 10181 (SpeakerTileStatuses)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import _modDef7070 from "module_7070" /* 7070 */;
-import _modDef10181 from "module_10181" /* 10181 */;
+import native from "native" /* 1177 */;
+import _modDef7074 from "module_7074" /* 7074 */;
+import _modDef10183 from "module_10183" /* 10183 */;
 import noop from "module_19" /* 19 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5502 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5506 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
 let size = { position: "absolute", top: 4, left: 4, backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
 obj.voiceStatusWrapper = size;
@@ -48,15 +48,15 @@ const memoResult = noop.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10136);
+    let tmp5 = channelId(10138);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9756);
+    tmp5 = channelId(9758);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(9757);
+      tmp5 = channelId(9759);
       flag3 = false;
     }
   }
@@ -65,8 +65,8 @@ const memoResult = noop.memo((userId) => {
     const obj3 = { style: null, children: null };
     const items4 = [tmp.voiceStatusWrapper, userId.style];
     obj3.style = items4;
-    const obj4 = { source: tmp5, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 };
-    obj3.children = jsx(tmp2(1176).Icon, { source: tmp5, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 });
+    const obj4 = { source: tmp5, size: tmp2(1177).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 };
+    obj3.children = jsx(tmp2(1177).Icon, { source: tmp5, size: tmp2(1177).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 });
     tmp9 = <View style={null}>{null}</View>;
   }
   return tmp9;
@@ -83,24 +83,24 @@ export const ModeratorStatus = noop.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10180);
+    tmp4 = channelId(10182);
   }
   let tmp6 = null;
   if (null != tmp4) {
     const obj2 = { style: null, children: null };
     const items2 = [tmp.moderatorStatusWrapper, userId.style];
     obj2.style = items2;
-    const obj3 = { source: tmp4, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
-    obj2.children = jsx(tmp2(1176).Icon, { source: tmp4, size: tmp2(1176).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK });
+    const obj3 = { source: tmp4, size: tmp2(1177).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
+    obj2.children = jsx(tmp2(1177).Icon, { source: tmp4, size: tmp2(1177).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK });
     tmp6 = <View style={null}>{null}</View>;
   }
   return tmp6;
 });
 export const BlockedStatus = function BlockedStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef10181, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef10183, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const tmp = closure_8();
-  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef7070, size: native.Icon.Sizes.EXTRA_SMALL });
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef7074, size: native.Icon.Sizes.EXTRA_SMALL });
 };

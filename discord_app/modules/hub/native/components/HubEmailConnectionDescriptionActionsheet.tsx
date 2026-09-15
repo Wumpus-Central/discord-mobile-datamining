@@ -1,16 +1,16 @@
-// === Module 12863: HubEmailConnectionDescriptionActionsheet ===
+// === Module 12868: HubEmailConnectionDescriptionActionsheet ===
 
-// Module 12863 (HubEmailConnectionDescriptionActionsheet)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+// Module 12868 (HubEmailConnectionDescriptionActionsheet)
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7256 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7257 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_4 = createStyles.createStyles({ description: { marginBottom: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");

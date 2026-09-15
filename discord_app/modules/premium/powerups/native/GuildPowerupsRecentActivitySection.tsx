@@ -1,23 +1,23 @@
-// === Module 12709: GuildPowerupsRecentActivitySection ===
+// === Module 12714: GuildPowerupsRecentActivitySection ===
 
-// Module 12709 (GuildPowerupsRecentActivitySection)
+// Module 12714 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import DateUtils from "DateUtils" /* 4318 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7083 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8065 */;
-import BoostGemIcon from "BoostGemIcon" /* 9505 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12710 */;
-import BoostTier1Icon from "BoostTier1Icon" /* 12712 */;
-import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12714 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12716 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import DateUtils from "DateUtils" /* 4321 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7087 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8068 */;
+import BoostGemIcon from "BoostGemIcon" /* 9507 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12715 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 12717 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12719 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12721 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4636 */;
+import createStyles from "createStyles" /* 4639 */;
 import size from "module_2" /* 2 */;
 
 const useMaybeGetSortedBoostsDefault = useMaybeGetSortedBoosts;

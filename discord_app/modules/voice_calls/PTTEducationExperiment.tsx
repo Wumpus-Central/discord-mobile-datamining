@@ -1,7 +1,7 @@
-// === Module 14090: PTTEducationExperiment ===
+// === Module 14095: PTTEducationExperiment ===
 
-// Module 14090 (PTTEducationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 14095 (PTTEducationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { showPTTJoinTooltip: false, showPTTIconIndicator: false, showPTTNoKeybindWarning: false, showPTTSpeakingIndicator: false };

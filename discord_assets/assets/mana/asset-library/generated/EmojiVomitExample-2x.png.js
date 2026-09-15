@@ -1,6 +1,6 @@
-// === Module 6059: ? ===
+// === Module 6063: ? ===
 
-// Module 6059
+// Module 6063
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiVomitExample-2x.png.js");

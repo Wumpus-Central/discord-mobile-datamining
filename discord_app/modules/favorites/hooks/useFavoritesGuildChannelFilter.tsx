@@ -1,13 +1,13 @@
-// === Module 11112: useFavoritesGuildChannelFilter ===
+// === Module 11116: useFavoritesGuildChannelFilter ===
 
-// Module 11112 (useFavoritesGuildChannelFilter)
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import sortByMatchScore from "sortByMatchScore" /* 9965 */;
+// Module 11116 (useFavoritesGuildChannelFilter)
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import FavoritesUtils from "FavoritesUtils" /* 1983 */;
+import sortByMatchScore from "sortByMatchScore" /* 9967 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import FavoriteStore from "FavoriteStore" /* 1960 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import FavoriteStore from "FavoriteStore" /* 1961 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;

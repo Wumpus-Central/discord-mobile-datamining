@@ -1,11 +1,11 @@
-// === Module 7228: usePromptHelpText ===
+// === Module 7232: usePromptHelpText ===
 
-// Module 7228 (usePromptHelpText)
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 7232 (usePromptHelpText)
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 const Permissions = fn(1074).Permissions;
@@ -49,20 +49,20 @@ export default function usePromptHelpText(arg0) {
   }
   let str = "";
   if (!singleSelect) {
-    const intl = selectedRoleIds(1114).intl;
-    str = intl.string(selectedRoleIds(1114).t.JshhEl);
+    const intl = selectedRoleIds(1115).intl;
+    str = intl.string(selectedRoleIds(1115).t.JshhEl);
   }
   if (0 === stateFromStoresArray1.length) {
     if (mapped.length > 0) {
       let str6 = "";
       if (0 !== mapped.length) {
-        const intl4 = selectedRoleIds(1114).intl;
+        const intl4 = selectedRoleIds(1115).intl;
         const obj3 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
         const _Math3 = Math;
         obj3.extraCount = Math.max(mapped.length - 2, 0);
         [obj6.role1, obj6.role2] = mapped;
         obj3.itemHook = itemHook;
-        str6 = intl4.format(selectedRoleIds(1114).t.Kj5GIT, obj3);
+        str6 = intl4.format(selectedRoleIds(1115).t.Kj5GIT, obj3);
       }
       str = str6;
       let str2 = "";
@@ -74,25 +74,25 @@ export default function usePromptHelpText(arg0) {
   if (stateFromStoresArray1.length > 0) {
     let str3 = "";
     if (0 !== stateFromStoresArray1.length) {
-      const intl2 = selectedRoleIds(1114).intl;
+      const intl2 = selectedRoleIds(1115).intl;
       const obj11 = { count: stateFromStoresArray1.length, extraCount: null, channel1: null, channel2: null, itemHook: null };
       const _Math = Math;
       obj11.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
       [obj4.channel1, obj4.channel2] = stateFromStoresArray1;
       obj11.itemHook = itemHook;
-      str3 = intl2.format(selectedRoleIds(1114).t.Rj841R, obj11);
+      str3 = intl2.format(selectedRoleIds(1115).t.Rj841R, obj11);
     }
     let str4 = "";
     if (mapped.length > 0) {
       let str5 = "";
       if (0 !== mapped.length) {
-        const intl3 = selectedRoleIds(1114).intl;
+        const intl3 = selectedRoleIds(1115).intl;
         const obj12 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
         const _Math2 = Math;
         obj12.extraCount = Math.max(mapped.length - 2, 0);
         [obj5.role1, obj5.role2] = mapped;
         obj12.itemHook = itemHook;
-        str5 = intl3.format(selectedRoleIds(1114).t.cJZxWf, obj12);
+        str5 = intl3.format(selectedRoleIds(1115).t.cJZxWf, obj12);
       }
       str4 = str5;
     }
@@ -138,35 +138,35 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
   }
   let str = "";
   if (!singleSelect) {
-    const intl = selectedRoleIds(1114).intl;
-    str = intl.string(selectedRoleIds(1114).t.JshhEl);
+    const intl = selectedRoleIds(1115).intl;
+    str = intl.string(selectedRoleIds(1115).t.JshhEl);
   }
   if (0 === stateFromStoresArray1.length) {
     if (mapped.length > 0) {
-      const intl4 = selectedRoleIds(1114).intl;
+      const intl4 = selectedRoleIds(1115).intl;
       const obj6 = { count: mapped.length, extraCount: null, role1: null, role2: null, itemHook: null };
       const _Math4 = Math;
       obj6.extraCount = Math.max(mapped.length - 2, 0);
       [obj5.role1, obj5.role2] = mapped;
       obj6.itemHook = itemHook;
-      str = intl4.format(selectedRoleIds(1114).t.vdtNYa, obj6);
+      str = intl4.format(selectedRoleIds(1115).t.vdtNYa, obj6);
     }
     const obj10 = { helpText: str, helpTextAdditional: "" };
     return obj10;
   }
   if (stateFromStoresArray1.length > 0) {
     if (0 === mapped.length) {
-      const intl3 = selectedRoleIds(1114).intl;
+      const intl3 = selectedRoleIds(1115).intl;
       const obj11 = { count: stateFromStoresArray1.length, extraCount: null, channel1: null, channel2: null, itemHook: null };
       const _Math3 = Math;
       obj11.extraCount = Math.max(stateFromStoresArray1.length - 2, 0);
       [obj4.channel1, obj4.channel2] = stateFromStoresArray1;
       obj11.itemHook = itemHook;
-      str = intl3.format(selectedRoleIds(1114).t.ZKywGU, obj11);
+      str = intl3.format(selectedRoleIds(1115).t.ZKywGU, obj11);
     }
   }
   if (tmp5) {
-    const intl2 = selectedRoleIds(1114).intl;
+    const intl2 = selectedRoleIds(1115).intl;
     const obj12 = { channelCount: stateFromStoresArray1.length, extraChannelCount: null, channel1: null, channel2: null, itemHook: null, roleCount: null, extraRoleCount: null, role1: null, role2: null };
     const _Math = Math;
     obj12.extraChannelCount = Math.max(stateFromStoresArray1.length - 2, 0);
@@ -176,7 +176,7 @@ export const useCustomizeCommunityPromptHelpText = function useCustomizeCommunit
     const _Math2 = Math;
     obj12.extraRoleCount = Math.max(mapped.length - 2, 0);
     [obj3.role1, obj3.role2] = mapped;
-    str = intl2.format(selectedRoleIds(1114).t.WewRHM, obj12);
+    str = intl2.format(selectedRoleIds(1115).t.WewRHM, obj12);
   }
   const obj2 = selectedRoleIds(504);
   tmp5 = stateFromStoresArray1.length > 0 && mapped.length > 0;

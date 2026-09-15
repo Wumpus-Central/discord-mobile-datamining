@@ -1,6 +1,6 @@
-// === Module 7979: VibegrationsAppChannelsStore ===
+// === Module 7982: VibegrationsAppChannelsStore ===
 
-// Module 7979 (VibegrationsAppChannelsStore)
+// Module 7982 (VibegrationsAppChannelsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

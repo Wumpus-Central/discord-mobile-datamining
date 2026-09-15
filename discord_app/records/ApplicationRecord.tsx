@@ -1,13 +1,13 @@
-// === Module 1918: ApplicationRecord ===
+// === Module 1919: ApplicationRecord ===
 
-// Module 1918 (ApplicationRecord)
+// Module 1919 (ApplicationRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 1923 */;
-import Record from "Record" /* 1386 */;
-import CompanyRecord from "CompanyRecord" /* 1919 */;
-import UserRecord from "UserRecord" /* 1385 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 1924 */;
+import Record from "Record" /* 1387 */;
+import CompanyRecord from "CompanyRecord" /* 1920 */;
+import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;
 function createExecutable(os) {
@@ -24,9 +24,9 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(1920);
+const Constants = fn(1921);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
-const ApplicationTypes = fn(1348).ApplicationTypes;
+const ApplicationTypes = fn(1349).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };
 let BasicApplicationRecord;
 class BasicApplicationRecord extends tmp2 {

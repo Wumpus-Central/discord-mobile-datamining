@@ -1,7 +1,7 @@
-// === Module 12718: ServerSetupBoostCtaExperiment ===
+// === Module 12723: ServerSetupBoostCtaExperiment ===
 
-// Module 12718 (ServerSetupBoostCtaExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 12723 (ServerSetupBoostCtaExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-server-setup-boost-cta", kind: "user", defaultConfig: { enabled: false }, variations: null };

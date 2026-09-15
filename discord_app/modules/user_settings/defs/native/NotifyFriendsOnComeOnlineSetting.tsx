@@ -1,22 +1,22 @@
-// === Module 16003: NotifyFriendsOnComeOnlineSetting ===
+// === Module 16016: NotifyFriendsOnComeOnlineSetting ===
 
-// Module 16003 (NotifyFriendsOnComeOnlineSetting)
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import _modDef2562 from "module_2562" /* 2562 */;
-import SettingsConstants from "SettingsConstants" /* 8079 */;
-import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15590 */;
-import SettingBuilders from "SettingBuilders" /* 11602 */;
+// Module 16016 (NotifyFriendsOnComeOnlineSetting)
+import util from "util" /* 1115 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import _modDef2563 from "module_2563" /* 2563 */;
+import SettingsConstants from "SettingsConstants" /* 8082 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15600 */;
+import SettingBuilders from "SettingBuilders" /* 11606 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2562.A0FVCV);
+    return intl.string(_modDef2563.A0FVCV);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2562.vHX6RG);
+    return intl.string(_modDef2563.vHX6RG);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.NotifyFriendsOnComeOnline.useSetting,

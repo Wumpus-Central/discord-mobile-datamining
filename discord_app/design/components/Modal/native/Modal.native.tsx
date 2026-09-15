@@ -1,9 +1,9 @@
-// === Module 12059: Modal ===
+// === Module 12063: Modal ===
 
-// Module 12059 (Modal)
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import NavigatorConstants from "NavigatorConstants" /* 5763 */;
-import Navigator from "Navigator" /* 7103 */;
+// Module 12063 (Modal)
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
+import NavigatorConstants from "NavigatorConstants" /* 5767 */;
+import Navigator from "Navigator" /* 7107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,16 +1,14 @@
-// === Module 15602: ScreenDowntimeReminderSetting ===
+// === Module 15612: ScreenDowntimeReminderSetting ===
 
-// Module 15602 (ScreenDowntimeReminderSetting)
+// Module 15612 (ScreenDowntimeReminderSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7696 */;
-import useUserLinks from "useUserLinks" /* 8768 */;
-import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15001 */;
-import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15603 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10210 */;
+import util from "util" /* 1115 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 15011 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15613 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10212 */;
 
 require = fn;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -20,7 +18,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.TummoQ);
   },
-  parent: fn(8079).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8082).MobileUserSettings.NOTIFICATIONS,
   useValue() {
     const items = [NotificationSettingsStore];
     return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);
@@ -29,16 +27,11 @@ const toggle = SettingBuilders.createToggle({
     return NotificationActionCreatorsDefault.setScreenDowntimeReminder(screen_downtime_reminder);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = FamilyCenterV3Experiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
-    const tmp2 = useUserIsTeenAgeGroupDefault();
-    const hasActiveParentLinks = useUserLinks.useHasActiveParentLinks();
-    if (isFamilyCenterV3Enabled) {
-      isFamilyCenterV3Enabled = tmp2;
+    let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+    if (hasActiveParentLinks) {
+      hasActiveParentLinks = obj.useHasActiveParentLinks();
     }
-    if (isFamilyCenterV3Enabled) {
-      isFamilyCenterV3Enabled = hasActiveParentLinks;
-    }
-    return isFamilyCenterV3Enabled;
+    return hasActiveParentLinks;
   }
 });
 const size = fn(2);

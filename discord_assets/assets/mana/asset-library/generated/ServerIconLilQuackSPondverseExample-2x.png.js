@@ -1,6 +1,6 @@
-// === Module 6533: ? ===
+// === Module 6537: ? ===
 
-// Module 6533
+// Module 6537
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconLilQuackSPondverseExample-2x.png.js");

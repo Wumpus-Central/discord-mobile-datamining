@@ -1,15 +1,15 @@
-// === Module 12039: AppealIngestionSpam ===
+// === Module 12043: AppealIngestionSpam ===
 
-// Module 12039 (AppealIngestionSpam)
-import native from "native" /* 1176 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 12017 */;
+// Module 12043 (AppealIngestionSpam)
+import native from "native" /* 1177 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 12021 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_4 = createStyles.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionSpam.tsx");

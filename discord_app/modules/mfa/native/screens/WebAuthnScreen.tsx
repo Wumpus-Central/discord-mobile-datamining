@@ -1,15 +1,15 @@
-// === Module 15760: WebAuthnScreen ===
+// === Module 15771: WebAuthnScreen ===
 
-// Module 15760 (WebAuthnScreen)
+// Module 15771 (WebAuthnScreen)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 7050 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 15761 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 7054 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 15772 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const buttonDefault = tmp15(15764);
+const buttonDefault = tmp15(15775);
 require = fn;
 function AndroidAuthRadioGroup(setAuthenticator) {
   setAuthenticator = setAuthenticator.setAuthenticator;
@@ -36,7 +36,7 @@ function AndroidAuthRadioGroup(setAuthenticator) {
 }
 const NativeModules = fn(17).NativeModules;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { radioItem: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { AUTHENTICATE: 0, [0]: "AUTHENTICATE", ANDROID_PASSKEY: 1, [1]: "ANDROID_PASSKEY" };
@@ -53,9 +53,9 @@ export default function WebAuthnScreen(arg0) {
   const tmp4 = authenticatorSelection(noop.useState(undefined), 2);
   dependencyMap = tmp4[1];
   const tmp2 = authenticatorSelection(noop.useState(false), 2);
-  let tmpResult = authenticatorSelection(noop.useState(finish(1363).isAndroid() ? obj4.ANDROID_PASSKEY : obj4.AUTHENTICATE), 2);
+  let tmpResult = authenticatorSelection(noop.useState(finish(1364).isAndroid() ? obj4.ANDROID_PASSKEY : obj4.AUTHENTICATE), 2);
   authenticatorSelection = tmpResult[0];
-  const obj2 = finish(1363);
+  const obj2 = finish(1364);
   [tmp11, c4] = authenticatorSelection(noop.useState(false), 2);
   const methods = mfaChallenge.methods;
   const challenge = methods.find((type) => "webauthn" === type.type).challenge;
@@ -69,23 +69,23 @@ export default function WebAuthnScreen(arg0) {
     const nextPromise = memo(challenge).then((data) => finish({ mfaType: "webauthn", data }));
     const nextPromise1 = memo(challenge).then((data) => finish({ mfaType: "webauthn", data })).then(() => closure_1_4(true));
     memo(challenge).then((data) => finish({ mfaType: "webauthn", data })).then(() => closure_1_4(true)).catch((error) => {
-      if (error instanceof finish(1270).HTTPResponseError) {
-        const intl = finish(1114).intl;
-        dependencyMap(intl.string(finish(1114).t.xSCvBf));
+      if (error instanceof finish(1271).HTTPResponseError) {
+        const intl = finish(1115).intl;
+        dependencyMap(intl.string(finish(1115).t.xSCvBf));
       } else {
-        const result = finish(7052).captureWebAuthnException(error, {});
+        const result = finish(7056).captureWebAuthnException(error, {});
         dependencyMap(error.message);
-        const tmpResult = finish(7052);
+        const tmpResult = finish(7056);
       }
     }).finally(() => _undefined(false));
   }, items1);
   const obj3 = { headerText: null, subtitle: null, headerImage: null, content: null, submit: null, screenProps: null, mfaMethod: "webauthn", error: null };
   const tmpResult2 = authenticatorSelection(noop.useState(false), 2);
-  let intl = finish(1114).intl;
-  obj3.headerText = intl.string(finish(1114).t.saHocI);
-  const intl2 = finish(1114).intl;
-  obj3.subtitle = intl2.string(finish(1114).t.YpMrqM);
-  obj3.headerImage = challenge(finish(14763).KeyImage, {});
+  let intl = finish(1115).intl;
+  obj3.headerText = intl.string(finish(1115).t.saHocI);
+  const intl2 = finish(1115).intl;
+  obj3.subtitle = intl2.string(finish(1115).t.YpMrqM);
+  obj3.headerImage = challenge(finish(14773).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj4 = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };
@@ -99,8 +99,8 @@ export default function WebAuthnScreen(arg0) {
   obj3.content = shouldDisplayAndroidFidoSelector;
   const obj5 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
   const tmp16 = MfaOptionScreenDefault;
-  const intl3 = finish(1114).intl;
-  obj5.text = intl3.string(finish(1114).t.Xr3Eks);
+  const intl3 = finish(1115).intl;
+  obj5.text = intl3.string(finish(1115).t.Xr3Eks);
   let tmp20 = tmp11;
   if (!tmp11) {
     tmp20 = tmp11;

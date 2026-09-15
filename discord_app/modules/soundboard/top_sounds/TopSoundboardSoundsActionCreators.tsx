@@ -1,10 +1,10 @@
-// === Module 17178: TopSoundboardSoundsActionCreators ===
+// === Module 17216: TopSoundboardSoundsActionCreators ===
 
-// Module 17178 (TopSoundboardSoundsActionCreators)
+// Module 17216 (TopSoundboardSoundsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserStore from "UserStore" /* 1371 */;
-import SoundboardStore from "SoundboardStore" /* 5093 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5094 */;
+import UserStore from "UserStore" /* 1372 */;
+import SoundboardStore from "SoundboardStore" /* 5096 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5097 */;
 
 const require = globalThis.__r;
 
@@ -30,7 +30,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
           if (!tmp9Result.isPseudoGuildId(id)) {
             const obj = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: id };
             DispatcherDefault.dispatch(obj);
-            const HTTP = tmp9(1270).HTTP;
+            const HTTP = tmp9(1271).HTTP;
             const obj3 = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id), oldFormErrors: true, rejectWithError: true };
             value = HTTP.get(obj3);
             value.then((body) => {
@@ -41,7 +41,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
               return DispatcherDefault.dispatch(obj2);
             }, () => DispatcherDefault.dispatch({ type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId }));
           }
-          tmp9Result = tmp9(4476);
+          tmp9Result = tmp9(4479);
         }
       }
     }
@@ -52,7 +52,7 @@ export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildI
   if (!obj.isPseudoGuildId(guildId)) {
     const obj3 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
     DispatcherDefault.dispatch(obj3);
-    const HTTP = tmp(1270).HTTP;
+    const HTTP = tmp(1271).HTTP;
     const obj4 = { url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
     value = HTTP.get(obj4);
     value.then((body) => {

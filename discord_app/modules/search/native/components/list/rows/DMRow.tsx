@@ -1,20 +1,20 @@
-// === Module 16760: DMRow ===
+// === Module 16798: DMRow ===
 
-// Module 16760 (DMRow)
+// Module 16798 (DMRow)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import UserUtils from "UserUtils" /* 4481 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import BotTagDefault from "BotTag" /* 9568 */;
-import _modDef9883 from "module_9883" /* 9883 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11005 */;
-import _modDef13589 from "module_13589" /* 13589 */;
+import native from "native" /* 1177 */;
+import UserUtils from "UserUtils" /* 4484 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import BotTagDefault from "BotTag" /* 9570 */;
+import _modDef9885 from "module_9885" /* 9885 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11009 */;
+import _modDef13594 from "module_13594" /* 13594 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import PresenceStore from "PresenceStore" /* 4676 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import PresenceStore from "PresenceStore" /* 4679 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 const UserUtilsDefault = UserUtils;
 
@@ -39,7 +39,7 @@ const Constants = fn(1074);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" }, tag: { marginLeft: 4 }, title: { flexDirection: "row" } };
 let closure_15 = createStyles.createStyles(obj);
 let obj3 = { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" };
@@ -163,7 +163,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9883, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9885, disableColor: true };
         obj4.children = map1(native.Icon, obj5);
         tmp4Result = map1(timestampProducer, obj4);
       }
@@ -171,7 +171,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13589, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13594, disableColor: true };
         obj6.children = map1(native.Icon, obj7);
         tmp4Result3 = map1(timestampProducer, obj6);
       }

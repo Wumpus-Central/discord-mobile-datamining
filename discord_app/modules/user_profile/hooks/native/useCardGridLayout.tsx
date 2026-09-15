@@ -1,8 +1,8 @@
-// === Module 13224: useCardGridLayout ===
+// === Module 13229: useCardGridLayout ===
 
-// Module 13224 (useCardGridLayout)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import Constants from "Constants" /* 7311 */;
+// Module 13229 (useCardGridLayout)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
+import Constants from "Constants" /* 7315 */;
 import size from "module_2" /* 2 */;
 
 const PROFILE_SIDE_PADDING = Constants.PROFILE_SIDE_PADDING;

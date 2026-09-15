@@ -1,6 +1,6 @@
-// === Module 6723: InputTypes ===
+// === Module 6727: InputTypes ===
 
-// Module 6723 (InputTypes)
+// Module 6727 (InputTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Input/native/InputTypes.native.tsx");

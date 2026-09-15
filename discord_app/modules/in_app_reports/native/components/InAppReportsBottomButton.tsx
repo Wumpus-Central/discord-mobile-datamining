@@ -1,19 +1,19 @@
-// === Module 9209: InAppReportsBottomButton ===
+// === Module 9212: InAppReportsBottomButton ===
 
-// Module 9209 (InAppReportsBottomButton)
+// Module 9212 (InAppReportsBottomButton)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import _modDef2528 from "module_2528" /* 2528 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import _modDef2529 from "module_2529" /* 2529 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 }, paddingHorizontal: { paddingHorizontal: 16 }, divider: { height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 16 }, descriptionText: { lineHeight: 16, textAlign: "center", marginBottom: 12 }, errorText: null };
 let obj3 = { height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 16 };
 obj2.errorText = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
@@ -34,7 +34,7 @@ export default function InAppReportsBottomButton(button) {
       const intl2 = util.intl;
       const string = intl2.string;
       if (isModeratorReport) {
-        let stringResult = string(_modDef2528.ZUyreS);
+        let stringResult = string(_modDef2529.ZUyreS);
       } else {
         const intl3 = util.intl;
         const stringResult1 = string(util.t["G+vU89"]);
@@ -55,7 +55,7 @@ export default function InAppReportsBottomButton(button) {
       const intl4 = util.intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
-        let string2Result = string2(_modDef2528.psKFdJ);
+        let string2Result = string2(_modDef2529.psKFdJ);
       } else {
         string2Result = string2(util.t.h6D8Vy);
       }

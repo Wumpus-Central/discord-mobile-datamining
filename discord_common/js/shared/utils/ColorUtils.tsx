@@ -1,6 +1,6 @@
-// === Module 1091: utils/ColorUtils ===
+// === Module 1092: utils/ColorUtils ===
 
-// Module 1091 (utils/ColorUtils)
+// Module 1092 (utils/ColorUtils)
 import _modDef672 from "module_672" /* 672 */;
 import size from "module_2" /* 2 */;
 

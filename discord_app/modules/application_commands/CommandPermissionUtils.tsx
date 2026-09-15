@@ -1,18 +1,18 @@
-// === Module 9535: CommandPermissionUtils ===
+// === Module 9537: CommandPermissionUtils ===
 
-// Module 9535 (CommandPermissionUtils)
+// Module 9537 (CommandPermissionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import Server from "Server" /* 1894 */;
-import ChannelRecord from "ChannelRecord" /* 1961 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5080 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7625 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9374 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9424 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import Server from "Server" /* 1895 */;
+import ChannelRecord from "ChannelRecord" /* 1962 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5083 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7628 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7629 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7630 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9377 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9427 */;
+import GuildStore from "GuildStore" /* 1980 */;
 import size from "module_2" /* 2 */;
 
 function computeAllowedForUser(permissions, guild_id, userId, roleIds, isImpersonating) {

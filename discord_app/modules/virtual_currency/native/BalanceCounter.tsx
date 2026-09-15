@@ -1,13 +1,13 @@
-// === Module 11233: BalanceCounter ===
+// === Module 11237: BalanceCounter ===
 
-// Module 11233 (BalanceCounter)
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4357 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import spring from "spring" /* 5055 */;
+// Module 11237 (BalanceCounter)
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4360 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5058 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop_mod from "module_19" /* 19 */;
 
-const Text_Text = tmp(4632);
+const Text_Text = tmp(4635);
 require = fn;
 let noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);

@@ -1,9 +1,9 @@
-// === Module 7267: ApplicationDirectoryApplicationsStore ===
+// === Module 7271: ApplicationDirectoryApplicationsStore ===
 
-// Module 7267 (ApplicationDirectoryApplicationsStore)
+// Module 7271 (ApplicationDirectoryApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import ApplicationRecord from "ApplicationRecord" /* 1919 */;
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 obj = {};

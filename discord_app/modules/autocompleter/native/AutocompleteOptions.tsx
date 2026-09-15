@@ -1,29 +1,29 @@
-// === Module 10552: AutocompleteOptions ===
+// === Module 10556: AutocompleteOptions ===
 
-// Module 10552 (AutocompleteOptions)
-import util from "util" /* 1114 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5523 */;
-import executeCommandDefault from "executeCommand" /* 9541 */;
-import StickersActionCreators from "StickersActionCreators" /* 10517 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7881 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7882 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5189 */;
-import StickersStore from "StickersStore" /* 5583 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildStore from "GuildStore" /* 1979 */;
+// Module 10556 (AutocompleteOptions)
+import util from "util" /* 1115 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5527 */;
+import executeCommandDefault from "executeCommand" /* 9543 */;
+import StickersActionCreators from "StickersActionCreators" /* 10520 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7884 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7885 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5192 */;
+import StickersStore from "StickersStore" /* 5587 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildStore from "GuildStore" /* 1980 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
-const ChannelAutocompleteConstants = fn(5081);
+const ChannelAutocompleteConstants = fn(5084);
 ({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10553).AutocompleteTypes;
-const EmojiConstants = fn(1374);
+const AutocompleteTypes = fn(10557).AutocompleteTypes;
+const EmojiConstants = fn(1375);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
-const executeCommand = apply.debounce(executeCommandDefault, fn(5080).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
+const executeCommand = apply.debounce(executeCommandDefault, fn(5083).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
 
@@ -277,7 +277,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [channel, (arg0, arg1) => arg1 === channel(7440).StickerSendability.SENDABLE];
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(7444).StickerSendability.SENDABLE];
               items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
               const tmp2Result = AutocompleteUtilsDefault;
             }
@@ -289,8 +289,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const obj4 = { id: null, animated: null, size: null };
                 ({ id: obj3.id, animated: obj3.animated } = name);
                 obj4.size = size;
-                let url = flag(1396).getEmojiURL(obj4);
-                const obj2 = flag(1396);
+                let url = flag(1397).getEmojiURL(obj4);
+                const obj2 = flag(1397);
               } else {
                 url = name.url;
               }

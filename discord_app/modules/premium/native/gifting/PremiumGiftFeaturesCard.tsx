@@ -1,27 +1,27 @@
-// === Module 10879: PremiumGiftFeaturesCard ===
+// === Module 10883: PremiumGiftFeaturesCard ===
 
-// Module 10879 (PremiumGiftFeaturesCard)
+// Module 10883 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import StringUtils from "StringUtils" /* 1925 */;
-import native from "native" /* 4347 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import TextStylesDefault from "TextStyles" /* 5605 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8958 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9500 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9512 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9514 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9521 */;
-import MarketingComponentType from "MarketingComponentType" /* 10871 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10880 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10881 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10882 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10883 */;
+import util from "util" /* 1115 */;
+import StringUtils from "StringUtils" /* 1926 */;
+import native from "native" /* 4350 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import LinearGradientDefault from "LinearGradient" /* 5071 */;
+import TextStylesDefault from "TextStyles" /* 5609 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8961 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9502 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9514 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9516 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9523 */;
+import MarketingComponentType from "MarketingComponentType" /* 10875 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10884 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10885 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10886 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10887 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10794 */;
+import PromotionsStore from "PromotionsStore" /* 10798 */;
 
 require = fn;
 function PremiumGiftPlanSelectPromotionDetails(config) {
@@ -62,7 +62,7 @@ function PremiumGiftPlanSelectPromotionDetails(config) {
   return React7(native.ThemeContextProvider, obj2);
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PremiumTypes: hasOwnProperty, SubscriptionIntervalTypes: metroRequire } = PremiumConstants);
 const Constants = fn(1085);
 ({ Fonts: closure_7, ThemeTypes: closure_8 } = Constants);
@@ -93,7 +93,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_15 = createStyles.createStyles(() => {
   obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);

@@ -1,6 +1,6 @@
-// === Module 1378: types ===
+// === Module 1379: types ===
 
-// Module 1378 (types)
+// Module 1379 (types)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/perks_state/types.tsx");

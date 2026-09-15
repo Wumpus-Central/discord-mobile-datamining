@@ -1,13 +1,13 @@
-// === Module 8113: ApplicationCommandSourceSystemMessage ===
+// === Module 8116: ApplicationCommandSourceSystemMessage ===
 
-// Module 8113 (ApplicationCommandSourceSystemMessage)
+// Module 8116 (ApplicationCommandSourceSystemMessage)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5081 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8064 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
-import ApplicationCommands from "ApplicationCommands" /* 8114 */;
+import util from "util" /* 1115 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5084 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
+import ApplicationCommands from "ApplicationCommands" /* 8117 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;

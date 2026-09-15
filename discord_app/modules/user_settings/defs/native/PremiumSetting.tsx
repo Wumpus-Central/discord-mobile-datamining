@@ -1,19 +1,19 @@
-// === Module 15070: PremiumSetting ===
+// === Module 15080: PremiumSetting ===
 
-// Module 15070 (PremiumSetting)
-import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4294 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7520 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11567 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13482 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15071 */;
+// Module 15080 (PremiumSetting)
+import util from "util" /* 1115 */;
+import PremiumUtils from "PremiumUtils" /* 4297 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7524 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11571 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13487 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 15081 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4300 */;
+import UserStore from "UserStore" /* 1372 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment = MobileNitroManageSubscriptionsSettingsExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
@@ -34,7 +34,7 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(8785).NitroWheelIcon,
+  IconComponent: fn(8788).NitroWheelIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

@@ -1,8 +1,8 @@
-// === Module 12036: AppealIngestionRequestSent ===
+// === Module 12040: AppealIngestionRequestSent ===
 
-// Module 12036 (AppealIngestionRequestSent)
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12031 */;
-import _modDef12037 from "module_12037" /* 12037 */;
+// Module 12040 (AppealIngestionRequestSent)
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 12035 */;
+import _modDef12041 from "module_12041" /* 12041 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,11 +10,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8537);
+const SafetyHubConstants = fn(8540);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles({ container: { flex: 1, padding: 8 }, actionsHeader: { marginTop: 31, marginBottom: 16 }, checkboxPng: { width: 86, height: 78.33, marginLeft: -2, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
@@ -29,13 +29,13 @@ export default function AppealIngestionRequestSent() {
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  const items = [closure_7(closure_4, { source: _modDef12037, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
+  const items = [closure_7(closure_4, { source: _modDef12041, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
   const intl3 = require("util").intl;
   obj5.children = intl3.string(require("util").t["9BRc1N"]);
   items[2] = closure_7(require("Text/Text").Text, obj5);
   const obj6 = { text: null, url: null, onPress: null };
-  const obj4 = { source: _modDef12037, style: tmp.checkboxPng };
+  const obj4 = { source: _modDef12041, style: tmp.checkboxPng };
   const intl4 = require("util").intl;
   obj6.text = intl4.string(require("util").t.PxL38B);
   obj6.url = constants.COMMUNITY_GUIDELINES;

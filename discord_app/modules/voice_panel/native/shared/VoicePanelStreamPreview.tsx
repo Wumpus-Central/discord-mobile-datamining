@@ -1,13 +1,13 @@
-// === Module 13169: VoicePanelStreamPreview ===
+// === Module 13174: VoicePanelStreamPreview ===
 
-// Module 13169 (VoicePanelStreamPreview)
+// Module 13174 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4637 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4688 */;
+import timing from "timing" /* 4640 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4691 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4376 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -17,9 +17,9 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5056).Button);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(5059).Button);
 const OPACITY_TIMING = { duration: 200 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.roundedCard = size;
@@ -49,8 +49,8 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10191)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(10191);
+  const previewUrl = stream(10193)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(10193);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
   const stateFromStores = mode(504).useStateFromStores(items, () => {
@@ -85,8 +85,8 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
       return obj1;
     }
   }
-  let obj2 = mode(4373);
-  T.__closure = { mode, withTiming: mode(4637).withTiming, OPACITY_TIMING };
+  let obj2 = mode(4376);
+  T.__closure = { mode, withTiming: mode(4640).withTiming, OPACITY_TIMING };
   T.__workletHash = 15496474861955;
   T.__initData = __initData;
   const obj4 = { layout, onPress, style: tmp.roundedCard, disabled: null, accessible: false, children: null };
@@ -102,27 +102,27 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     const obj6 = { uri: previewUrl };
     obj5.source = obj6;
     obj5.style = tmp.streamPreviewImage;
-    tmp14 = closure_6(tmp2(4373).Image, obj5);
+    tmp14 = closure_6(tmp2(4376).Image, obj5);
   }
   const items2 = [tmp14, ];
   const obj7 = { style: animatedStyle, layout, children: null };
-  let obj3 = { mode, withTiming: mode(4637).withTiming, OPACITY_TIMING };
+  let obj3 = { mode, withTiming: mode(4640).withTiming, OPACITY_TIMING };
   if (stateFromStores) {
     const obj8 = { style: tmp.ownStreamTextContainer, children: null };
     const obj9 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };
-    const intl2 = tmp8(1114).intl;
-    obj9.children = intl2.string(tmp8(1114).t["ro/HN8"]);
-    obj8.children = closure_6(tmp8(4632).Text, obj9);
+    const intl2 = tmp8(1115).intl;
+    obj9.children = intl2.string(tmp8(1115).t["ro/HN8"]);
+    obj8.children = closure_6(tmp8(4635).Text, obj9);
     let tmp16Result = closure_6(closure_3, obj8);
   } else {
     const obj10 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
-    const intl = tmp8(1114).intl;
-    obj10.text = intl.string(tmp8(1114).t["7Xq/nV"]);
+    const intl = tmp8(1115).intl;
+    obj10.text = intl.string(tmp8(1115).t["7Xq/nV"]);
     obj10.onPress = onPress;
     tmp16Result = closure_6(closure_9, obj10);
   }
   obj7.children = tmp16Result;
-  items2[1] = closure_6(stream(7176), obj7);
+  items2[1] = closure_6(stream(7180), obj7);
   obj4.children = items2;
   return closure_7(closure_8, obj4);
 };

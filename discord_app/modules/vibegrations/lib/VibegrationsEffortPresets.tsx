@@ -1,9 +1,9 @@
-// === Module 16704: VibegrationsEffortPresets ===
+// === Module 16716: VibegrationsEffortPresets ===
 
-// Module 16704 (VibegrationsEffortPresets)
-import util from "util" /* 1114 */;
-import _modDef3590 from "module_3590" /* 3590 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16705 */;
+// Module 16716 (VibegrationsEffortPresets)
+import util from "util" /* 1115 */;
+import _modDef3591 from "module_3591" /* 3591 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16717 */;
 import size from "module_2" /* 2 */;
 
 const items = [
@@ -13,7 +13,7 @@ const items = [
     fast: true,
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3590.Mo0a1m);
+      return intl.string(_modDef3591.Mo0a1m);
     }
   },
   {
@@ -21,7 +21,7 @@ const items = [
     thinking: "high",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3590.dkt78K);
+      return intl.string(_modDef3591.dkt78K);
     }
   },
   {
@@ -29,7 +29,7 @@ const items = [
     thinking: "medium",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3590.Ly6zYL);
+      return intl.string(_modDef3591.Ly6zYL);
     }
   }
 ];
@@ -68,22 +68,20 @@ const result = size.fileFinishedImporting("modules/vibegrations/lib/Vibegrations
 export const VIBEGRATIONS_EFFORT_PRESETS = items;
 export { vibegrationsPresetTier };
 export const VIBEGRATIONS_DEFAULT_MODEL_SETTINGS = obj4;
-export const matchVibegrationsEffortPreset = function matchVibegrationsEffortPreset(arg0, arg1) {
-  let main = arg0;
-  closure_1 = arg1;
+export const matchVibegrationsEffortPreset = function matchVibegrationsEffortPreset(settings, main) {
   return items.findIndex((model) => {
-    main = main.main;
+    main = settings.main;
     let tmp2 = main.model === model.model;
     if (tmp2) {
       tmp2 = main.thinking === model.thinking;
     }
     if (tmp2) {
-      main = model;
+      settings = model;
       let tmp3 = true === model.fast;
       if (tmp3) {
-        let tmp5 = null == closure_1;
+        let tmp5 = null == main;
         if (!tmp5) {
-          const found = closure_1.find((id) => id.id === model.model);
+          const found = main.find((id) => id.id === model.model);
           let supports_fast;
           if (found != null) {
             supports_fast = found.supports_fast;
@@ -95,15 +93,15 @@ export const matchVibegrationsEffortPreset = function matchVibegrationsEffortPre
       tmp2 = true === main.fast === tmp3;
     }
     if (tmp2) {
-      const subagent = main.subagent;
+      const subagent = settings.subagent;
       let tmp8 = subagent.model === model.model && subagent.thinking === model.thinking;
       if (tmp8) {
-        main = model;
+        settings = model;
         let tmp9 = true === model.fast;
         if (tmp9) {
-          let tmp11 = null == closure_1;
+          let tmp11 = null == main;
           if (!tmp11) {
-            const found1 = closure_1.find((id) => id.id === model.model);
+            const found1 = main.find((id) => id.id === model.model);
             let supports_fast1;
             if (found1 != null) {
               supports_fast1 = found1.supports_fast;
@@ -120,11 +118,11 @@ export const matchVibegrationsEffortPreset = function matchVibegrationsEffortPre
   });
 };
 export { vibegrationsSettingsForTier };
-export const describeVibegrationsModelSettings = function describeVibegrationsModelSettings(main, arr) {
-  main = main.main;
+export const describeVibegrationsModelSettings = function describeVibegrationsModelSettings(settings, main) {
+  main = settings.main;
   const model = main.model;
   ({ thinking, fast } = main);
-  const found = arr.find((id) => id.id === model);
+  const found = main.find((id) => id.id === model);
   let label;
   if (found != null) {
     label = found.label;
@@ -141,7 +139,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (true === fast) {
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3590.qOoAsd);
+    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3591.qOoAsd);
   }
   return combined1;
 };

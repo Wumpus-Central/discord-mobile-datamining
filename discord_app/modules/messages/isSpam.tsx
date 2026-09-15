@@ -1,8 +1,8 @@
-// === Module 7610: isSpam ===
+// === Module 7614: isSpam ===
 
-// Module 7610 (isSpam)
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7611 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 7614 (isSpam)
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7615 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Constants = fn(1074);

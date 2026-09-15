@@ -1,8 +1,8 @@
-// === Module 4689: VideoStreamStats ===
+// === Module 4692: VideoStreamStats ===
 
-// Module 4689 (VideoStreamStats)
-import TimeUtils from "TimeUtils" /* 4665 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4682 */;
+// Module 4692 (VideoStreamStats)
+import TimeUtils from "TimeUtils" /* 4668 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4685 */;
 
 require = fn;
 const StreamLayouts = fn(1074).StreamLayouts;

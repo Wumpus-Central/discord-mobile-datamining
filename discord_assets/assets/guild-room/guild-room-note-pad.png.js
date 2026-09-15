@@ -1,6 +1,6 @@
-// === Module 4808: ? ===
+// === Module 4811: ? ===
 
-// Module 4808
+// Module 4811
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/guild-room/guild-room-note-pad.png.js");

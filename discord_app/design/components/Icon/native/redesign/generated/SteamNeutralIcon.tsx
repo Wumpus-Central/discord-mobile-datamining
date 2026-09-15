@@ -1,9 +1,9 @@
-// === Module 8817: SteamNeutralIcon ===
+// === Module 8820: SteamNeutralIcon ===
 
-// Module 8817 (SteamNeutralIcon)
+// Module 8820 (SteamNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod8818 from "module_8818" /* 8818 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod8821 from "module_8821" /* 8821 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const SteamNeutralIcon = function SteamNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8818, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8821, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

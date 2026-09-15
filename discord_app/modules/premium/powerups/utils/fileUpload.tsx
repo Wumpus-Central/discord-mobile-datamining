@@ -1,13 +1,13 @@
-// === Module 12628: fileUpload ===
+// === Module 12633: fileUpload ===
 
-// Module 12628 (fileUpload)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12629 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4525 */;
+// Module 12633 (fileUpload)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12634 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4528 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(4526).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4529).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/fileUpload.tsx");
 
@@ -17,7 +17,7 @@ export const useShouldShowFileUploadRollback = function useShouldShowFileUploadR
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4529).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4532).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   const obj = require("initialize");
   const tmp5 = usePowerupActiveStatusDefault(guildId, tmp4);

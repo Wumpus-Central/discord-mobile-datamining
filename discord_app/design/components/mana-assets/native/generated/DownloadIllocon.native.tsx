@@ -1,9 +1,9 @@
-// === Module 6040: DownloadIllocon ===
+// === Module 6044: DownloadIllocon ===
 
-// Module 6040 (DownloadIllocon)
+// Module 6044 (DownloadIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6041 from "module_6041" /* 6041 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6045 from "module_6045" /* 6045 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const DownloadIllocon = function DownloadIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6041 };
+  const obj2 = { uri: _modDef6045 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

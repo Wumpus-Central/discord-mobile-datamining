@@ -1,11 +1,11 @@
-// === Module 8000: duration ===
+// === Module 8003: duration ===
 
-// Module 8000 (duration)
-import _mod1186 from "module_1186" /* 1186 */;
+// Module 8003 (duration)
+import _mod1187 from "module_1187" /* 1187 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1186).MessageType;
+const MessageType = fn(1187).MessageType;
 class Duration$Type extends MessageType {
   constructor() {
     items = [, ];
@@ -17,7 +17,7 @@ class Duration$Type extends MessageType {
 }
 const prototype = Duration$Type.prototype;
 prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
-  const PbLong = _mod1186.PbLong;
+  const PbLong = _mod1187.PbLong;
   const toNumberResult = PbLong.from(seconds.seconds).toNumber();
   if (toNumberResult <= 315576000000) {
     if (toNumberResult >= -315576000000) {
@@ -48,7 +48,7 @@ prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
 prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
   if (typeof str !== "string") {
     const _Error3 = Error;
-    const error = new Error("Unable to parse Duration from JSON " + _mod1186.typeofJsonValue(str) + ". Expected string.");
+    const error = new Error("Unable to parse Duration from JSON " + _mod1187.typeofJsonValue(str) + ". Expected string.");
     throw error;
   } else {
     const match = str.match(/^(-?[0-9]+)(?:\.([0-9]+))?s/);
@@ -62,7 +62,7 @@ prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
         const self = this;
         obj2 = this.create();
       }
-      const PbLong = _mod1186.PbLong;
+      const PbLong = _mod1187.PbLong;
       str = PbLong.from(match[1]);
       if (str.toNumber() <= 315576000000) {
         if (str.toNumber() >= -315576000000) {
@@ -87,10 +87,10 @@ prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
 prototype["create"] = function create(arr) {
   const obj = { seconds: "0", nanos: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -127,7 +127,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -139,17 +139,17 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(seconds, tag, writeUnknownFields) {
   if ("0" !== seconds.seconds) {
-    tag.tag(1, _mod1186.WireType.Varint).int64(seconds.seconds);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).int64(seconds.seconds);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   if (0 !== seconds.nanos) {
-    tag.tag(2, _mod1186.WireType.Varint).int32(seconds.nanos);
-    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
+    tag.tag(2, _mod1187.WireType.Varint).int32(seconds.nanos);
+    const tagResult1 = tag.tag(2, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, seconds, tag);

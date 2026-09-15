@@ -1,22 +1,22 @@
-// === Module 13395: ChannelHeader ===
+// === Module 13400: ChannelHeader ===
 
-// Module 13395 (ChannelHeader)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import RootNavigationRef from "RootNavigationRef" /* 4495 */;
-import ChatInputUtils from "ChatInputUtils" /* 4502 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11600 */;
-import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13396 */;
-import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13397 */;
-import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13398 */;
-import ForumChannelHeaderDefault from "ForumChannelHeader" /* 13406 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13408 */;
+// Module 13400 (ChannelHeader)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import RootNavigationRef from "RootNavigationRef" /* 4498 */;
+import ChatInputUtils from "ChatInputUtils" /* 4505 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11604 */;
+import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 13401 */;
+import HomeChannelHeaderDefault from "HomeChannelHeader" /* 13402 */;
+import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 13403 */;
+import ForumChannelHeaderDefault from "ForumChannelHeader" /* 13411 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13413 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 const ComponentActions = fn(1074).ComponentActions;
-const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const StaticChannelRoute = fn(1965).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx");
@@ -38,7 +38,7 @@ export default function ChannelHeader(channelId) {
   const items = [ChannelStore];
   const stateFromStores = channelId(563).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(563);
-  const isChannelContentGated = channelId(4847).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(4850).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;
@@ -73,8 +73,8 @@ export default function ChannelHeader(channelId) {
         obj4.screenIndex = screenIndex;
         let stringResult;
         if (!stateFromStores.isForumChannel()) {
-          const intl = tmp(1114).intl;
-          stringResult = intl.string(tmp(1114).t["L9fR+P"]);
+          const intl = tmp(1115).intl;
+          stringResult = intl.string(tmp(1115).t["L9fR+P"]);
         }
         obj4.searchPlaceholder = stringResult;
         tmp8Result = jsx(ForumChannelHeaderDefault, { channelId, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, searchPlaceholder: null });

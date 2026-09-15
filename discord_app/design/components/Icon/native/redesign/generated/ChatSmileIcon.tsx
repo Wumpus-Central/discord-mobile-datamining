@@ -1,9 +1,9 @@
-// === Module 9551: ChatSmileIcon ===
+// === Module 9553: ChatSmileIcon ===
 
-// Module 9551 (ChatSmileIcon)
+// Module 9553 (ChatSmileIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod9552 from "module_9552" /* 9552 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod9554 from "module_9554" /* 9554 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ChatSmileIcon = function ChatSmileIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9552, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9554, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

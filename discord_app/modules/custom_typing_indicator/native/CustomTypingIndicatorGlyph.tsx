@@ -1,13 +1,13 @@
-// === Module 12111: CustomTypingIndicatorGlyph ===
+// === Module 12115: CustomTypingIndicatorGlyph ===
 
-// Module 12111 (CustomTypingIndicatorGlyph)
-import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 12112 */;
+// Module 12115 (CustomTypingIndicatorGlyph)
+import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 12116 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_5 = createStyles.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");
@@ -19,8 +19,8 @@ export default function CustomTypingIndicatorGlyph(config) {
   let obj = dependencyMap;
   const tmp = closure_5();
   const tmp2 = map;
-  dependencyMap = map(1392).getEffectiveCustomTypingIndicatorAnimation(map);
-  const obj2 = map(1392);
+  dependencyMap = map(1393).getEffectiveCustomTypingIndicatorAnimation(map);
+  const obj2 = map(1393);
   if (obj3.hasCustomTypingIndicatorEmojis(map.emojis)) {
     let items = [tmp.emojiRow, ];
     if (null == size) {
@@ -37,7 +37,7 @@ export default function CustomTypingIndicatorGlyph(config) {
     obj.children = map((emoji, index) => jsx(CustomTypingIndicatorAnimatedEmojiDefault, { emoji, index, emojiCount: map.emojis.length, animation, size }, index));
     <View style={null}>{null}</View>;
   } else {
-    return jsx(tmp2(1176).Ellipsis, {});
+    return jsx(tmp2(1177).Ellipsis, {});
   }
-  obj3 = map(1392);
+  obj3 = map(1393);
 };

@@ -1,18 +1,18 @@
-// === Module 7866: ReactionActionCreators ===
+// === Module 7869: ReactionActionCreators ===
 
-// Module 7866 (ReactionActionCreators)
+// Module 7869 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import util from "util" /* 1114 */;
-import EmojiUtils from "EmojiUtils" /* 4293 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7867 */;
+import DurationsDefault from "Durations" /* 1091 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
+import util from "util" /* 1115 */;
+import EmojiUtils from "EmojiUtils" /* 4296 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7868 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7870 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4857 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MessageStore from "MessageStore" /* 4860 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -786,11 +786,11 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(4488).AccessibilityAnnouncer;
-                  intl = channelId(1114).intl;
+                  const AccessibilityAnnouncer = channelId(4491).AccessibilityAnnouncer;
+                  intl = channelId(1115).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };
-                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1114).t["tD9+b+"], obj6));
+                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1115).t["tD9+b+"], obj6));
                   }
                 }
                 const obj7 = { name: tmp2.name };

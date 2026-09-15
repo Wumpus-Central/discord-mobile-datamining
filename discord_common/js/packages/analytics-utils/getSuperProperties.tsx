@@ -1,17 +1,17 @@
-// === Module 1335: getSuperProperties ===
+// === Module 1336: getSuperProperties ===
 
-// Module 1335 (getSuperProperties)
+// Module 1336 (getSuperProperties)
 import Storage5 from "Storage" /* 510 */;
-import encodeProperties from "encodeProperties" /* 1333 */;
-import getSystemLocale2 from "getSystemLocale" /* 1336 */;
-import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1337 */;
-import clientLaunchId from "clientLaunchId" /* 1338 */;
-import formatDefault from "format" /* 1339 */;
-import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1340 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1341 */;
-import NativeClientInfoModule from "NativeClientInfoModule" /* 1342 */;
-import DesignIds from "DesignIds" /* 1343 */;
-import SessionStorage3 from "SessionStorage" /* 1344 */;
+import encodeProperties from "encodeProperties" /* 1334 */;
+import getSystemLocale2 from "getSystemLocale" /* 1337 */;
+import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1338 */;
+import clientLaunchId from "clientLaunchId" /* 1339 */;
+import formatDefault from "format" /* 1340 */;
+import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1341 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1342 */;
+import NativeClientInfoModule from "NativeClientInfoModule" /* 1343 */;
+import DesignIds from "DesignIds" /* 1344 */;
+import SessionStorage3 from "SessionStorage" /* 1345 */;
 import size from "module_2" /* 2 */;
 
 function getOS() {
@@ -185,7 +185,7 @@ function extendSuperProperties(arg0) {
   closure_4 = encodeProperties.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
-  obj = { client_build_number: parseInt("6417", 10) };
+  obj = { client_build_number: parseInt("6425", 10) };
   let buildNumber;
   if (DiscordNative != null) {
     const app = DiscordNative.app;

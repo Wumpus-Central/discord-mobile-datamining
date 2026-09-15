@@ -1,10 +1,10 @@
-// === Module 12793: NsfwGateChat ===
+// === Module 12798: NsfwGateChat ===
 
-// Module 12793 (NsfwGateChat)
+// Module 12798 (NsfwGateChat)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import _modDef12794 from "module_12794" /* 12794 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import _modDef12799 from "module_12799" /* 12799 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, border: null, description: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 obj2.border = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -26,7 +26,7 @@ export default function NsfwGateChat() {
   const obj = { children: null };
   const items = [hasOwnProperty(React3, { style: tmp.border }), ];
   const obj3 = { style: tmp.container, children: null };
-  const items1 = [hasOwnProperty(React4, { source: _modDef12794 }), ];
+  const items1 = [hasOwnProperty(React4, { source: _modDef12799 }), ];
   const obj5 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.W4Qyxr);

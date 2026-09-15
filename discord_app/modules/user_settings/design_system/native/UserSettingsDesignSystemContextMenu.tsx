@@ -1,19 +1,19 @@
-// === Module 15870: UserSettingsDesignSystemContextMenu ===
+// === Module 15881: UserSettingsDesignSystemContextMenu ===
 
-// Module 15870 (UserSettingsDesignSystemContextMenu)
+// Module 15881 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import _modDef4600 from "module_4600" /* 4600 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import Card from "Card" /* 5688 */;
-import _modDef7197 from "module_7197" /* 7197 */;
-import _modDef8070 from "module_8070" /* 8070 */;
-import _modDef11387 from "module_11387" /* 11387 */;
-import _modDef11694 from "module_11694" /* 11694 */;
-import _modDef12903 from "module_12903" /* 12903 */;
-import _modDef15871 from "module_15871" /* 15871 */;
-import _modDef15872 from "module_15872" /* 15872 */;
+import _modDef4603 from "module_4603" /* 4603 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import Card from "Card" /* 5692 */;
+import _modDef7201 from "module_7201" /* 7201 */;
+import _modDef8073 from "module_8073" /* 8073 */;
+import _modDef11391 from "module_11391" /* 11391 */;
+import _modDef11698 from "module_11698" /* 11698 */;
+import _modDef12908 from "module_12908" /* 12908 */;
+import _modDef15882 from "module_15882" /* 15882 */;
+import _modDef15883 from "module_15883" /* 15883 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -103,9 +103,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let items = [_modDef12903, _modDef7197, _modDef8070, _modDef11387, _modDef4600, _modDef15871, _modDef15872, _modDef11694];
+let items = [_modDef12908, _modDef7201, _modDef8073, _modDef11391, _modDef4603, _modDef15882, _modDef15883, _modDef11698];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

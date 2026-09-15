@@ -1,17 +1,17 @@
-// === Module 15103: BountiesScrollVideoItem ===
+// === Module 15113: BountiesScrollVideoItem ===
 
-// Module 15103 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 5530 */;
-import AdCreativeType from "AdCreativeType" /* 5532 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7830 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11630 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11908 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15104 */;
+// Module 15113 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 5534 */;
+import AdCreativeType from "AdCreativeType" /* 5536 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7833 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11634 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11912 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8977 */;
-import BountyStore from "BountyStore" /* 7804 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8980 */;
+import BountyStore from "BountyStore" /* 7807 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -343,7 +343,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj7);
 }
 const View = fn(17).View;
-const QuestConstants = fn(5525);
+const QuestConstants = fn(5529);
 ({ BOUNTY_ORB_AMOUNT: closure_9, QuestsExperimentLocations: c10 } = QuestConstants);
 const jsx = fn(21).jsx;
 let size = fn(2);
@@ -376,10 +376,10 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (flag3 === undefined) {
     flag3 = false;
   }
-  return softDownloadCapsEnabled(bounty(11908).BillableAdPlacementImpressionTrackerNative, {
+  return softDownloadCapsEnabled(bounty(11912).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5532).AdCreativeType.BOUNTY,
-    questContent: bounty(5530).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5536).AdCreativeType.BOUNTY,
+    questContent: bounty(5534).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

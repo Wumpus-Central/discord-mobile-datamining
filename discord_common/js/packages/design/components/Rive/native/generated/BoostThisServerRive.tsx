@@ -1,8 +1,8 @@
-// === Module 4423: BoostThisServerRive ===
+// === Module 4426: BoostThisServerRive ===
 
-// Module 4423 (BoostThisServerRive)
-import BaseRive from "BaseRive" /* 4367 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4422 */;
+// Module 4426 (BoostThisServerRive)
+import BaseRive from "BaseRive" /* 4370 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4425 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

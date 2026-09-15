@@ -1,12 +1,12 @@
-// === Module 7040: FreeFormTextInput ===
+// === Module 7044: FreeFormTextInput ===
 
-// Module 7040 (FreeFormTextInput)
+// Module 7044 (FreeFormTextInput)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import Pressables from "Pressables" /* 5204 */;
-import _modDef7041 from "module_7041" /* 7041 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import Pressables from "Pressables" /* 5207 */;
+import _modDef7045 from "module_7045" /* 7045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,14 +17,14 @@ function ClearButton(onPress) {
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_9();
-  obj.children = React5(native.Icon, { source: _modDef7041, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
+  obj.children = React5(native.Icon, { source: _modDef7045, style: closure_9().closeIcon, size: native.Icon.Sizes.MEDIUM });
   return React5(Pressables.PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableWithoutFeedback: closure_4, View: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" }, onPress: { flexDirection: "row" }, input: null, error: null, closeIcon: null, placeholder: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
 obj.input = { flex: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

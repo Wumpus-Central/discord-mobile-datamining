@@ -1,24 +1,24 @@
-// === Module 13089: MediaModalOverlay ===
+// === Module 13094: MediaModalOverlay ===
 
-// Module 13089 (MediaModalOverlay)
+// Module 13094 (MediaModalOverlay)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5046 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8378 */;
-import useVideoControls from "useVideoControls" /* 8380 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8381 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8383 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9179 */;
-import useMediaModalFooterAction from "useMediaModalFooterAction" /* 11643 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 13093 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 13094 */;
-import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 13096 */;
-import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText" /* 13100 */;
-import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction" /* 13101 */;
-import MediaModalOverlayFooter from "MediaModalOverlayFooter" /* 13102 */;
+import util from "util" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5049 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8381 */;
+import useVideoControls from "useVideoControls" /* 8383 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8384 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8386 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9182 */;
+import useMediaModalFooterAction from "useMediaModalFooterAction" /* 11647 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 13098 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 13099 */;
+import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 13101 */;
+import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText" /* 13105 */;
+import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction" /* 13106 */;
+import MediaModalOverlayFooter from "MediaModalOverlayFooter" /* 13107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ function OverlayMuteButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.w4m945);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(isMuted ? 13090 : 10140);
+  obj.source = importDefault(isMuted ? 13095 : 10142);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleMute;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -44,7 +44,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 13091 : 13092);
+  obj.source = importDefault(spoilerActive ? 13096 : 13097);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -54,7 +54,7 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  const tmp2 = videoControls(8380)(index, source, videoControls);
+  const tmp2 = videoControls(8383)(index, source, videoControls);
   const items = [index];
   const items1 = [videoControls];
   const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);
@@ -70,7 +70,7 @@ function MediaModalOverlay(getVideoControls) {
     flag = false;
   }
   obj2.obscure = flag;
-  obj2.spoilerActive = _slicedToArray(index(13095).useMediaItemSpoilerState(index), 1)[0];
+  obj2.spoilerActive = _slicedToArray(index(13100).useMediaItemSpoilerState(index), 1)[0];
   obj2.toggleObscure = callback;
   return closure_7(closure_13, obj2);
 }
@@ -79,7 +79,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { portraitFooterButtons: null, invisibleFooter: null, overlayIcons: null, overlayButtonIcon: null, overlayButton: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

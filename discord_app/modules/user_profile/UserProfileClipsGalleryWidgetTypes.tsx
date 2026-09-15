@@ -1,8 +1,8 @@
-// === Module 7731: UserProfileClipsGalleryWidgetTypes ===
+// === Module 7734: UserProfileClipsGalleryWidgetTypes ===
 
-// Module 7731 (UserProfileClipsGalleryWidgetTypes)
-import _modDef1330 from "module_1330" /* 1330 */;
-import WidgetType from "WidgetType" /* 7724 */;
+// Module 7734 (UserProfileClipsGalleryWidgetTypes)
+import _modDef1331 from "module_1331" /* 1331 */;
+import WidgetType from "WidgetType" /* 7727 */;
 import size from "module_2" /* 2 */;
 
 function convertClip(gameId) {
@@ -52,7 +52,7 @@ prototype["isEqual"] = function isEqual(clips) {
   let tmp = clips instanceof ClipsGalleryWidget;
   if (tmp) {
     const self = this;
-    tmp = _modDef1330(this.clips, clips.clips);
+    tmp = _modDef1331(this.clips, clips.clips);
   }
   return tmp;
 };

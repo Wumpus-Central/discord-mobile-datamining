@@ -1,11 +1,11 @@
-// === Module 4601: BrowserManager ===
+// === Module 4604: BrowserManager ===
 
-// Module 4601 (BrowserManager)
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import LinkingDefault from "Linking" /* 4331 */;
-import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 4602 */;
+// Module 4604 (BrowserManager)
+import ConstantsIOS from "ConstantsIOS" /* 1094 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 4605 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;

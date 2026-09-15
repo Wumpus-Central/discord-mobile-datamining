@@ -1,8 +1,8 @@
-// === Module 5104: StaticRouteRendering ===
+// === Module 5107: StaticRouteRendering ===
 
-// Module 5104 (StaticRouteRendering)
-import util from "util" /* 1114 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+// Module 5107 (StaticRouteRendering)
+import util from "util" /* 1115 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 
 require = fn;
 const size = fn(2);

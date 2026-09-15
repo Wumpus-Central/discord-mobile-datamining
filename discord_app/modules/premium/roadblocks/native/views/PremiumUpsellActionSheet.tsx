@@ -1,30 +1,30 @@
-// === Module 7953: PremiumUpsellActionSheet ===
+// === Module 7956: PremiumUpsellActionSheet ===
 
-// Module 7953 (PremiumUpsellActionSheet)
+// Module 7956 (PremiumUpsellActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import PremiumUtils from "PremiumUtils" /* 4294 */;
-import ChatInputUtils from "ChatInputUtils" /* 4502 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import LinearGradientDefault from "LinearGradient" /* 5068 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import TableSwitchRow from "TableSwitchRow" /* 7303 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 7952 */;
-import showForLaterModal from "showForLaterModal" /* 7962 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7963 */;
-import APNGPlayer from "APNGPlayer" /* 8935 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9488 */;
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import PremiumUtils from "PremiumUtils" /* 4297 */;
+import ChatInputUtils from "ChatInputUtils" /* 4505 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import LinearGradientDefault from "LinearGradient" /* 5071 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import TableSwitchRow from "TableSwitchRow" /* 7307 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 7955 */;
+import showForLaterModal from "showForLaterModal" /* 7965 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7966 */;
+import APNGPlayer from "APNGPlayer" /* 8938 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9490 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ThemeStore from "ThemeStore" /* 1181 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
-import UserStore from "UserStore" /* 1371 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import ThemeStore from "ThemeStore" /* 1182 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function AlwaysCompressImagesSwitch(isKestrelTreatment) {
@@ -101,17 +101,17 @@ function PremiumUpsellHero(arg0) {
   return tmp13;
 }
 const View = fn(17).View;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PremiumSubscriptionSKUs: closure_11, PremiumTypes: closure_12, PremiumUpsellTypes: map1 } = PremiumConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, AnalyticsPages: closure_15, HelpdeskArticles: closure_16, ThemeTypes: closure_17 } = Constants);
-const ApplicationStreamFPS = fn(4683).ApplicationStreamFPS;
-const SavedMessagesConstants = fn(7954);
+const ApplicationStreamFPS = fn(4686).ApplicationStreamFPS;
+const SavedMessagesConstants = fn(7957);
 ({ SAVED_BOOKMARKS_MAX: closure_19, SAVED_REMINDERS_MAX: closure_20 } = SavedMessagesConstants);
-const premiumMax = fn(7948).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(7951).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_22, Fragment: closure_23, jsxs: closure_24 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 }, image: { width: 240, height: 144 }, text: { alignSelf: "center", textAlign: "center" }, betaTag: { marginLeft: 0 }, description: null, textContainer: null, buttonContainer: null, compressionContainer: null, compressionHint: null, imageGradientBackgroundContainer: null, imageGradientBackground: null, imageInGradientBackground: null };
 let obj3 = { alignSelf: "center", marginTop: nativeDefault.space.PX_16 };
 obj2.description = { marginHorizontal: nativeDefault.space.PX_16 };
@@ -228,7 +228,7 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   obj8.description = intl6.string(legacyProps(tmp3[25]).t.sMmd7s);
   obj8.analyticsPage = constants3.PREMIUM_UPSELL_STICKERS_EVERYWHERE;
   obj8.upsellType = constants.STICKERS_EVERYWHERE_UPSELL;
-  obj8.illustration = closure_22(legacyProps(tmp3[24]).StickersSpotIllustration, { width: 188, height: 106, accessible: false });
+  obj8.illustration = closure_22(legacyProps(tmp3[24]).StickersSpotIllustration, { width: 235, height: 132, accessible: false });
   obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.STICKERS_EVERYWHERE] = obj8;
   const obj9 = { title: null, showBetaBadge: null, isKestrelRaisedCap: null, description: null, analyticsPage: null, upsellType: null, image: null };
   const intl7 = legacyProps(tmp3[25]).intl;

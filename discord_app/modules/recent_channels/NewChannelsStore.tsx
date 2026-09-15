@@ -1,20 +1,20 @@
-// === Module 7635: NewChannelsStore ===
+// === Module 7639: NewChannelsStore ===
 
-// Module 7635 (NewChannelsStore)
+// Module 7639 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7213 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7385 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
+import DurationsDefault from "Durations" /* 1091 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7217 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7389 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import ReadStateStore from "ReadStateStore" /* 4651 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import ReadStateStore from "ReadStateStore" /* 4654 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {
@@ -127,7 +127,7 @@ function pruneNewChannels() {
     closure_16[item] = new Set(items.filter((item) => !channelOrParentOptedIn.isChannelOrParentOptedIn(closure_0, item)));
   });
 }
-let closure_7 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();

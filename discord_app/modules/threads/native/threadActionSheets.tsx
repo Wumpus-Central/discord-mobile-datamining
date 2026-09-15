@@ -1,12 +1,12 @@
-// === Module 11446: threadActionSheets ===
+// === Module 11450: threadActionSheets ===
 
-// Module 11446 (threadActionSheets)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+// Module 11450 (threadActionSheets)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/threads/native/threadActionSheets.tsx");
 
 export const showThreadNotificationsBottomSheet = function showThreadNotificationsBottomSheet(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11447, dependencyMap.paths), "ThreadNotificationsBottomSheet", { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11451, dependencyMap.paths), "ThreadNotificationsBottomSheet", { channel });
 };

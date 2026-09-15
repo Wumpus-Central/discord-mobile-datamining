@@ -1,9 +1,9 @@
-// === Module 16185: useEnsureHydratedUsers ===
+// === Module 16198: useEnsureHydratedUsers ===
 
-// Module 16185 (useEnsureHydratedUsers)
+// Module 16198 (useEnsureHydratedUsers)
 import noop from "module_19" /* 19 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5507 */;
-import UserStore from "UserStore" /* 1371 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5511 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 

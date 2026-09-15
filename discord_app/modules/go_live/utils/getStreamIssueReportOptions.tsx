@@ -1,8 +1,8 @@
-// === Module 17330: getStreamIssueReportOptions ===
+// === Module 17368: getStreamIssueReportOptions ===
 
-// Module 17330 (getStreamIssueReportOptions)
-import util from "util" /* 1114 */;
-import Constants from "Constants" /* 4678 */;
+// Module 17368 (getStreamIssueReportOptions)
+import util from "util" /* 1115 */;
+import Constants from "Constants" /* 4681 */;
 import size from "module_2" /* 2 */;
 
 const StreamIssueReportReasons = Constants.StreamIssueReportReasons;
@@ -24,9 +24,9 @@ export default function getStreamIssueReportOptions(isEndStream) {
   obj.label = stringResult;
   const items = [obj, , , , , , , , ];
   const obj2 = { id: "blurry", value: StreamIssueReportReasons.BLURRY, label: null };
-  const intl2 = tmp6(1114).intl;
+  const intl2 = tmp6(1115).intl;
   const string2 = intl2.string;
-  const t2 = tmp6(1114).t;
+  const t2 = tmp6(1115).t;
   if (isEndStream) {
     let string2Result = string2(t2.VVPQyy);
   } else {
@@ -35,9 +35,9 @@ export default function getStreamIssueReportOptions(isEndStream) {
   obj2.label = string2Result;
   items[1] = obj2;
   const obj3 = { id: "lagging", value: StreamIssueReportReasons.LAGGING, label: null };
-  const intl3 = tmp6(1114).intl;
+  const intl3 = tmp6(1115).intl;
   const string3 = intl3.string;
-  const t3 = tmp6(1114).t;
+  const t3 = tmp6(1115).t;
   if (isEndStream) {
     let string3Result = string3(t3.ObEHd4);
   } else {
@@ -46,9 +46,9 @@ export default function getStreamIssueReportOptions(isEndStream) {
   obj3.label = string3Result;
   items[2] = obj3;
   const obj4 = { id: "out-of-sync", value: StreamIssueReportReasons.OUT_OF_SYNC, label: null };
-  const intl4 = tmp6(1114).intl;
+  const intl4 = tmp6(1115).intl;
   const string4 = intl4.string;
-  const t4 = tmp6(1114).t;
+  const t4 = tmp6(1115).t;
   if (isEndStream) {
     let string4Result = string4(t4.mYmwD3);
   } else {
@@ -57,9 +57,9 @@ export default function getStreamIssueReportOptions(isEndStream) {
   obj4.label = string4Result;
   items[3] = obj4;
   const obj5 = { id: "audio-missing", value: StreamIssueReportReasons.AUDIO_MISSING, label: null };
-  const intl5 = tmp6(1114).intl;
+  const intl5 = tmp6(1115).intl;
   const string5 = intl5.string;
-  const t5 = tmp6(1114).t;
+  const t5 = tmp6(1115).t;
   if (isEndStream) {
     let string5Result = string5(t5["Xwv41+"]);
   } else {
@@ -68,9 +68,9 @@ export default function getStreamIssueReportOptions(isEndStream) {
   obj5.label = string5Result;
   items[4] = obj5;
   const obj6 = { id: "audio-poor", value: StreamIssueReportReasons.AUDIO_POOR, label: null };
-  const intl6 = tmp6(1114).intl;
+  const intl6 = tmp6(1115).intl;
   const string6 = intl6.string;
-  const t6 = tmp6(1114).t;
+  const t6 = tmp6(1115).t;
   if (isEndStream) {
     let string6Result = string6(t6["fHey+d"]);
   } else {
@@ -79,16 +79,16 @@ export default function getStreamIssueReportOptions(isEndStream) {
   obj6.label = string6Result;
   items[5] = obj6;
   const obj7 = { id: "stream-stopped", value: StreamIssueReportReasons.STREAM_STOPPED, label: null };
-  const intl7 = tmp6(1114).intl;
-  obj7.label = intl7.string(tmp6(1114).t.uEoqQp);
+  const intl7 = tmp6(1115).intl;
+  obj7.label = intl7.string(tmp6(1115).t.uEoqQp);
   items[6] = obj7;
   const obj8 = { id: "vibes-off", value: StreamIssueReportReasons.VIBES_OFF, label: null };
-  const intl8 = tmp6(1114).intl;
-  obj8.label = intl8.string(tmp6(1114).t["++JLL0"]);
+  const intl8 = tmp6(1115).intl;
+  obj8.label = intl8.string(tmp6(1115).t["++JLL0"]);
   items[7] = obj8;
   const obj9 = { id: "other", value: StreamIssueReportReasons.OTHER, label: null };
-  const intl9 = tmp6(1114).intl;
-  obj9.label = intl9.string(tmp6(1114).t.emlT91);
+  const intl9 = tmp6(1115).intl;
+  obj9.label = intl9.string(tmp6(1115).t.emlT91);
   items[8] = obj9;
   return items;
 };

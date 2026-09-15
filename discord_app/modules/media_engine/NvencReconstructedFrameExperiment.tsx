@@ -1,7 +1,7 @@
-// === Module 14163: NvencReconstructedFrameExperiment ===
+// === Module 14168: NvencReconstructedFrameExperiment ===
 
-// Module 14163 (NvencReconstructedFrameExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
+// Module 14168 (NvencReconstructedFrameExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const obj = { kind: "user", name: "2026-07-nvenc-reconstructed-frames", defaultConfig: { enabled: false }, variations: null };
 let obj2 = { 1: null };

@@ -1,6 +1,6 @@
-// === Module 6721: IconSize ===
+// === Module 6725: IconSize ===
 
-// Module 6721 (IconSize)
+// Module 6725 (IconSize)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Icon/IconSize.tsx");

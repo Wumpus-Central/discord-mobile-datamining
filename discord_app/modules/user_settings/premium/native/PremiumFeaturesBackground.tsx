@@ -1,16 +1,16 @@
-// === Module 8958: PremiumFeaturesBackground ===
+// === Module 8961: PremiumFeaturesBackground ===
 
-// Module 8958 (PremiumFeaturesBackground)
+// Module 8961 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import LinearGradientDefault from "LinearGradient" /* 5071 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const Gradients = fn(7535).Gradients;
-const PremiumTypes = fn(1373).PremiumTypes;
+const Gradients = fn(7539).Gradients;
+const PremiumTypes = fn(1374).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { cardContainer: { display: "flex", borderRadius: nativeDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,8 +39,8 @@ export default function PremiumFeaturesBackground(opacity) {
   const items = [closure_6().cardContainer, style];
   obj.style = items;
   const tmp2 = closure_6();
-  obj.start = num(1093).HorizontalGradient.START;
-  obj.end = num(1093).HorizontalGradient.END;
+  obj.start = num(1094).HorizontalGradient.START;
+  obj.end = num(1094).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
   return jsx(LinearGradientDefault, { style: null, colors: mapped, start: null, end: null });

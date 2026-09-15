@@ -1,11 +1,11 @@
-// === Module 9908: useSelectStage ===
+// === Module 9910: useSelectStage ===
 
-// Module 9908 (useSelectStage)
+// Module 9910 (useSelectStage)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
 const require = globalThis.__r;
 

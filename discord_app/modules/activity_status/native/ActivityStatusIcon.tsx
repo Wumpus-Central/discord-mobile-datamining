@@ -1,10 +1,10 @@
-// === Module 11011: ActivityStatusIcon ===
+// === Module 11015: ActivityStatusIcon ===
 
-// Module 11011 (ActivityStatusIcon)
+// Module 11015 (ActivityStatusIcon)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_1 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");

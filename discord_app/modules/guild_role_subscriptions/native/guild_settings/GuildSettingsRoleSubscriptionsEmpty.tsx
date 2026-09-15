@@ -1,11 +1,11 @@
-// === Module 17795: GuildSettingsRoleSubscriptionsEmpty ===
+// === Module 17833: GuildSettingsRoleSubscriptionsEmpty ===
 
-// Module 17795 (GuildSettingsRoleSubscriptionsEmpty)
-import useNavigation from "useNavigation" /* 1483 */;
-import PlaceholderDefault from "Placeholder" /* 17797 */;
-import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 17798 */;
+// Module 17833 (GuildSettingsRoleSubscriptionsEmpty)
+import useNavigation from "useNavigation" /* 1484 */;
+import PlaceholderDefault from "Placeholder" /* 17835 */;
+import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 17836 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
@@ -34,7 +34,7 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
 }
 const Constants = fn(1074);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
-const ApplicationTypes = fn(1348).ApplicationTypes;
+const ApplicationTypes = fn(1349).ApplicationTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");

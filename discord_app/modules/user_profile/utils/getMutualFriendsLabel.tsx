@@ -1,7 +1,7 @@
-// === Module 12739: getMutualFriendsLabel ===
+// === Module 12744: getMutualFriendsLabel ===
 
-// Module 12739 (getMutualFriendsLabel)
-import util from "util" /* 1114 */;
+// Module 12744 (getMutualFriendsLabel)
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");

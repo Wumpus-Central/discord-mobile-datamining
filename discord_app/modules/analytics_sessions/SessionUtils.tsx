@@ -1,7 +1,7 @@
-// === Module 7574: SessionUtils ===
+// === Module 7578: SessionUtils ===
 
-// Module 7574 (SessionUtils)
-import DurationsDefault from "Durations" /* 1090 */;
+// Module 7578 (SessionUtils)
+import DurationsDefault from "Durations" /* 1091 */;
 
 const result = 30 * DurationsDefault.Millis.MINUTE;
 const size = fn(2);

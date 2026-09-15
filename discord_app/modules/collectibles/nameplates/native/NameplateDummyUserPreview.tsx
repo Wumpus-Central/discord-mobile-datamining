@@ -1,24 +1,24 @@
-// === Module 8944: NameplateDummyUserPreview ===
+// === Module 8947: NameplateDummyUserPreview ===
 
-// Module 8944 (NameplateDummyUserPreview)
+// Module 8947 (NameplateDummyUserPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import themes from "themes" /* 4345 */;
-import NameplateDefault from "Nameplate" /* 8945 */;
+import native from "native" /* 1177 */;
+import themes from "themes" /* 4348 */;
+import NameplateDefault from "Nameplate" /* 8948 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1181 */;
+import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG = {};
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.XSMALL_20] = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.XSMALL] = { padding: 6, avatarMarginRight: 6, placeholderBarHeight: 8 };
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1177).AvatarSizes.XSMALL_20] = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1177).AvatarSizes.XSMALL] = { padding: 6, avatarMarginRight: 6, placeholderBarHeight: 8 };
 let obj2 = { padding: nativeDefault.space.PX_4, avatarMarginRight: nativeDefault.space.PX_4, placeholderBarHeight: 6 };
-NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1176).AvatarSizes.NORMAL] = { padding: nativeDefault.space.PX_8, avatarMarginRight: nativeDefault.space.PX_8, placeholderBarHeight: 14 };
-const createStyles = fn(4636);
+NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG[fn(1177).AvatarSizes.NORMAL] = { padding: nativeDefault.space.PX_8, avatarMarginRight: nativeDefault.space.PX_8, placeholderBarHeight: 14 };
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles((arg0, arg1) => {
   obj = { container: { padding: obj[arg0].padding, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", width: "100%", position: "relative", borderRadius: nativeDefault.radii.sm }, avatarContainer: null, avatar: null, placeholderBar: null, nameplate: null };
   const obj3 = { borderRadius: nativeDefault.radii.round, marginRight: obj[arg0].avatarMarginRight, backgroundColor: null };
@@ -65,7 +65,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   const items2 = [hasOwnProperty(NameplateDefault, { nameplate, fullOpacity: true, style: tmp3.nameplate, animate }), , ];
   const obj4 = { style: tmp3.avatarContainer, children: null };
   const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
-  obj4.children = hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 8947 : 8948), size: NORMAL, "aria-hidden": true, style: tmp3.avatar });
+  obj4.children = hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 8950 : 8951), size: NORMAL, "aria-hidden": true, style: tmp3.avatar });
   items2[1] = hasOwnProperty(View, obj4);
   const obj6 = { style: null };
   const items3 = [tmp3.placeholderBar, { width: hideAvatar.width }];

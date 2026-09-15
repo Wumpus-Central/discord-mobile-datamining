@@ -1,9 +1,9 @@
-// === Module 9941: StartEventUtils ===
+// === Module 9943: StartEventUtils ===
 
-// Module 9941 (StartEventUtils)
+// Module 9943 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 const require = fn;
 function createStageChannelForEvent() {
@@ -240,8 +240,8 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "PX_16";
 };
-let closure_4 = fn(1961).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(1963);
+let closure_4 = fn(1962).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(1964);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);

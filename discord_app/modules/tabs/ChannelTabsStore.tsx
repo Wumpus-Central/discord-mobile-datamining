@@ -1,13 +1,13 @@
-// === Module 11123: ChannelTabsStore ===
+// === Module 11127: ChannelTabsStore ===
 
-// Module 11123 (ChannelTabsStore)
+// Module 11127 (ChannelTabsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
-import TabsExperimentDefault from "TabsExperiment" /* 11124 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
+import TabsExperimentDefault from "TabsExperiment" /* 11128 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
 
 require = fn;
 function handleChannelDelete(channel) {
@@ -16,8 +16,8 @@ function handleChannelDelete(channel) {
     enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
   }
   if (enabled) {
-    enabled = channel(1364).isDesktop();
-    const obj2 = channel(1364);
+    enabled = channel(1365).isDesktop();
+    const obj2 = channel(1365);
   }
   if (enabled) {
     if (0 === found.filter((kind) => {
@@ -48,8 +48,8 @@ function handleChannelDelete(channel) {
         enabled2 = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
       }
       if (enabled2) {
-        enabled2 = channel(1364).isDesktop();
-        const obj4 = channel(1364);
+        enabled2 = channel(1365).isDesktop();
+        const obj4 = channel(1365);
       }
       let tmp10 = !enabled2;
       if (!enabled2) {
@@ -69,7 +69,7 @@ function handleChannelDelete(channel) {
     return false;
   }
 }
-const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
+const isStaticChannelRoute = fn(1965).isStaticChannelRoute;
 let tabs = [];
 let c8 = null;
 let closure_9 = 1;
@@ -456,8 +456,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj3(1364).isDesktop();
-      const obj2 = obj3(1364);
+      enabled = obj3(1365).isDesktop();
+      const obj2 = obj3(1365);
     }
     if (enabled) {
       if (0 !== tabs.length) {
@@ -515,8 +515,8 @@ const channelTabsStore = new ChannelTabsStore(DispatcherDefault, {
       enabled = TabsExperimentDefault.getConfig({ location: "ChannelTabsStore" }).enabled;
     }
     if (enabled) {
-      enabled = obj3(1364).isDesktop();
-      const obj2 = obj3(1364);
+      enabled = obj3(1365).isDesktop();
+      const obj2 = obj3(1365);
     }
     if (enabled) {
       if (null != channelId) {

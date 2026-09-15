@@ -1,8 +1,8 @@
-// === Module 8995: OneDayFractionalNitroExperiment ===
+// === Module 8998: OneDayFractionalNitroExperiment ===
 
-// Module 8995 (OneDayFractionalNitroExperiment)
-import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 8996 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 8998 (OneDayFractionalNitroExperiment)
+import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 8999 */;
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-one-day-fractional-nitro", kind: "user", defaultConfig: false, variations: { 1: true } });

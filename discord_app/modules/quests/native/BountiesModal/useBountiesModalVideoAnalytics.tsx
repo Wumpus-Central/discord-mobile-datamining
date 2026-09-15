@@ -1,15 +1,15 @@
-// === Module 15110: useBountiesModalVideoAnalytics ===
+// === Module 15120: useBountiesModalVideoAnalytics ===
 
-// Module 15110 (useBountiesModalVideoAnalytics)
-import AdCreativeType from "AdCreativeType" /* 5532 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
-import MetricEvents from "MetricEvents" /* 7709 */;
-import AnalyticsActions from "AnalyticsActions" /* 7820 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11646 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15104 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 15111 */;
+// Module 15120 (useBountiesModalVideoAnalytics)
+import AdCreativeType from "AdCreativeType" /* 5536 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7707 */;
+import MetricEvents from "MetricEvents" /* 7712 */;
+import AnalyticsActions from "AnalyticsActions" /* 7823 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11650 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15114 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 15121 */;
 import noop from "module_19" /* 19 */;
-import NetworkStore from "NetworkStore" /* 4685 */;
+import NetworkStore from "NetworkStore" /* 4688 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

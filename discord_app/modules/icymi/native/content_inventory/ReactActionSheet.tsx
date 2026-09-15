@@ -1,12 +1,12 @@
-// === Module 16604: ReactActionSheet ===
+// === Module 16617: ReactActionSheet ===
 
-// Module 16604 (ReactActionSheet)
+// Module 16617 (ReactActionSheet)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7865 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8469 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11256 */;
-import ICYMIContext from "ICYMIContext" /* 16550 */;
+import util from "util" /* 1115 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7868 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8472 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11260 */;
+import ICYMIContext from "ICYMIContext" /* 16563 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -110,10 +110,10 @@ function ReactActionSheetBase(content) {
               return obj3;
             } else {
               closure_5(true);
-              v1(8469).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-              const obj5 = v1(8469);
+              v1(8472).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+              const obj5 = v1(8472);
               const obj4 = { itemId: tmp4.id, itemType: hotwheels_gaming_activity, actionParameters: { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null } };
-              v1(8469).feedItemActioned(obj4);
+              v1(8472).feedItemActioned(obj4);
               v1 = 1;
               dependencyMap = 1;
               const obj7 = { value: sendMessage(first1), done: false };
@@ -358,11 +358,11 @@ function ReactActionSheetBase(content) {
   stringResult = intl.string(require("util").t["5IEsGx"]);
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
-const EmojiIntention = fn(1374).EmojiIntention;
+const ACTION_SHEET_MAX_WIDTH = fn(7258).ACTION_SHEET_MAX_WIDTH;
+const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, loading: { opacity: 0.5 }, base: { position: "relative" }, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -417,10 +417,10 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   }
   if (null != attachments) {
     if (attachments.length > 0) {
-      const intl2 = tmp5(1114).intl;
+      const intl2 = tmp5(1115).intl;
       const obj3 = { attachmentsCount: attachments.length };
       const _HermesInternal2 = HermesInternal;
-      items.push("> -# *" + intl2.formatToPlainString(tmp5(1114).t["JiNPo+"], obj3) + "*");
+      items.push("> -# *" + intl2.formatToPlainString(tmp5(1115).t["JiNPo+"], obj3) + "*");
     }
   }
   items.push(reply.reply);

@@ -1,7 +1,7 @@
-// === Module 8185: FriendAnniversaryGate ===
+// === Module 8188: FriendAnniversaryGate ===
 
-// Module 8185 (FriendAnniversaryGate)
-import MobileFriendAnniversaryExperimentDefault from "MobileFriendAnniversaryExperiment" /* 8186 */;
+// Module 8188 (FriendAnniversaryGate)
+import MobileFriendAnniversaryExperimentDefault from "MobileFriendAnniversaryExperiment" /* 8189 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/FriendAnniversaryGate.native.tsx");

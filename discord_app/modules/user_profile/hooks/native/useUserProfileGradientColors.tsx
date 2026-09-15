@@ -1,9 +1,9 @@
-// === Module 8355: useUserProfileGradientColors ===
+// === Module 8358: useUserProfileGradientColors ===
 
-// Module 8355 (useUserProfileGradientColors)
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8345 */;
+// Module 8358 (useUserProfileGradientColors)
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8348 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 const require = globalThis.__r;
 

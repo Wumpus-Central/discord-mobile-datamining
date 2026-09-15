@@ -1,6 +1,6 @@
-// === Module 7211: ConnectedAppsStore ===
+// === Module 7215: ConnectedAppsStore ===
 
-// Module 7211 (ConnectedAppsStore)
+// Module 7215 (ConnectedAppsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

@@ -1,7 +1,7 @@
-// === Module 12093: MobileEmojiSuggestionsExperiment ===
+// === Module 12097: MobileEmojiSuggestionsExperiment ===
 
-// Module 12093 (MobileEmojiSuggestionsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 12097 (MobileEmojiSuggestionsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-mobile-emoji-suggestions", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true, style: "large" }, 2: { enabled: true, style: "small" } } });

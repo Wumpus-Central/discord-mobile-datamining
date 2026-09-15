@@ -1,16 +1,16 @@
-// === Module 12538: ChatInputNotificationNudge ===
+// === Module 12543: ChatInputNotificationNudge ===
 
-// Module 12538 (ChatInputNotificationNudge)
+// Module 12543 (ChatInputNotificationNudge)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12275 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12541 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12542 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12279 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12546 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12547 */;
 import _slicedToArray from "module_32" /* 32 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
 
-const PostReactionPermissionNudgeExperimentDefault = tmp4(12550);
+const PostReactionPermissionNudgeExperimentDefault = tmp4(12555);
 require = fn;
 function ChatInputNotificationNudgeImpl(children) {
   ({ promptType: require, location: importDefault, surface } = children);
@@ -66,15 +66,15 @@ function ChatInputNotificationNudgeImpl(children) {
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const PermissionPromptType = fn(12539).PermissionPromptType;
+const PermissionPromptType = fn(12544).PermissionPromptType;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, NOOP: closure_11 } = Constants);
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12540);
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const NotificationPermissionConstants = fn(12545);
 ({ EventActionLocation: map1, EventActionType: closure_14, NotificationNudgeAnalyticsAction: closure_15, NotificationNudgeSurface: closure_16 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_19 = createStyles.createStyles(() => {
   const obj = { container: { display: "flex", flexDirection: "row", padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, alignItems: "center", borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, marginBottom: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM, gap: 12 }, containerRefreshShadow: null, iconContainer: null, contentContainer: null, ctaButton: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
@@ -109,23 +109,23 @@ export default function ChatInputNotificationNudge(channel) {
     tmp5 = !useIsAppDMDefault(channel);
   }
   const obj = channel(504);
-  const shouldShowPushNotificationNudgeByPromptType = channel(12541).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
-  const tmpResult = channel(12541);
+  const shouldShowPushNotificationNudgeByPromptType = channel(12546).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
+  const tmpResult = channel(12546);
   const tmp4Result = PostReactionPermissionNudgeExperimentDefault;
-  const shouldShowPushNotificationNudgeByPromptType1 = channel(12541).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
-  const tmpResult4 = channel(12541);
+  const shouldShowPushNotificationNudgeByPromptType1 = channel(12546).useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
+  const tmpResult4 = channel(12546);
   let prop = null;
   if (tmp5) {
     prop = null;
     if (shouldShowPushNotificationNudgeByPromptType) {
-      prop = tmp(1943).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER;
+      prop = tmp(1944).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER;
     }
   }
   const obj2 = { cooldownDurationMs };
-  const tmpResult5 = channel(7491);
-  [tmp13, tmp14] = channel(7491).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }, undefined, true);
+  const tmpResult5 = channel(7495);
+  [tmp13, tmp14] = channel(7495).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }, undefined, true);
   importDefault = tmp14;
-  const tmp12 = _slicedToArray(channel(7491).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }, undefined, true), 2);
+  const tmp12 = _slicedToArray(channel(7495).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }, undefined, true), 2);
   let prop1 = null;
   if (tmp5) {
     prop1 = null;
@@ -134,30 +134,30 @@ export default function ChatInputNotificationNudge(channel) {
       if (shouldShowPushNotificationNudgeByPromptType1) {
         prop1 = null;
         if (null == tmp13) {
-          prop1 = tmp(1943).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER;
+          prop1 = tmp(1944).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER;
         }
       }
     }
   }
-  const tmp11Result = _slicedToArray(channel(7491).useSelectedTimeRecurringDismissibleContent(prop1, { cooldownDurationMs }, undefined, true), 2);
+  const tmp11Result = _slicedToArray(channel(7495).useSelectedTimeRecurringDismissibleContent(prop1, { cooldownDurationMs }, undefined, true), 2);
   dependencyMap = tmp17;
   const items1 = [tmp14];
   const items2 = [tmp11Result[1]];
   const obj3 = { cooldownDurationMs };
-  const tmpResult6 = channel(7491);
+  const tmpResult6 = channel(7495);
   const tmp18 = closure_4(() => _undefined(ContentDismissActionType.USER_DISMISS), items1);
-  if (tmp13 === channel(1943).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
+  if (tmp13 === channel(1944).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
     const obj4 = { promptType: PermissionPromptType.CHANNEL_BANNER, location: constants2.CHANNEL_BANNER, surface: constants5.CHANNEL_BANNER, body: null, onDismiss: null };
-    const intl2 = tmp(1114).intl;
-    obj4.body = intl2.string(tmp(1114).t["/6SnPw"]);
+    const intl2 = tmp(1115).intl;
+    obj4.body = intl2.string(tmp(1115).t["/6SnPw"]);
     obj4.onDismiss = tmp18;
     let tmp24 = closure_17(ChatInputNotificationNudgeImpl, obj4);
   } else {
     tmp24 = null;
-    if (tmp11Result[0] === tmp(1943).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER) {
+    if (tmp11Result[0] === tmp(1944).DismissibleContent.NOTIFICATION_NUDGE_POST_REACTION_BANNER) {
       const obj5 = { promptType: PermissionPromptType.POST_REACTION_BANNER, location: constants2.POST_REACTION, surface: constants5.POST_REACTION_BANNER, body: null, onDismiss: null };
-      const intl = tmp(1114).intl;
-      obj5.body = intl.string(tmp(1114).t.VS6ey0);
+      const intl = tmp(1115).intl;
+      obj5.body = intl.string(tmp(1115).t.VS6ey0);
       obj5.onDismiss = tmp19;
       tmp24 = closure_17(ChatInputNotificationNudgeImpl, obj5);
     }

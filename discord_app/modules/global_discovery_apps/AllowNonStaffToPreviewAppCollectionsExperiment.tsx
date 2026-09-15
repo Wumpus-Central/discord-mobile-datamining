@@ -1,7 +1,7 @@
-// === Module 12247: AllowNonStaffToPreviewAppCollectionsExperiment ===
+// === Module 12251: AllowNonStaffToPreviewAppCollectionsExperiment ===
 
-// Module 12247 (AllowNonStaffToPreviewAppCollectionsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 12251 (AllowNonStaffToPreviewAppCollectionsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2025-01-allow-nonstaff-to-preview-app-collections", defaultConfig: { enabled: false }, variations: null };

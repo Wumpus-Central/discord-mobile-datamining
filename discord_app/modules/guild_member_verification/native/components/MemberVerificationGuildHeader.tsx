@@ -1,21 +1,21 @@
-// === Module 5663: MemberVerificationGuildHeader ===
+// === Module 5667: MemberVerificationGuildHeader ===
 
-// Module 5663 (MemberVerificationGuildHeader)
+// Module 5667 (MemberVerificationGuildHeader)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(5654);
+const MemberVerificationFormConstants = fn(5658);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 const useBannerHeight = MemberVerificationFormConstants.useBannerHeight;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 1.20225424859375;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { header: { flex: 1, flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 }, headerContent: { alignItems: "center", marginTop: -48, paddingTop: 20, paddingBottom: 0, paddingHorizontal: 16 }, linearGradient: { position: "absolute", height: 140, top: 0, right: 0, left: 0 }, avatar: null, avatarContainer: null, featureIcon: null, headerTitle: null, headerDescription: null };
 let size = { borderRadius: nativeDefault.radii.lg, borderWidth: 0, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE, width: AVATAR_SIZE, margin: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.avatar = size;
@@ -45,7 +45,7 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
     let obj = require("AvatarUtils");
   } else {
     tmp3 = top;
-    guildBannerSource = require("module_5664");
+    guildBannerSource = require("module_5668");
     tmp5 = importDefault;
   }
   const tmp8 = useBannerHeight();

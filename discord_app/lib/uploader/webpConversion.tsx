@@ -1,8 +1,8 @@
-// === Module 5262: webpConversion ===
+// === Module 5266: webpConversion ===
 
-// Module 5262 (webpConversion)
+// Module 5266 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1239 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1240 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

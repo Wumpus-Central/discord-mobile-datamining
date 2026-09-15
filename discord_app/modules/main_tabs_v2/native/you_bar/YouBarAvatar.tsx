@@ -1,19 +1,19 @@
-// === Module 16484: YouBarAvatar ===
+// === Module 16497: YouBarAvatar ===
 
-// Module 16484 (YouBarAvatar)
+// Module 16497 (YouBarAvatar)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import native2 from "native" /* 4347 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import spring from "spring" /* 5055 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import ClipView from "ClipView" /* 8940 */;
+import native from "native" /* 1177 */;
+import native2 from "native" /* 4350 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5058 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
+import ClipView from "ClipView" /* 8943 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
-import UserStore from "UserStore" /* 1371 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5364 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function YouBarAvatarLarge(transitionState) {
@@ -169,7 +169,7 @@ function YouBarAvatarLarge(transitionState) {
     obj6.style = size2;
     obj5.children = closure_22(sharedValue1, obj6);
     const items6 = [closure_22(tmp23(tmp3[17]), obj5), , , ];
-    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z" };
+    const obj7 = { user: stateFromStores, guildId: "Array", size, animate: true, needsOffscreenAlphaCompositing: null, status: null, statusSizeOverride: null, cutout: null, statusStyle: "boolean" };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
     }
@@ -299,12 +299,12 @@ function YouBarAvatar(transitionState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(15179);
+const YouBarConstants = fn(15189);
 ({ YOU_BAR_AVATAR_LARGE_SIZE: closure_11, YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12, YOU_BAR_AVATAR_SIZE: map1, YOU_BAR_STATUS_INSET: closure_14, YOU_BAR_HEIGHT: closure_15, YOU_BAR_LARGE_STATUS_SIZE: closure_16, YOU_BAR_PADDING: closure_17, YOU_BAR_SPRING_CONFIG: closure_18, YOU_BAR_STATUS_OFFSET: closure_19, YOU_BAR_AVATAR_LARGE_PX: closure_20 } = YouBarConstants);
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};

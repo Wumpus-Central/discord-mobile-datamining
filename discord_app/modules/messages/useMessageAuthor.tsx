@@ -1,14 +1,14 @@
-// === Module 4869: useMessageAuthor ===
+// === Module 4872: useMessageAuthor ===
 
-// Module 4869 (useMessageAuthor)
+// Module 4872 (useMessageAuthor)
 import _modDef38 from "module_38" /* 38 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 function useNullableMessageAuthor(message) {

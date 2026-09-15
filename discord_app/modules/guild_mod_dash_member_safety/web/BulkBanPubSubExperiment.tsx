@@ -1,7 +1,7 @@
-// === Module 7425: BulkBanPubSubExperiment ===
+// === Module 7429: BulkBanPubSubExperiment ===
 
-// Module 7425 (BulkBanPubSubExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 7429 (BulkBanPubSubExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-pubsub-bulk-ban-users", kind: "user", defaultConfig: { usePubSub: false }, variations: null };

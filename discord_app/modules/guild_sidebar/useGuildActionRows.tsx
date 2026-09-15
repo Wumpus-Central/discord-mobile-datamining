@@ -1,17 +1,17 @@
-// === Module 16354: useGuildActionRows ===
+// === Module 16367: useGuildActionRows ===
 
-// Module 16354 (useGuildActionRows)
-import useIsNewMemberDefault from "useIsNewMember" /* 7326 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12502 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12643 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16319 */;
+// Module 16367 (useGuildActionRows)
+import useIsNewMemberDefault from "useIsNewMember" /* 7330 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12507 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12648 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16332 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4823 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4826 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7637).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7641).ChannelListGuildActionRow;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
@@ -63,7 +63,7 @@ export default function useGuildActionRows(id) {
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp3(1943).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp3(1944).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (hasItem) {

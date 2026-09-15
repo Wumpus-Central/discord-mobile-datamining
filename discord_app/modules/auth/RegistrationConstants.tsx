@@ -1,7 +1,7 @@
-// === Module 16044: RegistrationConstants ===
+// === Module 16057: RegistrationConstants ===
 
-// Module 16044 (RegistrationConstants)
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+// Module 16057 (RegistrationConstants)
+import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import size from "module_2" /* 2 */;
 
 const RegisterTransitionSteps = { ACCOUNT_IDENTITY: "Account Identity", ACCOUNT_DISPLAY_NAME: "Account Display Name", ACCOUNT_INFORMATION: "Account Information", AGE_GATE: "Age Gate", AGE_GATE_UNDERAGE: "Age Gate Underage", PHONE_VERIFICATION: "Phone Verification", REGISTER: "Register", CAPTCHA: "Captcha" };

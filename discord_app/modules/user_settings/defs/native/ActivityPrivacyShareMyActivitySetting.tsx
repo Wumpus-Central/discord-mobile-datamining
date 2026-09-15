@@ -1,21 +1,21 @@
-// === Module 15998: ActivityPrivacyShareMyActivitySetting ===
+// === Module 16011: ActivityPrivacyShareMyActivitySetting ===
 
-// Module 15998 (ActivityPrivacyShareMyActivitySetting)
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import _modDef2562 from "module_2562" /* 2562 */;
-import SettingsConstants from "SettingsConstants" /* 8079 */;
-import SettingBuilders from "SettingBuilders" /* 11602 */;
+// Module 16011 (ActivityPrivacyShareMyActivitySetting)
+import util from "util" /* 1115 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import _modDef2563 from "module_2563" /* 2563 */;
+import SettingsConstants from "SettingsConstants" /* 8082 */;
+import SettingBuilders from "SettingBuilders" /* 11606 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2562.WhdCGP);
+    return intl.string(_modDef2563.WhdCGP);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2562.UQ9RHJ);
+    return intl.string(_modDef2563.UQ9RHJ);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.ShowCurrentGame.useSetting,

@@ -1,8 +1,8 @@
-// === Module 17399: trackZoomedInHttpRequest ===
+// === Module 17437: trackZoomedInHttpRequest ===
 
-// Module 17399 (trackZoomedInHttpRequest)
+// Module 17437 (trackZoomedInHttpRequest)
 import Constants from "Constants" /* 1074 */;
-import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 1899 */;
+import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 1900 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

@@ -1,9 +1,9 @@
-// === Module 12250: AppLauncherLastUsedCommandStore ===
+// === Module 12254: AppLauncherLastUsedCommandStore ===
 
-// Module 12250 (AppLauncherLastUsedCommandStore)
+// Module 12254 (AppLauncherLastUsedCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1090 */;
+import DurationsDefault from "Durations" /* 1091 */;
 
 let closure_0 = 10 * DurationsDefault.Millis.MINUTE;
 const lastUsedTimeMs = { lastUsedCommandId: null, lastUsedTimeMs: null };

@@ -1,14 +1,14 @@
-// === Module 8497: InstantInviteStore ===
+// === Module 8500: InstantInviteStore ===
 
-// Module 8497 (InstantInviteStore)
+// Module 8500 (InstantInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import headDefault from "head" /* 8499 */;
-import reverseDefault from "reverse" /* 8501 */;
-import _modDef8502 from "module_8502" /* 8502 */;
-import InviteRecord from "InviteRecord" /* 8498 */;
+import headDefault from "head" /* 8502 */;
+import reverseDefault from "reverse" /* 8504 */;
+import _modDef8505 from "module_8505" /* 8505 */;
+import InviteRecord from "InviteRecord" /* 8501 */;
 
-const InviteTargetTypes = fn(7838).InviteTargetTypes;
+const InviteTargetTypes = fn(7841).InviteTargetTypes;
 let closure_5 = {};
 const dependencyMap = {};
 const dependencyMap2 = {};
@@ -89,7 +89,7 @@ const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
     closure_8[invite.invite.code] = InviteRecord.createFromServer(invite.invite);
     const tmp = headDefault;
     const tmp2 = reverseDefault;
-    let tmpResult = tmp(tmp2(_modDef8502(Object.values(closure_8), "createdAt")));
+    let tmpResult = tmp(tmp2(_modDef8505(Object.values(closure_8), "createdAt")));
     if (tmpResult == null) {
       tmpResult = null;
     }
@@ -111,7 +111,7 @@ const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
     }
     const tmp2 = headDefault;
     const tmp3 = reverseDefault;
-    let tmp2Result = tmp2(tmp3(_modDef8502(Object.values(closure_8), "createdAt")));
+    let tmp2Result = tmp2(tmp3(_modDef8505(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
@@ -163,7 +163,7 @@ const instantInviteStore = new InstantInviteStore(DispatcherDefault, {
     });
     const tmp2 = headDefault;
     const tmp3 = reverseDefault;
-    let tmp2Result = tmp2(tmp3(_modDef8502(Object.values(closure_8), "createdAt")));
+    let tmp2Result = tmp2(tmp3(_modDef8505(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }

@@ -1,18 +1,18 @@
-// === Module 15645: CopyClientInfoSetting ===
+// === Module 15655: CopyClientInfoSetting ===
 
-// Module 15645 (CopyClientInfoSetting)
-import util from "util" /* 1114 */;
-import ToastUtils from "ToastUtils" /* 4334 */;
-import CopyIcon from "CopyIcon" /* 4583 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import DeviceUtils from "DeviceUtils" /* 4615 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
-import ClipboardUtils from "ClipboardUtils" /* 7292 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import ActionSheetRow from "ActionSheetRow" /* 7302 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11920 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11559 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1362 */;
+// Module 15655 (CopyClientInfoSetting)
+import util from "util" /* 1115 */;
+import ToastUtils from "ToastUtils" /* 4337 */;
+import CopyIcon from "CopyIcon" /* 4586 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import DeviceUtils from "DeviceUtils" /* 4618 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7256 */;
+import ClipboardUtils from "ClipboardUtils" /* 7296 */;
+import ActionSheet from "ActionSheet" /* 7304 */;
+import ActionSheetRow from "ActionSheetRow" /* 7306 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11924 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11563 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1363 */;
 
 require = fn;
 function getClientInfo() {
@@ -139,18 +139,18 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(5619).ClipboardListIcon,
+  IconComponent: fn(5623).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ClientClientInfoActionSheet }), "ClientClientInfoActionSheet");
   },
-  usePredicate: fn(1935).DeveloperMode.useSetting,
+  usePredicate: fn(1936).DeveloperMode.useSetting,
   withArrow: true
 });
 const size = fn(2);

@@ -1,14 +1,14 @@
-// === Module 9656: activityLaunchErrorUtils ===
+// === Module 9658: activityLaunchErrorUtils ===
 
-// Module 9656 (activityLaunchErrorUtils)
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 4865 */;
-import InteractionUtils from "InteractionUtils" /* 8233 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9634 */;
-import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 9657 */;
+// Module 9658 (activityLaunchErrorUtils)
+import util from "util" /* 1115 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 4868 */;
+import InteractionUtils from "InteractionUtils" /* 8236 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9636 */;
+import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 9659 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8980 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8983 */;
 
 require = fn;
 let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
@@ -128,7 +128,7 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(8980).DevShelfFetchState;
+const DevShelfFetchState = fn(8983).DevShelfFetchState;
 const AbortCodes = fn(1074).AbortCodes;
 const ActivityLaunchFailErrorType = { ClientError: 0, [0]: "ClientError", CallbackError: 1, [1]: "CallbackError", ApiError: 2, [2]: "ApiError" };
 const size = fn(2);

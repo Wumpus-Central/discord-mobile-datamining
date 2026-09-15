@@ -1,22 +1,22 @@
-// === Module 10396: ForumGuidelinesActionSheet ===
+// === Module 10398: ForumGuidelinesActionSheet ===
 
-// Module 10396 (ForumGuidelinesActionSheet)
+// Module 10398 (ForumGuidelinesActionSheet)
 import nativeDefault from "native" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import LinkUtils from "LinkUtils" /* 4790 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8748 */;
-import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10398 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import LinkUtils from "LinkUtils" /* 4793 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8751 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10400 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7376).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(7380).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { scrollContainer: { paddingHorizontal: 16 }, header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 }, headerTitle: { marginTop: 8 }, guidelinesContainer: { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, footer: { paddingBottom: 16 }, buttonWrapper: { marginHorizontal: 16 }, buttonPill: null, floatingButtonContainer: null, editButton: null, editText: null, editIcon: null };
 let obj3 = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
 obj2.buttonPill = { borderRadius: nativeDefault.radii.sm };
@@ -182,5 +182,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10396, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(10398, dependencyMap.paths), closure_6, obj2);
 };

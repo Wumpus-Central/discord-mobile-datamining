@@ -1,12 +1,9 @@
-// === Module 8260: CheckpointUtils ===
+// === Module 8263: CheckpointUtils ===
 
-// Module 8260 (CheckpointUtils)
-import util from "util" /* 1114 */;
-import TimeUtils from "TimeUtils" /* 4665 */;
-import notification_center_getTimestampString from "notification_center/getTimestampString" /* 7744 */;
-import _modDef8261 from "module_8261" /* 8261 */;
-import _modDef8262 from "module_8262" /* 8262 */;
-import _modDef8263 from "module_8263" /* 8263 */;
+// Module 8263 (CheckpointUtils)
+import util from "util" /* 1115 */;
+import TimeUtils from "TimeUtils" /* 4668 */;
+import notification_center_getTimestampString from "notification_center/getTimestampString" /* 7747 */;
 import _modDef8264 from "module_8264" /* 8264 */;
 import _modDef8265 from "module_8265" /* 8265 */;
 import _modDef8266 from "module_8266" /* 8266 */;
@@ -14,6 +11,9 @@ import _modDef8267 from "module_8267" /* 8267 */;
 import _modDef8268 from "module_8268" /* 8268 */;
 import _modDef8269 from "module_8269" /* 8269 */;
 import _modDef8270 from "module_8270" /* 8270 */;
+import _modDef8271 from "module_8271" /* 8271 */;
+import _modDef8272 from "module_8272" /* 8272 */;
+import _modDef8273 from "module_8273" /* 8273 */;
 import size from "module_2" /* 2 */;
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -43,25 +43,25 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef8261;
-  } else if (1 === cardId) {
-    return _modDef8262;
-  } else if (2 === cardId) {
-    return _modDef8263;
-  } else if (3 === cardId) {
     return _modDef8264;
-  } else if (4 === cardId) {
+  } else if (1 === cardId) {
     return _modDef8265;
-  } else if (5 === cardId) {
+  } else if (2 === cardId) {
     return _modDef8266;
-  } else if (6 === cardId) {
+  } else if (3 === cardId) {
     return _modDef8267;
-  } else if (7 === cardId) {
+  } else if (4 === cardId) {
     return _modDef8268;
-  } else if (8 === cardId) {
+  } else if (5 === cardId) {
     return _modDef8269;
-  } else {
+  } else if (6 === cardId) {
     return _modDef8270;
+  } else if (7 === cardId) {
+    return _modDef8271;
+  } else if (8 === cardId) {
+    return _modDef8272;
+  } else {
+    return _modDef8273;
   }
 };
 export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(arg0) {

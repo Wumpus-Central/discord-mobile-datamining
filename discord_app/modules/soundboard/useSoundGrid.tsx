@@ -1,19 +1,19 @@
-// === Module 17174: useSoundGrid ===
+// === Module 17212: useSoundGrid ===
 
-// Module 17174 (useSoundGrid)
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4530 */;
-import SoundboardTypes from "SoundboardTypes" /* 5101 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9801 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 17175 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17178 */;
+// Module 17212 (useSoundGrid)
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4533 */;
+import SoundboardTypes from "SoundboardTypes" /* 5104 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9803 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 17213 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17216 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserStore from "UserStore" /* 1371 */;
-import SoundboardStore from "SoundboardStore" /* 5093 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import UserStore from "UserStore" /* 1372 */;
+import SoundboardStore from "SoundboardStore" /* 5096 */;
 
 const require = globalThis.__r;
 
@@ -52,9 +52,9 @@ function addTopSoundsSection(items, stateFromStores3, arg2) {
     items.push(obj2);
   }
 }
-const SoundboardConstants = fn(5095);
+const SoundboardConstants = fn(5098);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/useSoundGrid.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 9162: UserProfileMobileGameCollectionExperiment ===
+// === Module 9165: UserProfileMobileGameCollectionExperiment ===
 
-// Module 9162 (UserProfileMobileGameCollectionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 9165 (UserProfileMobileGameCollectionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-07-mobile-game-collection", kind: "user", defaultConfig: { enabled: false }, variations: null };

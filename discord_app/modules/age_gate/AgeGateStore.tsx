@@ -1,9 +1,9 @@
-// === Module 16046: AgeGateStore ===
+// === Module 16059: AgeGateStore ===
 
-// Module 16046 (AgeGateStore)
+// Module 16059 (AgeGateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AgeGateConstants from "AgeGateConstants" /* 1098 */;
+import AgeGateConstants from "AgeGateConstants" /* 1099 */;
 import size from "module_2" /* 2 */;
 
 const AGE_GATE_REGISTER_TIMEOUT_MS = AgeGateConstants.AGE_GATE_REGISTER_TIMEOUT_MS;

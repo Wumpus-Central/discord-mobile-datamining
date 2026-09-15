@@ -1,17 +1,17 @@
-// === Module 13845: RTCConnectionDesyncStore ===
+// === Module 13850: RTCConnectionDesyncStore ===
 
-// Module 13845 (RTCConnectionDesyncStore)
+// Module 13850 (RTCConnectionDesyncStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import CachedEntriesMapDefault from "CachedEntriesMap" /* 1932 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 8333 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 4656 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
-import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import CachedEntriesMapDefault from "CachedEntriesMap" /* 1933 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4694 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4791 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 8336 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 4659 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import UserStore from "UserStore" /* 1372 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
 
 require = fn;
 function retryFailedUsers() {
@@ -49,10 +49,10 @@ function retryFailedUsers() {
     return c2;
   }
 }
-const makeSortedVoiceState = fn(4660).makeSortedVoiceState;
+const makeSortedVoiceState = fn(4663).makeSortedVoiceState;
 const Constants = fn(1074);
 ({ ME: closure_9, RTCConnectionStates: c10 } = Constants);
-const ParticipantTypes = fn(4657).ParticipantTypes;
+const ParticipantTypes = fn(4660).ParticipantTypes;
 new CachedEntriesMapDefault();
 const tmp3 = new CachedEntriesMapDefault();
 const set = new Set();

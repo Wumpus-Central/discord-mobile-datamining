@@ -1,6 +1,6 @@
-// === Module 16696: vibegrationsPreviewClaims ===
+// === Module 16709: vibegrationsPreviewClaims ===
 
-// Module 16696 (vibegrationsPreviewClaims)
+// Module 16709 (vibegrationsPreviewClaims)
 import _slicedToArray from "module_32" /* 32 */;
 
 const map = new Map();

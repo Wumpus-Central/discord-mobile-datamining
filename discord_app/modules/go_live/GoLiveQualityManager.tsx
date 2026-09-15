@@ -1,9 +1,9 @@
-// === Module 13896: GoLiveQualityManager ===
+// === Module 13901: GoLiveQualityManager ===
 
-// Module 13896 (GoLiveQualityManager)
+// Module 13901 (GoLiveQualityManager)
 import LoggerDefault from "Logger" /* 3 */;
-import Timers from "Timers" /* 1952 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;
+import Timers from "Timers" /* 1953 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4697 */;
 
 require = fn;
 const GoLiveQualityManagerEvent = { RequestedSSRCsUpdate: "requested-ssrcs-update", RequestedStreamsUpdate: "requested-streams-update" };

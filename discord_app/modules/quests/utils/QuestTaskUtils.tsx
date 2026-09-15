@@ -1,11 +1,11 @@
-// === Module 7826: QuestTaskUtils ===
+// === Module 7829: QuestTaskUtils ===
 
-// Module 7826 (QuestTaskUtils)
+// Module 7829 (QuestTaskUtils)
 import _mod12 from "module_12" /* 12 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5533 */;
-import QuestDataUtils from "QuestDataUtils" /* 7801 */;
-import QuestStore from "QuestStore" /* 7805 */;
+import DurationsDefault from "Durations" /* 1091 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5537 */;
+import QuestDataUtils from "QuestDataUtils" /* 7804 */;
+import QuestStore from "QuestStore" /* 7808 */;
 
 require = fn;
 function getApplicationIdsByTaskTypes(nextResult, items) {
@@ -280,33 +280,33 @@ function formatWatchTaskTimeFromSeconds(arg0, arg1) {
   const padStartResult1 = String(bound2).padStart(2, "0");
   return "" + padStartResult1 + ":" + String(bound3).padStart(2, "0");
 }
-let items = [fn(5533).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(5533).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION];
+let items = [fn(5537).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(5537).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION];
 let closure_129_0 = items;
 const hasSomeConsoleTasks = (arg0) => {
   const config = arg0;
   return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
-const items1 = [fn(5533).FirstPartyQuestTaskTypes.WATCH_VIDEO];
+const items1 = [fn(5537).FirstPartyQuestTaskTypes.WATCH_VIDEO];
 let closure_130_0 = items1;
 const fn2 = (arg0) => {
   const config = arg0;
   return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
-const items2 = [fn(5533).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+const items2 = [fn(5537).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
 let closure_131_0 = items2;
 const fn3 = (arg0) => {
   const config = arg0;
   return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
-const items3 = [fn(5533).FirstPartyQuestTaskTypes.WATCH_VIDEO, fn(5533).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+const items3 = [fn(5537).FirstPartyQuestTaskTypes.WATCH_VIDEO, fn(5537).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
 let closure_132_0 = items3;
 const fn4 = (arg0) => {
   const config = arg0;
   return config.some((item) => null != config.config.taskConfigV2.tasks[item]);
 };
-const items4 = [fn(5533).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, fn(5533).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, fn(5533).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, fn(5533).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(5533).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME];
+const items4 = [fn(5537).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, fn(5537).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, fn(5537).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, fn(5537).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, fn(5537).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME];
 let closure_133_0 = items4;
-const items5 = [fn(5533).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, fn(5533).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const items5 = [fn(5537).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, fn(5537).FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 let closure_134_0 = items5;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestTaskUtils.tsx");
@@ -482,7 +482,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
         tmp13Result = (function _getLatestTaskDetails(arg0) {
           ({ quest, includeTaskTypes } = arg0);
           if (includeTaskTypes === undefined) {
-            includeTaskTypes = value(5533).FirstPartyQuestTaskTypesSets.ALL;
+            includeTaskTypes = value(5537).FirstPartyQuestTaskTypesSets.ALL;
           }
           const userStatus = quest.userStatus;
           let progress;
@@ -556,7 +556,7 @@ export const getQuestTaskDetails = function getQuestTaskDetails(value, DESKTOP) 
               }
             }
           });
-          const found = sorted.filter(value(1369).isNotNullish);
+          const found = sorted.filter(value(1370).isNotNullish);
           const obj3 = found[Symbol.iterator]();
           while (obj3 !== undefined) {
             let tmp6 = _parseFirstPartyTaskType(tmp4.eventName);
@@ -709,3 +709,15 @@ export const formatWatchTaskTime = function formatWatchTaskTime(minutes, seconds
   return "" + padStartResult + ":" + String(seconds).padStart(2, "0");
 };
 export { formatWatchTaskTimeFromSeconds };
+export const getWatchVideoTaskDetailsFromProgress = function getWatchVideoTaskDetailsFromProgress(arg0) {
+  ({ progressSeconds, targetSeconds } = arg0);
+  const obj = { progressSeconds, targetSeconds, targetMinutes: Math.ceil(targetSeconds / DurationsDefault.Seconds.MINUTE), percentComplete: null, taskType: null };
+  let num = 0;
+  if (targetSeconds > 0) {
+    const _Math = Math;
+    num = _mod12.floor(Math.min(progressSeconds / targetSeconds, 1), 4);
+  }
+  obj.percentComplete = num;
+  obj.taskType = FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE;
+  return obj;
+};

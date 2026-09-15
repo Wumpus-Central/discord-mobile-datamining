@@ -1,7 +1,7 @@
-// === Module 11619: RenewableEndDateSortExperiment ===
+// === Module 11623: RenewableEndDateSortExperiment ===
 
-// Module 11619 (RenewableEndDateSortExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 11623 (RenewableEndDateSortExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-renewable-end-date-sort", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

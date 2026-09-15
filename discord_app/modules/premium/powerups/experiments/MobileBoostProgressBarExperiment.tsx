@@ -1,7 +1,7 @@
-// === Module 16254: MobileBoostProgressBarExperiment ===
+// === Module 16267: MobileBoostProgressBarExperiment ===
 
-// Module 16254 (MobileBoostProgressBarExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 16267 (MobileBoostProgressBarExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-mobile-boost-progress-bar", kind: "user", defaultConfig: { enabled: false }, variations: null };

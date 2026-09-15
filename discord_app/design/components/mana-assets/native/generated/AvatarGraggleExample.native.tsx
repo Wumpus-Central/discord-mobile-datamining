@@ -1,9 +1,9 @@
-// === Module 5864: AvatarGraggleExample ===
+// === Module 5868: AvatarGraggleExample ===
 
-// Module 5864 (AvatarGraggleExample)
+// Module 5868 (AvatarGraggleExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5865 from "module_5865" /* 5865 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5869 from "module_5869" /* 5869 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarGraggleExample = function AvatarGraggleExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5865 };
+  const obj2 = { uri: _modDef5869 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

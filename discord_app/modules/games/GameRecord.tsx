@@ -1,14 +1,14 @@
-// === Module 1917: GameRecord ===
+// === Module 1918: GameRecord ===
 
-// Module 1917 (GameRecord)
-import AvatarUtils from "AvatarUtils" /* 1396 */;
-import Server from "Server" /* 1894 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
-import Record from "Record" /* 1386 */;
-import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+// Module 1918 (GameRecord)
+import AvatarUtils from "AvatarUtils" /* 1397 */;
+import Server from "Server" /* 1895 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1925 */;
+import Record from "Record" /* 1387 */;
+import ApplicationRecord from "ApplicationRecord" /* 1919 */;
 
 require = fn;
-const createExecutable = fn(1918).createExecutable;
+const createExecutable = fn(1919).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -166,7 +166,7 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
     artwork = [];
   }
   const mapped = artwork.map((item) => getGameMediaRefURLDefault(self.id, item, { keepAspectRatio: true }));
-  return mapped.filter(self(1369).isNotNullish);
+  return mapped.filter(self(1370).isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
   closure_0 = DEVELOPER;

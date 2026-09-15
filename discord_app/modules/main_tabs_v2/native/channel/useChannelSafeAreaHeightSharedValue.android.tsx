@@ -1,7 +1,7 @@
-// === Module 11486: useChannelSafeAreaHeightSharedValue ===
+// === Module 11490: useChannelSafeAreaHeightSharedValue ===
 
-// Module 11486 (useChannelSafeAreaHeightSharedValue)
-import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+// Module 11490 (useChannelSafeAreaHeightSharedValue)
+import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

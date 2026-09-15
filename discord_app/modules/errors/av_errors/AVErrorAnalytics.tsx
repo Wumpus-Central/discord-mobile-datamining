@@ -1,20 +1,20 @@
-// === Module 17968: AVErrorAnalytics ===
+// === Module 18006: AVErrorAnalytics ===
 
-// Module 17968 (AVErrorAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1357 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4630 */;
-import VideoQualityStats from "VideoQualityStats" /* 7843 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9739 */;
+// Module 18006 (AVErrorAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4633 */;
+import VideoQualityStats from "VideoQualityStats" /* 7846 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9741 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4674 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4682 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
-import RTCRegionStore from "RTCRegionStore" /* 4686 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4675 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4677 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4685 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
+import RTCRegionStore from "RTCRegionStore" /* 4689 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4678 */;
 
 const require = globalThis.__r;
 
@@ -72,9 +72,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(4681).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(4684).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(4661);
+const Constants = fn(4664);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");

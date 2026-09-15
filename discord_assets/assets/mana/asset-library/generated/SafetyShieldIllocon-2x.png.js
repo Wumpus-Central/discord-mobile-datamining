@@ -1,6 +1,6 @@
-// === Module 6503: ? ===
+// === Module 6507: ? ===
 
-// Module 6503
+// Module 6507
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyShieldIllocon-2x.png.js");

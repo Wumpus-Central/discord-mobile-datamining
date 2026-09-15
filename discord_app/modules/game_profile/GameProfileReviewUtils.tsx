@@ -1,8 +1,8 @@
-// === Module 8849: GameProfileReviewUtils ===
+// === Module 8852: GameProfileReviewUtils ===
 
-// Module 8849 (GameProfileReviewUtils)
-import util from "util" /* 1114 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 1934 */;
+// Module 8852 (GameProfileReviewUtils)
+import util from "util" /* 1115 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 1935 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");

@@ -1,14 +1,14 @@
-// === Module 15267: QuestDockContentCollapsed ===
+// === Module 15277: QuestDockContentCollapsed ===
 
-// Module 15267 (QuestDockContentCollapsed)
-import spring from "spring" /* 5055 */;
+// Module 15277 (QuestDockContentCollapsed)
+import spring from "spring" /* 5058 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5525).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15176).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5529).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15186).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { questDockContentCollapsed: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -28,7 +28,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15177).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(15187).QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
   const fn = function l() {
     let num = 1;
@@ -40,12 +40,12 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     }
     return { opacity: spring.withSpring(num, closure_5) };
   };
-  let obj = hideOnExpand(4373);
-  fn.__closure = { withSpring: hideOnExpand(5055).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  let obj = hideOnExpand(4376);
+  fn.__closure = { withSpring: hideOnExpand(5058).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   fn.__workletHash = 13361221764426;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj2 = { withSpring: hideOnExpand(5055).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj2 = { withSpring: hideOnExpand(5058).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   class C {
     constructor() {
       pointerEvents = "auto";
@@ -62,9 +62,9 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   C.__closure = { activeQuestDockMode, QuestDockMode, hideOnExpand: tmp };
   C.__workletHash = 14339269503421;
   C.__initData = __initData2;
-  const animatedProps = hideOnExpand(4373).useAnimatedProps(C);
+  const animatedProps = hideOnExpand(4376).useAnimatedProps(C);
   const obj4 = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj4.style = items;
-  return jsx(activeQuestDockMode(7176), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(7180), { style: null, animatedProps, children: children.children });
 });

@@ -1,14 +1,14 @@
-// === Module 13542: useMaybeFetchTieredTenureBadgeData ===
+// === Module 13547: useMaybeFetchTieredTenureBadgeData ===
 
-// Module 13542 (useMaybeFetchTieredTenureBadgeData)
-import useMountEffectDefault from "useMountEffect" /* 5073 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 13547 (useMaybeFetchTieredTenureBadgeData)
+import useMountEffectDefault from "useMountEffect" /* 5076 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8307 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useMaybeFetchTieredTenureBadgeData.tsx");
 

@@ -1,16 +1,16 @@
-// === Module 5635: AppWindowContext ===
+// === Module 5639: AppWindowContext ===
 
-// Module 5635 (AppWindowContext)
-import WindowIdUtils2 from "WindowIdUtils" /* 5636 */;
-import WindowInteractingUtils from "WindowInteractingUtils" /* 5637 */;
+// Module 5639 (AppWindowContext)
+import WindowIdUtils2 from "WindowIdUtils" /* 5640 */;
+import WindowInteractingUtils from "WindowInteractingUtils" /* 5641 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let componentDispatcher = new fn(1109).ComponentDispatcher();
+let componentDispatcher = new fn(1110).ComponentDispatcher();
 let obj = { appContext: fn(1074).AppContext.APP, renderWindow: window, windowDispatch: componentDispatcher, windowId: null };
-const WindowIdUtils = fn(5636);
+const WindowIdUtils = fn(5640);
 obj.windowId = WindowIdUtils.getMainWindowId();
 const context = noop.createContext(obj);
 const map = new Map();

@@ -1,20 +1,20 @@
-// === Module 11206: PremiumGiftSuccess ===
+// === Module 11210: PremiumGiftSuccess ===
 
-// Module 11206 (PremiumGiftSuccess)
+// Module 11210 (PremiumGiftSuccess)
 import nativeDefault from "native" /* 576 */;
-import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
+import dismissible_content from "dismissible_content" /* 1944 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10794 */;
+import PromotionsStore from "PromotionsStore" /* 10798 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bodyContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 }, actionContainer: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16, flex: 1, alignContent: "center", justifyContent: "center", flexGrow: 1 };

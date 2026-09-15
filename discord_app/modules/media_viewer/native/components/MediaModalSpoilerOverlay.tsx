@@ -1,15 +1,15 @@
-// === Module 13110: MediaModalSpoilerOverlay ===
+// === Module 13115: MediaModalSpoilerOverlay ===
 
-// Module 13110 (MediaModalSpoilerOverlay)
+// Module 13115 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import PlatformUtils2 from "PlatformUtils" /* 1363 */;
-import useToken from "useToken" /* 4338 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5046 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5162 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13095 */;
+import util from "util" /* 1115 */;
+import PlatformUtils2 from "PlatformUtils" /* 1364 */;
+import useToken from "useToken" /* 4341 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5049 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5165 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13100 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,10 +18,10 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isAndroid();
 const unsafe_rawColors = nativeDefault.unsafe_rawColors;
 obj4.backgroundColor = PlatformUtils ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;

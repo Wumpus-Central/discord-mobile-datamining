@@ -1,11 +1,11 @@
-// === Module 13812: NoticeStore ===
+// === Module 13817: NoticeStore ===
 
-// Module 13812 (NoticeStore)
+// Module 13817 (NoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef4228 from "module_4228" /* 4228 */;
-import UserOfferStore from "UserOfferStore" /* 7553 */;
+import _modDef4231 from "module_4231" /* 4231 */;
+import UserOfferStore from "UserOfferStore" /* 7557 */;
 
 require = fn;
 function clearDismissUntil(arg0) {
@@ -21,10 +21,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = _modDef4228(value);
+        tmp4 = _modDef4231(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(_modDef4228());
+        return tmp4.isAfter(_modDef4231());
       }
     }
     let tmp6 = null != tmp11;
@@ -71,7 +71,7 @@ function updateNotice() {
     continue;
   }
 }
-const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1374).PremiumSubscriptionSKUs;
 const NoticeTypes = fn(1074).NoticeTypes;
 let c6 = null;
 let items = [, ];

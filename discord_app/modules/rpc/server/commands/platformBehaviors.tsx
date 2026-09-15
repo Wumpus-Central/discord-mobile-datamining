@@ -1,6 +1,6 @@
-// === Module 14595: platformBehaviors ===
+// === Module 14605: platformBehaviors ===
 
-// Module 14595 (platformBehaviors)
+// Module 14605 (platformBehaviors)
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

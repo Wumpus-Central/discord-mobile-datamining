@@ -1,7 +1,7 @@
-// === Module 1352: clock ===
+// === Module 1353: clock ===
 
-// Module 1352 (clock)
-import global_types from "global_types" /* 1351 */;
+// Module 1353 (clock)
+import global_types from "global_types" /* 1352 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/clock.tsx");

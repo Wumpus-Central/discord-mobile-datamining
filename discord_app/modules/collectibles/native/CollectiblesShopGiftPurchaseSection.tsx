@@ -1,27 +1,27 @@
-// === Module 11148: CollectiblesShopGiftPurchaseSection ===
+// === Module 11152: CollectiblesShopGiftPurchaseSection ===
 
-// Module 11148 (CollectiblesShopGiftPurchaseSection)
+// Module 11152 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8312 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7527).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7531).useNativeCheckoutStore;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);

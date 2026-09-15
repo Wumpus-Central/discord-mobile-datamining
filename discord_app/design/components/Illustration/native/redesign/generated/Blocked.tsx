@@ -1,8 +1,8 @@
-// === Module 14891: Blocked ===
+// === Module 14901: Blocked ===
 
-// Module 14891 (Blocked)
-import shared from "shared" /* 4488 */;
-import _mod8349 from "module_8349" /* 8349 */;
+// Module 14901 (Blocked)
+import shared from "shared" /* 4491 */;
+import _mod8352 from "module_8352" /* 8352 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,44 +14,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/Blocked.tsx");
 
 export const getBlockedSource = function getBlockedSource(theme) {
-  return _mod8349.getIllustrationSource(theme, {
+  return _mod8352.getIllustrationSource(theme, {
     dark() {
-      return require("module_14892");
+      return require("module_14902");
     },
     darker() {
-      return require("module_14893");
+      return require("module_14903");
     },
     light() {
-      return require("module_14894");
+      return require("module_14904");
     }
   });
 };
 export const useBlockedSource = function useBlockedSource() {
   const obj = shared;
-  return _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8352.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_14892");
+      return require("module_14902");
     },
     darker() {
-      return require("module_14893");
+      return require("module_14903");
     },
     light() {
-      return require("module_14894");
+      return require("module_14904");
     }
   });
 };
 export const Blocked = function Blocked(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8349.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8352.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_14892");
+      return require("module_14902");
     },
     darker() {
-      return require("module_14893");
+      return require("module_14903");
     },
     light() {
-      return require("module_14894");
+      return require("module_14904");
     }
   });
   const merged = Object.assign(arg0);

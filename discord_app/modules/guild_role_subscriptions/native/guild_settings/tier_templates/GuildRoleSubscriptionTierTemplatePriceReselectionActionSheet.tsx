@@ -1,14 +1,14 @@
-// === Module 17905: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 17943: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 17905 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 17943 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import PriceUtils from "PriceUtils" /* 7337 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9179 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15315 */;
+import util from "util" /* 1115 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4358 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import PriceUtils from "PriceUtils" /* 7341 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9182 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15325 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ function PriceOptionRow(selected) {
   items[1] = containerSelected;
   const obj3 = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj3.source = importDefault(selected ? 17809 : 16666);
+  obj3.source = importDefault(selected ? 17847 : 16679);
   const items1 = [React7(FastImageDefault, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = util.intl;
@@ -46,11 +46,11 @@ function PriceOptionRow(selected) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1374).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1085).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md }, rowContainer: null, containerSelected: null, rowStatusIcon: null, confirmButton: null, backToTemplates: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md };
 obj2.rowContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignSelf: "stretch", justifyContent: "flex-start", padding: 12, marginBottom: 12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };

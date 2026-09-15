@@ -1,8 +1,8 @@
-// === Module 11436: QuestHomeHeroTypes ===
+// === Module 11440: QuestHomeHeroTypes ===
 
-// Module 11436 (QuestHomeHeroTypes)
-import AssetUtils from "AssetUtils" /* 11419 */;
-import QuestHomeHeroCta from "QuestHomeHeroCta" /* 11437 */;
+// Module 11440 (QuestHomeHeroTypes)
+import AssetUtils from "AssetUtils" /* 11423 */;
+import QuestHomeHeroCta from "QuestHomeHeroCta" /* 11441 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");

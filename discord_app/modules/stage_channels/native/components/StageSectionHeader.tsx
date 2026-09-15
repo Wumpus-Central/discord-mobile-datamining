@@ -1,10 +1,10 @@
-// === Module 10182: StageSectionHeader ===
+// === Module 10184: StageSectionHeader ===
 
-// Module 10182 (StageSectionHeader)
+// Module 10184 (StageSectionHeader)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
-import _modDef7261 from "module_7261" /* 7261 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
+import _modDef7265 from "module_7265" /* 7265 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, audience: null };
 let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.audience = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: nativeDefault.radii.xs };
@@ -36,9 +36,9 @@ export default function StageSectionHeader(collapsed) {
     obj2.transform = items;
     return obj2;
   };
-  let obj = collapsed(4373);
+  let obj = collapsed(4376);
   const tmp2 = collapsed;
-  fn.__closure = { withTiming: collapsed(4637).withTiming, collapsed };
+  fn.__closure = { withTiming: collapsed(4640).withTiming, collapsed };
   fn.__workletHash = 13855092771739;
   fn.__initData = __initData;
   const obj3 = { style: tmp.section, children: null };
@@ -47,7 +47,7 @@ export default function StageSectionHeader(collapsed) {
   const obj5 = { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   let items = [label, " \u2014 ", count];
   obj5.children = items;
-  const items1 = [closure_5(collapsed(4632).Text, obj5), , ];
+  const items1 = [closure_5(collapsed(4635).Text, obj5), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj6 = { style: tmp.children, children };
@@ -56,8 +56,8 @@ export default function StageSectionHeader(collapsed) {
   items1[1] = tmp5Result;
   const obj7 = { style: tmp.collapseButton, children: null };
   const obj8 = { style: animatedStyle, children: null };
-  let obj2 = { withTiming: collapsed(4637).withTiming, collapsed };
-  obj8.children = closure_6(tmp2(1176).Icon, { source: _modDef7261, style: tmp.collapseIcon });
+  let obj2 = { withTiming: collapsed(4640).withTiming, collapsed };
+  obj8.children = closure_6(tmp2(1177).Icon, { source: _modDef7265, style: tmp.collapseIcon });
   obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
   items1[2] = closure_6(closure_4, obj7);
   obj4.children = items1;

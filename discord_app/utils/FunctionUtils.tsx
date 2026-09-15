@@ -1,6 +1,6 @@
-// === Module 1933: FunctionUtils ===
+// === Module 1934: FunctionUtils ===
 
-// Module 1933 (FunctionUtils)
+// Module 1934 (FunctionUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/FunctionUtils.tsx");

@@ -1,23 +1,23 @@
-// === Module 7382: ChannelMemberStore ===
+// === Module 7386: ChannelMemberStore ===
 
-// Module 7382 (ChannelMemberStore)
+// Module 7386 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1239 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
-import ExperimentStore from "ExperimentStore" /* 4552 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1240 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4283 */;
+import ExperimentStore from "ExperimentStore" /* 4555 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4676 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5360 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PresenceStore from "PresenceStore" /* 4679 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5364 */;
+import UserStore from "UserStore" /* 1372 */;
 
 let require = fn;
 function getMemberListId(arg0) {
@@ -138,14 +138,14 @@ prototype["setGroups"] = function setGroups(groups) {
     Object.defineProperty(obj2, "title", {
       get: () => {
         if (constants.ONLINE === id) {
-          const intl3 = id(1114).intl;
-          return intl3.string(id(1114).t.WbGtnH);
+          const intl3 = id(1115).intl;
+          return intl3.string(id(1115).t.WbGtnH);
         } else if (tmp2.OFFLINE === tmp) {
-          const intl2 = id(1114).intl;
-          return intl2.string(id(1114).t.Vv0abJ);
+          const intl2 = id(1115).intl;
+          return intl2.string(id(1115).t.Vv0abJ);
         } else {
-          const intl = id(1114).intl;
-          return intl.string(id(1114).t["UQMV/E"]);
+          const intl = id(1115).intl;
+          return intl.string(id(1115).t["UQMV/E"]);
         }
       },
       set: undefined
@@ -211,14 +211,14 @@ prototype["insert"] = function insert(arg0, arg1) {
     Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1115).intl;
+            return intl3.string(id(1115).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1115).intl;
+            return intl2.string(id(1115).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1115).intl;
+            return intl.string(id(1115).t["UQMV/E"]);
           }
         },
       set: undefined
@@ -306,14 +306,14 @@ prototype["update"] = function update(arg0, arg1) {
     Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1115).intl;
+            return intl3.string(id(1115).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1115).intl;
+            return intl2.string(id(1115).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1115).intl;
+            return intl.string(id(1115).t["UQMV/E"]);
           }
         },
       set: undefined
@@ -461,14 +461,14 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
     Object.defineProperty(obj2, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1114).intl;
-            return intl3.string(id(1114).t.WbGtnH);
+            const intl3 = id(1115).intl;
+            return intl3.string(id(1115).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1114).intl;
-            return intl2.string(id(1114).t.Vv0abJ);
+            const intl2 = id(1115).intl;
+            return intl2.string(id(1115).t.Vv0abJ);
           } else {
-            const intl = id(1114).intl;
-            return intl.string(id(1114).t["UQMV/E"]);
+            const intl = id(1115).intl;
+            return intl.string(id(1115).t["UQMV/E"]);
           }
         },
       set: undefined

@@ -1,12 +1,12 @@
-// === Module 15952: SponsoredContentPreferencesSetting ===
+// === Module 15965: SponsoredContentPreferencesSetting ===
 
-// Module 15952 (SponsoredContentPreferencesSetting)
+// Module 15965 (SponsoredContentPreferencesSetting)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import _modDef2070 from "module_2070" /* 2070 */;
-import QuestsIcon from "QuestsIcon" /* 15084 */;
-import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15950 */;
-import SettingBuilders from "SettingBuilders" /* 11602 */;
+import util from "util" /* 1115 */;
+import _modDef2071 from "module_2071" /* 2071 */;
+import QuestsIcon from "QuestsIcon" /* 15094 */;
+import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15963 */;
+import SettingBuilders from "SettingBuilders" /* 11606 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2070.XUj46U);
+    return intl.string(_modDef2071.XUj46U);
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,

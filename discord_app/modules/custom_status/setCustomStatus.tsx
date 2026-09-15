@@ -1,12 +1,12 @@
-// === Module 11253: setCustomStatus ===
+// === Module 11257: setCustomStatus ===
 
-// Module 11253 (setCustomStatus)
+// Module 11257 (setCustomStatus)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import _modDef4228 from "module_4228" /* 4228 */;
-import Constants2 from "Constants" /* 11250 */;
-import getClearAfterDurationDefault from "getClearAfterDuration" /* 11254 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import _modDef4231 from "module_4231" /* 4231 */;
+import Constants2 from "Constants" /* 11254 */;
+import getClearAfterDurationDefault from "getClearAfterDuration" /* 11258 */;
 import size from "module_2" /* 2 */;
 
 const ClearAfterValues = Constants2.ClearAfterValues;
@@ -33,10 +33,10 @@ export default function setCustomStatus(arg0) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
-      const obj2 = _modDef4228();
-      const addResult = _modDef4228().add(getClearAfterDurationDefault(clearAfter), "ms");
-      str2 = String(_modDef4228().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
-      const toDateResult = _modDef4228().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
+      const obj2 = _modDef4231();
+      const addResult = _modDef4231().add(getClearAfterDurationDefault(clearAfter), "ms");
+      str2 = String(_modDef4231().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
+      const toDateResult = _modDef4231().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
     }
   }
   obj.expiresAtMs = str2;
@@ -54,9 +54,9 @@ export default function setCustomStatus(arg0) {
   }
   obj.emojiName = str5;
   if (createdAtMs == null) {
-    const obj5 = _modDef4228();
-    createdAtMs = _modDef4228().toDate().getTime();
-    const toDateResult1 = _modDef4228().toDate();
+    const obj5 = _modDef4231();
+    createdAtMs = _modDef4231().toDate().getTime();
+    const toDateResult1 = _modDef4231().toDate();
   }
   obj.createdAtMs = String(createdAtMs);
   const updateSettingResult = CustomStatusSetting2.updateSetting(obj);

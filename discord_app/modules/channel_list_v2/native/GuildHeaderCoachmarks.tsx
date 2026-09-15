@@ -1,14 +1,14 @@
-// === Module 16253: GuildHeaderCoachmarks ===
+// === Module 16266: GuildHeaderCoachmarks ===
 
-// Module 16253 (GuildHeaderCoachmarks)
-import dismissible_content from "dismissible_content" /* 1943 */;
+// Module 16266 (GuildHeaderCoachmarks)
+import dismissible_content from "dismissible_content" /* 1944 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;
-const constants = fn(1954).DismissibleContentGroupName;
+const constants = fn(1955).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/GuildHeaderCoachmarks.tsx");

@@ -1,9 +1,9 @@
-// === Module 9832: saveGuildEventRecurrence ===
+// === Module 9834: saveGuildEventRecurrence ===
 
-// Module 9832 (saveGuildEventRecurrence)
+// Module 9834 (saveGuildEventRecurrence)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ScheduleUtils from "ScheduleUtils" /* 9795 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9833 */;
+import ScheduleUtils from "ScheduleUtils" /* 9797 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9835 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");

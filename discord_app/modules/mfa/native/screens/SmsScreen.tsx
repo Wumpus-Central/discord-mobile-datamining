@@ -1,7 +1,7 @@
-// === Module 15769: SmsScreen ===
+// === Module 15780: SmsScreen ===
 
-// Module 15769 (SmsScreen)
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+// Module 15780 (SmsScreen)
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -208,20 +208,20 @@ export default function SmsScreen(mfaChallenge) {
       }
     }
   };
-  const tmp2 = finish(7045)();
-  const screenStyles = finish(15762).useScreenStyles(tmp2);
+  const tmp2 = finish(7049)();
+  const screenStyles = finish(15773).useScreenStyles(tmp2);
   const tmp4 = first(noop.useState(null), 2);
   dependencyMap = tmp4[1];
-  let obj = finish(15762);
+  let obj = finish(15773);
   [tmp6, c3] = first(noop.useState(false), 2);
   const tmp7 = first(noop.useState(""), 2);
   first = tmp7[0];
   noop = tmp7[1];
-  let intl = mfaChallenge(1114).intl;
+  let intl = mfaChallenge(1115).intl;
   const tmp5 = first(noop.useState(false), 2);
   const tmp8 = mfaChallenge;
-  [tmp10, c6] = first(noop.useState(intl.string(mfaChallenge(1114).t.LQdCQE)), 2);
-  const tmp9 = first(noop.useState(intl.string(mfaChallenge(1114).t.LQdCQE)), 2);
+  [tmp10, c6] = first(noop.useState(intl.string(mfaChallenge(1115).t.LQdCQE)), 2);
+  const tmp9 = first(noop.useState(intl.string(mfaChallenge(1115).t.LQdCQE)), 2);
   [tmp12, c7] = first(noop.useState(false), 2);
   const items = [mfaChallenge.ticket];
   const effect = noop.useEffect(() => {
@@ -231,8 +231,8 @@ export default function SmsScreen(mfaChallenge) {
     const obj = { ticket: mfaChallenge.ticket };
     const postResult = HTTP.post(request);
     HTTP.post(request).then((body) => {
-      const intl = mfaChallenge(1114).intl;
-      closure_1_6(intl.formatToPlainString(mfaChallenge(1114).t["8r6h7+"], { phoneNumber: body.body.phone }));
+      const intl = mfaChallenge(1115).intl;
+      closure_1_6(intl.formatToPlainString(mfaChallenge(1115).t["8r6h7+"], { phoneNumber: body.body.phone }));
     }).catch((error) => {
       const body = error.body;
       let message;
@@ -248,20 +248,20 @@ export default function SmsScreen(mfaChallenge) {
   }, items);
   let obj2 = { headerText: null, subtitle: null, input: null, submit: null, screenProps: null, mfaMethod: "sms" };
   const tmp11 = first(noop.useState(false), 2);
-  let intl2 = mfaChallenge(1114).intl;
-  obj2.headerText = intl2.string(mfaChallenge(1114).t.o4JNrO);
+  let intl2 = mfaChallenge(1115).intl;
+  obj2.headerText = intl2.string(mfaChallenge(1115).t.o4JNrO);
   obj2.subtitle = tmp10;
   let obj3 = { style: screenStyles.inputContainer, children: null };
-  let obj4 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15766).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, placeholder: null, errorMessage: null };
-  const intl3 = mfaChallenge(1114).intl;
-  obj4.label = intl3.string(mfaChallenge(1114).t["/sHnXc"]);
-  const intl4 = mfaChallenge(1114).intl;
-  obj4.placeholder = intl4.string(mfaChallenge(1114).t.tARzgo);
+  let obj4 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15777).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, placeholder: null, errorMessage: null };
+  const intl3 = mfaChallenge(1115).intl;
+  obj4.label = intl3.string(mfaChallenge(1115).t["/sHnXc"]);
+  const intl4 = mfaChallenge(1115).intl;
+  obj4.placeholder = intl4.string(mfaChallenge(1115).t.tARzgo);
   obj4.errorMessage = tmp4[0];
-  const items1 = [handleChange(mfaChallenge(6707).TextInput, obj4), ];
+  const items1 = [handleChange(mfaChallenge(6711).TextInput, obj4), ];
   let obj5 = { text: null, variant: "secondary", size: "sm", onPress: null };
-  const intl5 = mfaChallenge(1114).intl;
-  obj5.text = intl5.string(mfaChallenge(1114).t.WbaP3r);
+  const intl5 = mfaChallenge(1115).intl;
+  obj5.text = intl5.string(mfaChallenge(1115).t.WbaP3r);
   obj5.onPress = function handleResend() {
     const self = this;
     const apply = closure_10.apply;
@@ -272,13 +272,13 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   };
-  items1[1] = handleChange(mfaChallenge(5056).Button, obj5);
+  items1[1] = handleChange(mfaChallenge(5059).Button, obj5);
   obj3.children = items1;
   obj2.input = closure_9(c6, obj3);
   let obj6 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  const tmp15 = finish(15761);
-  const intl6 = mfaChallenge(1114).intl;
-  obj6.text = intl6.string(mfaChallenge(1114).t.geKm7t);
+  const tmp15 = finish(15772);
+  const intl6 = mfaChallenge(1115).intl;
+  obj6.text = intl6.string(mfaChallenge(1115).t.geKm7t);
   let tmp17 = tmp6;
   if (!tmp6) {
     tmp17 = tmp12;
@@ -291,10 +291,10 @@ export default function SmsScreen(mfaChallenge) {
     tmp6 = tmp12;
   }
   if (!tmp6) {
-    tmp6 = first.length !== tmp8(15766).SMS_CODE_LENGTH;
+    tmp6 = first.length !== tmp8(15777).SMS_CODE_LENGTH;
   }
   obj6.disabled = tmp6;
-  obj2.submit = handleChange(finish(15764), obj6);
+  obj2.submit = handleChange(finish(15775), obj6);
   obj2.screenProps = { mfaChallenge, finish };
   return handleChange(tmp15, obj2);
 };

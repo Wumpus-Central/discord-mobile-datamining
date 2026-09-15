@@ -1,14 +1,14 @@
-// === Module 17575: AppStoreAgeSignalReport ===
+// === Module 17613: AppStoreAgeSignalReport ===
 
-// Module 17575 (AppStoreAgeSignalReport)
-import TimeUtils from "TimeUtils" /* 4665 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5504 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8557 */;
-import AppStoreAgeSignalAttestation from "AppStoreAgeSignalAttestation" /* 8689 */;
-import AppStoreAgeAssurance from "AppStoreAgeAssurance" /* 8692 */;
+// Module 17613 (AppStoreAgeSignalReport)
+import TimeUtils from "TimeUtils" /* 4668 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5508 */;
+import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8560 */;
+import AppStoreAgeSignalAttestation from "AppStoreAgeSignalAttestation" /* 8692 */;
+import AppStoreAgeAssurance from "AppStoreAgeAssurance" /* 8695 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function collectAgeSignal() {

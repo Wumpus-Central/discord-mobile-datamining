@@ -1,6 +1,6 @@
-// === Module 5843: ? ===
+// === Module 5847: ? ===
 
-// Module 5843
+// Module 5847
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AnniversaryTier8Badge-2x.png.js");

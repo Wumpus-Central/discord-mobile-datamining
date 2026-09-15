@@ -1,17 +1,17 @@
-// === Module 14061: GuildActionSheetTabItems ===
+// === Module 14066: GuildActionSheetTabItems ===
 
-// Module 14061 (GuildActionSheetTabItems)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import actions_BoostingActionCreatorsAll from "actions/BoostingActionCreators" /* 5515 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9950 */;
-import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9953 */;
+// Module 14066 (GuildActionSheetTabItems)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
+import actions_BoostingActionCreatorsAll from "actions/BoostingActionCreators" /* 5519 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7226 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9195 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9952 */;
+import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9955 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -24,13 +24,13 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let canAccessSettings = guild(14049).useGuildActionSheetPermissions(guild).canAccessSettings;
-  const total = stateFromStores(4545)(guild.id).total;
-  let obj = guild(14049);
+  let canAccessSettings = guild(14054).useGuildActionSheetPermissions(guild).canAccessSettings;
+  const total = stateFromStores(4548)(guild.id).total;
+  let obj = guild(14054);
   const items = [GuildChannelStore];
   stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);
-  let shouldRenderInviteResult = guild(9953).shouldRenderInvite(stateFromStores, guild);
+  let shouldRenderInviteResult = guild(9955).shouldRenderInvite(stateFromStores, guild);
   const items1 = [stateFromStores, guild];
   closure_2 = noop.useCallback(() => {
     const channelId = SelectedChannelStore.getChannelId(guild.id);
@@ -45,16 +45,16 @@ export default function GuildActionSheetTabItems(guild) {
   }, items1);
   let obj4 = { direction: "horizontal", style: { flexWrap: "wrap" }, children: null };
   if (total > 0) {
-    const intl2 = tmp(1114).intl;
+    const intl2 = tmp(1115).intl;
     const obj5 = { subscriptions: total };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t["pob/cL"], obj5);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp(1115).t["pob/cL"], obj5);
   } else {
-    const intl = tmp(1114).intl;
-    formatToPlainStringResult = intl.string(tmp(1114).t.Uj0md3);
+    const intl = tmp(1115).intl;
+    formatToPlainStringResult = intl.string(tmp(1115).t.Uj0md3);
   }
   const obj6 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
-  let obj3 = guild(9953);
-  obj6.icon = closure_12(guild(9505).BoostGemIcon, { color: stateFromStores(576).unsafe_rawColors.GUILD_BOOSTING_PINK });
+  let obj3 = guild(9955);
+  obj6.icon = closure_12(guild(9507).BoostGemIcon, { color: stateFromStores(576).unsafe_rawColors.GUILD_BOOSTING_PINK });
   obj6.onPress = function onPress() {
     const obj2 = { location: { section: constants3.GUILD_POPOUT, object: constants2.BOOST_GEM_ICON } };
     AppAnalyticsUtilsDefault.trackWithMetadata(constants.PREMIUM_GUILD_PROMOTION_OPENED, obj2);
@@ -62,40 +62,40 @@ export default function GuildActionSheetTabItems(guild) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     actions_BoostingActionCreatorsAll.openApplyBoostModal(guild.id);
   };
-  const items2 = [closure_12(guild(8202).IconButton, obj6), , , ];
+  const items2 = [closure_12(guild(8205).IconButton, obj6), , , ];
   if (shouldRenderInviteResult) {
     const obj8 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-    const intl3 = tmp(1114).intl;
-    obj8.label = intl3.string(tmp(1114).t.VINpSK);
-    obj8.icon = tmp3(10160);
+    const intl3 = tmp(1115).intl;
+    obj8.label = intl3.string(tmp(1115).t.VINpSK);
+    obj8.icon = tmp3(10162);
     obj8.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_2();
     };
-    shouldRenderInviteResult = closure_12(tmp(8202).IconButton, obj8);
+    shouldRenderInviteResult = closure_12(tmp(8205).IconButton, obj8);
   }
   items2[1] = shouldRenderInviteResult;
   const obj9 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-  const intl4 = tmp(1114).intl;
-  obj9.label = intl4.string(guild(1114).t.HcoRu0);
-  obj9.icon = stateFromStores(8053);
+  const intl4 = tmp(1115).intl;
+  obj9.label = intl4.string(guild(1115).t.HcoRu0);
+  obj9.icon = stateFromStores(8056);
   obj9.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
   };
-  items2[2] = closure_12(guild(8202).IconButton, obj9);
+  items2[2] = closure_12(guild(8205).IconButton, obj9);
   if (canAccessSettings) {
     const obj10 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
-    const intl5 = tmp(1114).intl;
-    obj10.label = intl5.string(tmp(1114).t["3D5yo/"]);
-    obj10.icon = tmp3(7484);
+    const intl5 = tmp(1115).intl;
+    obj10.label = intl5.string(tmp(1115).t["3D5yo/"]);
+    obj10.icon = tmp3(7488);
     obj10.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsActionCreatorsDefault.open(guild.id);
     };
-    canAccessSettings = closure_12(tmp(8202).IconButton, obj10);
+    canAccessSettings = closure_12(tmp(8205).IconButton, obj10);
   }
   items2[3] = canAccessSettings;
   obj4.children = items2;
-  return closure_13(guild(5514).ButtonGroup, obj4);
+  return closure_13(guild(5518).ButtonGroup, obj4);
 };

@@ -1,7 +1,7 @@
-// === Module 13660: GiftingBadgeComplexArtExperiment ===
+// === Module 13665: GiftingBadgeComplexArtExperiment ===
 
-// Module 13660 (GiftingBadgeComplexArtExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 13665 (GiftingBadgeComplexArtExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-gifting-badge-complex-art", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,9 +1,9 @@
-// === Module 16902: ShopCoachmark ===
+// === Module 16940: ShopCoachmark ===
 
-// Module 16902 (ShopCoachmark)
+// Module 16940 (ShopCoachmark)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ function CoachmarkImg(arg0) {
   const tmp = closure_6();
   return jsx(native.Avatar, { style: closure_6().image, source, avatarDecoration: { asset: decorationAsset }, size: native.AvatarSizes.XXLARGE });
 }
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_6 = createStyles.createStyles({ image: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");

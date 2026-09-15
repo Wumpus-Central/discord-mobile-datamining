@@ -1,9 +1,9 @@
-// === Module 4538: APIError ===
+// === Module 4541: APIError ===
 
-// Module 4538 (APIError)
+// Module 4541 (APIError)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+import util from "util" /* 1115 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import size from "module_2" /* 2 */;
 
 const Links = Constants.Links;

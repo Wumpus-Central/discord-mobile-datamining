@@ -1,14 +1,14 @@
-// === Module 1979: GuildStore ===
+// === Module 1980: GuildStore ===
 
-// Module 1979 (GuildStore)
+// Module 1980 (GuildStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import FavoritesConstants from "FavoritesConstants" /* 1970 */;
-import GuildRecordUtilsAll from "GuildRecordUtils" /* 1971 */;
-import SetUtils from "SetUtils" /* 1974 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 1980 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 1983 */;
-import PlainRecord from "PlainRecord" /* 1972 */;
-import GuildRecord from "GuildRecord" /* 1975 */;
+import FavoritesConstants from "FavoritesConstants" /* 1971 */;
+import GuildRecordUtilsAll from "GuildRecordUtils" /* 1972 */;
+import SetUtils from "SetUtils" /* 1975 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 1981 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 1984 */;
+import PlainRecord from "PlainRecord" /* 1973 */;
+import GuildRecord from "GuildRecord" /* 1976 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 

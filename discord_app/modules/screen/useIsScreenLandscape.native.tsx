@@ -1,9 +1,9 @@
-// === Module 5207: useIsScreenLandscape ===
+// === Module 5210: useIsScreenLandscape ===
 
-// Module 5207 (useIsScreenLandscape)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
+// Module 5210 (useIsScreenLandscape)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1481 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1478 */;
+import DimensionsStore from "DimensionsStore" /* 1479 */;
 
 require = fn;
 const size = fn(2);

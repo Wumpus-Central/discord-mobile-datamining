@@ -1,7 +1,7 @@
-// === Module 16355: GameServerTabAlwaysOnExperiment ===
+// === Module 16368: GameServerTabAlwaysOnExperiment ===
 
-// Module 16355 (GameServerTabAlwaysOnExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 16368 (GameServerTabAlwaysOnExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-game-server-tab-always-on", kind: "user", defaultConfig: { enabled: false }, variations: null };

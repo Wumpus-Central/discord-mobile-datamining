@@ -1,20 +1,20 @@
-// === Module 5511: StageBoostingActionSheet ===
+// === Module 5515: StageBoostingActionSheet ===
 
-// Module 5511 (StageBoostingActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5515 */;
+// Module 5515 (StageBoostingActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1966 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5519 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5495).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5499).STAGE_BOOSTING_SHEET_KEY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, BoostedGuildTiers: closure_8, GuildFeatures: closure_9, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: c10, MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: closure_11 } = Constants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ BoostingUpsellAction: closure_12, PremiumUpsellTypes: map1 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -66,9 +66,9 @@ export default function StageBoostingActionSheet(channel) {
       premiumTier1 = stateFromStores.premiumTier;
     }
     if (premiumTier1 === closure_8.TIER_3) {
-      const intl2 = tmp(1114).intl;
+      const intl2 = tmp(1115).intl;
       const string2 = intl2.string;
-      let tJmOuw = tmp(1114).t;
+      let tJmOuw = tmp(1115).t;
       if (tmp9) {
         tJmOuw = tJmOuw.tJmOuw;
         let string2Result = string2(tJmOuw);
@@ -77,17 +77,17 @@ export default function StageBoostingActionSheet(channel) {
       }
     }
   }
-  const intl = tmp(1114).intl;
+  const intl = tmp(1115).intl;
   const string = intl.string;
-  const t = tmp(1114).t;
+  const t = tmp(1115).t;
   if (tmp9) {
     let stringResult = string(t["8/uDSF"]);
   } else {
     stringResult = string(t["7FHbPG"]);
   }
-  const intl3 = tmp(1114).intl;
+  const intl3 = tmp(1115).intl;
   const string3 = intl3.string;
-  let t1 = tmp(1114).t;
+  let t1 = tmp(1115).t;
   if (stateFromStores2) {
     if (tmp9) {
       t1 = t1["T+zF9M"];
@@ -101,17 +101,17 @@ export default function StageBoostingActionSheet(channel) {
       AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.DISMISS });
     }
     const string3Result1 = string3(t1.pqPQL0);
-    dependencyMap = tmp(5512).useActualStageSpeakerCount(channel.id);
-    const tmpResult3 = tmp(5512);
-    useReducedMotion = tmp(5512).useStageParticipantsCount(channel.id, tmp(5506).StageChannelParticipantNamedIndex.AUDIENCE);
-    stateFromStores2(5073)(() => {
+    dependencyMap = tmp(5516).useActualStageSpeakerCount(channel.id);
+    const tmpResult3 = tmp(5516);
+    useReducedMotion = tmp(5516).useStageParticipantsCount(channel.id, tmp(5510).StageChannelParticipantNamedIndex.AUDIENCE);
+    stateFromStores2(5076)(() => {
       AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_VIEWED, { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: closure_2 + closure_3 });
     });
     if (tmp9) {
       let obj3 = { size: "lg", children: null };
       let obj4 = { variant: "experimental_premium-primary", size: "lg", shiny: !stateFromStores1, text: null, onPress: null };
-      const intl6 = tmp(1114).intl;
-      obj4.text = intl6.string(tmp(1114).t.Uj0md3);
+      const intl6 = tmp(1115).intl;
+      obj4.text = intl6.string(tmp(1115).t.Uj0md3);
       obj4.onPress = function onPress() {
         ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
         AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.DISMISS });
@@ -119,42 +119,42 @@ export default function StageBoostingActionSheet(channel) {
         actions_BoostingActionCreators.openApplyBoostModal(channel.guild_id);
         AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, { guild_id: channel.guild_id, type: constants4.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: constants3.BOOST });
       };
-      const items5 = [closure_14(tmp(5056).Button, obj4), ];
+      const items5 = [closure_14(tmp(5059).Button, obj4), ];
       const obj5 = { variant: "secondary", size: "lg", text: null, onPress: null };
-      const intl7 = tmp(1114).intl;
-      obj5.text = intl7.string(tmp(1114).t.f3Pet9);
+      const intl7 = tmp(1115).intl;
+      obj5.text = intl7.string(tmp(1115).t.f3Pet9);
       obj5.onPress = handleClose;
-      items5[1] = closure_14(tmp(5056).Button, obj5);
+      items5[1] = closure_14(tmp(5059).Button, obj5);
       obj3.children = items5;
-      let tmp24Result = closure_15(tmp(5514).ButtonGroup, obj3);
+      let tmp24Result = closure_15(tmp(5518).ButtonGroup, obj3);
       let tmp24 = closure_14;
     } else {
       tmp24 = closure_14;
       if (stateFromStores2) {
         const obj6 = { variant: "secondary", size: "lg", text: null, onPress: null };
-        const intl5 = tmp(1114).intl;
-        obj6.text = intl5.string(tmp(1114).t.WAI6xu);
+        const intl5 = tmp(1115).intl;
+        obj6.text = intl5.string(tmp(1115).t.WAI6xu);
         obj6.onPress = handleClose;
         let obj7 = obj6;
       } else {
         obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
-        const intl4 = tmp(1114).intl;
-        obj7.text = intl4.string(tmp(1114).t["NX+WJN"]);
+        const intl4 = tmp(1115).intl;
+        obj7.text = intl4.string(tmp(1115).t["NX+WJN"]);
         obj7.onPress = handleClose;
       }
-      tmp24Result = tmp24(tmp(5056).Button, obj7);
+      tmp24Result = tmp24(tmp(5059).Button, obj7);
     }
     const obj8 = { title: string3Result1, description: stringResult, illustration: null, actions: null };
     if (tmp9) {
-      let tmp24Result2 = tmp24(tmp(5773).HoldingGemSpotIllustration, { accessible: false });
+      let tmp24Result2 = tmp24(tmp(5777).HoldingGemSpotIllustration, { accessible: false });
     } else {
-      const obj9 = { source: tmp22(8715) };
-      tmp24Result2 = tmp24(tmp22(5668), obj9);
-      const tmp22Result = tmp22(5668);
+      const obj9 = { source: tmp22(8718) };
+      tmp24Result2 = tmp24(tmp22(5672), obj9);
+      const tmp22Result = tmp22(5672);
     }
     obj8.illustration = tmp24Result2;
     obj8.actions = tmp24Result;
-    return tmp24(tmp(10359).PromoSheet, obj8);
+    return tmp24(tmp(10361).PromoSheet, obj8);
   }
   const tmpResult = channel(504);
 };

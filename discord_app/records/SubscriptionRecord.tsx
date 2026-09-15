@@ -1,11 +1,11 @@
-// === Module 4301: SubscriptionRecord ===
+// === Module 4304: SubscriptionRecord ===
 
-// Module 4301 (SubscriptionRecord)
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import PremiumSubscription from "PremiumSubscription" /* 4306 */;
-import Record from "Record" /* 1386 */;
-import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 4302 */;
-import InvoiceRecord from "InvoiceRecord" /* 4303 */;
+// Module 4304 (SubscriptionRecord)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import PremiumSubscription from "PremiumSubscription" /* 4309 */;
+import Record from "Record" /* 1387 */;
+import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 4305 */;
+import InvoiceRecord from "InvoiceRecord" /* 4306 */;
 
 require = fn;
 function createSubscriptionItemFromServer(id) {
@@ -13,9 +13,9 @@ function createSubscriptionItemFromServer(id) {
 }
 const Constants = fn(1074);
 ({ PaymentGateways: hasOwnProperty, SubscriptionStatusTypes: metroRequire, SubscriptionStatusTypesSets: closure_7, SubscriptionTypes: closure_8 } = Constants);
-const BillingConstants = fn(4305);
+const BillingConstants = fn(4308);
 ({ SubscriptionPauseReason: closure_9, SubscriptionPauseReasonSets: c10 } = BillingConstants);
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PREMIUM_PLANS: closure_11, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
 let SubscriptionRecord;
 class SubscriptionRecord extends tmp2 {

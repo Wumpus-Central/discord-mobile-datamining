@@ -1,18 +1,18 @@
-// === Module 15892: UserSettingsDesignSystemFormPrimitives ===
+// === Module 15903: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 15892 (UserSettingsDesignSystemFormPrimitives)
-import Text_Text from "Text/Text" /* 4632 */;
-import Stack_Stack from "Stack/Stack" /* 5054 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5182 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5685 */;
-import TableRow from "TableRow" /* 5686 */;
-import TableRadioGroup from "TableRadioGroup" /* 5766 */;
-import TableRowGroup from "TableRowGroup" /* 5768 */;
-import TableRadioRow from "TableRadioRow" /* 5769 */;
-import TableSwitchRow from "TableSwitchRow" /* 7303 */;
-import Checkbox from "Checkbox" /* 9559 */;
-import VoiceXIcon from "VoiceXIcon" /* 10116 */;
-import Slider from "Slider" /* 14267 */;
+// Module 15903 (UserSettingsDesignSystemFormPrimitives)
+import Text_Text from "Text/Text" /* 4635 */;
+import Stack_Stack from "Stack/Stack" /* 5057 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5185 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5689 */;
+import TableRow from "TableRow" /* 5690 */;
+import TableRadioGroup from "TableRadioGroup" /* 5770 */;
+import TableRowGroup from "TableRowGroup" /* 5772 */;
+import TableRadioRow from "TableRadioRow" /* 5773 */;
+import TableSwitchRow from "TableSwitchRow" /* 7307 */;
+import Checkbox from "Checkbox" /* 9561 */;
+import VoiceXIcon from "VoiceXIcon" /* 10118 */;
+import Slider from "Slider" /* 14276 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -123,7 +123,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");

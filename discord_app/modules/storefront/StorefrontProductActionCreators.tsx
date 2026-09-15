@@ -1,11 +1,11 @@
-// === Module 8335: StorefrontProductActionCreators ===
+// === Module 8338: StorefrontProductActionCreators ===
 
-// Module 8335 (StorefrontProductActionCreators)
-import DurationsDefault from "Durations" /* 1090 */;
+// Module 8338 (StorefrontProductActionCreators)
+import DurationsDefault from "Durations" /* 1091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8336 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7665 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8339 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7669 */;
 
 const require = fn;
 let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {

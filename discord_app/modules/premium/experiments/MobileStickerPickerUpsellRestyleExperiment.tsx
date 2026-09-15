@@ -1,8 +1,8 @@
-// === Module 9451: MobileStickerPickerUpsellRestyleExperiment ===
+// === Module 9453: MobileStickerPickerUpsellRestyleExperiment ===
 
-// Module 9451 (MobileStickerPickerUpsellRestyleExperiment)
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7955 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 9453 (MobileStickerPickerUpsellRestyleExperiment)
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7958 */;
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-09-mobile-sticker-picker-upsell-restyle", kind: "user", defaultConfig: false, variations: { 0: false, 1: true } });

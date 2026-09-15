@@ -1,11 +1,11 @@
-// === Module 7509: MobileWebRedirectCheckoutUtils ===
+// === Module 7513: MobileWebRedirectCheckoutUtils ===
 
-// Module 7509 (MobileWebRedirectCheckoutUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1230 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import _mod4464 from "module_4464" /* 4464 */;
-import PaymentConstants from "PaymentConstants" /* 4618 */;
-import keysSorter from "keysSorter" /* 5537 */;
+// Module 7513 (MobileWebRedirectCheckoutUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1231 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
+import _mod4467 from "module_4467" /* 4467 */;
+import PaymentConstants from "PaymentConstants" /* 4621 */;
+import keysSorter from "keysSorter" /* 5541 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -29,7 +29,7 @@ export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowF
   return MetaQuestUtils.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
 export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
-  const _location = _mod4464.useLocation();
+  const _location = _mod4467.useLocation();
   ({ pathname, search } = _location);
   const parsed = keysSorter.parse(search);
   ({ deep_link_type, flow_type } = parsed);

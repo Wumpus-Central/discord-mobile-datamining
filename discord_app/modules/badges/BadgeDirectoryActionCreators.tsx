@@ -1,10 +1,10 @@
-// === Module 8314: BadgeDirectoryActionCreators ===
+// === Module 8317: BadgeDirectoryActionCreators ===
 
-// Module 8314 (BadgeDirectoryActionCreators)
+// Module 8317 (BadgeDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function urlUserId(arg0) {

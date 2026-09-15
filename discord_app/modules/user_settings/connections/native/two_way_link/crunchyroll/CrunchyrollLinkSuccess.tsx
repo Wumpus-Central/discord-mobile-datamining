@@ -1,12 +1,12 @@
-// === Module 9407: CrunchyrollLinkSuccess ===
+// === Module 9410: CrunchyrollLinkSuccess ===
 
-// Module 9407 (CrunchyrollLinkSuccess)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9355 */;
-import _modDef9408 from "module_9408" /* 9408 */;
+// Module 9410 (CrunchyrollLinkSuccess)
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9358 */;
+import _modDef9411 from "module_9411" /* 9411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
@@ -24,7 +24,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef9408, style: tmp.image }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef9411, style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.Fnvxvk);

@@ -1,11 +1,11 @@
-// === Module 9667: getCachedOrFetchActivityApplicationForLaunch ===
+// === Module 9669: getCachedOrFetchActivityApplicationForLaunch ===
 
-// Module 9667 (getCachedOrFetchActivityApplicationForLaunch)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9634 */;
+// Module 9669 (getCachedOrFetchActivityApplicationForLaunch)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4864 */;
-import ApplicationRecord from "ApplicationRecord" /* 1918 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ApplicationStore from "ApplicationStore" /* 4867 */;
+import ApplicationRecord from "ApplicationRecord" /* 1919 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 let closure_7 = async function _getCachedOrFetchActivityApplicationForLaunch() {

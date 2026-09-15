@@ -1,8 +1,8 @@
-// === Module 2023: GuildDisableCommunicationConstants ===
+// === Module 2024: GuildDisableCommunicationConstants ===
 
-// Module 2023 (GuildDisableCommunicationConstants)
-import util from "util" /* 1114 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2024 */;
+// Module 2024 (GuildDisableCommunicationConstants)
+import util from "util" /* 1115 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2025 */;
 
 require = fn;
 function getFriendlyDurationString(DisableCommunicationDuration) {

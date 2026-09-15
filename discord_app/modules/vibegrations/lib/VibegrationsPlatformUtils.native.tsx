@@ -1,10 +1,10 @@
-// === Module 16691: VibegrationsPlatformUtils ===
+// === Module 16704: VibegrationsPlatformUtils ===
 
-// Module 16691 (VibegrationsPlatformUtils)
-import PushNotificationDefault from "PushNotification" /* 9817 */;
-import AppStateStore from "AppStateStore" /* 1895 */;
+// Module 16704 (VibegrationsPlatformUtils)
+import PushNotificationDefault from "PushNotification" /* 9819 */;
+import AppStateStore from "AppStateStore" /* 1896 */;
 
-const LocalNotificationTypes = fn(13806).LocalNotificationTypes;
+const LocalNotificationTypes = fn(13811).LocalNotificationTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
 

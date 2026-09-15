@@ -1,12 +1,12 @@
-// === Module 14874: TwoFASetupLanding ===
+// === Module 14884: TwoFASetupLanding ===
 
-// Module 14874 (TwoFASetupLanding)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7226 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14871 */;
-import TwoFASetupStyles from "TwoFASetupStyles" /* 14875 */;
-import _modDef14876 from "module_14876" /* 14876 */;
+// Module 14884 (TwoFASetupLanding)
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7230 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14881 */;
+import TwoFASetupStyles from "TwoFASetupStyles" /* 14885 */;
+import _modDef14886 from "module_14886" /* 14886 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" }, authIcon: { width: 120, height: 120, marginBottom: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
@@ -25,7 +25,7 @@ export default function TwoFASetupLanding() {
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef14876, style: tmp.authIcon }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef14886, style: tmp.authIcon }), , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["9E74Dx"]);

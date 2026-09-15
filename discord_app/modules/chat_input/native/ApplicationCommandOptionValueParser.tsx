@@ -1,19 +1,19 @@
-// === Module 12123: ApplicationCommandOptionValueParser ===
+// === Module 12127: ApplicationCommandOptionValueParser ===
 
-// Module 12123 (ApplicationCommandOptionValueParser)
+// Module 12127 (ApplicationCommandOptionValueParser)
 import _modDef12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import Server from "Server" /* 1894 */;
-import useChannelName from "useChannelName" /* 4789 */;
-import MessageParser from "MessageParser" /* 7784 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import Server from "Server" /* 1895 */;
+import useChannelName from "useChannelName" /* 4792 */;
+import MessageParser from "MessageParser" /* 7787 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5587 */;
-import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5591 */;
+import GuildChannelStore from "GuildChannelStore" /* 2013 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const MessageParserDefault = MessageParser;
 
@@ -43,7 +43,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(4789).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(4792).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -77,8 +77,8 @@ function getChannels(getGuildId, arr) {
     });
   }
 }
-let closure_6 = fn(1961).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5081);
+let closure_6 = fn(1962).isGuildSelectableChannelType;
+const ChannelAutocompleteConstants = fn(5084);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {
 
@@ -152,7 +152,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
       obj = closure_1;
     }
-    if (type.type === channel(1894).ApplicationCommandOptionType.USER) {
+    if (type.type === channel(1895).ApplicationCommandOptionType.USER) {
       const matchUserResult = matchUser();
       if (null != matchUserResult) {
         return matchUserResult;
@@ -206,13 +206,13 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    if (type.type === channel(1894).ApplicationCommandOptionType.ROLE) {
+    if (type.type === channel(1895).ApplicationCommandOptionType.ROLE) {
       const matchRoleResult = matchRole();
       if (null != matchRoleResult) {
         return matchRoleResult;
       }
     }
-    if (type.type === channel(1894).ApplicationCommandOptionType.CHANNEL) {
+    if (type.type === channel(1895).ApplicationCommandOptionType.CHANNEL) {
       arr7 = closure_2_13;
       if (typeof matchPrefix === "function") {
         let firstResult = null;
@@ -237,7 +237,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
       obj8 = getChannels(obj.channel, type.channelTypes);
     }
-    if (type.type === channel(1894).ApplicationCommandOptionType.MENTIONABLE) {
+    if (type.type === channel(1895).ApplicationCommandOptionType.MENTIONABLE) {
       const matchRoleResult1 = matchRole();
       if (null != matchRoleResult1) {
         return matchRoleResult1;
@@ -395,7 +395,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           }
           obj = closure_1;
         }
-        if (type.type === channel(1894).ApplicationCommandOptionType.USER) {
+        if (type.type === channel(1895).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
           if (null != matchUserResult) {
             return matchUserResult;
@@ -449,13 +449,13 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (type.type === channel(1894).ApplicationCommandOptionType.ROLE) {
+        if (type.type === channel(1895).ApplicationCommandOptionType.ROLE) {
           const matchRoleResult = matchRole();
           if (null != matchRoleResult) {
             return matchRoleResult;
           }
         }
-        if (type.type === channel(1894).ApplicationCommandOptionType.CHANNEL) {
+        if (type.type === channel(1895).ApplicationCommandOptionType.CHANNEL) {
           arr7 = closure_2_13;
           if (typeof matchPrefix === "function") {
             let firstResult = null;
@@ -480,7 +480,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           }
           obj8 = getChannels(obj.channel, type.channelTypes);
         }
-        if (type.type === channel(1894).ApplicationCommandOptionType.MENTIONABLE) {
+        if (type.type === channel(1895).ApplicationCommandOptionType.MENTIONABLE) {
           const matchRoleResult1 = matchRole();
           if (null != matchRoleResult1) {
             return matchRoleResult1;

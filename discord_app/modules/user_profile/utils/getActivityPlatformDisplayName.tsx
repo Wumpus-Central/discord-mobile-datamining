@@ -1,8 +1,8 @@
-// === Module 13150: getActivityPlatformDisplayName ===
+// === Module 13155: getActivityPlatformDisplayName ===
 
-// Module 13150 (getActivityPlatformDisplayName)
+// Module 13155 (getActivityPlatformDisplayName)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;

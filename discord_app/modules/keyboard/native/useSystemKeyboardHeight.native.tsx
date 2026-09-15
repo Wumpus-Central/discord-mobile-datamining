@@ -1,8 +1,8 @@
-// === Module 1877: useSystemKeyboardHeight ===
+// === Module 1878: useSystemKeyboardHeight ===
 
-// Module 1877 (useSystemKeyboardHeight)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1481 */;
+// Module 1878 (useSystemKeyboardHeight)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1481 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1482 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = { excludeSafeAreaInsets: false };

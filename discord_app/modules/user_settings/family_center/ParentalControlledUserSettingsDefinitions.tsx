@@ -1,7 +1,7 @@
-// === Module 14916: ParentalControlledUserSettingsDefinitions ===
+// === Module 14926: ParentalControlledUserSettingsDefinitions ===
 
-// Module 14916 (ParentalControlledUserSettingsDefinitions)
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7643 */;
+// Module 14926 (ParentalControlledUserSettingsDefinitions)
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7647 */;
 
 const require = fn;
 const size = fn(2);

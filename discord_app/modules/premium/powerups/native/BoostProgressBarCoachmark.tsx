@@ -1,16 +1,16 @@
-// === Module 16265: BoostProgressBarCoachmark ===
+// === Module 16278: BoostProgressBarCoachmark ===
 
-// Module 16265 (BoostProgressBarCoachmark)
-import util from "util" /* 1114 */;
-import _modDef2428 from "module_2428" /* 2428 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
+// Module 16278 (BoostProgressBarCoachmark)
+import util from "util" /* 1115 */;
+import _modDef2429 from "module_2429" /* 2429 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9195 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/BoostProgressBarCoachmark.tsx");
@@ -34,9 +34,9 @@ export default function BoostProgressBarCoachmark(guild) {
   const memo = onDismiss.useMemo(() => {
     const obj = { title: null, description: null, visible: true, position: "bottom", offsetY: 8, onDismiss: null, renderImgComponent: null, buttonLabel: null, buttonVariant: "primary", onButtonPress: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef2428.uwV2dH);
+    obj.title = intl.string(_modDef2429.uwV2dH);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef2428.MIwlcR);
+    obj.description = intl2.string(_modDef2429.MIwlcR);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return <callback1 style={riveContainer.riveContainer}>{jsx(guild(riveContainer[8]).BoostThisServerRive, { stateMachine: "State Machine 1" })}</callback1>;
@@ -46,6 +46,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(11262).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(11266).useCoachmark(guild.targetRef, memo);
   return null;
 };

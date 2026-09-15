@@ -1,13 +1,13 @@
-// === Module 17884: GuildRoleSubscriptionTierDesignModal ===
+// === Module 17922: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 17884 (GuildRoleSubscriptionTierDesignModal)
+// Module 17922 (GuildRoleSubscriptionTierDesignModal)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import useToken from "useToken" /* 4338 */;
-import RoleIconUtils from "RoleIconUtils" /* 7290 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15311 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 15322 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17850 */;
+import util from "util" /* 1115 */;
+import useToken from "useToken" /* 4341 */;
+import RoleIconUtils from "RoleIconUtils" /* 7294 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15321 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 15332 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function MemberPreviews(role) {
   return closure_1_10(View, obj5);
 }
 function Content() {
-  const tmp3 = role(13986)();
+  const tmp3 = role(13991)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -62,36 +62,36 @@ function Content() {
   const items1 = [closure_9(MemberPreviews, { role }), , , , ];
   const obj7 = { style: tmp3.header, children: null };
   const tmp4Result = require("RoleSubscriptionSettingsDisabledContext");
-  const intl = tmp4(1114).intl;
+  const intl = tmp4(1115).intl;
   obj7.children = intl.string(require("util").t.sEr1zr);
-  items1[1] = closure_9(role(9946), obj7);
+  items1[1] = closure_9(role(9948), obj7);
   const obj8 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
-  const tmpResult = role(9946);
-  const intl2 = tmp4(1114).intl;
+  const tmpResult = role(9948);
+  const intl2 = tmp4(1115).intl;
   obj8.description = intl2.string(require("util").t.Glqj9m);
   obj8.image = tmp10;
   obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj8.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
   };
   obj8.disabled = roleSubscriptionSettingsDisabled;
-  items1[2] = closure_9(role(17847), obj8);
+  items1[2] = closure_9(role(17885), obj8);
   const obj9 = { style: tmp3.header, children: null };
-  const tmpResult3 = role(17847);
-  const intl3 = tmp4(1114).intl;
+  const tmpResult3 = role(17885);
+  const intl3 = tmp4(1115).intl;
   obj9.children = intl3.string(require("util").t["W7hH+z"]);
-  items1[3] = closure_9(role(9946), obj9);
-  items1[4] = closure_9(role(17885), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[3] = closure_9(role(9948), obj9);
+  items1[4] = closure_9(role(17923), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj6.children = items1;
   return closure_10(closure_11, obj6);
 }
 const View = fn(17).View;
-const constants = fn(15289).GuildRoleSubscriptionsTierScenes;
+const constants = fn(15299).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1074).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { memberPreviews: { paddingHorizontal: 16, paddingTop: 26 }, member: { padding: 16, borderRadius: nativeDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, memberLight: { borderTopLeftRadius: 8, borderTopRightRadius: 8, borderTopWidth: 1 }, memberDark: { borderBottomLeftRadius: 8, borderBottomRightRadius: 8, borderBottomWidth: 1 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

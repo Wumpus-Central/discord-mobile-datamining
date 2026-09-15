@@ -1,16 +1,16 @@
-// === Module 15252: SettingsQuestPreviewScreen ===
+// === Module 15262: SettingsQuestPreviewScreen ===
 
-// Module 15252 (SettingsQuestPreviewScreen)
+// Module 15262 (SettingsQuestPreviewScreen)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import QuestActionCreators from "QuestActionCreators" /* 11410 */;
-import QuestCardPreview from "QuestCardPreview" /* 15253 */;
-import QuestEmbedPreview from "QuestEmbedPreview" /* 15255 */;
+import util from "util" /* 1115 */;
+import QuestActionCreators from "QuestActionCreators" /* 11414 */;
+import QuestCardPreview from "QuestCardPreview" /* 15263 */;
+import QuestEmbedPreview from "QuestEmbedPreview" /* 15265 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7805 */;
-import ThemeStore from "ThemeStore" /* 1181 */;
+import QuestStore from "QuestStore" /* 7808 */;
+import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, controlBarContainer: { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 }, segmentedControlContainer: { paddingHorizontal: PX_16 }, pagesContainer: { flex: 1, width: "100%" }, activityIndicator: null, allSectionsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let obj4 = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };

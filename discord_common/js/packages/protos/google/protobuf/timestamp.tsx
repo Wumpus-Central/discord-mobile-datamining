@@ -1,11 +1,11 @@
-// === Module 1215: timestamp ===
+// === Module 1216: timestamp ===
 
-// Module 1215 (timestamp)
-import _mod1186 from "module_1186" /* 1186 */;
+// Module 1216 (timestamp)
+import _mod1187 from "module_1187" /* 1187 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1186).MessageType;
+const MessageType = fn(1187).MessageType;
 class Timestamp$Type extends MessageType {
   constructor() {
     items = [, ];
@@ -19,13 +19,13 @@ const prototype = Timestamp$Type.prototype;
 prototype["now"] = function now() {
   const obj = this.create();
   const timestamp = Date.now();
-  const PbLong = _mod1186.PbLong;
+  const PbLong = _mod1187.PbLong;
   obj.seconds = PbLong.from(Math.floor(timestamp / 1000)).toString();
   obj.nanos = timestamp % 1000 * 1000000;
   return obj;
 };
 prototype["toDate"] = function toDate(seconds) {
-  const PbLong = _mod1186.PbLong;
+  const PbLong = _mod1187.PbLong;
   const result = 1000 * PbLong.from(seconds.seconds).toNumber();
   const fromResult = PbLong.from(seconds.seconds);
   return new Date(result + Math.ceil(seconds.nanos / 1000000));
@@ -33,13 +33,13 @@ prototype["toDate"] = function toDate(seconds) {
 prototype["fromDate"] = function fromDate(getTime) {
   const obj = this.create();
   const time = getTime.getTime();
-  const PbLong = _mod1186.PbLong;
+  const PbLong = _mod1187.PbLong;
   obj.seconds = PbLong.from(Math.floor(time / 1000)).toString();
   obj.nanos = time % 1000 * 1000000;
   return obj;
 };
 prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
-  const PbLong = _mod1186.PbLong;
+  const PbLong = _mod1187.PbLong;
   const result = 1000 * PbLong.from(seconds.seconds).toNumber();
   if (result >= Date.parse("0001-01-01T00:00:00Z")) {
     const _Date2 = Date;
@@ -73,7 +73,7 @@ prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
 prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
   if (typeof str !== "string") {
     const _Error3 = Error;
-    const error = new Error("Unable to parse Timestamp from JSON " + _mod1186.typeofJsonValue(str) + ".");
+    const error = new Error("Unable to parse Timestamp from JSON " + _mod1187.typeofJsonValue(str) + ".");
     throw error;
   } else {
     const match = str.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/);
@@ -99,7 +99,7 @@ prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
               const self = this;
               obj2 = this.create();
             }
-            const PbLong = _mod1186.PbLong;
+            const PbLong = _mod1187.PbLong;
             obj2.seconds = PbLong.from(parsed / 1000).toString();
             obj2.nanos = 0;
             if (match[7]) {
@@ -125,10 +125,10 @@ prototype["internalJsonRead"] = function internalJsonRead(str, arg1, arg2) {
 prototype["create"] = function create(arr) {
   const obj = { seconds: "0", nanos: 0 };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -165,7 +165,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -177,17 +177,17 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(seconds, tag, writeUnknownFields) {
   if ("0" !== seconds.seconds) {
-    tag.tag(1, _mod1186.WireType.Varint).int64(seconds.seconds);
-    const tagResult = tag.tag(1, _mod1186.WireType.Varint);
+    tag.tag(1, _mod1187.WireType.Varint).int64(seconds.seconds);
+    const tagResult = tag.tag(1, _mod1187.WireType.Varint);
   }
   if (0 !== seconds.nanos) {
-    tag.tag(2, _mod1186.WireType.Varint).int32(seconds.nanos);
-    const tagResult1 = tag.tag(2, _mod1186.WireType.Varint);
+    tag.tag(2, _mod1187.WireType.Varint).int32(seconds.nanos);
+    const tagResult1 = tag.tag(2, _mod1187.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, seconds, tag);

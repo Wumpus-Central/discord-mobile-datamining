@@ -1,21 +1,21 @@
-// === Module 8227: transformMessageComponents ===
+// === Module 8230: transformMessageComponents ===
 
-// Module 8227 (transformMessageComponents)
-import DurationsDefault from "Durations" /* 1090 */;
-import URLUtilsDefault from "URLUtils" /* 1365 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4786 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4861 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8225 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8243 */;
+// Module 8230 (transformMessageComponents)
+import DurationsDefault from "Durations" /* 1091 */;
+import URLUtilsDefault from "URLUtils" /* 1366 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4789 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4864 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8228 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8246 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import priv from "priv" /* 1437 */;
+import priv from "priv" /* 1438 */;
 
-const util = tmp4(1114);
-const FlagUtils = tmp4(1384);
-const AgeVerificationUtils = tmp4(4849);
-const MediaTypes = tmp4(4867);
-const sanitizeMediaDimension = tmp4(8224);
-const ExplicitMediaUtils = tmp4(8242);
+const util = tmp4(1115);
+const FlagUtils = tmp4(1385);
+const AgeVerificationUtils = tmp4(4852);
+const MediaTypes = tmp4(4870);
+const sanitizeMediaDimension = tmp4(8227);
+const ExplicitMediaUtils = tmp4(8245);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -566,8 +566,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(4862).CheckpointVersions;
-let closure_7 = fn(8228).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(4865).CheckpointVersions;
+let closure_7 = fn(8231).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -575,12 +575,12 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  const obj = { type: "textDisplayComponent", parserState: obj3(7992).getInitialParserStateFromMessage(message.message, closure_7) };
+  const obj = { type: "textDisplayComponent", parserState: obj3(7995).getInitialParserStateFromMessage(message.message, closure_7) };
   obj3 = {};
   const merged = Object.assign(message);
   obj3.markdownConfigs = { textDisplayComponent: obj };
   const mapped = arr.map((item) => transformToRowGeneratedComponent(obj3, item));
-  return mapped.filter(obj3(1369).isNotNullish);
+  return mapped.filter(obj3(1370).isNotNullish);
 };
 export const getUnfurledMediaItemType = function getUnfurledMediaItemType(media) {
   ({ width, height, contentType } = media);

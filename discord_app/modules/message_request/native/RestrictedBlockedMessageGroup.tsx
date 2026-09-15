@@ -1,10 +1,10 @@
-// === Module 17016: RestrictedBlockedMessageGroup ===
+// === Module 17054: RestrictedBlockedMessageGroup ===
 
-// Module 17016 (RestrictedBlockedMessageGroup)
+// Module 17054 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import Pressables from "Pressables" /* 5204 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import Pressables from "Pressables" /* 5207 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,8 +14,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
-let obj2 = { toggle: { marginLeft: fn(17014).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
+const createStyles = fn(4639);
+let obj2 = { toggle: { marginLeft: fn(17052).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");

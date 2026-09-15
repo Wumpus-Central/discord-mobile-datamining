@@ -1,9 +1,9 @@
-// === Module 10417: useEmojiPickerSearchState ===
+// === Module 10419: useEmojiPickerSearchState ===
 
-// Module 10417 (useEmojiPickerSearchState)
+// Module 10419 (useEmojiPickerSearchState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5540 */;
+import EmojiStore from "EmojiStore" /* 5544 */;
 
 const require = fn;
 const size = fn(2);
@@ -25,22 +25,22 @@ export default function useEmojiPickerSearchState(channel, arg1, intention, bypa
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(1940).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(1941).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);
-      channel(1247).batchUpdates(() => {
+      channel(1248).batchUpdates(() => {
         ref.current = current;
         closure_5(closure_1);
       });
-      const obj3 = channel(1247);
+      const obj3 = channel(1248);
     } else {
-      channel(1247).batchUpdates(() => {
+      channel(1248).batchUpdates(() => {
         ref.current = "";
         closure_1_5(null);
         const result = closure_1.set(0);
       });
-      const obj = channel(1247);
+      const obj = channel(1248);
     }
   }, items);
   return obj;

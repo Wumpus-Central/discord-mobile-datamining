@@ -1,26 +1,26 @@
-// === Module 15779: PremiumTrialOfferActionSheetContent ===
+// === Module 15790: PremiumTrialOfferActionSheetContent ===
 
-// Module 15779 (PremiumTrialOfferActionSheetContent)
+// Module 15790 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4294 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import FolderIcon from "FolderIcon" /* 5155 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5211 */;
-import native from "native" /* 5773 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8785 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 9551 */;
-import UserIcon from "UserIcon" /* 11956 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15780 */;
+import util from "util" /* 1115 */;
+import PremiumUtils from "PremiumUtils" /* 4297 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import FolderIcon from "FolderIcon" /* 5158 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5214 */;
+import native from "native" /* 5777 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8788 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 9553 */;
+import UserIcon from "UserIcon" /* 11960 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 15791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };

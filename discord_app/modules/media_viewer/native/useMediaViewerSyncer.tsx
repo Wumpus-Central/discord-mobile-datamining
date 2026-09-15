@@ -1,15 +1,15 @@
-// === Module 8409: useMediaViewerSyncer ===
+// === Module 8412: useMediaViewerSyncer ===
 
-// Module 8409 (useMediaViewerSyncer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8383 */;
+// Module 8412 (useMediaViewerSyncer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8386 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(8410);
+const Constants = fn(8413);
 ({ THUMBNAIL_MARGIN: hasOwnProperty, THUMBNAIL_HEIGHT: metroRequire, THUMBNAIL_MAX_WIDTH: closure_7, THUMBNAIL_MIN_WIDTH: closure_8, THUMBNAIL_WIDTH_MARGIN: closure_9 } = Constants);
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = { code: "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}" };
 let closure_12 = { code: "function useMediaViewerSyncerTsx2(){const{thumbnailsScrolling,SCROLLING_DRAG}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()&~SCROLLING_DRAG);}" };

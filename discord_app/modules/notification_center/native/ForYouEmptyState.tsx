@@ -1,16 +1,16 @@
-// === Module 16545: ForYouEmptyState ===
+// === Module 16558: ForYouEmptyState ===
 
-// Module 16545 (ForYouEmptyState)
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import native from "native" /* 5773 */;
+// Module 16558 (ForYouEmptyState)
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import native from "native" /* 5777 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_5 = createStyles.createStyles({ image: { marginBottom: 16 }, container: { paddingHorizontal: 48, alignItems: "center", justifyContent: "center" }, headerText: { fontSize: 18, marginTop: 16, marginBottom: 8 }, text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouEmptyState.tsx");

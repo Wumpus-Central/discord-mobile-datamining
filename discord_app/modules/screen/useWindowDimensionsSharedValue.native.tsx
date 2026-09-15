@@ -1,10 +1,10 @@
-// === Module 12163: useWindowDimensionsSharedValue ===
+// === Module 12167: useWindowDimensionsSharedValue ===
 
-// Module 12163 (useWindowDimensionsSharedValue)
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11488 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12164 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4373 */;
-import useWindowDimensions_mod from "useWindowDimensions" /* 1477 */;
+// Module 12167 (useWindowDimensionsSharedValue)
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11492 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12168 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4376 */;
+import useWindowDimensions_mod from "useWindowDimensions" /* 1478 */;
 import size from "module_2" /* 2 */;
 
 let ReanimatedRexport = ReanimatedRexport_mod;

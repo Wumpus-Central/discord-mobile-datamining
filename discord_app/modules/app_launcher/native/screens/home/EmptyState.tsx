@@ -1,19 +1,19 @@
-// === Module 12241: home/EmptyState ===
+// === Module 12245: home/EmptyState ===
 
-// Module 12241 (home/EmptyState)
+// Module 12245 (home/EmptyState)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9539 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12181 */;
-import HomeEmptyStateDefault from "HomeEmptyState" /* 12242 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9541 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12185 */;
+import HomeEmptyStateDefault from "HomeEmptyState" /* 12246 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { padding: 16, gap: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center" }, textContainer: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

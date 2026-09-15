@@ -1,9 +1,9 @@
-// === Module 8464: GuildAffinitiesActionCreators ===
+// === Module 8467: GuildAffinitiesActionCreators ===
 
-// Module 8464 (GuildAffinitiesActionCreators)
+// Module 8467 (GuildAffinitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

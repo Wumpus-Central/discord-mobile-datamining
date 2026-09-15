@@ -1,10 +1,10 @@
-// === Module 11000: GameRelationshipActionCreators ===
+// === Module 11004: GameRelationshipActionCreators ===
 
-// Module 11000 (GameRelationshipActionCreators)
-import util from "util" /* 1114 */;
-import shared from "shared" /* 4488 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4537 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
+// Module 11004 (GameRelationshipActionCreators)
+import util from "util" /* 1115 */;
+import shared from "shared" /* 4491 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4540 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -116,9 +116,9 @@ let closure_9 = async function _removeGameFriend() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4488).AccessibilityAnnouncer;
-      const intl = closure_1_0(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1114).t.zRf8cO));
+      const AccessibilityAnnouncer = closure_1_0(4491).AccessibilityAnnouncer;
+      const intl = closure_1_0(1115).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1115).t.zRf8cO));
     }
   });
   await "HermesInternal";
@@ -131,9 +131,9 @@ let closure_10 = async function _cancelGameFriendRequest() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4488).AccessibilityAnnouncer;
-      const intl = closure_1_0(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1114).t.XMf21q));
+      const AccessibilityAnnouncer = closure_1_0(4491).AccessibilityAnnouncer;
+      const intl = closure_1_0(1115).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_1_0(1115).t.XMf21q));
     }
   });
   await "HermesInternal";
@@ -162,7 +162,7 @@ export default {
 
     }
     ({ userId, applicationId } = arg0);
-    const HTTP = onSuccess(1270).HTTP;
+    const HTTP = onSuccess(1271).HTTP;
     const request = { url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false };
     const putResult = HTTP.put(request);
     return HTTP.put(request).then(() => {
@@ -170,14 +170,14 @@ export default {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
     }).catch((error) => {
-      const aPIError = new onSuccess(4537).APIError(error);
+      const aPIError = new onSuccess(4540).APIError(error);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
-      const intl = onSuccess(1114).intl;
-      obj.title = intl.string(onSuccess(1114).t["328j/I"]);
+      const intl = onSuccess(1115).intl;
+      obj.title = intl.string(onSuccess(1115).t["328j/I"]);
       if (null == anyErrorMessage) {
-        const intl2 = onSuccess(1114).intl;
-        anyErrorMessage = intl2.string(onSuccess(1114).t.fEptJP);
+        const intl2 = onSuccess(1115).intl;
+        anyErrorMessage = intl2.string(onSuccess(1115).t.fEptJP);
       }
       obj.body = anyErrorMessage;
       AlertActionCreatorsDefault.show(obj);

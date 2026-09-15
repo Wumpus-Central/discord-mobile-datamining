@@ -1,11 +1,11 @@
-// === Module 8843: GameProfileMedia ===
+// === Module 8846: GameProfileMedia ===
 
-// Module 8843 (GameProfileMedia)
+// Module 8846 (GameProfileMedia)
 import nativeDefault from "native" /* 576 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
-import openMediaModal from "openMediaModal" /* 8377 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8809 */;
-import GameProfileMediaSources from "GameProfileMediaSources" /* 8844 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
+import openMediaModal from "openMediaModal" /* 8380 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8812 */;
+import GameProfileMediaSources from "GameProfileMediaSources" /* 8847 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -134,13 +134,13 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 }, scrollView: { flexDirection: "row", overflow: "visible" }, scrollViewContent: null, mediaItem: null, mediaImage: null, mediaVideo: null };
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.scrollViewContent = { gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 const obj4 = { gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-obj2.mediaItem = { maxWidth: fn(8844).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8844).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+obj2.mediaItem = { maxWidth: fn(8847).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8847).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj2.mediaImage = { width: "100%", height: "100%", resizeMode: "cover" };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 obj2.mediaVideo = size;

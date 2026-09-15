@@ -1,26 +1,26 @@
-// === Module 8744: StageSettingsActionSheet ===
+// === Module 8747: StageSettingsActionSheet ===
 
-// Module 8744 (StageSettingsActionSheet)
+// Module 8747 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8512 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8748 */;
-import ReportModals from "ReportModals" /* 8752 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1966 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8515 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8751 */;
+import ReportModals from "ReportModals" /* 8755 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4652 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import StageInstanceStore from "StageInstanceStore" /* 1962 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4655 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import StageInstanceStore from "StageInstanceStore" /* 1963 */;
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(5495).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(5499).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1074);
 ({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { marginTop: 8 }, icon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, warning: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.warning = { color: nativeDefault.unsafe_rawColors.RED_400 };

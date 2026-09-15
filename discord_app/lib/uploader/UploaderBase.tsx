@@ -1,14 +1,14 @@
-// === Module 7942: UploaderBase ===
+// === Module 7945: UploaderBase ===
 
-// Module 7942 (UploaderBase)
+// Module 7945 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5217 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 5220 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1074).AbortCodes;
-const FileUploadErrorTypes = fn(4629).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4632).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -131,7 +131,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
                 target = item.target;
               }
             }
-            const uploadTarget = _self(5255).getUploadTarget(target);
+            const uploadTarget = _self(5259).getUploadTarget(target);
             closure_132_0 = uploadTarget;
             if (self.files.length > uploadTarget.getMaxAttachmentsCount()) {
               const _HermesInternal2 = HermesInternal;
@@ -141,14 +141,14 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
               c9 = 3;
               return { value: false, done: true };
             } else {
-              kestrelConfig = _self(5260).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
+              kestrelConfig = _self(5264).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
               const _HermesInternal3 = HermesInternal;
               tmp65.log("compressing files for " + self.id);
               const files = self.files;
               _self = files[Symbol.iterator]();
-              const obj15 = _self(5260);
+              const obj15 = _self(5264);
             }
-            const obj14 = _self(5255);
+            const obj14 = _self(5259);
           }
         } else if (1 === tmp9) {
           c7 = 0;
@@ -189,7 +189,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             c9 = 3;
             return { value: false, done: true };
           } else {
-            effectiveKestrelLimit = _self(5260).getEffectiveKestrelLimit(kestrelConfig, closure_132_0.getMaxFileSize(closure_132_2.channelId));
+            effectiveKestrelLimit = _self(5264).getEffectiveKestrelLimit(kestrelConfig, closure_132_0.getMaxFileSize(closure_132_2.channelId));
             const currentSize2 = closure_132_2.currentSize;
             c3 = currentSize2;
             if (currentSize2 == null) {
@@ -207,7 +207,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             } else {
               c7 = 0;
             }
-            const obj13 = _self(5260);
+            const obj13 = _self(5264);
           }
         }
         if (_self === undefined) {

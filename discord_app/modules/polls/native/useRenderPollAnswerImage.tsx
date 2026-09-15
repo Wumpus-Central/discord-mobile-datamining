@@ -1,20 +1,20 @@
-// === Module 12356: useRenderPollAnswerImage ===
+// === Module 12360: useRenderPollAnswerImage ===
 
-// Module 12356 (useRenderPollAnswerImage)
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import EmojiTypes from "EmojiTypes" /* 4292 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import EmojiDefault from "Emoji" /* 7233 */;
+// Module 12360 (useRenderPollAnswerImage)
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import EmojiTypes from "EmojiTypes" /* 4295 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import EmojiDefault from "Emoji" /* 7237 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4979 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const DraftType = fn(4977).DraftType;
-const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const DraftType = fn(4980).DraftType;
+const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");

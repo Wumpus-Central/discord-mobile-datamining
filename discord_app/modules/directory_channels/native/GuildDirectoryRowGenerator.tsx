@@ -1,7 +1,7 @@
-// === Module 12800: GuildDirectoryRowGenerator ===
+// === Module 12805: GuildDirectoryRowGenerator ===
 
-// Module 12800 (GuildDirectoryRowGenerator)
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12435 */;
+// Module 12805 (GuildDirectoryRowGenerator)
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12440 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryCategories = GuildDirectoryConstants.DirectoryEntryCategories;
@@ -19,30 +19,30 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
   if (0 === arr.length) {
     return [];
   } else if (currentCategoryId !== DirectoryEntryCategories.ALL) {
-    const obj4 = set(12434);
-    return set(12434).rankGuildEntries(arr).map((entry) => ({ type: constants.ENTRY, entry }));
+    const obj4 = set(12439);
+    return set(12439).rankGuildEntries(arr).map((entry) => ({ type: constants.ENTRY, entry }));
   } else {
     const items = [];
-    const rankByDateAddedResult = set(12434).rankByDateAdded(arr);
+    const rankByDateAddedResult = set(12439).rankByDateAdded(arr);
     const _Set = Set;
     set = new Set(rankByDateAddedResult.map((guildId) => guildId.guildId));
     let combined = items;
     if (rankByDateAddedResult.length > 0) {
       const obj = { type: null, header: null };
       obj.type = obj.HEADER;
-      const intl = tmp12(1114).intl;
-      obj.header = intl.string(tmp12(1114).t.CbaapP);
+      const intl = tmp12(1115).intl;
+      obj.header = intl.string(tmp12(1115).t.CbaapP);
       arr = items.push(obj);
       combined = items.concat(rankByDateAddedResult.map((entry) => ({ type: constants.ENTRY, entry })));
     }
     const found = arr.filter((guildId) => !set.has(guildId.guildId));
-    const obj5 = set(12434);
-    const result = set(12434).orderByTotalMemberCount(found);
+    const obj5 = set(12439);
+    const result = set(12439).orderByTotalMemberCount(found);
     let combined1 = combined;
     if (result.length > 0) {
       const obj2 = { type: obj.HEADER, header: null };
-      const intl2 = tmp12(1114).intl;
-      obj2.header = intl2.string(tmp12(1114).t.wxbhEe);
+      const intl2 = tmp12(1115).intl;
+      obj2.header = intl2.string(tmp12(1115).t.wxbhEe);
       combined.push(obj2);
       combined1 = combined.concat(result.map((entry) => ({ type: constants.ENTRY, entry })));
     }

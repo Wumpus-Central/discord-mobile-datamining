@@ -1,9 +1,9 @@
-// === Module 8544: AgeVerificationQuestUnsupportedAlertModal ===
+// === Module 8547: AgeVerificationQuestUnsupportedAlertModal ===
 
-// Module 8544 (AgeVerificationQuestUnsupportedAlertModal)
-import util from "util" /* 1114 */;
-import _modDef2946 from "module_2946" /* 2946 */;
-import AlertModal from "AlertModal" /* 4986 */;
+// Module 8547 (AgeVerificationQuestUnsupportedAlertModal)
+import util from "util" /* 1115 */;
+import _modDef2947 from "module_2947" /* 2947 */;
+import AlertModal from "AlertModal" /* 4989 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,9 +14,9 @@ const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerif
 export default function AgeVerificationQuestUnsupportedAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef2946.gUqXQN);
+  obj.title = intl.string(_modDef2947.gUqXQN);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef2946.yBHwMy);
+  obj.content = intl2.string(_modDef2947.yBHwMy);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

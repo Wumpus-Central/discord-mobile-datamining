@@ -1,27 +1,27 @@
-// === Module 16904: YouBannerDecorations ===
+// === Module 16942: YouBannerDecorations ===
 
-// Module 16904 (YouBannerDecorations)
+// Module 16942 (YouBannerDecorations)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
-import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
-import QuestTypes from "QuestTypes" /* 5528 */;
-import useTrialOffer from "useTrialOffer" /* 7552 */;
-import QuestUtils from "QuestUtils" /* 11897 */;
-import PromotionsHooks from "PromotionsHooks" /* 13550 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16907 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
+import dismissible_content from "dismissible_content" /* 1944 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
+import QuestTypes from "QuestTypes" /* 5532 */;
+import useTrialOffer from "useTrialOffer" /* 7556 */;
+import QuestUtils from "QuestUtils" /* 11901 */;
+import PromotionsHooks from "PromotionsHooks" /* 13555 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16945 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
-let closure_9 = fn(1373).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
+let closure_9 = fn(1374).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_13 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, buttonsFloating: null, loading: null };
   const obj2 = {};

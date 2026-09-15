@@ -1,7 +1,7 @@
-// === Module 17232: DefaultAudioRouteExperiment ===
+// === Module 17270: DefaultAudioRouteExperiment ===
 
-// Module 17232 (DefaultAudioRouteExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 17270 (DefaultAudioRouteExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-default-audio-route", kind: "user", defaultConfig: { defaultSpeakerForGuildCall: false, defaultSpeakerForDMCall: false }, variations: null };

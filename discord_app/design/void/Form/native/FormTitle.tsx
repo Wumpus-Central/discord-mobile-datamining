@@ -1,8 +1,8 @@
-// === Module 8726: FormTitle ===
+// === Module 8729: FormTitle ===
 
-// Module 8726 (FormTitle)
+// Module 8729 (FormTitle)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
+import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,17 +10,17 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1363);
+let PlatformUtils = fn(1364);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1363);
+PlatformUtils = fn(1364);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj4 = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE }, error: null };
 const obj5 = { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
 obj4.error = { color: nativeDefault.unsafe_rawColors.RED_400 };

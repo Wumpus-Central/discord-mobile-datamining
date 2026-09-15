@@ -1,9 +1,9 @@
-// === Module 5852: AvatarCamExample ===
+// === Module 5856: AvatarCamExample ===
 
-// Module 5852 (AvatarCamExample)
+// Module 5856 (AvatarCamExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5853 from "module_5853" /* 5853 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5857 from "module_5857" /* 5857 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarCamExample = function AvatarCamExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5853 };
+  const obj2 = { uri: _modDef5857 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

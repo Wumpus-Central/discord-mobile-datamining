@@ -1,15 +1,15 @@
-// === Module 7103: Navigator ===
+// === Module 7107: Navigator ===
 
-// Module 7103 (Navigator)
+// Module 7107 (Navigator)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import SentryInitUtils from "SentryInitUtils" /* 1231 */;
-import Link from "Link" /* 1484 */;
-import NavigatorHeader from "NavigatorHeader" /* 5705 */;
-import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7104 */;
-import StackNavigator from "StackNavigator" /* 7105 */;
-import NavigatorScreen from "NavigatorScreen" /* 7138 */;
-import useNavigationTheme from "useNavigationTheme" /* 7144 */;
+import util from "util" /* 1115 */;
+import SentryInitUtils from "SentryInitUtils" /* 1232 */;
+import Link from "Link" /* 1485 */;
+import NavigatorHeader from "NavigatorHeader" /* 5709 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7108 */;
+import StackNavigator from "StackNavigator" /* 7109 */;
+import NavigatorScreen from "NavigatorScreen" /* 7142 */;
+import useNavigationTheme from "useNavigationTheme" /* 7148 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -217,7 +217,7 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  const tmp4 = navigationContainerRef(4571)();
+  const tmp4 = navigationContainerRef(4574)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp4);
   const obj3 = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null != navigationTheme) {
@@ -246,7 +246,7 @@ function WrappedNavigationStack(arg0) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

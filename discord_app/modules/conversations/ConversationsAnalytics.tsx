@@ -1,8 +1,8 @@
-// === Module 8013: ConversationsAnalytics ===
+// === Module 8016: ConversationsAnalytics ===
 
-// Module 8013 (ConversationsAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+// Module 8016 (ConversationsAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

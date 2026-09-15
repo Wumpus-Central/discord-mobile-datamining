@@ -1,8 +1,8 @@
-// === Module 17542: AccountSwitchingSpinnerModal ===
+// === Module 17580: AccountSwitchingSpinnerModal ===
 
-// Module 17542 (AccountSwitchingSpinnerModal)
-import util from "util" /* 1114 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5658 */;
+// Module 17580 (AccountSwitchingSpinnerModal)
+import util from "util" /* 1115 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5662 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ class AccountSwitchingSpinnerModal {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const React4 = createStyles.createStyles({ switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" } });
-AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1093).ModalAnimation.FADE, closable: false };
+AccountSwitchingSpinnerModal.modalConfig = { animation: fn(1094).ModalAnimation.FADE, closable: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 

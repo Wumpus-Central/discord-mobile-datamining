@@ -1,20 +1,20 @@
-// === Module 2330: ? ===
+// === Module 2331: ? ===
 
-// Module 2330
-import AssetJsonUtils from "AssetJsonUtils" /* 1118 */;
-import _mod2331 from "module_2331" /* 2331 */;
-import module_1153_mod from "module_1153" /* 1153 */;
+// Module 2331
+import AssetJsonUtils from "AssetJsonUtils" /* 1119 */;
+import _mod2332 from "module_2332" /* 2332 */;
+import module_1154_mod from "module_1154" /* 1154 */;
 import size from "module_2" /* 2 */;
 
-let module_1153 = module_1153_mod;
-const loader = module_1153.createLoader({
+let module_1154 = module_1154_mod;
+const loader = module_1154.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2331);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2332);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1153 = module_1153_mod;
-const messagesProxy = module_1153.makeMessagesProxy(loader);
+let module_1154 = module_1154_mod;
+const messagesProxy = module_1154.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/guild_space/GuildSpace.messages.js");
 
 export default messagesProxy;

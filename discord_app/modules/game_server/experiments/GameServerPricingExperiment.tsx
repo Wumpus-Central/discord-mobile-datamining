@@ -1,8 +1,8 @@
-// === Module 12639: GameServerPricingExperiment ===
+// === Module 12644: GameServerPricingExperiment ===
 
-// Module 12639 (GameServerPricingExperiment)
-import GameServerExperiment from "GameServerExperiment" /* 4549 */;
-import createExperiment from "module_4550" /* 4550 */;
+// Module 12644 (GameServerPricingExperiment)
+import GameServerExperiment from "GameServerExperiment" /* 4552 */;
+import createExperiment from "module_4553" /* 4553 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-03_game_server_pricing", label: "Game Server Pricing", defaultConfig: { enabled: false }, treatments: null };

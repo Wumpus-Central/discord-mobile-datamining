@@ -1,16 +1,16 @@
-// === Module 14544: PreloadedUserSettingsMigrations ===
+// === Module 14553: PreloadedUserSettingsMigrations ===
 
-// Module 14544 (PreloadedUserSettingsMigrations)
+// Module 14553 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import wrappers from "wrappers" /* 1216 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1221 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1942 */;
-import dismissible_content from "dismissible_content" /* 1943 */;
-import HotspotStore2 from "HotspotStore" /* 7316 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import wrappers from "wrappers" /* 1217 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1222 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1943 */;
+import dismissible_content from "dismissible_content" /* 1944 */;
+import HotspotStore2 from "HotspotStore" /* 7320 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7628 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {
@@ -38,7 +38,7 @@ function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULT
   return hasHiddenHotspotResult;
 }
 const ChannelNoticeTypes = fn(1074).ChannelNoticeTypes;
-let closure_5 = fn(12544).MULTIACCOUNT_TOOLTIP_SEEN_KEY;
+let closure_5 = fn(12549).MULTIACCOUNT_TOOLTIP_SEEN_KEY;
 let items = [
   {
     version: 2,

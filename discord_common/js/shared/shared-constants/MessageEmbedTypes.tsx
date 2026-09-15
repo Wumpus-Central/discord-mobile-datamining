@@ -1,6 +1,6 @@
-// === Module 1095: MessageEmbedTypes ===
+// === Module 1096: MessageEmbedTypes ===
 
-// Module 1095 (MessageEmbedTypes)
+// Module 1096 (MessageEmbedTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx");

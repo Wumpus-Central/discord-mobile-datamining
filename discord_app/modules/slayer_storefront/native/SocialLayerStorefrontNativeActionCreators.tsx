@@ -1,15 +1,15 @@
-// === Module 10926: SocialLayerStorefrontNativeActionCreators ===
+// === Module 10930: SocialLayerStorefrontNativeActionCreators ===
 
-// Module 10926 (SocialLayerStorefrontNativeActionCreators)
-import util from "util" /* 1114 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef3460 from "module_3460" /* 3460 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4307 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10927 */;
-import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 10932 */;
-import SKUStore from "SKUStore" /* 5591 */;
+// Module 10930 (SocialLayerStorefrontNativeActionCreators)
+import util from "util" /* 1115 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import _modDef3461 from "module_3461" /* 3461 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4310 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10931 */;
+import redirectToSlayerStorefrontWebDefault from "redirectToSlayerStorefrontWeb" /* 10936 */;
+import SKUStore from "SKUStore" /* 5595 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -25,21 +25,21 @@ export const SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY = "social-l
 export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSocialLayerStorefrontUnsupportedOnMobileAlert() {
   const obj2 = { title: null, body: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3460.XjhkM5);
+  obj2.title = intl.string(_modDef3461.XjhkM5);
   const intl2 = util.intl;
-  obj2.body = intl2.string(_modDef3460.NBFa62);
+  obj2.body = intl2.string(_modDef3461.NBFa62);
   actions_AlertActionCreatorsDefault.show(obj2);
 };
 export const openSocialLayerStorefrontProductDetailsModal = function openSocialLayerStorefrontProductDetailsModal(merged) {
   const socialLayerStorefrontConfig = SocialLayerStorefrontActionCreators.fetchSocialLayerStorefrontConfig();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10928, dependencyMap.paths), merged, c5, { presentation: "modal" });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10932, dependencyMap.paths), merged, c5, { presentation: "modal" });
 };
 export const closeSocialLayerStorefrontProductDetailsModal = function closeSocialLayerStorefrontProductDetailsModal() {
   ModalActionCreatorsDefault.popWithKey(c5);
 };
 export const openSocialLayerStorefrontGiftModal = function openSocialLayerStorefrontGiftModal(skuId) {
   if (obj.isSocialLayerStorefrontGiftingSupported()) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10953, dependencyMap.paths), skuId, c6);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10957, dependencyMap.paths), skuId, c6);
     const tmp3Result = ModalActionCreatorsDefault;
   } else {
     value = SKUStore.get(skuId.skuId);
@@ -60,7 +60,7 @@ export const openSocialLayerStorefrontProductSelfPurchaseSuccessModal = function
   closure_0 = arg0;
   return actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11140, dependencyMap.paths).then((SocialLayerStorefrontProductSelfPurchaseSuccessModal) => {
+      return asyncRequireImpl(11144, dependencyMap.paths).then((SocialLayerStorefrontProductSelfPurchaseSuccessModal) => {
         closure_0 = SocialLayerStorefrontProductSelfPurchaseSuccessModal.SocialLayerStorefrontProductSelfPurchaseSuccessModal;
         return (arg0) => {
           const merged = Object.assign(closure_2_0);
@@ -75,7 +75,7 @@ export const openSocialLayerStorefrontProductGiftPurchaseSuccessModal = function
   closure_0 = arg0;
   return actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11140, dependencyMap.paths).then((SocialLayerStorefrontProductGiftPurchaseSuccessModal) => {
+      return asyncRequireImpl(11144, dependencyMap.paths).then((SocialLayerStorefrontProductGiftPurchaseSuccessModal) => {
         closure_0 = SocialLayerStorefrontProductGiftPurchaseSuccessModal.SocialLayerStorefrontProductGiftPurchaseSuccessModal;
         return (arg0) => {
           const merged = Object.assign(closure_2_0);

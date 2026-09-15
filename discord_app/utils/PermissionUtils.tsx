@@ -1,21 +1,21 @@
-// === Module 4280: PermissionUtils ===
+// === Module 4283: PermissionUtils ===
 
-// Module 4280 (PermissionUtils)
+// Module 4283 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import Server from "Server" /* 1894 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 2019 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4263 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4281 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4282 */;
-import ImpersonateStore from "ImpersonateStore" /* 2014 */;
-import LurkingStore from "LurkingStore" /* 4276 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
+import Server from "Server" /* 1895 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 2020 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4266 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4284 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4285 */;
+import ImpersonateStore from "ImpersonateStore" /* 2015 */;
+import LurkingStore from "LurkingStore" /* 4279 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
 import BigFlagUtils_mod from "BigFlagUtils" /* 1086 */;
 import apply from "module_12" /* 12 */;
 
@@ -351,11 +351,11 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(1961);
+const ChannelRecord = fn(1962);
 ({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(1975);
+const GuildRecord = fn(1976);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
-const hasPermission = fn(2016).hasPermission;
+const hasPermission = fn(2017).hasPermission;
 const Constants = fn(1074);
 const Permissions = Constants.Permissions;
 ({ ElevatedPermissions: closure_19, MFALevels: closure_20, ChannelTypes: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22 } = Constants);
@@ -458,7 +458,7 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
           const tmp12 = getSyncedPermissionOverwrites(guild_id, appChannelBotUserId);
           closure_1 = tmp12;
           if (null == obj2[guild_id]) {
-            let obj = { id: guild_id, type: obj2(1894).PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
+            let obj = { id: guild_id, type: obj2(1895).PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
             obj2[guild_id] = obj;
           }
           const _Object = Object;

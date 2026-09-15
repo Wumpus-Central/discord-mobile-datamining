@@ -1,7 +1,7 @@
-// === Module 10830: useGiftStyles ===
+// === Module 10834: useGiftStyles ===
 
-// Module 10830 (useGiftStyles)
-import PremiumConstants from "PremiumConstants" /* 1373 */;
+// Module 10834 (useGiftStyles)
+import PremiumConstants from "PremiumConstants" /* 1374 */;
 import size from "module_2" /* 2 */;
 
 const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;

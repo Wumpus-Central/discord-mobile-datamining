@@ -1,8 +1,8 @@
-// === Module 1999: GuildEntityDao ===
+// === Module 2000: GuildEntityDao ===
 
-// Module 1999 (GuildEntityDao)
-import Table from "Table" /* 1991 */;
-import TableId from "TableId" /* 1993 */;
+// Module 2000 (GuildEntityDao)
+import Table from "Table" /* 1992 */;
+import TableId from "TableId" /* 1994 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,13 +1,13 @@
-// === Module 9002: StorefrontCollectionActionCreators ===
+// === Module 9005: StorefrontCollectionActionCreators ===
 
-// Module 9002 (StorefrontCollectionActionCreators)
+// Module 9005 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1090 */;
-import StoreUtils from "StoreUtils" /* 4878 */;
+import DurationsDefault from "Durations" /* 1091 */;
+import StoreUtils from "StoreUtils" /* 4881 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9000 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7663 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 9003 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7667 */;
 
 require = fn;
 let closure_10 = async function _maybeFetchCollectionsWithProducts(arg0) {

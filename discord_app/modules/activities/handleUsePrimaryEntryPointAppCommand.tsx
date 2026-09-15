@@ -1,10 +1,10 @@
-// === Module 9678: handleUsePrimaryEntryPointAppCommand ===
+// === Module 9680: handleUsePrimaryEntryPointAppCommand ===
 
-// Module 9678 (handleUsePrimaryEntryPointAppCommand)
-import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 9667 */;
+// Module 9680 (handleUsePrimaryEntryPointAppCommand)
+import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 9669 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {

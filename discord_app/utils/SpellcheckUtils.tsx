@@ -1,8 +1,8 @@
-// === Module 5638: SpellcheckUtils ===
+// === Module 5642: SpellcheckUtils ===
 
-// Module 5638 (SpellcheckUtils)
-import PlatformUtils2 from "PlatformUtils" /* 1363 */;
-import DiscordNativeDefault from "DiscordNative" /* 4257 */;
+// Module 5642 (SpellcheckUtils)
+import PlatformUtils2 from "PlatformUtils" /* 1364 */;
+import DiscordNativeDefault from "DiscordNative" /* 4260 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -409,8 +409,8 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   }
 };
-fn(5639).addPostConnectionCallback;
-let PlatformUtils = fn(1363);
+fn(5643).addPostConnectionCallback;
+let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {
   const importDefaultResult = DiscordNativeDefault;

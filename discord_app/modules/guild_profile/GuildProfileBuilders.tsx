@@ -1,11 +1,11 @@
-// === Module 5629: GuildProfileBuilders ===
+// === Module 5633: GuildProfileBuilders ===
 
-// Module 5629 (GuildProfileBuilders)
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4289 */;
-import EmojiStore from "EmojiStore" /* 5540 */;
-import GuildProfileLimits from "GuildProfileLimits" /* 5630 */;
-import GuildProfileTypes from "GuildProfileTypes" /* 5631 */;
+// Module 5633 (GuildProfileBuilders)
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
+import EmojiStore from "EmojiStore" /* 5544 */;
+import GuildProfileLimits from "GuildProfileLimits" /* 5634 */;
+import GuildProfileTypes from "GuildProfileTypes" /* 5635 */;
 import size from "module_2" /* 2 */;
 
 function getEmoji(guildId) {

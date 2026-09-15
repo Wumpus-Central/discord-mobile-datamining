@@ -1,14 +1,14 @@
-// === Module 12647: openGuildPowerupsBottomSheet ===
+// === Module 12652: openGuildPowerupsBottomSheet ===
 
-// Module 12647 (openGuildPowerupsBottomSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+// Module 12652 (openGuildPowerupsBottomSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const GUILD_POWERUPS_BOTTOM_SHEET_KEY = "GUILD_POWERUPS_BOTTOM_SHEET_KEY";
 const result = size.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsBottomSheet.tsx");
 
 export default function openGuildPowerupsBottomSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12648, dependencyMap.paths), GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12653, dependencyMap.paths), GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
 };
 export const GUILD_POWERUPS_BOTTOM_SHEET_KEY = "GUILD_POWERUPS_BOTTOM_SHEET_KEY";

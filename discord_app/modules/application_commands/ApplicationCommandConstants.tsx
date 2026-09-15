@@ -1,8 +1,8 @@
-// === Module 5080: ApplicationCommandConstants ===
+// === Module 5083: ApplicationCommandConstants ===
 
-// Module 5080 (ApplicationCommandConstants)
-import util from "util" /* 1114 */;
-import Server from "Server" /* 1894 */;
+// Module 5083 (ApplicationCommandConstants)
+import util from "util" /* 1115 */;
+import Server from "Server" /* 1895 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];

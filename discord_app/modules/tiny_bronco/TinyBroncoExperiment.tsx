@@ -1,8 +1,8 @@
-// === Module 14771: TinyBroncoExperiment ===
+// === Module 14781: TinyBroncoExperiment ===
 
-// Module 14771 (TinyBroncoExperiment)
-import TinyBroncoGate from "TinyBroncoGate" /* 14772 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 14781 (TinyBroncoExperiment)
+import TinyBroncoGate from "TinyBroncoGate" /* 14782 */;
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-08-tiny-bronco", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

@@ -1,12 +1,12 @@
-// === Module 10109: MobileVoiceOverlayStore ===
+// === Module 10111: MobileVoiceOverlayStore ===
 
-// Module 10109 (MobileVoiceOverlayStore)
+// Module 10111 (MobileVoiceOverlayStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

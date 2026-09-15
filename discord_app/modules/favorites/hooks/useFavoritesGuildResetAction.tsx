@@ -1,14 +1,14 @@
-// === Module 16236: useFavoritesGuildResetAction ===
+// === Module 16249: useFavoritesGuildResetAction ===
 
-// Module 16236 (useFavoritesGuildResetAction)
-import router_utils from "router_utils" /* 1100 */;
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import _modDef3236 from "module_3236" /* 3236 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10352 */;
+// Module 16249 (useFavoritesGuildResetAction)
+import router_utils from "router_utils" /* 1101 */;
+import util from "util" /* 1115 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import FavoritesUtils from "FavoritesUtils" /* 1983 */;
+import _modDef3237 from "module_3237" /* 3237 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10354 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
@@ -32,9 +32,9 @@ export default function useFavoritesGuildResetAction() {
   }
   const obj2 = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
   const intl = util.intl;
-  obj2.label = intl.string(_modDef3236.YkET6R);
+  obj2.label = intl.string(_modDef3237.YkET6R);
   const intl2 = util.intl;
-  obj2.subLabel = intl2.string(_modDef3236.ZzcwNk);
+  obj2.subLabel = intl2.string(_modDef3237.ZzcwNk);
   obj2.perform = callback;
   return obj2;
 };

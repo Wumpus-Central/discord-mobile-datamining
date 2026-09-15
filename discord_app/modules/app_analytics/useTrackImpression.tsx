@@ -1,16 +1,16 @@
-// === Module 8894: useTrackImpression ===
+// === Module 8897: useTrackImpression ===
 
-// Module 8894 (useTrackImpression)
+// Module 8897 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtils2 from "AnalyticsUtils" /* 1240 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
-import _modDef1330 from "module_1330" /* 1330 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
-import uniqueIdDefault from "uniqueId" /* 4840 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1241 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
+import _modDef1331 from "module_1331" /* 1331 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
+import uniqueIdDefault from "uniqueId" /* 4843 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
 
 require = fn;
 function trackImpression(type) {
@@ -65,10 +65,10 @@ function trackImpression(type) {
   }
   const tmpResult5 = AppAnalyticsUtils;
 }
-const ImpressionStore = fn(1241);
+const ImpressionStore = fn(1242);
 ({ setCurrentImpression: closure_7, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: c10, getImpressionStack: closure_11 } = ImpressionStore);
-const AnalyticsUtils = fn(1248);
-let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1240).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
+const AnalyticsUtils = fn(1249);
+let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1241).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
 
@@ -81,13 +81,13 @@ export default function useTrackImpression(current, arg1) {
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5073)(() => {
+  obj(5076)(() => {
     if (obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1330(ref.current, current);
+      const tmp6 = _modDef1331(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1330(ref2.current, current2);
+      const tmp10 = _modDef1331(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }
@@ -107,11 +107,11 @@ export default function useTrackImpression(current, arg1) {
   });
   const effect = noop.useEffect(() => {
     if (!obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1330(ref.current, current);
+      const tmp6 = _modDef1331(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1330(ref2.current, current2);
+      const tmp10 = _modDef1331(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }

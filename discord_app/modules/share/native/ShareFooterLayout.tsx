@@ -1,11 +1,11 @@
-// === Module 11823: ShareFooterLayout ===
+// === Module 11827: ShareFooterLayout ===
 
-// Module 11823 (ShareFooterLayout)
+// Module 11827 (ShareFooterLayout)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import spring from "spring" /* 5055 */;
-import springPresets from "springPresets" /* 5059 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5058 */;
+import springPresets from "springPresets" /* 5062 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7088 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { footer: { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, footerSeparator: null, warningWrapper: null, chatRow: null };
 let obj3 = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.footerSeparator = { marginHorizontal: -nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -63,7 +63,7 @@ export default function ShareFooterLayout(arg0) {
   let tmp12 = null != warningText;
   if (tmp12) {
     const obj8 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
-    tmp12 = closure_4(tmp4(4632).Text, obj8);
+    tmp12 = closure_4(tmp4(4635).Text, obj8);
   }
   items4[1] = tmp12;
   obj6.children = items4;

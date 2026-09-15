@@ -1,9 +1,9 @@
-// === Module 15030: AuthorizedAppScreen ===
+// === Module 15040: AuthorizedAppScreen ===
 
-// Module 15030 (AuthorizedAppScreen)
-import useNavigation from "useNavigation" /* 1483 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7097 */;
-import UserSettingsAuthedAppDefault from "UserSettingsAuthedApp" /* 15031 */;
+// Module 15040 (AuthorizedAppScreen)
+import useNavigation from "useNavigation" /* 1484 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7101 */;
+import UserSettingsAuthedAppDefault from "UserSettingsAuthedApp" /* 15041 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

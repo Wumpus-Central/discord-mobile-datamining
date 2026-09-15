@@ -1,10 +1,10 @@
-// === Module 4686: RTCRegionStore ===
+// === Module 4689: RTCRegionStore ===
 
-// Module 4686 (RTCRegionStore)
+// Module 4689 (RTCRegionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1090 */;
+import DurationsDefault from "Durations" /* 1091 */;
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
 let closure_3 = obj;

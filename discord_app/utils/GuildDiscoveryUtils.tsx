@@ -1,13 +1,13 @@
-// === Module 7444: GuildDiscoveryUtils ===
+// === Module 7448: GuildDiscoveryUtils ===
 
-// Module 7444 (GuildDiscoveryUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import _modDef1471 from "module_1471" /* 1471 */;
+// Module 7448 (GuildDiscoveryUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import _modDef1472 from "module_1472" /* 1472 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4276 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
-import GuildStore from "GuildStore" /* 1979 */;
+import LurkingStore from "LurkingStore" /* 4279 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -176,7 +176,7 @@ let closure_13 = async function _getDiscoverableGuild() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
             const obj4 = { guild_ids };
-            request.query = _modDef1471.stringify(obj4);
+            request.query = _modDef1472.stringify(obj4);
             c5 = 2;
             c6 = 1;
             const obj5 = { value: HTTP.get(request), done: false };

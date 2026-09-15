@@ -1,10 +1,10 @@
-// === Module 11318: useTenureBadgeRequirementString ===
+// === Module 11322: useTenureBadgeRequirementString ===
 
-// Module 11318 (useTenureBadgeRequirementString)
-import util from "util" /* 1114 */;
-import PremiumConstants from "PremiumConstants" /* 1373 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7736 */;
-import useTenureBadging from "useTenureBadging" /* 11319 */;
+// Module 11322 (useTenureBadgeRequirementString)
+import util from "util" /* 1115 */;
+import PremiumConstants from "PremiumConstants" /* 1374 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7739 */;
+import useTenureBadging from "useTenureBadging" /* 11323 */;
 import size from "module_2" /* 2 */;
 
 const TieredTenureBadge = PremiumConstants.TieredTenureBadge;

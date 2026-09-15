@@ -1,21 +1,21 @@
-// === Module 16991: MessageRequestRowSenderDetails ===
+// === Module 17029: MessageRequestRowSenderDetails ===
 
-// Module 16991 (MessageRequestRowSenderDetails)
+// Module 17029 (MessageRequestRowSenderDetails)
 import nativeDefault from "native" /* 576 */;
-import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1399 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import MessageRequestPreviewDefault from "MessageRequestPreview" /* 16993 */;
-import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 16994 */;
+import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1400 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import MessageRequestPreviewDefault from "MessageRequestPreview" /* 17031 */;
+import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 17032 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4636);
-const obj2 = { avatar: { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" }, detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 }, messageDetails: { flexDirection: "row", alignItems: "center" }, username: null, timestampSeparator: null, messagePreview: null, usernameTextContainer: null };
-let obj3 = { borderRadius: fn(1176).AVATAR_SIZE_MAP[fn(undefined, 1176).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createStyles = fn(4639);
+const obj2 = { avatar: { borderRadius: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, avatarContainer: { marginRight: 16, alignItems: "flex-start", height: "100%" }, detailsContainer: { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 }, messageDetails: { flexDirection: "row", alignItems: "center" }, username: null, timestampSeparator: null, messagePreview: null, usernameTextContainer: null };
+let obj3 = { borderRadius: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.username = { flexShrink: 1, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.timestampSeparator = { marginHorizontal: 6 };
 obj2.messagePreview = { marginTop: 2 };
@@ -44,7 +44,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     return tmp2;
   });
   let obj = otherUser(504);
-  const messageRequestRelativeTimestampText = otherUser(16992).useMessageRequestRelativeTimestampText(channel);
+  const messageRequestRelativeTimestampText = otherUser(17030).useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   const obj3 = { style: tmp.avatarContainer, children: null };
@@ -59,7 +59,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   } else {
     obj5 = { avatarStyle: tmp.avatar, source: utils_AvatarUtilsDefault.DEFAULT_AVATARS[rounded] };
   }
-  obj3.children = closure_5(otherUser(1176).Avatar, obj5);
+  obj3.children = closure_5(otherUser(1177).Avatar, obj5);
   const items1 = [closure_5(View, obj3), ];
   const obj6 = { style: tmp.detailsContainer, children: null };
   const obj7 = { style: tmp.messageDetails, children: null };
@@ -74,22 +74,22 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     stringResult = username;
   }
   if (stringResult == null) {
-    const intl = otherUser(1114).intl;
-    stringResult = intl.string(otherUser(1114).t["30mdIx"]);
+    const intl = otherUser(1115).intl;
+    stringResult = intl.string(otherUser(1115).t["30mdIx"]);
   }
   obj9.children = stringResult;
-  const items2 = [closure_5(otherUser(4632).Text, obj9), ];
+  const items2 = [closure_5(otherUser(4635).Text, obj9), ];
   let tmp9Result = null != stateFromStores;
   if (tmp9Result) {
     const obj10 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const items3 = [" ", otherUser(4481).getUserTag(otherUser)];
+    const items3 = [" ", otherUser(4484).getUserTag(otherUser)];
     obj10.children = items3;
-    tmp9Result = closure_6(otherUser(4632).Text, obj10);
-    const tmp2Result = otherUser(4481);
+    tmp9Result = closure_6(otherUser(4635).Text, obj10);
+    const tmp2Result = otherUser(4484);
   }
   items2[1] = tmp9Result;
   obj8.children = items2;
-  const items4 = [closure_6(otherUser(4632).Text, obj8), closure_5(otherUser(4632).Text, { style: tmp.timestampSeparator, variant: "text-xs/medium", color: "text-muted", children: "\u00B7" }), closure_5(otherUser(4632).Text, { variant: "text-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText })];
+  const items4 = [closure_6(otherUser(4635).Text, obj8), closure_5(otherUser(4635).Text, { style: tmp.timestampSeparator, variant: "text-xs/medium", color: "text-muted", children: "\u00B7" }), closure_5(otherUser(4635).Text, { variant: "text-xs/semibold", color: "text-muted", children: messageRequestRelativeTimestampText })];
   obj7.children = items4;
   const items5 = [closure_6(View, obj7), , ];
   let tmp11Result = !flag;
@@ -103,8 +103,8 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   }
   if (flag) {
     const obj13 = { style: tmp.messagePreview, userId: otherUser.id, suffix: null };
-    const intl2 = otherUser(1114).intl;
-    obj13.suffix = intl2.string(otherUser(1114).t.hTltPn);
+    const intl2 = otherUser(1115).intl;
+    obj13.suffix = intl2.string(otherUser(1115).t.hTltPn);
     flag = closure_5(MessageRequestMutualServersDefault, obj13);
     const tmp7Result = MessageRequestMutualServersDefault;
   }

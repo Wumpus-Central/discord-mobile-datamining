@@ -1,7 +1,7 @@
-// === Module 8521: GuildTiVPlatformUtils ===
+// === Module 8524: GuildTiVPlatformUtils ===
 
-// Module 8521 (GuildTiVPlatformUtils)
-import util from "util" /* 1114 */;
+// Module 8524 (GuildTiVPlatformUtils)
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/text_in_voice/GuildTiVPlatformUtils.native.tsx");

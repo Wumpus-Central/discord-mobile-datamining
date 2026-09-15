@@ -1,13 +1,13 @@
-// === Module 13772: mute ===
+// === Module 13777: mute ===
 
-// Module 13772 (mute)
-import _mod1186 from "module_1186" /* 1186 */;
-import timestamp from "timestamp" /* 1215 */;
-import wrappers from "wrappers" /* 1216 */;
+// Module 13777 (mute)
+import _mod1187 from "module_1187" /* 1187 */;
+import timestamp from "timestamp" /* 1216 */;
+import wrappers from "wrappers" /* 1217 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1186).MessageType;
+const MessageType = fn(1187).MessageType;
 class MuteNotificationSettings$Type extends MessageType {
   constructor() {
     obj = {
@@ -36,10 +36,10 @@ const prototype = MuteNotificationSettings$Type.prototype;
 prototype["create"] = function create(arr) {
   const obj = {};
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1186.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
-    const result = _mod1186.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1186;
+    const result = _mod1187.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1187;
   }
   return obj;
 };
@@ -77,7 +77,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1186.UnknownFieldHandler.onRead;
+              onRead = _mod1187.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -90,20 +90,20 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 prototype["internalBinaryWrite"] = function internalBinaryWrite(endTime, tag, writeUnknownFields) {
   if (endTime.endTime) {
     const Timestamp = timestamp.Timestamp;
-    const tagResult = tag.tag(1, _mod1186.WireType.LengthDelimited);
-    const joined = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult = tag.tag(1, _mod1187.WireType.LengthDelimited);
+    const joined = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1187.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = Timestamp.internalBinaryWrite(endTime.endTime, tag.tag(1, _mod1187.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (endTime.selectedTimeWindow) {
     const Int32Value = wrappers.Int32Value;
-    const tagResult1 = tag.tag(2, _mod1186.WireType.LengthDelimited);
-    const joined1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1186.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult1 = tag.tag(2, _mod1187.WireType.LengthDelimited);
+    const joined1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1187.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = Int32Value.internalBinaryWrite(endTime.selectedTimeWindow, tag.tag(2, _mod1187.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1186.UnknownFieldHandler.onWrite;
+      onWrite = _mod1187.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, endTime, tag);

@@ -1,8 +1,8 @@
-// === Module 8027: ConversationNavigatorUtils ===
+// === Module 8030: ConversationNavigatorUtils ===
 
-// Module 8027 (ConversationNavigatorUtils)
-import RootNavigationRef from "RootNavigationRef" /* 4495 */;
-import transitionToChannel from "transitionToChannel" /* 4647 */;
+// Module 8030 (ConversationNavigatorUtils)
+import RootNavigationRef from "RootNavigationRef" /* 4498 */;
+import transitionToChannel from "transitionToChannel" /* 4650 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");

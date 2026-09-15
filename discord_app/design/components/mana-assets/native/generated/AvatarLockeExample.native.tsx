@@ -1,9 +1,9 @@
-// === Module 5866: AvatarLockeExample ===
+// === Module 5870: AvatarLockeExample ===
 
-// Module 5866 (AvatarLockeExample)
+// Module 5870 (AvatarLockeExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5867 from "module_5867" /* 5867 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5871 from "module_5871" /* 5871 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarLockeExample = function AvatarLockeExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5867 };
+  const obj2 = { uri: _modDef5871 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

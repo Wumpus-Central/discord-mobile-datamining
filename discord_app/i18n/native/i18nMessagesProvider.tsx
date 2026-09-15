@@ -1,9 +1,9 @@
-// === Module 18016: i18nMessagesProvider ===
+// === Module 18054: i18nMessagesProvider ===
 
-// Module 18016 (i18nMessagesProvider)
+// Module 18054 (i18nMessagesProvider)
 import _mod17 from "module_17" /* 17 */;
-import NativeI18nModuleDefault from "NativeI18nModule" /* 18017 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
+import NativeI18nModuleDefault from "NativeI18nModule" /* 18055 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
 
 if (PlatformUtils.isAndroid()) {
@@ -18,11 +18,11 @@ export default function newIntlMessagesProvider() {
     closure_0 = arg0;
     closure_2.keysRequest((arr) => {
       i18nManager.valuesResult(arr.map((item) => {
-        const result = closure_1_0(1153).runtimeHashMessageKey(item);
-        const tmp4 = closure_1_0(1114).t[result];
+        const result = closure_1_0(1154).runtimeHashMessageKey(item);
+        const tmp4 = closure_1_0(1115).t[result];
         let str = "";
         if (null != tmp4) {
-          const intl = closure_1_0(1114).intl;
+          const intl = closure_1_0(1115).intl;
           str = intl.reserialize(tmp4);
         }
         return str;

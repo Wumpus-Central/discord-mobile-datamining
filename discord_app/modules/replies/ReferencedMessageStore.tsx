@@ -1,15 +1,15 @@
-// === Module 7697: ReferencedMessageStore ===
+// === Module 7700: ReferencedMessageStore ===
 
-// Module 7697 (ReferencedMessageStore)
+// Module 7700 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import privDefault from "priv" /* 1437 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7702 */;
+import privDefault from "priv" /* 1438 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4862 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7705 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConversationsStore from "ConversationsStore" /* 7698 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4857 */;
+import ConversationsStore from "ConversationsStore" /* 7701 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import MessageStore from "MessageStore" /* 4860 */;
 
 require = fn;
 function processMessage(message) {

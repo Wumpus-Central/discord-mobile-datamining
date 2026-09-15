@@ -1,27 +1,27 @@
-// === Module 12181: AppLauncherNativeUtils ===
+// === Module 12185: AppLauncherNativeUtils ===
 
-// Module 12181 (AppLauncherNativeUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import _modDef1884 from "module_1884" /* 1884 */;
-import Server from "Server" /* 1894 */;
-import HapticUtils from "HapticUtils" /* 4604 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7624 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7626 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7880 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9418 */;
-import FrecencySection from "FrecencySection" /* 12182 */;
+// Module 12185 (AppLauncherNativeUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import _modDef1885 from "module_1885" /* 1885 */;
+import Server from "Server" /* 1895 */;
+import HapticUtils from "HapticUtils" /* 4607 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7628 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7630 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7883 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9421 */;
+import FrecencySection from "FrecencySection" /* 12186 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AppLauncherNativeConstants = fn(1482);
+const AppLauncherNativeConstants = fn(1483);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const BuiltInSectionId = fn(5080).BuiltInSectionId;
+const BuiltInSectionId = fn(5083).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
@@ -211,7 +211,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1884;
+    let applicationIconSource = _modDef1885;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {

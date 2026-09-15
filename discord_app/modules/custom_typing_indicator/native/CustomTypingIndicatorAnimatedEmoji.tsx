@@ -1,18 +1,18 @@
-// === Module 12112: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 12116: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 12112 (CustomTypingIndicatorAnimatedEmoji)
-import user from "user" /* 1379 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
+// Module 12116 (CustomTypingIndicatorAnimatedEmoji)
+import user from "user" /* 1380 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1895 */;
+import AppStateStore from "AppStateStore" /* 1896 */;
 
 require = fn;
 const AppStates = fn(1074).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles((fontSize) => ({ textEmoji: { fontSize }, imageEmoji: { width: fontSize, height: fontSize } }));
 let __initData = { code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}" };
 const size = fn(2);

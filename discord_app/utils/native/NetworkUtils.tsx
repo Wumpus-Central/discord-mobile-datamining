@@ -1,9 +1,9 @@
-// === Module 1462: utils/NetworkUtils ===
+// === Module 1463: utils/NetworkUtils ===
 
-// Module 1462 (utils/NetworkUtils)
+// Module 1463 (utils/NetworkUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1074 */;
-import configure_mod from "configure" /* 1463 */;
+import configure_mod from "configure" /* 1464 */;
 import size from "module_2" /* 2 */;
 
 function notifyListeners(isConnected) {

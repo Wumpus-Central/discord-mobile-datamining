@@ -1,9 +1,9 @@
-// === Module 6686: WumpusGearSpotIllustration ===
+// === Module 6690: WumpusGearSpotIllustration ===
 
-// Module 6686 (WumpusGearSpotIllustration)
+// Module 6690 (WumpusGearSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6687 from "module_6687" /* 6687 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6691 from "module_6691" /* 6691 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WumpusGearSpotIllustration = function WumpusGearSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6687 };
+  const obj2 = { uri: _modDef6691 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,11 +1,11 @@
-// === Module 7195: MemberVerificationAlertIncomplete ===
+// === Module 7199: MemberVerificationAlertIncomplete ===
 
-// Module 7195 (MemberVerificationAlertIncomplete)
-import util from "util" /* 1114 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5608 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5650 */;
+// Module 7199 (MemberVerificationAlertIncomplete)
+import util from "util" /* 1115 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5612 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5654 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4459 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4462 */;
 
 require = fn;
 const jsxProd = fn(21);
@@ -44,30 +44,30 @@ export default function MemberVerificationAlertIncomplete(guildId) {
     name = stateFromStores.name;
   }
   if (null != name) {
-    let intl2 = tmp2(1114).intl;
+    let intl2 = tmp2(1115).intl;
     let obj2 = { guildName: stateFromStores.name };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.f5Jaw7, obj2);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1115).t.f5Jaw7, obj2);
   } else {
-    let intl = tmp2(1114).intl;
-    formatToPlainStringResult = intl.string(tmp2(1114).t["0sTyEb"]);
+    let intl = tmp2(1115).intl;
+    formatToPlainStringResult = intl.string(tmp2(1115).t["0sTyEb"]);
   }
   const obj3 = {};
   const obj = guildId(563);
   const merged1 = Object.assign(merged);
-  obj3.icon = guildId(7196).ListViewIcon;
+  obj3.icon = guildId(7200).ListViewIcon;
   obj3.header = formatToPlainStringResult;
   const obj4 = { children: null };
   const obj5 = { variant: "secondary", text: null, onPress: null };
-  const intl3 = tmp2(1114).intl;
-  obj5.text = intl3.string(guildId(1114).t.h3aGmv);
+  const intl3 = tmp2(1115).intl;
+  obj5.text = intl3.string(guildId(1115).t.h3aGmv);
   obj5.onPress = callback;
-  const items4 = [closure_5(guildId(5056).Button, obj5), ];
+  const items4 = [closure_5(guildId(5059).Button, obj5), ];
   const obj6 = { text: null, variant: "destructive", onPress: null };
-  const intl4 = tmp2(1114).intl;
-  obj6.text = intl4.string(guildId(1114).t.OQFlFD);
+  const intl4 = tmp2(1115).intl;
+  obj6.text = intl4.string(guildId(1115).t.OQFlFD);
   obj6.onPress = callback1;
-  items4[1] = closure_5(guildId(5056).Button, obj6);
+  items4[1] = closure_5(guildId(5059).Button, obj6);
   obj4.children = items4;
   obj3.buttons = closure_7(closure_6, obj4);
-  return closure_5(onClose(5618), obj3);
+  return closure_5(onClose(5622), obj3);
 };

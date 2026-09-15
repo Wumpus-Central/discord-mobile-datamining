@@ -1,11 +1,11 @@
-// === Module 5209: Upload ===
+// === Module 5212: Upload ===
 
-// Module 5209 (Upload)
+// Module 5212 (Upload)
 import _modDef12 from "module_12" /* 12 */;
 import _mod568 from "module_568" /* 568 */;
-import v1 from "v1" /* 1254 */;
-import UploadUtils from "UploadUtils" /* 5210 */;
-import FileUtilsAll from "FileUtils" /* 5215 */;
+import v1 from "v1" /* 1255 */;
+import UploadUtils from "UploadUtils" /* 5213 */;
+import FileUtilsAll from "FileUtils" /* 5218 */;
 import size from "module_2" /* 2 */;
 
 const UploadPlatform = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };

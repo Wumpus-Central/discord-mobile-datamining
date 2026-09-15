@@ -1,8 +1,8 @@
-// === Module 14045: GuildBadgeSpider ===
+// === Module 14050: GuildBadgeSpider ===
 
-// Module 14045 (GuildBadgeSpider)
-import inlineStyles from "inlineStyles" /* 8574 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14005 */;
+// Module 14050 (GuildBadgeSpider)
+import inlineStyles from "inlineStyles" /* 8577 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

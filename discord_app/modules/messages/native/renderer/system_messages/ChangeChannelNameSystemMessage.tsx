@@ -1,13 +1,13 @@
-// === Module 8086: ChangeChannelNameSystemMessage ===
+// === Module 8089: ChangeChannelNameSystemMessage ===
 
-// Module 8086 (ChangeChannelNameSystemMessage)
-import util from "util" /* 1114 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8057 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8064 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8071 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+// Module 8089 (ChangeChannelNameSystemMessage)
+import util from "util" /* 1115 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8060 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8074 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 const size = fn(2);

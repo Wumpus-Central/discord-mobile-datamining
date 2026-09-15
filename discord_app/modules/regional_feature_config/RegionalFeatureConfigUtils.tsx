@@ -1,8 +1,8 @@
-// === Module 5504: RegionalFeatureConfigUtils ===
+// === Module 5508: RegionalFeatureConfigUtils ===
 
-// Module 5504 (RegionalFeatureConfigUtils)
+// Module 5508 (RegionalFeatureConfigUtils)
 import initialize from "initialize" /* 504 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4851 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4854 */;
 
 const require = globalThis.__r;
 

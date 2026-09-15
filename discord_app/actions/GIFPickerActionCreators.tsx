@@ -1,19 +1,19 @@
-// === Module 10495: GIFPickerActionCreators ===
+// === Module 10498: GIFPickerActionCreators ===
 
-// Module 10495 (GIFPickerActionCreators)
+// Module 10498 (GIFPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1114 */;
-import frecency_user_settings from "frecency_user_settings" /* 1220 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import URLUtilsDefault from "URLUtils" /* 1365 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 10072 */;
-import GifProvider from "GifProvider" /* 10496 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10497 */;
-import LocaleStore from "LocaleStore" /* 2025 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10494 */;
+import util from "util" /* 1115 */;
+import frecency_user_settings from "frecency_user_settings" /* 1221 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import URLUtilsDefault from "URLUtils" /* 1366 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 10074 */;
+import GifProvider from "GifProvider" /* 10499 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10500 */;
+import LocaleStore from "LocaleStore" /* 2026 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10497 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -169,9 +169,9 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  const obj = replaced(1254);
-  replaced = replaced(1254).v4().replace(closure_12, "");
-  const str = replaced(1254).v4();
+  const obj = replaced(1255);
+  replaced = replaced(1255).v4().replace(closure_12, "");
+  const str = replaced(1255).v4();
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_OPENED, { search_type: constants3.GIF, load_id: replaced });
   const obj3 = { search_type: constants3.GIF, load_id: replaced };
   DispatcherDefault.wait(() => {

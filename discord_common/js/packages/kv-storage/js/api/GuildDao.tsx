@@ -1,8 +1,8 @@
-// === Module 1998: GuildDao ===
+// === Module 1999: GuildDao ===
 
-// Module 1998 (GuildDao)
-import Table from "Table" /* 1991 */;
-import TableId from "TableId" /* 1993 */;
+// Module 1999 (GuildDao)
+import Table from "Table" /* 1992 */;
+import TableId from "TableId" /* 1994 */;
 import size from "module_2" /* 2 */;
 
 let GuildDao;

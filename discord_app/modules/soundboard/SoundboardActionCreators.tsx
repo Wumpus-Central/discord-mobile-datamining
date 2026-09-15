@@ -1,12 +1,13 @@
-// === Module 7441: SoundboardActionCreators ===
+// === Module 7445: SoundboardActionCreators ===
 
-// Module 7441 (SoundboardActionCreators)
+// Module 7445 (SoundboardActionCreators)
+import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1114 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
+import util from "util" /* 1115 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1941 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 5093 */;
+import SoundboardStore from "SoundboardStore" /* 5096 */;
 
 const require = globalThis.__r;
 
@@ -64,7 +65,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7443).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7447).getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
@@ -82,7 +83,7 @@ function _maybeFetchGuildSoundboardSounds() {
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7443);
+  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7447);
 }
 let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
   let disableAnalytics = arg0;
@@ -396,7 +397,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5095).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5098).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const UserSettingsConstants = fn(1084);
@@ -449,26 +450,39 @@ export const addFavoriteSound = function addFavoriteSound(soundId) {
   _require = soundId;
   const FrecencyUserSettingsActionCreators = require("UserSettingsProtoActionCreators").FrecencyUserSettingsActionCreators;
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", async (soundIds) => {
-    if (obj.size(soundIds.soundIds) >= React6) {
-      const obj2 = { title: null, body: null };
-      const intl = util.intl;
-      obj2.title = intl.string(util.t["+XYXtZ"]);
-      const intl2 = util.intl;
-      const obj3 = { count: tmp3 };
-      obj2.body = intl2.formatToPlainString(util.t.JaIyFi, obj3);
-      AlertActionCreatorsDefault.show(obj2);
-      let flag = false;
-      const tmpResult = AlertActionCreatorsDefault;
-    } else {
-      soundIds = soundIds.soundIds;
-      const hasItem = soundIds.includes(closure_0);
-      flag = !hasItem;
-      if (!hasItem) {
-        const soundIds1 = soundIds.soundIds;
-        soundIds1.push(closure_0);
+    if (obj.size(soundIds.soundIds) < React6) {
+      if (tmpResult.size(soundIds.orderedSoundIds) < React6) {
+        const soundIds2 = soundIds.soundIds;
+        const hasItem = soundIds2.includes(closure_0);
+        let flag = !hasItem;
+        if (hasItem) {
+          const orderedSoundIds = soundIds.orderedSoundIds;
+          flag = !orderedSoundIds.includes(closure_0);
+        }
+        if (flag) {
+          soundIds = soundIds.soundIds;
+          if (!soundIds.includes(closure_0)) {
+            const soundIds1 = soundIds.soundIds;
+            soundIds1.push(closure_0);
+          }
+          const orderedSoundIds2 = soundIds.orderedSoundIds;
+          if (!orderedSoundIds2.includes(closure_0)) {
+            const orderedSoundIds1 = soundIds.orderedSoundIds;
+            orderedSoundIds1.push(closure_0);
+          }
+        }
       }
+      return flag;
     }
-    return flag;
+    obj = _modDef12;
+    const obj2 = { title: null, body: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t["+XYXtZ"]);
+    const intl2 = util.intl;
+    obj2.body = intl2.formatToPlainString(util.t.JaIyFi, { count: React6 });
+    AlertActionCreatorsDefault.show(obj2);
+    flag = false;
+    const tmpResult2 = AlertActionCreatorsDefault;
   }, constants.INFREQUENT_USER_ACTION);
 };
 export const removeFavoriteSound = function removeFavoriteSound(soundId) {
@@ -477,6 +491,8 @@ export const removeFavoriteSound = function removeFavoriteSound(soundId) {
   FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", async (soundIds) => {
     soundIds = soundIds.soundIds;
     soundIds.soundIds = soundIds.filter((item) => item !== soundId);
+    const orderedSoundIds = soundIds.orderedSoundIds;
+    soundIds.orderedSoundIds = orderedSoundIds.filter((item) => item !== soundId);
   }, constants.INFREQUENT_USER_ACTION);
 };
 export const fetchSoundGuildData = function fetchSoundGuildData() {

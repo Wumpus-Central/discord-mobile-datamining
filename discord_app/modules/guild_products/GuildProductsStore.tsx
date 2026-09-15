@@ -1,17 +1,17 @@
-// === Module 13796: GuildProductsStore ===
+// === Module 13801: GuildProductsStore ===
 
-// Module 13796 (GuildProductsStore)
+// Module 13801 (GuildProductsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1090 */;
+import DurationsDefault from "Durations" /* 1091 */;
 
 const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
 let closure_6 = 10 * DurationsDefault.Millis.MINUTE;
-const secondaryIndexMap = new fn(4271).SecondaryIndexMap((guild_id) => {
+const secondaryIndexMap = new fn(4274).SecondaryIndexMap((guild_id) => {
   const items = ["guild:" + guild_id.guild_id];
   if (guild_id.published) {
     const _HermesInternal = HermesInternal;

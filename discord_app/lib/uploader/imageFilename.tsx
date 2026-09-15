@@ -1,6 +1,6 @@
-// === Module 5252: imageFilename ===
+// === Module 5255: imageFilename ===
 
-// Module 5252 (imageFilename)
+// Module 5255 (imageFilename)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["image/heic", "image/heif", "image/heic-sequence", "image/heif-sequence"]);
@@ -53,13 +53,13 @@ export const isJxrFile = function isJxrFile(file) {
     return hasItem;
   }
 };
-export const heicMimeType = function heicMimeType(type) {
+export const heicMimeType = function heicMimeType(file) {
   let str = "";
-  if ("" !== type.type) {
-    let str3 = type.type;
+  if ("" !== file.type) {
+    let str3 = file.type;
   } else {
-    if (typeof type.name === "string") {
-      str = type.name;
+    if (typeof file.name === "string") {
+      str = file.name;
     }
     const formatted = str.toLowerCase();
     str3 = "image/heif";
@@ -69,10 +69,10 @@ export const heicMimeType = function heicMimeType(type) {
   }
   return str3;
 };
-export const jxrMimeType = function jxrMimeType(type) {
+export const jxrMimeType = function jxrMimeType(file) {
   let str = "image/jxr";
-  if ("" !== type.type) {
-    str = type.type;
+  if ("" !== file.type) {
+    str = file.type;
   }
   return str;
 };

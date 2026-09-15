@@ -1,6 +1,6 @@
-// === Module 16552: ICYMICustomScoresModal ===
+// === Module 16565: ICYMICustomScoresModal ===
 
-// Module 16552 (ICYMICustomScoresModal)
+// Module 16565 (ICYMICustomScoresModal)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,9 +9,9 @@ const require = globalThis.__r;
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const NativeStackNavigator = fn(8017);
+const NativeStackNavigator = fn(8020);
 let closure_5 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj3 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_6 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -41,24 +41,24 @@ export default function ICYMICustomScoresModal() {
       name: "default",
       options(navigation) {
         const obj = { title: null, headerLeft: null };
-        const intl = closure_0(1114).intl;
-        obj.title = intl.string(closure_0(1114).t.jVshKt);
-        obj.headerLeft = closure_0(7966).getRenderModalCloseImage(navigation.navigation);
-        const merged = Object.assign(closure_1(11057)());
+        const intl = closure_0(1115).intl;
+        obj.title = intl.string(closure_0(1115).t.jVshKt);
+        obj.headerLeft = closure_0(7969).getRenderModalCloseImage(navigation.navigation);
+        const merged = Object.assign(closure_1(11061)());
         return obj;
       },
       getComponent() {
-        return closure_0(16553).default;
+        return closure_0(16566).default;
       }
     }),
     closure_3(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: closure_0(7966).getRenderModalBackImage(navigation.navigation) };
+        const obj = { headerLeft: closure_0(7969).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
-        return closure_0(16554).default;
+        return closure_0(16567).default;
       }
     })
   ];

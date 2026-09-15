@@ -1,7 +1,7 @@
-// === Module 10088: MobileGoLiveUpsellExperiment ===
+// === Module 10090: MobileGoLiveUpsellExperiment ===
 
-// Module 10088 (MobileGoLiveUpsellExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 10090 (MobileGoLiveUpsellExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-mobile-go-live-upsell", kind: "user", defaultConfig: { showMobileGoLiveUpsell: false }, variations: null };

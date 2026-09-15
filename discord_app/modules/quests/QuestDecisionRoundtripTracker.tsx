@@ -1,14 +1,14 @@
-// === Module 11415: QuestDecisionRoundtripTracker ===
+// === Module 11419: QuestDecisionRoundtripTracker ===
 
-// Module 11415 (QuestDecisionRoundtripTracker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import AdCreativeType from "AdCreativeType" /* 5532 */;
-import NetStats from "NetStats" /* 7562 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7565 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7779 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7803 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7802 */;
-import NetworkStore from "NetworkStore" /* 4685 */;
+// Module 11419 (QuestDecisionRoundtripTracker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import AdCreativeType from "AdCreativeType" /* 5536 */;
+import NetStats from "NetStats" /* 7566 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7569 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7782 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7806 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7805 */;
+import NetworkStore from "NetworkStore" /* 4688 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {

@@ -1,7 +1,7 @@
-// === Module 5595: transformSKUTenantMetadata ===
+// === Module 5599: transformSKUTenantMetadata ===
 
-// Module 5595 (transformSKUTenantMetadata)
-import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
+// Module 5599 (transformSKUTenantMetadata)
+import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
 import size from "module_2" /* 2 */;
 
 function transformProfileEffectKeyFrameFromServer(src) {

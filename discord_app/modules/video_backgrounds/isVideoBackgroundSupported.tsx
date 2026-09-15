@@ -1,11 +1,11 @@
-// === Module 9236: isVideoBackgroundSupported ===
+// === Module 9239: isVideoBackgroundSupported ===
 
-// Module 9236 (isVideoBackgroundSupported)
-import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 9237 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+// Module 9239 (isVideoBackgroundSupported)
+import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 9240 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 
 const require = fn;
-const Features = fn(4661).Features;
+const Features = fn(4664).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 

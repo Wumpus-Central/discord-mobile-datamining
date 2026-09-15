@@ -1,8 +1,8 @@
-// === Module 4775: FrontierTuningExperiment ===
+// === Module 4778: FrontierTuningExperiment ===
 
-// Module 4775 (FrontierTuningExperiment)
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4683 */;
-import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
+// Module 4778 (FrontierTuningExperiment)
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4686 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
 const obj = { maxBitrate: null, maxResolution: null, maxFPS: null, maskReportedQuality: false };

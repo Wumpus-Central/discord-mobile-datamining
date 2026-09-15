@@ -1,6 +1,6 @@
-// === Module 1974: SetUtils ===
+// === Module 1975: SetUtils ===
 
-// Module 1974 (SetUtils)
+// Module 1975 (SetUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");

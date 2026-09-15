@@ -1,13 +1,13 @@
-// === Module 5600: GuildUtils ===
+// === Module 5604: GuildUtils ===
 
-// Module 5600 (GuildUtils)
-import DurationsDefault from "Durations" /* 1090 */;
-import util from "util" /* 1114 */;
-import UserUtilsAll from "UserUtils" /* 4481 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
-import priv from "priv" /* 1437 */;
+// Module 5604 (GuildUtils)
+import DurationsDefault from "Durations" /* 1091 */;
+import util from "util" /* 1115 */;
+import UserUtilsAll from "UserUtils" /* 4484 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5605 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
+import priv from "priv" /* 1438 */;
 
 require = fn;
 function getGuildNameSuggestion(truncateUsername) {

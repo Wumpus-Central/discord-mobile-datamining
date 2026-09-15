@@ -1,8 +1,8 @@
-// === Module 17286: getConsoleConnectingText ===
+// === Module 17324: getConsoleConnectingText ===
 
-// Module 17286 (getConsoleConnectingText)
+// Module 17324 (getConsoleConnectingText)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const PlatformTypes = Constants.PlatformTypes;

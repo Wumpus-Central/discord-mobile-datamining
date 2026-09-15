@@ -1,16 +1,16 @@
-// === Module 16383: getGuildsBarGuildMenuItems ===
+// === Module 16396: getGuildsBarGuildMenuItems ===
 
-// Module 16383 (getGuildsBarGuildMenuItems)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
-import _modDef12507 from "module_12507" /* 12507 */;
-import _modDef12508 from "module_12508" /* 12508 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13995 */;
+// Module 16396 (getGuildsBarGuildMenuItems)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7221 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7226 */;
+import _modDef12512 from "module_12512" /* 12512 */;
+import _modDef12513 from "module_12513" /* 12513 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 14000 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
 
 const require = globalThis.__r;
 
@@ -100,9 +100,9 @@ export default function getGuildsBarGuildMenuItems(guildId) {
     const splice = items.splice;
     const obj5 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj5.iconSource = _modDef12508;
-      const intl5 = tmp(1114).intl;
-      obj5.label = intl5.string(tmp(1114).t.De0BTC);
+      obj5.iconSource = _modDef12513;
+      const intl5 = tmp(1115).intl;
+      obj5.label = intl5.string(tmp(1115).t.De0BTC);
       obj5.action = function action() {
         if (null != closure_0) {
           const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(tmp, { muted: false }, NotificationSettingsUtils.NotificationLabels.Unmuted);
@@ -110,12 +110,12 @@ export default function getGuildsBarGuildMenuItems(guildId) {
       };
       splice(1, 0, obj5);
     } else {
-      obj5.iconSource = _modDef12507;
-      const intl4 = tmp(1114).intl;
-      obj5.label = intl4.string(tmp(1114).t.vRzp7P);
+      obj5.iconSource = _modDef12512;
+      const intl4 = tmp(1115).intl;
+      obj5.label = intl4.string(tmp(1115).t.vRzp7P);
       obj5.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        obj.openLazy(asyncRequireImpl(10272, dependencyMap.paths), "muteSettings" + guildId, { guildId });
+        obj.openLazy(asyncRequireImpl(10274, dependencyMap.paths), "muteSettings" + guildId, { guildId });
       };
       splice(1, 0, obj5);
     }

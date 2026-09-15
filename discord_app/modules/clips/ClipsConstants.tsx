@@ -1,8 +1,8 @@
-// === Module 5213: ClipsConstants ===
+// === Module 5216: ClipsConstants ===
 
-// Module 5213 (ClipsConstants)
+// Module 5216 (ClipsConstants)
 import LoggerDefault from "Logger" /* 3 */;
-import DurationsDefault from "Durations" /* 1090 */;
+import DurationsDefault from "Durations" /* 1091 */;
 
 let obj = {};
 const result = 30 * DurationsDefault.Millis.SECOND;
@@ -63,6 +63,7 @@ export const TRANSIENT_AUTOCLIP_DIRNAME = ".autoclip-cache";
 export const CLIP_NAME_MIN_CHAR_LENGTH = 0;
 export const ClipsTrackSuffixes = { ALL: ":all", APPLICATION: ":application", VOICE: ":voice", SOUNDBOARD: ":soundboard" };
 export const ClipSignalTypes = { MANUAL: "manual", DISTRIBUTED: "distributed", SHOUTING: "shouting", LAUGHTER: "laughter", GAME_EVENT: "game_event", SPEAKING: "speaking", SOUNDBOARD: "soundboard" };
+export const AutoclipsCapability = { LAUGHTER: 1, [1]: "LAUGHTER", SHOUTING: 2, [2]: "SHOUTING", GAME_EVENTS: 4, [4]: "GAME_EVENTS" };
 export const ClipsHardwareClassification = { UNKNOWN: "unknown", BELOW_MINIMUM: "below_minimum", MEETS_MINIMUM: "meets_minimum", MEETS_AUTO_ENABLE: "meets_auto_enable" };
 export const ClipsSaveNoOpReason = { MAX_CONCURRENT_SAVES: "max_concurrent_saves", NO_ELIGIBLE_SOURCE: "no_eligible_source", MODULE_NOT_LOADED: "module_not_loaded", BUFFER_WARMING_UP: "buffer_warming_up", BRIDGE_SHUTDOWN: "bridge_shutdown", RECORDING_NOT_READY: "recording_not_ready" };
 export const Emotion = { ANGER: "anger", CALM: "calm", DISGUST: "disgust", FEAR: "fear", HAPPY: "happy", NEUTRAL: "neutral", SAD: "sad", SURPRISED: "surprised" };

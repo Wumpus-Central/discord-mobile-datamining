@@ -1,9 +1,9 @@
-// === Module 5828: AnniversaryTier1Badge ===
+// === Module 5832: AnniversaryTier1Badge ===
 
-// Module 5828 (AnniversaryTier1Badge)
+// Module 5832 (AnniversaryTier1Badge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5829 from "module_5829" /* 5829 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5833 from "module_5833" /* 5833 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AnniversaryTier1Badge = function AnniversaryTier1Badge(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5829 };
+  const obj2 = { uri: _modDef5833 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

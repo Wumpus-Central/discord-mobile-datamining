@@ -1,15 +1,15 @@
-// === Module 9717: PopoutMenu ===
+// === Module 9719: PopoutMenu ===
 
-// Module 9717 (PopoutMenu)
+// Module 9719 (PopoutMenu)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import Patterns from "Patterns" /* 4606 */;
-import timing from "timing" /* 4637 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import FormRowDefault from "FormRow" /* 7240 */;
-import Form from "Form" /* 8716 */;
+import native from "native" /* 1177 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import Patterns from "Patterns" /* 4609 */;
+import timing from "timing" /* 4640 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
+import FormRowDefault from "FormRow" /* 7244 */;
+import Form from "Form" /* 8719 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function PopoutMenuRow(onClose) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, popoutMenuRow: { flex: 1 }, popoutMenuRowLabel: { width: "100%" } };
 let closure_9 = createStyles.createStyles(obj);
 let closure_11 = { code: "function PopoutMenuTsx1(){const{withTiming,animateIn,STANDARD_EASING,ANIMATION_DURATION,runOnJS,handleClose,EXTRA_PADDING}=this.__closure;return{opacity:withTiming(animateIn?1:0,{easing:STANDARD_EASING,duration:ANIMATION_DURATION},'respect-motion-settings',function(finished){if(finished){runOnJS(handleClose)();}}),transform:[{translateY:withTiming(animateIn?-EXTRA_PADDING:0,{easing:STANDARD_EASING,duration:ANIMATION_DURATION})}]};}" };

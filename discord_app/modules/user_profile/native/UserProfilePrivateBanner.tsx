@@ -1,19 +1,19 @@
-// === Module 13234: UserProfilePrivateBanner ===
+// === Module 13239: UserProfilePrivateBanner ===
 
-// Module 13234 (UserProfilePrivateBanner)
+// Module 13239 (UserProfilePrivateBanner)
 import nativeDefault from "native" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import LockIcon from "LockIcon" /* 5176 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import LockIcon from "LockIcon" /* 5179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
-let obj2 = { banner: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(7311).PROFILE_TOP_LAYER_Z_INDEX } };
+const createStyles = fn(4639);
+let obj2 = { banner: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, paddingTop: 18, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, position: "relative", zIndex: fn(7315).PROFILE_TOP_LAYER_Z_INDEX } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateBanner.tsx");

@@ -1,16 +1,16 @@
-// === Module 17898: SelectEmojiRolesActionSheet ===
+// === Module 17936: SelectEmojiRolesActionSheet ===
 
-// Module 17898 (SelectEmojiRolesActionSheet)
+// Module 17936 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import Pressables from "Pressables" /* 5204 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7252 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15296 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import Pressables from "Pressables" /* 5207 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7256 */;
+import ActionSheet from "ActionSheet" /* 7304 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15306 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5605 */;
+import TextStyles_mod from "TextStyles" /* 5609 */;
 
 const require = globalThis.__r;
 
@@ -19,8 +19,8 @@ const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const itemSize = fn(1180).FORM_ROW_VERTICAL_PADDING + 22;
-const createStyles = fn(4636);
+const itemSize = fn(1181).FORM_ROW_VERTICAL_PADDING + 22;
+const createStyles = fn(4639);
 let obj2 = { list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, label: { flex: 1, flexDirection: "row", alignItems: "center" }, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
@@ -144,6 +144,6 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj6.sections = items1;
-  obj5.children = closure_6(emoji(7175), obj6);
+  obj5.children = closure_6(emoji(7179), obj6);
   return closure_6(ActionSheet.ActionSheet, obj5);
 };

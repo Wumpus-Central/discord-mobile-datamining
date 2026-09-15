@@ -1,20 +1,20 @@
-// === Module 11833: DestinationFailedAlertModal ===
+// === Module 11837: DestinationFailedAlertModal ===
 
-// Module 11833 (DestinationFailedAlertModal)
+// Module 11837 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import useChannelNameDefault from "useChannelName" /* 4789 */;
-import AlertModal from "AlertModal" /* 4986 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11042 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import useChannelNameDefault from "useChannelName" /* 4792 */;
+import AlertModal from "AlertModal" /* 4989 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11046 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4676 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PresenceStore from "PresenceStore" /* 4679 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function FailedGroupDMRow(channel) {
@@ -41,7 +41,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     const obj3 = { style: tmp.row, children: null };
-    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: 200.75, avatarDecoration: null, autoStatusCutout: "\u{1F9D1}\u{1F3FE}\u200D\u{1F3EB}" };
+    const obj4 = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "primary", autoStatusCutout: null };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -49,15 +49,15 @@ function FailedUserRow(user) {
     obj4.status = tmp13;
     obj4.isMobileOnline = tmp6;
     obj4.isVROnline = tmp7;
-    obj4.size = tmp2(1176).AvatarSizes.XSMALL;
+    obj4.size = tmp2(1177).AvatarSizes.XSMALL;
     obj4.avatarDecoration = user.avatarDecoration;
-    const items2 = [closure_10(tmp2(1176).Avatar, obj4), ];
+    const items2 = [closure_10(tmp2(1177).Avatar, obj4), ];
     const obj5 = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: null };
     if (stateFromStores == null) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj5.children = stateFromStores;
-    items2[1] = closure_10(tmp2(4632).Text, obj5);
+    items2[1] = closure_10(tmp2(4635).Text, obj5);
     obj3.children = items2;
     tmp9Result = closure_11(View, obj3);
   }
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(11134).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11134).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4632).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(11138).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11138).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4635).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }
@@ -121,7 +121,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 }, row: null, label: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.lg, paddingVertical: nativeDefault.space.PX_8 };
 obj2.row = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, height: 40, marginHorizontal: nativeDefault.space.PX_16 };

@@ -1,6 +1,6 @@
-// === Module 17526: NativeJankStatsModule ===
+// === Module 17564: NativeJankStatsModule ===
 
-// Module 17526 (NativeJankStatsModule)
+// Module 17564 (NativeJankStatsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,34 +1,34 @@
-// === Module 17577: ParentalConsentWarningModal ===
+// === Module 17615: ParentalConsentWarningModal ===
 
-// Module 17577 (ParentalConsentWarningModal)
+// Module 17615 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
-import RootNavigationRef from "RootNavigationRef" /* 4495 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 4842 */;
-import openUserSettings from "openUserSettings" /* 7485 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7642 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
+import RootNavigationRef from "RootNavigationRef" /* 4498 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 4845 */;
+import openUserSettings from "openUserSettings" /* 7489 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7646 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7640 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7641);
+const FamilyCenterConstants = fn(7645);
 ({ FamilyCenterSubPages: metroRequire, UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const modal = "modal";
-let closure_15 = fn(1943).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
-const createStyles = fn(4636);
+let closure_15 = fn(1944).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
+const createStyles = fn(4639);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, illustration: null, title: null, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.illustration = { alignItems: "center", paddingTop: nativeDefault.space.PX_12 };
@@ -98,7 +98,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       ModalDispatchQueueDefault.enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17578, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17616, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);
@@ -126,14 +126,14 @@ export default function ParentalConsentWarningModal(daysRemaining) {
   const obj10 = { spacing: require("native").space.PX_8, children: null };
   const obj11 = { size: "lg", variant: "primary", grow: true, text: null, onPress: null };
   const intl3 = tmp4(tmp3[15]).intl;
-  obj11.text = intl3.string(require("module_2396").Kp7sjX);
+  obj11.text = intl3.string(require("module_2397").Kp7sjX);
   obj11.onPress = callback3;
   const items5 = [closure_12(daysRemaining(callback[28]).Button, obj11), ];
   const obj12 = { size: "lg", variant: "secondary", grow: true, text: null, accessibilityHint: null, onPress: null };
   const intl4 = tmp4(tmp3[15]).intl;
-  obj12.text = intl4.string(require("module_2396").hST5o8);
+  obj12.text = intl4.string(require("module_2397").hST5o8);
   const intl5 = tmp4(tmp3[15]).intl;
-  obj12.accessibilityHint = intl5.string(require("module_2396")["4fZtHa"]);
+  obj12.accessibilityHint = intl5.string(require("module_2397")["4fZtHa"]);
   obj12.onPress = callback2;
   items5[1] = closure_12(daysRemaining(callback[28]).Button, obj12);
   obj10.children = items5;

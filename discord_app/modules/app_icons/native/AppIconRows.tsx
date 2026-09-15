@@ -1,15 +1,15 @@
-// === Module 15613: AppIconRows ===
+// === Module 15623: AppIconRows ===
 
-// Module 15613 (AppIconRows)
+// Module 15623 (AppIconRows)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import AppIconTypes from "AppIconTypes" /* 9454 */;
-import AppIconUtils from "AppIconUtils" /* 13537 */;
-import AppIconRowDefault from "AppIconRow" /* 15614 */;
+import util from "util" /* 1115 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import AppIconTypes from "AppIconTypes" /* 9456 */;
+import AppIconUtils from "AppIconUtils" /* 13542 */;
+import AppIconRowDefault from "AppIconRow" /* 15624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function BackwardsCompatibleAppIconRows(arg0) {
@@ -31,8 +31,8 @@ function BackwardsCompatibleAppIconRows(arg0) {
     const icons = merged.icons;
     let obj = { style: tmp4.container, children: null };
     const obj2 = { title: merged.title, accessibilityRole: "radiogroup", accessibilityLabel: null, hasIcons: true, children: null };
-    const intl = merged(1114).intl;
-    obj2.accessibilityLabel = intl.string(merged(1114).t.N4YDao);
+    const intl = merged(1115).intl;
+    obj2.accessibilityLabel = intl.string(merged(1115).t.N4YDao);
     obj2.children = icons.map((id) => {
       const obj = {};
       merged = Object.assign(merged);
@@ -42,7 +42,7 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_8(merged(5768).TableRowGroup, obj2);
+    obj.children = closure_8(merged(5772).TableRowGroup, obj2);
     return closure_8(View, obj);
   }
 }
@@ -50,7 +50,7 @@ const View = fn(17).View;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_11 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");

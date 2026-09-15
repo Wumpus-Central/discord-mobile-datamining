@@ -1,7 +1,7 @@
-// === Module 17390: markdownRules ===
+// === Module 17428: markdownRules ===
 
-// Module 17390 (markdownRules)
-import t_mod from "module_4333" /* 4333 */;
+// Module 17428 (markdownRules)
+import t_mod from "module_4336" /* 4336 */;
 import size from "module_2" /* 2 */;
 
 const link = t.defaultRules.link;

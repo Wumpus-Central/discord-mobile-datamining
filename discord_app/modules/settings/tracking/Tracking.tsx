@@ -1,9 +1,9 @@
-// === Module 7100: Tracking ===
+// === Module 7104: Tracking ===
 
-// Module 7100 (Tracking)
+// Module 7104 (Tracking)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7099 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 7103 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

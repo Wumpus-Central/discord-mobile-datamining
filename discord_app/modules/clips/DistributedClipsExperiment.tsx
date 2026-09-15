@@ -1,7 +1,7 @@
-// === Module 14081: DistributedClipsExperiment ===
+// === Module 14086: DistributedClipsExperiment ===
 
-// Module 14081 (DistributedClipsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 14086 (DistributedClipsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-05-distributed-clips", defaultConfig: { enableDistributedClips: false }, variations: null };

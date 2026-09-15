@@ -1,8 +1,8 @@
-// === Module 9642: getURLForApplication ===
+// === Module 9644: getURLForApplication ===
 
-// Module 9642 (getURLForApplication)
-import TestModeStore from "TestModeStore" /* 8982 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8980 */;
+// Module 9644 (getURLForApplication)
+import TestModeStore from "TestModeStore" /* 8985 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8983 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");

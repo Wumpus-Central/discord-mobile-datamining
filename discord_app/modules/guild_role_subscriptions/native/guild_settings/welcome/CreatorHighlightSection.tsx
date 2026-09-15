@@ -1,13 +1,13 @@
-// === Module 17824: CreatorHighlightSection ===
+// === Module 17862: CreatorHighlightSection ===
 
-// Module 17824 (CreatorHighlightSection)
+// Module 17862 (CreatorHighlightSection)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import LinkingDefault from "Linking" /* 4331 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import _modDef10431 from "module_10431" /* 10431 */;
-import EmojiIconDefault from "EmojiIcon" /* 15324 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import _modDef10433 from "module_10433" /* 10433 */;
+import EmojiIconDefault from "EmojiIcon" /* 15334 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function GuildServerSubscriberCount(arg0) {
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
-  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10431 }), ];
+  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10433 }), ];
   const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["3NNXPW"]);
@@ -35,12 +35,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(17825)(guild_id, 3, 60);
+  const tmp6 = guild_id(17863)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(17797), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(17835), {}) };
     return closure_6(closure_4, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;
@@ -51,10 +51,10 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj5 = { style: tmp.guildIcon, source: null };
     const obj6 = { uri: guildAvatarUrl };
     obj5.source = obj6;
-    const items1 = [closure_6(tmp5(5668), obj5), ];
+    const items1 = [closure_6(tmp5(5672), obj5), ];
     const obj7 = { style: tmp.cardHeaderContainer, children: null };
     const obj8 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: guildName };
-    const items2 = [closure_6(tmp2(4632).Text, obj8), ];
+    const items2 = [closure_6(tmp2(4635).Text, obj8), ];
     let tmp11Result = null != subscriberCount;
     if (tmp11Result) {
       const obj9 = { subscriberCount, style: tmp.serverSubscriberCount };
@@ -66,17 +66,17 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     obj4.children = items1;
     const items3 = [closure_7(closure_4, obj4), , , , ];
     const obj10 = { style: tmp.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
-    items3[1] = closure_6(tmp2(4632).Text, obj10);
+    items3[1] = closure_6(tmp2(4635).Text, obj10);
     const obj11 = { style: tmp.ownerUsername, variant: "text-sm/normal", color: "text-default", lineClamp: 1, lineBreakMode: "tail", children: null };
-    const intl = tmp2(1114).intl;
+    const intl = tmp2(1115).intl;
     const obj12 = { attributionName: quote_attribution, attributionTitle: null };
     if (quote_attribution_title == null) {
-      const intl2 = tmp2(1114).intl;
-      quote_attribution_title = intl2.string(tmp2(1114).t.pclUFJ);
+      const intl2 = tmp2(1115).intl;
+      quote_attribution_title = intl2.string(tmp2(1115).t.pclUFJ);
     }
     obj12.attributionTitle = quote_attribution_title;
-    obj11.children = intl.format(tmp2(1114).t.m0b6Kj, obj12);
-    items3[2] = closure_6(tmp2(4632).Text, obj11);
+    obj11.children = intl.format(tmp2(1115).t.m0b6Kj, obj12);
+    items3[2] = closure_6(tmp2(4635).Text, obj11);
     let tmp9Result = null != emojisToShow;
     if (tmp9Result) {
       tmp9Result = emojisToShow.length > 0;
@@ -87,9 +87,9 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       const items4 = [tmp.premiumEmojisTitle, typeConsolidationEyebrow.style];
       obj14.style = items4;
       obj14.variant = typeConsolidationEyebrow.variant;
-      const intl3 = tmp2(1114).intl;
-      obj14.children = intl3.string(tmp2(1114).t.wg53L8);
-      const items5 = [closure_6(tmp2(4632).Text, obj14), ];
+      const intl3 = tmp2(1115).intl;
+      obj14.children = intl3.string(tmp2(1115).t.wg53L8);
+      const items5 = [closure_6(tmp2(4635).Text, obj14), ];
       const obj15 = { style: null, children: null };
       const items6 = [, ];
       ({ horizontalContainer: arr7[0], emojiContainer: arr7[1] } = tmp);
@@ -109,7 +109,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
         const obj16 = { style: tmp.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: null };
         const _HermesInternal = HermesInternal;
         obj16.children = "+" + notShownEmojiCount;
-        tmp11Result2 = closure_6(tmp2(4632).Text, obj16);
+        tmp11Result2 = closure_6(tmp2(4635).Text, obj16);
       }
       items7[1] = tmp11Result2;
       obj15.children = items7;
@@ -120,10 +120,10 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     items3[3] = tmp9Result;
     const obj17 = { style: tmp.viewServerButtonContainer, children: null };
     const obj18 = { pillStyle: tmp.viewServerButton, text: null, onPress: null, shrink: true };
-    const intl4 = tmp2(1114).intl;
-    obj18.text = intl4.string(tmp2(1114).t.mQ2IGa);
+    const intl4 = tmp2(1115).intl;
+    obj18.text = intl4.string(tmp2(1115).t.mQ2IGa);
     obj18.onPress = tmp7;
-    obj17.children = closure_6(tmp2(5057).BaseTextButton, obj18);
+    obj17.children = closure_6(tmp2(5060).BaseTextButton, obj18);
     items3[4] = closure_6(closure_4, obj17);
     obj3.children = items3;
     return closure_7(closure_4, obj3);
@@ -136,7 +136,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { horizontalContainer: { flexDirection: "row" }, serverSubscriberCount: { marginTop: 8 }, subscriberCountContainer: { alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BRAND_530, paddingEnd: 8, borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, subscriberCount: null, subscriberCountIcon: null, cardContainer: null, cardHeaderContainer: null, guildIcon: null, ownerQuote: null, ownerUsername: null, premiumEmojisTitle: null, viewServerButtonContainer: null, viewServerButton: null, emojiSectionContainer: null, emojiContainer: null, emojiListItem: null, emoji: null };
 let obj3 = { alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BRAND_530, paddingEnd: 8, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj2.subscriberCount = { backgroundColor: nativeDefault.unsafe_rawColors.BRAND_630, paddingHorizontal: 8, paddingVertical: 4 };

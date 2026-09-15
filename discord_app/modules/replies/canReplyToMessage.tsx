@@ -1,12 +1,12 @@
-// === Module 8080: canReplyToMessage ===
+// === Module 8083: canReplyToMessage ===
 
-// Module 8080 (canReplyToMessage)
-import MessageTypes from "MessageTypes" /* 1089 */;
-import ThreadHooks from "ThreadHooks" /* 7372 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8081 */;
+// Module 8083 (canReplyToMessage)
+import MessageTypes from "MessageTypes" /* 1090 */;
+import ThreadHooks from "ThreadHooks" /* 7376 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 8084 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import UserStore from "UserStore" /* 1371 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 

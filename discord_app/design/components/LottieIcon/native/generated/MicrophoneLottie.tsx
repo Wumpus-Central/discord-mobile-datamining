@@ -1,8 +1,8 @@
-// === Module 14230: MicrophoneLottie ===
+// === Module 14239: MicrophoneLottie ===
 
-// Module 14230 (MicrophoneLottie)
-import LottieIcon from "LottieIcon" /* 10078 */;
-import _mod14231 from "module_14231" /* 14231 */;
+// Module 14239 (MicrophoneLottie)
+import LottieIcon from "LottieIcon" /* 10080 */;
+import _mod14240 from "module_14240" /* 14240 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,5 +14,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 
 export const MicrophoneLottie = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14231, ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14240, ref, layers, markers: items });
 });

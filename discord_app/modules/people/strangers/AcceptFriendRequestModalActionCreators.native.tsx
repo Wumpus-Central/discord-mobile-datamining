@@ -1,12 +1,12 @@
-// === Module 11002: AcceptFriendRequestModalActionCreators ===
+// === Module 11006: AcceptFriendRequestModalActionCreators ===
 
-// Module 11002 (AcceptFriendRequestModalActionCreators)
+// Module 11006 (AcceptFriendRequestModalActionCreators)
 import jsxProd from "jsxProd" /* 21 */;
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
-import Constants2 from "Constants" /* 11003 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
+import Constants2 from "Constants" /* 11007 */;
 import size from "module_2" /* 2 */;
 
 const type = Constants2.ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID;
@@ -20,7 +20,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
   const obj2 = { type };
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11004, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(11008, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (View) => {
           const obj = {};

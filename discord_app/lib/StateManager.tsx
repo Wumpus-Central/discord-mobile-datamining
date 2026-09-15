@@ -1,7 +1,7 @@
-// === Module 13761: StateManager ===
+// === Module 13766: StateManager ===
 
-// Module 13761 (StateManager)
-import _modDef1330 from "module_1330" /* 1330 */;
+// Module 13766 (StateManager)
+import _modDef1331 from "module_1331" /* 1331 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/StateManager.tsx");
@@ -47,14 +47,14 @@ prototype["update"] = function update() {
   const merged1 = Object.assign(obj);
   const nextState = this.getNextState({});
   if (flag) {
-    self.dirty = !_modDef1330(nextState, self.getInitialState());
+    self.dirty = !_modDef1331(nextState, self.getInitialState());
   } else {
     const _Object = Object;
     const keys = Object.keys(nextState);
     for (const item10021 of keys) {
       let dirty = self.dirty;
       if (!dirty) {
-        dirty = !_modDef1330(self.state[item10021], nextState[item10021]);
+        dirty = !_modDef1331(self.state[item10021], nextState[item10021]);
       }
       self.dirty = dirty;
       continue;

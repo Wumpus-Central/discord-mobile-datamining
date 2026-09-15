@@ -1,23 +1,23 @@
-// === Module 15438: DisplayNameStylesColorPickerSheet ===
+// === Module 15448: DisplayNameStylesColorPickerSheet ===
 
-// Module 15438 (DisplayNameStylesColorPickerSheet)
+// Module 15448 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import HapticUtils from "HapticUtils" /* 4604 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14683 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import HapticUtils from "HapticUtils" /* 4607 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14693 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const getColorPresetsForEffect = fn(1389).getColorPresetsForEffect;
+const getColorPresetsForEffect = fn(1390).getColorPresetsForEffect;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, presetGrid: null, presetRow: null, presetColor: null, presetColorSelected: null, buttonsContainer: null, button: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.presetGrid = { gap: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16 };

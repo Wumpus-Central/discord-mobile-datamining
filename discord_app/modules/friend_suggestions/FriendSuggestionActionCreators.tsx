@@ -1,7 +1,7 @@
-// === Module 7765: FriendSuggestionActionCreators ===
+// === Module 7768: FriendSuggestionActionCreators ===
 
-// Module 7765 (FriendSuggestionActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+// Module 7768 (FriendSuggestionActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

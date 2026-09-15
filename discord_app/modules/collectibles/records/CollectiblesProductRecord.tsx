@@ -1,13 +1,13 @@
-// === Module 7647: CollectiblesProductRecord ===
+// === Module 7651: CollectiblesProductRecord ===
 
-// Module 7647 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5594 */;
+// Module 7651 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5598 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7648 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7654 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7652 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7658 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7649);
+const CollectiblesItemRecord = fn(7653);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1074);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "call", items: 1717973304, categorySkuId: 1717986918, isCategoryReward: 7421926, prices: 822083584, previewAssets: "c", googleSkuIds: "memo", eligibleOffers: "applicationId", variants: "substring_i", bundledProducts: "toLowerCase", isFirstParty: "accessibilityLabel" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: "<string:1107296525>", categorySkuId: "<rootDir>/example/node_modules", isCategoryReward: "<rootDir>/lib/", prices: "<string:43868482>", previewAssets: "<string:27789056>", googleSkuIds: "<string:1536512256>", eligibleOffers: "<string:2310412802>", variants: true, bundledProducts: true, isFirstParty: true };
               let str;
               if (first != null) {
                 str = first.optionValue;

@@ -1,9 +1,9 @@
-// === Module 16933: MessagePreview ===
+// === Module 16971: MessagePreview ===
 
-// Module 16933 (MessagePreview)
-import util from "util" /* 1114 */;
+// Module 16971 (MessagePreview)
+import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8478 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8481 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -30,5 +30,5 @@ export default function MessagePreview(channelId) {
   const effect = noop.useEffect(() => () => {
     jumpTargetId(closure_1_2[6]).clearMessages();
   }, []);
-  return jsx(onBeforeJumpToMessage(13383).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation });
+  return jsx(onBeforeJumpToMessage(13388).ChatPreview, { channelId: channelId.channelId, messages: stateFromStoresObject.messages, jumpToChatProps: memo, analyticsLocation });
 };

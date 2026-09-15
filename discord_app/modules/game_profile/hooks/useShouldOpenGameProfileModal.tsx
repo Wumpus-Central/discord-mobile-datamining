@@ -1,13 +1,13 @@
-// === Module 8799: useShouldOpenGameProfileModal ===
+// === Module 8802: useShouldOpenGameProfileModal ===
 
-// Module 8799 (useShouldOpenGameProfileModal)
+// Module 8802 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import FlagUtilsAll from "FlagUtils" /* 1384 */;
-import utils from "utils" /* 5193 */;
-import GameFlags from "GameFlags" /* 8800 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import FlagUtilsAll from "FlagUtils" /* 1385 */;
+import utils from "utils" /* 5196 */;
+import GameFlags from "GameFlags" /* 8803 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 1916 */;
+import GameStore from "GameStore" /* 1917 */;
 
 const require = globalThis.__r;
 
@@ -71,13 +71,13 @@ export default function useShouldOpenGameProfileModal(applicationId) {
         }
         tmp19Result = utils;
       }
-      track = track(1240).track;
+      track = track(1241).track;
       GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
       obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
       track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
       flag = true;
       ref.current = true;
-      const trackResult = track(1240);
+      const trackResult = track(1241);
     }
   }, items);
   return { shouldOpenGameProfile, gameId: gameId2.gameId };

@@ -1,8 +1,8 @@
-// === Module 10361: Graphic ===
+// === Module 10363: Graphic ===
 
-// Module 10361 (Graphic)
-import GraphicTypes from "GraphicTypes" /* 4454 */;
-import FastImageDefault from "FastImage" /* 5668 */;
+// Module 10363 (Graphic)
+import GraphicTypes from "GraphicTypes" /* 4457 */;
+import FastImageDefault from "FastImage" /* 5672 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function RiveGraphic(riveProps) {
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_6 = { "21/9": 2.3333333333333335, "16/9": 1.7777777777777777, "6/4": 1.5, "2/1": 2, "1/1": 1 };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({ container: { width: "100%", justifyContent: "center", alignItems: "center", overflow: "hidden" }, image: { width: "100%", height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Graphic/native/Graphic.native.tsx");

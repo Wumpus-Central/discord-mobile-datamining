@@ -1,14 +1,14 @@
-// === Module 11684: useBatchUpdateSelectOption ===
+// === Module 11688: useBatchUpdateSelectOption ===
 
-// Module 11684 (useBatchUpdateSelectOption)
+// Module 11688 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7208 */;
-import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11685 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7212 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11689 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7203 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7207 */;
 
 const require = globalThis.__r;
 
@@ -125,14 +125,14 @@ export default function useBatchUpdateSelectOption(guildId) {
         const merged = Object.assign(items1.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-          obj.flags = closure_0(1384).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+          obj.flags = closure_0(1385).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
           acc[item] = obj;
           return acc;
         }, {}));
         const merged1 = Object.assign(differenceResult3.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(closure_0, item);
-          obj.flags = closure_0(1384).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+          obj.flags = closure_0(1385).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
           acc[item] = obj;
           return acc;
         }, {}));

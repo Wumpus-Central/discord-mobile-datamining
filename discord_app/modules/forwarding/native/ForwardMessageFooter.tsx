@@ -1,13 +1,13 @@
-// === Module 11821: ForwardMessageFooter ===
+// === Module 11825: ForwardMessageFooter ===
 
-// Module 11821 (ForwardMessageFooter)
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7879 */;
+// Module 11825 (ForwardMessageFooter)
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7882 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DraftStore from "DraftStore" /* 4977 */;
+import DraftStore from "DraftStore" /* 4980 */;
 
 const require = fn;
-const DraftType = fn(4977).DraftType;
+const DraftType = fn(4980).DraftType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardMessageFooter.tsx");

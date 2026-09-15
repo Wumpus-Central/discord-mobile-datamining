@@ -1,27 +1,27 @@
-// === Module 4849: AgeVerificationUtils ===
+// === Module 4852: AgeVerificationUtils ===
 
-// Module 4849 (AgeVerificationUtils)
+// Module 4852 (AgeVerificationUtils)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1114 */;
-import Server from "Server" /* 1894 */;
-import _modDef2946 from "module_2946" /* 2946 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5504 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5505 */;
-import usePreviousDefault from "usePrevious" /* 8390 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8535 */;
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8554 */;
-import FamilyCenterConnectionPrereqExperiment2 from "FamilyCenterConnectionPrereqExperiment" /* 12058 */;
-import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 13853 */;
+import util from "util" /* 1115 */;
+import Server from "Server" /* 1895 */;
+import _modDef2947 from "module_2947" /* 2947 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5508 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5509 */;
+import usePreviousDefault from "usePrevious" /* 8393 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8538 */;
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 8557 */;
+import FamilyCenterConnectionPrereqExperiment2 from "FamilyCenterConnectionPrereqExperiment" /* 12062 */;
+import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 13858 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 4850 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4851 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 4853 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4854 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 4857 */;
-import UserStore from "UserStore" /* 1371 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 8571 */;
+import MessageStore from "MessageStore" /* 4860 */;
+import UserStore from "UserStore" /* 1372 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 8574 */;
 
 const require = globalThis.__r;
 
@@ -193,17 +193,17 @@ function useShouldCallReactiveCheck() {
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  let tmp5 = prop !== tmp(1894).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== tmp(1895).AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (stateFromStores != null) {
       prop1 = stateFromStores.ageVerificationStatus;
     }
-    tmp5 = prop1 !== tmp(1894).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== tmp(1895).AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   _require = tmp5;
   obj = require("initialize");
-  const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(tmp(5505).AgeGatedFeature.REACTIVE_CHECK);
+  const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(tmp(5509).AgeGatedFeature.REACTIVE_CHECK);
   const tmpResult = require("RegionalFeatureConfigUtils");
   const items1 = [AgeVerificationStore];
   const items2 = [tmp5, isFeatureAgeGated];
@@ -296,13 +296,13 @@ let closure_24 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(8530).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(8533).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const Constants = fn(1074);
 ({ AbortCodes: map1, MessageEmbedTypes: closure_14 } = Constants);
-const AgeGateConstants = fn(1098);
+const AgeGateConstants = fn(1099);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_15 } = AgeGateConstants);
-const SafetyToastType = fn(8517).SafetyToastType;
-let items = [fn(8531).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(8531).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(8531).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
+const SafetyToastType = fn(8520).SafetyToastType;
+let items = [fn(8534).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(8534).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(8534).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
 const set = new Set(items);
 let items1 = [, , , , , ];
 ({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2], LARGE_GUILD: arr2[3], JOIN_LARGE_GUILD_UNDERAGE: arr2[4], ACCESS_LARGE_GUILD_UNDERAGE: arr2[5] } = AgeGateSource);
@@ -634,7 +634,7 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   if (hasItem) {
     let stringResult = string(util.t.lSWVTM);
   } else if (flag) {
-    stringResult = string(_modDef2946["/kgWIg"]);
+    stringResult = string(_modDef2947["/kgWIg"]);
   } else {
     stringResult = string(util.t.xYXsr6);
   }
@@ -654,14 +654,14 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
     let stringResult = intl6.string(util.t["S/xS/w"]);
   } else if (flag) {
     const intl5 = util.intl;
-    stringResult = intl5.string(_modDef2946.h7qzoa);
+    stringResult = intl5.string(_modDef2947.h7qzoa);
   } else {
     if (flag2) {
       if (null != handleOnHelpUrlHook) {
         if (null != fn) {
           const intl4 = util.intl;
           obj2 = { handleOnHelpUrlHook, handleOnTrustedProvidersHook: fn };
-          stringResult = intl4.format(_modDef2946["+Ft5ch"], obj2);
+          stringResult = intl4.format(_modDef2947["+Ft5ch"], obj2);
         }
       }
     }
@@ -669,13 +669,13 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
       if (null != handleOnHelpUrlHook) {
         const intl3 = util.intl;
         const obj3 = { handleOnHelpUrlHook };
-        stringResult = intl3.format(_modDef2946["22HSSI"], obj3);
+        stringResult = intl3.format(_modDef2947["22HSSI"], obj3);
       }
     }
     if (null != handleOnHelpUrlHook) {
       const intl2 = util.intl;
       obj = { handleOnHelpUrlHook };
-      stringResult = intl2.format(_modDef2946.RpMIT0, obj);
+      stringResult = intl2.format(_modDef2947.RpMIT0, obj);
     } else {
       const intl = util.intl;
       stringResult = intl.string(util.t.HxS3oQ);

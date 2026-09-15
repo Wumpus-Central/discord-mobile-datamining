@@ -1,20 +1,20 @@
-// === Module 16311: GuildMemberDashChannelRow ===
+// === Module 16324: GuildMemberDashChannelRow ===
 
-// Module 16311 (GuildMemberDashChannelRow)
+// Module 16324 (GuildMemberDashChannelRow)
 import nativeDefault from "native" /* 576 */;
-import router_utils from "router_utils" /* 1100 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5622 */;
+import router_utils from "router_utils" /* 1101 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4464 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5626 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_4, Routes: hasOwnProperty } = Constants);
-const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const StaticChannelRoute = fn(1965).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
-let obj2 = { container: { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, badge: null, badgeText: null };
-let obj3 = { marginVertical: fn(10246).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+const createStyles = fn(4639);
+let obj2 = { container: { marginVertical: fn(10248).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md }, badge: null, badgeText: null };
+let obj3 = { marginVertical: fn(10248).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 obj2.badge = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_DEFAULT };
 const obj4 = { backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_DEFAULT };
 obj2.badgeText = { color: nativeDefault.colors.BADGE_TEXT_DEFAULT };
@@ -27,7 +27,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = closure_8();
   const id = guild.id;
-  let num = id(16312).useSubmittedGuildJoinRequestTotal({ guildId: id });
+  let num = id(16325).useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;
   }
@@ -44,27 +44,27 @@ export default function GuildMemberDashChannelRow(arg0) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(hasOwnProperty.CHANNEL(id, StaticChannelRoute.MEMBER_SAFETY));
   }, items1);
-  const ChannelModes = tmp2(12509).ChannelModes;
+  const ChannelModes = tmp2(12514).ChannelModes;
   const tmp7 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
   let obj2 = { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null };
-  let obj = id(16312);
-  const intl = tmp2(1114).intl;
-  obj2.accessibilityLabel = intl.string(id(1114).t["9Oq93m"]);
+  let obj = id(16325);
+  const intl = tmp2(1115).intl;
+  obj2.accessibilityLabel = intl.string(id(1115).t["9Oq93m"]);
   obj2.accessibilityState = { selected };
   obj2.mode = tmp7;
   const obj3 = { name: null, mode: null };
-  const intl2 = tmp2(1114).intl;
-  obj3.name = intl2.string(id(1114).t["9Oq93m"]);
+  const intl2 = tmp2(1115).intl;
+  obj3.name = intl2.string(id(1115).t["9Oq93m"]);
   obj3.mode = tmp7;
-  obj2.name = jsx(id(12509).BaseChannelName, { name: null, mode: null });
-  const tmp9 = hasItem(12509);
-  obj2.icon = jsx(id(12509).BaseChannelIcon, { mode: tmp7, IconComponent: id(5170).GroupIcon });
+  obj2.name = jsx(id(12514).BaseChannelName, { name: null, mode: null });
+  const tmp9 = hasItem(12514);
+  obj2.icon = jsx(id(12514).BaseChannelIcon, { mode: tmp7, IconComponent: id(5173).GroupIcon });
   let tmp8Result = null;
   if (num > 0) {
     const obj9 = { style: null, textStyle: null, value: null };
     ({ badge: obj5.style, badgeText: obj5.textStyle } = tmp);
     obj9.value = num;
-    tmp8Result = jsx(tmp2(1176).Badge, { style: null, textStyle: null, value: null });
+    tmp8Result = jsx(tmp2(1177).Badge, { style: null, textStyle: null, value: null });
   }
   obj2.channelInfo = tmp8Result;
   return <tmp9 onPress={callback} style={tmp.container} accessible accessibilityLabel={null} accessibilityState={null} mode={null} name={null} icon={null} channelInfo={null} />;

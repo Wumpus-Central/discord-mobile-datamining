@@ -1,11 +1,11 @@
-// === Module 15591: FriendGamingActivityNotificationSetting ===
+// === Module 15601: FriendGamingActivityNotificationSetting ===
 
-// Module 15591 (FriendGamingActivityNotificationSetting)
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 8079 */;
-import FriendGamingActivityNotificationUtils from "FriendGamingActivityNotificationUtils" /* 15592 */;
-import SettingBuilders from "SettingBuilders" /* 11602 */;
+// Module 15601 (FriendGamingActivityNotificationSetting)
+import util from "util" /* 1115 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import SettingsConstants from "SettingsConstants" /* 8082 */;
+import FriendGamingActivityNotificationUtils from "FriendGamingActivityNotificationUtils" /* 15602 */;
+import SettingBuilders from "SettingBuilders" /* 11606 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

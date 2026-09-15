@@ -1,10 +1,10 @@
-// === Module 15622: SupportSetting ===
+// === Module 15632: SupportSetting ===
 
-// Module 15622 (SupportSetting)
-import util from "util" /* 1114 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 11240 */;
-import SupportUtils from "SupportUtils" /* 15623 */;
-import SettingBuilders from "SettingBuilders" /* 11602 */;
+// Module 15632 (SupportSetting)
+import util from "util" /* 1115 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 11244 */;
+import SupportUtils from "SupportUtils" /* 15633 */;
+import SettingBuilders from "SettingBuilders" /* 11606 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

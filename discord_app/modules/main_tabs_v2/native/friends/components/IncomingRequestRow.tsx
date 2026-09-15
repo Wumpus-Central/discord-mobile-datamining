@@ -1,13 +1,13 @@
-// === Module 16883: IncomingRequestRow ===
+// === Module 16921: IncomingRequestRow ===
 
-// Module 16883 (IncomingRequestRow)
-import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12758 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16141 */;
+// Module 16921 (IncomingRequestRow)
+import util from "util" /* 1115 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12763 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16154 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import ApplicationStore from "ApplicationStore" /* 4864 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import ApplicationStore from "ApplicationStore" /* 4867 */;
 
 require = fn;
 function IncomingRequestRow(user) {
@@ -99,24 +99,24 @@ function IncomingGameFriendRequestRow(arg0) {
   const merged = Object.assign(arg0, Object.assign({ user: 0, application: 0 }));
   const userTag = UserUtilsDefault.useUserTag(user);
   const obj2 = { user, applicationId: application.id, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
-  const intl = application(1114).intl;
-  obj2.accessibilityLabel = intl.formatToPlainString(application(1114).t.u6lp4x, { name: userTag });
-  const intl2 = application(1114).intl;
-  obj2.acceptedRequestLabel = intl2.format(application(1114).t.gRgJGR, {
+  const intl = application(1115).intl;
+  obj2.accessibilityLabel = intl.formatToPlainString(application(1115).t.u6lp4x, { name: userTag });
+  const intl2 = application(1115).intl;
+  obj2.acceptedRequestLabel = intl2.format(application(1115).t.gRgJGR, {
     applicationNameHook() {
       return jsx(ApplicationIconAndNameDefault, { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
     }
   });
-  const intl3 = application(1114).intl;
-  obj2.acceptedRequestAccessibilityLabel = intl3.formatToPlainString(application(1114).t.Ke6fRJ, { name: userTag, applicationName: application.name });
-  const intl4 = application(1114).intl;
-  obj2.acceptRequestAccessibilityLabel = intl4.formatToPlainString(application(1114).t.kMUpdH, { name: userTag, applicationName: application.name });
-  const intl5 = application(1114).intl;
-  obj2.ignoreRequestAccessibilityLabel = intl5.formatToPlainString(application(1114).t.d8Cw5e, { name: userTag, applicationName: application.name });
+  const intl3 = application(1115).intl;
+  obj2.acceptedRequestAccessibilityLabel = intl3.formatToPlainString(application(1115).t.Ke6fRJ, { name: userTag, applicationName: application.name });
+  const intl4 = application(1115).intl;
+  obj2.acceptRequestAccessibilityLabel = intl4.formatToPlainString(application(1115).t.kMUpdH, { name: userTag, applicationName: application.name });
+  const intl5 = application(1115).intl;
+  obj2.ignoreRequestAccessibilityLabel = intl5.formatToPlainString(application(1115).t.d8Cw5e, { name: userTag, applicationName: application.name });
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow user={user} applicationId={application.id} accessibilityLabel={null} acceptedRequestLabel={null} acceptedRequestAccessibilityLabel={null} acceptRequestAccessibilityLabel={null} ignoreRequestAccessibilityLabel={null} />;
 }
-const UserRowModes = fn(10989).UserRowModes;
+const UserRowModes = fn(10993).UserRowModes;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

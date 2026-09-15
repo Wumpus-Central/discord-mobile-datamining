@@ -1,9 +1,9 @@
-// === Module 6638: TabletSpotIllustration ===
+// === Module 6642: TabletSpotIllustration ===
 
-// Module 6638 (TabletSpotIllustration)
+// Module 6642 (TabletSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6639 from "module_6639" /* 6639 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6643 from "module_6643" /* 6643 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const TabletSpotIllustration = function TabletSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6639 };
+  const obj2 = { uri: _modDef6643 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

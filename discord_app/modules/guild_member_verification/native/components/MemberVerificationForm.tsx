@@ -1,21 +1,21 @@
-// === Module 5677: MemberVerificationForm ===
+// === Module 5681: MemberVerificationForm ===
 
-// Module 5677 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4461 */;
+// Module 5681 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4464 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5653 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5657 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(5653).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(5657).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1074).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationForm.tsx");
@@ -61,10 +61,10 @@ export default function MemberVerificationForm(guild) {
               if (memo1) {
                 (function showIncompleteToast() {
                   const obj2 = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
-                  const intl = closure_1_0(1114).intl;
-                  obj2.content = intl.string(closure_1_0(1114).t.StC497);
-                  obj2.icon = closure_1_1(5678);
-                  closure_1_1(4335).open(obj2);
+                  const intl = closure_1_0(1115).intl;
+                  obj2.content = intl.string(closure_1_0(1115).t.StC497);
+                  obj2.icon = closure_1_1(5682);
+                  closure_1_1(4338).open(obj2);
                 })();
                 c6 = 3;
                 return { value: "HermesInternal", done: null };

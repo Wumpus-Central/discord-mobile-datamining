@@ -1,26 +1,26 @@
-// === Module 11573: GiftCodeRedeemStart ===
+// === Module 11577: GiftCodeRedeemStart ===
 
-// Module 11573 (GiftCodeRedeemStart)
+// Module 11577 (GiftCodeRedeemStart)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4875 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7329 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7441 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10927 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11243 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11353 */;
-import NameplatePreview from "NameplatePreview" /* 11354 */;
-import actions_GiftCodeActionCreatorsDefault from "actions/GiftCodeActionCreators" /* 11566 */;
-import GiftCodeRedeemModal from "GiftCodeRedeemModal" /* 11572 */;
-import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11582 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4878 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7333 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7445 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10931 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 11247 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11357 */;
+import NameplatePreview from "NameplatePreview" /* 11358 */;
+import actions_GiftCodeActionCreatorsDefault from "actions/GiftCodeActionCreators" /* 11570 */;
+import GiftCodeRedeemModal from "GiftCodeRedeemModal" /* 11576 */;
+import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 11586 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GiftCodeStore from "GiftCodeStore" /* 11563 */;
-import UserStore from "UserStore" /* 1371 */;
-import SKUStore from "SKUStore" /* 5591 */;
+import GiftCodeStore from "GiftCodeStore" /* 11567 */;
+import UserStore from "UserStore" /* 1372 */;
+import SKUStore from "SKUStore" /* 5595 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -29,7 +29,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, GiftCodeModalStates: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 }, bodyWithMessage: { flex: 0 }, nameplateContainer: { width: "100%" }, nameplateContainerOffCenter: { paddingBottom: 56 }, message: { gap: 8 }, text: { textAlign: "center", paddingHorizontal: 32 }, footer: { paddingHorizontal: 24, paddingBottom: 12 }, confettiBackground: { justifyContent: "center", width: "100%", position: "absolute", top: 0, left: 0, opacity: 0.4, height: 275 }, emojiContainer: { justifyContent: "center", alignItems: "center" }, imageWrapper: { position: "relative", width: "100%", alignItems: "center", justifyContent: "center" }, collectiblesAsset: { margin: 40 }, collectiblesAssetBundle: { margin: 20, alignSelf: "stretch", minHeight: 250, alignItems: "center", justifyContent: "center" }, giftCardAsset: { marginTop: 20, marginBottom: 40 }, linkAccountIcon: { marginRight: 4 } };
 let closure_15 = createStyles.createStyles(obj2);
 let size = fn(2);

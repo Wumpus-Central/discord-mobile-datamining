@@ -1,8 +1,8 @@
-// === Module 9426: useNSFWAllowed ===
+// === Module 9429: useNSFWAllowed ===
 
-// Module 9426 (useNSFWAllowed)
+// Module 9429 (useNSFWAllowed)
 import initialize from "initialize" /* 504 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const size = fn(2);

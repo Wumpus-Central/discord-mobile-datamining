@@ -1,21 +1,21 @@
-// === Module 7383: ChannelSectionStore ===
+// === Module 7387: ChannelSectionStore ===
 
-// Module 7383 (ChannelSectionStore)
+// Module 7387 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7385 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7386 */;
-import ExperimentStore from "ExperimentStore" /* 4552 */;
-import SearchMessageStore from "SearchMessageStore" /* 7384 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
-import UserStore from "UserStore" /* 1371 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
+import ApexExperiment from "ApexExperiment" /* 1434 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7389 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7390 */;
+import ExperimentStore from "ExperimentStore" /* 4555 */;
+import SearchMessageStore from "SearchMessageStore" /* 7388 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function toggleSection(c17, arg1) {
@@ -115,10 +115,10 @@ function setIsSearchSidebarOpen() {
     c24 = hasSearchStateResult;
   }
 }
-const isChannelChatInSidebar = fn(1961).isChannelChatInSidebar;
+const isChannelChatInSidebar = fn(1962).isChannelChatInSidebar;
 const Constants = fn(1074);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(1964);
+const ChannelConstants = fn(1965);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1085).Permissions;
 let c17 = false;

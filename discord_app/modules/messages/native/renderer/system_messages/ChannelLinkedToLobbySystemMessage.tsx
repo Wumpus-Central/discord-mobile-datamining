@@ -1,13 +1,13 @@
-// === Module 8148: ChannelLinkedToLobbySystemMessage ===
+// === Module 8151: ChannelLinkedToLobbySystemMessage ===
 
-// Module 8148 (ChannelLinkedToLobbySystemMessage)
-import util from "util" /* 1114 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8057 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8064 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
-import ApplicationStore from "ApplicationStore" /* 4864 */;
+// Module 8151 (ChannelLinkedToLobbySystemMessage)
+import util from "util" /* 1115 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8060 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
+import ApplicationStore from "ApplicationStore" /* 4867 */;
 
 require = fn;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;

@@ -1,13 +1,13 @@
-// === Module 1434: apex/ApexExperiment ===
+// === Module 1435: apex/ApexExperiment ===
 
-// Module 1434 (apex/ApexExperiment)
+// Module 1435 (apex/ApexExperiment)
 import initialize from "initialize" /* 504 */;
-import FingerprintUtils from "FingerprintUtils" /* 1253 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import discord_common_apex_ApexExperimentDefault from "discord_common/apex/ApexExperiment" /* 1435 */;
+import FingerprintUtils from "FingerprintUtils" /* 1254 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import discord_common_apex_ApexExperimentDefault from "discord_common/apex/ApexExperiment" /* 1436 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1234 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
 
 require = fn;
 function getUnitId(type, guildId) {
@@ -52,5 +52,5 @@ const result = size.fileFinishedImporting("modules/experiments/apex/ApexExperime
 export default function createApexExperiment(arg0) {
   return discord_common_apex_ApexExperimentDefault(arg0, ApexExperimentStore, getUnitId, useUnitId);
 };
-export const ApexExperiment = fn(1435).ApexExperiment;
+export const ApexExperiment = fn(1436).ApexExperiment;
 export { getUnitId };

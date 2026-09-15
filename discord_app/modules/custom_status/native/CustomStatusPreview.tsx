@@ -1,19 +1,19 @@
-// === Module 11283: CustomStatusPreview ===
+// === Module 11287: CustomStatusPreview ===
 
-// Module 11283 (CustomStatusPreview)
+// Module 11287 (CustomStatusPreview)
 import nativeDefault from "native" /* 576 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ChatInputUtils from "ChatInputUtils" /* 4502 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ChatInputUtils from "ChatInputUtils" /* 4505 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7311);
+const Constants = fn(7315);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty, UserProfileThemeTypes: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { flex: 1, position: "relative", overflow: "hidden", width: 323, maxHeight: 301, borderWidth: 1, borderColor: null, borderRadius: null };
   const colors = nativeDefault.colors;
@@ -51,7 +51,7 @@ export default function CustomStatusPreview(user) {
   ({ gradientFallbackBackground, avatarBackground, containerBackground } = userProfileColors);
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11284, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11288, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji }, "stack");
   }, items);
   const obj2 = { theme, primaryColor, secondaryColor, children: null };
   const obj3 = { style: null, children: null };

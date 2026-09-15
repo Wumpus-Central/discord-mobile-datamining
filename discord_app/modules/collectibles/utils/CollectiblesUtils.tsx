@@ -1,11 +1,11 @@
-// === Module 7690: utils/CollectiblesUtils ===
+// === Module 7694: utils/CollectiblesUtils ===
 
-// Module 7690 (utils/CollectiblesUtils)
-import DateUtils from "DateUtils" /* 4318 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4683 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4691 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7496 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7691 */;
+// Module 7694 (utils/CollectiblesUtils)
+import DateUtils from "DateUtils" /* 4321 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4686 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4694 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7500 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7695 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;

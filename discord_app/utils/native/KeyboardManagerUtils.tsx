@@ -1,9 +1,9 @@
-// === Module 1874: KeyboardManagerUtils ===
+// === Module 1875: KeyboardManagerUtils ===
 
-// Module 1874 (KeyboardManagerUtils)
+// Module 1875 (KeyboardManagerUtils)
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import NativeKeyboardModuleDefault from "NativeKeyboardModule" /* 1875 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import NativeKeyboardModuleDefault from "NativeKeyboardModule" /* 1876 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

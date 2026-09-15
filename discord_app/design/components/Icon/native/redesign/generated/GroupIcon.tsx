@@ -1,9 +1,9 @@
-// === Module 5170: GroupIcon ===
+// === Module 5173: GroupIcon ===
 
-// Module 5170 (GroupIcon)
+// Module 5173 (GroupIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod5115 from "module_5115" /* 5115 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod5118 from "module_5118" /* 5118 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const GroupIcon = function GroupIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5115, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5118, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

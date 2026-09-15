@@ -1,8 +1,8 @@
-// === Module 9181: InAppReportsShareWithParentElement ===
+// === Module 9184: InAppReportsShareWithParentElement ===
 
-// Module 9181 (InAppReportsShareWithParentElement)
-import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7642 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 9180 */;
+// Module 9184 (InAppReportsShareWithParentElement)
+import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7646 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 9183 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ export default function _default(parents) {
   if (0 === parents.length) {
     return null;
   } else {
-    const intl3 = parents(1114).intl;
+    const intl3 = parents(1115).intl;
     let obj2 = { count: parents.length, parent1: parents[0].username, parent2: null, parent3: null };
     let username;
     if (parents[1] != null) {
@@ -31,9 +31,9 @@ export default function _default(parents) {
       username1 = tmp4.username;
     }
     obj2.parent3 = username1;
-    let obj = { title: intl3.formatToPlainString(parents(1114).t.HqyWeO, obj2), disabledTitle: null, icon: null, description: null, disabled: null, onPress: null };
-    const formatToPlainStringResult = intl3.formatToPlainString(parents(1114).t.HqyWeO, obj2);
-    let intl = tmp15(1114).intl;
+    let obj = { title: intl3.formatToPlainString(parents(1115).t.HqyWeO, obj2), disabledTitle: null, icon: null, description: null, disabled: null, onPress: null };
+    const formatToPlainStringResult = intl3.formatToPlainString(parents(1115).t.HqyWeO, obj2);
+    let intl = tmp15(1115).intl;
     const obj3 = { count: parents.length, parent1: parents[0].username, parent2: null, parent3: null };
     let username2;
     if (parents[1] != null) {
@@ -45,12 +45,12 @@ export default function _default(parents) {
       username3 = tmp12.username;
     }
     obj3.parent3 = username3;
-    obj.disabledTitle = intl.formatToPlainString(parents(1114).t.BlAMme, obj3);
-    obj.icon = jsx(parents(9182).ShareIcon, {});
-    const intl2 = tmp15(1114).intl;
-    obj.description = intl2.string(parents(1114).t["5l/hlt"]);
+    obj.disabledTitle = intl.formatToPlainString(parents(1115).t.BlAMme, obj3);
+    obj.icon = jsx(parents(9185).ShareIcon, {});
+    const intl2 = tmp15(1115).intl;
+    obj.description = intl2.string(parents(1115).t["5l/hlt"]);
     obj.disabled = tmp[0];
     obj.onPress = tmp2;
-    return jsx(InAppReportsUpsellsTableRowDefault, { title: intl3.formatToPlainString(parents(1114).t.HqyWeO, obj2), disabledTitle: null, icon: null, description: null, disabled: null, onPress: null });
+    return jsx(InAppReportsUpsellsTableRowDefault, { title: intl3.formatToPlainString(parents(1115).t.HqyWeO, obj2), disabledTitle: null, icon: null, description: null, disabled: null, onPress: null });
   }
 };

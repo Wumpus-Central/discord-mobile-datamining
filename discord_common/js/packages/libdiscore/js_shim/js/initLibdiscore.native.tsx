@@ -1,8 +1,8 @@
-// === Module 1353: initLibdiscore ===
+// === Module 1354: initLibdiscore ===
 
-// Module 1353 (initLibdiscore)
+// Module 1354 (initLibdiscore)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import timers_mod from "timers" /* 1354 */;
+import timers_mod from "timers" /* 1355 */;
 
 let closure_2 = async function _initLibdiscore() {
   if (c0 === 2) {

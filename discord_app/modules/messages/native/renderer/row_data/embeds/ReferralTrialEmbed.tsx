@@ -1,31 +1,31 @@
-// === Module 8172: ReferralTrialEmbed ===
+// === Module 8175: ReferralTrialEmbed ===
 
-// Module 8172 (ReferralTrialEmbed)
+// Module 8175 (ReferralTrialEmbed)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import PremiumUtils from "PremiumUtils" /* 4294 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import createStyles from "createStyles" /* 4636 */;
-import ProductIds from "ProductIds" /* 7343 */;
-import useTrialOffer from "useTrialOffer" /* 7552 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8050 */;
-import _modDef8156 from "module_8156" /* 8156 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 8160 */;
-import _modDef8173 from "module_8173" /* 8173 */;
-import _modDef8174 from "module_8174" /* 8174 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import UserOfferStore from "UserOfferStore" /* 7553 */;
-import IAPStore from "IAPStore" /* 7340 */;
+import util from "util" /* 1115 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
+import PremiumUtils from "PremiumUtils" /* 4297 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import createStyles from "createStyles" /* 4639 */;
+import ProductIds from "ProductIds" /* 7347 */;
+import useTrialOffer from "useTrialOffer" /* 7556 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8053 */;
+import _modDef8159 from "module_8159" /* 8159 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 8163 */;
+import _modDef8176 from "module_8176" /* 8176 */;
+import _modDef8177 from "module_8177" /* 8177 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import UserStore from "UserStore" /* 1372 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import UserOfferStore from "UserOfferStore" /* 7557 */;
+import IAPStore from "IAPStore" /* 7344 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
-let closure_9 = fn(1373).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+let closure_9 = fn(1374).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx");
 
@@ -38,13 +38,13 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
     const channel = ChannelStore.getChannel(message.getChannelId());
     if (null != channel) {
       if (channel.isDM()) {
-        const obj = { backgroundColor, borderColor: backgroundColor, thumbnailCornerRadius: 3, headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8173), headerText: null, headerColor: null, thumbnailUrl: null };
+        const obj = { backgroundColor, borderColor: backgroundColor, thumbnailCornerRadius: 3, headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8176), headerText: null, headerColor: null, thumbnailUrl: null };
         const intl = util.intl;
         const tmp44Result = renderer_EmbedUtils;
         obj.headerText = intl.string(util.t.gtNqJQ).toLocaleLowerCase();
         obj.headerColor = headerTextColor;
         const stringResult = intl.string(util.t.gtNqJQ);
-        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8174);
+        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8177);
         let userId;
         if (relevantUserTrialOffer != null) {
           userId = relevantUserTrialOffer.userId;
@@ -158,7 +158,7 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                     const intl8 = util.intl;
                     obj11.acceptLabelText = intl8.string(util.t.bXTClc);
                     obj11.acceptLabelColor = acceptLabelColor;
-                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8156);
+                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8159);
                     tmp33 = obj11;
                     const tmp44Result11 = renderer_EmbedUtils;
                   }

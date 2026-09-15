@@ -1,29 +1,29 @@
-// === Module 15180: QuestDockExternalCoordinationContext ===
+// === Module 15190: QuestDockExternalCoordinationContext ===
 
-// Module 15180 (QuestDockExternalCoordinationContext)
-import DurationsDefault from "Durations" /* 1090 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import QuestActionCreators from "QuestActionCreators" /* 11410 */;
+// Module 15190 (QuestDockExternalCoordinationContext)
+import DurationsDefault from "Durations" /* 1091 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import QuestActionCreators from "QuestActionCreators" /* 11414 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 15174 */;
+import QuestDockStore from "QuestDockStore" /* 15184 */;
 
 require = fn;
-let QuestDockMode = fn(5525).QuestDockMode;
-let closure_5 = fn(15176).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let QuestDockMode = fn(5529).QuestDockMode;
+let closure_5 = fn(15186).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = { restingQuestDockMode: null, setRestingQuestDockMode: null, lastScrollEventSourceId: null, questDockOffset: null };
-let ReanimatedHelperTypes = fn(7177);
+let ReanimatedHelperTypes = fn(7181);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {
 
 };
-ReanimatedHelperTypes = fn(7177);
+ReanimatedHelperTypes = fn(7181);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(7177);
+ReanimatedHelperTypes = fn(7181);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 const IS_ANDROID = PlatformUtils.isAndroid();
 const __initData = { code: "function QuestDockExternalCoordinationContextTsx1(){const{restingQuestDockMode}=this.__closure;return restingQuestDockMode.get();}" };
 const __initData2 = { code: "function QuestDockExternalCoordinationContextTsx2(nextMode,prevMode){const{runOnJS,cancelReopenQuestDock}=this.__closure;if(nextMode!==prevMode){runOnJS(cancelReopenQuestDock)();}}" };

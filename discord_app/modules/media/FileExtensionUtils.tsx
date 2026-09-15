@@ -1,7 +1,7 @@
-// === Module 5649: FileExtensionUtils ===
+// === Module 5653: FileExtensionUtils ===
 
-// Module 5649 (FileExtensionUtils)
-import URLUtilsDefault from "URLUtils" /* 1365 */;
+// Module 5653 (FileExtensionUtils)
+import URLUtilsDefault from "URLUtils" /* 1366 */;
 import size from "module_2" /* 2 */;
 
 const dependencyMap = { "image/avif": "avif", "image/gif": "gif", "image/heic": "heic", "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "video/mp4": "mp4", "video/quicktime": "mov", "video/webm": "webm" };

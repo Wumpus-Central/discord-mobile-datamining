@@ -1,24 +1,24 @@
-// === Module 4616: parseURL ===
+// === Module 4619: parseURL ===
 
-// Module 4616 (parseURL)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import FingerprintUtils from "FingerprintUtils" /* 1253 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import URLUtilsDefault from "URLUtils" /* 1365 */;
-import UrlDefault from "Url" /* 1367 */;
-import _modDef1471 from "module_1471" /* 1471 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import _modDef4333 from "module_4333" /* 4333 */;
-import findCodedLinks from "findCodedLinks" /* 4619 */;
-import CodedLink from "CodedLink" /* 4624 */;
-import LinkUtils from "LinkUtils" /* 4790 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 4875 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7509 */;
-import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9289 */;
-import Authorize from "Authorize" /* 9366 */;
-import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 13076 */;
-import QRLoginUtils from "QRLoginUtils" /* 13937 */;
-import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13938 */;
+// Module 4619 (parseURL)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import FingerprintUtils from "FingerprintUtils" /* 1254 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import URLUtilsDefault from "URLUtils" /* 1366 */;
+import UrlDefault from "Url" /* 1368 */;
+import _modDef1472 from "module_1472" /* 1472 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
+import _modDef4336 from "module_4336" /* 4336 */;
+import findCodedLinks from "findCodedLinks" /* 4622 */;
+import CodedLink from "CodedLink" /* 4627 */;
+import LinkUtils from "LinkUtils" /* 4793 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 4878 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7513 */;
+import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9292 */;
+import Authorize from "Authorize" /* 9369 */;
+import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 13081 */;
+import QRLoginUtils from "QRLoginUtils" /* 13942 */;
+import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13943 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -26,7 +26,7 @@ function parseQuery(arg0) {
   try {
     const _Object = Object;
     const _Object2 = Object;
-    const entries = Object.entries(_modDef1471.parse(arg0));
+    const entries = Object.entries(_modDef1472.parse(arg0));
     return Object.fromEntries(entries.map((item) => {
       [tmp, tmp2] = item;
       const items = [tmp, ];
@@ -45,8 +45,8 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, GuildSettingsSections: hasOwnProperty, GuildSettingsSubsections: metroRequire, LinkingTypes: closure_7 } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const UPDATE_CONFIG = fn(4617).UPDATE_CONFIG;
-const PaymentConstants = fn(4618);
+const UPDATE_CONFIG = fn(4620).UPDATE_CONFIG;
+const PaymentConstants = fn(4621);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_11, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } = PaymentConstants);
 const re13 = /feature\/([\w-]+)/;
 const re14 = /feature\/boost\/([0-9]+)/;
@@ -73,7 +73,7 @@ export default function parseURL(ctaLink) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const sanitizeUrlResult = _modDef4333.sanitizeUrl(ctaLink);
+  const sanitizeUrlResult = _modDef4336.sanitizeUrl(ctaLink);
   if (null == sanitizeUrlResult) {
     const obj3 = { payload: null };
     const obj4 = { type: React5.NONE };
@@ -274,7 +274,7 @@ export default function parseURL(ctaLink) {
               if (query == null) {
                 str5 = "";
               }
-              let ad_creative_ids = _modDef1471.parse(str5).ad_creative_ids;
+              let ad_creative_ids = _modDef1472.parse(str5).ad_creative_ids;
               if (ad_creative_ids == null) {
                 ad_creative_ids = [];
               }
@@ -286,14 +286,14 @@ export default function parseURL(ctaLink) {
                 obj36.payload = obj38;
                 return obj36;
               }
-              const tmpResult10 = _modDef1471;
+              const tmpResult10 = _modDef1472;
             }
             if (null != pathname.match(re27)) {
               let str24 = query;
               if (query == null) {
                 str24 = "";
               }
-              let ad_creative_ids1 = _modDef1471.parse(str24).ad_creative_ids;
+              let ad_creative_ids1 = _modDef1472.parse(str24).ad_creative_ids;
               if (ad_creative_ids1 == null) {
                 ad_creative_ids1 = [];
               }

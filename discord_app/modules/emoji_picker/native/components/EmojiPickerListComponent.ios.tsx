@@ -1,12 +1,12 @@
-// === Module 10454: components/EmojiPickerListComponent ===
+// === Module 10457: components/EmojiPickerListComponent ===
 
-// Module 10454 (components/EmojiPickerListComponent)
+// Module 10457 (components/EmojiPickerListComponent)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiPickerListConstants = fn(10419);
+const EmojiPickerListConstants = fn(10421);
 ({ ROW_HEIGHT: closure_4, LABEL_HEIGHT: hasOwnProperty, LABEL_TOP_PADDING: metroRequire, LABEL_BOTTOM_PADDING: closure_7 } = EmojiPickerListConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -33,7 +33,7 @@ export default noop.forwardRef((paddingTop, arg1) => {
       if (require("useEmojiPickerData").EmojiPickerItemType.EMOJI_ROW !== type) {
         if (require("useEmojiPickerData").EmojiPickerItemType.EMOJI_ROW_NSFW !== type) {
           if (require("useEmojiPickerData").EmojiPickerItemType.FOOTER_UPSELL === type) {
-            arg0.size = require("EmojiPickerPremiumSearchUpsell").EMOJI_PICKER_PREMIUM_UPSELL_HEIGHT;
+            arg0.size = require("PremiumExpressionPickerSearchUpsell").PREMIUM_EXPRESSION_PICKER_SEARCH_UPSELL_HEIGHT;
           }
         }
       }
@@ -81,5 +81,5 @@ export default noop.forwardRef((paddingTop, arg1) => {
     }
   }));
   const preventNativeModalDismiss = require("PortalKeyboardModalContext").useIsPortalKeyboardInModal();
-  return jsx(require("module_9003").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref, renderItem, stickyHeaderIndices });
+  return jsx(require("module_9006").BottomSheetFlashList, { contentContainerStyle, data: data.data, getItemType, keyboardShouldPersistTaps: "always", keyExtractor, onViewableItemsChanged: stickyHeaderIndices(paddingTop[5])(onViewableItemsChanged).onViewableItemsChanged, overrideItemLayout, preventNativeModalDismiss, ref, renderItem, stickyHeaderIndices });
 });

@@ -1,8 +1,8 @@
-// === Module 16947: HangoutWindowExperiment ===
+// === Module 16985: HangoutWindowExperiment ===
 
-// Module 16947 (HangoutWindowExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 4553 */;
-import createExperiment from "module_4550" /* 4550 */;
+// Module 16985 (HangoutWindowExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4556 */;
+import createExperiment from "module_4553" /* 4553 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-02_hangout_window", label: "Hangout Window", defaultConfig: { enableHangoutWindow: false }, commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, treatments: null };

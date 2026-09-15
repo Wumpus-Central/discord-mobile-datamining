@@ -1,9 +1,9 @@
-// === Module 6300: HelloWumpusSpotIllustration ===
+// === Module 6304: HelloWumpusSpotIllustration ===
 
-// Module 6300 (HelloWumpusSpotIllustration)
+// Module 6304 (HelloWumpusSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef6301 from "module_6301" /* 6301 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef6305 from "module_6305" /* 6305 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const HelloWumpusSpotIllustration = function HelloWumpusSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6301 };
+  const obj2 = { uri: _modDef6305 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

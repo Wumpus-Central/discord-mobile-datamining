@@ -1,19 +1,19 @@
-// === Module 16287: GameClaimCoachmark ===
+// === Module 16300: GameClaimCoachmark ===
 
-// Module 16287 (GameClaimCoachmark)
+// Module 16300 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import ButtonConstants from "ButtonConstants" /* 5061 */;
-import Pressables from "Pressables" /* 5204 */;
-import Card from "Card" /* 5688 */;
-import XSmallIcon from "XSmallIcon" /* 5761 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8701 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9049 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16288 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16289 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import ButtonConstants from "ButtonConstants" /* 5064 */;
+import Pressables from "Pressables" /* 5207 */;
+import Card from "Card" /* 5692 */;
+import XSmallIcon from "XSmallIcon" /* 5765 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8704 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9052 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10249 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16301 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16302 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,13 +24,13 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: metroRequire } = Constants);
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { card: { padding: nativeDefault.space.PX_12 }, closeButton: null, centeredText: null, body: null, cta: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;

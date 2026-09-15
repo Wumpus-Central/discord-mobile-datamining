@@ -1,6 +1,6 @@
-// === Module 16031: ScreenRecordingManager ===
+// === Module 16044: ScreenRecordingManager ===
 
-// Module 16031 (ScreenRecordingManager)
+// Module 16044 (ScreenRecordingManager)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

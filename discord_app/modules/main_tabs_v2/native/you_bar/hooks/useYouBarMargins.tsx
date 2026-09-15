@@ -1,10 +1,10 @@
-// === Module 15178: useYouBarMargins ===
+// === Module 15188: useYouBarMargins ===
 
-// Module 15178 (useYouBarMargins)
+// Module 15188 (useYouBarMargins)
 import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useToken from "useToken" /* 4338 */;
-import YouBarConstants from "YouBarConstants" /* 15179 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
+import useToken from "useToken" /* 4341 */;
+import YouBarConstants from "YouBarConstants" /* 15189 */;
 import size from "module_2" /* 2 */;
 
 ({ YOU_BAR_MARGIN_IOS: c3, YOU_BAR_MARGIN: closure_4 } = YouBarConstants);

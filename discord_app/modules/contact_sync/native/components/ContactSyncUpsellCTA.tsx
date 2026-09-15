@@ -1,18 +1,18 @@
-// === Module 13946: ContactSyncUpsellCTA ===
+// === Module 13951: ContactSyncUpsellCTA ===
 
-// Module 13946 (ContactSyncUpsellCTA)
+// Module 13951 (ContactSyncUpsellCTA)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12806 */;
-import _modDef13947 from "module_13947" /* 13947 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12811 */;
+import _modDef13952 from "module_13952" /* 13952 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const dismissUpsellCTA = fn(12809).dismissUpsellCTA;
+const dismissUpsellCTA = fn(12814).dismissUpsellCTA;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { container: { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_7 = createStyles.createStyles(obj);
 let obj3 = { padding: 12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -39,27 +39,27 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
     onLongPress() {
       const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
       const obj3 = { label: null, onPress: null };
-      const intl = location(1114).intl;
-      obj3.label = intl.string(location(1114).t.WAI6xu);
+      const intl = location(1115).intl;
+      obj3.label = intl.string(location(1115).t.WAI6xu);
       obj3.onPress = function onPress() {
         closure_1_3();
       };
       const items = [obj3];
       obj2.options = items;
-      const result = location(7297).showSimpleActionSheet(obj2);
+      const result = location(7301).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13947,
+    iconSource: _modDef13952,
     title: null,
     subtitle: null
   };
   let items = [closure_7().container, location.style];
   obj.style = items;
-  let intl = location(1114).intl;
-  obj.title = intl.string(location(1114).t.T6Rfd9);
-  const intl2 = location(1114).intl;
-  obj.subtitle = intl2.string(location(1114).t.c6KIpg);
-  return jsx(location(8716).FormCTA, {
+  let intl = location(1115).intl;
+  obj.title = intl.string(location(1115).t.T6Rfd9);
+  const intl2 = location(1115).intl;
+  obj.subtitle = intl2.string(location(1115).t.c6KIpg);
+  return jsx(location(8719).FormCTA, {
     onPress() {
       const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
       let str = location;
@@ -77,17 +77,17 @@ export default noop.memo(function ContactSyncUpsellCTA(location) {
     onLongPress() {
       const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
       const obj3 = { label: null, onPress: null };
-      const intl = location(1114).intl;
-      obj3.label = intl.string(location(1114).t.WAI6xu);
+      const intl = location(1115).intl;
+      obj3.label = intl.string(location(1115).t.WAI6xu);
       obj3.onPress = function onPress() {
         closure_1_3();
       };
       const items = [obj3];
       obj2.options = items;
-      const result = location(7297).showSimpleActionSheet(obj2);
+      const result = location(7301).showSimpleActionSheet(obj2);
     },
     style: null,
-    iconSource: _modDef13947,
+    iconSource: _modDef13952,
     title: null,
     subtitle: null
   });

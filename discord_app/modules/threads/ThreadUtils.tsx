@@ -1,18 +1,18 @@
-// === Module 7883: ThreadUtils ===
+// === Module 7886: ThreadUtils ===
 
-// Module 7883 (ThreadUtils)
+// Module 7886 (ThreadUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import _modDef4228 from "module_4228" /* 4228 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
-import getTimestampStringDefault from "getTimestampString" /* 7602 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7876 */;
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import _modDef4231 from "module_4231" /* 4231 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7221 */;
+import getTimestampStringDefault from "getTimestampString" /* 7606 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7879 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ReadStateStore from "ReadStateStore" /* 4651 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4277 */;
+import ReadStateStore from "ReadStateStore" /* 4654 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ function getAccessibilityLabelFormatter() {
   return time;
 }
 let closure_3 = ["can_send_message", "parent_channel_type"];
-const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
+const ThreadMemberFlags = fn(1114).ThreadMemberFlags;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UserNotificationSettings: c10 } = Constants);
 const size = fn(2);
@@ -127,8 +127,8 @@ export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) 
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef4228(createTimestamp).valueOf();
-    const obj3 = _modDef4228(createTimestamp);
+    valueOfResult = _modDef4231(createTimestamp).valueOf();
+    const obj3 = _modDef4231(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

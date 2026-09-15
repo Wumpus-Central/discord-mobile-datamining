@@ -1,6 +1,6 @@
-// === Module 1088: GameGenres ===
+// === Module 1089: GameGenres ===
 
-// Module 1088 (GameGenres)
+// Module 1089 (GameGenres)
 import size from "module_2" /* 2 */;
 
 const obj = { ACTION_GENRES: new Set([1, 2, 3, 4, 5, 6, 7]), ADVENTURE_GENRES: null, DRIVING_RACING_GENRES: null, MASSIVELY_MULTIPLAYER_GENRES: null, ROLE_PLAYING_GENRES: null, SHOOTER_GENRES: null, SIMULATION_GENRES: null, SPORTS_GENRES: null, STRATEGY_GENRES: null, MISCELLANEOUS_GENRES: null, ALL: null };

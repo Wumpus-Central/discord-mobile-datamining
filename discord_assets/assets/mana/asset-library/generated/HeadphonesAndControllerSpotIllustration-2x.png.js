@@ -1,6 +1,6 @@
-// === Module 6289: ? ===
+// === Module 6293: ? ===
 
-// Module 6289
+// Module 6293
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeadphonesAndControllerSpotIllustration-2x.png.js");

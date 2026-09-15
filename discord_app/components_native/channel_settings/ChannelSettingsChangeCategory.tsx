@@ -1,32 +1,32 @@
-// === Module 16968: ChannelSettingsChangeCategory ===
+// === Module 17006: ChannelSettingsChangeCategory ===
 
-// Module 16968 (ChannelSettingsChangeCategory)
+// Module 17006 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import useChannelName from "useChannelName" /* 4789 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import Stack_Stack from "Stack/Stack" /* 5054 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
-import TableRow from "TableRow" /* 5686 */;
-import TableRowGroup from "TableRowGroup" /* 5768 */;
-import Form from "Form" /* 8716 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import useChannelName from "useChannelName" /* 4792 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
+import Stack_Stack from "Stack/Stack" /* 5057 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5605 */;
+import TableRow from "TableRow" /* 5690 */;
+import TableRowGroup from "TableRowGroup" /* 5772 */;
+import Form from "Form" /* 8719 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7214 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7218 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -275,7 +275,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_14(Stack_Stack.Stack, obj2);
   return map1(Form.Form, obj);
 };
-ChannelSettingsChangeCategory.contextType = fn(4347).ThemeContext;
+ChannelSettingsChangeCategory.contextType = fn(4350).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeCategory.tsx");
 
@@ -284,9 +284,9 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const items = [ChannelStore];
   const channel = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(504);
-  const navigation = channelId(1483).useNavigation();
-  const obj2 = channelId(1483);
-  const appChannelBotUserId = channelId(11740).useAppChannelBotUserId(channel);
+  const navigation = channelId(1484).useNavigation();
+  const obj2 = channelId(1484);
+  const appChannelBotUserId = channelId(11744).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

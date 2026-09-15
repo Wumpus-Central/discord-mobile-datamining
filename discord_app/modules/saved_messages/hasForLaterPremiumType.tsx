@@ -1,12 +1,12 @@
-// === Module 7958: hasForLaterPremiumType ===
+// === Module 7961: hasForLaterPremiumType ===
 
-// Module 7958 (hasForLaterPremiumType)
+// Module 7961 (hasForLaterPremiumType)
 import initialize from "initialize" /* 504 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import UserStore from "UserStore" /* 1371 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/hasForLaterPremiumType.tsx");
 

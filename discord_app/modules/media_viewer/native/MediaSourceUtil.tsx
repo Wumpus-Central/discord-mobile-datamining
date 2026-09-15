@@ -1,29 +1,29 @@
-// === Module 8383: MediaSourceUtil ===
+// === Module 8386: MediaSourceUtil ===
 
-// Module 8383 (MediaSourceUtil)
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import util from "util" /* 1114 */;
-import FlagUtils from "FlagUtils" /* 1384 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1476 */;
-import Server from "Server" /* 1894 */;
-import ToastUtils from "ToastUtils" /* 4334 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4786 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4861 */;
-import EmbedUtils from "EmbedUtils" /* 4973 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7395 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7400 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7432 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 7992 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8050 */;
-import transformMessageComponents from "transformMessageComponents" /* 8227 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8243 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8379 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8384 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8385 */;
-import NativePortalView from "NativePortalView" /* 8386 */;
+// Module 8386 (MediaSourceUtil)
+import ConstantsIOS from "ConstantsIOS" /* 1094 */;
+import util from "util" /* 1115 */;
+import FlagUtils from "FlagUtils" /* 1385 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1477 */;
+import Server from "Server" /* 1895 */;
+import ToastUtils from "ToastUtils" /* 4337 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4789 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4864 */;
+import EmbedUtils from "EmbedUtils" /* 4976 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7399 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7404 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7436 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 7995 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8053 */;
+import transformMessageComponents from "transformMessageComponents" /* 8230 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8246 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8382 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8387 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8388 */;
+import NativePortalView from "NativePortalView" /* 8389 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = globalThis.__r;
 
@@ -757,7 +757,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
     return null;
   } else {
     const type = value.type;
-    if (tmp(1894).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(1895).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -778,9 +778,9 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
         }
         return tmp;
       });
-      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1369).isNotNullish) };
+      const obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1370).isNotNullish) };
       return obj2;
-    } else if (tmp(1894).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(1895).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {

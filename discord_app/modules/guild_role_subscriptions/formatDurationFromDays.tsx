@@ -1,7 +1,7 @@
-// === Module 17807: formatDurationFromDays ===
+// === Module 17845: formatDurationFromDays ===
 
-// Module 17807 (formatDurationFromDays)
-import util from "util" /* 1114 */;
+// Module 17845 (formatDurationFromDays)
+import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");

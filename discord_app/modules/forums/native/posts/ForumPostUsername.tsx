@@ -1,16 +1,16 @@
-// === Module 12135: ForumPostUsername ===
+// === Module 12139: ForumPostUsername ===
 
-// Module 12135 (ForumPostUsername)
+// Module 12139 (ForumPostUsername)
 import initialize from "initialize" /* 504 */;
-import native from "native" /* 1176 */;
-import ForumLayout from "ForumLayout" /* 1967 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import ForumHooks from "ForumHooks" /* 7989 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8065 */;
-import useChatWidthDefault from "useChatWidth" /* 11657 */;
-import ForumPostGridBody from "ForumPostGridBody" /* 12136 */;
+import native from "native" /* 1177 */;
+import ForumLayout from "ForumLayout" /* 1968 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import ForumHooks from "ForumHooks" /* 7992 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8068 */;
+import useChatWidthDefault from "useChatWidth" /* 11661 */;
+import ForumPostGridBody from "ForumPostGridBody" /* 12140 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 require = fn;
 function ForumPostUsername(arg0) {
@@ -68,10 +68,10 @@ function ForumPostUsername(arg0) {
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12131).useForumChannelStore;
+const useForumChannelStore = fn(12135).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");

@@ -1,12 +1,12 @@
-// === Module 13550: PromotionsHooks ===
+// === Module 13555: PromotionsHooks ===
 
-// Module 13550 (PromotionsHooks)
+// Module 13555 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PromotionUtils from "PromotionUtils" /* 13508 */;
+import PromotionUtils from "PromotionUtils" /* 13513 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
-import PromotionsStore from "PromotionsStore" /* 10794 */;
+import UserStore from "UserStore" /* 1372 */;
+import PromotionsStore from "PromotionsStore" /* 10798 */;
 
 const require = globalThis.__r;
 
@@ -59,7 +59,7 @@ function useEligibleActiveOutboundPromotions(arg0) {
     });
   }, items3);
 }
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/promotions/PromotionsHooks.tsx");
 

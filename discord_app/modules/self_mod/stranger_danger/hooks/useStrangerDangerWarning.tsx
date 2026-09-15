@@ -1,16 +1,16 @@
-// === Module 11498: useStrangerDangerWarning ===
+// === Module 11502: useStrangerDangerWarning ===
 
-// Module 11498 (useStrangerDangerWarning)
+// Module 11502 (useStrangerDangerWarning)
 import initialize from "initialize" /* 504 */;
-import useUserIsTeen from "useUserIsTeen" /* 8767 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11105 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11106 */;
-import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11499 */;
-import useIsMessageRequest from "useIsMessageRequest" /* 11500 */;
-import UserStore from "UserStore" /* 1371 */;
+import useUserIsTeen from "useUserIsTeen" /* 8770 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 11109 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 11110 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 11503 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 11504 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const SafetyWarningTypes = fn(11047).SafetyWarningTypes;
+const SafetyWarningTypes = fn(11051).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
 

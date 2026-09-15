@@ -1,11 +1,11 @@
-// === Module 8764: IarSettingsUpsellsConfigDmSpamFilter ===
+// === Module 8767: IarSettingsUpsellsConfigDmSpamFilter ===
 
-// Module 8764 (IarSettingsUpsellsConfigDmSpamFilter)
-import ChannelTypes from "ChannelTypes" /* 1094 */;
-import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import MenuTypes from "MenuTypes" /* 8753 */;
+// Module 8767 (IarSettingsUpsellsConfigDmSpamFilter)
+import ChannelTypes from "ChannelTypes" /* 1095 */;
+import util from "util" /* 1115 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import MenuTypes from "MenuTypes" /* 8756 */;
 import size from "module_2" /* 2 */;
 
 const obj = {

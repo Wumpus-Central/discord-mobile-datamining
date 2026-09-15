@@ -1,19 +1,19 @@
-// === Module 13557: PremiumPromotionCard ===
+// === Module 13562: PremiumPromotionCard ===
 
-// Module 13557 (PremiumPromotionCard)
+// Module 13562 (PremiumPromotionCard)
 import nativeDefault from "native" /* 576 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7525 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7529 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: metroRequire, AnalyticsPages: closure_7, AnalyticsSections: closure_8, HelpdeskArticles: closure_9 } = Constants);
-const PremiumTypes = fn(1373).PremiumTypes;
+const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { width: "100%" }, card: { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT, marginBottom: nativeDefault.space.PX_24, overflow: "hidden" }, image: null, nitroWheelIcon: null };
 let size = { alignSelf: "center", marginBottom: nativeDefault.space.PX_24, borderTopLeftRadius: nativeDefault.radii.lg, borderTopRightRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.none, borderBottomLeftRadius: nativeDefault.radii.none, width: "110%", height: 95 };
 obj2.image = size;

@@ -1,7 +1,7 @@
-// === Module 16327: MentionsBadge ===
+// === Module 16340: MentionsBadge ===
 
-// Module 16327 (MentionsBadge)
-import native from "native" /* 1176 */;
+// Module 16340 (MentionsBadge)
+import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

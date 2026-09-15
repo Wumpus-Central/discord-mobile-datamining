@@ -1,22 +1,22 @@
-// === Module 16838: AutocompleteScreen ===
+// === Module 16876: AutocompleteScreen ===
 
-// Module 16838 (AutocompleteScreen)
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import useChannelName from "useChannelName" /* 4789 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12468 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12488 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12491 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16839 */;
+// Module 16876 (AutocompleteScreen)
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import useChannelName from "useChannelName" /* 4792 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12473 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12493 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12496 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16877 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12472 */;
-import SearchQueryStore from "SearchQueryStore" /* 12469 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 12477 */;
+import SearchQueryStore from "SearchQueryStore" /* 12474 */;
 
 require = fn;
-const SearchConstants = fn(7982);
+const SearchConstants = fn(7985);
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
 const Constants = fn(1074);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);

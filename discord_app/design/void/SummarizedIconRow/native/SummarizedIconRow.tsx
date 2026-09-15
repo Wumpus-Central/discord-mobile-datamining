@@ -1,8 +1,8 @@
-// === Module 14184: SummarizedIconRow ===
+// === Module 14189: SummarizedIconRow ===
 
-// Module 14184 (SummarizedIconRow)
+// Module 14189 (SummarizedIconRow)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4632 */;
+import Text_Text from "Text/Text" /* 4635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function OverflowSquircle(arg0) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flexDirection: "row", alignItems: "center" }, iconWrapper: { alignItems: "center", justifyContent: "center" }, overflowSquircleWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md }, overflowSquircle: null, overflowTextOnly: null, overflowCircleWrap: null, overflowCircle: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md };
 obj2.overflowSquircle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };

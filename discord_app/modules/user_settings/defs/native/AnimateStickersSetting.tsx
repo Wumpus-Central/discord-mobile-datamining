@@ -1,20 +1,20 @@
-// === Module 15505: AnimateStickersSetting ===
+// === Module 15515: AnimateStickersSetting ===
 
-// Module 15505 (AnimateStickersSetting)
-import util from "util" /* 1114 */;
-import UserSettings from "UserSettings" /* 1935 */;
+// Module 15515 (AnimateStickersSetting)
+import util from "util" /* 1115 */;
+import UserSettings from "UserSettings" /* 1936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StickerAnimationSettings = fn(1938).StickerAnimationSettings;
-const SettingBuilders = fn(11602);
+const StickerAnimationSettings = fn(1939).StickerAnimationSettings;
+const SettingBuilders = fn(11606);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.R5nQkS);
   },
-  parent: fn(8079).MobileUserSettings.ACCESSIBILITY,
-  useValue: fn(1935).AnimateStickers.useSetting,
+  parent: fn(8082).MobileUserSettings.ACCESSIBILITY,
+  useValue: fn(1936).AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
     const AnimateStickers = UserSettings.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));

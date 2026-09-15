@@ -1,17 +1,17 @@
-// === Module 11972: GuildDisableCommunication ===
+// === Module 11976: GuildDisableCommunication ===
 
-// Module 11972 (GuildDisableCommunication)
+// Module 11976 (GuildDisableCommunication)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import useMountEffectDefault from "useMountEffect" /* 5073 */;
-import TableRadioGroup from "TableRadioGroup" /* 5766 */;
-import TableRadioRow from "TableRadioRow" /* 5769 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
-import TextArea from "TextArea" /* 7188 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11281 */;
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import useMountEffectDefault from "useMountEffect" /* 5076 */;
+import TableRadioGroup from "TableRadioGroup" /* 5770 */;
+import TableRadioRow from "TableRadioRow" /* 5773 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7088 */;
+import TextArea from "TextArea" /* 7192 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -19,7 +19,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(2023);
+const GuildDisableCommunicationConstants = fn(2024);
 ({ DisableCommunicationDuration, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8, SET_COMMUNICATION_DISABLED_MODAL_NAME: closure_9 } = GuildDisableCommunicationConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
@@ -68,7 +68,7 @@ let items = [
     }
   }
 ];
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, reasonTextArea: null, buttonContainer: null };
 let obj = {
   value: DisableCommunicationDuration.DURATION_60_SEC,
@@ -116,7 +116,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = tmp4(11973);
+            const obj4 = tmp4(11977);
             dependencyMap = 1;
             c3 = 1;
             const obj5 = { value: obj4.setCommunicationDisabledDuration(guild_id, id.id, items[asyncGeneratorStep].value, ref.current), done: false };
@@ -130,17 +130,17 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          const intl = user(1114).intl;
-          const obj8 = tmp4(4335);
-          const name = tmp4(4788).getName(closure_129_1, null, closure_129_0);
+          const intl = user(1115).intl;
+          const obj8 = tmp4(4338);
+          const name = tmp4(4791).getName(closure_129_1, null, closure_129_0);
           user = name;
           if (name == null) {
             user = "";
           }
           const obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
           const obj7 = { user };
-          obj.content = intl.formatToPlainString(user(1114).t.O9C3Nt, obj7);
-          obj.icon = tmp4(9696);
+          obj.content = intl.formatToPlainString(user(1115).t.O9C3Nt, obj7);
+          obj.icon = tmp4(9698);
           obj8.open(obj);
           closure_129_2();
           c3 = 3;

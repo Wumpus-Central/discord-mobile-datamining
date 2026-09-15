@@ -1,16 +1,16 @@
-// === Module 4293: EmojiUtils ===
+// === Module 4296: EmojiUtils ===
 
-// Module 4293 (EmojiUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ImageUtils from "ImageUtils" /* 1474 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4268 */;
-import EmojiTypes from "EmojiTypes" /* 4292 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5545 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7885 */;
+// Module 4296 (EmojiUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import ImageUtils from "ImageUtils" /* 1475 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4271 */;
+import EmojiTypes from "EmojiTypes" /* 4295 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5549 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7888 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import UserStore from "UserStore" /* 1371 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
@@ -131,10 +131,10 @@ let closure_19 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(1961);
+const ChannelRecord = fn(1962);
 ({ isGuildTextChannelType: closure_4, isGuildVocalChannelType: hasOwnProperty } = ChannelRecord);
 const Permissions = fn(1074).Permissions;
-const EmojiConstants = fn(1374);
+const EmojiConstants = fn(1375);
 ({ EMOJI_MAX_FILESIZE: closure_9, EMOJI_MAX_LENGTH: c10, EMOJI_RE: closure_11, EmojiDisabledReasons } = EmojiConstants);
 ({ EmojiIntention: map1, isExternalEmojiAllowedForIntention: closure_14 } = EmojiConstants);
 const items = [, ];

@@ -1,6 +1,6 @@
-// === Module 1111: utils/ComponentDispatchUtils ===
+// === Module 1112: utils/ComponentDispatchUtils ===
 
-// Module 1111 (utils/ComponentDispatchUtils)
+// Module 1112 (utils/ComponentDispatchUtils)
 import _mod568 from "module_568" /* 568 */;
 import size from "module_2" /* 2 */;
 

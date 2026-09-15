@@ -1,8 +1,8 @@
-// === Module 14731: UserProfileLegacyUsernameSwitch ===
+// === Module 14741: UserProfileLegacyUsernameSwitch ===
 
-// Module 14731 (UserProfileLegacyUsernameSwitch)
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7087 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8281 */;
+// Module 14741 (UserProfileLegacyUsernameSwitch)
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 7091 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8284 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,25 +13,25 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDisabled) {
   pendingLegacyUsernameDisabled = pendingLegacyUsernameDisabled.pendingLegacyUsernameDisabled;
   let setting;
-  const LegacyUsernameDisabled = setting(1935).LegacyUsernameDisabled;
+  const LegacyUsernameDisabled = setting(1936).LegacyUsernameDisabled;
   setting = LegacyUsernameDisabled.useSetting();
   let tmp4 = setting;
   if (undefined !== pendingLegacyUsernameDisabled) {
     tmp4 = pendingLegacyUsernameDisabled;
   }
   let obj = { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null };
-  const intl = tmp(1114).intl;
-  obj.label = intl.string(setting(1114).t["3cWDuO"]);
-  const intl2 = tmp(1114).intl;
+  const intl = tmp(1115).intl;
+  obj.label = intl.string(setting(1115).t["3cWDuO"]);
+  const intl2 = tmp(1115).intl;
   if (tmp4) {
-    let stringResult = intl2.string(tmp(1114).t.eD6Yq0);
+    let stringResult = intl2.string(tmp(1115).t.eD6Yq0);
   } else {
     let obj2 = { username: pendingLegacyUsernameDisabled.legacyUsername };
-    stringResult = intl2.formatToPlainString(tmp(1114).t.aYhclf, obj2);
+    stringResult = intl2.formatToPlainString(tmp(1115).t.aYhclf, obj2);
   }
   obj.subLabel = stringResult;
-  const intl3 = tmp(1114).intl;
-  obj.accessibilityLabel = intl3.string(setting(1114).t["3cWDuO"]);
+  const intl3 = tmp(1115).intl;
+  obj.accessibilityLabel = intl3.string(setting(1115).t["3cWDuO"]);
   obj.onValueChange = function onValueChange(arg0) {
     if (!arg0 === setting) {
       const result = UserSettingsAccountActionCreators.resetPendingLegacyUsernameDisabled();
@@ -40,5 +40,5 @@ export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDis
       UserProfileSettingsActionCreators.setPendingChanges(obj2);
     }
   };
-  return jsx(setting(14706).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
+  return jsx(setting(14716).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
 };

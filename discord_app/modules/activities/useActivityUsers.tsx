@@ -1,8 +1,8 @@
-// === Module 17260: useActivityUsers ===
+// === Module 17298: useActivityUsers ===
 
-// Module 17260 (useActivityUsers)
-import UserStore from "UserStore" /* 1371 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+// Module 17298 (useActivityUsers)
+import UserStore from "UserStore" /* 1372 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 
 const require = globalThis.__r;
 

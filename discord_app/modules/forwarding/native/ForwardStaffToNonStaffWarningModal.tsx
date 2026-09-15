@@ -1,8 +1,8 @@
-// === Module 11816: ForwardStaffToNonStaffWarningModal ===
+// === Module 11820: ForwardStaffToNonStaffWarningModal ===
 
-// Module 11816 (ForwardStaffToNonStaffWarningModal)
-import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4986 */;
+// Module 11820 (ForwardStaffToNonStaffWarningModal)
+import util from "util" /* 1115 */;
+import AlertModal from "AlertModal" /* 4989 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 

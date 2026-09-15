@@ -1,16 +1,16 @@
-// === Module 8909: WishlistActionCreators ===
+// === Module 8912: WishlistActionCreators ===
 
-// Module 8909 (WishlistActionCreators)
+// Module 8912 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import StorefrontUtils from "StorefrontUtils" /* 7334 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import StorefrontUtils from "StorefrontUtils" /* 7338 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserProfileStore from "UserProfileStore" /* 7723 */;
-import UserStore from "UserStore" /* 1371 */;
-import BillingInfoStore from "BillingInfoStore" /* 4296 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7330 */;
-import WishlistRecord from "WishlistRecord" /* 8904 */;
+import UserProfileStore from "UserProfileStore" /* 7726 */;
+import UserStore from "UserStore" /* 1372 */;
+import BillingInfoStore from "BillingInfoStore" /* 4299 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 7334 */;
+import WishlistRecord from "WishlistRecord" /* 8907 */;
 
 require = fn;
 function extraWishlistParams() {
@@ -44,7 +44,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(8904).getWishlistSkuIds;
+const getWishlistSkuIds = fn(8907).getWishlistSkuIds;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);

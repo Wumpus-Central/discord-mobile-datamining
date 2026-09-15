@@ -1,20 +1,20 @@
-// === Module 12319: GroupDMNitroCapInfoActionSheet ===
+// === Module 12323: GroupDMNitroCapInfoActionSheet ===
 
-// Module 12319 (GroupDMNitroCapInfoActionSheet)
+// Module 12323 (GroupDMNitroCapInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7253 */;
+import util from "util" /* 1115 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7257 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const number = fn(11723).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11727).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, title: null, body: null, button: null };
 let obj3 = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.title = { marginTop: nativeDefault.space.PX_8, textAlign: "center" };

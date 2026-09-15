@@ -1,32 +1,32 @@
-// === Module 14598: activities ===
+// === Module 14608: activities ===
 
-// Module 14598 (activities)
-import RPCHelpers from "RPCHelpers" /* 9689 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14553 */;
+// Module 14608 (activities)
+import RPCHelpers from "RPCHelpers" /* 9691 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ RPCCommands, RPCErrors: closure_4, ApplicationFlags: hasOwnProperty } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(14565);
+let CONTEXT_MENU_ICON_NAMES = fn(14575);
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-  scope: fn(14553).activityInstanceConnectedParticipantsScope,
+  scope: fn(14562).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(14565);
+CONTEXT_MENU_ICON_NAMES = fn(14575);
 let obj3 = {
-  scope: fn(14553).activityInstanceConnectedParticipantsScope,
+  scope: fn(14562).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 };
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, {
-  scope: fn(14553).activityInstanceConnectedParticipantsScope,
+  scope: fn(14562).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
     return (async () => {
@@ -60,7 +60,7 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
               const obj10 = value(tmp29[4]);
               const validateApplicationResult = value(tmp29[4]).validateApplication(socket.application);
               if (obj11.hasApplicationFlag(socket.application, constants2.EMBEDDED)) {
-                const tmp26 = tmp3(tmp29[7])();
+                const tmp26 = tmp3(tmp29[7])(socket);
                 c3 = 1;
                 value = {};
                 let id;

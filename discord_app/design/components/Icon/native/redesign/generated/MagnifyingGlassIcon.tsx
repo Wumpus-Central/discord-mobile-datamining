@@ -1,9 +1,9 @@
-// === Module 7154: MagnifyingGlassIcon ===
+// === Module 7158: MagnifyingGlassIcon ===
 
-// Module 7154 (MagnifyingGlassIcon)
+// Module 7158 (MagnifyingGlassIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod7155 from "module_7155" /* 7155 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod7159 from "module_7159" /* 7159 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const MagnifyingGlassIcon = function MagnifyingGlassIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7155, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7159, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

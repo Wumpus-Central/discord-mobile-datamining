@@ -1,14 +1,14 @@
-// === Module 14631: VoiceMessagesPlaybackManager ===
+// === Module 14641: VoiceMessagesPlaybackManager ===
 
-// Module 14631 (VoiceMessagesPlaybackManager)
+// Module 14641 (VoiceMessagesPlaybackManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4984 */;
-import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 14632 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4987 */;
+import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 14642 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import LifecycleManager from "LifecycleManager" /* 1898 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import LifecycleManager from "LifecycleManager" /* 1899 */;
 import size from "module_2" /* 2 */;
 
 ({ AppState: c3, NativeModules: closure_4 } = get_ActivityIndicator);
@@ -31,7 +31,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
             const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
           }
         }
-        obj = applyArgumentsResult(1363);
+        obj = applyArgumentsResult(1364);
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
@@ -43,7 +43,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           DCDAudioPlayerManager.pauseCurrentPlayer(false);
         }
       }
-      obj = applyArgumentsResult(1363);
+      obj = applyArgumentsResult(1364);
     };
     applyArgumentsResult.handleAppStateChanged = function handleAppStateChanged(state) {
       state = state.state;

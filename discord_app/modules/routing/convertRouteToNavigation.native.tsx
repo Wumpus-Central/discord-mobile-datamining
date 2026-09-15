@@ -1,11 +1,11 @@
-// === Module 12921: convertRouteToNavigation ===
+// === Module 12926: convertRouteToNavigation ===
 
-// Module 12921 (convertRouteToNavigation)
+// Module 12926 (convertRouteToNavigation)
 import Constants from "Constants" /* 1074 */;
-import matchPathCompat from "matchPathCompat" /* 4463 */;
-import RouteUtils from "RouteUtils" /* 4476 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4494 */;
-import RootNavigationRef from "RootNavigationRef" /* 4495 */;
+import matchPathCompat from "matchPathCompat" /* 4466 */;
+import RouteUtils from "RouteUtils" /* 4479 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
+import RootNavigationRef from "RootNavigationRef" /* 4498 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
@@ -85,7 +85,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                 const tmpResult23 = NavigationRouteUtils;
               }
               if (tmp15) {
-                const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "Array" };
+                const obj10 = { channelId, guildId, messageId, replaceChannelAndFixRoot: "a" };
                 NavigationRouteUtils.navigateToChannel(obj10);
                 const tmpResult24 = NavigationRouteUtils;
               }

@@ -1,9 +1,9 @@
-// === Module 5241: IosImageTypesManager ===
+// === Module 5244: IosImageTypesManager ===
 
-// Module 5241 (IosImageTypesManager)
+// Module 5244 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LifecycleManager from "LifecycleManager" /* 1898 */;
+import LifecycleManager from "LifecycleManager" /* 1899 */;
 
 const NativeModules = fn(17).NativeModules;
 const logger = new LoggerDefault("IosImageTypesManager");

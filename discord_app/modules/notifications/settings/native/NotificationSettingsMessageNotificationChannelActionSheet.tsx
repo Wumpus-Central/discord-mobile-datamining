@@ -1,17 +1,17 @@
-// === Module 10290: NotificationSettingsMessageNotificationChannelActionSheet ===
+// === Module 10292: NotificationSettingsMessageNotificationChannelActionSheet ===
 
-// Module 10290 (NotificationSettingsMessageNotificationChannelActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7217 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7222 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10278 */;
+// Module 10292 (NotificationSettingsMessageNotificationChannelActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7221 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7226 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10280 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4818).UnreadSetting;
+const UnreadSetting = fn(4821).UnreadSetting;
 let closure_6 = fn(1084).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -27,8 +27,8 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
   let obj = require("notficationSettingsChannelFlagUtils");
   if (notification !== UserNotificationSettings.ALL_MESSAGES) {
     if (unread !== UnreadSetting.ALL_MESSAGES) {
-      const intl = tmp(1114).intl;
-      stringResult = intl.string(tmp(1114).t.eP8yWU);
+      const intl = tmp(1115).intl;
+      stringResult = intl.string(tmp(1115).t.eP8yWU);
     }
   }
   obj2.allMessagesSubLabel = stringResult;
@@ -44,5 +44,5 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(10289), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10291), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 };

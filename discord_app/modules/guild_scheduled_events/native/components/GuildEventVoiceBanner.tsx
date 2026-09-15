@@ -1,19 +1,19 @@
-// === Module 13869: GuildEventVoiceBanner ===
+// === Module 13874: GuildEventVoiceBanner ===
 
-// Module 13869 (GuildEventVoiceBanner)
+// Module 13874 (GuildEventVoiceBanner)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9828 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9919 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9830 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9921 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7629).isGuildScheduledEventActive;
+let closure_6 = fn(7633).isGuildScheduledEventActive;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { header: { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, descriptionContainerStyle: { paddingTop: 4 }, buttonContainer: { marginTop: 12 } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { margin: 12, padding: 12, borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

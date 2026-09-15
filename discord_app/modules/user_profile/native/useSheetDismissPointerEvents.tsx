@@ -1,7 +1,7 @@
-// === Module 13121: useSheetDismissPointerEvents ===
+// === Module 13126: useSheetDismissPointerEvents ===
 
-// Module 13121 (useSheetDismissPointerEvents)
-import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
+// Module 13126 (useSheetDismissPointerEvents)
+import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
 import size from "module_2" /* 2 */;
 
 const __initData = { code: "function useSheetDismissPointerEventsTsx1(){const{contentGestureState,State,handleGestureState}=this.__closure;var _contentGestureState,_handleGestureState;const isDragging=((_contentGestureState=contentGestureState)===null||_contentGestureState===void 0?void 0:_contentGestureState.get())===State.ACTIVE||((_handleGestureState=handleGestureState)===null||_handleGestureState===void 0?void 0:_handleGestureState.get())===State.ACTIVE;return{pointerEvents:isDragging?'none':'box-none'};}" };

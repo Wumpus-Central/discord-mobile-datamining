@@ -1,20 +1,20 @@
-// === Module 10114: UserSettingsVoiceOutputOptions ===
+// === Module 10116: UserSettingsVoiceOutputOptions ===
 
-// Module 10114 (UserSettingsVoiceOutputOptions)
+// Module 10116 (UserSettingsVoiceOutputOptions)
 import _modDef38 from "module_38" /* 38 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9218 */;
-import VolumeSliderDefault from "VolumeSlider" /* 10115 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9221 */;
+import VolumeSliderDefault from "VolumeSlider" /* 10117 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 
 const require = fn;
 const View = fn(17).View;
-const MediaEngineContextTypes = fn(4661).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4664).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_11 = createStyles.createStyles({ slider: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
@@ -51,11 +51,11 @@ export default function UserSettingsVoiceOutputOptions() {
     AudioActionCreatorsDefault.setLocalVolume(stateFromStores1.ownerId, arg0, MediaEngineContextTypes.STREAM);
   }, items3);
   const obj4 = { title: null, hasIcons: false, children: null };
-  const intl = stateFromStores1(1114).intl;
-  obj4.title = intl.string(stateFromStores1(1114).t.UXxPGB);
+  const intl = stateFromStores1(1115).intl;
+  obj4.title = intl.string(stateFromStores1(1115).t.UXxPGB);
   const obj5 = { label: null, subLabel: null };
-  const intl2 = stateFromStores1(1114).intl;
-  obj5.label = intl2.string(stateFromStores1(1114).t.xPHVBs);
+  const intl2 = stateFromStores1(1115).intl;
+  obj5.label = intl2.string(stateFromStores1(1115).t.xPHVBs);
   const obj6 = { style: tmp.slider, children: null };
   const obj7 = {
     style: tmp.slider,
@@ -66,26 +66,26 @@ export default function UserSettingsVoiceOutputOptions() {
     accessibilityLabel: null
   };
   const obj3 = stateFromStores1(504);
-  const intl3 = stateFromStores1(1114).intl;
-  obj7.accessibilityLabel = intl3.string(stateFromStores1(1114).t.xPHVBs);
+  const intl3 = stateFromStores1(1115).intl;
+  obj7.accessibilityLabel = intl3.string(stateFromStores1(1115).t.xPHVBs);
   obj6.children = closure_9(VolumeSliderDefault, obj7);
   obj5.subLabel = closure_9(View, obj6);
-  const items4 = [closure_9(stateFromStores1(5686).TableRow, obj5), ];
+  const items4 = [closure_9(stateFromStores1(5690).TableRow, obj5), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj8 = { label: null, subLabel: null };
-    const intl4 = tmp2(1114).intl;
-    obj8.label = intl4.string(tmp2(1114).t.pEAl4b);
+    const intl4 = tmp2(1115).intl;
+    obj8.label = intl4.string(tmp2(1115).t.pEAl4b);
     const obj9 = { style: tmp.slider, children: null };
     const obj10 = { value: stateFromStores2, onValueChange: callback, accessibilityLabel: null };
-    const intl5 = tmp2(1114).intl;
-    obj10.accessibilityLabel = intl5.string(tmp2(1114).t.pEAl4b);
+    const intl5 = tmp2(1115).intl;
+    obj10.accessibilityLabel = intl5.string(tmp2(1115).t.pEAl4b);
     obj9.children = closure_9(VolumeSliderDefault, obj10);
     obj8.subLabel = closure_9(View, obj9);
-    tmp9Result = closure_9(tmp2(5686).TableRow, obj8);
+    tmp9Result = closure_9(tmp2(5690).TableRow, obj8);
     const tmp11Result = VolumeSliderDefault;
   }
   items4[1] = tmp9Result;
   obj4.children = items4;
-  return closure_10(stateFromStores1(10108).UserSettingsTableRowGroup, obj4);
+  return closure_10(stateFromStores1(10110).UserSettingsTableRowGroup, obj4);
 };

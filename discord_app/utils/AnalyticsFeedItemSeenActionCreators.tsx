@@ -1,6 +1,6 @@
-// === Module 8003: AnalyticsFeedItemSeenActionCreators ===
+// === Module 8006: AnalyticsFeedItemSeenActionCreators ===
 
-// Module 8003 (AnalyticsFeedItemSeenActionCreators)
+// Module 8006 (AnalyticsFeedItemSeenActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

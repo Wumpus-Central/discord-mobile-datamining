@@ -1,16 +1,16 @@
-// === Module 4977: DraftStore ===
+// === Module 4980: DraftStore ===
 
-// Module 4977 (DraftStore)
+// Module 4980 (DraftStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import DraftCommand from "DraftCommand" /* 4979 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import DraftCommand from "DraftCommand" /* 4982 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4978 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4981 */;
 
 require = fn;
 function handleChanged(type) {
@@ -256,8 +256,8 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };
-prototype["getDraft"] = function getDraft(id, ChannelMessage) {
-  id = AuthenticationStore.getId();
+prototype["getDraft"] = function getDraft(arg0, arg1) {
+  const id = AuthenticationStore.getId();
   if (null == id) {
     return "";
   } else {
@@ -267,8 +267,8 @@ prototype["getDraft"] = function getDraft(id, ChannelMessage) {
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
-    if (null != tmp3[id]) {
-      if (null != tmp6[ChannelMessage]) {
+    if (null != tmp3[arg0]) {
+      if (null != tmp6[arg1]) {
         return tmp8.draft;
       }
     }

@@ -1,10 +1,10 @@
-// === Module 13347: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 13352: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 13347 (useEmbeddedActivityParticipantAvatarUris)
-import GlobalUtils from "GlobalUtils" /* 1369 */;
+// Module 13352 (useEmbeddedActivityParticipantAvatarUris)
+import GlobalUtils from "GlobalUtils" /* 1370 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import UserStore from "UserStore" /* 1371 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const size = fn(2);

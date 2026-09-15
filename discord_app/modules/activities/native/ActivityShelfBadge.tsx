@@ -1,24 +1,24 @@
-// === Module 12216: ActivityShelfBadge ===
+// === Module 12220: ActivityShelfBadge ===
 
-// Module 12216 (ActivityShelfBadge)
+// Module 12220 (ActivityShelfBadge)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Server from "Server" /* 1894 */;
-import Text_Text from "Text/Text" /* 4632 */;
+import util from "util" /* 1115 */;
+import Server from "Server" /* 1895 */;
+import Text_Text from "Text/Text" /* 4635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { badge: null, newBadge: null, updatedBadge: null, elevationShadow: null, badgeText: null };
 const rect = { position: "absolute", top: 4, right: 4, display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
 obj2.badge = rect;
 obj2.newBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 let obj3 = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND };
 obj2.updatedBadge = { paddingLeft: 4, paddingRight: 6, borderRadius: nativeDefault.radii.sm, height: 16, backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND };
-const native = fn(1176);
-obj2.elevationShadow = native.generateBoxShadowStyle(fn(1176).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1177);
+obj2.elevationShadow = native.generateBoxShadowStyle(fn(1177).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj2.badgeText = { textTransform: "uppercase", marginLeft: 2, fontFamily: fn(1074).Fonts.DISPLAY_EXTRABOLD, lineHeight: 16, fontSize: 12 };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

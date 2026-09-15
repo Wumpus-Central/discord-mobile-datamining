@@ -1,13 +1,13 @@
-// === Module 13094: MediaViewerThumbnails ===
+// === Module 13099: MediaViewerThumbnails ===
 
-// Module 13094 (MediaViewerThumbnails)
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import useToken from "useToken" /* 4338 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4374 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5046 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13095 */;
+// Module 13099 (MediaViewerThumbnails)
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import useToken from "useToken" /* 4341 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4377 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5049 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13100 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,11 +39,11 @@ function ObscuredView(source) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8410);
+const Constants = fn(8413);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_11 = createStyles.createStyles({ containerPortrait: { height: 60 }, thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 }, thumbnailImagePortrait: { height: THUMBNAIL_HEIGHT, width: "100%" } });
 let closure_12 = noop.memo((onSelect) => {
   ({ source, index } = onSelect);

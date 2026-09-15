@@ -1,13 +1,13 @@
-// === Module 11601: ChatGestureSettings ===
+// === Module 11605: ChatGestureSettings ===
 
-// Module 11601 (ChatGestureSettings)
-import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 8079 */;
+// Module 11605 (ChatGestureSettings)
+import util from "util" /* 1115 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import SettingsConstants from "SettingsConstants" /* 8082 */;
 import Constants from "Constants" /* 1074 */;
-import SettingBuilders from "SettingBuilders" /* 11602 */;
+import SettingBuilders from "SettingBuilders" /* 11606 */;
 import size from "module_2" /* 2 */;
 
 function useSwipeToReplySettingValue() {

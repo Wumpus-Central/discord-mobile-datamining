@@ -1,14 +1,14 @@
-// === Module 16921: UserProfileYourFriendsCard ===
+// === Module 16959: UserProfileYourFriendsCard ===
 
-// Module 16921 (UserProfileYourFriendsCard)
+// Module 16959 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7761 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7764 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
@@ -17,10 +17,10 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-let closure_12 = Object.freeze({ direction: fn(1176).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4636);
+let closure_12 = Object.freeze({ direction: fn(1177).CutoutDirection.RIGHT, inset: -4 });
+const createStyles = fn(4639);
 const obj3 = { pressable: null, label: null, facepile: null, avatars: null };
-let obj = { direction: fn(1176).CutoutDirection.RIGHT, inset: -4 };
+let obj = { direction: fn(1177).CutoutDirection.RIGHT, inset: -4 };
 obj3.pressable = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: nativeDefault.radii.lg };
 obj3.label = { flex: 1 };
 obj3.facepile = { flexDirection: "row", alignItems: "center", marginLeft: "auto", marginRight: 8 };
@@ -49,7 +49,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9978).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9980).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -88,13 +88,13 @@ export default function UserProfileYourFriendsCard(arg0) {
           const items = [{ translateX: 4 * (first.length - 1 - index) }];
           obj2.transform = items;
           obj.style = obj2;
-          const obj4 = { user, guildId: "r", size: closure_0(1176).AvatarSizes.XSMALL, cutout: null };
+          const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null };
           let tmp3;
           if (index < first.length - 1) {
             tmp3 = closure_2_12;
           }
           obj4.cutout = tmp3;
-          obj.children = closure_2_10(closure_0(1176).CutoutableAvatarImage, obj4);
+          obj.children = closure_2_10(closure_0(1177).CutoutableAvatarImage, obj4);
           return closure_2_10(gameRelationshipsByType, obj, user.id);
         })
       })

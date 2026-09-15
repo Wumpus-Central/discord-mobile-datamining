@@ -1,23 +1,23 @@
-// === Module 17320: VoicePanelVoiceControls ===
+// === Module 17358: VoicePanelVoiceControls ===
 
-// Module 17320 (VoicePanelVoiceControls)
+// Module 17358 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import TableRowGroup from "TableRowGroup" /* 5768 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9712 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10111 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10121 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12402 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13882 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17148 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17212 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17321 */;
+import util from "util" /* 1115 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import TableRowGroup from "TableRowGroup" /* 5772 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9714 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10113 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10123 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12406 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13887 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17186 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17250 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17359 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
@@ -25,10 +25,10 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12401).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12405).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };

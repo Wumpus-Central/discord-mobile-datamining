@@ -1,18 +1,18 @@
-// === Module 12094: TypingIndicator ===
+// === Module 12098: TypingIndicator ===
 
-// Module 12094 (TypingIndicator)
+// Module 12098 (TypingIndicator)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import native from "native" /* 4347 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
-import spring from "spring" /* 5055 */;
-import springPresets from "springPresets" /* 5059 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12101 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import native from "native" /* 4350 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4791 */;
+import spring from "spring" /* 5058 */;
+import springPresets from "springPresets" /* 5062 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 12105 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4635 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5542 */;
-import TypingStore from "TypingStore" /* 12095 */;
-import UserStore from "UserStore" /* 1371 */;
+import DevSettingsStore from "DevSettingsStore" /* 4638 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5546 */;
+import TypingStore from "TypingStore" /* 12099 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function TypingIndicatorInner(channel) {
@@ -214,12 +214,12 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return closure_1_12(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(9615).useChatShowingAutoComplete;
-const SlowmodeType = fn(7789).SlowmodeType;
+let closure_5 = fn(9617).useChatShowingAutoComplete;
+const SlowmodeType = fn(7792).SlowmodeType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { typingWrapper: { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 }, wrapperHoriz: { justifyContent: "space-between", flexDirection: "row", alignItems: "center" }, horiz: null, text: null };
   const obj2 = { paddingTop: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: "transparent", paddingRight: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingLeft: 2 * arg0 };

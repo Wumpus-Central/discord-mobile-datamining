@@ -1,13 +1,13 @@
-// === Module 14526: AccessibilityActionCreators ===
+// === Module 14535: AccessibilityActionCreators ===
 
-// Module 14526 (AccessibilityActionCreators)
+// Module 14535 (AccessibilityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9488 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9490 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const StickerAnimationSettings = fn(1938).StickerAnimationSettings;
+const StickerAnimationSettings = fn(1939).StickerAnimationSettings;
 const constants = fn(1084).SettingsOverrideReasonKeys;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/AccessibilityActionCreators.tsx");

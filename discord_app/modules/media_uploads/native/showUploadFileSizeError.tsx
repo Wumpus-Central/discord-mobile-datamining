@@ -1,29 +1,29 @@
-// === Module 9440: showUploadFileSizeError ===
+// === Module 9442: showUploadFileSizeError ===
 
-// Module 9440 (showUploadFileSizeError)
-import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import util from "util" /* 1114 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import FileSizeUtils from "FileSizeUtils" /* 4533 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4816 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4980 */;
-import UploadUtils from "UploadUtils" /* 5210 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5211 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5219 */;
-import KestrelExperiment from "KestrelExperiment" /* 5260 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import logMessageSendFailure from "logMessageSendFailure" /* 7945 */;
-import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9441 */;
-import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9442 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9443 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1183 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 9442 (showUploadFileSizeError)
+import ConstantsIOS from "ConstantsIOS" /* 1094 */;
+import util from "util" /* 1115 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import FileSizeUtils from "FileSizeUtils" /* 4536 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
+import UploadUtils from "UploadUtils" /* 5213 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5214 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5222 */;
+import KestrelExperiment from "KestrelExperiment" /* 5264 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import logMessageSendFailure from "logMessageSendFailure" /* 7948 */;
+import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9443 */;
+import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9444 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9445 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(4629).FileUploadErrorTypes;
-const PremiumConstants = fn(1373);
+const FileUploadErrorTypes = fn(4632).FileUploadErrorTypes;
+const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
 const size = fn(2);

@@ -1,18 +1,18 @@
-// === Module 8705: useAgeVerificationMethods ===
+// === Module 8708: useAgeVerificationMethods ===
 
-// Module 8705 (useAgeVerificationMethods)
-import util from "util" /* 1114 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
-import MetricEvents from "MetricEvents" /* 7709 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8535 */;
-import GoogleWalletExperiment from "GoogleWalletExperiment" /* 8706 */;
+// Module 8708 (useAgeVerificationMethods)
+import util from "util" /* 1115 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7707 */;
+import MetricEvents from "MetricEvents" /* 7712 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8538 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 8709 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 8571 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 8574 */;
 
 require = fn;
-const AgeVerificationConstants = fn(8530);
+const AgeVerificationConstants = fn(8533);
 ({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
@@ -70,9 +70,9 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
           } else {
             let obj = { id, title: null, description: null, onClick: null };
             ({ title, description } = tmp);
-            const intl = onGoogleWalletSelect(1114).intl;
+            const intl = onGoogleWalletSelect(1115).intl;
             obj.title = intl.string(title);
-            const intl2 = onGoogleWalletSelect(1114).intl;
+            const intl2 = onGoogleWalletSelect(1115).intl;
             obj.description = intl2.string(description);
             closure_1 = first(function*(arg0) {
               if (c1 === 2) {
@@ -99,8 +99,8 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(8531);
-                      const result = obj5.trackAgeVerificationModalClicked(id, id(8531).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(8531).AgeVerificationModalCta.METHOD_SELECT, id);
+                      const obj5 = id(8534);
+                      const result = obj5.trackAgeVerificationModalClicked(id, id(8534).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(8534).AgeVerificationModalCta.METHOD_SELECT, id);
                       v1 = 1;
                       c1 = 1;
                       const obj4 = { value: v1(id), done: false };

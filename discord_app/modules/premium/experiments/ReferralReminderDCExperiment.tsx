@@ -1,7 +1,7 @@
-// === Module 8171: ReferralReminderDCExperiment ===
+// === Module 8174: ReferralReminderDCExperiment ===
 
-// Module 8171 (ReferralReminderDCExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 8174 (ReferralReminderDCExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-02-referral-reminder-dc", kind: "user", defaultConfig: { enabled: false }, variations: null };

@@ -1,15 +1,15 @@
-// === Module 12866: HubEmailConnectionSubmitSchool ===
+// === Module 12871: HubEmailConnectionSubmitSchool ===
 
-// Module 12866 (HubEmailConnectionSubmitSchool)
+// Module 12871 (HubEmailConnectionSubmitSchool)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import native from "native" /* 1176 */;
-import useNavigation from "useNavigation" /* 1483 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import components_Button_Button from "components/Button/Button" /* 5056 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6706 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7084 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12857 */;
+import util from "util" /* 1115 */;
+import native from "native" /* 1177 */;
+import useNavigation from "useNavigation" /* 1484 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import components_Button_Button from "components/Button/Button" /* 5059 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6710 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7088 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12862 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,10 +17,10 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12849).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12854).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { paddingHorizontal: 16 }, title: { fontFamily: fn(1074).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 24 }, scrollViewContainer: { flexGrow: 2 }, input: { marginBottom: 8 }, redesignTextInput: null, redesignGrowSpacing: null, redesignSubmit: null };
 let obj3 = { fontFamily: fn(1074).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };

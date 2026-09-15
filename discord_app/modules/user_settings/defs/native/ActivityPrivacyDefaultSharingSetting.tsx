@@ -1,23 +1,23 @@
-// === Module 15999: ActivityPrivacyDefaultSharingSetting ===
+// === Module 16012: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 15999 (ActivityPrivacyDefaultSharingSetting)
-import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14941 */;
-import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 16000 */;
+// Module 16012 (ActivityPrivacyDefaultSharingSetting)
+import util from "util" /* 1115 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14951 */;
+import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 16013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8079).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8082).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
     return ActivityPrivacyMatchingExperiment.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
   },
@@ -60,7 +60,7 @@ const radio = SettingBuilders.createRadio({
         const obj2 = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj2.settingName = activityRestrictionSettingName;
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16001, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16014, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
       }
       const tmp2Result = ActivityPrivacyUpsellUtils;
     }

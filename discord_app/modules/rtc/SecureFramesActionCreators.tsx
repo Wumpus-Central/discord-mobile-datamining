@@ -1,14 +1,14 @@
-// === Module 9282: SecureFramesActionCreators ===
+// === Module 9285: SecureFramesActionCreators ===
 
-// Module 9282 (SecureFramesActionCreators)
+// Module 9285 (SecureFramesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1114 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9279 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9283 */;
+import util from "util" /* 1115 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9282 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9286 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import VoiceStateStore from "VoiceStateStore" /* 4655 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import VoiceStateStore from "VoiceStateStore" /* 4658 */;
 
 require = fn;
 function savePersistentCodesEnabled() {
@@ -176,17 +176,17 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
               tmp10 = require;
             }
             let obj5 = { title: stringResult, subtitle: null, confirmText: null, onConfirm: null };
-            const intl2 = tmp10(1114).intl;
+            const intl2 = tmp10(1115).intl;
             const string2 = intl2.string;
-            let intl3 = tmp10(1114).t;
+            let intl3 = tmp10(1115).t;
             if (closure_0) {
               let string2Result = string2(intl3.y015ZY);
             } else {
               string2Result = string2(intl3.E66FQn);
             }
             obj5.subtitle = string2Result;
-            intl3 = tmp10(1114).intl;
-            obj5.confirmText = intl3.string(tmp10(1114).t.aTuFYT);
+            intl3 = tmp10(1115).intl;
+            obj5.confirmText = intl3.string(tmp10(1115).t.aTuFYT);
             closure_1 = asyncGeneratorStep(async () => {
               if (c0 === 2) {
                 c0 = 3;
@@ -216,9 +216,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                                  c1(5492).disconnect();
-                                  const obj = c1(5492);
-                                  const voiceChannel = c1(5492).selectVoiceChannel(dependencyMap);
+                                  c1(5496).disconnect();
+                                  const obj = c1(5496);
+                                  const voiceChannel = c1(5496).selectVoiceChannel(dependencyMap);
                                 }),
                         done: false
                       };
@@ -276,7 +276,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9281).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(9284).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");

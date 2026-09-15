@@ -1,9 +1,9 @@
-// === Module 12016: AppealIngestionModalActionCreators ===
+// === Module 12020: AppealIngestionModalActionCreators ===
 
-// Module 12016 (AppealIngestionModalActionCreators)
+// Module 12020 (AppealIngestionModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
 import size from "module_2" /* 2 */;
 
 const APPEAL_INGESTION_MODAL_KEY = "APPEAL_INGESTION_MODAL_KEY";
@@ -13,7 +13,7 @@ export default {
   open(classificationId) {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId });
     const obj2 = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12017, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12021, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(APPEAL_INGESTION_MODAL_KEY);

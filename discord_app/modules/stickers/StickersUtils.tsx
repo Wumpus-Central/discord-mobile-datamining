@@ -1,16 +1,16 @@
-// === Module 4975: StickersUtils ===
+// === Module 4978: StickersUtils ===
 
-// Module 4975 (StickersUtils)
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import AvatarUtils from "AvatarUtils" /* 1396 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
-import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 1879 */;
-import StickersTypes from "StickersTypes" /* 5349 */;
-import StickersSuggestionUtils from "StickersSuggestionUtils" /* 5351 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4976 */;
-import StickerMessagePreviewStore from "StickerMessagePreviewStore" /* 5348 */;
+// Module 4978 (StickersUtils)
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import AvatarUtils from "AvatarUtils" /* 1397 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
+import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 1880 */;
+import StickersTypes from "StickersTypes" /* 5353 */;
+import StickersSuggestionUtils from "StickersSuggestionUtils" /* 5355 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4979 */;
+import StickerMessagePreviewStore from "StickerMessagePreviewStore" /* 5352 */;
 
 require = fn;
 function getStickerExtensionFromFormatType(format_type) {
@@ -30,14 +30,14 @@ function getStickerExtensionFromFormatType(format_type) {
     throw error;
   }
 }
-const StickersConstants = fn(1938);
+const StickersConstants = fn(1939);
 ({ DEFAULT_STICKER_DIMENSIONS: metroRequire, STICKER_APPLICATION_ID: closure_7, StickerAnimationSettings: closure_8 } = StickersConstants);
 const Endpoints = fn(1074).Endpoints;
 const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: closure_12, ASSET_ENDPOINT } = GLOBAL_ENV);
 const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-const values = Object.values(fn(5349).StickerExtensions);
+const values = Object.values(fn(5353).StickerExtensions);
 const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\d]+", "(" + values.join("|") + ")"));
 const regExp = new RegExp("(" + location.protocol + ASSET_ENDPOINT + "|" + location.protocol + MEDIA_PROXY_ENDPOINT + ")(" + decodeURIComponentResult + ")", "ig");
 const regExp1 = new RegExp("" + location.protocol + API_ENDPOINT + "(" + decodeURIComponentResult + ")", "ig");

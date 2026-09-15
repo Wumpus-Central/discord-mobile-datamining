@@ -1,15 +1,15 @@
-// === Module 16220: VoiceUserItem ===
+// === Module 16233: VoiceUserItem ===
 
-// Module 16220 (VoiceUserItem)
+// Module 16233 (VoiceUserItem)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10247 */;
+import native from "native" /* 1177 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10249 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 const require = globalThis.__r;
 
@@ -20,12 +20,12 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "text-sm/medium";
 let c10 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1176).AvatarSizes.XSMALL_20;
-const createStyles = fn(4636);
+const XSMALL_20 = fn(1177).AvatarSizes.XSMALL_20;
+const createStyles = fn(4639);
 let obj = { voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 }, disabled: { opacity: 0.5 }, voiceStateCollapsed: null, voiceStateIcon: null, legacyVoiceStateIcon: null, gameIcon: null };
 let size = { marginTop: 4, marginRight: 8, width: 32, height: 32, borderRadius: nativeDefault.radii.lg, borderWidth: 4, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", overflow: "hidden" };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(10249);
+const ChannelListLayout = fn(10251);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

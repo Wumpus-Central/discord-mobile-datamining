@@ -1,15 +1,15 @@
-// === Module 16504: NotificationCenterActionSheet ===
+// === Module 16517: NotificationCenterActionSheet ===
 
-// Module 16504 (NotificationCenterActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7952 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7955 */;
-import showForLaterModal from "showForLaterModal" /* 7962 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7963 */;
-import MentionActionCreatorsDefault from "MentionActionCreators" /* 16505 */;
+// Module 16517 (NotificationCenterActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7955 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7958 */;
+import showForLaterModal from "showForLaterModal" /* 7965 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7966 */;
+import MentionActionCreatorsDefault from "MentionActionCreators" /* 16518 */;
 import noop from "module_19" /* 19 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 7739 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 7742 */;
 
 require = fn;
 const UserSettingsSections = fn(1074).UserSettingsSections;
@@ -29,9 +29,9 @@ export default function NotificationCenterActionSheet() {
     MentionActionCreatorsDefault.setGuildFilter({ roleFilter, everyoneFilter });
   }, items1);
   let obj = roleFilter(504);
-  const isForLaterExperimentOn = roleFilter(7957).useIsForLaterExperimentOn("NotificationCenterActionSheet");
-  let obj2 = roleFilter(7957);
-  hasForLaterAccess = roleFilter(7957).useHasForLaterAccess("NotificationCenterActionSheet");
+  const isForLaterExperimentOn = roleFilter(7960).useIsForLaterExperimentOn("NotificationCenterActionSheet");
+  let obj2 = roleFilter(7960);
+  hasForLaterAccess = roleFilter(7960).useHasForLaterAccess("NotificationCenterActionSheet");
   const items2 = [hasForLaterAccess];
   closure_4 = hasForLaterAccess.useCallback((BOOKMARK) => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -43,23 +43,23 @@ export default function NotificationCenterActionSheet() {
       const tmpResult = openPremiumUpsellActionSheetDefault;
     }
   }, items2);
-  const obj3 = roleFilter(7957);
-  const canUseScheduledMessages = roleFilter(7947).useCanUseScheduledMessages();
+  const obj3 = roleFilter(7960);
+  const canUseScheduledMessages = roleFilter(7950).useCanUseScheduledMessages();
   const callback = hasForLaterAccess.useCallback(() => {
-    everyoneFilter(4603).hideActionSheet();
-    const obj = everyoneFilter(4603);
-    const result = roleFilter(12341).showScheduledMessagesModal();
+    everyoneFilter(4606).hideActionSheet();
+    const obj = everyoneFilter(4606);
+    const result = roleFilter(12345).showScheduledMessagesModal();
   }, []);
   const callback1 = hasForLaterAccess.useCallback(() => {
-    everyoneFilter(4603).hideActionSheet();
-    const obj = everyoneFilter(4603);
-    roleFilter(7485).openUserSettings({ screen: constants.NOTIFICATIONS });
+    everyoneFilter(4606).hideActionSheet();
+    const obj = everyoneFilter(4606);
+    roleFilter(7489).openUserSettings({ screen: constants.NOTIFICATIONS });
   }, []);
   const obj5 = { showGradient: true, header: null, children: null };
   const obj6 = { title: null };
-  const intl = roleFilter(1114).intl;
-  obj6.title = intl.string(roleFilter(1114).t.HcoRu0);
-  obj5.header = closure_6(roleFilter(7252).BottomSheetTitleHeader, obj6);
+  const intl = roleFilter(1115).intl;
+  obj6.title = intl.string(roleFilter(1115).t.HcoRu0);
+  obj5.header = closure_6(roleFilter(7256).BottomSheetTitleHeader, obj6);
   const obj7 = { hasIcons: true, children: null };
   const obj8 = {
     onValueChange() {
@@ -69,11 +69,11 @@ export default function NotificationCenterActionSheet() {
     label: null,
     icon: null
   };
-  const intl2 = roleFilter(1114).intl;
-  obj8.label = intl2.string(roleFilter(1114).t.asInft);
-  const obj4 = roleFilter(7947);
-  obj8.icon = closure_6(roleFilter(7302).ActionSheetRow.Icon, { IconComponent: roleFilter(5171).AtIcon, source: everyoneFilter(12552) });
-  const items3 = [closure_6(roleFilter(7302).ActionSheetSwitchRow, obj8), ];
+  const intl2 = roleFilter(1115).intl;
+  obj8.label = intl2.string(roleFilter(1115).t.asInft);
+  const obj4 = roleFilter(7950);
+  obj8.icon = closure_6(roleFilter(7306).ActionSheetRow.Icon, { IconComponent: roleFilter(5174).AtIcon, source: everyoneFilter(12557) });
+  const items3 = [closure_6(roleFilter(7306).ActionSheetSwitchRow, obj8), ];
   const obj10 = {
     onValueChange() {
       return dependencyMap({ everyoneFilter: !everyoneFilter });
@@ -83,62 +83,62 @@ export default function NotificationCenterActionSheet() {
     subLabel: null,
     icon: null
   };
-  const intl3 = roleFilter(1114).intl;
-  obj10.label = intl3.string(roleFilter(1114).t.S9GLtt);
-  const intl4 = roleFilter(1114).intl;
-  obj10.subLabel = intl4.string(roleFilter(1114).t.jYgZa4);
-  const obj9 = { IconComponent: roleFilter(5171).AtIcon, source: everyoneFilter(12552) };
-  obj10.icon = closure_6(roleFilter(7302).ActionSheetRow.Icon, { IconComponent: roleFilter(9906).BellIcon, source: everyoneFilter(16506) });
-  items3[1] = closure_6(roleFilter(7302).ActionSheetSwitchRow, obj10);
+  const intl3 = roleFilter(1115).intl;
+  obj10.label = intl3.string(roleFilter(1115).t.S9GLtt);
+  const intl4 = roleFilter(1115).intl;
+  obj10.subLabel = intl4.string(roleFilter(1115).t.jYgZa4);
+  const obj9 = { IconComponent: roleFilter(5174).AtIcon, source: everyoneFilter(12557) };
+  obj10.icon = closure_6(roleFilter(7306).ActionSheetRow.Icon, { IconComponent: roleFilter(9908).BellIcon, source: everyoneFilter(16519) });
+  items3[1] = closure_6(roleFilter(7306).ActionSheetSwitchRow, obj10);
   obj7.children = items3;
-  const items4 = [closure_7(roleFilter(7302).ActionSheetRow.Group, obj7), ];
+  const items4 = [closure_7(roleFilter(7306).ActionSheetRow.Group, obj7), ];
   let tmp10Result = null;
   if (isForLaterExperimentOn) {
     const obj12 = { icon: null, label: null, onPress: null, arrow: true };
-    const obj13 = { IconComponent: tmp(11837).BookmarkIcon };
-    obj12.icon = closure_6(tmp(7302).ActionSheetRow.Icon, obj13);
-    const intl5 = tmp(1114).intl;
-    obj12.label = intl5.string(tmp(1114).t["2pAkDA"]);
+    const obj13 = { IconComponent: tmp(11841).BookmarkIcon };
+    obj12.icon = closure_6(tmp(7306).ActionSheetRow.Icon, obj13);
+    const intl5 = tmp(1115).intl;
+    obj12.label = intl5.string(tmp(1115).t["2pAkDA"]);
     obj12.onPress = function onPress() {
       return closure_4(SavedMessagesTypes.SavedMessageSortTypes.BOOKMARK);
     };
-    tmp10Result = closure_6(tmp(7302).ActionSheetRow, obj12, "bookmarks");
+    tmp10Result = closure_6(tmp(7306).ActionSheetRow, obj12, "bookmarks");
   }
   const items5 = [tmp10Result, , , ];
   let tmp10Result3 = null;
   if (isForLaterExperimentOn) {
     const obj14 = { icon: null, label: null, onPress: null, arrow: true };
-    const obj15 = { IconComponent: tmp(4599).ClockIcon };
-    obj14.icon = closure_6(tmp(7302).ActionSheetRow.Icon, obj15);
-    const intl6 = tmp(1114).intl;
-    obj14.label = intl6.string(tmp(1114).t.aUXxzT);
+    const obj15 = { IconComponent: tmp(4602).ClockIcon };
+    obj14.icon = closure_6(tmp(7306).ActionSheetRow.Icon, obj15);
+    const intl6 = tmp(1115).intl;
+    obj14.label = intl6.string(tmp(1115).t.aUXxzT);
     obj14.onPress = function onPress() {
       return closure_4(SavedMessagesTypes.SavedMessageSortTypes.REMINDER);
     };
-    tmp10Result3 = closure_6(tmp(7302).ActionSheetRow, obj14, "reminders");
+    tmp10Result3 = closure_6(tmp(7306).ActionSheetRow, obj14, "reminders");
   }
   items5[1] = tmp10Result3;
   let tmp10Result4 = null;
   if (canUseScheduledMessages) {
     const obj16 = { icon: null, label: null, onPress: null, arrow: true };
-    const obj17 = { IconComponent: tmp(12339).CalendarPlusIcon };
-    obj16.icon = closure_6(tmp(7302).ActionSheetRow.Icon, obj17);
-    const intl7 = tmp(1114).intl;
-    obj16.label = intl7.string(tmp(1114).t.SZVs3K);
+    const obj17 = { IconComponent: tmp(12343).CalendarPlusIcon };
+    obj16.icon = closure_6(tmp(7306).ActionSheetRow.Icon, obj17);
+    const intl7 = tmp(1115).intl;
+    obj16.label = intl7.string(tmp(1115).t.SZVs3K);
     obj16.onPress = callback;
-    tmp10Result4 = closure_6(tmp(7302).ActionSheetRow, obj16, "scheduled-messages");
+    tmp10Result4 = closure_6(tmp(7306).ActionSheetRow, obj16, "scheduled-messages");
   }
   const obj18 = { hasIcons: true, children: null };
   items5[2] = tmp10Result4;
   const obj19 = { icon: null, label: null, onPress: null, arrow: true };
-  const obj11 = { IconComponent: roleFilter(9906).BellIcon, source: everyoneFilter(16506) };
-  obj19.icon = closure_6(roleFilter(7302).ActionSheetRow.Icon, { IconComponent: roleFilter(7483).SettingsIcon });
-  const intl8 = tmp(1114).intl;
-  obj19.label = intl8.string(roleFilter(1114).t.h850Ss);
+  const obj11 = { IconComponent: roleFilter(9908).BellIcon, source: everyoneFilter(16519) };
+  obj19.icon = closure_6(roleFilter(7306).ActionSheetRow.Icon, { IconComponent: roleFilter(7487).SettingsIcon });
+  const intl8 = tmp(1115).intl;
+  obj19.label = intl8.string(roleFilter(1115).t.h850Ss);
   obj19.onPress = callback1;
-  items5[3] = closure_6(roleFilter(7302).ActionSheetRow, obj19, "settings");
+  items5[3] = closure_6(roleFilter(7306).ActionSheetRow, obj19, "settings");
   obj18.children = items5;
-  items4[1] = closure_7(roleFilter(7302).ActionSheetRow.Group, obj18);
+  items4[1] = closure_7(roleFilter(7306).ActionSheetRow.Group, obj18);
   obj5.children = items4;
-  return closure_7(roleFilter(7300).ActionSheet, obj5);
+  return closure_7(roleFilter(7304).ActionSheet, obj5);
 };

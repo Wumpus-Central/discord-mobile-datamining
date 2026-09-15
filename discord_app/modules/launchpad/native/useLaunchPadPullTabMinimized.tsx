@@ -1,6 +1,6 @@
-// === Module 17084: useLaunchPadPullTabMinimized ===
+// === Module 17122: useLaunchPadPullTabMinimized ===
 
-// Module 17084 (useLaunchPadPullTabMinimized)
+// Module 17122 (useLaunchPadPullTabMinimized)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

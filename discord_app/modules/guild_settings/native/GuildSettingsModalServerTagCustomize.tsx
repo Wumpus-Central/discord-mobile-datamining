@@ -1,24 +1,24 @@
-// === Module 17702: GuildSettingsModalServerTagCustomize ===
+// === Module 17740: GuildSettingsModalServerTagCustomize ===
 
-// Module 17702 (GuildSettingsModalServerTagCustomize)
+// Module 17740 (GuildSettingsModalServerTagCustomize)
 import nativeDefault from "native" /* 576 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9192 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9317 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9195 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9320 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9193 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9196 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(9194).GuildProfileFetchStatus;
-const BADGES = fn(8048).BADGES;
+let GuildProfileFetchStatus = fn(9197).GuildProfileFetchStatus;
+const BADGES = fn(8051).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1 }, containerContent: { paddingTop: 16, paddingHorizontal: PX_16 }, warning: { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "flex-start", marginTop: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, warningText: { flex: 1 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);

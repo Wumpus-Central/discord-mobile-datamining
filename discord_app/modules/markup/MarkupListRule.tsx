@@ -1,8 +1,8 @@
-// === Module 5106: MarkupListRule ===
+// === Module 5109: MarkupListRule ===
 
-// Module 5106 (MarkupListRule)
+// Module 5109 (MarkupListRule)
 import _modDef38 from "module_38" /* 38 */;
-import _modDef4333 from "module_4333" /* 4333 */;
+import _modDef4336 from "module_4336" /* 4336 */;
 
 const re2 = /\n{2,}$/;
 const re3 = /(?:^|\n)( *)$/;
@@ -15,7 +15,7 @@ const re9 = /\n *$/;
 let closure_10 = "\n".charCodeAt(0);
 const re11 = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/;
 let obj = {};
-let merged = Object.assign(_modDef4333.defaultRules.list);
+let merged = Object.assign(_modDef4336.defaultRules.list);
 obj.requiredFirstCharacters = "\n *-0123456789".split("");
 obj.match = function match(str, allowList) {
   if (allowList.allowList) {

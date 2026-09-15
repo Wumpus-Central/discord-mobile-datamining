@@ -1,21 +1,21 @@
-// === Module 7189: TextAreaField ===
+// === Module 7193: TextAreaField ===
 
-// Module 7189 (TextAreaField)
+// Module 7193 (TextAreaField)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4340 */;
-import useTextField from "useTextField" /* 6715 */;
-import InputFieldContainer from "InputFieldContainer" /* 6722 */;
+import native from "native" /* 4343 */;
+import useTextField from "useTextField" /* 6719 */;
+import InputFieldContainer from "InputFieldContainer" /* 6726 */;
 import noop from "module_19" /* 19 */;
 
-const util = prop(1114);
-const Text_Text = prop(4632);
-const NativeTextInput = prop(6725);
-const useCharacterLimitAnnouncement = prop(7190);
+const util = prop(1115);
+const Text_Text = prop(4635);
+const NativeTextInput = prop(6729);
+const useCharacterLimitAnnouncement = prop(7194);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
 obj.maxLengthIndicator = rect;

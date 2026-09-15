@@ -1,10 +1,10 @@
-// === Module 7091: trackUserAvatarUpdated ===
+// === Module 7095: trackUserAvatarUpdated ===
 
-// Module 7091 (trackUserAvatarUpdated)
+// Module 7095 (trackUserAvatarUpdated)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import AvatarUtils from "AvatarUtils" /* 1396 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7092 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import AvatarUtils from "AvatarUtils" /* 1397 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7096 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

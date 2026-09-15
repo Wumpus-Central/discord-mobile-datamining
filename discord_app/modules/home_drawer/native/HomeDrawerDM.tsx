@@ -1,18 +1,18 @@
-// === Module 16440: HomeDrawerDM ===
+// === Module 16453: HomeDrawerDM ===
 
-// Module 16440 (HomeDrawerDM)
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4500 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import useChannelName from "useChannelName" /* 4789 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7983 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 9188 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10237 */;
-import BellZIcon from "BellZIcon" /* 13420 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15403 */;
+// Module 16453 (HomeDrawerDM)
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4503 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import useChannelName from "useChannelName" /* 4792 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7986 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 9191 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10239 */;
+import BellZIcon from "BellZIcon" /* 13425 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15413 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4817 */;
-import UserStore from "UserStore" /* 1371 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function HomeDrawerDMExpandedChildren(channel) {
@@ -37,9 +37,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   let obj2 = channel(504);
-  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(16441).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(16454).useBaseChannelUnreadBadgeState(channel, false).unread });
   closure_4 = tmp3;
-  const obj3 = channel(16441);
+  const obj3 = channel(16454);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -95,14 +95,14 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(16403).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(16416).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
-const isMultiUserDM = fn(1961).isMultiUserDM;
+const isMultiUserDM = fn(1962).isMultiUserDM;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_12 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerDM.tsx");

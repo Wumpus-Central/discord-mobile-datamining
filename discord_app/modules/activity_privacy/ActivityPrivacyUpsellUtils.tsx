@@ -1,14 +1,14 @@
-// === Module 14941: ActivityPrivacyUpsellUtils ===
+// === Module 14951: ActivityPrivacyUpsellUtils ===
 
-// Module 14941 (ActivityPrivacyUpsellUtils)
-import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
-import FrecencyStore from "FrecencyStore" /* 5590 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import SortedGuildStore from "SortedGuildStore" /* 5519 */;
+// Module 14951 (ActivityPrivacyUpsellUtils)
+import util from "util" /* 1115 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7102 */;
+import FrecencyStore from "FrecencyStore" /* 5594 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import SortedGuildStore from "SortedGuildStore" /* 5523 */;
 
 require = fn;
 function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
@@ -17,20 +17,20 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
   } else {
     let num2 = 2;
     let num = 2;
-    if (EXPANDING(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== setting) {
+    if (EXPANDING(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== setting) {
       num = 1;
-      if (tmp8(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== setting) {
+      if (tmp8(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== setting) {
         num = -1;
-        if (tmp8(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === setting) {
+        if (tmp8(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === setting) {
           num = 0;
         }
       }
     }
-    if (EXPANDING(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
+    if (EXPANDING(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF !== ACTIVITY_STATUS_OFF) {
       num2 = 1;
-      if (tmp8(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
+      if (tmp8(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS !== ACTIVITY_STATUS_OFF) {
         num2 = -1;
-        if (tmp8(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
+        if (tmp8(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON === ACTIVITY_STATUS_OFF) {
           num2 = 0;
         }
       }
@@ -42,13 +42,13 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
         } else {
           EXPANDING = obj.EXPANDING;
         }
-        dependencyMap = tmp8(7098).getSanitizedActivityRestrictedGuilds();
+        dependencyMap = tmp8(7102).getSanitizedActivityRestrictedGuilds();
         const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
-        if (setting !== tmp8(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
-          if (setting !== tmp8(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
-            if (setting !== tmp8(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON) {
+        if (setting !== tmp8(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
+          if (setting !== tmp8(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
+            if (setting !== tmp8(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON) {
               let str3 = "all";
-              if (setting === tmp8(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
+              if (setting === tmp8(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
                 str3 = "all";
               }
             }
@@ -150,11 +150,11 @@ function getProfileVisibilitySettingName(NumberResult) {
   }
 }
 const ChangeDirection = { RESTRICTING: "restricting", EXPANDING: "expanding" };
-let items = [fn(1185).ProfileVisibility.FRIENDS_AND_ALL_GUILDS, fn(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF];
+let items = [fn(1186).ProfileVisibility.FRIENDS_AND_ALL_GUILDS, fn(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF];
 let items1 = [items, , ];
-let items2 = [fn(1185).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS, fn(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS];
+let items2 = [fn(1186).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS, fn(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS];
 items1[1] = items2;
-const items3 = [fn(1185).ProfileVisibility.FRIENDS_ONLY, fn(1185).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON];
+const items3 = [fn(1186).ProfileVisibility.FRIENDS_ONLY, fn(1186).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON];
 items1[2] = items3;
 const map = new Map(items1);
 const size = fn(2);

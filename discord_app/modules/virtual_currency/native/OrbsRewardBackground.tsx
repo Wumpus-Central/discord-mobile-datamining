@@ -1,14 +1,14 @@
-// === Module 11914: OrbsRewardBackground ===
+// === Module 11918: OrbsRewardBackground ===
 
-// Module 11914 (OrbsRewardBackground)
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef11915 from "module_11915" /* 11915 */;
+// Module 11918 (OrbsRewardBackground)
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef11919 from "module_11919" /* 11919 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
-import AppStateStore from "AppStateStore" /* 1895 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AppStateStore from "AppStateStore" /* 1896 */;
 
-const _modDef11916 = tmp15(11916);
+const _modDef11920 = tmp15(11920);
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -51,22 +51,22 @@ export const OrbsRewardBackground = function OrbsRewardBackground(arg0) {
   const obj4 = { source: null, style: null, resizeMode: "cover", onLoad: null };
   const obj5 = { uri: null };
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  obj5.uri = _modDef11915;
+  obj5.uri = _modDef11919;
   obj4.source = obj5;
   obj4.style = style;
   obj4.onLoad = callback;
   const children = [closure_7(FastImageDefault, obj4), ];
   let tmp14Result = !stateFromStores;
   if (!stateFromStores) {
-    tmp14Result = stateFromStores1 === onReady(1093).AppStates.ACTIVE;
+    tmp14Result = stateFromStores1 === onReady(1094).AppStates.ACTIVE;
   }
   if (tmp14Result) {
     const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-    const obj7 = { uri: _modDef11916 };
+    const obj7 = { uri: _modDef11920 };
     obj6.source = obj7;
     obj6.style = style;
     obj6.onLoad = callback1;
-    tmp14Result = closure_7(onReady(8425).VideoComponent, obj6);
+    tmp14Result = closure_7(onReady(8428).VideoComponent, obj6);
   }
   children[1] = tmp14Result;
   return closure_8(noop.Fragment, { children });

@@ -1,6 +1,6 @@
-// === Module 8384: getDisplayFilename ===
+// === Module 8387: getDisplayFilename ===
 
-// Module 8384 (getDisplayFilename)
+// Module 8387 (getDisplayFilename)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/getDisplayFilename.tsx");

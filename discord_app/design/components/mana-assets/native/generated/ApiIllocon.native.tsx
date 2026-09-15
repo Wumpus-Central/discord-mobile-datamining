@@ -1,9 +1,9 @@
-// === Module 5846: ApiIllocon ===
+// === Module 5850: ApiIllocon ===
 
-// Module 5846 (ApiIllocon)
+// Module 5850 (ApiIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5847 from "module_5847" /* 5847 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5851 from "module_5851" /* 5851 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const ApiIllocon = function ApiIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5847 };
+  const obj2 = { uri: _modDef5851 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

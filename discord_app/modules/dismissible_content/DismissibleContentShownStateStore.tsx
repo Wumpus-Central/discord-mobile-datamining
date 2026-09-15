@@ -1,13 +1,13 @@
-// === Module 1949: DismissibleContentShownStateStore ===
+// === Module 1950: DismissibleContentShownStateStore ===
 
-// Module 1949 (DismissibleContentShownStateStore)
+// Module 1950 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1247 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
-import isActionRequiredDefault from "isActionRequired" /* 1953 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1949 */;
+import isActionRequiredDefault from "isActionRequired" /* 1954 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1951 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
 
 const require = globalThis.__r;
 
@@ -163,7 +163,7 @@ function withUpdateWinner(candidates, content) {
   }
 }
 const NOOP = fn(1074).NOOP;
-const identity = fn(1242);
+const identity = fn(1243);
 let closure_6 = identity.createWithEqualityFn(function initState() {
   const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();
@@ -173,7 +173,7 @@ let closure_6 = identity.createWithEqualityFn(function initState() {
   return obj;
 });
 let closure_7 = false;
-const batchInvocationManager = new fn(1952).BatchInvocationManager((arg0) => {
+const batchInvocationManager = new fn(1953).BatchInvocationManager((arg0) => {
   const resolved = Promise.resolve(arg0);
   return resolved.then((result) => {
     closure_0 = result;

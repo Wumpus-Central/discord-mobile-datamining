@@ -1,12 +1,12 @@
-// === Module 11665: openMediaModalOverlayAltTextSheet ===
+// === Module 11669: openMediaModalOverlayAltTextSheet ===
 
-// Module 11665 (openMediaModalOverlayAltTextSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
+// Module 11669 (openMediaModalOverlayAltTextSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx");
 
 export default function openMediaModalOverlayAltTextSheet(description) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11666, dependencyMap.paths), "MediaModalOverlayAltTextSheet", { description: description.description });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11670, dependencyMap.paths), "MediaModalOverlayAltTextSheet", { description: description.description });
 };

@@ -1,13 +1,13 @@
-// === Module 16846: ChannelDetailsTopic ===
+// === Module 16884: ChannelDetailsTopic ===
 
-// Module 16846 (ChannelDetailsTopic)
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
-import ChannelUtils from "ChannelUtils" /* 4781 */;
-import spring from "spring" /* 5055 */;
+// Module 16884 (ChannelDetailsTopic)
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4629 */;
+import ChannelUtils from "ChannelUtils" /* 4784 */;
+import spring from "spring" /* 5058 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function GuildChannelDetailsTopic(channel) {
@@ -184,7 +184,7 @@ function PrivateChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(4632).Text, obj2);
+    tmp4 = closure_11(channel(4635).Text, obj2);
   }
   return tmp4;
 }
@@ -198,19 +198,19 @@ function GroupDMChannelDetailsTopic(channel) {
     const obj3 = { textAlign: channel.textAlign };
     obj2.style = obj3;
     obj2.children = stateFromStores;
-    tmp4 = closure_11(channel(4632).Text, obj2);
+    tmp4 = closure_11(channel(4635).Text, obj2);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(11048);
+const ChannelDetailsConstants = fn(11052);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PlatformUtils = fn(1363);
-const createStyles = fn(4636);
+const PlatformUtils = fn(1364);
+const createStyles = fn(4639);
 let closure_15 = createStyles.createStyles({ hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 }, topic: { overflow: "hidden" }, gradient: { flex: 1, flexGrow: 1 }, expanded: { textAlign: "center" }, topicText: { paddingVertical: 5 } });
 const EMPTY_STYLE = {};
 const constants = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };

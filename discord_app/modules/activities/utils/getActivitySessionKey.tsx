@@ -1,6 +1,6 @@
-// === Module 11607: getActivitySessionKey ===
+// === Module 11611: getActivitySessionKey ===
 
-// Module 11607 (getActivitySessionKey)
+// Module 11611 (getActivitySessionKey)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getActivitySessionKey.tsx");

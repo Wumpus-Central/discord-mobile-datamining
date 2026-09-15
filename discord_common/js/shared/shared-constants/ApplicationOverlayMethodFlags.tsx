@@ -1,6 +1,6 @@
-// === Module 1923: ApplicationOverlayMethodFlags ===
+// === Module 1924: ApplicationOverlayMethodFlags ===
 
-// Module 1923 (ApplicationOverlayMethodFlags)
+// Module 1924 (ApplicationOverlayMethodFlags)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx");

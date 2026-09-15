@@ -1,16 +1,16 @@
-// === Module 4703: BaseConnection ===
+// === Module 4706: BaseConnection ===
 
-// Module 4703 (BaseConnection)
-import VideoQualityManager from "VideoQualityManager" /* 4704 */;
-import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer" /* 4706 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 4707 */;
-import cloneDeepDefault from "cloneDeep" /* 4708 */;
-import flatRestDefault from "flatRest" /* 4737 */;
+// Module 4706 (BaseConnection)
+import VideoQualityManager from "VideoQualityManager" /* 4707 */;
+import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer" /* 4709 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 4710 */;
+import cloneDeepDefault from "cloneDeep" /* 4711 */;
+import flatRestDefault from "flatRest" /* 4740 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4694 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4697 */;
 
 require = fn;
-const Constants = fn(4661);
+const Constants = fn(4664);
 ({ ConnectionStates: closure_4, DEFAULT_VOICE_BITRATE: hasOwnProperty, MediaTypes: metroRequire, ResolutionTypes: closure_7, MediaEngineContextTypes: closure_8, VIDEO_QUALITY_FRAMERATE: closure_9, SIMULCAST_HQ_QUALITY: c10 } = Constants);
 let closure_11 = 0;
 class BaseConnection extends tmp3 {
@@ -377,8 +377,12 @@ prototype["setSpatialAudioEnabled"] = function setSpatialAudioEnabled(arg0) {
 prototype["setCalcMaxBitrateFunc"] = function setCalcMaxBitrateFunc(calcMaxBitrateFunc) {
   this.calcMaxBitrateFunc = calcMaxBitrateFunc;
 };
+prototype["setFakeGoLiveEncodePixelCount"] = function setFakeGoLiveEncodePixelCount(arg0) {
+  const videoQualityManager = this.videoQualityManager;
+  const result = videoQualityManager.setFakeGoLiveEncodePixelCount(arg0);
+};
 let size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
-export const BaseConnectionEvent = fn(4707).BaseConnectionEvent;
+export const BaseConnectionEvent = fn(4710).BaseConnectionEvent;

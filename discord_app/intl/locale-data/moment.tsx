@@ -1,86 +1,86 @@
-// === Module 4226: moment ===
+// === Module 4229: moment ===
 
-// Module 4226 (moment)
-import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+// Module 4229 (moment)
+import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("intl/locale-data/moment.tsx");
 
 export const momentLocales = {
   bg() {
-    return asyncRequireImpl(4227, dependencyMap.paths);
-  },
-  cs() {
-    return asyncRequireImpl(4229, dependencyMap.paths);
-  },
-  da() {
     return asyncRequireImpl(4230, dependencyMap.paths);
   },
-  de() {
-    return asyncRequireImpl(4231, dependencyMap.paths);
-  },
-  el() {
+  cs() {
     return asyncRequireImpl(4232, dependencyMap.paths);
   },
-  () => asyncRequireImpl(4233, dependencyMap.paths),
-  () => asyncRequireImpl(4234, dependencyMap.paths),
-  () => asyncRequireImpl(4234, dependencyMap.paths),
-  fi() {
+  da() {
+    return asyncRequireImpl(4233, dependencyMap.paths);
+  },
+  de() {
+    return asyncRequireImpl(4234, dependencyMap.paths);
+  },
+  el() {
     return asyncRequireImpl(4235, dependencyMap.paths);
   },
-  fr() {
-    return asyncRequireImpl(4236, dependencyMap.paths);
-  },
-  hr() {
-    return asyncRequireImpl(4237, dependencyMap.paths);
-  },
-  hu() {
+  () => asyncRequireImpl(4236, dependencyMap.paths),
+  () => asyncRequireImpl(4237, dependencyMap.paths),
+  () => asyncRequireImpl(4237, dependencyMap.paths),
+  fi() {
     return asyncRequireImpl(4238, dependencyMap.paths);
   },
-  it() {
+  fr() {
     return asyncRequireImpl(4239, dependencyMap.paths);
   },
-  ja() {
+  hr() {
     return asyncRequireImpl(4240, dependencyMap.paths);
   },
-  ko() {
+  hu() {
     return asyncRequireImpl(4241, dependencyMap.paths);
   },
-  lt() {
+  it() {
     return asyncRequireImpl(4242, dependencyMap.paths);
   },
-  nl() {
+  ja() {
     return asyncRequireImpl(4243, dependencyMap.paths);
   },
-  no() {
+  ko() {
     return asyncRequireImpl(4244, dependencyMap.paths);
   },
-  pl() {
+  lt() {
     return asyncRequireImpl(4245, dependencyMap.paths);
   },
-  () => asyncRequireImpl(4246, dependencyMap.paths),
-  ro() {
+  nl() {
+    return asyncRequireImpl(4246, dependencyMap.paths);
+  },
+  no() {
     return asyncRequireImpl(4247, dependencyMap.paths);
   },
-  ru() {
+  pl() {
     return asyncRequireImpl(4248, dependencyMap.paths);
   },
   () => asyncRequireImpl(4249, dependencyMap.paths),
-  th() {
+  ro() {
     return asyncRequireImpl(4250, dependencyMap.paths);
   },
-  tr() {
+  ru() {
     return asyncRequireImpl(4251, dependencyMap.paths);
   },
-  uk() {
-    return asyncRequireImpl(4252, dependencyMap.paths);
-  },
-  vi() {
+  () => asyncRequireImpl(4252, dependencyMap.paths),
+  th() {
     return asyncRequireImpl(4253, dependencyMap.paths);
   },
-  () => asyncRequireImpl(4254, dependencyMap.paths),
-  () => asyncRequireImpl(4255, dependencyMap.paths),
-  hi() {
+  tr() {
+    return asyncRequireImpl(4254, dependencyMap.paths);
+  },
+  uk() {
+    return asyncRequireImpl(4255, dependencyMap.paths);
+  },
+  vi() {
     return asyncRequireImpl(4256, dependencyMap.paths);
+  },
+  () => asyncRequireImpl(4257, dependencyMap.paths),
+  () => asyncRequireImpl(4258, dependencyMap.paths),
+  hi() {
+    return asyncRequireImpl(4259, dependencyMap.paths);
   }
 };

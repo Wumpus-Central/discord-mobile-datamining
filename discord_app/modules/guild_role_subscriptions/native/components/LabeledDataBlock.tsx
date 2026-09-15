@@ -1,18 +1,18 @@
-// === Module 15304: LabeledDataBlock ===
+// === Module 15314: LabeledDataBlock ===
 
-// Module 15304 (LabeledDataBlock)
+// Module 15314 (LabeledDataBlock)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import Pressables from "Pressables" /* 5204 */;
+import native from "native" /* 1177 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import Pressables from "Pressables" /* 5207 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5605 */;
+import TextStyles from "TextStyles" /* 5609 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: nativeDefault.radii.sm, flexBasis: "auto", flexGrow: 1, padding: 16 }, title: { marginRight: 4 }, data: null, titleSection: null };
 const merged = Object.assign(TextStyles(fn(1074).Fonts.PRIMARY_MEDIUM, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 obj2.data = {};

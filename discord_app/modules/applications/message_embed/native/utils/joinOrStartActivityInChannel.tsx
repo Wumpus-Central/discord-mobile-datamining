@@ -1,10 +1,10 @@
-// === Module 12075: joinOrStartActivityInChannel ===
+// === Module 12079: joinOrStartActivityInChannel ===
 
-// Module 12075 (joinOrStartActivityInChannel)
+// Module 12079 (joinOrStartActivityInChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
 const require = fn;
 let closure_7 = async function _joinOrStartActivityInChannel(arg0) {

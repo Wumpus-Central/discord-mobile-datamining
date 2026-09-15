@@ -1,15 +1,15 @@
-// === Module 12847: AcceptInvite ===
+// === Module 12852: AcceptInvite ===
 
-// Module 12847 (AcceptInvite)
+// Module 12852 (AcceptInvite)
 import nativeDefault from "native" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import useToken from "useToken" /* 4338 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5662 */;
-import Card from "Card" /* 5688 */;
-import _modDef12856 from "module_12856" /* 12856 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
+import useToken from "useToken" /* 4341 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5666 */;
+import Card from "Card" /* 5692 */;
+import _modDef12861 from "module_12861" /* 12861 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -83,12 +83,12 @@ function AcceptInviteCardComponent(invite) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_9(first(12848), obj2);
+    return closure_9(first(12853), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_9(first(12851), obj);
+    return closure_9(first(12856), obj);
   } else {
     return closure_9(InviteResolving, {});
   }
@@ -98,7 +98,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1074).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { parentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" }, imageStyle: { marginVertical: 0, resizeMode: "cover" }, cardContainer: null, cardContent: null, resolvingContainer: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 obj2.cardContainer = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -124,7 +124,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef12856;
+    let guildSplashSource = _modDef12861;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

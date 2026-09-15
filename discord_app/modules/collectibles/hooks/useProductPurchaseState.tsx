@@ -1,9 +1,9 @@
-// === Module 8967: useProductPurchaseState ===
+// === Module 8970: useProductPurchaseState ===
 
-// Module 8967 (useProductPurchaseState)
-import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import compactDefault from "compact" /* 8968 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7660 */;
+// Module 8970 (useProductPurchaseState)
+import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
+import compactDefault from "compact" /* 8971 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7664 */;
 
 const require = globalThis.__r;
 

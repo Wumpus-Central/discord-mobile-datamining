@@ -1,14 +1,14 @@
-// === Module 7563: stores/AnalyticsTrackingStore ===
+// === Module 7567: stores/AnalyticsTrackingStore ===
 
-// Module 7563 (stores/AnalyticsTrackingStore)
+// Module 7567 (stores/AnalyticsTrackingStore)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtils2 from "AnalyticsUtils" /* 1240 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7564 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1241 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7568 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const AnalyticsUtils = fn(1248);
+const AnalyticsUtils = fn(1249);
 const obj2 = {
   dispatcher: DispatcherDefault,
   actionHandler: {
@@ -50,8 +50,8 @@ const obj2 = {
   getLaunchSignature() {
     return AnalyticsUtils2.launchSignature;
   },
-  scheduleWhenIdle: fn(7575).requestSafeIdleCallback,
-  sendUnloadRequest: fn(7576).sendUnloadRequest
+  scheduleWhenIdle: fn(7579).requestSafeIdleCallback,
+  sendUnloadRequest: fn(7580).sendUnloadRequest
 };
 const items = [AuthenticationStore];
 obj2.waitFor = items;

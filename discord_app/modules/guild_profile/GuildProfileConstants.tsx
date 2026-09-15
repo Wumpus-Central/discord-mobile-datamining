@@ -1,6 +1,6 @@
-// === Module 9315: GuildProfileConstants ===
+// === Module 9318: GuildProfileConstants ===
 
-// Module 9315 (GuildProfileConstants)
+// Module 9318 (GuildProfileConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { BOULDER: "Boulder", CASCADE: "Cascade", THUNDER: "Thunder", SOUL: "Soul", MARSH: "Marsh", VOLCANO: "Volcano", EARTH: "Earth", ZEPHYR: "Zephyr", RISING: "Rising" };

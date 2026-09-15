@@ -1,13 +1,13 @@
-// === Module 10780: Caption ===
+// === Module 10784: Caption ===
 
-// Module 10780 (Caption)
+// Module 10784 (Caption)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
-import native from "native" /* 1176 */;
-import createStyles from "createStyles" /* 4636 */;
-import ColorUtils from "ColorUtils" /* 4486 */;
+import native from "native" /* 1177 */;
+import createStyles from "createStyles" /* 4639 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

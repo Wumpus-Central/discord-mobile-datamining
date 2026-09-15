@@ -1,17 +1,17 @@
-// === Module 16735: ChannelDetailsSearchBar ===
+// === Module 16773: ChannelDetailsSearchBar ===
 
-// Module 16735 (ChannelDetailsSearchBar)
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12491 */;
+// Module 16773 (ChannelDetailsSearchBar)
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12496 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12469 */;
+import SearchQueryStore from "SearchQueryStore" /* 12474 */;
 
 const require = fn;
-let closure_5 = fn(7980).setIsChannelDetailsSearchActive;
+let closure_5 = fn(7983).setIsChannelDetailsSearchActive;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
-let obj = { back: { justifyContent: "center", height: fn(12500).SEARCH_BAR_HEIGHT, paddingStart: fn(11048).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 } };
+const createStyles = fn(4639);
+let obj = { back: { justifyContent: "center", height: fn(12505).SEARCH_BAR_HEIGHT, paddingStart: fn(11052).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 } };
 let closure_7 = createStyles.createStyles(obj);
-let obj3 = { justifyContent: "center", height: fn(12500).SEARCH_BAR_HEIGHT, paddingStart: fn(11048).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
+let obj3 = { justifyContent: "center", height: fn(12505).SEARCH_BAR_HEIGHT, paddingStart: fn(11052).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
 

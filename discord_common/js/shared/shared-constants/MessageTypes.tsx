@@ -1,6 +1,6 @@
-// === Module 1089: MessageTypes ===
+// === Module 1090: MessageTypes ===
 
-// Module 1089 (MessageTypes)
+// Module 1090 (MessageTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64, 68]), GUILD_DISCOVERY_STATUS: null, USER_MESSAGE: null, NOTIFIABLE_SYSTEM_MESSAGE: null, REPLYABLE: null, FORWARDABLE: null, REFERENCED_MESSAGE_AVAILABLE: null, AVAILABLE_IN_GUILD_FEED: null, DEADCHAT_PROMPTS: null, NON_COLLAPSIBLE: null, NON_PARSED: null, NON_REPORTABLE: null, AUTOMOD_INCIDENT_ACTIONS: null, SELF_MENTIONABLE_SYSTEM: null, SCHEDULABLE: null, SILENTLY_CREATABLE: null };

@@ -1,8 +1,8 @@
-// === Module 8374: useAvatarDecorationIfNotExpired ===
+// === Module 8377: useAvatarDecorationIfNotExpired ===
 
-// Module 8374 (useAvatarDecorationIfNotExpired)
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1881 */;
-import Timers from "Timers" /* 1952 */;
+// Module 8377 (useAvatarDecorationIfNotExpired)
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1882 */;
+import Timers from "Timers" /* 1953 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

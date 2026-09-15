@@ -1,14 +1,14 @@
-// === Module 15965: useAuthorizedSlayerApplications ===
+// === Module 15978: useAuthorizedSlayerApplications ===
 
-// Module 15965 (useAuthorizedSlayerApplications)
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7273 */;
+// Module 15978 (useAuthorizedSlayerApplications)
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7277 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7210 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7214 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(7210).FetchState;
+const FetchState = fn(7214).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");
 

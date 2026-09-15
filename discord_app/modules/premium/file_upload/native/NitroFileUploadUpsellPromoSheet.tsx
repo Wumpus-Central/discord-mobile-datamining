@@ -1,8 +1,8 @@
-// === Module 17063: NitroFileUploadUpsellPromoSheet ===
+// === Module 17101: NitroFileUploadUpsellPromoSheet ===
 
-// Module 17063 (NitroFileUploadUpsellPromoSheet)
+// Module 17101 (NitroFileUploadUpsellPromoSheet)
 import nativeDefault from "native" /* 576 */;
-import openUserSettings from "openUserSettings" /* 7485 */;
+import openUserSettings from "openUserSettings" /* 7489 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,9 +10,9 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -45,13 +45,13 @@ export default function NitroFileUploadUpsellPromoSheet(markAsDismissed) {
   const obj = markAsDismissed(callback[7]);
   obj2.illustration = <View style={tmp.illustration}>{jsx(markAsDismissed(callback[10]).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" })}</View>;
   const intl = markAsDismissed(callback[11]).intl;
-  obj2.title = intl.string(require("module_2496")["Uty2/X"]);
+  obj2.title = intl.string(require("module_2497")["Uty2/X"]);
   const intl2 = markAsDismissed(callback[11]).intl;
-  obj2.description = intl2.string(require("module_2496").VAgI8Q);
+  obj2.description = intl2.string(require("module_2497").VAgI8Q);
   obj2.onDismiss = callback2;
   const obj4 = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = markAsDismissed(callback[11]).intl;
-  obj4.text = intl3.string(require("module_2496").mRy6sO);
+  obj4.text = intl3.string(require("module_2497").mRy6sO);
   obj4.onPress = callback1;
   obj2.actions = jsx(markAsDismissed(callback[13]).Button, { grow: true, size: "lg", variant: "primary", text: null, onPress: null });
   return jsx(markAsDismissed(callback[9]).PromoSheet, { illustration: null, title: null, description: null, onDismiss: null, actions: null });

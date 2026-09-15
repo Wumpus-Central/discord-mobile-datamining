@@ -1,10 +1,10 @@
-// === Module 1901: BaseTelemetryExportChannel ===
+// === Module 1902: BaseTelemetryExportChannel ===
 
-// Module 1901 (BaseTelemetryExportChannel)
+// Module 1902 (BaseTelemetryExportChannel)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1902 */;
+import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1903 */;
 
 require = fn;
 class BaseTelemetryExportChannel extends tmp2 {

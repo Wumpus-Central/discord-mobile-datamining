@@ -1,9 +1,9 @@
-// === Module 5510: useGuildMemberDisplayRole ===
+// === Module 5514: useGuildMemberDisplayRole ===
 
-// Module 5510 (useGuildMemberDisplayRole)
-import PermissionUtilsAll from "PermissionUtils" /* 4280 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildStore from "GuildStore" /* 1979 */;
+// Module 5514 (useGuildMemberDisplayRole)
+import PermissionUtilsAll from "PermissionUtils" /* 4283 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildStore from "GuildStore" /* 1980 */;
 
 const require = globalThis.__r;
 

@@ -1,16 +1,16 @@
-// === Module 7288: UserProfileRolesCard ===
+// === Module 7292: UserProfileRolesCard ===
 
-// Module 7288 (UserProfileRolesCard)
+// Module 7292 (UserProfileRolesCard)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4334 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import ClipboardUtils from "ClipboardUtils" /* 7292 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7306 */;
-import RoleIconDefault from "RoleIcon" /* 7308 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7309 */;
+import ToastUtils from "ToastUtils" /* 4337 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import ClipboardUtils from "ClipboardUtils" /* 7296 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7310 */;
+import RoleIconDefault from "RoleIcon" /* 7312 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7313 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 
 require = fn;
 function RoleDot(color) {
@@ -149,7 +149,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm }, roleDot: null };
 let size = { borderRadius: nativeDefault.radii.round, height: 12, width: 12 };
 obj2.roleDot = size;
@@ -173,13 +173,13 @@ export default function UserProfileRolesCard(userId) {
   let tmp4 = null;
   if (0 !== roles.length) {
     const obj2 = { title: null, style: null, children: null };
-    const intl = tmp(1114).intl;
-    obj2.title = intl.string(tmp(1114).t["LPJmL/"]);
+    const intl = tmp(1115).intl;
+    obj2.title = intl.string(tmp(1115).t["LPJmL/"]);
     obj2.style = userId.style;
     const obj3 = { guildId, guildMemberRoleIds: roles };
     obj2.children = closure_9(RolesList, obj3);
-    tmp4 = closure_9(guildId(7310), obj2);
-    const tmp7 = guildId(7310);
+    tmp4 = closure_9(guildId(7314), obj2);
+    const tmp7 = guildId(7314);
   }
   return tmp4;
 };

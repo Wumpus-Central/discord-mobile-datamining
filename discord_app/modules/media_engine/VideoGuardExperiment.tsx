@@ -1,7 +1,7 @@
-// === Module 13392: VideoGuardExperiment ===
+// === Module 13397: VideoGuardExperiment ===
 
-// Module 13392 (VideoGuardExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 13397 (VideoGuardExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-video-guard", kind: "user", defaultConfig: { videoEnabled: true }, variations: null };

@@ -1,10 +1,10 @@
-// === Module 8571: AgeVerificationStore ===
+// === Module 8574: AgeVerificationStore ===
 
-// Module 8571 (AgeVerificationStore)
+// Module 8574 (AgeVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 let c3 = 86400000;

@@ -1,8 +1,8 @@
-// === Module 1997: EntityDao ===
+// === Module 1998: EntityDao ===
 
-// Module 1997 (EntityDao)
-import Table from "Table" /* 1991 */;
-import TableId from "TableId" /* 1993 */;
+// Module 1998 (EntityDao)
+import Table from "Table" /* 1992 */;
+import TableId from "TableId" /* 1994 */;
 import size from "module_2" /* 2 */;
 
 let EntityDao;

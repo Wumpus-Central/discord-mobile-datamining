@@ -1,18 +1,18 @@
-// === Module 16993: MessageRequestPreview ===
+// === Module 17031: MessageRequestPreview ===
 
-// Module 16993 (MessageRequestPreview)
+// Module 17031 (MessageRequestPreview)
 import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import TextStyles_mod from "TextStyles" /* 5605 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import TextStyles_mod from "TextStyles" /* 5609 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ Fonts, AnalyticEvents: metroRequire, MessageFlags: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { systemContent: null, messageContent: null };
 let obj3 = { fontStyle: "italic" };
 let TextStyles = TextStyles_mod;
@@ -31,10 +31,10 @@ const result = size.fileFinishedImporting("modules/message_request/native/Messag
 export default noop.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const messageRequestPreview = channel(12724).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(12729).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
-  let obj = channel(12724);
+  let obj = channel(12729);
   const items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
@@ -61,8 +61,8 @@ export default noop.memo(function MessageRequestPreview(channel) {
     }
   }, items2);
   if (error) {
-    const intl9 = tmp2(1114).intl;
-    let stringResult = intl9.string(tmp2(1114).t.BZHld2);
+    const intl9 = tmp2(1115).intl;
+    let stringResult = intl9.string(tmp2(1115).t.BZHld2);
     let flag = false;
   } else {
     stringResult = null;
@@ -70,15 +70,15 @@ export default noop.memo(function MessageRequestPreview(channel) {
     if (loaded) {
       if (null != message) {
         if (isBlocked) {
-          const intl8 = tmp2(1114).intl;
-          stringResult = intl8.string(tmp2(1114).t["WPe+xL"]);
+          const intl8 = tmp2(1115).intl;
+          stringResult = intl8.string(tmp2(1115).t["WPe+xL"]);
           flag = false;
         }
       }
       if (null != message) {
         if (isIgnored) {
-          const intl7 = tmp2(1114).intl;
-          stringResult = intl7.string(tmp2(1114).t.uxrh1O);
+          const intl7 = tmp2(1115).intl;
+          stringResult = intl7.string(tmp2(1115).t.uxrh1O);
           flag = false;
         }
       }
@@ -88,31 +88,31 @@ export default noop.memo(function MessageRequestPreview(channel) {
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(7992)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(7995)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
             stringResult = content1;
           }
-          const intl6 = tmp2(1114).intl;
-          stringResult = intl6.string(tmp2(1114).t["262oPB"]);
+          const intl6 = tmp2(1115).intl;
+          stringResult = intl6.string(tmp2(1115).t["262oPB"]);
           flag = false;
         }
       }
       if (null != message) {
         if (tmp2Result.getMessageStickers(message).length > 0) {
-          const intl5 = tmp2(1114).intl;
-          let stringResult1 = intl5.string(tmp2(1114).t["zuI+by"]);
+          const intl5 = tmp2(1115).intl;
+          let stringResult1 = intl5.string(tmp2(1115).t["zuI+by"]);
         } else if (null != message.interaction) {
-          const intl4 = tmp2(1114).intl;
-          stringResult1 = intl4.string(tmp2(1114).t["2v7kfl"]);
+          const intl4 = tmp2(1115).intl;
+          stringResult1 = intl4.string(tmp2(1115).t["2v7kfl"]);
         } else if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
-          const intl3 = tmp2(1114).intl;
-          stringResult1 = intl3.string(tmp2(1114).t["6bhHrc"]);
+          const intl3 = tmp2(1115).intl;
+          stringResult1 = intl3.string(tmp2(1115).t["6bhHrc"]);
         } else {
-          const intl2 = tmp2(1114).intl;
+          const intl2 = tmp2(1115).intl;
           const string = intl2.string;
-          const t = tmp2(1114).t;
+          const t = tmp2(1115).t;
           if (hasFlagResult) {
             stringResult1 = string(t.Xxm5i3);
           } else {
@@ -122,14 +122,14 @@ export default noop.memo(function MessageRequestPreview(channel) {
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(4975);
+        tmp2Result = tmp2(4978);
       } else {
-        const intl = tmp2(1114).intl;
-        stringResult = intl.string(tmp2(1114).t["0KfDxM"]);
+        const intl = tmp2(1115).intl;
+        stringResult = intl.string(tmp2(1115).t["0KfDxM"]);
         flag = false;
       }
     }
   }
-  let obj3 = { style: channel.style, children: jsx(channel(1176).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
-  return <View style={channel.style}>{jsx(channel(1176).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
+  let obj3 = { style: channel.style, children: jsx(channel(1177).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult }) };
+  return <View style={channel.style}>{jsx(channel(1177).LegacyText, { style: flag ? tmp.messageContent : tmp.systemContent, numberOfLines: 3, ellipsizeMode: "tail", children: stringResult })}</View>;
 });

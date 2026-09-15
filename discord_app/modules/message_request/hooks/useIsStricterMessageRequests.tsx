@@ -1,7 +1,7 @@
-// === Module 12575: useIsStricterMessageRequests ===
+// === Module 12580: useIsStricterMessageRequests ===
 
-// Module 12575 (useIsStricterMessageRequests)
-import RegionalTeenUtils from "RegionalTeenUtils" /* 12549 */;
+// Module 12580 (useIsStricterMessageRequests)
+import RegionalTeenUtils from "RegionalTeenUtils" /* 12554 */;
 import size from "module_2" /* 2 */;
 
 const set = new Set(["GB"]);

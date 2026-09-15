@@ -1,12 +1,12 @@
-// === Module 11831: ShareChatInput ===
+// === Module 11835: ShareChatInput ===
 
-// Module 11831 (ShareChatInput)
+// Module 11835 (ShareChatInput)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Pressables from "Pressables" /* 5204 */;
-import FormInputDefault from "FormInput" /* 8724 */;
-import ReactionIcon from "ReactionIcon" /* 8883 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9433 */;
+import util from "util" /* 1115 */;
+import Pressables from "Pressables" /* 5207 */;
+import FormInputDefault from "FormInput" /* 8727 */;
+import ReactionIcon from "ReactionIcon" /* 8886 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9436 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,12 +14,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 }, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
 let obj3 = { flex: 1, flexDirection: "row", backgroundColor: nativeDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.chatInput = { flex: 1, paddingVertical: 0, paddingHorizontal: nativeDefault.space.PX_4, maxHeight: 80 };
 const obj5 = { fontSize: 16, lineHeight: 20, fontFamily: fn(1074).Fonts.PRIMARY_NORMAL, color: nativeDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
-const PlatformUtils = fn(1363);
+const PlatformUtils = fn(1364);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;

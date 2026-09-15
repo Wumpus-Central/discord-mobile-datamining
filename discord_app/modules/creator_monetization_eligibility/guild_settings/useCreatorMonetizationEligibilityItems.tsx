@@ -1,9 +1,9 @@
-// === Module 17804: useCreatorMonetizationEligibilityItems ===
+// === Module 17842: useCreatorMonetizationEligibilityItems ===
 
-// Module 17804 (useCreatorMonetizationEligibilityItems)
-import util from "util" /* 1114 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import formatDurationFromDaysDefault from "formatDurationFromDays" /* 17807 */;
+// Module 17842 (useCreatorMonetizationEligibilityItems)
+import util from "util" /* 1115 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
+import formatDurationFromDaysDefault from "formatDurationFromDays" /* 17845 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -135,8 +135,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let fn;
       if (!noRecentViolations) {
         fn = () => {
-          const tmp = onEligibilityBecameStale(4325);
-          return tmp(onEligibilityBecameStale(2024).getSubmitRequestURL());
+          const tmp = onEligibilityBecameStale(4328);
+          return tmp(onEligibilityBecameStale(2025).getSubmitRequestURL());
         };
       }
       obj2.actionHandler = fn;

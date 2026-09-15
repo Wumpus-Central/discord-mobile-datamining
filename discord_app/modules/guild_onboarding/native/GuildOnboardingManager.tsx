@@ -1,15 +1,15 @@
-// === Module 17487: GuildOnboardingManager ===
+// === Module 17525: GuildOnboardingManager ===
 
-// Module 17487 (GuildOnboardingManager)
-import doGuildOnboardingDefault from "doGuildOnboarding" /* 7198 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4458 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+// Module 17525 (GuildOnboardingManager)
+import doGuildOnboardingDefault from "doGuildOnboarding" /* 7202 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 
 let require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
-const GuildMemberFlags = fn(4262).GuildMemberFlags;
+const GuildMemberFlags = fn(4265).GuildMemberFlags;
 let guildId = null;
 const channelId = null;
 const prototype = function GuildOnboardingManager() {
@@ -56,7 +56,7 @@ const prototype = function GuildOnboardingManager() {
     }
   };
   applyArgumentsResult.handleGuildDelete = function handleGuildDelete(guild) {
-    const result = applyArgumentsResult(7198).discardOnboardingPromise(guild.guild.id);
+    const result = applyArgumentsResult(7202).discardOnboardingPromise(guild.guild.id);
   };
   applyArgumentsResult._openOnboardingIfIncomplete = function _openOnboardingIfIncomplete(guildId) {
     guild = guild.getGuild(guildId);
@@ -70,16 +70,16 @@ const prototype = function GuildOnboardingManager() {
           if (num == null) {
             num = 0;
           }
-          hasFlagResult = !applyArgumentsResult(1384).hasFlag(num, constants2.COMPLETED_ONBOARDING);
-          const obj = applyArgumentsResult(1384);
+          hasFlagResult = !applyArgumentsResult(1385).hasFlag(num, constants2.COMPLETED_ONBOARDING);
+          const obj = applyArgumentsResult(1385);
         }
         if (hasFlagResult) {
           let num2 = selfMember.flags;
           if (num2 == null) {
             num2 = 0;
           }
-          hasFlagResult = applyArgumentsResult(1384).hasFlag(num2, constants2.STARTED_ONBOARDING);
-          const obj2 = applyArgumentsResult(1384);
+          hasFlagResult = applyArgumentsResult(1385).hasFlag(num2, constants2.STARTED_ONBOARDING);
+          const obj2 = applyArgumentsResult(1385);
         }
         if (hasFlagResult) {
           const obj3 = { guildId };

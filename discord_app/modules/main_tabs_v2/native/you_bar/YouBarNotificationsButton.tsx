@@ -1,24 +1,24 @@
-// === Module 16490: YouBarNotificationsButton ===
+// === Module 16503: YouBarNotificationsButton ===
 
-// Module 16490 (YouBarNotificationsButton)
+// Module 16503 (YouBarNotificationsButton)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import HapticUtils from "HapticUtils" /* 4604 */;
-import spring from "spring" /* 5055 */;
-import showForLaterModal from "showForLaterModal" /* 7962 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7963 */;
+import util from "util" /* 1115 */;
+import HapticUtils from "HapticUtils" /* 4607 */;
+import spring from "spring" /* 5058 */;
+import showForLaterModal from "showForLaterModal" /* 7965 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7966 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11790 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11794 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15179);
+const YouBarConstants = fn(15189);
 ({ YOU_BAR_SPRING_CONFIG: metroRequire, YOU_BAR_BUTTON_HIT_SLOP: closure_7, YOU_BAR_BUTTON_ICON_SIZE } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE }, iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, overdueReminderDot: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION } };
 let closure_10 = createStyles.createStyles(obj);
 const __initData = { code: "function YouBarNotificationsButtonTsx1(){const{withSpring,badgeCount,YOU_BAR_SPRING_CONFIG,tokens}=this.__closure;return{transform:[{scaleX:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)}],marginLeft:withSpring(badgeCount>0?tokens.space.PX_4:0,YOU_BAR_SPRING_CONFIG),opacity:withSpring(badgeCount>0?1:0,YOU_BAR_SPRING_CONFIG)};}" };

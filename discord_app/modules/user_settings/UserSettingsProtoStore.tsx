@@ -1,16 +1,16 @@
-// === Module 1219: UserSettingsProtoStore ===
+// === Module 1220: UserSettingsProtoStore ===
 
-// Module 1219 (UserSettingsProtoStore)
+// Module 1220 (UserSettingsProtoStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import timestamp from "timestamp" /* 1215 */;
-import frecency_user_settings from "frecency_user_settings" /* 1220 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1221 */;
-import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1223 */;
-import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1224 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import timestamp from "timestamp" /* 1216 */;
+import frecency_user_settings from "frecency_user_settings" /* 1221 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1222 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1224 */;
+import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1225 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
 import size from "module_2" /* 2 */;
 

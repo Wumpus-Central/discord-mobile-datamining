@@ -1,7 +1,7 @@
-// === Module 7083: ManaTypeConsolidationExperiment ===
+// === Module 7087: ManaTypeConsolidationExperiment ===
 
-// Module 7083 (ManaTypeConsolidationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 7087 (ManaTypeConsolidationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-05-mana-type-consolidation", kind: "user", defaultConfig: { enabled: false }, variations: null };

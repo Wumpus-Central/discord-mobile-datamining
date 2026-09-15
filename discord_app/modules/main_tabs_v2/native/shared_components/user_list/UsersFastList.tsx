@@ -1,18 +1,18 @@
-// === Module 10995: UsersFastList ===
+// === Module 10999: UsersFastList ===
 
-// Module 10995 (UsersFastList)
+// Module 10999 (UsersFastList)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import Pressables from "Pressables" /* 5204 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5206 */;
-import TableRow from "TableRow" /* 5686 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7975 */;
-import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10996 */;
-import UserRowDefault from "UserRow" /* 10997 */;
-import GroupDMRowDefault from "GroupDMRow" /* 11041 */;
-import ChannelRowDefault from "ChannelRow" /* 11044 */;
+import native from "native" /* 1177 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import Pressables from "Pressables" /* 5207 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5209 */;
+import TableRow from "TableRow" /* 5690 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 7978 */;
+import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 11000 */;
+import UserRowDefault from "UserRow" /* 11001 */;
+import GroupDMRowDefault from "GroupDMRow" /* 11045 */;
+import ChannelRowDefault from "ChannelRow" /* 11048 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,11 +34,11 @@ function PlaceholderSection() {
   return React5(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(10342);
+const UsersFastListConstants = fn(10344);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING }, stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
 let obj3 = { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

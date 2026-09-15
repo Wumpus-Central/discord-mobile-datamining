@@ -1,23 +1,23 @@
-// === Module 10186: CallTile ===
+// === Module 10188: CallTile ===
 
-// Module 10186 (CallTile)
+// Module 10188 (CallTile)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4837 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8296 */;
-import _modDef9572 from "module_9572" /* 9572 */;
-import _modDef9594 from "module_9594" /* 9594 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10187 */;
-import _modDef10192 from "module_10192" /* 10192 */;
-import _modDef10193 from "module_10193" /* 10193 */;
+import native from "native" /* 1177 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4840 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8299 */;
+import _modDef9574 from "module_9574" /* 9574 */;
+import _modDef9596 from "module_9596" /* 9596 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10189 */;
 import _modDef10194 from "module_10194" /* 10194 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 10195 */;
+import _modDef10195 from "module_10195" /* 10195 */;
+import _modDef10196 from "module_10196" /* 10196 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 10197 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4658 */;
-import UserStore from "UserStore" /* 1371 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 class StreamPreviewTile {
@@ -44,17 +44,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10192;
+    let tmp3 = _modDef10194;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10193;
+      tmp3 = _modDef10195;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef9572;
+      tmp3 = _modDef9574;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef9594;
+      tmp3 = _modDef9596;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef10194;
+      tmp3 = _modDef10196;
     }
   }
   let tmp14 = null;
@@ -148,16 +148,16 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9597);
+const ChannelCallStore = fn(9599);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(4657);
+const CallConstants = fn(4660);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 let obj3 = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(4486);
+const ColorUtils = fn(4489);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj3;

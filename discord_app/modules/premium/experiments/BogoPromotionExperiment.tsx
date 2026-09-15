@@ -1,7 +1,7 @@
-// === Module 13551: BogoPromotionExperiment ===
+// === Module 13556: BogoPromotionExperiment ===
 
-// Module 13551 (BogoPromotionExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 13556 (BogoPromotionExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-bogo-promotion-gate-v2", kind: "user", defaultConfig: false, variations: { 1: true } });

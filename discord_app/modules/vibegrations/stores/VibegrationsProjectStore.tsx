@@ -1,11 +1,11 @@
-// === Module 16690: VibegrationsProjectStore ===
+// === Module 16703: VibegrationsProjectStore ===
 
-// Module 16690 (VibegrationsProjectStore)
+// Module 16703 (VibegrationsProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7348 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7352 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 function isProjectOwner(item10010) {

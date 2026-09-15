@@ -1,10 +1,10 @@
-// === Module 14181: NewTag ===
+// === Module 14186: NewTag ===
 
-// Module 14181 (NewTag)
+// Module 14186 (NewTag)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import LinearGradientDefault from "LinearGradient" /* 5068 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import LinearGradientDefault from "LinearGradient" /* 5071 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Platform } = get_ActivityIndicator);
 const HorizontalGradient = fn(1074).HorizontalGradient;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { tagContainer: { height: "auto", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, justifyContent: "center", alignItems: "center", paddingHorizontal: 4, marginBottom: 2, borderRadius: nativeDefault.radii.round }, tagText: { textTransform: "uppercase" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,22 +1,22 @@
-// === Module 8780: InAppReportsWidgetPreviewElement ===
+// === Module 8783: InAppReportsWidgetPreviewElement ===
 
-// Module 8780 (InAppReportsWidgetPreviewElement)
+// Module 8783 (InAppReportsWidgetPreviewElement)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7082 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7725 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7732 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8357 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8781 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 8797 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7086 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7728 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7735 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8360 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8784 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 8800 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

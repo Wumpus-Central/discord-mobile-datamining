@@ -1,26 +1,26 @@
-// === Module 13874: VoiceMemberEmbeddedActivity ===
+// === Module 13879: VoiceMemberEmbeddedActivity ===
 
-// Module 13874 (VoiceMemberEmbeddedActivity)
+// Module 13879 (VoiceMemberEmbeddedActivity)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9660 */;
+import native from "native" /* 1177 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9662 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import UserStore from "UserStore" /* 1371 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_MAX_WIDTH = fn(7254).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7258).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const XSMALL = fn(1176).AvatarSizes.XSMALL;
-const androidRippleConfig = fn(1180).getThemedRippleConfig({ foreground: true });
+const XSMALL = fn(1177).AvatarSizes.XSMALL;
+const androidRippleConfig = fn(1181).getThemedRippleConfig({ foreground: true });
 let size = { width: 32, height: 32, marginRight: 16, borderRadius: 4 };
 let c14 = 1.7777777777777777;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { voiceMemberItemRow: { paddingTop: 12, paddingBottom: 16, flexDirection: "column", display: "flex", justifyContent: "flex-start" }, innerRow: { paddingHorizontal: 16, alignItems: "center" }, activityDetails: { marginBottom: 8, flexDirection: "row", display: "flex" }, appIcon: size, appIconPlaceholder: null, centerGroup: null, applicationName: null, joinButton: null, joinButtonPill: null, joinButtonContainer: null, overflow: null, overflowBackgroundColor: null, overflowBackgroundColorActionSheet: null };
 let obj3 = {};
 const merged = Object.assign(size);
@@ -31,8 +31,8 @@ obj.applicationName = { lineHeight: 20 };
 obj.joinButton = { alignSelf: "center" };
 obj.joinButtonPill = { borderRadius: 100, paddingHorizontal: 24 };
 obj.joinButtonContainer = { alignItems: "center", justifyContent: "center", display: "flex", width: "100%", paddingHorizontal: 16 };
-obj.overflow = { height: fn(1176).AVATAR_SIZE_MAP[XSMALL] };
-let obj4 = { height: fn(1176).AVATAR_SIZE_MAP[XSMALL] };
+obj.overflow = { height: fn(1177).AVATAR_SIZE_MAP[XSMALL] };
+let obj4 = { height: fn(1177).AVATAR_SIZE_MAP[XSMALL] };
 obj.overflowBackgroundColor = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 const obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj.overflowBackgroundColorActionSheet = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

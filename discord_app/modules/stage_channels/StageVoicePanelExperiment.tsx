@@ -1,7 +1,7 @@
-// === Module 4845: StageVoicePanelExperiment ===
+// === Module 4848: StageVoicePanelExperiment ===
 
-// Module 4845 (StageVoicePanelExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 4848 (StageVoicePanelExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-stage-voice-panel", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

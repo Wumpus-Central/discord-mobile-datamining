@@ -1,12 +1,12 @@
-// === Module 12700: GuildPowerupsSinglePerkCard ===
+// === Module 12705: GuildPowerupsSinglePerkCard ===
 
-// Module 12700 (GuildPowerupsSinglePerkCard)
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12626 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12629 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12649 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12650 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12697 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12701 */;
+// Module 12705 (GuildPowerupsSinglePerkCard)
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12631 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12634 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12654 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12655 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12702 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12706 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

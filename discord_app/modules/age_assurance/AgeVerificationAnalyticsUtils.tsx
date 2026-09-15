@@ -1,8 +1,8 @@
-// === Module 8531: AgeVerificationAnalyticsUtils ===
+// === Module 8534: AgeVerificationAnalyticsUtils ===
 
-// Module 8531 (AgeVerificationAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+// Module 8534 (AgeVerificationAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

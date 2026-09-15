@@ -1,11 +1,11 @@
-// === Module 9229: LastUsedVideoBackgroundOption ===
+// === Module 9232: LastUsedVideoBackgroundOption ===
 
-// Module 9229 (LastUsedVideoBackgroundOption)
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9226 */;
+// Module 9232 (LastUsedVideoBackgroundOption)
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9229 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1219 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const size = fn(2);

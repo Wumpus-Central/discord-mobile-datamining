@@ -1,8 +1,8 @@
-// === Module 4366: BadgesCoachmarkRive ===
+// === Module 4369: BadgesCoachmarkRive ===
 
-// Module 4366 (BadgesCoachmarkRive)
-import BaseRive from "BaseRive" /* 4367 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4422 */;
+// Module 4369 (BadgesCoachmarkRive)
+import BaseRive from "BaseRive" /* 4370 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4425 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

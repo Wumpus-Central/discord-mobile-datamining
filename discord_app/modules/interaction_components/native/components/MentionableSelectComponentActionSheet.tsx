@@ -1,21 +1,21 @@
-// === Module 11954: MentionableSelectComponentActionSheet ===
+// === Module 11958: MentionableSelectComponentActionSheet ===
 
-// Module 11954 (MentionableSelectComponentActionSheet)
+// Module 11958 (MentionableSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1176 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 4868 */;
-import RoleIconUtils from "RoleIconUtils" /* 7290 */;
-import RoleIconDefault from "RoleIcon" /* 7308 */;
-import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8237 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9882 */;
-import DiscordTagDefault from "DiscordTag" /* 9933 */;
-import UserIcon from "UserIcon" /* 11956 */;
+import native from "native" /* 1177 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4871 */;
+import RoleIconUtils from "RoleIconUtils" /* 7294 */;
+import RoleIconDefault from "RoleIcon" /* 7312 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8240 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9884 */;
+import DiscordTagDefault from "DiscordTag" /* 9935 */;
+import UserIcon from "UserIcon" /* 11960 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4676 */;
-import UserStore from "UserStore" /* 1371 */;
+import GuildRoleStore from "GuildRoleStore" /* 2016 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import PresenceStore from "PresenceStore" /* 4679 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
@@ -23,7 +23,7 @@ const Constants = fn(1074);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { name: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 }, discriminator: null, roleCountContainer: null, roleCountText: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 obj2.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };

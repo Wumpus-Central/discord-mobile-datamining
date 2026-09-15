@@ -1,7 +1,7 @@
-// === Module 8931: ProfileEffectUtils ===
+// === Module 8934: ProfileEffectUtils ===
 
-// Module 8931 (ProfileEffectUtils)
-import getAssetWHRatio from "getAssetWHRatio" /* 8932 */;
+// Module 8934 (ProfileEffectUtils)
+import getAssetWHRatio from "getAssetWHRatio" /* 8935 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectUtils.tsx");

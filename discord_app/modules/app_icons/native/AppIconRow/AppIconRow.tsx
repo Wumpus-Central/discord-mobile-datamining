@@ -1,14 +1,14 @@
-// === Module 15614: AppIconRow ===
+// === Module 15624: AppIconRow ===
 
-// Module 15614 (AppIconRow)
+// Module 15624 (AppIconRow)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4355 */;
-import TableRow from "TableRow" /* 5686 */;
-import FormRadio from "FormRadio" /* 5770 */;
-import AppIconTypes from "AppIconTypes" /* 9454 */;
-import AppIconDefault from "AppIcon" /* 15611 */;
+import util from "util" /* 1115 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4358 */;
+import TableRow from "TableRow" /* 5690 */;
+import FormRadio from "FormRadio" /* 5774 */;
+import AppIconTypes from "AppIconTypes" /* 9456 */;
+import AppIconDefault from "AppIcon" /* 15621 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ const items = [
     return intl.string(util.t.RnMLvl);
   }
 ];
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { icon: { borderRadius: nativeDefault.radii.md } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

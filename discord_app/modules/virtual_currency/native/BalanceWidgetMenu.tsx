@@ -1,20 +1,20 @@
-// === Module 15786: BalanceWidgetMenu ===
+// === Module 15797: BalanceWidgetMenu ===
 
-// Module 15786 (BalanceWidgetMenu)
+// Module 15797 (BalanceWidgetMenu)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5072 */;
-import Pressables from "Pressables" /* 5204 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7285 */;
-import _mod8975 from "module_8975" /* 8975 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10754 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11235 */;
-import OrbOnboardingPillDefault from "OrbOnboardingPill" /* 15787 */;
+import util from "util" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import dismissible_content from "dismissible_content" /* 1944 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5075 */;
+import Pressables from "Pressables" /* 5207 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import _mod8978 from "module_8978" /* 8978 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10758 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11239 */;
+import OrbOnboardingPillDefault from "OrbOnboardingPill" /* 15798 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,8 +46,8 @@ class OrbsOnboardingMenuDismissibleContent {
         function handleOnboardingPress() {
           markAsDismissed(constants2.TAKE_ACTION);
           AnalyticsUtilsDefault.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
-          const obj2 = style(11897);
-          obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: style(5528).QuestContent.MOBILE_ORBS_ONBOARDING_DC });
+          const obj2 = style(11901);
+          obj2.openQuestHome({ filter: constants3.VIRTUAL_CURRENCY, fromContent: style(5532).QuestContent.MOBILE_ORBS_ONBOARDING_DC });
         }
         let obj = { onPress: handleOnboardingPress, style, accessibilityLabel: null, children: null };
         const intl = util.intl;
@@ -64,7 +64,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  str = str(8975).useFetchVirtualCurrencyBalance().balance;
+  str = str(8978).useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
@@ -82,7 +82,7 @@ function BalanceWidgetMenu(style) {
       obj5.analyticsLocations = items;
       obj5.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
       obj5.screen = constants2.ORBS;
-      const result = str(7644).openCollectiblesShopMobile(obj5);
+      const result = str(7648).openCollectiblesShopMobile(obj5);
     };
     obj3.primaryButtonConfig = obj4;
     let obj5 = { buttonText: null, onButtonPress: null };
@@ -93,15 +93,15 @@ function BalanceWidgetMenu(style) {
       obj.track(constants.ORB_BALANCE_ACTION_SHEET_ACTION, { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance });
       const obj2 = { type: "GO_TO_QUEST_HOME", source: AnalyticsLocationDefault.YOU_SCREEN, balance };
       ActionSheetActionCreatorsDefault.hideActionSheet();
-      const obj4 = str(11897);
-      obj4.openQuestHome({ mergeExistingRoutes: true, filter: constants3.VIRTUAL_CURRENCY, fromContent: str(5528).QuestContent.ORBS_BALANCE_MENU });
+      const obj4 = str(11901);
+      obj4.openQuestHome({ mergeExistingRoutes: true, filter: constants3.VIRTUAL_CURRENCY, fromContent: str(5532).QuestContent.ORBS_BALANCE_MENU });
     };
     obj3.secondaryButtonConfig = obj5;
     obj3.source = AnalyticsLocationDefault.YOU_SCREEN;
     ActionSheetActionCreatorsDefault.openLazy(() => balance(paths[19])(paths[18], paths.paths).then((result) => result.default), "BalanceWidgetMenu", obj3);
   }, items);
   let obj2 = { onPress: callback, style: style.style, accessibilityLabel: null, children: null };
-  let intl = str(1114).intl;
+  let intl = str(1115).intl;
   let str2;
   if (str != null) {
     str2 = str.toString();
@@ -109,19 +109,19 @@ function BalanceWidgetMenu(style) {
   if (str2 == null) {
     str2 = "";
   }
-  obj2.accessibilityLabel = intl.formatToPlainString(str(1114).t.zPaLL9, { balance: str2 });
+  obj2.accessibilityLabel = intl.formatToPlainString(str(1115).t.zPaLL9, { balance: str2 });
   obj2.children = closure_10(BalanceWidgetPillButtonDefault, { balance: str, onPress: callback, accessible: false });
   return closure_10(BalanceWidget, obj2);
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
-const DismissibleContentConstants = fn(1954);
+const DismissibleContentConstants = fn(1955);
 ({ ContentDismissActionType: closure_7, DismissibleContentGroupName: closure_8 } = DismissibleContentConstants);
-const RewardFilterTypes = fn(5525).RewardFilterTypes;
+const RewardFilterTypes = fn(5529).RewardFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_15 = createStyles.createStyles(() => {
   const obj = { pressable: { flex: 1, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md }, label: { flex: 1 }, pill: { alignItems: "center" }, loadingContainer: { height: 36, justifyContent: "center" } };
   return obj;
@@ -131,7 +131,7 @@ let result = size.fileFinishedImporting("modules/virtual_currency/native/Balance
 
 export default function BalanceWidgetMenuWrapper(style) {
   const tmp = closure_15();
-  const balance = _mod8975.useFetchVirtualCurrencyBalance().balance;
+  const balance = _mod8978.useFetchVirtualCurrencyBalance().balance;
   DismissibleContentUnsafeUtils;
   if (null == balance) {
     const obj2 = {

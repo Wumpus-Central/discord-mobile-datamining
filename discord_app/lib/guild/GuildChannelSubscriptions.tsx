@@ -1,8 +1,8 @@
-// === Module 7389: GuildChannelSubscriptions ===
+// === Module 7393: GuildChannelSubscriptions ===
 
-// Module 7389 (GuildChannelSubscriptions)
+// Module 7393 (GuildChannelSubscriptions)
 import _modDef12 from "module_12" /* 12 */;
-import privDefault from "priv" /* 1437 */;
+import privDefault from "priv" /* 1438 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");

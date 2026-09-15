@@ -1,24 +1,9 @@
-// === Module 7887: getBurstAnimation ===
+// === Module 7890: getBurstAnimation ===
 
-// Module 7887 (getBurstAnimation)
+// Module 7890 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
-  {
-    load() {
-      return closure_0(7888);
-    }
-  },
-  {
-    load() {
-      return closure_0(7889);
-    }
-  },
-  {
-    load() {
-      return closure_0(7890);
-    }
-  },
   {
     load() {
       return closure_0(7891);
@@ -93,9 +78,7 @@ const items = [
     load() {
       return closure_0(7905);
     }
-  }
-];
-const items1 = [
+  },
   {
     load() {
       return closure_0(7906);
@@ -110,7 +93,9 @@ const items1 = [
     load() {
       return closure_0(7908);
     }
-  },
+  }
+];
+const items1 = [
   {
     load() {
       return closure_0(7909);
@@ -184,6 +169,21 @@ const items1 = [
   {
     load() {
       return closure_0(7923);
+    }
+  },
+  {
+    load() {
+      return closure_0(7924);
+    }
+  },
+  {
+    load() {
+      return closure_0(7925);
+    }
+  },
+  {
+    load() {
+      return closure_0(7926);
     }
   }
 ];

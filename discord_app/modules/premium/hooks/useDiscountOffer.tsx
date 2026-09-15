@@ -1,15 +1,15 @@
-// === Module 8166: useDiscountOffer ===
+// === Module 8169: useDiscountOffer ===
 
-// Module 8166 (useDiscountOffer)
+// Module 8169 (useDiscountOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
-import UserOfferStore from "UserOfferStore" /* 7553 */;
+import UserStore from "UserStore" /* 1372 */;
+import UserOfferStore from "UserOfferStore" /* 7557 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: metroRequire, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_7 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");

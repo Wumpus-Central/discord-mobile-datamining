@@ -1,17 +1,17 @@
-// === Module 14908: SensitiveContentFiltersNotices ===
+// === Module 14918: SensitiveContentFiltersNotices ===
 
-// Module 14908 (SensitiveContentFiltersNotices)
-import util from "util" /* 1114 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import LinkingDefault from "Linking" /* 4331 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8529 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14774 */;
+// Module 14918 (SensitiveContentFiltersNotices)
+import util from "util" /* 1115 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8532 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14784 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SafetySettingsNoticeType = fn(8517).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8520).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");
@@ -21,10 +21,10 @@ export const SensitiveContentFiltersTeenNotice = function SensitiveContentFilter
   let obj = require("TinyBroncoSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(14906).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(14916).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
-      label: tmp(1114).t.EUo0yj,
+      label: tmp(1115).t.EUo0yj,
       labelHook() {
           const obj = LinkingDefault;
           obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));
@@ -32,7 +32,7 @@ export const SensitiveContentFiltersTeenNotice = function SensitiveContentFilter
       noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
     };
     tmp4Result = jsx(SafetySettingsNoticeDefault, {
-      label: tmp(1114).t.EUo0yj,
+      label: tmp(1115).t.EUo0yj,
       labelHook() {
           const obj = LinkingDefault;
           obj.openURL(HelpdeskUtilsDefault.getArticleURL(closure_0));

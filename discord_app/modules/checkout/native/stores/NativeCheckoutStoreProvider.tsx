@@ -1,10 +1,10 @@
-// === Module 10933: NativeCheckoutStoreProvider ===
+// === Module 10937: NativeCheckoutStoreProvider ===
 
-// Module 10933 (NativeCheckoutStoreProvider)
-import SentryUtilsDefault from "SentryUtils" /* 1230 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import v1 from "v1" /* 1254 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10937 */;
+// Module 10937 (NativeCheckoutStoreProvider)
+import SentryUtilsDefault from "SentryUtils" /* 1231 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import v1 from "v1" /* 1255 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10941 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -15,7 +15,7 @@ require = fn;
 function NativeCheckoutStoreProvider(children) {
   ({ checkoutInitParameters: require, order } = children);
   ({ paymentGateway: dependencyMap, orderRequired: asyncGeneratorStep, onOrderRetryCancellation: _slicedToArray, initialSubscriptionFacet: noop, checkoutAnalyticsFields: View, analyticsInitialStep: closure_7 } = children);
-  const contextMetadata = order(5679)(() => {
+  const contextMetadata = order(5683)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -28,7 +28,7 @@ function NativeCheckoutStoreProvider(children) {
     const obj3 = { message: "Checkout session ID: " + id };
     return { loadId: id, startTime: Date.now() };
   });
-  redux = order(5679)(() => {
+  redux = order(5683)(() => {
     const obj = {};
     const merged = Object.assign(View);
     obj.load_id = contextMetadata.loadId;
@@ -36,7 +36,7 @@ function NativeCheckoutStoreProvider(children) {
     return obj;
   });
   value = _slicedToArray(noop.useState(() => React5({ order, checkoutInitParameters, contextMetadata, analyticsFields, paymentGateway: dependencyMap, orderRequired, onOrderRetryCancellation, initialSubscriptionFacet })), 1)[0];
-  order(5073)(() => {
+  order(5076)(() => {
     if (null != View) {
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
       const obj3 = {};
@@ -53,8 +53,8 @@ function NativeCheckoutStoreProvider(children) {
           checkoutSucceeded = purchaseInFlight;
         }
         if (!checkoutSucceeded) {
-          order(1240).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
-          const obj = order(1240);
+          order(1241).track(first.PAYMENT_FLOW_CANCELED, analyticsFields);
+          const obj = order(1241);
         }
       };
     }
@@ -80,20 +80,20 @@ function NativeCheckoutStoreProvider(children) {
       const obj2 = { checkoutSucceeded: tmp2, order: null };
       ({ id: obj3.id, status: obj3.status } = orderRecord);
       obj2.order = { id: null, status: null };
-      checkoutInitParameters(10941).discardDraftOrder(obj2);
-      const obj = checkoutInitParameters(10941);
+      checkoutInitParameters(10945).discardDraftOrder(obj2);
+      const obj = checkoutInitParameters(10945);
       const obj5 = { id: null, status: null };
     }
   }, items1);
   return <contextMetadata value={value}><redux.Provider value={value}>{children.children}</redux.Provider></contextMetadata>;
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7527);
+const NativeCheckoutStore = fn(7531);
 ({ createNativeStore: closure_7, NativeCheckoutStoreContext: closure_8, NativeCheckoutStoreContextOrNull: closure_9 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ItemPurchaseType = fn(4618).ItemPurchaseType;
+const ItemPurchaseType = fn(4621).ItemPurchaseType;
 let jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_13 = createStyles.createStyles({ loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx");

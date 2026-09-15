@@ -1,13 +1,13 @@
-// === Module 8082: RemoveRecipientSystemMessage ===
+// === Module 8085: RemoveRecipientSystemMessage ===
 
-// Module 8082 (RemoveRecipientSystemMessage)
-import util from "util" /* 1114 */;
-import ChannelRecord from "ChannelRecord" /* 1961 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8064 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8066 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8068 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 8085 (RemoveRecipientSystemMessage)
+import util from "util" /* 1115 */;
+import ChannelRecord from "ChannelRecord" /* 1962 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 
 const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;

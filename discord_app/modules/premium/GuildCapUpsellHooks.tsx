@@ -1,11 +1,11 @@
-// === Module 7315: GuildCapUpsellHooks ===
+// === Module 7319: GuildCapUpsellHooks ===
 
-// Module 7315 (GuildCapUpsellHooks)
+// Module 7319 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4294 */;
-import HotspotStore2 from "HotspotStore" /* 7316 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import UserStore from "UserStore" /* 1371 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import HotspotStore2 from "HotspotStore" /* 7320 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const MAX_USER_GUILDS = fn(1074).MAX_USER_GUILDS;

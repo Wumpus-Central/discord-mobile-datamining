@@ -1,7 +1,7 @@
-// === Module 8367: useProfileTileGradient ===
+// === Module 8370: useProfileTileGradient ===
 
-// Module 8367 (useProfileTileGradient)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8304 */;
+// Module 8370 (useProfileTileGradient)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8307 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

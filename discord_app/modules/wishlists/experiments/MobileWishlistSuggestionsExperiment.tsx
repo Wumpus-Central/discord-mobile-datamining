@@ -1,7 +1,7 @@
-// === Module 13223: MobileWishlistSuggestionsExperiment ===
+// === Module 13228: MobileWishlistSuggestionsExperiment ===
 
-// Module 13223 (MobileWishlistSuggestionsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 13228 (MobileWishlistSuggestionsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-07-smag-mobile-wishlist-suggestions", kind: "user", defaultConfig: { isEnabled: false }, variations: { 0: { isEnabled: false }, 1: { isEnabled: true } } });

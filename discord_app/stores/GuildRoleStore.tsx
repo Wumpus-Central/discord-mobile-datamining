@@ -1,14 +1,14 @@
-// === Module 2015: GuildRoleStore ===
+// === Module 2016: GuildRoleStore ===
 
-// Module 2015 (GuildRoleStore)
+// Module 2016 (GuildRoleStore)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PlainRecord from "PlainRecord" /* 1972 */;
-import GuildRecord from "GuildRecord" /* 1975 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 1980 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 1983 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2016 */;
-import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 2017 */;
-import GuildRoleUtilsAll from "GuildRoleUtils" /* 2019 */;
+import PlainRecord from "PlainRecord" /* 1973 */;
+import GuildRecord from "GuildRecord" /* 1976 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 1981 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 1984 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2017 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 2018 */;
+import GuildRoleUtilsAll from "GuildRoleUtils" /* 2020 */;
 import size from "module_2" /* 2 */;
 
 function createGuildRoleRecordFromRust(permissions) {

@@ -1,18 +1,18 @@
-// === Module 15140: BountyVideoEndAppStorePanel ===
+// === Module 15150: BountyVideoEndAppStorePanel ===
 
-// Module 15140 (BountyVideoEndAppStorePanel)
+// Module 15150 (BountyVideoEndAppStorePanel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import openURLDefault from "openURL" /* 4325 */;
-import native from "native" /* 4347 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
-import timingPresets from "timingPresets" /* 4640 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6756 */;
-import AnalyticsActions from "AnalyticsActions" /* 7820 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11632 */;
+import openURLDefault from "openURL" /* 4328 */;
+import native from "native" /* 4350 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
+import timingPresets from "timingPresets" /* 4643 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
+import AnalyticsActions from "AnalyticsActions" /* 7823 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11636 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1181 */;
+import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;
 function BountyVideoEndAppStorePanelInner(metadata) {
@@ -135,13 +135,13 @@ function BountyVideoEndAppStorePanelInner(metadata) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_BORDER_RADIUS = fn(7254).ACTION_SHEET_BORDER_RADIUS;
+const ACTION_SHEET_BORDER_RADIUS = fn(7258).ACTION_SHEET_BORDER_RADIUS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { root: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 10 }, panel: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, overflow: "hidden", flexDirection: "column" }, headerBar: { zIndex: 1 }, headerGestureTarget: { position: "absolute", top: 0, left: 0, right: 0, height: 48, zIndex: 2 }, scrollBody: { flex: 1, minHeight: 0 }, scrollContent: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, overflow: "hidden", flexDirection: "column" };
-obj2.scrollContent = { paddingBottom: fn(11636).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(11640).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}" };
 let closure_11 = { code: "function BountyVideoEndAppStorePanelTsx2(event){const{revealProgress,DISMISS_PROGRESS_THRESHOLD,DISMISS_VELOCITY_THRESHOLD,runOnJS,handleDismiss,withTiming,timingStandard}=this.__closure;if(revealProgress.get()<DISMISS_PROGRESS_THRESHOLD||event.velocityY>DISMISS_VELOCITY_THRESHOLD){runOnJS(handleDismiss)();return;}revealProgress.set(withTiming(1,timingStandard));}" };

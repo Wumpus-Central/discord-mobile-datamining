@@ -1,18 +1,18 @@
-// === Module 13212: UserProfilePrivacyNotice ===
+// === Module 13217: UserProfilePrivacyNotice ===
 
-// Module 13212 (UserProfilePrivacyNotice)
+// Module 13217 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1185 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import dismissible_content from "dismissible_content" /* 1943 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4591 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import Pressables from "Pressables" /* 5204 */;
-import XSmallIcon from "XSmallIcon" /* 5761 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7491 */;
-import useUserIsTeen from "useUserIsTeen" /* 8767 */;
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13213 */;
+import util from "util" /* 1115 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import dismissible_content from "dismissible_content" /* 1944 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4594 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import Pressables from "Pressables" /* 5207 */;
+import XSmallIcon from "XSmallIcon" /* 5765 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7495 */;
+import useUserIsTeen from "useUserIsTeen" /* 8770 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13218 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,10 +21,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,14 +1,14 @@
-// === Module 9583: GameConsoleAlert ===
+// === Module 9585: GameConsoleAlert ===
 
-// Module 9583 (GameConsoleAlert)
+// Module 9585 (GameConsoleAlert)
 import noop from "module_19" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4653 */;
+import GameConsoleStore from "GameConsoleStore" /* 4656 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_7 = createStyles.createStyles({ errorCodeText: { marginTop: 16 }, alertBody: { marginTop: 0 }, container: { flex: 1 }, body: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/GameConsoleAlert.tsx");

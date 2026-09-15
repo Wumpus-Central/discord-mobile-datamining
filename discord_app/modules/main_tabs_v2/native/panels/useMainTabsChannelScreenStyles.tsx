@@ -1,12 +1,12 @@
-// === Module 16628: useMainTabsChannelScreenStyles ===
+// === Module 16641: useMainTabsChannelScreenStyles ===
 
-// Module 16628 (useMainTabsChannelScreenStyles)
+// Module 16641 (useMainTabsChannelScreenStyles)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);

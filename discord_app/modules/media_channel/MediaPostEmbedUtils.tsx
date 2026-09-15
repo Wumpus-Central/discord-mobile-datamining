@@ -1,17 +1,17 @@
-// === Module 4784: MediaPostEmbedUtils ===
+// === Module 4787: MediaPostEmbedUtils ===
 
-// Module 4784 (MediaPostEmbedUtils)
-import util from "util" /* 1114 */;
-import FlagUtils from "FlagUtils" /* 1384 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import findCodedLinks from "findCodedLinks" /* 4619 */;
-import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 4785 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
-import useChannelName from "useChannelName" /* 4789 */;
-import LinkUtils from "LinkUtils" /* 4790 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 4787 (MediaPostEmbedUtils)
+import util from "util" /* 1115 */;
+import FlagUtils from "FlagUtils" /* 1385 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+import findCodedLinks from "findCodedLinks" /* 4622 */;
+import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 4788 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4791 */;
+import useChannelName from "useChannelName" /* 4792 */;
+import LinkUtils from "LinkUtils" /* 4793 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Constants = fn(1074);

@@ -1,7 +1,7 @@
-// === Module 12065: getSoundboardEmojiUrl ===
+// === Module 12069: getSoundboardEmojiUrl ===
 
-// Module 12065 (getSoundboardEmojiUrl)
-import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+// Module 12069 (getSoundboardEmojiUrl)
+import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");

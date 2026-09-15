@@ -1,10 +1,10 @@
-// === Module 12331: PollDurationActionSheet ===
+// === Module 12335: PollDurationActionSheet ===
 
-// Module 12331 (PollDurationActionSheet)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4603 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import usePollDurationOptionsDefault from "usePollDurationOptions" /* 12330 */;
+// Module 12335 (PollDurationActionSheet)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ActionSheet from "ActionSheet" /* 7304 */;
+import usePollDurationOptionsDefault from "usePollDurationOptions" /* 12334 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,8 +20,8 @@ function PollDurationRadioGroup(onChange) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   const obj = { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null };
-  const intl = onChange(1114).intl;
-  obj.title = intl.string(onChange(1114).t["0ZStp9"]);
+  const intl = onChange(1115).intl;
+  obj.title = intl.string(onChange(1115).t["0ZStp9"]);
   obj.onChange = callback;
   obj.defaultValue = onChange.selectedDuration;
   const entries = Object.entries(tmp);
@@ -29,7 +29,7 @@ function PollDurationRadioGroup(onChange) {
     [tmp, tmp2] = item;
     return jsx(onChange(dependencyMap[7]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
   });
-  return jsx(onChange(5766).TableRadioGroup, { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null });
+  return jsx(onChange(5770).TableRadioGroup, { title: null, hasIcons: false, onChange: null, defaultValue: null, children: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

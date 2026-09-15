@@ -1,6 +1,6 @@
-// === Module 6547: ? ===
+// === Module 6551: ? ===
 
-// Module 6547
+// Module 6551
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerTagAbstractUI-2x.png.js");

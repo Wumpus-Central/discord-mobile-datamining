@@ -1,8 +1,8 @@
-// === Module 16858: makeAuthenticated ===
+// === Module 16896: makeAuthenticated ===
 
-// Module 16858 (makeAuthenticated)
-import AuthenticationUtils from "AuthenticationUtils" /* 7770 */;
-import RedirectUnauthenticatedDefault from "RedirectUnauthenticated" /* 16859 */;
+// Module 16896 (makeAuthenticated)
+import AuthenticationUtils from "AuthenticationUtils" /* 7773 */;
+import RedirectUnauthenticatedDefault from "RedirectUnauthenticated" /* 16897 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

@@ -1,12 +1,12 @@
-// === Module 13417: ForLaterMessageCard ===
+// === Module 13422: ForLaterMessageCard ===
 
-// Module 13417 (ForLaterMessageCard)
+// Module 13422 (ForLaterMessageCard)
 import nativeDefault from "native" /* 576 */;
-import _modDef4595 from "module_4595" /* 4595 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 11834 */;
+import _modDef4598 from "module_4598" /* 4598 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 11838 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 class ForLaterDeletedMessageCard {
@@ -54,7 +54,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, deletedCard: { flexDirection: "row", alignItems: "center", gap: 8 }, deletedText: { flex: 1 }, deletedActionButton: { marginLeft: "auto" } };
 let closure_12 = createStyles.createStyles(obj);
 let obj3 = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -65,7 +65,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const throttledNow = savedMessage.throttledNow;
   const tmp = closure_12();
-  const savedMessageChannel = savedMessage(11841).useSavedMessageChannel(savedMessage);
+  const savedMessageChannel = savedMessage(11845).useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
@@ -129,7 +129,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     } else {
                       c1 = 1;
                       c2 = 1;
-                      const obj5 = { value: v3(11841).savedMessageJumpToMessage(tmp4, c1), done: false };
+                      const obj5 = { value: v3(11845).savedMessageJumpToMessage(tmp4, c1), done: false };
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -140,8 +140,8 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     const obj6 = { value, done: true };
                     return obj6;
                   } else {
-                    v1(4839).pop();
-                    const arr = v1(4839);
+                    v1(4842).pop();
+                    const arr = v1(4842);
                     const obj8 = { channel_id: tmp4.saveData.channelId, message_id: tmp4.saveData.messageId, message_author_id: null, type: null, due_duration: null };
                     const message = tmp4.message;
                     let id;
@@ -150,18 +150,18 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                     }
                     obj8.message_author_id = id;
                     if (null != tmp4.saveData.dueAt) {
-                      let BOOKMARK = v3(7963).SavedMessageSortTypes.REMINDER;
+                      let BOOKMARK = v3(7966).SavedMessageSortTypes.REMINDER;
                     } else {
-                      BOOKMARK = v3(7963).SavedMessageSortTypes.BOOKMARK;
+                      BOOKMARK = v3(7966).SavedMessageSortTypes.BOOKMARK;
                     }
                     obj8.type = BOOKMARK;
                     let diffResult;
                     if (null != tmp4.saveData.dueAt) {
-                      diffResult = v1(4228)().diff(tmp4.saveData.dueAt);
-                      const obj = v1(4228)();
+                      diffResult = v1(4231)().diff(tmp4.saveData.dueAt);
+                      const obj = v1(4231)();
                     }
                     obj8.due_duration = diffResult;
-                    v1(1240).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
+                    v1(1241).track(constants.FOR_LATER_SAVED_MESSAGE_JUMP, obj8);
                     c2 = 3;
                     return { value: "HermesInternal", done: null };
                   }
@@ -194,7 +194,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
       }
     }
   }), items);
-  let obj = savedMessage(11841);
+  let obj = savedMessage(11845);
   const items1 = [PermissionStore];
   if (null != savedMessage.message) {
     if (null != savedMessageChannel) {
@@ -218,12 +218,12 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
         return tmp2;
       })) {
         let obj3 = { savedMessage, jumpToMessage: callback, throttledNow };
-        const tmp8 = closure_10(savedMessageChannel(13419), obj3);
+        const tmp8 = closure_10(savedMessageChannel(13424), obj3);
         let obj4 = { variant: "primary", border: "subtle", shadow: "none", style: tmp.card, onPress: callback, children: null };
         let tmp6Result = null;
         if (null != savedMessage.saveData.dueAt) {
           let obj5 = { savedMessage, throttledNow, actions: tmp8 };
-          tmp6Result = closure_10(tmp2(13422).ForLaterCardReminderHeader, obj5);
+          tmp6Result = closure_10(tmp2(13427).ForLaterCardReminderHeader, obj5);
         }
         const items2 = [tmp6Result, , , ];
         let obj6 = { channel: savedMessageChannel, actions: null };
@@ -232,13 +232,13 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
           tmp12 = tmp8;
         }
         obj6.actions = tmp12;
-        items2[1] = closure_10(tmp2(12345).ForLaterCardHeader, obj6);
+        items2[1] = closure_10(tmp2(12349).ForLaterCardHeader, obj6);
         const obj7 = { style: tmp.cardDivider };
         items2[2] = closure_10(View, obj7);
         let obj8 = { message: savedMessage.message, lineClamp: 2, maxHeight: 250 };
-        items2[3] = closure_10(tmp2(12346).ForLaterMessageRow, obj8);
+        items2[3] = closure_10(tmp2(12350).ForLaterMessageRow, obj8);
         obj4.children = items2;
-        return closure_11(tmp2(5688).Card, obj4);
+        return closure_11(tmp2(5692).Card, obj4);
       }
     }
   }

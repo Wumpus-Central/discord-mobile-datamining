@@ -1,11 +1,11 @@
-// === Module 17224: SecureFramesCallVerificationBottomSheet ===
+// === Module 17262: SecureFramesCallVerificationBottomSheet ===
 
-// Module 17224 (SecureFramesCallVerificationBottomSheet)
-import showShareActionSheet from "showShareActionSheet" /* 8479 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9290 */;
-import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9296 */;
+// Module 17262 (SecureFramesCallVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8482 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9293 */;
+import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9299 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4659 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4662 */;
 
 require = fn;
 const AnalyticsSections = fn(1074).AnalyticsSections;
@@ -32,14 +32,14 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   }, items1);
   let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   let obj = channelId(504);
-  const intl = channelId(1114).intl;
-  obj2.title = intl.string(channelId(1114).t.cTQI5t);
-  const intl2 = channelId(1114).intl;
-  obj2.subtitle = intl2.string(channelId(1114).t["MPp7+C"]);
-  const intl3 = channelId(1114).intl;
+  const intl = channelId(1115).intl;
+  obj2.title = intl.string(channelId(1115).t.cTQI5t);
+  const intl2 = channelId(1115).intl;
+  obj2.subtitle = intl2.string(channelId(1115).t["MPp7+C"]);
+  const intl3 = channelId(1115).intl;
   const obj3 = { helpArticle: null };
-  obj3.helpArticle = channelId(9279).getSecureFramesHelpdeskArticle();
-  obj2.footer = intl3.format(channelId(1114).t.wKxADe, obj3);
+  obj3.helpArticle = channelId(9282).getSecureFramesHelpdeskArticle();
+  obj2.footer = intl3.format(channelId(1115).t.wKxADe, obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;
   return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;

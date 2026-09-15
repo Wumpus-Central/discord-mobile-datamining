@@ -1,8 +1,8 @@
-// === Module 8346: useUserProfileBannerHeight ===
+// === Module 8349: useUserProfileBannerHeight ===
 
-// Module 8346 (useUserProfileBannerHeight)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import Constants from "Constants" /* 7311 */;
+// Module 8349 (useUserProfileBannerHeight)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
+import Constants from "Constants" /* 7315 */;
 import size from "module_2" /* 2 */;
 
 const BANNER_ASPECT_RATIO = Constants.BANNER_ASPECT_RATIO;

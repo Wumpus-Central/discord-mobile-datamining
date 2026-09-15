@@ -1,12 +1,12 @@
-// === Module 9663: handleJoinEmbeddedActivity ===
+// === Module 9665: handleJoinEmbeddedActivity ===
 
-// Module 9663 (handleJoinEmbeddedActivity)
+// Module 9665 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 4864 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import UserStore from "UserStore" /* 1371 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ApplicationStore from "ApplicationStore" /* 4867 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import UserStore from "UserStore" /* 1372 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 
 const require = globalThis.__r;
 
@@ -214,7 +214,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
     }
   }
 };
-let closure_9 = fn(1920).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
+let closure_9 = fn(1921).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/handleJoinEmbeddedActivity.tsx");
 

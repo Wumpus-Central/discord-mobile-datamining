@@ -1,14 +1,14 @@
-// === Module 13594: BoostedGuildTierProgressCircle ===
+// === Module 13599: BoostedGuildTierProgressCircle ===
 
-// Module 13594 (BoostedGuildTierProgressCircle)
+// Module 13599 (BoostedGuildTierProgressCircle)
 import nativeDefault from "native" /* 576 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4530 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4545 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import Tier048Px from "Tier048Px" /* 13595 */;
-import _modDef13599 from "module_13599" /* 13599 */;
-import _modDef13600 from "module_13600" /* 13600 */;
-import _modDef13601 from "module_13601" /* 13601 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4533 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4548 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import Tier048Px from "Tier048Px" /* 13600 */;
+import _modDef13604 from "module_13604" /* 13604 */;
+import _modDef13605 from "module_13605" /* 13605 */;
+import _modDef13606 from "module_13606" /* 13606 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ const Constants = fn(1074);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: hasOwnProperty, BoostedGuildTiers: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { guildTierProgressCircle: { position: "relative", width: 70, height: 70 }, guildTierBackground: null, guildTierNoneIcon: null, guildTierIcon: null, guildTierName: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: 64, height: 64, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xxl };
 obj2.guildTierBackground = size;
@@ -60,11 +60,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tier048PxSource = _modDef13599;
+          let tier048PxSource = _modDef13604;
         } else if (constants.TIER_2 === premiumTier) {
-          tier048PxSource = _modDef13600;
+          tier048PxSource = _modDef13605;
         } else if (constants.TIER_3 === premiumTier) {
-          tier048PxSource = _modDef13601;
+          tier048PxSource = _modDef13606;
         }
       }
       const obj5 = { source: tier048PxSource, style: tmp.guildTierIcon, accessibilityElementsHidden: true, importantForAccessibility: "no" };

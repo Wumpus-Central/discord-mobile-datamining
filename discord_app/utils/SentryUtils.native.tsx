@@ -1,11 +1,11 @@
-// === Module 1230: SentryUtils ===
+// === Module 1231: SentryUtils ===
 
-// Module 1230 (SentryUtils)
+// Module 1231 (SentryUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
 import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 674 */;
 import _modAll675 from "module_675" /* 675 */;
-import SentryInitUtils_mod from "SentryInitUtils" /* 1231 */;
+import SentryInitUtils_mod from "SentryInitUtils" /* 1232 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -210,7 +210,7 @@ export default {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "A general error has occurred with Cardinal. See description for more information." };
+                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "transport" };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {

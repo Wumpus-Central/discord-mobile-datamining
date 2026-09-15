@@ -1,25 +1,25 @@
-// === Module 8090: SystemMessageUtils ===
+// === Module 8093: SystemMessageUtils ===
 
-// Module 8090 (SystemMessageUtils)
+// Module 8093 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1114 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4788 */;
-import useChannelName from "useChannelName" /* 4789 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4859 */;
-import useMessageAuthor from "useMessageAuthor" /* 4869 */;
-import MarkupParser from "MarkupParser" /* 8091 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8095 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8096 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8098 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8099 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8100 */;
+import util from "util" /* 1115 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4791 */;
+import useChannelName from "useChannelName" /* 4792 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4862 */;
+import useMessageAuthor from "useMessageAuthor" /* 4872 */;
+import MarkupParser from "MarkupParser" /* 8094 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8098 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8099 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8101 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8102 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8103 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4286 */;
+import MessageRecord from "MessageRecord" /* 4289 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildStore from "GuildStore" /* 1980 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 

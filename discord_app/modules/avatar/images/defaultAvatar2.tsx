@@ -1,6 +1,6 @@
-// === Module 17553: defaultAvatar2 ===
+// === Module 17591: defaultAvatar2 ===
 
-// Module 17553 (defaultAvatar2)
+// Module 17591 (defaultAvatar2)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/avatar/images/defaultAvatar2.tsx");

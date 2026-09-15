@@ -1,22 +1,22 @@
-// === Module 9560: ApplicationDetails ===
+// === Module 9562: ApplicationDetails ===
 
-// Module 9560 (ApplicationDetails)
+// Module 9562 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import LinkIcon from "LinkIcon" /* 4579 */;
-import ClockIcon from "ClockIcon" /* 4599 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import LockIcon from "LockIcon" /* 5176 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8457 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9015 */;
-import scopes from "scopes" /* 9367 */;
-import disclosures from "disclosures" /* 9369 */;
-import Utils from "Utils" /* 9371 */;
-import ShieldIcon from "ShieldIcon" /* 9532 */;
-import EmbedIcon from "EmbedIcon" /* 9561 */;
-import HammerIcon from "HammerIcon" /* 9563 */;
-import RobotIcon from "RobotIcon" /* 9565 */;
+import util from "util" /* 1115 */;
+import LinkIcon from "LinkIcon" /* 4582 */;
+import ClockIcon from "ClockIcon" /* 4602 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import LockIcon from "LockIcon" /* 5179 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8460 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9018 */;
+import scopes from "scopes" /* 9370 */;
+import disclosures from "disclosures" /* 9372 */;
+import Utils from "Utils" /* 9374 */;
+import ShieldIcon from "ShieldIcon" /* 9534 */;
+import EmbedIcon from "EmbedIcon" /* 9563 */;
+import HammerIcon from "HammerIcon" /* 9565 */;
+import RobotIcon from "RobotIcon" /* 9567 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,7 +36,7 @@ function ApplicationDetailsEntry(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { applicationDetails: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 8 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj2.entryIcon = size;

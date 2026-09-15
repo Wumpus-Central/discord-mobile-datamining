@@ -1,9 +1,9 @@
-// === Module 5850: AppsButtonSpotIllustration ===
+// === Module 5854: AppsButtonSpotIllustration ===
 
-// Module 5850 (AppsButtonSpotIllustration)
+// Module 5854 (AppsButtonSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import _modDef5851 from "module_5851" /* 5851 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import _modDef5855 from "module_5855" /* 5855 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AppsButtonSpotIllustration = function AppsButtonSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5851 };
+  const obj2 = { uri: _modDef5855 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

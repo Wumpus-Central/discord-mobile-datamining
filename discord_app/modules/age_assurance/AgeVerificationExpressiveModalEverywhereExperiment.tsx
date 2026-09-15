@@ -1,7 +1,7 @@
-// === Module 8696: AgeVerificationExpressiveModalEverywhereExperiment ===
+// === Module 8699: AgeVerificationExpressiveModalEverywhereExperiment ===
 
-// Module 8696 (AgeVerificationExpressiveModalEverywhereExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 8699 (AgeVerificationExpressiveModalEverywhereExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2025-11-age-verification-expressive-everywhere", defaultConfig: { enabled: false }, variations: null };

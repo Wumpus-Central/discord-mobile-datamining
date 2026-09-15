@@ -1,7 +1,7 @@
-// === Module 16465: YouBarGuildTagExperiment ===
+// === Module 16478: YouBarGuildTagExperiment ===
 
-// Module 16465 (YouBarGuildTagExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 16478 (YouBarGuildTagExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-you-bar-guild-tag", kind: "user", defaultConfig: { showGuildTag: false }, variations: { 0: { showGuildTag: false }, 1: { showGuildTag: true } } });

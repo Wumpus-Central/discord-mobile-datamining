@@ -1,27 +1,27 @@
-// === Module 11862: EmojiReactionRowButton ===
+// === Module 11866: EmojiReactionRowButton ===
 
-// Module 11862 (EmojiReactionRowButton)
+// Module 11866 (EmojiReactionRowButton)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import EmojiTypes from "EmojiTypes" /* 4292 */;
-import shared from "shared" /* 4488 */;
-import Pressables from "Pressables" /* 5204 */;
-import EmojiDefault from "Emoji" /* 7233 */;
-import ReactionIcon from "ReactionIcon" /* 8883 */;
+import util from "util" /* 1115 */;
+import EmojiTypes from "EmojiTypes" /* 4295 */;
+import shared from "shared" /* 4491 */;
+import Pressables from "Pressables" /* 5207 */;
+import EmojiDefault from "Emoji" /* 7237 */;
+import ReactionIcon from "ReactionIcon" /* 8886 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
-const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: null };
   const size = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
   obj.emojiContainer = size;
   return obj;
 });
-createStyles = fn(4636);
+createStyles = fn(4639);
 let closure_7 = createStyles.createStyles((width, fontSize, lineHeight) => {
   const obj = { emojiImage: { width, height: width }, emojiText: null };
   const size = { lineHeight, fontSize, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: lineHeight, height: lineHeight };
@@ -82,7 +82,7 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emoji) {
     }
     obj5.name = str;
     if (null != animated.id) {
-      const emojiURL = getEmojiURL(1396);
+      const emojiURL = getEmojiURL(1397);
       getEmojiURL = emojiURL.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj.id, animated } = animated);

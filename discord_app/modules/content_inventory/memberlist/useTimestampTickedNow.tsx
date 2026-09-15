@@ -1,10 +1,10 @@
-// === Module 13137: useTimestampTickedNow ===
+// === Module 13142: useTimestampTickedNow ===
 
-// Module 13137 (useTimestampTickedNow)
-import DurationsDefault from "Durations" /* 1090 */;
+// Module 13142 (useTimestampTickedNow)
+import DurationsDefault from "Durations" /* 1091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4628 */;
+import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 const require = globalThis.__r;
 
@@ -24,8 +24,8 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   importDefault = undefined;
   const now = _slicedToArray(noop.useState(() => {
     const timestamp = Date.now();
-    const rounded = Math.floor(timestamp / _undefined(1090).Millis.SECOND);
-    return rounded * _undefined(1090).Millis.SECOND;
+    const rounded = Math.floor(timestamp / _undefined(1091).Millis.SECOND);
+    return rounded * _undefined(1091).Millis.SECOND;
   }), 2);
   _require = now[1];
   const items = [AccessibilityStore];
@@ -46,11 +46,11 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   importDefault = result;
   const items1 = [result];
   const effect = noop.useEffect(() => {
-    const interval = new closure_0(1952).Interval();
+    const interval = new closure_0(1953).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
-      const rounded = Math.floor(timestamp / c1(1090).Millis.SECOND);
-      interval(rounded * c1(1090).Millis.SECOND);
+      const rounded = Math.floor(timestamp / c1(1091).Millis.SECOND);
+      interval(rounded * c1(1091).Millis.SECOND);
     });
     return () => interval.stop();
   }, items1);

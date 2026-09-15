@@ -1,6 +1,6 @@
-// === Module 1930: UrlHostUtils ===
+// === Module 1931: UrlHostUtils ===
 
-// Module 1930 (UrlHostUtils)
+// Module 1931 (UrlHostUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/core/UrlHostUtils.tsx");

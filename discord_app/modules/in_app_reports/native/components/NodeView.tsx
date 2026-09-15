@@ -1,20 +1,20 @@
-// === Module 8759: NodeView ===
+// === Module 8762: NodeView ===
 
-// Module 8759 (NodeView)
+// Module 8762 (NodeView)
 import nativeDefault from "native" /* 576 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4348 */;
-import ColorUtils from "ColorUtils" /* 4486 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4591 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4816 */;
-import CustomMarkupAll from "CustomMarkup" /* 5076 */;
-import MenuTypes from "MenuTypes" /* 8753 */;
-import ArrowDefault from "Arrow" /* 8761 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4594 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
+import CustomMarkupAll from "CustomMarkup" /* 5079 */;
+import MenuTypes from "MenuTypes" /* 8756 */;
+import ArrowDefault from "Arrow" /* 8764 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4635 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
+import DevSettingsStore from "DevSettingsStore" /* 4638 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 require = fn;
 function HeaderView(node) {
@@ -86,20 +86,20 @@ function ChildItem(child) {
   const obj2 = { style: tmp.childButton, accessibilityRole: "button", onPress: _slicedToArray(noop.useState(() => () => closure_1_1.onPress(child)), 1)[0], children: null };
   const obj3 = { style: tmp.childContainer, children: null };
   const obj4 = { style: tmp.childContent, children: null };
-  const items1 = [closure_16(child(4632).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
+  const items1 = [closure_16(child(4635).Text, { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 }), ];
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
   if (stateFromStores) {
     const obj6 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_16(tmp5(4632).Text, obj6);
+    stateFromStores = closure_16(tmp5(4635).Text, obj6);
   }
   items1[1] = stateFromStores;
   obj4.children = items1;
   const items2 = [closure_17(closure_6, obj4), closure_16(ArrowDefault, {})];
   obj3.children = items2;
   obj2.children = closure_17(closure_6, obj3);
-  return closure_16(child(5204).PressableHighlight, obj2);
+  return closure_16(child(5207).PressableHighlight, obj2);
 }
 function ChildrenView(node) {
   const children = node.node.children;
@@ -125,14 +125,14 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8760).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8758).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8763).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8761).IN_APP_REPORTS_NODE;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { container: { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 }, scrollView: { flex: 1, alignSelf: "stretch", marginTop: 24 }, childrenContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerContainer: { alignSelf: "stretch", marginBottom: 24, paddingHorizontal: 16 }, header: { marginBottom: 8, textAlign: "center" }, subheader: { lineHeight: 20, marginBottom: 8, textAlign: "center" }, description: { lineHeight: 16, marginBottom: 8, textAlign: "center" }, infoBox: null, infoBoxText: null, childButton: null, childContainer: null, childContent: null, childButtonText: null, debugText: null };
 let obj3 = { flex: 1, alignSelf: "stretch", justifyContent: "flex-start", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, marginTop: 30 };
 obj2.infoBox = { alignSelf: "stretch", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.BLUE_345, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.unsafe_rawColors.BLUE_345, borderWidth: 1, padding: 8, flexDirection: "row", marginBottom: 16, marginHorizontal: 16 };

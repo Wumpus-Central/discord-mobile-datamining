@@ -1,26 +1,26 @@
-// === Module 11824: ForwardPreview ===
+// === Module 11828: ForwardPreview ===
 
-// Module 11824 (ForwardPreview)
+// Module 11828 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1476 */;
-import Server from "Server" /* 1894 */;
-import _modDef2914 from "module_2914" /* 2914 */;
-import useThemeDefault from "useTheme" /* 4571 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import ImageIcon from "ImageIcon" /* 5168 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8243 */;
-import CheckpointUtils from "CheckpointUtils" /* 8260 */;
-import ChatItemDefault from "ChatItem" /* 8775 */;
-import ClipView from "ClipView" /* 8940 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10240 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 10260 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11825 */;
-import CheckpointColors from "CheckpointColors" /* 11826 */;
-import MosaicMediaType from "MosaicMediaType" /* 11827 */;
-import ImagesIcon2 from "ImagesIcon" /* 11829 */;
+import util from "util" /* 1115 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1477 */;
+import Server from "Server" /* 1895 */;
+import _modDef2915 from "module_2915" /* 2915 */;
+import useThemeDefault from "useTheme" /* 4574 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import ImageIcon from "ImageIcon" /* 5171 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8246 */;
+import CheckpointUtils from "CheckpointUtils" /* 8263 */;
+import ChatItemDefault from "ChatItem" /* 8778 */;
+import ClipView from "ClipView" /* 8943 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10242 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 10262 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11829 */;
+import CheckpointColors from "CheckpointColors" /* 11830 */;
+import MosaicMediaType from "MosaicMediaType" /* 11831 */;
+import ImagesIcon2 from "ImagesIcon" /* 11833 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -35,7 +35,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(576).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(4636).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(4639).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -53,7 +53,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(4636);
+  let obj = attachmentCount(4639);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -63,7 +63,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 let size = { width: 4, height: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
 obj2.quote = size;
@@ -241,7 +241,7 @@ export const ForwardPreview = function ForwardPreview(message) {
   if (tmp36Result) {
     const obj22 = { variant: "text-md/medium", children: null };
     const intl5 = util.intl;
-    obj22.children = intl5.string(_modDef2914.goiR2u);
+    obj22.children = intl5.string(_modDef2915.goiR2u);
     tmp36Result = hasOwnProperty(Text_Text.Text, obj22);
   }
   const items6 = [tmp36Result, , ];

@@ -1,19 +1,19 @@
-// === Module 14800: AccountEmailSetting ===
+// === Module 14810: AccountEmailSetting ===
 
-// Module 14800 (AccountEmailSetting)
+// Module 14810 (AccountEmailSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1114 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5702 */;
-import UserStore from "UserStore" /* 1371 */;
+import util from "util" /* 1115 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5706 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const SettingBuilders = fn(11602);
+const SettingBuilders = fn(11606);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w/qqKK"]);
   },
-  parent: fn(8079).MobileUserSettings.ACCOUNT,
+  parent: fn(8082).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountEmailSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {

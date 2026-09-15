@@ -1,8 +1,8 @@
-// === Module 7959: MobileEmojiPickerUpsellRestyleExperiment ===
+// === Module 7962: MobileEmojiPickerUpsellRestyleExperiment ===
 
-// Module 7959 (MobileEmojiPickerUpsellRestyleExperiment)
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7955 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 7962 (MobileEmojiPickerUpsellRestyleExperiment)
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7958 */;
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-mobile-emoji-picker-upsell-restyle", kind: "user", defaultConfig: false, variations: { 0: false, 1: true } });

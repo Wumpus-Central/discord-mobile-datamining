@@ -1,9 +1,9 @@
-// === Module 10386: ChatRestrictions ===
+// === Module 10388: ChatRestrictions ===
 
-// Module 10386 (ChatRestrictions)
+// Module 10388 (ChatRestrictions)
 import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1114 */;
-import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10387 */;
+import util from "util" /* 1115 */;
+import MentionGuardUtilsDefault from "MentionGuardUtils" /* 10389 */;
 import size from "module_2" /* 2 */;
 
 const TOKEN_REGEX = Constants.TOKEN_REGEX;
@@ -51,7 +51,7 @@ const items = [
       }
     },
     analyticsType: "@Everyone Warning",
-    animation: "accessible"
+    animation: "alignItems"
   },
   {
     check(arg0) {

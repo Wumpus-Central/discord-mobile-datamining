@@ -1,19 +1,19 @@
-// === Module 14001: GuildSettingsServerTagPreview ===
+// === Module 14006: GuildSettingsServerTagPreview ===
 
-// Module 14001 (GuildSettingsServerTagPreview)
+// Module 14006 (GuildSettingsServerTagPreview)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(8048).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8051).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let obj2 = { card: { padding: nativeDefault.space.PX_16 }, notice: null, message: null, unfocused: null, avatar: null, messageBody: null, usernameRow: null };
 let obj3 = { padding: nativeDefault.space.PX_16 };
 obj2.notice = { marginBottom: nativeDefault.space.PX_12 };
@@ -41,14 +41,14 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const items = [UserStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = guildId(504);
-  const name = onAdopted(4788).useName(guildId, null, stateFromStores);
-  let obj3 = onAdopted(4788);
+  const name = onAdopted(4791).useName(guildId, null, stateFromStores);
+  let obj3 = onAdopted(4791);
   let avatarURL;
   if (stateFromStores != null) {
     avatarURL = stateFromStores.getAvatarURL(guildId, 40);
   }
   let identityGuildId;
-  const source = onAdopted(1396).makeSource(avatarURL);
+  const source = onAdopted(1397).makeSource(avatarURL);
   if (stateFromStores != null) {
     const primaryGuild = stateFromStores.primaryGuild;
     if (primaryGuild != null) {
@@ -66,7 +66,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
     }
     isDirty = true === identityEnabled;
   }
-  let obj4 = onAdopted(1396);
+  let obj4 = onAdopted(1397);
   [tmp11, c2] = noop.useState(false);
   const items1 = [guildId, onAdopted];
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
@@ -99,7 +99,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
             dependencyMap(true);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(14002).adoptGuildIdentity(guildId, true), done: false };
+            const obj5 = { value: tmp2(14007).adoptGuildIdentity(guildId, true), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -127,29 +127,29 @@ export default function GuildSettingsServerTagPreview(guildId) {
     }
   }), items1);
   const obj2 = { variant: "text-sm/medium", color: "text-muted", style: tmp.notice, children: null };
-  const intl = tmp2(1114).intl;
+  const intl = tmp2(1115).intl;
   const string = intl.string;
-  const t = tmp2(1114).t;
+  const t = tmp2(1115).t;
   if (isDirty) {
     let stringResult = string(t.hRsJ7T);
   } else {
     stringResult = string(t.OVvzY0);
   }
   obj2.children = stringResult;
-  const items2 = [closure_10(guildId(4632).Text, obj2), ];
+  const items2 = [closure_10(guildId(4635).Text, obj2), ];
   let obj5 = { spacing: onAdopted(576).space.PX_12, children: null };
   const obj6 = { style: null, children: null };
   const items3 = [, ];
   ({ message: arr4[0], unfocused: arr4[1] } = tmp);
   obj6.style = items3;
   const tmp10 = _slicedToArray(noop.useState(false), 2);
-  const items4 = [closure_10(closure_6, { source: onAdopted(10287), style: tmp.avatar, importantForAccessibility: "no" }), ];
+  const items4 = [closure_10(closure_6, { source: onAdopted(10289), style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj8 = { style: tmp.messageBody, children: null };
-  const items5 = [closure_10(guildId(4632).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }), ];
+  const items5 = [closure_10(guildId(4635).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }), ];
   const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
-  const intl2 = tmp2(1114).intl;
-  obj9.children = intl2.string(guildId(1114).t.KZQ4mF);
-  items5[1] = closure_10(guildId(4632).Text, obj9);
+  const intl2 = tmp2(1115).intl;
+  obj9.children = intl2.string(guildId(1115).t.KZQ4mF);
+  items5[1] = closure_10(guildId(4635).Text, obj9);
   obj8.children = items5;
   items4[1] = closure_11(closure_7, obj8);
   obj6.children = items4;
@@ -158,7 +158,7 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const items7 = [closure_10(closure_6, { source, style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj12 = { style: tmp.messageBody, children: null };
   const obj13 = { style: tmp.usernameRow, children: null };
-  const items8 = [closure_10(guildId(4632).Text, { variant: "text-md/semibold", color: "text-default", children: name }), ];
+  const items8 = [closure_10(guildId(4635).Text, { variant: "text-md/semibold", color: "text-default", children: name }), ];
   let tmp15Result3 = null != tag;
   if (tmp15Result3) {
     tmp15Result3 = "" !== tag;
@@ -169,18 +169,18 @@ export default function GuildSettingsServerTagPreview(guildId) {
     if (null != badge) {
       const size = { badge, primaryTintColor: primaryColor, secondaryTintColor: secondaryColor, width: null, height: null };
       ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-      tmp15Result = closure_10(tmp2(14003).GuildBadge, size);
+      tmp15Result = closure_10(tmp2(14008).GuildBadge, size);
     }
     obj14.guildBadge = tmp15Result;
-    tmp15Result3 = closure_10(tmp2(9313).BaseGuildTagChiplet, obj14);
+    tmp15Result3 = closure_10(tmp2(9316).BaseGuildTagChiplet, obj14);
   }
   items8[1] = tmp15Result3;
   obj13.children = items8;
   const items9 = [closure_11(closure_7, obj13), ];
   const obj15 = { variant: "text-md/normal", color: "text-default", children: null };
-  const intl3 = tmp2(1114).intl;
-  obj15.children = intl3.string(guildId(1114).t.LKsPRe);
-  items9[1] = closure_10(guildId(4632).Text, obj15);
+  const intl3 = tmp2(1115).intl;
+  obj15.children = intl3.string(guildId(1115).t.LKsPRe);
+  items9[1] = closure_10(guildId(4635).Text, obj15);
   obj12.children = items9;
   items7[1] = closure_11(closure_7, obj12);
   obj10.children = items7;
@@ -190,21 +190,21 @@ export default function GuildSettingsServerTagPreview(guildId) {
   ({ message: arr11[0], unfocused: arr11[1] } = tmp);
   obj17.style = items10;
   const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
-  const obj7 = { source: onAdopted(10287), style: tmp.avatar, importantForAccessibility: "no" };
-  const items11 = [closure_10(closure_6, { source: onAdopted(14047), style: tmp.avatar, importantForAccessibility: "no" }), ];
+  const obj7 = { source: onAdopted(10289), style: tmp.avatar, importantForAccessibility: "no" };
+  const items11 = [closure_10(closure_6, { source: onAdopted(14052), style: tmp.avatar, importantForAccessibility: "no" }), ];
   const obj19 = { style: tmp.messageBody, children: null };
-  const items12 = [closure_10(guildId(4632).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }), ];
+  const items12 = [closure_10(guildId(4635).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }), ];
   const obj20 = { variant: "text-md/normal", color: "text-default", children: null };
-  const intl4 = tmp2(1114).intl;
-  obj20.children = intl4.string(guildId(1114).t.vtCg11);
-  items12[1] = closure_10(guildId(4632).Text, obj20);
+  const intl4 = tmp2(1115).intl;
+  obj20.children = intl4.string(guildId(1115).t.vtCg11);
+  items12[1] = closure_10(guildId(4635).Text, obj20);
   obj19.children = items12;
   items11[1] = closure_11(closure_7, obj19);
   obj17.children = items11;
   items6[2] = closure_11(closure_7, obj17);
   const obj21 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
-  const intl5 = tmp2(1114).intl;
-  obj21.text = intl5.string(guildId(1114).t.cQDYRu);
+  const intl5 = tmp2(1115).intl;
+  obj21.text = intl5.string(guildId(1115).t.cQDYRu);
   obj21.loading = tmp11;
   if (!isDirty) {
     isDirty = tmp11;
@@ -221,15 +221,15 @@ export default function GuildSettingsServerTagPreview(guildId) {
   const obj22 = { children: null };
   obj21.disabled = isDirty;
   obj21.onPress = callback;
-  items6[3] = closure_10(guildId(5056).Button, obj21);
+  items6[3] = closure_10(guildId(5059).Button, obj21);
   obj5.children = items6;
-  items2[1] = closure_11(guildId(5054).Stack, obj5);
+  items2[1] = closure_11(guildId(5057).Stack, obj5);
   obj22.children = items2;
   const tmp13Result = closure_11(closure_12, obj22);
   let tmp15Result4 = tmp13Result;
   if ("plain" !== variant) {
     const obj23 = { variant: "secondary", radius: 16, style: tmp.card, children: tmp13Result };
-    tmp15Result4 = closure_10(tmp2(5688).Card, obj23);
+    tmp15Result4 = closure_10(tmp2(5692).Card, obj23);
   }
   return tmp15Result4;
 };

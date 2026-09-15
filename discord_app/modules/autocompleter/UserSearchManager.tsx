@@ -1,21 +1,21 @@
-// === Module 9969: UserSearchManager ===
+// === Module 9971: UserSearchManager ===
 
-// Module 9969 (UserSearchManager)
+// Module 9971 (UserSearchManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1074 */;
-import SentryUtilsDefault from "SentryUtils" /* 1230 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import FlagUtilsAll from "FlagUtils" /* 1384 */;
-import ChannelRecord from "ChannelRecord" /* 1961 */;
-import UserUtilsDefault from "UserUtils" /* 4481 */;
-import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9970 */;
-import UserRecord from "UserRecord" /* 1385 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberStore from "GuildMemberStore" /* 2021 */;
-import RelationshipStore from "RelationshipStore" /* 4285 */;
-import UserStore from "UserStore" /* 1371 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7221 */;
+import SentryUtilsDefault from "SentryUtils" /* 1231 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import FlagUtilsAll from "FlagUtils" /* 1385 */;
+import ChannelRecord from "ChannelRecord" /* 1962 */;
+import UserUtilsDefault from "UserUtils" /* 4484 */;
+import UserSearchWorkerManager from "UserSearchWorkerManager" /* 9972 */;
+import UserRecord from "UserRecord" /* 1386 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberStore from "GuildMemberStore" /* 2022 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import UserStore from "UserStore" /* 1372 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7225 */;
 import size from "module_2" /* 2 */;
 
 function getTransformedUser(user) {
@@ -950,7 +950,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResu
       }
     };
     obj._worker = _worker;
-    obj._uuid = obj(1254).v4();
+    obj._uuid = obj(1255).v4();
     obj._callback = parseUserResults;
     obj._limit = num;
     obj._currentQuery = null;

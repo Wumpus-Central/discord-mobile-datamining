@@ -1,7 +1,7 @@
-// === Module 15793: DevToolsGuildPowerupsConstants ===
+// === Module 15804: DevToolsGuildPowerupsConstants ===
 
-// Module 15793 (DevToolsGuildPowerupsConstants)
-import dismissible_content from "dismissible_content" /* 1943 */;
+// Module 15804 (DevToolsGuildPowerupsConstants)
+import dismissible_content from "dismissible_content" /* 1944 */;
 import size from "module_2" /* 2 */;
 
 const items = [dismissible_content.DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUP_NOTIFICATION, dismissible_content.DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK, dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE];

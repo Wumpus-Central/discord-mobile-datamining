@@ -1,7 +1,7 @@
-// === Module 10035: getSoundsForPack ===
+// === Module 10037: getSoundsForPack ===
 
-// Module 10035 (getSoundsForPack)
-import Constants from "Constants" /* 10034 */;
+// Module 10037 (getSoundsForPack)
+import Constants from "Constants" /* 10036 */;
 import size from "module_2" /* 2 */;
 
 const Soundpacks = Constants.Soundpacks;

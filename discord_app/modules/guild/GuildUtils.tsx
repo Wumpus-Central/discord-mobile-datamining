@@ -1,7 +1,7 @@
-// === Module 10470: guild/GuildUtils ===
+// === Module 10473: guild/GuildUtils ===
 
-// Module 10470 (guild/GuildUtils)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5601 */;
+// Module 10473 (guild/GuildUtils)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5605 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");

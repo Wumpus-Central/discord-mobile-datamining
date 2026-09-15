@@ -1,6 +1,6 @@
-// === Module 1902: BaseTelemetryChannel ===
+// === Module 1903: BaseTelemetryChannel ===
 
-// Module 1902 (BaseTelemetryChannel)
+// Module 1903 (BaseTelemetryChannel)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");

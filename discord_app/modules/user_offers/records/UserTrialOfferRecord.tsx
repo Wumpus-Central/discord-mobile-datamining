@@ -1,10 +1,10 @@
-// === Module 7557: UserTrialOfferRecord ===
+// === Module 7561: UserTrialOfferRecord ===
 
-// Module 7557 (UserTrialOfferRecord)
-import Record from "Record" /* 1386 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7558 */;
+// Module 7561 (UserTrialOfferRecord)
+import Record from "Record" /* 1387 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7562 */;
 
-let closure_1 = fn(1373).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
+let closure_1 = fn(1374).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
 let UserTrialOfferRecord;
 class UserTrialOfferRecord extends tmp2 {
   constructor(arg0) {

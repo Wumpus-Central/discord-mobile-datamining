@@ -1,14 +1,14 @@
-// === Module 13658: GiftingBadgesUtils ===
+// === Module 13663: GiftingBadgesUtils ===
 
-// Module 13658 (GiftingBadgesUtils)
+// Module 13663 (GiftingBadgesUtils)
 import initialize from "initialize" /* 504 */;
-import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4457 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8309 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10872 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13659 */;
-import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 13660 */;
-import UserStore from "UserStore" /* 1371 */;
+import dismissible_content from "dismissible_content" /* 1944 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8312 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10876 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 13664 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 13665 */;
+import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = BadgeDirectoryStore.getSingleRequirementThreshold;

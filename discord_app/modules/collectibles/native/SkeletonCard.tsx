@@ -1,16 +1,16 @@
-// === Module 8997: SkeletonCard ===
+// === Module 9000: SkeletonCard ===
 
-// Module 8997 (SkeletonCard)
+// Module 9000 (SkeletonCard)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import timing from "timing" /* 4637 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4640 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_5 = createStyles.createStyles((width, height) => {
   const obj = { skeletonCard: null };
   const size = { width, height, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm };
@@ -24,21 +24,21 @@ let result = size.fileFinishedImporting("modules/collectibles/native/SkeletonCar
 export default function _default(width) {
   let COLLECTIBLES_SHOP_CARD_WIDTH = width.width;
   if (COLLECTIBLES_SHOP_CARD_WIDTH === undefined) {
-    COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(8890).COLLECTIBLES_SHOP_CARD_WIDTH;
+    COLLECTIBLES_SHOP_CARD_WIDTH = sharedValue(8893).COLLECTIBLES_SHOP_CARD_WIDTH;
   }
   let COLLECTIBLES_SHOP_CARD_HEIGHT = width.height;
   sharedValue = undefined;
   if (COLLECTIBLES_SHOP_CARD_HEIGHT == null) {
-    COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8890).COLLECTIBLES_SHOP_CARD_HEIGHT;
+    COLLECTIBLES_SHOP_CARD_HEIGHT = sharedValue(8893).COLLECTIBLES_SHOP_CARD_HEIGHT;
   }
   const tmp3Result = closure_5(COLLECTIBLES_SHOP_CARD_WIDTH, COLLECTIBLES_SHOP_CARD_HEIGHT);
-  sharedValue = sharedValue(4373).useSharedValue(0.3);
+  sharedValue = sharedValue(4376).useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj = sharedValue(4373);
+  let obj = sharedValue(4376);
   class C {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -48,7 +48,7 @@ export default function _default(width) {
   C.__closure = { opacity: sharedValue };
   C.__workletHash = 5620456625640;
   C.__initData = __initData;
-  const animatedStyle = sharedValue(4373).useAnimatedStyle(C);
+  const animatedStyle = sharedValue(4376).useAnimatedStyle(C);
   const obj3 = { style: null };
   const items1 = [tmp3Result.skeletonCard, width.style, animatedStyle];
   obj3.style = items1;

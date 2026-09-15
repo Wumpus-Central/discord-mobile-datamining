@@ -1,25 +1,25 @@
-// === Module 11661: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11665: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11661 (createSocialLayerStorefrontProductDetailsEmbed)
-import util from "util" /* 1114 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1364 */;
-import GlobalUtils from "GlobalUtils" /* 1369 */;
-import _modDef3460 from "module_3460" /* 3460 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7329 */;
-import StorefrontUtils from "StorefrontUtils" /* 7334 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8049 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10927 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11662 */;
+// Module 11665 (createSocialLayerStorefrontProductDetailsEmbed)
+import util from "util" /* 1115 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import _modDef3461 from "module_3461" /* 3461 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7333 */;
+import StorefrontUtils from "StorefrontUtils" /* 7338 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8052 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10931 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11666 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4864 */;
-import SKUStore from "SKUStore" /* 5591 */;
+import ApplicationStore from "ApplicationStore" /* 4867 */;
+import SKUStore from "SKUStore" /* 5595 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(7838).InviteTypes;
+const InviteTypes = fn(7841).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
@@ -80,7 +80,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3460.BKf0MM);
+              stringResult = string(_modDef3461.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;

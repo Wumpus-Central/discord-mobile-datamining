@@ -1,7 +1,7 @@
-// === Module 10870: GiftPromotionReminderExperiment ===
+// === Module 10874: GiftPromotionReminderExperiment ===
 
-// Module 10870 (GiftPromotionReminderExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 10874 (GiftPromotionReminderExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-gift-promotion-reminder", kind: "user", defaultConfig: { enabled: false }, variations: null };

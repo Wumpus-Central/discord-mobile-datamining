@@ -1,19 +1,19 @@
-// === Module 8964: WishlistButton ===
+// === Module 8967: WishlistButton ===
 
-// Module 8964 (WishlistButton)
+// Module 8967 (WishlistButton)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4335 */;
-import native from "native" /* 4347 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4373 */;
-import spring from "spring" /* 5055 */;
-import springPresets from "springPresets" /* 5059 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8895 */;
+import util from "util" /* 1115 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import native from "native" /* 4350 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5058 */;
+import springPresets from "springPresets" /* 5062 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8898 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1371 */;
+import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 class WishlistButtonBase {
@@ -385,11 +385,11 @@ const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { duration: 400, easing: null };
-const Easing = fn(4373).Easing;
+const Easing = fn(4376).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-let obj2 = { sm: fn(5061).SMALL_BUTTON_HEIGHT, md: fn(5061).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5064).SMALL_BUTTON_HEIGHT, md: fn(5064).MEDIUM_BUTTON_HEIGHT };
 let value = { sm: "sm", md: "md" };
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_17 = createStyles.createStyles((arg0) => {
   obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
   const size = { width: obj2[arg0], height: obj2[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };

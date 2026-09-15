@@ -1,36 +1,36 @@
-// === Module 7522: BillingActionCreators ===
+// === Module 7526: BillingActionCreators ===
 
-// Module 7522 (BillingActionCreators)
+// Module 7526 (BillingActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1114 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1239 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
-import BillingUtils from "BillingUtils" /* 4309 */;
-import BillingError from "BillingError" /* 4316 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4537 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4829 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4981 */;
-import ProductIds from "ProductIds" /* 7343 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7520 */;
-import ACOMExperiments from "ACOMExperiments" /* 9495 */;
-import showSpendingLimitReachedAlert from "showSpendingLimitReachedAlert" /* 10834 */;
-import IAPUtils from "IAPUtils" /* 11182 */;
-import _mod11183 from "module_11183" /* 11183 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11567 */;
-import ErrorUtilsAll from "ErrorUtils" /* 13434 */;
-import APBRequestOperations from "APBRequestOperations" /* 13436 */;
-import ACRequestOperations from "ACRequestOperations" /* 13437 */;
+import util from "util" /* 1115 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1240 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
+import BillingUtils from "BillingUtils" /* 4312 */;
+import BillingError from "BillingError" /* 4319 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4540 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4832 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4984 */;
+import ProductIds from "ProductIds" /* 7347 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7524 */;
+import ACOMExperiments from "ACOMExperiments" /* 9497 */;
+import showSpendingLimitReachedAlert from "showSpendingLimitReachedAlert" /* 10838 */;
+import IAPUtils from "IAPUtils" /* 11186 */;
+import _mod11187 from "module_11187" /* 11187 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11571 */;
+import ErrorUtilsAll from "ErrorUtils" /* 13439 */;
+import APBRequestOperations from "APBRequestOperations" /* 13441 */;
+import ACRequestOperations from "ACRequestOperations" /* 13442 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 7523 */;
-import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4300 */;
-import IAPStore from "IAPStore" /* 7340 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 7527 */;
+import UserStore from "UserStore" /* 1372 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import IAPStore from "IAPStore" /* 7344 */;
 
 const IAPUtilsDefault = IAPUtils;
 
@@ -228,7 +228,7 @@ let closure_30 = async function _clearAndMakeIAPRequest() {
   closure_132_1 = closure_1;
   closure_132_2 = closure_2;
   closure_132_3 = closure_3;
-  await _mod11183.clearTransactionIOS();
+  await _mod11187.clearTransactionIOS();
   return closure_133_31(closure_132_0, closure_132_1, closure_132_2, closure_132_3);
 };
 function makeTrackedIAPRequest(arg0, arg1, arg2, arg3) {
@@ -1922,7 +1922,7 @@ let closure_46 = async function _migrateToACOM() {
 let closure_4 = ["items", "country_code"];
 let closure_5 = ["subscription_items"];
 let closure_6 = ["sku_id", "country_code", "is_gift", "gift_info_options"];
-const PremiumPlanPurchasedStore = fn(7524);
+const PremiumPlanPurchasedStore = fn(7528);
 ({ setPaymentSuccess: c10, showOldPaymentFlowSuccess: closure_11 } = PremiumPlanPurchasedStore);
 const Constants = fn(1074);
 ({ SubscriptionTypes: closure_15, AnalyticEvents: closure_16, CurrencyCodes: closure_17, Endpoints: closure_18, StoreKitErrors } = Constants);
@@ -1931,7 +1931,7 @@ const jsx = fn(21).jsx;
 const localAppleReceiptHash = "localAppleReceiptHash";
 const BILLING = "BILLING";
 new LoggerDefault("BillingActionCreators.tsx");
-let items = [fn(11183).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [fn(11187).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 const set = new Set(items);
 let obj2 = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 const size = fn(2);
@@ -1939,8 +1939,8 @@ let result = size.fileFinishedImporting("actions/native/BillingActionCreators.ts
 
 export default {
   applyAppleReceipt,
-  fetchMostRecentSubscription: fn(4960).fetchMostRecentSubscription,
-  fetchIpCountryCode: fn(4960).fetchIpCountryCode,
+  fetchMostRecentSubscription: fn(4963).fetchMostRecentSubscription,
+  fetchIpCountryCode: fn(4963).fetchIpCountryCode,
   init() {
     const self = this;
     return (async () => {
@@ -2090,7 +2090,7 @@ export default {
               c3 = 1;
               c4 = 2;
               c5 = 1;
-              const obj4 = { value: _mod11183.initConnection(), done: false };
+              const obj4 = { value: _mod11187.initConnection(), done: false };
               return obj4;
             }
           } else if (1 === tmp7) {
@@ -2700,7 +2700,7 @@ export default {
                       if (jwsRepresentation == null) {
                         transactionReceipt = purchaseResponse.transactionReceipt;
                       }
-                      const v3Result = closure_2_1(1239).v3(transactionReceipt);
+                      const v3Result = closure_2_1(1240).v3(transactionReceipt);
                       closure_130_2 = v3Result;
                       giftOptionsForKey = giftOptionsForKey.getGiftOptionsForKey(v3Result);
                       const obj6 = { jwsRepresentation: null, encodedReceipt: null, presentmentCurrency: null, presentmentAmount: null, appStoreRegion: null, giftInfoOptions: null, source: "restoreSubscription", skipDupCheck: null };
@@ -2771,7 +2771,7 @@ export default {
                       return obj22;
                     } else if (closure_134_3.length > 0) {
                       const item = closure_134_3.forEach((item) => {
-                        const result = closure_1_0(4309).captureBillingException(item);
+                        const result = closure_1_0(4312).captureBillingException(item);
                       });
                       const _Error = Error;
                       const error = new Error("There were some errors while trying to restore");

@@ -1,7 +1,7 @@
-// === Module 15434: GummyStripesFromHue ===
+// === Module 15444: GummyStripesFromHue ===
 
-// Module 15434 (GummyStripesFromHue)
-import ColorPickerUtils from "ColorPickerUtils" /* 14686 */;
+// Module 15444 (GummyStripesFromHue)
+import ColorPickerUtils from "ColorPickerUtils" /* 14696 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ function AnimatedStripe(hue) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(4636);
+const createStyles = fn(4639);
 let closure_6 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 const __initData = { code: "function GummyStripesFromHueTsx1(){const{hue,shift,hslToRgbWorklet,saturation,lightness}=this.__closure;const h=((hue.get()+shift)%360+360)%360;const[r,g,b]=hslToRgbWorklet({h:h,s:saturation,l:lightness});return{backgroundColor:\"rgb(\"+r+\", \"+g+\", \"+b+\")\"};}" };
 const size = fn(2);
@@ -43,7 +43,7 @@ let result = size.fileFinishedImporting("modules/display_name_styles/native/effe
 export default function GummyStripesFromHue(hue) {
   hue = hue.hue;
   const obj = { children: null };
-  const GUMMY_STRIPES = hue(1388).GUMMY_STRIPES;
+  const GUMMY_STRIPES = hue(1389).GUMMY_STRIPES;
   obj.children = GUMMY_STRIPES.map((hueShift, index) => React4(AnimatedStripe, { hue, shift: hueShift.hueShift, saturation: hueShift.saturation, lightness: hueShift.lightness, overlap: index > 0 }, index));
   return closure_4(closure_5, obj);
 };

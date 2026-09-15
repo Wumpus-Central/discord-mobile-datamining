@@ -1,22 +1,22 @@
-// === Module 10235: MessagePreviewText ===
+// === Module 10237: MessagePreviewText ===
 
-// Module 10235 (MessagePreviewText)
+// Module 10237 (MessagePreviewText)
 import nativeDefault from "native" /* 576 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import useMessageAuthor from "useMessageAuthor" /* 4869 */;
-import FastImageDefault from "FastImage" /* 5668 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7405 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7983 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10223 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10236 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10237 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10259 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 10267 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10268 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1096 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import useMessageAuthor from "useMessageAuthor" /* 4872 */;
+import FastImageDefault from "FastImage" /* 5672 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7409 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7986 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10225 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10238 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10239 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10261 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 10269 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 10270 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;
 function NativeMessagePreviewContent(arg0) {
@@ -133,16 +133,16 @@ function EmbedCard(embed) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10224);
+const InAppNotificationConstants = fn(10226);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4636);
-const PlatformUtils = fn(1364);
+let createStyles = fn(4639);
+const PlatformUtils = fn(1365);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(4636);
+createStyles = fn(4639);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };

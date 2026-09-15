@@ -1,18 +1,18 @@
-// === Module 15195: QuestDisclosureModal ===
+// === Module 15205: QuestDisclosureModal ===
 
-// Module 15195 (QuestDisclosureModal)
+// Module 15205 (QuestDisclosureModal)
 import jsxProd from "jsxProd" /* 21 */;
-import util from "util" /* 1114 */;
-import _modDef7095 from "module_7095" /* 7095 */;
-import Navigator from "Navigator" /* 7103 */;
-import HeaderActionButton from "HeaderActionButton" /* 7480 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15194 */;
-import QuestDisclosureModalInnerDefault from "QuestDisclosureModalInner" /* 15196 */;
+import util from "util" /* 1115 */;
+import _modDef7099 from "module_7099" /* 7099 */;
+import Navigator from "Navigator" /* 7107 */;
+import HeaderActionButton from "HeaderActionButton" /* 7484 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15204 */;
+import QuestDisclosureModalInnerDefault from "QuestDisclosureModalInner" /* 15206 */;
 import size from "module_2" /* 2 */;
 
 function CloseButton() {
   const obj = {
-    source: _modDef7095,
+    source: _modDef7099,
     onPress() {
       return QuestDisclosureModalActionCreatorsDefault.hideModal();
     },
@@ -21,7 +21,7 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7095,
+    source: _modDef7099,
     onPress() {
       return QuestDisclosureModalActionCreatorsDefault.hideModal();
     },

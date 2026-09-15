@@ -1,11 +1,11 @@
-// === Module 11433: QuestBarRenderDelayTracker ===
+// === Module 11437: QuestBarRenderDelayTracker ===
 
-// Module 11433 (QuestBarRenderDelayTracker)
+// Module 11437 (QuestBarRenderDelayTracker)
 import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7704 */;
-import MetricEvents from "MetricEvents" /* 7709 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11434 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7707 */;
+import MetricEvents from "MetricEvents" /* 7712 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11438 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

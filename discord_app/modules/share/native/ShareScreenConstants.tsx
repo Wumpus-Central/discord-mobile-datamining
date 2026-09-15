@@ -1,6 +1,6 @@
-// === Module 13940: ShareScreenConstants ===
+// === Module 13945: ShareScreenConstants ===
 
-// Module 13940 (ShareScreenConstants)
+// Module 13945 (ShareScreenConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/share/native/ShareScreenConstants.tsx");

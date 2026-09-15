@@ -1,8 +1,8 @@
-// === Module 13840: XboxApplicationRecord ===
+// === Module 13845: XboxApplicationRecord ===
 
-// Module 13840 (XboxApplicationRecord)
-import PlatformsDefault from "Platforms" /* 5364 */;
-import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+// Module 13845 (XboxApplicationRecord)
+import PlatformsDefault from "Platforms" /* 5368 */;
+import ApplicationRecord from "ApplicationRecord" /* 1919 */;
 
 let c2 = "xbox:";
 const size = fn(2);

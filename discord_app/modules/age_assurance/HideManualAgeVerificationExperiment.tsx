@@ -1,7 +1,7 @@
-// === Module 8699: HideManualAgeVerificationExperiment ===
+// === Module 8702: HideManualAgeVerificationExperiment ===
 
-// Module 8699 (HideManualAgeVerificationExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 8702 (HideManualAgeVerificationExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2025-11-hide-manual-link", defaultConfig: { isHidden: false }, variations: null };

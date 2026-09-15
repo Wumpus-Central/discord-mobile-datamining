@@ -1,6 +1,6 @@
-// === Module 17721: GuildSettingsRolesManager ===
+// === Module 17759: GuildSettingsRolesManager ===
 
-// Module 17721 (GuildSettingsRolesManager)
+// Module 17759 (GuildSettingsRolesManager)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

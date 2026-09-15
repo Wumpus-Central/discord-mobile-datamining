@@ -1,7 +1,7 @@
-// === Module 13777: ConnectionIndicatorExperiment ===
+// === Module 13782: ConnectionIndicatorExperiment ===
 
-// Module 13777 (ConnectionIndicatorExperiment)
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 13782 (ConnectionIndicatorExperiment)
+import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-12-connection-indicator", kind: "user", defaultConfig: { timeoutMs: "HermesInternal", hidden: null }, variations: null };

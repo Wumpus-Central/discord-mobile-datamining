@@ -1,17 +1,17 @@
-// === Module 13685: GuildBoostingMarketingBoosterRecognitionCards ===
+// === Module 13690: GuildBoostingMarketingBoosterRecognitionCards ===
 
-// Module 13685 (GuildBoostingMarketingBoosterRecognitionCards)
+// Module 13690 (GuildBoostingMarketingBoosterRecognitionCards)
 import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4632 */;
-import HeartIcon from "HeartIcon" /* 8900 */;
-import BoostGemIcon from "BoostGemIcon" /* 9505 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9882 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 13612 */;
-import _modDef13686 from "module_13686" /* 13686 */;
-import _modDef13687 from "module_13687" /* 13687 */;
-import _modDef13688 from "module_13688" /* 13688 */;
-import _modDef13689 from "module_13689" /* 13689 */;
+import util from "util" /* 1115 */;
+import Text_Text from "Text/Text" /* 4635 */;
+import HeartIcon from "HeartIcon" /* 8903 */;
+import BoostGemIcon from "BoostGemIcon" /* 9507 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9884 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13617 */;
+import _modDef13691 from "module_13691" /* 13691 */;
+import _modDef13692 from "module_13692" /* 13692 */;
+import _modDef13693 from "module_13693" /* 13693 */;
+import _modDef13694 from "module_13694" /* 13694 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,10 +27,10 @@ function Card(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4636);
+let createStyles = fn(4639);
 let obj2 = { card: { minHeight: 124, width: 172, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 13, paddingVertical: 16 }, description: { textAlign: "center" }, iconContainer: { height: 30, marginBottom: 10 } };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(4636);
+createStyles = fn(4639);
 let closure_8 = createStyles.createStyles({ container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" }, title: { textAlign: "center", marginHorizontal: 34 }, recognitionCardsContainer: { marginTop: 15, display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx");
@@ -43,19 +43,19 @@ export default function GuildBoostingMarketingBoosterRecognitionCards() {
   obj2.children = intl.string(util.t.IzKs3o);
   const items = [React4(Text_Text.Heading, obj2), ];
   const obj3 = { style: tmp.recognitionCardsContainer, children: null };
-  const obj4 = { icon: _modDef13686, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  const obj4 = { icon: _modDef13691, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.TZigSO);
   const items1 = [React4(Card, obj4), , , ];
-  const obj5 = { icon: _modDef13687, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  const obj5 = { icon: _modDef13692, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
   obj5.children = intl3.string(util.t.hjQuV2);
   items1[1] = React4(Card, obj5);
-  const obj6 = { icon: _modDef13688, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  const obj6 = { icon: _modDef13693, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
   obj6.children = intl4.string(util.t["2RUcaM"]);
   items1[2] = React4(Card, obj6);
-  const obj7 = { icon: _modDef13689, IconComponent: HeartIcon.HeartIcon, children: null };
+  const obj7 = { icon: _modDef13694, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t.bJoZKV);
   items1[3] = React4(Card, obj7);

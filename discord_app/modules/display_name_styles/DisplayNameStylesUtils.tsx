@@ -1,18 +1,18 @@
-// === Module 1388: DisplayNameStylesUtils ===
+// === Module 1389: DisplayNameStylesUtils ===
 
-// Module 1388 (DisplayNameStylesUtils)
+// Module 1389 (DisplayNameStylesUtils)
 import _modDef672 from "module_672" /* 672 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
-import DisplayNameFont from "DisplayNameFont" /* 1391 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1391 */;
+import DisplayNameFont from "DisplayNameFont" /* 1392 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1389);
+const DisplayNameStylesConstants = fn(1390);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, FLYWHEEL_EFFECTS: metroRequire, FLYWHEEL_FONTS: closure_7, getColorPresetsForEffect: closure_8 } = DisplayNameStylesConstants);
-let items = [fn(1390).DisplayNameEffect.NEON, fn(1390).DisplayNameEffect.TOON, fn(1390).DisplayNameEffect.POP, fn(1390).DisplayNameEffect.GUMMY];
+let items = [fn(1391).DisplayNameEffect.NEON, fn(1391).DisplayNameEffect.TOON, fn(1391).DisplayNameEffect.POP, fn(1391).DisplayNameEffect.GUMMY];
 const set = new Set(items);
 const items1 = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 7991: MessageCountUtils ===
+// === Module 7994: MessageCountUtils ===
 
-// Module 7991 (MessageCountUtils)
+// Module 7994 (MessageCountUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1114 */;
-import ThreadConstants from "ThreadConstants" /* 1113 */;
+import util from "util" /* 1115 */;
+import ThreadConstants from "ThreadConstants" /* 1114 */;
 import size from "module_2" /* 2 */;
 
 function _formatMessageCountLabel(count, iTS3Xe, id) {

@@ -1,7 +1,7 @@
-// === Module 12673: GuildPowerupAnalytics ===
+// === Module 12678: GuildPowerupAnalytics ===
 
-// Module 12673 (GuildPowerupAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
+// Module 12678 (GuildPowerupAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;

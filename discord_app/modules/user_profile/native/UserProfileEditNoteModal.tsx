@@ -1,8 +1,8 @@
-// === Module 13188: UserProfileEditNoteModal ===
+// === Module 13193: UserProfileEditNoteModal ===
 
-// Module 13188 (UserProfileEditNoteModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4839 */;
-import UserProfileEditNote from "UserProfileEditNote" /* 13189 */;
+// Module 13193 (UserProfileEditNoteModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 13194 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ export default function UserProfileEditNoteModal(arg0) {
   }
   navigation = undefined;
   onSave = undefined;
-  navigation = navigation(1483).useNavigation();
+  navigation = navigation(1484).useNavigation();
   [_slicedToArray, onSave] = handleClose.useState(false);
   const items = [navigation];
   const effect = handleClose.useEffect(() => navigation.addListener("transitionEnd", (data) => {
@@ -30,9 +30,9 @@ export default function UserProfileEditNoteModal(arg0) {
       onSave(true);
     }
   }), items);
-  navigation(1364);
+  navigation(1365);
   const obj3 = { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null };
-  let obj = navigation(1483);
+  let obj = navigation(1484);
   let obj4;
   if (!tmpResult.isAndroid()) {
     obj4 = { height: 56 };
@@ -40,20 +40,20 @@ export default function UserProfileEditNoteModal(arg0) {
   obj3.headerStyle = obj4;
   const obj5 = { root: null };
   const obj6 = { title: null, headerTitle: null, headerLeft: null, render: null };
-  let intl = tmp(1114).intl;
-  obj6.title = intl.string(navigation(1114).t.sHHsOM);
+  let intl = tmp(1115).intl;
+  obj6.title = intl.string(navigation(1115).t.sHHsOM);
   obj6.headerTitle = function headerTitle() {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
-    const intl = navigation(1114).intl;
-    obj.children = intl.string(navigation(1114).t.sHHsOM);
-    return jsx(navigation(4632).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
+    const intl = navigation(1115).intl;
+    obj.children = intl.string(navigation(1115).t.sHHsOM);
+    return jsx(navigation(4635).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
   };
-  tmpResult = navigation(1364);
-  obj6.headerLeft = navigation(5705).getHeaderCloseButton(handleClose);
+  tmpResult = navigation(1365);
+  obj6.headerLeft = navigation(5709).getHeaderCloseButton(handleClose);
   obj6.render = function render() {
     return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
   obj5.root = obj6;
   obj3.screens = obj5;
-  return jsx(navigation(7103).Navigator, { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null });
+  return jsx(navigation(7107).Navigator, { initialRouteName: "root", headerStatusBarHeight: 12, headerStyle: null, screens: null });
 };

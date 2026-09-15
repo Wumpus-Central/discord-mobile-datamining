@@ -1,20 +1,20 @@
-// === Module 1231: SentryInitUtils ===
+// === Module 1232: SentryInitUtils ===
 
-// Module 1231 (SentryInitUtils)
+// Module 1232 (SentryInitUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod675 from "module_675" /* 675 */;
-import router_utils from "router_utils" /* 1100 */;
-import SentryUtilsDefault from "SentryUtils" /* 1230 */;
-import TelemetryRingLifecycle from "TelemetryRingLifecycle" /* 1232 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1240 */;
-import DesignIds from "DesignIds" /* 1343 */;
-import ClientInfoUtilsAll from "ClientInfoUtils" /* 1362 */;
-import PlatformUtils from "PlatformUtils" /* 1363 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import DeviceUtils from "DeviceUtils" /* 4615 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 7705 */;
-import MetricEvents from "MetricEvents" /* 7709 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 14169 */;
+import router_utils from "router_utils" /* 1101 */;
+import SentryUtilsDefault from "SentryUtils" /* 1231 */;
+import TelemetryRingLifecycle from "TelemetryRingLifecycle" /* 1233 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+import DesignIds from "DesignIds" /* 1344 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1363 */;
+import PlatformUtils from "PlatformUtils" /* 1364 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
+import DeviceUtils from "DeviceUtils" /* 4618 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 7708 */;
+import MetricEvents from "MetricEvents" /* 7712 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 14174 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -540,8 +540,8 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1230).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1230);
+    tmp25(1231).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1231);
   }
   const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
@@ -552,8 +552,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(7704).increment(obj6, true);
-  const tmp26Result = tmp26(7704);
+  tmp26(7707).increment(obj6, true);
+  const tmp26Result = tmp26(7707);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
@@ -572,7 +572,7 @@ let closure_11 = ["The operation couldn\u2019t be completed. (com.apple.CallKit.
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1356);
+const CommonSentryInitUtils = fn(1357);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -633,7 +633,7 @@ export const initSentry = function initSentry() {
           if (tmp14Result11.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "6417", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@347.0.0-2+347200", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "6425", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@347.1.0-2+347201", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -664,7 +664,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result10.init(obj3);
           const tmp14Result13 = _mod675;
-          _mod675.setTag("buildNumber", "6417");
+          _mod675.setTag("buildNumber", "6425");
           const tmp14Result14 = _mod675;
           _mod675.setTag("appVersion", constants.Version);
           const tmp14Result15 = _mod675;

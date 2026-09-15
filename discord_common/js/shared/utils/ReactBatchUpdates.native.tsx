@@ -1,6 +1,6 @@
-// === Module 1247: ReactBatchUpdates ===
+// === Module 1248: ReactBatchUpdates ===
 
-// Module 1247 (ReactBatchUpdates)
+// Module 1248 (ReactBatchUpdates)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

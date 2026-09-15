@@ -1,13 +1,13 @@
-// === Module 10244: MessagePreviewMarkup ===
+// === Module 10246: MessagePreviewMarkup ===
 
-// Module 10244 (MessagePreviewMarkup)
-import privDefault from "priv" /* 1437 */;
-import _modDef4333 from "module_4333" /* 4333 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4626 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5078 */;
-import MarkupRulesDefault from "MarkupRules" /* 5079 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7983 */;
-import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 10245 */;
+// Module 10246 (MessagePreviewMarkup)
+import privDefault from "priv" /* 1438 */;
+import _modDef4336 from "module_4336" /* 4336 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4629 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5081 */;
+import MarkupRulesDefault from "MarkupRules" /* 5082 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7986 */;
+import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 10247 */;
 
 require = fn;
 function getOrParseMessagePreviewMarkupAST(arg0) {
@@ -42,8 +42,8 @@ export const renderASTToReact = function renderASTToReact(layout) {
   ({ tree, initialParserState, color, fontScale, maxFontSizeMultiplier } = layout);
   const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
   const tmpResult = combineMarkupRulesDefault(items);
-  const obj = _modDef4333;
-  return obj.reactFor(_modDef4333.ruleOutput(tmpResult, "react"))(tree, initialParserState);
+  const obj = _modDef4336;
+  return obj.reactFor(_modDef4336.ruleOutput(tmpResult, "react"))(tree, initialParserState);
 };
 export const getMessagePreviewASTParser = function getMessagePreviewASTParser(layout) {
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
@@ -78,8 +78,8 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
     const items = [MarkupRulesDefault.RULES, MarkupMessagePreviewReactRulesDefault(layout, color, num, maxFontSizeMultiplier)];
     const tmp7Result = combineMarkupRulesDefault(items);
-    const obj2 = _modDef4333;
-    return obj2.reactFor(_modDef4333.ruleOutput(tmp7Result, "react"))(tmp4, obj4);
+    const obj2 = _modDef4336;
+    return obj2.reactFor(_modDef4336.ruleOutput(tmp7Result, "react"))(tmp4, obj4);
   }
 };
 export const messagePreviewASTCache = tmp2;

@@ -1,14 +1,14 @@
-// === Module 11319: useTenureBadging ===
+// === Module 11323: useTenureBadging ===
 
-// Module 11319 (useTenureBadging)
+// Module 11323 (useTenureBadging)
 import initialize from "initialize" /* 504 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7736 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11320 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11321 */;
-import UserProfileStore from "UserProfileStore" /* 7723 */;
-import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4300 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7739 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11324 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11325 */;
+import UserProfileStore from "UserProfileStore" /* 7726 */;
+import UserStore from "UserStore" /* 1372 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
 
 const require = globalThis.__r;
 
@@ -53,7 +53,7 @@ function usePremiumSince() {
   }
   return stateFromStores1;
 }
-const PremiumConstants = fn(1373);
+const PremiumConstants = fn(1374);
 ({ PremiumTypes: hasOwnProperty, TENURE_BADGES: metroRequire } = PremiumConstants);
 const TieredTenureBadgeStatus = { UPCOMING: "upcoming", WITHHELD: "withheld", EARNED: "earned" };
 const size = fn(2);

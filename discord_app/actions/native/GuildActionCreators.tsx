@@ -1,9 +1,9 @@
-// === Module 17731: actions/GuildActionCreators ===
+// === Module 17769: actions/GuildActionCreators ===
 
-// Module 17731 (actions/GuildActionCreators)
+// Module 17769 (actions/GuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import size from "module_2" /* 2 */;
 
 function batchChannelUpdate(guildId, body) {

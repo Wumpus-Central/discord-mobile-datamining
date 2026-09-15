@@ -1,7 +1,7 @@
-// === Module 16694: VibegrationsWorkerTickets ===
+// === Module 16707: VibegrationsWorkerTickets ===
 
-// Module 16694 (VibegrationsWorkerTickets)
-import HTTPUtils from "HTTPUtils" /* 1270 */;
+// Module 16707 (VibegrationsWorkerTickets)
+import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

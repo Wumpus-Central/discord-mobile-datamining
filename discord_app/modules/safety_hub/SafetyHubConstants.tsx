@@ -1,8 +1,8 @@
-// === Module 8537: SafetyHubConstants ===
+// === Module 8540: SafetyHubConstants ===
 
-// Module 8537 (SafetyHubConstants)
+// Module 8540 (SafetyHubConstants)
 import Constants from "Constants" /* 1074 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1248 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsSections = Constants.AnalyticsSections;

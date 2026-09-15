@@ -1,9 +1,9 @@
-// === Module 8565: GoogleNeutralIcon ===
+// === Module 8568: GoogleNeutralIcon ===
 
-// Module 8565 (GoogleNeutralIcon)
+// Module 8568 (GoogleNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4337 */;
-import _mod8566 from "module_8566" /* 8566 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod8569 from "module_8569" /* 8569 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const GoogleNeutralIcon = function GoogleNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8566, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8569, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

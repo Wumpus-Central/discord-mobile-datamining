@@ -1,8 +1,8 @@
-// === Module 15916: VisibilitySensor ===
+// === Module 15929: VisibilitySensor ===
 
-// Module 15916 (VisibilitySensor)
+// Module 15929 (VisibilitySensor)
 import _mod17 from "module_17" /* 17 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
 import noop_mod from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;

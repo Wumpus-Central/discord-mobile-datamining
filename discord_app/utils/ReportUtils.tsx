@@ -1,10 +1,10 @@
-// === Module 7392: ReportUtils ===
+// === Module 7396: ReportUtils ===
 
-// Module 7392 (ReportUtils)
-import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4556 */;
-import PermissionStore from "PermissionStore" /* 4275 */;
-import UserStore from "UserStore" /* 1371 */;
+// Module 7396 (ReportUtils)
+import ChannelStore from "ChannelStore" /* 1958 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import UserStore from "UserStore" /* 1372 */;
 
 const Constants = fn(1074);
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty, MessageTypesSets: metroRequire } = Constants);

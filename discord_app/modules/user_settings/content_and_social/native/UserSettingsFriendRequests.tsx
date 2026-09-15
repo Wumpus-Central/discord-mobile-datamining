@@ -1,9 +1,9 @@
-// === Module 16890: UserSettingsFriendRequests ===
+// === Module 16928: UserSettingsFriendRequests ===
 
-// Module 16890 (UserSettingsFriendRequests)
-import FlagUtilsAll from "FlagUtils" /* 1384 */;
-import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7098 */;
+// Module 16928 (UserSettingsFriendRequests)
+import FlagUtilsAll from "FlagUtils" /* 1385 */;
+import UserSettings from "UserSettings" /* 1936 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7102 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,17 +16,17 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/UserSettingsFriendRequests.tsx");
 
 export default function UserSettingsFriendRequests() {
-  let FriendSourceFlagsSetting = setting(1935).FriendSourceFlagsSetting;
+  let FriendSourceFlagsSetting = setting(1936).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);
   let obj = { children: null };
   const obj2 = { title: null, hasIcons: false, children: null };
-  const intl = setting(1114).intl;
-  obj2.title = intl.string(setting(1114).t.vyodkM);
+  const intl = setting(1115).intl;
+  obj2.title = intl.string(setting(1115).t.vyodkM);
   const obj3 = { label: null, value: null, onValueChange: null };
-  const intl2 = setting(1114).intl;
-  obj3.label = intl2.string(setting(1114).t.mGr3CX);
+  const intl2 = setting(1115).intl;
+  obj3.label = intl2.string(setting(1115).t.mGr3CX);
   obj3.value = memo.all;
   obj3.onValueChange = function onValueChange(arg0) {
     const FriendSourceFlagsSetting = setting(dependencyMap[4]).FriendSourceFlagsSetting;
@@ -37,10 +37,10 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(tmp3);
   };
-  const items1 = [closure_7(setting(7303).TableSwitchRow, obj3), , ];
+  const items1 = [closure_7(setting(7307).TableSwitchRow, obj3), , ];
   const obj4 = { label: null, value: null, onValueChange: null };
-  const intl3 = setting(1114).intl;
-  obj4.label = intl3.string(setting(1114).t.IqlCSq);
+  const intl3 = setting(1115).intl;
+  obj4.label = intl3.string(setting(1115).t.IqlCSq);
   obj4.value = memo.mutualFriends;
   obj4.onValueChange = function onValueChange(arg0) {
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
@@ -52,10 +52,10 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[1] = closure_7(setting(7303).TableSwitchRow, obj4);
+  items1[1] = closure_7(setting(7307).TableSwitchRow, obj4);
   const obj5 = { label: null, value: null, onValueChange: null };
-  const intl4 = setting(1114).intl;
-  obj5.label = intl4.string(setting(1114).t.mozb8f);
+  const intl4 = setting(1115).intl;
+  obj5.label = intl4.string(setting(1115).t.mozb8f);
   obj5.value = memo.mutualGuilds;
   obj5.onValueChange = function onValueChange(arg0) {
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
@@ -67,8 +67,8 @@ export default function UserSettingsFriendRequests() {
     }
     return FriendSourceFlagsSetting.updateSetting(addFlagResult);
   };
-  items1[2] = closure_7(setting(7303).TableSwitchRow, obj5);
+  items1[2] = closure_7(setting(7307).TableSwitchRow, obj5);
   obj2.children = items1;
-  obj.children = closure_8(setting(5768).TableRowGroup, obj2);
+  obj.children = closure_8(setting(5772).TableRowGroup, obj2);
   return closure_7(View, obj);
 };
