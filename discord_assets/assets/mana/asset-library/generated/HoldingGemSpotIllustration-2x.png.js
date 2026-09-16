@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/HoldingGemSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/7b79c8ca5fa456a454a014d1fccabae845178450cdee12958012bd91f36f1d1c.png";
-export const metadata = { fileBytes: 64830 };
+export default "https://cdn.discordapp.com/assets/content/67bbdfbca37f05c3e1eea68449b063d26ee3069cd55c859bbe6a9199998867da.png";
+export const metadata = { fileBytes: 62949 };

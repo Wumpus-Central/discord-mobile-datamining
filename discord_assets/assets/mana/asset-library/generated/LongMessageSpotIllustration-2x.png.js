@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/LongMessageSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/2f79216893c991b3c6166363ac2dadae14e7fcd0caaf943b5efdd38dac2bf921.png";
-export const metadata = { fileBytes: 128420 };
+export default "https://cdn.discordapp.com/assets/content/e291c2b30ff7c0cbef884f1a58932d39369f628c1ba5ab9f5c66efbb3e1ebf4a.png";
+export const metadata = { fileBytes: 129577 };

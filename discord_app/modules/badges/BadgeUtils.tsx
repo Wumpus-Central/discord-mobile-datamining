@@ -1,4 +1,5 @@
 // discord_app/modules/badges/BadgeUtils.tsx
+import util from "../../intl/index.native.tsx";
 import Constants from "../user_profile/Constants.tsx";
 import BadgeId from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
@@ -19,6 +20,14 @@ let result = size.fileFinishedImporting("modules/badges/BadgeUtils.tsx");
 
 export const MAX_DISPLAYED_PROFILE_BADGES = 6;
 export { isPinnedBadge };
+export const getAlwaysVisibleCopy = function getAlwaysVisibleCopy(badge_id) {
+  if (badge_id === BadgeId.BadgeId.STAFF) {
+    let nPQVxb = util.t.t3udZb;
+  } else {
+    nPQVxb = util.t.nPQVxb;
+  }
+  return nPQVxb;
+};
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
   const _Set = Set;
   const STAFF = BadgeId.BadgeId.STAFF;

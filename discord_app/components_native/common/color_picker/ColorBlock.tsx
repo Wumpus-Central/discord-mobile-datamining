@@ -4,13 +4,13 @@ import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUt
 import native from "../../../design/void/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef11698 from "../../../../_runtime/metro/11698__.js";
+import _modDef11706 from "../../../../_runtime/metro/11706__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj = {
   colorBlock: {
     minWidth: 44,
@@ -71,7 +71,7 @@ export default noop.memo((color) => {
       obj2.children = null;
       let tmp10Result1 = jsx(Pressables.PressableOpacity, obj2);
     } else {
-      const obj5 = { source: _modDef11698, color: null };
+      const obj5 = { source: _modDef11706, color: null };
       if (v < 0.5) {
         unsafe_rawColors = nativeDefault.unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
@@ -79,7 +79,7 @@ export default noop.memo((color) => {
         BLACK2 = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj5.color = BLACK2;
-      jsx(native.Icon, { source: _modDef11698, color: null });
+      jsx(native.Icon, { source: _modDef11706, color: null });
     }
     const tmp2Result5 = utils_ColorUtils;
   } else {
@@ -92,14 +92,14 @@ export default noop.memo((color) => {
       obj6.children = null;
       tmp10Result1 = <View {...obj6} />;
     } else {
-      const obj8 = { source: _modDef11698, color: null };
+      const obj8 = { source: _modDef11706, color: null };
       if (v < 0.5) {
         let BLACK = nativeDefault.unsafe_rawColors.WHITE;
       } else {
         BLACK = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj8.color = BLACK;
-      jsx(native.Icon, { source: _modDef11698, color: null });
+      jsx(native.Icon, { source: _modDef11706, color: null });
     }
     const tmp2Result6 = utils_ColorUtils;
   }

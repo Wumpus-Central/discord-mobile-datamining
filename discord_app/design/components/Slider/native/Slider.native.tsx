@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: { flex: 1, flexDirection: "row", alignItems: "center" },
   slider: { flex: 1 },
@@ -57,7 +57,7 @@ export const Slider = function Slider(step) {
   obj3.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
   obj3.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
   obj3.tapToSeek = true;
-  items1[1] = closure_5(step(8399), obj3);
+  items1[1] = closure_5(step(8408), obj3);
   let tmp8Result = null;
   if (null != endIcon) {
     const obj4 = { style: tmp2.endIcon, children: endIcon };

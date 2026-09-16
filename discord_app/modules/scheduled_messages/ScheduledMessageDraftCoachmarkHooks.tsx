@@ -19,9 +19,9 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   let first;
   let connected;
   let isCoachmarkVisible;
-  let result = channel(4460).useIsDismissibleContentDismissed_UNSAFE(closure_7);
+  let result = channel(4458).useIsDismissibleContentDismissed_UNSAFE(closure_7);
   dependencyMap = result;
-  let obj = channel(4460);
+  let obj = channel(4458);
   const items = [isCoachmarkVisible];
   const stateFromStores = channel(504).useStateFromStores(
     items,

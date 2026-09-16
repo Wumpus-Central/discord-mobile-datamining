@@ -102,7 +102,7 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(16705);
+let VibegrationsConnectionStore = fn(16725);
 ({
   requestProjectRebuild: closure_12,
   sendUserMessage: map1,
@@ -112,7 +112,7 @@ let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const VibegrationsSettingsSheet = "VibegrationsSettingsSheet";
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_21 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingBottom },
@@ -715,9 +715,9 @@ export default function VibegrationsSettingsSheet(projectId) {
                     if (application_id == null) {
                       _null = null;
                     }
-                    _null2(13390)(_null);
+                    _null2(13401)(_null);
                     let prop;
-                    const tmp19 = _null2(13390);
+                    const tmp19 = _null2(13401);
                     if (project2 != null) {
                       prop = project2.preview_application_id;
                     }
@@ -725,13 +725,13 @@ export default function VibegrationsSettingsSheet(projectId) {
                     if (prop == null) {
                       _null2 = null;
                     }
-                    _null2(13390)(_null2);
-                    const tmp27 = _null2(13390);
+                    _null2(13401)(_null2);
+                    const tmp27 = _null2(13401);
                   }
                 }
-                _null2(4606).hideActionSheet(closure_1_20);
+                _null2(4605).hideActionSheet(closure_1_20);
                 c5 = 1;
-                const obj = _null2(4606);
+                const obj = _null2(4605);
               }
               const intl = _null(1115).intl;
               closure_1_13(closure_131_0, intl.string(_null2(3591).gqJFu0));

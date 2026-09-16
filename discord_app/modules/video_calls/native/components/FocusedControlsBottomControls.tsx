@@ -57,11 +57,11 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  const canShowTooltip = positionY(9824).useCanShowTooltip(
+  const canShowTooltip = positionY(9832).useCanShowTooltip(
     positionY(1094).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS,
     true,
   );
-  positionY(4376);
+  positionY(4374);
   const fn = function o() {
     return { opacity: 1 - Math.min((-1 * positionY.get()) / c15, 1) };
   };
@@ -111,10 +111,10 @@ function FocusedControlsAboveActionBarView(positionY) {
     children: null,
   };
   const obj4 = { style: tmp.aboveActionBarContainer, children: null };
-  const animatedStyle = positionY(4376).useAnimatedStyle(fn);
+  const animatedStyle = positionY(4374).useAnimatedStyle(fn);
   const items = [
     closure_13(FocusedControlsBottomDrawerTooltip, { positionY }),
-    closure_13(positionY(7261).ActionSheetHeaderBar, {}),
+    closure_13(positionY(7264).ActionSheetHeaderBar, {}),
   ];
   let tmp4Result = null != aboveActionBar;
   if (tmp4Result) {
@@ -122,7 +122,7 @@ function FocusedControlsAboveActionBarView(positionY) {
     const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
     obj5.style = items1;
     obj5.children = aboveActionBar;
-    tmp4Result = closure_13(offsetY(4376).View, obj5);
+    tmp4Result = closure_13(offsetY(4374).View, obj5);
   }
   items[2] = tmp4Result;
   obj4.children = items;
@@ -150,11 +150,11 @@ class FocusedControlsBottomDrawer {
     ({ bottom, right } = tmp4);
     closure_2 = right;
     top = tmp4.top;
-    size = closure_1(closure_2[23])();
+    size = closure_1(closure_2[21])();
     height = size.height;
     tmp5 = size.width > closure_10;
     closure_3 = tmp5;
-    tmp6 = closure_1(closure_2[24])();
+    tmp6 = closure_1(closure_2[22])();
     onClose = tmp6;
     bound = height;
     if (tmp5) {
@@ -231,7 +231,6 @@ class FocusedControlsBottomDrawer {
         closure_10 = undefined;
         closure_11 = undefined;
         closure_12 = undefined;
-        closure_13 = undefined;
         handleOpen = function handleOpen() {
           if (!first) {
             if (onDrawerOpen != null) {
@@ -246,7 +245,6 @@ class FocusedControlsBottomDrawer {
               tmp();
             }
             closure_7(false);
-            callback();
           }
         };
         tmp23 = onClose;
@@ -296,35 +294,27 @@ class FocusedControlsBottomDrawer {
         tmp19Result4 = tmp19(tmp3[13]);
         sharedValue3 = tmp19Result4.useSharedValue(0);
         closure_12 = sharedValue3;
-        callback = onClose.useCallback(() => {
-          const result = reveal(sum3[18]).UNSAFE_markDismissibleContentAsDismissed(
-            reveal(sum3[19]).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE,
-          );
-        }, []);
-        closure_13 = callback;
-        items = [, ,];
+        items = [,];
         items[0] = sharedValue;
         items[1] = derivedValue;
-        items[2] = callback;
-        callback1 = onClose.useCallback(() => {
+        callback = onClose.useCallback(() => {
           let num = 0;
           const tmp = 0 !== first1.get();
           if (!tmp) {
             num = -closure_9.get();
           }
-          const result = first1.set(closure_0(sum3[20]).withTiming(num, closure_3_19));
+          const result = first1.set(closure_0(sum3[18]).withTiming(num, closure_3_19));
           if (tmp) {
             closure_9();
-            callback();
           } else {
             closure_8();
           }
           closure_7(!tmp);
-          const obj2 = closure_0(sum3[20]);
+          const obj2 = closure_0(sum3[18]);
         }, items);
-        Gesture = tmp19(tmp3[21]).Gesture;
+        Gesture = tmp19(tmp3[19]).Gesture;
         PanResult = Gesture.Pan();
-        class M {
+        class N {
           constructor() {
             obj = closure_0(c2[13]);
             tmp = obj.runOnJS(closure_8)();
@@ -349,19 +339,19 @@ class FocusedControlsBottomDrawer {
           startY: null,
         };
         obj27.runOnJS = tmp19(tmp3[13]).runOnJS;
-        tmp35 = closure_8;
+        tmp34 = closure_8;
         obj27.clearFocusTimer = closure_8;
         obj27.drawerOpen = sharedValue2;
         obj27.positionY = sharedValue;
         obj27.velocity = sharedValue3;
         obj27.startY = sharedValue1;
-        M.__closure = obj27;
+        N.__closure = obj27;
         num11 = 9674965708496;
-        M.__workletHash = 9674965708496;
-        tmp36 = closure_30;
-        M.__initData = closure_30;
-        onStartResult = PanResult.onStart(M);
-        class N {
+        N.__workletHash = 9674965708496;
+        tmp35 = closure_30;
+        N.__initData = closure_30;
+        onStartResult = PanResult.onStart(N);
+        class H {
           constructor(arg0) {
             result = closure_12.set(global.velocityY);
             obj = closure_8;
@@ -383,13 +373,13 @@ class FocusedControlsBottomDrawer {
         obj28.positionY = sharedValue;
         obj28.maxHeight = derivedValue;
         obj28.startY = sharedValue1;
-        N.__closure = obj28;
+        H.__closure = obj28;
         num12 = 16755118181071;
-        N.__workletHash = 16755118181071;
-        tmp37 = closure_29;
-        N.__initData = closure_29;
-        onUpdateResult = onStartResult.onUpdate(N);
-        class H {
+        H.__workletHash = 16755118181071;
+        tmp36 = closure_29;
+        H.__initData = closure_29;
+        onUpdateResult = onStartResult.onUpdate(H);
+        class R {
           constructor() {
             obj = closure_11;
             value = closure_11.get();
@@ -430,7 +420,7 @@ class FocusedControlsBottomDrawer {
                   result3 = closure_10.set(0);
                   tmp26 = closure_0;
                   tmp27 = c2;
-                  obj7 = closure_0(c2[20]);
+                  obj7 = closure_0(c2[18]);
                   tmp28 = closure_3_20;
                   result4 = obj2.set(obj7.withTiming(0, closure_3_20));
                   flag2 = false;
@@ -451,7 +441,7 @@ class FocusedControlsBottomDrawer {
               result6 = closure_10.set(0);
               tmp11 = closure_0;
               tmp12 = c2;
-              obj4 = closure_0(c2[20]);
+              obj4 = closure_0(c2[18]);
               tmp13 = closure_3_20;
               result7 = obj2.set(obj4.withTiming(0, closure_3_20));
               flag = false;
@@ -496,69 +486,77 @@ class FocusedControlsBottomDrawer {
         obj29.runOnJS = tmp19(tmp3[13]).runOnJS;
         obj29.handleOpen = handleOpen;
         obj29.startY = sharedValue1;
-        obj29.withTiming = tmp19(tmp3[20]).withTiming;
-        tmp38 = closure_19;
+        obj29.withTiming = tmp19(tmp3[18]).withTiming;
+        tmp37 = closure_19;
         obj29.TIMING_CONFIG = closure_19;
-        obj29.TooltipActionCreators = tmp2(tmp3[22]);
+        obj29.TooltipActionCreators = tmp2(tmp3[20]);
         obj29.TooltipNames = tmp19(tmp3[15]).TooltipNames;
-        tmp39 = closure_20;
+        tmp38 = closure_20;
         obj29.TIMING_CONFIG_EXIT = closure_20;
-        tmp40 = closure_9;
+        tmp39 = closure_9;
         obj29.resetFocusTimer = closure_9;
         obj29.handleClose = handleClose;
-        H.__closure = obj29;
+        R.__closure = obj29;
         num13 = 6790759206787;
-        H.__workletHash = 6790759206787;
-        tmp41 = closure_28;
-        H.__initData = closure_28;
+        R.__workletHash = 6790759206787;
+        tmp40 = closure_28;
+        R.__initData = closure_28;
         items1 = [, , ,];
         items1[0] = sharedValue;
-        items1[1] = onUpdateResult.onEnd(H);
-        items1[2] = callback1;
+        items1[1] = onUpdateResult.onEnd(R);
+        items1[2] = callback;
         items1[3] = first;
         num14 = 4;
-        tmp42 = closure_3(items1, 4);
-        first1 = tmp42[0];
+        tmp41 = closure_3(items1, 4);
+        first1 = tmp41[0];
         closure_8 = first1;
-        tmp44 = tmp42[2];
-        closure_9 = tmp44;
+        tmp43 = tmp41[2];
+        closure_9 = tmp43;
         tmp19Result5 = tmp19(tmp3[13]);
-        fn = function f() {
-          let num = 0;
-          if (!reveal) {
-            num = first;
+        class C {
+          constructor() {
+            num = 0;
+            if (!closure_0) {
+              num = closure_6;
+            }
+            size = {
+              position: "absolute",
+              height: onDrawerOpen,
+              overflow: "hidden",
+              bottom: null,
+              right: null,
+              borderRadius: null,
+              width: null,
+              transform: null,
+            };
+            tmp = closure_3;
+            num2 = 0;
+            if (closure_3) {
+              num2 = 16;
+            }
+            size.bottom = num2;
+            num3 = 0;
+            if (tmp) {
+              tmp2 = closure_2;
+              num4 = 16;
+              num3 = 16 + closure_2;
+            }
+            size.right = num3;
+            num5 = 0;
+            if (tmp) {
+              num5 = 8;
+            }
+            size.borderRadius = num5;
+            size.width = onClose;
+            obj1 = { translateY: null };
+            obj3 = closure_0(closure_2[18]);
+            obj1.translateY = obj3.withTiming(num, closure_19);
+            items = [];
+            items[0] = obj1;
+            size.transform = items;
+            return size;
           }
-          const size = {
-            position: "absolute",
-            height: onDrawerOpen,
-            overflow: "hidden",
-            bottom: null,
-            right: null,
-            borderRadius: null,
-            width: null,
-            transform: null,
-          };
-          let num2 = 0;
-          if (sum4) {
-            num2 = 16;
-          }
-          size.bottom = num2;
-          let num3 = 0;
-          if (sum4) {
-            num3 = 16 + sum3;
-          }
-          size.right = num3;
-          let num5 = 0;
-          if (sum4) {
-            num5 = 8;
-          }
-          size.borderRadius = num5;
-          size.width = onClose;
-          const obj = { translateY: timing.withTiming(num, obj5) };
-          const items = [obj];
-          size.transform = items;
-          return size;
-        };
+        }
         obj30 = {
           reveal: null,
           controlHeightWithOffset: null,
@@ -575,17 +573,17 @@ class FocusedControlsBottomDrawer {
         obj30.isLandscapeMode = tmp5;
         obj30.safeAreaRight = right;
         obj30.sheetWidth = tmp6;
-        obj30.withTiming = tmp19(tmp3[20]).withTiming;
+        obj30.withTiming = tmp19(tmp3[18]).withTiming;
         obj30.TIMING_CONFIG = closure_19;
-        fn.__closure = obj30;
+        C.__closure = obj30;
         num15 = 608185354082;
-        fn.__workletHash = 608185354082;
-        tmp45 = closure_31;
-        fn.__initData = closure_31;
+        C.__workletHash = 608185354082;
+        tmp44 = closure_31;
+        C.__initData = closure_31;
         items2 = [,];
         items2[0] = tmp5;
         items2[1] = first1;
-        animatedStyle = tmp19Result5.useAnimatedStyle(fn);
+        animatedStyle = tmp19Result5.useAnimatedStyle(C);
         effect = onClose.useEffect(() => {
           const result = first1.set(timing.withTiming(0, obj6));
         }, items2);
@@ -601,9 +599,9 @@ class FocusedControlsBottomDrawer {
         items4[0] = first1;
         effect2 = onClose.useEffect(() => {
           function handleSelectActivity() {
-            const result = first1.set(reveal(sum3[20]).withTiming(0, obj6));
+            const result = first1.set(reveal(sum3[18]).withTiming(0, obj6));
           }
-          let ComponentDispatch = reveal(sum3[25]).ComponentDispatch;
+          let ComponentDispatch = reveal(sum3[23]).ComponentDispatch;
           const subscription = ComponentDispatch.subscribe(sharedValue3.SELECT_ACTIVITY, handleSelectActivity);
           return () => {
             const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
@@ -628,27 +626,27 @@ class FocusedControlsBottomDrawer {
         Z.__closure = obj31;
         num16 = 4471821639301;
         Z.__workletHash = 4471821639301;
-        tmp50 = closure_32;
+        tmp49 = closure_32;
         Z.__initData = closure_32;
         items5 = [];
-        items5[0] = tmp44;
+        items5[0] = tmp43;
         animatedStyle1 = tmp19Result6.useAnimatedStyle(Z);
         effect3 = onClose.useEffect(() => {
           let ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
           const subscription = ComponentDispatch.subscribe(closure_2_12.TOGGLE_CALL_CONTROL_DRAWER, closure_9);
           return () => {
-            const ComponentDispatch = reveal(sum3[25]).ComponentDispatch;
+            const ComponentDispatch = reveal(sum3[23]).ComponentDispatch;
             ComponentDispatch.unsubscribe(sharedValue3.TOGGLE_CALL_CONTROL_DRAWER, closure_1_9);
           };
         }, items5);
-        tmp19Result7 = tmp19(tmp3[26]);
+        tmp19Result7 = tmp19(tmp3[24]);
         theme = tmp19Result7.useThemeContext().theme;
-        tmp53 = closure_13;
+        tmp52 = handleOpen;
         obj32 = { style: null, pointerEvents: "box-none", children: null };
         obj32.style = animatedStyle;
         obj33 = { gesture: null, children: null };
-        obj33.gesture = tmp42[1];
-        tmp54 = handleOpen;
+        obj33.gesture = tmp41[1];
+        tmp53 = handleClose;
         obj34 = { style: null, children: null };
         items6 = [,];
         items6[0] = tmp.bottomDrawerContainer;
@@ -658,8 +656,8 @@ class FocusedControlsBottomDrawer {
         obj35.blurTheme = theme;
         items7 = [,];
         items7[0] = tmp.visualEffectView;
-        tmp2Result = tmp2(tmp3[27]);
-        tmp19Result8 = tmp19(tmp3[28]);
+        tmp2Result = tmp2(tmp3[25]);
+        tmp19Result8 = tmp19(tmp3[26]);
         prop = null;
         if (tmp19Result8.isThemeLight(theme)) {
           prop = tmp.visualEffectViewBackground;
@@ -667,26 +665,26 @@ class FocusedControlsBottomDrawer {
         items7[1] = prop;
         obj35.style = items7;
         items8 = [, , ,];
-        items8[0] = tmp53(tmp2Result, obj35);
-        tmp57 = FocusedControlsAboveActionBarView;
+        items8[0] = tmp52(tmp2Result, obj35);
+        tmp56 = FocusedControlsAboveActionBarView;
         obj36 = { onPressHeader: null, aboveActionBar: null, positionY: null, offsetY: null, isExpanded: null };
-        obj36.onPressHeader = tmp44;
+        obj36.onPressHeader = tmp43;
         obj36.aboveActionBar = aboveActionBar;
         obj36.positionY = first1;
         obj36.offsetY = diff;
-        obj36.isExpanded = tmp42[3];
-        items8[1] = tmp53(FocusedControlsAboveActionBarView, obj36);
+        obj36.isExpanded = tmp41[3];
+        items8[1] = tmp52(FocusedControlsAboveActionBarView, obj36);
         items8[2] = children;
-        tmp58 = FocusedControlsExpanded;
+        tmp57 = FocusedControlsExpanded;
         obj37 = { expandedControls: null, availableHeight: null, positionY: null };
         obj37.expandedControls = expandedControls;
         obj37.availableHeight = diff2;
         obj37.positionY = first1;
-        items8[3] = tmp53(FocusedControlsExpanded, obj37);
+        items8[3] = tmp52(FocusedControlsExpanded, obj37);
         obj34.children = items8;
-        obj33.children = tmp54(tmp2(tmp3[13]).View, obj34);
-        obj32.children = tmp53(tmp19(tmp3[21]).GestureDetector, obj33);
-        return tmp53(tmp2(tmp3[13]).View, obj32);
+        obj33.children = tmp53(tmp2(tmp3[13]).View, obj34);
+        obj32.children = tmp52(tmp19(tmp3[19]).GestureDetector, obj33);
+        return tmp52(tmp2(tmp3[13]).View, obj32);
       } else {
         str4 = "Trying to call a non-function";
         throw new TypeError("Trying to call a non-function");
@@ -704,9 +702,9 @@ get_ActivityIndicator = fn(17);
   ScrollView: closure_7,
   StyleSheet,
 } = get_ActivityIndicator);
-const ChannelCallStore = fn(9599);
+const ChannelCallStore = fn(9610);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(9600);
+const ChannelCallConstants = fn(9611);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_12, Fonts } = Constants);
@@ -715,7 +713,7 @@ const jsxProd = fn(21);
 let c15 = 20;
 function EXTENDED_CONTROLS_OFFSET_Y(arg0) {}
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {}
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   bottomDrawerContainer: null,
   visualEffectView: null,

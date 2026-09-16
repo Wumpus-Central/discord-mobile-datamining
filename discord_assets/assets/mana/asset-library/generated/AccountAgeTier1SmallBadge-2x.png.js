@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/AccountAgeTier1SmallBadge-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/57ded25abce4ec778e54abde3ac9521036f44ba7885ee0a715bffb735cd7c323.png";
+export default "https://cdn.discordapp.com/assets/content/32360f7e9881a4f61f79426bbe7f05e8d23e6f98917401f0f4901f453dba4c55.png";
 export const vanityUrl =
   "https://cdn.discordapp.com/assets/mana/asset-library/generated/AccountAgeTier1SmallBadge-2x.png";
-export const metadata = { fileBytes: 1038 };
+export const metadata = { fileBytes: 1047 };

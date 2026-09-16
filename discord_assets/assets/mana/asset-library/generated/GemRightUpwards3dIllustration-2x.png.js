@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/GemRightUpwards3dIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/2bebd40ea84dd828f1b6bc0741d1d8253ff913bfd6846a75ca06dce171128c04.png";
-export const metadata = { fileBytes: 120608 };
+export default "https://cdn.discordapp.com/assets/content/11108b99c330ecf0415960c3f66611a688859c152d8d76a74b03639e4c1b3ee2.png";
+export const metadata = { fileBytes: 121169 };

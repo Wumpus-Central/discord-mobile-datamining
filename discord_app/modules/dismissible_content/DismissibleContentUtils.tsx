@@ -500,7 +500,6 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 let c14 = 2592000000;
 let items = [
   fn(1944).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
-  fn(1944).DismissibleContent.ACCOUNT_LINK_PROMPT,
   fn(1944).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
 ];
 const set = new Set(items);

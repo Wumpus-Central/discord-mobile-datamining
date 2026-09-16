@@ -135,6 +135,7 @@ import TimestampHourCycleSettingDefault from "../../defs/native/TimestampHourCyc
 import SwipeRightToLeftSettingDefault from "../../defs/native/SwipeRightToLeftSetting.tsx";
 import WebBrowserSettingDefault from "../../defs/native/WebBrowserSetting.tsx";
 import SelectWebBrowserSettingDefault from "../../defs/native/SelectWebBrowserSetting.tsx";
+import ClearWebBrowserDataSettingDefault from "../../defs/native/ClearWebBrowserDataSetting.tsx";
 import NotificationsSettingDefault from "../../defs/native/NotificationsSetting.tsx";
 import InAppNotificationsSetting from "../../defs/native/InAppNotificationsSetting.tsx";
 import SystemNotificationsSettingDefault from "../../defs/native/SystemNotificationsSetting.tsx";
@@ -210,6 +211,7 @@ import DesignSystemSheetsSettingDefault from "../../defs/native/DesignSystemShee
 import DesignSystemFormPrimitivesSettingDefault from "../../defs/native/DesignSystemFormPrimitivesSetting.tsx";
 import DesignSystemHapticsSettingDefault from "../../defs/native/DesignSystemHapticsSetting.tsx";
 import DesignSystemAILoaderSettingDefault from "../../defs/native/DesignSystemAILoaderSetting.tsx";
+import DesignSystemAIShimmerSettingDefault from "../../defs/native/DesignSystemAIShimmerSetting.tsx";
 import PremiumProfileCustomizationTryItOutSettingDefault from "../../defs/native/PremiumProfileCustomizationTryItOutSetting.tsx";
 import CollectiblesShopSettingDefault from "../../defs/native/CollectiblesShopSetting.tsx";
 import CollectiblesShopViewAllCategoryItemsSettingDefault from "../../defs/native/CollectiblesShopViewAllCategoryItemsSetting.tsx";
@@ -407,6 +409,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   CHAT_GESTURES,
   WEB_BROWSER,
   SELECT_WEB_BROWSER,
+  CLEAR_WEB_BROWSER_DATA,
   NOTIFICATIONS,
   IN_APP_NOTIFICATIONS,
   SYSTEM_NOTIFICATIONS,
@@ -489,6 +492,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   DESIGN_SYSTEM_FORM_PRIMITIVES,
   DESIGN_SYSTEM_HAPTICS,
   DESIGN_SYSTEM_AI_LOADER,
+  DESIGN_SYSTEM_AI_SHIMMER,
   PREMIUM_PROFILE_CUSTOMIZATION_TRY_IT_OUT,
   COLLECTIBLES_SHOP,
   COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
@@ -534,8 +538,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P,
   ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY,
   ACTIVITY_PRIVACY_DEFAULT_SHARING,
-  FRIEND_REQUEST_NOTES,
-  NOTIFY_FRIENDS_ON_COME_ONLINE,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -675,6 +677,7 @@ const frozen = Object.freeze({
   [CHAT_GESTURES]: ChatGestureSettingsDefault,
   [WEB_BROWSER]: WebBrowserSettingDefault,
   [SELECT_WEB_BROWSER]: SelectWebBrowserSettingDefault,
+  [CLEAR_WEB_BROWSER_DATA]: ClearWebBrowserDataSettingDefault,
   [NOTIFICATIONS]: NotificationsSettingDefault,
   [IN_APP_NOTIFICATIONS]: InAppNotificationsSettingDefault,
   [SYSTEM_NOTIFICATIONS]: SystemNotificationsSettingDefault,
@@ -759,6 +762,7 @@ const frozen = Object.freeze({
   [DESIGN_SYSTEM_FORM_PRIMITIVES]: DesignSystemFormPrimitivesSettingDefault,
   [DESIGN_SYSTEM_HAPTICS]: DesignSystemHapticsSettingDefault,
   [DESIGN_SYSTEM_AI_LOADER]: DesignSystemAILoaderSettingDefault,
+  [DESIGN_SYSTEM_AI_SHIMMER]: DesignSystemAIShimmerSettingDefault,
   [PREMIUM_PROFILE_CUSTOMIZATION_TRY_IT_OUT]: PremiumProfileCustomizationTryItOutSettingDefault,
   [COLLECTIBLES_SHOP]: CollectiblesShopSettingDefault,
   [COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS]: CollectiblesShopViewAllCategoryItemsSettingDefault,
@@ -805,8 +809,8 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P]: ParentalControlsUseDataForQuests3PSettingDefault,
   [ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY]: ActivityPrivacyShareMyActivitySettingDefault,
   [ACTIVITY_PRIVACY_DEFAULT_SHARING]: ActivityPrivacyDefaultSharingSettingDefault,
-  [FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,
-  [NOTIFY_FRIENDS_ON_COME_ONLINE]: NotifyFriendsOnComeOnlineSettingDefault,
+  [MobileUserSettings.FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,
+  [MobileUserSettings.NOTIFY_FRIENDS_ON_COME_ONLINE]: NotifyFriendsOnComeOnlineSettingDefault,
   [MobileUserSettings.NOTIFY_FRIENDS_ON_PROFILE_UPDATE]: NotifyFriendsOnProfileUpdateSettingDefault,
 });
 const result = size.fileFinishedImporting("modules/user_settings/core/native/SettingsRendererConfig.tsx");

@@ -13,7 +13,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
   let hasNeverWishlisted;
   _slicedToArray = undefined;
   let registerDismiss;
-  hasNeverWishlisted = hasNeverWishlisted(8899).useHasNeverWishlisted();
+  hasNeverWishlisted = hasNeverWishlisted(8910).useHasNeverWishlisted();
   let items = [hasNeverWishlisted];
   const memo = registerDismiss.useMemo(() => {
     if (hasNeverWishlisted) {
@@ -24,13 +24,13 @@ export default function WishlistButtonCoachmark(anchorRef) {
     }
     return items1;
   }, items);
-  let obj = hasNeverWishlisted(8899);
-  const tmp3 = _slicedToArray(hasNeverWishlisted(7495).useSelectedDismissibleContent(memo), 2);
+  let obj = hasNeverWishlisted(8910);
+  const tmp3 = _slicedToArray(hasNeverWishlisted(7498).useSelectedDismissibleContent(memo), 2);
   dependencyMap = tmp4;
   const tmp5 = tmp3[0] === hasNeverWishlisted(1944).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
   _slicedToArray = tmp5;
-  const obj2 = hasNeverWishlisted(7495);
-  registerDismiss = hasNeverWishlisted(15923).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
+  const obj2 = hasNeverWishlisted(7498);
+  registerDismiss = hasNeverWishlisted(15943).useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
   let items1 = [tmp5, registerDismiss, tmp3[1]];
   const effect = registerDismiss.useEffect(() => {
     if (closure_2) {
@@ -50,7 +50,7 @@ export default function WishlistButtonCoachmark(anchorRef) {
     };
     return obj;
   }, items2);
-  const obj3 = hasNeverWishlisted(15923);
-  const coachmark = hasNeverWishlisted(11266).useCoachmark(anchorRef.anchorRef, memo1);
+  const obj3 = hasNeverWishlisted(15943);
+  const coachmark = hasNeverWishlisted(11280).useCoachmark(anchorRef.anchorRef, memo1);
   return null;
 }

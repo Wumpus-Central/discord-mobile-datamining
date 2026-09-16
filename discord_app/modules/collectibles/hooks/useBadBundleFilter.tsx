@@ -21,18 +21,18 @@ export const useBadBundleFilter = function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          const obj = canUseShopDiscountsResult(8970);
+          const obj = canUseShopDiscountsResult(8981);
           if (obj2.isBundleProduct(product)) {
             if (!tmpResult.isFreeCollectiblesProduct(product)) {
               if (!obj.getProductPurchaseState(CollectiblesPurchaseStore, product).isPurchased) {
                 if (tmpResult5.isOrbsExclusiveProduct(product)) {
                   const obj3 = { product, hasShopDiscount };
-                  return null != canUseShopDiscountsResult(7660).getProductOrbPrice(obj3);
+                  return null != canUseShopDiscountsResult(7663).getProductOrbPrice(obj3);
                 } else {
                   const defaultPriceSetAssignmentPurchaseType =
-                    canUseShopDiscountsResult(7661).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
-                  const tmpResult7 = canUseShopDiscountsResult(7661);
-                  let result = canUseShopDiscountsResult(7661).extractPriceByPurchaseTypes(
+                    canUseShopDiscountsResult(7664).getDefaultPriceSetAssignmentPurchaseType(hasShopDiscount);
+                  const tmpResult7 = canUseShopDiscountsResult(7664);
+                  let result = canUseShopDiscountsResult(7664).extractPriceByPurchaseTypes(
                     product,
                     defaultPriceSetAssignmentPurchaseType,
                   );
@@ -61,10 +61,10 @@ export const useBadBundleFilter = function useBadBundleFilter() {
                   }
                   return true;
                 }
-                tmpResult5 = canUseShopDiscountsResult(7660);
+                tmpResult5 = canUseShopDiscountsResult(7663);
               }
             }
-            tmpResult = canUseShopDiscountsResult(7661);
+            tmpResult = canUseShopDiscountsResult(7664);
           }
           return true;
         });

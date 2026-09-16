@@ -4,7 +4,7 @@ import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import getGameMediaRefURLDefault from "../games/getGameMediaRefURL.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
-import _modDef4336 from "../../../_runtime/metro/04336__.js";
+import _modDef4334 from "../../../_runtime/metro/04334__.js";
 import MarkupTextRuleDefault from "MarkupTextRule.tsx";
 import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule.tsx";
 import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule.tsx";
@@ -49,7 +49,7 @@ let obj = {
   silentPrefix: null,
 };
 let obj2 = {};
-let merged = Object.assign(_modDef4336.defaultRules.escape);
+let merged = Object.assign(_modDef4334.defaultRules.escape);
 obj2.requiredFirstCharacters = undefined;
 obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;

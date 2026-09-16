@@ -56,26 +56,31 @@ export const getIsGiftingBadgesDesktopEnabled = function getIsGiftingBadgesDeskt
   }
   return enabled;
 };
-export const useIsGiftingBadgeComplexArtEnabled = function useIsGiftingBadgeComplexArtEnabled(location) {
+export const useIsGiftingBadgeComplexArtEnabled = function useIsGiftingBadgeComplexArtEnabled(
+  UserSettingsGiftingBadgeProgress,
+) {
   const GiftingBadgeComplexArtExperiment = GiftingBadgeComplexArtExperiment2.GiftingBadgeComplexArtExperiment;
-  return GiftingBadgeComplexArtExperiment.useConfig({ location }).enabled;
+  return GiftingBadgeComplexArtExperiment.useConfig({ location: UserSettingsGiftingBadgeProgress }).enabled;
 };
-export const getGiftingBadgeTierIconUrl = function getGiftingBadgeTierIconUrl(complex_icon_static_url, arg1) {
-  if (arg1) {
+export const getGiftingBadgeTierIconUrl = function getGiftingBadgeTierIconUrl(
+  nextTier,
+  isGiftingBadgeComplexArtEnabled,
+) {
+  if (isGiftingBadgeComplexArtEnabled) {
     let prop;
     if (!tmp) {
-      prop = complex_icon_static_url.complex_icon_static_url;
+      prop = nextTier.complex_icon_static_url;
     }
     if (prop == null) {
       let simple_icon_url1;
-      if (complex_icon_static_url != null) {
-        simple_icon_url1 = complex_icon_static_url.simple_icon_url;
+      if (nextTier != null) {
+        simple_icon_url1 = nextTier.simple_icon_url;
       }
       prop = simple_icon_url1;
     }
     let simple_icon_url = prop;
   } else if (!tmp) {
-    simple_icon_url = complex_icon_static_url.simple_icon_url;
+    simple_icon_url = nextTier.simple_icon_url;
   }
   return simple_icon_url;
 };

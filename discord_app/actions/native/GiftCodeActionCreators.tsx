@@ -160,7 +160,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
 };
 function openGiftCodeRedeemModal(code) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(11576, dependencyMap.paths),
+    asyncRequireImpl(11584, dependencyMap.paths),
     { code },
     "GIFT_CODE_REDEEM_MODAL_KEY",
   );

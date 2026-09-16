@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/GiftCardSingle3dIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/1db4e3460e79a37c7cc9dab09ed4affea5e8d278f636cd7145aaa444a8dfe439.png";
-export const metadata = { fileBytes: 104423 };
+export default "https://cdn.discordapp.com/assets/content/7070793d1288fde666f9c94ffed1c02bb9b5f7be9d2e525f886e6c5abe597355.png";
+export const metadata = { fileBytes: 103684 };

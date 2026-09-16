@@ -7,7 +7,7 @@ import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentContext from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
 import PlainTextEligibility from "PlainTextEligibility.tsx";
-import _modDef4649 from "../../../../../_runtime/metro/04649__.js";
+import _modDef4648 from "../../../../../_runtime/metro/04648__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
@@ -63,7 +63,7 @@ const dependencyMap = {
   code: { 400: null, 700: null },
 };
 let closure_14 = { headline: obj7, nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(4636).TextVariantsFlat;
+const TextVariantsFlat = fn(4635).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
@@ -103,9 +103,9 @@ const mapped = TextVariantsFlat.map((name) => {
   return tmp;
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(4637);
+const useManaTextMigrationHighlight = fn(4636);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {
@@ -241,7 +241,7 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
     }
     obj4.ellipsizeMode = ellipsizeMode;
     const merged1 = Object.assign(merged);
-    return jsx(_modDef4649, {
+    return jsx(_modDef4648, {
       text: children,
       color: color2,
       fontSize,

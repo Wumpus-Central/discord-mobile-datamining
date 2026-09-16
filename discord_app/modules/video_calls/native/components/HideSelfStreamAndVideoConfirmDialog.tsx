@@ -5,10 +5,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const constants = fn(17360).SelfStreamAndVideoAlertType;
+const constants = fn(17416).SelfStreamAndVideoAlertType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_7 = createStyles.createStyles({
   wrapper: { padding: 16 },
   body: { paddingTop: 16 },
@@ -56,7 +56,7 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj.onConfirm = onConfirm;
   const obj2 = { style: tmp2.body, children: null };
   const items = [
-    closure_5(tmp6(4635).Text, { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 }),
+    closure_5(tmp6(4634).Text, { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 }),
   ];
   const obj4 = {
     accessibilityRole: "link",
@@ -75,7 +75,7 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj4.style = items1;
   const intl7 = tmp6(1115).intl;
   obj4.children = intl7.string(tmp6(1115).t["JdIQ/Y"]);
-  items[1] = closure_5(tmp6(4635).Text, obj4);
+  items[1] = closure_5(tmp6(4634).Text, obj4);
   obj2.children = items;
   obj.children = closure_6(View, obj2);
   return closure_5(common_AlertDefault, obj);

@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/StickersSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/e5b2519118310c69ef8abd4211fbac4ac5719bb1bdc96454722bc5d0a5e530ab.png";
-export const metadata = { fileBytes: 115889 };
+export default "https://cdn.discordapp.com/assets/content/ac1aacd62bc4f4cf4d89892ddf5cae4213e9e719f9967b9be45278ba941e8592.png";
+export const metadata = { fileBytes: 118649 };

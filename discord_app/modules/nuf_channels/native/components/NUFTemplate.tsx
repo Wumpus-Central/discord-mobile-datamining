@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Image: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = {
   container: { padding: 16, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   title: { textAlign: "center", marginBottom: 8 },

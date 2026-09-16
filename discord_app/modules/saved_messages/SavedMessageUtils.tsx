@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef4231 from "../../../_runtime/metro/04231__.js";
+import _modDef4229 from "../../../_runtime/metro/04229__.js";
 import ChannelActionCreatorsDefault from "../../actions/ChannelActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -160,7 +160,7 @@ export const useDueInString = function useDueInString(arg0) {
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef4231.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef4229.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;

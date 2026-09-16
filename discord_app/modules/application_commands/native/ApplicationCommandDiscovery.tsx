@@ -9,7 +9,7 @@ import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import ApplicationCommandQueryTypes from "../ApplicationCommandQueryTypes.tsx";
-import _modDef10551 from "../../../../_runtime/metro/10551__.js";
+import _modDef10559 from "../../../../_runtime/metro/10559__.js";
 import ApplicationSectionHeader from "ApplicationSectionHeader.tsx";
 import ApplicationCommandDiscoveryManager from "../ApplicationCommandDiscoveryManager.tsx";
 import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories.tsx";
@@ -21,15 +21,15 @@ const ApplicationSectionHeaderDefault = ApplicationSectionHeader;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
-const ApplicationCommandConstants = fn(5083);
+const ApplicationCommandConstants = fn(5084);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(12530).ITEM_HEIGHT;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10394).AUTOCOMPLETE_ROW_HEIGHT;
+const ITEM_HEIGHT = fn(12538).ITEM_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10402).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   discoveryWrapper: { flex: 1 },
   noCommandsImage: { height: 50, width: 50, marginBottom: 16 },
@@ -72,7 +72,7 @@ export default function ApplicationCommandDiscovery(channel) {
   obj6.applicationCommands = !canOnlyUseTextCommands;
   obj5.filters = obj6;
   obj5.options = { placeholderCount: 3, limit: commandDiscoveryManager, includeFrecency: true };
-  const discovery = channel(9548).useDiscovery(obj5);
+  const discovery = channel(9559).useDiscovery(obj5);
   const sectionDescriptors = discovery.sectionDescriptors;
   ({ activeSections: c11, commandsByActiveSection } = discovery);
   ({ hasMoreAfter: c13, filteredSectionId } = discovery);
@@ -333,7 +333,7 @@ export default function ApplicationCommandDiscovery(channel) {
     const section = item.section;
     let found;
     if (item.inputType === ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER) {
-      return filteredSectionId(onHeightChange(12534), {});
+      return filteredSectionId(onHeightChange(12542), {});
     } else {
       found = sectionDescriptors.find((id) => id.id === item.applicationId);
       const obj = {
@@ -349,7 +349,7 @@ export default function ApplicationCommandDiscovery(channel) {
         showIcon: item.applicationId !== section.section.id,
         guildId: found.guild_id,
       };
-      return filteredSectionId(onHeightChange(12535), obj);
+      return filteredSectionId(onHeightChange(12543), obj);
     }
   };
   obj9.renderSectionHeader = function renderSectionHeader(section) {
@@ -364,8 +364,8 @@ export default function ApplicationCommandDiscovery(channel) {
     let tmp3Result = 0 === section.data.length;
     if (tmp3Result) {
       const obj3 = {
-        lightSource: _modDef10551,
-        darkSource: _modDef10551,
+        lightSource: _modDef10559,
+        darkSource: _modDef10559,
         body: null,
         containerStyle: null,
         imageStyle: null,

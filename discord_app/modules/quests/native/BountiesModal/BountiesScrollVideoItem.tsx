@@ -459,7 +459,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj7);
 }
 const View = fn(17).View;
-const QuestConstants = fn(5529);
+const QuestConstants = fn(5530);
 ({ BOUNTY_ORB_AMOUNT: closure_9, QuestsExperimentLocations: c10 } = QuestConstants);
 const jsx = fn(21).jsx;
 let size = fn(2);
@@ -492,10 +492,10 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (flag3 === undefined) {
     flag3 = false;
   }
-  return softDownloadCapsEnabled(bounty(11912).BillableAdPlacementImpressionTrackerNative, {
+  return softDownloadCapsEnabled(bounty(11920).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5536).AdCreativeType.BOUNTY,
-    questContent: bounty(5534).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5537).AdCreativeType.BOUNTY,
+    questContent: bounty(5535).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

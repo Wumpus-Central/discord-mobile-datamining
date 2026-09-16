@@ -48,7 +48,7 @@ function Footer(arg0) {
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5059).Button, {
+  obj.children = timestampProducer(tmp5(5060).Button, {
     loading: submitting,
     disabled: !canProceedToNextStep,
     text: stringResult,
@@ -60,7 +60,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" },
   scrollContainer: { flexGrow: 1 },

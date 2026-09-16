@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef672 from "../../../../../_runtime/metro/00672__.js";
-import LinearGradientDefault from "../../../../../_runtime/05071_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05072_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const Gradients = fn(7539).Gradients;
+const Gradients = fn(7542).Gradients;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = {
   cardContainer: {
     display: "flex",

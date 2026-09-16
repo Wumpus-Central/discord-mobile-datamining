@@ -1,8 +1,8 @@
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import _modDef8248 from "../../../_runtime/metro/08248__.js";
+import _modDef8257 from "../../../_runtime/metro/08257__.js";
 
-const set = new Set(_modDef8248);
+const set = new Set(_modDef8257);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj["github.com"] = regExp;

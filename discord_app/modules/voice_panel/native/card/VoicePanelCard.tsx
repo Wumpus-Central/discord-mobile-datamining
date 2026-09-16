@@ -6,7 +6,7 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
 import StreamActionCreators from "../../../../actions/StreamActionCreators.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05071_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05072_LinearGradient.js";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
@@ -1062,7 +1062,7 @@ function AnimatedWrapper(children) {
   return windowDimensions(cleanUp(id[52]).GestureDetector, obj10);
 }
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12407);
+const VoicePanelConstants = fn(12415);
 ({
   VoicePanelCTACard: closure_9,
   VoicePanelModes: c10,
@@ -1070,16 +1070,16 @@ const VoicePanelConstants = fn(12407);
   SPEAKING_PHYSICS: closure_12,
   VoicePanelCardItemType: map1,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12405).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17237).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12410).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12413).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17293).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12418).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
-const ParticipantTypes = fn(4660).ParticipantTypes;
-let SCALE_PHYSICS = fn(12408).SCALE_PHYSICS;
+const ParticipantTypes = fn(4659).ParticipantTypes;
+let SCALE_PHYSICS = fn(12416).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(4635).Text);
+let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(4634).Text);
 let ReanimatedRexport = ReanimatedRexport_mod;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 let tmp4 = fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.XXLARGE];
@@ -1089,7 +1089,7 @@ obj.stiffness = 150;
 let closure_26 = { duration: 200 };
 let closure_27 = { duration: 0 };
 let c28 = 0.75;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   positionWrapper: null,
   userRoundedCard: null,
@@ -1492,7 +1492,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   return obj2;
 }
 let obj4 = { position: "relative", borderRadius: nativeDefault.radii.round, overflow: "hidden" };
-layoutTransitionFunction.__closure = { withSpring: fn(5058).withSpring };
+layoutTransitionFunction.__closure = { withSpring: fn(5059).withSpring };
 layoutTransitionFunction.__workletHash = 4871152530917;
 layoutTransitionFunction.__initData = {
   code: "function layoutTransitionFunction_VoicePanelCardTsx13(values,physics,disableAnimation=false){const{withSpring}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,physics,!disableAnimation?'animate-always':'animate-never'),originY:withSpring(values.targetOriginY,physics,!disableAnimation?'animate-always':'animate-never'),width:withSpring(values.targetWidth,physics,!disableAnimation?'animate-always':'animate-never'),height:withSpring(values.targetHeight,physics,!disableAnimation?'animate-always':'animate-never')},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}",
@@ -1524,7 +1524,7 @@ const __initData17 = {
 let closure_58 = {
   code: "function layoutTransition_VoicePanelCardTsx22(values,disableAnimation=false){const{layoutTransitionFunction,physics}=this.__closure;return layoutTransitionFunction(values,physics,disableAnimation);}",
 };
-let obj9 = { withSpring: fn(5058).withSpring };
+let obj9 = { withSpring: fn(5059).withSpring };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCard.tsx");
 
@@ -1537,7 +1537,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   let cardLayoutCoordsSubscription;
   const id = item.id;
   const context = cardLayoutCoordsSubscription.useContext(windowDimensions(id2[25]));
-  ({ focused, guildId, isCall, mountedCards, scrollPosition } = context);
+  ({ guildId, isCall, mountedCards, scrollPosition } = context);
   windowDimensions = context.windowDimensions;
   ({ channelId, layoutManager } = context);
   const tmp4 = windowDimensions(id2[47])(id, channelId, guildId);
@@ -1569,7 +1569,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   } else {
     DEFAULT = tmp5(tmp2[28]).MediaEngineContextTypes.DEFAULT;
   }
-  let tmpResultResult = windowDimensions(id2[27])(DEFAULT, str);
+  const tmpResultResult = windowDimensions(id2[27])(DEFAULT, str);
   windowDimensions(id2[53])(str);
   const tmpResult = windowDimensions(id2[27]);
   if (transitionState === scrollPosition(id2[44]).TransitionStates.MOUNTED) {
@@ -1606,24 +1606,20 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   const tmp5Result10 = scrollPosition(id2[14]);
   cardLayoutCoordsSubscription = scrollPosition(id2[54]).useCardLayoutCoordsSubscription(id, layoutManager);
   const tmp5Result11 = scrollPosition(id2[54]);
-  class L {
-    constructor() {
-      sum = EDGE_GUTTER + closure_4.get().y;
-      obj = scrollPosition;
-      value = scrollPosition.get();
-      tmp3 = sum > value - closure_4.get().height;
-      if (tmp3) {
-        tmp5 = windowDimensions;
-        value1 = obj.get();
-        tmp3 = sum < value1 + windowDimensions.get().height;
-      }
-      return tmp3;
+  const fn = function $() {
+    const sum = EDGE_GUTTER + cardLayoutCoordsSubscription.get().y;
+    value = scrollPosition.get();
+    let tmp3 = sum > value - cardLayoutCoordsSubscription.get().height;
+    if (tmp3) {
+      value2 = scrollPosition.get();
+      tmp3 = sum < value2 + windowDimensions.get().height;
     }
-  }
-  L.__closure = { EDGE_GUTTER, coords: cardLayoutCoordsSubscription, scrollPosition, windowDimensions };
-  L.__workletHash = 11720551113486;
-  L.__initData = __initData17;
-  const derivedValue = scrollPosition(id2[14]).useDerivedValue(L);
+    return tmp3;
+  };
+  fn.__closure = { EDGE_GUTTER, coords: cardLayoutCoordsSubscription, scrollPosition, windowDimensions };
+  fn.__workletHash = 11720551113486;
+  fn.__initData = __initData17;
+  const derivedValue = scrollPosition(id2[14]).useDerivedValue(fn);
   const memo = obj.useMemo(() => {
     const physics = {
       mass: closure_11.mass,
@@ -1645,12 +1641,12 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   }, []);
   ({ physics, layoutTransition } = memo);
   if (item.type === constants2.CTA) {
-    const id4 = item.id;
-    if (constants.NO_VIDEO_PARTICIPANTS === id4) {
-      let tmp26Result = closure_20(tmp(tmp2[56]), {});
+    const id3 = item.id;
+    if (constants.NO_VIDEO_PARTICIPANTS === id3) {
+      let tmp27Result = closure_20(tmp(tmp2[56]), {});
       let tmp25 = closure_20;
-    } else if (tmp36.CALLER_DISCONNECTED === id4) {
-      tmp26Result = closure_20(tmp(tmp2[57]), {});
+    } else if (tmp36.CALLER_DISCONNECTED === id3) {
+      tmp27Result = closure_20(tmp(tmp2[57]), {});
       tmp25 = closure_20;
     }
     const obj4 = {
@@ -1664,11 +1660,11 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       sharedVisible: sharedValue,
       children: null,
     };
-    const items2 = [tmp26Result, ,];
+    const items2 = [tmp27Result, ,];
     let tmp25Result = null != tmp4;
     if (tmp25Result) {
       const obj5 = { isRinging: tmp8, participant: tmp4, label: null, layout: null, speaking: null };
-      const tmpResult4 = tmp(tmp2[60]);
+      const tmpResult3 = tmp(tmp2[60]);
       let userNick;
       if (tmp5Result13.isStableParticipantWithUser(tmp4)) {
         userNick = tmp4.userNick;
@@ -1676,7 +1672,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj5.label = userNick;
       obj5.layout = layoutTransition;
       obj5.speaking = sharedValue1;
-      tmp25Result = tmp25(tmpResult4, obj5);
+      tmp25Result = tmp25(tmpResult3, obj5);
       tmp5Result13 = tmp5(tmp2[47]);
     }
     items2[1] = tmp25Result;
@@ -1692,14 +1688,14 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
     const type = item.type;
     const type2 = tmp4.type;
     if (ParticipantTypes.USER === type2) {
-      ({ id: id3, streamId, user } = tmp4);
+      ({ streamId, user } = tmp4);
       if (tmp4.hasVideo) {
         if (stateFromStores) {
           if (tmp4.canRenderVideo) {
             if (null == tmpResultResult) {
-              let tmp28 = closure_20;
+              let tmp29 = closure_20;
               const obj7 = {
-                id: id3,
+                id: tmp26,
                 userId: user.id,
                 streamId: null,
                 isScrollVisible: null,
@@ -1722,22 +1718,14 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
               }
               obj7.focusOnReady = isCall;
               obj7.layout = layoutTransition;
-              let tmp31Result = tmp28(tmp(tmp2[32]), obj7);
-              const tmpResult5 = tmp(tmp2[32]);
+              let tmp29Result = tmp29(tmp(tmp2[32]), obj7);
+              const tmpResult4 = tmp(tmp2[32]);
             }
-            const obj8 = { avError: tmpResultResult, removeSplashImage: null, userId: null, style: null };
-            focused = focused.get();
-            tmpResultResult = undefined;
-            if (focused != null) {
-              tmpResultResult = focused.id;
-            }
-            obj8.removeSplashImage = tmpResultResult !== id3;
-            obj8.userId = user.id;
+            const obj8 = { avError: tmpResultResult, userId: user.id, style: null };
             user = StyleSheet.absoluteFill;
             obj8.style = user;
-            tmp31Result = closure_20(tmp(tmp2[58]), obj8);
-            tmp28 = closure_20;
-            const tmpResult6 = tmp(tmp2[58]);
+            tmp29Result = closure_20(tmp(tmp2[58]), obj8);
+            tmp29 = closure_20;
           }
         }
       }
@@ -1757,7 +1745,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj9.userId = user.id;
       obj9.guildId = guildId;
       tmp25 = closure_20;
-      tmp26Result = closure_20(closure_37, obj9);
+      tmp27Result = closure_20(closure_37, obj9);
     } else if (ParticipantTypes.STREAM === type2) {
       const obj11 = {
         userId: tmp4.user.id,
@@ -1775,22 +1763,22 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       obj11.sharedCoords = cardLayoutCoordsSubscription;
       obj11.isScrollVisible = derivedValue;
       obj11.layout = layoutTransition;
-      tmp26Result = closure_20(closure_34, obj11);
+      tmp27Result = closure_20(closure_34, obj11);
       tmp25 = closure_20;
     } else if (ParticipantTypes.ACTIVITY === type2) {
       const obj12 = { sharedVisible: sharedValue, applicationId: tmp4.applicationId, layout: layoutTransition };
-      tmp26Result = closure_20(tmp(tmp2[59]), obj12, tmp4.id);
+      tmp27Result = closure_20(tmp(tmp2[59]), obj12, tmp4.id);
       tmp25 = closure_20;
     }
   }
   const obj13 = {
     isRinging: tmp8,
     avatarURI: "r",
-    avatarDecoration: "isArray",
+    avatarDecoration: "call",
     layout: layoutTransition,
     layoutPhysics: physics,
   };
-  tmp26Result = closure_20(closure_37, obj13);
+  tmp27Result = closure_20(closure_37, obj13);
   tmp25 = closure_20;
   const obj3 = { EDGE_GUTTER, coords: cardLayoutCoordsSubscription, scrollPosition, windowDimensions };
   const tmp5Result12 = scrollPosition(id2[14]);

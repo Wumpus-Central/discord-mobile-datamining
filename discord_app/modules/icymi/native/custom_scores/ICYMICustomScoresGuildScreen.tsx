@@ -121,7 +121,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: {
     flex: 1,
@@ -192,9 +192,9 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   const items2 = [ICYMIStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
   const tmp2Result = navigation(504);
-  const numberToCustomScoreResult = navigation(8471).numberToCustomScore(stateFromStores1);
+  const numberToCustomScoreResult = navigation(8480).numberToCustomScore(stateFromStores1);
   noop = numberToCustomScoreResult;
-  const tmp2Result3 = navigation(8471);
+  const tmp2Result3 = navigation(8480);
   const items3 = [ChannelListStore];
   guildChannels = navigation(504).useStateFromStoresObject(items3, () =>
     ChannelListStore.getGuild(guildId),
@@ -314,6 +314,6 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   obj4.renderItem = callback;
   obj4.data = memo;
   obj4.keyExtractor = keyExtractor;
-  obj3.children = closure_11(navigation(9006).AnimatedFlashList, obj4);
+  obj3.children = closure_11(navigation(9017).AnimatedFlashList, obj4);
   return closure_11(guildChannels, obj3);
 }

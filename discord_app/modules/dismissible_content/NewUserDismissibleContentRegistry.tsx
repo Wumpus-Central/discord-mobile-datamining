@@ -10,8 +10,6 @@ require = fn;
 const dependencyMap = {
   [fn(1944).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0,
   [fn(1944).DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
-  [fn(1944).DismissibleContent.SEEN_LAUNCH_WELCOME]: 0,
-  [fn(1944).DismissibleContent.SEEN_OLD_DESIGN]: 0,
   [fn(1944).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0,
   [fn(1944).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0,
   [fn(1944).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0,

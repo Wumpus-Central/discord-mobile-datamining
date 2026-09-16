@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8255).isEntryNew }, , , ,];
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8255).isEntryNew };
+let items = [{ Badge: BadgesAll.NewGameBadge, predicate: fn(8264).isEntryNew }, , , ,];
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8264).isEntryNew };
 items[1] = {
   Badge: BadgesAll.StreakBadge,
   predicate(entry) {
@@ -67,7 +67,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   },
 };
-const createICYMIStyles = fn(16562);
+const createICYMIStyles = fn(16582);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   const obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
@@ -173,7 +173,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(16612, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(16632, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         author_id(openReplyActionSheet[19]).itemInteracted(content.id, "hotwheels_gaming_activity", "press_forward");

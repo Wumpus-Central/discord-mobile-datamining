@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import util from "../../../../../../intl/index.native.tsx";
 import native from "../../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
-import _modDef7099 from "../../../../../../../_runtime/metro/07099__.js";
+import _modDef7102 from "../../../../../../../_runtime/metro/07102__.js";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import MonitoringAgentDefault from "../../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
@@ -47,7 +47,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: null,
@@ -105,7 +105,7 @@ export default function MoreTipsModal(headerStyle) {
             onPress() {
               return warningId(senderId[12]).popWithKey(channelId);
             },
-            source: _modDef7099,
+            source: _modDef7102,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null,
           };

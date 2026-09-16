@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import ChatIcon from "../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import RobotIcon2 from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
-import _modDef17705 from "../../../../_runtime/metro/17705__.js";
-import _modDef17706 from "../../../../_runtime/metro/17706__.js";
-import _modDef17707 from "../../../../_runtime/metro/17707__.js";
+import _modDef17761 from "../../../../_runtime/metro/17761__.js";
+import _modDef17762 from "../../../../_runtime/metro/17762__.js";
+import _modDef17763 from "../../../../_runtime/metro/17763__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,13 +14,13 @@ function AuditIcons(action) {
   const tmp = closure_10();
   const tmp2 = hasOwnProperty(action);
   if (constants.CREATE === tmp2) {
-    let tmp4 = _modDef17705;
+    let tmp4 = _modDef17761;
   } else if (constants.UPDATE === tmp2) {
-    tmp4 = _modDef17706;
+    tmp4 = _modDef17762;
   } else {
     tmp4 = null;
     if (constants.DELETE === tmp2) {
-      tmp4 = _modDef17707;
+      tmp4 = _modDef17763;
     }
   }
   if (action === constants2.MESSAGE_DELETE) {
@@ -49,13 +49,13 @@ function AuditIcons(action) {
   return React7(View, obj);
 }
 const View = fn(17).View;
-const AuditLogRecord = fn(17690);
+const AuditLogRecord = fn(17746);
 ({ getTargetType: closure_4, getActionType: hasOwnProperty } = AuditLogRecord);
 const Constants = fn(1074);
 ({ AuditLogTargetTypes, AuditLogActionTypes: metroRequire, AuditLogActions: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = {
   actionImageContainer: { height: 24, width: 24 },
   actionImageOverlay: null,
@@ -75,32 +75,32 @@ obj2.iconComponent = { width: 22, height: 22 };
 obj2.actionImage = { position: "absolute" };
 let closure_10 = createStyles.createStyles(obj2);
 let obj3 = {
-  [ALL]: fn(17701).ListBulletsIcon,
-  [CHANNEL]: fn(17674).ChannelListIcon,
-  [CHANNEL_OVERWRITE]: fn(17674).ChannelListIcon,
-  [EMOJI]: fn(8886).ReactionIcon,
-  [GUILD]: fn(4594).CircleInformationIcon,
-  [GUILD_PROFILE]: fn(4594).CircleInformationIcon,
-  [INTEGRATION]: fn(15054).PuzzlePieceIcon,
-  [INVITE]: fn(4582).LinkIcon,
-  [ROLE]: fn(8790).FlagIcon,
-  [USER]: fn(5173).GroupIcon,
-  [WEBHOOK]: fn(16878).WebhookIcon,
-  [STAGE_INSTANCE]: fn(5181).StageIcon,
-  [GUILD_SCHEDULED_EVENT]: fn(9917).CalendarIcon,
-  [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(9917).CalendarIcon,
-  [THREAD]: fn(5157).ThreadIcon,
-  [STICKER]: fn(10244).StickerIcon,
-  [APPLICATION_COMMAND]: fn(11351).SlashBoxIcon,
-  [AUTO_MODERATION_RULE]: fn(16878).WebhookIcon,
-  [GUILD_SOUNDBOARD]: fn(12663).SoundboardIcon,
-  [ONBOARDING_PROMPT]: fn(5173).GroupIcon,
-  [GUILD_ONBOARDING]: fn(5173).GroupIcon,
-  [HOME_SETTINGS]: fn(5173).GroupIcon,
-  [GUILD_MEMBER_VERIFICATION]: fn(5173).GroupIcon,
-  [VOICE_CHANNEL_STATUS]: fn(17674).ChannelListIcon,
-  [GUILD_HOME]: fn(17703).HomeIcon,
-  [UNKNOWN]: fn(11244).CircleQuestionIcon,
+  [ALL]: fn(17757).ListBulletsIcon,
+  [CHANNEL]: fn(17730).ChannelListIcon,
+  [CHANNEL_OVERWRITE]: fn(17730).ChannelListIcon,
+  [EMOJI]: fn(8897).ReactionIcon,
+  [GUILD]: fn(4592).CircleInformationIcon,
+  [GUILD_PROFILE]: fn(4592).CircleInformationIcon,
+  [INTEGRATION]: fn(15070).PuzzlePieceIcon,
+  [INVITE]: fn(4580).LinkIcon,
+  [ROLE]: fn(8799).FlagIcon,
+  [USER]: fn(5174).GroupIcon,
+  [WEBHOOK]: fn(16935).WebhookIcon,
+  [STAGE_INSTANCE]: fn(5182).StageIcon,
+  [GUILD_SCHEDULED_EVENT]: fn(9925).CalendarIcon,
+  [GUILD_SCHEDULED_EVENT_EXCEPTION]: fn(9925).CalendarIcon,
+  [THREAD]: fn(5158).ThreadIcon,
+  [STICKER]: fn(10252).StickerIcon,
+  [APPLICATION_COMMAND]: fn(11359).SlashBoxIcon,
+  [AUTO_MODERATION_RULE]: fn(16935).WebhookIcon,
+  [GUILD_SOUNDBOARD]: fn(12671).SoundboardIcon,
+  [ONBOARDING_PROMPT]: fn(5174).GroupIcon,
+  [GUILD_ONBOARDING]: fn(5174).GroupIcon,
+  [HOME_SETTINGS]: fn(5174).GroupIcon,
+  [GUILD_MEMBER_VERIFICATION]: fn(5174).GroupIcon,
+  [VOICE_CHANNEL_STATUS]: fn(17730).ChannelListIcon,
+  [GUILD_HOME]: fn(17759).HomeIcon,
+  [UNKNOWN]: fn(11258).CircleQuestionIcon,
 };
 ({
   ALL,

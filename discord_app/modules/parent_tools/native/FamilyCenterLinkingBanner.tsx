@@ -6,7 +6,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterBannerButton from "FamilyCenterBannerButton.tsx";
-import _modDef15014 from "../../../../_runtime/metro/15014__.js";
+import _modDef15030 from "../../../../_runtime/metro/15030__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -74,7 +74,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -106,17 +106,17 @@ obj2.art = size;
 let obj4 = { padding: nativeDefault.space.PX_16 };
 obj2.header = { marginBottom: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(obj2);
-createStyles = fn(4639);
+createStyles = fn(4638);
 const obj6 = { container: null };
 let obj5 = { marginBottom: nativeDefault.space.PX_8 };
 obj6.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 let closure_8 = createStyles.createStyles(obj6);
-createStyles = fn(4639);
+createStyles = fn(4638);
 const obj9 = { container: null };
 const obj8 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 obj9.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
 let closure_10 = createStyles.createStyles(obj9);
-createStyles = fn(4639);
+createStyles = fn(4638);
 const obj12 = {
   row: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   gap: { marginBottom: 12 },
@@ -157,7 +157,7 @@ export default function FamilyCenterLinkingBanner() {
     intl3.format(_modDef2397.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
     intl4.string(_modDef2397.JsAEDi),
   );
-  obj4.source = _modDef15014;
+  obj4.source = _modDef15030;
   obj4.style = tmp.art;
   const items = [hasOwnProperty(React4, obj4), ,];
   const obj5 = { style: tmp.content, children: null };

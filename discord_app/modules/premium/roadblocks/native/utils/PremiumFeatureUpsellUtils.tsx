@@ -1,10 +1,12 @@
 // discord_app/modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx
 import _modDef38 from "../../../../../../_runtime/metro/00038__.js";
+import Constants from "../../../../../Constants.tsx";
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
 import SoundboardTypes from "../../../../soundboard/SoundboardTypes.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
+const AnalyticsPages = Constants.AnalyticsPages;
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
@@ -13,6 +15,32 @@ export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroL
     tmp = categoryInfo.guild.id !== guild_id;
   }
   return tmp;
+};
+export const getAnalyticsPage = function getAnalyticsPage(featureName) {
+  if (EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_ANIMATED_EMOJI;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_EMOJI_EVERYWHERE;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_STICKERS_EVERYWHERE;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_FILE_UPLOAD;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_SOUNDBOARD_EVERYWHERE;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.CLIENT_THEMES === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_CLIENT_THEMES;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.APP_ICONS === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_APP_ICONS;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_FOR_LATER;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SCHEDULED_MESSAGES === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_SCHEDULED_MESSAGES;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY === featureName) {
+    return AnalyticsPages.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
+  } else {
+    const _HermesInternal = HermesInternal;
+    _modDef38(false, "Missing featureName: " + featureName);
+  }
 };
 export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
   if (EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS === EMOJIS_EVERYWHERE) {

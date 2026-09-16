@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/LanternSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/78dce9609354d4b56d6c8c765b91178eb0b2a1ff2f531cb2ea3a0d6802cf7383.png";
-export const metadata = { fileBytes: 33218 };
+export default "https://cdn.discordapp.com/assets/content/3f37b949d1c6852ccc800748c3ec7a4fed6b1a8e4d5f34461d33878baad1bff0.png";
+export const metadata = { fileBytes: 33170 };

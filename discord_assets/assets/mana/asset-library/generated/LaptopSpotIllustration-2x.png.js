@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/LaptopSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/bdebcde2989b32614a340c04c5102c2cc055253d3e400e23be3014fd41db0ffc.png";
-export const metadata = { fileBytes: 18985 };
+export default "https://cdn.discordapp.com/assets/content/c70fbe6e2615555d2a93fa8851f87557b85f4a60d047d6d91ce5c3687ea7c564.png";
+export const metadata = { fileBytes: 18910 };

@@ -9,9 +9,9 @@ import InviteStore from "../../../../stores/InviteStore.tsx";
 
 require = fn;
 const ThemeTypes = fn(1074).ThemeTypes;
-const GuildMemberFlags = fn(4265).GuildMemberFlags;
+const GuildMemberFlags = fn(4263).GuildMemberFlags;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { flex: { flex: 1 }, paddingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -182,8 +182,8 @@ export default function AcceptInviteContainer(code) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
+          let obj3 = { value, done: true };
+          return obj3;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -196,8 +196,8 @@ export default function AcceptInviteContainer(code) {
               throw value;
             } else if (arg0 === 2) {
               inviteInstanceId = 3;
-              let obj3 = { value, done: true };
-              return obj3;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
               closure_128_0 = undefined;
               closure_128_1 = function transitionToInviteChannel() {
@@ -325,37 +325,37 @@ export default function AcceptInviteContainer(code) {
               };
               const invite = stateFromStoresObject.invite;
               closure_128_0 = invite;
-              if (obj10.handleNSFWGuildInvite(invite)) {
+              if (obj11.handleNSFWGuildInvite(invite)) {
                 inviteInstanceId = 3;
-                const obj4 = { value: onPressClose(), done: true };
-                return obj4;
+                let obj5 = { value: onPressClose(), done: true };
+                return obj5;
               } else {
                 if (!stateFromStoresObject.isGuildMember) {
                   if (null != invite) {
-                    let obj5 = { inviteKey: code, context: null, callback: null };
+                    let obj6 = { inviteKey: code, context: null, callback: null };
                     if (null != inviteInstanceId) {
-                      let obj6 = { invite_instance_id: tmp26 };
-                      let obj7 = obj6;
+                      let obj7 = { invite_instance_id: tmp13 };
+                      let obj8 = obj7;
                     } else {
-                      obj7 = {};
+                      obj8 = {};
                     }
-                    const obj8 = { location: "Accept Invite Page" };
-                    const merged = Object.assign(obj7);
-                    obj5.context = obj8;
-                    obj5.callback = function callback(c2) {
+                    const obj9 = { location: "Accept Invite Page" };
+                    const merged = Object.assign(obj8);
+                    obj6.context = obj9;
+                    obj6.callback = function callback(c2) {
                       v1(c2);
                     };
-                    obj5 = v1(tmp23[19]).acceptInvite(obj5);
-                    const obj11 = v1(tmp23[19]);
+                    obj6 = v1(tmp26[19]).acceptInvite(obj6);
+                    let obj2 = v1(tmp26[19]);
                   }
                 }
                 v1 = 1;
                 inviteInstanceId = 1;
-                const obj9 = { value: callback(), done: false };
-                return obj9;
+                const obj10 = { value: callback(), done: false };
+                return obj10;
               }
-              obj10 = tmp2(inviteInstanceId[20]);
-              tmp23 = inviteInstanceId;
+              obj11 = tmp2(inviteInstanceId[20]);
+              tmp26 = inviteInstanceId;
             }
           } else if (arg0 === 1) {
             inviteInstanceId = 3;
@@ -369,9 +369,9 @@ export default function AcceptInviteContainer(code) {
             let obj = { value, done: true };
             return obj;
           }
-        } catch (tmp16) {
+        } catch (tmp19) {
           inviteInstanceId = tmp;
-          throw tmp16;
+          throw tmp19;
         }
       }
     }),

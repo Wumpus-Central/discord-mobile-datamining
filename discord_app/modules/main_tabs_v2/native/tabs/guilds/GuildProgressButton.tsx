@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds
 
 export default function GuildProgressButton(guild) {
   guild = guild.guild;
-  const guildProgressStep = guild(12609).useGuildProgressStep(guild);
+  const guildProgressStep = guild(12617).useGuildProgressStep(guild);
   const completed = guildProgressStep.completed;
   const items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
@@ -30,14 +30,14 @@ export default function GuildProgressButton(guild) {
     GuildProgressUtils.openActionSheet(guild);
   }, items1);
   let obj2 = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
-  let obj = guild(12609);
-  obj2.icon = jsx(guild(8721).RowButton.Icon, { source: completed(16308) });
+  let obj = guild(12617);
+  obj2.icon = jsx(guild(8730).RowButton.Icon, { source: completed(16328) });
   const intl = guild(1115).intl;
   obj2.label = intl.string(guild(1115).t.o3HK3d);
   obj2.subLabel = subtitle;
   obj2.onPress = callback;
-  obj2.trailing = jsx(completed(12725), { percent: percentComplete });
-  return jsx(guild(8721).RowButton, { icon: null, label: null, subLabel: null, onPress: null, trailing: null });
+  obj2.trailing = jsx(completed(12733), { percent: percentComplete });
+  return jsx(guild(8730).RowButton, { icon: null, label: null, subLabel: null, onPress: null, trailing: null });
 }
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale) {
   const refreshToken = MobileVisualRefreshExperiment.resolveRefreshToken(

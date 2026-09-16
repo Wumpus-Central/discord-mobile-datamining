@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/ServerIconShieldzordExample-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/f7b2f15869917be8b5802074a5d319c0050af59ebfc218794a05136f9bfe0f14.png";
-export const metadata = { fileBytes: 43475 };
+export default "https://cdn.discordapp.com/assets/content/71d817dfee89b5eb6d3908959f08778a0b48894cae3b47bcf5116d18903b87ab.png";
+export const metadata = { fileBytes: 43492 };

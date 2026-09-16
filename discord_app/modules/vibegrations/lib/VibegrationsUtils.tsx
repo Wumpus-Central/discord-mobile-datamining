@@ -104,8 +104,11 @@ export const findVibegrationChannelId = function findVibegrationChannelId(guildI
   }
   return null;
 };
-export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(guildId, location) {
-  let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location });
+export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(guildId, VibegrationsRemixSheet) {
+  let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({
+    guildId: guildId.id,
+    location: VibegrationsRemixSheet,
+  });
   if (result) {
     const features = guildId.features;
     result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);

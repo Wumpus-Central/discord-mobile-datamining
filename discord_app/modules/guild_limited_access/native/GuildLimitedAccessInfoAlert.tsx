@@ -9,10 +9,10 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
 require = fn;
-const helpdeskArticle = fn(13926).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(13939).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(

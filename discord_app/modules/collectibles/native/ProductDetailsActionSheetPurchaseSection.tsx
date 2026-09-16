@@ -54,32 +54,32 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(13287).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(13298).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(13287);
-  let isPartiallyOwnedBundle = balance(8997).useProductDisableState(product.skuId).isDisabled;
-  let obj2 = balance(8997);
+  let obj = balance(13298);
+  let isPartiallyOwnedBundle = balance(9008).useProductDisableState(product.skuId).isDisabled;
+  let obj2 = balance(9008);
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = !canAfford;
   }
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = obj3.useProductPurchaseState(product).isPartiallyOwnedBundle;
   }
-  obj3 = balance(8970);
+  obj3 = balance(8981);
   navigation = balance(1484).useNavigation();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(13290, dependencyMap.paths),
+      asyncRequireImpl(13301, dependencyMap.paths),
       {
         skuId: product.skuId,
         analyticsLocations,
         onCheckoutSuccess(arg0) {
-          const collectiblesPurchases = balance(7648).fetchCollectiblesPurchases();
-          const obj = balance(7648);
-          product(4842).popWithKey(ORB_CHECKOUT_MODAL);
+          const collectiblesPurchases = balance(7651).fetchCollectiblesPurchases();
+          const obj = balance(7651);
+          product(4841).popWithKey(ORB_CHECKOUT_MODAL);
           if (product.skuId === constants.ORB_PROFILE_BADGE) {
             const obj3 = {
               modalKey,
@@ -88,8 +88,8 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(4842).pushLazy(balance(1897)(13294, dependencyMap.paths), obj3, modalKey);
-            const tmp4Result = product(4842);
+            product(4841).pushLazy(balance(1897)(13305, dependencyMap.paths), obj3, modalKey);
+            const tmp4Result = product(4841);
           } else {
             const ALL = balance(1077).FractionalPremiumSKUsSets.ALL;
             if (ALL.has(product.skuId)) {
@@ -101,7 +101,7 @@ function VCButton(balance) {
               };
               const first = arg0.entitlements[0];
               let flag;
-              const tmp4Result3 = product(4606);
+              const tmp4Result3 = product(4605);
               if (first != null) {
                 flag = first.consumed;
               }
@@ -111,18 +111,18 @@ function VCButton(balance) {
               obj4.consumed = flag;
               obj4.onPressExplorePerks = function onPressExplorePerks() {
                 navigation.navigate(constants2.PREMIUM);
-                product(4606).hideActionSheet();
+                product(4605).hideActionSheet();
               };
               obj4.onPressViewCredits = function onPressViewCredits() {
                 navigation.navigate(constants2.PREMIUM_MANAGE_PLAN);
-                product(4606).hideActionSheet();
+                product(4605).hideActionSheet();
               };
               tmp4Result3.openLazy(
-                balance(1897)(13295, dependencyMap.paths),
+                balance(1897)(13306, dependencyMap.paths),
                 "FractionalNitroCollectedActionSheet",
                 obj4,
               );
-              const tmp10 = balance(1897)(13295, dependencyMap.paths);
+              const tmp10 = balance(1897)(13306, dependencyMap.paths);
             } else {
               const obj5 = {
                 product,
@@ -131,11 +131,11 @@ function VCButton(balance) {
                 orbBalancePriorToPurchase,
                 stageCollectibleChangeForEditProfile,
               };
-              product(11216).open(obj5);
-              const tmp4Result4 = product(11216);
+              product(11230).open(obj5);
+              const tmp4Result4 = product(11230);
             }
           }
-          const obj2 = product(4842);
+          const obj2 = product(4841);
         },
       },
       ORB_CHECKOUT_MODAL,
@@ -193,7 +193,7 @@ function VCButton(balance) {
       str2 = "secondary";
     }
     obj8.variant = str2;
-    obj7.children = closure_13(tmp2(5060).BaseTextButton, obj8);
+    obj7.children = closure_13(tmp2(5061).BaseTextButton, obj8);
     return closure_13(navigation, obj7);
   }
   const tmp2Result = balance(1484);
@@ -220,13 +220,13 @@ const CollectiblesShopConstants = fn(1076);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const Constants = fn(1074);
 ({ MarketingURLs: closure_9, UserSettingsSections: c10 } = Constants);
-const RootNavigatorScreen = fn(11223).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11237).RootNavigatorScreen;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const ORB_BADGE_COLLECTED_MODAL = "ORB_BADGE_COLLECTED_MODAL";
 const ORB_CHECKOUT_MODAL = "ORB_CHECKOUT_MODAL";
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,

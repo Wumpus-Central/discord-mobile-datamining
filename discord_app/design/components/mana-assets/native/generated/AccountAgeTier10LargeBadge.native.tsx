@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/AccountAgeTier10LargeBadge.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef5779 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AccountAgeTier10LargeBadge-2x.png.js";
+import _modDef5780 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AccountAgeTier10LargeBadge-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const AccountAgeTier10LargeBadge = function AccountAgeTier10LargeBadge(wi
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef5779 };
+  const obj2 = { uri: _modDef5780 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

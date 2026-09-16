@@ -4,7 +4,7 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(8082).MobileUserSettings;
+const MobileUserSettings = fn(8091).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -37,7 +37,8 @@ export default function SettingsDesignSystemsScreen() {
     obj3.settings = items;
     const items1 = [obj3, , , ,];
     const obj4 = { label: "AI Visual Identity", settings: null };
-    const items2 = [constants.DESIGN_SYSTEM_AI_LOADER];
+    const items2 = [,];
+    ({ DESIGN_SYSTEM_AI_LOADER: arr3[0], DESIGN_SYSTEM_AI_SHIMMER: arr3[1] } = constants);
     obj4.settings = items2;
     items1[1] = obj4;
     const obj5 = { label: "In Progress", settings: null };

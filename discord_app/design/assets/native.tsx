@@ -281,6 +281,7 @@ import MagnifyingGlassSpotIllustration from "../components/mana-assets/native/ge
 import MailboxIllocon from "../components/mana-assets/native/generated/MailboxIllocon.native.tsx";
 import MailboxSpotIllustration from "../components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx";
 import MapleIllocon from "../components/mana-assets/native/generated/MapleIllocon.native.tsx";
+import MemberRolesAbstractUI from "../components/mana-assets/native/generated/MemberRolesAbstractUI.native.tsx";
 import MicrophoneAndKeyboardSpotIllustration from "../components/mana-assets/native/generated/MicrophoneAndKeyboardSpotIllustration.native.tsx";
 import MicrophoneSpotIllustration from "../components/mana-assets/native/generated/MicrophoneSpotIllustration.native.tsx";
 import MiniaturesSpotIllustration from "../components/mana-assets/native/generated/MiniaturesSpotIllustration.native.tsx";
@@ -748,6 +749,7 @@ export const MagnifyingGlassSpotIllustration = MagnifyingGlassSpotIllustration.M
 export const MailboxIllocon = MailboxIllocon.MailboxIllocon;
 export const MailboxSpotIllustration = MailboxSpotIllustration.MailboxSpotIllustration;
 export const MapleIllocon = MapleIllocon.MapleIllocon;
+export const MemberRolesAbstractUI = MemberRolesAbstractUI.MemberRolesAbstractUI;
 export const MicrophoneAndKeyboardSpotIllustration =
   MicrophoneAndKeyboardSpotIllustration.MicrophoneAndKeyboardSpotIllustration;
 export const MicrophoneSpotIllustration = MicrophoneSpotIllustration.MicrophoneSpotIllustration;

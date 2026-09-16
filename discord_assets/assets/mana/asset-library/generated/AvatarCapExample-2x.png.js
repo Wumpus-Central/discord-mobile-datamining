@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/39bda965c151df0e5d2c0b7e5754a1f9a8e5b164e95a7fbee4f88e3db9e99eca.png";
-export const metadata = { fileBytes: 25353 };
+export default "https://cdn.discordapp.com/assets/content/5729eb50308b2020ca15bf8d3b7bc73165b4fcfbf15ededd07014c8bb9248f5e.png";
+export const metadata = { fileBytes: 25344 };

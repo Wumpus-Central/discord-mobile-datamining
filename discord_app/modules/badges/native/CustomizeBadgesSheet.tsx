@@ -120,13 +120,13 @@ const Constants = fn(1074);
   AnalyticsPages: closure_11,
   AnalyticsSections: closure_12,
 } = Constants);
-let closure_13 = fn(7258).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_13 = fn(7261).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 80;
 let c18 = 16.666666666666668;
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let obj = {
   gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   grid: null,
@@ -158,7 +158,7 @@ obj.message = {
 };
 obj.messageText = { textAlign: "center" };
 let closure_19 = createStyles.createStyles(obj);
-createStyles = fn(4639);
+createStyles = fn(4638);
 let obj10 = {
   position: { position: "absolute" },
   fill: { flex: 1 },
@@ -203,8 +203,8 @@ let obj9 = {
   paddingVertical: nativeDefault.space.PX_32,
 };
 getSlotOffset.__closure = {
-  BADGE_GRID_COLUMNS: fn(14719).BADGE_GRID_COLUMNS,
-  BADGE_GRID_GAP: fn(14719).BADGE_GRID_GAP,
+  BADGE_GRID_COLUMNS: fn(14735).BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: fn(14735).BADGE_GRID_GAP,
 };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = {
@@ -233,10 +233,10 @@ let closure_24 = noop.memo((badge) => {
     items1[1] = size;
     if (badge.hidden) {
       let obj = { style: items1, children: null };
-      let obj2 = { badge, alwaysVisible, showAccessibilityLabel: null, onShowPress: null };
+      const obj2 = { badge, alwaysVisible, showAccessibilityLabel: null, onShowPress: null };
       let intl = tmp2(alwaysVisible[15]).intl;
       let t = tmp2(alwaysVisible[15]).t;
-      let obj3 = { badgeName: badge.name, position: index + 1 };
+      const obj3 = { badgeName: badge.name, position: index + 1 };
       obj2.showAccessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj3);
       obj2.onShowPress = onShowPress;
       obj.children = closure_15(BadgeTileContent, obj2);
@@ -255,55 +255,50 @@ let closure_24 = noop.memo((badge) => {
           badgeName: badge.name,
           position: index + 1,
         });
-        if (!alwaysVisible) {
-          const obj3 = { accessibilityRole: "button", accessibilityHint: undefined };
-          const merged = Object.assign(obj3);
-          let accessibilityActions;
-          if (ref != null) {
-            accessibilityActions = ref.accessibilityActions;
-          }
-          obj.accessibilityActions = accessibilityActions;
-          let prop;
-          if (ref != null) {
-            prop = ref.onAccessibilityAction;
-          }
-          obj.onAccessibilityAction = prop;
-          if (alwaysVisible) {
-            onPress = callback;
-          } else if (ref != null) {
-            onPress = ref.onPress;
-          }
-          obj.onPress = onPress;
-          let fn;
-          if (null != ref) {
-            fn = (arg0) => {
-              const result = badge(alwaysVisible[11]).triggerHapticFeedback(
-                badge(alwaysVisible[12]).CONTEXT_MENU_OPEN_HAPTIC,
-              );
-              onLongPress = onLongPress.onLongPress;
-              if (onLongPress != null) {
-                onLongPress(arg0);
-              }
-            };
-          }
-          obj.onLongPress = fn;
-          obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-          obj.style = items1;
-          const obj4 = { badge, alwaysVisible };
-          obj.children = __initData(BadgeTileContent, obj4);
-          return __initData(React4, obj);
-        } else {
+        let stringResult;
+        if (alwaysVisible) {
           const intl2 = util.intl;
+          stringResult = intl2.string(BadgeUtils.getAlwaysVisibleCopy(tmp9));
           const tmp6Result = BadgeUtils;
-          const t2 = util.t;
-          intl2.string(BadgeUtils.isPinnedBadge(tmp9) ? t2.t3udZb : t2.nPQVxb);
-          const isPinnedBadgeResult = BadgeUtils.isPinnedBadge(tmp9);
         }
-        const obj2 = { badgeName: badge.name, position: index + 1 };
+        const merged = Object.assign({ accessibilityRole: "button", accessibilityHint: stringResult });
+        let accessibilityActions;
+        if (ref != null) {
+          accessibilityActions = ref.accessibilityActions;
+        }
+        obj.accessibilityActions = accessibilityActions;
+        let prop;
+        if (ref != null) {
+          prop = ref.onAccessibilityAction;
+        }
+        obj.onAccessibilityAction = prop;
+        if (alwaysVisible) {
+          onPress = callback;
+        } else if (ref != null) {
+          onPress = ref.onPress;
+        }
+        obj.onPress = onPress;
+        let fn;
+        if (null != ref) {
+          fn = (arg0) => {
+            const result = badge(alwaysVisible[11]).triggerHapticFeedback(
+              badge(alwaysVisible[12]).CONTEXT_MENU_OPEN_HAPTIC,
+            );
+            onLongPress = onLongPress.onLongPress;
+            if (onLongPress != null) {
+              onLongPress(arg0);
+            }
+          };
+        }
+        obj.onLongPress = fn;
+        obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+        obj.style = items1;
+        obj.children = __initData(BadgeTileContent, { badge, alwaysVisible });
+        return __initData(React4, obj);
       }
       if (!alwaysVisible) {
         if (null != onHide) {
-          let obj4 = { badge, index, onHide, children: renderTile };
+          const obj4 = { badge, index, onHide, children: renderTile };
           let renderTileResult = closure_15(HideBadgeMenu, obj4);
         }
         return renderTileResult;
@@ -468,34 +463,27 @@ let closure_37 = noop.memo((badge) => {
     C.__workletHash = 4011295272705;
     C.__initData = __initData;
     const animatedReaction = tmp2(tmp[23]).useAnimatedReaction(fn, C);
-    class Q {
-      constructor() {
-        obj = orderShared;
-        value = orderShared.get();
-        tmp = closure_0;
-        tmp2 = closure_2;
-        sum = tileSize + closure_0(closure_2[13]).BADGE_GRID_GAP;
-        obj2 = closure_0(closure_2[23]);
-        rounded = Math.floor((closure_17.get() + tileSize / 2) / sum);
-        clampResult = obj2.clamp(rounded, 0, closure_0(closure_2[13]).BADGE_GRID_COLUMNS - 1);
-        bound = Math.max(Math.floor((closure_18.get() + tileSize / 2) / sum), 0);
-        obj3 = closure_0(closure_2[23]);
-        clampResult1 = obj3.clamp(
-          bound * closure_0(closure_2[13]).BADGE_GRID_COLUMNS + clampResult - slotOffset,
-          0,
-          value.length - 1,
+    let fn2 = function $() {
+      value = orderShared.get();
+      const sum = tileSize + BadgeGrid.BADGE_GRID_GAP;
+      const rounded = Math.floor((sharedValue2.get() + tileSize / 2) / sum);
+      const bound = Math.max(Math.floor((sharedValue3.get() + tileSize / 2) / sum), 0);
+      const clampResult = ReanimatedRexport.clamp(rounded, 0, BadgeGrid.BADGE_GRID_COLUMNS - 1);
+      const clampResult1 = ReanimatedRexport.clamp(
+        bound * BadgeGrid.BADGE_GRID_COLUMNS + clampResult - slotOffset,
+        0,
+        value.length - 1,
+      );
+      const result = PendingBadgeSettings.moveBadgeInDisplayOrder(value, value.indexOf(badge_id), clampResult1);
+      if (result !== value) {
+        const result1 = orderShared.set(result);
+        const tmpResult = ReanimatedRexport;
+        ReanimatedRexport.runOnJS(HapticUtils.triggerHapticFeedback)(
+          HapticUtils.HapticFeedbackTypes.DRAG_AND_DROP_MOVE,
         );
-        obj4 = closure_0(closure_2[26]);
-        result = obj4.moveBadgeInDisplayOrder(value, value.indexOf(badge_id), clampResult1);
-        if (result !== value) {
-          result1 = obj.set(result);
-          tmpResult = tmp(tmp2[23]);
-          runOnJSResult = tmpResult.runOnJS(tmp(tmp2[11]).triggerHapticFeedback);
-          tmp10Result = runOnJSResult(tmp(tmp2[11]).HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
-        }
-        return;
+        const runOnJSResult = ReanimatedRexport.runOnJS(HapticUtils.triggerHapticFeedback);
       }
-    }
+    };
     let obj5 = {
       orderShared,
       tileSize,
@@ -511,11 +499,11 @@ let closure_37 = noop.memo((badge) => {
       triggerHapticFeedback: tmp2(tmp[11]).triggerHapticFeedback,
       HapticFeedbackTypes: tmp2(tmp[11]).HapticFeedbackTypes,
     };
-    Q.__closure = obj5;
-    Q.__workletHash = 1083237242858;
-    Q.__initData = __initData2;
+    fn2.__closure = obj5;
+    fn2.__workletHash = 1083237242858;
+    fn2.__initData = __initData2;
     let items = [badge_id, orderShared, slotOffset, tileSize, sharedValue2, sharedValue3];
-    reslot = slotOffset.useCallback(Q, items);
+    reslot = slotOffset.useCallback(fn2, items);
     const tmp2Result10 = tmp2(tmp[23]);
     function ee() {
       return scrollOffset.get();
@@ -524,21 +512,28 @@ let closure_37 = noop.memo((badge) => {
     ee.__closure = obj6;
     ee.__workletHash = 10993823060256;
     ee.__initData = __initData3;
-    let fn2 = function $(arg0, arg1) {
-      value = null != arg1;
-      if (value) {
-        value = sharedValue.get();
+    class Q {
+      constructor(arg0, arg1) {
+        value = null != arg1;
+        if (value) {
+          tmp2 = closure_15;
+          value = closure_15.get();
+        }
+        if (value) {
+          tmp3 = badge;
+          tmp4 = closure_18;
+          result = closure_18.set(closure_18.get() + (badge - arg1));
+          tmp6 = closure_21;
+          tmp7 = closure_21();
+        }
+        return;
       }
-      if (value) {
-        const result = sharedValue3.set(sharedValue3.get() + (arg0 - arg1));
-        callback();
-      }
-    };
+    }
     const obj7 = { isThisTileDragging: sharedValue, positionY: sharedValue3, reslot };
-    fn2.__closure = obj7;
-    fn2.__workletHash = 9803143874483;
-    fn2.__initData = __initData4;
-    const animatedReaction1 = tmp2(tmp[23]).useAnimatedReaction(ee, fn2);
+    Q.__closure = obj7;
+    Q.__workletHash = 9803143874483;
+    Q.__initData = __initData4;
+    const animatedReaction1 = tmp2(tmp[23]).useAnimatedReaction(ee, Q);
     let items1 = [
       reslot,
       scrollRef,
@@ -872,65 +867,59 @@ let closure_37 = noop.memo((badge) => {
         badgeName: badge.name,
         position: index + 1,
       });
-      if (!alwaysVisible) {
-        const obj5 = { accessibilityRole: "button", accessibilityHint: undefined };
-        const merged = Object.assign(obj5);
-        let accessibilityActions;
-        if (ref != null) {
-          accessibilityActions = ref.accessibilityActions;
-        }
-        if (accessibilityActions == null) {
-          accessibilityActions = [];
-        }
-        const items1 = [];
-        HermesBuiltin.arraySpread(items3, HermesBuiltin.arraySpread(accessibilityActions, 0));
-        obj3.accessibilityActions = items1;
-        obj3.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
-          const actionName = nativeEvent.nativeEvent.actionName;
-          if ("moveup" !== actionName) {
-            if ("movedown" !== actionName) {
-              if (onLongPress != null) {
-                const onAccessibilityAction = onLongPress.onAccessibilityAction;
-                if (onAccessibilityAction != null) {
-                  const result = onAccessibilityAction(nativeEvent);
-                }
+      let stringResult;
+      if (alwaysVisible) {
+        const intl2 = tmp2(tileSize[15]).intl;
+        stringResult = intl2.string(tmp2(tileSize[21]).getAlwaysVisibleCopy(tmp10));
+        const tmp2Result = tmp2(tileSize[21]);
+      }
+      const merged = Object.assign({ accessibilityRole: "button", accessibilityHint: stringResult });
+      let accessibilityActions;
+      if (ref != null) {
+        accessibilityActions = ref.accessibilityActions;
+      }
+      if (accessibilityActions == null) {
+        accessibilityActions = [];
+      }
+      const items1 = [...items3];
+      obj3.accessibilityActions = items1;
+      obj3.onAccessibilityAction = function onAccessibilityAction(nativeEvent) {
+        const actionName = nativeEvent.nativeEvent.actionName;
+        if ("moveup" !== actionName) {
+          if ("movedown" !== actionName) {
+            if (onLongPress != null) {
+              const onAccessibilityAction = onLongPress.onAccessibilityAction;
+              if (onAccessibilityAction != null) {
+                const result = onAccessibilityAction(nativeEvent);
               }
             }
           }
-          closure_24(nativeEvent);
-        };
-        if (alwaysVisible) {
-          onPress = closure_14;
-        } else if (ref != null) {
-          onPress = ref.onPress;
         }
-        obj3.onPress = onPress;
-        let fn;
-        if (null != ref) {
-          fn = (arg0) => {
-            const result = HapticUtils.triggerHapticFeedback(ContextMenuConstants.CONTEXT_MENU_OPEN_HAPTIC);
-            onLongPress = onLongPress.onLongPress;
-            if (onLongPress != null) {
-              onLongPress(arg0);
-            }
-          };
-        }
-        obj3.onLongPress = fn;
-        obj3.delayLongPress = tmp2(tileSize[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-        obj3.style = position.fill;
-        const obj6 = { badge: tmp7, alwaysVisible };
-        obj3.children = sharedValue(closure_23, obj6);
-        obj2.children = sharedValue(alwaysVisible, obj3);
-        obj.children = sharedValue(index(tileSize[23]).View, obj2);
-        return sharedValue(badge(tileSize[28]).GestureDetector, obj);
-      } else {
-        const intl2 = tmp2(tileSize[15]).intl;
-        const tmp2Result = tmp2(tileSize[21]);
-        const t2 = tmp2(tileSize[15]).t;
-        intl2.string(tmp2(tileSize[21]).isPinnedBadge(tmp10) ? t2.t3udZb : t2.nPQVxb);
-        const isPinnedBadgeResult = tmp2(tileSize[21]).isPinnedBadge(tmp10);
+        closure_24(nativeEvent);
+      };
+      if (alwaysVisible) {
+        onPress = closure_14;
+      } else if (ref != null) {
+        onPress = ref.onPress;
       }
-      const obj4 = { badgeName: badge.name, position: index + 1 };
+      obj3.onPress = onPress;
+      let fn;
+      if (null != ref) {
+        fn = (arg0) => {
+          const result = HapticUtils.triggerHapticFeedback(ContextMenuConstants.CONTEXT_MENU_OPEN_HAPTIC);
+          onLongPress = onLongPress.onLongPress;
+          if (onLongPress != null) {
+            onLongPress(arg0);
+          }
+        };
+      }
+      obj3.onLongPress = fn;
+      obj3.delayLongPress = badge(tileSize[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+      obj3.style = position.fill;
+      obj3.children = sharedValue(closure_23, { badge, alwaysVisible });
+      obj2.children = sharedValue(alwaysVisible, obj3);
+      obj.children = sharedValue(index(tileSize[23]).View, obj2);
+      return sharedValue(badge(tileSize[28]).GestureDetector, obj);
     }
     if (alwaysVisible) {
       let renderTileResult = renderTile(null);
@@ -1144,15 +1133,13 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
       const obj3 = { badgeName: badge_id.name };
       AccessibilityAnnouncer.announce(intl2.formatToPlainString(util.t.mehuPg, obj3));
     } else if (set.has(badge_id.badge_id)) {
-      let obj6 = { key: null, content: null };
+      const obj6 = { key: null, content: null };
       const _HermesInternal = HermesInternal;
       obj6.key = "BADGE_ALWAYS_VISIBLE-" + badge_id.badge_id;
       const intl = util.intl;
       const obj2 = ToastActionCreatorsDefault;
-      const t = util.t;
-      obj6.content = intl.string(BadgeUtils.isPinnedBadge(badge_id.badge_id) ? t.t3udZb : t.nPQVxb);
-      obj6 = obj2.open(obj6);
-      const isPinnedBadgeResult = BadgeUtils.isPinnedBadge(badge_id.badge_id);
+      obj6.content = intl.string(BadgeUtils.getAlwaysVisibleCopy(badge_id.badge_id));
+      obj2.open(obj6);
     }
   });
   onHide = tmp2(tmp3[22])((badgeId) => {
@@ -1379,7 +1366,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
   const intl5 = tmp5(tmp3[15]).intl;
   obj16.title = intl5.string(tenureBadgeHideable(stateFromStores1[15]).t.x5SfWU);
   const intl6 = tmp5(tmp3[15]).intl;
-  let t = tmp5(tmp3[15]).t;
+  const t = tmp5(tmp3[15]).t;
   obj16.subtitle = intl6.string(stateFromStores1 ? t["Vzc4+8"] : t.ZuXSRp);
   obj15.header = sharedValue(tenureBadgeHideable(stateFromStores1[49]).BottomSheetTitleHeader, obj16);
   obj15.children = sharedValue(tenureBadgeHideable(stateFromStores1[50]).BottomSheetScrollView, {

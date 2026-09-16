@@ -50,7 +50,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     }),
     items,
   );
-  jsx = obj.useContext(onChange(5771).RedesignCompatContext);
+  jsx = obj.useContext(onChange(5772).RedesignCompatContext);
   const items1 = [undefined !== value, onChange];
   onSelect = obj.useCallback((arg0) => {
     if (!closure_1) {
@@ -79,7 +79,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     }
     tmp4 = type;
   });
-  obj2.children = jsx(onChange(5772).TableRowGroup, {
+  obj2.children = jsx(onChange(5773).TableRowGroup, {
     accessibilityRole: "radiogroup",
     accessibilityLabel,
     title,

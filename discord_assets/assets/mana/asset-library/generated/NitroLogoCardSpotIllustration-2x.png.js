@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/NitroLogoCardSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/b9a749dd3f30ba82a59e4fc3f13ebf961d88453358fce3f576235543b636bc48.png";
-export const metadata = { fileBytes: 57551 };
+export default "https://cdn.discordapp.com/assets/content/ee07eead9dabc5e56083cfcc0cf5b3d18b9d8a09f43250d57ab7d9283300e360.png";
+export const metadata = { fileBytes: 58565 };

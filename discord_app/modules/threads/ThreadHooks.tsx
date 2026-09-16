@@ -218,23 +218,30 @@ export const computeCanStartPublicThread = function computeCanStartPublicThread(
 };
 export { useCanStartPrivateThread };
 export const computeCanStartPrivateThread = function computeCanStartPrivateThread(type, hasFlag) {
-  let flag = false;
-  if (PermissionStore.can(constants.CREATE_PRIVATE_THREADS, type)) {
-    flag = false;
-    if (THREADED_CHANNEL_TYPES.has(type.type)) {
-      flag = true;
-      if (null != hasFlag) {
-        flag = false;
-        if (!hasFlag.hasFlag(constants2.HAS_THREAD)) {
-          flag = true;
-          if (isSystemMessageDefault(hasFlag)) {
-            flag = false;
+  let tmp3 = type.type === constants3.GUILD_TEXT;
+  if (!tmp3) {
+    tmp3 = type.type === tmp2.GUILD_APP;
+  }
+  if (tmp3) {
+    let flag = false;
+    if (canResult) {
+      flag = false;
+      if (THREADED_CHANNEL_TYPES.has(type.type)) {
+        flag = true;
+        if (null != hasFlag) {
+          flag = false;
+          if (!hasFlag.hasFlag(constants2.HAS_THREAD)) {
+            flag = true;
+            if (isSystemMessageDefault(hasFlag)) {
+              flag = false;
+            }
           }
         }
       }
     }
+    tmp3 = flag;
   }
-  return flag;
+  return tmp3;
 };
 export const useCanStartThread = function useCanStartThread(channel) {
   _require = channel;
@@ -575,8 +582,8 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("AgeGateUtils").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4850).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(4850);
+    shouldAgeVerifyForAgeGate = tmp3(4849).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(4849);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

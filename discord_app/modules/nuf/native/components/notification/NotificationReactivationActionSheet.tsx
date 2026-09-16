@@ -3,17 +3,17 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import _modDef17611 from "../../../../../../_runtime/metro/17611__.js";
+import _modDef17667 from "../../../../../../_runtime/metro/17667__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const EventActionType = fn(12545).EventActionType;
+const EventActionType = fn(12553).EventActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" },
   image: null,
@@ -59,29 +59,29 @@ export default function NotificationReactivationActionSheet(location) {
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17611, resizeMode: "contain" }), , ,];
+  const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17667, resizeMode: "contain" }), , ,];
   const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1115).intl;
   obj4.children = intl.string(_location(1115).t.a4bgO0);
-  items2[1] = closure_8(_location(4635).Text, obj4);
+  items2[1] = closure_8(_location(4634).Text, obj4);
   const obj5 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = _location(1115).intl;
   obj5.children = intl2.string(_location(1115).t["rW5gw/"]);
-  items2[2] = closure_8(_location(4635).Text, obj5);
+  items2[2] = closure_8(_location(4634).Text, obj5);
   const obj6 = { style: tmp.buttons, children: null };
   const obj7 = { text: null, onPress: null };
   const intl3 = _location(1115).intl;
   obj7.text = intl3.string(_location(1115).t.a4bgO0);
   obj7.onPress = callback;
-  const items3 = [closure_8(_location(5059).Button, obj7)];
+  const items3 = [closure_8(_location(5060).Button, obj7)];
   const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = _location(1115).intl;
   obj8.text = intl4.string(_location(1115).t["/L3kom"]);
   obj8.onPress = callback1;
-  items3[1] = closure_8(_location(5059).Button, obj8);
+  items3[1] = closure_8(_location(5060).Button, obj8);
   obj6.children = items3;
-  items2[3] = closure_9(_location(5518).ButtonGroup, obj6);
+  items2[3] = closure_9(_location(5519).ButtonGroup, obj6);
   obj2.children = items2;
   obj.children = closure_9(closure_4, obj2);
-  return closure_8(_location(7257).BottomSheet, obj);
+  return closure_8(_location(7260).BottomSheet, obj);
 }

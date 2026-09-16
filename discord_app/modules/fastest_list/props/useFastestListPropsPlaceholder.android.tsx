@@ -17,32 +17,32 @@ function createNativePlaceholderConfig(listFooter) {
     borderRadius: "Array",
     borderTopLeftRadius: "count",
     borderTopRightRadius: "displayName",
-    borderBottomLeftRadius: "p",
-    borderBottomRightRadius: "to",
+    borderBottomLeftRadius: "y",
+    borderBottomRightRadius: "e",
     divider: "isArray",
     dividerColor: "isArray",
-    dividerPaddingLeft: "LengthDelimited",
-    dividerPaddingRight: "to",
+    dividerPaddingLeft: "Boolean",
+    dividerPaddingRight: "e",
     placeholderShape: "isArray",
     placeholderShapeColor: "isArray",
-    placeholderShapeCount: "limit",
-    placeholderShapeGap: "to",
+    placeholderShapeCount: "o",
+    placeholderShapeGap: "e",
     placeholderShapePaddingHorizontal: "isArray",
     placeholderShapePaddingVertical: "isArray",
-    placeholderFeedBackgroundColor: "i",
-    placeholderFeedColor: "to",
+    placeholderFeedBackgroundColor: "l",
+    placeholderFeedColor: "e",
     placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "isArray",
-    placeholderFeedLabelSize: "it",
-    placeholderFeedLabelSecondarySize: "to",
+    placeholderFeedLabelSize: "e",
+    placeholderFeedLabelSecondarySize: "e",
     placeholderFeedPadding: "isArray",
     placeholderFeedShape: "isArray",
     placeholderFeedShapeSize: "call",
     placeholderType: NONE,
-    width: "<string:727808>",
-    height: "<string:728064>",
-    verticalAlignment: "<string:728320>",
-    horizontalAlignment: "<string:728576>",
+    width: "face",
+    height: "fancy",
+    verticalAlignment: "monocle",
+    horizontalAlignment: "rich",
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(7169).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(7172).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

@@ -44,9 +44,9 @@ updateContextMenuState.__closure = {
   INDEX_BOUNDS_PAGE_Y_OFFSET: 1,
   INDEX_BOUNDS_PAGE_X_OFFSET: 0,
   INDEX_BOUNDS_OFFSET: 4,
-  runOnJS: fn(4376).runOnJS,
-  triggerHapticFeedback: fn(4607).triggerHapticFeedback,
-  HapticFeedbackTypes: fn(4607).HapticFeedbackTypes,
+  runOnJS: fn(4374).runOnJS,
+  triggerHapticFeedback: fn(4606).triggerHapticFeedback,
+  HapticFeedbackTypes: fn(4606).HapticFeedbackTypes,
 };
 updateContextMenuState.__workletHash = 10158111154044;
 updateContextMenuState.__initData = {

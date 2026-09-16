@@ -26,8 +26,8 @@ let obj2 = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "call",
-  source: "DateToSystemTimezoneSetter",
-  incrementableActions: "HIPER",
+  source: "HermesInternal",
+  incrementableActions: "Array",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

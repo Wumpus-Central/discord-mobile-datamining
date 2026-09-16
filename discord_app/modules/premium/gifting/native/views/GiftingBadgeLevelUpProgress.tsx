@@ -3,15 +3,16 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import _modDef2493 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import GiftingBadgesUtils from "../../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8312).getSingleRequirementThreshold;
+let closure_4 = fn(8321).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_4, width: "100%" },
   barRow: null,
@@ -49,47 +50,55 @@ const result = size.fileFinishedImporting("modules/premium/gifting/native/views/
 export default function GiftingBadgeLevelUpProgress(style) {
   ({ progress, currentTier, newTier } = style);
   const tmp = closure_7();
-  const tmp2 = closure_4(newTier);
+  const isGiftingBadgeComplexArtEnabled =
+    GiftingBadgesUtils.useIsGiftingBadgeComplexArtEnabled("GiftingBadgeLevelUpProgress");
+  const giftingBadgeTierIconUrl = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(
+    currentTier,
+    isGiftingBadgeComplexArtEnabled,
+  );
+  const giftingBadgeTierIconUrl1 = GiftingBadgesUtils.getGiftingBadgeTierIconUrl(
+    newTier,
+    isGiftingBadgeComplexArtEnabled,
+  );
+  const tmp7 = closure_4(newTier);
   let num = 100;
-  if (tmp2 > 0) {
+  if (tmp7 > 0) {
     const _Math = Math;
     const _Math2 = Math;
-    num = Math.min(Math.max((progress / tmp2) * 100, 0), 100);
+    num = Math.min(Math.max((progress / tmp7) * 100, 0), 100);
   }
-  const obj = { style: null, children: null };
+  const obj3 = { style: null, children: null };
   const items = [tmp.container, style.style];
-  obj.style = items;
-  const obj2 = { style: tmp.barRow, children: null };
-  let simple_icon_url;
-  if (currentTier != null) {
-    simple_icon_url = currentTier.simple_icon_url;
+  obj3.style = items;
+  const obj4 = { style: tmp.barRow, children: null };
+  let tmp11 = null != giftingBadgeTierIconUrl;
+  if (tmp11) {
+    const obj5 = { icon: giftingBadgeTierIconUrl, size: 24 };
+    tmp11 = hasOwnProperty(GiftingBadgeIconDefault, obj5);
   }
-  let tmp7 = null != simple_icon_url;
-  if (tmp7) {
-    const obj3 = { icon: currentTier.simple_icon_url, size: 24 };
-    tmp7 = hasOwnProperty(GiftingBadgeIconDefault, obj3);
+  const items1 = [tmp11, ,];
+  const obj6 = { style: tmp.progressBarTrack, children: null };
+  const obj7 = { style: null };
+  const items2 = [tmp.progressBarFill];
+  const tmp2Result = GiftingBadgesUtils;
+  items2[1] = { width: "" + num + "%" };
+  obj7.style = items2;
+  obj6.children = hasOwnProperty(View, obj7);
+  items1[1] = hasOwnProperty(View, obj6);
+  let tmp14Result = null != giftingBadgeTierIconUrl1;
+  if (tmp14Result) {
+    const obj9 = { icon: giftingBadgeTierIconUrl1, size: 24 };
+    tmp14Result = hasOwnProperty(GiftingBadgeIconDefault, obj9);
   }
-  const items1 = [tmp7, ,];
-  const obj4 = { style: tmp.progressBarTrack, children: null };
-  const obj5 = { style: null };
-  const items2 = [tmp.progressBarFill, { width: "" + num + "%" }];
-  obj5.style = items2;
-  obj4.children = hasOwnProperty(View, obj5);
-  items1[1] = hasOwnProperty(View, obj4);
-  let tmp11Result = null != newTier.simple_icon_url;
-  if (tmp11Result) {
-    const obj7 = { icon: newTier.simple_icon_url, size: 24 };
-    tmp11Result = hasOwnProperty(GiftingBadgeIconDefault, obj7);
-  }
-  items1[2] = tmp11Result;
-  obj2.children = items1;
-  const items3 = [timestampProducer(View, obj2)];
-  const obj8 = { style: tmp.labels, children: null };
-  const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
+  items1[2] = tmp14Result;
+  obj4.children = items1;
+  const items3 = [timestampProducer(View, obj4)];
+  const obj10 = { style: tmp.labels, children: null };
+  const obj11 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj9.children = intl.format(_modDef2493.iIpfQe, { count: progress, threshold: tmp2 });
-  obj8.children = hasOwnProperty(Text_Text.Text, obj9);
-  items3[1] = hasOwnProperty(View, obj8);
-  obj.children = items3;
-  return timestampProducer(View, obj);
+  obj11.children = intl.format(_modDef2493.iIpfQe, { count: progress, threshold: tmp7 });
+  obj10.children = hasOwnProperty(Text_Text.Text, obj11);
+  items3[1] = hasOwnProperty(View, obj10);
+  obj3.children = items3;
+  return timestampProducer(View, obj3);
 }

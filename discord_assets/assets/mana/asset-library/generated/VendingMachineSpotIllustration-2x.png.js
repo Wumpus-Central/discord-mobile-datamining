@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/VendingMachineSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/d9a71306a5658e5c930ffe289dbdca4b324569844f9251130cb87c6ae2362c77.png";
-export const metadata = { fileBytes: 42066 };
+export default "https://cdn.discordapp.com/assets/content/ddde1dc33e4cfc5d6b113e84c7bdff341ac2c99654e451a68e04996c3fb2e821.png";
+export const metadata = { fileBytes: 43766 };

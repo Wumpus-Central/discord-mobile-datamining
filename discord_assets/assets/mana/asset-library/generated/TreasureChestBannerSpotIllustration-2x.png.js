@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/364945bb8426628bbbdc005e00afd328ac25c0bdb90b92733d5e90eec58f8d40.png";
-export const metadata = { fileBytes: 50096 };
+export default "https://cdn.discordapp.com/assets/content/61d57e66a04860d54dc9c2df279244b903ca3c7911bb98f9f0a47334bb43093a.png";
+export const metadata = { fileBytes: 48578 };

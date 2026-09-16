@@ -7,7 +7,7 @@ import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import HelpdeskUtilsDefault from "../utils/HelpdeskUtils.tsx";
 import InviteCodeUtils from "../modules/instant_invite/InviteCodeUtils.tsx";
 import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
-import _mod4824 from "module_4824" /* 4824 */;
+import _mod4823 from "module_4823" /* 4823 */;
 import UploadUtils from "../utils/UploadUtils.tsx";
 import MessageCacheStatsDefault from "../modules/local_message_caching/MessageCacheStats.tsx";
 import ExplicitMediaRedactionUtils from "../modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
@@ -180,14 +180,14 @@ function trackInvite(channelId) {
   }
   tmp8 = null != id1 && result1;
 }
-const ReferencedMessageState = fn(7700).ReferencedMessageState;
-const SlowmodeType = fn(7792).SlowmodeType;
+const ReferencedMessageState = fn(7703).ReferencedMessageState;
+const SlowmodeType = fn(7795).SlowmodeType;
 const Constants = fn(1074);
 const AbortCodes = Constants.AbortCodes;
 ({ AnalyticEvents: closure_27, Endpoints: closure_28, Permissions, ChannelTypes: closure_29, LoggingInviteTypes: closure_30, SendTypes: items, InviteStates: closure_32, MessageFlags: closure_33, MAX_MESSAGES_FOR_JUMP: closure_34, MessageTypes: closure_35, AllowedMentionTypes: closure_36, HelpdeskArticles: closure_37, MarketingURLs: closure_38, MessageReferenceTypes: closure_39, LOCAL_BOT_ID: closure_40, NON_USER_BOT_DISCRIMINATOR: closure_41, MessageStates: closure_42, ActivityActionTypes: closure_43 } = Constants);
-const LinkType = fn(7794).LinkType;
-const GuildTemplateStates = fn(7433).GuildTemplateStates;
-const MessageConstants = fn(4632);
+const LinkType = fn(7797).LinkType;
+const GuildTemplateStates = fn(7436).GuildTemplateStates;
+const MessageConstants = fn(4631);
 ({ FileUploadErrorTypes: closure_46, MessageSendLocation: closure_47 } = MessageConstants);
 const MediaPlayerManager = fn(17).NativeModules.MediaPlayerManager;
 const logger = new LoggerDefault("MessageActionCreators");
@@ -403,7 +403,7 @@ let obj17 = {
     const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
       let obj = { isDM: channel.isDM(), isGDM: channel.isGroupDM() };
-      const match = _mod4824.match(obj);
+      const match = _mod4823.match(obj);
       const withResult = match.with({ isDM: true }, () => {
         const obj = { message: null, messageName: "BOT_DM_EXPLICIT_CONTENT" };
         const intl = require("util").intl;
@@ -563,7 +563,7 @@ let obj17 = {
             closure_128_0 = value;
             if (closure_128_0.body.length > 0) {
               dependencyMap = 3;
-              const obj7 = { value: v0(4862).createMessageRecord(closure_128_0.body[0]), done: true };
+              const obj7 = { value: v0(4861).createMessageRecord(closure_128_0.body[0]), done: true };
               return obj7;
             } else {
               dependencyMap = 3;
@@ -769,8 +769,8 @@ let obj17 = {
               closure_128_3 = undefined;
               basicChannel = basicChannel.getBasicChannel(closure_0);
               closure_128_0 = basicChannel;
-              const orCreate = tmp2(5357).getOrCreate(closure_0);
-              const obj13 = tmp2(5357);
+              const orCreate = tmp2(5358).getOrCreate(closure_0);
+              const obj13 = tmp2(5358);
               const databaseResult = tmp2(1987).database();
               closure_128_1 = databaseResult;
               if (null != databaseResult) {
@@ -820,7 +820,7 @@ let obj17 = {
                 tmp30 = closure_128_2.connectionId === GatewayConnectionStore.lastTimeConnectedChanged();
               }
               closure_128_3 = tmp30;
-              const obj3 = tmp2(7595);
+              const obj3 = tmp2(7598);
               const result = obj3.recordChannelFetchedLocal(closure_129_0, closure_129_1, closure_129_2, closure_129_3, closure_129_4, closure_128_2.messages);
               const obj12 = { type: "LOCAL_MESSAGES_LOADED", guildId: closure_128_0.guild_id, channelId: closure_129_0, users: closure_128_2.users, members: closure_128_2.members, messages: closure_128_2.messages, stale: !closure_128_3 };
               tmp2(573).dispatch(obj12);
@@ -876,14 +876,14 @@ let obj17 = {
               closure_128_1 = databaseResult;
               if (null != databaseResult) {
                 if (null != basicChannel) {
-                  orCreate = tmp2(5357).getOrCreate(closure_0);
+                  orCreate = tmp2(5358).getOrCreate(closure_0);
                   if (!orCreate.hasMoreAfter) {
                     c2 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: v0(2007).tryLoadAsync(async () => closure_1(7584).load(closure_1_1, c0, closure_1)), done: false };
+                    const obj6 = { value: v0(2007).tryLoadAsync(async () => closure_1(7587).load(closure_1_1, c0, closure_1)), done: false };
                     return obj6;
                   }
-                  const obj2 = tmp2(5357);
+                  const obj2 = tmp2(5358);
                 }
               }
               dependencyMap = 3;
@@ -895,7 +895,7 @@ let obj17 = {
           } else if (arg0 !== 2) {
             closure_128_3 = value;
             if (null != closure_128_3) {
-              orCreate = tmp2(5357).getOrCreate(closure_129_0);
+              orCreate = tmp2(5358).getOrCreate(closure_129_0);
               const lastResult = orCreate.last();
               id = undefined;
               if (lastResult != null) {
@@ -914,11 +914,11 @@ let obj17 = {
               if (0 !== closure_128_5.length) {
                 const obj9 = { type: "LOCAL_MESSAGES_LOADED", guildId: closure_128_0.guild_id, channelId: closure_129_0, users: closure_128_3.users, members: closure_128_3.members, messages: closure_128_5, stale: true, isForegroundCacheLoad: null };
                 const obj8 = tmp2(573);
-                obj9.isForegroundCacheLoad = v0(5360).isIOSPushNotificationRawPayloadFixExperimentEnabled();
+                obj9.isForegroundCacheLoad = v0(5361).isIOSPushNotificationRawPayloadFixExperimentEnabled();
                 obj8.dispatch(obj9);
-                const obj10 = v0(5360);
+                const obj10 = v0(5361);
               }
-              const obj7 = tmp2(5357);
+              const obj7 = tmp2(5358);
             }
           }
           dependencyMap = 3;
@@ -1087,7 +1087,7 @@ let obj17 = {
               } else {
                 dependencyMap = 1;
                 c4 = 1;
-                const obj6 = { value: tmp2(7859)(closure_0), done: false };
+                const obj6 = { value: tmp2(7868)(closure_0), done: false };
                 return obj6;
               }
             }
@@ -1108,15 +1108,15 @@ let obj17 = {
               const nonce = closure_130_3.nonce;
               closure_0 = nonce;
               if (nonce == null) {
-                closure_0 = closure_0(7858).createNonce();
-                const obj = closure_0(7858);
+                closure_0 = closure_0(7867).createNonce();
+                const obj = closure_0(7867);
               }
               closure_129_1 = closure_0;
               const obj9 = {};
               const merged = Object.assign(closure_130_3);
               obj9.nonce = closure_129_1;
               closure_130_3 = obj9;
-              closure_129_2 = tmp2(7860).backgroundify(function _trySend() {
+              closure_129_2 = tmp2(7869).backgroundify(function _trySend() {
                 return closure_2_55._sendMessage(closure_1_0, closure_1_1, dependencyMap);
               }, undefined);
               if (null == closure_130_3.scheduledTimestamp) {
@@ -1126,7 +1126,7 @@ let obj17 = {
                 closure_129_2();
               } else {
                 if (closure_130_2) {
-                  if (closure_130_0 !== closure_0(7328).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+                  if (closure_130_0 !== closure_0(7331).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
                     const _HermesInternal = HermesInternal;
                     logger.info("Waiting for channel " + closure_130_0 + " to be ready before sending.");
                     new Promise((arg0, arg1) => {
@@ -1142,7 +1142,7 @@ let obj17 = {
                 closure_129_2();
               }
               c4 = 3;
-              const obj3 = tmp2(7860);
+              const obj3 = tmp2(7869);
             }
           }
         } catch (tmp61) {
@@ -1698,19 +1698,19 @@ let obj17 = {
               logger.info("Queueing message to be sent LogId:" + rounded);
               emojiUsed(inviteAnalyticsMetadata[72]).enqueue(channel, (ok) => {
                 if (ok.ok) {
-                  id(7865).donateSentMessage(content, channelId);
+                  id(7874).donateSentMessage(content, channelId);
                   let obj4 = { sendAnalytics: null, poll: null };
                   let obj5 = { duration: tmp, queueSize: length };
                   obj4.sendAnalytics = obj5;
                   obj4.poll = poll;
                   closure_4_55.receiveMessage(channelId, ok.body, true, obj4);
-                  const obj15 = id(7865);
+                  const obj15 = id(7874);
                   request = request.getRequest(id(11).cast(channelId));
                   if (null != request) {
                     ({ guildId, userId, applicationStatus } = request);
                     let obj7 = { guildId, channelId, messageId: ok.body.id, joinRequestStatus: applicationStatus, joinRequestUserId: userId };
-                    let result = closure_0(5628).trackMemberApplicationInterviewMessage(obj7);
-                    let obj19 = closure_0(5628);
+                    let result = closure_0(5629).trackMemberApplicationInterviewMessage(obj7);
+                    let obj19 = closure_0(5629);
                   }
                   let result1 = MessageRoundtripTrackerStore.recordMessageSendApiResponse(stickerById);
                   if (closure_2_13 === constants3.REPLY) {
@@ -1757,11 +1757,11 @@ let obj17 = {
                       if (channel1 != null) {
                         guild_id2 = channel1.guild_id;
                       }
-                      let merged = Object.assign(closure_0(4819).collectGuildAnalyticsMetadata(guild_id2));
-                      const obj21 = closure_0(4819);
-                      let merged1 = Object.assign(closure_0(4819).collectChannelAnalyticsMetadata(channel1));
+                      let merged = Object.assign(closure_0(4818).collectGuildAnalyticsMetadata(guild_id2));
+                      const obj21 = closure_0(4818);
+                      let merged1 = Object.assign(closure_0(4818).collectChannelAnalyticsMetadata(channel1));
                       obj39.track(constants2.MESSAGE_SHORTCUT_ACTION_SENT, obj11);
-                      const obj22 = closure_0(4819);
+                      const obj22 = closure_0(4818);
                     }
                   }
                   const obj18 = id(11);
@@ -1792,7 +1792,7 @@ let obj17 = {
                   }
                   const id2 = id.getId();
                   const obj31 = id(573);
-                  const item = id(4622)(content).forEach((url) => {
+                  const item = id(4621)(content).forEach((url) => {
                     ({ type, code } = url);
                     if (obj.isApplicationCodedLink(type)) {
                       const applicationCodedLinkData = channelId(length[29]).getApplicationCodedLinkData(type, code, url.url);
@@ -1897,9 +1897,9 @@ let obj17 = {
                   id = ok.body.id;
                   attachments = str6;
                   channel3 = c2.isGiftLinkSentOnBehalfOfUser;
-                  const arr2 = id(4622)(content);
-                  const obj35 = closure_0(4878);
-                  const item1 = closure_0(4878).findGiftCodes(content).forEach((gift_code) => {
+                  const arr2 = id(4621)(content);
+                  const obj35 = closure_0(4877);
+                  const item1 = closure_0(4877).findGiftCodes(content).forEach((gift_code) => {
                     channel = channel.getChannel(closure_0);
                     if (null != channel) {
                       const obj = { location: attachments, gift_code, guild_id: channel.getGuildId(), channel_id: null, channel_type: null, message_id: null, automatic_send: null };
@@ -1919,11 +1919,11 @@ let obj17 = {
                       const obj28 = { location: str4, message_id: ok.body.id, gif_provider: null, load_id: null, source_object: null, gif_url: null, gif_id: null };
                       ({ gif_provider: obj42.gif_provider, load_id: obj42.load_id, source_object: obj42.source_object, gif_url: obj42.gif_url, gif_id: obj42.gif_id } = c2.gifMetadata);
                       const obj41 = id(1241);
-                      const merged2 = Object.assign(closure_0(4819).collectGuildAnalyticsMetadata(channel2.getGuildId()));
-                      const obj43 = closure_0(4819);
-                      const merged3 = Object.assign(closure_0(4819).collectChannelAnalyticsMetadata(channel2));
+                      const merged2 = Object.assign(closure_0(4818).collectGuildAnalyticsMetadata(channel2.getGuildId()));
+                      const obj43 = closure_0(4818);
+                      const merged3 = Object.assign(closure_0(4818).collectChannelAnalyticsMetadata(channel2));
                       obj41.track(constants2.MESSAGE_SENT_WITH_GIF, obj28);
-                      const obj44 = closure_0(4819);
+                      const obj44 = closure_0(4818);
                     }
                   }
                   attachments = ok.body.attachments;
@@ -1972,7 +1972,7 @@ let obj17 = {
                     const obj37 = id(573);
                   }
                   closure_0(ok);
-                  const findGiftCodesResult = closure_0(4878).findGiftCodes(content);
+                  const findGiftCodesResult = closure_0(4877).findGiftCodes(content);
                 } else {
                   let obj = { hasErr: null, status: null, code: null, error: null };
                   ({ hasErr: obj.hasErr, status: obj.status, body } = ok);
@@ -2009,7 +2009,7 @@ let obj17 = {
                               let obj6 = id(573);
                             }
                           } else {
-                            const AUTOMOD_ERROR_CODES = closure_0(8046).AUTOMOD_ERROR_CODES;
+                            const AUTOMOD_ERROR_CODES = closure_0(8055).AUTOMOD_ERROR_CODES;
                             if (AUTOMOD_ERROR_CODES.has(ok.body.code)) {
                               const obj33 = { type: "MESSAGE_SEND_FAILED_AUTOMOD", messageData, errorResponseBody: null };
                               const obj34 = { code: ok.body.code, message: ok.body.message };
@@ -2060,7 +2060,7 @@ let obj17 = {
                       if (body2 != null) {
                         attachments1 = body2.attachments;
                       }
-                      let result2 = closure_4_55.sendExplicitMediaClydeError(channelId, attachments1, closure_0(7705).TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                      let result2 = closure_4_55.sendExplicitMediaClydeError(channelId, attachments1, closure_0(7708).TrackMediaRedactionContext.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
                     }
                     const obj38 = { type: "MESSAGE_SEND_FAILED", messageId, channelId, shouldNotify: !c2.doNotNotifyOnError, reason: EXPLICIT_CONTENT };
                     id(573).dispatch(obj38);
@@ -2075,14 +2075,14 @@ let obj17 = {
                       message1 = ok.err.message;
                     }
                     obj40.errorMessage = message1;
-                    let result3 = closure_0(7948).logMessageSendFailure(obj40);
-                    const obj12 = closure_0(7948);
-                    let result4 = id(7939).cancelPendingSendRequests(channelId);
+                    let result3 = closure_0(7957).logMessageSendFailure(obj40);
+                    const obj12 = closure_0(7957);
+                    let result4 = id(7948).cancelPendingSendRequests(channelId);
                     const item3 = result4.forEach((messageId) => {
                       logger.log("Cancelling pending message", messageId.nonce);
                       id(channel3[46]).dispatch({ type: "MESSAGE_SEND_FAILED", messageId: messageId.nonce, channelId: messageId.channelId });
                     });
-                    const obj14 = id(7939);
+                    const obj14 = id(7948);
                   }
                   id(ok);
                 }
@@ -2177,7 +2177,7 @@ let obj17 = {
               })(tmp2, tmp3);
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp2(7870).unarchiveThreadIfNecessary(tmp3), done: false };
+              const obj5 = { value: tmp2(7879).unarchiveThreadIfNecessary(tmp3), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2215,23 +2215,23 @@ let obj17 = {
             })(closure_129_0, closure_129_1);
             let obj6 = { channelId: closure_129_0, messageId: closure_129_1, content: closure_129_2, isCrossposted: closure_128_1, allowed_mentions: closure_128_0, components: closure_129_3 };
             closure_128_2 = obj6;
-            const obj8 = { type: tmp3(7939).MessageDataType.EDIT, message: closure_128_2 };
-            tmp2(7939).enqueue(obj8, (hasErr) => {
+            const obj8 = { type: tmp3(7948).MessageDataType.EDIT, message: closure_128_2 };
+            tmp2(7948).enqueue(obj8, (hasErr) => {
               hasErr = hasErr.hasErr;
               let hasItem = !hasErr;
               if (!hasErr) {
-                const AUTOMOD_ERROR_CODES = channelId(8046).AUTOMOD_ERROR_CODES;
+                const AUTOMOD_ERROR_CODES = channelId(8055).AUTOMOD_ERROR_CODES;
                 hasItem = AUTOMOD_ERROR_CODES.has(hasErr.body.code);
               }
               if (hasItem) {
-                const obj = { type: channelId(7939).MessageDataType.EDIT, message };
+                const obj = { type: channelId(7948).MessageDataType.EDIT, message };
                 const obj3 = { type: "MESSAGE_EDIT_FAILED_AUTOMOD", messageData: obj, errorResponseBody: null };
                 const obj4 = { code: hasErr.body.code, message: hasErr.body.message };
                 obj3.errorResponseBody = obj4;
                 messageId(573).dispatch(obj3);
                 const obj2 = messageId(573);
               }
-              const AccessibilityAnnouncer = channelId(4491).AccessibilityAnnouncer;
+              const AccessibilityAnnouncer = channelId(4489).AccessibilityAnnouncer;
               const announce = AccessibilityAnnouncer.announce;
               const intl = channelId(1115).intl;
               const string = intl.string;
@@ -2292,7 +2292,7 @@ let obj17 = {
               let message2;
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp5(7870).unarchiveThreadIfNecessary(tmp2), done: false };
+              const obj5 = { value: tmp5(7879).unarchiveThreadIfNecessary(tmp2), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2356,7 +2356,7 @@ let obj17 = {
               let message2;
               c2 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp5(7870).unarchiveThreadIfNecessary(tmp2), done: false };
+              const obj5 = { value: tmp5(7879).unarchiveThreadIfNecessary(tmp2), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2419,7 +2419,7 @@ let obj17 = {
             } else {
               v1 = 1;
               c2 = 1;
-              const obj5 = { value: v1(7870).unarchiveThreadIfNecessary(tmp4), done: false };
+              const obj5 = { value: v1(7879).unarchiveThreadIfNecessary(tmp4), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -2485,7 +2485,7 @@ let obj17 = {
                   const obj = id(573);
                   const obj2 = { type: "MESSAGE_DELETE", id, channelId };
                   id(573).dispatch({ type: "MESSAGE_DELETE", id, channelId }).then(() => {
-                    const AccessibilityAnnouncer = channelId(4491).AccessibilityAnnouncer;
+                    const AccessibilityAnnouncer = channelId(4489).AccessibilityAnnouncer;
                     const intl = channelId(1115).intl;
                     AccessibilityAnnouncer.announce(intl.string(channelId(1115).t.RYMs7s));
                   });
@@ -2494,7 +2494,7 @@ let obj17 = {
               } else {
                 c2 = 1;
                 dependencyMap = 1;
-                const obj5 = { value: id(7870).unarchiveThreadIfNecessary(channelId), done: false };
+                const obj5 = { value: id(7879).unarchiveThreadIfNecessary(channelId), done: false };
                 return obj5;
               }
             }
@@ -2509,7 +2509,7 @@ let obj17 = {
               const obj = id(573);
               const obj2 = { type: "MESSAGE_DELETE", id, channelId };
               id(573).dispatch({ type: "MESSAGE_DELETE", id, channelId }).then(() => {
-                const AccessibilityAnnouncer = channelId(4491).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = channelId(4489).AccessibilityAnnouncer;
                 const intl = channelId(1115).intl;
                 AccessibilityAnnouncer.announce(intl.string(channelId(1115).t.RYMs7s));
               });
@@ -2594,9 +2594,9 @@ let obj17 = {
             obj8.body = closure_128_0;
             const intl4 = channel(1115).intl;
             obj8.confirmText = intl4.string(channel(1115).t.BddRzS);
-            tmp3(4983).show(obj8);
+            tmp3(4982).show(obj8);
             c5 = 3;
-            const obj4 = tmp3(4983);
+            const obj4 = tmp3(4982);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

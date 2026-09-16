@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/GemLevel2Illocon.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6217 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GemLevel2Illocon-2x.png.js";
+import _modDef6218 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GemLevel2Illocon-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -21,7 +21,7 @@ export const GemLevel2Illocon = function GemLevel2Illocon(size) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6217 };
+  const obj2 = { uri: _modDef6218 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

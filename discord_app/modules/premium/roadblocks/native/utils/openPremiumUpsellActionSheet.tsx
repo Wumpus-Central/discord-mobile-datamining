@@ -7,7 +7,7 @@ const PremiumUpsellActionSheetKey = "PremiumUpsellActionSheetKey";
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx");
 
 export default function openPremiumUpsellActionSheet(featureName, subfeatureName, analyticsLocations, onDismiss) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7956, dependencyMap.paths), PremiumUpsellActionSheetKey, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7965, dependencyMap.paths), PremiumUpsellActionSheetKey, {
     featureName,
     subfeatureName,
     analyticsLocations,

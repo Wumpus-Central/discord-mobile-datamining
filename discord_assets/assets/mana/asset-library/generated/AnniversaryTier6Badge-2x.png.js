@@ -5,6 +5,6 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/AnniversaryTier6Badge-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/b17c1c0309a6ed33baa34b71879f865c23585ba6f7e1d96b1cb197462e75b230.png";
+export default "https://cdn.discordapp.com/assets/content/021a6be001069b0c0f0a4ea818badd788d41c05f0fa492db1487c6aeff3a8d86.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/AnniversaryTier6Badge-2x.png";
-export const metadata = { fileBytes: 2136 };
+export const metadata = { fileBytes: 2014 };

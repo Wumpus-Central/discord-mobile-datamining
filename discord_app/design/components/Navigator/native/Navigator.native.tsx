@@ -4,8 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.tsx";
 import Link from "../../../../../_runtime/01485_Link.js";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
+import _mod5717 from "../../../../../_runtime/metro/05717__.js";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
-import StackNavigator from "../../../../../_runtime/07109_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07112_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -253,7 +254,7 @@ function WrappedNavigationStack(arg0) {
     }),
     1,
   )[0];
-  const tmp4 = navigationContainerRef(4574)();
+  const tmp4 = navigationContainerRef(4572)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp4);
   const obj3 = {
     ref: navigationContainerRef,
@@ -275,6 +276,7 @@ function WrappedNavigationStack(arg0) {
     initialRouteState = tmp7;
   }
   const obj4 = { children: null };
+  const obj5 = { value: "Array", children: 0 };
   obj3.initialState = initialRouteState;
   obj3.onReady = function onReady() {
     const routingInstrumentation = SentryInitUtils.routingInstrumentation;
@@ -283,7 +285,7 @@ function WrappedNavigationStack(arg0) {
   obj3.onStateChange = onStateChange;
   const merged1 = Object.assign(merged);
   obj3.children = <NavigationStack initialRouteName={initialRouteName} />;
-  obj4.children = jsx(Link.NavigationContainer, {
+  obj5.children = jsx(Link.NavigationContainer, {
     ref: navigationContainerRef,
     theme: null,
     initialState: null,
@@ -291,12 +293,13 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
+  obj4.children = jsx(_mod5717.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

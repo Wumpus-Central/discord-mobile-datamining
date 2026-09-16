@@ -5,12 +5,12 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4529);
+const GuildPowerupsConstants = fn(4527);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
 let items = [
   ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET),
   ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET),
-  fn(4532).VANITY_URL_POWERUP_SKU_ID,
+  fn(4530).VANITY_URL_POWERUP_SKU_ID,
 ];
 const set = new Set(items);
 const size = fn(2);
@@ -30,7 +30,7 @@ export default function useMarketablePowerupPerks(arg0) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12711)(arg0);
+  let tmp2 = stateFromStores(12719)(arg0);
   dependencyMap = tmp2;
   let items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => {

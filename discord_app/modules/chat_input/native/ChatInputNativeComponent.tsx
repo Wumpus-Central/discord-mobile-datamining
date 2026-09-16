@@ -11,7 +11,7 @@ import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgro
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { style: { flex: 1 }, textColor: { color: nativeDefault.colors.TEXT_DEFAULT }, placeholderColor: null };
 let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj.placeholderColor = { color: nativeDefault.colors.TEXT_MUTED };
@@ -69,7 +69,7 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
     num2 = 1;
   }
   tmp4Result3 = PlatformUtils;
-  const tmp13 = tmp9(12165)(onMaxHeightChanged);
+  const tmp13 = tmp9(12173)(onMaxHeightChanged);
   return jsx(ChatInputNativeComponent.default, {
     accessible,
     accessibilityLabel: tmp11,
@@ -78,7 +78,7 @@ const forwardRefResult = noop.forwardRef((markAsSpoilerTitle, ref) => {
     keyboardAppearance: num2,
     keyboardType: "default",
     markAsSpoilerTitle,
-    maxHeight: tmp9(12165)(onMaxHeightChanged),
+    maxHeight: tmp9(12173)(onMaxHeightChanged),
     onBeginFocus,
     onEndBlur,
     onChangeContentSize,

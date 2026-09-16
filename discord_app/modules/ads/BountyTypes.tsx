@@ -31,6 +31,7 @@ export const bountyFromServer = function bountyFromServer(creative_content) {
     videoHls: null,
     cta: null,
     rewardTimerSeconds: null,
+    videoDurationSeconds: null,
   };
   obj.videoPreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
   obj.imagePreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
@@ -55,5 +56,6 @@ export const bountyFromServer = function bountyFromServer(creative_content) {
     num = 15;
   }
   obj.rewardTimerSeconds = num;
+  obj.videoDurationSeconds = creative_content.video_duration_seconds;
   return obj;
 };

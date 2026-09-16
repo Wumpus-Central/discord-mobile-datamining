@@ -120,7 +120,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     const obj2 = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1115).intl;
     obj2.label = intl2.string(tmp(1115).t.oJ1Muw);
-    obj2.IconComponent = tmp(10762).IdIcon;
+    obj2.IconComponent = tmp(10770).IdIcon;
     obj2.onPress = function onPress() {
       ToastUtils.presentIdCopied();
       ClipboardUtils.copy(closure_1);
@@ -136,8 +136,8 @@ function handleLongPressCommandMention(arg0, arg1) {
 }
 const AppLauncherNativeConstants = fn(1483);
 ({ AppLauncherRouteName: hasOwnProperty, useAppLauncherNavigation: metroRequire } = AppLauncherNativeConstants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5083).SUB_COMMAND_KEY_SEPARATOR;
-const COMMAND_SENTINEL = fn(5084).COMMAND_SENTINEL;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5084).SUB_COMMAND_KEY_SEPARATOR;
+const COMMAND_SENTINEL = fn(5085).COMMAND_SENTINEL;
 const jsxs = fn(21).jsxs;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup/native/MarkupReactCommandRule.tsx");
@@ -145,7 +145,7 @@ let result = size.fileFinishedImporting("modules/markup/native/MarkupReactComman
 export default function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(11353).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(11361).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,
@@ -206,9 +206,9 @@ export default function MarkupReactCommandRule(node) {
     },
     children: null,
   };
-  const items = ["/", node(8204).smartOutput(node, output, state)];
+  const items = ["/", node(8213).smartOutput(node, output, state)];
   obj.children = items;
-  return jsxs(node(4635).Text, {
+  return jsxs(node(4634).Text, {
     style,
     variant: "text-md/bold",
     onPress() {

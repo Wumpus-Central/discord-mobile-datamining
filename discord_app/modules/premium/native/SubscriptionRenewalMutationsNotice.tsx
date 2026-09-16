@@ -9,10 +9,10 @@ const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
 const View = fn(17).View;
-const isNoneSubscription = fn(4298).isNoneSubscription;
+const isNoneSubscription = fn(4296).isNoneSubscription;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: {
     padding: 10,
@@ -22,7 +22,7 @@ let obj2 = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    backgroundColor: fn(5526).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+    backgroundColor: fn(5527).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
   },
   icon: null,
   text: null,
@@ -35,11 +35,11 @@ let obj3 = {
   display: "flex",
   flexDirection: "row",
   justifyContent: "center",
-  backgroundColor: fn(5526).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  backgroundColor: fn(5527).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
 };
-obj2.icon = { alignSelf: "center", marginLeft: 15, color: fn(5526).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-let obj4 = { alignSelf: "center", marginLeft: 15, color: fn(5526).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-obj2.text = { paddingLeft: 10, marginRight: 15, color: fn(5526).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+obj2.icon = { alignSelf: "center", marginLeft: 15, color: fn(5527).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+let obj4 = { alignSelf: "center", marginLeft: 15, color: fn(5527).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+obj2.text = { paddingLeft: 10, marginRight: 15, color: fn(5527).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/SubscriptionRenewalMutationsNotice.tsx");

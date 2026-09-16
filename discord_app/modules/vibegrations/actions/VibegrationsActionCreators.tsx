@@ -550,7 +550,7 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-const isLaunched = fn(9643).isLaunched;
+const isLaunched = fn(9654).isLaunched;
 let c9 = null;
 let c10 = null;
 const size = fn(2);
@@ -600,8 +600,8 @@ export const createProject = function createProject() {
 export const renameProject = function renameProject(projectId, name) {
   return patchProject(projectId, { name });
 };
-export const updateProjectSettings = function updateProjectSettings(first2, arg1) {
-  return patchProject(first2, arg1);
+export const updateProjectSettings = function updateProjectSettings(projectId, arg1) {
+  return patchProject(projectId, arg1);
 };
 export const setProjectIcon = function setProjectIcon() {
   const self = this;
@@ -613,8 +613,8 @@ export const setProjectIcon = function setProjectIcon() {
   }
   return applyArgumentsResult;
 };
-export const setGuildHints = function setGuildHints(first2, arg1) {
-  return patchProject(first2, arg1);
+export const setGuildHints = function setGuildHints(projectId, arg1) {
+  return patchProject(projectId, arg1);
 };
 export const deleteProject = function deleteProject() {
   const self = this;

@@ -6,27 +6,16 @@ import Text_Text from "../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
 import PremiumBundledPlansUtils from "../../modules/premium/native/PremiumBundledPlansUtils.tsx";
-import _modDef8176 from "../../../_runtime/metro/08176__.js";
-import _modDef9517 from "../../../_runtime/metro/09517__.js";
+import _modDef8185 from "../../../_runtime/metro/08185__.js";
+import _modDef9528 from "../../../_runtime/metro/09528__.js";
 import PremiumAnalyticsUtils from "../../modules/premium/native/PremiumAnalyticsUtils.tsx";
-import _modDef10843 from "../../../_runtime/metro/10843__.js";
-import _modDef10844 from "../../../_runtime/metro/10844__.js";
-import _modDef10845 from "../../../_runtime/metro/10845__.js";
-import _modDef10846 from "../../../_runtime/metro/10846__.js";
-import _modDef10847 from "../../../_runtime/metro/10847__.js";
-import _modDef10849 from "../../../_runtime/metro/10849__.js";
+import _modDef10851 from "../../../_runtime/metro/10851__.js";
 import _modDef10852 from "../../../_runtime/metro/10852__.js";
-import _modDef13446 from "../../../_runtime/metro/13446__.js";
-import _modDef13447 from "../../../_runtime/metro/13447__.js";
-import _modDef13448 from "../../../_runtime/metro/13448__.js";
-import _modDef13449 from "../../../_runtime/metro/13449__.js";
-import _modDef13450 from "../../../_runtime/metro/13450__.js";
-import _modDef13451 from "../../../_runtime/metro/13451__.js";
-import _modDef13452 from "../../../_runtime/metro/13452__.js";
-import _modDef13453 from "../../../_runtime/metro/13453__.js";
-import _modDef13454 from "../../../_runtime/metro/13454__.js";
-import _modDef13455 from "../../../_runtime/metro/13455__.js";
-import _modDef13456 from "../../../_runtime/metro/13456__.js";
+import _modDef10853 from "../../../_runtime/metro/10853__.js";
+import _modDef10854 from "../../../_runtime/metro/10854__.js";
+import _modDef10855 from "../../../_runtime/metro/10855__.js";
+import _modDef10857 from "../../../_runtime/metro/10857__.js";
+import _modDef10860 from "../../../_runtime/metro/10860__.js";
 import _modDef13457 from "../../../_runtime/metro/13457__.js";
 import _modDef13458 from "../../../_runtime/metro/13458__.js";
 import _modDef13459 from "../../../_runtime/metro/13459__.js";
@@ -39,6 +28,17 @@ import _modDef13465 from "../../../_runtime/metro/13465__.js";
 import _modDef13466 from "../../../_runtime/metro/13466__.js";
 import _modDef13467 from "../../../_runtime/metro/13467__.js";
 import _modDef13468 from "../../../_runtime/metro/13468__.js";
+import _modDef13469 from "../../../_runtime/metro/13469__.js";
+import _modDef13470 from "../../../_runtime/metro/13470__.js";
+import _modDef13471 from "../../../_runtime/metro/13471__.js";
+import _modDef13472 from "../../../_runtime/metro/13472__.js";
+import _modDef13473 from "../../../_runtime/metro/13473__.js";
+import _modDef13474 from "../../../_runtime/metro/13474__.js";
+import _modDef13475 from "../../../_runtime/metro/13475__.js";
+import _modDef13476 from "../../../_runtime/metro/13476__.js";
+import _modDef13477 from "../../../_runtime/metro/13477__.js";
+import _modDef13478 from "../../../_runtime/metro/13478__.js";
+import _modDef13479 from "../../../_runtime/metro/13479__.js";
 import PremiumPlanWhatYouLoseActionSheet from "../../modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumSubscriptionInvoice from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 import SubscriptionRenewalMutationsNoticeDefault from "../../modules/premium/native/SubscriptionRenewalMutationsNotice.tsx";
@@ -51,7 +51,7 @@ import IAPStore from "../../stores/native/IAPStore.android.tsx";
 
 const require = globalThis.__r;
 
-const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13469);
+const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13480);
 require = fn;
 function handleCancelSubscription() {
   const self = this;
@@ -657,7 +657,7 @@ let size = { height: 35, width: 49 };
 const size1 = { height: 36, width: 51 };
 const size2 = { width: 51, height: 36 };
 let obj = { fontSize: 14, marginTop: 10, color: nativeDefault.unsafe_rawColors.WHITE };
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj3 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   header: { padding: 16 },
@@ -679,62 +679,62 @@ let closure_20 = createStyles.createStyles(obj3);
 let obj5 = { ACTIVE: "active", RESUB: "resub", ERROR: "error" };
 let obj7 = {};
 let obj8 = {};
-obj8[obj5.ACTIVE] = _modDef10846;
-obj8[obj5.ERROR] = _modDef13446;
-obj8[obj5.RESUB] = _modDef13447;
-obj7[fn(4297).Branding.BUNDLE] = obj8;
+obj8[obj5.ACTIVE] = _modDef10854;
+obj8[obj5.ERROR] = _modDef13457;
+obj8[obj5.RESUB] = _modDef13458;
+obj7[fn(4295).Branding.BUNDLE] = obj8;
 let obj9 = {};
-obj9[obj5.ACTIVE] = _modDef10843;
-obj9[obj5.ERROR] = _modDef13446;
-obj9[obj5.RESUB] = _modDef13447;
-obj7[fn(4297).Branding.TIER_0] = obj9;
+obj9[obj5.ACTIVE] = _modDef10851;
+obj9[obj5.ERROR] = _modDef13457;
+obj9[obj5.RESUB] = _modDef13458;
+obj7[fn(4295).Branding.TIER_0] = obj9;
 let obj10 = {};
-obj10[obj5.ACTIVE] = _modDef10844;
-obj10[obj5.ERROR] = _modDef13446;
-obj10[obj5.RESUB] = _modDef13447;
-obj7[fn(4297).Branding.TIER_1] = obj10;
+obj10[obj5.ACTIVE] = _modDef10852;
+obj10[obj5.ERROR] = _modDef13457;
+obj10[obj5.RESUB] = _modDef13458;
+obj7[fn(4295).Branding.TIER_1] = obj10;
 let obj11 = {};
-obj11[obj5.ACTIVE] = _modDef10845;
-obj11[obj5.ERROR] = _modDef13446;
-obj11[obj5.RESUB] = _modDef13447;
-obj7[fn(4297).Branding.TIER_2] = obj11;
+obj11[obj5.ACTIVE] = _modDef10853;
+obj11[obj5.ERROR] = _modDef13457;
+obj11[obj5.RESUB] = _modDef13458;
+obj7[fn(4295).Branding.TIER_2] = obj11;
 let obj12 = {};
-obj12[obj5.ACTIVE] = _modDef10847;
-obj12[obj5.ERROR] = _modDef13448;
-obj12[obj5.RESUB] = _modDef13449;
-obj7[fn(4297).Branding.PREMIUM_GUILD] = obj12;
+obj12[obj5.ACTIVE] = _modDef10855;
+obj12[obj5.ERROR] = _modDef13459;
+obj12[obj5.RESUB] = _modDef13460;
+obj7[fn(4295).Branding.PREMIUM_GUILD] = obj12;
 let obj13 = {};
 let obj14 = {};
-obj14[obj5.ACTIVE] = _modDef13450;
-obj14[obj5.ERROR] = _modDef13450;
-obj14[obj5.RESUB] = _modDef13450;
-obj13[fn(4297).Branding.BUNDLE] = obj14;
+obj14[obj5.ACTIVE] = _modDef13461;
+obj14[obj5.ERROR] = _modDef13461;
+obj14[obj5.RESUB] = _modDef13461;
+obj13[fn(4295).Branding.BUNDLE] = obj14;
 let obj15 = {};
-obj15[obj5.ACTIVE] = _modDef9517;
-obj15[obj5.ERROR] = _modDef13451;
-obj15[obj5.RESUB] = _modDef13452;
-obj13[fn(4297).Branding.TIER_0] = obj15;
+obj15[obj5.ACTIVE] = _modDef9528;
+obj15[obj5.ERROR] = _modDef13462;
+obj15[obj5.RESUB] = _modDef13463;
+obj13[fn(4295).Branding.TIER_0] = obj15;
 let obj16 = {};
-obj16[obj5.ACTIVE] = _modDef13453;
-obj16[obj5.ERROR] = _modDef13454;
-obj16[obj5.RESUB] = _modDef13455;
-obj13[fn(4297).Branding.TIER_1] = obj16;
+obj16[obj5.ACTIVE] = _modDef13464;
+obj16[obj5.ERROR] = _modDef13465;
+obj16[obj5.RESUB] = _modDef13466;
+obj13[fn(4295).Branding.TIER_1] = obj16;
 let obj17 = {};
-obj17[obj5.ACTIVE] = _modDef10849;
-obj17[obj5.ERROR] = _modDef13456;
-obj17[obj5.RESUB] = _modDef13457;
-obj13[fn(4297).Branding.TIER_2] = obj17;
+obj17[obj5.ACTIVE] = _modDef10857;
+obj17[obj5.ERROR] = _modDef13467;
+obj17[obj5.RESUB] = _modDef13468;
+obj13[fn(4295).Branding.TIER_2] = obj17;
 let obj18 = {};
-obj18[obj5.ACTIVE] = _modDef13458;
-obj18[obj5.ERROR] = _modDef13459;
-obj18[obj5.RESUB] = _modDef13460;
-obj13[fn(4297).Branding.PREMIUM_GUILD] = obj18;
+obj18[obj5.ACTIVE] = _modDef13469;
+obj18[obj5.ERROR] = _modDef13470;
+obj18[obj5.RESUB] = _modDef13471;
+obj13[fn(4295).Branding.PREMIUM_GUILD] = obj18;
 const __initData4 = {
-  [fn(4297).Branding.BUNDLE]: { [obj5.ACTIVE]: size, [obj5.ERROR]: size, [obj5.RESUB]: size },
-  [fn(4297).Branding.TIER_0]: { [obj5.ACTIVE]: { height: 35, width: 29 }, [obj5.ERROR]: size1, [obj5.RESUB]: size1 },
-  [fn(4297).Branding.TIER_1]: { [obj5.ACTIVE]: { height: 35, width: 49 }, [obj5.ERROR]: size1, [obj5.RESUB]: size1 },
-  [fn(4297).Branding.TIER_2]: { [obj5.ACTIVE]: { height: 37, width: 49 }, [obj5.ERROR]: size1, [obj5.RESUB]: size1 },
-  [fn(4297).Branding.PREMIUM_GUILD]: {
+  [fn(4295).Branding.BUNDLE]: { [obj5.ACTIVE]: size, [obj5.ERROR]: size, [obj5.RESUB]: size },
+  [fn(4295).Branding.TIER_0]: { [obj5.ACTIVE]: { height: 35, width: 29 }, [obj5.ERROR]: size1, [obj5.RESUB]: size1 },
+  [fn(4295).Branding.TIER_1]: { [obj5.ACTIVE]: { height: 35, width: 49 }, [obj5.ERROR]: size1, [obj5.RESUB]: size1 },
+  [fn(4295).Branding.TIER_2]: { [obj5.ACTIVE]: { height: 37, width: 49 }, [obj5.ERROR]: size1, [obj5.RESUB]: size1 },
+  [fn(4295).Branding.PREMIUM_GUILD]: {
     [obj5.ACTIVE]: { width: 51, height: 36 },
     [obj5.ERROR]: size2,
     [obj5.RESUB]: size2,
@@ -742,36 +742,36 @@ const __initData4 = {
 };
 let obj19 = {};
 let obj20 = {};
-obj20[obj5.ACTIVE] = _modDef13461;
-obj20[obj5.ERROR] = _modDef13461;
-obj20[obj5.RESUB] = _modDef13462;
-obj19[fn(4297).Branding.BUNDLE] = obj20;
+obj20[obj5.ACTIVE] = _modDef13472;
+obj20[obj5.ERROR] = _modDef13472;
+obj20[obj5.RESUB] = _modDef13473;
+obj19[fn(4295).Branding.BUNDLE] = obj20;
 let obj21 = {};
-obj21[obj5.ACTIVE] = _modDef10852;
-obj21[obj5.ERROR] = _modDef10852;
-obj21[obj5.RESUB] = _modDef13463;
-obj19[fn(4297).Branding.TIER_0] = obj21;
+obj21[obj5.ACTIVE] = _modDef10860;
+obj21[obj5.ERROR] = _modDef10860;
+obj21[obj5.RESUB] = _modDef13474;
+obj19[fn(4295).Branding.TIER_0] = obj21;
 const obj22 = {};
-obj22[obj5.ACTIVE] = _modDef13464;
-obj22[obj5.ERROR] = _modDef13464;
-obj22[obj5.RESUB] = _modDef13465;
-obj19[fn(4297).Branding.TIER_1] = obj22;
+obj22[obj5.ACTIVE] = _modDef13475;
+obj22[obj5.ERROR] = _modDef13475;
+obj22[obj5.RESUB] = _modDef13476;
+obj19[fn(4295).Branding.TIER_1] = obj22;
 const obj23 = {};
-obj23[obj5.ACTIVE] = _modDef8176;
-obj23[obj5.ERROR] = _modDef8176;
-obj23[obj5.RESUB] = _modDef13466;
-obj19[fn(4297).Branding.TIER_2] = obj23;
+obj23[obj5.ACTIVE] = _modDef8185;
+obj23[obj5.ERROR] = _modDef8185;
+obj23[obj5.RESUB] = _modDef13477;
+obj19[fn(4295).Branding.TIER_2] = obj23;
 const obj24 = {};
-obj24[obj5.ACTIVE] = _modDef13467;
-obj24[obj5.ERROR] = _modDef13467;
-obj24[obj5.RESUB] = _modDef13468;
-obj19[fn(4297).Branding.PREMIUM_GUILD] = obj24;
+obj24[obj5.ACTIVE] = _modDef13478;
+obj24[obj5.ERROR] = _modDef13478;
+obj24[obj5.RESUB] = _modDef13479;
+obj19[fn(4295).Branding.PREMIUM_GUILD] = obj24;
 let dependencyMap = {
-  [fn(4297).Branding.BUNDLE]: { height: 33, width: 205 },
-  [fn(4297).Branding.TIER_0]: { height: 32, width: 59 },
-  [fn(4297).Branding.TIER_1]: { height: 16, width: 156 },
-  [fn(4297).Branding.TIER_2]: { height: 32, width: 78 },
-  [fn(4297).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
+  [fn(4295).Branding.BUNDLE]: { height: 33, width: 205 },
+  [fn(4295).Branding.TIER_0]: { height: 32, width: 59 },
+  [fn(4295).Branding.TIER_1]: { height: 16, width: 156 },
+  [fn(4295).Branding.TIER_2]: { height: 32, width: 78 },
+  [fn(4295).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
 };
 const __initData5 = { [obj5.ACTIVE]: obj, [obj5.ERROR]: obj, [obj5.RESUB]: obj2 };
 size = fn(2);
@@ -844,7 +844,7 @@ export const onCancelClick = function onCancelClick(subscription, analyticsLocat
   } else {
     const obj3 = {
       subscription,
-      mode: tmp(13470).WhatYouLoseMode.CANCEL,
+      mode: tmp(13481).WhatYouLoseMode.CANCEL,
       onContinue(arg0) {
         return handleCancelSubscription(closure_0, closure_1, arg0);
       },

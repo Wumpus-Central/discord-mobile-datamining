@@ -501,6 +501,9 @@ const frozen2 = Object.freeze({
     }
     return "/guilds/" + guildId + "/users/" + id + "/banners/" + banner + "." + str;
   },
+  INTELLIGENCE_LAYER_SEARCH(arg0) {
+    return "/guilds/" + arg0 + "/intelligence/search";
+  },
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
   },
@@ -2525,6 +2528,9 @@ const obj2 = {
     }
     return "/guilds/" + guildId + "/users/" + id + "/banners/" + banner + "." + str;
   },
+  INTELLIGENCE_LAYER_SEARCH(arg0) {
+    return "/guilds/" + arg0 + "/intelligence/search";
+  },
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
   },
@@ -4470,6 +4476,7 @@ const obj6 = {
   DESIGN_SYSTEM_LEGACY_BUTTON: "Design System (Legacy Button)",
   DESIGN_SYSTEM_HAPTICS: "Design Systems (Haptics)",
   DESIGN_SYSTEM_AI_LOADER: "Design Systems (AI Loader)",
+  DESIGN_SYSTEM_AI_SHIMMER: "Design Systems (AI Shimmer)",
   SETTINGS_ADVANCED: "Advanced",
   SETTINGS_REVENUE_STORYBOOK: "Revenue Storybook",
   SETTINGS_SESSIONS: "Sessions",
@@ -4851,6 +4858,7 @@ const obj7 = {
   DESIGN_SYSTEM_LEGACY_BUTTON: obj10.DESIGN_SYSTEM_LEGACY_BUTTON,
   DESIGN_SYSTEM_HAPTICS: obj10.DESIGN_SYSTEM_HAPTICS,
   DESIGN_SYSTEM_AI_LOADER: obj10.DESIGN_SYSTEM_AI_LOADER,
+  DESIGN_SYSTEM_AI_SHIMMER: obj10.DESIGN_SYSTEM_AI_SHIMMER,
   SETTINGS_ADVANCED: obj10.ADVANCED,
   SETTINGS_CUSTOMIZE_PROFILE: obj10.PROFILE_CUSTOMIZATION,
   SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT: obj10.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
@@ -5678,6 +5686,7 @@ export const KeybindActions = {
   MENTION_PREV: "MENTION_PREV",
   CREATE_DM_GROUP: "CREATE_DM_GROUP",
   CREATE_GUILD: "CREATE_GUILD",
+  CREATE_THREAD: "CREATE_THREAD",
   RETURN_TO_AUDIO_CHANNEL: "RETURN_TO_AUDIO_CHANNEL",
   CALL_ACCEPT: "CALL_ACCEPT",
   CALL_DECLINE: "CALL_DECLINE",

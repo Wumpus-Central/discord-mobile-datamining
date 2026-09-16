@@ -37,7 +37,7 @@ export default function useNativeForumPostHandlers(threadId) {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
-    NORMAL = threadId(7868).ReactionTypes.NORMAL;
+    NORMAL = threadId(7877).ReactionTypes.NORMAL;
   }
   const items = [threadId];
   const items1 = [threadId];
@@ -65,16 +65,16 @@ export default function useNativeForumPostHandlers(threadId) {
           tmp = endsWithResult;
         }
         if (tmp) {
-          let isAttachmentPathUrlResult = src.type === threadId(8004).ForumPostMediaTypes.ATTACHMENT;
+          let isAttachmentPathUrlResult = src.type === threadId(8013).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentPathUrlResult) {
-            isAttachmentPathUrlResult = callback1(10074).isAttachmentPathUrl(str);
-            const obj5 = callback1(10074);
+            isAttachmentPathUrlResult = callback1(10082).isAttachmentPathUrl(str);
+            const obj5 = callback1(10082);
           }
           if (!isAttachmentPathUrlResult) {
-            let result = src.type === threadId(8004).ForumPostMediaTypes.EMBED;
+            let result = src.type === threadId(8013).ForumPostMediaTypes.EMBED;
             if (result) {
-              result = callback1(10074).isExternalProxiedAttachmentUrl(str);
-              const obj6 = callback1(10074);
+              result = callback1(10082).isExternalProxiedAttachmentUrl(str);
+              const obj6 = callback1(10082);
             }
             isAttachmentPathUrlResult = result;
           }

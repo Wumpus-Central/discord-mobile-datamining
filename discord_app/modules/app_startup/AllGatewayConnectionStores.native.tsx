@@ -67,6 +67,7 @@ import GuildThemeRuntimeStore from "../guild_themes/GuildThemeRuntimeStore.tsx";
 import GuildMediaStateStore from "../guilds_bar/GuildMediaStateStore.tsx";
 import DataHarvestStore from "../harvester/DataHarvestStore.tsx";
 import RecentMentionsStore from "../inbox/RecentMentionsStore.tsx";
+import IntelligenceSearchStore from "../intelligence_layer/search/IntelligenceSearchStore.tsx";
 import LocalAppDetectionStore from "../local_app_detection/native/LocalAppDetectionStore.tsx";
 import LocalPushNotificationStore from "../local_push_notification/native/LocalPushNotificationStore.tsx";
 import LocationMetadataStore from "../location_metadata/stores/LocationMetadataStore.tsx";

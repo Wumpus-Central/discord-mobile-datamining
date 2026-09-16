@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/VibingWumpusSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/b8ee16ef29fa7c03aae68c469914ba49e187ee4e6595b0bfb0581d985f15706a.png";
-export const metadata = { fileBytes: 33032 };
+export default "https://cdn.discordapp.com/assets/content/a52f473da640e9f0930be1c0a2af118db69104c37f55f5de9de5695ea22f659f.png";
+export const metadata = { fileBytes: 34174 };

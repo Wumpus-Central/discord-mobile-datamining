@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/FamilyShieldSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/771db85e3f7b8c49c408ddbd0070590513d57c0a4db2341c8aa7bf752b1eb319.png";
-export const metadata = { fileBytes: 45741 };
+export default "https://cdn.discordapp.com/assets/content/23477e4d0303f438941aff4304fc2c52991391b9ecda6d07745c0a4ca3c981e2.png";
+export const metadata = { fileBytes: 43104 };

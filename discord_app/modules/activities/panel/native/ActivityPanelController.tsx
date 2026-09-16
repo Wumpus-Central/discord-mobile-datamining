@@ -253,7 +253,7 @@ const Constants = fn(1921);
   ACTIVITY_PORTRAIT_ASPECT_RATIO: closure_12,
   ACTIVITY_LANDSCAPE_ASPECT_RATIO: map1,
 } = Constants);
-const ActivityPanelModes = fn(9637).ActivityPanelModes;
+const ActivityPanelModes = fn(9648).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_16 = { x: 0, y: 0, gestureActive: false };
 const FunctionUtils = fn(1934);
@@ -369,7 +369,7 @@ export default function ActivityPanelController(children) {
   let obj = mode(504);
   return (
     <BaseActivityPanelController
-      context={connectedActivityInTextChannelId(17164)}
+      context={connectedActivityInTextChannelId(17220)}
       orientationLockStateForApp={orientationLockStateForApp}
       mode={mode}
       hasConnectedActivity={hasConnectedActivity}

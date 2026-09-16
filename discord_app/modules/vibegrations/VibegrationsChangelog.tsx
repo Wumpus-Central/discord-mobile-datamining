@@ -3,6 +3,24 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   {
+    date: "2026-09-15",
+    platforms: ["mobile"],
+    summary:
+      "With Discord\u2019s Developer Mode on, a project\u2019s menu on phones has a Debug entry: your app\u2019s runtime logs, its resource use, and the agent\u2019s spend and limits.",
+  },
+  {
+    date: "2026-09-15",
+    platforms: ["mobile"],
+    summary:
+      "On phones, a project has the same menu as desktop: remix it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
+  },
+  {
+    date: "2026-09-14",
+    platforms: ["mobile"],
+    summary:
+      "The box for answering a question in your own words no longer grabs the keyboard the moment a question appears, and it reads as an answer rather than a heading.",
+  },
+  {
     date: "2026-09-14",
     platforms: ["mobile"],
     summary:

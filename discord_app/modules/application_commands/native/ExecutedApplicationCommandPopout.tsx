@@ -64,7 +64,7 @@ function getCommandOptionComponents(option) {
             },
             children: null,
           };
-          const items = [closure_1_22, channel(4484).getUserTag(user, { decoration: "never" })];
+          const items = [closure_1_22, channel(4482).getUserTag(user, { decoration: "never" })];
           obj.children = items;
           return closure_1_24(user(1177).LegacyText, obj, "optionValue-" + user.name);
         }
@@ -87,11 +87,11 @@ function getCommandOptionComponents(option) {
           userComponent = null;
           if (null != channel1) {
             let obj = { style: styles.commandOptionMentionText, children: null };
-            const items1 = [closure_20, tmp6(4792).computeChannelName(channel1, UserStore, RelationshipStore)];
+            const items1 = [closure_20, tmp6(4791).computeChannelName(channel1, UserStore, RelationshipStore)];
             obj.children = items1;
             const _HermesInternal3 = HermesInternal;
             userComponent = closure_24(tmp6(1177).LegacyText, obj, "optionValue-" + iter.name);
-            const tmp6Result = tmp6(4792);
+            const tmp6Result = tmp6(4791);
           }
         } else {
           function getRoleComponent(role) {
@@ -729,11 +729,11 @@ function CommandActionsContainer(channelId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5083).SUB_COMMAND_KEY_SEPARATOR;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5084).SUB_COMMAND_KEY_SEPARATOR;
 const Constants = fn(1074);
 ({ MessageTypes: closure_17, WHITESPACE_RE: closure_18 } = Constants);
 const AppLauncherRouteName = fn(1483).AppLauncherRouteName;
-const ChannelAutocompleteConstants = fn(5084);
+const ChannelAutocompleteConstants = fn(5085);
 ({
   CHANNEL_SENTINEL: closure_20,
   COMMAND_SENTINEL: closure_21,
@@ -741,7 +741,7 @@ const ChannelAutocompleteConstants = fn(5084);
 } = ChannelAutocompleteConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: { paddingVertical: 8, paddingHorizontal: 16, gap: 16 },
   activityIndicator: { padding: 16 },
@@ -803,7 +803,7 @@ export default function ExecutedCommandPopout(channelId) {
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(7269)(messageId(7289).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7272)(messageId(7292).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -833,6 +833,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = closure_23(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_23(channelId(7257).BottomSheet, obj3);
-  return closure_23(channelId(7269).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_23(channelId(7260).BottomSheet, obj3);
+  return closure_23(channelId(7272).AnalyticsLocationProvider, obj2);
 }

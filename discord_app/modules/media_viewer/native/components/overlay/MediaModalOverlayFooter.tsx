@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06760_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06763_LegacyBaseButton.js";
 import useMessagePreviewHeight from "../../useMessagePreviewHeight.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -12,9 +12,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "Error" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "w" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
   drawerHeader: { backgroundColor: "Array" },
   messagePreviewContainer: { marginLeft: 6 },

@@ -10,15 +10,15 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import AnalyticsTypes from "../../quests/lib/analytics/AnalyticsTypes.tsx";
+import AdAnalyticsInterfaceExperiment from "../../quests/experiments/AdAnalyticsInterfaceExperiment.tsx";
+import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
+import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import GuildTagUtils from "../../guild_tag/GuildTagUtils.tsx";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import useBadges from "../hooks/useBadges.tsx";
 import GuildTagDefault from "../../guild_tag/native/GuildTag.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
-import AdAnalyticsInterfaceExperiment from "../../quests/experiments/AdAnalyticsInterfaceExperiment.tsx";
-import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
-import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import BadgeUtils from "../../badges/BadgeUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -701,16 +701,16 @@ function GuildTag(style) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8303).getBadgeName;
-let Constants = fn(7315);
+const getBadgeName = fn(8312).getBadgeName;
+let Constants = fn(7318);
 ({ DIVIDER_DOT: closure_7, PROFILE_SIDE_PADDING: closure_8, UserProfileThemeTypes } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
-const GuildTagBadgeSize = fn(8051).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8314).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8060).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8323).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },

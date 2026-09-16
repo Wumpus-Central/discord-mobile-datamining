@@ -16,6 +16,7 @@ const CollectibleShopTab = {
   BUNDLES: "bundles",
   COLLABS: "collabs",
   OFFER_ELIGIBLE: "offer-eligible",
+  PROMOTION: "promotion",
   LAYOUT: "layout",
   COLLECTION_INDEX: "collection-index",
   GAME_SHOPS: "game-shops",

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/LockIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod5152 from "../../../../../../../_runtime/metro/05152__.js";
+import _mod5153 from "../../../../../../../_runtime/metro/05153__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const LockIcon = function LockIcon(WHITE) {
   }
   const merged = Object.assign(WHITE, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5152, color: INTERACTIVE_ICON_DEFAULT, style: WHITE.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5153, color: INTERACTIVE_ICON_DEFAULT, style: WHITE.style });
 };

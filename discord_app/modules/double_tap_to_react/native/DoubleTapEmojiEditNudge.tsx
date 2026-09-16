@@ -101,7 +101,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(11263).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(11277).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
               return { value: "HermesInternal", done: null };
             }
@@ -122,12 +122,12 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = _location(11260).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(11274).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
   let obj4 = { color: "text-subtle", variant: "text-sm/normal", children: null };
   const intl = _location(1115).intl;
   obj4.children = intl.string(_location(1115).t["1EUr/W"]);
-  const items3 = [closure_11(_location(4635).Text, obj4), ,];
+  const items3 = [closure_11(_location(4634).Text, obj4), ,];
   const obj5 = {
     style: tmp5.doubleTapEmojiContainer,
     fastImageStyle: tmp5.doubleTapCustomEmoji,
@@ -141,13 +141,13 @@ function DoubleTapEmojiEditNudgeInner(location) {
     str = emoji.surrogates;
   }
   obj5.name = str;
-  items3[1] = closure_11(emoji(7237), obj5);
+  items3[1] = closure_11(emoji(7240), obj5);
   let obj6 = { accessibilityRole: "button", onPress: callback, hitSlop, style: tmp5.editButton, children: null };
   const obj7 = { color: "text-brand", variant: "text-sm/normal", children: null };
   const intl2 = tmp(1115).intl;
   obj7.children = intl2.string(_location(1115).t.bt75uw);
-  obj6.children = closure_11(_location(4635).Text, obj7);
-  items3[2] = closure_11(_location(5207).PressableOpacity, obj6);
+  obj6.children = closure_11(_location(4634).Text, obj7);
+  items3[2] = closure_11(_location(5208).PressableOpacity, obj6);
   obj3.children = items3;
   return closure_12(View, obj3);
 }
@@ -158,7 +158,7 @@ const EmojiConstants = fn(1375);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const hitSlop = { left: 8, right: 8 };
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     doubleTapEmojiContainer: { marginHorizontal: nativeDefault.space.PX_4 },

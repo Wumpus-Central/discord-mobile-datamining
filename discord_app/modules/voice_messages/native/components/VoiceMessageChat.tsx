@@ -184,8 +184,8 @@ function Duration(animationValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator } = get_ActivityIndicator);
-let useVoiceMessagesUIStore = fn(12094).useVoiceMessagesUIStore;
-const VoiceMessageConstants = fn(12095);
+let useVoiceMessagesUIStore = fn(12102).useVoiceMessagesUIStore;
+const VoiceMessageConstants = fn(12103);
 ({
   VOICE_RECORDING_MAX_DURATION_MILLIS: closure_8,
   VOICE_RECORDING_MAX_DURATION_OFFSET: closure_9,
@@ -196,7 +196,7 @@ const VoiceMessageConstants = fn(12095);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = ReanimatedRexport.createAnimatedComponent(ActivityIndicator);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = {
   container: {
     height: "100%",

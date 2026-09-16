@@ -14,7 +14,7 @@ export const FavoritesGuildHeaderActionButton = function FavoritesGuildHeaderAct
   const obj = {
     variant: "secondary",
     size: "sm",
-    icon: importDefault(isPreview ? 5766 : 12333),
+    icon: importDefault(isPreview ? 5767 : 12341),
     onPress: null,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1,
@@ -27,7 +27,7 @@ export const FavoritesGuildHeaderActionButton = function FavoritesGuildHeaderAct
   return jsx(IconButton.IconButton, {
     variant: "secondary",
     size: "sm",
-    icon: importDefault(isPreview ? 5766 : 12333),
+    icon: importDefault(isPreview ? 5767 : 12341),
     onPress: null,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1,

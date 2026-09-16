@@ -34,8 +34,8 @@ function ClearAllHistory(searchContext) {
   const obj2 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1115).intl;
   obj2.children = intl2.string(searchContext(1115).t.LFTAUp);
-  obj.children = jsx(searchContext(4635).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(5207).PressableHighlight, {
+  obj.children = jsx(searchContext(4634).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(5208).PressableHighlight, {
     onPress() {
       return SearchPlatformActionCreatorsDefault.clearSearchHistory(searchContext);
     },
@@ -67,14 +67,14 @@ function ViewAll(onJumpToMedia) {
     children: null,
   });
 }
-const SearchConstants = fn(7985);
+const SearchConstants = fn(7994);
 ({
   EMPTY_SEARCH_QUERY_STRING: c10,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11,
   SearchListItemTypes: closure_12,
   SearchTabs: map1,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12488).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12496).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo((searchContext) => {

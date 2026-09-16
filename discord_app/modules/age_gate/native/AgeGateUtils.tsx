@@ -64,9 +64,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
         }
       }
       const obj3 = { guildId: id1 };
-      obj2.pushLazy(asyncRequireImpl(10426, dependencyMap.paths), obj3);
+      obj2.pushLazy(asyncRequireImpl(10434, dependencyMap.paths), obj3);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(10426, dependencyMap.paths);
+      const tmp12 = asyncRequireImpl(10434, dependencyMap.paths);
     }
     return flag2;
   } else {

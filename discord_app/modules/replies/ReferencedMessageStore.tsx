@@ -59,9 +59,9 @@ function processMessage(message) {
   }
   return flag2;
 }
-function anyChanged(data, fn) {
+function anyChanged(messages, fn) {
   let flag = false;
-  const iter = data[Symbol.iterator]();
+  const iter = messages[Symbol.iterator]();
   while (iter !== undefined) {
     let tmp = false !== fn(iter.next()) || flag;
     flag = tmp;
@@ -309,6 +309,9 @@ const referencedMessageStore = new ReferencedMessageStore(DispatcherDefault, {
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
   SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
+  INTELLIGENCE_SEARCH_FETCH_SUCCESS: function handleIntelligenceSearchFetchSuccess(messages) {
+    return anyChanged(messages.messages, (first_message) => processMessage(first_message));
+  },
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(messages) {
     messages = messages.messages;

@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/NitroStarterBadgeSmallBadge-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/c0021220dfb14e1f65792ded8b03c8e29d3fdc308268e05a9adba6c60c0888d6.png";
+export default "https://cdn.discordapp.com/assets/content/285935cb28c74971bbc09b1dbf46792cd32602beeaf75263c866a96dea3dab84.png";
 export const vanityUrl =
   "https://cdn.discordapp.com/assets/mana/asset-library/generated/NitroStarterBadgeSmallBadge-2x.png";
-export const metadata = { fileBytes: 1365 };
+export const metadata = { fileBytes: 1366 };

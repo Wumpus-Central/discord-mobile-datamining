@@ -99,7 +99,7 @@ function RequestToSpeakParticipant(participant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: { paddingVertical: 4, flexDirection: "column", minHeight: 288, flex: 1 },
   listContainer: { paddingVertical: 4, flexDirection: "column", flex: 1 },
@@ -153,7 +153,7 @@ export default function RequestToSpeakParticipantList(channel) {
   if (0 === sortedRequestToSpeakParticipants.length) {
     let obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.emptyContainer, children: null };
-    const obj4 = { source: require("../../../../../_runtime/metro/10058__.js") };
+    const obj4 = { source: require("../../../../../_runtime/metro/10066__.js") };
     const items = [closure_4(require("FastImage"), obj4), ,];
     const obj5 = {
       style: tmp.emptyTitle,

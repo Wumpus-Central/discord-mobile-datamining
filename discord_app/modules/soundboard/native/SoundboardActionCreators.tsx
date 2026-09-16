@@ -2,18 +2,16 @@
 import Constants from "../../../Constants.tsx";
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
-import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const ComponentActions = Constants.ComponentActions;
-let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardActionCreators.tsx");
 
 export const openSoundboardSoundPickerActionSheet = function openSoundboardSoundPickerActionSheet(arg0) {
   ({ channel, analyticsSource, initialScrollLocation } = arg0);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(17209, dependencyMap.paths),
+    asyncRequireImpl(17265, dependencyMap.paths),
     "SoundboardSoundPickerActionSheet",
     { channel, analyticsSource, initialScrollLocation },
   );
@@ -22,13 +20,9 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   ({ channel, analyticsSource } = arg0);
   const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
-  const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(
-    dismissible_content.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE,
-  );
   ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = { channel, analyticsSource });
-  const obj2 = { channel, analyticsSource };
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(17209, dependencyMap.paths),
+    asyncRequireImpl(17265, dependencyMap.paths),
     "SoundboardSoundPickerActionSheet",
     { channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation },
   );

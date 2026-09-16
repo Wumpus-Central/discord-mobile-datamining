@@ -11,9 +11,9 @@ import ApplicationCommandUtils from "../application_commands/ApplicationCommandU
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {
+function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NOTICE_HUBLINK) {
   const HotspotStore = HotspotStore2.HotspotStore;
-  let hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(ACTIVITY_BEB_TUTORIAL);
+  let hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(HUB_LINK_CHANNEL_NOTICE);
   if (hasHiddenHotspotResult) {
     if (null == userContent.userContent) {
       const UserContentSettings = preloaded_user_settings.UserContentSettings;
@@ -25,10 +25,10 @@ function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULT
       userContent.userContent.dismissedContents = uint8Array;
     }
     let flag = false;
-    if (!tmpResult.hasBit(userContent.userContent.dismissedContents, ACCOUNT_MULTIACCOUNT_TOOLTIP)) {
+    if (!tmpResult.hasBit(userContent.userContent.dismissedContents, CHANNEL_NOTICE_HUBLINK)) {
       userContent.userContent.dismissedContents = Uint8ArrayUtils.addBit(
         userContent.userContent.dismissedContents,
-        ACCOUNT_MULTIACCOUNT_TOOLTIP,
+        CHANNEL_NOTICE_HUBLINK,
       );
       flag = true;
       const tmpResult2 = Uint8ArrayUtils;
@@ -39,7 +39,6 @@ function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULT
   return hasHiddenHotspotResult;
 }
 const ChannelNoticeTypes = fn(1074).ChannelNoticeTypes;
-let closure_5 = fn(12549).MULTIACCOUNT_TOOLTIP_SEEN_KEY;
 let items = [
   {
     version: 2,
@@ -150,48 +149,6 @@ let items = [
       }
     },
     cleanup() {},
-  },
-  {
-    version: 4,
-    run(userContent) {
-      const Storage = Storage4.Storage;
-      let hasHiddenHotspotResult = true === Storage.get("HAS_SEEN_HUB_UPSELL");
-      if (!hasHiddenHotspotResult) {
-        const HotspotStore = HotspotStore2.HotspotStore;
-        hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(
-          HotspotStore2.HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL,
-        );
-      }
-      let flag = false;
-      if (hasHiddenHotspotResult) {
-        const HUB_WAITLIST_UPSELL = dismissible_content.DismissibleContent.HUB_WAITLIST_UPSELL;
-        if (null == userContent.userContent) {
-          const UserContentSettings = preloaded_user_settings.UserContentSettings;
-          userContent.userContent = UserContentSettings.create();
-        }
-        if (null == userContent.userContent.dismissedContents) {
-          const _Uint8Array = Uint8Array;
-          const uint8Array = new Uint8Array();
-          userContent.userContent.dismissedContents = uint8Array;
-        }
-        let flag2 = false;
-        if (!tmpResult.hasBit(userContent.userContent.dismissedContents, HUB_WAITLIST_UPSELL)) {
-          userContent.userContent.dismissedContents = Uint8ArrayUtils.addBit(
-            userContent.userContent.dismissedContents,
-            HUB_WAITLIST_UPSELL,
-          );
-          flag2 = true;
-          const tmpResult2 = Uint8ArrayUtils;
-        }
-        flag = flag2;
-        tmpResult = Uint8ArrayUtils;
-      }
-      return flag;
-    },
-    cleanup() {
-      const Storage = Storage4.Storage;
-      Storage.remove("HAS_SEEN_HUB_UPSELL");
-    },
   },
   {
     version: 5,
@@ -329,44 +286,6 @@ let items = [
     cleanup() {},
   },
   {
-    version: 7,
-    run(userContent) {
-      return migrateHotspotLocation(
-        userContent,
-        HotspotStore2.HotspotLocations.APPLICATION_COMMAND_TOOLTIP,
-        dismissible_content.DismissibleContent.APPLICATION_COMMAND_TOOLTIP,
-      );
-    },
-    cleanup() {},
-  },
-  {
-    version: 8,
-    run(userContent) {
-      return migrateHotspotLocation(
-        userContent,
-        HotspotStore2.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE,
-        dismissible_content.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE,
-      );
-    },
-    cleanup() {},
-  },
-  {
-    version: 9,
-    run(userContent) {
-      const HotspotStore = HotspotStore2.HotspotStore;
-      if (HotspotStore.hasHiddenHotspot(HotspotStore2.HotspotLocations.MULTI_ACCOUNT_TOOLTIP)) {
-        const Storage = Storage4.Storage;
-        const result = Storage.set(closure_5, "true");
-      }
-      return migrateHotspotLocation(
-        userContent,
-        HotspotStore2.HotspotLocations.MULTI_ACCOUNT_TOOLTIP,
-        dismissible_content.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP,
-      );
-    },
-    cleanup() {},
-  },
-  {
     version: 10,
     run(userContent) {
       let flag = migrateHotspotLocation(
@@ -467,32 +386,6 @@ let items = [
       const Storage = Storage4.Storage;
       Storage.remove("channelNotices");
     },
-  },
-  {
-    version: 11,
-    run(userContent) {
-      let flag = false;
-      if (
-        migrateHotspotLocation(
-          userContent,
-          HotspotStore2.HotspotLocations.GUILD_EVENT_UPSELL,
-          dismissible_content.DismissibleContent.GUILD_HEADER_EVENT_UPSELL,
-        )
-      ) {
-        flag = true;
-      }
-      if (
-        migrateHotspotLocation(
-          userContent,
-          HotspotStore2.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP,
-          dismissible_content.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER,
-        )
-      ) {
-        flag = true;
-      }
-      return flag;
-    },
-    cleanup() {},
   },
   {
     version: 12,
@@ -698,17 +591,6 @@ let items = [
     },
   },
   {
-    version: 14,
-    run(userContent) {
-      return migrateHotspotLocation(
-        userContent,
-        HotspotStore2.HotspotLocations.ACTIVITY_BEB_TUTORIAL,
-        dismissible_content.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK,
-      );
-    },
-    cleanup() {},
-  },
-  {
     version: 15,
     run(userContent) {
       return migrateHotspotLocation(
@@ -776,71 +658,6 @@ let items = [
     cleanup() {
       const Storage = Storage4.Storage;
       Storage.remove("ExpressionSuggestionsPersistedStore");
-    },
-  },
-  {
-    version: 18,
-    run(userContent) {
-      let flag = false;
-      if (
-        migrateHotspotLocation(
-          userContent,
-          HotspotStore2.HotspotLocations.GUILD_DELETE_FEEDBACK,
-          dismissible_content.DismissibleContent.GUILD_DELETE_FEEDBACK,
-        )
-      ) {
-        flag = true;
-      }
-      if (
-        migrateHotspotLocation(
-          userContent,
-          HotspotStore2.HotspotLocations.GUILD_LEAVE_FEEDBACK,
-          dismissible_content.DismissibleContent.GUILD_LEAVE_FEEDBACK,
-        )
-      ) {
-        flag = true;
-      }
-      return flag;
-    },
-    cleanup() {},
-  },
-  {
-    version: 19,
-    run(userContent) {
-      const Storage = Storage4.Storage;
-      let flag = Storage.get("forumHelperCardStorageKey");
-      if (flag == null) {
-        flag = false;
-      }
-      let flag2 = false;
-      if (flag) {
-        const FORUM_CHANNEL_HELPER_CARD = dismissible_content.DismissibleContent.FORUM_CHANNEL_HELPER_CARD;
-        if (null == userContent.userContent) {
-          const UserContentSettings = preloaded_user_settings.UserContentSettings;
-          userContent.userContent = UserContentSettings.create();
-        }
-        if (null == userContent.userContent.dismissedContents) {
-          const _Uint8Array = Uint8Array;
-          const uint8Array = new Uint8Array();
-          userContent.userContent.dismissedContents = uint8Array;
-        }
-        let flag3 = false;
-        if (!tmpResult.hasBit(userContent.userContent.dismissedContents, FORUM_CHANNEL_HELPER_CARD)) {
-          userContent.userContent.dismissedContents = Uint8ArrayUtils.addBit(
-            userContent.userContent.dismissedContents,
-            FORUM_CHANNEL_HELPER_CARD,
-          );
-          flag3 = true;
-          const tmpResult2 = Uint8ArrayUtils;
-        }
-        flag2 = flag3;
-        tmpResult = Uint8ArrayUtils;
-      }
-      return flag2;
-    },
-    cleanup() {
-      const Storage = Storage4.Storage;
-      Storage.remove("forumHelperCardStorageKey");
     },
   },
   {

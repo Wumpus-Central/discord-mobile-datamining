@@ -8,8 +8,8 @@ import BaseConnectionEvent from "../../../../../discord_common/js/packages/media
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import AVError from "../../../errors/av_errors/AVError.tsx";
-import StreamFailed from "../../../../design/components/Illustration/native/redesign/generated/StreamFailed.tsx";
 import VideoStreamReadyActionCreators from "../../../errors/VideoStreamReadyActionCreators.tsx";
+import StreamFailed from "../../../../design/components/Illustration/native/redesign/generated/StreamFailed.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

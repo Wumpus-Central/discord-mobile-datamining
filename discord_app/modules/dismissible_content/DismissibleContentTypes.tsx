@@ -21,13 +21,11 @@ const items = [
   dismissible_content.DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL,
   dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE,
   dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA,
-  dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER,
   dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER,
 ];
 const items1 = [
   dismissible_content.DismissibleContent.GIFTING_INTENT_FRIENDS_TAB_BADGE,
   dismissible_content.DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL,
-  dismissible_content.DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK,
   dismissible_content.DismissibleContent.GUILD_POWERUP_NOTIFICATION,
   dismissible_content.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
   dismissible_content.DismissibleContent.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK,
@@ -50,7 +48,6 @@ const items1 = [
   dismissible_content.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
-  dismissible_content.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_STICKY_BAR,
   dismissible_content.DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING,
   dismissible_content.DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK,
   dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX,
@@ -77,10 +74,7 @@ const items2 = [
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK,
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_MOBILE_FIRST_TIME_HALFSHEET,
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER,
-  dismissible_content.DismissibleContent.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR,
   dismissible_content.DismissibleContent.GAME_SERVER_NEW_GAMES_COACHMARK,
-  dismissible_content.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_STICKY_BAR,
-  dismissible_content.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
   dismissible_content.DismissibleContent.PREMIUM_SHOP_NAGBAR_NOTICE,
   dismissible_content.DismissibleContent.GUILD_HEADER_COACHMARK,
   dismissible_content.DismissibleContent.GUILD_BOOST_TAB_BANNER,
@@ -91,7 +85,6 @@ const items3 = [
   dismissible_content.DismissibleContent.GAME_SHOP_NEW_DROP_POPOVER,
 ];
 const items4 = [
-  dismissible_content.DismissibleContent.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
   dismissible_content.DismissibleContent.GAME_SERVER_HOSTING_NEW_BADGE,
   dismissible_content.DismissibleContent.GAME_SERVER_HOSTING_NEW_COACHMARK,
   dismissible_content.DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK_V2,

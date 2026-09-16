@@ -4,8 +4,8 @@ import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUt
 import native from "../../../design/void/native.tsx";
 import useRoleIconProps from "../../roles/useRoleIconProps.tsx";
 import RoleIconDefault from "../../roles/native/RoleIcon.tsx";
-import _modDef11701 from "../../../../_runtime/metro/11701__.js";
-import _modDef11702 from "../../../../_runtime/metro/11702__.js";
+import _modDef11709 from "../../../../_runtime/metro/11709__.js";
+import _modDef11710 from "../../../../_runtime/metro/11710__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_4, EMPTY_STRING_SNOWFLAKE_ID: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_8 = createStyles.createStyles({ verifiedCheck: { position: "absolute", left: 0, top: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/OfficialConnectionIcon.tsx");
@@ -68,11 +68,11 @@ export default function OfficialConnectionIcon(arg0) {
   const obj5 = { style: null, children: null };
   const items1 = [style, size1];
   obj5.style = items1;
-  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11701, color: roleColor };
+  const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11709, color: roleColor };
   const items2 = [tmp.verifiedCheck, size1];
   obj6.style = items2;
   const items3 = [timestampProducer(native.Icon, obj6)];
-  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11702, color: PRIMARY_630 };
+  const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11710, color: PRIMARY_630 };
   const items4 = [tmp.verifiedCheck, size1];
   obj7.style = items4;
   items3[1] = timestampProducer(native.Icon, obj7);

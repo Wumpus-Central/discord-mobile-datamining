@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/ServerBannerUnderboxExample-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/6ac34386832a166c00ad59304ec55fa949b4e4181c8f65bc0346a92e22b3def2.png";
-export const metadata = { fileBytes: 101696 };
+export default "https://cdn.discordapp.com/assets/content/bb4dfed4e4ad5b361bf4331e2655fcce9a062a2b223f9d4b8395da2660379c5e.png";
+export const metadata = { fileBytes: 111519 };

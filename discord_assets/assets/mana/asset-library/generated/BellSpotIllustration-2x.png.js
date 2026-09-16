@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/BellSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/e0dd1f9036f8fd5fba1e99e15acd07c2baf11d281d478e1dc7ff6fb63e551db8.png";
-export const metadata = { fileBytes: 50835 };
+export default "https://cdn.discordapp.com/assets/content/bb905568b72c8a93ef1412315d39c720d4698c783dba8735eb8dd0f6ec2cb1e8.png";
+export const metadata = { fileBytes: 49103 };

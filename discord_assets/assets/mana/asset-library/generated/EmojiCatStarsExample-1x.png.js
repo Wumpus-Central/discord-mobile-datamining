@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/EmojiCatStarsExample-1x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/1dac5faa3e65f70b2d8ae8794d8f800bc2171de517e0bfd950f49f9a1dae3741.png";
-export const metadata = { fileBytes: 2574 };
+export default "https://cdn.discordapp.com/assets/content/526c7cfd3408dc3d958e361aae0c686bb9b4b18f564fc50611a6f1bebec1ceb7.png";
+export const metadata = { fileBytes: 2553 };

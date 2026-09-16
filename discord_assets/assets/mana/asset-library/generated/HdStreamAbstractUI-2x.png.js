@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/HdStreamAbstractUI-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/68a02537c415fc04cc75911f661f34c0be4a31f0644428ca68935012d19e2dbc.png";
-export const metadata = { fileBytes: 144926 };
+export default "https://cdn.discordapp.com/assets/content/ca73c001d2dc44811c812e947e68068290e2e3a524046ced98f7d007f873565f.png";
+export const metadata = { fileBytes: 144924 };

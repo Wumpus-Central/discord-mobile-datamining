@@ -40,15 +40,11 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
           if (dismissible_content.DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== id) {
             if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== id) {
               if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA !== id) {
-                if (
-                  dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER !== id
-                ) {
-                  if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === id) {
-                    return 0;
-                  } else {
-                    TypeUtils.assertUnreachable(id, { andFail: false });
-                    return 0;
-                  }
+                if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === id) {
+                  return 0;
+                } else {
+                  TypeUtils.assertUnreachable(id, { andFail: false });
+                  return 0;
                 }
               }
             }

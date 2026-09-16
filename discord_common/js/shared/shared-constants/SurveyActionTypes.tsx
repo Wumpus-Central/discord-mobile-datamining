@@ -17,4 +17,5 @@ export const SurveyActionTypes = {
   POPULATED_CLIP_GALLERY_CLOSED: "populated_clip_gallery_closed",
   TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS: "topical_navigation_multiple_impressions",
   GUILD_ROOM_JOINED: "guild_room_joined",
+  YOUTUBE_3PP_MODAL_DISMISSED: "youtube_3pp_modal_dismissed",
 };

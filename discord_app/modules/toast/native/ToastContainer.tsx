@@ -174,14 +174,14 @@ function wrapChildren(children) {
   return jsx(native.NonExpandingOverlayView, { children });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = {
   container: {
     position: "absolute",
     alignSelf: "center",
     flexDirection: "row",
     justifyContent: "center",
-    shadowColor: fn(5526).TOAST_CONTAINER_SHADOW_COLOR,
+    shadowColor: fn(5527).TOAST_CONTAINER_SHADOW_COLOR,
   },
 };
 let closure_7 = createStyles.createStyles(obj);
@@ -201,7 +201,7 @@ let obj3 = {
   alignSelf: "center",
   flexDirection: "row",
   justifyContent: "center",
-  shadowColor: fn(5526).TOAST_CONTAINER_SHADOW_COLOR,
+  shadowColor: fn(5527).TOAST_CONTAINER_SHADOW_COLOR,
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/toast/native/ToastContainer.tsx");
@@ -228,7 +228,7 @@ export default noop.memo(() => {
       return () => clearTimeout(closure_0);
     }
   }, items1);
-  return jsx(stateFromStoresArray(4350).TransitionGroup, {
+  return jsx(stateFromStoresArray(4348).TransitionGroup, {
     items: stateFromStoresArray,
     renderItem,
     getItemKey,

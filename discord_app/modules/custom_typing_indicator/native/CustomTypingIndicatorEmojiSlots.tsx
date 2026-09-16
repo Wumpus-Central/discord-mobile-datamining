@@ -55,13 +55,13 @@ function PlaceholderEmojiGlyph(pressed) {
     obj.transform = items;
     return obj;
   };
-  let obj = pressed(4376);
+  let obj = pressed(4374);
   fn.__closure = {
     pressed,
-    withSpring: pressed(5058).withSpring,
-    interpolate: pressed(4376).interpolate,
+    withSpring: pressed(5059).withSpring,
+    interpolate: pressed(4374).interpolate,
     PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4,
-    ON_PRESS_SPRING: pressed(5062).ON_PRESS_SPRING,
+    ON_PRESS_SPRING: pressed(5063).ON_PRESS_SPRING,
     PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14,
   };
   fn.__workletHash = 16574219123934;
@@ -149,30 +149,30 @@ const EmojiIntention = fn(1375).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
 let items = [
-  fn(15457).EmojiAngryFaceWithHornsIcon,
-  fn(15459).EmojiColdFaceIcon,
-  fn(15461).EmojiCowboyHatFaceIcon,
-  fn(15463).EmojiCryingFaceIcon,
-  fn(15465).EmojiDisguisedFaceIcon,
-  fn(15467).EmojiFaceVomitingIcon,
-  fn(15469).EmojiFaceWithMonocleIcon,
-  fn(15471).EmojiFaceWithSpiralEyesIcon,
-  fn(15473).EmojiMeltingFaceIcon,
-  fn(15475).EmojiMoneyMouthFaceIcon,
-  fn(15477).EmojiNerdFaceIcon,
-  fn(15479).EmojiPartyingFaceIcon,
-  fn(15481).EmojiSalutingFaceIcon,
-  fn(15483).EmojiSkullIcon,
-  fn(15485).EmojiSmilingFaceWithHornsIcon,
-  fn(15487).EmojiSmilingFaceWithSunglassesIcon,
-  fn(15489).EmojiSquintingFaceWithTongueIcon,
-  fn(15491).EmojiUpsideDownFaceIcon,
-  fn(15493).EmojiWoozyFaceIcon,
-  fn(15495).EmojiZanyFaceIcon,
-  fn(15497).EmojiRollingOnTheFloorLaughingIcon,
-  fn(15499).EmojiSmilingFaceWithHeartsIcon,
+  fn(15473).EmojiAngryFaceWithHornsIcon,
+  fn(15475).EmojiColdFaceIcon,
+  fn(15477).EmojiCowboyHatFaceIcon,
+  fn(15479).EmojiCryingFaceIcon,
+  fn(15481).EmojiDisguisedFaceIcon,
+  fn(15483).EmojiFaceVomitingIcon,
+  fn(15485).EmojiFaceWithMonocleIcon,
+  fn(15487).EmojiFaceWithSpiralEyesIcon,
+  fn(15489).EmojiMeltingFaceIcon,
+  fn(15491).EmojiMoneyMouthFaceIcon,
+  fn(15493).EmojiNerdFaceIcon,
+  fn(15495).EmojiPartyingFaceIcon,
+  fn(15497).EmojiSalutingFaceIcon,
+  fn(15499).EmojiSkullIcon,
+  fn(15501).EmojiSmilingFaceWithHornsIcon,
+  fn(15503).EmojiSmilingFaceWithSunglassesIcon,
+  fn(15505).EmojiSquintingFaceWithTongueIcon,
+  fn(15507).EmojiUpsideDownFaceIcon,
+  fn(15509).EmojiWoozyFaceIcon,
+  fn(15511).EmojiZanyFaceIcon,
+  fn(15513).EmojiRollingOnTheFloorLaughingIcon,
+  fn(15515).EmojiSmilingFaceWithHeartsIcon,
 ];
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_9 = createStyles.createStyles({
   slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
 });

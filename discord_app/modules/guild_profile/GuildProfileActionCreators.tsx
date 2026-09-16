@@ -22,7 +22,7 @@ let closure_10 = async function _fetchGuildTopGames() {
   closure_129_0 = value;
   return closure_130_0(closure_130_2[7]).buildTopGamesFromServer(closure_129_0.body.top_games);
 };
-const GuildProfileFetchStatus = fn(9197).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9208).GuildProfileFetchStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);

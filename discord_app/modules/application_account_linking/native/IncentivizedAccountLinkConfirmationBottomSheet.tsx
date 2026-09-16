@@ -10,8 +10,8 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import APNGDecorationNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import WindowLaunchIcon from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
-import _modDef15938 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
-import _modDef15939 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
+import _modDef15958 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import _modDef15959 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -29,7 +29,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     let obj2 = { source: null, style: null };
-    const obj3 = { uri: _modDef15938 };
+    const obj3 = { uri: _modDef15958 };
     obj2.source = obj3;
     const size = { width: v150, height: v150 };
     obj2.style = size;
@@ -38,16 +38,16 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj4 = { url: _modDef15939, style: null };
+      const obj4 = { url: _modDef15959, style: null };
       const size1 = { width: v150, height: v150 };
       obj4.style = size1;
-      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15939, style: null });
+      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15959, style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
       const tmp4Result = APNGDecorationNativeComponentDefault;
     } else {
       const obj5 = { source: null, resizeMode: "contain", style: null };
-      const obj6 = { uri: _modDef15939 };
+      const obj6 = { uri: _modDef15959 };
       obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
       obj5.style = size2;

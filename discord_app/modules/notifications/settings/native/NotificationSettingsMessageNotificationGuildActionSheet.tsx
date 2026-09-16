@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4821).UnreadSetting;
+const UnreadSetting = fn(4820).UnreadSetting;
 let closure_6 = fn(1084).GuildNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -51,5 +51,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
       NotificationLabel.notifications(message_notifications),
     );
   };
-  return jsx(unread(10291), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10299), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 }

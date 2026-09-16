@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestModalContentCloudBackground.tsx
 import themes from "../../../design/utils/shared/themes.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05071_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05072_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
@@ -78,7 +78,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj6.style = items2;
-    obj6.source = importDefault(isThemeDarkResult ? 15219 : 15220);
+    obj6.source = importDefault(isThemeDarkResult ? 15235 : 15236);
     obj6.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj6);
     obj3.children = items1;

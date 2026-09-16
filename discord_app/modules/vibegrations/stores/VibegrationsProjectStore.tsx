@@ -108,8 +108,8 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
   }
   return value;
 };
-prototype["getLogs"] = function getLogs(arg0) {
-  value = map4.get(arg0);
+prototype["getLogs"] = function getLogs(projectId) {
+  value = map4.get(projectId);
   if (value == null) {
     value = closure_11;
   }
@@ -144,8 +144,8 @@ prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
     return num2;
   }
 };
-prototype["getTrace"] = function getTrace(arg0) {
-  value = map7.get(arg0);
+prototype["getTrace"] = function getTrace(projectId) {
+  value = map7.get(projectId);
   if (value == null) {
     value = closure_16;
   }

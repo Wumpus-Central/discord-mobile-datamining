@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/DevCommerceWideAbstractUI-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/764e2776f8082d48bbd9b61d63148038fdfcda93cd351c42b092a11c74635925.png";
-export const metadata = { fileBytes: 166878 };
+export default "https://cdn.discordapp.com/assets/content/3d7b33e65df66d67a44e9237754bbad231a22dcfa806cdadae7abf681fe5b5cf.png";
+export const metadata = { fileBytes: 166911 };

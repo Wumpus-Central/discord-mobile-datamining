@@ -7,7 +7,7 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05071_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05072_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import GuildOnboardingActionCreatorsDefault from "../GuildOnboardingActionCreators.tsx";
@@ -57,20 +57,20 @@ function BackgroundImageGradient(uri) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const OnboardingPromptType = fn(7208).OnboardingPromptType;
-let closure_15 = fn(7204).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(7211).OnboardingPromptType;
+let closure_15 = fn(7207).GuildOnboardingModalStates;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5767).NAV_BAR_HEIGHT,
+    marginTop: fn(5768).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -89,7 +89,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5767).NAV_BAR_HEIGHT,
+  marginTop: fn(5768).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };

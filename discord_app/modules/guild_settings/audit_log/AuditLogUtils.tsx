@@ -6,7 +6,7 @@ import BigFlagUtilsAll from "../../../../discord_common/js/shared/utils/BigFlagU
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import util from "../../../intl/index.native.tsx";
 import FlagUtilsAll from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef4231 from "../../../../_runtime/metro/04231__.js";
+import _modDef4229 from "../../../../_runtime/metro/04229__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
@@ -242,7 +242,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(17690).AuditLogChange;
+const AuditLogChange = fn(17746).AuditLogChange;
 const Constants = fn(1074);
 ({ AuditLogActions: closure_15, AuditLogChangeKeys } = Constants);
 const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
@@ -261,8 +261,8 @@ const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
   AuditLogActionTypes: closure_29,
 } = Constants);
 const ChannelFlags = fn(1965).ChannelFlags;
-const AutomodTriggerType = fn(11997).AutomodTriggerType;
-const GuildOnboardingMode = fn(7208).GuildOnboardingMode;
+const AutomodTriggerType = fn(12005).AutomodTriggerType;
+const GuildOnboardingMode = fn(7211).GuildOnboardingMode;
 const GuildScheduledEventsConstants = fn(1964);
 ({
   GuildScheduledEventEntityTypes: closure_33,
@@ -270,7 +270,7 @@ const GuildScheduledEventsConstants = fn(1964);
   GuildScheduledEventPrivacyLevel: closure_35,
 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
-let items = [fn(4668).TimeUnits.DAYS, fn(4668).TimeUnits.HOURS, fn(4668).TimeUnits.MINUTES, fn(4668).TimeUnits.SECONDS];
+let items = [fn(4667).TimeUnits.DAYS, fn(4667).TimeUnits.HOURS, fn(4667).TimeUnits.MINUTES, fn(4667).TimeUnits.SECONDS];
 let closure_38 = {
   [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true },
   [AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
@@ -638,19 +638,19 @@ class ACTION_FILTER_ITEMS {
   }
 }
 let obj = {
-  [fn(4668).TimeUnits.SECONDS]: (seconds) => {
+  [fn(4667).TimeUnits.SECONDS]: (seconds) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.geSp4K, { seconds });
   },
-  [fn(4668).TimeUnits.MINUTES]: (minutes) => {
+  [fn(4667).TimeUnits.MINUTES]: (minutes) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.iXLF9W, { minutes });
   },
-  [fn(4668).TimeUnits.HOURS]: (hours) => {
+  [fn(4667).TimeUnits.HOURS]: (hours) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.xCjYxK, { hours });
   },
-  [fn(4668).TimeUnits.DAYS]: (days) => {
+  [fn(4667).TimeUnits.DAYS]: (days) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t["k2UNz+"], { days });
   },
@@ -901,7 +901,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1115).t.MWp6H7;
           obj20[AuditLogChangeKeys.TEMPORARY] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj23 = {};
-          obj23[__3TkD(8513).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1115).t.XYZMbL;
+          obj23[__3TkD(8522).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1115).t.XYZMbL;
           __3TkD = obj23;
           obj20[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj20[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1115).t.gb1Owj;
@@ -2555,7 +2555,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let tmp10 = null;
                             if (tmp9) {
                               tmp10 = ((channel) =>
-                                result3(4792).computeChannelName(channel, user, closure_1_12, true))(tmp7);
+                                result3(4791).computeChannelName(channel, user, closure_1_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2641,7 +2641,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
           const tmp205 = ((targetId16) => closure_1_10.getChannel(targetId16))(targetId16);
           let tmp208 = null;
           if (tmp207) {
-            tmp208 = ((channel) => result3(4792).computeChannelName(channel, user, closure_1_12, true))(tmp205);
+            tmp208 = ((channel) => result3(4791).computeChannelName(channel, user, closure_1_12, true))(tmp205);
           }
           let tmp209 = tmp208;
           if (null == tmp208) {
@@ -2686,8 +2686,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
           let id = result1.options.id;
           user = user.getUser(id);
           if (tmp224) {
-            id = items(4484).getUserTag(user);
-            let obj4 = items(4484);
+            id = items(4482).getUserTag(user);
+            let obj4 = items(4482);
           }
           obj.subtarget = id;
           tmp224 = null != user && true;
@@ -2759,8 +2759,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
               (event_exception_id) => event_exception_id.event_exception_id === result3.options.event_exception_id,
             );
           }
-          let obj5 = closure_0(4321);
-          const tmp244 = items(4231);
+          let obj5 = closure_0(4319);
+          const tmp244 = items(4229);
           let str5;
           if (found20 != null) {
             str5 = found20.event_exception_id;
@@ -3362,14 +3362,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               const _Date = Date;
                                               obj = DateUtils;
                                               const date = new Date(newValue2);
-                                              newValue = obj.dateFormat(_modDef4231(date), "LLLL");
+                                              newValue = obj.dateFormat(_modDef4229(date), "LLLL");
                                             }
                                             if (null != newValue.oldValue) {
                                               const oldValue2 = newValue.oldValue;
                                               const _Date2 = Date;
                                               const obj2 = DateUtils;
                                               const date1 = new Date(oldValue2);
-                                              oldValue = obj2.dateFormat(_modDef4231(date1), "LLLL");
+                                              oldValue = obj2.dateFormat(_modDef4229(date1), "LLLL");
                                             }
                                             if (!oldValue) {
                                               oldValue = newValue.oldValue;

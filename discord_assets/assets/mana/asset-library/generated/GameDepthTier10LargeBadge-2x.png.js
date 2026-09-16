@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/GameDepthTier10LargeBadge-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/5607ca728d217e8482485b4978f291c8211abf7f9f515fb56613df9fe6d2947f.png";
+export default "https://cdn.discordapp.com/assets/content/dd6bb33f74929726fa667a5000f280cac8f133c23208586987e70b8431464ed3.png";
 export const vanityUrl =
   "https://cdn.discordapp.com/assets/mana/asset-library/generated/GameDepthTier10LargeBadge-2x.png";
-export const metadata = { fileBytes: 15140 };
+export const metadata = { fileBytes: 15896 };

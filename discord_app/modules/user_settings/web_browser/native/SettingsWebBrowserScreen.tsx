@@ -4,7 +4,7 @@ import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayou
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MobileUserSettings = fn(8082).MobileUserSettings;
+const MobileUserSettings = fn(8091).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
@@ -16,6 +16,10 @@ export default noop.memo(function SettingsWebBrowserScreen() {
     const items = [constants.SELECT_WEB_BROWSER];
     obj3.settings = items;
     const items1 = [obj3];
+    const obj4 = { settings: null };
+    const items2 = [constants.CLEAR_WEB_BROWSER_DATA];
+    obj4.settings = items2;
+    items1[1] = obj4;
     obj2.sections = items1;
     return SettingBuilders.createList(obj2);
   }, []);

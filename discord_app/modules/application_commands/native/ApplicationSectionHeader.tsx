@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = {
   applicationHeaderWrapper: {
     flexDirection: "row",
@@ -41,7 +41,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(12365).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12373).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -57,11 +57,11 @@ export default function ApplicationSectionHeader(section) {
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(5672), obj4);
+    tmp9 = closure_5(guildId(5673), obj4);
   }
   const items1 = [
     tmp9,
-    closure_5(section(4635).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
+    closure_5(section(4634).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
   ];
   obj3.children = items1;
   return closure_6(View, obj3);

@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/SleepingWumpusSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/62130003366bf759cc6dc9b2391f43041e793c8c2705e00a7ad2a4358eafc542.png";
-export const metadata = { fileBytes: 53407 };
+export default "https://cdn.discordapp.com/assets/content/84e1e31ee8aed4ca9588172fa29aec74ac552de59c24acfb4affabeda9a0cb17.png";
+export const metadata = { fileBytes: 53610 };

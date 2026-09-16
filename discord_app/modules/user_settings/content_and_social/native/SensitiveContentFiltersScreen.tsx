@@ -15,7 +15,7 @@ function SensitiveContentFiltersNotices() {
     screen: SettingsScreenNotices.SettingsScreen.SENSITIVE_CONTENT_FILTERS,
   });
 }
-const MobileUserSettings = fn(8082).MobileUserSettings;
+const MobileUserSettings = fn(8091).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

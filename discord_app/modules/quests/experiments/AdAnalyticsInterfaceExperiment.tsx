@@ -34,9 +34,9 @@ export const AdAnalyticsInterfaceExperimentStep = obj;
 export const AdAnalyticsInterfaceExperiment = apexExperiment;
 export const shouldMigrateToAdAnalyticsInterface = function shouldMigrateToAdAnalyticsInterface(
   STEP_2_CLICKED_INTERNAL,
-  quest_bottom_sheet_console_connect,
+  app_store_overlay_surface_click,
 ) {
-  const config = apexExperiment.getConfig({ location: quest_bottom_sheet_console_connect });
+  const config = apexExperiment.getConfig({ location: app_store_overlay_surface_click });
   let enabled = config.enabled;
   if (enabled) {
     enabled = STEP_2_CLICKED_INTERNAL <= config.maxStep;

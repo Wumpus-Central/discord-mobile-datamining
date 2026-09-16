@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/MushroomSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/4b179950e4b2cdcdf06cd954e8eb88843b50c8e2dddc555c7ccb7291a076a211.png";
-export const metadata = { fileBytes: 16742 };
+export default "https://cdn.discordapp.com/assets/content/12c1a8418fd88c0425984302b39440cc06b571547d26fb39cff9384c23398945.png";
+export const metadata = { fileBytes: 16652 };

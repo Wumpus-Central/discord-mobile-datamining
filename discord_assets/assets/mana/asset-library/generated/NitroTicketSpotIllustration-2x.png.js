@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/NitroTicketSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/3bbdbe3141cbc1cc80fde83d138d63f2d1a08f2decc5733bbe00c6fe0f85b134.png";
-export const metadata = { fileBytes: 84609 };
+export default "https://cdn.discordapp.com/assets/content/fa39bfbf69cdb93d29277e24086a15346d36788b370944e097e5b325a8267218.png";
+export const metadata = { fileBytes: 86251 };

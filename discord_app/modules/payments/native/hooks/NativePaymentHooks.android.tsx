@@ -69,7 +69,7 @@ function useGoogleSkuIds(arg0, arg1) {
                       ref = 1;
                       v2 = 2;
                       c5 = 1;
-                      const obj7 = { value: closure_2_0(9499).loadInAppSkus(differenceResult), done: false };
+                      const obj7 = { value: closure_2_0(9510).loadInAppSkus(differenceResult), done: false };
                       return obj7;
                     }
                   }
@@ -85,8 +85,8 @@ function useGoogleSkuIds(arg0, arg1) {
               closure_128_1 = closure_2;
               logger.error("Unable to fetch product IDs from google play store: ", closure_128_1);
               v2("Unable to fetch");
-              const result = closure_2_0(4312).captureBillingException(closure_128_1);
-              const obj3 = closure_2_0(4312);
+              const result = closure_2_0(4310).captureBillingException(closure_128_1);
+              const obj3 = closure_2_0(4310);
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;

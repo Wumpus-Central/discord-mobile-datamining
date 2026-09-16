@@ -10,7 +10,7 @@ const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, MAX_VISUAL_ROLE_LENGTH: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = {
   container: { marginRight: 4, marginBottom: 4, borderRadius: nativeDefault.radii.xs },
   pill: null,
@@ -47,7 +47,7 @@ export default function RolePill(role) {
   ({ guildId, color } = role);
   const DeveloperMode = role(1936).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  const roleIconProps = role(7293).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
+  const roleIconProps = role(7296).useRoleIconProps({ guildId, roleId: role.id, size: 12 });
   let name = role.name;
   let combined = name;
   if (role.name.length > closure_5) {
@@ -94,8 +94,8 @@ export default function RolePill(role) {
     }
     obj5.guildId = guildId;
     obj5.roleColor = color;
-    let tmp10Result = closure_6(combined(7310), obj5);
-    const tmp15 = combined(7310);
+    let tmp10Result = closure_6(combined(7313), obj5);
+    const tmp15 = combined(7313);
   } else {
     const items = [tmp9.bubble];
     if (null != color) {
@@ -115,17 +115,17 @@ export default function RolePill(role) {
     const obj9 = { style: tmp9.roleIcon, children: null };
     const obj10 = {};
     const merged = Object.assign(roleIconProps);
-    obj9.children = closure_6(combined(7312), obj10);
+    obj9.children = closure_6(combined(7315), obj10);
     tmp10Result2 = closure_6(View, obj9);
-    const tmp18 = combined(7312);
+    const tmp18 = combined(7315);
   }
   items1[1] = tmp10Result2;
-  items1[2] = closure_6(role(4635).Text, {
+  items1[2] = closure_6(role(4634).Text, {
     variant: "text-xs/semibold",
     color: "interactive-text-active",
     children: name,
   });
   obj4.children = items1;
   obj3.children = closure_7(View, obj4);
-  return closure_6(role(5207).PressableHighlight, obj3);
+  return closure_6(role(5208).PressableHighlight, obj3);
 }

@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import AccessibilityPreferencesContext from "../../AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import DataBindByName from "../../../../../../../_runtime/04371_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/04369_DataBindByName.js";
 import ManaContext from "../../ManaContext/ManaContext.native.tsx";
 import useRivePlayback from "useRivePlayback.tsx";
 import RiveTypes from "RiveTypes.tsx";

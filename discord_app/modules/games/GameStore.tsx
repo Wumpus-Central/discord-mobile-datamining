@@ -294,6 +294,60 @@ const gameStore = new GameStore(DispatcherDefault, {
     });
   },
   SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
+  INTELLIGENCE_SEARCH_FETCH_SUCCESS: function handleIntelligenceSearchFetchSuccess(messages) {
+    messages = messages.messages;
+    return messages.reduce((acc, mention_games) => {
+      closure_0 = false;
+      mention_games = mention_games.mention_games;
+      if (mention_games != null) {
+        const item = mention_games.forEach((game_flags) => {
+          if (tmp) {
+            if (!map.has(game_flags.id)) {
+              const tmp8 = new closure_2_2(game_flags);
+              const result = map.set(game_flags.id, tmp8);
+              c0 = true;
+              set2.delete(game_flags.id);
+              set.delete(game_flags.id);
+            }
+          }
+          tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
+        });
+      }
+      if (null != mention_games.referenced_message) {
+        const referenced_message = mention_games.referenced_message;
+        closure_129_0 = false;
+        const mention_games1 = referenced_message.mention_games;
+        if (mention_games1 != null) {
+          const item1 = mention_games1.forEach((game_flags) => {
+            if (tmp) {
+              if (!map.has(game_flags.id)) {
+                const tmp8 = new closure_2_2(game_flags);
+                const result = map.set(game_flags.id, tmp8);
+                c0 = true;
+                set2.delete(game_flags.id);
+                set.delete(game_flags.id);
+              }
+            }
+            tmp = "game_flags" in game_flags && typeof game_flags.game_flags === "number";
+          });
+        }
+        if (null != referenced_message.referenced_message) {
+          closure_129_0 = closure_7(referenced_message.referenced_message) || closure_129_0;
+          const tmp4 = closure_7(referenced_message.referenced_message) || closure_129_0;
+        }
+        let tmp5 = closure_129_0;
+        if (!closure_129_0) {
+          tmp5 = closure_0;
+        }
+        closure_0 = tmp5;
+      }
+      let tmp6 = closure_0;
+      if (!closure_0) {
+        tmp6 = acc;
+      }
+      return tmp6;
+    }, false);
+  },
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,

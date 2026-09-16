@@ -9,12 +9,12 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = {
   pill: {
     alignItems: "center",
     alignSelf: "flex-start",
-    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+    backgroundColor: nativeDefault.unsafe_rawColors.NEUTRAL_79,
     borderRadius: nativeDefault.radii.round,
     flexDirection: "row",
     gap: nativeDefault.space.PX_4,
@@ -27,7 +27,7 @@ let closure_6 = createStyles.createStyles(obj);
 let obj3 = {
   alignItems: "center",
   alignSelf: "flex-start",
-  backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+  backgroundColor: nativeDefault.unsafe_rawColors.NEUTRAL_79,
   borderRadius: nativeDefault.radii.round,
   flexDirection: "row",
   gap: nativeDefault.space.PX_4,

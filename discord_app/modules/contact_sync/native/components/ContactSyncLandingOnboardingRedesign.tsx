@@ -1,7 +1,7 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import _modDef12828 from "../../../../../_runtime/metro/12828__.js";
+import _modDef12836 from "../../../../../_runtime/metro/12836__.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,17 +9,17 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const NativePermissionTypes = fn(4849).NativePermissionTypes;
+const NativePermissionTypes = fn(4848).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
 let obj3 = {
   flex: 1,
   justifyContent: "center",
   alignItems: "center",
   textAlign: "center",
-  marginTop: -nativeDefault.space.PX_32 - fn(5767).NAV_BAR_HEIGHT,
+  marginTop: -nativeDefault.space.PX_32 - fn(5768).NAV_BAR_HEIGHT,
 };
 obj2.content = obj3;
 let size = { height: 135, width: 216, marginBottom: nativeDefault.space.PX_24 };
@@ -104,23 +104,23 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
     }),
     items,
   );
-  obj3.source = _modDef12828;
+  obj3.source = _modDef12836;
   const items1 = [closure_8(closure_6, obj3), , , ,];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1115).intl;
   obj4.children = intl.string(onNext(1115).t["/G+nci"]);
-  items1[1] = closure_8(onNext(4635).Text, obj4);
+  items1[1] = closure_8(onNext(4634).Text, obj4);
   let obj5 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
   const intl2 = onNext(1115).intl;
   obj5.children = intl2.string(onNext(1115).t.G8zcHt);
-  items1[2] = closure_8(onNext(4635).Text, obj5);
+  items1[2] = closure_8(onNext(4634).Text, obj5);
   const obj6 = { style: tmp.buttonContainer, children: null };
   const obj7 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
   const intl3 = onNext(1115).intl;
   obj7.text = intl3.string(onNext(1115).t.LhlgY9);
   obj7.onPress = callback;
   obj7.loading = loading;
-  obj6.children = closure_8(onNext(5059).Button, obj7);
+  obj6.children = closure_8(onNext(5060).Button, obj7);
   items1[3] = closure_8(closure_5, obj6);
   items1[4] = closure_8(ContactSyncErrorDefault, { error });
   obj2.children = items1;

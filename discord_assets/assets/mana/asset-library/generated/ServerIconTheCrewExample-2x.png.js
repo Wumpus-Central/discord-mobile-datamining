@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/ServerIconTheCrewExample-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/f22c11791351a451c93026f30afb031d49a7d9f23f9c3a35dd9b214e0382c7f6.png";
-export const metadata = { fileBytes: 43756 };
+export default "https://cdn.discordapp.com/assets/content/5c61ee7c3e46cb3b81ff514dacca473a8b504a4f645cb9766f1942b5d8044083.png";
+export const metadata = { fileBytes: 44016 };

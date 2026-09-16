@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/AvatarValExample-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/4ff71bbdbc7e16f5511573730cfea15e3cbb61a939d484192a0a79acb2152aa8.png";
-export const metadata = { fileBytes: 22653 };
+export default "https://cdn.discordapp.com/assets/content/43de227583fb869b2bef01b1e7c03e69a6ec6fc4eceaa941b1cc6c4c081788c9.png";
+export const metadata = { fileBytes: 22886 };

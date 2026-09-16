@@ -9,12 +9,12 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
-import XboxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
-import PlaystationNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
-import authorizeConnectionDefault from "../../../connections/authorizeConnection.native.tsx";
 import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
+import XboxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
+import PlaystationNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
+import authorizeConnectionDefault from "../../../connections/authorizeConnection.native.tsx";
 import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -86,7 +86,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -104,19 +104,19 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15211, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15227, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(11621).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(11621);
-  closure_4 = quest(11908).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11908);
-  const impressionId = quest(11624).useQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(11629).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(11629);
+  closure_4 = quest(11916).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11916);
+  const impressionId = quest(11632).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj3 = quest(11624);
+  let obj3 = quest(11632);
   return openQuestBottomSheet(NonInlineConsoleConnection, {
     consoles: xboxAndPlaystationAccounts.useMemo(
       () =>

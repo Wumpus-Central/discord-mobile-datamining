@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import MessageConstants from "../../MessageConstants.tsx";
 import PublicGuildsUtils from "../../../public_guilds/PublicGuildsUtils.tsx";
 import isCrosspostDefault from "../../isCrosspost.tsx";
-import _modDef8146 from "../../../../../_runtime/metro/08146__.js";
+import _modDef8155 from "../../../../../_runtime/metro/08155__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -33,7 +33,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8146).uri;
+            uri = Image.resolveAssetSource(_modDef8155).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -69,8 +69,8 @@ export default function getTagProperties(arg0) {
         tagType: SYSTEM_DM_TAG_SYSTEM_TYPE,
         tagIconUrl: tmp5,
         opTagText: stringResult2,
-        opTagTextColor: "r",
-        opTagBackgroundColor: "ip",
+        opTagTextColor: "<string:42888769>",
+        opTagBackgroundColor: "<string:119161344>",
       };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;

@@ -1,39 +1,39 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx
 import _mod19 from "../../../../../_runtime/metro/00019__.js";
-import _modDef4231 from "../../../../../_runtime/metro/04231__.js";
+import _modDef4229 from "../../../../../_runtime/metro/04229__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const useMemo = _mod19.useMemo;
 const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTimeUntilNextBadge.tsx");
 
 export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeDate(arg0, arg1) {
-  const obj = _modDef4231(arg0);
-  const addResult = _modDef4231(arg0).add(arg1, "months");
-  return Math.max(0, _modDef4231(arg0).add(arg1, "months").add(1, "day").diff(_modDef4231(), "days"));
+  const obj = _modDef4229(arg0);
+  const addResult = _modDef4229(arg0).add(arg1, "months");
+  return Math.max(0, _modDef4229(arg0).add(arg1, "months").add(1, "day").diff(_modDef4229(), "days"));
 };
 export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
-  nextTenureBadge = nextTenureBadge(13523).useNextTenureBadge();
-  let obj = nextTenureBadge(13523);
-  const premiumSince = nextTenureBadge(11323).usePremiumSince();
+  nextTenureBadge = nextTenureBadge(13534).useNextTenureBadge();
+  let obj = nextTenureBadge(13534);
+  const premiumSince = nextTenureBadge(11337).usePremiumSince();
   const items = [nextTenureBadge, premiumSince];
   return useMemo(() => {
     if (null != nextTenureBadge) {
       if (null != premiumSince) {
         const tenureReqNumMonths = tmp.tenureReqNumMonths;
-        const obj = _modDef4231(premiumSince);
-        const addResult = _modDef4231(premiumSince).add(tenureReqNumMonths, "months");
+        const obj = _modDef4229(premiumSince);
+        const addResult = _modDef4229(premiumSince).add(tenureReqNumMonths, "months");
         const obj2 = { days: null, months: null };
         const _Math = Math;
-        const addResult1 = _modDef4231(premiumSince).add(tenureReqNumMonths, "months").add(1, "day");
-        const obj5 = _modDef4231(premiumSince);
-        const addResult2 = _modDef4231(premiumSince).add(tenureReqNumMonths, "months");
+        const addResult1 = _modDef4229(premiumSince).add(tenureReqNumMonths, "months").add(1, "day");
+        const obj5 = _modDef4229(premiumSince);
+        const addResult2 = _modDef4229(premiumSince).add(tenureReqNumMonths, "months");
         obj2.days = Math.max(
           0,
-          _modDef4231(premiumSince).add(tenureReqNumMonths, "months").add(1, "day").diff(_modDef4231(), "days"),
+          _modDef4229(premiumSince).add(tenureReqNumMonths, "months").add(1, "day").diff(_modDef4229(), "days"),
         );
         const _Math2 = Math;
         const _Math3 = Math;
-        obj2.months = Math.max(0, Math.round(addResult1.diff(_modDef4231(), "months", true)));
+        obj2.months = Math.max(0, Math.round(addResult1.diff(_modDef4229(), "months", true)));
         return obj2;
       }
     }

@@ -6,18 +6,18 @@ import useResourceChannelsDefault from "../useResourceChannels.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = fn(16674).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(16694).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");
 
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
-  importDefault = guildId(4341).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
-  let obj = guildId(4341);
+  importDefault = guildId(4339).useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
+  let obj = guildId(4339);
   let obj2 = { children: null };
   const arr = useResourceChannelsDefault(guildId);
-  obj2.children = jsx(guildId(7306).ActionSheetRow.Group, {
+  obj2.children = jsx(guildId(7309).ActionSheetRow.Group, {
     hasIcons: true,
     children: useResourceChannelsDefault(guildId).map((label) => {
       const resourceChannelIconURL = height(dependencyMap[10]).getResourceChannelIconURL(label);
@@ -46,5 +46,5 @@ export default function OnboardingHomeResourcesSheet(guildId) {
       );
     }),
   });
-  return jsx(guildId(7304).ActionSheet, { children: null });
+  return jsx(guildId(7307).ActionSheet, { children: null });
 }

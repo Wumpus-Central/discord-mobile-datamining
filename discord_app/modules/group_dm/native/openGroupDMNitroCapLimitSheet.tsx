@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/group_dm/native/openGroupDMNitroCapLimitSheet.tsx");
 
 export default function openGroupDMNitroCapLimitSheet(location) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11730, dependencyMap.paths), "GroupDMNitroCapLimitSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11738, dependencyMap.paths), "GroupDMNitroCapLimitSheet", {
     location,
   });
 }

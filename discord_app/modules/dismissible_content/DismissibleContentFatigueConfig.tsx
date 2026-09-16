@@ -3,11 +3,9 @@ import dismissible_content from "../../../discord_common/js/packages/protos/disc
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
-  dismissible_content.DismissibleContent.APPLICATION_COMMAND_TOOLTIP,
   dismissible_content.DismissibleContent.NOW_PLAYING_CONSENT_CARD,
   dismissible_content.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL,
   dismissible_content.DismissibleContent.CHANNEL_BROWSER_NUX,
-  dismissible_content.DismissibleContent.CLIENT_THEMES_SPARKLE_PREVIEW,
   dismissible_content.DismissibleContent.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE,
   dismissible_content.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL,
   dismissible_content.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE,
@@ -18,7 +16,6 @@ const items = [
   dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
   dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
   dismissible_content.DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
-  dismissible_content.DismissibleContent.CHANNEL_LIST_CLAN_ADMIN_UPSELL,
   dismissible_content.DismissibleContent.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE,
   dismissible_content.DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP,
   dismissible_content.DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP,
@@ -68,10 +65,8 @@ const items = [
   dismissible_content.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING,
   dismissible_content.DismissibleContent.NAGBAR_NOTICE_OFFER_EXPIRING,
   dismissible_content.DismissibleContent.CLOUD_PLAY_NEW_BADGE,
-  dismissible_content.DismissibleContent.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
   dismissible_content.DismissibleContent.CHURN_DISCOUNT_PREMIUM_TAB_BADGE,
   dismissible_content.DismissibleContent.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK,
-  dismissible_content.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL,
   dismissible_content.DismissibleContent.WISHLIST_NUX_TOOLTIP_AND_MODAL,
   dismissible_content.DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET,
   dismissible_content.DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS,
@@ -101,7 +96,6 @@ const items = [
   dismissible_content.DismissibleContent.USER_PROFILE_WISHLIST_RECOMMENDATIONS,
   dismissible_content.DismissibleContent.QUEST_ACTIVITY_HEADER_INTRO,
   dismissible_content.DismissibleContent.FIRST_BOOSTER_UPSELL_OVERSEER,
-  dismissible_content.DismissibleContent.MOBILE_MULTI_GUILD_CREATE_UPSELL_ANIMATION,
   dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE,
   dismissible_content.DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE,
   dismissible_content.DismissibleContent.PREMIUM_GROUP_POPOVER_UPSELL_V2,

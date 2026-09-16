@@ -44,10 +44,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "Current subscription has no plan in group",
-    externalChildren: null,
-    expandedChildren: false,
-    children: false,
+    label: "geluid",
+    externalChildren: "horen",
+    expandedChildren: "lichaam",
+    children: "luisteren",
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -64,9 +64,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "Current subscription has no plan in group",
-    externalChildren: null,
-    expandedChildren: false,
-    children: false,
+    label: "geluid",
+    externalChildren: "horen",
+    expandedChildren: "lichaam",
+    children: "luisteren",
   });
 });

@@ -78,7 +78,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let items = [,];
 ({ YEAR: arr[0], MONTH: arr[1] } = SubscriptionIntervalTypes);
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_8 },
   containerSelected: null,
@@ -100,7 +100,7 @@ obj2.labelPromo = {
   borderRadius: nativeDefault.radii.round,
 };
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(4639);
+createStyles = fn(4638);
 const obj7 = { durationContainer: null, durationTitle: null };
 let obj5 = {
   marginStart: nativeDefault.space.PX_8,
@@ -117,12 +117,12 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 
 export default function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(10832).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10840).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1115).intl;
   obj3.children = intl.string(planInterval(1115).t["8XT6Nf"]);
-  items = [closure_6(planInterval(4635).Text, obj3)];
+  items = [closure_6(planInterval(4634).Text, obj3)];
   items[1] = items.map((planInterval, index) =>
     timestampProducer(PremiumGiftDurationButton, { selected: planInterval === planInterval, planInterval }, index),
   );

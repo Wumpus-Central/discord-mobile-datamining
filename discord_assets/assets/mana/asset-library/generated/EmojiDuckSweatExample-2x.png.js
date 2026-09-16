@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/48cb7e5eb18ca69dd29ba9c5f6a2ae6a34c1804402d359cc2c4502fd1f0e774a.png";
-export const metadata = { fileBytes: 4219 };
+export default "https://cdn.discordapp.com/assets/content/4ca9eb32edd9326c55a64ab8e28e7ce0bd5e6d123ada84d91286bf661b56fd87.png";
+export const metadata = { fileBytes: 4173 };

@@ -5,7 +5,7 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/StreamingTier2LargeBadge-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/4de803816d00a21f58c56964c066ce39e05ba0b54c9927f59197aa5f3b7d6ac7.png";
+export default "https://cdn.discordapp.com/assets/content/589361bdb62a77cb89eed9a84af8a8da7737d2cf1aee2e1b55a9cd9264ad218b.png";
 export const vanityUrl =
   "https://cdn.discordapp.com/assets/mana/asset-library/generated/StreamingTier2LargeBadge-2x.png";
-export const metadata = { fileBytes: 3437 };
+export const metadata = { fileBytes: 3473 };

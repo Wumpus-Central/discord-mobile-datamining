@@ -254,25 +254,25 @@ function DropdownOption(option) {
   obj3.children = closure_15(EmojiDefault, obj4);
   const items1 = [
     closure_15(closure_6, obj3),
-    closure_15(tmp2(4635).Text, { variant: "text-md/semibold", children: option.title }),
+    closure_15(tmp2(4634).Text, { variant: "text-md/semibold", children: option.title }),
   ];
   obj2.children = items1;
   return closure_16(closure_6, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-let closure_13 = fn(7204).GuildOnboardingModalStates;
+let closure_13 = fn(7207).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5767).NAV_BAR_HEIGHT,
+    marginTop: fn(5768).NAV_BAR_HEIGHT,
     marginBottom: 16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -299,7 +299,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5767).NAV_BAR_HEIGHT,
+  marginTop: fn(5768).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -631,7 +631,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7242, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7245, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, flag) {

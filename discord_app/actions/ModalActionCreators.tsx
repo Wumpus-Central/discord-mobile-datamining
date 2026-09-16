@@ -2,7 +2,8 @@
 import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../Constants.tsx";
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import uniqueIdDefault from "../../_runtime/04843_uniqueId.js";
+import Types from "../modules/main_tabs_v2/Types.tsx";
+import uniqueIdDefault from "../../_runtime/04842_uniqueId.js";
 import getDeprecatedModalDataDefault from "../utils/getDeprecatedModalData.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
@@ -23,8 +24,14 @@ export default {
     }
     const obj = NavigationRouteUtils;
     const merged = Object.assign(arg3);
-    obj.pushModal({ modal: getDeprecatedModalDataDefault(modal, {}, props, tmp) });
-    const obj2 = { modal: getDeprecatedModalDataDefault(modal, {}, props, tmp) };
+    obj.pushModal({
+      modal: getDeprecatedModalDataDefault(modal, {}, props, tmp),
+      trigger: Types.ModalOpenTrigger.AUTOMATIC,
+    });
+    const obj2 = {
+      modal: getDeprecatedModalDataDefault(modal, {}, props, tmp),
+      trigger: Types.ModalOpenTrigger.AUTOMATIC,
+    };
     const element = { type: "MODAL_PUSH", modal, props, key: tmp, appContext: APP };
     DispatcherDefault.dispatch(element);
     return tmp;
@@ -52,7 +59,7 @@ export default {
     }
     promise = new Promise((arg0) => {
       closure_0 = arg0;
-      return promise(merged[6]).enqueue(() => closure_0(self.pushLazy(closure_1, closure_2, closure_3, closure_0)));
+      return promise(merged[7]).enqueue(() => closure_0(self.pushLazy(closure_1, closure_2, closure_3, closure_0)));
     });
     return promise;
   },

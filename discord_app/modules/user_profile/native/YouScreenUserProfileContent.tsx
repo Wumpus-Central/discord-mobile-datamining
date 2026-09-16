@@ -209,10 +209,10 @@ function EditSection(navigateToProfileCustomization) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const useIsContentShown = fn(1950).useIsContentShown;
-let UserProfileSections = fn(8303).UserProfileSections;
-const UserProfileThemeTypes = fn(7315).UserProfileThemeTypes;
+let UserProfileSections = fn(8312).UserProfileSections;
+const UserProfileThemeTypes = fn(7318).UserProfileThemeTypes;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
-let closure_13 = fn(14687).UserProfileEditAutoFocusElement;
+let closure_13 = fn(14703).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const size = fn(2);
@@ -374,8 +374,7 @@ export default function YouScreenUserProfileContent(user) {
     items2[1] = tmp3Result;
     let tmp3Result2 = enabled;
     if (enabled) {
-      const obj5 = { style: items };
-      tmp3Result2 = closure_2_14(BalanceWidgetMenuDefault, obj5);
+      tmp3Result2 = closure_2_14(BalanceWidgetMenuDefault, {});
     }
     items2[2] = tmp3Result2;
     items2[3] = closure_2_14(UserProfileActivityDefault, { user, currentUser: user, style: items });
@@ -383,7 +382,7 @@ export default function YouScreenUserProfileContent(user) {
     items2[5] = closure_2_14(FormDividerDefault, {});
     items2[6] = closure_2_14(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
     items2[7] = closure_2_14(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
-    items2[8] = closure_2_14(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends, style: items });
+    items2[8] = closure_2_14(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
     items2[9] = closure_2_14(UserProfileNoteDefault, { userId: user.id });
     obj2.children = items2;
     return __initData(timestampProducer, obj2);

@@ -44,7 +44,7 @@ const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, GuildFeatures: hasOwnProperty } = Constants);
 const value = InstantInviteUtilsDefault.INVITE_OPTIONS_7_DAYS.value;
 const metroRequire = value;
-let createExperiment = fn(4553);
+let createExperiment = fn(4551);
 let obj2 = {
   kind: "guild",
   id: "2025-08_default_invite_expiration_guild",
@@ -59,7 +59,7 @@ let items = [
 ];
 obj2.treatments = items;
 let experiment = createExperiment.createExperiment(obj2);
-createExperiment = fn(4553);
+createExperiment = fn(4551);
 const obj4 = {
   kind: "guild",
   id: "2026-05_default_invite_expiration_guild_web",

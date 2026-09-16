@@ -42,7 +42,7 @@ class VibegrationsMessageHeader {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 },
   name: { flexShrink: 1 },
@@ -50,8 +50,8 @@ let obj2 = {
   conjureTile: null,
 };
 let size = {
-  width: fn(16729).MESSAGE_AVATAR_SIZE,
-  height: fn(16729).MESSAGE_AVATAR_SIZE,
+  width: fn(16763).MESSAGE_AVATAR_SIZE,
+  height: fn(16763).MESSAGE_AVATAR_SIZE,
   borderRadius: nativeDefault.radii.sm,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
@@ -101,7 +101,7 @@ export const VibegrationsUserHeader = function VibegrationsUserHeader(userId) {
     items2,
   );
   const obj = userId(504);
-  const name = userId(4484).useName(stateFromStores);
+  const name = userId(4482).useName(stateFromStores);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;

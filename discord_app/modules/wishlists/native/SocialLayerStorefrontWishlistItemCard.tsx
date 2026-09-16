@@ -9,7 +9,7 @@ import SentGiftsStore from "../SentGiftsStore.tsx";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = {
   position: "absolute",

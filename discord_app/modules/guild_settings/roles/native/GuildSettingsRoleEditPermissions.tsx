@@ -20,7 +20,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   emptyState: { backgroundColor: "transparent", paddingTop: 40 },
   sectionSeparator: { height: nativeDefault.space.PX_24 },
@@ -82,7 +82,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
         React5.dismiss();
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(17788, dependencyMap.paths),
+          asyncRequireImpl(17844, dependencyMap.paths),
           "role-permission-templates-" + guild.id + "-" + role.id,
           { permissionsEdited, onPermissionsChanged, guildId: guild.id },
         );
@@ -91,11 +91,11 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     obj5.onTemplateOpen = obj6;
     obj4.children = intl.format(guild(1115).t.ZhSOBy, obj5);
-    tmp18Result = closure_14(guild(4635).Text, obj4);
+    tmp18Result = closure_14(guild(4634).Text, obj4);
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(16983).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(17040).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -108,9 +108,9 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17785), { role }), , ,];
+  const children = [closure_14(role(17841), { role }), , ,];
   const obj7 = {
-    children: closure_14(guild(7157).SearchField, {
+    children: closure_14(guild(7160).SearchField, {
       size: "md",
       onChange(str) {
         closure_8(str);
@@ -215,7 +215,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     let tmp18Result4 = closure_14(closure_8, obj9);
   } else {
-    const obj10 = { Illustration: tmp27(9892).NoResultsAlt, style: null, bodyStyle: null, body: null };
+    const obj10 = { Illustration: tmp27(9900).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj11.style, emptyStateText: obj11.bodyStyle } = tmp);
     const intl2 = tmp27(1115).intl;
     const obj12 = { query };

@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: { marginTop: 16 },
   scrollView: { marginTop: 8, marginBottom: 8, borderRadius: nativeDefault.radii.sm, maxHeight: 140 },
@@ -36,7 +36,7 @@ export default function GuildEventRecurrences(guildEventId) {
   const obj2 = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1115).intl;
   obj2.children = intl.string(guildEventId(1115).t["D/jjoa"]);
-  const items = [closure_6(guildEventId(4635).Text, obj2), ,];
+  const items = [closure_6(guildEventId(4634).Text, obj2), ,];
   const tmp4 = useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule);
   const tmp6 = c4;
   items[1] = closure_6(closure_5, {
@@ -66,7 +66,7 @@ export default function GuildEventRecurrences(guildEventId) {
         current.scrollToEnd();
       }
     };
-    canViewMoreRecurrences = closure_6(tmp8(5059).Button, obj4);
+    canViewMoreRecurrences = closure_6(tmp8(5060).Button, obj4);
   }
   items[2] = canViewMoreRecurrences;
   obj.children = items;

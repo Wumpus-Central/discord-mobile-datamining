@@ -23,11 +23,11 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16705);
+const VibegrationsConnectionStore = fn(16725);
 ({ deleteStagedAttachment: closure_9, uploadAttachmentBytes: c10 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   container: {
     paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
@@ -457,12 +457,12 @@ export default function VibegrationsNativeComposer(projectId) {
               closure_128_0 = undefined;
               const obj5 = {
                 mediaType: "any",
-                selectionLimit: tmp2(7352).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE,
+                selectionLimit: tmp2(7355).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE,
                 skipProcessing: true,
               };
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(5234).launchImageLibraryAsync(obj5), done: false };
+              const obj6 = { value: tmp5(5235).launchImageLibraryAsync(obj5), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {

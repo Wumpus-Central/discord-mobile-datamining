@@ -17,7 +17,7 @@ let items = [
   [400, 20, -20],
   [410, 0, 40],
 ];
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_6 = createStyles.createStyles({
   emojisContainer: {
     alignItems: "center",

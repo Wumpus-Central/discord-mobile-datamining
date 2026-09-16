@@ -13,12 +13,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const diff = fn(16729).MESSAGE_EDGE_INSET + fn(16729).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(16729).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(4639);
+const diff = fn(16763).MESSAGE_EDGE_INSET + fn(16763).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(16763).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(4638);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(16729).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(16763).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",

@@ -1,10 +1,10 @@
 // discord_app/design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx
+import useBackPressHandler from "../../../../modules/routing/native/useBackPressHandler.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const require = fn;
-fn(17).BackHandler;
+require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx");
 
@@ -15,12 +15,6 @@ export const useNavigatorBackPressHandler = function useNavigatorBackPressHandle
     closure_1.current = current;
   });
   const focusEffect = require("Link").useFocusEffect(
-    noop.useCallback(() => {
-      if (!obj.isIOS()) {
-        current = BackHandler.addEventListener("hardwareBackPress", () => ref.current());
-        return () => closure_0.remove();
-      }
-      obj = current(ref[3]);
-    }, []),
+    noop.useCallback(() => useBackPressHandler.subscribeToBackPress(() => ref.current()), []),
   );
 };

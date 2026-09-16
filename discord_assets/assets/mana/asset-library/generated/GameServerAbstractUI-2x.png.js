@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/GameServerAbstractUI-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/69d979800293f2d0f27a1b4ef0eccd976b73a156592e4020c910d144d77c99a7.png";
-export const metadata = { fileBytes: 326690 };
+export default "https://cdn.discordapp.com/assets/content/f62c60763d6dd7ad342d424d66d92a595d424426147bd1def2a58c734791e528.png";
+export const metadata = { fileBytes: 326689 };

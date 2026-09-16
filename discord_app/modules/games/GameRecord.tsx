@@ -1,4 +1,5 @@
 // discord_app/modules/games/GameRecord.tsx
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import Server from "../../flow/Server.tsx";
 import getGameMediaRefURLDefault from "getGameMediaRefURL.tsx";
@@ -172,8 +173,12 @@ prototype["getCoverURL"] = function getCoverURL(size) {
   }
   return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size });
 };
-prototype["getArtworkURLs"] = function getArtworkURLs() {
+prototype["getArtworkURLs"] = function getArtworkURLs(size) {
   const self = this;
+  let str = null;
+  if (str(self[4]).SUPPORTS_WEBP) {
+    str = "webp";
+  }
   const media = this.media;
   let artwork;
   if (media != null) {
@@ -182,8 +187,39 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
   if (artwork == null) {
     artwork = [];
   }
-  const mapped = artwork.map((item) => getGameMediaRefURLDefault(self.id, item, { keepAspectRatio: true }));
-  return mapped.filter(self(1370).isNotNullish);
+  const mapped = artwork.map((item) =>
+    getGameMediaRefURLDefault(self.id, item, { size, format: str, keepAspectRatio: true }),
+  );
+  return mapped.filter(str(self[5]).isNotNullish);
+};
+prototype["getScreenshotURL"] = function getScreenshotURL(index, size) {
+  const screenshotUrls = this.screenshotUrls;
+  let tmp;
+  if (screenshotUrls != null) {
+    tmp = screenshotUrls[index];
+  }
+  let tmp7Result = null;
+  if (null != tmp) {
+    const obj = { type: "url", value: tmp };
+    const obj2 = { size, format: null, keepAspectRatio: true };
+    let str = null;
+    if (AvatarUtils.SUPPORTS_WEBP) {
+      str = "webp";
+    }
+    obj2.format = str;
+    tmp7Result = getGameMediaRefURLDefault(this.id, obj, obj2);
+  }
+  return tmp7Result;
+};
+prototype["getScreenshotURLs"] = function getScreenshotURLs(arg0) {
+  const self = this;
+  closure_0 = arg0;
+  let screenshotUrls = this.screenshotUrls;
+  if (screenshotUrls == null) {
+    screenshotUrls = [];
+  }
+  const mapped = screenshotUrls.map((item, index) => self.getScreenshotURL(index, closure_0));
+  return mapped.filter(GlobalUtils.isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
   closure_0 = DEVELOPER;

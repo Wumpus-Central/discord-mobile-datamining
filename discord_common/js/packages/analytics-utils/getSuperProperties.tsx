@@ -194,7 +194,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("6425", 10) };
+    obj = { client_build_number: parseInt("6437", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;

@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/AvatarDannoExample-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/d5c771ed972e30dacf518e679d3f1e0c42d1ae5bd68952dabe139dc33a49a6a7.png";
-export const metadata = { fileBytes: 24543 };
+export default "https://cdn.discordapp.com/assets/content/5bb79d52459244349aa473e2944c7e555d8eee944fe8553a24bf6e7476275d50.png";
+export const metadata = { fileBytes: 24688 };

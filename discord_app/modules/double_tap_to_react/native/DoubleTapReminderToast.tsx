@@ -26,7 +26,7 @@ function DoubleTapReminderContent(emoji) {
 }
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { toastText: { marginRight: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_8 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -45,14 +45,14 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
     if (flag == null) {
       flag = false;
     }
-    const result = tmp(8075).disambiguatedEmojiFromSettingsValue(setting);
+    const result = tmp(8084).disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      areEmojisEqualResult = tmp(8075).areEmojisEqual(result, emoji);
-      const tmpResult3 = tmp(8075);
+      areEmojisEqualResult = tmp(8084).areEmojisEqual(result, emoji);
+      const tmpResult3 = tmp(8084);
     }
     if (areEmojisEqualResult) {
       const obj2 = {
@@ -67,13 +67,13 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       };
       ToastActionCreatorsDefault.open(obj2);
       const obj3 = { dismissAction: ContentDismissActionType.AUTO_DISMISS, forceTrack: true };
-      const result1 = tmp(4460).UNSAFE_markDismissibleContentAsDismissed(
+      const result1 = tmp(4458).UNSAFE_markDismissibleContentAsDismissed(
         tmp(1944).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
         obj3,
       );
-      const tmpResult4 = tmp(4460);
+      const tmpResult4 = tmp(4458);
     }
-    const tmpResult = tmp(8075);
+    const tmpResult = tmp(8084);
   }
   obj = require("DismissibleContentUnsafeUtils");
 };

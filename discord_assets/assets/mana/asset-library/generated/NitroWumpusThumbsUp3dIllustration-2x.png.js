@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/NitroWumpusThumbsUp3dIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/daeefbd0a61eb4481c55a572425aa63d946f6c4a7c91f68f09583d1a6a9796c9.png";
-export const metadata = { fileBytes: 216429 };
+export default "https://cdn.discordapp.com/assets/content/a3ce0d48dccf2944ecc195ce93a7a313223114a8622a0f50250220cee36bff37.png";
+export const metadata = { fileBytes: 277274 };

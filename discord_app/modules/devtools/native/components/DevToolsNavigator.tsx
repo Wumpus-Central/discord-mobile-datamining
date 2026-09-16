@@ -1,4 +1,5 @@
 // discord_app/modules/devtools/native/components/DevToolsNavigator.tsx
+import Types from "../../../main_tabs_v2/Types.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
@@ -10,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(8020);
+const NativeStackNavigator = fn(8029);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 let closure_8 = noop.memo((screenKey) => {
   let str = screenKey.screenKey;
@@ -47,14 +48,14 @@ let closure_8 = noop.memo((screenKey) => {
         return {
           headerTitle() {
             const obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_4(closure_1_0(9565).HammerIcon, { size: "sm" })];
+            const items = [closure_1_4(closure_1_0(9576).HammerIcon, { size: "sm" })];
             const obj2 = {
               style: { marginLeft: closure_1_1(576).space.PX_8 },
               variant: "heading-md/semibold",
               color: "mobile-text-heading-primary",
               children: "DevTools",
             };
-            items[1] = closure_1_4(closure_1_0(4635).Text, obj2);
+            items[1] = closure_1_4(closure_1_0(4634).Text, obj2);
             obj.children = items;
             return closure_1_5(closure_1_3, obj);
           },
@@ -64,8 +65,8 @@ let closure_8 = noop.memo((screenKey) => {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(15678).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15678).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15696).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15696).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp] = item;
@@ -88,14 +89,14 @@ let closure_8 = noop.memo((screenKey) => {
       return {
         headerTitle() {
           const obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_4(closure_1_0(9565).HammerIcon, { size: "sm" })];
+          const items = [closure_1_4(closure_1_0(9576).HammerIcon, { size: "sm" })];
           const obj2 = {
             style: { marginLeft: closure_1_1(576).space.PX_8 },
             variant: "heading-md/semibold",
             color: "mobile-text-heading-primary",
             children: "DevTools",
           };
-          items[1] = closure_1_4(closure_1_0(4635).Text, obj2);
+          items[1] = closure_1_4(closure_1_0(4634).Text, obj2);
           obj.children = items;
           return closure_1_5(closure_1_3, obj);
         },
@@ -140,9 +141,9 @@ export const navigateToDevTools = function navigateToDevTools(arg0) {
     obj = {};
   }
   ActionSheetActionCreatorsDefault.hideActionSheet();
-  ModalActionCreatorsDefault.pushLazy(
-    () => Promise.resolve(closure_1_8),
-    { screenKey: obj.screenKey },
-    "DevToolsNavigator",
-  );
+  const obj3 = ModalActionCreatorsDefault;
+  const obj4 = { screenKey: obj.screenKey };
+  obj3.pushLazy(() => Promise.resolve(closure_1_8), obj4, "DevToolsNavigator", {
+    trigger: Types.ModalOpenTrigger.USER_INTERACTION,
+  });
 };

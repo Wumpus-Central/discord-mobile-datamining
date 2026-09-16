@@ -14,8 +14,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11714 from "../../../../_runtime/metro/11714__.js";
-import _modDef11715 from "../../../../_runtime/metro/11715__.js";
+import _modDef11722 from "../../../../_runtime/metro/11722__.js";
+import _modDef11723 from "../../../../_runtime/metro/11723__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -38,10 +38,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11714, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11722, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [closure_1_12(native2.Icon, obj4)];
-    const obj5 = { source: _modDef11715, color: WHITE };
+    const obj5 = { source: _modDef11723, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = closure_1_12(native2.Icon, obj5);
     obj3.children = items;
@@ -51,21 +51,22 @@ function VerifiedIcon(arg0) {
   tmp2Result = shared;
 }
 const View = fn(17).View;
-let Constants = fn(7315);
+let Constants = fn(7318);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(5493).MetadataFields;
+const MetadataFields = fn(5494).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1177).Icon.Sizes.REFRESH_SMALL_16;
 let native = fn(1177);
 const iconSize = native.getIconSize(REFRESH_SMALL_16);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = {
   cardContainer: { paddingBottom: CARD_PADDING - 12 },
   refreshCardTitle: { marginBottom: nativeDefault.space.PX_8 },
   connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 },
+  linkIcon: { marginEnd: 4 },
   connectedAccountNameText: { flexShrink: 1 },
   verifiedIconContainer: { height: iconSize, width: iconSize },
   verifiedIcon: { position: "absolute", left: 0, top: 0 },
@@ -270,7 +271,8 @@ let closure_18 = noop.memo((userId) => {
     obj11.icon = closure_12(tmp2(tmp3[29]).BaseIconImage, obj12);
     let tmp29Result6;
     if (null != platformUserUrl) {
-      tmp29Result6 = closure_12(tmp2(tmp3[30]).LinkExternalSmallIcon, { size: "sm" });
+      const obj13 = { size: "sm", style: tmp.linkIcon };
+      tmp29Result6 = closure_12(tmp2(tmp3[30]).LinkExternalSmallIcon, obj13);
     }
     obj11.trailing = tmp29Result6;
     let tmp39 = callback1;
@@ -442,8 +444,8 @@ export const ApplicationRoleConnection = memoResult;
 export const UserProfileAccountConnectionsCard = function UserProfileAccountConnectionsCard(userId) {
   userId = userId.userId;
   const tmp = closure_16();
-  const theme = userId(4350).useThemeContext().theme;
-  const obj = userId(4350);
+  const theme = userId(4348).useThemeContext().theme;
+  const obj = userId(4348);
   const items = [LocaleStore];
   dependencyMap = userId(504).useStateFromStores(items, () => locale2.locale);
   const obj2 = userId(504);
@@ -451,7 +453,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(13223)(userId));
+  ({ connections, appIdentities } = theme(13234)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(
@@ -479,8 +481,8 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
     obj4.title = intl.string(tmp2(1115).t["3fe7U5"]);
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(5772).TableRowGroup, obj5);
-    return closure_12(tmp5(7314), obj4);
+    obj4.children = closure_12(tmp2(5773).TableRowGroup, obj5);
+    return closure_12(tmp5(7317), obj4);
   }
   return null;
 };

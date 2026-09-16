@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = {
   labelContainer: { flexDirection: "row", alignItems: "center" },
   showAllText: { marginLeft: nativeDefault.space.PX_12 },

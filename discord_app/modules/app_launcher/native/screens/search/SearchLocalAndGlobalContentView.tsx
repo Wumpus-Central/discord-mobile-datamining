@@ -37,20 +37,20 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(12185).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(12193).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12190), obj2);
+    tmp4 = closure_10(onPressSend(12198), obj2);
   }
-  obj = hasOptions(12185);
-  const tmpResult = hasOptions(12239);
+  obj = hasOptions(12193);
+  const tmpResult = hasOptions(12247);
   const commandRowSend = tmpResult.useCommandRowSend({
     command,
     context,
     beforeExecuteCommand,
     onExecuteCommand,
-    sectionName: hasOptions(9541).AppLauncherSectionName.SEARCH,
+    sectionName: hasOptions(9552).AppLauncherSectionName.SEARCH,
   });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
@@ -89,16 +89,16 @@ function CommandRow(arg0) {
     context,
     beforeExecuteCommand,
     onExecuteCommand,
-    sectionName: hasOptions(9541).AppLauncherSectionName.SEARCH,
+    sectionName: hasOptions(9552).AppLauncherSectionName.SEARCH,
   };
-  obj4.subLabel = hasOptions(9421).getSectionName(application);
+  obj4.subLabel = hasOptions(9432).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(12239), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return closure_10(hasOptions(5690).TableRow, obj4);
+  obj4.trailing = closure_10(onPressSend(12247), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(5691).TableRow, obj4);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -188,8 +188,8 @@ function CommandsExpandableList(expandedOverride) {
   });
 }
 const View = fn(17).View;
-const getSection = fn(9422).getSection;
-const FetchState = fn(12202).FetchState;
+const getSection = fn(9433).getSection;
+const FetchState = fn(12210).FetchState;
 const AppLauncherNativeConstants = fn(1483);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
@@ -208,7 +208,7 @@ const array = new Array(6);
 let closure_17 = array.fill("placeholder");
 const array2 = new Array(3);
 let closure_18 = array2.fill({ type: obj.PLACERHOLDER });
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj3 = {
   sectionHeader: { marginBottom: 8 },
   list: {

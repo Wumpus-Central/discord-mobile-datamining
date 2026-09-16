@@ -5,10 +5,10 @@ import FramesStore from "FramesStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const EmbeddedSurfaceType = fn(9643).EmbeddedSurfaceType;
+const EmbeddedSurfaceType = fn(9654).EmbeddedSurfaceType;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire } = Constants);
-const TransportTypes = fn(4544).TransportTypes;
+const TransportTypes = fn(4542).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -19,14 +19,14 @@ class FramesManager extends tmp3 {
       },
       FRAME_LAUNCH(arg0) {
         ({ applicationId, analyticsContext } = arg0);
-        const result = applyArgumentsResult(9650).trackFrameSessionStart(applicationId, analyticsContext);
+        const result = applyArgumentsResult(9661).trackFrameSessionStart(applicationId, analyticsContext);
       },
       FRAME_LAUNCH_FAIL(arg0) {
         ({ applicationId, error, analyticsContext } = arg0);
-        const result = applyArgumentsResult(9650).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+        const result = applyArgumentsResult(9661).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
       },
       FRAME_STOP(applicationId) {
-        applyArgumentsResult(9650).trackFrameSessionEnd(applicationId.applicationId);
+        applyArgumentsResult(9661).trackFrameSessionEnd(applicationId.applicationId);
       },
       VOICE_CHANNEL_SELECT(arg0) {
         const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);

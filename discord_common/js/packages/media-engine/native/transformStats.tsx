@@ -531,6 +531,7 @@ function transformInboundVideoStats(height, id, id, playout) {
     jitterBuffer: null,
     currentDelay: null,
     targetDelay: null,
+    totalProcessingDelay: null,
     minPlayoutDelay: null,
     renderDelay: null,
     averageDecodeTime: null,
@@ -586,6 +587,7 @@ function transformInboundVideoStats(height, id, id, playout) {
     jitterBuffer: obj.jitterBuffer,
     currentDelay: obj.currentDelay,
     targetDelay: obj.targetDelay,
+    totalProcessingDelay: obj.totalProcessingDelay,
     minPlayoutDelay: obj.minPlayoutDelay,
     renderDelay: obj.renderDelay,
     decode: obj.averageDecodeTime,
@@ -791,7 +793,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         let obj5 = {
           type: "audio",
           ssrc: audio.ssrc,
-          sinkWant: id(4757).formatSinkWantStat(id, audio.ssrc, false),
+          sinkWant: id(4756).formatSinkWantStat(id, audio.ssrc, false),
           sinkWantAsInt: null,
           codec: null,
           bytesReceived: null,
@@ -825,6 +827,9 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           opPreemptiveExpand: null,
           opCNG: null,
           delayEstimate: null,
+          totalProcessingDelay: null,
+          totalSamplesReceived: null,
+          totalSamplesDuration: null,
           passthroughCount: null,
           decryptSuccessCount: null,
           decryptFailureCount: null,
@@ -834,8 +839,8 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           decryptInvalidNonceCount: null,
         };
         const arr = obj7[id];
-        const obj2 = id(4757);
-        obj5.sinkWantAsInt = id(4757).formatSinkWantAsInt(id, audio.ssrc);
+        const obj2 = id(4756);
+        obj5.sinkWantAsInt = id(4756).formatSinkWantAsInt(id, audio.ssrc);
         ({ codecPayloadType: obj4.id, codecName: obj4.name } = audio);
         obj5.codec = { id: null, name: null };
         ({
@@ -873,6 +878,9 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           opPreemptiveExpand: obj.opPreemptiveExpand,
           opCNG: obj.opCNG,
           delayEstimate: obj.delayEstimate,
+          totalProcessingDelay: obj.totalProcessingDelay,
+          totalSamplesReceived: obj.totalSamplesReceived,
+          totalSamplesDuration: obj.totalSamplesDuration,
           passthroughCount: obj.passthroughCount,
           decryptSuccessCount: obj.decryptSuccessCount,
           decryptFailureCount: obj.decryptFailureCount,
@@ -920,7 +928,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         }
         const merged = Object.assign(obj11);
         obj5 = arr.push(obj5);
-        const obj3 = id(4757);
+        const obj3 = id(4756);
         const obj9 = { id: null, name: null };
       }
     });

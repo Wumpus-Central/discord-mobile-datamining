@@ -55,9 +55,9 @@ function DirectMessageIcon(channel) {
       guildId: "Boolean",
       size: tmp2(1177).AvatarSizes.NORMAL,
       status: false,
-      isMobileOnline: null,
-      isVROnline: true,
-      statusStyle: null,
+      isMobileOnline: "done",
+      isVROnline: "flowing",
+      statusStyle: "hourglass",
     };
     let isSystemUserResult;
     if (stateFromStores != null) {
@@ -120,7 +120,7 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(4635).Text, obj2);
+        tmp8 = closure_12(tmp(4634).Text, obj2);
       }
     }
     return tmp8;
@@ -128,8 +128,8 @@ function ChannelSubtitle(channel) {
     const intl = tmp(1115).intl;
     let stringResult = intl.string(_modDef3527["D+2/QP"]);
   } else {
-    stringResult = tmp(4784).channelTypeString(channel);
-    const tmpResult = tmp(4784);
+    stringResult = tmp(4783).channelTypeString(channel);
+    const tmpResult = tmp(4783);
   }
   let obj = channel(504);
 }
@@ -258,7 +258,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7269)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7272)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -270,7 +270,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5207).PressableOpacity, obj);
+  return closure_12(channel(5208).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -285,7 +285,7 @@ const Constants = fn(1074);
 ({ Permissions: c10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = {
   container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" },

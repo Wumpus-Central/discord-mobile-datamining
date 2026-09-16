@@ -47,8 +47,8 @@ prototype["hasHotspot"] = function hasHotspot(LIVE_STAGE_NOTIFICATION_BADGE) {
   }
   return tmp3;
 };
-prototype["hasHiddenHotspot"] = function hasHiddenHotspot(HUB_SECOND_EMAIL_CONNECTION_UPSELL) {
-  return set.has(HUB_SECOND_EMAIL_CONNECTION_UPSELL);
+prototype["hasHiddenHotspot"] = function hasHiddenHotspot(HUB_LINK_CHANNEL_NOTICE) {
+  return set.has(HUB_LINK_CHANNEL_NOTICE);
 };
 prototype["getHotspotOverride"] = function getHotspotOverride(arg0) {
   return hotspotOverrides[arg0];

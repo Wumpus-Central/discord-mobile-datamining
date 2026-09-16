@@ -1,42 +1,42 @@
 // discord_common/js/packages/i18n/i18n.tsx
 import getSystemLocale from "getSystemLocale.tsx";
-import _modDef17384 from "../../../../_runtime/metro/17384__.js";
-import _mod17425 from "../../../../_runtime/metro/17425__.js";
+import _modDef17440 from "../../../../_runtime/metro/17440__.js";
+import _mod17481 from "../../../../_runtime/metro/17481__.js";
 import parse from "parse.tsx";
 
 require = fn;
-global.IntlMessageFormat = _modDef17384;
-const module_17393 = fn(17393);
-const module_17394 = fn(17394);
-const module_17395 = fn(17395);
-const module_17396 = fn(17396);
-const module_17397 = fn(17397);
-const module_17398 = fn(17398);
-const module_17399 = fn(17399);
-const module_17400 = fn(17400);
-const module_17401 = fn(17401);
-const module_17402 = fn(17402);
-const module_17403 = fn(17403);
-const module_17404 = fn(17404);
-const module_17405 = fn(17405);
-const module_17406 = fn(17406);
-const module_17407 = fn(17407);
-const module_17408 = fn(17408);
-const module_17409 = fn(17409);
-const module_17410 = fn(17410);
-const module_17411 = fn(17411);
-const module_17412 = fn(17412);
-const module_17413 = fn(17413);
-const module_17414 = fn(17414);
-const module_17415 = fn(17415);
-const module_17416 = fn(17416);
-const module_17417 = fn(17417);
-const module_17418 = fn(17418);
-const module_17419 = fn(17419);
-const module_17420 = fn(17420);
+global.IntlMessageFormat = _modDef17440;
+const module_17449 = fn(17449);
+const module_17450 = fn(17450);
+const module_17451 = fn(17451);
+const module_17452 = fn(17452);
+const module_17453 = fn(17453);
+const module_17454 = fn(17454);
+const module_17455 = fn(17455);
+const module_17456 = fn(17456);
+const module_17457 = fn(17457);
+const module_17458 = fn(17458);
+const module_17459 = fn(17459);
+const module_17460 = fn(17460);
+const module_17461 = fn(17461);
+const module_17462 = fn(17462);
+const module_17463 = fn(17463);
+const module_17464 = fn(17464);
+const module_17465 = fn(17465);
+const module_17466 = fn(17466);
+const module_17467 = fn(17467);
+const module_17468 = fn(17468);
+const module_17469 = fn(17469);
+const module_17470 = fn(17470);
+const module_17471 = fn(17471);
+const module_17472 = fn(17472);
+const module_17473 = fn(17473);
+const module_17474 = fn(17474);
+const module_17475 = fn(17475);
+const module_17476 = fn(17476);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(17421);
+  fn(17477);
 }
 const React2 = "en-US";
 class Provider {
@@ -139,10 +139,10 @@ _instance_members_initializer_I18N_ = function () {
       return _createProxy(obj3);
     } else {
       try {
-        return self(17426).getMessage(tmp4, locale);
+        return self(17482).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(17426).getMessage(tmp7, tmp);
+          return self(17482).getMessage(tmp7, tmp);
         } else {
           return "";
         }

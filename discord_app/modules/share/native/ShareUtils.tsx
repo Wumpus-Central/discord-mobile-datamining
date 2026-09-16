@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/ShareUtils.tsx
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef11391 from "../../../../_runtime/metro/11391__.js";
+import _modDef11399 from "../../../../_runtime/metro/11399__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
@@ -59,11 +59,11 @@ let closure_6 = async function _sendShareMessage(arg0) {
               originalUri: uri.uri,
               mimeType: uri.mimeType,
               filename: uri.name,
-              platform: closure_0(5212).UploadPlatform.REACT_NATIVE,
+              platform: closure_0(5213).UploadPlatform.REACT_NATIVE,
               width: uri.width,
               height: uri.height,
             };
-            const cloudUpload = new closure_0(5211).CloudUpload(size, closure_1_1.id);
+            const cloudUpload = new closure_0(5212).CloudUpload(size, closure_1_1.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -84,10 +84,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
             attachmentsToUpload: closure_130_4,
             onAttachmentUploadError() {
               closure_1_6.reject(undefined);
-              c1(9439).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-              const obj = c1(9439);
+              c1(9450).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+              const obj = c1(9450);
               const obj2 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-              c1(7882).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+              c1(7891).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
             },
           };
           c4 = 2;
@@ -114,14 +114,14 @@ let closure_6 = async function _sendShareMessage(arg0) {
     }
   }
 };
-const DraftType = fn(4980).DraftType;
-const MessageSendLocation = fn(4632).MessageSendLocation;
+const DraftType = fn(4979).DraftType;
+const MessageSendLocation = fn(4631).MessageSendLocation;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11391 });
+  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11399 });
 };
 export const sendShareMessage = function sendShareMessage() {
   const self = this;

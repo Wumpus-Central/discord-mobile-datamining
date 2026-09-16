@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting(
   "../discord_assets/assets/mana/asset-library/generated/ConnectionCablesSpotIllustration-2x.png.js",
 );
 
-export default "https://cdn.discordapp.com/assets/content/99dbeb3607802bb2b27ca79b278e21926fe2498016ed93245d851300993d97e2.png";
-export const metadata = { fileBytes: 40131 };
+export default "https://cdn.discordapp.com/assets/content/a3f4c6ea54a50af2944bc9457b5975107bfd59f3284991fe50b0432c0e4c129c.png";
+export const metadata = { fileBytes: 41324 };

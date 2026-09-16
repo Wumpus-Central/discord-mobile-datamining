@@ -8,8 +8,8 @@ const result = size.fileFinishedImporting("modules/premium/gifting/native/views/
 
 export default function GiftingBadgeIcon(uri) {
   const size = uri.size;
-  const obj = { source: { uri: uri.icon }, style: null };
+  const obj = { source: { uri: uri.icon }, resizeMode: "contain", style: null };
   const items = [{ width: size, height: size }, uri.style];
   obj.style = items;
-  return <Image source={{ uri: uri.icon }} style={null} />;
+  return <Image source={{ uri: uri.icon }} resizeMode="contain" style={null} />;
 }
