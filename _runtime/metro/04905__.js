@@ -1,41 +1,30 @@
 // === Module 4905: ? ===
 
 // Module 4905
-import _Symbol from "_Symbol" /* 1285 */;
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1315 */;
-import regexTester from "regexTester" /* 1447 */;
+import _mod1445 from "module_1445" /* 1445 */;
 
-let closure_0 = callBoundIntrinsic("Object.prototype.toString");
-if (_Symbol()) {
-  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
-  let closure_2 = regexTester(/^Symbol\(.*\)$/);
-  module.exports = function isSymbol(obj) {
-    if (typeof obj === "symbol") {
-      return true;
-    } else {
-      if (obj) {
-        if (typeof obj === "object") {
-          if ("[object Symbol]" === closure_0(obj)) {
-            try {
-              return (function isRealSymbolObject(arg0) {
-                const valueOfResult = arg0.valueOf();
-                let tmp2 = typeof valueOfResult === "symbol";
-                if (typeof valueOfResult === "symbol") {
-                  tmp2 = closure_1_2(closure_1_1(arg0));
-                }
-                return tmp2;
-              })(obj);
-            } catch (err) {
-              return false;
-            }
-          }
-        }
+let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1445();
+
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
+  }
+  if (!tmp) {
+    return tmp;
+  } else if (closure_2) {
+    let tmp4 = (function tryDateGetDayCall(arg0) {
+      try {
+        closure_1_0(arg0);
+        return true;
+      } catch (err) {
+        return false;
       }
-      return false;
-    }
-  };
-} else {
-  module.exports = function isSymbol(arg0) {
-    return false;
-  };
-}
+    })(obj);
+  } else {
+    tmp4 = "[object Date]" === closure_1(obj);
+  }
+};

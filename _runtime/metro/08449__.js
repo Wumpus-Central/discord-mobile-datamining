@@ -1,80 +1,90 @@
 // === Module 8449: ? ===
 
 // Module 8449
-import colorPropType from "colorPropType" /* 8435 */;
-import _mod8439 from "module_8439" /* 8439 */;
-import _mod8450 from "module_8450" /* 8450 */;
-import emptyFunction_mod from "module_4469" /* 4469 */;
-import "module_4469";
+const require = globalThis.__r;
 
-const items = ["phoneNumber", "link", "address", "calendarEvent", "none", "all"];
-const obj = {};
-const module_8439 = Object.assign(_mod8439);
-let emptyFunction = emptyFunction_mod;
-obj.autoCapitalize = emptyFunction.oneOf(["none", "sentences", "words", "characters"]);
-let emptyFunction = emptyFunction_mod;
-obj.autoCompleteType = emptyFunction.oneOf(["cc-csc", "cc-exp", "cc-exp-month", "cc-exp-year", "cc-number", "email", "name", "password", "postal-code", "street-address", "tel", "username", "off"]);
-obj.autoCorrect = emptyFunction.bool;
-obj.spellCheck = emptyFunction.bool;
-obj.autoFocus = emptyFunction.bool;
-obj.allowFontScaling = emptyFunction.bool;
-obj.maxFontSizeMultiplier = emptyFunction.number;
-obj.editable = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.keyboardType = emptyFunction.oneOf(["default", "email-address", "numeric", "phone-pad", "number-pad", "ascii-capable", "numbers-and-punctuation", "url", "name-phone-pad", "decimal-pad", "twitter", "web-search", "ascii-capable-number-pad", "visible-password"]);
-let emptyFunction = emptyFunction_mod;
-obj.keyboardAppearance = emptyFunction.oneOf(["default", "light", "dark"]);
-let emptyFunction = emptyFunction_mod;
-obj.returnKeyType = emptyFunction.oneOf(["done", "go", "next", "search", "send", "none", "previous", "default", "emergency-call", "google", "join", "route", "yahoo"]);
-obj.returnKeyLabel = emptyFunction.string;
-obj.maxLength = emptyFunction.number;
-obj.numberOfLines = emptyFunction.number;
-obj.disableFullscreenUI = emptyFunction.bool;
-obj.enablesReturnKeyAutomatically = emptyFunction.bool;
-obj.multiline = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.textBreakStrategy = emptyFunction.oneOf(["simple", "highQuality", "balanced"]);
-obj.onBlur = emptyFunction.func;
-obj.onFocus = emptyFunction.func;
-obj.onChange = emptyFunction.func;
-obj.onChangeText = emptyFunction.func;
-obj.onContentSizeChange = emptyFunction.func;
-obj.onTextInput = emptyFunction.func;
-obj.onEndEditing = emptyFunction.func;
-obj.onSelectionChange = emptyFunction.func;
-obj.onSubmitEditing = emptyFunction.func;
-obj.onKeyPress = emptyFunction.func;
-obj.onLayout = emptyFunction.func;
-obj.onScroll = emptyFunction.func;
-obj.placeholder = emptyFunction.string;
-obj.placeholderTextColor = colorPropType;
-obj.scrollEnabled = emptyFunction.bool;
-obj.secureTextEntry = emptyFunction.bool;
-obj.selectionColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.selection = emptyFunction.shape({ start: emptyFunction.number.isRequired, end: emptyFunction.number });
-obj.value = emptyFunction.string;
-obj.defaultValue = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.clearButtonMode = emptyFunction.oneOf(["never", "while-editing", "unless-editing", "always"]);
-obj.clearTextOnFocus = emptyFunction.bool;
-obj.selectTextOnFocus = emptyFunction.bool;
-obj.blurOnSubmit = emptyFunction.bool;
-obj.style = _mod8450.style;
-obj.underlineColorAndroid = colorPropType;
-obj.inlineImageLeft = emptyFunction.string;
-obj.inlineImagePadding = emptyFunction.number;
-obj.rejectResponderTermination = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.oneOf(items), ];
-let emptyFunction = emptyFunction_mod;
-items1[1] = emptyFunction.arrayOf(emptyFunction.oneOf(items));
-obj.dataDetectorTypes = emptyFunction.oneOfType(items1);
-obj.caretHidden = emptyFunction.bool;
-obj.contextMenuHidden = emptyFunction.bool;
-obj.inputAccessoryViewID = emptyFunction.string;
-let emptyFunction = emptyFunction_mod;
-obj.textContentType = emptyFunction.oneOf(["none", "URL", "addressCity", "addressCityAndState", "addressState", "countryName", "creditCardNumber", "emailAddress", "familyName", "fullStreetAddress", "givenName", "jobTitle", "location", "middleName", "name", "namePrefix", "nameSuffix", "nickname", "organizationName", "postalCode", "streetAddressLine1", "streetAddressLine2", "sublocality", "telephoneNumber", "username", "password", "newPassword", "oneTimeCode"]);
-obj.showSoftInputOnFocus = emptyFunction.bool;
+function flattenStyle(obj) {
+  if (null !== obj) {
+    if (typeof obj === "object") {
+      const _Array = Array;
+      if (Array.isArray(obj)) {
+        obj = {};
+        for (let num3 = 0; num3 < length; num3 = num3 + 1) {
+          let tmp3 = flattenStyle(obj[num3]);
+          if (tmp3) {
+            for (const key10019 in tmp3) {
+              obj[key10019] = tmp3[key10019];
+              continue;
+            }
+          }
+        }
+        return obj;
+      } else {
+        return obj;
+      }
+    }
+  }
+}
 
-export default obj;
+export default function DeprecatedStyleSheetPropType(arg0) {
+  _require = require("deprecatedCreateStrictShapeTypeChecker")(arg0);
+  return (arg0, arg1, arg2, arg3) => {
+    const substr = [...arguments].slice();
+    if (arg0[arg1]) {
+      let tmp4;
+      if (null !== arg0[arg1]) {
+        if (typeof arr === "object") {
+          const _Array = Array;
+          tmp4 = arr;
+          if (Array.isArray(arr)) {
+            const obj = {};
+            let num3 = 0;
+            tmp4 = obj;
+            if (0 < arr.length) {
+              do {
+                let arr2 = arr[num3];
+                let tmp6;
+                if (null !== arr2) {
+                  if (typeof arr2 === "object") {
+                    let _Array2 = Array;
+                    tmp6 = arr2;
+                    if (Array.isArray(arr2)) {
+                      let obj2 = {};
+                      let length2 = arr2.length;
+                      let num4 = 0;
+                      tmp6 = obj2;
+                      if (0 < length2) {
+                        do {
+                          let tmp8 = flattenStyle(arr2[num4]);
+                          if (tmp8) {
+                            for (const key10029 in tmp8) {
+                              obj2[key10029] = tmp8[key10029];
+                              continue;
+                            }
+                          }
+                          num4 = num4 + 1;
+                          tmp6 = obj2;
+                        } while (num4 < length2);
+                      }
+                    }
+                  }
+                }
+                if (tmp6) {
+                  for (const key10032 in tmp6) {
+                    obj[key10032] = tmp6[key10032];
+                    continue;
+                  }
+                }
+                num3 = num3 + 1;
+                tmp4 = obj;
+              } while (num3 < length);
+            }
+          }
+        }
+      }
+      const obj3 = {};
+      obj3[arg1] = tmp4;
+    }
+    return closure_0(arg1, arg2, arg3, ...substr);
+  };
+};

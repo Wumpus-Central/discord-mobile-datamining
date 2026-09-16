@@ -172,7 +172,7 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            if (typeof f20009 === "function") {
+            if (typeof f20065 === "function") {
               str = " -> ";
               str2 = "Dependency Cycle Found: ";
               tmp16 = globalThis;
@@ -268,7 +268,7 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            if (typeof f20009 === "function") {
+            if (typeof f20065 === "function") {
               str = " -> ";
               str2 = "Dependency Cycle Found: ";
               tmp16 = globalThis;
@@ -368,7 +368,7 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            if (typeof f20009 === "function") {
+            if (typeof f20065 === "function") {
               str = " -> ";
               str2 = "Dependency Cycle Found: ";
               tmp16 = globalThis;
@@ -452,7 +452,7 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            if (typeof f20009 === "function") {
+            if (typeof f20065 === "function") {
               str = " -> ";
               str2 = "Dependency Cycle Found: ";
               tmp16 = globalThis;
@@ -511,8 +511,8 @@ class tmp {
     setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(this));
     if (Error.captureStackTrace) {
       _Error = Error;
-      tmp3 = f20009;
-      captureStackTraceResult = Error.captureStackTrace(error, f20009);
+      tmp3 = f20065;
+      captureStackTraceResult = Error.captureStackTrace(error, f20065);
     }
     return error;
   }

@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native/images", width: 375, height: 58, scales: [1, 2, 3], hash: "e5d497e242dfffadb8102108e8df2b1a", name: "clouds_background", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e2f2314b317d679f7a97eb76ebf6b124", name: "UnsendIcon", type: "png" });

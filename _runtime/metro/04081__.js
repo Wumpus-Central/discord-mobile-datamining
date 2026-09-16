@@ -1,17 +1,17 @@
 // === Module 4081: ? ===
 
 // Module 4081
-import startOfSecond_mod from "startOfSecond" /* 4082 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import _typeof_mod from "module_3726" /* 3726 */;
+import requiredArgs_mod from "requiredArgs" /* 3727 */;
 
-let startOfSecond = startOfSecond_mod;
-if (!startOfSecond) {
-  const obj = { default: startOfSecond };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfSecond;
+  tmp3 = _typeof;
 }
-startOfSecond = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameSecond(arg0, arg1) {
+export default function isSameYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfSecond.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfSecond.default(arg1).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  return fullYear === _typeof.default(arg1).getFullYear();
 };
 export default exports.default;

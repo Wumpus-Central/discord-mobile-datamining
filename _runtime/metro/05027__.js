@@ -1,8 +1,11 @@
 // === Module 5027: ? ===
 
 // Module 5027
-new Set();
+import noop from "module_19" /* 19 */;
 
-export default function warnOnce(arg0) {
-  const substr = [...arguments].slice();
-};
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
+const context = noop.createContext((children) => framebus(React, { children: children.children }));
+
+export const GHContext = context;
+export const RNSScreensRefContext = noop.createContext(null);

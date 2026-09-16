@@ -7,23 +7,45 @@ import _mod6922 from "module_6922" /* 6922 */;
 import noop_mod from "module_19" /* 19 */;
 
 let noop = noop_mod;
-const useMemo = noop.useMemo;
+({ useMemo: c3, memo } = noop);
 let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
+const Platform = _mod17.Platform;
 const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  let items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    const items = [_mod6922.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
-  }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(6923).BottomSheetBackground;
+const __initData = { code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}" };
+const memoResult = memo(function BottomSheetBodyComponent(children) {
+  const style = children.style;
+  let View = children.BodyComponent;
+  if (View === undefined) {
+    View = animatedIndex(animatedPosition[3]).View;
   }
-  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
+  animatedPosition = undefined;
+  const bottomSheetInternal = style(animatedPosition[4]).useBottomSheetInternal();
+  animatedIndex = bottomSheetInternal.animatedIndex;
+  animatedPosition = bottomSheetInternal.animatedPosition;
+  let obj = style(animatedPosition[4]);
+  const fn = function y() {
+    let num = 1;
+    if (-1 === animatedIndex.get()) {
+      num = 0;
+    }
+    const obj = { opacity: num, transform: null };
+    const items = [{ translateY: animatedPosition.get() }];
+    obj.transform = items;
+    return obj;
+  };
+  fn.__closure = { Platform, animatedIndex, animatedPosition };
+  fn.__workletHash = 5915282482182;
+  fn.__initData = __initData;
+  let items = [animatedPosition, animatedIndex];
+  const animatedStyle = style(animatedPosition[3]).useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  const obj2 = style(animatedPosition[3]);
+  const obj3 = { Platform, animatedIndex, animatedPosition };
+  return <View style={animatedStyle(() => {
+    const items = [style, _mod6922.styles.container, animatedStyle];
+    return items;
+  }, items1)} collapsable>{children.children}</View>;
 });
-memoResult.displayName = "BottomSheetBackgroundContainer";
+memoResult.displayName = "BottomSheetBody";
 
-export const BottomSheetBackgroundContainer = memoResult;
+export const BottomSheetBody = memoResult;

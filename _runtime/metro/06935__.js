@@ -1,111 +1,69 @@
 // === Module 6935: ? ===
 
 // Module 6935
-import jsxProd from "jsxProd" /* 21 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
+import _mod6937 from "module_6937" /* 6937 */;
 import noop_mod from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
 let noop = noop_mod;
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+const useMemo = noop.useMemo;
 let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneousHandlers) {
-  simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
-  let DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers.enableHandlePanningGesture;
-  ({ animatedIndex, animatedPosition } = simultaneousHandlers);
-  if (DEFAULT_ENABLE_HANDLE_PANNING_GESTURE === undefined) {
-    DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers(handleHeight[2]).DEFAULT_ENABLE_HANDLE_PANNING_GESTURE;
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
+  style = style.style;
+  const indicatorStyle = style.indicatorStyle;
+  let DEFAULT_ACCESSIBLE = style.accessible;
+  if (DEFAULT_ACCESSIBLE === undefined) {
+    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
   }
-  handleHeight = simultaneousHandlers.handleHeight;
-  let handleComponent = simultaneousHandlers.handleComponent;
-  let failOffsetX;
-  ({ handleStyle, handleIndicatorStyle } = simultaneousHandlers);
-  const tmp3 = failOffsetX(null);
-  const bottomSheetInternal = simultaneousHandlers(handleHeight[3]).useBottomSheetInternal();
-  const activeOffsetX = bottomSheetInternal.activeOffsetX;
-  const activeOffsetY = bottomSheetInternal.activeOffsetY;
-  failOffsetX = bottomSheetInternal.failOffsetX;
-  const failOffsetY = bottomSheetInternal.failOffsetY;
-  const waitFor = bottomSheetInternal.waitFor;
-  const simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
-  const obj = simultaneousHandlers(handleHeight[3]);
-  const tmp4 = simultaneousHandlers;
-  const handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers().handlePanGestureHandler;
-  let items = [simultaneousHandlers2, simultaneousHandlers];
-  const tmp7 = activeOffsetY(() => {
-    const items = [];
-    if (simultaneousHandlers) {
-      items.push(tmp);
-    }
-    if (simultaneousHandlers2) {
-      const _Array = Array;
-      const push = items.push;
-      if (Array.isArray(simultaneousHandlers2)) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(simultaneousHandlers2, 0);
-        HermesBuiltin.apply(items1, items);
-      } else {
-        push(simultaneousHandlers2);
-      }
-    }
+  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
+  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
+    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
+  }
+  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
+  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
+    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
+  }
+  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
+  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
+    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
+  }
+  let items = [style];
+  const items1 = [indicatorStyle];
+  const obj = {
+    style: useMemo(() => {
+      const items = [_mod6937.styles.container, React3.flatten(style)];
+      return items;
+    }, items),
+    accessible: null,
+    accessibilityRole: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    collapsable: true,
+    children: null
+  };
+  const tmp9 = useMemo(() => {
+    const items = [_mod6937.styles.container, React3.flatten(style)];
     return items;
   }, items);
-  closure_10 = tmp7;
-  let items1 = [activeOffsetX, activeOffsetY, DEFAULT_ENABLE_HANDLE_PANNING_GESTURE, failOffsetX, failOffsetY, tmp7, waitFor, , , , ];
-  ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = handlePanGestureHandler);
-  const items2 = [handleHeight];
-  const obj2 = simultaneousHandlers(handleHeight[3]);
-  const items3 = [handleHeight];
-  const tmp8 = activeOffsetY(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const PanResult = Gesture.Pan();
-    const result = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE).shouldCancelWhenOutside(false);
-    const enabledResult = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE);
-    const runOnJSResult = result.runOnJS(false);
-    const onStartResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart);
-    const onChangeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange);
-    const onFinalizeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange).onEnd(handlePanGestureHandler.handleOnEnd).onFinalize(handlePanGestureHandler.handleOnFinalize);
-    let result1 = onFinalizeResult;
-    if (waitFor) {
-      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
-    }
-    let result2 = result1;
-    if (closure_10) {
-      result2 = result1.simultaneousWithExternalGesture(tmp2);
-    }
-    let activeOffsetXResult = result2;
-    if (activeOffsetX) {
-      activeOffsetXResult = result2.activeOffsetX(tmp3);
-    }
-    let activeOffsetYResult = activeOffsetXResult;
-    if (activeOffsetY) {
-      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
-    }
-    let failOffsetXResult = activeOffsetYResult;
-    if (failOffsetX) {
-      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
-    }
-    let failOffsetYResult = failOffsetXResult;
-    if (failOffsetY) {
-      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
-    }
-    return failOffsetYResult;
-  }, items1);
-  const tmp9 = activeOffsetX(function handleContainerLayout(nativeEvent) {
-    handleHeight.value = nativeEvent.nativeEvent.layout.height;
-  }, items2);
-  const tmp10 = activeOffsetX((height) => {
-    handleHeight.value = height.height;
-  }, items3);
-  const boundingClientRect = simultaneousHandlers(handleHeight[3]).useBoundingClientRect(tmp3, tmp10);
-  if (handleComponent == null) {
-    handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
-  }
-  const obj4 = { gesture: tmp8, children: null };
-  const obj3 = simultaneousHandlers(handleHeight[3]);
-  obj4.children = failOffsetY(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View, { ref: tmp3, onLayout: tmp9, children: failOffsetY(handleComponent, { animatedIndex, animatedPosition, style: handleStyle, indicatorStyle: handleIndicatorStyle }) }, "BottomSheetHandleContainer");
-  return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj4);
+  obj.accessible = DEFAULT_ACCESSIBLE;
+  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
+  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
+  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
+  const items2 = [
+    closure_5(closure_4, {
+      style: useMemo(() => {
+        const items = [_mod6937.styles.indicator, React3.flatten(indicatorStyle)];
+        return items;
+      }, items1)
+    }),
+    style.children
+  ];
+  obj.children = items2;
+  return closure_6(closure_4, obj);
 });
-memoResult.displayName = "BottomSheetHandleContainer";
+memoResult.displayName = "BottomSheetHandle";
 
 export default memoResult;

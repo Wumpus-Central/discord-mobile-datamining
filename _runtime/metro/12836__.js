@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 156.5, height: 118, scales: [2, 3], hash: "273d7cc721dbd2991c78c1e8d926e220", name: "empty-suggestions-header", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 215.5, height: 135, scales: [2, 3], hash: "fad7ba73a3f13e1d6de72f833c30efc1", name: "header-art-onboarding", type: "png" });

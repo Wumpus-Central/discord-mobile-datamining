@@ -1,211 +1,86 @@
 // === Module 10604: ? ===
 
 // Module 10604
-import assignSimilarDate from "assignSimilarDate" /* 10571 */;
+import Filter from "Filter" /* 10592 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-let self = this;
-const ForwardDateRefiner = require;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
-  }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
+const ENMergeRelativeAfterDateRefiner = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (!fn) {
-      fn = function t(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_6 = fn(assignSimilarDate);
-    class ForwardDateRefiner {
-      constructor() {
-        tmp = closure_3(this, ForwardDateRefiner);
-        return;
-      }
-    }
-    const entry = {
-      key: "refine",
-      value: function refine(option, arr) {
-            const self = this;
-            if (option.option.forwardDate) {
-              const item = arr.forEach((start) => {
-                option = start;
-                const reference = option.reference;
-                const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
-                start = start.start;
-                if (start.isOnlyTime()) {
-                  const start2 = start.start;
-                  if (obj.reference.instant > start2.date()) {
-                    const reference2 = obj.reference;
-                    const dateWithAdjustedTimezone1 = reference2.getDateWithAdjustedTimezone();
-                    const _Date = Date;
-                    const date = new Date(dateWithAdjustedTimezone1);
-                    date.setDate(date.getDate() + 1);
-                    closure_1_6.implySimilarDate(start.start, date);
-                    obj.debug(() => {
-                      console.log("" + self.constructor.name + " adjusted " + closure_0 + " time from the ref date (" + dateWithAdjustedTimezone1 + ") to the following day (" + date + ")");
-                    });
-                    let end2 = start.end;
-                    if (end2) {
-                      const end = start.end;
-                      end2 = end.isOnlyTime();
-                    }
-                    if (end2) {
-                      closure_1_6.implySimilarDate(start.end, date);
-                      ({ start: start3, end: end3 } = start);
-                      if (dateResult > end3.date()) {
-                        date.setDate(date.getDate() + 1);
-                        closure_1_6.implySimilarDate(start.end, date);
-                      }
-                      dateResult = start3.date();
-                    }
-                  }
-                }
-                const start4 = start.start;
-                let tmp5 = dateWithAdjustedTimezone;
-                if (start4.isOnlyWeekdayComponent()) {
-                  const start5 = start.start;
-                  tmp5 = dateWithAdjustedTimezone;
-                  if (dateWithAdjustedTimezone > start5.date()) {
-                    const start11 = start.start;
-                    value = start11.get("weekday");
-                    const diff = value - dateWithAdjustedTimezone.getDay();
-                    let sum = diff;
-                    if (diff <= 0) {
-                      sum = diff + 7;
-                    }
-                    const obj2 = { day: sum };
-                    const addDurationResult = option(self[3]).addDuration(dateWithAdjustedTimezone, obj2);
-                    option(self[2]).implySimilarDate(start.start, addDurationResult);
-                    obj.debug(() => {
-                      console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.start + ")");
-                    });
-                    tmp5 = addDurationResult;
-                    if (start.end) {
-                      const end4 = start.end;
-                      tmp5 = addDurationResult;
-                      if (end4.isOnlyWeekdayComponent()) {
-                        const end5 = start.end;
-                        value2 = end5.get("weekday");
-                        const diff1 = value2 - addDurationResult.getDay();
-                        let sum1 = diff1;
-                        if (diff1 <= 0) {
-                          sum1 = diff1 + 7;
-                        }
-                        const obj3 = { day: sum1 };
-                        const addDurationResult1 = tmp7(self[3]).addDuration(addDurationResult, obj3);
-                        tmp7(self[2]).implySimilarDate(start.end, addDurationResult1);
-                        obj.debug(() => {
-                          console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.end + ")");
-                        });
-                        tmp5 = addDurationResult1;
-                      }
-                    }
-                  }
-                }
-                const start6 = start.start;
-                if (start6.isDateWithUnknownYear()) {
-                  const start7 = start.start;
-                  if (tmp5 > start7.date()) {
-                    const start12 = start.start;
-                    let num3 = 0;
-                    if (tmp5 > start12.date()) {
-                      while (true) {
-                        ({ start: start8, start: start9 } = start);
-                        let implyResult = start8.imply("year", start9.get("year") + 1);
-                        let obj6 = option;
-                        let debugResult3 = option.debug(() => {
-                          console.log("" + self.constructor.name + " adjusted " + start + " year (" + start.start + ")");
-                        });
-                        let end6 = start.end;
-                        if (end6) {
-                          let end7 = start.end;
-                          end6 = !end7.isCertain("year");
-                        }
-                        if (end6) {
-                          ({ end: end8, end: end9 } = start);
-                          let implyResult1 = end8.imply("year", end9.get("year") + 1);
-                          let debugResult4 = obj6.debug(() => {
-                            console.log("" + self.constructor.name + " adjusted " + start + " month (" + start.start + ")");
-                          });
-                        }
-                        let sum2 = num3 + 1;
-                        if (sum2 >= 3) {
-                          break;
-                        } else {
-                          let start10 = start.start;
-                          num3 = sum2;
-                          if (tmp5 <= start10.date()) {
-                            break;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              });
-            }
-            return arr;
-          }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
-    let items = [entry];
-    exports.default = _createClass(ForwardDateRefiner, items);
-  } else {
-    const _Object2 = Object;
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-} else {
-  let _Object = Object;
 }
+class ENMergeRelativeAfterDateRefiner {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(ENMergeRelativeAfterDateRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
+const entry = {
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, arg1, text) {
+    let match = str.match(/^\s*$/i);
+    if (match) {
+      let tmp4 = null != str.match(/^[+-]/i);
+      if (!tmp4) {
+        tmp4 = null != text.text.match(/^-/i);
+      }
+      match = tmp4;
+    }
+    return match;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, text, arg3) {
+      const parseDurationResult = ENMergeRelativeAfterDateRefiner(10572).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/^-/i)) {
+        reverseDurationResult = ENMergeRelativeAfterDateRefiner(10575).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = ENMergeRelativeAfterDateRefiner(10576).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeAfterDateRefiner(10576).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      ({ reference, index } = start);
+      return new ENMergeRelativeAfterDateRefiner(10576).ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
+    }
+  }
+];
+
+export default _createClass(ENMergeRelativeAfterDateRefiner, items);

@@ -5,7 +5,6 @@ import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -29,20 +28,14 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-function changeEventCalculator(arg0, arg1) {
-  return arg0;
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 12945462865583;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}" };
-class ManualGesture {
+class LongPressGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, ManualGesture);
+    tmp = closure_0(this, LongPressGesture);
     tmp2 = c2;
-    obj = c2(ManualGesture);
+    obj = c2(LongPressGesture);
     tmp3 = closure_1;
-    if (closure_4()) {
+    if (closure_3()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -50,25 +43,37 @@ class ManualGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "ManualGestureHandler";
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "LongPressGestureHandler";
+    result = tmp3Result.shouldCancelWhenOutside(true);
     return tmp3Result;
   }
 }
-_classCallCheck = ManualGesture;
-_inherits(ManualGesture, fn(6781).ContinousBaseGesture);
+_classCallCheck = LongPressGesture;
+_inherits(LongPressGesture, fn(6784).BaseGesture);
 const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    const items = [arg0];
-    return fn(items);
+  key: "minDuration",
+  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
+    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+    return this;
   }
 };
-let items = [entry];
+const items = [
+  entry,
+  {
+    key: "maxDistance",
+    value: function maxDistance(maxDist) {
+      this.config.maxDist = maxDist;
+      return this;
+    }
+  },
+  {
+    key: "numberOfPointers",
+    value: function numberOfPointers(numberOfPointers) {
+      this.config.numberOfPointers = numberOfPointers;
+      return this;
+    }
+  }
+];
 
-export const ManualGesture = _createClass(ManualGesture, items);
+export const LongPressGesture = _createClass(LongPressGesture, items);

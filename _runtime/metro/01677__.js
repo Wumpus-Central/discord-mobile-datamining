@@ -1241,14 +1241,14 @@ defineAnimation.__closure = { IN_STYLE_UPDATER: React2, decorateAnimation, SHOUL
 defineAnimation.__workletHash = 8998026617746;
 defineAnimation.__initData = { code: "function defineAnimation_Pnpm_utilTs9(starting,factory){const{IN_STYLE_UPDATER,decorateAnimation,SHOULD_BE_USE_WEB}=this.__closure;if(IN_STYLE_UPDATER){return starting;}const create=function(){'worklet';const animation=factory();decorateAnimation(animation);return animation;};if(_WORKLET||SHOULD_BE_USE_WEB){return create();}create.__isAnimationDefinition=true;return create;}" };
 const __initData2 = { code: "function pnpm_utilTs12(){const{sharedValue}=this.__closure;sharedValue.value=sharedValue.value;}" };
-let cancelAnimationWeb = function cancelAnimationNative(sharedValue) {
+let cancelAnimationWeb = function cancelAnimationNative(animationProgress) {
   if (globalThis._WORKLET) {
-    sharedValue.value = sharedValue.value;
+    animationProgress.value = animationProgress.value;
   } else {
     const fn = function n() {
-      sharedValue.value = sharedValue.value;
+      animationProgress.value = animationProgress.value;
     };
-    const obj2 = { sharedValue };
+    const obj2 = { sharedValue: animationProgress };
     fn.__closure = obj2;
     fn.__workletHash = 14261344384038;
     fn.__initData = __initData2;

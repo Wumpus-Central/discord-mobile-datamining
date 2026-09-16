@@ -1,10 +1,19 @@
 // === Module 4262: ? ===
 
 // Module 4262
-const require = globalThis.__r;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const dependencyMap = arg6;
 
-export const shallow = require("module_4263").shallow;
-export const useShallow = require("module_4264").useShallow;
+export const useShallow = function useShallow(arg0) {
+  closure_0 = arg0;
+  noop.useRef(undefined);
+  return (arg0) => {
+    let current = closure_0(arg0);
+    if (obj.shallow(ref.current, current)) {
+      current = ref.current;
+    } else {
+      ref.current = current;
+    }
+    return current;
+  };
+};

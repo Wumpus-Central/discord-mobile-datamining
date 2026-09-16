@@ -5,6 +5,7 @@ import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -28,14 +29,28 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class LongPressGesture {
+function changeEventCalculator(scale, scale2) {
+  if (undefined === scale2) {
+    const obj2 = { scaleChange: scale.scale };
+    let obj = obj2;
+  } else {
+    obj = { scaleChange: scale.scale / scale2.scale };
+  }
+  const merged = Object.assign(scale);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 9876979738005;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}" };
+class PinchGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, LongPressGesture);
+    tmp = closure_0(this, PinchGesture);
     tmp2 = c2;
-    obj = c2(LongPressGesture);
+    obj = c2(PinchGesture);
     tmp3 = closure_1;
-    if (closure_3()) {
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -43,37 +58,25 @@ class LongPressGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "LongPressGestureHandler";
-    result = tmp3Result.shouldCancelWhenOutside(true);
+    tmp3Result.handlerName = "PinchGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = LongPressGesture;
-_inherits(LongPressGesture, fn(6781).BaseGesture);
+_classCallCheck = PinchGesture;
+_inherits(PinchGesture, fn(6784).ContinousBaseGesture);
 const entry = {
-  key: "minDuration",
-  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
-    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-    return this;
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    const items = [arg0];
+    return fn(items);
   }
 };
-const items = [
-  entry,
-  {
-    key: "maxDistance",
-    value: function maxDistance(maxDist) {
-      this.config.maxDist = maxDist;
-      return this;
-    }
-  },
-  {
-    key: "numberOfPointers",
-    value: function numberOfPointers(numberOfPointers) {
-      this.config.numberOfPointers = numberOfPointers;
-      return this;
-    }
-  }
-];
+let items = [entry];
 
-export const LongPressGesture = _createClass(LongPressGesture, items);
+export const PinchGesture = _createClass(PinchGesture, items);

@@ -1,0 +1,7 @@
+// === Module 14365: CanonicalizeUnicodeLocaleId ===
+
+// Module 14365 (CanonicalizeUnicodeLocaleId)
+
+export const CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(items) {
+  return Intl.getCanonicalLocales(items)[0];
+};

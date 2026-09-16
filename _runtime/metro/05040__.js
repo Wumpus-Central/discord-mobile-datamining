@@ -1,11 +1,17 @@
 // === Module 5040: ? ===
 
 // Module 5040
-import _mod17 from "module_17" /* 17 */;
-import module_65 from "module_65" /* 65 */;
+import _modDef5015 from "module_5015" /* 5015 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSFullWindowOverlay", validAttributes: { accessibilityContainerViewIsModal: true } };
 
-export default module_65.get("RNSFullWindowOverlay", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default function useTransitionProgress() {
+  const context = noop.useContext(_modDef5015);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
+    throw error;
+  } else {
+    return context;
+  }
+};

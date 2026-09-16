@@ -1,7 +1,8 @@
 // === Module 6925: ? ===
 
 // Module 6925
-import _modDef6926 from "module_6926" /* 6926 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default _modDef6926;
+export const styles = StyleSheet.create({ container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } });

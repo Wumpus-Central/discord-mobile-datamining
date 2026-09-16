@@ -1,32 +1,42 @@
 // === Module 8447: ? ===
 
 // Module 8447
-import colorPropType from "colorPropType" /* 8435 */;
-import _mod8443 from "module_8443" /* 8443 */;
-import merged12 from "merged1" /* 8444 */;
-import merged22 from "merged2" /* 8445 */;
-import emptyFunction_mod from "module_4469" /* 4469 */;
+import _mod8448 from "module_8448" /* 8448 */;
+import _mod8456 from "module_8456" /* 8456 */;
+import flattenStyle from "module_8449" /* 8449 */;
+import "module_4467";
+import emptyFunction_mod from "module_4467" /* 4467 */;
 
 const obj = {};
-const size = Object.assign(_mod8443);
-const merged1 = Object.assign(merged12);
-const merged2 = Object.assign(merged22);
+const module_8448 = Object.assign(_mod8448);
+obj.style = flattenStyle(_mod8456);
 let emptyFunction = emptyFunction_mod;
-obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
+const obj2 = { uri: emptyFunction.string, headers: null };
 let emptyFunction = emptyFunction_mod;
-obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
-obj.backgroundColor = colorPropType;
-obj.borderColor = colorPropType;
-obj.borderWidth = emptyFunction.number;
-obj.borderRadius = emptyFunction.number;
+obj2.headers = emptyFunction.objectOf(emptyFunction.string);
+const items = [emptyFunction.shape(obj2), emptyFunction.number, ];
 let emptyFunction = emptyFunction_mod;
-obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
-obj.tintColor = colorPropType;
-obj.opacity = emptyFunction.number;
-obj.overlayColor = emptyFunction.string;
-obj.borderTopLeftRadius = emptyFunction.number;
-obj.borderTopRightRadius = emptyFunction.number;
-obj.borderBottomLeftRadius = emptyFunction.number;
-obj.borderBottomRightRadius = emptyFunction.number;
+const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
+let emptyFunction = emptyFunction_mod;
+size.headers = emptyFunction.objectOf(emptyFunction.string);
+items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
+obj.source = emptyFunction.oneOfType(items);
+obj.blurRadius = emptyFunction.number;
+obj.defaultSource = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
+obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
+obj.progressiveRenderingEnabled = emptyFunction.bool;
+obj.fadeDuration = emptyFunction.number;
+obj.internal_analyticTag = emptyFunction.string;
+obj.onLoadStart = emptyFunction.func;
+obj.onError = emptyFunction.func;
+obj.onLoad = emptyFunction.func;
+obj.onLoadEnd = emptyFunction.func;
+obj.testID = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
 
 export default obj;

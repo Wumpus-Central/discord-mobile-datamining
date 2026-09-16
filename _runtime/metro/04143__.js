@@ -1,111 +1,61 @@
 // === Module 4143: ? ===
 
 // Module 4143
-import _mod3733 from "module_3733" /* 3733 */;
-import module_3876_mod from "module_3876" /* 3876 */;
-import _typeof_mod from "module_3728" /* 3728 */;
-import module_3732_mod from "module_3732" /* 3732 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import _mod3731 from "module_3731" /* 3731 */;
+import requiredArgs_mod from "requiredArgs" /* 3727 */;
 
-let module_3876 = module_3876_mod;
-if (!module_3876) {
-  const obj = { default: module_3876 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3876;
-}
-module_3876 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let module_3732 = module_3732_mod;
-if (!module_3732) {
-  const obj3 = { default: module_3732 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3732;
-}
-module_3732 = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  let obj = { default: requiredArgs };
+  let tmp3 = obj;
 } else {
-  tmp9 = requiredArgs;
+  tmp3 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp3;
 
-export default function setDay(arg0, arg1, weekStartsOn) {
-  requiredArgs.default(2, arguments);
-  const defaultOptions = _mod3733.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
+export default function setDefaultOptions(obj) {
+  requiredArgs.default(1, arguments);
+  obj = {};
+  const defaultOptions = _mod3731.getDefaultOptions();
+  for (const key10017 in defaultOptions) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10017);
+    } else {
+      hasOwnPropertyResult = call(defaultOptions, key10017);
+    }
+    if (!hasOwnPropertyResult) {
+      continue;
+    } else {
+      obj[key10017] = defaultOptions[key10017];
+      continue;
+    }
+    continue;
   }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
-            }
-          }
-        }
+  for (const key10023 in arg0) {
+    let _Object2 = Object;
+    let call2 = hasOwnProperty2.call;
+    if (typeof call2 === "unknown") {
+      let hasOwnProperty2Result = hasOwnProperty2(key10023);
+    } else {
+      hasOwnProperty2Result = call2(arg0, key10023);
+    }
+    if (!hasOwnProperty2Result) {
+      continue;
+    } else {
+      if (undefined === arg0[key10023]) {
+        delete tmp[tmp2];
+        continue;
+      } else {
+        obj[key10023] = arg0[key10023];
+        continue;
       }
+      continue;
     }
-    weekStartsOn = weekStartsOn1;
+    continue;
   }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult1 = module_3732.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = _typeof.default(arg0);
-      const defaultResult3 = module_3732.default(arg1);
-      const day = defaultResult2.getDay();
-      const diff = 7 - defaultResult1;
-      if (defaultResult3 >= 0) {
-        if (defaultResult3 <= 6) {
-          let diff1 = ((defaultResult3 % 7 + 7) % 7 + diff) % 7 - (day + diff) % 7;
-        }
-        return module_3876.default(defaultResult2, diff1);
-      }
-      diff1 = defaultResult3 - (day + diff) % 7;
-    }
-  }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  throw rangeError;
+  _mod3731.setDefaultOptions(obj);
 };
 export default exports.default;

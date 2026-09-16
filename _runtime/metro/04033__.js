@@ -1,7 +1,7 @@
 // === Module 4033: ? ===
 
 // Module 4033
-import Parser2 from "Parser" /* 4034 */;
+import Parser2 from "Parser" /* 4032 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(EraParser, Parser) {
+function _setPrototypeOf(YearParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(EraParser, Parser) {
-      EraParser.__proto__ = Parser;
-      return EraParser;
+    _setPrototypeOf = function _setPrototypeOf(YearParser, Parser) {
+      YearParser.__proto__ = Parser;
+      return YearParser;
     };
   }
-  return _setPrototypeOf(EraParser, Parser);
+  return _setPrototypeOf(YearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,10 +55,10 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 const Parser = Parser2.Parser;
-let closure_129_0;
-class EraParser {
+let _createSuperInternal;
+class YearParser {
   constructor() {
-    if (this instanceof _setPrototypeOf) {
+    if (this instanceof closure_1) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -74,11 +74,11 @@ class EraParser {
           num = num + 1;
         } while (num < length);
       }
-      tmp11 = _typeof;
-      call = _typeof.call;
+      tmp11 = _createSuperInternal;
+      call = _createSuperInternal.call;
       items = [];
       items[0] = tmp;
-      applyResult = call.apply(_typeof, items.concat(array));
+      applyResult = call.apply(_createSuperInternal, items.concat(array));
       tmp13 = undefined === applyResult;
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
@@ -92,10 +92,10 @@ class EraParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 140, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 140;
-          applyResult.priority = 140;
+          num3 = 130;
+          applyResult.priority = 130;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +106,7 @@ class EraParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["R", "u", "t", "T"];
+          items1 = ["Y", "R", "u", "w", "I", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +130,7 @@ class EraParser {
     }
   }
 }
-let closure_129_1 = EraParser;
+let dependencyMap = YearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,13 +142,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-EraParser.prototype = Object.create(prototype, { constructor: { value: EraParser, writable: true, configurable: true } });
+YearParser.prototype = Object.create(prototype, { constructor: { value: YearParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(EraParser, Parser);
+  _setPrototypeOf(YearParser, Parser);
 }
-_typeof = EraParser;
 let num = 0;
-_setPrototypeOf = (function _isNativeReflectConstruct() {
+dependencyMap = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -180,10 +179,10 @@ _setPrototypeOf = (function _isNativeReflectConstruct() {
   }
   return false;
 })();
-closure_129_0 = function _createSuperInternal() {
+_createSuperInternal = function _createSuperInternal() {
   const self = this;
-  const obj = _getPrototypeOf(_typeof);
-  if (_setPrototypeOf) {
+  const obj = _getPrototypeOf(_createSuperInternal);
+  if (closure_1) {
     const _Reflect = Reflect;
     let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
   } else {
@@ -206,30 +205,50 @@ closure_129_0 = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, era) {
-    if ("G" !== arg1) {
-      if ("GG" !== arg1) {
-        if ("GGG" !== arg1) {
-          if ("GGGGG" === arg1) {
-            return era.era(arg0, { width: "narrow" });
-          } else {
-            return era.era(arg0, { width: "wide" }) || era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
-          }
-        }
-      }
+  value: function parse(arg0, arg1, ordinalNumber) {
+    closure_0 = arg1;
+    function valueCallback(year) {
+      return { year, isTwoDigitYear: "yy" === closure_0 };
     }
-    return era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
+    if ("y" === arg1) {
+      return _createSuperInternal(4034).mapValue(_createSuperInternal(4034).parseNDigits(4, arg0), valueCallback);
+    } else if ("yo" === arg1) {
+      return _createSuperInternal(4034).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "year" }), valueCallback);
+    } else {
+      return _createSuperInternal(4034).mapValue(_createSuperInternal(4034).parseNDigits(arg1.length, arg0), valueCallback);
+    }
   }
 };
 let items = [
   entry,
   {
+    key: "validate",
+    value: function validate(arg0, isTwoDigitYear) {
+      isTwoDigitYear = isTwoDigitYear.isTwoDigitYear;
+      if (!isTwoDigitYear) {
+        isTwoDigitYear = isTwoDigitYear.year > 0;
+      }
+      return isTwoDigitYear;
+    }
+  },
+  {
     key: "set",
-    value: function set(setUTCFullYear, arg1, era) {
-      arg1.era = era;
-      setUTCFullYear.setUTCFullYear(era, 0, 1);
-      setUTCFullYear.setUTCHours(0, 0, 0, 0);
-      return setUTCFullYear;
+    value: function set(setUTCFullYear, era, isTwoDigitYear) {
+      if (isTwoDigitYear.isTwoDigitYear) {
+        setUTCFullYear.setUTCFullYear(_createSuperInternal(4034).normalizeTwoDigitYear(isTwoDigitYear.year, tmp), 0, 1);
+        setUTCFullYear.setUTCHours(0, 0, 0, 0);
+        return setUTCFullYear;
+      } else {
+        if ("era" in era) {
+          if (1 !== era.era) {
+            let year = 1 - isTwoDigitYear.year;
+          }
+          setUTCFullYear.setUTCFullYear(year, 0, 1);
+          setUTCFullYear.setUTCHours(0, 0, 0, 0);
+          return setUTCFullYear;
+        }
+        year = isTwoDigitYear.year;
+      }
     }
   }
 ];
@@ -251,4 +270,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { EraParser };
+export { YearParser };

@@ -1,21 +1,30 @@
 // === Module 14401: ? ===
 
 // Module 14401
-import _mod14399 from "module_14399" /* 14399 */;
-import _mod14402 from "module_14402" /* 14402 */;
-import _mod14404 from "module_14404" /* 14404 */;
+const require = globalThis.__r;
 
-let fn = Object;
-let closure_3 = _mod14402("".split);
-if (_mod14399(() => !Object("z").propertyIsEnumerable(0))) {
-  fn = (arg0) => {
-    if ("String" === _mod14404(arg0)) {
-      let tmp2 = closure_3(arg0, "");
-    } else {
-      tmp2 = Object(arg0);
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
+  _require = locale;
+  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
+  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
     }
-    return tmp2;
-  };
-}
-
-export default fn;
+    try {
+      const concat = "".concat;
+      const combined = "".concat(str, "-u-nu-");
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
+      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
+        if ("123" === memoizedNumberFormat.format(123)) {
+          return false;
+        }
+      }
+      return true;
+    } catch (err) {
+    }
+  })(item, closure_0));
+};

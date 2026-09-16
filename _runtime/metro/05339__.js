@@ -1,246 +1,178 @@
 // === Module 5339: ? ===
 
 // Module 5339
-import _mod5298 from "module_5298" /* 5298 */;
-import iccTags from "iccTags" /* 5340 */;
+import _mod5299 from "module_5299" /* 5299 */;
+import _modDef5316 from "module_5316" /* 5316 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-const dependencyMap = arg6;
-function parseTags(buffer) {
-  buffer = buffer.buffer;
-  if (buffer.byteLength !== buffer.getUint32()) {
-    const _Error3 = Error;
-    const error = new Error("ICC profile length not matching");
-    throw error;
-  } else if (buffer.byteLength < c2) {
-    const _Error2 = Error;
-    const error1 = new Error("ICC profile too short");
-    throw error1;
-  } else {
-    const obj2 = {};
-    const _Object = Object;
-    const keys = Object.keys(iccTags.iccProfile);
-    for (let num = 0; num < keys.length; num = num + 1) {
-      let tmp = keys[num];
-      let iter = iccTags.iccProfile[tmp];
-      let _parseInt = parseInt;
-      let valueResult = iter.value(buffer, parseInt(tmp, 10));
-      let descriptionResult = valueResult;
-      if (iter.description) {
-        descriptionResult = iter.description(valueResult);
-      }
-      let obj = { value: valueResult, description: descriptionResult };
-      obj2[iter.name] = obj;
+function parseBezierKnot(dataView, arg1) {
+  const items = [];
+  let num = 0;
+  do {
+    let sum = arg1 + num;
+    let obj = _modDef5316;
+    let longAt = obj.getLongAt(dataView, sum);
+    let num2 = -1;
+    if (longAt >>> 31 === 0) {
+      num2 = 1;
     }
-    const _String = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(buffer.slice(36, 40));
-    if (fromCharCode.apply(null, uint8Array) !== acsp) {
-      const _Error = Error;
-      const error2 = new Error("ICC profile: missing signature");
-      throw error2;
-    } else {
-      let num6 = 132;
-      if (buffer.length < 132) {
-        return obj2;
-      } else {
-        const uint32 = buffer.getUint32(128);
-        let num7 = 0;
-        if (0 < uint32) {
-          while (buffer.length >= num6 + c8) {
-            let obj17 = _mod5298;
-            let stringFromDataView = obj17.getStringFromDataView(buffer, num6, 4);
-            let uint321 = buffer.getUint32(num6 + 4);
-            let uint322 = buffer.getUint32(num6 + 8);
-            if (uint321 > buffer.length) {
-              return obj2;
-            } else {
-              let tmp55Result = _mod5298;
-              let stringFromDataView1 = tmp55Result.getStringFromDataView(buffer, uint321, 4);
-              if (stringFromDataView1 === desc) {
-                let uint323 = buffer.getUint32(uint321 + 8);
-                if (uint323 > uint322) {
-                  return obj2;
-                } else {
-                  let _String4 = String;
-                  let _Uint8Array4 = Uint8Array;
-                  let tmp70 = new.target;
-                  let tmp71 = new.target;
-                  let uint8Array1 = new Uint8Array(buffer.slice(uint321 + 12, uint321 + uint323 + 11));
-                  let applyResult = fromCharCode4.apply(null, uint8Array1);
-                  if (iccTags.iccTags[stringFromDataView]) {
-                    let obj3 = { value: applyResult, description: applyResult };
-                    obj2[iccTags.iccTags[stringFromDataView].name] = obj3;
-                  } else {
-                    let obj4 = { value: applyResult, description: applyResult };
-                    obj2[stringFromDataView] = obj4;
-                  }
-                }
-              } else if (stringFromDataView1 === mluc) {
-                let uint324 = buffer.getUint32(uint321 + 8);
-                let sum = uint321 + 16;
-                let items = [];
-                let num4 = 0;
-                let tmp25 = require;
-                if (0 < uint324) {
-                  do {
-                    let obj6 = _mod5298;
-                    let stringFromDataView2 = obj6.getStringFromDataView(buffer, sum, 2);
-                    let obj7 = _mod5298;
-                    let stringFromDataView3 = obj7.getStringFromDataView(buffer, sum + 2, 2);
-                    let uint325 = buffer.getUint32(sum + 4);
-                    let uint326 = buffer.getUint32(sum + 8);
-                    let obj8 = _mod5298;
-                    let obj5 = { languageCode: stringFromDataView2, countryCode: stringFromDataView3, text: obj8.getUnicodeStringFromDataView(buffer, uint321 + uint326, uint325) };
-                    let arr = items.push(obj5);
-                    sum = sum + tmp22;
-                    num4 = num4 + 1;
-                    tmp25 = require;
-                  } while (num4 < uint324);
-                }
-                if (1 === uint324) {
-                  text = items[0].text;
-                  if (tmp25(5340).iccTags[stringFromDataView]) {
-                    let obj9 = { value: text, description: text };
-                    obj2[tmp25(5340).iccTags[stringFromDataView].name] = obj9;
-                  } else {
-                    let obj10 = { value: text, description: text };
-                    obj2[stringFromDataView] = obj10;
-                  }
-                } else {
-                  let obj11 = {};
-                  let num5 = 0;
-                  if (0 < items.length) {
-                    do {
-                      let _HermesInternal = HermesInternal;
-                      obj11["" + items[num5].languageCode + "-" + items[num5].countryCode] = items[num5].text;
-                      num5 = num5 + 1;
-                      length = items.length;
-                    } while (num5 < length);
-                  }
-                  if (iccTags.iccTags[stringFromDataView]) {
-                    let obj12 = { value: obj11, description: obj11 };
-                    obj2[iccTags.iccTags[stringFromDataView].name] = obj12;
-                  } else {
-                    let obj13 = { value: obj11, description: obj11 };
-                    obj2[stringFromDataView] = obj13;
-                  }
-                }
-              } else if (stringFromDataView1 === text) {
-                let _String2 = String;
-                let _Uint8Array2 = Uint8Array;
-                let tmp16 = new.target;
-                let tmp17 = new.target;
-                let uint8Array2 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + uint322 - 7));
-                let applyResult1 = fromCharCode2.apply(null, uint8Array2);
-                if (iccTags.iccTags[stringFromDataView]) {
-                  let obj14 = { value: applyResult1, description: applyResult1 };
-                  obj2[iccTags.iccTags[stringFromDataView].name] = obj14;
-                } else {
-                  let obj15 = { value: applyResult1, description: applyResult1 };
-                  obj2[stringFromDataView] = obj15;
-                }
-              } else if (stringFromDataView1 === c7) {
-                let _String3 = String;
-                let _Uint8Array3 = Uint8Array;
-                let tmp65 = new.target;
-                let tmp66 = new.target;
-                let uint8Array3 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + 12));
-                let applyResult2 = fromCharCode3.apply(null, uint8Array3);
-                if (iccTags.iccTags[stringFromDataView]) {
-                  let obj16 = { value: applyResult2, description: applyResult2 };
-                  obj2[iccTags.iccTags[stringFromDataView].name] = obj16;
-                } else {
-                  let obj18 = { value: applyResult2, description: applyResult2 };
-                  obj2[stringFromDataView] = obj18;
-                }
-              }
-              num6 = num6 + 12;
-              num7 = num7 + 1;
-            }
-          }
-          return obj2;
-        }
-        return obj2;
-      }
+    let str = (2130706432 & longAt) >>> 24;
+    let _parseInt = parseInt;
+    let obj2 = _mod5299;
+    let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
+    let obj3 = _mod5299;
+    let text = `${str.toString(2)}.`;
+    let obj4 = _mod5299;
+    let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
+    let tmp2Result = _modDef5316;
+    let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
+    let num3 = -1;
+    if (longAt1 >>> 31 === 0) {
+      num3 = 1;
     }
-  }
+    let str3 = (2130706432 & longAt1) >>> 24;
+    let _parseInt2 = parseInt;
+    let tmp6Result = _mod5299;
+    let str4 = longAt1 & parseInt(tmp6Result.strRepeat("1", 24), 2);
+    let tmp6Result3 = _mod5299;
+    let text1 = `${str3.toString(2)}.`;
+    let tmp6Result4 = _mod5299;
+    let items1 = [num3 * tmp6Result3.parseFloatRadix(`${str3.toString(2)}.` + tmp6Result4.padStart(str4.toString(2), 24, "0"), 2), result];
+    let arr = items.push(items1);
+    num = num + 8;
+  } while (num < 24);
+  return items;
 }
-let c2 = 84;
-const acsp = "acsp";
-const desc = "desc";
-const mluc = "mluc";
-let text = "text";
-let c7 = "sig ";
-let c8 = 12;
-
-export default {
-  read(buffer, arr, arg2) {
-    if (arg2) {
-      if (arr[0].compressionMethod !== _mod5298.COMPRESSION_METHOD_NONE) {
-        if (arr[0].compressionMethod === _mod5298.COMPRESSION_METHOD_DEFLATE) {
-          let _DataView = DataView;
-          buffer = buffer.buffer;
-          let dataView = new DataView(buffer.slice(arr[0].offset, arr[0].offset + arr[0].length));
-          const tmpResult = _mod5298;
-          const decompressResult = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview");
-          let catchPromise = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview").then(parseTags).catch(() => ({}));
-          const nextPromise = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview").then(parseTags);
-        } else {
-          catchPromise = {};
+let obj = { CLOSED_SUBPATH_LENGTH: 0, CLOSED_SUBPATH_BEZIER_LINKED: 1, CLOSED_SUBPATH_BEZIER_UNLINKED: 2, OPEN_SUBPATH_LENGTH: 3, OPEN_SUBPATH_BEZIER_LINKED: 4, OPEN_SUBPATH_BEZIER_UNLINKED: 5, FILL_RULE: 6, CLIPBOARD: 7, INITIAL_FILL_RULE: 8 };
+let obj2 = { 2000: null, 2999: null };
+obj2[2000] = {
+  name: "PathInformation",
+  description: function pathResource(byteLength) {
+    const types = {};
+    const paths = [];
+    for (let num = 0; num < byteLength.byteLength; num = num + 26) {
+      let obj2 = _modDef5316;
+      let shortAt = obj2.getShortAt(byteLength, num);
+      if (dependencyMap[shortAt]) {
+        if (!types[shortAt]) {
+          types[shortAt] = dependencyMap[shortAt].description;
         }
-        return catchPromise;
+        let obj = { type: shortAt, path: null };
+        let obj4 = dependencyMap[shortAt];
+        obj.path = obj4.path(byteLength, num + 2);
+        let arr = paths.push(obj);
       }
     }
-    return (function readIcc(buffer, arr) {
-      let length;
-      let sum;
-      closure_0 = arr;
-      try {
-        let _Uint8Array = Uint8Array;
-        let uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
-        closure_2 = 0;
-        closure_3 = (function getBuffer(buffer) {
-          if (Array.isArray(buffer)) {
-            const _DataView = DataView;
-            const _Uint8Array = Uint8Array;
-            const dataView = new DataView(Uint8Array.from(buffer).buffer);
-            return dataView.buffer;
-          } else {
-            return buffer.buffer;
-          }
-        })(buffer);
-        function _loop(arg0) {
-          closure_0 = arg0;
-          const found = closure_0.find((chunkNumber) => chunkNumber.chunkNumber === closure_0);
-          if (found) {
-            const _Uint8Array = Uint8Array;
-            uint8Array = new Uint8Array(closure_3.slice(found.offset, found.offset + found.length));
-            const result = uint8Array.set(uint8Array, closure_2);
-            closure_2 = closure_2 + uint8Array.length;
-          } else {
-            const _Error = Error;
-            const _HermesInternal = HermesInternal;
-            const error = new Error("ICC chunk " + arg0 + " not found");
-            throw error;
-          }
-        }
-        let num3 = 1;
-        if (1 <= arr.length) {
-          do {
-            let _loopResult = _loop(num3);
-            sum = num3 + 1;
-            num3 = sum;
-            length = arr.length;
-          } while (sum <= length);
-        }
-        let _DataView = DataView;
-        let dataView = new DataView(uint8Array.buffer);
-        return parseTags(dataView);
-      } catch (err) {
-        return {};
-      }
-    })(buffer, arr);
+    return JSON.stringify({ types, paths });
   }
 };
-export { parseTags };
+obj2[2999] = {
+  name: "ClippingPathName",
+  description(getUint8) {
+    return _slicedToArray(_mod5299.getPascalStringFromDataView(getUint8, 0), 2)[1];
+  }
+};
+const dependencyMap = {
+  [obj.CLOSED_SUBPATH_LENGTH]: {
+    description: "Closed subpath length",
+    path(dataView, sum) {
+      const items = [_modDef5316.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.CLOSED_SUBPATH_BEZIER_LINKED]: { description: "Closed subpath Bezier knot, linked", path: parseBezierKnot },
+  [obj.CLOSED_SUBPATH_BEZIER_UNLINKED]: { description: "Closed subpath Bezier knot, unlinked", path: parseBezierKnot },
+  [obj.OPEN_SUBPATH_LENGTH]: {
+    description: "Open subpath length",
+    path(dataView, sum) {
+      const items = [_modDef5316.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.OPEN_SUBPATH_BEZIER_LINKED]: { description: "Open subpath Bezier knot, linked", path: parseBezierKnot },
+  [obj.OPEN_SUBPATH_BEZIER_UNLINKED]: { description: "Open subpath Bezier knot, unlinked", path: parseBezierKnot },
+  [obj.FILL_RULE]: {
+    description: "Path fill rule",
+    path() {
+      return [];
+    }
+  },
+  [obj.INITIAL_FILL_RULE]: {
+    description: "Initial fill rule",
+    path(dataView, sum) {
+      const items = [_modDef5316.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.CLIPBOARD]: {
+    description: "Clipboard",
+    path: function parseClipboard(dataView, sum) {
+      const longAt = _modDef5316.getLongAt(dataView, sum);
+      let num = -1;
+      let num2 = -1;
+      if (longAt >>> 31 === 0) {
+        num2 = 1;
+      }
+      const str2 = longAt & parseInt(_mod5299.strRepeat("1", 24), 2);
+      const text = `${str.toString(2)}.`;
+      const obj3 = _mod5299;
+      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + _mod5299.padStart(str2.toString(2), 24, "0"), 2), , , ];
+      sum = sum + 4;
+      const longAt1 = _modDef5316.getLongAt(dataView, sum);
+      let num3 = num;
+      if (longAt1 >>> 31 === 0) {
+        num3 = 1;
+      }
+      const tmpResult = _modDef5316;
+      const tmp4Result = _mod5299;
+      const str4 = longAt1 & parseInt(_mod5299.strRepeat("1", 24), 2);
+      const text1 = `${str3.toString(2)}.`;
+      const tmp4Result12 = _mod5299;
+      items[1] = num3 * tmp4Result12.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + _mod5299.padStart(str4.toString(2), 24, "0"), 2);
+      const sum1 = sum + 8;
+      const tmp4Result13 = _mod5299;
+      const longAt2 = _modDef5316.getLongAt(dataView, sum1);
+      let num4 = num;
+      if (longAt2 >>> 31 === 0) {
+        num4 = 1;
+      }
+      const tmpResult4 = _modDef5316;
+      const tmp4Result14 = _mod5299;
+      const str6 = longAt2 & parseInt(_mod5299.strRepeat("1", 24), 2);
+      const text2 = `${str5.toString(2)}.`;
+      const tmp4Result15 = _mod5299;
+      items[2] = num4 * tmp4Result15.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + _mod5299.padStart(str6.toString(2), 24, "0"), 2);
+      const sum2 = sum + 12;
+      const tmp4Result16 = _mod5299;
+      const longAt3 = _modDef5316.getLongAt(dataView, sum2);
+      let num5 = num;
+      if (longAt3 >>> 31 === 0) {
+        num5 = 1;
+      }
+      const tmpResult5 = _modDef5316;
+      const tmp4Result17 = _mod5299;
+      const str8 = longAt3 & parseInt(_mod5299.strRepeat("1", 24), 2);
+      const text3 = `${str7.toString(2)}.`;
+      const tmp4Result18 = _mod5299;
+      items[3] = num5 * tmp4Result18.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + _mod5299.padStart(str8.toString(2), 24, "0"), 2);
+      const items1 = [items, ];
+      const sum3 = sum + 16;
+      const tmp4Result19 = _mod5299;
+      const longAt4 = _modDef5316.getLongAt(dataView, sum3);
+      if (longAt4 >>> 31 === 0) {
+        num = 1;
+      }
+      const tmpResult6 = _modDef5316;
+      const tmp4Result20 = _mod5299;
+      const str10 = longAt4 & parseInt(_mod5299.strRepeat("1", 24), 2);
+      const text4 = `${str9.toString(2)}.`;
+      const tmp4Result21 = _mod5299;
+      items1[1] = num * tmp4Result21.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + _mod5299.padStart(str10.toString(2), 24, "0"), 2);
+      return items1;
+    }
+  }
+};
+
+export default obj2;
+export const PathRecordTypes = obj;

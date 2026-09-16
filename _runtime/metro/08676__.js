@@ -1,19 +1,15 @@
 // === Module 8676: ? ===
 
 // Module 8676
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 8585 */;
-import extractPropsDefault from "extractProps" /* 8592 */;
-import extractFontDefault from "extractFont" /* 8599 */;
-import _modDef8601 from "module_8601" /* 8601 */;
-import _modDef8677 from "module_8677" /* 8677 */;
+import _modDef8610 from "module_8610" /* 8610 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TSpan = fn;
+const Polyline = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,19 +29,18 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class TSpan {
+class Polyline {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_3(this, TSpan);
+    tmp = c2(this, Polyline);
     items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(TSpan);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp2 = closure_4;
+    obj = closure_4(Polyline);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -54,49 +49,40 @@ class TSpan {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polyline(8675)(points);
       }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = TSpan(8592).propsAndStyles(matrix);
-      const obj = TSpan(8592);
-      const merged = Object.assign(propsAndStylesResult, TSpan(8593).pickNotNil(extractFontDefault(propsAndStylesResult, false)));
       if (closure_0.root) {
         const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
+        root.setNativeProps(points);
       }
-      const obj2 = TSpan(8593);
     };
     return tmp3Result;
   }
 }
-_inherits(TSpan, _modDef8601);
+_inherits(Polyline, _modDef8610);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = TSpan(8592).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = TSpan(8592);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef8677, {});
+    const props = this.props;
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polyline(8675)(points);
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polyline(8670), { ref: this.refMethod, d: null });
   }
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(TSpan, items);
-importDefaultResultResult.displayName = "TSpan";
-const extractFont = fn(8599);
-extractFont.setTSpan(importDefaultResultResult);
+const importDefaultResultResult = _createClass(Polyline, items);
+importDefaultResultResult.displayName = "Polyline";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

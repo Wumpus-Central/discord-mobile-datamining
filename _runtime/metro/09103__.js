@@ -1,7 +1,7 @@
 // === Module 9103: ? ===
 
 // Module 9103
-import _mod9071 from "module_9071" /* 9071 */;
+import _mod9082 from "module_9082" /* 9082 */;
 
 const self = this;
 let self2 = this;
@@ -57,8 +57,8 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         const obj = { localeError: null };
-        const obj2 = { string: { unit: "\uBB38\uC790", verb: "to have" }, file: { unit: "\uBC14\uC774\uD2B8", verb: "to have" }, array: { unit: "\uAC1C", verb: "to have" }, set: { unit: "\uAC1C", verb: "to have" } };
-        closure_1 = { regex: "\uC785\uB825", email: "\uC774\uBA54\uC77C \uC8FC\uC18C", url: "URL", emoji: "\uC774\uBAA8\uC9C0", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO \uB0A0\uC9DC\uC2DC\uAC04", date: "ISO \uB0A0\uC9DC", time: "ISO \uC2DC\uAC04", duration: "ISO \uAE30\uAC04", ipv4: "IPv4 \uC8FC\uC18C", ipv6: "IPv6 \uC8FC\uC18C", cidrv4: "IPv4 \uBC94\uC704", cidrv6: "IPv6 \uBC94\uC704", base64: "base64 \uC778\uCF54\uB529 \uBB38\uC790\uC5F4", base64url: "base64url \uC778\uCF54\uB529 \uBB38\uC790\uC5F4", json_string: "JSON \uBB38\uC790\uC5F4", e164: "E.164 \uBC88\uD638", jwt: "JWT", template_literal: "\uC785\uB825" };
+        const obj2 = { string: { unit: "caract\u00E8res", verb: "avoir" }, file: { unit: "octets", verb: "avoir" }, array: { unit: "\u00E9l\u00E9ments", verb: "avoir" }, set: { unit: "\u00E9l\u00E9ments", verb: "avoir" } };
+        closure_1 = { regex: "entr\u00E9e", email: "adresse courriel", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "date-heure ISO", date: "date ISO", time: "heure ISO", duration: "dur\u00E9e ISO", ipv4: "adresse IPv4", ipv6: "adresse IPv6", cidrv4: "plage IPv4", cidrv6: "plage IPv6", base64: "cha\u00EEne encod\u00E9e en base64", base64url: "cha\u00EEne encod\u00E9e en base64url", json_string: "cha\u00EEne JSON", e164: "num\u00E9ro E.164", jwt: "JWT", template_literal: "entr\u00E9e" };
         closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
@@ -68,137 +68,117 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp49 = closure_2[parsedTypeResult];
-              if (tmp49 == null) {
-                tmp49 = parsedTypeResult;
+              let tmp47 = closure_2[parsedTypeResult];
+              if (tmp47 == null) {
+                tmp47 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "\uC798\uBABB\uB41C \uC785\uB825: \uC608\uC0C1 \uD0C0\uC785\uC740 instanceof " + code.expected + ", \uBC1B\uC740 \uD0C0\uC785\uC740 " + tmp49 + "\uC785\uB2C8\uB2E4";
+                let combined = "Entr\u00E9e invalide : attendu instanceof " + code.expected + ", re\u00E7u " + tmp47;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "\uC798\uBABB\uB41C \uC785\uB825: \uC608\uC0C1 \uD0C0\uC785\uC740 " + expected + ", \uBC1B\uC740 \uD0C0\uC785\uC740 " + tmp49 + "\uC785\uB2C8\uB2E4";
+                combined = "Entr\u00E9e invalide : attendu " + expected + ", re\u00E7u " + tmp47;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "\uC798\uBABB\uB41C \uC785\uB825: \uAC12\uC740 " + closure_2.stringifyPrimitive(code.values[0]) + " \uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4";
+                let combined1 = "Entr\u00E9e invalide : attendu " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "\uC798\uBABB\uB41C \uC635\uC158: " + closure_2.joinValues(code.values, "\uB610\uB294 ") + " \uC911 \uD558\uB098\uC5EC\uC57C \uD569\uB2C8\uB2E4";
+                combined1 = "Option invalide : attendu l'une des valeurs suivantes " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str33 = "\uBBF8\uB9CC";
+              let str27 = "<";
               if (code.inclusive) {
-                str33 = "\uC774\uD558";
+                str27 = "\u2264";
               }
-              let str34 = "\uC5EC\uC57C \uD569\uB2C8\uB2E4";
-              if ("\uBBF8\uB9CC" === str33) {
-                str34 = "\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4";
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
               }
-              let tmp28 = obj2[code.origin];
-              if (tmp28 == null) {
-                tmp28 = null;
-              }
-              let str35;
-              if (tmp28 != null) {
-                str35 = tmp28.unit;
-              }
-              if (str35 == null) {
-                str35 = "\uC694\uC18C";
-              }
-              let str36 = code.origin;
-              if (tmp28) {
-                if (str36 == null) {
-                  str36 = "\uAC12";
+              let str28 = code.origin;
+              if (tmp29) {
+                if (str28 == null) {
+                  str28 = "la valeur";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "" + str36 + "\uC774 \uB108\uBB34 \uD07D\uB2C8\uB2E4: " + code.maximum.toString() + str35 + " " + str33 + str34;
+                let combined2 = "Trop grand : attendu que " + str28 + " ait " + str27 + code.maximum.toString() + " " + tmp29.unit;
               } else {
-                let str37 = str36;
-                if (str36 == null) {
-                  str37 = "\uAC12";
+                let str29 = str28;
+                if (str28 == null) {
+                  str29 = "la valeur";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "" + str37 + "\uC774 \uB108\uBB34 \uD07D\uB2C8\uB2E4: " + code.maximum.toString() + " " + str33 + str34;
+                combined2 = "Trop grand : attendu que " + str29 + " soit " + str27 + code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str18 = "\uCD08\uACFC";
+              let str21 = ">";
               if (code.inclusive) {
-                str18 = "\uC774\uC0C1";
+                str21 = "\u2265";
               }
-              let str19 = "\uC5EC\uC57C \uD569\uB2C8\uB2E4";
-              if ("\uC774\uC0C1" === str18) {
-                str19 = "\uC774\uC5B4\uC57C \uD569\uB2C8\uB2E4";
+              let tmp17 = obj2[code.origin];
+              if (tmp17 == null) {
+                tmp17 = null;
               }
-              let tmp15 = obj2[code.origin];
-              if (tmp15 == null) {
-                tmp15 = null;
-              }
-              let str21;
-              if (tmp15 != null) {
-                str21 = tmp15.unit;
-              }
-              if (str21 == null) {
-                str21 = "\uC694\uC18C";
-              }
-              let str22 = code.origin;
-              if (tmp15) {
-                if (str22 == null) {
-                  str22 = "\uAC12";
-                }
+              ({ origin, minimum } = code);
+              const str1 = minimum.toString();
+              if (tmp17) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "" + str22 + "\uC774 \uB108\uBB34 \uC791\uC2B5\uB2C8\uB2E4: " + code.minimum.toString() + str21 + " " + str18 + str19;
+                let combined3 = "Trop petit : attendu que " + origin + " ait " + str21 + str1 + " " + tmp17.unit;
               } else {
-                let str23 = str22;
-                if (str22 == null) {
-                  str23 = "\uAC12";
-                }
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "" + str23 + "\uC774 \uB108\uBB34 \uC791\uC2B5\uB2C8\uB2E4: " + code.minimum.toString() + " " + str18 + str19;
+                combined3 = "Trop petit : attendu que " + origin + " soit " + str21 + str1;
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"" + code.prefix + "\"(\uC73C)\uB85C \uC2DC\uC791\uD574\uC57C \uD569\uB2C8\uB2E4";
+                let combined4 = "Cha\u00EEne invalide : doit commencer par \"" + code.prefix + "\"";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"" + code.suffix + "\"(\uC73C)\uB85C \uB05D\uB098\uC57C \uD569\uB2C8\uB2E4";
+                combined4 = "Cha\u00EEne invalide : doit se terminer par \"" + code.suffix + "\"";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \"" + code.includes + "\"\uC744(\uB97C) \uD3EC\uD568\uD574\uC57C \uD569\uB2C8\uB2E4";
+                combined4 = "Cha\u00EEne invalide : doit inclure \"" + code.includes + "\"";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "\uC798\uBABB\uB41C \uBB38\uC790\uC5F4: \uC815\uADDC\uC2DD " + code.pattern + " \uD328\uD134\uACFC \uC77C\uCE58\uD574\uC57C \uD569\uB2C8\uB2E4";
+                combined4 = "Cha\u00EEne invalide : doit correspondre au motif " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "\uC798\uBABB\uB41C " + format;
+                combined4 = "" + format + " invalide";
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "\uC798\uBABB\uB41C \uC22B\uC790: " + code.divisor + "\uC758 \uBC30\uC218\uC5EC\uC57C \uD569\uB2C8\uB2E4";
+              return "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
             case "unrecognized_keys":
+              let str3 = "";
+              let str4 = "";
+              if (code.keys.length > 1) {
+                str4 = "s";
+              }
+              if (code.keys.length > 1) {
+                str3 = "s";
+              }
               const _HermesInternal3 = HermesInternal;
-              return "\uC778\uC2DD\uD560 \uC218 \uC5C6\uB294 \uD0A4: " + closure_2.joinValues(code.keys, ", ");
+              return "Cl\u00E9" + str4 + " non reconnue" + str3 + " : " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "\uC798\uBABB\uB41C \uD0A4: " + code.origin;
+              return "Cl\u00E9 invalide dans " + code.origin;
             case "invalid_union":
-              return "\uC798\uBABB\uB41C \uC785\uB825";
+              return "Entr\u00E9e invalide";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "\uC798\uBABB\uB41C \uAC12: " + code.origin;
+              return "Valeur invalide dans " + code.origin;
             default:
-              return "\uC798\uBABB\uB41C \uC785\uB825";
+              return "Entr\u00E9e invalide";
           }
         };
         return obj;
@@ -206,7 +186,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod9071);
+    let closure_2 = fn(_mod9082);
     function error() {
 
     }

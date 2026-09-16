@@ -1,7 +1,7 @@
 // === Module 9093: ? ===
 
 // Module 9093
-import _mod9071 from "module_9071" /* 9071 */;
+import _mod9082 from "module_9082" /* 9082 */;
 
 const self = this;
 let self2 = this;
@@ -55,503 +55,135 @@ if (self2) {
     }
     const _Object3 = Object;
     exports.default = function default_1() {
-      if (typeof typeLabel === "function") {
+      if (typeof error === "function") {
         const obj = { localeError: null };
-        let obj2 = { string: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA", gender: "f" }, number: { label: "\u05DE\u05E1\u05E4\u05E8", gender: "m" }, boolean: { label: "\u05E2\u05E8\u05DA \u05D1\u05D5\u05DC\u05D9\u05D0\u05E0\u05D9", gender: "m" }, bigint: { label: "BigInt", gender: "m" }, date: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA", gender: "m" }, array: { label: "\u05DE\u05E2\u05E8\u05DA", gender: "m" }, object: { label: "\u05D0\u05D5\u05D1\u05D9\u05D9\u05E7\u05D8", gender: "m" }, null: { label: "\u05E2\u05E8\u05DA \u05E8\u05D9\u05E7 (null)", gender: "m" }, undefined: { label: "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05DE\u05D5\u05D2\u05D3\u05E8 (undefined)", gender: "m" }, symbol: { label: "\u05E1\u05D9\u05DE\u05D1\u05D5\u05DC (Symbol)", gender: "m" }, function: { label: "\u05E4\u05D5\u05E0\u05E7\u05E6\u05D9\u05D4", gender: "f" }, map: { label: "\u05DE\u05E4\u05D4 (Map)", gender: "f" }, set: { label: "\u05E7\u05D1\u05D5\u05E6\u05D4 (Set)", gender: "f" }, file: { label: "\u05E7\u05D5\u05D1\u05E5", gender: "m" }, promise: { label: "Promise", gender: "m" }, NaN: { label: "NaN", gender: "m" }, unknown: { label: "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05D9\u05D3\u05D5\u05E2", gender: "m" }, value: { label: "\u05E2\u05E8\u05DA", gender: "m" } };
-        const obj3 = { string: { unit: "\u05EA\u05D5\u05D5\u05D9\u05DD", shortLabel: "\u05E7\u05E6\u05E8", longLabel: "\u05D0\u05E8\u05D5\u05DA" }, file: { unit: "\u05D1\u05D9\u05D9\u05D8\u05D9\u05DD", shortLabel: "\u05E7\u05D8\u05DF", longLabel: "\u05D2\u05D3\u05D5\u05DC" }, array: { unit: "\u05E4\u05E8\u05D9\u05D8\u05D9\u05DD", shortLabel: "\u05E7\u05D8\u05DF", longLabel: "\u05D2\u05D3\u05D5\u05DC" }, set: { unit: "\u05E4\u05E8\u05D9\u05D8\u05D9\u05DD", shortLabel: "\u05E7\u05D8\u05DF", longLabel: "\u05D2\u05D3\u05D5\u05DC" }, number: { unit: "", shortLabel: "\u05E7\u05D8\u05DF", longLabel: "\u05D2\u05D3\u05D5\u05DC" } };
-        function typeEntry(arg0) {
-
-        }
-        typeLabel = function typeLabel(arg0) {
-
-        };
-        function withDefinite(arg0) {
-
-        }
-        function verbFor(arg0) {
-
-        }
-        function getSizing(arg0) {
-
-        }
-        const obj4 = { regex: { label: "\u05E7\u05DC\u05D8", gender: "m" }, email: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA \u05D0\u05D9\u05DE\u05D9\u05D9\u05DC", gender: "f" }, url: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA \u05E8\u05E9\u05EA", gender: "f" }, emoji: { label: "\u05D0\u05D9\u05DE\u05D5\u05D2'\u05D9", gender: "m" }, uuid: { label: "UUID", gender: "m" }, nanoid: { label: "nanoid", gender: "m" }, guid: { label: "GUID", gender: "m" }, cuid: { label: "cuid", gender: "m" }, cuid2: { label: "cuid2", gender: "m" }, ulid: { label: "ULID", gender: "m" }, xid: { label: "XID", gender: "m" }, ksuid: { label: "KSUID", gender: "m" }, datetime: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA \u05D5\u05D6\u05DE\u05DF ISO", gender: "m" }, date: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA ISO", gender: "m" }, time: { label: "\u05D6\u05DE\u05DF ISO", gender: "m" }, duration: { label: "\u05DE\u05E9\u05DA \u05D6\u05DE\u05DF ISO", gender: "m" }, ipv4: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA IPv4", gender: "f" }, ipv6: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA IPv6", gender: "f" }, cidrv4: { label: "\u05D8\u05D5\u05D5\u05D7 IPv4", gender: "m" }, cidrv6: { label: "\u05D8\u05D5\u05D5\u05D7 IPv6", gender: "m" }, base64: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D1\u05D1\u05E1\u05D9\u05E1 64", gender: "f" }, base64url: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D1\u05D1\u05E1\u05D9\u05E1 64 \u05DC\u05DB\u05EA\u05D5\u05D1\u05D5\u05EA \u05E8\u05E9\u05EA", gender: "f" }, json_string: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA JSON", gender: "f" }, e164: { label: "\u05DE\u05E1\u05E4\u05E8 E.164", gender: "m" }, jwt: { label: "JWT", gender: "m" }, ends_with: { label: "\u05E7\u05DC\u05D8", gender: "m" }, includes: { label: "\u05E7\u05DC\u05D8", gender: "m" }, lowercase: { label: "\u05E7\u05DC\u05D8", gender: "m" }, starts_with: { label: "\u05E7\u05DC\u05D8", gender: "m" }, uppercase: { label: "\u05E7\u05DC\u05D8", gender: "m" } };
-        dependencyMap = { nan: "NaN" };
+        const obj2 = { string: { unit: "car\u00E0cters", verb: "contenir" }, file: { unit: "bytes", verb: "contenir" }, array: { unit: "elements", verb: "contenir" }, set: { unit: "elements", verb: "contenir" } };
+        closure_1 = { regex: "entrada", email: "adre\u00E7a electr\u00F2nica", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data i hora ISO", date: "data ISO", time: "hora ISO", duration: "durada ISO", ipv4: "adre\u00E7a IPv4", ipv6: "adre\u00E7a IPv6", cidrv4: "rang IPv4", cidrv6: "rang IPv6", base64: "cadena codificada en base64", base64url: "cadena codificada en base64url", json_string: "cadena JSON", e164: "n\u00FAmero E.164", jwt: "JWT", template_literal: "entrada" };
+        closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
-              let label = code.expected;
-              let str135 = label;
-              if (label == null) {
-                str135 = "";
+              let expected = closure_2[code.expected];
+              if (expected == null) {
+                expected = code.expected;
               }
-              if (dependencyMap[str135] != null) {
-                const parsedTypeResult = typeEntry.parsedType(code.input);
-                let tmp119 = dependencyMap[parsedTypeResult];
-                if (tmp119 == null) {
-                  let label1;
-                  if (obj2[parsedTypeResult] != null) {
-                    label1 = tmp121.label;
-                  }
-                  tmp119 = label1;
-                }
-                if (tmp119 == null) {
-                  tmp119 = parsedTypeResult;
-                }
-                obj2 = /^[A-Z]/;
-                if (obj2.test(code.expected)) {
-                  const _HermesInternal33 = HermesInternal;
-                  let combined = "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA instanceof " + code.expected + ", \u05D4\u05EA\u05E7\u05D1\u05DC " + tmp119;
-                } else {
-                  const _HermesInternal32 = HermesInternal;
-                  combined = "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA " + tmp110 + ", \u05D4\u05EA\u05E7\u05D1\u05DC " + tmp119;
-                }
-                return combined;
-              } else if (typeof typeLabel === "function") {
-                if (typeof typeEntry === "function") {
-                  let tmp113;
-                  if (label) {
-                    tmp113 = obj2[label];
-                  }
-                  if (tmp113) {
-                    label = tmp113.label;
-                  } else if (label == null) {
-                    label = obj2.unknown.label;
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
+              const parsedTypeResult = closure_2.parsedType(code.input);
+              let tmp50 = closure_2[parsedTypeResult];
+              if (tmp50 == null) {
+                tmp50 = parsedTypeResult;
+              }
+              if (obj.test(code.expected)) {
+                const _HermesInternal17 = HermesInternal;
+                let combined = "Tipus inv\u00E0lid: s'esperava instanceof " + code.expected + ", s'ha rebut " + tmp50;
               } else {
-                throw new TypeError("Trying to call a non-function");
+                const _HermesInternal16 = HermesInternal;
+                combined = "Tipus inv\u00E0lid: s'esperava " + expected + ", s'ha rebut " + tmp50;
               }
-            break;
+              return combined;
             case "invalid_value":
               if (1 === code.values.length) {
-                const _HermesInternal31 = HermesInternal;
-                return "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05E2\u05E8\u05DA \u05D7\u05D9\u05D9\u05D1 \u05DC\u05D4\u05D9\u05D5\u05EA " + typeEntry.stringifyPrimitive(code.values[0]);
+                const _HermesInternal15 = HermesInternal;
+                let combined1 = "Valor inv\u00E0lid: s'esperava " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
-                const values = code.values;
-                const mapped = values.map((item) => typeEntry.stringifyPrimitive(item));
-                if (2 === code.values.length) {
-                  const _HermesInternal30 = HermesInternal;
-                  return "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05D0\u05E4\u05E9\u05E8\u05D5\u05D9\u05D5\u05EA \u05D4\u05DE\u05EA\u05D0\u05D9\u05DE\u05D5\u05EA \u05D4\u05DF " + mapped[0] + " \u05D0\u05D5 " + mapped[1];
-                } else {
-                  const substr = mapped.slice(0, -1);
-                  const _HermesInternal29 = HermesInternal;
-                  return "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D4\u05D0\u05E4\u05E9\u05E8\u05D5\u05D9\u05D5\u05EA \u05D4\u05DE\u05EA\u05D0\u05D9\u05DE\u05D5\u05EA \u05D4\u05DF " + substr.join(", ") + " \u05D0\u05D5 " + mapped[mapped.length - 1];
-                }
+                const _HermesInternal14 = HermesInternal;
+                combined1 = "Opci\u00F3 inv\u00E0lida: s'esperava una de " + closure_2.joinValues(code.values, " o ");
               }
-            break;
+              return combined1;
             case "too_big":
-              const origin3 = code.origin;
-              if (typeof getSizing === "function") {
-                let tmp67 = null;
-                if (origin3) {
-                  let tmp69 = obj3[origin3];
-                  if (tmp69 == null) {
-                    tmp69 = null;
-                  }
-                  tmp67 = tmp69;
-                }
-                let str79 = code.origin;
-                if (str79 == null) {
-                  str79 = "value";
-                }
-                if (typeof withDefinite === "function") {
-                  if (typeof typeLabel === "function") {
-                    if (typeof typeEntry === "function") {
-                      let tmp73;
-                      if (str79) {
-                        tmp73 = obj2[str79];
-                      }
-                      if (tmp73) {
-                        str79 = tmp73.label;
-                      } else if (str79 == null) {
-                        str79 = obj2.unknown.label;
-                      }
-                      const _HermesInternal20 = HermesInternal;
-                      const combined1 = "\u05D4" + str79;
-                      if ("string" === code.origin) {
-                        let str118;
-                        if (tmp67 != null) {
-                          str118 = tmp67.longLabel;
-                        }
-                        if (str118 == null) {
-                          str118 = "\u05D0\u05E8\u05D5\u05DA";
-                        }
-                        const str1 = code.maximum.toString();
-                        let str120;
-                        if (tmp67 != null) {
-                          str120 = tmp67.unit;
-                        }
-                        if (str120 == null) {
-                          str120 = "";
-                        }
-                        let str121 = "\u05DC\u05DB\u05DC \u05D4\u05D9\u05D5\u05EA\u05E8";
-                        if (code.inclusive) {
-                          str121 = "\u05D0\u05D5 \u05E4\u05D7\u05D5\u05EA";
-                        }
-                        const _HermesInternal28 = HermesInternal;
-                        return "" + str118 + " \u05DE\u05D3\u05D9: " + combined1 + " \u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05DB\u05D9\u05DC " + str1 + " " + str120 + " " + str121.trim();
-                      } else if ("number" === code.origin) {
-                        const maximum2 = code.maximum;
-                        const _HermesInternal26 = HermesInternal;
-                        if (code.inclusive) {
-                          let concat2Result = concat2(maximum2);
-                        } else {
-                          concat2Result = concat2(maximum2);
-                        }
-                        const _HermesInternal27 = HermesInternal;
-                        return "\u05D2\u05D3\u05D5\u05DC \u05DE\u05D3\u05D9: " + combined1 + " \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA " + concat2Result;
-                      } else {
-                        if ("array" !== code.origin) {
-                          if ("set" !== code.origin) {
-                            let str82 = "<";
-                            if (code.inclusive) {
-                              str82 = "<=";
-                            }
-                            let str83 = code.origin;
-                            if (str83 == null) {
-                              str83 = "value";
-                            }
-                            if (typeof verbFor === "function") {
-                              if (typeof tmp72 === "function") {
-                                let tmp79;
-                                if (str83) {
-                                  tmp79 = obj2[str83];
-                                }
-                                let str84;
-                                if (tmp79 != null) {
-                                  str84 = tmp79.gender;
-                                }
-                                if (str84 == null) {
-                                  str84 = "m";
-                                }
-                                let str85 = "\u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA";
-                                if ("f" === str84) {
-                                  str85 = "\u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05D9\u05D5\u05EA";
-                                }
-                                let unit;
-                                if (tmp67 != null) {
-                                  unit = tmp67.unit;
-                                }
-                                if (unit) {
-                                  const _HermesInternal22 = HermesInternal;
-                                  let combined2 = "" + tmp67.longLabel + " \u05DE\u05D3\u05D9: " + combined1 + " " + str85 + " " + str82 + code.maximum.toString() + " " + tmp67.unit;
-                                } else {
-                                  let str87;
-                                  if (tmp67 != null) {
-                                    str87 = tmp67.longLabel;
-                                  }
-                                  if (str87 == null) {
-                                    str87 = "\u05D2\u05D3\u05D5\u05DC";
-                                  }
-                                  const _HermesInternal21 = HermesInternal;
-                                  combined2 = "" + str87 + " \u05DE\u05D3\u05D9: " + combined1 + " " + str85 + " " + str82 + code.maximum.toString();
-                                }
-                                return combined2;
-                              } else {
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
-                            }
-                          }
-                        }
-                        let str101 = "\u05E6\u05E8\u05D9\u05DA";
-                        if ("set" === code.origin) {
-                          str101 = "\u05E6\u05E8\u05D9\u05DB\u05D4";
-                        }
-                        const maximum = code.maximum;
-                        if (code.inclusive) {
-                          let str106;
-                          if (!tmp90) {
-                            str106 = tmp67.unit;
-                          }
-                          if (str106 == null) {
-                            str106 = "";
-                          }
-                          const _HermesInternal24 = HermesInternal;
-                          let combined3 = "" + maximum + " " + str106 + " \u05D0\u05D5 \u05E4\u05D7\u05D5\u05EA";
-                        } else {
-                          let str103;
-                          if (!tmp90) {
-                            str103 = tmp67.unit;
-                          }
-                          if (str103 == null) {
-                            str103 = "";
-                          }
-                          const _HermesInternal23 = HermesInternal;
-                          combined3 = "\u05E4\u05D7\u05D5\u05EA \u05DE-" + maximum + " " + str103;
-                        }
-                        const _HermesInternal25 = HermesInternal;
-                        return "\u05D2\u05D3\u05D5\u05DC \u05DE\u05D3\u05D9: " + combined1 + " " + str101 + " \u05DC\u05D4\u05DB\u05D9\u05DC " + combined3.trim();
-                      }
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
+              let str29 = "menys de";
+              if (code.inclusive) {
+                str29 = "com a m\u00E0xim";
               }
-            break;
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
+              }
+              let str30 = code.origin;
+              if (tmp29) {
+                if (str30 == null) {
+                  str30 = "el valor";
+                }
+                const str1 = code.maximum.toString();
+                let str37 = tmp29.unit;
+                if (str37 == null) {
+                  str37 = "elements";
+                }
+                const _HermesInternal13 = HermesInternal;
+                let combined2 = "Massa gran: s'esperava que " + str30 + " contingu\u00E9s " + str29 + " " + str1 + " " + str37;
+              } else {
+                let str31 = str30;
+                if (str30 == null) {
+                  str31 = "el valor";
+                }
+                const _HermesInternal12 = HermesInternal;
+                combined2 = "Massa gran: s'esperava que " + str31 + " fos " + str29 + " " + code.maximum.toString();
+              }
+              return combined2;
             case "too_small":
-              const origin = code.origin;
-              if (typeof getSizing === "function") {
-                let tmp25 = null;
-                if (origin) {
-                  let tmp27 = obj3[origin];
-                  if (tmp27 == null) {
-                    tmp27 = null;
-                  }
-                  tmp25 = tmp27;
-                }
-                let str25 = code.origin;
-                if (str25 == null) {
-                  str25 = "value";
-                }
-                if (typeof withDefinite === "function") {
-                  if (typeof typeLabel === "function") {
-                    if (typeof typeEntry === "function") {
-                      let tmp31;
-                      if (str25) {
-                        tmp31 = obj2[str25];
-                      }
-                      if (tmp31) {
-                        str25 = tmp31.label;
-                      } else if (str25 == null) {
-                        str25 = obj2.unknown.label;
-                      }
-                      const _HermesInternal10 = HermesInternal;
-                      const combined4 = "\u05D4" + str25;
-                      if ("string" === code.origin) {
-                        let str68;
-                        if (tmp25 != null) {
-                          str68 = tmp25.shortLabel;
-                        }
-                        if (str68 == null) {
-                          str68 = "\u05E7\u05E6\u05E8";
-                        }
-                        const str167 = code.minimum.toString();
-                        let str70;
-                        if (tmp25 != null) {
-                          str70 = tmp25.unit;
-                        }
-                        if (str70 == null) {
-                          str70 = "";
-                        }
-                        let str71 = "\u05DC\u05E4\u05D7\u05D5\u05EA";
-                        if (code.inclusive) {
-                          str71 = "\u05D0\u05D5 \u05D9\u05D5\u05EA\u05E8";
-                        }
-                        const _HermesInternal19 = HermesInternal;
-                        return "" + str68 + " \u05DE\u05D3\u05D9: " + combined4 + " \u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05DB\u05D9\u05DC " + str167 + " " + str70 + " " + str71.trim();
-                      } else if ("number" === code.origin) {
-                        const minimum2 = code.minimum;
-                        const _HermesInternal17 = HermesInternal;
-                        if (code.inclusive) {
-                          let combined5 = concat(minimum2);
-                        } else {
-                          combined5 = concat(minimum2);
-                        }
-                        const _HermesInternal18 = HermesInternal;
-                        return "\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: " + combined4 + " \u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA " + combined5;
-                      } else {
-                        if ("array" !== code.origin) {
-                          if ("set" !== code.origin) {
-                            let str28 = ">";
-                            if (code.inclusive) {
-                              str28 = ">=";
-                            }
-                            let str29 = code.origin;
-                            if (str29 == null) {
-                              str29 = "value";
-                            }
-                            if (typeof verbFor === "function") {
-                              if (typeof tmp30 === "function") {
-                                let tmp37;
-                                if (str29) {
-                                  tmp37 = obj2[str29];
-                                }
-                                let str30;
-                                if (tmp37 != null) {
-                                  str30 = tmp37.gender;
-                                }
-                                if (str30 == null) {
-                                  str30 = "m";
-                                }
-                                let str31 = "\u05E6\u05E8\u05D9\u05DA \u05DC\u05D4\u05D9\u05D5\u05EA";
-                                if ("f" === str30) {
-                                  str31 = "\u05E6\u05E8\u05D9\u05DB\u05D4 \u05DC\u05D4\u05D9\u05D5\u05EA";
-                                }
-                                let unit1;
-                                if (tmp25 != null) {
-                                  unit1 = tmp25.unit;
-                                }
-                                if (unit1) {
-                                  const _HermesInternal12 = HermesInternal;
-                                  let combined6 = "" + tmp25.shortLabel + " \u05DE\u05D3\u05D9: " + combined4 + " " + str31 + " " + str28 + code.minimum.toString() + " " + tmp25.unit;
-                                } else {
-                                  let str33;
-                                  if (tmp25 != null) {
-                                    str33 = tmp25.shortLabel;
-                                  }
-                                  if (str33 == null) {
-                                    str33 = "\u05E7\u05D8\u05DF";
-                                  }
-                                  const _HermesInternal11 = HermesInternal;
-                                  combined6 = "" + str33 + " \u05DE\u05D3\u05D9: " + combined4 + " " + str31 + " " + str28 + code.minimum.toString();
-                                }
-                                return combined6;
-                              } else {
-                                throw new TypeError("Trying to call a non-function");
-                              }
-                            } else {
-                              throw new TypeError("Trying to call a non-function");
-                            }
-                          }
-                        }
-                        let str47 = "\u05E6\u05E8\u05D9\u05DA";
-                        if ("set" === code.origin) {
-                          str47 = "\u05E6\u05E8\u05D9\u05DB\u05D4";
-                        }
-                        if (1 === code.minimum) {
-                          if (code.inclusive) {
-                            const origin2 = code.origin;
-                            const _HermesInternal16 = HermesInternal;
-                            let combined7 = "\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: " + combined4 + " " + str47 + " \u05DC\u05D4\u05DB\u05D9\u05DC " + "\u05DC\u05E4\u05D7\u05D5\u05EA \u05E4\u05E8\u05D9\u05D8 \u05D0\u05D7\u05D3";
-                          }
-                          return combined7;
-                        }
-                        const minimum = code.minimum;
-                        if (code.inclusive) {
-                          let str52;
-                          if (!tmp48) {
-                            str52 = tmp25.unit;
-                          }
-                          if (str52 == null) {
-                            str52 = "";
-                          }
-                          const _HermesInternal14 = HermesInternal;
-                          let combined8 = "" + minimum + " " + str52 + " \u05D0\u05D5 \u05D9\u05D5\u05EA\u05E8";
-                        } else {
-                          let str49;
-                          if (!tmp48) {
-                            str49 = tmp25.unit;
-                          }
-                          if (str49 == null) {
-                            str49 = "";
-                          }
-                          const _HermesInternal13 = HermesInternal;
-                          combined8 = "\u05D9\u05D5\u05EA\u05E8 \u05DE-" + minimum + " " + str49;
-                        }
-                        const _HermesInternal15 = HermesInternal;
-                        combined7 = "\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: " + combined4 + " " + str47 + " \u05DC\u05D4\u05DB\u05D9\u05DC " + combined8.trim();
-                        const str59 = "\u05E7\u05D8\u05DF \u05DE\u05D3\u05D9: " + combined4 + " " + str47 + " \u05DC\u05D4\u05DB\u05D9\u05DC " + combined8;
-                      }
-                    } else {
-                      throw new TypeError("Trying to call a non-function");
-                    }
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
+              let str20 = "m\u00E9s de";
+              if (code.inclusive) {
+                str20 = "com a m\u00EDnim";
               }
-            break;
+              let tmp17 = obj2[code.origin];
+              if (tmp17 == null) {
+                tmp17 = null;
+              }
+              ({ origin, minimum } = code);
+              const str53 = minimum.toString();
+              if (tmp17) {
+                const _HermesInternal11 = HermesInternal;
+                let combined3 = "Massa petit: s'esperava que " + origin + " contingu\u00E9s " + str20 + " " + str53 + " " + tmp17.unit;
+              } else {
+                const _HermesInternal10 = HermesInternal;
+                combined3 = "Massa petit: s'esperava que " + origin + " fos " + str20 + " " + str53;
+              }
+              return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                return "\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05EA\u05D7\u05D9\u05DC \u05D1 \"" + code.prefix + "\"";
+                let combined4 = "Format inv\u00E0lid: ha de comen\u00E7ar amb \"" + code.prefix + "\"";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                return "\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05E1\u05EA\u05D9\u05D9\u05DD \u05D1 \"" + code.suffix + "\"";
+                combined4 = "Format inv\u00E0lid: ha d'acabar amb \"" + code.suffix + "\"";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                return "\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05DB\u05DC\u05D5\u05DC \"" + code.includes + "\"";
+                combined4 = "Format inv\u00E0lid: ha d'incloure \"" + code.includes + "\"";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                return "\u05D4\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D7\u05D9\u05D9\u05D1\u05EA \u05DC\u05D4\u05EA\u05D0\u05D9\u05DD \u05DC\u05EA\u05D1\u05E0\u05D9\u05EA " + code.pattern;
+                combined4 = "Format inv\u00E0lid: ha de coincidir amb el patr\u00F3 " + code.pattern;
               } else {
-                let label2;
-                if (obj4[code.format] != null) {
-                  label2 = tmp15.label;
-                }
-                if (label2 == null) {
-                  label2 = code.format;
-                }
-                let str13;
-                if (obj4[code.format] != null) {
-                  str13 = tmp15.gender;
-                }
-                if (str13 == null) {
-                  str13 = "m";
-                }
-                let str14 = "\u05EA\u05E7\u05D9\u05DF";
-                if ("f" === str13) {
-                  str14 = "\u05EA\u05E7\u05D9\u05E0\u05D4";
+                let format = closure_1[code.format];
+                if (format == null) {
+                  format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                return "" + label2 + " \u05DC\u05D0 " + str14;
+                combined4 = "Format inv\u00E0lid per a " + format;
               }
-            break;
+              return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "\u05DE\u05E1\u05E4\u05E8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF: \u05D7\u05D9\u05D9\u05D1 \u05DC\u05D4\u05D9\u05D5\u05EA \u05DE\u05DB\u05E4\u05DC\u05D4 \u05E9\u05DC " + code.divisor;
+              return "N\u00FAmero inv\u00E0lid: ha de ser m\u00FAltiple de " + code.divisor;
             case "unrecognized_keys":
-              let str5 = "";
+              let str3 = "";
+              let str4 = "";
               if (code.keys.length > 1) {
-                str5 = "\u05D5\u05EA";
+                str4 = "s";
               }
-              let str6 = "\u05D4";
               if (code.keys.length > 1) {
-                str6 = "\u05D9\u05DD";
+                str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "\u05DE\u05E4\u05EA\u05D7" + str5 + " \u05DC\u05D0 \u05DE\u05D6\u05D5\u05D4" + str6 + ": " + typeEntry.joinValues(code.keys, ", ");
+              return "Clau" + str4 + " no reconeguda" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
-              return "\u05E9\u05D3\u05D4 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1\u05D0\u05D5\u05D1\u05D9\u05D9\u05E7\u05D8";
+              const _HermesInternal2 = HermesInternal;
+              return "Clau inv\u00E0lida a " + code.origin;
             case "invalid_union":
-              return "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF";
+              return "Entrada inv\u00E0lida";
             case "invalid_element":
-              let str = code.origin;
-              if (str == null) {
-                str = "array";
-              }
-              if (typeof withDefinite === "function") {
-                if (typeof typeLabel === "function") {
-                  if (typeof typeEntry === "function") {
-                    let tmp5;
-                    if (str) {
-                      tmp5 = obj2[str];
-                    }
-                    if (tmp5) {
-                      str = tmp5.label;
-                    } else if (str == null) {
-                      str = obj2.unknown.label;
-                    }
-                    const _HermesInternal = HermesInternal;
-                    const _HermesInternal2 = HermesInternal;
-                    return "\u05E2\u05E8\u05DA \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF \u05D1" + "\u05D4" + str;
-                  } else {
-                    throw new TypeError("Trying to call a non-function");
-                  }
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            break;
+              const _HermesInternal = HermesInternal;
+              return "Element inv\u00E0lid a " + code.origin;
             default:
-              return "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF";
+              return "Entrada inv\u00E0lida";
           }
         };
         return obj;
@@ -559,7 +191,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod9071);
+    let closure_2 = fn(_mod9082);
     function error() {
 
     }

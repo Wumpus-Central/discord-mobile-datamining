@@ -1,14 +1,14 @@
 // === Module 14443: ? ===
 
 // Module 14443
+import _mod14424 from "module_14424" /* 14424 */;
 import _mod14444 from "module_14444" /* 14444 */;
 
 
-export default (arg0) => {
-  const tmp = _mod14444(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
+export default (arg0, arg1) => {
+  let tmp4;
+  if (!_mod14424(arg0[arg1])) {
+    tmp4 = _mod14444(tmp);
   }
-  return num;
+  return tmp4;
 };

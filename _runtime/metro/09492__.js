@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 80, scales: [2, 3], hash: "d6c65250c1813722d34dd286c312a88f", name: "img_nitro_classic_icon_white_80px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MushroomIcon", width: 60, height: 60, scales: [2, 3], hash: "d0258153ad64bd0da42bc5243da496aa", name: "MushroomIcon", type: "png" });

@@ -1,17 +1,17 @@
 // === Module 4078: ? ===
 
 // Module 4078
-import startOfMinute_mod from "startOfMinute" /* 3937 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import startOfQuarter_mod from "startOfQuarter" /* 3938 */;
+import requiredArgs_mod from "requiredArgs" /* 3727 */;
 
-let startOfMinute = startOfMinute_mod;
-if (!startOfMinute) {
-  const obj = { default: startOfMinute };
+let startOfQuarter = startOfQuarter_mod;
+if (!startOfQuarter) {
+  const obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfMinute;
+  tmp3 = startOfQuarter;
 }
-startOfMinute = tmp3;
+startOfQuarter = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameMinute(arg0, arg1) {
+export default function isSameQuarter(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfMinute.default(arg0);
+  const defaultResult1 = startOfQuarter.default(arg0);
   const time = defaultResult1.getTime();
-  return time === startOfMinute.default(arg1).getTime();
+  return time === startOfQuarter.default(arg1).getTime();
 };
 export default exports.default;

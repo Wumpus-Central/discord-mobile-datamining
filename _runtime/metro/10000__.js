@@ -1,5 +1,7 @@
 // === Module 10000: ? ===
 
 // Module 10000
+import registerAsset from "module_1121" /* 1121 */;
 
-export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 32, height: 32, scales: [2, 3], hash: "6745f221b3e662876db35721a519454b", name: "copy", type: "png" });

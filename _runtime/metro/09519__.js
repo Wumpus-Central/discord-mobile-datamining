@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 153, height: 121, scales: [2, 3], hash: "285e979e530f2dfb10749ec34ebaf83a", name: "img_tier_0_clouds", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "30bd17a4fc8d423d981d2ea586a3ca6e", name: "BoostGemIcon", type: "png" });

@@ -1,28 +1,39 @@
 // === Module 3881: ? ===
 
 // Module 3881
-import _typeof_mod from "module_3728" /* 3728 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import module_3730_mod from "module_3730" /* 3730 */;
+import _typeof_mod from "module_3726" /* 3726 */;
+import requiredArgs_mod from "requiredArgs" /* 3727 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_3730 = module_3730_mod;
+if (!module_3730) {
+  const obj = { default: module_3730 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3730;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_3730 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = _typeof;
 }
-requiredArgs = tmp5;
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isSaturday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 6 === _typeof.default(arg0).getDay();
+export default function addMilliseconds(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const time = _typeof.default(arg0).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  return new Date(time + module_3730.default(arg1));
 };
 export default exports.default;

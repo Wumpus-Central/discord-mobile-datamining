@@ -1,23 +1,12 @@
 // === Module 13754: ? ===
 
 // Module 13754
-import _mod13746 from "module_13746" /* 13746 */;
+import _mod13768 from "module_13768" /* 13768 */;
+import assign from "module_13755" /* 13755 */;
+import Deflate from "Deflate" /* 13756 */;
+import Inflate from "Inflate" /* 13764 */;
 
-let c2 = true;
-let c3 = true;
-try {
-  const _String = String;
-  fromCharCode.apply(null, [0]);
-  try {
-    const _String2 = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(1);
-    fromCharCode2.apply(null, uint8Array);
-    const buf8 = new _mod13746.Buf8(256);
-    require = 252;
-  } catch (err) {
-    c3 = false;
-  }
-} catch (err) {
-  c2 = false;
-}
+const obj = {};
+assign.assign(obj, Deflate, Inflate, _mod13768);
+
+export default obj;

@@ -1,96 +1,118 @@
 // === Module 6912: ? ===
 
 // Module 6912
-import cancelAnimation from "cancelAnimation" /* 1637 */;
-import _slicedToArray from "module_32" /* 32 */;
+import DEFAULT_HANDLE_HEIGHT from "DEFAULT_HANDLE_HEIGHT" /* 6739 */;
 
 const require = globalThis.__r;
 
-require = fn;
-const noop = fn(19);
-({ useMemo: c3, useState: closure_4 } = noop);
-get_ActivityIndicator = fn(17);
-({ Platform: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const __initData = { code: "function pnpm_useBottomSheetContentContainerStyleTs1(){const{animatedFooterHeight}=this.__closure;return animatedFooterHeight.get();}" };
-const __initData2 = { code: "function pnpm_useBottomSheetContentContainerStyleTs2(result,previousFooterHeight){const{enableFooterMarginAdjustment,runOnJS,setFooterHeight,Platform,animatedContentHeight}=this.__closure;if(!enableFooterMarginAdjustment){return;}runOnJS(setFooterHeight)(result);if(Platform.OS==='web'){if(result&&!previousFooterHeight){const contentHeight=animatedContentHeight.get();animatedContentHeight.set(contentHeight+result);}}}" };
+require = arg1;
+let dependencyMap = arg6;
+let __initData = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}" };
+let __initData2 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
 
-export const useBottomSheetContentContainerStyle = function useBottomSheetContentContainerStyle(flag, contentContainerStyle) {
-  _require = flag;
-  dependencyMap = contentContainerStyle;
-  const tmp = first(animatedFooterHeight(0), 2);
-  first = tmp[0];
-  closure_3 = tmp3;
-  const bottomSheetInternal = require("module_6740").useBottomSheetInternal();
-  animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  let items = [contentContainerStyle];
-  const tmp5 = closure_3(() => {
-    if (closure_1) {
-      const _Array = Array;
-      let applyResult = closure_1;
-      if (Array.isArray(closure_1)) {
-        compose = compose.compose;
-        const items = [];
-        HermesBuiltin.arraySpread(closure_1, 0);
-        applyResult = HermesBuiltin.apply(items, compose);
-      }
-      let obj = applyResult;
-    } else {
-      obj = {};
-    }
-    return obj;
-  }, items);
-  Platform = tmp5;
-  const items1 = [first, flag, tmp5];
-  let obj = require("module_6740");
-  const tmp6 = closure_3(() => {
-    if (closure_0) {
-      let num = 0;
-      if (closure_5) {
-        num = 0;
-        if (typeof closure_5 === "object") {
-          ({ paddingBottom, padding, paddingVertical } = closure_5);
-          if (undefined === paddingBottom) {
-            if (undefined === paddingVertical) {
-              num = 0;
-              if (tmp2) {
-                num = padding;
-              }
-              tmp2 = undefined !== padding && typeof padding === "number";
-            } else {
-              num = paddingVertical;
-            }
-          } else {
-            num = paddingBottom;
+export const useAnimatedSnapPoints = (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize) => {
+  _require = snapPoints;
+  dependencyMap = derivedValue;
+  __initData = sharedValue1;
+  __initData2 = reactiveSharedValue2;
+  closure_4 = DEFAULT_DYNAMIC_SIZING;
+  closure_5 = maxDynamicContentSize;
+  sharedValue = require("cancelAnimation").useSharedValue(-1);
+  const obj = require("cancelAnimation");
+  class P {
+    constructor() {
+      iter = closure_1;
+      tmp = closure_0;
+      tmp2 = closure_1;
+      if (closure_1.value === closure_0(closure_1[1]).INITIAL_CONTAINER_HEIGHT) {
+        items = [];
+        items[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
+        return items;
+      } else {
+        iter3 = closure_0;
+        if (closure_0) {
+          str = "value";
+          value = iter3;
+          if ("value" in iter3) {
+            value = iter3.value;
           }
+          items1 = value;
+        } else {
+          items1 = [];
+        }
+        mapped = items1.map(() => { ... });
+        tmp3 = closure_4;
+        if (closure_4) {
+          iter2 = closure_3;
+          if (closure_3.value === tmp(tmp2[1]).INITIAL_HANDLE_HEIGHT) {
+            items2 = [];
+            items2[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
+            return items2;
+          } else {
+            iter4 = closure_2;
+            if (closure_2.value === tmp(tmp2[1]).INITIAL_CONTAINER_HEIGHT) {
+              items3 = [];
+              items3[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
+              return items3;
+            } else {
+              tmp4 = globalThis;
+              value1 = closure_5;
+              sum = iter4.value + iter2.value;
+              if (undefined === closure_5) {
+                value1 = iter.value;
+              }
+              diff = iter.value - Math.min(sum, value1);
+              if (!mapped.includes(diff)) {
+                arr1 = mapped.push(diff);
+              }
+              sorted = mapped.sort(() => { ... });
+              tmp8 = closure_6;
+              closure_6.value = sorted.indexOf(diff);
+              return sorted;
+            }
+          }
+        } else {
+          return mapped;
         }
       }
-      const items = [closure_5, ];
-      const obj = { paddingBottom: num + first, overflow: "visible" };
-      items[1] = obj;
-      return items;
-    } else {
-      return closure_5;
-    }
-  }, items1);
-  class H {
-    constructor() {
-      return animatedFooterHeight.get();
     }
   }
-  H.__closure = { animatedFooterHeight };
-  H.__workletHash = 10172145694310;
-  H.__initData = __initData;
-  const fn = function f(arg0, arg1) {
-    if (closure_0) {
-      cancelAnimation.runOnJS(closure_3)(arg0);
-    }
-  };
   const obj2 = require("cancelAnimation");
-  fn.__closure = { enableFooterMarginAdjustment: flag, runOnJS: require("cancelAnimation").runOnJS, setFooterHeight: tmp[1], Platform, animatedContentHeight };
-  fn.__workletHash = 1149497927090;
-  fn.__initData = __initData2;
-  const items2 = [animatedFooterHeight, animatedContentHeight, flag];
-  const animatedReaction = obj2.useAnimatedReaction(H, fn, items2);
-  return tmp6;
+  P.__closure = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
+  P.__workletHash = 15015207820492;
+  P.__initData = __initData;
+  let items = [snapPoints, derivedValue, reactiveSharedValue2, sharedValue1, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize, sharedValue];
+  derivedValue = obj2.useDerivedValue(P, items);
+  const obj3 = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
+  class N {
+    constructor() {
+      if (closure_4) {
+        flag = true;
+        return true;
+      } else {
+        iter = closure_0;
+        if (closure_0) {
+          str = "value";
+          value = iter;
+          if ("value" in iter) {
+            value = iter.value;
+          }
+          items = value;
+        } else {
+          items = [];
+        }
+        length = items.length;
+        tmp = !length;
+        if (length) {
+          tmp = !items.find(/* F111975 */ function() { ... });
+        }
+        return !tmp;
+      }
+    }
+  }
+  N.__closure = { enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, snapPoints };
+  N.__workletHash = 4816362093278;
+  N.__initData = __initData2;
+  let items1 = [derivedValue, sharedValue, require("cancelAnimation").useDerivedValue(N)];
+  return items1;
 };

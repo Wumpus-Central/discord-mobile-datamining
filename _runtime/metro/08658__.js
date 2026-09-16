@@ -1,107 +1,20 @@
 // === Module 8658: ? ===
 
 // Module 8658
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8601 from "module_8601" /* 8601 */;
-import unitsDefault from "units" /* 8655 */;
-import _modDef8660 from "module_8660" /* 8660 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import _mod26 from "module_26" /* 26 */;
+import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const Mask = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGImage", directEventTypes: { topLoad: { registrationName: "onLoad" }, topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, x: true, y: true, width: true, height: true, src: null, align: true, meetOrSlice: true };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Mask {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, Mask);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Mask);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(Mask, _modDef8601);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ maskUnits, maskContentUnits, style } = props);
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
-    let num = 0;
-    if (undefined !== maskUnits) {
-      num = unitsDefault[maskUnits];
-    }
-    size.maskUnits = num;
-    let num2 = 1;
-    if (undefined !== maskContentUnits) {
-      num2 = unitsDefault[maskContentUnits];
-    }
-    size.maskContentUnits = num2;
-    let str;
-    if (props != null) {
-      str = props.maskType;
-    }
-    if (!str) {
-      let maskType;
-      if (style != null) {
-        maskType = style.maskType;
-      }
-      str = maskType;
-    }
-    if (!str) {
-      str = "luminance";
-    }
-    size.maskType = Mask(8659).maskType[str];
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(Mask(8592).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return <tmp8 ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(Mask, items);
-importDefaultResultResult.displayName = "Mask";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+size.src = { process: resolveAssetSource };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onLoad: true, onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = size;
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGImage", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

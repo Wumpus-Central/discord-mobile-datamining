@@ -1,14 +1,10 @@
 // === Module 14139: ? ===
 
 // Module 14139
-import _mod14137 from "module_14137" /* 14137 */;
+import _mod14138 from "module_14138" /* 14138 */;
 
 
-export default (arg0, arg1, arg2) => {
-  try {
-    const tmp7 = new _mod14137(arg1, arg2);
-    return tmp7.test(arg0);
-  } catch (err) {
-    return false;
-  }
+export default (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod14138(arg0, arg1, closure_0));
 };

@@ -1,77 +1,71 @@
 // === Module 13011: ? ===
 
 // Module 13011
-import _mod12933 from "module_12933" /* 12933 */;
+import errorCallback from "errorCallback" /* 12936 */;
+import _mod12940 from "module_12940" /* 12940 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12945 */;
+import _mod12952 from "module_12952" /* 12952 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12953 */;
+import _mod12958 from "module_12958" /* 12958 */;
+import _mod12959 from "module_12959" /* 12959 */;
+import _mod12967 from "module_12967" /* 12967 */;
+import _mod12976 from "module_12976" /* 12976 */;
+import "module_12939";
+import __SENTRY_DEBUG__ from "module_12968" /* 12968 */;
+import dateTimestampInSeconds from "module_12954" /* 12954 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getMetadataForUrl(fn, arg1) {
-  (function ensureMetadataStacksAreParsed(fn) {
-    if (_mod12933.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod12933.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp16 = _mod12933.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        if (!set.has(item10026)) {
-          let addResult = set.add(item10026);
-          let obj2 = arg0(item10026);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
-            }
-            continue;
-          }
+errorCallback;
+
+export const getTraceData = function getTraceData(arg0) {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  const client = _mod12967.getClient();
+  if (obj3.isEnabled()) {
+    if (client) {
+      const mainCarrier = _mod12958.getMainCarrier();
+      const tmpResult = _mod12958;
+      const asyncContextStrategy = _mod12959.getAsyncContextStrategy(mainCarrier);
+      if (asyncContextStrategy.getTraceData) {
+        return asyncContextStrategy.getTraceData(obj);
+      } else {
+        const currentScope = _mod12967.getCurrentScope();
+        let span = obj.span;
+        if (!span) {
+          span = spanTimeInputToSeconds.getActiveSpan();
+          const tmpResult10 = spanTimeInputToSeconds;
         }
-        continue;
+        if (span) {
+          let spanToTraceHeaderResult = spanTimeInputToSeconds.spanToTraceHeader(span);
+          const tmpResult11 = spanTimeInputToSeconds;
+        } else {
+          const propagationContext = currentScope.getPropagationContext();
+          ({ traceId, sampled, spanId } = propagationContext);
+          spanToTraceHeaderResult = _mod12952.generateSentryTraceHeader(traceId, spanId, sampled);
+          const tmpResult12 = _mod12952;
+        }
+        const tmpResult13 = _mod12976;
+        if (span) {
+          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
+        } else {
+          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
+        }
+        const tmpResult9 = _mod12967;
+        const result = BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const TRACEPARENT_REGEXP = _mod12952.TRACEPARENT_REGEXP;
+        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
+          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
+          let obj5 = obj4;
+        } else {
+          const logger = _mod12940.logger;
+          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
+          obj5 = {};
+        }
+        return obj5;
       }
+      const tmpResult8 = _mod12959;
     }
-  })(fn);
-  return map.get(arg1);
-}
-const map = new Map();
-const set = new Set();
-
-export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
-  closure_0 = arg0;
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          if (item10010.filename) {
-            if (!item10010.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
-              if (tmp9) {
-                item10010.module_metadata = tmp10;
-              }
-            }
-          }
-          continue;
-        }
-      }
-    });
-  } catch (err) {
   }
-};
-export { getMetadataForUrl };
-export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
-  try {
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp3 = stacktrace.stacktrace.frames || [];
-        const iter = tmp3[Symbol.iterator]();
-        iter.next();
-        while (iter !== undefined) {
-          delete tmp2[tmp];
-          continue;
-        }
-      }
-    });
-  } catch (err) {
-  }
+  return {};
 };
