@@ -1,21 +1,10 @@
 // _runtime/metro/13754__.js
-import _mod13746 from "13746__.js";
+import _mod13768 from "13768__.js";
+import assign from "13755__.js";
+import Deflate from "../13756_Deflate.js";
+import Inflate from "../13764_Inflate.js";
 
-let c2 = true;
-let c3 = true;
-try {
-  const _String = String;
-  fromCharCode.apply(null, [0]);
-  try {
-    const _String2 = String;
-    const _Uint8Array = Uint8Array;
-    const uint8Array = new Uint8Array(1);
-    fromCharCode2.apply(null, uint8Array);
-    const buf8 = new _mod13746.Buf8(256);
-    require = 252;
-  } catch (err) {
-    c3 = false;
-  }
-} catch (err) {
-  c2 = false;
-}
+const obj = {};
+assign.assign(obj, Deflate, Inflate, _mod13768);
+
+export default obj;

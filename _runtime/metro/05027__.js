@@ -1,6 +1,9 @@
 // _runtime/metro/05027__.js
-new Set();
+import noop from "00019__.js";
 
-export default function warnOnce(arg0) {
-  const substr = [...arguments].slice();
-}
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsx: closure_1 } = jsxProd);
+const context = noop.createContext((children) => framebus(React, { children: children.children }));
+
+export const GHContext = context;
+export const RNSScreensRefContext = noop.createContext(null);

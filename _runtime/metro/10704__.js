@@ -1,12 +1,12 @@
 // _runtime/metro/10704__.js
-import _mod10696 from "10696__.js";
+import AbstractParserWithWordBoundaryChecking from "../10580_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUWeekdayParser = require;
+let AbstractParserWithLeftRightBoundaryChecking = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUWeekdayParser {
+class AbstractParserWithLeftBoundaryChecking {
   constructor() {
     self = this;
-    tmp = c2(this, RUWeekdayParser);
+    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
     tmp2 = closure_4;
-    obj = closure_4(RUWeekdayParser);
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,70 +45,71 @@ class RUWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUWeekdayParser, _mod10696.AbstractParserWithLeftRightBoundaryChecking);
+AbstractParserWithLeftRightBoundaryChecking = AbstractParserWithLeftBoundaryChecking;
+_inherits(
+  AbstractParserWithLeftBoundaryChecking,
+  AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking,
+);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:(\u044D\u0442\u0443|\u044D\u0442\u043E\u0442|\u043F\u0440\u043E\u0448\u043B\u044B\u0439|\u043F\u0440\u043E\u0448\u043B\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E)\\s*)?(" +
-      RUWeekdayParser(10565).matchAnyPattern(RUWeekdayParser(10694).WEEKDAY_DICTIONARY) +
-      ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*\u043D\u0430\\s*(\u044D\u0442\u043E\u0439|\u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439)\\s*\u043D\u0435\u0434\u0435\u043B\u0435)?"
-    );
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return AbstractParserWithLeftRightBoundaryChecking(10702).REGEX_PARTS.leftBoundary;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const formatted1 = str2.toLowerCase();
-      let str3 = "last";
-      if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0439" != formatted1) {
-        str3 = "last";
-        if ("\u043F\u0440\u043E\u0448\u043B\u0443\u044E" != formatted1) {
-          str3 = "last";
-          if ("\u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted1) {
-            str3 = "next";
-            if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439" != formatted1) {
-              str3 = "next";
-              if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E" != formatted1) {
-                str3 = "next";
-                if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted1) {
-                  str3 = "next";
-                  if ("\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0433\u043E" != formatted1) {
-                    let tmp5 = "\u044D\u0442\u043E\u0442" != formatted1;
-                    if (tmp5) {
-                      tmp5 = "\u044D\u0442\u0443" != formatted1;
-                    }
-                    if (tmp5) {
-                      tmp5 = "\u044D\u0442\u043E\u0439" != formatted1;
-                    }
-                    str3 = null;
-                    if (!tmp5) {
-                      str3 = "this";
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      return RUWeekdayParser(10592).createParsingComponentsAtWeekday(
-        reference.reference,
-        RUWeekdayParser(10694).WEEKDAY_DICTIONARY[formatted],
-        str3,
+    key: "innerPattern",
+    value: function innerPattern(arg0) {
+      const regExp = new RegExp(
+        this.innerPatternString(arg0),
+        AbstractParserWithLeftRightBoundaryChecking(10702).REGEX_PARTS.flags,
       );
+      return regExp;
+    },
+  },
+  {
+    key: "innerPatternHasChange",
+    value: function innerPatternHasChange(arg0, arg1) {
+      return false;
     },
   },
 ];
+const _moduleResult = _createClass(AbstractParserWithLeftBoundaryChecking, items);
+class AbstractParserWithLeftRightBoundaryChecking {
+  constructor() {
+    self = this;
+    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(AbstractParserWithLeftRightBoundaryChecking, _moduleResult);
+const entry1 = {
+  key: "innerPattern",
+  value: function innerPattern(arg0) {
+    const combined =
+      "" + this.innerPatternString(arg0) + AbstractParserWithLeftRightBoundaryChecking(10702).REGEX_PARTS.rightBoundary;
+    const regExp = new RegExp(combined, AbstractParserWithLeftRightBoundaryChecking(10702).REGEX_PARTS.flags);
+    return regExp;
+  },
+};
+const items1 = [entry1];
 
-export default _createClass(RUWeekdayParser, items);
+export const AbstractParserWithLeftBoundaryChecking = _moduleResult;
+export const AbstractParserWithLeftRightBoundaryChecking = _createClass(
+  AbstractParserWithLeftRightBoundaryChecking,
+  items1,
+);

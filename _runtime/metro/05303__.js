@@ -1,19 +1,27 @@
 // _runtime/metro/05303__.js
-let c0 = 18761;
-let c1 = 19789;
+import _modDef5302 from "05302__.js";
+import _modDef5304 from "05304__.js";
+
+importDefault = arg2;
+const dependencyMap = arg6;
 
 export default {
-  BIG_ENDIAN: 19789,
-  LITTLE_ENDIAN: 18761,
-  getByteOrder(getUint16, c5) {
-    if (getUint16.getUint16(c5) === c0) {
-      return c0;
-    } else if (getUint16.getUint16(c5) === c1) {
-      return c1;
+  isTiffFile(byteLength) {
+    let tmp = byteLength;
+    if (tmp) {
+      tmp = byteLength.byteLength >= 4;
+    }
+    if (tmp) {
+      const uint16 = byteLength.getUint16(0);
+      tmp = byteLength.getUint16(2, uint16 === _modDef5304.LITTLE_ENDIAN) === 42;
+    }
+    return tmp;
+  },
+  findTiffOffsets() {
+    if (_modDef5302.USE_EXIF) {
+      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
     } else {
-      const _Error = Error;
-      const error = new Error("Illegal byte order value. Faulty image.");
-      throw error;
+      return {};
     }
   },
 };

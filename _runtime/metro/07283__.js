@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native",
-  width: 38,
-  height: 38,
+  width: 80,
+  height: 80,
   scales: [2, 3],
-  hash: "396b5aebc51e5c35836ff2654ee02ebc",
-  name: "game_icon_placeholder",
+  hash: "f949eef54936cb2056a4a93d768a87c3",
+  name: "img_nitro_tier_0_icon_80px",
   type: "png",
 });

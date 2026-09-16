@@ -1,13 +1,20 @@
 // _runtime/metro/17459__.js
-import registerAsset from "01121__.js";
-
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/age_gate/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "d591eaa154611b58ebc00af8c514af58",
-  name: "check",
-  type: "png",
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "hu",
+  pluralRuleFunction(arg0, arg1) {
+    if (arg1) {
+      if (1 == arg0) {
+        let str2 = "one";
+      } else {
+        str2 = "other";
+      }
+      let str = str2;
+    } else {
+      str = "other";
+      if (1 == arg0) {
+        str = "one";
+      }
+    }
+    return str;
+  },
 });

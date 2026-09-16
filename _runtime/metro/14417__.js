@@ -1,16 +1,9 @@
 // _runtime/metro/14417__.js
-import _mod14402 from "14402__.js";
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod14402(1.toString);
-
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
+export default (fn) => {
+  try {
+    return fn();
+  } catch (err) {
+    return true;
   }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
 };

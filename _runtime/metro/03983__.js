@@ -1,131 +1,84 @@
 // _runtime/metro/03983__.js
-import _typeof_mod from "03728__.js";
-import module_3971_mod from "03971__.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import requiredArgs_mod from "../03727_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
 }
-_typeof = tmp3;
-let module_3971 = module_3971_mod;
-if (!module_3971) {
-  const obj2 = { default: module_3971 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3971;
-}
-module_3971 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp3 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp3;
 
-export default function formatISO(arg0, format) {
+export default function formatISODuration(years) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  if (isNaN(defaultResult1.getTime())) {
-    const _RangeError3 = RangeError;
-    const rangeError = new RangeError("Invalid time value");
-    throw rangeError;
+  if ("object" !== _typeof(years)) {
+    const _Error = Error;
+    const error = new Error("Duration must be an object");
+    throw error;
   } else {
-    format = undefined;
-    if (null != format) {
-      format = format.format;
+    years = years.years;
+    let num = 0;
+    if (undefined !== years) {
+      num = years;
     }
-    let str2 = "extended";
-    if (null !== format) {
-      str2 = "extended";
-      if (undefined !== format) {
-        str2 = format;
-      }
+    const months = years.months;
+    let num2 = 0;
+    if (undefined !== months) {
+      num2 = months;
     }
-    const StringResult = String(str2);
-    let representation;
-    if (null != format) {
-      representation = format.representation;
+    const days = years.days;
+    let num3 = 0;
+    if (undefined !== days) {
+      num3 = days;
     }
-    let str4 = "complete";
-    if (null !== representation) {
-      str4 = "complete";
-      if (undefined !== representation) {
-        str4 = representation;
-      }
+    const hours = years.hours;
+    let num4 = 0;
+    if (undefined !== hours) {
+      num4 = hours;
     }
-    const StringResult1 = String(str4);
-    if ("extended" !== StringResult) {
-      if ("basic" !== StringResult) {
-        const _RangeError2 = RangeError;
-        const rangeError1 = new RangeError("format must be 'extended' or 'basic'");
-        throw rangeError1;
-      }
+    const minutes = years.minutes;
+    let num5 = 0;
+    if (undefined !== minutes) {
+      num5 = minutes;
     }
-    if ("date" !== StringResult1) {
-      if ("time" !== StringResult1) {
-        if ("complete" !== StringResult1) {
-          const _RangeError = RangeError;
-          const rangeError2 = new RangeError("representation must be 'date', 'time', or 'complete'");
-          throw rangeError2;
-        }
-      }
+    const seconds = years.seconds;
+    let num6 = 0;
+    if (undefined !== seconds) {
+      num6 = seconds;
     }
-    let str9 = "";
-    if ("extended" === StringResult) {
-      str9 = "-";
-    }
-    let str10 = "";
-    if ("extended" === StringResult) {
-      str10 = ":";
-    }
-    let str12 = "";
-    if ("time" !== StringResult1) {
-      const defaultResult2 = module_3971.default(defaultResult1.getDate(), 2);
-      const concat2 = "".concat;
-      const combined = "".concat(module_3971.default(defaultResult1.getFullYear(), 4));
-      const combined1 = combined.concat(str9);
-      const combined2 = combined1.concat(module_3971.default(defaultResult1.getMonth() + 1, 2));
-      const combined3 = combined2.concat(str9);
-      str12 = combined3.concat(defaultResult2);
-      const defaultResult3 = module_3971.default(defaultResult1.getMonth() + 1, 2);
-    }
-    let combined9 = str12;
-    if ("date" !== StringResult1) {
-      const timezoneOffset = defaultResult1.getTimezoneOffset();
-      let str13 = "Z";
-      if (0 !== timezoneOffset) {
-        const _Math = Math;
-        const absolute = Math.abs(timezoneOffset);
-        const _Math2 = Math;
-        let str14 = "-";
-        const defaultResult4 = module_3971.default(Math.floor(absolute / 60), 2);
-        if (timezoneOffset < 0) {
-          str14 = "+";
-        }
-        const combined4 = "".concat(str14);
-        const combined5 = combined4.concat(defaultResult4, ":");
-        str13 = combined5.concat(module_3971.default(absolute % 60, 2));
-        const defaultResult5 = module_3971.default(absolute % 60, 2);
-      }
-      let str16 = "T";
-      if ("" === str12) {
-        str16 = "";
-      }
-      const items = [module_3971.default(defaultResult1.getHours(), 2), module_3971.default(defaultResult1.getMinutes(), 2), module_3971.default(defaultResult1.getSeconds(), 2)];
-      const concat = "".concat;
-      const joined = items.join(str10);
-      const combined6 = "".concat(str12);
-      const combined7 = combined6.concat(str16);
-      const combined8 = combined7.concat(joined);
-      combined9 = combined8.concat(str13);
-    }
-    return combined9;
+    const concat = "P".concat;
+    const combined = "P".concat(num, "Y");
+    const combined1 = combined.concat(num2, "M");
+    const combined2 = combined1.concat(num3, "DT");
+    const combined3 = combined2.concat(num4, "H");
+    const combined4 = combined3.concat(num5, "M");
+    return combined4.concat(num6, "S");
   }
 };
 export default exports.default;

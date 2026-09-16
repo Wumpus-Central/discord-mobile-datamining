@@ -1,6 +1,6 @@
 // _runtime/metro/08629__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8616 from "08616__.js";
+import _modDef8625 from "08625__.js";
 import _modDef8630 from "08630__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeOffset = fn;
+const FeComposite = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeOffset {
+class FeComposite {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
+    tmp = closure_3(this, FeComposite);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeOffset);
+    obj = hasOwnProperty(FeComposite);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,20 +49,19 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeOffset, _modDef8616);
+_inherits(FeComposite, _modDef8625);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const merged = Object.assign(this.props);
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged1 = Object.assign(FeOffset(8615).extractFilter(this.props));
-    const obj2 = FeOffset(8615);
-    const merged2 = Object.assign(FeOffset(8615).extractIn(this.props));
+    const merged = Object.assign(FeComposite(8624).extractFilter(this.props));
+    const obj2 = FeComposite(8624);
+    const merged1 = Object.assign(FeComposite(8624).extractFeComposite(this.props));
     return (
       <tmp
         ref={function ref(arg0) {
@@ -73,12 +72,14 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
+const importDefaultResultResult = _createClass(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
 let obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "46bee89e41092010bef3088a4b8308ea",
-  name: "BlueskyNeutralIcon",
+  hash: "34bb1c89964a0349aafd993e713936d7",
+  name: "ScreenIcon",
   type: "png",
 });

@@ -1,43 +1,28 @@
 // _runtime/metro/13016__.js
+import eventFromMessage from "../13000_eventFromMessage.js";
+import _mod13017 from "13017__.js";
+import setupIntegration from "12996__.js";
 
-export const parseCookie = function parseCookie(arr) {
-  const obj = {};
-  let num = 0;
-  if (0 < arr.length) {
-    let index = arr.indexOf("=", num);
-    while (-1 !== index) {
-      let length = arr.indexOf(";", num);
-      if (-1 === length) {
-        length = arr.length;
-      } else if (length < index) {
-        let sum = arr.lastIndexOf(";", index - 1) + 1;
-        num = sum;
-        if (sum >= arr.length) {
-          break;
-        }
-      }
-      let str = arr.slice(num, index);
-      let trimmed = str.trim();
-      if (undefined === obj[trimmed]) {
-        let str2 = arr.slice(index + 1, length);
-        let trimmed1 = str2.trim();
-        index = trimmed1;
-        if (34 === trimmed1.charCodeAt(0)) {
-          index = trimmed1.slice(1, -1);
-        }
-        try {
-          let decodeURIComponentResult = index;
-          if (-1 !== index.indexOf("%")) {
-            let _decodeURIComponent = decodeURIComponent;
-            decodeURIComponentResult = decodeURIComponent(index);
-          }
-          obj[trimmed] = decodeURIComponentResult;
-        } catch (err) {
-          obj[trimmed] = index;
-        }
-      }
-      let sum1 = length + 1;
-    }
+export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
   }
-  return obj;
-};
+  closure_0 = obj.limit || 5;
+  closure_1 = obj.key || "cause";
+  return {
+    name: "LinkedErrors",
+    preprocessEvent(exception, originalException, getOptions) {
+      const options = getOptions.getOptions();
+      const result = _mod13017.applyAggregateErrorsToEvent(
+        eventFromMessage.exceptionFromError,
+        options.stackParser,
+        options.maxValueLength,
+        closure_1,
+        closure_0,
+        exception,
+        originalException,
+      );
+    },
+  };
+});

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/saved_messages",
-  width: 297,
-  height: 238,
-  scales: [1],
-  hash: "2a38db2647d78740ca056c705d4301a7",
-  name: "wumpus-clock",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "6fb23e8fddb36af1d7c8748104537e96",
+  name: "VideoDenyIcon",
   type: "png",
 });

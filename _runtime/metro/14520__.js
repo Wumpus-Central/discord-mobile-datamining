@@ -1,12 +1,7 @@
 // _runtime/metro/14520__.js
+import _mod14521 from "14521__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      clear() {
-        return closure_0.send("clear");
-      },
-    },
-  };
-};
+export default function getReactNativeVersion() {
+  return _mod14521.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
+}

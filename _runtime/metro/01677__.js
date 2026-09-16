@@ -1329,14 +1329,14 @@ defineAnimation.__initData = {
 const __initData2 = {
   code: "function pnpm_utilTs12(){const{sharedValue}=this.__closure;sharedValue.value=sharedValue.value;}",
 };
-let cancelAnimationWeb = function cancelAnimationNative(sharedValue) {
+let cancelAnimationWeb = function cancelAnimationNative(animationProgress) {
   if (globalThis._WORKLET) {
-    sharedValue.value = sharedValue.value;
+    animationProgress.value = animationProgress.value;
   } else {
     const fn = function n() {
-      sharedValue.value = sharedValue.value;
+      animationProgress.value = animationProgress.value;
     };
-    const obj2 = { sharedValue };
+    const obj2 = { sharedValue: animationProgress };
     fn.__closure = obj2;
     fn.__workletHash = 14261344384038;
     fn.__initData = __initData2;

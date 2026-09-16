@@ -1,10 +1,14 @@
 // _runtime/metro/08616__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8610 from "08610__.js";
+import _modDef8617 from "08617__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -23,43 +27,41 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class FilterPrimitive {
+const jsx = fn(21).jsx;
+class ClipPath {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, FilterPrimitive);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FilterPrimitive);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = closure_3(this, ClipPath);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ClipPath);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.root = null;
-    tmp3Result.refMethod = (root) => {
-      closure_0.root = root;
-    };
-    tmp3Result.setNativeProps = (arg0) => {
-      root = root.root;
-      if (root != null) {
-        root.setNativeProps(arg0);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FilterPrimitive;
-_inherits(FilterPrimitive, fn(19).Component);
-const importDefaultResultResult = _createClass(FilterPrimitive);
-importDefaultResultResult.defaultPrimitiveProps = {};
+_inherits(ClipPath, _modDef8610);
+const entry = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(8601).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

@@ -1,7 +1,45 @@
 // _runtime/metro/09081__.js
-import _mod9071 from "09071__.js";
+import _mod9079 from "09079__.js";
+import _mod9082 from "09082__.js";
 
 const self = this;
+function toDotPath(path) {
+  const items = [];
+  const mapped = path.map((key) => {
+    if (typeof key === "object") {
+      key = key.key;
+    }
+    return key;
+  });
+  const iter = mapped[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp3 = nextResult;
+    if (typeof nextResult === "number") {
+      let _HermesInternal3 = HermesInternal;
+      let arr = items.push("[" + tmp3 + "]");
+    } else if (typeof tmp3 === "symbol") {
+      let _JSON2 = JSON;
+      let _String = String;
+      let _HermesInternal2 = HermesInternal;
+      let arr6 = items.push("[" + JSON.stringify(String(tmp3)) + "]");
+    } else {
+      let obj = /[^\w$]/;
+      if (obj.test(tmp3)) {
+        let _JSON = JSON;
+        let _HermesInternal = HermesInternal;
+        let arr7 = items.push("[" + JSON.stringify(tmp3) + "]");
+      } else {
+        if (items.length) {
+          let arr8 = items.push(".");
+        }
+        let arr9 = items.push(tmp3);
+      }
+    }
+    continue;
+  }
+  return items.join("");
+}
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -52,274 +90,241 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        const obj = { localeError: null };
-        const obj2 = {
-          string: {
-            unit: "\u0441\u0438\u043C\u0432\u043E\u043B\u0430",
-            verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430",
-          },
-          file: {
-            unit: "\u0431\u0430\u0439\u0442\u0430",
-            verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430",
-          },
-          array: {
-            unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
-            verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430",
-          },
-          set: {
-            unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430",
-            verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430",
-          },
+    exports.$ZodError = undefined;
+    exports.$ZodRealError = undefined;
+    exports.flattenError = function flattenError(arg0, arg1) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
         };
-        closure_1 = {
-          regex: "\u0432\u0445\u043E\u0434",
-          email: "\u0438\u043C\u0435\u0439\u043B \u0430\u0434\u0440\u0435\u0441",
-          url: "URL",
-          emoji: "\u0435\u043C\u043E\u0434\u0436\u0438",
-          uuid: "UUID",
-          uuidv4: "UUIDv4",
-          uuidv6: "UUIDv6",
-          nanoid: "nanoid",
-          guid: "GUID",
-          cuid: "cuid",
-          cuid2: "cuid2",
-          ulid: "ULID",
-          xid: "XID",
-          ksuid: "KSUID",
-          datetime: "ISO \u0432\u0440\u0435\u043C\u0435",
-          date: "ISO \u0434\u0430\u0442\u0430",
-          time: "ISO \u0432\u0440\u0435\u043C\u0435",
-          duration: "ISO \u043F\u0440\u043E\u0434\u044A\u043B\u0436\u0438\u0442\u0435\u043B\u043D\u043E\u0441\u0442",
-          ipv4: "IPv4 \u0430\u0434\u0440\u0435\u0441",
-          ipv6: "IPv6 \u0430\u0434\u0440\u0435\u0441",
-          cidrv4: "IPv4 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D",
-          cidrv6: "IPv6 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D",
-          base64: "base64-\u043A\u043E\u0434\u0438\u0440\u0430\u043D \u043D\u0438\u0437",
-          base64url: "base64url-\u043A\u043E\u0434\u0438\u0440\u0430\u043D \u043D\u0438\u0437",
-          json_string: "JSON \u043D\u0438\u0437",
-          e164: "E.164 \u043D\u043E\u043C\u0435\u0440",
-          jwt: "JWT",
-          template_literal: "\u0432\u0445\u043E\u0434",
-        };
-        closure_2 = { nan: "NaN", number: "\u0447\u0438\u0441\u043B\u043E", array: "\u043C\u0430\u0441\u0438\u0432" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp49 = closure_2[parsedTypeResult];
-              if (tmp49 == null) {
-                tmp49 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined =
-                  "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434: \u043E\u0447\u0430\u043A\u0432\u0430\u043D instanceof " +
-                  code.expected +
-                  ", \u043F\u043E\u043B\u0443\u0447\u0435\u043D " +
-                  tmp49;
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined =
-                  "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434: \u043E\u0447\u0430\u043A\u0432\u0430\u043D " +
-                  expected +
-                  ", \u043F\u043E\u043B\u0443\u0447\u0435\u043D " +
-                  tmp49;
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal15 = HermesInternal;
-                let combined1 =
-                  "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434: \u043E\u0447\u0430\u043A\u0432\u0430\u043D " +
-                  closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal14 = HermesInternal;
-                combined1 =
-                  "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u043E\u043F\u0446\u0438\u044F: \u043E\u0447\u0430\u043A\u0432\u0430\u043D\u043E \u0435\u0434\u043D\u043E \u043E\u0442 " +
-                  closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
-            case "too_big":
-              let str31 = "<";
-              if (code.inclusive) {
-                str31 = "<=";
-              }
-              let tmp28 = obj2[code.origin];
-              if (tmp28 == null) {
-                tmp28 = null;
-              }
-              let str32 = code.origin;
-              if (tmp28) {
-                if (str32 == null) {
-                  str32 = "\u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442";
-                }
-                const str1 = code.maximum.toString();
-                let str38 = tmp28.unit;
-                if (str38 == null) {
-                  str38 = "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430";
-                }
-                const _HermesInternal13 = HermesInternal;
-                let combined2 =
-                  "\u0422\u0432\u044A\u0440\u0434\u0435 \u0433\u043E\u043B\u044F\u043C\u043E: \u043E\u0447\u0430\u043A\u0432\u0430 \u0441\u0435 " +
-                  str32 +
-                  " \u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430 " +
-                  str31 +
-                  str1 +
-                  " " +
-                  str38;
-              } else {
-                let str33 = str32;
-                if (str32 == null) {
-                  str33 = "\u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442";
-                }
-                const _HermesInternal12 = HermesInternal;
-                combined2 =
-                  "\u0422\u0432\u044A\u0440\u0434\u0435 \u0433\u043E\u043B\u044F\u043C\u043E: \u043E\u0447\u0430\u043A\u0432\u0430 \u0441\u0435 " +
-                  str33 +
-                  " \u0434\u0430 \u0431\u044A\u0434\u0435 " +
-                  str31 +
-                  code.maximum.toString();
-              }
-              return combined2;
-            case "too_small":
-              let str25 = ">";
-              if (code.inclusive) {
-                str25 = ">=";
-              }
-              let tmp16 = obj2[code.origin];
-              if (tmp16 == null) {
-                tmp16 = null;
-              }
-              ({ origin, minimum } = code);
-              const str54 = minimum.toString();
-              if (tmp16) {
-                const _HermesInternal11 = HermesInternal;
-                let combined3 =
-                  "\u0422\u0432\u044A\u0440\u0434\u0435 \u043C\u0430\u043B\u043A\u043E: \u043E\u0447\u0430\u043A\u0432\u0430 \u0441\u0435 " +
-                  origin +
-                  " \u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430 " +
-                  str25 +
-                  str54 +
-                  " " +
-                  tmp16.unit;
-              } else {
-                const _HermesInternal10 = HermesInternal;
-                combined3 =
-                  "\u0422\u0432\u044A\u0440\u0434\u0435 \u043C\u0430\u043B\u043A\u043E: \u043E\u0447\u0430\u043A\u0432\u0430 \u0441\u0435 " +
-                  origin +
-                  " \u0434\u0430 \u0431\u044A\u0434\u0435 " +
-                  str25 +
-                  str54;
-              }
-              return combined3;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                return (
-                  '\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043D\u0438\u0437: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0437\u0430\u043F\u043E\u0447\u0432\u0430 \u0441 "' +
-                  code.prefix +
-                  '"'
-                );
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                return (
-                  '\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043D\u0438\u0437: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0437\u0430\u0432\u044A\u0440\u0448\u0432\u0430 \u0441 "' +
-                  code.suffix +
-                  '"'
-                );
-              } else if ("includes" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                return (
-                  '\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043D\u0438\u0437: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0432\u043A\u043B\u044E\u0447\u0432\u0430 "' +
-                  code.includes +
-                  '"'
-                );
-              } else if ("regex" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                return (
-                  "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043D\u0438\u0437: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0441\u044A\u0432\u043F\u0430\u0434\u0430 \u0441 " +
-                  code.pattern
-                );
-              } else {
-                let str11 = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D";
-                if ("emoji" === code.format) {
-                  str11 = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u043E";
-                }
-                if ("datetime" === code.format) {
-                  str11 = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u043E";
-                }
-                if ("date" === code.format) {
-                  str11 = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430";
-                }
-                if ("time" === code.format) {
-                  str11 = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u043E";
-                }
-                if ("duration" === code.format) {
-                  str11 = "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430";
-                }
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal5 = HermesInternal;
-                return "" + str11 + " " + format;
-              }
-              break;
-            case "not_multiple_of":
-              const _HermesInternal4 = HermesInternal;
-              return (
-                "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u043E \u0447\u0438\u0441\u043B\u043E: \u0442\u0440\u044F\u0431\u0432\u0430 \u0434\u0430 \u0431\u044A\u0434\u0435 \u043A\u0440\u0430\u0442\u043D\u043E \u043D\u0430 " +
-                code.divisor
-              );
-            case "unrecognized_keys":
-              let str3 = "";
-              let str4 = "";
-              if (code.keys.length > 1) {
-                str4 = "\u0438";
-              }
-              if (code.keys.length > 1) {
-                str3 = "\u043E\u0432\u0435";
-              }
-              const _HermesInternal3 = HermesInternal;
-              return (
-                "\u041D\u0435\u0440\u0430\u0437\u043F\u043E\u0437\u043D\u0430\u0442" +
-                str4 +
-                " \u043A\u043B\u044E\u0447" +
-                str3 +
-                ": " +
-                closure_2.joinValues(code.keys, ", ")
-              );
-            case "invalid_key":
-              const _HermesInternal2 = HermesInternal;
-              return (
-                "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u043A\u043B\u044E\u0447 \u0432 " + code.origin
-              );
-            case "invalid_union":
-              return "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434";
-            case "invalid_element":
-              const _HermesInternal = HermesInternal;
-              return (
-                "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442 \u0432 " +
-                code.origin
-              );
-            default:
-              return "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434";
-          }
-        };
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
       }
+      const fieldErrors = {};
+      const formErrors = [];
+      const iter = arg0.issues[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp2 = nextResult;
+        if (nextResult.path.length > 0) {
+          let items1 = fieldErrors[tmp2.path[0]];
+          if (!items1) {
+            items1 = [];
+          }
+          fieldErrors[tmp2.path[0]] = items1;
+          let arr3 = fieldErrors[tmp2.path[0]];
+          let arr = arr3.push(fn(tmp2));
+        } else {
+          let arr2 = formErrors.push(fn(tmp2));
+        }
+        continue;
+      }
+      return { formErrors, fieldErrors };
     };
-    let closure_2 = fn(_mod9071);
-    function error() {}
-    module.exports = exports.default;
+    exports.formatError = function formatError(arg0, arg1) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
+        };
+      }
+      let obj = { _errors: [] };
+      function processError(arg0) {
+        const iter = arg0.issues[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp2 = nextResult;
+          if ("invalid_union" === nextResult.code) {
+            if (tmp2.errors.length) {
+              let errors = tmp2.errors;
+              let mapped = errors.map((issues) => {
+                processError({ issues });
+              });
+              continue;
+            }
+          }
+          if ("invalid_key" === tmp2.code) {
+            let obj2 = { issues: null };
+            obj2.issues = tmp2.issues;
+            let tmp34 = processError(obj2);
+          } else if ("invalid_element" === tmp2.code) {
+            let obj3 = { issues: null };
+            obj3.issues = tmp2.issues;
+            let tmp31 = processError(obj3);
+          } else if (0 === tmp2.path.length) {
+            let _errors = obj._errors;
+            let arr = _errors.push(fn(tmp2));
+          } else {
+            let tmp21 = obj;
+            let num = 0;
+            if (0 < tmp2.path.length) {
+              do {
+                let tmp7 = tmp2.path[num];
+                if (num === tmp2.path.length - 1) {
+                  let tmp13 = tmp21[tmp7];
+                  if (!tmp13) {
+                    let obj4 = { _errors: [] };
+                    tmp13 = obj4;
+                  }
+                  tmp21[tmp7] = tmp13;
+                  let _errors1 = tmp21[tmp7]._errors;
+                  let arr2 = _errors1.push(fn(tmp2));
+                } else {
+                  let tmp10 = tmp21[tmp7];
+                  if (!tmp10) {
+                    obj = { _errors: [] };
+                    tmp10 = obj;
+                  }
+                  tmp21[tmp7] = tmp10;
+                }
+                tmp21 = tmp21[tmp7];
+                sum = num + 1;
+                num = sum;
+              } while (sum < tmp2.path.length);
+            }
+          }
+        }
+      }
+      processError(arg0);
+      return obj;
+    };
+    exports.treeifyError = function treeifyError(arg0) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
+        };
+      }
+      let obj = { errors: [] };
+      function processError(arg0) {
+        let items = arg1;
+        if (arg1 === undefined) {
+          items = [];
+        }
+        let properties;
+        items = undefined;
+        function _loop(iter) {
+          if ("invalid_union" === iter.code) {
+            if (iter.errors.length) {
+              const errors = iter.errors;
+              const mapped = errors.map((issues) => {
+                items({ issues }, iter.path);
+              });
+            }
+          }
+          if ("invalid_key" === iter.code) {
+            const obj2 = { issues: iter.issues };
+            processError(obj2, iter.path);
+          } else if ("invalid_element" === iter.code) {
+            const obj3 = { issues: iter.issues };
+            processError(obj3, iter.path);
+          } else {
+            const items1 = [];
+            HermesBuiltin.arraySpread(iter.path, HermesBuiltin.arraySpread(items, 0));
+            if (0 === items1.length) {
+              const errors1 = obj.errors;
+              errors1.push(fn(iter));
+              return 1;
+            } else {
+              let tmp10 = obj;
+              let num = 0;
+              if (0 < items1.length) {
+                do {
+                  let tmp = items1[num];
+                  let diff = items1.length - 1;
+                  if (typeof tmp === "string") {
+                    if (tmp10.properties == null) {
+                      tmp10.properties = {};
+                    }
+                    properties = tmp10.properties;
+                    if (properties[tmp] == null) {
+                      let obj4 = { errors: [] };
+                      properties[tmp] = obj4;
+                    }
+                    let tmp6 = tmp10.properties[tmp];
+                  } else {
+                    if (tmp10.items == null) {
+                      tmp10.items = [];
+                    }
+                    items = tmp10.items;
+                    if (items[tmp] == null) {
+                      obj = { errors: [] };
+                      items[tmp] = obj;
+                    }
+                    tmp6 = tmp10.items[tmp];
+                  }
+                  if (num === diff) {
+                    let errors2 = tmp6.errors;
+                    let arr2 = errors2.push(fn(iter));
+                  }
+                  num = num + 1;
+                  tmp10 = tmp6;
+                } while (num < items1.length);
+              }
+            }
+          }
+        }
+        const iter = arg0.issues[Symbol.iterator]();
+        while (iter !== undefined) {
+          let _loopResult = _loop(iter.next());
+          continue;
+        }
+      }
+      processError(arg0);
+      return obj;
+    };
+    exports.toDotPath = toDotPath;
+    exports.prettifyError = function prettifyError(issues) {
+      const items = [];
+      const items1 = [...issues.issues];
+      const sorted = items1.sort((path, path2) => {
+        path = path.path;
+        if (path == null) {
+          path = [];
+        }
+        let path1 = path2.path;
+        if (path1 == null) {
+          path1 = [];
+        }
+        return path.length - path1.length;
+      });
+      const iter = sorted[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let _HermesInternal = HermesInternal;
+        let tmp3 = nextResult;
+        let arr = items.push("\u2716 " + nextResult.message);
+        let path = nextResult.path;
+        let length;
+        if (path != null) {
+          length = path.length;
+        }
+        if (length) {
+          let _HermesInternal2 = HermesInternal;
+          let arr2 = items.push("  \u2192 at " + toDotPath(tmp3.path));
+        }
+        continue;
+      }
+      return items.join("\n");
+    };
+    let closure_2 = fn(_mod9082);
+    function initializer(_zod, value) {
+      const message = _zod;
+      _zod.name = "$ZodError";
+      Object.defineProperty(_zod, "_zod", { value: _zod._zod, enumerable: false });
+      Object.defineProperty(_zod, "issues", { value, enumerable: false });
+      _zod.message = JSON.stringify(value, closure_2.jsonStringifyReplacer, 2);
+      Object.defineProperty(_zod, "toString", {
+        value() {
+          return message.message;
+        },
+        enumerable: false,
+      });
+    }
+    exports.$ZodError = _mod9079.$constructor("$ZodError", initializer);
+    let obj = { Parent: null };
+    const _Error = Error;
+    obj.Parent = Error;
+    exports.$ZodRealError = _mod9079.$constructor("$ZodError", initializer, obj);
   } else {
     const _Object2 = Object;
   }

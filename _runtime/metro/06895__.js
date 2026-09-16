@@ -1,5 +1,5 @@
 // _runtime/metro/06895__.js
-import _modDef6893 from "06893__.js";
+import _modDef6896 from "06896__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const TouchableOpacity = fn;
+const TouchableHighlight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,93 +29,110 @@ function _isNativeReflectConstruct() {
 }
 let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
-({ Animated: closure_8, Easing: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
+({ StyleSheet: closure_9, View: c10 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-class TouchableOpacity {
-  constructor() {
+class TouchableHighlight {
+  constructor(arg0) {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = hasOwnProperty(this, TouchableOpacity);
-    items1 = [...items];
+    tmp = hasOwnProperty(this, TouchableHighlight);
+    items = [];
+    items[0] = global;
     tmp2 = closure_7;
-    obj = closure_7(TouchableOpacity);
+    obj = closure_7(TouchableHighlight);
     tmp3 = metroRequire;
-    if (closure_13()) {
+    if (closure_12()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = closure_2_10.flatten(closure_0.props.style) || {};
-      let num = 1;
-      if (null != tmp.opacity) {
-        const opacity = tmp.opacity;
-        num = opacity.valueOf();
+    tmp3Result.showUnderlay = () => {
+      if (closure_0.hasPressHandler()) {
+        const obj2 = { extraChildStyle: null, extraUnderlayStyle: null };
+        const obj3 = { opacity: closure_0.props.activeOpacity };
+        obj2.extraChildStyle = obj3;
+        const obj4 = { backgroundColor: closure_0.props.underlayColor };
+        obj2.extraUnderlayStyle = obj4;
+        closure_0.setState(obj2);
+        const props = closure_0.props;
+        const onShowUnderlay = props.onShowUnderlay;
+        if (onShowUnderlay != null) {
+          onShowUnderlay();
+        }
       }
-      return num;
     };
-    value = new closure_8.Value(tmp3Result.getChildStyleOpacityWithDefault());
-    tmp3Result.opacity = value;
-    tmp3Result.setOpacityTo = (toValue, duration) => {
-      const obj = { toValue, duration, easing: React7.inOut(React7.quad), useNativeDriver: null };
-      let flag = closure_0.props.useNativeAnimations;
-      if (flag == null) {
-        flag = true;
+    tmp3Result.hasPressHandler = () =>
+      closure_0.props.onPress || closure_0.props.onPressIn || closure_0.props.onPressOut || closure_0.props.onLongPress;
+    tmp3Result.hideUnderlay = () => {
+      closure_0.setState({ extraChildStyle: null, extraUnderlayStyle: null });
+      const props = closure_0.props;
+      const onHideUnderlay = props.onHideUnderlay;
+      if (onHideUnderlay != null) {
+        onHideUnderlay();
       }
-      obj.useNativeDriver = flag;
-      React6.timing(closure_0.opacity, obj).start();
-      const timingResult = React6.timing(closure_0.opacity, obj);
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === TouchableOpacity(6893).TOUCHABLE_STATE.BEGAN) {
-        closure_0.setOpacityTo(closure_0.props.activeOpacity, 0);
+      if (arg1 === TouchableHighlight(6896).TOUCHABLE_STATE.BEGAN) {
+        closure_0.showUnderlay();
       } else {
         if (!tmp3) {
-          closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
+          closure_0.hideUnderlay();
         }
         tmp3 =
-          arg1 !== TouchableOpacity(6893).TOUCHABLE_STATE.UNDETERMINED &&
-          arg1 !== TouchableOpacity(6893).TOUCHABLE_STATE.MOVED_OUTSIDE;
+          arg1 !== TouchableHighlight(6896).TOUCHABLE_STATE.UNDETERMINED &&
+          arg1 !== TouchableHighlight(6896).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
+    tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
     return tmp3Result;
   }
 }
-_inherits(TouchableOpacity, fn(19).Component);
+_inherits(TouchableHighlight, fn(19).Component);
 const entry = {
-  key: "render",
-  value: function render() {
+  key: "renderChildren",
+  value: function renderChildren() {
     const self = this;
-    const props = this.props;
-    let style = props.style;
-    if (undefined === style) {
-      style = {};
-    }
-    const obj = {};
-    const tmp = _objectWithoutProperties(props, closure_3);
-    const merged = Object.assign(tmp);
-    const items = [style, { opacity: self.opacity }];
-    obj.style = items;
-    obj.onStateChange = self.onStateChange;
-    if (self.props.children) {
-      let children = self.props.children;
+    if (this.props.children) {
+      const Children = noop.Children;
+      const onlyResult = Children.only(self.props.children);
+      const obj = { style: React7.compose(onlyResult.props.style, self.state.extraChildStyle) };
+      return noop.cloneElement(onlyResult, obj);
     } else {
-      children = <closure_1_11 />;
+      return <closure_1_10 />;
     }
-    obj.children = children;
-    return jsx(_modDef6893, {});
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(TouchableOpacity, items);
+let items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_3);
+      const merged = Object.assign(tmp);
+      const items = [style, self.state.extraUnderlayStyle];
+      obj.style = items;
+      obj.onStateChange = self.onStateChange;
+      obj.children = self.renderChildren();
+      return jsx(_modDef6896, {});
+    },
+  },
+];
+const importDefaultResultResult = _createClass(TouchableHighlight, items);
 let obj = {};
-let merged = Object.assign(_modDef6893.defaultProps);
-obj.activeOpacity = 0.2;
+let merged = Object.assign(_modDef6896.defaultProps);
+obj.activeOpacity = 0.85;
+obj.delayPressOut = 100;
+obj.underlayColor = "black";
 importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

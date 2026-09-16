@@ -1,3 +1,4 @@
 // _runtime/metro/08433__.js
+import _mod17 from "00017__.js";
 
-export default { WIDEVINE: "widevine", PLAYREADY: "playready", CLEARKEY: "clearkey", FAIRPLAY: "fairplay" };
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

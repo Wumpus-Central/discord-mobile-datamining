@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 89,
-  height: 80,
-  scales: [1, 2],
-  hash: "0ee8111d166277419681845b13003ed7",
-  name: "img_empty_audience",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "e535ea871b8155df08d1e92a6b532c6c",
+  name: "GroupArrowDownIcon",
   type: "png",
 });

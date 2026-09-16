@@ -1,22 +1,21 @@
 // _runtime/metro/06995__.js
-import _mod6996 from "06996__.js";
-
-export default function _inherits(value, fn) {
-  if (typeof fn !== "function") {
-    if (null !== fn) {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Super expression must either be null or a function");
-      throw typeError;
-    }
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    exports = getPrototypeOf.bind();
+  } else {
+    exports = (arg0) => {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
+    };
   }
-  let prototype = fn;
-  if (fn) {
-    prototype = fn.prototype;
-  }
-  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
-  Object.defineProperty(value, "prototype", { writable: false });
-  if (fn) {
-    _mod6996(value, fn);
-  }
-  const obj = { constructor: { value, writable: true, configurable: true } };
+  module.exports = exports;
+  return exports(arg0);
 }
+let exports = _getPrototypeOf;
+
+export default _getPrototypeOf;

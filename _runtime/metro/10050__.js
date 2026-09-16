@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e535ea871b8155df08d1e92a6b532c6c",
-  name: "GroupArrowDownIcon",
+  hash: "44d2aa5379438547523c3d419e9ade52",
+  name: "MusicSlashIcon",
   type: "png",
 });

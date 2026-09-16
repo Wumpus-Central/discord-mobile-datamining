@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "77e220fd6c1c82f2ff76cc9449534740",
-  name: "StampXIcon",
+  hash: "4efa5140d546996fe7cb2ba013410d48",
+  name: "ArrowAngleLeftUpIcon",
   type: "png",
 });

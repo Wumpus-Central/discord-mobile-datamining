@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "69d07b73ba14be901804955fa84a0ead",
-  name: "grey_badge",
+  hash: "fe4737c3dd5ab570ff8c05c7dd4152ca",
+  name: "custom_icons",
   type: "png",
 });

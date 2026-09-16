@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "cde816791540f65e5c599ecf6c251745",
-  name: "ChatXIcon",
+  httpServerLocation: "/assets/images/native/community",
+  width: 62,
+  height: 65,
+  scales: [1, 2, 3],
+  hash: "38485069fbc14bffd27bdd20bfea4ac1",
+  name: "pending-alert",
   type: "png",
 });

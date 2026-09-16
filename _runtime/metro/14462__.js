@@ -1,7 +1,13 @@
 // _runtime/metro/14462__.js
-import _mod17 from "00017__.js";
-import setupURLPolyfill_mod from "../14463_setupURLPolyfill.js";
+import _mod14463 from "14463__.js";
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+export default (arg0) => {
+  let num = 0;
+  {
+    num = 0;
+    if (0 !== tmp) {
+      num = _mod14463(tmp);
+    }
+  }
+  return num;
+};

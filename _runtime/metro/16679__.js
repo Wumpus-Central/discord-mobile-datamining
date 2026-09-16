@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "d69183c841a46891894e3608d083bf5f",
-  name: "ic_radio_circle",
+  scales: [2, 3],
+  hash: "e831387e9387034c87c9b5bc784cf6eb",
+  name: "partner_icon",
   type: "png",
 });

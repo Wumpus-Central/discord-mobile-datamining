@@ -1,12 +1,15 @@
 // _runtime/metro/08640__.js
-import _modDef8616 from "08616__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8624 from "08624__.js";
+import _modDef8625 from "08625__.js";
+import _modDef8641 from "08641__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeSpecularLighting = arg1;
+const FeFlood = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +28,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeSpecularLighting {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeFlood {
   constructor() {
     self = this;
-    tmp = c2(this, FeSpecularLighting);
-    tmp2 = closure_4;
-    obj = closure_4(FeSpecularLighting);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeFlood);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeFlood);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,18 +50,34 @@ class FeSpecularLighting {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeSpecularLighting, _modDef8616);
+_inherits(FeFlood, _modDef8625);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeSpecularLighting(8593).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(FeFlood(8624).extractFilter(this.props));
+    const merged1 = Object.assign(_modDef8624(this.props));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeSpecularLighting, items);
-importDefaultResultResult.displayName = "FeSpecularLighting";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(FeFlood, items);
+importDefaultResultResult.displayName = "FeFlood";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.floodColor = "black";
+obj.floodOpacity = 1;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

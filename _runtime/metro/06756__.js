@@ -1,4 +1,8 @@
 // _runtime/metro/06756__.js
-import _mod17 from "00017__.js";
+function print() {}
+const frozen = Object.freeze(print);
 
-export const findNodeHandle = _mod17.findNodeHandle;
+export { print };
+export const enableLogging = (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
+};

@@ -1,42 +1,12 @@
 // _runtime/metro/04180__.js
-import 04181__ from "04181__.js";
-import 04182__ from "04182__.js";
-import 04183__ from "04183__.js";
-import date_mod from "04184__.js";
-import date_mod from "04185__.js";
+import 02031__ from "02031__.js";
 
-if (!module_4181) {
-  const obj = { default: module_4181 };
-  let tmp3 = obj;
+if (!module_2031) {
+  const obj2 = { default: module_2031 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4181;
-}
-if (!module_4182) {
-  const obj2 = { default: module_4182 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4182;
-}
-if (!module_4183) {
-  const obj3 = { default: module_4183 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4183;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
+  obj = module_2031;
 }
 
-export default { code: "zh-CN", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default { date: obj.default({ formats: { full: "y'\u5E74'M'\u6708'd'\u65E5' EEEE", long: "y'\u5E74'M'\u6708'd'\u65E5'", medium: "yyyy-MM-dd", short: "yy-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "zzzz a h:mm:ss", long: "z a h:mm:ss", medium: "a h:mm:ss", short: "a h:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

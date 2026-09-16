@@ -1,45 +1,42 @@
 // _runtime/metro/14452__.js
-import _mod14396 from "14396__.js";
-import _mod14421 from "14421__.js";
-import _mod14449 from "14449__.js";
-import _mod14453 from "14453__.js";
+import _mod14417 from "14417__.js";
+import _mod14439 from "14439__.js";
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod14421(value)) {
-    _mod14453(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      _mod14396(arg1, value);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod14439(arg1)) {
+          tmp11Result = _mod14417;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
         }
-      } else {
-        delete tmp[tmp2];
       }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod14449.f(arg0, arg1, obj2);
-        const tmp3Result = _mod14449;
-      }
-    } catch (err) {}
+    }
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return arg0;
+}
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
 };
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
+
+export default isForced;

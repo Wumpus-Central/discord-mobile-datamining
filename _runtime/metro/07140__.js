@@ -1,16 +1,13 @@
 // _runtime/metro/07140__.js
-import CardAnimationContext from "../07134_CardAnimationContext.js";
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-require = arg1;
+const Platform = _mod17.Platform;
 
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export const getShadowStyle = function getShadowStyle(color) {
+  let shadowColor = color.color;
+  ({ offset, radius, opacity } = color);
+  if (shadowColor === undefined) {
+    shadowColor = "#000";
   }
+  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
 };

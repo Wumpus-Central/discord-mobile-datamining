@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e34464fbaad016de0cccce358d754f22",
-  name: "ic_overflow_android",
+  httpServerLocation: "/assets/images/native/verification",
+  width: 180,
+  height: 160,
+  scales: [1],
+  hash: "39e83a7f9fd6f4ad0c8041d592ca008c",
+  name: "img_verify_phone_dark_theme",
   type: "png",
 });

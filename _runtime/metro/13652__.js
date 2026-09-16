@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 250,
-  height: 125,
-  scales: [2, 3],
-  hash: "055ef15e97264c0633986165b3aae3ac",
-  name: "img_outbound_promotion_redemption",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 64,
+  height: 64,
+  scales: [1],
+  hash: "e56e37c53edc4951356b726ba43f79c4",
+  name: "img_wumpus_nitro_classic_boost",
   type: "png",
 });

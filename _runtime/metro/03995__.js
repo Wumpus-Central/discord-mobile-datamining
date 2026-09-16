@@ -1,37 +1,17 @@
 // _runtime/metro/03995__.js
-import _typeof_mod from "03728__.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import _mod3731 from "03731__.js";
+import assign_mod from "../03976_assign.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function isLeapYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const fullYear = _typeof.default(arg0).getFullYear();
-  const result = fullYear % 400;
-  let tmp4 = result === 0;
-  if (result !== 0) {
-    const result1 = fullYear % 4;
-    let tmp6 = result1 === 0;
-    if (result1 === 0) {
-      tmp6 = fullYear % 100 !== 0;
-    }
-    tmp4 = tmp6;
-  }
-  return tmp4;
+export default function getDefaultOptions() {
+  return assign.default({}, _mod3731.getDefaultOptions());
 };
 export default exports.default;

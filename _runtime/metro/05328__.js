@@ -1,13 +1,10 @@
 // _runtime/metro/05328__.js
-const obj = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
-    },
+const obj = { 4: null };
+obj[4] = {
+  name: "ShotInfo",
+  description(arg0) {
+    return arg0;
   },
-  5: "PentaxModelID",
-  555: "LevelInfo",
 };
 
 export default obj;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "bc9640d059e4504fae6e197e103e15f0",
-  name: "whatsapp",
+  hash: "811fb35960f597c4ee3417f16bd2f9e6",
+  name: "messages",
   type: "png",
 });

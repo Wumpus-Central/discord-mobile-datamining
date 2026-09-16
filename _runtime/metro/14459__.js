@@ -1,40 +1,99 @@
 // _runtime/metro/14459__.js
-import _mod14398 from "14398__.js";
-import _mod14399 from "14399__.js";
-import _mod14401 from "14401__.js";
-import _mod14402 from "14402__.js";
-import _mod14419 from "14419__.js";
-import _mod14428 from "14428__.js";
-import _mod14448 from "14448__.js";
-import _mod14460 from "14460__.js";
+let c0 = false;
 
-let closure_4 = _mod14402([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod14419(arg0);
-    const f = _mod14448.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod14401(arguments[num]);
-      if (f) {
-        let tmp8 = _mod14460(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
-      } else {
-        arr = _mod14460(tmp5);
+export default {
+  includes: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(14418)(arg0);
+    const tmp4 = closure_0(14460)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
       }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod14398;
-        if (tmp12) {
-          tmp12 = !_mod14428(tmp2, tmp5, tmp9);
+      return num3;
+    } else {
+      let sum = closure_0(14464)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
         }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
         }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
       }
     }
-    return tmp;
-  };
-}
-
-export default assign;
+  },
+  indexOf: (arg0, arg1, arg2) => {
+    const tmp3 = closure_0(14418)(arg0);
+    const tmp4 = closure_0(14460)(tmp3);
+    if (0 === tmp4) {
+      let num3 = !c0;
+      if (!c0) {
+        num3 = -1;
+      }
+      return num3;
+    } else {
+      let sum = closure_0(14464)(arg2, tmp4);
+      if (c0) {
+        if (arg1 != arg1) {
+          if (tmp4 > sum) {
+            while (tmp3[+sum] == tmp3[+sum]) {
+              sum = tmp7 + 1;
+            }
+            return true;
+          }
+        }
+        let num2 = !c0;
+        if (!c0) {
+          num2 = -1;
+        }
+        return num2;
+      }
+      let sum1 = sum;
+      if (tmp4 > sum) {
+        while (true) {
+          let num = c0;
+          if (c0) {
+            if (tmp3[sum1] === arg1) {
+              break;
+            }
+          }
+          sum1 = sum1 + 1;
+        }
+        if (!num) {
+          num = sum1;
+        }
+        if (!num) {
+          num = 0;
+        }
+        return num;
+      }
+    }
+  },
+};

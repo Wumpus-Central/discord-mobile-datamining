@@ -1,39 +1,31 @@
 // _runtime/metro/06972__.js
-import _mod6973 from "06973__.js";
 
-export default function _createClass(arg0, arg1, arg2) {
-  if (arg1) {
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp3 = arg1[num];
-      let flag2 = tmp3.enumerable;
-      if (!flag2) {
-        flag2 = false;
+export default function _objectWithoutPropertiesLoose(obj, arr) {
+  if (null == obj) {
+    return {};
+  } else {
+    obj = {};
+    for (const key10007 in arg0) {
+      hasOwnProperty = {}.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
+      } else {
+        hasOwnPropertyResult = call(arg0, key10007);
       }
-      tmp3.enumerable = flag2;
-      tmp3.configurable = true;
-      if ("value" in tmp3) {
-        tmp3.writable = true;
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        if (-1 !== arg1.indexOf(key10007)) {
+          continue;
+        } else {
+          obj[key10007] = arg0[key10007];
+          continue;
+        }
+        continue;
       }
-      let _Object = Object;
-      let definePropertyResult = Object.defineProperty(tmp, _mod6973(tmp3.key), tmp3);
+      continue;
     }
+    return obj;
   }
-  if (arg2) {
-    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
-      let tmp9 = arg2[num3];
-      let flag4 = tmp9.enumerable;
-      if (!flag4) {
-        flag4 = false;
-      }
-      tmp9.enumerable = flag4;
-      tmp9.configurable = true;
-      if ("value" in tmp9) {
-        tmp9.writable = true;
-      }
-      let _Object2 = Object;
-      let definePropertyResult1 = Object.defineProperty(arg0, _mod6973(tmp9.key), tmp9);
-    }
-  }
-  Object.defineProperty(arg0, "prototype", { writable: false });
-  return arg0;
 }

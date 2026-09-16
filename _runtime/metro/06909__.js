@@ -1,116 +1,135 @@
 // _runtime/metro/06909__.js
-import DEFAULT_HANDLE_HEIGHT from "../06736_DEFAULT_HANDLE_HEIGHT.js";
+import _mod19 from "00019__.js";
+import value22 from "../06736_value2.js";
+import get_ActivityIndicator from "00017__.js";
 
-const require = globalThis.__r;
+const useEffect = _mod19.useEffect;
+({ Keyboard: c3, Platform } = get_ActivityIndicator);
+const keyboardDidShow = "keyboardDidShow";
+const keyboardDidHide = "keyboardDidHide";
+let closure_6 = {
+  code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}",
+};
+let closure_7 = {
+  code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}",
+};
+const __initData = {
+  code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}",
+};
 
-require = arg1;
-let dependencyMap = arg6;
-let __initData = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}" };
-let __initData2 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
-
-export const useAnimatedSnapPoints = (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize) => {
-  _require = snapPoints;
-  dependencyMap = derivedValue;
-  __initData = sharedValue1;
-  __initData2 = reactiveSharedValue2;
-  closure_4 = DEFAULT_DYNAMIC_SIZING;
-  closure_5 = maxDynamicContentSize;
-  sharedValue = require("cancelAnimation").useSharedValue(-1);
-  const obj = require("cancelAnimation");
-  class P {
-    constructor() {
-      iter = closure_1;
-      tmp = closure_0;
-      tmp2 = closure_1;
-      if (closure_1.value === closure_0(closure_1[1]).INITIAL_CONTAINER_HEIGHT) {
-        items = [];
-        items[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-        return items;
-      } else {
-        iter3 = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter3;
-          if ("value" in iter3) {
-            value = iter3.value;
-          }
-          items1 = value;
-        } else {
-          items1 = [];
-        }
-        mapped = items1.map(() => { ... });
-        tmp3 = closure_4;
-        if (closure_4) {
-          iter2 = closure_3;
-          if (closure_3.value === tmp(tmp2[1]).INITIAL_HANDLE_HEIGHT) {
-            items2 = [];
-            items2[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-            return items2;
-          } else {
-            iter4 = closure_2;
-            if (closure_2.value === tmp(tmp2[1]).INITIAL_CONTAINER_HEIGHT) {
-              items3 = [];
-              items3[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-              return items3;
-            } else {
-              tmp4 = globalThis;
-              value1 = closure_5;
-              sum = iter4.value + iter2.value;
-              if (undefined === closure_5) {
-                value1 = iter.value;
-              }
-              diff = iter.value - Math.min(sum, value1);
-              if (!mapped.includes(diff)) {
-                arr1 = mapped.push(diff);
-              }
-              sorted = mapped.sort(() => { ... });
-              tmp8 = closure_6;
-              closure_6.value = sorted.indexOf(diff);
-              return sorted;
-            }
-          }
-        } else {
-          return mapped;
-        }
+export const useKeyboard = (includeBottomOffset) => {
+  includeBottomOffset = includeBottomOffset.includeBottomOffset;
+  let shouldHandleKeyboardEvents;
+  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
+  let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(
+    includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED,
+  );
+  const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
+  const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
+  const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
+  const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
+  const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const fn = function v(value, arg1, value2, value3, arg4) {
+    value = arg1;
+    if (value === value22.KEYBOARD_STATE.SHOWN) {
+      if (!shouldHandleKeyboardEvents.value) {
+        const items = [value, value, value2, value3];
+        sharedValue5.value = items;
       }
     }
-  }
-  const obj2 = require("cancelAnimation");
-  P.__closure = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  P.__workletHash = 15015207820492;
-  P.__initData = __initData;
-  let items = [snapPoints, derivedValue, reactiveSharedValue2, sharedValue1, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize, sharedValue];
-  derivedValue = obj2.useDerivedValue(P, items);
-  const obj3 = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  class N {
-    constructor() {
-      if (closure_4) {
-        flag = true;
-        return true;
-      } else {
-        iter = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter;
-          if ("value" in iter) {
-            value = iter.value;
-          }
-          items = value;
-        } else {
-          items = [];
-        }
-        length = items.length;
-        tmp = !length;
-        if (length) {
-          tmp = !items.find(/* F111544 */ function() { ... });
-        }
-        return !tmp;
-      }
+    if (value !== value22.KEYBOARD_STATE.SHOWN) {
+      value = height.value;
     }
-  }
-  N.__closure = { enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, snapPoints };
-  N.__workletHash = 4816362093278;
-  N.__initData = __initData2;
-  let items1 = [derivedValue, sharedValue, require("cancelAnimation").useDerivedValue(N)];
-  return items1;
+    height.value = value;
+    let tmp5 = arg4;
+    if (arg4) {
+      tmp5 = includeBottomOffset;
+    }
+    if (tmp5) {
+      height.value = height.value + arg4;
+    }
+    animationDuration.value = value2;
+    animationEasing.value = value3;
+    state.value = value;
+    sharedValue5.value = [];
+  };
+  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  fn.__closure = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
+  fn.__workletHash = 7905199978020;
+  fn.__initData = sharedValue5;
+  const workletCallback = obj7.useWorkletCallback(fn, []);
+  let items = [workletCallback];
+  state(() => {
+    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      ({ duration, easing } = endCoordinates);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN,
+        endCoordinates.endCoordinates.height,
+        duration,
+        easing,
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).SCREEN_HEIGHT -
+          endCoordinates.endCoordinates.height -
+          endCoordinates.endCoordinates.screenY,
+      );
+    });
+    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN,
+        endCoordinates.endCoordinates.height,
+        endCoordinates.duration,
+        endCoordinates.easing,
+      );
+    });
+    return () => {
+      closure_0.remove();
+      closure_1.remove();
+    };
+  }, items);
+  const obj8 = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
+  const fn2 = function b() {
+    return shouldHandleKeyboardEvents.value;
+  };
+  fn2.__closure = { shouldHandleKeyboardEvents };
+  fn2.__workletHash = 11615500623565;
+  fn2.__initData = workletCallback;
+  const fn3 = function y(arg0) {
+    let tmp = arg0;
+    value = sharedValue5.value;
+    if (arg0) {
+      tmp = value.length > 0;
+    }
+    if (tmp) {
+      workletCallback(value[0], value[1], value[2], value[3]);
+    }
+  };
+  fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
+  fn3.__workletHash = 16636741173520;
+  fn3.__initData = __initData;
+  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
+  return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
 };

@@ -1,67 +1,32 @@
 // _runtime/metro/14528__.js
-import get_ActivityIndicator from "00017__.js";
+let closure_0 = { url: "http://localhost:8081" };
 
-function getDevMenu() {}
-
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
-        } else {
-          throw new TypeError("Trying to call a non-function");
+export default () => {
+  if (arg0 === undefined) {
+    let obj = {};
+  }
+  return () => {
+    url = Object.assign({}, url, obj);
+    obj = {
+      onCommand(type) {
+        if ("editor.open" === type.type) {
+          const payload = type.payload;
+          let num = payload.lineNumber;
+          const _HermesInternal = HermesInternal;
+          obj = { file: payload.file, lineNumber: null };
+          const combined = "" + url.url + "/open-stack-frame";
+          if (!num) {
+            num = 1;
+          }
+          obj.lineNumber = num;
+          const _fetch = fetch;
+          const request = { method: "POST", body: null };
+          const _JSON = JSON;
+          request.body = JSON.stringify(obj);
+          const response = fetch(combined, request);
         }
-      }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-    }
-  },
-});
+      },
+    };
+    return obj;
+  };
+};

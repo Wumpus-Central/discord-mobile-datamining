@@ -1,20 +1,13 @@
 // _runtime/metro/04734__.js
-import _mod523 from "00523__.js";
+import _process from "../00539__process.js";
+import baseUnary from "../00540_baseUnary.js";
+import baseIsSet from "../04735_baseIsSet.js";
 
-let prototype;
-if (_mod523) {
-  prototype = _mod523.prototype;
-}
-let valueOf;
-if (prototype) {
-  valueOf = prototype.valueOf;
+const tmp = _process && _process.isSet;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsSet;
 }
 
-export default function cloneSymbol(arg0) {
-  if (valueOf) {
-    const call = valueOf.call;
-    Object(typeof call === "unknown" ? valueOf() : call(arg0));
-  } else {
-    return {};
-  }
-}
+export default _module;

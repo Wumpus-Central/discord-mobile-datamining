@@ -1,16 +1,26 @@
 // _runtime/metro/07141__.js
-import GestureHandlerRefContext from "../07114_GestureHandlerRefContext.js";
-import noop from "00019__.js";
 
-require = arg1;
-
-export const useGestureHandlerRef = function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
-  }
+export const getModalRouteKeys = (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.reduce((arr, key) => {
+    let options;
+    if (closure_0[key.key] != null) {
+      options = tmp.options;
+    }
+    if (options == null) {
+      options = {};
+    }
+    const presentation = options.presentation;
+    let tmp2 = arr.length && !presentation;
+    if (!tmp2) {
+      tmp2 = "modal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "transparentModal" === presentation;
+    }
+    if (tmp2) {
+      arr = arr.push(key.key);
+    }
+    return arr;
+  }, []);
 };

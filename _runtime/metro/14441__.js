@@ -1,99 +1,20 @@
 // _runtime/metro/14441__.js
-let c0 = false;
+import _mod14413 from "14413__.js";
+import _mod14439 from "14439__.js";
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(14400)(arg0);
-    const tmp4 = closure_0(14442)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(14446)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+export default (arg0, arg1) => {
+  if (arguments.length < 2) {
+    const tmp7 = _mod14413[arg0];
+    let tmp8;
+    if (_mod14439(tmp7)) {
+      tmp8 = tmp7;
     }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(14400)(arg0);
-    const tmp4 = closure_0(14442)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(14446)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod14413[arg0];
+    if (tmp3) {
+      tmp3 = _mod14413[arg0][arg1];
     }
-  },
+  }
+  return tmp3;
 };

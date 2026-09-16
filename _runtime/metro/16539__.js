@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/notification_center/native/images",
+  httpServerLocation: "/assets/modules/notifications/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "6840fde776aba6730d4f566b68c449e7",
-  name: "ic_highlight",
+  scales: [1],
+  hash: "0ca8431ba26e114a3e93aa8dc5cdf521",
+  name: "ic_bell_on",
   type: "png",
 });

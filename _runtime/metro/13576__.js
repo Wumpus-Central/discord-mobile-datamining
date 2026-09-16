@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 51,
-  height: 12,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 314,
+  height: 195,
   scales: [2, 3],
-  hash: "762c9356acc18a559214b01d8cc7bf33",
-  name: "img_logo_nitro_small_light",
+  hash: "f774e43fd38da2d8b6e5bdabed98e8b8",
+  name: "img_tier_0_marketing_emojis",
   type: "png",
 });

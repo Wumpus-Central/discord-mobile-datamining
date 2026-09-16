@@ -1,61 +1,73 @@
 // _runtime/metro/10639__.js
+import AbstractParserWithWordBoundaryChecking from "../10580_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp(
-  "([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))",
-  "i",
-);
-class JPSlashDateFormatParser {
+const FRTimeUnitWithinFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class FRTimeUnitWithinFormatParser {
   constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
-    return;
+    self = this;
+    tmp = c2(this, FRTimeUnitWithinFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(FRTimeUnitWithinFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
 }
+_inherits(FRTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:dans|en|pour|pendant|de)\\s*(" + FRTimeUnitWithinFormatParser(10635).TIME_UNITS_PATTERN + ")(?=\\W|$)",
+      "i",
+    );
     return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(10635).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(10635).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(10635).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(10566).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply(
-                  "year",
-                  JPSlashDateFormatParser(10566).findYearClosestToRef(
-                    createParsingComponents.reference.instant,
-                    parsed1,
-                    parsed,
-                  ),
-                );
-              }
-              return parsingComponents;
-            }
-          }
-          return null;
-        }
-      }
-      return null;
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = FRTimeUnitWithinFormatParser(10576).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        FRTimeUnitWithinFormatParser(10635).parseDuration(arg1[1]),
+      );
     },
   },
 ];
 
-export default _createClass(JPSlashDateFormatParser, items);
+export default _createClass(FRTimeUnitWithinFormatParser, items);

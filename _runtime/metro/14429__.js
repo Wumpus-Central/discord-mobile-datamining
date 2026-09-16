@@ -1,36 +1,28 @@
 // _runtime/metro/14429__.js
-import _mod14420 from "14420__.js";
-import _mod14421 from "14421__.js";
-import _mod14428 from "14428__.js";
+import _mod14413 from "14413__.js";
+import _mod14414 from "14414__.js";
+import _mod14430 from "14430__.js";
 
-export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (_mod14421(toString)) {
-      const tmp4 = _mod14428(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
-      }
-      tmpResult = _mod14420;
-    }
-  }
-  const valueOf = arg0.valueOf;
-  if (_mod14421(valueOf)) {
-    const tmp8 = _mod14428(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-    tmp5Result = _mod14420;
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (_mod14421(toString2)) {
-      const tmp10 = _mod14428(toString2, arg0);
-      if (!tmp5Result2(tmp10)) {
-        return tmp10;
-      }
-      tmp5Result2 = _mod14420;
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
-};
+let prop = _mod14413["__core-js_shared__"];
+if (!prop) {
+  prop = _mod14414("__core-js_shared__", {});
+}
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod14430) {
+  str2 = "pure";
+}
+versions.push({
+  version: "3.41.0",
+  mode: str2,
+  copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)",
+  license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE",
+  source: "https://github.com/zloirock/core-js",
+});
+
+export default prop;

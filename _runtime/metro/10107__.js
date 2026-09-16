@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "bed3256ccaf0e78cd27d637be4c78d04",
-  name: "ic_stop_stream_24px",
+  width: 32,
+  height: 32,
+  scales: [2, 3],
+  hash: "15492a52206e63f9d08f70b19c6b74cb",
+  name: "ic_nitro_basic_wheel_gradient",
   type: "png",
 });

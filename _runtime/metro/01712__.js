@@ -92,7 +92,7 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "NAVIGATE_DEPRECATED",
+      startTimestamp: "UPLOAD_ATTACHMENT_REMOVE_FILE",
       reduceMotion: null,
     };
     let num = obj.velocity;

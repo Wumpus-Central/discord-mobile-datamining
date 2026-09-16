@@ -1,81 +1,52 @@
 // _runtime/metro/05348__.js
-import _mod5298 from "05298__.js";
+import _modDef5316 from "05316__.js";
 
-require = arg1;
+importDefault = arg2;
 const dependencyMap = arg6;
+let c2 = 4;
+let c3 = 7;
 
 export default {
-  read(byteLength) {
-    let tmp;
-    if (6 <= byteLength.byteLength) {
-      const stringFromDataView = _mod5298.getStringFromDataView(byteLength, 3, 3);
-      const obj2 = { value: stringFromDataView, description: stringFromDataView };
-      tmp = obj2;
+  read(getUint8, sum) {
+    const byteAt = _modDef5316.getByteAt(getUint8, sum);
+    let num = 0;
+    if (16 & byteAt) {
+      num = 1;
     }
-    const obj3 = {
-      "GIF Version": tmp,
-      "Image Width": null,
-      "Image Height": null,
-      "Global Color Map": null,
-      "Bits Per Pixel": null,
-      "Color Resolution Depth": null,
-    };
-    let tmp5;
-    if (8 <= byteLength.byteLength) {
-      const uint16 = byteLength.getUint16(6, true);
-      const obj4 = { value: uint16, description: null };
-      const _HermesInternal = HermesInternal;
-      obj4.description = "" + uint16 + "px";
-      tmp5 = obj4;
+    const obj2 = { value: num, description: null };
+    let str = "No";
+    let str2 = "No";
+    if (16 & byteAt) {
+      str2 = "Yes";
     }
-    obj3["Image Width"] = tmp5;
-    let tmp8;
-    if (10 <= byteLength.byteLength) {
-      const uint161 = byteLength.getUint16(8, true);
-      const obj5 = { value: uint161, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj5.description = "" + uint161 + "px";
-      tmp8 = obj5;
+    const obj3 = { Alpha: obj2 };
+    obj2.description = str2;
+    let num2 = 0;
+    if (2 & byteAt) {
+      num2 = 1;
     }
-    obj3["Image Height"] = tmp8;
-    let tmp11;
-    if (11 <= byteLength.byteLength) {
-      const tmp12 = (128 & byteLength.getUint8(10)) >>> 7;
-      const obj6 = { value: tmp12, description: null };
-      let str5 = "No";
-      if (1 === tmp12) {
-        str5 = "Yes";
-      }
-      obj6.description = str5;
-      tmp11 = obj6;
+    const obj4 = { value: num2, description: null };
+    if (2 & byteAt) {
+      str = "Yes";
     }
-    obj3["Global Color Map"] = tmp11;
-    let tmp13;
-    if (11 <= byteLength.byteLength) {
-      const sum = 1 + (7 & byteLength.getUint8(10));
-      const obj7 = { value: sum, description: null };
-      let str6 = "bits";
-      if (1 === sum) {
-        str6 = "bit";
-      }
-      const _HermesInternal3 = HermesInternal;
-      obj7.description = "" + sum + " " + str6;
-      tmp13 = obj7;
-    }
-    obj3["Bits Per Pixel"] = tmp13;
-    let tmp16;
-    if (11 <= byteLength.byteLength) {
-      const sum1 = 1 + ((112 & byteLength.getUint8(10)) >>> 4);
-      const obj8 = { value: sum1, description: null };
-      let str9 = "bits";
-      if (1 === sum1) {
-        str9 = "bit";
-      }
-      const _HermesInternal4 = HermesInternal;
-      obj8.description = "" + sum1 + " " + str9;
-      tmp16 = obj8;
-    }
-    obj3["Color Resolution Depth"] = tmp16;
+    obj4.description = str;
+    obj3.Animation = obj4;
+    sum = sum + c2;
+    const byteAt1 = _modDef5316.getByteAt(getUint8, sum);
+    const tmpResult = _modDef5316;
+    const sum1 = byteAt1 + 256 * _modDef5316.getByteAt(getUint8, sum + 1);
+    const tmpResult6 = _modDef5316;
+    const sum2 = sum1 + 65536 * _modDef5316.getByteAt(getUint8, sum + 2) + 1;
+    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
+    const sum3 = sum + c3;
+    const obj5 = { value: sum2, description: `${tmp9}px` };
+    const tmpResult7 = _modDef5316;
+    const byteAt2 = _modDef5316.getByteAt(getUint8, sum3);
+    const tmpResult8 = _modDef5316;
+    const sum4 = byteAt2 + 256 * _modDef5316.getByteAt(getUint8, sum3 + 1);
+    const tmpResult9 = _modDef5316;
+    const sum5 = sum4 + 65536 * _modDef5316.getByteAt(getUint8, sum3 + 2) + 1;
+    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
     return obj3;
   },
 };

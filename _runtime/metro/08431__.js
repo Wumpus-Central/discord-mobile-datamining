@@ -1,22 +1,12 @@
 // _runtime/metro/08431__.js
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-export default (obj) => {
-  if (obj instanceof Object) {
-    const _Array = Array;
-    if (!Array.isArray(obj)) {
-      obj = {};
-      for (const key10010 in arg0) {
-        if (!arg0.hasOwnProperty(key10010)) {
-          continue;
-        } else {
-          obj[key10010] = key10010;
-          continue;
-        }
-        continue;
-      }
-      return obj;
-    }
+export default (str) => {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
   }
-  const error = new Error("keyMirror(...): Argument must be an object.");
-  throw error;
 };

@@ -1,12 +1,13 @@
 // _runtime/metro/10586__.js
-import Filter from "../10584_Filter.js";
+import AbstractTimeExpressionParser from "../10587_AbstractTimeExpressionParser.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
-const AbstractMergeDateTimeRefiner = require;
+const ENTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,65 +26,121 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class AbstractMergeDateTimeRefiner {
-  constructor() {
+class ENTimeExpressionParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, AbstractMergeDateTimeRefiner);
+    tmp = c2(this, ENTimeExpressionParser);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(AbstractMergeDateTimeRefiner);
+    obj = closure_4(ENTimeExpressionParser);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    if (metroRequire()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(AbstractMergeDateTimeRefiner, Filter.MergingRefiner);
+_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "shouldMergeResults",
-  value: function shouldMergeResults(str, start, start2) {
-    start = start.start;
-    let isOnlyDateResult = start.isOnlyDate();
-    if (isOnlyDateResult) {
-      start2 = start2.start;
-      isOnlyDateResult = start2.isOnlyTime();
-    }
-    if (!isOnlyDateResult) {
-      const start3 = start2.start;
-      let isOnlyDateResult1 = start3.isOnlyDate();
-      if (isOnlyDateResult1) {
-        const start4 = start.start;
-        isOnlyDateResult1 = start4.isOnlyTime();
-      }
-      isOnlyDateResult = isOnlyDateResult1;
-    }
-    if (isOnlyDateResult) {
-      const self = this;
-      isOnlyDateResult = null != str.match(this.patternBetween());
-    }
-    return isOnlyDateResult;
+  key: "followingPhase",
+  value: function followingPhase() {
+    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|until|through|till|\\?)\\s*";
   },
 };
-const items = [
+let items = [
   entry,
   {
-    key: "mergeResults",
-    value: function mergeResults(arg0, start, text) {
-      start = start.start;
-      const mergeDateTimeResult = AbstractMergeDateTimeRefiner(10587).mergeDateTimeResult;
-      const tmp2 = start.isOnlyDate() ? mergeDateTimeResult(start, text) : mergeDateTimeResult(text, start);
-      tmp2.index = start.index;
-      tmp2.text = start.text + arg0 + text.text;
-      return tmp2;
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:at|from)\\s*)??";
+    },
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:o\\W*clock|at\\s*night|in\\s*the\\s*(?:morning|afternoon)))?(?!/)(?=\\W|$)";
+    },
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      const self = this;
+      const tmp = hasOwnProperty(
+        _getPrototypeOf(ENTimeExpressionParser.prototype),
+        "extractPrimaryTimeComponents",
+        this,
+      );
+      dependencyMap = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1];
+      const fnResult = fn(items);
+      if (fnResult) {
+        const first = arg1[0];
+        if (first.endsWith("night")) {
+          value = fnResult.get("hour");
+          if (value >= 6) {
+            if (value < 12) {
+              fnResult.assign("hour", fnResult.get("hour") + 12);
+              fnResult.assign("meridiem", ENTimeExpressionParser(10578).Meridiem.PM);
+            }
+          }
+          if (value < 6) {
+            fnResult.assign("meridiem", ENTimeExpressionParser(10578).Meridiem.AM);
+          }
+        }
+        const first1 = arg1[0];
+        if (first1.endsWith("afternoon")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(10578).Meridiem.PM);
+          value2 = fnResult.get("hour");
+          let tmp14 = value2 >= 0;
+          if (tmp14) {
+            tmp14 = value2 <= 6;
+          }
+          if (tmp14) {
+            fnResult.assign("hour", fnResult.get("hour") + 12);
+          }
+        }
+        const first2 = arg1[0];
+        if (first2.endsWith("morning")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(10578).Meridiem.AM);
+          if (fnResult.get("hour") < 12) {
+            fnResult.assign("hour", fnResult.get("hour"));
+          }
+        }
+        return fnResult.addTag("parser/ENTimeExpressionParser");
+      } else {
+        return fnResult;
+      }
+    },
+  },
+  {
+    key: "extractFollowingTimeComponents",
+    value: function extractFollowingTimeComponents(arg0, arg1, arg2) {
+      const self = this;
+      let fn = hasOwnProperty(
+        _getPrototypeOf(ENTimeExpressionParser.prototype),
+        "extractFollowingTimeComponents",
+        this,
+      );
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1, arg2];
+      const fnResult = fn(items);
+      if (fnResult) {
+        fnResult.addTag("parser/ENTimeExpressionParser");
+      }
+      return fnResult;
     },
   },
 ];
 
-export default _createClass(AbstractMergeDateTimeRefiner, items);
+export default _createClass(ENTimeExpressionParser, items);

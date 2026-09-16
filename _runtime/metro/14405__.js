@@ -1,11 +1,25 @@
 // _runtime/metro/14405__.js
-import _mod14406 from "14406__.js";
+const require = globalThis.__r;
 
-export default (arg0) => {
-  if (_mod14406(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("14406__.js").units;
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
 };

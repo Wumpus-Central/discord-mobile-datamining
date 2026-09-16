@@ -1,5 +1,5 @@
 // _runtime/metro/04064__.js
-import Parser2 from "../04034_Parser.js";
+import Parser2 from "../04032_Parser.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -26,15 +26,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(MinuteParser, Parser) {
+function _setPrototypeOf(FractionOfSecondParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(MinuteParser, Parser) {
-      MinuteParser.__proto__ = Parser;
-      return MinuteParser;
+    _setPrototypeOf = function _setPrototypeOf(FractionOfSecondParser, Parser) {
+      FractionOfSecondParser.__proto__ = Parser;
+      return FractionOfSecondParser;
     };
   }
-  return _setPrototypeOf(MinuteParser, Parser);
+  return _setPrototypeOf(FractionOfSecondParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,7 +54,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 let _createSuperInternal;
-class MinuteParser {
+class FractionOfSecondParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -91,14 +91,14 @@ class MinuteParser {
         if ("priority" in applyResult) {
           _Object = Object;
           definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 60,
+            value: 30,
             enumerable: true,
             configurable: true,
             writable: true,
           });
         } else {
-          num3 = 60;
-          applyResult.priority = 60;
+          num3 = 30;
+          applyResult.priority = 30;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -133,7 +133,7 @@ class MinuteParser {
     }
   }
 }
-let dependencyMap = MinuteParser;
+let dependencyMap = FractionOfSecondParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,11 +145,11 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-MinuteParser.prototype = Object.create(prototype, {
-  constructor: { value: MinuteParser, writable: true, configurable: true },
+FractionOfSecondParser.prototype = Object.create(prototype, {
+  constructor: { value: FractionOfSecondParser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(MinuteParser, Parser);
+  _setPrototypeOf(FractionOfSecondParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -210,33 +210,22 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("m" === arg1) {
-      return _createSuperInternal(4036).parseNumericPattern(_createSuperInternal(4037).numericPatterns.minute, arg0);
-    } else if ("mo" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "minute" });
-    } else {
-      return _createSuperInternal(4036).parseNDigits(arg1.length, arg0);
-    }
+  value: function parse(arg0, arg1) {
+    return _createSuperInternal(4034).mapValue(
+      _createSuperInternal(4034).parseNDigits(arg1.length, arg0),
+      function valueCallback(arg0) {
+        return Math.floor(arg0 * Math.pow(10, 3 - length.length));
+      },
+    );
   },
 };
 let items = [
   entry,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 0;
-      if (tmp) {
-        tmp = arg1 <= 59;
-      }
-      return tmp;
-    },
-  },
-  {
     key: "set",
-    value: function set(setUTCMinutes, arg1, arg2) {
-      setUTCMinutes.setUTCMinutes(arg2, 0, 0);
-      return setUTCMinutes;
+    value: function set(setUTCMilliseconds, arg1, arg2) {
+      setUTCMilliseconds.setUTCMilliseconds(arg2);
+      return setUTCMilliseconds;
     },
   },
 ];
@@ -258,4 +247,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { MinuteParser };
+export { FractionOfSecondParser };

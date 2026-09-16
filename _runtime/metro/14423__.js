@@ -1,20 +1,11 @@
 // _runtime/metro/14423__.js
-import _mod14395 from "14395__.js";
-import _mod14421 from "14421__.js";
+import _mod14424 from "14424__.js";
 
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod14395[arg0];
-    let tmp8;
-    if (_mod14421(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
+export default (arg0) => {
+  if (_mod14424(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
   } else {
-    tmp3 = _mod14395[arg0];
-    if (tmp3) {
-      tmp3 = _mod14395[arg0][arg1];
-    }
+    return arg0;
   }
-  return tmp3;
 };

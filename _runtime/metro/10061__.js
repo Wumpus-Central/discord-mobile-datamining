@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2b05b694fba9643d8f0981005b85363f",
-  name: "HandRequestSpeakListIcon",
+  hash: "da62561340ac0cea2169f7776825bdc0",
+  name: "ic_channel_arrow_collapsed_24px",
   type: "png",
 });

@@ -1,4 +1,11 @@
 // _runtime/metro/14461__.js
-import _mod14395 from "14395__.js";
+import _mod14462 from "14462__.js";
 
-export default _mod14395;
+export default (arg0) => {
+  const tmp = _mod14462(arg0);
+  let num = 0;
+  if (tmp > 0) {
+    num = min(tmp, 9007199254740991);
+  }
+  return num;
+};

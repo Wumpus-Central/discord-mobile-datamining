@@ -1,102 +1,82 @@
 // _runtime/metro/04407__.js
-import c from "../04396_c.js";
+import _mod4408 from "04408__.js";
 import _slicedToArray from "00032__.js";
 
 require = fn;
 const noop = fn(19);
-({ useRef: c3, useCallback, useState: closure_4 } = noop);
+({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 
-export const useRive = function useRive() {
-  const cResult = c.c(4);
-  const tmp2 = React3(null);
-  [tmp4, dependencyMap] = React4(null);
-  React3(null);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function t(current) {
-      if (current.current !== current) {
-        ref.current = current;
-        if (ref2.current) {
-          let _clearTimeout = clearTimeout;
-          clearTimeout(tmp11.current);
-        }
-        const promise = new Promise((arg0, arg1) => {
-          closure_0 = arg1;
-          ref.current = setTimeout(() => {
-            const error = new Error("Rive view ready timeout");
-            closure_0(error);
-          }, 5000);
-        });
-        let awaitViewReadyResult;
-        if (current != null) {
-          awaitViewReadyResult = current.awaitViewReady();
-        }
-        const items = [awaitViewReadyResult, promise];
-        const racePromise = Promise.race(items);
-        const nextPromise = Promise.race(items).then((result) => {
-          if (true === result) {
-            dependencyMap(closure_0);
-          } else {
-            const _console = console;
-            console.warn("Rive view ready check returned false");
-            dependencyMap(null);
-          }
-        });
-        Promise.race(items)
-          .then((result) => {
-            if (true === result) {
-              dependencyMap(closure_0);
-            } else {
-              const _console = console;
-              console.warn("Rive view ready check returned false");
-              dependencyMap(null);
-            }
-          })
-          .catch((error) => {
-            console.warn("Failed to initialize Rive view:", error);
-            closure_1_1(null);
-          })
-          .finally(() => {
-            if (ref.current) {
-              const _clearTimeout = clearTimeout;
-              clearTimeout(ref.current);
-              ref.current = null;
-            }
-          });
-        const catchPromise = Promise.race(items)
-          .then((result) => {
-            if (true === result) {
-              dependencyMap(closure_0);
-            } else {
-              const _console = console;
-              console.warn("Rive view ready check returned false");
-              dependencyMap(null);
-            }
-          })
-          .catch((error) => {
-            console.warn("Failed to initialize Rive view:", error);
-            closure_1_1(null);
-          });
+export const useRiveProperty = function useRiveProperty(instance, FillColor, f30817) {
+  closure_0 = instance;
+  closure_1 = FillColor;
+  closure_2 = f30817;
+  let tmp = hasOwnProperty(undefined);
+  const items = [instance, FillColor];
+  const disposableMemo = _mod4408.useDisposableMemo(
+    () => {
+      if (closure_0) {
+        return closure_2(tmp, closure_1);
       }
-    };
-    cResult[0] = fn;
-    let first = fn;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { f: first };
-    cResult[1] = obj2;
-    let tmp6 = obj2;
-  } else {
-    tmp6 = cResult[1];
-  }
-  if (cResult[2] !== tmp4) {
-    const obj3 = { riveRef: tmp2, riveViewRef: tmp4, setHybridRef: tmp6 };
-    cResult[2] = tmp4;
-    cResult[3] = obj3;
-    let tmp7 = obj3;
-  } else {
-    tmp7 = cResult[3];
-  }
-  return tmp7;
+    },
+    (dispose) => {
+      let disposeResult;
+      if (dispose != null) {
+        disposeResult = dispose.dispose();
+      }
+      return disposeResult;
+    },
+    items,
+    tmp,
+  );
+  [first, closure_6] = timestampProducer(undefined);
+  const tmp5 = _slicedToArray(timestampProducer(null), 2);
+  closure_7 = tmp5[1];
+  const items1 = [FillColor, instance];
+  React4(() => {
+    closure_7(null);
+  }, items1);
+  const items2 = [instance, disposableMemo, FillColor];
+  React4(() => {
+    let tmp = closure_0;
+    if (closure_0) {
+      tmp = !disposableMemo;
+    }
+    if (tmp) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error('Property "' + closure_1 + '" not found in the ViewModel instance');
+      closure_7(error);
+    }
+  }, items2);
+  const items3 = [disposableMemo];
+  React4(() => {
+    if (disposableMemo) {
+      closure_6(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
+        closure_1_6(arg0);
+      });
+      return () => {
+        try {
+          closure_0();
+        } catch (err) {}
+      };
+    }
+  }, items3);
+  const items4 = [disposableMemo, first];
+  const items5 = [
+    first,
+    React3((fn) => {
+      const current = ref.current;
+      if (current) {
+        let tmp2 = fn;
+        if (typeof fn === "function") {
+          tmp2 = fn(first);
+        }
+        current.value = tmp2;
+      }
+    }, items4),
+    tmp5[0],
+    disposableMemo,
+  ];
+  return items5;
 };

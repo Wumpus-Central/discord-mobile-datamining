@@ -1,47 +1,78 @@
 // _runtime/metro/06751__.js
-import value2 from "../06733_value2.js";
+import normalizeSnapPoint from "../06752_normalizeSnapPoint.js";
+import noop from "00019__.js";
 
-const cancelAnimation = tmp3(1637);
-require = fn;
-const dependencyMap = arg6;
-fn = function n(arg0) {
-  ({ point, configs, velocity } = arg0);
-  if (velocity === undefined) {
-    velocity = 0;
-  }
-  ({ overrideReduceMotion, onComplete } = arg0);
-  if (!configs) {
-    configs = value2.ANIMATION_CONFIGS;
-  }
-  if (overrideReduceMotion) {
-    configs.reduceMotion = overrideReduceMotion;
-  }
-  if (!("duration" in configs)) {
-    if (!("easing" in configs)) {
-      let TIMING = value2.ANIMATION_METHOD.SPRING;
-    }
-    if (TIMING === value2.ANIMATION_METHOD.TIMING) {
-      let withTimingResult = cancelAnimation.withTiming(point, configs, onComplete);
-      const tmp3Result = cancelAnimation;
-    } else {
-      const _Object = Object;
-      const obj = { velocity };
-      withTimingResult = cancelAnimation.withSpring(point, Object.assign(obj, configs), onComplete);
-      const tmp3Result2 = cancelAnimation;
-    }
-    return withTimingResult;
-  }
-  TIMING = value2.ANIMATION_METHOD.TIMING;
-};
-fn.__closure = {
-  ANIMATION_CONFIGS: fn(6733).ANIMATION_CONFIGS,
-  ANIMATION_METHOD: fn(6733).ANIMATION_METHOD,
-  withTiming: fn(1637).withTiming,
-  withSpring: fn(1637).withSpring,
-};
-fn.__workletHash = 17032227615993;
-fn.__initData = {
-  code: "function pnpm_animateTs1({point:point,configs:configs,velocity=0,overrideReduceMotion:overrideReduceMotion,onComplete:onComplete}){const{ANIMATION_CONFIGS,ANIMATION_METHOD,withTiming,withSpring}=this.__closure;if(!configs){configs=ANIMATION_CONFIGS;}if(overrideReduceMotion){configs.reduceMotion=overrideReduceMotion;}const type='duration'in configs||'easing'in configs?ANIMATION_METHOD.TIMING:ANIMATION_METHOD.SPRING;if(type===ANIMATION_METHOD.TIMING){return withTiming(point,configs,onComplete);}return withSpring(point,Object.assign({velocity:velocity},configs),onComplete);}",
-};
+const require = globalThis.__r;
 
-export const animate = fn;
+({ useCallback: c2, useRef: c3 } = noop);
+
+export const useScrollable = () => {
+  const tmp = closure_3(null);
+  _require = tmp;
+  dependencyMap = closure_3(null);
+  const sharedValue = require("cancelAnimation").useSharedValue(require("value2").SCROLLABLE_TYPE.UNDETERMINED);
+  let obj = require("cancelAnimation");
+  const sharedValue1 = require("cancelAnimation").useSharedValue(0);
+  const obj2 = require("cancelAnimation");
+  const sharedValue2 = require("cancelAnimation").useSharedValue(require("value2").SCROLLABLE_STATE.UNDETERMINED);
+  const obj3 = require("cancelAnimation");
+  const sharedValue3 = require("cancelAnimation").useSharedValue(false);
+  const obj4 = require("cancelAnimation");
+  const tmp6 = closure_2((id) => {
+    const current = ref.current;
+    id = undefined;
+    if (current != null) {
+      id = current.id;
+    }
+    if (id == null) {
+      id = null;
+    }
+    if (id !== id.id) {
+      if (ref.current) {
+        closure_1.current = ref.current;
+      }
+      ref.current = id;
+    }
+  }, []);
+  return {
+    scrollableRef: tmp,
+    animatedScrollableType: sharedValue,
+    animatedScrollableContentOffsetY: sharedValue1,
+    animatedScrollableOverrideState: sharedValue2,
+    isScrollableRefreshable: sharedValue3,
+    setScrollableRef: closure_2((id) => {
+      const current = ref.current;
+      id = undefined;
+      if (current != null) {
+        id = current.id;
+      }
+      if (id == null) {
+        id = null;
+      }
+      if (id !== id.id) {
+        if (ref.current) {
+          closure_1.current = ref.current;
+        }
+        ref.current = id;
+      }
+    }, []),
+    removeScrollableRef: closure_2((current) => {
+      try {
+        const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(current.current);
+        current = ref.current;
+        let id;
+        if (current != null) {
+          id = current.id;
+        }
+        if (id == null) {
+          id = null;
+        }
+        if (findNodeHandleResult === id) {
+          ref.current = ref2.current;
+        }
+      } catch (err) {
+        return tmp;
+      }
+    }, []),
+  };
+};

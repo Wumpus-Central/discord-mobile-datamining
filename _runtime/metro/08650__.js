@@ -1,14 +1,11 @@
 // _runtime/metro/08650__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8601 from "08601__.js";
-import _modDef8651 from "08651__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const Line = fn;
+const FeSpotLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +24,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Line {
+class FeSpotLight {
   constructor() {
     self = this;
-    tmp = closure_3(this, Line);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Line);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeSpotLight);
+    tmp2 = closure_4;
+    obj = closure_4(FeSpotLight);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,36 +44,17 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Line, _modDef8601);
+_inherits(FeSpotLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const obj = {};
-    ({ x1, y1, x2, y2 } = props);
-    const merged = Object.assign(Line(8592).extract(this, props));
-    obj.x1 = x1;
-    obj.y1 = y1;
-    obj.x2 = x2;
-    obj.y2 = y2;
-    const obj2 = Line(8592);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8651, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const result = FeSpotLight(8602).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = _createClass(FeSpotLight, items);
+importDefaultResultResult.displayName = "FeSpotLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

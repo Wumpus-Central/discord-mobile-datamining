@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "58031e8cd71ba255d9d80c351eb0d4d4",
-  name: "img_account_sync_facebook_white",
+  hash: "322f5aec10ee0e2c3d6aad9844b5f00f",
+  name: "img_account_sync_facebook_light_and_dark",
   type: "png",
 });

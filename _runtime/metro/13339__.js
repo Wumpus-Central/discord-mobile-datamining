@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/gifting",
-  width: 270,
-  height: 134,
-  scales: [2, 3],
-  hash: "415663ee17f9e1c2411c453e5e8ca806",
-  name: "img_premium_embed_background_light",
+  width: 132,
+  height: 145,
+  scales: [1, 2, 3],
+  hash: "79c6466cf28ca8f6510b4a84fb435a2a",
+  name: "wumpus_snowglobe_premium120",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "321fcdfdc6f79caac89fae29f0991750",
-  name: "ForumWarningIcon",
+  hash: "97a83fa92aca73b91331f0f57ecb4c27",
+  name: "ForumIcon",
   type: "png",
 });

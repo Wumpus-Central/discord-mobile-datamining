@@ -1,12 +1,14 @@
 // _runtime/metro/10618__.js
-import AbstractParserWithWordBoundaryChecking from "../10572_AbstractParserWithWordBoundaryChecking.js";
+import repeatedTimeunitPattern from "../10573_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10580_AbstractParserWithWordBoundaryChecking.js";
+import _mod10619 from "10619__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const DETimeUnitAgoFormatParser = require;
+const DEWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,35 +27,36 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class DETimeUnitAgoFormatParser {
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:a[mn]\\s*?)?(?:(diese[mn]|letzte[mn]|n(?:\u00E4|ae)chste[mn])\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10619.WEEKDAY_DICTIONARY) +
+    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(diese|letzte|n(?:\u00E4|ae)chste)\\s*woche)?(?=\\W|$)",
+  "i",
+);
+class DEWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, DETimeUnitAgoFormatParser);
+    tmp = c2(this, DEWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(DETimeUnitAgoFormatParser);
+    obj = closure_4(DEWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(DEWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    const regExp = new RegExp(
-      "(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" +
-        DETimeUnitAgoFormatParser(10611).NUMBER_PATTERN +
-        ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" +
-        DETimeUnitAgoFormatParser(10565).matchAnyPattern(DETimeUnitAgoFormatParser(10611).TIME_UNIT_DICTIONARY) +
-        ")",
-      "i",
-    );
     return regExp;
   },
 };
@@ -62,33 +65,32 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      let num = 1;
-      if (arg1[2]) {
-        num = DETimeUnitAgoFormatParser(10611).parseNumberPattern(arg1[2]);
+      const formatted = arg1[2].toLowerCase();
+      let str2 = arg1[1];
+      if (!str2) {
+        str2 = arg1[3];
       }
-      const obj = {};
-      obj[DETimeUnitAgoFormatParser(10611).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
-      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
-      if (formatted) {
-        let isMatch = /vor/.test(formatted);
-        if (!isMatch) {
-          isMatch = /letzte/.test(formatted);
-          const obj3 = /letzte/;
-        }
-        if (!isMatch) {
-          isMatch = /vergangen/.test(formatted);
-          const obj4 = /vergangen/;
-        }
-        let reverseDurationResult = obj;
-        if (isMatch) {
-          reverseDurationResult = DETimeUnitAgoFormatParser(10567).reverseDuration(obj);
-        }
-        const ParsingComponents = DETimeUnitAgoFormatParser(10568).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      if (!str2) {
+        str2 = "";
       }
-      const str2 = arg1[1] || arg1[3] || "";
+      const str3 = str2.toLowerCase();
+      let str4 = "last";
+      if (!str3.match(/letzte/)) {
+        str4 = "next";
+        if (!str3.match(/chste/)) {
+          str4 = null;
+          if (str3.match(/diese/)) {
+            str4 = "this";
+          }
+        }
+      }
+      return DEWeekdayParser(10600).createParsingComponentsAtWeekday(
+        reference.reference,
+        DEWeekdayParser(10619).WEEKDAY_DICTIONARY[formatted],
+        str4,
+      );
     },
   },
 ];
 
-export default _createClass(DETimeUnitAgoFormatParser, items);
+export default _createClass(DEWeekdayParser, items);

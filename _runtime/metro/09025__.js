@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dcae1df15663c479951183ad5f2fe3dd",
-  name: "RedditNeutralIcon",
+  hash: "36a084fbace40e0af86aab037df7e8b7",
+  name: "PlaystationNeutralIcon",
   type: "png",
 });

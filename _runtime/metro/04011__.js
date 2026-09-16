@@ -1,34 +1,33 @@
 // _runtime/metro/04011__.js
-import _mod3733 from "03733__.js";
-import startOfWeek_mod from "../03887_startOfWeek.js";
-import _typeof_mod from "03728__.js";
-import module_3732_mod from "03732__.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import differenceInCalendarWeeks_mod from "../03915_differenceInCalendarWeeks.js";
+import lastDayOfMonth_mod from "../04012_lastDayOfMonth.js";
+import startOfMonth_mod from "../03942_startOfMonth.js";
+import requiredArgs_mod from "../03727_requiredArgs.js";
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
+let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
+if (!differenceInCalendarWeeks) {
+  const obj = { default: differenceInCalendarWeeks };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfWeek;
+  tmp3 = differenceInCalendarWeeks;
 }
-startOfWeek = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+differenceInCalendarWeeks = tmp3;
+let lastDayOfMonth = lastDayOfMonth_mod;
+if (!lastDayOfMonth) {
+  const obj2 = { default: lastDayOfMonth };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = lastDayOfMonth;
 }
-_typeof = tmp5;
-let module_3732 = module_3732_mod;
-if (!module_3732) {
-  const obj3 = { default: module_3732 };
+lastDayOfMonth = tmp5;
+let startOfMonth = startOfMonth_mod;
+if (!startOfMonth) {
+  const obj3 = { default: startOfMonth };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_3732;
+  tmp7 = startOfMonth;
 }
-module_3732 = tmp7;
+startOfMonth = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -38,83 +37,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp9;
 
-export default function getWeekYear(arg0, firstWeekContainsDate) {
+export default function getWeeksInMonth(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const defaultOptions = _mod3733.getDefaultOptions();
-  let prop;
-  if (null != firstWeekContainsDate) {
-    prop = firstWeekContainsDate.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    let prop1;
-    if (null != firstWeekContainsDate) {
-      locale = firstWeekContainsDate.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
-            }
-          }
-        }
-      }
-    }
-    prop = prop1;
-  }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    const locale2 = defaultOptions.locale;
-    let prop2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
-          }
-        }
-      }
-    }
-    prop = prop2;
-  }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
-    }
-  }
-  const defaultResult2 = module_3732.default(num);
-  if (defaultResult2 >= 1) {
-    if (defaultResult2 <= 7) {
-      const _Date = Date;
-      const date = new Date(0);
-      date.setFullYear(fullYear + 1, 0, defaultResult2);
-      date.setHours(0, 0, 0, 0);
-      const _Date2 = Date;
-      const date1 = new Date(0);
-      date1.setFullYear(fullYear, 0, defaultResult2);
-      date1.setHours(0, 0, 0, 0);
-      const defaultResult3 = startOfWeek.default(date, firstWeekContainsDate);
-      const time = defaultResult1.getTime();
-      if (time >= defaultResult3.getTime()) {
-        let sum = fullYear + 1;
-      } else {
-        const time1 = defaultResult1.getTime();
-        sum = fullYear;
-        if (time1 < defaultResult4.getTime()) {
-          sum = fullYear - 1;
-        }
-      }
-      return sum;
-    }
-  }
-  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
-  throw rangeError;
+  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
 };
 export default exports.default;

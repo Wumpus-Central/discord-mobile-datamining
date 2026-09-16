@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 140.5,
-  height: 89.5,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 411,
+  height: 134,
   scales: [2, 3],
-  hash: "26fec1ac0e2aea05499090830fe99884",
-  name: "img_boost_hands",
+  hash: "d8c3e4c6e3c94e3724597aef8c906754",
+  name: "img_tier_0_subheader_mobile",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c00f2cf86b7ac758e128c274c6adc688",
-  name: "MicrophoneArrowRightIcon",
+  hash: "d1dac949a0f852ec9c729a240d5758b0",
+  name: "MusicIcon",
   type: "png",
 });

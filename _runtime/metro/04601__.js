@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dd2bf1474590dee83bbb5fea2b4f182c",
-  name: "CircleCheckIcon-primary",
+  hash: "d43523873b246ea97ff723dd8970498f",
+  name: "ClockIcon",
   type: "png",
 });

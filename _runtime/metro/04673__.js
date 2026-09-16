@@ -1,16 +1,25 @@
 // _runtime/metro/04673__.js
-import _mod4674 from "04674__.js";
+import _mod552 from "00552__.js";
 
-export default function toInteger(arg0) {
-  const tmp = _mod4674(arg0);
-  const result = tmp % 1;
-  let num = 0;
-  if (tmp == tmp) {
-    let diff = tmp;
-    if (result) {
-      diff = tmp - result;
+export default function toFinite(arg0) {
+  if (arg0) {
+    const tmp3 = _mod552(arg0);
+    if (tmp3 !== Infinity) {
+      if (tmp3 !== -Infinity) {
+      }
     }
-    num = diff;
+    let num6 = 1;
+    if (tmp3 < 0) {
+      num6 = -1;
+    }
+    const num4 =
+      179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 *
+      num6;
+  } else {
+    let num = 0;
+    if (0 === arg0) {
+      num = arg0;
+    }
+    return num;
   }
-  return num;
 }

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 70,
   height: 47,
   scales: [1],
-  hash: "ab02db863b7edeaa46bf4cd49b6646a9",
-  name: "ko",
+  hash: "d24e290703f8b31b56744a69df613fcb",
+  name: "bg",
   type: "png",
 });

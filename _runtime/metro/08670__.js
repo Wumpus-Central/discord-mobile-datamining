@@ -1,6 +1,6 @@
 // _runtime/metro/08670__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8601 from "08601__.js";
+import _modDef8610 from "08610__.js";
 import _modDef8671 from "08671__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Rect = fn;
+const Path = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Rect {
+class Path {
   constructor() {
     self = this;
-    tmp = closure_3(this, Rect);
+    tmp = closure_3(this, Path);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Rect);
+    obj = hasOwnProperty(Path);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,32 +49,31 @@ class Rect {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Rect, _modDef8601);
+_inherits(Path, _modDef8610);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
-    const obj = {
+    const obj = {};
+    const merged = Object.assign(Path(8601).extract(this, props));
+    obj.d = props.d;
+    const obj2 = Path(8601);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(Rect(8592).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8671, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Rect, items);
-importDefaultResultResult.displayName = "Rect";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = _createClass(Path, items);
+importDefaultResultResult.displayName = "Path";
 
 export default importDefaultResultResult;

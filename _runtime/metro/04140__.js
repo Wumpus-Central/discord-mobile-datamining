@@ -1,105 +1,37 @@
 // _runtime/metro/04140__.js
-import _typeof_mod from "03728__.js";
-import module_4141_mod from "04141__.js";
-import module_3732_mod from "03732__.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import module_3730_mod from "03730__.js";
+import _typeof_mod from "03726__.js";
+import requiredArgs_mod from "../03727_requiredArgs.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_3730 = module_3730_mod;
+if (!module_3730) {
+  const obj = { default: module_3730 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3730;
 }
-_typeof = tmp3;
-let module_4141 = module_4141_mod;
-if (!module_4141) {
-  const obj2 = { default: module_4141 };
+module_3730 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4141;
+  tmp5 = _typeof;
 }
-module_4141 = tmp5;
-let module_3732 = module_3732_mod;
-if (!module_3732) {
-  const obj3 = { default: module_3732 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3732;
-}
-module_3732 = tmp7;
+_typeof = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp7;
 
-export default function set(arg0, year) {
+export default function setDate(module_3730, arg1) {
   requiredArgs.default(2, arguments);
-  if ("object" === _typeof(year)) {
-    if (null !== year) {
-      const defaultResult1 = _typeof.default(arg0);
-      const _isNaN = isNaN;
-      if (isNaN(defaultResult1.getTime())) {
-        const _Date = Date;
-        const date = new Date(NaN);
-        return date;
-      } else {
-        if (null != year.year) {
-          defaultResult1.setFullYear(year.year);
-        }
-        let defaultResult2 = defaultResult1;
-        if (null != year.month) {
-          defaultResult2 = module_4141.default(defaultResult1, year.month);
-        }
-        if (null != year.date) {
-          defaultResult2.setDate(module_3732.default(year.date));
-        }
-        if (null != year.hours) {
-          defaultResult2.setHours(module_3732.default(year.hours));
-        }
-        if (null != year.minutes) {
-          defaultResult2.setMinutes(module_3732.default(year.minutes));
-        }
-        if (null != year.seconds) {
-          defaultResult2.setSeconds(module_3732.default(year.seconds));
-        }
-        if (null != year.milliseconds) {
-          defaultResult2.setMilliseconds(module_3732.default(year.milliseconds));
-        }
-        return defaultResult2;
-      }
-    }
-  }
-  const rangeError = new RangeError("values parameter must be an object");
-  throw rangeError;
+  const defaultResult1 = _typeof.default(module_3730);
+  defaultResult1.setDate(module_3730.default(arg1));
+  return defaultResult1;
 };
 export default exports.default;
