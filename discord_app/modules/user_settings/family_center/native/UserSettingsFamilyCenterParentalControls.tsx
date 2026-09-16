@@ -1,10 +1,10 @@
-// === Module 15029: UserSettingsFamilyCenterParentalControls ===
+// === Module 15045: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15029 (UserSettingsFamilyCenterParentalControls)
+// Module 15045 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2397 from "module_2397" /* 2397 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7646 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,10 +14,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const FamilyCenterSubPages = fn(7645).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7648).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };

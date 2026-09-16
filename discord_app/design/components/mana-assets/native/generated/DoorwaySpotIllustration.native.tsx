@@ -1,9 +1,9 @@
-// === Module 6038: DoorwaySpotIllustration ===
+// === Module 6039: DoorwaySpotIllustration ===
 
-// Module 6038 (DoorwaySpotIllustration)
+// Module 6039 (DoorwaySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6039 from "module_6039" /* 6039 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6040 from "module_6040" /* 6040 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DoorwaySpotIllustration = function DoorwaySpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6039 };
+  const obj2 = { uri: _modDef6040 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

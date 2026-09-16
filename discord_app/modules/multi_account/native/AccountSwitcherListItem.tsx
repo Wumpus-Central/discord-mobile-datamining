@@ -1,19 +1,19 @@
-// === Module 16062: AccountSwitcherListItem ===
+// === Module 16082: AccountSwitcherListItem ===
 
-// Module 16062 (AccountSwitcherListItem)
+// Module 16082 (AccountSwitcherListItem)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4358 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4594 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4599 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Pressables from "Pressables" /* 5207 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4356 */;
+import UserUtilsDefault from "UserUtils" /* 4482 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4592 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4597 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Pressables from "Pressables" /* 5208 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1386 */;
-import StreamerModeStore from "StreamerModeStore" /* 4485 */;
+import StreamerModeStore from "StreamerModeStore" /* 4483 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -52,10 +52,10 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12548).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12556).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");

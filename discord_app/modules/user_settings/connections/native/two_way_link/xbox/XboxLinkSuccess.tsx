@@ -1,6 +1,6 @@
-// === Module 9572: XboxLinkSuccess ===
+// === Module 9583: XboxLinkSuccess ===
 
-// Module 9572 (XboxLinkSuccess)
+// Module 9583 (XboxLinkSuccess)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,12 +11,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Linking: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9351).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9365);
+const XboxLinkModalScenes = fn(9362).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9376);
 ({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: closure_11, XBOX_URL_BASE: closure_12 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { image: { width: 58, height: 85, marginBottom: 24 }, getApp: { alignItems: "center", alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, padding: 16, borderRadius: nativeDefault.radii.sm, flexDirection: "row" }, appLogoBox: null, appLogo: null, getAppTitle: null, icon: null, externalLinkIcon: null };
 let size = { marginRight: 12, width: 40, height: 40, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.unsafe_rawColors.PLATFORM_XBOX };
 obj2.appLogoBox = size;
@@ -57,7 +57,7 @@ export default function XboxLinkDiscordSuccess() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.EDUCATION);
   }, items1);
-  obj5.source = require("module_9573");
+  obj5.source = require("module_9584");
   obj5.style = tmp.image;
   const items2 = [closure_13(closure_5, obj5), , , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
@@ -71,7 +71,7 @@ export default function XboxLinkDiscordSuccess() {
   const obj8 = { onPress: callback, style: tmp.getApp, children: null };
   const obj9 = { style: tmp.appLogoBox, children: null };
   const obj2 = first(navigation[10]);
-  obj9.children = closure_13(closure_5, { source: require("module_9574"), style: tmp.appLogo });
+  obj9.children = closure_13(closure_5, { source: require("module_9585"), style: tmp.appLogo });
   const items3 = [closure_13(closure_6, obj9), , ];
   const obj11 = { style: tmp.getAppTitle, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = first(navigation[13]).intl;

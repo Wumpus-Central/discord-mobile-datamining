@@ -1,7 +1,7 @@
-// === Module 12065: handleForwardBreadcrumb ===
+// === Module 12073: handleForwardBreadcrumb ===
 
-// Module 12065 (handleForwardBreadcrumb)
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7448 */;
+// Module 12073 (handleForwardBreadcrumb)
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7451 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;

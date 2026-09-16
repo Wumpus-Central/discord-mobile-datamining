@@ -1,9 +1,9 @@
-// === Module 5822: ActivitiesTogetherSpotIllustration ===
+// === Module 5823: ActivitiesTogetherSpotIllustration ===
 
-// Module 5822 (ActivitiesTogetherSpotIllustration)
+// Module 5823 (ActivitiesTogetherSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef5823 from "module_5823" /* 5823 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef5824 from "module_5824" /* 5824 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ActivitiesTogetherSpotIllustration = function ActivitiesTogetherSpo
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5823 };
+  const obj2 = { uri: _modDef5824 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

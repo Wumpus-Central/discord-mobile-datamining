@@ -1,9 +1,9 @@
-// === Module 6001: ? ===
+// === Module 6002: ? ===
 
-// Module 6001
+// Module 6002
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DevQuestsTallAbstractUI-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/5d860568d4411f7821385f085e6318fbea5851e93d19b9e12022bf7dc1d7a16f.png";
-export const metadata = { fileBytes: 104613 };
+export default "https://cdn.discordapp.com/assets/content/a5f409cb81c50d3d4c29ec34bea6c55e205f1921d90727bb526aa57b4b7e8e8e.png";
+export const metadata = { fileBytes: 109404 };

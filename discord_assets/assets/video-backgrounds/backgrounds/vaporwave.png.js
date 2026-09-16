@@ -1,6 +1,6 @@
-// === Module 9237: ? ===
+// === Module 9248: ? ===
 
-// Module 9237
+// Module 9248
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/video-backgrounds/backgrounds/vaporwave.png.js");

@@ -1,6 +1,6 @@
-// === Module 4366: ThemeContextProvider/ThemeTypes ===
+// === Module 4364: ThemeContextProvider/ThemeTypes ===
 
-// Module 4366 (ThemeContextProvider/ThemeTypes)
+// Module 4364 (ThemeContextProvider/ThemeTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeTypes.tsx");

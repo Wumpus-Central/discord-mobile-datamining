@@ -1,9 +1,9 @@
-// === Module 11258: getClearAfterDuration ===
+// === Module 11272: getClearAfterDuration ===
 
-// Module 11258 (getClearAfterDuration)
+// Module 11272 (getClearAfterDuration)
 import _modDef38 from "module_38" /* 38 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import Constants from "Constants" /* 11254 */;
+import Constants from "Constants" /* 11268 */;
 import size from "module_2" /* 2 */;
 
 const ClearAfterValues = Constants.ClearAfterValues;

@@ -1,9 +1,9 @@
-// === Module 6513: ? ===
+// === Module 6516: ? ===
 
-// Module 6513
+// Module 6516
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SecurityKeySpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/4bca1ef4de93e23ffde8f25d375ec62ee3a4565d3742f1f0c67cfd47c1016bad.png";
-export const metadata = { fileBytes: 18576 };
+export default "https://cdn.discordapp.com/assets/content/bbdb3657073726f72f5fb781c770eb2fe6d0a22f2fa9742b37777b0aaae11c5b.png";
+export const metadata = { fileBytes: 18604 };

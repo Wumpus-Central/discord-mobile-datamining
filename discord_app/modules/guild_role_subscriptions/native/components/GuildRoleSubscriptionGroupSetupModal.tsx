@@ -1,10 +1,10 @@
-// === Module 17927: GuildRoleSubscriptionGroupSetupModal ===
+// === Module 17983: GuildRoleSubscriptionGroupSetupModal ===
 
-// Module 17927 (GuildRoleSubscriptionGroupSetupModal)
+// Module 17983 (GuildRoleSubscriptionGroupSetupModal)
 import util from "util" /* 1115 */;
-import ToastUtils from "ToastUtils" /* 4337 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4819 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15321 */;
+import ToastUtils from "ToastUtils" /* 4335 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4818 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15337 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -168,8 +168,8 @@ class GuildRoleSubscriptionGroupSetupModal {
                       const intl = merged(1115).intl;
                       closure_1 = intl.string(merged(1115).t.ZUEGFn);
                     }
-                    merged(4337).presentError(closure_1);
-                    const obj8 = merged(4337);
+                    merged(4335).presentError(closure_1);
+                    const obj8 = merged(4335);
                   }
                   const obj5 = {
                     guildId: closure_131_1,
@@ -295,8 +295,8 @@ class GuildRoleSubscriptionGroupSetupModal {
     return closure_11(tmp3(tmp4[13]).EditStateContextProvider, obj1);
   }
 }
-const useRoleTierEditStore = fn(17884).useRoleTierEditStore;
-const GuildRoleSubscriptionsConstants = fn(15299);
+const useRoleTierEditStore = fn(17940).useRoleTierEditStore;
+const GuildRoleSubscriptionsConstants = fn(15315);
 ({ GuildRoleSubscriptionsTierScenes: closure_8, GUILD_ROLE_SUBSCRIPTION_GROUP_SETUP_KEY: closure_9 } = GuildRoleSubscriptionsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;

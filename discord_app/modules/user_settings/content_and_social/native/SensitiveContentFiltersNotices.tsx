@@ -1,17 +1,17 @@
-// === Module 14918: SensitiveContentFiltersNotices ===
+// === Module 14934: SensitiveContentFiltersNotices ===
 
-// Module 14918 (SensitiveContentFiltersNotices)
+// Module 14934 (SensitiveContentFiltersNotices)
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import LinkingDefault from "Linking" /* 4334 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8532 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14784 */;
+import LinkingDefault from "Linking" /* 4332 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8541 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14800 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SafetySettingsNoticeType = fn(8520).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8529).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");
@@ -21,7 +21,7 @@ export const SensitiveContentFiltersTeenNotice = function SensitiveContentFilter
   let obj = require("TinyBroncoSettingsNoticesLazy");
   _require = require("SensitiveMediaGoreRedactionSettingsUtils").useSensitiveContentFilterHelpArticle();
   if (isTinyBroncoSettingsNoticeEnabled) {
-    let tmp4Result = jsx(tmp(14916).ContentFiltersTeenNotice, {});
+    let tmp4Result = jsx(tmp(14932).ContentFiltersTeenNotice, {});
   } else {
     const obj3 = {
       label: tmp(1115).t.EUo0yj,

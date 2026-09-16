@@ -1,9 +1,9 @@
-// === Module 6320: LanternSpotIllustration ===
+// === Module 6321: LanternSpotIllustration ===
 
-// Module 6320 (LanternSpotIllustration)
+// Module 6321 (LanternSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6321 from "module_6321" /* 6321 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6322 from "module_6322" /* 6322 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const LanternSpotIllustration = function LanternSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6321 };
+  const obj2 = { uri: _modDef6322 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

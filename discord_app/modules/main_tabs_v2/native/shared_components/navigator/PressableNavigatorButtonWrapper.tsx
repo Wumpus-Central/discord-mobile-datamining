@@ -1,11 +1,11 @@
-// === Module 7972: PressableNavigatorButtonWrapper ===
+// === Module 7981: PressableNavigatorButtonWrapper ===
 
-// Module 7972 (PressableNavigatorButtonWrapper)
+// Module 7981 (PressableNavigatorButtonWrapper)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import MainTabsV2Constants from "MainTabsV2Constants" /* 7970 */;
-import createStyles from "createStyles" /* 4639 */;
+import MainTabsV2Constants from "MainTabsV2Constants" /* 7979 */;
+import createStyles from "createStyles" /* 4638 */;
 import size_mod from "module_2" /* 2 */;
 
 const View = _mod17.View;

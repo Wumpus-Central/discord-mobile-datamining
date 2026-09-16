@@ -1,14 +1,14 @@
-// === Module 16710: VibegrationsActionCreators ===
+// === Module 16730: VibegrationsActionCreators ===
 
-// Module 16710 (VibegrationsActionCreators)
+// Module 16730 (VibegrationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7352 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9639 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16706 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7355 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9650 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16726 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9642 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16703 */;
+import FramesStore from "FramesStore" /* 9653 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16723 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {
@@ -535,7 +535,7 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-const isLaunched = fn(9643).isLaunched;
+const isLaunched = fn(9654).isLaunched;
 let c9 = null;
 let c10 = null;
 const size = fn(2);
@@ -579,8 +579,8 @@ export const createProject = function createProject() {
 export const renameProject = function renameProject(projectId, name) {
   return patchProject(projectId, { name });
 };
-export const updateProjectSettings = function updateProjectSettings(first2, arg1) {
-  return patchProject(first2, arg1);
+export const updateProjectSettings = function updateProjectSettings(projectId, arg1) {
+  return patchProject(projectId, arg1);
 };
 export const setProjectIcon = function setProjectIcon() {
   const self = this;
@@ -592,8 +592,8 @@ export const setProjectIcon = function setProjectIcon() {
   }
   return applyArgumentsResult;
 };
-export const setGuildHints = function setGuildHints(first2, arg1) {
-  return patchProject(first2, arg1);
+export const setGuildHints = function setGuildHints(projectId, arg1) {
+  return patchProject(projectId, arg1);
 };
 export const deleteProject = function deleteProject() {
   const self = this;

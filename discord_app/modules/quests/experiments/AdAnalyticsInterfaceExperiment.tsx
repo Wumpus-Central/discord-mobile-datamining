@@ -1,6 +1,6 @@
-// === Module 11330: AdAnalyticsInterfaceExperiment ===
+// === Module 7837: AdAnalyticsInterfaceExperiment ===
 
-// Module 11330 (AdAnalyticsInterfaceExperiment)
+// Module 7837 (AdAnalyticsInterfaceExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
@@ -11,8 +11,8 @@ const result = size.fileFinishedImporting("modules/quests/experiments/AdAnalytic
 
 export const AdAnalyticsInterfaceExperimentStep = obj;
 export const AdAnalyticsInterfaceExperiment = apexExperiment;
-export const shouldMigrateToAdAnalyticsInterface = function shouldMigrateToAdAnalyticsInterface(STEP_2_CLICKED_INTERNAL, quest_bottom_sheet_console_connect) {
-  const config = apexExperiment.getConfig({ location: quest_bottom_sheet_console_connect });
+export const shouldMigrateToAdAnalyticsInterface = function shouldMigrateToAdAnalyticsInterface(STEP_2_CLICKED_INTERNAL, app_store_overlay_surface_click) {
+  const config = apexExperiment.getConfig({ location: app_store_overlay_surface_click });
   let enabled = config.enabled;
   if (enabled) {
     enabled = STEP_2_CLICKED_INTERNAL <= config.maxStep;

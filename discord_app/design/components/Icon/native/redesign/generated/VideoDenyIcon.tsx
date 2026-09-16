@@ -1,9 +1,9 @@
-// === Module 13417: VideoDenyIcon ===
+// === Module 13428: VideoDenyIcon ===
 
-// Module 13417 (VideoDenyIcon)
+// Module 13428 (VideoDenyIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod13418 from "module_13418" /* 13418 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod13429 from "module_13429" /* 13429 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const VideoDenyIcon = function VideoDenyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13418, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13429, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

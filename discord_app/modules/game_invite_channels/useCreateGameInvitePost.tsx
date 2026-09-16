@@ -1,13 +1,13 @@
-// === Module 12907: useCreateGameInvitePost ===
+// === Module 12915: useCreateGameInvitePost ===
 
-// Module 12907 (useCreateGameInvitePost)
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7379 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11895 */;
+// Module 12915 (useCreateGameInvitePost)
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7382 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11903 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11595 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5364 */;
+import LocalActivityStore from "LocalActivityStore" /* 11603 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5365 */;
 
 require = fn;
 const ActivityActionTypes = fn(1074).ActivityActionTypes;
@@ -24,16 +24,26 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
   ({ upload, onThreadCreated } = appliedTagIds);
   const application = description(stateFromStores[6]).useGameInvitesChannelOfficialApplication(parentChannel.id).application;
   let obj = description(stateFromStores[6]);
-  const items = [LocalActivityStore, SelfPresenceStore];
-  const items1 = [application];
-  stateFromStores = description(stateFromStores[7]).useStateFromStores(items, () => {
-    let id;
-    if (application != null) {
-      id = application.id;
-    }
-    return getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, id);
-  }, items1);
+  const applicationIdsForGame = description(stateFromStores[7]).useApplicationIdsForGame(parentChannel.gameId);
   let obj2 = description(stateFromStores[7]);
+  const items = [LocalActivityStore, SelfPresenceStore];
+  const items1 = [applicationIdsForGame];
+  stateFromStores = description(stateFromStores[8]).useStateFromStores(items, () => {
+    const obj = applicationIdsForGame[Symbol.iterator]();
+    while (obj !== undefined) {
+      let tmp7 = getCurrentUserPresenceActivityDefault(LocalActivityStore, SelfPresenceStore, tmp2);
+      if (null != tmp7) {
+        let obj2 = GameInvitesChannelUtils;
+        if (obj2.canInviteToActivity(tmp8)) {
+          obj.return();
+          return tmp7;
+        }
+      }
+      continue;
+    }
+    return null;
+  }, items1);
+  let obj3 = description(stateFromStores[8]);
   let availableTags = parentChannel.availableTags;
   if (availableTags == null) {
     availableTags = [];
@@ -51,40 +61,40 @@ export const useCreateGameInvitePost = function useCreateGameInvitePost(appliedT
       obj = GameInvitesChannelUtils;
     }
   }, items2);
-  let obj3 = description(stateFromStores[6]);
-  const obj5 = { parentChannel, name: null, appliedTags: null, activityAction: null, applicationId: null, voiceChatEnabled: null, upload: null, onThreadCreated: null };
-  const tmpResult = description(stateFromStores[9]);
-  obj5.name = description(stateFromStores[6]).deriveThreadName(description);
-  obj5.appliedTags = appliedTagIds;
-  obj5.activityAction = memo;
+  let obj4 = description(stateFromStores[6]);
+  const obj6 = { parentChannel, name: null, appliedTags: null, activityAction: null, applicationId: null, voiceChatEnabled: null, upload: null, onThreadCreated: null };
+  const tmpResult = description(stateFromStores[10]);
+  obj6.name = description(stateFromStores[6]).deriveThreadName(description);
+  obj6.appliedTags = appliedTagIds;
+  obj6.activityAction = memo;
   let id;
   if (application != null) {
     id = application.id;
   }
-  obj5.applicationId = id;
-  obj5.voiceChatEnabled = voiceChatEnabled;
-  obj5.upload = upload;
-  obj5.onThreadCreated = onThreadCreated;
-  createForumPostCommon = tmpResult.useCreateForumPostCommon(obj5);
+  obj6.applicationId = id;
+  obj6.voiceChatEnabled = voiceChatEnabled;
+  obj6.upload = upload;
+  obj6.onThreadCreated = onThreadCreated;
+  createForumPostCommon = tmpResult.useCreateForumPostCommon(obj6);
   const tmpResult2 = description(stateFromStores[6]);
-  [tmp9, c4] = noop.useState(false);
-  let tmp10 = !tmp9;
-  if (!tmp9) {
-    tmp10 = description.trim().length > 0;
+  [tmp10, c4] = noop.useState(false);
+  let tmp11 = !tmp10;
+  if (!tmp10) {
+    tmp11 = description.trim().length > 0;
   }
-  if (tmp10) {
-    tmp10 = description.length <= tmp(tmp2[6]).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
+  if (tmp11) {
+    tmp11 = description.length <= tmp(tmp2[6]).GAME_INVITE_POST_MESSAGE_MAX_LENGTH;
   }
-  noop = tmp10;
-  const items3 = [tmp10, createForumPostCommon, description];
-  const tmp8 = _slicedToArray(noop.useState(false), 2);
+  noop = tmp11;
+  const items3 = [tmp11, createForumPostCommon, description];
+  const tmp9 = _slicedToArray(noop.useState(false), 2);
   return {
     application,
     noMicTag,
     voiceChatEnabled,
     voiceToggleDisabled,
-    submitting: tmp9,
-    canSubmit: tmp10,
+    submitting: tmp10,
+    canSubmit: tmp11,
     submit: noop.useCallback(createForumPostCommon(function*() {
       if (c3 === 2) {
         c3 = 3;

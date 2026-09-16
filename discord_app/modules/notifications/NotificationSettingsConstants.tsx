@@ -1,9 +1,9 @@
-// === Module 14542: NotificationSettingsConstants ===
+// === Module 14560: NotificationSettingsConstants ===
 
-// Module 14542 (NotificationSettingsConstants)
+// Module 14560 (NotificationSettingsConstants)
 import _modDef2723 from "module_2723" /* 2723 */;
-import NotifSettings from "NotifSettings" /* 14543 */;
-import NotifTypes from "NotifTypes" /* 14544 */;
+import NotifSettings from "NotifSettings" /* 14561 */;
+import NotifTypes from "NotifTypes" /* 14562 */;
 import size from "module_2" /* 2 */;
 
 const obj = { badge: true, visibility: "popup", vibrate: true, sound: true };
@@ -67,22 +67,20 @@ const items4 = [NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW, NotifSettings.No
 obj29[NotifTypes.NotifTypes.GO_LIVE_NOTIFICATION] = items4;
 const items5 = [NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW, NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT];
 obj29[NotifTypes.NotifTypes.VOICE_CHANNEL_ACTIVITY] = items5;
-const items6 = [NotifSettings.NotifSettings.VOICE_ACTIVITY_LOW, NotifSettings.NotifSettings.VOICE_ACTIVITY_DEFAULT];
-obj29[NotifTypes.NotifTypes.VOICE_CHANNEL_ACTIVITY_PEAK_AFFINITY] = items6;
-const items7 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
-obj29[NotifTypes.NotifTypes.MISSED_MESSAGE_PUSH] = items7;
+const items6 = [NotifSettings.NotifSettings.MISSED_MESSAGES_LOW, NotifSettings.NotifSettings.MISSED_MESSAGES_DEFAULT];
+obj29[NotifTypes.NotifTypes.MISSED_MESSAGE_PUSH] = items6;
+const items7 = [NotifSettings.NotifSettings.GAMING_LOW, NotifSettings.NotifSettings.GAMING_DEFAULT];
+obj29[NotifTypes.NotifTypes.FRIEND_GAMING_ACTIVITY_PUSH] = items7;
 const items8 = [NotifSettings.NotifSettings.GAMING_LOW, NotifSettings.NotifSettings.GAMING_DEFAULT];
-obj29[NotifTypes.NotifTypes.FRIEND_GAMING_ACTIVITY_PUSH] = items8;
+obj29[NotifTypes.NotifTypes.FRIENDS_PLAYING_GAME] = items8;
 const items9 = [NotifSettings.NotifSettings.GAMING_LOW, NotifSettings.NotifSettings.GAMING_DEFAULT];
-obj29[NotifTypes.NotifTypes.FRIENDS_PLAYING_GAME] = items9;
-const items10 = [NotifSettings.NotifSettings.GAMING_LOW, NotifSettings.NotifSettings.GAMING_DEFAULT];
-obj29[NotifTypes.NotifTypes.FRIENDS_PLAYING_TRENDING_GAME] = items10;
-const items11 = [NotifSettings.NotifSettings.SYSTEM];
-obj29[NotifTypes.NotifTypes.PARENTAL_CONSENT_FINAL_WARNING] = items11;
+obj29[NotifTypes.NotifTypes.FRIENDS_PLAYING_TRENDING_GAME] = items9;
+const items10 = [NotifSettings.NotifSettings.SYSTEM];
+obj29[NotifTypes.NotifTypes.PARENTAL_CONSENT_FINAL_WARNING] = items10;
+const items11 = [NotifSettings.NotifSettings.FRIEND_ACTIVITY_LOW, NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT];
+obj29[NotifTypes.NotifTypes.CUSTOM_STATUS_UPDATE] = items11;
 const items12 = [NotifSettings.NotifSettings.FRIEND_ACTIVITY_LOW, NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT];
-obj29[NotifTypes.NotifTypes.CUSTOM_STATUS_UPDATE] = items12;
-const items13 = [NotifSettings.NotifSettings.FRIEND_ACTIVITY_LOW, NotifSettings.NotifSettings.FRIEND_ACTIVITY_DEFAULT];
-obj29[NotifTypes.NotifTypes.PROFILE_UPDATES_NOTIFICATION] = items13;
+obj29[NotifTypes.NotifTypes.PROFILE_UPDATES_NOTIFICATION] = items12;
 const result = size.fileFinishedImporting("modules/notifications/NotificationSettingsConstants.tsx");
 
 export const NOTIF_CATEGORIES = items;

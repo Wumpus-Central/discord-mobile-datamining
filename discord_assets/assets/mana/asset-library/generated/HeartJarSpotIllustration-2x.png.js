@@ -1,9 +1,9 @@
-// === Module 6303: ? ===
+// === Module 6304: ? ===
 
-// Module 6303
+// Module 6304
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeartJarSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/de60cad3d73074018608b651067b9394f8994a4124c7da44bb8a0321ad09f681.png";
-export const metadata = { fileBytes: 34555 };
+export default "https://cdn.discordapp.com/assets/content/3c2459ea7aa433a4af63181bd32193fa11cb0a36ad50ad6cd9027a224c107fbf.png";
+export const metadata = { fileBytes: 34682 };

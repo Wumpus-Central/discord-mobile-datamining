@@ -602,6 +602,13 @@ function handleLoadSearchResults(data) {
   });
   return false;
 }
+function handleIntelligenceSearchFetchSuccess(messages) {
+  messages = messages.messages;
+  const item = messages.forEach((item) => {
+    mergeUsersFromMessage(item, true);
+  });
+  return false;
+}
 function handleLoadThreadsSuccess(arg0) {
   ({ firstMessages, owners } = arg0);
   if (null != firstMessages) {
@@ -723,7 +730,7 @@ function handlePresenceUpdates(updates) {
     if (null == closure_11[item.user.id]) {
       return false;
     } else {
-      const reduced = closure_43.reduce((acc, item) => {
+      const reduced = closure_44.reduce((acc, item) => {
         const user = item.user;
         let tmp2 = acc;
         if (user.hasOwnProperty(item)) {
@@ -1134,7 +1141,7 @@ let closure_10 = fn(1374).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let users = {};
 let closure_12 = 0;
 let c13 = "47835198259242069";
-let closure_43 = ["username", "avatar", "global_name", "discriminator", "bot", "primary_guild"];
+let closure_44 = ["username", "avatar", "global_name", "discriminator", "bot", "primary_guild"];
 let UserStore;
 class UserStore extends tmp2 {
   constructor() {
@@ -1153,6 +1160,7 @@ class UserStore extends tmp2 {
       CURRENT_USER_UPDATE: handleCurrentUserUpdate,
       PRESENCE_UPDATES: handlePresenceUpdates,
       SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
+      INTELLIGENCE_SEARCH_FETCH_SUCCESS: handleIntelligenceSearchFetchSuccess,
       MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
       LOAD_MESSAGES_SUCCESS: handleLoadMessages,
       LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
@@ -1211,7 +1219,7 @@ class UserStore extends tmp2 {
       CLOSE_AGE_VERIFICATION_MODAL: handleCloseAgeVerificationModal,
       INTERACTION_MODAL_CREATE: handleInteractionModalCreate
     };
-    tmp1 = new tmp(obj, handleCloseAgeVerificationModal, new.target, tmp);
+    tmp1 = new tmp(obj, handleIntelligenceSearchFetchSuccess, handleCloseAgeVerificationModal, new.target);
     closure_0 = tmp1;
     return tmp1;
   }

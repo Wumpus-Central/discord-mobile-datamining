@@ -1,9 +1,9 @@
-// === Module 6317: ? ===
+// === Module 6318: ? ===
 
-// Module 6317
+// Module 6318
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/InkQuillSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/4bc8046cd046f621e9950ca291431bb8848f637972dd1346b4521693ff1062b4.png";
-export const metadata = { fileBytes: 38446 };
+export default "https://cdn.discordapp.com/assets/content/20231538331f666d04da61faa90b5a4b1b774c1b807561e122c00b1cfbc62084.png";
+export const metadata = { fileBytes: 39023 };

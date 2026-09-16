@@ -1,7 +1,7 @@
-// === Module 13523: useNextTenureBadge ===
+// === Module 13534: useNextTenureBadge ===
 
-// Module 13523 (useNextTenureBadge)
-import useTenureBadging from "useTenureBadging" /* 11323 */;
+// Module 13534 (useNextTenureBadge)
+import useTenureBadging from "useTenureBadging" /* 11337 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import size from "module_2" /* 2 */;
 

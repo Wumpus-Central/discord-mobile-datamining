@@ -1,24 +1,24 @@
-// === Module 13554: PremiumBogoPromotionUtilsCommon ===
+// === Module 13566: PremiumBogoPromotionUtilsCommon ===
 
-// Module 13554 (PremiumBogoPromotionUtilsCommon)
+// Module 13566 (PremiumBogoPromotionUtilsCommon)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import _modDef4231 from "module_4231" /* 4231 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 4880 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7524 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7554 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8168 */;
-import PromotionsHooks from "PromotionsHooks" /* 13555 */;
-import BogoPromotionExperiment from "BogoPromotionExperiment" /* 13556 */;
-import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13557 */;
-import BOGOPromotionMarketingMaterialsExperiments from "BOGOPromotionMarketingMaterialsExperiments" /* 13558 */;
+import _modDef4229 from "module_4229" /* 4229 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4295 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 4879 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7527 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7557 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8177 */;
+import PromotionsHooks from "PromotionsHooks" /* 13567 */;
+import BogoPromotionExperiment from "BogoPromotionExperiment" /* 13568 */;
+import useScheduledForcedUpdateDefault from "useScheduledForcedUpdate" /* 13569 */;
+import BOGOPromotionMarketingMaterialsExperiments from "BOGOPromotionMarketingMaterialsExperiments" /* 13570 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
-import UserOfferStore from "UserOfferStore" /* 7557 */;
-import EntitlementStore from "EntitlementStore" /* 7501 */;
-import PromotionsStore from "PromotionsStore" /* 10798 */;
+import SubscriptionStore from "SubscriptionStore" /* 4301 */;
+import UserOfferStore from "UserOfferStore" /* 7560 */;
+import EntitlementStore from "EntitlementStore" /* 7504 */;
+import PromotionsStore from "PromotionsStore" /* 10806 */;
 
 require = fn;
 function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
@@ -29,11 +29,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt = mostRecentSubscription.endedAt;
         if (null != endedAt) {
           if (mostRecentSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
-            const obj = _modDef4231();
+            const obj = _modDef4229();
             if (subtractResult.isBefore(endedAt)) {
               return false;
             }
-            subtractResult = _modDef4231().subtract(10, "days");
+            subtractResult = _modDef4229().subtract(10, "days");
           }
         }
       }
@@ -43,11 +43,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt2 = previousPremiumSubscription.endedAt;
         if (null != endedAt2) {
           if (previousPremiumSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
-            const obj3 = _modDef4231();
+            const obj3 = _modDef4229();
             if (subtractResult1.isBefore(endedAt2)) {
               return false;
             }
-            subtractResult1 = _modDef4231().subtract(10, "days");
+            subtractResult1 = _modDef4229().subtract(10, "days");
           }
         }
       }

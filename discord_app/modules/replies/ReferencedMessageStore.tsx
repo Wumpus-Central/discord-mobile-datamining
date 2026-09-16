@@ -1,15 +1,15 @@
-// === Module 7700: ReferencedMessageStore ===
+// === Module 7703: ReferencedMessageStore ===
 
-// Module 7700 (ReferencedMessageStore)
+// Module 7703 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1438 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4862 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7705 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4861 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7708 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ConversationsStore from "ConversationsStore" /* 7701 */;
+import ConversationsStore from "ConversationsStore" /* 7704 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4860 */;
+import MessageStore from "MessageStore" /* 4859 */;
 
 require = fn;
 function processMessage(message) {
@@ -61,9 +61,9 @@ function processMessage(message) {
   }
   return flag2;
 }
-function anyChanged(data, fn) {
+function anyChanged(messages, fn) {
   let flag = false;
-  const iter = data[Symbol.iterator]();
+  const iter = messages[Symbol.iterator]();
   while (iter !== undefined) {
     let tmp = false !== fn(iter.next()) || flag;
     flag = tmp;
@@ -301,6 +301,9 @@ const referencedMessageStore = new ReferencedMessageStore(DispatcherDefault, {
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
   SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
+  INTELLIGENCE_SEARCH_FETCH_SUCCESS: function handleIntelligenceSearchFetchSuccess(messages) {
+    return anyChanged(messages.messages, (first_message) => processMessage(first_message));
+  },
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(messages) {
     messages = messages.messages;

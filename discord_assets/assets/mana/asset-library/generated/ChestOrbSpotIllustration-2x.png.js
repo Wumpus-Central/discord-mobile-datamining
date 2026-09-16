@@ -1,9 +1,9 @@
-// === Module 5951: ? ===
+// === Module 5952: ? ===
 
-// Module 5951
+// Module 5952
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChestOrbSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/b8fbdaf8bf85f4a099cc9a7bc1d4764be15812956d8e3b016671731882905443.png";
-export const metadata = { fileBytes: 119069 };
+export default "https://cdn.discordapp.com/assets/content/b0f7202657c8bb28f3a774221b6215e47529eb4e51bdd5197b4a5c4c59cd8744.png";
+export const metadata = { fileBytes: 119323 };

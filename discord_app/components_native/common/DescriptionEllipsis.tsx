@@ -1,13 +1,13 @@
-// === Module 12539: DescriptionEllipsis ===
+// === Module 12547: DescriptionEllipsis ===
 
-// Module 12539 (DescriptionEllipsis)
+// Module 12547 (DescriptionEllipsis)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_1, jsxs: c2 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { topicEllipsis: null, topicEllipsisDot: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", flexDirection: "row", borderRadius: nativeDefault.radii.xs, marginTop: 4, height: 12, width: 24 };
 obj2.topicEllipsis = size;

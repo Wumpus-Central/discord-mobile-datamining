@@ -1,9 +1,9 @@
-// === Module 6465: ? ===
+// === Module 6468: ? ===
 
-// Module 6465
+// Module 6468
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PrivacyShieldBannerSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/5c86bf3bd12b6c28c23a329ea71a9a27d94601393b701de5fcf0ebcedd41415e.png";
-export const metadata = { fileBytes: 64353 };
+export default "https://cdn.discordapp.com/assets/content/c8d8d639692498b0d32549f4e996ea1d3667d3968b59df97c5bd34480d59e7b3.png";
+export const metadata = { fileBytes: 64167 };

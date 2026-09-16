@@ -1,8 +1,8 @@
-// === Module 16742: VibegrationsClarificationCard ===
+// === Module 16778: VibegrationsClarificationCard ===
 
-// Module 16742 (VibegrationsClarificationCard)
+// Module 16778 (VibegrationsClarificationCard)
 import nativeDefault from "native" /* 576 */;
-import VibegrationsClarification from "VibegrationsClarification" /* 16743 */;
+import VibegrationsClarification from "VibegrationsClarification" /* 16779 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,14 +10,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, optionHeader: null, footer: null, customField: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.optionHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.footer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
-obj2.customField = { flex: 1, minHeight: 36, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round };
+obj2.customField = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsClarificationCard.tsx");
@@ -99,9 +98,9 @@ export default function VibegrationsClarificationCard(clarification) {
     let intl = clarification(1115).intl;
     const obj4 = { index: bound + 1, total: length };
     obj3.children = intl.formatToPlainString(onSubmit(3591)["7bypa+"], obj4);
-    tmp14 = closure_6(clarification(4635).Text, obj3);
+    tmp14 = closure_6(clarification(4634).Text, obj3);
   }
-  const items4 = [tmp14, closure_6(clarification(4635).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
+  const items4 = [tmp14, closure_6(clarification(4634).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
   const options = tmp8.options;
   items4[2] = options.map((answer) => {
     closure_0 = answer;
@@ -152,16 +151,17 @@ export default function VibegrationsClarificationCard(clarification) {
       let intl2 = tmp20(1115).intl;
       obj7.text = intl2.string(onSubmit(3591).yKdgqw);
       obj7.onPress = callback1;
-      tmp19Result = tmp19(tmp20(5059).Button, obj7);
+      tmp19Result = tmp19(tmp20(5060).Button, obj7);
     }
   }
   const items5 = [tmp19Result, ];
-  const obj8 = { style: tmp.customField, children: null };
-  const obj9 = { size: "md", isCentered: false, placeholder: null, value: null, onChange: null, onSubmitEditing: null, returnKeyType: "send" };
+  const obj8 = { size: "md", containerStyle: tmp.customField, placeholder: null, accessibilityLabel: null, value: null, onChange: null, onSubmitEditing: null, returnKeyType: "send" };
   const intl3 = tmp20(1115).intl;
-  obj9.placeholder = intl3.string(onSubmit(3591).qifsdL);
-  obj9.value = str;
-  obj9.onChange = function onChange(arg0) {
+  obj8.placeholder = intl3.string(onSubmit(3591).qifsdL);
+  const intl4 = tmp20(1115).intl;
+  obj8.accessibilityLabel = intl4.formatToPlainString(onSubmit(3591).XHESTL, { question: clarification.questions[bound].question });
+  obj8.value = str;
+  obj8.onChange = function onChange(arg0) {
     closure_0 = arg0;
     return closure_5((arg0) => {
       const obj = {};
@@ -170,9 +170,8 @@ export default function VibegrationsClarificationCard(clarification) {
       return obj;
     });
   };
-  obj9.onSubmitEditing = callback2;
-  obj8.children = closure_6(clarification(14268).GhostInput, obj9);
-  items5[1] = closure_6(closure_5, obj8);
+  obj8.onSubmitEditing = callback2;
+  items5[1] = closure_6(clarification(6714).TextInput, obj8);
   obj6.children = items5;
   items4[3] = closure_7(closure_5, obj6);
   obj2.children = items4;

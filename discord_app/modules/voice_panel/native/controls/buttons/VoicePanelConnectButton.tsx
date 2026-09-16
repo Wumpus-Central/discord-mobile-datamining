@@ -1,15 +1,15 @@
-// === Module 17335: VoicePanelConnectButton ===
+// === Module 17391: VoicePanelConnectButton ===
 
-// Module 17335 (VoicePanelConnectButton)
+// Module 17391 (VoicePanelConnectButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import useAlertStore from "useAlertStore" /* 4985 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5496 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 13069 */;
-import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17336 */;
-import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17339 */;
-import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17340 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import useAlertStore from "useAlertStore" /* 4984 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5497 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 13077 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17392 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17395 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17396 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -21,7 +21,7 @@ const VoicePanelNsfwAlertDefault = VoicePanelNsfwAlert;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { connectButton: { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360, paddingLeft: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8 }, connectText: { textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

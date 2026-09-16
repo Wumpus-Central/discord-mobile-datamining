@@ -1,9 +1,9 @@
-// === Module 5939: ? ===
+// === Module 5940: ? ===
 
-// Module 5939
+// Module 5940
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChairIllocon-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/5bad123b0ca0d675ccf2992bff1ac1b773579b7b4059407a4eb44d65e3103deb.png";
-export const metadata = { fileBytes: 1004 };
+export default "https://cdn.discordapp.com/assets/content/40168e029d6bc6464dc1ea1cbb0369a12efabfe3c9fcab3371922cf1163757ab.png";
+export const metadata = { fileBytes: 1009 };

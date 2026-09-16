@@ -1,6 +1,6 @@
-// === Module 5548: EmojiPickerConstants ===
+// === Module 5549: EmojiPickerConstants ===
 
-// Module 5548 (EmojiPickerConstants)
+// Module 5549 (EmojiPickerConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_picker/EmojiPickerConstants.tsx");

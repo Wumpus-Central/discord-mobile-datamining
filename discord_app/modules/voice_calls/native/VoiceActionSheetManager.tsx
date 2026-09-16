@@ -1,9 +1,9 @@
-// === Module 13860: VoiceActionSheetManager ===
+// === Module 13873: VoiceActionSheetManager ===
 
-// Module 13860 (VoiceActionSheetManager)
+// Module 13873 (VoiceActionSheetManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import VoiceStateStore from "VoiceStateStore" /* 4658 */;
+import VoiceStateStore from "VoiceStateStore" /* 4657 */;
 import LifecycleManager from "LifecycleManager" /* 1899 */;
 
 let require = fn;
@@ -16,9 +16,9 @@ class VoiceActionSheetManager extends tmp2 {
       const channel = applyArgumentsResult.channel;
       if (null != channel) {
         DispatcherDefault.wait(() => {
-          const result = applyArgumentsResult(4846).dismissVoiceChannelScreens(channel);
-          const obj = applyArgumentsResult(4846);
-          applyArgumentsResult(4846).openChannelCallModal(channel);
+          const result = applyArgumentsResult(4845).dismissVoiceChannelScreens(channel);
+          const obj = applyArgumentsResult(4845);
+          applyArgumentsResult(4845).openChannelCallModal(channel);
         });
         applyArgumentsResult.terminate();
       }

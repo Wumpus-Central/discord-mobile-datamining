@@ -1,6 +1,6 @@
-// === Module 8337: useNameplate ===
+// === Module 8346: useNameplate ===
 
-// Module 8337 (useNameplate)
+// Module 8346 (useNameplate)
 import utils from "utils" /* 1887 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;

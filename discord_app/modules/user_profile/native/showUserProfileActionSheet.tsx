@@ -1,12 +1,12 @@
-// === Module 8299: showUserProfileActionSheet ===
+// === Module 8308: showUserProfileActionSheet ===
 
-// Module 8299 (showUserProfileActionSheet)
+// Module 8308 (showUserProfileActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 
 require = fn;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
@@ -16,7 +16,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = RelationshipStore.isBlocked(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      const tmp8 = asyncRequireImpl(8302, dependencyMap.paths);
+      const tmp8 = asyncRequireImpl(8311, dependencyMap.paths);
       const obj = ActionSheetActionCreatorsDefault;
       const _HermesInternal = HermesInternal;
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
@@ -32,7 +32,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
     }
     isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
   }
-  const tmp20 = asyncRequireImpl(8320, dependencyMap.paths);
+  const tmp20 = asyncRequireImpl(8329, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   const obj4 = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
@@ -42,7 +42,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   }
   ActionSheetActionCreatorsDefault.openLazy(tmp20, combined1, obj4, str);
 }
-fn(5643).addPostConnectionCallback;
+fn(5644).addPostConnectionCallback;
 let closure_6 = new LoggerDefault("showUserProfileActionSheet");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");

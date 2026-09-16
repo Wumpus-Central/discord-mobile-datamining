@@ -1,10 +1,10 @@
-// === Module 7746: NotificationCenterUtils ===
+// === Module 7749: NotificationCenterUtils ===
 
-// Module 7746 (NotificationCenterUtils)
+// Module 7749 (NotificationCenterUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7745 */;
-import notification_center_getTimestampString from "notification_center/getTimestampString" /* 7747 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7748 */;
+import notification_center_getTimestampString from "notification_center/getTimestampString" /* 7750 */;
 import size from "module_2" /* 2 */;
 
 const notification_center_getTimestampStringDefault = notification_center_getTimestampString;

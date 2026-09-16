@@ -1,8 +1,8 @@
-// === Module 13112: MediaModalYoutube ===
+// === Module 13120: MediaModalYoutube ===
 
-// Module 13112 (MediaModalYoutube)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8382 */;
-import MediaModalWebView from "MediaModalWebView" /* 8418 */;
+// Module 13120 (MediaModalYoutube)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8391 */;
+import MediaModalWebView from "MediaModalWebView" /* 8427 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,16 +21,16 @@ export default noop.memo((visible) => {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   noop = undefined;
-  [playerState, dependencyMap] = noop.useState(visible(8418).PlayerState.UNREADY);
+  [playerState, dependencyMap] = noop.useState(visible(8427).PlayerState.UNREADY);
   const tmp6 = _slicedToArray(noop.useState(undefined), 2);
   _slicedToArray = tmp6[1];
-  const tmp8 = playerState(8393)(playerState);
+  const tmp8 = playerState(8402)(playerState);
   noop = tmp8;
-  const tmp9 = playerState(8393)(visible);
+  const tmp9 = playerState(8402)(visible);
   closure_5 = tmp9;
   const ref = noop.useRef(null);
   const effect = noop.useEffect(() => {
-    const MediaViewerAnalytics = visible(8382).MediaViewerAnalytics;
+    const MediaViewerAnalytics = visible(8391).MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted({ platform: "youtube", action: "attempted" });
   }, []);
   const items = [ref, visible, tmp9, tmp8, playerState];
@@ -121,18 +121,18 @@ export default noop.memo((visible) => {
       }
     }
   }, items);
-  let youtubeVideoIdFromURI = visible(8386).getYoutubeVideoIdFromURI(source.uri);
+  let youtubeVideoIdFromURI = visible(8395).getYoutubeVideoIdFromURI(source.uri);
   if (youtubeVideoIdFromURI == null) {
-    youtubeVideoIdFromURI = tmp2(8386).getYoutubeClipVideoIdFromURI(source.uri);
-    const tmp2Result = tmp2(8386);
+    youtubeVideoIdFromURI = tmp2(8395).getYoutubeClipVideoIdFromURI(source.uri);
+    const tmp2Result = tmp2(8395);
   }
   if (null == youtubeVideoIdFromURI) {
     return null;
   } else {
-    if (playerState === tmp2(8418).PlayerState.ERRORED) {
+    if (playerState === tmp2(8427).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp6[0]) {
         let obj2 = { videoId: youtubeVideoIdFromURI.videoId };
-        return ref(tmp7(13113), obj2);
+        return ref(tmp7(13121), obj2);
       }
     }
     let tmp15 = tmp2(1364).isAndroid() ? { nestedScrollEnabled: true, overScrollMode: "never", domStorageEnabled: true, mixedContentMode: "compatibility" } : {};
@@ -165,7 +165,7 @@ export default noop.memo((visible) => {
     obj3.onDataReceived = callback;
     const merged1 = Object.assign(tmp15);
     const merged2 = Object.assign(merged);
-    return tmp16(tmp7(8418), obj3, youtubeVideoIdFromURI.videoId);
+    return tmp16(tmp7(8427), obj3, youtubeVideoIdFromURI.videoId);
   }
-  let obj = visible(8386);
+  let obj = visible(8395);
 });

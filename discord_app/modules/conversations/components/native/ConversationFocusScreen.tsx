@@ -1,19 +1,19 @@
-// === Module 13387: ConversationFocusScreen ===
+// === Module 13398: ConversationFocusScreen ===
 
-// Module 13387 (ConversationFocusScreen)
+// Module 13398 (ConversationFocusScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8016 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8030 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8025 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8039 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7701 */;
+import ConversationsStore from "ConversationsStore" /* 7704 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, pendingContent: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.pendingContent = { flex: 1, paddingVertical: nativeDefault.space.PX_24, alignItems: "center", gap: nativeDefault.space.PX_32, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

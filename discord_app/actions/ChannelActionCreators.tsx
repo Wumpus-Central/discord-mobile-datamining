@@ -1,21 +1,21 @@
-// === Module 4652: ChannelActionCreators ===
+// === Module 4651: ChannelActionCreators ===
 
-// Module 4652 (ChannelActionCreators)
+// Module 4651 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import shared from "shared" /* 4491 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import transitionToChannel from "transitionToChannel" /* 4650 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5496 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8495 */;
+import shared from "shared" /* 4489 */;
+import RootNavigationRef from "RootNavigationRef" /* 4496 */;
+import transitionToChannel from "transitionToChannel" /* 4649 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5497 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 4653 */;
+import ChangelogStore from "ChangelogStore" /* 4652 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ReadStateStore from "ReadStateStore" /* 4654 */;
+import ReadStateStore from "ReadStateStore" /* 4653 */;
 
 const require = globalThis.__r;
 
@@ -518,8 +518,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7430).checkGuildTemplateDirty(closure_128_2);
-        name(7430);
+        const result = name(7433).checkGuildTemplateDirty(closure_128_2);
+        name(7433);
       }
       return closure_128_1;
     })();

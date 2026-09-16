@@ -1,14 +1,14 @@
-// === Module 9897: EditGuildEventStepHeader ===
+// === Module 9905: EditGuildEventStepHeader ===
 
-// Module 9897 (EditGuildEventStepHeader)
-import Text_Text from "Text/Text" /* 4635 */;
+// Module 9905 (EditGuildEventStepHeader)
+import Text_Text from "Text/Text" /* 4634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_5 = createStyles.createStyles({ header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 8, marginBottom: 8 }, headerSubtitle: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventStepHeader.tsx");

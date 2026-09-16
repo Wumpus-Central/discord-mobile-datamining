@@ -1,6 +1,6 @@
-// === Module 17904: useTrialActiveUserLimitOptions ===
+// === Module 17960: useTrialActiveUserLimitOptions ===
 
-// Module 17904 (useTrialActiveUserLimitOptions)
+// Module 17960 (useTrialActiveUserLimitOptions)
 import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 6665: ? ===
+// === Module 6668: ? ===
 
-// Module 6665
+// Module 6668
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VoiceChannelsAbstractUI-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/5f8d817a844cb7e0ff7cc4fb46a849cbd9e86840e5c219f99bd9239a727ab76b.png";
-export const metadata = { fileBytes: 7120 };
+export default "https://cdn.discordapp.com/assets/content/f4ee60e782df3b2be967b1f243f13c3fe3dcc9b59467f9162dd4d70047c2b716.png";
+export const metadata = { fileBytes: 7106 };

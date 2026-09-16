@@ -1,21 +1,21 @@
-// === Module 17096: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 17152: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 17096 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 17152 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import LinkingDefault from "Linking" /* 4334 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8939 */;
-import PromoSheet from "PromoSheet" /* 10361 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 13092 */;
-import _modDef15938 from "module_15938" /* 15938 */;
-import _modDef15939 from "module_15939" /* 15939 */;
+import LinkingDefault from "Linking" /* 4332 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8950 */;
+import PromoSheet from "PromoSheet" /* 10369 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13100 */;
+import _modDef15958 from "module_15958" /* 15958 */;
+import _modDef15959 from "module_15959" /* 15959 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -29,7 +29,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     let obj2 = { source: null, style: null };
-    const obj3 = { uri: _modDef15938 };
+    const obj3 = { uri: _modDef15958 };
     obj2.source = obj3;
     const size = { width: v150, height: v150 };
     obj2.style = size;
@@ -38,16 +38,16 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj4 = { url: _modDef15939, style: null };
+      const obj4 = { url: _modDef15959, style: null };
       const size1 = { width: v150, height: v150 };
       obj4.style = size1;
-      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15939, style: null });
+      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef15959, style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
       const tmp4Result = APNGDecorationNativeComponentDefault;
     } else {
       const obj5 = { source: null, resizeMode: "contain", style: null };
-      const obj6 = { uri: _modDef15939 };
+      const obj6 = { uri: _modDef15959 };
       obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
       obj5.style = size2;

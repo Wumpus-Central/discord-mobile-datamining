@@ -1,7 +1,7 @@
-// === Module 8461: SpotifyConstants ===
+// === Module 8470: SpotifyConstants ===
 
-// Module 8461 (SpotifyConstants)
-import Platforms from "Platforms" /* 5368 */;
+// Module 8470 (SpotifyConstants)
+import Platforms from "Platforms" /* 5369 */;
 
 const spotify = "spotify";
 let c1 = "spotify:";

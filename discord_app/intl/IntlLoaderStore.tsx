@@ -3,9 +3,9 @@
 // Module 2027 (IntlLoaderStore)
 import util from "util" /* 1115 */;
 import _modDef2028 from "module_2028" /* 2028 */;
-import bg from "bg" /* 3723 */;
-import formatjs from "formatjs" /* 4198 */;
-import moment from "moment" /* 4229 */;
+import bg from "bg" /* 3721 */;
+import formatjs from "formatjs" /* 4196 */;
+import moment from "moment" /* 4227 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -343,7 +343,7 @@ const identity = fn(1243);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  return {
+  let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
     error: "accessible",
@@ -366,6 +366,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
+  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/IntlLoaderStore.tsx");

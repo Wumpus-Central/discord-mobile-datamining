@@ -1,9 +1,9 @@
-// === Module 6059: ? ===
+// === Module 6060: ? ===
 
-// Module 6059
+// Module 6060
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiSlotsAbstractUI-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/3be96ebd975842c29c3b262c5be56a8cf7fa5ed5b5652d1855ff464f7ed44435.png";
-export const metadata = { fileBytes: 68388 };
+export default "https://cdn.discordapp.com/assets/content/f075438fb06db72058719d403c37bd2e3091ac00497f9c78a4b82a033fa39b41.png";
+export const metadata = { fileBytes: 68539 };

@@ -1,10 +1,10 @@
-// === Module 4343: native ===
+// === Module 4341: native ===
 
-// Module 4343 (native)
-import getNodeText from "getNodeText" /* 4344 */;
-import mergeProps from "mergeProps" /* 4346 */;
-import useFocus from "useFocus" /* 4347 */;
-import themes from "themes" /* 4348 */;
+// Module 4341 (native)
+import getNodeText from "getNodeText" /* 4342 */;
+import mergeProps from "mergeProps" /* 4344 */;
+import useFocus from "useFocus" /* 4345 */;
+import themes from "themes" /* 4346 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/native.tsx");

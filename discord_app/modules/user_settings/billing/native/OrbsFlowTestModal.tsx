@@ -1,17 +1,17 @@
-// === Module 15796: OrbsFlowTestModal ===
+// === Module 15814: OrbsFlowTestModal ===
 
-// Module 15796 (OrbsFlowTestModal)
+// Module 15814 (OrbsFlowTestModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Stack_Stack from "Stack/Stack" /* 5057 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7088 */;
-import LayerScope from "LayerScope" /* 7263 */;
-import HeaderShared from "HeaderShared" /* 7969 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11061 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15797 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15799 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Stack_Stack from "Stack/Stack" /* 5058 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7091 */;
+import LayerScope from "LayerScope" /* 7266 */;
+import HeaderShared from "HeaderShared" /* 7978 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 11074 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15815 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -85,9 +85,9 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(8020);
+const NativeStackNavigator = fn(8029);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, title: null, balancePillContainer: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = { padding: nativeDefault.space.PX_16 };

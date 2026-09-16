@@ -1,9 +1,9 @@
-// === Module 8223: transformNativeMarkupMentionLink ===
+// === Module 8232: transformNativeMarkupMentionLink ===
 
-// Module 8223 (transformNativeMarkupMentionLink)
-import MarkupTypes from "MarkupTypes" /* 5080 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5090 */;
-import transformNativeMarkupMention from "transformNativeMarkupMention" /* 8222 */;
+// Module 8232 (transformNativeMarkupMentionLink)
+import MarkupTypes from "MarkupTypes" /* 5081 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5091 */;
+import transformNativeMarkupMention from "transformNativeMarkupMention" /* 8231 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMentionLink.tsx");

@@ -1,6 +1,6 @@
-// === Module 8416: resolveSelectedIndex ===
+// === Module 8425: resolveSelectedIndex ===
 
-// Module 8416 (resolveSelectedIndex)
+// Module 8425 (resolveSelectedIndex)
 import size from "module_2" /* 2 */;
 
 function resolveSelectedIndex(arg0) {

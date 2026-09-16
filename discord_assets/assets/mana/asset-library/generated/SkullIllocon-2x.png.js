@@ -1,9 +1,9 @@
-// === Module 6567: ? ===
+// === Module 6570: ? ===
 
-// Module 6567
+// Module 6570
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SkullIllocon-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/d5ae5e0f65b86c5790d407b1bccbe215d0b2e21ee99b070f1941f8dd02f36d24.png";
-export const metadata = { fileBytes: 745 };
+export default "https://cdn.discordapp.com/assets/content/77f783cde68b14e4a1fffd11ef4652340403c0346a29a389e7a64cf7c9c2738a.png";
+export const metadata = { fileBytes: 746 };

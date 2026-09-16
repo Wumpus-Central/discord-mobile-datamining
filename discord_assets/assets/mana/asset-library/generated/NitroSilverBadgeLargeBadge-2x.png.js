@@ -1,10 +1,10 @@
-// === Module 6399: ? ===
+// === Module 6402: ? ===
 
-// Module 6399
+// Module 6402
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroSilverBadgeLargeBadge-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/7e9ade8609b51b7b9c4c5bca6ef307a5a8246dd547f59c97e6f8b1089a5e213f.png";
+export default "https://cdn.discordapp.com/assets/content/478b2e23cf1505655dd899c195eaa084fdfd7c675485fb163d680ae1f7dea15e.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/NitroSilverBadgeLargeBadge-2x.png";
-export const metadata = { fileBytes: 17728 };
+export const metadata = { fileBytes: 17766 };

@@ -1,6 +1,6 @@
-// === Module 8933: constants ===
+// === Module 8944: constants ===
 
-// Module 8933 (constants)
+// Module 8944 (constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");

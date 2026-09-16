@@ -1,9 +1,9 @@
-// === Module 6431: ? ===
+// === Module 6434: ? ===
 
-// Module 6431
+// Module 6434
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusPinkSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/aa0f88710b3893a01e12c879f0b6f22eabcb82cf0208653a030af4bd28225391.png";
-export const metadata = { fileBytes: 74541 };
+export default "https://cdn.discordapp.com/assets/content/29e6f3cd1f19215ab7ad724b6be609cfe4adf718021a4bc8c329321c2366772a.png";
+export const metadata = { fileBytes: 75241 };

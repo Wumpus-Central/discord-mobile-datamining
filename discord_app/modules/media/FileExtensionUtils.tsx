@@ -1,6 +1,6 @@
-// === Module 5653: FileExtensionUtils ===
+// === Module 5654: FileExtensionUtils ===
 
-// Module 5653 (FileExtensionUtils)
+// Module 5654 (FileExtensionUtils)
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import size from "module_2" /* 2 */;
 

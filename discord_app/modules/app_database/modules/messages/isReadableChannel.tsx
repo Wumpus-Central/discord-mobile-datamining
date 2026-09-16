@@ -1,9 +1,9 @@
-// === Module 7591: isReadableChannel ===
+// === Module 7594: isReadableChannel ===
 
-// Module 7591 (isReadableChannel)
+// Module 7594 (isReadableChannel)
 import ChannelRecord from "ChannelRecord" /* 1962 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

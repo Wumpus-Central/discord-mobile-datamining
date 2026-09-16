@@ -1,9 +1,9 @@
-// === Module 6548: ServerIconUnderboxExample ===
+// === Module 6551: ServerIconUnderboxExample ===
 
-// Module 6548 (ServerIconUnderboxExample)
+// Module 6551 (ServerIconUnderboxExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6549 from "module_6549" /* 6549 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6552 from "module_6552" /* 6552 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerIconUnderboxExample = function ServerIconUnderboxExample(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6549 };
+  const obj2 = { uri: _modDef6552 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

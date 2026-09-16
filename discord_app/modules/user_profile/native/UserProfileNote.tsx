@@ -1,91 +1,60 @@
-// === Module 13187: UserProfileNote ===
+// === Module 13198: UserProfileNote ===
 
-// Module 13187 (UserProfileNote)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import openEditNoteModalDefault from "openEditNoteModal" /* 13192 */;
+// Module 13198 (UserProfileNote)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import openEditNoteModalDefault from "openEditNoteModal" /* 13201 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
-let closure_4 = createStyles.createStyles({ title: { justifyContent: "space-between" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileNote.tsx");
 
-export default function UserProfileNote(style) {
-  const userId = style.userId;
-  const onBack = style.onBack;
+export default function UserProfileNote(userId) {
+  userId = userId.userId;
+  const onBack = userId.onBack;
   let trackUserProfileAction;
-  const tmp = closure_4();
-  trackUserProfileAction = userId(trackUserProfileAction[3]).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const note = onBack(trackUserProfileAction[4])(userId).note;
-  let tmp6Result = null != note;
-  if (tmp6Result) {
-    tmp6Result = "" !== note;
+  trackUserProfileAction = userId(trackUserProfileAction[2]).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const note = onBack(trackUserProfileAction[3])(userId).note;
+  let tmp3 = null != note;
+  if (tmp3) {
+    tmp3 = "" !== note;
   }
-  if (tmp6Result) {
-    let PaperPlusIcon = tmp2(tmp3[5]).PaperIcon;
-  } else {
-    PaperPlusIcon = tmp2(tmp3[6]).PaperPlusIcon;
+  const obj2 = { label: null, subLabel: null, accessibilityHint: null, onPress: null, trailing: null, arrow: null, start: true, end: true };
+  const obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
+  const intl = tmp(tmp2[6]).intl;
+  obj3.children = intl.string(userId(trackUserProfileAction[6]).t["mQKv+v"]);
+  obj2.label = jsx(userId(trackUserProfileAction[5]).Text, { variant: "text-sm/semibold", color: "text-default", children: null });
+  let tmp5;
+  if (tmp3) {
+    tmp5 = note;
   }
-  const intl = tmp2(tmp3[8]).intl;
-  const string = intl.string;
-  const t = tmp2(tmp3[8]).t;
-  if (tmp6Result) {
+  obj2.subLabel = tmp5;
+  const intl2 = tmp(tmp2[6]).intl;
+  const string = intl2.string;
+  const t = tmp(tmp2[6]).t;
+  if (tmp3) {
     let stringResult = string(t["gs+qcM"]);
   } else {
     stringResult = string(t["1ZZtts"]);
   }
-  const obj2 = {
-    accessibilityRole: "button",
-    accessibilityHint: stringResult,
-    accessibilityLabel: note,
-    onPress() {
-      ActionSheetActionCreatorsDefault.hideActionSheet();
-      openEditNoteModalDefault({
-        userId,
-        onBack,
-        onSave() {
-          return trackUserProfileAction({ action: "SET_NOTE" });
-        }
-      });
-    },
-    activeOpacity: 0.8,
-    children: null
+  obj2.accessibilityHint = stringResult;
+  obj2.onPress = function onPress() {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
+    openEditNoteModalDefault({
+      userId,
+      onBack,
+      onSave() {
+        return trackUserProfileAction({ action: "SET_NOTE" });
+      }
+    });
   };
-  const obj3 = { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null };
-  const obj = userId(trackUserProfileAction[3]);
-  const intl2 = tmp2(tmp3[8]).intl;
-  obj3.title = intl2.string(userId(trackUserProfileAction[8]).t["mQKv+v"]);
-  const items = [tmp.title, ];
-  let obj4 = !tmp6Result;
-  if (!tmp6Result) {
-    obj4 = { marginBottom: 0 };
+  let tmp4Result;
+  if (!tmp3) {
+    const obj4 = { IconComponent: tmp(tmp2[9]).PaperPlusIcon };
+    tmp4Result = jsx(tmp(tmp2[4]).TableRow.Icon, { IconComponent: tmp(tmp2[9]).PaperPlusIcon });
   }
-  items[1] = obj4;
-  obj3.titleStyle = items;
-  obj3.titleIcon = <PaperPlusIcon size="xs" color="interactive-text-default" />;
-  if (tmp6Result) {
-    const obj5 = { variant: "text-md/normal", color: "text-default", children: note };
-    tmp6Result = jsx(tmp2(tmp3[12]).Text, { variant: "text-md/normal", color: "text-default", children: note });
-  }
-  obj3.children = tmp6Result;
-  obj2.children = jsx(onBack(trackUserProfileAction[11]), { style: style.style, title: null, titleStyle: null, titleIcon: null, children: null });
-  return jsx(userId(trackUserProfileAction[7]).PressableOpacity, {
-    accessibilityRole: "button",
-    accessibilityHint: stringResult,
-    accessibilityLabel: note,
-    onPress() {
-      ActionSheetActionCreatorsDefault.hideActionSheet();
-      openEditNoteModalDefault({
-        userId,
-        onBack,
-        onSave() {
-          return trackUserProfileAction({ action: "SET_NOTE" });
-        }
-      });
-    },
-    activeOpacity: 0.8,
-    children: null
-  });
+  obj2.trailing = tmp4Result;
+  obj2.arrow = tmp3;
+  return jsx(userId(trackUserProfileAction[4]).TableRow, { label: null, subLabel: null, accessibilityHint: null, onPress: null, trailing: null, arrow: null, start: true, end: true });
 };

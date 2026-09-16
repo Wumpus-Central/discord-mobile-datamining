@@ -1,8 +1,8 @@
-// === Module 12768: useJoinRequestButtonActions ===
+// === Module 12776: useJoinRequestButtonActions ===
 
-// Module 12768 (useJoinRequestButtonActions)
+// Module 12776 (useJoinRequestButtonActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -222,7 +222,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             const intl = tmp4(tmp44[7]).intl;
             obj10.content = intl.string(tmp4(tmp44[7]).t.WXHcq5);
             obj10.icon = function icon() {
-              return closure_1_8(closure_1_0(4599).CircleCheckIcon, { color: closure_1_1(576).colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: closure_1_1(576).colors.STATUS_POSITIVE_TEXT });
+              return closure_1_8(closure_1_0(4597).CircleCheckIcon, { color: closure_1_1(576).colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: closure_1_1(576).colors.STATUS_POSITIVE_TEXT });
             };
             tmp42(tmp44[6]).open(obj10);
             c3 = 1;
@@ -265,8 +265,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(12769, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(12769, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(12777, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(12777, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

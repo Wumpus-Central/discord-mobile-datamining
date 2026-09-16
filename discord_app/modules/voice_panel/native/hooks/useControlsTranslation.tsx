@@ -1,14 +1,14 @@
-// === Module 17329: useControlsTranslation ===
+// === Module 17385: useControlsTranslation ===
 
-// Module 17329 (useControlsTranslation)
-import spring from "spring" /* 5058 */;
+// Module 17385 (useControlsTranslation)
+import spring from "spring" /* 5059 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(12407).MODE_CHANGE_PHYSICS;
-const CALL_TILE_GUTTER = fn(12410).CALL_TILE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(12415).MODE_CHANGE_PHYSICS;
+const CALL_TILE_GUTTER = fn(12418).CALL_TILE_GUTTER;
 const __initData = { code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useControlsTranslation.tsx");

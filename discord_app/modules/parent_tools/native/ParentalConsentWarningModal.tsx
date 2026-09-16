@@ -1,25 +1,25 @@
-// === Module 17615: ParentalConsentWarningModal ===
+// === Module 17671: ParentalConsentWarningModal ===
 
-// Module 17615 (ParentalConsentWarningModal)
+// Module 17671 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 4845 */;
-import openUserSettings from "openUserSettings" /* 7489 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7646 */;
+import RootNavigationRef from "RootNavigationRef" /* 4496 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 4844 */;
+import openUserSettings from "openUserSettings" /* 7492 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7649 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7645);
+const FamilyCenterConstants = fn(7648);
 ({ FamilyCenterSubPages: metroRequire, UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const modal = "modal";
 let closure_15 = fn(1944).DismissibleContent.PARENTAL_CONSENT_GRACE_WARNING;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, illustration: null, title: null, body: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.illustration = { alignItems: "center", paddingTop: nativeDefault.space.PX_12 };
@@ -98,7 +98,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       ModalDispatchQueueDefault.enqueue(() => daysRemaining(callback[10]).openUserSettings({ screen: constants3.FAMILY_CENTER }));
       const tmp2Result3 = ModalDispatchQueueDefault;
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17616, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17672, dependencyMap.paths));
       const tmp2Result4 = ModalActionCreatorsDefault;
     }
   }, items2);

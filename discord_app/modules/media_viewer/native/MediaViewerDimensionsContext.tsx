@@ -1,6 +1,6 @@
-// === Module 8414: MediaViewerDimensionsContext ===
+// === Module 8423: MediaViewerDimensionsContext ===
 
-// Module 8414 (MediaViewerDimensionsContext)
+// Module 8423 (MediaViewerDimensionsContext)
 import _modDef38 from "module_38" /* 38 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 16720: VibegrationsTemplates ===
+// === Module 16742: VibegrationsTemplates ===
 
-// Module 16720 (VibegrationsTemplates)
+// Module 16742 (VibegrationsTemplates)
 import util from "util" /* 1115 */;
 import _modDef3591 from "module_3591" /* 3591 */;
 import size from "module_2" /* 2 */;

@@ -1,7 +1,7 @@
-// === Module 8084: useUserCommunicationDisabled ===
+// === Module 8093: useUserCommunicationDisabled ===
 
-// Module 8084 (useUserCommunicationDisabled)
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4266 */;
+// Module 8093 (useUserCommunicationDisabled)
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4264 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -68,7 +68,7 @@ export const useCurrentUserCommunicationDisabled = function useCurrentUserCommun
   }
   const items3 = [prop, ];
   const tmpResult = id(504);
-  items3[1] = id(4266).isMemberCommunicationDisabled(stateFromStores1);
+  items3[1] = id(4264).isMemberCommunicationDisabled(stateFromStores1);
   return items3;
 };
 export const userCommunicationDisabled = function userCommunicationDisabled(id, guildId) {

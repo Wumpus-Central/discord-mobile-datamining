@@ -1,9 +1,9 @@
-// === Module 16344: FavoritesGuildCoachmarkMenuItem ===
+// === Module 16364: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 16344 (FavoritesGuildCoachmarkMenuItem)
+// Module 16364 (FavoritesGuildCoachmarkMenuItem)
 import util from "util" /* 1115 */;
 import _modDef3237 from "module_3237" /* 3237 */;
-import LayerScope from "LayerScope" /* 7263 */;
+import LayerScope from "LayerScope" /* 7266 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
 
@@ -30,7 +30,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "DESKTOP", onButtonPress: "M7 2v1h2V2H7ZM9 1v1h4V1H9ZM13 2v1h1V2h-1ZM14 3v1h1V3h-1ZM15 4v5h1V4h-1ZM14 9v2h1V9h-1ZM13 11v1h1v-1h-1ZM11 12v1h2v-1h-2ZM9 13v1h2v-1H9ZM7 14v1h2v-1H7Z" };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "M13 3v1h1V3h-1ZM2 3v1h1V3H2ZM3 4v1h1V4H3ZM1 4v2h1V4H1Z", onButtonPress: null };
     const intl = util.intl;
     const tmp4 = _modDef3237;
     if (stateFromStores) {

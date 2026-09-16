@@ -1,8 +1,8 @@
-// === Module 17114: updateTheme ===
+// === Module 17170: updateTheme ===
 
-// Module 17114 (updateTheme)
+// Module 17170 (updateTheme)
 import _mod17 from "module_17" /* 17 */;
-import NativeThemeModuleDefault from "NativeThemeModule" /* 14537 */;
+import NativeThemeModuleDefault from "NativeThemeModule" /* 14555 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

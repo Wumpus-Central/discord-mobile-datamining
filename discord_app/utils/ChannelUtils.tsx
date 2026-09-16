@@ -1,22 +1,22 @@
-// === Module 4784: ChannelUtils ===
+// === Module 4783: ChannelUtils ===
 
-// Module 4784 (ChannelUtils)
+// Module 4783 (ChannelUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import util from "util" /* 1115 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import Server from "Server" /* 1895 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4283 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import ChannelListUtils from "ChannelListUtils" /* 4785 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4786 */;
-import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4794 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4281 */;
+import UserUtilsDefault from "UserUtils" /* 4482 */;
+import ChannelListUtils from "ChannelListUtils" /* 4784 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4785 */;
+import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4793 */;
 import ChannelRecord from "ChannelRecord" /* 1962 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4663 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4662 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 16986: guild_automod/PermissionUtils ===
+// === Module 17043: guild_automod/PermissionUtils ===
 
-// Module 16986 (guild_automod/PermissionUtils)
+// Module 17043 (guild_automod/PermissionUtils)
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 
 const require = globalThis.__r;
 

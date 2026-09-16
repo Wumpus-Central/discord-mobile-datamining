@@ -1,23 +1,23 @@
-// === Module 13407: ChannelHeaderShared ===
+// === Module 13418: ChannelHeaderShared ===
 
-// Module 13407 (ChannelHeaderShared)
+// Module 13418 (ChannelHeaderShared)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useToken from "useToken" /* 4341 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import useChannelName from "useChannelName" /* 4792 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5112 */;
-import Pressables from "Pressables" /* 5207 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7087 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11032 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11046 */;
-import _modDef13408 from "module_13408" /* 13408 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13409 */;
+import useToken from "useToken" /* 4339 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import useChannelName from "useChannelName" /* 4791 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5113 */;
+import Pressables from "Pressables" /* 5208 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7090 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11045 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11059 */;
+import _modDef13419 from "module_13419" /* 13419 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13420 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj6 = { source: _modDef13408, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj6 = { source: _modDef13419, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj6);
   }
   items[2] = tmp5Result;
@@ -94,7 +94,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: null, isVROnline: true, style: null, autoStatusCutout: false };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;
@@ -166,7 +166,7 @@ function EmptyIcon() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 }, channelContent: { flex: 1, flexShrink: 1, justifyContent: "center", marginTop: 4 }, nameWithArrow: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, channelNameContainer: { flexShrink: 1 }, channelName: { flexShrink: 1 }, arrowIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 }, channelIcon: { marginRight: 12, flexShrink: 0 }, channelIconWrapper: { width: 32, height: 32, justifyContent: "center", alignItems: "center" }, guildChannelIcon: null, subTitleContainer: null, parentChannelName: null };
   const obj2 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0, flexGrow: 0, marginTop: 2, marginLeft: 2 };

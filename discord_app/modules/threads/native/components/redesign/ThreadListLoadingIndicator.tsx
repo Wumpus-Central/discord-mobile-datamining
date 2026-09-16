@@ -1,11 +1,11 @@
-// === Module 16860: ThreadListLoadingIndicator ===
+// === Module 16917: ThreadListLoadingIndicator ===
 
-// Module 16860 (ThreadListLoadingIndicator)
-import MessageLoadingSpinnerDefault from "MessageLoadingSpinner" /* 9745 */;
+// Module 16917 (ThreadListLoadingIndicator)
+import MessageLoadingSpinnerDefault from "MessageLoadingSpinner" /* 9753 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_3 = createStyles.createStyles({ spinner: { width: 32, height: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx");

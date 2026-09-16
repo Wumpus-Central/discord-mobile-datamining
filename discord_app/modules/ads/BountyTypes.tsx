@@ -1,7 +1,7 @@
-// === Module 11422: BountyTypes ===
+// === Module 11430: BountyTypes ===
 
-// Module 11422 (BountyTypes)
-import AssetUtils from "AssetUtils" /* 11423 */;
+// Module 11430 (BountyTypes)
+import AssetUtils from "AssetUtils" /* 11431 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/ads/BountyTypes.tsx");
@@ -23,7 +23,7 @@ export const bountyCtaFromServer = function bountyCtaFromServer(url) {
   return obj;
 };
 export const bountyFromServer = function bountyFromServer(creative_content) {
-  const obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon), videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
+  const obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon), videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null, videoDurationSeconds: null };
   obj.videoPreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
   obj.imagePreview = AssetUtils.resolveOptionalAdCreativeCdnUrl(creative_content.image_preview);
   obj.videoHls = AssetUtils.resolveAdCreativeCdnUrl(creative_content.video_hls);
@@ -47,5 +47,6 @@ export const bountyFromServer = function bountyFromServer(creative_content) {
     num = 15;
   }
   obj.rewardTimerSeconds = num;
+  obj.videoDurationSeconds = creative_content.video_duration_seconds;
   return obj;
 };

@@ -1,16 +1,16 @@
-// === Module 15003: FamilyCenterActivityItemPreview ===
+// === Module 15019: FamilyCenterActivityItemPreview ===
 
-// Module 15003 (FamilyCenterActivityItemPreview)
+// Module 15019 (FamilyCenterActivityItemPreview)
 import nativeDefault from "native" /* 576 */;
 import utils from "utils" /* 1887 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8321 */;
-import NitroWheelIcon2 from "NitroWheelIcon" /* 8788 */;
-import NameplateUtils from "NameplateUtils" /* 8949 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8952 */;
-import BoostGemIcon from "BoostGemIcon" /* 9507 */;
-import ShopIcon from "ShopIcon" /* 12272 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15002 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8330 */;
+import NitroWheelIcon2 from "NitroWheelIcon" /* 8797 */;
+import NameplateUtils from "NameplateUtils" /* 8960 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8963 */;
+import BoostGemIcon from "BoostGemIcon" /* 9518 */;
+import ShopIcon from "ShopIcon" /* 12280 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15018 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -123,19 +123,19 @@ function CollectiblePreview(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-let closure_5 = fn(8341).PROFILE_FRAME_ASPECT_RATIO;
+let closure_5 = fn(8350).PROFILE_FRAME_ASPECT_RATIO;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
-let size = { width: fn(15002).PREVIEW_SIZE, height: fn(15002).PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
+let size = { width: fn(15018).PREVIEW_SIZE, height: fn(15018).PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
 obj2.purchasePlaceholder = size;
-const size1 = { width: fn(15002).PREVIEW_SIZE, height: fn(15002).PREVIEW_SIZE, marginRight: 12 };
+const size1 = { width: fn(15018).PREVIEW_SIZE, height: fn(15018).PREVIEW_SIZE, marginRight: 12 };
 obj2.avatarDecorationPreview = size1;
-const size2 = { width: fn(15002).PREVIEW_SIZE, height: fn(15002).PREVIEW_SIZE, marginRight: 12, borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
+const size2 = { width: fn(15018).PREVIEW_SIZE, height: fn(15018).PREVIEW_SIZE, marginRight: 12, borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 obj2.nameplateContainer = size2;
-const size3 = { position: "absolute", right: 0, width: fn(15002).PREVIEW_SIZE * fn(15002).NAMEPLATE_ASPECT_RATIO, height: fn(15002).PREVIEW_SIZE };
+const size3 = { position: "absolute", right: 0, width: fn(15018).PREVIEW_SIZE * fn(15018).NAMEPLATE_ASPECT_RATIO, height: fn(15018).PREVIEW_SIZE };
 obj2.nameplatePreview = size3;
-const size4 = { width: fn(15002).PREVIEW_SIZE, height: fn(15002).PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
+const size4 = { width: fn(15018).PREVIEW_SIZE, height: fn(15018).PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
 obj2.profileFrameContainer = size4;
 let closure_7 = createStyles.createStyles(obj2);
 size = fn(2);

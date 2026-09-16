@@ -1,19 +1,19 @@
-// === Module 9675: confirmExternalAppLaunchAlert ===
+// === Module 9686: confirmExternalAppLaunchAlert ===
 
-// Module 9675 (confirmExternalAppLaunchAlert)
+// Module 9686 (confirmExternalAppLaunchAlert)
 import util from "util" /* 1115 */;
-import LinkingDefault from "Linking" /* 4334 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4983 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import _modDef9676 from "module_9676" /* 9676 */;
+import LinkingDefault from "Linking" /* 4332 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4982 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import _modDef9687 from "module_9687" /* 9687 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_8();
   const obj = { style: tmp.alertContainer, children: null };
-  const items = [timestampProducer(React3, { source: _modDef9676, style: tmp.announcementBirb }), , , ];
+  const items = [timestampProducer(React3, { source: _modDef9687, style: tmp.announcementBirb }), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["06YebE"]);
@@ -49,7 +49,7 @@ get_ActivityIndicator = fn(17);
 const PRIVATE_APPS_HELP_ARTICLE = fn(1921).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_8 = createStyles.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");

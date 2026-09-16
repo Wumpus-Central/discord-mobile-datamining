@@ -1,7 +1,7 @@
-// === Module 9501: useStoreFrontPrice ===
+// === Module 9512: useStoreFrontPrice ===
 
-// Module 9501 (useStoreFrontPrice)
-import PremiumUtils from "PremiumUtils" /* 4297 */;
+// Module 9512 (useStoreFrontPrice)
+import PremiumUtils from "PremiumUtils" /* 4295 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

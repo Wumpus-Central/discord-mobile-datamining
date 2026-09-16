@@ -1,11 +1,11 @@
-// === Module 4280: JoinedThreadsStore ===
+// === Module 4278: JoinedThreadsStore ===
 
-// Module 4280 (JoinedThreadsStore)
+// Module 4278 (JoinedThreadsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelRecord from "ChannelRecord" /* 1962 */;
-import MuteTimersDefault from "MuteTimers" /* 4281 */;
+import MuteTimersDefault from "MuteTimers" /* 4279 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 

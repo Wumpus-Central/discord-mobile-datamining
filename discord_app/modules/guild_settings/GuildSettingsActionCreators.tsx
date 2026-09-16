@@ -1,19 +1,19 @@
-// === Module 9195: GuildSettingsActionCreators ===
+// === Module 9206: GuildSettingsActionCreators ===
 
-// Module 9195 (GuildSettingsActionCreators)
+// Module 9206 (GuildSettingsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4832 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7430 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4831 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7433 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2015 */;
-import LurkingStore from "LurkingStore" /* 4279 */;
+import LurkingStore from "LurkingStore" /* 4277 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9196 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9207 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -208,7 +208,7 @@ let body = {
     obj(573).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(573);
-    const obj6 = obj(5253);
+    const obj6 = obj(5254);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
     const HTTP = require("HTTPUtils").HTTP;
     const request = { url: closure_10.GUILD(id), query: { for_discovery: obj.isForDiscovery }, body: obj2, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
@@ -324,7 +324,7 @@ let body = {
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                          const AccessibilityAnnouncer = closure_1_0(4492).AccessibilityAnnouncer;
+                          const AccessibilityAnnouncer = closure_1_0(4490).AccessibilityAnnouncer;
                           const intl = closure_1_0(1115).intl;
                           AccessibilityAnnouncer.announce(intl.string(closure_1_0(1115).t["7iPyVW"]));
                         }),

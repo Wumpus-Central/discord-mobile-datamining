@@ -1,6 +1,6 @@
-// === Module 9425: Future ===
+// === Module 9436: Future ===
 
-// Module 9425 (Future)
+// Module 9436 (Future)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");

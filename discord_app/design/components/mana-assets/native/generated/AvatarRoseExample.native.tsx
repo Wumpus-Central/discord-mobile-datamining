@@ -1,9 +1,9 @@
-// === Module 5880: AvatarRoseExample ===
+// === Module 5881: AvatarRoseExample ===
 
-// Module 5880 (AvatarRoseExample)
+// Module 5881 (AvatarRoseExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef5881 from "module_5881" /* 5881 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef5882 from "module_5882" /* 5882 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarRoseExample = function AvatarRoseExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5881 };
+  const obj2 = { uri: _modDef5882 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

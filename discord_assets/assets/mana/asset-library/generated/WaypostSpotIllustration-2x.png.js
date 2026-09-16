@@ -1,9 +1,9 @@
-// === Module 6675: ? ===
+// === Module 6678: ? ===
 
-// Module 6675
+// Module 6678
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WaypostSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/8101e29284ab80c17921b3839f4852b97e415b9000f23f5079e9e10b73d46c8e.png";
-export const metadata = { fileBytes: 24788 };
+export default "https://cdn.discordapp.com/assets/content/9d212e6d4f7344e56dd281583e2e87d79e9830e8650d4457e397f8dad50d12b7.png";
+export const metadata = { fileBytes: 24734 };

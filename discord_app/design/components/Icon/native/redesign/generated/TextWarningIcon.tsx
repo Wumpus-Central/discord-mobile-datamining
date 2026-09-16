@@ -1,9 +1,9 @@
-// === Module 5160: TextWarningIcon ===
+// === Module 5161: TextWarningIcon ===
 
-// Module 5160 (TextWarningIcon)
+// Module 5161 (TextWarningIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod5128 from "module_5128" /* 5128 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod5129 from "module_5129" /* 5129 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const TextWarningIcon = function TextWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5128, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5129, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

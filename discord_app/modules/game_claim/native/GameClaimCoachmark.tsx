@@ -1,19 +1,19 @@
-// === Module 16300: GameClaimCoachmark ===
+// === Module 16320: GameClaimCoachmark ===
 
-// Module 16300 (GameClaimCoachmark)
+// Module 16320 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import ButtonConstants from "ButtonConstants" /* 5064 */;
-import Pressables from "Pressables" /* 5207 */;
-import Card from "Card" /* 5692 */;
-import XSmallIcon from "XSmallIcon" /* 5765 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8704 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9052 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10249 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16301 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16302 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import ButtonConstants from "ButtonConstants" /* 5065 */;
+import Pressables from "Pressables" /* 5208 */;
+import Card from "Card" /* 5693 */;
+import XSmallIcon from "XSmallIcon" /* 5766 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8713 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9063 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10257 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16321 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16322 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { card: { padding: nativeDefault.space.PX_12 }, closeButton: null, centeredText: null, body: null, cta: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;

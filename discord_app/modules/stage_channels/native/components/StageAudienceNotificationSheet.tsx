@@ -1,16 +1,16 @@
-// === Module 8716: StageAudienceNotificationSheet ===
+// === Module 8725: StageAudienceNotificationSheet ===
 
-// Module 8716 (StageAudienceNotificationSheet)
+// Module 8725 (StageAudienceNotificationSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8717 */;
-import _modDef8718 from "module_8718" /* 8718 */;
-import _modDef8740 from "module_8740" /* 8740 */;
-import _modDef8741 from "module_8741" /* 8741 */;
-import _modDef8742 from "module_8742" /* 8742 */;
-import _modDef8743 from "module_8743" /* 8743 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8726 */;
+import _modDef8727 from "module_8727" /* 8727 */;
+import _modDef8749 from "module_8749" /* 8749 */;
+import _modDef8750 from "module_8750" /* 8750 */;
+import _modDef8751 from "module_8751" /* 8751 */;
+import _modDef8752 from "module_8752" /* 8752 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1963 */;
 
@@ -24,11 +24,11 @@ function BulletIcon(source) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(5499).STAGE_AUDIENCE_NOTICE_SHEET_KEY;
+let closure_5 = fn(5500).STAGE_AUDIENCE_NOTICE_SHEET_KEY;
 const constants = fn(1964).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { padding: 16 }, header: { alignItems: "center", paddingVertical: 16 }, headerImage: {}, headerTitle: { marginTop: 16, marginBottom: 8 }, headerBulletIconContainer: null, headerBulletIconComponent: null, headerBulletList: null, headerBullet: null, startButton: null };
 let size = { alignItems: "center", justifyContent: "center", height: 40, width: 40, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.headerBulletIconContainer = size;
@@ -54,47 +54,47 @@ export default function StageAudienceNotificationSheet(channelId) {
   const obj = channelId(504);
   const obj4 = { source: null, style: null };
   const tmp8 = ScrollHandlingActionSheetDefault;
-  obj4.source = _modDef8718;
+  obj4.source = _modDef8727;
   obj4.style = tmp.headerImage;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1115).intl;
   obj5.children = intl.string(channelId(1115).t.UVuXCs);
-  items1[1] = closure_7(channelId(4635).Text, obj5);
+  items1[1] = closure_7(channelId(4634).Text, obj5);
   const obj6 = { style: tmp.headerBulletList, children: null };
   const obj7 = { leading: null, label: null };
-  obj7.leading = closure_7(BulletIcon, { source: _modDef8740 });
+  obj7.leading = closure_7(BulletIcon, { source: _modDef8749 });
   const obj9 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = tmp2(1115).intl;
   obj9.children = intl2.string(channelId(1115).t.sBDfo6);
-  obj7.label = closure_7(channelId(4635).Text, obj9);
-  const items2 = [closure_7(channelId(8719).FormRow, obj7), , , ];
+  obj7.label = closure_7(channelId(4634).Text, obj9);
+  const items2 = [closure_7(channelId(8728).FormRow, obj7), , , ];
   const obj10 = { leading: null, label: null };
-  const obj8 = { source: _modDef8740 };
-  obj10.leading = closure_7(BulletIcon, { source: _modDef8741 });
+  const obj8 = { source: _modDef8749 };
+  obj10.leading = closure_7(BulletIcon, { source: _modDef8750 });
   const obj12 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl3 = tmp2(1115).intl;
   obj12.children = intl3.string(channelId(1115).t.x58YtH);
-  obj10.label = closure_7(channelId(4635).Text, obj12);
-  items2[1] = closure_7(channelId(8719).FormRow, obj10);
+  obj10.label = closure_7(channelId(4634).Text, obj12);
+  items2[1] = closure_7(channelId(8728).FormRow, obj10);
   const obj13 = { leading: null, label: null };
-  const obj11 = { source: _modDef8741 };
-  obj13.leading = closure_7(BulletIcon, { source: _modDef8742 });
+  const obj11 = { source: _modDef8750 };
+  obj13.leading = closure_7(BulletIcon, { source: _modDef8751 });
   const obj15 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl4 = tmp2(1115).intl;
   obj15.children = intl4.string(channelId(1115).t.XtVqla);
-  obj13.label = closure_7(channelId(4635).Text, obj15);
-  items2[2] = closure_7(channelId(8719).FormRow, obj13);
+  obj13.label = closure_7(channelId(4634).Text, obj15);
+  items2[2] = closure_7(channelId(8728).FormRow, obj13);
   let tmp6Result = null;
   if (privacy_level === constants.PUBLIC) {
     const obj16 = { leading: null, label: null };
-    const obj17 = { source: _modDef8743 };
+    const obj17 = { source: _modDef8752 };
     obj16.leading = closure_7(BulletIcon, obj17);
     const obj18 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
     const intl6 = tmp2(1115).intl;
     obj18.children = intl6.string(tmp2(1115).t.nDsbJg);
-    obj16.label = closure_7(tmp2(4635).Text, obj18);
-    tmp6Result = closure_7(tmp2(8719).FormRow, obj16);
+    obj16.label = closure_7(tmp2(4634).Text, obj18);
+    tmp6Result = closure_7(tmp2(8728).FormRow, obj16);
   }
   const obj19 = { children: null };
   items2[3] = tmp6Result;
@@ -107,7 +107,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl5 = tmp2(1115).intl;
   obj21.text = intl5.string(channelId(1115).t.obLqZ8);
   obj21.onPress = handleDismiss;
-  obj20.children = closure_7(channelId(5059).Button, obj21);
+  obj20.children = closure_7(channelId(5060).Button, obj21);
   items3[1] = closure_7(View, obj20);
   obj2.children = items3;
   obj19.children = closure_8(View, obj2);

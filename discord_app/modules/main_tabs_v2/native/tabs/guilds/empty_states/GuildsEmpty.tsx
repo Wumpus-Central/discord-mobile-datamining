@@ -1,20 +1,20 @@
-// === Module 16379: GuildsEmpty ===
+// === Module 16399: GuildsEmpty ===
 
-// Module 16379 (GuildsEmpty)
+// Module 16399 (GuildsEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import FavoritesUtils from "FavoritesUtils" /* 1983 */;
-import getInitialNavigationState from "getInitialNavigationState" /* 4499 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Stack_Stack from "Stack/Stack" /* 5057 */;
-import components_Button_Button from "components/Button/Button" /* 5059 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12843 */;
-import _modDef16380 from "module_16380" /* 16380 */;
+import getInitialNavigationState from "getInitialNavigationState" /* 4497 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Stack_Stack from "Stack/Stack" /* 5058 */;
+import components_Button_Button from "components/Button/Button" /* 5060 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12851 */;
+import _modDef16400 from "module_16400" /* 16400 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
 
 require = fn;
 function handleJoinGuild() {
@@ -81,7 +81,7 @@ const Constants = fn(1074);
 ({ ME: closure_11, MOBILE_GUILD_UPSELL_LIST: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { scrollView: { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm }, header: null, headerTitle: null, scrollViewContentContainer: null, headerInner: null, content: null, illustrationWrapper: null, illustration: null, buttonContainer: null, textWrapper: null, headerText: null, text: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.xxl, borderTopRightRadius: nativeDefault.radii.sm };
 obj.header = { zIndex: 100, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -99,7 +99,7 @@ obj.buttonContainer = { paddingBottom: nativeDefault.space.PX_16, paddingHorizon
 let obj8 = { paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 let obj10 = {};
-const merged = Object.assign(fn(4635).TextStyleSheet["heading-md/bold"]);
+const merged = Object.assign(fn(4634).TextStyleSheet["heading-md/bold"]);
 obj10.fontSize = 18;
 obj10.marginBottom = 8;
 obj.headerText = obj10;
@@ -127,7 +127,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   const obj2 = navigation(563);
   obj3.type = navigation(1249).ImpressionTypes.VIEW;
   obj3.name = navigation(1249).ImpressionNames.GUILDS_EMPTY_NUX;
-  selectedGuildId(8897)(obj3);
+  selectedGuildId(8908)(obj3);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -161,9 +161,9 @@ export default noop.memo(function GuildsEmpty(arg0) {
       }
     }
   }, items1);
-  const tmp7 = selectedGuildId(8897);
-  const isScreenLandscape = navigation(5210).useIsScreenLandscape();
-  navigation(15191);
+  const tmp7 = selectedGuildId(8908);
+  const isScreenLandscape = navigation(5211).useIsScreenLandscape();
+  navigation(15207);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: null, children: null };
@@ -174,7 +174,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
     const obj7 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl = tmp2(1115).intl;
     obj7.children = intl.string(tmp2(1115).t["7hB4kg"]);
-    obj6.children = closure_13(tmp2(4635).Text, obj7);
+    obj6.children = closure_13(tmp2(4634).Text, obj7);
     obj5.children = closure_13(closure_6, obj6);
     const items3 = [closure_13(closure_6, obj5), ];
     let tmp18;

@@ -1,27 +1,27 @@
-// === Module 11850: PollVotesActionSheet ===
+// === Module 11858: PollVotesActionSheet ===
 
-// Module 11850 (PollVotesActionSheet)
+// Module 11858 (PollVotesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import useThemeDefault from "useTheme" /* 4574 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import timing from "timing" /* 4640 */;
-import Pressables from "Pressables" /* 5207 */;
-import EmojiDefault from "Emoji" /* 7237 */;
-import PollsUtils from "PollsUtils" /* 7866 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8299 */;
-import formatPollMessageChatData from "formatPollMessageChatData" /* 11851 */;
-import _modDef11858 from "module_11858" /* 11858 */;
-import _modDef11859 from "module_11859" /* 11859 */;
+import useThemeDefault from "useTheme" /* 4572 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import timing from "timing" /* 4639 */;
+import Pressables from "Pressables" /* 5208 */;
+import EmojiDefault from "Emoji" /* 7240 */;
+import PollsUtils from "PollsUtils" /* 7875 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8308 */;
+import formatPollMessageChatData from "formatPollMessageChatData" /* 11859 */;
+import _modDef11866 from "module_11866" /* 11866 */;
+import _modDef11867 from "module_11867" /* 11867 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
-import EmojiStore from "EmojiStore" /* 5544 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import EmojiStore from "EmojiStore" /* 5545 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4860 */;
+import MessageStore from "MessageStore" /* 4859 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -311,9 +311,9 @@ function NoResults() {
   const obj2 = { style: tmp.noResultsImage, source: null };
   const tmp4 = useThemeDefault();
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11858;
+    let tmp2Result = _modDef11866;
   } else {
-    tmp2Result = _modDef11859;
+    tmp2Result = _modDef11867;
   }
   obj2.source = tmp2Result;
   const items = [closure_1_14(timestampProducer, obj2), , ];
@@ -332,7 +332,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { headerText: { textAlign: "center", paddingHorizontal: 16 }, subheaderText: { textAlign: "center", marginTop: 2, paddingHorizontal: 16 }, answerScroll: { marginTop: 24 }, answerScrollContainer: { gap: 4, paddingHorizontal: 16 }, answerName: { marginTop: 16, marginHorizontal: 16, marginBottom: 8 }, list: { paddingHorizontal: 16 }, answerButton: { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 }, answerSelected: null, answerEmoji: null, answerText: null, emojiText: null, emojiImage: null, noResultsContainer: null, noResultsImage: null, noResultsTitle: null, noResultsSubtitle: null };
 let obj3 = { padding: 8, flexDirection: "row", alignItems: "center", borderRadius: nativeDefault.radii.xs, maxWidth: 200 };
 obj.answerSelected = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

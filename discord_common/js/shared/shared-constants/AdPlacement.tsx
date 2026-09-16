@@ -1,6 +1,6 @@
-// === Module 5535: AdPlacement ===
+// === Module 5536: AdPlacement ===
 
-// Module 5535 (AdPlacement)
+// Module 5536 (AdPlacement)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AdPlacement.tsx");

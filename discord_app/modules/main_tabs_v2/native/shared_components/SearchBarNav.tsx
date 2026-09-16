@@ -1,13 +1,13 @@
-// === Module 7483: SearchBarNav ===
+// === Module 7486: SearchBarNav ===
 
-// Module 7483 (SearchBarNav)
+// Module 7486 (SearchBarNav)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Pressables from "Pressables" /* 5207 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5713 */;
-import SearchField from "SearchField" /* 7157 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Pressables from "Pressables" /* 5208 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5714 */;
+import SearchField from "SearchField" /* 7160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4639);
-let obj = { container: { flexDirection: "row", alignItems: "center", height: fn(5767).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG }, cancelText: null, cancelIcon: null, flex: null };
-let obj3 = { flexDirection: "row", alignItems: "center", height: fn(5767).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG };
+const createStyles = fn(4638);
+let obj = { container: { flexDirection: "row", alignItems: "center", height: fn(5768).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG }, cancelText: null, cancelIcon: null, flex: null };
+let obj3 = { flexDirection: "row", alignItems: "center", height: fn(5768).NAV_BAR_HEIGHT, paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj.cancelText = { paddingLeft: nativeDefault.space.PX_16 };
 let obj4 = { paddingLeft: nativeDefault.space.PX_16 };
 obj.cancelIcon = { marginRight: nativeDefault.space.PX_16 };

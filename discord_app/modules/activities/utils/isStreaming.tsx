@@ -1,6 +1,6 @@
-// === Module 8378: isStreaming ===
+// === Module 8387: isStreaming ===
 
-// Module 8378 (isStreaming)
+// Module 8387 (isStreaming)
 import Constants from "Constants" /* 1074 */;
 import Constants2 from "Constants" /* 1921 */;
 import size from "module_2" /* 2 */;

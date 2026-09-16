@@ -1,10 +1,10 @@
-// === Module 10114: UserSettingsVoiceInputOptions ===
+// === Module 10122: UserSettingsVoiceInputOptions ===
 
-// Module 10114 (UserSettingsVoiceInputOptions)
+// Module 10122 (UserSettingsVoiceInputOptions)
 import util from "util" /* 1115 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7301 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9221 */;
-import VoiceSensitivityDefault from "VoiceSensitivity" /* 10115 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7304 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9232 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 10123 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 
@@ -36,7 +36,7 @@ const View = fn(17).View;
 const InputModes = fn(1074).InputModes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_9 = createStyles.createStyles({ value: { textAlign: "right" }, slider: { marginTop: 4 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceInputOptions.tsx");
@@ -62,9 +62,9 @@ export default function UserSettingsVoiceInputOptions() {
     stringResult = intl3.string(tmp(1115).t.cHCEOJ);
   }
   obj4.children = stringResult;
-  obj3.trailing = closure_6(inputMode(4635).Text, obj4);
+  obj3.trailing = closure_6(inputMode(4634).Text, obj4);
   obj3.onPress = handleInputModePress;
-  const items1 = [closure_6(inputMode(5690).TableRow, obj3), ];
+  const items1 = [closure_6(inputMode(5691).TableRow, obj3), ];
   let tmp4Result = null;
   if (inputMode !== InputModes.PUSH_TO_TALK) {
     const obj5 = { children: null };
@@ -75,7 +75,7 @@ export default function UserSettingsVoiceInputOptions() {
     obj6.onValueChange = function onValueChange(autoThreshold) {
       return AudioActionCreatorsDefault.setMode(inputMode, { autoThreshold });
     };
-    const items2 = [closure_6(tmp(7307).TableSwitchRow, obj6), ];
+    const items2 = [closure_6(tmp(7310).TableSwitchRow, obj6), ];
     const obj7 = { label: null, subLabel: null };
     const intl6 = tmp(1115).intl;
     obj7.label = intl6.string(tmp(1115).t["o+2oMK"]);
@@ -89,12 +89,12 @@ export default function UserSettingsVoiceInputOptions() {
     };
     obj8.children = closure_6(VoiceSensitivityDefault, obj9);
     obj7.subLabel = closure_6(View, obj8);
-    items2[1] = closure_6(tmp(5690).TableRow, obj7);
+    items2[1] = closure_6(tmp(5691).TableRow, obj7);
     obj5.children = items2;
     tmp4Result = closure_8(closure_7, obj5);
   }
   items1[1] = tmp4Result;
   obj2.children = items1;
-  return closure_8(inputMode(10110).UserSettingsTableRowGroup, obj2);
+  return closure_8(inputMode(10118).UserSettingsTableRowGroup, obj2);
 };
 export { handleInputModePress };

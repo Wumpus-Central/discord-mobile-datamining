@@ -1,9 +1,9 @@
-// === Module 6593: ? ===
+// === Module 6596: ? ===
 
-// Module 6593
+// Module 6596
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StreamSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/ffccc164bd9e3cd63fb82ef15a89db3d6007eda82a6dd72fa3fcf16cb9e01594.png";
-export const metadata = { fileBytes: 113643 };
+export default "https://cdn.discordapp.com/assets/content/b54754191c95542cfbbd6d1733acd0d423e0d43b05b1e4b4c1f40dbb4e72a9f6.png";
+export const metadata = { fileBytes: 115199 };

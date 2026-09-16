@@ -1,13 +1,13 @@
-// === Module 8728: FormSection ===
+// === Module 8737: FormSection ===
 
-// Module 8728 (FormSection)
+// Module 8737 (FormSection)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import RedesignCompat from "RedesignCompat" /* 5771 */;
-import TableRowGroup from "TableRowGroup" /* 5772 */;
-import FormRowDefault from "FormRow" /* 7244 */;
-import FormDividerDefault from "FormDivider" /* 8725 */;
-import FormTitleDefault from "FormTitle" /* 8729 */;
+import RedesignCompat from "RedesignCompat" /* 5772 */;
+import TableRowGroup from "TableRowGroup" /* 5773 */;
+import FormRowDefault from "FormRow" /* 7247 */;
+import FormDividerDefault from "FormDivider" /* 8734 */;
+import FormTitleDefault from "FormTitle" /* 8738 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const TitleStyleType = fn(1181).TitleStyleType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { titledSectionHeader: { borderTopWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: 16 }, titledSectionNoBorder: { marginTop: 24 }, titledSectionNoBorderOrMargin: {}, emptySectionHeader: { marginTop: 24 }, sectionBody: {}, sectionBodyIOSBorder: {} };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

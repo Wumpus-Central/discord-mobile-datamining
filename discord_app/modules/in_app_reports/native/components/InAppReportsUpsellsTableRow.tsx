@@ -1,7 +1,7 @@
-// === Module 9183: InAppReportsUpsellsTableRow ===
+// === Module 9194: InAppReportsUpsellsTableRow ===
 
-// Module 9183 (InAppReportsUpsellsTableRow)
-import TableRow from "TableRow" /* 5690 */;
+// Module 9194 (InAppReportsUpsellsTableRow)
+import TableRow from "TableRow" /* 5691 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,16 +1,16 @@
-// === Module 14686: UserProfileEditForm ===
+// === Module 14702: UserProfileEditForm ===
 
-// Module 14686 (UserProfileEditForm)
+// Module 14702 (UserProfileEditForm)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8286 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8287 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8317 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13209 */;
-import _modDef14688 from "module_14688" /* 14688 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8295 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8296 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8326 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13220 */;
+import _modDef14704 from "module_14704" /* 14704 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8312 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9340 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8321 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9351 */;
 
 require = fn;
 function EditUserProfileBanner(user) {
@@ -47,7 +47,7 @@ function EditUserProfileBanner(user) {
       fn = (banner) => user(isTryItOut[19]).setPendingChanges({ banner });
     }
     obj2.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14690, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14706, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -65,14 +65,14 @@ function EditUserProfileBanner(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7315).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7318).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10 } = Constants);
 let closure_11 = fn(1084).ProfileCustomizationScrollPositions;
-const constants = fn(14687).UserProfileEditAutoFocusElement;
+const constants = fn(14703).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { assetOrigin: fn(7096).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14688, staticImageUri: _modDef14688, description: "", originalAsset: "assign" };
+let obj = { assetOrigin: fn(7099).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14704, staticImageUri: _modDef14704, description: "", originalAsset: "assign" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 

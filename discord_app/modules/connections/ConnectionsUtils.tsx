@@ -1,26 +1,22 @@
-// === Module 5492: ConnectionsUtils ===
+// === Module 5493: ConnectionsUtils ===
 
-// Module 5492 (ConnectionsUtils)
+// Module 5493 (ConnectionsUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1115 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import dismissible_content from "dismissible_content" /* 1944 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
-import getConnectionsRolesDefault from "getConnectionsRoles" /* 5494 */;
+import getConnectionsRolesDefault from "getConnectionsRoles" /* 5495 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let Constants = fn(5493);
-({ MetadataFields: metroRequire, OperatorTypes: closure_7 } = Constants);
-Constants = fn(1074);
-({ Permissions: closure_8, PlatformTypes: closure_9 } = Constants);
+const Constants = fn(5494);
+({ MetadataFields: hasOwnProperty, OperatorTypes: metroRequire } = Constants);
+const PlatformTypes = fn(1074).PlatformTypes;
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/connections/ConnectionsUtils.tsx");
+const result = size.fileFinishedImporting("modules/connections/ConnectionsUtils.tsx");
 
 export const officialApplicationIds = ["426537812993638400", "1042836142560645130", "296023718839451649", "979802510766268446", "1031611223235637258", "512333785338216465"];
 export const ConnectionConfigurationRuleOperator = { AND: 0, [0]: "AND", OR: 1, [1]: "OR" };
@@ -49,7 +45,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
   const rounded = Math.round(Number(value.value));
   _require = rounded;
   if (constants2.EQUAL === operator) {
-    let tmp14 = connectionType === constants4.PAYPAL;
+    let tmp14 = connectionType === PlatformTypes.PAYPAL;
     if (tmp14) {
       tmp14 = connectionMetadataField === constants.PAYPAL_VERIFIED;
     }
@@ -81,7 +77,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
   if (null != H97H4S) {
     formatResult = H97H4S;
     if (null != operator) {
-      if (constants4.REDDIT === connectionType) {
+      if (PlatformTypes.REDDIT === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl26 = require("util").intl;
           const obj2 = {
@@ -121,7 +117,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (constants4.STEAM === connectionType) {
+      } else if (PlatformTypes.STEAM === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl22 = require("util").intl;
           const obj6 = {
@@ -161,7 +157,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (constants4.BLUESKY === connectionType) {
+      } else if (PlatformTypes.BLUESKY === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl18 = require("util").intl;
           const obj10 = {
@@ -192,7 +188,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (constants4.TWITTER === connectionType) {
+      } else if (PlatformTypes.TWITTER === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl15 = require("util").intl;
           const obj13 = {
@@ -232,7 +228,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (constants4.PAYPAL === connectionType) {
+      } else if (PlatformTypes.PAYPAL === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl11 = require("util").intl;
           const obj17 = {
@@ -254,7 +250,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (constants4.EBAY === connectionType) {
+      } else if (PlatformTypes.EBAY === connectionType) {
         if (constants.CREATED_AT === connectionMetadataField) {
           const intl9 = require("util").intl;
           const obj19 = {
@@ -303,7 +299,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
         } else {
           return null;
         }
-      } else if (constants4.TIKTOK === connectionType) {
+      } else if (PlatformTypes.TIKTOK === connectionType) {
         if (constants.TIKTOK_VERIFIED === connectionMetadataField) {
           const intl4 = require("util").intl;
           const obj24 = {
@@ -419,21 +415,4 @@ export const getCreatedAtDate = function getCreatedAtDate(metadata, locale) {
     }
   }
   return null;
-};
-export const useShowLinkedRolesAdminNux = function useShowLinkedRolesAdminNux(arg0) {
-  _require = arg0;
-  const items = [GuildRoleStore, PermissionStore];
-  return require("initialize").useStateFromStores(items, () => {
-    const sortedRoles = GuildRoleStore.getSortedRoles(id.id);
-    const someResult = sortedRoles.some((tags) => null === tags.tags.guild_connections);
-    const result = DismissibleContentUnsafeUtils.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.CONNECTIONS_NUX);
-    let tmp4 = !someResult;
-    if (!someResult) {
-      tmp4 = result;
-    }
-    if (tmp4) {
-      tmp4 = canResult;
-    }
-    return tmp4;
-  });
 };

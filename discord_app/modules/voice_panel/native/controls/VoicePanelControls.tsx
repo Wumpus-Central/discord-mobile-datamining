@@ -1,44 +1,44 @@
-// === Module 17318: VoicePanelControls ===
+// === Module 17374: VoicePanelControls ===
 
-// Module 17318 (VoicePanelControls)
+// Module 17374 (VoicePanelControls)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import native from "native" /* 4350 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import HapticUtils from "HapticUtils" /* 4607 */;
-import spring from "spring" /* 5058 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6760 */;
-import native2 from "native" /* 9034 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9627 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11130 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12411 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12414 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17203 */;
-import useControlsLockDefault from "useControlsLock" /* 17244 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 17319 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17320 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17321 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17322 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17326 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17328 */;
+import native from "native" /* 4348 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import HapticUtils from "HapticUtils" /* 4606 */;
+import spring from "spring" /* 5059 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6763 */;
+import native2 from "native" /* 9045 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9638 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11144 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12419 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12422 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17259 */;
+import useControlsLockDefault from "useControlsLock" /* 17300 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17375 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17376 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17377 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17378 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17382 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17384 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4655 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4654 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12407);
+const VoicePanelConstants = fn(12415);
 ({ UI_SHOW_HIDE_PHYSICS: closure_7, MODE_CHANGE_PHYSICS: closure_8, BORDER_RADIUS_PHYSICS: closure_9, PANEL_CONTROLS_HEIGHT_PHYSICS: c10, VoicePanelModes: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12410);
+const VoicePanelCardConstants = fn(12418);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(12405);
+const VoicePanelControlsConstants = fn(12413);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } = VoicePanelControlsConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { accessibilityWrapper: null, wrapper: null, buttonsWrapper: null, actionSheetDragHandleWrapper: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

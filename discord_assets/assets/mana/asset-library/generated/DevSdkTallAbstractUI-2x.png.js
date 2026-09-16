@@ -1,9 +1,9 @@
-// === Module 6005: ? ===
+// === Module 6006: ? ===
 
-// Module 6005
+// Module 6006
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DevSdkTallAbstractUI-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/1c37ceac30384f6397a23bc38bba7a6556fbe6c65bf63303c22d010057e58d50.png";
-export const metadata = { fileBytes: 44493 };
+export default "https://cdn.discordapp.com/assets/content/a9384cbc31a4f7e5f9e739fba543449f35df9e76db5df00b8af01c7df68f4330.png";
+export const metadata = { fileBytes: 50116 };

@@ -1,6 +1,6 @@
-// === Module 9456: AppIconTypes ===
+// === Module 9467: AppIconTypes ===
 
-// Module 9456 (AppIconTypes)
+// Module 9467 (AppIconTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { DEFAULT: "AppIcon" };

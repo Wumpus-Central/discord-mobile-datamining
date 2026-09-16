@@ -1,9 +1,9 @@
-// === Module 6463: ? ===
+// === Module 6466: ? ===
 
-// Module 6463
+// Module 6466
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PowerupSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/72ed92aef3d43852811277f853044df0681c7301532050ad5da4af53053308cc.png";
-export const metadata = { fileBytes: 44533 };
+export default "https://cdn.discordapp.com/assets/content/a9a1f211eb5be7cfd56b2f76fb32c698c2283347f585188ae94907292ba1c97b.png";
+export const metadata = { fileBytes: 45067 };

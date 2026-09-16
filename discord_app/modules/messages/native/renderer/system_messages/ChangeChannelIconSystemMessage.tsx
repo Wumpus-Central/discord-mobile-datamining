@@ -1,12 +1,12 @@
-// === Module 8090: ChangeChannelIconSystemMessage ===
+// === Module 8099: ChangeChannelIconSystemMessage ===
 
-// Module 8090 (ChangeChannelIconSystemMessage)
+// Module 8099 (ChangeChannelIconSystemMessage)
 import util from "util" /* 1115 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8060 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8067 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8069 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8071 */;
-import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8074 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8069 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8076 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8078 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8080 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 8083 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 require = fn;

@@ -1,9 +1,9 @@
-// === Module 17020: ContextMenuCommandNavigator ===
+// === Module 17077: ContextMenuCommandNavigator ===
 
-// Module 17020 (ContextMenuCommandNavigator)
+// Module 17077 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import HeaderShared from "HeaderShared" /* 7969 */;
+import HeaderShared from "HeaderShared" /* 7978 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,9 +12,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(8020);
+const NativeStackNavigator = fn(8029);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj3 = { container: { flex: 1 }, content: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_8 = createStyles.createStyles(obj3);
 const size = fn(2);
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/application_commands/native/C
 export default function ContextMenuCommandNavigator() {
   const tmp = closure_8();
   _require = tmp;
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7582).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7585).trackAppUIViewed(), []);
   importDefault = require("Navigator").useAccessibilityNativeStackOptions();
   const rect = useSafeAreaInsetsDefault();
   let obj2 = { style: null, children: null };
@@ -61,7 +61,7 @@ export default function ContextMenuCommandNavigator() {
   obj5.title = intl.string(require("util").t.PHjkRE);
   obj4.options = obj5;
   obj4.getComponent = function getComponent() {
-    return closure_0(17021).default;
+    return closure_0(17078).default;
   };
   const items1 = [
     closure_5(Screen, obj4),
@@ -76,7 +76,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(17023).default;
+        return closure_0(17080).default;
       }
     })
   ];

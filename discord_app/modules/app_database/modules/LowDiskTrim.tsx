@@ -1,8 +1,8 @@
-// === Module 7760: LowDiskTrim ===
+// === Module 7763: LowDiskTrim ===
 
-// Module 7760 (LowDiskTrim)
+// Module 7763 (LowDiskTrim)
 import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
-import FileSystemStore from "FileSystemStore" /* 7586 */;
+import FileSystemStore from "FileSystemStore" /* 7589 */;
 
 class LowDiskTrim {
   constructor() {

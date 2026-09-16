@@ -1,13 +1,13 @@
-// === Module 16732: VibegrationsMessageAuthor ===
+// === Module 16766: VibegrationsMessageAuthor ===
 
-// Module 16732 (VibegrationsMessageAuthor)
+// Module 16766 (VibegrationsMessageAuthor)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3591 from "module_3591" /* 3591 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import AppsIcon from "AppsIcon" /* 5190 */;
-import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16733 */;
-import VibegrationsMessageTime from "VibegrationsMessageTime" /* 16734 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import AppsIcon from "AppsIcon" /* 5191 */;
+import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16767 */;
+import VibegrationsMessageTime from "VibegrationsMessageTime" /* 16768 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -44,9 +44,9 @@ class VibegrationsMessageHeader {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, conjureTile: null };
-let size = { width: fn(16729).MESSAGE_AVATAR_SIZE, height: fn(16729).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(16763).MESSAGE_AVATAR_SIZE, height: fn(16763).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
 obj2.conjureTile = size;
 const React6 = createStyles.createStyles(obj2);
 size = fn(2);
@@ -81,7 +81,7 @@ export const VibegrationsUserHeader = function VibegrationsUserHeader(userId) {
     return vibegrationsMessageAuthors.resolveMessageAuthor(userId, user, UserStore.getCurrentUser());
   }, items2);
   const obj = userId(504);
-  const name = userId(4484).useName(stateFromStores);
+  const name = userId(4482).useName(stateFromStores);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;

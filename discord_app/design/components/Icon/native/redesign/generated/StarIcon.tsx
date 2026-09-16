@@ -1,9 +1,9 @@
-// === Module 10366: StarIcon ===
+// === Module 10374: StarIcon ===
 
-// Module 10366 (StarIcon)
+// Module 10374 (StarIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod10367 from "module_10367" /* 10367 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod10375 from "module_10375" /* 10375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const StarIcon = function StarIcon(YELLOW_300) {
   }
   const merged = Object.assign(YELLOW_300, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10367, color: INTERACTIVE_ICON_DEFAULT, style: YELLOW_300.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10375, color: INTERACTIVE_ICON_DEFAULT, style: YELLOW_300.style });
 };

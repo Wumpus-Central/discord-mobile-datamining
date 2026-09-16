@@ -1,9 +1,9 @@
-// === Module 7063: KeyIcon ===
+// === Module 7066: KeyIcon ===
 
-// Module 7063 (KeyIcon)
+// Module 7066 (KeyIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod7064 from "module_7064" /* 7064 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod7067 from "module_7067" /* 7067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const KeyIcon = function KeyIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7064, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7067, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

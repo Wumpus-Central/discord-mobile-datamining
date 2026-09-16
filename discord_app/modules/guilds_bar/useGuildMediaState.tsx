@@ -1,20 +1,20 @@
-// === Module 16441: useGuildMediaState ===
+// === Module 16461: useGuildMediaState ===
 
-// Module 16441 (useGuildMediaState)
+// Module 16461 (useGuildMediaState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ChannelTypes from "ChannelTypes" /* 1095 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13804 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13813 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
 import StageInstanceStore from "StageInstanceStore" /* 1963 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4660 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
-import VoiceStateStore from "VoiceStateStore" /* 4658 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4819 */;
+import VoiceStateStore from "VoiceStateStore" /* 4657 */;
 
 const require = globalThis.__r;
 

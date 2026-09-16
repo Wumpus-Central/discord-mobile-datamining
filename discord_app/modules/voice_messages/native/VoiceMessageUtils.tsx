@@ -1,13 +1,13 @@
-// === Module 12390: VoiceMessageUtils ===
+// === Module 12398: VoiceMessageUtils ===
 
-// Module 12390 (VoiceMessageUtils)
+// Module 12398 (VoiceMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import HapticUtils from "HapticUtils" /* 4607 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4694 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 12391 */;
+import HapticUtils from "HapticUtils" /* 4606 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4693 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 12399 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 import apply from "module_12" /* 12 */;
@@ -46,7 +46,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
           React7(constants.REQUESTED);
           React6(closure_0);
           const mediaEngine = MediaEngineStore.getMediaEngine();
-          mediaEngine.on(BaseConnectionEvent.MediaEngineEvent.VoiceActivity, __initData2);
+          mediaEngine.on(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, __initData2);
           c4 = 1;
           const _performance2 = performance;
           closure_129_1 = performance.now();
@@ -63,7 +63,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
       } else if (1 === tmp8) {
         c4 = 0;
         closure_129_2 = closure_3;
-        closure_130_23();
+        closure_130_24();
         throw closure_129_2;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -101,6 +101,10 @@ let closure_22 = async function _startAudioRecording(arg0) {
     }
   }
 };
+function removeVoiceActivityListener() {
+  const mediaEngine = MediaEngineStore.getMediaEngine();
+  mediaEngine.removeListener(BaseConnectionEvent.MediaEngineEvent.VoiceActivity, closure_21);
+}
 function resetAudioRecording() {
   const mediaEngine = MediaEngineStore.getMediaEngine();
   mediaEngine.removeListener(BaseConnectionEvent.MediaEngineEvent.VoiceActivity, closure_21);
@@ -109,6 +113,8 @@ function resetAudioRecording() {
 function stopAndGetAudioRecording() {
   closure_8(null);
   closure_9(null);
+  let mediaEngine = MediaEngineStore.getMediaEngine();
+  mediaEngine.removeListener(require("BaseConnectionEvent").MediaEngineEvent.VoiceActivity, closure_21);
   let waveform = closure_11.getState().waveform;
   const mapped = waveform.map((item) => {
     [tmp] = item;
@@ -116,11 +122,11 @@ function stopAndGetAudioRecording() {
   });
   let arr3 = mapped;
   if (mapped.length > closure_16) {
-    arr3 = downsampleWaveformDefault(mapped, tmp3);
+    arr3 = downsampleWaveformDefault(mapped, tmp5);
   }
   const mapped1 = arr3.map((item) => Math.min(item, closure_1_13));
   const uint8Array = new Uint8Array(mapped1);
-  closure_0 = byteLengthDefault.fromByteArray(uint8Array);
+  _require = byteLengthDefault.fromByteArray(uint8Array);
   return new Promise((waveform) => {
     mediaEngine = mediaEngine.getMediaEngine();
     const result = mediaEngine.stopLocalAudioRecording((filename, arg1) => {
@@ -128,7 +134,7 @@ function stopAndGetAudioRecording() {
     });
   });
 }
-let closure_25 = async function _endAudioRecording() {
+let closure_26 = async function _endAudioRecording() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -174,7 +180,7 @@ let closure_25 = async function _endAudioRecording() {
             return obj4;
           } else {
             startTimeMillis = closure_129_11.getState().startTimeMillis;
-            closure_129_23();
+            closure_129_24();
             const obj5 = { data: closure_128_0, startTimeMillis };
             c3 = 3;
           }
@@ -196,7 +202,7 @@ let closure_25 = async function _endAudioRecording() {
 };
 function stopAndCacheAudioRecording() {
   const self = this;
-  const apply = closure_27.apply;
+  const apply = closure_28.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -204,7 +210,7 @@ function stopAndCacheAudioRecording() {
   }
   return applyArgumentsResult;
 }
-let closure_27 = async function _stopAndCacheAudioRecording() {
+let closure_28 = async function _stopAndCacheAudioRecording() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -212,8 +218,8 @@ let closure_27 = async function _stopAndCacheAudioRecording() {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj = { value, done: true };
-      return obj;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -226,41 +232,40 @@ let closure_27 = async function _stopAndCacheAudioRecording() {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_1 = tmp2;
           closure_0 = tmp3;
           closure_128_0 = undefined;
           c2 = 1;
           c3 = 1;
-          const obj3 = { value: stopAndGetAudioRecording(), done: false };
-          return obj3;
+          const obj4 = { value: stopAndGetAudioRecording(), done: false };
+          return obj4;
         }
       } else if (arg0 === 1) {
         c3 = 3;
         throw value;
       } else if (arg0 === 2) {
         c3 = 3;
-        const obj4 = { value, done: true };
-        return obj4;
+        const obj = { value, done: true };
+        return obj;
       } else {
         closure_128_0 = value;
-        const mediaEngine = closure_129_4.getMediaEngine();
-        mediaEngine.removeListener(closure_129_0(closure_129_2[9]).MediaEngineEvent.VoiceActivity, closure_129_21);
+        closure_129_23();
         closure_129_7(closure_128_0);
         c3 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } catch (tmp18) {
+    } catch (tmp15) {
       c3 = tmp;
-      throw tmp18;
+      throw tmp15;
     }
   }
 };
-const VoiceMessagesUIStore = fn(12094);
+const VoiceMessagesUIStore = fn(12102);
 ({ addVoiceMessageWave: hasOwnProperty, resetVoiceMessageState: metroRequire, setSavedVoiceMessageUploadData: closure_7, setVoiceMessageRecordingId: closure_8, setVoiceMessageRecordingState: closure_9, setVoiceMessageStartTimeMillis: c10, useVoiceMessagesUIStore: closure_11, VoiceMessageRecordingStatus: closure_12 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(12095);
+const VoiceMessageConstants = fn(12103);
 ({ WAVEFORM_WAVE_MAX_VALUE: map1, VOICE_RECORDING_MIN_DB: closure_14, VOICE_RECORDING_MAX_DB: closure_15, WAVEFORM_MAX_SAMPLES: closure_16, VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17 } = VoiceMessageConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let c19 = null;
@@ -303,7 +308,7 @@ export const startAudioRecording = function startAudioRecording() {
 };
 export const endAudioRecording = function endAudioRecording() {
   const self = this;
-  const apply = closure_25.apply;
+  const apply = closure_26.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

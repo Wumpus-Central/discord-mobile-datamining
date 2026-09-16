@@ -1,9 +1,9 @@
-// === Module 6295: ? ===
+// === Module 6296: ? ===
 
-// Module 6295
+// Module 6296
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeadphonesPairSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/d4dd74bba54845b5f005c2258235d8bd1f7d1f3b178cad77ad514c6cb9f8f149.png";
-export const metadata = { fileBytes: 39731 };
+export default "https://cdn.discordapp.com/assets/content/49a3f6cde01c9fbb3d93641e386224497f400370b0404e537dcba7b429b273f0.png";
+export const metadata = { fileBytes: 39649 };

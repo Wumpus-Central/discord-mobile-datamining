@@ -1,20 +1,20 @@
-// === Module 16430: HomeDrawerGuildVoiceState ===
+// === Module 16450: HomeDrawerGuildVoiceState ===
 
-// Module 16430 (HomeDrawerGuildVoiceState)
+// Module 16450 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import LinearGradientDefault from "LinearGradient" /* 5071 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10193 */;
-import AvatarPile from "AvatarPile" /* 13163 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import LinearGradientDefault from "LinearGradient" /* 5072 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10201 */;
+import AvatarPile from "AvatarPile" /* 13174 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4820 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4663 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4819 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4662 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ const GUILD_VOCAL_CHANNELS_KEY = fn(2013).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let obj2 = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj2.streamPreviewShadow = { borderRadius: nativeDefault.radii.sm };
@@ -59,7 +59,7 @@ obj2.streamPreviewGradient = { position: "absolute", top: 0, left: 0, right: 0, 
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm };
 obj2.streamPreviewBorder = rect;
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(4639);
+createStyles = fn(4638);
 let obj4 = { tag: null, tagText: null };
 const rect1 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: nativeDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
 obj4.tag = rect1;

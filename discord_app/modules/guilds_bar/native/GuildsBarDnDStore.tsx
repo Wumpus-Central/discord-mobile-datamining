@@ -1,10 +1,10 @@
-// === Module 16395: GuildsBarDnDStore ===
+// === Module 16415: GuildsBarDnDStore ===
 
-// Module 16395 (GuildsBarDnDStore)
+// Module 16415 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import _mod4262 from "module_4262" /* 4262 */;
-import SortedGuildStore from "SortedGuildStore" /* 5523 */;
+import _mod4260 from "module_4260" /* 4260 */;
+import SortedGuildStore from "SortedGuildStore" /* 5524 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 50, scrollPosition: 100, windowSize: 100, setStateShallow: 50, dropStart: 100, dropComplete: "userPremiumType" };
+  let obj = { dragSpecs: "Boolean", overSpecs: "ip", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 50, scrollPosition: 100, windowSize: 100, setStateShallow: 50, dropStart: 100, dropComplete: true };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   let obj3 = require("ReanimatedRexport");
@@ -198,7 +198,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4262.shallow);
+  }, _mod4260.shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

@@ -1,10 +1,10 @@
-// === Module 12514: BaseChannelItem ===
+// === Module 12522: BaseChannelItem ===
 
-// Module 12514 (BaseChannelItem)
+// Module 12522 (BaseChannelItem)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,12 +48,12 @@ class BaseChannelSubtitle {
   }
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10248);
+const RedesignChannelListConstants = fn(10256);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: hasOwnProperty, CHANNEL_TITLE_LINE_HEIGHT: metroRequire } = RedesignChannelListConstants);
-const UnreadSetting = fn(4821).UnreadSetting;
+const UnreadSetting = fn(4820).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
@@ -130,9 +130,9 @@ export default function BaseChannelItem(mode) {
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12515);
+      let AnimatedPressableHighlight = hideIcon(12523);
     } else {
-      AnimatedPressableHighlight = mode(9034).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(9045).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -147,8 +147,8 @@ export default function BaseChannelItem(mode) {
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(10295), obj3);
-    const tmp9 = hideIcon(10295);
+    closure_8(hideIcon(10303), obj3);
+    const tmp9 = hideIcon(10303);
   }
 };
 export const ChannelModes = obj2;

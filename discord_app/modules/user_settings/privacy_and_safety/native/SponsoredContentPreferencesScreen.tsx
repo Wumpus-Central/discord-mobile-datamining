@@ -1,13 +1,13 @@
-// === Module 15966: SponsoredContentPreferencesScreen ===
+// === Module 15986: SponsoredContentPreferencesScreen ===
 
-// Module 15966 (SponsoredContentPreferencesScreen)
+// Module 15986 (SponsoredContentPreferencesScreen)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
-import SettingLayoutDefault from "SettingLayout" /* 14786 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
+import SettingLayoutDefault from "SettingLayout" /* 14802 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8082).MobileUserSettings;
+const MobileUserSettings = fn(8091).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);

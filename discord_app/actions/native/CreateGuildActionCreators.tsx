@@ -1,6 +1,6 @@
-// === Module 12879: CreateGuildActionCreators ===
+// === Module 12887: CreateGuildActionCreators ===
 
-// Module 12879 (CreateGuildActionCreators)
+// Module 12887 (CreateGuildActionCreators)
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 
 const require = fn;

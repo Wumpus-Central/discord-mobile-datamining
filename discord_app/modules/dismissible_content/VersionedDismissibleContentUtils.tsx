@@ -4,11 +4,11 @@
 import Server from "Server" /* 1895 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
 import TypeUtils from "TypeUtils" /* 1970 */;
-import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 14079 */;
-import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 14080 */;
-import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 14081 */;
+import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 14092 */;
+import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 14093 */;
+import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 14094 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7691 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7694 */;
 
 require = fn;
 const size = fn(2);
@@ -37,13 +37,11 @@ export const getVersionedDismissibleContentCurrentVersion = function getVersione
           if (dismissible_content.DismissibleContent.GAME_SHOP_ANNOUNCEMENT_MODAL !== id) {
             if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE !== id) {
               if (dismissible_content.DismissibleContent.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA !== id) {
-                if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER !== id) {
-                  if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === id) {
-                    return 0;
-                  } else {
-                    TypeUtils.assertUnreachable(id, { andFail: false });
-                    return 0;
-                  }
+                if (dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER === id) {
+                  return 0;
+                } else {
+                  TypeUtils.assertUnreachable(id, { andFail: false });
+                  return 0;
                 }
               }
             }

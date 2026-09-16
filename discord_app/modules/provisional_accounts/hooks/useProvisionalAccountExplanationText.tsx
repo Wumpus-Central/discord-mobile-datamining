@@ -1,9 +1,9 @@
-// === Module 12764: useProvisionalAccountExplanationText ===
+// === Module 12772: useProvisionalAccountExplanationText ===
 
-// Module 12764 (useProvisionalAccountExplanationText)
+// Module 12772 (useProvisionalAccountExplanationText)
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12765 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12773 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

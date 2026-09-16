@@ -1,9 +1,9 @@
-// === Module 6345: ? ===
+// === Module 6348: ? ===
 
-// Module 6345
+// Module 6348
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MicrophoneSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/42a88f7abc10de4464ee8f243326986aec3f8a934e03c5a1c61402ea9407bbfe.png";
-export const metadata = { fileBytes: 31934 };
+export default "https://cdn.discordapp.com/assets/content/9b617e750ca0986c7aacf1e4c1cc16c8eaee636c3b9df5115c0af7baa64482f9.png";
+export const metadata = { fileBytes: 32198 };

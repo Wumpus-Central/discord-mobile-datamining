@@ -1,6 +1,6 @@
-// === Module 10357: FavoritesGuildExperiment ===
+// === Module 10365: FavoritesGuildExperiment ===
 
-// Module 10357 (FavoritesGuildExperiment)
+// Module 10365 (FavoritesGuildExperiment)
 import ApexExperiment_mod from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

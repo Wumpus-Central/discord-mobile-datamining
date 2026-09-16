@@ -1,12 +1,12 @@
-// === Module 15910: CollectiblesShopSetting ===
+// === Module 15930: CollectiblesShopSetting ===
 
-// Module 15910 (CollectiblesShopSetting)
+// Module 15930 (CollectiblesShopSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7648 */;
-import ShopIcon from "ShopIcon" /* 12272 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7651 */;
+import ShopIcon from "ShopIcon" /* 12280 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

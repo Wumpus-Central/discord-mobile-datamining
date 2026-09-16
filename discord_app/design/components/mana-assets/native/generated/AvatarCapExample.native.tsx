@@ -1,9 +1,9 @@
-// === Module 5858: AvatarCapExample ===
+// === Module 5859: AvatarCapExample ===
 
-// Module 5858 (AvatarCapExample)
+// Module 5859 (AvatarCapExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef5859 from "module_5859" /* 5859 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef5860 from "module_5860" /* 5860 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarCapExample = function AvatarCapExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5859 };
+  const obj2 = { uri: _modDef5860 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

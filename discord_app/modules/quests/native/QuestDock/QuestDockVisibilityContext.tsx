@@ -1,6 +1,6 @@
-// === Module 15273: QuestDockVisibilityContext ===
+// === Module 15289: QuestDockVisibilityContext ===
 
-// Module 15273 (QuestDockVisibilityContext)
+// Module 15289 (QuestDockVisibilityContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext({ isRendered: false, isVisibleToUser: false });

@@ -1,15 +1,15 @@
-// === Module 8031: ConversationNavigatorHeader ===
+// === Module 8040: ConversationNavigatorHeader ===
 
-// Module 8031 (ConversationNavigatorHeader)
+// Module 8040 (ConversationNavigatorHeader)
 import nativeDefault from "native" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 4792 */;
+import useChannelNameDefault from "useChannelName" /* 4791 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = { flex: 1, paddingVertical: nativeDefault.space.PX_16, paddingRight: null, alignItems: "center", justifyContent: "center" };
   let num = 0;
@@ -35,6 +35,6 @@ export default function ConversationNavigatorHeader(channelId) {
   const obj = channelId(504);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" };
-  obj2.children = jsx(channelId(7969).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
+  obj2.children = jsx(channelId(7978).GenericHeaderTitle, { title: channelId.title, subtitle: useChannelNameDefault(stateFromStores, true), variant: "heading-lg/semibold", subtitleColor: "text-muted" });
   return <View style={tmp.container}>{null}</View>;
 };

@@ -1,8 +1,8 @@
-// === Module 8303: Constants ===
+// === Module 8312: Constants ===
 
-// Module 8303 (Constants)
+// Module 8312 (Constants)
 import Constants from "Constants" /* 1074 */;
-import BadgeId from "BadgeId" /* 8304 */;
+import BadgeId from "BadgeId" /* 8313 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

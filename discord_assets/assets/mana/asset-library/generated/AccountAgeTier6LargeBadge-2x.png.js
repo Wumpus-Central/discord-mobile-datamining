@@ -1,10 +1,10 @@
-// === Module 5803: ? ===
+// === Module 5804: ? ===
 
-// Module 5803
+// Module 5804
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier6LargeBadge-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/022fe8e5c41c33446db1c462bf932f7087b2f9c888df08184f06a62b1636af48.png";
+export default "https://cdn.discordapp.com/assets/content/6c5e972c28c202d609d3b46a1d1a0165f9be52360c247269a63f008264e43fa7.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/AccountAgeTier6LargeBadge-2x.png";
-export const metadata = { fileBytes: 5244 };
+export const metadata = { fileBytes: 5180 };

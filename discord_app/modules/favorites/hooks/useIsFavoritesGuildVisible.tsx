@@ -1,10 +1,10 @@
-// === Module 15421: useIsFavoritesGuildVisible ===
+// === Module 15437: useIsFavoritesGuildVisible ===
 
-// Module 15421 (useIsFavoritesGuildVisible)
+// Module 15437 (useIsFavoritesGuildVisible)
 import FavoritesUtils from "FavoritesUtils" /* 1983 */;
-import FavoritesHooks from "FavoritesHooks" /* 10355 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10369 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import FavoritesHooks from "FavoritesHooks" /* 10363 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10377 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
 
 require = fn;

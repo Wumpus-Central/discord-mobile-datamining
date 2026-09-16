@@ -1,7 +1,7 @@
-// === Module 8860: GameProfileSummary ===
+// === Module 8870: GameProfileSummary ===
 
-// Module 8860 (GameProfileSummary)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8812 */;
+// Module 8870 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_8 = createStyles.createStyles({ container: { flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSummary.tsx");

@@ -1,8 +1,8 @@
-// === Module 16088: WumpTrash ===
+// === Module 16108: WumpTrash ===
 
-// Module 16088 (WumpTrash)
-import shared from "shared" /* 4491 */;
-import _mod8352 from "module_8352" /* 8352 */;
+// Module 16108 (WumpTrash)
+import shared from "shared" /* 4489 */;
+import _mod8361 from "module_8361" /* 8361 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,35 +14,35 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/WumpTrash.tsx");
 
 export const getWumpTrashSource = function getWumpTrashSource(theme) {
-  return _mod8352.getIllustrationSource(theme, {
+  return _mod8361.getIllustrationSource(theme, {
     dark() {
-      return require("module_16089");
+      return require("module_16109");
     },
     darker() {
-      return require("module_16090");
+      return require("module_16110");
     }
   });
 };
 export const useWumpTrashSource = function useWumpTrashSource() {
   const obj = shared;
-  return _mod8352.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_16089");
+      return require("module_16109");
     },
     darker() {
-      return require("module_16090");
+      return require("module_16110");
     }
   });
 };
 export const WumpTrash = function WumpTrash(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8352.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_16089");
+      return require("module_16109");
     },
     darker() {
-      return require("module_16090");
+      return require("module_16110");
     }
   });
   const merged = Object.assign(arg0);

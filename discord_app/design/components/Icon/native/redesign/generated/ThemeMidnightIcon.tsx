@@ -1,9 +1,9 @@
-// === Module 15365: ThemeMidnightIcon ===
+// === Module 15381: ThemeMidnightIcon ===
 
-// Module 15365 (ThemeMidnightIcon)
+// Module 15381 (ThemeMidnightIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15366 from "module_15366" /* 15366 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod15382 from "module_15382" /* 15382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ThemeMidnightIcon = function ThemeMidnightIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15366, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15382, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

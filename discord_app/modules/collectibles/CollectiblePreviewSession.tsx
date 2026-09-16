@@ -1,6 +1,6 @@
-// === Module 11227: CollectiblePreviewSession ===
+// === Module 11241: CollectiblePreviewSession ===
 
-// Module 11227 (CollectiblePreviewSession)
+// Module 11241 (CollectiblePreviewSession)
 import size from "module_2" /* 2 */;
 
 let closure_0 = 0;

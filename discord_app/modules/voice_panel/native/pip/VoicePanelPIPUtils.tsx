@@ -1,23 +1,23 @@
-// === Module 17236: VoicePanelPIPUtils ===
+// === Module 17292: VoicePanelPIPUtils ===
 
-// Module 17236 (VoicePanelPIPUtils)
+// Module 17292 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5058 */;
-import participantHasVideo from "participantHasVideo" /* 9754 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 14078 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4655 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4661 */;
+import spring from "spring" /* 5059 */;
+import participantHasVideo from "participantHasVideo" /* 9762 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 14091 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4654 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4660 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(12407);
+const VoicePanelConstants = fn(12415);
 ({ SECONDARY_PIP_TOP_MARGIN: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelPIPConstants = fn(17237);
+const VoicePanelPIPConstants = fn(17293);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(4660).ParticipantTypes;
-const MorphablePanelConstants = fn(12408);
+const ParticipantTypes = fn(4659).ParticipantTypes;
+const MorphablePanelConstants = fn(12416);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 const set = new Set();
@@ -38,7 +38,7 @@ function layoutTransition(originX) {
   obj.initialValues = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;
 }
-layoutTransition.__closure = { withSpring: fn(5058).withSpring, PIP_LAYOUT_PHYSICS };
+layoutTransition.__closure = { withSpring: fn(5059).withSpring, PIP_LAYOUT_PHYSICS };
 layoutTransition.__workletHash = 16735009420384;
 layoutTransition.__initData = { code: "function layoutTransition_VoicePanelPIPUtilsTsx2(values){const{withSpring,PIP_LAYOUT_PHYSICS}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,PIP_LAYOUT_PHYSICS),originY:withSpring(values.targetOriginY,PIP_LAYOUT_PHYSICS),width:withSpring(values.targetWidth,PIP_LAYOUT_PHYSICS),height:withSpring(values.targetHeight,PIP_LAYOUT_PHYSICS)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}" };
 function getPIPWindowDimensions(width, left) {

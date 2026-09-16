@@ -1,18 +1,18 @@
-// === Module 7701: ConversationsStore ===
+// === Module 7704: ConversationsStore ===
 
-// Module 7701 (ConversationsStore)
+// Module 7704 (ConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1438 */;
-import ReactionUtils from "ReactionUtils" /* 4290 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4862 */;
+import ReactionUtils from "ReactionUtils" /* 4288 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4861 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 import UserStore from "UserStore" /* 1372 */;
-import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7702 */;
+import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7705 */;
 
 require = fn;
 function removePendingListFetch(channelId, requestKey) {
@@ -262,7 +262,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7703);
+const ConversationConstants = fn(7706);
 ({ CONVERSATION_COLORS: closure_9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: closure_11, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -533,7 +533,7 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7704).mapConversation);
+      const mapped = rawConversations.map(set(7707).mapConversation);
       const found = mapped.filter(set(1370).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

@@ -1,6 +1,6 @@
-// === Module 7797: activityBookmarkUtils ===
+// === Module 7800: activityBookmarkUtils ===
 
-// Module 7797 (activityBookmarkUtils)
+// Module 7800 (activityBookmarkUtils)
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 7321: hotspot/HotspotStore ===
+// === Module 7324: hotspot/HotspotStore ===
 
-// Module 7321 (hotspot/HotspotStore)
+// Module 7324 (hotspot/HotspotStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ConferenceModeConstants from "ConferenceModeConstants" /* 1081 */;
-import ProcessArgs2 from "ProcessArgs" /* 5225 */;
+import ProcessArgs2 from "ProcessArgs" /* 5226 */;
 import size from "module_2" /* 2 */;
 
 const CONFERENCE_MODE_ENABLED = ConferenceModeConstants.CONFERENCE_MODE_ENABLED;
@@ -50,8 +50,8 @@ prototype["hasHotspot"] = function hasHotspot(LIVE_STAGE_NOTIFICATION_BADGE) {
   }
   return tmp3;
 };
-prototype["hasHiddenHotspot"] = function hasHiddenHotspot(HUB_SECOND_EMAIL_CONNECTION_UPSELL) {
-  return set.has(HUB_SECOND_EMAIL_CONNECTION_UPSELL);
+prototype["hasHiddenHotspot"] = function hasHiddenHotspot(HUB_LINK_CHANNEL_NOTICE) {
+  return set.has(HUB_LINK_CHANNEL_NOTICE);
 };
 prototype["getHotspotOverride"] = function getHotspotOverride(arg0) {
   return hotspotOverrides[arg0];

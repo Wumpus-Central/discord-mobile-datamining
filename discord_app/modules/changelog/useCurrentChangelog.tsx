@@ -1,11 +1,11 @@
-// === Module 8200: useCurrentChangelog ===
+// === Module 8209: useCurrentChangelog ===
 
-// Module 8200 (useCurrentChangelog)
+// Module 8209 (useCurrentChangelog)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8201 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8210 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import ChangelogStore from "ChangelogStore" /* 4653 */;
+import ChangelogStore from "ChangelogStore" /* 4652 */;
 
 require = fn;
 function useChangelog(changelogId, stateFromStores) {

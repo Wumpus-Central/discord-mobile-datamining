@@ -1,9 +1,9 @@
-// === Module 7997: ExperimentEmbedUtils ===
+// === Module 8006: ExperimentEmbedUtils ===
 
-// Module 7997 (ExperimentEmbedUtils)
-import ExperimentManager from "ExperimentManager" /* 4560 */;
-import ExperimentUtilsDefault from "ExperimentUtils" /* 7998 */;
-import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7999 */;
+// Module 8006 (ExperimentEmbedUtils)
+import ExperimentManager from "ExperimentManager" /* 4558 */;
+import ExperimentUtilsDefault from "ExperimentUtils" /* 8007 */;
+import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 8008 */;
 import size from "module_2" /* 2 */;
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");

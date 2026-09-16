@@ -1,9 +1,9 @@
-// === Module 8564: VideoSelfieIcon ===
+// === Module 8573: VideoSelfieIcon ===
 
-// Module 8564 (VideoSelfieIcon)
+// Module 8573 (VideoSelfieIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8565 from "module_8565" /* 8565 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod8574 from "module_8574" /* 8574 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const VideoSelfieIcon = function VideoSelfieIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8565, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8574, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

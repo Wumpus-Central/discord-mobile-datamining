@@ -1,6 +1,6 @@
-// === Module 17090: ? ===
+// === Module 17146: ? ===
 
-// Module 17090
+// Module 17146
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/display_name_styles/dns_flywheel_halfsheet_animated_2x.png.js");

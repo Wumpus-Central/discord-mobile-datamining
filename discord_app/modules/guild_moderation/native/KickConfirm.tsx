@@ -1,8 +1,8 @@
-// === Module 11984: KickConfirm ===
+// === Module 11992: KickConfirm ===
 
-// Module 11984 (KickConfirm)
+// Module 11992 (KickConfirm)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5605 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5606 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, iconLabelBlock: null, iconStyles: null, redText: null, blurb: null, errorText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.iconLabelBlock = { marginTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16, alignItems: "center" };
@@ -61,7 +61,7 @@ export default noop.memo(function KickConfirm(arg0) {
       const obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj4.contentContainerStyle = obj5;
       const obj6 = { style: tmp.iconLabelBlock, children: null };
-      const obj7 = { style: tmp.iconStyles, source: require("module_11985"), resizeMode: "contain" };
+      const obj7 = { style: tmp.iconStyles, source: require("module_11993"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj7), , ];
       const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

@@ -1,6 +1,6 @@
-// === Module 8371: VideoBackgroundProfileFetchExperiment ===
+// === Module 8380: VideoBackgroundProfileFetchExperiment ===
 
-// Module 8371 (VideoBackgroundProfileFetchExperiment)
+// Module 8380 (VideoBackgroundProfileFetchExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

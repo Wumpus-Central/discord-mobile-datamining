@@ -1,21 +1,21 @@
-// === Module 11783: PublicGuildAnnouncementProfile ===
+// === Module 11791: PublicGuildAnnouncementProfile ===
 
-// Module 11783 (PublicGuildAnnouncementProfile)
+// Module 11791 (PublicGuildAnnouncementProfile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7257 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8142 */;
-import _modDef11784 from "module_11784" /* 11784 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7260 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8151 */;
+import _modDef11792 from "module_11792" /* 11792 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 obj2.avatar = size;
@@ -35,7 +35,7 @@ export default function PublicGuildAnnouncementProfile() {
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   const items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11784, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11792, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);

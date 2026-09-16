@@ -1,9 +1,9 @@
-// === Module 6324: LavaIllocon ===
+// === Module 6325: LavaIllocon ===
 
-// Module 6324 (LavaIllocon)
+// Module 6325 (LavaIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6325 from "module_6325" /* 6325 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6326 from "module_6326" /* 6326 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const LavaIllocon = function LavaIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6325 };
+  const obj2 = { uri: _modDef6326 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

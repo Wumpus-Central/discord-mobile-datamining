@@ -1,6 +1,6 @@
-// === Module 4261: getLocalizedLink ===
+// === Module 4259: getLocalizedLink ===
 
-// Module 4261 (getLocalizedLink)
+// Module 4259 (getLocalizedLink)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

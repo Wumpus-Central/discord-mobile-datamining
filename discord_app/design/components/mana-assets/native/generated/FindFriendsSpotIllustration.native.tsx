@@ -1,9 +1,9 @@
-// === Module 6100: FindFriendsSpotIllustration ===
+// === Module 6101: FindFriendsSpotIllustration ===
 
-// Module 6100 (FindFriendsSpotIllustration)
+// Module 6101 (FindFriendsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6101 from "module_6101" /* 6101 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6102 from "module_6102" /* 6102 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const FindFriendsSpotIllustration = function FindFriendsSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6101 };
+  const obj2 = { uri: _modDef6102 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

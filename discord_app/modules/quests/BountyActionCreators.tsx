@@ -1,18 +1,18 @@
-// === Module 11659: BountyActionCreators ===
+// === Module 11667: BountyActionCreators ===
 
-// Module 11659 (BountyActionCreators)
+// Module 11667 (BountyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import QuestTypes from "QuestTypes" /* 5532 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7568 */;
-import QuestDataUtils from "QuestDataUtils" /* 7804 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7826 */;
+import QuestTypes from "QuestTypes" /* 5533 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7571 */;
+import QuestDataUtils from "QuestDataUtils" /* 7807 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7805 */;
-import NetworkStore from "NetworkStore" /* 4688 */;
-import BountyStore from "BountyStore" /* 7807 */;
-import QuestStore from "QuestStore" /* 7808 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7808 */;
+import NetworkStore from "NetworkStore" /* 4687 */;
+import BountyStore from "BountyStore" /* 7810 */;
+import QuestStore from "QuestStore" /* 7811 */;
 
 require = fn;
 function fetchBountiesAndDispatch() {
@@ -101,9 +101,9 @@ let closure_12 = async function _fetchQuestHomeBounties(arg0) {
           c1 = 1;
           const obj4 = {
             value: fetchBountiesAndDispatch(tmp5, asyncGeneratorStep(async () => {
-                      await tmp2(7568).getSession();
+                      await tmp2(7571).getSession();
                       closure_128_0 = value;
-                      const orRefreshAdSession = tmp2(7826).getOrRefreshAdSession();
+                      const orRefreshAdSession = tmp2(7829).getOrRefreshAdSession();
                       const HTTP = tmp2(1271).HTTP;
                       const request = { url: constants.QUESTS_GET_DECISIONS, query: null, rejectWithError: false, context: null };
                       const obj7 = { placement: closure_129_0, client_ad_session_id: orRefreshAdSession.uuid, client_heartbeat_session_id: null, num_decisions_requested: 5 };

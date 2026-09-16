@@ -1,6 +1,6 @@
-// === Module 10926: WishlistRecommendationsStore ===
+// === Module 10939: WishlistRecommendationsStore ===
 
-// Module 10926 (WishlistRecommendationsStore)
+// Module 10939 (WishlistRecommendationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import LocaleStore from "LocaleStore" /* 2026 */;

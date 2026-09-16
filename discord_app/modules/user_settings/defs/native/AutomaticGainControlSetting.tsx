@@ -1,23 +1,23 @@
-// === Module 15353: AutomaticGainControlSetting ===
+// === Module 15369: AutomaticGainControlSetting ===
 
-// Module 15353 (AutomaticGainControlSetting)
+// Module 15369 (AutomaticGainControlSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 
 require = fn;
-const SettingBuilders = fn(11606);
+const SettingBuilders = fn(11614);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.cUMdH0);
   },
-  parent: fn(8082).MobileUserSettings.VOICE,
+  parent: fn(8091).MobileUserSettings.VOICE,
   useValue: function useAutomaticGainControlSettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
   },
-  onValueChange: fn(10124).handleAutomaticGainControlChange,
+  onValueChange: fn(10132).handleAutomaticGainControlChange,
   useDescription: function useAutomaticGainControlSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["6EjbvA"]);

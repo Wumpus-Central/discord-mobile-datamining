@@ -1,13 +1,13 @@
-// === Module 13279: FractionalNitroPreview ===
+// === Module 13290: FractionalNitroPreview ===
 
-// Module 13279 (FractionalNitroPreview)
+// Module 13290 (FractionalNitroPreview)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import LinearGradientDefault from "LinearGradient" /* 5071 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7240 */;
-import _modDef13280 from "module_13280" /* 13280 */;
-import NitroIconDefault from "NitroIcon" /* 13281 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import LinearGradientDefault from "LinearGradient" /* 5072 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7243 */;
+import _modDef13291 from "module_13291" /* 13291 */;
+import NitroIconDefault from "NitroIcon" /* 13292 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ const VerticalGradient = fn(1074).VerticalGradient;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.lg, overflow: "hidden", alignSelf: "center", gap: nativeDefault.space.PX_16 }, gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, headerImage: { width: 211, height: 157, resizeMode: "cover" }, nitroIconContainer: { alignSelf: "flex-start" }, benefits: null, benefitRow: null };
 let obj3 = { flexDirection: "column", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.lg, overflow: "hidden", alignSelf: "center", gap: nativeDefault.space.PX_16 };
 obj2.benefits = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_8 };
@@ -54,7 +54,7 @@ export const FractionalNitroPreview = function FractionalNitroPreview() {
   const obj8 = { uri: null };
   const obj4 = require("PremiumUtils");
   const obj6 = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
-  obj8.uri = _modDef13280;
+  obj8.uri = _modDef13291;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);

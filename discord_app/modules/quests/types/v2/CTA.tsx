@@ -1,6 +1,6 @@
-// === Module 7822: CTA ===
+// === Module 7825: CTA ===
 
-// Module 7822 (CTA)
+// Module 7825 (CTA)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/types/v2/CTA.tsx");

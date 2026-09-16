@@ -1,6 +1,6 @@
-// === Module 9646: getEmbeddedActivitiesManager ===
+// === Module 9657: getEmbeddedActivitiesManager ===
 
-// Module 9646 (getEmbeddedActivitiesManager)
+// Module 9657 (getEmbeddedActivitiesManager)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 7581: RTCBandwidthMonitor ===
+// === Module 7584: RTCBandwidthMonitor ===
 
-// Module 7581 (RTCBandwidthMonitor)
+// Module 7584 (RTCBandwidthMonitor)
 import _modDef12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

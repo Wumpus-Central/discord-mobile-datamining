@@ -1,15 +1,15 @@
-// === Module 12497: SearchTabsLayoutStore ===
+// === Module 12505: SearchTabsLayoutStore ===
 
-// Module 12497 (SearchTabsLayoutStore)
+// Module 12505 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SearchUtils from "SearchUtils" /* 12475 */;
+import SearchUtils from "SearchUtils" /* 12483 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import SearchMessageStore from "SearchMessageStore" /* 7388 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12498 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 12499 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12500 */;
-import SearchQueryStore from "SearchQueryStore" /* 12474 */;
+import SearchMessageStore from "SearchMessageStore" /* 7391 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12506 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12507 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12508 */;
+import SearchQueryStore from "SearchQueryStore" /* 12482 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -157,7 +157,7 @@ function computeLayoutForAll() {
   }
   return flag;
 }
-const SearchConstants = fn(7985);
+const SearchConstants = fn(7994);
 ({ SearchTabs: closure_9, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: c10, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_11 } = SearchConstants);
 let closure_12 = [];
 const map = new Map();

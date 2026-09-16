@@ -1,9 +1,9 @@
-// === Module 6531: ? ===
+// === Module 6534: ? ===
 
-// Module 6531
+// Module 6534
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconDefaultExample-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/6820e2499206d8acde78b5e4eb02a5ece9043f2de24e45d828ae381d00e58f01.png";
-export const metadata = { fileBytes: 27213 };
+export default "https://cdn.discordapp.com/assets/content/b3e0379314b4cfcba38ba88bbea73a293a96104caee441ded58bb305d8b13608.png";
+export const metadata = { fileBytes: 27671 };

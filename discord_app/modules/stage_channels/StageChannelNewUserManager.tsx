@@ -1,15 +1,15 @@
-// === Module 13063: StageChannelNewUserManager ===
+// === Module 13071: StageChannelNewUserManager ===
 
-// Module 13063 (StageChannelNewUserManager)
+// Module 13071 (StageChannelNewUserManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import StageChannelAlertActionCreatorsAll from "StageChannelAlertActionCreators" /* 13064 */;
+import StageChannelAlertActionCreatorsAll from "StageChannelAlertActionCreators" /* 13072 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5506 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5507 */;
 import LifecycleManager from "LifecycleManager" /* 1899 */;
 
 let require = fn;
-let closure_7 = fn(5499).STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY;
+let closure_7 = fn(5500).STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY;
 class StageChannelNewUserManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

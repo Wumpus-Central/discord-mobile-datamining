@@ -1,6 +1,6 @@
-// === Module 8852: GameProfileReviewUtils ===
+// === Module 8862: GameProfileReviewUtils ===
 
-// Module 8852 (GameProfileReviewUtils)
+// Module 8862 (GameProfileReviewUtils)
 import util from "util" /* 1115 */;
 import GameDetectionTypes from "GameDetectionTypes" /* 1935 */;
 import size from "module_2" /* 2 */;

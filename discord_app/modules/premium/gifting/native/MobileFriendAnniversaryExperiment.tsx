@@ -1,6 +1,6 @@
-// === Module 8189: MobileFriendAnniversaryExperiment ===
+// === Module 8198: MobileFriendAnniversaryExperiment ===
 
-// Module 8189 (MobileFriendAnniversaryExperiment)
+// Module 8198 (MobileFriendAnniversaryExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

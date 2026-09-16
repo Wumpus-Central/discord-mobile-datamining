@@ -1,14 +1,14 @@
-// === Module 8889: GameProfileHttpUtils ===
+// === Module 8900: GameProfileHttpUtils ===
 
-// Module 8889 (GameProfileHttpUtils)
+// Module 8900 (GameProfileHttpUtils)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import StoreUtils from "StoreUtils" /* 4881 */;
+import StoreUtils from "StoreUtils" /* 4880 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import GameProfileStore from "GameProfileStore" /* 8808 */;
+import GameProfileStore from "GameProfileStore" /* 8817 */;
 
 require = fn;
 let closure_8 = async function _getShopCollection() {
@@ -159,7 +159,7 @@ let closure_10 = async function _getGameAnnouncements() {
   })();
 };
 const Endpoints = fn(1074).Endpoints;
-let closure_7 = fn(8890).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_7 = fn(8901).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameProfileStore, {
   getQueryId(arg0, arg1) {

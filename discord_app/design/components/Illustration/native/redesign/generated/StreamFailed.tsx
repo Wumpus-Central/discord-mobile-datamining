@@ -1,8 +1,8 @@
-// === Module 9733: StreamFailed ===
+// === Module 13122: StreamFailed ===
 
-// Module 9733 (StreamFailed)
-import shared from "shared" /* 4491 */;
-import _mod8352 from "module_8352" /* 8352 */;
+// Module 13122 (StreamFailed)
+import shared from "shared" /* 4489 */;
+import _mod8361 from "module_8361" /* 8361 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,35 +14,35 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamFailed.tsx");
 
 export const getStreamFailedSource = function getStreamFailedSource(theme) {
-  return _mod8352.getIllustrationSource(theme, {
+  return _mod8361.getIllustrationSource(theme, {
     dark() {
-      return require("module_9734");
+      return require("module_13123");
     },
     darker() {
-      return require("module_9735");
+      return require("module_13124");
     }
   });
 };
 export const useStreamFailedSource = function useStreamFailedSource() {
   const obj = shared;
-  return _mod8352.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9734");
+      return require("module_13123");
     },
     darker() {
-      return require("module_9735");
+      return require("module_13124");
     }
   });
 };
 export const StreamFailed = function StreamFailed(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8352.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_9734");
+      return require("module_13123");
     },
     darker() {
-      return require("module_9735");
+      return require("module_13124");
     }
   });
   const merged = Object.assign(arg0);

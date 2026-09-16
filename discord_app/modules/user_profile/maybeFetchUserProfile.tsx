@@ -1,11 +1,11 @@
-// === Module 8307: maybeFetchUserProfile ===
+// === Module 8316: maybeFetchUserProfile ===
 
-// Module 8307 (maybeFetchUserProfile)
-import UserActionCreators from "UserActionCreators" /* 8301 */;
-import preloadUserBannerImageDefault from "preloadUserBannerImage" /* 8308 */;
+// Module 8316 (maybeFetchUserProfile)
+import UserActionCreators from "UserActionCreators" /* 8310 */;
+import preloadUserBannerImageDefault from "preloadUserBannerImage" /* 8317 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import UserProfileStore from "UserProfileStore" /* 7726 */;
+import UserProfileStore from "UserProfileStore" /* 7729 */;
 
 const require = globalThis.__r;
 
@@ -154,7 +154,7 @@ export default function maybeFetchUserProfile(id, guildIconURL, arg2) {
       obj5(573).wait(() => UserActionCreators.fetchProfile(closure_0, obj5, preloadUserBannerImageDefault));
       return Promise.resolve();
     } else {
-      const profile = require("UserActionCreators").fetchProfile(id, obj5, obj5(8308));
+      const profile = require("UserActionCreators").fetchProfile(id, obj5, obj5(8317));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

@@ -1,8 +1,8 @@
-// === Module 10810: gift_icon ===
+// === Module 10818: gift_icon ===
 
-// Module 10810 (gift_icon)
+// Module 10818 (gift_icon)
 import _mod1187 from "module_1187" /* 1187 */;
-import gradient from "gradient" /* 10811 */;
+import gradient from "gradient" /* 10819 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

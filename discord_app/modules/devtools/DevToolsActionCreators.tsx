@@ -1,8 +1,8 @@
-// === Module 15674: DevToolsActionCreators ===
+// === Module 15692: DevToolsActionCreators ===
 
-// Module 15674 (DevToolsActionCreators)
+// Module 15692 (DevToolsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7824 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7827 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/devtools/DevToolsActionCreators.tsx");

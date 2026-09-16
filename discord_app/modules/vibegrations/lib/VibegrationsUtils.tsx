@@ -1,12 +1,12 @@
-// === Module 7351: VibegrationsUtils ===
+// === Module 7354: VibegrationsUtils ===
 
-// Module 7351 (VibegrationsUtils)
-import VibegrationsTypes from "VibegrationsTypes" /* 7352 */;
-import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 7353 */;
+// Module 7354 (VibegrationsUtils)
+import VibegrationsTypes from "VibegrationsTypes" /* 7355 */;
+import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 7356 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -101,8 +101,8 @@ export const findVibegrationChannelId = function findVibegrationChannelId(guildI
   }
   return null;
 };
-export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(guildId, location) {
-  let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location });
+export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(guildId, VibegrationsRemixSheet) {
+  let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location: VibegrationsRemixSheet });
   if (result) {
     const features = guildId.features;
     result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);

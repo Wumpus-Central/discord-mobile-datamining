@@ -1,10 +1,10 @@
-// === Module 17534: HolidayEventsConfig ===
+// === Module 17590: HolidayEventsConfig ===
 
-// Module 17534 (HolidayEventsConfig)
+// Module 17590 (HolidayEventsConfig)
 import util from "util" /* 1115 */;
-import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17535 */;
-import _modDef17536 from "module_17536" /* 17536 */;
-import _modDef17537 from "module_17537" /* 17537 */;
+import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17591 */;
+import _modDef17592 from "module_17592" /* 17592 */;
+import _modDef17593 from "module_17593" /* 17593 */;
 
 require = fn;
 const obj = {
@@ -18,9 +18,9 @@ const obj = {
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(10036).Soundpacks.HALLOWEEN,
+  soundpack: fn(10044).Soundpacks.HALLOWEEN,
   soundpackLabel: fn(1115).t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef17536, webmLight: _modDef17537 },
+  appSpinnerSources: { webmDark: _modDef17592, webmLight: _modDef17593 },
   coachmarkDismissibleContent: fn(1944).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2025,
   coachmarkBackgroundColor: "#1170ed",
   getLoadingTips() {

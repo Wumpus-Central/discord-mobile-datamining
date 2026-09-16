@@ -1,6 +1,6 @@
-// === Module 8336: useAvatarDecoration ===
+// === Module 8345: useAvatarDecoration ===
 
-// Module 8336 (useAvatarDecoration)
+// Module 8345 (useAvatarDecoration)
 import _slicedToArray from "module_32" /* 32 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 

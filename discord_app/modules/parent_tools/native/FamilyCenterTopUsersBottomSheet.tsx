@@ -1,15 +1,15 @@
-// === Module 14997: FamilyCenterTopUsersBottomSheet ===
+// === Module 15013: FamilyCenterTopUsersBottomSheet ===
 
-// Module 14997 (FamilyCenterTopUsersBottomSheet)
+// Module 15013 (FamilyCenterTopUsersBottomSheet)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import _modDef2397 from "module_2397" /* 2397 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import TableRow from "TableRow" /* 5690 */;
-import TableRowGroup from "TableRowGroup" /* 5772 */;
-import ActionSheet from "ActionSheet" /* 7304 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7699 */;
+import UserUtilsDefault from "UserUtils" /* 4482 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import TableRow from "TableRow" /* 5691 */;
+import TableRowGroup from "TableRowGroup" /* 5773 */;
+import ActionSheet from "ActionSheet" /* 7307 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7702 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -31,7 +31,7 @@ function UserRow(userActivity) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");

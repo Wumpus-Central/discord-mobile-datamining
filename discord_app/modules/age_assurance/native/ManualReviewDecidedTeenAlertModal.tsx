@@ -1,10 +1,10 @@
-// === Module 8711: ManualReviewDecidedTeenAlertModal ===
+// === Module 8720: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8711 (ManualReviewDecidedTeenAlertModal)
+// Module 8720 (ManualReviewDecidedTeenAlertModal)
 import util from "util" /* 1115 */;
 import _modDef2979 from "module_2979" /* 2979 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import AlertModal from "AlertModal" /* 4989 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import AlertModal from "AlertModal" /* 4988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default function ManualReviewDecidedTeenAlertModal() {
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(8532);
+          const obj = closure_1_1(8541);
           const intl = closure_1_0(1115).intl;
           return obj.openUrl(closure_1_1(2025).getArticleURL(intl.string(closure_1_1(2979).agiNYw)));
         },

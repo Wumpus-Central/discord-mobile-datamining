@@ -1,15 +1,15 @@
-// === Module 9621: useShouldForcePipOrientation ===
+// === Module 9632: useShouldForcePipOrientation ===
 
-// Module 9621 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9608 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9622 */;
+// Module 9632 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9619 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9633 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4655 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4654 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const OrientationLockState = fn(1921).OrientationLockState;
-const CallConstants = fn(4660);
+const CallConstants = fn(4659);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -78,17 +78,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_7(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8453).OrientationType.LANDSCAPE;
+        return tmp2(8462).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8453).OrientationType;
+    OrientationType = tmp2(8462).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(8453).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8462).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

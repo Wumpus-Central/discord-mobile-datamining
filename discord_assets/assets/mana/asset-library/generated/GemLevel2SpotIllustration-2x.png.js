@@ -1,9 +1,9 @@
-// === Module 6219: ? ===
+// === Module 6220: ? ===
 
-// Module 6219
+// Module 6220
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemLevel2SpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/fb0a61785415dd96d70d83fd49c17b69f973cd641073e5fa04cf318e12acd7e3.png";
-export const metadata = { fileBytes: 41334 };
+export default "https://cdn.discordapp.com/assets/content/f6e950bd067de9abae8febd6a6a4e840aa3d837a46753addc4d7cd957c9998c3.png";
+export const metadata = { fileBytes: 40192 };

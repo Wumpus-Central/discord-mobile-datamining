@@ -1,8 +1,8 @@
-// === Module 7103: SettingSearchSessionAnalyticsManager ===
+// === Module 7106: SettingSearchSessionAnalyticsManager ===
 
-// Module 7103 (SettingSearchSessionAnalyticsManager)
+// Module 7106 (SettingSearchSessionAnalyticsManager)
 import v1 from "v1" /* 1255 */;
-import Tracking from "Tracking" /* 7104 */;
+import Tracking from "Tracking" /* 7107 */;
 import size from "module_2" /* 2 */;
 
 class SettingSearchSessionAnalyticsManager {

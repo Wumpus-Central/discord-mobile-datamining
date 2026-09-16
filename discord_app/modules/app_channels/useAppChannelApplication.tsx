@@ -1,8 +1,8 @@
-// === Module 11745: useAppChannelApplication ===
+// === Module 11753: useAppChannelApplication ===
 
-// Module 11745 (useAppChannelApplication)
+// Module 11753 (useAppChannelApplication)
 import Constants from "Constants" /* 1074 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7270 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7273 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

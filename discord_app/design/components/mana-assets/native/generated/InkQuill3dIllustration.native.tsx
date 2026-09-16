@@ -1,9 +1,9 @@
-// === Module 6314: InkQuill3dIllustration ===
+// === Module 6315: InkQuill3dIllustration ===
 
-// Module 6314 (InkQuill3dIllustration)
+// Module 6315 (InkQuill3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6315 from "module_6315" /* 6315 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6316 from "module_6316" /* 6316 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const InkQuill3dIllustration = function InkQuill3dIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6315 };
+  const obj2 = { uri: _modDef6316 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

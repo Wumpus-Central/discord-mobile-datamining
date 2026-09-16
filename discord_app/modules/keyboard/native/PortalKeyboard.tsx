@@ -1,8 +1,8 @@
-// === Module 4511: PortalKeyboard ===
+// === Module 4510: PortalKeyboard ===
 
-// Module 4511 (PortalKeyboard)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
-import Portal from "Portal" /* 4512 */;
+// Module 4510 (PortalKeyboard)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4495 */;
+import Portal from "Portal" /* 4511 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

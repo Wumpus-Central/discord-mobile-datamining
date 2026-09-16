@@ -1,8 +1,8 @@
-// === Module 10492: EmojiPickerCategoriesUnicodeShortcutItem ===
+// === Module 10500: EmojiPickerCategoriesUnicodeShortcutItem ===
 
-// Module 10492 (EmojiPickerCategoriesUnicodeShortcutItem)
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9627 */;
+// Module 10500 (EmojiPickerCategoriesUnicodeShortcutItem)
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9638 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ EXPRESSION_FOOTER_HEIGHT: metroRequire, NODE_SIZE } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { itemInner: null, fadedItemOpacity: { opacity: 0.5 } };
 let size = { justifyContent: "center", alignItems: "center", height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2 };
 obj2.itemInner = size;

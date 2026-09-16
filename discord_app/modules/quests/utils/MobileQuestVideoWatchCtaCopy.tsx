@@ -1,10 +1,10 @@
-// === Module 11651: MobileQuestVideoWatchCtaCopy ===
+// === Module 11659: MobileQuestVideoWatchCtaCopy ===
 
-// Module 11651 (MobileQuestVideoWatchCtaCopy)
+// Module 11659 (MobileQuestVideoWatchCtaCopy)
 import util from "util" /* 1115 */;
-import QuestConstants from "QuestConstants" /* 5529 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7829 */;
-import VQRemainingTimeTruncationExperimentDefault from "VQRemainingTimeTruncationExperiment" /* 11652 */;
+import QuestConstants from "QuestConstants" /* 5530 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7832 */;
+import VQRemainingTimeTruncationExperimentDefault from "VQRemainingTimeTruncationExperiment" /* 11660 */;
 import size from "module_2" /* 2 */;
 
 function formatWatchRemainingDurationShort(questTaskDetails, truncate) {

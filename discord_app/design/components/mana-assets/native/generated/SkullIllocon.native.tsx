@@ -1,9 +1,9 @@
-// === Module 6566: SkullIllocon ===
+// === Module 6569: SkullIllocon ===
 
-// Module 6566 (SkullIllocon)
+// Module 6569 (SkullIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6567 from "module_6567" /* 6567 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6570 from "module_6570" /* 6570 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const SkullIllocon = function SkullIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6567 };
+  const obj2 = { uri: _modDef6570 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

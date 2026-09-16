@@ -1,12 +1,12 @@
-// === Module 17322: useConsoleConnectingInfo ===
+// === Module 17378: useConsoleConnectingInfo ===
 
-// Module 17322 (useConsoleConnectingInfo)
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9347 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9595 */;
-import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 17323 */;
-import getConsoleColorDefault from "getConsoleColor" /* 17325 */;
-import GameConsoleStore from "GameConsoleStore" /* 4656 */;
-import SessionsStore from "SessionsStore" /* 4657 */;
+// Module 17378 (useConsoleConnectingInfo)
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9358 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9606 */;
+import useShouldDisplayCancelConsoleTransferDefault from "useShouldDisplayCancelConsoleTransfer" /* 17379 */;
+import getConsoleColorDefault from "getConsoleColor" /* 17381 */;
+import GameConsoleStore from "GameConsoleStore" /* 4655 */;
+import SessionsStore from "SessionsStore" /* 4656 */;
 
 const require = globalThis.__r;
 
@@ -63,7 +63,7 @@ export default function useConsoleConnectingInfo(arg0) {
   obj3.isConnectingOrConnectedToConsole = channelId2 === arg0 || channelId === arg0;
   obj3.icon = getConsoleIconDefault(str);
   const tmp9 = useShouldDisplayCancelConsoleTransferDefault(stateFromStores);
-  obj3.text = tmp5(17324).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
+  obj3.text = tmp5(17380).getConsoleConnectingText(stateFromStores1, stateFromStores, channelId === arg0);
   obj3.color = getConsoleColorDefault(str);
   obj3.displayCancel = tmp9;
   return obj3;

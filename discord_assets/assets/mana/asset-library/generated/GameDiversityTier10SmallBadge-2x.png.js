@@ -1,10 +1,10 @@
-// === Module 6157: ? ===
+// === Module 6158: ? ===
 
-// Module 6157
+// Module 6158
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier10SmallBadge-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/1379fbe9aa75453bbd6978ea05869a5a36dcff15b3a7039d29868fd7f12e9588.png";
+export default "https://cdn.discordapp.com/assets/content/21417ad965e9406bee097c1ef4a5f8f5e028831187cf9539df8a2d7cf733be0b.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/GameDiversityTier10SmallBadge-2x.png";
-export const metadata = { fileBytes: 1913 };
+export const metadata = { fileBytes: 1935 };

@@ -1,9 +1,9 @@
-// === Module 6645: ? ===
+// === Module 6648: ? ===
 
-// Module 6645
+// Module 6648
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TeaKettleSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/db0a4a1653f93a7555c1cc10d3bae4eae1bf8ad18840d0990155c3a00b0149a2.png";
-export const metadata = { fileBytes: 31201 };
+export default "https://cdn.discordapp.com/assets/content/ac765e3c8830e98cc975434f713eed74f7c273ee1880c00774cc744a77056823.png";
+export const metadata = { fileBytes: 31288 };

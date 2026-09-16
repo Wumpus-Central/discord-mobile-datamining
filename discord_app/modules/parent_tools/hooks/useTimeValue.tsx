@@ -1,6 +1,6 @@
-// === Module 15035: useTimeValue ===
+// === Module 15051: useTimeValue ===
 
-// Module 15035 (useTimeValue)
+// Module 15051 (useTimeValue)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);
@@ -19,4 +19,4 @@ export default function useTimeValue(arg0) {
     return tmp2;
   });
 };
-export const timeToMinutes = fn(10214).timeToMinutes;
+export const timeToMinutes = fn(10222).timeToMinutes;

@@ -1,7 +1,7 @@
-// === Module 14792: useHighlightSettingItem ===
+// === Module 14808: useHighlightSettingItem ===
 
-// Module 14792 (useHighlightSettingItem)
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14788 */;
+// Module 14808 (useHighlightSettingItem)
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14804 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");

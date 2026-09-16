@@ -1,6 +1,6 @@
-// === Module 17035: MessageRequestStoreUtils ===
+// === Module 17092: MessageRequestStoreUtils ===
 
-// Module 17035 (MessageRequestStoreUtils)
+// Module 17092 (MessageRequestStoreUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

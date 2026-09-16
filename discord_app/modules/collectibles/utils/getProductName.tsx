@@ -1,9 +1,9 @@
-// === Module 8992: getProductName ===
+// === Module 9003: getProductName ===
 
-// Module 8992 (getProductName)
+// Module 9003 (getProductName)
 import util from "util" /* 1115 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7660 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7663 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");

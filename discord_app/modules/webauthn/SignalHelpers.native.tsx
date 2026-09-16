@@ -1,6 +1,6 @@
-// === Module 6703: SignalHelpers ===
+// === Module 6706: SignalHelpers ===
 
-// Module 6703 (SignalHelpers)
+// Module 6706 (SignalHelpers)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

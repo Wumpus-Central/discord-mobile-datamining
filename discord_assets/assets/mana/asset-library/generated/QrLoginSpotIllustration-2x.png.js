@@ -1,9 +1,9 @@
-// === Module 6481: ? ===
+// === Module 6484: ? ===
 
-// Module 6481
+// Module 6484
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QrLoginSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/34ae2896f537d7877956fcd2bd9dac3797b960658dc525de6a8216c33f82d565.png";
-export const metadata = { fileBytes: 67818 };
+export default "https://cdn.discordapp.com/assets/content/0887af0758ece297974fbfa6f51aee7d7050d2f1eda47fdd0753291030713076.png";
+export const metadata = { fileBytes: 68415 };

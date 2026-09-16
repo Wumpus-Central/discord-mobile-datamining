@@ -1,6 +1,6 @@
-// === Module 15036: RestrictedScheduleActionCreators ===
+// === Module 15052: RestrictedScheduleActionCreators ===
 
-// Module 15036 (RestrictedScheduleActionCreators)
+// Module 15052 (RestrictedScheduleActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

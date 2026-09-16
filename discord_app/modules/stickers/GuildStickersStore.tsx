@@ -1,8 +1,8 @@
-// === Module 5588: GuildStickersStore ===
+// === Module 5589: GuildStickersStore ===
 
-// Module 5588 (GuildStickersStore)
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
-import StickersTypes from "StickersTypes" /* 5353 */;
+// Module 5589 (GuildStickersStore)
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4290 */;
+import StickersTypes from "StickersTypes" /* 5354 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
@@ -24,12 +24,12 @@ function parseServerGuildStickers(stickers) {
 }
 function deriveStickerMetadata(arg0, tags) {
   const items = [];
-  const obj = { type: items(5353).StickerMetadataTypes.STICKER_NAME, value: null };
+  const obj = { type: items(5354).StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = tags.name.trim();
   obj.value = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != tags.tags) {
-    const obj2 = { type: tmp(5353).StickerMetadataTypes.TAG, value: null };
+    const obj2 = { type: tmp(5354).StickerMetadataTypes.TAG, value: null };
     const trimmed1 = str.trim();
     obj2.value = trimmed1.toLocaleLowerCase();
     items.push(obj2);
@@ -42,13 +42,13 @@ function deriveStickerMetadata(arg0, tags) {
         tmp5 = "" !== toLocaleLowerCaseResult;
       }
       if (tmp5) {
-        const obj3 = { type: tmp(5353).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
+        const obj3 = { type: tmp(5354).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
         items.push(obj3);
       }
     }
     const byName = UnicodeEmojisDefault.getByName(str);
     if (null != byName) {
-      const obj4 = { type: tmp(5353).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
+      const obj4 = { type: tmp(5354).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
       items.push(obj4);
       byName.forEachDiversity((surrogates) => items.push({ type: StickersTypes.StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
     }

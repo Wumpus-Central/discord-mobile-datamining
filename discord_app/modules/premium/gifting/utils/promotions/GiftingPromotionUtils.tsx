@@ -1,14 +1,14 @@
-// === Module 10866: GiftingPromotionUtils ===
+// === Module 10874: GiftingPromotionUtils ===
 
-// Module 10866 (GiftingPromotionUtils)
+// Module 10874 (GiftingPromotionUtils)
 import dismissible_content from "dismissible_content" /* 1944 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
-import PremiumGiftingGogoPromotionExperiment2 from "PremiumGiftingGogoPromotionExperiment" /* 10873 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10874 */;
-import MarketingComponentType from "MarketingComponentType" /* 10875 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4458 */;
+import PremiumGiftingGogoPromotionExperiment2 from "PremiumGiftingGogoPromotionExperiment" /* 10881 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10882 */;
+import MarketingComponentType from "MarketingComponentType" /* 10883 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10798 */;
+import PromotionsStore from "PromotionsStore" /* 10806 */;
 
 require = fn;
 const SubscriptionPlans = fn(1374).SubscriptionPlans;
@@ -22,7 +22,7 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
   let items = [hasPreviouslyFetched];
   stateFromStoresArray = first(504).useStateFromStoresArray(items, () => hasPreviouslyFetched.getGiftPromotionRewardSkuIds());
   const obj = first(504);
-  const fetchPurchases = first(10867).useFetchPurchases();
+  const fetchPurchases = first(10875).useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
@@ -43,9 +43,9 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       }
     }
   }, items1);
-  const someResult = stateFromStoresArray.some((item) => item === first(10871).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
-  const obj3 = first(10867);
-  const fetchSummer2026GogoPromoEligibility = first(10872).useFetchSummer2026GogoPromoEligibility(someResult);
+  const someResult = stateFromStoresArray.some((item) => item === first(10879).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
+  const obj3 = first(10875);
+  const fetchSummer2026GogoPromoEligibility = first(10880).useFetchSummer2026GogoPromoEligibility(someResult);
   const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
   const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
   const items2 = [first, isEligible, hasFetched, someResult];

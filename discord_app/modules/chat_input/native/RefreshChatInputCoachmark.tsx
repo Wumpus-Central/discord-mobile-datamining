@@ -1,9 +1,9 @@
-// === Module 12119: RefreshChatInputCoachmark ===
+// === Module 12127: RefreshChatInputCoachmark ===
 
-// Module 12119 (RefreshChatInputCoachmark)
+// Module 12127 (RefreshChatInputCoachmark)
 import util from "util" /* 1115 */;
-import native from "native" /* 4350 */;
-import useCoachmark from "useCoachmark" /* 11266 */;
+import native from "native" /* 4348 */;
+import useCoachmark from "useCoachmark" /* 11280 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

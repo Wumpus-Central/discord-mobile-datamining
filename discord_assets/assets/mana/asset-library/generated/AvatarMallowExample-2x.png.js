@@ -1,9 +1,9 @@
-// === Module 5875: ? ===
+// === Module 5876: ? ===
 
-// Module 5875
+// Module 5876
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarMallowExample-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/2b52747b118de5ad8b65f2994a6a6dcfd6403f0f500833c4df5bcf4c6db69cfe.png";
-export const metadata = { fileBytes: 23664 };
+export default "https://cdn.discordapp.com/assets/content/5ac01786ab8537c57dd38ff6693718dd0f2ee81d7eb324608c3f7bdf3bef8c14.png";
+export const metadata = { fileBytes: 23865 };

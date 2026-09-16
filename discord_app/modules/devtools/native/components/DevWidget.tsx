@@ -1,15 +1,15 @@
-// === Module 16035: DevWidget ===
+// === Module 16055: DevWidget ===
 
-// Module 16035 (DevWidget)
+// Module 16055 (DevWidget)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import spring from "spring" /* 5058 */;
-import springPresets from "springPresets" /* 5062 */;
-import Pressables from "Pressables" /* 5207 */;
-import StaffBadgeIcon from "StaffBadgeIcon" /* 15675 */;
-import VEVOODefault from "VEVOO" /* 16036 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import spring from "spring" /* 5059 */;
+import springPresets from "springPresets" /* 5063 */;
+import Pressables from "Pressables" /* 5208 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 15693 */;
+import VEVOODefault from "VEVOO" /* 16056 */;
 import noop from "module_19" /* 19 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7824 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7827 */;
 
 const require = globalThis.__r;
 
@@ -130,7 +130,7 @@ function DraggableContainer(children) {
 const DEV_WIDGET_SIZE = fn(574).DEV_WIDGET_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: nativeDefault.radii.xl };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);

@@ -1,12 +1,12 @@
-// === Module 7504: LibraryApplicationStore ===
+// === Module 7507: LibraryApplicationStore ===
 
-// Module 7504 (LibraryApplicationStore)
+// Module 7507 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7506 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7505 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7509 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7508 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

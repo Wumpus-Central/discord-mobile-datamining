@@ -1,6 +1,6 @@
-// === Module 16267: MobileBoostProgressBarExperiment ===
+// === Module 16287: MobileBoostProgressBarExperiment ===
 
-// Module 16267 (MobileBoostProgressBarExperiment)
+// Module 16287 (MobileBoostProgressBarExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

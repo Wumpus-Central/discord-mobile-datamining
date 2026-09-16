@@ -1,9 +1,9 @@
-// === Module 5891: ? ===
+// === Module 5892: ? ===
 
-// Module 5891
+// Module 5892
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BadgePacksAbstractUI-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/ca3d42166b3b951389490f5ae20ce8cf29723929a4e7c6abb7b23a504ed311ea.png";
-export const metadata = { fileBytes: 27558 };
+export default "https://cdn.discordapp.com/assets/content/fcf436d3e42c1a2d29a512a93ce1526e74497ce358c4fc1c0b14c7c117d2bcdb.png";
+export const metadata = { fileBytes: 27645 };

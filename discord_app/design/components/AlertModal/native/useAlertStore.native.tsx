@@ -1,7 +1,7 @@
-// === Module 4985: useAlertStore ===
+// === Module 4984: useAlertStore ===
 
-// Module 4985 (useAlertStore)
-import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4988 */;
+// Module 4984 (useAlertStore)
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4987 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(4986)();
+    arr4(4985)();
   }
   const obj = first(1248);
   tmp4 = 0 === tmp[1].length && first.length > 0;
@@ -69,7 +69,7 @@ export const dismissAlert = function dismissAlert(c6) {
       }
     });
     if (tmp2) {
-      found(4986)();
+      found(4985)();
     }
     let obj = require("ReactBatchUpdates");
   }

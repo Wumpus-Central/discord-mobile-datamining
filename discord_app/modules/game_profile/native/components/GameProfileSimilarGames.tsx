@@ -1,15 +1,15 @@
-// === Module 9007: GameProfileSimilarGames ===
+// === Module 9018: GameProfileSimilarGames ===
 
-// Module 9007 (GameProfileSimilarGames)
+// Module 9018 (GameProfileSimilarGames)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8806 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8812 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 8863 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 8880 */;
-import _mod9006 from "module_9006" /* 9006 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 9008 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8815 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8821 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 8873 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 8891 */;
+import _mod9017 from "module_9017" /* 9017 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 9019 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,13 +24,13 @@ function ListPadding() {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_8 = fn(8840).MOBILE_GAME_PROFILE_MAX_WIDTH;
-fn(8890).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_8 = fn(8849).MOBILE_GAME_PROFILE_MAX_WIDTH;
+fn(8901).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 }, header: null, card: null, spacer: null, listPadding: null, coverArtContainer: null, coverArt: null, coverArtPlaceholder: null, coverArtFallback: null, skeletonCards: null, skeletonArtwork: null };
 let obj3 = { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 };
 obj.header = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -140,7 +140,7 @@ let closure_20 = noop.memo((cardWidth) => {
   const obj = { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null };
   const obj2 = { contentContainerStyle: tmp.skeletonCards, children: Array.from({ length: 4 }, (arg0, arg1) => closure_2_10(closure_19, { animationDelayMs: arg1 * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS, cardWidth }, arg1)) };
   obj.children = closure_10(GameProfileSkeletonCardRowDefault, obj2);
-  return closure_10(cardWidth(8862).GameProfileSectionSkeleton, obj);
+  return closure_10(cardWidth(8872).GameProfileSectionSkeleton, obj);
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSimilarGames.tsx");
@@ -163,7 +163,7 @@ export default function GameProfileSimilarGames(arg0) {
     obj3.title = intl.string(util.t["6rLyQB"]);
     const obj5 = {
       horizontal: true,
-      renderScrollComponent: tmp2(8848),
+      renderScrollComponent: tmp2(8858),
       data: similarGames,
       renderItem(game) {
           return closure_2_10(closure_18, { game: game.item, trackAction, cardWidth });
@@ -175,9 +175,9 @@ export default function GameProfileSimilarGames(arg0) {
       decelerationRate: "fast",
       snapToInterval: result + PX_12
     };
-    obj3.children = closure_10(_mod9006.FlashList, obj5);
-    tmp7 = closure_10(tmp2(8862), obj3);
-    const tmp2Result = tmp2(8862);
+    obj3.children = closure_10(_mod9017.FlashList, obj5);
+    tmp7 = closure_10(tmp2(8872), obj3);
+    const tmp2Result = tmp2(8872);
   }
   const tmp4 = useSimilarGamesDefault(gameId);
 };

@@ -1,18 +1,18 @@
-// === Module 15615: CommunityActivityAlertsSetting ===
+// === Module 15632: CommunityActivityAlertsSetting ===
 
-// Module 15615 (CommunityActivityAlertsSetting)
+// Module 15632 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10211 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10219 */;
 
 require = fn;
-const SettingBuilders = fn(11606);
+const SettingBuilders = fn(11614);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(8082).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8091).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);

@@ -1,22 +1,22 @@
-// === Module 17345: VoicePanelVideoButton ===
+// === Module 17401: VoicePanelVideoButton ===
 
-// Module 17345 (VoicePanelVideoButton)
+// Module 17401 (VoicePanelVideoButton)
 import util from "util" /* 1115 */;
-import native from "native" /* 4350 */;
-import useAlertStore from "useAlertStore" /* 4985 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7831 */;
-import CallsUtils from "CallsUtils" /* 9214 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9717 */;
-import VideoIcon from "VideoIcon" /* 10240 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 13182 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13399 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17346 */;
+import native from "native" /* 4348 */;
+import useAlertStore from "useAlertStore" /* 4984 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7834 */;
+import CallsUtils from "CallsUtils" /* 9225 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9728 */;
+import VideoIcon from "VideoIcon" /* 10248 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 13193 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13410 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17402 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9618 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9629 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 
 require = fn;
 function VideoButtonRive(arg0) {
@@ -38,7 +38,7 @@ function VideoButtonRive(arg0) {
   return <View style={{ width: 24, height: 24, pointerEvents: "none" }}>{null}</View>;
 }
 const View = fn(17).View;
-const Features = fn(4664).Features;
+const Features = fn(4663).Features;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");

@@ -1,7 +1,7 @@
-// === Module 8917: StorefrontPromotionRecord ===
+// === Module 8928: StorefrontPromotionRecord ===
 
-// Module 8917 (StorefrontPromotionRecord)
-import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 8918 */;
+// Module 8928 (StorefrontPromotionRecord)
+import StorefrontCollectiblesTypes from "StorefrontCollectiblesTypes" /* 8929 */;
 import _slicedToArray from "module_32" /* 32 */;
 import Record from "Record" /* 1387 */;
 
@@ -85,7 +85,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       let obj71 = require;
       let tmp29 = dependencyMap;
       if (collectibles.type !== StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM) {
-        if (collectibles.type === obj71(8918).StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
+        if (collectibles.type === obj71(8929).StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
           const reward = collectibles.reward;
           let nagbar;
           if (reward != tmp14) {
@@ -120,11 +120,11 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           }
           if (tmp14 == nagbar) {
             if (tmp14 == offer_notice) {
-              const obj5 = { type: obj71(8918).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+              const obj5 = { type: obj71(8929).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
               let obj6 = obj5;
             }
           }
-          obj6 = { type: obj71(8918).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+          obj6 = { type: obj71(8929).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
           let tmp36;
           if (tmp14 != nagbar) {
             const header_text = nagbar.header_text;
@@ -166,7 +166,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           obj6.reward = obj10;
         }
       }
-      const obj14 = { type: obj71(8918).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: obj71(8918).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
+      const obj14 = { type: obj71(8929).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM, subtype: obj71(8929).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER, collectionId: collectibles.collection_id, shopHome: null, indexPage: null, shared: null };
       const obj15 = { title: collectibles.shop_home.title, description: collectibles.shop_home.description, rewardStates: null, style: null };
       const reward_states = collectibles.shop_home.reward_states;
       const obj16 = { inProgress: null, earned: null, consumed: null };

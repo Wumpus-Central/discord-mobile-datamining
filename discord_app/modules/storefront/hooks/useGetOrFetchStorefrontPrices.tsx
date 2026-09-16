@@ -1,7 +1,7 @@
-// === Module 8913: useGetOrFetchStorefrontPrices ===
+// === Module 8924: useGetOrFetchStorefrontPrices ===
 
-// Module 8913 (useGetOrFetchStorefrontPrices)
-import StorefrontActionCreators from "StorefrontActionCreators" /* 8914 */;
+// Module 8924 (useGetOrFetchStorefrontPrices)
+import StorefrontActionCreators from "StorefrontActionCreators" /* 8925 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

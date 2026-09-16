@@ -1,18 +1,17 @@
-// === Module 8863: GameProfileSkeleton ===
+// === Module 8873: GameProfileSkeleton ===
 
-// Module 8863 (GameProfileSkeleton)
+// Module 8873 (GameProfileSkeleton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import timing from "timing" /* 4640 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4374 */;
+import GameProfileSkeletonPulse from "GameProfileSkeletonPulse" /* 8874 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
 
 require = fn;
 class GameProfileSkeletonPlaceholder {
   constructor(arg0) {
     obj = { style: null };
     items = [, ];
-    items[0] = closure_7().placeholder;
+    items[0] = closure_5().placeholder;
     items[1] = global.style;
     obj.style = items;
     return jsx(View, obj);
@@ -20,19 +19,18 @@ class GameProfileSkeletonPlaceholder {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { placeholder: { backgroundColor: nativeDefault.colors.ICON_MUTED }, button: null, buttonSm: null, buttonMd: null };
-let obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
+const obj3 = { backgroundColor: nativeDefault.colors.ICON_MUTED };
 obj2.button = { borderRadius: nativeDefault.radii.sm };
 let size = { width: 92, height: nativeDefault.space.PX_32, flexShrink: 0 };
 obj2.buttonSm = size;
 const size1 = { width: "100%", height: nativeDefault.space.PX_40 };
 obj2.buttonMd = size1;
-const React5 = createStyles.createStyles(obj2);
-let closure_8 = { sm: "buttonSm", md: "buttonMd" };
-const __initData = { code: "function GameProfileSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+const hasOwnProperty = createStyles.createStyles(obj2);
+let closure_6 = { sm: "buttonSm", md: "buttonMd" };
 size = fn(2);
-let result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSkeleton.tsx");
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileSkeleton.tsx");
 
 export default GameProfileSkeletonPlaceholder;
 export const SKELETON_CARD_ANIMATION_DELAY_MS = 150;
@@ -41,51 +39,21 @@ export const GameProfileSkeletonContainer = function GameProfileSkeletonContaine
   if (num === undefined) {
     num = 0;
   }
-  let sharedValue;
   ({ children, style } = animationDelayMs);
-  const items = [AccessibilityStore];
-  const stateFromStores = num(sharedValue[6]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj = num(sharedValue[6]);
-  const tmp = num;
-  let num2 = 0.05;
-  if (stateFromStores) {
-    num2 = 0.1;
-  }
-  sharedValue = num(sharedValue[7]).useSharedValue(num2);
-  const items1 = [num, sharedValue, stateFromStores];
-  const effect = noop.useEffect(() => {
-    ReanimatedRexport.cancelAnimation(sharedValue);
-    if (stateFromStores) {
-      const result = set(0.1);
-    } else {
-      const result1 = set(0.05);
-      const tmpResult = ReanimatedRexport;
-      const tmpResult3 = ReanimatedRexport;
-      const result2 = sharedValue.set(tmpResult.withDelay(num, tmpResult3.withRepeat(timing.withTiming(0.1, { duration: 650 }), -1, true)));
-      return () => num(sharedValue[7]).cancelAnimation(closure_1_2);
-    }
-  }, items1);
-  const obj2 = num(sharedValue[7]);
-  const fn = function _() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 16774017266233;
-  fn.__initData = __initData;
-  const animatedStyle = tmp(sharedValue[7]).useAnimatedStyle(fn);
-  const obj3 = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
-  const items2 = [style, animatedStyle];
-  obj3.style = items2;
-  return jsx(stateFromStores(sharedValue[7]).View, { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children });
+  const skeletonPulseStyle = GameProfileSkeletonPulse.useSkeletonPulseStyle(num);
+  const obj2 = { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
+  const items = [style, skeletonPulseStyle];
+  obj2.style = items;
+  return jsx(ReanimatedRexportDefault.View, { style: null, accessible: false, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children });
 };
 export const GameProfileSkeletonButton = function GameProfileSkeletonButton(size) {
   let str = size.size;
   if (str === undefined) {
     str = "md";
   }
-  const tmp = closure_7();
+  const tmp = closure_5();
   const obj = { style: null };
-  const items = [tmp.button, tmp[closure_8[str]], size.style];
+  const items = [tmp.button, tmp[closure_6[str]], size.style];
   obj.style = items;
   return <GameProfileSkeletonPlaceholder style={null} />;
 };

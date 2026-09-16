@@ -1,10 +1,10 @@
-// === Module 6599: ? ===
+// === Module 6602: ? ===
 
-// Module 6599
+// Module 6602
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StreamingTier1LargeBadge-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/ae013b88eb5558b1cf59483d473538ebd54251e9ea379c8ab64d058b85502bad.png";
+export default "https://cdn.discordapp.com/assets/content/9a6d9385f9f20894f7f0e93f047bfa76f2ff1e60e4b4b44c814b0b9e7663d22b.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/StreamingTier1LargeBadge-2x.png";
 export const metadata = { fileBytes: 3432 };

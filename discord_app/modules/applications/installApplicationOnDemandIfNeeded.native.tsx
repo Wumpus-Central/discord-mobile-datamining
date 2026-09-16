@@ -1,9 +1,9 @@
-// === Module 9704: installApplicationOnDemandIfNeeded ===
+// === Module 9715: installApplicationOnDemandIfNeeded ===
 
-// Module 9704 (installApplicationOnDemandIfNeeded)
+// Module 9715 (installApplicationOnDemandIfNeeded)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 1919 */;
-import ApplicationStore from "ApplicationStore" /* 4867 */;
+import ApplicationStore from "ApplicationStore" /* 4866 */;
 
 const require = fn;
 let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
@@ -104,9 +104,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(4505).dismissKeyboard();
-          let obj = closure_1_0(4505);
-          closure_1_0(9705).openOAuth2Modal({
+          closure_1_0(4504).dismissKeyboard();
+          let obj = closure_1_0(4504);
+          closure_1_0(9716).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,

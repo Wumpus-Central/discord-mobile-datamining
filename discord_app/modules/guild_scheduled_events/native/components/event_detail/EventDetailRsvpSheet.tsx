@@ -1,19 +1,19 @@
-// === Module 9933: EventDetailRsvpSheet ===
+// === Module 9941: EventDetailRsvpSheet ===
 
-// Module 9933 (EventDetailRsvpSheet)
+// Module 9941 (EventDetailRsvpSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import BottomSheetModal from "BottomSheetModal" /* 6732 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8299 */;
-import StageSparkleDefault from "StageSparkle" /* 8528 */;
-import Form from "Form" /* 8719 */;
-import _modDef9934 from "module_9934" /* 9934 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import BottomSheetModal from "BottomSheetModal" /* 6735 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8308 */;
+import StageSparkleDefault from "StageSparkle" /* 8537 */;
+import Form from "Form" /* 8728 */;
+import _modDef9942 from "module_9942" /* 9942 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4679 */;
+import PresenceStore from "PresenceStore" /* 4678 */;
 import UserStore from "UserStore" /* 1372 */;
-import TextStyles from "TextStyles" /* 5609 */;
+import TextStyles from "TextStyles" /* 5610 */;
 
 require = fn;
 function EmptyDisplay(arg0) {
@@ -21,7 +21,7 @@ function EmptyDisplay(arg0) {
   const obj = { style: null, children: null };
   const items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  const obj2 = { icon: _modDef9934 };
+  const obj2 = { icon: _modDef9942 };
   const items1 = [React5(StageSparkleDefault, obj2), children];
   obj.children = items1;
   return React6(View, obj);
@@ -46,7 +46,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
-  const obj3 = { source: _modDef9934, style: tmp.remainingUsersIcon };
+  const obj3 = { source: _modDef9942, style: tmp.remainingUsersIcon };
   obj2.children = React5(FastImageDefault, obj3);
   obj.leading = React5(View, obj2);
   const intl = util.intl;
@@ -214,7 +214,7 @@ const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { staticMessageContentContainer: { flex: 1, padding: 16 }, userList: { paddingTop: 16 }, userListRow: { paddingVertical: 8 }, userName: { color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 }, emptyDisplayContainer: { alignItems: "center", justifyContent: "center", minHeight: 200 }, staticMessageContent: { height: "100%" }, emptyDisplayTitle: null, remainingUsersIcon: null, remainingUsersIconContainer: null };
 let obj4 = { paddingTop: 24 };
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 20, { marginBottom: 8 }));
@@ -229,7 +229,7 @@ const memoResult = noop.memo((eventUser) => {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = closure_9();
-  analyticsLocations = analyticsLocations(7269)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7272)().analyticsLocations;
   const items = [UserStore];
   const stateFromStores = eventUser(504).useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
   const obj = eventUser(504);
@@ -252,16 +252,16 @@ const memoResult = noop.memo((eventUser) => {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = tmp2(4484).getName(eventUser.user);
-    const tmp2Result2 = tmp2(4484);
+    nick = tmp2(4482).getName(eventUser.user);
+    const tmp2Result2 = tmp2(4482);
   }
   obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
-  obj3.label = closure_7(analyticsLocations(9935), obj6);
+  obj3.label = closure_7(analyticsLocations(9943), obj6);
   obj3.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8719).FormRow, obj3, eventUser.user_id);
+  return closure_7(eventUser(8728).FormRow, obj3, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 size = fn(2);

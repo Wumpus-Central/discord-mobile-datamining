@@ -1,8 +1,8 @@
-// === Module 7482: canChannelUseSoundboard ===
+// === Module 7485: canChannelUseSoundboard ===
 
-// Module 7482 (canChannelUseSoundboard)
+// Module 7485 (canChannelUseSoundboard)
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
 const require = globalThis.__r;

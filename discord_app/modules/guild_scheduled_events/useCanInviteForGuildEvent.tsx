@@ -1,13 +1,13 @@
-// === Module 9905: useCanInviteForGuildEvent ===
+// === Module 9913: useCanInviteForGuildEvent ===
 
-// Module 9905 (useCanInviteForGuildEvent)
-import PermissionUtilsAll from "PermissionUtils" /* 4283 */;
-import canViewInviteModal from "canViewInviteModal" /* 9906 */;
+// Module 9913 (useCanInviteForGuildEvent)
+import PermissionUtilsAll from "PermissionUtils" /* 4281 */;
+import canViewInviteModal from "canViewInviteModal" /* 9914 */;
 import StageInstanceStore from "StageInstanceStore" /* 1963 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 
 const require = globalThis.__r;
 
@@ -67,7 +67,7 @@ function isGuildEventInvitable(guildEvent) {
     return canViewInviteModalResult;
   }
 }
-const isGuildEventEnded = fn(7633).isGuildEventEnded;
+const isGuildEventEnded = fn(7636).isGuildEventEnded;
 const constants = fn(1964).GuildScheduledEventEntityTypes;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);

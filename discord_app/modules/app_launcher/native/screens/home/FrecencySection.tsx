@@ -1,22 +1,22 @@
-// === Module 12186: FrecencySection ===
+// === Module 12194: FrecencySection ===
 
-// Module 12186 (FrecencySection)
+// Module 12194 (FrecencySection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import timing from "timing" /* 4640 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9421 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9541 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11292 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12188 */;
-import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12189 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4374 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import timing from "timing" /* 4639 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4818 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9432 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9552 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11306 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12196 */;
+import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12197 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import FrecencySectionStore from "FrecencySectionStore" /* 12187 */;
+import FrecencySectionStore from "FrecencySectionStore" /* 12195 */;
 
 const require = globalThis.__r;
 
@@ -105,7 +105,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12185).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12193).getAppLauncherIconSource(app.section.application);
     let obj = { style: disabled ? tmp.appContainerDisabled : tmp.appContainer, disabled, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     const application = app.section.application;
     let name;
@@ -126,22 +126,22 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(5672), obj2);
+      tmp3 = closure_11(onAppSelected(5673), obj2);
     }
     const items = [tmp3, ];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12194).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(12202).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_12(app(5207).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(5208).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const FrecencySectionSelection = fn(12187).FrecencySectionSelection;
+const FrecencySectionSelection = fn(12195).FrecencySectionSelection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_16 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, header: null, scrollView: null, scrollViewContentContainer: null, contextMenuIcon: null, appContainer: null, appContainerDisabled: null, commandContainer: null, appIcon: null, loadingCommandIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, submittingOverlay: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

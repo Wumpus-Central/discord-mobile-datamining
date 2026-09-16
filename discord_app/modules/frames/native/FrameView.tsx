@@ -1,13 +1,13 @@
-// === Module 16758: FrameView ===
+// === Module 16815: FrameView ===
 
-// Module 16758 (FrameView)
+// Module 16815 (FrameView)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9700 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16759 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9711 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16816 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9642 */;
+import FramesStore from "FramesStore" /* 9653 */;
 
 require = fn;
 function FrameViewInner(frame) {
@@ -71,7 +71,7 @@ function FrameViewInner(frame) {
   }} applicationId={frame.applicationId} frameId={frame.id} activityUrl={frame.data.url} queryParams={null} onLoadError={null} allowPopups={null} referrerPolicy="origin" isPipOrGridMode={null} webViewKey={null} safeAreasConfig={null} />;
   return jsx(frame(setIsResetting[10]).BaseActivityView, { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null });
 }
-const FramesConstants = fn(9643);
+const FramesConstants = fn(9654);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const ActivityPlatform = fn(1921).ActivityPlatform;
 const jsx = fn(21).jsx;

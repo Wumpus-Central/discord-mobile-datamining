@@ -1,9 +1,9 @@
-// === Module 5780: AccountAgeTier10SmallBadge ===
+// === Module 5781: AccountAgeTier10SmallBadge ===
 
-// Module 5780 (AccountAgeTier10SmallBadge)
+// Module 5781 (AccountAgeTier10SmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef5781 from "module_5781" /* 5781 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef5782 from "module_5782" /* 5782 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AccountAgeTier10SmallBadge = function AccountAgeTier10SmallBadge(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5781 };
+  const obj2 = { uri: _modDef5782 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

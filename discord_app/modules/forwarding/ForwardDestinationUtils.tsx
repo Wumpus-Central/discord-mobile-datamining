@@ -1,15 +1,15 @@
-// === Module 11818: ForwardDestinationUtils ===
+// === Module 11826: ForwardDestinationUtils ===
 
-// Module 11818 (ForwardDestinationUtils)
+// Module 11826 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import StickersUtils from "StickersUtils" /* 4978 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7793 */;
+import StickersUtils from "StickersUtils" /* 4977 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7796 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5587 */;
+import StickersStore from "StickersStore" /* 5588 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(11118).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(11132).getChannelIdFromDestinationId);
   found = mapped.find(found(1370).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
@@ -63,7 +63,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp) {
-          tmp11(4850);
+          tmp11(4849);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp11(1115).intl;
@@ -90,9 +90,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj4.label = intl3.string(tmp11(1115).t.Wr4RIX);
                 return obj4;
               }
-              tmp11Result6 = tmp11(4976);
+              tmp11Result6 = tmp11(4975);
             }
-            tmp11Result5 = tmp11(4976);
+            tmp11Result5 = tmp11(4975);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -103,12 +103,12 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj5.label = intl4.string(tmp11(1115).t.Wr4RIX);
               return obj5;
             }
-            tmp11Result7 = tmp11(4976);
+            tmp11Result7 = tmp11(4975);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp11Result8 = tmp11(4978);
-          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp11(4978).getMessageStickers(components), 0));
+          const tmp11Result8 = tmp11(4977);
+          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp11(4977).getMessageStickers(components), 0));
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
               if (items.some((id) => {
@@ -140,7 +140,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4978).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4977).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");
@@ -170,8 +170,8 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
         if (null != user) {
           nickname = nickname.getNickname(user.id);
           if (nickname == null) {
-            nickname = closure_1_1(4484).getName(user);
-            const obj2 = closure_1_1(4484);
+            nickname = closure_1_1(4482).getName(user);
+            const obj2 = closure_1_1(4482);
           }
           tmp13 = nickname;
         }
@@ -180,7 +180,7 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
         channel = channel.getChannel(id);
         let channelName = null;
         if (null != channel) {
-          const obj = closure_1_0(4792);
+          const obj = closure_1_0(4791);
           channelName = obj.computeChannelName(channel, user, nickname, true);
         }
         return channelName;

@@ -1,6 +1,6 @@
-// === Module 14162: queryAudioEffects ===
+// === Module 14175: queryAudioEffects ===
 
-// Module 14162 (queryAudioEffects)
+// Module 14175 (queryAudioEffects)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

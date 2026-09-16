@@ -1,8 +1,8 @@
-// === Module 11175: PremiumWishlistItemCard ===
+// === Module 11189: PremiumWishlistItemCard ===
 
-// Module 11175 (PremiumWishlistItemCard)
-import SKUPreview from "SKUPreview" /* 8901 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8902 */;
+// Module 11189 (PremiumWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 8912 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

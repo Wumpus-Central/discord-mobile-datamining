@@ -1,16 +1,16 @@
-// === Module 11215: PremiumGiftingPromotionSuccessActions ===
+// === Module 11229: PremiumGiftingPromotionSuccessActions ===
 
-// Module 11215 (PremiumGiftingPromotionSuccessActions)
+// Module 11229 (PremiumGiftingPromotionSuccessActions)
 import nativeDefault from "native" /* 576 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10795 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11216 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10803 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11230 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 }, promoDetails: null };
 let obj3 = { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.promoDetails = { alignSelf: "stretch", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -19,70 +19,85 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
 
 export default function PremiumGiftingPromotionSuccessActions(purchase) {
-  let onClose;
-  let navigation;
+  purchase = purchase.purchase;
+  let prePurchaseGiftingBadgeProgress;
   let onCancel;
   let tmp = closure_7();
-  const nativeGiftContext = onClose(navigation[5]).useNativeGiftContext();
-  onClose = nativeGiftContext.onClose;
-  const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
-  let obj = onClose(navigation[5]);
-  navigation = onClose(navigation[6]).useNavigation();
-  const GiftingBadgeExperiment = onClose(navigation[7]).GiftingBadgeExperiment;
+  const nativeGiftContext = purchase(prePurchaseGiftingBadgeProgress[5]).useNativeGiftContext();
+  const onClose = nativeGiftContext.onClose;
+  prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  ({ allRewards, claimableRewards } = nativeGiftContext);
+  let obj = purchase(prePurchaseGiftingBadgeProgress[5]);
+  const navigation = purchase(prePurchaseGiftingBadgeProgress[6]).useNavigation();
+  const GiftingBadgeExperiment = purchase(prePurchaseGiftingBadgeProgress[7]).GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftingPromotionSuccessActions" }).enabled;
-  let obj2 = onClose(navigation[6]);
-  const fetchCollectiblesProduct = onClose(navigation[8]).useFetchCollectiblesProduct(purchase.purchase.skuId);
+  let obj2 = purchase(prePurchaseGiftingBadgeProgress[6]);
+  const fetchCollectiblesProduct = purchase(prePurchaseGiftingBadgeProgress[8]).useFetchCollectiblesProduct(purchase.skuId);
   const product = fetchCollectiblesProduct.product;
-  c4 = product;
-  let tmp12Result = null != product;
-  if (tmp12Result) {
-    tmp12Result = product.items.length > 0;
+  c5 = product;
+  let tmp7 = null != product;
+  if (tmp7) {
+    tmp7 = product.items.length > 0;
   }
-  const items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
-  onCancel = enabled.useCallback(() => {
-    let tmp = enabled;
-    if (enabled) {
-      tmp = null != prePurchaseGiftingBadgeProgress;
-    }
-    if (tmp) {
-      const obj = { currentProgress: prePurchaseGiftingBadgeProgress };
-      navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
-    }
-  }, items);
-  const items1 = [product, onClose, onCancel, enabled, prePurchaseGiftingBadgeProgress, navigation];
-  const obj4 = { style: tmp.container, children: null };
-  const callback1 = enabled.useCallback(() => {
-    if (null != c4) {
-      const obj3 = { product: tmp, onCancel };
-      ProductPurchaseSuccessActionCreatorsDefault.open(obj3);
-    } else {
-      if (enabled) {
-        if (null != prePurchaseGiftingBadgeProgress) {
-          const obj = { currentProgress: tmp3 };
-          navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
+  if (claimableRewards != null) {
+    const found = claimableRewards.filter((item) => item !== purchase.skuId);
+  }
+  if (null != allRewards) {
+    if (allRewards.length > 0) {
+      if (null != found) {
+        if (0 === found.length) {
+          const intl2 = tmp2(tmp3[9]).intl;
+          const obj4 = { count: allRewards.length };
+          let formatToPlainStringResult = intl2.formatToPlainString(onClose(tmp3[10]).cMHedL, obj4);
+          let tmp9 = onClose;
         }
+        const items = [enabled, prePurchaseGiftingBadgeProgress, navigation];
+        onCancel = navigation.useCallback(() => {
+          let tmp = enabled;
+          if (enabled) {
+            tmp = null != prePurchaseGiftingBadgeProgress;
+          }
+          if (tmp) {
+            const obj = { currentProgress: prePurchaseGiftingBadgeProgress };
+            navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
+          }
+        }, items);
+        const items1 = [product, onClose, onCancel, enabled, prePurchaseGiftingBadgeProgress, navigation];
+        const obj5 = { style: tmp.container, children: null };
+        const callback1 = navigation.useCallback(() => {
+          if (null != c5) {
+            const obj3 = { product: tmp, onCancel };
+            ProductPurchaseSuccessActionCreatorsDefault.open(obj3);
+          } else {
+            if (enabled) {
+              if (null != prePurchaseGiftingBadgeProgress) {
+                const obj = { currentProgress: tmp3 };
+                navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
+              }
+            }
+            onClose();
+          }
+        }, items1);
+        if (tmp7) {
+          const obj6 = { style: tmp.promoDetails, product, title: null, subtitle: null };
+          const intl3 = tmp2(tmp3[9]).intl;
+          obj6.title = intl3.string(tmp9(tmp3[10]).WvAqZA);
+          obj6.subtitle = formatToPlainStringResult;
+          tmp7 = c5(tmp2(tmp3[13]).PremiumGiftPromotionCollectibleRewardDetails, obj6);
+        }
+        const items2 = [tmp7, ];
+        const obj7 = { grow: true, text: null, loading: null, onPress: null };
+        const intl4 = tmp2(tmp3[9]).intl;
+        obj7.text = intl4.string(tmp2(tmp3[9]).t.kMYVwv);
+        obj7.loading = fetchCollectiblesProduct.isFetching;
+        obj7.onPress = callback1;
+        items2[1] = c5(tmp2(tmp3[14]).Button, obj7);
+        obj5.children = items2;
+        return onCancel(enabled, obj5);
       }
-      onClose();
     }
-  }, items1);
-  if (tmp12Result) {
-    const obj5 = { style: tmp.promoDetails, product, title: null, subtitle: null };
-    const intl = tmp2(tmp3[12]).intl;
-    obj5.title = intl.string(prePurchaseGiftingBadgeProgress(tmp3[13]).XeLTZl);
-    let name;
-    if (product != null) {
-      name = product.name;
-    }
-    obj5.subtitle = name;
-    tmp12Result = onCancel(tmp2(tmp3[11]).PremiumGiftPromotionCollectibleRewardDetails, obj5);
   }
-  const items2 = [tmp12Result, ];
-  const obj6 = { grow: true, text: null, loading: null, onPress: null };
-  const intl2 = tmp2(tmp3[12]).intl;
-  obj6.text = intl2.string(onClose(navigation[12]).t.kMYVwv);
-  obj6.loading = fetchCollectiblesProduct.isFetching;
-  obj6.onPress = callback1;
-  items2[1] = onCancel(onClose(navigation[14]).Button, obj6);
-  obj4.children = items2;
-  return closure_6(c4, obj4);
+  const intl = tmp2(tmp3[9]).intl;
+  formatToPlainStringResult = intl.string(onClose(tmp3[10])["/8znyU"]);
+  tmp9 = onClose;
 };

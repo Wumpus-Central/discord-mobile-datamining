@@ -1,6 +1,6 @@
-// === Module 7264: LayerContext ===
+// === Module 7267: LayerContext ===
 
-// Module 7264 (LayerContext)
+// Module 7267 (LayerContext)
 import noop from "module_19" /* 19 */;
 
 class LayerContextManager {

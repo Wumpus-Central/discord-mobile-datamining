@@ -1,23 +1,23 @@
-// === Module 16195: HappeningNowCardEmbeddedActivity ===
+// === Module 16215: HappeningNowCardEmbeddedActivity ===
 
-// Module 16195 (HappeningNowCardEmbeddedActivity)
+// Module 16215 (HappeningNowCardEmbeddedActivity)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15390);
+const HappeningNowConstants = fn(15406);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { content: { flexShrink: 1, gap: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 }, activityBackground: null, cardTitle: null };
 let size = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.activityBackground = size;
@@ -100,12 +100,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj2.highlighted_user_ids = items1;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    asyncRequireImpl(9668, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(9679, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(9668, dependencyMap.paths);
+    const promise = asyncRequireImpl(9679, dependencyMap.paths);
   }, items3);
   context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   cardKey.useRef(cardKey);

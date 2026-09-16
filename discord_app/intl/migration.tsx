@@ -1,6 +1,6 @@
-// === Module 17517: intl/migration ===
+// === Module 17573: intl/migration ===
 
-// Module 17517 (intl/migration)
+// Module 17573 (intl/migration)
 import util from "util" /* 1115 */;
 import _mod1154 from "module_1154" /* 1154 */;
 import size from "module_2" /* 2 */;

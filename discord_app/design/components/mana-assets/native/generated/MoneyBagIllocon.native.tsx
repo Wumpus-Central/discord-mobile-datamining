@@ -1,9 +1,9 @@
-// === Module 6350: MoneyBagIllocon ===
+// === Module 6353: MoneyBagIllocon ===
 
-// Module 6350 (MoneyBagIllocon)
+// Module 6353 (MoneyBagIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6351 from "module_6351" /* 6351 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6354 from "module_6354" /* 6354 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const MoneyBagIllocon = function MoneyBagIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6351 };
+  const obj2 = { uri: _modDef6354 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

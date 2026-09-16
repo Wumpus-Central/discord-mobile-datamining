@@ -1,16 +1,16 @@
-// === Module 14974: FamilyCenterInlineWarningNotice ===
+// === Module 14990: FamilyCenterInlineWarningNotice ===
 
-// Module 14974 (FamilyCenterInlineWarningNotice)
+// Module 14990 (FamilyCenterInlineWarningNotice)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import WarningIcon from "WarningIcon" /* 8714 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import WarningIcon from "WarningIcon" /* 8723 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING }, text: null };
 const obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
 obj2.text = { flex: 1, paddingRight: nativeDefault.space.PX_8 };

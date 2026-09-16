@@ -1,8 +1,8 @@
-// === Module 10961: UnifiedGiftModalDetailsScreen ===
+// === Module 10974: UnifiedGiftModalDetailsScreen ===
 
-// Module 10961 (UnifiedGiftModalDetailsScreen)
+// Module 10974 (UnifiedGiftModalDetailsScreen)
 import nativeDefault from "native" /* 576 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10960 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10973 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { container: { flex: 1, paddingTop: nativeDefault.space.PX_12, alignItems: "stretch" }, scrollView: null, sectionHeader: null };
 let obj3 = { flex: 1, paddingTop: nativeDefault.space.PX_12, alignItems: "stretch" };
 obj.scrollView = { paddingBottom: nativeDefault.space.PX_24 };

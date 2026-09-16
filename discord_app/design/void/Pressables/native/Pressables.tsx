@@ -1,9 +1,9 @@
-// === Module 5207: Pressables ===
+// === Module 5208: Pressables ===
 
-// Module 5207 (Pressables)
+// Module 5208 (Pressables)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import StyleSheetUtilsDefault from "StyleSheetUtils" /* 5208 */;
+import StyleSheetUtilsDefault from "StyleSheetUtils" /* 5209 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -90,10 +90,10 @@ function PressableBase(androidRippleConfig) {
   }, items1)} style={memo} ref={innerRef} />;
 }
 const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5068).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5069).IOS_POINTER_STYLE;
 const getThemedRippleConfig = fn(1181).getThemedRippleConfig;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { pressedHighlight: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED } };
 let closure_8 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };

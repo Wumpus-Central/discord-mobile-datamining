@@ -1,9 +1,9 @@
-// === Module 17348: useSoundboardConfig ===
+// === Module 17404: useSoundboardConfig ===
 
-// Module 17348 (useSoundboardConfig)
-import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7482 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17186 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17208 */;
+// Module 17404 (useSoundboardConfig)
+import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7485 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17242 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17264 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
@@ -22,7 +22,6 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
   let obj = require("initialize");
   const items = [MediaEngineStore];
   const stateFromStores = obj.useStateFromStores(items, () => deaf.isDeaf());
-  let obj2 = require("DismissibleContentUnsafeUtils");
   if (tmp2) {
     if (obj.VOICE_CONTROLS === analyticsSource) {
       let flag = true;
@@ -40,19 +39,18 @@ export default function useSoundboardConfig(channelId, analyticsSource) {
       const result = soundboard_SoundboardActionCreators.showSoundboardSoundPickerActionSheet(obj2);
     }
   }, items1);
-  const obj3 = { visible: tmp2, handlePress: callback, disabled: null, disabledAccessibilityHint: null, showIndicator: null };
-  let tmp8 = stateFromStores;
+  let obj2 = { visible: tmp2, handlePress: callback, disabled: null, disabledAccessibilityHint: null };
+  let tmp7 = stateFromStores;
   if (!stateFromStores) {
-    tmp8 = !noop.useMemo(() => canChannelUseSoundboardDefault(ChannelStore.getChannel(closure_0)), items2);
+    tmp7 = !noop.useMemo(() => canChannelUseSoundboardDefault(ChannelStore.getChannel(closure_0)), items2);
   }
-  obj3.disabled = tmp8;
+  obj2.disabled = tmp7;
   let stringResult;
   if (stateFromStores) {
     const intl = tmp3(1115).intl;
     stringResult = intl.string(tmp3(1115).t.X1lQli);
   }
-  obj3.disabledAccessibilityHint = stringResult;
-  obj3.showIndicator = !require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
-  return obj3;
+  obj2.disabledAccessibilityHint = stringResult;
+  return obj2;
 };
 export { SoundboardButtonLocation };

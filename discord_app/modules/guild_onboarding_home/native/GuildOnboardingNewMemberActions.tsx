@@ -1,17 +1,17 @@
-// === Module 16678: GuildOnboardingNewMemberActions ===
+// === Module 16698: GuildOnboardingNewMemberActions ===
 
-// Module 16678 (GuildOnboardingNewMemberActions)
+// Module 16698 (GuildOnboardingNewMemberActions)
 import nativeDefault from "native" /* 576 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12419 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12427 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5544 */;
+import EmojiStore from "EmojiStore" /* 5545 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4826 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4827 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4825 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4826 */;
 
 require = fn;
 function MemberActionRow(channelId) {
@@ -107,10 +107,10 @@ function MemberActionRow(channelId) {
 const View = fn(17).View;
 const Permissions = fn(1074).Permissions;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
-const GuildMemberFlags = fn(4265).GuildMemberFlags;
+const GuildMemberFlags = fn(4263).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { actionsContainer: { paddingHorizontal: 12 }, actionsHeader: { display: "flex", marginBottom: 16 }, actionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center" }, channelNameContainer: { flex: 1, marginHorizontal: 8 }, icon: null, emoji: null, textEmoji: null, emojiPlaceholder: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.xs };
 obj2.icon = size;

@@ -1,22 +1,22 @@
-// === Module 14749: GuildProfileEditForm ===
+// === Module 14765: GuildProfileEditForm ===
 
-// Module 14749 (GuildProfileEditForm)
+// Module 14765 (GuildProfileEditForm)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7269 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8284 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8286 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9445 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9494 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9524 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 14689 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4295 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7272 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8293 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8295 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9456 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9505 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9535 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 14705 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import UserProfileStore from "UserProfileStore" /* 7726 */;
+import UserProfileStore from "UserProfileStore" /* 7729 */;
 
 require = fn;
 function EditGuildProfileBanner(user) {
@@ -36,7 +36,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       const obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(14690, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(14706, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -63,12 +63,12 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1115).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(7269).AnalyticsLocationProvider, obj2);
+  return closure_17(user(7272).AnalyticsLocationProvider, obj2);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7315).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7318).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_11, AnalyticsSections } = Constants);
 ({ DISPLAY_NAME_MAX_LENGTH: map1, PRONOUNS_MAX_LENGTH: closure_14, UpsellTypes: closure_15, AnalyticsPages } = Constants);

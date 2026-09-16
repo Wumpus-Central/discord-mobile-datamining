@@ -1,15 +1,15 @@
-// === Module 15450: TypingIndicatorSetting ===
+// === Module 15466: TypingIndicatorSetting ===
 
-// Module 15450 (TypingIndicatorSetting)
+// Module 15466 (TypingIndicatorSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
-import _modDef3595 from "module_3595" /* 3595 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12101 */;
-import ChatDotsIcon from "ChatDotsIcon" /* 15451 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 15502 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14816 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
+import _modDef3593 from "module_3593" /* 3593 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 12109 */;
+import ChatDotsIcon from "ChatDotsIcon" /* 15467 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 15518 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14832 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ const dismissibleBadgeRouteProps = DismissibleBadgeUtils.createDismissibleBadgeR
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3595["pT+BVM"]);
+    return intl.string(_modDef3593["pT+BVM"]);
   },
   parent: null,
   IconComponent: ChatDotsIcon.ChatDotsIcon,

@@ -1,11 +1,11 @@
-// === Module 16192: HappeningNowAvatarStack ===
+// === Module 16212: HappeningNowAvatarStack ===
 
-// Module 16192 (HappeningNowAvatarStack)
+// Module 16212 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import spring from "spring" /* 5058 */;
-import ClipView from "ClipView" /* 8943 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import spring from "spring" /* 5059 */;
+import ClipView from "ClipView" /* 8954 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
@@ -15,11 +15,11 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(13165).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(13176).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 createStyles.createStyles((arg0, marginLeft) => {
   const obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 }, avatarBubbles: { display: "flex", flexDirection: "row" }, avatars: { display: "flex", flexDirection: "row" }, shiftedAvatar: { marginLeft: -marginLeft }, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };

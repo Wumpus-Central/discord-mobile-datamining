@@ -1,10 +1,10 @@
-// === Module 5841: ? ===
+// === Module 5842: ? ===
 
-// Module 5841
+// Module 5842
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AnniversaryTier5Badge-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/95a314cf6a16ea0aa14e940a655141cf10fd607d519c352f47ed6af35f7fced7.png";
+export default "https://cdn.discordapp.com/assets/content/c95ff5677ee0c172f2cfc01bd639425bee0f773ecf098d32b5d77ff91b72b4fb.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/AnniversaryTier5Badge-2x.png";
-export const metadata = { fileBytes: 1955 };
+export const metadata = { fileBytes: 1786 };

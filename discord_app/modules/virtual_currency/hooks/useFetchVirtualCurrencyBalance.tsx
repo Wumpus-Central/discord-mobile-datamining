@@ -1,9 +1,9 @@
-// === Module 8979: useFetchVirtualCurrencyBalance ===
+// === Module 8990: useFetchVirtualCurrencyBalance ===
 
-// Module 8979 (useFetchVirtualCurrencyBalance)
+// Module 8990 (useFetchVirtualCurrencyBalance)
 import _mod19 from "module_19" /* 19 */;
-import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 8981 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8980 */;
+import VirtualCurrencyActionCreators from "VirtualCurrencyActionCreators" /* 8992 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8991 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

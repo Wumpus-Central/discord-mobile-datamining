@@ -1,6 +1,6 @@
-// === Module 12778: ChannelSafeAreaBottomNoop ===
+// === Module 12786: ChannelSafeAreaBottomNoop ===
 
-// Module 12778 (ChannelSafeAreaBottomNoop)
+// Module 12786 (ChannelSafeAreaBottomNoop)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

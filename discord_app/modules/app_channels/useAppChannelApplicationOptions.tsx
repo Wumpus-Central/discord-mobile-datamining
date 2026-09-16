@@ -1,6 +1,6 @@
-// === Module 9875: useAppChannelApplicationOptions ===
+// === Module 9883: useAppChannelApplicationOptions ===
 
-// Module 9875 (useAppChannelApplicationOptions)
+// Module 9883 (useAppChannelApplicationOptions)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -17,7 +17,7 @@ function compareOptions(status, status2) {
   }
   return localeCompareResult;
 }
-const EmbeddedSurfaceType = fn(9643).EmbeddedSurfaceType;
+const EmbeddedSurfaceType = fn(9654).EmbeddedSurfaceType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
 

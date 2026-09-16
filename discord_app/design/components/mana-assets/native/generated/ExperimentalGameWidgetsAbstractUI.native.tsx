@@ -1,9 +1,9 @@
-// === Module 6082: ExperimentalGameWidgetsAbstractUI ===
+// === Module 6083: ExperimentalGameWidgetsAbstractUI ===
 
-// Module 6082 (ExperimentalGameWidgetsAbstractUI)
+// Module 6083 (ExperimentalGameWidgetsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6083 from "module_6083" /* 6083 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6084 from "module_6084" /* 6084 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ExperimentalGameWidgetsAbstractUI = function ExperimentalGameWidget
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6083 };
+  const obj2 = { uri: _modDef6084 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

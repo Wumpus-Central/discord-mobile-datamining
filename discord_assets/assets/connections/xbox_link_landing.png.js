@@ -1,6 +1,6 @@
-// === Module 9356: ? ===
+// === Module 9367: ? ===
 
-// Module 9356
+// Module 9367
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/connections/xbox_link_landing.png.js");

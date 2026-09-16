@@ -1,7 +1,7 @@
-// === Module 15359: FontScaleStore ===
+// === Module 15375: FontScaleStore ===
 
-// Module 15359 (FontScaleStore)
-import NativeFontModuleDefault from "NativeFontModule" /* 10250 */;
+// Module 15375 (FontScaleStore)
+import NativeFontModuleDefault from "NativeFontModule" /* 10258 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;

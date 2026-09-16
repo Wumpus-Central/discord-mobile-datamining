@@ -1,9 +1,9 @@
-// === Module 6505: ? ===
+// === Module 6508: ? ===
 
-// Module 6505
+// Module 6508
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SafetyShieldCenter3dIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/41c638a0afaefd1c93b8e386eefb2f890d2c0cca288347d96342184be76a335d.png";
-export const metadata = { fileBytes: 168729 };
+export default "https://cdn.discordapp.com/assets/content/0a60d4954965e052fb541a59d5a043934e5c46a215a6aefc2be47b33b3fccbd6.png";
+export const metadata = { fileBytes: 169028 };

@@ -1,10 +1,10 @@
-// === Module 10886: MarketingComponentHooks ===
+// === Module 10897: MarketingComponentHooks ===
 
-// Module 10886 (MarketingComponentHooks)
+// Module 10897 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
-import themes from "themes" /* 4348 */;
-import useThemeDefault from "useTheme" /* 4574 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import themes from "themes" /* 4346 */;
+import useThemeDefault from "useTheme" /* 4572 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
 const size = fn(2);

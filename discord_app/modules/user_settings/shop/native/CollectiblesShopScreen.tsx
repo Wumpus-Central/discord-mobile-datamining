@@ -1,11 +1,11 @@
-// === Module 15911: CollectiblesShopScreen ===
+// === Module 15931: CollectiblesShopScreen ===
 
-// Module 15911 (CollectiblesShopScreen)
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7101 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7289 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7492 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 15912 */;
-import CollectiblesShopV2 from "CollectiblesShopV2" /* 15913 */;
+// Module 15931 (CollectiblesShopScreen)
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7104 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7495 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 15932 */;
+import CollectiblesShopV2 from "CollectiblesShopV2" /* 15933 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 8222: transformNativeMarkupMention ===
+// === Module 8231: transformNativeMarkupMention ===
 
-// Module 8222 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 5080 */;
-import MarkupRules from "MarkupRules" /* 5082 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5090 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 5111 */;
+// Module 8231 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 5081 */;
+import MarkupRules from "MarkupRules" /* 5083 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5091 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 5112 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -26,9 +26,9 @@ export const transformNativeMention = function transformNativeMention(value, all
     obj4.id = str1;
     return MarkupRules.hydrateUserMention(obj4, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "accessible", everyoneOrHere: 1758339011332018700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "accessible", everyoneOrHere: 1758339659463359000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "accessible", everyoneOrHere: "NETWORK" }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "accessible", everyoneOrHere: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003135211834177868 }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {

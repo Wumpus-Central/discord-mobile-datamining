@@ -1,6 +1,6 @@
-// === Module 8012: ConversationExperiments ===
+// === Module 8021: ConversationExperiments ===
 
-// Module 8012 (ConversationExperiments)
+// Module 8021 (ConversationExperiments)
 import GuildStore from "GuildStore" /* 1980 */;
 
 const require = globalThis.__r;

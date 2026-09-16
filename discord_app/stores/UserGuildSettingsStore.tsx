@@ -1,13 +1,13 @@
-// === Module 4820: UserGuildSettingsStore ===
+// === Module 4819: UserGuildSettingsStore ===
 
-// Module 4820 (UserGuildSettingsStore)
+// Module 4819 (UserGuildSettingsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import MuteTimers from "MuteTimers" /* 4281 */;
+import MuteTimers from "MuteTimers" /* 4279 */;
 import ImpersonateStore from "ImpersonateStore" /* 2015 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4278 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -210,8 +210,8 @@ const ChannelRecord = fn(1962);
 ({ THREAD_CHANNEL_TYPES: metroRequire, isPrivate: closure_7 } = ChannelRecord);
 const Constants = fn(1074);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(4291).AccountNotificationFlags;
-const UnreadSetting = fn(4821).UnreadSetting;
+const AccountNotificationFlags = fn(4289).AccountNotificationFlags;
+const UnreadSetting = fn(4820).UnreadSetting;
 const UserSettingsConstants = fn(1084);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};

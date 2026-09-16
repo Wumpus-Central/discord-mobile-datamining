@@ -1,8 +1,8 @@
-// === Module 15666: UserSettingsPushNotificationLogs ===
+// === Module 15683: UserSettingsPushNotificationLogs ===
 
-// Module 15666 (UserSettingsPushNotificationLogs)
+// Module 15683 (UserSettingsPushNotificationLogs)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -11,13 +11,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, list: null, searchWrap: null, shareButton: null, log: null, code: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6727).InputHeights.MD, width: fn(6727).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6730).InputHeights.MD, width: fn(6730).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 obj2.shareButton = size;
 let obj5 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.log = { paddingBottom: nativeDefault.space.PX_16 };
@@ -140,7 +140,7 @@ export default function UserSettingsPushNotificationLogs() {
   _slicedToArray = tmp9;
   let obj = { style: tmp9.wrap, children: null };
   let obj2 = { style: tmp9.searchWrap, children: null };
-  let items1 = [closure_7(defaultValue(7157).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue }), ];
+  let items1 = [closure_7(defaultValue(7160).SearchField, { size: "md", placeholder: "Filter (regex)", onChange: tmp[1], defaultValue }), ];
   let obj3 = { style: tmp9.shareButton, accessibilityLabel: null, onPress: null, children: null };
   const intl = defaultValue(1115).intl;
   obj3.accessibilityLabel = intl.string(defaultValue(1115).t.leICvh);
@@ -172,7 +172,7 @@ export default function UserSettingsPushNotificationLogs() {
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp5(10321)(), done: false };
+            const obj4 = { value: tmp5(10329)(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -184,8 +184,8 @@ export default function UserSettingsPushNotificationLogs() {
           return obj5;
         } else {
           closure_128_0 = value;
-          const obj6 = { message: tmp5(10322)(closure_128_0, false) };
-          tmp2(8482).showShareActionSheet(obj6, "push-notification-logs");
+          const obj6 = { message: tmp5(10330)(closure_128_0, false) };
+          tmp2(8491).showShareActionSheet(obj6, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -195,8 +195,8 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj3.children = closure_7(defaultValue(9185).ShareIcon, {});
-  items1[1] = closure_7(defaultValue(5207).PressableOpacity, obj3);
+  obj3.children = closure_7(defaultValue(9196).ShareIcon, {});
+  items1[1] = closure_7(defaultValue(5208).PressableOpacity, obj3);
   obj2.children = items1;
   let items2 = [closure_8(View, obj2), ];
   let obj4 = { contentContainerStyle: null, data: null, renderItem: null };
@@ -224,7 +224,7 @@ export default function UserSettingsPushNotificationLogs() {
     obj.children = items;
     return React6(View, obj, item.index);
   };
-  items2[1] = closure_7(defaultValue(9006).FlashList, obj4);
+  items2[1] = closure_7(defaultValue(9017).FlashList, obj4);
   obj.children = items2;
   return closure_8(View, obj);
 };

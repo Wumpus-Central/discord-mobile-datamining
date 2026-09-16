@@ -1,7 +1,7 @@
-// === Module 12144: SpoilerIcon ===
+// === Module 12152: SpoilerIcon ===
 
-// Module 12144 (SpoilerIcon)
-import inlineStyles from "inlineStyles" /* 8577 */;
+// Module 12152 (SpoilerIcon)
+import inlineStyles from "inlineStyles" /* 8586 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

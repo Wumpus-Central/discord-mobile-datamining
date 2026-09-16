@@ -1,9 +1,9 @@
-// === Module 5965: ? ===
+// === Module 5966: ? ===
 
-// Module 5965
+// Module 5966
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeHologramSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/9cd4d36982f0520baccda7f3006d25cccfd8a9042e85aee2fc34a98dce4a928f.png";
-export const metadata = { fileBytes: 42413 };
+export default "https://cdn.discordapp.com/assets/content/60b8aa4be4b9228239b0b3b640f9248c8e9675df935fe4d05dd4f3a57f591522.png";
+export const metadata = { fileBytes: 40559 };

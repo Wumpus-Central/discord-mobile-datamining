@@ -1,9 +1,9 @@
-// === Module 6561: ? ===
+// === Module 6564: ? ===
 
-// Module 6561
+// Module 6564
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ShoesSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/6d4751ff57e3c8299bc6b5ace0b44a3ff371e61f9a2909b590915ecb73c1509c.png";
-export const metadata = { fileBytes: 15800 };
+export default "https://cdn.discordapp.com/assets/content/b9e502ee737a5c7d818ae08992fcc673f5d7c37f5ec15830650e8c7c5546eabf.png";
+export const metadata = { fileBytes: 15701 };

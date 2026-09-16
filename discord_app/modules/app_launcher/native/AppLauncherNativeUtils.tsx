@@ -1,16 +1,16 @@
-// === Module 12185: AppLauncherNativeUtils ===
+// === Module 12193: AppLauncherNativeUtils ===
 
-// Module 12185 (AppLauncherNativeUtils)
+// Module 12193 (AppLauncherNativeUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import _modDef1885 from "module_1885" /* 1885 */;
 import Server from "Server" /* 1895 */;
-import HapticUtils from "HapticUtils" /* 4607 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7628 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7630 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7883 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9421 */;
-import FrecencySection from "FrecencySection" /* 12186 */;
+import HapticUtils from "HapticUtils" /* 4606 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4818 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7631 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7633 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7892 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9432 */;
+import FrecencySection from "FrecencySection" /* 12194 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -21,7 +21,7 @@ require = fn;
 const AppLauncherNativeConstants = fn(1483);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const BuiltInSectionId = fn(5083).BuiltInSectionId;
+const BuiltInSectionId = fn(5084).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 

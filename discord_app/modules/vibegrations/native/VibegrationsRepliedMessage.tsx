@@ -1,13 +1,13 @@
-// === Module 16731: VibegrationsRepliedMessage ===
+// === Module 16765: VibegrationsRepliedMessage ===
 
-// Module 16731 (VibegrationsRepliedMessage)
+// Module 16765 (VibegrationsRepliedMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import _modDef3591 from "module_3591" /* 3591 */;
-import UserUtils from "UserUtils" /* 4484 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import VibegrationsMessageAuthor from "VibegrationsMessageAuthor" /* 16732 */;
+import UserUtils from "UserUtils" /* 4482 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import VibegrationsMessageAuthor from "VibegrationsMessageAuthor" /* 16766 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,10 +15,10 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const diff = fn(16729).MESSAGE_EDGE_INSET + fn(16729).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(16729).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(4639);
-let obj2 = { root: { marginLeft: diff - fn(16729).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
+const diff = fn(16763).MESSAGE_EDGE_INSET + fn(16763).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(16763).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(4638);
+let obj2 = { root: { marginLeft: diff - fn(16763).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
 const rect = { position: "absolute", left: 0, top: 9, bottom: 0, width: diff1, borderTopWidth: 2, borderLeftWidth: 2, borderColor: nativeDefault.colors.SPINE_DEFAULT, borderTopLeftRadius: Math.round(0.25 * diff1) };
 obj2.spine = rect;
 obj2.avatar = { marginRight: 4 };

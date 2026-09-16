@@ -1,19 +1,19 @@
-// === Module 15511: EnableReducedMotionSetting ===
+// === Module 15527: EnableReducedMotionSetting ===
 
-// Module 15511 (EnableReducedMotionSetting)
+// Module 15527 (EnableReducedMotionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14535 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14553 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
-const SettingBuilders = fn(11606);
+const SettingBuilders = fn(11614);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.e3TR1b);
   },
-  parent: fn(8082).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8091).MobileUserSettings.ACCESSIBILITY,
   useValue: function useReducedMotionSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);

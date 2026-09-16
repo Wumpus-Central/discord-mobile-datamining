@@ -1,8 +1,8 @@
-// === Module 9220: useChannelVideoLimit ===
+// === Module 9231: useChannelVideoLimit ===
 
-// Module 9220 (useChannelVideoLimit)
+// Module 9231 (useChannelVideoLimit)
 import GuildStore from "GuildStore" /* 1980 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4663 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4662 */;
 
 const require = globalThis.__r;
 

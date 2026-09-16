@@ -1,9 +1,9 @@
-// === Module 6680: WindIllocon ===
+// === Module 6683: WindIllocon ===
 
-// Module 6680 (WindIllocon)
+// Module 6683 (WindIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6681 from "module_6681" /* 6681 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6684 from "module_6684" /* 6684 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const WindIllocon = function WindIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6681 };
+  const obj2 = { uri: _modDef6684 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

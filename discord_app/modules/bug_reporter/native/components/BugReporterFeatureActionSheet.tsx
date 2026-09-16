@@ -1,10 +1,10 @@
-// === Module 10342: BugReporterFeatureActionSheet ===
+// === Module 10350: BugReporterFeatureActionSheet ===
 
-// Module 10342 (BugReporterFeatureActionSheet)
+// Module 10350 (BugReporterFeatureActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { list: { paddingHorizontal: nativeDefault.space.PX_12 }, searchBar: null, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.searchBar = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -31,16 +31,16 @@ let closure_10 = noop.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  const obj = { start, end, value: item(10317).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
-  const obj2 = item(10317);
-  const featureId = item(10317).getFeatureId(item);
-  const obj3 = item(10317);
-  obj.legacyCompat_selected = featureId === item(10317).getFeatureId(feature);
+  const obj = { start, end, value: item(10325).getFeatureId(item), label: item.name, legacyCompat_selected: null, legacyCompat_onPress: null };
+  const obj2 = item(10325);
+  const featureId = item(10325).getFeatureId(item);
+  const obj3 = item(10325);
+  obj.legacyCompat_selected = featureId === item(10325).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_6(item(5773).TableRadioRow, obj);
+  return closure_6(item(5774).TableRadioRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

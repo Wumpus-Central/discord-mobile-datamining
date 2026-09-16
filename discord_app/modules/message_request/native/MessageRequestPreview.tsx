@@ -1,18 +1,18 @@
-// === Module 17031: MessageRequestPreview ===
+// === Module 17088: MessageRequestPreview ===
 
-// Module 17031 (MessageRequestPreview)
+// Module 17088 (MessageRequestPreview)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
-import TextStyles_mod from "TextStyles" /* 5609 */;
+import RelationshipStore from "RelationshipStore" /* 4286 */;
+import TextStyles_mod from "TextStyles" /* 5610 */;
 
 const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ Fonts, AnalyticEvents: metroRequire, MessageFlags: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { systemContent: null, messageContent: null };
 let obj3 = { fontStyle: "italic" };
 let TextStyles = TextStyles_mod;
@@ -31,10 +31,10 @@ const result = size.fileFinishedImporting("modules/message_request/native/Messag
 export default noop.memo(function MessageRequestPreview(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const messageRequestPreview = channel(12729).useMessageRequestPreview(channel);
+  const messageRequestPreview = channel(12737).useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
-  let obj = channel(12729);
+  let obj = channel(12737);
   const items = [RelationshipStore];
   const items1 = [message];
   const stateFromStoresObject = channel(504).useStateFromStoresObject(items, () => {
@@ -88,7 +88,7 @@ export default noop.memo(function MessageRequestPreview(channel) {
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(7995)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(8004)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
@@ -122,7 +122,7 @@ export default noop.memo(function MessageRequestPreview(channel) {
         }
         stringResult = stringResult1;
         flag = false;
-        tmp2Result = tmp2(4978);
+        tmp2Result = tmp2(4977);
       } else {
         const intl = tmp2(1115).intl;
         stringResult = intl.string(tmp2(1115).t["0KfDxM"]);

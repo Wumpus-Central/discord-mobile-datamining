@@ -1,6 +1,6 @@
-// === Module 7078: WideAuthScrollContext ===
+// === Module 7081: WideAuthScrollContext ===
 
-// Module 7078 (WideAuthScrollContext)
+// Module 7081 (WideAuthScrollContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(() => {

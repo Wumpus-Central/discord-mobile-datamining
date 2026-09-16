@@ -1,13 +1,13 @@
-// === Module 8774: InAppReportsShieldElement ===
+// === Module 8783: InAppReportsShieldElement ===
 
-// Module 8774 (InAppReportsShieldElement)
-import native from "native" /* 5777 */;
+// Module 8783 (InAppReportsShieldElement)
+import native from "native" /* 5778 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");

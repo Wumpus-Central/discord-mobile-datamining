@@ -1,6 +1,6 @@
-// === Module 7086: useTypeConsolidationTextTransform ===
+// === Module 7089: useTypeConsolidationTextTransform ===
 
-// Module 7086 (useTypeConsolidationTextTransform)
+// Module 7089 (useTypeConsolidationTextTransform)
 import size from "module_2" /* 2 */;
 
 const style = { textTransform: "none" };

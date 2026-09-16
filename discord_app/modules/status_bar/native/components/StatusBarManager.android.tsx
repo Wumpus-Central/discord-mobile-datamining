@@ -1,6 +1,6 @@
-// === Module 9614: StatusBarManager ===
+// === Module 9625: StatusBarManager ===
 
-// Module 9614 (StatusBarManager)
+// Module 9625 (StatusBarManager)
 import _modDef12 from "module_12" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
 import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1624 */;

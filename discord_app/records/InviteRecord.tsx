@@ -1,38 +1,51 @@
-// === Module 8501: InviteRecord ===
+// === Module 8510: InviteRecord ===
 
-// Module 8501 (InviteRecord)
-import _modDef4231 from "module_4231" /* 4231 */;
+// Module 8510 (InviteRecord)
+import _modDef4229 from "module_4229" /* 4229 */;
 import Record from "Record" /* 1387 */;
+import UserRecord from "UserRecord" /* 1386 */;
 
 let InviteRecord;
 class InviteRecord extends tmp2 {
   constructor(arg0) {
-    tmp2 = new InviteRecord(tmp, new.target, new.target);
-    tmp3 = global.code || "";
-    tmp2.code = tmp3;
-    tmp2.temporary = global.temporary || false;
-    tmp2.revoked = global.revoked || false;
-    tmp2.uses = global.uses || 0;
-    tmp2.maxUses = global.maxUses || 0;
-    tmp2.maxAge = global.maxAge || 0;
+    tmp4 = new InviteRecord(tmp3, tmp2, tmp, new.target);
+    tmp5 = global.code || "";
+    tmp4.code = tmp5;
+    tmp4.temporary = global.temporary || false;
+    tmp4.revoked = global.revoked || false;
+    tmp4.uses = global.uses || 0;
+    tmp4.maxUses = global.maxUses || 0;
+    tmp4.maxAge = global.maxAge || 0;
     createdAt = global.createdAt;
     if (!createdAt) {
-      tmp4 = globalThis;
+      tmp6 = globalThis;
       _Date = Date;
-      tmp5 = new.target;
-      tmp6 = new.target;
+      tmp7 = new.target;
+      tmp8 = new.target;
       createdAt = new Date();
     }
-    tmp2.createdAt = createdAt;
-    ({ channel: tmp2.channel, guild: tmp2.guild } = global);
-    tmp2.inviter = global.inviter || null;
-    tmp2.targetType = global.targetType || null;
-    tmp2.targetUser = global.targetUser || null;
-    tmp2.targetApplication = global.targetApplication || null;
-    tmp2.type = global.type || null;
-    tmp2.flags = global.flags || 0;
-    tmp2.roles = global.roles || [];
-    return tmp2;
+    tmp4.createdAt = createdAt;
+    ({ channel: tmp4.channel, guild: tmp4.guild } = global);
+    tmp9 = null;
+    if (null != global.inviter) {
+      inviter = global.inviter;
+      tmp101 = inviter;
+      if (!(inviter instanceof closure_2)) {
+        tmp12 = new.target;
+        tmp13 = new.target;
+        tmp14 = inviter;
+        tmp101 = new tmp10(inviter);
+      }
+      tmp9 = tmp101;
+    }
+    tmp4.inviter = tmp9;
+    tmp4.targetType = global.targetType || null;
+    tmp4.targetUser = global.targetUser || null;
+    tmp4.targetApplication = global.targetApplication || null;
+    tmp4.type = global.type || null;
+    tmp4.flags = global.flags || 0;
+    tmp4.roles = global.roles || [];
+    return tmp4;
   }
 }
 const prototype = InviteRecord.prototype;
@@ -41,19 +54,19 @@ InviteRecord["createFromServer"] = function createFromServer(created_at) {
   const merged = Object.assign(created_at);
   ({ max_uses: obj.maxUses, max_age: obj.maxAge } = created_at);
   created_at = created_at.created_at;
-  obj.createdAt = _modDef4231(created_at);
+  obj.createdAt = _modDef4229(created_at);
   ({ target_type: obj.targetType, target_user: obj.targetUser, target_application: obj.targetApplication } = created_at);
   return new InviteRecord(obj);
 };
 prototype["isExpired"] = function isExpired() {
   const maxAge = this.maxAge;
   if (maxAge > 0) {
-    const obj = _modDef4231(tmp.createdAt);
+    const obj = _modDef4229(tmp.createdAt);
     const _Date = Date;
     if (addResult.isBefore(Date.now())) {
       return true;
     }
-    addResult = _modDef4231(tmp.createdAt).add(maxAge, "seconds");
+    addResult = _modDef4229(tmp.createdAt).add(maxAge, "seconds");
   }
   return false;
 };
@@ -61,9 +74,9 @@ prototype["getExpiresAt"] = function getExpiresAt() {
   const self = this;
   let num = Infinity;
   if (this.maxAge > 0) {
-    const obj = _modDef4231(self.createdAt);
-    num = _modDef4231(self.createdAt).add(self.maxAge, "seconds").toDate();
-    const addResult = _modDef4231(self.createdAt).add(self.maxAge, "seconds");
+    const obj = _modDef4229(self.createdAt);
+    num = _modDef4229(self.createdAt).add(self.maxAge, "seconds").toDate();
+    const addResult = _modDef4229(self.createdAt).add(self.maxAge, "seconds");
   }
   return num;
 };

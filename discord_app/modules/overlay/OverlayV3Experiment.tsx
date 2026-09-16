@@ -1,6 +1,6 @@
-// === Module 4486: OverlayV3Experiment ===
+// === Module 4484: OverlayV3Experiment ===
 
-// Module 4486 (OverlayV3Experiment)
+// Module 4484 (OverlayV3Experiment)
 import ApexExperiment_mod from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

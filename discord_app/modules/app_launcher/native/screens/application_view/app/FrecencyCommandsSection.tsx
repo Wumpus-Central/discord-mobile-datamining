@@ -1,11 +1,11 @@
-// === Module 12281: FrecencyCommandsSection ===
+// === Module 12289: FrecencyCommandsSection ===
 
-// Module 12281 (FrecencyCommandsSection)
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4819 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7630 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9541 */;
-import AppDetailContent from "AppDetailContent" /* 12263 */;
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12282 */;
+// Module 12289 (FrecencyCommandsSection)
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4818 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7633 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9552 */;
+import AppDetailContent from "AppDetailContent" /* 12271 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12290 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,8 +13,8 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
-let obj2 = { container: { marginBottom: fn(12263).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
+const createStyles = fn(4638);
+let obj2 = { container: { marginBottom: fn(12271).BETWEEN_SECTIONS_MARGIN }, header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
@@ -38,7 +38,7 @@ export default function FrecencyCommandsSection(commands) {
     const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = context(1115).intl;
     obj3.children = intl.string(context(1115).t.acSE0h);
-    obj2.children = arr(context(4635).Heading, obj3);
+    obj2.children = arr(context(4634).Heading, obj3);
     const items1 = [arr(View, obj2), arr.map((command, index) => timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
     obj.children = items1;
     tmp4 = closure_7(View, obj);

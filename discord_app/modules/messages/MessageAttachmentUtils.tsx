@@ -1,13 +1,13 @@
-// === Module 12146: MessageAttachmentUtils ===
+// === Module 12154: MessageAttachmentUtils ===
 
-// Module 12146 (MessageAttachmentUtils)
+// Module 12154 (MessageAttachmentUtils)
 import util from "util" /* 1115 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7399 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 7403 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7404 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8004 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8392 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7402 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7406 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7407 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8013 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8401 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 
 require = fn;
 function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChannelType) {
@@ -152,7 +152,7 @@ export const useShouldObscure = function useShouldObscure(channel) {
   const RenderSpoilers = channel(1936).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(7399).getEnabledHarmTypesBitmaskForChannelType(channel(7404).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(7402).getEnabledHarmTypesBitmaskForChannelType(channel(7407).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 };
 export const getObscuredAlt = function getObscuredAlt(arg0) {

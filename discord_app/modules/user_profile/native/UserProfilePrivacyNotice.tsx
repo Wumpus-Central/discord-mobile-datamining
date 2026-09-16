@@ -1,18 +1,18 @@
-// === Module 13217: UserProfilePrivacyNotice ===
+// === Module 13228: UserProfilePrivacyNotice ===
 
-// Module 13217 (UserProfilePrivacyNotice)
+// Module 13228 (UserProfilePrivacyNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 1936 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4594 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Pressables from "Pressables" /* 5207 */;
-import XSmallIcon from "XSmallIcon" /* 5765 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7495 */;
-import useUserIsTeen from "useUserIsTeen" /* 8770 */;
-import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13218 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4592 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Pressables from "Pressables" /* 5208 */;
+import XSmallIcon from "XSmallIcon" /* 5766 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7498 */;
+import useUserIsTeen from "useUserIsTeen" /* 8779 */;
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13229 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

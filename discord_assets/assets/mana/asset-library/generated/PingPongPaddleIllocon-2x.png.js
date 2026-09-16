@@ -1,6 +1,6 @@
-// === Module 6451: ? ===
+// === Module 6454: ? ===
 
-// Module 6451
+// Module 6454
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PingPongPaddleIllocon-2x.png.js");

@@ -1,19 +1,19 @@
-// === Module 17688: GuildSettingsModalAuditLog ===
+// === Module 17744: GuildSettingsModalAuditLog ===
 
-// Module 17688 (GuildSettingsModalAuditLog)
+// Module 17744 (GuildSettingsModalAuditLog)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7301 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 17691 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 17699 */;
-import AuditLogDefault from "AuditLog" /* 17708 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7304 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 17747 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 17755 */;
+import AuditLogDefault from "AuditLog" /* 17764 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 import UserStore from "UserStore" /* 1372 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17689 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17745 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -22,7 +22,7 @@ const Constants = fn(1074);
 ({ GuildSettingsSections: map1, AuditLogFilterTypes: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { listView: { marginVertical: 12 }, spinner: { marginTop: 40 }, filterTextWrapper: { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT }, filtersWrapper: null, firstAuditRow: null, lastAuditRow: null, filterTrailing: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
 obj2.filtersWrapper = { paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_8 };

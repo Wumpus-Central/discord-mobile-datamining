@@ -1,7 +1,7 @@
-// === Module 9924: SegmentedControlState ===
+// === Module 9932: SegmentedControlState ===
 
-// Module 9924 (SegmentedControlState)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5046 */;
+// Module 9932 (SegmentedControlState)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5045 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

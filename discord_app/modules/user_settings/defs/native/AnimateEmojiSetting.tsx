@@ -1,10 +1,10 @@
-// === Module 15514: AnimateEmojiSetting ===
+// === Module 15530: AnimateEmojiSetting ===
 
-// Module 15514 (AnimateEmojiSetting)
+// Module 15530 (AnimateEmojiSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8082 */;
-import SettingBuilders from "SettingBuilders" /* 11606 */;
+import SettingsConstants from "SettingsConstants" /* 8091 */;
+import SettingBuilders from "SettingBuilders" /* 11614 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

@@ -1,11 +1,11 @@
-// === Module 12677: useDeactivateWarningText ===
+// === Module 12685: useDeactivateWarningText ===
 
-// Module 12677 (useDeactivateWarningText)
+// Module 12685 (useDeactivateWarningText)
 import util from "util" /* 1115 */;
 import _modDef2429 from "module_2429" /* 2429 */;
-import Powerups from "Powerups" /* 4532 */;
+import Powerups from "Powerups" /* 4530 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4557 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 import GuildStore from "GuildStore" /* 1980 */;
 

@@ -1,9 +1,9 @@
-// === Module 4508: PortalKeyboardUIStore ===
+// === Module 4507: PortalKeyboardUIStore ===
 
-// Module 4508 (PortalKeyboardUIStore)
+// Module 4507 (PortalKeyboardUIStore)
 import v1 from "v1" /* 1255 */;
-import ZustandStore from "ZustandStore" /* 4509 */;
-import PortalKeyboard from "PortalKeyboard" /* 4511 */;
+import ZustandStore from "ZustandStore" /* 4508 */;
+import PortalKeyboard from "PortalKeyboard" /* 4510 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => ({ keyboard: null, state: PortalKeyboard.PortalKeyboardState.EMPTY, renderers: [] }));

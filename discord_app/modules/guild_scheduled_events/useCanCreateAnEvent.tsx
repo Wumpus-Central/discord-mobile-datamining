@@ -1,11 +1,11 @@
-// === Module 9805: useCanCreateAnEvent ===
+// === Module 9813: useCanCreateAnEvent ===
 
-// Module 9805 (useCanCreateAnEvent)
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9803 */;
+// Module 9813 (useCanCreateAnEvent)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9811 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
 
 const require = globalThis.__r;
 

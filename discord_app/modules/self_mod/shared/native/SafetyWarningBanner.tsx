@@ -1,8 +1,8 @@
-// === Module 11510: SafetyWarningBanner ===
+// === Module 11518: SafetyWarningBanner ===
 
-// Module 11510 (SafetyWarningBanner)
+// Module 11518 (SafetyWarningBanner)
 import nativeDefault from "native" /* 576 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11508 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11516 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -80,7 +80,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: null, contentContainer: null, safetyShieldIconContainer: null, safetyShieldIcon: null, textContainer: null, text: null, closeButton: null, closeButtonIcon: null, buttonsContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12 };

@@ -1,6 +1,6 @@
-// === Module 7401: SensitiveContentSelfHarmExperiment ===
+// === Module 7404: SensitiveContentSelfHarmExperiment ===
 
-// Module 7401 (SensitiveContentSelfHarmExperiment)
+// Module 7404 (SensitiveContentSelfHarmExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

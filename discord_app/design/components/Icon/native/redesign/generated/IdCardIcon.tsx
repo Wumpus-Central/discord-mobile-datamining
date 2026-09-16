@@ -1,9 +1,9 @@
-// === Module 8566: IdCardIcon ===
+// === Module 8575: IdCardIcon ===
 
-// Module 8566 (IdCardIcon)
+// Module 8575 (IdCardIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8567 from "module_8567" /* 8567 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod8576 from "module_8576" /* 8576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const IdCardIcon = function IdCardIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8567, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8576, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

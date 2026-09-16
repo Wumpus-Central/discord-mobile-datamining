@@ -1,8 +1,8 @@
-// === Module 13266: usePrivateChannelCall ===
+// === Module 13277: usePrivateChannelCall ===
 
-// Module 13266 (usePrivateChannelCall)
+// Module 13277 (usePrivateChannelCall)
 import util from "util" /* 1115 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 11002 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 11015 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
@@ -83,7 +83,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             if (null == channel) {
               dependencyMap = 1;
               c3 = 1;
-              const obj7 = { value: tmp3(4652).ensurePrivateChannel(tmp32), done: false };
+              const obj7 = { value: tmp3(4651).ensurePrivateChannel(tmp32), done: false };
               return obj7;
             }
             tmp32 = closure_0;
@@ -104,8 +104,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
           isPrivateResult = channel.isPrivate();
         }
         if (isPrivateResult) {
-          tmp3(11002)(channel, closure_129_1).onPress();
-          const obj3 = tmp3(11002)(channel, closure_129_1);
+          tmp3(11015)(channel, closure_129_1).onPress();
+          const obj3 = tmp3(11015)(channel, closure_129_1);
         }
         if (closure_129_2 != null) {
           closure_129_2();

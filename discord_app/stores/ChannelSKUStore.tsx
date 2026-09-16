@@ -1,6 +1,6 @@
-// === Module 13839: ChannelSKUStore ===
+// === Module 13852: ChannelSKUStore ===
 
-// Module 13839 (ChannelSKUStore)
+// Module 13852 (ChannelSKUStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

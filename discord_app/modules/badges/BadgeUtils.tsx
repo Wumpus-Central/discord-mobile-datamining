@@ -1,9 +1,10 @@
-// === Module 11337: BadgeUtils ===
+// === Module 11345: BadgeUtils ===
 
-// Module 11337 (BadgeUtils)
-import Constants from "Constants" /* 8303 */;
-import BadgeId from "BadgeId" /* 8304 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8313 */;
+// Module 11345 (BadgeUtils)
+import util from "util" /* 1115 */;
+import Constants from "Constants" /* 8312 */;
+import BadgeId from "BadgeId" /* 8313 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8322 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -21,6 +22,14 @@ let result = size.fileFinishedImporting("modules/badges/BadgeUtils.tsx");
 
 export const MAX_DISPLAYED_PROFILE_BADGES = 6;
 export { isPinnedBadge };
+export const getAlwaysVisibleCopy = function getAlwaysVisibleCopy(badge_id) {
+  if (badge_id === BadgeId.BadgeId.STAFF) {
+    let nPQVxb = util.t.t3udZb;
+  } else {
+    nPQVxb = util.t.nPQVxb;
+  }
+  return nPQVxb;
+};
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
   const _Set = Set;
   const STAFF = BadgeId.BadgeId.STAFF;

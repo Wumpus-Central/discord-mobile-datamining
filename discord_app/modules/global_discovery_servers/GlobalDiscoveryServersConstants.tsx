@@ -1,6 +1,6 @@
-// === Module 9198: GlobalDiscoveryServersConstants ===
+// === Module 9209: GlobalDiscoveryServersConstants ===
 
-// Module 9198 (GlobalDiscoveryServersConstants)
+// Module 9209 (GlobalDiscoveryServersConstants)
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
 

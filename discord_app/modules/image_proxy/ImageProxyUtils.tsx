@@ -72,16 +72,28 @@ export const getSizedImageAssetURL = function getSizedImageAssetURL(value, size)
       startsWithResult = pathname.startsWith("/external/");
     }
     if (startsWithResult) {
-      let str1 = getSizedImageProxyURL(value, size);
+      return getSizedImageProxyURL(value, size);
     } else {
       if (tmpResult.isDiscordCdnUrl(value)) {
         if (null != size.size) {
-          const searchParams = str.searchParams;
           const _String = String;
           const obj3 = ImageLoaderUtils;
-          const result = searchParams.set("size", String(obj3.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio())));
+          const StringResult = String(obj3.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio()));
+          const _Number2 = Number;
+          const searchParams2 = str.searchParams;
+          const NumberResult = Number(searchParams2.get("size"));
+          if (NumberResult > 0) {
+            const _Number = Number;
+            if (Number(StringResult) > NumberResult) {
+              return value;
+            }
+          }
+          const searchParams = str.searchParams;
+          const result = searchParams.set("size", StringResult);
         }
-        str1 = str.toString();
+        return str.toString();
+      } else {
+        return value;
       }
       tmpResult = URLUtilsDefault;
     }

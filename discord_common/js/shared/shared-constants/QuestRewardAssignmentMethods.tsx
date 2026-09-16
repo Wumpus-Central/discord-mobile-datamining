@@ -1,6 +1,6 @@
-// === Module 11434: QuestRewardAssignmentMethods ===
+// === Module 11442: QuestRewardAssignmentMethods ===
 
-// Module 11434 (QuestRewardAssignmentMethods)
+// Module 11442 (QuestRewardAssignmentMethods)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardAssignmentMethods.tsx");

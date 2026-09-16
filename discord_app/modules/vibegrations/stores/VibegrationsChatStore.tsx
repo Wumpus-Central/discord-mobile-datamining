@@ -1,21 +1,21 @@
-// === Module 16702: VibegrationsChatStore ===
+// === Module 16722: VibegrationsChatStore ===
 
-// Module 16702 (VibegrationsChatStore)
+// Module 16722 (VibegrationsChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
 import _modDef3591 from "module_3591" /* 3591 */;
-import SoundUtils from "SoundUtils" /* 10034 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16704 */;
+import SoundUtils from "SoundUtils" /* 10042 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7644 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10212 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10220 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5364 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16703 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5365 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16723 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {

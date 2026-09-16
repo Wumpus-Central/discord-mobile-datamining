@@ -1,9 +1,9 @@
-// === Module 5961: ? ===
+// === Module 5962: ? ===
 
-// Module 5961
+// Module 5962
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeCoinsSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/3eca0de1818ce67f7851ed32606ccf0c1786bc96cab5ac8b85c6be044fbeeaa7.png";
-export const metadata = { fileBytes: 31460 };
+export default "https://cdn.discordapp.com/assets/content/c5d6d3962906539ab22b559e7bb7c473fe050a30dfc92d3276113d391d7805d3.png";
+export const metadata = { fileBytes: 31455 };

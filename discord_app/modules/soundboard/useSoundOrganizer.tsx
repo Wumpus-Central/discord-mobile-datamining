@@ -1,6 +1,6 @@
-// === Module 17213: useSoundOrganizer ===
+// === Module 17269: useSoundOrganizer ===
 
-// Module 17213 (useSoundOrganizer)
+// Module 17269 (useSoundOrganizer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 

@@ -1,19 +1,19 @@
-// === Module 16388: FavoritesGuildSidebarHeader ===
+// === Module 16408: FavoritesGuildSidebarHeader ===
 
-// Module 16388 (FavoritesGuildSidebarHeader)
+// Module 16408 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
 import _modDef3237 from "module_3237" /* 3237 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import Stack_Stack from "Stack/Stack" /* 5057 */;
-import ChatIcon from "ChatIcon" /* 5155 */;
-import TextIcon from "TextIcon" /* 5164 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5185 */;
-import FavoritesHooks from "FavoritesHooks" /* 10355 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10358 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11113 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import Stack_Stack from "Stack/Stack" /* 5058 */;
+import ChatIcon from "ChatIcon" /* 5156 */;
+import TextIcon from "TextIcon" /* 5165 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5186 */;
+import FavoritesHooks from "FavoritesHooks" /* 10363 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10366 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11127 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -69,10 +69,10 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16312).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16332).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

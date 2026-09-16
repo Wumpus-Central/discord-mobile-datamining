@@ -1,9 +1,9 @@
-// === Module 12110: ? ===
+// === Module 12118: ? ===
 
-// Module 12110
+// Module 12118
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiWumpEyesExample-1x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/8479eb6aded192ee835ac85e230cb5ea765d127433a49afb65ea0b408c406d29.png";
-export const metadata = { fileBytes: 4300 };
+export default "https://cdn.discordapp.com/assets/content/76f2a711cc8d49cef2553be970cca4b90c071c4ee1fc2c6f54ed7dcf07fcd2fe.png";
+export const metadata = { fileBytes: 4329 };

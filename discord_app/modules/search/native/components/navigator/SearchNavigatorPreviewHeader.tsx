@@ -1,12 +1,12 @@
-// === Module 17013: SearchNavigatorPreviewHeader ===
+// === Module 17070: SearchNavigatorPreviewHeader ===
 
-// Module 17013 (SearchNavigatorPreviewHeader)
-import ChannelHeaderDefault from "ChannelHeader" /* 13400 */;
+// Module 17070 (SearchNavigatorPreviewHeader)
+import ChannelHeaderDefault from "ChannelHeader" /* 13411 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let closure_4 = createStyles.createStyles({ container: { flexShrink: 1, paddingRight: 12, flexDirection: "row", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewHeader.tsx");

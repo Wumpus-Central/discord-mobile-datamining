@@ -1,6 +1,6 @@
-// === Module 12532: ApplicationCommandDiscoveryManager ===
+// === Module 12540: ApplicationCommandDiscoveryManager ===
 
-// Module 12532 (ApplicationCommandDiscoveryManager)
+// Module 12540 (ApplicationCommandDiscoveryManager)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

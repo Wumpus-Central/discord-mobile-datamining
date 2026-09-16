@@ -1,12 +1,12 @@
-// === Module 11378: AddImageDescriptionModal ===
+// === Module 11386: AddImageDescriptionModal ===
 
-// Module 11378 (AddImageDescriptionModal)
+// Module 11386 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11060 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 11073 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4979 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4978 */;
 
 require = fn;
 function AddDescription(id) {
@@ -66,9 +66,9 @@ function AddDescription(id) {
           const obj2 = {};
           const merged = Object.assign(dependencyMap);
           obj2.description = ref.current;
-          id(9439).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-          const obj = id(9439);
-          id(11377).close();
+          id(9450).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+          const obj = id(9450);
+          id(11385).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});
@@ -100,10 +100,10 @@ function AddDescription(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(4980).DraftType;
+const DraftType = fn(4979).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, imageContainer: null, image: null, placeholderText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };

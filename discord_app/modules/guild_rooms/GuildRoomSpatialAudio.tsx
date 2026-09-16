@@ -1,13 +1,13 @@
-// === Module 17529: GuildRoomSpatialAudio ===
+// === Module 17585: GuildRoomSpatialAudio ===
 
-// Module 17529 (GuildRoomSpatialAudio)
+// Module 17585 (GuildRoomSpatialAudio)
 import initialize from "initialize" /* 504 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4839 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4838 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 4797 */;
+import GuildRoomStore from "GuildRoomStore" /* 4796 */;
 
 require = fn;
-const GuildRoomConstants = fn(4801);
+const GuildRoomConstants = fn(4800);
 ({ GUILD_ROOM_BACKGROUND_CONFIG: closure_4, GUILD_ROOM_SPATIAL_AUDIO_MODE } = GuildRoomConstants);
 let c5 = false;
 let closure_6 = { x: 50, y: 50 };

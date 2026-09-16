@@ -1,9 +1,9 @@
-// === Module 15249: RefreshIcon ===
+// === Module 15265: RefreshIcon ===
 
-// Module 15249 (RefreshIcon)
+// Module 15265 (RefreshIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15250 from "module_15250" /* 15250 */;
+import BaseIconImage from "BaseIconImage" /* 4338 */;
+import _mod15266 from "module_15266" /* 15266 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const RefreshIcon = function RefreshIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15250, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15266, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

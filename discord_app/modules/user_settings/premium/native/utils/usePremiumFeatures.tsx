@@ -1,18 +1,18 @@
-// === Module 9502: usePremiumFeatures ===
+// === Module 9513: usePremiumFeatures ===
 
-// Module 9502 (usePremiumFeatures)
+// Module 9513 (usePremiumFeatures)
 import util from "util" /* 1115 */;
 import user from "user" /* 1380 */;
 import _modDef3075 from "module_3075" /* 3075 */;
-import PremiumUtils from "PremiumUtils" /* 4297 */;
-import FriendsIcon from "FriendsIcon" /* 4339 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8788 */;
-import ReactionIcon from "ReactionIcon" /* 8886 */;
-import ScreenStreamIcon from "ScreenStreamIcon" /* 9353 */;
-import UploadIcon from "UploadIcon" /* 9503 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9505 */;
-import BoostGemIcon from "BoostGemIcon" /* 9507 */;
-import UserSquareIcon from "UserSquareIcon" /* 9509 */;
+import PremiumUtils from "PremiumUtils" /* 4295 */;
+import FriendsIcon from "FriendsIcon" /* 4337 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8797 */;
+import ReactionIcon from "ReactionIcon" /* 8897 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9364 */;
+import UploadIcon from "UploadIcon" /* 9514 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9516 */;
+import BoostGemIcon from "BoostGemIcon" /* 9518 */;
+import UserSquareIcon from "UserSquareIcon" /* 9520 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 require = fn;
 const PremiumConstants = fn(1374);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const TOTAL_PREMIUM_GROUP_USERS = fn(4311).TOTAL_PREMIUM_GROUP_USERS;
+const TOTAL_PREMIUM_GROUP_USERS = fn(4309).TOTAL_PREMIUM_GROUP_USERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
 

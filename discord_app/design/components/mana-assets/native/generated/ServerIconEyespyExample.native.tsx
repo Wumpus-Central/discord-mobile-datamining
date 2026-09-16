@@ -1,9 +1,9 @@
-// === Module 6532: ServerIconEyespyExample ===
+// === Module 6535: ServerIconEyespyExample ===
 
-// Module 6532 (ServerIconEyespyExample)
+// Module 6535 (ServerIconEyespyExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6533 from "module_6533" /* 6533 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6536 from "module_6536" /* 6536 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerIconEyespyExample = function ServerIconEyespyExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6533 };
+  const obj2 = { uri: _modDef6536 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

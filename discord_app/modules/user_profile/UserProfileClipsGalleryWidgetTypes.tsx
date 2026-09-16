@@ -1,8 +1,8 @@
-// === Module 7734: UserProfileClipsGalleryWidgetTypes ===
+// === Module 7737: UserProfileClipsGalleryWidgetTypes ===
 
-// Module 7734 (UserProfileClipsGalleryWidgetTypes)
+// Module 7737 (UserProfileClipsGalleryWidgetTypes)
 import _modDef1331 from "module_1331" /* 1331 */;
-import WidgetType from "WidgetType" /* 7727 */;
+import WidgetType from "WidgetType" /* 7730 */;
 import size from "module_2" /* 2 */;
 
 function convertClip(gameId) {

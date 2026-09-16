@@ -1,8 +1,8 @@
-// === Module 16988: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 17045: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 16988 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 17045 (ChannelSettingsPermissionsOverrideCheckbox)
 import nativeDefault from "native" /* 576 */;
-import PermissionUtils from "PermissionUtils" /* 4283 */;
+import PermissionUtils from "PermissionUtils" /* 4281 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -78,7 +78,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
 const md = nativeDefault.radii.md;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj = { ternaryCheckBox: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" }, iconWrapper: { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" }, icon: null, denyActive: null, denySelected: null, allowActive: null, allowSelected: null, passthroughSelected: null, passthroughActive: null, disabled: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: nativeDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
 obj.icon = { marginHorizontal: nativeDefault.space.PX_8 };
@@ -96,7 +96,7 @@ const obj9 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELE
 obj.passthroughActive = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj.disabled = { opacity: 0.3 };
 let closure_6 = createStyles.createStyles(obj);
-let items = [fn(4283).DENY, fn(4283).PASSTHROUGH, fn(4283).ALLOW];
+let items = [fn(4281).DENY, fn(4281).PASSTHROUGH, fn(4281).ALLOW];
 const obj10 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx");

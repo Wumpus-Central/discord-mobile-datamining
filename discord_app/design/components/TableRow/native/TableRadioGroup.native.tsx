@@ -1,6 +1,6 @@
-// === Module 5770: TableRadioGroup ===
+// === Module 5771: TableRadioGroup ===
 
-// Module 5770 (TableRadioGroup)
+// Module 5771 (TableRadioGroup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -48,7 +48,7 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
       return selectedValue;
     }
   }), items);
-  jsx = obj.useContext(onChange(5771).RedesignCompatContext);
+  jsx = obj.useContext(onChange(5772).RedesignCompatContext);
   const items1 = [undefined !== value, onChange];
   onSelect = obj.useCallback((arg0) => {
     if (!closure_1) {
@@ -69,6 +69,6 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
     }
     tmp4 = type;
   });
-  obj2.children = jsx(onChange(5772).TableRowGroup, { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: null });
+  obj2.children = jsx(onChange(5773).TableRowGroup, { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: null });
   return <onSelect.Provider value={noop.useMemo(() => ({ selectedValue, onSelect }), items2)}>{null}</onSelect.Provider>;
 };

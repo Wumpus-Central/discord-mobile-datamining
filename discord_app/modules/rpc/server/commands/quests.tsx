@@ -1,20 +1,20 @@
-// === Module 14609: quests ===
+// === Module 14627: quests ===
 
-// Module 14609 (quests)
+// Module 14627 (quests)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7829 */;
-import RPCErrorDefault from "RPCError" /* 9686 */;
-import RPCHelpers from "RPCHelpers" /* 9691 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 11653 */;
-import QuestStore from "QuestStore" /* 7808 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7832 */;
+import RPCErrorDefault from "RPCError" /* 9697 */;
+import RPCHelpers from "RPCHelpers" /* 9702 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 11661 */;
+import QuestStore from "QuestStore" /* 7811 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
 obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = {
-  scope: fn(8460).OAuth2Scopes.IDENTIFY,
+  scope: fn(8469).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -50,7 +50,7 @@ obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = {
   }
 };
 let obj2 = {
-  scope: fn(8460).OAuth2Scopes.IDENTIFY,
+  scope: fn(8469).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -86,7 +86,7 @@ let obj2 = {
   }
 };
 obj[RPCCommands.QUEST_START_TIMER] = {
-  scope: fn(8460).OAuth2Scopes.IDENTIFY,
+  scope: fn(8469).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -121,7 +121,7 @@ obj[RPCCommands.QUEST_START_TIMER] = {
   }
 };
 let obj3 = {
-  scope: fn(8460).OAuth2Scopes.IDENTIFY,
+  scope: fn(8469).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -156,7 +156,7 @@ let obj3 = {
   }
 };
 obj[RPCCommands.GET_QUEST] = {
-  scope: fn(8460).OAuth2Scopes.IDENTIFY,
+  scope: fn(8469).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const result = RPCHelpers.validatePostMessageTransport(socket.transport);

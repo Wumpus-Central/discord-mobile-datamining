@@ -1,10 +1,10 @@
-// === Module 13234: useWishlistSuggestionsDismissibleContent ===
+// === Module 13245: useWishlistSuggestionsDismissibleContent ===
 
-// Module 13234 (useWishlistSuggestionsDismissibleContent)
+// Module 13245 (useWishlistSuggestionsDismissibleContent)
 import DurationsDefault from "Durations" /* 1091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7726 */;
+import UserProfileStore from "UserProfileStore" /* 7729 */;
 
 const require = fn;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;

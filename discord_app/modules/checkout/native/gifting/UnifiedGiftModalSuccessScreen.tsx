@@ -1,10 +1,10 @@
-// === Module 11154: UnifiedGiftModalSuccessScreen ===
+// === Module 11168: UnifiedGiftModalSuccessScreen ===
 
-// Module 11154 (UnifiedGiftModalSuccessScreen)
+// Module 11168 (UnifiedGiftModalSuccessScreen)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4842 */;
-import openUserSettings from "openUserSettings" /* 7489 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+import openUserSettings from "openUserSettings" /* 7492 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const Image = fn(17).Image;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { alertContainer: { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" }, image: { position: "relative", top: -50 }, title: null, description: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.title = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
@@ -38,7 +38,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     }
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11166, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11180, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];

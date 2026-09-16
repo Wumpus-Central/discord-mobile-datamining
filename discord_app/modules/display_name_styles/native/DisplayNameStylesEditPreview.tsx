@@ -1,18 +1,18 @@
-// === Module 15449: DisplayNameStylesEditPreview ===
+// === Module 15465: DisplayNameStylesEditPreview ===
 
-// Module 15449 (DisplayNameStylesEditPreview)
+// Module 15465 (DisplayNameStylesEditPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import utils from "utils" /* 1887 */;
 import _modDef2787 from "module_2787" /* 2787 */;
-import DateUtils from "DateUtils" /* 4321 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8286 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11032 */;
-import types from "types" /* 11033 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11248 */;
-import NameplatePreview from "NameplatePreview" /* 11358 */;
+import DateUtils from "DateUtils" /* 4319 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8295 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11045 */;
+import types from "types" /* 11046 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11262 */;
+import NameplatePreview from "NameplatePreview" /* 11366 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function ChatPreview(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { previewSection: { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 }, chatPreviewWrapper: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 };
 obj2.chatPreviewWrapper = { marginTop: -18, alignSelf: "flex-end", width: 260, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

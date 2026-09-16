@@ -1,9 +1,9 @@
-// === Module 10805: cta_button ===
+// === Module 10813: cta_button ===
 
-// Module 10805 (cta_button)
+// Module 10813 (cta_button)
 import _mod1187 from "module_1187" /* 1187 */;
 import wrappers from "wrappers" /* 1217 */;
-import localized_string from "localized_string" /* 10803 */;
+import localized_string from "localized_string" /* 10811 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

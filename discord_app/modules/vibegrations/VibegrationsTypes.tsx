@@ -1,6 +1,6 @@
-// === Module 7352: VibegrationsTypes ===
+// === Module 7355: VibegrationsTypes ===
 
-// Module 7352 (VibegrationsTypes)
+// Module 7355 (VibegrationsTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
@@ -38,8 +38,8 @@ export const projectSupportsCollaboratorRoles = function projectSupportsCollabor
 export const runesFromUsd = function runesFromUsd(cost_usd) {
   return Math.floor(100 * cost_usd);
 };
-export const runeCount = function runeCount(usage) {
-  return usage.input_tokens + usage.output_tokens + usage.cache_creation_input_tokens + usage.cache_read_input_tokens;
+export const runeCount = function runeCount(total) {
+  return total.input_tokens + total.output_tokens + total.cache_creation_input_tokens + total.cache_read_input_tokens;
 };
 export const promptRunes = function promptRunes(input_tokens) {
   return input_tokens.input_tokens + input_tokens.cache_creation_input_tokens + input_tokens.cache_read_input_tokens;
@@ -72,8 +72,8 @@ export const vibegrationsAttachmentLimit = function vibegrationsAttachmentLimit(
 export const isVibegrationsAttachmentWithinLimit = function isVibegrationsAttachmentWithinLimit(size, contentType) {
   return size <= (set.has(contentType) ? c2 : c3);
 };
-export const formatVibegrationsAttachmentLimit = function formatVibegrationsAttachmentLimit(arg0) {
-  return "" + Math.round(arg0 / 1048576) + " MB";
+export const formatVibegrationsAttachmentLimit = function formatVibegrationsAttachmentLimit(tmpResult2) {
+  return "" + Math.round(tmpResult2 / 1048576) + " MB";
 };
 export const VIBEGRATIONS_FALLBACK_MODEL_CHOICES = obj;
 export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent: items1, thinking: obj.thinking };

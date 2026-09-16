@@ -1,13 +1,13 @@
-// === Module 9877: AppChannelApplicationIcon ===
+// === Module 9885: AppChannelApplicationIcon ===
 
-// Module 9877 (AppChannelApplicationIcon)
+// Module 9885 (AppChannelApplicationIcon)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import FastImageDefault from "FastImage" /* 5672 */;
+import FastImageDefault from "FastImage" /* 5673 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 const obj2 = { icon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.md };
 obj2.icon = size;

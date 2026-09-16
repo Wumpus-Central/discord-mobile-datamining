@@ -1,6 +1,6 @@
-// === Module 17865: useOnboardingMonetizationEnableFlow ===
+// === Module 17921: useOnboardingMonetizationEnableFlow ===
 
-// Module 17865 (useOnboardingMonetizationEnableFlow)
+// Module 17921 (useOnboardingMonetizationEnableFlow)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -38,18 +38,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(17866);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17866)(id));
+  const tmp10 = refresh(17922);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17922)(id));
   let id1;
-  const tmp10Result = refresh(17866)(id);
+  const tmp10Result = refresh(17922)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = refresh(17867)(id1);
+  const tmp9ResultResult = refresh(17923)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp9Result = refresh(17867);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(17868)(eligibility));
+  const tmp9Result = refresh(17923);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(17924)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -64,7 +64,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  const tmp16 = refresh(17868)(eligibility);
+  const tmp16 = refresh(17924)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;

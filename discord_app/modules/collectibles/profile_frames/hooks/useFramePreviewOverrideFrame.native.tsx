@@ -1,12 +1,12 @@
-// === Module 8322: useFramePreviewOverrideFrame ===
+// === Module 8331: useFramePreviewOverrideFrame ===
 
-// Module 8322 (useFramePreviewOverrideFrame)
+// Module 8331 (useFramePreviewOverrideFrame)
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
 import noop from "module_19" /* 19 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7656 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7659 */;
 
 require = fn;
-let closure_4 = fn(8323).useFramePreviewOverrideStore;
+let closure_4 = fn(8332).useFramePreviewOverrideStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx");
 

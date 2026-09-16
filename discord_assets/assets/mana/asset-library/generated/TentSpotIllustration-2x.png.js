@@ -1,9 +1,9 @@
-// === Module 6647: ? ===
+// === Module 6650: ? ===
 
-// Module 6647
+// Module 6650
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TentSpotIllustration-2x.png.js");
 
-export default "https://cdn.discordapp.com/assets/content/6f1b3f9cc3eb225649dc01b389ce7bdeb85b5708d687d7d82056d49c3a665c7d.png";
-export const metadata = { fileBytes: 23084 };
+export default "https://cdn.discordapp.com/assets/content/d79d11a48fd708b268578ca0d72ced14861fbd4730f5f0ffdfcab0d22c1a1b2e.png";
+export const metadata = { fileBytes: 23129 };

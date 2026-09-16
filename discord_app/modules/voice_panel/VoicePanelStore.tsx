@@ -1,6 +1,6 @@
-// === Module 4847: VoicePanelStore ===
+// === Module 4846: VoicePanelStore ===
 
-// Module 4847 (VoicePanelStore)
+// Module 4846 (VoicePanelStore)
 import ChannelStore from "ChannelStore" /* 1958 */;
 
 const require = fn;
@@ -37,7 +37,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   obj.voicePanelsPIP = new Set();
   obj.openChannel = function openChannel(arg0) {
     closure_0 = arg0;
-    let result = closure_0(4848).isStageVoicePanelEnabled("voice_panel_store");
+    let result = closure_0(4847).isStageVoicePanelEnabled("voice_panel_store");
     if (!result) {
       channel = channel.getChannel(arg0);
       let isGuildStageVoiceResult;
@@ -64,7 +64,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         const tmpResult = tmp(1248);
       }
     }
-    let obj = closure_0(4848);
+    let obj = closure_0(4847);
     tmp = closure_0;
   };
   obj.closeChannel = function closeChannel(channelId) {

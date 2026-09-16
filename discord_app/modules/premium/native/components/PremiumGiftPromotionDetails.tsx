@@ -1,25 +1,26 @@
-// === Module 10887: PremiumGiftPromotionDetails ===
+// === Module 10899: PremiumGiftPromotionDetails ===
 
-// Module 10887 (PremiumGiftPromotionDetails)
+// Module 10899 (PremiumGiftPromotionDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import Text_Text from "Text/Text" /* 4635 */;
-import SKUPreview from "SKUPreview" /* 8901 */;
+import Text_Text from "Text/Text" /* 4634 */;
+import SKUPreview from "SKUPreview" /* 8912 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4631 */;
+import AccessibilityStore from "AccessibilityStore" /* 4630 */;
 
 require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
   ({ titleVariant, titleColor, subtitleVariant, subtitleColor } = arg0);
-  ({ style, graphic, title, subtitle } = arg0);
+  ({ style, graphic, topContent, title, subtitle } = arg0);
   const tmp = closure_10();
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
   const items1 = [graphic, ];
   const obj2 = { style: tmp.textContainer, children: null };
+  const items2 = [topContent, , ];
   if (titleVariant == null) {
     titleVariant = "text-md/semibold";
   }
@@ -29,7 +30,7 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   }
   obj3.color = titleColor;
   obj3.children = title;
-  const items2 = [React5(Text_Text.Text, obj3), ];
+  items2[1] = React5(Text_Text.Text, obj3);
   if (subtitleVariant == null) {
     subtitleVariant = "text-sm/medium";
   }
@@ -39,7 +40,7 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   }
   obj4.color = subtitleColor;
   obj4.children = subtitle;
-  items2[1] = React5(Text_Text.Text, obj4);
+  items2[2] = React5(Text_Text.Text, obj4);
   obj2.children = items2;
   items1[1] = React6(View, obj2);
   obj.children = items1;
@@ -104,7 +105,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(4639);
+let createStyles = fn(4638);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs };
@@ -112,7 +113,7 @@ let closure_10 = createStyles.createStyles(() => {
   obj.textContainer = { flex: 1 };
   return obj;
 });
-createStyles = fn(4639);
+createStyles = fn(4638);
 let obj3 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 }, overflow: "hidden" };
 obj3.preview = size;

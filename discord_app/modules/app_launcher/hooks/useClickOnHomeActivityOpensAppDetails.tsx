@@ -1,6 +1,6 @@
-// === Module 12223: useClickOnHomeActivityOpensAppDetails ===
+// === Module 12231: useClickOnHomeActivityOpensAppDetails ===
 
-// Module 12223 (useClickOnHomeActivityOpensAppDetails)
+// Module 12231 (useClickOnHomeActivityOpensAppDetails)
 import UserSettings from "UserSettings" /* 1936 */;
 import size from "module_2" /* 2 */;
 

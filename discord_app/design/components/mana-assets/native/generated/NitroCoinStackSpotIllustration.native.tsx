@@ -1,9 +1,9 @@
-// === Module 6364: NitroCoinStackSpotIllustration ===
+// === Module 6367: NitroCoinStackSpotIllustration ===
 
-// Module 6364 (NitroCoinStackSpotIllustration)
+// Module 6367 (NitroCoinStackSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5672 */;
-import _modDef6365 from "module_6365" /* 6365 */;
+import FastImageDefault from "FastImage" /* 5673 */;
+import _modDef6368 from "module_6368" /* 6368 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const NitroCoinStackSpotIllustration = function NitroCoinStackSpotIllustr
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6365 };
+  const obj2 = { uri: _modDef6368 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

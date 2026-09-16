@@ -1,17 +1,17 @@
-// === Module 12132: AddMediaToOriginalForumPostActionSheet ===
+// === Module 12140: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 12132 (AddMediaToOriginalForumPostActionSheet)
+// Module 12140 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4606 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5222 */;
-import tracking_Tracking from "tracking/Tracking" /* 7872 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5223 */;
+import tracking_Tracking from "tracking/Tracking" /* 7881 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import MessageStore from "MessageStore" /* 4860 */;
+import MessageStore from "MessageStore" /* 4859 */;
 
 require = fn;
 let closure_16 = async function _upload2(arg0) {
@@ -72,30 +72,30 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const kestrelConfig = closure_0(5264).getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
-            const obj = closure_0(5264);
-            const maxFileSizeResult = closure_0(5218).maxFileSize(id.id);
-            const obj2 = closure_0(5218);
-            const effectiveKestrelLimit = closure_0(5264).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+            const kestrelConfig = closure_0(5265).getKestrelConfig({ location: "native.AddMediaToOriginalForumPostActionSheet" });
+            const obj = closure_0(5265);
+            const maxFileSizeResult = closure_0(5219).maxFileSize(id.id);
+            const obj2 = closure_0(5219);
+            const effectiveKestrelLimit = closure_0(5265).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
             if (currentSize.currentSize > effectiveKestrelLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(4606).hideActionSheet();
+              closure_1(4605).hideActionSheet();
               const obj5 = { file: currentSize, maxSize: effectiveKestrelLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(9442)(obj5);
-              const obj4 = closure_1(4606);
+              closure_1(9453)(obj5);
+              const obj4 = closure_1(4605);
             }
-            const obj3 = closure_0(5264);
+            const obj3 = closure_0(5265);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(4606).hideActionSheet();
+            closure_1(4605).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9439).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9439);
-            closure_1(4606).hideActionSheet();
+            closure_1(9450).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9450);
+            closure_1(4605).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -143,7 +143,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(5213).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(5214).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -229,12 +229,12 @@ let closure_16 = async function _upload2(arg0) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(4980).DraftType;
+const DraftType = fn(4979).DraftType;
 const Constants = fn(1074);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 }, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: null, buttonMargin: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
 obj2.button = { borderRadius: nativeDefault.radii.sm };

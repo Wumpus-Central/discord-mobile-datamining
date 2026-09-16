@@ -1,9 +1,9 @@
-// === Module 12900: ForumPlatformHooks ===
+// === Module 12908: ForumPlatformHooks ===
 
-// Module 12900 (ForumPlatformHooks)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 8007 */;
+// Module 12908 (ForumPlatformHooks)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4495 */;
+import RootNavigationRef from "RootNavigationRef" /* 4496 */;
+import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 8016 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

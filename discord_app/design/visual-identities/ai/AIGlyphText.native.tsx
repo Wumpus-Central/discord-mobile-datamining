@@ -1,15 +1,17 @@
-// === Module 14228: AIGlyphText ===
+// === Module 14241: AIGlyphText ===
 
-// Module 14228 (AIGlyphText)
-import useToken from "useToken" /* 4341 */;
-import AIGlyphFont from "AIGlyphFont" /* 14229 */;
+// Module 14241 (AIGlyphText)
+import useToken from "useToken" /* 4339 */;
+import AIGlyphFont from "AIGlyphFont" /* 14242 */;
 import noop from "module_19" /* 19 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
 
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
-let closure_4 = createStyles.createStyles((fontSize, color) => {
+let closure_4 = ReanimatedRexport.createAnimatedComponent(Text);
+const createStyles = fn(4638);
+let closure_5 = createStyles.createStyles((fontSize, color) => {
   const obj = { glyph: { color, fontFamily: AIGlyphFont.AI_GLYPH_FONT_FAMILY_NATIVE, fontSize, lineHeight: fontSize, textAlign: "center", includeFontPadding: false } };
   return obj;
 });
@@ -21,15 +23,21 @@ export const AIGlyphText = function AIGlyphText(color) {
   if (str === undefined) {
     str = "text-default";
   }
-  ({ allowFontScaling, style, children } = color);
+  ({ animated, allowFontScaling } = color);
+  if (animated === undefined) {
+    animated = false;
+  }
+  ({ numberOfLines, ellipsizeMode, style, children } = color);
   let tmp;
   if ("none" !== str) {
     tmp = str;
   }
-  const obj2 = { style: null, allowFontScaling: null, children: null };
-  const items = [closure_4(color.size, useToken.useToken(tmp)).glyph, style];
+  const obj2 = { style: null, allowFontScaling: null, numberOfLines: null, ellipsizeMode: null, children: null };
+  const items = [closure_5(color.size, useToken.useToken(tmp)).glyph, style];
   obj2.style = items;
   obj2.allowFontScaling = allowFontScaling;
+  obj2.numberOfLines = numberOfLines;
+  obj2.ellipsizeMode = ellipsizeMode;
   obj2.children = children;
-  return <Text style={null} allowFontScaling={null}>{null}</Text>;
+  return jsx(animated ? closure_4 : Text, { style: null, allowFontScaling: null, numberOfLines: null, ellipsizeMode: null, children: null });
 };

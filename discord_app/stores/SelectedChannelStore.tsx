@@ -14,8 +14,8 @@ import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import PermissionStore from "PermissionStore" /* 4276 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

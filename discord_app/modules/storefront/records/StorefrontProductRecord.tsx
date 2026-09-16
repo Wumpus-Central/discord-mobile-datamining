@@ -1,8 +1,8 @@
-// === Module 7669: StorefrontProductRecord ===
+// === Module 7672: StorefrontProductRecord ===
 
-// Module 7669 (StorefrontProductRecord)
-import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7668 */;
-import SKURecord from "SKURecord" /* 5596 */;
+// Module 7672 (StorefrontProductRecord)
+import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7671 */;
+import SKURecord from "SKURecord" /* 5597 */;
 
 const prototype = function StorefrontProductRecord(arg0) {
   ({ id: tmp.id, skuIds: tmp.skuIds, name: tmp.name, summary: tmp.summary, options: tmp.options, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, skus: tmp.skus, primaryCollectionId: tmp.primaryCollectionId, primaryCollectionStyles: tmp.primaryCollectionStyles, primaryCollectionPdpBgUrl: tmp.primaryCollectionPdpBgUrl, primaryCollectionWillUnpublishAt: tmp.primaryCollectionWillUnpublishAt, gameApplicationId: tmp.gameApplicationId, badgeOverride: tmp.badgeOverride, hideBadge: tmp.hideBadge } = arg0);

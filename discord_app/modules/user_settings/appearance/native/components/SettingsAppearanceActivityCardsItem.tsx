@@ -1,8 +1,8 @@
-// === Module 15388: SettingsAppearanceActivityCardsItem ===
+// === Module 15404: SettingsAppearanceActivityCardsItem ===
 
-// Module 15388 (SettingsAppearanceActivityCardsItem)
+// Module 15404 (SettingsAppearanceActivityCardsItem)
 import nativeDefault from "native" /* 576 */;
-import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15389 */;
+import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15405 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,7 +25,7 @@ export default function ActivityCardsItem(animatedStyles) {
     showsHorizontalScrollIndicator: false,
     horizontal: true
   };
-  return jsx(animatedStyles(9006).FlashList, {
+  return jsx(animatedStyles(9017).FlashList, {
     contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
     data: animatedStyles.cards,
     renderItem(item) {

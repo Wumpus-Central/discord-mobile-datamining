@@ -1,8 +1,8 @@
-// === Module 5243: ImageConversionDecision ===
+// === Module 5244: ImageConversionDecision ===
 
-// Module 5243 (ImageConversionDecision)
+// Module 5244 (ImageConversionDecision)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import IosImageTypesManagerDefault from "IosImageTypesManager" /* 5244 */;
+import IosImageTypesManagerDefault from "IosImageTypesManager" /* 5245 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");

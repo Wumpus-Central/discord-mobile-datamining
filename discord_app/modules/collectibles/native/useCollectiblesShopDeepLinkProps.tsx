@@ -1,9 +1,9 @@
-// === Module 15917: useCollectiblesShopDeepLinkProps ===
+// === Module 15937: useCollectiblesShopDeepLinkProps ===
 
-// Module 15917 (useCollectiblesShopDeepLinkProps)
+// Module 15937 (useCollectiblesShopDeepLinkProps)
 import _mod19 from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7649 */;
-import CollectiblesShopStore from "CollectiblesShopStore" /* 7665 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7652 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7668 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

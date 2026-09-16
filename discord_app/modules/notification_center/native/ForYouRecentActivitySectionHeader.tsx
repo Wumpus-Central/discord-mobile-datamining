@@ -1,15 +1,15 @@
-// === Module 16546: ForYouRecentActivitySectionHeader ===
+// === Module 16566: ForYouRecentActivitySectionHeader ===
 
-// Module 16546 (ForYouRecentActivitySectionHeader)
+// Module 16566 (ForYouRecentActivitySectionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4635 */;
+import Text_Text from "Text/Text" /* 4634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4639);
+const createStyles = fn(4638);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 }, textHeader: null };
 const obj3 = { marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_24 };
 obj2.textHeader = { marginTop: nativeDefault.space.PX_8 };

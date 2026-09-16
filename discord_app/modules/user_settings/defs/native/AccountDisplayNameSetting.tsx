@@ -1,18 +1,18 @@
-// === Module 14809: AccountDisplayNameSetting ===
+// === Module 14825: AccountDisplayNameSetting ===
 
-// Module 14809 (AccountDisplayNameSetting)
+// Module 14825 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const SettingBuilders = fn(11606);
+const SettingBuilders = fn(11614);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["9AjdkD"]);
   },
-  parent: fn(8082).MobileUserSettings.ACCOUNT,
+  parent: fn(8091).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountDisplayNameSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
