@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BlurpleTwilightIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "f385b38a044809a0b451d707fc7cd058",
-  name: "BlurpleTwilightIcon",
+  hash: "ff5825c454c175379e6be98cbe46511a",
+  name: "img_nitro_badge",
   type: "png",
 });

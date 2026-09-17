@@ -1,27 +1,32 @@
 // _runtime/metro/13010__.js
-import _mod12942 from "12942__.js";
+import _mod12948 from "12948__.js";
+import _mod12975 from "12975__.js";
+import _mod12976 from "12976__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
-  let arr = arg2;
-  if (arg2 === undefined) {
-    const items = [arg1];
-    arr = items;
+export const initAndBind = function initAndBind(arg0, debug) {
+  if (true === debug.debug) {
+    const obj = _mod12948;
+    if (_mod12976.DEBUG_BUILD) {
+      const logger = obj.logger;
+      logger.enable();
+    } else {
+      obj.consoleSandbox(() => {
+        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
+      });
+    }
   }
-  let str = arg3;
-  if (arg3 === undefined) {
-    str = "npm";
-  }
-  const tmp = _metadata._metadata || {};
-  if (!tmp.sdk) {
-    const obj = { name: null, packages: null, version: null };
-    const _HermesInternal = HermesInternal;
-    obj.name = "sentry.javascript." + arg1;
-    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12942.SDK_VERSION }));
-    obj.version = str(12942).SDK_VERSION;
-    tmp.sdk = obj;
-  }
-  _metadata._metadata = tmp;
+  const currentScope = _mod12975.getCurrentScope();
+  currentScope.update(debug.initialScope);
+  const obj4 = new arg0(debug);
+  const currentScope1 = _mod12975.getCurrentScope();
+  currentScope1.setClient(obj4);
+  obj4.init();
+  return obj4;
+};
+export const setCurrentClient = function setCurrentClient(arg0) {
+  const currentScope = _mod12975.getCurrentScope();
+  currentScope.setClient(arg0);
 };

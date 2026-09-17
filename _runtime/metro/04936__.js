@@ -1,4 +1,9 @@
 // _runtime/metro/04936__.js
-import _mod1281 from "01281__.js";
 
-export default _mod1281;
+export default function isPropertyKey(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    tmp = typeof str === "symbol";
+  }
+  return tmp;
+}

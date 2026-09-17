@@ -1,13 +1,10 @@
 // _runtime/metro/05739__.js
 
-export const getHeaderTitle = function getHeaderTitle(options, name) {
-  if (typeof options.headerTitle === "string") {
-    let title = options.headerTitle;
-  } else {
-    title = name;
-    if (undefined !== options.title) {
-      title = options.title;
-    }
+export const getDefaultSidebarWidth = (width) => {
+  width = width.width;
+  let num = 360;
+  if (width - 56 <= 360) {
+    num = width - 56;
   }
-  return title;
+  return num;
 };

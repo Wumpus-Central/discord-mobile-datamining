@@ -1,12 +1,12 @@
 // _runtime/metro/08651__.js
-import _modDef8625 from "08625__.js";
+import _modDef8645 from "08645__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const FeTile = arg1;
+const FeConvolveMatrix = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeTile {
+class FeConvolveMatrix {
   constructor() {
     self = this;
-    tmp = c2(this, FeTile);
+    tmp = c2(this, FeConvolveMatrix);
     tmp2 = closure_4;
-    obj = closure_4(FeTile);
+    obj = closure_4(FeConvolveMatrix);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,17 +45,17 @@ class FeTile {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTile, _modDef8625);
+_inherits(FeConvolveMatrix, _modDef8645);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTile(8602).warnUnimplementedFilter();
+    const result = FeConvolveMatrix(8622).warnUnimplementedFilter();
     return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTile, items);
-importDefaultResultResult.displayName = "FeTile";
+const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
+importDefaultResultResult.displayName = "FeConvolveMatrix";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

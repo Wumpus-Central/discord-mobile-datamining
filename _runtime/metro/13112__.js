@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/media_viewer/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b7967e1c069a1d25ab22d1157c869621",
-  name: "MoreVerticalIcon",
+  hash: "87391322b2483c883b3f5fd1ac4080a9",
+  name: "ic_eye",
   type: "png",
 });

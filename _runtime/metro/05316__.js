@@ -1,57 +1,22 @@
 // _runtime/metro/05316__.js
-import _modDef5304 from "05304__.js";
+import _mod5301 from "05301__.js";
 
-importDefault = arg2;
+require = arg1;
 const dependencyMap = arg6;
-const typeSizes = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8, 13: 4 };
-const obj2 = { BYTE: 1, ASCII: 2, SHORT: 3, LONG: 4, RATIONAL: 5, UNDEFINED: 7, SLONG: 9, SRATIONAL: 10, IFD: 13 };
+let c2 = 0;
+let c3 = "<?xpacket begin";
 
 export default {
-  getAsciiValue(items) {
-    return items.map((item) => String.fromCharCode(item));
-  },
-  getByteAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getAsciiAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getShortAt(dataView, sum, byteOrder) {
-    return dataView.getUint16(sum, byteOrder === _modDef5304.LITTLE_ENDIAN);
-  },
-  getLongAt(dataView, sum, byteOrder) {
-    return dataView.getUint32(sum, byteOrder === _modDef5304.LITTLE_ENDIAN);
-  },
-  getRationalAt(getUint32, sum, arg2) {
-    const items = [getUint32.getUint32(sum, arg2 === _modDef5304.LITTLE_ENDIAN)];
-    sum = sum + 4;
-    items[1] = getUint32.getUint32(sum, arg2 === _modDef5304.LITTLE_ENDIAN);
-    return items;
-  },
-  getUndefinedAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getSlongAt(getInt32, sum, arg2) {
-    return getInt32.getInt32(sum, arg2 === _modDef5304.LITTLE_ENDIAN);
-  },
-  getSrationalAt(getInt32, sum, arg2) {
-    const items = [getInt32.getInt32(sum, arg2 === _modDef5304.LITTLE_ENDIAN)];
-    sum = sum + 4;
-    items[1] = getInt32.getInt32(sum, arg2 === _modDef5304.LITTLE_ENDIAN);
-    return items;
-  },
-  getIfdPointerAt(getUint32, sum, arg2) {
-    return getUint32.getUint32(sum, arg2 === _modDef5304.LITTLE_ENDIAN);
-  },
-  typeSizes,
-  tagTypes: obj2,
-  getTypeSize(LONG) {
-    if (undefined === obj2[LONG]) {
-      const _Error = Error;
-      const error = new Error("No such type found.");
-      throw error;
-    } else {
-      return obj[tmp[LONG]];
+  isXMLFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5301.getStringFromDataView(dataView, c2, length.length) === length;
     }
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    const xmpChunks = [];
+    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
+    return { xmpChunks };
   },
 };

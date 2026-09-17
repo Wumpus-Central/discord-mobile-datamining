@@ -1,31 +1,27 @@
 // _runtime/metro/13018__.js
-import _mod13019 from "13019__.js";
-import setupIntegration from "12996__.js";
+import _mod12950 from "12950__.js";
 
-export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
-  name: "ModuleMetadata",
-  setup(on) {
-    const options = on;
-    on.on("beforeEnvelope", (arg0) => {
-      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        if ("event" === arg1) {
-          const _Array = Array;
-          let tmp3;
-          if (Array.isArray(arg0)) {
-            tmp3 = arg0[1];
-          }
-          if (tmp3) {
-            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-            arg0[1] = tmp3;
-            const obj = options(dependencyMap[2]);
-          }
-        }
-      });
-    });
-    on.on("applyFrameMetadata", (type) => {
-      if (!type.type) {
-        const result = _mod13019.addMetadataToStackFrames(options.getOptions().stackParser, type);
-      }
-    });
-  },
-}));
+require = arg1;
+const dependencyMap = arg6;
+
+export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
+  let arr = arg2;
+  if (arg2 === undefined) {
+    const items = [arg1];
+    arr = items;
+  }
+  let str = arg3;
+  if (arg3 === undefined) {
+    str = "npm";
+  }
+  const tmp = _metadata._metadata || {};
+  if (!tmp.sdk) {
+    const obj = { name: null, packages: null, version: null };
+    const _HermesInternal = HermesInternal;
+    obj.name = "sentry.javascript." + arg1;
+    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12950.SDK_VERSION }));
+    obj.version = str(12950).SDK_VERSION;
+    tmp.sdk = obj;
+  }
+  _metadata._metadata = tmp;
+};

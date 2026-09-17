@@ -1,76 +1,31 @@
 // _runtime/metro/12952__.js
-import generatePropagationContext from "../12950_generatePropagationContext.js";
-import BAGGAGE_HEADER_NAME from "../12953_BAGGAGE_HEADER_NAME.js";
+import _mod12946 from "12946__.js";
+import _mod12949 from "12949__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+function instrumentUnhandledRejection() {
+  onunhandledrejection = _mod12949.GLOBAL_OBJ.onunhandledrejection;
+  _mod12949.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
+    _mod12946.triggerHandlers("unhandledrejection", arg0);
+    if (!onunhandledrejection) {
+      return !onunhandledrejection;
+    } else {
+      const self = this;
+      const apply = onunhandledrejection.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+  };
+  _mod12949.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
+}
+let onunhandledrejection = null;
 
-export const TRACEPARENT_REGEXP = regExp;
-export const extractTraceparentData = function extractTraceparentData(str) {
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      return obj;
-    }
-  }
-};
-export const generateSentryTraceHeader = function generateSentryTraceHeader() {
-  if (traceId === undefined) {
-    traceId = generatePropagationContext.generateTraceId();
-  }
-  if (spanId === undefined) {
-    spanId = generatePropagationContext.generateSpanId();
-  }
-  let str = "";
-  if (undefined !== sampled) {
-    let str2 = "-0";
-    if (sampled) {
-      str2 = "-1";
-    }
-    str = str2;
-  }
-  return "" + traceId + "-" + spanId + str;
-};
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
-  let tmp;
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      tmp = obj;
-    }
-  }
-  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
-  if (tmp) {
-    if (tmp.traceId) {
-      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
-      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
-      obj3.spanId = generatePropagationContext.generateSpanId();
-      obj3.sampled = parentSampled;
-      if (!result) {
-        result = {};
-      }
-      obj3.dsc = result;
-      return obj3;
-    }
-  }
-  const obj4 = { traceId: null, spanId: null };
-  obj4.traceId = generatePropagationContext.generateTraceId();
-  const tmp4Result3 = generatePropagationContext;
-  obj4.spanId = generatePropagationContext.generateSpanId();
-  return obj4;
-};
+export const addGlobalUnhandledRejectionInstrumentationHandler =
+  function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
+    _mod12946.addHandler("unhandledrejection", errorCallback);
+    _mod12946.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
+  };

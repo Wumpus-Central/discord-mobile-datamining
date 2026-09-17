@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "8ba3e8ee2991f198308400197cdb28bc",
+  hash: "2eaff20be2a75be7ccdd4c6f19f0eb36",
   name: "img_account_sync_youtube_white",
-  type: "svg",
+  type: "png",
 });

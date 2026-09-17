@@ -1,16 +1,16 @@
 // _runtime/metro/04144__.js
-import module_3730_mod from "03730__.js";
-import _typeof_mod from "03726__.js";
-import requiredArgs_mod from "../03727_requiredArgs.js";
+import module_3732_mod from "03732__.js";
+import _typeof_mod from "03728__.js";
+import requiredArgs_mod from "../03729_requiredArgs.js";
 
-let module_3730 = module_3730_mod;
-if (!module_3730) {
-  const obj = { default: module_3730 };
+let module_3732 = module_3732_mod;
+if (!module_3732) {
+  const obj = { default: module_3732 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3730;
+  tmp3 = module_3732;
 }
-module_3730 = tmp3;
+module_3732 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -28,10 +28,11 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setHours(module_3730, uTCMinutes) {
+export default function setDayOfYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_3730);
-  defaultResult1.setHours(module_3730.default(uTCMinutes));
+  const defaultResult1 = _typeof.default(arg0);
+  defaultResult1.setMonth(0);
+  defaultResult1.setDate(module_3732.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

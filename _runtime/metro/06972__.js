@@ -1,31 +1,13 @@
 // _runtime/metro/06972__.js
 
-export default function _objectWithoutPropertiesLoose(obj, arr) {
-  if (null == obj) {
-    return {};
-  } else {
-    obj = {};
-    for (const key10007 in arg0) {
-      hasOwnProperty = {}.hasOwnProperty;
-      let call = hasOwnProperty.call;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(key10007);
-      } else {
-        hasOwnPropertyResult = call(arg0, key10007);
-      }
-      if (!hasOwnPropertyResult) {
-        continue;
-      } else {
-        if (-1 !== arg1.indexOf(key10007)) {
-          continue;
-        } else {
-          obj[key10007] = arg0[key10007];
-          continue;
-        }
-        continue;
-      }
-      continue;
-    }
-    return obj;
+export default function _arrayLikeToArray(arg0, arg1) {
+  let length = arg1;
+  if (tmp) {
+    length = arg0.length;
   }
+  const ArrayResult = Array(length);
+  for (let num = 0; num < length; num = num + 1) {
+    ArrayResult[num] = arg0[num];
+  }
+  return ArrayResult;
 }

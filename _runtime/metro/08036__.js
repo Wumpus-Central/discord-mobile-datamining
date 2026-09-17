@@ -1,32 +1,97 @@
 // _runtime/metro/08036__.js
-import _slicedToArray from "00032__.js";
+import Link2 from "../01485_Link.js";
 import noop from "00019__.js";
 
-export const useDismissedRouteError = function useDismissedRouteError(state) {
-  const setNextDismissedKey = _slicedToArray(noop.useState(null), 2);
-  const first = setNextDismissedKey[0];
-  let tmp3 = null;
-  if (first) {
-    const routes = state.routes;
-    const found = routes.find((key) => key.key === first);
-    let name;
-    if (found != null) {
-      name = found.name;
+require = fn;
+function NativeStackNavigator(arg0) {
+  ({
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  } = arg0);
+  let merged = Object.assign(
+    arg0,
+    Object.assign({
+      id: 0,
+      initialRouteName: 0,
+      UNSTABLE_routeNamesChangeBehavior: 0,
+      children: 0,
+      layout: 0,
+      screenListeners: 0,
+      screenOptions: 0,
+      screenLayout: 0,
+      UNSTABLE_router: 0,
+    }),
+  );
+  let state;
+  let navigation;
+  let context;
+  const navigationBuilder = state(navigation[2]).useNavigationBuilder(state(navigation[2]).StackRouter, {
+    id,
+    initialRouteName,
+    UNSTABLE_routeNamesChangeBehavior,
+    children,
+    layout,
+    screenListeners,
+    screenOptions,
+    screenLayout,
+    UNSTABLE_router,
+  });
+  state = navigationBuilder.state;
+  navigation = navigationBuilder.navigation;
+  ({ describe, descriptors, NavigationContent } = navigationBuilder);
+  context = context.useContext(state(navigation[2]).NavigationMetaContext);
+  const items = [context, navigation, ,];
+  ({ index: arr[2], key: arr[3] } = state);
+  const effect = context.useEffect(() => {
+    let addListenerResult;
+    if (navigation != null) {
+      const addListener = navigation.addListener;
+      if (addListener != null) {
+        addListenerResult = addListener("tabPress", (arg0) => {
+          const defaultPrevented = arg0;
+          closure_1 = closure_1.isFocused();
+          const animationFrame = requestAnimationFrame(() => {
+            let tmp2 = index.index > 0;
+            if (tmp2) {
+              tmp2 = closure_1;
+            }
+            if (tmp2) {
+              tmp2 = !defaultPrevented.defaultPrevented;
+            }
+            if (tmp2) {
+              const obj = {};
+              const StackActions = state(navigation[2]).StackActions;
+              const merged = Object.assign(StackActions.popToTop());
+              obj.target = index.key;
+              closure_2_1.dispatch(obj);
+            }
+          });
+        });
+      }
     }
-    tmp3 = name;
-  }
-  name = tmp3;
-  const items = [tmp3];
-  const effect = noop.useEffect(() => {
-    if (name) {
-      const _HermesInternal = HermesInternal;
-      const _console = console;
-      console.error(
-        "The screen '" +
-          tmp +
-          "' was removed natively but didn't get removed from JS state. This can happen if the action was prevented in a 'beforeRemove' listener, which is not fully supported in native-stack.\n\nConsider using a 'usePreventRemove' hook with 'headerBackButtonMenuEnabled: false' to prevent users from natively going back multiple screens.",
-      );
-    }
+    return addListenerResult;
   }, items);
-  return { setNextDismissedKey: setNextDismissedKey[1] };
+  const obj2 = { children: null };
+  const obj3 = {};
+  const merged1 = Object.assign(merged);
+  obj3.state = state;
+  obj3.navigation = navigation;
+  obj3.descriptors = descriptors;
+  obj3.describe = describe;
+  obj2.children = jsx(state(navigation[3]).NativeStackView, {});
+  return <NavigationContent>{null}</NavigationContent>;
+}
+const jsx = fn(21).jsx;
+const Link = fn(1485);
+
+export const createNativeStackNavigator = function createNativeStackNavigator(arg0) {
+  return Link2.createNavigatorFactory(NativeStackNavigator)(arg0);
 };
+export const createNativeStackScreen = Link.createScreenFactory();

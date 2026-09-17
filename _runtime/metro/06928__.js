@@ -1,4 +1,9 @@
 // _runtime/metro/06928__.js
-import _modDef6929 from "06929__.js";
+import _mod17 from "00017__.js";
 
-export default _modDef6929;
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({
+  container: StyleSheet.absoluteFillObject,
+  background: { backgroundColor: "white", borderRadius: 15 },
+});

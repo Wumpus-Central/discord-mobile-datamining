@@ -1,62 +1,94 @@
 // _runtime/metro/06807__.js
-import RNGestureHandlerModuleDefault from "../06792_RNGestureHandlerModule.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const require = arg1;
-importDefault = fn;
-let dependencyMap = arg6;
-let obj = {
-  createGestureHandler(Handler, handlerTag, config) {
-    _require = Handler;
-    closure_1 = handlerTag;
-    dependencyMap = config;
-    const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      let obj2 = closure_2;
-      if (!closure_2) {
-        obj2 = {};
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(arg0, arg1) {
+  if (undefined === arg1) {
+    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
+  } else {
+    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
+  }
+  const merged = Object.assign(arg0);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 2074844346342;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}",
+};
+class HoverGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, HoverGesture);
+    tmp2 = c2;
+    obj = c2(HoverGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "HoverGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = HoverGesture;
+_inherits(HoverGesture, fn(6787).ContinousBaseGesture);
+const entry = {
+  key: "effect",
+  value: function effect(hoverEffect) {
+    this.config.hoverEffect = hoverEffect;
+    return this;
+  },
+};
+let items = [
+  entry,
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
       }
-      RNGestureHandlerModuleDefault.createGestureHandler(closure_0, closure_1, obj2);
-    });
+      const items = [arg0];
+      return fn(items);
+    },
   },
-  setGestureHandlerConfig(handlerTag, result) {
-    _require = handlerTag;
-    closure_1 = result;
-    result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      result = RNGestureHandlerModuleDefault.setGestureHandlerConfig(closure_0, closure_1);
-    });
-  },
-  updateGestureHandlerConfig: null,
-  dropGestureHandler: null,
-  configureRelations: null,
-  installUIRuntimeBindings: null,
-};
-fn = function n(arg0, arg1) {
-  const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
-  RNGestureHandlerModuleDefault.flushOperations();
-};
-fn.__closure = {
-  updateGestureHandlerConfig: fn(6792).updateGestureHandlerConfig,
-  flushOperations: fn(6792).flushOperations,
-};
-fn.__workletHash = 12442858879797;
-fn.__initData = {
-  code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}",
-};
-obj.updateGestureHandlerConfig = fn;
-obj.dropGestureHandler = function dropGestureHandler(handlerTag) {
-  _require = handlerTag;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.dropGestureHandler(closure_0);
-  });
-};
-obj.configureRelations = function configureRelations(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.configureRelations(closure_0, closure_1);
-  });
-};
-obj.installUIRuntimeBindings = function installUIRuntimeBindings() {
-  return RNGestureHandlerModuleDefault.installUIRuntimeBindings();
-};
+];
 
-export const NativeProxy = obj;
+export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
+export const hoverGestureHandlerProps = ["hoverEffect"];
+export const HoverGesture = _createClass(HoverGesture, items);

@@ -1,16 +1,13 @@
 // _runtime/metro/07144__.js
-import GestureHandlerRefContext from "../07117_GestureHandlerRefContext.js";
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-require = arg1;
+const Platform = _mod17.Platform;
 
-export const useGestureHandlerRef = function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export const getShadowStyle = function getShadowStyle(color) {
+  let shadowColor = color.color;
+  ({ offset, radius, opacity } = color);
+  if (shadowColor === undefined) {
+    shadowColor = "#000";
   }
+  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
 };

@@ -1,18 +1,11 @@
 // _runtime/metro/14446__.js
-import _mod14421 from "14421__.js";
+import _mod14447 from "14447__.js";
 
-if (_mod14421) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
-  };
-}
-
-export default fn;
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod14447(obj);
+  }
+  return tmp2;
+};

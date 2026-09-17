@@ -5,7 +5,7 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
   scales: [1],
-  hash: "e2ea348445c8a662d796c112d980d074",
-  name: "Microphone",
+  hash: "99f159454017c9a8930c299b70fe8f24",
+  name: "MessagesTab",
   type: "lottie",
 });

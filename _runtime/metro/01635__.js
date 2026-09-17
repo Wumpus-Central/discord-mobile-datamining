@@ -290,11 +290,11 @@ export const KeyboardProvider = (enabled) => {
     style: null,
     onKeyboardMoveReanimated: null,
     onKeyboardMoveStart: "Boolean",
-    onKeyboardMove: "otherAxisSize",
-    onKeyboardMoveInteractive: "Array",
-    onKeyboardMoveEnd: "badgeSurfaceLightMode",
-    onFocusedInputLayoutChangedReanimated: "Array",
-    children: "man_guard_tone3",
+    onKeyboardMove: "a.m.",
+    onKeyboardMoveInteractive: "p.m.",
+    onKeyboardMoveEnd: "midnat",
+    onFocusedInputLayoutChangedReanimated: "middag",
+    children: "morgen",
   };
   let tmp18 = updateSharedValues;
   let tmp19 = updateSharedValues;

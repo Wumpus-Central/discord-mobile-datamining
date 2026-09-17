@@ -1,25 +1,27 @@
 // _runtime/metro/04673__.js
-import _mod552 from "00552__.js";
+import baseIteratee from "../00584_baseIteratee.js";
+import _mod4674 from "04674__.js";
+import baseFindIndex from "../04676_baseFindIndex.js";
 
-export default function toFinite(arg0) {
-  if (arg0) {
-    const tmp3 = _mod552(arg0);
-    if (tmp3 !== Infinity) {
-      if (tmp3 !== -Infinity) {
+export default function findLastIndex(arg0, arg1, arg2) {
+  let num = 0;
+  if (null != arg0) {
+    num = arg0.length;
+  }
+  if (num) {
+    const diff = num - 1;
+    if (undefined === arg2) {
+      return baseFindIndex(arg0, baseIteratee(arg1, 3), diff, true);
+    } else {
+      let sum = _mod4674(arg2);
+      if (arg2 < 0) {
+        sum = num + sum;
+        let tmp7 = max(sum, 0);
+      } else {
+        tmp7 = min(sum, num - 1);
       }
     }
-    let num6 = 1;
-    if (tmp3 < 0) {
-      num6 = -1;
-    }
-    const num4 =
-      179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 *
-      num6;
   } else {
-    let num = 0;
-    if (0 === arg0) {
-      num = arg0;
-    }
-    return num;
+    return -1;
   }
 }

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "eb011b89d6ca95998a19fc9752810bf1",
-  name: "MinecraftNeutralIcon-tertiary",
+  hash: "d6b6d301228ff846f051730b4a535337",
+  name: "SteamNeutralIcon",
   type: "png",
 });

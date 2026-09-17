@@ -1,13 +1,7 @@
 // _runtime/metro/15675__.js
-import registerAsset from "01121__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e0471dd70c51b44f6fe3c89ec72a7182",
-  name: "MobilePhoneSettingsIcon",
-  type: "png",
-});
+const require = arg1;
+const dependencyMap = arg6;
+
+export const WebView = require("WebView").WebView;

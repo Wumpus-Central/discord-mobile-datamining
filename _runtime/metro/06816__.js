@@ -1,45 +1,21 @@
 // _runtime/metro/06816__.js
 import _mod19 from "00019__.js";
-import transformIntoHandlerTags from "../06794_transformIntoHandlerTags.js";
-import MountRegistry2 from "../06797_MountRegistry.js";
+import _modDef6801 from "06801__.js";
 
-function shouldUpdateDetector(blocksHandlers, handlerTag) {
-  if (undefined === blocksHandlers) {
-    return false;
-  } else {
-    const result = transformIntoHandlerTags.transformIntoHandlerTags(blocksHandlers);
-    for (const item10012 of result) {
-      if (item10012 === arg1.handlerTag) {
-        obj2.return();
-        let flag = true;
-        return true;
+_mod19.useCallback;
+
+export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  const items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        previousViewTag.previousViewTag = _modDef6801(previousViewTag.viewRef);
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
       }
     }
-    return false;
-  }
-}
-const useEffect = _mod19.useEffect;
-
-export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
-  closure_0 = detectorUpdater;
-  closure_1 = current2;
-  const items = [detectorUpdater, current2];
-  useEffect(() => {
-    const MountRegistry = MountRegistry2.MountRegistry;
-    return MountRegistry.addMountListener((handlerTag) => {
-      if (current2.isMounted) {
-        const attachedGestures = current2.attachedGestures;
-        const iter = attachedGestures[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let requireToFail = nextResult.config.requireToFail;
-          let simultaneousWith = nextResult.config.simultaneousWith;
-          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, handlerTag)) {
-          }
-          let tmp9 = detectorUpdater();
-          iter.return();
-        }
-      }
-    });
   }, items);
 };

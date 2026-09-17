@@ -1,3 +1,4 @@
 // _runtime/metro/14450__.js
+import _mod14428 from "14428__.js";
 
-export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });
+export default _mod14428({}.isPrototypeOf);

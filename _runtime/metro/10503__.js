@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e482df76bca128861506eefe107fb633",
-  name: "BackspaceIcon",
+  hash: "24c4788690396bae9cc4c1af395a6a87",
+  name: "BicycleIcon",
   type: "png",
 });

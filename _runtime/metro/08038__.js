@@ -1,41 +1,14 @@
 // _runtime/metro/08038__.js
 
-export const getModalRouteKeys = (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.reduce((arr, key) => {
-    let options;
-    if (closure_0[key.key] != null) {
-      options = tmp.options;
-    }
-    if (options == null) {
-      options = {};
-    }
-    const presentation = options.presentation;
-    let tmp2 = arr.length && !presentation;
-    if (!tmp2) {
-      tmp2 = "modal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "transparentModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "containedModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "containedTransparentModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "fullScreenModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "formSheet" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "pageSheet" === presentation;
-    }
-    if (tmp2) {
-      arr = arr.push(key.key);
-    }
-    return arr;
-  }, []);
-};
+export function debounce(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return function () {
+    const self = this;
+    closure_0 = [...arguments];
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      closure_0.apply(self, closure_0);
+    }, self);
+  };
+}

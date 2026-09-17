@@ -1,9 +1,13 @@
 // _runtime/metro/04889__.js
 
-export default function getIterator(arg0) {
-  if (null != arg0) {
-    if (undefined !== arg0[iterator]) {
-      return arg0[iterator]();
+export default function isObject(fn) {
+  let tmp = fn;
+  if (tmp) {
+    let tmp2 = typeof fn === "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn === "object";
     }
+    tmp = tmp2;
   }
+  return tmp;
 }

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 88,
-  height: 106,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "acbb98adccf298ebfe7faeca9c938eda",
-  name: "img_tier_0_mobile",
+  hash: "45844ffe000e8da4174843bafa8614af",
+  name: "SuperReactionIcon",
   type: "png",
 });

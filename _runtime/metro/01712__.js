@@ -92,7 +92,7 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "UPLOAD_ATTACHMENT_REMOVE_FILE",
+      startTimestamp: "APPLICATION_FETCH",
       reduceMotion: null,
     };
     let num = obj.velocity;

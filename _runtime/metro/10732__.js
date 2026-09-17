@@ -1,12 +1,12 @@
 // _runtime/metro/10732__.js
-import _mod10729 from "10729__.js";
+import AbstractParserWithWordBoundaryChecking from "../10588_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKTimeUnitAgoFormatParser = require;
+const ESTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKTimeUnitAgoFormatParser {
+class ESTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitAgoFormatParser);
+    tmp = c2(this, ESTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitAgoFormatParser);
+    obj = closure_4(ESTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,11 +45,15 @@ class UKTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitAgoFormatParser, _mod10729.AbstractParserWithLeftBoundaryChecking);
+_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(" + UKTimeUnitAgoFormatParser(10727).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(10725).TIME_UNITS_PATTERN + ")(?=\\W|$)",
+      "i",
+    );
+    return regExp;
   },
 };
 const items = [
@@ -57,14 +61,13 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = UKTimeUnitAgoFormatParser(10727).parseDuration(arg1[1]);
-      const ParsingComponents = UKTimeUnitAgoFormatParser(10576).ParsingComponents;
+      const ParsingComponents = ESTimeUnitWithinFormatParser(10584).ParsingComponents;
       return ParsingComponents.createRelativeFromReference(
         reference.reference,
-        UKTimeUnitAgoFormatParser(10575).reverseDuration(UKTimeUnitAgoFormatParser(10727).parseDuration(arg1[1])),
+        ESTimeUnitWithinFormatParser(10725).parseDuration(arg1[1]),
       );
     },
   },
 ];
 
-export default _createClass(UKTimeUnitAgoFormatParser, items);
+export default _createClass(ESTimeUnitWithinFormatParser, items);

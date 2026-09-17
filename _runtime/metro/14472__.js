@@ -1,11 +1,12 @@
 // _runtime/metro/14472__.js
-import _mod14420 from "14420__.js";
-import _mod14429 from "14429__.js";
-import all from "14439__.js";
+import _mod14470 from "14470__.js";
 
-let closure_0 = _mod14420(Function.toString);
-if (!all(_mod14429.inspectSource)) {
-  _mod14429.inspectSource = (arg0) => closure_0(arg0);
-}
-
-export default _mod14429.inspectSource;
+export default (arg0, arg1) => {
+  const tmp = _mod14470(arg0);
+  if (tmp < 0) {
+    let tmp3 = max(tmp + arg1, 0);
+  } else {
+    tmp3 = min(tmp, arg1);
+  }
+  return tmp3;
+};

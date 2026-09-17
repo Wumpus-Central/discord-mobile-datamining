@@ -1,21 +1,9 @@
 // _runtime/metro/04742__.js
+import shortOut from "../04743_shortOut.js";
+import overRest from "../04747_overRest.js";
+import flatten from "../04749_flatten.js";
 
-export default function shortOut(arg0) {
-  closure_0 = arg0;
-  c1 = 0;
-  closure_2 = 0;
-  return () => {
-    const tmp = now();
-    closure_2 = tmp;
-    if (0 < 16 - (tmp - closure_2)) {
-      const sum = c1 + 1;
-      c1 = sum;
-      if (800 <= sum) {
-        return arguments[0];
-      }
-    } else {
-      c1 = 0;
-    }
-    return closure_0(...arguments);
-  };
+export default function flatRest(arg0) {
+  const tmp = shortOut;
+  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
 }

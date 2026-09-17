@@ -72,20 +72,20 @@ let items = [
     key: "__getValue",
     value: function __getValue() {
       const _transforms = this._transforms;
-      const f108656 = (__getValue) => __getValue.__getValue();
+      const f109037 = (__getValue) => __getValue.__getValue();
       return _transforms.map((item) => {
         const obj = {};
         for (const key10006 in arg0) {
           let arr = arg0[key10006];
           if (arr instanceof AnimatedTransform(367)) {
-            obj[key10006] = f108659(arr);
+            obj[key10006] = f109040(arr);
             continue;
           } else {
             let _Array = Array;
             if (Array.isArray(arr)) {
               obj[key10006] = arr.map((item) => {
                 let tmp = item;
-                if (item instanceof f108659(dependencyMap[6])) {
+                if (item instanceof f109040(dependencyMap[6])) {
                   tmp = closure_1_0(item);
                 }
                 return tmp;
@@ -98,7 +98,7 @@ let items = [
                   let tmp9 = arr[key10013];
                   let tmp3 = tmp9;
                   if (tmp9 instanceof AnimatedTransform(367)) {
-                    tmp3 = f108659(tmp9);
+                    tmp3 = f109040(tmp9);
                   }
                   obj2[key10013] = tmp3;
                   continue;
@@ -122,24 +122,24 @@ let items = [
   {
     key: "__getValueWithStaticTransforms",
     value: function __getValueWithStaticTransforms(arr) {
-      let f108657 = [];
+      let f109038 = [];
       const _transforms = this._transforms;
-      f108657 = (__getValue) => {
-        f108657.push(__getValue.__getValue());
+      f109038 = (__getValue) => {
+        f109038.push(__getValue.__getValue());
       };
       const mapped = _transforms.map((item) => {
         const obj = {};
         for (const key10006 in arg0) {
           let arr = arg0[key10006];
           if (arr instanceof AnimatedTransform(367)) {
-            obj[key10006] = f108659(arr);
+            obj[key10006] = f109040(arr);
             continue;
           } else {
             let _Array = Array;
             if (Array.isArray(arr)) {
               obj[key10006] = arr.map((item) => {
                 let tmp = item;
-                if (item instanceof f108659(dependencyMap[6])) {
+                if (item instanceof f109040(dependencyMap[6])) {
                   tmp = closure_1_0(item);
                 }
                 return tmp;
@@ -152,7 +152,7 @@ let items = [
                   let tmp9 = arr[key10013];
                   let tmp3 = tmp9;
                   if (tmp9 instanceof AnimatedTransform(367)) {
-                    tmp3 = f108659(tmp9);
+                    tmp3 = f109040(tmp9);
                   }
                   obj2[key10013] = tmp3;
                   continue;
@@ -171,20 +171,20 @@ let items = [
         }
         return obj;
       });
-      closure_129_0 = () => f108657.shift();
+      closure_129_0 = () => f109038.shift();
       return arr.map((item) => {
         const obj = {};
         for (const key10006 in arg0) {
           let arr = arg0[key10006];
           if (arr instanceof AnimatedTransform(367)) {
-            obj[key10006] = f108659(arr);
+            obj[key10006] = f109040(arr);
             continue;
           } else {
             let _Array = Array;
             if (Array.isArray(arr)) {
               obj[key10006] = arr.map((item) => {
                 let tmp = item;
-                if (item instanceof f108659(dependencyMap[6])) {
+                if (item instanceof f109040(dependencyMap[6])) {
                   tmp = closure_1_0(item);
                 }
                 return tmp;
@@ -197,7 +197,7 @@ let items = [
                   let tmp9 = arr[key10013];
                   let tmp3 = tmp9;
                   if (tmp9 instanceof AnimatedTransform(367)) {
-                    tmp3 = f108659(tmp9);
+                    tmp3 = f109040(tmp9);
                   }
                   obj2[key10013] = tmp3;
                   continue;
@@ -222,20 +222,20 @@ let items = [
     key: "__getAnimatedValue",
     value: function __getAnimatedValue() {
       const _transforms = this._transforms;
-      const f108659 = (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue();
+      const f109040 = (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue();
       return _transforms.map((item) => {
         const obj = {};
         for (const key10006 in arg0) {
           let arr = arg0[key10006];
           if (arr instanceof AnimatedTransform(367)) {
-            obj[key10006] = f108659(arr);
+            obj[key10006] = f109040(arr);
             continue;
           } else {
             let _Array = Array;
             if (Array.isArray(arr)) {
               obj[key10006] = arr.map((item) => {
                 let tmp = item;
-                if (item instanceof f108659(dependencyMap[6])) {
+                if (item instanceof f109040(dependencyMap[6])) {
                   tmp = closure_1_0(item);
                 }
                 return tmp;
@@ -248,7 +248,7 @@ let items = [
                   let tmp9 = arr[key10013];
                   let tmp3 = tmp9;
                   if (tmp9 instanceof AnimatedTransform(367)) {
-                    tmp3 = f108659(tmp9);
+                    tmp3 = f109040(tmp9);
                   }
                   obj2[key10013] = tmp3;
                   continue;

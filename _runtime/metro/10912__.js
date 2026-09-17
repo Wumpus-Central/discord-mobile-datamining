@@ -1,34 +1,27 @@
 // _runtime/metro/10912__.js
+import _mod10913 from "10913__.js";
+import _mod10916 from "10916__.js";
+import _mod10920 from "10920__.js";
+import _mod10921 from "10921__.js";
+import CarouselLayout from "../10922_CarouselLayout.js";
 import noop from "00019__.js";
 
-export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {
-  closure_0 = arg0;
-  const items = [arg0];
-  const effect = noop.useEffect(() => {
-    const size = closure_0;
-    ({ defaultIndex, dataLength } = closure_0);
-    if (typeof defaultIndex === "number") {
-      if (dataLength > 0) {
-        const _Error3 = Error;
-        const error = new Error("DefaultIndex must be in the range of data length.");
-        throw error;
-      }
-    }
-    if (!size.mode) {
-      if (!size.vertical) {
-        if (!size.width) {
-          const _Error = Error;
-          const error1 = new Error("`width` must be specified for horizontal carousels.");
-          throw error1;
-        }
-      }
-      if (size.vertical) {
-        if (!size.height) {
-          const _Error2 = Error;
-          const error2 = new Error("`height` must be specified for vertical carousels.");
-          throw error2;
-        }
-      }
-    }
-  }, items);
-};
+require = fn;
+const jsx = fn(21).jsx;
+
+export default noop.forwardRef((defaultIndex, ref) => {
+  const initProps = _mod10913.useInitProps(defaultIndex);
+  const commonVariables = _mod10916.useCommonVariables(initProps);
+  const obj4 = {};
+  const merged = Object.assign(initProps);
+  obj4.dataLength = initProps.dataLength;
+  const propsErrorBoundary = _mod10920.usePropsErrorBoundary(obj4);
+  const obj5 = {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+  };
+  return jsx(_mod10921.GlobalStateProvider, {
+    value: { props: initProps, common: commonVariables },
+    children: jsx(CarouselLayout.CarouselLayout, { ref }),
+  });
+});

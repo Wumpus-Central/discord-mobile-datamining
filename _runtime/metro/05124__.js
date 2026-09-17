@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e3a50d090de2ca1d8928677d5f100909",
-  name: "HubIcon",
+  hash: "38e1b93a52067f9cce24c90cbb1af007",
+  name: "StageIcon",
   type: "png",
 });

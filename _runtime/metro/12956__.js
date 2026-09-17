@@ -1,68 +1,190 @@
 // _runtime/metro/12956__.js
-import _mod12946 from "12946__.js";
-import _slicedToArray from "00032__.js";
+import _mod12949 from "12949__.js";
+import _mod12955 from "12955__.js";
 
-const _sentryMetrics = "_sentryMetrics";
-
-export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
-  if (self[_sentryMetrics]) {
-    const obj = {};
-    const tmp3 = tmp[Symbol.iterator]();
-    while (tmp3 !== undefined) {
-      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
-      [tmp9, tmp11] = tmp8;
-      let arr = obj[tmp9];
-      if (!arr) {
-        let items = [];
-        obj[tmp10] = items;
-        arr = items;
+require = arg1;
+const dependencyMap = arg6;
+function _htmlElementAsString(tagName, arr) {
+  let items = [];
+  if (tagName) {
+    if (tagName.tagName) {
+      if (_mod12949.GLOBAL_OBJ.HTMLElement) {
+        if (tagName instanceof globalThis.HTMLElement) {
+          if (tagName.dataset) {
+            const dataset = tagName.dataset;
+            if (tagName.dataset.sentryComponent) {
+              return dataset.sentryComponent;
+            } else if (dataset.sentryElement) {
+              return tagName.dataset.sentryElement;
+            }
+          }
+        }
       }
-      let obj2 = _mod12946;
-      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
-      continue;
+      arr = items.push(tagName.tagName.toLowerCase());
+      let mapped = null;
+      if (arr) {
+        mapped = null;
+        if (arr.length) {
+          const found = arr.filter((item) => tagName.getAttribute(item));
+          mapped = found.map((item) => {
+            items = [item, tagName.getAttribute(item)];
+            return items;
+          });
+        }
+      }
+      if (mapped) {
+        if (mapped.length) {
+          const item = mapped.forEach((item) => {
+            items.push("[" + item[0] + '="' + item[1] + '"]');
+          });
+        }
+        const items1 = ["aria-label", "type", "name", "title", "alt"];
+        const iter = items1[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp22 = nextResult;
+          let attr = tagName.getAttribute(nextResult);
+          if (attr) {
+            let _HermesInternal3 = HermesInternal;
+            let str8 = "[";
+            let str9 = '="';
+            let str10 = '"]';
+            let arr2 = items.push("[" + tmp22 + '="' + tmp24 + '"]');
+          }
+          continue;
+        }
+        return items.join("");
+      }
+      if (tagName.id) {
+        const _HermesInternal = HermesInternal;
+        items.push("#" + tagName.id);
+      }
+      if (tagName.className) {
+        if (tmpResult.isString(str3)) {
+          const parts = str3.split(/\s+/);
+          const tmp11 = parts[Symbol.iterator]();
+          while (tmp11 !== undefined) {
+            let _HermesInternal2 = HermesInternal;
+            let arr7 = items.push("." + tmp14);
+            continue;
+          }
+        }
+        tmpResult = _mod12955;
+      }
     }
-    return obj;
+  }
+  return "";
+}
+
+export const getComponentName = function getComponentName(arg0) {
+  let parentNode = arg0;
+  let num = 0;
+  if (_mod12949.GLOBAL_OBJ.HTMLElement) {
+    while (parentNode) {
+      if (parentNode instanceof globalThis.HTMLElement) {
+        let dataset = parentNode.dataset;
+        if (parentNode.dataset.sentryComponent) {
+          return dataset.sentryComponent;
+        } else if (dataset.sentryElement) {
+          return parentNode.dataset.sentryElement;
+        }
+      }
+      parentNode = parentNode.parentNode;
+      num = num + 1;
+      if (num < 5) {
+        continue;
+      } else {
+        return null;
+      }
+    }
+    return null;
+  } else {
+    return null;
   }
 };
-export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(
-  activeSpan,
-  metricType,
-  sanitizeMetricKeyResult,
-  min,
-  sanitizeUnitResult,
-  tags,
-  bucketKey,
-) {
-  let obj = activeSpan[_sentryMetrics];
-  if (!obj) {
-    const _Map = Map;
-    const map = new Map();
-    activeSpan[tmp] = map;
-    obj = map;
+export const getDomElement = function getDomElement(arg0) {
+  let element = null;
+  if (_mod12949.GLOBAL_OBJ.document) {
+    element = null;
+    if (_mod12949.GLOBAL_OBJ.document.querySelector) {
+      const _document = _mod12949.GLOBAL_OBJ.document;
+      element = _document.querySelector(arg0);
+    }
   }
-  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
-  value = obj.get(bucketKey);
-  if (value) {
-    const range = _slicedToArray(value, 2)[1];
-    const items = [combined];
-    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
-    const _Math = Math;
-    range1.min = Math.min(range.min, min);
-    const _Math2 = Math;
-    range1.max = Math.max(range.max, min);
-    const sum = range.count + 1;
-    range.count = sum;
-    range1.count = sum;
-    const sum1 = range.sum + min;
-    range.sum = sum1;
-    range1.sum = sum1;
-    range1.tags = range.tags;
-    items[1] = range1;
-    const result = obj.set(bucketKey, items);
+  return element;
+};
+export const getLocationHref = function getLocationHref() {
+  try {
+    return _mod12949.GLOBAL_OBJ.document.location.href;
+  } catch (err) {
+    return "";
+  }
+};
+export const htmlTreeAsString = function htmlTreeAsString(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (arg0) {
+    try {
+      let tmp = arg0;
+      const items = [];
+      let num2 = 0;
+      const _Array = Array;
+      let keyAttrs = obj;
+      if (!Array.isArray(obj)) {
+        keyAttrs = obj.keyAttrs;
+      }
+      const _Array2 = Array;
+      const isArray = Array.isArray(obj);
+      let num3 = !isArray;
+      if (!isArray) {
+        num3 = obj.maxStringLength;
+      }
+      if (!num3) {
+        num3 = 80;
+      }
+      if (tmp) {
+        let sum = tmp7 + 1;
+        if (+0 < 5) {
+          const tmp33 = _htmlElementAsString(tmp, tmp3);
+          let arr2 = tmp33;
+          if ("html" !== tmp33) {
+            if (sum <= 1) {
+              items.push(arr2);
+              num2 = num2 + arr2.length;
+              const parentNode = tmp.parentNode;
+              tmp = parentNode;
+              while (parentNode) {
+                let tmp19 = +sum;
+                sum = tmp19 + 1;
+                if (tmp19 >= 5) {
+                  break;
+                } else {
+                  let tmp23 = _htmlElementAsString(tmp, tmp3);
+                  arr2 = tmp23;
+                  if ("html" === tmp23) {
+                    break;
+                  } else {
+                    if (sum <= 1) {
+                      continue;
+                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
+                      break;
+                    }
+                    continue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const reversed = items.reverse();
+      return reversed.join(" > ");
+    } catch (err) {
+      return "<unknown>";
+    }
   } else {
-    const items1 = [combined];
-    const range2 = { min, max: min, count: 1, sum: min, tags };
-    items1[1] = range2;
-    const result1 = obj.set(bucketKey, items1);
+    return "<unknown>";
   }
 };

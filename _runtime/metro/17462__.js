@@ -1,8 +1,13 @@
 // _runtime/metro/17462__.js
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "ko",
-  pluralRuleFunction(arg0, arg1) {
-    return "other";
-  },
+import registerAsset from "01121__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "2b649615a70a14244330a855517175bb",
+  name: "report",
+  type: "png",
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "ko-KP", parentLocale: "ko" });

@@ -1,50 +1,28 @@
 // _runtime/metro/06913__.js
 import noop from "00019__.js";
 
-const require = globalThis.__r;
+({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
 
-({ useEffect: c2, useRef: c3 } = noop);
-
-export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
-  const tmp = closure_3(null);
-  const tmp2 = closure_3(null);
-  _require = tmp2;
-  let tmp3 = INITIAL_CONTAINER_HEIGHT;
-  if (INITIAL_CONTAINER_HEIGHT) {
-    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
-  }
-  if (tmp3) {
-    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
-  }
-  if (!tmp3) {
-    if (null === tmp2.current) {
-      tmp.current = INITIAL_CONTAINER_HEIGHT;
-      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
-        const obj2 = {};
-        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
-        let mutable = require("cancelAnimation").makeMutable(obj2);
-        let obj = require("cancelAnimation");
-      } else {
-        mutable = require("cancelAnimation").makeMutable(INITIAL_CONTAINER_HEIGHT);
-        const obj3 = require("cancelAnimation");
-      }
-      tmp2.current = mutable;
-    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
-      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
-    }
-  }
-  closure_2(
+export const useStableCallback = function useStableCallback(current) {
+  React3(undefined);
+  React2(() => {
+    closure_1.current = current;
+  });
+  framebus(
     () => () => {
-      if (ref.current) {
-        ref(dependencyMap[1]).cancelAnimation(tmp.current);
-        const obj = ref(dependencyMap[1]);
-      }
+      ref.current = undefined;
     },
     [],
   );
-  let current = tmp2.current;
-  if (current == null) {
-    current = INITIAL_CONTAINER_HEIGHT;
-  }
-  return current;
+  return React(() => {
+    const items = [...arguments];
+    current = ref.current;
+    let applyResult;
+    if (current != null) {
+      const items1 = [];
+      HermesBuiltin.arraySpread(items, 0);
+      applyResult = HermesBuiltin.apply(items1, ref);
+    }
+    return applyResult;
+  }, []);
 };

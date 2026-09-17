@@ -1,6 +1,6 @@
 // _runtime/metro/04089__.js
 import module_4081_mod from "04081__.js";
-import requiredArgs_mod from "../03727_requiredArgs.js";
+import requiredArgs_mod from "../03729_requiredArgs.js";
 
 let module_4081 = module_4081_mod;
 if (!module_4081) {
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisYear(arg0) {
+export default function isThisSecond(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4081.default(arg0, Date.now());
+  return module_4081.default(Date.now(), arg0);
 };
 export default exports.default;

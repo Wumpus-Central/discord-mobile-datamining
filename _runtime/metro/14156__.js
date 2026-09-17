@@ -1,81 +1,101 @@
 // _runtime/metro/14156__.js
-import _mod14121 from "14121__.js";
-import _mod14141 from "14141__.js";
+import _mod14128 from "14128__.js";
+import _mod14129 from "14129__.js";
+import _mod14133 from "14133__.js";
 
-export default (arg0, arg1) => {
-  obj = new obj(14150)(arg0, arg1);
-  const tmp3 = new obj(14121)("0.0.0");
-  if (obj.test(tmp3)) {
-    return tmp3;
+export default (num, arg1) => {
+  if (num instanceof _mod14129) {
+    return num;
   } else {
-    const tmp6 = new tmp(14121)("0.0.0-0");
-    if (obj.test(tmp6)) {
-      return tmp6;
+    let StringResult = num;
+    if (typeof num === "number") {
+      const _String = String;
+      StringResult = String(num);
+    }
+    if (typeof StringResult !== "string") {
+      return null;
     } else {
-      let num = 0;
-      let num3 = 0;
-      let tmp9 = null;
-      let tmp10 = null;
-      if (0 < obj.set.length) {
-        do {
-          let arr = obj.set[num3];
-          obj = null;
-          let item = arr.forEach((semver) => {
-            obj = new _mod14121(semver.semver.version);
-            const operator = semver.operator;
-            if (">" === operator) {
-              if (0 === obj.prerelease.length) {
-                obj.patch = obj.patch + 1;
-              } else {
-                const prerelease = obj.prerelease;
-                prerelease.push(0);
-              }
-              obj.raw = obj.format();
+      let obj = arg1;
+      if (!arg1) {
+        obj = {};
+      }
+      if (obj.rtl) {
+        const safeRe2 = _mod14133.safeRe;
+        const t2 = _mod14133.t;
+        if (obj.includePrerelease) {
+          let obj2 = safeRe2[t2.COERCERTLFULL];
+        } else {
+          obj2 = safeRe2[t2.COERCERTL];
+        }
+        let match = obj2.exec(StringResult);
+        let tmp6 = null;
+        let tmp8 = null;
+        if (match) {
+          while (true) {
+            let tmp10 = tmp6;
+            let tmp11 = tmp6;
+            if (tmp6) {
+              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
+            }
+            if (!tmp11) {
+              tmp10 = match;
+            }
+            obj2.lastIndex = match.index + match[1].length + match[2].length;
+            let match1 = obj2.exec(StringResult);
+            tmp8 = tmp10;
+            if (!match1) {
+              break;
             } else {
-              if ("" !== operator) {
-                if (">=" !== operator) {
-                  if ("<" !== operator) {
-                    if ("<=" !== operator) {
-                      const _Error = Error;
-                      const _HermesInternal = HermesInternal;
-                      const error = new Error("Unexpected operation: " + semver.operator);
-                      throw error;
-                    }
-                  }
+              match = match1;
+              tmp6 = tmp10;
+              if (!tmp10) {
+                continue;
+              } else {
+                match = match1;
+                tmp6 = tmp10;
+                tmp8 = tmp10;
+                if (tmp10.index + tmp10[0].length === StringResult.length) {
+                  break;
                 }
               }
-              if (obj) {
-                !_mod14141(obj, obj);
-              }
+              continue;
             }
-          });
-          let tmp13 = !obj;
-          let tmp14 = tmp9;
-          if (obj) {
-            let tmp16 = tmp14;
-            if (tmp14) {
-              tmp16 = !obj(14141)(tmp14, obj);
-            }
-            tmp13 = tmp16;
           }
-          if (!tmp13) {
-            tmp14 = obj;
-          }
-          num3 = num + 1;
-          tmp9 = tmp14;
-          tmp10 = tmp14;
-          num = num3;
-        } while (num3 < obj.set.length);
-      }
-      let tmp20 = null;
-      if (tmp10) {
-        tmp20 = null;
-        if (obj.test(tmp10)) {
-          tmp20 = tmp10;
         }
+        obj2.lastIndex = -1;
+        let match2 = tmp8;
+      } else {
+        const safeRe = _mod14133.safeRe;
+        const t = _mod14133.t;
+        if (obj.includePrerelease) {
+          let tmp3 = safeRe[t.COERCEFULL];
+        } else {
+          tmp3 = safeRe[t.COERCE];
+        }
+        match2 = StringResult.match(tmp3);
       }
-      return tmp20;
+      if (null === match2) {
+        return null;
+      } else {
+        let str2 = "";
+        if (obj.includePrerelease) {
+          str2 = "";
+          if (match2[5]) {
+            const _HermesInternal = HermesInternal;
+            str2 = "-" + match2[5];
+          }
+        }
+        let str4 = "";
+        if (obj.includePrerelease) {
+          str4 = "";
+          if (match2[6]) {
+            const _HermesInternal2 = HermesInternal;
+            str4 = "+" + match2[6];
+          }
+        }
+        const _HermesInternal3 = HermesInternal;
+        return _mod14128("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+      }
     }
   }
-  tmp = obj;
 };

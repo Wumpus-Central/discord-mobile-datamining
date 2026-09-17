@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/main_tabs",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "afec4e7bfe67c8da93450ca26af6a62e",
-  name: "NotificationCenter",
+  hash: "0c1dfbd9df935becc793861dc2d441bd",
+  name: "ConnectionFineIcon",
   type: "png",
 });

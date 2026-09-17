@@ -1,13 +1,19 @@
 // _runtime/metro/08610__.js
-import extractBrushDefault from "../08604_extractBrush.js";
-import _modDef8613 from "08613__.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import extractOpacityDefault from "../08612_extractOpacity.js";
+import extractResponderDefault from "../08613_extractResponder.js";
+import _modDef8618 from "08618__.js";
+import reducedDefault from "../08619_reduced.js";
+import _modDef8620 from "08620__.js";
+import _modDef8630 from "08630__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import metroRequire from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-let Shape = fn;
+const Svg = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,415 +32,213 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const findNodeHandle = fn(17).findNodeHandle;
-let closure_8 = Math.PI / 180;
-class SVGMatrix {
-  constructor(arg0) {
+let closure_3 = ["style", "opacity", "viewBox", "children", "onLayout", "preserveAspectRatio"];
+get_ActivityIndicator = fn(17);
+({ findNodeHandle: closure_8, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const svg = StyleSheet.create({ svg: { backgroundColor: "transparent", borderWidth: 0 } }).svg;
+class Svg {
+  constructor() {
     self = this;
-    tmp = hasOwnProperty(this, Shape);
-    if (global) {
-      ({ a: self.a, b: self.b, c: self.c, d: self.d, e: self.e, f: self.f } = global);
-    } else {
-      num = 1;
-      self.a = 1;
-      num2 = 0;
-      self.b = 0;
-      self.c = 0;
-      self.d = 1;
-      self.e = 0;
-      self.f = 0;
-    }
-    return;
-  }
-}
-Shape = SVGMatrix;
-const entry = {
-  key: "multiply",
-  value: function multiply(arg0) {
-    ({ a, b, c, d } = this);
-    ({ a: a2, b: b2, c: c2, d: d2, e, f } = arg0);
-    const obj2 = Object.create(Shape.prototype);
-    hasOwnProperty(obj2, Shape);
-    ({
-      a: tmp.a,
-      b: tmp.b,
-      c: tmp.c,
-      d: tmp.d,
-      e: tmp.e,
-      f: tmp.f,
-    } = {
-      a: a * a2 + c * b2,
-      c: a * c2 + c * d2,
-      e: a * e + c * f + this.e,
-      b: b * a2 + d * b2,
-      d: b * c2 + d * d2,
-      f: b * e + d * f + this.f,
-    });
-    return obj2;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "inverse",
-    value: function inverse() {
-      ({ a, b, c, d, e, f } = this);
-      const diff = a * d - b * c;
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp2.a,
-        b: tmp2.b,
-        c: tmp2.c,
-        d: tmp2.d,
-        e: tmp2.e,
-        f: tmp2.f,
-      } = {
-        a: d / diff,
-        b: -b / diff,
-        c: -c / diff,
-        d: a / diff,
-        e: (c * f - d * e) / diff,
-        f: -a * f - (b * e) / diff,
-      });
-      return obj2;
-    },
-  },
-  {
-    key: "translate",
-    value: function translate(arg0, arg1) {
-      ({ a, b, c, d } = this);
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp.a,
-        b: tmp.b,
-        c: tmp.c,
-        d: tmp.d,
-        e: tmp.e,
-        f: tmp.f,
-      } = { a, c, e: a * arg0 + c * arg1 + this.e, b, d, f: b * arg0 + d * arg1 + this.f });
-      return obj2;
-    },
-  },
-  {
-    key: "scale",
-    value: function scale(mapped) {
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp.a,
-        b: tmp.b,
-        c: tmp.c,
-        d: tmp.d,
-        e: tmp.e,
-        f: tmp.f,
-      } = { a: this.a * mapped, c: this.c * mapped, e: this.e, b: this.b * mapped, d: this.d * mapped, f: this.f });
-      return obj2;
-    },
-  },
-  {
-    key: "scaleNonUniform",
-    value: function scaleNonUniform(arg0, arg1) {
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp.a,
-        b: tmp.b,
-        c: tmp.c,
-        d: tmp.d,
-        e: tmp.e,
-        f: tmp.f,
-      } = { a: this.a * arg0, c: this.c * arg1, e: this.e, b: this.b * arg0, d: this.d * arg1, f: this.f });
-      return obj2;
-    },
-  },
-  {
-    key: "rotate",
-    value: function rotate(arg0) {
-      const cosResult = Math.cos(closure_8 * arg0);
-      const sinResult = Math.sin(closure_8 * arg0);
-      ({ a, b, c, d } = this);
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp4.a,
-        b: tmp4.b,
-        c: tmp4.c,
-        d: tmp4.d,
-        e: tmp4.e,
-        f: tmp4.f,
-      } = {
-        a: a * cosResult + c * sinResult,
-        c: a * -sinResult + c * cosResult,
-        e: this.e,
-        b: b * cosResult + d * sinResult,
-        d: b * -sinResult + d * cosResult,
-        f: this.f,
-      });
-      return obj2;
-    },
-  },
-  {
-    key: "rotateFromVector",
-    value: function rotateFromVector(result2, result2) {
-      const atan2Result = Math.atan2(result2, result2);
-      const cosResult = Math.cos(closure_8 * atan2Result);
-      const sinResult = Math.sin(closure_8 * atan2Result);
-      ({ a, b, c, d } = this);
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp5.a,
-        b: tmp5.b,
-        c: tmp5.c,
-        d: tmp5.d,
-        e: tmp5.e,
-        f: tmp5.f,
-      } = {
-        a: a * cosResult + c * sinResult,
-        c: a * -sinResult + c * cosResult,
-        e: this.e,
-        b: b * cosResult + d * sinResult,
-        d: b * -sinResult + d * cosResult,
-        f: this.f,
-      });
-      return obj2;
-    },
-  },
-  {
-    key: "flipX",
-    value: function flipX() {
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp.a,
-        b: tmp.b,
-        c: tmp.c,
-        d: tmp.d,
-        e: tmp.e,
-        f: tmp.f,
-      } = { a: this.a * -1, c: this.c, e: this.e, b: this.b * -1, d: this.d, f: this.f });
-      return obj2;
-    },
-  },
-  {
-    key: "flipY",
-    value: function flipY() {
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp.a,
-        b: tmp.b,
-        c: tmp.c,
-        d: tmp.d,
-        e: tmp.e,
-        f: tmp.f,
-      } = { a: this.a, c: this.c * -1, e: this.e, b: this.b, d: this.d * -1, f: this.f });
-      return obj2;
-    },
-  },
-  {
-    key: "skewX",
-    value: function skewX(arg0) {
-      const tanResult = Math.tan(closure_8 * arg0);
-      ({ a, b } = this);
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp2.a,
-        b: tmp2.b,
-        c: tmp2.c,
-        d: tmp2.d,
-        e: tmp2.e,
-        f: tmp2.f,
-      } = { a, c: a * tanResult + this.c, e: this.e, b, d: b * tanResult + this.d, f: this.f });
-      return obj2;
-    },
-  },
-  {
-    key: "skewY",
-    value: function skewY(arg0) {
-      const tanResult = Math.tan(closure_8 * arg0);
-      ({ c, d } = this);
-      const obj2 = Object.create(Shape.prototype);
-      hasOwnProperty(obj2, Shape);
-      ({
-        a: tmp2.a,
-        b: tmp2.b,
-        c: tmp2.c,
-        d: tmp2.d,
-        e: tmp2.e,
-        f: tmp2.f,
-      } = { a: this.a + c * tanResult, c, e: this.e, b: this.b + d * tanResult, d, f: this.f });
-      return obj2;
-    },
-  },
-];
-const importDefaultResult1Result = _createClass(SVGMatrix, items);
-class SVGPoint {
-  constructor(arg0) {
-    self = this;
-    tmp = hasOwnProperty(this, Shape);
-    if (global) {
-      ({ x: self.x, y: self.y } = global);
-    } else {
-      num = 0;
-      self.x = 0;
-      self.y = 0;
-    }
-    return;
-  }
-}
-Shape = SVGPoint;
-const entry1 = {
-  key: "matrixTransform",
-  value: function matrixTransform(arg0) {
-    ({ x, y } = this);
-    const point = { x: arg0.a * x + arg0.c * y + arg0.e, y: arg0.b * x + arg0.d * y + arg0.f };
-    const obj = Object.create(Shape.prototype);
-    hasOwnProperty(obj, Shape);
-    ({ x: tmp.x, y: tmp.y } = point);
-    return obj;
-  },
-};
-const items1 = [entry1];
-const importDefaultResult1Result1 = _createClass(SVGPoint, items1);
-let obj = {
-  createSVGPoint() {
-    return new importDefaultResult1Result1();
-  },
-  createSVGMatrix() {
-    return new importDefaultResult1Result();
-  },
-};
-class Shape {
-  constructor(arg0) {
-    self = this;
-    tmp = hasOwnProperty(this, Shape);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_4;
-    obj = closure_4(Shape);
-    tmp3 = closure_3;
-    if (closure_7()) {
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, Svg);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(Svg);
+    tmp3 = metroRequire;
+    if (closure_11()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      constructResult = obj.apply(self, items1);
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.root = null;
-    tmp3Result.refMethod = (root) => {
-      closure_0.root = root;
-    };
-    tmp3Result.setNativeProps = (obj) => {
-      for (const key10004 in arg0) {
-        let BrushProperties = Shape(8611).BrushProperties;
-        if (!BrushProperties.includes(key10004)) {
-          continue;
-        } else {
-          arg0[key10004] = extractBrushDefault(arg0[key10004]);
-          continue;
-        }
-        continue;
-      }
+    tmp3Result.measureInWindow = (arg0) => {
       const root = closure_0.root;
-      if (root != null) {
-        root.setNativeProps(obj);
+      if (root) {
+        root.measureInWindow(arg0);
       }
     };
-    tmp3Result.getBBox = (arg0) => {
-      let obj = arg0;
-      if (!arg0) {
-        obj = {};
+    tmp3Result.measure = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measure(arg0);
       }
-      const fill = obj.fill;
-      const fill2 = undefined === fill || fill;
-      const stroke = obj.stroke;
-      const stroke2 = undefined === stroke || stroke;
-      const markers = obj.markers;
-      const markers2 = undefined === markers || markers;
-      const clipped = obj.clipped;
-      const clipped2 = undefined === clipped || clipped;
-      const tmp5 = findNodeHandle(closure_0.root);
-      return Shape(8612).default.getBBox(tmp5, { fill: fill2, stroke: stroke2, markers: markers2, clipped: clipped2 });
     };
-    tmp3Result.getCTM = () => {
-      const tmp = findNodeHandle(closure_0.root);
-      const _default = Shape(8612).default;
-      return new importDefaultResult1Result(Shape(8612).default.getCTM(tmp));
+    tmp3Result.measureLayout = (arg0, arg1, arg2) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureLayout(arg0, arg1, arg2);
+      }
     };
-    tmp3Result.getScreenCTM = () => {
-      const tmp = findNodeHandle(closure_0.root);
-      const _default = Shape(8612).default;
-      return new importDefaultResult1Result(Shape(8612).default.getScreenCTM(tmp));
+    tmp3Result.setNativeProps = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.setNativeProps(arg0);
+      }
     };
-    tmp3Result.isPointInFill = (arg0) => {
-      const tmp = findNodeHandle(closure_0.root);
-      return Shape(8612).default.isPointInFill(tmp, arg0);
+    tmp3Result.toDataURL = (arg0, arg1) => {
+      if (arg0) {
+        const tmp4 = React6(closure_0.root);
+        Svg(8611).default.toDataURL(tmp4, arg1, arg0);
+        const _default = Svg(8611).default;
+      }
     };
-    tmp3Result.isPointInStroke = (arg0) => {
-      const tmp = findNodeHandle(closure_0.root);
-      return Shape(8612).default.isPointInStroke(tmp, arg0);
-    };
-    tmp3Result.getTotalLength = () => {
-      const tmp = findNodeHandle(closure_0.root);
-      return Shape(8612).default.getTotalLength(tmp);
-    };
-    tmp3Result.getPointAtLength = (length) => {
-      const tmp = findNodeHandle(closure_0.root);
-      const _default = Shape(8612).default;
-      const obj = { length };
-      return new importDefaultResult1Result1(Shape(8612).default.getPointAtLength(tmp, { length }));
-    };
-    tmp7 = closure_1(c2[10])(tmp3Result);
     return tmp3Result;
   }
 }
-_inherits(Shape, fn(19).Component);
-const entry2 = {
-  key: "getNativeScrollRef",
-  value: function getNativeScrollRef() {
-    return this.root;
+_inherits(Svg, _modDef8630);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ style, opacity } = props);
+    ({ viewBox, children, onLayout, preserveAspectRatio } = props);
+    const tmp = _objectWithoutProperties(props, closure_3);
+    let applyResult = style;
+    if (Array.isArray(style)) {
+      const _Object = Object;
+      const items = [{}];
+      HermesBuiltin.arraySpread(style, 1);
+      const _Object2 = Object;
+      applyResult = HermesBuiltin.apply(items, Object);
+    }
+    const obj = {};
+    const merged = Object.assign(applyResult);
+    const merged1 = Object.assign(tmp);
+    ({ width, height, focusable } = obj);
+    let tmp10 = undefined === width;
+    ({
+      transform,
+      font,
+      fill,
+      fillOpacity,
+      fillRule,
+      stroke,
+      strokeWidth,
+      strokeOpacity,
+      strokeDasharray,
+      strokeDashoffset,
+      strokeLinecap,
+      strokeLinejoin,
+      strokeMiterlimit,
+      position,
+    } = obj);
+    if (tmp10) {
+      tmp10 = undefined === height;
+    }
+    if (tmp10) {
+      tmp10 = "absolute" !== position;
+    }
+    if (tmp10) {
+      height = "100%";
+      width = "100%";
+    }
+    let BooleanResult = Boolean(focusable);
+    if (BooleanResult) {
+      BooleanResult = "false" !== focusable;
+    }
+    tmp.focusable = BooleanResult;
+    let items1 = [svg];
+    if (style) {
+      items1.push(style);
+    }
+    let num2 = NaN;
+    if (null != opacity) {
+      num2 = extractOpacityDefault(opacity);
+    }
+    const obj2 = {};
+    let flag = false;
+    if (!isNaN(num2)) {
+      obj2.opacity = num2;
+      flag = true;
+    }
+    let flag2 = flag;
+    if (width) {
+      flag2 = flag;
+      if (height) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(width, 10);
+        const _parseInt2 = parseInt;
+        let parsed1 = parseInt(height, 10);
+        const _isNaN = isNaN;
+        let isNaNResult = isNaN(parsed);
+        if (!isNaNResult) {
+          isNaNResult = "%" === width[width.length - 1];
+        }
+        const _isNaN2 = isNaN;
+        let isNaNResult1 = isNaN(parsed1);
+        if (!isNaNResult1) {
+          isNaNResult1 = "%" === height[height.length - 1];
+        }
+        if (isNaNResult) {
+          parsed = width;
+        }
+        obj2.width = parsed;
+        if (isNaNResult1) {
+          parsed1 = height;
+        }
+        obj2.height = parsed1;
+        obj2.flex = 0;
+        flag2 = true;
+      }
+    }
+    if (flag2) {
+      items1.push(obj2);
+    }
+    if (items1.length <= 1) {
+      items1 = svg;
+    }
+    tmp.style = items1;
+    if (null != width) {
+      tmp.bbWidth = width;
+    }
+    if (null != height) {
+      tmp.bbHeight = height;
+    }
+    extractResponderDefault(tmp, tmp, this);
+    const merged2 = Object.assign({}, StyleSheet.flatten(style));
+    if (transform) {
+      if (merged2.transform) {
+        tmp.transform = merged2.transform;
+        merged2.transform = undefined;
+      }
+      tmp.transform = Svg(8614).extractTransformSvgView(tmp);
+      const obj3 = Svg(8614);
+    }
+    const obj4 = {};
+    const merged3 = Object.assign(tmp);
+    obj4.ref = function ref(arg0) {
+      return self.refMethod(arg0);
+    };
+    const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
+    obj4.children = jsx(_modDef8620, {
+      children,
+      style: merged2,
+      font,
+      fill,
+      fillOpacity,
+      fillRule,
+      stroke,
+      strokeWidth,
+      strokeOpacity,
+      strokeDasharray,
+      strokeDashoffset,
+      strokeLinecap,
+      strokeLinejoin,
+      strokeMiterlimit,
+      onLayout,
+    });
+    return jsx(_modDef8618, {});
   },
 };
-const items2 = [entry2];
-const importDefaultResult1Result2 = _createClass(Shape, items2);
-importDefaultResult1Result2.prototype.ownerSVGElement = obj;
+let items = [entry];
+const importDefaultResultResult = _createClass(Svg, items);
+importDefaultResultResult.displayName = "Svg";
+importDefaultResultResult.defaultProps = { preserveAspectRatio: "xMidYMid meet" };
 
-export default importDefaultResult1Result2;
-export const multiplyMatrices = function multiplyMatrices(arg0, arg1) {
-  ({ a, b, c, d } = arg0);
-  ({ a: a2, b: b2, c: c2, d: d2, e, f } = arg1);
-  return {
-    a: a * a2 + c * b2,
-    c: a * c2 + c * d2,
-    e: a * e + c * f + arg0.e,
-    b: b * a2 + d * b2,
-    d: b * c2 + d * d2,
-    f: b * e + d * f + arg0.f,
-  };
-};
-export const invert = function invert(permissions) {
-  ({ a, b, c, d, e, f } = permissions);
-  const diff = a * d - b * c;
-  return {
-    a: d / diff,
-    b: -b / diff,
-    c: -c / diff,
-    d: a / diff,
-    e: (c * f - d * e) / diff,
-    f: -a * f - (b * e) / diff,
-  };
-};
-export const SVGMatrix = importDefaultResult1Result;
-export const matrixTransform = function _matrixTransform(arg0, arg1) {
-  ({ x, y } = arg1);
-  const point = { x: arg0.a * x + arg0.c * y + arg0.e, y: arg0.b * x + arg0.d * y + arg0.f };
-  return point;
-};
-export const SVGPoint = importDefaultResult1Result1;
-export const ownerSVGElement = obj;
+export default importDefaultResultResult;

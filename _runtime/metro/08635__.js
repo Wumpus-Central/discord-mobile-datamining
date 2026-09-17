@@ -1,87 +1,11 @@
 // _runtime/metro/08635__.js
-import _modDef8625 from "08625__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
+import _mod26 from "00026__.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-const FeDropShadow = importDefault;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-class FeDropShadow {
-  constructor() {
-    self = this;
-    tmp = c2(this, FeDropShadow);
-    tmp2 = closure_4;
-    obj = closure_4(FeDropShadow);
-    tmp3 = closure_3;
-    if (closure_8()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(FeDropShadow, _modDef8625);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    const _in = props.in;
-    let str = "SourceGraphic";
-    if (undefined !== _in) {
-      str = _in;
-    }
-    const obj = { children: null };
-    ({ dx, dy, result } = props);
-    const items = [
-      timestampProducer(FeDropShadow(8636), { in: str, stdDeviation: props.stdDeviation }),
-      timestampProducer(FeDropShadow(8638), { dx, dy, result: "offsetblur" }),
-      timestampProducer(FeDropShadow(8640), {
-        floodColor: self.props.floodColor,
-        floodOpacity: self.props.floodOpacity,
-      }),
-      timestampProducer(FeDropShadow(8629), { in2: "offsetblur", operator: "in" }),
-    ];
-    const obj3 = { result, children: null };
-    const items1 = [timestampProducer(FeDropShadow(8644), {}), timestampProducer(FeDropShadow(8644), { in: str })];
-    obj3.children = items1;
-    items[4] = React5(FeDropShadow(8642), obj3);
-    obj.children = items;
-    return React5(noop.Fragment, obj);
-  },
-};
-let items = [entry];
-const importDefaultResultResult = _createClass(FeDropShadow, items);
-importDefaultResultResult.displayName = "FeDropShadow";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGCircle", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, cx: true, cy: true, r: true };
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGCircle", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

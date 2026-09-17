@@ -1,12 +1,47 @@
 // _runtime/metro/14414__.js
-import _mod14413 from "14413__.js";
 
-export default (arg0, value) => {
-  try {
-    const obj = { value, configurable: true, writable: true };
-    defineProperty(_mod14413, arg0, obj);
-    return value;
-  } catch (err) {
-    _mod14413[tmp2] = tmp;
-  }
-};
+export const units = [
+  "degree",
+  "acre",
+  "hectare",
+  "percent",
+  "bit",
+  "byte",
+  "gigabit",
+  "gigabyte",
+  "kilobit",
+  "kilobyte",
+  "megabit",
+  "megabyte",
+  "petabyte",
+  "terabit",
+  "terabyte",
+  "day",
+  "hour",
+  "millisecond",
+  "minute",
+  "month",
+  "second",
+  "week",
+  "year",
+  "centimeter",
+  "foot",
+  "inch",
+  "kilometer",
+  "meter",
+  "mile-scandinavian",
+  "mile",
+  "millimeter",
+  "yard",
+  "gram",
+  "kilogram",
+  "ounce",
+  "pound",
+  "stone",
+  "celsius",
+  "fahrenheit",
+  "fluid-ounce",
+  "gallon",
+  "liter",
+  "milliliter",
+];

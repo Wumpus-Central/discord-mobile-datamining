@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8aacc7898585bec38aca6cf682c01533",
-  name: "FolderIcon",
+  hash: "e06e2e681624b5a052b477a4af8dc512",
+  name: "ThreadLockIcon",
   type: "png",
 });
