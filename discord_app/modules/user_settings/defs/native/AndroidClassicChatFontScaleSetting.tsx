@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod4260 from "../../../../../_runtime/metro/04260__.js";
+import _mod4262 from "../../../../../_runtime/metro/04262__.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FontScaleStore from "../../appearance/native/FontScaleStore.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -19,7 +19,7 @@ const toggle = SettingBuilders.createToggle({
   useValue: function useClassicChatFontScaleValue() {
     return useFontScaleStore(
       (isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled,
-      _mod4260.shallow,
+      _mod4262.shallow,
     );
   },
   onValueChange: function onClassicChatFontScaleChange(isClassicChatFontScaleEnabled) {

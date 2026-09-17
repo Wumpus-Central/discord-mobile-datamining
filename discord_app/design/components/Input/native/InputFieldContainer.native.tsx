@@ -14,11 +14,11 @@ function useInputStyles(size) {
   if (str === undefined) {
     str = "lg";
   }
-  let flag = size.isRound;
+  let flag = size.round;
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = size.isDisabled;
+  let flag2 = size.disabled;
   if (flag2 === undefined) {
     flag2 = false;
   }
@@ -61,7 +61,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(4638);
+let createStyles = fn(4640);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -190,7 +190,7 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.splitBorder = obj15;
   return obj9;
 });
-createStyles = fn(4638);
+createStyles = fn(4640);
 let closure_10 = createStyles.createStyleProperties({
   error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT,
   default: "transparent",
@@ -213,13 +213,22 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
   if (undefined !== status) {
     str = status;
   }
-  const tmp3 = useInputStyles({
-    size: isFocused.size,
-    isRound: isFocused.isRound,
-    isDisabled: isFocused.isDisabled,
-    grow: isFocused.grow,
-    hasLeadingIcon: null != isFocused.leadingIcon,
-  });
+  const round = isFocused.round;
+  let tmp3 = undefined !== round;
+  ({ children, size, grow, leadingIcon } = isFocused);
+  if (tmp3) {
+    tmp3 = round;
+  }
+  const disabled = isFocused.disabled;
+  const obj = { size, round: tmp3, disabled: null, grow: null, hasLeadingIcon: null };
+  let tmp5 = undefined !== disabled;
+  if (tmp5) {
+    tmp5 = disabled;
+  }
+  obj.disabled = tmp5;
+  obj.grow = grow;
+  obj.hasLeadingIcon = null != leadingIcon;
+  const tmp4Result = useInputStyles(obj);
   const fn = function s() {
     if ("default" !== str) {
       str = closure_0.error;
@@ -247,13 +256,6 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
     rect.bottom = -num;
     return rect;
   };
-  const obj = {
-    size: isFocused.size,
-    isRound: isFocused.isRound,
-    isDisabled: isFocused.isDisabled,
-    grow: isFocused.grow,
-    hasLeadingIcon: null != isFocused.leadingIcon,
-  };
   let obj2 = require("ReanimatedRexport");
   fn.__closure = {
     status: str,
@@ -266,13 +268,13 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
   fn.__initData = __initData;
   const obj4 = { style: null, children: null };
   const items = [, , ,];
-  ({ container: arr[0], background: arr[1], radius: arr[2], minHeight: arr[3] } = tmp3);
+  ({ container: arr[0], background: arr[1], radius: arr[2], minHeight: arr[3] } = tmp4Result);
   obj4.style = items;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const obj5 = { style: null };
-  const items1 = [absoluteFill.absoluteFill, tmp3.radius, animatedStyle];
+  const items1 = [absoluteFill.absoluteFill, tmp4Result.radius, animatedStyle];
   obj5.style = items1;
-  const items2 = [closure_5(require("ReanimatedRexport").View, obj5), isFocused.children];
+  const items2 = [closure_5(require("ReanimatedRexport").View, obj5), children];
   obj4.children = items2;
   return closure_6(closure_4, obj4);
 };

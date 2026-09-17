@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import PhoneStore from "../../../phone/PhoneStore.tsx";
 
 require = fn;
-const RegistrationUIStore = fn(16076);
+const RegistrationUIStore = fn(16098);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -108,7 +108,7 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
     submitBehavior,
     autoComplete: null,
     keyboardType: null,
-    isClearable: true,
+    clearable: true,
     status: null,
   };
   const tmp16 = closure_7;

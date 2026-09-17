@@ -6,6 +6,9 @@ import useChatLayoutDefault from "../modules/chat/native/useChatLayout.tsx";
 import HomeDrawerExperiment from "../modules/home_drawer/native/HomeDrawerExperiment.tsx";
 import useRefValueDefault from "../hooks/useRefValue.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
+import isJankScreenReportingEnabled from "../modules/jank_stats/native/isJankScreenReportingEnabled.tsx";
+import getJankScreenName from "../modules/jank_stats/native/getJankScreenName.tsx";
+import JankSlidingSurfaceReporterDefault from "../modules/jank_stats/native/JankSlidingSurfaceReporter.native.tsx";
 import useGuildsRouteGuildId from "../modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx";
 import useChannelListWidthDefault from "../modules/channel_list_v2/native/useChannelListWidth.tsx";
 import NativeFreezeScreens from "../modules/freeze/native/NativeFreezeScreens.tsx";
@@ -16,6 +19,7 @@ import HomePanelContent from "../modules/main_tabs_v2/native/tabs/guilds/HomePan
 import NonCollapsableGestureDetector from "../modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import noop from "../../_runtime/metro/00019__.js";
+import HomeDrawerStore from "../modules/home_drawer/native/HomeDrawerStore.tsx";
 
 const StartupProfilerDefault = StartupProfiler;
 
@@ -23,7 +27,7 @@ require = fn;
 function LeftPanelContent(panelStyles) {
   panelStyles = panelStyles.panelStyles;
   let top;
-  const tmp = closure_11();
+  const tmp = closure_13();
   const tmp4 = _slicedToArray(useGuildsRouteGuildId.useGuildsRouteGuildAndChannelId(), 2);
   const current = tmp4[0];
   const ref = noop.useRef(current);
@@ -64,11 +68,11 @@ function LeftPanelContent(panelStyles) {
   }
   const obj3 = { activeIndex: num, children: null };
   const items3 = [
-    React7(messages_MessagesDefault, { style: memo1 }),
-    React7(RedesignChannelListDefault, { style: memo1, selectedGuildId: tmp11, selectedChannelId: tmp4[1] }),
+    closure_1_11(messages_MessagesDefault, { style: memo1 }),
+    closure_1_11(RedesignChannelListDefault, { style: memo1, selectedGuildId: tmp11, selectedChannelId: tmp4[1] }),
   ];
   obj3.children = items3;
-  const tmp15Result = closure_1_10(NativeFreezeScreens.NativeFreezeScreens, obj3);
+  const tmp15Result = closure_1_12(NativeFreezeScreens.NativeFreezeScreens, obj3);
   const items4 = [absoluteFill.absoluteFill];
   let tmp19;
   if (isChatBesideChannelList) {
@@ -76,39 +80,66 @@ function LeftPanelContent(panelStyles) {
   }
   const obj4 = { style: items4, children: null };
   items4[1] = { width: tmp19 };
-  const items5 = [React7(HomePanelContent.HomePanelContent, {})];
+  const items5 = [closure_1_11(HomePanelContent.HomePanelContent, {})];
   if (null == panelStyles) {
     const obj5 = { style: memo, pointerEvents: "box-none", nativeID: "messages-parent-view", children: tmp15Result };
-    let tmp16Result = React7(hasOwnProperty, obj5);
+    let tmp16Result = closure_1_11(hasOwnProperty, obj5);
   } else {
     const obj6 = { style: null, pointerEvents: "box-none", nativeID: "messages-parent-view", children: null };
     const items6 = [memo, panelStyles];
     obj6.style = items6;
     obj6.children = tmp15Result;
-    tmp16Result = React7(ReanimatedRexportDefault.View, obj6);
+    tmp16Result = closure_1_11(ReanimatedRexportDefault.View, obj6);
   }
   items5[1] = tmp16Result;
   obj4.children = items5;
-  return closure_1_10(hasOwnProperty, obj4);
+  return closure_1_12(hasOwnProperty, obj4);
+}
+function resolveHomeDrawerName() {
+  return HOME_DRAWER_SCREEN;
 }
 function LeftPanelHomeDrawerContainer() {
   const homeGesture = useHomeDrawerGesture.useHomeGesture();
-  ({ gesture, panelStyles, homeDrawerContext } = homeGesture);
+  const homeDrawerContext = homeGesture.homeDrawerContext;
+  ({ gesture, panelStyles } = homeGesture);
+  const tmp5 = HomeDrawerStore((maxX) => maxX.maxX);
   const obj2 = { value: homeDrawerContext, children: null };
-  obj2.children = React7(NonCollapsableGestureDetector.NonCollapsableGestureDetector, {
+  const tmp4 = HomeDrawerStore((panelX) => panelX.panelX);
+  let tmp7 = null;
+  if (obj3.isJankScreenReportingEnabled()) {
+    tmp7 = null;
+    if (homeDrawerContext.enableHome) {
+      tmp7 = null;
+      if (tmp5 > 0) {
+        const obj4 = {
+          position: tmp4,
+          openAt: tmp5,
+          closedAt: 0,
+          resolveOpenName: resolveHomeDrawerName,
+          resolveClosedName: getJankScreenName.getBaseScreenName,
+        };
+        tmp7 = closure_1_11(JankSlidingSurfaceReporterDefault, obj4);
+      }
+    }
+  }
+  const items = [tmp7];
+  obj3 = isJankScreenReportingEnabled;
+  items[1] = closure_1_11(NonCollapsableGestureDetector.NonCollapsableGestureDetector, {
     gesture,
-    children: React7(LeftPanelContent, { panelStyles }),
+    children: closure_1_11(LeftPanelContent, { panelStyles }),
   });
-  return React7(useHomeDrawerGesture.HomeDrawerStateContext.Provider, obj2);
+  obj2.children = items;
+  return closure_1_12(useHomeDrawerGesture.HomeDrawerStateContext.Provider, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1074);
 const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
+const HOME_DRAWER_SCREEN = fn(16166).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4640);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = {
   position: "absolute",
@@ -126,14 +157,14 @@ obj.sideContainer = rect;
 obj.side = { borderTopLeftRadius: nativeDefault.radii.xl - 1, borderTopRightRadius: nativeDefault.radii.none };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.xl - 1, borderTopRightRadius: nativeDefault.radii.none };
 obj.sideTablet = { borderTopRightRadius: nativeDefault.modules.mobile.CHANNEL_DRAWER_CORNER_RADIUS };
-let closure_11 = createStyles.createStyles(obj);
-let closure_14 = noop.memo(function LeftMenuTabsInner() {
+let closure_13 = createStyles.createStyles(obj);
+let closure_17 = noop.memo(function LeftMenuTabsInner() {
   const MobileHomeDrawerExperiment = HomeDrawerExperiment.MobileHomeDrawerExperiment;
   if (MobileHomeDrawerExperiment.useConfig({ location: "gesture" }).enableHome) {
-    let tmp2Result = React7(LeftPanelHomeDrawerContainer, {});
+    let tmp2Result = closure_1_11(LeftPanelHomeDrawerContainer, {});
   } else {
-    const obj = { style: tmp.fill, children: React7(LeftPanelContent, {}) };
-    tmp2Result = React7(hasOwnProperty, obj);
+    const obj = { style: tmp.fill, children: closure_1_11(LeftPanelContent, {}) };
+    tmp2Result = closure_1_11(hasOwnProperty, obj);
   }
   return tmp2Result;
 });
@@ -142,6 +173,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("components_native/MainChannels.tsx");
 
 export default noop.memo(function MainChannelsRedesignInner() {
-  const obj = { profile: StartupProfiler.Profiles.LeftPanel, children: React7(closure_14, {}) };
-  return React7(StartupProfilerDefault, obj);
+  const obj = { profile: StartupProfiler.Profiles.LeftPanel, children: closure_1_11(closure_17, {}) };
+  return closure_1_11(StartupProfilerDefault, obj);
 });

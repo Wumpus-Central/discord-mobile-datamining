@@ -95,7 +95,7 @@ let obj = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F468}\u{1F3FB}",
+  userDiscounts: "\u{1F466}\u{1F3FD}",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 8,

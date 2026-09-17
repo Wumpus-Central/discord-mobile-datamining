@@ -1,16 +1,16 @@
 // discord_app/modules/conversations/components/native/ConversationNavigatorMoreMenu.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
-import MoreHorizontalIcon from "../../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
 import ThumbsUpIcon from "../../../../design/components/Icon/native/redesign/generated/ThumbsUpIcon.tsx";
 import ThumbsDownIcon from "../../../../design/components/Icon/native/redesign/generated/ThumbsDownIcon.tsx";
+import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
+import MoreHorizontalIcon from "../../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

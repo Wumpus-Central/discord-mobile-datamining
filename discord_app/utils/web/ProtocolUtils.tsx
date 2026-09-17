@@ -1,7 +1,7 @@
 // discord_app/utils/web/ProtocolUtils.tsx
-import _modDef4961 from "../../../_runtime/metro/04961__.js";
+import _modDef4963 from "../../../_runtime/metro/04963__.js";
 
-const os = _modDef4961.os;
+const os = _modDef4963.os;
 let family;
 if (os != null) {
   family = os.family;
@@ -13,7 +13,7 @@ function launchMobile(href, arg1) {
 }
 let tmp3 = launchMobile;
 if ("Android" !== family) {
-  const os2 = _modDef4961.os;
+  const os2 = _modDef4963.os;
   let family1;
   if (os2 != null) {
     family1 = os2.family;
@@ -64,7 +64,7 @@ if ("Android" !== family) {
         return process.nextTick(() => closure_0(true));
       }
     }
-    if ("Gecko" !== _modDef4961.layout) {
+    if ("Gecko" !== _modDef4963.layout) {
       function launchChrome(href, arg1) {
         closure_0 = arg1;
         function handleBlur() {
@@ -79,8 +79,8 @@ if ("Android" !== family) {
         }, 1000);
       }
       let launchSteam = launchChrome;
-      if (null != _modDef4961.ua) {
-        const ua = _modDef4961.ua;
+      if (null != _modDef4963.ua) {
+        const ua = _modDef4963.ua;
         launchSteam = launchChrome;
         if (-1 !== ua.indexOf("Valve Steam GameOverlay")) {
           launchSteam = function launchSteam(arg0, fn) {

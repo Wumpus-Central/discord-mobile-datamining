@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/native/VibegrationsArchivePicker.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3591 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsTypes from "../VibegrationsTypes.tsx";
 import FilePickerUtils from "../../../utils/native/FilePickerUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -96,7 +96,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(16725);
+const VibegrationsConnectionStore = fn(16752);
 ({
   ensureConnection: closure_4,
   sendUserMessage: hasOwnProperty,
@@ -125,7 +125,7 @@ export const describeVibegrationsArchiveRejection = function describeVibegration
     obj2.size = tmpResult.formatVibegrationsAttachmentLimit(
       VibegrationsTypes.vibegrationsAttachmentLimit(bytes.contentType),
     );
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3591.AzziHF, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3593.AzziHF, obj2);
     const tmpResult2 = VibegrationsTypes;
   }
   return formatToPlainStringResult;

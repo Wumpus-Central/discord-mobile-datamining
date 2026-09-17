@@ -35,11 +35,11 @@ function Loading() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7850).InviteTargetTypes;
+const InviteTargetTypes = fn(7856).InviteTargetTypes;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   placeholderHeader: null,
   placeholderLabel: null,
@@ -258,7 +258,7 @@ export default function InstantInviteActionSheet(channel) {
       const obj12 = { contentContainerStyle: tmp.shareApps, onItemPressed: callback1 };
       const items10 = [closure_13(tmp2(tmp3[32]), obj12)];
       const obj13 = { style: tmp.searchAndShareContainer, children: null };
-      const obj14 = { size: "md", isRound: true, onChange: tmp7(tmp3[34]).searchInviteSuggestions, placeholder: null };
+      const obj14 = { size: "md", round: true, onChange: tmp7(tmp3[34]).searchInviteSuggestions, placeholder: null };
       if (null != targetApplicationId) {
         const intl5 = tmp7(tmp3[28]).intl;
         let stringResult = intl5.string(tmp7(tmp3[28]).t.iI1gMg);

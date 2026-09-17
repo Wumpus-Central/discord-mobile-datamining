@@ -42,7 +42,7 @@ class BaseActivityPanelController {
     tmp7 = connectedActivityAppId(closure_3[17])(tmp3);
     closure_4 = tmp7;
     obj2 = mode(closure_3[12]);
-    sharedValue1 = obj2.useSharedValue(closure_16);
+    sharedValue1 = obj2.useSharedValue(closure_15);
     closure_5 = sharedValue1;
     obj3 = closure_5;
     closure_6 = closure_5.useRef(mode);
@@ -56,7 +56,7 @@ class BaseActivityPanelController {
       defaultOrientationLockState = tmp5Result.getDefaultOrientationLockState(currentApp);
     }
     closure_9 = defaultOrientationLockState;
-    tmp12 = closure_17(tmp4, tmp3.top, defaultOrientationLockState, tmp10);
+    tmp12 = closure_16(tmp4, tmp3.top, defaultOrientationLockState, tmp10);
     closure_10 = tmp12;
     closure_11 = obj3.useRef(connectedActivityAppId);
     tmp5Result1 = tmp5(tmp2[21]);
@@ -113,7 +113,7 @@ class BaseActivityPanelController {
       }
       if (tmp3) {
         ChatInputUtils.dismissKeyboard();
-        const result = sharedValue1.set(closure_16);
+        const result = sharedValue1.set(closure_15);
       }
       ref.current = mode;
     }, items1);
@@ -194,7 +194,7 @@ class BaseActivityPanelController {
     };
     fn.__closure = { wrapperOffset: sharedValue1 };
     fn.__workletHash = 5299695936442;
-    fn.__initData = closure_18;
+    fn.__initData = closure_17;
     fn2 = function s(arg0, arg1) {
       if (arg0 !== arg1) {
         ReanimatedRexport.runOnJS(sharedValue)(arg0);
@@ -203,7 +203,7 @@ class BaseActivityPanelController {
     obj1 = { runOnJS: tmp5(tmp2[12]).runOnJS, setWrapperGestureInProgress: tmp28 };
     fn2.__closure = obj1;
     fn2.__workletHash = 5831467313798;
-    fn2.__initData = closure_19;
+    fn2.__initData = closure_18;
     animatedReaction = tmp5Result4.useAnimatedReaction(fn, fn2);
     items4 = [, ,];
     items4[0] = isActivityPanelFullscreen;
@@ -248,21 +248,17 @@ class BaseActivityPanelController {
   }
 }
 const Constants = fn(1921);
-({
-  OrientationLockState: closure_11,
-  ACTIVITY_PORTRAIT_ASPECT_RATIO: closure_12,
-  ACTIVITY_LANDSCAPE_ASPECT_RATIO: map1,
-} = Constants);
-const ActivityPanelModes = fn(9648).ActivityPanelModes;
+({ OrientationLockState: closure_11, ACTIVITY_LOCKED_ASPECT_RATIO: closure_12 } = Constants);
+const ActivityPanelModes = fn(9659).ActivityPanelModes;
 const jsx = fn(21).jsx;
-let closure_16 = { x: 0, y: 0, gestureActive: false };
+let closure_15 = { x: 0, y: 0, gestureActive: false };
 const FunctionUtils = fn(1934);
-let closure_17 = FunctionUtils.cachedFunction((arg0, arg1, arg2, arg3) => {
+const value = FunctionUtils.cachedFunction((arg0, arg1, arg2, arg3) => {
   ({ width, height } = arg0);
   if (constants.LANDSCAPE === arg2) {
     if (arg3) {
       if (!tmp) {
-        let size = { width, height: width * map1 - arg1, isLandscape: true, isWindowLandscape: tmp };
+        let size = { width, height: width * closure_1_12 - arg1, isLandscape: true, isWindowLandscape: tmp };
       }
       return size;
     }
@@ -298,10 +294,10 @@ let closure_17 = FunctionUtils.cachedFunction((arg0, arg1, arg2, arg3) => {
     return size4;
   }
 });
-const collapsedCategories = {
+const __initData = {
   code: "function ActivityPanelControllerTsx1(){const{wrapperOffset}=this.__closure;return wrapperOffset.get().gestureActive;}",
 };
-const __initData2 = {
+const collapsedCategories = {
   code: "function ActivityPanelControllerTsx2(gestureActive,previous){const{runOnJS,setWrapperGestureInProgress}=this.__closure;if(gestureActive===previous)return;runOnJS(setWrapperGestureInProgress)(gestureActive);}",
 };
 let size = fn(2);
@@ -369,7 +365,7 @@ export default function ActivityPanelController(children) {
   let obj = mode(504);
   return (
     <BaseActivityPanelController
-      context={connectedActivityInTextChannelId(17220)}
+      context={connectedActivityInTextChannelId(17260)}
       orientationLockStateForApp={orientationLockStateForApp}
       mode={mode}
       hasConnectedActivity={hasConnectedActivity}

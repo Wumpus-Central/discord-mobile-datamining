@@ -5,6 +5,7 @@ import privDefault from "../../../_runtime/01438_priv.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ExplicitMediaRedactionUtils from "../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
+import ConversationPreviewStore from "../conversations/ConversationPreviewStore.tsx";
 import ConversationsStore from "../conversations/ConversationsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
@@ -46,12 +47,15 @@ function processMessage(message) {
         if (message == null) {
           message = ConversationsStore.getMessage(message_reference.channel_id, message_id);
         }
+        if (message == null) {
+          message = ConversationPreviewStore.getMessage(message_id);
+        }
         if (null != message) {
           const obj4 = { state: merged.LOADED, message };
           const result2 = merged.set(message_reference.channel_id, message_id, obj4);
           flag2 = true;
         } else {
-          const result3 = merged.set(message_reference.channel_id, message_id, closure_10);
+          const result3 = merged.set(message_reference.channel_id, message_id, closure_11);
           flag2 = true;
         }
       }
@@ -74,7 +78,7 @@ function handleLoadMessages(messages) {
 }
 function handleSearchMessagesSuccess(data) {
   return anyChanged(data.data, (messages) =>
-    anyChanged(messages.messages, (arg0) => closure_1_15(arg0, (arg0) => closure_1_14(arg0))),
+    anyChanged(messages.messages, (arg0) => closure_1_16(arg0, (arg0) => closure_1_15(arg0))),
   );
 }
 function handleChannelDelete(channel) {
@@ -92,7 +96,7 @@ function handleLoadThreadsSuccess(firstMessages) {
   return tmp;
 }
 const Constants = fn(1074);
-({ MessageTypes: closure_7, MessageTypesWithLazyLoadedReferences: closure_8 } = Constants);
+({ MessageTypes: closure_8, MessageTypesWithLazyLoadedReferences: closure_9 } = Constants);
 const ReferencedMessageState = {
   LOADED: 0,
   [0]: "LOADED",
@@ -101,7 +105,7 @@ const ReferencedMessageState = {
   DELETED: 2,
   [2]: "DELETED",
 };
-let closure_10 = Object.freeze({ state: ReferencedMessageState.NOT_LOADED });
+let closure_11 = Object.freeze({ state: ReferencedMessageState.NOT_LOADED });
 let set = new Set();
 class ChannelReferencedMessageCache {
   constructor() {
@@ -113,7 +117,7 @@ class ChannelReferencedMessageCache {
         return obj.handleCacheDisposed(arg0, arg1);
       },
     };
-    tmp2 = new closure_1(closure_2[5])(obj);
+    tmp2 = new closure_1(closure_2[6])(obj);
     obj1._cachedMessages = tmp2;
     set = new Set();
     obj1._cachedMessageIds = set;
@@ -269,7 +273,7 @@ const Store = initializeDefault.Store;
 class ReferencedMessageStore extends Store {}
 const prototype3 = ReferencedMessageStore.prototype;
 prototype3["initialize"] = function initialize() {
-  this.waitFor(MessageStore, ChannelStore, ConversationsStore);
+  this.waitFor(MessageStore, ChannelStore, ConversationsStore, ConversationPreviewStore);
 };
 prototype3["getMessageByReference"] = function getMessageByReference(messageReference) {
   value = undefined;
@@ -277,14 +281,14 @@ prototype3["getMessageByReference"] = function getMessageByReference(messageRefe
     value = merged.get(messageReference.channel_id, messageReference.message_id);
   }
   if (value == null) {
-    value = closure_10;
+    value = closure_11;
   }
   return value;
 };
 prototype3["getMessage"] = function getMessage(arg0, arg1) {
   value = merged.get(arg0, arg1);
   if (value == null) {
-    value = closure_10;
+    value = closure_11;
   }
   return value;
 };
@@ -302,7 +306,7 @@ ReferencedMessageStore.displayName = "ReferencedMessageStore";
 const referencedMessageStore = new ReferencedMessageStore(DispatcherDefault, {
   CACHE_LOADED: function handleCacheLoaded(messages) {
     return anyChanged(Object.values(messages.messages), (arg0) =>
-      anyChanged(Object.values(arg0), (arg0) => closure_1_14(arg0)),
+      anyChanged(Object.values(arg0), (arg0) => closure_1_15(arg0)),
     );
   },
   LOCAL_MESSAGES_LOADED: handleLoadMessages,
@@ -323,7 +327,7 @@ const referencedMessageStore = new ReferencedMessageStore(DispatcherDefault, {
       if (messages == null) {
         messages = [];
       }
-      return anyChanged(messages, (arg0) => closure_1_14(arg0));
+      return anyChanged(messages, (arg0) => closure_1_15(arg0));
     });
   },
   LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess,

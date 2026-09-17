@@ -9,7 +9,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_2 = [
   "size",
-  "isRound",
+  "round",
   "text",
   "value",
   "icon",
@@ -20,7 +20,7 @@ let closure_2 = [
 ];
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" },
   buttonTextPlaceholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
@@ -39,7 +39,7 @@ export const InputButton = noop.forwardRef((size, ref) => {
   if (undefined !== size) {
     str = size;
   }
-  const isRound = size.isRound;
+  const round = size.round;
   ({ text, value, icon, iconPosition } = size);
   let str2 = "start";
   if (undefined !== iconPosition) {
@@ -50,7 +50,7 @@ export const InputButton = noop.forwardRef((size, ref) => {
     maxFontSizeMultiplier = ButtonConstants.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
   }
   const tmp4 = _objectWithoutProperties(size, closure_2);
-  const obj2 = { size: str, isRound: undefined !== isRound && isRound, hasLeadingIcon: "start" === str2 };
+  const obj2 = { size: str, round: undefined !== round && round, hasLeadingIcon: "start" === str2 };
   const inputStyles = InputFieldContainer.useInputStyles(obj2);
   const tmp9 = closure_6();
   if (null != icon) {
@@ -100,5 +100,5 @@ export const InputButton = noop.forwardRef((size, ref) => {
     );
     return jsx(BaseTextButton.BaseTextButton, {});
   }
-  const tmp = undefined !== isRound && isRound;
+  const tmp = undefined !== round && round;
 });

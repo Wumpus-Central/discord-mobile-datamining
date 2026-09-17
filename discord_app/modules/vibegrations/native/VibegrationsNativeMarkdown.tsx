@@ -14,7 +14,7 @@ let obj2 = {};
 const merged = Object.assign(VIBEGRATIONS_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };
@@ -51,7 +51,7 @@ export default function VibegrationsNativeMarkdown(source) {
           obj.style = items;
           const obj3 = {
             style: list.marker,
-            children: closure_2_5(source(4634).Text, {
+            children: closure_2_5(source(4636).Text, {
               variant: "text-md/normal",
               color: "text-default",
               children: children.marker,
@@ -62,9 +62,9 @@ export default function VibegrationsNativeMarkdown(source) {
           const obj6 = {
             variant: "text-md/normal",
             color: "text-default",
-            children: closure_1(4628).parse(children.text, true, obj2),
+            children: closure_1(4630).parse(children.text, true, obj2),
           };
-          obj5.children = closure_2_5(source(4634).Text, obj6);
+          obj5.children = closure_2_5(source(4636).Text, obj6);
           items1[1] = closure_2_5(View, obj5);
           obj.children = items1;
           return closure_2_6(View, obj, index);

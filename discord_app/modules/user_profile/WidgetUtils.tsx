@@ -83,14 +83,14 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const UserProfileWidgetConstants = fn(7734);
+const UserProfileWidgetConstants = fn(7740);
 ({
   WIDGET_TITLES_BY_TYPE: closure_7,
   WIDGETS_SUPPORTING_COMMENT: closure_8,
   WIDGETS_SUPPORTING_TAGS: closure_9,
 } = UserProfileWidgetConstants);
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
-let closure_11 = fn(7735).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+let closure_11 = fn(7741).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -224,7 +224,8 @@ export const removeWidgetFromPending = function removeWidgetFromPending(arg0) {
   });
   WidgetActionCreatorsDefault.setPendingWidgets(found);
 };
-export const addPendingClipToClipsGalleryWidget = function addPendingClipToClipsGalleryWidget(arg0) {
+export const addUploadingClipToClipsGalleryWidget = function addUploadingClipToClipsGalleryWidget(arg0) {
+  const localClipId = arg0;
   if (WidgetStore.hasPendingChanges()) {
     let pendingWidgets = WidgetStore.getPendingWidgets();
     if (pendingWidgets == null) {
@@ -256,7 +257,19 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
   if (clips == null) {
     clips = [];
   }
-  if (clips.length < closure_11) {
+  if (clips.length >= closure_11) {
+    return false;
+  } else if (
+    clips.some((status) => {
+      let tmp = "uploading" === status.status;
+      if (tmp) {
+        tmp = status.localClipId === localClipId.localClipId;
+      }
+      return tmp;
+    })
+  ) {
+    return false;
+  } else {
     let id;
     if (found != null) {
       id = found.id;
@@ -267,7 +280,110 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
     obj2.clips = items;
     const clipsGalleryWidget = new UserProfileClipsGalleryWidgetTypes.ClipsGalleryWidget(obj2);
     WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    return true;
   }
+};
+export const hasUploadingClipInClipsGalleryWidget = function hasUploadingClipInClipsGalleryWidget(arg0) {
+  closure_0 = arg0;
+  if (WidgetStore.hasPendingChanges()) {
+    let pendingWidgets = WidgetStore.getPendingWidgets();
+    if (pendingWidgets == null) {
+      pendingWidgets = [];
+    }
+    let widgets = pendingWidgets;
+  } else {
+    const currentUser = UserStore.getCurrentUser();
+    let userProfile = null;
+    if (null != currentUser) {
+      userProfile = UserProfileStore.getUserProfile(currentUser.id);
+    }
+    widgets = undefined;
+    if (userProfile != null) {
+      widgets = userProfile.widgets;
+    }
+    if (widgets == null) {
+      widgets = [];
+    }
+  }
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[14]).ClipsGalleryWidget);
+  if (found == null) {
+    found = null;
+  }
+  let flag;
+  if (found != null) {
+    const clips = found.clips;
+    flag = clips.some((id) => {
+      let tmp = id.id === closure_0;
+      if (tmp) {
+        tmp = "uploading" === id.status;
+      }
+      return tmp;
+    });
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+export const commitUploadedClipInClipsGalleryWidget = function commitUploadedClipInClipsGalleryWidget(
+  arg0,
+  uploadFilename,
+) {
+  closure_0 = arg0;
+  if (WidgetStore.hasPendingChanges()) {
+    let pendingWidgets = WidgetStore.getPendingWidgets();
+    if (pendingWidgets == null) {
+      pendingWidgets = [];
+    }
+    let widgets = pendingWidgets;
+  } else {
+    const currentUser = UserStore.getCurrentUser();
+    let userProfile = null;
+    if (null != currentUser) {
+      userProfile = UserProfileStore.getUserProfile(currentUser.id);
+    }
+    widgets = undefined;
+    if (userProfile != null) {
+      widgets = userProfile.widgets;
+    }
+    if (widgets == null) {
+      widgets = [];
+    }
+  }
+  let found = widgets.find((item) => item instanceof closure_0(dependencyMap[14]).ClipsGalleryWidget);
+  if (found == null) {
+    found = null;
+  }
+  let found1;
+  if (found != null) {
+    const clips1 = found.clips;
+    found1 = clips1.find((id) => id.id === closure_0);
+  }
+  if (null != found) {
+    let status;
+    if (found1 != null) {
+      status = found1.status;
+    }
+    if ("uploading" === status) {
+      const obj4 = { id: null, clips: null };
+      ({ id: obj2.id, clips } = found);
+      obj4.clips = clips.map((item) => {
+        let tmp = item;
+        if (item === found1) {
+          const obj = {};
+          const merged = Object.assign(found1);
+          obj.status = "pending";
+          obj.uploadFilename = uploadFilename;
+          tmp = obj;
+        }
+        return tmp;
+      });
+      const clipsGalleryWidget = new UserProfileClipsGalleryWidgetTypes.ClipsGalleryWidget(obj4);
+      WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+      return true;
+    }
+  }
+  return false;
 };
 export const updateClipTitleInClipsGalleryWidget = function updateClipTitleInClipsGalleryWidget(arg0, str) {
   closure_0 = arg0;
@@ -529,11 +645,14 @@ export const removeClipFromClipsGalleryWidget = function removeClipFromClipsGall
     found = null;
   }
   if (null != found) {
-    const obj4 = { id: null, clips: null };
-    ({ id: obj2.id, clips } = found);
-    obj4.clips = clips.filter((id) => id.id !== closure_0);
-    const clipsGalleryWidget = new UserProfileClipsGalleryWidgetTypes.ClipsGalleryWidget(obj4);
-    WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    const clips2 = found.clips;
+    if (clips2.some((id) => id.id === closure_0)) {
+      const obj4 = { id: null, clips: null };
+      ({ id: obj2.id, clips } = found);
+      obj4.clips = clips.filter((id) => id.id !== closure_0);
+      const clipsGalleryWidget = new UserProfileClipsGalleryWidgetTypes.ClipsGalleryWidget(obj4);
+      WidgetActionCreatorsDefault.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    }
   }
 };
 export const updatePersonalWidget = function updatePersonalWidget(fn) {

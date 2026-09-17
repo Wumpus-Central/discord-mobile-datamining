@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(16725);
+const VibegrationsConnectionStore = fn(16752);
 ({
   ensureConnection: closure_7,
   sendUserMessage: closure_8,
@@ -21,7 +21,7 @@ const VibegrationsConnectionStore = fn(16725);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsCreateSheet = "VibegrationsCreateSheet";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };
@@ -399,11 +399,11 @@ export default function VibegrationsCreateSheet(guildId) {
   obj3.header = closure_10(require("BottomSheetTitleHeader").BottomSheetTitleHeader, obj4);
   let obj5 = { style: tmp.content, children: null };
   let obj6 = { style: tmp.form, children: null };
-  let obj7 = { placeholder: null, autoComplete: "off", value: null, onChange: null, isDisabled: null };
+  let obj7 = { placeholder: null, autoComplete: "off", value: null, onChange: null, disabled: null };
   const intl6 = require("util").intl;
   obj7.placeholder = intl6.string(onCreated(str[14]).TU9IGR);
   obj7.value = str;
-  obj7.isDisabled = first2;
+  obj7.disabled = first2;
   const items5 = [closure_10(require("TextArea").TextArea, obj7), , , ,];
   let obj8 = { hasIcons: false, children: null };
   const obj9 = {

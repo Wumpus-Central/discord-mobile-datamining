@@ -192,7 +192,7 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_1_17);
 }
-let closure_6 = fn(4275).createFavoritesGuildChannelRecord;
+let closure_6 = fn(4277).createFavoritesGuildChannelRecord;
 const ChannelRecord = fn(1962);
 ({
   isGuildSelectableChannelType: closure_7,
@@ -307,8 +307,8 @@ prototype["getSFWDefaultChannel"] = function getSFWDefaultChannel(id) {
 prototype["getSelectableChannelIds"] = function getSelectableChannelIds(guildId) {
   return this.getChannels(guildId)[SELECTABLE].map((channel) => channel.channel.id);
 };
-prototype["getSelectableChannels"] = function getSelectableChannels(arg0) {
-  return this.getChannels(arg0)[SELECTABLE];
+prototype["getSelectableChannels"] = function getSelectableChannels(id) {
+  return this.getChannels(id)[SELECTABLE];
 };
 prototype["getVocalChannelIds"] = function getVocalChannelIds(set) {
   return this.getChannels(set)[VOCAL].map((channel) => channel.channel.id);

@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { keyboardStickyFooter: null };
 const rect = {
   position: "absolute",
@@ -44,8 +44,8 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
   const height = reanimatedKeyboardAnimation.height;
   progress = reanimatedKeyboardAnimation.progress;
   let obj = animatedSheetIndex(1626);
-  const keyboardTypeSharedValue = animatedSheetIndex(4506).useKeyboardTypeSharedValue();
-  let obj2 = animatedSheetIndex(4506);
+  const keyboardTypeSharedValue = animatedSheetIndex(4508).useKeyboardTypeSharedValue();
+  let obj2 = animatedSheetIndex(4508);
   class S {
     constructor() {
       tmp = closure_0;
@@ -85,9 +85,9 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
       return;
     }
   }
-  let obj3 = animatedSheetIndex(4374);
+  let obj3 = animatedSheetIndex(4376);
   S.__closure = {
-    interpolate: animatedSheetIndex(4374).interpolate,
+    interpolate: animatedSheetIndex(4376).interpolate,
     progress,
     bottom,
     followSystemKeyboard: flag,
@@ -106,7 +106,7 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
     return items;
   }, items);
   let obj4 = {
-    interpolate: animatedSheetIndex(4374).interpolate,
+    interpolate: animatedSheetIndex(4376).interpolate,
     progress,
     bottom,
     followSystemKeyboard: flag,
@@ -116,5 +116,5 @@ export default function PortalKeyboardFooterIOS(animatedSheetIndex) {
     height,
     EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1094).EXPRESSION_FOOTER_HEIGHT,
   };
-  return height(flag(4374).View, { style: memo, children: height(animatedSheetIndex(4511).PortalHost, { name: str }) });
+  return height(flag(4376).View, { style: memo, children: height(animatedSheetIndex(4513).PortalHost, { name: str }) });
 }

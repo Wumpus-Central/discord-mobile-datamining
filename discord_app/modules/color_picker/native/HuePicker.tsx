@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   container: { justifyContent: "center", alignItems: "center" },
   containerFullWidth: { alignSelf: "stretch", overflow: "visible" },

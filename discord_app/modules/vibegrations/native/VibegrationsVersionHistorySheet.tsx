@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const fetchSourceHistory = fn(16725).fetchSourceHistory;
+const fetchSourceHistory = fn(16752).fetchSourceHistory;
 const jsx = fn(21).jsx;
 const VibegrationsVersionHistorySheet = "VibegrationsVersionHistorySheet";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { state: { alignItems: "center", padding: nativeDefault.space.PX_24 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -76,8 +76,8 @@ export default function VibegrationsVersionHistorySheet(projectId) {
     const obj3 = { style: tmp.state, accessibilityRole: "alert", children: null };
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
     let intl2 = projectId(1115).intl;
-    obj4.children = intl2.string(tmp2(3591)["mSJn+K"]);
-    obj3.children = jsx(projectId(4634).Text, { variant: "text-md/normal", color: "text-muted", children: null });
+    obj4.children = intl2.string(tmp2(3593)["mSJn+K"]);
+    obj3.children = jsx(projectId(4636).Text, { variant: "text-md/normal", color: "text-muted", children: null });
     tmp9 = (
       <closure_6 style={tmp.state} accessibilityRole="alert">
         {null}
@@ -88,8 +88,8 @@ export default function VibegrationsVersionHistorySheet(projectId) {
     const obj5 = { style: tmp.state, children: null };
     const obj6 = { variant: "text-md/normal", color: "text-muted", children: null };
     let intl = projectId(1115).intl;
-    obj6.children = intl.string(tmp2(3591).TOmYPT);
-    obj5.children = jsx(projectId(4634).Text, { variant: "text-md/normal", color: "text-muted", children: null });
+    obj6.children = intl.string(tmp2(3593).TOmYPT);
+    obj5.children = jsx(projectId(4636).Text, { variant: "text-md/normal", color: "text-muted", children: null });
     tmp9 = <closure_6 style={tmp.state}>{null}</closure_6>;
     tmp7 = jsx;
   } else {
@@ -115,18 +115,18 @@ export default function VibegrationsVersionHistorySheet(projectId) {
         subject.sha,
       );
     });
-    tmp9 = jsx(projectId(5773).TableRowGroup, { hasIcons: false, children: null });
+    tmp9 = jsx(projectId(5775).TableRowGroup, { hasIcons: false, children: null });
   }
   const obj7 = { scrollable: true, header: null, children: null };
   const obj8 = { title: null };
   let intl3 = projectId(1115).intl;
-  obj8.title = intl3.string(onRestore(3591).jAWwzi);
-  obj7.header = tmp7(projectId(7259).BottomSheetTitleHeader, obj8);
+  obj8.title = intl3.string(onRestore(3593).jAWwzi);
+  obj7.header = tmp7(projectId(7263).BottomSheetTitleHeader, obj8);
   const tmp4 = _slicedToArray(noop.useState({ status: "loading" }), 2);
-  obj7.children = tmp7(projectId(6735).BottomSheetScrollView, {
+  obj7.children = tmp7(projectId(6738).BottomSheetScrollView, {
     contentContainerStyle: { paddingBottom: onRestore(1612)().bottom },
     children: tmp9,
   });
-  return tmp7(projectId(7307).ActionSheet, obj7);
+  return tmp7(projectId(7311).ActionSheet, obj7);
 }
 export const VIBEGRATIONS_VERSION_HISTORY_SHEET_KEY = "VibegrationsVersionHistorySheet";

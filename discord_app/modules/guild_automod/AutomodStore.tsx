@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import _mod4260 from "../../../_runtime/metro/04260__.js";
+import _mod4262 from "../../../_runtime/metro/04262__.js";
 import SystemRulesUtils from "SystemRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(12005).AutomodTriggerType;
+const AutomodTriggerType = fn(12014).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1243);
@@ -142,6 +142,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
                   [closure_1_5.MENTION_SPAM]: [],
                   [closure_1_5.USER_PROFILE]: [],
                   [closure_1_5.SERVER_POLICY]: [],
+                  [closure_1_5.APPLICATION]: [],
                 };
                 const item = arr.forEach((item) => {
                   if (obj[item.triggerType] != null) {
@@ -239,7 +240,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
       const items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, _mod4260.shallow),
+    }, _mod4262.shallow),
     2,
   );
   const first = tmp2[0];
@@ -325,7 +326,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
       const items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, require("../../../_runtime/metro/04260__.js").shallow),
+    }, require("../../../_runtime/metro/04262__.js").shallow),
     2,
   );
   first = tmp2[0];
@@ -467,5 +468,5 @@ export const useAutomodRulesList = function useAutomodRulesList(arg0) {
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("../../../_runtime/metro/04260__.js").shallow);
+  }, require("../../../_runtime/metro/04262__.js").shallow);
 };

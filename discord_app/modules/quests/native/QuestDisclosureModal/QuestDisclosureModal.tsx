@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModal.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef7102 from "../../../../../_runtime/metro/07102__.js";
+import _modDef7106 from "../../../../../_runtime/metro/07106__.js";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators.tsx";
@@ -10,7 +10,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 function CloseButton() {
   const obj = {
-    source: _modDef7102,
+    source: _modDef7106,
     onPress() {
       return QuestDisclosureModalActionCreatorsDefault.hideModal();
     },
@@ -19,7 +19,7 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7102,
+    source: _modDef7106,
     onPress() {
       return QuestDisclosureModalActionCreatorsDefault.hideModal();
     },

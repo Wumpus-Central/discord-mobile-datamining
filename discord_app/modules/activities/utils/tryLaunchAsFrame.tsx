@@ -4,7 +4,7 @@ import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.nativ
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(9654).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9665).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

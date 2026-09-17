@@ -104,12 +104,12 @@ class VoiceQuality extends tmp2 {
       let outboundStats = rtp;
       if (null != rtp) {
         const networkQuality = outboundStats.networkQuality;
-        const result = networkQuality.incrementNetworkStats(outboundStats(4667).now());
+        const result = networkQuality.incrementNetworkStats(outboundStats(4669).now());
         const systemResources = outboundStats.systemResources;
         systemResources.takeSample();
         const duration4 = outboundStats.duration;
         duration4.connected = duration4.connected + 1;
-        const obj2 = outboundStats(4667);
+        const obj2 = outboundStats(4669);
         let num = 0;
         const reduced = _modDef12.reduce(
           outboundStats.inboundStats,

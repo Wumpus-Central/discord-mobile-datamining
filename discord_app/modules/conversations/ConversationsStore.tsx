@@ -3,8 +3,8 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import privDefault from "../../../_runtime/01438_priv.js";
-import ReactionUtils from "../reactions/ReactionUtils.tsx";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
@@ -83,107 +83,79 @@ function buildModerationLabel(arr) {
   }
   return str5;
 }
-function processHydratedMessages(channelId, conversationId, messages, fullyHydrated) {
-  let items = messageReferences;
-  if (messageReferences === undefined) {
-    items = [];
-  }
-  const peekResult = navigation.peek(channelId);
+function processHydratedMessages(arg0, arg1, messages, fullyHydrated) {
+  closure_0 = arg1;
+  const items = [];
+  const peekResult = navigation.peek(arg0);
+  c1 = peekResult;
   if (null != peekResult) {
     const conversationMetadataById = peekResult.conversationMetadataById;
-    value = conversationMetadataById.get(conversationId);
+    value = conversationMetadataById.get(arg1);
     if (null != value) {
-      if (fullyHydrated) {
-        const items1 = [];
-        const tmp4 = messages[Symbol.iterator]();
-        while (tmp4 !== undefined) {
-          let obj = MessageRecordUtils;
-          let messageRecord = obj.createMessageRecord(tmp6);
-          let tmp11 = messageRecord;
-          let arr = items1.push(messageRecord);
-          let messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-          value2 = messageMetadataByMessageId.get(messageRecord.id);
-          let tmp14 = value2;
-          if (null != value2) {
-            tmp14.conversationId = conversationId;
-            tmp14.message = tmp11;
+      const obj2 = {
+        meta: value,
+        messages,
+        fullyHydrated,
+        messageReferences: items,
+        upsertMessage(id) {
+          const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
+          value = messageMetadataByMessageId.get(id.id);
+          if (null != value) {
+            value.conversationId = conversationId;
+            value.message = id;
           } else {
-            let messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
-            let obj2 = { conversationId, moderationLabel: null, message: tmp11 };
-            let result = messageMetadataByMessageId2.set(tmp11.id, obj2);
+            const messageMetadataByMessageId2 = _undefined.messageMetadataByMessageId;
+            const obj = { conversationId, moderationLabel: null, message: id };
+            const result = messageMetadataByMessageId2.set(id.id, obj);
           }
-          continue;
-        }
-        value.hydratedMessages = items1;
-        value.fullyHydrated = fullyHydrated;
-        for (const item10044 of items) {
-          let messageMetadataByMessageId3 = peekResult.messageMetadataByMessageId;
-          if (null == messageMetadataByMessageId3.get(item10044.id)) {
-            let messageMetadataByMessageId4 = peekResult.messageMetadataByMessageId;
-            let obj3 = { conversationId: null, moderationLabel: null, message: null };
-            let obj4 = MessageRecordUtils;
-            obj3.message = obj4.createMessageRecord(item10044);
-            let result1 = messageMetadataByMessageId4.set(item10044.id, obj3);
+        },
+        upsertReference(id) {
+          const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
+          if (!messageMetadataByMessageId.has(id.id)) {
+            const messageMetadataByMessageId2 = _undefined.messageMetadataByMessageId;
+            const obj = { conversationId: null, moderationLabel: null, message: id };
+            const result = messageMetadataByMessageId2.set(id.id, obj);
           }
-          continue;
-        }
-      }
+        },
+      };
+      const result = ConversationMessageCacheUtils.applyHydratedMessages(obj2);
     }
   }
 }
-function handleReaction(channelId) {
-  ({ messageId, emoji, reactionType } = channelId);
-  ({ type, userId } = channelId);
-  const peekResult = navigation.peek(channelId.channelId);
-  if (null == peekResult) {
-    return false;
-  } else {
+function handleReaction(messageId) {
+  messageId = messageId.messageId;
+  const peekResult = navigation.peek(messageId.channelId);
+  let flag = false;
+  if (null != peekResult) {
     const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
     value = messageMetadataByMessageId.get(messageId);
-    let message1;
+    let message;
     if (value != null) {
-      message1 = value.message;
+      message = value.message;
     }
-    if (null == message1) {
-      return false;
-    } else {
-      if (obj2.shouldApplyReaction(channelId)) {
-        const tmp4 = AuthenticationStore.getId() === userId;
-        if ("MESSAGE_REACTION_ADD" === type) {
-          const message2 = value.message;
-          const obj = { colors: channelId.colors, reactionType };
-          let addReactionResult = message2.addReaction(emoji, tmp4, obj);
-        } else {
-          const message = value.message;
-          addReactionResult = message.removeReaction(emoji, tmp4, reactionType);
-        }
-        value.message = addReactionResult;
-        value2 = null;
+    flag = false;
+    if (null != message) {
+      const applyReactionResult = ConversationMessageCacheUtils.applyReaction(messageId, value.message);
+      let flag2 = null != applyReactionResult;
+      if (flag2) {
+        value.message = applyReactionResult;
+        let tmp7 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
           value2 = conversationMetadataById.get(value.conversationId);
-        }
-        let hydratedMessages1;
-        if (value2 != null) {
-          hydratedMessages1 = value2.hydratedMessages;
-        }
-        if (null != hydratedMessages1) {
-          const hydratedMessages = value2.hydratedMessages;
-          const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
-          if (-1 !== findIndexResult) {
-            const hydratedMessages2 = value2.hydratedMessages;
-            const substr = hydratedMessages2.slice();
-            substr[findIndexResult] = addReactionResult;
-            value2.hydratedMessages = substr;
+          if (value2 == null) {
+            value2 = null;
           }
+          tmp7 = value2;
         }
-        return true;
-      } else {
-        return false;
+        const result = ConversationMessageCacheUtils.replaceHydratedMessage(tmp7, messageId, applyReactionResult);
+        flag2 = true;
+        const tmp4Result = ConversationMessageCacheUtils;
       }
-      obj2 = ReactionUtils;
+      flag = flag2;
     }
   }
+  return flag;
 }
 function handleRelationshipUpdate() {
   c0 = false;
@@ -191,65 +163,50 @@ function handleRelationshipUpdate() {
     const prop = messageMetadataByMessageId.messageMetadataByMessageId;
     const item = prop.forEach((message, index) => {
       if (null != message.message) {
-        const isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message.message);
-        if (message.message.blocked !== isBlockedForMessageResult) {
+        const result = ConversationMessageCacheUtils.applyRelationshipFlags(message.message);
+        if (null != result) {
           c0 = true;
-          message = message.message;
-          const result = message.set("blocked", isBlockedForMessageResult);
-          const result1 = result.set("ignored", isIgnoredForMessageResult);
-          messageMetadataByMessageId = index;
-          message.message = result1;
-          value = null;
+          message.message = result;
+          let tmp = null;
           if (null != message.conversationId) {
             const conversationMetadataById = messageMetadataByMessageId.conversationMetadataById;
             value = conversationMetadataById.get(message.conversationId);
-          }
-          let hydratedMessages1;
-          if (value != null) {
-            hydratedMessages1 = value.hydratedMessages;
-          }
-          if (null != hydratedMessages1) {
-            const hydratedMessages = value.hydratedMessages;
-            const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
-            if (-1 !== findIndexResult) {
-              const hydratedMessages2 = value.hydratedMessages;
-              const substr = hydratedMessages2.slice();
-              substr[findIndexResult] = result1;
-              value.hydratedMessages = substr;
+            if (value == null) {
+              value = null;
             }
+            tmp = value;
           }
+          const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(tmp, index, result);
+          const tmp5Result = ConversationMessageCacheUtils;
         }
-        isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message.message);
       }
     });
   });
   return c0;
 }
-function removeHydratedMessage(arg0, arg1) {
-  closure_0 = arg1;
+function removeMessage(arg0, id) {
   const peekResult = navigation.peek(arg0);
   if (null == peekResult) {
     return false;
   } else {
     const messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
-    value = messageMetadataByMessageId2.get(arg1);
+    value = messageMetadataByMessageId2.get(id);
+    let tmp4 = null;
     if (null != value) {
-      value2 = null;
+      let tmp2 = null;
       if (null != value.conversationId) {
         const conversationMetadataById = peekResult.conversationMetadataById;
         value2 = conversationMetadataById.get(value.conversationId);
+        if (value2 == null) {
+          value2 = null;
+        }
+        tmp2 = value2;
       }
-      let hydratedMessages;
-      if (value2 != null) {
-        hydratedMessages = value2.hydratedMessages;
-      }
-      if (null != hydratedMessages) {
-        const hydratedMessages1 = value2.hydratedMessages;
-        value2.hydratedMessages = hydratedMessages1.filter((id) => id.id !== id);
-      }
+      tmp4 = tmp2;
     }
+    const result = ConversationMessageCacheUtils.removeHydratedMessage(tmp4, id);
     const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-    return messageMetadataByMessageId.delete(arg1);
+    return messageMetadataByMessageId.delete(id);
   }
 }
 function evictChannel(arg0) {
@@ -260,7 +217,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7706);
+const ConversationConstants = fn(7709);
 ({
   CONVERSATION_COLORS: closure_9,
   CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10,
@@ -420,12 +377,24 @@ prototype["getConversationColor"] = function getConversationColor(arg0, arg1) {
   }
   return tmp2;
 };
-prototype["getHydratedMessages"] = function getHydratedMessages(channelId, conversationId) {
-  const peekResult = navigation.peek(channelId);
+prototype["isFullyHydrated"] = function isFullyHydrated(arg0, arg1) {
+  const peekResult = navigation.peek(arg0);
+  let fullyHydrated;
+  if (peekResult != null) {
+    const conversationMetadataById = peekResult.conversationMetadataById;
+    value = conversationMetadataById.get(arg1);
+    if (value != null) {
+      fullyHydrated = value.fullyHydrated;
+    }
+  }
+  return true === fullyHydrated;
+};
+prototype["getHydratedMessages"] = function getHydratedMessages(arg0, arg1) {
+  const peekResult = navigation.peek(arg0);
   let hydratedMessages;
   if (peekResult != null) {
     const conversationMetadataById = peekResult.conversationMetadataById;
-    value = conversationMetadataById.get(conversationId);
+    value = conversationMetadataById.get(arg1);
     if (value != null) {
       hydratedMessages = value.hydratedMessages;
     }
@@ -450,8 +419,8 @@ prototype["getHydratedMessageById"] = function getHydratedMessageById(arg0, arg1
   }
   return message;
 };
-prototype["isConversationFetchPending"] = function isConversationFetchPending(conversationId, arg1) {
-  value = map1.get(conversationId);
+prototype["isConversationFetchPending"] = function isConversationFetchPending(arg0, arg1) {
+  value = map1.get(arg0);
   let tmp = null != value;
   if (tmp) {
     tmp = 0 !== value.size;
@@ -481,46 +450,95 @@ ConversationsStore.displayName = "ConversationsStore";
 const conversationsStore = new ConversationsStore(DispatcherDefault, {
   CONVERSATION_FETCH_START: function handleConversationFetchStart(conversationId) {
     conversationId = conversationId.conversationId;
-    let str = "preview";
-    if (conversationId.full) {
-      str = "full";
-    }
-    value = map1.get(conversationId);
-    if (null != value) {
-      value.add(str);
+    if (true === conversationId.isStandalone) {
+      return false;
     } else {
-      const _Set = Set;
-      const items = [str];
-      const set = new Set(items);
-      const result = map1.set(conversationId, set);
-    }
-  },
-  CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(arg0) {
-    ({ channelId, conversationId, messages, messageReferences, fullyHydrated } = arg0);
-    let str = "preview";
-    if (fullyHydrated) {
-      str = "full";
-    }
-    value = map1.get(conversationId);
-    if (null != value) {
-      value.delete(str);
-      if (0 === value.size) {
-        map1.delete(conversationId);
+      let str = "preview";
+      if (tmp) {
+        str = "full";
+      }
+      value = map1.get(conversationId);
+      if (null != value) {
+        value.add(str);
+      } else {
+        const _Set = Set;
+        const items = [str];
+        const set = new Set(items);
+        const result = map1.set(conversationId, set);
       }
     }
-    processHydratedMessages(channelId, conversationId, messages, fullyHydrated, messageReferences);
+  },
+  CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(isStandalone) {
+    ({ conversationId, messageReferences, fullyHydrated } = isStandalone);
+    if (true === isStandalone.isStandalone) {
+      return false;
+    } else {
+      let str = "preview";
+      if (fullyHydrated) {
+        str = "full";
+      }
+      value = map1.get(conversationId);
+      if (null != value) {
+        value.delete(str);
+        if (0 === value.size) {
+          map1.delete(conversationId);
+        }
+      }
+      if (messageReferences === undefined) {
+        messageReferences = [];
+      }
+      const peekResult = navigation.peek(tmp);
+      c1 = peekResult;
+      if (null != peekResult) {
+        const conversationMetadataById = peekResult.conversationMetadataById;
+        value2 = conversationMetadataById.get(conversationId);
+        if (null != value2) {
+          const obj2 = {
+            meta: value2,
+            messages: tmp2,
+            fullyHydrated,
+            messageReferences,
+            upsertMessage(id) {
+              const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
+              value = messageMetadataByMessageId.get(id.id);
+              if (null != value) {
+                value.conversationId = conversationId;
+                value.message = id;
+              } else {
+                const messageMetadataByMessageId2 = _undefined.messageMetadataByMessageId;
+                const obj = { conversationId, moderationLabel: null, message: id };
+                const result = messageMetadataByMessageId2.set(id.id, obj);
+              }
+            },
+            upsertReference(id) {
+              const messageMetadataByMessageId = _undefined.messageMetadataByMessageId;
+              if (!messageMetadataByMessageId.has(id.id)) {
+                const messageMetadataByMessageId2 = _undefined.messageMetadataByMessageId;
+                const obj = { conversationId: null, moderationLabel: null, message: id };
+                const result = messageMetadataByMessageId2.set(id.id, obj);
+              }
+            },
+          };
+          let result = ConversationMessageCacheUtils.applyHydratedMessages(obj2);
+        }
+      }
+    }
   },
   CONVERSATION_FETCH_FAILURE: function handleConversationFetchFailure(conversationId) {
     conversationId = conversationId.conversationId;
-    let str = "preview";
-    if (conversationId.full) {
-      str = "full";
-    }
-    value = map1.get(conversationId);
-    if (null != value) {
-      value.delete(str);
-      if (0 === value.size) {
-        map1.delete(conversationId);
+    if (true === conversationId.isStandalone) {
+      return false;
+    } else {
+      let str = "preview";
+      if (tmp) {
+        str = "full";
+      }
+      value = map1.get(conversationId);
+      if (null != value) {
+        value.delete(str);
+        if (0 === value.size) {
+          map1.delete(conversationId);
+        }
       }
     }
   },
@@ -542,7 +560,7 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7707).mapConversation);
+      const mapped = rawConversations.map(set(7710).mapConversation);
       const found = mapped.filter(set(1370).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
@@ -1059,175 +1077,149 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
     ({ channel_id, id } = message);
-    if (null != channel_id) {
-      if (null != id) {
-        const peekResult = navigation.peek(channel_id);
-        if (null == peekResult) {
-          return false;
-        } else {
-          const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
-          value = messageMetadataByMessageId.get(id);
-          let message1;
-          if (value != null) {
-            message1 = value.message;
-          }
-          let flag = null != message1;
-          if (flag) {
-            const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(value.message, message);
+    let tmp = null != channel_id && null != id;
+    if (tmp) {
+      const peekResult = navigation.peek(channel_id);
+      let flag = false;
+      if (null != peekResult) {
+        const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
+        value = messageMetadataByMessageId.get(id);
+        let message1;
+        if (value != null) {
+          message1 = value.message;
+        }
+        flag = false;
+        if (null != message1) {
+          const updateMessageRecordResult = MessageRecordUtils.updateMessageRecord(value.message, message);
+          let flag2 = null != updateMessageRecordResult;
+          if (flag2) {
             value.message = updateMessageRecordResult;
-            value2 = null;
+            let tmp9 = null;
             if (null != value.conversationId) {
               const conversationMetadataById = peekResult.conversationMetadataById;
               value2 = conversationMetadataById.get(value.conversationId);
-            }
-            let hydratedMessages1;
-            if (value2 != null) {
-              hydratedMessages1 = value2.hydratedMessages;
-            }
-            flag = true;
-            if (null != hydratedMessages1) {
-              const hydratedMessages = value2.hydratedMessages;
-              const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
-              flag = true;
-              if (-1 !== findIndexResult) {
-                const hydratedMessages2 = value2.hydratedMessages;
-                const substr = hydratedMessages2.slice();
-                substr[findIndexResult] = updateMessageRecordResult;
-                value2.hydratedMessages = substr;
-                flag = true;
+              if (value2 == null) {
+                value2 = null;
               }
+              tmp9 = value2;
             }
+            const result = ConversationMessageCacheUtils.replaceHydratedMessage(tmp9, id, updateMessageRecordResult);
+            flag2 = true;
+            const tmp6Result = ConversationMessageCacheUtils;
           }
-          return flag;
+          flag = flag2;
         }
       }
+      tmp = flag;
     }
-    return false;
+    return tmp;
   },
   MESSAGE_REACTION_ADD: handleReaction,
   MESSAGE_REACTION_REMOVE: handleReaction,
   MESSAGE_REACTION_ADD_MANY: function handleReactionBatch(messageId) {
     messageId = messageId.messageId;
     const peekResult = navigation.peek(messageId.channelId);
-    if (null == peekResult) {
-      return false;
-    } else {
+    let flag = false;
+    if (null != peekResult) {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
       value = messageMetadataByMessageId.get(messageId);
       let message1;
       if (value != null) {
         message1 = value.message;
       }
-      if (null == message1) {
-        return false;
-      } else {
+      flag = false;
+      if (null != message1) {
         const message = value.message;
         const addReactionBatchResult = message.addReactionBatch(messageId.reactions, AuthenticationStore.getId());
-        value.message = addReactionBatchResult;
-        value2 = null;
-        if (null != value.conversationId) {
-          const conversationMetadataById = peekResult.conversationMetadataById;
-          value2 = conversationMetadataById.get(value.conversationId);
-        }
-        let hydratedMessages1;
-        if (value2 != null) {
-          hydratedMessages1 = value2.hydratedMessages;
-        }
-        if (null != hydratedMessages1) {
-          const hydratedMessages = value2.hydratedMessages;
-          const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
-          if (-1 !== findIndexResult) {
-            const hydratedMessages2 = value2.hydratedMessages;
-            const substr = hydratedMessages2.slice();
-            substr[findIndexResult] = addReactionBatchResult;
-            value2.hydratedMessages = substr;
+        let flag2 = null != addReactionBatchResult;
+        if (flag2) {
+          value.message = addReactionBatchResult;
+          let tmp8 = null;
+          if (null != value.conversationId) {
+            const conversationMetadataById = peekResult.conversationMetadataById;
+            value2 = conversationMetadataById.get(value.conversationId);
+            if (value2 == null) {
+              value2 = null;
+            }
+            tmp8 = value2;
           }
+          const result = ConversationMessageCacheUtils.replaceHydratedMessage(tmp8, messageId, addReactionBatchResult);
+          flag2 = true;
         }
-        return true;
+        flag = flag2;
       }
     }
+    return flag;
   },
   MESSAGE_REACTION_REMOVE_ALL: function handleRemoveAllReactions(messageId) {
     messageId = messageId.messageId;
     const peekResult = navigation.peek(messageId.channelId);
-    if (null == peekResult) {
-      return false;
-    } else {
+    let flag = false;
+    if (null != peekResult) {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
       value = messageMetadataByMessageId.get(messageId);
       let message1;
       if (value != null) {
         message1 = value.message;
       }
-      if (null == message1) {
-        return false;
-      } else {
+      flag = false;
+      if (null != message1) {
         const message = value.message;
         const result = message.set("reactions", []);
-        value.message = result;
-        value2 = null;
-        if (null != value.conversationId) {
-          const conversationMetadataById = peekResult.conversationMetadataById;
-          value2 = conversationMetadataById.get(value.conversationId);
-        }
-        let hydratedMessages1;
-        if (value2 != null) {
-          hydratedMessages1 = value2.hydratedMessages;
-        }
-        if (null != hydratedMessages1) {
-          const hydratedMessages = value2.hydratedMessages;
-          const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
-          if (-1 !== findIndexResult) {
-            const hydratedMessages2 = value2.hydratedMessages;
-            const substr = hydratedMessages2.slice();
-            substr[findIndexResult] = result;
-            value2.hydratedMessages = substr;
+        let flag2 = null != result;
+        if (flag2) {
+          value.message = result;
+          let tmp7 = null;
+          if (null != value.conversationId) {
+            const conversationMetadataById = peekResult.conversationMetadataById;
+            value2 = conversationMetadataById.get(value.conversationId);
+            if (value2 == null) {
+              value2 = null;
+            }
+            tmp7 = value2;
           }
+          const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(tmp7, messageId, result);
+          flag2 = true;
         }
-        return true;
+        flag = flag2;
       }
     }
+    return flag;
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(messageId) {
     messageId = messageId.messageId;
     const peekResult = navigation.peek(messageId.channelId);
-    if (null == peekResult) {
-      return false;
-    } else {
+    let flag = false;
+    if (null != peekResult) {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
       value = messageMetadataByMessageId.get(messageId);
       let message1;
       if (value != null) {
         message1 = value.message;
       }
-      if (null == message1) {
-        return false;
-      } else {
+      flag = false;
+      if (null != message1) {
         const message = value.message;
         const result = message.removeReactionsForEmoji(messageId.emoji);
-        value.message = result;
-        value2 = null;
-        if (null != value.conversationId) {
-          const conversationMetadataById = peekResult.conversationMetadataById;
-          value2 = conversationMetadataById.get(value.conversationId);
-        }
-        let hydratedMessages1;
-        if (value2 != null) {
-          hydratedMessages1 = value2.hydratedMessages;
-        }
-        if (null != hydratedMessages1) {
-          const hydratedMessages = value2.hydratedMessages;
-          const findIndexResult = hydratedMessages.findIndex((id) => id.id === closure_0);
-          if (-1 !== findIndexResult) {
-            const hydratedMessages2 = value2.hydratedMessages;
-            const substr = hydratedMessages2.slice();
-            substr[findIndexResult] = result;
-            value2.hydratedMessages = substr;
+        let flag2 = null != result;
+        if (flag2) {
+          value.message = result;
+          let tmp7 = null;
+          if (null != value.conversationId) {
+            const conversationMetadataById = peekResult.conversationMetadataById;
+            value2 = conversationMetadataById.get(value.conversationId);
+            if (value2 == null) {
+              value2 = null;
+            }
+            tmp7 = value2;
           }
+          const result1 = ConversationMessageCacheUtils.replaceHydratedMessage(tmp7, messageId, result);
+          flag2 = true;
         }
-        return true;
+        flag = flag2;
       }
     }
+    return flag;
   },
   MESSAGE_DELETE: function handleMessageDelete(id) {
     id = id.id;
@@ -1236,21 +1228,20 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
     if (null != peekResult) {
       const messageMetadataByMessageId = peekResult.messageMetadataByMessageId;
       value = messageMetadataByMessageId.get(id);
+      let tmp3 = null;
       if (null != value) {
-        value2 = null;
+        let tmp4 = null;
         if (null != value.conversationId) {
           const conversationMetadataById = peekResult.conversationMetadataById;
           value2 = conversationMetadataById.get(value.conversationId);
+          if (value2 == null) {
+            value2 = null;
+          }
+          tmp4 = value2;
         }
-        let hydratedMessages;
-        if (value2 != null) {
-          hydratedMessages = value2.hydratedMessages;
-        }
-        if (null != hydratedMessages) {
-          const hydratedMessages1 = value2.hydratedMessages;
-          value2.hydratedMessages = hydratedMessages1.filter((id) => id.id !== id);
-        }
+        tmp3 = tmp4;
       }
+      const result = ConversationMessageCacheUtils.removeHydratedMessage(tmp3, id);
       const messageMetadataByMessageId2 = peekResult.messageMetadataByMessageId;
       flag = messageMetadataByMessageId2.delete(id);
     }
@@ -1259,7 +1250,7 @@ const conversationsStore = new ConversationsStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
     let flag = false;
     while (tmp2 !== undefined) {
-      if (removeHydratedMessage(tmp, tmp3)) {
+      if (removeMessage(tmp, tmp3)) {
         flag = true;
       }
       continue;

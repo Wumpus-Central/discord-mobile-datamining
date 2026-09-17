@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetReportButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import ReportModals from "../../in_app_reports/ReportModals.tsx";
-import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import MoreHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
+import ReportModals from "../../in_app_reports/ReportModals.tsx";
+import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

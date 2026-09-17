@@ -1,0 +1,59 @@
+// discord_app/modules/checkpoint/native/components/CheckpointButton.tsx
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import CheckpointTextDefault from "CheckpointText.tsx";
+import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
+import CheckpointConstants from "../../CheckpointConstants.tsx";
+import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
+import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
+import size from "../../../../../_runtime/metro/00002__.js";
+
+({ Pressable: c2, View: c3 } = get_ActivityIndicator);
+({ CHECKPOINT_PRIMARY: closure_4, CHECKPOINT_BUTTON_BORDER, CHECKPOINT_BUTTON_SHADOW } = CheckpointConstants);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let obj = {
+  container: { justifyContent: "center", marginRight: -4, marginBottom: -4, paddingRight: 4, paddingBottom: 4 },
+  backdrop: { position: "absolute", top: 4, left: 4, right: 0, bottom: 0, backgroundColor: CHECKPOINT_BUTTON_SHADOW },
+  button: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: nativeDefault.space.PX_8,
+    backgroundColor: nativeDefault.colors.BLACK,
+    borderWidth: 2,
+    borderColor: CHECKPOINT_BUTTON_BORDER,
+    height: 48,
+  },
+  label: { textTransform: "uppercase" },
+};
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointButton.tsx");
+
+export default function CheckpointButton(onPress) {
+  ({ Icon, label } = onPress);
+  const tmp = closure_7();
+  const obj = { style: tmp.container, children: null };
+  const items = [hasOwnProperty(React3, { style: tmp.backdrop })];
+  const obj3 = {
+    style: tmp.button,
+    onPress: onPress.onPress,
+    accessibilityRole: "button",
+    accessibilityLabel: label,
+    children: null,
+  };
+  let tmp4Result = null != Icon;
+  if (tmp4Result) {
+    const obj4 = { color, size: "sm" };
+    tmp4Result = hasOwnProperty(Icon, obj4);
+  }
+  const items1 = [tmp4Result];
+  let tmp4Result2 = null != label;
+  if (tmp4Result2) {
+    const obj5 = { variant: "text-lg/medium", style: tmp.label, children: label };
+    tmp4Result2 = hasOwnProperty(CheckpointTextDefault, obj5);
+  }
+  items1[1] = tmp4Result2;
+  obj3.children = items1;
+  items[1] = timestampProducer(React2, obj3);
+  obj.children = items;
+  return timestampProducer(React3, obj);
+}

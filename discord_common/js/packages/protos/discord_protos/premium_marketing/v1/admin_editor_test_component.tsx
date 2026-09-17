@@ -3,6 +3,7 @@ import _mod1187 from "../../../../../../../_runtime/metro/01187__.js";
 import localized_string from "../../common/v1/localized_string.tsx";
 import help_article from "help_article.tsx";
 import cta_button from "cta_button.tsx";
+import gradient from "gradient.tsx";
 import theme_aware_asset from "theme_aware_asset.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
@@ -10,7 +11,7 @@ require = fn;
 const MessageType = fn(1187).MessageType;
 class AdminEditorTestComponent$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , ,];
+    items = [, , , , , , , , ,];
     items[0] = { no: 1, name: "deprecated_field", kind: "scalar", T: 9 };
     items[1] = {
       no: 2,
@@ -39,20 +40,28 @@ class AdminEditorTestComponent$Type extends MessageType {
         return require("theme_aware_asset").ThemeAwareAsset;
       },
     };
-    obj = { no: 8, name: "help_article_field", kind: "message", T: null };
+    items[7] = {
+      no: 8,
+      name: "help_article_field",
+      kind: "message",
+      T() {
+        return require("help_article").HelpArticle;
+      },
+    };
+    obj = { no: 9, name: "cta_field", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_0(closure_1_1[4]).HelpArticle;
+        return closure_1_0(closure_1_1[5]).CTAButton;
       }
     }
     obj.T = T;
-    items[7] = obj;
-    items[8] = {
-      no: 9,
-      name: "cta_field",
+    items[8] = obj;
+    items[9] = {
+      no: 10,
+      name: "gradient_field",
       kind: "message",
       T() {
-        return require("cta_button").CTAButton;
+        return require("gradient").Gradient;
       },
     };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, T);
@@ -70,79 +79,15 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    do {
-      let tmp4 = _slicedToArray(pos.tag(), 2);
-      [tmp5, tmp6] = tmp4;
-      if (1 === tmp5) {
-        obj.deprecatedField = pos.string();
-      } else if (2 === tmp5) {
-        let LocalizedString2 = localized_string.LocalizedString;
-        obj.localizedTextField = LocalizedString2.internalBinaryRead(
-          pos,
-          pos.uint32(),
-          readUnknownField,
-          obj.localizedTextField,
-        );
-      } else if (3 === tmp5) {
-        obj.plainTextField = pos.string();
-      } else if (4 === tmp5) {
-        let LocalizedString = localized_string.LocalizedString;
-        obj.textareaField = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.textareaField);
-      } else if (5 === tmp5) {
-        obj.checkboxField = pos.bool();
-      } else if (6 === tmp5) {
-        obj.assetField = pos.string();
-      } else if (7 === tmp5) {
-        let ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-        obj.themedAssetField = ThemeAwareAsset.internalBinaryRead(
-          pos,
-          pos.uint32(),
-          readUnknownField,
-          obj.themedAssetField,
-        );
-      } else if (8 === tmp5) {
-        let HelpArticle = help_article.HelpArticle;
-        obj.helpArticleField = HelpArticle.internalBinaryRead(
-          pos,
-          pos.uint32(),
-          readUnknownField,
-          obj.helpArticleField,
-        );
-      } else if (9 === tmp5) {
-        let CTAButton = cta_button.CTAButton;
-        obj.ctaField = CTAButton.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.ctaField);
-      } else {
-        let onRead = readUnknownField.readUnknownField;
-        if ("throw" === onRead) {
-          let tmp15 = globalThis;
-          let _globalThis = globalThis;
-          let _HermesInternal = HermesInternal;
-          let str = ") for ";
-          let str2 = " (wire type ";
-          let str3 = "Unknown field ";
-          let tmp18 = new.target;
-          let tmp19 = new.target;
-          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          throw error;
-        } else {
-          let skipResult = pos.skip(tmp6);
-          if (false !== onRead) {
-            if (true === onRead) {
-              onRead = _mod1187.UnknownFieldHandler.onRead;
-            }
-            let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
-          }
-        }
-      }
-    } while (pos.pos < sum);
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = pos.tag();
+    const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
 };
@@ -233,6 +178,20 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
       writeUnknownFields,
     );
   }
+  if (deprecatedField.gradientField) {
+    const Gradient = gradient.Gradient;
+    const tagResult9 = tag.tag(10, _mod1187.WireType.LengthDelimited);
+    const joined5 = Gradient.internalBinaryWrite(
+      deprecatedField.gradientField,
+      tag.tag(10, _mod1187.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult5 = Gradient.internalBinaryWrite(
+      deprecatedField.gradientField,
+      tag.tag(10, _mod1187.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -272,22 +231,30 @@ let items = [
       return require("theme_aware_asset").ThemeAwareAsset;
     },
   },
+  {
+    no: 8,
+    name: "help_article_field",
+    kind: "message",
+    T() {
+      return require("help_article").HelpArticle;
+    },
+  },
   ,
 ];
-let obj = { no: 8, name: "help_article_field", kind: "message", T: null };
+let obj = { no: 9, name: "cta_field", kind: "message", T: null };
 class T {
   constructor() {
-    return closure_1_0(closure_1_1[4]).HelpArticle;
+    return closure_1_0(closure_1_1[5]).CTAButton;
   }
 }
 obj.T = T;
-items[7] = obj;
-items[8] = {
-  no: 9,
-  name: "cta_field",
+items[8] = obj;
+items[9] = {
+  no: 10,
+  name: "gradient_field",
   kind: "message",
   T() {
-    return require("cta_button").CTAButton;
+    return require("gradient").Gradient;
   },
 };
 const prototype1 = new prototype(

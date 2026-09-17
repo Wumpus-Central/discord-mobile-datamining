@@ -5,14 +5,14 @@ import native2 from "../../../../../discord_common/js/packages/design/native.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const native = TextArea(1177);
-const shared = TextArea(4489);
-const RedesignCompat = TextArea(5772);
-const TextInput = TextArea(6714);
-const TextArea2 = TextArea(7195);
+const shared = TextArea(4491);
+const RedesignCompat = TextArea(5774);
+const TextInput = TextArea(6717);
+const TextArea2 = TextArea(7199);
 require = fn;
 const KeyboardThemes = fn(1074).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 },
   placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
@@ -198,7 +198,7 @@ export default noop.forwardRef((helpText, arg1) => {
           placeholderTextColor: null,
           placeholder: null,
           secureTextEntry: null,
-          isDisabled: null,
+          disabled: null,
           autoFocus: null,
           autoCapitalize: null,
           autoCorrect: null,
@@ -211,7 +211,7 @@ export default noop.forwardRef((helpText, arg1) => {
         obj2.placeholderTextColor = color;
         obj2.placeholder = placeholder;
         obj2.secureTextEntry = tmp9;
-        obj2.isDisabled = flag2;
+        obj2.disabled = flag2;
         obj2.autoFocus = flag4;
         obj2.autoCapitalize = autoCapitalize;
         obj2.autoCorrect = autoCorrect;
@@ -231,7 +231,7 @@ export default noop.forwardRef((helpText, arg1) => {
             placeholderTextColor={null}
             placeholder={null}
             secureTextEntry={null}
-            isDisabled={null}
+            disabled={null}
             autoFocus={null}
             autoCapitalize={null}
             autoCorrect={null}
@@ -251,7 +251,7 @@ export default noop.forwardRef((helpText, arg1) => {
           placeholderTextColor: color.placeholderText.color,
           placeholder,
           secureTextEntry: tmp9,
-          isDisabled: flag2,
+          disabled: flag2,
           autoFocus: flag4,
           autoCapitalize,
           autoCorrect,
@@ -268,7 +268,7 @@ export default noop.forwardRef((helpText, arg1) => {
           placeholderTextColor: color.placeholderText.color,
           placeholder,
           secureTextEntry: tmp9,
-          isDisabled: flag2,
+          disabled: flag2,
           autoFocus: flag4,
           autoCapitalize,
           autoCorrect,

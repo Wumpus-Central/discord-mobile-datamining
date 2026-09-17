@@ -63,6 +63,8 @@ export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.SCHEDULED_MESSAGES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY === EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.STREAM_HIGH_QUALITY;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SHOP_MEMBER_PRICING === EMOJIS_EVERYWHERE) {
+    return ConstantsIOS.UpsellTypes.SHOP_MEMBER_PRICING;
   } else {
     const _HermesInternal = HermesInternal;
     _modDef38(false, "Missing featureName: " + EMOJIS_EVERYWHERE);

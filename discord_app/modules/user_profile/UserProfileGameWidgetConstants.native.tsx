@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/UserProfileGameWidgetConstants.native.tsx
 import FriendsIcon from "../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
-import RibbonIcon from "../../design/components/Icon/native/redesign/generated/RibbonIcon.tsx";
 import ThumbsUpIcon from "../../design/components/Icon/native/redesign/generated/ThumbsUpIcon.tsx";
 import ThumbsDownIcon from "../../design/components/Icon/native/redesign/generated/ThumbsDownIcon.tsx";
+import RibbonIcon from "../../design/components/Icon/native/redesign/generated/RibbonIcon.tsx";
 import UserProfileGameWidgetTagMetadata from "UserProfileGameWidgetTagMetadata.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

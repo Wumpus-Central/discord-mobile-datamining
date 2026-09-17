@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/UserSettingSearchManager.tsx
-import fuzzysearchDefault from "../../../_runtime/05603_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05605_fuzzysearch.js";
 import StringMatchUtils from "../search/StringMatchUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

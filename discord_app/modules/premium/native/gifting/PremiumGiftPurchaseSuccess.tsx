@@ -14,7 +14,7 @@ const SubscriptionIntervalTypes = fn(1374).SubscriptionIntervalTypes;
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   disclaimer: { marginTop: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 },
   title: null,
@@ -37,23 +37,23 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  const nativeGiftContext = giftCodeRecord(10840).useNativeGiftContext();
+  const nativeGiftContext = giftCodeRecord(10848).useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj = giftCodeRecord(10840);
-  const giftCodeURL = giftCodeRecord(4877).getGiftCodeURL(giftCodeRecord.code);
+  let obj = giftCodeRecord(10848);
+  const giftCodeURL = giftCodeRecord(4879).getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
   }
   if (null != giftCodeRecord.subscriptionPlanId) {
     let subscriptionPlanId = giftCodeRecord.subscriptionPlanId;
   } else {
-    subscriptionPlanId = tmp2(4295).getPlanIdForPremiumType(premiumType, planInterval);
-    const tmp2Result = tmp2(4295);
+    subscriptionPlanId = tmp2(4297).getPlanIdForPremiumType(premiumType, planInterval);
+    const tmp2Result = tmp2(4297);
   }
-  let obj2 = giftCodeRecord(4877);
+  let obj2 = giftCodeRecord(4879);
   const tmp6 = giftCodeURL;
-  const tierDisplayNameByPlanId = giftCodeURL(4295).getTierDisplayNameByPlanId(subscriptionPlanId);
-  const obj4 = giftCodeURL(4295);
+  const tierDisplayNameByPlanId = giftCodeURL(4297).getTierDisplayNameByPlanId(subscriptionPlanId);
+  const obj4 = giftCodeURL(4297);
   const items = [giftCodeRecord, giftCodeURL];
   let obj3 = { children: null };
   const callback = noop.useCallback(() => {
@@ -64,12 +64,12 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj3.children = closure_8(giftCodeURL(10976), { giftStyle });
+  obj3.children = closure_8(giftCodeURL(10984), { giftStyle });
   const items1 = [closure_8(View, obj3), , , ,];
   const obj6 = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1115).intl;
   obj6.children = intl.string(giftCodeRecord(1115).t["/s1xR7"]);
-  items1[1] = closure_8(giftCodeRecord(4634).Text, obj6);
+  items1[1] = closure_8(giftCodeRecord(4636).Text, obj6);
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl2 = tmp2(1115).intl;
   if (obj5.getInterval(subscriptionPlanId).intervalType === SubscriptionIntervalTypes.YEAR) {
@@ -79,16 +79,16 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   }
   const obj8 = { children: null };
   obj7.children = intl2.format(bUdTqI, { intervalCount: 1, name: tierDisplayNameByPlanId });
-  items1[2] = closure_8(giftCodeRecord(4634).Text, obj7);
+  items1[2] = closure_8(giftCodeRecord(4636).Text, obj7);
   const obj9 = { style: tmp.input, children: null };
   const obj10 = { style: tmp.inputLabel, variant: "heading-md/bold", children: null };
   const intl3 = tmp2(1115).intl;
   obj10.children = intl3.string(giftCodeRecord(1115).t["qS+yMo"]);
-  const items2 = [closure_8(giftCodeRecord(4634).Text, obj10)];
-  obj5 = giftCodeURL(4295);
-  items2[1] = closure_8(giftCodeRecord(9045).InputButton, {
+  const items2 = [closure_8(giftCodeRecord(4636).Text, obj10)];
+  obj5 = giftCodeURL(4297);
+  items2[1] = closure_8(giftCodeRecord(9060).InputButton, {
     text: giftCodeURL,
-    icon: tmp6(4585),
+    icon: tmp6(4587),
     iconPosition: "end",
     onPress: callback,
   });
@@ -97,7 +97,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   const obj12 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };
   const intl4 = tmp2(1115).intl;
   obj12.children = intl4.string(giftCodeRecord(1115).t.As9eLl);
-  items1[4] = closure_8(giftCodeRecord(4634).Text, obj12);
+  items1[4] = closure_8(giftCodeRecord(4636).Text, obj12);
   obj8.children = items1;
   return closure_10(closure_9, obj8);
 }

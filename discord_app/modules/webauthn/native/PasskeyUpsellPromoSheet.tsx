@@ -21,11 +21,11 @@ export default function PasswordlessUpsellPromoSheet() {
     const result1 = setRegistering(onRegisterSuccess[6]).openPasskeyUpsellPromoModal(merged);
   }
   let obj = {
-    source: require("../../../../_runtime/metro/14780__.js"),
+    source: require("../../../../_runtime/metro/14788__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   };
   const tmp4 = closure_7(Image, {
-    source: require("../../../../_runtime/metro/14780__.js"),
+    source: require("../../../../_runtime/metro/14788__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   });
   [r10018, require] = noop.useState("");

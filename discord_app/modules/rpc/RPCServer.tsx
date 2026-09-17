@@ -8,7 +8,7 @@ import RpcCommandInterception from "RpcCommandInterception.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(4542).TransportTypes;
+const TransportTypes = fn(4544).TransportTypes;
 const Constants = fn(1074);
 ({
   AnalyticEvents: hasOwnProperty,
@@ -646,22 +646,25 @@ prototype["addSubscription"] = function addSubscription(socket, evt, args, arg3)
     tmp = null;
   }
   const self = this;
-  const dispatch = this.dispatch;
-  const bindResult = dispatch.bind(this, socket, null, constants3.DISPATCH, evt);
-  if (null == this.getSubscription(socket, evt, args)) {
-    const subscriptions = self.subscriptions;
-    const obj = { update: tmp, dispatch: bindResult, prevState: null, socket: null, evt: null, args: null };
-    let tmpResult = null;
-    if (tmp) {
-      const obj2 = { prevState: null, dispatch: bindResult };
-      tmpResult = tmp(obj2);
+  const sockets = this.sockets;
+  if (sockets.has(socket)) {
+    const dispatch = self.dispatch;
+    const bindResult = dispatch.bind(self, socket, null, constants3.DISPATCH, evt);
+    if (null == self.getSubscription(socket, evt, args)) {
+      const subscriptions = self.subscriptions;
+      const obj = { update: tmp, dispatch: bindResult, prevState: null, socket: null, evt: null, args: null };
+      let tmpResult = null;
+      if (tmp) {
+        const obj2 = { prevState: null, dispatch: bindResult };
+        tmpResult = tmp(obj2);
+      }
+      obj.prevState = tmpResult;
+      obj.socket = socket;
+      obj.evt = evt;
+      obj.args = args;
+      subscriptions.push(obj);
+      const result = self.dispatchIsSubscribedUpdate();
     }
-    obj.prevState = tmpResult;
-    obj.socket = socket;
-    obj.evt = evt;
-    obj.args = args;
-    subscriptions.push(obj);
-    const result = self.dispatchIsSubscribedUpdate();
   }
 };
 prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) {

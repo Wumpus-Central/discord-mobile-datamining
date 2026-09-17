@@ -4,7 +4,7 @@ import discord_common_shallowEqual from "../../../discord_common/js/packages/sha
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../modules/reanimated/ReanimatedRexport.tsx";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
-import BottomSheetModal from "../../../_runtime/06735_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/06738_BottomSheetModal.js";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -1818,8 +1818,7 @@ class FastList extends PureComponent {
           tmp = undefined !== EXPERIMENTAL_enableAnchorWhileScrolling && EXPERIMENTAL_enableAnchorWhileScrolling;
         };
         tmp1.handleLayout = function handleLayout(nativeEvent) {
-          const state = uiStore.state;
-          const fastListComputer = state.fastListComputer;
+          ({ isFirstLayout, fastListComputer } = uiStore.state);
           ({ contentInset, onLayout, horizontal, chunkBase } = uiStore.props);
           const layout = nativeEvent.nativeEvent.layout;
           let num = horizontal ? contentInset.left : contentInset.top;
@@ -1837,11 +1836,14 @@ class FastList extends PureComponent {
           if (onLayout != null) {
             onLayout(nativeEvent, uiStore);
           }
-          if (state.isFirstLayout) {
+          if (isFirstLayout) {
             if (null == chunkBase) {
               uiStore.setState(uiStore.getInitialState(uiStore.containerSize, fastListComputer, false));
             }
             const result = uiStore.queueViewabilityChange();
+          }
+          if (isFirstLayout) {
+            const result1 = uiStore.clampInitialScrollPosition();
           }
           const blocks = uiStore.computeBlocks();
           const tmp = horizontal ? layout.width : layout.height;
@@ -2261,6 +2263,28 @@ prototype4["restoreScrollPosition"] = function restoreScrollPosition() {
       const _requestAnimationFrame = requestAnimationFrame;
       self.deferredCompute = requestAnimationFrame(() => self.computeBlocks());
     }
+  }
+};
+prototype4["clampInitialScrollPosition"] = function clampInitialScrollPosition() {
+  const self = this;
+  ({ fastListComputer, initialContentOffset } = this.state);
+  if (null != initialContentOffset) {
+    const horizontal = self.props.horizontal;
+    if (horizontal != null) {
+      if (horizontal) {
+        let y = initialContentOffset.x;
+      }
+      const _Math = Math;
+      const _Math2 = Math;
+      const _Math3 = Math;
+      const bound = Math.max(0, Math.min(y, Math.max(0, fastListComputer.getSize() - self.containerSize)));
+      if (bound !== y) {
+        self.scrollPos = bound;
+        const scrollPosValue = self.scrollPosValue;
+        const result = scrollPosValue.set(bound);
+      }
+    }
+    y = initialContentOffset.y;
   }
 };
 prototype4["computeBlocks"] = function computeBlocks() {

@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_9 = createStyles.createStyles(obj);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -74,7 +74,7 @@ export default noop.forwardRef((animate, ref) => {
   });
   const obj4 = guildId(504);
   const tmp9 = id;
-  const tmp10 = id(8386);
+  const tmp10 = id(8405);
   const obj6 = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -98,25 +98,25 @@ export default noop.forwardRef((animate, ref) => {
     avatarDecoration: null,
   };
   let tmp14 = null;
-  const obj5 = guildId(8295);
+  const obj5 = guildId(8314);
   if (!disableStatus) {
     tmp14 = status;
   }
   obj7.status = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj7.statusStyle = items4;
-  obj7.streaming = tmp9(8387)(activities);
+  obj7.streaming = tmp9(8406)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
   obj7.animate = flag;
-  obj7.avatarDecoration = tmp10(guildId(8295).getProfilePreviewValue(obj6));
+  obj7.avatarDecoration = tmp10(guildId(8314).getProfilePreviewValue(obj6));
   if (null != onPress) {
     const obj8 = { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" };
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj9 = { source: null };
-      obj = obj(8375);
+      obj = obj(8394);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj9.source = avatarSource;
       obj7 = Object.assign(obj7);
@@ -126,7 +126,7 @@ export default noop.forwardRef((animate, ref) => {
       const merged2 = Object.assign(obj7);
     }
     obj8.children = jsx(obj(1177).Avatar, obj10);
-    jsx(obj(5208).PressableOpacity, {
+    jsx(obj(5210).PressableOpacity, {
       ref,
       onPress,
       onLongPress: onPress,
@@ -139,7 +139,7 @@ export default noop.forwardRef((animate, ref) => {
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj12 = { source: null };
-      const objResult = obj(8375);
+      const objResult = obj(8394);
       obj12.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj7);
       let obj13 = obj12;
@@ -150,5 +150,5 @@ export default noop.forwardRef((animate, ref) => {
     obj11.children = jsx(obj(1177).Avatar, obj13);
     return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
-  const tmp10Result = tmp10(guildId(8295).getProfilePreviewValue(obj6));
+  const tmp10Result = tmp10(guildId(8314).getProfilePreviewValue(obj6));
 });

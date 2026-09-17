@@ -211,6 +211,7 @@ const tmp10 = new "shouldCollectMetrics"(
   LibdiscoreCachedExperiment,
   LibdiscoreWrapperSimpleExperiment,
   tmp8,
+  libdiscoreTelemetryExperiment,
 );
 tmp10.label = "Allow react to render before lazy cache is loaded";
 tmp10.defaultValue = false;
@@ -246,6 +247,7 @@ const tmp11 = new "getTreatments"(
   tmp8,
   libdiscoreTelemetryExperiment,
   tmp10,
+  "getCachedBridgedStoreMode",
   prototype4,
   "shouldCollectMetrics",
   "getLabel",
@@ -272,6 +274,7 @@ const tmp12 = new "getTreatments"(
   libdiscoreTelemetryExperiment,
   tmp10,
   tmp11,
+  prototype4,
   "shouldCollectMetrics",
   "getLabel",
   "getTreatments",
@@ -294,6 +297,7 @@ const tmp13 = new "getTreatments"(
   LibdiscoreCachedExperiment,
   LibdiscoreWrapperSimpleExperiment,
   tmp8,
+  libdiscoreTelemetryExperiment,
 );
 tmp13.label = "Android Chat Mosaic Shared Pool";
 tmp13.defaultValue = false;
@@ -311,9 +315,28 @@ const tmp14 = new "getTreatments"(
   LibdiscoreCachedExperiment,
   LibdiscoreWrapperSimpleExperiment,
   tmp8,
+  libdiscoreTelemetryExperiment,
 );
 tmp14.label = "Android Hermes Occupancy Target";
 tmp14.defaultValue = false;
+const tmp15 = new "getTreatments"(
+  "2026-08-android-jank-per-screen",
+  undefined,
+  tmp5,
+  LibdiscoreCustomTreatmentsExperiment,
+  tmp3,
+  tmp2,
+  undefined,
+  require,
+  dependencyMap,
+  items,
+  LibdiscoreCachedExperiment,
+  LibdiscoreWrapperSimpleExperiment,
+  tmp8,
+  libdiscoreTelemetryExperiment,
+);
+tmp15.label = "Android Per-Screen Jank Aggregation";
+tmp15.defaultValue = false;
 const tmp22 = new tmp2(
   "2026-08-android-rn-reparenting-flag",
   undefined,
@@ -328,6 +351,7 @@ const tmp22 = new tmp2(
   LibdiscoreCachedExperiment,
   LibdiscoreWrapperSimpleExperiment,
   tmp8,
+  libdiscoreTelemetryExperiment,
 );
 tmp22.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
 tmp22.defaultValue = false;
@@ -351,6 +375,7 @@ const tmp32 = new tmp3(
   tmp12,
   tmp13,
   tmp14,
+  tmp15,
   tmp22,
   "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
 );
@@ -369,6 +394,7 @@ export const AndroidPullModeRenderingExperiment = tmp11;
 export const AndroidFrescoCacheExperiment = tmp12;
 export const AndroidChatMosaicSharedPoolExperiment = tmp13;
 export const AndroidHermesOccupancyTargetExperiment = tmp14;
+export const AndroidJankPerScreenExperiment = tmp15;
 export const AndroidRNFlagReparenting = tmp22;
 export const IOSObjcComposedImageCacheExperiment = tmp32;
 export function isExperimentSyncDisabled() {

@@ -17,12 +17,12 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChatInputConstants = fn(12104);
+const ChatInputConstants = fn(12113);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   actions: { flexDirection: "row", alignItems: "center" },
   themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG },
@@ -30,8 +30,8 @@ let obj = {
   activeBrand: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5065).SMALL_BUTTON_HEIGHT + fn(5065).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5065).SMALL_BUTTON_HEIGHT + fn(5065).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5067).SMALL_BUTTON_HEIGHT + fn(5067).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5067).SMALL_BUTTON_HEIGHT + fn(5067).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
 let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };

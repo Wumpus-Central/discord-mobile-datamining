@@ -6,20 +6,20 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef10336 from "../../../../_runtime/metro/10336__.js";
-import _modDef10337 from "../../../../_runtime/metro/10337__.js";
-import _modDef10338 from "../../../../_runtime/metro/10338__.js";
-import _modDef10339 from "../../../../_runtime/metro/10339__.js";
-import _modDef10340 from "../../../../_runtime/metro/10340__.js";
-import _modDef10341 from "../../../../_runtime/metro/10341__.js";
-import _modDef10342 from "../../../../_runtime/metro/10342__.js";
-import _modDef10343 from "../../../../_runtime/metro/10343__.js";
 import _modDef10344 from "../../../../_runtime/metro/10344__.js";
 import _modDef10345 from "../../../../_runtime/metro/10345__.js";
 import _modDef10346 from "../../../../_runtime/metro/10346__.js";
 import _modDef10347 from "../../../../_runtime/metro/10347__.js";
 import _modDef10348 from "../../../../_runtime/metro/10348__.js";
 import _modDef10349 from "../../../../_runtime/metro/10349__.js";
+import _modDef10350 from "../../../../_runtime/metro/10350__.js";
+import _modDef10351 from "../../../../_runtime/metro/10351__.js";
+import _modDef10352 from "../../../../_runtime/metro/10352__.js";
+import _modDef10353 from "../../../../_runtime/metro/10353__.js";
+import _modDef10354 from "../../../../_runtime/metro/10354__.js";
+import _modDef10355 from "../../../../_runtime/metro/10355__.js";
+import _modDef10356 from "../../../../_runtime/metro/10356__.js";
+import _modDef10357 from "../../../../_runtime/metro/10357__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,7 +39,7 @@ class AttachmentIcon {
         }
         let tmp2 = obj4[obj.classifyFileName(obj, str)];
         if (tmp2 == null) {
-          tmp2 = _modDef10347;
+          tmp2 = _modDef10355;
         }
         return tmp2;
       }, items),
@@ -105,7 +105,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   fileInfoAttachmentPreviewFile: {
     flexDirection: "row",
@@ -131,20 +131,20 @@ let obj = {
 };
 const React6 = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef10336,
-  acrobat: _modDef10337,
-  ae: _modDef10338,
-  ai: _modDef10339,
-  audio: _modDef10340,
-  code: _modDef10341,
-  document: _modDef10342,
-  image: _modDef10343,
-  photoshop: _modDef10344,
-  sketch: _modDef10345,
-  spreadsheet: _modDef10346,
-  unknown: _modDef10347,
-  video: _modDef10348,
-  webcode: _modDef10349,
+  archive: _modDef10344,
+  acrobat: _modDef10345,
+  ae: _modDef10346,
+  ai: _modDef10347,
+  audio: _modDef10348,
+  code: _modDef10349,
+  document: _modDef10350,
+  image: _modDef10351,
+  photoshop: _modDef10352,
+  sketch: _modDef10353,
+  spreadsheet: _modDef10354,
+  unknown: _modDef10355,
+  video: _modDef10356,
+  webcode: _modDef10357,
 };
 let closure_13 = noop.memo((borderRadius) => {
   ({ uri, width, height, style, fileName } = borderRadius);
@@ -265,7 +265,7 @@ export default function AttachmentPreview(height) {
       const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj8.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(10270).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(8870).CirclePlayIcon;
       tmp6 = timestampProducer(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj8.children = tmp6;
       items[1] = timestampProducer(hasOwnProperty, obj8);

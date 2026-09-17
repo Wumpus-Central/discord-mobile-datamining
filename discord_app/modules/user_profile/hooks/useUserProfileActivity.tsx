@@ -59,8 +59,8 @@ export default function useUserProfileActivity(arg0) {
               tmp6 = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8467).isMatchingListeningActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8467);
+                  result = userProfileLiveActivities(8486).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8486);
                 }
                 return result;
               });
@@ -71,8 +71,8 @@ export default function useUserProfileActivity(arg0) {
               result = !userProfileLiveActivities.some((item) => {
                 let result = null != item;
                 if (result) {
-                  result = userProfileLiveActivities(8467).isMatchingWatchActivity(closure_0, item);
-                  const obj = userProfileLiveActivities(8467);
+                  result = userProfileLiveActivities(8486).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8486);
                 }
                 return result;
               });

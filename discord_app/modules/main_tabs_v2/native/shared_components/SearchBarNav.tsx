@@ -13,12 +13,12 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   container: {
     flexDirection: "row",
     alignItems: "center",
-    height: fn(5768).NAV_BAR_HEIGHT,
+    height: fn(5770).NAV_BAR_HEIGHT,
     paddingHorizontal: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -31,7 +31,7 @@ let obj = {
 let obj3 = {
   flexDirection: "row",
   alignItems: "center",
-  height: fn(5768).NAV_BAR_HEIGHT,
+  height: fn(5770).NAV_BAR_HEIGHT,
   paddingHorizontal: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomWidth: StyleSheet.hairlineWidth,
@@ -81,10 +81,10 @@ export default noop.forwardRef((onClose, ref) => {
   const obj6 = { style: tmp2.flex, children: null };
   const obj7 = { children: null };
   const merged1 = Object.assign(merged);
-  obj7.children = React3(SearchField.SearchField, { size: "md", isRound: true, ref });
+  obj7.children = React3(SearchField.SearchField, { size: "md", round: true, ref });
   obj6.children = React3(React2, obj7);
   items[1] = React3(React2, obj6);
-  const obj8 = { size: "md", isRound: true, ref };
+  const obj8 = { size: "md", round: true, ref };
   tmp4Result = PlatformUtils;
   let tmp12 = null;
   if (!tmp4Result2.isAndroid()) {

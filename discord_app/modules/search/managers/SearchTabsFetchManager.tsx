@@ -3,28 +3,30 @@ import SearchFetcher from "../SearchFetcher.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 require = fn;
-let closure_2 = ["include_nsfw", "channel_id"];
-const SearchConstants = fn(7994);
+let closure_2 = ["include_nsfw", "channel_id", "search_session_id", "search_query_id"];
+const SearchConstants = fn(8000);
 ({
   SEARCH_FILTERS_BY_TAB: closure_4,
   SEARCH_QUERY_BY_SEARCH_FILTER: hasOwnProperty,
   SEARCH_QUERY_DEFAULT_FILTERS: metroRequire,
 } = SearchConstants);
 const SearchTypes = fn(1074).SearchTypes;
-const AbstractSearchFetchManager = fn(12492).AbstractSearchFetchManager;
+const AbstractSearchFetchManager = fn(12501).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {}
 const prototype = SearchTabsFetchManager.prototype;
 prototype["createRequestPayload"] = function createRequestPayload(trackExactTotalHits) {
   ({ searchQuery, searchTabs, getLimit: require, pagination: dependencyMap } = trackExactTotalHits);
   closure_2 = undefined;
   let obj;
-  ({ include_nsfw, channel_id } = searchQuery);
+  ({ include_nsfw, channel_id, search_session_id, search_query_id } = searchQuery);
   closure_2 = obj(searchQuery, closure_2);
   obj = {
     include_nsfw,
     channel_ids: channel_id,
     tabs: {},
     track_exact_total_hits: trackExactTotalHits.trackExactTotalHits,
+    search_session_id,
+    search_query_id,
   };
   const item = searchTabs.forEach((item) => {
     if (null != React4[item]) {

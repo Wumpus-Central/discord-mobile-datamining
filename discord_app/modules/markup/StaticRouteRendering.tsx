@@ -1,21 +1,19 @@
 // discord_app/modules/markup/StaticRouteRendering.tsx
 import util from "../../intl/index.native.tsx";
-import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
+import size from "../../../_runtime/metro/00002__.js";
 
-require = fn;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");
 
-export const staticRouteToTranslation = function staticRouteToTranslation(arg0) {
-  if ("home" !== arg0) {
-    if ("guide" !== arg0) {
-      if ("browse" === arg0) {
+export const staticRouteToTranslation = function staticRouteToTranslation(id) {
+  if ("home" !== id) {
+    if ("guide" !== id) {
+      if ("browse" === id) {
         const intl3 = util.intl;
         return intl3.string(util.t.et6wav);
-      } else if ("customize" === arg0) {
+      } else if ("customize" === id) {
         const intl2 = util.intl;
         return intl2.string(util.t.h9mGOP);
-      } else if ("linked-roles" === arg0) {
+      } else if ("linked-roles" === id) {
         const intl = util.intl;
         return intl.string(util.t.ghtnss);
       } else {
@@ -26,12 +24,12 @@ export const staticRouteToTranslation = function staticRouteToTranslation(arg0) 
   const intl4 = util.intl;
   return intl4.string(util.t.VbpLyU);
 };
-export const staticRouteToItemString = function staticRouteToItemString(arg0, arg1, id) {
-  if ("linked-roles" === arg0) {
+export const staticRouteToItemString = function staticRouteToItemString(GuildRoleStore, id, itemId, id) {
+  if ("linked-roles" === id) {
     if (null == id) {
       return null;
     } else {
-      const role = GuildRoleStore.getRole(id, arg1);
+      const role = GuildRoleStore.getRole(id, itemId);
       let name = null;
       if (null != role) {
         const tags = role.tags;

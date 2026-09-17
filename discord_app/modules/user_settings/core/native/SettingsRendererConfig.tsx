@@ -130,6 +130,7 @@ import EmojiReactionsOnMessagesSettingDefault from "../../defs/native/EmojiReact
 import ChatEmojiEmoticonsSettingDefault from "../../defs/native/ChatEmojiEmoticonsSetting.tsx";
 import StickerAutocompleteSettingDefault from "../../defs/native/StickerAutocompleteSetting.tsx";
 import ShowSpoilersSettingDefault from "../../defs/native/ShowSpoilersSetting.tsx";
+import InlineEmojiSuggestionsSettingDefault from "../../defs/native/InlineEmojiSuggestionsSetting.tsx";
 import TextAndMediaSyncSettingDefault from "../../defs/native/TextAndMediaSyncSetting.tsx";
 import TimestampHourCycleSettingDefault from "../../defs/native/TimestampHourCycleSetting.tsx";
 import SwipeRightToLeftSettingDefault from "../../defs/native/SwipeRightToLeftSetting.tsx";
@@ -403,6 +404,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   CHAT_EMOJI_EMOTICONS,
   STICKER_AUTOCOMPLETE,
   SHOW_SPOILERS,
+  INLINE_EMOJI_SUGGESTIONS,
   TEXT_AND_MEDIA_SYNC,
   TIMESTAMP_HOUR_CYCLE,
   SWIPE_RIGHT_TO_LEFT,
@@ -537,7 +539,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_DATA_USAGE_QUESTS,
   PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P,
   ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY,
-  ACTIVITY_PRIVACY_DEFAULT_SHARING,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -671,6 +672,7 @@ const frozen = Object.freeze({
   [CHAT_EMOJI_EMOTICONS]: ChatEmojiEmoticonsSettingDefault,
   [STICKER_AUTOCOMPLETE]: StickerAutocompleteSettingDefault,
   [SHOW_SPOILERS]: ShowSpoilersSettingDefault,
+  [INLINE_EMOJI_SUGGESTIONS]: InlineEmojiSuggestionsSettingDefault,
   [TEXT_AND_MEDIA_SYNC]: TextAndMediaSyncSettingDefault,
   [TIMESTAMP_HOUR_CYCLE]: TimestampHourCycleSettingDefault,
   [SWIPE_RIGHT_TO_LEFT]: SwipeRightToLeftSettingDefault,
@@ -808,7 +810,7 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_DATA_USAGE_QUESTS]: ParentalControlsUseDataForQuestsSettingDefault,
   [PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P]: ParentalControlsUseDataForQuests3PSettingDefault,
   [ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY]: ActivityPrivacyShareMyActivitySettingDefault,
-  [ACTIVITY_PRIVACY_DEFAULT_SHARING]: ActivityPrivacyDefaultSharingSettingDefault,
+  [MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_SHARING]: ActivityPrivacyDefaultSharingSettingDefault,
   [MobileUserSettings.FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,
   [MobileUserSettings.NOTIFY_FRIENDS_ON_COME_ONLINE]: NotifyFriendsOnComeOnlineSettingDefault,
   [MobileUserSettings.NOTIFY_FRIENDS_ON_PROFILE_UPDATE]: NotifyFriendsOnProfileUpdateSettingDefault,

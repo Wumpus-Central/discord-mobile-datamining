@@ -235,8 +235,8 @@ let closure_18 = async function _getNextOnboardingStep() {
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
-const ContactPermissions = fn(12821).ContactPermissions;
-let closure_11 = fn(4848).NotificationAuthorizationStatus;
+const ContactPermissions = fn(12829).ContactPermissions;
+let closure_11 = fn(4850).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_13 = asyncGeneratorStep(async () => {
   if (c2 === 2) {
@@ -401,7 +401,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9960).hasDeferredInvite,
+    shouldShowStep: fn(9971).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

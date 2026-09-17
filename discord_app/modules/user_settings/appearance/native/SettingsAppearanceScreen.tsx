@@ -10,19 +10,19 @@ import ThemeStore from "../../ThemeStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FontScaleStore = fn(15375);
+const FontScaleStore = fn(15380);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8091).MobileUserSettings;
+const MobileUserSettings = fn(8111).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceScreen.tsx");
 
 export default noop.memo(() => {
-  nativeStackNavigation(5077)(() => {
+  nativeStackNavigation(5079)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(15376).fetchUserCustomThemes();
-      const obj = closure_0(15376);
+      const userCustomThemes = closure_0(15381).fetchUserCustomThemes();
+      const obj = closure_0(15381);
     }
   });
   let items = [ThemeStore, ClientThemesBackgroundStore];
@@ -55,13 +55,13 @@ export default noop.memo(() => {
     if (obj.isAndroid()) {
       if (closure_0.persistedFontScale === closure_0.fontScale) {
         if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-          nativeStackNavigation.setOptions({ headerRight: "Array" });
+          nativeStackNavigation.setOptions({ headerRight: "r" });
         }
       }
       const obj2 = { headerRight: null };
       const intl = util.intl;
       obj2.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () =>
-        nativeStackNavigation(10258).setCustomFontScale(
+        nativeStackNavigation(10269).setCustomFontScale(
           closure_1_0.fontScale,
           closure_1_0.isClassicChatFontScaleEnabled,
         ),
@@ -116,9 +116,9 @@ export default noop.memo(() => {
     obj8.settings = items6;
     const intl3 = closure_0(1115).intl;
     const obj9 = { helpCenterLink: null };
-    const obj = closure_0(11614);
+    const obj = closure_0(11622);
     obj9.helpCenterLink = nativeStackNavigation(2025).getArticleURL(constants2.FAVORITES_GUILD);
-    obj8.subLabel = intl3.format(nativeStackNavigation(3237).GR2KOG, obj9);
+    obj8.subLabel = intl3.format(nativeStackNavigation(3239).GR2KOG, obj9);
     items1[5] = obj8;
     const obj11 = { label: null, settings: null };
     const intl4 = closure_0(1115).intl;
@@ -140,5 +140,5 @@ export default noop.memo(() => {
     return obj.createList(obj2);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(14802), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14810), { node }, "" + theme + "-" + gradientPresetId);
 });

@@ -48,6 +48,10 @@ function DiskUsageResults(report) {
     library_other: null,
     container_other: null,
     app_group: null,
+    share_extension: null,
+    notification_service_extension: null,
+    broadcast_upload_extension: null,
+    lockscreen_widget_extension: null,
   };
   const intl = obj(1115).intl;
   obj.caches = intl.string(obj(1115).t["2CKnsF"]);
@@ -65,21 +69,29 @@ function DiskUsageResults(report) {
   obj.container_other = intl7.string(obj(1115).t.ZduI7f);
   const intl8 = obj(1115).intl;
   obj.app_group = intl8.string(obj(1115).t.rManeQ);
+  const intl9 = obj(1115).intl;
+  obj.share_extension = intl9.string(obj(1115).t.BEL9MJ);
+  const intl10 = obj(1115).intl;
+  obj.notification_service_extension = intl10.string(obj(1115).t.V46Edz);
+  const intl11 = obj(1115).intl;
+  obj.broadcast_upload_extension = intl11.string(obj(1115).t.BhYGtj);
+  const intl12 = obj(1115).intl;
+  obj.lockscreen_widget_extension = intl12.string(obj(1115).t.toGFBn);
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
   const obj3 = { label: null, bytes: null };
-  const intl9 = obj(1115).intl;
-  obj3.label = intl9.string(obj(1115).t.O20zQi);
+  const intl13 = obj(1115).intl;
+  obj3.label = intl13.string(obj(1115).t.O20zQi);
   obj3.bytes = report.totalMeasuredBytes;
   const items = [closure_6(SizeRow, obj3), ,];
   const obj4 = { label: null, bytes: null };
-  const intl10 = obj(1115).intl;
-  obj4.label = intl10.string(obj(1115).t.VQKK5O);
+  const intl14 = obj(1115).intl;
+  obj4.label = intl14.string(obj(1115).t.VQKK5O);
   obj4.bytes = report.metricKitSize;
   items[1] = closure_6(SizeRow, obj4);
   const obj5 = { variant: "heading-sm/semibold", children: null };
-  const intl11 = obj(1115).intl;
-  obj5.children = intl11.string(obj(1115).t.CoudPr);
-  const items1 = [closure_6(obj(4634).Heading, obj5), ,];
+  const intl15 = obj(1115).intl;
+  obj5.children = intl15.string(obj(1115).t.CoudPr);
+  const items1 = [closure_6(obj(4636).Heading, obj5), ,];
   const roots = report.roots;
   items1[1] = roots.map((bytes) => {
     const root = bytes.root;
@@ -99,20 +111,20 @@ function DiskUsageResults(report) {
   }
   if (tmp4Result) {
     const obj6 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
-    const intl12 = tmp(1115).intl;
+    const intl16 = tmp(1115).intl;
     ({ errorCount: obj7.errors, unmeasuredRootCount: obj7.unavailable } = report);
-    obj6.children = intl12.formatToPlainString(tmp(1115).t.kt7tAT, { errors: null, unavailable: null });
-    tmp4Result = closure_6(tmp(4634).Text, obj6);
+    obj6.children = intl16.formatToPlainString(tmp(1115).t.kt7tAT, { errors: null, unavailable: null });
+    tmp4Result = closure_6(tmp(4636).Text, obj6);
     const obj13 = { errors: null, unavailable: null };
   }
   items1[2] = tmp4Result;
-  items[2] = closure_7(obj(5058).Stack, { children: items1 });
+  items[2] = closure_7(obj(5060).Stack, { children: items1 });
   obj2.children = items;
-  return closure_7(obj(5058).Stack, obj2);
+  return closure_7(obj(5060).Stack, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_8 = createStyles.createStyles({ label: { flex: 1 }, value: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CacheActionsDiskUsageSection.tsx");

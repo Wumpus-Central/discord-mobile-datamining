@@ -23,17 +23,17 @@ function ContactSyncNameInputScreen() {
   }
   dependencyMap = async function _onNext(arg0) {
     _require(true);
-    await tmp3(12827).updateName(closure_0);
+    await tmp3(12835).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
       const intl = closure_0(1115).intl;
       obj7.content = intl.string(closure_0(1115).t.R0RpRX);
-      obj7.icon = tmp3(5683);
-      tmp3(4336).open(obj7);
+      obj7.icon = tmp3(5685);
+      tmp3(4338).open(obj7);
       closure_129_0(false);
       c4 = 3;
-      tmp3(4336);
+      tmp3(4338);
     } else if (arg0 === 1) {
       c4 = 3;
       throw value;
@@ -66,7 +66,7 @@ function ContactSyncNameInputScreen() {
     str = "";
   }
   obj3.initialName = str;
-  obj2.children = jsx(onNext(12840), {
+  obj2.children = jsx(onNext(12848), {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -77,15 +77,15 @@ function ContactSyncNameInputScreen() {
   return <View style={tmp.container}>{null}</View>;
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(12821).ContactSyncScenes;
+const ContactSyncScenes = fn(12829).ContactSyncScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(5768).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5770).NAV_BAR_HEIGHT + 32,
   },
 };
 let closure_10 = createStyles.createStyles(obj2);
@@ -99,7 +99,7 @@ const obj5 = {
   headerLeft: null,
   title: "",
 };
-const NavigatorHeader = fn(5710);
+const NavigatorHeader = fn(5712);
 obj5.headerLeft = NavigatorHeader.getHeaderCloseButton(onClose);
 obj4[ContactSyncScenes.NAME_INPUT] = obj5;
 const size = fn(2);

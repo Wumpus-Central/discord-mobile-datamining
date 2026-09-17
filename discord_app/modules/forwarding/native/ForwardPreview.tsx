@@ -12,9 +12,9 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import RowGeneratorTypes from "../../messages/native/renderer/RowGeneratorTypes.tsx";
 import CheckpointUtils from "../../checkpoint/CheckpointUtils.tsx";
 import ChatItemDefault from "../../../components_native/chat/ChatItem.tsx";
+import CirclePlayIcon from "../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import ClipView from "../../../design/components/Icon/native/ClipView.tsx";
 import AttachmentIcon2 from "../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import CirclePlayIcon from "../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
 import ForwardPreviewUtils from "../ForwardPreviewUtils.tsx";
 import CheckpointColors from "../../checkpoint/CheckpointColors.native.tsx";
 import MosaicMediaType from "../../messages/MosaicMediaType.tsx";
@@ -33,7 +33,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(576).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(4638).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(4640).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -82,7 +82,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(4638);
+  let obj = attachmentCount(4640);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -92,7 +92,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   quote: null,

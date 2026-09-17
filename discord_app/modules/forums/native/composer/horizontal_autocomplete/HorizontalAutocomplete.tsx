@@ -10,7 +10,7 @@ import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import _modDef8253 from "../../../../../../_runtime/metro/08253__.js";
+import _modDef8272 from "../../../../../../_runtime/metro/08272__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
@@ -24,11 +24,11 @@ function HorizontalAutocompleteOption(arg0) {
   let sharedValue;
   ({ children, onPress } = arg0);
   const tmp = closure_13();
-  sharedValue = sharedValue(4374).useSharedValue(0);
+  sharedValue = sharedValue(4376).useSharedValue(0);
   useMountEffectDefault(() => {
     const result = sharedValue.set(timing.withTiming(1));
   });
-  const obj = sharedValue(4374);
+  const obj = sharedValue(4376);
   const fn = function c() {
     return { opacity: sharedValue.get() };
   };
@@ -36,7 +36,7 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = __initData;
   const obj3 = { onPress, children: null };
-  const animatedStyle = sharedValue(4374).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4376).useAnimatedStyle(fn);
   const obj4 = { style: null, children };
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
   obj4.style = items;
@@ -49,7 +49,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   emoji: { width: 32, height: 32 },
   emojiImage: { resizeMode: "contain" },
@@ -169,17 +169,17 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8253;
+      let channelIconWithGuild = _modDef8272;
     } else {
-      channelIconWithGuild = tmp2(5113).getChannelIconWithGuild(channel, tmp5);
-      const tmp2Result = tmp2(5113);
+      channelIconWithGuild = tmp2(5115).getChannelIconWithGuild(channel, tmp5);
+      const tmp2Result = tmp2(5115);
     }
     const tmp = closure_13();
     const tmp8 = closure_11(channel(1177).Icon, { source: channelIconWithGuild });
     const obj = { onPress: channel.onPress, children: null };
     const items = [tmp8];
-    const channelName = channel(4791).computeChannelName(channel, UserStore, RelationshipStore);
-    items[1] = closure_11(channel(4634).Text, {
+    const channelName = channel(4793).computeChannelName(channel, UserStore, RelationshipStore);
+    items[1] = closure_11(channel(4636).Text, {
       style: tmp.channelName,
       variant: "text-sm/semibold",
       children: channelName,

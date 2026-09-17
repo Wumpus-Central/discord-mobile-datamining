@@ -112,8 +112,8 @@ function BountiesModalContentInner(bounty) {
     }),
     items5,
   );
-  let obj2 = bounty(8989);
-  const bountiesModalVideoAnalytics = bounty(15136).useBountiesModalVideoAnalytics({
+  let obj2 = bounty(9005);
+  const bountiesModalVideoAnalytics = bounty(15144).useBountiesModalVideoAnalytics({
     bountyId: bounty.id,
     sourceQuestContent,
     rewardDurationMs: result,
@@ -133,7 +133,7 @@ function BountiesModalContentInner(bounty) {
     handleReadyForDisplayAnalytics,
     handleBufferAnalytics,
   } = bountiesModalVideoAnalytics);
-  let obj3 = bounty(15136);
+  let obj3 = bounty(15144);
   let obj4 = {
     bountyId: bounty.id,
     sourceQuestContent,
@@ -142,8 +142,8 @@ function BountiesModalContentInner(bounty) {
     verticalScrollingPosition: null,
     isActive: true,
   };
-  const bountiesModalTiming = bounty(15133).useBountiesModalTiming({
-    endMode: bounty(15133).BountyVideoEndMode.END_CARD,
+  const bountiesModalTiming = bounty(15141).useBountiesModalTiming({
+    endMode: bounty(15141).BountyVideoEndMode.END_CARD,
     rewardDurationMs: result,
     isCompleted: stateFromStores,
     onRewardEarned: callback,
@@ -269,12 +269,12 @@ function BountiesModalContentInner(bounty) {
       });
     },
   };
-  obj7.children = closure_10(bounty(15139).BountyVideo, size1);
+  obj7.children = closure_10(bounty(15147).BountyVideo, size1);
   const items8 = [closure_10(maxVideoProgressSeconds, obj7), ,];
-  let obj5 = bounty(15133);
+  let obj5 = bounty(15141);
   items8[1] = closure_10(maxVideoProgressSeconds, {
     style: memo1,
-    children: closure_10(sourceQuestContent(15167), { onPress: callback1 }),
+    children: closure_10(sourceQuestContent(15175), { onPress: callback1 }),
   });
   let rect = {
     left: size2.isFullWidth,
@@ -282,14 +282,14 @@ function BountiesModalContentInner(bounty) {
     bottom: true,
     style: memo2,
     pointerEvents: "box-none",
-    children: closure_10(sourceQuestContent(15160), {
+    children: closure_10(sourceQuestContent(15168), {
       bounty,
       visible: isEndCardVisible,
       sourceQuestContent,
       onClose: callback2,
     }),
   };
-  items8[2] = closure_10(bounty(7233).SafeAreaPaddingView, rect);
+  items8[2] = closure_10(bounty(7237).SafeAreaPaddingView, rect);
   obj6.children = items8;
   return closure_12(closure_11, obj6);
 }
@@ -300,7 +300,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_15 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },

@@ -156,12 +156,12 @@ class MobileSearchableSelect {
       onFocus: callback2,
       onBlur: callback3,
       leadingIcon: options(closure_1[8]).MagnifyingGlassIcon,
-      isClearable: true,
+      clearable: true,
       returnKeyType: "search",
       accessibilityRole: "search",
       autoCorrect: false,
       autoCapitalize: "none",
-      isDisabled: flag2,
+      disabled: flag2,
     };
     items6 = [,];
     items6[0] = closure_7(options(closure_1[7]).TextField, obj6);
@@ -215,7 +215,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,

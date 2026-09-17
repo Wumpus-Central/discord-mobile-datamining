@@ -9,10 +9,10 @@ import SearchQueryStore from "../../stores/SearchQueryStore.tsx";
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(7994).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(8000).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   spinnerColor: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   spinner: { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" },

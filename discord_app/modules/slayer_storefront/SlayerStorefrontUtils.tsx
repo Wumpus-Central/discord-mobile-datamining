@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import StoreUtils from "../../utils/StoreUtils.tsx";
-import keysSorter from "../../../_runtime/05542_keysSorter.js";
+import keysSorter from "../../../_runtime/05544_keysSorter.js";
 import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes.tsx";
 import StorefrontUtils from "../storefront/StorefrontUtils.tsx";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -178,8 +178,8 @@ function getSKUShareURL(arg0, applicationId) {
     window.GLOBAL_ENV.WEBAPP_ENDPOINT +
     map1.COLLECTIBLES_SHOP_GAME_SHOP(applicationId.applicationId, undefined, applicationId.id, applicationId.slug);
 }
-let closure_4 = fn(7337).WishlistRecommendationReason;
-const SocialLayerStorefrontConstants = fn(7339);
+let closure_4 = fn(7341).WishlistRecommendationReason;
+const SocialLayerStorefrontConstants = fn(7343);
 ({
   getChannelsGameShopPrefix: closure_8,
   STOREFRONT_MARKETING_GUILD_ID: closure_9,
@@ -195,7 +195,7 @@ const Constants = fn(1074);
 const CollectibleShopTab = fn(1076).CollectibleShopTab;
 const CurrencyCodes = fn(1085).CurrencyCodes;
 let str = "jpg";
-if (fn(4880).SUPPORTS_WEBP) {
+if (fn(4882).SUPPORTS_WEBP) {
   str = "webp";
 }
 function getCountryPrices(arg0, arg1) {

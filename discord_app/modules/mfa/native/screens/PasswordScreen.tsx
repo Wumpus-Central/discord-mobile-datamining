@@ -80,8 +80,8 @@ export default function PasswordScreen(finish) {
     returnKeyType: "done",
     onChange: null,
     onSubmitEditing: null,
-    isDisabled: null,
-    isClearable: true,
+    disabled: null,
+    clearable: true,
     secureTextEntry: true,
   };
   const intl2 = finish(first[8]).intl;
@@ -92,7 +92,7 @@ export default function PasswordScreen(finish) {
   if (!tmp10) {
     tmp15 = tmp10;
   }
-  obj4.isDisabled = tmp15;
+  obj4.disabled = tmp15;
   obj3.children = jsx(finish(first[9]).TextInput, {
     autoFocus: true,
     required: true,
@@ -103,8 +103,8 @@ export default function PasswordScreen(finish) {
     returnKeyType: "done",
     onChange: null,
     onSubmitEditing: null,
-    isDisabled: null,
-    isClearable: true,
+    disabled: null,
+    clearable: true,
     secureTextEntry: true,
   });
   obj2.input = <View style={screenStyles.inputContainer}>{null}</View>;

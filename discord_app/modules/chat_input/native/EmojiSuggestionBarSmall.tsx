@@ -19,13 +19,13 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_7(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(12569).useSuggestionBarHeight(
+  const suggestionBarHeight = displayEmojis(12578).useSuggestionBarHeight(
     transitionState,
     cleanUp,
     CONTAINER_SMALL_WRAPPER_HEIGHT,
     onOccupiedHeightChange,
   );
-  let obj = displayEmojis(12569);
+  let obj = displayEmojis(12578);
   class A {
     constructor() {
       obj = { opacity: null };
@@ -36,9 +36,9 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       return obj;
     }
   }
-  let obj2 = displayEmojis(4374);
+  let obj2 = displayEmojis(4376);
   A.__closure = {
-    interpolate: displayEmojis(4374).interpolate,
+    interpolate: displayEmojis(4376).interpolate,
     heightSv: suggestionBarHeight,
     CONTAINER_SMALL_WRAPPER_HEIGHT,
   };
@@ -85,10 +85,10 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   return suggestionBarHeight(ReanimatedRexportDefault.View, obj4);
 }
 const jsx = fn(21).jsx;
-const sum = fn(10429).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10437).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = {
@@ -120,11 +120,12 @@ const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSugges
 export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, arg1) => {
   anchorTop = anchorTop.anchorTop;
   const onOccupiedHeightChange = anchorTop.onOccupiedHeightChange;
-  let unlockedEmojis;
   let merged = Object.assign(anchorTop, Object.assign({ anchorTop: 0, onOccupiedHeightChange: 0 }));
+  let unlockedEmojis;
   const emojiSuggestionBarState = anchorTop(unlockedEmojis[5]).useEmojiSuggestionBarState(
     merged,
     anchorTop(unlockedEmojis[5]).MAX_SUGGESTIONS_LARGE,
+    1,
     arg1,
   );
   unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;

@@ -14,7 +14,7 @@ let items = [
   nativeDefault.colors.TEXT_FEEDBACK_WARNING,
   nativeDefault.colors.TEXT_FEEDBACK_INFO,
 ];
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 },
   glyphGutter: { width: 40, marginRight: 12, alignItems: "center" },

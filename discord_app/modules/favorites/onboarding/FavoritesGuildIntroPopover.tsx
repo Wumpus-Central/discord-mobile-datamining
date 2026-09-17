@@ -47,7 +47,7 @@ export default noop.memo(function FavoritesGuildIntroPopover() {
             items3 = [];
           }
           const tmp12 =
-            _slicedToArray(tmp(7498).useSelectedDismissibleContent(items3, undefined, true), 1)[0] ===
+            _slicedToArray(tmp(7502).useSelectedDismissibleContent(items3, undefined, true), 1)[0] ===
             tmp(1944).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];

@@ -7,10 +7,10 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(17304, dependencyMap.paths);
+  return asyncRequireImpl(17345, dependencyMap.paths);
 }
-const VoicePanelModes = fn(12415).VoicePanelModes;
-const isActivityParticipant = fn(4659).isActivityParticipant;
+const VoicePanelModes = fn(12424).VoicePanelModes;
+const isActivityParticipant = fn(4661).isActivityParticipant;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}",

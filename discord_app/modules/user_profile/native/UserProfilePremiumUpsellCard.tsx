@@ -13,7 +13,7 @@ const Constants = fn(1074);
   UserSettingsSections: closure_7,
 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_9 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 } };
   return obj;
@@ -29,11 +29,11 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   const tmp3 = closure_9(analyticsLocations(1612)().bottom);
   navigation = navigation(1484).useNavigation();
   let obj = navigation(1484);
-  let nitroTrialCtaOverride = navigation(7556).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(7556);
-  const tmp8 = analyticsLocations(7292);
+  let nitroTrialCtaOverride = navigation(7560).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(7560);
+  const tmp8 = analyticsLocations(7296);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
-  analyticsLocations = analyticsLocations(7272)(items).analyticsLocations;
+  analyticsLocations = analyticsLocations(7276)(items).analyticsLocations;
   const items1 = [navigation];
   let callback = noop.useCallback(() => {
     UserSettingsModalActionCreatorsDefault.setSection(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
@@ -53,7 +53,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     openPremiumModalDefault(obj);
   }, items2);
   const obj3 = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
-  const tmp7 = analyticsLocations(7272);
+  const tmp7 = analyticsLocations(7276);
   if (isTryItOut) {
     if (nitroTrialCtaOverride == null) {
       const intl2 = tmp4(1115).intl;
@@ -77,12 +77,12 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj3.children = jsx(navigation(4634).Text, {
+  obj3.children = jsx(navigation(4636).Text, {
     variant: "text-sm/normal",
     maxFontSizeMultiplier: 2.5,
     children: stringResult1,
   });
-  return jsx(tmp(14736), {
+  return jsx(tmp(14744), {
     style: tmp3.container,
     ctaText: null,
     showLinearGradient: true,

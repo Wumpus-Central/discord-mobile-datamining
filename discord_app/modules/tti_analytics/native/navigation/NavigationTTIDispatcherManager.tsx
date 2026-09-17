@@ -1,6 +1,6 @@
 // discord_app/modules/tti_analytics/native/navigation/NavigationTTIDispatcherManager.tsx
-import NavigationSpanTrackerDefault from "NavigationSpanTracker.tsx";
 import navigationTTIEnabled from "navigationTTIEnabled.tsx";
+import NavigationSpanTrackerDefault from "NavigationSpanTracker.tsx";
 import NavigationTTIDefinition from "NavigationTTIDefinition.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../../stores/MessageStore.tsx";

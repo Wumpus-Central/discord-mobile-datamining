@@ -75,3 +75,14 @@ export const resolveSearchStatus = function resolveSearchStatus(response, length
     return IntelligenceSearchTypes.IntelligenceSearchStatus.ERROR;
   }
 };
+export const parseConversationId = function parseConversationId(sourceId) {
+  const match = /\/(\d+)$/.exec(sourceId);
+  let tmp2;
+  if (match != null) {
+    tmp2 = match[1];
+  }
+  if (tmp2 == null) {
+    tmp2 = sourceId;
+  }
+  return tmp2;
+};

@@ -10,7 +10,7 @@ const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const SPRING_CONFIG = { stiffness: 70, damping: 10 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   wrapper: { display: "flex", alignItems: "center", position: "absolute", width: "100%", zIndex: 1, bottom: -76 },
   innerWraper: null,
@@ -85,11 +85,11 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
     obj2.opacity = spring.withSpring(num3, closure_8);
     return obj2;
   };
-  let obj2 = isVisible(4374);
+  let obj2 = isVisible(4376);
   fn.__closure = {
     useReducedMotion: stateFromStores,
     VISIBILITY_OFFSET: 120,
-    withSpring: isVisible(5059).withSpring,
+    withSpring: isVisible(5061).withSpring,
     isVisible,
     SPRING_CONFIG,
   };
@@ -111,7 +111,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj3 = {
     useReducedMotion: stateFromStores,
     VISIBILITY_OFFSET: 120,
-    withSpring: isVisible(5059).withSpring,
+    withSpring: isVisible(5061).withSpring,
     isVisible,
     SPRING_CONFIG,
   };
@@ -125,11 +125,11 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj6 = { style: tmp.innerWraper, children: null };
   const obj7 = { style: tmp.guildInfoContainer, children: null };
   const obj8 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
-  const tmp4 = stateFromStores(5072);
-  obj8.size = isVisible(5670).GuildIconSizes.LARGE;
+  const tmp4 = stateFromStores(5074);
+  obj8.size = isVisible(5672).GuildIconSizes.LARGE;
   const items3 = [
-    closure_6(stateFromStores(5670), obj8),
-    closure_6(isVisible(4634).Text, {
+    closure_6(stateFromStores(5672), obj8),
+    closure_6(isVisible(4636).Text, {
       style: tmp.guildName,
       variant: "text-md/bold",
       lineClamp: 1,
@@ -140,7 +140,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const items4 = [closure_7(View, obj7)];
   const obj10 = {
     style: tmp.buttonContainer,
-    children: closure_6(stateFromStores(7512), {
+    children: closure_6(stateFromStores(7516), {
       guild,
       previousGuildSubscriptionSlot,
       useShortenedCTA: true,
@@ -154,6 +154,6 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   obj6.children = items4;
   obj5.children = closure_7(View, obj6);
   obj4.children = closure_6(tmp4, obj5);
-  return closure_6(stateFromStores(4374).View, obj4);
+  return closure_6(stateFromStores(4376).View, obj4);
 }
 export const VISIBILITY_OFFSET = 120;

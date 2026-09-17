@@ -1,0 +1,12 @@
+// discord_app/modules/collectibles/native/MobileNitroUpsellInShopFeedExperiment.tsx
+import apex_ApexExperimentDefault from "../../experiments/apex/ApexExperiment.tsx";
+
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/MobileNitroUpsellInShopFeedExperiment.tsx");
+
+export default apex_ApexExperimentDefault({
+  kind: "user",
+  name: "2026-09-mobile-nitro-upsell-in-shop-feed",
+  defaultConfig: { enabled: false },
+  variations: { 0: { enabled: false }, 1: { enabled: true } },
+});

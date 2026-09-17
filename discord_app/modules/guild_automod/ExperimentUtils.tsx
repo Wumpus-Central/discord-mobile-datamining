@@ -16,3 +16,7 @@ export const useIsMentionRaidExperimentEnabled = function useIsMentionRaidExperi
   const AutomodMentionRaidLimit = AutomodExperiment.AutomodMentionRaidLimit;
   return AutomodMentionRaidLimit.useExperiment({ guildId: id, location: "988d4e_4" }, { autoTrackExposure }).enabled;
 };
+export const useIsApplicationRuleEnabled = function useIsApplicationRuleEnabled(guildId) {
+  const AutomodApplicationRules = AutomodExperiment.AutomodApplicationRules;
+  return AutomodApplicationRules.useConfig({ guildId, location: "automod_settings" }).enabled;
+};

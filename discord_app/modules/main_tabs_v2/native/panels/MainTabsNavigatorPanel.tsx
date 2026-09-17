@@ -19,7 +19,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -49,35 +49,36 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(16134);
+        obj = obj(16156);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(4504).dismissKeyboard();
-        const objResult = obj(4504);
+        obj(4506).dismissKeyboard();
+        const objResult = obj(4506);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;
     }
   }, items);
   const arr2 = isChatLockedOpen(drawerWidth[14])(navigation);
-  [screenStackActive, closure_7] = noop.useState(() => {
-    const first = arr2[0];
-    let type;
-    if (first != null) {
-      type = first.type;
-    }
-    return type === useChannelScreensFromNavigation.ChannelScreenType.DEFAULT;
-  });
-  const first1 = arr2[0];
-  noop.useRef(first1);
-  const items1 = [first1];
-  const effect = noop.useEffect(() => {
-    closure_9.current = first1;
+  const first = arr2[0];
+  let type;
+  if (first != null) {
+    type = first.type;
+  }
+  const tmp12 = type === navigation(drawerWidth[14]).ChannelScreenType.DEFAULT;
+  [first1, closure_6] = noop.useState(tmp12);
+  const tmp15 = _slicedToArray(noop.useState(tmp12), 2);
+  closure_7 = tmp15[1];
+  const first2 = arr2[0];
+  noop.useRef(first2);
+  const items1 = [first2];
+  const effect = obj3.useEffect(() => {
+    closure_9.current = first2;
   }, items1);
   const items2 = [navigation];
-  const handleExit = noop.useCallback(() => {
+  const handleExit = obj3.useCallback(() => {
     let name1;
-    closure_7(false);
+    closure_6(false);
     const state = navigation.getState();
     let index = state.index;
     let name;
@@ -103,11 +104,11 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       navigation.pop(num2);
     }
   }, items2);
-  [first2, logger] = noop.useState(() => useChannelScreensFromNavigation.isActiveTabsGuilds(navigation.getState()));
+  [first3, logger] = noop.useState(() => useChannelScreensFromNavigation.isActiveTabsGuilds(navigation.getState()));
   const tmp8 = isChatLockedOpen(drawerWidth[11])();
-  [isChatBesideChannelList, closure_13] = noop.useState(() => first2);
+  [isChatBesideChannelList, closure_13] = noop.useState(() => first3);
   const items3 = [navigation];
-  const effect1 = noop.useEffect(() => {
+  const effect1 = obj3.useEffect(() => {
     function handleStateChange(data) {
       logger(navigation(drawerWidth[14]).isActiveTabsGuilds(data.data.state));
     }
@@ -116,9 +117,9 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       navigation.removeListener("state", handleStateChange);
     };
   }, items3);
-  const items4 = [first2];
-  const effect2 = noop.useEffect(() => {
-    closure_1_13(first2);
+  const items4 = [first3];
+  const effect2 = obj3.useEffect(() => {
+    closure_1_13(first3);
   }, items4);
   if (isChatBesideChannelList) {
     isChatBesideChannelList = tmp6.isChatBesideChannelList;
@@ -126,6 +127,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   noop.useRef(false);
   const items5 = [navigation, handleExit];
   const callback1 = obj3.useCallback((arg0) => {
+    closure_6(arg0);
     closure_7(arg0);
     closure_15.current = false;
     if (arg0) {
@@ -144,14 +146,14 @@ export default noop.memo(function MainTabsNavigatorPanel() {
                 }
               }
               if (state.routes[index] != null) {
-                name = tmp11.name;
+                name = tmp12.name;
               }
             }
           }
           if ("modal" !== name) {
-            tmp2.current = true;
-            transitionToChannel.transitionToChannel(tmp5.current.channelId);
-            const tmp14Result = transitionToChannel;
+            tmp3.current = true;
+            transitionToChannel.transitionToChannel(tmp6.current.channelId);
+            const tmp15Result = transitionToChannel;
           }
         }
       }
@@ -159,46 +161,52 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       callback();
     }
   }, items5);
-  let tmp22 = null != first1;
-  const callback2 = obj3.useCallback(() => {
+  const callback2 = obj3.useCallback((arg0) => {
+    if (arg0) {
+      closure_7(true);
+    }
+  }, []);
+  let tmp27 = null != first2;
+  const callback3 = obj3.useCallback(() => {
     const ComponentDispatch = navigation(drawerWidth[17]).ComponentDispatch;
-    ComponentDispatch.dispatch(first1.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+    ComponentDispatch.dispatch(first2.BOTTOM_CHANNEL_SCREEN_DRAG_START);
     navigation(drawerWidth[13]).dismissKeyboard();
   }, []);
-  if (tmp22) {
-    tmp22 = first1.type !== tmp2(tmp3[14]).ChannelScreenType.FALLBACK_RENDERED;
+  if (tmp27) {
+    tmp27 = first2.type !== tmp2(tmp3[14]).ChannelScreenType.FALLBACK_RENDERED;
   }
-  closure_16 = tmp22;
-  let tmp24 = isChatBesideChannelList;
-  const tmp17 = _slicedToArray(
-    noop.useState(() => first2),
+  closure_16 = tmp27;
+  let tmp29 = isChatBesideChannelList;
+  const tmp21 = _slicedToArray(
+    noop.useState(() => first3),
     2,
   );
   if (isChatBesideChannelList) {
-    tmp24 = isChatLockedOpen;
+    tmp29 = isChatLockedOpen;
   }
-  let tmp25 = !tmp24;
-  if (!tmp24) {
-    tmp25 = tmp22;
+  let tmp30 = !tmp29;
+  if (!tmp29) {
+    tmp30 = tmp27;
   }
   const obj4 = {
-    canDrag: tmp25,
+    canDrag: tmp30,
     onVisibilityChange: callback1,
-    onDragStart: callback2,
+    onPreMovement: callback2,
+    onDragStart: callback3,
     startShown: null,
     openWidth: null,
   };
-  const first3 = arr2[0];
-  let type;
-  if (first3 != null) {
-    type = first3.type;
+  const first4 = arr2[0];
+  let type1;
+  if (first4 != null) {
+    type1 = first4.type;
   }
-  obj4.startShown = type === navigation(drawerWidth[14]).ChannelScreenType.DEFAULT;
-  let tmp28;
+  obj4.startShown = type1 === navigation(drawerWidth[14]).ChannelScreenType.DEFAULT;
+  let tmp33;
   if (isChatBesideChannelList) {
-    tmp28 = drawerWidth;
+    tmp33 = drawerWidth;
   }
-  obj4.openWidth = tmp28;
+  obj4.openWidth = tmp33;
   const tmp5ResultResult = isChatLockedOpen(drawerWidth[18])(obj4);
   const translateX = tmp5ResultResult.translateX;
   const movePanel = tmp5ResultResult.movePanel;
@@ -209,24 +217,24 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   const effect3 = obj3.useEffect(() => {
     logger.log("Chat Layout Changed", { isNavigatorPanelsBesideChannelList: isChatBesideChannelList, drawerWidth });
   }, items6);
-  const obj5 = { handleExit, maxWidth, movePanel, screens: arr2, firstScreen: first1 };
+  const obj5 = { handleExit, maxWidth, movePanel, screens: arr2, firstScreen: first2 };
   noop.useRef(obj5);
   const effect4 = obj3.useEffect(() => {
     closure_22.current = obj5;
   });
-  let type1;
-  if (first1 != null) {
-    type1 = first1.type;
+  let type2;
+  if (first2 != null) {
+    type2 = first2.type;
   }
-  const items7 = [type1, translateX, isDraggingRef];
+  const items7 = [type2, translateX, isDraggingRef];
   const effect5 = obj3.useEffect(() => {
     if (!isDraggingRef.current) {
       const current = ref4.current;
       ({ maxWidth, movePanel } = current);
       let type;
       ({ handleExit, screens } = current);
-      if (first1 != null) {
-        type = first1.type;
+      if (first2 != null) {
+        type = first2.type;
       }
       const tmp6 = type === useChannelScreensFromNavigation.ChannelScreenType.DEFAULT;
       if (screens.length >= 2) {
@@ -235,6 +243,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
           num4 = maxWidth;
         }
         const result = translateX.set(num4);
+        closure_6(tmp6);
         closure_7(tmp6);
       } else if (tmp6) {
         if (ref3.current) {
@@ -252,8 +261,8 @@ export default noop.memo(function MainTabsNavigatorPanel() {
     }
   }, items7);
   let channelId;
-  if (first1 != null) {
-    channelId = first1.channelId;
+  if (first2 != null) {
+    channelId = first2.channelId;
   }
   const items8 = [channelId];
   const effect6 = obj3.useEffect(() => {
@@ -270,16 +279,23 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       ChannelActionCreatorsDefault.preload(guildId, firstScreen.channelId);
     }
   }, items8);
-  const items9 = [movePanel, tmp22];
-  const callback3 = obj3.useCallback(() => {
+  const items9 = [movePanel, tmp27];
+  const callback4 = obj3.useCallback(() => {
     if (closure_16) {
       movePanel(true, false, 0, false);
     }
   }, items9);
-  const items10 = [callback3, screenStackActive, isChatLockedOpen, isChatBesideChannelList];
+  const items10 = [callback4, first1, isChatLockedOpen, isChatBesideChannelList];
   if (isChatBesideChannelList) {
     if (isChatLockedOpen) {
-      let tmp38 = arr2.length <= 1;
+      let tmp43 = arr2.length <= 1;
+    }
+    if (!first1) {
+      let tmp44 = isChatBesideChannelList;
+      if (isChatBesideChannelList) {
+        tmp44 = isChatLockedOpen;
+      }
+      first1 = tmp44;
     }
     const items11 = [isChatLockedOpen, isChatBesideChannelList, maxWidth, translateX];
     const memo = obj3.useMemo(() => {
@@ -296,7 +312,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
     }
     const sharedValue = tmp2(tmp3[21]).useSharedValue(num3);
     const tmp2Result = tmp2(tmp3[21]);
-    function re() {
+    function de() {
       let opacity = 0;
       if (translateX.get() > 0) {
         opacity = 0;
@@ -307,42 +323,64 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       return { opacity };
     }
     const obj6 = { translateX, highestFullyRenderedScreenIndex: sharedValue };
-    re.__closure = obj6;
-    re.__workletHash = 10839500061449;
-    re.__initData = isChatBesideChannelList;
-    const animatedStyle = tmp2(tmp3[21]).useAnimatedStyle(re);
-    const tmp2Result3 = tmp2(tmp3[21]);
-    const tmp43 = tmp5(tmp3[22])("channel_list_scrim");
+    de.__closure = obj6;
+    de.__workletHash = 10839500061449;
+    de.__initData = isChatBesideChannelList;
+    const animatedStyle = tmp2(tmp3[21]).useAnimatedStyle(de);
+    const tmp2Result4 = tmp2(tmp3[21]);
+    const tmp49 = tmp5(tmp3[22])("channel_list_scrim");
     const isCustomThemeActive = tmp2(tmp3[23]).useIsCustomThemeActive();
     const obj7 = { value: panelGestureContext, children: null };
-    const obj8 = { gesture, children: null };
-    const items12 = [tmp.container];
+    const tmp2Result5 = tmp2(tmp3[23]);
+    let tmp53Result = null;
+    if (tmp2Result6.isJankScreenReportingEnabled()) {
+      const obj8 = { translateX, maxWidth, channelId: null, showCreateThread: null };
+      let channelId1;
+      if (first2 != null) {
+        channelId1 = first2.channelId;
+      }
+      obj8.channelId = channelId1;
+      let flag;
+      if (first2 != null) {
+        flag = first2.showCreateThread;
+      }
+      if (flag == null) {
+        flag = false;
+      }
+      obj8.showCreateThread = flag;
+      tmp53Result = handleExit(tmp5(tmp3[26]), obj8);
+      const tmp5Result3 = tmp5(tmp3[26]);
+    }
+    const items12 = [tmp53Result];
+    const obj9 = { gesture, children: null };
+    const items13 = [tmp.container];
     let containerBackground = !isCustomThemeActive;
     if (!isCustomThemeActive) {
       containerBackground = tmp.containerBackground;
     }
-    const obj9 = { style: null, collapsable: false, children: null };
-    items12[1] = containerBackground;
-    obj9.style = items12;
-    const obj10 = { enabled: isChatBesideChannelList, children: null };
-    const obj11 = { style: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-    const items13 = [tmp.tabsContainer, animatedStyle];
-    obj11.style = items13;
-    obj11.accessibilityElementsHidden = !tmp38;
-    obj11.importantForAccessibility = "no-hide-descendants";
-    const items14 = [handleExit(tmp5(tmp3[27]), {})];
-    let tmp45Result;
-    if (tmp43) {
-      const obj12 = { translateX, maxWidth };
-      tmp45Result = tmp45(tmp2(tmp3[28]).MainTabsContentScrim, obj12);
+    const obj10 = { style: null, collapsable: false, children: null };
+    items13[1] = containerBackground;
+    obj10.style = items13;
+    const obj11 = { enabled: isChatBesideChannelList, children: null };
+    const obj12 = { style: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+    const items14 = [tmp.tabsContainer, animatedStyle];
+    obj12.style = items14;
+    obj12.accessibilityElementsHidden = !tmp43;
+    obj12.importantForAccessibility = "no-hide-descendants";
+    const items15 = [handleExit(tmp5(tmp3[29]), {})];
+    let tmp56Result;
+    if (tmp49) {
+      const obj13 = { translateX, maxWidth };
+      tmp56Result = tmp56(tmp2(tmp3[30]).MainTabsContentScrim, obj13);
     }
-    items14[1] = tmp45Result;
-    obj11.children = items14;
-    const items15 = [first2(tmp5(tmp3[21]).View, obj11), handleExit(tmp5(tmp3[29]), {})];
+    items15[1] = tmp56Result;
+    obj12.children = items15;
+    const items16 = [first3(tmp5(tmp3[21]).View, obj12), handleExit(tmp5(tmp3[31]), {})];
     if (arr2.length > 0) {
-      const obj13 = {
+      const obj14 = {
         screens: arr2,
-        screenStackActive: null,
+        screenStackActive: first1,
+        navigationTTIStackVisible: null,
         translateX: null,
         isDragging: null,
         maxWidth: null,
@@ -352,45 +390,42 @@ export default noop.memo(function MainTabsNavigatorPanel() {
         firstScreenWidth: null,
         firstScreenFrame: null,
       };
-      if (!screenStackActive) {
-        let tmp52 = isChatBesideChannelList;
-        if (isChatBesideChannelList) {
-          tmp52 = isChatLockedOpen;
-        }
-        screenStackActive = tmp52;
+      if (!first1) {
+        first1 = tmp15[0];
       }
-      obj13.screenStackActive = screenStackActive;
-      obj13.translateX = translateX;
-      obj13.isDragging = isDragging;
-      obj13.maxWidth = maxWidth;
-      obj13.highestFullyRenderedScreenIndex = sharedValue;
-      obj13.shouldFreeze = !isChatBesideChannelList;
-      obj13.focusChatPressableComponent = tmp37;
-      let tmp53;
+      obj14.navigationTTIStackVisible = first1;
+      obj14.translateX = translateX;
+      obj14.isDragging = isDragging;
+      obj14.maxWidth = maxWidth;
+      obj14.highestFullyRenderedScreenIndex = sharedValue;
+      obj14.shouldFreeze = !isChatBesideChannelList;
+      obj14.focusChatPressableComponent = tmp42;
+      let tmp62;
       if (isChatBesideChannelList) {
         if (isChatLockedOpen) {
-          tmp53 = tmp8;
+          tmp62 = tmp8;
         }
       }
-      obj13.firstScreenWidth = tmp53;
-      obj13.firstScreenFrame = memo;
-      let tmp45Result2 = tmp45(tmp5(tmp3[30]), obj13);
-      const tmp5Result2 = tmp5(tmp3[30]);
+      obj14.firstScreenWidth = tmp62;
+      obj14.firstScreenFrame = memo;
+      let tmp56Result2 = tmp56(tmp5(tmp3[32]), obj14);
+      const tmp5Result4 = tmp5(tmp3[32]);
     } else {
-      tmp45Result2 = null;
+      tmp56Result2 = null;
       if (isChatBesideChannelList) {
-        tmp45Result2 = null;
+        tmp56Result2 = null;
         if (isChatLockedOpen) {
-          tmp45Result2 = tmp45(tmp5(tmp3[31]), {});
+          tmp56Result2 = tmp56(tmp5(tmp3[33]), {});
         }
       }
     }
-    items15[2] = tmp45Result2;
-    obj10.children = items15;
-    obj9.children = first2(tmp2(tmp3[26]).SidebarCoachmarkOverlay, obj10);
-    obj8.children = handleExit(arr2, obj9);
-    obj7.children = handleExit(tmp2(tmp3[25]).GestureDetector, obj8);
-    return handleExit(tmp5(tmp3[24]).Provider, obj7);
+    items16[2] = tmp56Result2;
+    obj11.children = items16;
+    obj10.children = first3(tmp2(tmp3[28]).SidebarCoachmarkOverlay, obj11);
+    obj9.children = handleExit(first1, obj10);
+    items12[1] = handleExit(tmp2(tmp3[27]).GestureDetector, obj9);
+    obj7.children = items12;
+    return first3(tmp5(tmp3[24]).Provider, obj7);
   }
-  tmp38 = !screenStackActive;
+  tmp43 = !first1;
 });

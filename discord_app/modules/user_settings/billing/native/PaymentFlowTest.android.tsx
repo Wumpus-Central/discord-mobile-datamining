@@ -36,7 +36,7 @@ function TestView() {
       onChange(arg0) {
         return closure_1(arg0);
       },
-      isClearable: true,
+      clearable: true,
     }),
     closure_7(value(first1[11]).TextInput, {
       containerStyle: tmp.textInput,
@@ -44,7 +44,7 @@ function TestView() {
       value: first1,
       placeholder: "Recipient User ID",
       onChange: tmp2Result[1],
-      isClearable: true,
+      clearable: true,
     }),
     closure_7(value(first1[11]).TextInput, {
       containerStyle: tmp.textInput,
@@ -52,7 +52,7 @@ function TestView() {
       value: first2,
       placeholder: "Here's a gift for you!",
       onChange: tmp2Result2[1],
-      isClearable: true,
+      clearable: true,
     }),
   ];
   let tmp15 = null === value;
@@ -72,7 +72,7 @@ function TestView() {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15813, dependencyMap.paths),
+          asyncRequireImpl(15830, dependencyMap.paths),
           "SimpleRequestOTPActionSheet",
           obj,
         );
@@ -87,7 +87,7 @@ function TestView() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,

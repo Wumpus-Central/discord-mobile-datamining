@@ -29,26 +29,26 @@ function PostPurchaseFooter(onSendGift) {
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(4496).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(4498).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(11183).GiftIcon, {
+  obj2.icon = closure_10(onSendGift(11191).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });
   const intl = onSendGift(1115).intl;
   obj2.text = intl.string(_modDef2493.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5060).Button, obj2)];
+  const items1 = [closure_10(onSendGift(5062).Button, obj2)];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1115).intl;
   obj4.text = intl2.string(_modDef2493["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5060).Button, obj4);
+  items1[1] = closure_10(onSendGift(5062).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -154,7 +154,7 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj3);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(11182);
+const GiftingBadgeConstants = fn(11190);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,
@@ -163,7 +163,7 @@ const GiftingBadgeConstants = fn(11182);
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     screenContainer: { flex: 1 },

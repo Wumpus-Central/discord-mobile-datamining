@@ -1,7 +1,7 @@
 // discord_app/modules/content_inventory/memberlist/useHeroColors.tsx
 import _modDef672 from "../../../../_runtime/metro/00672__.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07662_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07666_tinycolor.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -19,9 +19,9 @@ export default function useHeroColors(pendingAvatarSrc) {
   const items1 = [ThemeStore];
   const stateFromStores1 = first(504).useStateFromStores(items1, () => theme.theme);
   let obj2 = first(504);
-  const fallbackHeroColor = first(8263).getFallbackHeroColor(stateFromStores1, stateFromStores);
-  let obj3 = first(8263);
-  let tmp4 = _slicedToArray(first(8261).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
+  const fallbackHeroColor = first(8282).getFallbackHeroColor(stateFromStores1, stateFromStores);
+  let obj3 = first(8282);
+  let tmp4 = _slicedToArray(first(8280).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
   first = tmp4[0];
   closure_1 = tmp6;
   const items2 = [first, tmp4[1]];
@@ -75,12 +75,12 @@ export default function useHeroColors(pendingAvatarSrc) {
   }, items2);
 }
 export const getHeroColors = function getHeroColors(game_name) {
-  const fallbackHeroColor = num(8263).getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
+  const fallbackHeroColor = num(8282).getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
   num = 1;
   if (AccessibilityStore.desaturateUserColors) {
     num = AccessibilityStore.saturation;
   }
-  const useColorStore = tmp2(8261).useColorStore;
+  const useColorStore = tmp2(8280).useColorStore;
   const arr = useColorStore.getState().palette[game_name];
   let mapped;
   if (arr != null) {
@@ -97,7 +97,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     const items = [fallbackHeroColor, fallbackHeroColor];
     mapped = items;
   }
-  let obj = num(8263);
+  let obj = num(8282);
   [tmp7, tmp8] = mapped;
   const tmp6 = _slicedToArray(mapped, 2);
   const hex2intResult = num(1092).hex2int(tmp7);

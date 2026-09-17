@@ -2866,7 +2866,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(arr) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "Array" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -3810,7 +3810,7 @@ class TextAndImagesSettings$Type extends MessageType18 {
         return require("wrappers").StringValue;
       },
     };
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -4073,17 +4073,25 @@ class TextAndImagesSettings$Type extends MessageType18 {
         return items;
       },
     };
-    obj1 = { no: 38, name: "custom_search_url", kind: "message", T: null };
+    items[36] = {
+      no: 38,
+      name: "custom_search_url",
+      kind: "message",
+      T() {
+        return require("wrappers").StringValue;
+      },
+    };
+    obj1 = { no: 39, name: "include_game_mentions_in_autocomplete", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_0(closure_1_1[4]).StringValue;
+        return closure_1_0(closure_1_1[4]).BoolValue;
       }
     }
     obj1.T = T;
-    items[36] = obj1;
-    items[37] = {
-      no: 39,
-      name: "include_game_mentions_in_autocomplete",
+    items[37] = obj1;
+    items[38] = {
+      no: 40,
+      name: "inline_emoji_suggestions_enabled",
       kind: "message",
       T() {
         return require("wrappers").BoolValue;
@@ -4625,6 +4633,20 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
     const internalBinaryWriteResult32 = BoolValue22.internalBinaryWrite(
       diversitySurrogate.includeGameMentionsInAutocomplete,
       tag.tag(39, _mod1187.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if (diversitySurrogate.inlineEmojiSuggestionsEnabled) {
+    const BoolValue23 = wrappers.BoolValue;
+    const tagResult38 = tag.tag(40, _mod1187.WireType.LengthDelimited);
+    const joined33 = BoolValue23.internalBinaryWrite(
+      diversitySurrogate.inlineEmojiSuggestionsEnabled,
+      tag.tag(40, _mod1187.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult33 = BoolValue23.internalBinaryWrite(
+      diversitySurrogate.inlineEmojiSuggestionsEnabled,
+      tag.tag(40, _mod1187.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }

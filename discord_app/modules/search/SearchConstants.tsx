@@ -200,5 +200,6 @@ export const SearchQuerySource = {
   SEARCH_POPOUT: "search_popout",
   SEARCH_FILTERS_MODAL: "search_filters_modal",
   SEARCH_XDM_SETTINGS: "search_xdm_settings",
+  SEARCH_RESULTS_HINT: "search_results_hint",
 };
 export const EMBED_TYPES_WITHOUT_DESCRIPTION = new Set(items13);

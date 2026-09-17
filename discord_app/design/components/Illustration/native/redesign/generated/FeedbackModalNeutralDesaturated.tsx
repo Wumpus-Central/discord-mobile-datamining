@@ -1,6 +1,6 @@
 // discord_app/design/components/Illustration/native/redesign/generated/FeedbackModalNeutralDesaturated.tsx
 import shared from "../../../../../shared.tsx";
-import _mod8361 from "../../index.tsx";
+import _mod8380 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -14,44 +14,44 @@ const result = size.fileFinishedImporting(
 );
 
 export const getFeedbackModalNeutralDesaturatedSource = function getFeedbackModalNeutralDesaturatedSource(theme) {
-  return _mod8361.getIllustrationSource(theme, {
+  return _mod8380.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/11780__.js");
+      return require("../../../../../../../_runtime/metro/11788__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/11781__.js");
+      return require("../../../../../../../_runtime/metro/11789__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/11782__.js");
+      return require("../../../../../../../_runtime/metro/11790__.js");
     },
   });
 };
 export const useFeedbackModalNeutralDesaturatedSource = function useFeedbackModalNeutralDesaturatedSource() {
   const obj = shared;
-  return _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8380.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/11780__.js");
+      return require("../../../../../../../_runtime/metro/11788__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/11781__.js");
+      return require("../../../../../../../_runtime/metro/11789__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/11782__.js");
+      return require("../../../../../../../_runtime/metro/11790__.js");
     },
   });
 };
 export const FeedbackModalNeutralDesaturated = function FeedbackModalNeutralDesaturated(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8361.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8380.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/11780__.js");
+      return require("../../../../../../../_runtime/metro/11788__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/11781__.js");
+      return require("../../../../../../../_runtime/metro/11789__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/11782__.js");
+      return require("../../../../../../../_runtime/metro/11790__.js");
     },
   });
   const merged = Object.assign(arg0);

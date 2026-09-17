@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesWumpus.tsx
-import _modDef9528 from "../../../../../_runtime/metro/09528__.js";
-import _modDef9533 from "../../../../../_runtime/metro/09533__.js";
+import _modDef9539 from "../../../../../_runtime/metro/09539__.js";
+import _modDef9544 from "../../../../../_runtime/metro/09544__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   clouds: { position: "absolute", top: 0, right: 0 },
   wumpus: { position: "absolute", top: 22, right: 22, height: 90 },
@@ -23,25 +23,25 @@ const result = size.fileFinishedImporting("modules/user_settings/premium/native/
 export default function PremiumFeaturesWumpus(premiumType) {
   premiumType = premiumType.premiumType;
   const tmp = closure_7();
-  const tmp2 = premiumType(7053)();
+  const tmp2 = premiumType(7057)();
   dependencyMap = tmp2;
   const items = [premiumType, tmp2];
   const memo = noop.useMemo(() => {
     if (premiumType === PremiumTypes.TIER_0) {
-      const obj2 = { wumpusImageSource: _modDef9528, cloudsImageSource: importDefault(closure_1 ? 9529 : 9530) };
+      const obj2 = { wumpusImageSource: _modDef9539, cloudsImageSource: importDefault(closure_1 ? 9540 : 9541) };
     } else {
       if (closure_1) {
-        let tmp4 = 9531;
+        let tmp4 = 9542;
       } else {
-        tmp4 = 9532;
+        tmp4 = 9543;
       }
-      const obj = { wumpusImageSource: _modDef9533, cloudsImageSource: importDefault(tmp4) };
+      const obj = { wumpusImageSource: _modDef9544, cloudsImageSource: importDefault(tmp4) };
       return obj;
     }
   }, items);
   ({ wumpusImageSource, cloudsImageSource } = memo);
   const items1 = [
-    closure_4(premiumType(5673), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }),
+    closure_4(premiumType(5675), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }),
   ];
   const items2 = [tmp.wumpus];
   let wumpusLeft = premiumType === PremiumTypes.TIER_0;
@@ -50,7 +50,7 @@ export default function PremiumFeaturesWumpus(premiumType) {
   }
   let obj2 = { children: null };
   items2[1] = wumpusLeft;
-  items1[1] = closure_4(premiumType(5673), { style: items2, resizeMode: "contain", source: wumpusImageSource });
+  items1[1] = closure_4(premiumType(5675), { style: items2, resizeMode: "contain", source: wumpusImageSource });
   obj2.children = items1;
   return closure_6(closure_5, obj2);
 }

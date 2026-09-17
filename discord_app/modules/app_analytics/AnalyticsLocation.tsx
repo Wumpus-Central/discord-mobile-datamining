@@ -87,6 +87,7 @@ export default {
   SUBSCRIPTION_HEADER: "subscription header",
   GUILD_BOOSTING_SUBSCRIPTION_HEADER: "guild boosting subscription header",
   CHURN_DISCOUNT_SUBSCRIPTION_HEADER: "churn discount subscription header",
+  REFERRAL_INCENTIVE_DISCOUNT_SUBSCRIPTION_HEADER: "referral incentive discount subscription header",
   CHURN_DISCOUNT_POPOVER: "churn discount popover",
   CHURN_DISCOUNT_PERSISTENT_CTA: "churn discount persistent cta",
   ACCOUNT_CREDIT_BANNER: "account credit banner",

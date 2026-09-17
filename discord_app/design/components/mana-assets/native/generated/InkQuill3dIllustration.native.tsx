@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/InkQuill3dIllustration.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6316 from "../../../../../../discord_assets/assets/mana/asset-library/generated/InkQuill3dIllustration-2x.png.js";
+import _modDef6318 from "../../../../../../discord_assets/assets/mana/asset-library/generated/InkQuill3dIllustration-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const InkQuill3dIllustration = function InkQuill3dIllustration(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6316 };
+  const obj2 = { uri: _modDef6318 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

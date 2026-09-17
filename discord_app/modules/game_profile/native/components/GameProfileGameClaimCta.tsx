@@ -22,8 +22,8 @@ export default function GameProfileGameClaimCta(trackAction) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "HermesInternal", done: null };
         }
@@ -36,19 +36,20 @@ export default function GameProfileGameClaimCta(trackAction) {
               throw value;
             } else if (arg0 === 2) {
               v3 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj3 = { value, done: true };
+              return obj3;
             } else {
-              trackAction(v3(8821).GameProfileTrackActionActions.ClaimGame);
+              trackAction(v3(8833).GameProfileTrackActionActions.ClaimGame);
               v1 = 1;
               v3 = 1;
-              const obj5 = {
-                value: v1(7426).redirectDeveloperPortalWithHandoffToken(
+              const obj4 = {
+                value: v1(7430).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
+                  v3(7434).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };
-              return obj5;
+              return obj4;
             }
           } else if (arg0 === 1) {
             v3 = 3;
@@ -61,23 +62,23 @@ export default function GameProfileGameClaimCta(trackAction) {
             v3 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp11) {
+        } catch (tmp5) {
           v3 = tmp;
-          throw tmp11;
+          throw tmp5;
         }
       }
     }),
     items,
   );
   if (linkedApplications != null) {
-    someResult = linkedApplications.some((type) => type.type === trackAction(dependencyMap[6]).GameLinkTypes.OFFICIAL);
+    someResult = linkedApplications.some((type) => type.type === trackAction(dependencyMap[7]).GameLinkTypes.OFFICIAL);
   }
   if (someResult == null) {
     let obj = { variant: "secondary", size: "md", text: null, onPress: null };
     const intl = trackAction(1115).intl;
     obj.text = intl.string(trackAction(1115).t["mqg+to"]);
     obj.onPress = callback;
-    let tmp3 = jsx(trackAction(5060).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(5062).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

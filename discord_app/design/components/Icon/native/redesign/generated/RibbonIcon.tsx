@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/RibbonIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9058 from "../../../../../../../_runtime/metro/09058__.js";
+import _mod9073 from "../../../../../../../_runtime/metro/09073__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const RibbonIcon = function RibbonIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9058, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9073, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

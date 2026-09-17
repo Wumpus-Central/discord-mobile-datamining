@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/VibegrationsTimelineTree.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3591 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -411,21 +411,21 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  assembling: _modDef3591["9G3ZmA"],
-  installing_deps: _modDef3591.VZuRug,
-  building: _modDef3591["s+ylXP"],
-  bundling: _modDef3591.rEQlMx,
-  committing: _modDef3591.Yvyw1H,
-  built: _modDef3591.hOcVAj,
-  build_error: _modDef3591["6L9Vwt"],
-  healthchecking: _modDef3591.sz8yAj,
-  awaiting_auth: _modDef3591["orD+xo"],
-  healthcheck_passed: _modDef3591["x+sqTG"],
-  healthcheck_failed: _modDef3591.FUWbq1,
-  deploying: _modDef3591.wcXX8Z,
-  preview_ready: _modDef3591["78YNh7"],
-  working: _modDef3591.nv6pUM,
-  error: _modDef3591.j3hBoA,
+  assembling: _modDef3593["9G3ZmA"],
+  installing_deps: _modDef3593.VZuRug,
+  building: _modDef3593["s+ylXP"],
+  bundling: _modDef3593.rEQlMx,
+  committing: _modDef3593.Yvyw1H,
+  built: _modDef3593.hOcVAj,
+  build_error: _modDef3593["6L9Vwt"],
+  healthchecking: _modDef3593.sz8yAj,
+  awaiting_auth: _modDef3593["orD+xo"],
+  healthcheck_passed: _modDef3593["x+sqTG"],
+  healthcheck_failed: _modDef3593.FUWbq1,
+  deploying: _modDef3593.wcXX8Z,
+  preview_ready: _modDef3593["78YNh7"],
+  working: _modDef3593.nv6pUM,
+  error: _modDef3593.j3hBoA,
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimelineTree.tsx");
@@ -442,26 +442,26 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (nv6pUM == null) {
-    nv6pUM = _modDef3591.nv6pUM;
+    nv6pUM = _modDef3593.nv6pUM;
   }
   return intl.string(nv6pUM);
 };
-export const describeTaskStatus = function describeTaskStatus(status) {
-  if ("running" === status) {
+export const describeTaskStatus = function describeTaskStatus(arg0) {
+  if ("running" === arg0) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3591["fW7T+d"]);
-  } else if ("done" === status) {
+    return intl5.string(_modDef3593["fW7T+d"]);
+  } else if ("done" === arg0) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3591.X3c4hc);
-  } else if ("failed" === status) {
+    return intl4.string(_modDef3593.X3c4hc);
+  } else if ("failed" === arg0) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3591.LK4Wsd);
-  } else if ("cancelled" === status) {
+    return intl3.string(_modDef3593.LK4Wsd);
+  } else if ("cancelled" === arg0) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3591.msWvKA);
-  } else if ("incomplete" === status) {
+    return intl2.string(_modDef3593.msWvKA);
+  } else if ("incomplete" === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef3591.esfcU6);
+    return intl.string(_modDef3593.esfcU6);
   }
 };
 export { buildTimelineTree };

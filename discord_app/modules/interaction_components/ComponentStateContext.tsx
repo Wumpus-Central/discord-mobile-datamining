@@ -137,11 +137,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(8093);
-  const isThreadModerator = channel(7379).useIsThreadModerator(channel);
-  const tmpResult = channel(7379);
+  const obj5 = channel(8113);
+  const isThreadModerator = channel(7383).useIsThreadModerator(channel);
+  const tmpResult = channel(7383);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(7379).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7383).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }

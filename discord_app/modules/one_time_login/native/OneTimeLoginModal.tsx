@@ -21,7 +21,7 @@ const Constants = fn(1074);
 let closure_12 = fn(1229).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   container: {
     padding: 24,
@@ -238,18 +238,18 @@ export default function OneTimeLoginModal(token) {
     angleOverride: 0,
     mixAmount: null,
   };
-  let obj3 = { dark: token(4456).OverlayOpacity.LEVEL_1 };
+  let obj3 = { dark: token(4458).OverlayOpacity.LEVEL_1 };
   obj2.mixAmount = obj3;
   const items6 = [closure_13(ThemedGradientDefault, obj2)];
   let obj4 = { style: tmp.container, children: null };
   let obj5 = { style: tmp.centerContent, children: null };
-  const items7 = [closure_13(callback3, { source: token(13969), style: tmp.logo })];
+  const items7 = [closure_13(callback3, { source: token(13977), style: tmp.logo })];
   const obj7 = { style: tmp.loadingContainer, children: null };
   const items8 = [closure_13(callback2, {})];
   const obj8 = { variant: "text-lg/semibold", children: null };
   let intl = token(1115).intl;
   obj8.children = intl.string(token(1115).t.W9uNdG);
-  items8[1] = closure_13(token(4634).Text, obj8);
+  items8[1] = closure_13(token(4636).Text, obj8);
   obj7.children = items8;
   items7[1] = closure_14(callback1, obj7);
   obj5.children = items7;
@@ -258,13 +258,13 @@ export default function OneTimeLoginModal(token) {
   const obj10 = { variant: "text-sm/normal", children: null };
   let intl2 = token(1115).intl;
   obj10.children = intl2.string(token(1115).t["ZXe5/Y"]);
-  const items10 = [closure_13(token(4634).Text, obj10)];
+  const items10 = [closure_13(token(4636).Text, obj10)];
   const obj11 = { textColor: "text-default", text: null, variant: "text-sm/medium", onPress: null, textStyle: null };
   let intl3 = token(1115).intl;
   obj11.text = intl3.string(token(1115).t.FIEwfG);
   obj11.onPress = onPress;
   obj11.textStyle = tmp.link;
-  items10[1] = closure_13(token(7050).LinkButton, obj11);
+  items10[1] = closure_13(token(7054).LinkButton, obj11);
   obj9.children = items10;
   items9[1] = closure_14(callback1, obj9);
   obj4.children = items9;

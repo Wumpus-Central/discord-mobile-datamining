@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3237 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3239 from "../../intl/FavoritesGuild.messages.js";
 import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FavoriteStore from "../../FavoriteStore.tsx";
@@ -39,11 +39,11 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       description: null,
       onDismiss: null,
       renderImgComponent: "r",
-      buttonLabel: "M13 3v1h1V3h-1ZM2 3v1h1V3H2ZM3 4v1h1V4H3ZM1 4v2h1V4H1Z",
+      buttonLabel: "M13 7h-1v1h1V7Z",
       onButtonPress: null,
     };
     const intl = util.intl;
-    const tmp4 = _modDef3237;
+    const tmp4 = _modDef3239;
     if (stateFromStores) {
       let TWuDTt = tmp4.TWuDTt;
       let tmp6 = importDefault;
@@ -53,10 +53,10 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
     }
     obj.title = intl.string(TWuDTt);
     const intl2 = util.intl;
-    obj.description = intl2.string(tmp6(3237).Ztl9ht);
+    obj.description = intl2.string(tmp6(3239).Ztl9ht);
     obj.onDismiss = onDismiss;
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(tmp6(3237)["+h9aza"]);
+    obj.buttonLabel = intl3.string(tmp6(3239)["+h9aza"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items3);

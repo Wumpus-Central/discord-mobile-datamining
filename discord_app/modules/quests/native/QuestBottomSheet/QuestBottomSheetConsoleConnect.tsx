@@ -86,7 +86,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -104,19 +104,19 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15227, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15232, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(11629).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(11629);
-  closure_4 = quest(11916).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11916);
-  const impressionId = quest(11632).useQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(11637).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(11637);
+  closure_4 = quest(11925).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11925);
+  const impressionId = quest(11640).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj3 = quest(11632);
+  let obj3 = quest(11640);
   return openQuestBottomSheet(NonInlineConsoleConnection, {
     consoles: xboxAndPlaystationAccounts.useMemo(
       () =>

@@ -31,7 +31,7 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { sectionTitle: { textTransform: "uppercase" }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
 obj2.separator = size;
@@ -62,7 +62,7 @@ export const Content = function Content(arg0) {
   const items = [
     closure_6(SectionTitle, obj7),
     closure_6(guildId(1177).Spacer, { size: 8 }),
-    closure_6(guildId(15348).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(guildId(15353).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , ,];
@@ -98,7 +98,7 @@ export const Content = function Content(arg0) {
         timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id),
       ),
     };
-    items4[2] = closure_6(guildId(10486).GappedList, obj15);
+    items4[2] = closure_6(guildId(10494).GappedList, obj15);
     obj12.children = items4;
     tmp4Result3 = closure_8(closure_7, obj12);
   }
@@ -117,11 +117,11 @@ export const Content = function Content(arg0) {
         timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index),
       ),
     };
-    items5[2] = closure_6(guildId(10486).GappedList, obj19);
+    items5[2] = closure_6(guildId(10494).GappedList, obj19);
     obj16.children = items5;
     tmp4Result4 = closure_8(closure_7, obj16);
   }
   items1[3] = tmp4Result4;
   obj5.children = items1;
-  return closure_8(guildId(10486).GappedList, obj5);
+  return closure_8(guildId(10494).GappedList, obj5);
 };

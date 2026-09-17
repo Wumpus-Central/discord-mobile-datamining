@@ -550,7 +550,7 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-const isLaunched = fn(9654).isLaunched;
+const isLaunched = fn(9665).isLaunched;
 let c9 = null;
 let c10 = null;
 const size = fn(2);

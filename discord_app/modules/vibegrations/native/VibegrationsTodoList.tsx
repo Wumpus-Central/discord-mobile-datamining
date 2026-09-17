@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsTodoList.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3591 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import VibegrationsNativeStatusLine from "VibegrationsNativeStatusLine.tsx";
 import VibegrationsTodoAgents from "../lib/VibegrationsTodoAgents.tsx";
@@ -26,7 +26,7 @@ function TodoAgents(agents) {
           items[VibegrationsNativeStatusLine.laneTintIndexFor(key.key) % VibegrationsNativeStatusLine.LANE_TINT_COUNT];
         obj.style = items;
         const intl = util.intl;
-        obj.accessibilityLabel = intl.formatToPlainString(_modDef3591.yTB8eu, { name: key.name, task: key.task });
+        obj.accessibilityLabel = intl.formatToPlainString(_modDef3593.yTB8eu, { name: key.name, task: key.task });
         return timestampProducer(hasOwnProperty, obj, key.key);
       }),
     ];
@@ -35,10 +35,10 @@ function TodoAgents(agents) {
       const obj3 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
       let intl = tmp2(1115).intl;
       const obj4 = { count: overflow };
-      obj3.accessibilityLabel = intl.formatToPlainString(items(3591).Vpu1Pd, obj4);
+      obj3.accessibilityLabel = intl.formatToPlainString(items(3593).Vpu1Pd, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(4634).Text, obj3);
+      tmp9 = closure_6(tmp2(4636).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -63,17 +63,17 @@ function TodoMarker(status) {
   items[2] = markerInProgress;
   if ("completed" === status) {
     const intl3 = util.intl;
-    let stringResult = intl3.string(_modDef3591.TkPGOH);
+    let stringResult = intl3.string(_modDef3593.TkPGOH);
     let tmp10 = importDefault;
     let tmp11 = require;
   } else if ("in_progress" === status) {
     const intl2 = util.intl;
-    stringResult = intl2.string(_modDef3591["oK+fmd"]);
+    stringResult = intl2.string(_modDef3593["oK+fmd"]);
     tmp10 = importDefault;
     tmp11 = require;
   } else {
     const intl = util.intl;
-    stringResult = intl.string(_modDef3591.d7lieu);
+    stringResult = intl.string(_modDef3593.d7lieu);
     tmp10 = importDefault;
     tmp11 = require;
   }
@@ -87,7 +87,7 @@ function TodoMarker(status) {
   let tmp21 = null;
   if ("completed" === status) {
     const obj3 = { size: "xs", color: tmp10(576).colors.CHECKBOX_ICON_ACTIVE };
-    tmp21 = timestampProducer(tmp11(9582).CheckmarkSmallBoldIcon, obj3);
+    tmp21 = timestampProducer(tmp11(9593).CheckmarkSmallBoldIcon, obj3);
   }
   items1[1] = tmp21;
   obj.children = items1;
@@ -97,7 +97,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   root: { gap: nativeDefault.space.PX_8 },
   header: null,
@@ -213,8 +213,8 @@ export default function VibegrationsTodoList(announceProgress) {
       const obj2 = { style: tmp.header, children: null };
       let obj3 = { variant: "text-sm/medium", color: "text-subtle", children: null };
       const intl = agents(1115).intl;
-      obj3.children = intl.string(_modDef3591.qCRC6c);
-      let items1 = [closure_6(agents(4634).Text, obj3)];
+      obj3.children = intl.string(_modDef3593.qCRC6c);
+      let items1 = [closure_6(agents(4636).Text, obj3)];
       let str2 = "none";
       if (flag) {
         str2 = "polite";
@@ -228,11 +228,11 @@ export default function VibegrationsTodoList(announceProgress) {
       };
       const intl2 = agents(1115).intl;
       const obj5 = { completed: length, total: length2 };
-      obj4.accessibilityLabel = intl2.formatToPlainString(_modDef3591["QG/EiF"], obj5);
+      obj4.accessibilityLabel = intl2.formatToPlainString(_modDef3593["QG/EiF"], obj5);
       const intl3 = agents(1115).intl;
       const obj6 = { completed: length, total: length2 };
-      obj4.children = intl3.formatToPlainString(_modDef3591.bQvqly, obj6);
-      items1[1] = closure_6(agents(4634).Text, obj4);
+      obj4.children = intl3.formatToPlainString(_modDef3593.bQvqly, obj6);
+      items1[1] = closure_6(agents(4636).Text, obj4);
       obj2.children = items1;
       tmp4Result = closure_7(closure_5, obj2);
     }
@@ -271,7 +271,7 @@ export default function VibegrationsTodoList(announceProgress) {
         const obj8 = { style: tmp.row, children: null };
         const items4 = [closure_6(TodoMarker, { status: "pending" })];
         const obj9 = { variant: "text-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-        items4[1] = closure_6(agents(4634).Text, obj9);
+        items4[1] = closure_6(agents(4636).Text, obj9);
         obj8.children = items4;
         tmp4Result3 = closure_7(closure_5, obj8);
       }

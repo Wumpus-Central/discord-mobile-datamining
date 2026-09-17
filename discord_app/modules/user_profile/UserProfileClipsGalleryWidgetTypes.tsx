@@ -3,6 +3,9 @@ import _modDef1331 from "../../../_runtime/metro/01331__.js";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
+function isUploadedWidgetClip(status) {
+  return "uploading" !== status.status;
+}
 function convertClip(gameId) {
   const obj = { game_id: gameId.gameId, title: gameId.title, tags: gameId.tags };
   if ("saved" === gameId.status) {
@@ -29,11 +32,19 @@ class ClipsGalleryWidget {
   }
 }
 const prototype = ClipsGalleryWidget.prototype;
+prototype["getUploadedClips"] = function getUploadedClips() {
+  const clips = this.clips;
+  return clips.filter(isUploadedWidgetClip);
+};
+prototype["hasUploadingClips"] = function hasUploadingClips() {
+  const clips = this.clips;
+  return clips.some((status) => "uploading" === status.status);
+};
 prototype["toSubmission"] = function toSubmission() {
   const obj = { id: this.id, data: null };
   const obj2 = { type: this.type, clips: null };
-  const clips = this.clips;
-  obj2.clips = clips.map(convertClip);
+  const uploadedClips = this.getUploadedClips();
+  obj2.clips = uploadedClips.map(convertClip);
   obj.data = obj2;
   return obj;
 };
@@ -41,16 +52,18 @@ prototype["isUpdatable"] = function isUpdatable() {
   return true;
 };
 prototype["isDiscardable"] = function isDiscardable() {
-  return 0 === this.clips.length;
+  return 0 === this.getUploadedClips().length;
 };
 prototype["isValid"] = function isValid() {
-  return this.clips.length > 0;
+  const self = this;
+  return this.getUploadedClips().length > 0 && !self.hasUploadingClips();
 };
-prototype["isEqual"] = function isEqual(clips) {
-  let tmp = clips instanceof ClipsGalleryWidget;
+prototype["isEqual"] = function isEqual(getUploadedClips) {
+  let tmp = getUploadedClips instanceof ClipsGalleryWidget;
   if (tmp) {
     const self = this;
-    tmp = _modDef1331(this.clips, clips.clips);
+    const uploadedClips = this.getUploadedClips();
+    tmp = _modDef1331(uploadedClips, getUploadedClips.getUploadedClips());
   }
   return tmp;
 };
@@ -65,5 +78,6 @@ prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOp
 };
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx");
 
+export { isUploadedWidgetClip };
 export { ClipsGalleryWidget };
 export const WIDGET_CLIP_CONTENT_TYPE = "video/mp4";

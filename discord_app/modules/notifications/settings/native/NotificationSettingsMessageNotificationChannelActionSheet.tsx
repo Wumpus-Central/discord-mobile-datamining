@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4820).UnreadSetting;
+const UnreadSetting = fn(4822).UnreadSetting;
 let closure_6 = fn(1084).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -54,5 +54,5 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
       NotificationLabel.notifications(message_notifications),
     );
   };
-  return jsx(unread(10299), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10307), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 }

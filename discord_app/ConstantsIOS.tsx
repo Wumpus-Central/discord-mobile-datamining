@@ -152,6 +152,7 @@ export const UpsellTypes = {
   FOR_LATER: "for-later",
   SCHEDULED_MESSAGES: "scheduled-messages",
   STREAM_HIGH_QUALITY: "stream-high-quality",
+  SHOP_MEMBER_PRICING: "shop-member-pricing",
 };
 export const StoreKitErrors = {
   UNKNOWN: "ESKERRORDOMAIN0",

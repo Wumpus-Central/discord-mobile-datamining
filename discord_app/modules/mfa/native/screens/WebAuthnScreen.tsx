@@ -2,12 +2,13 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
+import NativeSecurityKeyManagerModuleDefault from "../../../../../discord_common/js/packages/rtn-codegen/js/NativeSecurityKeyManagerModule.tsx";
 import NativeCeremoniesDefault from "../../../webauthn/native/NativeCeremonies.tsx";
 import MfaOptionScreenDefault from "MfaOptionScreen.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const buttonDefault = tmp15(15793);
+const buttonDefault = tmp15(15799);
 require = fn;
 function AndroidAuthRadioGroup(setAuthenticator) {
   setAuthenticator = setAuthenticator.setAuthenticator;
@@ -32,18 +33,18 @@ function AndroidAuthRadioGroup(setAuthenticator) {
     withSpacing: true,
   });
 }
-const NativeModules = fn(17).NativeModules;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   radioItem: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md },
 };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { AUTHENTICATE: 0, [0]: "AUTHENTICATE", ANDROID_PASSKEY: 1, [1]: "ANDROID_PASSKEY" };
-let closure_8 = {
-  [obj4.AUTHENTICATE]: NativeModules.DCDSecurityKeyManager.authenticate,
-  [obj4.ANDROID_PASSKEY]: NativeModules.DCDSecurityKeyManager.authenticatePasskey,
+let obj5 = {
+  [AUTHENTICATE]: NativeSecurityKeyManagerModuleDefault.authenticate,
+  [ANDROID_PASSKEY]: NativeSecurityKeyManagerModuleDefault.authenticatePasskey,
 };
+({ AUTHENTICATE, ANDROID_PASSKEY } = obj4);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/mfa/native/screens/WebAuthnScreen.tsx");
 
@@ -66,7 +67,7 @@ export default function WebAuthnScreen(arg0) {
   const methods = mfaChallenge.methods;
   const challenge = methods.find((type) => "webauthn" === type.type).challenge;
   const items = [authenticatorSelection];
-  const memo = obj.useMemo(() => closure_8[first], items);
+  const memo = obj.useMemo(() => obj5[first], items);
   const items1 = [memo, challenge, finish];
   const callback = obj.useCallback(() => {
     dependencyMap(undefined);
@@ -84,9 +85,9 @@ export default function WebAuthnScreen(arg0) {
           const intl = finish(1115).intl;
           dependencyMap(intl.string(finish(1115).t.xSCvBf));
         } else {
-          const result = finish(7059).captureWebAuthnException(error, {});
+          const result = finish(7063).captureWebAuthnException(error, {});
           dependencyMap(error.message);
-          const tmpResult = finish(7059);
+          const tmpResult = finish(7063);
         }
       })
       .finally(() => _undefined(false));
@@ -106,7 +107,7 @@ export default function WebAuthnScreen(arg0) {
   obj3.headerText = intl.string(finish(1115).t.saHocI);
   const intl2 = finish(1115).intl;
   obj3.subtitle = intl2.string(finish(1115).t.YpMrqM);
-  obj3.headerImage = challenge(finish(14789).KeyImage, {});
+  obj3.headerImage = challenge(finish(14797).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj4 = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };
@@ -118,7 +119,7 @@ export default function WebAuthnScreen(arg0) {
     shouldDisplayAndroidFidoSelector = tmp14(AndroidAuthRadioGroup, obj4);
   }
   obj3.content = shouldDisplayAndroidFidoSelector;
-  const obj5 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
+  obj5 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
   const tmp16 = MfaOptionScreenDefault;
   const intl3 = finish(1115).intl;
   obj5.text = intl3.string(finish(1115).t.Xr3Eks);

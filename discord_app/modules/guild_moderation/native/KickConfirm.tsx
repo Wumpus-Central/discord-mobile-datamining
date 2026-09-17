@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   iconLabelBlock: null,
@@ -93,7 +93,7 @@ export default noop.memo(function KickConfirm(arg0) {
       const obj6 = { style: tmp.iconLabelBlock, children: null };
       const obj7 = {
         style: tmp.iconStyles,
-        source: require("../../../../_runtime/metro/11993__.js"),
+        source: require("../../../../_runtime/metro/12002__.js"),
         resizeMode: "contain",
       };
       const items4 = [closure_10(ref, obj7), ,];

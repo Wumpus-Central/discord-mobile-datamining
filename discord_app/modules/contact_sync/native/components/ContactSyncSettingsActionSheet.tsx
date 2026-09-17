@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12820);
+const ContactSyncModalStore = fn(12828);
 ({
   setAllowEmail: c3,
   setAllowPhone: closure_4,
@@ -13,7 +13,7 @@ const ContactSyncModalStore = fn(12820);
 } = ContactSyncModalStore);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingBottom: 16 },
   formRow: null,

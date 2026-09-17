@@ -1,6 +1,5 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import participantHasVideo from "../../../video_calls/participantHasVideo.tsx";
 import isActivityParticipantCurrentUserCurrentSession from "../../../activities/isActivityParticipantCurrentUserCurrentSession.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
@@ -8,14 +7,15 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const VoicePanelConstants = fn(12415);
-({ SECONDARY_PIP_TOP_MARGIN: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelPIPConstants = fn(17293);
+const VoicePanelConstants = fn(12424);
+const SECONDARY_PIP_TOP_MARGIN = VoicePanelConstants.SECONDARY_PIP_TOP_MARGIN;
+const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
+const VoicePanelPIPConstants = fn(17335);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(4659).ParticipantTypes;
-const MorphablePanelConstants = fn(12416);
+const ParticipantTypes = fn(4661).ParticipantTypes;
+const MorphablePanelConstants = fn(12425);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 const set = new Set();
@@ -26,27 +26,6 @@ clamp.__closure = {};
 clamp.__workletHash = 10301627783217;
 clamp.__initData = {
   code: "function clamp_VoicePanelPIPUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);}",
-};
-const PIP_LAYOUT_PHYSICS = { mass: 0.3, damping: 80, stiffness: 150 };
-function layoutTransition(originX) {
-  const obj = { animations: null, initialValues: null };
-  const size = { originX: spring.withSpring(originX.targetOriginX, obj), originY: null, width: null, height: null };
-  size.originY = spring.withSpring(originX.targetOriginY, obj);
-  size.width = spring.withSpring(originX.targetWidth, obj);
-  size.height = spring.withSpring(originX.targetHeight, obj);
-  obj.animations = size;
-  obj.initialValues = {
-    originX: originX.currentOriginX,
-    originY: originX.currentOriginY,
-    width: originX.currentWidth,
-    height: originX.currentHeight,
-  };
-  return obj;
-}
-layoutTransition.__closure = { withSpring: fn(5059).withSpring, PIP_LAYOUT_PHYSICS };
-layoutTransition.__workletHash = 16735009420384;
-layoutTransition.__initData = {
-  code: "function layoutTransition_VoicePanelPIPUtilsTsx2(values){const{withSpring,PIP_LAYOUT_PHYSICS}=this.__closure;return{animations:{originX:withSpring(values.targetOriginX,PIP_LAYOUT_PHYSICS),originY:withSpring(values.targetOriginY,PIP_LAYOUT_PHYSICS),width:withSpring(values.targetWidth,PIP_LAYOUT_PHYSICS),height:withSpring(values.targetHeight,PIP_LAYOUT_PHYSICS)},initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight}};}",
 };
 function getPIPWindowDimensions(width, left) {
   const bound = Math.max(left.left, PIP_WINDOW_OFFSET);
@@ -59,9 +38,9 @@ function getPIPWindowDimensions(width, left) {
   return obj;
 }
 getPIPWindowDimensions.__closure = { PIP_WINDOW_OFFSET };
-getPIPWindowDimensions.__workletHash = 12185397231026;
+getPIPWindowDimensions.__workletHash = 10369369214675;
 getPIPWindowDimensions.__initData = {
-  code: "function getPIPWindowDimensions_VoicePanelPIPUtilsTsx3(windowDimensions,safeArea){const{PIP_WINDOW_OFFSET}=this.__closure;const xOffset=Math.max(safeArea.left,PIP_WINDOW_OFFSET);const yOffset=Math.max(safeArea.top,PIP_WINDOW_OFFSET);return{xOffset:xOffset,yOffset:yOffset,xRange:windowDimensions.width-xOffset-Math.max(safeArea.right,PIP_WINDOW_OFFSET),yRange:windowDimensions.height-yOffset-Math.max(safeArea.bottom,PIP_WINDOW_OFFSET)};}",
+  code: "function getPIPWindowDimensions_VoicePanelPIPUtilsTsx2(windowDimensions,safeArea){const{PIP_WINDOW_OFFSET}=this.__closure;const xOffset=Math.max(safeArea.left,PIP_WINDOW_OFFSET);const yOffset=Math.max(safeArea.top,PIP_WINDOW_OFFSET);return{xOffset:xOffset,yOffset:yOffset,xRange:windowDimensions.width-xOffset-Math.max(safeArea.right,PIP_WINDOW_OFFSET),yRange:windowDimensions.height-yOffset-Math.max(safeArea.bottom,PIP_WINDOW_OFFSET)};}",
 };
 function pipXYtoAbsoluteXY(arg0) {
   ({ windowDimensions, safeArea } = arg0);
@@ -82,9 +61,9 @@ function pipXYtoAbsoluteXY(arg0) {
   }
 }
 pipXYtoAbsoluteXY.__closure = { getPIPWindowDimensions };
-pipXYtoAbsoluteXY.__workletHash = 16213175273517;
+pipXYtoAbsoluteXY.__workletHash = 13405407399530;
 pipXYtoAbsoluteXY.__initData = {
-  code: "function pipXYtoAbsoluteXY_VoicePanelPIPUtilsTsx4({pipX:pipX,pipY:pipY,windowDimensions:windowDimensions,safeArea:safeArea}){const{getPIPWindowDimensions}=this.__closure;const{xOffset:xOffset,yOffset:yOffset,xRange:xRange,yRange:yRange}=getPIPWindowDimensions(windowDimensions,safeArea);return{x:xOffset+pipX*xRange,y:yOffset+pipY*yRange};}",
+  code: "function pipXYtoAbsoluteXY_VoicePanelPIPUtilsTsx3({pipX:pipX,pipY:pipY,windowDimensions:windowDimensions,safeArea:safeArea}){const{getPIPWindowDimensions}=this.__closure;const{xOffset:xOffset,yOffset:yOffset,xRange:xRange,yRange:yRange}=getPIPWindowDimensions(windowDimensions,safeArea);return{x:xOffset+pipX*xRange,y:yOffset+pipY*yRange};}",
 };
 function getClampedPIPPosition(topAvoidanceRegion) {
   ({ pipX, pipY, width, height, windowDimensions, safeArea, bottomAvoidanceRegion } = topAvoidanceRegion);
@@ -94,10 +73,6 @@ function getClampedPIPPosition(topAvoidanceRegion) {
   let num = topAvoidanceRegion.topAvoidanceRegion;
   if (num === undefined) {
     num = 0;
-  }
-  let point = topAvoidanceRegion.positionOffset;
-  if (point === undefined) {
-    point = { x: 0, y: 0 };
   }
   let num2 = 1;
   if (-1 !== pipX) {
@@ -111,7 +86,9 @@ function getClampedPIPPosition(topAvoidanceRegion) {
   obj.pipY = num3;
   obj.windowDimensions = windowDimensions;
   obj.safeArea = safeArea;
-  const y = pipXYtoAbsoluteXY(obj).y;
+  const point = pipXYtoAbsoluteXY(obj);
+  const y = point.y;
+  const diff = point.x - width / 2;
   if (-1 === pipY) {
     let sum = y + 72;
   } else {
@@ -123,17 +100,19 @@ function getClampedPIPPosition(topAvoidanceRegion) {
     const _Math2 = Math;
     const bound1 = Math.max(safeArea.top, PIP_WINDOW_OFFSET);
     const _Math3 = Math;
-    const diff = windowDimensions.width - bound;
+    const diff1 = windowDimensions.width - bound;
     const _Math4 = Math;
-    const diff1 = diff - Math.max(safeArea.right, PIP_WINDOW_OFFSET);
-    const diff2 = windowDimensions.height - bound1;
+    const diff2 = diff1 - Math.max(safeArea.right, PIP_WINDOW_OFFSET);
+    const diff3 = windowDimensions.height - bound1;
     if (typeof clamp === "function") {
+      const point1 = { x: null, y: null };
       const _Math5 = Math;
       const _Math6 = Math;
+      point1.x = Math.min(Math.max(diff, bound), tmp13);
       if (typeof tmp12 === "function") {
         const _Math7 = Math;
         const _Math8 = Math;
-        const point1 = { x: tmp13 + point.x, y: Math.min(Math.max(sum, tmp14), tmp15) + point.y };
+        point1.y = Math.min(Math.max(sum, tmp14), tmp15);
         return point1;
       } else {
         throw new TypeError("Trying to call a non-function");
@@ -144,12 +123,60 @@ function getClampedPIPPosition(topAvoidanceRegion) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  const tmpResult = pipXYtoAbsoluteXY(obj);
 }
 getClampedPIPPosition.__closure = { pipXYtoAbsoluteXY, getPIPWindowDimensions, clamp };
-getClampedPIPPosition.__workletHash = 7473574077366;
+getClampedPIPPosition.__workletHash = 4971721292921;
 getClampedPIPPosition.__initData = {
-  code: "function getClampedPIPPosition_VoicePanelPIPUtilsTsx5({pipX:pipX,pipY:pipY,width:width,height:height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion=0,topAvoidanceRegion=0,positionOffset={x:0,y:0}}){const{pipXYtoAbsoluteXY,getPIPWindowDimensions,clamp}=this.__closure;let{x:x,y:y}=pipXYtoAbsoluteXY({pipX:pipX===-1?1:pipX,pipY:pipY===-1?0:pipY,windowDimensions:windowDimensions,safeArea:safeArea});const halfWidth=width/2;const halfHeight=height/2;x-=halfWidth;if(pipY===-1){y+=72;}else{y-=halfHeight;}const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea);x=clamp(x,pipRegion.xOffset,pipRegion.xOffset+pipRegion.xRange-width);y=clamp(y,pipRegion.yOffset+topAvoidanceRegion,pipRegion.yOffset+pipRegion.yRange-bottomAvoidanceRegion-height);x+=positionOffset.x;y+=positionOffset.y;return{x:x,y:y};}",
+  code: "function getClampedPIPPosition_VoicePanelPIPUtilsTsx4({pipX:pipX,pipY:pipY,width:width,height:height,windowDimensions:windowDimensions,safeArea:safeArea,bottomAvoidanceRegion=0,topAvoidanceRegion=0}){const{pipXYtoAbsoluteXY,getPIPWindowDimensions,clamp}=this.__closure;let{x:x,y:y}=pipXYtoAbsoluteXY({pipX:pipX===-1?1:pipX,pipY:pipY===-1?0:pipY,windowDimensions:windowDimensions,safeArea:safeArea});const halfWidth=width/2;const halfHeight=height/2;x-=halfWidth;if(pipY===-1){y+=72;}else{y-=halfHeight;}const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea);x=clamp(x,pipRegion.xOffset,pipRegion.xOffset+pipRegion.xRange-width);y=clamp(y,pipRegion.yOffset+topAvoidanceRegion,pipRegion.yOffset+pipRegion.yRange-bottomAvoidanceRegion-height);return{x:x,y:y};}",
+};
+function getScaledPIPContainerHeight(scale) {
+  scale = scale.scale;
+  if (scale.showSecondaryPIP) {
+    let sum = (tmp2 - SECONDARY_PIP_TOP_MARGIN) * scale + SECONDARY_PIP_TOP_MARGIN;
+  } else {
+    sum = tmp * scale;
+  }
+  return sum;
+}
+getScaledPIPContainerHeight.__closure = { SECONDARY_PIP_TOP_MARGIN };
+getScaledPIPContainerHeight.__workletHash = 10243624845636;
+getScaledPIPContainerHeight.__initData = {
+  code: "function getScaledPIPContainerHeight_VoicePanelPIPUtilsTsx5({height:height,containerHeight:containerHeight,showSecondaryPIP:showSecondaryPIP,scale:scale}){const{SECONDARY_PIP_TOP_MARGIN}=this.__closure;if(!showSecondaryPIP){return height*scale;}return(containerHeight-SECONDARY_PIP_TOP_MARGIN)*scale+SECONDARY_PIP_TOP_MARGIN;}",
+};
+function clampPIPScale(arg0) {
+  ({ containerHeight, showSecondaryPIP, windowDimensions, safeArea, pipAvoidanceSpecs } = arg0);
+  if (typeof getPIPWindowDimensions === "function") {
+    const _Math = Math;
+    const _Math2 = Math;
+    const bound = Math.max(safeArea.left, PIP_WINDOW_OFFSET);
+    const _Math3 = Math;
+    const bound1 = Math.max(safeArea.top, PIP_WINDOW_OFFSET);
+    const diff = windowDimensions.width - bound;
+    const _Math4 = Math;
+    const diff1 = diff - Math.max(safeArea.right, PIP_WINDOW_OFFSET);
+    const diff2 = windowDimensions.height - bound1;
+    const diff3 =
+      diff2 - Math.max(safeArea.bottom, PIP_WINDOW_OFFSET) - pipAvoidanceSpecs.top - pipAvoidanceSpecs.bottom;
+    let diff4 = containerHeight;
+    if (showSecondaryPIP) {
+      diff4 = containerHeight - SECONDARY_PIP_TOP_MARGIN;
+    }
+    let diff5 = diff3;
+    if (showSecondaryPIP) {
+      diff5 = diff3 - SECONDARY_PIP_TOP_MARGIN;
+    }
+    const _Math5 = Math;
+    const _Math6 = Math;
+    const _Math7 = Math;
+    return Math.max(0.75, Math.min(tmp, Math.min(diff1 / tmp2, diff5 / diff4)));
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+clampPIPScale.__closure = { getPIPWindowDimensions, SECONDARY_PIP_TOP_MARGIN };
+clampPIPScale.__workletHash = 9137920818537;
+clampPIPScale.__initData = {
+  code: "function clampPIPScale_VoicePanelPIPUtilsTsx6({scale:scale,width:width,containerHeight:containerHeight,showSecondaryPIP:showSecondaryPIP,windowDimensions:windowDimensions,safeArea:safeArea,pipAvoidanceSpecs:pipAvoidanceSpecs}){const{getPIPWindowDimensions,SECONDARY_PIP_TOP_MARGIN}=this.__closure;const{xRange:xRange,yRange:yRange}=getPIPWindowDimensions(windowDimensions,safeArea);const maxWidth=xRange;const maxHeight=yRange-pipAvoidanceSpecs.top-pipAvoidanceSpecs.bottom;const scalableHeight=showSecondaryPIP?containerHeight-SECONDARY_PIP_TOP_MARGIN:containerHeight;const scalableMaxHeight=showSecondaryPIP?maxHeight-SECONDARY_PIP_TOP_MARGIN:maxHeight;const maxScale=Math.min(maxWidth/width,scalableMaxHeight/scalableHeight);return Math.max(0.75,Math.min(scale,maxScale));}",
 };
 function calculatePIPPositionFromVelocity(arg0) {
   ({ velocityX, velocityY, windowDimensions, safeArea } = arg0);
@@ -277,9 +304,9 @@ function calculatePIPPositionFromVelocity(arg0) {
   }
 }
 calculatePIPPositionFromVelocity.__closure = { getPIPWindowDimensions, MIN_PIP_TOSS_VELOCITY, clamp };
-calculatePIPPositionFromVelocity.__workletHash = 3870426217462;
+calculatePIPPositionFromVelocity.__workletHash = 15429903396759;
 calculatePIPPositionFromVelocity.__initData = {
-  code: "function calculatePIPPositionFromVelocity_VoicePanelPIPUtilsTsx6({velocityX:velocityX,velocityY:velocityY,absoluteX:absoluteX,absoluteY:absoluteY,windowDimensions:windowDimensions,safeArea:safeArea}){const{getPIPWindowDimensions,MIN_PIP_TOSS_VELOCITY,clamp}=this.__closure;const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea);const{xRange:xRange,yRange:yRange}=pipRegion;const x=absoluteX-pipRegion.xOffset;const y=absoluteY-pipRegion.yOffset;let pipX=0;let pipY=0;if(Math.max(Math.abs(velocityY),Math.abs(velocityX))<MIN_PIP_TOSS_VELOCITY){const closestEdge=function(specs){const minValue=Math.min(...Object.values(specs));if(specs.left===minValue){return'left';}if(specs.top===minValue){return'top';}if(specs.right===minValue){return'right';}return'bottom';}({left:clamp(x,0,xRange),right:clamp(xRange-x,0,xRange),top:clamp(y,0,yRange),bottom:clamp(yRange-y,0,yRange)});switch(closestEdge){case'left':pipX=0;pipY=y/yRange;break;case'right':pipX=1;pipY=y/yRange;break;case'top':pipY=0;pipX=x/xRange;break;case'bottom':pipY=1;pipX=x/xRange;break;}}else{const slope=velocityY/velocityX;let intersectionY=0;let intersectionX=0;intersectionX=velocityX>0?xRange:0;intersectionY=y+slope*(intersectionX-x);if(intersectionY>=0&&intersectionY<=yRange){pipX=intersectionX/xRange;pipY=intersectionY/yRange;}else{intersectionY=velocityY>0?yRange:0;intersectionX=x+1/slope*(intersectionY-y);pipX=intersectionX/xRange;pipY=intersectionY/yRange;}}return{pipX:clamp(pipX,0,1),pipY:clamp(pipY,0,1)};}",
+  code: "function calculatePIPPositionFromVelocity_VoicePanelPIPUtilsTsx7({velocityX:velocityX,velocityY:velocityY,absoluteX:absoluteX,absoluteY:absoluteY,windowDimensions:windowDimensions,safeArea:safeArea}){const{getPIPWindowDimensions,MIN_PIP_TOSS_VELOCITY,clamp}=this.__closure;const pipRegion=getPIPWindowDimensions(windowDimensions,safeArea);const{xRange:xRange,yRange:yRange}=pipRegion;const x=absoluteX-pipRegion.xOffset;const y=absoluteY-pipRegion.yOffset;let pipX=0;let pipY=0;if(Math.max(Math.abs(velocityY),Math.abs(velocityX))<MIN_PIP_TOSS_VELOCITY){const closestEdge=function(specs){const minValue=Math.min(...Object.values(specs));if(specs.left===minValue){return'left';}if(specs.top===minValue){return'top';}if(specs.right===minValue){return'right';}return'bottom';}({left:clamp(x,0,xRange),right:clamp(xRange-x,0,xRange),top:clamp(y,0,yRange),bottom:clamp(yRange-y,0,yRange)});switch(closestEdge){case'left':pipX=0;pipY=y/yRange;break;case'right':pipX=1;pipY=y/yRange;break;case'top':pipY=0;pipX=x/xRange;break;case'bottom':pipY=1;pipX=x/xRange;break;}}else{const slope=velocityY/velocityX;let intersectionY=0;let intersectionX=0;intersectionX=velocityX>0?xRange:0;intersectionY=y+slope*(intersectionX-x);if(intersectionY>=0&&intersectionY<=yRange){pipX=intersectionX/xRange;pipY=intersectionY/yRange;}else{intersectionY=velocityY>0?yRange:0;intersectionX=x+1/slope*(intersectionY-y);pipX=intersectionX/xRange;pipY=intersectionY/yRange;}}return{pipX:clamp(pipX,0,1),pipY:clamp(pipY,0,1)};}",
 };
 const xl = nativeDefault.radii.xl;
 const lg = nativeDefault.radii.lg;
@@ -293,9 +320,9 @@ function getVoicePanelPIPBorderRadius(width, height) {
   tmp3 = xl;
 }
 getVoicePanelPIPBorderRadius.__closure = { SquareActivityPIPReferenceDimensions, lg, xl };
-getVoicePanelPIPBorderRadius.__workletHash = 4735899866220;
+getVoicePanelPIPBorderRadius.__workletHash = 16865454935363;
 getVoicePanelPIPBorderRadius.__initData = {
-  code: "function getVoicePanelPIPBorderRadius_VoicePanelPIPUtilsTsx7(width,height){const{SquareActivityPIPReferenceDimensions,lg,xl}=this.__closure;if(width<=SquareActivityPIPReferenceDimensions.width&&height<=SquareActivityPIPReferenceDimensions.height){return lg;}return xl;}",
+  code: "function getVoicePanelPIPBorderRadius_VoicePanelPIPUtilsTsx8(width,height){const{SquareActivityPIPReferenceDimensions,lg,xl}=this.__closure;if(width<=SquareActivityPIPReferenceDimensions.width&&height<=SquareActivityPIPReferenceDimensions.height){return lg;}return xl;}",
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPUtils.tsx");
@@ -303,8 +330,7 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePan
 export { PIPReferenceDimensions };
 export { SquarePIPReferenceDimensions };
 export { SquareActivityPIPReferenceDimensions };
-export { PIP_LAYOUT_PHYSICS };
-export { layoutTransition };
+export const PIP_LAYOUT_PHYSICS = { mass: 0.3, damping: 80, stiffness: 150 };
 export const computePIPSize = function computePIPSize(SquarePIPReferenceDimensions, arg1, arg2, showSecondaryPIP) {
   ({ width, height } = SquarePIPReferenceDimensions);
   if (!arg1) {
@@ -330,7 +356,7 @@ export const computePIPSize = function computePIPSize(SquarePIPReferenceDimensio
       const size = { width: result, height: height2, containerHeight: null };
       let sum = height2;
       if (showSecondaryPIP) {
-        sum = 2 * height2 + hasOwnProperty;
+        sum = 2 * height2 + SECONDARY_PIP_TOP_MARGIN;
       }
       size.containerHeight = sum;
       return size;
@@ -348,7 +374,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   if (null != focusedParticipantId) {
     participant = ChannelRTCStore.getParticipant(channelId, focusedParticipantId);
   }
-  if (panelMode === constants.PANEL) {
+  if (panelMode === VoicePanelModes.PANEL) {
     if (null != focusedParticipantId) {
       let type1;
       if (participant != null) {
@@ -486,7 +512,7 @@ export const computePIPParticipantToShow = function computePIPParticipantToShow(
   let tmp46;
   if (!blockList.has(id)) {
     if (null != participant3) {
-      if (panelMode !== constants.PANEL) {
+      if (panelMode !== VoicePanelModes.PANEL) {
         const obj35 = { id, type: ParticipantTypes.USER };
         tmp46 = obj35;
       } else {
@@ -505,23 +531,23 @@ export const getPIPMode = function getPIPMode(connected) {
     if (null != manuallyFocusedId) {
       const participant = ChannelRTCStore.getParticipant(channelId, manuallyFocusedId);
     }
-    if (mode === constants.PANEL) {
+    if (mode === VoicePanelModes.PANEL) {
       if (null != participant) {
         if (participant.type === ParticipantTypes.ACTIVITY) {
-          return constants2.IN_PANEL;
+          return constants.IN_PANEL;
         } else {
           if (participant.type === tmp27.STREAM) {
             if (participant.userVideo) {
               const participant1 = ChannelRTCStore.getParticipant(channelId, participant.user.id);
               if (obj.canRenderParticipantVideo(participant1)) {
-                return constants2.IN_PANEL;
+                return constants.IN_PANEL;
               }
               obj = participantHasVideo;
             }
           }
           if (tmp) {
             if (participant.id !== AuthenticationStore.getId()) {
-              return constants2.IN_PANEL;
+              return constants.IN_PANEL;
             } else {
               const videoParticipants = ChannelRTCStore.getVideoParticipants(channelId);
               for (const item10032 of videoParticipants) {
@@ -529,13 +555,13 @@ export const getPIPMode = function getPIPMode(connected) {
                   let obj2 = participantHasVideo;
                   if (obj2.canRenderParticipantVideo(item10032)) {
                     obj3.return();
-                    return constants2.IN_PANEL;
+                    return constants.IN_PANEL;
                   }
                 }
                 continue;
               }
               if (participant.id !== AuthenticationStore.getId()) {
-                return constants2.IN_PANEL;
+                return constants.IN_PANEL;
               }
             }
           }
@@ -543,8 +569,8 @@ export const getPIPMode = function getPIPMode(connected) {
       }
     }
     let IN_APP;
-    if (mode === constants.PIP) {
-      IN_APP = constants2.IN_APP;
+    if (mode === VoicePanelModes.PIP) {
+      IN_APP = constants.IN_APP;
     }
     return IN_APP;
   }
@@ -552,5 +578,7 @@ export const getPIPMode = function getPIPMode(connected) {
 export { getPIPWindowDimensions };
 export { pipXYtoAbsoluteXY };
 export { getClampedPIPPosition };
+export { getScaledPIPContainerHeight };
+export { clampPIPScale };
 export { calculatePIPPositionFromVelocity };
 export { getVoicePanelPIPBorderRadius };

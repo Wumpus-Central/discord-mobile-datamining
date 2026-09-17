@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupAssignedAdultSetting.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2947 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef2949 from "../../../age_assurance/AgeAssurance.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeGroupScreenRowProps from "AgeGroupScreenRowProps.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -18,7 +18,7 @@ const route = SettingBuilders.createRoute({
   useTrailing() {
     const intl = util.intl;
     const intl2 = util.intl;
-    return "" + intl.string(util.t.XxRj7f) + " \u2022 " + intl2.string(_modDef2947.FTawSP);
+    return "" + intl.string(util.t.XxRj7f) + " \u2022 " + intl2.string(_modDef2949.FTawSP);
   },
   usePredicate: AgeGroupScreenRowProps.useShowAssignedAdultAgeGroupRow,
   screen: {

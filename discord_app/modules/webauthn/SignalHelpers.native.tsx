@@ -3,7 +3,6 @@ import LoggerDefault from "../debug/Logger.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-const NativeModules = fn(17).NativeModules;
 let closure_4 = new LoggerDefault("SignalHelpers.native");
 const prototype = function SignalHelpers() {
   return Object.create(new.target.prototype);
@@ -19,31 +18,31 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
         credentials = 2;
-        if (0 === c1) {
+        if (0 === v1) {
           if (arg0 === 1) {
             credentials = 3;
             throw value;
           } else if (arg0 === 2) {
             credentials = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else if (undefined !== NativeModules.DCDSecurityKeyManager.signalAllAcceptedCredentials) {
-            const result = credentials(c1[3]).encodeUserIdForWebAuthn(closure_1);
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            const result = credentials(6709).encodeUserIdForWebAuthn(closure_1);
             const mapped = credentials.map((cred_id) => cred_id.cred_id);
             const found = mapped.filter((item) => "" !== item);
-            const obj5 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
-            logger.info("signalAllAcceptedCredentials", obj5);
-            const DCDSecurityKeyManager = tmp19.DCDSecurityKeyManager;
-            const result1 = DCDSecurityKeyManager.signalAllAcceptedCredentials(rpId, result, found);
-            c1 = 1;
+            const obj4 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
+            logger.info("signalAllAcceptedCredentials", obj4);
+            const obj5 = credentials(6709);
+            const result1 = v1(6710).signalAllAcceptedCredentials(rpId, result, found);
+            v1 = 1;
             credentials = 1;
             const obj6 = { value: result1.catch(logger.warn), done: false };
             return obj6;
@@ -55,12 +54,13 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
           credentials = 3;
           const obj = { value, done: true };
           return obj;
+        } else {
+          credentials = 3;
+          return { value: "HermesInternal", done: null };
         }
-        credentials = 3;
-        return { value: "HermesInternal", done: null };
-      } catch (tmp14) {
+      } catch (tmp5) {
         credentials = tmp;
-        throw tmp14;
+        throw tmp5;
       }
     }
   })();
@@ -68,63 +68,64 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
 prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) {
   closure_0 = user;
   return (async () => {
-    if (c2 === 2) {
-      c2 = 3;
+    if (dependencyMap === 2) {
+      dependencyMap = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        c2 = 2;
+        dependencyMap = 2;
         if (0 === c3) {
           if (arg0 === 1) {
-            c2 = 3;
+            dependencyMap = 3;
             throw value;
           } else if (arg0 === 2) {
-            c2 = 3;
+            dependencyMap = 3;
             const obj4 = { value, done: true };
             return obj4;
-          } else if (undefined !== c3.DCDSecurityKeyManager.signalCurrentUserDetails) {
-            const result = username(global_name[3]).encodeUserIdForWebAuthn(username.id);
+          } else {
+            const result = username(dependencyMap[2]).encodeUserIdForWebAuthn(username.id);
             const email = username.email;
-            global_name = email;
+            let global_name = email;
             if (email == null) {
-              global_name = tmp7.global_name;
+              global_name = tmp23.global_name;
             }
             username = global_name;
             if (global_name == null) {
-              username = tmp7.username;
+              username = tmp23.username;
             }
-            username = tmp7.username;
+            username = tmp23.username;
             const obj5 = { rpId, encodedId: result, name: username, displayName: username };
             logger.info("signalCurrentUserDetails", obj5);
-            const DCDSecurityKeyManager = tmp25.DCDSecurityKeyManager;
-            const result1 = DCDSecurityKeyManager.signalCurrentUserDetails(rpId, result, username, username);
+            const obj3 = global_name(dependencyMap[3]);
+            const result1 = obj3.signalCurrentUserDetails(rpId, result, username, username);
             c3 = 1;
-            c2 = 1;
+            dependencyMap = 1;
             const obj6 = { value: result1.catch(logger.warn), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
-          c2 = 3;
+          dependencyMap = 3;
           throw value;
         } else if (arg0 === 2) {
-          c2 = 3;
+          dependencyMap = 3;
           const obj = { value, done: true };
           return obj;
+        } else {
+          dependencyMap = 3;
+          return { value: "HermesInternal", done: null };
         }
-        c2 = 3;
-        return { value: "HermesInternal", done: null };
-      } catch (tmp20) {
-        c2 = tmp;
-        throw tmp20;
+      } catch (tmp16) {
+        dependencyMap = tmp;
+        throw tmp16;
       }
     }
   })();
@@ -147,33 +148,32 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
     } else {
       try {
         c0 = 2;
-        if (0 === c1) {
+        if (0 === v1) {
           if (arg0 === 1) {
             c0 = 3;
             throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
-            let _catch = NativeModules;
-            if (undefined !== NativeModules.DCDSecurityKeyManager.signalUnknownCredential) {
-              let obj4 = closure_0;
-              if (typeof closure_0 === "string") {
-                const _JSON = JSON;
-                let cred_id = JSON.parse(obj4).id;
-              } else {
-                cred_id = obj4.cred_id;
-              }
-              obj4 = { rpId, credentialId: cred_id };
-              logger.info("signalUnknownCredential", obj4);
-              const DCDSecurityKeyManager = _catch.DCDSecurityKeyManager;
-              const result = DCDSecurityKeyManager.signalUnknownCredential(rpId, cred_id);
-              _catch = result.catch;
-              _catch(logger.warn);
-              c1 = 1;
-              c0 = 1;
+            let tmp7 = closure_0;
+            if (typeof closure_0 === "string") {
+              const _JSON = JSON;
+              let cred_id = JSON.parse(tmp7).id;
+            } else {
+              cred_id = tmp7.cred_id;
             }
+            const obj5 = { rpId: null, credentialId: null };
+            tmp7 = rpId;
+            obj5.rpId = rpId;
+            obj5.credentialId = cred_id;
+            logger.info("signalUnknownCredential", obj5);
+            const result = v1(dependencyMap[3]).signalUnknownCredential(rpId, cred_id);
+            result.catch(logger.warn);
+            v1 = 1;
+            c0 = 1;
+            const obj3 = v1(dependencyMap[3]);
           }
         } else if (arg0 === 1) {
           c0 = 3;
@@ -182,12 +182,13 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
           c0 = 3;
           const obj = { value, done: true };
           return obj;
+        } else {
+          c0 = 3;
+          return { value: "HermesInternal", done: null };
         }
-        c0 = 3;
-        return { value: "HermesInternal", done: null };
-      } catch (tmp10) {
+      } catch (tmp12) {
         c0 = tmp;
-        throw tmp10;
+        throw tmp12;
       }
     }
   })();

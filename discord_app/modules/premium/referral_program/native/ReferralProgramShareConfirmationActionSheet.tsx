@@ -15,7 +15,7 @@ function SharedUser(user) {
   user = user.user;
   const tmp = closure_8();
   const name = UserUtilsDefault.getName(user);
-  const tmp6 = user.trialCreationResult === user(7563).CreateReferralStatus.FAIL;
+  const tmp6 = user.trialCreationResult === user(7567).CreateReferralStatus.FAIL;
   const obj2 = { style: tmp.recipientRow, children: null };
   const items = [tmp.avatarContainer];
   let erroredAvatar = tmp6;
@@ -30,24 +30,24 @@ function SharedUser(user) {
   if (tmp6) {
     const obj4 = { children: null };
     const obj5 = { variant: "text-md/medium", color: "text-muted", style: tmp.recipientDisplayName, children: name };
-    const items2 = [closure_5(tmp5(4634).Text, obj5)];
+    const items2 = [closure_5(tmp5(4636).Text, obj5)];
     const obj6 = { variant: "text-md/medium", color: "text-muted", children: null };
     const intl = tmp5(1115).intl;
     const obj7 = { userName: name };
     obj6.children = intl.format(tmp5(1115).t.RO3T4B, obj7);
-    items2[1] = closure_5(tmp5(4634).Text, obj6);
+    items2[1] = closure_5(tmp5(4636).Text, obj6);
     obj4.children = items2;
     let tmp9Result = closure_7(closure_6, obj4);
   } else {
     const obj8 = { variant: "text-md/medium", color: "text-strong", style: tmp.recipientDisplayName, children: name };
-    tmp9Result = closure_5(tmp5(4634).Text, obj8);
+    tmp9Result = closure_5(tmp5(4636).Text, obj8);
   }
   items1[1] = tmp9Result;
   const obj9 = { variant: "secondary", size: "sm", text: null, icon: null, onPress: null };
   const intl2 = tmp5(1115).intl;
   obj9.text = intl2.string(user(1115).t["g33r/P"]);
   const obj3 = { style: items, size: user(1177).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "a" };
-  obj9.icon = closure_5(user(5156).ChatIcon, {
+  obj9.icon = closure_5(user(5158).ChatIcon, {
     size: "xs",
     color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT,
   });
@@ -55,7 +55,7 @@ function SharedUser(user) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: user.id });
   };
-  items1[2] = closure_5(user(5060).Button, obj9);
+  items1[2] = closure_5(user(5062).Button, obj9);
   obj2.children = items1;
   return closure_7(View, obj2);
 }
@@ -130,20 +130,20 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const obj3 = {
     startExpanded: true,
     contentStyles: tmp.content,
-    header: closure_5(tmp5(7259).BottomSheetTitleHeader, { title: null }),
+    header: closure_5(tmp5(7263).BottomSheetTitleHeader, { title: null }),
     children: null,
   };
   const obj4 = { children: null };
   const formatResult = intl3.format(tmp5(1115).t.AwGSWl, obj);
   const items = [
-    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(5778).FistBumpSpotIllustration, {}) }),
-    closure_5(tmp5(4634).Text, {
+    closure_5(View, { style: tmp.headerAsset, children: closure_5(tmp5(5780).FistBumpSpotIllustration, {}) }),
+    closure_5(tmp5(4636).Text, {
       variant: "heading-lg/bold",
       color: "mobile-text-heading-primary",
       style: tmp.header,
       children: stringResult,
     }),
-    closure_5(tmp5(4634).Text, {
+    closure_5(tmp5(4636).Text, {
       variant: "text-md/medium",
       color: "text-default",
       style: tmp.subheader,
@@ -151,7 +151,7 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
     }),
   ];
   const obj8 = { style: tmp.recipientContainer, children: null };
-  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(5778).FistBumpSpotIllustration, {}) };
+  const obj5 = { style: tmp.headerAsset, children: closure_5(tmp5(5780).FistBumpSpotIllustration, {}) };
   const obj6 = {
     variant: "heading-lg/bold",
     color: "mobile-text-heading-primary",
@@ -164,6 +164,6 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   );
   items[3] = closure_5(View, obj8);
   obj4.children = items;
-  obj3.children = closure_7(tmp5(5058).Stack, obj4);
-  return closure_5(tmp5(7260).BottomSheet, obj3);
+  obj3.children = closure_7(tmp5(5060).Stack, obj4);
+  return closure_5(tmp5(7264).BottomSheet, obj3);
 }

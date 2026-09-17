@@ -1,0 +1,16 @@
+// discord_app/modules/forwarding/ForwardAgeRestrictedDestinationsExperiment.tsx
+import apex_ApexExperimentDefault from "../experiments/apex/ApexExperiment.tsx";
+
+const obj = {
+  kind: "user",
+  name: "2026-08-forward-age-restricted-destinations",
+  defaultConfig: { disableAgeRestrictedDestinations: false },
+  variations: null,
+};
+const obj2 = { 1: null };
+obj2[1] = { disableAgeRestrictedDestinations: true };
+obj.variations = obj2;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forwarding/ForwardAgeRestrictedDestinationsExperiment.tsx");
+
+export default apex_ApexExperimentDefault(obj);

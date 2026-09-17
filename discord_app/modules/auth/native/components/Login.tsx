@@ -59,7 +59,7 @@ const View = fn(17).View;
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     password: { marginTop: 24 },
@@ -500,7 +500,7 @@ export default function Login(isMultiAccount) {
     errorMessage: null,
     testID: "login_login_input",
     onPressCountrySelector: null,
-    isClearable: true,
+    clearable: true,
     autoComplete: "username",
   };
   tmp4Result = require("MetaQuestUtils");

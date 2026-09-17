@@ -628,7 +628,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       const iter = values[Symbol.iterator]();
       while (iter !== undefined) {
         ({ location: _location, applicationId } = nextResult);
-        let obj2 = applyArgumentsResult(4266);
+        let obj2 = applyArgumentsResult(4268);
         let embeddedActivityLocationChannelId = obj2.getEmbeddedActivityLocationChannelId(_location);
         let tmp8 = embeddedActivityLocationChannelId;
         let tmp9 = null != embeddedActivityLocationChannelId;
@@ -899,7 +899,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     if (getChannel !== closure_131_1) {
                       set = 2;
                       c6 = 1;
-                      const obj5 = { value: getChannel(7273).fetchApplication(closure_131_1), done: false };
+                      const obj5 = { value: getChannel(7277).fetchApplication(closure_131_1), done: false };
                       return obj5;
                     }
                   } else {
@@ -922,7 +922,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                   const intl = applyArgumentsResult(1115).intl;
                   closure_132_1.showLaunchErrorModal(intl.string(applyArgumentsResult(1115).t.UXoQTp));
                 }
-                obj25 = applyArgumentsResult(9645);
+                obj25 = applyArgumentsResult(9656);
               }
             } else {
               if (3 === getChannel) {
@@ -938,11 +938,11 @@ class EmbeddedActivitiesManager extends tmp3 {
                   activityConfigs = closure_131_9.activityConfigs;
                   applications = closure_131_9.applications;
                   const obj9 = { applicationId: closure_131_1, activityConfigs, applications };
-                  if (null == getChannel(9663)(obj9)) {
+                  if (null == getChannel(9674)(obj9)) {
                     const obj11 = { guildId: closure_131_8, force: true };
                     set = 4;
                     c6 = 1;
-                    const obj12 = { value: applyArgumentsResult(9647).fetchShelf(obj11), done: false };
+                    const obj12 = { value: applyArgumentsResult(9658).fetchShelf(obj11), done: false };
                     return obj12;
                   }
                 }
@@ -961,7 +961,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     activityConfigs: closure_131_12.activityConfigs,
                     applications: closure_131_12.applications,
                   };
-                  getChannel(9663)(obj16);
+                  getChannel(9674)(obj16);
                 }
               } else if (5 === getChannel) {
                 if (arg0 === 1) {
@@ -1011,7 +1011,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 obj18.inviterUserId = closure_131_4;
                 set = 6;
                 c6 = 1;
-                const obj20 = { value: applyArgumentsResult(9673).maybeJoinEmbeddedActivity(obj18), done: false };
+                const obj20 = { value: applyArgumentsResult(9684).maybeJoinEmbeddedActivity(obj18), done: false };
                 return obj20;
               } else {
                 const obj21 = {
@@ -1023,7 +1023,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 };
                 set = 5;
                 c6 = 1;
-                const obj22 = { value: getChannel(9691)(obj21), done: false };
+                const obj22 = { value: getChannel(9702)(obj21), done: false };
                 return obj22;
               }
             }
@@ -1044,13 +1044,13 @@ class EmbeddedActivitiesManager extends tmp3 {
               const obj23 = { guildId: closure_131_8 };
               set = 3;
               c6 = 1;
-              const obj24 = { value: applyArgumentsResult(9647).fetchShelf(obj23), done: false };
+              const obj24 = { value: applyArgumentsResult(9658).fetchShelf(obj23), done: false };
               return obj24;
             } else {
               const intl2 = applyArgumentsResult(1115).intl;
               closure_132_1.showLaunchErrorModal(intl2.string(applyArgumentsResult(1115).t.uGDCcw));
             }
-            tmp56 = getChannel(9672);
+            tmp56 = getChannel(9683);
           }
         } catch (tmp89) {
           c6 = tmp;

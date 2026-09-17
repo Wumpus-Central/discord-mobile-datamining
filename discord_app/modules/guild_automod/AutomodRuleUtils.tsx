@@ -7,8 +7,8 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(17750).getRuleCountByTriggerType;
-const Constants = fn(12005);
+const getRuleCountByTriggerType = fn(17791).getRuleCountByTriggerType;
+const Constants = fn(12014);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
@@ -67,6 +67,13 @@ export const isRuleUserProfileFilter = function isRuleUserProfileFilter(triggerT
     triggerType = triggerType.triggerType;
   }
   return triggerType === constants.USER_PROFILE;
+};
+export const isRuleApplicationFilter = function isRuleApplicationFilter(triggerType) {
+  triggerType = undefined;
+  if (triggerType != null) {
+    triggerType = triggerType.triggerType;
+  }
+  return triggerType === constants.APPLICATION;
 };
 export const createDefaultRule = function createDefaultRule(guildId, triggerType) {
   const obj = AutomodTriggerConfigs.triggerConfigs[triggerType];
@@ -171,17 +178,17 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     }
     if (0 === keywordFilter.length) {
       if (0 === regexPatterns.length) {
-        const _Error4 = Error;
-        const intl4 = util.intl;
-        const error = new Error(intl4.string(util.t.kz2Av3));
+        const _Error5 = Error;
+        const intl5 = util.intl;
+        const error = new Error(intl5.string(util.t.kz2Av3));
         throw error;
       }
     }
     if (keywordFilter.length > hasOwnProperty) {
-      const _Error3 = Error;
-      const intl3 = util.intl;
-      const obj2 = { limit: tmp2 };
-      const error1 = new Error(intl3.formatToPlainString(util.t.mee4qd, obj2));
+      const _Error4 = Error;
+      const intl4 = util.intl;
+      const obj2 = { limit: tmp3 };
+      const error1 = new Error(intl4.formatToPlainString(util.t.mee4qd, obj2));
       throw error1;
     } else {
       const item = keywordFilter.forEach((keyword) => {
@@ -193,10 +200,10 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
         throw invalidKeywordError;
       });
       if (regexPatterns.length > timestampProducer) {
-        const _Error2 = Error;
-        const intl2 = util.intl;
-        const obj = { limit: tmp33 };
-        const error2 = new Error(intl2.formatToPlainString(util.t.tDjhF1, obj));
+        const _Error3 = Error;
+        const intl3 = util.intl;
+        const obj = { limit: tmp41 };
+        const error2 = new Error(intl3.formatToPlainString(util.t.tDjhF1, obj));
         throw error2;
       } else {
         const item1 = regexPatterns.forEach((regex) => {
@@ -210,11 +217,22 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
       }
     }
   }
-  if (0 === triggerType.actions.length) {
+  let triggerType1;
+  if (triggerType != null) {
+    triggerType1 = triggerType.triggerType;
+  }
+  if (triggerType1 === constants.APPLICATION) {
+    if (null == triggerType.triggerMetadata.applicationId) {
+      const _Error2 = Error;
+      const intl2 = util.intl;
+      const error3 = new Error(intl2.string(util.t["6NbEkN"]));
+      throw error3;
+    }
+  } else if (0 === triggerType.actions.length) {
     const _Error = Error;
     let intl = util.intl;
-    const error3 = new Error(intl.string(util.t["t+gj5V"]));
-    throw error3;
+    const error4 = new Error(intl.string(util.t["t+gj5V"]));
+    throw error4;
   }
 };
 export const isBackendPersistedRule = function isBackendPersistedRule(id) {
@@ -259,20 +277,23 @@ export const actionTypeToName = function actionTypeToName(arg0) {
 };
 export const triggerTypeToName = function triggerTypeToName(newValue) {
   if (constants.KEYWORD === newValue) {
-    const intl6 = util.intl;
-    return intl6.string(util.t.ffR2cM);
+    const intl7 = util.intl;
+    return intl7.string(util.t.ffR2cM);
   } else if (constants.ML_SPAM === newValue) {
-    const intl5 = util.intl;
-    return intl5.string(util.t["puF/Os"]);
+    const intl6 = util.intl;
+    return intl6.string(util.t["puF/Os"]);
   } else if (constants.DEFAULT_KEYWORD_LIST === newValue) {
-    const intl4 = util.intl;
-    return intl4.string(util.t.LnGhZv);
+    const intl5 = util.intl;
+    return intl5.string(util.t.LnGhZv);
   } else if (constants.MENTION_SPAM === newValue) {
-    const intl3 = util.intl;
-    return intl3.string(util.t.pX7i6n);
+    const intl4 = util.intl;
+    return intl4.string(util.t.pX7i6n);
   } else if (constants.USER_PROFILE === newValue) {
+    const intl3 = util.intl;
+    return intl3.string(util.t.q1L2v8);
+  } else if (constants.APPLICATION === newValue) {
     const intl2 = util.intl;
-    return intl2.string(util.t.q1L2v8);
+    return intl2.string(util.t.VxE3o6);
   } else {
     const intl = util.intl;
     return intl.string(util.t.SP9BBx);

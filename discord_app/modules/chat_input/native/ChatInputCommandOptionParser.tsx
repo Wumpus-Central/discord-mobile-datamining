@@ -2,7 +2,7 @@
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import _modDef8260 from "../../../../_runtime/metro/08260__.js";
+import _modDef8279 from "../../../../_runtime/metro/08279__.js";
 import ChatInputParser from "ChatInputParser.tsx";
 import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -69,7 +69,7 @@ function buildGameMentionResult(id) {
     iconSpacing: 4,
   };
   if (obj2.isNullOrEmpty(uri)) {
-    uri = Image.resolveAssetSource(_modDef8260).uri;
+    uri = Image.resolveAssetSource(_modDef8279).uri;
   }
   obj.icon = uri;
   return obj;
@@ -113,7 +113,7 @@ function findAllTimestampPillMatches(size, text) {
 }
 const Image = fn(17).Image;
 const Permissions = fn(1074).Permissions;
-const ChannelAutocompleteConstants = fn(5085);
+const ChannelAutocompleteConstants = fn(5087);
 ({
   GAME_MENTION_INPUT_PREFIX: c10,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_11,
@@ -136,6 +136,51 @@ const re20 =
 const re21 = /^@(silent(?![^\s]))/;
 const everyone = "everyone";
 const here = "here";
+function getMatchedOptions(c22, activeCommand) {
+  if (activeCommand != null) {
+    activeCommand = activeCommand.activeCommand;
+    if (activeCommand != null) {
+      const options = activeCommand.options;
+    }
+  }
+  let activeCommand1;
+  if (activeCommand != null) {
+    activeCommand1 = activeCommand.activeCommand;
+  }
+  if (null != activeCommand1) {
+    if (null != options) {
+      re15.lastIndex = 0;
+      const items = [];
+      const _Set = Set;
+      const set = new Set();
+      let match = re15.exec(c22);
+      if (null != match) {
+        do {
+          if (match[0].length > 1) {
+            let first = match[0];
+            for (let num = 0; num < options.length; num = num + 1) {
+              let hasItem = set.has(num);
+              if (!hasItem) {
+                hasItem = options[num].displayName !== tmp18;
+              }
+              if (!hasItem) {
+                let obj = { location: match.index + 1, length: match[0].length - 1, data: null };
+                let obj2 = { type: ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION, option: options[num] };
+                obj.data = obj2;
+                let arr = items.push(obj);
+                let addResult = set.add(num);
+              }
+            }
+          }
+          re15.lastIndex = match.index + 1;
+          match = re15.exec(c22);
+        } while (null != match);
+      }
+      return items;
+    }
+  }
+  return [];
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/ChatInputCommandOptionParser.tsx");
 
@@ -241,50 +286,16 @@ export const getMatchedOptionsWithValue = (length2, activeCommand) => {
   }
   return [];
 };
-export const getMatchedOptions = (arg0, activeCommand) => {
-  if (activeCommand != null) {
-    activeCommand = activeCommand.activeCommand;
-    if (activeCommand != null) {
-      const options = activeCommand.options;
-    }
+export { getMatchedOptions };
+export const getCommandOptionValueEnd = function getCommandOptionValueEnd(c22, sum, activeCommand) {
+  closure_0 = sum;
+  const found = getMatchedOptions(length3, { activeCommand }).find((location) => location.location > closure_0);
+  if (null != found) {
+    length = found.location - 1;
+  } else {
+    length = length3.length;
   }
-  let activeCommand1;
-  if (activeCommand != null) {
-    activeCommand1 = activeCommand.activeCommand;
-  }
-  if (null != activeCommand1) {
-    if (null != options) {
-      re15.lastIndex = 0;
-      const items = [];
-      const _Set = Set;
-      const set = new Set();
-      let match = re15.exec(arg0);
-      if (null != match) {
-        do {
-          if (match[0].length > 1) {
-            let first = match[0];
-            for (let num = 0; num < options.length; num = num + 1) {
-              let hasItem = set.has(num);
-              if (!hasItem) {
-                hasItem = options[num].displayName !== tmp18;
-              }
-              if (!hasItem) {
-                let obj = { location: match.index + 1, length: match[0].length - 1, data: null };
-                let obj2 = { type: ChatInputParser.ChatInputParseResultDataType.COMMAND_OPTION, option: options[num] };
-                obj.data = obj2;
-                let arr = items.push(obj);
-                let addResult = set.add(num);
-              }
-            }
-          }
-          re15.lastIndex = match.index + 1;
-          match = re15.exec(arg0);
-        } while (null != match);
-      }
-      return items;
-    }
-  }
-  return [];
+  return length;
 };
 export const getTextBeforeFirstOption = (text) => {
   re15.lastIndex = 0;

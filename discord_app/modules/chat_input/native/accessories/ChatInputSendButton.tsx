@@ -39,7 +39,7 @@ function FloatingSlot(arg0) {
   return jsx(ReanimatedRexportDefault.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(12104).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(12113).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = {
   BUTTON_SEND: "send-button",
@@ -47,7 +47,7 @@ const constants = {
   BUTTON_SEND_VOICE_MESSAGE: "voice-message-button",
   BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled",
 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_11 = createStyles.createStyles((width, height) => {
   const obj = {
     button: null,
@@ -123,12 +123,12 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
   let stateFromStores1;
   noop = undefined;
   canSendVoiceMessage = undefined;
-  const token = channel(4339).useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-  const obj = channel(4339);
-  const token1 = channel(4339).useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
-  const obj2 = channel(4339);
-  const token2 = channel(4339).useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  const obj3 = channel(4339);
+  const token = channel(4341).useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+  const obj = channel(4341);
+  const token1 = channel(4341).useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
+  const obj2 = channel(4341);
+  const token2 = channel(4341).useToken(onSendMessage(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const obj3 = channel(4341);
   const tmp7 = closure_11(token, token1);
   let items = [AccessibilityStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -182,7 +182,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
     obj7.style = size;
     if (canSendVoiceMessage) {
       const obj8 = { disabled: stateFromStores1, channelId: channel.id };
-      let tmp15Result = jsx(onSendMessage(12397), { disabled: stateFromStores1, channelId: channel.id });
+      let tmp15Result = jsx(onSendMessage(12406), { disabled: stateFromStores1, channelId: channel.id });
     } else {
       const obj9 = {
         active: true,
@@ -195,12 +195,12 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
         disabled: null,
       };
       ({ button: obj11.style, buttonActive: obj11.activeStyle, iconActive: obj11.activeIconStyle } = tmp7);
-      obj9.IconComponent = tmp(4582).SendMessageIcon;
+      obj9.IconComponent = tmp(4584).SendMessageIcon;
       const intl = tmp(1115).intl;
       obj9.accessibilityLabel = intl.string(tmp(1115).t.TXNS7S);
       obj9.onPress = onSendMessage;
       obj9.disabled = !tmp12;
-      tmp15Result = jsx(onSendMessage(12381), {
+      tmp15Result = jsx(onSendMessage(12390), {
         active: true,
         style: null,
         activeStyle: null,
@@ -210,7 +210,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
         onPress: null,
         disabled: null,
       });
-      const tmp3Result = onSendMessage(12381);
+      const tmp3Result = onSendMessage(12390);
     }
     obj7.children = tmp15Result;
     return <canSendVoiceMessage style={null}>{null}</canSendVoiceMessage>;
@@ -221,7 +221,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
       buttonHeight: token1,
       buttonMargin: token2,
       sendVoiceMessageEnabled: canSendVoiceMessage,
-      children: jsx(tmp(4348).TransitionGroup, {
+      children: jsx(tmp(4350).TransitionGroup, {
         items: memo,
         renderItem: renderChatInputSendButton,
         getItemKey: getChatInputSendButtonItemKey,
@@ -234,7 +234,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
         buttonMargin={token2}
         sendVoiceMessageEnabled={canSendVoiceMessage}
       >
-        {jsx(tmp(4348).TransitionGroup, {
+        {jsx(tmp(4350).TransitionGroup, {
           items: memo,
           renderItem: renderChatInputSendButton,
           getItemKey: getChatInputSendButtonItemKey,

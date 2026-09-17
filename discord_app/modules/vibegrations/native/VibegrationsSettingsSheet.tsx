@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsSettingsSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3591 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import VibegrationsUtils from "../lib/VibegrationsUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../channel/native/ChannelPickerActionSheet.tsx";
@@ -81,7 +81,7 @@ function VibegrationsChannelSettingRow(projectId) {
         obj3.channels = channels;
         obj3.selectedChannel = found;
         const intl = util.intl;
-        obj3.noChannelOptionLabel = intl.string(_modDef3591.aO4AM6);
+        obj3.noChannelOptionLabel = intl.string(_modDef3593.aO4AM6);
         obj3.onSelect = function onSelect(id) {
           let str;
           if (id != null) {
@@ -102,7 +102,7 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(16725);
+let VibegrationsConnectionStore = fn(16752);
 ({
   requestProjectRebuild: closure_12,
   sendUserMessage: map1,
@@ -112,7 +112,7 @@ let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const VibegrationsSettingsSheet = "VibegrationsSettingsSheet";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_21 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingBottom },
@@ -281,7 +281,7 @@ export default function VibegrationsSettingsSheet(projectId) {
           autoCorrect: false,
           value: null,
           onChange: null,
-          isDisabled: null,
+          disabled: null,
         };
         let str4 = "";
         if (typeof tmp25 === "string") {
@@ -297,7 +297,7 @@ export default function VibegrationsSettingsSheet(projectId) {
             return obj;
           });
         };
-        obj11.isDisabled = first2;
+        obj11.disabled = first2;
         obj5.fallback = found(projectId(flag[25]).TextInput, obj11, found.key);
         let tmp12Result = found(renderValueSetting, obj5, found.key);
       } else {
@@ -314,7 +314,7 @@ export default function VibegrationsSettingsSheet(projectId) {
           autoCorrect: false,
           value: null,
           onChange: null,
-          isDisabled: null,
+          disabled: null,
         };
         let str3 = "";
         if (typeof tmp11 === "string") {
@@ -330,7 +330,7 @@ export default function VibegrationsSettingsSheet(projectId) {
             return obj;
           });
         };
-        obj.isDisabled = first2;
+        obj.disabled = first2;
         tmp12Result = found(projectId(flag[25]).TextInput, obj, found.key);
       }
       return tmp12Result;
@@ -433,7 +433,7 @@ export default function VibegrationsSettingsSheet(projectId) {
       autoCorrect: false,
       value: null,
       onChange: null,
-      isDisabled: null,
+      disabled: null,
     };
     let str3;
     if (value.set) {
@@ -455,7 +455,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         return obj;
       });
     };
-    obj.isDisabled = first2;
+    obj.disabled = first2;
     tmp12Result = found(projectId(flag[25]).TextInput, obj, value.name);
   }
   let tmp3 = closure_21(notifyAgent(flag[14])({ includeKeyboardHeight: true }).insets.bottom);
@@ -562,12 +562,12 @@ export default function VibegrationsSettingsSheet(projectId) {
   const memo3 = obj2.useMemo(() => {
     const obj = { id: "settings", label: null, count: null, page: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3591.jczqxT);
+    obj.label = intl.string(_modDef3593.jczqxT);
     obj.count = found.length;
     const items = [obj];
     const obj2 = { id: "secrets", label: null, count: null, page: null };
     const intl2 = util.intl;
-    obj2.label = intl2.string(_modDef3591.iD7xfZ);
+    obj2.label = intl2.string(_modDef3593.iD7xfZ);
     obj2.count = memo2.length;
     items[1] = obj2;
     return items;
@@ -715,9 +715,9 @@ export default function VibegrationsSettingsSheet(projectId) {
                     if (application_id == null) {
                       _null = null;
                     }
-                    _null2(13401)(_null);
+                    _null2(13409)(_null);
                     let prop;
-                    const tmp19 = _null2(13401);
+                    const tmp19 = _null2(13409);
                     if (project2 != null) {
                       prop = project2.preview_application_id;
                     }
@@ -725,16 +725,16 @@ export default function VibegrationsSettingsSheet(projectId) {
                     if (prop == null) {
                       _null2 = null;
                     }
-                    _null2(13401)(_null2);
-                    const tmp27 = _null2(13401);
+                    _null2(13409)(_null2);
+                    const tmp27 = _null2(13409);
                   }
                 }
-                _null2(4605).hideActionSheet(closure_1_20);
+                _null2(4607).hideActionSheet(closure_1_20);
                 c5 = 1;
-                const obj = _null2(4605);
+                const obj = _null2(4607);
               }
               const intl = _null(1115).intl;
-              closure_1_13(closure_131_0, intl.string(_null2(3591).gqJFu0));
+              closure_1_13(closure_131_0, intl.string(_null2(3593).gqJFu0));
             }
             c5 = 0;
             closure_131_12(false);

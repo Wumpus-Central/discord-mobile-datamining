@@ -12,7 +12,7 @@ const MAX_CHANNEL_NAME_LENGTH = fn(1074).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   iconUploader: null,
@@ -321,8 +321,8 @@ export default noop.memo(
         defaultValue: null,
         maxLength: null,
         onChange: null,
-        isDisabled: null,
-        isClearable: true,
+        disabled: null,
+        clearable: true,
       };
       let intl2 = tmp4(tmp3[16]).intl;
       obj11.label = intl2.string(tmp4(tmp3[16]).t.GEGW3P);
@@ -330,7 +330,7 @@ export default noop.memo(
       obj11.defaultValue = tmp2ResultResult;
       obj11.maxLength = maxLength;
       obj11.onChange = tmp8[1];
-      obj11.isDisabled = tmp28;
+      obj11.disabled = tmp28;
       obj10.children = c10(tmp4(tmp3[22]).TextInput, obj11);
       items5[2] = c10(hasUnsavedChanges, obj10);
       let obj12 = { onPress: callback1, text: null, variant: null, disabled: null, loading: null };

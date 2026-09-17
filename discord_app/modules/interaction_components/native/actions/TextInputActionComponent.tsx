@@ -34,7 +34,7 @@ export default noop.memo((type) => {
     defaultValue: null,
     onChange: null,
     autoFocus: null,
-    isClearable: true,
+    clearable: true,
   };
   let str = "default";
   const state = noop.useState(() => {

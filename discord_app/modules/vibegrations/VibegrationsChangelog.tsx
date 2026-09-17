@@ -3,6 +3,35 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   {
+    date: "2026-09-16",
+    platforms: ["mobile"],
+    summary:
+      "On phones, tap a name or avatar in the transcript to open their profile, and hold a message to copy its text; handy when building together.",
+  },
+  {
+    date: "2026-09-16",
+    platforms: ["mobile"],
+    summary:
+      "On phones, the model picker now sits in the composer until you start typing, and send and stop take turns in that corner as they do in a text channel.",
+  },
+  {
+    date: "2026-09-16",
+    platforms: ["mobile"],
+    summary:
+      "On phones, the strip above the composer now shows what Conjure is doing and the runes used, as on desktop; tap the indicator to read the model\u2019s reasoning as it streams.",
+  },
+  {
+    date: "2026-09-16",
+    platforms: ["mobile"],
+    summary: "While Conjure works on your phone, a side quest may be offered when a video quest is available.",
+  },
+  {
+    date: "2026-09-16",
+    platforms: ["mobile"],
+    summary:
+      "On phones, helpers now say what they finished and how long it took, a quick aside is marked as one, and a project that is gone says so instead of closing.",
+  },
+  {
     date: "2026-09-15",
     platforms: ["mobile"],
     summary:
@@ -36,6 +65,12 @@ const items = [
     date: "2026-09-14",
     platforms: ["mobile"],
     summary: "On phones, App Settings is one tap away in the chat menu, without waiting for Conjure to ask.",
+  },
+  {
+    date: "2026-09-14",
+    platforms: ["desktop"],
+    summary:
+      "An app's channel now opens its chat when unread messages are waiting, and new messages preview over the running app while the chat is closed.",
   },
   {
     date: "2026-09-13",

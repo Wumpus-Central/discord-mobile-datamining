@@ -47,7 +47,7 @@ function useNativeIAPPayments() {
   if (nativePaymentsConnected) {
     nativePaymentsConnected = null != storeFront;
   }
-  storeFront(10900)(() => {
+  storeFront(10908)(() => {
     let tmp = nativePaymentsConnected;
     if (!nativePaymentsConnected) {
       tmp = c15;
@@ -189,9 +189,9 @@ function useCancelSubscription(arg0, arg1) {
       closure_1(38)(memo, "Cannot update subscription");
       closure_1(38)(nativePaymentsConnected, "Cannot connect to IAP API");
       closure_1(38)(null != closure_6, "Subscription not found");
-      yield tmp2(7529).cancelGenericSubscription(closure_6.requestIdentifier, closure_6.subscriptionId, closure_1);
+      yield tmp2(7533).cancelGenericSubscription(closure_6.requestIdentifier, closure_6.subscriptionId, closure_1);
       closure_128_0 = value;
-      yield tmp2(4962).fetchSubscriptions();
+      yield tmp2(4964).fetchSubscriptions();
       return closure_128_0;
     }),
     items3,
@@ -231,9 +231,9 @@ function useResubscribeSubscription(arg0) {
       nativePaymentsConnected(38)(nativePaymentsConnected, "Cannot connect to IAP API");
       nativePaymentsConnected(38)(null != closure_5, "Subscription not found");
       nativePaymentsConnected(38)(null != stateFromStores, "Subscription not found");
-      yield tmp2(7529).resubscribeGenericSubscription(closure_5, stateFromStores.isACOM);
+      yield tmp2(7533).resubscribeGenericSubscription(closure_5, stateFromStores.isACOM);
       closure_128_0 = value;
-      yield tmp2(4962).fetchSubscriptions();
+      yield tmp2(4964).fetchSubscriptions();
       return closure_128_0;
     }),
     items3,

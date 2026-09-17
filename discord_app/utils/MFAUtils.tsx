@@ -1,8 +1,7 @@
 // discord_app/utils/MFAUtils.tsx
-import _mod17 from "../../_runtime/metro/00017__.js";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
+import encodeDefault from "../../_runtime/07064_encode.js";
 import MetaQuestUtils from "../modules/device/MetaQuestUtils.android.tsx";
-import encodeDefault from "../../_runtime/07060_encode.js";
 import size from "../../_runtime/metro/00002__.js";
 
 let _crypto;
@@ -23,18 +22,13 @@ if (tmp5) {
 if (tmp5) {
   tmp5 = tmp4;
 }
-let tmp6 = null != _mod17.NativeModules.DCDSecurityKeyManager;
-if (tmp6) {
-  const _module = MetaQuestUtils;
-  tmp6 = !_module.isMetaQuest();
-}
 function encodeTotpSecret(totpSecret) {
   return totpSecret.replace(/[\s._-]+/g, "").toUpperCase();
 }
 const result = size.fileFinishedImporting("utils/MFAUtils.tsx");
 
 export const hasCrypto = tmp5;
-export const hasWebAuthn = tmp6;
+export const hasWebAuthn = !MetaQuestUtils.isMetaQuest();
 export const generateTotpSecret = function generateTotpSecret() {
   const uint8Array = new Uint8Array(20);
   const randomValues = _crypto.getRandomValues(uint8Array);

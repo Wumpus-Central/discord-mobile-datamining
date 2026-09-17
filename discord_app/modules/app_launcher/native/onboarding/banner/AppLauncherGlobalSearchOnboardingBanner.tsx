@@ -8,7 +8,7 @@ const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1483).DEFAULT_CONTENT_PADDING;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { appsIcon: null, appsIconImage: null };
 let size = {
   height: 40,
@@ -81,7 +81,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(11288).Coachmark, {
+    tmp3 = jsx(markAsDismissed(11296).Coachmark, {
       renderImgComponent: function appsIcon() {
         const obj = {
           style: closure_2.appsIcon,

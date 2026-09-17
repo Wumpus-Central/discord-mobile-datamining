@@ -117,7 +117,7 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   obj6.onPress = callback;
   obj5.trailing = closure_10(guildId(onSave[18]).ActionSheetHeaderPressableText, obj6);
   obj3.header = closure_10(guildId(onSave[17]).BottomSheetTitleHeader, obj5);
-  const obj7 = { size: "md", isRound: true, grow: false, accessibilityLabel: null, placeholder: null, onChange: null };
+  const obj7 = { size: "md", round: true, grow: false, accessibilityLabel: null, placeholder: null, onChange: null };
   const intl5 = guildId(onSave[13]).intl;
   obj7.accessibilityLabel = intl5.string(guildId(onSave[13]).t.Sojqsr);
   const intl6 = guildId(onSave[13]).intl;
@@ -192,7 +192,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsProjectSettingsSheet = "VibegrationsProjectSettingsSheet";
 VibegrationsCollaboratorRolesSheet = "VibegrationsCollaboratorRolesSheet";
-let createStyles = fn(4638);
+let createStyles = fn(4640);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   roleLabel: null,
@@ -215,7 +215,7 @@ obj2.roleListFooter = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4638);
+createStyles = fn(4640);
 let closure_15 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -505,12 +505,12 @@ export default function VibegrationsProjectSettingsSheet(projectId) {
   obj4.title = intl2.string(guildId(stateFromStores[14])["xhcY+n"]);
   obj3.header = closure_10(projectId(stateFromStores[17]).BottomSheetTitleHeader, obj4);
   let obj5 = { style: tmp.content, children: null };
-  const obj6 = { label: null, value: null, onChange: null, maxLength: 128, isDisabled: null };
+  const obj6 = { label: null, value: null, onChange: null, maxLength: 128, disabled: null };
   const intl3 = tmp2(tmp3[13]).intl;
   obj6.label = intl3.string(guildId(stateFromStores[14]).u9UpIx);
   obj6.value = str2;
   obj6.onChange = callback;
-  obj6.isDisabled = first3;
+  obj6.disabled = first3;
   const items4 = [closure_10(projectId(stateFromStores[25]).TextInput, obj6), , , , , ,];
   let tmp30Result = null;
   if (null != tmp15) {

@@ -45,11 +45,15 @@ export function useGameServerPricingCoachmarkDCF() {
   return items;
 }
 export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
+  let _location = "useBoostToUnlockCoachmarkDCF-ineligible";
+  if (arg0) {
+    _location = "useBoostToUnlockCoachmarkDCF-eligible";
+  }
   const obj = BoostToUnlockMobileCoachmarkExperimentDefault;
   let prop = null;
   if (arg0) {
     prop = null;
-    if (obj.useConfig({ location: "useBoostToUnlockCoachmarkDCF" }).showCoachmark) {
+    if (obj.useConfig({ location: _location }).showCoachmark) {
       prop = dismissible_content.DismissibleContent.BOOST_TO_UNLOCK_COACHMARK;
     }
   }

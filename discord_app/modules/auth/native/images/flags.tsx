@@ -1,9 +1,4 @@
 // discord_app/modules/auth/native/images/flags.tsx
-import _mod15537 from "../../../../../_runtime/metro/15537__.js";
-import _mod15538 from "../../../../../_runtime/metro/15538__.js";
-import _mod15539 from "../../../../../_runtime/metro/15539__.js";
-import _mod15540 from "../../../../../_runtime/metro/15540__.js";
-import _mod15541 from "../../../../../_runtime/metro/15541__.js";
 import _mod15542 from "../../../../../_runtime/metro/15542__.js";
 import _mod15543 from "../../../../../_runtime/metro/15543__.js";
 import _mod15544 from "../../../../../_runtime/metro/15544__.js";
@@ -30,40 +25,45 @@ import _mod15564 from "../../../../../_runtime/metro/15564__.js";
 import _mod15565 from "../../../../../_runtime/metro/15565__.js";
 import _mod15566 from "../../../../../_runtime/metro/15566__.js";
 import _mod15567 from "../../../../../_runtime/metro/15567__.js";
+import _mod15568 from "../../../../../_runtime/metro/15568__.js";
+import _mod15569 from "../../../../../_runtime/metro/15569__.js";
+import _mod15570 from "../../../../../_runtime/metro/15570__.js";
+import _mod15571 from "../../../../../_runtime/metro/15571__.js";
+import _mod15572 from "../../../../../_runtime/metro/15572__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
 export const flags = {
-  bg: _mod15537,
-  cs: _mod15538,
-  da: _mod15539,
-  de: _mod15540,
-  el: _mod15541,
-  "en-GB": _mod15542,
-  "en-US": _mod15543,
-  "es-ES": _mod15544,
-  "es-419": _mod15545,
-  fi: _mod15546,
-  fr: _mod15547,
-  hi: _mod15548,
-  hr: _mod15549,
-  hu: _mod15550,
-  it: _mod15551,
-  ja: _mod15552,
-  ko: _mod15553,
-  lt: _mod15554,
-  nl: _mod15555,
-  no: _mod15556,
-  pl: _mod15557,
-  "pt-BR": _mod15558,
-  ro: _mod15559,
-  ru: _mod15560,
-  "sv-SE": _mod15561,
-  th: _mod15562,
-  tr: _mod15563,
-  uk: _mod15564,
-  vi: _mod15565,
-  "zh-CN": _mod15566,
-  "zh-TW": _mod15567,
+  bg: _mod15542,
+  cs: _mod15543,
+  da: _mod15544,
+  de: _mod15545,
+  el: _mod15546,
+  "en-GB": _mod15547,
+  "en-US": _mod15548,
+  "es-ES": _mod15549,
+  "es-419": _mod15550,
+  fi: _mod15551,
+  fr: _mod15552,
+  hi: _mod15553,
+  hr: _mod15554,
+  hu: _mod15555,
+  it: _mod15556,
+  ja: _mod15557,
+  ko: _mod15558,
+  lt: _mod15559,
+  nl: _mod15560,
+  no: _mod15561,
+  pl: _mod15562,
+  "pt-BR": _mod15563,
+  ro: _mod15564,
+  ru: _mod15565,
+  "sv-SE": _mod15566,
+  th: _mod15567,
+  tr: _mod15568,
+  uk: _mod15569,
+  vi: _mod15570,
+  "zh-CN": _mod15571,
+  "zh-TW": _mod15572,
 };

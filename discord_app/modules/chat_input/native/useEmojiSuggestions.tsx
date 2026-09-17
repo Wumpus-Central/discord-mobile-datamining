@@ -47,8 +47,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(5545).LoadState;
-const EMOJI_SENTINEL = fn(5085).EMOJI_SENTINEL;
+const LoadState = fn(5547).LoadState;
+const EMOJI_SENTINEL = fn(5087).EMOJI_SENTINEL;
 const EmojiIntention = fn(1375).EmojiIntention;
 const re9 = /(\S+)\s$/;
 let closure_10 = { unlockedEmojis: [], lockedEmojis: [], queryStart: 0, queryEnd: 0 };
@@ -63,9 +63,10 @@ export default function useEmojiSuggestions(channel) {
   const selectionEnd = channel.selectionEnd;
   const enabled = channel.enabled;
   const maxCount = channel.maxCount;
+  const minUnlockedEmojis = channel.minUnlockedEmojis;
   const items = [maxCount];
   const stateFromStores = channel(selectionStart[5]).useStateFromStores(items, () => maxCount.loadState);
-  const items1 = [channel, stateFromStores, enabled, maxCount, selectionEnd, selectionStart, text];
+  const items1 = [channel, stateFromStores, enabled, maxCount, minUnlockedEmojis, selectionEnd, selectionStart, text];
   const memo = enabled.useMemo(() => {
     if (enabled) {
       if (stateFromStores === LoadState.Loaded) {
@@ -86,15 +87,14 @@ export default function useEmojiSuggestions(channel) {
         } else {
           const obj3 = { query: tmp3.query, channel, intention: EmojiIntention.CHAT, maxCount };
           const emojis = AutocompleteUtilsDefault.queryEmojiResults(obj3).emojis;
-          if (0 === emojis.unlocked.length) {
-            if (0 === emojis.locked.length) {
-              let obj = closure_10;
-            }
-            return obj;
+          if (emojis.unlocked.length < minUnlockedEmojis) {
+            let obj = closure_10;
+          } else {
+            obj = { unlockedEmojis: null, lockedEmojis: null, queryStart: null, queryEnd: null };
+            ({ unlocked: obj.unlockedEmojis, locked: obj.lockedEmojis } = emojis);
+            ({ queryStart: obj.queryStart, queryEnd: obj.queryEnd } = tmp3);
           }
-          obj = { unlockedEmojis: null, lockedEmojis: null, queryStart: null, queryEnd: null };
-          ({ unlocked: obj.unlockedEmojis, locked: obj.lockedEmojis } = emojis);
-          ({ queryStart: obj.queryStart, queryEnd: obj.queryEnd } = tmp3);
+          return obj;
         }
       }
     }
@@ -103,7 +103,7 @@ export default function useEmojiSuggestions(channel) {
   let tmp3 = closure_10;
   let obj = channel(selectionStart[5]);
   [tmp5, tmp6] = selectionEnd(enabled.useState(closure_10), 2);
-  c7 = tmp6;
+  c8 = tmp6;
   if (enabled) {
     if (tmp7) {
       if (tmp5 !== memo) {

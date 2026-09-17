@@ -9,14 +9,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let size = {
-  shape: fn(8954).CutoutShape.RoundedRect,
-  x: fn(5670).ImageSizes[fn(undefined, 5670).GuildIconSizes.NORMAL] - -6 - 24,
+  shape: fn(8970).CutoutShape.RoundedRect,
+  x: fn(5672).ImageSizes[fn(undefined, 5672).GuildIconSizes.NORMAL] - -6 - 24,
   y: -6,
   width: 24,
   height: 24,
   cornerRadius: nativeDefault.radii.sm,
 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_9 = createStyles.createStyles({
   warningBadge: {
     position: "absolute",
@@ -37,7 +37,7 @@ export default function AlertNotification(notification) {
   const channel = notification.channel;
   const guild = notification.guild;
   const tmp = closure_9();
-  const incidentData = channel(10236).useGuildIncidentsState(notification.key).incidentData;
+  const incidentData = channel(10247).useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
     raidDetectedAt = incidentData.raidDetectedAt;
@@ -70,12 +70,12 @@ export default function AlertNotification(notification) {
   const obj4 = { cutouts: null, children: null };
   const items2 = [size];
   obj4.cutouts = items2;
-  let obj = channel(10236);
-  obj4.children = closure_5(guild(5670), { guild, selected: false });
-  const items3 = [closure_5(guild(8954), obj4)];
+  let obj = channel(10247);
+  obj4.children = closure_5(guild(5672), { guild, selected: false });
+  const items3 = [closure_5(guild(8970), obj4)];
   const obj5 = { style: tmp.warningBadge, children: null };
-  const tmp8 = guild(8954);
-  obj5.children = closure_5(channel(8723).WarningIcon, {
+  const tmp8 = guild(8970);
+  obj5.children = closure_5(channel(8743).WarningIcon, {
     style: tmp.warningIcon,
     color: guild(576).colors.ICON_FEEDBACK_WARNING,
   });
@@ -83,8 +83,8 @@ export default function AlertNotification(notification) {
   obj3.children = items3;
   obj2.icon = closure_7(closure_6, obj3);
   obj2.header = memo;
-  obj2.children = closure_5(channel(10245).SystemMessageText, { text: stringResult });
+  obj2.children = closure_5(channel(10256).SystemMessageText, { text: stringResult });
   obj2.onPress = callback;
   obj2.notification = notification;
-  return closure_5(channel(10308).NotificationPressable, obj2);
+  return closure_5(channel(10316).NotificationPressable, obj2);
 }

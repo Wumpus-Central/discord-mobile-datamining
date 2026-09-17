@@ -35,7 +35,7 @@ export default {
             } else {
               dependencyMap = 1;
               c2 = 1;
-              const obj5 = { value: tmp4(4771).canOpenUrlScheme("roblox"), done: false };
+              const obj5 = { value: tmp4(4773).canOpenUrlScheme("roblox"), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -46,7 +46,7 @@ export default {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            const obj = tmp4(4769);
+            const obj = tmp4(4771);
             if (value) {
               obj.ROBLOX_PROTOCOL_URL(closure_128_0);
             } else {

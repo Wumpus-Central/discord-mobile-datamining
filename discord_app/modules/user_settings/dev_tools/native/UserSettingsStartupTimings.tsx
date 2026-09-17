@@ -24,7 +24,7 @@ function Code(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   code: { fontFamily: fn(1074).Fonts.CODE_BOLD },
@@ -96,7 +96,7 @@ export default function UserSettingsStartupTimings() {
               closure_128_1 = undefined;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp5(4502).getAppFirstVisibleTimestamp(), done: false };
+              const obj5 = { value: tmp5(4504).getAppFirstVisibleTimestamp(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -108,9 +108,9 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(10331)(closure_128_0);
+            closure_128_1 = tmp5(10339)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(8491).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(8510).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -228,12 +228,12 @@ export default function UserSettingsStartupTimings() {
     const obj22 = { label: null };
     const obj23 = { children: null };
     const items10 = [
-      React7(Code, { children: ["\u2615", " - Java / Kotlin"] }),
-      React7(Code, { children: ["\u{1F3A8}", " - React render"] }),
-      React7(Code, { children: ["\u{1F4BE}", " - CacheStore"] }),
-      React7(Code, { children: ["\u{1F9A5}", " - Slow Store Update / Handler"] }),
-      React7(Code, { children: ["\u{1F3C3}", " - Startup Event"] }),
-      React7(Code, { children: ["\u{1F310}", " - Socket Event"] }),
+      React6(Code, { children: "\u2615 - Java / Kotlin" }),
+      React6(Code, { children: "\u{1F3A8} - React render" }),
+      React6(Code, { children: "\u{1F4BE} - CacheStore" }),
+      React6(Code, { children: "\u{1F9A5} - Slow Store Update / Handler" }),
+      React6(Code, { children: "\u{1F3C3} - Startup Event" }),
+      React6(Code, { children: "\u{1F310} - Socket Event" }),
     ];
     obj23.children = items10;
     obj22.label = React7(closure_2_10, obj23);
@@ -278,6 +278,6 @@ export default function UserSettingsStartupTimings() {
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(9017).FlashList, obj5);
+  obj4.children = closure_8(tmp10(8873).FlashList, obj5);
   return closure_8(checked, obj4);
 }

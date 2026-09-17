@@ -37,10 +37,10 @@ const obj7 = {
   [0]: "CONTROL",
   LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY: 1,
   [1]: "LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY",
-  ENTIRE_VIDEO_CLICKABLE: 2,
-  [2]: "ENTIRE_VIDEO_CLICKABLE",
-  OPEN_APP_SHEET_ON_PAUSE: 3,
-  [3]: "OPEN_APP_SHEET_ON_PAUSE",
+  FIRST_TAP_APP_STORE_OVERLAY: 2,
+  [2]: "FIRST_TAP_APP_STORE_OVERLAY",
+  EVERY_PAUSE_APP_STORE_OVERLAY: 3,
+  [3]: "EVERY_PAUSE_APP_STORE_OVERLAY",
 };
 const apexExperiment2 = ApexExperiment.createApexExperiment(obj5);
 let ApexExperiment = ApexExperiment_mod;
@@ -51,8 +51,8 @@ const obj8 = {
   variations: {
     0: { enabled: false, variant: obj7.CONTROL },
     1: { enabled: true, variant: obj7.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY },
-    2: { enabled: true, variant: obj7.ENTIRE_VIDEO_CLICKABLE },
-    3: { enabled: true, variant: obj7.OPEN_APP_SHEET_ON_PAUSE },
+    2: { enabled: true, variant: obj7.FIRST_TAP_APP_STORE_OVERLAY },
+    3: { enabled: true, variant: obj7.EVERY_PAUSE_APP_STORE_OVERLAY },
   },
 };
 const apexExperiment3 = ApexExperiment.createApexExperiment(obj8);

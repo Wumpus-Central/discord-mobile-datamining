@@ -65,21 +65,21 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(16076);
+const RegistrationUIStore = fn(16098);
 ({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_12 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
-const FadeIn = fn(4374).FadeIn;
+const FadeIn = fn(4376).FadeIn;
 obj2.entering = FadeIn.duration(300);
-const FadeOut = fn(4374).FadeOut;
+const FadeOut = fn(4376).FadeOut;
 obj2.exiting = FadeOut.duration(300);
 let obj3 = { layout: null };
-const LinearTransition = fn(4374).LinearTransition;
-const Easing = fn(4374).Easing;
-obj3.layout = LinearTransition.easing(Easing.inOut(fn(4374).Easing.quad)).duration(300);
+const LinearTransition = fn(4376).LinearTransition;
+const Easing = fn(4376).Easing;
+obj3.layout = LinearTransition.easing(Easing.inOut(fn(4376).Easing.quad)).duration(300);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
@@ -132,7 +132,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     autoCapitalize: "none",
     onFocus: null,
     onBlur: null,
-    isClearable: true,
+    clearable: true,
     status: null,
     submitBehavior: null,
   };
@@ -158,14 +158,14 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14819).NameValidationState.ERROR) {
+  if (type === tmp14(14827).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
   const items3 = [
-    closure_9(setUsername(6714).TextInput, obj3),
+    closure_9(setUsername(6717).TextInput, obj3),
     closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] }),
   ];
   obj6.children = items3;

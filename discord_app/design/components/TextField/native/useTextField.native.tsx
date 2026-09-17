@@ -156,19 +156,19 @@ export const useTextField = function useTextField(onClear, arg1) {
     }),
     items3,
   );
+  const disabled = onClear.disabled;
   const obj4 = { innerRef: ref, state: obj3, inputProps: null };
   const obj5 = {};
   const merged1 = Object.assign(onClear);
   obj5.onChange = undefined;
   obj5.onChangeText = obj3.setTextValue;
-  obj5.editable = !onClear.isDisabled;
-  const isDisabled = onClear.isDisabled;
-  let focusable = !isDisabled;
-  if (!isDisabled) {
+  obj5.editable = !(undefined !== disabled && disabled);
+  let focusable = !tmp8;
+  if (!(undefined !== disabled && disabled)) {
     focusable = onClear.focusable;
   }
   obj5.focusable = focusable;
-  obj5["aria-disabled"] = onClear.isDisabled;
+  obj5["aria-disabled"] = undefined !== disabled && disabled;
   obj4.inputProps = obj5;
   return obj4;
 };

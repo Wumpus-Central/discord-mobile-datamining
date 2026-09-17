@@ -59,11 +59,11 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(4659);
+const CallConstants = fn(4661);
 ({ isStreamParticipant: map1, ParticipantTypes: closure_14 } = CallConstants);
 let Constants = fn(1074);
 ({ ActivityTypes: closure_15, ChannelTypes: closure_16 } = Constants);
-Constants = fn(4663);
+Constants = fn(4665);
 ({ MediaEngineContextTypes: closure_17, Features: closure_18 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
@@ -231,11 +231,11 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f79122) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f79407) {
   const self = this;
-  const userId = f79122;
+  const userId = f79407;
   let flag;
-  if (this.participants[f79122] != null) {
+  if (this.participants[f79407] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -273,10 +273,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f791
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f79129, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f79414, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f79129] != null) {
+  if (this.participants[f79414] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {

@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _modDef3461 from "../intl/SlayerStorefront.messages.js";
+import _modDef3463 from "../intl/SlayerStorefront.messages.js";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
 import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(7850).InviteTypes;
+const InviteTypes = fn(7856).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",
@@ -82,7 +82,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3461.BKf0MM);
+              stringResult = string(_modDef3463.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({
   label: { marginBottom: 8 },
   input: { flexGrow: 1, marginBottom: 8 },
@@ -71,7 +71,7 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
       description: hint,
       placeholder,
       onChange: onChangeText,
-      isClearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT,
+      clearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT,
       keyboardType: str,
       secureTextEntry: isAndroidResult,
       autoCapitalize: merged.autoCapitalize,

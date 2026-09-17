@@ -51,10 +51,10 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
     items1,
   );
 };
-export const useIsUserProfileRuleEnabled = function useIsUserProfileRuleEnabled(arg0) {
-  _require = arg0;
+export const useIsUserProfileRuleEnabled = function useIsUserProfileRuleEnabled(guildId) {
+  _require = guildId;
   const items = [GuildStore];
-  const items1 = [arg0];
+  const items1 = [guildId];
   return require("initialize").useStateFromStores(
     items,
     () => {

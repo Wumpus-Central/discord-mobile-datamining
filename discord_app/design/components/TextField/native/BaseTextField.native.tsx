@@ -4,6 +4,7 @@ import mergeProps from "../../../utils/native/mergeProps.native.tsx";
 import useFocus from "../../../utils/native/useFocus.native.tsx";
 import InputFieldContainer from "../../Input/native/InputFieldContainer.native.tsx";
 import NativeTextInput from "../../Input/native/NativeTextInput.native.tsx";
+import propsForNativeTextInput from "../../Input/native/propsForNativeTextInput.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,10 +16,10 @@ const result = size.fileFinishedImporting("design/components/TextField/native/Ba
 export const BaseTextField = noop.forwardRef((size, ref2) => {
   const inputStyles = InputFieldContainer.useInputStyles({
     size: size.size,
-    isRound: size.isRound,
+    round: size.round,
     hasLeadingIcon: null != size.leadingIcon,
   });
-  const obj2 = { size: size.size, isRound: size.isRound, hasLeadingIcon: null != size.leadingIcon };
+  const obj2 = { size: size.size, round: size.round, hasLeadingIcon: null != size.leadingIcon };
   const focus = useFocus.useFocus();
   ({ focusProps, isFocused } = focus);
   let tmp6 = null;
@@ -36,16 +37,16 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
     }
     const obj5 = { autoComplete: str, secureTextEntry: null, keyboardType: null };
     tmpResult = PlatformUtils;
-    const tmpResult5 = PlatformUtils;
+    const tmpResult6 = PlatformUtils;
     obj5.secureTextEntry = PlatformUtils.isAndroid() || secureTextEntry;
     const tmp7 = PlatformUtils.isAndroid() || secureTextEntry;
     let str2 = "visible-password";
-    if (!tmpResult6.isAndroid()) {
+    if (!tmpResult7.isAndroid()) {
       str2 = keyboardType;
     }
     obj5.keyboardType = str2;
     tmp6 = obj5;
-    tmpResult6 = PlatformUtils;
+    tmpResult7 = PlatformUtils;
   }
   const onChangeText = size.onChangeText;
   const items = [onChangeText];
@@ -72,7 +73,8 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
   const obj7 = {};
   const merged1 = Object.assign(tmp6);
   const ref = noop.useRef(null);
-  const merged2 = Object.assign(mergeProps.mergeProps(size, focusProps));
+  const tmpResult8 = propsForNativeTextInput;
+  const merged2 = Object.assign(tmpResult8.propsForNativeTextInput(mergeProps.mergeProps(size, focusProps)));
   let replaced = str3;
   if (null != size.value) {
     replaced = str3.replace(/\r\n?|\n/g, " ");
@@ -84,7 +86,7 @@ export const BaseTextField = noop.forwardRef((size, ref2) => {
   }
   obj7.defaultValue = replaced1;
   obj7.onChangeText = callback;
-  const tmpResult7 = mergeProps;
+  const tmpResult9 = mergeProps;
   obj7.ref = mergeProps.mergeRefs(ref, ref2);
   const items2 = [, ,];
   ({ padding: arr3[0], text: arr3[1] } = inputStyles);

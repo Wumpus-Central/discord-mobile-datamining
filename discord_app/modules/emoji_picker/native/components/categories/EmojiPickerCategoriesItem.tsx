@@ -8,12 +8,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let EmojiCategoryTypes = fn(5549).EmojiCategoryTypes;
+let EmojiCategoryTypes = fn(5551).EmojiCategoryTypes;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: closure_7, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   itemInner: null,
   fadedItem: { backgroundColor: nativeDefault.colors.ICON_TRANSPARENT },

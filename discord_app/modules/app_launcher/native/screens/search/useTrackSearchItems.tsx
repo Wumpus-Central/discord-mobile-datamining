@@ -36,7 +36,7 @@ export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1
               properties: null,
             };
             const obj3 = {
-              location: closure_0(7633).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+              location: closure_0(7637).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
               application_id: applicationId,
               command_id: commandId,
               search_results_position: isViewable.index,
@@ -44,8 +44,8 @@ export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1
               source,
             };
             obj2.properties = obj3;
-            closure_0(8908).trackImpression(obj2, false);
-            const obj = closure_0(8908);
+            closure_0(8924).trackImpression(obj2, false);
+            const obj = closure_0(8924);
           }
         }
       }

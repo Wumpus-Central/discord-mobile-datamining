@@ -8,14 +8,14 @@ import GuildSettingsRolesStore from "../GuildSettingsRolesStore.tsx";
 require = fn;
 const View = fn(17).View;
 const isEveryoneRole = fn(2017).isEveryoneRole;
-const RoleColorsStyle = fn(17819).RoleColorsStyle;
-const STYLE_CONFIGS = fn(17818).STYLE_CONFIGS;
+const RoleColorsStyle = fn(17860).RoleColorsStyle;
+const STYLE_CONFIGS = fn(17859).STYLE_CONFIGS;
 const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR: closure_9, MAX_ROLE_LENGTH: c10 } = Constants);
-let closure_11 = fn(17821).DEFAULT_GRADIENT_ROLE_COLORS;
+let closure_11 = fn(17862).DEFAULT_GRADIENT_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   roleIcon: { paddingTop: 2 },
   roleIconPlaceholder: { opacity: 0.5 },
@@ -119,7 +119,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     const items1 = [guild.id, id];
     const items2 = [role, id, concat, primary_color, SOLID];
     const callback = SOLID.useCallback(() => {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17836, dependencyMap.paths), "RoleIcon", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17877, dependencyMap.paths), "RoleIcon", {
         guildId: guild.id,
         roleId: id,
       });
@@ -134,7 +134,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
           },
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16421, dependencyMap.paths),
+          asyncRequireImpl(16451, dependencyMap.paths),
           "RoleColorPicker",
           obj2,
         );
@@ -146,7 +146,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
           },
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(17838, dependencyMap.paths),
+          asyncRequireImpl(17879, dependencyMap.paths),
           "RoleColorPicker",
           obj4,
         );
@@ -154,7 +154,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     }, items2);
     const callback2 = SOLID.useCallback(() => {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17839, dependencyMap.paths),
+        asyncRequireImpl(17880, dependencyMap.paths),
         "EnhancedRoleColorsSelectStyleModal",
         {
           guildId: guild.id,
@@ -169,7 +169,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     const obj6 = {
       label: null,
       value: null,
-      isDisabled: null,
+      disabled: null,
       onChange: null,
       maxLength: null,
       autoFocus: null,
@@ -178,7 +178,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     const intl = tmp4(tmp5[25]).intl;
     obj6.label = intl.string(tmp4(tmp5[25]).t.dLbkBk);
     obj6.value = name;
-    obj6.isDisabled = tmp3;
+    obj6.disabled = tmp3;
     obj6.onChange = onNameChanged;
     obj6.maxLength = maxLength;
     obj6.autoFocus = autoFocusInput;

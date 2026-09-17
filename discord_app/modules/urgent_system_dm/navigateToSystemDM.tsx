@@ -2,7 +2,7 @@
 import SelectedChannelActionCreatorsDefault from "../../actions/SelectedChannelActionCreators.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const SYSTEM_USER = fn(17706).SYSTEM_USER;
+const SYSTEM_USER = fn(17747).SYSTEM_USER;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
 

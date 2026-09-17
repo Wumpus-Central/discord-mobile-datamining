@@ -294,14 +294,14 @@ const frozen2 = Object.freeze({
   GUILD_ANALYTICS_OVERVIEW(arg0) {
     return "/guilds/" + arg0 + "/analytics/overview";
   },
-  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW(arg0) {
-    return "/guilds/" + arg0 + "/analytics/engagement/overview";
+  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW(guildId) {
+    return "/guilds/" + guildId + "/analytics/engagement/overview";
   },
-  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW(arg0) {
-    return "/guilds/" + arg0 + "/analytics/growth-activation/overview";
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW(guildId) {
+    return "/guilds/" + guildId + "/analytics/growth-activation/overview";
   },
-  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION(arg0) {
-    return "/guilds/" + arg0 + "/analytics/growth-activation/retention";
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION(guildId) {
+    return "/guilds/" + guildId + "/analytics/growth-activation/retention";
   },
   GUILD_TOP_GAMES(arg0) {
     return "/guilds/" + arg0 + "/top-games";
@@ -506,6 +506,9 @@ const frozen2 = Object.freeze({
   },
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
+  },
+  CHANNEL_CONVERSATION(arg0, arg1) {
+    return "/channels/" + arg0 + "/conversations/" + arg1;
   },
   CHANNEL_CONVERSATION_MESSAGES(channelId, conversationId) {
     return "/channels/" + channelId + "/conversations/" + conversationId + "/messages";
@@ -2321,14 +2324,14 @@ const obj2 = {
   GUILD_ANALYTICS_OVERVIEW(arg0) {
     return "/guilds/" + arg0 + "/analytics/overview";
   },
-  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW(arg0) {
-    return "/guilds/" + arg0 + "/analytics/engagement/overview";
+  GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW(guildId) {
+    return "/guilds/" + guildId + "/analytics/engagement/overview";
   },
-  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW(arg0) {
-    return "/guilds/" + arg0 + "/analytics/growth-activation/overview";
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW(guildId) {
+    return "/guilds/" + guildId + "/analytics/growth-activation/overview";
   },
-  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION(arg0) {
-    return "/guilds/" + arg0 + "/analytics/growth-activation/retention";
+  GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION(guildId) {
+    return "/guilds/" + guildId + "/analytics/growth-activation/retention";
   },
   GUILD_TOP_GAMES(arg0) {
     return "/guilds/" + arg0 + "/top-games";
@@ -2533,6 +2536,9 @@ const obj2 = {
   },
   CHANNEL_CONVERSATIONS(arg0) {
     return "/channels/" + arg0 + "/conversations";
+  },
+  CHANNEL_CONVERSATION(arg0, arg1) {
+    return "/channels/" + arg0 + "/conversations/" + arg1;
   },
   CHANNEL_CONVERSATION_MESSAGES(channelId, conversationId) {
     return "/channels/" + channelId + "/conversations/" + conversationId + "/messages";
@@ -4142,12 +4148,12 @@ const frozen3 = Object.freeze({
   DEVELOPER_PORTAL_GUILD_ANALYTICS(arg0) {
     return "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/servers/" + arg0;
   },
-  DEVELOPER_PORTAL_LOGIN_HANDOFF(nonce, arg1, arg2) {
+  DEVELOPER_PORTAL_LOGIN_HANDOFF(arg0, arg1, arg2) {
     return (
       "" +
       window.GLOBAL_ENV.DEVELOPERS_ENDPOINT +
       "/developers/handoff#handoff_key=" +
-      nonce +
+      arg0 +
       "&handoff_token=" +
       arg1 +
       "&redirect_to=" +
@@ -4243,6 +4249,7 @@ const obj5 = {
   PREMIUM_UPSELL_HALLOWEEN_GIFTING_CAMPAIGN: "Premium Upsell Modal - Halloween Gifting Campaign",
   PREMIUM_UPSELL_SEASONAL_GIFTING_CAMPAIGN: "Premium Upsell Modal - Seasonal Gifting Campaign",
   PREMIUM_UPSELL_STREAM_HIGH_QUALITY: "Premium Upsell Modal - Stream High Quality",
+  PREMIUM_UPSELL_SHOP_MEMBER_PRICING: "Premium Upsell Modal - Shop Member Pricing",
   PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN: "Premium Upsell Modal - Valentines Gifting Campaign",
   PREMUIM_UPSELL_GIFTING_PROMOTION: "Premium Upsell Modal - Gifting Promotion",
   PREMIUM_UPSELL_CUSTOM_THEMES: "Premium Upsell Modal - Custom Themes",
@@ -4819,6 +4826,7 @@ const obj7 = {
   ACK_WINDOW_FOCUS: "Ack - Window Focus",
   ACK_CHANNEL_SECTION_STORE_UPDATE: "Ack - Channel Section Store Update",
   ACK_VOICE_CHANNEL_SELECT: "Ack - Voice Channel Select",
+  ACK_VIBEGRATIONS_CHAT_CLOSED: "Ack - Vibegrations Chat Closed",
   ACK_APP_FOREGROUND: "Ack - App Foreground",
   ENABLE_AUTOMATIC_ACK: "Enable Automatic Ack",
 };
@@ -5020,12 +5028,12 @@ const obj3 = {
   DEVELOPER_PORTAL_GUILD_ANALYTICS(arg0) {
     return "" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/developers/servers/" + arg0;
   },
-  DEVELOPER_PORTAL_LOGIN_HANDOFF(nonce, arg1, arg2) {
+  DEVELOPER_PORTAL_LOGIN_HANDOFF(arg0, arg1, arg2) {
     return (
       "" +
       window.GLOBAL_ENV.DEVELOPERS_ENDPOINT +
       "/developers/handoff#handoff_key=" +
-      nonce +
+      arg0 +
       "&handoff_token=" +
       arg1 +
       "&redirect_to=" +
@@ -7416,6 +7424,7 @@ export const AnalyticEvents = {
   ANDROID_ART_PROFILE_SNAPSHOT: "android_art_profile_snapshot",
   ANDROID_JANK_STATS: "android_jank_stats",
   ANDROID_JANK_SESSION: "android_jank_session",
+  ANDROID_JANK_SCREEN: "android_jank_screen",
   IOS_JANK_STATS: "ios_jank_stats",
   APP_JS_STALLED: "app_js_stalled",
   LIBDISCORE_LOADED: "libdiscore_loaded",
@@ -9628,6 +9637,7 @@ export const HelpdeskArticles = {
   LINKED_LOBBIES: "29216887858967",
   MACOS_19_DEPRECATE: "20900540446231",
   MACOS_20_DEPRECATE: "41117240080151",
+  MACOS_21_DEPRECATE: "42846930613783",
   SLAYER_GAME_FRIENDS: "29216909413143",
   SLAYER_PROVISIONAL_ACCOUNTS: "29667419799063",
   MEMBER_APPLICATIONS: "29729107418519",
@@ -9651,7 +9661,8 @@ export const HelpdeskArticles = {
   GAME_SERVER_HOSTING: "35370817986839",
   RECURRING_PROMOTION: "39188406147479-Nitro-Rewards#h_01KQZ3D7Z26A58ERQBDNY7TAWS",
   LOGITECH_PROMOTION: "39554094193175",
-  YOUTUBE_PROMOTION: "39188406147479-Nitro-Rewards#h_01KQZ3D7Z26A58ERQBDNY7TAWS",
+  YOUTUBE_PROMOTION: "39188406147479-Nitro-Rewards#h_01M28JF5GNHD4FAYCE01XS5GA1",
+  YOUTUBE_PROMOTION_CURRENT_SUBSCRIBER: "39188406147479-Nitro-Rewards#h_01M2GVH8RZYMDKFGEAFDNSWFCT",
   PREMIUM_GROUP_ABOUT: "36320645875479",
   SOCIAL_LAYER_STOREFRONT: "40102783004311",
   CHECKPOINT: "36415877391511",

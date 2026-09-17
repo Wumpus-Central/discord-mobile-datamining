@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef8884 from "../../../../../_runtime/metro/08884__.js";
-import _modDef8887 from "../../../../../_runtime/metro/08887__.js";
+import _modDef8900 from "../../../../../_runtime/metro/08900__.js";
+import _modDef8903 from "../../../../../_runtime/metro/08903__.js";
 import GuildPopoutActionCreators from "../../../guild_profile/GuildPopoutActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPopoutStore from "../../../guild_profile/GuildPopoutStore.tsx";
@@ -18,12 +18,12 @@ function CommunityPill(guildVisibility) {
   const tmp = closure_12();
   const intl = GlobeEarthIcon(1115).intl;
   importDefault = intl.string(GlobeEarthIcon(1115).t.TME4LJ);
-  let tmp4Result = _modDef8884;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(8883).GuildVisibility.PUBLIC) {
+  let tmp4Result = _modDef8900;
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(8899).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1115).intl;
     importDefault = intl2.string(tmp2(1115).t.op2cJ6);
-    GlobeEarthIcon = tmp2(9029).GlobeEarthIcon;
-    tmp4Result = _modDef8887;
+    GlobeEarthIcon = tmp2(9044).GlobeEarthIcon;
+    tmp4Result = _modDef8903;
   }
   const obj = {
     style: tmp.communityPill,
@@ -43,16 +43,16 @@ function CommunityPill(guildVisibility) {
   const obj3 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl3 = tmp2(1115).intl;
   obj3.children = intl3.string(GlobeEarthIcon(1115).t.K7iRig);
-  items[1] = closure_10(GlobeEarthIcon(4634).Text, obj3);
+  items[1] = closure_10(GlobeEarthIcon(4636).Text, obj3);
   obj.children = items;
-  return closure_11(GlobeEarthIcon(5208).PressableOpacity, obj);
+  return closure_11(GlobeEarthIcon(5210).PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   content: { padding: 16 },
   avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 },

@@ -33,7 +33,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       str = JSON.stringify(tmp2);
     }
     obj.subLabel = str;
-    obj.icon = closure_9(closure_0(4584).CopyIcon, {});
+    obj.icon = closure_9(closure_0(4586).CopyIcon, {});
     obj.onPress = function onPress() {
       let str = "null";
       if (null != closure_1_0) {
@@ -42,7 +42,7 @@ function SurveyOverrideInfoActionSheet(survey) {
       }
       require("ClipboardUtils").copy(str);
     };
-    return closure_9(closure_0(7309).ActionSheetRow, obj, tmp);
+    return closure_9(closure_0(7313).ActionSheetRow, obj, tmp);
   });
   obj.children = React7(ActionSheetRow.ActionSheetRow.Group, obj2);
   return React7(ActionSheet.ActionSheet, obj);
@@ -59,14 +59,14 @@ function SurveyOverrideActionSheet() {
     2,
   );
   const first = tmp[0];
-  let obj = { header: closure_9(first(7259).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
+  let obj = { header: closure_9(first(7263).BottomSheetTitleHeader, { title: "Survey Override" }), children: null };
   const items = [
-    closure_9(first(6714).TextInput, {
+    closure_9(first(6717).TextInput, {
       label: "Survey Override",
       size: "md",
       placeholder: "Enter the ID of the Survey you want to test",
       onChange: tmp[1],
-      isClearable: true,
+      clearable: true,
     }),
   ];
   let str = "Fetch Survey";
@@ -91,9 +91,9 @@ function SurveyOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SurveyOverrideActionSheet");
   };
-  items[1] = closure_9(first(5060).Button, obj2);
+  items[1] = closure_9(first(5062).Button, obj2);
   obj.children = items;
-  return closure_10(first(7307).ActionSheet, obj);
+  return closure_10(first(7311).ActionSheet, obj);
 }
 function SurveyInfo() {
   const items = [SurveyStore];
@@ -150,14 +150,14 @@ function ChangelogOverrideActionSheet() {
     2,
   );
   const first = tmp[0];
-  let obj = { header: closure_9(first(7259).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
+  let obj = { header: closure_9(first(7263).BottomSheetTitleHeader, { title: "Changelog Override" }), children: null };
   const items = [
-    closure_9(first(6714).TextInput, {
+    closure_9(first(6717).TextInput, {
       label: "Changelog Override",
       size: "md",
       placeholder: "Enter the ID of the changelog you want to test",
       onChange: tmp[1],
-      isClearable: true,
+      clearable: true,
     }),
   ];
   let str = "Fetch Changelog";
@@ -182,9 +182,9 @@ function ChangelogOverrideActionSheet() {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("ChangelogOverrideActionSheet");
   };
-  items[1] = closure_9(first(5060).Button, obj2);
+  items[1] = closure_9(first(5062).Button, obj2);
   obj.children = items;
-  return closure_10(first(7307).ActionSheet, obj);
+  return closure_10(first(7311).ActionSheet, obj);
 }
 function ChangelogInfo() {
   const obj = { title: "Changelog", hasIcons: false, children: null };
@@ -217,7 +217,7 @@ function ChangelogInfo() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   scrollView: { padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
 };

@@ -582,8 +582,8 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("AgeGateUtils").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4849).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(4849);
+    shouldAgeVerifyForAgeGate = tmp3(4851).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(4851);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

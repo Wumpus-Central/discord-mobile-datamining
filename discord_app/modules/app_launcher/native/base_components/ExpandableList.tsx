@@ -5,12 +5,12 @@ import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = tmp4(4374);
+const ReanimatedRexportDefault = tmp4(4376);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_9 = createStyles.createStyles({
   animatedListContainer: { overflow: "hidden" },
   expandCTALabelContainer: { alignItems: "center" },
@@ -69,10 +69,10 @@ export default function ExpandableList(onExpand) {
   if (null == showsExpandCTAOverride) {
     showsExpandCTAOverride = items.length > bound;
   }
-  sharedValue = memo1(4374).useSharedValue(0);
-  let obj3 = memo1(4374);
-  sharedValue1 = memo1(4374).useSharedValue(0);
-  const obj4 = memo1(4374);
+  sharedValue = memo1(4376).useSharedValue(0);
+  let obj3 = memo1(4376);
+  sharedValue1 = memo1(4376).useSharedValue(0);
+  const obj4 = memo1(4376);
   class C {
     constructor() {
       if (closure_5) {
@@ -94,12 +94,12 @@ export default function ExpandableList(onExpand) {
   C.__closure = { expanded: first, collapsedListHeight: sharedValue, remainingListHeight: sharedValue1 };
   C.__workletHash = 17033418452229;
   C.__initData = sharedValue1;
-  derivedValue = memo1(4374).useDerivedValue(C);
+  derivedValue = memo1(4376).useDerivedValue(C);
   const items3 = [items, bound];
   const memo = noop.useMemo(() => memo1.slice(0, bound), items3);
   const items4 = [items, bound];
   memo1 = noop.useMemo(() => memo1.slice(bound, memo1.length), items4);
-  const obj5 = memo1(4374);
+  const obj5 = memo1(4376);
   class A {
     constructor() {
       if (0 !== closure_9.get()) {
@@ -117,12 +117,12 @@ export default function ExpandableList(onExpand) {
       return obj;
     }
   }
-  const obj6 = memo1(4374);
+  const obj6 = memo1(4376);
   A.__closure = {
     collapsedListHeight: sharedValue,
-    withTiming: memo1(4639).withTiming,
+    withTiming: memo1(4641).withTiming,
     containerHeight: derivedValue,
-    timingStandard: memo1(4642).timingStandard,
+    timingStandard: memo1(4644).timingStandard,
   };
   A.__workletHash = 2086836441465;
   A.__initData = derivedValue;
@@ -197,7 +197,7 @@ export default function ExpandableList(onExpand) {
     }
     obj14 = { children: null };
     const obj15 = { color: "text-brand", variant: "text-md/semibold", children: stringResult1 };
-    obj13.children = tmp16(tmp9(4634).Text, obj15);
+    obj13.children = tmp16(tmp9(4636).Text, obj15);
     obj13 = tmp16(tmp17, obj13);
     obj12.label = obj13;
     obj12.onPress = function onPress() {
@@ -211,15 +211,15 @@ export default function ExpandableList(onExpand) {
         tmp4(obj);
       }
     };
-    obj12 = tmp16(tmp9(5691).TableRow, obj12);
+    obj12 = tmp16(tmp9(5693).TableRow, obj12);
     obj14.children = obj12;
     tmp16(tmp17, obj14);
   }
   let obj2 = {
     collapsedListHeight: sharedValue,
-    withTiming: memo1(4639).withTiming,
+    withTiming: memo1(4641).withTiming,
     containerHeight: derivedValue,
-    timingStandard: memo1(4642).timingStandard,
+    timingStandard: memo1(4644).timingStandard,
   };
   tmp15 = bound;
 }

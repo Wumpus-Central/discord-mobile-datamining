@@ -2,7 +2,7 @@
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
-import _modDef4334 from "../../../_runtime/metro/04334__.js";
+import _modDef4336 from "../../../_runtime/metro/04336__.js";
 import ChannelUtils from "../../utils/ChannelUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import LinkUtils from "../links/LinkUtils.tsx";
@@ -373,7 +373,7 @@ let obj2 = {
   },
 };
 obj.channelOrMessageUrl = {
-  order: _modDef4334.defaultRules.url.order - 0.5,
+  order: _modDef4336.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
@@ -425,7 +425,7 @@ obj.channelOrMessageUrl = {
   },
 };
 let obj3 = {
-  order: _modDef4334.defaultRules.url.order - 0.5,
+  order: _modDef4336.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
@@ -477,7 +477,7 @@ let obj3 = {
   },
 };
 obj.mediaPostLink = {
-  order: _modDef4334.defaultRules.url.order - 0.5,
+  order: _modDef4336.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;

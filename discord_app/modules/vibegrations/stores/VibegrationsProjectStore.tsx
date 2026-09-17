@@ -168,8 +168,8 @@ prototype["getProjectsFetchState"] = function getProjectsFetchState() {
 prototype["hasFetchedGuildProjects"] = function hasFetchedGuildProjects(arg0) {
   return set.has(arg0);
 };
-prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(arg0) {
-  let str = map3.get(arg0);
+prototype["getGuildProjectsFetchState"] = function getGuildProjectsFetchState(guildId) {
+  let str = map3.get(guildId);
   if (str == null) {
     str = "unattempted";
   }

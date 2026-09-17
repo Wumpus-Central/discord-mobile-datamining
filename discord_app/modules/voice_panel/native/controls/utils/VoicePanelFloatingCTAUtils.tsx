@@ -19,10 +19,10 @@ const require = globalThis.__r;
 
 require = fn;
 function useFloatingCTAProps(stateFromStores) {
-  let tmp3 = setShowFloatingCTA(8397)(noop.useContext(setShowFloatingCTA(12414)).showFloatingCTA);
+  let tmp3 = setShowFloatingCTA(8416)(noop.useContext(setShowFloatingCTA(12423)).showFloatingCTA);
   _require = tmp3;
   setShowFloatingCTA = undefined;
-  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(12414)).setShowFloatingCTA;
+  setShowFloatingCTA = noop.useContext(setShowFloatingCTA(12423)).setShowFloatingCTA;
   const items = [setShowFloatingCTA, tmp3];
   let memo = noop.useMemo(() => {
     let tmp = null;
@@ -34,8 +34,8 @@ function useFloatingCTAProps(stateFromStores) {
   closure_129_0 = undefined;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
-  const tmp5 = setShowFloatingCTA(4572)();
-  const tmp6 = setShowFloatingCTA(17242)(noop.useContext(setShowFloatingCTA(12414)).channelId);
+  const tmp5 = setShowFloatingCTA(4574)();
+  const tmp6 = setShowFloatingCTA(17282)(noop.useContext(setShowFloatingCTA(12423)).channelId);
   let id1;
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
@@ -78,7 +78,7 @@ function useFloatingCTAProps(stateFromStores) {
     id2 = stateFromStores.id;
   }
   const items3 = [stateFromStores, nextRecurrenceIdInEvent];
-  const tmpResult = setShowFloatingCTA(9920);
+  const tmpResult = setShowFloatingCTA(9931);
   [][0] = stateFromStores;
   const callback = noop.useCallback(() => {
     if (null != setShowFloatingCTA) {
@@ -92,15 +92,15 @@ function useFloatingCTAProps(stateFromStores) {
         if (!tmp12) {
           ({ scheduled_start_time, name, entity_type } = stateFromStores);
           const obj3 = { eventTimeData: null, isStage: null, theme: null, event: null };
-          const tmp7Result9 = tmp7(9922);
-          obj3.eventTimeData = tmp7(9805).getEventTimeData(scheduled_start_time);
+          const tmp7Result9 = tmp7(9933);
+          obj3.eventTimeData = tmp7(9816).getEventTimeData(scheduled_start_time);
           obj3.isStage = entity_type === constants.STAGE_INSTANCE;
           obj3.theme = tmp5;
           obj3.event = stateFromStores;
           const obj4 = { onPress: callback, icon: null, label: null, subLabel: null, trailing: null };
-          const obj5 = { IconComponent: tmp7(9925).CalendarIcon, variant: "translucent" };
-          obj4.icon = jsx(tmp7(8730).RowButton.Icon, {
-            IconComponent: tmp7(9925).CalendarIcon,
+          const obj5 = { IconComponent: tmp7(9936).CalendarIcon, variant: "translucent" };
+          obj4.icon = jsx(tmp7(8750).RowButton.Icon, {
+            IconComponent: tmp7(9936).CalendarIcon,
             variant: "translucent",
           });
           obj4.label = name;
@@ -116,21 +116,21 @@ function useFloatingCTAProps(stateFromStores) {
           const intl2 = tmp7(1115).intl;
           obj7.accessibilityLabel = intl2.string(tmp7(1115).t.cpT0Cq);
           obj7.onPress = tmp20;
-          obj7.children = jsx(tmp7(5766).XSmallIcon, { color: "interactive-icon-default" });
+          obj7.children = jsx(tmp7(5768).XSmallIcon, { color: "interactive-icon-default" });
           obj4.trailing = (
             <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null}>
               {null}
             </Pressable>
           );
           const tmp21 = obj4;
-          const tmp7Result10 = tmp7(9805);
+          const tmp7Result10 = tmp7(9816);
         }
       }
     }
   }
   closure_130_0 = stateFromStores;
-  tmpResultResult = setShowFloatingCTA(9920)(guild_id, id2, nextRecurrenceIdInEvent);
-  const tmp26 = setShowFloatingCTA(17242)(noop.useContext(setShowFloatingCTA(12414)).channelId);
+  tmpResultResult = setShowFloatingCTA(9931)(guild_id, id2, nextRecurrenceIdInEvent);
+  const tmp26 = setShowFloatingCTA(17282)(noop.useContext(setShowFloatingCTA(12423)).channelId);
   const items4 = [ChannelRTCStore];
   const stateFromStores1 = require("useStateFromStores").useStateFromStores(items4, () => {
     let id;
@@ -155,9 +155,9 @@ function useFloatingCTAProps(stateFromStores) {
         obj8.label = intl3.string(tmp7(1115).t.N4nebq);
         const intl4 = tmp7(1115).intl;
         obj8.subLabel = intl4.string(tmp7(1115).t.o2XPr2);
-        const obj9 = { IconComponent: tmp7(10171).GroupPlusIcon, variant: "translucent" };
-        obj8.icon = jsx(tmp7(8730).RowButton.Icon, {
-          IconComponent: tmp7(10171).GroupPlusIcon,
+        const obj9 = { IconComponent: tmp7(10182).GroupPlusIcon, variant: "translucent" };
+        obj8.icon = jsx(tmp7(8750).RowButton.Icon, {
+          IconComponent: tmp7(10182).GroupPlusIcon,
           variant: "translucent",
         });
         obj8.onPress = tmp29;
@@ -256,7 +256,7 @@ function getDismissableCTAProps(arg0) {
   }
 }
 const Pressable = fn(17).Pressable;
-let closure_8 = fn(7636).isGuildScheduledEventActive;
+let closure_8 = fn(7640).isGuildScheduledEventActive;
 const constants = fn(1964).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
 const OverrideFloatingCTA = { BAD_CONNECTION: "BAD_CONNECTION" };

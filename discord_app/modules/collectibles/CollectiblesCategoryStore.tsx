@@ -95,11 +95,11 @@ prototype["isFetchingProduct"] = function isFetchingProduct(arg0) {
   }
   return tmp;
 };
-prototype["isProductFetchBackedOff"] = function isProductFetchBackedOff(item) {
-  let tmp = null != item;
+prototype["isProductFetchBackedOff"] = function isProductFetchBackedOff(arg0) {
+  let tmp = null != arg0;
   if (tmp) {
     let pending;
-    if (dependencyMap[item] != null) {
+    if (dependencyMap[arg0] != null) {
       pending = tmp3.pending;
     }
     tmp = true === pending;

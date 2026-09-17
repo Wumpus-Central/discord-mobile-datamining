@@ -14,8 +14,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 
 export const SplitTextField = noop.forwardRef((size, arg1) => {
-  const inputStyles = InputFieldContainer.useInputStyles({ size: size.size, isRound: size.isRound });
-  const obj2 = { size: size.size, isRound: size.isRound };
+  const inputStyles = InputFieldContainer.useInputStyles({ size: size.size, round: size.round });
+  const obj2 = { size: size.size, round: size.round };
   const textField = useTextField.useTextField(size, arg1);
   ({ inputProps, innerRef, state } = textField);
   const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(size, state);

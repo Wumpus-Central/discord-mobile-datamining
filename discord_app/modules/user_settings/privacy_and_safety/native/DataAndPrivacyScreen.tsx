@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8091).MobileUserSettings;
+const MobileUserSettings = fn(8111).MobileUserSettings;
 const Constants = fn(1074);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
@@ -80,11 +80,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj19);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14971).fetchConsents();
-      const obj = stackNavigation(14971);
+      const consents = stackNavigation(14979).fetchConsents();
+      const obj = stackNavigation(14979);
     }
-    const harvestStatus = stackNavigation(14974).fetchHarvestStatus();
-    const obj2 = stackNavigation(14974);
+    const harvestStatus = stackNavigation(14982).fetchHarvestStatus();
+    const obj2 = stackNavigation(14982);
   }, []);
   const items8 = [stackNavigation, items1];
   const obj20 = { children: null };
@@ -129,8 +129,8 @@ export default function DataAndPrivacySettings() {
       return stackNavigation.navigate(constants2.CONTENT_AND_SOCIAL);
     },
   };
-  obj21.screen = stackNavigation(14930).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(14930), obj21), closure_8(items1(14802), { node: memo })];
+  obj21.screen = stackNavigation(14938).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(14938), obj21), closure_8(items1(14810), { node: memo })];
   obj20.children = items9;
   return closure_10(closure_9, obj20);
 }

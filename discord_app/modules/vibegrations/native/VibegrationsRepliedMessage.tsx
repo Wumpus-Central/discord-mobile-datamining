@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef3591 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
 import UserUtils from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import VibegrationsMessageAuthor from "VibegrationsMessageAuthor.tsx";
@@ -13,12 +13,12 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const diff = fn(16763).MESSAGE_EDGE_INSET + fn(16763).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(16763).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(4638);
+const diff = fn(16793).MESSAGE_EDGE_INSET + fn(16793).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(16793).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(4640);
 let obj2 = {
   root: {
-    marginLeft: diff - fn(16763).MESSAGE_CONTENT_INSET,
+    marginLeft: diff - fn(16793).MESSAGE_CONTENT_INSET,
     paddingLeft: diff1 + 4,
     height: 20,
     flexDirection: "row",
@@ -66,7 +66,7 @@ export default function VibegrationsRepliedMessage(arg0) {
     children: null,
   };
   const intl = util.intl;
-  obj3.accessibilityLabel = intl.formatToPlainString(_modDef3591.loFt7s, { name: str, content: trimmed });
+  obj3.accessibilityLabel = intl.formatToPlainString(_modDef3593.loFt7s, { name: str, content: trimmed });
   const items = [hasOwnProperty(React4, { style: tmp.spine }), , ,];
   let tmp8Result = null;
   if (null != messageAuthorUser) {

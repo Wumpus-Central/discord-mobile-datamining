@@ -1,7 +1,7 @@
 // discord_app/components_native/channel_settings/ChannelSettingsPermissionsList.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/05603_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05605_fuzzysearch.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -220,7 +220,7 @@ export default noop.memo(function ChannelSettingsPermissionsList(channelId) {
       return null;
     }
   }, items7);
-  const obj7 = { size: "md", placeholder: null, onChange: null, isRound: true };
+  const obj7 = { size: "md", placeholder: null, onChange: null, round: true };
   const intl = tmp2(tmp3[23]).intl;
   obj7.placeholder = intl.string(channelId(stateFromStores[23]).t["5h0QOP"]);
   obj7.onChange = tmp5[1];

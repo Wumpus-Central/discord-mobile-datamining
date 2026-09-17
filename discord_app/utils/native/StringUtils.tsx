@@ -1,5 +1,5 @@
 // discord_app/utils/native/StringUtils.tsx
-import rawDefault from "../../../_runtime/11051_raw.js";
+import rawDefault from "../../../_runtime/11059_raw.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");

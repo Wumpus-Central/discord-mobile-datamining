@@ -10,6 +10,8 @@ const UserSettingsPath = UserSettingsConstants.UserSettingsPath;
 const LoginHandoffSource = {
   ROLE_SUBSCRIPTION: "role_subscription",
   ROLE_SUBSCRIPTION_SETTING: "role_subscription_setting",
+  GUILD_ANALYTICS_SETTING: "guild_analytics_setting",
+  GAME_CLAIM: "game_claim",
 };
 const result = size.fileFinishedImporting("modules/auth/LoginHandoffSource.tsx");
 

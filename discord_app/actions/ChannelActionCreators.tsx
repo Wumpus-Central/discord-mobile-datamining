@@ -590,8 +590,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7433).checkGuildTemplateDirty(closure_128_2);
-        name(7433);
+        const result = name(7437).checkGuildTemplateDirty(closure_128_2);
+        name(7437);
       }
       return closure_128_1;
     })();

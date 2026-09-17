@@ -1,12 +1,12 @@
 // discord_app/modules/virtual_currency/native/OrbsRewardBackground.tsx
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef11927 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
+import _modDef11936 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
-const _modDef11928 = tmp15(11928);
+const _modDef11937 = tmp15(11937);
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -49,7 +49,7 @@ export const OrbsRewardBackground = function OrbsRewardBackground(arg0) {
   const obj4 = { source: null, style: null, resizeMode: "cover", onLoad: null };
   const obj5 = { uri: null };
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  obj5.uri = _modDef11927;
+  obj5.uri = _modDef11936;
   obj4.source = obj5;
   obj4.style = style;
   obj4.onLoad = callback;
@@ -68,11 +68,11 @@ export const OrbsRewardBackground = function OrbsRewardBackground(arg0) {
       playInBackground: true,
       preventsDisplaySleepDuringVideoPlayback: false,
     };
-    const obj7 = { uri: _modDef11928 };
+    const obj7 = { uri: _modDef11937 };
     obj6.source = obj7;
     obj6.style = style;
     obj6.onLoad = callback1;
-    tmp14Result = closure_7(onReady(8437).VideoComponent, obj6);
+    tmp14Result = closure_7(onReady(8456).VideoComponent, obj6);
   }
   children[1] = tmp14Result;
   return closure_8(noop.Fragment, { children });

@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsRestorePointsSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
-import _modDef4229 from "../../../../_runtime/metro/04229__.js";
+import _modDef4231 from "../../../../_runtime/metro/04231__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Sheet_showSimpleActionSheet from "../../../design/components/Sheet/native/showSimpleActionSheet.native.tsx";
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16725);
+const VibegrationsConnectionStore = fn(16752);
 ({
   createDatabaseRestorePoint: closure_7,
   fetchDatabaseRestorePoints: closure_8,
@@ -23,7 +23,7 @@ const VibegrationsConnectionStore = fn(16725);
 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, section: null, state: null, notice: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.section = { gap: nativeDefault.space.PX_8 };
@@ -156,25 +156,25 @@ export default function VibegrationsRestorePointsSheet(projectId) {
         .then((ok) => {
           if (ok.ok) {
             const intl4 = closure_0(1115).intl;
-            closure_1_15(dependencyMap, "positive", intl4.string(_undefined(3591).kIWqXR));
+            closure_1_15(dependencyMap, "positive", intl4.string(_undefined(3593).kIWqXR));
             closure_1_12();
           } else if ("expired" === ok.code) {
             const intl3 = closure_0(1115).intl;
-            const obj = { days: closure_0(16761).RESTORE_WINDOW_DAYS };
-            closure_1_15(dependencyMap, "danger", intl3.formatToPlainString(_undefined(3591).PeVYaC, obj));
+            const obj = { days: closure_0(16791).RESTORE_WINDOW_DAYS };
+            closure_1_15(dependencyMap, "danger", intl3.formatToPlainString(_undefined(3593).PeVYaC, obj));
             closure_1_12();
           } else if ("unconfirmed" === ok.code) {
             const intl2 = closure_0(1115).intl;
-            closure_1_15(dependencyMap, "danger", intl2.string(_undefined(3591)["2xSPXh"]));
+            closure_1_15(dependencyMap, "danger", intl2.string(_undefined(3593)["2xSPXh"]));
             closure_1_12();
           } else {
             const intl = closure_0(1115).intl;
-            closure_1_15(dependencyMap, "danger", intl.string(_undefined(3591).kXofol));
+            closure_1_15(dependencyMap, "danger", intl.string(_undefined(3593).kXofol));
           }
         })
         .catch(() => {
           const intl = closure_0(1115).intl;
-          closure_1_15(dependencyMap, "danger", intl.string(_undefined(3591).kXofol));
+          closure_1_15(dependencyMap, "danger", intl.string(_undefined(3593).kXofol));
         });
     };
     projectId(first[11]).showConfirmModal(obj2);
@@ -230,7 +230,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
       str = "VibegrationsRestoreDate";
     }
     obj.openLazy(
-      asyncRequireImpl(9857, dependencyMap.paths),
+      asyncRequireImpl(9868, dependencyMap.paths),
       str,
       { mode, title: stringResult1, startDate, minimumDate: minimumDate[0], maximumDate: minimumDate[1], onSubmit },
       "stack",
@@ -238,16 +238,16 @@ export default function VibegrationsRestorePointsSheet(projectId) {
   }, items4);
   const items5 = [prop, num, callback4, first2];
   const callback5 = obj2.useCallback(() => {
-    const obj = _modDef4229(prop);
-    let items = [_modDef4229(prop).startOf("day").toDate()];
-    const startOfResult = _modDef4229(prop).startOf("day");
-    const obj3 = _modDef4229(num);
-    items[1] = _modDef4229(num).endOf("day").toDate();
+    const obj = _modDef4231(prop);
+    let items = [_modDef4231(prop).startOf("day").toDate()];
+    const startOfResult = _modDef4231(prop).startOf("day");
+    const obj3 = _modDef4231(num);
+    items[1] = _modDef4231(num).endOf("day").toDate();
     let tmp3 = first2;
     if (first2 == null) {
       tmp3 = num;
     }
-    const endOfResult = _modDef4229(num).endOf("day");
+    const endOfResult = _modDef4231(num).endOf("day");
     callback4("date", new Date(tmp3), items, (arg0) => {
       closure_0 = arg0;
       const timerId = setTimeout(() => {
@@ -323,7 +323,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
       obj2.disabled = expired;
       obj2.onPress = function onPress() {
         if (null != parsed) {
-          let createdAt = DateUtils.dateFormat(_modDef4229(tmp3), "LLL");
+          let createdAt = DateUtils.dateFormat(_modDef4231(tmp3), "LLL");
         } else {
           createdAt = tmp2.createdAt;
         }
@@ -404,11 +404,11 @@ export default function VibegrationsRestorePointsSheet(projectId) {
   items6[2] = tmp31Result1;
   items6[3] = tmp32;
   const obj23 = { style: tmp.section, children: null };
-  const obj24 = { label: null, value: null, onChange: null, maxLength: 200, isDisabled: null };
+  const obj24 = { label: null, value: null, onChange: null, maxLength: 200, disabled: null };
   const intl8 = tmp4(tmp3[12]).intl;
   obj24.label = intl8.string(require("../intl/VibegrationsUntranslated.messages.js").hJb78b);
   obj24.value = first1;
-  obj24.isDisabled = tmp15;
+  obj24.disabled = tmp15;
   const items9 = [tmp31(projectId(environment[25]).TextInput, obj24)];
   const obj25 = { variant: "secondary", text: null, loading: null, disabled: null, onPress: null };
   const intl9 = tmp4(tmp3[12]).intl;
@@ -454,7 +454,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
   obj29.disabled = tmp15;
   obj29.onPress = function onPress() {
     if (null != first2) {
-      closure_16(DateUtils.dateFormat(_modDef4229(tmp), "LLL"), () => c11(projectId, environment, first2));
+      closure_16(DateUtils.dateFormat(_modDef4231(tmp), "LLL"), () => c11(projectId, environment, first2));
     }
   };
   items10[1] = tmp31(projectId(environment[26]).Button, obj29);

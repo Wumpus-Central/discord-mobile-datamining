@@ -8,7 +8,7 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9376).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+let closure_4 = fn(9387).GAME_CONSOLE_ALERT_MODAL_LOCATION;
 const Constants = fn(1074);
 ({ InputModes: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -40,7 +40,7 @@ export default {
             const intl = util.intl;
             obj2.body = intl.string(util.t.bL21zs);
             obj2.onConfirm = function onConfirm() {
-              const result = closure_0(4458).UNSAFE_markDismissibleContentAsDismissed(
+              const result = closure_0(4460).UNSAFE_markDismissibleContentAsDismissed(
                 closure_0(1944).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT,
               );
               closure_0();
@@ -59,7 +59,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     const obj2 = { title, body: null, onConfirm: null };
     let obj = actions_AlertActionCreatorsDefault;
-    obj2.body = jsx(reconnectPlatformType(9596).SelfDismissibleAlertBody, {
+    obj2.body = jsx(reconnectPlatformType(9607).SelfDismissibleAlertBody, {
       body,
       errorCodeMessage,
       dismissCallback: actions_AlertActionCreatorsDefault.close,

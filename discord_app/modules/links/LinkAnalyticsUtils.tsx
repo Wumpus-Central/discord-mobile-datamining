@@ -13,6 +13,7 @@ const constants = {
   GIFT: "Discord Gift Link",
   UNKNOWN: "Unknown",
   DISCOVERY: "Discord Discovery Link",
+  USER_PROFILE: "Discord User Profile Link",
 };
 const items = [
   (substr) => {
@@ -52,6 +53,18 @@ const items = [
       DISCOVERY = constants.DISCOVERY;
     }
     return DISCOVERY;
+  },
+  (target) => {
+    const safeParseWithQueryResult = URLUtilsDefault.safeParseWithQuery(target);
+    let USER_PROFILE = null;
+    if (null != safeParseWithQueryResult) {
+      USER_PROFILE = null;
+      if (null != obj2.tryParseUserProfilePath(safeParseWithQueryResult.pathname)) {
+        USER_PROFILE = constants.USER_PROFILE;
+      }
+      obj2 = LinkUtils;
+    }
+    return USER_PROFILE;
   },
 ];
 const result = size.fileFinishedImporting("modules/links/LinkAnalyticsUtils.tsx");

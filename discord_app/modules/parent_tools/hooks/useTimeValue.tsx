@@ -17,4 +17,4 @@ export default function useTimeValue(arg0) {
     return tmp2;
   });
 }
-export const timeToMinutes = fn(10222).timeToMinutes;
+export const timeToMinutes = fn(10233).timeToMinutes;

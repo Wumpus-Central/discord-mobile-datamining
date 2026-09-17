@@ -41005,8 +41005,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(8006).isExperimentEmbedURL(type.target);
-      const obj = closure_0(8006);
+      tmp = !closure_0(8012).isExperimentEmbedURL(type.target);
+      const obj = closure_0(8012);
     }
     return tmp;
   });
@@ -41265,8 +41265,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(8006).isExperimentEmbedURL(type.target);
-        const obj = closure_0(8006);
+        tmp = !closure_0(8012).isExperimentEmbedURL(type.target);
+        const obj = closure_0(8012);
       }
       return tmp;
     });

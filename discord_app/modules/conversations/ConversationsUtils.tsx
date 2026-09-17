@@ -4,8 +4,8 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
 
-export const mapConversation = function mapConversation(summary_map) {
-  summary_map = summary_map.summary_map;
+export const mapConversation = function mapConversation(rawConversation) {
+  const summary_map = rawConversation.summary_map;
   let found;
   if (summary_map != null) {
     const entries = summary_map.entries;
@@ -68,7 +68,7 @@ export const mapConversation = function mapConversation(summary_map) {
     tmp4 = null;
     if ("" !== tmp2.title) {
       const obj5 = {
-        id: summary_map.id,
+        id: rawConversation.id,
         title: null,
         briefSummary: null,
         keyPoints: null,
@@ -103,15 +103,15 @@ export const mapConversation = function mapConversation(summary_map) {
         message_count: obj3.messageCount,
         user_count: obj3.userCount,
         keywords,
-      } = summary_map);
+      } = rawConversation);
       if (keywords == null) {
         keywords = [];
       }
       obj5.keywords = keywords;
       let tmp5 = null;
-      if (null != summary_map.summary_map) {
+      if (null != rawConversation.summary_map) {
         let obj = { entries: null };
-        const entries1 = summary_map.summary_map.entries;
+        const entries1 = rawConversation.summary_map.entries;
         obj.entries = entries1.map((summaryType) => ({
           summaryType: summaryType.summary_type,
           contentJson: summaryType.content_json,
@@ -119,10 +119,10 @@ export const mapConversation = function mapConversation(summary_map) {
         tmp5 = obj;
       }
       obj5.summaryMap = tmp5;
-      ({ engagement: obj3.engagement, substance: obj3.substance, dynamics: obj3.dynamics } = summary_map);
+      ({ engagement: obj3.engagement, substance: obj3.substance, dynamics: obj3.dynamics } = rawConversation);
       let tmp6 = null;
-      if (null != summary_map.moderation) {
-        const moderation = summary_map.moderation;
+      if (null != rawConversation.moderation) {
+        const moderation = rawConversation.moderation;
         const obj6 = {
           status: null,
           statusReason: null,

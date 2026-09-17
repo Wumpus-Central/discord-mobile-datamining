@@ -45,7 +45,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       const obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(14706, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(14714, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -80,12 +80,12 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1115).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(7272).AnalyticsLocationProvider, obj2);
+  return closure_17(user(7276).AnalyticsLocationProvider, obj2);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7318).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7322).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_11, AnalyticsSections } = Constants);
 ({
@@ -421,7 +421,7 @@ export default function GuildProfileEditForm(currentUser) {
         onChange: null,
         placeholder: null,
         maxLength: null,
-        isDisabled: null,
+        disabled: null,
       };
       const intl2 = tmp5(tmp2[17]).intl;
       obj30.label = intl2.string(tmp5(tmp2[17]).t.me1lRk);
@@ -441,7 +441,7 @@ export default function GuildProfileEditForm(currentUser) {
       if (canEditNickname) {
         tmp51 = isDisabled;
       }
-      obj30.isDisabled = tmp51;
+      obj30.disabled = tmp51;
       items12[1] = closure_17(tmpResult14, obj30);
       let tmp58Result6 = result;
       if (result) {
@@ -461,7 +461,7 @@ export default function GuildProfileEditForm(currentUser) {
         maxLength: null,
         spellCheck: false,
         autoCorrect: false,
-        isDisabled: null,
+        disabled: null,
       };
       const tmpResult15 = tmp(tmp2[44]);
       const intl3 = tmp5(tmp2[17]).intl;
@@ -476,7 +476,7 @@ export default function GuildProfileEditForm(currentUser) {
       };
       obj32.placeholder = str3;
       obj32.maxLength = maxLength2;
-      obj32.isDisabled = isDisabled;
+      obj32.disabled = isDisabled;
       items12[3] = closure_17(tmp(tmp2[43]), obj32);
       let tmp58Result7 = null;
       if (result) {
@@ -491,7 +491,7 @@ export default function GuildProfileEditForm(currentUser) {
           placeholder: null,
           maxLength: null,
           numberOfLines: 5,
-          isDisabled: null,
+          disabled: null,
         };
         const intl5 = tmp5(tmp2[17]).intl;
         obj33.label = intl5.string(tmp5(tmp2[17]).t.ZzAR2Y);
@@ -508,7 +508,7 @@ export default function GuildProfileEditForm(currentUser) {
         };
         obj33.placeholder = str5;
         obj33.maxLength = bioMaxLength;
-        obj33.isDisabled = isDisabled;
+        obj33.disabled = isDisabled;
         tmp58Result7 = closure_17(tmp(tmp2[43]), obj33);
         const tmpResult17 = tmp(tmp2[43]);
       }

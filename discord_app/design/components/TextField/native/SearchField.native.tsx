@@ -19,6 +19,6 @@ export const SearchField = noop.forwardRef((arg0, ref) => {
   obj.autoCapitalize = "none";
   obj.accessibilityRole = "search";
   obj.leadingIcon = MagnifyingGlassIcon.MagnifyingGlassIcon;
-  obj.isClearable = true;
+  obj.clearable = true;
   return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
 });

@@ -10,6 +10,14 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["79qal8"]);
   },
+  useDescription() {
+    const intl = util.intl;
+    return intl.formatToPlainString(util.t.GejoQK, {
+      emojiHook(arg0) {
+        return arg0;
+      },
+    });
+  },
   parent: SettingsConstants.MobileUserSettings.CHAT,
   useValue: UserSettings.ConvertEmoticons.useSetting,
   onValueChange: UserSettings.ConvertEmoticons.updateSetting,

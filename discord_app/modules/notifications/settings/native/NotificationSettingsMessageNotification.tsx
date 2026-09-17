@@ -77,7 +77,7 @@ class NotificationSettingsMessageNotification {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -108,7 +108,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).notification,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(10298, dependencyMap.paths),
+        asyncRequireImpl(10306, dependencyMap.paths),
         "MessageNotificationGuildActionSheet",
         { guildId: style.guildId },
       );
@@ -126,7 +126,7 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).notification,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(10300, dependencyMap.paths),
+        asyncRequireImpl(10308, dependencyMap.paths),
         "MessageNotificationChannelActionSheet",
         { channel: style.channel },
       );

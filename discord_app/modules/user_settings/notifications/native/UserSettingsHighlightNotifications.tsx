@@ -52,7 +52,7 @@ function Row(guildId) {
       start: isStart,
       end: isEnd,
     };
-    return jsx(tmp2(7310).TableSwitchRow, {
+    return jsx(tmp2(7314).TableSwitchRow, {
       label: guild.name,
       icon: jsx(GuildIconDefault, { guild }),
       value: !muted,
@@ -80,7 +80,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8728).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8748).Form, { children: tmp3 });
   }
   return tmp4;
 }

@@ -3,7 +3,7 @@ import util from "../../../intl/index.native.tsx";
 import _modDef2691 from "../SafetyFlows.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import _modDef9709 from "../../../../_runtime/metro/09709__.js";
+import _modDef9720 from "../../../../_runtime/metro/09720__.js";
 import types from "../types.tsx";
 import constants from "../constants.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -36,7 +36,7 @@ let closure_7 = async function _fetchAndUpdateTask() {
 function navigateToScreenForTask(arr, task_type) {
   if (null == task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef9709, content: null };
+    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef9720, content: null };
     const intl = util.intl;
     obj3.content = intl.string(_modDef2691["/fHz9S"]);
     ToastActionCreatorsDefault.open(obj3);

@@ -2,8 +2,8 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import VisualEffectViewDefault from "../modules/visual_effect_view/native/VisualEffectView.tsx";
 import VisualEffectViewThemedDefault from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
-import QRCodeDefault from "../../_runtime/10005_QRCode.js";
-import _mod10019 from "../../_runtime/metro/10019__.js";
+import QRCodeDefault from "../../_runtime/10016_QRCode.js";
+import _mod10030 from "../../_runtime/metro/10030__.js";
 import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   qrCode: {
     display: "flex",
@@ -66,7 +66,7 @@ QRCode.prototype["render"] = function render() {
   obj.children = React7(hasOwnProperty, obj2);
   return React6(hasOwnProperty, obj);
 };
-QRCode.contextType = fn(4348).ThemeContext;
+QRCode.contextType = fn(4350).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
 const PureComponent2 = noop.PureComponent;
 class QRCodeWithOverlay extends PureComponent2 {}
@@ -85,7 +85,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, React5.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod10019 };
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod10030 };
   obj3.children = React6(timestampProducer, obj4);
   items[1] = React6(hasOwnProperty, obj3);
   let tmp6Result = null;
@@ -97,7 +97,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   obj.children = items;
   return React7(hasOwnProperty, obj);
 };
-QRCodeWithOverlay.contextType = fn(4348).ThemeContext;
+QRCodeWithOverlay.contextType = fn(4350).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/QRCode.tsx");

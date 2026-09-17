@@ -2,7 +2,7 @@
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../intl/index.native.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
-import _modDef3237 from "../intl/FavoritesGuild.messages.js";
+import _modDef3239 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
 
@@ -32,9 +32,9 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             if (formatted === closure_4.toLowerCase()) {
               const obj2 = { label: null, tooltip: null };
               const intl = util.intl;
-              obj2.label = intl.string(_modDef3237.WsUrMD);
+              obj2.label = intl.string(_modDef3239.WsUrMD);
               const intl2 = util.intl;
-              obj2.tooltip = intl2.string(_modDef3237.dW9Kov);
+              obj2.tooltip = intl2.string(_modDef3239.dW9Kov);
               tmp6 = obj2;
             }
           }

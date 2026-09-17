@@ -61,16 +61,7 @@ export const AgeVerificationDmCta = {
   CONNECT_TO_TEEN: "connect_to_teen",
   MANUAL_REVIEW: "manual_review",
 };
-export const NsfwSpaceWarningModalType = {
-  NSFW_CHANNEL_AGE_VERIFY: "nsfw_channel_age_verify",
-  NSFW_CHANNEL_UNDERAGE: "nsfw_channel_underage",
-  NSFW_CHANNEL_VERIFIED: "nsfw_channel_verified",
-  GUILD_LARGE_SERVER: "guild_large_server",
-  GUILD_LARGE_SERVER_UNDERAGE: "guild_large_server_underage",
-  NSFW_EMBEDDED_ACTIVITY: "nsfw_embedded_activity",
-  NSFW_APP_LISTING: "nsfw_app_listing",
-  SPOILER_CHANNEL: "spoiler_channel",
-};
+export const NsfwSpaceWarningModalType = fn(8563).NsfwSpaceWarningModalType;
 export const NsfwSpaceWarningModalCta = {
   NSFW_CHANNEL_AGREE_CTA: "nsfw_channel_agree_cta",
   NSFW_CHANNEL_DISAGREE_CTA: "nsfw_channel_disagree_cta",

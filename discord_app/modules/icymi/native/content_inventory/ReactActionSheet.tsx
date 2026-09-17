@@ -123,8 +123,8 @@ function ReactActionSheetBase(content) {
                 return obj3;
               } else {
                 closure_5(true);
-                v1(8481).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
-                const obj5 = v1(8481);
+                v1(8500).itemInteracted(tmp4.id, hotwheels_gaming_activity, "press_reply_send");
+                const obj5 = v1(8500);
                 const obj4 = {
                   itemId: tmp4.id,
                   itemType: hotwheels_gaming_activity,
@@ -135,7 +135,7 @@ function ReactActionSheetBase(content) {
                     actionDestinationType: null,
                   },
                 };
-                v1(8481).feedItemActioned(obj4);
+                v1(8500).feedItemActioned(obj4);
                 v1 = 1;
                 dependencyMap = 1;
                 const obj7 = { value: sendMessage(first1), done: false };
@@ -375,18 +375,18 @@ function ReactActionSheetBase(content) {
       const obj18 = {
         containerStyle: tmp.input,
         grow: true,
-        isRound: true,
+        round: true,
         placeholder: null,
         value: null,
         onChange: null,
-        isDisabled: null,
+        disabled: null,
       };
       const intl4 = tmp5(tmp6[7]).intl;
       const obj19 = { username: tmp5(tmp6[30]).getName(author) };
       obj18.placeholder = intl4.formatToPlainString(tmp5(tmp6[7]).t.m3dK5W, obj19);
       obj18.value = first1;
       obj18.onChange = tmp10;
-      obj18.isDisabled = loading;
+      obj18.disabled = loading;
       const items10 = [tmp23(tmp5(tmp6[29]).TextInput, obj18)];
       const obj20 = { accessibilityLabel: null, icon: null, size: "md", onPress: null, disabled: null, loading: null };
       const intl5 = tmp5(tmp6[7]).intl;
@@ -417,11 +417,11 @@ function ReactActionSheetBase(content) {
   stringResult = intl.string(require("util").t["5IEsGx"]);
 }
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7261).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7265).ACTION_SHEET_MAX_WIDTH;
 const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   header: { width: "100%", display: "flex", alignItems: "center", padding: 8 },
   container: { gap: 12 },

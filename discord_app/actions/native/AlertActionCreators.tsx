@@ -122,12 +122,12 @@ export default {
     }
     if (!tmp7) {
       if (flag) {
-        merged(4605).hideActionSheet();
-        const obj4 = merged(4605);
+        merged(4607).hideActionSheet();
+        const obj4 = merged(4607);
       }
       if (null != c6) {
-        confirmText(4984).dismissAlert(c6);
-        const obj5 = confirmText(4984);
+        confirmText(4986).dismissAlert(c6);
+        const obj5 = confirmText(4986);
       }
       merged(573).dispatch({ type: "ALERT_CLOSE" });
       closure_7 = tmp27 + 1;
@@ -137,14 +137,14 @@ export default {
       ({ cancelText, onConfirm: c3, onCancel: c4 } = merged);
       c5 = false;
       ({ title, body: body2, children, confirmColor } = merged);
-      const obj7 = confirmText(4984);
+      const obj7 = confirmText(4986);
       const obj3 = { title, content: body2, extraContent: children, actions: null };
       const obj8 = { variant: null, text: null, onPress: null };
       const obj6 = merged(573);
       const tmp29 = confirmText;
       const tmp31 = c5;
       const tmp32 = c4;
-      obj8.variant = confirmText(5079).getAlertButtonVariant(confirmColor);
+      obj8.variant = confirmText(5081).getAlertButtonVariant(confirmColor);
       obj8.text = confirmText;
       obj8.onPress = function onPress() {
         c5 = true;
@@ -152,7 +152,7 @@ export default {
           tmp();
         }
       };
-      const items = [c3(confirmText(4988).AlertActionButton, obj8)];
+      const items = [c3(confirmText(4990).AlertActionButton, obj8)];
       let tmp30Result = null;
       if (null != cancelText) {
         const obj9 = {
@@ -165,7 +165,7 @@ export default {
             }
           },
         };
-        tmp30Result = tmp30(tmp29(4988).AlertActionButton, obj9);
+        tmp30Result = tmp30(tmp29(4990).AlertActionButton, obj9);
       }
       const obj11 = { children: null };
       items[1] = tmp30Result;
@@ -174,7 +174,7 @@ export default {
       const obj12 = { dismissable: true === isDismissable };
       obj7.openAlert(
         text,
-        c3(confirmText(4988).AlertModal, obj3),
+        c3(confirmText(4990).AlertModal, obj3),
         () => {
           if (!c5) {
             if (c4 != null) {
@@ -187,17 +187,17 @@ export default {
         },
         obj12,
       );
-      const obj10 = confirmText(5079);
+      const obj10 = confirmText(5081);
     } else {
       if (null != c6) {
-        confirmText(4984).dismissAlert(c6);
+        confirmText(4986).dismissAlert(c6);
         c6 = null;
-        const obj2 = confirmText(4984);
+        const obj2 = confirmText(4986);
       }
       const self = this;
       const obj13 = {
         importer() {
-          return asyncRequireImpl(5079, dependencyMap.paths).then((result) => {
+          return asyncRequireImpl(5081, dependencyMap.paths).then((result) => {
             closure_0 = result.default;
             return (arg0) => {
               const obj = {};

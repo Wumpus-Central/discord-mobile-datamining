@@ -29,4 +29,5 @@ export const EntitlementFeatureNames = {
   APP_ICONS: "appIcons",
   CHAT_WALLPAPERS: "chatWallpapers",
   QUEST_ORB_MULTIPLIER: "questOrbMultiplier",
+  SHOP_MEMBER_PRICING: "shopMemberPricing",
 };

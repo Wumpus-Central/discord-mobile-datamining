@@ -36,7 +36,7 @@ import HeaderShared from "../../modules/main_tabs_v2/native/shared_components/He
 import Form from "../../design/void/Form/native/index.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../actions/ChannelSettingsActionCreators.tsx";
 import ThreadAutoArchive from "../../modules/threads/ThreadAutoArchive.tsx";
-import _modDef9709 from "../../../_runtime/metro/09709__.js";
+import _modDef9720 from "../../../_runtime/metro/09720__.js";
 import sanitizeChannelNameDefault from "../../modules/channel/sanitizeChannelName.tsx";
 import AppChannelApplicationSelectorDefault from "../../modules/app_channels/native/AppChannelApplicationSelector.tsx";
 import GroupPlusIcon from "../../design/components/Icon/native/redesign/generated/GroupPlusIcon.tsx";
@@ -106,7 +106,7 @@ const ChannelRecord = fn(1962);
   GUILD_WEBHOOK_CHANNEL_TYPES: closure_14,
 } = ChannelRecord);
 const isGuildNSFW = fn(1976).isGuildNSFW;
-let closure_25 = fn(17021).ChannelSettingsAutoFocusElement;
+let closure_25 = fn(17060).ChannelSettingsAutoFocusElement;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_26,
@@ -132,11 +132,11 @@ const ChannelConstants = fn(1965);
   MAX_CHANNEL_TOPIC_LENGTH: closure_43,
   MAX_FORUM_CHANNEL_TOPIC_LENGTH: closure_44,
 } = ChannelConstants);
-const MAX_FORUM_TAGS = fn(7383).MAX_FORUM_TAGS;
+const MAX_FORUM_TAGS = fn(7387).MAX_FORUM_TAGS;
 let closure_46 = fn(1114).DEFAULT_AUTO_ARCHIVE_DURATION;
 const jsxProd = fn(21);
 ({ jsx: closure_47, jsxs: closure_48, Fragment: closure_49 } = jsxProd);
-let createStyles = fn(4638);
+let createStyles = fn(4640);
 let obj2 = { outer: null, badge: null };
 let size = {
   position: "absolute",
@@ -158,7 +158,7 @@ const size1 = {
 };
 obj2.badge = size1;
 let closure_50 = createStyles.createStyles(obj2);
-createStyles = fn(4638);
+createStyles = fn(4640);
 let obj3 = {
   screenContainer: {
     flex: 1,
@@ -268,7 +268,7 @@ class ChannelSettingsOverview extends PureComponent {
         ChannelSettingsActionCreatorsDefault.saveChannel(channel.id, obj4).then((status) => {
           if (200 === status.status) {
             let navigation = ToastActionCreatorsDefault.open;
-            let goBackResult = { key: "THREAD_SETTINGS_UPDATED", icon: _modDef9709, content: null };
+            let goBackResult = { key: "THREAD_SETTINGS_UPDATED", icon: _modDef9720, content: null };
             const intl = util.intl;
             const string = intl.string;
             let n2Y84J = util.t;
@@ -427,7 +427,7 @@ class ChannelSettingsOverview extends PureComponent {
               dependencyMap = 1;
               c3 = 1;
               const obj4 = {
-                value: tmp2(9880).isDefaultChannelThresholdMetAfterDelete(channel.getGuildId(), channel.id),
+                value: tmp2(9891).isDefaultChannelThresholdMetAfterDelete(channel.getGuildId(), channel.id),
                 done: false,
               };
               return obj4;
@@ -460,7 +460,7 @@ class ChannelSettingsOverview extends PureComponent {
                   obj6.confirmText = intl4.string(tmp2(1115).t.BddRzS);
                   const obj8 = { children: null };
                   const obj9 = { style: closure_128_0.alertText, variant: "text-md/medium", children: closure_128_5 };
-                  const items = [closure_1_47(tmp2(4634).Text, obj9)];
+                  const items = [closure_1_47(tmp2(4636).Text, obj9)];
                   const obj10 = { style: closure_128_0.alertText, variant: "text-md/medium", children: null };
                   const intl5 = tmp2(1115).intl;
                   const obj11 = {
@@ -473,12 +473,12 @@ class ChannelSettingsOverview extends PureComponent {
                     },
                   };
                   obj10.children = intl5.format(tmp2(1115).t.LAJbDm, obj11);
-                  items[1] = closure_1_47(tmp2(4634).Text, obj10);
+                  items[1] = closure_1_47(tmp2(4636).Text, obj10);
                   obj8.children = items;
                   obj6.children = closure_1_48(closure_1_49, obj8);
-                  tmp5(4983).show(obj6);
+                  tmp5(4985).show(obj6);
                   c3 = 3;
-                  let obj = tmp5(4983);
+                  let obj = tmp5(4985);
                 }
               }
             }
@@ -493,7 +493,7 @@ class ChannelSettingsOverview extends PureComponent {
                 const obj16 = { style: closure_128_0.alertText, variant: "text-md/medium", children: null };
                 const intl8 = tmp2(1115).intl;
                 obj16.children = intl8.string(tmp2(1115).t.iWlB6h);
-                const items1 = [closure_1_47(tmp2(4634).Text, obj16)];
+                const items1 = [closure_1_47(tmp2(4636).Text, obj16)];
                 const obj17 = { style: closure_128_0.alertText, variant: "text-md/medium", children: null };
                 const intl9 = tmp2(1115).intl;
                 const obj18 = {
@@ -506,14 +506,14 @@ class ChannelSettingsOverview extends PureComponent {
                   },
                 };
                 obj17.children = intl9.format(tmp2(1115).t.ajiBwB, obj18);
-                items1[1] = closure_1_47(tmp2(4634).Text, obj17);
+                items1[1] = closure_1_47(tmp2(4636).Text, obj17);
                 obj15.children = items1;
                 obj12.children = closure_1_48(closure_1_49, obj15);
-                tmp5(4983).show(obj12);
-                const obj7 = tmp5(4983);
+                tmp5(4985).show(obj12);
+                const obj7 = tmp5(4985);
               }
             }
-            const obj13 = tmp2(4791);
+            const obj13 = tmp2(4793);
             closure_128_4 = obj13.computeChannelName(closure_128_1, UserStore, RelationshipStore, true);
             if (closure_129_0.props.isForumPost) {
               const intl11 = tmp2(1115).intl;
@@ -544,9 +544,9 @@ class ChannelSettingsOverview extends PureComponent {
             const intl14 = tmp2(1115).intl;
             obj19.confirmText = intl14.string(tmp2(1115).t.p89ACt);
             obj19.onConfirm = closure_129_0.handleConfirmDeleteChannel;
-            obj19.confirmColor = tmp5(5079).Colors.RED;
-            tmp5(4983).show(obj19);
-            const obj14 = tmp5(4983);
+            obj19.confirmColor = tmp5(5081).Colors.RED;
+            tmp5(4985).show(obj19);
+            const obj14 = tmp5(4985);
           }
         } catch (tmp129) {
           c3 = tmp;
@@ -675,7 +675,7 @@ prototype["updateNavigation"] = function updateNavigation(submitting, hasChanges
       stringResult1 = intl.string(hasChanges(1115).t.XPDhcc);
     }
     if (submitting) {
-      let fn = tmp3(5710).HeaderSubmittingIndicator;
+      let fn = tmp3(5712).HeaderSubmittingIndicator;
     } else {
       fn = (arg0) => {
         const obj = {};
@@ -728,7 +728,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     value: null,
     onChange: null,
     onBlur: null,
-    isDisabled: null,
+    disabled: null,
     maxLength: null,
     errorMessage: null,
     enableAndroidSanitizedInputWorkaround: true,
@@ -736,7 +736,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
   const TextInput = TextInput2.TextInput;
   obj3.value = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   ({ handleChangeName: obj2.onChange, handleBlurName: obj2.onBlur } = self);
-  obj3.isDisabled = !isChannelNameSettingEditable;
+  obj3.disabled = !isChannelNameSettingEditable;
   obj3.maxLength = maxLength;
   obj3.errorMessage = self.getError("name");
   if (!hasItem) {
@@ -757,7 +757,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
       label: stringResult1,
       value: null,
       onChange: null,
-      isDisabled: null,
+      disabled: null,
       autoCorrect: true,
       maxLength: null,
       errorMessage: null,
@@ -765,7 +765,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     isForumLikeChannelResult = channel.isForumLikeChannel();
     obj6.value = UnicodeEmojisDefault.translateSurrogatesToInlineEmoji(channel.topic);
     obj6.onChange = self.handleChangeTopic;
-    obj6.isDisabled = !canManageChannels;
+    obj6.disabled = !canManageChannels;
     obj6.maxLength = channel.isForumLikeChannel() ? closure_1_44 : closure_1_43;
     obj6.errorMessage = self.getError("topic");
     closure_1_47(TextArea.TextArea, obj6);
@@ -936,7 +936,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj.selected = autoArchiveDuration;
       obj.channel = channel;
       obj.onSelectDuration = this.handleAutoArchiveDurationChange;
-      return closure_1_47(tmp5(17025).AutoArchiveDurationOptions, obj);
+      return closure_1_47(tmp5(17064).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -1245,9 +1245,9 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       };
       const intl4 = tmp7(1115).intl;
       obj5.children = intl4.string(tmp7(1115).t["/AoSGN"]);
-      const items1 = [closure_1_47(tmp7(4634).Text, obj5)];
+      const items1 = [closure_1_47(tmp7(4636).Text, obj5)];
       const obj6 = { variant: "text-md/medium", color: "text-muted", children: stringResult };
-      items1[1] = closure_1_47(tmp7(4634).Text, obj6);
+      items1[1] = closure_1_47(tmp7(4636).Text, obj6);
       obj4.children = items1;
       const items2 = [__V(View, obj4)];
       const obj7 = { style: tmp.slider, value: null, minimumValue: 0, maximumValue: null, onValueChange: null };
@@ -1255,10 +1255,10 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj7.value = Math.min(channel.userLimit, tmp10);
       obj7.maximumValue = tmp10;
       obj7.onValueChange = this.handleUserLimitChange;
-      items2[1] = closure_1_47(tmp7(14294).Slider, obj7);
+      items2[1] = closure_1_47(tmp7(14302).Slider, obj7);
       obj3.children = items2;
-      obj2.children = __V(tmp7(5693).Card, obj3);
-      items.push(closure_1_47(tmp7(5773).TableRowGroup, obj2, "channel-user-limit"));
+      obj2.children = __V(tmp7(5695).Card, obj3);
+      items.push(closure_1_47(tmp7(5775).TableRowGroup, obj2, "channel-user-limit"));
       return items;
     }
   }
@@ -1298,13 +1298,13 @@ prototype["renderRegionOverride"] = function renderRegionOverride() {
           const intl4 = channel(1115).intl;
           obj2.label = intl4.string(channel(1115).t["Ms8bX+"]);
           const obj3 = { text: name };
-          obj2.trailing = closure_47(channel(5691).TableRow.TrailingText, obj3);
+          obj2.trailing = closure_47(channel(5693).TableRow.TrailingText, obj3);
           obj2.disabled = tmp2;
           obj2.onPress = function onPress() {
             return self.pushScreen(constants2.CHANGE_RTC_REGION);
           };
-          obj.children = closure_47(channel(5691).TableRow, obj2);
-          items.push(closure_47(channel(5773).TableRowGroup, obj, "channel-region-override"));
+          obj.children = closure_47(channel(5693).TableRow, obj2);
+          items.push(closure_47(channel(5775).TableRowGroup, obj, "channel-region-override"));
           return items;
         }
       }
@@ -1347,14 +1347,14 @@ prototype["renderPermissions"] = function renderPermissions() {
       stringResult = intl2.string(ShieldUserIcon(1115).t.BAZMBn);
     }
     const obj2 = { label: stringResult, arrow: true, icon: null, onPress: null };
-    ShieldUserIcon = ShieldUserIcon(9892).ShieldUserIcon;
+    ShieldUserIcon = ShieldUserIcon(9903).ShieldUserIcon;
     tmp2Result = closure_47(ShieldUserIcon, {});
     obj2.icon = tmp2Result;
     obj2.onPress = function onPress() {
       return self.pushScreen(constants2.PERMISSIONS, { origin: constants2.OVERVIEW });
     };
-    obj.children = closure_47(self(5691).TableRow, obj2);
-    closure_47(self(5773).TableRowGroup, obj);
+    obj.children = closure_47(self(5693).TableRow, obj2);
+    closure_47(self(5775).TableRowGroup, obj);
   }
 };
 prototype["renderSettingsSection"] = function renderSettingsSection(items) {
@@ -1375,7 +1375,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     let obj = { label: null, arrow: true, icon: null, onPress: null };
     const intl = channel(1115).intl;
     obj.label = intl.string(channel(1115).t.h850Ss);
-    obj.icon = closure_47(channel(9916).BellIcon, {});
+    obj.icon = closure_47(channel(9927).BellIcon, {});
     obj.onPress = function onPress() {
       if (channel.isThread()) {
         let result = threadActionSheets.showThreadNotificationsBottomSheet(channel);
@@ -1384,7 +1384,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
       }
       return result;
     };
-    items.push(closure_47(channel(5691).TableRow, obj, "rowNotifications"));
+    items.push(closure_47(channel(5693).TableRow, obj, "rowNotifications"));
   }
   if (closure_8(channel.type)) {
     const obj2 = { label: null, arrow: true, icon: null, onPress: null, disabled: null };
@@ -1396,7 +1396,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
       return self.pushScreen(constants2.PINNED_MESSAGES);
     };
     obj2.disabled = self.props.pinDisabled;
-    items.push(closure_47(channel(5691).TableRow, obj2, "rowPinnedMessages"));
+    items.push(closure_47(channel(5693).TableRow, obj2, "rowPinnedMessages"));
   }
   if (canManageChannels) {
     canManageChannels = channel.type !== constants3.GUILD_CATEGORY;
@@ -1408,11 +1408,11 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     const obj4 = { label: null, arrow: true, icon: null, onPress: null };
     const intl3 = channel(1115).intl;
     obj4.label = intl3.string(channel(1115).t.ngRFjZ);
-    obj4.icon = closure_47(channel(4580).LinkIcon, {});
+    obj4.icon = closure_47(channel(4582).LinkIcon, {});
     obj4.onPress = function onPress() {
       return self.pushScreen(constants2.INSTANT_INVITES);
     };
-    items.push(closure_47(channel(5691).TableRow, obj4, "rowInstantInvites"));
+    items.push(closure_47(channel(5693).TableRow, obj4, "rowInstantInvites"));
   }
   return self.renderSettingsSection(items);
 };
@@ -1438,20 +1438,20 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
       stringResult = intl3.string(GridSquareIcon(1115).t["4HXEZG"]);
     }
     const obj4 = { text: stringResult };
-    obj3.trailing = closure_47(self(5691).TableRow.TrailingText, obj4);
+    obj3.trailing = closure_47(self(5693).TableRow.TrailingText, obj4);
     if (channel.defaultForumLayout === GridSquareIcon(1968).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(17027).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(17066).GridSquareIcon;
       obj = {};
       let tmpResult = closure_47(GridSquareIcon, obj);
     } else {
-      tmpResult = closure_47(GridSquareIcon(7203).ListViewIcon, {});
+      tmpResult = closure_47(GridSquareIcon(7207).ListViewIcon, {});
     }
     obj3.icon = tmpResult;
     obj3.onPress = function onPress() {
       return self.pushScreen(constants2.DEFAULT_FORUM_LAYOUT);
     };
-    obj2.children = closure_47(self(5691).TableRow, obj3, "forumDefaultLayout");
-    closure_47(self(5773).TableRowGroup, obj2, "default-forum-layout");
+    obj2.children = closure_47(self(5693).TableRow, obj3, "forumDefaultLayout");
+    closure_47(self(5775).TableRowGroup, obj2, "default-forum-layout");
   }
 };
 prototype["renderUncommonSettingsSection"] = function renderUncommonSettingsSection() {
@@ -1636,17 +1636,17 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
       const items = [null];
       const obj3 = {
         variant: "danger",
-        icon: closure_47(tmp8(4595).TrashIcon, { color: "text-feedback-critical" }),
+        icon: closure_47(tmp8(4597).TrashIcon, { color: "text-feedback-critical" }),
         label: stringResult,
         onPress: this.handleDeleteChannel,
       };
-      items[1] = closure_47(tmp8(5691).TableRow, obj3);
+      items[1] = closure_47(tmp8(5693).TableRow, obj3);
       obj2.children = items;
       tmp = closure_48(tmp14, obj2);
     } else {
       const obj = {
         variant: "danger",
-        icon: closure_47(tmp8(4578).UserMinusIcon, { color: "text-feedback-critical" }),
+        icon: closure_47(tmp8(4580).UserMinusIcon, { color: "text-feedback-critical" }),
         label: null,
         onPress: null,
       };
@@ -1663,7 +1663,7 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
       obj.onPress = function onPress() {
         return ThreadActionCreatorsDefault.leaveThread(channel, "Context Menu");
       };
-      closure_47(tmp8(5691).TableRow, obj);
+      closure_47(tmp8(5693).TableRow, obj);
     }
   }
   return tmp;
@@ -1710,13 +1710,13 @@ prototype["renderForumTags"] = function renderForumTags() {
         const obj4 = { style: tmp.addTagIconButtonWrapper, children: null };
         const obj5 = { icon: null, size: "sm", onPress: null, accessibilityLabel: null };
         const obj6 = { size: "sm", color: self(576).colors.WHITE };
-        obj5.icon = closure_47(canManageChannels(9006).PlusSmallIcon, obj6);
+        obj5.icon = closure_47(canManageChannels(9022).PlusSmallIcon, obj6);
         obj5.onPress = function onPress() {
           return self.handlePressTag();
         };
         const intl3 = canManageChannels(1115).intl;
         obj5.accessibilityLabel = intl3.string(canManageChannels(1115).t["/jubeD"]);
-        obj4.children = closure_47(canManageChannels(8214).IconButton, obj5);
+        obj4.children = closure_47(canManageChannels(8057).IconButton, obj5);
         tmp10Result = closure_47(View, obj4);
       }
       const obj7 = { children: null };
@@ -1726,7 +1726,7 @@ prototype["renderForumTags"] = function renderForumTags() {
     }
     obj3.children = tmp6Result;
     obj2.children = closure_47(View, obj3);
-    const items1 = [closure_47(canManageChannels(5773).TableRowGroup, obj2), , ,];
+    const items1 = [closure_47(canManageChannels(5775).TableRowGroup, obj2), , ,];
     let tmp10Result3 = null;
     if (channel.availableTags.length <= 0) {
       const obj8 = {
@@ -1741,14 +1741,14 @@ prototype["renderForumTags"] = function renderForumTags() {
       const obj9 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.createTagButtonText, children: null };
       const intl4 = canManageChannels(1115).intl;
       obj9.children = intl4.string(canManageChannels(1115).t.F4is7L);
-      obj8.children = closure_47(canManageChannels(4634).Text, obj9);
-      tmp10Result3 = closure_47(canManageChannels(5208).PressableOpacity, obj8);
+      obj8.children = closure_47(canManageChannels(4636).Text, obj9);
+      tmp10Result3 = closure_47(canManageChannels(5210).PressableOpacity, obj8);
     }
     items1[1] = tmp10Result3;
     let tmp10Result4 = null != error && error.length > 0;
     if (tmp10Result4) {
       const obj10 = { variant: "text-sm/normal", color: "text-feedback-critical", children: error };
-      tmp10Result4 = closure_47(canManageChannels(4634).Text, obj10);
+      tmp10Result4 = closure_47(canManageChannels(4636).Text, obj10);
     }
     items1[2] = tmp10Result4;
     let tmp18 = !canManageChannels;
@@ -1761,10 +1761,10 @@ prototype["renderForumTags"] = function renderForumTags() {
     obj12.label = intl5.string(canManageChannels(1115).t.yX24uI);
     obj12.value = channel.hasFlag(constants10.REQUIRE_TAG);
     obj12.onValueChange = self.handleToggleRequireTag;
-    obj11.children = closure_47(canManageChannels(7310).TableSwitchRow, obj12);
-    items1[3] = closure_47(canManageChannels(5773).TableRowGroup, obj11);
+    obj11.children = closure_47(canManageChannels(7314).TableSwitchRow, obj12);
+    items1[3] = closure_47(canManageChannels(5775).TableRowGroup, obj11);
     obj.children = items1;
-    return closure_48(canManageChannels(5058).Stack, obj);
+    return closure_48(canManageChannels(5060).Stack, obj);
   } else {
     return null;
   }
@@ -1798,12 +1798,12 @@ prototype["renderCategory"] = function renderCategory() {
         let stringResult = intl.string(self(1115).t.GSfOoo);
         let tmp7 = self;
       } else {
-        stringResult = self(4791).computeChannelName(category, UserStore, RelationshipStore);
+        stringResult = self(4793).computeChannelName(category, UserStore, RelationshipStore);
         tmp7 = self;
-        const obj = self(4791);
+        const obj = self(4793);
       }
       const obj2 = {
-        icon: closure_47(tmp7(16284).FolderPlusIcon, {}),
+        icon: closure_47(tmp7(16314).FolderPlusIcon, {}),
         label: null,
         trailing: null,
         arrow: null,
@@ -1812,7 +1812,7 @@ prototype["renderCategory"] = function renderCategory() {
       const intl2 = tmp7(1115).intl;
       obj2.label = intl2.string(tmp7(1115).t.vHCZwr);
       const obj3 = { text: stringResult };
-      obj2.trailing = closure_47(tmp7(5691).TableRow.TrailingText, obj3);
+      obj2.trailing = closure_47(tmp7(5693).TableRow.TrailingText, obj3);
       obj2.arrow = canManageParent;
       let fn;
       if (canManageParent) {
@@ -1820,8 +1820,8 @@ prototype["renderCategory"] = function renderCategory() {
       }
       const obj4 = { hasIcons: true, children: null };
       obj2.onPress = fn;
-      obj4.children = closure_47(tmp7(5691).TableRow, obj2);
-      return closure_47(tmp7(5773).TableRowGroup, obj4);
+      obj4.children = closure_47(tmp7(5693).TableRow, obj2);
+      return closure_47(tmp7(5775).TableRowGroup, obj4);
     }
   }
   return null;
@@ -1881,7 +1881,7 @@ prototype["render"] = function render() {
   const tmp = closure_52(this.context);
   return closure_1_47(View, { style: closure_52(this.context).screenContainer, children: renderThreadSettingsResult });
 };
-ChannelSettingsOverview.contextType = fn(4348).ThemeContext;
+ChannelSettingsOverview.contextType = fn(4350).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsOverview.tsx");
 

@@ -163,7 +163,7 @@ function computeLayoutForAll() {
   }
   return flag;
 }
-const SearchConstants = fn(7994);
+const SearchConstants = fn(8000);
 ({
   SearchTabs: closure_9,
   SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: c10,

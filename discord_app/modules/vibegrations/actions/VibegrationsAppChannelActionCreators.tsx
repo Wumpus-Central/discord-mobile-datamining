@@ -11,3 +11,6 @@ export const setAppChannelChatOpen = function setAppChannelChatOpen(id, open) {
     DispatcherDefault.dispatch(obj2);
   }
 };
+export const markAppChannelChatAutoOpened = function markAppChannelChatAutoOpened(channelId, timestamp) {
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_APP_CHANNEL_CHAT_AUTO_OPENED", channelId, timestamp });
+};

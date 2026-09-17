@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/EmojiVomitExample.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6064 from "../../../../../../discord_assets/assets/mana/asset-library/generated/EmojiVomitExample-2x.png.js";
+import _modDef6066 from "../../../../../../discord_assets/assets/mana/asset-library/generated/EmojiVomitExample-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const EmojiVomitExample = function EmojiVomitExample(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6064 };
+  const obj2 = { uri: _modDef6066 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

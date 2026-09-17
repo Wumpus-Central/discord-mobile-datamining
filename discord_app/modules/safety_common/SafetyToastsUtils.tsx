@@ -1,14 +1,14 @@
 // discord_app/modules/safety_common/SafetyToastsUtils.tsx
 import util from "../../intl/index.native.tsx";
 import _modDef2529 from "../report_to_mod/ReportToMod.messages.js";
-import _modDef2947 from "../age_assurance/AgeAssurance.messages.js";
+import _modDef2949 from "../age_assurance/AgeAssurance.messages.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyToastType = fn(8529).SafetyToastType;
+const SafetyToastType = fn(8548).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 
@@ -61,13 +61,13 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
     return intl11.string(util.t.c6kn6F);
   } else if (SafetyToastType.AGE_VERIFICATION_FAE_FAILED === BLOCK_SUCCESS) {
     const intl10 = util.intl;
-    return intl10.string(_modDef2947["9F2y52"]);
+    return intl10.string(_modDef2949["9F2y52"]);
   } else if (SafetyToastType.AGE_VERIFICATION_ID_FAILED === BLOCK_SUCCESS) {
     const intl9 = util.intl;
-    return intl9.string(_modDef2947["40UKek"]);
+    return intl9.string(_modDef2949["40UKek"]);
   } else if (SafetyToastType.AGE_VERIFICATION_UNDERAGE === BLOCK_SUCCESS) {
     const intl8 = util.intl;
-    return intl8.string(_modDef2947.XBGt7g);
+    return intl8.string(_modDef2949.XBGt7g);
   } else if (SafetyToastType.TIGGER_PAWTECT_VERIFIED === BLOCK_SUCCESS) {
     const intl7 = util.intl;
     return intl7.string(util.t["7nKAXx"]);
@@ -85,7 +85,7 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
     return intl3.string(util.t["susqq/"]);
   } else if (SafetyToastType.AGE_VERIFICATION_METHOD_UNAVAILABLE === BLOCK_SUCCESS) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2947.vVwFCK);
+    return intl2.string(_modDef2949.vVwFCK);
   } else {
     const intl = util.intl;
     return intl.string(util.t["+c5xtT"]);

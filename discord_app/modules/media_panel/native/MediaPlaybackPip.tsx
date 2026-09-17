@@ -24,8 +24,8 @@ function MediaInfo(message) {
   noop = undefined;
   ({ isVoiceMessage, isControlVisible } = message);
   const tmp = closure_17();
-  const token = message(4339).useToken(first(576).colors.BACKGROUND_SURFACE_HIGH);
-  let obj = message(4339);
+  const token = message(4341).useToken(first(576).colors.BACKGROUND_SURFACE_HIGH);
+  let obj = message(4341);
   const items = [ChannelStore, UserStore, RelationshipStore];
   const items1 = [message];
   const stateFromStores = message(504).useStateFromStores(
@@ -66,7 +66,7 @@ function MediaInfo(message) {
           if (contentMessage.attachments.length > 0) {
             str2 = "";
             if (null != activeMediaPlayerSource.attachmentIndex) {
-              str2 = tmp4(8396)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
+              str2 = tmp4(8415)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
             }
           }
         }
@@ -79,7 +79,7 @@ function MediaInfo(message) {
           },
           children: str2,
         };
-        const tmp14 = closure_15(tmp2(4634).Text, obj3);
+        const tmp14 = closure_15(tmp2(4636).Text, obj3);
         const obj4 = {
           accessibilityElementsHidden: isControlVisible,
           style: tmp.infoContent,
@@ -93,7 +93,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj6 = { style: { flex: 1 }, children: null };
           const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(17431).Marquee, obj7)];
+          const items3 = [closure_15(tmp2(17472).Marquee, obj7)];
           const obj8 = {
             start: { x: 0, y: 0 },
             end: { x: 1, y: 0 },
@@ -104,7 +104,7 @@ function MediaInfo(message) {
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
           obj8.colors = items4;
           obj8.style = tmp.infoContainerGradient;
-          items3[1] = closure_15(tmp4(5072), obj8);
+          items3[1] = closure_15(tmp4(5074), obj8);
           obj6.children = items3;
           tmp16Result = closure_16(closure_7, obj6);
         }
@@ -112,7 +112,7 @@ function MediaInfo(message) {
         let tmp13Result = null != stateFromStores;
         if (tmp13Result) {
           const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: stateFromStores };
-          tmp13Result = closure_15(tmp2(4634).Text, obj9);
+          tmp13Result = closure_15(tmp2(4636).Text, obj9);
         }
         items5[1] = tmp13Result;
         obj5.children = items5;
@@ -156,8 +156,8 @@ function PiPControls(message) {
     }
     return { opacity: timing.withTiming(num, { duration: 200 }) };
   };
-  let obj = message(4374);
-  fn.__closure = { withTiming: message(4639).withTiming, visible };
+  let obj = message(4376);
+  fn.__closure = { withTiming: message(4641).withTiming, visible };
   fn.__workletHash = 3641278982291;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -180,7 +180,7 @@ function PiPControls(message) {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.pipControls, animatedStyle];
   obj3.style = items1;
-  const items2 = [closure_15(message(9045).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
+  const items2 = [closure_15(message(9060).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
   const obj4 = {
     disabled: !visible,
     style: null,
@@ -188,7 +188,7 @@ function PiPControls(message) {
     accessible: true,
     accessibilityRole: "button",
     accessibilityLabel: stringResult,
-    children: closure_15(message(5714).ArrowLargeLeftIcon, { size: "sm" }),
+    children: closure_15(message(5716).ArrowLargeLeftIcon, { size: "sm" }),
   };
   const items3 = [,];
   ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
@@ -201,23 +201,23 @@ function PiPControls(message) {
     accessible: true,
     accessibilityRole: "button",
     accessibilityLabel: string2Result,
-    children: closure_15(message(4590).XLargeIcon, { size: "sm" }),
+    children: closure_15(message(4592).XLargeIcon, { size: "sm" }),
   };
   const items4 = [,];
   ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);
   obj5.style = items4;
   items2[2] = closure_15(closure_6, obj5);
   obj3.children = items2;
-  return closure_16(visible(4374).View, obj3);
+  return closure_16(visible(4376).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17293).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17335).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   container: {
     justifyContent: "center",

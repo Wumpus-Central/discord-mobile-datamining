@@ -21,9 +21,9 @@ export default function ContentInventoryEntryRow(content) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8259).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8259).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8259).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8278).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8278).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8278).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           const obj2 = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;

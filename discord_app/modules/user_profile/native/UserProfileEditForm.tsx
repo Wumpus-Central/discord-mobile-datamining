@@ -5,7 +5,7 @@ import ProfileCustomizationUtils from "../../profile_customization/ProfileCustom
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef14704 from "../../../../_runtime/metro/14704__.js";
+import _modDef14712 from "../../../../_runtime/metro/14712__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
@@ -57,7 +57,7 @@ function EditUserProfileBanner(user) {
       fn = (banner) => user(isTryItOut[19]).setPendingChanges({ banner });
     }
     obj2.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14706, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14714, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -75,19 +75,19 @@ function EditUserProfileBanner(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7318).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7322).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10 } = Constants);
 let closure_11 = fn(1084).ProfileCustomizationScrollPositions;
-const constants = fn(14703).UserProfileEditAutoFocusElement;
+const constants = fn(14711).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let obj = {
-  assetOrigin: fn(7099).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef14704,
-  staticImageUri: _modDef14704,
+  assetOrigin: fn(7103).AssetOriginTypes.NEW_ASSET,
+  imageUri: _modDef14712,
+  staticImageUri: _modDef14712,
   description: "",
-  originalAsset: "assign",
+  originalAsset: "call",
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
@@ -454,7 +454,7 @@ export default function UserProfileEditForm(currentUser) {
     onChange: null,
     placeholder: null,
     maxLength: null,
-    isDisabled: null,
+    disabled: null,
   };
   const tmpResult14 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[49]);
   const intl2 = tmp5(tmp2[21]).intl;
@@ -470,7 +470,7 @@ export default function UserProfileEditForm(currentUser) {
   };
   obj25.placeholder = currentUser.currentUser.toString();
   obj25.maxLength = maxLength;
-  obj25.isDisabled = isSubmitting;
+  obj25.disabled = isSubmitting;
   items14[1] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj25);
   let tmp41Result6 = result;
   if (!result) {
@@ -491,7 +491,7 @@ export default function UserProfileEditForm(currentUser) {
     maxLength: null,
     spellCheck: false,
     autoCorrect: false,
-    isDisabled: null,
+    disabled: null,
   };
   const tmpResult15 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);
   const intl3 = tmp5(tmp2[21]).intl;
@@ -506,7 +506,7 @@ export default function UserProfileEditForm(currentUser) {
     return str(pendingBadgeHiddenBadges[19]).setPendingChanges({ pronouns });
   };
   obj27.maxLength = maxLength2;
-  obj27.isDisabled = isSubmitting;
+  obj27.disabled = isSubmitting;
   items14[3] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj27);
   let tmp41Result7 = !isTryItOut;
   if (!isTryItOut) {
@@ -529,7 +529,7 @@ export default function UserProfileEditForm(currentUser) {
     autoFocus: null,
     maxLength: null,
     numberOfLines: 5,
-    isDisabled: null,
+    disabled: null,
   };
   const tmpResult16 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);
   const intl4 = tmp5(tmp2[21]).intl;
@@ -545,7 +545,7 @@ export default function UserProfileEditForm(currentUser) {
   };
   obj29.autoFocus = autoFocusElement === constants.BIO;
   obj29.maxLength = bioMaxLength;
-  obj29.isDisabled = isSubmitting;
+  obj29.disabled = isSubmitting;
   items14[5] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj29);
   const obj30 = {
     user: currentUser.currentUser,

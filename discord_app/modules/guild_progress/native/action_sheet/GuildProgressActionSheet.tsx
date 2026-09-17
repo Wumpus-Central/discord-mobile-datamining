@@ -41,7 +41,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(12612);
+const GuildProgressConstants = fn(12621);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1074);
 ({
@@ -52,7 +52,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -94,14 +94,14 @@ export default function GuildProgressActionSheet(guild) {
             return obj3;
           } else {
             let base64;
-            tmp5(9206).init(View);
-            const obj6 = tmp5(9206);
-            tmp2(12617).hideActionSheet(id.id);
-            const obj7 = tmp2(12617);
+            tmp5(9217).init(View);
+            const obj6 = tmp5(9217);
+            tmp2(12626).hideActionSheet(id.id);
+            const obj7 = tmp2(12626);
             const obj4 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(5223).openImagePicker(obj4), done: false };
+            const obj5 = { value: tmp5(5225).openImagePicker(obj4), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -114,8 +114,8 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            tmp5(9206).updateIcon(closure_129_5, base64);
-            const obj = tmp5(9206);
+            tmp5(9217).updateIcon(closure_129_5, base64);
+            const obj = tmp5(9217);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -133,7 +133,7 @@ export default function GuildProgressActionSheet(guild) {
   const iOSCompletionStates = guild(numFinished[11]).useIOSCompletionStates(guild);
   numFinished = iOSCompletionStates.numFinished;
   const totalSteps = iOSCompletionStates.totalSteps;
-  ({ guildPopulated, guildPersonalized, guildMessaged, guildBoosted, showBoostStep } = iOSCompletionStates);
+  ({ guildPopulated, guildPersonalized, guildMessaged, guildBoosted } = iOSCompletionStates);
   let obj2 = guild(numFinished[11]);
   const items1 = [errors];
   const stateFromStoresObject = guild(numFinished[10]).useStateFromStoresObject(items1, () => errors.getErrors());
@@ -176,7 +176,7 @@ export default function GuildProgressActionSheet(guild) {
   obj4.isCompleted = guildPopulated;
   obj4.analyticsSetupType = constants.GUILD_PROGRESS;
   obj4.analyticsAction = constants2.INVITE;
-  const tmp11 = require("ProgressItem");
+  const tmp10 = require("ProgressItem");
   let obj6 = {
     onPress: function addServerIcon() {
       const self = this;
@@ -195,7 +195,7 @@ export default function GuildProgressActionSheet(guild) {
     analyticsAction: null,
   };
   let obj7 = { uri: null };
-  const tmp14 = closure_14(require("ProgressItem"), obj4);
+  const tmp11 = closure_14(require("ProgressItem"), obj4);
   obj7.uri = require("../../../../../discord_assets/assets/mana/asset-library/generated/BrushIllocon-2x.png.js");
   obj6.source = obj7;
   const intl2 = guild(numFinished[18]).intl;
@@ -203,7 +203,7 @@ export default function GuildProgressActionSheet(guild) {
   obj6.isCompleted = guildPersonalized;
   obj6.analyticsSetupType = constants.GUILD_PROGRESS;
   obj6.analyticsAction = constants2.PERSONALIZE_SERVER;
-  const tmp15 = require("ProgressItem");
+  const tmp12 = require("ProgressItem");
   const obj8 = {
     onPress: function goToChannel() {
       if (null != user) {
@@ -225,7 +225,7 @@ export default function GuildProgressActionSheet(guild) {
     analyticsAction: null,
   };
   let obj9 = { uri: null };
-  const tmp16 = closure_14(require("ProgressItem"), obj6);
+  const tmp13 = closure_14(require("ProgressItem"), obj6);
   obj9.uri = require("../../../../../discord_assets/assets/mana/asset-library/generated/PlaneIllocon-2x.png.js");
   obj8.source = obj9;
   const intl3 = guild(numFinished[18]).intl;
@@ -233,37 +233,35 @@ export default function GuildProgressActionSheet(guild) {
   obj8.isCompleted = guildMessaged;
   obj8.analyticsSetupType = constants.GUILD_PROGRESS;
   obj8.analyticsAction = constants2.SEND_MESSAGE;
-  let tmp9Result = null;
-  const tmp17 = require("ProgressItem");
-  if (showBoostStep) {
-    const obj10 = {
-      onPress: function goToBoosts() {
-        GuildProgressUtils.hideActionSheet(id);
-        const obj2 = { guildId: id, analyticsLocation: null };
-        obj2.analyticsLocation = AnalyticsLocationDefault.GUILD_POWERUPS_GUILD_PROGRESS;
-        openGuildPowerupsModalDefault(obj2);
-      },
-      source: null,
-      title: null,
-      isCompleted: null,
-      analyticsSetupType: null,
-      analyticsAction: null,
-    };
-    const obj11 = { uri: tmp10(tmp3[28]) };
-    obj10.source = obj11;
-    const intl4 = tmp2(tmp3[18]).intl;
-    obj10.title = intl4.string(tmp2(tmp3[18]).t["6Qbqxw"]);
-    obj10.isCompleted = guildBoosted;
-    obj10.analyticsSetupType = constants.GUILD_PROGRESS;
-    obj10.analyticsAction = constants2.BOOST;
-    tmp9Result = closure_14(tmp10(tmp3[15]), obj10);
-    const tmp10Result = tmp10(tmp3[15]);
-  }
+  const tmp14 = require("ProgressItem");
+  const obj10 = {
+    onPress: function goToBoosts() {
+      GuildProgressUtils.hideActionSheet(id);
+      const obj2 = { guildId: id, analyticsLocation: null };
+      obj2.analyticsLocation = AnalyticsLocationDefault.GUILD_POWERUPS_GUILD_PROGRESS;
+      openGuildPowerupsModalDefault(obj2);
+    },
+    source: null,
+    title: null,
+    isCompleted: null,
+    analyticsSetupType: null,
+    analyticsAction: null,
+  };
+  const obj11 = { uri: null };
+  const tmp15 = closure_14(require("ProgressItem"), obj8);
+  obj11.uri = require("../../../../../discord_assets/assets/mana/asset-library/generated/BoostGemIllocon-2x.png.js");
+  obj10.source = obj11;
+  const intl4 = guild(numFinished[18]).intl;
+  obj10.title = intl4.string(guild(numFinished[18]).t["6Qbqxw"]);
+  obj10.isCompleted = guildBoosted;
+  obj10.analyticsSetupType = constants.GUILD_PROGRESS;
+  obj10.analyticsAction = constants2.BOOST;
   const obj12 = { style: tmp.container, children: null };
   const obj13 = { title: null, subtitle: null };
-  const intl5 = tmp2(tmp3[18]).intl;
+  const tmp16 = require("ProgressItem");
+  const intl5 = guild(numFinished[18]).intl;
   obj13.title = intl5.string(guild(numFinished[18]).t["tu/tr8"]);
-  const intl6 = tmp2(tmp3[18]).intl;
+  const intl6 = guild(numFinished[18]).intl;
   obj13.subtitle = intl6.format(guild(numFinished[18]).t.l6iRLs, {
     numFinished,
     total: totalSteps,
@@ -277,10 +275,10 @@ export default function GuildProgressActionSheet(guild) {
   });
   const items5 = [
     closure_14(GuildProgressHeader, obj13),
-    tmp14,
-    tmp16,
-    closure_14(require("ProgressItem"), obj8),
-    tmp9Result,
+    tmp11,
+    tmp13,
+    tmp15,
+    closure_14(require("ProgressItem"), obj10),
   ];
   const items6 = [tmp.footer];
   let center = null;
@@ -303,19 +301,19 @@ export default function GuildProgressActionSheet(guild) {
     const obj16 = { variant: "primary", grow: true, onPress: handleDismissGuildProgress, text: null };
     const intl8 = tmp2(tmp3[18]).intl;
     obj16.text = intl8.string(tmp2(tmp3[18]).t["0/5zhg"]);
-    let tmp9Result2 = closure_14(tmp2(tmp3[30]).Button, obj16);
+    let tmp9Result = closure_14(tmp2(tmp3[30]).Button, obj16);
   } else {
     const obj17 = { accessibilityRole: "button", onPress: handleDismissGuildProgress, children: null };
     const obj18 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl7 = tmp2(tmp3[18]).intl;
     obj18.children = intl7.string(tmp2(tmp3[18]).t["9E36wf"]);
     obj17.children = closure_14(tmp2(tmp3[29]).Text, obj18);
-    tmp9Result2 = closure_14(tmp2(tmp3[31]).PressableOpacity, obj17);
+    tmp9Result = closure_14(tmp2(tmp3[31]).PressableOpacity, obj17);
   }
-  obj15.children = tmp9Result2;
+  obj15.children = tmp9Result;
   items5[5] = closure_14(id, obj15);
   obj12.children = items5;
-  const children = closure_15(tmp23, obj12);
+  const children = closure_15(tmp20, obj12);
   return closure_14(guild(numFinished[32]).ActionSheet, { showGradient: true, startExpanded: true, children });
 }
 export { GuildProgressHeader };

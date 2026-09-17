@@ -8,12 +8,12 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(16725);
+const VibegrationsConnectionStore = fn(16752);
 ({ sendUserMessage: closure_7, submitProjectSecrets: closure_8 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const VibegrationsSecretsSheet = "VibegrationsSecretsSheet";
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_12 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
@@ -247,7 +247,7 @@ export default function VibegrationsSecretsSheet(projectId) {
       autoCorrect: false,
       value: null,
       onChange: null,
-      isDisabled: null,
+      disabled: null,
     };
     let hint;
     if (null != label.hint) {
@@ -264,7 +264,7 @@ export default function VibegrationsSecretsSheet(projectId) {
     obj.onChange = function onChange(arg0) {
       return closure_10(label.name, arg0);
     };
-    obj.isDisabled = first1;
+    obj.disabled = first1;
     return closure_9(projectId(first[17]).TextInput, obj, label.name);
   });
   let tmp13Result4 = null;

@@ -15,7 +15,7 @@ import canAddNewReactionsDefault from "../../modules/reactions/canAddNewReaction
 import messages_MessagesUtils from "../../modules/messages/native/MessagesUtils.tsx";
 import reactions_ReactionUtils from "../../modules/reactions/native/ReactionUtils.tsx";
 import computeScrollDataDefault from "../../modules/chat/native/computeScrollData.tsx";
-import NativeChatUtilsDefault from "../../modules/chat/native/NativeChatUtils.tsx";
+import NativeChatUtils from "../../modules/chat/native/NativeChatUtils.tsx";
 import ChatManagerDefault from "../../modules/messages/native/renderer/ChatManager.tsx";
 import handleMessagesTapImage from "../../modules/messages/native/handlers/handleMessagesTapImage.tsx";
 import MessageDataSnowflakeUtils from "../../modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx";
@@ -34,14 +34,16 @@ import ActionSheetStore from "../../modules/action_sheet/native/ActionSheetStore
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const NativeChatUtilsDefault = NativeChatUtils;
+
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8049);
+const RowGeneratorConstants = fn(8069);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -71,11 +73,29 @@ class ChatPreviewBase extends PureComponent {
     applyArgumentsResult.chatRef = closure_4.createRef();
     applyArgumentsResult.didPositionInitialScroll = false;
     applyArgumentsResult.handleCompleteFirstLayout = function handleCompleteFirstLayout() {
-      if (tmp2) {
+      if (!applyArgumentsResult.didPositionInitialScroll) {
         applyArgumentsResult.didPositionInitialScroll = true;
-        messages_MessagesUtils.scrollToTopMessage(applyArgumentsResult.chatRef, applyArgumentsResult.chatManager);
+        if (applyArgumentsResult.props.initialScrollToTop) {
+          messages_MessagesUtils.scrollToTopMessage(applyArgumentsResult.chatRef, applyArgumentsResult.chatManager);
+        } else {
+          let tmp3 = null != applyArgumentsResult.scrollData;
+          if (tmp3) {
+            tmp3 = applyArgumentsResult.scrollData.type === NativeChatUtils.ChatScrollType.SCROLL;
+          }
+          if (tmp3) {
+            const obj2 = {
+              animated: applyArgumentsResult.scrollData.animate,
+              highlight: applyArgumentsResult.scrollData.highlight,
+              position: applyArgumentsResult.scrollData.position,
+            };
+            NativeChatUtilsDefault.scrollTo(
+              applyArgumentsResult.chatRef.current,
+              applyArgumentsResult.scrollData.index,
+              obj2,
+            );
+          }
+        }
       }
-      tmp2 = applyArgumentsResult.props.initialScrollToTop && !applyArgumentsResult.didPositionInitialScroll;
     };
     applyArgumentsResult.setup = function setup() {
       let flag = arg0;
@@ -142,8 +162,8 @@ class ChatPreviewBase extends PureComponent {
             isSameDayResult = null == timestamp;
           }
           if (!isSameDayResult) {
-            isSameDayResult = _undefined(changeType[15]).isSameDay(tmp.timestamp, timestamp);
-            const obj = _undefined(changeType[15]);
+            isSameDayResult = _undefined(changeType[16]).isSameDay(tmp.timestamp, timestamp);
+            const obj = _undefined(changeType[16]);
           }
           let flag = false;
           if (!isSameDayResult) {
@@ -182,9 +202,9 @@ class ChatPreviewBase extends PureComponent {
             });
             tmp8.revealed = tmp.id === messages.revealedMessageId;
             tmp8.context = tmp.id;
-            const intl2 = _undefined(changeType[16]).intl;
+            const intl2 = _undefined(changeType[17]).intl;
             const obj4 = { count: tmp8.content.length };
-            tmp8.text = intl2.formatToPlainString(_undefined(changeType[16]).t["+FcYM/"], obj4);
+            tmp8.text = intl2.formatToPlainString(_undefined(changeType[17]).t["+FcYM/"], obj4);
             tmp25 = null != tmp8 && tmp8.rowType === constants.BLOCKED_GROUP;
           } else if (tmp.ignored) {
             let tmp14 = tmp8;
@@ -208,9 +228,9 @@ class ChatPreviewBase extends PureComponent {
             });
             tmp14.revealed = tmp.id === messages.revealedMessageId;
             tmp14.context = tmp.id;
-            const intl = _undefined(changeType[16]).intl;
+            const intl = _undefined(changeType[17]).intl;
             const obj6 = { count: tmp14.content.length };
-            tmp14.text = intl.formatToPlainString(_undefined(changeType[16]).t["VFWjc+"], obj6);
+            tmp14.text = intl.formatToPlainString(_undefined(changeType[17]).t["VFWjc+"], obj6);
             tmp13 = null != tmp8 && tmp8.rowType === constants.IGNORED_GROUP;
           } else {
             const item2 = arr.forEach((id) => {
@@ -242,10 +262,10 @@ class ChatPreviewBase extends PureComponent {
               roleStyle,
               rowType: constants2.DAY,
               changeType,
-              text: _undefined(changeType[15]).dateFormat(tmp.timestamp, "LL"),
+              text: _undefined(changeType[16]).dateFormat(tmp.timestamp, "LL"),
             };
             items1.push(obj7);
-            const obj8 = _undefined(changeType[15]);
+            const obj8 = _undefined(changeType[16]);
           }
         });
         for (const item10042 of items1) {
@@ -254,24 +274,27 @@ class ChatPreviewBase extends PureComponent {
           continue;
         }
         const chatManager3 = applyArgumentsResult.chatManager;
-        const chatManager4 = applyArgumentsResult.chatManager;
         const changeset = chatManager3.createChangeset();
+        const chatManager4 = applyArgumentsResult.chatManager;
         const jumpTargetId = tmp3.jumpTargetId;
-        let tmp23;
+        const previousRows = chatManager4.getPreviousRows();
+        let obj3 = {
+          rows: previousRows,
+          scrollToMessageId: jumpTargetId,
+          jumpTargetId,
+          jumpType: "flex",
+          shouldInitialScroll: "Array",
+          animated: "bearded_person_tone3",
+          scrollPosition: "bearded_person_medium_skin_tone",
+          focusTargetId: "bearded_person_tone4",
+        };
+        applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
-          let obj3 = {
-            rows: tmp22,
-            scrollToMessageId: jumpTargetId,
-            jumpTargetId,
-            jumpType: "flex",
-            shouldInitialScroll: "Array",
-            animated: 0,
-            scrollPosition: 2,
-            focusTargetId: 0,
-          };
-          tmp23 = computeScrollDataDefault(obj3);
+          if (applyArgumentsResult.didPositionInitialScroll) {
+            applyArgumentsResult.updateContent(changeset, applyArgumentsResult.scrollData);
+          }
         }
-        applyArgumentsResult.updateContent(changeset, tmp23);
+        applyArgumentsResult.updateContent(changeset, undefined);
       }
     };
     applyArgumentsResult.updateContent = function updateContent(changeset, scrollData) {
@@ -295,7 +318,7 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          applyArgumentsResult(4649).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(4651).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -328,8 +351,8 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(4649).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(4649);
+            applyArgumentsResult(4651).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(4651);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
@@ -606,7 +629,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4348).ThemeContext;
+ChatPreviewBase.contextType = fn(4350).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -625,10 +648,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7439).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7439);
-  const isChannelContentGated = channelId(4849).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4849);
+  const isChannelSpoilerGated = channelId(7443).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7443);
+  const isChannelContentGated = channelId(4851).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4851);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

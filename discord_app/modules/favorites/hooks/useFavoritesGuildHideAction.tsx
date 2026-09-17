@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildHideAction.tsx
 import router_utils from "../../routing/router_utils.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
-import _modDef3237 from "../intl/FavoritesGuild.messages.js";
+import _modDef3239 from "../intl/FavoritesGuild.messages.js";
 import FavoritesActionCreators from "../FavoritesActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -12,7 +12,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
-  hasAccess = hasAccess(10363).useFavoritesAccess().hasAccess;
+  hasAccess = hasAccess(10371).useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   let obj2 = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
   const callback = noop.useCallback(() => {
@@ -26,7 +26,7 @@ export default function useFavoritesGuildHideAction() {
   }, items);
   const intl = hasAccess(1115).intl;
   if (hasAccess) {
-    let ojM1xJ = _modDef3237["8FO0y9"];
+    let ojM1xJ = _modDef3239["8FO0y9"];
   } else {
     ojM1xJ = tmp(1115).t.ojM1xJ;
   }
@@ -34,7 +34,7 @@ export default function useFavoritesGuildHideAction() {
   let stringResult;
   if (hasAccess) {
     const intl2 = tmp(1115).intl;
-    stringResult = intl2.string(_modDef3237.FaHxWl);
+    stringResult = intl2.string(_modDef3239.FaHxWl);
   }
   obj2.subLabel = stringResult;
   obj2.perform = callback;

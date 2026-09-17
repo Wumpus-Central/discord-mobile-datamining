@@ -88,7 +88,7 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(4272).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4274).SecondaryIndexMap(
   (saveData) => {
     const items = [SavedMessagesTypes.SavedMessageSortTypes.ALL];
     if (null != saveData.saveData.dueAt) {
