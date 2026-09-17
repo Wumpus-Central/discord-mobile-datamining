@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/icymi/native/images", width: 77, height: 95.5, scales: [2, 3], hash: "ebbb7db0461de915440e3bdd6a8249c9", name: "flash", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "4a70f7aa7e8a3ecde1dcede1f7baaaa2", name: "ic_send", type: "png" });

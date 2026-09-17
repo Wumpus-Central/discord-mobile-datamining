@@ -2,7 +2,7 @@
 
 // Module 8690
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8610 from "module_8610" /* 8610 */;
+import _modDef8630 from "module_8630" /* 8630 */;
 import _modDef8691 from "module_8691" /* 8691 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,7 +10,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Use = fn;
+const Path = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Use {
+class Path {
   constructor() {
     self = this;
-    tmp = closure_3(this, Use);
+    tmp = closure_3(this, Path);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Use);
+    obj = hasOwnProperty(Path);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -52,46 +52,31 @@ class Use {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Use, _modDef8610);
+_inherits(Path, _modDef8630);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    let str = props.href;
-    ({ children, x, y, width, height } = props);
-    if (undefined === str) {
-      str = props.xlinkHref;
-    }
-    let match = str;
-    if (str) {
-      match = str.match(Use(8602).idPattern);
-    }
-    let tmp4 = match;
-    if (match) {
-      tmp4 = match[1];
-    }
-    if (!tmp4) {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
-    }
-    const size = { href: tmp4, x, y, width, height };
-    const obj = {
+    const obj = {};
+    const merged = Object.assign(Path(8621).extract(this, props));
+    obj.d = props.d;
+    const obj2 = Path(8621);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(Use(8601).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = children;
-    return <tmp7 ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8691, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Use, items);
-importDefaultResultResult.displayName = "Use";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = _createClass(Path, items);
+importDefaultResultResult.displayName = "Path";
 
 export default importDefaultResultResult;

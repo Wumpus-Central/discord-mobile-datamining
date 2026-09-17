@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 375, height: 180, scales: [2, 3], hash: "ed3a2617f9b5f5cc8eac96d446f7dd22", name: "intro_header_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_settings/roles/native/images", width: 375, height: 280, scales: [2, 3], hash: "385febe027093418da10e0784f3891bd", name: "illustration-dark", type: "png" });

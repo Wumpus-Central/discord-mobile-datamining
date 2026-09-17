@@ -1,211 +1,340 @@
 // === Module 14527: ? ===
 
 // Module 14527
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import emptyPromise2 from "emptyPromise" /* 14538 */;
+import _mod14557 from "module_14557" /* 14557 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator_mod from "module_17" /* 17 */;
+import get_mod from "module_82" /* 82 */;
+import get_ActivityIndicator_mod from "module_14528" /* 14528 */;
+import get_ActivityIndicator_mod from "module_14530" /* 14530 */;
+import sendToReactotron from "sendToReactotron" /* 14532 */;
+import OverlayCreator from "OverlayCreator" /* 14533 */;
+import module_14536 from "module_14536" /* 14536 */;
+import objectifyError from "objectifyError" /* 14537 */;
+import module_14550 from "module_14550" /* 14550 */;
+import module_14552 from "module_14552" /* 14552 */;
+import get_ActivityIndicator_mod from "module_14554" /* 14554 */;
+import emptyPromise from "module_14555" /* 14555 */;
+import get_ActivityIndicator_mod from "module_14556" /* 14556 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-if (typeof WeakMap === "function") {
-  const _WeakMap = WeakMap;
-  const weakMap = new WeakMap();
-  const _WeakMap2 = WeakMap;
-  const weakMap1 = new WeakMap();
-}
-if (!noop) {
-  let merged = Object.assign({ default: null });
-  merged[0] = noop;
-  let value = merged;
-  if (null !== noop) {
-    if (typeof noop === "object") {
-      if (!weakMap) {
-        value = merged;
-        const keys = Object.keys();
-        if (keys !== undefined) {
-          value = merged;
-          while (keys[tmp] !== undefined) {
-            let tmp22 = "default" !== tmp12;
-            if (!tmp22) {
-              if (!tmp22) {
-                continue;
-              } else {
-                let _Object = Object;
-                let ownPropertyDescriptor = defineProperty;
-                if (defineProperty) {
-                  let _Object2 = Object;
-                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp12);
-                }
-                if (!ownPropertyDescriptor) {
-                  merged[tmp12] = noop[tmp12];
-                  continue;
-                } else {
-                  let definePropertyResult1 = defineProperty(merged, tmp12, ownPropertyDescriptor);
-                  continue;
-                }
-                continue;
-              }
-              continue;
-            } else {
-              let hasOwnProperty = {}.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              let tmp13 = typeof call === "unknown" ? hasOwnProperty(tmp12) : call(noop, tmp12);
-            }
-          }
-        }
-      } else if (weakMap.has(noop)) {
-        value = weakMap.get(noop);
-      } else {
-        const result = weakMap.set(noop, merged);
-      }
-    } else {
-      value = merged;
-    }
-  }
+let get_ActivityIndicator = get_ActivityIndicator_mod;
+let get = get_mod;
+if (!get) {
+  const obj9 = { default: get };
+  let tmp13 = obj9;
 } else {
-  value = noop;
+  tmp13 = get;
 }
-const container = { container: { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, zIndex: 1000, opacity: 0.25 }, debugContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", zIndex: 2000 }, debugTextContainer: { backgroundColor: "lightgray", margin: 50, padding: 20 }, debugText: { color: "red", fontSize: 16, marginBottom: 10 } };
-class FullScreenOverlay {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_0(this, FullScreenOverlay);
-    items = [];
-    items[0] = global;
-    tmp2 = c2;
-    obj = c2(FullScreenOverlay);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    obj1 = { opacity: metroRequire.container.opacity, uri: null, justifyContent: "center", alignItems: "center" };
-    tmp3Result.state = obj1;
-    emitter = global.emitter;
-    onResult = emitter.on("overlay", (arg0) => {
-      const merged = Object.assign(state.state);
-      const merged1 = Object.assign(arg0);
-      state.setState({});
-    });
-    return tmp3Result;
-  }
+get = tmp13;
+let get_ActivityIndicator = get_ActivityIndicator_mod;
+if (!get_ActivityIndicator) {
+  const obj11 = { default: get_ActivityIndicator };
+  let obj10 = obj11;
+} else {
+  obj10 = get_ActivityIndicator;
 }
-_classCallCheck = FullScreenOverlay;
-_inherits(FullScreenOverlay, value.Component);
-const entry = {
-  key: "createContainerStyle",
-  value: function createContainerStyle() {
-    const Dimensions = get_ActivityIndicator.Dimensions;
-    ({ opacity, justifyContent, alignItems } = this.state);
-    value = Dimensions.get("window");
-    const obj = {};
-    ({ width, height } = value);
-    const merged = Object.assign(container.container);
-    obj.opacity = opacity;
-    obj.width = width;
-    obj.height = height;
-    obj.justifyContent = justifyContent;
-    obj.alignItems = alignItems;
-    return obj;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "renderDebug",
-    value: function renderDebug() {
-      return null;
-    }
+let get_ActivityIndicator = get_ActivityIndicator_mod;
+if (!get_ActivityIndicator) {
+  const obj13 = { default: get_ActivityIndicator };
+  let obj12 = obj13;
+} else {
+  obj12 = get_ActivityIndicator;
+}
+if (!sendToReactotron) {
+  const obj15 = { default: sendToReactotron };
+  let obj14 = obj15;
+} else {
+  obj14 = sendToReactotron;
+}
+if (!OverlayCreator) {
+  const obj17 = { default: OverlayCreator };
+  let obj16 = obj17;
+} else {
+  obj16 = OverlayCreator;
+}
+if (!module_14536) {
+  const obj19 = { default: module_14536 };
+  let obj18 = obj19;
+} else {
+  obj18 = module_14536;
+}
+if (!objectifyError) {
+  const obj21 = { default: objectifyError };
+  let obj20 = obj21;
+} else {
+  obj20 = objectifyError;
+}
+if (!module_14550) {
+  const obj23 = { default: module_14550 };
+  let obj22 = obj23;
+} else {
+  obj22 = module_14550;
+}
+if (!module_14552) {
+  const obj25 = { default: module_14552 };
+  let obj24 = obj25;
+} else {
+  obj24 = module_14552;
+}
+let get_ActivityIndicator = get_ActivityIndicator_mod;
+if (!get_ActivityIndicator) {
+  const obj27 = { default: get_ActivityIndicator };
+  let obj26 = obj27;
+} else {
+  obj26 = get_ActivityIndicator;
+}
+if (!emptyPromise) {
+  const obj29 = { default: emptyPromise };
+  let obj28 = obj29;
+} else {
+  obj28 = emptyPromise;
+}
+let get_ActivityIndicator = get_ActivityIndicator_mod;
+if (!get_ActivityIndicator) {
+  const obj31 = { default: get_ActivityIndicator };
+  let obj30 = obj31;
+} else {
+  obj30 = get_ActivityIndicator;
+}
+let c15 = "@REACTOTRON/clientId";
+const defaultResult = obj30.default();
+const model = defaultResult.model;
+const systemName = defaultResult.systemName;
+const url = {
+  createSocket(dependencyMap) {
+    const webSocket = new WebSocket(dependencyMap);
+    return webSocket;
   },
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const state = this.state;
-      ({ uri, growToWindow, marginLeft } = state);
-      let num = 0;
-      ({ width, height, resizeMode } = state);
-      if (undefined !== marginLeft) {
-        num = marginLeft;
-      }
-      const marginRight = state.marginRight;
-      let num2 = 0;
-      if (undefined !== marginRight) {
-        num2 = marginRight;
-      }
-      const marginTop = state.marginTop;
-      let num3 = 0;
-      if (undefined !== marginTop) {
-        num3 = marginTop;
-      }
-      const marginBottom = state.marginBottom;
-      const size = { width, height, marginTop: num3, marginRight: num2, marginBottom: null, marginLeft: null };
-      let num4 = 0;
-      if (undefined !== marginBottom) {
-        num4 = marginBottom;
-      }
-      size.marginBottom = num4;
-      size.marginLeft = num;
-      if (growToWindow) {
-        const Dimensions = get_ActivityIndicator.Dimensions;
-        value = Dimensions.get("window");
-        ({ width: obj.width, height: obj.height } = value);
-      }
-      const jsx = jsxProd.jsx;
-      if (uri) {
-        const obj2 = { source: null, style: null, resizeMode: null };
-        const obj3 = { uri };
-        obj2.source = obj3;
-        obj2.style = size;
-        let tmp8 = null;
-        if (growToWindow) {
-          tmp8 = resizeMode;
-        }
-        obj2.resizeMode = tmp8;
-        let jsxResult = <get ActivityIndicator.Image source={null} style={null} resizeMode={null} />;
-        let tmp6 = get_ActivityIndicator;
-        let tmp7 = jsxProd;
+  host: (() => {
+    try {
+      const scriptURL = get.default.getConstants().scriptURL;
+      if (typeof scriptURL !== "string") {
+        const _Error = Error;
+        const error = new Error("Invalid non-string URL");
+        throw error;
       } else {
-        jsxResult = <get ActivityIndicator.View />;
-        tmp6 = get_ActivityIndicator;
-        tmp7 = jsxProd;
+        return _mod14557.getHostFromUrl(scriptURL);
       }
-      const obj4 = { children: null };
-      ({ jsxs, Fragment, jsx: jsx2 } = tmp7);
-      const items = [jsx2(tmp6.View, { style: self.createContainerStyle(), pointerEvents: "none", children: jsxResult }), self.renderDebug()];
-      obj4.children = items;
-      return <>{null}</>;
+      const _default = get.default;
+    } catch (tmp8) {
+      const _console = console;
+      const _HermesInternal = HermesInternal;
+      console.warn("getHost: \"" + tmp8.message + "\" for scriptURL - Falling back to " + "localhost");
+      return "localhost";
+    }
+  })("localhost"),
+  port: 9090,
+  name: "React Native App",
+  environment: "production",
+  client: null,
+  getClientId: null,
+  setClientId: null,
+  proxyHack: true
+};
+({ osRelease, serverHost, forceTouch, interfaceIdiom, uiMode, serial } = defaultResult);
+const merged = Object.assign(obj12.default());
+url.client = { reactotronLibraryName: "reactotron-react-native", reactotronLibraryVersion: "REACTOTRON_REACT_NATIVE_VERSION", platform: get_ActivityIndicator.Platform.OS, platformVersion: get_ActivityIndicator.Platform.Version, osRelease, model, serverHost, forceTouch, interfaceIdiom, systemName, uiMode, serial, reactNativeVersion: obj10.default() };
+let closure_14 = asyncGeneratorStep(async () => {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let str2 = closure_0;
+          if (closure_0 === undefined) {
+            str2 = "";
+          }
+          closure_129_0 = str2;
+          closure_129_1 = undefined;
+          let screenWidth;
+          let screenHeight;
+          let screenScale;
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else if (closure_130_18.asyncStorageHandler) {
+        c4 = 3;
+        const obj4 = { value: closure_130_18.asyncStorageHandler.getItem(closure_130_15), done: true };
+        return obj4;
+      } else {
+        closure_129_1 = closure_130_4.default();
+        screenWidth = closure_129_1.screenWidth;
+        screenHeight = closure_129_1.screenHeight;
+        screenScale = closure_129_1.screenScale;
+        const items = [screenWidth, screenHeight];
+        const sorted = items.sort();
+        closure_129_5 = sorted.join("-");
+        const Platform = closure_130_2.Platform;
+        const obj5 = { ios: closure_130_17, android: closure_130_16, default: "" };
+        closure_129_6 = Platform.select(obj5);
+        const items1 = [closure_129_0, closure_130_2.Platform.OS, closure_130_2.Platform.Version, closure_129_6, closure_129_5, screenScale];
+        const _Boolean = Boolean;
+        const found = items1.filter(Boolean);
+        c4 = 3;
+        const obj6 = { value: found.join("-"), done: true };
+        return obj6;
+      }
+    } catch (tmp25) {
+      c4 = tmp;
+      throw tmp25;
     }
   }
-];
+});
+url.getClientId = function getClientId() {
+  const self = this;
+  const apply = closure_14.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+let closure_13 = asyncGeneratorStep(async (arg0) => {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else if (client.asyncStorageHandler) {
+        c1 = 3;
+        const obj = { value: client.asyncStorageHandler.setItem(c15, tmp4), done: true };
+        return obj;
+      } else {
+        c1 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp6) {
+      c1 = tmp;
+      throw tmp6;
+    }
+  }
+});
+url.setClientId = function setClientId(payload) {
+  const self = this;
+  const apply = closure_13.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+let items = [obj14.default(), obj20.default(), obj28.default(), obj18.default(), obj16.default(), obj22.default(), obj24.default(), obj26.default()];
+const client = emptyPromise2.createClient(url);
+client.useReactNative = () => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  if (false !== obj.errors) {
+    const errors = obj.errors;
+    let tmp3 = null;
+    if (typeof errors === "object") {
+      tmp3 = errors;
+    }
+    client.use(obj20.default(tmp3));
+  }
+  if (false !== obj.log) {
+    client.use(obj28.default());
+  }
+  if (false !== obj.editor) {
+    const editor = obj.editor;
+    let tmp10 = null;
+    if (typeof editor === "object") {
+      tmp10 = editor;
+    }
+    client.use(obj18.default(tmp10));
+  }
+  if (false !== obj.overlay) {
+    client.use(obj16.default());
+  }
+  if (false !== obj.asyncStorage) {
+    const asyncStorage = obj.asyncStorage;
+    let tmp17 = null;
+    if (typeof asyncStorage === "object") {
+      tmp17 = asyncStorage;
+    }
+    client.use(obj14.default(tmp17));
+  }
+  if (false !== obj.networking) {
+    const networking = obj.networking;
+    let tmp21 = null;
+    if (typeof networking === "object") {
+      tmp21 = networking;
+    }
+    client.use(obj22.default(tmp21));
+  }
+  if (false !== obj.storybook) {
+    client.use(obj24.default());
+  }
+  if (false !== obj.devTools) {
+    client.use(obj26.default());
+  }
+  return client;
+};
+client.setAsyncStorageHandler = (asyncStorageHandler) => {
+  client.asyncStorageHandler = asyncStorageHandler;
+  return client;
+};
 
-export default _createClass(FullScreenOverlay, items);
+export const asyncStorage = obj14.default;
+export const devTools = obj26.default;
+export const networking = obj22.default;
+export const openInEditor = obj18.default;
+export const overlay = obj16.default;
+export const storybook = obj24.default;
+export const trackGlobalErrors = obj20.default;
+export const trackGlobalLogs = obj28.default;
+export const reactNativeCorePlugins = items;
+export default client;

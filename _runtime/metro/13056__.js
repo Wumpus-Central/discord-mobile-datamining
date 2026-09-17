@@ -1,306 +1,73 @@
 // === Module 13056: ? ===
 
 // Module 13056
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12943 */;
+import _mod12975 from "module_12975" /* 12975 */;
+import _flush from "_flush" /* 12996 */;
+import _mod13021 from "module_13021" /* 13021 */;
 
 require = arg1;
 const dependencyMap = arg6;
-
-export const filenameIsInApp = function filenameIsInApp(str) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (!flag) {
-    let tmp = str;
-    if (str) {
-      tmp = !str.startsWith("/");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[A-Z]:/);
-    }
-    if (tmp) {
-      tmp = !str.startsWith(".");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-    }
-    flag = tmp;
-  }
-  let tmp2 = !flag;
-  if (!flag) {
-    tmp2 = undefined !== str;
-  }
-  if (tmp2) {
-    tmp2 = !str.includes("node_modules/");
-  }
-  return tmp2;
-};
-export function node(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  return (filename) => {
-    const match = filename.match(re2);
-    if (match) {
-      let tmp3;
-      let tmp4;
-      if (match[1]) {
-        const lastIndexOfResult = match[1].lastIndexOf(".");
-        let diff = lastIndexOfResult;
-        if ("." === match[1][lastIndexOfResult - 1]) {
-          diff = lastIndexOfResult - 1;
-        }
-        let substr2 = arr;
-        let tmp9;
-        let substr3;
-        if (diff > 0) {
-          const substr = arr.slice(0, diff);
-          const substr1 = arr.slice(diff + 1);
-          const index = substr.indexOf(".Module");
-          substr2 = arr;
-          tmp9 = substr1;
-          substr3 = substr;
-          if (index > 0) {
-            substr2 = arr.slice(index + 1);
-            substr3 = substr.slice(0, index);
-            tmp9 = substr1;
-          }
-        }
-        tmp3 = substr2;
-        tmp4 = tmp9;
+function getCurrentHubShim() {
+  return {
+    bindClient(arg0) {
+      const currentScope = _mod12975.getCurrentScope();
+      currentScope.setClient(arg0);
+    },
+    withScope: _mod12975.withScope,
+    getClient() {
+      return _mod12975.getClient();
+    },
+    getScope: _mod12975.getCurrentScope,
+    getIsolationScope: _mod12975.getIsolationScope,
+    captureException(arg0, arg1) {
+      const currentScope = _mod12975.getCurrentScope();
+      return currentScope.captureException(arg0, arg1);
+    },
+    captureMessage(arg0, arg1, arg2) {
+      const currentScope = _mod12975.getCurrentScope();
+      return currentScope.captureMessage(arg0, arg1, arg2);
+    },
+    captureEvent: _flush.captureEvent,
+    addBreadcrumb: _mod13021.addBreadcrumb,
+    setUser: _flush.setUser,
+    setTags: _flush.setTags,
+    setTag: _flush.setTag,
+    setExtra: _flush.setExtra,
+    setExtras: _flush.setExtras,
+    setContext: _flush.setContext,
+    getIntegration(id) {
+      const client = _mod12975.getClient();
+      let integrationByName = client;
+      if (client) {
+        integrationByName = client.getIntegrationByName(id.id);
       }
-      if (tmp4) {
-        let UNKNOWN_FUNCTION = tmp4;
+      if (!integrationByName) {
+        integrationByName = null;
       }
-      if (undefined === tmp3) {
-        if (!UNKNOWN_FUNCTION) {
-          UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
+      return integrationByName;
+    },
+    startSession: _flush.startSession,
+    endSession: _flush.endSession,
+    captureSession(arg0) {
+      if (arg0) {
+        return _flush.endSession();
+      } else {
+        const currentScope = _mod12975.getCurrentScope();
+        const tmpResult3 = _mod12975;
+        const client = _mod12975.getClient();
+        const session = currentScope.getSession();
+        let tmp4 = client;
+        if (client) {
+          tmp4 = session;
         }
-        let combined = UNKNOWN_FUNCTION;
-        if (tmp13) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
+        if (tmp4) {
+          client.captureSession(session);
         }
-        tmp3 = combined;
+        const tmpResult4 = _mod12975;
       }
-      if (match[2]) {
-        if (obj2.startsWith("file://")) {
-          let str7 = match[2].slice(7);
-        }
-        let match1 = str7;
-        if (str7) {
-          match1 = str7.match(/\/[A-Z]:/);
-        }
-        let substr4 = str7;
-        if (match1) {
-          substr4 = str7.slice(1);
-        }
-        let tmp20 = substr4;
-        if (!substr4) {
-          tmp20 = !match[5];
-        }
-        let tmp21 = "native" === match[5];
-        if (!tmp20) {
-          tmp20 = tmp21;
-        }
-        if (!tmp20) {
-          substr4 = match[5];
-        }
-        let decodeURIResult;
-        if (substr4) {
-          const _decodeURI = decodeURI;
-          decodeURIResult = decodeURI(substr4);
-        }
-        const obj3 = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
-        let tmp24;
-        if (closure_0) {
-          tmp24 = closure_0(substr4);
-        }
-        obj3.module = tmp24;
-        obj3.function = tmp3;
-        let str9 = match[3];
-        if (!str9) {
-          str9 = "";
-        }
-        obj3.lineno = parseInt(str9, 10) || undefined;
-        let str10 = match[4];
-        if (!str10) {
-          str10 = "";
-        }
-        obj2 = match[2];
-        const tmp26 = parseInt(str9, 10) || undefined;
-        obj3.colno = parseInt(str10, 10) || undefined;
-        let str11 = substr4;
-        if (!substr4) {
-          str11 = "";
-        }
-        if (!tmp21) {
-          let tmp28 = str11;
-          if (str11) {
-            tmp28 = !str11.startsWith("/");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[A-Z]:/);
-          }
-          if (tmp28) {
-            tmp28 = !str11.startsWith(".");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-          }
-          tmp21 = tmp28;
-        }
-        let tmp29 = !tmp21;
-        if (!tmp21) {
-          tmp29 = undefined !== str11;
-        }
-        if (tmp29) {
-          tmp29 = !str11.includes("node_modules/");
-        }
-        obj3.in_app = tmp29;
-        return obj3;
-      }
-      str7 = match[2];
-    } else if (filename.match(re1)) {
-      const obj = { filename };
-      return obj;
     }
   };
 }
-export function nodeStackLineParser(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  const items = [
-    90,
-    (filename) => {
-      const match = filename.match(re2);
-      if (match) {
-        let tmp3;
-        let tmp4;
-        if (match[1]) {
-          const lastIndexOfResult = match[1].lastIndexOf(".");
-          let diff = lastIndexOfResult;
-          if ("." === match[1][lastIndexOfResult - 1]) {
-            diff = lastIndexOfResult - 1;
-          }
-          let substr2 = arr;
-          let tmp9;
-          let substr3;
-          if (diff > 0) {
-            const substr = arr.slice(0, diff);
-            const substr1 = arr.slice(diff + 1);
-            const index = substr.indexOf(".Module");
-            substr2 = arr;
-            tmp9 = substr1;
-            substr3 = substr;
-            if (index > 0) {
-              substr2 = arr.slice(index + 1);
-              substr3 = substr.slice(0, index);
-              tmp9 = substr1;
-            }
-          }
-          tmp3 = substr2;
-          tmp4 = tmp9;
-        }
-        if (tmp4) {
-          let UNKNOWN_FUNCTION = tmp4;
-        }
-        if (undefined === tmp3) {
-          if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-          }
-          let combined = UNKNOWN_FUNCTION;
-          if (tmp13) {
-            const _HermesInternal = HermesInternal;
-            combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-          }
-          tmp3 = combined;
-        }
-        if (match[2]) {
-          if (obj2.startsWith("file://")) {
-            let str7 = match[2].slice(7);
-          }
-          let match1 = str7;
-          if (str7) {
-            match1 = str7.match(/\/[A-Z]:/);
-          }
-          let substr4 = str7;
-          if (match1) {
-            substr4 = str7.slice(1);
-          }
-          let tmp20 = substr4;
-          if (!substr4) {
-            tmp20 = !match[5];
-          }
-          let tmp21 = "native" === match[5];
-          if (!tmp20) {
-            tmp20 = tmp21;
-          }
-          if (!tmp20) {
-            substr4 = match[5];
-          }
-          let decodeURIResult;
-          if (substr4) {
-            const _decodeURI = decodeURI;
-            decodeURIResult = decodeURI(substr4);
-          }
-          const obj3 = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
-          let tmp24;
-          if (closure_0) {
-            tmp24 = closure_0(substr4);
-          }
-          obj3.module = tmp24;
-          obj3.function = tmp3;
-          let str9 = match[3];
-          if (!str9) {
-            str9 = "";
-          }
-          obj3.lineno = parseInt(str9, 10) || undefined;
-          let str10 = match[4];
-          if (!str10) {
-            str10 = "";
-          }
-          obj2 = match[2];
-          const tmp26 = parseInt(str9, 10) || undefined;
-          obj3.colno = parseInt(str10, 10) || undefined;
-          let str11 = substr4;
-          if (!substr4) {
-            str11 = "";
-          }
-          if (!tmp21) {
-            let tmp28 = str11;
-            if (str11) {
-              tmp28 = !str11.startsWith("/");
-            }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[A-Z]:/);
-            }
-            if (tmp28) {
-              tmp28 = !str11.startsWith(".");
-            }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-            }
-            tmp21 = tmp28;
-          }
-          let tmp29 = !tmp21;
-          if (!tmp21) {
-            tmp29 = undefined !== str11;
-          }
-          if (tmp29) {
-            tmp29 = !str11.includes("node_modules/");
-          }
-          obj3.in_app = tmp29;
-          return obj3;
-        }
-        str7 = match[2];
-      } else if (filename.match(re1)) {
-        const obj = { filename };
-        return obj;
-      }
-    }
-  ];
-  return items;
-}
+
+export const getCurrentHub = getCurrentHubShim;
+export { getCurrentHubShim };

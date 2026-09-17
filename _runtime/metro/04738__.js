@@ -1,12 +1,15 @@
 // === Module 4738: ? ===
 
 // Module 4738
-import baseGetAllKeys from "baseGetAllKeys" /* 657 */;
-import _mod4721 from "module_4721" /* 4721 */;
-import keysIn from "keysIn" /* 4723 */;
+import _process from "_process" /* 539 */;
+import baseUnary from "baseUnary" /* 540 */;
+import baseIsMap from "baseIsMap" /* 4739 */;
 
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsMap;
+}
 
-export default function getAllKeysIn(arg0) {
-  const tmp = baseGetAllKeys;
-  return tmp(arg0, keysIn, _mod4721);
-};
+export default _module;

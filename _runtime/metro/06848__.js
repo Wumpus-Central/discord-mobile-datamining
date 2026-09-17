@@ -1,20 +1,21 @@
 // === Module 6848: ? ===
 
 // Module 6848
-import _mod19 from "module_19" /* 19 */;
+import ComposedGestureName from "ComposedGestureName" /* 6825 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6834 */;
+import _mod6849 from "module_6849" /* 6849 */;
 
-let useMemo = _mod19.useMemo;
+require = arg1;
+const dependencyMap = arg6;
+const items = [["maxDistance", "maxDist"], ["maxDuration", "maxDurationMs"], ["maxDelay", "maxDelayMs"]];
+const map = new Map(items);
+let closure_3 = {};
 
-export const useGestureEventHandler = function useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated) {
-  closure_0 = handlerTag;
-  closure_1 = memoizedGestureCallbacks;
-  useMemo = disableReanimated;
-  const tmp = useMemo(() => ({ lastUpdateEvent: "Array" }), []);
-  closure_3 = tmp;
-  const items = [handlerTag, memoizedGestureCallbacks, , , , ];
-  ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
-  items[5] = tmp;
-  return useMemo(() => (arg0) => {
-    closure_0(closure_1[1]).eventHandler(handlerTag, arg0, memoizedGestureCallbacks, disableReanimated.changeEventCalculator, closure_1_3, disableReanimated.dispatchesAnimatedEvents, disableReanimated.fillInDefaultValues);
-  }, items);
+export const useTapGesture = function useTapGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_3;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
+  return _mod6849.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
 };

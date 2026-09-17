@@ -1,29 +1,30 @@
 // === Module 6917: ? ===
 
 // Module 6917
-import cancelAnimation from "cancelAnimation" /* 1637 */;
-import value2 from "value2" /* 6736 */;
-import _mod6740 from "module_6740" /* 6740 */;
-import BottomSheetContext from "BottomSheetContext" /* 6746 */;
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6761 from "module_6761" /* 6761 */;
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const jsx = fn(21).jsx;
+const useLayoutEffect = _mod19.useLayoutEffect;
 
-export default function _default(children) {
-  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
-  if (useGestureEventsHandlersDefault === undefined) {
-    useGestureEventsHandlersDefault = _mod6740.useGestureEventsHandlersDefault;
+export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (closure_0.current) {
+          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof closure_0.current.getBoundingClientRect === "function") {
+              const current2 = closure_0.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = closure_0.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
+        }
+      }
+    });
   }
-  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
-  const bottomSheetInternal = _mod6740.useBottomSheetInternal();
-  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
-  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
-  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
-  const gestureHandler = _mod6740.useGestureHandler(value2.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const gestureHandler1 = _mod6740.useGestureHandler(value2.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const items = [gestureHandler, gestureHandler1, sharedValue];
-  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
-  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+  obj = _mod6761;
 };

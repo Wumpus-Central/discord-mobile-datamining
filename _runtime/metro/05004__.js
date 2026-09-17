@@ -1,25 +1,113 @@
 // === Module 5004: ? ===
 
 // Module 5004
-import _mod17 from "module_17" /* 17 */;
-import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _mod5005 from "module_5005" /* 5005 */;
+import _modDef5006 from "module_5006" /* 5006 */;
+import _mod5007 from "module_5007" /* 5007 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsScreenAndroid", directEventTypes: { topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-const obj2 = { screenKey: true, preventNativeSelection: true, title: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, specialEffects: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, selectedDrawableIconResourceName: true, selectedImageIconResource: null, standardAppearance: true };
-let resolveAssetSource = resolveAssetSource_mod;
-if ("default" in resolveAssetSource) {
-  resolveAssetSource = resolveAssetSource.default;
-}
-obj2.selectedImageIconResource = { process: resolveAssetSource };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onWillAppear: true, onDidAppear: true, onWillDisappear: true, onDidDisappear: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = obj2;
+require = fn;
+let closure_3 = ["android", "ios"];
+let closure_4 = ["onDidAppear", "onDidDisappear", "onWillAppear", "onWillDisappear", "children", "style"];
+let closure_5 = ["tabBarBackgroundColor", "tabBarItemRippleColor", "normal", "selected", "focused", "disabled", "tabBarItemActiveIndicatorColor", "tabBarItemTitleFontWeight", "tabBarItemBadgeBackgroundColor", "tabBarItemBadgeTextColor"];
+let closure_6 = ["tabBarItemTitleFontColor", "tabBarItemIconColor"];
+get_ActivityIndicator = fn(17);
+({ StyleSheet, processColor: closure_9 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const fillParent = StyleSheet.create({ fillParent: { position: "absolute", flex: 1, width: "100%", height: "100%" } });
 
-export default module_65.get("RNSTabsScreenAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default function TabsScreen(arg0) {
+  ({ android, ios } = arg0);
+  const tmp2 = _objectWithoutProperties(arg0, closure_3);
+  const ref = noop.useRef(null);
+  ({ onDidAppear, onDidDisappear, onWillAppear, onWillDisappear, children, style } = tmp2);
+  const tmp4 = _objectWithoutProperties(tmp2, closure_4);
+  let icon;
+  if (android != null) {
+    icon = android.icon;
+  }
+  let selectedIcon;
+  if (android != null) {
+    selectedIcon = android.selectedIcon;
+  }
+  const obj = _mod5005;
+  const obj2 = { componentNodeRef: ref, onDidAppear, onDidDisappear, onWillAppear, onWillDisappear, screenKey: tmp4.screenKey };
+  const result = _mod5007.parseAndroidIconToNativeProps(icon);
+  const tmp5Result = _mod5007;
+  const result1 = _mod5007.parseAndroidIconToNativeProps(selectedIcon);
+  const obj4 = { collapsable: false, style: null, ref };
+  const items = [style, fillParent.fillParent];
+  obj4.style = items;
+  const obj3 = { imageIconResource: result.imageIconResource, drawableIconResourceName: result.drawableIconResourceName, selectedImageIconResource: result1.imageIconResource, selectedDrawableIconResourceName: result1.drawableIconResourceName };
+  const tmp5Result2 = _mod5007;
+  const merged = Object.assign(obj.useTabsScreen(obj2).lifecycleCallbacks);
+  const merged1 = Object.assign(obj3);
+  const merged2 = Object.assign(tmp4);
+  let standardAppearance;
+  if (android != null) {
+    standardAppearance = android.standardAppearance;
+  }
+  let tmp17;
+  if (standardAppearance) {
+    ({ normal, selected, focused, disabled, tabBarItemTitleFontWeight } = standardAppearance);
+    const obj5 = {};
+    ({ tabBarBackgroundColor, tabBarItemRippleColor, tabBarItemActiveIndicatorColor, tabBarItemBadgeBackgroundColor, tabBarItemBadgeTextColor } = standardAppearance);
+    const merged3 = Object.assign(_objectWithoutProperties(standardAppearance, closure_5));
+    obj5.tabBarBackgroundColor = React7(tabBarBackgroundColor);
+    obj5.tabBarItemRippleColor = React7(tabBarItemRippleColor);
+    let tmp22;
+    if (normal) {
+      const obj6 = {};
+      ({ tabBarItemTitleFontColor, tabBarItemIconColor } = normal);
+      const merged4 = Object.assign(_objectWithoutProperties(normal, closure_6));
+      obj6.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor);
+      obj6.tabBarItemIconColor = React7(tabBarItemIconColor);
+      tmp22 = obj6;
+    }
+    obj5.normal = tmp22;
+    let tmp26;
+    if (selected) {
+      const obj7 = {};
+      ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor2, tabBarItemIconColor: tabBarItemIconColor2 } = selected);
+      const merged5 = Object.assign(_objectWithoutProperties(selected, closure_6));
+      obj7.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor2);
+      obj7.tabBarItemIconColor = React7(tabBarItemIconColor2);
+      tmp26 = obj7;
+    }
+    obj5.selected = tmp26;
+    let tmp30;
+    if (focused) {
+      const obj8 = {};
+      ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor3, tabBarItemIconColor: tabBarItemIconColor3 } = focused);
+      const merged6 = Object.assign(_objectWithoutProperties(focused, closure_6));
+      obj8.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor3);
+      obj8.tabBarItemIconColor = React7(tabBarItemIconColor3);
+      tmp30 = obj8;
+    }
+    obj5.focused = tmp30;
+    let tmp34;
+    if (disabled) {
+      const obj9 = {};
+      ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor4, tabBarItemIconColor: tabBarItemIconColor4 } = disabled);
+      const merged7 = Object.assign(_objectWithoutProperties(disabled, closure_6));
+      obj9.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor4);
+      obj9.tabBarItemIconColor = React7(tabBarItemIconColor4);
+      tmp34 = obj9;
+    }
+    obj5.disabled = tmp34;
+    obj5.tabBarItemActiveIndicatorColor = React7(tabBarItemActiveIndicatorColor);
+    let StringResult;
+    if (undefined !== tabBarItemTitleFontWeight) {
+      const _String = String;
+      StringResult = String(tabBarItemTitleFontWeight);
+    }
+    obj5.tabBarItemTitleFontWeight = StringResult;
+    obj5.tabBarItemBadgeBackgroundColor = React7(tabBarItemBadgeBackgroundColor);
+    obj5.tabBarItemBadgeTextColor = React7(tabBarItemBadgeTextColor);
+    tmp17 = obj5;
+  }
+  obj4.standardAppearance = tmp17;
+  obj4.children = children;
+  return jsx(_modDef5006, { collapsable: false, style: null, ref });
+};

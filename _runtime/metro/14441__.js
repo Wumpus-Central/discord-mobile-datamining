@@ -1,23 +1,48 @@
 // === Module 14441: ? ===
 
 // Module 14441
-import _mod14413 from "module_14413" /* 14413 */;
-import _mod14439 from "module_14439" /* 14439 */;
+import _mod14421 from "module_14421" /* 14421 */;
+import _mod14442 from "module_14442" /* 14442 */;
 
-
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod14413[arg0];
-    let tmp8;
-    if (_mod14439(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
+let tmp = _mod14421.process && _mod14421.process.versions;
+if (!tmp) {
+  tmp = _mod14421.Deno && _mod14421.Deno.version;
+  const tmp2 = _mod14421.Deno && _mod14421.Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
   } else {
-    tmp3 = _mod14413[arg0];
-    if (tmp3) {
-      tmp3 = _mod14413[arg0][arg1];
-    }
+    num3 = 1;
   }
-  return tmp3;
-};
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = _mod14442;
+}
+if (_module) {
+  const match = _mod14442.match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+}
+if (_module) {
+  _module = _mod14442.match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+}
+if (_module) {
+  tmp3 = +tmp4[1];
+}
+
+export default tmp3;

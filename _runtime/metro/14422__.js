@@ -1,9 +1,15 @@
 // === Module 14422: ? ===
 
 // Module 14422
-import _mod14420 from "module_14420" /* 14420 */;
+import _mod14421 from "module_14421" /* 14421 */;
 
-let closure_0 = _mod14420({}.toString);
-let closure_1 = _mod14420("".slice);
 
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod14421, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod14421[tmp2] = tmp;
+  }
+};

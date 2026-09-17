@@ -1,101 +1,21 @@
 // === Module 14459: ? ===
 
 // Module 14459
-let c0 = false;
-
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(14418)(arg0);
-    const tmp4 = closure_0(14460)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(14464)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
-    }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(14418)(arg0);
-    const tmp4 = closure_0(14460)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(14464)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
-          }
-        }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
-      }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
-    }
+let propertyIsEnumerable = {}.propertyIsEnumerable;
+if (!getOwnPropertyDescriptor) {
+  if (getOwnPropertyDescriptor) {
+    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
+      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+      return tmp && tmp.enumerable;
+    };
   }
-};
+  arg5.f = propertyIsEnumerable;
+} else {
+  const call = propertyIsEnumerable.call;
+  if (typeof call === "unknown") {
+    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+  } else {
+    propertyIsEnumerableResult = call(obj, 1);
+  }
+  obj = { 1: 2 };
+}

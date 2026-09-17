@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 88, height: 40, scales: [2, 3], hash: "bb1baaeee62e8a609680d1082f363744", name: "img_gifting_empty", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 80, height: 80, scales: [1], hash: "e2676a24ea3247f11452fad9b442341d", name: "img_wumpus_nitro", type: "png" });

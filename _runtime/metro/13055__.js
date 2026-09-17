@@ -1,14 +1,36 @@
 // === Module 13055: ? ===
 
 // Module 13055
+import _mod12954 from "module_12954" /* 12954 */;
+import _mod12975 from "module_12975" /* 12975 */;
 
-export function getSDKSource() {
-  return "npm";
-}
-export const isBrowserBundle = function isBrowserBundle() {
-  let prop = typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined";
-  if (typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined") {
-    prop = globalThis.__SENTRY_BROWSER_BUNDLE__;
+require = arg1;
+const dependencyMap = arg6;
+
+export const captureFeedback = function captureFeedback(arg0) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  return prop;
+  let currentScope = arg2;
+  if (arg2 === undefined) {
+    currentScope = _mod12975.getCurrentScope();
+  }
+  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
+  const obj4 = { feedback: _mod12954.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId }) };
+  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
+  obj2.contexts = obj4;
+  obj2.tags = tags;
+  let client = currentScope;
+  if (currentScope) {
+    client = currentScope.getClient();
+  }
+  if (!client) {
+    client = _mod12975.getClient();
+    const tmp3Result = _mod12975;
+  }
+  if (client) {
+    client.emit("beforeSendFeedback", obj2, obj);
+  }
+  return currentScope.captureEvent(obj2, obj);
 };

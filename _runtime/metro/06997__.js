@@ -1,32 +1,13 @@
 // === Module 6997: ? ===
 
 // Module 6997
-import _mod6995 from "module_6995" /* 6995 */;
 
-
-export default function _superPropBase(arg0, key10009) {
-  hasOwnProperty = {}.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  let tmp = arg0;
-  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-    let tmp4 = _mod6995(arg0);
-    tmp = tmp4;
-    if (null !== tmp4) {
-      while (true) {
-        let hasOwnProperty2 = {}.hasOwnProperty;
-        let call2 = hasOwnProperty2.call;
-        tmp = tmp4;
-        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
-          break;
-        } else {
-          tmp4 = _mod6995(tmp4);
-          tmp = tmp4;
-          if (null === tmp4) {
-            break;
-          }
-        }
-      }
-    }
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
   }
-  return tmp;
 };

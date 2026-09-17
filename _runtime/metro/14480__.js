@@ -1,9 +1,13 @@
 // === Module 14480: ? ===
 
 // Module 14480
-import _mod17 from "module_17" /* 17 */;
-import setupURLPolyfill_mod from "setupURLPolyfill" /* 14481 */;
+import _mod14428 from "module_14428" /* 14428 */;
+import _mod14437 from "module_14437" /* 14437 */;
+import all from "module_14447" /* 14447 */;
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+let closure_0 = _mod14428(Function.toString);
+if (!all(_mod14437.inspectSource)) {
+  _mod14437.inspectSource = (arg0) => closure_0(arg0);
+}
+
+export default _mod14437.inspectSource;

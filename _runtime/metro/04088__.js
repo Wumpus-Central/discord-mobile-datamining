@@ -1,17 +1,17 @@
 // === Module 4088: ? ===
 
 // Module 4088
-import module_4074_mod from "module_4074" /* 4074 */;
-import requiredArgs_mod from "requiredArgs" /* 3727 */;
+import module_4080_mod from "module_4080" /* 4080 */;
+import requiredArgs_mod from "requiredArgs" /* 3729 */;
 
-let module_4074 = module_4074_mod;
-if (!module_4074) {
-  const obj = { default: module_4074 };
+let module_4080 = module_4080_mod;
+if (!module_4080) {
+  const obj = { default: module_4080 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4074;
+  tmp3 = module_4080;
 }
-module_4074 = tmp3;
+module_4080 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisWeek(arg0, arg1) {
+export default function isThisQuarter(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4074.default(arg0, Date.now(), arg1);
+  return module_4080.default(Date.now(), arg0);
 };
 export default exports.default;

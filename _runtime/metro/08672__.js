@@ -1,15 +1,14 @@
 // === Module 8672: ? ===
 
 // Module 8672
-import _modDef8610 from "module_8610" /* 8610 */;
+import _modDef8645 from "module_8645" /* 8645 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Pattern = importDefault;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Pattern {
+class FeTurbulence {
   constructor() {
     self = this;
-    tmp = c2(this, Pattern);
+    tmp = c2(this, FeTurbulence);
     tmp2 = closure_4;
-    obj = closure_4(Pattern);
+    obj = closure_4(FeTurbulence);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,54 +48,18 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Pattern, _modDef8610);
+_inherits(FeTurbulence, _modDef8645);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ patternTransform, patternUnits, patternContentUnits } = props);
-    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-    if (!patternTransform) {
-      patternTransform = transform;
-    }
-    if (!patternTransform) {
-      patternTransform = props;
-    }
-    const tmp3Result = Pattern(8594)(patternTransform);
-    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
-    let num = patternUnits;
-    if (patternUnits) {
-      num = Pattern(8664)[patternUnits];
-    }
-    if (!num) {
-      num = 0;
-    }
-    size.patternUnits = num;
-    let num2 = 1;
-    if (patternContentUnits) {
-      num2 = Pattern(8664)[patternContentUnits];
-    }
-    size.patternContentUnits = num2;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp3 = Pattern(8594);
-    const merged = Object.assign(size);
-    const merged1 = Object.assign(Pattern(8599)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Pattern(8673), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeTurbulence(8622).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

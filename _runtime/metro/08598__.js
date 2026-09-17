@@ -1,10 +1,7 @@
 // === Module 8598: ? ===
 
 // Module 8598
-import _mod26 from "module_26" /* 26 */;
-import module_65 from "module_65" /* 65 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGSvgViewAndroid", validAttributes: { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: _mod26.colorAttribute, pointerEvents: true, hasTVPreferredFocus: true, borderBottomColor: _mod26.colorAttribute, nextFocusDown: true, borderRightColor: _mod26.colorAttribute, nextFocusRight: true, borderLeftColor: _mod26.colorAttribute, borderColor: _mod26.colorAttribute, removeClippedSubviews: true, nextFocusForward: true, nextFocusUp: true, accessible: true, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, focusable: true, nativeBackgroundAndroid: true, nativeForegroundAndroid: true, backfaceVisibility: true, borderStyle: true, needsOffscreenAlphaCompositing: true, hitSlop: true, borderTopColor: _mod26.colorAttribute, nextFocusLeft: true, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomRightRadius: true, borderBottomLeftRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true } };
 
-export default module_65.get("RNSVGSvgViewAndroid", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f6beefc7c46ba35914164c9b6ddbe0f6", name: "GoogleNeutralIcon", type: "png" });

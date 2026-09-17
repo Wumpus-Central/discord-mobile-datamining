@@ -1,16 +1,12 @@
 // === Module 13762: ? ===
 
 // Module 13762
-let num = 0;
-let num2 = 0;
-let tmp2 = num;
-do {
-  do {
-    let tmp3 = tmp2 >>> 1;
-    let tmp5 = 1 & tmp2 ? 3988292384 ^ tmp3 : tmp3;
-    num2 = num2 + 1;
-    tmp2 = tmp5;
-  } while (num2 < 8);
-  tmp[num] = tmp5;
-  num = num + 1;
-} while (num < 256);
+import _mod13776 from "module_13776" /* 13776 */;
+import assign from "module_13763" /* 13763 */;
+import Deflate from "Deflate" /* 13764 */;
+import Inflate from "Inflate" /* 13772 */;
+
+const obj = {};
+assign.assign(obj, Deflate, Inflate, _mod13776);
+
+export default obj;

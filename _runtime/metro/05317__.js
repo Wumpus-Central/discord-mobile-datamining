@@ -1,109 +1,91 @@
 // === Module 5317: ? ===
 
 // Module 5317
-import _modDef5316 from "module_5316" /* 5316 */;
+import _modDef5318 from "module_5318" /* 5318 */;
 
 importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  read(buffer, sum) {
-    const shortAt = _modDef5316.getShortAt(buffer, sum);
+  read(dataView, sum) {
+    const shortAt = _modDef5318.getShortAt(dataView, sum);
+    let tmp4;
+    if (8 <= shortAt) {
+      const byteAt = _modDef5318.getByteAt(dataView, sum + 7);
+      const obj2 = { value: byteAt, description: "" + byteAt };
+      tmp4 = obj2;
+      const tmpResult = _modDef5318;
+    }
     let tmp6;
-    if (15 <= shortAt) {
-      const byteAt = _modDef5316.getByteAt(buffer, sum + 14);
-      const obj2 = { value: byteAt, description: null };
+    if (3 <= shortAt) {
+      const byteAt1 = _modDef5318.getByteAt(dataView, sum + 2);
+      const obj3 = { value: byteAt1, description: "" + byteAt1 };
+      tmp6 = obj3;
+      const tmpResult4 = _modDef5318;
+    }
+    const obj4 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
+    let tmp8;
+    if (5 <= shortAt) {
+      const shortAt1 = _modDef5318.getShortAt(dataView, sum + 3);
+      const obj5 = { value: shortAt1, description: null };
       const _HermesInternal = HermesInternal;
-      obj2.description = "" + byteAt + "px";
-      tmp6 = obj2;
-      const tmp3Result = _modDef5316;
+      obj5.description = "" + shortAt1 + "px";
+      tmp8 = obj5;
+      const tmpResult5 = _modDef5318;
     }
-    let tmp9;
-    if (16 <= shortAt) {
-      const byteAt1 = _modDef5316.getByteAt(buffer, sum + 15);
-      const obj3 = { value: byteAt1, description: null };
+    obj4["Image Height"] = tmp8;
+    let tmp11;
+    if (7 <= shortAt) {
+      const shortAt2 = _modDef5318.getShortAt(dataView, sum + 5);
+      const obj6 = { value: shortAt2, description: null };
       const _HermesInternal2 = HermesInternal;
-      obj3.description = "" + byteAt1 + "px";
-      tmp9 = obj3;
-      const tmp3Result7 = _modDef5316;
+      obj6.description = "" + shortAt2 + "px";
+      tmp11 = obj6;
+      const tmpResult6 = _modDef5318;
     }
-    let tmp12;
-    if (9 <= shortAt) {
-      const byteAt2 = _modDef5316.getByteAt(buffer, sum + 7);
-      const tmp3Result8 = _modDef5316;
-      const byteAt3 = _modDef5316.getByteAt(buffer, sum + 7 + 1);
-      const obj4 = { value: 256 * byteAt2 + byteAt3, description: `${tmp13}.${tmp14}` };
-      tmp12 = obj4;
-      const tmp3Result9 = _modDef5316;
-    }
-    const obj5 = { "JFIF Version": tmp12, "Resolution Unit": null, XResolution: null, YResolution: null, "JFIF Thumbnail Width": null, "JFIF Thumbnail Height": null };
-    let tmp15;
-    if (10 <= shortAt) {
-      const byteAt4 = _modDef5316.getByteAt(buffer, sum + 9);
-      const obj6 = { value: byteAt4, description: null };
-      let str6 = "None";
-      if (0 !== byteAt4) {
-        let str7 = "inches";
-        if (1 !== byteAt4) {
-          let str8 = "Unknown";
-          if (2 === byteAt4) {
-            str8 = "cm";
+    obj4["Image Width"] = tmp11;
+    obj4["Color Components"] = tmp4;
+    let tmp14 = tmp4;
+    if (tmp4) {
+      value = tmp4.value;
+      let tmp15;
+      if (8 + 3 * value <= shortAt) {
+        const items = [];
+        for (let num6 = 0; num6 < value; num6 = num6 + 1) {
+          sum = sum + 8 + 3 * num6;
+          let obj11 = _modDef5318;
+          let items1 = [obj11.getByteAt(dataView, sum), , ];
+          let obj12 = _modDef5318;
+          items1[1] = obj12.getByteAt(dataView, sum + 1);
+          let obj13 = _modDef5318;
+          items1[2] = obj13.getByteAt(dataView, sum + 2);
+          let arr = items.push(items1);
+        }
+        const obj7 = { value: items, description: null };
+        let str6 = "";
+        if (items.length > 1) {
+          closure_0 = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
+          const mapped = items.map((item) => closure_0[item[0]]);
+          let str7 = "";
+          const joined = mapped.join("");
+          if (0 !== items.length) {
+            str7 = "";
+            if (undefined !== items[0][1]) {
+              const obj8 = { 17: "4:4:4 (1 1)", 18: "4:4:0 (1 2)", 20: "4:4:1 (1 4)", 33: "4:2:2 (2 1)", 34: "4:2:0 (2 2)", 36: "4:2:1 (2 4)", 65: "4:1:1 (4 1)", 66: "4:1:0 (4 2)" };
+              str7 = "";
+              if (undefined !== obj8[items[0][1]]) {
+                str7 = obj8[items[0][1]];
+              }
+            }
           }
-          str7 = str8;
+          str6 = joined + str7;
         }
-        str6 = str7;
+        obj7.description = str6;
+        tmp15 = obj7;
       }
-      obj6.description = str6;
-      tmp15 = obj6;
-      const tmp3Result10 = _modDef5316;
+      tmp14 = tmp15;
     }
-    obj5["Resolution Unit"] = tmp15;
-    let tmp17;
-    if (12 <= shortAt) {
-      const shortAt1 = _modDef5316.getShortAt(buffer, sum + 10);
-      const obj7 = { value: shortAt1, description: "" + shortAt1 };
-      tmp17 = obj7;
-      const tmp3Result11 = _modDef5316;
-    }
-    obj5.XResolution = tmp17;
-    let tmp19;
-    if (14 <= shortAt) {
-      const shortAt2 = _modDef5316.getShortAt(buffer, sum + 12);
-      const obj8 = { value: shortAt2, description: "" + shortAt2 };
-      tmp19 = obj8;
-      const tmp3Result12 = _modDef5316;
-    }
-    obj5.YResolution = tmp19;
-    obj5["JFIF Thumbnail Width"] = tmp6;
-    obj5["JFIF Thumbnail Height"] = tmp9;
-    if (undefined !== tmp6) {
-      if (undefined !== tmp9) {
-        const result = 3 * tmp6.value * tmp9.value;
-        let tmp22;
-        if (0 !== result) {
-          if (16 + result <= shortAt) {
-            buffer = buffer.buffer;
-            const obj9 = { value: buffer.slice(sum + 16, sum + 16 + result), description: "<24-bit RGB pixel data>" };
-            tmp22 = obj9;
-          }
-        }
-        if (tmp22) {
-          obj5["JFIF Thumbnail"] = tmp22;
-        }
-      }
-    }
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      while (keys[16] !== undefined) {
-        if (undefined !== obj5[tmp24]) {
-          continue;
-        } else {
-          delete tmp[tmp2];
-          continue;
-        }
-        continue;
-      }
-    }
-    return obj5;
+    obj4.Subsampling = tmp14;
+    return obj4;
   }
 };

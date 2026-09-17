@@ -1,7 +1,7 @@
 // === Module 14145: ? ===
 
 // Module 14145
-import _mod14135 from "module_14135" /* 14135 */;
+import _mod14143 from "module_14143" /* 14143 */;
 
 
-export default (arg0, arg1, arg2) => _mod14135(arg0, arg1, arg2) >= 0;
+export default (arg0, arg1) => _mod14143(arg0, arg1, true);

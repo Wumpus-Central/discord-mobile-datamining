@@ -1,10 +1,19 @@
 // === Module 6860: ? ===
 
 // Module 6860
-import _mod26 from "module_26" /* 26 */;
-import module_65 from "module_65" /* 65 */;
+import ComposedGestureName from "ComposedGestureName" /* 6825 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6834 */;
+import _mod6849 from "module_6849" /* 6849 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerButton", validAttributes: { exclusive: true, foreground: true, borderless: true, enabled: true, rippleColor: _mod26.colorAttribute, rippleRadius: true, touchSoundDisabled: true, pointerEvents: true, tapAnimationInDuration: true, tapAnimationOutDuration: true, longPressDuration: true, longPressAnimationOutDuration: true, needsOffscreenAlphaCompositing: true, activeOpacity: true, activeScale: true, activeUnderlayOpacity: true, hoverOpacity: true, hoverScale: true, hoverUnderlayOpacity: true, hoverAnimationInDuration: true, hoverAnimationOutDuration: true, defaultOpacity: true, defaultScale: true, defaultUnderlayOpacity: true, underlayColor: _mod26.colorAttribute, borderWidth: true, borderColor: _mod26.colorAttribute, borderStyle: true, overflow: true, borderLeftWidth: true, borderRightWidth: true, borderTopWidth: true, borderBottomWidth: true, borderStartWidth: true, borderEndWidth: true, borderLeftColor: _mod26.colorAttribute, borderRightColor: _mod26.colorAttribute, borderTopColor: _mod26.colorAttribute, borderBottomColor: _mod26.colorAttribute, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true } };
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export default module_65.get("RNGestureHandlerButton", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useNativeGesture = function useNativeGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6849.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+};

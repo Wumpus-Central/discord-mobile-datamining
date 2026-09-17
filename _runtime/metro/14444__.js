@@ -1,15 +1,11 @@
 // === Module 14444: ? ===
 
 // Module 14444
-import _mod14439 from "module_14439" /* 14439 */;
+import _mod14428 from "module_14428" /* 14428 */;
 import _mod14445 from "module_14445" /* 14445 */;
 
+let closure_2 = _mod14428({}.hasOwnProperty);
 
-export default (arg0) => {
-  if (_mod14439(arg0)) {
-    return arg0;
-  } else {
-    const tmp6 = new TypeError(_mod14445(arg0) + " is not a function");
-    throw tmp6;
-  }
-};
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod14445(arg0), arg1);
+});

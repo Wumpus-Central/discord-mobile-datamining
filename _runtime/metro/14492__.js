@@ -1,69 +1,34 @@
 // === Module 14492: ? ===
 
 // Module 14492
+import _mod17 from "module_17" /* 17 */;
+import replaceByteInByteSequence from "replaceByteInByteSequence" /* 14493 */;
 
-export default {
-  isASCIIDigit(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    return tmp;
-  },
-  isASCIIAlpha(input) {
-    let tmp = input >= 65;
-    if (tmp) {
-      tmp = input <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = input >= 97;
-      if (tmp2) {
-        tmp2 = input <= 122;
-      }
-      tmp = tmp2;
-    }
-    return tmp;
-  },
-  isASCIIAlphanumeric(arg0) {
-    let tmp = arg0 >= 65;
-    if (tmp) {
-      tmp = arg0 <= 90;
-    }
-    if (!tmp) {
-      let tmp2 = arg0 >= 97;
-      if (tmp2) {
-        tmp2 = arg0 <= 122;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = arg0 >= 48;
-      if (tmp3) {
-        tmp3 = arg0 <= 57;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
-  },
-  isASCIIHex(decodeResult) {
-    let tmp = decodeResult >= 48;
-    if (tmp) {
-      tmp = decodeResult <= 57;
-    }
-    if (!tmp) {
-      let tmp2 = decodeResult >= 65;
-      if (tmp2) {
-        tmp2 = decodeResult <= 70;
-      }
-      tmp = tmp2;
-    }
-    if (!tmp) {
-      let tmp3 = decodeResult >= 97;
-      if (tmp3) {
-        tmp3 = decodeResult <= 102;
-      }
-      tmp = tmp3;
-    }
-    return tmp;
+let closure_0 = null;
+const BlobModule = _mod17.NativeModules.BlobModule;
+let tmp2 = BlobModule;
+if (BlobModule) {
+  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
+}
+if (tmp2) {
+  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
+  if (typeof BlobModule.BLOB_URI_HOST === "string") {
+    let _HermesInternal = HermesInternal;
+    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
+  }
+}
+replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
+  if (null === closure_0) {
+    const _Error = Error;
+    const error = new Error("Cannot create URL for blob!");
+    throw error;
+  } else {
+    const _HermesInternal = HermesInternal;
+    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
   }
 };
+replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {
+
+};
+
+export const URL = replaceByteInByteSequence.URL;

@@ -1,16 +1,14 @@
 // === Module 8638: ? ===
 
 // Module 8638
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8625 from "module_8625" /* 8625 */;
-import _modDef8639 from "module_8639" /* 8639 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeOffset = fn;
+const Defs = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeOffset {
+class Defs {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeOffset);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Defs);
+    tmp2 = closure_4;
+    obj = closure_4(Defs);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,32 +49,15 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeOffset, _modDef8625);
+_inherits(Defs, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const merged = Object.assign(this.props);
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged1 = Object.assign(FeOffset(8624).extractFilter(this.props));
-    const obj2 = FeOffset(8624);
-    const merged2 = Object.assign(FeOffset(8624).extractIn(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    return jsx(Defs(8639), { children: this.props.children });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(Defs, items);
+importDefaultResultResult.displayName = "Defs";
 
 export default importDefaultResultResult;

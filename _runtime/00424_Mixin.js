@@ -10,7 +10,7 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const f19637 = (arg0) => {
+const f19701 = (arg0) => {
 
 };
 const NOT_RESPONDER = "NOT_RESPONDER";
@@ -159,7 +159,7 @@ const obj5 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f19637 === "function") {
+      if (typeof f19701 === "function") {
         ({ touches, changedTouches } = nativeEvent);
         let tmp12 = touches;
         if (touches) {
@@ -328,7 +328,7 @@ const obj5 = {
   },
   _savePressInLocation(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f19637 === "function") {
+    if (typeof f19701 === "function") {
       ({ touches, changedTouches } = nativeEvent);
       let tmp = touches;
       if (touches) {

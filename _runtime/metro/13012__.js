@@ -1,16 +1,78 @@
 // === Module 13012: ? ===
 
 // Module 13012
-import _mod13011 from "module_13011" /* 13011 */;
+import _mod12972 from "module_12972" /* 12972 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(_mod13011.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
-  });
-  return mapped.join("\n");
-};
+export function makePromiseBuffer(bufferSize) {
+  const items = [];
+  return {
+    $: items,
+    add(fn) {
+      let tmp2 = undefined === promise;
+      if (!tmp2) {
+        tmp2 = items.length < tmp;
+      }
+      if (tmp2) {
+        promise = fn();
+        if (-1 === items.indexOf(promise)) {
+          items.push(promise);
+        }
+        promise.then(() => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first;
+        }).then(null, () => {
+          let first = items.splice(items.indexOf(promise), 1)[0];
+          if (!first) {
+            first = Promise.resolve(undefined);
+          }
+          return first.then(null, () => {
+
+          });
+        });
+        return promise;
+      } else {
+        const sentryError = new bufferSize(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
+        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
+      }
+    },
+    drain(arg0) {
+      bufferSize = arg0;
+      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
+        closure_0 = fn;
+        closure_1 = arg1;
+        length = length.length;
+        if (length) {
+          const _setTimeout = setTimeout;
+          const timeout = setTimeout(() => {
+            let tmp2 = closure_0;
+            if (closure_0) {
+              tmp2 = tmp > 0;
+            }
+            if (tmp2) {
+              closure_0(false);
+            }
+          }, closure_0);
+          const item = arr.forEach((item) => {
+            _mod12972.resolvedSyncPromise(item).then(() => {
+              diff = diff - 1;
+              if (!diff) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(closure_1_3);
+                fn(true);
+              }
+            }, closure_1);
+          });
+        } else {
+          return fn(true);
+        }
+        arr = length;
+      });
+    }
+  };
+}

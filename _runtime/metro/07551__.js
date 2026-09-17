@@ -1,12 +1,7 @@
 // === Module 7551: ? ===
 
 // Module 7551
-import _slicedToArray from "module_32" /* 32 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
 
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return framebus(() => closure_0({}), []);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 81, height: 20, scales: [2, 3], hash: "18e5c4ae4dc618d5509942d43522b6eb", name: "img_logo_nitro_tier_2_horizontal_dark", type: "png" });

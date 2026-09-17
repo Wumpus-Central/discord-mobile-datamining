@@ -2,7 +2,7 @@
 
 // Module 4086
 import module_4078_mod from "module_4078" /* 4078 */;
-import requiredArgs_mod from "requiredArgs" /* 3727 */;
+import requiredArgs_mod from "requiredArgs" /* 3729 */;
 
 let module_4078 = module_4078_mod;
 if (!module_4078) {
@@ -21,7 +21,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisQuarter(arg0) {
+export default function isThisMinute(arg0) {
   requiredArgs.default(1, arguments);
   return module_4078.default(Date.now(), arg0);
 };

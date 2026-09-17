@@ -2,15 +2,17 @@
 
 // Module 8620
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8610 from "module_8610" /* 8610 */;
-import _modDef8621 from "module_8621" /* 8621 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 8614 */;
+import extractPropsDefault from "extractProps" /* 8621 */;
+import _modDef8629 from "module_8629" /* 8629 */;
+import _modDef8630 from "module_8630" /* 8630 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Ellipse = fn;
+const G = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,56 +34,84 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Ellipse {
+class G {
   constructor() {
     self = this;
-    tmp = closure_3(this, Ellipse);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, G);
+    items1 = [...items];
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Ellipse);
+    obj = hasOwnProperty(G);
     tmp3 = closure_4;
     if (closure_7()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(matrix);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(Ellipse, _modDef8610);
+_inherits(G, _modDef8630);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const obj = {};
-    ({ cx, cy, rx, ry } = props);
-    const merged = Object.assign(Ellipse(8601).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.rx = rx;
-    obj.ry = ry;
-    const obj2 = Ellipse(8601);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
+    const propsAndStylesResult = G(8621).propsAndStyles(props);
+    const tmp5 = extractPropsDefault(propsAndStylesResult, this);
+    const obj = G(8621);
+    const extractFontResult = G(8628).extractFont(propsAndStylesResult);
+    if (typeof hasProps === "function") {
+      const keys = Object.keys();
+      if (keys !== undefined) {
+        let flag = true;
+        if (flag) {
+          tmp5.font = extractFontResult;
+        }
+        const obj3 = {
+          ref(arg0) {
+                return self.refMethod(arg0);
+              }
+        };
+        const merged = Object.assign(tmp5);
+        obj3.children = props.children;
+        return jsx(_modDef8629, {
+          ref(arg0) {
+                return self.refMethod(arg0);
+              }
+        });
       }
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8621, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+      flag = false;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+    const obj2 = G(8628);
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+let items = [entry];
+const importDefaultResultResult = _createClass(G, items);
+importDefaultResultResult.displayName = "G";
+function hasProps(arg0) {
+
+}
 
 export default importDefaultResultResult;

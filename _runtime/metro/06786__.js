@@ -1,85 +1,204 @@
 // === Module 6786: ? ===
 
 // Module 6786
-import jsxProd from "jsxProd" /* 21 */;
-import _modDef6798 from "module_6798" /* 6798 */;
-import attachHandlers from "attachHandlers" /* 6811 */;
-import noop_mod from "module_19" /* 19 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-let noop = noop_mod;
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-
-export const GestureDetector = (gesture) => {
-  if (gesture.gesture) {
-    gesture = gesture.gesture;
-    (function propagateDetectorConfig(gesture, gesture) {
-      const items = ["userSelect", "enableContextMenu", "touchAction"];
-      for (const item10008 of items) {
-        let tmp2 = arg0[item10008];
-        if (undefined !== tmp2) {
-          let toGestureArrayResult = arg1.toGestureArray();
-          for (const item10018 of toGestureArrayResult) {
-            item10018.config[tmp] = tmp3;
-            continue;
-          }
-        }
-        continue;
-      }
-    })(gesture, gesture);
-    let items = [gesture];
-    let gesturesToAttach = current2(() => gesture.toGestureArray(), items);
-    const someResult = gesturesToAttach.some((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-    webEventHandlers = gesture(webEventHandlers[2]).useWebEventHandlers();
-    const current = detectorUpdater({ firstRender: true, viewRef: null, previousViewTag: -1, forceRebuildReanimatedEvent: false }).current;
-    const obj3 = { attachedGestures: [], animatedEventHandler: null, animatedHandlers: null, shouldUseReanimated: someResult, isMounted: false };
-    current2 = noop.useRef(obj3).current;
-    const obj4 = gesture(webEventHandlers[3]);
-    detectorUpdater = obj4.useDetectorUpdater(current, current2, gesturesToAttach, gesture, webEventHandlers);
-    const obj2 = gesture(webEventHandlers[2]);
-    const viewRefHandler = gesture(webEventHandlers[4]).useViewRefHandler(current, detectorUpdater);
-    let needsToReattachResult = current.firstRender || current.forceRebuildReanimatedEvent;
-    if (!needsToReattachResult) {
-      needsToReattachResult = tmp9(tmp10[5]).needsToReattach(current2, gesturesToAttach);
-      const tmp9Result = tmp9(tmp10[5]);
-    }
-    current.forceRebuildReanimatedEvent = false;
-    const obj5 = gesture(webEventHandlers[4]);
-    const animatedGesture = gesture(webEventHandlers[6]).useAnimatedGesture(current2, needsToReattachResult);
-    const tmp9Result5 = gesture(webEventHandlers[6]);
-    const isomorphicLayoutEffect = gesture(webEventHandlers[7]).useIsomorphicLayoutEffect(() => {
-      current2.isMounted = true;
-      gesturesToAttach = attachHandlers;
-      const tmp = _modDef6798(current.viewRef);
-      gesturesToAttach.attachHandlers({ preparedGesture: current2, gestureConfig: gesture, gesturesToAttach, webEventHandlersRef: webEventHandlers, viewTag: _modDef6798(current.viewRef) });
-      return () => {
-        current2.isMounted = false;
-        gesture(webEventHandlers[10]).dropHandlers(current2);
-      };
-    }, []);
-    const items1 = [gesture];
-    current(() => {
-      if (current.firstRender) {
-        tmp.firstRender = false;
-      } else {
-        detectorUpdater();
-      }
-    }, items1);
-    const tmp9Result6 = gesture(webEventHandlers[7]);
-    const mountReactions = gesture(webEventHandlers[11]).useMountReactions(detectorUpdater, current2);
-    const tmp9Result8 = gesture(webEventHandlers[12]);
-    if (someResult) {
-      const obj6 = { ref: viewRefHandler, onGestureHandlerEvent: current2.animatedEventHandler, children: gesture.children };
-      let tmp28Result = <tmp9Result8.AnimatedWrap ref={viewRefHandler} onGestureHandlerEvent={current2.animatedEventHandler}>{gesture.children}</tmp9Result8.AnimatedWrap>;
+let ExclusiveGesture = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      const obj7 = { ref: viewRefHandler, children: gesture.children };
-      tmp28Result = <tmp9Result8.Wrap ref={viewRefHandler}>{gesture.children}</tmp9Result8.Wrap>;
+      callResult = call(constructResult);
     }
-    return tmp28Result;
-  } else {
-    const _Error = Error;
-    const error = new Error("GestureDetector must have a gesture prop provided.");
-    throw error;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+class ComposedGesture {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.gestures = [];
+    tmp3Result.simultaneousGestures = [];
+    tmp3Result.requireGesturesToFail = [];
+    tmp3Result.gestures = items;
+    return tmp3Result;
+  }
+}
+ExclusiveGesture = ComposedGesture;
+_inherits(ComposedGesture, fn(6787).Gesture);
+const entry = {
+  key: "prepareSingleGesture",
+  value: function prepareSingleGesture(item10006, simultaneousGestures, requireGesturesToFail) {
+    if (item10006 instanceof ExclusiveGesture(6787).BaseGesture) {
+      if (item10006.relationsSnapshot == null) {
+        const obj = { simultaneousWith: item10006.config.simultaneousWith, requireToFail: item10006.config.requireToFail };
+        item10006.relationsSnapshot = obj;
+      }
+      const obj2 = {};
+      const merged = Object.assign(item10006.config);
+      const simultaneousWith = item10006.relationsSnapshot.simultaneousWith;
+      if (undefined === simultaneousWith) {
+        const items = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, 0);
+        let items1 = items;
+      } else {
+        items1 = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, HermesBuiltin.arraySpread(simultaneousWith, 0));
+      }
+      obj2.simultaneousWith = items1;
+      const requireToFail = item10006.relationsSnapshot.requireToFail;
+      if (undefined === requireToFail) {
+        const items2 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, 0);
+        let items3 = items2;
+      } else {
+        items3 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, HermesBuiltin.arraySpread(requireToFail, 0));
+      }
+      obj2.requireToFail = items3;
+      item10006.config = obj2;
+    } else if (item10006 instanceof ExclusiveGesture) {
+      item10006.simultaneousGestures = simultaneousGestures;
+      item10006.requireGesturesToFail = requireGesturesToFail;
+      item10006.prepare();
+    }
   }
 };
+let items = [
+  entry,
+  {
+    key: "prepare",
+    value: function prepare() {
+      const self = this;
+      for (const item10006 of tmp) {
+        let prepareSingleGestureResult = self.prepareSingleGesture(item10006, self.simultaneousGestures, self.requireGesturesToFail);
+        continue;
+      }
+    }
+  },
+  {
+    key: "initialize",
+    value: function initialize() {
+      for (const item10006 of tmp) {
+        let initializeResult = item10006.initialize();
+        continue;
+      }
+    }
+  },
+  {
+    key: "toGestureArray",
+    value: function toGestureArray() {
+      const gestures = this.gestures;
+      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
+    }
+  }
+];
+const importDefaultResultResult = _createClass(ComposedGesture, items);
+class SimultaneousGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+ExclusiveGesture = SimultaneousGesture;
+_inherits(SimultaneousGesture, importDefaultResultResult);
+const entry1 = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], tmp[num], self.requireGesturesToFail);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
+  }
+};
+let items1 = [entry1];
+class ExclusiveGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ExclusiveGesture, importDefaultResultResult);
+const entry2 = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    let items = [];
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let requireGesturesToFail = self.requireGesturesToFail;
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], self.simultaneousGestures, requireGesturesToFail.concat(items));
+        items = items.concat(tmp[num]);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
+  }
+};
+let items2 = [entry2];
+
+export const ComposedGesture = importDefaultResultResult;
+export const SimultaneousGesture = _createClass(SimultaneousGesture, items1);
+export const ExclusiveGesture = _createClass(ExclusiveGesture, items2);

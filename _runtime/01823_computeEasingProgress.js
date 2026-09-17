@@ -36,7 +36,7 @@ function computeProgress(screenDimensions, translationX, arg2) {
 computeProgress.__closure = {};
 computeProgress.__workletHash = 3778680834909;
 computeProgress.__initData = { code: "function computeProgress_Pnpm_swipeSimulatorTs3(screenTransitionConfig,event,isTransitionCanceled){const screenDimensions=screenTransitionConfig.screenDimensions;const progressX=Math.abs(event.translationX/screenDimensions.width);const progressY=Math.abs(event.translationY/screenDimensions.height);const maxProgress=Math.max(progressX,progressY);const progress=isTransitionCanceled?maxProgress/2:maxProgress;return progress;}" };
-function maybeScheduleNextFrame(scrollAnimation, arg1, onFinishAnimation, translationX, arg4) {
+function maybeScheduleNextFrame(callback2, arg1, onFinishAnimation, translationX, arg4) {
   if (arg1) {
     onFinishAnimation = onFinishAnimation.onFinishAnimation;
     if (onFinishAnimation != null) {
@@ -56,7 +56,7 @@ function maybeScheduleNextFrame(scrollAnimation, arg1, onFinishAnimation, transl
     const RNScreensTurboModule = RNScreensTurboModule2.RNScreensTurboModule;
     RNScreensTurboModule.updateTransition(tmp, result);
     const _requestAnimationFrame = requestAnimationFrame;
-    const animationFrame = requestAnimationFrame(scrollAnimation);
+    const animationFrame = requestAnimationFrame(callback2);
   } else {
     throw new TypeError("Trying to call a non-function");
   }

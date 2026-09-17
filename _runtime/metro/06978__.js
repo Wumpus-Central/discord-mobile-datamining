@@ -1,30 +1,42 @@
 // === Module 6978: ? ===
 
 // Module 6978
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      exports = (arg0) => typeof arg0;
-    }
-    module.exports = exports;
-    return exports(arg0);
-  }
-  exports = (arg0) => {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let exports = _typeof;
+import _mod6979 from "module_6979" /* 6979 */;
 
-export default _typeof;
+
+export default function _createClass(arg0, arg1, arg2) {
+  if (arg1) {
+    for (let num = 0; num < arg1.length; num = num + 1) {
+      let tmp3 = arg1[num];
+      let flag2 = tmp3.enumerable;
+      if (!flag2) {
+        flag2 = false;
+      }
+      tmp3.enumerable = flag2;
+      tmp3.configurable = true;
+      if ("value" in tmp3) {
+        tmp3.writable = true;
+      }
+      let _Object = Object;
+      let definePropertyResult = Object.defineProperty(tmp, _mod6979(tmp3.key), tmp3);
+    }
+  }
+  if (arg2) {
+    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
+      let tmp9 = arg2[num3];
+      let flag4 = tmp9.enumerable;
+      if (!flag4) {
+        flag4 = false;
+      }
+      tmp9.enumerable = flag4;
+      tmp9.configurable = true;
+      if ("value" in tmp9) {
+        tmp9.writable = true;
+      }
+      let _Object2 = Object;
+      let definePropertyResult1 = Object.defineProperty(arg0, _mod6979(tmp9.key), tmp9);
+    }
+  }
+  Object.defineProperty(arg0, "prototype", { writable: false });
+  return arg0;
+};

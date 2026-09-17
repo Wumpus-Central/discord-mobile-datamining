@@ -1,18 +1,34 @@
 // === Module 14440: ? ===
 
 // Module 14440
-import _mod14431 from "module_14431" /* 14431 */;
-import _mod14439 from "module_14439" /* 14439 */;
+import _mod14421 from "module_14421" /* 14421 */;
+import _mod14425 from "module_14425" /* 14425 */;
 import _mod14441 from "module_14441" /* 14441 */;
-import _mod14442 from "module_14442" /* 14442 */;
 
+let prop = Object.getOwnPropertySymbols;
+if (prop) {
+  prop = !_mod14425(() => {
+    const SymbolResult = Symbol("symbol detection");
+    const StringResult = _mod14421.String(SymbolResult);
+    let tmp5 = !StringResult;
+    if (StringResult) {
+      const _Object = Object;
+      const _Symbol = Symbol;
+      tmp5 = !(Object(SymbolResult) instanceof Symbol);
+    }
+    if (!tmp5) {
+      const _Symbol2 = Symbol;
+      let tmp2Result = !sham;
+      if (!sham) {
+        tmp2Result = _mod14441;
+      }
+      if (tmp2Result) {
+        tmp2Result = _mod14441 < 41;
+      }
+      tmp5 = tmp2Result;
+    }
+    return tmp5;
+  });
+}
 
-export default _mod14431 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod14441("Symbol");
-  let tmpResultResult = _mod14439(tmp3);
-  if (tmpResultResult) {
-    tmpResultResult = _mod14442(tmp3.prototype, Object(arg0));
-    const tmpResult = _mod14442;
-  }
-  return tmpResultResult;
-});
+export default prop;

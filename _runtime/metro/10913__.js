@@ -1,50 +1,96 @@
 // === Module 10913: ? ===
 
 // Module 10913
-import cancelAnimation from "cancelAnimation" /* 1637 */;
+import SINGLE_ITEM from "SINGLE_ITEM" /* 10914 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext({});
-const __initData = { code: "function pnpm_indexTsx1(index,dimensions){const{itemDimensions}=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};}" };
-const __initData2 = { code: "function pnpm_indexTsx2(dimensions){const{containerSize}=this.__closure;containerSize.value=dimensions;}" };
+require = arg1;
 
-export const GlobalStateContext = context;
-export const GlobalStateProvider = (arg0) => {
-  ({ children, value } = arg0);
-  const sharedValue = cancelAnimation.useSharedValue({ width: 0, height: 0 });
-  const sharedValue1 = cancelAnimation.useSharedValue({});
-  const fn = function c(arg0, arg1) {
-    const obj = {};
-    const merged = Object.assign(sharedValue1.value);
-    obj[arg0] = arg1;
-    sharedValue1.value = obj;
-  };
-  fn.__closure = { itemDimensions: sharedValue1 };
-  fn.__workletHash = 9846581158902;
-  fn.__initData = __initData;
-  const fn2 = function _(value) {
-    sharedValue.value = value;
-  };
-  fn2.__closure = { containerSize: sharedValue };
-  fn2.__workletHash = 5978604737778;
-  fn2.__initData = __initData2;
-  const obj3 = { value: null, children: null };
-  const obj4 = {};
-  let merged = Object.assign(value);
-  obj4.layout = { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: fn, updateContainerSize: fn2 };
-  obj3.value = obj4;
-  obj3.children = children;
-  return <context.Provider value={null}>{null}</context.Provider>;
-};
-export const useGlobalState = () => {
-  context = noop.useContext(context);
-  if (context) {
-    return context;
-  } else {
-    const _Error = Error;
-    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
-    throw error;
+export const useInitProps = function useInitProps(defaultIndex) {
+  defaultIndex = defaultIndex.defaultIndex;
+  let num = 0;
+  if (undefined !== defaultIndex) {
+    num = defaultIndex;
   }
+  let data = defaultIndex.data;
+  if (undefined === data) {
+    data = [];
+  }
+  const loop = tmp;
+  const autoPlayInterval = defaultIndex.autoPlayInterval;
+  let num2 = 1000;
+  if (undefined !== autoPlayInterval) {
+    num2 = autoPlayInterval;
+  }
+  const scrollAnimationDuration = defaultIndex.scrollAnimationDuration;
+  let num3 = 500;
+  if (undefined !== scrollAnimationDuration) {
+    num3 = scrollAnimationDuration;
+  }
+  let style = defaultIndex.style;
+  if (undefined === style) {
+    style = {};
+  }
+  const autoFillData = defaultIndex.autoFillData;
+  noop = tmp2;
+  const enabled = defaultIndex.enabled;
+  const pagingEnabled = defaultIndex.pagingEnabled;
+  const overscrollEnabled = defaultIndex.overscrollEnabled;
+  let snapEnabled = defaultIndex.snapEnabled;
+  if (undefined === snapEnabled) {
+    let flag = defaultIndex.enableSnap;
+    if (flag == null) {
+      flag = true;
+    }
+    snapEnabled = flag;
+  }
+  ({ width, height } = defaultIndex);
+  if (!width) {
+    width = 0;
+  }
+  const rounded = Math.round(width);
+  if (!height) {
+    height = 0;
+  }
+  const rounded1 = Math.round(height);
+  const items = [data, undefined === loop || loop, undefined === autoFillData || autoFillData];
+  const bound = Math.max(num2, 0);
+  const memo = noop.useMemo(() => SINGLE_ITEM.computedFillDataWithAutoFillData({ loop, autoFillData, data, dataLength: data.length }), items);
+  let tmp10 = "vertical-stack" !== defaultIndex.mode;
+  if (tmp10) {
+    tmp10 = "horizontal-stack" !== defaultIndex.mode;
+  }
+  if (!tmp10) {
+    if (!defaultIndex.modeConfig) {
+      defaultIndex.modeConfig = {};
+    }
+    const modeConfig = defaultIndex.modeConfig;
+    let showLength;
+    if (modeConfig != null) {
+      showLength = modeConfig.showLength;
+    }
+    if (showLength == null) {
+      showLength = length - 1;
+    }
+    defaultIndex.modeConfig.showLength = showLength;
+  }
+  const obj = {};
+  const merged = Object.assign(defaultIndex);
+  obj.defaultIndex = num;
+  obj.autoFillData = undefined === autoFillData || autoFillData;
+  obj.data = memo;
+  obj.dataLength = memo.length;
+  obj.rawData = data;
+  obj.rawDataLength = data.length;
+  obj.loop = undefined === loop || loop;
+  obj.enabled = undefined === enabled || enabled;
+  obj.autoPlayInterval = bound;
+  obj.scrollAnimationDuration = num3;
+  obj.style = style;
+  obj.pagingEnabled = undefined === pagingEnabled || pagingEnabled;
+  obj.snapEnabled = snapEnabled;
+  obj.overscrollEnabled = undefined === overscrollEnabled || overscrollEnabled;
+  obj.width = rounded;
+  obj.height = rounded1;
+  return obj;
 };

@@ -1,124 +1,140 @@
 // === Module 6835: ? ===
 
 // Module 6835
-import jsxProd from "jsxProd" /* 21 */;
-import noop_mod from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import tagMessage from "tagMessage" /* 6771 */;
+import _mod6809 from "module_6809" /* 6809 */;
+import hash from "hash" /* 6823 */;
+import allowedNativeProps2 from "allowedNativeProps" /* 6824 */;
+import _mod6836 from "module_6836" /* 6836 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let noop = noop_mod;
-({ useCallback: closure_0, useEffect: closure_1, useMemo: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = jsxProd.jsx;
-let c7 = 0;
-let closure_8 = [];
-let c9 = false;
-const context = noop.createContext(null);
-const logicalResponder = StyleSheet.create({ logicalResponder: { display: "contents" } });
-
-export default function _default(children) {
-  const keyboardShouldPersistTaps = children.keyboardShouldPersistTaps;
-  const tmp = closure_3(false);
-  const isRNGHResponderEvent = tmp;
-  let items = [tmp, keyboardShouldPersistTaps];
-  isRNGHResponderEvent(() => {
-    sum = sum + 1;
-    if (1 >= sum) {
-      let addListener;
-      if (closure_1_4 != null) {
-        addListener = closure_1_4.addListener;
-      }
-      if (null != addListener) {
-        const metrics = closure_1_4.metrics;
-        let height;
-        if (metrics != null) {
-          const metricsResult = metrics();
-          if (metricsResult != null) {
-            height = metricsResult.height;
-          }
-        }
-        let tmp5 = null != height;
-        if (tmp5) {
-          tmp5 = height > 0;
-        }
-        function setVisible(endCoordinates) {
-          endCoordinates = endCoordinates.endCoordinates;
-          let height;
-          if (endCoordinates != null) {
-            height = endCoordinates.height;
-          }
-          let tmp2 = null != height;
-          if (tmp2) {
-            tmp2 = height > 0;
-          }
-          c9 = tmp2;
-        }
-        closure_9 = tmp5;
-        items = [
-          closure_1_4.addListener("keyboardDidShow", setVisible),
-          closure_1_4.addListener("keyboardWillShow", setVisible),
-          closure_1_4.addListener("keyboardDidHide", () => {
-                c9 = false;
-              })
-        ];
-      }
-    }
-    return () => {
-      (function unsubscribeFromKeyboardVisibility() {
-        diff = diff - 1;
-        if (0 >= diff) {
-          for (const item10008 of closure_8) {
-            let removeResult = item10008.remove();
-            continue;
-          }
-          closure_8 = [];
-          c9 = false;
-        }
-      })();
-    };
-  }, []);
-  const items1 = [keyboardShouldPersistTaps];
-  let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
-  const obj = { value: tmp2, children: null };
-  const tmp4 = keyboardShouldPersistTaps(() => {
-    closure_1.current = false;
-    return false;
-  }, []);
-  obj.children = <closure_5 collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
-    closure_1.current = false;
-    return false;
-  }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
-    let current = "handled" === keyboardShouldPersistTaps;
-    if (current) {
-      current = isRNGHResponderEvent.current;
-    }
-    isRNGHResponderEvent.current = false;
-    return current;
-  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{children.children}</closure_5>;
-  return <context value={tmp2}>{null}</context>;
-};
-export const JSResponderContext = context;
-export const updateResponderEventValue = function updateResponderEventValue(isRNGHResponderEvent, current) {
-  isRNGHResponderEvent = undefined;
-  if (isRNGHResponderEvent != null) {
-    isRNGHResponderEvent = isRNGHResponderEvent.isRNGHResponderEvent;
-  }
-  if (isRNGHResponderEvent) {
-    isRNGHResponderEvent.current = current;
-  }
-};
-export const isKeyboardDismissingTap = function isKeyboardDismissingTap(keyboardShouldPersistTaps) {
-  if (null == keyboardShouldPersistTaps) {
-    return false;
+require = fn;
+const useMemo = fn(19).useMemo;
+const map = new Map();
+function DEFAULT_PROPS_TRANSFORMER(arg0) {
+  return arg0;
+}
+function isGestureEnabled(gestures) {
+  if (obj.isComposedGesture(gestures)) {
+    gestures = gestures.gestures;
+    let someResult = gestures.some(isGestureEnabled);
   } else {
-    keyboardShouldPersistTaps = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
-    let tmp = !keyboardShouldPersistTaps;
-    if (keyboardShouldPersistTaps) {
-      tmp = "never" === keyboardShouldPersistTaps;
-    }
-    if (tmp) {
-      tmp = c9;
-    }
-    return tmp;
+    someResult = false !== hash.maybeUnpackValue(gestures.config.enabled);
+    const tmpResult = hash;
   }
+  return someResult;
+}
+
+export { isGestureEnabled };
+export const resolveInternalConfigProps = function resolveInternalConfigProps(useAnimated) {
+  useAnimated = useAnimated.useAnimated;
+  if (!useAnimated) {
+    useAnimated = _mod6836.isNativeAnimatedEvent(useAnimated.onUpdate);
+  }
+  useAnimated.dispatchesAnimatedEvents = useAnimated;
+  if (useAnimated.dispatchesAnimatedEvents) {
+    useAnimated.disableReanimated = true;
+  }
+  const disableReanimated = useAnimated.disableReanimated;
+  let result = !disableReanimated;
+  if (!disableReanimated) {
+    result = undefined !== _mod6809.Reanimated;
+  }
+  if (result) {
+    result = hash.hasWorkletEventHandlers(useAnimated);
+  }
+  if (result) {
+    result = !useAnimated.dispatchesAnimatedEvents;
+  }
+  useAnimated.shouldUseReanimatedDetector = result;
+  useAnimated.needsPointerData = _mod6836.shouldHandleTouchEvents(useAnimated);
+};
+export const prepareConfigForNativeSide = function prepareConfigForNativeSide(arg0, shouldUseReanimatedDetector) {
+  shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
+  if (shouldUseReanimatedDetector) {
+    shouldUseReanimatedDetector = !hash.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
+  }
+  const obj2 = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
+  const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
+  let EMPTY_WHITE_LIST = PropsWhiteLists.get(arg0);
+  if (EMPTY_WHITE_LIST == null) {
+    EMPTY_WHITE_LIST = allowedNativeProps2.EMPTY_WHITE_LIST;
+  }
+  const entries = Object.entries(shouldUseReanimatedDetector);
+  while (tmp12 !== undefined) {
+    [first, iter] = tmp13;
+    let tmp17 = first;
+    let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
+    if (!allowedNativeProps.has(first)) {
+      if (!EMPTY_WHITE_LIST.has(tmp17)) {
+        let PropsToFilter = allowedNativeProps2.PropsToFilter;
+        if (PropsToFilter.has(tmp17)) {
+          continue;
+        } else {
+          let _console = console;
+          let tmp19Result = tagMessage;
+          let _HermesInternal = HermesInternal;
+          let str = "";
+          let str2 = " is not a valid property for ";
+          let str3 = " and will be ignored.";
+          let warnResult = console.warn(tmp19Result.tagMessage("" + tmp17 + " is not a valid property for " + arg0 + " and will be ignored."));
+          continue;
+        }
+        continue;
+      }
+    }
+    let Reanimated = _mod6809.Reanimated;
+    let isSharedValueResult;
+    if (Reanimated != null) {
+      isSharedValueResult = Reanimated.isSharedValue(iter);
+    }
+    obj2[tmp17] = isSharedValueResult ? iter.value : iter;
+  }
+  return obj2;
+};
+export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps) {
+  closure_0 = gestureHandlerProps;
+  let tmp = map;
+  if (map === undefined) {
+    tmp = map;
+  }
+  closure_1 = tmp;
+  let tmp2 = transformHoverProps;
+  if (transformHoverProps === undefined) {
+    tmp2 = DEFAULT_PROPS_TRANSFORMER;
+  }
+  closure_2 = tmp2;
+  const items = [gestureHandlerProps, tmp, tmp2];
+  return useMemo(() => {
+    const merged = Object.assign(closure_0);
+    const item = closure_1.forEach((item, index) => {
+      if (index in obj) {
+        obj[item] = obj[index];
+        delete tmp[tmp2];
+      }
+    });
+    const tmp3 = closure_2({});
+    let useAnimated = tmp3.useAnimated;
+    if (!useAnimated) {
+      useAnimated = _mod6836.isNativeAnimatedEvent(tmp3.onUpdate);
+    }
+    tmp3.dispatchesAnimatedEvents = useAnimated;
+    if (tmp3.dispatchesAnimatedEvents) {
+      tmp3.disableReanimated = true;
+    }
+    const disableReanimated = tmp3.disableReanimated;
+    let result = !disableReanimated;
+    if (!disableReanimated) {
+      result = undefined !== _mod6809.Reanimated;
+    }
+    if (result) {
+      result = hash.hasWorkletEventHandlers(tmp3);
+    }
+    if (result) {
+      result = !tmp3.dispatchesAnimatedEvents;
+    }
+    tmp3.shouldUseReanimatedDetector = result;
+    tmp3.needsPointerData = _mod6836.shouldHandleTouchEvents(tmp3);
+    return tmp3;
+  }, items);
 };

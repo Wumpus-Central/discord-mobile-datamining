@@ -1,68 +1,18 @@
 // === Module 7012: ? ===
 
 // Module 7012
-import _mod7010 from "module_7010" /* 7010 */;
-import _slicedToArray from "module_6965" /* 6965 */;
+import noop from "module_19" /* 19 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
-function useOnLoad(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = hasOwnProperty(false);
-  React3(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-    if (isFirstLayoutComplete) {
-      isFirstLayoutComplete = !ref.current;
-    }
-    if (isFirstLayoutComplete) {
-      ref.current = true;
-      f81679();
-    }
-  });
-}
+({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
 
-export const useOnListLoad = (recyclerViewManager, onLoad) => {
-  let isFirstLayoutComplete = recyclerViewManager;
-  let f81679 = onLoad;
-  hasOwnProperty(Date.now());
-  [tmp3, closure_3] = timestampProducer(false);
-  const dataLength = recyclerViewManager.getDataLength();
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
-  const requestAnimationFrame = _mod7010.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  const items = [dataLength];
-  React4(() => {
-    closure_2.current = Date.now();
-  }, items);
-  if (typeof useOnLoad === "function") {
-    isFirstLayoutComplete = recyclerViewManager;
-    f81679 = () => {
-      const elapsedTimeInMs = Date.now() - ref.current;
-      requestAnimationFrame(() => {
-        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f81679 != null) {
-          const obj = { elapsedTimeInMs };
-          tmp(obj);
-        }
-        closure_2_3(true);
-      });
+export const useUnmountFlag = () => {
+  const tmp = React(false);
+  closure_0 = tmp;
+  framebus(() => {
+    closure_0.current = false;
+    return () => {
+      closure_1_0.current = true;
     };
-    hasOwnProperty(false);
-    React3(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-      if (isFirstLayoutComplete) {
-        isFirstLayoutComplete = !ref.current;
-      }
-      if (isFirstLayoutComplete) {
-        ref.current = true;
-        f81679();
-      }
-    });
-    const obj2 = { isLoaded: tmp3 };
-    return obj2;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
+  }, []);
+  return tmp;
 };
-export { useOnLoad };

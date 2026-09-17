@@ -2,4 +2,4 @@
 
 // Module 8461
 
-export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+export default { WIDEVINE: "widevine", PLAYREADY: "playready", CLEARKEY: "clearkey", FAIRPLAY: "fairplay" };

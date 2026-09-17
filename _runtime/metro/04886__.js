@@ -1,33 +1,31 @@
 // === Module 4886: ? ===
 
 // Module 4886
-import _mod4887 from "module_4887" /* 4887 */;
+import _mod1281 from "module_1281" /* 1281 */;
+import requirePromise from "requirePromise" /* 4884 */;
+import PromiseResolve from "PromiseResolve" /* 4960 */;
+import callBind_mod from "callBind" /* 1455 */;
 
+requirePromise();
+let callBind = callBind_mod;
+let closure_2 = callBind(_mod1281("%Promise.all%"));
+let callBind = callBind_mod;
+let closure_3 = callBind(_mod1281("%Promise.reject%"));
 
-export default function Type(num) {
-  let str = "Null";
-  if (null !== num) {
-    let str2 = "Undefined";
-    if (undefined !== num) {
-      let str3 = "Object";
-      if (!_mod4887(num)) {
-        let str4 = "Number";
-        if (typeof num !== "number") {
-          let str5 = "Boolean";
-          if (typeof num !== "boolean") {
-            let str6;
-            if (typeof num === "string") {
-              str6 = "String";
-            }
-            str5 = str6;
-          }
-          str4 = str5;
-        }
-        str3 = str4;
+export default function allSettled(arg0) {
+  const self = this;
+  if ("Object" !== self(4887)(this)) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("`this` value must be an object");
+    throw typeError;
+  } else {
+    return closure_2(this, tmp(4893)(tmp(4890)(arg0), (arg0) => {
+      try {
+        return promise.then((value) => ({ status: "fulfilled", value }), (reason) => ({ status: "rejected", reason }));
+      } catch (tmp3) {
+        return closure_3(tmp, tmp3);
       }
-      str2 = str3;
-    }
-    str = str2;
+      promise = PromiseResolve(self, arg0);
+    }));
   }
-  return str;
 };

@@ -1,200 +1,286 @@
 // === Module 13007: ? ===
 
 // Module 13007
-import _mod12984 from "module_12984" /* 12984 */;
-import _mod12987 from "module_12987" /* 12987 */;
-import _mod12994 from "module_12994" /* 12994 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod13003 from "module_13003" /* 13003 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
+import __SENTRY_DEBUG__ from "module_12947" /* 12947 */;
+import dateTimestampInSeconds from "module_12962" /* 12962 */;
 
-function eventFromEnvelope(arg0, arg1) {
-  closure_0 = arg1;
-  _mod12984.forEachEnvelopeItem(arg0, (arg0, arg1) => {
-    if (items.includes(arg1)) {
-      const _Array = Array;
-      let tmp3;
-      if (Array.isArray(arg0)) {
-        tmp3 = arg0[1];
-      }
-      closure_1 = tmp3;
+const ServerRuntimeClient = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    return closure_1;
-  });
-  return dependencyMap;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
 }
-
-export { eventFromEnvelope };
-export function makeMultiplexedTransport(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0) => {
-    let tunnel = arg0;
-    function getTransport(arg0, arg1) {
-      let combined = arg0;
-      if (arg1) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + arg0 + ":" + arg1;
+_possibleConstructorReturn;
+class ServerRuntimeClient {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_3(this, ServerRuntimeClient);
+    obj = closure_0(closure_1[9]);
+    result = obj.registerSpanErrorInstrumentation();
+    items = [];
+    items[0] = global;
+    tmp3 = hasOwnProperty;
+    obj2 = hasOwnProperty(ServerRuntimeClient);
+    tmp4 = closure_4;
+    if (closure_7()) {
+      tmp6 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj2, items, tmp3(self).constructor);
+    } else {
+      constructResult = obj2.apply(self, items);
+    }
+    return tmp4(self, constructResult);
+  }
+}
+_inherits(ServerRuntimeClient, _mod13003.BaseClient);
+const entry = {
+  key: "eventFromException",
+  value: function eventFromException(arg0, arg1) {
+    const result = ServerRuntimeClient(13008).eventFromUnknownInput(this, this._options.stackParser, arg0, arg1);
+    result.level = "error";
+    const obj = ServerRuntimeClient(13008);
+    return ServerRuntimeClient(12972).resolvedSyncPromise(result);
+  }
+};
+let items = [
+  entry,
+  {
+    key: "eventFromMessage",
+    value: function eventFromMessage(arg0) {
+      let str = arg1;
+      if (arg1 === undefined) {
+        str = "info";
       }
-      value = map.get(combined);
-      if (value) {
-        const items = [arg0, value];
+      const obj = ServerRuntimeClient(12972);
+      return obj.resolvedSyncPromise(ServerRuntimeClient(13008).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace));
+    }
+  },
+  {
+    key: "captureException",
+    value: function captureException(arg0, arg1, arg2) {
+      const self = this;
+      if (this._options.autoSessionTracking) {
+        if (self._sessionFlusher) {
+          const isolationScope = ServerRuntimeClient(12975).getIsolationScope();
+          const requestSession = isolationScope.getRequestSession();
+          let tmp4 = requestSession;
+          if (requestSession) {
+            tmp4 = "ok" === requestSession.status;
+          }
+          if (tmp4) {
+            requestSession.status = "errored";
+          }
+          const obj = ServerRuntimeClient(12975);
+        }
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1, arg2];
+      return fn(items);
+    }
+  },
+  {
+    key: "captureEvent",
+    value: function captureEvent(type, arg1, arg2) {
+      const self = this;
+      if (this._options.autoSessionTracking) {
+        if (self._sessionFlusher) {
+          if ("exception" === tmp) {
+            if (type.exception) {
+              if (type.exception.values) {
+                if (type.exception.values.length > 0) {
+                  const isolationScope = ServerRuntimeClient(12975).getIsolationScope();
+                  const requestSession = isolationScope.getRequestSession();
+                  let tmp5 = requestSession;
+                  if (requestSession) {
+                    tmp5 = "ok" === requestSession.status;
+                  }
+                  if (tmp5) {
+                    requestSession.status = "errored";
+                  }
+                  const obj = ServerRuntimeClient(12975);
+                }
+              }
+            }
+          }
+          tmp = type.type || "exception";
+        }
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [type, arg1, arg2];
+      return fn(items);
+    }
+  },
+  {
+    key: "close",
+    value: function close(arg0) {
+      const self = this;
+      if (this._sessionFlusher) {
+        const _sessionFlusher = self._sessionFlusher;
+        _sessionFlusher.close();
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "close", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    }
+  },
+  {
+    key: "initSessionFlusher",
+    value: function initSessionFlusher() {
+      const self = this;
+      const release = this._options.release;
+      if (release) {
+        const obj = { release, environment: tmp };
+        const sessionFlusher = new ServerRuntimeClient(13001).SessionFlusher(self, obj);
+        self._sessionFlusher = sessionFlusher;
+      } else if (ServerRuntimeClient(12976).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12948).logger;
+        logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
+      }
+    }
+  },
+  {
+    key: "captureCheckIn",
+    value: function captureCheckIn(checkInId, arg1, arg2) {
+      if ("checkInId" in checkInId) {
+        if (checkInId.checkInId) {
+          checkInId = checkInId.checkInId;
+        }
+        const self = this;
+        if (this._isEnabled()) {
+          const options = self.getOptions();
+          const tunnel = options.tunnel;
+          const obj4 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
+          ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
+          ({ release: obj2.release, environment: obj2.environment } = options);
+          if ("duration" in checkInId) {
+            obj4.duration = checkInId.duration;
+          }
+          if (arg1) {
+            ({ schedule: obj3.schedule, checkinMargin: obj3.checkin_margin, maxRuntime: obj3.max_runtime, timezone: obj3.timezone, failureIssueThreshold: obj3.failure_issue_threshold, recoveryThreshold: obj3.recovery_threshold } = arg1);
+            obj4.monitor_config = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+            const obj8 = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+          }
+          [tmp9, tmp10] = self._getTraceInfoFromScope(arg2);
+          if (tmp10) {
+            const obj9 = { trace: tmp10 };
+            obj4.contexts = obj9;
+          }
+          const obj5 = ServerRuntimeClient(13009);
+          const sdkMetadata = self.getSdkMetadata();
+          const checkInEnvelope = obj5.createCheckInEnvelope(obj4, tmp9, sdkMetadata, tunnel, self.getDsn());
+          if (ServerRuntimeClient(12976).DEBUG_BUILD) {
+            const logger2 = ServerRuntimeClient(12948).logger;
+            logger2.info("Sending checkin:", checkInId.monitorSlug, checkInId.status);
+          }
+          self.sendEnvelope(checkInEnvelope);
+          return checkInId;
+        } else {
+          if (ServerRuntimeClient(12976).DEBUG_BUILD) {
+            const logger = ServerRuntimeClient(12948).logger;
+            logger.warn("SDK not enabled, will not capture checkin.");
+          }
+          return checkInId;
+        }
+      }
+      checkInId = ServerRuntimeClient(12959).uuid4();
+      const obj = ServerRuntimeClient(12959);
+    }
+  },
+  {
+    key: "_captureRequestSession",
+    value: function _captureRequestSession() {
+      if (this._sessionFlusher) {
+        const _sessionFlusher = this._sessionFlusher;
+        const result = _sessionFlusher.incrementSessionStatusCount();
+      } else if (ServerRuntimeClient(12976).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12948).logger;
+        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
+      }
+    }
+  },
+  {
+    key: "_prepareEvent",
+    value: function _prepareEvent(platform, arg1, arg2, arg3) {
+      const self = this;
+      if (this._options.platform) {
+        platform.platform = platform.platform || self._options.platform;
+      }
+      if (self._options.runtime) {
+        const obj = {};
+        const merged = Object.assign(platform.contexts);
+        obj.runtime = platform.contexts || {}.runtime || self._options.runtime;
+        platform.contexts = obj;
+        const tmp3 = platform.contexts || {};
+      }
+      if (self._options.serverName) {
+        platform.server_name = platform.server_name || self._options.serverName;
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [platform, arg1, arg2, arg3];
+      return fn(items);
+    }
+  },
+  {
+    key: "_getTraceInfoFromScope",
+    value: function _getTraceInfoFromScope(arg0) {
+      if (arg0) {
+        const _getSpanForScopeResult = ServerRuntimeClient(12970)._getSpanForScope(arg0);
+        if (_getSpanForScopeResult) {
+          let spanToTraceContextResult = ServerRuntimeClient(12953).spanToTraceContext(_getSpanForScopeResult);
+          const tmpResult = ServerRuntimeClient(12953);
+        } else {
+          spanToTraceContextResult = ServerRuntimeClient(12975).getTraceContextFromScope(arg0);
+          const tmpResult3 = ServerRuntimeClient(12975);
+        }
+        const tmpResult4 = ServerRuntimeClient(12984);
+        if (_getSpanForScopeResult) {
+          let dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
+        } else {
+          const self = this;
+          dynamicSamplingContextFromSpan = tmpResult4.getDynamicSamplingContextFromScope(this, arg0);
+        }
+        const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
         return items;
       } else {
-        const dsnFromStringResult = _mod12987.dsnFromString(arg0);
-        if (dsnFromStringResult) {
-          let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = _mod12994.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
-          let tmp9 = tunnel;
-          let obj3 = {};
-          if (arg1) {
-            merged = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            const tmp9Result = tmp9(obj3);
-            closure_1 = tmp9Result;
-            const obj4 = {};
-            const merged1 = Object.assign(tmp9Result);
-            tmp9 = asyncGeneratorStep;
-            tunnel = asyncGeneratorStep(async (release) => {
-              c1 = 0;
-              return (async (arg0) => {
-                if (c1 === 2) {
-                  c1 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "HermesInternal", done: null };
-                  }
-                } else {
-                  try {
-                    c1 = 2;
-                    if (arg0 === 1) {
-                      c1 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c1 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else {
-                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
-                      if (tmp6) {
-                        tmp6.release = release;
-                      }
-                      c1 = 3;
-                      const obj = { value: closure_1.send(release), done: true };
-                      return obj;
-                    }
-                  } catch (tmp9) {
-                    c1 = tmp;
-                    throw tmp9;
-                  }
-                }
-              })();
-            });
-            obj4.send = function send(arg0) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            let tmp9Result2 = obj4;
-          } else {
-            const merged2 = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            tmp9Result2 = tmp9(obj3);
-          }
-          obj3 = map.set(combined, tmp9Result2);
-          const tmp4Result = _mod12994;
-        }
+        const items1 = [undefined, undefined];
+        return items1;
       }
     }
-    closure_4 = async function _send() {
-      c2 = 0;
-      c1 = 0;
-      return (async (arg0) => {
-        const mapped = v3({
-          envelope,
-          getEvent(arg0) {
-            let items = arg0;
-            if (!arg0) {
-              items = ["event"];
-            }
-            dependencyMap(12984).forEachEnvelopeItem(dependencyMap, () => { ... });
-            return dependencyMap2;
-          }
-        }).map((dsn) => {
-          if (typeof dsn === "string") {
-            let tmp2 = closure_1_3(dsn, undefined);
-          } else {
-            tmp2 = closure_1_3(dsn.dsn, dsn.release);
-          }
-          return tmp2;
-        });
-        const found = mapped.filter((item) => item);
-        let arr3 = found;
-        if (!found.length) {
-          let items = ["", closure_2_1];
-          const items1 = [items];
-          arr3 = items1;
-        }
-        await Promise.all(arr3.map((item) => {
-          [tmp, obj] = item;
-          const first = 5;
-          if (tmp) {
-            const obj3 = {};
-            const merged = Object.assign(first);
-            obj3.dsn = tmp;
-            let tmp4 = obj3;
-          } else {
-            tmp4 = first;
-          }
-          return obj.send(dependencyMap(12984).createEnvelope(tmp4, 12984));
-        }));
-        return value[0];
-      })();
-    };
-    closure_5 = async function _flush() {
-      closure_2 = tmp2;
-      closure_130_0 = closure_0;
-      closure_1 = 0;
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
-      closure_1 = arraySpreadResult;
-      items[arraySpreadResult] = closure_2_1;
-      closure_1 = closure_1 + 1;
-      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return value.every((item) => item);
-    };
-    closure_1 = tunnel(arg0);
-    const map = new Map();
-    return {
-      send(arg0) {
-        const self = this;
-        const apply = closure_4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      flush(arg0) {
-        const self = this;
-        const apply = closure_5.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      }
-    };
-  };
-}
+  }
+];
+
+export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);

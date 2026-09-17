@@ -2,15 +2,15 @@
 
 // Module 8642
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8625 from "module_8625" /* 8625 */;
 import _modDef8643 from "module_8643" /* 8643 */;
+import _modDef8645 from "module_8645" /* 8645 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeMerge = fn;
+const FeBlend = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeMerge {
+class FeBlend {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
+    tmp = closure_3(this, FeBlend);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeMerge);
+    obj = hasOwnProperty(FeBlend);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -52,7 +52,7 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeMerge, _modDef8625);
+_inherits(FeBlend, _modDef8645);
 const entry = {
   key: "render",
   value: function render() {
@@ -62,18 +62,22 @@ const entry = {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(FeMerge(8624).extractFilter(this.props));
-    const obj2 = FeMerge(8624);
-    const merged1 = Object.assign(FeMerge(8624).extractFeMerge(this.props, this));
+    const merged = Object.assign(FeBlend(8644).extractFilter(this.props));
+    const obj2 = FeBlend(8644);
+    const merged1 = Object.assign(FeBlend(8644).extractIn(this.props));
+    const obj3 = FeBlend(8644);
+    const merged2 = Object.assign(FeBlend(8644).extractFeBlend(this.props));
     return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
+const importDefaultResultResult = _createClass(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
+let obj = {};
 let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+obj.mode = "normal";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

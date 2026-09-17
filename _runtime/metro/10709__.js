@@ -1,13 +1,15 @@
 // === Module 10709: ? ===
 
 // Module 10709
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10594 from "module_10594" /* 10594 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10588 */;
+import REGEX_PARTS from "REGEX_PARTS" /* 10710 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const RUTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,31 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class RUMergeDateTimeRefiner {
+let closure_6 = "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" + REGEX_PARTS.TIME_UNITS_PATTERN + ")" + REGEX_PARTS.REGEX_PARTS.rightBoundary;
+class RUTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, RUMergeDateTimeRefiner);
-    tmp2 = c2;
-    obj = c2(RUMergeDateTimeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, RUTimeUnitWithinFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(RUTimeUnitWithinFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -64,15 +50,36 @@ class RUMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = RUMergeDateTimeRefiner;
-_inherits(RUMergeDateTimeRefiner, fn(_mod10594).default);
+_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u0432|,|-)?\\s*$");
-    return regExp;
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return RUTimeUnitWithinFormatParser(10710).REGEX_PARTS.leftBoundary;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerPattern",
+    value: function innerPattern(option) {
+      const _RegExp = RegExp;
+      if (option.option.forwardDate) {
+        let _RegExp1 = new _RegExp(closure_6, RUTimeUnitWithinFormatParser(10710).REGEX_PARTS.flags);
+      } else {
+        const _HermesInternal = HermesInternal;
+        const combined = "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" + closure_6;
+        _RegExp1 = new _RegExp(combined, RUTimeUnitWithinFormatParser(10710).REGEX_PARTS.flags);
+      }
+      return _RegExp1;
+    }
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = RUTimeUnitWithinFormatParser(10584).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitWithinFormatParser(10710).parseDuration(arg1[1]));
+    }
+  }
+];
 
-export default _createClass(RUMergeDateTimeRefiner, items);
+export default _createClass(RUTimeUnitWithinFormatParser, items);
