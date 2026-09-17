@@ -1,9 +1,9 @@
-// === Module 5941: ChatControllersSpotIllustration ===
+// === Module 5943: ChatControllersSpotIllustration ===
 
-// Module 5941 (ChatControllersSpotIllustration)
+// Module 5943 (ChatControllersSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5942 from "module_5942" /* 5942 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5944 from "module_5944" /* 5944 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ChatControllersSpotIllustration = function ChatControllersSpotIllus
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5942 };
+  const obj2 = { uri: _modDef5944 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

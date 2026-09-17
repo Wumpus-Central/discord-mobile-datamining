@@ -1,12 +1,12 @@
-// === Module 17963: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 18027: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 17963 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 18027 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import _mod4260 from "module_4260" /* 4260 */;
+import _mod4262 from "module_4262" /* 4262 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "paddingHorizontal", emojiName: "LengthDelimited", description: "it", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "paddingHorizontal", emojiName: "Symbol", description: "it", refId: "Array" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   closure_0 = arg0;
   const obj = {};
@@ -59,33 +59,33 @@ export const useDescriptionState = function useDescriptionState() {
     const items = [, ];
     ({ description: arr[0], setDescription: arr[1] } = arg0);
     return items;
-  }, _mod4260.shallow);
+  }, _mod4262.shallow);
 };
 export const useEmojiIdState = function useEmojiIdState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
     return items;
-  }, _mod4260.shallow);
+  }, _mod4262.shallow);
 };
 export const useEmojiNameState = function useEmojiNameState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
     return items;
-  }, _mod4260.shallow);
+  }, _mod4262.shallow);
 };
 export const useNameState = function useNameState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ name: arr[0], setName: arr[1] } = arg0);
     return items;
-  }, _mod4260.shallow);
+  }, _mod4262.shallow);
 };
 export const useRefIdState = function useRefIdState() {
   return closure_3((arg0) => {
     const items = [, ];
     ({ refId: arr[0], setRefId: arr[1] } = arg0);
     return items;
-  }, _mod4260.shallow);
+  }, _mod4262.shallow);
 };

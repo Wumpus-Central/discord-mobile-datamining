@@ -1,11 +1,11 @@
-// === Module 7385: ForumTagHooks ===
+// === Module 7389: ForumTagHooks ===
 
-// Module 7385 (ForumTagHooks)
+// Module 7389 (ForumTagHooks)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ReportToModUtils from "ReportToModUtils" /* 7386 */;
+import ReportToModUtils from "ReportToModUtils" /* 7390 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 const require = globalThis.__r;
 

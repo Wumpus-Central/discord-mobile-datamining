@@ -1,9 +1,9 @@
-// === Module 8483: LabFeatureStore ===
+// === Module 8502: LabFeatureStore ===
 
-// Module 8483 (LabFeatureStore)
+// Module 8502 (LabFeatureStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LabFeaturesDefault from "LabFeatures" /* 8484 */;
+import LabFeaturesDefault from "LabFeatures" /* 8503 */;
 
 let toggleStates = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

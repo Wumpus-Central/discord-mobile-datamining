@@ -1,6 +1,6 @@
-// === Module 5653: IPCEvents ===
+// === Module 5655: IPCEvents ===
 
-// Module 5653 (IPCEvents)
+// Module 5655 (IPCEvents)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/discord-native-types/IPCEvents.tsx");

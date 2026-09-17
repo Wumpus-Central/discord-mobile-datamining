@@ -1,14 +1,14 @@
-// === Module 17338: VoicePanelVideoRenderer ===
+// === Module 17379: VoicePanelVideoRenderer ===
 
-// Module 17338 (VoicePanelVideoRenderer)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
-import spring from "spring" /* 5059 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6763 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9638 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9756 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11500 */;
-import VideoActionCreators from "VideoActionCreators" /* 17209 */;
+// Module 17379 (VoicePanelVideoRenderer)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
+import spring from "spring" /* 5061 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6766 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9649 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9767 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11508 */;
+import VideoActionCreators from "VideoActionCreators" /* 17249 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12415);
+const VoicePanelConstants = fn(12424);
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(12413).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17293).VoicePanelPIPModes;
-let SCALE_PHYSICS = fn(12416).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(12422).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17335).VoicePanelPIPModes;
+let SCALE_PHYSICS = fn(12425).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 25;
@@ -41,7 +41,7 @@ function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
 getScaleChangeWithOverscroll.__closure = { MIN_OVERSCROLL: 0.1, OVERSCOLL_INTENSITY_FACTOR: 5 };
 getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = { code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}" };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_18 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, animatedWrapperStyles: { position: "absolute" }, video: { width: "100%", height: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -16, marginLeft: -16, height: 32, width: 32 } });
 let closure_19 = { code: "function VoicePanelVideoRendererTsx2(){const{containerLayout,videoDimensions}=this.__closure;return Math.max(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
 let closure_20 = { code: "function VoicePanelVideoRendererTsx3(){const{containerLayout,videoDimensions}=this.__closure;return Math.min(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
@@ -98,7 +98,7 @@ const __initData15 = { code: "function VoicePanelVideoRendererTsx39(props,previo
 const __initData16 = { code: "function VoicePanelVideoRendererTsx40(){const{focused,id,windowDimensions,sharedCoords}=this.__closure;var _focused$get;if(((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id){return{width:windowDimensions.get().width,height:windowDimensions.get().height};}return{width:sharedCoords.get().width,height:sharedCoords.get().height};}" };
 const __initData17 = { code: "function VoicePanelVideoRendererTsx41(){const{scale,videoDimensions,mode}=this.__closure;return[scale.get(),videoDimensions.get(),mode.get()];}" };
 const __initData18 = { code: "function VoicePanelVideoRendererTsx42(props,previous){const{streamId,cheapWorkletShallowEqual,runOnJS,respondToVideoSizeUpdate}=this.__closure;if(streamId==null)return;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(respondToVideoSizeUpdate)();}" };
-const __initData19 = { code: "function VoicePanelVideoRendererTsx43(){const{videoDimensions,pipState,VoicePanelPIPModes,scale,disableAnimations,translateX,translateY,mirror}=this.__closure;let{width:width,height:height}=videoDimensions.get();if(pipState.mode===VoicePanelPIPModes.IN_APP){if(width>height){width=width*(pipState.height/height)/scale.get();height=pipState.height/scale.get();}else{height=height*(pipState.width/width)/scale.get();width=pipState.width/scale.get();}}return{width:width,height:height,opacity:disableAnimations.get()?0:1,transform:[{scale:scale.get()},{translateX:translateX.get()},{translateY:translateY.get()},{scaleX:mirror?-1:1}]};}" };
+const __initData19 = { code: "function VoicePanelVideoRendererTsx43(){const{videoDimensions,pipState,VoicePanelPIPModes,scale,disableAnimations,translateX,translateY,mirror}=this.__closure;let{width:width,height:height}=videoDimensions.get();if(pipState.mode===VoicePanelPIPModes.IN_APP){const pipScale=pipState.scale.get();if(width>height){width=width*(pipState.height*pipScale/height)/scale.get();height=pipState.height*pipScale/scale.get();}else{height=height*(pipState.width*pipScale/width)/scale.get();width=pipState.width*pipScale/scale.get();}}return{width:width,height:height,opacity:disableAnimations.get()?0:1,transform:[{scale:scale.get()},{translateX:translateX.get()},{translateY:translateY.get()},{scaleX:mirror?-1:1}]};}" };
 const __initData20 = { code: "function VoicePanelVideoRendererTsx44(){const{mode,VoicePanelModes,focused,id}=this.__closure;var _focused$get;return{inPip:mode.get()===VoicePanelModes.PIP,isFocused:((_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id)===id};}" };
 const __initData21 = { code: "function VoicePanelVideoRendererTsx45(curr,prev){const{cheapWorkletShallowEqual,strokeOpacity,withDelay,withTiming}=this.__closure;if(cheapWorkletShallowEqual(curr,prev!==null&&prev!==void 0?prev:undefined))return;if(curr.inPip||curr.isFocused){strokeOpacity.set(0);return;}const shouldDelay=(prev===null||prev===void 0?void 0:prev.isFocused)===true;strokeOpacity.set(shouldDelay?withDelay(300,withTiming(0.3,{duration:0},'animate-never')):0.3);}" };
 const __initData22 = { code: "function VoicePanelVideoRendererTsx46(){const{isInSnap,SNAP_EDGE_INNER_THRESHOLD,borderRadius,strokeOpacity}=this.__closure;if(isInSnap.get()){return{position:'absolute',top:0,left:0,bottom:0,right:0,borderWidth:SNAP_EDGE_INNER_THRESHOLD,overflow:'hidden',borderColor:'white',opacity:0.5};}return{position:'absolute',top:-1,left:-1,bottom:-1,right:-1,borderWidth:2,borderRadius:borderRadius+2,overflow:'hidden',borderColor:'white',opacity:strokeOpacity.get()};}" };
@@ -1060,43 +1060,45 @@ export default noop.memo(function VideoRenderer(streamKey) {
   function dt() {
     value = sharedValue1.get();
     ({ width, height } = value);
-    let size = pIPState;
-    if (pIPState.mode !== VoicePanelPIPModes.IN_APP) {
-      const size1 = { width, height, opacity: null, transform: null };
-      let num = 1;
-      let num2 = 1;
-      if (sharedValue.get()) {
-        num2 = 0;
+    const size = pIPState;
+    let result3 = height;
+    let result1 = width;
+    if (pIPState.mode === VoicePanelPIPModes.IN_APP) {
+      const scale = size.scale;
+      value2 = scale.get();
+      if (width > height) {
+        const result = width * (size.height * value2 / height);
+        result1 = result / sharedValue2.get();
+        const result2 = size.height * value2;
+        result3 = result2 / sharedValue2.get();
+      } else {
+        const result4 = height * (size.width * value2 / width);
+        result3 = result4 / sharedValue2.get();
+        const result5 = size.width * value2;
+        result1 = result5 / sharedValue2.get();
       }
-      size1.opacity = num2;
-      const obj = { scale: sharedValue2.get() };
-      const items = [obj, , , ];
-      const obj2 = { translateX: sharedValue3.get() };
-      items[1] = obj2;
-      const obj3 = { translateY: sharedValue4.get() };
-      items[2] = obj3;
-      if (flag) {
-        num = -1;
-      }
-      const obj4 = { scaleX: num };
-      items[3] = obj4;
-      size1.transform = items;
-      return size1;
-    } else if (width > height) {
-      const result = width * (size.height / height);
-      height = sharedValue2;
-      let result1 = result / sharedValue2.get();
-      width = size.height;
-      size = sharedValue2.get();
-      let result2 = width / size;
-    } else {
-      const result3 = height * (size.width / width);
-      result2 = result3 / sharedValue2.get();
-      result1 = size.width / sharedValue2.get();
     }
+    const size1 = { width: result1, height: result3, opacity: null, transform: null };
+    let num = 1;
+    let num2 = 1;
+    if (sharedValue.get()) {
+      num2 = 0;
+    }
+    size1.opacity = num2;
+    const items = [{ scale: sharedValue2.get() }, , , ];
+    const obj = { scale: sharedValue2.get() };
+    items[1] = { translateX: sharedValue3.get() };
+    const obj2 = { translateX: sharedValue3.get() };
+    items[2] = { translateY: sharedValue4.get() };
+    if (flag) {
+      num = -1;
+    }
+    items[3] = { scaleX: num };
+    size1.transform = items;
+    return size1;
   }
   dt.__closure = { videoDimensions: sharedValue1, pipState: pIPState, VoicePanelPIPModes: focused, scale: sharedValue2, disableAnimations: sharedValue, translateX: sharedValue3, translateY: sharedValue4, mirror: flag };
-  dt.__workletHash = 4149619035590;
+  dt.__workletHash = 4341344805541;
   dt.__initData = __initData19;
   const animatedStyle = id(tmp3[8]).useAnimatedStyle(dt);
   const obj13 = { videoDimensions: sharedValue1, pipState: pIPState, VoicePanelPIPModes: focused, scale: sharedValue2, disableAnimations: sharedValue, translateX: sharedValue3, translateY: sharedValue4, mirror: flag };

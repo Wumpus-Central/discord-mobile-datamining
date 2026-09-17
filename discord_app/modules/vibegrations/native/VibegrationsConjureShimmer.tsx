@@ -1,12 +1,12 @@
-// === Module 16764: VibegrationsConjureShimmer ===
+// === Module 16794: VibegrationsConjureShimmer ===
 
-// Module 16764 (VibegrationsConjureShimmer)
+// Module 16794 (VibegrationsConjureShimmer)
 import _modDef672 from "module_672" /* 672 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_13 = createStyles.createStyles({ root: { position: "relative" }, band: { position: "absolute", top: 0, bottom: 0 }, fill: { flex: 1 } });
 const __initData = { code: "function VibegrationsConjureShimmerTsx1(){const{bandWidth,progress,width}=this.__closure;return{transform:[{translateX:-bandWidth+progress.get()*(bandWidth+width)}]};}" };
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function VibegrationsConjureShimmer(epoch) {
   const width = tmp5[0];
   dependencyMap = tmp5[1];
   let obj = tint(504);
-  sharedValue = tint(4374).useSharedValue(0);
+  sharedValue = tint(4376).useSharedValue(0);
   if (live) {
     live = !stateFromStores;
   }
@@ -72,7 +72,7 @@ export default function VibegrationsConjureShimmer(epoch) {
     items[4] = cssResult;
     return items;
   }, items2);
-  let obj3 = tint(4374);
+  let obj3 = tint(4376);
   class W {
     constructor() {
       obj = { transform: null };
@@ -86,7 +86,7 @@ export default function VibegrationsConjureShimmer(epoch) {
   W.__closure = { bandWidth: result, progress: sharedValue, width };
   W.__workletHash = 16230447544169;
   W.__initData = __initData;
-  const animatedStyle = tint(4374).useAnimatedStyle(W);
+  const animatedStyle = tint(4376).useAnimatedStyle(W);
   let obj4 = {
     style: tmp.root,
     onLayout: live.useCallback((nativeEvent) => {
@@ -115,11 +115,11 @@ export default function VibegrationsConjureShimmer(epoch) {
     items4[2] = animatedStyle;
     obj8.style = items4;
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
-    obj8.children = closure_8(width(5072), obj10);
-    obj6.children = closure_8(width(4374).View, obj8);
-    obj5.children = closure_8(width(5750), obj6);
+    obj8.children = closure_8(width(5074), obj10);
+    obj6.children = closure_8(width(4376).View, obj8);
+    obj5.children = closure_8(width(5752), obj6);
     tmp14 = closure_8(closure_6, obj5);
-    const tmp18 = width(5750);
+    const tmp18 = width(5752);
   }
   items3[1] = tmp14;
   obj4.children = items3;

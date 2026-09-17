@@ -1,14 +1,14 @@
-// === Module 7652: CollectiblesCategoryStore ===
+// === Module 7656: CollectiblesCategoryStore ===
 
-// Module 7652 (CollectiblesCategoryStore)
+// Module 7656 (CollectiblesCategoryStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7664 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7668 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7653 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7657 */;
 
 require = fn;
 function updateCategoriesAndProducts(map) {
@@ -92,11 +92,11 @@ prototype["isFetchingProduct"] = function isFetchingProduct(arg0) {
   }
   return tmp;
 };
-prototype["isProductFetchBackedOff"] = function isProductFetchBackedOff(item) {
-  let tmp = null != item;
+prototype["isProductFetchBackedOff"] = function isProductFetchBackedOff(arg0) {
+  let tmp = null != arg0;
   if (tmp) {
     let pending;
-    if (dependencyMap[item] != null) {
+    if (dependencyMap[arg0] != null) {
       pending = tmp3.pending;
     }
     tmp = true === pending;

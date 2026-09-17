@@ -1,6 +1,6 @@
-// === Module 7667: CollectiblesPurchaseStore ===
+// === Module 7671: CollectiblesPurchaseStore ===
 
-// Module 7667 (CollectiblesPurchaseStore)
+// Module 7671 (CollectiblesPurchaseStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

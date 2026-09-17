@@ -1,8 +1,8 @@
-// === Module 17750: AutomodStore ===
+// === Module 17791: AutomodStore ===
 
-// Module 17750 (AutomodStore)
-import _mod4260 from "module_4260" /* 4260 */;
-import SystemRulesUtils from "SystemRulesUtils" /* 17751 */;
+// Module 17791 (AutomodStore)
+import _mod4262 from "module_4262" /* 4262 */;
+import SystemRulesUtils from "SystemRulesUtils" /* 17792 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(12005).AutomodTriggerType;
+const AutomodTriggerType = fn(12014).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1243);
@@ -135,7 +135,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
               c7[closure_0] = Date.now();
               c4 = 1;
               function convertToRulesByTriggerType(arr) {
-                const obj = { [closure_1_5.KEYWORD]: [], [closure_1_5.ML_SPAM]: [], [closure_1_5.DEFAULT_KEYWORD_LIST]: [], [closure_1_5.MENTION_SPAM]: [], [closure_1_5.USER_PROFILE]: [], [closure_1_5.SERVER_POLICY]: [] };
+                const obj = { [closure_1_5.KEYWORD]: [], [closure_1_5.ML_SPAM]: [], [closure_1_5.DEFAULT_KEYWORD_LIST]: [], [closure_1_5.MENTION_SPAM]: [], [closure_1_5.USER_PROFILE]: [], [closure_1_5.SERVER_POLICY]: [], [closure_1_5.APPLICATION]: [] };
                 const item = arr.forEach((item) => {
                   if (obj[item.triggerType] != null) {
                     arr.push(item);
@@ -228,7 +228,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _mod4260.shallow), 2);
+  }, _mod4262.shallow), 2);
   const first = tmp2[0];
   closure_3 = tmp4;
   const items = [tmp[0], ];
@@ -308,7 +308,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, require("module_4260").shallow), 2);
+  }, require("module_4262").shallow), 2);
   first = tmp2[0];
   asyncGeneratorStep = tmp4;
   let items = [tmp[0], ];
@@ -445,5 +445,5 @@ export const useAutomodRulesList = function useAutomodRulesList(arg0) {
       obj = {};
     }
     return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-  }, require("module_4260").shallow);
+  }, require("module_4262").shallow);
 };

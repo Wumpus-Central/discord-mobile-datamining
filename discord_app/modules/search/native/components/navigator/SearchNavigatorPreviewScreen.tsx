@@ -1,14 +1,14 @@
-// === Module 17071: SearchNavigatorPreviewScreen ===
+// === Module 17110: SearchNavigatorPreviewScreen ===
 
-// Module 17071 (SearchNavigatorPreviewScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12501 */;
+// Module 17110 (SearchNavigatorPreviewScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12510 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx");

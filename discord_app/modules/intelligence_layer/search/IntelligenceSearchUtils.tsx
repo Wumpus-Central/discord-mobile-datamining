@@ -1,11 +1,11 @@
-// === Module 13818: IntelligenceSearchUtils ===
+// === Module 13826: IntelligenceSearchUtils ===
 
-// Module 13818 (IntelligenceSearchUtils)
-import MessageRecordUtils from "MessageRecordUtils" /* 4861 */;
-import SearchUtils from "SearchUtils" /* 12483 */;
-import QueryTokenizer from "QueryTokenizer" /* 12489 */;
-import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 13817 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+// Module 13826 (IntelligenceSearchUtils)
+import MessageRecordUtils from "MessageRecordUtils" /* 4863 */;
+import SearchUtils from "SearchUtils" /* 12492 */;
+import QueryTokenizer from "QueryTokenizer" /* 12498 */;
+import IntelligenceSearchTypes from "IntelligenceSearchTypes" /* 13825 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 
 require = fn;
 function isUnsupportedFilterToken(type) {
@@ -69,4 +69,15 @@ export const resolveSearchStatus = function resolveSearchStatus(response, length
   } else {
     return IntelligenceSearchTypes.IntelligenceSearchStatus.ERROR;
   }
+};
+export const parseConversationId = function parseConversationId(sourceId) {
+  const match = /\/(\d+)$/.exec(sourceId);
+  let tmp2;
+  if (match != null) {
+    tmp2 = match[1];
+  }
+  if (tmp2 == null) {
+    tmp2 = sourceId;
+  }
+  return tmp2;
 };

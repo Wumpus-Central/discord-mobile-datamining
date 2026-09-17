@@ -1,15 +1,15 @@
-// === Module 9958: DeleteEventAlert ===
+// === Module 9969: DeleteEventAlert ===
 
-// Module 9958 (DeleteEventAlert)
+// Module 9969 (DeleteEventAlert)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7636 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7640 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_6 = createStyles.createStyles({ contentText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx");
@@ -44,7 +44,7 @@ export default function DeleteEventAlert(eventException) {
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(9843);
+            const obj8 = v1(9854);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -75,7 +75,7 @@ export default function DeleteEventAlert(eventException) {
             const obj = { value, done: true };
             return obj;
           }
-          v1(4605).hideActionSheet();
+          v1(4607).hideActionSheet();
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

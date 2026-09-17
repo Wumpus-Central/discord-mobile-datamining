@@ -1,11 +1,11 @@
-// === Module 6415: NitroWordmarkLogo ===
+// === Module 6417: NitroWordmarkLogo ===
 
-// Module 6415 (NitroWordmarkLogo)
+// Module 6417 (NitroWordmarkLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4339 */;
-import _modDef6416 from "module_6416" /* 6416 */;
+import useToken from "useToken" /* 4341 */;
+import _modDef6418 from "module_6418" /* 6418 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,7 +42,7 @@ export const NitroWordmarkLogo = function NitroWordmarkLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6416 };
+  obj4.source = { uri: _modDef6418 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

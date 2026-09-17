@@ -1,6 +1,6 @@
-// === Module 13975: QRScannerNativeComponent ===
+// === Module 13983: QRScannerNativeComponent ===
 
-// Module 13975 (QRScannerNativeComponent)
+// Module 13983 (QRScannerNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

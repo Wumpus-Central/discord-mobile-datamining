@@ -1,12 +1,12 @@
-// === Module 15405: SettingsAppearanceActivityCardItem ===
+// === Module 15410: SettingsAppearanceActivityCardItem ===
 
-// Module 15405 (SettingsAppearanceActivityCardItem)
+// Module 15410 (SettingsAppearanceActivityCardItem)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ClipView from "ClipView" /* 8954 */;
+import ClipView from "ClipView" /* 8970 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 
 const require = globalThis.__r;
 const ClipViewDefault = ClipView;
@@ -14,12 +14,12 @@ const ClipViewDefault = ClipView;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15406);
+const HappeningNowConstants = fn(15411);
 ({ HAPPENING_NOW_BADGE_SIZE, HAPPENING_NOW_CONTENT_HEIGHT, HAPPENING_NOW_CARD_HEIGHT, HAPPENING_NOW_CARD_MARGIN_RIGHT, HAPPENING_NOW_CARD_PADDING, HAPPENING_NOW_CARD_PADDING_RIGHT } = HappeningNowConstants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(1177).Icon);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { card: { borderRadius: nativeDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" }, cardBadgeWrapper: { position: "absolute", top: 0, right: 0 }, cardImage: null, cardBadge: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageAsset: null, shiftedAvatar: null, userCounter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, borderWidth: StyleSheet.hairlineWidth, padding: HAPPENING_NOW_CARD_PADDING, paddingRight: HAPPENING_NOW_CARD_PADDING_RIGHT, marginRight: HAPPENING_NOW_CARD_MARGIN_RIGHT, height: HAPPENING_NOW_CARD_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj.cardImage = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, position: "relative" };

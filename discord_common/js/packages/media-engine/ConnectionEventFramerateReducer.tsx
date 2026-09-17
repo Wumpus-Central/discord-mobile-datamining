@@ -1,8 +1,8 @@
-// === Module 4708: ConnectionEventFramerateReducer ===
+// === Module 4710: ConnectionEventFramerateReducer ===
 
-// Module 4708 (ConnectionEventFramerateReducer)
+// Module 4710 (ConnectionEventFramerateReducer)
 import logger_Logger from "logger/Logger" /* 4 */;
-import Constants from "Constants" /* 4663 */;
+import Constants from "Constants" /* 4665 */;
 import size from "module_2" /* 2 */;
 
 ({ SpeakingFlags: c2, VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: c3 } = Constants);

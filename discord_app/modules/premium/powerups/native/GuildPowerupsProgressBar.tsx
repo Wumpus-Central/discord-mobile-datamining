@@ -1,16 +1,16 @@
-// === Module 16350: GuildPowerupsProgressBar ===
+// === Module 16380: GuildPowerupsProgressBar ===
 
-// Module 16350 (GuildPowerupsProgressBar)
+// Module 16380 (GuildPowerupsProgressBar)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4639 */;
-import LinearGradientDefault from "LinearGradient" /* 5072 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12622 */;
-import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16353 */;
+import timing from "timing" /* 4641 */;
+import LinearGradientDefault from "LinearGradient" /* 5074 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 12631 */;
+import GuildBoostingProgressBarActionCreators from "GuildBoostingProgressBarActionCreators" /* 16383 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16351 */;
+import GuildBoostingProgressBarPersistedStore from "GuildBoostingProgressBarPersistedStore" /* 16381 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 }, track: null, fillContainer: null, fill: null, fillShadow: null, textContainer: null, headerText: null, rightContent: null, descriptionText: null };
 const obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.track = { height: 30, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, justifyContent: "center" };

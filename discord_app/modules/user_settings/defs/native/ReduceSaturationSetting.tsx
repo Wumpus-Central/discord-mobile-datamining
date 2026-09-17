@@ -1,23 +1,23 @@
-// === Module 15525: ReduceSaturationSetting ===
+// === Module 15530: ReduceSaturationSetting ===
 
-// Module 15525 (ReduceSaturationSetting)
+// Module 15530 (ReduceSaturationSetting)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11350 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14553 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15424 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11358 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14561 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15429 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11614);
+const SettingBuilders = fn(11622);
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["5PWWCY"]);
   },
-  parent: fn(8091).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8111).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

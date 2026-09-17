@@ -1,7 +1,7 @@
-// === Module 10238: guild_automod/ExperimentUtils ===
+// === Module 10249: guild_automod/ExperimentUtils ===
 
-// Module 10238 (guild_automod/ExperimentUtils)
-import AutomodExperiment from "AutomodExperiment" /* 10239 */;
+// Module 10249 (guild_automod/ExperimentUtils)
+import AutomodExperiment from "AutomodExperiment" /* 10250 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
@@ -17,4 +17,8 @@ export const useIsMentionRaidExperimentEnabled = function useIsMentionRaidExperi
   }
   const AutomodMentionRaidLimit = AutomodExperiment.AutomodMentionRaidLimit;
   return AutomodMentionRaidLimit.useExperiment({ guildId: id, location: "988d4e_4" }, { autoTrackExposure }).enabled;
+};
+export const useIsApplicationRuleEnabled = function useIsApplicationRuleEnabled(guildId) {
+  const AutomodApplicationRules = AutomodExperiment.AutomodApplicationRules;
+  return AutomodApplicationRules.useConfig({ guildId, location: "automod_settings" }).enabled;
 };

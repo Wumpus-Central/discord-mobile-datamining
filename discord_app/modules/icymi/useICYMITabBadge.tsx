@@ -1,8 +1,8 @@
-// === Module 16521: useICYMITabBadge ===
+// === Module 16551: useICYMITabBadge ===
 
-// Module 16521 (useICYMITabBadge)
+// Module 16551 (useICYMITabBadge)
 import initialize from "initialize" /* 504 */;
-import ICYMIStore from "ICYMIStore" /* 8465 */;
+import ICYMIStore from "ICYMIStore" /* 8484 */;
 
 require = fn;
 const size = fn(2);

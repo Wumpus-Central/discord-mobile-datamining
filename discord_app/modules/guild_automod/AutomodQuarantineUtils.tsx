@@ -1,24 +1,24 @@
-// === Module 12014: AutomodQuarantineUtils ===
+// === Module 12023: AutomodQuarantineUtils ===
 
-// Module 12014 (AutomodQuarantineUtils)
+// Module 12023 (AutomodQuarantineUtils)
 import util from "util" /* 1115 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4282 */;
-import openUserSettings2 from "openUserSettings" /* 7492 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9353 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4284 */;
+import openUserSettings2 from "openUserSettings" /* 7496 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 9364 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9351 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9362 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1074);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4263).GuildMemberFlags;
+const GuildMemberFlags = fn(4265).GuildMemberFlags;
 let closure_12 = fn(1084).ProfileCustomizationSubsection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodQuarantineUtils.tsx");

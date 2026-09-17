@@ -1,12 +1,12 @@
-// === Module 4504: ChatInputUtils ===
+// === Module 4506: ChatInputUtils ===
 
-// Module 4504 (ChatInputUtils)
+// Module 4506 (ChatInputUtils)
 import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4505 */;
-import useKeyboardType from "useKeyboardType" /* 4506 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4507 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4507 */;
+import useKeyboardType from "useKeyboardType" /* 4508 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4509 */;
 import size from "module_2" /* 2 */;
 
 function getBestActiveInput() {

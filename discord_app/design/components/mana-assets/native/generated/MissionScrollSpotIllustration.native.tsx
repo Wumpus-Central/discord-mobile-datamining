@@ -1,9 +1,9 @@
-// === Module 6351: MissionScrollSpotIllustration ===
+// === Module 6353: MissionScrollSpotIllustration ===
 
-// Module 6351 (MissionScrollSpotIllustration)
+// Module 6353 (MissionScrollSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6352 from "module_6352" /* 6352 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6354 from "module_6354" /* 6354 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const MissionScrollSpotIllustration = function MissionScrollSpotIllustrat
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6352 };
+  const obj2 = { uri: _modDef6354 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

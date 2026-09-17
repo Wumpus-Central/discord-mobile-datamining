@@ -1,8 +1,8 @@
-// === Module 7870: ForegroundServiceManager ===
+// === Module 7876: ForegroundServiceManager ===
 
-// Module 7870 (ForegroundServiceManager)
+// Module 7876 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7871 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7877 */;
 import LifecycleManager from "LifecycleManager" /* 1899 */;
 import size from "module_2" /* 2 */;
 

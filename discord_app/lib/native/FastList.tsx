@@ -1,13 +1,13 @@
-// === Module 7182: FastList ===
+// === Module 7186: FastList ===
 
-// Module 7182 (FastList)
+// Module 7186 (FastList)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4374 */;
-import NativeViewDefault from "NativeView" /* 5675 */;
-import BottomSheetModal from "BottomSheetModal" /* 6735 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7185 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4376 */;
+import NativeViewDefault from "NativeView" /* 5677 */;
+import BottomSheetModal from "BottomSheetModal" /* 6738 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7189 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -1607,8 +1607,7 @@ class FastList extends PureComponent {
           tmp = undefined !== EXPERIMENTAL_enableAnchorWhileScrolling && EXPERIMENTAL_enableAnchorWhileScrolling;
         };
         tmp1.handleLayout = function handleLayout(nativeEvent) {
-          const state = uiStore.state;
-          const fastListComputer = state.fastListComputer;
+          ({ isFirstLayout, fastListComputer } = uiStore.state);
           ({ contentInset, onLayout, horizontal, chunkBase } = uiStore.props);
           const layout = nativeEvent.nativeEvent.layout;
           let num = horizontal ? contentInset.left : contentInset.top;
@@ -1626,11 +1625,14 @@ class FastList extends PureComponent {
           if (onLayout != null) {
             onLayout(nativeEvent, uiStore);
           }
-          if (state.isFirstLayout) {
+          if (isFirstLayout) {
             if (null == chunkBase) {
               uiStore.setState(uiStore.getInitialState(uiStore.containerSize, fastListComputer, false));
             }
             const result = uiStore.queueViewabilityChange();
+          }
+          if (isFirstLayout) {
+            const result1 = uiStore.clampInitialScrollPosition();
           }
           const blocks = uiStore.computeBlocks();
           const tmp = horizontal ? layout.width : layout.height;
@@ -2028,6 +2030,28 @@ prototype4["restoreScrollPosition"] = function restoreScrollPosition() {
       const _requestAnimationFrame = requestAnimationFrame;
       self.deferredCompute = requestAnimationFrame(() => self.computeBlocks());
     }
+  }
+};
+prototype4["clampInitialScrollPosition"] = function clampInitialScrollPosition() {
+  const self = this;
+  ({ fastListComputer, initialContentOffset } = this.state);
+  if (null != initialContentOffset) {
+    const horizontal = self.props.horizontal;
+    if (horizontal != null) {
+      if (horizontal) {
+        let y = initialContentOffset.x;
+      }
+      const _Math = Math;
+      const _Math2 = Math;
+      const _Math3 = Math;
+      const bound = Math.max(0, Math.min(y, Math.max(0, fastListComputer.getSize() - self.containerSize)));
+      if (bound !== y) {
+        self.scrollPos = bound;
+        const scrollPosValue = self.scrollPosValue;
+        const result = scrollPosValue.set(bound);
+      }
+    }
+    y = initialContentOffset.y;
   }
 };
 prototype4["computeBlocks"] = function computeBlocks() {

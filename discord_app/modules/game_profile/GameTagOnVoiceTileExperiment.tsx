@@ -1,6 +1,6 @@
-// === Module 17363: GameTagOnVoiceTileExperiment ===
+// === Module 17404: GameTagOnVoiceTileExperiment ===
 
-// Module 17363 (GameTagOnVoiceTileExperiment)
+// Module 17404 (GameTagOnVoiceTileExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const obj = { kind: "user", name: "2026-08-game-tag-on-mobile-voice-call-tiles", defaultConfig: { showGameTag: false }, variations: null };

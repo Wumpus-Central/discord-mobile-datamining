@@ -1,6 +1,6 @@
-// === Module 12265: ApplicationDirectoryCollectionType ===
+// === Module 12274: ApplicationDirectoryCollectionType ===
 
-// Module 12265 (ApplicationDirectoryCollectionType)
+// Module 12274 (ApplicationDirectoryCollectionType)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([1, 2, 3, 4, 5, 6, 7]), APPLICATION_DIRECTORY: null, APP_LAUNCHER_IN_TEXT: null, APP_LAUNCHER_IN_VOICE_BANNER: null };

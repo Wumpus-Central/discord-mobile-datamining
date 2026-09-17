@@ -1,13 +1,13 @@
-// === Module 17978: GuildRoleSubscriptionTierDesignModal ===
+// === Module 18042: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 17978 (GuildRoleSubscriptionTierDesignModal)
+// Module 18042 (GuildRoleSubscriptionTierDesignModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useToken from "useToken" /* 4339 */;
-import RoleIconUtils from "RoleIconUtils" /* 7297 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15337 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 15348 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17944 */;
+import useToken from "useToken" /* 4341 */;
+import RoleIconUtils from "RoleIconUtils" /* 7301 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15342 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 15353 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 18008 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function MemberPreviews(role) {
   return closure_1_10(View, obj5);
 }
 function Content() {
-  const tmp3 = role(14004)();
+  const tmp3 = role(14012)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -64,34 +64,34 @@ function Content() {
   const tmp4Result = require("RoleSubscriptionSettingsDisabledContext");
   const intl = tmp4(1115).intl;
   obj7.children = intl.string(require("util").t.sEr1zr);
-  items1[1] = closure_9(role(9956), obj7);
+  items1[1] = closure_9(role(9967), obj7);
   const obj8 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
-  const tmpResult = role(9956);
+  const tmpResult = role(9967);
   const intl2 = tmp4(1115).intl;
   obj8.description = intl2.string(require("util").t.Glqj9m);
   obj8.image = tmp10;
   obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj8.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
   };
   obj8.disabled = roleSubscriptionSettingsDisabled;
-  items1[2] = closure_9(role(17941), obj8);
+  items1[2] = closure_9(role(18005), obj8);
   const obj9 = { style: tmp3.header, children: null };
-  const tmpResult3 = role(17941);
+  const tmpResult3 = role(18005);
   const intl3 = tmp4(1115).intl;
   obj9.children = intl3.string(require("util").t["W7hH+z"]);
-  items1[3] = closure_9(role(9956), obj9);
-  items1[4] = closure_9(role(17979), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[3] = closure_9(role(9967), obj9);
+  items1[4] = closure_9(role(18043), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj6.children = items1;
   return closure_10(closure_11, obj6);
 }
 const View = fn(17).View;
-const constants = fn(15315).GuildRoleSubscriptionsTierScenes;
+const constants = fn(15320).GuildRoleSubscriptionsTierScenes;
 const UPLOAD_SMALL_SIZE = fn(1074).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { memberPreviews: { paddingHorizontal: 16, paddingTop: 26 }, member: { padding: 16, borderRadius: nativeDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, memberLight: { borderTopLeftRadius: 8, borderTopRightRadius: 8, borderTopWidth: 1 }, memberDark: { borderBottomLeftRadius: 8, borderBottomRightRadius: 8, borderBottomWidth: 1 } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

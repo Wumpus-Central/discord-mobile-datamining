@@ -1,8 +1,8 @@
-// === Module 11126: useFavoritesGuildCategoryAddAction ===
+// === Module 11134: useFavoritesGuildCategoryAddAction ===
 
-// Module 11126 (useFavoritesGuildCategoryAddAction)
-import _modDef3237 from "module_3237" /* 3237 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11127 */;
+// Module 11134 (useFavoritesGuildCategoryAddAction)
+import _modDef3239 from "module_3239" /* 3239 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11135 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ export default function useFavoritesGuildCategoryAddAction(id) {
     if (id.type === ChannelTypes.GUILD_CATEGORY) {
       const obj2 = { label: null, perform: null };
       const intl = require("util").intl;
-      obj2.label = intl.string(_modDef3237["1QJmIL"]);
+      obj2.label = intl.string(_modDef3239["1QJmIL"]);
       obj2.perform = callback;
       tmp4 = obj2;
     }

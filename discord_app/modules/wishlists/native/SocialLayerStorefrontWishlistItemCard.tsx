@@ -1,17 +1,17 @@
-// === Module 11190: SocialLayerStorefrontWishlistItemCard ===
+// === Module 11198: SocialLayerStorefrontWishlistItemCard ===
 
-// Module 11190 (SocialLayerStorefrontWishlistItemCard)
+// Module 11198 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 576 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8966 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8982 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4866 */;
-import SentGiftsStore from "SentGiftsStore" /* 11188 */;
+import ApplicationStore from "ApplicationStore" /* 4868 */;
+import SentGiftsStore from "SentGiftsStore" /* 11196 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_8, left: nativeDefault.space.PX_8, width: 24, height: 24, borderRadius: nativeDefault.radii.sm, zIndex: 1 };
 obj2.applicationIcon = size;

@@ -1,12 +1,12 @@
-// === Module 6711: ConfirmEmailChangeCode ===
+// === Module 6714: ConfirmEmailChangeCode ===
 
-// Module 6711 (ConfirmEmailChangeCode)
+// Module 6714 (ConfirmEmailChangeCode)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const setEmailToken = fn(5709).setEmailToken;
+const setEmailToken = fn(5711).setEmailToken;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
@@ -97,5 +97,5 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj2.headerText = intl.string(isChangeEmail(1115).t["2x/2Uo"]);
   const intl2 = isChangeEmail(1115).intl;
   obj2.confirmButtonText = intl2.string(isChangeEmail(1115).t.PDTjLN);
-  return jsx(navigation(6712), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
+  return jsx(navigation(6715), { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null });
 };

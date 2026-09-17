@@ -1,8 +1,8 @@
-// === Module 18100: AccountLinkManagerNative ===
+// === Module 18164: AccountLinkManagerNative ===
 
-// Module 18100 (AccountLinkManagerNative)
-import BrowserManager from "BrowserManager" /* 4602 */;
-import AccountLinkManager2 from "AccountLinkManager" /* 17150 */;
+// Module 18164 (AccountLinkManagerNative)
+import BrowserManager from "BrowserManager" /* 4604 */;
+import AccountLinkManager2 from "AccountLinkManager" /* 17190 */;
 import size from "module_2" /* 2 */;
 
 const AccountLinkManager = AccountLinkManager2.AccountLinkManager;

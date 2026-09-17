@@ -1,15 +1,15 @@
-// === Module 12617: GuildProgressUtils ===
+// === Module 12626: GuildProgressUtils ===
 
-// Module 12617 (GuildProgressUtils)
+// Module 12626 (GuildProgressUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12620 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12629 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import GuildProgressStore from "GuildProgressStore" /* 12618 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import GuildProgressStore from "GuildProgressStore" /* 12627 */;
 
 const require = globalThis.__r;
 
@@ -32,12 +32,11 @@ function useIOSCompletionStates(guild) {
   } else {
     items3 = [];
   }
-  const channelsMessaged = require("GuildProgressHooks").useChannelsMessaged(items3);
+  let channelsMessaged = require("GuildProgressHooks").useChannelsMessaged(items3);
   const obj5 = require("GuildProgressHooks");
   const items4 = [GuildProgressStore];
-  let stateFromStores2 = channelsMessaged;
   if (!channelsMessaged) {
-    stateFromStores2 = tmpResult.useStateFromStores(items4, () => {
+    channelsMessaged = tmpResult.useStateFromStores(items4, () => {
       const progress = GuildProgressStore.getProgress(guild.id);
       let flag;
       if (progress != null) {
@@ -51,7 +50,7 @@ function useIOSCompletionStates(guild) {
   }
   tmpResult = require("initialize");
   const items5 = [GuildStore];
-  const stateFromStores3 = require("initialize").useStateFromStores(items5, () => {
+  const stateFromStores2 = require("initialize").useStateFromStores(items5, () => {
     guild = GuildStore.getGuild(guild.id);
     let num;
     if (guild != null) {
@@ -64,26 +63,21 @@ function useIOSCompletionStates(guild) {
   });
   const tmpResult3 = require("initialize");
   const items6 = [GuildProgressStore];
-  const stateFromStores4 = require("initialize").useStateFromStores(items6, () => GuildProgressStore.getProgress(guild.id));
+  const stateFromStores3 = require("initialize").useStateFromStores(items6, () => GuildProgressStore.getProgress(guild.id));
   if (stateFromStores) {
-    const ServerSetupBoostCtaExperiment = tmp(12731).ServerSetupBoostCtaExperiment;
-    const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
-    const items7 = [guildPopulated, guildPersonalized, stateFromStores2];
-    if (enabled) {
-      items7.push(stateFromStores3);
-    }
+    const items7 = [guildPopulated, guildPersonalized, channelsMessaged, stateFromStores2];
     let length = items7.filter((item) => item).length;
     let hasItem;
-    if (stateFromStores4 != null) {
-      hasItem = stateFromStores4.has(Steps.COMPLETED);
+    if (stateFromStores3 != null) {
+      hasItem = stateFromStores3.has(Steps.COMPLETED);
     }
     if (!hasItem) {
       hasItem = length === length2;
     }
-    const obj6 = { guildPopulated, guildPersonalized, guildMessaged: stateFromStores2, guildBoosted: stateFromStores3, showBoostStep: enabled, completed: hasItem, dismissed: null, numFinished: null, totalSteps: null };
-    let hasItem1 = null == stateFromStores4;
+    const obj6 = { guildPopulated, guildPersonalized, guildMessaged: channelsMessaged, guildBoosted: stateFromStores2, completed: hasItem, dismissed: null, numFinished: null, totalSteps: null };
+    let hasItem1 = null == stateFromStores3;
     if (!hasItem1) {
-      hasItem1 = stateFromStores4.has(Steps.DISMISSED);
+      hasItem1 = stateFromStores3.has(Steps.DISMISSED);
     }
     obj6.dismissed = hasItem1;
     if (hasItem) {
@@ -93,11 +87,11 @@ function useIOSCompletionStates(guild) {
     obj6.totalSteps = items7.length;
     return obj6;
   } else {
-    return { guildPopulated: false, guildPersonalized: false, guildMessaged: false, guildChannelCreated: false, guildBoosted: false, showBoostStep: false, completed: true, dismissed: true, numFinished: 0, totalSteps: 0 };
+    return { guildPopulated: false, guildPersonalized: false, guildMessaged: false, guildChannelCreated: false, guildBoosted: false, completed: true, dismissed: true, numFinished: 0, totalSteps: 0 };
   }
   const tmpResult4 = require("initialize");
 }
-const Steps = fn(12612).Steps;
+const Steps = fn(12621).Steps;
 const Constants = fn(1074);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -107,7 +101,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(12619, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
+  obj.openLazy(asyncRequireImpl(12628, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
 };
 export const hideActionSheet = function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);
@@ -122,12 +116,12 @@ export const useGuildProgressStep = function useGuildProgressStep(guild) {
   const tmp = useIOSCompletionStates(guild);
   const totalSteps = tmp.totalSteps;
   let stringResult = null;
-  ({ guildPersonalized, guildMessaged, guildBoosted, showBoostStep, completed } = tmp);
+  ({ guildPersonalized, guildMessaged, guildBoosted, completed } = tmp);
   if (!tmp.guildPopulated) {
     const intl = util.intl;
     stringResult = intl.string(util.t.q9n0Ta);
   }
-  const items = [stringResult, , ];
+  const items = [stringResult, , , ];
   let stringResult1 = null;
   if (!guildPersonalized) {
     const intl2 = util.intl;
@@ -140,14 +134,12 @@ export const useGuildProgressStep = function useGuildProgressStep(guild) {
     stringResult2 = intl3.string(util.t.dNktpr);
   }
   items[2] = stringResult2;
-  if (showBoostStep) {
-    let stringResult3 = null;
-    if (!guildBoosted) {
-      const intl4 = util.intl;
-      stringResult3 = intl4.string(util.t["6Qbqxw"]);
-    }
-    items.push(stringResult3);
+  let stringResult3 = null;
+  if (!guildBoosted) {
+    const intl4 = util.intl;
+    stringResult3 = intl4.string(util.t["6Qbqxw"]);
   }
+  items[3] = stringResult3;
   const length = items.filter((item) => null == item).length;
   let found = items.find((item) => null != item);
   if (found == null) {

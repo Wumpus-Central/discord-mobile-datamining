@@ -1,10 +1,10 @@
-// === Module 5503: StageMediaHooks ===
+// === Module 5505: StageMediaHooks ===
 
-// Module 5503 (StageMediaHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 5511 */;
+// Module 5505 (StageMediaHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 5513 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import VoiceStateStore from "VoiceStateStore" /* 4657 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5504 */;
+import VoiceStateStore from "VoiceStateStore" /* 4659 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5506 */;
 
 const require = globalThis.__r;
 

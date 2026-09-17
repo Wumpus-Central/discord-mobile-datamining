@@ -1,6 +1,6 @@
-// === Module 8223: MarkdownParseSampleExperiment ===
+// === Module 8241: MarkdownParseSampleExperiment ===
 
-// Module 8223 (MarkdownParseSampleExperiment)
+// Module 8241 (MarkdownParseSampleExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

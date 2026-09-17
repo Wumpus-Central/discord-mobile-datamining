@@ -1,9 +1,9 @@
-// === Module 6651: Tome3dIllustration ===
+// === Module 6653: Tome3dIllustration ===
 
-// Module 6651 (Tome3dIllustration)
+// Module 6653 (Tome3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6652 from "module_6652" /* 6652 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6654 from "module_6654" /* 6654 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const Tome3dIllustration = function Tome3dIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6652 };
+  const obj2 = { uri: _modDef6654 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

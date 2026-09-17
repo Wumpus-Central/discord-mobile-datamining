@@ -1,6 +1,6 @@
-// === Module 8059: useIsFirstMessageInMediaPost ===
+// === Module 8079: useIsFirstMessageInMediaPost ===
 
-// Module 8059 (useIsFirstMessageInMediaPost)
+// Module 8079 (useIsFirstMessageInMediaPost)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 

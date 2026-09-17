@@ -1,6 +1,6 @@
-// === Module 6006: ? ===
+// === Module 6008: ? ===
 
-// Module 6006
+// Module 6008
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DevSdkTallAbstractUI-2x.png.js");

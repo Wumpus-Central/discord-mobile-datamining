@@ -1,6 +1,6 @@
-// === Module 17611: InteractionIframeConstants ===
+// === Module 17652: InteractionIframeConstants ===
 
-// Module 17611 (InteractionIframeConstants)
+// Module 17652 (InteractionIframeConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/interaction_components/native/InteractionIframeConstants.tsx");

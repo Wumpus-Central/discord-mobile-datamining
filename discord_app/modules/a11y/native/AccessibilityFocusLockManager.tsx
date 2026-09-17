@@ -1,9 +1,9 @@
-// === Module 5044: AccessibilityFocusLockManager ===
+// === Module 5046: AccessibilityFocusLockManager ===
 
-// Module 5044 (AccessibilityFocusLockManager)
+// Module 5046 (AccessibilityFocusLockManager)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4986 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5045 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4988 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5047 */;
 import LifecycleManager from "LifecycleManager" /* 1899 */;
 
 require = fn;
@@ -43,9 +43,9 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
     }
   }
   if (self._focusLockEnabled) {
-    item10014(4986).disableFocusLock();
+    item10014(4988).disableFocusLock();
     self._focusLockEnabled = false;
-    const obj = item10014(4986);
+    const obj = item10014(4988);
   }
 };
 prototype["_initialize"] = function _initialize() {

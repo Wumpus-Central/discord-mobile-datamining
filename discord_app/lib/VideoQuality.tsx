@@ -1,15 +1,15 @@
-// === Module 13927: VideoQuality ===
+// === Module 13935: VideoQuality ===
 
-// Module 13927 (VideoQuality)
+// Module 13935 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import TimeUtils from "TimeUtils" /* 4667 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4693 */;
-import VideoQualityStats from "VideoQualityStats" /* 7855 */;
-import Histogram from "Histogram" /* 7856 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13924 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4696 */;
+import TimeUtils from "TimeUtils" /* 4669 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4695 */;
+import VideoQualityStats from "VideoQualityStats" /* 7861 */;
+import Histogram from "Histogram" /* 7862 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13932 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4698 */;
 
 require = fn;
 function round(arg0) {
@@ -1350,12 +1350,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const set = new Set();
   const set1 = new Set();
   self.updateSendState({ receivers: num });
-  let tmp7 = self.connection.context === tmp(4693).MediaEngineContextTypes.DEFAULT;
+  let tmp7 = self.connection.context === tmp(4695).MediaEngineContextTypes.DEFAULT;
   if (tmp7) {
     tmp7 = null != transport.camera;
   }
   self.cameraDuration.value = tmp7;
-  let tmp9 = self.connection.context === tmp(4693).MediaEngineContextTypes.DEFAULT;
+  let tmp9 = self.connection.context === tmp(4695).MediaEngineContextTypes.DEFAULT;
   if (tmp9) {
     tmp9 = null != transport.camera;
   }
@@ -1363,7 +1363,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     tmp9 = self.callUserIdsCount > 1;
   }
   self.cameraOpportunityDuration.value = tmp9;
-  let tmp11 = self.connection.context === tmp(4693).MediaEngineContextTypes.DEFAULT;
+  let tmp11 = self.connection.context === tmp(4695).MediaEngineContextTypes.DEFAULT;
   if (tmp11) {
     tmp11 = null != transport.camera;
   }

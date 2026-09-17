@@ -1,18 +1,18 @@
-// === Module 16359: ChannelBadge ===
+// === Module 16389: ChannelBadge ===
 
-// Module 16359 (ChannelBadge)
+// Module 16389 (ChannelBadge)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import NumberUtils from "NumberUtils" /* 1881 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import NewBadgeDefault from "NewBadge" /* 12439 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 16360 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import NewBadgeDefault from "NewBadge" /* 12448 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 16390 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_6 = createStyles.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");

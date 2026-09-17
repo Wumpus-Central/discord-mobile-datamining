@@ -1,19 +1,19 @@
-// === Module 4456: client_themes/ClientThemesUtils ===
+// === Module 4458: client_themes/ClientThemesUtils ===
 
-// Module 4456 (client_themes/ClientThemesUtils)
+// Module 4458 (client_themes/ClientThemesUtils)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1230 */;
-import ColorUtils from "ColorUtils" /* 4487 */;
-import utils_ColorDefault from "utils/Color" /* 4488 */;
-import shared from "shared" /* 4489 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4491 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4569 */;
-import useThemeDefault from "useTheme" /* 4572 */;
+import ColorUtils from "ColorUtils" /* 4489 */;
+import utils_ColorDefault from "utils/Color" /* 4490 */;
+import shared from "shared" /* 4491 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4493 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4571 */;
+import useThemeDefault from "useTheme" /* 4574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4457 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4459 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1227 */;
 
 require = fn;

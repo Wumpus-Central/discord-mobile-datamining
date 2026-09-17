@@ -1,15 +1,15 @@
-// === Module 12491: SearchTabsFetchManager ===
+// === Module 12500: SearchTabsFetchManager ===
 
-// Module 12491 (SearchTabsFetchManager)
-import SearchFetcher from "SearchFetcher" /* 12493 */;
+// Module 12500 (SearchTabsFetchManager)
+import SearchFetcher from "SearchFetcher" /* 12502 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
-let closure_2 = ["include_nsfw", "channel_id"];
-const SearchConstants = fn(7994);
+let closure_2 = ["include_nsfw", "channel_id", "search_session_id", "search_query_id"];
+const SearchConstants = fn(8000);
 ({ SEARCH_FILTERS_BY_TAB: closure_4, SEARCH_QUERY_BY_SEARCH_FILTER: hasOwnProperty, SEARCH_QUERY_DEFAULT_FILTERS: metroRequire } = SearchConstants);
 const SearchTypes = fn(1074).SearchTypes;
-const AbstractSearchFetchManager = fn(12492).AbstractSearchFetchManager;
+const AbstractSearchFetchManager = fn(12501).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {
 }
 const prototype = SearchTabsFetchManager.prototype;
@@ -17,9 +17,9 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
   ({ searchQuery, searchTabs, getLimit: require, pagination: dependencyMap } = trackExactTotalHits);
   closure_2 = undefined;
   let obj;
-  ({ include_nsfw, channel_id } = searchQuery);
+  ({ include_nsfw, channel_id, search_session_id, search_query_id } = searchQuery);
   closure_2 = obj(searchQuery, closure_2);
-  obj = { include_nsfw, channel_ids: channel_id, tabs: {}, track_exact_total_hits: trackExactTotalHits.trackExactTotalHits };
+  obj = { include_nsfw, channel_ids: channel_id, tabs: {}, track_exact_total_hits: trackExactTotalHits.trackExactTotalHits, search_session_id, search_query_id };
   const item = searchTabs.forEach((item) => {
     if (null != React4[item]) {
       obj = hasOwnProperty[tmp2];

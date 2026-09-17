@@ -1,6 +1,6 @@
-// === Module 6530: ? ===
+// === Module 6532: ? ===
 
-// Module 6530
+// Module 6532
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconBoomBGoneExample-2x.png.js");

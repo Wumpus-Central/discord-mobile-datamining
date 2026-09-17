@@ -1,6 +1,6 @@
-// === Module 5862: ? ===
+// === Module 5864: ? ===
 
-// Module 5862
+// Module 5864
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarClydeExample-2x.png.js");

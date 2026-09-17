@@ -1,9 +1,9 @@
-// === Module 7562: ReferralTrialStore ===
+// === Module 7566: ReferralTrialStore ===
 
-// Module 7562 (ReferralTrialStore)
+// Module 7566 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7563 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7567 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -141,8 +141,8 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(7563).fetchReferralsRemaining();
-      const obj = userTrialOfferId(7563);
+      const referralsRemaining = userTrialOfferId(7567).fetchReferralsRemaining();
+      const obj = userTrialOfferId(7567);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);

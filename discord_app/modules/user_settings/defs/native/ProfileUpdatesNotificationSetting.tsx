@@ -1,11 +1,11 @@
-// === Module 15620: ProfileUpdatesNotificationSetting ===
+// === Module 15626: ProfileUpdatesNotificationSetting ===
 
-// Module 15620 (ProfileUpdatesNotificationSetting)
+// Module 15626 (ProfileUpdatesNotificationSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import SettingsConstants from "SettingsConstants" /* 8091 */;
-import ProfileUpdatesNotificationUtils from "ProfileUpdatesNotificationUtils" /* 15621 */;
-import SettingBuilders from "SettingBuilders" /* 11614 */;
+import SettingsConstants from "SettingsConstants" /* 8111 */;
+import ProfileUpdatesNotificationUtils from "ProfileUpdatesNotificationUtils" /* 15627 */;
+import SettingBuilders from "SettingBuilders" /* 11622 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

@@ -1,9 +1,9 @@
-// === Module 7160: SearchField ===
+// === Module 7164: SearchField ===
 
-// Module 7160 (SearchField)
+// Module 7164 (SearchField)
 import util from "util" /* 1115 */;
-import TextField from "TextField" /* 6721 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7161 */;
+import TextField from "TextField" /* 6724 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7165 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,6 +21,6 @@ export const SearchField = noop.forwardRef((arg0, ref) => {
   obj.autoCapitalize = "none";
   obj.accessibilityRole = "search";
   obj.leadingIcon = MagnifyingGlassIcon.MagnifyingGlassIcon;
-  obj.isClearable = true;
+  obj.clearable = true;
   return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
 });

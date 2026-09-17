@@ -1,11 +1,11 @@
-// === Module 13127: MediaViewer ===
+// === Module 13135: MediaViewer ===
 
-// Module 13127 (MediaViewer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
-import useVideoControls from "useVideoControls" /* 8392 */;
-import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8423 */;
-import MediaViewerItem from "MediaViewerItem" /* 13129 */;
+// Module 13135 (MediaViewer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
+import useVideoControls from "useVideoControls" /* 8411 */;
+import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8442 */;
+import MediaViewerItem from "MediaViewerItem" /* 13137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,16 +21,16 @@ function MediaViewer(arg0) {
   __initData = undefined;
   ({ onLongPress, originLayout, renderMedia, renderOverlay, swipeVelocityThreshold } = arg0);
   ({ useViewerProps, zoomed } = syncer);
-  value = [height(7292).MEDIA_VIEWER];
+  value = [height(7296).MEDIA_VIEWER];
   let tmp = height;
-  const tmp3 = height(7272);
+  const tmp3 = height(7276);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   const _require = tmp6;
   const tmp4 = sharedValue(sharedValue1.useState(true), 2);
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13133)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13141)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -213,7 +213,7 @@ function MediaViewer(arg0) {
   const orientationListener = require("DeviceOrientation").useOrientationListener(callback2);
   const obj16 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const obj15 = require("DeviceOrientation");
-  const items5 = [translatePos(height(9624), { barStyle: "light-content", hidden: !tmp5 }), translatePos(height(4374).View, { style: animatedStyle }), translatePos(height(4375), { ref: animatedRef, style: animatedStyle2, children: translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed }) }), , ];
+  const items5 = [translatePos(height(9635), { barStyle: "light-content", hidden: !tmp5 }), translatePos(height(4376).View, { style: animatedStyle }), translatePos(height(4377), { ref: animatedRef, style: animatedStyle2, children: translatePos(ref, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed }) }), , ];
   const obj18 = { style: null, pointerEvents: null, children: null };
   const items6 = [sharedValue(sharedValue1.useState(obj8), 1)[0], animatedStyle1];
   obj18.style = items6;
@@ -227,11 +227,11 @@ function MediaViewer(arg0) {
   }
   obj18.pointerEvents = str;
   obj18.children = renderOverlay(dismiss, overlayEnabled);
-  items5[3] = translatePos(height(4375), obj18);
-  items5[4] = translatePos(tmp(9626), {});
+  items5[3] = translatePos(height(4377), obj18);
+  items5[4] = translatePos(tmp(9637), {});
   obj16.children = items5;
   const children = tmp28(tmp29, obj16);
-  return translatePos(tmp7(7272).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+  return translatePos(tmp7(7276).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
-// === Module 8543: AgeVerificationAnalyticsUtils ===
+// === Module 8562: AgeVerificationAnalyticsUtils ===
 
-// Module 8543 (AgeVerificationAnalyticsUtils)
+// Module 8562 (AgeVerificationAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -12,7 +12,7 @@ export const AgeVerificationModalEntryPoint = { GET_STARTED_MODAL: "get_started_
 export const AgeVerificationModalVersion = { PRIMARY: 1, [1]: "PRIMARY", RETRY: 2, [2]: "RETRY", EXPRESSIVE_PRIMARY: 3, [3]: "EXPRESSIVE_PRIMARY", SAFETY_FLOWS: 4, [4]: "SAFETY_FLOWS", EXPRESSIVE_V2: 5, [5]: "EXPRESSIVE_V2" };
 export const AgeVerificationModalCta = { MANUAL_REVIEW_REQUEST: "manual_review_request", LEARN_MORE: "learn_more", GET_STARTED: "get_started", SYSTEM_DMS_LEARN_MORE: "system_dms_learn_more", TRUSTED_PROVIDERS: "trusted_providers", METHOD_SELECT: "method_select", LOG_OUT: "log_out" };
 export const AgeVerificationDmCta = { RETRY: "retry", CONNECT_TO_TEEN: "connect_to_teen", MANUAL_REVIEW: "manual_review" };
-export const NsfwSpaceWarningModalType = { NSFW_CHANNEL_AGE_VERIFY: "nsfw_channel_age_verify", NSFW_CHANNEL_UNDERAGE: "nsfw_channel_underage", NSFW_CHANNEL_VERIFIED: "nsfw_channel_verified", GUILD_LARGE_SERVER: "guild_large_server", GUILD_LARGE_SERVER_UNDERAGE: "guild_large_server_underage", NSFW_EMBEDDED_ACTIVITY: "nsfw_embedded_activity", NSFW_APP_LISTING: "nsfw_app_listing", SPOILER_CHANNEL: "spoiler_channel" };
+export const NsfwSpaceWarningModalType = fn(8563).NsfwSpaceWarningModalType;
 export const NsfwSpaceWarningModalCta = { NSFW_CHANNEL_AGREE_CTA: "nsfw_channel_agree_cta", NSFW_CHANNEL_DISAGREE_CTA: "nsfw_channel_disagree_cta" };
 export const trackAgeVerificationModalViewed = function trackAgeVerificationModalViewed(memo, EXPRESSIVE_PRIMARY, entryPoint) {
   AnalyticsUtilsDefault.track(AnalyticEvents.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: memo, modal_version: EXPRESSIVE_PRIMARY, entry_point: entryPoint });

@@ -1,6 +1,6 @@
-// === Module 13568: BogoPromotionExperiment ===
+// === Module 13576: BogoPromotionExperiment ===
 
-// Module 13568 (BogoPromotionExperiment)
+// Module 13576 (BogoPromotionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 13387: getRequestToStreamCTAAndIsDisabled ===
+// === Module 13395: getRequestToStreamCTAAndIsDisabled ===
 
-// Module 13387 (getRequestToStreamCTAAndIsDisabled)
+// Module 13395 (getRequestToStreamCTAAndIsDisabled)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
 import _modDef2883 from "module_2883" /* 2883 */;
-import isInviteActive from "isInviteActive" /* 11896 */;
-import useCanFulfillStreamRequest from "useCanFulfillStreamRequest" /* 11908 */;
+import isInviteActive from "isInviteActive" /* 11905 */;
+import useCanFulfillStreamRequest from "useCanFulfillStreamRequest" /* 11917 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

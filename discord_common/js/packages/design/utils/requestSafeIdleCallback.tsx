@@ -1,6 +1,6 @@
-// === Module 7582: requestSafeIdleCallback ===
+// === Module 7586: requestSafeIdleCallback ===
 
-// Module 7582 (requestSafeIdleCallback)
+// Module 7586 (requestSafeIdleCallback)
 import GlobalUtils from "utils/GlobalUtils" /* 1356 */;
 import size from "module_2" /* 2 */;
 

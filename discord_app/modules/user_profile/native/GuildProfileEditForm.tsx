@@ -1,22 +1,22 @@
-// === Module 14765: GuildProfileEditForm ===
+// === Module 14773: GuildProfileEditForm ===
 
-// Module 14765 (GuildProfileEditForm)
+// Module 14773 (GuildProfileEditForm)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4295 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7272 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8293 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8295 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9456 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9505 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9535 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 14705 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7276 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8312 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8314 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9467 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9516 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9546 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 14713 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import UserProfileStore from "UserProfileStore" /* 7729 */;
+import UserProfileStore from "UserProfileStore" /* 7735 */;
 
 require = fn;
 function EditGuildProfileBanner(user) {
@@ -36,7 +36,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       const obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(14706, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(14714, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -63,12 +63,12 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1115).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(7272).AnalyticsLocationProvider, obj2);
+  return closure_17(user(7276).AnalyticsLocationProvider, obj2);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7318).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7322).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_11, AnalyticsSections } = Constants);
 ({ DISPLAY_NAME_MAX_LENGTH: map1, PRONOUNS_MAX_LENGTH: closure_14, UpsellTypes: closure_15, AnalyticsPages } = Constants);
@@ -328,7 +328,7 @@ export default function GuildProfileEditForm(currentUser) {
         }
       }
       const items12 = [tmp45, , , , , , , , , ];
-      const obj30 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, isDisabled: null };
+      const obj30 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, disabled: null };
       const intl2 = tmp5(tmp2[17]).intl;
       obj30.label = intl2.string(tmp5(tmp2[17]).t.me1lRk);
       obj30.errorMessage = first;
@@ -347,7 +347,7 @@ export default function GuildProfileEditForm(currentUser) {
       if (canEditNickname) {
         tmp51 = isDisabled;
       }
-      obj30.isDisabled = tmp51;
+      obj30.disabled = tmp51;
       items12[1] = closure_17(tmpResult14, obj30);
       let tmp58Result6 = result;
       if (result) {
@@ -355,7 +355,7 @@ export default function GuildProfileEditForm(currentUser) {
         tmp58Result6 = closure_17(tmp(tmp2[45]), obj31);
       }
       items12[2] = tmp58Result6;
-      const obj32 = { inputRef: ref2, label: null, errorMessage: null, description: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, spellCheck: false, autoCorrect: false, isDisabled: null };
+      const obj32 = { inputRef: ref2, label: null, errorMessage: null, description: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, spellCheck: false, autoCorrect: false, disabled: null };
       const tmpResult15 = tmp(tmp2[44]);
       const intl3 = tmp5(tmp2[17]).intl;
       obj32.label = intl3.string(tmp5(tmp2[17]).t["+T3RI/"]);
@@ -369,11 +369,11 @@ export default function GuildProfileEditForm(currentUser) {
       };
       obj32.placeholder = str3;
       obj32.maxLength = maxLength2;
-      obj32.isDisabled = isDisabled;
+      obj32.disabled = isDisabled;
       items12[3] = closure_17(tmp(tmp2[43]), obj32);
       let tmp58Result7 = null;
       if (result) {
-        const obj33 = { inputRef: ref3, label: null, errorMessage: null, description: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, numberOfLines: 5, isDisabled: null };
+        const obj33 = { inputRef: ref3, label: null, errorMessage: null, description: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, numberOfLines: 5, disabled: null };
         const intl5 = tmp5(tmp2[17]).intl;
         obj33.label = intl5.string(tmp5(tmp2[17]).t.ZzAR2Y);
         obj33.errorMessage = first2;
@@ -389,7 +389,7 @@ export default function GuildProfileEditForm(currentUser) {
         };
         obj33.placeholder = str5;
         obj33.maxLength = bioMaxLength;
-        obj33.isDisabled = isDisabled;
+        obj33.disabled = isDisabled;
         tmp58Result7 = closure_17(tmp(tmp2[43]), obj33);
         const tmpResult17 = tmp(tmp2[43]);
       }

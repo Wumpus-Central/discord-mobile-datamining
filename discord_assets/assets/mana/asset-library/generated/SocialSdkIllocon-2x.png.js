@@ -1,6 +1,6 @@
-// === Module 6582: ? ===
+// === Module 6584: ? ===
 
-// Module 6582
+// Module 6584
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SocialSdkIllocon-2x.png.js");

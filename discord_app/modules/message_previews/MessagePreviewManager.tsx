@@ -1,16 +1,16 @@
-// === Module 15431: MessagePreviewManager ===
+// === Module 15436: MessagePreviewManager ===
 
-// Module 15431 (MessagePreviewManager)
+// Module 15436 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 15432 */;
+import RemoteFetchData from "RemoteFetchData" /* 15437 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5363 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5365 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13826 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13834 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
 
 require = fn;
 const isThread = fn(1962).isThread;

@@ -1,9 +1,9 @@
-// === Module 17066: ChannelSettingsChangeDefaultForumLayout ===
+// === Module 17105: ChannelSettingsChangeDefaultForumLayout ===
 
-// Module 17066 (ChannelSettingsChangeDefaultForumLayout)
+// Module 17105 (ChannelSettingsChangeDefaultForumLayout)
 import nativeDefault from "native" /* 576 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8760 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8780 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
@@ -78,7 +78,7 @@ class ChannelSettingsChangeDefaultForumLayout {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 }, description: null, thumbnailImagePortrait: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 };
 obj2.description = { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };

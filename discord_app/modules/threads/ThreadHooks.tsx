@@ -1,17 +1,17 @@
-// === Module 7379: ThreadHooks ===
+// === Module 7383: ThreadHooks ===
 
-// Module 7379 (ThreadHooks)
+// Module 7383 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7380 */;
-import useIsRemoteDefault from "useIsRemote" /* 7381 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7384 */;
+import useIsRemoteDefault from "useIsRemote" /* 7385 */;
 import _slicedToArray from "module_32" /* 32 */;
-import createExperiment from "createExperiment" /* 4552 */;
+import createExperiment from "createExperiment" /* 4554 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5592 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5594 */;
 
 const require = globalThis.__r;
 
@@ -526,8 +526,8 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("AgeGateUtils").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4849).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(4849);
+    shouldAgeVerifyForAgeGate = tmp3(4851).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(4851);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

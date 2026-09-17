@@ -1,9 +1,9 @@
-// === Module 16664: useComponentRenderSpan ===
+// === Module 16695: useComponentRenderSpan ===
 
-// Module 16664 (useComponentRenderSpan)
+// Module 16695 (useComponentRenderSpan)
 import LoggerDefault from "Logger" /* 3 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 16665 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16666 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 16696 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 16697 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ let closure_4 = new LoggerDefault("NavTTISurface");
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/useComponentRenderSpan.tsx");
 
-export const useComponentRenderSpan = function useComponentRenderSpan(spanComponent) {
-  _require = spanComponent;
+export const useComponentRenderSpan = function useComponentRenderSpan(name) {
+  _require = name;
   const navTTISurface = require("NavTTISurfaceContext").useNavTTISurface();
   let str;
   if (navTTISurface != null) {
@@ -30,87 +30,137 @@ export const useComponentRenderSpan = function useComponentRenderSpan(spanCompon
   if (activeTraceId == null) {
     activeTraceId = null;
   }
-  closure_129_0 = spanComponent;
+  let flag;
+  if (navTTISurface != null) {
+    flag = navTTISurface.isVisible;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  closure_129_0 = name;
   closure_129_1 = str;
   closure_129_2 = activeTraceId;
-  closure_129_3 = noop.useRef(null);
+  closure_129_3 = flag;
   closure_129_4 = noop.useRef(null);
   closure_129_5 = noop.useRef(null);
-  closure_129_6 = noop.useRef(str);
-  const items = [spanComponent];
+  closure_129_6 = noop.useRef(null);
+  closure_129_7 = noop.useRef(null);
+  closure_129_8 = noop.useRef(str);
+  closure_129_9 = noop.useRef(false);
+  const items = [name];
   const callback = noop.useCallback((traceId, endMonotonicMs, arg2, arg3, measurementSource) => {
-    if (arg2 > 0) {
-      if (arg3 > 0) {
-        current = logger.current;
-        traceId = undefined;
-        if (current != null) {
-          traceId = current.traceId;
-        }
-        if (traceId !== traceId) {
-          const obj3 = { spanComponent, endMonotonicMs, measurementSource };
-          if (obj2.recordComponentSpan(traceId, obj3)) {
-            const obj4 = { traceId, source: measurementSource };
-            logger.current = obj4;
-          }
-          obj2 = NavigationSpanTrackerDefault;
-        } else {
-          if (tmp7) {
-            const result = NavigationSpanTrackerDefault.recordLateComponentLayout(traceId, spanComponent, endMonotonicMs);
-          }
-          tmp7 = measurementSource === NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT && current.source !== measurementSource;
-        }
-      }
+    let isFiniteResult = arg2 > 0 && arg3 > 0;
+    if (isFiniteResult) {
+      const _Number = Number;
+      isFiniteResult = Number.isFinite(arg2);
     }
-  }, items);
-  closure_129_7 = callback;
-  const items1 = [activeTraceId, str];
-  const layoutEffect = noop.useLayoutEffect(() => {
-    ref2.current = current;
-    ref3.current = navTTISurface;
-  }, items1);
-  const items2 = [callback];
-  const items3 = [activeTraceId, str, callback];
-  const onLayout = noop.useCallback((nativeEvent) => {
-    const layout = nativeEvent.nativeEvent.layout;
-    const size = { navigationKey: ref3.current, width: layout.width, height: layout.height };
-    ref.current = size;
-    current = ref2.current;
-    if (null != current) {
-      const _performance = performance;
-      ({ width, height } = layout);
-      closure_1_7(current, performance.now(), width, height, NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT);
-      const nowResult = performance.now();
+    if (isFiniteResult) {
+      const _Number2 = Number;
+      isFiniteResult = Number.isFinite(arg3);
     }
-  }, items2);
-  const effect = noop.useEffect(() => {
-    if (null != closure_2) {
-      current = logger.current;
-      let traceId;
+    if (isFiniteResult) {
+      current = ref2.current;
+      traceId = undefined;
       if (current != null) {
         traceId = current.traceId;
       }
-      if (traceId !== tmp) {
-        const current2 = ref.current;
-        if (null != current2) {
-          if (current2.width > 0) {
-            if (current2.height > 0) {
-              if (current2.navigationKey === CACHED_PREVIOUS_DESTINATION) {
-                CACHED_PREVIOUS_DESTINATION = spanComponent(current[2]).ComponentMeasurementSource.CACHED_SAME_DESTINATION;
+      if (traceId !== traceId) {
+        const obj3 = { spanComponent, endMonotonicMs, measurementSource };
+        if (obj2.recordComponentSpan(traceId, obj3)) {
+          const obj4 = { traceId, source: measurementSource };
+          ref2.current = obj4;
+        }
+        obj2 = NavigationSpanTrackerDefault;
+      } else {
+        if (tmp12) {
+          const result = NavigationSpanTrackerDefault.recordLateComponentLayout(traceId, spanComponent, endMonotonicMs);
+        }
+        tmp12 = measurementSource === NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT && current.source !== measurementSource;
+      }
+    }
+  }, items);
+  closure_129_10 = callback;
+  const items1 = [activeTraceId, flag, str];
+  const layoutEffect = noop.useLayoutEffect(() => {
+    if (ref3.current !== dependencyMap) {
+      ref.current = null;
+    }
+    ref3.current = dependencyMap;
+    ref4.current = navTTISurface;
+    ref5.current = current;
+  }, items1);
+  const items2 = [callback];
+  const items3 = [activeTraceId, flag, str, callback];
+  const onLayout = noop.useCallback((nativeEvent) => {
+    const layout = nativeEvent.nativeEvent.layout;
+    ({ width, height } = layout);
+    let isFiniteResult = width > 0 && height > 0;
+    if (isFiniteResult) {
+      const _Number = Number;
+      isFiniteResult = Number.isFinite(width);
+    }
+    if (isFiniteResult) {
+      const _Number2 = Number;
+      isFiniteResult = Number.isFinite(height);
+    }
+    if (isFiniteResult) {
+      const size = { navigationKey: ref4.current, width: null, height: null };
+      ({ width: obj.width, height: obj.height } = layout);
+      logger.current = size;
+    }
+    current = ref3.current;
+    if (null != current) {
+      if (ref5.current) {
+        const _performance = performance;
+        ({ width: width2, height: height2 } = layout);
+        closure_1_10(current, performance.now(), width2, height2, NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT);
+        const nowResult = performance.now();
+      } else if (isFiniteResult) {
+        const size1 = { traceId: current, width: null, height: null };
+        ({ width: obj2.width, height: obj2.height } = layout);
+        ref.current = size1;
+      }
+    }
+  }, items2);
+  const effect = noop.useEffect(() => {
+    if (closure_3) {
+      if (null != closure_2) {
+        const current2 = ref2.current;
+        let traceId;
+        if (current2 != null) {
+          traceId = current2.traceId;
+        }
+        if (traceId !== tmp) {
+          const current3 = ref.current;
+          let traceId1;
+          if (current3 != null) {
+            traceId1 = current3.traceId;
+          }
+          if (traceId1 !== tmp) {
+            current = logger.current;
+            if (null != current) {
+              if (current.navigationKey === CACHED_PREVIOUS_DESTINATION) {
+                CACHED_PREVIOUS_DESTINATION = spanComponent(16696).ComponentMeasurementSource.CACHED_SAME_DESTINATION;
               } else {
-                CACHED_PREVIOUS_DESTINATION = spanComponent(current[2]).ComponentMeasurementSource.CACHED_PREVIOUS_DESTINATION;
+                CACHED_PREVIOUS_DESTINATION = spanComponent(16696).ComponentMeasurementSource.CACHED_PREVIOUS_DESTINATION;
               }
               const _requestAnimationFrame = requestAnimationFrame;
               closure_2 = requestAnimationFrame(() => {
-                closure_2_7(current, performance.now(), current2.width, current2.height, CACHED_PREVIOUS_DESTINATION);
+                closure_2_10(dependencyMap, performance.now(), current.width, current.height, CACHED_PREVIOUS_DESTINATION);
               });
               return () => cancelAnimationFrame(closure_2);
             }
+          } else {
+            const _performance = performance;
+            ({ width, height } = current3);
+            closure_10(tmp, performance.now(), width, height, spanComponent(16696).ComponentMeasurementSource.ON_LAYOUT);
+            const nowResult = performance.now();
           }
         }
       }
     }
   }, items3);
-  const items4 = [spanComponent, navTTISurface];
+  const items4 = [name, navTTISurface];
   const effect1 = noop.useEffect(() => {
     if (null == navTTISurface) {
       const _HermesInternal = HermesInternal;

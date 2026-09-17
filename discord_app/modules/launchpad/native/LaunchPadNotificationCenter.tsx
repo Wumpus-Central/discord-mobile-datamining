@@ -1,11 +1,11 @@
-// === Module 17201: LaunchPadNotificationCenter ===
+// === Module 17241: LaunchPadNotificationCenter ===
 
-// Module 17201 (LaunchPadNotificationCenter)
-import notifications_NotificationsDefault from "notifications/Notifications" /* 16531 */;
+// Module 17241 (LaunchPadNotificationCenter)
+import notifications_NotificationsDefault from "notifications/Notifications" /* 16561 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_3 = createStyles.createStyles({ wrapper: { height: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadNotificationCenter.tsx");

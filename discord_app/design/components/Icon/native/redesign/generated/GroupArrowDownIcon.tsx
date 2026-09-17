@@ -1,9 +1,9 @@
-// === Module 10057: GroupArrowDownIcon ===
+// === Module 10068: GroupArrowDownIcon ===
 
-// Module 10057 (GroupArrowDownIcon)
+// Module 10068 (GroupArrowDownIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod10058 from "module_10058" /* 10058 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod10069 from "module_10069" /* 10069 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const GroupArrowDownIcon = function GroupArrowDownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10058, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10069, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

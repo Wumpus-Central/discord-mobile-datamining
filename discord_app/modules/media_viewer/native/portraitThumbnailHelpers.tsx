@@ -1,6 +1,6 @@
-// === Module 8424: portraitThumbnailHelpers ===
+// === Module 8443: portraitThumbnailHelpers ===
 
-// Module 8424 (portraitThumbnailHelpers)
+// Module 8443 (portraitThumbnailHelpers)
 import size from "module_2" /* 2 */;
 
 function lerpVarWidthThumbnailScrollBounds(items, arg1) {

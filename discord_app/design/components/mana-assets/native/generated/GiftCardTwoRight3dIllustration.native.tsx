@@ -1,9 +1,9 @@
-// === Module 6253: GiftCardTwoRight3dIllustration ===
+// === Module 6255: GiftCardTwoRight3dIllustration ===
 
-// Module 6253 (GiftCardTwoRight3dIllustration)
+// Module 6255 (GiftCardTwoRight3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6254 from "module_6254" /* 6254 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6256 from "module_6256" /* 6256 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GiftCardTwoRight3dIllustration = function GiftCardTwoRight3dIllustr
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6254 };
+  const obj2 = { uri: _modDef6256 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

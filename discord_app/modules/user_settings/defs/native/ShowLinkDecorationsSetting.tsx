@@ -1,10 +1,10 @@
-// === Module 15522: ShowLinkDecorationsSetting ===
+// === Module 15527: ShowLinkDecorationsSetting ===
 
-// Module 15522 (ShowLinkDecorationsSetting)
+// Module 15527 (ShowLinkDecorationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14553 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14561 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 
 require = fn;
 function useShowLinkDecorationsSettingValue() {
@@ -14,13 +14,13 @@ function useShowLinkDecorationsSettingValue() {
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-const SettingBuilders = fn(11614);
+const SettingBuilders = fn(11622);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.OLZFB8);
   },
-  parent: fn(8091).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8111).MobileUserSettings.ACCESSIBILITY,
   useValue: useShowLinkDecorationsSettingValue,
   onValueChange: onShowLinkDecorationsValueChange
 });

@@ -99,7 +99,6 @@ export function getAppIntentScheme(arg0) {
 }
 export const PRIVATE_APPS_HELP_ARTICLE = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
 export const DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY = "disallowed_navigation_error_close_activity";
-export const ACTIVITY_PORTRAIT_ASPECT_RATIO = 0.5625;
-export const ACTIVITY_LANDSCAPE_ASPECT_RATIO = 1.7777777777777777;
+export const ACTIVITY_LOCKED_ASPECT_RATIO = 0.5625;
 export const ActivityPopoutWindowLayouts = { NORMAL: "normal", FULL_SCREEN: "full-screen" };
 export const INVITE_EXPIRATION_MS = 21600000;

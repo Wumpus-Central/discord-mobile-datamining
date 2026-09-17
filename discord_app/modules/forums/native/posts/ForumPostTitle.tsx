@@ -1,12 +1,12 @@
-// === Module 12158: ForumPostTitle ===
+// === Module 12167: ForumPostTitle ===
 
-// Module 12158 (ForumPostTitle)
-import Text_Text from "Text/Text" /* 4634 */;
+// Module 12167 (ForumPostTitle)
+import Text_Text from "Text/Text" /* 4636 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const PlatformUtils = fn(1365);
 let obj3 = null;
 if (PlatformUtils.isIOS()) {

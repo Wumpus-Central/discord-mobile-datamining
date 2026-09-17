@@ -1,8 +1,8 @@
-// === Module 17547: DeclarativeSystemNotifPermissionManager ===
+// === Module 17588: DeclarativeSystemNotifPermissionManager ===
 
-// Module 17547 (DeclarativeSystemNotifPermissionManager)
-import DeclarativeSystemNotifPermissionActionCreators from "DeclarativeSystemNotifPermissionActionCreators" /* 16044 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
+// Module 17588 (DeclarativeSystemNotifPermissionManager)
+import DeclarativeSystemNotifPermissionActionCreators from "DeclarativeSystemNotifPermissionActionCreators" /* 16066 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
 
 require = fn;
 function handleAppStateChanged(state) {

@@ -1,39 +1,9 @@
-// === Module 7899: getBurstAnimation ===
+// === Module 7905: getBurstAnimation ===
 
-// Module 7899 (getBurstAnimation)
+// Module 7905 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
-  {
-    load() {
-      return closure_0(7900);
-    }
-  },
-  {
-    load() {
-      return closure_0(7901);
-    }
-  },
-  {
-    load() {
-      return closure_0(7902);
-    }
-  },
-  {
-    load() {
-      return closure_0(7903);
-    }
-  },
-  {
-    load() {
-      return closure_0(7904);
-    }
-  },
-  {
-    load() {
-      return closure_0(7905);
-    }
-  },
   {
     load() {
       return closure_0(7906);
@@ -93,9 +63,7 @@ const items = [
     load() {
       return closure_0(7917);
     }
-  }
-];
-const items1 = [
+  },
   {
     load() {
       return closure_0(7918);
@@ -125,7 +93,9 @@ const items1 = [
     load() {
       return closure_0(7923);
     }
-  },
+  }
+];
+const items1 = [
   {
     load() {
       return closure_0(7924);
@@ -184,6 +154,36 @@ const items1 = [
   {
     load() {
       return closure_0(7935);
+    }
+  },
+  {
+    load() {
+      return closure_0(7936);
+    }
+  },
+  {
+    load() {
+      return closure_0(7937);
+    }
+  },
+  {
+    load() {
+      return closure_0(7938);
+    }
+  },
+  {
+    load() {
+      return closure_0(7939);
+    }
+  },
+  {
+    load() {
+      return closure_0(7940);
+    }
+  },
+  {
+    load() {
+      return closure_0(7941);
     }
   }
 ];

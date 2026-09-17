@@ -1,13 +1,13 @@
-// === Module 17902: EligibilityChecklist ===
+// === Module 17966: EligibilityChecklist ===
 
-// Module 17902 (EligibilityChecklist)
+// Module 17966 (EligibilityChecklist)
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import components_Button_Button from "components/Button/Button" /* 5060 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import FormSeparatorDefault from "FormSeparator" /* 15327 */;
-import _modDef17903 from "module_17903" /* 17903 */;
-import _modDef17904 from "module_17904" /* 17904 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import components_Button_Button from "components/Button/Button" /* 5062 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import FormSeparatorDefault from "FormSeparator" /* 15332 */;
+import _modDef17967 from "module_17967" /* 17967 */;
+import _modDef17968 from "module_17968" /* 17968 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,9 +23,9 @@ function EligibilityChecklistRow(item) {
   items[1] = eligibleRow;
   const obj2 = { style: tmp.rowStatusIcon, source: null };
   if (item.checked) {
-    let tmp6Result = _modDef17903;
+    let tmp6Result = _modDef17967;
   } else {
-    tmp6Result = _modDef17904;
+    tmp6Result = _modDef17968;
   }
   obj2.source = tmp6Result;
   const items1 = [React4(FastImageDefault, obj2), ];
@@ -56,7 +56,7 @@ function EligibilityChecklistRow(item) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ row: { paddingHorizontal: 24, paddingTop: 16, flex: 0, flexDirection: "row" }, eligibleRow: { opacity: 0.8 }, rowStatusIcon: { height: 20, width: 20, marginRight: 16 }, rowTextColumn: { flex: 1, flexDirection: "column" }, rowLabel: { marginBottom: 4 }, actionButtonWrapper: { marginTop: 12 }, divider: { marginHorizontal: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx");

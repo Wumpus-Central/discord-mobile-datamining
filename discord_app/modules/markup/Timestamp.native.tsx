@@ -1,14 +1,14 @@
-// === Module 10267: Timestamp ===
+// === Module 10278: Timestamp ===
 
-// Module 10267 (Timestamp)
+// Module 10278 (Timestamp)
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4336 */;
-import useFormattedTimestampDefault from "useFormattedTimestamp" /* 10268 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
+import useFormattedTimestampDefault from "useFormattedTimestamp" /* 10279 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,9 +1,9 @@
-// === Module 11167: useMobileCollectiblesPurchaseSKU ===
+// === Module 11175: useMobileCollectiblesPurchaseSKU ===
 
-// Module 11167 (useMobileCollectiblesPurchaseSKU)
+// Module 11175 (useMobileCollectiblesPurchaseSKU)
 import initialize from "initialize" /* 504 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8987 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10961 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9003 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10969 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

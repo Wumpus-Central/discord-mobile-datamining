@@ -1,11 +1,11 @@
-// === Module 17309: useStableParticipant ===
+// === Module 17350: useStableParticipant ===
 
-// Module 17309 (useStableParticipant)
+// Module 17350 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import NicknameUtils from "NicknameUtils" /* 4790 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 8345 */;
-import participantHasVideoDefault from "participantHasVideo" /* 9762 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4654 */;
+import NicknameUtils from "NicknameUtils" /* 4792 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 8364 */;
+import participantHasVideoDefault from "participantHasVideo" /* 9773 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4656 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -24,7 +24,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(4659).ParticipantTypes;
+const ParticipantTypes = fn(4661).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/useStableParticipant.tsx");
 

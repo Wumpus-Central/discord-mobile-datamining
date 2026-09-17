@@ -1,6 +1,6 @@
-// === Module 16508: FadeInOut ===
+// === Module 16538: FadeInOut ===
 
-// Module 16508 (FadeInOut)
+// Module 16538 (FadeInOut)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

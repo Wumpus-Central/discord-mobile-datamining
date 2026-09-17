@@ -1,9 +1,9 @@
-// === Module 8011: lifecycle_plan ===
+// === Module 8017: lifecycle_plan ===
 
-// Module 8011 (lifecycle_plan)
+// Module 8017 (lifecycle_plan)
 import _mod1187 from "module_1187" /* 1187 */;
 import timestamp from "timestamp" /* 1216 */;
-import duration from "duration" /* 8012 */;
+import duration from "duration" /* 8018 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

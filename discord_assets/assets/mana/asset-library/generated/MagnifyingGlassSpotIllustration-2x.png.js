@@ -1,6 +1,6 @@
-// === Module 6336: ? ===
+// === Module 6338: ? ===
 
-// Module 6336
+// Module 6338
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MagnifyingGlassSpotIllustration-2x.png.js");

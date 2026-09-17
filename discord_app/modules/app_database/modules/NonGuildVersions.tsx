@@ -1,12 +1,12 @@
-// === Module 7764: NonGuildVersions ===
+// === Module 7770: NonGuildVersions ===
 
-// Module 7764 (NonGuildVersions)
+// Module 7770 (NonGuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
 
 const require = fn;
 let closure_5 = new LoggerDefault("NonGuildVersions");
@@ -159,7 +159,7 @@ obj.actions = {
     return obj3.handleConnectionOpen(arg0, arg1);
   }
 };
-const isCacheEnabled = fn(7757);
+const isCacheEnabled = fn(7763);
 if (isCacheEnabled.isCacheEnabled()) {
   SelectedGuildStore.addChangeListener(_modDef12.throttle(() => {
     const databaseResult = DatabaseDaosDefault.database();

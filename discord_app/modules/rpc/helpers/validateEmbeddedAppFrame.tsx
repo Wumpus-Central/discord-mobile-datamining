@@ -1,11 +1,11 @@
-// === Module 14578: validateEmbeddedAppFrame ===
+// === Module 14586: validateEmbeddedAppFrame ===
 
-// Module 14578 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8995 */;
-import RPCErrorDefault from "RPCError" /* 9697 */;
-import RPCHelpers from "RPCHelpers" /* 9702 */;
-import FramesStore from "FramesStore" /* 9653 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14579 */;
+// Module 14586 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9011 */;
+import RPCErrorDefault from "RPCError" /* 9708 */;
+import RPCHelpers from "RPCHelpers" /* 9713 */;
+import FramesStore from "FramesStore" /* 9664 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14587 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -56,10 +56,10 @@ function validateEmbeddedAppFrame(transport) {
   }
   obj3 = ApplicationFlagUtils;
 }
-const TransportTypes = fn(4542).TransportTypes;
+const TransportTypes = fn(4544).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9654);
+const FramesConstants = fn(9665);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");

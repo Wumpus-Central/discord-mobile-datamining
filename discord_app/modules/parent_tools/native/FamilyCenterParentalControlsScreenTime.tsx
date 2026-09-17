@@ -1,12 +1,12 @@
-// === Module 15048: FamilyCenterParentalControlsScreenTime ===
+// === Module 15056: FamilyCenterParentalControlsScreenTime ===
 
-// Module 15048 (FamilyCenterParentalControlsScreenTime)
+// Module 15056 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import _modDef2397 from "module_2397" /* 2397 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4638 */;
+import createStyles from "createStyles" /* 4640 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -17,10 +17,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(10222).getScheduleRuleDateRange(rule);
-  let obj = rule(10222);
-  const obj2 = rule(10222);
-  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10222).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const scheduleRuleDateRange = rule(10233).getScheduleRuleDateRange(rule);
+  let obj = rule(10233);
+  const obj2 = rule(10233);
+  const obj3 = { label: scheduleRuleDateRange, subLabel: rule(10233).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1115).intl;
   const string = intl.string;
   const tmp4 = _modDef2397;
@@ -29,7 +29,7 @@ function ScheduleRuleRow(rule) {
   } else {
     stringResult = string(tmp4["4z9fN+"]);
   }
-  obj3.trailing = closure_5(rule(4634).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
+  obj3.trailing = closure_5(rule(4636).Text, { variant: "text-sm/medium", color: "text-subtle", children: stringResult });
   obj3.arrow = !readOnly;
   let fn;
   if (!readOnly) {
@@ -41,7 +41,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(5691).TableRow, obj3);
+  return closure_5(rule(5693).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;

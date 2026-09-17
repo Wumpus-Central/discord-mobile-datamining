@@ -1,11 +1,11 @@
-// === Module 10313: useContentHarmTypes ===
+// === Module 10321: useContentHarmTypes ===
 
-// Module 10313 (useContentHarmTypes)
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7402 */;
+// Module 10321 (useContentHarmTypes)
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7406 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -58,10 +58,10 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(7405).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(7409).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(7402).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(7402);
+    NONE = tmp(7406).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(7406);
   }
   return NONE;
 }

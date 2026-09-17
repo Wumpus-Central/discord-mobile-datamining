@@ -1,22 +1,22 @@
-// === Module 15869: BuildOverrideActiveSetting ===
+// === Module 15886: BuildOverrideActiveSetting ===
 
-// Module 15869 (BuildOverrideActiveSetting)
+// Module 15886 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11932 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14695 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14958 */;
-import DevToolsContent from "DevToolsContent" /* 15863 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11571 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11941 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14703 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14966 */;
+import DevToolsContent from "DevToolsContent" /* 15880 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11579 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11614);
+const SettingBuilders = fn(11622);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(15265).RefreshIcon,
+  IconComponent: fn(15270).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     const items = [BuildOverrideStore];
     const stateFromStores = initialize.useStateFromStores(items, () => {

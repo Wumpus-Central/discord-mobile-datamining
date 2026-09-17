@@ -1,6 +1,6 @@
-// === Module 8794: PersonalWidgetExpandCollapseContext ===
+// === Module 8814: PersonalWidgetExpandCollapseContext ===
 
-// Module 8794 (PersonalWidgetExpandCollapseContext)
+// Module 8814 (PersonalWidgetExpandCollapseContext)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

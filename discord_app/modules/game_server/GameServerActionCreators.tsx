@@ -1,22 +1,22 @@
-// === Module 12625: GameServerActionCreators ===
+// === Module 12634: GameServerActionCreators ===
 
-// Module 12625 (GameServerActionCreators)
+// Module 12634 (GameServerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 4549 */;
-import StoreUtils from "StoreUtils" /* 4880 */;
-import GameServerMocks from "GameServerMocks" /* 12627 */;
-import GameServerStatus from "GameServerStatus" /* 12628 */;
-import regionResponseToRegionDefault from "regionResponseToRegion" /* 12630 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 4551 */;
+import StoreUtils from "StoreUtils" /* 4882 */;
+import GameServerMocks from "GameServerMocks" /* 12636 */;
+import GameServerStatus from "GameServerStatus" /* 12637 */;
+import regionResponseToRegionDefault from "regionResponseToRegion" /* 12639 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 import UserStore from "UserStore" /* 1372 */;
-import OwnedGameServersStore from "OwnedGameServersStore" /* 12626 */;
+import OwnedGameServersStore from "OwnedGameServersStore" /* 12635 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(4528).GAME_SERVER_COLLECTION_ID;
+const GAME_SERVER_COLLECTION_ID = fn(4530).GAME_SERVER_COLLECTION_ID;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
@@ -228,7 +228,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_CANCELED" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "DATA_COLLECTOR_KOUNT_NOT_ENABLED" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -243,7 +243,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_CANCELED" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "DATA_COLLECTOR_KOUNT_NOT_ENABLED" };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -304,7 +304,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_CANCELED" };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "DATA_COLLECTOR_KOUNT_NOT_ENABLED" };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -317,10 +317,10 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   return HTTP.post({ url: constants.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
     body = body.body;
     let tmp3 = body;
-    if (body.status === closure_0(12628).GameServerStatus.SLEEPING) {
+    if (body.status === closure_0(12637).GameServerStatus.SLEEPING) {
       const obj2 = {};
       const merged = Object.assign(body);
-      obj2.status = closure_0(12628).GameServerStatus.STARTING;
+      obj2.status = closure_0(12637).GameServerStatus.STARTING;
       tmp3 = obj2;
     }
     const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

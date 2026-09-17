@@ -1,6 +1,6 @@
-// === Module 15799: PasswordScreen ===
+// === Module 15805: PasswordScreen ===
 
-// Module 15799 (PasswordScreen)
+// Module 15805 (PasswordScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -72,7 +72,7 @@ export default function PasswordScreen(finish) {
   const intl = finish(first[8]).intl;
   obj2.headerText = intl.string(finish(first[8]).t.Rw1XuM);
   const obj3 = { style: screenStyles.inputContainer, children: null };
-  const obj4 = { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true };
+  const obj4 = { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, disabled: null, clearable: true, secureTextEntry: true };
   const intl2 = finish(first[8]).intl;
   obj4.label = intl2.string(finish(first[8]).t["CIGa+7"]);
   obj4.onChange = tmp6[1];
@@ -81,8 +81,8 @@ export default function PasswordScreen(finish) {
   if (!tmp10) {
     tmp15 = tmp10;
   }
-  obj4.isDisabled = tmp15;
-  obj3.children = jsx(finish(first[9]).TextInput, { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, isDisabled: null, isClearable: true, secureTextEntry: true });
+  obj4.disabled = tmp15;
+  obj3.children = jsx(finish(first[9]).TextInput, { autoFocus: true, required: true, textContentType: "password", label: null, autoComplete: "current-password", errorMessage: null, returnKeyType: "done", onChange: null, onSubmitEditing: null, disabled: null, clearable: true, secureTextEntry: true });
   obj2.input = <View style={screenStyles.inputContainer}>{null}</View>;
   const obj5 = { text: null, disabled: null, loading: null, onPress: null };
   const tmp12 = require("MfaOptionScreen");

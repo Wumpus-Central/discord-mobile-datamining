@@ -1,9 +1,9 @@
-// === Module 12005: Constants ===
+// === Module 12014: Constants ===
 
-// Module 12005 (Constants)
-import AutomodTriggerType from "AutomodTriggerType" /* 12006 */;
-import AutomodEventType from "AutomodEventType" /* 12007 */;
-import AutomodActionType from "AutomodActionType" /* 12008 */;
+// Module 12014 (Constants)
+import AutomodTriggerType from "AutomodTriggerType" /* 12015 */;
+import AutomodEventType from "AutomodEventType" /* 12016 */;
+import AutomodActionType from "AutomodActionType" /* 12017 */;
 import size from "module_2" /* 2 */;
 
 const items = [AutomodTriggerType.AutomodTriggerType.USER_PROFILE, AutomodTriggerType.AutomodTriggerType.SERVER_POLICY, AutomodTriggerType.AutomodTriggerType.MENTION_SPAM, AutomodTriggerType.AutomodTriggerType.ML_SPAM, AutomodTriggerType.AutomodTriggerType.DEFAULT_KEYWORD_LIST, AutomodTriggerType.AutomodTriggerType.KEYWORD];
@@ -14,6 +14,7 @@ export const AutomodTriggerType = AutomodTriggerType.AutomodTriggerType;
 export const AutomodActionType = AutomodActionType.AutomodActionType;
 export const KeywordPreset = { PROFANITY: 1, [1]: "PROFANITY", SEXUAL_CONTENT: 2, [2]: "SEXUAL_CONTENT", SLURS: 3, [3]: "SLURS" };
 export const AUTOMOD_TRIGGER_TYPES = items;
+export const MAX_APPLICATION_RULES_PER_GUILD = 5;
 export const MAX_KEYWORDS_PER_KEYWORD_FILTER = 1000;
 export const MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE = 100;
 export const MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE = 1000;

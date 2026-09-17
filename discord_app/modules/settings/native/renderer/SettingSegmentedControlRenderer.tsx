@@ -1,20 +1,20 @@
-// === Module 14816: SettingSegmentedControlRenderer ===
+// === Module 14824: SettingSegmentedControlRenderer ===
 
-// Module 14816 (SettingSegmentedControlRenderer)
+// Module 14824 (SettingSegmentedControlRenderer)
 import nativeDefault from "native" /* 576 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14807 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14815 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14804 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14812 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const NodeType = fn(11615).NodeType;
+const NodeType = fn(11623).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { controlContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 }, pageContainer: { flex: 1 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -54,13 +54,13 @@ export default function SettingSegmentedControl(node) {
   const memo = noop.useMemo(() => {
     const items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(14698).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(14706).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(14806).getSettingTitle(id);
+      obj.label = items(14814).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

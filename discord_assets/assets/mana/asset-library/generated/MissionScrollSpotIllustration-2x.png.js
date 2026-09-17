@@ -1,6 +1,6 @@
-// === Module 6352: ? ===
+// === Module 6354: ? ===
 
-// Module 6352
+// Module 6354
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MissionScrollSpotIllustration-2x.png.js");

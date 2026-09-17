@@ -1,8 +1,8 @@
-// === Module 14053: GuildBadgeMoneyBag ===
+// === Module 14061: GuildBadgeMoneyBag ===
 
-// Module 14053 (GuildBadgeMoneyBag)
-import inlineStyles from "inlineStyles" /* 8586 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14023 */;
+// Module 14061 (GuildBadgeMoneyBag)
+import inlineStyles from "inlineStyles" /* 8606 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14031 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

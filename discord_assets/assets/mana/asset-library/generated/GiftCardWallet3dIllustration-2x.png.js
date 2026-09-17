@@ -1,6 +1,6 @@
-// === Module 6256: ? ===
+// === Module 6258: ? ===
 
-// Module 6256
+// Module 6258
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardWallet3dIllustration-2x.png.js");

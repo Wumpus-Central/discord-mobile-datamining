@@ -1,19 +1,19 @@
-// === Module 16320: GameClaimCoachmark ===
+// === Module 16350: GameClaimCoachmark ===
 
-// Module 16320 (GameClaimCoachmark)
+// Module 16350 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import components_Button_Button from "components/Button/Button" /* 5060 */;
-import ButtonConstants from "ButtonConstants" /* 5065 */;
-import Pressables from "Pressables" /* 5208 */;
-import Card from "Card" /* 5693 */;
-import XSmallIcon from "XSmallIcon" /* 5766 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8713 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9063 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10257 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16321 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16322 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import components_Button_Button from "components/Button/Button" /* 5062 */;
+import ButtonConstants from "ButtonConstants" /* 5067 */;
+import Pressables from "Pressables" /* 5210 */;
+import Card from "Card" /* 5695 */;
+import XSmallIcon from "XSmallIcon" /* 5768 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8733 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9074 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10268 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16351 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16352 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { card: { padding: nativeDefault.space.PX_12 }, closeButton: null, centeredText: null, body: null, cta: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;
@@ -95,8 +95,8 @@ export default noop.memo((arg0) => {
     obj9.text = intl3.string(util.t["2u6ZlY"]);
     obj9.icon = closure_8(LinkExternalSmallIcon.LinkExternalSmallIcon, { size: "xs", color: "white" });
     obj9.onPress = asyncGeneratorStep(async () => {
-      if (c0 === 2) {
-        c0 = 3;
+      if (v3 === 2) {
+        v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
@@ -109,36 +109,36 @@ export default noop.memo((arg0) => {
         }
       } else {
         try {
-          c0 = 2;
+          v3 = 2;
           if (0 === v1) {
             if (arg0 === 1) {
-              c0 = 3;
+              v3 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c0 = 3;
+              v3 = 3;
               const obj4 = { value, done: true };
               return obj4;
             } else {
               require(constants2.TAKE_ACTION);
               v1 = 1;
-              c0 = 1;
-              const obj5 = { value: v1(dependencyMap[20]).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY), done: false };
+              v3 = 1;
+              const obj5 = { value: v1(7430).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7434).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
-            c0 = 3;
+            v3 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c0 = 3;
+            v3 = 3;
             const obj = { value, done: true };
             return obj;
           } else {
-            c0 = 3;
+            v3 = 3;
             return { value: "HermesInternal", done: null };
           }
-        } catch (tmp11) {
-          c0 = tmp;
-          throw tmp11;
+        } catch (tmp12) {
+          v3 = tmp;
+          throw tmp12;
         }
       }
     });

@@ -1,20 +1,20 @@
-// === Module 4677: StreamRTCConnectionStore ===
+// === Module 4679: StreamRTCConnectionStore ===
 
-// Module 4677 (StreamRTCConnectionStore)
+// Module 4679 (StreamRTCConnectionStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 4682 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4690 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4693 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7852 */;
-import canSpectateDefault from "canSpectate" /* 13908 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 4684 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4692 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4695 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7858 */;
+import canSpectateDefault from "canSpectate" /* 13916 */;
 import RunningGameStore from "RunningGameStore" /* 1916 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import PresenceStore from "PresenceStore" /* 4678 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4661 */;
+import PresenceStore from "PresenceStore" /* 4680 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
 import Dispatcher from "Dispatcher" /* 573 */;
 
 const StreamRTCConnectionDefault = StreamRTCConnection;
@@ -22,7 +22,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 require = fn;
 const Constants = fn(1074);
 ({ RTCConnectionQuality: closure_9, StreamLayouts } = Constants);
-const StreamTypes = fn(4680).StreamTypes;
+const StreamTypes = fn(4682).StreamTypes;
 let dependencyMap = {};
 dependencyMap = {};
 let closure_13 = {};
@@ -293,7 +293,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
         appContext = appContext.appContext;
         const streamKey = appContext.streamKey;
-        closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
+        closure_11[streamKey] = { appContext, analyticsLocations: "a" };
         const item = _modDef12.forEach(closure_18, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;
           analyticsContext.setActionContext(appContext);

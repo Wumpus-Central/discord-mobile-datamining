@@ -1,8 +1,8 @@
-// === Module 10148: coercePlatformTypeToConsoleType ===
+// === Module 10159: coercePlatformTypeToConsoleType ===
 
-// Module 10148 (coercePlatformTypeToConsoleType)
+// Module 10159 (coercePlatformTypeToConsoleType)
 import Constants from "Constants" /* 1074 */;
-import GameConsoleConstants from "GameConsoleConstants" /* 9376 */;
+import GameConsoleConstants from "GameConsoleConstants" /* 9387 */;
 import size from "module_2" /* 2 */;
 
 const GameConsoleTypes = GameConsoleConstants.GameConsoleTypes;

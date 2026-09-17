@@ -1,10 +1,10 @@
-// === Module 7190: CodeField ===
+// === Module 7194: CodeField ===
 
-// Module 7190 (CodeField)
+// Module 7194 (CodeField)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5664 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5666 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -26,7 +26,7 @@ function SingleCodeInput(loading) {
   const setCode = loading.setCode;
   const tmp2 = closure_10();
   obj = { style: tmp2.singleInputWrapper, children: null };
-  const obj2 = { errorMessage: error, value: code, autoCapitalize: "characters", maxLength: count, accessibilityLabel: null, textContentType: "oneTimeCode", keyboardType: null, onChange: null, isDisabled: null, isClearable: true, autoFocus: true };
+  const obj2 = { errorMessage: error, value: code, autoCapitalize: "characters", maxLength: count, accessibilityLabel: null, textContentType: "oneTimeCode", keyboardType: null, onChange: null, disabled: null, clearable: true, autoFocus: true };
   const intl = NUMERIC(code[8]).intl;
   obj2.accessibilityLabel = intl.string(NUMERIC(code[8]).t["ysthA+"]);
   let str = "default";
@@ -37,7 +37,7 @@ function SingleCodeInput(loading) {
   obj2.onChange = function handleChange(str) {
     setCode(str.replace(NUMERIC === obj.NUMERIC ? /\D/g : /[^A-Z0-9]/g, ""));
   };
-  obj2.isDisabled = disabled;
+  obj2.disabled = disabled;
   const items = [closure_7(NUMERIC(code[7]).TextInput, obj2), ];
   const obj3 = { style: tmp2.singleInputButton, children: null };
   const obj4 = { loading: flag, variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
@@ -89,7 +89,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const CodeType = { NUMERIC: "numeric", ALPHANUMERIC: "alphanumeric" };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj3 = { viewWrapper: { flex: 1 }, background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, backgroundFlex: { flex: 1, justifyContent: "space-between" }, container: { padding: 16 }, title: { textAlign: "center" }, subtitle: { marginTop: 8, lineHeight: 18, textAlign: "center" }, inputContainer: { marginTop: 20, width: "100%", alignItems: "center" }, codeContainer: { maxWidth: 336, width: "100%", flexDirection: "row", justifyContent: "space-around" }, spacer: { width: 4 }, inputWrapper: null, inputWrapperError: null, input: null, singleInputWrapper: null, singleInputButton: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj3.inputWrapper = { borderWidth: 1, borderRadius: 5, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };

@@ -1,6 +1,6 @@
-// === Module 5972: ? ===
+// === Module 5974: ? ===
 
-// Module 5972
+// Module 5974
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CoinSlotSpotIllustration-2x.png.js");

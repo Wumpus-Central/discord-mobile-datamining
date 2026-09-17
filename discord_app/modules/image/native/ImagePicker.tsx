@@ -1,12 +1,12 @@
-// === Module 5235: ImagePicker ===
+// === Module 5237: ImagePicker ===
 
-// Module 5235 (ImagePicker)
+// Module 5237 (ImagePicker)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 5236 */;
-import launchCamera from "launchCamera" /* 5237 */;
-import openPickerDefault from "openPicker" /* 5239 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 5238 */;
+import launchCamera from "launchCamera" /* 5239 */;
+import openPickerDefault from "openPicker" /* 5241 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;

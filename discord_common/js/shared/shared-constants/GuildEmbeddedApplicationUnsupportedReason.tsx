@@ -1,6 +1,6 @@
-// === Module 9888: GuildEmbeddedApplicationUnsupportedReason ===
+// === Module 9899: GuildEmbeddedApplicationUnsupportedReason ===
 
-// Module 9888 (GuildEmbeddedApplicationUnsupportedReason)
+// Module 9899 (GuildEmbeddedApplicationUnsupportedReason)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildEmbeddedApplicationUnsupportedReason.tsx");

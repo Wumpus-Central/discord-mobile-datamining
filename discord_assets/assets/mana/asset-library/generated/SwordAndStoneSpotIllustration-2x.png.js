@@ -1,6 +1,6 @@
-// === Module 6642: ? ===
+// === Module 6644: ? ===
 
-// Module 6642
+// Module 6644
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SwordAndStoneSpotIllustration-2x.png.js");

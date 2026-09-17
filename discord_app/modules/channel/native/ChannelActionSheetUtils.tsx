@@ -1,9 +1,9 @@
-// === Module 11106: ChannelActionSheetUtils ===
+// === Module 11114: ChannelActionSheetUtils ===
 
-// Module 11106 (ChannelActionSheetUtils)
-import ToastUtils from "ToastUtils" /* 4335 */;
-import ChannelUtils from "ChannelUtils" /* 4783 */;
-import ClipboardUtils from "ClipboardUtils" /* 7299 */;
+// Module 11114 (ChannelActionSheetUtils)
+import ToastUtils from "ToastUtils" /* 4337 */;
+import ChannelUtils from "ChannelUtils" /* 4785 */;
+import ClipboardUtils from "ClipboardUtils" /* 7303 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel/native/ChannelActionSheetUtils.tsx");

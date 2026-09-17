@@ -1,8 +1,8 @@
-// === Module 8233: transformNativeMarkupLink ===
+// === Module 8252: transformNativeMarkupLink ===
 
-// Module 8233 (transformNativeMarkupLink)
-import MarkupTypes from "MarkupTypes" /* 5081 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5087 */;
+// Module 8252 (transformNativeMarkupLink)
+import MarkupTypes from "MarkupTypes" /* 5083 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5089 */;
 import size from "module_2" /* 2 */;
 
 function stripCredentialsForDisplay(url) {

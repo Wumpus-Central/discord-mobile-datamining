@@ -1,25 +1,25 @@
-// === Module 15905: UserSettingsDesignSystemTextInput ===
+// === Module 15922: UserSettingsDesignSystemTextInput ===
 
-// Module 15905 (UserSettingsDesignSystemTextInput)
+// Module 15922 (UserSettingsDesignSystemTextInput)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import Stack_Stack from "Stack/Stack" /* 5058 */;
-import components_Button_Button from "components/Button/Button" /* 5060 */;
-import TextIcon from "TextIcon" /* 5165 */;
-import AtIcon from "AtIcon" /* 5175 */;
-import Card from "Card" /* 5693 */;
-import TextInput from "TextInput" /* 6714 */;
-import Input from "Input" /* 6715 */;
-import TextField from "TextField" /* 6721 */;
-import SplitTextInput from "SplitTextInput" /* 7074 */;
-import SearchField from "SearchField" /* 7160 */;
-import TextArea from "TextArea" /* 7195 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7259 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7260 */;
-import SettingsIcon from "SettingsIcon" /* 7490 */;
-import IconButton from "IconButton" /* 8214 */;
-import GhostInput from "GhostInput" /* 14286 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import Stack_Stack from "Stack/Stack" /* 5060 */;
+import components_Button_Button from "components/Button/Button" /* 5062 */;
+import TextIcon from "TextIcon" /* 5167 */;
+import AtIcon from "AtIcon" /* 5177 */;
+import Card from "Card" /* 5695 */;
+import TextInput from "TextInput" /* 6717 */;
+import Input from "Input" /* 6718 */;
+import TextField from "TextField" /* 6724 */;
+import SplitTextInput from "SplitTextInput" /* 7078 */;
+import SearchField from "SearchField" /* 7164 */;
+import TextArea from "TextArea" /* 7199 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7263 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7264 */;
+import SettingsIcon from "SettingsIcon" /* 7494 */;
+import IconButton from "IconButton" /* 8057 */;
+import GhostInput from "GhostInput" /* 14294 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -97,7 +97,7 @@ function GhostInputActionSheet() {
 function GhostInputActionSheetLeftAligned() {
   const obj = { children: null };
   const items = [timestampProducer(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: "Ghost Input - Left Aligned" }), ];
-  const obj2 = { style: { padding: 12 }, children: timestampProducer(Sample, { children: timestampProducer(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters", isCentered: false, size: "md" }) }) };
+  const obj2 = { style: { padding: 12 }, children: timestampProducer(Sample, { children: timestampProducer(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters", centered: false, size: "md" }) }) };
   items[1] = timestampProducer(Stack_Stack.Stack, obj2);
   obj.children = items;
   return React5(Sheet_BottomSheet.BottomSheet, obj);
@@ -133,7 +133,7 @@ function CustomAttachmentExample() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { padding: 16 }, sample: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.xl } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -143,7 +143,7 @@ export default function UserSettingsDesignSystemTextInput() {
   const obj = { children: null };
   const obj2 = { spacing: 24, style: closure_8().container, children: null };
   const obj3 = { children: null };
-  const items = [timestampProducer(TextInput.TextInput, { label: "Input Label", placeholder: "Placeholder text", description: "Descriptions give context for the input.", errorMessage: "Error messages communicate invalid states." }), timestampProducer(TextArea.TextArea, { label: "Text Area", maxLength: 100, placeholder: "Multiline inputs use TextArea" }), timestampProducer(TextInput.TextInput, { label: "Password", secureTextEntry: true, placeholder: "Password", isClearable: true }), timestampProducer(TextInput.TextInput, { label: "Required Field", placeholder: "Placeholder", description: "Required inputs are indicated with an asterisk.", required: true })];
+  const items = [timestampProducer(TextInput.TextInput, { label: "Input Label", placeholder: "Placeholder text", description: "Descriptions give context for the input.", errorMessage: "Error messages communicate invalid states." }), timestampProducer(TextArea.TextArea, { label: "Text Area", maxLength: 100, placeholder: "Multiline inputs use TextArea" }), timestampProducer(TextInput.TextInput, { label: "Password", secureTextEntry: true, placeholder: "Password", clearable: true }), timestampProducer(TextInput.TextInput, { label: "Required Field", placeholder: "Placeholder", description: "Required inputs are indicated with an asterisk.", required: true })];
   obj3.children = items;
   const items1 = [React5(Sample, obj3), timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Sizing" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "All inputs except TextArea accept a size prop, either sm, md, or lg. By default, inputs will use the large variant." }), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
   const obj4 = { children: null };
@@ -169,10 +169,10 @@ export default function UserSettingsDesignSystemTextInput() {
   items1[10] = timestampProducer(Sample, { children: timestampProducer(CustomAttachmentExample, {}) });
   items1[11] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Note that the props do not allow for changing the styling of the pressable. Styling is instead handled by the Input itself." });
   items1[12] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Rounding" });
-  items1[13] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "All inputs except TextArea can use the isRound prop to fully round out the sides. Round variants should only be used when adjacent to another round element, like an IconButton." });
+  items1[13] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "All inputs except TextArea can use the round prop to fully round out the sides. Round variants should only be used when adjacent to another round element, like an IconButton." });
   const obj10 = { children: null };
   const obj11 = { children: null };
-  const items4 = [timestampProducer(SearchField.SearchField, { size: "md", isRound: true }), ];
+  const items4 = [timestampProducer(SearchField.SearchField, { size: "md", round: true }), ];
   const obj9 = { children: timestampProducer(CustomAttachmentExample, {}) };
   items4[1] = timestampProducer(IconButton.IconButton, {
     icon: timestampProducer(SettingsIcon.SettingsIcon, { size: "sm" }),
@@ -192,7 +192,7 @@ export default function UserSettingsDesignSystemTextInput() {
   obj13.children = items5;
   items1[17] = React5(Sample, obj13);
   items1[18] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Clearable" });
-  items1[19] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Inputs can use the isClearable prop to let users immediately empty the input value with a button. The button is automatically rendered when the input contains a non-empty value. When pressed, the onClear callback is called, as well as the onChange with the new empty value." });
+  items1[19] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Inputs can use the clearable prop to let users immediately empty the input value with a button. The button is automatically rendered when the input contains a non-empty value. When pressed, the onClear callback is called, as well as the onChange with the new empty value." });
   const obj12 = {
     icon: timestampProducer(SettingsIcon.SettingsIcon, { size: "sm" }),
     accessibilityLabel: "Settings",
@@ -201,16 +201,16 @@ export default function UserSettingsDesignSystemTextInput() {
     },
     variant: "tertiary"
   };
-  items1[20] = timestampProducer(Sample, { children: timestampProducer(TextField.TextField, { defaultValue: "Clear this text", isClearable: true }) });
-  items1[21] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Certain input types automatically control the isClearable prop. For example, SearchInput is always clearable. Most inputs will also replace any trailing attachment with the clear button when it is present." });
+  items1[20] = timestampProducer(Sample, { children: timestampProducer(TextField.TextField, { defaultValue: "Clear this text", clearable: true }) });
+  items1[21] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Certain input types automatically control the clearable prop. For example, SearchInput is always clearable. Most inputs will also replace any trailing attachment with the clear button when it is present." });
   items1[22] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Disableable" });
-  items1[23] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "The isDisabled prop prevents users from interacting with an input in any way. The input container will be visually dimmed." });
-  const obj14 = { children: timestampProducer(TextField.TextField, { defaultValue: "Clear this text", isClearable: true }) };
-  items1[24] = timestampProducer(Sample, { children: timestampProducer(TextInput.TextInput, { defaultValue: "Can't edit this value", isDisabled: true }) });
-  items1[25] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "The isDisabled prop prevents users from interacting with an input in any way. The input container will be visually dimmed." });
+  items1[23] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "The disabled prop prevents users from interacting with an input in any way. The input container will be visually dimmed." });
+  const obj14 = { children: timestampProducer(TextField.TextField, { defaultValue: "Clear this text", clearable: true }) };
+  items1[24] = timestampProducer(Sample, { children: timestampProducer(TextInput.TextInput, { defaultValue: "Can't edit this value", disabled: true }) });
+  items1[25] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "The disabled prop prevents users from interacting with an input in any way. The input container will be visually dimmed." });
   items1[26] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Max Length" });
   items1[27] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Inputs can specify a maxLength prop to limit how long the user's input value can be. For TextAreas, setting a maxLength will also render an indicator in the bottom corner of how much of that length the current value takes up." });
-  const obj15 = { children: timestampProducer(TextInput.TextInput, { defaultValue: "Can't edit this value", isDisabled: true }) };
+  const obj15 = { children: timestampProducer(TextInput.TextInput, { defaultValue: "Can't edit this value", disabled: true }) };
   items1[28] = timestampProducer(Sample, { children: timestampProducer(TextArea.TextArea, { label: "Limited length", maxLength: 124 }) });
   items1[29] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Exceeding the maxLength will prevent the user from inputting any more text for the value until it has been shortened under the maximum length." });
   items1[30] = timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Ghost Inputs (Deprecated)" });
@@ -224,7 +224,7 @@ export default function UserSettingsDesignSystemTextInput() {
     })
   };
   items1[32] = timestampProducer(Sample, obj17);
-  items1[33] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "GhostInputs can also appear left-aligned by setting `isCentered` to false." });
+  items1[33] = timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "GhostInputs can also appear left-aligned by setting `centered` to false." });
   const obj19 = {
     children: timestampProducer(components_Button_Button.Button, {
       onPress() {

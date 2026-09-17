@@ -1,10 +1,10 @@
-// === Module 8143: StageEndSystemMessage ===
+// === Module 8163: StageEndSystemMessage ===
 
-// Module 8143 (StageEndSystemMessage)
+// Module 8163 (StageEndSystemMessage)
 import util from "util" /* 1115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8076 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8078 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8080 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8096 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8098 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8100 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageEndSystemMessage.tsx");

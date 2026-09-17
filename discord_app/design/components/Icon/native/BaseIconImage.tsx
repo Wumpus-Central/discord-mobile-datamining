@@ -1,7 +1,7 @@
-// === Module 4338: BaseIconImage ===
+// === Module 4340: BaseIconImage ===
 
-// Module 4338 (BaseIconImage)
-import useToken from "useToken" /* 4339 */;
+// Module 4340 (BaseIconImage)
+import useToken from "useToken" /* 4341 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

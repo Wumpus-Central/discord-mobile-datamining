@@ -1,15 +1,15 @@
-// === Module 13493: PremiumBillingInfo ===
+// === Module 13501: PremiumBillingInfo ===
 
-// Module 13493 (PremiumBillingInfo)
+// Module 13501 (PremiumBillingInfo)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import PremiumUtils from "PremiumUtils" /* 4295 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7272 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
-import PremiumManagementUtils from "PremiumManagementUtils" /* 7514 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13490 */;
-import BillingInformation from "BillingInformation" /* 13494 */;
+import PremiumUtils from "PremiumUtils" /* 4297 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7276 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
+import PremiumManagementUtils from "PremiumManagementUtils" /* 7518 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13498 */;
+import BillingInformation from "BillingInformation" /* 13502 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ const Constants = fn(1074);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, billingContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 }, billingRenewalInfo: { marginTop: 4 }, billingManageGoogle: { marginTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

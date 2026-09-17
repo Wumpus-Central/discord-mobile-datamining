@@ -1,6 +1,6 @@
-// === Module 7392: SidebarActionTypes ===
+// === Module 7396: SidebarActionTypes ===
 
-// Module 7392 (SidebarActionTypes)
+// Module 7396 (SidebarActionTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/sidebar/SidebarActionTypes.tsx");

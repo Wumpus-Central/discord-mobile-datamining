@@ -1,31 +1,31 @@
-// === Module 15054: UserSettingsAuthedApps ===
+// === Module 15062: UserSettingsAuthedApps ===
 
-// Module 15054 (UserSettingsAuthedApps)
+// Module 15062 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4592 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import TableRowGroup from "TableRowGroup" /* 5773 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7100 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7105 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9029 */;
-import applications from "applications" /* 9384 */;
-import EmbedIcon from "EmbedIcon" /* 9574 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4594 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import TableRowGroup from "TableRowGroup" /* 5775 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7104 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7109 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9044 */;
+import applications from "applications" /* 9395 */;
+import EmbedIcon from "EmbedIcon" /* 9585 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7217 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7221 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const FetchState = fn(7217).FetchState;
+const FetchState = fn(7221).FetchState;
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { spinner: { padding: 16 }, emptyText: { marginTop: 24 }, emptyContainer: { padding: 16 }, container: { paddingHorizontal: 16, paddingTop: nativeDefault.space.PX_24 }, headerDescription: { marginTop: 12 }, appListHeader: { marginTop: 24 } };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);

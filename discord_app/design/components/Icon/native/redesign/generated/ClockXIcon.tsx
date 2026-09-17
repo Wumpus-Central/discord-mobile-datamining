@@ -1,9 +1,9 @@
-// === Module 11880: ClockXIcon ===
+// === Module 11889: ClockXIcon ===
 
-// Module 11880 (ClockXIcon)
+// Module 11889 (ClockXIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod11881 from "module_11881" /* 11881 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod11890 from "module_11890" /* 11890 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ClockXIcon = function ClockXIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11881, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11890, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

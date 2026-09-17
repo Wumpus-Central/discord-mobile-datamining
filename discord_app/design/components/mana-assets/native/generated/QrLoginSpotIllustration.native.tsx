@@ -1,9 +1,9 @@
-// === Module 6483: QrLoginSpotIllustration ===
+// === Module 6485: QrLoginSpotIllustration ===
 
-// Module 6483 (QrLoginSpotIllustration)
+// Module 6485 (QrLoginSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6484 from "module_6484" /* 6484 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6486 from "module_6486" /* 6486 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const QrLoginSpotIllustration = function QrLoginSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6484 };
+  const obj2 = { uri: _modDef6486 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

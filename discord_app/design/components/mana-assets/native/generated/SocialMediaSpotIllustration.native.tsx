@@ -1,9 +1,9 @@
-// === Module 6579: SocialMediaSpotIllustration ===
+// === Module 6581: SocialMediaSpotIllustration ===
 
-// Module 6579 (SocialMediaSpotIllustration)
+// Module 6581 (SocialMediaSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6580 from "module_6580" /* 6580 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6582 from "module_6582" /* 6582 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SocialMediaSpotIllustration = function SocialMediaSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6580 };
+  const obj2 = { uri: _modDef6582 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

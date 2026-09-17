@@ -1,6 +1,6 @@
-// === Module 8326: BadgeDirectoryActionCreators ===
+// === Module 8345: BadgeDirectoryActionCreators ===
 
-// Module 8326 (BadgeDirectoryActionCreators)
+// Module 8345 (BadgeDirectoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

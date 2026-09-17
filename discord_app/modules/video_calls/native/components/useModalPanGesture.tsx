@@ -1,9 +1,9 @@
-// === Module 13069: useModalPanGesture ===
+// === Module 13077: useModalPanGesture ===
 
-// Module 13069 (useModalPanGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
-import spring from "spring" /* 5059 */;
+// Module 13077 (useModalPanGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
+import spring from "spring" /* 5061 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = { code: "function useModalPanGestureTsx1({velocityY:velocityY}){const{translateY,thresholdTranslate,thresholdVelocity,withSpring,height,runOnJS,ModalActionCreators,onClose,onEnd}=this.__closure;const config={damping:15,mass:1,stiffness:250,overshootClamping:true,restSpeedThreshold:0.001,restDisplacementThreshold:0.001,velocity:velocityY};if(translateY.get()>=thresholdTranslate||velocityY>=thresholdVelocity){translateY.set(withSpring(height,config,'respect-motion-settings',function(){runOnJS(ModalActionCreators.pop)();}));if(onClose!=null){runOnJS(onClose)();}}else{translateY.set(withSpring(0,config));}if(onEnd!=null){runOnJS(onEnd)();}}" };
@@ -82,7 +82,7 @@ export default function useModalPanGesture(thresholdVelocity) {
       }
       obj4 = closure_0(closure_2[2]);
       fn = function n() {
-        num(4374).runOnJS(maxTranslate(4841).pop)();
+        num(4376).runOnJS(maxTranslate(4843).pop)();
       };
       obj1 = { runOnJS: closure_0(closure_2[0]).runOnJS, ModalActionCreators: closure_1(closure_2[3]) };
       fn.__closure = obj1;

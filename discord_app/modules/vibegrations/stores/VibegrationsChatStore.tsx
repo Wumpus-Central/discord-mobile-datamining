@@ -1,21 +1,21 @@
-// === Module 16722: VibegrationsChatStore ===
+// === Module 16753: VibegrationsChatStore ===
 
-// Module 16722 (VibegrationsChatStore)
+// Module 16753 (VibegrationsChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import _modDef3591 from "module_3591" /* 3591 */;
-import SoundUtils from "SoundUtils" /* 10042 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16724 */;
+import _modDef3593 from "module_3593" /* 3593 */;
+import SoundUtils from "SoundUtils" /* 10053 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16755 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7647 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10220 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7651 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10231 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5365 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16723 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5367 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16754 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -383,7 +383,7 @@ function recordThinkingTransition(projectId) {
                     if ("terminal_error" !== tmp47.kind) {
                       if ("preview_ready" === tmp47.kind) {
                         let intl = util.intl;
-                        content = intl.string(_modDef3591["78YNh7"]);
+                        content = intl.string(_modDef3593["78YNh7"]);
                       } else {
                         diff3 = diff3 - 1;
                         content = null;
@@ -605,8 +605,8 @@ prototype["getProjectUsage"] = function getProjectUsage(projectId) {
   }
   return value;
 };
-prototype["getThinkingActivity"] = function getThinkingActivity(arg0) {
-  value = map4.get(arg0);
+prototype["getThinkingActivity"] = function getThinkingActivity(projectId) {
+  value = map4.get(projectId);
   if (value == null) {
     value = null;
   }
@@ -1059,7 +1059,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
                 const items = [];
                 const obj2 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef3591["wjWm+/"]);
+                obj2.message = intl.string(_modDef3593["wjWm+/"]);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                 obj.steps = items;
                 tmp2 = obj;

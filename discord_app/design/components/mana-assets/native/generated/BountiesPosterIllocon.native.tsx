@@ -1,9 +1,9 @@
-// === Module 5911: BountiesPosterIllocon ===
+// === Module 5913: BountiesPosterIllocon ===
 
-// Module 5911 (BountiesPosterIllocon)
+// Module 5913 (BountiesPosterIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5912 from "module_5912" /* 5912 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5914 from "module_5914" /* 5914 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const BountiesPosterIllocon = function BountiesPosterIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5912 };
+  const obj2 = { uri: _modDef5914 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

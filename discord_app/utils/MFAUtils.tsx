@@ -1,10 +1,9 @@
-// === Module 7059: MFAUtils ===
+// === Module 7063: MFAUtils ===
 
-// Module 7059 (MFAUtils)
-import _mod17 from "module_17" /* 17 */;
+// Module 7063 (MFAUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
+import encodeDefault from "encode" /* 7064 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
-import encodeDefault from "encode" /* 7060 */;
 import size from "module_2" /* 2 */;
 
 let _crypto;
@@ -25,18 +24,13 @@ if (tmp5) {
 if (tmp5) {
   tmp5 = tmp4;
 }
-let tmp6 = null != _mod17.NativeModules.DCDSecurityKeyManager;
-if (tmp6) {
-  const _module = MetaQuestUtils;
-  tmp6 = !_module.isMetaQuest();
-}
 function encodeTotpSecret(totpSecret) {
   return totpSecret.replace(/[\s._-]+/g, "").toUpperCase();
 }
 const result = size.fileFinishedImporting("utils/MFAUtils.tsx");
 
 export const hasCrypto = tmp5;
-export const hasWebAuthn = tmp6;
+export const hasWebAuthn = !MetaQuestUtils.isMetaQuest();
 export const generateTotpSecret = function generateTotpSecret() {
   const uint8Array = new Uint8Array(20);
   const randomValues = _crypto.getRandomValues(uint8Array);

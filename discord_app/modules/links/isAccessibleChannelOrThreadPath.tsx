@@ -1,9 +1,9 @@
-// === Module 7359: isAccessibleChannelOrThreadPath ===
+// === Module 7363: isAccessibleChannelOrThreadPath ===
 
-// Module 7359 (isAccessibleChannelOrThreadPath)
+// Module 7363 (isAccessibleChannelOrThreadPath)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatedChannelStore from "GatedChannelStore" /* 2014 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7206 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7210 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
 import GuildStore from "GuildStore" /* 1980 */;

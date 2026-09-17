@@ -1,9 +1,9 @@
-// === Module 11635: apexExperiment ===
+// === Module 11643: apexExperiment ===
 
-// Module 11635 (apexExperiment)
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11438 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11439 */;
-import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11636 */;
+// Module 11643 (apexExperiment)
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11446 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11447 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11644 */;
 import ApexExperiment_mod from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
@@ -24,10 +24,10 @@ const obj5 = { name: "2026-07-custom-app-store-overlay", kind: "user", defaultCo
 const obj6 = { 1: null };
 obj6[1] = { enabled: true };
 obj5.variations = obj6;
-const obj7 = { CONTROL: 0, [0]: "CONTROL", LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY: 1, [1]: "LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY", ENTIRE_VIDEO_CLICKABLE: 2, [2]: "ENTIRE_VIDEO_CLICKABLE", OPEN_APP_SHEET_ON_PAUSE: 3, [3]: "OPEN_APP_SHEET_ON_PAUSE" };
+const obj7 = { CONTROL: 0, [0]: "CONTROL", LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY: 1, [1]: "LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY", FIRST_TAP_APP_STORE_OVERLAY: 2, [2]: "FIRST_TAP_APP_STORE_OVERLAY", EVERY_PAUSE_APP_STORE_OVERLAY: 3, [3]: "EVERY_PAUSE_APP_STORE_OVERLAY" };
 const apexExperiment2 = ApexExperiment.createApexExperiment(obj5);
 let ApexExperiment = ApexExperiment_mod;
-const obj8 = { name: "2026-08-bounties-ctr-experiment-1", kind: "user", defaultConfig: { enabled: false, variant: obj7.CONTROL }, variations: { 0: { enabled: false, variant: obj7.CONTROL }, 1: { enabled: true, variant: obj7.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY }, 2: { enabled: true, variant: obj7.ENTIRE_VIDEO_CLICKABLE }, 3: { enabled: true, variant: obj7.OPEN_APP_SHEET_ON_PAUSE } } };
+const obj8 = { name: "2026-08-bounties-ctr-experiment-1", kind: "user", defaultConfig: { enabled: false, variant: obj7.CONTROL }, variations: { 0: { enabled: false, variant: obj7.CONTROL }, 1: { enabled: true, variant: obj7.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY }, 2: { enabled: true, variant: obj7.FIRST_TAP_APP_STORE_OVERLAY }, 3: { enabled: true, variant: obj7.EVERY_PAUSE_APP_STORE_OVERLAY } } };
 const apexExperiment3 = ApexExperiment.createApexExperiment(obj8);
 let ApexExperiment = ApexExperiment_mod;
 const obj10 = { name: "2026-07-ios-attribution", kind: "user", defaultConfig: { enabled: false }, variations: null };

@@ -1,16 +1,16 @@
-// === Module 14702: UserProfileEditForm ===
+// === Module 14710: UserProfileEditForm ===
 
-// Module 14702 (UserProfileEditForm)
+// Module 14710 (UserProfileEditForm)
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8295 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8296 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8326 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13220 */;
-import _modDef14704 from "module_14704" /* 14704 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8314 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8315 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8345 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13228 */;
+import _modDef14712 from "module_14712" /* 14712 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8321 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9351 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8340 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9362 */;
 
 require = fn;
 function EditUserProfileBanner(user) {
@@ -47,7 +47,7 @@ function EditUserProfileBanner(user) {
       fn = (banner) => user(isTryItOut[19]).setPendingChanges({ banner });
     }
     obj2.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14706, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14714, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -65,14 +65,14 @@ function EditUserProfileBanner(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7318).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7322).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10 } = Constants);
 let closure_11 = fn(1084).ProfileCustomizationScrollPositions;
-const constants = fn(14703).UserProfileEditAutoFocusElement;
+const constants = fn(14711).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { assetOrigin: fn(7099).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14704, staticImageUri: _modDef14704, description: "", originalAsset: "assign" };
+let obj = { assetOrigin: fn(7103).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14712, staticImageUri: _modDef14712, description: "", originalAsset: "call" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 
@@ -311,7 +311,7 @@ export default function UserProfileEditForm(currentUser) {
     }
   }
   const items14 = [tmp41Result, , , , , , , , , , , , , ];
-  const obj25 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, isDisabled: null };
+  const obj25 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, disabled: null };
   const tmpResult14 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[49]);
   const intl2 = tmp5(tmp2[21]).intl;
   obj25.label = intl2.string(currentUser.currentUser(pendingBadgeHiddenBadges[21]).t["9AjdkD"]);
@@ -326,7 +326,7 @@ export default function UserProfileEditForm(currentUser) {
   };
   obj25.placeholder = currentUser.currentUser.toString();
   obj25.maxLength = maxLength;
-  obj25.isDisabled = isSubmitting;
+  obj25.disabled = isSubmitting;
   items14[1] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj25);
   let tmp41Result6 = result;
   if (!result) {
@@ -337,7 +337,7 @@ export default function UserProfileEditForm(currentUser) {
     tmp41Result6 = closure_13(tmp(tmp2[51]), obj26);
   }
   items14[2] = tmp41Result6;
-  const obj27 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, spellCheck: false, autoCorrect: false, isDisabled: null };
+  const obj27 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, spellCheck: false, autoCorrect: false, disabled: null };
   const tmpResult15 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);
   const intl3 = tmp5(tmp2[21]).intl;
   obj27.label = intl3.string(currentUser.currentUser(pendingBadgeHiddenBadges[21]).t["+T3RI/"]);
@@ -351,7 +351,7 @@ export default function UserProfileEditForm(currentUser) {
     return str(pendingBadgeHiddenBadges[19]).setPendingChanges({ pronouns });
   };
   obj27.maxLength = maxLength2;
-  obj27.isDisabled = isSubmitting;
+  obj27.disabled = isSubmitting;
   items14[3] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj27);
   let tmp41Result7 = !isTryItOut;
   if (!isTryItOut) {
@@ -359,7 +359,7 @@ export default function UserProfileEditForm(currentUser) {
     tmp41Result7 = closure_13(tmp(tmp2[52]), obj28);
   }
   items14[4] = tmp41Result7;
-  const obj29 = { inputRef: ref3, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, autoFocus: null, maxLength: null, numberOfLines: 5, isDisabled: null };
+  const obj29 = { inputRef: ref3, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, autoFocus: null, maxLength: null, numberOfLines: 5, disabled: null };
   const tmpResult16 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);
   const intl4 = tmp5(tmp2[21]).intl;
   obj29.label = intl4.string(currentUser.currentUser(pendingBadgeHiddenBadges[21]).t.ZzAR2Y);
@@ -374,7 +374,7 @@ export default function UserProfileEditForm(currentUser) {
   };
   obj29.autoFocus = autoFocusElement === constants.BIO;
   obj29.maxLength = bioMaxLength;
-  obj29.isDisabled = isSubmitting;
+  obj29.disabled = isSubmitting;
   items14[5] = closure_13(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]), obj29);
   const obj30 = { user: currentUser.currentUser, onProfileThemeColorsChanged: null, pendingAvatarSrc: null, pendingThemeColors: null, isTryItOut: null };
   const tmpResult17 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[50]);

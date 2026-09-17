@@ -1,11 +1,11 @@
-// === Module 12574: EmojiSuggestionBarSmall ===
+// === Module 12583: EmojiSuggestionBarSmall ===
 
-// Module 12574 (EmojiSuggestionBarSmall)
+// Module 12583 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10449 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10468 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12569 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10457 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10476 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12578 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -16,8 +16,8 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: noop, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_7(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(12569).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
-  let obj = displayEmojis(12569);
+  const suggestionBarHeight = displayEmojis(12578).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
+  let obj = displayEmojis(12578);
   class A {
     constructor() {
       obj = { opacity: null };
@@ -28,8 +28,8 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
       return obj;
     }
   }
-  let obj2 = displayEmojis(4374);
-  A.__closure = { interpolate: displayEmojis(4374).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT };
+  let obj2 = displayEmojis(4376);
+  A.__closure = { interpolate: displayEmojis(4376).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT };
   A.__workletHash = 1856279964267;
   A.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(A);
@@ -55,10 +55,10 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   return suggestionBarHeight(ReanimatedRexportDefault.View, obj4);
 }
 const jsx = fn(21).jsx;
-const sum = fn(10429).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10437).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = { position: "absolute", top: null, right: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, height: sum, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
@@ -75,9 +75,9 @@ const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSugges
 export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, arg1) => {
   anchorTop = anchorTop.anchorTop;
   const onOccupiedHeightChange = anchorTop.onOccupiedHeightChange;
-  let unlockedEmojis;
   let merged = Object.assign(anchorTop, Object.assign({ anchorTop: 0, onOccupiedHeightChange: 0 }));
-  const emojiSuggestionBarState = anchorTop(unlockedEmojis[5]).useEmojiSuggestionBarState(merged, anchorTop(unlockedEmojis[5]).MAX_SUGGESTIONS_LARGE, arg1);
+  let unlockedEmojis;
+  const emojiSuggestionBarState = anchorTop(unlockedEmojis[5]).useEmojiSuggestionBarState(merged, anchorTop(unlockedEmojis[5]).MAX_SUGGESTIONS_LARGE, 1, arg1);
   unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
   const lockedEmojis = emojiSuggestionBarState.lockedEmojis;
   const reducedMotion = emojiSuggestionBarState.reducedMotion;

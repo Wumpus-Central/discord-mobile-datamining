@@ -1,6 +1,6 @@
-// === Module 17324: ConsoleVoiceUpsellStore ===
+// === Module 17365: ConsoleVoiceUpsellStore ===
 
-// Module 17324 (ConsoleVoiceUpsellStore)
+// Module 17365 (ConsoleVoiceUpsellStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

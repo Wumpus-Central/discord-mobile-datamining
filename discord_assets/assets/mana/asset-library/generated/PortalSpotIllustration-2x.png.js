@@ -1,6 +1,6 @@
-// === Module 6458: ? ===
+// === Module 6460: ? ===
 
-// Module 6458
+// Module 6460
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PortalSpotIllustration-2x.png.js");

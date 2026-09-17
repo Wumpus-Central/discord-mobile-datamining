@@ -1,23 +1,23 @@
-// === Module 7745: RecentMentionsStore ===
+// === Module 7751: RecentMentionsStore ===
 
-// Module 7745 (RecentMentionsStore)
+// Module 7751 (RecentMentionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import TimeUtils from "TimeUtils" /* 4667 */;
-import AgeGateUtils from "AgeGateUtils" /* 4849 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4861 */;
-import isMessageMentioned from "isMessageMentioned" /* 4876 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7380 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7746 */;
-import MessageRecord from "MessageRecord" /* 4287 */;
+import TimeUtils from "TimeUtils" /* 4669 */;
+import AgeGateUtils from "AgeGateUtils" /* 4851 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4863 */;
+import isMessageMentioned from "isMessageMentioned" /* 4878 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7384 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7752 */;
+import MessageRecord from "MessageRecord" /* 4289 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4859 */;
-import ReadStateStore from "ReadStateStore" /* 4653 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4459 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4819 */;
+import MessageStore from "MessageStore" /* 4861 */;
+import ReadStateStore from "ReadStateStore" /* 4655 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const isMessageMentionedDefault = isMessageMentioned;

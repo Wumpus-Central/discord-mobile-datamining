@@ -1,15 +1,15 @@
-// === Module 10805: PremiumGiftPlanSelect ===
+// === Module 10813: PremiumGiftPlanSelect ===
 
-// Module 10805 (PremiumGiftPlanSelect)
+// Module 10813 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import native from "native" /* 1177 */;
-import timing from "timing" /* 4639 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10894 */;
+import timing from "timing" /* 4641 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10902 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8321 */;
-import PromotionsStore from "PromotionsStore" /* 10806 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8340 */;
+import PromotionsStore from "PromotionsStore" /* 10814 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 let items = [, ];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1374).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };

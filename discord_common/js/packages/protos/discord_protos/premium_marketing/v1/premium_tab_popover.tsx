@@ -1,11 +1,11 @@
-// === Module 10828: premium_tab_popover ===
+// === Module 10836: premium_tab_popover ===
 
-// Module 10828 (premium_tab_popover)
+// Module 10836 (premium_tab_popover)
 import _mod1187 from "module_1187" /* 1187 */;
-import localized_string from "localized_string" /* 10811 */;
-import help_article from "help_article" /* 10812 */;
-import cta_button from "cta_button" /* 10813 */;
-import theme_aware_asset from "theme_aware_asset" /* 10821 */;
+import localized_string from "localized_string" /* 10819 */;
+import help_article from "help_article" /* 10820 */;
+import cta_button from "cta_button" /* 10821 */;
+import theme_aware_asset from "theme_aware_asset" /* 10829 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

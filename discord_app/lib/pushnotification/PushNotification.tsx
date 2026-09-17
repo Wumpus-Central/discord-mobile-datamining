@@ -1,10 +1,10 @@
-// === Module 9827: PushNotification ===
+// === Module 9838: PushNotification ===
 
-// Module 9827 (PushNotification)
+// Module 9838 (PushNotification)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 9828 */;
-import NativePushNotificationMonitorModule from "NativePushNotificationMonitorModule" /* 9829 */;
-import openNotificationSettingsDefault from "openNotificationSettings" /* 9830 */;
+import RNCPushNotificationIOSDefault from "RNCPushNotificationIOS" /* 9839 */;
+import NativePushNotificationMonitorModule from "NativePushNotificationMonitorModule" /* 9840 */;
+import openNotificationSettingsDefault from "openNotificationSettings" /* 9841 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

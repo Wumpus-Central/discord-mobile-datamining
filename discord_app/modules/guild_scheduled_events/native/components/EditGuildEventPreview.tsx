@@ -1,13 +1,13 @@
-// === Module 9908: EditGuildEventPreview ===
+// === Module 9919: EditGuildEventPreview ===
 
-// Module 9908 (EditGuildEventPreview)
+// Module 9919 (EditGuildEventPreview)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4983 */;
-import ScheduleUtils from "ScheduleUtils" /* 9805 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9844 */;
-import guildEventDetailsParser from "guildEventDetailsParser" /* 9911 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4985 */;
+import ScheduleUtils from "ScheduleUtils" /* 9816 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9855 */;
+import guildEventDetailsParser from "guildEventDetailsParser" /* 9922 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -21,7 +21,7 @@ function PreviewBody(event) {
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(4791)(stateFromStores);
+  const tmp6 = channel_id(4793)(stateFromStores);
   dependencyMap = tmp6;
   let obj = require("initialize");
   const tmp5 = channel_id;
@@ -44,7 +44,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1115).intl;
     const obj6 = { channelName: null };
     const obj7 = { channel: stateFromStores };
-    obj6.channelName = tmp5(9910)(obj7);
+    obj6.channelName = tmp5(9921)(obj7);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1115).t.sxcQPE, obj6);
   }
   obj5.accessibilityLabel = formatToPlainStringResult;
@@ -93,7 +93,7 @@ function PreviewBody(event) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" }, centered: { flexDirection: "column", alignItems: "center", justifyContent: "center" }, centerContainer: { flexGrow: 0, width: "100%" }, flex: { flex: 1, overflow: "visible" }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, eventContainer: null, channelContainer: null, channelIcon: null, buttonContainer: null, error: null };
 let obj3 = { flex: 1, padding: 16, paddingBottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", overflow: "visible" };
 obj2.eventContainer = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: 24, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.sm, shadowOpacity: 0.2, elevation: 2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 }, overflow: "visible" };

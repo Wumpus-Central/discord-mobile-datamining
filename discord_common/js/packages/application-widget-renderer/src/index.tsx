@@ -1,7 +1,7 @@
-// === Module 9069: resolvedValuesFromUserApplicationIdentityProfile ===
+// === Module 9080: resolvedValuesFromUserApplicationIdentityProfile ===
 
-// Module 9069 (resolvedValuesFromUserApplicationIdentityProfile)
-import discord_common_resolvedValuesFromUserApplicationIdentityProfile from "discord_common/resolvedValuesFromUserApplicationIdentityProfile" /* 9154 */;
+// Module 9080 (resolvedValuesFromUserApplicationIdentityProfile)
+import discord_common_resolvedValuesFromUserApplicationIdentityProfile from "discord_common/resolvedValuesFromUserApplicationIdentityProfile" /* 9165 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,23 +1,23 @@
-// === Module 13265: AddFriendNicknameModal ===
+// === Module 13273: AddFriendNicknameModal ===
 
-// Module 13265 (AddFriendNicknameModal)
+// Module 13273 (AddFriendNicknameModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
-import TextField from "TextField" /* 6721 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
+import TextField from "TextField" /* 6724 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, description: { marginTop: 8, marginBottom: 16, textAlign: "center", lineHeight: 18 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -127,7 +127,7 @@ export default function AddFriendNicknameModal(arg0) {
   };
   const tmp = closure_11();
   [c2, c3] = noop.useState(false);
-  _slicedToArray = showUserProfile(11076)();
+  _slicedToArray = showUserProfile(11084)();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
   const items = [closure_7];
   const stateFromStores = initialize.useStateFromStores(items, () => RelationshipStore.getNickname(require));
@@ -159,7 +159,7 @@ export default function AddFriendNicknameModal(arg0) {
   const obj4 = { children: null };
   const tmp5Result = initialize;
   let obj5 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp3Result = showUserProfile(5664);
+  const tmp3Result = showUserProfile(5666);
   const intl3 = util.intl;
   obj5.confirmText = intl3.string(util.t["R3BPH+"]);
   obj5.onConfirm = function handleSubmit() {
@@ -180,12 +180,12 @@ export default function AddFriendNicknameModal(arg0) {
   const intl5 = util.intl;
   obj7.children = intl5.string(util.t["NdQ+lP"]);
   items3[1] = closure_9(Text_Text.Text, obj7);
-  const obj8 = { onChange: callback, autoFocus: true, accessibilityLabel: null, placeholder: null, defaultValue: null, maxLength: 32, isClearable: true };
+  const obj8 = { onChange: callback, autoFocus: true, accessibilityLabel: null, placeholder: null, defaultValue: null, maxLength: 32, clearable: true };
   const intl6 = util.intl;
   obj8.accessibilityLabel = intl6.string(util.t.pqG6GS);
   let obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
-  const tmp3Result3 = showUserProfile(5079);
-  obj8.placeholder = showUserProfile(4482).getName(stateFromStores1);
+  const tmp3Result3 = showUserProfile(5081);
+  obj8.placeholder = showUserProfile(4484).getName(stateFromStores1);
   obj8.defaultValue = stateFromStores;
   items3[2] = closure_9(TextField.TextField, obj8);
   obj5.children = items3;

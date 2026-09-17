@@ -1,20 +1,20 @@
-// === Module 15418: DarkModeThemeSetting ===
+// === Module 15423: DarkModeThemeSetting ===
 
-// Module 15418 (DarkModeThemeSetting)
+// Module 15423 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15416 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15421 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
 require = fn;
 const SystemTheme = fn(1185).SystemTheme;
-const SettingBuilders = fn(11614);
+const SettingBuilders = fn(11622);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(8091).MobileUserSettings.APPEARANCE,
+  parent: fn(8111).MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
     const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());

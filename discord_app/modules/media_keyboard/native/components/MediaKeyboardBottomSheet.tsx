@@ -1,13 +1,13 @@
-// === Module 16972: MediaKeyboardBottomSheet ===
+// === Module 17011: MediaKeyboardBottomSheet ===
 
-// Module 16972 (MediaKeyboardBottomSheet)
+// Module 17011 (MediaKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import ChatInputUtils from "ChatInputUtils" /* 4504 */;
-import HapticUtils from "HapticUtils" /* 4606 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4607 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import ChatInputUtils from "ChatInputUtils" /* 4506 */;
+import HapticUtils from "HapticUtils" /* 4608 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ const MetaQuestUtils = fn(1609);
 let closure_11 = MetaQuestUtils.isMetaQuest();
 const PlatformUtils = fn(1364);
 const IS_IOS = PlatformUtils.isIOS();
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: nativeDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS } };
 let closure_13 = createStyles.createStyles(obj);
 const __initData = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };

@@ -1,17 +1,17 @@
-// === Module 17048: ChannelSettingsIntegrationsOverview ===
+// === Module 17087: ChannelSettingsIntegrationsOverview ===
 
-// Module 17048 (ChannelSettingsIntegrationsOverview)
+// Module 17087 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import useNavigation from "useNavigation" /* 1484 */;
-import Stack_Stack from "Stack/Stack" /* 5058 */;
-import TableRow from "TableRow" /* 5691 */;
-import TableRowGroup from "TableRowGroup" /* 5773 */;
-import Form from "Form" /* 8728 */;
-import WebhookIcon from "WebhookIcon" /* 16935 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17049 */;
+import Stack_Stack from "Stack/Stack" /* 5060 */;
+import TableRow from "TableRow" /* 5693 */;
+import TableRowGroup from "TableRowGroup" /* 5775 */;
+import Form from "Form" /* 8748 */;
+import WebhookIcon from "WebhookIcon" /* 16974 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17088 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 
@@ -25,7 +25,7 @@ function LinkedLobbyFormSection(channel) {
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7278).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(7282).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -40,8 +40,8 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(5691).TableRow, obj4);
-    tmp5 = closure_6(tmp(5773).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(5693).TableRow, obj4);
+    tmp5 = closure_6(tmp(5775).TableRowGroup, obj3);
     const obj11 = { id: null, icon: null };
   }
   return tmp5;
@@ -50,7 +50,7 @@ fn(1962).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { screenContainer: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

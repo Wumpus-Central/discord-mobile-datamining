@@ -1,14 +1,14 @@
-// === Module 7504: EntitlementStore ===
+// === Module 7508: EntitlementStore ===
 
-// Module 7504 (EntitlementStore)
+// Module 7508 (EntitlementStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7509 */;
-import EntitlementRecord from "EntitlementRecord" /* 7505 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7507 */;
-import SKUStore from "SKUStore" /* 5596 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7513 */;
+import EntitlementRecord from "EntitlementRecord" /* 7509 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7511 */;
+import SKUStore from "SKUStore" /* 5598 */;
 
 require = fn;
 function addEntitlement(entitlement) {

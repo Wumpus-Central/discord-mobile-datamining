@@ -1,9 +1,9 @@
-// === Module 16731: VibegrationsCreateErrors ===
+// === Module 16761: VibegrationsCreateErrors ===
 
-// Module 16731 (VibegrationsCreateErrors)
+// Module 16761 (VibegrationsCreateErrors)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import _modDef3591 from "module_3591" /* 3591 */;
+import _modDef3593 from "module_3593" /* 3593 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;
@@ -62,12 +62,12 @@ export const getVibegrationsCreateErrorMessage = function getVibegrationsCreateE
   }
   if ("project_limit" === str) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3591.Asusmn);
+    return intl3.string(_modDef3593.Asusmn);
   } else if ("rate_limited" === str) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3591.DT6qly);
+    return intl2.string(_modDef3593.DT6qly);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3591.KKkp5Y);
+    return intl.string(_modDef3593.KKkp5Y);
   }
 };

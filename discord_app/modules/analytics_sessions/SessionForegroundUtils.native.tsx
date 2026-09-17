@@ -1,6 +1,6 @@
-// === Module 7572: SessionForegroundUtils ===
+// === Module 7576: SessionForegroundUtils ===
 
-// Module 7572 (SessionForegroundUtils)
+// Module 7576 (SessionForegroundUtils)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

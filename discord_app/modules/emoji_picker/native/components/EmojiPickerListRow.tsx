@@ -1,17 +1,17 @@
-// === Module 10449: EmojiPickerListRow ===
+// === Module 10457: EmojiPickerListRow ===
 
-// Module 10449 (EmojiPickerListRow)
+// Module 10457 (EmojiPickerListRow)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import native from "native" /* 1177 */;
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import shared from "shared" /* 4489 */;
-import LockIcon from "LockIcon" /* 5180 */;
-import Pressables from "Pressables" /* 5208 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef7242 from "module_7242" /* 7242 */;
-import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 10450 */;
+import shared from "shared" /* 4491 */;
+import LockIcon from "LockIcon" /* 5182 */;
+import Pressables from "Pressables" /* 5210 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef7246 from "module_7246" /* 7246 */;
+import EmojiPickerListRowViewDefault from "EmojiPickerListRowView" /* 10458 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -110,12 +110,12 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(10429);
+const EmojiPickerListConstants = fn(10437);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1218).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1364);
 let num = 28;

@@ -1,15 +1,15 @@
-// === Module 15322: GuildRoleSubscriptionsHooks ===
+// === Module 15327: GuildRoleSubscriptionsHooks ===
 
-// Module 15322 (GuildRoleSubscriptionsHooks)
+// Module 15327 (GuildRoleSubscriptionsHooks)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7365 */;
-import useRequestDefault from "useRequest" /* 12345 */;
-import subscriptionUtils from "subscriptionUtils" /* 15324 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7369 */;
+import useRequestDefault from "useRequest" /* 12354 */;
+import subscriptionUtils from "subscriptionUtils" /* 15329 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5363 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4270 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5365 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4272 */;
 
 const require = globalThis.__r;
 
@@ -68,7 +68,7 @@ function useFetchListingsForGuild(guildId) {
   }
   return { listingsLoaded };
 }
-const FetchState = fn(4270).FetchState;
+const FetchState = fn(4272).FetchState;
 let closure_10 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsHooks.tsx");

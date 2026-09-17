@@ -1,6 +1,6 @@
-// === Module 14830: TinyBroncoLazy ===
+// === Module 14838: TinyBroncoLazy ===
 
-// Module 14830 (TinyBroncoLazy)
+// Module 14838 (TinyBroncoLazy)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoLazy.tsx");

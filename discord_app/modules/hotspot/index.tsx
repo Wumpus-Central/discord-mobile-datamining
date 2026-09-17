@@ -1,13 +1,13 @@
-// === Module 7323: HotspotStore ===
+// === Module 7327: HotspotStore ===
 
-// Module 7323 (HotspotStore)
-import HotspotStore from "hotspot/HotspotStore" /* 7324 */;
+// Module 7327 (HotspotStore)
+import HotspotStore from "hotspot/HotspotStore" /* 7328 */;
 
 const require = globalThis.__r;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hotspot/index.tsx");
-const Constants = fn(7325);
+const Constants = fn(7329);
 for (const key10022 in tmp4) {
   arg5[key10022] = Constants[key10022];
   continue;

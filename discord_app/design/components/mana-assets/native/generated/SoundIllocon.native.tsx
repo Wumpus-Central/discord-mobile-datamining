@@ -1,9 +1,9 @@
-// === Module 6583: SoundIllocon ===
+// === Module 6585: SoundIllocon ===
 
-// Module 6583 (SoundIllocon)
+// Module 6585 (SoundIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6584 from "module_6584" /* 6584 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6586 from "module_6586" /* 6586 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const SoundIllocon = function SoundIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6584 };
+  const obj2 = { uri: _modDef6586 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

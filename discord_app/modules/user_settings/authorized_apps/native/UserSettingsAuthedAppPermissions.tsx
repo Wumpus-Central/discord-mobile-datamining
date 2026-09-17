@@ -1,9 +1,9 @@
-// === Module 15060: UserSettingsAuthedAppPermissions ===
+// === Module 15068: UserSettingsAuthedAppPermissions ===
 
-// Module 15060 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 4634 */;
-import disclosures from "disclosures" /* 9383 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15054 */;
+// Module 15068 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 4636 */;
+import disclosures from "disclosures" /* 9394 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15062 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
@@ -49,8 +49,8 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(4597).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(4634).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
+        items[0] = closure_2_5(items(4599).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(4636).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });

@@ -1,8 +1,8 @@
-// === Module 11612: SwipeToMemberListUtils ===
+// === Module 11620: SwipeToMemberListUtils ===
 
-// Module 11612 (SwipeToMemberListUtils)
+// Module 11620 (SwipeToMemberListUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import ChatGestureSettings from "ChatGestureSettings" /* 11613 */;
+import ChatGestureSettings from "ChatGestureSettings" /* 11621 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");

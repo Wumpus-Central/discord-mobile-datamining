@@ -1,18 +1,18 @@
-// === Module 8745: FormSliderRow ===
+// === Module 8765: FormSliderRow ===
 
-// Module 8745 (FormSliderRow)
-import Text_Text from "Text/Text" /* 4634 */;
-import Card from "Card" /* 5693 */;
-import RedesignCompat from "RedesignCompat" /* 5772 */;
-import FormRowDefault from "FormRow" /* 7247 */;
-import _modDef8408 from "module_8408" /* 8408 */;
+// Module 8765 (FormSliderRow)
+import Text_Text from "Text/Text" /* 4636 */;
+import Card from "Card" /* 5695 */;
+import RedesignCompat from "RedesignCompat" /* 5774 */;
+import FormRowDefault from "FormRow" /* 7251 */;
+import _modDef8427 from "module_8427" /* 8427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_8 = createStyles.createStyles({ labels: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, slider: { marginStart: -4, marginTop: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormSliderRow.tsx");
@@ -32,7 +32,7 @@ export default function FormSliderRow(arg0) {
     const obj5 = {};
     const merged1 = Object.assign(merged);
     obj5.style = tmp5.slider;
-    items1[1] = hasOwnProperty(_modDef8408, obj5);
+    items1[1] = hasOwnProperty(_modDef8427, obj5);
     obj2.children = items1;
     let tmp6Result = timestampProducer(Card.Card, obj2);
   } else {
@@ -41,7 +41,7 @@ export default function FormSliderRow(arg0) {
     const items2 = [hasOwnProperty(FormRowDefault, obj6), ];
     const obj7 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = hasOwnProperty(_modDef8408, obj7);
+    items2[1] = hasOwnProperty(_modDef8427, obj7);
     obj.children = items2;
     tmp6Result = timestampProducer(React5, obj);
   }

@@ -1,21 +1,22 @@
-// === Module 7196: TextAreaField ===
+// === Module 7200: TextAreaField ===
 
-// Module 7196 (TextAreaField)
+// Module 7200 (TextAreaField)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4341 */;
-import useTextField from "useTextField" /* 6722 */;
-import InputFieldContainer from "InputFieldContainer" /* 6729 */;
+import native from "native" /* 4343 */;
+import useTextField from "useTextField" /* 6725 */;
+import InputFieldContainer from "InputFieldContainer" /* 6732 */;
 import noop from "module_19" /* 19 */;
 
 const util = prop(1115);
-const Text_Text = prop(4634);
-const NativeTextInput = prop(6732);
-const useCharacterLimitAnnouncement = prop(7197);
+const Text_Text = prop(4636);
+const NativeTextInput = prop(6735);
+const propsForNativeTextInput = prop(7049);
+const useCharacterLimitAnnouncement = prop(7201);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
 obj.maxLengthIndicator = rect;
@@ -23,14 +24,14 @@ let closure_5 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TextField/native/TextAreaField.native.tsx");
 
-export const TextAreaField = noop.forwardRef((isDisabled, arg1) => {
+export const TextAreaField = noop.forwardRef((disabled, arg1) => {
   let prop = require;
   let obj = dependencyMap;
-  const inputStyles = InputFieldContainer.useInputStyles({ size: "lg", isRound: false, isDisabled: isDisabled.isDisabled });
+  const inputStyles = InputFieldContainer.useInputStyles({ size: "lg", round: false, disabled: disabled.disabled });
   const tmp3 = closure_5();
-  const maxLength = isDisabled.maxLength;
-  const obj3 = { size: "lg", isRound: false, isDisabled: isDisabled.isDisabled };
-  const textField = useTextField.useTextField(isDisabled, arg1);
+  const maxLength = disabled.maxLength;
+  const obj3 = { size: "lg", round: false, disabled: disabled.disabled };
+  const textField = useTextField.useTextField(disabled, arg1);
   ({ state, inputProps, innerRef } = textField);
   const focus = native.useFocus();
   let diff;
@@ -38,18 +39,19 @@ export const TextAreaField = noop.forwardRef((isDisabled, arg1) => {
   if (null != maxLength) {
     diff = maxLength - state.value.length;
   }
-  const nodeText = native.getNodeText(isDisabled.label);
+  const nodeText = native.getNodeText(disabled.label);
   const propResult = native;
   const obj6 = { currentLength: state.value.length, maxLength, message: null };
   const intl = util.intl;
   obj6.message = intl.string(util.t.c2Jqed);
   const characterLimitAnnouncement = useCharacterLimitAnnouncement.useCharacterLimitAnnouncement(obj6);
   const obj7 = {};
-  const merged = Object.assign(isDisabled);
+  const merged = Object.assign(disabled);
   obj7.isFocused = isFocused;
   const obj8 = {};
   const propResult1 = useCharacterLimitAnnouncement;
-  const merged1 = Object.assign(native.mergeProps(inputProps, focusProps));
+  const propResult2 = propsForNativeTextInput;
+  const merged1 = Object.assign(propResult2.propsForNativeTextInput(native.mergeProps(inputProps, focusProps)));
   obj8.ref = innerRef;
   const items = [, , ];
   ({ padding: arr[0], text: arr[1] } = inputStyles);
@@ -96,5 +98,5 @@ export const TextAreaField = noop.forwardRef((isDisabled, arg1) => {
     obj9.children = obj10;
     React3(View, obj9);
   }
-  const propResult2 = native;
+  const propResult3 = native;
 });

@@ -1,8 +1,8 @@
-// === Module 8016: ForumChannelSeenManager ===
+// === Module 8022: ForumChannelSeenManager ===
 
-// Module 8016 (ForumChannelSeenManager)
-import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 8015 */;
-import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 8017 */;
+// Module 8022 (ForumChannelSeenManager)
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 8021 */;
+import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 8023 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,10 +1,10 @@
-// === Module 15087: ClipsSetting ===
+// === Module 15095: ClipsSetting ===
 
-// Module 15087 (ClipsSetting)
+// Module 15095 (ClipsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import ClipsIcon from "ClipsIcon" /* 15088 */;
-import SettingBuilders from "SettingBuilders" /* 11614 */;
+import ClipsIcon from "ClipsIcon" /* 15096 */;
+import SettingBuilders from "SettingBuilders" /* 11622 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

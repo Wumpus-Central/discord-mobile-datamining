@@ -1,11 +1,11 @@
-// === Module 7893: ApplicationCommandAutocompleteStore ===
+// === Module 7899: ApplicationCommandAutocompleteStore ===
 
-// Module 7893 (ApplicationCommandAutocompleteStore)
+// Module 7899 (ApplicationCommandAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1895 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4818 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7894 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4820 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7900 */;
 
 require = fn;
 function handleInit() {

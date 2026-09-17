@@ -1,9 +1,9 @@
-// === Module 6675: WateringCanSpotIllustration ===
+// === Module 6677: WateringCanSpotIllustration ===
 
-// Module 6675 (WateringCanSpotIllustration)
+// Module 6677 (WateringCanSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6676 from "module_6676" /* 6676 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6678 from "module_6678" /* 6678 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WateringCanSpotIllustration = function WateringCanSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6676 };
+  const obj2 = { uri: _modDef6678 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,8 +1,8 @@
-// === Module 12458: GuildDirectoryEditDescriptionModal ===
+// === Module 12467: GuildDirectoryEditDescriptionModal ===
 
-// Module 12458 (GuildDirectoryEditDescriptionModal)
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12457 */;
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12460 */;
+// Module 12467 (GuildDirectoryEditDescriptionModal)
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12466 */;
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12469 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ function GuildDirectoryEditDescription(entry) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj3 = tmp4(12459);
+            const obj3 = tmp4(12468);
             dependencyMap = 1;
             c4 = 1;
             const obj5 = { value: obj3.updateDirectoryEntry(entry.channelId, entry.guildId, closure_0, closure_1), done: false };
@@ -50,7 +50,7 @@ function GuildDirectoryEditDescription(entry) {
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          closure_1(12457).close();
+          closure_1(12466).close();
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -67,7 +67,7 @@ function GuildDirectoryEditDescription(entry) {
   let obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = entry(1115).intl;
   obj4.children = intl.format(entry(1115).t.w9tsNk, { guildName: entry.name });
-  obj3.children = closure_7(entry(4634).Text, obj4);
+  obj3.children = closure_7(entry(4636).Text, obj4);
   const items = [closure_7(closure_5, obj3), ];
   let obj6 = {
     onSubmit(arg0, arg1) {
@@ -91,14 +91,14 @@ function GuildDirectoryEditDescription(entry) {
   items[1] = closure_7(GuildDirectoryEditDescriptionTemplateDefault, obj6);
   obj2.children = items;
   obj.children = closure_8(closure_6, obj2);
-  return closure_7(entry(7233).SafeAreaPaddingView, obj);
+  return closure_7(entry(7237).SafeAreaPaddingView, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
-let obj2 = { safeArea: { marginTop: fn(5768).NAV_BAR_HEIGHT, flex: 1 }, container: { flex: 1 }, title: { marginBottom: 8, textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 } };
+const createStyles = fn(4640);
+let obj2 = { safeArea: { marginTop: fn(5770).NAV_BAR_HEIGHT, flex: 1 }, container: { flex: 1 }, title: { marginBottom: 8, textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const EDIT_DESCRIPTION = "EDIT_DESCRIPTION";
 const size = fn(2);

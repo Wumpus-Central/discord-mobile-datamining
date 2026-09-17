@@ -1,9 +1,9 @@
-// === Module 5921: BuildingBlocksSpotIllustration ===
+// === Module 5923: BuildingBlocksSpotIllustration ===
 
-// Module 5921 (BuildingBlocksSpotIllustration)
+// Module 5923 (BuildingBlocksSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5922 from "module_5922" /* 5922 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5924 from "module_5924" /* 5924 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BuildingBlocksSpotIllustration = function BuildingBlocksSpotIllustr
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5922 };
+  const obj2 = { uri: _modDef5924 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,11 +1,11 @@
-// === Module 15812: PaymentFlowTest ===
+// === Module 15829: PaymentFlowTest ===
 
-// Module 15812 (PaymentFlowTest)
+// Module 15829 (PaymentFlowTest)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7091 */;
-import NativePaymentContext from "NativePaymentContext" /* 10968 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7095 */;
+import NativePaymentContext from "NativePaymentContext" /* 10976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -38,10 +38,10 @@ function TestView() {
       onChange(arg0) {
         return closure_1(arg0);
       },
-      isClearable: true
+      clearable: true
     }),
-    closure_7(value(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Recipient ID", value: first1, placeholder: "Recipient User ID", onChange: tmp2Result[1], isClearable: true }),
-    closure_7(value(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Message (Optional)", value: first2, placeholder: "Here's a gift for you!", onChange: tmp2Result2[1], isClearable: true }),
+    closure_7(value(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Recipient ID", value: first1, placeholder: "Recipient User ID", onChange: tmp2Result[1], clearable: true }),
+    closure_7(value(first1[11]).TextInput, { containerStyle: tmp.textInput, label: "Gift Message (Optional)", value: first2, placeholder: "Here's a gift for you!", onChange: tmp2Result2[1], clearable: true }),
 
   ];
   let tmp15 = null === value;
@@ -60,7 +60,7 @@ function TestView() {
       if (tmp2) {
         const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
         ActionSheetActionCreatorsDefault.hideActionSheet();
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15813, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15830, dependencyMap.paths), "SimpleRequestOTPActionSheet", obj);
       }
     }
   });
@@ -72,7 +72,7 @@ function TestView() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, textInput: null, title: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = { padding: nativeDefault.space.PX_16 };

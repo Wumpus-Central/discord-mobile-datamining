@@ -1,6 +1,6 @@
-// === Module 13268: UserProfileIncomingFriendRequest ===
+// === Module 13276: UserProfileIncomingFriendRequest ===
 
-// Module 13268 (UserProfileIncomingFriendRequest)
+// Module 13276 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

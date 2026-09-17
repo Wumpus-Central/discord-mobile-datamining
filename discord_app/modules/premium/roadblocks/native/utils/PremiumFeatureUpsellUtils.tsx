@@ -1,11 +1,11 @@
-// === Module 10105: PremiumFeatureUpsellUtils ===
+// === Module 10116: PremiumFeatureUpsellUtils ===
 
-// Module 10105 (PremiumFeatureUpsellUtils)
+// Module 10116 (PremiumFeatureUpsellUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1074 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import SoundboardTypes from "SoundboardTypes" /* 5105 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7967 */;
+import SoundboardTypes from "SoundboardTypes" /* 5108 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7973 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsPages = Constants.AnalyticsPages;
@@ -65,6 +65,8 @@ export const getUpsellType = function getUpsellType(EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.SCHEDULED_MESSAGES;
   } else if (EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY === EMOJIS_EVERYWHERE) {
     return ConstantsIOS.UpsellTypes.STREAM_HIGH_QUALITY;
+  } else if (EntitlementFeatureNames.EntitlementFeatureNames.SHOP_MEMBER_PRICING === EMOJIS_EVERYWHERE) {
+    return ConstantsIOS.UpsellTypes.SHOP_MEMBER_PRICING;
   } else {
     const _HermesInternal = HermesInternal;
     _modDef38(false, "Missing featureName: " + EMOJIS_EVERYWHERE);

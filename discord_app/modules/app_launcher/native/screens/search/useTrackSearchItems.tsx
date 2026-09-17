@@ -1,6 +1,6 @@
-// === Module 12248: useTrackSearchItems ===
+// === Module 12257: useTrackSearchItems ===
 
-// Module 12248 (useTrackSearchItems)
+// Module 12257 (useTrackSearchItems)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -33,10 +33,10 @@ export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1
             ({ applicationId, commandId } = dependencyMap(isViewable.item));
             const tmp5 = dependencyMap(isViewable.item);
             const obj2 = { type: closure_0(1249).ImpressionTypes.VIEW, name: closure_0(1249).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM, properties: null };
-            const obj3 = { location: closure_0(7633).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
+            const obj3 = { location: closure_0(7637).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application_id: applicationId, command_id: commandId, search_results_position: isViewable.index, query, source };
             obj2.properties = obj3;
-            closure_0(8908).trackImpression(obj2, false);
-            const obj = closure_0(8908);
+            closure_0(8924).trackImpression(obj2, false);
+            const obj = closure_0(8924);
           }
         }
       }

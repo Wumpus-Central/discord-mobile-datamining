@@ -1,11 +1,11 @@
-// === Module 7075: SplitTextField ===
+// === Module 7079: SplitTextField ===
 
-// Module 7075 (SplitTextField)
-import useTextField from "useTextField" /* 6722 */;
-import useInputClearButton from "useInputClearButton" /* 6723 */;
-import useInputAttachments from "useInputAttachments" /* 6727 */;
-import InputFieldContainer from "InputFieldContainer" /* 6729 */;
-import BaseTextField from "BaseTextField" /* 6731 */;
+// Module 7079 (SplitTextField)
+import useTextField from "useTextField" /* 6725 */;
+import useInputClearButton from "useInputClearButton" /* 6726 */;
+import useInputAttachments from "useInputAttachments" /* 6730 */;
+import InputFieldContainer from "InputFieldContainer" /* 6732 */;
+import BaseTextField from "BaseTextField" /* 6734 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,8 +16,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 
 export const SplitTextField = noop.forwardRef((size, arg1) => {
-  const inputStyles = InputFieldContainer.useInputStyles({ size: size.size, isRound: size.isRound });
-  const obj2 = { size: size.size, isRound: size.isRound };
+  const inputStyles = InputFieldContainer.useInputStyles({ size: size.size, round: size.round });
+  const obj2 = { size: size.size, round: size.round };
   const textField = useTextField.useTextField(size, arg1);
   ({ inputProps, innerRef, state } = textField);
   const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(size, state);

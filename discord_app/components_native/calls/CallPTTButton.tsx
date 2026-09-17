@@ -1,28 +1,28 @@
-// === Module 9835: CallPTTButton ===
+// === Module 9846: CallPTTButton ===
 
-// Module 9835 (CallPTTButton)
+// Module 9846 (CallPTTButton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 9836 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 9847 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4661 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
 
 require = fn;
 const InputModes = fn(1074).InputModes;
 const jsx = fn(21).jsx;
 const CallPTTButtonLooks = { BRAND: "brand", BLUR: "blur" };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { button: { margin: 13 }, container: null, buttonBlur: null, buttonBlurPressed: null, textStyle: null, brandButtonContainer: null };
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: null };
-let ColorUtils = fn(4487);
+let ColorUtils = fn(4489);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 obj2.container = obj4;
 obj2.buttonBlur = { backgroundColor: "transparent" };
 const obj5 = { backgroundColor: null };
-ColorUtils = fn(4487);
+ColorUtils = fn(4489);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.6);
 obj2.buttonBlurPressed = obj5;
 obj2.textStyle = { fontSize: 16 };

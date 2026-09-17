@@ -1,21 +1,21 @@
-// === Module 11555: SafetyToolsAboutActionSheet ===
+// === Module 11563: SafetyToolsAboutActionSheet ===
 
-// Module 11555 (SafetyToolsAboutActionSheet)
+// Module 11563 (SafetyToolsAboutActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11516 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11517 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11524 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11525 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(11509).getSafetyToolsActionSheetKey;
+let closure_6 = fn(11517).getSafetyToolsActionSheetKey;
 let HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { aboutContainer: { marginHorizontal: nativeDefault.space.PX_32 }, description: null, reportFalsePositive: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_32 };
 obj2.description = { alignSelf: "center", textAlign: "center", marginBottom: nativeDefault.space.PX_24 };

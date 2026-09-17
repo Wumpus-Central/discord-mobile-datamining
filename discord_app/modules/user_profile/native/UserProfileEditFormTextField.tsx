@@ -1,8 +1,8 @@
-// === Module 14727: UserProfileEditFormTextField ===
+// === Module 14735: UserProfileEditFormTextField ===
 
-// Module 14727 (UserProfileEditFormTextField)
-import TextInput from "TextInput" /* 6714 */;
-import TextArea from "TextArea" /* 7195 */;
+// Module 14735 (UserProfileEditFormTextField)
+import TextInput from "TextInput" /* 6717 */;
+import TextArea from "TextArea" /* 7199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function UserProfileEditFormTextField(inputRef) {
   } else {
     const obj3 = { ref: inputRef };
     const merged3 = Object.assign(obj);
-    obj3.isClearable = true;
+    obj3.clearable = true;
     tmp9 = jsx(TextInput.TextInput, { ref: inputRef });
   }
   return tmp9;

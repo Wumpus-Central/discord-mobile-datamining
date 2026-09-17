@@ -1,6 +1,6 @@
-// === Module 5057: NativeKeyCommandsModule ===
+// === Module 5059: NativeKeyCommandsModule ===
 
-// Module 5057 (NativeKeyCommandsModule)
+// Module 5059 (NativeKeyCommandsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

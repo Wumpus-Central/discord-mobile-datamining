@@ -1,10 +1,10 @@
-// === Module 11994: BanConfirm ===
+// === Module 12003: BanConfirm ===
 
-// Module 11994 (BanConfirm)
+// Module 12003 (BanConfirm)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5606 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5608 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
@@ -115,7 +115,7 @@ items[6] = {
     return intl.string(util.t.FA7IUk);
   }
 };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj8 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj7 = {
   value: 7 * DurationsDefault.Seconds.DAY,
@@ -170,7 +170,7 @@ export default noop.memo(function BanConfirm(arg0) {
       const obj5 = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj4.contentContainerStyle = obj5;
       const obj6 = { style: tmp.iconLabelBlock, children: null };
-      const obj7 = { style: tmp.iconStyles, source: require("module_11995"), resizeMode: "contain" };
+      const obj7 = { style: tmp.iconStyles, source: require("module_12004"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj7), , ];
       const obj8 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

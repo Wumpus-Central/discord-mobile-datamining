@@ -1,7 +1,7 @@
-// === Module 14797: TinyBroncoExperiment ===
+// === Module 14805: TinyBroncoExperiment ===
 
-// Module 14797 (TinyBroncoExperiment)
-import TinyBroncoGate from "TinyBroncoGate" /* 14798 */;
+// Module 14805 (TinyBroncoExperiment)
+import TinyBroncoGate from "TinyBroncoGate" /* 14806 */;
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

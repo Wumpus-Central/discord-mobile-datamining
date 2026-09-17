@@ -1,10 +1,10 @@
-// === Module 10064: ChannelCallNavigatorIcon ===
+// === Module 10075: ChannelCallNavigatorIcon ===
 
-// Module 10064 (ChannelCallNavigatorIcon)
+// Module 10075 (ChannelCallNavigatorIcon)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5048 */;
-import Pressables from "Pressables" /* 5208 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5050 */;
+import Pressables from "Pressables" /* 5210 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,12 +12,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(9610).resetFocusTimer;
+const resetFocusTimer = fn(9621).resetFocusTimer;
 const Constants = fn(1074);
 ({ ThemeTypes: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { pressableContainer: { marginHorizontal: 4 }, pressable: { borderRadius: nativeDefault.radii.lg }, container: null, text: null, disabled: null, iconColor: null };
 let size = { flexDirection: "row", height: 32, width: 32, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = size;

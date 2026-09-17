@@ -1,14 +1,14 @@
-// === Module 9371: XboxLinkPreConnect ===
+// === Module 9382: XboxLinkPreConnect ===
 
-// Module 9371 (XboxLinkPreConnect)
-import _modDef9372 from "module_9372" /* 9372 */;
+// Module 9382 (XboxLinkPreConnect)
+import _modDef9383 from "module_9383" /* 9383 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const XboxLinkModalScenes = fn(9362).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9373).XboxLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx");
@@ -24,11 +24,11 @@ export default function XboxLinkPreConnect() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.ERROR);
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef9372 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef9383 }), []);
   const obj2 = { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
   const intl = navigation(1115).intl;
   obj2.title = intl.string(navigation(1115).t["e/z3na"]);
   const intl2 = navigation(1115).intl;
   obj2.body = intl2.string(navigation(1115).t["7tXu0i"]);
-  return jsx(navigation(9373).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
+  return jsx(navigation(9384).TwoWayLinkPreConnect, { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
 };

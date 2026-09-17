@@ -1,21 +1,21 @@
-// === Module 6713: FreeFormInputGroup ===
+// === Module 6716: FreeFormInputGroup ===
 
-// Module 6713 (FreeFormInputGroup)
+// Module 6716 (FreeFormInputGroup)
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import RedesignCompat from "RedesignCompat" /* 5772 */;
-import TextInput from "TextInput" /* 6714 */;
-import FreeFormLabelDefault from "FreeFormLabel" /* 7046 */;
-import FreeFormTextInputDefault from "FreeFormTextInput" /* 7047 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7049 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import RedesignCompat from "RedesignCompat" /* 5774 */;
+import TextInput from "TextInput" /* 6717 */;
+import FreeFormLabelDefault from "FreeFormLabel" /* 7050 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 7051 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7053 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_7 = createStyles.createStyles({ label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FreeFormInputGroup.tsx");
@@ -46,7 +46,7 @@ export default noop.forwardRef((accessibilityLabel, ref) => {
   const id = noop.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
-    const obj3 = { containerStyle: style, value, label, errorMessage: error, description: hint, placeholder, onChange: onChangeText, isClearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT, keyboardType: str, secureTextEntry: isAndroidResult, autoCapitalize: merged.autoCapitalize };
+    const obj3 = { containerStyle: style, value, label, errorMessage: error, description: hint, placeholder, onChange: onChangeText, clearable: clearButtonVisibility !== native.ClearButtonVisibility.WITH_CONTENT, keyboardType: str, secureTextEntry: isAndroidResult, autoCapitalize: merged.autoCapitalize };
     return hasOwnProperty(TextInput.TextInput, obj3);
   } else {
     const obj4 = { style, children: null };

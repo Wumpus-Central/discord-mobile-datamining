@@ -1,13 +1,13 @@
-// === Module 16093: RegisterPhoneOrEmailInput ===
+// === Module 16115: RegisterPhoneOrEmailInput ===
 
-// Module 16093 (RegisterPhoneOrEmailInput)
+// Module 16115 (RegisterPhoneOrEmailInput)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7071 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 7075 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7051 */;
+import PhoneStore from "PhoneStore" /* 7055 */;
 
 require = fn;
-const RegistrationUIStore = fn(16076);
+const RegistrationUIStore = fn(16098);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -93,7 +93,7 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
     const intl3 = tmp(tmp2[9]).intl;
     stringResult1 = intl3.string(tmp(tmp2[9]).t.a17rBk);
   }
-  const obj4 = { ref, alpha2: stateFromStores.alpha2, countryCode: stateFromStores.code, onChange: callback1, onSubmitEditing: onSubmit, placeholder: stringResult, returnKeyType: "next", autoCapitalize: "none", accessibilityHint: stringResult1, label: stringResult, errorMessage: inputError, onPressCountrySelector: callback2, forceMode: inputMode, submitBehavior, autoComplete: null, keyboardType: null, isClearable: true, status: null };
+  const obj4 = { ref, alpha2: stateFromStores.alpha2, countryCode: stateFromStores.code, onChange: callback1, onSubmitEditing: onSubmit, placeholder: stringResult, returnKeyType: "next", autoCapitalize: "none", accessibilityHint: stringResult1, label: stringResult, errorMessage: inputError, onPressCountrySelector: callback2, forceMode: inputMode, submitBehavior, autoComplete: null, keyboardType: null, clearable: true, status: null };
   const tmp16 = closure_7;
   const tmpResult = loginPhone(setLoginPhone[6]);
   let str = "email";

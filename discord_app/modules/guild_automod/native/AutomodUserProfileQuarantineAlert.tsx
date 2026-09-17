@@ -1,15 +1,15 @@
-// === Module 12012: AutomodUserProfileQuarantineAlert ===
+// === Module 12021: AutomodUserProfileQuarantineAlert ===
 
-// Module 12012 (AutomodUserProfileQuarantineAlert)
+// Module 12021 (AutomodUserProfileQuarantineAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4282 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import common_AlertDefault from "common/Alert" /* 5079 */;
-import openUserSettings from "openUserSettings" /* 7492 */;
-import _modDef12013 from "module_12013" /* 12013 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4284 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import common_AlertDefault from "common/Alert" /* 5081 */;
+import openUserSettings from "openUserSettings" /* 7496 */;
+import _modDef12022 from "module_12022" /* 12022 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ function ChatBlockedAlert(arg0) {
   obj.onConfirm = onConfirm;
   const obj2 = { style: tmp2.body, children: null };
   const tmp6 = common_AlertDefault;
-  const items = [value2(native.Icon, { source: _modDef12013, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }), value2(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title }), value2(Text_Text.Text, { style: tmp2.description, variant: "text-sm/medium", color: "text-default", children: description })];
+  const items = [value2(native.Icon, { source: _modDef12022, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }), value2(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title }), value2(Text_Text.Text, { style: tmp2.description, variant: "text-sm/medium", color: "text-default", children: description })];
   obj2.children = items;
   obj.children = closure_1_17(View, obj2);
   return value2(tmp6, obj);
@@ -53,8 +53,8 @@ function PerServerProfileAlert(arg0) {
     stringResult = intl.string(util.t.TBeZmG);
   }
   const tmp = _objectWithoutProperties(arg0, closure_4);
-  const tmp2Result = tmp2(12014);
-  [require, tmp8] = tmp2(12014).useOpenFixQuarantinedProfileModal({ guildId });
+  const tmp2Result = tmp2(12023);
+  [require, tmp8] = tmp2(12023).useOpenFixQuarantinedProfileModal({ guildId });
   if (!tmp8) {
     const intl3 = tmp2(1115).intl;
     stringResult = intl3.string(tmp2(1115).t.FFj5Dt);
@@ -96,13 +96,13 @@ let closure_3 = ["title", "description", "buttonCta", "onConfirm"];
 let closure_4 = ["guildId", "guildName", "automodReason"];
 let closure_5 = ["guildName"];
 const View = fn(17).View;
-const QUARANTINE_USER_ALERT_KEY = fn(12005).QUARANTINE_USER_ALERT_KEY;
+const QUARANTINE_USER_ALERT_KEY = fn(12014).QUARANTINE_USER_ALERT_KEY;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, UserSettingsSections: closure_14 } = Constants);
-const GuildMemberFlags = fn(4263).GuildMemberFlags;
+const GuildMemberFlags = fn(4265).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { wrapper: { padding: 16 }, body: { flexDirection: "column", alignItems: "center" }, mainIcon: null, title: null, description: null };
 let size = { width: 48, height: 48, tintColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, marginBottom: 16 };
 obj2.mainIcon = size;
@@ -139,7 +139,7 @@ export default function AutomodUserProfileQuarantineAlert(guildId) {
       return AutomodPermissionUtils.getAutomodReason(automodQuarantinedGuildMemberFlags);
     }
   }, items4);
-  stateFromStores(5077)(() => {
+  stateFromStores(5079)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: QUARANTINE_USER_ALERT_KEY, guild_id: guildId, other_user_id: stateFromStores });
   });
   if (stateFromStores2 !== GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) {

@@ -1,17 +1,17 @@
-// === Module 12445: GuildDirectorySearch ===
+// === Module 12454: GuildDirectorySearch ===
 
-// Module 12445 (GuildDirectorySearch)
+// Module 12454 (GuildDirectorySearch)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12443 */;
-import _modDef12449 from "module_12449" /* 12449 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12451 */;
-import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12459 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12452 */;
+import _modDef12458 from "module_12458" /* 12458 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 12460 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12446 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12455 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ function DefaultState() {
   importDefault = require("useTypeConsolidationTextTransform").useTypeConsolidationTextTransform("GuildDirectorySearch");
   const obj2 = { style: tmp.emptyWrapper, children: null };
   let obj = require("useTypeConsolidationTextTransform");
-  let items = [closure_12(closure_7, { style: tmp.emptyStateImage, source: _modDef12449 }), ];
+  let items = [closure_12(closure_7, { style: tmp.emptyStateImage, source: _modDef12458 }), ];
   const obj4 = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = require("util").intl;
   obj4.children = intl.format(require("util").t.aYLd8O, {
@@ -43,7 +43,7 @@ function EmptyState(channel) {
   const items = [GuildStore];
   importDefault = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.getGuildId()));
   const obj = channel(504);
-  const canCreateOrAddGuildInDirectory = channel(12450).useCanCreateOrAddGuildInDirectory(channel);
+  const canCreateOrAddGuildInDirectory = channel(12459).useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1115).intl;
   if (canCreateOrAddGuildInDirectory) {
     const obj3 = {
@@ -56,13 +56,13 @@ function EmptyState(channel) {
     formatResult = intl.string(tmp2(1115).t.vYyEnv);
   }
   const obj4 = { style: tmp.emptyWrapper, children: null };
-  const obj2 = channel(12450);
-  const items1 = [closure_12(closure_7, { style: tmp.emptyStateImage, source: _modDef12449 }), , ];
+  const obj2 = channel(12459);
+  const items1 = [closure_12(closure_7, { style: tmp.emptyStateImage, source: _modDef12458 }), , ];
   const obj6 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp2(1115).intl;
   obj6.children = intl2.string(channel(1115).t["6HXiuE"]);
-  items1[1] = closure_12(channel(4634).Text, obj6);
-  items1[2] = closure_12(channel(4634).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
+  items1[1] = closure_12(channel(4636).Text, obj6);
+  items1[2] = closure_12(channel(4636).Text, { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: formatResult });
   obj4.children = items1;
   return closure_13(closure_6, obj4);
 }
@@ -72,7 +72,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { flex: { flex: 1, height: "100%" }, fauxHeader: { paddingHorizontal: 0 }, scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, emptyWrapper: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, emptyStateImage: { marginBottom: 24 }, emptyStateText: { textAlign: "center" }, emptyStateTitle: { marginBottom: 4, textAlign: "center" }, proTip: null };
 let obj3 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.proTip = { fontFamily: Fonts.PRIMARY_BOLD, color: nativeDefault.unsafe_rawColors.GREEN_360, textTransform: "uppercase" };

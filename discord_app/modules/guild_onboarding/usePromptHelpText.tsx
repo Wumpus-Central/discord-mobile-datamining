@@ -1,10 +1,10 @@
-// === Module 7235: usePromptHelpText ===
+// === Module 7239: usePromptHelpText ===
 
-// Module 7235 (usePromptHelpText)
+// Module 7239 (usePromptHelpText)
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import RelationshipStore from "RelationshipStore" /* 4286 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import RelationshipStore from "RelationshipStore" /* 4288 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;

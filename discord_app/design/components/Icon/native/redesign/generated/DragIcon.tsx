@@ -1,9 +1,9 @@
-// === Module 5701: DragIcon ===
+// === Module 5703: DragIcon ===
 
-// Module 5701 (DragIcon)
+// Module 5703 (DragIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod5702 from "module_5702" /* 5702 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod5704 from "module_5704" /* 5704 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const DragIcon = function DragIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5702, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5704, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

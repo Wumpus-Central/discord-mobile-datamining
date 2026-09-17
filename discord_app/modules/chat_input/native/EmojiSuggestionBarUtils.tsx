@@ -1,13 +1,13 @@
-// === Module 12569: EmojiSuggestionBarUtils ===
+// === Module 12578: EmojiSuggestionBarUtils ===
 
-// Module 12569 (EmojiSuggestionBarUtils)
-import native from "native" /* 4348 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
-import spring from "spring" /* 5059 */;
+// Module 12578 (EmojiSuggestionBarUtils)
+import native from "native" /* 4350 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
+import spring from "spring" /* 5061 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 
 const require = globalThis.__r;
 
@@ -82,7 +82,7 @@ export const EmojiEntranceAnimation = function EmojiEntranceAnimation(children) 
     const result = sharedValue.set(obj.withDelay(num, spring.withSpring(1, closure_10)));
   }, items);
   obj = index(sharedValue[6]);
-  const fn = function c() {
+  const fn = function u() {
     obj = { opacity: sharedValue.get(), transform: null };
     const items = [{ scale: sharedValue.get() }];
     obj.transform = items;
@@ -127,7 +127,7 @@ export const useSuggestionBarHeight = function useSuggestionBarHeight(transition
   }, items);
   return sharedValue;
 };
-export const useEmojiSuggestionBarState = function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, arg2) {
+export const useEmojiSuggestionBarState = function useEmojiSuggestionBarState(merged, MAX_SUGGESTIONS_LARGE, minUnlockedEmojis, arg3) {
   const chatInputRef = merged.chatInputRef;
   const chatInputStateRef = merged.chatInputStateRef;
   let setData;
@@ -146,14 +146,15 @@ export const useEmojiSuggestionBarState = function useEmojiSuggestionBarState(me
   setData = tmp4.setData;
   setDataImmediate = tmp4.setDataImmediate;
   const items1 = [setData];
-  const imperativeHandle = queryStart.useImperativeHandle(arg2, () => ({ setData }), items1);
-  const obj3 = { channel, text, selectionStart, selectionEnd, enabled: null, maxCount: null };
+  const imperativeHandle = queryStart.useImperativeHandle(arg3, () => ({ setData }), items1);
+  const obj3 = { channel, text, selectionStart, selectionEnd, enabled: null, maxCount: null, minUnlockedEmojis: null };
   let obj2 = chatInputRef(setData[10]);
   if (focused) {
     focused = !suppressed;
   }
   obj3.enabled = focused;
   obj3.maxCount = MAX_SUGGESTIONS_LARGE;
+  obj3.minUnlockedEmojis = minUnlockedEmojis;
   const tmp6Result = chatInputStateRef(setData[12])(obj3);
   queryStart = tmp6Result.queryStart;
   queryEnd = tmp6Result.queryEnd;

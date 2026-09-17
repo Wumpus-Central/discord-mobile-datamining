@@ -1,12 +1,12 @@
-// === Module 13431: useSavedMessagesForPage ===
+// === Module 13439: useSavedMessagesForPage ===
 
-// Module 13431 (useSavedMessagesForPage)
+// Module 13439 (useSavedMessagesForPage)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7975 */;
-import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13432 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7981 */;
+import useRefreshSavedMessagesDefault from "useRefreshSavedMessages" /* 13440 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11802 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11810 */;
 
 require = fn;
 function getSavedMessagesForType(arg0) {
@@ -24,7 +24,7 @@ const result = size.fileFinishedImporting("modules/saved_messages/useSavedMessag
 export default function useSavedMessagesForPage() {
   let ALL = arg0;
   if (arg0 === undefined) {
-    ALL = ALL(7975).SavedMessageSortTypes.ALL;
+    ALL = ALL(7981).SavedMessageSortTypes.ALL;
   }
   importDefault = undefined;
   dependencyMap = undefined;

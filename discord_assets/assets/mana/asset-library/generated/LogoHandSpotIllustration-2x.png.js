@@ -1,6 +1,6 @@
-// === Module 6332: ? ===
+// === Module 6334: ? ===
 
-// Module 6332
+// Module 6334
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LogoHandSpotIllustration-2x.png.js");

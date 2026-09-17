@@ -1,16 +1,16 @@
-// === Module 17992: SelectEmojiRolesActionSheet ===
+// === Module 18056: SelectEmojiRolesActionSheet ===
 
-// Module 17992 (SelectEmojiRolesActionSheet)
+// Module 18056 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5208 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7259 */;
-import ActionSheet from "ActionSheet" /* 7307 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15322 */;
+import Pressables from "Pressables" /* 5210 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7263 */;
+import ActionSheet from "ActionSheet" /* 7311 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15327 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5610 */;
+import TextStyles_mod from "TextStyles" /* 5612 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const itemSize = fn(1181).FORM_ROW_VERTICAL_PADDING + 22;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, label: { flex: 1, flexDirection: "row", alignItems: "center" }, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
@@ -144,6 +144,6 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj6.sections = items1;
-  obj5.children = closure_6(emoji(7182), obj6);
+  obj5.children = closure_6(emoji(7186), obj6);
   return closure_6(ActionSheet.ActionSheet, obj5);
 };

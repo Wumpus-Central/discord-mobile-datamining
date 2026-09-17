@@ -1,14 +1,14 @@
-// === Module 4459: SelectedGuildStore ===
+// === Module 4461: SelectedGuildStore ===
 
-// Module 4459 (SelectedGuildStore)
+// Module 4461 (SelectedGuildStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1101 */;
-import matchPathCompat from "matchPathCompat" /* 4464 */;
-import RouteUtils from "RouteUtils" /* 4477 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4460 */;
+import matchPathCompat from "matchPathCompat" /* 4466 */;
+import RouteUtils from "RouteUtils" /* 4479 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4462 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4463 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4465 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;

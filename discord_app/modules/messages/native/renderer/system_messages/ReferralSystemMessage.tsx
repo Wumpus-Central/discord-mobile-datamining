@@ -1,17 +1,17 @@
-// === Module 8169: ReferralSystemMessage ===
+// === Module 8189: ReferralSystemMessage ===
 
-// Module 8169 (ReferralSystemMessage)
+// Module 8189 (ReferralSystemMessage)
 import nativeDefault from "native" /* 576 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8062 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8080 */;
-import _modDef8168 from "module_8168" /* 8168 */;
-import ReferralTrialEmbedRedesign from "ReferralTrialEmbedRedesign" /* 8170 */;
-import ReferralTrialEmbed from "ReferralTrialEmbed" /* 8184 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7562 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8082 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8100 */;
+import _modDef8188 from "module_8188" /* 8188 */;
+import ReferralTrialEmbedRedesign from "ReferralTrialEmbedRedesign" /* 8190 */;
+import ReferralTrialEmbed from "ReferralTrialEmbed" /* 8204 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7566 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_5 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ReferralSystemMessage.tsx");
@@ -38,7 +38,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged = Object.assign(createCommonMessageDefault(message));
         obj2.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = closure_5(theme);
-        obj2.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8168);
+        obj2.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8188);
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj2;
       }
@@ -52,7 +52,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
         const merged1 = Object.assign(createCommonMessageDefault(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = closure_5(theme);
-        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8168);
+        obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8188);
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

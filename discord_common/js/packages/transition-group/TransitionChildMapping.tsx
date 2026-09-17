@@ -1,6 +1,6 @@
-// === Module 12567: TransitionChildMapping ===
+// === Module 12576: TransitionChildMapping ===
 
-// Module 12567 (TransitionChildMapping)
+// Module 12576 (TransitionChildMapping)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

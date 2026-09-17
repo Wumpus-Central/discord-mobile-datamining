@@ -1,7 +1,7 @@
-// === Module 14882: useAvailableAgeVerificationMethods ===
+// === Module 14890: useAvailableAgeVerificationMethods ===
 
-// Module 14882 (useAvailableAgeVerificationMethods)
-import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 8567 */;
+// Module 14890 (useAvailableAgeVerificationMethods)
+import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 8587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,13 +20,13 @@ export const useAvailableAgeVerificationMethods = function useAvailableAgeVerifi
       closure_1_1(573).dispatch({ type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: methods.methods, footerMessage: methods.footerMessage, outageBannerMessage: methods.outageBannerMessage });
       const obj = closure_1_1(573);
       const obj2 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: methods.methods, footerMessage: methods.footerMessage, outageBannerMessage: methods.outageBannerMessage };
-      return _true(8568).getAvailableMethodsV2(methods.methods);
+      return _true(8588).getAvailableMethodsV2(methods.methods);
     });
     ageVerificationMethodsV2SuspendedUser.then((methods) => {
       closure_1_1(573).dispatch({ type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: methods.methods, footerMessage: methods.footerMessage, outageBannerMessage: methods.outageBannerMessage });
       const obj = closure_1_1(573);
       const obj2 = { type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS", methods: methods.methods, footerMessage: methods.footerMessage, outageBannerMessage: methods.outageBannerMessage };
-      return _true(8568).getAvailableMethodsV2(methods.methods);
+      return _true(8588).getAvailableMethodsV2(methods.methods);
     }).then((methods) => {
       if (!c0) {
         const obj = { methods, loading: false };

@@ -1,7 +1,7 @@
-// === Module 11790: FeedbackModal ===
+// === Module 11798: FeedbackModal ===
 
-// Module 11790 (FeedbackModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
+// Module 11798 (FeedbackModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -75,7 +75,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_9 = createStyles.createStyles({ helpDeskLabel: { lineHeight: 16, marginTop: 8 }, bottomContainer: { paddingHorizontal: 16 }, submitButton: { marginTop: 24, marginBottom: 24 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/feedback/native/FeedbackModal.tsx");

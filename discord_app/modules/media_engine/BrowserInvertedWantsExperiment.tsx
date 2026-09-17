@@ -1,6 +1,6 @@
-// === Module 13913: BrowserInvertedWantsExperiment ===
+// === Module 13921: BrowserInvertedWantsExperiment ===
 
-// Module 13913 (BrowserInvertedWantsExperiment)
+// Module 13921 (BrowserInvertedWantsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

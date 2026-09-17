@@ -1,22 +1,22 @@
-// === Module 8911: WishlistNUXAddedItemActionSheet ===
+// === Module 8927: WishlistNUXAddedItemActionSheet ===
 
-// Module 8911 (WishlistNUXAddedItemActionSheet)
+// Module 8927 (WishlistNUXAddedItemActionSheet)
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7292 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8308 */;
-import SKUPreview from "SKUPreview" /* 8912 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8327 */;
+import SKUPreview from "SKUPreview" /* 8928 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8312).UserProfileSections;
+const UserProfileSections = fn(8331).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, textContainer: null, subtitle: null };
 let obj3 = { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.textContainer = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };

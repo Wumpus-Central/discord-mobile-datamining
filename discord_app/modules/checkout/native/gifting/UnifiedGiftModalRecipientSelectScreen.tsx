@@ -1,16 +1,16 @@
-// === Module 11005: UnifiedGiftModalRecipientSelectScreen ===
+// === Module 11013: UnifiedGiftModalRecipientSelectScreen ===
 
-// Module 11005 (UnifiedGiftModalRecipientSelectScreen)
+// Module 11013 (UnifiedGiftModalRecipientSelectScreen)
 import nativeDefault from "native" /* 576 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10973 */;
-import SearchableUserListDefault from "SearchableUserList" /* 11007 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10981 */;
+import SearchableUserListDefault from "SearchableUserList" /* 11015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(11006).UserRowModes;
+const UserRowModes = fn(11014).UserRowModes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

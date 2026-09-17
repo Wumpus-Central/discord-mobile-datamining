@@ -1,6 +1,6 @@
-// === Module 7432: BulkBanPubSubExperiment ===
+// === Module 7436: BulkBanPubSubExperiment ===
 
-// Module 7432 (BulkBanPubSubExperiment)
+// Module 7436 (BulkBanPubSubExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

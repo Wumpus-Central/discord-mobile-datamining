@@ -1,7 +1,7 @@
-// === Module 13569: useScheduledForcedUpdate ===
+// === Module 13577: useScheduledForcedUpdate ===
 
-// Module 13569 (useScheduledForcedUpdate)
-import areHookInputsEqual from "areHookInputsEqual" /* 7550 */;
+// Module 13577 (useScheduledForcedUpdate)
+import areHookInputsEqual from "areHookInputsEqual" /* 7554 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

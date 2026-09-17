@@ -1,26 +1,26 @@
-// === Module 12545: GameMentionSearchBar ===
+// === Module 12554: GameMentionSearchBar ===
 
-// Module 12545 (GameMentionSearchBar)
+// Module 12554 (GameMentionSearchBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import Form from "Form" /* 8728 */;
-import GameControllerIcon from "GameControllerIcon" /* 9366 */;
-import useGameMentionSearchBarHeight from "useGameMentionSearchBarHeight" /* 12531 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import Form from "Form" /* 8748 */;
+import GameControllerIcon from "GameControllerIcon" /* 9377 */;
+import useGameMentionSearchBarHeight from "useGameMentionSearchBarHeight" /* 12540 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND }, headerRow: null, icon: null, description: null, divider: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
-obj.headerRow = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: fn(12531).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL };
+obj.headerRow = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: fn(12540).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL };
 obj.icon = { marginRight: 12 };
-const obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: fn(12531).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL };
-obj.description = { paddingHorizontal: 16, paddingBottom: fn(12531).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
-const obj5 = { paddingHorizontal: 16, paddingBottom: fn(12531).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
+const obj4 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: fn(12540).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL };
+obj.description = { paddingHorizontal: 16, paddingBottom: fn(12540).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
+const obj5 = { paddingHorizontal: 16, paddingBottom: fn(12540).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
 obj.divider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let closure_5 = createStyles.createStyles(obj);
 let obj6 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };

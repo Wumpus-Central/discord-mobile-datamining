@@ -1,6 +1,6 @@
-// === Module 13773: PrivateChannelHidingExperimentCache ===
+// === Module 13781: PrivateChannelHidingExperimentCache ===
 
-// Module 13773 (PrivateChannelHidingExperimentCache)
+// Module 13781 (PrivateChannelHidingExperimentCache)
 import Storage2 from "Storage" /* 510 */;
 import size from "module_2" /* 2 */;
 

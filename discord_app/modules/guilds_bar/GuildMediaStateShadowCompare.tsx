@@ -1,9 +1,9 @@
-// === Module 16462: GuildMediaStateShadowCompare ===
+// === Module 16492: GuildMediaStateShadowCompare ===
 
-// Module 16462 (GuildMediaStateShadowCompare)
+// Module 16492 (GuildMediaStateShadowCompare)
 import LastFewActionsAll from "LastFewActions" /* 509 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import GuildMediaStateStore from "GuildMediaStateStore" /* 13811 */;
+import GuildMediaStateStore from "GuildMediaStateStore" /* 13819 */;
 
 const logger = new fn(4).Logger("GuildMediaStateShadowCompare");
 let closure_5 = ["audio", "video", "screenshare", "liveStage", "activeEvent", "activity", "isCurrentUserConnected"];

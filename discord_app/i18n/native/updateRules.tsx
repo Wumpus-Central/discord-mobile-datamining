@@ -1,9 +1,9 @@
-// === Module 17486: updateRules ===
+// === Module 17527: updateRules ===
 
-// Module 17486 (updateRules)
+// Module 17527 (updateRules)
 import native from "native" /* 1177 */;
-import LinkingDefault from "Linking" /* 4332 */;
-import _modDef4334 from "module_4334" /* 4334 */;
+import LinkingDefault from "Linking" /* 4334 */;
+import _modDef4336 from "module_4336" /* 4336 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ class I18nLink {
     if (null == obj.onClick) {
       obj.onClick = () => {
         const obj = LinkingDefault;
-        return obj.openURL(_modDef4334.sanitizeUrl(node.target));
+        return obj.openURL(_modDef4336.sanitizeUrl(node.target));
       };
     }
     obj1 = { accessible: true, accessibilityRole: "link", onPress: obj.onClick, style: memo, children: output(node.content, state) };

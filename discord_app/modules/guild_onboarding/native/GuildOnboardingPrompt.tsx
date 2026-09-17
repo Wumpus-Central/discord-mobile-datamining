@@ -1,22 +1,22 @@
-// === Module 7234: GuildOnboardingPrompt ===
+// === Module 7238: GuildOnboardingPrompt ===
 
-// Module 7234 (GuildOnboardingPrompt)
+// Module 7238 (GuildOnboardingPrompt)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4605 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5633 */;
-import TermsFieldListDefault from "TermsFieldList" /* 5687 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7216 */;
-import EmojiDefault from "Emoji" /* 7240 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5635 */;
+import TermsFieldListDefault from "TermsFieldList" /* 5689 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7220 */;
+import EmojiDefault from "Emoji" /* 7244 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5545 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5658 */;
+import EmojiStore from "EmojiStore" /* 5547 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5660 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7210 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7214 */;
 
 const require = globalThis.__r;
 
@@ -213,19 +213,19 @@ function DropdownOption(option) {
   }
   obj4.name = str;
   obj3.children = closure_15(EmojiDefault, obj4);
-  const items1 = [closure_15(closure_6, obj3), closure_15(tmp2(4634).Text, { variant: "text-md/semibold", children: option.title })];
+  const items1 = [closure_15(closure_6, obj3), closure_15(tmp2(4636).Text, { variant: "text-md/semibold", children: option.title })];
   obj2.children = items1;
   return closure_16(closure_6, obj2);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-let closure_13 = fn(7207).GuildOnboardingModalStates;
+let closure_13 = fn(7211).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(4638);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5768).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, scrollContainerGradient: null, promptHeader: null, requiredSeparator: null, countText: null, title: null, helpText: null, footer: null, footerText: null, footerContent: null, optionTextEmoji: null, optionImageEmoji: null, emojiContainer: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, dropdownIconContainer: null, dropdownIcon: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5768).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(4640);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5770).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, scrollContainerGradient: null, promptHeader: null, requiredSeparator: null, countText: null, title: null, helpText: null, footer: null, footerText: null, footerContent: null, optionTextEmoji: null, optionImageEmoji: null, emojiContainer: null, dropdownContainer: null, emptyDropdownText: null, dropdownPill: null, dropdownIconContainer: null, dropdownIcon: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5770).NAV_BAR_HEIGHT, marginBottom: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollContainer = { display: "flex", flexGrow: 1, justifyContent: "center", paddingHorizontal: 16, paddingTop: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollContainerGradient = { position: "absolute", height: 48, width: "100%", left: 0, top: -48 };
 obj2.promptHeader = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 };
@@ -462,7 +462,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[15])().bottom + 48 + 48, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7245, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7249, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, flag) {

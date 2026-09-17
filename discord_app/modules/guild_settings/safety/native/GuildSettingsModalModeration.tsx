@@ -1,22 +1,22 @@
-// === Module 17743: GuildSettingsModalModeration ===
+// === Module 17784: GuildSettingsModalModeration ===
 
-// Module 17743 (GuildSettingsModalModeration)
+// Module 17784 (GuildSettingsModalModeration)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import Stack_Stack from "Stack/Stack" /* 5058 */;
-import TableRowGroup from "TableRowGroup" /* 5773 */;
-import TableRadioRow from "TableRadioRow" /* 5774 */;
-import NavScrim from "NavScrim" /* 7150 */;
-import TableSwitchRow from "TableSwitchRow" /* 7310 */;
-import HeaderActionButton from "HeaderActionButton" /* 7487 */;
-import Form from "Form" /* 8728 */;
-import useUserIsTeen from "useUserIsTeen" /* 8779 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9206 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import Stack_Stack from "Stack/Stack" /* 5060 */;
+import TableRowGroup from "TableRowGroup" /* 5775 */;
+import TableRadioRow from "TableRadioRow" /* 5776 */;
+import NavScrim from "NavScrim" /* 7154 */;
+import TableSwitchRow from "TableSwitchRow" /* 7314 */;
+import HeaderActionButton from "HeaderActionButton" /* 7491 */;
+import Form from "Form" /* 8748 */;
+import useUserIsTeen from "useUserIsTeen" /* 8799 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9217 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9207 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9218 */;
 
 require = fn;
 function GuildSettingsOwnerConfiguredContentLevel(guild) {
@@ -57,7 +57,7 @@ const Constants = fn(1074);
 ({ GuildFeatures: metroRequire, HelpdeskArticles: closure_7, Permissions: closure_8, GuildNSFWContentLevel: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { stack: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_13 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
@@ -115,7 +115,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(14953).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(14961).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -138,7 +138,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj.disabled = tmp5;
     return closure_2_10(TableRadioRow.TableRadioRow, obj, "level-" + value);
   });
-  return closure_10(self(5771).TableRadioGroup, obj, "level-section");
+  return closure_10(self(5773).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -154,7 +154,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(14953).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(14961).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -167,7 +167,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj.disabled = tmp2;
     return closure_2_10(TableRadioRow.TableRadioRow, obj, "filter-" + value);
   });
-  return closure_10(self(5771).TableRadioGroup, obj, "filter-section");
+  return closure_10(self(5773).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;
@@ -201,7 +201,7 @@ prototype["handleVerificationLevelChange"] = function handleVerificationLevelCha
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
   GuildSettingsActionCreatorsDefault.updateGuild({ explicitContentFilter });
 };
-GuildSettingsModalModeration.contextType = fn(4348).ThemeContext;
+GuildSettingsModalModeration.contextType = fn(4350).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalModeration.tsx");
 

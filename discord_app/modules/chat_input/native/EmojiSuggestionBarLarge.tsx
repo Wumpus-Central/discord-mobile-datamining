@@ -1,12 +1,12 @@
-// === Module 12568: EmojiSuggestionBarLarge ===
+// === Module 12577: EmojiSuggestionBarLarge ===
 
-// Module 12568 (EmojiSuggestionBarLarge)
+// Module 12577 (EmojiSuggestionBarLarge)
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4348 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10449 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10468 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12569 */;
+import native from "native" /* 4350 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10457 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10476 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12578 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -76,9 +76,9 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
   return <EmojiSuggestionBarLargeAnimated key={key} />;
 }
 const View = fn(17).View;
-const IMAGE_SIZE = fn(10429).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10437).IMAGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { containerLargeWrapper: { overflow: "hidden" }, containerLarge: null, emptySlot: null };
   let str = "space-between";
@@ -103,7 +103,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarLarge.tsx");
 
 export const EmojiSuggestionBarLarge = noop.forwardRef((merged, arg1) => {
-  const emojiSuggestionBarState = EmojiSuggestionBarUtils.useEmojiSuggestionBarState(merged, EmojiSuggestionBarUtils.MAX_SUGGESTIONS_LARGE, arg1);
+  const emojiSuggestionBarState = EmojiSuggestionBarUtils.useEmojiSuggestionBarState(merged, EmojiSuggestionBarUtils.MAX_SUGGESTIONS_LARGE, 3, arg1);
   const unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
   const lockedEmojis = emojiSuggestionBarState.lockedEmojis;
   const reducedMotion = emojiSuggestionBarState.reducedMotion;

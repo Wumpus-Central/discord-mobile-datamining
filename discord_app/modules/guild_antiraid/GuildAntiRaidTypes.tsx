@@ -1,6 +1,6 @@
-// === Module 8133: GuildAntiRaidTypes ===
+// === Module 8153: GuildAntiRaidTypes ===
 
-// Module 8133 (GuildAntiRaidTypes)
+// Module 8153 (GuildAntiRaidTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidTypes.tsx");

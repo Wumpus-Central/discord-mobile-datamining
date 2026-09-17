@@ -1,6 +1,6 @@
-// === Module 7783: PerformanceAnalyticsActionCreators ===
+// === Module 7789: PerformanceAnalyticsActionCreators ===
 
-// Module 7783 (PerformanceAnalyticsActionCreators)
+// Module 7789 (PerformanceAnalyticsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

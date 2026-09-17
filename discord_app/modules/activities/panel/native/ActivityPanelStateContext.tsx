@@ -1,10 +1,10 @@
-// === Module 17220: ActivityPanelStateContext ===
+// === Module 17260: ActivityPanelStateContext ===
 
-// Module 17220 (ActivityPanelStateContext)
+// Module 17260 (ActivityPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = {
-  mode: fn(9648).ActivityPanelModes.PANEL,
+  mode: fn(9659).ActivityPanelModes.PANEL,
   setMode() {
     const error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
     throw error;
@@ -15,11 +15,11 @@ const obj = {
   wrapperOffset: null,
   useActivityWebViewLock: null
 };
-let ReanimatedHelperTypes = fn(7184);
+let ReanimatedHelperTypes = fn(7188);
 obj.pipState = ReanimatedHelperTypes.createFakeSharedValue({ x: -1, y: -1 });
-ReanimatedHelperTypes = fn(7184);
+ReanimatedHelperTypes = fn(7188);
 obj.pipAvoidanceSpecs = ReanimatedHelperTypes.createFakeSharedValue({ top: 0, bottom: 0 });
-ReanimatedHelperTypes = fn(7184);
+ReanimatedHelperTypes = fn(7188);
 obj.wrapperOffset = ReanimatedHelperTypes.createFakeSharedValue({ x: 0, y: 0, gestureActive: false });
 obj.useActivityWebViewLock = function useActivityWebViewLock() {
   return true;

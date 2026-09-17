@@ -1,30 +1,30 @@
-// === Module 16798: VibegrationsDebugLabels ===
+// === Module 16837: VibegrationsDebugLabels ===
 
-// Module 16798 (VibegrationsDebugLabels)
+// Module 16837 (VibegrationsDebugLabels)
 import util from "util" /* 1115 */;
-import _modDef3591 from "module_3591" /* 3591 */;
-import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16797 */;
+import _modDef3593 from "module_3593" /* 3593 */;
+import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 16836 */;
 import size from "module_2" /* 2 */;
 
 const set = new Set(["error", "aborted", "length"]);
 let closure_4 = {
   db() {
-    return _modDef3591.r6cciE;
+    return _modDef3593.r6cciE;
   },
   db_preview() {
-    return _modDef3591.JmIyL8;
+    return _modDef3593.JmIyL8;
   },
   runtime() {
-    return _modDef3591.bzNyv8;
+    return _modDef3593.bzNyv8;
   },
   runtime_preview() {
-    return _modDef3591["LONZ/8"];
+    return _modDef3593["LONZ/8"];
   },
   bot() {
-    return _modDef3591.jdpw3A;
+    return _modDef3593.jdpw3A;
   },
   bot_preview() {
-    return _modDef3591["/g6wUz"];
+    return _modDef3593["/g6wUz"];
   }
 };
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsDebugLabels.tsx");
@@ -32,15 +32,15 @@ const result = size.fileFinishedImporting("modules/vibegrations/lib/Vibegrations
 export const debugEnvLabel = function debugEnvLabel(env) {
   const intl = util.intl;
   if ("preview" === env) {
-    let kiOVnt = _modDef3591["+m8XM6"];
+    let kiOVnt = _modDef3593["+m8XM6"];
   } else {
-    kiOVnt = _modDef3591.kiOVnt;
+    kiOVnt = _modDef3593.kiOVnt;
   }
   return intl.string(kiOVnt);
 };
 export const debugYesNo = function debugYesNo(connected) {
   const intl = util.intl;
-  const tmp = _modDef3591;
+  const tmp = _modDef3593;
   return intl.string(connected ? tmp["9KlveJ"] : tmp["4tYZVa"]);
 };
 export const DEBUG_LOG_FILTERS = ["all", "preview", "stable", "web"];
@@ -49,18 +49,18 @@ export const debugLogFilterLabel = function debugLogFilterLabel(id) {
     if ("stable" !== id) {
       if ("web" === id) {
         const intl2 = util.intl;
-        return intl2.string(_modDef3591.J2TPCe);
+        return intl2.string(_modDef3593.J2TPCe);
       } else {
         const intl = util.intl;
-        return intl.string(_modDef3591.humq1B);
+        return intl.string(_modDef3593.humq1B);
       }
     }
   }
   const intl3 = util.intl;
   if ("preview" === id) {
-    let kiOVnt = _modDef3591["+m8XM6"];
+    let kiOVnt = _modDef3593["+m8XM6"];
   } else {
-    kiOVnt = _modDef3591.kiOVnt;
+    kiOVnt = _modDef3593.kiOVnt;
   }
   return intl3.string(kiOVnt);
 };
@@ -102,23 +102,23 @@ export const modelCallOutcome = function modelCallOutcome(call) {
 export const forceCompactionStatus = function forceCompactionStatus(stateFromStores3) {
   if ("idle" === stateFromStores3) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3591.wBng42);
+    return intl4.string(_modDef3593.wBng42);
   } else if ("pending" === stateFromStores3) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3591["0tgo31"]);
+    return intl3.string(_modDef3593["0tgo31"]);
   } else {
     const formatObservedAtResult = VibegrationsDebugFormat.formatObservedAt(stateFromStores3.observedAt);
     if ("compacted" === stateFromStores3.outcome) {
       const intl2 = util.intl;
       const obj2 = { time: formatObservedAtResult };
-      return intl2.formatToPlainString(_modDef3591["eL8+rZ"], obj2);
+      return intl2.formatToPlainString(_modDef3593["eL8+rZ"], obj2);
     } else {
       if ("declined" === stateFromStores3.outcome) {
-        let v9vZuG6 = _modDef3591["9vZuG6"];
+        let v9vZuG6 = _modDef3593["9vZuG6"];
       } else if ("busy" === stateFromStores3.outcome) {
-        v9vZuG6 = _modDef3591.GV4sdd;
+        v9vZuG6 = _modDef3593.GV4sdd;
       } else {
-        v9vZuG6 = _modDef3591["Y+0nUb"];
+        v9vZuG6 = _modDef3593["Y+0nUb"];
       }
       const intl = util.intl;
       let str2 = stateFromStores3.reason;
@@ -134,21 +134,21 @@ export const analyticsUnavailableReason = function analyticsUnavailableReason(an
   const reason = analytics.reason;
   if ("local" === reason) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3591.M7Vn6y);
+    return intl5.string(_modDef3593.M7Vn6y);
   } else if ("unconfigured" === reason) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3591.QirpMl);
+    return intl4.string(_modDef3593.QirpMl);
   } else if ("unauthorized" === reason) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3591.QZ1e4l);
+    return intl3.string(_modDef3593.QZ1e4l);
   } else {
     if (null != analytics.detail) {
       const intl2 = util.intl;
       const obj = { detail: analytics.detail };
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3591.zUTHf7, obj);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3593.zUTHf7, obj);
     } else {
       const intl = util.intl;
-      formatToPlainStringResult = intl.string(_modDef3591.WIAQes);
+      formatToPlainStringResult = intl.string(_modDef3593.WIAQes);
     }
     return formatToPlainStringResult;
   }
@@ -169,7 +169,7 @@ export const analyticsMemoryValue = function analyticsMemoryValue(found) {
       num2 = 0;
     }
     obj2.p999 = VibegrationsDebugFormat.formatBytes(num2);
-    let formatToPlainStringResult = intl.formatToPlainString(_modDef3591.SBkDIZ, obj2);
+    let formatToPlainStringResult = intl.formatToPlainString(_modDef3593.SBkDIZ, obj2);
     const tmp2Result = VibegrationsDebugFormat;
   } else {
     formatToPlainStringResult = null;

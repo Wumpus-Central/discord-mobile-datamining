@@ -1,8 +1,8 @@
-// === Module 14050: GuildBadgeDiamond ===
+// === Module 14058: GuildBadgeDiamond ===
 
-// Module 14050 (GuildBadgeDiamond)
-import inlineStyles from "inlineStyles" /* 8586 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14023 */;
+// Module 14058 (GuildBadgeDiamond)
+import inlineStyles from "inlineStyles" /* 8606 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14031 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

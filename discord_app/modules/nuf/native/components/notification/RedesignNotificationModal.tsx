@@ -1,12 +1,12 @@
-// === Module 16129: RedesignNotificationModal ===
+// === Module 16151: RedesignNotificationModal ===
 
-// Module 16129 (RedesignNotificationModal)
+// Module 16151 (RedesignNotificationModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12554 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12555 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 12831 */;
-import _modDef16130 from "module_16130" /* 16130 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12563 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12564 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 12839 */;
+import _modDef16152 from "module_16152" /* 16152 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,12 +50,12 @@ class RedesignNotificationModal {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12552).PermissionStateType;
-const NotificationPermissionConstants = fn(12553);
+const PermissionStateType = fn(12561).PermissionStateType;
+const NotificationPermissionConstants = fn(12562);
 ({ EventActionLocation: closure_7, EventActionType: closure_8 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: -nativeDefault.space.PX_48 }, notificationHeaderImage: { position: "absolute", alignSelf: "center", zIndex: 2, top: -140, height: 156, width: 150 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);

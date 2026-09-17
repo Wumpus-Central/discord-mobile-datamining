@@ -1,7 +1,7 @@
-// === Module 15950: FeedProductList ===
+// === Module 15972: FeedProductList ===
 
-// Module 15950 (FeedProductList)
-import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15952 */;
+// Module 15972 (FeedProductList)
+import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15974 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  const cardLayout = num(15951).useCardLayout();
+  const cardLayout = num(15973).useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   const items = [];
   for (let num = 0; num < loadingCardsNum; num = num + columns) {
@@ -25,9 +25,9 @@ function SkeletonGrid(accessibilityLabel) {
     obj3.style = items1;
     obj3.children = arr.map((item, index) => {
       const obj = { width: require, style: null };
-      const obj2 = { marginBottom: num(8904).COLLECTIBLES_SHOP_CARD_GAP };
+      const obj2 = { marginBottom: num(8920).COLLECTIBLES_SHOP_CARD_GAP };
       obj.style = obj2;
-      return closure_4(closure_1(9011), obj, "" + num + "-" + index);
+      return closure_4(closure_1(9027), obj, "" + num + "-" + index);
     });
     let _HermesInternal = HermesInternal;
     let arr2 = items.push(<View key={"row-" + num} style={null}>{null}</View>);
@@ -36,8 +36,8 @@ function SkeletonGrid(accessibilityLabel) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
-let obj2 = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: { flexDirection: "row", gap: fn(8904).COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: fn(8904).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(4640);
+let obj2 = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: { flexDirection: "row", gap: fn(8920).COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: fn(8920).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FeedProductList.tsx");

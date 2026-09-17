@@ -1,17 +1,17 @@
-// === Module 16379: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 16409: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 16379 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 16409 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import components_Button_Button from "components/Button/Button" /* 5060 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5211 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7260 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9206 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import components_Button_Button from "components/Button/Button" /* 5062 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5213 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7264 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9217 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 
 require = fn;
 const View = fn(17).View;
@@ -21,7 +21,7 @@ const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" }, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
 obj2.videoContainer = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
@@ -63,7 +63,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const intl = util.intl;
   obj5.accessibilityLabel = intl.string(util.t.gCgirr);
   const size = { style: tmp.videoContainer, src, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true };
-  obj5.children = closure_10(markAsDismissed(8437), size);
+  obj5.children = closure_10(markAsDismissed(8456), size);
   const items2 = [closure_10(View, obj5), , ];
   const obj6 = { style: tmp.info, children: null };
   const obj7 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };

@@ -1,10 +1,10 @@
-// === Module 16281: useFavoritesGuildHeaderAction ===
+// === Module 16311: useFavoritesGuildHeaderAction ===
 
-// Module 16281 (useFavoritesGuildHeaderAction)
+// Module 16311 (useFavoritesGuildHeaderAction)
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
-import _modDef3237 from "module_3237" /* 3237 */;
-import FavoritesHooks from "FavoritesHooks" /* 10363 */;
+import _modDef3239 from "module_3239" /* 3239 */;
+import FavoritesHooks from "FavoritesHooks" /* 10371 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ export default function useFavoritesGuildHeaderAction() {
   }, []);
   const intl = util.intl;
   if (hasAccess) {
-    let ojM1xJ = _modDef3237.G9fGlP;
+    let ojM1xJ = _modDef3239.G9fGlP;
   } else {
     ojM1xJ = util.t.ojM1xJ;
   }

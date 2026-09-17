@@ -1,16 +1,16 @@
-// === Module 12642: usePowerupActiveStatus ===
+// === Module 12651: usePowerupActiveStatus ===
 
-// Module 12642 (usePowerupActiveStatus)
+// Module 12651 (usePowerupActiveStatus)
 import GuildStore from "GuildStore" /* 1980 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4526 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4528 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4527);
+const GuildPowerupsConstants = fn(4529);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS: closure_4, PowerupActiveStatusType: hasOwnProperty, POWERUPS_INCLUDED_IN_LEVEL: metroRequire, BOOSTING_TIER_TO_LEVEL_SKU_ID: closure_7 } = GuildPowerupsConstants);
 const GuildFeatures = fn(1074).GuildFeatures;
-let closure_9 = fn(4528).GAME_SERVER_POWERUP_SKU_ID;
+let closure_9 = fn(4530).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/usePowerupActiveStatus.tsx");
 

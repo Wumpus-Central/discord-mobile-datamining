@@ -1,18 +1,18 @@
-// === Module 16136: useMainTabsPanelsGesture ===
+// === Module 16158: useMainTabsPanelsGesture ===
 
-// Module 16136 (useMainTabsPanelsGesture)
+// Module 16158 (useMainTabsPanelsGesture)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
-import timingPresets from "timingPresets" /* 4642 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6763 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
+import timingPresets from "timingPresets" /* 4644 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6766 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadTypes = fn(11610).LaunchPadTypes;
+const LaunchPadTypes = fn(11618).LaunchPadTypes;
 let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(16137);
+const PanelsConfig = fn(16159);
 let panelsConfig = PlatformUtils ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
 let closure_7 = { code: "function useMainTabsPanelsGestureTsx1(width){const{isDragging,translateX,IS_ANDROID,withTiming,timingInstant}=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;translateX.set(IS_ANDROID?withTiming(width,timingInstant,'animate-always'):width);}" };
 let closure_8 = { code: "function useMainTabsPanelsGestureTsx2(show,isFling,velocity,force){const{translateX,width,onVisibilityChange,runOnJS,onPreMovement,panelsConfig,isTimingConfig,withTiming,withSpring}=this.__closure;if(!force&&translateX.get()!==0&&translateX.get()!==width){return false;}const targetTranslationX=show?0:width;if(translateX.get()===targetTranslationX){if(onVisibilityChange!=null){runOnJS(onVisibilityChange)(show);}return false;}if(onPreMovement!=null){runOnJS(onPreMovement)(show);}const animationConfig=show?isFling?panelsConfig.swipeSidePanelOpen:panelsConfig.nonSwipeSidePanelOpen:isFling?panelsConfig.swipeSidePanelClose:panelsConfig.nonSwipeSidePanelClose;function handleAnimationFinish(finished){'worklet';if(!finished)return;if(onVisibilityChange!=null){runOnJS(onVisibilityChange)(show);}}translateX.set(isTimingConfig(animationConfig)?withTiming(targetTranslationX,animationConfig,'respect-motion-settings',handleAnimationFinish):withSpring(targetTranslationX,{...animationConfig,velocity:velocity},'respect-motion-settings',handleAnimationFinish));return true;}" };

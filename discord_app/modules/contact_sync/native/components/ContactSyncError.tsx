@@ -1,15 +1,15 @@
-// === Module 12837: ContactSyncError ===
+// === Module 12845: ContactSyncError ===
 
-// Module 12837 (ContactSyncError)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
+// Module 12845 (ContactSyncError)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_4 = createStyles.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
 const __initData = { code: "function ContactSyncErrorTsx1(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
 const size = fn(2);

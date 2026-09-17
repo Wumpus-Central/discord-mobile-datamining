@@ -1,9 +1,9 @@
-// === Module 16460: useGuildsBarGuildMediaState ===
+// === Module 16490: useGuildsBarGuildMediaState ===
 
-// Module 16460 (useGuildsBarGuildMediaState)
-import GuildMediaStateShadowCompare from "GuildMediaStateShadowCompare" /* 16462 */;
+// Module 16490 (useGuildsBarGuildMediaState)
+import GuildMediaStateShadowCompare from "GuildMediaStateShadowCompare" /* 16492 */;
 import noop from "module_19" /* 19 */;
-import GuildMediaStateStore from "GuildMediaStateStore" /* 13811 */;
+import GuildMediaStateStore from "GuildMediaStateStore" /* 13819 */;
 
 const require = globalThis.__r;
 

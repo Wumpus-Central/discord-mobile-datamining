@@ -1,20 +1,20 @@
-// === Module 17113: SettingsNavigator ===
+// === Module 17153: SettingsNavigator ===
 
-// Module 17113 (SettingsNavigator)
+// Module 17153 (SettingsNavigator)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import Pressables from "Pressables" /* 5208 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7105 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14806 */;
-import SettingRendererTypes from "SettingRendererTypes" /* 15518 */;
-import BackIconWithBadge from "BackIconWithBadge" /* 16533 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import Pressables from "Pressables" /* 5210 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7109 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14814 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 15523 */;
+import BackIconWithBadge from "BackIconWithBadge" /* 16563 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14804 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14812 */;
 
 const require = globalThis.__r;
 
@@ -49,9 +49,9 @@ const Constants = fn(1074);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(8029);
+const NativeStackNavigator = fn(8035);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, headerContainer: null, headerContainerRow: null, headerTitleWithBadge: null, backIcon: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.headerContainer = { width: "100%", paddingHorizontal: nativeDefault.space.PX_8, marginTop: nativeDefault.space.PX_8 };

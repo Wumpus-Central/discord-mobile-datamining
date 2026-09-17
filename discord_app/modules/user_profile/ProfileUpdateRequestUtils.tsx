@@ -1,9 +1,9 @@
-// === Module 11239: ProfileUpdateRequestUtils ===
+// === Module 11247: ProfileUpdateRequestUtils ===
 
-// Module 11239 (ProfileUpdateRequestUtils)
+// Module 11247 (ProfileUpdateRequestUtils)
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7099 */;
-import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11240 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7103 */;
+import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11248 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");

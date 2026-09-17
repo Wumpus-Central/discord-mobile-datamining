@@ -1,20 +1,20 @@
-// === Module 9953: StartStageChannelModal ===
+// === Module 9964: StartStageChannelModal ===
 
-// Module 9953 (StartStageChannelModal)
+// Module 9964 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4841 */;
-import Pressables from "Pressables" /* 5208 */;
-import GuildIcon from "GuildIcon" /* 5670 */;
-import _modDef7199 from "module_7199" /* 7199 */;
-import HotspotStore2 from "HotspotStore" /* 7323 */;
-import StageSparkleDefault from "StageSparkle" /* 8537 */;
-import Form from "Form" /* 8728 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
+import Pressables from "Pressables" /* 5210 */;
+import GuildIcon from "GuildIcon" /* 5672 */;
+import _modDef7203 from "module_7203" /* 7203 */;
+import HotspotStore2 from "HotspotStore" /* 7327 */;
+import StageSparkleDefault from "StageSparkle" /* 8556 */;
+import Form from "Form" /* 8748 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ function NavigationBar(guild) {
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef7199 };
+    const obj3 = { source: _modDef7203 };
     obj2.children = closure_1_14(native.Icon, obj3);
     obj.children = closure_1_14(Pressables.PressableOpacity, obj2);
     tmp2 = closure_1_14(React5, obj);
@@ -99,13 +99,13 @@ class NotificationToggle {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(5500);
+const StageChannelsConstants = fn(5502);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let constants = fn(1964).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { keyboardAwareView: { flex: 1 }, closeButtonContainer: { right: 10 }, container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { paddingHorizontal: 16 }, contentTopSpacing: { paddingTop: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, textInput: null, startButton: null, error: null, optionExplanation: null, guildIcon: null, label: null, pill: null, pillLabel: null, notificationToggle: null, ageVerificationNotice: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.textInput = { padding: 12, width: "100%", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
@@ -180,10 +180,10 @@ export default noop.forwardRef((channel, arg1) => {
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(8528).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(8547).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(8528);
+                  obj5 = tmp66(8547);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -197,7 +197,7 @@ export default noop.forwardRef((channel, arg1) => {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(4538).APIError(closure_128_1);
+            const aPIError = new closure_0(4540).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -212,8 +212,8 @@ export default noop.forwardRef((channel, arg1) => {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(7326).hideHotspot(closure_0(7323).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(7326);
+                  tmp66(7330).hideHotspot(closure_0(7327).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(7330);
                 }
               }
             } else if (arg0 === 1) {
@@ -260,7 +260,7 @@ export default noop.forwardRef((channel, arg1) => {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("module_7199");
+      obj.source = require("module_7203");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     }

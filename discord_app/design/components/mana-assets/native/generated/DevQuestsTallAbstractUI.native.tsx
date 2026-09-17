@@ -1,9 +1,9 @@
-// === Module 6001: DevQuestsTallAbstractUI ===
+// === Module 6003: DevQuestsTallAbstractUI ===
 
-// Module 6001 (DevQuestsTallAbstractUI)
+// Module 6003 (DevQuestsTallAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6002 from "module_6002" /* 6002 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6004 from "module_6004" /* 6004 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DevQuestsTallAbstractUI = function DevQuestsTallAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6002 };
+  const obj2 = { uri: _modDef6004 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

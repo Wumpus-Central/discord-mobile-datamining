@@ -1,6 +1,6 @@
-// === Module 6286: ? ===
+// === Module 6288: ? ===
 
-// Module 6286
+// Module 6288
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GroupGamingSpotIllustration-2x.png.js");

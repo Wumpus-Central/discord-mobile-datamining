@@ -1,6 +1,6 @@
-// === Module 14932: TinyBroncoSettingsNoticesLazy ===
+// === Module 14940: TinyBroncoSettingsNoticesLazy ===
 
-// Module 14932 (TinyBroncoSettingsNoticesLazy)
+// Module 14940 (TinyBroncoSettingsNoticesLazy)
 import jsxProd from "jsxProd" /* 21 */;
 import size from "module_2" /* 2 */;
 

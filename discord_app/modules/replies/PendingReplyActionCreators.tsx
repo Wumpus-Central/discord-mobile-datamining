@@ -1,6 +1,6 @@
-// === Module 11811: PendingReplyActionCreators ===
+// === Module 11819: PendingReplyActionCreators ===
 
-// Module 11811 (PendingReplyActionCreators)
+// Module 11819 (PendingReplyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

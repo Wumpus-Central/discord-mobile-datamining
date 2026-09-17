@@ -1,6 +1,6 @@
-// === Module 5978: ? ===
+// === Module 5980: ? ===
 
-// Module 5978
+// Module 5980
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ConnectionCablesSpotIllustration-2x.png.js");

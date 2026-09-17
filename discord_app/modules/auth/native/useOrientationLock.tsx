@@ -1,10 +1,10 @@
-// === Module 16131: useOrientationLock ===
+// === Module 16153: useOrientationLock ===
 
-// Module 16131 (useOrientationLock)
+// Module 16153 (useOrientationLock)
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
-import DeviceUtils from "DeviceUtils" /* 4617 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7052 */;
-import DeviceOrientation from "DeviceOrientation" /* 8462 */;
+import DeviceUtils from "DeviceUtils" /* 4619 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7056 */;
+import DeviceOrientation from "DeviceOrientation" /* 8481 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

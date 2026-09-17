@@ -1,17 +1,17 @@
-// === Module 10194: StageGridRow ===
+// === Module 10205: StageGridRow ===
 
-// Module 10194 (StageGridRow)
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5211 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5511 */;
-import SpeakerTileDefault from "SpeakerTile" /* 10185 */;
-import StageTileTypes from "StageTileTypes" /* 10186 */;
-import MediaTileDefault from "MediaTile" /* 10195 */;
+// Module 10205 (StageGridRow)
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5213 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5513 */;
+import SpeakerTileDefault from "SpeakerTile" /* 10196 */;
+import StageTileTypes from "StageTileTypes" /* 10197 */;
+import MediaTileDefault from "MediaTile" /* 10206 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_5 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center" }, containerLandscape: { justifyContent: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageGridRow.tsx");

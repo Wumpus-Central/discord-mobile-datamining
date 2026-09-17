@@ -1,13 +1,13 @@
-// === Module 10806: PromotionsStore ===
+// === Module 10814: PromotionsStore ===
 
-// Module 10806 (PromotionsStore)
+// Module 10814 (PromotionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 10839 */;
+import selectActiveMarketingComponentDefault from "selectActiveMarketingComponent" /* 10847 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import PromotionRecord from "PromotionRecord" /* 10807 */;
+import PromotionRecord from "PromotionRecord" /* 10815 */;
 import UserStore from "UserStore" /* 1372 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 10808 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 10816 */;
 
 const require = fn;
 function createEmptyPromotionsByType() {

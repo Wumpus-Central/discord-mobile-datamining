@@ -1,15 +1,15 @@
-// === Module 7231: GuildOnboardingModal ===
+// === Module 7235: GuildOnboardingModal ===
 
-// Module 7231 (GuildOnboardingModal)
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5633 */;
-import NavigatorHeader from "NavigatorHeader" /* 5710 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7215 */;
+// Module 7235 (GuildOnboardingModal)
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5635 */;
+import NavigatorHeader from "NavigatorHeader" /* 5712 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7219 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5658 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5660 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7210 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7214 */;
 
 require = fn;
 function headerTitle() {
@@ -18,7 +18,7 @@ function headerTitle() {
 function headerRight() {
   return null;
 }
-let closure_9 = fn(7207).GuildOnboardingModalStates;
+let closure_9 = fn(7211).GuildOnboardingModalStates;
 const Constants = fn(1074);
 ({ GuildFeatures: c10, Routes: closure_11 } = Constants);
 const jsx = fn(21).jsx;

@@ -1,7 +1,7 @@
-// === Module 7335: GuildSpaceExperiment ===
+// === Module 7339: GuildSpaceExperiment ===
 
-// Module 7335 (GuildSpaceExperiment)
-import createExperiment from "module_4551" /* 4551 */;
+// Module 7339 (GuildSpaceExperiment)
+import createExperiment from "module_4553" /* 4553 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-06_guild_spaces", label: "Guild Space", defaultConfig: { enabled: false }, treatments: null };

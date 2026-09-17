@@ -1,8 +1,8 @@
-// === Module 17733: useChannelsAllowedToUnlink ===
+// === Module 17774: useChannelsAllowedToUnlink ===
 
-// Module 17733 (useChannelsAllowedToUnlink)
+// Module 17774 (useChannelsAllowedToUnlink)
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 const require = globalThis.__r;
 

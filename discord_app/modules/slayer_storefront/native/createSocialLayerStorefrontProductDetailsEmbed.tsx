@@ -1,25 +1,25 @@
-// === Module 11673: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11681: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11673 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11681 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1115 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import _modDef3461 from "module_3461" /* 3461 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7336 */;
-import StorefrontUtils from "StorefrontUtils" /* 7341 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8061 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10944 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11674 */;
+import _modDef3463 from "module_3463" /* 3463 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7340 */;
+import StorefrontUtils from "StorefrontUtils" /* 7345 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8081 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10952 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11682 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4866 */;
-import SKUStore from "SKUStore" /* 5596 */;
+import ApplicationStore from "ApplicationStore" /* 4868 */;
+import SKUStore from "SKUStore" /* 5598 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(7850).InviteTypes;
+const InviteTypes = fn(7856).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
@@ -80,7 +80,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3461.BKf0MM);
+              stringResult = string(_modDef3463.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;

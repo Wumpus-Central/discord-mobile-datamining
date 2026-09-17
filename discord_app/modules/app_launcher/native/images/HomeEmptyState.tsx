@@ -1,7 +1,7 @@
-// === Module 12254: HomeEmptyState ===
+// === Module 12263: HomeEmptyState ===
 
-// Module 12254 (HomeEmptyState)
-import inlineStyles from "inlineStyles" /* 8586 */;
+// Module 12263 (HomeEmptyState)
+import inlineStyles from "inlineStyles" /* 8606 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

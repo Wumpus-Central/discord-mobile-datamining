@@ -1,16 +1,16 @@
-// === Module 11508: ChatViewStickyHeader ===
+// === Module 11516: ChatViewStickyHeader ===
 
-// Module 11508 (ChatViewStickyHeader)
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11120 */;
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11510 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11513 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11514 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11527 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11533 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11557 */;
-import ForumPostActionBarDefault from "ForumPostActionBar" /* 11559 */;
-import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11563 */;
-import ChatBannerDefault from "ChatBanner" /* 11566 */;
+// Module 11516 (ChatViewStickyHeader)
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 11128 */;
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 11518 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 11521 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 11522 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 11535 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11541 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11565 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 11567 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11571 */;
+import ChatBannerDefault from "ChatBanner" /* 11574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   }
   return tmp5;
 }
-const LOCATION_CONTEXT_MOBILE = fn(11509).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(11517).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);

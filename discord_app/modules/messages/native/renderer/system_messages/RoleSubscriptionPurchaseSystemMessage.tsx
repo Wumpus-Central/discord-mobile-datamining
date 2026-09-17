@@ -1,16 +1,16 @@
-// === Module 8139: RoleSubscriptionPurchaseSystemMessage ===
+// === Module 8159: RoleSubscriptionPurchaseSystemMessage ===
 
-// Module 8139 (RoleSubscriptionPurchaseSystemMessage)
+// Module 8159 (RoleSubscriptionPurchaseSystemMessage)
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import useMessageAuthor from "useMessageAuthor" /* 4871 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8076 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8078 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8080 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8108 */;
-import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8113 */;
-import transformSticker from "transformSticker" /* 8114 */;
+import useMessageAuthor from "useMessageAuthor" /* 4873 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8096 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8098 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8100 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8128 */;
+import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 8133 */;
+import transformSticker from "transformSticker" /* 8134 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
 

@@ -1,10 +1,10 @@
-// === Module 4792: LinkUtils ===
+// === Module 4794: LinkUtils ===
 
-// Module 4792 (LinkUtils)
-import RegexUtilsDefault from "RegexUtils" /* 4625 */;
+// Module 4794 (LinkUtils)
+import RegexUtilsDefault from "RegexUtils" /* 4627 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
 
 const Constants = fn(1074);
 const ME = Constants.ME;
@@ -16,6 +16,7 @@ const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + 
 const regExp2 = new RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
 const regExp3 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+)/roll-dice(?:/(\\d+)d(\\d+))?$");
 const regExp4 = new RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?");
+const re12 = /^\/users\/(\d+)\/?$/;
 const regExp5 = new RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?");
 const regExp6 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|" + ME + ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?");
 const regExp7 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
@@ -69,6 +70,21 @@ export const tryParseEventDetailsPath = function tryParseEventDetailsPath(pathna
     }
     return tmp2;
   }
+};
+export const tryParseUserProfilePath = function tryParseUserProfilePath(pathname) {
+  let tmp = null;
+  if (null != pathname) {
+    const match = pathname.match(re12);
+    let tmp4;
+    if (match != null) {
+      tmp4 = match[1];
+    }
+    if (tmp4 == null) {
+      tmp4 = null;
+    }
+    tmp = tmp4;
+  }
+  return tmp;
 };
 export const canViewChannel = function canViewChannel(channel) {
   let canResult = channel.isPrivate();

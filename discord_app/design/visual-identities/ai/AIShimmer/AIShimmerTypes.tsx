@@ -1,6 +1,6 @@
-// === Module 14244: AIShimmerTypes ===
+// === Module 14252: AIShimmerTypes ===
 
-// Module 14244 (AIShimmerTypes)
+// Module 14252 (AIShimmerTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/AIShimmerTypes.tsx");

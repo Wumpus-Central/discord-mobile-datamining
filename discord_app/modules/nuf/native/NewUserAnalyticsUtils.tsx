@@ -1,6 +1,6 @@
-// === Module 12826: NewUserAnalyticsUtils ===
+// === Module 12834: NewUserAnalyticsUtils ===
 
-// Module 12826 (NewUserAnalyticsUtils)
+// Module 12834 (NewUserAnalyticsUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import size from "module_2" /* 2 */;

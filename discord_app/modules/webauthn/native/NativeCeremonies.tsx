@@ -1,8 +1,9 @@
-// === Module 7057: NativeCeremonies ===
+// === Module 7061: NativeCeremonies ===
 
-// Module 7057 (NativeCeremonies)
+// Module 7061 (NativeCeremonies)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1115 */;
+import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 6710 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -36,7 +37,7 @@ let closure_5 = async function _promptForRegisterCredential() {
           closure_130_0 = undefined;
           let register = closure_0;
           if (closure_0 === undefined) {
-            register = NativeModules.DCDSecurityKeyManager.register;
+            register = NativeSecurityKeyManagerModuleDefault.register;
           }
           closure_130_0 = register;
           closure_130_1 = undefined;
@@ -57,7 +58,7 @@ let closure_5 = async function _promptForRegisterCredential() {
         } else {
           c4 = 2;
           c5 = 1;
-          const obj5 = { value: closure_131_0(closure_131_1[3]).startRegisterWebAuthnCredential(), done: false };
+          const obj5 = { value: closure_131_0(closure_131_2[3]).startRegisterWebAuthnCredential(), done: false };
           return obj5;
         }
       } else if (2 === tmp6) {
@@ -91,30 +92,15 @@ let closure_5 = async function _promptForRegisterCredential() {
         const obj = { value: obj8, done: true };
         return obj;
       }
-    } catch (tmp19) {
+    } catch (tmp20) {
       c5 = tmp;
-      throw tmp19;
+      throw tmp20;
     }
   }
 };
-const NativeModules = fn(17).NativeModules;
 let closure_4 = new LoggerDefault("WebAuthnUtils");
 let obj = {};
-Object.defineProperty(obj, "hasAndroidPasskeySupport", {
-  get: () => {
-    let isAndroidResult = require("PlatformUtils").isAndroid();
-    if (isAndroidResult) {
-      const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
-      let registerPasskey;
-      if (DCDSecurityKeyManager != null) {
-        registerPasskey = DCDSecurityKeyManager.registerPasskey;
-      }
-      isAndroidResult = null != registerPasskey;
-    }
-    return isAndroidResult;
-  },
-  set: undefined
-});
+Object.defineProperty(obj, "hasAndroidPasskeySupport", { get: () => require("PlatformUtils").isAndroid(), set: undefined });
 Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
   get: () => {
     let isAndroidResult = require("PlatformUtils").isAndroid();
@@ -127,19 +113,9 @@ Object.defineProperty(obj, "shouldDisplayAndroidFidoSelector", {
   set: undefined
 });
 obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
-  let authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticate;
-  let isAndroidResult = authenticatePasskey(1364).isAndroid();
-  if (isAndroidResult) {
-    const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
-    authenticatePasskey = undefined;
-    if (DCDSecurityKeyManager != null) {
-      authenticatePasskey = DCDSecurityKeyManager.authenticatePasskey;
-    }
-    isAndroidResult = null != authenticatePasskey;
-  }
-  if (isAndroidResult) {
-    authenticatePasskey = NativeModules.DCDSecurityKeyManager.authenticatePasskey;
-  }
+  let obj = require("PlatformUtils");
+  const tmp2 = NativeSecurityKeyManagerModuleDefault;
+  _require = require("PlatformUtils").isAndroid() ? tmp2.authenticatePasskey : tmp2.authenticate;
   return asyncGeneratorStep(async () => {
     closure_0 = [...arguments];
     c5 = 0;
@@ -170,7 +146,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              closure_2 = tmp3;
+              closure_1 = tmp5;
               closure_129_0 = closure_0;
               c5 = 1;
               c6 = 1;
@@ -199,13 +175,13 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
             const code = closure_129_1.code;
             if ("AbortError" !== code) {
               if ("NotAllowedError" !== code) {
-                const result = closure_0(tmp5[7]).captureWebAuthnException(closure_129_1);
+                const result = closure_0(tmp3[7]).captureWebAuthnException(closure_129_1);
                 logger.error(closure_129_1);
                 throw closure_129_1;
               }
             }
             logger.warn(closure_129_1);
-            const ignorableWebAuthnError = new closure_0(tmp5[6]).IgnorableWebAuthnError();
+            const ignorableWebAuthnError = new closure_0(tmp3[6]).IgnorableWebAuthnError();
             throw ignorableWebAuthnError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -237,9 +213,10 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   });
 };
 obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredentialManagerPasskey(setError) {
+  setRegistering(6710).registerPasskey;
   setError = undefined;
   setError = setError.setError;
-  const setRegistering = setError.setRegistering;
+  setRegistering = setError.setRegistering;
   if (undefined !== setError) {
     setError("");
   }
@@ -289,9 +266,10 @@ obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredential
   }).finally(() => setRegistering(false));
 };
 obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setError) {
+  setRegistering(6710).register;
   setError = undefined;
   setError = setError.setError;
-  const setRegistering = setError.setRegistering;
+  setRegistering = setError.setRegistering;
   if (undefined !== setError) {
     setError("");
   }
@@ -341,13 +319,14 @@ obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setErro
   }).finally(() => setRegistering(false));
 };
 obj.registerPasskey = function registerPasskey(setError) {
-  const DCDSecurityKeyManager = NativeModules.DCDSecurityKeyManager;
-  if (obj.isAndroid()) {
+  const obj = setError(1364);
+  const tmp2 = setRegistering(6710);
+  if (isAndroidResult) {
     setError = undefined;
     const setError2 = setError.setError;
     setError = setError2;
     const setRegistering2 = setError.setRegistering;
-    let setRegistering = setRegistering2;
+    setRegistering = setRegistering2;
     if (undefined !== setError2) {
       setError2("");
     }
@@ -430,7 +409,7 @@ obj.registerPasskey = function registerPasskey(setError) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(DCDSecurityKeyManager.register);
+    })(tmp2.register);
     const nextPromise1 = (function promptForRegisterCredential() {
       const self = this;
       const apply = closure_1_5.apply;
@@ -440,7 +419,7 @@ obj.registerPasskey = function registerPasskey(setError) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(DCDSecurityKeyManager.register).then(setError.onRegisterSuccess);
+    })(tmp2.register).then(setError.onRegisterSuccess);
     cleanupPromise = (function promptForRegisterCredential() {
       const self = this;
       const apply = closure_1_5.apply;
@@ -450,7 +429,7 @@ obj.registerPasskey = function registerPasskey(setError) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(DCDSecurityKeyManager.register).then(setError.onRegisterSuccess).catch((error) => {
+    })(tmp2.register).then(setError.onRegisterSuccess).catch((error) => {
       if (undefined === setError) {
         throw error;
       } else {
@@ -468,7 +447,7 @@ obj.registerPasskey = function registerPasskey(setError) {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(DCDSecurityKeyManager.register).then(setError.onRegisterSuccess).catch((error) => {
+    })(tmp2.register).then(setError.onRegisterSuccess).catch((error) => {
       if (undefined === setError) {
         throw error;
       } else {
@@ -483,11 +462,11 @@ obj.registerPasskey = function registerPasskey(setError) {
 obj.registerSecurityKey = function registerSecurityKey(setError) {
   let register = fn;
   if (fn === undefined) {
-    register = NativeModules.DCDSecurityKeyManager.register;
+    register = setRegistering(6710).register;
   }
   setError = undefined;
   setError = setError.setError;
-  const setRegistering = setError.setRegistering;
+  setRegistering = setError.setRegistering;
   if (undefined !== setError) {
     setError("");
   }

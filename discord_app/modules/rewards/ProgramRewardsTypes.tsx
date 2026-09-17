@@ -1,8 +1,8 @@
-// === Module 13835: ProgramRewardsTypes ===
+// === Module 13843: ProgramRewardsTypes ===
 
-// Module 13835 (ProgramRewardsTypes)
-import RewardProgram from "RewardProgram" /* 13836 */;
-import ProgramCurrentState from "ProgramCurrentState" /* 13837 */;
+// Module 13843 (ProgramRewardsTypes)
+import RewardProgram from "RewardProgram" /* 13844 */;
+import ProgramCurrentState from "ProgramCurrentState" /* 13845 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsTypes.tsx");

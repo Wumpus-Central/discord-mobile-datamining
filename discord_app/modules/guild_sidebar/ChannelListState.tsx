@@ -1,35 +1,35 @@
-// === Module 7638: ChannelListState ===
+// === Module 7642: ChannelListState ===
 
-// Module 7638 (ChannelListState)
+// Module 7642 (ChannelListState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ChannelListUtils from "ChannelListUtils" /* 4784 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7376 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7400 */;
+import ChannelListUtils from "ChannelListUtils" /* 4786 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7380 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7404 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ApplicationStore from "ApplicationStore" /* 4866 */;
-import ChannelStatusStore from "ChannelStatusStore" /* 7639 */;
+import ApplicationStore from "ApplicationStore" /* 4868 */;
+import ChannelStatusStore from "ChannelStatusStore" /* 7643 */;
 import GatedChannelStore from "GatedChannelStore" /* 2014 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7636 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7640 */;
 import ImpersonateStore from "ImpersonateStore" /* 2015 */;
-import FavoritesSuggestionStore from "FavoritesSuggestionStore" /* 7640 */;
-import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7641 */;
-import NewChannelsStore from "NewChannelsStore" /* 7642 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5592 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4278 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7227 */;
+import FavoritesSuggestionStore from "FavoritesSuggestionStore" /* 7644 */;
+import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7645 */;
+import NewChannelsStore from "NewChannelsStore" /* 7646 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5594 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7231 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7637 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7641 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4276 */;
-import ReadStateStore from "ReadStateStore" /* 4653 */;
+import PermissionStore from "PermissionStore" /* 4278 */;
+import ReadStateStore from "ReadStateStore" /* 4655 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4819 */;
-import VoiceStateStore from "VoiceStateStore" /* 4657 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4662 */;
-import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7643 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
+import VoiceStateStore from "VoiceStateStore" /* 4659 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4664 */;
+import ChannelListVoiceCategoryStore from "ChannelListVoiceCategoryStore" /* 7647 */;
 
 require = fn;
 function computeSubtitle(type, arg1, arg2) {
@@ -225,7 +225,7 @@ function shouldShowInRecents(guild, record, initializationData) {
 }
 const ChannelRecord = fn(1962);
 ({ ChannelRecordBase: closure_14, isGuildReadableType: closure_15, isThread: closure_16, THREADED_CHANNEL_TYPES: closure_17 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7644).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7648).ChannelListGuildActionRow;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_30, GuildFeatures: items } = Constants);
 const ChannelFlags = fn(1965).ChannelFlags;

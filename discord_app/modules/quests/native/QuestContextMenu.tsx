@@ -1,36 +1,36 @@
-// === Module 15258: QuestContextMenu ===
+// === Module 15263: QuestContextMenu ===
 
-// Module 15258 (QuestContextMenu)
+// Module 15263 (QuestContextMenu)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4349 */;
-import CopyIcon from "CopyIcon" /* 4584 */;
-import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 4588 */;
-import parseURLDefault from "parseURL" /* 4618 */;
-import QuestTypes from "QuestTypes" /* 5533 */;
-import AdCreativeType from "AdCreativeType" /* 5537 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7836 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7837 */;
-import captureAdUserAction from "captureAdUserAction" /* 7838 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7848 */;
-import IconButton from "IconButton" /* 8214 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8713 */;
-import _modDef8808 from "module_8808" /* 8808 */;
-import QuestActionCreators from "QuestActionCreators" /* 11422 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11441 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11642 */;
-import QuestUtils from "QuestUtils" /* 11909 */;
-import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15220 */;
-import _modDef15259 from "module_15259" /* 15259 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
+import CopyIcon from "CopyIcon" /* 4586 */;
+import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 4590 */;
+import parseURLDefault from "parseURL" /* 4620 */;
+import QuestTypes from "QuestTypes" /* 5535 */;
+import AdCreativeType from "AdCreativeType" /* 5539 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7842 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7843 */;
+import captureAdUserAction from "captureAdUserAction" /* 7844 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7854 */;
+import IconButton from "IconButton" /* 8057 */;
+import _modDef8060 from "module_8060" /* 8060 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8733 */;
+import QuestActionCreators from "QuestActionCreators" /* 11430 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11449 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11650 */;
+import QuestUtils from "QuestUtils" /* 11918 */;
+import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators" /* 15225 */;
+import _modDef15264 from "module_15264" /* 15264 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7811 */;
+import QuestStore from "QuestStore" /* 7817 */;
 
 require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef8808;
+  obj.icon = _modDef8060;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -136,7 +136,7 @@ export default noop.memo((children) => {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef15259;
+    obj2.iconSource = _modDef15264;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

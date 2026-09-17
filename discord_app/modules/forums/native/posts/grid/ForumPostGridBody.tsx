@@ -1,31 +1,31 @@
-// === Module 12148: ForumPostGridBody ===
+// === Module 12157: ForumPostGridBody ===
 
-// Module 12148 (ForumPostGridBody)
+// Module 12157 (ForumPostGridBody)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8013 */;
-import _modDef11391 from "module_11391" /* 11391 */;
-import _modDef12149 from "module_12149" /* 12149 */;
-import _modDef12150 from "module_12150" /* 12150 */;
-import ForumPostMedia from "ForumPostMedia" /* 12151 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8019 */;
+import _modDef11399 from "module_11399" /* 11399 */;
+import _modDef12158 from "module_12158" /* 12158 */;
+import _modDef12159 from "module_12159" /* 12159 */;
+import ForumPostMedia from "ForumPostMedia" /* 12160 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GIFIcon() {
   const tmp = closure_8();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12149, disableColor: true, style: closure_8().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12158, disableColor: true, style: closure_8().gifIcon });
 }
 function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12150, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12159, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_8();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
-  items = [timestampProducer(native.Icon, { source: _modDef11391, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
-  const obj2 = { source: _modDef11391, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, { source: _modDef11399, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
+  const obj2 = { source: _modDef11399, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount });
   obj.children = items;
   return React5(View, obj);
@@ -53,7 +53,7 @@ function MediaGridColumn(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj2 = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
 let size = { height: 20, width: 33, backgroundColor: "black", borderRadius: nativeDefault.radii.xs, resizeMode: "cover" };
 obj2.gifIcon = size;
@@ -84,7 +84,7 @@ export default function ForumPostGridBody(thread) {
   const media = thread.media;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const tmp4 = _slicedToArray(thread(7385).useSomeAppliedTags(thread, 2), 2);
+  const tmp4 = _slicedToArray(thread(7389).useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp13Result = first.length > 0;
   items = [media];
@@ -139,7 +139,7 @@ export default function ForumPostGridBody(thread) {
   if (isMediaPostResult) {
     wideAspectRatioGrid = tmp.wideAspectRatioGrid;
   }
-  let obj = thread(7385);
+  let obj = thread(7389);
   let tmp2 = thread;
   items5[1] = wideAspectRatioGrid;
   const items6 = [
@@ -164,7 +164,7 @@ export default function ForumPostGridBody(thread) {
   if (tmp13Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(12155).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(12164).ForumPostAppliedTagPills, obj5);
     tmp13Result = closure_6(View, obj4);
   }
   items6[1] = tmp13Result;

@@ -1,11 +1,11 @@
-// === Module 15044: FamilyCenterSettingParentalControlsSetting ===
+// === Module 15052: FamilyCenterSettingParentalControlsSetting ===
 
-// Module 15044 (FamilyCenterSettingParentalControlsSetting)
+// Module 15052 (FamilyCenterSettingParentalControlsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import _modDef2397 from "module_2397" /* 2397 */;
-import SettingsConstants from "SettingsConstants" /* 8091 */;
-import SettingBuilders from "SettingBuilders" /* 11614 */;
+import SettingsConstants from "SettingsConstants" /* 8111 */;
+import SettingBuilders from "SettingBuilders" /* 11622 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

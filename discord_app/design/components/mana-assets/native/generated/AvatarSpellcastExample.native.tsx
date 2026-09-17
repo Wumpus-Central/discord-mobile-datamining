@@ -1,9 +1,9 @@
-// === Module 5883: AvatarSpellcastExample ===
+// === Module 5885: AvatarSpellcastExample ===
 
-// Module 5883 (AvatarSpellcastExample)
+// Module 5885 (AvatarSpellcastExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5884 from "module_5884" /* 5884 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5886 from "module_5886" /* 5886 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarSpellcastExample = function AvatarSpellcastExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5884 };
+  const obj2 = { uri: _modDef5886 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

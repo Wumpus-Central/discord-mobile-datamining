@@ -1,8 +1,8 @@
-// === Module 12624: useLoadGuildPowerups ===
+// === Module 12633: useLoadGuildPowerups ===
 
-// Module 12624 (useLoadGuildPowerups)
-import GameServerActionCreators from "GameServerActionCreators" /* 12625 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12631 */;
+// Module 12633 (useLoadGuildPowerups)
+import GameServerActionCreators from "GameServerActionCreators" /* 12634 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12640 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

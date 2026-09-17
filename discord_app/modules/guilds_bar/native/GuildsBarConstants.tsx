@@ -1,8 +1,8 @@
-// === Module 16412: GuildsBarConstants ===
+// === Module 16442: GuildsBarConstants ===
 
-// Module 16412 (GuildsBarConstants)
+// Module 16442 (GuildsBarConstants)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4339 */;
+import useToken from "useToken" /* 4341 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarConstants.tsx");

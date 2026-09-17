@@ -1,22 +1,22 @@
-// === Module 12525: SelectDoubleTapEmojiRow ===
+// === Module 12534: SelectDoubleTapEmojiRow ===
 
-// Module 12525 (SelectDoubleTapEmojiRow)
+// Module 12534 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiDefault from "Emoji" /* 7240 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7877 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11274 */;
+import EmojiDefault from "Emoji" /* 7244 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7883 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11282 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4630 */;
+import AccessibilityStore from "AccessibilityStore" /* 4632 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7261).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7265).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1375);
 ({ EMOJI_URL_BASE_SIZE: closure_7, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { emoji: { width: 24, height: 24 }, customEmoji: { width: 24, height: 24 }, textEmoji: null, emojiRow: null, emojiPressable: null, selectedEmojiPressable: null, emojiWrapper: null, selectedEmojiWrapper: null, chooseEmojiButton: null, customReactionOverlay: null, selectedCustomReactionIcon: null };
 let PlatformUtils = fn(1364);
 let num = 20;
@@ -100,7 +100,7 @@ let closure_13 = noop.memo((emoji) => {
   obj4.src = url;
   obj3.children = closure_9(EmojiDefault, obj4);
   obj2.children = closure_9(View, obj3);
-  return closure_9(emoji(5208).PressableOpacity, obj2);
+  return closure_9(emoji(5210).PressableOpacity, obj2);
 });
 const obj11 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);

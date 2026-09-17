@@ -1,11 +1,11 @@
-// === Module 8064: ForumPostActions ===
+// === Module 8084: ForumPostActions ===
 
-// Module 8064 (ForumPostActions)
+// Module 8084 (ForumPostActions)
 import Constants from "Constants" /* 1074 */;
-import ReactionUtils from "ReactionUtils" /* 4288 */;
-import _modDef4589 from "module_4589" /* 4589 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8062 */;
-import _modDef8065 from "module_8065" /* 8065 */;
+import ReactionUtils from "ReactionUtils" /* 4290 */;
+import _modDef4591 from "module_4591" /* 4591 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8082 */;
+import _modDef8085 from "module_8085" /* 8085 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -26,7 +26,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: "baby_angel", displayName: "r" };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: "plante", displayName: "sapin" };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);
@@ -46,7 +46,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
       if (emojiName == null) {
         str = "";
       }
-      const obj = { id: "Array", name: emojiName, animated: null, src: emojiId(str2[13]).getURL(emojiName), displayName: "fast" };
+      const obj = { id: "Array", name: emojiName, animated: null, src: emojiId(str2[13]).getURL(emojiName), displayName: 0 };
       let obj2 = emojiId(str2[13]);
       const obj9 = {
         expensive() {
@@ -72,17 +72,17 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed;
   if (isFollowing) {
-    let assetUriForEmbed = getAssetUriForEmbed(_modDef4589);
+    let assetUriForEmbed = getAssetUriForEmbed(_modDef4591);
     let tmp6 = importDefault;
     let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(_modDef8065);
+    assetUriForEmbed = getAssetUriForEmbed(_modDef8085);
     tmp6 = importDefault;
     tmp8 = require;
   }
   if (null != assetUriForEmbed) {
     let stringResult;
-    const assetUriForEmbed1 = tmp8(8062).getAssetUriForEmbed(tmp6(4581));
+    const assetUriForEmbed1 = tmp8(8082).getAssetUriForEmbed(tmp6(4583));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {
@@ -106,11 +106,11 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       const intl4 = tmp8(1115).intl;
       obj.cta = intl4.string(tmp8(1115).t.C5UQC9);
       const tmp6Result = tmp6(2025);
-      obj.icon = tmp8(8062).getAssetUriForEmbed(tmp6(8066));
-      const tmp8Result3 = tmp8(8062);
-      obj.closeIcon = tmp8(8062).getAssetUriForEmbed(tmp6(7199));
+      obj.icon = tmp8(8082).getAssetUriForEmbed(tmp6(8086));
+      const tmp8Result3 = tmp8(8082);
+      obj.closeIcon = tmp8(8082).getAssetUriForEmbed(tmp6(7203));
       tmp14 = obj;
-      const tmp8Result4 = tmp8(8062);
+      const tmp8Result4 = tmp8(8082);
     }
     const obj4 = { numDisplayedReactions: 3, isFollowing, followIcon: assetUriForEmbed, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
     const intl5 = tmp8(1115).intl;
@@ -131,7 +131,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     return obj4;
   } else {
     const _HermesInternal = HermesInternal;
-    tmp6(1231).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4589 : 8065));
+    tmp6(1231).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4591 : 8085));
     const tmp6Result2 = tmp6(1231);
   }
 };

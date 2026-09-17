@@ -1,9 +1,9 @@
-// === Module 6347: MicrophoneSpotIllustration ===
+// === Module 6349: MicrophoneSpotIllustration ===
 
-// Module 6347 (MicrophoneSpotIllustration)
+// Module 6349 (MicrophoneSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6348 from "module_6348" /* 6348 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6350 from "module_6350" /* 6350 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const MicrophoneSpotIllustration = function MicrophoneSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6348 };
+  const obj2 = { uri: _modDef6350 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

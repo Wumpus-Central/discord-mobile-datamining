@@ -1,9 +1,9 @@
-// === Module 5919: BugSpotIllustration ===
+// === Module 5921: BugSpotIllustration ===
 
-// Module 5919 (BugSpotIllustration)
+// Module 5921 (BugSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef5920 from "module_5920" /* 5920 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef5922 from "module_5922" /* 5922 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BugSpotIllustration = function BugSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5920 };
+  const obj2 = { uri: _modDef5922 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,6 +1,6 @@
-// === Module 6586: ? ===
+// === Module 6588: ? ===
 
-// Module 6586
+// Module 6588
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SoundboardSpotIllustration-2x.png.js");

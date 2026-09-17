@@ -1,10 +1,10 @@
-// === Module 8058: MediaPostSharePromptStore ===
+// === Module 8078: MediaPostSharePromptStore ===
 
-// Module 8058 (MediaPostSharePromptStore)
+// Module 8078 (MediaPostSharePromptStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8059 */;
+import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8079 */;
 import GatedChannelStore from "GatedChannelStore" /* 2014 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;

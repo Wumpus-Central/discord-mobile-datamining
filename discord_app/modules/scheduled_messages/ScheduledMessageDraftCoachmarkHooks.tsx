@@ -1,12 +1,12 @@
-// === Module 12128: ScheduledMessageDraftCoachmarkHooks ===
+// === Module 12137: ScheduledMessageDraftCoachmarkHooks ===
 
-// Module 12128 (ScheduledMessageDraftCoachmarkHooks)
+// Module 12137 (ScheduledMessageDraftCoachmarkHooks)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1946 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4458 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5363 */;
-import DraftStore from "DraftStore" /* 4979 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5365 */;
+import DraftStore from "DraftStore" /* 4981 */;
 
 require = fn;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
@@ -21,9 +21,9 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   let first;
   let connected;
   let isCoachmarkVisible;
-  let result = channel(4458).useIsDismissibleContentDismissed_UNSAFE(closure_7);
+  let result = channel(4460).useIsDismissibleContentDismissed_UNSAFE(closure_7);
   dependencyMap = result;
-  let obj = channel(4458);
+  let obj = channel(4460);
   const items = [isCoachmarkVisible];
   const stateFromStores = channel(504).useStateFromStores(items, () => null != DraftStore.getScheduledMessage(channel.id));
   let obj2 = channel(504);

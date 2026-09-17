@@ -1,15 +1,15 @@
-// === Module 17678: PromotionsManager ===
+// === Module 17719: PromotionsManager ===
 
-// Module 17678 (PromotionsManager)
-import PremiumUtilsDefault from "PremiumUtils" /* 4295 */;
-import PromotionsActionCreators from "PromotionsActionCreators" /* 13522 */;
-import PremiumBogoPromotionUtilsCommon from "PremiumBogoPromotionUtilsCommon" /* 13566 */;
+// Module 17719 (PromotionsManager)
+import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+import PromotionsActionCreators from "PromotionsActionCreators" /* 13530 */;
+import PremiumBogoPromotionUtilsCommon from "PremiumBogoPromotionUtilsCommon" /* 13574 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4301 */;
-import PromotionsStore from "PromotionsStore" /* 10806 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7228 */;
+import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import PromotionsStore from "PromotionsStore" /* 10814 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
 
 require = fn;
 const PremiumTypes = fn(1374).PremiumTypes;

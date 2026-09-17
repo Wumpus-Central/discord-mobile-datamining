@@ -1,32 +1,31 @@
-// === Module 16262: useChannelListSpecs ===
+// === Module 16292: useChannelListSpecs ===
 
-// Module 16262 (useChannelListSpecs)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11144 */;
+// Module 16292 (useChannelListSpecs)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11152 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const RedesignChannelListConstants = fn(10256);
+const RedesignChannelListConstants = fn(10267);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_4, BANNER_MAX_HEIGHT_PERCENTAGE: hasOwnProperty } = RedesignChannelListConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(height2[2]).useRedesignGuildHeaderHeight(banner);
-  height = height(height2[3])().height;
-  height2 = height(height2[3])({ ignoreKeyboard: true }).height;
-  const tmp2 = height(height2[4])();
-  noop = tmp2;
-  const obj = redesignGuildHeaderHeight(height2[2]);
-  const fontScale = redesignGuildHeaderHeight(height2[5]).useFontScale();
-  closure_5 = tmp4;
-  const top = height(height2[6])().top;
-  const items = [null != banner.banner, tmp2, height, height2, redesignGuildHeaderHeight, top, fontScale];
-  return noop.useMemo(() => {
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(16293).useRedesignGuildHeaderHeight(banner);
+  height = height(1478)({ ignoreKeyboard: true }).height;
+  const tmp2 = height(16179)();
+  dependencyMap = tmp2;
+  const obj = redesignGuildHeaderHeight(16293);
+  const fontScale = redesignGuildHeaderHeight(5069).useFontScale();
+  closure_4 = tmp4;
+  const top = height(1612)().top;
+  const items = [null != banner.banner, tmp2, height, redesignGuildHeaderHeight, top, fontScale];
+  return fontScale.useMemo(() => {
     let num = 0;
-    if (closure_5) {
+    if (closure_4) {
       const _Math = Math;
-      num = Math.min(closure_3 / React4, height2 * hasOwnProperty);
+      num = Math.min(closure_2 / React4, height * hasOwnProperty);
     }
-    return { bannerHeight: roundToNearestPixelDefault(num), bannerWidth: roundToNearestPixelDefault(closure_3), headerHeight: roundToNearestPixelDefault(redesignGuildHeaderHeight), fontScale, listTop: roundToNearestPixelDefault(num + redesignGuildHeaderHeight), listBottom: 0, listPaddingBottom: roundToNearestPixelDefault(24), listViewportHeight: roundToNearestPixelDefault(height - top) };
+    return { bannerHeight: roundToNearestPixelDefault(num), bannerWidth: roundToNearestPixelDefault(closure_2), headerHeight: roundToNearestPixelDefault(redesignGuildHeaderHeight), fontScale, listTop: roundToNearestPixelDefault(num + redesignGuildHeaderHeight), listBottom: 0, listPaddingBottom: roundToNearestPixelDefault(24), listViewportHeight: roundToNearestPixelDefault(height - top) };
   }, items);
 };

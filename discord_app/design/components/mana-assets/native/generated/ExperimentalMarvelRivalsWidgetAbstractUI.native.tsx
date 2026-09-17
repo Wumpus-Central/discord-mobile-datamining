@@ -1,9 +1,9 @@
-// === Module 6087: ExperimentalMarvelRivalsWidgetAbstractUI ===
+// === Module 6089: ExperimentalMarvelRivalsWidgetAbstractUI ===
 
-// Module 6087 (ExperimentalMarvelRivalsWidgetAbstractUI)
+// Module 6089 (ExperimentalMarvelRivalsWidgetAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import _modDef6088 from "module_6088" /* 6088 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import _modDef6090 from "module_6090" /* 6090 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ExperimentalMarvelRivalsWidgetAbstractUI = function ExperimentalMar
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6088 };
+  const obj2 = { uri: _modDef6090 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

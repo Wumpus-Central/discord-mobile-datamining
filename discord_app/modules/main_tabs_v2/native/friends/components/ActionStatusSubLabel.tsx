@@ -1,9 +1,9 @@
-// === Module 16572: ActionStatusSubLabel ===
+// === Module 16602: ActionStatusSubLabel ===
 
-// Module 16572 (ActionStatusSubLabel)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4349 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4374 */;
-import timing from "timing" /* 4639 */;
+// Module 16602 (ActionStatusSubLabel)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4376 */;
+import timing from "timing" /* 4641 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -15,9 +15,9 @@ function announceActioned(intl) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_5 = createStyles.createStyles(() => ({ container: { overflow: "hidden" }, actionStatus: { position: "absolute" } }));
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(4634).Text);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(4636).Text);
 const __initData = { code: "function ActionStatusSubLabelTsx1(){const{hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};}" };
 const __initData2 = { code: "function ActionStatusSubLabelTsx2(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?lineHeight*fontScale:0;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[0,translateYValue]))}]};}" };
 const __initData3 = { code: "function ActionStatusSubLabelTsx3(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};}" };

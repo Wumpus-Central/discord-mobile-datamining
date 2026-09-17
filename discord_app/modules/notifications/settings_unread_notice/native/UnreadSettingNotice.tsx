@@ -1,9 +1,9 @@
-// === Module 11563: UnreadSettingNotice ===
+// === Module 11571: UnreadSettingNotice ===
 
-// Module 11563 (UnreadSettingNotice)
+// Module 11571 (UnreadSettingNotice)
 import nativeDefault from "native" /* 576 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11564 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11565 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 11572 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 11573 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 let closure_4 = fn(1084).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 const obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = { display: "flex", flexDirection: "row", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

@@ -1,12 +1,12 @@
-// === Module 8891: GameProfileSkeletonCardRow ===
+// === Module 8907: GameProfileSkeletonCardRow ===
 
-// Module 8891 (GameProfileSkeletonCardRow)
+// Module 8907 (GameProfileSkeletonCardRow)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let closure_4 = createStyles.createStyles((gap) => {
   const obj = { viewport: { overflow: "hidden" }, row: { flexDirection: "row", gap } };
   return obj;

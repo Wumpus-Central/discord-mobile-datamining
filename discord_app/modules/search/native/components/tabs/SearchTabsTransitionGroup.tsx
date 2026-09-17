@@ -1,11 +1,11 @@
-// === Module 16927: SearchTabsTransitionGroup ===
+// === Module 16966: SearchTabsTransitionGroup ===
 
-// Module 16927 (SearchTabsTransitionGroup)
-import native from "native" /* 4348 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4374 */;
-import spring from "spring" /* 5059 */;
-import springPresets from "springPresets" /* 5063 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 12757 */;
+// Module 16966 (SearchTabsTransitionGroup)
+import native from "native" /* 4350 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import spring from "spring" /* 5061 */;
+import springPresets from "springPresets" /* 5065 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 12765 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

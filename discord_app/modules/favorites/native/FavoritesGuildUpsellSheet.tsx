@@ -1,12 +1,12 @@
-// === Module 10367: FavoritesGuildUpsellSheet ===
+// === Module 10375: FavoritesGuildUpsellSheet ===
 
-// Module 10367 (FavoritesGuildUpsellSheet)
+// Module 10375 (FavoritesGuildUpsellSheet)
 import router_utils from "router_utils" /* 1101 */;
-import _modDef3237 from "module_3237" /* 3237 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9505 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9535 */;
-import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10368 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10372 */;
+import _modDef3239 from "module_3239" /* 3239 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9516 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9546 */;
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 10376 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10380 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ let result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuild
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
   if (FREE_FAVORITE_LIMIT === undefined) {
-    FREE_FAVORITE_LIMIT = analyticsLocations(10364).FREE_FAVORITE_LIMIT;
+    FREE_FAVORITE_LIMIT = analyticsLocations(10372).FREE_FAVORITE_LIMIT;
   }
   let str = limit.source;
   if (str === undefined) {
@@ -32,20 +32,20 @@ export default function FavoritesGuildUpsellSheet(limit) {
   }
   analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault(str).analyticsLocations;
   importDefault = noop.useCallback(() => {
-    closure_1(4605).hideActionSheet(analyticsLocations(10366).FAVORITES_UPSELL_SHEET_KEY);
+    closure_1(4607).hideActionSheet(analyticsLocations(10374).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1115).intl;
-  const tmp8 = _modDef3237;
+  const tmp8 = _modDef3239;
   let obj = { title: intl.string("limit_reached" === str2 ? tmp8.hINqUs : tmp8.aA0vO8), description: null, illustration: null, actions: null };
   const intl2 = tmp7(1115).intl;
   if ("limit_reached" === str2) {
     const obj2 = { count: FREE_FAVORITE_LIMIT, maxCount: MAX_FAVORITE_CHANNELS };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(3237).D7S0Zo, obj2);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(3239).D7S0Zo, obj2);
   } else {
-    formatToPlainStringResult = intl2.string(tmp3(3237)["WaP/lz"]);
+    formatToPlainStringResult = intl2.string(tmp3(3239)["WaP/lz"]);
   }
   obj.description = formatToPlainStringResult;
-  obj.illustration = closure_6(analyticsLocations(6095).FavoritesSpotIllustration, {});
+  obj.illustration = closure_6(analyticsLocations(6097).FavoritesSpotIllustration, {});
   const obj3 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = tmp7(1115).intl;
   obj3.text = intl3.string(analyticsLocations(1115).t.pj0XBN);
@@ -54,11 +54,11 @@ export default function FavoritesGuildUpsellSheet(limit) {
     const obj = { analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   };
-  const items = [closure_6(analyticsLocations(5060).Button, obj3), ];
+  const items = [closure_6(analyticsLocations(5062).Button, obj3), ];
   const intl4 = tmp7(1115).intl;
-  const tmp3Result = _modDef3237;
+  const tmp3Result = _modDef3239;
   const obj4 = { children: null };
-  items[1] = closure_6(analyticsLocations(5060).Button, {
+  items[1] = closure_6(analyticsLocations(5062).Button, {
     size: "lg",
     variant: "secondary",
     text: intl4.string("limit_reached" === str2 ? tmp3Result.PprSsy : tmp3Result["+dSwhE"]),
@@ -69,6 +69,6 @@ export default function FavoritesGuildUpsellSheet(limit) {
     }
   });
   obj4.children = items;
-  obj.actions = closure_7(analyticsLocations(5519).ButtonGroup, obj4);
-  return closure_6(analyticsLocations(10369).PromoSheet, obj);
+  obj.actions = closure_7(analyticsLocations(5521).ButtonGroup, obj4);
+  return closure_6(analyticsLocations(10377).PromoSheet, obj);
 };

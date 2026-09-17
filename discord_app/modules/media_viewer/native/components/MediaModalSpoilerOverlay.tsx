@@ -1,15 +1,15 @@
-// === Module 13126: MediaModalSpoilerOverlay ===
+// === Module 13134: MediaModalSpoilerOverlay ===
 
-// Module 13126 (MediaModalSpoilerOverlay)
+// Module 13134 (MediaModalSpoilerOverlay)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import useToken from "useToken" /* 4339 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4374 */;
-import Text_Text from "Text/Text" /* 4634 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5048 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5166 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13108 */;
+import useToken from "useToken" /* 4341 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
+import Text_Text from "Text/Text" /* 4636 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5050 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5168 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4638);
+const createStyles = fn(4640);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: { gap: nativeDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" }, spoilerOverlayBackground: null };
 let obj4 = { paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, height: nativeDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
 let PlatformUtils = fn(1364);

@@ -19,6 +19,30 @@ export const shortenAndLocalizeNumber = function shortenAndLocalizeNumber(count)
     return intl.formatToPlainString(util.t.Iku48I, obj2);
   }
 };
+export const truncateAndLocalizeNumber = function truncateAndLocalizeNumber(communicators, stateFromStores) {
+  if (communicators < c2) {
+    const _Intl = Intl;
+    let num2 = 1;
+    if (tmp % 1 === 0) {
+      num2 = 0;
+    }
+    const obj2 = { maximumFractionDigits: num2 };
+    const numberFormat = new Intl.NumberFormat(stateFromStores, obj2);
+    return numberFormat.format(communicators);
+  } else {
+    const _Math = Math;
+    const _Intl2 = Intl;
+    let num = 1;
+    if (Math.round(communicators / c2 * 10) / 10 % 1 === 0) {
+      num = 0;
+    }
+    const obj = { maximumFractionDigits: num };
+    const numberFormat1 = new Intl.NumberFormat(stateFromStores, obj);
+    const intl = util.intl;
+    const obj3 = { value: numberFormat1.format(communicators / c2) };
+    return intl.formatToPlainString(util.t.Iku48I, obj3);
+  }
+};
 export const humanizeValue = function humanizeValue(newPostCount, stateFromStores) {
   if (newPostCount < 1000) {
     const intl2 = util.intl;

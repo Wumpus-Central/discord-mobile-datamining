@@ -1,6 +1,6 @@
-// === Module 17507: logThirdPartyImportsDone ===
+// === Module 17548: logThirdPartyImportsDone ===
 
-// Module 17507 (logThirdPartyImportsDone)
+// Module 17548 (logThirdPartyImportsDone)
 import LoggerDefault from "Logger" /* 3 */;
 
 new LoggerDefault("app").log("Finished loading third party imports");

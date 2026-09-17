@@ -1,6 +1,6 @@
-// === Module 11125: useFavoritesGuildChannelActions ===
+// === Module 11133: useFavoritesGuildChannelActions ===
 
-// Module 11125 (useFavoritesGuildChannelActions)
+// Module 11133 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import FavoriteStore from "FavoriteStore" /* 1961 */;
@@ -45,6 +45,6 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10379).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10387).useFavoritesBetaTagDismissibleContent(tmp7);
   return { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
 };

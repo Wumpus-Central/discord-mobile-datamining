@@ -1,14 +1,14 @@
-// === Module 8940: ProfileEffectSampleV2 ===
+// === Module 8956: ProfileEffectSampleV2 ===
 
-// Module 8940 (ProfileEffectSampleV2)
+// Module 8956 (ProfileEffectSampleV2)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import FastImageDefault from "FastImage" /* 5673 */;
-import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8939 */;
-import _modDef8941 from "module_8941" /* 8941 */;
-import ProfileEffectDefault from "ProfileEffect" /* 8942 */;
+import FastImageDefault from "FastImage" /* 5675 */;
+import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8955 */;
+import _modDef8957 from "module_8957" /* 8957 */;
+import ProfileEffectDefault from "ProfileEffect" /* 8958 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4638 */;
+import createStyles from "createStyles" /* 4640 */;
 import size_mod from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -36,7 +36,7 @@ export default function ProfileEffectSample(hideBackground) {
   const obj2 = { style: null, source: null, accessible: false, resizeMode: "cover" };
   const items1 = [tmp.sampleProfileImage];
   obj2.style = items1;
-  const obj3 = { uri: _modDef8941 };
+  const obj3 = { uri: _modDef8957 };
   obj2.source = obj3;
   const items2 = [React3(FastImageDefault, obj2), , ];
   let tmp4Result = !flag;

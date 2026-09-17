@@ -1,9 +1,9 @@
-// === Module 5191: AppsIcon ===
+// === Module 5193: AppsIcon ===
 
-// Module 5191 (AppsIcon)
+// Module 5193 (AppsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4338 */;
-import _mod5118 from "module_5118" /* 5118 */;
+import BaseIconImage from "BaseIconImage" /* 4340 */;
+import _mod5120 from "module_5120" /* 5120 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const AppsIcon = function AppsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5118, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5120, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };
