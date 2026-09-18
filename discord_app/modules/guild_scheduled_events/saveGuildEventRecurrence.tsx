@@ -31,10 +31,16 @@ export default function saveGuildEventRecurrence(guild_id, nextRecurrenceIdInEve
       if (startDate != null) {
         toISOStringResult = startDate.toISOString();
       }
+      if (toISOStringResult == null) {
+        toISOStringResult = null;
+      }
       const obj3 = { scheduled_start_time: toISOStringResult, scheduled_end_time: null, is_canceled: null };
       let toISOStringResult1;
       if (endDate != null) {
         toISOStringResult1 = endDate.toISOString();
+      }
+      if (toISOStringResult1 == null) {
+        toISOStringResult1 = null;
       }
       obj3.scheduled_end_time = toISOStringResult1;
       obj3.is_canceled = event_exception_id.is_canceled;

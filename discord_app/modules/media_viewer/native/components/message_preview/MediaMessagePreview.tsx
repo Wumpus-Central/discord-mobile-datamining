@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06766_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06848_LegacyBaseButton.js";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -118,11 +118,11 @@ obj.setOptions({
   forcedTheme: ThemeTypes.DARK,
   forceHideSimpleEmbedContent: true,
 });
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let closure_17 = createStyles.createStyles({
-  dummyLayout: { position: "absolute", top: 0, left: -9999, bottom: 0, width: "100%", opacity: 0 },
+  dummyLayout: { position: "absolute", top: 0, left: -9999, width: "100%", opacity: 0 },
 });
-createStyles = fn(4640);
+createStyles = fn(4722);
 let closure_19 = createStyles.createNativeStyleProperties({
   reactionBackgroundColor: nativeDefault.colors.REACTION_BACKGROUND_DEFAULT,
   reactionBorderColor: nativeDefault.colors.REACTION_BORDER_DEFAULT,
@@ -131,7 +131,7 @@ let closure_19 = createStyles.createNativeStyleProperties({
   activeReactionBorderColor: nativeDefault.colors.REACTION_BORDER_REACTED_DEFAULT,
   activeReactionTextColor: nativeDefault.colors.REACTION_TEXT_REACTED_DEFAULT,
 });
-createStyles = fn(4640);
+createStyles = fn(4722);
 let obj2 = {
   renderCodedLinks: false,
   renderGiftCode: false,
@@ -343,20 +343,7 @@ export default function MediaMessagePreview(channelId) {
       const obj4 = {
         scrollEventThrottle: 16,
         onScroll(nativeEvent) {
-          nativeEvent = nativeEvent.nativeEvent;
-          const velocity = nativeEvent.velocity;
-          let tmp2 = 0 === nativeEvent.contentOffset.y;
-          if (tmp2) {
-            let num;
-            if (velocity != null) {
-              num = velocity.y;
-            }
-            if (num == null) {
-              num = 0;
-            }
-            tmp2 = 0 === num;
-          }
-          closure_1_6(tmp2);
+          closure_1_6(nativeEvent.nativeEvent.contentOffset.y <= 0);
         },
         onLayout: callback2,
         onContentSizeChange: callback1,

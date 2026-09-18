@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
-import _mod4262 from "../../../../../_runtime/metro/04262__.js";
+import _mod4345 from "../../../../../_runtime/metro/04345__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -96,14 +96,14 @@ const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
 const identity = fn(1243);
 let closure_6 = identity.createWithEqualityFn(() => ({ isLoading: false }));
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(8111).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8194).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: function useIsFindYourFriendsDeletionDisabled() {
-    return closure_6((isLoading) => isLoading.isLoading, _mod4262.shallow);
+    return closure_6((isLoading) => isLoading.isLoading, _mod4345.shallow);
   },
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -115,10 +115,10 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14966).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15060).useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
-    if (closure_6((isLoading) => isLoading.isLoading, _mod4262.shallow)) {
+    if (closure_6((isLoading) => isLoading.isLoading, _mod4345.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;

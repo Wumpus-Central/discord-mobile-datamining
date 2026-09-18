@@ -1,6 +1,6 @@
 // discord_app/modules/safety_hub/native/AppealIngestionRequestSent.tsx
 import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink.tsx";
-import _modDef12058 from "../../../../_runtime/metro/12058__.js";
+import _modDef12150 from "../../../../_runtime/metro/12150__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -8,11 +8,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8569);
+const SafetyHubConstants = fn(8652);
 ({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_9 = createStyles.createStyles({
   container: { flex: 1, padding: 8 },
   actionsHeader: { marginTop: 31, marginBottom: 16 },
@@ -32,7 +32,7 @@ export default function AppealIngestionRequestSent() {
   const obj3 = { style: tmp.container, children: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
   const items = [
-    closure_7(closure_4, { source: _modDef12058, style: tmp.checkboxPng }),
+    closure_7(closure_4, { source: _modDef12150, style: tmp.checkboxPng }),
     closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: stringResult1,
@@ -50,7 +50,7 @@ export default function AppealIngestionRequestSent() {
   obj5.children = intl3.string(require("util").t["9BRc1N"]);
   items[2] = closure_7(require("Text/Text").Text, obj5);
   const obj6 = { text: null, url: null, onPress: null };
-  const obj4 = { source: _modDef12058, style: tmp.checkboxPng };
+  const obj4 = { source: _modDef12150, style: tmp.checkboxPng };
   const intl4 = require("util").intl;
   obj6.text = intl4.string(require("util").t.PxL38B);
   obj6.url = constants.COMMUNITY_GUIDELINES;

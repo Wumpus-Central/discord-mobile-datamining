@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef2493 from "../../GiftingBadge.messages.js";
+import _modDef2576 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = {
@@ -76,7 +76,7 @@ export default function GiftingBadgeProgressBanner(arg0) {
   const items2 = [React4(View, obj3)];
   const obj5 = { variant: "text-md/semibold", children: null };
   const intl = util.intl;
-  obj5.children = intl.formatToPlainString(_modDef2493["0+xfd9"], {
+  obj5.children = intl.formatToPlainString(_modDef2576["0+xfd9"], {
     giftsRemaining: giftsToNextTier,
     nextTier: nextTierName,
   });

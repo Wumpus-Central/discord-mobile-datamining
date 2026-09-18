@@ -27,8 +27,9 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
       guildId: null,
       analyticsLocations: null,
       errorReason: null,
+      appEntryKey: null,
     };
-    const tmp27 = showUploadFileSizeErrorDefault;
+    const tmp28 = showUploadFileSizeErrorDefault;
     obj4.maxSize = KestrelExperiment.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
     obj4.baseMaxSize = maxFileSizeResult;
     obj4.guildId = guildId;
@@ -38,7 +39,8 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
       type = reason.type;
     }
     obj4.errorReason = type;
-    tmp27(obj4);
+    obj4.appEntryKey = tmp3;
+    tmp28(obj4);
     return true;
   } else if (code === constants.TOO_MANY_ATTACHMENTS) {
     const obj6 = { title: null, body: null };

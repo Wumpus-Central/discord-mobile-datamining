@@ -7,7 +7,7 @@ import FastestListPropsPlaceholder from "../../fastest_list/props/FastestListPro
 import PremiumUpsellSectionDividerDefault from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
-import _modDef10563 from "../../../../_runtime/metro/10563__.js";
+import _modDef10657 from "../../../../_runtime/metro/10657__.js";
 import useStickerPickerListData from "useStickerPickerListData.tsx";
 import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -16,8 +16,8 @@ import StickersStore from "../StickersStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10538).useStickerPickerStore;
-const StickerPickerConstants = fn(10420);
+const useStickerPickerStore = fn(10632).useStickerPickerStore;
+const StickerPickerConstants = fn(10514);
 ({
   STICKER_SCROLL_LOAD_DELAY_MS: closure_8,
   STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9,
@@ -25,7 +25,7 @@ const StickerPickerConstants = fn(10420);
 } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   listPlaceholder: { color: nativeDefault.colors.BACKGROUND_MOD_MUTED },
   section: null,
@@ -62,7 +62,7 @@ let closure_15 = noop.memo((height) => {
   const obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  const items1 = [closure_1_11(native.Icon, { source: _modDef10563, size: native.Icon.Sizes.SMALL })];
+  const items1 = [closure_1_11(native.Icon, { source: _modDef10657, size: native.Icon.Sizes.SMALL })];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.uy25Qz);

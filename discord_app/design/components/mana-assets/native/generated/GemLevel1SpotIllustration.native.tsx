@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/GemLevel1SpotIllustration.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6218 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GemLevel1SpotIllustration-2x.png.js";
+import _modDef6300 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GemLevel1SpotIllustration-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const GemLevel1SpotIllustration = function GemLevel1SpotIllustration(widt
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6218 };
+  const obj2 = { uri: _modDef6300 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

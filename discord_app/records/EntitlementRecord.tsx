@@ -32,6 +32,7 @@ class EntitlementRecord extends tmp2 {
       deleted: tmp.deleted,
       sourceType: tmp.sourceType,
       fulfillmentStatus: tmp.fulfillmentStatus,
+      orbsReward: tmp.orbsReward,
     } = global);
     return tmp;
   }
@@ -86,10 +87,17 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   if (fulfillment_status == null) {
     fulfillment_status = null;
   }
+  const metadata = user.metadata;
+  let orbs_reward;
+  if (metadata != null) {
+    orbs_reward = metadata.orbs_reward;
+  }
+  if (orbs_reward == null) {
+    orbs_reward = null;
+  }
   if (typeof EntitlementRecord === "function") {
-    const tmp26 = new EntitlementRecord(
+    const tmp27 = new EntitlementRecord(
       tmp4,
-      SKURecord,
       EntitlementRecord,
       new.target,
       id,
@@ -111,28 +119,31 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
       guild_id,
       deleted,
       source_type,
+      fulfillment_status,
+      orbs_reward,
     );
-    tmp26.id = id;
-    tmp26.skuId = sku_id;
-    tmp26.applicationId = application_id;
-    tmp26.user = tmp2;
-    tmp26.userId = user_id;
-    tmp26.gifterId = gifter_user_id;
-    tmp26.type = type;
-    tmp26.branches = branches;
-    tmp26.startsAt = date;
-    tmp26.endsAt = date1;
-    tmp26.subscriptionId = subscription_id;
-    tmp26.subscriptionPlanId = id1;
-    tmp26.parentId = parent_id;
-    tmp26.consumed = consumed;
-    tmp26.giftCodeBatchId = gift_code_batch_id;
-    tmp26.giftStyle = gift_style;
-    tmp26.guildId = guild_id;
-    tmp26.deleted = deleted;
-    tmp26.sourceType = source_type;
-    tmp26.fulfillmentStatus = fulfillment_status;
-    return tmp26;
+    tmp27.id = id;
+    tmp27.skuId = sku_id;
+    tmp27.applicationId = application_id;
+    tmp27.user = tmp2;
+    tmp27.userId = user_id;
+    tmp27.gifterId = gifter_user_id;
+    tmp27.type = type;
+    tmp27.branches = branches;
+    tmp27.startsAt = date;
+    tmp27.endsAt = date1;
+    tmp27.subscriptionId = subscription_id;
+    tmp27.subscriptionPlanId = id1;
+    tmp27.parentId = parent_id;
+    tmp27.consumed = consumed;
+    tmp27.giftCodeBatchId = gift_code_batch_id;
+    tmp27.giftStyle = gift_style;
+    tmp27.guildId = guild_id;
+    tmp27.deleted = deleted;
+    tmp27.sourceType = source_type;
+    tmp27.fulfillmentStatus = fulfillment_status;
+    tmp27.orbsReward = orbs_reward;
+    return tmp27;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

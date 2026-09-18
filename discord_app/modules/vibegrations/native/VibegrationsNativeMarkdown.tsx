@@ -3,9 +3,64 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import VibegrationsMarkdownBlocks from "../lib/VibegrationsMarkdownBlocks.tsx";
+import useVibegrationsRevealedText from "../lib/useVibegrationsRevealedText.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
+class VibegrationsNativeMarkdown {
+  constructor(arg0) {
+    source = global.source;
+    closure_1 = undefined;
+    tmp = closure_10();
+    closure_1 = tmp;
+    items = [];
+    items[0] = source;
+    memo = closure_3.useMemo(() => VibegrationsMarkdownBlocks.splitMarkdownBlocks(source), items);
+    obj = {
+      style: tmp.blocks,
+      children: memo.map((kind, index) => {
+        if ("text" === kind.kind) {
+          obj2 = {
+            variant: "text-md/normal",
+            color: "text-default",
+            children: MarkupUtilsDefault.parse(kind.text, true, obj),
+          };
+          let tmp4 = hasOwnProperty(Text_Text.Text, obj2, index);
+        } else {
+          obj = { style: list.list, accessibilityRole: "list", children: null };
+          let items = kind.items;
+          obj.children = items.map((children, index) => {
+            const obj = { style: null, children: null };
+            const items = [list.item, { paddingLeft: children.depth * PX_16 }];
+            obj.style = items;
+            const obj3 = {
+              style: list.marker,
+              children: closure_2_5(source(4718).Text, {
+                variant: "text-md/normal",
+                color: "text-default",
+                children: children.marker,
+              }),
+            };
+            const items1 = [closure_2_5(View, obj3)];
+            const obj5 = { style: list.itemText, children: null };
+            const obj6 = {
+              variant: "text-md/normal",
+              color: "text-default",
+              children: closure_1(4712).parse(children.text, true, obj2),
+            };
+            obj5.children = closure_2_5(source(4718).Text, obj6);
+            items1[1] = closure_2_5(View, obj5);
+            obj.children = items1;
+            return closure_2_6(View, obj, index);
+          });
+          tmp4 = hasOwnProperty(View, obj, index);
+        }
+        return tmp4;
+      }),
+    };
+    return jsx(View, obj);
+  }
+}
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -14,7 +69,7 @@ let obj2 = {};
 const merged = Object.assign(VIBEGRATIONS_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };
@@ -26,53 +81,11 @@ let closure_10 = createStyles.createStyles(obj4);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsNativeMarkdown.tsx");
 
-export default function VibegrationsNativeMarkdown(source) {
-  source = source.source;
-  const tmp = closure_10();
-  const list = tmp;
-  let items = [source];
-  const memo = noop.useMemo(() => VibegrationsMarkdownBlocks.splitMarkdownBlocks(source), items);
-  return closure_5(View, {
-    style: tmp.blocks,
-    children: memo.map((kind, index) => {
-      if ("text" === kind.kind) {
-        obj2 = {
-          variant: "text-md/normal",
-          color: "text-default",
-          children: MarkupUtilsDefault.parse(kind.text, true, obj),
-        };
-        let tmp4 = hasOwnProperty(Text_Text.Text, obj2, index);
-      } else {
-        obj = { style: list.list, accessibilityRole: "list", children: null };
-        let items = kind.items;
-        obj.children = items.map((children, index) => {
-          const obj = { style: null, children: null };
-          const items = [list.item, { paddingLeft: children.depth * PX_16 }];
-          obj.style = items;
-          const obj3 = {
-            style: list.marker,
-            children: closure_2_5(source(4636).Text, {
-              variant: "text-md/normal",
-              color: "text-default",
-              children: children.marker,
-            }),
-          };
-          const items1 = [closure_2_5(View, obj3)];
-          const obj5 = { style: list.itemText, children: null };
-          const obj6 = {
-            variant: "text-md/normal",
-            color: "text-default",
-            children: closure_1(4630).parse(children.text, true, obj2),
-          };
-          obj5.children = closure_2_5(source(4636).Text, obj6);
-          items1[1] = closure_2_5(View, obj5);
-          obj.children = items1;
-          return closure_2_6(View, obj, index);
-        });
-        tmp4 = hasOwnProperty(View, obj, index);
-      }
-      return tmp4;
-    }),
-  });
-}
+export default VibegrationsNativeMarkdown;
 export { VIBEGRATIONS_MARKUP_OPTIONS };
+export const VibegrationsRevealedMarkdown = function VibegrationsRevealedMarkdown(arg0) {
+  ({ source, streaming } = arg0);
+  return hasOwnProperty(VibegrationsNativeMarkdown, {
+    source: useVibegrationsRevealedText.useVibegrationsRevealedText(source, { streaming }).text,
+  });
+};

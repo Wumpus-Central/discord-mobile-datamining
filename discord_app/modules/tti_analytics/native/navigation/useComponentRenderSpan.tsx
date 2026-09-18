@@ -146,10 +146,10 @@ export const useComponentRenderSpan = function useComponentRenderSpan(name) {
             current = logger.current;
             if (null != current) {
               if (current.navigationKey === CACHED_PREVIOUS_DESTINATION) {
-                CACHED_PREVIOUS_DESTINATION = spanComponent(16696).ComponentMeasurementSource.CACHED_SAME_DESTINATION;
+                CACHED_PREVIOUS_DESTINATION = spanComponent(16793).ComponentMeasurementSource.CACHED_SAME_DESTINATION;
               } else {
                 CACHED_PREVIOUS_DESTINATION =
-                  spanComponent(16696).ComponentMeasurementSource.CACHED_PREVIOUS_DESTINATION;
+                  spanComponent(16793).ComponentMeasurementSource.CACHED_PREVIOUS_DESTINATION;
               }
               const _requestAnimationFrame = requestAnimationFrame;
               closure_2 = requestAnimationFrame(() => {
@@ -171,7 +171,7 @@ export const useComponentRenderSpan = function useComponentRenderSpan(name) {
               performance.now(),
               width,
               height,
-              spanComponent(16696).ComponentMeasurementSource.ON_LAYOUT,
+              spanComponent(16793).ComponentMeasurementSource.ON_LAYOUT,
             );
             const nowResult = performance.now();
           }

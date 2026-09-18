@@ -4,13 +4,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 get_ActivityIndicator = fn(17);
 ({ Image: c3, ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CheckpointConstants = fn(4866);
+const CheckpointConstants = fn(4948);
 ({ CHECKPOINT_BACKGROUND_GRADIENT: metroRequire, CHECKPOINT_NAV_HEIGHT: closure_7 } = CheckpointConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_13 = createStyles.createStyles({
   container: { height: "100%", width: "100%" },
   scroll: { width: "100%" },
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointScreen(children) {
   let insets;
   const tmp = closure_13();
-  insets = insets(7095)().insets;
+  insets = insets(7177)().insets;
   const items = [, , ,];
   ({ bottom: arr[0], left: arr[1], right: arr[2], top: arr[3] } = insets);
   const obj = { children: null };
@@ -37,7 +37,7 @@ export default function CheckpointScreen(children) {
     items,
   );
   const items1 = [
-    closure_9(insets(5074), {
+    closure_9(insets(5156), {
       colors,
       start: VerticalGradient.START,
       end: VerticalGradient.END,
@@ -45,7 +45,7 @@ export default function CheckpointScreen(children) {
     }),
     ,
   ];
-  const obj3 = { source: { uri: insets(15813) }, style: tmp.background, resizeMode: "cover" };
+  const obj3 = { source: { uri: insets(15908) }, style: tmp.background, resizeMode: "cover" };
   items1[1] = closure_9(closure_3, obj3);
   const obj5 = { style: tmp.container, children: null };
   const obj6 = {

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/community/GuildSettingsAnalyticsUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import NumberUtils from "../../../utils/NumberUtils.tsx";
 import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators.tsx";
+import utils_NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberCountStore from "../../../stores/GuildMemberCountStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -104,13 +104,13 @@ export const getGuildAnalyticsCardProps = function getGuildAnalyticsCardProps(
       const intl = util.intl;
       const obj = { percentage: null };
       const _Math = Math;
-      obj.percentage = NumberUtils.truncateAndLocalizeNumber(Math.abs(communicatorsChange), stateFromStores);
+      obj.percentage = utils_NumberUtils.truncateAndLocalizeNumber(Math.abs(communicatorsChange), stateFromStores);
       let formatToPlainStringResult = intl.formatToPlainString(util.t.nskeMw, obj);
     }
     let combined = null;
     if (null != communicators) {
       let str2 = "";
-      const result = NumberUtils.truncateAndLocalizeNumber(communicators, stateFromStores);
+      const result = utils_NumberUtils.truncateAndLocalizeNumber(communicators, stateFromStores);
       if (flag) {
         str2 = "%";
       }

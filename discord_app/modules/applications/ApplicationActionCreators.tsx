@@ -127,15 +127,15 @@ const Constants = fn(1074);
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(ApplicationStore, {
   getQueryId: Constants.QueryIds.APPLICATIONS,
-  get(item) {
+  get(applicationId) {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = false;
     }
     let tmp = null;
-    if (null != item) {
+    if (null != applicationId) {
       if (flag) {
-        let application = ApplicationStore.getApplication(item);
+        let application = ApplicationStore.getApplication(applicationId);
         if (application == null) {
           application = null;
         }

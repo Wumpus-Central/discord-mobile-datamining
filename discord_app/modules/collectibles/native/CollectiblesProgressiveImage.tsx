@@ -16,7 +16,7 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
   ({ source, style } = arg0);
   let sharedValue;
   const merged = Object.assign(arg0, Object.assign({ source: 0, style: 0 }));
-  sharedValue = sharedValue(4376).useSharedValue(0);
+  sharedValue = sharedValue(4458).useSharedValue(0);
   let obj2 = { style, children: null };
   const obj3 = {};
   const merged1 = Object.assign(merged);

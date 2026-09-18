@@ -170,7 +170,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let closure_9 = createStyles.createStyleProperties((arg0) => {
   if ("primary" === arg0) {
     let backgroundColor = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;
@@ -200,7 +200,7 @@ let closure_9 = createStyles.createStyleProperties((arg0) => {
   }
   return { backgroundColor, backgroundColorPressed };
 });
-createStyles = fn(4640);
+createStyles = fn(4722);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2, arg3, arg4, arg5) => {
   if ("primary" === arg2) {
     let BACKGROUND_SURFACE_HIGH = nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT;

@@ -2,7 +2,7 @@
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
-import _modDef4336 from "../../../_runtime/metro/04336__.js";
+import _modDef2075 from "../../../_runtime/metro/02075__.js";
 import ChannelUtils from "../../utils/ChannelUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import LinkUtils from "../links/LinkUtils.tsx";
@@ -160,7 +160,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, combined1) {
           obj4.content = items3;
           let obj11 = obj4;
         } else if (null != combined1) {
-          const obj9 = { type: "link", content: null, target: null, title: "call" };
+          const obj9 = { type: "link", content: null, target: null, title: "accessible" };
           const obj10 = { type: "text", content: combined1 };
           const items4 = [obj10];
           obj9.content = items4;
@@ -373,7 +373,7 @@ let obj2 = {
   },
 };
 obj.channelOrMessageUrl = {
-  order: _modDef4336.defaultRules.url.order - 0.5,
+  order: _modDef2075.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
@@ -397,7 +397,7 @@ obj.channelOrMessageUrl = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "call" };
+      const obj = { type: "link", content: null, target: null, title: "accessible" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -425,7 +425,7 @@ obj.channelOrMessageUrl = {
   },
 };
 let obj3 = {
-  order: _modDef4336.defaultRules.url.order - 0.5,
+  order: _modDef2075.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
@@ -449,7 +449,7 @@ let obj3 = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "call" };
+      const obj = { type: "link", content: null, target: null, title: "accessible" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -477,7 +477,7 @@ let obj3 = {
   },
 };
 obj.mediaPostLink = {
-  order: _modDef4336.defaultRules.url.order - 0.5,
+  order: _modDef2075.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;
@@ -516,7 +516,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "call" };
+    const obj = { type: "link", content: null, target: tmp, title: "accessible" };
     const items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

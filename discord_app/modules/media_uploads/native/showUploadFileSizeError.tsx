@@ -20,7 +20,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(4633).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4715).FileUploadErrorTypes;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
@@ -31,7 +31,7 @@ export default function showUploadFileSizeError(arg0) {
   ({ file, maxSize, analyticsLocations, errorReason } = arg0);
   let items;
   let items1;
-  ({ baseMaxSize, guildId } = arg0);
+  ({ baseMaxSize, guildId, appEntryKey } = arg0);
   const currentUser = UserStore.getCurrentUser();
   const isPremiumExactlyResult = PremiumTypeUtils.isPremiumExactly(currentUser, TIER_2.TIER_2);
   if (null != file.items) {
@@ -176,6 +176,7 @@ export default function showUploadFileSizeError(arg0) {
       analyticsLocations: null,
       analyticsProperties: null,
       largestFileSize: null,
+      appEntryKey: null,
     };
     const obj8 = { section: constants2.FILE_UPLOAD_POPOUT };
     obj7.analyticsLocation = obj8;
@@ -186,6 +187,7 @@ export default function showUploadFileSizeError(arg0) {
     const obj9 = { type: constants3.UPLOAD_ERROR_UPSELL };
     obj7.analyticsProperties = obj9;
     obj7.largestFileSize = num;
+    obj7.appEntryKey = appEntryKey;
     const result = obj13.handleShowUpsellAlert(obj7);
     const arraySpreadResult2 = HermesBuiltin.arraySpread(analyticsLocations, 0);
   }

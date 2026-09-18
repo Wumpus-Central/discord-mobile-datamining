@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/Voi
 export default function VoicePanelNsfwAlert(guildId) {
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
-  dependencyMap = guildId(4990).useDismissModalCallback();
+  dependencyMap = guildId(5072).useDismissModalCallback();
   const tmp3 = isGuildNSFW(GuildStore.getGuild(guildId));
   const intl = guildId(1115).intl;
   const string = intl.string;
@@ -46,7 +46,7 @@ export default function VoicePanelNsfwAlert(guildId) {
   };
   const intl3 = tmp(1115).intl;
   obj4.text = intl3.string(guildId(1115).t.wVq7uo);
-  const items = [closure_5(guildId(4990).AlertActionButton, obj4, "confirm")];
+  const items = [closure_5(guildId(5072).AlertActionButton, obj4, "confirm")];
   const obj5 = {
     variant: "secondary",
     onPress() {
@@ -57,9 +57,9 @@ export default function VoicePanelNsfwAlert(guildId) {
   };
   const intl4 = tmp(1115).intl;
   obj5.text = intl4.string(guildId(1115).t["/g10LC"]);
-  items[1] = closure_5(guildId(4990).AlertActionButton, obj5, "add-profile-picture");
+  items[1] = closure_5(guildId(5072).AlertActionButton, obj5, "add-profile-picture");
   obj3.children = items;
-  obj2.actions = closure_6(guildId(4990).AlertActions, obj3);
-  return closure_5(guildId(4990).AlertModal, obj2);
+  obj2.actions = closure_6(guildId(5072).AlertActions, obj3);
+  return closure_5(guildId(5072).AlertModal, obj2);
 }
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

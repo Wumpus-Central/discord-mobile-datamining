@@ -8,8 +8,8 @@ import Navigator from "../../../../design/components/Navigator/native/Navigator.
 import ModalScreen from "../../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../../design/components/Modal/native/ModalContent.native.tsx";
 import ModalActionButton from "../../../../design/components/Modal/native/ModalActionButton.native.tsx";
-import ModalFooter from "../../../../design/components/Modal/native/ModalFooter.native.tsx";
 import Modal from "../../../../design/components/Modal/native/Modal.native.tsx";
+import ModalFooter from "../../../../design/components/Modal/native/ModalFooter.native.tsx";
 import StepModal from "../../../../design/components/Modal/native/StepModal.native.tsx";
 import ModalDisclaimer from "../../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -25,11 +25,11 @@ function DemoModal() {
         const obj = { text: null, onPress: null };
         const intl = closure_1_0(1115).intl;
         obj.text = intl.string(closure_1_0(1115).t["5Wxrcd"]);
-        obj.onPress = closure_1_1(4843).pop;
-        return closure_1_7(closure_1_0(7491).HeaderActionButton, obj);
+        obj.onPress = closure_1_1(4925).pop;
+        return closure_1_7(closure_1_0(7573).HeaderActionButton, obj);
       },
       headerTitle() {
-        return closure_1_7(closure_1_0(5712).NavigatorHeader, {
+        return closure_1_7(closure_1_0(5794).NavigatorHeader, {
           title: constants.START,
           subtitle: "I said come on fhqwhgads",
         });
@@ -44,7 +44,7 @@ function DemoModal() {
             return closure_0.push(constants.WHO_DAT);
           },
           secondaryAction: "Maybe later",
-          onSecondaryAction: closure_1(4843).pop,
+          onSecondaryAction: closure_1(4925).pop,
           disclaimer: "I said come on fhqwhgads.",
         });
       },
@@ -54,7 +54,7 @@ function DemoModal() {
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj4.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5712).NavigatorHeader, { title: constants.WHO_DAT });
+      return closure_1_7(closure_1_0(5794).NavigatorHeader, { title: constants.WHO_DAT });
     };
     obj4.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -65,7 +65,7 @@ function DemoModal() {
         onAction() {
           return closure_0.push(constants.EVERYBODY);
         },
-        children: closure_7(closure_0(6717).TextInput, { placeholder: "My friend Jake" }),
+        children: closure_7(closure_0(6799).TextInput, { placeholder: "My friend Jake" }),
       });
     };
     obj[constants.WHO_DAT] = obj4;
@@ -73,7 +73,7 @@ function DemoModal() {
     obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj7.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5712).NavigatorHeader, { title: constants.EVERYBODY });
+      return closure_1_7(closure_1_0(5794).NavigatorHeader, { title: constants.EVERYBODY });
     };
     obj7.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -88,7 +88,7 @@ function DemoModal() {
     obj10.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj10.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj10.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5712).NavigatorHeader, {
+      return closure_1_7(closure_1_0(5794).NavigatorHeader, {
         title: constants.JOCKIN,
         subtitle: "Tryin' to play like, you know me",
       });
@@ -109,17 +109,17 @@ function DemoModal() {
     const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     obj13.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj13.headerRight = function headerRight() {
-      return closure_1_7(closure_1_0(5712).HeaderSubmittingIndicator, {});
+      return closure_1_7(closure_1_0(5794).HeaderSubmittingIndicator, {});
     };
     obj13.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5712).NavigatorHeader, { title: constants.LIMIT });
+      return closure_1_7(closure_1_0(5794).NavigatorHeader, { title: constants.LIMIT });
     };
     obj13.render = function render() {
       return closure_1_7(closure_1_13, {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: closure_1_1(4843).pop,
+        onAction: closure_1_1(4925).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return closure_1_1(dependencyMap[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -141,11 +141,11 @@ function DemoStepModal() {
         const obj = { text: null, onPress: null };
         const intl = closure_1_0(1115).intl;
         obj.text = intl.string(closure_1_0(1115).t["5Wxrcd"]);
-        obj.onPress = closure_1_1(4843).pop;
-        return closure_1_7(closure_1_0(7491).HeaderActionButton, obj);
+        obj.onPress = closure_1_1(4925).pop;
+        return closure_1_7(closure_1_0(7573).HeaderActionButton, obj);
       },
       headerTitle() {
-        return closure_1_7(closure_1_0(5712).NavigatorHeader, {
+        return closure_1_7(closure_1_0(5794).NavigatorHeader, {
           title: constants.START,
           subtitle: "I said come on fhqwhgads",
         });
@@ -160,7 +160,7 @@ function DemoStepModal() {
             return closure_0.push(constants.WHO_DAT);
           },
           secondaryAction: "Maybe later",
-          onSecondaryAction: closure_1(4843).pop,
+          onSecondaryAction: closure_1(4925).pop,
           disclaimer: "I said come on fhqwhgads.",
         });
       },
@@ -170,7 +170,7 @@ function DemoStepModal() {
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj4.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5712).NavigatorHeader, { title: constants.WHO_DAT });
+      return closure_1_7(closure_1_0(5794).NavigatorHeader, { title: constants.WHO_DAT });
     };
     obj4.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -181,7 +181,7 @@ function DemoStepModal() {
         onAction() {
           return closure_0.push(constants.EVERYBODY);
         },
-        children: closure_7(closure_0(6717).TextInput, { placeholder: "My friend Jake" }),
+        children: closure_7(closure_0(6799).TextInput, { placeholder: "My friend Jake" }),
       });
     };
     obj[constants.WHO_DAT] = obj4;
@@ -189,7 +189,7 @@ function DemoStepModal() {
     obj7.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj7.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj7.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5712).NavigatorHeader, { title: constants.EVERYBODY });
+      return closure_1_7(closure_1_0(5794).NavigatorHeader, { title: constants.EVERYBODY });
     };
     obj7.render = function render(arg0, arg1) {
       closure_0 = arg1;
@@ -204,7 +204,7 @@ function DemoStepModal() {
     obj10.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj10.headerRight = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj10.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5712).NavigatorHeader, {
+      return closure_1_7(closure_1_0(5794).NavigatorHeader, {
         title: constants.JOCKIN,
         subtitle: "Tryin' to play like, you know me",
       });
@@ -225,17 +225,17 @@ function DemoStepModal() {
     const obj13 = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
     obj13.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj13.headerRight = function headerRight() {
-      return closure_1_7(closure_1_0(5712).HeaderSubmittingIndicator, {});
+      return closure_1_7(closure_1_0(5794).HeaderSubmittingIndicator, {});
     };
     obj13.headerTitle = function headerTitle() {
-      return closure_1_7(closure_1_0(5712).NavigatorHeader, { title: constants.LIMIT });
+      return closure_1_7(closure_1_0(5794).NavigatorHeader, { title: constants.LIMIT });
     };
     obj13.render = function render() {
       return closure_1_7(closure_1_13, {
         title: "Everybody to the limit.",
         emoji: "\u{1F44F}",
         action: "Everybody come on fhqwhgads!",
-        onAction: closure_1_1(4843).pop,
+        onAction: closure_1_1(4925).pop,
         secondaryAction: "Push that fh-h-h-h-wqhgad",
         onSecondaryAction() {
           return closure_1_1(dependencyMap[12]).openURL("https://www.youtube.com/watch?v=votBDwhTu1E");
@@ -311,7 +311,7 @@ function SwitchesScreen(onAction) {
   [arr2, c1] = noop.useState(parts.map(() => false));
   const obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
   const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
-  obj.footer = closure_7(parts(11154).ModalFloatingAction, {
+  obj.footer = closure_7(parts(11247).ModalFloatingAction, {
     isVisible: arr2.some((item) => item),
     floatingBackgroundColor: tmp.screen.backgroundColor,
     text: "Come on fhqwhgads",
@@ -324,7 +324,7 @@ function SwitchesScreen(onAction) {
     text: "Come on fhqwhgads",
     onPress: onAction.onAction,
   };
-  obj3.children = closure_7(parts(5775).TableRowGroup, {
+  obj3.children = closure_7(parts(5857).TableRowGroup, {
     hasIcons: false,
     children: arr2.map((value, index) => {
       parts = index;
@@ -350,7 +350,7 @@ function SwitchesScreen(onAction) {
       );
     }),
   });
-  const items = [closure_7(closure_5, obj3), closure_7(parts(11154).ModalFloatingActionSpacer, {})];
+  const items = [closure_7(closure_5, obj3), closure_7(parts(11247).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(DemoScreen, obj);
 }
@@ -364,7 +364,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: { flex: 1, alignItems: "center", padding: 16, gap: 16 },
   screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },

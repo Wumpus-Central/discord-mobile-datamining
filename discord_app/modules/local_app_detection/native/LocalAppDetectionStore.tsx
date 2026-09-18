@@ -18,8 +18,8 @@ class LocalAppDetectionStore extends DeviceSettingsStore {
       POST_CONNECTION_OPEN() {
         return closure_0.handlePostConnectionOpen();
       },
-      LOCAL_APP_DETECTION_COMPLETE(arg0) {
-        return closure_0.handleLocalAppDetectionComplete(arg0);
+      LOCAL_APP_DETECTION_COMPLETE(result) {
+        return closure_0.handleLocalAppDetectionComplete(result);
       },
     };
     tmp21 = new tmp2(closure_1(closure_2[4]), obj, new.target, tmp2, tmp, new.target);
@@ -110,8 +110,8 @@ const object = new Object(
     POST_CONNECTION_OPEN() {
       return closure_0.handlePostConnectionOpen();
     },
-    LOCAL_APP_DETECTION_COMPLETE(arg0) {
-      return closure_0.handleLocalAppDetectionComplete(arg0);
+    LOCAL_APP_DETECTION_COMPLETE(result) {
+      return closure_0.handleLocalAppDetectionComplete(result);
     },
   },
   tmp,

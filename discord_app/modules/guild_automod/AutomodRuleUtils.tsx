@@ -1,5 +1,6 @@
 // discord_app/modules/guild_automod/AutomodRuleUtils.tsx
 import util from "../../intl/index.native.tsx";
+import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ApplicationCommandUtils from "../application_commands/ApplicationCommandUtils.tsx";
 import AutomodErrorUtils from "AutomodErrorUtils.tsx";
 import AutomodTriggerConfigs from "AutomodTriggerConfigs.tsx";
@@ -7,8 +8,8 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(17791).getRuleCountByTriggerType;
-const Constants = fn(12014);
+const getRuleCountByTriggerType = fn(17849).getRuleCountByTriggerType;
+const Constants = fn(12106);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
@@ -23,34 +24,50 @@ const Constants = fn(12014);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
 
+export const getRulesFromTriggerTypeMap = function getRulesFromTriggerTypeMap(rulesByTriggerType) {
+  let obj = rulesByTriggerType;
+  if (rulesByTriggerType == null) {
+    obj = {};
+  }
+  const values = Object.values(obj);
+  return values.flat().filter(GlobalUtils.isNotNullish);
+};
+export const isRegexSupported = function isRegexSupported(arg0) {
+  if (constants.KEYWORD !== arg0) {
+    if (constants.USER_PROFILE !== arg0) {
+      return false;
+    }
+  }
+  return true;
+};
 export const getNewAutomodRuleMockId = function getNewAutomodRuleMockId(arg0, arg1) {
   return "" + arg0 + "-" + arg1 + "-new-rule";
 };
-export const isRuleKeywordFilter = function isRuleKeywordFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleKeywordFilter = function isRuleKeywordFilter(length) {
+  let triggerType;
+  if (length != null) {
+    triggerType = length.triggerType;
   }
   return triggerType === constants.KEYWORD;
 };
-export const isRuleMLSpamFilter = function isRuleMLSpamFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleMLSpamFilter = function isRuleMLSpamFilter(rule) {
+  let triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.ML_SPAM;
 };
-export const isRuleDefaultKeywordListFilter = function isRuleDefaultKeywordListFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleDefaultKeywordListFilter = function isRuleDefaultKeywordListFilter(rule) {
+  let triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.DEFAULT_KEYWORD_LIST;
 };
-export const isRuleMentionSpamFilter = function isRuleMentionSpamFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleMentionSpamFilter = function isRuleMentionSpamFilter(rule) {
+  let triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.MENTION_SPAM;
 };
@@ -61,17 +78,17 @@ export const isRuleServerPolicyFilter = function isRuleServerPolicyFilter(trigge
   }
   return triggerType === constants.SERVER_POLICY;
 };
-export const isRuleUserProfileFilter = function isRuleUserProfileFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleUserProfileFilter = function isRuleUserProfileFilter(rule) {
+  let triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.USER_PROFILE;
 };
-export const isRuleApplicationFilter = function isRuleApplicationFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleApplicationFilter = function isRuleApplicationFilter(editingRule) {
+  let triggerType;
+  if (editingRule != null) {
+    triggerType = editingRule.triggerType;
   }
   return triggerType === constants.APPLICATION;
 };
@@ -235,10 +252,10 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     throw error4;
   }
 };
-export const isBackendPersistedRule = function isBackendPersistedRule(id) {
+export const isBackendPersistedRule = function isBackendPersistedRule(editingRule) {
   let str;
-  if (id != null) {
-    str = id.id;
+  if (editingRule != null) {
+    str = editingRule.id;
   }
   if (str == null) {
     str = "INVALID_SNOWFLAKE";

@@ -11,8 +11,8 @@ import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAn
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_4 = fn(7715).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
-const SearchMediaTypes = fn(8000).SearchMediaTypes;
+let closure_4 = fn(7797).EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY;
+const SearchMediaTypes = fn(8083).SearchMediaTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx",
@@ -75,7 +75,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     };
     items.push(obj3);
   }
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14946, dependencyMap.paths), closure_4, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15040, dependencyMap.paths), closure_4, {
     title,
     subtitle,
     options: items,

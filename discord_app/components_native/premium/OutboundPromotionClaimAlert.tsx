@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   loading: { marginVertical: 80 },
   body: { alignItems: "center" },

@@ -27,14 +27,14 @@ export default function useAppLauncherOnboardingContent(channelId) {
     if (
       (function useHasUsedActivities(channel) {
         channel = channel.channel;
-        let result = channelId(4460).useIsDismissibleContentDismissed_UNSAFE(
+        let result = channelId(4542).useIsDismissibleContentDismissed_UNSAFE(
           channelId(1944).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
         );
-        const obj = channelId(4460);
-        const result1 = channelId(4460).useIsDismissibleContentDismissed_UNSAFE(
+        const obj = channelId(4542);
+        const result1 = channelId(4542).useIsDismissibleContentDismissed_UNSAFE(
           channelId(1944).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
         );
-        const obj2 = channelId(4460);
+        const obj2 = channelId(4542);
         const items = [ApplicationFrecencyStore];
         const stateFromStores = channelId(504).useStateFromStores(items, () =>
           applicationFrecencyWithoutLoadingLatest.getApplicationFrecencyWithoutLoadingLatest(),
@@ -49,7 +49,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
           result = result1;
         }
         obj4.fetchesShelf = !result;
-        const activityApplications = channelId(12189).useActivityApplications(obj4);
+        const activityApplications = channelId(12280).useActivityApplications(obj4);
         let flag = false;
         for (const item10042 of activityApplications) {
           if (null != stateFromStores.getEntry(item10042.id)) {
@@ -60,7 +60,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
           let obj5 = { hasUsedActivities: flag };
           return obj5;
         }
-        const tmpResult = channelId(12189);
+        const tmpResult = channelId(12280);
       })(obj).hasUsedActivities
     ) {
       push(DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
@@ -70,7 +70,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
   }
   let obj2 = channelId(504);
   const tmp7 = _slicedToArray(
-    channelId(7502).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING),
+    channelId(7584).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING),
     2,
   );
   return { visibleContent: tmp7[0], markAsDismissed: tmp7[1] };

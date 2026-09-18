@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -16,8 +16,8 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.format(util.t["r91W/h"], { numberOfBlockedUsers });
   },
-  IconComponent: fn(8065).DenyIcon,
-  parent: fn(8111).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  IconComponent: fn(8148).DenyIcon,
+  parent: fn(8194).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1074).UserSettingsSections.BLOCKED_USERS_V2,
     getComponent() {

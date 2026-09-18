@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx
-import _modDef2429 from "../GuildPowerups.messages.js";
+import _modDef2512 from "../GuildPowerups.messages.js";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
@@ -19,7 +19,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
   );
   let tmp4;
   if (stateFromStores != null) {
-    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4532).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+    tmp4 = stateFromStores.allPowerups[tmp(undefined, 4614).GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
   }
   if (tmp4 != null) {
     const storeRemovalDate = tmp4.storeRemovalDate;
@@ -48,7 +48,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
           };
           const intl = tmp(1115).intl;
           const obj3 = { dateString: getGuildPowerupFormattedDateStringDefault(storeRemovalDate) };
-          obj2.title = intl.formatToPlainString(_modDef2429["6e2ry1"], obj3);
+          obj2.title = intl.formatToPlainString(_modDef2512["6e2ry1"], obj3);
           const intl2 = tmp(1115).intl;
           const obj4 = {
             startDate: getGuildPowerupFormattedDateStringDefault(storeRemovalDate),
@@ -66,7 +66,7 @@ export default function useGuildPowerupRollbackNotificationConfig(guildId, locat
             cost1 = tmp4.cost;
           }
           obj4.boostCount = cost1;
-          obj2.description = intl2.formatToPlainString(_modDef2429.jd8fki, obj4);
+          obj2.description = intl2.formatToPlainString(_modDef2512.jd8fki, obj4);
           tmp5 = obj2;
         }
       }

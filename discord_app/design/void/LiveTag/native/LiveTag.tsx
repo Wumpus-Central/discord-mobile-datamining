@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   tag: {
     paddingHorizontal: 6,
@@ -16,7 +16,7 @@ let obj2 = {
     overflow: "hidden",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
+    backgroundColor: nativeDefault.colors.BADGE_NOTIFICATION_BACKGROUND,
   },
   tagText: null,
 };

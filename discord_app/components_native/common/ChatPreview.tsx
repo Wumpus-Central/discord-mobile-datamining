@@ -39,11 +39,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8069);
+const RowGeneratorConstants = fn(8152);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -284,9 +284,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flex",
           shouldInitialScroll: "Array",
-          animated: "bearded_person_tone3",
-          scrollPosition: "bearded_person_medium_skin_tone",
-          focusTargetId: "bearded_person_tone4",
+          animated: 0,
+          scrollPosition: 2,
+          focusTargetId: 0,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -318,7 +318,7 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          applyArgumentsResult(4651).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(4733).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -351,8 +351,8 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(4651).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(4651);
+            applyArgumentsResult(4733).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(4733);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
@@ -629,7 +629,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4350).ThemeContext;
+ChatPreviewBase.contextType = fn(4432).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -648,10 +648,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7443).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7443);
-  const isChannelContentGated = channelId(4851).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4851);
+  const isChannelSpoilerGated = channelId(7525).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7525);
+  const isChannelContentGated = channelId(4933).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4933);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

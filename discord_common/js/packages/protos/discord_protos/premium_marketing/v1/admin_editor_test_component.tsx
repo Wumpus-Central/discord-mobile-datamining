@@ -8,10 +8,18 @@ import theme_aware_asset from "theme_aware_asset.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
+const AdminEditorTestSelectOption = {
+  UNSPECIFIED: 0,
+  [0]: "UNSPECIFIED",
+  FIRST: 1,
+  [1]: "FIRST",
+  SECOND: 2,
+  [2]: "SECOND",
+};
 const MessageType = fn(1187).MessageType;
 class AdminEditorTestComponent$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , ,];
+    items = [, , , , , , , , , ,];
     items[0] = { no: 1, name: "deprecated_field", kind: "scalar", T: 9 };
     items[1] = {
       no: 2,
@@ -48,20 +56,33 @@ class AdminEditorTestComponent$Type extends MessageType {
         return require("help_article").HelpArticle;
       },
     };
-    obj = { no: 9, name: "cta_field", kind: "message", T: null };
+    items[8] = {
+      no: 9,
+      name: "cta_field",
+      kind: "message",
+      T() {
+        return require("cta_button").CTAButton;
+      },
+    };
+    obj = { no: 10, name: "gradient_field", kind: "message", T: null };
     class T {
       constructor() {
-        return closure_1_0(closure_1_1[5]).CTAButton;
+        return closure_1_0(closure_1_1[6]).Gradient;
       }
     }
     obj.T = T;
-    items[8] = obj;
-    items[9] = {
-      no: 10,
-      name: "gradient_field",
-      kind: "message",
+    items[9] = obj;
+    items[10] = {
+      no: 11,
+      name: "select_field",
+      kind: "enum",
       T() {
-        return require("gradient").Gradient;
+        const items = [
+          "discord_protos.premium_marketing.v1.AdminEditorTestSelectOption",
+          AdminEditorTestSelectOption,
+          "ADMIN_EDITOR_TEST_SELECT_OPTION_",
+        ];
+        return items;
       },
     };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.AdminEditorTestComponent", items, T);
@@ -70,7 +91,7 @@ class AdminEditorTestComponent$Type extends MessageType {
 }
 const prototype = AdminEditorTestComponent$Type.prototype;
 prototype["create"] = function create(arr) {
-  const obj = { deprecatedField: "", plainTextField: "", checkboxField: false, assetField: "" };
+  const obj = { deprecatedField: "", plainTextField: "", checkboxField: false, assetField: "", selectField: 0 };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -192,6 +213,10 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
       writeUnknownFields,
     );
   }
+  if (0 !== deprecatedField.selectField) {
+    tag.tag(11, _mod1187.WireType.Varint).int32(deprecatedField.selectField);
+    const tagResult10 = tag.tag(11, _mod1187.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -239,22 +264,35 @@ let items = [
       return require("help_article").HelpArticle;
     },
   },
+  {
+    no: 9,
+    name: "cta_field",
+    kind: "message",
+    T() {
+      return require("cta_button").CTAButton;
+    },
+  },
   ,
 ];
-let obj = { no: 9, name: "cta_field", kind: "message", T: null };
+const obj2 = { no: 10, name: "gradient_field", kind: "message", T: null };
 class T {
   constructor() {
-    return closure_1_0(closure_1_1[5]).CTAButton;
+    return closure_1_0(closure_1_1[6]).Gradient;
   }
 }
-obj.T = T;
-items[8] = obj;
-items[9] = {
-  no: 10,
-  name: "gradient_field",
-  kind: "message",
+obj2.T = T;
+items[9] = obj2;
+items[10] = {
+  no: 11,
+  name: "select_field",
+  kind: "enum",
   T() {
-    return require("gradient").Gradient;
+    const items = [
+      "discord_protos.premium_marketing.v1.AdminEditorTestSelectOption",
+      AdminEditorTestSelectOption,
+      "ADMIN_EDITOR_TEST_SELECT_OPTION_",
+    ];
+    return items;
   },
 };
 const prototype1 = new prototype(
@@ -265,10 +303,13 @@ const prototype1 = new prototype(
   AdminEditorTestComponent$Type,
   prototype,
   items,
+  fn,
+  dependencyMap,
 );
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/admin_editor_test_component.tsx",
 );
 
+export { AdminEditorTestSelectOption };
 export const AdminEditorTestComponent = prototype1;

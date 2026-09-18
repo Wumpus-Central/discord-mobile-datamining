@@ -12,12 +12,12 @@ const result = size.fileFinishedImporting(
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
-  const threadNotificationSetting = channel(10238).useThreadNotificationSetting(channel);
+  const threadNotificationSetting = channel(10332).useThreadNotificationSetting(channel);
   const obj2 = { header: null, children: null };
   const obj3 = { title: null };
   const intl = channel(1115).intl;
   obj3.title = intl.string(channel(1115).t.h850Ss);
-  obj2.header = jsx(channel(7263).BottomSheetTitleHeader, { title: null });
+  obj2.header = jsx(channel(7345).BottomSheetTitleHeader, { title: null });
   const obj4 = {
     hasIcons: false,
     value: threadNotificationSetting,
@@ -29,12 +29,12 @@ export default function ThreadNotificationsBottomSheet(channel) {
   };
   const intl2 = channel(1115).intl;
   obj4.accessibilityLabel = intl2.string(channel(1115).t.h850Ss);
-  const obj = channel(10238);
+  const obj = channel(10332);
   obj4.children = closure_3().map((label) => {
     const setting = label.setting;
     return jsx(channel(dependencyMap[8]).TableRadioRow, { value: setting, label: label.label }, "" + setting);
   });
-  obj2.children = jsx(channel(5773).TableRadioGroup, {
+  obj2.children = jsx(channel(5855).TableRadioGroup, {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
@@ -43,5 +43,5 @@ export default function ThreadNotificationsBottomSheet(channel) {
     accessibilityLabel: null,
     children: null,
   });
-  return jsx(channel(7311).ActionSheet, { header: null, children: null });
+  return jsx(channel(7393).ActionSheet, { header: null, children: null });
 }

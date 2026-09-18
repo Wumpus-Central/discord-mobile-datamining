@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
-import _modDef2397 from "../FamilyCenter.messages.js";
+import _modDef2480 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
@@ -10,7 +10,7 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterEmptyDefault from "FamilyCenterEmpty.tsx";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
-import _modDef15047 from "../../../../_runtime/metro/15047__.js";
+import _modDef15141 from "../../../../_runtime/metro/15141__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,25 +25,25 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
     }
     const obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     const obj3 = { name: str1 };
-    obj.accessibilityLabel = intl.formatToPlainString(_modDef2397.T7DUoU, obj3);
+    obj.accessibilityLabel = intl.formatToPlainString(_modDef2480.T7DUoU, obj3);
     obj.onPress = function onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15045, dependencyMap.paths), { otherUser: str });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15139, dependencyMap.paths), { otherUser: str });
     };
     obj.style = tmp.actionButton;
-    const obj4 = { size: str(1177).Icon.Sizes.SMALL, disableColor: true, source: _modDef15047 };
+    const obj4 = { size: str(1177).Icon.Sizes.SMALL, disableColor: true, source: _modDef15141 };
     obj.children = closure_6(str(1177).Icon, obj4);
-    obj2.actions = closure_6(str(5210).PressableOpacity, obj);
+    obj2.actions = closure_6(str(5292).PressableOpacity, obj);
     tmp4Result = closure_6(FamilyCenterLinkRowDefault, obj2);
   }
   return tmp4Result;
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7652);
+const FamilyCenterConstants = fn(7734);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: closure_4, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: hasOwnProperty } =
   FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let obj2 = {
   container: { marginTop: 24 },
   content: {
@@ -56,7 +56,7 @@ let obj2 = {
   header: { marginBottom: 10 },
 };
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(4640);
+createStyles = fn(4722);
 let obj5 = { actionButton: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -82,8 +82,8 @@ export default function FamilyCenterAcceptedLinks() {
   const intl2 = util.intl;
   const obj3 = { style: tmp.container, children: null };
   const ageSpecificText = tmp5Result.useAgeSpecificText(
-    intl.formatToPlainString(_modDef2397["+tnO34"], obj2),
-    intl2.formatToPlainString(_modDef2397["pu6/U0"], obj2),
+    intl.formatToPlainString(_modDef2480["+tnO34"], obj2),
+    intl2.formatToPlainString(_modDef2480["pu6/U0"], obj2),
   );
   const items = [
     timestampProducer(Text_Text.Text, {
@@ -98,7 +98,7 @@ export default function FamilyCenterAcceptedLinks() {
     const obj6 = { style: tmp.empty, children: null };
     const obj7 = { text: null };
     const intl3 = util.intl;
-    obj7.text = intl3.string(_modDef2397.C4ScLD);
+    obj7.text = intl3.string(_modDef2480.C4ScLD);
     obj6.children = timestampProducer(FamilyCenterEmptyDefault, obj7);
     let mapped = timestampProducer(View, obj6);
     const tmp2Result = FamilyCenterEmptyDefault;

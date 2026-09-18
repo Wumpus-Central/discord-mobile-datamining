@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   screenContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   header: { alignItems: "center", marginTop: 8, marginBottom: 32, gap: 12 },

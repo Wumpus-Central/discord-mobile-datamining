@@ -7,7 +7,7 @@ import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import DeprecatedLayoutAnimation from "../../animations/native/DeprecatedLayoutAnimation.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
-import _modDef12877 from "../../../../_runtime/metro/12877__.js";
+import _modDef12968 from "../../../../_runtime/metro/12968__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -84,12 +84,12 @@ function AcceptInviteCardComponent(invite) {
     const obj2 = {};
     const merged = Object.assign(invite);
     obj2.invite = invite;
-    return closure_9(first(12869), obj2);
+    return closure_9(first(12960), obj2);
   } else if (tmp22.ERROR === first) {
     let obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_9(first(12872), obj);
+    return closure_9(first(12963), obj);
   } else {
     return closure_9(InviteResolving, {});
   }
@@ -99,7 +99,7 @@ get_ActivityIndicator = fn(17);
 const InviteStates = fn(1074).InviteStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   parentContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -147,7 +147,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef12877;
+    let guildSplashSource = _modDef12968;
   } else {
     const obj2 = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

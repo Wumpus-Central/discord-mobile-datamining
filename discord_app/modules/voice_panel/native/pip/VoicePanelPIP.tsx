@@ -4,7 +4,7 @@ import embeddedActivityLocationUtils from "../../../activities/utils/embeddedAct
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06766_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06848_LegacyBaseButton.js";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
@@ -895,15 +895,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12424);
+const VoicePanelConstants = fn(12515);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12422).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17335).VoicePanelPIPModes;
-const ActivityPanelModes = fn(9659).ActivityPanelModes;
-const isLaunched = fn(9665).isLaunched;
+const VoicePanelControlsModes = fn(12513).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17465).VoicePanelPIPModes;
+const ActivityPanelModes = fn(9743).ActivityPanelModes;
+const isLaunched = fn(9749).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   container: { position: "absolute", zIndex: 10 },
   pipContentWrapper: { backgroundColor: "black" },
@@ -1023,12 +1023,12 @@ const __initData7 = {
 let closure_37 = noop.memo((transitionState) => {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;
-  const pipHandoff = noop.useContext(transitionCleanUp(12423)).pipHandoff;
-  const mode = transitionState(17338).usePIPState().mode;
-  const obj = transitionState(17338);
-  const pIPCardsSettled = transitionState(12430).usePIPCardsSettled(pipHandoff);
-  const obj2 = transitionState(12430);
-  const pIPPanelLayoutCommitted = transitionState(12430).usePIPPanelLayoutCommitted(pipHandoff);
+  const pipHandoff = noop.useContext(transitionCleanUp(12514)).pipHandoff;
+  const mode = transitionState(17468).usePIPState().mode;
+  const obj = transitionState(17468);
+  const pIPCardsSettled = transitionState(12521).usePIPCardsSettled(pipHandoff);
+  const obj2 = transitionState(12521);
+  const pIPPanelLayoutCommitted = transitionState(12521).usePIPPanelLayoutCommitted(pipHandoff);
   const items = [transitionState, pIPPanelLayoutCommitted, transitionCleanUp];
   const effect = noop.useEffect(() => {
     if (tmp) {

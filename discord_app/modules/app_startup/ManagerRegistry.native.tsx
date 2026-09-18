@@ -803,13 +803,6 @@ const obj = {
     },
     neverLoadBeforeConnectionOpen: true,
   },
-  MobileGameCommunitiesManager: {
-    actions: ["POST_CONNECTION_OPEN", "LOCAL_APP_DETECTION_COMPLETE"],
-    inlineRequire() {
-      return require("MobileGameCommunitiesManager").default;
-    },
-    neverLoadBeforeConnectionOpen: true,
-  },
   VideoBackgroundManager: {
     actions: ["VOICE_CHANNEL_SELECT"],
     inlineRequire() {

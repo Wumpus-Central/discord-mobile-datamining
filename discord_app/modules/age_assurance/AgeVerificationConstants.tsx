@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/AgeVerificationConstants.tsx
 import Constants from "../../Constants.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
-import _modDef2949 from "AgeAssurance.messages.js";
+import _modDef3032 from "AgeAssurance.messages.js";
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -22,11 +22,11 @@ let obj = {
 };
 let obj2 = {};
 const set = new Set(items);
-obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef2949["2yLvkS"], description: _modDef2949.eJmat5 };
-let obj3 = { title: _modDef2949["2yLvkS"], description: _modDef2949.eJmat5 };
-obj2[obj.ID_VERIFICATION] = { title: _modDef2949.dwkwo0, description: _modDef2949.ZdmRwW };
-const obj4 = { title: _modDef2949.dwkwo0, description: _modDef2949.ZdmRwW };
-obj2[obj.GOOGLE_WALLET] = { title: _modDef2949.Y9sLpR, description: _modDef2949.dah4bF };
+obj2[obj.FACIAL_AGE_ESTIMATION] = { title: _modDef3032["2yLvkS"], description: _modDef3032.eJmat5 };
+let obj3 = { title: _modDef3032["2yLvkS"], description: _modDef3032.eJmat5 };
+obj2[obj.ID_VERIFICATION] = { title: _modDef3032.dwkwo0, description: _modDef3032.ZdmRwW };
+const obj4 = { title: _modDef3032.dwkwo0, description: _modDef3032.ZdmRwW };
+obj2[obj.GOOGLE_WALLET] = { title: _modDef3032.Y9sLpR, description: _modDef3032.dah4bF };
 let result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationConstants.tsx");
 
 export const FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS = set;
@@ -64,6 +64,7 @@ export const getAgeVerificationGetStartedSteps = function getAgeVerificationGetS
 };
 export const TRUSTED_PROVIDERS_URL =
   "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data";
+export const FALLBACK_TEEN_AGE_RANGE = "13-17";
 export const AGE_VERIFICATION_MODAL_KEY = "AGE_VERIFICATION_MODAL_KEY";
 export const AGE_VERIFICATION_GET_STARTED_MODAL_KEY = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
 export const AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY = "AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY";

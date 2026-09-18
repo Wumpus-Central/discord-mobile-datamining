@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef2949 from "AgeAssurance.messages.js";
+import _modDef3032 from "AgeAssurance.messages.js";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import usePreviousDefault from "../../hooks/usePrevious.tsx";
@@ -214,7 +214,7 @@ function useShouldCallReactiveCheck() {
   _require = tmp5;
   obj = require("initialize");
   const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-    tmp(5512).AgeGatedFeature.REACTIVE_CHECK,
+    tmp(5594).AgeGatedFeature.REACTIVE_CHECK,
   );
   const tmpResult = require("RegionalFeatureConfigUtils");
   const items1 = [AgeVerificationStore];
@@ -314,16 +314,16 @@ let closure_24 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(8561).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(8644).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const Constants = fn(1074);
 ({ AbortCodes: map1, MessageEmbedTypes: closure_14 } = Constants);
 const AgeGateConstants = fn(1099);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_15 } = AgeGateConstants);
-const SafetyToastType = fn(8548).SafetyToastType;
+const SafetyToastType = fn(8631).SafetyToastType;
 let items = [
-  fn(8562).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(8562).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(8562).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(8645).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(8645).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(8645).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];
@@ -715,7 +715,7 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   if (hasItem) {
     let stringResult = string(util.t.lSWVTM);
   } else if (flag) {
-    stringResult = string(_modDef2949["/kgWIg"]);
+    stringResult = string(_modDef3032["/kgWIg"]);
   } else {
     stringResult = string(util.t.xYXsr6);
   }
@@ -738,14 +738,14 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
     let stringResult = intl6.string(util.t["S/xS/w"]);
   } else if (flag) {
     const intl5 = util.intl;
-    stringResult = intl5.string(_modDef2949.h7qzoa);
+    stringResult = intl5.string(_modDef3032.h7qzoa);
   } else {
     if (flag2) {
       if (null != handleOnHelpUrlHook) {
         if (null != fn) {
           const intl4 = util.intl;
           obj2 = { handleOnHelpUrlHook, handleOnTrustedProvidersHook: fn };
-          stringResult = intl4.format(_modDef2949["+Ft5ch"], obj2);
+          stringResult = intl4.format(_modDef3032["+Ft5ch"], obj2);
         }
       }
     }
@@ -753,13 +753,13 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
       if (null != handleOnHelpUrlHook) {
         const intl3 = util.intl;
         const obj3 = { handleOnHelpUrlHook };
-        stringResult = intl3.format(_modDef2949["22HSSI"], obj3);
+        stringResult = intl3.format(_modDef3032["22HSSI"], obj3);
       }
     }
     if (null != handleOnHelpUrlHook) {
       const intl2 = util.intl;
       obj = { handleOnHelpUrlHook };
-      stringResult = intl2.format(_modDef2949.RpMIT0, obj);
+      stringResult = intl2.format(_modDef3032.RpMIT0, obj);
     } else {
       const intl = util.intl;
       stringResult = intl.string(util.t.HxS3oQ);

@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj = {
   suggestionsContainer: {
     justifyContent: "center",
@@ -45,13 +45,13 @@ export default noop.memo(function GIFPickerSearchSuggestions(onClickSuggestion) 
     };
     const intl = tmp2(1115).intl;
     obj3.children = intl.string(tmp2(1115).t["3JGJo2"]);
-    const items1 = [closure_5(tmp2(4636).Text, obj3)];
+    const items1 = [closure_5(tmp2(4718).Text, obj3)];
     const obj4 = {
       style: tmp.suggestionsContainer,
       children: stateFromStoresArray.map((text) => {
         closure_0 = text;
         return closure_1_5(
-          onClickSuggestion(5062).Button,
+          onClickSuggestion(5144).Button,
           {
             size: "sm",
             variant: "secondary",

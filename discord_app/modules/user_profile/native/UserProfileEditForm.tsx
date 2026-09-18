@@ -5,7 +5,7 @@ import ProfileCustomizationUtils from "../../profile_customization/ProfileCustom
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
-import _modDef14712 from "../../../../_runtime/metro/14712__.js";
+import _modDef14806 from "../../../../_runtime/metro/14806__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
 import ProfileCustomizationNavigationStore from "../../profile_customization/ProfileCustomizationNavigationStore.tsx";
@@ -57,7 +57,7 @@ function EditUserProfileBanner(user) {
       fn = (banner) => user(isTryItOut[19]).setPendingChanges({ banner });
     }
     obj2.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14714, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14808, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -75,17 +75,17 @@ function EditUserProfileBanner(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7322).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7404).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10 } = Constants);
 let closure_11 = fn(1084).ProfileCustomizationScrollPositions;
-const constants = fn(14711).UserProfileEditAutoFocusElement;
+const constants = fn(11449).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let obj = {
-  assetOrigin: fn(7103).AssetOriginTypes.NEW_ASSET,
-  imageUri: _modDef14712,
-  staticImageUri: _modDef14712,
+  assetOrigin: fn(7185).AssetOriginTypes.NEW_ASSET,
+  imageUri: _modDef14806,
+  staticImageUri: _modDef14806,
   description: "",
   originalAsset: "call",
 };

@@ -28,7 +28,7 @@ export const useAvailableAgeVerificationMethods = function useAvailableAgeVerifi
         footerMessage: methods.footerMessage,
         outageBannerMessage: methods.outageBannerMessage,
       };
-      return _true(8588).getAvailableMethodsV2(methods.methods);
+      return _true(8671).getAvailableMethodsV2(methods.methods);
     });
     ageVerificationMethodsV2SuspendedUser
       .then((methods) => {
@@ -45,7 +45,7 @@ export const useAvailableAgeVerificationMethods = function useAvailableAgeVerifi
           footerMessage: methods.footerMessage,
           outageBannerMessage: methods.outageBannerMessage,
         };
-        return _true(8588).getAvailableMethodsV2(methods.methods);
+        return _true(8671).getAvailableMethodsV2(methods.methods);
       })
       .then((methods) => {
         if (!c0) {

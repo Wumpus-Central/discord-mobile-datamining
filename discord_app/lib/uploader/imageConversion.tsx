@@ -390,14 +390,14 @@ const ImageConversionFailureReason = {
 };
 let obj2 = {
   label: "heic",
-  matches: fn(5258).isHeicFile,
+  matches: fn(5340).isHeicFile,
   canConvert(canConvertHeic) {
     return canConvertHeic.canConvertHeic();
   },
 };
 let obj3 = {
   label: "jxr",
-  matches: fn(5258).isJxrFile,
+  matches: fn(5340).isJxrFile,
   canConvert(canConvertJxr) {
     return canConvertJxr.canConvertJxr();
   },
@@ -406,7 +406,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/imageConversion.tsx");
 
 export { ImageConversionFailureReason };
-export const renameToJpegExtension = fn(5258).renameToJpegExtension;
+export const renameToJpegExtension = fn(5340).renameToJpegExtension;
 export { maybeConvertHeicToJpeg };
 export { maybeConvertJxrToJpeg };
 export const convertFileToJpeg = function convertFileToJpeg() {

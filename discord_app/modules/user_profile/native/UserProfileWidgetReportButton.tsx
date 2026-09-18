@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import MoreHorizontalIcon from "../../../design/components/Icon/native/redesign/generated/MoreHorizontalIcon.tsx";
-import ReportModals from "../../in_app_reports/ReportModals.tsx";
 import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
+import showReportModalForUserWidget from "../showReportModalForUserWidget.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -21,7 +21,7 @@ export default function UserProfileWidgetReportButton(arg0) {
   obj.label = intl.string(util.t.D4GvHE);
   obj.IconComponent = FlagIcon.FlagIcon;
   obj.action = function action() {
-    return ReportModals.showReportModalForWidget(closure_1_0, importDefault);
+    return showReportModalForUserWidget.showReportModalForUserWidget(closure_1_0, importDefault);
   };
   const items = [obj];
   return jsx(ContextMenu.ContextMenu, {

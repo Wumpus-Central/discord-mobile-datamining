@@ -17,8 +17,13 @@ export const transformNativeMentionLink = function transformNativeMentionLink(va
         if ("ephemeral_attachments" === value.bucket) {
           str = "ephemeral-attachments";
         }
+        let str3 = "";
+        if (null != value.query) {
+          const _HermesInternal = HermesInternal;
+          str3 = "?" + value.query;
+        }
         ({ channel_id, domain, attachment_id } = value);
-        const _HermesInternal = HermesInternal;
+        const _HermesInternal2 = HermesInternal;
         const obj2 = { type: null, content: null, attachmentUrl: null, attachmentName: null };
         const combined =
           "https://" +
@@ -30,7 +35,8 @@ export const transformNativeMentionLink = function transformNativeMentionLink(va
           "/" +
           attachment_id.toString() +
           "/" +
-          value.name;
+          value.name +
+          str3;
         obj2.type = MarkupTypes.AST_KEY.ATTACHMENT_LINK;
         const obj3 = { type: MarkupTypes.AST_KEY.TEXT, content: value.name };
         const items = [obj3];
@@ -45,34 +51,34 @@ export const transformNativeMentionLink = function transformNativeMentionLink(va
     }
   }
   value2 = value.value;
-  const str17 = value2.channel_id.toString();
-  let str18;
+  const str19 = value2.channel_id.toString();
+  let str20;
   if ("message" === value.type) {
-    str18 = value.value.message_id.toString();
+    str20 = value.value.message_id.toString();
   }
-  let str12 = "@me";
+  let str14 = "@me";
   if ("@me" !== value2.guild_id) {
-    str12 = str11.toString();
+    str14 = str13.toString();
   }
-  let str13 = "";
-  if (null != str18) {
-    const _HermesInternal2 = HermesInternal;
-    str13 = "/" + str18;
+  let str15 = "";
+  if (null != str20) {
+    const _HermesInternal3 = HermesInternal;
+    str15 = "/" + str20;
   }
-  const combined1 = "https://" + value2.domain + "/channels/" + str12 + "/" + str17 + str13;
-  const channel = MarkupChannelMentionRule.getChannel(str17, null);
+  const combined1 = "https://" + value2.domain + "/channels/" + str14 + "/" + str19 + str15;
+  const channel = MarkupChannelMentionRule.getChannel(str19, null);
   if (null == channel) {
     const tmpResult4 = MarkupChannelMentionRule;
     let handleUnknownChannelResult = tmpResult4.handleUnknownChannel(
-      str12,
-      str17,
-      str18,
+      str14,
+      str19,
+      str20,
       guildIdFromChannelId,
       combined1,
     );
   } else {
     const tmpResult5 = MarkupChannelMentionRule;
-    handleUnknownChannelResult = tmpResult5.parseChannel(channel, str18, guildIdFromChannelId, combined1);
+    handleUnknownChannelResult = tmpResult5.parseChannel(channel, str20, guildIdFromChannelId, combined1);
   }
   const tmpResult = MarkupChannelMentionRule;
   return transformNativeMarkupMention.applyChannelMentionIcons(handleUnknownChannelResult);

@@ -7,7 +7,7 @@ import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05074_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05156_LinearGradient.js";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
@@ -82,7 +82,7 @@ class ShopNitroUpsellBanner {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   card: {
     overflow: "hidden",

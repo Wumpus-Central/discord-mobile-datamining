@@ -27,8 +27,8 @@ function ShopCardGridItem(index) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(8920).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(4722);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9004).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
@@ -42,7 +42,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(15973).useCardLayout();
+  const cardLayout = products(16068).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
@@ -56,9 +56,9 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
     contentContainerStyle: null,
     children: null,
   };
-  let obj = products(15973);
+  let obj = products(16068);
   obj2.contentContainerStyle = {
-    gap: products(8920).COLLECTIBLES_SHOP_CARD_GAP,
+    gap: products(9004).COLLECTIBLES_SHOP_CARD_GAP,
     paddingTop,
     paddingBottom,
     width: cardLayout.rowWidth,

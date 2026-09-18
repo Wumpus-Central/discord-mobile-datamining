@@ -46,12 +46,12 @@ function EmojiIcon(arg0) {
     name: null,
   });
 }
-const ForumChannelStore = fn(12152);
+const ForumChannelStore = fn(12243);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_12 = createStyles.createStyles({
   emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" },
   imageEmoji: { height: 18, width: 18 },

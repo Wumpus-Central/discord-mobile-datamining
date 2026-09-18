@@ -8,9 +8,9 @@ import YouBarButtonDefault from "YouBarButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(15210).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(15304).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
   badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND },

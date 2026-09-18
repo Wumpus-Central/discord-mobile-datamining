@@ -6,11 +6,11 @@ import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import _modDef7106 from "../../../../../_runtime/metro/07106__.js";
+import _modDef7188 from "../../../../../_runtime/metro/07188__.js";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import CheckpointWelcomeScreenDefault from "screens/CheckpointWelcomeScreen.tsx";
 import CheckpointApngPlayerDefault from "CheckpointApngPlayer.tsx";
-import _modDef15818 from "../../../../../discord_assets/assets/checkpoint/checkpoint-clyde.png.js";
+import _modDef15913 from "../../../../../discord_assets/assets/checkpoint/checkpoint-clyde.png.js";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -56,11 +56,11 @@ export default function CheckpointModal() {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.nav, { marginTop: rect.top, marginLeft: rect.left, marginRight: rect.right }];
   obj3.style = items1;
-  const obj4 = { uri: _modDef15818, style: tmp.logo };
+  const obj4 = { uri: _modDef15913, style: tmp.logo };
   const items2 = [hasOwnProperty(CheckpointApngPlayerDefault, obj4)];
   const obj5 = { style: tmp.headerActions, children: null };
   const obj6 = {
-    source: _modDef7106,
+    source: _modDef7188,
     onPress: ModalActionCreatorsDefault.pop,
     accessibilityLabel: null,
     imageStyle: null,

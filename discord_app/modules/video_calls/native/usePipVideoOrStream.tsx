@@ -13,7 +13,7 @@ import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const CallConstants = fn(4661);
+const CallConstants = fn(4743);
 ({ isStreamParticipant: closure_11, isUserParticipant: closure_12, ParticipantTypes: map1 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/usePipVideoOrStream.tsx");

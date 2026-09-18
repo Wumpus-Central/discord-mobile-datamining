@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06766_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06848_LegacyBaseButton.js";
 import useMessagePreviewHeight from "../../useMessagePreviewHeight.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   drawerContainer: { overflow: "hidden", backgroundColor: "w" },
   drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 },
@@ -392,7 +392,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     const onStartResult = directionResult.onStart(fn);
     return directionResult.onStart(fn).withRef(ref1).enabled(first4);
   }, items9);
-  const items10 = [sharedValue2, sharedValue1, first1, first2, full, sharedValue, num2];
+  const items10 = [sharedValue2, sharedValue1, first1, first2, full, sharedValue, first4, num2];
   const memo2 = sharedValue.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
@@ -421,7 +421,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         throw new TypeError("Trying to call a non-function");
       }
     };
-    const activeOffsetYResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]);
+    const activeOffsetYResult = Gesture.Pan().maxPointers(1).activeOffsetY(10);
     fn.__closure = {
       animationState: sharedValue1,
       DRAWER_PANNING: 2,
@@ -528,7 +528,11 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
       STANDARD_EASING: native.STANDARD_EASING,
       EXPANDED: 1,
     };
-    return onUpdateResult.onEnd(fn2).enabled(first);
+    let tmp = first;
+    if (first) {
+      tmp = first4;
+    }
+    return onUpdateResult.onEnd(fn2).enabled(tmp);
   }, items10);
   let obj11 = {
     r,

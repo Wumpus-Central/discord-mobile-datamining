@@ -79,12 +79,12 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 if (null != tmp4) {
                   c4 = 4;
                   c5 = 1;
-                  const obj6 = { value: tmp47(17960).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                  const obj6 = { value: tmp47(18054).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
                   return obj6;
                 } else {
                   c4 = 3;
                   c5 = 1;
-                  const obj7 = { value: tmp47(17960).acceptCreatorMonetizationTermsV2(tmp55), done: false };
+                  const obj7 = { value: tmp47(18054).acceptCreatorMonetizationTermsV2(tmp55), done: false };
                   return obj7;
                 }
               }
@@ -94,7 +94,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
             if (2 === tmp8) {
               dependencyMap = 1;
               closure_128_0 = tmp47;
-              const tmp25 = new tmp4(4541)(closure_128_0);
+              const tmp25 = new tmp4(4623)(closure_128_0);
               closure_129_3(tmp25);
             } else {
               if (3 === tmp8) {

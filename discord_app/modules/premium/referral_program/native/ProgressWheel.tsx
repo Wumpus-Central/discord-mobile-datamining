@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../../_runtime/08606_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08689_inlineStyles.js";
 import useReferralProgramBannerDetails from "../hooks/useReferralProgramBannerDetails.tsx";
-import _modDef13558 from "../../../../../_runtime/metro/13558__.js";
-import _modDef13559 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import _modDef13655 from "../../../../../_runtime/metro/13655__.js";
+import _modDef13656 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 160;
 const strokeDasharray = 2 * Math.PI * 77;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_8 = createStyles.createStyles({
   progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 },
   progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 },
@@ -33,7 +33,7 @@ export default function ProgressWheel(arg0) {
   const token1 = useToken.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
   let tmp9 = nReferralsSent === useReferralProgramBannerDetails.MAX_REFERRALS_SENT;
   if (tmp9) {
-    const obj4 = { source: _modDef13558, style: tmp.glowImage };
+    const obj4 = { source: _modDef13655, style: tmp.glowImage };
     tmp9 = React4(FastImageDefault, obj4);
     const tmp4Result = FastImageDefault;
   }
@@ -72,7 +72,7 @@ export default function ProgressWheel(arg0) {
   };
   const tmp4Result3 = inlineStylesDefault;
   if (altImage == null) {
-    altImage = _modDef13559;
+    altImage = _modDef13656;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj3.children = items;

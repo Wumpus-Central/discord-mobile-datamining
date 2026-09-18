@@ -3,7 +3,7 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import Constants from "../Constants.tsx";
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import Types from "../modules/main_tabs_v2/Types.tsx";
-import uniqueIdDefault from "../../_runtime/04844_uniqueId.js";
+import uniqueIdDefault from "../../_runtime/04926_uniqueId.js";
 import getDeprecatedModalDataDefault from "../utils/getDeprecatedModalData.tsx";
 import size from "../../_runtime/metro/00002__.js";
 

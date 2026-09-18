@@ -93,13 +93,13 @@ function ImageInput(openImageInputActionSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, TouchableOpacity: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(4981).DraftType;
-const PollsConstants = fn(7949);
+const DraftType = fn(5063).DraftType;
+const PollsConstants = fn(8031);
 ({ MAX_POLL_ANSWER_LENGTH: closure_9, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: c10 } = PollsConstants);
 const EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   defaultContainer: { flexDirection: "row", alignItems: "center" },
   defaultImageAndTextContainer: {
@@ -197,7 +197,7 @@ export default function PollAnswerInput(answer) {
       image: answer.image,
       openExpressionPicker,
       openImageInputActionSheet() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12378, dependencyMap.paths), closure_2_10, {
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12469, dependencyMap.paths), closure_2_10, {
           channelId,
           index,
           answer,

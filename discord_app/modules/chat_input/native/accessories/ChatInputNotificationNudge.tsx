@@ -8,7 +8,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import JoinedThreadsStore from "../../../threads/JoinedThreadsStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
-const PostReactionPermissionNudgeExperimentDefault = tmp4(12572);
+const PostReactionPermissionNudgeExperimentDefault = tmp4(12663);
 require = fn;
 function ChatInputNotificationNudgeImpl(children) {
   ({ promptType: require, location: importDefault, surface } = children);
@@ -90,11 +90,11 @@ function ChatInputNotificationNudgeImpl(children) {
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const PermissionPromptType = fn(12561).PermissionPromptType;
+const PermissionPromptType = fn(12652).PermissionPromptType;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, NOOP: closure_11 } = Constants);
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12562);
+const NotificationPermissionConstants = fn(12653);
 ({
   EventActionLocation: map1,
   EventActionType: closure_14,
@@ -103,7 +103,7 @@ const NotificationPermissionConstants = fn(12562);
 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_19 = createStyles.createStyles(() => {
   const obj = {
     container: {
@@ -168,15 +168,15 @@ export default function ChatInputNotificationNudge(channel) {
     tmp5 = !useIsAppDMDefault(channel);
   }
   const obj = channel(504);
-  const shouldShowPushNotificationNudgeByPromptType = channel(12563).useShouldShowPushNotificationNudgeByPromptType(
+  const shouldShowPushNotificationNudgeByPromptType = channel(12654).useShouldShowPushNotificationNudgeByPromptType(
     PermissionPromptType.CHANNEL_BANNER,
   );
-  const tmpResult = channel(12563);
+  const tmpResult = channel(12654);
   const tmp4Result = PostReactionPermissionNudgeExperimentDefault;
-  const shouldShowPushNotificationNudgeByPromptType1 = channel(12563).useShouldShowPushNotificationNudgeByPromptType(
+  const shouldShowPushNotificationNudgeByPromptType1 = channel(12654).useShouldShowPushNotificationNudgeByPromptType(
     PermissionPromptType.POST_REACTION_BANNER,
   );
-  const tmpResult4 = channel(12563);
+  const tmpResult4 = channel(12654);
   let prop = null;
   if (tmp5) {
     prop = null;
@@ -185,8 +185,8 @@ export default function ChatInputNotificationNudge(channel) {
     }
   }
   const obj2 = { cooldownDurationMs };
-  const tmpResult5 = channel(7502);
-  [tmp13, tmp14] = channel(7502).useSelectedTimeRecurringDismissibleContent(
+  const tmpResult5 = channel(7584);
+  [tmp13, tmp14] = channel(7584).useSelectedTimeRecurringDismissibleContent(
     prop,
     { cooldownDurationMs },
     undefined,
@@ -194,7 +194,7 @@ export default function ChatInputNotificationNudge(channel) {
   );
   importDefault = tmp14;
   const tmp12 = _slicedToArray(
-    channel(7502).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }, undefined, true),
+    channel(7584).useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs }, undefined, true),
     2,
   );
   let prop1 = null;
@@ -211,14 +211,14 @@ export default function ChatInputNotificationNudge(channel) {
     }
   }
   const tmp11Result = _slicedToArray(
-    channel(7502).useSelectedTimeRecurringDismissibleContent(prop1, { cooldownDurationMs }, undefined, true),
+    channel(7584).useSelectedTimeRecurringDismissibleContent(prop1, { cooldownDurationMs }, undefined, true),
     2,
   );
   dependencyMap = tmp17;
   const items1 = [tmp14];
   const items2 = [tmp11Result[1]];
   const obj3 = { cooldownDurationMs };
-  const tmpResult6 = channel(7502);
+  const tmpResult6 = channel(7584);
   const tmp18 = closure_4(() => _undefined(ContentDismissActionType.USER_DISMISS), items1);
   if (tmp13 === channel(1944).DismissibleContent.NOTIFICATION_NUDGE_CHAT_BOTTOM_BANNER) {
     const obj4 = {

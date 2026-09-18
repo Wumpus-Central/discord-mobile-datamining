@@ -99,9 +99,9 @@ function useFrecentApps(onlyActivityApps) {
     return found2;
   }, items5);
 }
-const FetchState = fn(7221).FetchState;
+const FetchState = fn(7303).FetchState;
 const WATCH_YOUTUBE_PROD_APP_ID = fn(1921).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(5086);
+const ApplicationCommandConstants = fn(5168);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
 let items = [fn(1895).ApplicationCommandType.CHAT, fn(1895).ApplicationCommandType.PRIMARY_ENTRY_POINT];

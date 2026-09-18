@@ -20,7 +20,7 @@ function NativeCheckoutStoreProvider(children) {
     checkoutAnalyticsFields: View,
     analyticsInitialStep: closure_7,
   } = children);
-  const contextMetadata = order(5686)(() => {
+  const contextMetadata = order(5768)(() => {
     let id;
     if (order != null) {
       id = order.id;
@@ -33,7 +33,7 @@ function NativeCheckoutStoreProvider(children) {
     const obj3 = { message: "Checkout session ID: " + id };
     return { loadId: id, startTime: Date.now() };
   });
-  redux = order(5686)(() => {
+  redux = order(5768)(() => {
     const obj = {};
     const merged = Object.assign(View);
     obj.load_id = contextMetadata.loadId;
@@ -55,7 +55,7 @@ function NativeCheckoutStoreProvider(children) {
     ),
     1,
   )[0];
-  order(5079)(() => {
+  order(5161)(() => {
     if (null != View) {
       const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
       const obj3 = {};
@@ -100,8 +100,8 @@ function NativeCheckoutStoreProvider(children) {
         const obj2 = { checkoutSucceeded: tmp2, order: null };
         ({ id: obj3.id, status: obj3.status } = orderRecord);
         obj2.order = { id: null, status: null };
-        checkoutInitParameters(10966).discardDraftOrder(obj2);
-        const obj = checkoutInitParameters(10966);
+        checkoutInitParameters(11060).discardDraftOrder(obj2);
+        const obj = checkoutInitParameters(11060);
         const obj5 = { id: null, status: null };
       }
     },
@@ -114,16 +114,16 @@ function NativeCheckoutStoreProvider(children) {
   );
 }
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7538);
+const NativeCheckoutStore = fn(7620);
 ({
   createNativeStore: closure_7,
   NativeCheckoutStoreContext: closure_8,
   NativeCheckoutStoreContextOrNull: closure_9,
 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ItemPurchaseType = fn(4622).ItemPurchaseType;
+const ItemPurchaseType = fn(4704).ItemPurchaseType;
 let jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_13 = createStyles.createStyles({
   loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" },
 });

@@ -8,7 +8,7 @@ import ICYMIStore from "../../ICYMIStore.tsx";
 const require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: {
     flex: 1,

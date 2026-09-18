@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: {
     flex: 1,
@@ -62,13 +62,13 @@ export default function MediaSlider(controls) {
   ref = noop.useRef(0);
   const tmp8 = _slicedToArray(noop.useState(0), 2);
   closure_9 = tmp8[1];
-  const tmp11 = paused(5686)(() =>
+  const tmp11 = paused(5768)(() =>
     _modDef12.throttle((arg0) => {
       closure_1_5(arg0);
     }, 100),
   );
   closure_10 = tmp11;
-  closure_11 = paused(5686)(() =>
+  closure_11 = paused(5768)(() =>
     _modDef12.throttle((arg0) => {
       closure_1_6(arg0);
       let str = "transparent";
@@ -118,7 +118,7 @@ export default function MediaSlider(controls) {
   const obj2 = { style: null, children: null };
   const items3 = [tmp.container, controls.style];
   obj2.style = items3;
-  const timeFormat = controls(5255).getTimeFormat(tmp3);
+  const timeFormat = controls(5337).getTimeFormat(tmp3);
   const obj3 = {
     style: tmp.icon,
     accessibilityRole: "button",
@@ -144,12 +144,12 @@ export default function MediaSlider(controls) {
   };
   obj3.hitSlop = { top: 8, right: 8, bottom: 8, left: 8 };
   if (paused) {
-    let PauseIcon = tmp16(8423).PlayIcon;
+    let PauseIcon = tmp16(8506).PlayIcon;
   } else {
-    PauseIcon = tmp16(8425).PauseIcon;
+    PauseIcon = tmp16(8508).PauseIcon;
   }
   obj3.children = closure_6(PauseIcon, { size: "md", color: "white" });
-  const items4 = [closure_6(controls(5210).PressableOpacity, obj3), , ,];
+  const items4 = [closure_6(controls(5292).PressableOpacity, obj3), , ,];
   const obj4 = {
     style: null,
     tabularNumbers: true,
@@ -160,7 +160,7 @@ export default function MediaSlider(controls) {
   };
   const items5 = [tmp.centerText, { width: tmp8[0] }];
   obj4.style = items5;
-  items4[1] = closure_6(controls(4636).Text, obj4);
+  items4[1] = closure_6(controls(4718).Text, obj4);
   const obj5 = { style: tmp.sliderContainer, children: null };
   const obj6 = { pointerEvents: "none", style: tmp.progressSliderContainer, children: null };
   const obj7 = {
@@ -172,8 +172,8 @@ export default function MediaSlider(controls) {
     minimumTrackTintColor: null,
     maximumTrackTintColor: null,
   };
-  let obj = controls(5255);
-  const tmp9Result = paused(8427);
+  let obj = controls(5337);
+  const tmp9Result = paused(8510);
   const obj8 = paused(672)("#FFFFFF");
   obj7.thumbTintColor = paused(672)("#FFFFFF").alpha(0).hex();
   let alphaResult = paused(672)("#FFFFFF").alpha(0);
@@ -193,7 +193,7 @@ export default function MediaSlider(controls) {
     maximumTrackTintColor: null,
   };
   const alphaResult2 = paused(672)("#FFFFFF").alpha(0.1);
-  const tmp9Result3 = paused(8427);
+  const tmp9Result3 = paused(8510);
   const obj15 = paused(672)("#FFFFFF");
   obj9.thumbTintColor = paused(672)("#FFFFFF").alpha(0).hex();
   const alphaResult3 = paused(672)("#FFFFFF").alpha(0);
@@ -216,13 +216,13 @@ export default function MediaSlider(controls) {
     onSlidingComplete: null,
   };
   const alphaResult4 = paused(672)("#FFFFFF").alpha(0.2);
-  obj11.thumbImage = paused(8436);
+  obj11.thumbImage = paused(8519);
   obj11.maximumValue = ref.current;
   obj11.minimumTrackTintColor = paused(576).unsafe_rawColors.WHITE;
   obj11.onValueChange = tmp11;
   obj11.onSlidingStart = callback;
   obj11.onSlidingComplete = callback1;
-  items7[1] = closure_6(paused(8427), obj11);
+  items7[1] = closure_6(paused(8510), obj11);
   obj5.children = items7;
   items4[2] = c7(c5, obj5);
   const obj13 = {
@@ -236,9 +236,9 @@ export default function MediaSlider(controls) {
     },
     children: null,
   };
-  const tmp9Result4 = paused(8427);
-  obj13.children = controls(5255).getTimeFormat(ref.current);
-  items4[3] = closure_6(controls(4636).Text, obj13);
+  const tmp9Result4 = paused(8510);
+  obj13.children = controls(5337).getTimeFormat(ref.current);
+  items4[3] = closure_6(controls(4718).Text, obj13);
   obj2.children = items4;
   return c7(c5, obj2);
 }

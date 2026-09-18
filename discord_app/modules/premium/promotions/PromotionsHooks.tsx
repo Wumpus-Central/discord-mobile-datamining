@@ -192,12 +192,6 @@ export const useUnseenOutboundPromotions = function useUnseenOutboundPromotions(
   }, items1);
   return memo.filter((item) => stateFromStores(dependencyMap[5]).shouldShowOutboundPromotionOnPlatform(item));
 };
-export const useBogoPromotion = function useBogoPromotion() {
-  const obj = { promotion: null };
-  const items = [PromotionsStore];
-  obj.promotion = initialize.useStateFromStores(items, () => bogoPromotion.bogoPromotion);
-  return obj;
-};
 export const useIsInPromotion = function useIsInPromotion(arg0) {
   _require = arg0;
   const items = [PromotionsStore];
@@ -208,5 +202,5 @@ export const useHasActiveBogoPromotion = function useHasActiveBogoPromotion() {
     const result = require("PromotionsActionCreators").maybeFetchActivePromotions();
   }, []);
   const items = [PromotionsStore];
-  return initialize.useStateFromStores(items, () => null != activeBogoRewardPromotion.getActiveBogoRewardPromotion());
+  return initialize.useStateFromStores(items, () => PromotionsStore.hasActiveBogoRewardPromotion());
 };

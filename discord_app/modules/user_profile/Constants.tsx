@@ -47,6 +47,7 @@ export const TrackUserProfileLayouts = {
   ACCOUNT_POPOUT: "ACCOUNT_POPOUT",
   ACTION_SHEET: "ACTION_SHEET",
   YOU_SCREEN: "YOU_SCREEN",
+  EMBED: "EMBED",
 };
 export const UserProfileAnalyticsTypes = {
   USER_SHEET: "User Sheet",

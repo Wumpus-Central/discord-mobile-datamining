@@ -9,10 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(12595).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(12686).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: { alignItems: "flex-start", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 },
   avatar: null,
@@ -48,16 +48,16 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12752, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12843, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(8339).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(8339);
-        channel(7456).transitionToGuild(arg0);
-        const obj2 = channel(7456);
-        user(4607).hideActionSheet();
-        const obj3 = user(4607);
-        user(4843).popWithKey(closure_1_5);
+        const result = channel(8421).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = channel(8421);
+        channel(7538).transitionToGuild(arg0);
+        const obj2 = channel(7538);
+        user(4689).hideActionSheet();
+        const obj3 = user(4689);
+        user(4925).popWithKey(closure_1_5);
       },
     });
   }, items2);

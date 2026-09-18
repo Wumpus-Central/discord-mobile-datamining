@@ -1,11 +1,11 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOSlider.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8427 from "../../../../../_runtime/metro/08427__.js";
+import _modDef8510 from "../../../../../_runtime/metro/08510__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const PlatformUtils = fn(1364);
 let num = 0;
 if (PlatformUtils.isAndroid()) {

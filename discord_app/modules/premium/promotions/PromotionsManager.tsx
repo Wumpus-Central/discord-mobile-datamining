@@ -1,16 +1,11 @@
 // discord_app/modules/premium/promotions/PromotionsManager.tsx
-import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import PromotionsActionCreators from "PromotionsActionCreators.tsx";
-import PremiumBogoPromotionUtilsCommon from "../PremiumBogoPromotionUtilsCommon.tsx";
-import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
-import UserStore from "../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
 import PromotionsStore from "PromotionsStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const PremiumTypes = fn(1374).PremiumTypes;
 const EntitlementTypes = fn(1074).EntitlementTypes;
 const SubscriptionTypes = fn(1085).SubscriptionTypes;
 class PromotionsManager extends tmp2 {
@@ -45,63 +40,13 @@ class PromotionsManager extends tmp2 {
     applyArgumentsResult.actions = obj;
     map = new Map();
     onLocaleChanged = applyArgumentsResult.onLocaleChanged;
-    result = map.set(closure_4, onLocaleChanged.bind(applyArgumentsResult));
+    result = map.set(closure_2, onLocaleChanged.bind(applyArgumentsResult));
     onSubscriptionStateChanged = applyArgumentsResult.onSubscriptionStateChanged;
-    result1 = result.set(closure_6, onSubscriptionStateChanged.bind(applyArgumentsResult));
+    result1 = result.set(closure_3, onSubscriptionStateChanged.bind(applyArgumentsResult));
     onPromotionsFetchSettled = applyArgumentsResult.onPromotionsFetchSettled;
-    applyArgumentsResult.stores = result1.set(closure_7, onPromotionsFetchSettled.bind(applyArgumentsResult));
+    applyArgumentsResult.stores = result1.set(closure_4, onPromotionsFetchSettled.bind(applyArgumentsResult));
     applyArgumentsResult.lastSubscriptionStateSignature = null;
     applyArgumentsResult.hasPendingSubscriptionRefetch = false;
-    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(async () => {
-      if (c0 === 2) {
-        c0 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c0 = 2;
-          if (0 === c1) {
-            if (arg0 === 1) {
-              c0 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c0 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              currentUser = currentUser.getCurrentUser();
-              if (!obj6.isPremiumExactly(currentUser, TIER_2.TIER_2)) {
-                c1 = 1;
-                c0 = 1;
-                const obj5 = { value: PremiumBogoPromotionUtilsCommon.maybeFetchActiveBogoPromotion(), done: false };
-                return obj5;
-              }
-              obj6 = PremiumUtilsDefault;
-            }
-          } else if (arg0 === 1) {
-            c0 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          c0 = 3;
-          return { value: "HermesInternal", done: null };
-        } catch (tmp6) {
-          c0 = tmp;
-          throw tmp6;
-        }
-      }
-    });
     return applyArgumentsResult;
   }
 }
@@ -120,55 +65,7 @@ prototype["onLocaleChanged"] = function onLocaleChanged() {
   }
 };
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
-  const self = this;
-  return (async () => {
-    if (v3 === 2) {
-      v3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        v3 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            v3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            v3 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            const result = v3(dependencyMap[9]).maybeFetchActivePromotions();
-            c1 = 1;
-            v3 = 1;
-            const obj5 = { value: self.maybeFetchBogoPromotion(), done: false };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
-          v3 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          v3 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          v3 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp9) {
-        v3 = tmp;
-        throw tmp9;
-      }
-    }
-  })();
+  const result = PromotionsActionCreators.maybeFetchActivePromotions();
 };
 prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() {
   const subscriptions = SubscriptionStore.getSubscriptions(false);

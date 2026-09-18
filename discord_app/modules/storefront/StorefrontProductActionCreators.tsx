@@ -1,12 +1,12 @@
 // discord_app/modules/storefront/StorefrontProductActionCreators.tsx
-import DurationsDefault from "../../utils/Durations.tsx";
+import StorefrontCacheUtils from "StorefrontCacheUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 import StorefrontProductStore from "StorefrontProductStore.tsx";
 import StorefrontProductRecord from "records/StorefrontProductRecord.tsx";
 
-const require = fn;
-let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
+require = fn;
+let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -14,7 +14,7 @@ let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
+      let obj2 = { value, done: true };
       return obj2;
     } else {
       return { value: "HermesInternal", done: null };
@@ -57,23 +57,18 @@ let closure_10 = async function _maybeFetchProductsWithSkus(arg0) {
             return obj5;
           } else {
             closure_129_2 = closure_129_0.filter((item) => {
-              if (Boolean(item)) {
-                fetchState = fetchState.getFetchState(item);
-                if ("loading" === fetchState) {
-                  return false;
-                } else {
-                  const fetchedAt = obj.getFetchedAt(item);
-                  if (null != fetchedAt) {
-                    const _Date = Date;
-                    return Date.now() - fetchedAt > ("error" === fetchState ? closure_1_9 : closure_1_8);
-                  } else {
-                    return true;
-                  }
-                }
-                obj = fetchState;
-              } else {
-                return false;
+              let shouldRefetchEntryResult = Boolean(item);
+              if (shouldRefetchEntryResult) {
+                const obj2 = {
+                  fetchState: closure_1_5.getFetchState(item),
+                  fetchedAt: closure_1_5.getFetchedAt(item),
+                  needsPricing: true,
+                  hasPricingCoverage: closure_1_5.hasPricingCoverage(item),
+                };
+                shouldRefetchEntryResult = closure_1_0(dependencyMap[5]).shouldRefetchEntry(obj2);
+                const obj = closure_1_0(dependencyMap[5]);
               }
+              return shouldRefetchEntryResult;
             });
             if (0 !== closure_129_2.length) {
               c4 = 1;
@@ -153,8 +148,13 @@ function shouldFetchProductBySku(item10006) {
     } else {
       const fetchedAtForSku = StorefrontProductStore.getFetchedAtForSku(item10006);
       if (null != fetchedAtForSku) {
+        if ("error" === fetchStateForSku) {
+          let TWELVE_HOURS_MS = StorefrontCacheUtils.ERROR_STALE_THRESHOLD_MS;
+        } else {
+          TWELVE_HOURS_MS = StorefrontCacheUtils.TWELVE_HOURS_MS;
+        }
         const _Date = Date;
-        return Date.now() - fetchedAtForSku > ("error" === fetchStateForSku ? closure_9 : closure_8);
+        return Date.now() - fetchedAtForSku > TWELVE_HOURS_MS;
       } else {
         return true;
       }
@@ -163,7 +163,7 @@ function shouldFetchProductBySku(item10006) {
     return false;
   }
 }
-let closure_12 = async function _maybeFetchProductsBySkuIds(arg0) {
+let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -213,7 +213,7 @@ let closure_12 = async function _maybeFetchProductsBySkuIds(arg0) {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            closure_129_2 = closure_129_0.filter(closure_130_11);
+            closure_129_2 = closure_129_0.filter(closure_130_9);
             if (0 !== closure_129_2.length) {
               c4 = 1;
               const obj7 = { type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH", skuIds: closure_129_2 };
@@ -285,14 +285,12 @@ let closure_12 = async function _maybeFetchProductsBySkuIds(arg0) {
   }
 };
 const Endpoints = fn(1074).Endpoints;
-let closure_8 = 12 * DurationsDefault.Millis.HOUR;
-let closure_9 = 10 * DurationsDefault.Millis.MINUTE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 
 export const maybeFetchProductsWithSkus = function maybeFetchProductsWithSkus() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -303,7 +301,7 @@ export const maybeFetchProductsWithSkus = function maybeFetchProductsWithSkus() 
 export { shouldFetchProductBySku };
 export const maybeFetchProductsBySkuIds = function maybeFetchProductsBySkuIds() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

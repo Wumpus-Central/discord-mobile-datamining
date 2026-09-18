@@ -13,7 +13,7 @@ const Constants = fn(1074);
 ({ InstantInviteSources: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_12,
@@ -84,11 +84,11 @@ export default function InstantInviteQRCodeActionSheet(location) {
     if (null != channel2) {
       tmp13 = null;
       if (null != GuildStore.getGuild(channel2.guild_id)) {
-        const obj4 = { guild: GuildStore.getGuild(channel2.guild_id), size: tmp6(5672).GuildIconSizes.LARGE };
+        const obj4 = { guild: GuildStore.getGuild(channel2.guild_id), size: tmp6(5754).GuildIconSizes.LARGE };
         tmp13 = closure_9(GuildIconDefault, obj4);
       }
     }
-    presentFriendRequestAcceptedToast = tmp6(4337).presentFriendRequestAcceptedToast;
+    presentFriendRequestAcceptedToast = tmp6(4419).presentFriendRequestAcceptedToast;
     const items1 = [presentFriendRequestAcceptedToast];
     const effect = noop.useEffect(() => {
       function handleRelationshipAdd(relationship) {
@@ -104,7 +104,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     }, items1);
     const obj5 = { header: null, children: null };
     const obj6 = { title: stringResult };
-    obj5.header = closure_9(tmp6(7263).BottomSheetTitleHeader, obj6);
+    obj5.header = closure_9(tmp6(7345).BottomSheetTitleHeader, obj6);
     const obj7 = { style: tmp.container, children: null };
     const obj9 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
     let plainText;
@@ -127,12 +127,12 @@ export default function InstantInviteQRCodeActionSheet(location) {
     let tmp19Result2 = null != tmp12;
     if (tmp19Result2) {
       const obj13 = { variant: "text-md/normal", children: tmp12.visible };
-      tmp19Result2 = closure_9(tmp6(4636).Text, obj13);
+      tmp19Result2 = closure_9(tmp6(4718).Text, obj13);
     }
     items3[1] = tmp19Result2;
     obj7.children = items3;
     obj5.children = closure_10(View, obj7);
-    return closure_9(tmp6(7311).ActionSheet, obj5);
+    return closure_9(tmp6(7393).ActionSheet, obj5);
   }
   tmp12 = null;
   if (_location === constants.ADD_FRIENDS_MODAL) {

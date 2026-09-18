@@ -16,7 +16,7 @@ class LayoutAnimation {
     return obj5;
   }
 }
-LayoutAnimation.__closure = { withTiming: fn(4641).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+LayoutAnimation.__closure = { withTiming: fn(4723).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 LayoutAnimation.__workletHash = 16804895997501;
 LayoutAnimation.__initData = {
   code: "function LayoutAnimation_useOptionAnimationsTsx1(values){const{withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}=this.__closure;const animations={originY:withTiming(values.targetOriginY,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originY:values.currentOriginY};return{initialValues:initialValues,animations:animations};}",
@@ -35,8 +35,8 @@ class ExitingAnimation {
     return obj8;
   }
 }
-let obj = { withTiming: fn(4641).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
-ExitingAnimation.__closure = { withTiming: fn(4641).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+let obj = { withTiming: fn(4723).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+ExitingAnimation.__closure = { withTiming: fn(4723).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 ExitingAnimation.__workletHash = 8977480282966;
 ExitingAnimation.__initData = {
   code: "function ExitingAnimation_useOptionAnimationsTsx2(values){const{withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}=this.__closure;const offScreenX=Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth);const animations={opacity:withTiming(0,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}),originX:withTiming(offScreenX,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originX:values.currentOriginX,opacity:1};return{initialValues:initialValues,animations:animations};}",
@@ -53,7 +53,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export const useOptionEnteringAnimation = function useOptionEnteringAnimation() {
-  sharedValue = sharedValue(4376).useSharedValue(false);
+  sharedValue = sharedValue(4458).useSharedValue(false);
   dependencyMap = noop.useRef([]);
   let items = [sharedValue];
   _slicedToArray = noop.useCallback(() => {
@@ -63,24 +63,24 @@ export const useOptionEnteringAnimation = function useOptionEnteringAnimation() 
     const current1 = closure_1.current;
     current1.splice(0, closure_1.current.length);
   }, items);
-  let obj = sharedValue(4376);
+  let obj = sharedValue(4458);
   return {
     EnteringAnimation: _slicedToArray(
       noop.useState(() => {
         const fn = function n() {
           const obj2 = { duration: 250, easing: null };
-          const Easing = sharedValue(4376).Easing;
+          const Easing = sharedValue(4458).Easing;
           obj2.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-          const obj = sharedValue(4641);
-          const withTimingResult = sharedValue(4641).withTiming(1, obj2);
+          const obj = sharedValue(4723);
+          const withTimingResult = sharedValue(4723).withTiming(1, obj2);
           const obj4 = { animations: null, initialValues: null, callback: null };
           const obj5 = { opacity: null, transform: null };
-          const obj3 = sharedValue(4641);
-          const withTimingResult1 = sharedValue(4641).withTiming(1, { duration: 200 });
-          obj5.opacity = sharedValue(4376).withDelay(200, withTimingResult1);
+          const obj3 = sharedValue(4723);
+          const withTimingResult1 = sharedValue(4723).withTiming(1, { duration: 200 });
+          obj5.opacity = sharedValue(4458).withDelay(200, withTimingResult1);
           const obj7 = { scale: null };
-          const obj6 = sharedValue(4376);
-          obj7.scale = sharedValue(4376).withDelay(200, withTimingResult);
+          const obj6 = sharedValue(4458);
+          obj7.scale = sharedValue(4458).withDelay(200, withTimingResult);
           const items = [obj7];
           obj5.transform = items;
           obj4.animations = obj5;
@@ -89,7 +89,7 @@ export const useOptionEnteringAnimation = function useOptionEnteringAnimation() 
           obj9.transform = items1;
           obj4.initialValues = obj9;
           obj4.callback = function callback() {
-            sharedValue(4376).runOnJS(closure_1_2)();
+            sharedValue(4458).runOnJS(closure_1_2)();
           };
           return obj4;
         };

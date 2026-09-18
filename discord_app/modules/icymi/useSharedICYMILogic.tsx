@@ -10,7 +10,7 @@ import ICYMIStore from "ICYMIStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SCROLL_EVENT_THROTTLE_MS = fn(16611).SCROLL_EVENT_THROTTLE_MS;
+const SCROLL_EVENT_THROTTLE_MS = fn(16708).SCROLL_EVENT_THROTTLE_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 
@@ -156,13 +156,13 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
       const result = ICYMIAnalytics.trackItemLongImpression(
         viewableItems,
         viewableFeedItemsArray.map((id) => {
-          const obj = { id: id.id, type: notificationItem(8497).typeToString(id) };
+          const obj = { id: id.id, type: notificationItem(8580).typeToString(id) };
           return obj;
         }),
         stateFromStores,
       );
       const found = viewableItems.filter((item) => {
-        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(8506).NON_ELIGIBLE_SCROLL_ITEMS;
+        const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(8589).NON_ELIGIBLE_SCROLL_ITEMS;
         return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
       });
       const result1 = ICYMIActionCreatorsDefault.triggerItemsLongImpression(
@@ -170,7 +170,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
           item = item.item;
           const obj = {
             itemId: item.id,
-            itemType: notificationItem(8499).itemToType(item),
+            itemType: notificationItem(8582).itemToType(item),
             triggerType: "list",
             itemFeedIndex: item.index,
             itemScore: null,
@@ -195,7 +195,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
   const callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const found = viewableItems.filter((item) => {
-      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(8506).NON_ELIGIBLE_SCROLL_ITEMS;
+      const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(8589).NON_ELIGIBLE_SCROLL_ITEMS;
       return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
     });
     closure_1(unreadItems[9]).startItemsDwell(
@@ -203,7 +203,7 @@ export const useSharedICYMILogic = function useSharedICYMILogic(notificationItem
         item = item.item;
         const obj = {
           itemId: item.id,
-          itemType: notificationItem(8499).itemToType(item),
+          itemType: notificationItem(8582).itemToType(item),
           triggerType: "list",
           itemFeedIndex: item.index,
           itemScore: null,

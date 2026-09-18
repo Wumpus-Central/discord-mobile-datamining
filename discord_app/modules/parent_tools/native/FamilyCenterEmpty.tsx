@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef15041 from "../../../../_runtime/metro/15041__.js";
+import _modDef15135 from "../../../../_runtime/metro/15135__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_7 = createStyles.createStyles({
   art: { marginBottom: 10, width: 243 },
   empty: { display: "flex", alignItems: "center" },
@@ -20,7 +20,7 @@ export default function FamilyCenterEmpty(children) {
   const tmp = closure_7();
   const obj = { style: tmp.empty, children: null };
   const items = [
-    hasOwnProperty(React4, { source: _modDef15041, style: tmp.art, resizeMethod: "scale" }),
+    hasOwnProperty(React4, { source: _modDef15135, style: tmp.art, resizeMethod: "scale" }),
     hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),
   ];
   obj.children = items;

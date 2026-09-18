@@ -26,8 +26,8 @@ let obj2 = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "call",
-  source: "ACTIVITY_LAUNCH_INVALID_CHANNEL_NO_AFK",
-  incrementableActions: "activeOptionName",
+  source: "NRU",
+  incrementableActions: "BottomSheetModalInternalProvider",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

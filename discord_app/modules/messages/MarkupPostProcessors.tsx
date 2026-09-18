@@ -1,4 +1,5 @@
 // discord_app/modules/messages/MarkupPostProcessors.tsx
+import EmojiConstants from "../emojis/EmojiConstants.tsx";
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
 import EmbedUtils from "../../utils/EmbedUtils.tsx";
 import Constants from "../../Constants.tsx";
@@ -2573,7 +2574,7 @@ function checkSpoilerEmbeds(ast1, inline) {
               if (null == someResult2) {
                 let _Array3 = Array;
                 if (content.content instanceof Array) {
-                  let someResult3 = closure_7(content.content, fn);
+                  let someResult3 = closure_8(content.content, fn);
                 } else {
                   let _Array4 = Array;
                   someResult3 = content.items instanceof Array;
@@ -19642,7 +19643,7 @@ function checkSpoilerEmbeds(ast1, inline) {
                 if (null == someResult2) {
                   let _Array3 = Array;
                   if (content.content instanceof Array) {
-                    let someResult3 = closure_7(content.content, fn);
+                    let someResult3 = closure_8(content.content, fn);
                   } else {
                     let _Array4 = Array;
                     someResult3 = content.items instanceof Array;
@@ -40962,6 +40963,7 @@ function containsMatchingNode(content, fn) {
   }
 }
 ({ MessageEmbedTypes, MessageTypes: c3 } = Constants);
+const MAX_EMOJI_TO_BE_JUMBO = EmojiConstants.MAX_EMOJI_TO_BE_JUMBO;
 let items = [, ];
 ({ IMAGE: arr[0], GIFV: arr[1] } = MessageEmbedTypes);
 const set = new Set(items);
@@ -41005,8 +41007,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(8012).isExperimentEmbedURL(type.target);
-      const obj = closure_0(8012);
+      tmp = !closure_0(8095).isExperimentEmbedURL(type.target);
+      const obj = closure_0(8095);
     }
     return tmp;
   });
@@ -41037,7 +41039,7 @@ export const removeGameServerShareLinks = function removeGameServerShareLinks(ar
 };
 export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
   const item = arr.forEach((type) => {
-    let hasItem = closure_1_5.has(type.type);
+    let hasItem = closure_1_6.has(type.type);
     if (hasItem) {
       hasItem = null != type.content;
     }
@@ -41046,7 +41048,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
       let content = type.content;
       if (Array.isArray(type.content)) {
         let item = content.forEach((type) => {
-          let hasItem = closure_1_5.has(type.type);
+          let hasItem = closure_1_6.has(type.type);
           if (hasItem) {
             hasItem = null != type.content;
           }
@@ -41055,7 +41057,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
             let content = type.content;
             if (Array.isArray(type.content)) {
               let item = content.forEach((type) => {
-                let hasItem = closure_1_5.has(type.type);
+                let hasItem = closure_1_6.has(type.type);
                 if (hasItem) {
                   hasItem = null != type.content;
                 }
@@ -41064,7 +41066,7 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                   let content = type.content;
                   if (Array.isArray(type.content)) {
                     let item = content.forEach((type) => {
-                      let hasItem = closure_1_5.has(type.type);
+                      let hasItem = closure_1_6.has(type.type);
                       if (hasItem) {
                         hasItem = null != type.content;
                       }
@@ -41079,8 +41081,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                           type = type.type;
                           let _Object = Object;
                           let _HermesInternal = HermesInternal;
-                          closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                          let obj = closure_1_1(closure_1_2[5]);
+                          closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                          let obj = closure_1_1(closure_1_2[6]);
                         }
                       }
                     });
@@ -41090,8 +41092,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
                     type = type.type;
                     let _Object = Object;
                     let _HermesInternal = HermesInternal;
-                    closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                    let obj = closure_1_1(closure_1_2[5]);
+                    closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                    let obj = closure_1_1(closure_1_2[6]);
                   }
                 }
               });
@@ -41101,8 +41103,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
               type = type.type;
               let _Object = Object;
               let _HermesInternal = HermesInternal;
-              closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-              let obj = closure_1_1(closure_1_2[5]);
+              closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+              let obj = closure_1_1(closure_1_2[6]);
             }
           }
         });
@@ -41112,8 +41114,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
         type = type.type;
         let _Object = Object;
         let _HermesInternal = HermesInternal;
-        closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-        let obj = closure_1_1(closure_1_2[5]);
+        closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+        let obj = closure_1_1(closure_1_2[6]);
       }
     }
   });
@@ -41186,7 +41188,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
         }
         return tmp;
       })) {
-        _require = 0;
+        closure_129_0 = 0;
         const item = arr4.forEach((type) => {
           let tmp = "emoji" !== type.type;
           if (tmp) {
@@ -41195,11 +41197,11 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
           if (!tmp) {
             closure_0 = closure_0 + 1;
           }
-          if (closure_0 > 30) {
+          if (closure_0 > MAX_EMOJI_TO_BE_JUMBO) {
             return false;
           }
         });
-        if (_require <= 30) {
+        if (closure_129_0 <= MAX_EMOJI_TO_BE_JUMBO) {
           const item1 = arr4.forEach((item) => {
             item.jumboable = true;
           });
@@ -41238,11 +41240,11 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
             if (!tmp) {
               closure_0 = closure_0 + 1;
             }
-            if (closure_0 > 30) {
+            if (closure_0 > MAX_EMOJI_TO_BE_JUMBO) {
               return false;
             }
           });
-          if (_require <= 30) {
+          if (_require <= MAX_EMOJI_TO_BE_JUMBO) {
             const item3 = content.forEach((item) => {
               item.jumboable = true;
             });
@@ -41265,13 +41267,13 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(8012).isExperimentEmbedURL(type.target);
-        const obj = closure_0(8012);
+        tmp = !closure_0(8095).isExperimentEmbedURL(type.target);
+        const obj = closure_0(8095);
       }
       return tmp;
     });
   }
-  _require = found1.some((type) => "link" !== type.type);
+  closure_130_0 = found1.some((type) => "link" !== type.type);
   const ast1 = found1.filter((target) => {
     let parseQuestsEmbedCodeResult = null;
     if (null != target.target) {
@@ -41292,7 +41294,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
   }
   if (formatInline) {
     const item4 = ast1.forEach((type) => {
-      let hasItem = closure_1_5.has(type.type);
+      let hasItem = closure_1_6.has(type.type);
       if (hasItem) {
         hasItem = null != type.content;
       }
@@ -41301,7 +41303,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
         let content = type.content;
         if (Array.isArray(type.content)) {
           let item = content.forEach((type) => {
-            let hasItem = closure_1_5.has(type.type);
+            let hasItem = closure_1_6.has(type.type);
             if (hasItem) {
               hasItem = null != type.content;
             }
@@ -41310,7 +41312,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
               let content = type.content;
               if (Array.isArray(type.content)) {
                 let item = content.forEach((type) => {
-                  let hasItem = closure_1_5.has(type.type);
+                  let hasItem = closure_1_6.has(type.type);
                   if (hasItem) {
                     hasItem = null != type.content;
                   }
@@ -41319,7 +41321,7 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                     let content = type.content;
                     if (Array.isArray(type.content)) {
                       let item = content.forEach((type) => {
-                        let hasItem = closure_1_5.has(type.type);
+                        let hasItem = closure_1_6.has(type.type);
                         if (hasItem) {
                           hasItem = null != type.content;
                         }
@@ -41334,8 +41336,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                             type = type.type;
                             let _Object = Object;
                             let _HermesInternal = HermesInternal;
-                            closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                            let obj = closure_1_1(closure_1_2[5]);
+                            closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                            let obj = closure_1_1(closure_1_2[6]);
                           }
                         }
                       });
@@ -41345,8 +41347,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                       type = type.type;
                       let _Object = Object;
                       let _HermesInternal = HermesInternal;
-                      closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                      let obj = closure_1_1(closure_1_2[5]);
+                      closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                      let obj = closure_1_1(closure_1_2[6]);
                     }
                   }
                 });
@@ -41356,8 +41358,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
                 type = type.type;
                 let _Object = Object;
                 let _HermesInternal = HermesInternal;
-                closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-                let obj = closure_1_1(closure_1_2[5]);
+                closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+                let obj = closure_1_1(closure_1_2[6]);
               }
             }
           });
@@ -41367,8 +41369,8 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
           type = type.type;
           let _Object = Object;
           let _HermesInternal = HermesInternal;
-          closure_1_1(closure_1_2[5]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
-          let obj = closure_1_1(closure_1_2[5]);
+          closure_1_1(closure_1_2[6]).captureMessage("AST node type:" + type + " with content typeof " + typeof type.content + ". Keys " + Object.keys(type));
+          let obj = closure_1_1(closure_1_2[6]);
         }
       }
     });

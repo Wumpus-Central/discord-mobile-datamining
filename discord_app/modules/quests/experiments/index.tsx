@@ -32,36 +32,13 @@ const obj5 = {
 const obj6 = { 1: null };
 obj6[1] = { enabled: true };
 obj5.variations = obj6;
-const obj7 = {
-  CONTROL: 0,
-  [0]: "CONTROL",
-  LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY: 1,
-  [1]: "LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY",
-  FIRST_TAP_APP_STORE_OVERLAY: 2,
-  [2]: "FIRST_TAP_APP_STORE_OVERLAY",
-  EVERY_PAUSE_APP_STORE_OVERLAY: 3,
-  [3]: "EVERY_PAUSE_APP_STORE_OVERLAY",
-};
 const apexExperiment2 = ApexExperiment.createApexExperiment(obj5);
 let ApexExperiment = ApexExperiment_mod;
-const obj8 = {
-  name: "2026-08-bounties-ctr-experiment-1",
-  kind: "user",
-  defaultConfig: { enabled: false, variant: obj7.CONTROL },
-  variations: {
-    0: { enabled: false, variant: obj7.CONTROL },
-    1: { enabled: true, variant: obj7.LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY },
-    2: { enabled: true, variant: obj7.FIRST_TAP_APP_STORE_OVERLAY },
-    3: { enabled: true, variant: obj7.EVERY_PAUSE_APP_STORE_OVERLAY },
-  },
-};
-const apexExperiment3 = ApexExperiment.createApexExperiment(obj8);
-let ApexExperiment = ApexExperiment_mod;
-const obj10 = { name: "2026-07-ios-attribution", kind: "user", defaultConfig: { enabled: false }, variations: null };
-const obj11 = { 1: null };
-obj11[1] = { enabled: true };
-obj10.variations = obj11;
-const obj12 = {
+const obj7 = { name: "2026-07-ios-attribution", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj8 = { 1: null };
+obj8[1] = { enabled: true };
+obj7.variations = obj8;
+const obj9 = {
   DEFAULT: 0,
   [0]: "DEFAULT",
   AUTO_ENABLE_CAPTIONS: 1,
@@ -69,19 +46,19 @@ const obj12 = {
   AUTO_UNMUTE: 2,
   [2]: "AUTO_UNMUTE",
 };
-const apexExperiment4 = ApexExperiment.createApexExperiment(obj10);
+const apexExperiment3 = ApexExperiment.createApexExperiment(obj7);
 let ApexExperiment = ApexExperiment_mod;
-const obj13 = {
+const obj10 = {
   name: "2026-03-muted-video-quest-new-defaults",
   kind: "user",
-  defaultConfig: { enabled: false, variant: obj12.DEFAULT },
+  defaultConfig: { enabled: false, variant: obj9.DEFAULT },
   variations: {
-    0: { enabled: false, variant: obj12.DEFAULT },
-    1: { enabled: true, variant: obj12.AUTO_ENABLE_CAPTIONS },
-    2: { enabled: true, variant: obj12.AUTO_UNMUTE },
+    0: { enabled: false, variant: obj9.DEFAULT },
+    1: { enabled: true, variant: obj9.AUTO_ENABLE_CAPTIONS },
+    2: { enabled: true, variant: obj9.AUTO_UNMUTE },
   },
 };
-const apexExperiment5 = ApexExperiment.createApexExperiment(obj13);
+const apexExperiment4 = ApexExperiment.createApexExperiment(obj10);
 let ApexExperiment = ApexExperiment_mod;
 let closure_2 = ApexExperiment.createApexExperiment({
   name: "2026-04-quests-premium-orb-multiplier-marketing",
@@ -90,25 +67,25 @@ let closure_2 = ApexExperiment.createApexExperiment({
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
 let ApexExperiment = ApexExperiment_mod;
-const obj16 = {
+const obj13 = {
   name: "2026-04-composed-quest-player",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: null,
 };
-const obj17 = { 1: null };
-obj17[1] = { enabled: true };
-obj16.variations = obj17;
-const apexExperiment6 = ApexExperiment.createApexExperiment(obj16);
+const obj14 = { 1: null };
+obj14[1] = { enabled: true };
+obj13.variations = obj14;
+const apexExperiment5 = ApexExperiment.createApexExperiment(obj13);
 let ApexExperiment = ApexExperiment_mod;
-const apexExperiment7 = ApexExperiment.createApexExperiment({
+const apexExperiment6 = ApexExperiment.createApexExperiment({
   name: "2026-03-mobile-quest-home-red-dot-notification",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
 let ApexExperiment = ApexExperiment_mod;
-const apexExperiment8 = ApexExperiment.createApexExperiment({
+const apexExperiment7 = ApexExperiment.createApexExperiment({
   name: "2026-05-quest-home-tile-redesign",
   kind: "user",
   defaultConfig: { useNewLayoutWithSearch: false, useNewTile: false, useNewFeaturedTiles: false, ctaOnHover: false },
@@ -121,7 +98,7 @@ const apexExperiment8 = ApexExperiment.createApexExperiment({
   },
 });
 let ApexExperiment = ApexExperiment_mod;
-const obj21 = {
+const obj18 = {
   CONTROL: 0,
   [0]: "CONTROL",
   NEW_LAYOUT_WITH_SEARCH: 1,
@@ -133,36 +110,34 @@ const obj21 = {
   REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER: 4,
   [4]: "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER",
 };
-const apexExperiment9 = ApexExperiment.createApexExperiment({
+const apexExperiment8 = ApexExperiment.createApexExperiment({
   name: "2026-05-bounty-stale-refresh-quest-home",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 });
 let ApexExperiment = ApexExperiment_mod;
-const obj22 = {
+const obj19 = {
   name: "2026-06-quest-home-layout-visual-tweaks",
   kind: "user",
-  defaultConfig: { enabled: false, variant: obj21.CONTROL },
+  defaultConfig: { enabled: false, variant: obj18.CONTROL },
   variations: {
-    0: { enabled: false, variant: obj21.CONTROL },
-    1: { enabled: true, variant: obj21.NEW_LAYOUT_WITH_SEARCH },
-    2: { enabled: true, variant: obj21.LARGE_MASK_MARGIN },
-    3: { enabled: true, variant: obj21.REMOVE_QUEST_TITLE_SUFFIX },
-    4: { enabled: true, variant: obj21.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER },
+    0: { enabled: false, variant: obj18.CONTROL },
+    1: { enabled: true, variant: obj18.NEW_LAYOUT_WITH_SEARCH },
+    2: { enabled: true, variant: obj18.LARGE_MASK_MARGIN },
+    3: { enabled: true, variant: obj18.REMOVE_QUEST_TITLE_SUFFIX },
+    4: { enabled: true, variant: obj18.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER },
   },
 };
-const apexExperiment10 = ApexExperiment.createApexExperiment(obj22);
+const apexExperiment9 = ApexExperiment.createApexExperiment(obj19);
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
 export const AppStoreBottomSheetOverlayFeatureGate = apexExperiment1;
 export const CustomAppStoreOverlayExperiment = apexExperiment2;
-export const BountiesCtrExperiment1Variant = obj7;
-export const CustomAppStoreSqueezeBackExperiment = apexExperiment3;
-export const IosAttributionFeatureGate = apexExperiment4;
-export const MutedVideoQuestNewDefaultsVariant = obj12;
-export const MutedVideoQuestNewDefaultsExperiment = apexExperiment5;
+export const IosAttributionFeatureGate = apexExperiment3;
+export const MutedVideoQuestNewDefaultsVariant = obj9;
+export const MutedVideoQuestNewDefaultsExperiment = apexExperiment4;
 export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMarketing(location) {
   const questOrbMultiplierEligibility = QuestOrbMultiplierHooks.useQuestOrbMultiplierEligibility();
   const obj = { location };
@@ -178,9 +153,9 @@ export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMa
     multiplier: QuestOrbsMultiplier.QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
   };
 };
-export const ComposedQuestPlayerExperiment = apexExperiment6;
-export const MobileQuestHomeRedDotNotificationExperiment = apexExperiment7;
-export const QuestHomeTileRedesignExperiment = apexExperiment8;
-export const BountyStaleRefreshQuestHomeExperiment = apexExperiment9;
-export const QuestHomeLayoutVisualTweakVariant = obj21;
-export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment10;
+export const ComposedQuestPlayerExperiment = apexExperiment5;
+export const MobileQuestHomeRedDotNotificationExperiment = apexExperiment6;
+export const QuestHomeTileRedesignExperiment = apexExperiment7;
+export const BountyStaleRefreshQuestHomeExperiment = apexExperiment8;
+export const QuestHomeLayoutVisualTweakVariant = obj18;
+export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment9;

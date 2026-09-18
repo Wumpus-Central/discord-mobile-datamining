@@ -3,7 +3,7 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
-import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import VibegrationsPlatformUtilsDefault from "../lib/VibegrationsPlatformUtils.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -389,7 +389,7 @@ function recordThinkingTransition(projectId) {
                     if ("terminal_error" !== tmp47.kind) {
                       if ("preview_ready" === tmp47.kind) {
                         let intl = util.intl;
-                        content = intl.string(_modDef3593["78YNh7"]);
+                        content = intl.string(_modDef3676["78YNh7"]);
                       } else {
                         diff3 = diff3 - 1;
                         content = null;
@@ -1090,7 +1090,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
                   const items = [];
                   const obj2 = { type: "step", kind: "terminal_error", message: null };
                   const intl = util.intl;
-                  obj2.message = intl.string(_modDef3593["wjWm+/"]);
+                  obj2.message = intl.string(_modDef3676["wjWm+/"]);
                   items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                   obj.steps = items;
                   tmp2 = obj;

@@ -2,10 +2,10 @@
 import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06766_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06848_LegacyBaseButton.js";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef10148 from "../../../../../_runtime/metro/10148__.js";
-import _modDef10149 from "../../../../../_runtime/metro/10149__.js";
+import _modDef10242 from "../../../../../_runtime/metro/10242__.js";
+import _modDef10243 from "../../../../../_runtime/metro/10243__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,9 +17,9 @@ function KrispLogo() {
   const tmp = closure_13();
   const tmp4 = useThemeDefault();
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef10148;
+    let tmp2Result = _modDef10242;
   } else {
-    tmp2Result = _modDef10149;
+    tmp2Result = _modDef10243;
   }
   const obj2 = { style: tmp.krisp, children: null };
   const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
@@ -56,7 +56,7 @@ function SystemProcessingSubLabel() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const MobileUserSettings = fn(8111).MobileUserSettings;
+const MobileUserSettings = fn(8194).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -64,7 +64,7 @@ let closure_12 =
   "" +
   HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) +
   "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_13 = createStyles.createStyles({
   krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" },
   logo: { marginRight: 8, height: 30, width: 67 },

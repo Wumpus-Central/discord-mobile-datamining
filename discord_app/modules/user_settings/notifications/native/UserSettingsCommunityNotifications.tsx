@@ -9,7 +9,7 @@ import GuildIncidentsStore from "../../../guild_antiraid/GuildIncidentsStore.tsx
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_6 = createStyles.createStyles({ container: { paddingHorizontal: 16 } });
 const size = fn(2);
 let result = size.fileFinishedImporting(
@@ -63,8 +63,8 @@ export default function UserSettingsCommunityNotifications() {
         return hasOwnProperty(TableRowGroup.TableRowGroup, obj, item);
       }),
     };
-    obj3.children = closure_4(tmp2(5060).Stack, obj4);
-    tmp5 = closure_4(tmp2(8748).Form, obj3);
+    obj3.children = closure_4(tmp2(5142).Stack, obj4);
+    tmp5 = closure_4(tmp2(8831).Form, obj3);
   }
   return tmp5;
 }

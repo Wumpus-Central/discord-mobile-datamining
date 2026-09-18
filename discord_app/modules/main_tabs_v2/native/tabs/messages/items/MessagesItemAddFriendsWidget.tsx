@@ -6,8 +6,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef13969 from "../../../../../../../_runtime/metro/13969__.js";
-import _modDef16259 from "../../../../../../../_runtime/metro/16259__.js";
+import _modDef14063 from "../../../../../../../_runtime/metro/14063__.js";
+import _modDef16356 from "../../../../../../../_runtime/metro/16356__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -228,8 +228,8 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13408).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4640);
+const sum = fn(13499).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(4722);
 let obj = {
   container: {
     height: sum,
@@ -306,7 +306,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   const obj5 = {
     style: tmp.actionIcon,
     variant: "filled",
-    source: _modDef13969,
+    source: _modDef14063,
     onPress: handleShare,
     accessibilityLabel: null,
   };
@@ -314,7 +314,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [React5(IconActionButtonDefault, obj5)];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef16259;
+  obj6.source = _modDef16356;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

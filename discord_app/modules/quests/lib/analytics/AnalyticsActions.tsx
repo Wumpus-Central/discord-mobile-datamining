@@ -419,8 +419,12 @@ let closure_17 = async function _trackAdContentClicked() {
   return "PX_16";
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const items = [,];
-({ QUEST_CONTENT_VIEWED: arr[0], QUEST_CONTENT_CLICKED: arr[1] } = AnalyticEvents);
+const items = [, ,];
+({
+  QUEST_CONTENT_VIEWED: arr[0],
+  QUEST_CONTENT_ENGAGED_VIEWED: arr[1],
+  QUEST_CONTENT_CLICKED: arr[2],
+} = AnalyticEvents);
 let set = new Set(items);
 const AppStoreOverlaySurfaces = { MAIN_CTA: "main_cta", RATING_STAT: "rating_stat" };
 const size = fn(2);

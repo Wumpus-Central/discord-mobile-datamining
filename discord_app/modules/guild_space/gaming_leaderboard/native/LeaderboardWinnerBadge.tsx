@@ -5,7 +5,7 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_6 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/native/LeaderboardWinnerBadge.tsx");
@@ -33,21 +33,21 @@ export default function LeaderboardWinnerBadge(guildId) {
     const obj2 = {
       style: tmp.container,
       accessible: true,
-      accessibilityLabel: tmp2(11063).getLeaderboardWinnerBadgeText(stateFromStores),
+      accessibilityLabel: tmp2(11156).getLeaderboardWinnerBadgeText(stateFromStores),
       children: null,
     };
     const obj3 = { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING };
-    obj2.children = jsx(tmp2(8867).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
+    obj2.children = jsx(tmp2(8951).TrophyIcon, { size: "xs", color: userId(576).colors.TEXT_FEEDBACK_WARNING });
     tmp5 = (
       <View
         style={tmp.container}
         accessible
-        accessibilityLabel={tmp2(11063).getLeaderboardWinnerBadgeText(stateFromStores)}
+        accessibilityLabel={tmp2(11156).getLeaderboardWinnerBadgeText(stateFromStores)}
       >
         {null}
       </View>
     );
-    const tmp2Result = tmp2(11063);
+    const tmp2Result = tmp2(11156);
   }
   return tmp5;
 }

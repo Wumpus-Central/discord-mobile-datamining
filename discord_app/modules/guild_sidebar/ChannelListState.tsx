@@ -239,7 +239,7 @@ const ChannelRecord = fn(1962);
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7648).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7730).ChannelListGuildActionRow;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_30, GuildFeatures: items } = Constants);
 const ChannelFlags = fn(1965).ChannelFlags;
@@ -353,51 +353,58 @@ class ChannelListImpl {
         continue;
       } else {
         type = tmp41.type;
-        if (type !== arr13.GUILD_DIRECTORY) {
-          GUILD_CATEGORY = shouldShowInRecents;
-          if (shouldShowInRecents(merged, tmp41, initializationData)) {
-            arr1 = items1.push(tmp41);
-          } else {
-            GUILD_CATEGORY = arr13.GUILD_VOICE;
-            tmp13 = tmp41.type !== GUILD_CATEGORY;
-            if (!tmp13) {
-            } else {
-              tmp13 = tmp41.type !== arr13.GUILD_STAGE_VOICE;
-            }
-            if (tmp13) {
-            } else {
-              tmp14 = null != tmp41.parent_id;
-              if (!tmp14) {
-              } else {
-                tmp14 = null != obj1[tmp41.parent_id];
-              }
-              if (!tmp14) {
-              } else {
-                arr11 = items2.push(obj1[tmp41.parent_id]);
-              }
-              arr12 = items2.push(tmp41);
-            }
-          }
-          if (null == tmp41.parent_id) {
-          } else if (tmp41.parent_id in obj9) {
-            GUILD_CATEGORY = obj9[tmp41.parent_id];
-            arr13 = GUILD_CATEGORY.push(tmp41);
-            continue;
-          }
-          arr13 = items.push(tmp41);
+        GUILD_CATEGORY = arr13.GUILD_SPACE;
+        if (type === GUILD_CATEGORY) {
           continue;
         } else {
-          GUILD_CATEGORY = null == guild;
-          if (GUILD_CATEGORY) {
-          } else {
-            features = guild.features;
-            tmp12 = GuildFeatures;
-            GUILD_CATEGORY = features.has(GuildFeatures.HUB);
-          }
-          if (GUILD_CATEGORY) {
+          type = tmp41.type;
+          if (type !== arr13.GUILD_DIRECTORY) {
+            GUILD_CATEGORY = shouldShowInRecents;
+            if (shouldShowInRecents(merged, tmp41, initializationData)) {
+              arr1 = items1.push(tmp41);
+            } else {
+              GUILD_CATEGORY = arr13.GUILD_VOICE;
+              tmp13 = tmp41.type !== GUILD_CATEGORY;
+              if (!tmp13) {
+              } else {
+                tmp13 = tmp41.type !== arr13.GUILD_STAGE_VOICE;
+              }
+              if (tmp13) {
+              } else {
+                tmp14 = null != tmp41.parent_id;
+                if (!tmp14) {
+                } else {
+                  tmp14 = null != obj1[tmp41.parent_id];
+                }
+                if (!tmp14) {
+                } else {
+                  arr11 = items2.push(obj1[tmp41.parent_id]);
+                }
+                arr12 = items2.push(tmp41);
+              }
+            }
+            if (null == tmp41.parent_id) {
+            } else if (tmp41.parent_id in obj9) {
+              GUILD_CATEGORY = obj9[tmp41.parent_id];
+              arr13 = GUILD_CATEGORY.push(tmp41);
+              continue;
+            }
+            arr13 = items.push(tmp41);
             continue;
           } else {
-            GUILD_CATEGORY = items3.push(tmp41);
+            GUILD_CATEGORY = null == guild;
+            if (GUILD_CATEGORY) {
+            } else {
+              features = guild.features;
+              tmp12 = GuildFeatures;
+              GUILD_CATEGORY = features.has(GuildFeatures.HUB);
+            }
+            if (GUILD_CATEGORY) {
+              continue;
+            } else {
+              GUILD_CATEGORY = items3.push(tmp41);
+              continue;
+            }
             continue;
           }
           continue;

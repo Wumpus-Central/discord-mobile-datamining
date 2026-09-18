@@ -19,7 +19,7 @@ function BountiesModalContentInner(bounty) {
   const sourceQuestContent = bounty.sourceQuestContent;
   let isEndCardVisible;
   let videoDuration;
-  const tmp = closure_15();
+  const tmp = closure_16();
   dependencyMap = tmp;
   let size = sourceQuestContent(1478)();
   const width = size.width;
@@ -34,11 +34,11 @@ function BountiesModalContentInner(bounty) {
     const rect = closure_2;
     const diff = bounty - closure_2.left - closure_2.right;
     const diff1 = sourceQuestContent - closure_2.top - closure_2.bottom;
-    let result = diff / c13;
+    let result = diff / c14;
     let flag = true;
     let result1 = diff;
     if (result > diff1) {
-      result1 = diff1 * c13;
+      result1 = diff1 * c14;
       flag = false;
       result = diff1;
     }
@@ -94,26 +94,87 @@ function BountiesModalContentInner(bounty) {
   const items5 = [bounty.id, sourceQuestContent];
   const callback = isEndCardVisible.useCallback(
     asyncGeneratorStep(async () => {
-      closure_1 = tmp3;
-      await closure_0(tmp20[15]).claimBountyReward(bounty.id, sourceQuestContent);
-      if (1 === tmp7) {
-        c3 = 0;
-        closure_128_0 = tmp20;
-        const result = bounty(tmp20[16]).openBountyRewardClaimErrorToast(closure_128_0);
+      if (c5 === 2) {
         c5 = 3;
-        bounty(tmp20[16]);
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 !== 2) {
-        c3 = 0;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              closure_1 = tmp3;
+              bounty = tmp7;
+              closure_128_0 = false;
+              c3 = 1;
+              c4 = 2;
+              c5 = 1;
+              const obj7 = { value: bounty(tmp32[16]).claimBountyReward(bounty.id, sourceQuestContent), done: false };
+              return obj7;
+            }
+          } else {
+            if (1 === tmp7) {
+              c3 = 0;
+              closure_128_1 = tmp32;
+              const result = bounty(tmp32[17]).openBountyRewardClaimErrorToast(closure_128_1);
+              const obj2 = bounty(tmp32[17]);
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              c5 = 3;
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              closure_128_0 = true;
+              c3 = 0;
+            }
+            let hapticFeedbackOnRewardEarnedEnabled = closure_128_0;
+            if (closure_128_0) {
+              const BountiesMobileQuestBarExperiment = bounty(tmp32[18]).BountiesMobileQuestBarExperiment;
+              const obj8 = { location: constants.VIDEO_MODAL_MOBILE };
+              hapticFeedbackOnRewardEarnedEnabled =
+                BountiesMobileQuestBarExperiment.getConfig(obj8).hapticFeedbackOnRewardEarnedEnabled;
+            }
+            if (hapticFeedbackOnRewardEarnedEnabled) {
+              const result1 = bounty(tmp32[19]).triggerHapticFeedback(
+                bounty(tmp32[19]).HapticFeedbackTypes.IMPACT_MEDIUM,
+              );
+              const obj4 = bounty(tmp32[19]);
+            }
+            c5 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } catch (tmp32) {
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp32;
+          } else {
+            c4 = tmp;
+          }
+        }
       }
-      return value;
     }),
     items5,
   );
-  let obj2 = bounty(9005);
-  const bountiesModalVideoAnalytics = bounty(15144).useBountiesModalVideoAnalytics({
+  let obj2 = bounty(9089);
+  const bountiesModalVideoAnalytics = bounty(15238).useBountiesModalVideoAnalytics({
     bountyId: bounty.id,
     sourceQuestContent,
     rewardDurationMs: result,
@@ -133,7 +194,7 @@ function BountiesModalContentInner(bounty) {
     handleReadyForDisplayAnalytics,
     handleBufferAnalytics,
   } = bountiesModalVideoAnalytics);
-  let obj3 = bounty(15144);
+  let obj3 = bounty(15238);
   let obj4 = {
     bountyId: bounty.id,
     sourceQuestContent,
@@ -142,8 +203,8 @@ function BountiesModalContentInner(bounty) {
     verticalScrollingPosition: null,
     isActive: true,
   };
-  const bountiesModalTiming = bounty(15141).useBountiesModalTiming({
-    endMode: bounty(15141).BountyVideoEndMode.END_CARD,
+  const bountiesModalTiming = bounty(15235).useBountiesModalTiming({
+    endMode: bounty(15235).BountyVideoEndMode.END_CARD,
     rewardDurationMs: result,
     isCompleted: stateFromStores,
     onRewardEarned: callback,
@@ -200,7 +261,7 @@ function BountiesModalContentInner(bounty) {
     BountiesModalActionCreatorsDefault.hideModal();
   }, items6);
   let obj6 = { children: null };
-  const obj7 = { style: memo, children: null };
+  let obj7 = { style: memo, children: null };
   const callback2 = isEndCardVisible.useCallback(() => {
     const obj2 = {
       adContentId: bounty.id,
@@ -257,24 +318,24 @@ function BountiesModalContentInner(bounty) {
     width: size2.width,
     height: size2.height,
     renderEndCard() {
-      return closure_2_10(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
+      return closure_2_11(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
         adContentId: bounty.id,
         adCreativeType: AdCreativeType.AdCreativeType.BOUNTY,
         questContent: QuestContent.QuestContent.VIDEO_MODAL_END_CARD,
         sourceQuestContent,
         overrideVisibility: isEndCardVisible,
         children() {
-          return closure_2_10(sourceQuestContent(closure_2[26]), { bounty, visible, sourceQuestContent });
+          return closure_2_11(sourceQuestContent(closure_2[29]), { bounty, visible, sourceQuestContent });
         },
       });
     },
   };
-  obj7.children = closure_10(bounty(15147).BountyVideo, size1);
-  const items8 = [closure_10(maxVideoProgressSeconds, obj7), ,];
-  let obj5 = bounty(15141);
-  items8[1] = closure_10(maxVideoProgressSeconds, {
+  obj7.children = closure_11(bounty(15241).BountyVideo, size1);
+  const items8 = [closure_11(maxVideoProgressSeconds, obj7), ,];
+  let obj5 = bounty(15235);
+  items8[1] = closure_11(maxVideoProgressSeconds, {
     style: memo1,
-    children: closure_10(sourceQuestContent(15175), { onPress: callback1 }),
+    children: closure_11(sourceQuestContent(15269), { onPress: callback1 }),
   });
   let rect = {
     left: size2.isFullWidth,
@@ -282,26 +343,27 @@ function BountiesModalContentInner(bounty) {
     bottom: true,
     style: memo2,
     pointerEvents: "box-none",
-    children: closure_10(sourceQuestContent(15168), {
+    children: closure_11(sourceQuestContent(15262), {
       bounty,
       visible: isEndCardVisible,
       sourceQuestContent,
       onClose: callback2,
     }),
   };
-  items8[2] = closure_10(bounty(7237).SafeAreaPaddingView, rect);
+  items8[2] = closure_11(bounty(7319).SafeAreaPaddingView, rect);
   obj6.children = items8;
-  return closure_12(closure_11, obj6);
+  return closure_13(closure_12, obj6);
 }
 const View = fn(17).View;
+const QuestsExperimentLocations = fn(5614).QuestsExperimentLocations;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-let c13 = 0.5625;
+({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
+let c14 = 0.5625;
 const initialProgress = { timestampSec: 0, maxTimestampSec: 0, duration: 0 };
-const createStyles = fn(4640);
-let closure_15 = createStyles.createStyles(() => {
+const createStyles = fn(4722);
+let closure_16 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },
     closeButton: { position: "absolute" },
@@ -357,16 +419,16 @@ export default function BountiesModalContent(bountyId) {
     let obj = { theme: ThemeTypes.DARK, children: null };
     let obj2 = {
       adContentId: bounty.id,
-      adCreativeType: bountyId(bounty[19]).AdCreativeType.BOUNTY,
-      questContent: bountyId(bounty[21]).QuestContent.VIDEO_MODAL_MOBILE,
+      adCreativeType: bountyId(bounty[22]).AdCreativeType.BOUNTY,
+      questContent: bountyId(bounty[24]).QuestContent.VIDEO_MODAL_MOBILE,
       sourceQuestContent,
       overrideVisibility: true,
       children() {
-        return closure_2_10(BountiesModalContentInner, { bounty, sourceQuestContent });
+        return closure_2_11(BountiesModalContentInner, { bounty, sourceQuestContent });
       },
     };
-    obj.children = closure_10(bountyId(bounty[25]).BillableAdPlacementImpressionTrackerNative, obj2);
-    tmp2 = closure_10(bountyId(bounty[31]).ThemeContextProvider, obj);
+    obj.children = closure_11(bountyId(bounty[28]).BillableAdPlacementImpressionTrackerNative, obj2);
+    tmp2 = closure_11(bountyId(bounty[34]).ThemeContextProvider, obj);
   }
   return tmp2;
 }

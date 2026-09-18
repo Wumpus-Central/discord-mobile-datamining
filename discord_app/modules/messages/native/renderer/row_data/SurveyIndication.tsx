@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/row_data/SurveyIndication.tsx
 import util from "../../../../../intl/index.native.tsx";
 import PushNotificationConstants from "../../../../push_notifications/PushNotificationConstants.tsx";
-import _modDef13341 from "../../../../../../_runtime/metro/13341__.js";
-import _modDef13342 from "../../../../../../_runtime/metro/13342__.js";
+import _modDef13432 from "../../../../../../_runtime/metro/13432__.js";
+import _modDef13433 from "../../../../../../_runtime/metro/13433__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
@@ -24,11 +24,11 @@ export const createSurveyIndication = function createSurveyIndication(message, f
   }
   const obj2 = { content: intl.formatToParts(GwWhce, { handleMessage: obj }), feedbackIconUrl: null };
   obj.notificationType = TOP_MESSAGE_PUSH;
-  const tmp2Result = tmp2(8082);
+  const tmp2Result = tmp2(8165);
   if (tmp2Result2.isThemeDark(forcedTheme)) {
-    let tmp7Result = _modDef13341;
+    let tmp7Result = _modDef13432;
   } else {
-    tmp7Result = _modDef13342;
+    tmp7Result = _modDef13433;
   }
   obj2.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
   return obj2;

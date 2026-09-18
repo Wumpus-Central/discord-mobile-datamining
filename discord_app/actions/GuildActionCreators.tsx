@@ -825,7 +825,7 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(4283).NONE;
+              obj5.permissions = primary_color(4366).NONE;
               c6 = 1;
               const HTTP = color(1271).HTTP;
               const request = {
@@ -842,7 +842,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4320)(closure_131_2);
+            const tmp30 = new obj6(4403)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -862,7 +862,7 @@ export default {
               obj6(573).dispatch(obj10);
               const obj = obj6(573);
             }
-            const result = obj6(7437).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(7519).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -906,7 +906,7 @@ export default {
       request.rejectWithError = tmp5(1271).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(7437).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7519).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -942,7 +942,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7437).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7519).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -960,7 +960,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7437).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7519).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },

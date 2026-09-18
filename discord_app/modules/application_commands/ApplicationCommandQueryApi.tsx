@@ -52,7 +52,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9444);
+let ApplicationCommandIndexStore = fn(9528);
 ({
   useContextIndexState: metroRequire,
   useDiscoveryState: closure_7,
@@ -60,17 +60,17 @@ let ApplicationCommandIndexStore = fn(9444);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(5086).BuiltInSectionId;
+const BuiltInSectionId = fn(5168).BuiltInSectionId;
 const NOOP = fn(1074).NOOP;
 let items = [fn(1895).ApplicationCommandType.CHAT];
-let section = { id: "placeholder-section", type: fn(7637).ApplicationCommandSectionType.APPLICATION, name: "" };
+let section = { id: "placeholder-section", type: fn(7719).ApplicationCommandSectionType.APPLICATION, name: "" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "Array", command: "call", section: "default" };
+    return { application: "isArray", command: "accessible", section: "ty" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -121,7 +121,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "Array", command: "call", section: "default" };
+    return { application: "isArray", command: "accessible", section: "ty" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -462,7 +462,7 @@ export const useCommand = function useCommand(arg0, commandId) {
         }
       }
     }
-    return { command: "Array", application: "PX_16" };
+    return { command: "PX_16", application: "accessible" };
   }, items);
 };
 export const useCommandsForApplication = function useCommandsForApplication(arg0, arg1, arg2) {

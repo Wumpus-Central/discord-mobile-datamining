@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { list: { paddingHorizontal: nativeDefault.space.PX_12 }, searchBar: null, sectionHeader: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.searchBar = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -32,20 +32,20 @@ let closure_10 = noop.memo((item) => {
   const obj = {
     start,
     end,
-    value: item(10333).getFeatureId(item),
+    value: item(10427).getFeatureId(item),
     label: item.name,
     legacyCompat_selected: null,
     legacyCompat_onPress: null,
   };
-  const obj2 = item(10333);
-  const featureId = item(10333).getFeatureId(item);
-  const obj3 = item(10333);
-  obj.legacyCompat_selected = featureId === item(10333).getFeatureId(feature);
+  const obj2 = item(10427);
+  const featureId = item(10427).getFeatureId(item);
+  const obj3 = item(10427);
+  obj.legacyCompat_selected = featureId === item(10427).getFeatureId(feature);
   obj.legacyCompat_onPress = function legacyCompat_onPress() {
     setFeature(item);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  return closure_6(item(5776).TableRadioRow, obj);
+  return closure_6(item(5858).TableRadioRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

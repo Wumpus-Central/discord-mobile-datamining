@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _mod5719 from "../../../../../_runtime/metro/05719__.js";
+import _mod5801 from "../../../../../_runtime/metro/05801__.js";
 import PressableNavigatorBackIcon from "navigator/PressableNavigatorBackIcon.tsx";
 import PressableNavigatorModalIconDefault from "navigator/PressableNavigatorModalIcon.tsx";
 import ChannelActionsDefault from "../channel/ChannelActions.tsx";
@@ -141,10 +141,10 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(7985).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(8068).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   headerRightContainer: { marginRight: 16 },
   headerWrapper: {
@@ -176,7 +176,7 @@ obj.actionButtonIcon = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFA
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 let obj5 = {};
-let merged = Object.assign(fn(4636).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(4718).TextStyleSheet["text-md/semibold"]);
 obj5.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj5;
 let obj4 = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };

@@ -9,7 +9,7 @@ import AppLauncherOnboardingPersistedStore from "../stores/AppLauncherOnboarding
 import AppLauncherOnboardingStore from "../stores/AppLauncherOnboardingStore.tsx";
 
 const require = fn;
-const BuiltInSectionId = fn(5086).BuiltInSectionId;
+const BuiltInSectionId = fn(5168).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let c10 = result;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
@@ -67,7 +67,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     items4.push(tmp2(1944).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
   const tmp2Result10 = channelId(504);
-  const tmp2Result11 = channelId(7502);
+  const tmp2Result11 = channelId(7584);
   const items5 = [AppLauncherOnboardingStore];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({
     recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(),
@@ -105,16 +105,16 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
   const tmp2Result13 = channelId(504);
-  result = channelId(4460).useIsDismissibleContentDismissed_UNSAFE(
+  result = channelId(4542).useIsDismissibleContentDismissed_UNSAFE(
     tmp2(1944).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
   );
-  const tmp2Result14 = channelId(4460);
-  let result1 = channelId(4460).useIsDismissibleContentDismissed_UNSAFE(
+  const tmp2Result14 = channelId(4542);
+  let result1 = channelId(4542).useIsDismissibleContentDismissed_UNSAFE(
     tmp2(1944).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
   );
-  const tmp2Result15 = channelId(4460);
+  const tmp2Result15 = channelId(4542);
   let tmp30 = null != stateFromStores4;
-  const result2 = channelId(4460).useIsDismissibleContentDismissed_UNSAFE(
+  const result2 = channelId(4542).useIsDismissibleContentDismissed_UNSAFE(
     tmp2(1944).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
   );
   if (tmp30) {

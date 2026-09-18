@@ -86,7 +86,7 @@ let obj2 = {
   icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
 };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;

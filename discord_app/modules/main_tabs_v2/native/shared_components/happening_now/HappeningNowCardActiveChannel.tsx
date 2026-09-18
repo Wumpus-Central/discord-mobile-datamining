@@ -12,13 +12,13 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const MAX_STORED_MESSAGES = fn(13817).MAX_STORED_MESSAGES;
-let closure_10 = fn(15411).HappeningNowCardTrackingType;
+const MAX_STORED_MESSAGES = fn(13910).MAX_STORED_MESSAGES;
+let closure_10 = fn(15505).HappeningNowCardTrackingType;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Routes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_15 = createStyles.createStyles({
   content: { flexShrink: 1, marginLeft: 4, gap: 2 },
   avatarsWrapper: { marginBottom: 2 },

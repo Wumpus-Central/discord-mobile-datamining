@@ -10,10 +10,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
-const SafetyHubLinks = fn(8569).SafetyHubLinks;
+const SafetyHubLinks = fn(8652).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 },
   container: { paddingHorizontal: nativeDefault.space.PX_16, flex: 1 },
@@ -88,10 +88,10 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(8562).trackAgeVerificationModalClicked(
+              const result = v3(8645).trackAgeVerificationModalClicked(
                 c0,
-                v3(8562).AgeVerificationModalVersion.RETRY,
-                v3(8562).AgeVerificationModalCta.GET_STARTED,
+                v3(8645).AgeVerificationModalVersion.RETRY,
+                v3(8645).AgeVerificationModalCta.GET_STARTED,
               );
               v1 = 1;
               c0 = 1;

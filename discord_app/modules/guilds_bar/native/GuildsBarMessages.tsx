@@ -44,10 +44,10 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "explicit_media_report_false_positive_success",
+    label: "GUILD_SETTINGS_ROLES_UPDATE_COLOR",
     externalChildren: null,
     expandedChildren: null,
-    children: "text-brand",
+    children: "cover",
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -64,9 +64,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "explicit_media_report_false_positive_success",
+    label: "GUILD_SETTINGS_ROLES_UPDATE_COLOR",
     externalChildren: null,
     expandedChildren: null,
-    children: "text-brand",
+    children: "cover",
   });
 });

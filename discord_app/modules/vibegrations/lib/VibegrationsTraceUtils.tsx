@@ -190,15 +190,15 @@ export const findTraceEntry = function findTraceEntry(stateFromStoresArray, entr
   }
   return tmp;
 };
-export const traceExportPayload = function traceExportPayload(project_id, entries, exported_at) {
+export const traceExportPayload = function traceExportPayload(projectId, stateFromStoresArray, date) {
   return JSON.stringify(
     {
       kind: "vibegrations.trace",
       version: 1,
-      project_id,
-      exported_at,
+      project_id: projectId,
+      exported_at: date,
       note: 'Redacted developer trace. Tool arguments, results and prompts are reported as sizes and allowlisted technical values only; token counts marked "estimated" are a chars/4 heuristic measured before sending.',
-      entries,
+      entries: stateFromStoresArray,
     },
     null,
     2,

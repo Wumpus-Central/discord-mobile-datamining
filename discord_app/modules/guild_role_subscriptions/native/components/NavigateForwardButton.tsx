@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef15337 from "../../../../../_runtime/metro/15337__.js";
+import _modDef15431 from "../../../../../_runtime/metro/15431__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj2 = {
   container: {
     alignItems: "center",
@@ -36,7 +36,7 @@ export default function NavigateForwardButton(arg0) {
       color: "interactive-text-active",
       children: text,
     }),
-    React3(native.Icon, { source: _modDef15337 }),
+    React3(native.Icon, { source: _modDef15431 }),
   ];
   obj.children = items;
   return React4(Pressables.PressableHighlight, obj);

@@ -1,8 +1,9 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFontPickerSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2787 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2870 from "../intl/DisplayNameStyles.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
+import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -12,10 +13,8 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
-  header: { paddingTop: 4 },
-  headerTrailing: { justifyContent: "center", alignItems: "center" },
   container: { flex: 1 },
   contentContainer: { padding: nativeDefault.space.PX_8, alignItems: "center" },
   gridContainer: { flexWrap: "wrap", maxWidth: 350 },
@@ -78,14 +77,14 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   closure_5 = undefined;
   const tmp = closure_10();
   importDefault = tmp;
-  let obj = onSelectFont(8318);
-  const visibleFontOrder = onSelectFont(15454).useVisibleFontOrder();
-  let obj2 = onSelectFont(15454);
-  const displayNameStylesNewFonts = onSelectFont(15456).useDisplayNameStylesNewFonts(visibleFontOrder);
+  let obj = onSelectFont(8400);
+  const visibleFontOrder = onSelectFont(15548).useVisibleFontOrder();
+  let obj2 = onSelectFont(15548);
+  const displayNameStylesNewFonts = onSelectFont(15550).useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   [first, closure_5] = first.useState(selectedFontId);
-  let tmp14Result = first !== onSelectFont(1392).DisplayNameFont.DEFAULT;
-  let obj3 = onSelectFont(15456);
+  let tmp15Result = first !== onSelectFont(1392).DisplayNameFont.DEFAULT;
+  let obj3 = onSelectFont(15550);
   closure_6 = tmp9;
   let obj4 = onSelectFont(1389);
   constants = first.useCallback((arg0) => {
@@ -100,24 +99,20 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
   }, items);
   const obj5 = { ref: obj.useBottomSheetRef().bottomSheetRef, header: null, children: null };
-  const obj6 = { style: tmp.header, children: null };
-  const obj7 = { title: null, trailing: null };
-  let intl = onSelectFont(1115).intl;
-  obj7.title = intl.string(_modDef2787["0JCuGm"]);
-  const obj8 = { style: tmp.headerTrailing, children: null };
-  const obj9 = { text: null, onPress: null, variant: "primary", size: "sm" };
-  const intl2 = onSelectFont(1115).intl;
-  obj9.text = intl2.string(onSelectFont(1115).t.XqMe3N);
-  obj9.onPress = callback;
-  obj8.children = closure_8(onSelectFont(5062).Button, obj9);
-  obj7.trailing = closure_8(closure_5, obj8);
-  obj6.children = closure_8(onSelectFont(7263).BottomSheetTitleHeader, obj7);
-  obj5.header = closure_8(closure_5, obj6);
-  const obj10 = { style: tmp.container, children: null };
-  const obj11 = { style: tmp.contentContainer, children: null };
+  const obj6 = { title: null, trailing: null };
   const hasNonLatinLettersResult = onSelectFont(1389).hasNonLatinLetters(displayName.displayName);
+  let intl = onSelectFont(1115).intl;
+  obj6.title = intl.string(_modDef2870["0JCuGm"]);
+  const obj7 = { text: null, onPress: null, variant: "primary", size: "sm" };
+  const intl2 = onSelectFont(1115).intl;
+  obj7.text = intl2.string(onSelectFont(1115).t.XqMe3N);
+  obj7.onPress = callback;
+  obj6.trailing = closure_8(onSelectFont(5144).Button, obj7);
+  obj5.header = closure_8(DisplayNameStylesSheetHeaderDefault, obj6);
+  const obj8 = { style: tmp.container, children: null };
+  const obj9 = { style: tmp.contentContainer, children: null };
   let items1 = [
-    closure_8(onSelectFont(5060).Stack, {
+    closure_8(onSelectFont(5142).Stack, {
       direction: "horizontal",
       align: "center",
       justify: "center",
@@ -173,22 +168,22 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
       }),
     }),
   ];
-  if (tmp14Result) {
-    tmp14Result = hasNonLatinLettersResult;
+  if (tmp15Result) {
+    tmp15Result = hasNonLatinLettersResult;
   }
-  if (tmp14Result) {
-    const obj13 = { style: tmp.nonLatinDisclaimer, children: null };
-    let items2 = [closure_8(onSelectFont(4594).CircleInformationIcon, { size: "sm" })];
-    const obj14 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: null };
+  if (tmp15Result) {
+    const obj11 = { style: tmp.nonLatinDisclaimer, children: null };
+    let items2 = [closure_8(onSelectFont(4676).CircleInformationIcon, { size: "sm" })];
+    const obj12 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: null };
     const intl3 = onSelectFont(1115).intl;
-    obj14.children = intl3.string(_modDef2787["+O1xL2"]);
-    items2[1] = closure_8(onSelectFont(4636).Text, obj14);
-    obj13.children = items2;
-    tmp14Result = closure_9(tmp12, obj13);
+    obj12.children = intl3.string(_modDef2870["+O1xL2"]);
+    items2[1] = closure_8(onSelectFont(4718).Text, obj12);
+    obj11.children = items2;
+    tmp15Result = closure_9(tmp14, obj11);
   }
-  items1[1] = tmp14Result;
-  obj11.children = items1;
-  obj10.children = closure_9(closure_5, obj11);
-  obj5.children = closure_8(closure_5, obj10);
-  return closure_8(onSelectFont(7264).BottomSheet, obj5);
+  items1[1] = tmp15Result;
+  obj9.children = items1;
+  obj8.children = closure_9(closure_5, obj9);
+  obj5.children = closure_8(closure_5, obj8);
+  return closure_8(onSelectFont(7346).BottomSheet, obj5);
 }

@@ -31,7 +31,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   container: { flex: 1 },
   header: { paddingVertical: nativeDefault.space.PX_8 },
@@ -55,24 +55,24 @@ export default noop.memo(function StickerPicker(channel) {
   noop = undefined;
   ({ bottomSheetRef, bottomSheetIndex, paddingTop, stickerFormats, inPortalKeyboard } = channel);
   let tmp = closure_16();
-  const fetchStickerPacks = channel(10535).useFetchStickerPacks();
-  let obj = channel(10535);
-  const stickerCategories = channel(10537).useStickerCategories(channel);
-  let obj2 = channel(10537);
+  const fetchStickerPacks = channel(10629).useFetchStickerPacks();
+  let obj = channel(10629);
+  const stickerCategories = channel(10631).useStickerCategories(channel);
+  let obj2 = channel(10631);
   let items = [StickersStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => StickersStore.hasLoadedStickerPacks);
   const tmp6 = analyticsLocations(noop.useState(0), 2);
   dependencyMap = tmp7;
   let obj3 = channel(504);
-  analyticsLocations = onPressSticker(7276)(onPressSticker(7296).STICKER_PICKER).analyticsLocations;
-  const tmp9 = onPressSticker(7276);
+  analyticsLocations = onPressSticker(7358)(onPressSticker(7378).STICKER_PICKER).analyticsLocations;
+  const tmp9 = onPressSticker(7358);
   [tmp11, c4] = analyticsLocations(noop.useState(null), 2);
   const tmp10 = analyticsLocations(noop.useState(null), 2);
   let mobileStickerPickerUpsellRestyleEnabled =
-    channel(9475).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
-  let obj4 = channel(9475);
+    channel(9559).useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
+  let obj4 = channel(9559);
   let items1 = [channel, mobileStickerPickerUpsellRestyleEnabled];
-  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10430)({ hasCategories: true }));
+  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10524)({ hasCategories: true }));
   const items2 = [,];
   ({ id: arr4[0], guild_id: arr4[1] } = channel);
   const callback = noop.useCallback((arg0) => {
@@ -179,7 +179,7 @@ export default noop.memo(function StickerPicker(channel) {
       guild_id: channel.guild_id,
     });
   }, items4);
-  const tmp13 = onPressSticker(10430)({ hasCategories: true });
+  const tmp13 = onPressSticker(10524)({ hasCategories: true });
   const items5 = [channel];
   const callback3 = noop.useCallback((renderableSticker) => {
     const result = showStickerDetailActionSheet.showStickerDetailActionSheet({ renderableSticker, channel });
@@ -194,14 +194,14 @@ export default noop.memo(function StickerPicker(channel) {
     obj9.placeholder = intl.string(tmp2(1115).t.dt5h1C);
     obj9.onChange = callback;
     obj9.onFocus = callback2;
-    obj8.children = closure_14(tmp2(7164).SearchField, obj9);
+    obj8.children = closure_14(tmp2(7246).SearchField, obj9);
     tmp19Result = closure_14(tmp21, obj8);
   }
   const items6 = [tmp19Result, ,];
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       const obj10 = { style: tmp.emptyState, children: null };
-      tmp = closure_14(tmp8(10561), {});
+      tmp = closure_14(tmp8(10655), {});
       obj10.children = tmp;
       let tmp19Result2 = closure_14(tmp21, obj10);
     } else {
@@ -229,17 +229,17 @@ export default noop.memo(function StickerPicker(channel) {
       obj11.stickerFormats = stickerFormats;
       obj11.searchResults = tmp11;
       obj11.inPortalKeyboard = inPortalKeyboard;
-      tmp19Result2 = closure_14(tmp8(10562), obj11);
-      const tmp8Result = tmp8(10562);
+      tmp19Result2 = closure_14(tmp8(10656), obj11);
+      const tmp8Result = tmp8(10656);
     }
   } else {
     const obj12 = { animating: true, size: "large", style: tmp.loadingIndicator };
     items6[1] = closure_14(closure_6, obj12);
     const obj13 = { categories: stickerCategories, categoryIndex: tmp6[0], style: safeAreaStyle };
-    items6[2] = closure_14(tmp8(10568), obj13);
+    items6[2] = closure_14(tmp8(10662), obj13);
     obj7.children = items6;
     obj6.children = closure_15(tmp21, obj7);
-    return closure_14(channel(7276).AnalyticsLocationProvider, obj6);
+    return closure_14(channel(7358).AnalyticsLocationProvider, obj6);
   }
-  obj5 = onPressSticker(7302);
+  obj5 = onPressSticker(7384);
 });

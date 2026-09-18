@@ -4,12 +4,12 @@ import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05074_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05156_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13584 from "../../../../../_runtime/metro/13584__.js";
-import _modDef13585 from "../../../../../_runtime/metro/13585__.js";
-import _modDef13586 from "../../../../../_runtime/metro/13586__.js";
-import _modDef13587 from "../../../../../_runtime/metro/13587__.js";
+import _modDef13675 from "../../../../../_runtime/metro/13675__.js";
+import _modDef13676 from "../../../../../_runtime/metro/13676__.js";
+import _modDef13677 from "../../../../../_runtime/metro/13677__.js";
+import _modDef13678 from "../../../../../_runtime/metro/13678__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -57,7 +57,7 @@ function PremiumFeaturesCarousel(arg0) {
   let mapped;
   noop = undefined;
   const tmp = closure_14();
-  const isScreenReaderEnabled = onEndReached(5047).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = onEndReached(5129).useIsScreenReaderEnabled();
   const tmp5 = mapped(noop.useState(0), 2);
   const currentIndex = tmp5[0];
   dependencyMap = tmp7;
@@ -69,7 +69,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef13584;
+    obj.imageSrc = _modDef13675;
     obj.imageStyle = first.emojiImage;
     const items = [,];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -78,7 +78,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef13585;
+    obj2.imageSrc = _modDef13676;
     const items2 = [,];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -87,7 +87,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef13586;
+    obj3.imageSrc = _modDef13677;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -95,7 +95,7 @@ function PremiumFeaturesCarousel(arg0) {
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef13587;
+    obj4.imageSrc = _modDef13678;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);
@@ -143,7 +143,7 @@ function PremiumFeaturesCarousel(arg0) {
         modeConfig: { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 },
         onSnapToItem: tmp7,
       };
-      let tmp19 = closure_10(currentIndex(10911), obj3);
+      let tmp19 = closure_10(currentIndex(11005), obj3);
     }
     let items3 = [tmp19];
     let obj4 = { containerStyle: tmp.indicators, numberOfItems: mapped.length, currentIndex };
@@ -151,7 +151,7 @@ function PremiumFeaturesCarousel(arg0) {
     obj2.children = items3;
     return closure_11(closure_6, obj2);
   }
-  let obj = onEndReached(5047);
+  let obj = onEndReached(5129);
   tmp19 = closure_10(closure_5, {
     style: tmp.carousel,
     contentContainerStyle: { paddingHorizontal: bound, gap: PX_12 },
@@ -179,13 +179,13 @@ function PremiumFeaturesCarousel(arg0) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Gradients = fn(7546).Gradients;
+const Gradients = fn(7628).Gradients;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 0.85;
 const PX_12 = nativeDefault.space.PX_12;
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let obj2 = {
   container: { flex: 1 },
   headerText: { textAlign: "center" },
@@ -196,7 +196,7 @@ let obj2 = {
 let obj3 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
 obj2.indicators = { marginBottom: -nativeDefault.space.PX_48 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4640);
+createStyles = fn(4722);
 const obj6 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
 let obj4 = { marginBottom: -nativeDefault.space.PX_48 };
 obj6.card = {
@@ -216,7 +216,7 @@ const obj7 = {
 };
 obj6.cardTitle = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
 const __initData = createStyles.createStyles(obj6);
-createStyles = fn(4640);
+createStyles = fn(4722);
 let closure_16 = createStyles.createStyles({ emojiImage: { alignSelf: "flex-end" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx");
@@ -226,7 +226,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   dependencyMap = undefined;
   _slicedToArray = undefined;
   const tmp = closure_14();
-  const analyticsLocations = first(7276)().analyticsLocations;
+  const analyticsLocations = first(7358)().analyticsLocations;
   [first, dependencyMap] = noop.useState(false);
   const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1478).getWindowDimensions().width), 2);
   _slicedToArray = tmp4[1];
@@ -257,7 +257,7 @@ export default function PremiumFeaturesCarouselSection(style) {
   const intl = analyticsLocations(1115).intl;
   obj3.children = intl.string(analyticsLocations(1115).t.RGadQR);
   const items2 = [
-    closure_10(analyticsLocations(4636).Text, obj3),
+    closure_10(analyticsLocations(4718).Text, obj3),
     closure_10(PremiumFeaturesCarousel, { width: tmp4[0], onEndReached: callback }),
   ];
   obj2.children = items2;

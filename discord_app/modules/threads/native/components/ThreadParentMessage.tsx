@@ -9,7 +9,7 @@ import ReferencedMessageStore from "../../../replies/ReferencedMessageStore.tsx"
 import MessageStore from "../../../../stores/MessageStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7707).ReferencedMessageState;
+const ReferencedMessageState = fn(7789).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({

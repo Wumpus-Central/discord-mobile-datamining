@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/GiftingTier4SmallBadge.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6276 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftingTier4SmallBadge-2x.png.js";
+import _modDef6358 from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftingTier4SmallBadge-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const GiftingTier4SmallBadge = function GiftingTier4SmallBadge(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6276 };
+  const obj2 = { uri: _modDef6358 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

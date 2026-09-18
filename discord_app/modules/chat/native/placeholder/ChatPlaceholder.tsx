@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-let closure_3 = fn(9639).useChatInputContainerHeight;
+let closure_3 = fn(9723).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { placeholder: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

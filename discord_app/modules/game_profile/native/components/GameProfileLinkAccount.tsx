@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   card: {
     borderRadius: nativeDefault.radii.lg,

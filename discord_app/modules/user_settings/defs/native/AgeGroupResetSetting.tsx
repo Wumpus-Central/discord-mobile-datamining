@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupResetSetting.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2949 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3032 from "../../../age_assurance/AgeAssurance.messages.js";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeGroupScreenRowProps from "AgeGroupScreenRowProps.tsx";
@@ -13,12 +13,12 @@ const jsx = jsxProd.jsx;
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2949["bD//cU"]);
+    return intl.string(_modDef3032["bD//cU"]);
   },
   parent: SettingsConstants.MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2949.Gn0SAj);
+    return intl.string(_modDef3032.Gn0SAj);
   },
   onPress() {
     useAlertStore.openAlert(

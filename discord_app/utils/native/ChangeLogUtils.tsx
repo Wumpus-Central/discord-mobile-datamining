@@ -1,6 +1,6 @@
 // discord_app/utils/native/ChangeLogUtils.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4336 from "../../../_runtime/metro/04336__.js";
+import _modDef2075 from "../../../_runtime/metro/02075__.js";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import MarkupRulesUtils from "../../modules/markup/MarkupRulesUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -118,7 +118,7 @@ function ChangeLogStrong(arg0) {
 function ChangeLogImage(arg0) {
   ({ node, state } = arg0);
   const obj = { style: closure_6().image, source: null };
-  const obj2 = { uri: _modDef4336.sanitizeUrl(node.target) };
+  const obj2 = { uri: _modDef2075.sanitizeUrl(node.target) };
   obj.source = obj2;
   return <React4 key={state.key} style={closure_6().image} source={null} />;
 }
@@ -143,7 +143,7 @@ function ChangeLogBlockQuote(state) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   link: { color: nativeDefault.colors.TEXT_LINK },
   list: { marginBottom: 10 },
@@ -156,13 +156,13 @@ obj2.container = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: fn(5529).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5611).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
 const obj4 = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: fn(5529).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5611).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);

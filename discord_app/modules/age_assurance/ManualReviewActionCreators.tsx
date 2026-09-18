@@ -96,7 +96,9 @@ let closure_14 = async function _handleManualReviewCta() {
               const obj3 = closure_129_1(closure_129_2[7]);
             }
           }
-          const result1 = closure_129_1(closure_129_2[7]).showManualReviewDecidedTeenModal();
+          const result1 = closure_129_1(closure_129_2[7]).showManualReviewDecidedTeenModal(
+            closure_128_0.teen_age_range,
+          );
           c3 = 0;
           closure_129_11 = false;
           c5 = 3;
@@ -128,12 +130,12 @@ let closure_14 = async function _handleManualReviewCta() {
       }
       c3 = 0;
       closure_129_11 = false;
-    } catch (tmp46) {
-      closure_2 = tmp46;
+    } catch (tmp48) {
+      closure_2 = tmp48;
       if (tmp5 === c3) {
         c5 = tmp3;
-        throw tmp46;
-      } else if (tmp2 === tmp48) {
+        throw tmp48;
+      } else if (tmp2 === tmp50) {
         c4 = tmp2;
       } else {
         c4 = tmp;
@@ -142,7 +144,7 @@ let closure_14 = async function _handleManualReviewCta() {
   }
 };
 const Endpoints = fn(1074).Endpoints;
-const SafetyToastType = fn(8548).SafetyToastType;
+const SafetyToastType = fn(8631).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

@@ -13,7 +13,7 @@ let closure_3 = ["channelId", "analyticsLocation"];
 let closure_4 = ["channelId", "analyticsLocation"];
 const Constants = fn(1074);
 ({ AbortCodes: closure_9, Endpoints: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(4633).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
+let closure_12 = fn(4715).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
 const MessageDataType = {
   SEND: 0,
   [0]: "SEND",
@@ -207,8 +207,8 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const signalStrength = handleCommand1(7573).getSignalStrength();
-  const obj2 = handleCommand1(7573);
+  const signalStrength = handleCommand1(7655).getSignalStrength();
+  const obj2 = handleCommand1(7655);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -251,8 +251,8 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const signalStrength = handleCommand1(7573).getSignalStrength();
-  const obj2 = handleCommand1(7573);
+  const signalStrength = handleCommand1(7655).getSignalStrength();
+  const obj2 = handleCommand1(7655);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {

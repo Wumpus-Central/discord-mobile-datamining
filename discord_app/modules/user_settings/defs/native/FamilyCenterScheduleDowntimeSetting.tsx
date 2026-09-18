@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2397 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2480 from "../../../parent_tools/FamilyCenter.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2397["w/ISB8"]);
+    return intl.string(_modDef2480["w/ISB8"]);
   },
   parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   unsearchable: true,

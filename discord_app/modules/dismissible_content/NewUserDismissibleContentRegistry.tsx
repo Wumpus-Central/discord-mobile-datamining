@@ -30,7 +30,6 @@ const dependencyMap = {
   [fn(1944).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0,
   [fn(1944).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0,
   [fn(1944).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0,
-  [fn(1944).DismissibleContent.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
   [fn(1944).DismissibleContent.NITRO_DROP_REWARD]: 0,
 };
 const size = fn(2);

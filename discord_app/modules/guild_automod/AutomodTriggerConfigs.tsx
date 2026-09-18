@@ -4,7 +4,7 @@ import guild_automod_ExperimentUtils from "ExperimentUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(12014);
+const Constants = fn(12106);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -198,8 +198,8 @@ export const checkTriggerTypeForFlag = function checkTriggerTypeForFlag(arg0, ar
   const flags = obj2[arg0].flags;
   return flags.has(arg1);
 };
-export const getAvailableActionTypes = function getAvailableActionTypes(arg0) {
-  return Array.from(obj2[arg0].availableActionTypes);
+export const getAvailableActionTypes = function getAvailableActionTypes(triggerType) {
+  return Array.from(obj2[triggerType].availableActionTypes);
 };
 export const validateRuleByTriggerConfigOrThrow = function validateRuleByTriggerConfigOrThrow(actions, arr) {
   ({ id: require, triggerType } = actions);

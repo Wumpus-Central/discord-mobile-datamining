@@ -96,6 +96,7 @@ obj.PRIVATE = new Set([
   "identify.premium",
   "lobbies.write",
   "managed_platform.application_identities.write",
+  "orbs_arcade.play",
   "payment_sources.country_code",
   "presences.read",
   "presences.write",
@@ -120,6 +121,7 @@ const set1 = new Set([
   "identify.premium",
   "lobbies.write",
   "managed_platform.application_identities.write",
+  "orbs_arcade.play",
   "payment_sources.country_code",
   "presences.read",
   "presences.write",
@@ -341,6 +343,7 @@ obj.ALL = new Set([
   "managed_platform.application_identities.write",
   "messages.read",
   "openid",
+  "orbs_arcade.play",
   "payment_sources.country_code",
   "presences.read",
   "presences.write",
@@ -415,5 +418,6 @@ export const OAuth2Scopes = {
   APPLICATION_IDENTITIES_WRITE: "application_identities.write",
   MANAGED_PLATFORM_APPLICATION_IDENTITIES_WRITE: "managed_platform.application_identities.write",
   VIBEGRATIONS_PROJECTS: "vibegrations.projects",
+  ORBS_ARCADE_PLAY: "orbs_arcade.play",
 };
 export const OAuth2ScopesSets = obj;

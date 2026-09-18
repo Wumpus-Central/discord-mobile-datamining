@@ -6,7 +6,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(4544);
+const Constants = fn(4626);
 let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
 items = [Constants.RPC_AUTHENTICATED_SCOPE];
 const size = fn(2);
@@ -53,16 +53,16 @@ export const activityInstanceConnectedParticipantsUpdateEvent = {
         const obj = { participants: [] };
         let obj2 = obj;
       } else {
-        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4268).getEmbeddedActivityLocationGuildId(
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4351).getEmbeddedActivityLocationGuildId(
           currentEmbeddedActivity.location,
         );
-        const obj4 = embeddedActivityLocationGuildId(4268);
-        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4268).getEmbeddedActivityLocationChannelId(
+        const obj4 = embeddedActivityLocationGuildId(4351);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4351).getEmbeddedActivityLocationChannelId(
           currentEmbeddedActivity.location,
         );
         obj2 = { participants: null };
         const _Array = Array;
-        const obj5 = embeddedActivityLocationGuildId(4268);
+        const obj5 = embeddedActivityLocationGuildId(4351);
         obj2.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {

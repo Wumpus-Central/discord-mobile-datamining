@@ -31,7 +31,7 @@ class RouteManager {
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj2(12942);
+          obj = obj2(13033);
           if (!obj.convertRouteToNavigation(pathname)) {
             obj2(1101).replaceWith(Routes.ME);
             const tmp2Result = obj2(1101);
@@ -94,7 +94,7 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
       obj2 = obj2(1101);
       let tmp9Result = tmp9(location, REPLACE);
       if (null != tmp9Result) {
-        let tmp11Result = tmp11(12943);
+        let tmp11Result = tmp11(13034);
         let obj3 = {
           message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
           data: null,
@@ -192,7 +192,7 @@ obj2.handleConnectionChange = function handleConnectionChange() {
 obj2.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj2(12942);
+      obj = obj2(13033);
       if (!obj.convertRouteToNavigation(pathname)) {
         obj2(1101).replaceWith(Routes.ME);
         const tmp2Result = obj2(1101);

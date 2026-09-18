@@ -3,7 +3,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import _modDef7495 from "../../../../../_runtime/metro/07495__.js";
+import _modDef7577 from "../../../../../_runtime/metro/07577__.js";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 64 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -66,14 +66,14 @@ export default function UserSettingsDesignSystemButtonGroup() {
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef7495,
+      icon: _modDef7577,
       onPress() {},
     }),
   ];
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7495,
+    icon: _modDef7577,
     onPress() {},
   };
   const obj7 = {
@@ -89,7 +89,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7495,
+    icon: _modDef7577,
     onPress() {},
   });
   obj11.children = items4;
@@ -127,7 +127,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7495,
+    icon: _modDef7577,
     onPress() {},
   };
   const obj17 = {
@@ -139,7 +139,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef7495,
+    icon: _modDef7577,
     onPress() {},
   });
   obj16.children = items6;

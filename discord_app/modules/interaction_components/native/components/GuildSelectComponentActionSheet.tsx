@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_10 = createStyles.createStyles({
   guildIdentity: { flexDirection: "row", alignItems: "center" },
   iconContainer: { marginRight: 16 },
@@ -68,7 +68,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
       let reduced = flattenedGuildIds.reduce((arr, item) => {
         guild = guild.getGuild(item);
         if (null != guild) {
-          const obj = { type: closure_1_0(4872).SelectOptionType.GUILD, value: null, label: null, guild: null };
+          const obj = { type: closure_1_0(4954).SelectOptionType.GUILD, value: null, label: null, guild: null };
           ({ id: obj.value, name: obj.label } = guild);
           obj.guild = guild;
           arr = arr.push(obj);
@@ -83,7 +83,7 @@ export default function GuildSelectComponentActionSheet(arg0) {
         .map((record) => {
           record = record.record;
           return {
-            type: closure_1_0(4872).SelectOptionType.GUILD,
+            type: closure_1_0(4954).SelectOptionType.GUILD,
             value: record.id,
             label: record.name,
             guild: record,

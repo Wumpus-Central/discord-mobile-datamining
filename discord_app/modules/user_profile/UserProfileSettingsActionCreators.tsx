@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef4759 from "../../../_runtime/metro/04759__.js";
+import _modDef4841 from "../../../_runtime/metro/04841__.js";
 import GuildTagUtils from "../guild_tag/GuildTagUtils.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -66,7 +66,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (displayNameStyles2 == null) {
         displayNameStyles2 = null;
       }
-      obj.pendingDisplayNameStyles = _modDef4759(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
+      obj.pendingDisplayNameStyles = _modDef4841(tmp13, displayNameStyles2) ? undefined : displayNameStyles;
     }
     if ("customTypingIndicatorStyle" in merged) {
       const customTypingIndicatorStyle = merged.customTypingIndicatorStyle;
@@ -78,7 +78,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (typingIndicatorStyle == null) {
         typingIndicatorStyle = null;
       }
-      obj.pendingCustomTypingIndicatorStyle = _modDef4759(tmp17, typingIndicatorStyle)
+      obj.pendingCustomTypingIndicatorStyle = _modDef4841(tmp17, typingIndicatorStyle)
         ? undefined
         : customTypingIndicatorStyle;
     }
@@ -283,7 +283,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (_modDef4759(tmp42, themeColors)) {
+          if (_modDef4841(tmp42, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;

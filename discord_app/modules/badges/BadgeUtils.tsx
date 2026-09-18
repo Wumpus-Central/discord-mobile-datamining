@@ -28,6 +28,22 @@ export const getAlwaysVisibleCopy = function getAlwaysVisibleCopy(badge_id) {
   }
   return nPQVxb;
 };
+export const getDirectoryBadges = function getDirectoryBadges(stateFromStoresArray) {
+  const earnable = [];
+  const owned = [];
+  const iter = stateFromStoresArray[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    if (nextResult.owned) {
+      let arr = owned.push(tmp2);
+    } else if (tmp2.is_earnable) {
+      let arr2 = earnable.push(tmp2);
+    }
+    continue;
+  }
+  return { earnable, owned };
+};
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
   const _Set = Set;
   const STAFF = BadgeId.BadgeId.STAFF;

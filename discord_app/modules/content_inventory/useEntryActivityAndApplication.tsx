@@ -27,7 +27,7 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  [activityApplication, obj2.fallbackApplication] = activityApplication(7282)(items1);
+  [activityApplication, obj2.fallbackApplication] = activityApplication(7364)(items1);
   const obj2 = {
     activity: stateFromStores,
     embeddedActivity: null,
@@ -35,7 +35,7 @@ export default function useEntryActivityAndApplication(extra) {
     activityApplication: null,
     fallbackApplication: null,
   };
-  const tmp4 = activityApplication(7282);
+  const tmp4 = activityApplication(7364);
   const items2 = [EmbeddedActivitiesStore];
   obj2.embeddedActivity = tmp(504).useStateFromStores(items2, () => {
     let id;

@@ -2,13 +2,13 @@
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
-import apexExperiment from "../../experiments/index.tsx";
+import BountiesMobileQuestBarExperiment2 from "../../experiments/BountiesMobileQuestBarExperiment.tsx";
 import AdsVideoTypes from "../AdsVideoTypes.tsx";
 import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOverlayUtils.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(5532).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5614).QuestsExperimentLocations;
 const ComponentActions = fn(1074).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -22,13 +22,13 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
   let callback;
   let callback1;
   const getQuestImpressionId = bounty(sourceQuestContent[4]).useGetQuestImpressionId();
-  const CustomAppStoreSqueezeBackExperiment = bounty(sourceQuestContent[3]).CustomAppStoreSqueezeBackExperiment;
-  const config = CustomAppStoreSqueezeBackExperiment.getConfig({ location: playerRef.VIDEO_MODAL_MOBILE });
-  const variant = config.variant;
+  const BountiesMobileQuestBarExperiment = bounty(sourceQuestContent[3]).BountiesMobileQuestBarExperiment;
+  const config = BountiesMobileQuestBarExperiment.getConfig({ location: playerRef.VIDEO_MODAL_MOBILE });
+  const ctrVariant = config.ctrVariant;
   let tmp5 = null;
   if (config.enabled) {
-    if (variant === tmp(tmp2[3]).BountiesCtrExperiment1Variant.FIRST_TAP_APP_STORE_OVERLAY) {
-      tmp5 = variant;
+    if (ctrVariant === tmp(tmp2[3]).BountiesMobileQuestBarCtrVariant.FIRST_TAP_APP_STORE_OVERLAY) {
+      tmp5 = ctrVariant;
     } else {
       tmp5 = null;
     }
@@ -140,7 +140,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
     if (isActive) {
       if (arg0 === AdsVideoTypes.PlaybackTriggerSource.USER_INTERACTION) {
         if (null != c5) {
-          if (tmp4 === apexExperiment.BountiesCtrExperiment1Variant.FIRST_TAP_APP_STORE_OVERLAY) {
+          if (tmp4 === BountiesMobileQuestBarExperiment2.BountiesMobileQuestBarCtrVariant.FIRST_TAP_APP_STORE_OVERLAY) {
             if (!ref.current) {
               tmp8.current = true;
               callback1().then((result) => {

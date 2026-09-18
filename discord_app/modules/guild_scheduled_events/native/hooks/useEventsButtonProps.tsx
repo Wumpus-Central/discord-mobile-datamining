@@ -11,7 +11,7 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(4822).ReadStateTypes;
+const ReadStateTypes = fn(4904).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
@@ -48,7 +48,7 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12527, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, {
+    obj.openLazy(asyncRequireImpl(12618, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, {
       guildId: user.id,
     });
   }, items4);
@@ -60,13 +60,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1115).intl;
     name = intl.string(tmp(1115).t.tlopTM);
   }
-  let mode = tmp(12531).ChannelModes.DEFAULT;
+  let mode = tmp(12622).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12531).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12622).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 }

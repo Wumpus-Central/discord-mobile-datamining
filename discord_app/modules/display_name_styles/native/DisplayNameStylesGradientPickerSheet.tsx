@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   body: {
     paddingVertical: nativeDefault.space.PX_12,
@@ -171,22 +171,23 @@ export default function DisplayNameStylesColorPickerSheet(selectedColors) {
   }, []);
   let obj3 = { header: null, children: null };
   let obj4 = { title: displayNameStylesEffectConfig.name, trailing: null };
+  let obj2 = onSelectColors(displayNameStylesEffectConfig[8]);
   const obj5 = { variant: "primary", size: "sm", text: null, onPress: null };
   let intl = onSelectColors(displayNameStylesEffectConfig[17]).intl;
   obj5.text = intl.string(onSelectColors(displayNameStylesEffectConfig[17]).t.XqMe3N);
   obj5.onPress = callback;
   obj4.trailing = closure_8(onSelectColors(displayNameStylesEffectConfig[16]).Button, obj5);
-  obj3.header = closure_8(onSelectColors(displayNameStylesEffectConfig[15]).BottomSheetTitleHeader, obj4);
+  obj3.header = closure_8(require("DisplayNameStylesSheetHeader"), obj4);
   const obj6 = { style: tmp.body, children: null };
   const obj7 = { style: tmp.gradientContainer, children: null };
   const obj8 = { style: tmp.gradient, colors: null, start: null, end: null };
-  let obj2 = onSelectColors(displayNameStylesEffectConfig[8]);
+  const tmp7 = require("DisplayNameStylesSheetHeader");
   obj8.colors = colors.map((item) => onSelectColors(displayNameStylesEffectConfig[19]).int2hex(item));
   obj8.start = { x: 0, y: 0 };
   obj8.end = { x: 1, y: 0 };
   const items3 = [closure_8(require("LinearGradient"), obj8)];
   const obj9 = { style: tmp.dropperContainer, children: null };
-  const tmp7 = require("LinearGradient");
+  const tmp8 = require("LinearGradient");
   obj9.children = Array.from({ length: effectColorCount }).map((item, index) => {
     closure_0 = index;
     const obj = {

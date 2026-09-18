@@ -10,13 +10,13 @@ import GuildSettingsStore from "../GuildSettingsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(9219).GuildProfileFetchStatus;
-const BADGES = fn(8080).BADGES;
+let GuildProfileFetchStatus = fn(9303).GuildProfileFetchStatus;
+const BADGES = fn(8163).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: { flex: 1 },
   containerContent: { paddingTop: 16, paddingHorizontal: PX_16 },

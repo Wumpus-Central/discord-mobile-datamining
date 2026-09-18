@@ -1523,7 +1523,6 @@ const frozen2 = Object.freeze({
   HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",
   HUB_EMAIL_VERIFY_CODE: "/guilds/automations/email-domain-lookup/verify-code",
   PROMOTIONS: "/promotions",
-  BOGO_PROMOTIONS: "/bogo-promotions",
   GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY:
     "/users/@me/gifting-promotion-summer-2026-gogo-campaign-eligibility",
   CLAIMED_OUTBOUND_PROMOTION_CODES: "/users/@me/outbound-promotions/codes",
@@ -3553,7 +3552,6 @@ const obj2 = {
   HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",
   HUB_EMAIL_VERIFY_CODE: "/guilds/automations/email-domain-lookup/verify-code",
   PROMOTIONS: "/promotions",
-  BOGO_PROMOTIONS: "/bogo-promotions",
   GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY:
     "/users/@me/gifting-promotion-summer-2026-gogo-campaign-eligibility",
   CLAIMED_OUTBOUND_PROMOTION_CODES: "/users/@me/outbound-promotions/codes",
@@ -5288,6 +5286,7 @@ const obj18 = {
   PARTNER: null,
   PARENT: null,
   DISABLE_RELATIONSHIPS_ACCESS: null,
+  QUEST: null,
 };
 let BigFlagUtils = BigFlagUtils_mod;
 obj18.EMBEDDED_RELEASED = BigFlagUtils.getFlag(1);
@@ -5331,6 +5330,8 @@ let BigFlagUtils = BigFlagUtils_mod;
 obj18.PARENT = BigFlagUtils.getFlag(33);
 let BigFlagUtils = BigFlagUtils_mod;
 obj18.DISABLE_RELATIONSHIPS_ACCESS = BigFlagUtils.getFlag(34);
+let BigFlagUtils = BigFlagUtils_mod;
+obj18.QUEST = BigFlagUtils.getFlag(38);
 const frozen11 = Object.freeze(obj18);
 const frozen12 = Object.freeze({
   STORAGE_MANIFEST(arg0, arg1) {
@@ -5804,6 +5805,7 @@ export const GuildSettingsSections = {
   SOUNDBOARD: "SOUNDBOARD",
   APP_DIRECTORY: "APP_DIRECTORY",
   GUILD_AUTOMOD: "GUILD_AUTOMOD",
+  GUILD_AUTOMOD_RULE: "GUILD_AUTOMOD_RULE",
   SAFETY: "SAFETY",
   OFFICIAL_MESSAGES: "OFFICIAL_MESSAGES",
   PROFILE: "PROFILE",
@@ -7852,6 +7854,7 @@ export const AnalyticEvents = {
   QUEST_LINK_SHARED: "quest_link_shared_v2",
   QUEST_CONTENT_LOADED: "quest_content_loaded",
   QUEST_CONTENT_VIEWED: "quest_content_viewed",
+  QUEST_CONTENT_ENGAGED_VIEWED: "quest_content_engaged_viewed",
   QUEST_CONTENT_VIEW_TIME: "quest_content_view_time",
   IOS_ATTRIBUTION_VIEW_RESOLVED: "ios_attribution_view_resolved",
   IOS_ATTRIBUTION_CLICK_RESOLVED: "ios_attribution_click_resolved",
@@ -8646,6 +8649,7 @@ export const AnalyticEvents = {
   DETECTABLE_GAME_SEARCHED_BATCHED: "detectable_game_searched_batched",
   DM_PROFILE_TOGGLED: "dm_profile_toggled",
   USER_PROFILE_WISHLIST_ACTION: "user_profile_wishlist_action",
+  USER_PROFILE_LINK_EMBED_SENT: "user_profile_link_embed_sent",
   WISHLIST_UPDATED: "wishlist_updated",
   WISHLIST_ITEM_CLICKED: "wishlist_item_clicked",
   WISHLIST_ITEM_HOVERED: "wishlist_item_hovered",
@@ -9783,6 +9787,8 @@ export const EntitlementTypes = {
   [11]: "FRACTIONAL_REDEMPTION",
   VIRTUAL_CURRENCY_REDEMPTION: 12,
   [12]: "VIRTUAL_CURRENCY_REDEMPTION",
+  PURCHASE_REWARD: 16,
+  [16]: "PURCHASE_REWARD",
 };
 export const EntitlementSourceTypes = {
   QUEST_REWARD: 1,

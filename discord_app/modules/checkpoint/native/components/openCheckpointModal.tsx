@@ -11,5 +11,5 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function openCheckpointModal(source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_STARTED, { source });
   const obj2 = { source };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15810, dependencyMap.paths), undefined, "CHECKPOINT_MODAL");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15905, dependencyMap.paths), undefined, "CHECKPOINT_MODAL");
 }

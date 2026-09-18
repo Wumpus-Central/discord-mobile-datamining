@@ -5,7 +5,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
-import _modDef12852 from "../../../../../_runtime/metro/12852__.js";
+import _modDef12943 from "../../../../../_runtime/metro/12943__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -17,7 +17,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 },
   art: { marginBottom: 16 },
@@ -41,7 +41,7 @@ export default function ContactSyncInviteFriends() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef12852;
+  obj4.source = _modDef12943;
   const items1 = [closure_7(FastImageDefault, obj4), ,];
   const obj5 = {
     style: tmp.title,

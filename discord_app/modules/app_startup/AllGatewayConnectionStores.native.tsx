@@ -45,6 +45,7 @@ import ForumPostUnreadCountStore from "../forums/ForumPostUnreadCountStore.tsx";
 import ForumSearchStore from "../forums/ForumSearchStore.tsx";
 import FriendGroupsStore from "../friend_groups/FriendGroupsStore.tsx";
 import FriendSuggestionStore from "../friend_suggestions/FriendSuggestionStore.tsx";
+import OnlineFriendsStore from "../friends/OnlineFriendsStore.tsx";
 import GameRelationshipStore from "../game_relationships/GameRelationshipStore.tsx";
 import DerivedQosDataStore from "../gateway/qos/DerivedQosDataStore.tsx";
 import GlobalDiscoveryServersSearchCountsStore from "../global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx";

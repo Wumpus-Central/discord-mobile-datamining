@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/VibegrationsDuration.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsDuration.tsx");
@@ -10,21 +10,21 @@ export const describeDuration = function describeDuration(durationMs) {
   if (bound < 60) {
     const intl3 = util.intl;
     const obj = { count: bound };
-    return intl3.formatToPlainString(_modDef3593.RsOwXc, obj);
+    return intl3.formatToPlainString(_modDef3676.RsOwXc, obj);
   } else {
     const _Math2 = Math;
     const rounded = Math.round(bound / 60);
     if (rounded < 60) {
       const intl2 = util.intl;
       const obj2 = { count: rounded };
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3593["z+U4YX"], obj2);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3676["z+U4YX"], obj2);
     } else {
       const intl = util.intl;
       const time = { hours: null, minutes: null };
       const _Math = Math;
       time.hours = Math.floor(rounded / 60);
       time.minutes = rounded % 60;
-      formatToPlainStringResult = intl.formatToPlainString(_modDef3593["7Q/vz0"], time);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef3676["7Q/vz0"], time);
     }
     return formatToPlainStringResult;
   }
@@ -34,21 +34,21 @@ export const describeTurnDuration = function describeTurnDuration(durationMs) {
   if (bound < 60) {
     const intl3 = util.intl;
     const obj = { count: bound };
-    return intl3.formatToPlainString(_modDef3593["49T8W0"], obj);
+    return intl3.formatToPlainString(_modDef3676["49T8W0"], obj);
   } else {
     const _Math2 = Math;
     const rounded = Math.round(bound / 60);
     if (rounded < 60) {
       const intl2 = util.intl;
       const obj2 = { count: rounded };
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3593.NkZO2t, obj2);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3676.NkZO2t, obj2);
     } else {
       const intl = util.intl;
       const time = { hours: null, minutes: null };
       const _Math = Math;
       time.hours = Math.floor(rounded / 60);
       time.minutes = rounded % 60;
-      formatToPlainStringResult = intl.formatToPlainString(_modDef3593["2qYUUZ"], time);
+      formatToPlainStringResult = intl.formatToPlainString(_modDef3676["2qYUUZ"], time);
     }
     return formatToPlainStringResult;
   }

@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2429 from "../GuildPowerups.messages.js";
+import _modDef2512 from "../GuildPowerups.messages.js";
 import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader.tsx";
 import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard.tsx";
 import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard.tsx";
@@ -23,9 +23,9 @@ export default function GuildPowerupPerksSection(arg0) {
   let obj2 = { title: null, description: null };
   const tmp = closure_7();
   const intl = util.intl;
-  obj2.title = intl.string(_modDef2429.TV3Vm8);
+  obj2.title = intl.string(_modDef2512.TV3Vm8);
   const intl2 = util.intl;
-  obj2.description = intl2.string(_modDef2429.STx9hp);
+  obj2.description = intl2.string(_modDef2512.STx9hp);
   const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj2)];
   items[1] = closure_4(View, {
     style: tmp.container,

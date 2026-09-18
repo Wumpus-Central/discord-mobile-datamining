@@ -24,8 +24,8 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(9986).AutocompleterResultTypes.USER];
-const createStyles = fn(4640);
+let items = [fn(10080).AutocompleterResultTypes.USER];
+const createStyles = fn(4722);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   searchFieldContainer: null,
@@ -57,10 +57,10 @@ let closure_20 = noop.memo((guild) => {
     let formatToPlainStringResult;
     if (found.length > 0) {
       const user = UserStore.getUser(guildMember.userId);
-      let str = guildMember(4792).getNickname(guild.id, undefined, user);
+      let str = guildMember(4874).getNickname(guild.id, undefined, user);
       if (str == null) {
-        str = tmp9(4484).getGlobalName(user);
-        const tmp9Result = tmp9(4484);
+        str = tmp9(4566).getGlobalName(user);
+        const tmp9Result = tmp9(4566);
       }
       if (str == null) {
         let username;
@@ -77,7 +77,7 @@ let closure_20 = noop.memo((guild) => {
       const intl = tmp2(1115).intl;
       const obj3 = { memberName: str, roleNames: joined };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(1115).t["6eGpWx"], obj3);
-      const obj2 = guildMember(4792);
+      const obj2 = guildMember(4874);
       tmp9 = guildMember;
     }
     const obj4 = {
@@ -103,7 +103,7 @@ let closure_20 = noop.memo((guild) => {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(11100), obj4);
+    return closure_15(guildMember(11193), obj4);
   }
   const obj = guild(1484);
 });
@@ -303,12 +303,12 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(9951), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(10045), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1115).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1115).t.ogxXGq);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_15(closure_1_0(7491).HeaderActionButton, obj);
+            return closure_1_15(closure_1_0(7573).HeaderActionButton, obj);
           },
         });
       },

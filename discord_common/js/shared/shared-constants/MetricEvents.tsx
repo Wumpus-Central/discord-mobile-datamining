@@ -29,6 +29,8 @@ const obj = {
     "explicit_media_sender_fp_button_view",
     "family_center_view",
     "forum_channel_grid_auto_enabled",
+    "frame_session_join",
+    "frame_session_join_failed",
     "google_wallet_availability_check",
     "google_wallet_method_impression",
     "google_wallet_method_selected",
@@ -89,6 +91,8 @@ const set = new Set([
   "explicit_media_sender_fp_button_view",
   "family_center_view",
   "forum_channel_grid_auto_enabled",
+  "frame_session_join",
+  "frame_session_join_failed",
   "google_wallet_availability_check",
   "google_wallet_method_impression",
   "google_wallet_method_selected",
@@ -185,5 +189,7 @@ export const MetricEvents = {
   PRICE_DRIFT_IN_CHECKOUT: "price_drift_in_checkout",
   IOS_ATTRIBUTION_IMPRESSION: "ios_attribution_impression",
   IOS_ATTRIBUTION_CLICK: "ios_attribution_click",
+  FRAME_SESSION_JOIN: "frame_session_join",
+  FRAME_SESSION_JOIN_FAILED: "frame_session_join_failed",
 };
 export const MetricEventsSets = obj;

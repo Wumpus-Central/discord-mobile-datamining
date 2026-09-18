@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import BottomSheetModal from "../../../../../../_runtime/06738_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/06820_BottomSheetModal.js";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import StageSparkleDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
-import _modDef9953 from "../../../../../../_runtime/metro/09953__.js";
+import _modDef10047 from "../../../../../../_runtime/metro/10047__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -19,7 +19,7 @@ function EmptyDisplay(arg0) {
   const obj = { style: null, children: null };
   const items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  const obj2 = { icon: _modDef9953 };
+  const obj2 = { icon: _modDef10047 };
   const items1 = [React5(StageSparkleDefault, obj2), children];
   obj.children = items1;
   return React6(View, obj);
@@ -54,7 +54,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   const obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   const obj2 = { style: tmp.remainingUsersIconContainer, children: null };
-  const obj3 = { source: _modDef9953, style: tmp.remainingUsersIcon };
+  const obj3 = { source: _modDef10047, style: tmp.remainingUsersIcon };
   obj2.children = React5(FastImageDefault, obj3);
   obj.leading = React5(View, obj2);
   const intl = util.intl;
@@ -230,7 +230,7 @@ const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   staticMessageContentContainer: { flex: 1, padding: 16 },
   userList: { paddingTop: 16 },
@@ -264,7 +264,7 @@ const memoResult = noop.memo((eventUser) => {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = closure_9();
-  analyticsLocations = analyticsLocations(7276)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7358)().analyticsLocations;
   const items = [UserStore];
   const stateFromStores = eventUser(504).useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
   const obj = eventUser(504);
@@ -303,16 +303,16 @@ const memoResult = noop.memo((eventUser) => {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = tmp2(4484).getName(eventUser.user);
-    const tmp2Result2 = tmp2(4484);
+    nick = tmp2(4566).getName(eventUser.user);
+    const tmp2Result2 = tmp2(4566);
   }
   obj6.nick = nick;
   ({ userName: obj5.usernameStyle, userName: obj5.nicknameStyle } = tmp);
-  obj3.label = closure_7(analyticsLocations(9954), obj6);
+  obj3.label = closure_7(analyticsLocations(10048), obj6);
   obj3.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8748).FormRow, obj3, eventUser.user_id);
+  return closure_7(eventUser(8831).FormRow, obj3, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 size = fn(2);

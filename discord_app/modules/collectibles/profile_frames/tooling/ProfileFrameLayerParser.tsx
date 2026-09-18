@@ -7,15 +7,15 @@ require = fn;
 const preview = "preview";
 const responsive = "responsive";
 const items = [
-  fn(8356).ProfileFrameLayerType.STAPLE,
-  fn(8356).ProfileFrameLayerType.RAIL,
-  fn(8356).ProfileFrameLayerType.BORDER,
+  fn(8438).ProfileFrameLayerType.STAPLE,
+  fn(8438).ProfileFrameLayerType.RAIL,
+  fn(8438).ProfileFrameLayerType.BORDER,
 ];
 const set = new Set(items);
 const items1 = [
-  fn(8357).ProfileFrameLayerAnchor.TOP,
-  fn(8357).ProfileFrameLayerAnchor.BOTTOM,
-  fn(8357).ProfileFrameLayerAnchor.CENTER,
+  fn(8439).ProfileFrameLayerAnchor.TOP,
+  fn(8439).ProfileFrameLayerAnchor.BOTTOM,
+  fn(8439).ProfileFrameLayerAnchor.CENTER,
 ];
 const set1 = new Set(items1);
 let obj2 = {
@@ -33,15 +33,15 @@ const items3 = [...set1];
 obj3[obj2.INVALID_ANCHOR] = "invalid anchor (expected: " + items3.join(", ") + ")";
 obj3[obj2.INVALID_RESPONSIVE] = "invalid suffix (expected '" + "responsive" + "')";
 obj3[obj2.BORDER_HAS_ANCHOR] = "border layers must omit the anchor";
-const dependencyMap = { [fn(8355).ProfileFrameLayerOrder.FRONT]: 0, [fn(8355).ProfileFrameLayerOrder.BACK]: 1 };
+const dependencyMap = { [fn(8437).ProfileFrameLayerOrder.FRONT]: 0, [fn(8437).ProfileFrameLayerOrder.BACK]: 1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx");
 
 export const PREVIEW_FILENAME = "preview";
 export const RESPONSIVE_KEYWORD = "responsive";
 export const FOLDER_ORDER_MAP = {
-  foreground: fn(8355).ProfileFrameLayerOrder.FRONT,
-  background: fn(8355).ProfileFrameLayerOrder.BACK,
+  foreground: fn(8437).ProfileFrameLayerOrder.FRONT,
+  background: fn(8437).ProfileFrameLayerOrder.BACK,
 };
 export const ParseErrorKind = obj2;
 export const PARSE_ERROR_LABELS = obj3;

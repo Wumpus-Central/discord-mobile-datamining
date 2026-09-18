@@ -5,13 +5,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const StickerAnimationSettings = fn(1939).StickerAnimationSettings;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.R5nQkS);
   },
-  parent: fn(8111).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8194).MobileUserSettings.ACCESSIBILITY,
   useValue: fn(1936).AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
     const AnimateStickers = UserSettings.AnimateStickers;

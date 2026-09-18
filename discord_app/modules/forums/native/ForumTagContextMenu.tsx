@@ -14,11 +14,11 @@ export default function ForumTagContextMenu(children) {
   const enabled = DeveloperMode.useSetting();
   const intl = tagId(1115).intl;
   obj.label = intl.string(tagId(1115).t["8VG6IY"]);
-  obj.IconComponent = tagId(10778).IdIcon;
+  obj.IconComponent = tagId(10872).IdIcon;
   obj.action = function action() {
     ClipboardUtils.copy(tagId);
     ToastUtils.presentIdCopied();
   };
   const items = [obj];
-  return jsx(tagId(8052).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
+  return jsx(tagId(8135).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
 }

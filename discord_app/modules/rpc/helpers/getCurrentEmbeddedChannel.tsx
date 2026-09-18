@@ -3,8 +3,8 @@ import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivity
 import FramesStore from "../../frames/FramesStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-const TransportTypes = fn(4544).TransportTypes;
-const EmbeddedSurfaceType = fn(9665).EmbeddedSurfaceType;
+const TransportTypes = fn(4626).TransportTypes;
+const EmbeddedSurfaceType = fn(9749).EmbeddedSurfaceType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedChannel.tsx");
 

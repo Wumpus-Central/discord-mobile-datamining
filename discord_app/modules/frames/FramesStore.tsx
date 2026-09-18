@@ -53,8 +53,8 @@ prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
     continue;
   }
 };
-prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
-  return map.get(React5(arg0, arg1));
+prototype["getFrameBySurface"] = function getFrameBySurface(previewAppId, surface) {
+  return map.get(React5(previewAppId, surface));
 };
 prototype["getFramesForSurface"] = function getFramesForSurface(arg0) {
   closure_0 = arg0;

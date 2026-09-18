@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center", marginHorizontal: 36 },
   emptyImage: { width: 170, height: 130 },

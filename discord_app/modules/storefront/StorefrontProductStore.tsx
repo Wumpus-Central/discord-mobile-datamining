@@ -105,6 +105,17 @@ prototype["getProductsForSku"] = function getProductsForSku(nextResult) {
   }
   return tmp;
 };
+prototype["hasPricingCoverage"] = function hasPricingCoverage(arg0) {
+  let tmp = null != arg0;
+  if (tmp) {
+    let includePricing;
+    if (dependencyMap[arg0] != null) {
+      includePricing = tmp3.includePricing;
+    }
+    tmp = includePricing;
+  }
+  return true === tmp;
+};
 StorefrontProductStore.displayName = "StorefrontProductStore";
 const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH: function handleProductsWithSkusFetch(productIds) {
@@ -114,7 +125,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       if (dependencyMap[item] != null) {
         product = tmp2.product;
       }
-      dependencyMap[item] = { state: "loading", product };
+      dependencyMap[item] = { state: "loading", product, includePricing: true };
     });
   },
   STOREFRONT_PRODUCTS_WITH_SKUS_FETCH_SUCCESS: function handleProductsWithSkusFetchSuccess(arg0) {
@@ -123,7 +134,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
     const set = new Set();
     const item = products.forEach((id) => {
       set.add(id.id);
-      fetchedAt[id.id] = { state: "success", product: id, fetchedAt };
+      fetchedAt[id.id] = { state: "success", product: id, fetchedAt, includePricing: true };
     });
     const item1 = productIds.forEach((item) => {
       if (!set.has(item)) {
@@ -173,7 +184,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       }
     });
     const item1 = products.forEach((product) => {
-      fetchedAt[product.id] = { state: "success", product, fetchedAt };
+      fetchedAt[product.id] = { state: "success", product, fetchedAt, includePricing: true };
     });
   },
   STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE: function handleProductsBySkuIdsFetchFailure(arg0) {
@@ -183,25 +194,61 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       fetchedAt[item] = { state: "error", fetchedAt, fetchError };
     });
   },
-  STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function handleCollectionsWithProductsFetchSuccess(collections) {
-    collections = collections.collections;
-    closure_0 = Date.now();
+  STOREFRONT_COLLECTIONS_WITH_PRODUCTS_FETCH_SUCCESS: function handleCollectionsWithProductsFetchSuccess(arg0) {
+    ({ collections, includePricing: closure_0 } = arg0);
+    closure_1 = Date.now();
     let item = collections.forEach((products) => {
       products = products.products;
-      const item = products.forEach((product) => {
-        closure_0[product.id] = { state: "success", product, fetchedAt };
+      let item = products.forEach((id) => {
+        includePricing = id;
+        if (!includePricing) {
+          let state;
+          if (tmp3 != null) {
+            state = tmp3.state;
+          }
+          if ("success" === state) {
+            if (tmp3.includePricing) {
+              let obj = {};
+              const merged = Object.assign(tmp3);
+              obj.fetchedAt = fetchedAt;
+              closure_1_0[id.id] = obj;
+            }
+            if (tmp2) {
+              const skuIds = id.skuIds;
+              const item = skuIds.forEach((item) => {
+                const obj = { state: "success", products: null, fetchedAt };
+                const items = [closure_0];
+                obj.products = items;
+                closure_1[item] = obj;
+              });
+            }
+          }
+        }
+        closure_1_0[id.id] = { state: "success", product: id, fetchedAt, includePricing };
       });
     });
   },
-  STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(
-    collections,
-  ) {
-    collections = collections.collections;
-    closure_0 = Date.now();
+  STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_SUCCESS: function handleCollectionsForApplicationFetchSuccess(arg0) {
+    ({ collections, includePricing: closure_0 } = arg0);
+    closure_1 = Date.now();
     let item = collections.forEach((products) => {
       products = products.products;
-      const item = products.forEach((product) => {
-        closure_0[product.id] = { state: "success", product, fetchedAt };
+      const item = products.forEach((id) => {
+        if (!includePricing) {
+          let state;
+          if (tmp3 != null) {
+            state = tmp3.state;
+          }
+          if ("success" === state) {
+            if (tmp3.includePricing) {
+              const obj = {};
+              const merged = Object.assign(tmp3);
+              obj.fetchedAt = fetchedAt;
+              dependencyMap[id.id] = obj;
+            }
+          }
+        }
+        dependencyMap[id.id] = { state: "success", product: id, fetchedAt, includePricing };
       });
     });
   },
@@ -214,7 +261,7 @@ const storefrontProductStore = new StorefrontProductStore(DispatcherDefault, {
       products = products.products;
       let item = products.forEach((product) => {
         fetchedAt = product;
-        closure_1_0[product.id] = { state: "success", product, fetchedAt };
+        closure_1_0[product.id] = { state: "success", product, fetchedAt, includePricing: true };
         const skuIds = product.skuIds;
         const item = skuIds.forEach((item) => {
           const obj = { state: "success", products: null, fetchedAt };

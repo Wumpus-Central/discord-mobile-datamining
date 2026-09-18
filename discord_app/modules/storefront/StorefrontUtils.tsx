@@ -58,7 +58,7 @@ function useSKUPrice(sku) {
       if (null != stateFromStores1) {
         let tmp12 = stateFromStores1[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = stateFromStores1[tmp4(undefined, 7347).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores1[tmp4(undefined, 7429).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -75,7 +75,7 @@ function useSKUPrice(sku) {
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj2;
   }, items1);
   userPrice = memo.userPrice;
@@ -335,7 +335,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
       if (null != stateFromStores1) {
         let tmp12 = stateFromStores1[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = stateFromStores1[tmp4(undefined, 7347).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores1[tmp4(undefined, 7429).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {
@@ -352,7 +352,7 @@ export const useSKUOrbPrice = function useSKUOrbPrice(sku) {
         return obj;
       }
     }
-    const obj2 = { userPrice: "r", pricesForPurchaseType: "w", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
+    const obj2 = { userPrice: "r", pricesForPurchaseType: "ip", purchaseType: SELF_PURCHASE, storeHasPrice: null != stateFromStores1 };
     return obj2;
   }, items1);
   let userPrice = memo.userPrice;

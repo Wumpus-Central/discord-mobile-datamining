@@ -50,7 +50,7 @@ function VariantCheckmark(variant) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let obj2 = {
   container: {
     flex: 1,
@@ -83,7 +83,7 @@ obj2.variantsContainer = {
 };
 obj2.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(4640);
+createStyles = fn(4722);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = {
     width: 28,

@@ -173,7 +173,7 @@ const Constants = fn(1074);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(9659).ActivityPanelModes;
+const ActivityPanelModes = fn(9743).ActivityPanelModes;
 const ThreadMemberFlags = fn(1114).ThreadMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");

@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06766_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06848_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -200,7 +200,7 @@ function YouBarAvatarLarge(transitionState) {
       status: null,
       statusSizeOverride: null,
       cutout: null,
-      statusStyle: "WEBHOOKS_FETCHING",
+      statusStyle: "heading-lg/semibold",
     };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
@@ -351,7 +351,7 @@ function YouBarAvatar(transitionState) {
       needsOffscreenAlphaCompositing: null,
       avatarDecoration,
       status: true,
-      autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi",
+      autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==",
     };
     if (OFFLINE === StatusTypes.UNKNOWN) {
       OFFLINE = StatusTypes.OFFLINE;
@@ -372,7 +372,7 @@ function YouBarAvatar(transitionState) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(15210);
+const YouBarConstants = fn(15304);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -388,7 +388,7 @@ const YouBarConstants = fn(15210);
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};

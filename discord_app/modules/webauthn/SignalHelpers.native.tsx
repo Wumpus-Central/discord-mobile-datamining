@@ -35,13 +35,13 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const result = credentials(6709).encodeUserIdForWebAuthn(closure_1);
+            const result = credentials(6791).encodeUserIdForWebAuthn(closure_1);
             const mapped = credentials.map((cred_id) => cred_id.cred_id);
             const found = mapped.filter((item) => "" !== item);
             const obj4 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
             logger.info("signalAllAcceptedCredentials", obj4);
-            const obj5 = credentials(6709);
-            const result1 = v1(6710).signalAllAcceptedCredentials(rpId, result, found);
+            const obj5 = credentials(6791);
+            const result1 = v1(6792).signalAllAcceptedCredentials(rpId, result, found);
             v1 = 1;
             credentials = 1;
             const obj6 = { value: result1.catch(logger.warn), done: false };

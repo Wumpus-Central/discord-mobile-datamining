@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { iconContainer: null };
 let size = {
   width: 40,
@@ -39,16 +39,16 @@ export default noop.memo(function MessageFailedToSendNotification(notification) 
   const obj2 = { icon: null, children: null, header: null, onPress: null, notification: null };
   const obj3 = { style: closure_6().iconContainer, children: null };
   const tmp = closure_6();
-  obj3.children = jsx(channelId(10326).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
+  obj3.children = jsx(channelId(10420).RetryIcon, { size: "md", color: messageId(576).colors.ICON_SUBTLE });
   obj2.icon = <View style={closure_6().iconContainer}>{null}</View>;
   const obj5 = { text: null };
   const intl2 = channelId(1115).intl;
   obj5.text = intl2.string(channelId(1115).t.xxRPOT);
-  obj2.children = jsx(channelId(10256).SystemMessageText, { text: null });
+  obj2.children = jsx(channelId(10350).SystemMessageText, { text: null });
   obj2.header = obj;
   obj2.onPress = callback;
   obj2.notification = notification;
-  return jsx(channelId(10316).NotificationPressable, {
+  return jsx(channelId(10410).NotificationPressable, {
     icon: null,
     children: null,
     header: null,

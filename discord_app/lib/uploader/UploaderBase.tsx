@@ -6,7 +6,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
 const AbortCodes = fn(1074).AbortCodes;
-const FileUploadErrorTypes = fn(4633).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4715).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -85,7 +85,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "channel",
+      items: "call",
     };
     return tmp3;
   }
@@ -140,7 +140,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
                 target = item.target;
               }
             }
-            const uploadTarget = _self(5262).getUploadTarget(target);
+            const uploadTarget = _self(5344).getUploadTarget(target);
             closure_132_0 = uploadTarget;
             if (self.files.length > uploadTarget.getMaxAttachmentsCount()) {
               const _HermesInternal2 = HermesInternal;
@@ -150,14 +150,14 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
               c9 = 3;
               return { value: false, done: true };
             } else {
-              kestrelConfig = _self(5267).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
+              kestrelConfig = _self(5349).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
               const _HermesInternal3 = HermesInternal;
               tmp65.log("compressing files for " + self.id);
               const files = self.files;
               _self = files[Symbol.iterator]();
-              const obj15 = _self(5267);
+              const obj15 = _self(5349);
             }
-            const obj14 = _self(5262);
+            const obj14 = _self(5344);
           }
         } else if (1 === tmp9) {
           c7 = 0;
@@ -198,7 +198,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             c9 = 3;
             return { value: false, done: true };
           } else {
-            effectiveKestrelLimit = _self(5267).getEffectiveKestrelLimit(
+            effectiveKestrelLimit = _self(5349).getEffectiveKestrelLimit(
               kestrelConfig,
               closure_132_0.getMaxFileSize(closure_132_2.channelId),
             );
@@ -219,7 +219,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             } else {
               c7 = 0;
             }
-            const obj13 = _self(5267);
+            const obj13 = _self(5349);
           }
         }
         if (_self === undefined) {

@@ -32,10 +32,10 @@ function Scope(arg0) {
   };
   if (isFake) {
     const obj3 = { style: tmp.fakeScopeIcon, color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    let tmp10Result = React4(tmp6(6727).CircleXIcon, obj3);
+    let tmp10Result = React4(tmp6(6809).CircleXIcon, obj3);
   } else {
     const obj4 = { color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    tmp10Result = React4(tmp6(4599).CircleCheckIcon, obj4);
+    tmp10Result = React4(tmp6(4681).CircleCheckIcon, obj4);
   }
   obj2.children = tmp10Result;
   const items = [React4(View, obj2)];
@@ -44,11 +44,11 @@ function Scope(arg0) {
   if (isFake) {
     str3 = "text-muted";
   }
-  const items1 = [React4(tmp6(4636).Text, { variant: "text-md/normal", color: str3, children: text })];
+  const items1 = [React4(tmp6(4718).Text, { variant: "text-md/normal", color: str3, children: text })];
   let tmp10Result2 = null;
   if (null != error) {
     const obj6 = { variant: "text-xs/normal", children: error };
-    tmp10Result2 = React4(tmp6(4636).Text, obj6);
+    tmp10Result2 = React4(tmp6(4718).Text, obj6);
   }
   items1[1] = tmp10Result2;
   obj5.children = items1;
@@ -59,7 +59,7 @@ function Scope(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_6 = createStyles.createStyles({
   scopesContainer: { flexDirection: "column", gap: 16 },
   scopes: { flexDirection: "column", gap: 16 },
@@ -90,20 +90,20 @@ export default function AuthorizeScopes(accountScopes) {
       PZpY9c = t["1Hz+Sl"];
       tmp5 = tmp15;
     }
-    let hasItem = integrationType === tmp5(9399).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp5(9483).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(tmp5(8488).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(tmp5(8571).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     let obj = { style: tmp.scopesContainer, children: null };
     const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
     const intl = tmp5(1115).intl;
     const obj3 = { application: application.name };
     obj2.children = intl.format(PZpY9c, obj3);
-    const items = [closure_4(tmp5(4636).Text, obj2)];
+    const items = [closure_4(tmp5(4718).Text, obj2)];
     const obj4 = { style: tmp.scopes, children: null };
     const mapped = accountScopes.map((item) => {
       closure_0 = item;
-      const scopeNames = accountScopes(9392).getScopeNames(item, closure_0);
+      const scopeNames = accountScopes(9476).getScopeNames(item, closure_0);
       return scopeNames.map((text, index) => {
         const obj = { text, error: null };
         let tmp3;

@@ -206,8 +206,8 @@ prototype["getApplicationLastUpdated"] = function getApplicationLastUpdated(arg0
 prototype["isFetchingApplication"] = function isFetchingApplication(appId) {
   return true === map5.get(appId);
 };
-prototype["isHydrated"] = function isHydrated(item) {
-  return set.has(item);
+prototype["isHydrated"] = function isHydrated(applicationId) {
+  return set.has(applicationId);
 };
 prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(applicationId) {
   return false === map5.get(applicationId);

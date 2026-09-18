@@ -8,13 +8,13 @@ import ApexExperimentStore from "../../../experiments/apex/ApexExperimentStore.t
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(15707).BeakerIcon,
+  IconComponent: fn(15802).BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
     const items = [ExperimentStore];
     const stateFromStores = initialize.useStateFromStores(

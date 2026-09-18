@@ -34,7 +34,7 @@ let closure_15 = async function _navigateToGuild() {
   return "PX_16";
 };
 GlobalDiscoveryServersSearchResultsStoreDefault;
-const GlobalDiscoveryServersConstants = fn(9220);
+const GlobalDiscoveryServersConstants = fn(9304);
 ({
   GlobalDiscoveryServerTab: closure_7,
   FEATURED_GUILDS_CACHE_DURATION: closure_8,
@@ -221,8 +221,8 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "isArray",
-    discoverySplash: false,
-    emojis: false,
+    discoverySplash: "id",
+    emojis: "Array",
   };
   ({
     approximate_presence_count: obj.presenceCount,

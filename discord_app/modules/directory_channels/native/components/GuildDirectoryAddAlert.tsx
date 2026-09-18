@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   guildIcon: { marginBottom: 16, borderRadius: nativeDefault.radii.sm },
   title: { marginBottom: 8, textAlign: "center" },

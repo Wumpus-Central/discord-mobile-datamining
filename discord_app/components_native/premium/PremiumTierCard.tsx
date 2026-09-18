@@ -2,24 +2,24 @@
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../ConstantsIOS.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
-import LinearGradientDefault from "../../../_runtime/05074_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05156_LinearGradient.js";
 import Card from "../../design/components/Card/native/Card.native.tsx";
-import _modDef8205 from "../../../_runtime/metro/08205__.js";
-import _modDef9539 from "../../../_runtime/metro/09539__.js";
-import _modDef10864 from "../../../_runtime/metro/10864__.js";
-import _modDef10865 from "../../../_runtime/metro/10865__.js";
-import _modDef13677 from "../../../_runtime/metro/13677__.js";
-import _modDef13678 from "../../../_runtime/metro/13678__.js";
+import _modDef8287 from "../../../_runtime/metro/08287__.js";
+import _modDef9623 from "../../../_runtime/metro/09623__.js";
+import _modDef10958 from "../../../_runtime/metro/10958__.js";
+import _modDef10959 from "../../../_runtime/metro/10959__.js";
+import _modDef13769 from "../../../_runtime/metro/13769__.js";
+import _modDef13770 from "../../../_runtime/metro/13770__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const getPremiumGradientColor = fn(7546).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7628).getPremiumGradientColor;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   header: { marginTop: 24, padding: 16 },
   textLogoTier0: { width: 158, height: 32 },
@@ -62,11 +62,11 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef13677;
+    let tmp5Result = _modDef13769;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef13678;
+    tmp5Result = _modDef13770;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result = _modDef8205;
+    tmp5Result = _modDef8287;
   }
   obj2.source = tmp5Result;
   obj.children = React5(React4, obj2);
@@ -82,11 +82,11 @@ export default function _default(premiumType) {
   const obj4 = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result2 = _modDef9539;
+    let tmp5Result2 = _modDef9623;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result2 = _modDef10864;
+    tmp5Result2 = _modDef10958;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result2 = _modDef10865;
+    tmp5Result2 = _modDef10959;
   }
   const obj5 = { children: null };
   obj4.source = tmp5Result2;

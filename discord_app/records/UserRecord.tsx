@@ -405,8 +405,8 @@ Object.defineProperty(prototype, "tag", {
   },
   set: undefined,
 });
-prototype["hasPurchasedFlag"] = function hasPurchasedFlag(PREMIUM_TIER_2) {
-  return FlagUtils.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
+prototype["hasPurchasedFlag"] = function hasPurchasedFlag(PREMIUM_TIER_0) {
+  return FlagUtils.hasFlag(this.purchasedFlags, PREMIUM_TIER_0);
 };
 prototype["hasPremiumUsageFlag"] = function hasPremiumUsageFlag(IS_ANIMATED) {
   return FlagUtils.hasFlag(this.premiumUsageFlags, IS_ANIMATED);

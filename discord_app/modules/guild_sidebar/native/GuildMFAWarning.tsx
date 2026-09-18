@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import _modDef16360 from "../../../../_runtime/metro/16360__.js";
+import _modDef16457 from "../../../../_runtime/metro/16457__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -77,7 +77,7 @@ const Constants = fn(1074);
 ({ HelpdeskArticles: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" },
   MFAWarningIcon: { marginVertical: 10, width: 98, height: 53 },
@@ -92,7 +92,7 @@ const result = size.fileFinishedImporting("modules/guild_sidebar/native/GuildMFA
 export default function GuildMFAWarning() {
   const tmp = closure_8();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef16360 })];
+  const items = [timestampProducer(Image, { style: tmp.MFAWarningIcon, source: _modDef16457 })];
   const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = util.intl;
   const items1 = [intl.string(util.t.ZIf8Ag)];

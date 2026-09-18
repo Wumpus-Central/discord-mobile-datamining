@@ -3,10 +3,10 @@ import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import isEmbeddedActivityDefault from "../activities/utils/isEmbeddedActivity.tsx";
 import isCrunchyrollActivityDefault from "../activities/utils/isCrunchyrollActivity.tsx";
+import StageChannelRichPresenceUtils from "../stage_channels/StageChannelRichPresenceUtils.tsx";
 import StatusDisplayTypes from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
 import getChannelCopyForEmbeddedActivityDefault from "../activities/utils/getChannelCopyForEmbeddedActivity.tsx";
 import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";
-import StageChannelRichPresenceUtils from "../stage_channels/StageChannelRichPresenceUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ActivityTypes = Constants.ActivityTypes;

@@ -8,13 +8,13 @@ export const isInMentionRaidExperiment = function isInMentionRaidExperiment(guil
   const AutomodMentionRaidLimit = AutomodExperiment.AutomodMentionRaidLimit;
   return AutomodMentionRaidLimit.getCurrentConfig({ guildId, location: "988d4e_3" }).enabled;
 };
-export const useIsMentionRaidExperimentEnabled = function useIsMentionRaidExperimentEnabled(id, arg1) {
+export const useIsMentionRaidExperimentEnabled = function useIsMentionRaidExperimentEnabled(guildId, arg1) {
   let autoTrackExposure = arg1;
   if (arg1 === undefined) {
     autoTrackExposure = true;
   }
   const AutomodMentionRaidLimit = AutomodExperiment.AutomodMentionRaidLimit;
-  return AutomodMentionRaidLimit.useExperiment({ guildId: id, location: "988d4e_4" }, { autoTrackExposure }).enabled;
+  return AutomodMentionRaidLimit.useExperiment({ guildId, location: "988d4e_4" }, { autoTrackExposure }).enabled;
 };
 export const useIsApplicationRuleEnabled = function useIsApplicationRuleEnabled(guildId) {
   const AutomodApplicationRules = AutomodExperiment.AutomodApplicationRules;

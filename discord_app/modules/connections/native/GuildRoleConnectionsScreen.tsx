@@ -24,7 +24,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   content: { flexDirection: "column", alignItems: "center", padding: 16 },
@@ -99,7 +99,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
   closure_7 = undefined;
   let tmp = closure_16();
   dependencyMap = tmp;
-  _slicedToArray = onCloseModal(4574)();
+  _slicedToArray = onCloseModal(4656)();
   let items = [GuildRoleStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId));
   let obj = guildId(504);
@@ -142,7 +142,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
     const intl = tmp4(1115).intl;
     obj7 = { helpdeskArticleUrl: tmp2(2025).getArticleURL(constants2.CONNECTION_DETAILS) };
     obj6.children = intl.format(tmp4(1115).t["Y+TsEV"], obj7);
-    const items5 = [closure_14(tmp4(4636).Text, obj6)];
+    const items5 = [closure_14(tmp4(4718).Text, obj6)];
     const obj8 = {
       style: tmp.verifiedRoles,
       children: found.map((children) => {
@@ -241,14 +241,14 @@ export default function GuildRoleConnectionsScreen(guildId) {
                 },
               };
               obj4.openLazy(
-                asyncRequireImpl(11722, dependencyMap.paths),
+                asyncRequireImpl(11812, dependencyMap.paths),
                 "LeaveConnectionRoleActionSheet-" + tmp.id,
                 obj3,
               );
-              const tmp20 = asyncRequireImpl(11722, dependencyMap.paths);
+              const tmp20 = asyncRequireImpl(11812, dependencyMap.paths);
             } else {
               let obj = ActionSheetActionCreatorsDefault;
-              const tmp9 = asyncRequireImpl(11712, dependencyMap.paths);
+              const tmp9 = asyncRequireImpl(11802, dependencyMap.paths);
               const obj5 = { role: tmp, guildId, onCloseModal };
               obj.openLazy(
                 tmp9,

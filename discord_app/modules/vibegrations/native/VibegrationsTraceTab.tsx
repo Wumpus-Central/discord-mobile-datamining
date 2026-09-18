@@ -1,10 +1,11 @@
 // discord_app/modules/vibegrations/native/VibegrationsTraceTab.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
+import FileManagerUtils from "../../../utils/FileManagerUtils.native.tsx";
 import VibegrationsTraceFormat from "VibegrationsTraceFormat.tsx";
 import vibegrations_VibegrationsTraceFormat from "../lib/VibegrationsTraceFormat.tsx";
 import VibegrationsTraceUtils from "../lib/VibegrationsTraceUtils.tsx";
@@ -29,7 +30,7 @@ function TraceRow(entry) {
     if (null != entry.promptTokens) {
       const intl = util.intl;
       const obj3 = { tokens: vibegrations_VibegrationsTraceFormat.formatTokens(entry.promptTokens) };
-      let formatToPlainStringResult = intl.formatToPlainString(_modDef3593["PYO+Jv"], obj3);
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef3676["PYO+Jv"], obj3);
       const tmp2Result = vibegrations_VibegrationsTraceFormat;
     }
     const items = [tmp.rowSlot];
@@ -108,7 +109,7 @@ function TraceOverview(arg0) {
   let reduced;
   let tmp = closure_9();
   closure_1 = tmp;
-  dependencyMap = entries(16841).useTraceCategoryFillStyles();
+  dependencyMap = entries(16988).useTraceCategoryFillStyles();
   let items = [entries];
   const memo = reduced.useMemo(() => VibegrationsTraceUtils.traceCategoryTotals(entries), items);
   reduced = memo.reduce((acc, ms) => acc + ms.ms, 0);
@@ -138,7 +139,7 @@ function TraceOverview(arg0) {
   obj3.children = mapped;
   let items1 = [closure_7(View, obj3)];
   let obj4 = { style: tmp.legend, children: null };
-  const TRACE_CATEGORIES = entries(16843).TRACE_CATEGORIES;
+  const TRACE_CATEGORIES = entries(16990).TRACE_CATEGORIES;
   obj4.children = TRACE_CATEGORIES.map((item) => {
     closure_0 = item;
     const found = memo.find((category) => category.category === closure_0);
@@ -167,7 +168,7 @@ function TraceOverview(arg0) {
     items1[1] = React5(Text_Text.Text, obj3);
     const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     const intl = util.intl;
-    obj5.children = intl.formatToPlainString(_modDef3593.UffawN, { percent: num2 });
+    obj5.children = intl.formatToPlainString(_modDef3676.UffawN, { percent: num2 });
     items1[2] = React5(Text_Text.Text, obj5);
     const intl2 = util.intl;
     let num4;
@@ -180,7 +181,7 @@ function TraceOverview(arg0) {
     items1[3] = React5(Text_Text.Text, {
       variant: "text-xs/normal",
       color: "text-subtle",
-      children: intl2.formatToPlainString(_modDef3593.w8vPbe, { count: num4 }),
+      children: intl2.formatToPlainString(_modDef3676.w8vPbe, { count: num4 }),
     });
     let tmp6Result = null;
     if (0 !== num) {
@@ -209,10 +210,12 @@ function itemType(kind) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   list: { paddingHorizontal: nativeDefault.space.PX_16 },
   header: null,
+  tools: null,
+  search: null,
   placeholder: null,
   overview: null,
   overviewBar: null,
@@ -229,10 +232,13 @@ let obj2 = {
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.header = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
 let obj4 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
+obj2.tools = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj2.search = { flex: 1 };
+let obj5 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.placeholder = { padding: nativeDefault.space.PX_16 };
-let obj5 = { padding: nativeDefault.space.PX_16 };
+let obj6 = { padding: nativeDefault.space.PX_16 };
 obj2.overview = { gap: nativeDefault.space.PX_8 };
-let obj6 = { gap: nativeDefault.space.PX_8 };
+let obj7 = { gap: nativeDefault.space.PX_8 };
 obj2.overviewBar = {
   flexDirection: "row",
   height: 6,
@@ -240,7 +246,7 @@ obj2.overviewBar = {
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
 };
-let obj7 = {
+let obj8 = {
   flexDirection: "row",
   height: 6,
   borderRadius: nativeDefault.radii.xs,
@@ -248,10 +254,10 @@ let obj7 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG,
 };
 obj2.legend = { gap: nativeDefault.space.PX_4 };
-let obj8 = { gap: nativeDefault.space.PX_4 };
+let obj9 = { gap: nativeDefault.space.PX_4 };
 obj2.legendItem = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.swatch = { width: 8, height: 8, borderRadius: 4 };
-let obj9 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+let obj10 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.groupHead = {
   flexDirection: "row",
   alignItems: "baseline",
@@ -259,7 +265,7 @@ obj2.groupHead = {
   paddingTop: nativeDefault.space.PX_8,
   paddingBottom: nativeDefault.space.PX_8,
 };
-let obj10 = {
+let obj11 = {
   flexDirection: "row",
   alignItems: "baseline",
   gap: nativeDefault.space.PX_8,
@@ -267,11 +273,11 @@ let obj10 = {
   paddingBottom: nativeDefault.space.PX_8,
 };
 obj2.rowSlot = { paddingBottom: nativeDefault.space.PX_8 };
-let obj11 = { paddingBottom: nativeDefault.space.PX_8 };
+let obj12 = { paddingBottom: nativeDefault.space.PX_8 };
 obj2.rowNested = { marginLeft: nativeDefault.space.PX_16 };
-let obj12 = { marginLeft: nativeDefault.space.PX_16 };
+let obj13 = { marginLeft: nativeDefault.space.PX_16 };
 obj2.rowBody = { gap: nativeDefault.space.PX_4 };
-let obj13 = { gap: nativeDefault.space.PX_4 };
+let obj14 = { gap: nativeDefault.space.PX_4 };
 obj2.rowTop = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.rowTitle = { flexShrink: 1 };
 let closure_9 = createStyles.createStyles(obj2);
@@ -323,7 +329,7 @@ export default function VibegrationsTraceTab(projectId) {
           obj2.key = "group-" + turnId;
           const intl = util.intl;
           const obj3 = { number: index + 1 };
-          obj2.label = intl.formatToPlainString(_modDef3593["Y/j+TD"], obj3);
+          obj2.label = intl.formatToPlainString(_modDef3676["Y/j+TD"], obj3);
           obj2.started = VibegrationsTimeFormat.formatClockTime(turnId.startedAt);
           obj2.spanMs = turnId.spanMs;
           items.push(obj2);
@@ -345,6 +351,38 @@ export default function VibegrationsTraceTab(projectId) {
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items6);
   const items7 = [onPress, tmp];
+  const items8 = [stateFromStoresArray, projectId];
+  const callback1 = onPress.useCallback((item) => {
+    item = item.item;
+    if ("entry" === item.kind) {
+      const obj2 = { entry: item.entry, onPress };
+      let tmp9Result = React5(TraceRow, obj2);
+    } else {
+      const obj3 = { style: groupHead.groupHead, children: null };
+      const obj4 = { variant: "text-xs/semibold", color: "text-muted", children: item.label };
+      const items = [React5(Text_Text.Text, obj4), ,];
+      let tmp2 = null;
+      if (null != item.started) {
+        const obj = { variant: "text-xs/normal", color: "text-subtle", children: item.started };
+        tmp2 = React5(Text_Text.Text, obj);
+      }
+      items[1] = tmp2;
+      let tmp3 = null;
+      if (null != item.spanMs) {
+        const obj5 = {
+          variant: "text-xs/normal",
+          color: "text-subtle",
+          children: vibegrations_VibegrationsTraceFormat.formatDuration(item.spanMs),
+        };
+        tmp3 = React5(Text_Text.Text, obj5);
+        const tmp13Result = vibegrations_VibegrationsTraceFormat;
+      }
+      items[2] = tmp3;
+      obj3.children = items;
+      tmp9Result = React6(View, obj3);
+    }
+    return tmp9Result;
+  }, items7);
   if (0 === stateFromStoresArray.length) {
     let obj3 = { style: tmp.placeholder, children: null };
     let obj4 = { state: stateFromStores, emptyTitle: null, emptyBody: null };
@@ -352,14 +390,14 @@ export default function VibegrationsTraceTab(projectId) {
     obj4.emptyTitle = intl.string(tmp2(tmp3[10]).Iyt8OJ);
     const intl2 = tmp4(tmp3[9]).intl;
     obj4.emptyBody = intl2.string(tmp2(tmp3[10])["8pdPx5"]);
-    obj3.children = closure_7(tmp4(tmp3[20]).VibegrationsHistoryPlaceholder, obj4);
-    let tmp14 = closure_7(View, obj3);
+    obj3.children = closure_7(tmp4(tmp3[22]).VibegrationsHistoryPlaceholder, obj4);
+    let tmp15 = closure_7(View, obj3);
   } else {
     let obj5 = {
       data: memo,
       keyExtractor: itemKey,
       getItemType: itemType,
-      renderItem: tmp11,
+      renderItem: callback1,
       ListHeaderComponent: null,
       ListEmptyComponent: null,
       contentContainerStyle: null,
@@ -367,27 +405,37 @@ export default function VibegrationsTraceTab(projectId) {
     };
     const obj6 = { style: tmp.header, children: null };
     const obj7 = { entries: stateFromStoresArray };
-    const items8 = [closure_7(TraceOverview, obj7), ,];
-    const obj8 = { accessibilityLabel: null, placeholder: null, size: "sm", onChange: null };
+    const items9 = [closure_7(TraceOverview, obj7), ,];
+    const obj8 = { style: tmp.tools, children: null };
+    const obj9 = { style: tmp.search, children: null };
+    const obj10 = { accessibilityLabel: null, placeholder: null, size: "sm", onChange: null };
     const intl3 = tmp4(tmp3[9]).intl;
-    obj8.accessibilityLabel = intl3.string(tmp2(tmp3[10]).NfncNw);
+    obj10.accessibilityLabel = intl3.string(tmp2(tmp3[10]).NfncNw);
     const intl4 = tmp4(tmp3[9]).intl;
-    obj8.placeholder = intl4.string(tmp2(tmp3[10]).NfncNw);
-    obj8.onChange = tmp6[1];
-    items8[1] = closure_7(tmp4(tmp3[22]).SearchField, obj8);
-    const obj9 = { state: stateFromStores, hasRows: true };
-    items8[2] = closure_7(tmp4(tmp3[20]).VibegrationsHistoryNotice, obj9);
-    obj6.children = items8;
-    obj5.ListHeaderComponent = closure_8(View, obj6);
-    const obj10 = { variant: "text-sm/medium", color: "text-default", children: null };
+    obj10.placeholder = intl4.string(tmp2(tmp3[10]).NfncNw);
+    obj10.onChange = tmp6[1];
+    obj9.children = closure_7(tmp4(tmp3[24]).SearchField, obj10);
+    const items10 = [closure_7(View, obj9)];
+    const obj11 = { IconComponent: tmp4(tmp3[26]).DownloadIcon, onPress: tmp12, accessibilityLabel: null };
     const intl5 = tmp4(tmp3[9]).intl;
-    obj10.children = intl5.string(tmp2(tmp3[10])["Cpr+oM"]);
-    obj5.ListEmptyComponent = closure_7(tmp4(tmp3[13]).Text, obj10);
-    const items9 = [tmp.list];
-    const obj11 = { paddingBottom: tmp2(tmp3[6]).space.PX_16 + require("useSafeAreaInsets")().bottom };
-    items9[1] = obj11;
-    obj5.contentContainerStyle = items9;
-    tmp14 = closure_7(tmp4(tmp3[21]).FlashList, obj5);
+    obj11.accessibilityLabel = intl5.string(tmp2(tmp3[10]).A3Z3ar);
+    items10[1] = closure_7(tmp2(tmp3[25]), obj11);
+    obj8.children = items10;
+    items9[1] = closure_8(View, obj8);
+    const obj12 = { state: stateFromStores, hasRows: true };
+    items9[2] = closure_7(tmp4(tmp3[22]).VibegrationsHistoryNotice, obj12);
+    obj6.children = items9;
+    obj5.ListHeaderComponent = closure_8(View, obj6);
+    const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
+    const intl6 = tmp4(tmp3[9]).intl;
+    obj13.children = intl6.string(tmp2(tmp3[10])["Cpr+oM"]);
+    obj5.ListEmptyComponent = closure_7(tmp4(tmp3[13]).Text, obj13);
+    const items11 = [tmp.list];
+    const obj14 = { paddingBottom: tmp2(tmp3[6]).space.PX_16 + require("useSafeAreaInsets")().bottom };
+    items11[1] = obj14;
+    obj5.contentContainerStyle = items11;
+    tmp15 = closure_7(tmp4(tmp3[23]).FlashList, obj5);
+    const tmp2Result = tmp2(tmp3[25]);
   }
-  return tmp14;
+  return tmp15;
 }

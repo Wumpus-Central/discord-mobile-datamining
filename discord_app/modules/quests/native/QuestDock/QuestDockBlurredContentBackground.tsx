@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockBlurredContentBackground(blurTheme) {
   blurTheme = blurTheme.blurTheme;
   let str = "dark";
-  ({ animatedStyle, animatedLayout } = blurTheme);
+  ({ layoutAnimatedStyle, opacityAnimatedStyle, layoutAnimation } = blurTheme);
   if (undefined !== blurTheme) {
     str = blurTheme;
   }
@@ -37,9 +37,9 @@ export default noop.memo(function QuestDockBlurredContentBackground(blurTheme) {
     blurTheme: "dark",
     android_fallbackColor: memo,
     style: null,
-    layout: animatedLayout,
+    layout: layoutAnimation,
   };
-  const items2 = [StyleSheet.absoluteFillObject, animatedStyle];
+  const items2 = [StyleSheet.absoluteFillObject, layoutAnimatedStyle, opacityAnimatedStyle];
   obj.style = items2;
   return jsx(VisualEffectViewAnimatedDefault, {
     nativeID: "quest-dock-blurred-background",
@@ -48,6 +48,6 @@ export default noop.memo(function QuestDockBlurredContentBackground(blurTheme) {
     blurTheme: "dark",
     android_fallbackColor: memo,
     style: null,
-    layout: animatedLayout,
+    layout: layoutAnimation,
   });
 });

@@ -51,7 +51,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     CTALabel: null,
     onCTAPress: null,
   });
-  return jsx(markAsDismissed(7264).BottomSheet, {
+  return jsx(markAsDismissed(7346).BottomSheet, {
     onDismiss() {
       let tmpResult;
       if (markAsDismissed != null) {

@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: {
     flex: 1,
@@ -44,7 +44,7 @@ obj2.body = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(8861).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8945).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -53,7 +53,7 @@ let obj4 = {
   paddingVertical: nativeDefault.space.PX_16,
   paddingHorizontal: nativeDefault.space.PX_16,
   gap: nativeDefault.space.PX_32,
-  maxWidth: fn(8861).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8945).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };

@@ -6,7 +6,7 @@ import GuildStore from "GuildStore.tsx";
 import UserStore from "UserStore.tsx";
 
 require = fn;
-const ExperimentBuckets = fn(4556).ExperimentBuckets;
+const ExperimentBuckets = fn(4638).ExperimentBuckets;
 const Environments = fn(1384).Environments;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {

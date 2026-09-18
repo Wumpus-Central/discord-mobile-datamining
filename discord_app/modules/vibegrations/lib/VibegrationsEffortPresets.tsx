@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/VibegrationsEffortPresets.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3593 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsModelLabels from "VibegrationsModelLabels.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ const items = [
     fast: true,
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3593.Mo0a1m);
+      return intl.string(_modDef3676.Mo0a1m);
     },
   },
   {
@@ -19,7 +19,7 @@ const items = [
     thinking: "high",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3593.dkt78K);
+      return intl.string(_modDef3676.dkt78K);
     },
   },
   {
@@ -27,7 +27,7 @@ const items = [
     thinking: "medium",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3593.Ly6zYL);
+      return intl.string(_modDef3676.Ly6zYL);
     },
   },
 ];
@@ -137,7 +137,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (true === fast) {
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3593.qOoAsd);
+    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3676.qOoAsd);
   }
   return combined1;
 };

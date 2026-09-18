@@ -81,10 +81,10 @@ let Constants = fn(1074);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(4687);
+const StreamSettingsConstants = fn(4769);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13917).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(4665);
+let closure_24 = fn(14010).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(4747);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -177,7 +177,7 @@ class RTCConnection extends tmp5 {
     };
     tmp11 = closure_1;
     tmp12 = closure_3;
-    obj._alertMLSFailureDebouced = closure_1(closure_3[64])(obj._alertMLSFailure, 100);
+    obj._alertMLSFailureDebouced = closure_1(closure_3[65])(obj._alertMLSFailure, 100);
     obj._handleNetworkOnline = function _handleNetworkOnline() {
       obj.expeditedHeartbeat(5000, "network detected online.");
     };
@@ -1911,7 +1911,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   });
   if (self.context === constants6.STREAM) {
     if ("streamer" === self.getVoiceParticipantType()) {
-      const tmp19ResultResult = tmp19(4778)("RTCConnection", UserStore.getCurrentUser(), self.guildId);
+      const tmp19ResultResult = tmp19(4860)("RTCConnection", UserStore.getCurrentUser(), self.guildId);
       let maxResolution;
       if (tmp19ResultResult != null) {
         maxResolution = tmp19ResultResult.maxResolution;
@@ -1921,13 +1921,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
         num = 921600;
       }
       const result1 = connectResult.setFakeGoLiveEncodePixelCount(num);
-      const tmp19Result = tmp19(4778);
+      const tmp19Result = tmp19(4860);
     }
   }
   if (MediaEngineStore.supports(constants5.IMAGE_QUALITY_MEASUREMENT)) {
-    const result2 = connectResult.setVideoQualityMeasurement(
-      "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec",
-    );
+    const SingleCpuCopyExperiment = tmp2(14023).SingleCpuCopyExperiment;
+    let str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec";
+    if (SingleCpuCopyExperiment.getConfig({ location: "RTCConnection" }).enabled) {
+      str4 = "imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec,singleCopyExperiment";
+    }
+    const result2 = connectResult.setVideoQualityMeasurement(str4);
   }
   const result3 = connectResult.setVideoEncoderExperiments(
     MediaEngineStore.getVideoEncoderExperiments(self.context, self.getVoiceParticipantType()),
@@ -3442,7 +3445,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   const byteLength = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  dependencyMap = _connection(4669).now();
+  dependencyMap = _connection(4751).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3479,7 +3482,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   const byteLength = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  dependencyMap = _connection(4669).now();
+  dependencyMap = _connection(4751).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

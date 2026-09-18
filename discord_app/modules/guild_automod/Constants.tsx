@@ -40,5 +40,6 @@ export const MIN_MENTION_SPAM_LIMIT = 1;
 export const MAX_MENTION_SPAM_LIMIT = 50;
 export const MENTION_SPAM_LIMIT_DEFAULT = 20;
 export const MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH = 300;
+export const KEYWORDS_REGEX_PLACEHOLDER = "^b(a|@)d$\nw(o|0)rd(s|$)";
 export const SUBMIT_FEEDBACK_MODAL_KEY = "automod-submit-feedback";
 export const QUARANTINE_USER_ALERT_KEY = "automod-profile-quarantine-alert";

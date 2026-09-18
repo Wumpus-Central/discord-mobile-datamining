@@ -28,7 +28,7 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   card: { padding: nativeDefault.space.PX_12 },
   closeButton: null,
@@ -136,9 +136,9 @@ export default noop.memo((arg0) => {
               v1 = 1;
               v3 = 1;
               const obj5 = {
-                value: v1(7430).redirectDeveloperPortalWithHandoffToken(
+                value: v1(7512).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(7434).LoginHandoffSource.GAME_CLAIM,
+                  v3(7516).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };

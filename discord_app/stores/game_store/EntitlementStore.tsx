@@ -84,8 +84,8 @@ prototype["getForApplication"] = function getForApplication(arg0) {
     return set;
   }
 };
-prototype["getForSku"] = function getForSku(arg0) {
-  if (null == dependencyMap2[arg0]) {
+prototype["getForSku"] = function getForSku(SINGLE_ORB_SKU_ID) {
+  if (null == dependencyMap2[SINGLE_ORB_SKU_ID]) {
     return null;
   } else {
     const _Set = Set;

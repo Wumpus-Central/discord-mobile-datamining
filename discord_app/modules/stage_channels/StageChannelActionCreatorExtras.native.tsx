@@ -21,26 +21,26 @@ const setIsOnStartStageScreen = useIsOnStartStageScreenStore.setIsOnStartStageSc
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
 export const openStageChannelSettings = function openStageChannelSettings(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8546, dependencyMap.paths), hasOwnProperty, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8629, dependencyMap.paths), hasOwnProperty, { channel });
 };
 export function openEndGuildEventConfirmationModal() {}
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8745, dependencyMap.paths), React4, { channelId });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8828, dependencyMap.paths), React4, { channelId });
 };
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8773, dependencyMap.paths), timestampProducer, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8856, dependencyMap.paths), timestampProducer, {
     channel,
     onAccept,
   });
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8776, dependencyMap.paths), React5, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8859, dependencyMap.paths), React5, {
     channelId,
     onOpenRTCDebugOverlay,
   });
 };
 export const openEndStageModal = function openEndStageModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9235, dependencyMap.paths), React6, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9319, dependencyMap.paths), React6, { channel });
 };
 export const openStageChannel = function openStageChannel(isGuildStageVoice) {
   if (isGuildStageVoice.isGuildStageVoice()) {
@@ -50,7 +50,7 @@ export const openStageChannel = function openStageChannel(isGuildStageVoice) {
     } else {
       const obj3 = { channel: isGuildStageVoice };
       const obj2 = ModalActionCreatorsDefault;
-      const tmp4 = asyncRequireImpl(9620, dependencyMap.paths);
+      const tmp4 = asyncRequireImpl(9704, dependencyMap.paths);
       obj2.pushLazy(tmp4, obj3, PrivateChannelCallUtils.getVoiceChannelKey(isGuildStageVoice.id));
       const tmpResult2 = PrivateChannelCallUtils;
     }
@@ -78,7 +78,7 @@ export const navigateToStage = function navigateToStage(id, arg1) {
     } else {
       const obj3 = { channel: id };
       const obj2 = ModalActionCreatorsDefault;
-      const tmp6 = asyncRequireImpl(9620, dependencyMap.paths);
+      const tmp6 = asyncRequireImpl(9704, dependencyMap.paths);
       obj2.pushLazy(tmp6, obj3, PrivateChannelCallUtils.getVoiceChannelKey(id.id));
       const tmp3Result2 = PrivateChannelCallUtils;
     }

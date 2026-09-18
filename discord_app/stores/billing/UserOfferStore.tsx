@@ -95,10 +95,10 @@ let obj = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F466}\u{1F3FD}",
+  userDiscounts: "\u{1F468}\u{1F3FE}\u200D\u{1F9B0}",
   isFetching: true,
   lastFetchSuccessful: null,
-  shouldTriggerOffer: 8,
+  shouldTriggerOffer: 11,
   cooldownExpirationTimestamps: {
     [OfferTriggerTypes.CHANNEL_OPENED]: 0,
     [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0,

@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(9665);
+const FramesConstants = fn(9749);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
-const ActivityPanelModes = fn(9659).ActivityPanelModes;
+const ActivityPanelModes = fn(9743).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelFocusedView.tsx");

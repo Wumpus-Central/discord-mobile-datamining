@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_5 = createStyles.createStyles({
   search: {
     flex: 1,
@@ -14,7 +14,7 @@ let closure_5 = createStyles.createStyles({
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(7985).MIN_HEADER_HEIGHT,
+    height: fn(8068).MIN_HEADER_HEIGHT,
   },
 });
 const obj = {
@@ -24,7 +24,7 @@ const obj = {
     flexDirection: "row",
     alignItems: "center",
     paddingStart: 4,
-    height: fn(7985).MIN_HEADER_HEIGHT,
+    height: fn(8068).MIN_HEADER_HEIGHT,
   },
 };
 const size = fn(2);

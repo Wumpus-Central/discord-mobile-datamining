@@ -9,7 +9,7 @@ require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   searchButton: {
     backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,

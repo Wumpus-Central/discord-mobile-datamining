@@ -1,9 +1,9 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2691 from "../SafetyFlows.messages.js";
+import _modDef2774 from "../SafetyFlows.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
-import _modDef9720 from "../../../../_runtime/metro/09720__.js";
+import _modDef9814 from "../../../../_runtime/metro/09814__.js";
 import types from "../types.tsx";
 import constants from "../constants.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -36,9 +36,9 @@ let closure_7 = async function _fetchAndUpdateTask() {
 function navigateToScreenForTask(arr, task_type) {
   if (null == task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef9720, content: null };
+    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef9814, content: null };
     const intl = util.intl;
-    obj3.content = intl.string(_modDef2691["/fHz9S"]);
+    obj3.content = intl.string(_modDef2774["/fHz9S"]);
     ToastActionCreatorsDefault.open(obj3);
   } else {
     task_type = task_type.task_type;

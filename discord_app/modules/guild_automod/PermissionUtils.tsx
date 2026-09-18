@@ -5,8 +5,9 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
+const AutomodTriggerType = fn(12106).AutomodTriggerType;
 const Constants = fn(1074);
-({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
+({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/PermissionUtils.tsx");
 
@@ -46,6 +47,29 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
           }
           return canResult;
         }
+      }
+    },
+    items1,
+  );
+};
+export const useIsUndeletableMentionSpamRule = function useIsUndeletableMentionSpamRule(guildId, triggerType) {
+  _require = guildId;
+  dependencyMap = triggerType;
+  const items = [GuildStore];
+  const items1 = [guildId, triggerType];
+  return require("initialize").useStateFromStores(
+    items,
+    () => {
+      if (closure_1 !== AutomodTriggerType.MENTION_SPAM) {
+        return false;
+      } else {
+        const guild = GuildStore.getGuild(closure_0);
+        let hasItem = null != guild;
+        if (hasItem) {
+          const features = guild.features;
+          hasItem = features.has(constants.COMMUNITY);
+        }
+        return hasItem;
       }
     },
     items1,

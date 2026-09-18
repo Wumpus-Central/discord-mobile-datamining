@@ -1012,7 +1012,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(5360).getOrCreate(ids.channelId);
+    const orCreate = mutation(5442).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1061,14 +1061,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(5360).commit(tmp3);
+        tmp(5442).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(5360);
+        const tmpResult2 = tmp(5442);
       }
     }
-    let obj = mutation(5360);
+    let obj = mutation(5442);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);

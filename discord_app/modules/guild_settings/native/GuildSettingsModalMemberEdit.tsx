@@ -21,7 +21,6 @@ import GuildSettingsModalMembersActionCreatorsDefault from "../GuildSettingsModa
 import GuildDisableCommunicationActionCreators from "../../guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx";
 import TransferOwnershipModalActionCreatorsDefault from "../safety/native/TransferOwnershipModalActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -45,21 +44,17 @@ class GuildSettingsModalMemberEditScene {
     closure_2 = navigation;
     obj2 = guildId(closure_3[37]);
     items = [];
-    items[0] = closure_12;
+    items[0] = closure_11;
     stateFromStores = obj2.useStateFromStores(items, () => GuildStore.getGuild(guildId));
     closure_3 = stateFromStores;
     obj3 = guildId(closure_3[37]);
     items1 = [];
-    items1[0] = closure_11;
+    items1[0] = closure_10;
     stateFromStores1 = obj3.useStateFromStores(items1, () => GuildRoleStore.getSortedRoles(guildId));
     obj4 = guildId(closure_3[37]);
     items2 = [];
-    items2[0] = closure_6;
-    stateFromStores2 = obj4.useStateFromStores(items2, () => roleStyle.roleStyle);
-    obj5 = guildId(closure_3[37]);
-    items3 = [];
-    items3[0] = closure_14;
-    stateFromStoresObject = obj5.useStateFromStoresObject(items3, () => {
+    items2[0] = closure_13;
+    stateFromStoresObject = obj4.useStateFromStoresObject(items2, () => {
       const currentUser = UserStore.getCurrentUser();
       _modDef38(null != currentUser, "GuildSettingsModalMemberEditScene: current user cannot be undefined");
       return { user: UserStore.getUser(userId), currentUser };
@@ -72,14 +67,14 @@ class GuildSettingsModalMemberEditScene {
         userId(stateFromStores[32]).stopEditingRoles();
       };
     }, []);
-    obj6 = guildId(closure_3[37]);
-    items4 = [, , , ,];
-    items4[0] = closure_15;
-    items4[1] = closure_10;
-    items4[2] = closure_13;
-    items4[3] = closure_14;
-    items4[4] = closure_12;
-    stateFromStoresObject1 = obj6.useStateFromStoresObject(items4, () => {
+    obj5 = guildId(closure_3[37]);
+    items3 = [, , , ,];
+    items3[0] = closure_14;
+    items3[1] = closure_9;
+    items3[2] = closure_12;
+    items3[3] = closure_13;
+    items3[4] = closure_11;
+    stateFromStoresObject1 = obj5.useStateFromStoresObject(items3, () => {
       const obj = {
         member: GuildMemberStore.getMember(guildId, userId),
         nicknameError: GuildSettingsModalMembersStore.nicknameError,
@@ -133,56 +128,54 @@ class GuildSettingsModalMemberEditScene {
       );
       return obj;
     });
-    obj7 = guildId(closure_3[40]);
-    items5 = [];
-    items5[0] = userId;
-    subscribeGuildMembers = obj7.useSubscribeGuildMembers({ [guildId]: items5 }, "GuildSettingsModalMemberEdit");
+    obj6 = guildId(closure_3[40]);
+    items4 = [];
+    items4[0] = userId;
+    subscribeGuildMembers = obj6.useSubscribeGuildMembers({ [guildId]: items4 }, "GuildSettingsModalMemberEdit");
     [][0] = navigation;
-    tmp12 = null;
+    tmp11 = null;
     if (null != currentUser) {
-      tmp12 = null;
+      tmp11 = null;
       if (null != stateFromStores) {
-        tmp12 = null;
+        tmp11 = null;
         if (null != user) {
-          tmp13 = jsxs;
-          tmp14 = Fragment;
+          tmp12 = jsxs;
+          tmp13 = Fragment;
           obj1 = { children: null };
-          tmp15 = jsx;
-          tmp16 = GuildSettingsModalMemberEdit;
-          obj10 = {};
-          tmp17 = obj10;
-          tmp18 = stateFromStoresObject1;
+          tmp14 = jsx;
+          tmp15 = GuildSettingsModalMemberEdit;
+          obj9 = {};
+          tmp16 = obj9;
+          tmp17 = stateFromStoresObject1;
           merged = Object.assign(stateFromStoresObject1);
-          obj10.onClose = onClose;
-          obj10.handleSuccessfulRemoval = tmp11;
-          obj10.guild = stateFromStores;
-          obj10.sortedGuildRoles = stateFromStores1;
-          obj10.roleStyle = stateFromStores2;
-          obj10.currentUser = currentUser;
-          obj10.user = user;
-          obj10.navigation = navigation;
-          obj10.contentContainerStyle = contentContainerStyle;
-          items6 = [,];
-          items6[0] = jsx(GuildSettingsModalMemberEdit, obj10);
-          items6[1] = jsx(tmp(tmp2[41]).NavScrim, {});
-          obj1.children = items6;
-          tmp12 = jsxs(Fragment, obj1);
+          obj9.onClose = onClose;
+          obj9.handleSuccessfulRemoval = tmp10;
+          obj9.guild = stateFromStores;
+          obj9.sortedGuildRoles = stateFromStores1;
+          obj9.currentUser = currentUser;
+          obj9.user = user;
+          obj9.navigation = navigation;
+          obj9.contentContainerStyle = contentContainerStyle;
+          items5 = [,];
+          items5[0] = jsx(GuildSettingsModalMemberEdit, obj9);
+          items5[1] = jsx(tmp(tmp2[41]).NavScrim, {});
+          obj1.children = items5;
+          tmp11 = jsxs(Fragment, obj1);
         }
       }
     }
-    return tmp12;
+    return tmp11;
   }
 }
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const View = fn(17).View;
 const GuildRecord = fn(1976);
-({ isGuildOwner: closure_7, isGuildOwnerWithRequiredMfaLevel: closure_8 } = GuildRecord);
+({ isGuildOwner: metroRequire, isGuildOwnerWithRequiredMfaLevel: closure_7 } = GuildRecord);
 const isEveryoneRole = fn(2017).isEveryoneRole;
 const Constants = fn(1074);
-({ Permissions: closure_16, GuildFeatures: closure_17, GuildSettingsSections: closure_18 } = Constants);
+({ Permissions: closure_15, GuildFeatures: closure_16, GuildSettingsSections: closure_17 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
-const createStyles = fn(4640);
+({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
+const createStyles = fn(4722);
 let obj2 = {
   form: { flex: 1 },
   formContent: { paddingTop: 16 },
@@ -195,11 +188,7 @@ let obj2 = {
   actionButtonRight: { marginRight: 0, marginLeft: 0, paddingRight: 16, paddingLeft: 0 },
   actionButtonContainer: { flexBasis: "auto" },
 };
-let closure_22 = createStyles.createLegacyClassComponentStyles(obj2);
-const styles = StyleSheet.create({
-  labelContainer: { flexDirection: "row", alignItems: "center" },
-  roleDot: { marginEnd: 4 },
-});
+let closure_21 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class RolesList extends PureComponent {
   constructor(arg0) {
@@ -220,164 +209,96 @@ RolesList["getDerivedStateFromProps"] = function getDerivedStateFromProps(isEdit
 RolesList.prototype["render"] = function render() {
   const props = this.props;
   const guild = props.guild;
-  ({ sortedGuildRoles, roles: importDefault, roleStyle: importAll, currentUserId } = props);
+  ({ sortedGuildRoles, roles: importDefault, currentUserId } = props);
   const onToggleRole = props.onToggleRole;
   if (props.isEditing) {
-    const highestRole = require("PermissionUtils").getHighestRole(guild, currentUserId);
-    let obj2 = require("PermissionUtils");
+    const highestRole = currentUserId(onToggleRole[14]).getHighestRole(guild, currentUserId);
+    const obj2 = currentUserId(onToggleRole[14]);
     const found = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles).filter(
       (item) => !isEveryoneRole(item),
     );
     const found1 = found.filter((managed) => !managed.managed);
-    const found2 = found1.filter((item) => PermissionUtilsAll.isRoleHigher(guild, currentUserId, closure_5, item));
+    const found2 = found1.filter((item) => PermissionUtilsAll.isRoleHigher(guild, currentUserId, closure_4, item));
     const arr4 = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles);
     let valueResult = found2
-      .map((children) => {
-        const id = children;
-        const tmp = -1 !== closure_1.indexOf(children.id);
+      .map((id) => {
+        const tmp = -1 !== closure_1.indexOf(id.id);
         closure_1 = tmp;
-        const obj = { checked: tmp, label: null, onPress: null };
-        const obj2 = { style: closure_1_23.labelContainer, children: null };
-        let tmp2Result = "dot" === closure_2;
-        if (tmp2Result) {
-          tmp2Result = null != children.colorString;
-        }
-        if (tmp2Result) {
-          const obj4 = { color: null, colors: null, containerStyles: null };
-          ({ colorString: obj3.color, colorStrings: obj3.colors } = children);
-          obj4.containerStyles = closure_1_23.roleDot;
-          tmp2Result = closure_1_19(guild(currentUserId[18]).RoleDot, obj4);
-        }
-        const items = [tmp2Result];
-        let tmp11;
-        if (null != children.colorString) {
-          if ("username" === closure_2) {
-            const obj5 = { color: children.colorString };
-            tmp11 = obj5;
-          }
-        }
-        items[1] = closure_1_19(guild(currentUserId[19]).Text, {
-          variant: "text-md/semibold",
-          style: tmp11,
-          children: children.name,
-        });
-        obj2.children = items;
-        obj.label = closure_1_20(closure_5, obj2);
-        obj.onPress = function onPress() {
-          return onToggleRole(id.id, !closure_1);
+        const obj = {
+          checked: tmp,
+          label: closure_1_18(require("RoleName"), {
+            role: id,
+            textVariant: "text-md/semibold",
+            dotBackground: true,
+            children: id.name,
+          }),
+          onPress() {
+            return onToggleRole(id.id, !closure_1);
+          },
         };
-        return closure_1_19(guild(currentUserId[17]).TableCheckboxRow, obj, children.id);
+        return closure_1_18(guild(onToggleRole[16]).TableCheckboxRow, obj, id.id);
       })
       .value();
-    let tmp3 = currentUserId;
-    const iter2 = found2.map((children) => {
-      const id = children;
-      const tmp = -1 !== closure_1.indexOf(children.id);
+    let tmp3 = onToggleRole;
+    const iter2 = found2.map((id) => {
+      const tmp = -1 !== closure_1.indexOf(id.id);
       closure_1 = tmp;
-      const obj = { checked: tmp, label: null, onPress: null };
-      const obj2 = { style: closure_1_23.labelContainer, children: null };
-      let tmp2Result = "dot" === closure_2;
-      if (tmp2Result) {
-        tmp2Result = null != children.colorString;
-      }
-      if (tmp2Result) {
-        const obj4 = { color: null, colors: null, containerStyles: null };
-        ({ colorString: obj3.color, colorStrings: obj3.colors } = children);
-        obj4.containerStyles = closure_1_23.roleDot;
-        tmp2Result = closure_1_19(guild(currentUserId[18]).RoleDot, obj4);
-      }
-      const items = [tmp2Result];
-      let tmp11;
-      if (null != children.colorString) {
-        if ("username" === closure_2) {
-          const obj5 = { color: children.colorString };
-          tmp11 = obj5;
-        }
-      }
-      items[1] = closure_1_19(guild(currentUserId[19]).Text, {
-        variant: "text-md/semibold",
-        style: tmp11,
-        children: children.name,
-      });
-      obj2.children = items;
-      obj.label = closure_1_20(closure_5, obj2);
-      obj.onPress = function onPress() {
-        return onToggleRole(id.id, !closure_1);
+      const obj = {
+        checked: tmp,
+        label: closure_1_18(require("RoleName"), {
+          role: id,
+          textVariant: "text-md/semibold",
+          dotBackground: true,
+          children: id.name,
+        }),
+        onPress() {
+          return onToggleRole(id.id, !closure_1);
+        },
       };
-      return closure_1_19(guild(currentUserId[17]).TableCheckboxRow, obj, children.id);
+      return closure_1_18(guild(onToggleRole[16]).TableCheckboxRow, obj, id.id);
     });
   } else {
-    tmp3 = currentUserId;
+    tmp3 = onToggleRole;
     const found3 = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles).filter((id) =>
       importDefault.includes(id.id),
     );
     const arr = require("../../../../_runtime/metro/00012__.js")(sortedGuildRoles);
     const valueResult2 = found3
-      .map((children) => {
-        const obj = { style: closure_23.labelContainer, children: null };
-        let tmpResult = "dot" === importAll;
-        if (tmpResult) {
-          tmpResult = null != children.colorString;
-        }
-        if (tmpResult) {
-          const obj3 = { color: null, colors: null, containerStyles: null };
-          ({ colorString: obj2.color, colorStrings: obj2.colors } = children);
-          obj3.containerStyles = closure_23.roleDot;
-          tmpResult = closure_2_19(native.RoleDot, obj3);
-        }
-        const items = [tmpResult];
-        let tmp10;
-        if (null != children.colorString) {
-          if ("username" === importAll) {
-            const obj4 = { color: children.colorString };
-            tmp10 = obj4;
-          }
-        }
-        const obj5 = { label: null };
-        items[1] = closure_2_19(Text_Text.Text, { variant: "text-md/semibold", style: tmp10, children: children.name });
-        obj.children = items;
-        obj5.label = closure_2_20(hasOwnProperty, obj);
-        return closure_2_19(TableRow2.TableRow, obj5, children.id);
+      .map((role) => {
+        const obj = {
+          label: closure_1_18(require("RoleName"), {
+            role,
+            textVariant: "text-md/semibold",
+            dotBackground: true,
+            children: role.name,
+          }),
+        };
+        return closure_1_18(guild(onToggleRole[18]).TableRow, obj, role.id);
       })
       .value();
     let obj = { label: null, onPress: null };
-    const intl = guild(currentUserId[21]).intl;
-    obj.label = intl.string(guild(currentUserId[21]).t["+riKdA"]);
+    const intl = guild(onToggleRole[19]).intl;
+    obj.label = intl.string(guild(onToggleRole[19]).t["+riKdA"]);
     obj.onPress = tmp;
-    valueResult2.push(closure_19(guild(currentUserId[20]).TableRow, obj, "addition"));
+    valueResult2.push(closure_18(guild(onToggleRole[18]).TableRow, obj, "addition"));
     valueResult = valueResult2;
-    const iter = found3.map((children) => {
-      const obj = { style: closure_23.labelContainer, children: null };
-      let tmpResult = "dot" === importAll;
-      if (tmpResult) {
-        tmpResult = null != children.colorString;
-      }
-      if (tmpResult) {
-        const obj3 = { color: null, colors: null, containerStyles: null };
-        ({ colorString: obj2.color, colorStrings: obj2.colors } = children);
-        obj3.containerStyles = closure_23.roleDot;
-        tmpResult = closure_2_19(native.RoleDot, obj3);
-      }
-      const items = [tmpResult];
-      let tmp10;
-      if (null != children.colorString) {
-        if ("username" === importAll) {
-          const obj4 = { color: children.colorString };
-          tmp10 = obj4;
-        }
-      }
-      const obj5 = { label: null };
-      items[1] = closure_2_19(Text_Text.Text, { variant: "text-md/semibold", style: tmp10, children: children.name });
-      obj.children = items;
-      obj5.label = closure_2_20(hasOwnProperty, obj);
-      return closure_2_19(TableRow2.TableRow, obj5, children.id);
+    const iter = found3.map((role) => {
+      const obj = {
+        label: closure_1_18(require("RoleName"), {
+          role,
+          textVariant: "text-md/semibold",
+          dotBackground: true,
+          children: role.name,
+        }),
+      };
+      return closure_1_18(guild(onToggleRole[18]).TableRow, obj, role.id);
     });
   }
-  let obj3 = { title: null, hasIcons: false, children: null };
-  const intl2 = guild(tmp3[21]).intl;
-  obj3.title = intl2.string(guild(tmp3[21]).t["LPJmL/"]);
+  const obj3 = { title: null, hasIcons: false, children: null };
+  const intl2 = guild(tmp3[19]).intl;
+  obj3.title = intl2.string(guild(tmp3[19]).t["LPJmL/"]);
   obj3.children = valueResult;
-  return closure_19(guild(tmp3[22]).TableRowGroup, obj3);
+  return closure_18(guild(tmp3[20]).TableRowGroup, obj3);
 };
 RolesList.defaultProps = { roles: [] };
 const PureComponent2 = noop.PureComponent;
@@ -486,22 +407,22 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         const intl = util.intl;
         obj.text = intl.string(util.t["ETE/oC"]);
         obj.onPress = self.handleCancelEditMemberRoles;
-        return closure_2_19(HeaderActionButton.HeaderActionButton, obj);
+        return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      fn = self(5712).getHeaderCloseButton(onClose);
-      let obj = self(5712);
+      fn = self(5794).getHeaderCloseButton(onClose);
+      let obj = self(5794);
     }
     let obj2 = { headerLeft: fn, headerRight: null, headerTitle: null };
     if (submitting) {
-      let fn2 = () => closure_1_19(self(dependencyMap[25]).HeaderSubmittingIndicator, {});
+      let fn2 = () => closure_1_18(self(dependencyMap[23]).HeaderSubmittingIndicator, {});
     } else if (isEditing) {
       fn2 = () => {
         const obj = { text: null, onPress: null };
         const intl = util.intl;
         obj.text = intl.string(util.t["R3BPH+"]);
         obj.onPress = self.handleSaveMemberRoles;
-        return closure_2_19(HeaderActionButton.HeaderActionButton, obj);
+        return collapsedCategories(HeaderActionButton.HeaderActionButton, obj);
       };
     }
     obj2.headerRight = fn2;
@@ -510,7 +431,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
       const intl = util.intl;
       const obj2 = { user: UserUtilsDefault.getName(self.props.user) };
       obj.title = intl.formatToPlainString(util.t.v7odxj, obj2);
-      return closure_2_19(NavigatorHeader.NavigatorHeader, obj);
+      return collapsedCategories(NavigatorHeader.NavigatorHeader, obj);
     };
     obj2 = navigation.setOptions(obj2);
   }
@@ -522,7 +443,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = closure_22(this.context);
+  const tmp = closure_21(this.context);
   let str = this.state.nick;
   ({
     user,
@@ -542,32 +463,32 @@ prototype["render"] = function render() {
   } else {
     const obj2 = { style: tmp.rowLabel, children: null };
     const obj3 = { variant: "text-sm/medium", children: UserUtilsDefault.getUserTag(user) };
-    const items = [closure_1_19(Text_Text.Text, obj3)];
-    let tmp18Result = null;
+    const items = [collapsedCategories(Text_Text.Text, obj3)];
+    let tmp17Result = null;
     if (user.bot) {
       const obj = { verified: user.isVerifiedBot() };
-      tmp18Result = closure_1_19(BotTagDefault, obj);
-      const tmp21Result = BotTagDefault;
+      tmp17Result = collapsedCategories(BotTagDefault, obj);
+      const tmp20Result = BotTagDefault;
     }
-    items[1] = tmp18Result;
+    items[1] = tmp17Result;
     obj2.children = items;
     if (null == member) {
-      let bot = React5(guild, user);
+      let bot = timestampProducer(guild, user);
       if (!bot) {
-        bot = !React6(guild, currentUser);
+        bot = !React5(guild, currentUser);
       }
       if (!bot) {
         bot = user.bot;
       }
-      let tmp18Result3;
+      let tmp17Result3;
       if (!bot) {
         const obj4 = { hasIcons: false, children: null };
         const obj5 = { variant: "danger", label: null, onPress: null };
         const intl2 = util.intl;
         obj5.label = intl2.string(util.t.Z5s7PM);
         obj5.onPress = self.handleTransferOwnership;
-        obj4.children = closure_1_19(TableRow2.TableRow, obj5);
-        tmp18Result3 = closure_1_19(TableRowGroup2.TableRowGroup, obj4);
+        obj4.children = collapsedCategories(TableRow2.TableRow, obj5);
+        tmp17Result3 = collapsedCategories(TableRowGroup2.TableRowGroup, obj4);
       }
       const obj6 = { style: tmp.form, contentContainerStyle: null, children: null };
       const items1 = [tmp.formContent, self.props.contentContainerStyle];
@@ -576,10 +497,10 @@ prototype["render"] = function render() {
       const obj8 = { hasIcons: true, children: null };
       const obj9 = { icon: null, label: null };
       const obj10 = { style: tmp.avatar, user, guildId: guild.id };
-      obj9.icon = closure_1_19(native.Avatar, obj10);
-      obj9.label = tmp7;
-      obj8.children = closure_1_19(TableRow2.TableRow, obj9);
-      const items2 = [closure_1_19(TableRowGroup2.TableRowGroup, obj8), , , , , ,];
+      obj9.icon = collapsedCategories(native.Avatar, obj10);
+      obj9.label = tmp6;
+      obj8.children = collapsedCategories(TableRow2.TableRow, obj9);
+      const items2 = [collapsedCategories(TableRowGroup2.TableRowGroup, obj8), , , , , ,];
       if (!canChangeNick) {
         canChangeNick = currentUser.id === user.id;
       }
@@ -603,7 +524,7 @@ prototype["render"] = function render() {
         obj11.placeholder = intl4.string(util.t.h7UKXj);
         ({ handleChangeNickname: obj16.onChange, handleSaveNickname: obj16.onBlur } = self);
         obj11.errorMessage = tmp3;
-        canChangeNick = closure_1_19(TextInput.TextInput, obj11);
+        canChangeNick = collapsedCategories(TextInput.TextInput, obj11);
       }
       items2[1] = canChangeNick;
       if (canManageRoles) {
@@ -611,7 +532,6 @@ prototype["render"] = function render() {
           guild,
           sortedGuildRoles: tmp2,
           roles: null,
-          roleStyle: null,
           currentUserId: null,
           isEditing: null,
           onToggleRole: null,
@@ -624,11 +544,10 @@ prototype["render"] = function render() {
           editRoles = [];
         }
         obj12.roles = editRoles;
-        obj12.roleStyle = tmp4;
         obj12.currentUserId = currentUser.id;
         obj12.isEditing = isEditing;
         ({ handleToggleRole: obj17.onToggleRole, handleStartEditingRoles: obj17.onStartEditing } = self);
-        canManageRoles = closure_1_19(RolesList, obj12);
+        canManageRoles = collapsedCategories(RolesList, obj12);
       }
       items2[2] = canManageRoles;
       if (canDisableCommunication) {
@@ -642,9 +561,9 @@ prototype["render"] = function render() {
         const obj15 = { user: UserUtilsDefault.getName(user) };
         obj14.label = intl5.formatToPlainString(util.t.yOiJHB, obj15);
         obj14.onPress = self.handleKick;
-        obj13.children = closure_1_19(TableRow2.TableRow, obj14);
-        canKick = closure_1_19(TableRowGroup2.TableRowGroup, obj13);
-        const tmp21Result5 = UserUtilsDefault;
+        obj13.children = collapsedCategories(TableRow2.TableRow, obj14);
+        canKick = collapsedCategories(TableRowGroup2.TableRowGroup, obj13);
+        const tmp20Result5 = UserUtilsDefault;
       }
       items2[4] = canKick;
       if (canBan) {
@@ -654,15 +573,15 @@ prototype["render"] = function render() {
         const obj20 = { user: UserUtilsDefault.getName(user) };
         obj19.label = intl6.formatToPlainString(util.t.TuAZuW, obj20);
         obj19.onPress = self.handleBan;
-        obj18.children = closure_1_19(TableRow2.TableRow, obj19);
-        canBan = closure_1_19(TableRowGroup2.TableRowGroup, obj18);
-        const tmp21Result6 = UserUtilsDefault;
+        obj18.children = collapsedCategories(TableRow2.TableRow, obj19);
+        canBan = collapsedCategories(TableRowGroup2.TableRowGroup, obj18);
+        const tmp20Result6 = UserUtilsDefault;
       }
       items2[5] = canBan;
-      items2[6] = tmp18Result3;
+      items2[6] = tmp17Result3;
       obj7.children = items2;
-      obj6.children = closure_1_20(Stack_Stack.Stack, obj7);
-      return closure_1_19(Form.Form, obj6);
+      obj6.children = closure_1_19(Stack_Stack.Stack, obj7);
+      return collapsedCategories(Form.Form, obj6);
     } else {
       const result = CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
       const TableRowGroup = TableRowGroup2.TableRowGroup;
@@ -677,23 +596,23 @@ prototype["render"] = function render() {
         obj22.label = formatToPlainString(handleClearCommunicationDisabled.RuL6o7, obj23);
         handleClearCommunicationDisabled = self.handleClearCommunicationDisabled;
         obj22.onPress = handleClearCommunicationDisabled;
-        obj22 = closure_1_19(TableRow, obj22);
+        obj22 = collapsedCategories(TableRow, obj22);
         obj21.children = obj22;
-        let tmp18Result4 = closure_1_19(TableRowGroup, obj21);
-        const tmp21Result7 = UserUtilsDefault;
+        let tmp17Result4 = collapsedCategories(TableRowGroup, obj21);
+        const tmp20Result7 = UserUtilsDefault;
       } else {
         const obj24 = { user: UserUtilsDefault.getName(user) };
         obj22[1] = formatToPlainString(handleClearCommunicationDisabled.FN7NIS, obj24);
         obj22[2] = self.handleSetCommunicationDisabled;
-        obj21.children = closure_1_19(TableRow, obj22);
-        tmp18Result4 = closure_1_19(TableRowGroup, obj21);
-        const tmp21Result8 = UserUtilsDefault;
+        obj21.children = collapsedCategories(TableRow, obj22);
+        tmp17Result4 = collapsedCategories(TableRowGroup, obj21);
+        const tmp20Result8 = UserUtilsDefault;
       }
-      const tmp19Result = CommunicationDisabledUtils;
+      const tmp18Result = CommunicationDisabledUtils;
     }
   }
 };
-GuildSettingsModalMemberEdit.contextType = fn(4350).ThemeContext;
+GuildSettingsModalMemberEdit.contextType = fn(4432).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 
@@ -701,23 +620,23 @@ export default function MemberModalEdit(onClose) {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(5686)(guildId);
+  const tmp = onRemove(5768)(guildId);
   closure_2 = tmp;
   const items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {
     const guildId = closure_2;
     closure_2 = onRemove;
     return {
-      [closure_2_18.MEMBER_EDIT]: {
+      [closure_2_17.MEMBER_EDIT]: {
         render(arg0) {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.onClose = onClose;
           obj.guildId = guildId;
-          return closure_2_19(GuildSettingsModalMemberEditScene, obj);
+          return closure_2_18(GuildSettingsModalMemberEditScene, obj);
         },
       },
-      [closure_2_18.MEMBER_KICK]: {
+      [closure_2_17.MEMBER_KICK]: {
         headerTitle() {
           return null;
         },
@@ -726,10 +645,10 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onKick = onKick;
-          return closure_2_19(onRemove(12001), obj);
+          return closure_2_18(onRemove(12093), obj);
         },
       },
-      [closure_2_18.MEMBER_BAN]: {
+      [closure_2_17.MEMBER_BAN]: {
         headerTitle() {
           return null;
         },
@@ -738,7 +657,7 @@ export default function MemberModalEdit(onClose) {
           const merged = Object.assign(arg0);
           obj.guildId = guildId;
           obj.onBan = onBan;
-          return closure_2_19(onRemove(12003), obj);
+          return closure_2_18(onRemove(12095), obj);
         },
       },
     };
@@ -746,6 +665,6 @@ export default function MemberModalEdit(onClose) {
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: null };
   const items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   obj.initialRouteStack = items1;
-  return closure_19(onClose(7114).Navigator, obj);
+  return closure_18(onClose(7196).Navigator, obj);
 }
 export { GuildSettingsModalMemberEditScene };

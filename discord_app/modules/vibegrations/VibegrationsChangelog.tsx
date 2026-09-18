@@ -3,6 +3,46 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   {
+    date: "2026-09-18",
+    platforms: ["desktop", "mobile"],
+    summary: "What\u2019s new keeps its three newest lines and adds View all, which opens the whole history.",
+  },
+  {
+    date: "2026-09-18",
+    platforms: ["desktop", "mobile"],
+    summary:
+      'The working status above the chat box now reads simply "Conjuring\u2026" or "Thinking\u2026", without repeating the name in front.',
+  },
+  {
+    date: "2026-09-18",
+    platforms: ["mobile"],
+    summary:
+      "On phones, Conjure can now drive and look at your app\u2019s Frame while it works; the strip says Controlling and the app holds your taps until it is done.",
+  },
+  {
+    date: "2026-09-17",
+    platforms: ["mobile"],
+    summary:
+      "On phones, install your app or review its new permissions right from the builder; publishing no longer stops at a notice you could only act on from desktop.",
+  },
+  {
+    date: "2026-09-17",
+    platforms: ["mobile"],
+    summary:
+      "On phones, switch between the chat and your app at the top of the builder; the app keeps running while you talk to Conjure, a bot app opens its DM right there, and a profile card shows as it will on your profile.",
+  },
+  {
+    date: "2026-09-17",
+    platforms: ["mobile"],
+    summary:
+      "On phones, Conjure\u2019s replies and reasoning now stream in smoothly, and the status label changes on the loader\u2019s beat, as on desktop.",
+  },
+  {
+    date: "2026-09-17",
+    platforms: ["mobile"],
+    summary: "The debug Trace tab on phones can save the redacted trace as a JSON file, as desktop exports it.",
+  },
+  {
     date: "2026-09-16",
     platforms: ["mobile"],
     summary:
@@ -315,6 +355,22 @@ export const recentVibegrationsChangelog = function recentVibegrationsChangelog(
     return platforms.includes(closure_0);
   });
   return found.slice(0, 3);
+};
+export const allVibegrationsChangelog = function allVibegrationsChangelog(mobile) {
+  closure_0 = mobile;
+  return items.filter((platforms) => {
+    platforms = platforms.platforms;
+    return platforms.includes(closure_0);
+  });
+};
+export const hasMoreVibegrationsChangelog = function hasMoreVibegrationsChangelog(mobile) {
+  closure_0 = mobile;
+  return (
+    items.filter((platforms) => {
+      platforms = platforms.platforms;
+      return platforms.includes(closure_0);
+    }).length > 3
+  );
 };
 export const isVibegrationsChangelogEntryExclusive = function isVibegrationsChangelogEntryExclusive(platforms) {
   return 1 === platforms.platforms.length;

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
-import _modDef2691 from "../../SafetyFlows.messages.js";
+import _modDef2774 from "../../SafetyFlows.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import shareGuardianConnectLink from "../../../parent_tools/native/shareGuardianConnectLink.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -13,11 +13,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7652).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7734).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { body: { marginTop: nativeDefault.space.PX_24 }, cardSection: { alignItems: "center" }, cardTitle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.cardTitle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_24, textAlign: "center" };
@@ -194,10 +194,10 @@ export default function ParentalConsentConnectionScreen() {
     const obj2 = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: null, body: null };
     const obj = ActionSheetActionCreatorsDefault;
     const intl = util.intl;
-    obj2.title = intl.string(_modDef2691.dMMSA0);
+    obj2.title = intl.string(_modDef2774.dMMSA0);
     const intl2 = util.intl;
-    obj2.body = intl2.format(_modDef2691["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(15003, dependencyMap.paths), closure_9, obj2);
+    obj2.body = intl2.format(_modDef2774["6GaRTu"], { link });
+    obj.openLazy(asyncRequireImpl(15097, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = {
     title: null,

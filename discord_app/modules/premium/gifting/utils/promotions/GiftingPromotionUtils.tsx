@@ -22,7 +22,7 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     hasPreviouslyFetched.getGiftPromotionRewardSkuIds(),
   );
   const obj = first(504);
-  const fetchPurchases = first(10883).useFetchPurchases();
+  const fetchPurchases = first(10977).useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
@@ -44,10 +44,10 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     }
   }, items1);
   const someResult = stateFromStoresArray.some(
-    (item) => item === first(10887).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
+    (item) => item === first(10981).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID,
   );
-  const obj3 = first(10883);
-  const fetchSummer2026GogoPromoEligibility = first(10888).useFetchSummer2026GogoPromoEligibility(someResult);
+  const obj3 = first(10977);
+  const fetchSummer2026GogoPromoEligibility = first(10982).useFetchSummer2026GogoPromoEligibility(someResult);
   const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
   const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
   const items2 = [first, isEligible, hasFetched, someResult];

@@ -1,7 +1,7 @@
 // discord_app/modules/safety_flows/native/UpdateAppScreen.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2691 from "../SafetyFlows.messages.js";
+import _modDef2774 from "../SafetyFlows.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
@@ -25,11 +25,11 @@ export default function UpdateAppScreen() {
   const obj = { style: tmp.container, children: null };
   const obj2 = { variant: "heading-lg/semibold", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef2691.yxqMCD);
+  obj2.children = intl.string(_modDef2774.yxqMCD);
   const items = [hasOwnProperty(Text_Text.Text, obj2), ,];
   const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.string(_modDef2691.VBZJJg);
+  obj3.children = intl2.string(_modDef2774.VBZJJg);
   items[1] = hasOwnProperty(Text_Text.Text, obj3);
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = {
@@ -42,7 +42,7 @@ export default function UpdateAppScreen() {
     size: "md",
   };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef2691.o4D6fm);
+  obj5.text = intl3.string(_modDef2774.o4D6fm);
   obj4.children = hasOwnProperty(components_Button_Button.Button, obj5);
   items[2] = hasOwnProperty(React4, obj4);
   obj.children = items;

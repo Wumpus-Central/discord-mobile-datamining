@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/header_v2/ChannelNameHeader.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../../design/void/native.tsx";
-import _modDef3529 from "../../../../../game_invite_channels/GameInviteChannels.messages.js";
+import _modDef3612 from "../../../../../game_invite_channels/GameInviteChannels.messages.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import transitionToChannel from "../../../../../routing/transitionToChannel.tsx";
 import ChannelUtils from "../../../../../../utils/ChannelUtils.tsx";
@@ -54,9 +54,9 @@ function DirectMessageIcon(channel) {
       user: stateFromStores,
       guildId: "Boolean",
       size: tmp2(1177).AvatarSizes.NORMAL,
-      status: false,
+      status: null,
       isMobileOnline: null,
-      isVROnline: true,
+      isVROnline: null,
       statusStyle: null,
     };
     let isSystemUserResult;
@@ -120,16 +120,16 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(4636).Text, obj2);
+        tmp8 = closure_12(tmp(4718).Text, obj2);
       }
     }
     return tmp8;
   } else if (channel.isGameInvitesChannel()) {
     const intl = tmp(1115).intl;
-    let stringResult = intl.string(_modDef3529["D+2/QP"]);
+    let stringResult = intl.string(_modDef3612["D+2/QP"]);
   } else {
-    stringResult = tmp(4785).channelTypeString(channel);
-    const tmpResult = tmp(4785);
+    stringResult = tmp(4867).channelTypeString(channel);
+    const tmpResult = tmp(4867);
   }
   let obj = channel(504);
 }
@@ -258,7 +258,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7276)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7358)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -270,7 +270,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5210).PressableOpacity, obj);
+  return closure_12(channel(5292).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -285,7 +285,7 @@ const Constants = fn(1074);
 ({ Permissions: c10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" },

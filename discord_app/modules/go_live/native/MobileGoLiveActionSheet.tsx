@@ -4,7 +4,7 @@ import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
-import _modDef2235 from "../MobileGoLiveActionSheet.messages.js";
+import _modDef2318 from "../MobileGoLiveActionSheet.messages.js";
 import BaseIconImage from "../../../design/components/Icon/native/BaseIconImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -17,7 +17,7 @@ import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
-import _modDef10114 from "../../../../_runtime/metro/10114__.js";
+import _modDef10208 from "../../../../_runtime/metro/10208__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -30,12 +30,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 const getStreamSettingsForPresetDefault = getStreamSettingsForPreset;
 
 require = fn;
-let ApplicationStreamPresets = fn(4687).ApplicationStreamPresets;
+let ApplicationStreamPresets = fn(4769).ApplicationStreamPresets;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(4665).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4747).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = {
   wrapper: { gap: nativeDefault.space.PX_24 },
   header: { textAlign: "center" },
@@ -206,22 +206,22 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         );
         const obj5 = { icon: closure_2_14(MobilePhoneIcon.MobilePhoneIcon, {}), label: null, subLabel: null };
         const intl = util.intl;
-        obj5.label = intl.string(_modDef2235["2qmQ8N"]);
+        obj5.label = intl.string(_modDef2318["2qmQ8N"]);
         let str = "";
         let str2 = "";
         if (null != maxSettingsForPreset) {
           const intl2 = util.intl;
-          str2 = intl2.formatToPlainString(_modDef2235.ibH7vy, maxSettingsForPreset);
+          str2 = intl2.formatToPlainString(_modDef2318.ibH7vy, maxSettingsForPreset);
         }
         const obj6 = { [closure_2_11.PRESET_MOBILE_DEFAULT]: obj5 };
         obj5.subLabel = str2;
         const obj7 = { icon: closure_2_14(SpeedometerIcon.SpeedometerIcon, {}), label: null, subLabel: null };
         const intl3 = util.intl;
-        obj7.label = intl3.string(_modDef2235["5eO4/m"]);
+        obj7.label = intl3.string(_modDef2318["5eO4/m"]);
         let formatToPlainStringResult = str;
         if (null != maxSettingsForPreset1) {
           const intl4 = util.intl;
-          formatToPlainStringResult = intl4.formatToPlainString(_modDef2235.fN0UQY, maxSettingsForPreset1);
+          formatToPlainStringResult = intl4.formatToPlainString(_modDef2318.fN0UQY, maxSettingsForPreset1);
         }
         obj7.subLabel = formatToPlainStringResult;
         obj6[ApplicationStreamPresets.PRESET_MOBILE_PERFORMANCE] = obj7;
@@ -230,15 +230,15 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         const obj4 = { value };
         const obj10 = { variant: "text-md/semibold", color: "text-strong", children: null };
         const intl5 = util.intl;
-        obj10.children = intl5.string(_modDef2235.nMcXo1);
+        obj10.children = intl5.string(_modDef2318.nMcXo1);
         const items = [closure_2_14(Text_Text.Text, obj10)];
         const tmp8Result = NativeViewDefault;
-        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef10114, size: "xs" });
+        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef10208, size: "xs" });
         obj9.children = items;
         obj8.label = __initData(tmp8Result, obj9);
         if (null != maxSettingsForPreset2) {
           const intl6 = util.intl;
-          str = intl6.formatToPlainString(_modDef2235.q4gYBi, maxSettingsForPreset2);
+          str = intl6.formatToPlainString(_modDef2318.q4gYBi, maxSettingsForPreset2);
         }
         obj8.subLabel = str;
         obj6[ApplicationStreamPresets.PRESET_MOBILE_HIGH_QUALITY] = obj8;
@@ -337,5 +337,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(10103, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(10197, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 };

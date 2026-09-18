@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef7106 from "../../../../_runtime/metro/07106__.js";
+import _modDef7188 from "../../../../_runtime/metro/07188__.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import AutomodFeedback from "../AutomodFeedback.tsx";
@@ -20,7 +20,7 @@ function Navbar(onClose) {
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj2.onPress = onClose.onClose;
-  obj2.source = _modDef7106;
+  obj2.source = _modDef7188;
   obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
   rect.children = React5(View, obj);
   return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
@@ -96,7 +96,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = {
   container: {
     flex: 1,

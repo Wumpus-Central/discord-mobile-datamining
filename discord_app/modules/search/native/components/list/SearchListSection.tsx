@@ -6,7 +6,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_5 = createStyles.createStyles({
   section: {
     flex: 1,
@@ -15,7 +15,7 @@ let closure_5 = createStyles.createStyles({
     alignItems: "center",
     justifyContent: "space-between",
     textTransform: "none",
-    paddingTop: fn(8000).SEARCH_LIST_SECTION_TOP_PADDING,
+    paddingTop: fn(8083).SEARCH_LIST_SECTION_TOP_PADDING,
     paddingHorizontal: 16,
     paddingBottom: 8,
   },
@@ -28,7 +28,7 @@ let obj = {
     alignItems: "center",
     justifyContent: "space-between",
     textTransform: "none",
-    paddingTop: fn(8000).SEARCH_LIST_SECTION_TOP_PADDING,
+    paddingTop: fn(8083).SEARCH_LIST_SECTION_TOP_PADDING,
     paddingHorizontal: 16,
     paddingBottom: 8,
   },
