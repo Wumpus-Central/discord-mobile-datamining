@@ -1,9 +1,9 @@
-// === Module 7454: useGuildIdsToFetchSoundsFor ===
+// === Module 7536: useGuildIdsToFetchSoundsFor ===
 
-// Module 7454 (useGuildIdsToFetchSoundsFor)
+// Module 7536 (useGuildIdsToFetchSoundsFor)
 import _mod19 from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import SoundboardStore from "SoundboardStore" /* 5100 */;
+import SoundboardStore from "SoundboardStore" /* 5182 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

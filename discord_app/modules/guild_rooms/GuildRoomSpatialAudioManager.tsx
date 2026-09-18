@@ -1,18 +1,18 @@
-// === Module 17625: GuildRoomSpatialAudioManager ===
+// === Module 17689: GuildRoomSpatialAudioManager ===
 
-// Module 17625 (GuildRoomSpatialAudioManager)
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4840 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9243 */;
-import GuildRoomSpatialAudio from "GuildRoomSpatialAudio" /* 17626 */;
+// Module 17689 (GuildRoomSpatialAudioManager)
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4922 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9327 */;
+import GuildRoomSpatialAudio from "GuildRoomSpatialAudio" /* 17690 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4555 */;
+import ExperimentStore from "ExperimentStore" /* 4637 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
-import GuildRoomStore from "GuildRoomStore" /* 4798 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
+import GuildRoomStore from "GuildRoomStore" /* 4880 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
 
 require = fn;
 class GuildRoomSpatialAudioManager extends tmp2 {

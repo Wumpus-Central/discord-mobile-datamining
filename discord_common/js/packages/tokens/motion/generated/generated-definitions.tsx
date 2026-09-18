@@ -1,6 +1,6 @@
-// === Module 5066: SUBTLE_SPRING ===
+// === Module 5148: SUBTLE_SPRING ===
 
-// Module 5066 (SUBTLE_SPRING)
+// Module 5148 (SUBTLE_SPRING)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/tokens/motion/generated/generated-definitions.tsx");

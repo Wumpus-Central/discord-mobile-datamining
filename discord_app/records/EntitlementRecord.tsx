@@ -1,10 +1,10 @@
-// === Module 7509: EntitlementRecord ===
+// === Module 7591: EntitlementRecord ===
 
-// Module 7509 (EntitlementRecord)
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 7510 */;
+// Module 7591 (EntitlementRecord)
+import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 7592 */;
 import Record from "Record" /* 1387 */;
-import SKURecord from "SKURecord" /* 5599 */;
+import SKURecord from "SKURecord" /* 5681 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
 require = fn;
@@ -13,7 +13,7 @@ let EntitlementRecord;
 class EntitlementRecord extends tmp2 {
   constructor(arg0) {
     tmp = new EntitlementRecord(new.target, new.target);
-    ({ id: tmp.id, skuId: tmp.skuId, applicationId: tmp.applicationId, user: tmp.user, userId: tmp.userId, gifterId: tmp.gifterId, type: tmp.type, branches: tmp.branches, startsAt: tmp.startsAt, endsAt: tmp.endsAt, subscriptionId: tmp.subscriptionId, subscriptionPlanId: tmp.subscriptionPlanId, parentId: tmp.parentId, consumed: tmp.consumed, giftCodeBatchId: tmp.giftCodeBatchId, giftStyle: tmp.giftStyle, guildId: tmp.guildId, deleted: tmp.deleted, sourceType: tmp.sourceType, fulfillmentStatus: tmp.fulfillmentStatus } = global);
+    ({ id: tmp.id, skuId: tmp.skuId, applicationId: tmp.applicationId, user: tmp.user, userId: tmp.userId, gifterId: tmp.gifterId, type: tmp.type, branches: tmp.branches, startsAt: tmp.startsAt, endsAt: tmp.endsAt, subscriptionId: tmp.subscriptionId, subscriptionPlanId: tmp.subscriptionPlanId, parentId: tmp.parentId, consumed: tmp.consumed, giftCodeBatchId: tmp.giftCodeBatchId, giftStyle: tmp.giftStyle, guildId: tmp.guildId, deleted: tmp.deleted, sourceType: tmp.sourceType, fulfillmentStatus: tmp.fulfillmentStatus, orbsReward: tmp.orbsReward } = global);
     return tmp;
   }
 }
@@ -67,29 +67,38 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   if (fulfillment_status == null) {
     fulfillment_status = null;
   }
+  const metadata = user.metadata;
+  let orbs_reward;
+  if (metadata != null) {
+    orbs_reward = metadata.orbs_reward;
+  }
+  if (orbs_reward == null) {
+    orbs_reward = null;
+  }
   if (typeof EntitlementRecord === "function") {
-    const tmp26 = new EntitlementRecord(tmp4, SKURecord, EntitlementRecord, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id1, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type);
-    tmp26.id = id;
-    tmp26.skuId = sku_id;
-    tmp26.applicationId = application_id;
-    tmp26.user = tmp2;
-    tmp26.userId = user_id;
-    tmp26.gifterId = gifter_user_id;
-    tmp26.type = type;
-    tmp26.branches = branches;
-    tmp26.startsAt = date;
-    tmp26.endsAt = date1;
-    tmp26.subscriptionId = subscription_id;
-    tmp26.subscriptionPlanId = id1;
-    tmp26.parentId = parent_id;
-    tmp26.consumed = consumed;
-    tmp26.giftCodeBatchId = gift_code_batch_id;
-    tmp26.giftStyle = gift_style;
-    tmp26.guildId = guild_id;
-    tmp26.deleted = deleted;
-    tmp26.sourceType = source_type;
-    tmp26.fulfillmentStatus = fulfillment_status;
-    return tmp26;
+    const tmp27 = new EntitlementRecord(tmp4, EntitlementRecord, new.target, id, sku_id, application_id, tmp2, user_id, gifter_user_id, type, branches, date, date1, subscription_id, id1, parent_id, consumed, gift_code_batch_id, gift_style, guild_id, deleted, source_type, fulfillment_status, orbs_reward);
+    tmp27.id = id;
+    tmp27.skuId = sku_id;
+    tmp27.applicationId = application_id;
+    tmp27.user = tmp2;
+    tmp27.userId = user_id;
+    tmp27.gifterId = gifter_user_id;
+    tmp27.type = type;
+    tmp27.branches = branches;
+    tmp27.startsAt = date;
+    tmp27.endsAt = date1;
+    tmp27.subscriptionId = subscription_id;
+    tmp27.subscriptionPlanId = id1;
+    tmp27.parentId = parent_id;
+    tmp27.consumed = consumed;
+    tmp27.giftCodeBatchId = gift_code_batch_id;
+    tmp27.giftStyle = gift_style;
+    tmp27.guildId = guild_id;
+    tmp27.deleted = deleted;
+    tmp27.sourceType = source_type;
+    tmp27.fulfillmentStatus = fulfillment_status;
+    tmp27.orbsReward = orbs_reward;
+    return tmp27;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

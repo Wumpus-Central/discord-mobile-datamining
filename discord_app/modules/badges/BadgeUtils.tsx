@@ -1,10 +1,10 @@
-// === Module 11353: BadgeUtils ===
+// === Module 11450: BadgeUtils ===
 
-// Module 11353 (BadgeUtils)
+// Module 11450 (BadgeUtils)
 import util from "util" /* 1115 */;
-import Constants from "Constants" /* 8331 */;
-import BadgeId from "BadgeId" /* 8332 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8341 */;
+import Constants from "Constants" /* 8413 */;
+import BadgeId from "BadgeId" /* 8414 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8423 */;
 import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
@@ -29,6 +29,22 @@ export const getAlwaysVisibleCopy = function getAlwaysVisibleCopy(badge_id) {
     nPQVxb = util.t.nPQVxb;
   }
   return nPQVxb;
+};
+export const getDirectoryBadges = function getDirectoryBadges(stateFromStoresArray) {
+  const earnable = [];
+  const owned = [];
+  const iter = stateFromStoresArray[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    if (nextResult.owned) {
+      let arr = owned.push(tmp2);
+    } else if (tmp2.is_earnable) {
+      let arr2 = earnable.push(tmp2);
+    }
+    continue;
+  }
+  return { earnable, owned };
 };
 export const getUnhideableBadgeIds = function getUnhideableBadgeIds(tenureBadgeHideable) {
   const _Set = Set;

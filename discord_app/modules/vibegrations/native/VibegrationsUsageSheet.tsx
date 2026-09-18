@@ -1,12 +1,12 @@
-// === Module 16827: VibegrationsUsageSheet ===
+// === Module 16974: VibegrationsUsageSheet ===
 
-// Module 16827 (VibegrationsUsageSheet)
+// Module 16974 (VibegrationsUsageSheet)
 import nativeDefault from "native" /* 576 */;
-import _modDef3593 from "module_3593" /* 3593 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7359 */;
+import _modDef3676 from "module_3676" /* 3676 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7441 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16753 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16850 */;
 
 require = fn;
 function RoleRow(arg0) {
@@ -24,7 +24,7 @@ function RoleRow(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { row: { flexDirection: "row", alignItems: "baseline", justifyContent: "space-between", gap: nativeDefault.space.PX_8 }, label: { flexShrink: 1 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,63 +39,63 @@ export default function VibegrationsUsageSheet(projectId) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const tmp2Result = tmp2(7359);
-    const tmp2Result6 = tmp2(7359);
-    const sumTokenUsageResult = tmp2(7359).sumTokenUsage(stateFromStores.orchestrator, stateFromStores.codegen);
-    const tmp2Result7 = tmp2(7359);
+    const tmp2Result = tmp2(7441);
+    const tmp2Result6 = tmp2(7441);
+    const sumTokenUsageResult = tmp2(7441).sumTokenUsage(stateFromStores.orchestrator, stateFromStores.codegen);
+    const tmp2Result7 = tmp2(7441);
     const obj2 = { header: null, children: null };
     const obj3 = { title: null };
     const intl = tmp2(1115).intl;
-    obj3.title = intl.string(_modDef3593["9yoLWZ"]);
-    obj2.header = closure_5(tmp2(7263).BottomSheetTitleHeader, obj3);
+    obj3.title = intl.string(_modDef3676["9yoLWZ"]);
+    obj2.header = closure_5(tmp2(7345).BottomSheetTitleHeader, obj3);
     const obj4 = { children: null };
     const obj5 = { direction: "vertical", spacing: nativeDefault.space.PX_12, children: null };
     const obj6 = { variant: "text-md/semibold", color: "text-default", children: null };
     const intl2 = tmp2(1115).intl;
     const obj7 = { runes: null };
-    const sumTokenUsageResult1 = tmp2Result.sumTokenUsage(sumTokenUsageResult, tmp2(7359).usageOrEmpty(stateFromStores.compaction));
-    const tmp2Result8 = tmp2(7359);
-    obj7.runes = tmp2(7359).runesFromUsd(stateFromStores.cost_usd).toLocaleString();
-    obj6.children = intl2.formatToPlainString(_modDef3593["4PFO2p"], obj7);
-    const items2 = [closure_5(tmp2(4636).Text, obj6), , ];
+    const sumTokenUsageResult1 = tmp2Result.sumTokenUsage(sumTokenUsageResult, tmp2(7441).usageOrEmpty(stateFromStores.compaction));
+    const tmp2Result8 = tmp2(7441);
+    obj7.runes = tmp2(7441).runesFromUsd(stateFromStores.cost_usd).toLocaleString();
+    obj6.children = intl2.formatToPlainString(_modDef3676["4PFO2p"], obj7);
+    const items2 = [closure_5(tmp2(4718).Text, obj6), , ];
     const obj8 = { direction: "vertical", spacing: nativeDefault.space.PX_4, children: null };
     const obj9 = { label: null, usage: null };
     const intl3 = tmp2(1115).intl;
-    obj9.label = intl3.string(_modDef3593.hk4jJr);
+    obj9.label = intl3.string(_modDef3676.hk4jJr);
     obj9.usage = stateFromStores.orchestrator;
     const items3 = [closure_5(RoleRow, obj9), , ];
     const obj10 = { label: null, usage: null };
     const intl4 = tmp2(1115).intl;
-    obj10.label = intl4.string(_modDef3593.R9aduM);
+    obj10.label = intl4.string(_modDef3676.R9aduM);
     obj10.usage = stateFromStores.codegen;
     items3[1] = closure_5(RoleRow, obj10);
     const obj11 = { label: null, usage: null };
     const intl5 = tmp2(1115).intl;
-    obj11.label = intl5.string(_modDef3593.Tj6b30);
-    const runesFromUsdResult = tmp2(7359).runesFromUsd(stateFromStores.cost_usd);
-    obj11.usage = tmp2(7359).usageOrEmpty(stateFromStores.compaction);
+    obj11.label = intl5.string(_modDef3676.Tj6b30);
+    const runesFromUsdResult = tmp2(7441).runesFromUsd(stateFromStores.cost_usd);
+    obj11.usage = tmp2(7441).usageOrEmpty(stateFromStores.compaction);
     items3[2] = closure_5(RoleRow, obj11);
     obj8.children = items3;
-    items2[1] = closure_6(tmp2(5060).Stack, obj8);
+    items2[1] = closure_6(tmp2(5142).Stack, obj8);
     const obj12 = { style: tmp.row, children: null };
     const obj13 = { style: tmp.label, children: null };
     const obj14 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl6 = tmp2(1115).intl;
-    obj14.children = intl6.string(_modDef3593["kILb+R"]);
-    obj13.children = closure_5(tmp2(4636).Text, obj14);
+    obj14.children = intl6.string(_modDef3676["kILb+R"]);
+    obj13.children = closure_5(tmp2(4718).Text, obj14);
     const items4 = [closure_5(View, obj13), ];
     const obj15 = { variant: "text-sm/medium", color: "text-default", children: null };
     const _Math = Math;
-    const tmp2Result9 = tmp2(7359);
+    const tmp2Result9 = tmp2(7441);
     const _HermesInternal = HermesInternal;
-    obj15.children = "" + Math.round(100 * tmp2(7359).cacheHitRate(sumTokenUsageResult1)) + "%";
-    items4[1] = closure_5(tmp2(4636).Text, obj15);
+    obj15.children = "" + Math.round(100 * tmp2(7441).cacheHitRate(sumTokenUsageResult1)) + "%";
+    items4[1] = closure_5(tmp2(4718).Text, obj15);
     obj12.children = items4;
     items2[2] = closure_6(View, obj12);
     obj5.children = items2;
-    obj4.children = closure_6(tmp2(5060).Stack, obj5);
+    obj4.children = closure_6(tmp2(5142).Stack, obj5);
     obj2.children = closure_5(View, obj4);
-    return closure_5(tmp2(7311).ActionSheet, obj2);
+    return closure_5(tmp2(7393).ActionSheet, obj2);
   }
   const obj = projectId(504);
 };

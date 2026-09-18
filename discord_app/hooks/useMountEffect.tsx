@@ -1,7 +1,7 @@
-// === Module 5079: useMountEffect ===
+// === Module 5161: useMountEffect ===
 
-// Module 5079 (useMountEffect)
-import hooks_useMountEffect from "hooks/useMountEffect" /* 5080 */;
+// Module 5161 (useMountEffect)
+import hooks_useMountEffect from "hooks/useMountEffect" /* 5162 */;
 import size from "module_2" /* 2 */;
 
 const hooks_useMountEffectDefault = hooks_useMountEffect;

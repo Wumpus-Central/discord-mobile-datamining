@@ -1,8 +1,8 @@
-// === Module 16290: VoiceUserSummary ===
+// === Module 16387: VoiceUserSummary ===
 
-// Module 16290 (VoiceUserSummary)
+// Module 16387 (VoiceUserSummary)
 import native from "native" /* 1177 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7994 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8077 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,7 +10,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = Object.freeze({ direction: fn(1177).CutoutDirection.RIGHT, inset: -2 });
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 }, containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 }, iconContainer: { height: 40 }, redesignChannelIcon: { marginRight: 4 }, overflow: { height: 20, paddingHorizontal: 4, paddingVertical: 0, display: "flex", flexDirection: "row", alignItems: "center" }, transparentBorder: { borderColor: "transparent" } });
 let obj = { direction: fn(1177).CutoutDirection.RIGHT, inset: -2 };
 const size = fn(2);
@@ -25,11 +25,11 @@ export default noop.memo((guildId) => {
     transparentBorder = tmp.transparentBorder;
   }
   const obj2 = { style: null, children: null };
-  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(7993).useClientThemesOverride()];
+  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(8076).useClientThemesOverride()];
   obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(5184).StageIcon;
+      let VoiceNormalIcon = tmp4(5266).StageIcon;
     }
     const obj3 = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
     const items1 = [closure_4(VoiceNormalIcon, obj3), ];
@@ -52,7 +52,7 @@ export default noop.memo((guildId) => {
     obj2.children = items1;
     return tmp5(tmp6, obj2);
   }
-  VoiceNormalIcon = tmp4(5188).VoiceNormalIcon;
-  let obj = guildId(7993);
+  VoiceNormalIcon = tmp4(5270).VoiceNormalIcon;
+  let obj = guildId(8076);
 });
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

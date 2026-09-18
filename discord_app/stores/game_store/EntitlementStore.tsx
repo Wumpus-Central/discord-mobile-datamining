@@ -1,14 +1,14 @@
-// === Module 7508: EntitlementStore ===
+// === Module 7590: EntitlementStore ===
 
-// Module 7508 (EntitlementStore)
+// Module 7590 (EntitlementStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7513 */;
-import EntitlementRecord from "EntitlementRecord" /* 7509 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7511 */;
-import SKUStore from "SKUStore" /* 5598 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7595 */;
+import EntitlementRecord from "EntitlementRecord" /* 7591 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7593 */;
+import SKUStore from "SKUStore" /* 5680 */;
 
 require = fn;
 function addEntitlement(entitlement) {
@@ -87,8 +87,8 @@ prototype["getForApplication"] = function getForApplication(arg0) {
     return set;
   }
 };
-prototype["getForSku"] = function getForSku(arg0) {
-  if (null == dependencyMap2[arg0]) {
+prototype["getForSku"] = function getForSku(SINGLE_ORB_SKU_ID) {
+  if (null == dependencyMap2[SINGLE_ORB_SKU_ID]) {
     return null;
   } else {
     const _Set = Set;

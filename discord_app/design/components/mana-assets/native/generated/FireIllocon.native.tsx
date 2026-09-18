@@ -1,9 +1,9 @@
-// === Module 6105: FireIllocon ===
+// === Module 6187: FireIllocon ===
 
-// Module 6105 (FireIllocon)
+// Module 6187 (FireIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6106 from "module_6106" /* 6106 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6188 from "module_6188" /* 6188 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const FireIllocon = function FireIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6106 };
+  const obj2 = { uri: _modDef6188 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

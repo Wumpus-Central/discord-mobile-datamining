@@ -1,9 +1,9 @@
-// === Module 6303: HeartIllocon ===
+// === Module 6385: HeartIllocon ===
 
-// Module 6303 (HeartIllocon)
+// Module 6385 (HeartIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6304 from "module_6304" /* 6304 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6386 from "module_6386" /* 6386 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const HeartIllocon = function HeartIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6304 };
+  const obj2 = { uri: _modDef6386 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

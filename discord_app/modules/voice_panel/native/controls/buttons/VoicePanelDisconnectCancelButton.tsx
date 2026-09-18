@@ -1,26 +1,26 @@
-// === Module 17440: VoicePanelDisconnectCancelButton ===
+// === Module 17570: VoicePanelDisconnectCancelButton ===
 
-// Module 17440 (VoicePanelDisconnectCancelButton)
+// Module 17570 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import StreamActionCreators from "StreamActionCreators" /* 4782 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4841 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5499 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9630 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9669 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import StreamActionCreators from "StreamActionCreators" /* 4864 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4923 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5581 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9714 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9753 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4662 */;
-import VoicePanelStore from "VoicePanelStore" /* 4848 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
+import VoicePanelStore from "VoicePanelStore" /* 4930 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(12424).VoicePanelModes;
+const VoicePanelModes = fn(12515).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT }, icon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 obj2.icon = { tintColor: nativeDefault.colors.WHITE };

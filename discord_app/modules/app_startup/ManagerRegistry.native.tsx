@@ -1,7 +1,7 @@
-// === Module 17549: ManagerRegistry ===
+// === Module 17630: ManagerRegistry ===
 
-// Module 17549 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 18165 */;
+// Module 17630 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 18259 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -625,13 +625,6 @@ const obj = {
     actions: ["POST_CONNECTION_OPEN"],
     inlineRequire() {
       return require("UserOfferManager").default;
-    },
-    neverLoadBeforeConnectionOpen: true
-  },
-  MobileGameCommunitiesManager: {
-    actions: ["POST_CONNECTION_OPEN", "LOCAL_APP_DETECTION_COMPLETE"],
-    inlineRequire() {
-      return require("MobileGameCommunitiesManager").default;
     },
     neverLoadBeforeConnectionOpen: true
   },

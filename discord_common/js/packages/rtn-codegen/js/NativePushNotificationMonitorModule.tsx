@@ -1,6 +1,6 @@
-// === Module 9840: NativePushNotificationMonitorModule ===
+// === Module 9934: NativePushNotificationMonitorModule ===
 
-// Module 9840 (NativePushNotificationMonitorModule)
+// Module 9934 (NativePushNotificationMonitorModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,23 +1,23 @@
-// === Module 14606: links ===
+// === Module 14701: links ===
 
-// Module 14606 (links)
+// Module 14701 (links)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4268 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4634 */;
-import openUserSettings from "openUserSettings" /* 7496 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9011 */;
-import ActivityPopoutUtils from "ActivityPopoutUtils" /* 9688 */;
-import RPCErrorDefault from "RPCError" /* 9708 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9711 */;
-import RPCHelpers from "RPCHelpers" /* 9713 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14586 */;
-import internalDeepLinks from "internalDeepLinks" /* 14607 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14608 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14610 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4351 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4716 */;
+import openUserSettings from "openUserSettings" /* 7578 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9095 */;
+import ActivityPopoutUtils from "ActivityPopoutUtils" /* 9782 */;
+import RPCErrorDefault from "RPCError" /* 9802 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9805 */;
+import RPCHelpers from "RPCHelpers" /* 9807 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 14681 */;
+import internalDeepLinks from "internalDeepLinks" /* 14702 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 14703 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14705 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ApplicationStore from "ApplicationStore" /* 4868 */;
+import ApplicationStore from "ApplicationStore" /* 4950 */;
 
 require = fn;
 let closure_13 = async function _openExternalLink(arg0) {
@@ -146,7 +146,7 @@ let closure_13 = async function _openExternalLink(arg0) {
           } else {
             new Promise((arg0) => {
               closure_0 = arg0;
-              let obj = closure_1_0(8519);
+              let obj = closure_1_0(8602);
               const obj2 = {
                 href: dependencyMap,
                 shouldConfirm: true,
@@ -154,7 +154,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(4328)(dependencyMap);
+                  closure_1(4411)(dependencyMap);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
@@ -174,7 +174,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                   closure_0({ opened: false });
                 }
               };
-              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14609).getActivitiesModalContextKey({ application, channelId }));
+              return obj.handleClick(obj2, undefined, undefined, closure_1_0(14704).getActivitiesModalContextKey({ application, channelId }));
             });
           }
           c5 = 0;
@@ -192,7 +192,7 @@ let closure_13 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(4544);
+let Constants = fn(4626);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, PopoutWindowKeys: closure_7, RPCCommands, RPCErrors: closure_8, UserSettingsSections: closure_9, AnalyticEvents: c10 } = Constants);
@@ -338,7 +338,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14601);
+const CONTEXT_MENU_ICON_NAMES = fn(14696);
 let obj5 = {
   scope: null,
   handler(arg0) {

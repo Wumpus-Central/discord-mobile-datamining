@@ -1,7 +1,7 @@
-// === Module 8369: ProfileFrameConstants ===
+// === Module 8452: ProfileFrameConstants ===
 
-// Module 8369 (ProfileFrameConstants)
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8355 */;
+// Module 8452 (ProfileFrameConstants)
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8437 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/ProfileFrameConstants.tsx");

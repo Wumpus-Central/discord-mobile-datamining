@@ -1,6 +1,6 @@
-// === Module 7640: GuildScheduledEventStore ===
+// === Module 7722: GuildScheduledEventStore ===
 
-// Module 7640 (GuildScheduledEventStore)
+// Module 7722 (GuildScheduledEventStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -193,7 +193,7 @@ const StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   }
 };
-const secondaryIndexMap = new fn(4274).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(4357).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   const items = [guild_id];
   if (null != entity_id) {

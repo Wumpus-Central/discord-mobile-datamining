@@ -1,12 +1,12 @@
-// === Module 8170: getTagProperties ===
+// === Module 8253: getTagProperties ===
 
-// Module 8170 (getTagProperties)
+// Module 8253 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1115 */;
-import MessageConstants from "MessageConstants" /* 4633 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8171 */;
-import isCrosspostDefault from "isCrosspost" /* 8173 */;
-import _modDef8175 from "module_8175" /* 8175 */;
+import MessageConstants from "MessageConstants" /* 4715 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8254 */;
+import isCrosspostDefault from "isCrosspost" /* 8256 */;
+import _modDef8258 from "module_8258" /* 8258 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8175).uri;
+            uri = Image.resolveAssetSource(_modDef8258).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "accessible", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: true, opTagBackgroundColor: true };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "add", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "guide", opTagBackgroundColor: "Array" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

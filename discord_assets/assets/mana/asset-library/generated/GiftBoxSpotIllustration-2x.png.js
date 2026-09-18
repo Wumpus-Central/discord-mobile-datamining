@@ -1,6 +1,6 @@
-// === Module 6238: ? ===
+// === Module 6320: ? ===
 
-// Module 6238
+// Module 6320
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftBoxSpotIllustration-2x.png.js");

@@ -1,8 +1,8 @@
-// === Module 15253: MobileMuxWrapper ===
+// === Module 15347: MobileMuxWrapper ===
 
-// Module 15253 (MobileMuxWrapper)
+// Module 15347 (MobileMuxWrapper)
 import logger_Logger from "logger/Logger" /* 4 */;
-import MobileCustomMuxIntegration from "MobileCustomMuxIntegration" /* 15254 */;
+import MobileCustomMuxIntegration from "MobileCustomMuxIntegration" /* 15348 */;
 import size from "module_2" /* 2 */;
 
 const logger = new logger_Logger.Logger("MobileMuxWrapper");

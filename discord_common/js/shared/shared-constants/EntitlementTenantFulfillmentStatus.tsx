@@ -1,6 +1,6 @@
-// === Module 7510: EntitlementTenantFulfillmentStatus ===
+// === Module 7592: EntitlementTenantFulfillmentStatus ===
 
-// Module 7510 (EntitlementTenantFulfillmentStatus)
+// Module 7592 (EntitlementTenantFulfillmentStatus)
 import size from "module_2" /* 2 */;
 
 const obj = { ELIGIBLE_FOR_ATTEMPTS: new Set([2, 5, 9]), ELIGIBLE_FOR_FULFILLMENT: null };

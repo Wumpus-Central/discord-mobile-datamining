@@ -1,9 +1,9 @@
-// === Module 12133: CustomTypingIndicatorAnimatedEmoji ===
+// === Module 12224: CustomTypingIndicatorAnimatedEmoji ===
 
-// Module 12133 (CustomTypingIndicatorAnimatedEmoji)
+// Module 12224 (CustomTypingIndicatorAnimatedEmoji)
 import user from "user" /* 1380 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import timing from "timing" /* 4641 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import timing from "timing" /* 4723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1896 */;
@@ -12,7 +12,7 @@ require = fn;
 const AppStates = fn(1074).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_9 = createStyles.createStyles((fontSize) => ({ textEmoji: { fontSize }, imageEmoji: { width: fontSize, height: fontSize } }));
 let __initData = { code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,ringRadius,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-ringRadius*Math.sin(currentAngle)},{translateY:translateY.get()+ringRadius*(Math.cos(currentAngle)-1)}]};}" };
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 10852: handlePremiumPurchase ===
+// === Module 10946: handlePremiumPurchase ===
 
-// Module 10852 (handlePremiumPurchase)
+// Module 10946 (handlePremiumPurchase)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
-import IAPStore from "IAPStore" /* 7351 */;
+import SubscriptionStore from "SubscriptionStore" /* 4386 */;
+import IAPStore from "IAPStore" /* 7433 */;
 
 const require = globalThis.__r;
 
@@ -116,7 +116,7 @@ let closure_15 = async function _validatePurchase(arg0) {
   }
 };
 let closure_3 = ["succeededOnlyFields"];
-const setGPlayAnalytics = fn(9522).setGPlayAnalytics;
+const setGPlayAnalytics = fn(9606).setGPlayAnalytics;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12 } = Constants);
 const PaymentGateways = fn(1085).PaymentGateways;
@@ -198,14 +198,14 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           }
           if (null != offerIds) {
             if (null != arg2) {
-              const tmp13 = premiumSubscription(7354).TrialIdToProductOfferId[arg2.trialId];
+              const tmp13 = premiumSubscription(7436).TrialIdToProductOfferId[arg2.trialId];
               let tmp14;
               if (tmp13 != null) {
                 tmp14 = tmp13[arg0];
               }
               return tmp14;
             } else if (null != dependencyMap) {
-              const tmp9 = premiumSubscription(7354).DiscountIdToProductOfferId[dependencyMap.discountId];
+              const tmp9 = premiumSubscription(7436).DiscountIdToProductOfferId[dependencyMap.discountId];
               let tmp10;
               if (tmp9 != null) {
                 tmp10 = tmp9[arg0];
@@ -216,8 +216,8 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           let BOGO_OFFER_ID = null;
           if (arg1) {
             BOGO_OFFER_ID = null;
-            if (arg0 === premiumSubscription(7354).ProductIds.PREMIUM_TIER_2_MONTHLY) {
-              BOGO_OFFER_ID = premiumSubscription(7354).BOGO_OFFER_ID;
+            if (arg0 === premiumSubscription(7436).ProductIds.PREMIUM_TIER_2_MONTHLY) {
+              BOGO_OFFER_ID = premiumSubscription(7436).BOGO_OFFER_ID;
             }
           }
           return BOGO_OFFER_ID;
@@ -303,15 +303,15 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
       const result1 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_130_23);
       (function showPurchaseErrorModal(combined) {
         let billingError = combined;
-        if (!(combined instanceof premiumSubscription(4540).BillingError)) {
-          billingError = new premiumSubscription(4540).BillingError(combined);
+        if (!(combined instanceof premiumSubscription(4622).BillingError)) {
+          billingError = new premiumSubscription(4622).BillingError(combined);
         }
         if (tmpResult.isSpendingLimitError(billingError)) {
-          const result = premiumSubscription(10854).showSpendingLimitReachedAlert();
-          const tmpResult2 = premiumSubscription(10854);
+          const result = premiumSubscription(10948).showSpendingLimitReachedAlert();
+          const tmpResult2 = premiumSubscription(10948);
         } else {
           const intl = premiumSubscription(1115).intl;
-          let tmp8 = billingError.code !== premiumSubscription(4319).ErrorCodes.UNKNOWN;
+          let tmp8 = billingError.code !== premiumSubscription(4402).ErrorCodes.UNKNOWN;
           if (tmp8) {
             tmp8 = -1 !== billingError.code;
           }
@@ -327,10 +327,10 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           const intl2 = premiumSubscription(1115).intl;
           obj.title = intl2.string(premiumSubscription(1115).t["U+H+kd"]);
           obj.body = message;
-          closure_1_1(4984).show(obj);
-          const obj2 = closure_1_1(4984);
+          closure_1_1(5066).show(obj);
+          const obj2 = closure_1_1(5066);
         }
-        tmpResult = premiumSubscription(10854);
+        tmpResult = premiumSubscription(10948);
       })(closure_130_23);
       if (closure_130_23 instanceof premiumTrialOffer(premiumDiscountOffer[10])) {
         throw closure_130_23;

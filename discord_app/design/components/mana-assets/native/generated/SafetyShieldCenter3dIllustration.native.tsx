@@ -1,9 +1,9 @@
-// === Module 6509: SafetyShieldCenter3dIllustration ===
+// === Module 6591: SafetyShieldCenter3dIllustration ===
 
-// Module 6509 (SafetyShieldCenter3dIllustration)
+// Module 6591 (SafetyShieldCenter3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6510 from "module_6510" /* 6510 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6592 from "module_6592" /* 6592 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SafetyShieldCenter3dIllustration = function SafetyShieldCenter3dIll
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6510 };
+  const obj2 = { uri: _modDef6592 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

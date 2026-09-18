@@ -1,6 +1,6 @@
-// === Module 16330: ? ===
+// === Module 16427: ? ===
 
-// Module 16330
+// Module 16427
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/powerups/server-theme-powerup-static.png.js");

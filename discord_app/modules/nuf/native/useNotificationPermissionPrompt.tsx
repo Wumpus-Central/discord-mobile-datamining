@@ -1,12 +1,12 @@
-// === Module 16683: useNotificationPermissionPrompt ===
+// === Module 16780: useNotificationPermissionPrompt ===
 
-// Module 16683 (useNotificationPermissionPrompt)
-import NotificationUtilsDefault from "NotificationUtils" /* 12570 */;
+// Module 16780 (useNotificationPermissionPrompt)
+import NotificationUtilsDefault from "NotificationUtils" /* 12661 */;
 import noop from "module_19" /* 19 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1951 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5365 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12561 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12652 */;
 
 const require = fn;
 const size = fn(2);
@@ -32,7 +32,7 @@ export default function useNotificationPermissionPrompt() {
     }
   }, items2);
   const obj2 = stateFromStores(504);
-  const guildOpenNudge = stateFromStores(16684).useGuildOpenNudge();
-  const obj3 = stateFromStores(16684);
-  const postCallDisconnectNudge = stateFromStores(16686).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(16781).useGuildOpenNudge();
+  const obj3 = stateFromStores(16781);
+  const postCallDisconnectNudge = stateFromStores(16783).usePostCallDisconnectNudge();
 };

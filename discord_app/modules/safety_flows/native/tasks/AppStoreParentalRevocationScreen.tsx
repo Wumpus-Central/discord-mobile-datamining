@@ -1,25 +1,25 @@
-// === Module 18158: AppStoreParentalRevocationScreen ===
+// === Module 18252: AppStoreParentalRevocationScreen ===
 
-// Module 18158 (AppStoreParentalRevocationScreen)
+// Module 18252 (AppStoreParentalRevocationScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef2691 from "module_2691" /* 2691 */;
-import LinkingDefault from "Linking" /* 4334 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import Stack_Stack from "Stack/Stack" /* 5060 */;
-import ModalScreen from "ModalScreen" /* 8571 */;
-import ModalContent from "ModalContent" /* 8572 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8733 */;
-import ModalActionButton from "ModalActionButton" /* 11155 */;
-import ModalFooter from "ModalFooter" /* 12078 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18145 */;
+import _modDef2774 from "module_2774" /* 2774 */;
+import LinkingDefault from "Linking" /* 4417 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import Stack_Stack from "Stack/Stack" /* 5142 */;
+import ModalScreen from "ModalScreen" /* 8654 */;
+import ModalContent from "ModalContent" /* 8655 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8816 */;
+import ModalActionButton from "ModalActionButton" /* 11248 */;
+import ModalFooter from "ModalFooter" /* 12170 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18239 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { content: { flexGrow: 1, width: "100%" }, upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" }, lowerHalf: { flex: 1 }, text: { textAlign: "center" }, body: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,16 +37,16 @@ export default function AppStoreParentalRevocationScreen() {
   const obj5 = { align: "center", spacing: nativeDefault.space.PX_16, children: null };
   const obj6 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
-  obj6.children = intl.string(_modDef2691.Z87TFb);
+  obj6.children = intl.string(_modDef2774.Z87TFb);
   const items = [hasOwnProperty(Text_Text.Text, obj6), ];
   const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: null };
   const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj8.children = intl2.string(_modDef2691.VS98dM);
+  obj8.children = intl2.string(_modDef2774.VS98dM);
   const items1 = [hasOwnProperty(Text_Text.Text, obj8), ];
   const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl3 = util.intl;
-  obj9.children = intl3.string(_modDef2691.BaI6L4);
+  obj9.children = intl3.string(_modDef2774.BaI6L4);
   items1[1] = hasOwnProperty(Text_Text.Text, obj9);
   obj7.children = items1;
   items[1] = timestampProducer(Stack_Stack.Stack, obj7);
@@ -60,7 +60,7 @@ export default function AppStoreParentalRevocationScreen() {
   const items4 = [hasOwnProperty(LogOutDisclaimerDefault, {}), ];
   const obj12 = { variant: "primary", text: null, icon: null, iconPosition: "end", onPress: null };
   const intl4 = util.intl;
-  obj12.text = intl4.string(_modDef2691["6FXIU6"]);
+  obj12.text = intl4.string(_modDef2774["6FXIU6"]);
   obj12.icon = hasOwnProperty(LinkExternalSmallIcon.LinkExternalSmallIcon, { color: nativeDefault.colors.WHITE });
   obj12.onPress = callback;
   items4[1] = hasOwnProperty(ModalActionButton.ModalActionButton, obj12);

@@ -1,10 +1,10 @@
-// === Module 4875: useDisplayNameStylesEnabled ===
+// === Module 4957: useDisplayNameStylesEnabled ===
 
-// Module 4875 (useDisplayNameStylesEnabled)
+// Module 4957 (useDisplayNameStylesEnabled)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
-import DisplayNameStylesContext from "DisplayNameStylesContext" /* 4876 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import DisplayNameStylesContext from "DisplayNameStylesContext" /* 4958 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 import size from "module_2" /* 2 */;
 
 const useContext = _mod19.useContext;

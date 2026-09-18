@@ -1,6 +1,6 @@
-// === Module 10961: useToggleOnIAPSuccess ===
+// === Module 11055: useToggleOnIAPSuccess ===
 
-// Module 10961 (useToggleOnIAPSuccess)
+// Module 11055 (useToggleOnIAPSuccess)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

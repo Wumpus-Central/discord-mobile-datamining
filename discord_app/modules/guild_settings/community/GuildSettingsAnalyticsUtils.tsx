@@ -1,13 +1,13 @@
-// === Module 17931: GuildSettingsAnalyticsUtils ===
+// === Module 18024: GuildSettingsAnalyticsUtils ===
 
-// Module 17931 (GuildSettingsAnalyticsUtils)
+// Module 18024 (GuildSettingsAnalyticsUtils)
 import util from "util" /* 1115 */;
-import NumberUtils from "NumberUtils" /* 1881 */;
-import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 17950 */;
+import GuildSettingsAnalyticsActionCreators from "GuildSettingsAnalyticsActionCreators" /* 18043 */;
+import utils_NumberUtils from "utils/NumberUtils" /* 18044 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4559 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4641 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 17932 */;
+import GuildSettingsAnalyticsStore from "GuildSettingsAnalyticsStore" /* 18025 */;
 
 const require = globalThis.__r;
 
@@ -93,13 +93,13 @@ export const getGuildAnalyticsCardProps = function getGuildAnalyticsCardProps(co
       const intl = util.intl;
       const obj = { percentage: null };
       const _Math = Math;
-      obj.percentage = NumberUtils.truncateAndLocalizeNumber(Math.abs(communicatorsChange), stateFromStores);
+      obj.percentage = utils_NumberUtils.truncateAndLocalizeNumber(Math.abs(communicatorsChange), stateFromStores);
       let formatToPlainStringResult = intl.formatToPlainString(util.t.nskeMw, obj);
     }
     let combined = null;
     if (null != communicators) {
       let str2 = "";
-      const result = NumberUtils.truncateAndLocalizeNumber(communicators, stateFromStores);
+      const result = utils_NumberUtils.truncateAndLocalizeNumber(communicators, stateFromStores);
       if (flag) {
         str2 = "%";
       }

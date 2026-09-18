@@ -1,7 +1,7 @@
-// === Module 5062: components/Button/Button ===
+// === Module 5144: components/Button/Button ===
 
-// Module 5062 (components/Button/Button)
-import BaseTextButton from "BaseTextButton" /* 5063 */;
+// Module 5144 (components/Button/Button)
+import BaseTextButton from "BaseTextButton" /* 5145 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Button/native/Button.native.tsx");

@@ -1,12 +1,12 @@
-// === Module 5106: isSoundValid ===
+// === Module 5188: isSoundValid ===
 
-// Module 5106 (isSoundValid)
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
+// Module 5188 (isSoundValid)
+import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 import UserStore from "UserStore" /* 1372 */;
 
-const DEFAULT_SOUND_GUILD_ID = fn(5102).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5184).DEFAULT_SOUND_GUILD_ID;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");

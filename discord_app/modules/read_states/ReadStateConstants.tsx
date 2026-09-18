@@ -1,6 +1,6 @@
-// === Module 4822: ReadStateConstants ===
+// === Module 4904: ReadStateConstants ===
 
-// Module 4822 (ReadStateConstants)
+// Module 4904 (ReadStateConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/read_states/ReadStateConstants.tsx");

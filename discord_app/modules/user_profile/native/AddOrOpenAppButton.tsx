@@ -1,12 +1,12 @@
-// === Module 13152: AddOrOpenAppButton ===
+// === Module 13243: AddOrOpenAppButton ===
 
-// Module 13152 (AddOrOpenAppButton)
-import ToastUtils from "ToastUtils" /* 4337 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4607 */;
-import ClipboardUtils from "ClipboardUtils" /* 7303 */;
-import ApplicationUtils from "ApplicationUtils" /* 9727 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12283 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12296 */;
+// Module 13243 (AddOrOpenAppButton)
+import ToastUtils from "ToastUtils" /* 4419 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+import ClipboardUtils from "ClipboardUtils" /* 7385 */;
+import ApplicationUtils from "ApplicationUtils" /* 9821 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12374 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12387 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8733).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(8816).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -54,9 +54,9 @@ function AddAppButton(application) {
     obj3.onAccessibilityAction = callback1;
     const obj4 = { size: "sm", color: guildId(576).colors.WHITE };
     obj3.icon = <PlusSmallIcon size="sm" color={guildId(576).colors.WHITE} />;
-    return jsx(tmp6(5062).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
+    return jsx(tmp6(5144).Button, { text: null, onPress: null, onLongPress: null, accessibilityActions: null, onAccessibilityAction: null, icon: null });
   }
-  PlusSmallIcon = application(9022).PlusSmallIcon;
+  PlusSmallIcon = application(9106).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -114,18 +114,18 @@ function OpenAppButton(profileApplication) {
             if (application1 == null) {
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: tmp2(7277).fetchApplication(profileApplication.id), done: false };
+              const obj7 = { value: tmp2(7359).fetchApplication(profileApplication.id), done: false };
               return obj7;
             } else {
               closure_129_1 = closure_0;
               closure_130_3(false);
               if (null != closure_129_0) {
-                tmp2(4607).hideAllActionSheets();
-                const obj5 = tmp2(4607);
+                tmp2(4689).hideAllActionSheets();
+                const obj5 = tmp2(4689);
                 const obj8 = { recipientIds: closure_130_1 };
                 c3 = 2;
                 c4 = 1;
-                const obj10 = { value: tmp2(4653).openPrivateChannel(obj8), done: false };
+                const obj10 = { value: tmp2(4735).openPrivateChannel(obj8), done: false };
                 return obj10;
               } else {
                 c4 = 3;
@@ -183,7 +183,7 @@ function OpenAppButton(profileApplication) {
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const getSection = fn(9444).getSection;
+const getSection = fn(9528).getSection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const AppLauncherRouteName = fn(1483).AppLauncherRouteName;
 const jsx = fn(21).jsx;

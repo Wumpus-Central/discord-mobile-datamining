@@ -1,10 +1,10 @@
-// === Module 16316: GuildHeaderCoachmarks ===
+// === Module 16413: GuildHeaderCoachmarks ===
 
-// Module 16316 (GuildHeaderCoachmarks)
+// Module 16413 (GuildHeaderCoachmarks)
 import dismissible_content from "dismissible_content" /* 1944 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;

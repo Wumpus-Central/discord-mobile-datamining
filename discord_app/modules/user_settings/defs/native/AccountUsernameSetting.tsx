@@ -1,23 +1,23 @@
-// === Module 14825: AccountUsernameSetting ===
+// === Module 14919: AccountUsernameSetting ===
 
-// Module 14825 (AccountUsernameSetting)
+// Module 14919 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12023 */;
+import UserUtilsDefault from "UserUtils" /* 4566 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12115 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8111).MobileUserSettings.ACCOUNT,
+  parent: fn(8194).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
     const items = [UserStore];
     return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));

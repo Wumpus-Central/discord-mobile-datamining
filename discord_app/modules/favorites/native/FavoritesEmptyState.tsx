@@ -1,14 +1,14 @@
-// === Module 16983: FavoritesEmptyState ===
+// === Module 17123: FavoritesEmptyState ===
 
-// Module 16983 (FavoritesEmptyState)
+// Module 17123 (FavoritesEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3239 from "module_3239" /* 3239 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import Stack_Stack from "Stack/Stack" /* 5060 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import native from "native" /* 5780 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 12904 */;
+import _modDef3322 from "module_3322" /* 3322 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import Stack_Stack from "Stack/Stack" /* 5142 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import native from "native" /* 5862 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12995 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 }, text: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -37,25 +37,25 @@ export default function FavoritesEmptyState() {
   const obj3 = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
   const obj4 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3239["wh+Rz1"]);
+  obj4.children = intl.string(_modDef3322["wh+Rz1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj4), ];
   const obj5 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj5.children = intl2.string(_modDef3239["+SuGKb"]);
+  obj5.children = intl2.string(_modDef3322["+SuGKb"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj5);
   obj3.children = items1;
   items[1] = timestampProducer(Stack_Stack.Stack, obj3);
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj6 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = util.intl;
-    obj6.text = intl4.string(_modDef3239["6kk0gM"]);
+    obj6.text = intl4.string(_modDef3322["6kk0gM"]);
     obj6.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
     obj6.onPress = callback;
     let obj7 = obj6;
   } else {
     obj7 = { variant: "primary", text: null, onPress: null };
     const intl3 = util.intl;
-    obj7.text = intl3.string(_modDef3239.yYVbdv);
+    obj7.text = intl3.string(_modDef3322.yYVbdv);
     obj7.onPress = callback1;
   }
   items[2] = hasOwnProperty(components_Button_Button.Button, obj7);

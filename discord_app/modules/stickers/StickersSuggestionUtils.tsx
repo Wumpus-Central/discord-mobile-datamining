@@ -1,6 +1,6 @@
-// === Module 5358: StickersSuggestionUtils ===
+// === Module 5440: StickersSuggestionUtils ===
 
-// Module 5358 (StickersSuggestionUtils)
+// Module 5440 (StickersSuggestionUtils)
 import size from "module_2" /* 2 */;
 
 const re0 = /(!|\.|;|,|-|—|–|\?|"|')/g;

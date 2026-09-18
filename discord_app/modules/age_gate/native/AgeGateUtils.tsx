@@ -1,12 +1,12 @@
-// === Module 10441: age_gate/AgeGateUtils ===
+// === Module 10535: age_gate/AgeGateUtils ===
 
-// Module 10441 (age_gate/AgeGateUtils)
+// Module 10535 (age_gate/AgeGateUtils)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9450 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 9534 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -66,9 +66,9 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
         }
       }
       const obj3 = { guildId: id1 };
-      obj2.pushLazy(asyncRequireImpl(10442, dependencyMap.paths), obj3);
+      obj2.pushLazy(asyncRequireImpl(10536, dependencyMap.paths), obj3);
       flag2 = true;
-      const tmp12 = asyncRequireImpl(10442, dependencyMap.paths);
+      const tmp12 = asyncRequireImpl(10536, dependencyMap.paths);
     }
     return flag2;
   } else {

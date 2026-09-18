@@ -1,10 +1,10 @@
-// === Module 14952: FamilyCenterControlledSettingsUtils ===
+// === Module 15046: FamilyCenterControlledSettingsUtils ===
 
-// Module 14952 (FamilyCenterControlledSettingsUtils)
+// Module 15046 (FamilyCenterControlledSettingsUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7412 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7415 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14949 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7494 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7497 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15043 */;
 import size from "module_2" /* 2 */;
 
 function getGoreContentSettingOrDefault(arg0) {

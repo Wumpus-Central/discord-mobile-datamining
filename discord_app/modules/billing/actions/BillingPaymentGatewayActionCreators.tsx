@@ -1,15 +1,15 @@
-// === Module 4967: BillingPaymentGatewayActionCreators ===
+// === Module 5049: BillingPaymentGatewayActionCreators ===
 
-// Module 4967 (BillingPaymentGatewayActionCreators)
+// Module 5049 (BillingPaymentGatewayActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import BillingSharedActionCreators from "BillingSharedActionCreators" /* 4965 */;
-import _mod4968 from "module_4968" /* 4968 */;
-import StripeActionCreators from "StripeActionCreators" /* 4969 */;
-import StripeUtilsAll from "StripeUtils" /* 4970 */;
+import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5047 */;
+import _mod5050 from "module_5050" /* 5050 */;
+import StripeActionCreators from "StripeActionCreators" /* 5051 */;
+import StripeUtilsAll from "StripeUtils" /* 5052 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -65,7 +65,7 @@ let closure_14 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod4968.CardNumberElement);
+                element = element.getElement(_mod5050.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError("Unable to load card elements from Stripe");
                 } else {
@@ -505,7 +505,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       if (closure_136_11 == null) {
                         setupIntent = undefined;
                       }
-                      const obj8 = { setupIntent, error: "a" };
+                      const obj8 = { setupIntent, error: "Array" };
                       closure_136_10 = obj8;
                       if ((function shouldRecreateSetupIntentForPaymentElement(error) {
                         let tmp = null != error;
@@ -534,7 +534,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       setupIntent2 = closure_137_17(closure_136_10.setupIntent, closure_136_10.error, (type) => {
                         const intl = dependencyMap(1115).intl;
                         const stringResult = intl.string(dependencyMap(1115).t.khEaRI);
-                        return dependencyMap(4965).dispatchConfirmationError(type, true, stringResult, { tags: { source: "payment_elements" } });
+                        return dependencyMap(5047).dispatchConfirmationError(type, true, stringResult, { tags: { source: "payment_elements" } });
                       }).setupIntent;
                       closure_136_4.current = setupIntent2;
                       payment_method = setupIntent2.payment_method;

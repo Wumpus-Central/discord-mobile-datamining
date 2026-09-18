@@ -1,22 +1,22 @@
-// === Module 16618: ItemDetailsActionSheet ===
+// === Module 16715: ItemDetailsActionSheet ===
 
-// Module 16618 (ItemDetailsActionSheet)
+// Module 16715 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import useChannelNameDefault from "useChannelName" /* 4793 */;
-import GuildIcon from "GuildIcon" /* 5672 */;
-import TableRow from "TableRow" /* 5693 */;
-import useDesignToggleDefault from "useDesignToggle" /* 5714 */;
-import TableRowGroup from "TableRowGroup" /* 5775 */;
-import ActionSheet from "ActionSheet" /* 7311 */;
-import ICYMIUtils from "ICYMIUtils" /* 8499 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11159 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16619 */;
+import useChannelNameDefault from "useChannelName" /* 4875 */;
+import GuildIcon from "GuildIcon" /* 5754 */;
+import TableRow from "TableRow" /* 5775 */;
+import useDesignToggleDefault from "useDesignToggle" /* 5796 */;
+import TableRowGroup from "TableRowGroup" /* 5857 */;
+import ActionSheet from "ActionSheet" /* 7393 */;
+import ICYMIUtils from "ICYMIUtils" /* 8582 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11252 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16716 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import ICYMIStore from "ICYMIStore" /* 8484 */;
+import ICYMIStore from "ICYMIStore" /* 8567 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

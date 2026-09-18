@@ -1,23 +1,23 @@
-// === Module 12864: GuildInvite ===
+// === Module 12955: GuildInvite ===
 
-// Module 12864 (GuildInvite)
+// Module 12955 (GuildInvite)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4820 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5056 */;
-import GroupIcon from "GroupIcon" /* 5176 */;
-import TableRow from "TableRow" /* 5693 */;
-import NavigatorHeader from "NavigatorHeader" /* 5712 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9971 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9998 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 10044 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12859 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4902 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5138 */;
+import GroupIcon from "GroupIcon" /* 5258 */;
+import TableRow from "TableRow" /* 5775 */;
+import NavigatorHeader from "NavigatorHeader" /* 5794 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10065 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 10092 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 10138 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12950 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9972 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 10066 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9984 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 10078 */;
 
 require = fn;
 function SeeMoreFooter(openInviteSheet) {
@@ -67,15 +67,15 @@ function GuildInviteSuggestionRows(openInviteSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, FlatList: closure_7, StyleSheet } = get_ActivityIndicator);
-let closure_8 = fn(10045).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(7092).CreateGuildModalStates;
+let closure_8 = fn(10139).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(7174).CreateGuildModalStates;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, AnalyticsSections: closure_15, InstantInviteSources: closure_16, Permissions: closure_17, SearchTypes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(4640);
-let obj2 = { container: { marginTop: fn(5770).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" }, header: { marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" }, headerImage: { marginVertical: 16 }, linkContainer: { paddingHorizontal: 16, width: "100%" }, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
-let obj3 = { marginTop: fn(5770).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
+const createStyles = fn(4722);
+let obj2 = { container: { marginTop: fn(5852).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" }, header: { marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" }, headerImage: { marginVertical: 16 }, linkContainer: { paddingHorizontal: 16, width: "100%" }, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
+let obj3 = { marginTop: fn(5852).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
 obj2.linkButton = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 let obj4 = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 obj2.linkButtonIcon = { flexShrink: 0, marginLeft: 8, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };

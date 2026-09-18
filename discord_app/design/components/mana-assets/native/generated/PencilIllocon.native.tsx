@@ -1,9 +1,9 @@
-// === Module 6453: PencilIllocon ===
+// === Module 6535: PencilIllocon ===
 
-// Module 6453 (PencilIllocon)
+// Module 6535 (PencilIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6454 from "module_6454" /* 6454 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6536 from "module_6536" /* 6536 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const PencilIllocon = function PencilIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6454 };
+  const obj2 = { uri: _modDef6536 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

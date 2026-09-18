@@ -1,6 +1,6 @@
-// === Module 15953: useHasExpiredShopBlocks ===
+// === Module 16048: useHasExpiredShopBlocks ===
 
-// Module 15953 (useHasExpiredShopBlocks)
+// Module 16048 (useHasExpiredShopBlocks)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;

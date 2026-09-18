@@ -1,16 +1,16 @@
-// === Module 9723: FramesManager ===
+// === Module 9817: FramesManager ===
 
-// Module 9723 (FramesManager)
+// Module 9817 (FramesManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import FramesStore from "FramesStore" /* 9664 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
+import FramesStore from "FramesStore" /* 9748 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
 
 let require = fn;
-const EmbeddedSurfaceType = fn(9665).EmbeddedSurfaceType;
+const EmbeddedSurfaceType = fn(9749).EmbeddedSurfaceType;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire } = Constants);
-const TransportTypes = fn(4544).TransportTypes;
+const TransportTypes = fn(4626).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -21,14 +21,14 @@ class FramesManager extends tmp3 {
           },
       FRAME_LAUNCH(arg0) {
             ({ applicationId, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9672).trackFrameSessionStart(applicationId, analyticsContext);
+            const result = applyArgumentsResult(9756).trackFrameSessionStart(applicationId, analyticsContext);
           },
       FRAME_LAUNCH_FAIL(arg0) {
             ({ applicationId, error, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9672).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+            const result = applyArgumentsResult(9756).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(9672).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(9756).trackFrameSessionEnd(applicationId.applicationId);
           },
       VOICE_CHANNEL_SELECT(arg0) {
             const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);

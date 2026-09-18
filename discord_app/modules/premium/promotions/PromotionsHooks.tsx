@@ -1,12 +1,12 @@
-// === Module 13575: PromotionsHooks ===
+// === Module 13758: PromotionsHooks ===
 
-// Module 13575 (PromotionsHooks)
+// Module 13758 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PromotionUtils from "PromotionUtils" /* 13532 */;
+import PromotionUtils from "PromotionUtils" /* 13629 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import PromotionsStore from "PromotionsStore" /* 10814 */;
+import PromotionsStore from "PromotionsStore" /* 10908 */;
 
 const require = globalThis.__r;
 
@@ -163,12 +163,6 @@ export const useUnseenOutboundPromotions = function useUnseenOutboundPromotions(
   }, items1);
   return memo.filter((item) => stateFromStores(dependencyMap[5]).shouldShowOutboundPromotionOnPlatform(item));
 };
-export const useBogoPromotion = function useBogoPromotion() {
-  const obj = { promotion: null };
-  const items = [PromotionsStore];
-  obj.promotion = initialize.useStateFromStores(items, () => bogoPromotion.bogoPromotion);
-  return obj;
-};
 export const useIsInPromotion = function useIsInPromotion(arg0) {
   _require = arg0;
   const items = [PromotionsStore];
@@ -179,5 +173,5 @@ export const useHasActiveBogoPromotion = function useHasActiveBogoPromotion() {
     const result = require("PromotionsActionCreators").maybeFetchActivePromotions();
   }, []);
   const items = [PromotionsStore];
-  return initialize.useStateFromStores(items, () => null != activeBogoRewardPromotion.getActiveBogoRewardPromotion());
+  return initialize.useStateFromStores(items, () => PromotionsStore.hasActiveBogoRewardPromotion());
 };

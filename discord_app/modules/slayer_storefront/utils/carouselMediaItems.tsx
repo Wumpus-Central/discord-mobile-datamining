@@ -1,8 +1,8 @@
-// === Module 10955: carouselMediaItems ===
+// === Module 11049: carouselMediaItems ===
 
-// Module 10955 (carouselMediaItems)
-import StoreUtils from "StoreUtils" /* 4882 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7340 */;
+// Module 11049 (carouselMediaItems)
+import StoreUtils from "StoreUtils" /* 4964 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7422 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/slayer_storefront/utils/carouselMediaItems.tsx");

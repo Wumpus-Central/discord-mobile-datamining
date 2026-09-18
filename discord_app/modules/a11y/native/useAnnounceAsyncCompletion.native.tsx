@@ -1,6 +1,6 @@
-// === Module 11084: useAnnounceAsyncCompletion ===
+// === Module 11177: useAnnounceAsyncCompletion ===
 
-// Module 11084 (useAnnounceAsyncCompletion)
+// Module 11177 (useAnnounceAsyncCompletion)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -22,7 +22,7 @@ export default function useAnnounceAsyncCompletion() {
     if (polite === undefined) {
       str = "assertive";
     }
-    const AccessibilityAnnouncer = ref(4491).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = ref(4573).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(intl, str);
     if (obj.isIOS()) {
       if (tmpResult.getIsScreenReaderEnabled()) {

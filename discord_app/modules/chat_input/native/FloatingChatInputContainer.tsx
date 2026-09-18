@@ -1,18 +1,18 @@
-// === Module 12559: FloatingChatInputContainer ===
+// === Module 12650: FloatingChatInputContainer ===
 
-// Module 12559 (FloatingChatInputContainer)
+// Module 12650 (FloatingChatInputContainer)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4376 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4508 */;
-import timing from "timing" /* 4641 */;
-import timingPresets from "timingPresets" /* 4644 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4458 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4590 */;
+import timing from "timing" /* 4723 */;
+import timingPresets from "timingPresets" /* 4726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function useKeyboardOpenPaddingStyle() {
-  token = token(4341).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
-  let obj = token(4341);
+  token = token(4423).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+  let obj = token(4423);
   [tmp5, importDefault] = sharedValue(noop.useState(() => {
     const KeyboardController = token(1626).KeyboardController;
     const stateResult = KeyboardController.state();
@@ -47,7 +47,7 @@ function useKeyboardOpenPaddingStyle() {
     }
     return num > 0;
   }), 2);
-  const obj3 = token(4508);
+  const obj3 = token(4590);
   if (!tmp5) {
     tmp5 = true === obj3.useKeyboardContextForType(token(1610).KeyboardTypes.SYSTEM).keyboardWillOpen;
   }
@@ -60,7 +60,7 @@ function useKeyboardOpenPaddingStyle() {
   if (tmp5) {
     num = token;
   }
-  sharedValue = token(4376).useSharedValue(num);
+  sharedValue = token(4458).useSharedValue(num);
   const items = [tmp5, token, sharedValue];
   const effect1 = noop.useEffect(() => {
     let num = 0;
@@ -71,17 +71,17 @@ function useKeyboardOpenPaddingStyle() {
     const result = sharedValue.set(obj.withTiming(num, { duration: timingPresets.timingStandardDuration, easing }));
     const obj2 = { duration: timingPresets.timingStandardDuration, easing };
   }, items);
-  const tmpResult = token(4376);
+  const tmpResult = token(4458);
   const fn = function b() {
     return { paddingBottom: sharedValue.get() };
   };
   fn.__closure = { paddingSV: sharedValue };
   fn.__workletHash = 5673482424037;
   fn.__initData = __initData;
-  return token(4376).useAnimatedStyle(fn);
+  return token(4458).useAnimatedStyle(fn);
 }
 const jsx = fn(21).jsx;
-const Easing = fn(4376).Easing;
+const Easing = fn(4458).Easing;
 let closure_6 = Easing.bezier(0.2, 0, 0, 1);
 const __initData = { code: "function FloatingChatInputContainerTsx1(){const{paddingSV}=this.__closure;return{paddingBottom:paddingSV.get()};}" };
 const size = fn(2);

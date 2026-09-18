@@ -1,25 +1,25 @@
-// === Module 16649: AnnouncementMessageRow ===
+// === Module 16746: AnnouncementMessageRow ===
 
-// Module 16649 (AnnouncementMessageRow)
+// Module 16746 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5608 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8500 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11070 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11807 */;
-import ICYMIShared from "ICYMIShared" /* 16651 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5690 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8583 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11163 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11897 */;
+import ICYMIShared from "ICYMIShared" /* 16748 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
+import RelationshipStore from "RelationshipStore" /* 4371 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(16650).ITEM_PADDING;
+const ITEM_PADDING = fn(16747).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16612);
+const createICYMIStyles = fn(16709);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   const obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset } };
   return obj;

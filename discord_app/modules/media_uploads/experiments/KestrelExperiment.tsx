@@ -1,6 +1,6 @@
-// === Module 5267: KestrelExperiment ===
+// === Module 5349: KestrelExperiment ===
 
-// Module 5267 (KestrelExperiment)
+// Module 5349 (KestrelExperiment)
 import ApexExperiment_mod from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

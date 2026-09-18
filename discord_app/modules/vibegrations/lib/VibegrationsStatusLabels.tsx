@@ -1,9 +1,9 @@
-// === Module 16818: VibegrationsStatusLabels ===
+// === Module 16965: VibegrationsStatusLabels ===
 
-// Module 16818 (VibegrationsStatusLabels)
+// Module 16965 (VibegrationsStatusLabels)
 import util from "util" /* 1115 */;
-import _modDef3593 from "module_3593" /* 3593 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7359 */;
+import _modDef3676 from "module_3676" /* 3676 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7441 */;
 import size from "module_2" /* 2 */;
 
 function thinkingLabel(restoring) {
@@ -23,7 +23,7 @@ function thinkingLabel(restoring) {
   if (tmp) {
     tmp = "end" !== activity.phase;
   }
-  const tmp2 = _modDef3593;
+  const tmp2 = _modDef3676;
   if (flag2) {
     let ivvYHP = tmp2.ivvYHP;
   } else if (flag) {
@@ -37,30 +37,31 @@ function thinkingLabel(restoring) {
 }
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsStatusLabels.tsx");
 
+export const INDICATOR_PASS_MS = 1000;
+export const INDICATOR_PASS_STAGGER_MS = 1800;
 export const connectionLabel = function connectionLabel(stateFromStores6) {
   if ("connecting" === stateFromStores6) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3593.W7oyuf);
+    return intl3.string(_modDef3676.W7oyuf);
   } else if ("closed" === stateFromStores6) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3593["yBmS+I"]);
+    return intl2.string(_modDef3676["yBmS+I"]);
   } else if ("failed" === stateFromStores6) {
     const intl = util.intl;
-    return intl.string(_modDef3593.eE60xI);
+    return intl.string(_modDef3676.eE60xI);
   }
 };
 export { thinkingLabel };
 export const thinkingLine = function thinkingLine(restoring) {
   const intl = util.intl;
-  const intl2 = util.intl;
-  return "" + intl.string(_modDef3593.Xmvb23) + " " + intl2.string(thinkingLabel(restoring));
+  return intl.string(thinkingLabel(restoring));
 };
 export const runesUsedLabels = function runesUsedLabels(projectUsage) {
   const runesFromUsdResult = VibegrationsTypes.runesFromUsd(projectUsage.cost_usd);
   const obj2 = { text: null, aria: null };
   const intl = util.intl;
-  obj2.text = intl.formatToPlainString(_modDef3593["4PFO2p"], { runes: runesFromUsdResult.toLocaleString() });
+  obj2.text = intl.formatToPlainString(_modDef3676["4PFO2p"], { runes: runesFromUsdResult.toLocaleString() });
   const intl2 = util.intl;
-  obj2.aria = intl2.formatToPlainString(_modDef3593["7SZZvj"], { runes: runesFromUsdResult, turns: projectUsage.turns });
+  obj2.aria = intl2.formatToPlainString(_modDef3676["7SZZvj"], { runes: runesFromUsdResult, turns: projectUsage.turns });
   return obj2;
 };

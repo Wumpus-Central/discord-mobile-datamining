@@ -1,6 +1,6 @@
-// === Module 7663: ProfileFrameRecord ===
+// === Module 7745: ProfileFrameRecord ===
 
-// Module 7663 (ProfileFrameRecord)
+// Module 7745 (ProfileFrameRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
 import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1889 */;
 

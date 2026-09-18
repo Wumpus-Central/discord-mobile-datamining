@@ -1,14 +1,14 @@
-// === Module 16760: VibegrationsActionCreators ===
+// === Module 16859: VibegrationsActionCreators ===
 
-// Module 16760 (VibegrationsActionCreators)
+// Module 16859 (VibegrationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7359 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9661 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16756 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7441 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9745 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16855 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9664 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16754 */;
+import FramesStore from "FramesStore" /* 9748 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16851 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {
@@ -535,7 +535,7 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-const isLaunched = fn(9665).isLaunched;
+const isLaunched = fn(9749).isLaunched;
 let c9 = null;
 let c10 = null;
 const size = fn(2);
@@ -592,8 +592,8 @@ export const setProjectIcon = function setProjectIcon() {
   }
   return applyArgumentsResult;
 };
-export const setGuildHints = function setGuildHints(projectId, arg1) {
-  return patchProject(projectId, arg1);
+export const setGuildHints = function setGuildHints(id, arg1) {
+  return patchProject(id, arg1);
 };
 export const deleteProject = function deleteProject() {
   const self = this;

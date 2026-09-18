@@ -1,13 +1,13 @@
-// === Module 16771: VibegrationsEffortPicker ===
+// === Module 16870: VibegrationsEffortPicker ===
 
-// Module 16771 (VibegrationsEffortPicker)
+// Module 16870 (VibegrationsEffortPicker)
 import util from "util" /* 1115 */;
-import _modDef3593 from "module_3593" /* 3593 */;
-import TableRadioRow from "TableRadioRow" /* 5776 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7263 */;
-import ActionSheet from "ActionSheet" /* 7311 */;
-import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16767 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16768 */;
+import _modDef3676 from "module_3676" /* 3676 */;
+import TableRadioRow from "TableRadioRow" /* 5858 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7345 */;
+import ActionSheet from "ActionSheet" /* 7393 */;
+import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16866 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16867 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -287,7 +287,7 @@ export const VibegrationsEffortPickerSheet = function VibegrationsEffortPickerSh
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3593.GDs9Vq);
+  obj2.title = intl.string(_modDef3676.GDs9Vq);
   obj.header = React6(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React6(View, { children: React6(VibegrationsEffortPicker, { settings: tmp[0], choices: choices.choices, disabled: false, onChange: callback, hideTitle: true }) });
   return React6(ActionSheet.ActionSheet, obj);

@@ -1,9 +1,9 @@
-// === Module 12932: PanGestureAnimations ===
+// === Module 13023: PanGestureAnimations ===
 
-// Module 12932 (PanGestureAnimations)
+// Module 13023 (PanGestureAnimations)
 import native from "native" /* 1177 */;
-import timing from "timing" /* 4641 */;
-import spring from "spring" /* 5061 */;
+import timing from "timing" /* 4723 */;
+import spring from "spring" /* 5143 */;
 import size from "module_2" /* 2 */;
 
 const SPRING_CONFIG = { damping: 30, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };

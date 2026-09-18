@@ -1,12 +1,12 @@
-// === Module 8232: utils/ChangeLogUtils ===
+// === Module 8314: utils/ChangeLogUtils ===
 
-// Module 8232 (utils/ChangeLogUtils)
+// Module 8314 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 576 */;
-import _modDef4336 from "module_4336" /* 4336 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8233 */;
+import _modDef2075 from "module_2075" /* 2075 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8315 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 5082 */;
+import CustomMarkup from "CustomMarkup" /* 5164 */;
 
 require = fn;
 function ChangeLogLink(arg0) {
@@ -98,7 +98,7 @@ function ChangeLogStrong(arg0) {
 function ChangeLogImage(arg0) {
   ({ node, state } = arg0);
   const obj = { style: closure_6().image, source: null };
-  const obj2 = { uri: _modDef4336.sanitizeUrl(node.target) };
+  const obj2 = { uri: _modDef2075.sanitizeUrl(node.target) };
   obj.source = obj2;
   return <React4 key={state.key} style={closure_6().image} source={null} />;
 }
@@ -112,11 +112,11 @@ function ChangeLogBlockQuote(state) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, image: { alignSelf: "center", flex: 1 }, container: null, text: null };
 const obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5529).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5529).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5611).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5611).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});

@@ -1,6 +1,6 @@
-// === Module 5250: ImageEncodingLadder ===
+// === Module 5332: ImageEncodingLadder ===
 
-// Module 5250 (ImageEncodingLadder)
+// Module 5332 (ImageEncodingLadder)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

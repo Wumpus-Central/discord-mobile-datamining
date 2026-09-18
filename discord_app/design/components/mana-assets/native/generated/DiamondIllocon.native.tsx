@@ -1,9 +1,9 @@
-// === Module 6011: DiamondIllocon ===
+// === Module 6093: DiamondIllocon ===
 
-// Module 6011 (DiamondIllocon)
+// Module 6093 (DiamondIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6012 from "module_6012" /* 6012 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6094 from "module_6094" /* 6094 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const DiamondIllocon = function DiamondIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6012 };
+  const obj2 = { uri: _modDef6094 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

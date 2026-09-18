@@ -1,6 +1,6 @@
-// === Module 7366: useHasRoleSubscriptionInGuild ===
+// === Module 7448: useHasRoleSubscriptionInGuild ===
 
-// Module 7366 (useHasRoleSubscriptionInGuild)
+// Module 7448 (useHasRoleSubscriptionInGuild)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildRoleStore from "GuildRoleStore" /* 2016 */;

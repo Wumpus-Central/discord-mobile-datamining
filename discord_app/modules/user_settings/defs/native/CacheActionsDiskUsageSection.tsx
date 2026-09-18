@@ -1,14 +1,14 @@
-// === Module 15691: CacheActionsDiskUsageSection ===
+// === Module 15786: CacheActionsDiskUsageSection ===
 
-// Module 15691 (CacheActionsDiskUsageSection)
+// Module 15786 (CacheActionsDiskUsageSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import FileSizeUtils from "FileSizeUtils" /* 4536 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import Stack_Stack from "Stack/Stack" /* 5060 */;
-import Card from "Card" /* 5695 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 15692 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 15693 */;
+import FileSizeUtils from "FileSizeUtils" /* 4618 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import Stack_Stack from "Stack/Stack" /* 5142 */;
+import Card from "Card" /* 5777 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 15787 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 15788 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -73,7 +73,7 @@ function DiskUsageResults(report) {
   const obj5 = { variant: "heading-sm/semibold", children: null };
   const intl15 = obj(1115).intl;
   obj5.children = intl15.string(obj(1115).t.CoudPr);
-  const items1 = [closure_6(obj(4636).Heading, obj5), , ];
+  const items1 = [closure_6(obj(4718).Heading, obj5), , ];
   const roots = report.roots;
   items1[1] = roots.map((bytes) => {
     const root = bytes.root;
@@ -96,17 +96,17 @@ function DiskUsageResults(report) {
     const intl16 = tmp(1115).intl;
     ({ errorCount: obj7.errors, unmeasuredRootCount: obj7.unavailable } = report);
     obj6.children = intl16.formatToPlainString(tmp(1115).t.kt7tAT, { errors: null, unavailable: null });
-    tmp4Result = closure_6(tmp(4636).Text, obj6);
+    tmp4Result = closure_6(tmp(4718).Text, obj6);
     const obj13 = { errors: null, unavailable: null };
   }
   items1[2] = tmp4Result;
-  items[2] = closure_7(obj(5060).Stack, { children: items1 });
+  items[2] = closure_7(obj(5142).Stack, { children: items1 });
   obj2.children = items;
-  return closure_7(obj(5060).Stack, obj2);
+  return closure_7(obj(5142).Stack, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_8 = createStyles.createStyles({ label: { flex: 1 }, value: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CacheActionsDiskUsageSection.tsx");

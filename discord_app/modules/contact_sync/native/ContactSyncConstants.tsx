@@ -1,6 +1,6 @@
-// === Module 12829: ContactSyncConstants ===
+// === Module 12920: ContactSyncConstants ===
 
-// Module 12829 (ContactSyncConstants)
+// Module 12920 (ContactSyncConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncConstants.tsx");

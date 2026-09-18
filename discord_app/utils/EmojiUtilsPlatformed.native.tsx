@@ -1,16 +1,16 @@
-// === Module 7903: EmojiUtilsPlatformed ===
+// === Module 7985: EmojiUtilsPlatformed ===
 
-// Module 7903 (EmojiUtilsPlatformed)
+// Module 7985 (EmojiUtilsPlatformed)
 import _modDef12 from "module_12" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import DeviceUtils from "DeviceUtils" /* 4619 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7904 */;
-import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 7943 */;
+import DeviceUtils from "DeviceUtils" /* 4701 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7986 */;
+import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 8025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4293 */;
-import MemoizerUtils from "MemoizerUtils" /* 7948 */;
+import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4376 */;
+import MemoizerUtils from "MemoizerUtils" /* 8030 */;
 
 require = fn;
 function getURL(name) {

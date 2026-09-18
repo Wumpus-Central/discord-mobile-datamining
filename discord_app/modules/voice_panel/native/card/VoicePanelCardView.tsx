@@ -1,21 +1,21 @@
-// === Module 17377: VoicePanelCardView ===
+// === Module 17507: VoicePanelCardView ===
 
-// Module 17377 (VoicePanelCardView)
+// Module 17507 (VoicePanelCardView)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
-import native from "native" /* 4350 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import Suspender from "Suspender" /* 5015 */;
-import spring from "spring" /* 5061 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7187 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9649 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11152 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12428 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 17378 */;
+import native from "native" /* 4432 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4433 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import Suspender from "Suspender" /* 5097 */;
+import spring from "spring" /* 5143 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7269 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9733 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11245 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12519 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 17508 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4656 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4738 */;
 
 require = fn;
 function getCardKey(type) {
@@ -160,12 +160,12 @@ function CardContentFreezer(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12424);
+const VoicePanelConstants = fn(12515);
 ({ LAYOUT_PHYSICS: closure_8, VoicePanelModes: closure_9, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12422).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17335).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12427).EDGE_GUTTER;
-const isUserParticipant = fn(4661).isUserParticipant;
+const VoicePanelControlsModes = fn(12513).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17465).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12518).EDGE_GUTTER;
+const isUserParticipant = fn(4743).isUserParticipant;
 const jsx = fn(21).jsx;
 let SCALE_PHYSICS = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);

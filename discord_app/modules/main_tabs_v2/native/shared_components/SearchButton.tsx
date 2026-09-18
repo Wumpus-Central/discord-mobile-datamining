@@ -1,17 +1,17 @@
-// === Module 12522: SearchButton ===
+// === Module 12613: SearchButton ===
 
-// Module 12522 (SearchButton)
+// Module 12613 (SearchButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7165 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7247 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { searchButton: { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 }, roundedCorners: { borderRadius: 20 }, roundedCornersAlt: null, text: null };
 const obj3 = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
 obj2.roundedCornersAlt = { borderRadius: nativeDefault.radii.round };

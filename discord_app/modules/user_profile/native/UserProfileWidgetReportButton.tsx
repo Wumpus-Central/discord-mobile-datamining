@@ -1,12 +1,12 @@
-// === Module 8818: UserProfileWidgetReportButton ===
+// === Module 8901: UserProfileWidgetReportButton ===
 
-// Module 8818 (UserProfileWidgetReportButton)
+// Module 8901 (UserProfileWidgetReportButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ContextMenu from "ContextMenu" /* 8052 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8059 */;
-import ReportModals from "ReportModals" /* 8784 */;
-import FlagIcon from "FlagIcon" /* 8819 */;
+import ContextMenu from "ContextMenu" /* 8135 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8142 */;
+import FlagIcon from "FlagIcon" /* 8902 */;
+import showReportModalForUserWidget from "showReportModalForUserWidget" /* 8904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default function UserProfileWidgetReportButton(arg0) {
   obj.label = intl.string(util.t.D4GvHE);
   obj.IconComponent = FlagIcon.FlagIcon;
   obj.action = function action() {
-    return ReportModals.showReportModalForWidget(closure_1_0, importDefault);
+    return showReportModalForUserWidget.showReportModalForUserWidget(closure_1_0, importDefault);
   };
   const items = [obj];
   return jsx(ContextMenu.ContextMenu, {

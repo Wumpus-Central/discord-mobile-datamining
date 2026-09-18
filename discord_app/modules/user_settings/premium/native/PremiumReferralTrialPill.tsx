@@ -1,12 +1,12 @@
-// === Module 13507: PremiumReferralTrialPill ===
+// === Module 13604: PremiumReferralTrialPill ===
 
-// Module 13507 (PremiumReferralTrialPill)
+// Module 13604 (PremiumReferralTrialPill)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import createStyles from "createStyles" /* 4640 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

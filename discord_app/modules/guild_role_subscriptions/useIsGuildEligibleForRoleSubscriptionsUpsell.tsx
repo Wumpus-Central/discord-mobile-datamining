@@ -1,6 +1,6 @@
-// === Module 16412: useIsGuildEligibleForRoleSubscriptionsUpsell ===
+// === Module 16509: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
-// Module 16412 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 16509 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import Constants from "Constants" /* 1074 */;
 import GuildRecord from "GuildRecord" /* 1976 */;
 import GuildStore from "GuildStore" /* 1980 */;

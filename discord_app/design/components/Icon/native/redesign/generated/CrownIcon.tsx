@@ -1,9 +1,9 @@
-// === Module 11051: CrownIcon ===
+// === Module 11144: CrownIcon ===
 
-// Module 11051 (CrownIcon)
+// Module 11144 (CrownIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod11052 from "module_11052" /* 11052 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod11145 from "module_11145" /* 11145 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const CrownIcon = function CrownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11052, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11145, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

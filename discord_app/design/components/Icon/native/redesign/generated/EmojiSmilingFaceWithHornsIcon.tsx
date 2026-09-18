@@ -1,9 +1,9 @@
-// === Module 15506: EmojiSmilingFaceWithHornsIcon ===
+// === Module 15601: EmojiSmilingFaceWithHornsIcon ===
 
-// Module 15506 (EmojiSmilingFaceWithHornsIcon)
+// Module 15601 (EmojiSmilingFaceWithHornsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15507 from "module_15507" /* 15507 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod15602 from "module_15602" /* 15602 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const EmojiSmilingFaceWithHornsIcon = function EmojiSmilingFaceWithHornsI
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15507, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15602, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,8 +1,8 @@
-// === Module 7845: QuestHomeSearchSession ===
+// === Module 7927: QuestHomeSearchSession ===
 
-// Module 7845 (QuestHomeSearchSession)
+// Module 7927 (QuestHomeSearchSession)
 import v1 from "v1" /* 1255 */;
-import SessionUtils from "SessionUtils" /* 7585 */;
+import SessionUtils from "SessionUtils" /* 7667 */;
 import size from "module_2" /* 2 */;
 
 let c2 = null;

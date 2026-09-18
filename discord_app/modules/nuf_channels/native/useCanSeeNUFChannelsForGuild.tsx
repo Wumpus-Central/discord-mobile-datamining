@@ -1,8 +1,8 @@
-// === Module 16410: useCanSeeNUFChannelsForGuild ===
+// === Module 16507: useCanSeeNUFChannelsForGuild ===
 
-// Module 16410 (useCanSeeNUFChannelsForGuild)
+// Module 16507 (useCanSeeNUFChannelsForGuild)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import UserUtils from "UserUtils" /* 4484 */;
+import UserUtils from "UserUtils" /* 4566 */;
 import GuildMemberStore from "GuildMemberStore" /* 2022 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;
-const GuildMemberFlags = fn(4265).GuildMemberFlags;
+const GuildMemberFlags = fn(4348).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx");
 

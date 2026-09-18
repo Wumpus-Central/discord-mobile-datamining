@@ -1,10 +1,10 @@
-// === Module 13829: LocalAppDetectionUtils ===
+// === Module 13922: LocalAppDetectionUtils ===
 
-// Module 13829 (LocalAppDetectionUtils)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13828 */;
-import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13830 */;
+// Module 13922 (LocalAppDetectionUtils)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13921 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13923 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConsentStore from "ConsentStore" /* 6705 */;
+import ConsentStore from "ConsentStore" /* 6787 */;
 
 require = fn;
 function isGameCommunityAddServerEntryEnabled() {

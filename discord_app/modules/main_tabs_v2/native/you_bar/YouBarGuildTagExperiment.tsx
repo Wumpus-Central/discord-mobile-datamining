@@ -1,6 +1,6 @@
-// === Module 16528: YouBarGuildTagExperiment ===
+// === Module 16625: YouBarGuildTagExperiment ===
 
-// Module 16528 (YouBarGuildTagExperiment)
+// Module 16625 (YouBarGuildTagExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

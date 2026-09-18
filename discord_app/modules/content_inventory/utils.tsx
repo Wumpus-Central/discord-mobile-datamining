@@ -1,13 +1,13 @@
-// === Module 8283: utils ===
+// === Module 8365: utils ===
 
-// Module 8283 (utils)
+// Module 8365 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
-import _mod3874 from "module_3874" /* 3874 */;
-import _modDef4231 from "module_4231" /* 4231 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8278 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8284 */;
+import _mod3957 from "module_3957" /* 3957 */;
+import _modDef4314 from "module_4314" /* 4314 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8360 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8366 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {
@@ -97,8 +97,8 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = _modDef4231(timestamp);
-  const tmp3 = _modDef4231;
+  const obj2 = _modDef4314(timestamp);
+  const tmp3 = _modDef4314;
   const diffResult = obj2.diff(tmp3(SnowflakeUtilsDefault.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
   if (absolute < DurationsDefault.Seconds.MINUTE) {
@@ -392,7 +392,7 @@ export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastP
 };
 export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(start) {
   const obj2 = { start, end: null };
-  const obj = _mod3874;
+  const obj = _mod3957;
   obj2.end = new Date();
   const intervalToDurationResult = obj.intervalToDuration(obj2);
   const months = intervalToDurationResult.months;

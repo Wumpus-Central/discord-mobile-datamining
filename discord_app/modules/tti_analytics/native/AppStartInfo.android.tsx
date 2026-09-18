@@ -1,8 +1,8 @@
-// === Module 7787: AppStartInfo ===
+// === Module 7869: AppStartInfo ===
 
-// Module 7787 (AppStartInfo)
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4504 */;
-import NativeTTIModuleDefault from "NativeTTIModule" /* 7788 */;
+// Module 7869 (AppStartInfo)
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4586 */;
+import NativeTTIModuleDefault from "NativeTTIModule" /* 7870 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

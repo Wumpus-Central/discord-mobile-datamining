@@ -1,14 +1,14 @@
-// === Module 8542: StageChannelModalActionCreators ===
+// === Module 8625: StageChannelModalActionCreators ===
 
-// Module 8542 (StageChannelModalActionCreators)
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5499 */;
-import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8543 */;
-import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 13079 */;
+// Module 8625 (StageChannelModalActionCreators)
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5581 */;
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8626 */;
+import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 13170 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4662 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
 
 const require = fn;
@@ -71,15 +71,15 @@ function connectAndOpen(channel) {
     const obj = require("shouldShowVoiceChannelChangeConfirmation");
   }
   if (result) {
-    result = flag2(8543).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(8626).showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(8543);
+    const obj2 = flag2(8626);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(8543).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(8543);
+      flag2(8626).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(8626);
     }
   }
 }
@@ -130,7 +130,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
               const items = [closure_0];
               c3 = 1;
               c4 = 1;
-              const obj7 = { value: closure_0(7435).stopLurkingAll(items), done: false };
+              const obj7 = { value: closure_0(7517).stopLurkingAll(items), done: false };
               return obj7;
             }
           }
@@ -145,7 +145,7 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
           } else {
             c3 = 2;
             c4 = 1;
-            const obj9 = { value: tmp2(5608).joinGuild(closure_0, { lurker: true }), done: false };
+            const obj9 = { value: tmp2(5690).joinGuild(closure_0, { lurker: true }), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -161,10 +161,10 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             flag = null == channel;
             if (!flag) {
               connectToStage(channel);
-              closure_1(13078).initialize();
+              closure_1(13169).initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(13078);
+              const obj = closure_1(13169);
             }
             return flag;
           });

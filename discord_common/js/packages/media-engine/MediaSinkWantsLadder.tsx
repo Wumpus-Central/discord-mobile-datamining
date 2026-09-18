@@ -1,7 +1,7 @@
-// === Module 4709: MediaSinkWantsLadder ===
+// === Module 4791: MediaSinkWantsLadder ===
 
-// Module 4709 (MediaSinkWantsLadder)
-import Constants from "Constants" /* 4665 */;
+// Module 4791 (MediaSinkWantsLadder)
+import Constants from "Constants" /* 4747 */;
 import size from "module_2" /* 2 */;
 
 ({ defaultVideoQualityOptions: closure_0, VIDEO_QUALITY_FRAMERATE: closure_1, VIDEO_QUALITY_FRAMERATE_MUTED_2: c2, VIDEO_QUALITY_FRAMERATE_MUTED: c3 } = Constants);

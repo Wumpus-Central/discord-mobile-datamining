@@ -1,6 +1,6 @@
-// === Module 4685: SystemAnalyticsStore ===
+// === Module 4767: SystemAnalyticsStore ===
 
-// Module 4685 (SystemAnalyticsStore)
+// Module 4767 (SystemAnalyticsStore)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/system_analytics/SystemAnalyticsStore.native.tsx");

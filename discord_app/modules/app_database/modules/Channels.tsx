@@ -1,6 +1,6 @@
-// === Module 7761: Channels ===
+// === Module 7843: Channels ===
 
-// Module 7761 (Channels)
+// Module 7843 (Channels)
 import ChannelRecord from "ChannelRecord" /* 1962 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

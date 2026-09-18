@@ -1,28 +1,28 @@
-// === Module 10399: ForumComposerModal ===
+// === Module 10493: ForumComposerModal ===
 
-// Module 10399 (ForumComposerModal)
+// Module 10493 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4985 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7897 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9461 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10398 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7979 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9545 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10492 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9835 */;
+import NativeMenuStore from "NativeMenuStore" /* 9929 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import DraftStore from "DraftStore" /* 4981 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4980 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7391 */;
+import DraftStore from "DraftStore" /* 5063 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5062 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7473 */;
 
 require = fn;
 const View = fn(17).View;
-const DraftType = fn(4981).DraftType;
+const DraftType = fn(5063).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);

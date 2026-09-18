@@ -1,38 +1,38 @@
-// === Module 9179: useApplicationWidgetConfigs ===
+// === Module 9263: useApplicationWidgetConfigs ===
 
-// Module 9179 (useApplicationWidgetConfigs)
+// Module 9263 (useApplicationWidgetConfigs)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 9181 */;
+import ApplicationWidgetConfigActions from "ApplicationWidgetConfigActions" /* 9265 */;
 import noop from "module_19" /* 19 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 9180 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 9264 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const FetchState = fn(9180).FetchState;
+const FetchState = fn(9264).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 
-export default function useApplicationWidgetConfigs(arg0) {
-  _require = arg0;
+export default function useApplicationWidgetConfigs(items1) {
+  _require = items1;
   const DeveloperMode = require("UserSettings").DeveloperMode;
   setting = DeveloperMode.useSetting();
   const items = [stateFromStores1];
   const stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores1.getFeaturedFetchState());
   let obj = require("initialize");
-  const items1 = [stateFromStores1];
+  items1 = [stateFromStores1];
   stateFromStores1 = require("initialize").useStateFromStores(items1, () => stateFromStores1.getDeveloperFetchState());
   const obj2 = require("initialize");
   const items2 = [stateFromStores1];
-  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items2, () => closure_0.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED));
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items2, () => items1.filter((item) => fetchState.getFetchState(item) === constants.NOT_FETCHED));
   const obj3 = require("initialize");
   const items3 = [stateFromStores1];
   const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items3, () => {
-    const mapped = closure_0.map((item) => config.getConfig(item));
+    const mapped = items1.map((item) => config.getConfig(item));
     return mapped.filter(GlobalUtils.isNotNullish);
   });
   const effect = stateFromStores.useEffect(() => {
-    const featuredWidgetConfigs = closure_0(setting[5]).fetchFeaturedWidgetConfigs();
+    const featuredWidgetConfigs = items1(setting[5]).fetchFeaturedWidgetConfigs();
     featuredWidgetConfigs.catch(() => {
 
     });

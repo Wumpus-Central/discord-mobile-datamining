@@ -1,12 +1,12 @@
-// === Module 13123: MediaModalOverlayFooter ===
+// === Module 13214: MediaModalOverlayFooter ===
 
-// Module 13123 (MediaModalOverlayFooter)
+// Module 13214 (MediaModalOverlayFooter)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import timing from "timing" /* 4641 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6766 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11687 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import timing from "timing" /* 4723 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6848 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11777 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { drawerContainer: { overflow: "hidden", backgroundColor: "w" }, drawerHeaderTab: { width: 40, backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 }, drawerHeader: { backgroundColor: "r" }, messagePreviewContainer: { marginLeft: 6 }, thumbnailsContainer: { paddingTop: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let c9 = -1;
@@ -268,7 +268,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     const onStartResult = directionResult.onStart(fn);
     return directionResult.onStart(fn).withRef(ref1).enabled(first4);
   }, items9);
-  const items10 = [sharedValue2, sharedValue1, first1, first2, full, sharedValue, num2];
+  const items10 = [sharedValue2, sharedValue1, first1, first2, full, sharedValue, first4, num2];
   const memo2 = sharedValue.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const PanResult = Gesture.Pan();
@@ -297,7 +297,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         throw new TypeError("Trying to call a non-function");
       }
     };
-    const activeOffsetYResult = Gesture.Pan().maxPointers(1).activeOffsetY([-10, 10]);
+    const activeOffsetYResult = Gesture.Pan().maxPointers(1).activeOffsetY(10);
     fn.__closure = { animationState: sharedValue1, DRAWER_PANNING: 2, clamp, expandedHeight: first2, thumbnailsElementHeight: num2, collapsedHeight: first1, COLLAPSED: 0, EXPANDED: 1, animationDriver: sharedValue2, COLLAPSE_DRAWER_DURING_DRAG: 0.4, runOnJS: ReanimatedRexport.runOnJS, setFull, DRAWER_VERTICAL_DRAG_RESISTANCE: 3, MAX_DRAWER_VERTICAL_DRAG: 40, EXPANDED_MORE: 2 };
     fn.__workletHash = 7012168718409;
     fn.__initData = __initData6;
@@ -344,7 +344,11 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     fn2.__workletHash = 16268892990477;
     fn2.__initData = __initData5;
     let obj2 = { animationDriver: sharedValue2, COLLAPSE_DRAWER_ON_RELEASE: 0.75, runOnJS: ReanimatedRexport.runOnJS, setFull, isCollapsed: sharedValue, COLLAPSED: 0, animationState: sharedValue1, withDelay: ReanimatedRexport.withDelay, withTiming: timing.withTiming, NONE, STANDARD_EASING: native.STANDARD_EASING, EXPANDED: 1 };
-    return onUpdateResult.onEnd(fn2).enabled(first);
+    let tmp = first;
+    if (first) {
+      tmp = first4;
+    }
+    return onUpdateResult.onEnd(fn2).enabled(tmp);
   }, items10);
   let obj11 = { r, g, b, interpolate: onFullViewToggled(num[6]).interpolate, animationDriver: sharedValue2, COLLAPSED: 0, EXPANDED: 1, a, DISMISSED: -1 };
   function oe() {

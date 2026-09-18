@@ -1,14 +1,14 @@
-// === Module 11345: useTenureBadging ===
+// === Module 11437: useTenureBadging ===
 
-// Module 11345 (useTenureBadging)
+// Module 11437 (useTenureBadging)
 import initialize from "initialize" /* 504 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7748 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11346 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11347 */;
-import UserProfileStore from "UserProfileStore" /* 7735 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7830 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11438 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11439 */;
+import UserProfileStore from "UserProfileStore" /* 7817 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import SubscriptionStore from "SubscriptionStore" /* 4386 */;
 
 const require = globalThis.__r;
 

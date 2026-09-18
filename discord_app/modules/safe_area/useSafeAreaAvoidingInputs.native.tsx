@@ -1,9 +1,9 @@
-// === Module 11307: useSafeAreaAvoidingInputs ===
+// === Module 11399: useSafeAreaAvoidingInputs ===
 
-// Module 11307 (useSafeAreaAvoidingInputs)
+// Module 11399 (useSafeAreaAvoidingInputs)
 import nativeDefault from "native" /* 576 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 5668 */;
-import ViewMeasureUtils from "ViewMeasureUtils" /* 11308 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 5750 */;
+import ViewMeasureUtils from "ViewMeasureUtils" /* 11400 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -156,7 +156,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
               if (null != current2) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj4 = { value: tmp2(11308).measureViewRefInWindow(found.ref), done: false };
+                const obj4 = { value: tmp2(11400).measureViewRefInWindow(found.ref), done: false };
                 return obj4;
               }
             }
@@ -173,7 +173,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
             closure_128_2 = value;
             dependencyMap = 2;
             c3 = 1;
-            const obj6 = { value: tmp2(11308).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
+            const obj6 = { value: tmp2(11400).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
             return obj6;
           }
         } else {
@@ -191,7 +191,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                 if (null != closure_128_3) {
                   dependencyMap = 3;
                   c3 = 1;
-                  const obj9 = { value: tmp2(11308).measureViewInWindow(closure_128_0), done: false };
+                  const obj9 = { value: tmp2(11400).measureViewInWindow(closure_128_0), done: false };
                   return obj9;
                 }
               }

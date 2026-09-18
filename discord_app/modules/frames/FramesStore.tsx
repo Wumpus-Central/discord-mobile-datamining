@@ -1,12 +1,12 @@
-// === Module 9664: FramesStore ===
+// === Module 9748: FramesStore ===
 
-// Module 9664 (FramesStore)
+// Module 9748 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1085 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 9659 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9666 */;
-import FramesConstants from "FramesConstants" /* 9665 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9743 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9750 */;
+import FramesConstants from "FramesConstants" /* 9749 */;
 import size from "module_2" /* 2 */;
 
 ({ FrameIntent: c2, FrameLayoutModes: c3, getChannelIdForSurface: closure_4, getFrameIntentForSurface: hasOwnProperty, isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
@@ -49,8 +49,8 @@ prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
     continue;
   }
 };
-prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
-  return map.get(React5(arg0, arg1));
+prototype["getFrameBySurface"] = function getFrameBySurface(previewAppId, surface) {
+  return map.get(React5(previewAppId, surface));
 };
 prototype["getFramesForSurface"] = function getFramesForSurface(arg0) {
   closure_0 = arg0;

@@ -1,6 +1,6 @@
-// === Module 8511: NativeShareManagerModule ===
+// === Module 8594: NativeShareManagerModule ===
 
-// Module 8511 (NativeShareManagerModule)
+// Module 8594 (NativeShareManagerModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

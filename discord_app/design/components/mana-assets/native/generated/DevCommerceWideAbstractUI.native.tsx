@@ -1,9 +1,9 @@
-// === Module 5997: DevCommerceWideAbstractUI ===
+// === Module 6079: DevCommerceWideAbstractUI ===
 
-// Module 5997 (DevCommerceWideAbstractUI)
+// Module 6079 (DevCommerceWideAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5998 from "module_5998" /* 5998 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6080 from "module_6080" /* 6080 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DevCommerceWideAbstractUI = function DevCommerceWideAbstractUI(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5998 };
+  const obj2 = { uri: _modDef6080 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

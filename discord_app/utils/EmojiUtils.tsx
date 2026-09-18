@@ -1,15 +1,15 @@
-// === Module 4296: EmojiUtils ===
+// === Module 4379: EmojiUtils ===
 
-// Module 4296 (EmojiUtils)
+// Module 4379 (EmojiUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import ImageUtils from "ImageUtils" /* 1475 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4271 */;
-import EmojiTypes from "EmojiTypes" /* 4295 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5552 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7903 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4354 */;
+import EmojiTypes from "EmojiTypes" /* 4378 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5634 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7985 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

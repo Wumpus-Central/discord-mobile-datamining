@@ -1,9 +1,9 @@
-// === Module 8817: NitroWheelIcon ===
+// === Module 8900: NitroWheelIcon ===
 
-// Module 8817 (NitroWheelIcon)
+// Module 8900 (NitroWheelIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8188 from "module_8188" /* 8188 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod8271 from "module_8271" /* 8271 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const NitroWheelIcon = function NitroWheelIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8188, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8271, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,6 +1,6 @@
-// === Module 5950: ? ===
+// === Module 6032: ? ===
 
-// Module 5950
+// Module 6032
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChestAndGemSpotIllustration-2x.png.js");

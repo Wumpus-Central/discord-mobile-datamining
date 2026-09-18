@@ -1,16 +1,16 @@
-// === Module 15146: useBountyPauseAppStoreSheet ===
+// === Module 15240: useBountyPauseAppStoreSheet ===
 
-// Module 15146 (useBountyPauseAppStoreSheet)
+// Module 15240 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import AdCreativeType from "AdCreativeType" /* 5539 */;
-import AnalyticsActions from "AnalyticsActions" /* 7832 */;
-import apexExperiment from "apexExperiment" /* 11643 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15138 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15140 */;
+import AdCreativeType from "AdCreativeType" /* 5621 */;
+import AnalyticsActions from "AnalyticsActions" /* 7914 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 11535 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15232 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15234 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5532).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5614).QuestsExperimentLocations;
 const ComponentActions = fn(1074).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -24,13 +24,13 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
   let callback;
   let callback1;
   const getQuestImpressionId = bounty(sourceQuestContent[4]).useGetQuestImpressionId();
-  const CustomAppStoreSqueezeBackExperiment = bounty(sourceQuestContent[3]).CustomAppStoreSqueezeBackExperiment;
-  const config = CustomAppStoreSqueezeBackExperiment.getConfig({ location: playerRef.VIDEO_MODAL_MOBILE });
-  const variant = config.variant;
+  const BountiesMobileQuestBarExperiment = bounty(sourceQuestContent[3]).BountiesMobileQuestBarExperiment;
+  const config = BountiesMobileQuestBarExperiment.getConfig({ location: playerRef.VIDEO_MODAL_MOBILE });
+  const ctrVariant = config.ctrVariant;
   let tmp5 = null;
   if (config.enabled) {
-    if (variant === tmp(tmp2[3]).BountiesCtrExperiment1Variant.FIRST_TAP_APP_STORE_OVERLAY) {
-      tmp5 = variant;
+    if (ctrVariant === tmp(tmp2[3]).BountiesMobileQuestBarCtrVariant.FIRST_TAP_APP_STORE_OVERLAY) {
+      tmp5 = ctrVariant;
     } else {
       tmp5 = null;
     }
@@ -107,7 +107,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
     if (isActive) {
       if (arg0 === AdsVideoTypes.PlaybackTriggerSource.USER_INTERACTION) {
         if (null != c5) {
-          if (tmp4 === apexExperiment.BountiesCtrExperiment1Variant.FIRST_TAP_APP_STORE_OVERLAY) {
+          if (tmp4 === BountiesMobileQuestBarExperiment2.BountiesMobileQuestBarCtrVariant.FIRST_TAP_APP_STORE_OVERLAY) {
             if (!ref.current) {
               tmp8.current = true;
               callback1().then((result) => {

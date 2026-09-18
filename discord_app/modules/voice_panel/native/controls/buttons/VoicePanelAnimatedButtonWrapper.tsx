@@ -1,17 +1,17 @@
-// === Module 17431: VoicePanelAnimatedButtonWrapper ===
+// === Module 17561: VoicePanelAnimatedButtonWrapper ===
 
-// Module 17431 (VoicePanelAnimatedButtonWrapper)
+// Module 17561 (VoicePanelAnimatedButtonWrapper)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import timing from "timing" /* 4641 */;
-import spring from "spring" /* 5061 */;
+import timing from "timing" /* 4723 */;
+import spring from "spring" /* 5143 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(12424).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(12515).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { pressableWrapper: { justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG } };
 let closure_6 = createStyles.createStyles(obj2);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);

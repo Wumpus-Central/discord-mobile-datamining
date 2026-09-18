@@ -1,11 +1,11 @@
-// === Module 7950: PoggermodeActionCreators ===
+// === Module 8032: PoggermodeActionCreators ===
 
-// Module 7950 (PoggermodeActionCreators)
+// Module 8032 (PoggermodeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import trackPoggermodeSettingsUpdatedDefault from "trackPoggermodeSettingsUpdated" /* 7953 */;
+import trackPoggermodeSettingsUpdatedDefault from "trackPoggermodeSettingsUpdated" /* 8035 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7792 */;
-import PoggermodeStore from "PoggermodeStore" /* 7951 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7874 */;
+import PoggermodeStore from "PoggermodeStore" /* 8033 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");

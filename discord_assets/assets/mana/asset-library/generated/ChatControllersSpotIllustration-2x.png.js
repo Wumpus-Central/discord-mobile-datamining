@@ -1,6 +1,6 @@
-// === Module 5944: ? ===
+// === Module 6026: ? ===
 
-// Module 5944
+// Module 6026
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ChatControllersSpotIllustration-2x.png.js");

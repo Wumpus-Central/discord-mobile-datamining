@@ -1,24 +1,24 @@
-// === Module 11189: GiftBadgePostPurchase ===
+// === Module 11282: GiftBadgePostPurchase ===
 
-// Module 11189 (GiftBadgePostPurchase)
+// Module 11282 (GiftBadgePostPurchase)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
-import _modDef2493 from "module_2493" /* 2493 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
-import HapticUtils from "HapticUtils" /* 4608 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4609 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
-import BadgeId from "BadgeId" /* 8332 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10896 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10901 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11192 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11193 */;
+import _modDef2576 from "module_2576" /* 2576 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
+import HapticUtils from "HapticUtils" /* 4690 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4691 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
+import BadgeId from "BadgeId" /* 8414 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10990 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10995 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11285 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11286 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8340 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8422 */;
 
 require = fn;
 function PostPurchaseFooter(onSendGift) {
@@ -31,23 +31,23 @@ function PostPurchaseFooter(onSendGift) {
   const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = noop.useCallback(() => {
     ModalActionCreatorsDefault.pop();
-    const rootNavigationRef = onSendGift(4498).getRootNavigationRef();
+    const rootNavigationRef = onSendGift(4580).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("you");
     }
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(11191).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(11284).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1115).intl;
-  obj2.text = intl.string(_modDef2493.g86YiI);
+  obj2.text = intl.string(_modDef2576.g86YiI);
   obj2.onPress = callback;
-  const items1 = [closure_10(onSendGift(5062).Button, obj2), ];
+  const items1 = [closure_10(onSendGift(5144).Button, obj2), ];
   const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1115).intl;
-  obj4.text = intl2.string(_modDef2493["sa/cfM"]);
+  obj4.text = intl2.string(_modDef2576["sa/cfM"]);
   obj4.onPress = callback1;
-  items1[1] = closure_10(onSendGift(5062).Button, obj4);
+  items1[1] = closure_10(onSendGift(5144).Button, obj4);
   obj.children = items1;
   return closure_11(View, obj);
 }
@@ -94,7 +94,7 @@ function LevelUpScreen(arg0) {
   if (str == null) {
     str = "";
   }
-  obj10.children = intl.format(_modDef2493.k8MmO8, { tierName: str });
+  obj10.children = intl.format(_modDef2576.k8MmO8, { tierName: str });
   const items2 = [closure_1_10(Text_Text.Text, obj10), ];
   let tmp10Result2 = null != nextTier && null != giftsToNextTier;
   if (tmp10Result2) {
@@ -109,7 +109,7 @@ function LevelUpScreen(arg0) {
       str2 = "";
     }
     obj12.nextTierName = str2;
-    obj11.children = intl2.format(_modDef2493["6QVlxw"], obj12);
+    obj11.children = intl2.format(_modDef2576["6QVlxw"], obj12);
     tmp10Result2 = closure_1_10(Text_Text.Text, obj11);
   }
   items2[1] = tmp10Result2;
@@ -123,12 +123,12 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj3);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(11190);
+const GiftingBadgeConstants = fn(11283);
 ({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { screenContainer: { flex: 1 }, content: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 }, progressWrapper: null, messageSection: null, centerText: null, levelUpIconWrapper: null, levelUpBody: null, levelUpProgress: null, footer: null };
   const obj2 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_16 };
@@ -196,11 +196,11 @@ export default function GiftBadgePostPurchase(arg0) {
       }
       const obj3 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
       const obj4 = { nextTier: str2 };
-      obj3.title = intl2.formatToPlainString(_modDef2493.KjdBPz, obj4);
+      obj3.title = intl2.formatToPlainString(_modDef2576.KjdBPz, obj4);
       const intl3 = util.intl;
-      obj3.description = intl3.string(_modDef2493.oqDrEM);
+      obj3.description = intl3.string(_modDef2576.oqDrEM);
       const intl4 = util.intl;
-      obj3.progressBarTitle = intl4.string(_modDef2493["Ka5s+Q"]);
+      obj3.progressBarTitle = intl4.string(_modDef2576["Ka5s+Q"]);
       obj3.progress = sum;
       obj3.currentTier = tmp26;
       obj3.nextTier = tmp8;
@@ -209,9 +209,9 @@ export default function GiftBadgePostPurchase(arg0) {
     } else {
       obj5 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
       const intl5 = util.intl;
-      obj5.title = intl5.string(_modDef2493["/rBQud"]);
+      obj5.title = intl5.string(_modDef2576["/rBQud"]);
       const intl6 = util.intl;
-      obj5.description = intl6.string(_modDef2493.DDQMlx);
+      obj5.description = intl6.string(_modDef2576.DDQMlx);
       let name;
       if (tmp24 != null) {
         name = tmp24.name;
@@ -224,7 +224,7 @@ export default function GiftBadgePostPurchase(arg0) {
           name1 = tmp24.name;
         }
         const obj6 = { tierName: name1 };
-        str = intl.formatToPlainString(_modDef2493.bwyQt8, obj6);
+        str = intl.formatToPlainString(_modDef2576.bwyQt8, obj6);
       }
       obj5.progressBarTitle = str;
       obj5.progress = sum;

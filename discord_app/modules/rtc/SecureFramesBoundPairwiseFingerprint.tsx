@@ -1,9 +1,9 @@
-// === Module 9311: SecureFramesBoundPairwiseFingerprint ===
+// === Module 9395: SecureFramesBoundPairwiseFingerprint ===
 
-// Module 9311 (SecureFramesBoundPairwiseFingerprint)
+// Module 9395 (SecureFramesBoundPairwiseFingerprint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
 
 const require = fn;
 let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
@@ -56,7 +56,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
                               if (null != value2) {
                                 return value2;
                               } else {
-                                const obj4 = joined(9289);
+                                const obj4 = joined(9373);
                                 const _Uint8Array = Uint8Array;
                                 const uint8Array2 = new Uint8Array(secureFramesRosterMapEntry1);
                                 const _Uint8Array2 = Uint8Array;
@@ -104,7 +104,7 @@ let closure_8 = async function _computeBoundPairwiseFingerprint(arg0) {
     }
   }
 };
-let closure_6 = fn(9306).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let closure_6 = fn(9390).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesBoundPairwiseFingerprint.tsx");

@@ -1,7 +1,7 @@
-// === Module 11288: useCoachmark ===
+// === Module 11380: useCoachmark ===
 
-// Module 11288 (useCoachmark)
-import AnimatedCoachmark from "AnimatedCoachmark" /* 11295 */;
+// Module 11380 (useCoachmark)
+import AnimatedCoachmark from "AnimatedCoachmark" /* 11387 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

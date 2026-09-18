@@ -1,10 +1,10 @@
-// === Module 12579: useEmojiSuggestions ===
+// === Module 12670: useEmojiSuggestions ===
 
-// Module 12579 (useEmojiSuggestions)
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5530 */;
+// Module 12670 (useEmojiSuggestions)
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5612 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5547 */;
+import EmojiStore from "EmojiStore" /* 5629 */;
 
 const require = fn;
 function findWordSpan(text, selectionStart, selectionEnd) {
@@ -45,8 +45,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(5547).LoadState;
-const EMOJI_SENTINEL = fn(5087).EMOJI_SENTINEL;
+const LoadState = fn(5629).LoadState;
+const EMOJI_SENTINEL = fn(5169).EMOJI_SENTINEL;
 const EmojiIntention = fn(1375).EmojiIntention;
 const re9 = /(\S+)\s$/;
 let closure_10 = { unlockedEmojis: [], lockedEmojis: [], queryStart: 0, queryEnd: 0 };
@@ -62,6 +62,7 @@ export default function useEmojiSuggestions(channel) {
   const enabled = channel.enabled;
   const maxCount = channel.maxCount;
   const minUnlockedEmojis = channel.minUnlockedEmojis;
+  closure_10 = undefined;
   const items = [maxCount];
   const stateFromStores = channel(selectionStart[5]).useStateFromStores(items, () => maxCount.loadState);
   const items1 = [channel, stateFromStores, enabled, maxCount, minUnlockedEmojis, selectionEnd, selectionStart, text];
@@ -101,40 +102,57 @@ export default function useEmojiSuggestions(channel) {
   let tmp3 = closure_10;
   let obj = channel(selectionStart[5]);
   [tmp5, tmp6] = selectionEnd(enabled.useState(closure_10), 2);
-  c8 = tmp6;
+  c9 = tmp6;
+  closure_10 = tmp7;
+  enabled.useRef(null);
+  let tmp8 = enabled;
   if (enabled) {
-    if (tmp7) {
-      if (tmp5 !== memo) {
-        tmp6(memo);
-      }
-      const items2 = [text, selectionStart, selectionEnd];
-      const callback = obj2.useCallback(() => {
-        _undefined(closure_10);
-      }, []);
-      const memo1 = obj2.useMemo(() => {
-        let tmp3 = findWordSpan(text, selectionStart, selectionEnd);
-        if (tmp3 == null) {
-          const obj = { queryStart: selectionStart, queryEnd: selectionEnd };
-          tmp3 = obj;
-        }
-        return tmp3;
-      }, items2);
-      if (enabled) {
-        tmp3 = tmp5;
-      }
-      const obj4 = { unlockedEmojis: null, lockedEmojis: null, queryStart: null, queryEnd: null, clear: null };
-      ({ unlockedEmojis: obj3.unlockedEmojis, lockedEmojis: obj3.lockedEmojis } = tmp3);
-      ({ queryStart: obj3.queryStart, queryEnd: obj3.queryEnd } = memo1);
-      obj4.clear = callback;
-      return obj4;
-    }
+    tmp8 = "" !== text;
   }
-  if (!enabled) {
-    if (tmp5 !== tmp3) {
-      tmp6(tmp3);
-    }
+  if (!tmp8) {
+    tmp8 = tmp5 === tmp3;
   }
-  if (tmp9) {
+  if (!tmp8) {
     tmp6(tmp3);
   }
+  const items2 = [enabled, text, memo, memo.unlockedEmojis.length > 0 || memo.lockedEmojis.length > 0];
+  const effect = obj2.useEffect(() => {
+    if (enabled) {
+      if ("" !== closure_1) {
+        if (closure_10) {
+          let num = ref.current;
+          if (num == null) {
+            num = -Infinity;
+          }
+          const _Math = Math;
+          const _Date = Date;
+          const sum = num + 500;
+          const _setTimeout = setTimeout;
+          const timeout = setTimeout(() => {
+            ref.current = Date.now();
+            _undefined(memo);
+          }, Math.max(0, sum - Date.now()));
+          return () => clearTimeout(closure_0);
+        }
+      }
+    }
+    ref.current = null;
+  }, items2);
+  const items3 = [text, selectionStart, selectionEnd];
+  const callback = obj2.useCallback(() => {
+    closure_11.current = null;
+    _undefined(closure_10);
+  }, []);
+  const memo1 = obj2.useMemo(() => {
+    let tmp3 = findWordSpan(text, selectionStart, selectionEnd);
+    if (tmp3 == null) {
+      const obj = { queryStart: selectionStart, queryEnd: selectionEnd };
+      tmp3 = obj;
+    }
+    return tmp3;
+  }, items3);
+  if (enabled) {
+    tmp3 = tmp5;
+  }
+  return { unlockedEmojis: tmp3.unlockedEmojis, lockedEmojis: tmp3.lockedEmojis, queryStart: memo1.queryStart, queryEnd: memo1.queryEnd, clear: callback };
 };

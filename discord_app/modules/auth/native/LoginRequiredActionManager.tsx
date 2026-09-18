@@ -1,10 +1,10 @@
-// === Module 17664: LoginRequiredActionManager ===
+// === Module 17728: LoginRequiredActionManager ===
 
-// Module 17664 (LoginRequiredActionManager)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6703 */;
+// Module 17728 (LoginRequiredActionManager)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6785 */;
 import UserStore from "UserStore" /* 1372 */;
 import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1951 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
 
 const require = fn;
 const Constants = fn(1074);
@@ -34,8 +34,8 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
                   }
                 }
         };
-        currentUser(7496).openUserSettings(obj3);
-        const obj2 = currentUser(7496);
+        currentUser(7578).openUserSettings(obj3);
+        const obj2 = currentUser(7578);
       }
     }
     if (result1) {

@@ -1,12 +1,12 @@
-// === Module 15930: UserSettingsDesignSystemBackdrop ===
+// === Module 16025: UserSettingsDesignSystemBackdrop ===
 
-// Module 15930 (UserSettingsDesignSystemBackdrop)
-import Text_Text from "Text/Text" /* 4636 */;
-import Stack_Stack from "Stack/Stack" /* 5060 */;
-import spring from "spring" /* 5061 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import springPresets from "springPresets" /* 5065 */;
-import Card from "Card" /* 5695 */;
+// Module 16025 (UserSettingsDesignSystemBackdrop)
+import Text_Text from "Text/Text" /* 4718 */;
+import Stack_Stack from "Stack/Stack" /* 5142 */;
+import spring from "spring" /* 5143 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import springPresets from "springPresets" /* 5147 */;
+import Card from "Card" /* 5777 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -62,8 +62,8 @@ export default function UserSettingsDesignSystemBackdrop() {
     }
     return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
   };
-  let obj = showBackdrop(4376);
-  fn.__closure = { withSpring: showBackdrop(5061).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5065).SUBTLE_SPRING };
+  let obj = showBackdrop(4458);
+  fn.__closure = { withSpring: showBackdrop(5143).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5147).SUBTLE_SPRING };
   fn.__workletHash = 1929832617927;
   fn.__initData = __initData;
   const obj3 = { contentContainerStyle: tmp.container, children: null };
@@ -71,24 +71,24 @@ export default function UserSettingsDesignSystemBackdrop() {
   const obj4 = { spacing: 24, children: null };
   const items = [closure_6(BackdropCard, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(BackdropCard, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(BackdropCard, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 })];
   obj4.children = items;
-  const items1 = [closure_7(showBackdrop(5060).Stack, obj4), ];
+  const items1 = [closure_7(showBackdrop(5142).Stack, obj4), ];
   if (showBackdrop) {
     function handleClose() {
       closure_1(false);
     }
     const obj5 = { onDismiss: handleClose, children: null };
     const obj6 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
-    const items2 = [closure_6(tmp8(5048).Backdrop, obj6), ];
+    const items2 = [closure_6(tmp8(5130).Backdrop, obj6), ];
     const obj7 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
     const obj8 = { children: null };
     const obj9 = { variant: "text-md/normal", children: null };
     const items3 = ["blur style: ", tmp6];
     obj9.children = items3;
-    obj8.children = closure_7(tmp8(4636).Text, obj9);
-    obj7.children = closure_6(tmp8(5695).Card, obj8);
+    obj8.children = closure_7(tmp8(4718).Text, obj9);
+    obj7.children = closure_6(tmp8(5777).Card, obj8);
     items2[1] = closure_6(closure_5, obj7);
     obj5.children = items2;
-    showBackdrop = closure_7(tmp8(5043).Dialog, obj5);
+    showBackdrop = closure_7(tmp8(5125).Dialog, obj5);
   }
   items1[1] = showBackdrop;
   obj3.children = items1;

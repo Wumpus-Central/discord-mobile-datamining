@@ -1,9 +1,9 @@
-// === Module 6579: SnowIllocon ===
+// === Module 6661: SnowIllocon ===
 
-// Module 6579 (SnowIllocon)
+// Module 6661 (SnowIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6580 from "module_6580" /* 6580 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6662 from "module_6662" /* 6662 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const SnowIllocon = function SnowIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6580 };
+  const obj2 = { uri: _modDef6662 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

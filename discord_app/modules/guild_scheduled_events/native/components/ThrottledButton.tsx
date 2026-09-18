@@ -1,7 +1,7 @@
-// === Module 9928: ThrottledButton ===
+// === Module 10022: ThrottledButton ===
 
-// Module 9928 (ThrottledButton)
-import components_Button_Button from "components/Button/Button" /* 5062 */;
+// Module 10022 (ThrottledButton)
+import components_Button_Button from "components/Button/Button" /* 5144 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

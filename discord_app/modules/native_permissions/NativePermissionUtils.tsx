@@ -1,18 +1,18 @@
-// === Module 5226: NativePermissionUtils ===
+// === Module 5308: NativePermissionUtils ===
 
-// Module 5226 (NativePermissionUtils)
-import NativePermissionManager_mod from "NativePermissionManager" /* 5227 */;
+// Module 5308 (NativePermissionUtils)
+import NativePermissionManager_mod from "NativePermissionManager" /* 5309 */;
 
 let NativePermissionManager = NativePermissionManager_mod;
 NativePermissionManager = NativePermissionManager.initialize();
-const ProcessArgs = fn(5228).ProcessArgs;
+const ProcessArgs = fn(5310).ProcessArgs;
 if (ProcessArgs.isDiscordTestSet()) {
-  let _default = fn(5229).default;
+  let _default = fn(5311).default;
 } else {
-  _default = fn(5233).default;
+  _default = fn(5315).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
 
 export default _default;
-export const NativePermissionsRequestOptions = fn(5230).NativePermissionsRequestOptions;
+export const NativePermissionsRequestOptions = fn(5312).NativePermissionsRequestOptions;

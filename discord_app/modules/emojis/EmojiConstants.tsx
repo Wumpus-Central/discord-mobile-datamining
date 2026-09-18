@@ -16,6 +16,7 @@ export const EMOJI_RE = /[^a-zA-Z0-9_]/g;
 export const EMOJI_MAX_FILESIZE_KB = 256;
 export const EMOJI_MAX_FILESIZE = 262144;
 export const EMOJI_URL_BASE_SIZE = 48;
+export const MAX_EMOJI_TO_BE_JUMBO = 30;
 export const EmojiSprites = { NonDiversityPerRow: 42, [42]: "NonDiversityPerRow", DiversityPerRow: 10, [10]: "DiversityPerRow", PickerPerRow: 11, [11]: "PickerPerRow", PickerCount: 50, [50]: "PickerCount" };
 export const EmojiDisabledReasons = { DISALLOW_EXTERNAL: 0, [0]: "DISALLOW_EXTERNAL", GUILD_SUBSCRIPTION_UNAVAILABLE: 1, [1]: "GUILD_SUBSCRIPTION_UNAVAILABLE", PREMIUM_LOCKED: 2, [2]: "PREMIUM_LOCKED", ONLY_GUILD_EMOJIS_ALLOWED: 3, [3]: "ONLY_GUILD_EMOJIS_ALLOWED", ROLE_SUBSCRIPTION_LOCKED: 4, [4]: "ROLE_SUBSCRIPTION_LOCKED", ROLE_SUBSCRIPTION_UNAVAILABLE: 5, [5]: "ROLE_SUBSCRIPTION_UNAVAILABLE", DISALLOW_CUSTOM: 6, [6]: "DISALLOW_CUSTOM" };
 export const EmojiIntention = obj;

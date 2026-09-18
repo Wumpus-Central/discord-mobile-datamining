@@ -1,9 +1,9 @@
-// === Module 6053: EmojiDistrustExample ===
+// === Module 6135: EmojiDistrustExample ===
 
-// Module 6053 (EmojiDistrustExample)
+// Module 6135 (EmojiDistrustExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6054 from "module_6054" /* 6054 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6136 from "module_6136" /* 6136 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiDistrustExample = function EmojiDistrustExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6054 };
+  const obj2 = { uri: _modDef6136 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

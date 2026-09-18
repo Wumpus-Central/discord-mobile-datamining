@@ -1,21 +1,21 @@
-// === Module 15810: CheckpointModal ===
+// === Module 15905: CheckpointModal ===
 
-// Module 15810 (CheckpointModal)
+// Module 15905 (CheckpointModal)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import native from "native" /* 4350 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
-import _modDef7106 from "module_7106" /* 7106 */;
-import HeaderActionButton from "HeaderActionButton" /* 7491 */;
-import CheckpointWelcomeScreenDefault from "CheckpointWelcomeScreen" /* 15811 */;
-import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 15817 */;
-import _modDef15818 from "module_15818" /* 15818 */;
-import CheckpointConstants from "CheckpointConstants" /* 4866 */;
+import native from "native" /* 4432 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
+import _modDef7188 from "module_7188" /* 7188 */;
+import HeaderActionButton from "HeaderActionButton" /* 7573 */;
+import CheckpointWelcomeScreenDefault from "CheckpointWelcomeScreen" /* 15906 */;
+import CheckpointApngPlayerDefault from "CheckpointApngPlayer" /* 15912 */;
+import _modDef15913 from "module_15913" /* 15913 */;
+import CheckpointConstants from "CheckpointConstants" /* 4948 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4640 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -41,10 +41,10 @@ export default function CheckpointModal() {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.nav, { marginTop: rect.top, marginLeft: rect.left, marginRight: rect.right }];
   obj3.style = items1;
-  const obj4 = { uri: _modDef15818, style: tmp.logo };
+  const obj4 = { uri: _modDef15913, style: tmp.logo };
   const items2 = [hasOwnProperty(CheckpointApngPlayerDefault, obj4), ];
   const obj5 = { style: tmp.headerActions, children: null };
-  const obj6 = { source: _modDef7106, onPress: ModalActionCreatorsDefault.pop, accessibilityLabel: null, imageStyle: null, style: null };
+  const obj6 = { source: _modDef7188, onPress: ModalActionCreatorsDefault.pop, accessibilityLabel: null, imageStyle: null, style: null };
   const intl = util.intl;
   obj6.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj6.imageStyle = imageStyle;

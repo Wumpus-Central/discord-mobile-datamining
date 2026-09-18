@@ -1,24 +1,24 @@
-// === Module 11166: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 11259: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 11166 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 11259 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import _modDef3463 from "module_3463" /* 3463 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import HapticUtils from "HapticUtils" /* 4608 */;
-import timing from "timing" /* 4641 */;
-import spring from "spring" /* 5061 */;
-import XSmallIcon from "XSmallIcon" /* 5768 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7340 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10951 */;
+import _modDef3546 from "module_3546" /* 3546 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import UserUtilsDefault from "UserUtils" /* 4566 */;
+import HapticUtils from "HapticUtils" /* 4690 */;
+import timing from "timing" /* 4723 */;
+import spring from "spring" /* 5143 */;
+import XSmallIcon from "XSmallIcon" /* 5850 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7422 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 11045 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
-import SKUStore from "SKUStore" /* 5598 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import SKUStore from "SKUStore" /* 5680 */;
 
 const require = globalThis.__r;
 
@@ -307,12 +307,12 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const numDays = fn(7343).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+const numDays = fn(7425).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HorizontalGradient: map1, VerticalGradient: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, backdropImage: { position: "absolute", inset: 0, opacity: 0.45 }, backdropGradient: { position: "absolute", inset: 0 }, curtain: null, main: null, header: null, closeButtonIcon: null, scroll: null, body: null, bodyLandscape: null, preview: null, previewLandscape: null, messages: null, messagesLandscape: null, contentColumnLandscape: null, title: null, description: null, textLandscape: null, footer: null, footerLandscape: null, cta: null, ctaLandscape: null, finePrint: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.curtain = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
@@ -347,7 +347,7 @@ obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
 let obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.finePrint = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 let closure_17 = createStyles.createStyles(obj2);
-createStyles = fn(4640);
+createStyles = fn(4722);
 let obj17 = { linkAccountIcon: null };
 let obj15 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
@@ -526,7 +526,7 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function Soc
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3463.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef3546.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

@@ -1,8 +1,8 @@
-// === Module 16810: VibegrationsClarificationCard ===
+// === Module 16957: VibegrationsClarificationCard ===
 
-// Module 16810 (VibegrationsClarificationCard)
+// Module 16957 (VibegrationsClarificationCard)
 import nativeDefault from "native" /* 576 */;
-import VibegrationsClarification from "VibegrationsClarification" /* 16811 */;
+import VibegrationsClarification from "VibegrationsClarification" /* 16958 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, optionHeader: null, footer: null, customField: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.optionHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -97,10 +97,10 @@ export default function VibegrationsClarificationCard(clarification) {
     let obj3 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     let intl = clarification(1115).intl;
     const obj4 = { index: bound + 1, total: length };
-    obj3.children = intl.formatToPlainString(onSubmit(3593)["7bypa+"], obj4);
-    tmp14 = closure_6(clarification(4636).Text, obj3);
+    obj3.children = intl.formatToPlainString(onSubmit(3676)["7bypa+"], obj4);
+    tmp14 = closure_6(clarification(4718).Text, obj3);
   }
-  const items4 = [tmp14, closure_6(clarification(4636).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
+  const items4 = [tmp14, closure_6(clarification(4718).Text, { variant: "text-md/semibold", color: "text-default", children: clarification.questions[bound].question }), , ];
   const options = tmp8.options;
   items4[2] = options.map((answer) => {
     closure_0 = answer;
@@ -149,17 +149,17 @@ export default function VibegrationsClarificationCard(clarification) {
     if (!tmp6) {
       const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
       let intl2 = tmp20(1115).intl;
-      obj7.text = intl2.string(onSubmit(3593).yKdgqw);
+      obj7.text = intl2.string(onSubmit(3676).yKdgqw);
       obj7.onPress = callback1;
-      tmp19Result = tmp19(tmp20(5062).Button, obj7);
+      tmp19Result = tmp19(tmp20(5144).Button, obj7);
     }
   }
   const items5 = [tmp19Result, ];
   const obj8 = { size: "md", containerStyle: tmp.customField, placeholder: null, accessibilityLabel: null, value: null, onChange: null, onSubmitEditing: null, returnKeyType: "send" };
   const intl3 = tmp20(1115).intl;
-  obj8.placeholder = intl3.string(onSubmit(3593).qifsdL);
+  obj8.placeholder = intl3.string(onSubmit(3676).qifsdL);
   const intl4 = tmp20(1115).intl;
-  obj8.accessibilityLabel = intl4.formatToPlainString(onSubmit(3593).XHESTL, { question: clarification.questions[bound].question });
+  obj8.accessibilityLabel = intl4.formatToPlainString(onSubmit(3676).XHESTL, { question: clarification.questions[bound].question });
   obj8.value = str;
   obj8.onChange = function onChange(arg0) {
     closure_0 = arg0;
@@ -171,7 +171,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj8.onSubmitEditing = callback2;
-  items5[1] = closure_6(clarification(6717).TextInput, obj8);
+  items5[1] = closure_6(clarification(6799).TextInput, obj8);
   obj6.children = items5;
   items4[3] = closure_7(closure_5, obj6);
   obj2.children = items4;

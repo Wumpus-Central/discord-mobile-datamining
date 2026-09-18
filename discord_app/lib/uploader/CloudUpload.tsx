@@ -1,20 +1,20 @@
-// === Module 5214: CloudUpload ===
+// === Module 5296: CloudUpload ===
 
-// Module 5214 (CloudUpload)
+// Module 5296 (CloudUpload)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import Upload2 from "Upload" /* 5215 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5223 */;
-import InlineUploaderDefault from "InlineUploader" /* 5256 */;
+import Upload2 from "Upload" /* 5297 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 5305 */;
+import InlineUploaderDefault from "InlineUploader" /* 5338 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevSettingsStore from "DevSettingsStore" /* 4639 */;
+import DevSettingsStore from "DevSettingsStore" /* 4721 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
-import NetworkStore from "NetworkStore" /* 4689 */;
+import NetworkStore from "NetworkStore" /* 4771 */;
 
 const Upload = Upload2;
 
@@ -1017,10 +1017,10 @@ prototype["upload"] = function upload() {
                     }
                     if (tmp130) {
                       closure_3 = closure_133_0;
-                      const obj13 = status(5244);
+                      const obj13 = status(5326);
                       c8 = 3;
                       c9 = 1;
-                      const obj10 = { value: status(5244).fromBlob(file).catch(() => null), done: false };
+                      const obj10 = { value: status(5326).fromBlob(file).catch(() => null), done: false };
                       return obj10;
                     } else {
                       closure_133_0.item.file = closure_132_4.convertedFile;
@@ -1060,10 +1060,10 @@ prototype["upload"] = function upload() {
                     }
                     closure_133_0.uploadAnalytics.timing.compressTimeMs = closure_132_5.compressTimeMs;
                   }
-                  const uploadPayload = v0(5261).default.getUploadPayload(closure_133_0);
+                  const uploadPayload = v0(5343).default.getUploadPayload(closure_133_0);
                   c8 = 5;
                   c9 = 1;
-                  const _default = v0(5261).default;
+                  const _default = v0(5343).default;
                 }
                 c9 = 3;
                 const obj11 = { value, done: true };
@@ -1079,14 +1079,14 @@ prototype["upload"] = function upload() {
                 return obj12;
               } else {
                 closure_132_6 = value;
-                uploadTarget = v0(5262).getUploadTarget(closure_133_0.item.target);
+                uploadTarget = v0(5344).getUploadTarget(closure_133_0.item.target);
                 if (null != closure_132_6.filename) {
                   if ("" !== closure_132_6.filename) {
                     const currentSize2 = closure_133_0.currentSize;
                     if (0 !== closure_133_0.currentSize) {
-                      kestrelConfig = v0(5267).getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
-                      const obj6 = v0(5267);
-                      effectiveKestrelLimit = v0(5267).getEffectiveKestrelLimit(kestrelConfig, uploadTarget.getMaxFileSize(closure_133_0.channelId));
+                      kestrelConfig = v0(5349).getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
+                      const obj6 = v0(5349);
+                      effectiveKestrelLimit = v0(5349).getEffectiveKestrelLimit(kestrelConfig, uploadTarget.getMaxFileSize(closure_133_0.channelId));
                       const currentSize = closure_133_0.currentSize;
                       v0 = currentSize;
                       if (currentSize == null) {
@@ -1127,7 +1127,7 @@ prototype["upload"] = function upload() {
                         };
                         return obj14;
                       }
-                      const obj7 = v0(5267);
+                      const obj7 = v0(5349);
                     } else {
                       closure_133_0.handleError(constants.ENTITY_EMPTY);
                     }
@@ -1220,7 +1220,7 @@ prototype["upload"] = function upload() {
           if (closure_133_0.isCancelled()) {
             closure_133_0.handleComplete(closure_133_0.id);
           } else if (closure_133_0.allowOptimization) {
-            if (closure_133_0.item.platform === v0(5215).UploadPlatform.WEB) {
+            if (closure_133_0.item.platform === v0(5297).UploadPlatform.WEB) {
               if (!closure_132_0) {
                 if (true !== closure_133_0.item.imageConversionEvaluated) {
                   c8 = 4;
@@ -1239,7 +1239,7 @@ prototype["upload"] = function upload() {
           let tmp156 = null;
           if (closure_133_0.allowOptimization) {
             tmp156 = null;
-            if (closure_133_0.item.platform === v0(5215).UploadPlatform.WEB) {
+            if (closure_133_0.item.platform === v0(5297).UploadPlatform.WEB) {
               tmp156 = null;
               if (true !== closure_133_0.item.imageConversionEvaluated) {
                 tmp156 = null;
@@ -1251,17 +1251,17 @@ prototype["upload"] = function upload() {
                       str2 = "jxr";
                     }
                     str = str2;
-                    obj18 = v0(5258);
+                    obj18 = v0(5340);
                   }
                   tmp156 = str;
-                  obj17 = v0(5258);
+                  obj17 = v0(5340);
                 }
               }
             }
           }
           closure_132_1 = tmp156;
           if (null != closure_132_1) {
-            if (closure_133_0.item.platform === v0(5215).UploadPlatform.WEB) {
+            if (closure_133_0.item.platform === v0(5297).UploadPlatform.WEB) {
               if (null != closure_133_0.item.file) {
                 let tmp173 = null != closure_133_0.mimeType;
                 if (tmp173) {
@@ -1269,10 +1269,10 @@ prototype["upload"] = function upload() {
                 }
                 if (tmp173) {
                   if ("heic" === closure_132_1) {
-                    const HeicUploadConversionExperiment = v0(5259).HeicUploadConversionExperiment;
+                    const HeicUploadConversionExperiment = v0(5341).HeicUploadConversionExperiment;
                     let config = HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.heic" });
                   } else {
-                    const JxrUploadConversionExperiment = v0(5260).JxrUploadConversionExperiment;
+                    const JxrUploadConversionExperiment = v0(5342).JxrUploadConversionExperiment;
                     config = JxrUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.jxr" });
                   }
                   closure_132_2 = config;
@@ -1295,11 +1295,11 @@ prototype["upload"] = function upload() {
                   }
                 } else {
                   if ("heic" === closure_132_1) {
-                    let heicMimeTypeResult = v0(5258).heicMimeType(closure_133_0.item.file);
-                    const obj20 = v0(5258);
+                    let heicMimeTypeResult = v0(5340).heicMimeType(closure_133_0.item.file);
+                    const obj20 = v0(5340);
                   } else {
-                    heicMimeTypeResult = v0(5258).jxrMimeType(closure_133_0.item.file);
-                    const obj19 = v0(5258);
+                    heicMimeTypeResult = v0(5340).jxrMimeType(closure_133_0.item.file);
+                    const obj19 = v0(5340);
                   }
                   closure_133_0.mimeType = heicMimeTypeResult;
                 }
@@ -1389,7 +1389,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj17 = size(5262);
+            obj17 = size(5344);
           }
         } else {
           if (1 === tmp5) {
@@ -1466,7 +1466,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         if (fileSize == null) {
                           c3 = 2;
                           c4 = 1;
-                          const obj9 = { value: size(5216).getFileData(uri), done: false };
+                          const obj9 = { value: size(5298).getFileData(uri), done: false };
                           return obj9;
                         }
                       }
@@ -1904,7 +1904,7 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(5262).getUploadTarget(self.item.target);
+            const uploadTarget = v3(5344).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
             const HTTP = v3(1271).HTTP;

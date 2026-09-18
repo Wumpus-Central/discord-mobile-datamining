@@ -1,13 +1,13 @@
-// === Module 10896: GiftingBadgesUtils ===
+// === Module 10990: GiftingBadgesUtils ===
 
-// Module 10896 (GiftingBadgesUtils)
+// Module 10990 (GiftingBadgesUtils)
 import initialize from "initialize" /* 504 */;
 import dismissible_content from "dismissible_content" /* 1944 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8340 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10892 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10897 */;
-import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 10898 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8422 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10986 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10991 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 10992 */;
 import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 

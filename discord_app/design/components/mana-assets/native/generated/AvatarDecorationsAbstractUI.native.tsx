@@ -1,9 +1,9 @@
-// === Module 5867: AvatarDecorationsAbstractUI ===
+// === Module 5949: AvatarDecorationsAbstractUI ===
 
-// Module 5867 (AvatarDecorationsAbstractUI)
+// Module 5949 (AvatarDecorationsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5868 from "module_5868" /* 5868 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef5950 from "module_5950" /* 5950 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarDecorationsAbstractUI = function AvatarDecorationsAbstractUI(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5868 };
+  const obj2 = { uri: _modDef5950 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

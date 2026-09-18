@@ -1,6 +1,6 @@
-// === Module 13751: DispatcherWorkConstants ===
+// === Module 13843: DispatcherWorkConstants ===
 
-// Module 13751 (DispatcherWorkConstants)
+// Module 13843 (DispatcherWorkConstants)
 import size from "module_2" /* 2 */;
 
 let c0 = 2.0833333333333335;

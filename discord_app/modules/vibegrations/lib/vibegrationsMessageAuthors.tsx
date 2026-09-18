@@ -1,7 +1,7 @@
-// === Module 16797: vibegrationsMessageAuthors ===
+// === Module 16941: vibegrationsMessageAuthors ===
 
-// Module 16797 (vibegrationsMessageAuthors)
-import UserActionCreatorsAll from "UserActionCreators" /* 8329 */;
+// Module 16941 (vibegrationsMessageAuthors)
+import UserActionCreatorsAll from "UserActionCreators" /* 8411 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const set = new Set();

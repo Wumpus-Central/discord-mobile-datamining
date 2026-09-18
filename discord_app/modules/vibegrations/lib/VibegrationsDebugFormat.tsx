@@ -1,6 +1,6 @@
-// === Module 16836: VibegrationsDebugFormat ===
+// === Module 16983: VibegrationsDebugFormat ===
 
-// Module 16836 (VibegrationsDebugFormat)
+// Module 16983 (VibegrationsDebugFormat)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsDebugFormat.tsx");

@@ -1,6 +1,6 @@
-// === Module 8293: ? ===
+// === Module 8375: ? ===
 
-// Module 8293
+// Module 8375
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-donut.png.js");

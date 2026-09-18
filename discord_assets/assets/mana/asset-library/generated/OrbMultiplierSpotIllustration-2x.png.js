@@ -1,6 +1,6 @@
-// === Module 6442: ? ===
+// === Module 6524: ? ===
 
-// Module 6442
+// Module 6524
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/OrbMultiplierSpotIllustration-2x.png.js");

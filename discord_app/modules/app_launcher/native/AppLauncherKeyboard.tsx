@@ -1,28 +1,28 @@
-// === Module 12186: AppLauncherKeyboard ===
+// === Module 12277: AppLauncherKeyboard ===
 
-// Module 12186 (AppLauncherKeyboard)
+// Module 12277 (AppLauncherKeyboard)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
-import native from "native" /* 4350 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4820 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5056 */;
-import BottomSheetModal from "BottomSheetModal" /* 6738 */;
-import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12197 */;
-import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12198 */;
+import native from "native" /* 4432 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5138 */;
+import BottomSheetModal from "BottomSheetModal" /* 6820 */;
+import completeAppLauncherOnboardingDefault from "completeAppLauncherOnboarding" /* 12288 */;
+import AppLauncherOnboardingLayerDefault from "AppLauncherOnboardingLayer" /* 12289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ContentDismissActionType = fn(1955).ContentDismissActionType;
-const KEYBOARD_ANIMATION_CONFIG = fn(12187).KEYBOARD_ANIMATION_CONFIG;
+const KEYBOARD_ANIMATION_CONFIG = fn(12278).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { onboardingRoundingView: { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm }, onboardingHeader: null, onboardingNavigatorContent: null };
 let obj3 = { borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
 obj.onboardingHeader = { borderWidth: 2, borderBottomWidth: 0, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm };
@@ -138,20 +138,20 @@ export default noop.memo(function AppLauncherKeyboard(context) {
         let trackWithMetadata = require;
         let APP_LAUNCHER_EXPANDED = dependencyMap;
         if (arg2 === BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
-          let current = trackWithMetadata(11369).AppLauncherBottomSheetExpandReason.KEYBOARD;
-        } else if (arg2 === trackWithMetadata(6738).ANIMATION_SOURCE.GESTURE) {
-          current = trackWithMetadata(11369).AppLauncherBottomSheetExpandReason.GESTURE;
-        } else if (arg2 !== trackWithMetadata(6738).ANIMATION_SOURCE.USER) {
-          current = trackWithMetadata(11369).AppLauncherBottomSheetExpandReason.OTHER;
+          let current = trackWithMetadata(11467).AppLauncherBottomSheetExpandReason.KEYBOARD;
+        } else if (arg2 === trackWithMetadata(6820).ANIMATION_SOURCE.GESTURE) {
+          current = trackWithMetadata(11467).AppLauncherBottomSheetExpandReason.GESTURE;
+        } else if (arg2 !== trackWithMetadata(6820).ANIMATION_SOURCE.USER) {
+          current = trackWithMetadata(11467).AppLauncherBottomSheetExpandReason.OTHER;
         } else {
           current = ref1.current;
         }
-        trackWithMetadata = trackWithMetadata(4820).trackWithMetadata;
+        trackWithMetadata = trackWithMetadata(4902).trackWithMetadata;
         APP_LAUNCHER_EXPANDED = AnalyticEvents.APP_LAUNCHER_EXPANDED;
         const obj = { reason: current };
         trackWithMetadata(APP_LAUNCHER_EXPANDED, obj);
         ref1.current = undefined;
-        const trackWithMetadataResult = trackWithMetadata(4820);
+        const trackWithMetadataResult = trackWithMetadata(4902);
       }
     }
   }, items4);

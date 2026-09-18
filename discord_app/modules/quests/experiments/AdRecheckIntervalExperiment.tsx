@@ -1,6 +1,6 @@
-// === Module 15229: AdRecheckIntervalExperiment ===
+// === Module 15323: AdRecheckIntervalExperiment ===
 
-// Module 15229 (AdRecheckIntervalExperiment)
+// Module 15323 (AdRecheckIntervalExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

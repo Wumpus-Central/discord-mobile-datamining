@@ -1,17 +1,17 @@
-// === Module 8019: ForumPostMediaUtils ===
+// === Module 8102: ForumPostMediaUtils ===
 
-// Module 8019 (ForumPostMediaUtils)
+// Module 8102 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4790 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4865 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4872 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4947 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7420 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4861 */;
+import MessageStore from "MessageStore" /* 4943 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

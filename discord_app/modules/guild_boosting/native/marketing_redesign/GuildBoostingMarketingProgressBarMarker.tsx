@@ -1,11 +1,11 @@
-// === Module 13693: GuildBoostingMarketingProgressBarMarker ===
+// === Module 13785: GuildBoostingMarketingProgressBarMarker ===
 
-// Module 13693 (GuildBoostingMarketingProgressBarMarker)
+// Module 13785 (GuildBoostingMarketingProgressBarMarker)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5061 */;
-import _modDef13694 from "module_13694" /* 13694 */;
-import _modDef13695 from "module_13695" /* 13695 */;
-import _modDef13696 from "module_13696" /* 13696 */;
+import spring from "spring" /* 5143 */;
+import _modDef13786 from "module_13786" /* 13786 */;
+import _modDef13787 from "module_13787" /* 13787 */;
+import _modDef13788 from "module_13788" /* 13788 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -92,16 +92,16 @@ const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const TierMarkerPositions = { [BoostedGuildTiers.NONE]: 0, [BoostedGuildTiers.TIER_1]: 0.3333333333333333, [BoostedGuildTiers.TIER_2]: 0.6666666666666666, [BoostedGuildTiers.TIER_3]: 1 };
-let obj2 = { [TIER_1]: _modDef13694, [TIER_2]: _modDef13695, [TIER_3]: _modDef13696 };
+let obj2 = { [TIER_1]: _modDef13786, [TIER_2]: _modDef13787, [TIER_3]: _modDef13788 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let obj4 = { progressBarMarkerInnerCircle: { width: 17.5, height: 17.5, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }, progressBarMarkerInnerCircleBackground: { width: "100%", height: "100%", borderRadius: 17.5, position: "absolute" }, progressBarMarkerInnerCircleIcon: { width: 16, height: 16 }, progressBarMarkerInnerCircleIconUnlocked: null };
 let size = { width: "95%", height: "95%", tintColor: nativeDefault.colors.WHITE };
 obj4.progressBarMarkerInnerCircleIconUnlocked = size;
 let closure_11 = createStyles.createStyles(obj4);
 let closure_12 = { stiffness: 50, damping: 5 };
 const __initData = { code: "function GuildBoostingMarketingProgressBarMarkerTsx1(){const{backgroundColor,useReducedMotion,shouldAnimate,scale}=this.__closure;return{backgroundColor:backgroundColor,transform:[{scale:useReducedMotion||!shouldAnimate?1:scale.get()}]};}" };
-createStyles = fn(4640);
+createStyles = fn(4722);
 let obj5 = { progressBarMarker: null, progressBarMarkerBackground: { width: "100%", height: "100%", position: "absolute", borderRadius: 28 }, progressBarMarkerLabel: { width: 75, position: "absolute", top: "100%", paddingTop: 8, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "center", textAlign: "center" }, progressBarMarkerLabelWithIcon: null, progressBarMarkerLabelLocked: { opacity: 0.4 }, progressBarMarkerUnlockedIcon: null };
 const size1 = { height: 28, width: 28, position: "absolute", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", transform: null, zIndex: 1 };
 let items = [{ translateX: -14 }];
@@ -124,7 +124,7 @@ export default function ProgressBarMarker(arg0) {
   let PREMIUM_PERK_PINK;
   ({ revealedTier, isDisabled } = arg0);
   let tmp = closure_15();
-  let obj = useReducedMotion(4376);
+  let obj = useReducedMotion(4458);
   const sharedValue = obj.useSharedValue(1);
   dependencyMap = tmp7;
   let tmp20Result = tmp9;
@@ -170,11 +170,11 @@ export default function ProgressBarMarker(arg0) {
     const obj4 = { left: `${100 * obj[tier]}%` };
     items1[1] = obj4;
     obj3.style = items1;
-    const animatedStyle = useReducedMotion(4376).useAnimatedStyle(P);
+    const animatedStyle = useReducedMotion(4458).useAnimatedStyle(P);
     const obj5 = { style: null };
     const items2 = [tmp.progressBarMarkerBackground, animatedStyle];
     obj5.style = items2;
-    const items3 = [closure_7(tmp2(4376).View, obj5), , ];
+    const items3 = [closure_7(tmp2(4458).View, obj5), , ];
     const obj6 = { tier, isDisabled, isTierUnlocked: tmp9, isTierAnimated: tmp8, isCurrentTier: tmp7, useReducedMotion };
     items3[1] = closure_7(ProgressBarMarkerInnerContent, obj6);
     const items4 = [tmp.progressBarMarkerLabel, , ];
@@ -197,30 +197,30 @@ export default function ProgressBarMarker(arg0) {
       tmp20Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp20Result) {
-      const obj8 = { source: tmp2(11714), style: tmp.progressBarMarkerUnlockedIcon };
+      const obj8 = { source: tmp2(11804), style: tmp.progressBarMarkerUnlockedIcon };
       tmp20Result = closure_7(closure_5, obj8);
     }
     const items5 = [tmp20Result, ];
     const obj9 = { variant: "text-xs/medium", children: null };
-    const tmp5Result = useReducedMotion(4376);
-    obj9.children = useReducedMotion(4533).getTierName(tier, { useLevels: false });
-    items5[1] = closure_7(useReducedMotion(4636).Text, obj9);
+    const tmp5Result = useReducedMotion(4458);
+    obj9.children = useReducedMotion(4615).getTierName(tier, { useLevels: false });
+    items5[1] = closure_7(useReducedMotion(4718).Text, obj9);
     obj7.children = items5;
     items3[2] = closure_8(PREMIUM_PERK_PINK, obj7);
     obj3.children = items3;
     return closure_8(PREMIUM_PERK_PINK, obj3);
   }
-  const tmp4 = sharedValue(4574)();
-  const tmp5Result5 = useReducedMotion(4491);
-  const isThemeDarkResult = useReducedMotion(4491).isThemeDark(tmp4);
-  const hexWithOpacity = useReducedMotion(4489).hexWithOpacity;
+  const tmp4 = sharedValue(4656)();
+  const tmp5Result5 = useReducedMotion(4573);
+  const isThemeDarkResult = useReducedMotion(4573).isThemeDark(tmp4);
+  const hexWithOpacity = useReducedMotion(4571).hexWithOpacity;
   const unsafe_rawColors = tmp2(576).unsafe_rawColors;
   if (isThemeDarkResult) {
     PREMIUM_PERK_PINK = hexWithOpacity(unsafe_rawColors.WHITE, 0.4);
   } else {
     PREMIUM_PERK_PINK = hexWithOpacity(unsafe_rawColors.PRIMARY_200, 0.4);
   }
-  const tmp5Result6 = useReducedMotion(4489);
+  const tmp5Result6 = useReducedMotion(4571);
 };
 export const MARKER_DIMENSIONS = 28;
 export { TierMarkerPositions };

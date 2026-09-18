@@ -1,18 +1,18 @@
-// === Module 7886: ArchivedThreadsStore ===
+// === Module 7968: ArchivedThreadsStore ===
 
-// Module 7886 (ArchivedThreadsStore)
+// Module 7968 (ArchivedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 1967 */;
 import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 1969 */;
-import ForumUtils from "ForumUtils" /* 7421 */;
-import tracking_Tracking from "tracking/Tracking" /* 7887 */;
+import ForumUtils from "ForumUtils" /* 7503 */;
+import tracking_Tracking from "tracking/Tracking" /* 7969 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4363 */;
 
 require = fn;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {

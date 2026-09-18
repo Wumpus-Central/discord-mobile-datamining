@@ -1,9 +1,9 @@
-// === Module 6489: QuestsIllocon ===
+// === Module 6571: QuestsIllocon ===
 
-// Module 6489 (QuestsIllocon)
+// Module 6571 (QuestsIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6490 from "module_6490" /* 6490 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6572 from "module_6572" /* 6572 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const QuestsIllocon = function QuestsIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6490 };
+  const obj2 = { uri: _modDef6572 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

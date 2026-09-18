@@ -1,45 +1,45 @@
-// === Module 16195: MessagesItemChannelContent ===
+// === Module 16292: MessagesItemChannelContent ===
 
-// Module 16195 (MessagesItemChannelContent)
+// Module 16292 (MessagesItemChannelContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef4231 from "module_4231" /* 4231 */;
-import useThemeDefault from "useTheme" /* 4574 */;
-import useChannelNameDefault from "useChannelName" /* 4793 */;
-import _modDef7081 from "module_7081" /* 7081 */;
-import _modDef8066 from "module_8066" /* 8066 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8523 */;
-import GuildTagDefault from "GuildTag" /* 9338 */;
-import BotTagDefault from "BotTag" /* 9592 */;
-import _modDef10291 from "module_10291" /* 10291 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11030 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11053 */;
-import _modDef11113 from "module_11113" /* 11113 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15434 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16197 */;
-import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16199 */;
+import _modDef4314 from "module_4314" /* 4314 */;
+import useThemeDefault from "useTheme" /* 4656 */;
+import useChannelNameDefault from "useChannelName" /* 4875 */;
+import _modDef7163 from "module_7163" /* 7163 */;
+import _modDef8149 from "module_8149" /* 8149 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8606 */;
+import GuildTagDefault from "GuildTag" /* 9422 */;
+import BotTagDefault from "BotTag" /* 9676 */;
+import _modDef10385 from "module_10385" /* 10385 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11124 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11146 */;
+import _modDef11206 from "module_11206" /* 11206 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15528 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16294 */;
+import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16296 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
 
 require = fn;
 function MessagesItemChannelContentIcon(selected) {
   ({ muted, favorite, ignored, blocked } = selected);
   const tmp = closure_11(selected.selected);
   if (blocked) {
-    const obj2 = { source: _modDef8066, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj2 = { source: _modDef8149, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items = [, ];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
     obj2.style = items;
     let tmp2 = timestampProducer(native.Icon, obj2);
   } else if (ignored) {
-    const obj3 = { source: _modDef7081, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj3 = { source: _modDef7163, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items1 = [, ];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
     obj3.style = items1;
     tmp2 = timestampProducer(native.Icon, obj3);
   } else if (muted) {
-    const obj4 = { source: _modDef10291, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10385, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj4.style = items2;
@@ -47,7 +47,7 @@ function MessagesItemChannelContentIcon(selected) {
   } else {
     tmp2 = null;
     if (favorite) {
-      const obj = { source: _modDef11113, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+      const obj = { source: _modDef11206, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
       const items3 = [, ];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj.style = items3;
@@ -57,10 +57,10 @@ function MessagesItemChannelContentIcon(selected) {
   return tmp2;
 }
 const View = fn(17).View;
-const UnreadSetting = fn(4822).UnreadSetting;
+const UnreadSetting = fn(4904).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-let createStyles = fn(4640);
+let createStyles = fn(4722);
 let obj = { content: { flex: 1 }, channelIcon: { alignSelf: "center" }, channelNameAndAccessories: { flexDirection: "row", alignItems: "center", width: "100%" }, channelIcons: { flexDirection: "row", alignItems: "center" }, channelAccessoriesContainer: { flexDirection: "row", justifyContent: "flex-end", marginLeft: nativeDefault.space.PX_4 }, channelAccessories: null, channelNameAndBadge: null, botTag: null, contentPadded: null };
 let obj3 = { flexDirection: "row", justifyContent: "flex-end", marginLeft: nativeDefault.space.PX_4 };
 obj.channelAccessories = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", borderRadius: nativeDefault.radii.xs, paddingHorizontal: nativeDefault.space.PX_4, paddingVertical: 1 };
@@ -71,7 +71,7 @@ obj.botTag = { marginRight: nativeDefault.space.PX_4 };
 let obj6 = { marginRight: nativeDefault.space.PX_4 };
 obj.contentPadded = { paddingRight: nativeDefault.space.PX_40 };
 let closure_9 = createStyles.createStyles(obj);
-createStyles = fn(4640);
+createStyles = fn(4722);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   if (arg2) {
     let MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.TEXT_MUTED;
@@ -89,7 +89,7 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = { channelText: { color: MOBILE_TEXT_HEADING_PRIMARY }, channelName: { flexShrink: 1 }, timestamp: { color: tmp5(576).colors.TEXT_SUBTLE } };
   return obj;
 });
-createStyles = fn(4640);
+createStyles = fn(4722);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = { channelIcon: { marginRight: nativeDefault.space.PX_4 }, channelMutedIcon: null, channelFavoriteIcon: null, channelIgnoredIcon: null };
   const colors = nativeDefault.colors;
@@ -109,7 +109,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   ({ channelSelected, muted, ignored, blocked, hasUnreadMessages, hasNameplate } = channel);
   ({ favorite, hasActivity, resolvedUnreadSetting } = channel);
   let tmp5 = hasUnreadMessages;
-  const obj = channel(4348);
+  const obj = channel(4430);
   if (hasUnreadMessages) {
     tmp5 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
   }
@@ -125,21 +125,21 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   }
   const tmp8 = closure_9();
   const tmp9 = closure_10(channelSelected, tmp5, tmp7);
-  const isThemeLightResult = channel(4348).isThemeLight(useThemeDefault());
+  const isThemeLightResult = channel(4430).isThemeLight(useThemeDefault());
   const items = [ReadStateStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => ReadStateStore.lastMessageId(channel.id));
   const tmp11 = useMessagePreviewsDefault(channel, { unread: hasUnreadMessages });
   let tmp12 = null != tmp11;
   if (tmp12) {
-    const obj3 = _modDef4231();
-    tmp12 = _modDef4231().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
-    const tmp13 = _modDef4231().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+    const obj3 = _modDef4314();
+    tmp12 = _modDef4314().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+    const tmp13 = _modDef4314().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
   }
   if (tmp12) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(16196);
+  const tmpResult3 = channel(16293);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
@@ -155,7 +155,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   const waveShouldShow = tmp17.waveShouldShow;
   let obj4 = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
   const obj2 = { timestamp: SnowflakeUtilsDefault.extractTimestamp(id) };
-  obj4.variant = channel(4341).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+  obj4.variant = channel(4423).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
   const items1 = [, ];
   ({ channelText: arr2[0], channelName: arr2[1] } = tmp9);
   obj4.style = items1;
@@ -166,7 +166,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     if (null != channel.recipients) {
       if (channel.recipients.length > 0) {
         const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
-        const EffectDisplayType = tmp(11054).EffectDisplayType;
+        const EffectDisplayType = tmp(11147).EffectDisplayType;
         obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
         obj4 = Object.assign(obj4);
         closure_6(UsernameWithEffectsDefault, obj8);
@@ -177,7 +177,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   const obj9 = {};
   const merged = Object.assign(obj4);
   obj9.children = tmp16;
-  const items2 = [closure_6(channel(4636).Text, obj9), , ];
+  const items2 = [closure_6(channel(4718).Text, obj9), , ];
   let tmp20Result = null;
   if (tmp15) {
     const obj10 = { userId: channel.recipients[0], disabledTooltip: true };
@@ -224,7 +224,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
       obj17.style = items7;
       obj17.children = relativeTimestamp;
-      tmp20Result6 = closure_6(tmp(4636).Text, obj17);
+      tmp20Result6 = closure_6(tmp(4718).Text, obj17);
     }
     items6[1] = tmp20Result6;
     obj14.children = items6;
@@ -250,9 +250,9 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
         str7 = str6;
       }
       obj19.color = str7;
-      obj19.layout = tmp(8001).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      obj19.layout = tmp(8084).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj19.muted = muted;
-      let tmp20Result7 = closure_6(tmp(10258).ChannelRowPreview, obj19);
+      let tmp20Result7 = closure_6(tmp(10352).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
       const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;
@@ -268,7 +268,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
         const obj21 = { variant: "text-xs/medium", style: tmp9.channelText, lineClamp: 1, children: null };
         const intl = tmp(1115).intl;
         obj21.children = intl.string(tmp(1115).t.FL5T01);
-        tmp20Result7 = closure_6(tmp(4636).Text, obj21);
+        tmp20Result7 = closure_6(tmp(4718).Text, obj21);
       }
     }
     obj18.children = tmp20Result7;
@@ -302,5 +302,5 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     }
     const obj24 = { backgroundColor: combined };
   }
-  const tmpResult4 = channel(4341);
+  const tmpResult4 = channel(4423);
 });

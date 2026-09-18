@@ -1,34 +1,34 @@
-// === Module 17219: LaunchPad ===
+// === Module 17349: LaunchPad ===
 
-// Module 17219 (LaunchPad)
+// Module 17349 (LaunchPad)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import ChatInputUtils from "ChatInputUtils" /* 4506 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import Pressables from "Pressables" /* 5210 */;
-import AutocompleterDefault from "Autocompleter" /* 9987 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9995 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 11125 */;
-import RouteManagerDefault from "RouteManager" /* 12940 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14703 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import ChatInputUtils from "ChatInputUtils" /* 4588 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import Pressables from "Pressables" /* 5292 */;
+import AutocompleterDefault from "Autocompleter" /* 10081 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 10089 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 11218 */;
+import RouteManagerDefault from "RouteManager" /* 13031 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14798 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4330 */;
-import ChannelListStore from "ChannelListStore" /* 7639 */;
-import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 7442 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5594 */;
+import ActionSheetStore from "ActionSheetStore" /* 4413 */;
+import ChannelListStore from "ChannelListStore" /* 7721 */;
+import NavigationHistoryStore_mod from "NavigationHistoryStore" /* 7524 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5676 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7834 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7750 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7916 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7832 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13869 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
-import SortedGuildStore from "SortedGuildStore" /* 5526 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
-import VoiceStateStore from "VoiceStateStore" /* 4659 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13962 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
+import SortedGuildStore from "SortedGuildStore" /* 5608 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
+import VoiceStateStore from "VoiceStateStore" /* 4741 */;
 
 const require = globalThis.__r;
 
@@ -65,7 +65,7 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(7442);
+let NavigationHistoryStore = fn(7524);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(1962);
@@ -75,7 +75,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { wrapper: { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" }, launchPadContent: { flex: -1, overflow: "hidden", borderBottomLeftRadius: 24, borderBottomRightRadius: 24 }, header: { paddingHorizontal: 16, paddingTop: 16, flexDirection: "row", flexShrink: 0, flexGrow: 0 }, subheader: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", paddingStart: 8 }, tabs: null, tab: null, tabSelected: null };
 let obj3 = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
 obj.tabs = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: md, padding: 5, alignItems: "stretch", justifyContent: "center", gap: 5, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BORDER_DEFAULT };
@@ -278,7 +278,7 @@ let closure_35 = noop.memo((tab) => {
   return closure_28(sharedValue, obj6);
 });
 const results = [];
-let items = [fn(9986).AutocompleterResultTypes.GUILD, fn(9986).AutocompleterResultTypes.TEXT_CHANNEL, fn(9986).AutocompleterResultTypes.GROUP_DM, fn(9986).AutocompleterResultTypes.VOICE_CHANNEL, fn(9986).AutocompleterResultTypes.USER];
+let items = [fn(10080).AutocompleterResultTypes.GUILD, fn(10080).AutocompleterResultTypes.TEXT_CHANNEL, fn(10080).AutocompleterResultTypes.GROUP_DM, fn(10080).AutocompleterResultTypes.VOICE_CHANNEL, fn(10080).AutocompleterResultTypes.USER];
 const __initData3 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
 const __initData4 = { code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

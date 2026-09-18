@@ -1,7 +1,7 @@
-// === Module 14796: useAnnounceError ===
+// === Module 14890: useAnnounceError ===
 
-// Module 14796 (useAnnounceError)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4351 */;
+// Module 14890 (useAnnounceError)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4433 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

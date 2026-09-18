@@ -1,14 +1,14 @@
-// === Module 8793: Arrow ===
+// === Module 8876: Arrow ===
 
-// Module 8793 (Arrow)
+// Module 8876 (Arrow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef8794 from "module_8794" /* 8794 */;
+import _modDef8877 from "module_8877" /* 8877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj2 = { tintColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -16,5 +16,5 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 
 export default function Arrow() {
   const tmp = closure_4();
-  return jsx(native.Icon, { source: _modDef8794, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+  return jsx(native.Icon, { source: _modDef8877, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 };

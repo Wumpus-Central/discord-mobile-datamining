@@ -1,8 +1,8 @@
-// === Module 12648: useGuildPowerupRollbackEnabled ===
+// === Module 12739: useGuildPowerupRollbackEnabled ===
 
-// Module 12648 (useGuildPowerupRollbackEnabled)
-import Powerups from "Powerups" /* 4532 */;
-import FileUpload250MbPowerupExperiment from "FileUpload250MbPowerupExperiment" /* 4566 */;
+// Module 12739 (useGuildPowerupRollbackEnabled)
+import Powerups from "Powerups" /* 4614 */;
+import FileUpload250MbPowerupExperiment from "FileUpload250MbPowerupExperiment" /* 4648 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");

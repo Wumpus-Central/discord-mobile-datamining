@@ -1,9 +1,9 @@
-// === Module 5989: CrownIllocon ===
+// === Module 6071: CrownIllocon ===
 
-// Module 5989 (CrownIllocon)
+// Module 6071 (CrownIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5990 from "module_5990" /* 5990 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6072 from "module_6072" /* 6072 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const CrownIllocon = function CrownIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5990 };
+  const obj2 = { uri: _modDef6072 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

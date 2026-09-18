@@ -1,19 +1,19 @@
-// === Module 10484: EmojiActionCreators ===
+// === Module 10578: EmojiActionCreators ===
 
-// Module 10484 (EmojiActionCreators)
+// Module 10578 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import wrappers from "wrappers" /* 1217 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
-import InlineUploaderDefault from "InlineUploader" /* 5256 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5554 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4375 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
+import InlineUploaderDefault from "InlineUploader" /* 5338 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 5547 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5365 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4982 */;
+import EmojiStore from "EmojiStore" /* 5629 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5064 */;
 
 const require = globalThis.__r;
 

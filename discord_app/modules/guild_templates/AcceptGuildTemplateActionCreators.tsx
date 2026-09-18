@@ -1,9 +1,9 @@
-// === Module 11957: AcceptGuildTemplateActionCreators ===
+// === Module 12048: AcceptGuildTemplateActionCreators ===
 
-// Module 11957 (AcceptGuildTemplateActionCreators)
+// Module 12048 (AcceptGuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import transitionToGuild from "transitionToGuild" /* 7456 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5365 */;
+import transitionToGuild from "transitionToGuild" /* 7538 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;

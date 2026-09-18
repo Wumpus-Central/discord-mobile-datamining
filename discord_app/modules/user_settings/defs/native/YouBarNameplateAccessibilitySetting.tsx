@@ -1,19 +1,19 @@
-// === Module 15525: YouBarNameplateAccessibilitySetting ===
+// === Module 15620: YouBarNameplateAccessibilitySetting ===
 
-// Module 15525 (YouBarNameplateAccessibilitySetting)
+// Module 15620 (YouBarNameplateAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14561 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14656 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 
 require = fn;
-const SettingBuilders = fn(11622);
+const SettingBuilders = fn(11714);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.EEms8K);
   },
-  parent: fn(8111).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8194).MobileUserSettings.ACCESSIBILITY,
   useValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarNameplate);

@@ -1,8 +1,8 @@
-// === Module 4311: PremiumGroupConstants ===
+// === Module 4394: PremiumGroupConstants ===
 
-// Module 4311 (PremiumGroupConstants)
+// Module 4394 (PremiumGroupConstants)
 import util from "util" /* 1115 */;
-import _modDef3077 from "module_3077" /* 3077 */;
+import _modDef3160 from "module_3160" /* 3160 */;
 import Constants from "Constants" /* 1074 */;
 import HelpdeskUtils from "HelpdeskUtils" /* 2025 */;
 import size from "module_2" /* 2 */;
@@ -21,7 +21,7 @@ export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export const getPremiumGroupProductName = function getPremiumGroupProductName() {
   const intl = util.intl;
-  return intl.string(_modDef3077.aFBQ3d);
+  return intl.string(_modDef3160.aFBQ3d);
 };
 export const getPremiumGroupCountryName = function getPremiumGroupCountryName() {
   const intl = util.intl;

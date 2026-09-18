@@ -1,9 +1,9 @@
-// === Module 7326: GuildCapUpsellHooks ===
+// === Module 7408: GuildCapUpsellHooks ===
 
-// Module 7326 (GuildCapUpsellHooks)
+// Module 7408 (GuildCapUpsellHooks)
 import initialize from "initialize" /* 504 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4297 */;
-import HotspotStore2 from "HotspotStore" /* 7327 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
+import HotspotStore2 from "HotspotStore" /* 7409 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
 

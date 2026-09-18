@@ -1,10 +1,10 @@
-// === Module 12658: useFeaturedExpiringPowerup ===
+// === Module 12749: useFeaturedExpiringPowerup ===
 
-// Module 12658 (useFeaturedExpiringPowerup)
-import CollectiblesUtils from "CollectiblesUtils" /* 7668 */;
+// Module 12749 (useFeaturedExpiringPowerup)
+import CollectiblesUtils from "CollectiblesUtils" /* 7750 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 4549 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4528 */;
+import GameServerStore from "GameServerStore" /* 4631 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4610 */;
 
 const require = globalThis.__r;
 

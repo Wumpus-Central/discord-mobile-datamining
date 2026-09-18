@@ -1,9 +1,9 @@
-// === Module 6699: WumpusWishlistingSpotIllustration ===
+// === Module 6781: WumpusWishlistingSpotIllustration ===
 
-// Module 6699 (WumpusWishlistingSpotIllustration)
+// Module 6781 (WumpusWishlistingSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6700 from "module_6700" /* 6700 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6782 from "module_6782" /* 6782 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WumpusWishlistingSpotIllustration = function WumpusWishlistingSpotI
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6700 };
+  const obj2 = { uri: _modDef6782 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

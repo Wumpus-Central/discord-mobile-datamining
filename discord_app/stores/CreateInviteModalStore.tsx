@@ -1,14 +1,14 @@
-// === Module 9972: CreateInviteModalStore ===
+// === Module 10066: CreateInviteModalStore ===
 
-// Module 9972 (CreateInviteModalStore)
+// Module 10066 (CreateInviteModalStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9973 */;
-import DefaultInviteExpirationExperiments from "DefaultInviteExpirationExperiments" /* 9975 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10067 */;
+import DefaultInviteExpirationExperiments from "DefaultInviteExpirationExperiments" /* 10069 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import InstantInviteStore from "InstantInviteStore" /* 8528 */;
+import InstantInviteStore from "InstantInviteStore" /* 8611 */;
 
 require = fn;
 function updateWithLatestInvite(channelId, arg1) {

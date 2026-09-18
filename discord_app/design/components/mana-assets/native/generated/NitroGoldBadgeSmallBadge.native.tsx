@@ -1,9 +1,9 @@
-// === Module 6381: NitroGoldBadgeSmallBadge ===
+// === Module 6463: NitroGoldBadgeSmallBadge ===
 
-// Module 6381 (NitroGoldBadgeSmallBadge)
+// Module 6463 (NitroGoldBadgeSmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6382 from "module_6382" /* 6382 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6464 from "module_6464" /* 6464 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const NitroGoldBadgeSmallBadge = function NitroGoldBadgeSmallBadge(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6382 };
+  const obj2 = { uri: _modDef6464 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

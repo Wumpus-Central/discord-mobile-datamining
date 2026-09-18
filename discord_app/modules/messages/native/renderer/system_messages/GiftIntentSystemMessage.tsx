@@ -1,13 +1,13 @@
-// === Module 8213: GiftIntentSystemMessage ===
+// === Module 8295: GiftIntentSystemMessage ===
 
-// Module 8213 (GiftIntentSystemMessage)
+// Module 8295 (GiftIntentSystemMessage)
 import nativeDefault from "native" /* 576 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8082 */;
-import _modDef8085 from "module_8085" /* 8085 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8100 */;
-import GiftIntentEmbed from "GiftIntentEmbed" /* 8214 */;
-import EphemeralIndication from "EphemeralIndication" /* 8222 */;
-import createStyles from "createStyles" /* 4640 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8165 */;
+import _modDef8168 from "module_8168" /* 8168 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8183 */;
+import GiftIntentEmbed from "GiftIntentEmbed" /* 8296 */;
+import EphemeralIndication from "EphemeralIndication" /* 8304 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.BACKGROUND_BRAND, iconDividerColor: nativeDefault.colors.ICON_STRONG });
@@ -25,7 +25,7 @@ export const createGiftIntentSystemMessage = function createGiftIntentSystemMess
     const tmp5 = closure_3(theme);
     obj3.ephemeralIndication = EphemeralIndication.createEphemeralIndication(message);
     const tmpResult = EphemeralIndication;
-    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8085);
+    obj3.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8168);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp5);
     return obj3;
   }

@@ -1,8 +1,8 @@
-// === Module 8368: ProfileFrame ===
+// === Module 8451: ProfileFrame ===
 
-// Module 8368 (ProfileFrame)
-import FastImageDefault from "FastImage" /* 5675 */;
-import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8372 */;
+// Module 8451 (ProfileFrame)
+import FastImageDefault from "FastImage" /* 5757 */;
+import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8455 */;
 import noop from "module_19" /* 19 */;
 
 function ProfileFrameLayer(skuId) {
@@ -153,12 +153,12 @@ function LiveProfileFrame(frame) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-let closure_4 = fn(8351).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(8369);
+let closure_4 = fn(8433).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(8452);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: hasOwnProperty, PROFILE_FRAME_Z_INDEX: metroRequire } = ProfileFrameConstants);
-const UserProfileThemeTypes = fn(7322).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7404).UserProfileThemeTypes;
 let jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: null, layer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

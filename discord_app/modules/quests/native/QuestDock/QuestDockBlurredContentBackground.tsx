@@ -1,7 +1,7 @@
-// === Module 15273: QuestDockBlurredContentBackground ===
+// === Module 15367: QuestDockBlurredContentBackground ===
 
-// Module 15273 (QuestDockBlurredContentBackground)
-import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5049 */;
+// Module 15367 (QuestDockBlurredContentBackground)
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5131 */;
 import noop from "module_19" /* 19 */;
 
 const StyleSheet = fn(17).StyleSheet;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockBlurredContentBackground(blurTheme) {
   blurTheme = blurTheme.blurTheme;
   let str = "dark";
-  ({ animatedStyle, animatedLayout } = blurTheme);
+  ({ layoutAnimatedStyle, opacityAnimatedStyle, layoutAnimation } = blurTheme);
   if (undefined !== blurTheme) {
     str = blurTheme;
   }
@@ -32,8 +32,8 @@ export default noop.memo(function QuestDockBlurredContentBackground(blurTheme) {
     }
     return str;
   }, items1);
-  const obj = { nativeID: "quest-dock-blurred-background", tintColor: memo1, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor: memo, style: null, layout: animatedLayout };
-  const items2 = [StyleSheet.absoluteFillObject, animatedStyle];
+  const obj = { nativeID: "quest-dock-blurred-background", tintColor: memo1, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor: memo, style: null, layout: layoutAnimation };
+  const items2 = [StyleSheet.absoluteFillObject, layoutAnimatedStyle, opacityAnimatedStyle];
   obj.style = items2;
-  return jsx(VisualEffectViewAnimatedDefault, { nativeID: "quest-dock-blurred-background", tintColor: memo1, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor: memo, style: null, layout: animatedLayout });
+  return jsx(VisualEffectViewAnimatedDefault, { nativeID: "quest-dock-blurred-background", tintColor: memo1, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor: memo, style: null, layout: layoutAnimation });
 });

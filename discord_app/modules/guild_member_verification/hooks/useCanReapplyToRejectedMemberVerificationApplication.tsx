@@ -1,11 +1,11 @@
-// === Module 5634: useCanReapplyToRejectedMemberVerificationApplication ===
+// === Module 5716: useCanReapplyToRejectedMemberVerificationApplication ===
 
-// Module 5634 (useCanReapplyToRejectedMemberVerificationApplication)
+// Module 5716 (useCanReapplyToRejectedMemberVerificationApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteStore from "InviteStore" /* 4624 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4462 */;
+import InviteStore from "InviteStore" /* 4706 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4544 */;
 
 const require = globalThis.__r;
 

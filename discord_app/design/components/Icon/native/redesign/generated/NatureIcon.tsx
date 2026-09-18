@@ -1,9 +1,9 @@
-// === Module 10498: NatureIcon ===
+// === Module 10592: NatureIcon ===
 
-// Module 10498 (NatureIcon)
+// Module 10592 (NatureIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod10499 from "module_10499" /* 10499 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod10593 from "module_10593" /* 10593 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const NatureIcon = function NatureIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10499, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10593, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

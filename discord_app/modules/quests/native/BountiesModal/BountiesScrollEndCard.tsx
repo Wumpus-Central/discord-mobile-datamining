@@ -1,15 +1,15 @@
-// === Module 15165: BountiesScrollEndCard ===
+// === Module 15259: BountiesScrollEndCard ===
 
-// Module 15165 (BountiesScrollEndCard)
+// Module 15259 (BountiesScrollEndCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4641 */;
-import timingPresets from "timingPresets" /* 4644 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10119 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15132 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15133 */;
+import timing from "timing" /* 4723 */;
+import timingPresets from "timingPresets" /* 4726 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10213 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15226 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15227 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 
 require = fn;
 function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
@@ -39,23 +39,23 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
       return obj1;
     }
   }
-  const obj = isActive(4376);
-  S.__closure = { isScrollingInBoundsSharedValue, withTiming: isActive(4641).withTiming, isActive, timingStandard: isActive(4644).timingStandard };
+  const obj = isActive(4458);
+  S.__closure = { isScrollingInBoundsSharedValue, withTiming: isActive(4723).withTiming, isActive, timingStandard: isActive(4726).timingStandard };
   S.__workletHash = 4903386092677;
   S.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(S);
   const obj3 = { style: null, pointerEvents: "box-none", children: null };
   const items = [tmp.container, opacityStyle];
   obj3.style = items;
-  const items1 = [closure_8(closure_5, { style: tmp.backdropTint, pointerEvents: "none" }), closure_8(isScrollingInBoundsSharedValue(5074), { colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"], style: tmp.backdropGradient, pointerEvents: "none" }), ];
+  const items1 = [closure_8(closure_5, { style: tmp.backdropTint, pointerEvents: "none" }), closure_8(isScrollingInBoundsSharedValue(5156), { colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"], style: tmp.backdropGradient, pointerEvents: "none" }), ];
   const obj6 = { style: null, pointerEvents: "box-none", children: null };
   const items2 = [tmp.overlayContent, animatedStyle];
   obj6.style = items2;
-  const items3 = [closure_8(isScrollingInBoundsSharedValue(15166), { bounty, sourceQuestContent, disabled: !isActive }), ];
+  const items3 = [closure_8(isScrollingInBoundsSharedValue(15260), { bounty, sourceQuestContent, disabled: !isActive }), ];
   const obj8 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: closure_8(isScrollingInBoundsSharedValue(15168), {
+    children: closure_8(isScrollingInBoundsSharedValue(15262), {
       bounty,
       visible,
       sourceQuestContent,
@@ -68,16 +68,16 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   };
   items3[1] = closure_8(closure_5, obj8);
   obj6.children = items3;
-  items1[2] = closure_9(isScrollingInBoundsSharedValue(4376).View, obj6);
+  items1[2] = closure_9(isScrollingInBoundsSharedValue(4458).View, obj6);
   obj3.children = items1;
-  return closure_9(isScrollingInBoundsSharedValue(4376).View, obj3);
+  return closure_9(isScrollingInBoundsSharedValue(4458).View, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5532).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5614).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_10 = createStyles.createStyles(() => {
   const obj = { container: null, backdropTint: null, backdropGradient: null, overlayContent: null, endedCtaButtonsContainer: null };
   const merged = Object.assign(React4.absoluteFillObject);
@@ -101,15 +101,15 @@ const entering = function t(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-entering.__closure = { withTiming: fn(4641).withTiming, timingStandard: fn(4644).timingStandard };
+entering.__closure = { withTiming: fn(4723).withTiming, timingStandard: fn(4726).timingStandard };
 entering.__workletHash = 12127714049951;
 entering.__initData = { code: "function BountiesScrollEndCardTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
 const fn2 = function n(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-let obj2 = { withTiming: fn(4641).withTiming, timingStandard: fn(4644).timingStandard };
-fn2.__closure = { withTiming: fn(4641).withTiming, timingStandard: fn(4644).timingStandard };
+let obj2 = { withTiming: fn(4723).withTiming, timingStandard: fn(4726).timingStandard };
+fn2.__closure = { withTiming: fn(4723).withTiming, timingStandard: fn(4726).timingStandard };
 fn2.__workletHash = 7470211880124;
 fn2.__initData = { code: "function BountiesScrollEndCardTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}" };
 const __initData = { code: "function BountiesScrollEndCardTsx3(){const{isScrollingInBoundsSharedValue,withTiming,isActive,timingStandard}=this.__closure;var _isScrollingInBoundsS;const isScrollingInBounds=((_isScrollingInBoundsS=isScrollingInBoundsSharedValue)===null||_isScrollingInBoundsS===void 0?void 0:_isScrollingInBoundsS.get())===true;return{opacity:withTiming(isActive&&!isScrollingInBounds?1:0,timingStandard)};}" };

@@ -1,14 +1,14 @@
-// === Module 8592: AgeVerificationExpressiveV2Modal ===
+// === Module 8675: AgeVerificationExpressiveV2Modal ===
 
-// Module 8592 (AgeVerificationExpressiveV2Modal)
+// Module 8675 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4853 */;
-import NavigatorHeader from "NavigatorHeader" /* 5712 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8560 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8562 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8574 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8575 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4935 */;
+import NavigatorHeader from "NavigatorHeader" /* 5794 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8643 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8645 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8657 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8658 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -255,7 +255,10 @@ function MethodsScreen(onClose) {
     items9[1] = tmp19Result6;
     let tmp20Result = !loading;
     if (!loading) {
-      let tmp19Result7 = null != outageBannerMessage;
+      let tmp19Result7 = tmp6;
+      if (tmp6) {
+        tmp19Result7 = null != outageBannerMessage;
+      }
       if (tmp19Result7) {
         const obj16 = { messageType: tmp2(tmp3[30]).HelpMessageTypes.WARNING, children: outageBannerMessage };
         tmp19Result7 = tmp19(tmp2(tmp3[30]).HelpMessage, obj16);
@@ -329,7 +332,7 @@ function MethodsScreen(onClose) {
       } else {
         const obj19 = { style: tmp.emptyContainer, children: null };
         let obj20 = { messageType: tmp2(tmp3[30]).HelpMessageTypes.ERROR, button: null, children: null };
-        const obj21 = { variant: "primary", size: "sm", text: null, onPress: null };
+        const obj21 = { variant: "secondary", size: "sm", text: null, onPress: null };
         const intl = tmp2(tmp3[32]).intl;
         obj21.text = intl.string(onClose(tmp3[33]).hDvmYP);
         obj21.onPress = refetch;
@@ -366,11 +369,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(8561).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(8644).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: null, emptyContainer: null, footer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 obj2.loadingContainer = { marginTop: nativeDefault.space.PX_24 };

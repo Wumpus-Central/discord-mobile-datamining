@@ -1,9 +1,9 @@
-// === Module 6211: GemLeftForward3dIllustration ===
+// === Module 6293: GemLeftForward3dIllustration ===
 
-// Module 6211 (GemLeftForward3dIllustration)
+// Module 6293 (GemLeftForward3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6212 from "module_6212" /* 6212 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6294 from "module_6294" /* 6294 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GemLeftForward3dIllustration = function GemLeftForward3dIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6212 };
+  const obj2 = { uri: _modDef6294 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

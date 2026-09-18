@@ -1,6 +1,6 @@
-// === Module 7812: InteractionObserverUtils ===
+// === Module 7894: InteractionObserverUtils ===
 
-// Module 7812 (InteractionObserverUtils)
+// Module 7894 (InteractionObserverUtils)
 import size from "module_2" /* 2 */;
 
 function __handleIntersections(arr, arg1) {

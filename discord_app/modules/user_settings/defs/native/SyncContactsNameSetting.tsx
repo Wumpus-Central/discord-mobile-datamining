@@ -1,14 +1,14 @@
-// === Module 14970: SyncContactsNameSetting ===
+// === Module 15064: SyncContactsNameSetting ===
 
-// Module 14970 (SyncContactsNameSetting)
+// Module 15064 (SyncContactsNameSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4843 */;
-import SettingsConstants from "SettingsConstants" /* 8111 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12831 */;
-import SettingBuilders from "SettingBuilders" /* 11622 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
+import SettingsConstants from "SettingsConstants" /* 8194 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12922 */;
+import SettingBuilders from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -20,7 +20,7 @@ const pressable = SettingBuilders.createPressable({
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14969, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15063, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

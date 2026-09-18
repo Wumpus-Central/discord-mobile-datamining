@@ -1,6 +1,6 @@
-// === Module 7972: SavedMessagesConstants ===
+// === Module 8055: SavedMessagesConstants ===
 
-// Module 7972 (SavedMessagesConstants)
+// Module 8055 (SavedMessagesConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SavedMessagesConstants.tsx");

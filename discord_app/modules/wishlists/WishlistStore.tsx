@@ -1,11 +1,11 @@
-// === Module 8933: WishlistStore ===
+// === Module 9017: WishlistStore ===
 
-// Module 8933 (WishlistStore)
+// Module 9017 (WishlistStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import UserProfileStore from "UserProfileStore" /* 7735 */;
-import WishlistRecord_mod from "WishlistRecord" /* 8934 */;
+import UserProfileStore from "UserProfileStore" /* 7817 */;
+import WishlistRecord_mod from "WishlistRecord" /* 9018 */;
 import size from "module_2" /* 2 */;
 
 let WishlistRecord = WishlistRecord_mod;

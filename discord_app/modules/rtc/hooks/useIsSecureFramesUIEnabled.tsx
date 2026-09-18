@@ -1,11 +1,11 @@
-// === Module 9324: useIsSecureFramesUIEnabled ===
+// === Module 9408: useIsSecureFramesUIEnabled ===
 
-// Module 9324 (useIsSecureFramesUIEnabled)
+// Module 9408 (useIsSecureFramesUIEnabled)
 import ChannelStore from "ChannelStore" /* 1958 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
 
 const require = fn;
-let closure_4 = fn(9306).END_TO_END_ENCRYPTION_DISABLED;
+let closure_4 = fn(9390).END_TO_END_ENCRYPTION_DISABLED;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 

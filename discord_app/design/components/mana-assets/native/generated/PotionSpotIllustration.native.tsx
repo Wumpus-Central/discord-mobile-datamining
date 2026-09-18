@@ -1,9 +1,9 @@
-// === Module 6463: PotionSpotIllustration ===
+// === Module 6545: PotionSpotIllustration ===
 
-// Module 6463 (PotionSpotIllustration)
+// Module 6545 (PotionSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6464 from "module_6464" /* 6464 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6546 from "module_6546" /* 6546 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PotionSpotIllustration = function PotionSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6464 };
+  const obj2 = { uri: _modDef6546 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

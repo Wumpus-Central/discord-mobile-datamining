@@ -1,10 +1,10 @@
-// === Module 16445: GuildsBarDnDStore ===
+// === Module 16542: GuildsBarDnDStore ===
 
-// Module 16445 (GuildsBarDnDStore)
+// Module 16542 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import _mod4262 from "module_4262" /* 4262 */;
-import SortedGuildStore from "SortedGuildStore" /* 5526 */;
+import _mod4345 from "module_4345" /* 4345 */;
+import SortedGuildStore from "SortedGuildStore" /* 5608 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
@@ -198,7 +198,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4262.shallow);
+  }, _mod4345.shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

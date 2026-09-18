@@ -1,9 +1,9 @@
-// === Module 5875: AvatarLokyExample ===
+// === Module 5957: AvatarLokyExample ===
 
-// Module 5875 (AvatarLokyExample)
+// Module 5957 (AvatarLokyExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5876 from "module_5876" /* 5876 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef5958 from "module_5958" /* 5958 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarLokyExample = function AvatarLokyExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5876 };
+  const obj2 = { uri: _modDef5958 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

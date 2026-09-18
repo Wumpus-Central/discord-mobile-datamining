@@ -1,6 +1,6 @@
-// === Module 9743: VoiceChatModalContext ===
+// === Module 9837: VoiceChatModalContext ===
 
-// Module 9743 (VoiceChatModalContext)
+// Module 9837 (VoiceChatModalContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(null);

@@ -1,10 +1,10 @@
-// === Module 17916: SafetyCheckScreen ===
+// === Module 18009: SafetyCheckScreen ===
 
-// Module 17916 (SafetyCheckScreen)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9217 */;
+// Module 18009 (SafetyCheckScreen)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9301 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9218 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9302 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);

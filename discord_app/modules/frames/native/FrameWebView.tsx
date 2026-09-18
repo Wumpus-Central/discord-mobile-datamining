@@ -1,8 +1,8 @@
-// === Module 16856: FrameWebView ===
+// === Module 16895: FrameWebView ===
 
-// Module 16856 (FrameWebView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9661 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9722 */;
+// Module 16895 (FrameWebView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9745 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9816 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

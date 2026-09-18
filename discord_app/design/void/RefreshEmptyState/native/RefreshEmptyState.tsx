@@ -1,12 +1,12 @@
-// === Module 14307: RefreshEmptyState ===
+// === Module 14402: RefreshEmptyState ===
 
-// Module 14307 (RefreshEmptyState)
+// Module 14402 (RefreshEmptyState)
 import nativeDefault from "native" /* 576 */;
-import shared from "shared" /* 4491 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8767 */;
+import shared from "shared" /* 4573 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8850 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5612 */;
+import TextStyles_mod from "TextStyles" /* 5694 */;
 
 require = fn;
 class EmptyState {
@@ -77,7 +77,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", padding: 16 }, title: null, body: null, image: null, cta: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

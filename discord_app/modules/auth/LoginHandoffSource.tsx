@@ -1,10 +1,10 @@
-// === Module 7434: LoginHandoffSource ===
+// === Module 7516: LoginHandoffSource ===
 
-// Module 7434 (LoginHandoffSource)
+// Module 7516 (LoginHandoffSource)
 import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
 import ChannelConstants from "ChannelConstants" /* 1965 */;
-import LinkUtils from "LinkUtils" /* 4794 */;
-import UserSettingsURLUtils from "UserSettingsURLUtils" /* 5542 */;
+import LinkUtils from "LinkUtils" /* 4876 */;
+import UserSettingsURLUtils from "UserSettingsURLUtils" /* 5624 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;

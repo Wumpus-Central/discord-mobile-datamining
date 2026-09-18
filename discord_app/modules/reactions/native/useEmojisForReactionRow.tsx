@@ -1,6 +1,6 @@
-// === Module 11882: useEmojisForReactionRow ===
+// === Module 11973: useEmojisForReactionRow ===
 
-// Module 11882 (useEmojisForReactionRow)
+// Module 11973 (useEmojisForReactionRow)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

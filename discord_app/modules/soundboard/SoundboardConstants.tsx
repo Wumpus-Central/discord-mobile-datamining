@@ -1,6 +1,6 @@
-// === Module 5102: SoundboardConstants ===
+// === Module 5184: SoundboardConstants ===
 
-// Module 5102 (SoundboardConstants)
+// Module 5184 (SoundboardConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { SUCCESS: 0, [0]: "SUCCESS", INTERRUPTED: 1, [1]: "INTERRUPTED" };

@@ -1,23 +1,23 @@
-// === Module 12731: GuildPowerupsRecentActivitySection ===
+// === Module 12822: GuildPowerupsRecentActivitySection ===
 
-// Module 12731 (GuildPowerupsRecentActivitySection)
+// Module 12822 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import DateUtils from "DateUtils" /* 4321 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7094 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8097 */;
-import BoostGemIcon from "BoostGemIcon" /* 9529 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12732 */;
-import BoostTier1Icon from "BoostTier1Icon" /* 12734 */;
-import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12736 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12738 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import DateUtils from "DateUtils" /* 4404 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7176 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8180 */;
+import BoostGemIcon from "BoostGemIcon" /* 9613 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12823 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 12825 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12827 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12829 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4640 */;
+import createStyles from "createStyles" /* 4722 */;
 import size from "module_2" /* 2 */;
 
 const useMaybeGetSortedBoostsDefault = useMaybeGetSortedBoosts;

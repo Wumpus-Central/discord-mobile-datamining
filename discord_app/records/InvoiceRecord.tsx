@@ -1,7 +1,7 @@
-// === Module 4306: InvoiceRecord ===
+// === Module 4389: InvoiceRecord ===
 
-// Module 4306 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4307 */;
+// Module 4389 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4390 */;
 import Record from "Record" /* 1387 */;
 
 require = fn;

@@ -1,8 +1,8 @@
-// === Module 9863: useGuildsUserCanStartStageIn ===
+// === Module 9957: useGuildsUserCanStartStageIn ===
 
-// Module 9863 (useGuildsUserCanStartStageIn)
+// Module 9957 (useGuildsUserCanStartStageIn)
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 
 const require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(2013).GUILD_VOCAL_CHANNELS_KEY;

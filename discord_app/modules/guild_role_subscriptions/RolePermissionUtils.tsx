@@ -1,6 +1,6 @@
-// === Module 4270: RolePermissionUtils ===
+// === Module 4353: RolePermissionUtils ===
 
-// Module 4270 (RolePermissionUtils)
+// Module 4353 (RolePermissionUtils)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2017 */;

@@ -1,6 +1,6 @@
-// === Module 15290: ClientThemesBackgroundActionCreators ===
+// === Module 15384: ClientThemesBackgroundActionCreators ===
 
-// Module 15290 (ClientThemesBackgroundActionCreators)
+// Module 15384 (ClientThemesBackgroundActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

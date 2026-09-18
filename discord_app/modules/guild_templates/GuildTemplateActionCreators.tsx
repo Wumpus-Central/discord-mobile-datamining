@@ -1,6 +1,6 @@
-// === Module 7438: GuildTemplateActionCreators ===
+// === Module 7520: GuildTemplateActionCreators ===
 
-// Module 7438 (GuildTemplateActionCreators)
+// Module 7520 (GuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import Constants from "Constants" /* 1074 */;

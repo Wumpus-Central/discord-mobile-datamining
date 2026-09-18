@@ -1,21 +1,21 @@
-// === Module 8258: transformMessageComponents ===
+// === Module 8340: transformMessageComponents ===
 
-// Module 8258 (transformMessageComponents)
+// Module 8340 (transformMessageComponents)
 import DurationsDefault from "Durations" /* 1091 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4790 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4865 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8256 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8274 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4872 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4947 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8338 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8356 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import priv from "priv" /* 1438 */;
 
 const util = tmp4(1115);
 const FlagUtils = tmp4(1385);
-const AgeVerificationUtils = tmp4(4853);
-const MediaTypes = tmp4(4871);
-const sanitizeMediaDimension = tmp4(8255);
-const ExplicitMediaUtils = tmp4(8273);
+const AgeVerificationUtils = tmp4(4935);
+const MediaTypes = tmp4(4953);
+const sanitizeMediaDimension = tmp4(8337);
+const ExplicitMediaUtils = tmp4(8355);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -566,8 +566,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(4866).CheckpointVersions;
-let closure_7 = fn(8259).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(4948).CheckpointVersions;
+let closure_7 = fn(8341).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -575,7 +575,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  const obj = { type: "textDisplayComponent", parserState: obj3(8010).getInitialParserStateFromMessage(message.message, closure_7) };
+  const obj = { type: "textDisplayComponent", parserState: obj3(8093).getInitialParserStateFromMessage(message.message, closure_7) };
   obj3 = {};
   const merged = Object.assign(message);
   obj3.markdownConfigs = { textDisplayComponent: obj };

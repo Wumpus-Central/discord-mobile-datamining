@@ -1,23 +1,23 @@
-// === Module 17455: VoicePanelVoiceControls ===
+// === Module 17585: VoicePanelVoiceControls ===
 
-// Module 17455 (VoicePanelVoiceControls)
+// Module 17585 (VoicePanelVoiceControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import TableRowGroup from "TableRowGroup" /* 5775 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6766 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9736 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10132 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10142 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12423 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13908 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17282 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17347 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17456 */;
+import TableRowGroup from "TableRowGroup" /* 5857 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6848 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9830 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10226 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 10236 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12514 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 14001 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17412 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17477 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17586 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
 
 const MobileGoLiveEntrypointExperimentDefault = MobileGoLiveEntrypointExperiment;
 
@@ -25,10 +25,10 @@ require = fn;
 function NOOP() {
 
 }
-const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12422).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
+const CONTROLS_DRAWER_HEADER_EXPANDED_SIZE = fn(12513).CONTROLS_DRAWER_HEADER_EXPANDED_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj = { scrollView: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 }, scrollViewScreenReader: null, blurRegion: null };
 let obj3 = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 };
 obj.scrollViewScreenReader = { flex: 1, paddingHorizontal: nativeDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };

@@ -1,6 +1,6 @@
-// === Module 11628: RichPresenceInviteBarActionCreators ===
+// === Module 11720: RichPresenceInviteBarActionCreators ===
 
-// Module 11628 (RichPresenceInviteBarActionCreators)
+// Module 11720 (RichPresenceInviteBarActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

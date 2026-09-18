@@ -1,11 +1,11 @@
-// === Module 8034: ConversationNavigator ===
+// === Module 8117: ConversationNavigator ===
 
-// Module 8034 (ConversationNavigator)
+// Module 8117 (ConversationNavigator)
 import nativeDefault from "native" /* 576 */;
-import RootNavigationRef from "RootNavigationRef" /* 4498 */;
-import Navigator from "Navigator" /* 7114 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8045 */;
-import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 8046 */;
+import RootNavigationRef from "RootNavigationRef" /* 4580 */;
+import Navigator from "Navigator" /* 7196 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8128 */;
+import ConversationNavigatorHeader from "ConversationNavigatorHeader" /* 8129 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const NativeStackNavigator = fn(8035);
+const NativeStackNavigator = fn(8118);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");

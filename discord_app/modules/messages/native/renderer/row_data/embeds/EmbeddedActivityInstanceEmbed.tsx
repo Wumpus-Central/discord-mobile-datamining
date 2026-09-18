@@ -1,24 +1,24 @@
-// === Module 13380: EmbeddedActivityInstanceEmbed ===
+// === Module 13471: EmbeddedActivityInstanceEmbed ===
 
-// Module 13380 (EmbeddedActivityInstanceEmbed)
+// Module 13471 (EmbeddedActivityInstanceEmbed)
 import util from "util" /* 1115 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 7277 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12092 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 12093 */;
-import getPlayInContext from "getPlayInContext" /* 12094 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12095 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12283 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13371 */;
-import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 13381 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7359 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 12183 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 12184 */;
+import getPlayInContext from "getPlayInContext" /* 12185 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 12186 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12374 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13462 */;
+import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 13472 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ApplicationStore from "ApplicationStore" /* 4868 */;
+import ApplicationStore from "ApplicationStore" /* 4950 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
-import PresenceStore from "PresenceStore" /* 4680 */;
+import PresenceStore from "PresenceStore" /* 4762 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(11463).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11561).CodedLinkExtendedType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
 

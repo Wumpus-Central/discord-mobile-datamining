@@ -1,9 +1,9 @@
-// === Module 17282: useIsConnectedToVoiceChannel ===
+// === Module 17412: useIsConnectedToVoiceChannel ===
 
-// Module 17282 (useIsConnectedToVoiceChannel)
+// Module 17412 (useIsConnectedToVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
-import VoiceStateStore from "VoiceStateStore" /* 4659 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
+import VoiceStateStore from "VoiceStateStore" /* 4741 */;
 
 const require = globalThis.__r;
 

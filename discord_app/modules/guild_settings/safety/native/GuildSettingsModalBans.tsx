@@ -1,23 +1,23 @@
-// === Module 17902: GuildSettingsModalBans ===
+// === Module 17995: GuildSettingsModalBans ===
 
-// Module 17902 (GuildSettingsModalBans)
+// Module 17995 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5605 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5608 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7308 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5687 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5690 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7390 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import UserStore from "UserStore" /* 1372 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9218 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9302 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchField: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj2.searchField = { paddingVertical: nativeDefault.space.PX_16 };

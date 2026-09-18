@@ -1,27 +1,27 @@
-// === Module 12363: ScheduledMessagesModal ===
+// === Module 12454: ScheduledMessagesModal ===
 
-// Module 12363 (ScheduledMessagesModal)
+// Module 12454 (ScheduledMessagesModal)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import PremiumUtils from "PremiumUtils" /* 4297 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
-import spring from "spring" /* 5061 */;
-import _mod5719 from "module_5719" /* 5719 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7276 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
-import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 7964 */;
-import HeaderShared from "HeaderShared" /* 7984 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9467 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10117 */;
-import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12365 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12372 */;
+import PremiumUtils from "PremiumUtils" /* 4380 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
+import spring from "spring" /* 5143 */;
+import _mod5801 from "module_5801" /* 5801 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7358 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 8047 */;
+import HeaderShared from "HeaderShared" /* 8067 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9551 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10211 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12456 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12463 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ScheduledMessageStore from "ScheduledMessageStore" /* 12364 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 12455 */;
 
-const NavigatorHeader = tmp4(5712);
+const NavigatorHeader = tmp4(5794);
 require = fn;
 function keyExtractor(scheduledMessageId) {
   return scheduledMessageId.scheduledMessageId;
@@ -123,11 +123,11 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1074).AnalyticsPages;
 const PremiumTypes = fn(1374).PremiumTypes;
-const premiumMax = fn(7966).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(8049).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" }, headerLeftContainer: null, headerRightContainer: null, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
@@ -182,13 +182,13 @@ export default function ScheduledMessagesModal() {
   }
   obj6.headerStatusBarHeight = num + sharedValue(576).space.PX_8;
   obj5 = PlatformUtils;
-  obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4843).pop);
+  obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4925).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items1 = [closure_10(_mod5719.Header, obj6), , ];
+  const items1 = [closure_10(_mod5801.Header, obj6), , ];
   const obj7 = { style: null };
   const items2 = [tmp.headerBorder, animatedStyle];
   obj7.style = items2;
-  items1[1] = closure_10(sharedValue(4376).View, obj7);
+  items1[1] = closure_10(sharedValue(4458).View, obj7);
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj3.children = items1;
   return closure_11(View, obj3);

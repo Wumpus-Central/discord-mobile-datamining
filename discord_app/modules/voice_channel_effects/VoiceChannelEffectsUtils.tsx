@@ -1,41 +1,41 @@
-// === Module 7463: VoiceChannelEffectsUtils ===
+// === Module 7545: VoiceChannelEffectsUtils ===
 
-// Module 7463 (VoiceChannelEffectsUtils)
+// Module 7545 (VoiceChannelEffectsUtils)
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4292 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4296 */;
-import _modDef7464 from "module_7464" /* 7464 */;
-import _modDef7465 from "module_7465" /* 7465 */;
-import _modDef7466 from "module_7466" /* 7466 */;
-import _modDef7467 from "module_7467" /* 7467 */;
-import _modDef7468 from "module_7468" /* 7468 */;
-import _modDef7469 from "module_7469" /* 7469 */;
-import _modDef7470 from "module_7470" /* 7470 */;
-import _modDef7471 from "module_7471" /* 7471 */;
-import _modDef7472 from "module_7472" /* 7472 */;
-import _modDef7473 from "module_7473" /* 7473 */;
-import _modDef7474 from "module_7474" /* 7474 */;
-import _modDef7475 from "module_7475" /* 7475 */;
-import _modDef7476 from "module_7476" /* 7476 */;
-import _modDef7477 from "module_7477" /* 7477 */;
-import _modDef7478 from "module_7478" /* 7478 */;
-import _modDef7479 from "module_7479" /* 7479 */;
-import _modDef7480 from "module_7480" /* 7480 */;
-import _modDef7481 from "module_7481" /* 7481 */;
-import _modDef7482 from "module_7482" /* 7482 */;
-import _modDef7483 from "module_7483" /* 7483 */;
-import _modDef7484 from "module_7484" /* 7484 */;
-import _modDef7485 from "module_7485" /* 7485 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4375 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4379 */;
+import _modDef7546 from "module_7546" /* 7546 */;
+import _modDef7547 from "module_7547" /* 7547 */;
+import _modDef7548 from "module_7548" /* 7548 */;
+import _modDef7549 from "module_7549" /* 7549 */;
+import _modDef7550 from "module_7550" /* 7550 */;
+import _modDef7551 from "module_7551" /* 7551 */;
+import _modDef7552 from "module_7552" /* 7552 */;
+import _modDef7553 from "module_7553" /* 7553 */;
+import _modDef7554 from "module_7554" /* 7554 */;
+import _modDef7555 from "module_7555" /* 7555 */;
+import _modDef7556 from "module_7556" /* 7556 */;
+import _modDef7557 from "module_7557" /* 7557 */;
+import _modDef7558 from "module_7558" /* 7558 */;
+import _modDef7559 from "module_7559" /* 7559 */;
+import _modDef7560 from "module_7560" /* 7560 */;
+import _modDef7561 from "module_7561" /* 7561 */;
+import _modDef7562 from "module_7562" /* 7562 */;
+import _modDef7563 from "module_7563" /* 7563 */;
+import _modDef7564 from "module_7564" /* 7564 */;
+import _modDef7565 from "module_7565" /* 7565 */;
+import _modDef7566 from "module_7566" /* 7566 */;
+import _modDef7567 from "module_7567" /* 7567 */;
 import UserStore from "UserStore" /* 1372 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(7462);
+const VoiceChannelEffectsConstants = fn(7544);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef7464];
-const items1 = [_modDef7465, _modDef7466, _modDef7467, _modDef7468, _modDef7469, _modDef7470, _modDef7471, _modDef7472, _modDef7473, _modDef7474, _modDef7475, _modDef7476, _modDef7477, _modDef7478, _modDef7479, _modDef7480, _modDef7481, _modDef7482, _modDef7483, _modDef7484, _modDef7485];
+const items = [_modDef7546];
+const items1 = [_modDef7547, _modDef7548, _modDef7549, _modDef7550, _modDef7551, _modDef7552, _modDef7553, _modDef7554, _modDef7555, _modDef7556, _modDef7557, _modDef7558, _modDef7559, _modDef7560, _modDef7561, _modDef7562, _modDef7563, _modDef7564, _modDef7565, _modDef7566, _modDef7567];
 const AnimationTypeToAnimations = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsUtils.tsx");

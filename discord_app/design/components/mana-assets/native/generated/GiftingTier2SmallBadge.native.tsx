@@ -1,9 +1,9 @@
-// === Module 6267: GiftingTier2SmallBadge ===
+// === Module 6349: GiftingTier2SmallBadge ===
 
-// Module 6267 (GiftingTier2SmallBadge)
+// Module 6349 (GiftingTier2SmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6268 from "module_6268" /* 6268 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6350 from "module_6350" /* 6350 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GiftingTier2SmallBadge = function GiftingTier2SmallBadge(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6268 };
+  const obj2 = { uri: _modDef6350 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

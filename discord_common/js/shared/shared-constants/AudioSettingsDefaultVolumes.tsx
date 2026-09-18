@@ -1,6 +1,6 @@
-// === Module 9247: AudioSettingsDefaultVolumes ===
+// === Module 9331: AudioSettingsDefaultVolumes ===
 
-// Module 9247 (AudioSettingsDefaultVolumes)
+// Module 9331 (AudioSettingsDefaultVolumes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx");

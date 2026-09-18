@@ -1,20 +1,20 @@
-// === Module 15314: QuestDockVideoBackground ===
+// === Module 15408: QuestDockVideoBackground ===
 
-// Module 15314 (QuestDockVideoBackground)
+// Module 15408 (QuestDockVideoBackground)
 import _modDef672 from "module_672" /* 672 */;
-import spring from "spring" /* 5061 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7187 */;
-import QuestDockUtils from "QuestDockUtils" /* 15206 */;
+import spring from "spring" /* 5143 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7269 */;
+import QuestDockUtils from "QuestDockUtils" /* 15300 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4632 */;
+import AccessibilityStore from "AccessibilityStore" /* 4714 */;
 
 require = fn;
 function QuestDockBackgroundMediaFade(arg0) {
   let activeQuestDockMode;
   ({ children, style } = arg0);
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(15208).QuestDockGestureContext).activeQuestDockMode;
-  const tmp = closure_16();
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(15302).QuestDockGestureContext).activeQuestDockMode;
+  const tmp = closure_17();
   const fn = function n() {
     let num = 0;
     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -22,29 +22,29 @@ function QuestDockBackgroundMediaFade(arg0) {
     }
     return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
   };
-  let obj = activeQuestDockMode(4376);
-  fn.__closure = { withSpring: activeQuestDockMode(5061).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  let obj = activeQuestDockMode(4458);
+  fn.__closure = { withSpring: activeQuestDockMode(5143).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   fn.__workletHash = 5908890006198;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj3 = { style: null, children };
   const items = [tmp.media, style, animatedStyle];
   obj3.style = items;
-  return closure_11(ReanimatedNativeViewDefault, obj3);
+  return closure_12(ReanimatedNativeViewDefault, obj3);
 }
 get_ActivityIndicator = fn(17);
-({ AppState: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const QuestDockMode = fn(5532).QuestDockMode;
-const QuestDockConstants = fn(15207);
-({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_9 } = QuestDockConstants);
-const VerticalGradient = fn(1074).VerticalGradient;
+({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
+let QuestDockMode = fn(5614).QuestDockMode;
+const QuestDockConstants = fn(15301);
+({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } = QuestDockConstants);
+let VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let closure_13 = [0, 0.1, 0.8, 1];
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+let closure_14 = [0, 0.1, 0.8, 1];
 const locations = [0, 0.33, 0.76, 1];
 const QuestDockBackgroundCollapsedMediaMode = { PAUSED: "paused", HIDDEN: "hidden" };
-const createStyles = fn(4640);
-let obj2 = { backgroundWrapper: null, backgroundImage: null, backgroundImageWrapper: null, backgroundVideo: null, media: null, backgroundGradient: null };
+const createStyles = fn(4722);
+let obj2 = { backgroundWrapper: null, backgroundImage: null, backgroundImageWrapper: null, backgroundVideo: null, media: null, backgroundGradient: null, backdrop: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj4.right = undefined;
@@ -63,7 +63,9 @@ const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj2.media = {};
 const merged5 = Object.assign(StyleSheet.absoluteFillObject);
 obj2.backgroundGradient = {};
-let closure_16 = createStyles.createStyles(obj2);
+const merged6 = Object.assign(StyleSheet.absoluteFillObject);
+obj2.backdrop = {};
+let closure_17 = createStyles.createStyles(obj2);
 const __initData = { code: "function QuestDockVideoBackgroundTsx1(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(activeQuestDockMode.get()===QuestDockMode.EXPANDED?1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}" };
 const __initData2 = { code: "function QuestDockVideoBackgroundTsx2(){const{withSpring,activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,windowDimensions}=this.__closure;return{transform:[{translateX:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*-1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)},{translateY:withSpring(activeQuestDockMode.get()===QuestDockMode.COLLAPSED?QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED*-1:0,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)}],width:windowDimensions.get().width};}" };
 const __initData3 = { code: "function QuestDockVideoBackgroundTsx3(){const{withSpring,shouldShowVideo,videoLoaded,isMediaHiddenWhenCollapsed,activeQuestDockMode,QuestDockMode,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED}=this.__closure;return{opacity:withSpring(shouldShowVideo&&videoLoaded&&(isMediaHiddenWhenCollapsed||activeQuestDockMode.get()===QuestDockMode.EXPANDED)?0:1,QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED)};}" };
@@ -76,24 +78,24 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     collapsedMediaMode = obj.PAUSED;
   }
   gradientBaseColor = gradientBaseColor.gradientBaseColor;
-  const expandedHeight = gradientBaseColor.expandedHeight;
+  ({ backdropColor, expandedHeight } = gradientBaseColor);
   let windowDimensions;
-  QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = undefined;
+  QuestDockMode = undefined;
   let isRendered;
   let first1;
-  closure_11 = undefined;
+  VerticalGradient = undefined;
   dependencyMap = tmp2;
-  let tmp3 = closure_16();
-  const context = windowDimensions.useContext(gradientBaseColor(15208).QuestDockGestureContext);
+  let tmp3 = closure_17();
+  const context = windowDimensions.useContext(gradientBaseColor(15302).QuestDockGestureContext);
   const activeQuestDockMode = context.activeQuestDockMode;
   windowDimensions = context.windowDimensions;
-  const setRestingQuestDockMode = windowDimensions.useContext(gradientBaseColor(15211).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const tmp8 = expandedHeight(8416)(activeQuestDockMode);
+  const setRestingQuestDockMode = windowDimensions.useContext(gradientBaseColor(15305).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const tmp8 = expandedHeight(8499)(activeQuestDockMode);
   const height = expandedHeight(1478)().height;
   const top = expandedHeight(1612)().top;
-  let items = [height];
+  let items = [top];
   const items1 = [height, top, expandedHeight];
-  const stateFromStores = gradientBaseColor(504).useStateFromStores(items, () => height.useReducedMotion);
+  const stateFromStores = gradientBaseColor(504).useStateFromStores(items, () => top.useReducedMotion);
   const memo = windowDimensions.useMemo(() => {
     const obj = { height: QuestDockUtils.getQuestDockExpandedHeightLimits(height, top, expandedHeight).maxHeight };
     return obj;
@@ -101,19 +103,19 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   const items2 = [gradientBaseColor];
   const memo1 = windowDimensions.useMemo(() => {
     closure_0 = _modDef672(gradientBaseColor);
-    return closure_13.map((item) => closure_0.alpha(item).hex());
+    return closure_14.map((item) => closure_0.alpha(item).hex());
   }, items2);
   const obj2 = gradientBaseColor(504);
-  const fn = function v() {
+  const fn = function b() {
     let num = 0;
     if (activeQuestDockMode.get() === QuestDockMode.COLLAPSED) {
-      num = -1 * React7;
+      num = -1 * closure_2_10;
     }
     const items = [{ translateX: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) }, ];
     const obj3 = { translateX: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
     let num3 = 0;
     if (activeQuestDockMode.get() === QuestDockMode.COLLAPSED) {
-      num3 = -1 * React7;
+      num3 = -1 * closure_2_10;
     }
     const obj4 = { transform: null, width: null };
     const tmpResult = spring;
@@ -122,12 +124,12 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     obj4.width = windowDimensions.get().width;
     return obj4;
   };
-  let obj3 = gradientBaseColor(4376);
-  fn.__closure = { withSpring: gradientBaseColor(5061).withSpring, activeQuestDockMode, QuestDockMode: top, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: isRendered, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, windowDimensions };
+  let obj3 = gradientBaseColor(4458);
+  fn.__closure = { withSpring: gradientBaseColor(5143).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: first1, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: isRendered, windowDimensions };
   fn.__workletHash = 1105448000732;
   fn.__initData = __initData2;
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  const tmp17 = activeQuestDockMode(windowDimensions.useState(tmp8 === top.EXPANDED), 2);
+  const tmp17 = activeQuestDockMode(windowDimensions.useState(tmp8 === QuestDockMode.EXPANDED), 2);
   const first = tmp17[0];
   let tmp19 = !first;
   if (!first) {
@@ -136,8 +138,8 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   if (tmp19) {
     tmp17[1](true);
   }
-  let obj4 = { withSpring: gradientBaseColor(5061).withSpring, activeQuestDockMode, QuestDockMode: top, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: isRendered, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED, windowDimensions };
-  const tmp13 = QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
+  let obj4 = { withSpring: gradientBaseColor(5143).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: first1, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: isRendered, windowDimensions };
+  const tmp13 = isRendered;
   [tmp22, c8] = activeQuestDockMode(windowDimensions.useState("active" !== setRestingQuestDockMode.currentState), 2);
   const items3 = [activeQuestDockMode, setRestingQuestDockMode];
   const effect = obj.useEffect(() => {
@@ -145,10 +147,10 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
       closure_1_8("active" !== event);
       let tmp3 = gradientBaseColor(dependencyMap[21]).isIOS() && tmp;
       if (tmp3) {
-        tmp3 = activeQuestDockMode.get() === top.EXPANDED;
+        tmp3 = activeQuestDockMode.get() === c8.EXPANDED;
       }
       if (tmp3) {
-        setRestingQuestDockMode(top.COLLAPSED);
+        setRestingQuestDockMode(c8.COLLAPSED);
       }
       const obj = gradientBaseColor(dependencyMap[21]);
     });
@@ -158,7 +160,7 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   }, items3);
   isRendered = !tmp22;
   if (!tmp22) {
-    isRendered = windowDimensions.useContext(expandedHeight(15294)).isRendered;
+    isRendered = windowDimensions.useContext(expandedHeight(15388)).isRendered;
   }
   if (isRendered) {
     isRendered = !stateFromStores;
@@ -171,8 +173,8 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     const tmp4Result = tmp4(1364);
   }
   if (isRendered) {
-    isRendered = tmp4(11918).isHeroVideoSupported(gradientBaseColor.videoMimetype);
-    const tmp4Result3 = tmp4(11918);
+    isRendered = tmp4(12009).isHeroVideoSupported(gradientBaseColor.videoMimetype);
+    const tmp4Result3 = tmp4(12009);
   }
   if (isRendered) {
     let tmp25 = !tmp2;
@@ -183,12 +185,12 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
   }
   const tmp16Result2 = activeQuestDockMode(windowDimensions.useState(false), 2);
   first1 = tmp16Result2[0];
-  closure_11 = tmp16Result2[1];
+  VerticalGradient = tmp16Result2[1];
   const callback = obj.useCallback(() => {
     closure_11(true);
   }, []);
   const tmp16Result = activeQuestDockMode(windowDimensions.useState("active" !== setRestingQuestDockMode.currentState), 2);
-  const fn2 = function $() {
+  function te() {
     let num = 1;
     if (isRendered) {
       num = 1;
@@ -201,19 +203,19 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
       }
     }
     return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
-  };
-  const tmp4Result4 = gradientBaseColor(4376);
-  fn2.__closure = { withSpring: gradientBaseColor(5061).withSpring, shouldShowVideo: isRendered, videoLoaded: first1, isMediaHiddenWhenCollapsed: collapsedMediaMode === windowDimensions.HIDDEN, activeQuestDockMode, QuestDockMode: top, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp13 };
-  fn2.__workletHash = 10281907446713;
-  fn2.__initData = __initData3;
+  }
+  const tmp4Result4 = gradientBaseColor(4458);
+  te.__closure = { withSpring: gradientBaseColor(5143).withSpring, shouldShowVideo: isRendered, videoLoaded: first1, isMediaHiddenWhenCollapsed: collapsedMediaMode === windowDimensions.HIDDEN, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp13 };
+  te.__workletHash = 10281907446713;
+  te.__initData = __initData3;
   let tmp31 = null;
-  const animatedStyle1 = tmp4Result4.useAnimatedStyle(fn2);
+  const animatedStyle1 = tmp4Result4.useAnimatedStyle(te);
   if (isRendered) {
     const obj6 = { style: tmp3.backgroundVideo, onLoad: callback, source: null, paused: null, resizeMode: "cover", muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false };
     const obj7 = { uri: videoUrl };
     obj6.source = obj7;
     obj6.paused = tmp8 !== tmp12.EXPANDED;
-    tmp31 = closure_11(tmp4(8456).VideoComponent, obj6);
+    tmp31 = closure_12(tmp4(8539).VideoComponent, obj6);
   }
   const items4 = [tmp31, ];
   let tmp33 = null;
@@ -226,27 +228,37 @@ export default noop.memo(function QuestDockVideoBackground(gradientBaseColor) {
     obj9.style = items6;
     const obj10 = { uri: imageUrl };
     obj9.source = obj10;
-    obj8.children = closure_11(tmp7(5675), obj9);
-    tmp33 = closure_11(tmp7(7187), obj8);
-    const tmp7Result = tmp7(7187);
+    obj8.children = closure_12(expandedHeight(5757), obj9);
+    tmp33 = closure_12(expandedHeight(7269), obj8);
+    const tmp7Result = expandedHeight(7269);
   }
   items4[1] = tmp33;
-  const tmp30Result = closure_12(windowDimensions.Fragment, { children: items4 });
+  const tmp30Result = closure_13(windowDimensions.Fragment, { children: items4 });
   const obj11 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const items7 = [tmp3.backgroundWrapper, memo, animatedStyle];
   obj11.style = items7;
-  let tmp38 = tmp30Result;
-  const obj5 = { withSpring: gradientBaseColor(5061).withSpring, shouldShowVideo: isRendered, videoLoaded: first1, isMediaHiddenWhenCollapsed: collapsedMediaMode === obj.HIDDEN, activeQuestDockMode, QuestDockMode: top, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp13 };
-  if (collapsedMediaMode === obj.HIDDEN) {
-    const obj12 = { style: memo, children: tmp30Result };
-    tmp38 = closure_11(QuestDockBackgroundMediaFade, obj12);
+  let tmp38 = null;
+  const obj5 = { withSpring: gradientBaseColor(5143).withSpring, shouldShowVideo: isRendered, videoLoaded: first1, isMediaHiddenWhenCollapsed: collapsedMediaMode === obj.HIDDEN, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: tmp13 };
+  if (null != backdropColor) {
+    const obj12 = { style: null };
+    const items8 = [tmp3.backdrop, memo, ];
+    const obj13 = { backgroundColor: backdropColor };
+    items8[2] = obj13;
+    obj12.style = items8;
+    tmp38 = closure_12(height, obj12);
   }
-  const items8 = [tmp38, ];
-  const obj13 = { locations, style: null, start: first1.START, end: first1.END, colors: memo1 };
-  const items9 = [tmp3.backgroundGradient, memo];
-  obj13.style = items9;
-  items8[1] = closure_11(expandedHeight(5074), obj13);
-  obj11.children = items8;
-  return closure_12(expandedHeight(7187), obj11);
+  const items9 = [tmp38, , ];
+  let tmp41 = tmp30Result;
+  if (collapsedMediaMode === obj.HIDDEN) {
+    const obj14 = { style: memo, children: tmp30Result };
+    tmp41 = closure_12(QuestDockBackgroundMediaFade, obj14);
+  }
+  items9[1] = tmp41;
+  const obj15 = { locations, style: null, start: VerticalGradient.START, end: VerticalGradient.END, colors: memo1 };
+  const items10 = [tmp3.backgroundGradient, memo];
+  obj15.style = items10;
+  items9[2] = closure_12(expandedHeight(5156), obj15);
+  obj11.children = items9;
+  return closure_13(expandedHeight(7269), obj11);
 });
 export { QuestDockBackgroundCollapsedMediaMode };

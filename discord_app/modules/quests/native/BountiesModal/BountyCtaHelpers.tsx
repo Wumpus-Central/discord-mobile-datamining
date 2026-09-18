@@ -1,6 +1,6 @@
-// === Module 15163: BountyCtaHelpers ===
+// === Module 15257: BountyCtaHelpers ===
 
-// Module 15163 (BountyCtaHelpers)
+// Module 15257 (BountyCtaHelpers)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

@@ -1,25 +1,25 @@
-// === Module 7735: UserProfileStore ===
+// === Module 7817: UserProfileStore ===
 
-// Module 7735 (UserProfileStore)
+// Module 7817 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
 import Timers from "Timers" /* 1953 */;
-import WidgetType from "WidgetType" /* 7736 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7737 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7743 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7744 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7747 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7748 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7749 */;
+import WidgetType from "WidgetType" /* 7818 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7819 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7825 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7826 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7829 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7830 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7831 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 1980 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
-import PresenceStore from "PresenceStore" /* 4680 */;
-import SortedGuildStore from "SortedGuildStore" /* 5526 */;
+import PresenceStore from "PresenceStore" /* 4762 */;
+import SortedGuildStore from "SortedGuildStore" /* 5608 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {

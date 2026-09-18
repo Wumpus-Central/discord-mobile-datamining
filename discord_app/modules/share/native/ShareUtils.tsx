@@ -1,8 +1,8 @@
-// === Module 14016: ShareUtils ===
+// === Module 14111: ShareUtils ===
 
-// Module 14016 (ShareUtils)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4338 */;
-import _modDef11407 from "module_11407" /* 11407 */;
+// Module 14111 (ShareUtils)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
+import _modDef11505 from "module_11505" /* 11505 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -56,8 +56,8 @@ let closure_6 = async function _sendShareMessage(arg0) {
         } else {
           id = closure_130_1.id;
           closure_130_4 = closure_130_0.map((uri) => {
-            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(5215).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height };
-            const cloudUpload = new closure_0(5214).CloudUpload(size, closure_1_1.id);
+            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(5297).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height, preTranscodeSourceSize: uri.originalSize };
+            const cloudUpload = new closure_0(5296).CloudUpload(size, guildId.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -67,21 +67,23 @@ let closure_6 = async function _sendShareMessage(arg0) {
           closure_130_5 = closure_131_1(closure_131_2[9]).parse(closure_130_1, c1);
           if (closure_130_4.length > 0) {
             closure_131_1(closure_131_2[5]).clearAll(id, closure_131_4.ChannelMessage);
-            const obj3 = closure_131_1(closure_131_2[5]);
+            let obj3 = closure_131_1(closure_131_2[5]);
           }
           const future = new closure_131_0(closure_131_2[10]).Future();
           closure_130_6 = future;
-          const obj4 = closure_131_1(closure_131_2[11]);
+          let obj4 = closure_131_1(closure_131_2[11]);
           const obj7 = {
             location: closure_131_5.SHARE_MODAL,
             doNotNotifyOnError: true,
             attachmentsToUpload: closure_130_4,
-            onAttachmentUploadError() {
-                      closure_1_6.reject(undefined);
-                      c1(9461).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-                      const obj = c1(9461);
-                      const obj2 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-                      c1(7897).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+            onAttachmentUploadError(file, code, reason) {
+                      const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
+                      closure_1_6.reject(obj);
+                      const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
+                      guildId(9545).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+                      const obj3 = guildId(9545);
+                      const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
+                      guildId(7979).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
                     }
           };
           c4 = 2;
@@ -108,14 +110,14 @@ let closure_6 = async function _sendShareMessage(arg0) {
     }
   }
 };
-const DraftType = fn(4981).DraftType;
-const MessageSendLocation = fn(4633).MessageSendLocation;
+const DraftType = fn(5063).DraftType;
+const MessageSendLocation = fn(4715).MessageSendLocation;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11407 });
+  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11505 });
 };
 export const sendShareMessage = function sendShareMessage() {
   const self = this;

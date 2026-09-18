@@ -1,13 +1,13 @@
-// === Module 4571: MobileThemesUtils ===
+// === Module 4653: MobileThemesUtils ===
 
-// Module 4571 (MobileThemesUtils)
+// Module 4653 (MobileThemesUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1230 */;
-import _modDef2627 from "module_2627" /* 2627 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4573 */;
+import _modDef2710 from "module_2710" /* 2710 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4655 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
-import SavedCustomThemeStore from "SavedCustomThemeStore" /* 4572 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 4654 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1227 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2627.yl1iMm);
+  return intl.string(_modDef2710.yl1iMm);
 }
 const ClientThemesConstants = fn(1229);
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: metroRequire, REFRESH_STANDARD_BACKGROUND_THEMES: closure_7 } = ClientThemesConstants);

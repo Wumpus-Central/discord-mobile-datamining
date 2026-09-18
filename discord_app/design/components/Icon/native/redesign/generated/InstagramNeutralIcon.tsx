@@ -1,9 +1,9 @@
-// === Module 8238: InstagramNeutralIcon ===
+// === Module 8320: InstagramNeutralIcon ===
 
-// Module 8238 (InstagramNeutralIcon)
+// Module 8320 (InstagramNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8239 from "module_8239" /* 8239 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod8321 from "module_8321" /* 8321 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const InstagramNeutralIcon = function InstagramNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8239, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8321, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

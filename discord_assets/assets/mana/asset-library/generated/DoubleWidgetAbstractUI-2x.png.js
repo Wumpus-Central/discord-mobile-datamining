@@ -1,6 +1,6 @@
-// === Module 6044: ? ===
+// === Module 6126: ? ===
 
-// Module 6044
+// Module 6126
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DoubleWidgetAbstractUI-2x.png.js");

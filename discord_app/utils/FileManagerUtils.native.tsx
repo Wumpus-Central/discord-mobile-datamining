@@ -1,6 +1,6 @@
-// === Module 8353: FileManagerUtils ===
+// === Module 8435: FileManagerUtils ===
 
-// Module 8353 (FileManagerUtils)
+// Module 8435 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1151 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -120,8 +120,8 @@ let closure_4 = new LoggerDefault("FileManagerUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/FileManagerUtils.native.tsx");
 
-export const writeFile = function writeFile(cache, filePathForGif, arg2, utf8) {
-  return NativeFileModuleDefault.writeFile(cache, filePathForGif, arg2, utf8).then((result) => {
+export const writeFile = function writeFile(cache, combined, arg2, utf8) {
+  return NativeFileModuleDefault.writeFile(cache, combined, arg2, utf8).then((result) => {
     let combined = result;
     if (obj.isAndroid()) {
       const _HermesInternal = HermesInternal;

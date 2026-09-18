@@ -1,20 +1,20 @@
-// === Module 5594: ActiveJoinedThreadsStore ===
+// === Module 5676: ActiveJoinedThreadsStore ===
 
-// Module 5594 (ActiveJoinedThreadsStore)
+// Module 5676 (ActiveJoinedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelConstants from "ChannelConstants" /* 1965 */;
-import AgeGateUtils from "AgeGateUtils" /* 4851 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5596 */;
+import AgeGateUtils from "AgeGateUtils" /* 4933 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5678 */;
 import ChannelRecord from "ChannelRecord" /* 1962 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5595 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4280 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5677 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4363 */;
 import size from "module_2" /* 2 */;
 
 function rebuild() {

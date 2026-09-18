@@ -1,6 +1,6 @@
-// === Module 6680: ? ===
+// === Module 6762: ? ===
 
-// Module 6680
+// Module 6762
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WaypostSpotIllustration-2x.png.js");

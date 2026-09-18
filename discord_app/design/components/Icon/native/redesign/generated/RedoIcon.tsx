@@ -1,9 +1,9 @@
-// === Module 15219: RedoIcon ===
+// === Module 15313: RedoIcon ===
 
-// Module 15219 (RedoIcon)
+// Module 15313 (RedoIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15220 from "module_15220" /* 15220 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod15314 from "module_15314" /* 15314 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const RedoIcon = function RedoIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15220, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15314, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

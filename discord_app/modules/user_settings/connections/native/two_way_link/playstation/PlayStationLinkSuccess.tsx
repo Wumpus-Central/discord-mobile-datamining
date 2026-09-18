@@ -1,12 +1,12 @@
-// === Module 9417: PlayStationLinkSuccess ===
+// === Module 9501: PlayStationLinkSuccess ===
 
-// Module 9417 (PlayStationLinkSuccess)
+// Module 9501 (PlayStationLinkSuccess)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7237 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9380 */;
-import _modDef9418 from "module_9418" /* 9418 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7319 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9464 */;
+import _modDef9502 from "module_9502" /* 9502 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
@@ -24,7 +24,7 @@ export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9418 }), []), style: tmp.image }), , ];
+  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9502 }), []), style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.e6SOl0);

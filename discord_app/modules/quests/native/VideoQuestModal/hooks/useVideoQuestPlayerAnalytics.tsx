@@ -1,16 +1,16 @@
-// === Module 15246: useVideoQuestPlayerAnalytics ===
+// === Module 15340: useVideoQuestPlayerAnalytics ===
 
-// Module 15246 (useVideoQuestPlayerAnalytics)
-import QuestTypes from "QuestTypes" /* 5535 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7716 */;
-import MetricEvents from "MetricEvents" /* 7721 */;
-import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7820 */;
-import AnalyticsActions from "AnalyticsActions" /* 7832 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11666 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15138 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 15145 */;
+// Module 15340 (useVideoQuestPlayerAnalytics)
+import QuestTypes from "QuestTypes" /* 5617 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7798 */;
+import MetricEvents from "MetricEvents" /* 7803 */;
+import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7902 */;
+import AnalyticsActions from "AnalyticsActions" /* 7914 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11758 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15232 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 15239 */;
 import noop from "module_19" /* 19 */;
-import NetworkStore from "NetworkStore" /* 4689 */;
+import NetworkStore from "NetworkStore" /* 4771 */;
 
 require = fn;
 const AppState = fn(17).AppState;

@@ -1,9 +1,9 @@
-// === Module 11191: GiftIcon ===
+// === Module 11284: GiftIcon ===
 
-// Module 11191 (GiftIcon)
+// Module 11284 (GiftIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod8220 from "module_8220" /* 8220 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod8302 from "module_8302" /* 8302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const GiftIcon = function GiftIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8220, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8302, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

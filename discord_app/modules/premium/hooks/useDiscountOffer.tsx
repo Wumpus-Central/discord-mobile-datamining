@@ -1,10 +1,10 @@
-// === Module 8198: useDiscountOffer ===
+// === Module 8281: useDiscountOffer ===
 
-// Module 8198 (useDiscountOffer)
+// Module 8281 (useDiscountOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserOfferStore from "UserOfferStore" /* 7564 */;
+import UserOfferStore from "UserOfferStore" /* 7646 */;
 
 const require = globalThis.__r;
 

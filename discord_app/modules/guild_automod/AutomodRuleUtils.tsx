@@ -1,48 +1,65 @@
-// === Module 17790: AutomodRuleUtils ===
+// === Module 17852: AutomodRuleUtils ===
 
-// Module 17790 (AutomodRuleUtils)
+// Module 17852 (AutomodRuleUtils)
 import util from "util" /* 1115 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7635 */;
-import AutomodErrorUtils from "AutomodErrorUtils" /* 8075 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17793 */;
-import AutomodActionUtils from "AutomodActionUtils" /* 17794 */;
+import GlobalUtils from "GlobalUtils" /* 1370 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7717 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 8158 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17853 */;
+import AutomodActionUtils from "AutomodActionUtils" /* 17854 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const getRuleCountByTriggerType = fn(17791).getRuleCountByTriggerType;
-const Constants = fn(12014);
+const getRuleCountByTriggerType = fn(17849).getRuleCountByTriggerType;
+const Constants = fn(12106);
 ({ AutomodTriggerType: closure_4, MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: metroRequire, MAX_CHARACTERS_PER_KEYWORD: closure_7, MIN_CHARACTERS_PER_KEYWORD: closure_8, MIN_REGEX_PATTERN_LENGTH: closure_9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: closure_11, AutomodEventType: closure_12 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
 
+export const getRulesFromTriggerTypeMap = function getRulesFromTriggerTypeMap(rulesByTriggerType) {
+  let obj = rulesByTriggerType;
+  if (rulesByTriggerType == null) {
+    obj = {};
+  }
+  const values = Object.values(obj);
+  return values.flat().filter(GlobalUtils.isNotNullish);
+};
+export const isRegexSupported = function isRegexSupported(arg0) {
+  if (constants.KEYWORD !== arg0) {
+    if (constants.USER_PROFILE !== arg0) {
+      return false;
+    }
+  }
+  return true;
+};
 export const getNewAutomodRuleMockId = function getNewAutomodRuleMockId(arg0, arg1) {
   return "" + arg0 + "-" + arg1 + "-new-rule";
 };
-export const isRuleKeywordFilter = function isRuleKeywordFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleKeywordFilter = function isRuleKeywordFilter(length) {
+  let triggerType;
+  if (length != null) {
+    triggerType = length.triggerType;
   }
   return triggerType === constants.KEYWORD;
 };
-export const isRuleMLSpamFilter = function isRuleMLSpamFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleMLSpamFilter = function isRuleMLSpamFilter(rule) {
+  let triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.ML_SPAM;
 };
-export const isRuleDefaultKeywordListFilter = function isRuleDefaultKeywordListFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleDefaultKeywordListFilter = function isRuleDefaultKeywordListFilter(rule) {
+  let triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.DEFAULT_KEYWORD_LIST;
 };
-export const isRuleMentionSpamFilter = function isRuleMentionSpamFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleMentionSpamFilter = function isRuleMentionSpamFilter(rule) {
+  let triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.MENTION_SPAM;
 };
@@ -53,17 +70,17 @@ export const isRuleServerPolicyFilter = function isRuleServerPolicyFilter(trigge
   }
   return triggerType === constants.SERVER_POLICY;
 };
-export const isRuleUserProfileFilter = function isRuleUserProfileFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleUserProfileFilter = function isRuleUserProfileFilter(rule) {
+  let triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.USER_PROFILE;
 };
-export const isRuleApplicationFilter = function isRuleApplicationFilter(triggerType) {
-  triggerType = undefined;
-  if (triggerType != null) {
-    triggerType = triggerType.triggerType;
+export const isRuleApplicationFilter = function isRuleApplicationFilter(editingRule) {
+  let triggerType;
+  if (editingRule != null) {
+    triggerType = editingRule.triggerType;
   }
   return triggerType === constants.APPLICATION;
 };
@@ -203,10 +220,10 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     throw error4;
   }
 };
-export const isBackendPersistedRule = function isBackendPersistedRule(id) {
+export const isBackendPersistedRule = function isBackendPersistedRule(editingRule) {
   let str;
-  if (id != null) {
-    str = id.id;
+  if (editingRule != null) {
+    str = editingRule.id;
   }
   if (str == null) {
     str = "INVALID_SNOWFLAKE";

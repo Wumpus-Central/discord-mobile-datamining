@@ -1,16 +1,17 @@
-// === Module 16026: SafetyGuildSettingMessageRequests ===
+// === Module 16122: SafetyGuildSettingMessageRequests ===
 
-// Module 16026 (SafetyGuildSettingMessageRequests)
+// Module 16122 (SafetyGuildSettingMessageRequests)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 1936 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
-import common_AlertDefault from "common/Alert" /* 5081 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7109 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8560 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8562 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14948 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16024 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16027 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
+import common_AlertDefault from "common/Alert" /* 5163 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7191 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8643 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8645 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15042 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16115 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16123 */;
+import useShouldDisableMessageRequestSettings from "useShouldDisableMessageRequestSettings" /* 16124 */;
 import GuildStore from "GuildStore" /* 1980 */;
 
 require = fn;
@@ -43,10 +44,10 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   AlertActionCreatorsDefault.show(obj2);
 }
-const UserSettingsSafetySelectedGuildStore = fn(16017);
+const UserSettingsSafetySelectedGuildStore = fn(16112);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11623).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11622);
+let closure_6 = fn(11715).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11714);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -56,7 +57,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.o5fjz6);
   },
-  parent: fn(8111).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8194).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();
@@ -64,26 +65,34 @@ const toggle = SettingBuilders.createToggle({
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
     const setting = RestrictedGuildIds.useSetting();
     let hasItem = setting.includes(selectedGuildId2);
-    const tmp6 = selectedGuildId2 !== closure_6 || !useParentalControlSettings.useIsParentallyControlled();
-    let tmp7 = !tmp6;
-    if (tmp6) {
-      if (selectedGuildId2 === closure_6) {
-        hasItem = defaultGuildsRestricted;
+    const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
+    let shouldDisableMessageRequestSettings = useShouldDisableMessageRequestSettings.useShouldDisableMessageRequestSettings();
+    if (!shouldDisableMessageRequestSettings) {
+      let tmp8 = selectedGuildId2 !== closure_6;
+      if (!tmp8) {
+        tmp8 = !isParentallyControlled;
       }
-      tmp7 = hasItem;
+      let tmp9 = !tmp8;
+      if (tmp8) {
+        if (selectedGuildId2 === closure_6) {
+          hasItem = defaultGuildsRestricted;
+        }
+        tmp9 = hasItem;
+      }
+      shouldDisableMessageRequestSettings = tmp9;
     }
     const MessageRequestRestrictedDefault = UserSettings.MessageRequestRestrictedDefault;
     const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
     const setting1 = MessageRequestRestrictedGuildIds.useSetting();
-    let tmp9 = !setting1.includes(selectedGuildId);
-    let tmp10 = !tmp7;
-    if (!tmp7) {
+    let tmp11 = !setting1.includes(selectedGuildId);
+    let tmp12 = !shouldDisableMessageRequestSettings;
+    if (!shouldDisableMessageRequestSettings) {
       if (selectedGuildId === closure_6) {
-        tmp9 = tmp8;
+        tmp11 = tmp10;
       }
-      tmp10 = tmp9;
+      tmp12 = tmp11;
     }
-    return tmp10;
+    return tmp12;
   },
   useIsDisabled() {
     const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();
@@ -91,18 +100,23 @@ const toggle = SettingBuilders.createToggle({
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
     const setting = RestrictedGuildIds.useSetting();
     let hasItem = setting.includes(selectedGuildId);
-    let tmp4 = selectedGuildId !== closure_6;
-    if (!tmp4) {
-      tmp4 = !obj3.useIsParentallyControlled();
-    }
-    let tmp5 = !tmp4;
-    if (tmp4) {
-      if (selectedGuildId === closure_6) {
-        hasItem = defaultGuildsRestricted;
+    const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
+    let shouldDisableMessageRequestSettings = useShouldDisableMessageRequestSettings.useShouldDisableMessageRequestSettings();
+    if (!shouldDisableMessageRequestSettings) {
+      let tmp6 = selectedGuildId !== closure_6;
+      if (!tmp6) {
+        tmp6 = !isParentallyControlled;
       }
-      tmp5 = hasItem;
+      let tmp7 = !tmp6;
+      if (tmp6) {
+        if (selectedGuildId === closure_6) {
+          hasItem = defaultGuildsRestricted;
+        }
+        tmp7 = hasItem;
+      }
+      shouldDisableMessageRequestSettings = tmp7;
     }
-    return tmp5;
+    return shouldDisableMessageRequestSettings;
   },
   onValueChange: function onAllowMessageRequestsFromServerMembersValueChange(arg0) {
     if (!arg0) {

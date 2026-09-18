@@ -1,16 +1,16 @@
-// === Module 5700: TableRowArrow ===
+// === Module 5782: TableRowArrow ===
 
-// Module 5700 (TableRowArrow)
+// Module 5782 (TableRowArrow)
 import nativeDefault from "native" /* 576 */;
-import Icon from "Icon" /* 5064 */;
-import _modDef5701 from "module_5701" /* 5701 */;
+import Icon from "Icon" /* 5146 */;
+import _modDef5783 from "module_5783" /* 5783 */;
 import noop from "module_19" /* 19 */;
 
 const IconDefault = Icon;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 const obj2 = { icon: null, iconColor: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ARROW_WIDTH, height: 24, marginStart: nativeDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_START, marginEnd: nativeDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_END };
 obj2.icon = size;
@@ -21,6 +21,6 @@ const result = size.fileFinishedImporting("design/components/TableRow/native/Tab
 
 export const TableRowArrow = function TableRowArrow() {
   const tmp = closure_4();
-  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5701, size: Icon.IconSizes.CUSTOM };
-  return jsx(IconDefault, { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5701, size: Icon.IconSizes.CUSTOM });
+  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5783, size: Icon.IconSizes.CUSTOM };
+  return jsx(IconDefault, { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5783, size: Icon.IconSizes.CUSTOM });
 };

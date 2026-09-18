@@ -1,10 +1,10 @@
-// === Module 14012: FormStyles ===
+// === Module 14106: FormStyles ===
 
-// Module 14012 (FormStyles)
+// Module 14106 (FormStyles)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
-import createStyles from "createStyles" /* 4640 */;
-import TextStyles_mod from "TextStyles" /* 5612 */;
+import createStyles from "createStyles" /* 4722 */;
+import TextStyles_mod from "TextStyles" /* 5694 */;
 import size from "module_2" /* 2 */;
 
 const Fonts = Constants.Fonts;

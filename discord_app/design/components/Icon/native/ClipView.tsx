@@ -1,10 +1,10 @@
-// === Module 8970: ClipView ===
+// === Module 9054: ClipView ===
 
-// Module 8970 (ClipView)
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8971 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8973 */;
+// Module 9054 (ClipView)
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9055 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 9057 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4376 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
 
 require = fn;
 function SolidCutout(arg0) {

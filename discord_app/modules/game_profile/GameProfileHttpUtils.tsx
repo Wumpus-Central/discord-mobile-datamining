@@ -1,17 +1,18 @@
-// === Module 8916: GameProfileHttpUtils ===
+// === Module 9000: GameProfileHttpUtils ===
 
-// Module 8916 (GameProfileHttpUtils)
+// Module 9000 (GameProfileHttpUtils)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import StoreUtils from "StoreUtils" /* 4882 */;
+import StoreUtils from "StoreUtils" /* 4964 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7758 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
-import GameProfileStore from "GameProfileStore" /* 8829 */;
+import GameProfileStore from "GameProfileStore" /* 8913 */;
 
 require = fn;
-let closure_8 = async function _getShopCollection() {
+let closure_9 = async function _getShopCollection() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -19,27 +20,30 @@ let closure_8 = async function _getShopCollection() {
     closure_2 = tmp3;
     closure_129_0 = collectionId;
     DispatcherDefault.dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_START", collectionId });
-    const request = { url: Endpoints.STOREFRONT_COLLECTION_WITH_PRODUCTS(collectionId), query: { locale: locale.locale }, rejectWithError: false, retries: 2 };
+    const request = { url: Endpoints.STOREFRONT_COLLECTION_WITH_PRODUCTS(collectionId), query: { locale: locale.locale, include_pricing: true, with_bundled_skus: true }, rejectWithError: false, retries: 2 };
     await StoreUtils.httpGetWithCountryCodeQuery(request);
     if (1 === tmp7) {
       c4 = 0;
-      closure_130_1(closure_130_2[5]).dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_ERROR", collectionId: closure_129_0 });
+      closure_130_1(closure_130_2[6]).dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_ERROR", collectionId: closure_129_0 });
       c6 = 3;
-      closure_130_1(closure_130_2[5]);
+      closure_130_1(closure_130_2[6]);
     } else if (arg0 === 1) {
       c6 = 3;
       throw value;
     } else if (arg0 !== 2) {
       const products = value.body.products;
-      closure_129_1 = products.flatMap((sku_ids) => sku_ids.sku_ids);
-      closure_130_1(closure_130_2[5]).dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS", collectionId: closure_129_0, skuIds: closure_129_1 });
+      closure_129_1 = products.map(closure_130_4.fromServer);
+      closure_129_2 = closure_129_1.flatMap((skuIds) => skuIds.skuIds);
+      closure_130_1(closure_130_2[6]).dispatch({ type: "STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS", skuIds: closure_129_2, products: closure_129_1 });
+      closure_130_1(closure_130_2[6]);
+      closure_130_1(closure_130_2[6]).dispatch({ type: "GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS", collectionId: closure_129_0, skuIds: closure_129_2 });
       c4 = 0;
-      closure_130_1(closure_130_2[5]);
+      closure_130_1(closure_130_2[6]);
     }
     return value;
   })();
 };
-let closure_9 = async function _fetchSimilarGames(arg0) {
+let closure_10 = async function _fetchSimilarGames(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -96,7 +100,7 @@ let closure_9 = async function _fetchSimilarGames(arg0) {
           return tmp;
         });
         const obj7 = { type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: closure_130_0, games: closure_130_1 };
-        closure_131_1(closure_131_2[5]).dispatch(obj7);
+        closure_131_1(closure_131_2[6]).dispatch(obj7);
         c5 = 3;
         return { value: "HermesInternal", done: null };
       }
@@ -106,7 +110,7 @@ let closure_9 = async function _fetchSimilarGames(arg0) {
     }
   }
 };
-let closure_10 = async function _getGameAnnouncements() {
+let closure_11 = async function _getGameAnnouncements() {
   closure_1 = arg1;
   c8 = 0;
   c9 = 0;
@@ -128,16 +132,16 @@ let closure_10 = async function _getGameAnnouncements() {
     await HTTP.get(request);
     if (1 === tmp8) {
       c7 = 0;
-      closure_133_1(closure_133_2[5]).dispatch({ type: "GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR", gameId: closure_132_0 });
+      closure_133_1(closure_133_2[6]).dispatch({ type: "GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR", gameId: closure_132_0 });
       c9 = 3;
-      closure_133_1(closure_133_2[5]);
+      closure_133_1(closure_133_2[6]);
     } else if (arg0 === 1) {
       c9 = 3;
       throw value;
     } else if (arg0 !== 2) {
       const body = value.body;
       const obj10 = { type: "GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS", gameId: closure_132_0, messages: null, channelId: null, guildId: null };
-      obj10.messages = closure_133_0(closure_133_2[11]).toAnnouncementMessages(body.messages);
+      obj10.messages = closure_133_0(closure_133_2[12]).toAnnouncementMessages(body.messages);
       const channel_id = body.channel_id;
       channelId = channel_id;
       if (channel_id == null) {
@@ -150,16 +154,16 @@ let closure_10 = async function _getGameAnnouncements() {
         guildId = undefined;
       }
       obj10.guildId = guildId;
-      closure_133_1(closure_133_2[5]).dispatch(obj10);
+      closure_133_1(closure_133_2[6]).dispatch(obj10);
       c7 = 0;
-      closure_133_0(closure_133_2[11]);
-      closure_133_1(closure_133_2[5]);
+      closure_133_0(closure_133_2[12]);
+      closure_133_1(closure_133_2[6]);
     }
     return value;
   })();
 };
 const Endpoints = fn(1074).Endpoints;
-let closure_7 = fn(8917).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_8 = fn(9001).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameProfileStore, {
   getQueryId(arg0, arg1) {
@@ -180,7 +184,7 @@ const fetchStore = initialize.createFetchStore(GameProfileStore, {
   load(arg0) {
     return (function fetchSimilarGames() {
       const self = this;
-      const apply = closure_1_9.apply;
+      const apply = closure_1_10.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -202,7 +206,7 @@ let result = size.fileFinishedImporting("modules/game_profile/GameProfileHttpUti
 
 export const getShopCollection = function getShopCollection() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -213,7 +217,7 @@ export const getShopCollection = function getShopCollection() {
 export const useSimilarGameIds = fetchStore;
 export const getGameAnnouncements = function getGameAnnouncements() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,7 +1,7 @@
-// === Module 6720: ErrorText ===
+// === Module 6802: ErrorText ===
 
-// Module 6720 (ErrorText)
-import shared from "shared" /* 4491 */;
+// Module 6802 (ErrorText)
+import shared from "shared" /* 4573 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("design/components/ErrorText/native/Er
 export const ErrorText = function ErrorText(children) {
   children = children.children;
   let nodeText;
-  nodeText = nodeText(4343).getNodeText(children);
+  nodeText = nodeText(4425).getNodeText(children);
   const items = [nodeText];
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -26,7 +26,7 @@ export const ErrorText = function ErrorText(children) {
     }
   }, items);
   const obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
-  const items1 = [closure_3(nodeText(6721).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(4636).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
+  const items1 = [closure_3(nodeText(6803).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(4718).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
   obj2.children = items1;
-  return closure_4(nodeText(5060).Stack, obj2);
+  return closure_4(nodeText(5142).Stack, obj2);
 };

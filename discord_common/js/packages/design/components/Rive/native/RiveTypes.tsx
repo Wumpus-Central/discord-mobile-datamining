@@ -1,7 +1,7 @@
-// === Module 4423: RiveTypes ===
+// === Module 4505: RiveTypes ===
 
-// Module 4423 (RiveTypes)
-import DataBindByName from "DataBindByName" /* 4371 */;
+// Module 4505 (RiveTypes)
+import DataBindByName from "DataBindByName" /* 4453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { fill: DataBindByName.Fit.Fill, contain: DataBindByName.Fit.Contain, cover: DataBindByName.Fit.Cover, "fit-width": DataBindByName.Fit.FitWidth, "fit-height": DataBindByName.Fit.FitHeight, none: DataBindByName.Fit.None, "scale-down": DataBindByName.Fit.ScaleDown, layout: DataBindByName.Fit.Layout };

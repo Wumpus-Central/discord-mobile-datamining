@@ -1,6 +1,6 @@
-// === Module 7578: MonotonicClock ===
+// === Module 7660: MonotonicClock ===
 
-// Module 7578 (MonotonicClock)
+// Module 7660 (MonotonicClock)
 import clock from "clock" /* 1353 */;
 import size from "module_2" /* 2 */;
 

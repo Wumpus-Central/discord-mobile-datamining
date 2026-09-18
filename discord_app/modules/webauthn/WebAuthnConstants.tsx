@@ -1,6 +1,6 @@
-// === Module 14779: WebAuthnConstants ===
+// === Module 14873: WebAuthnConstants ===
 
-// Module 14779 (WebAuthnConstants)
+// Module 14873 (WebAuthnConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/webauthn/WebAuthnConstants.tsx");

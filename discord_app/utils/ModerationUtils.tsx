@@ -1,11 +1,11 @@
-// === Module 14961: ModerationUtils ===
+// === Module 15055: ModerationUtils ===
 
-// Module 14961 (ModerationUtils)
+// Module 15055 (ModerationUtils)
 import shims from "shims" /* 575 */;
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import DMSafetyConstants from "DMSafetyConstants" /* 1938 */;
-import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 14962 */;
+import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 15056 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

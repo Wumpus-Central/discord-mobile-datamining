@@ -1,9 +1,9 @@
-// === Module 16989: usePostableChannelCount ===
+// === Module 17129: usePostableChannelCount ===
 
-// Module 16989 (usePostableChannelCount)
+// Module 17129 (usePostableChannelCount)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
 
 const require = globalThis.__r;
 

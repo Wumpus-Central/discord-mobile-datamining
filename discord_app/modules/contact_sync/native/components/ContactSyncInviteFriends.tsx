@@ -1,13 +1,13 @@
-// === Module 12851: ContactSyncInviteFriends ===
+// === Module 12942: ContactSyncInviteFriends ===
 
-// Module 12851 (ContactSyncInviteFriends)
+// Module 12942 (ContactSyncInviteFriends)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UserUtilsDefault from "UserUtils" /* 4484 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import showShareActionSheet from "showShareActionSheet" /* 8510 */;
-import _modDef12852 from "module_12852" /* 12852 */;
+import UserUtilsDefault from "UserUtils" /* 4566 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import showShareActionSheet from "showShareActionSheet" /* 8593 */;
+import _modDef12943 from "module_12943" /* 12943 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -19,7 +19,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, art: { marginBottom: 16 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center" }, button: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -33,7 +33,7 @@ export default function ContactSyncInviteFriends() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.art, source: null };
   let obj = require("initialize");
-  obj4.source = _modDef12852;
+  obj4.source = _modDef12943;
   const items1 = [closure_7(FastImageDefault, obj4), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = require("util").intl;

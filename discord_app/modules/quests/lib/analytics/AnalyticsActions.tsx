@@ -1,23 +1,23 @@
-// === Module 7832: AnalyticsActions ===
+// === Module 7914: AnalyticsActions ===
 
-// Module 7832 (AnalyticsActions)
+// Module 7914 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4820 */;
-import QuestTypes from "QuestTypes" /* 5535 */;
-import AdCreativeType from "AdCreativeType" /* 5539 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7575 */;
-import QuestDataUtils from "QuestDataUtils" /* 7813 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7835 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7836 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7838 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7842 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7843 */;
-import captureAdUserAction from "captureAdUserAction" /* 7844 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7854 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4902 */;
+import QuestTypes from "QuestTypes" /* 5617 */;
+import AdCreativeType from "AdCreativeType" /* 5621 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7657 */;
+import QuestDataUtils from "QuestDataUtils" /* 7895 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7917 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7918 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7920 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7924 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7925 */;
+import captureAdUserAction from "captureAdUserAction" /* 7926 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7833 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7915 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
-import QuestStore from "QuestStore" /* 7817 */;
+import QuestStore from "QuestStore" /* 7899 */;
 
 require = fn;
 function trackQuestEvent(sourceQuestContent) {
@@ -354,8 +354,8 @@ let closure_17 = async function _trackAdContentClicked() {
   return "PX_16";
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const items = [, ];
-({ QUEST_CONTENT_VIEWED: arr[0], QUEST_CONTENT_CLICKED: arr[1] } = AnalyticEvents);
+const items = [, , ];
+({ QUEST_CONTENT_VIEWED: arr[0], QUEST_CONTENT_ENGAGED_VIEWED: arr[1], QUEST_CONTENT_CLICKED: arr[2] } = AnalyticEvents);
 let set = new Set(items);
 const AppStoreOverlaySurfaces = { MAIN_CTA: "main_cta", RATING_STAT: "rating_stat" };
 const size = fn(2);

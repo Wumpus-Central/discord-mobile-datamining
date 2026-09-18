@@ -1,20 +1,20 @@
-// === Module 18126: AVErrorAnalytics ===
+// === Module 18220: AVErrorAnalytics ===
 
-// Module 18126 (AVErrorAnalytics)
+// Module 18220 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4634 */;
-import VideoQualityStats from "VideoQualityStats" /* 7861 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9760 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4716 */;
+import VideoQualityStats from "VideoQualityStats" /* 7943 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9854 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4678 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4686 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4760 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4768 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4663 */;
-import RTCRegionStore from "RTCRegionStore" /* 4690 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
+import RTCRegionStore from "RTCRegionStore" /* 4772 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4679 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4761 */;
 
 const require = globalThis.__r;
 
@@ -72,9 +72,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   }
   return null;
 }
-const getSystemAnalyticsInfo = fn(4685).getSystemAnalyticsInfo;
+const getSystemAnalyticsInfo = fn(4767).getSystemAnalyticsInfo;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(4665);
+const Constants = fn(4747);
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");

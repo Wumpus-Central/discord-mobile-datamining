@@ -1,6 +1,6 @@
-// === Module 16843: VibegrationsTraceUtils ===
+// === Module 16990: VibegrationsTraceUtils ===
 
-// Module 16843 (VibegrationsTraceUtils)
+// Module 16990 (VibegrationsTraceUtils)
 import size from "module_2" /* 2 */;
 
 function traceCategory(entry) {
@@ -192,8 +192,8 @@ export const findTraceEntry = function findTraceEntry(stateFromStoresArray, entr
   }
   return tmp;
 };
-export const traceExportPayload = function traceExportPayload(project_id, entries, exported_at) {
-  return JSON.stringify({ kind: "vibegrations.trace", version: 1, project_id, exported_at, note: "Redacted developer trace. Tool arguments, results and prompts are reported as sizes and allowlisted technical values only; token counts marked \"estimated\" are a chars/4 heuristic measured before sending.", entries }, null, 2);
+export const traceExportPayload = function traceExportPayload(projectId, stateFromStoresArray, date) {
+  return JSON.stringify({ kind: "vibegrations.trace", version: 1, project_id: projectId, exported_at: date, note: "Redacted developer trace. Tool arguments, results and prompts are reported as sizes and allowlisted technical values only; token counts marked \"estimated\" are a chars/4 heuristic measured before sending.", entries: stateFromStoresArray }, null, 2);
 };
 export const isToolEntry = function isToolEntry(kind) {
   return "tool" === kind.kind;

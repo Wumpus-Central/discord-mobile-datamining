@@ -1,7 +1,7 @@
-// === Module 8393: UserProfileBanner ===
+// === Module 8476: UserProfileBanner ===
 
-// Module 8393 (UserProfileBanner)
-import BannerDefault from "Banner" /* 8401 */;
+// Module 8476 (UserProfileBanner)
+import BannerDefault from "Banner" /* 8484 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const BANNER_HEIGHT = fn(1074).BANNER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let closure_9 = createStyles.createStyles({ bannerContainer: { position: "relative" }, gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileBanner.tsx");

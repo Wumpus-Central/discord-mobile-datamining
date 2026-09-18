@@ -1,8 +1,8 @@
-// === Module 17478: ? ===
+// === Module 17607: ? ===
 
-// Module 17478
-import i18n from "i18n" /* 17479 */;
-import updateRulesDefault from "updateRules" /* 17527 */;
+// Module 17607
+import i18n from "i18n" /* 2029 */;
+import updateRulesDefault from "updateRules" /* 17608 */;
 import size from "module_2" /* 2 */;
 
 const updateRules = i18n.setUpdateRules(updateRulesDefault);

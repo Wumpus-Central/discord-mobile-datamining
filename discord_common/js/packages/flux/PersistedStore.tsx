@@ -9,7 +9,7 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 require = fn;
 let closure_3 = ["_state", "_version"];
 const Store = fn(506).Store;
-let closure_6 = { _state: "Array", _version: "PX_16" };
+let closure_6 = { _state: "PX_16", _version: "accessible" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {

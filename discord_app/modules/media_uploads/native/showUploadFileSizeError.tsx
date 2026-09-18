@@ -1,28 +1,28 @@
-// === Module 9464: showUploadFileSizeError ===
+// === Module 9548: showUploadFileSizeError ===
 
-// Module 9464 (showUploadFileSizeError)
+// Module 9548 (showUploadFileSizeError)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import util from "util" /* 1115 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
-import FileSizeUtils from "FileSizeUtils" /* 4536 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4820 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
-import UploadUtils from "UploadUtils" /* 5216 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5217 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5225 */;
-import KestrelExperiment from "KestrelExperiment" /* 5267 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7296 */;
-import logMessageSendFailure from "logMessageSendFailure" /* 7963 */;
-import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9465 */;
-import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9466 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9467 */;
+import FileSizeUtils from "FileSizeUtils" /* 4618 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
+import UploadUtils from "UploadUtils" /* 5298 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5299 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5307 */;
+import KestrelExperiment from "KestrelExperiment" /* 5349 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
+import logMessageSendFailure from "logMessageSendFailure" /* 8046 */;
+import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9549 */;
+import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9550 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9551 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(4633).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4715).FileUploadErrorTypes;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
@@ -33,7 +33,7 @@ export default function showUploadFileSizeError(arg0) {
   ({ file, maxSize, analyticsLocations, errorReason } = arg0);
   let items;
   let items1;
-  ({ baseMaxSize, guildId } = arg0);
+  ({ baseMaxSize, guildId, appEntryKey } = arg0);
   const currentUser = UserStore.getCurrentUser();
   const isPremiumExactlyResult = PremiumTypeUtils.isPremiumExactly(currentUser, TIER_2.TIER_2);
   if (null != file.items) {
@@ -141,7 +141,7 @@ export default function showUploadFileSizeError(arg0) {
     const obj6 = { title: stringResult, body: stringResult1 };
     AlertActionCreatorsDefault.show(obj6);
   } else {
-    const obj7 = { initialUpsellKey: ConstantsIOS.UpsellTypes.UPLOAD, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null, largestFileSize: null };
+    const obj7 = { initialUpsellKey: ConstantsIOS.UpsellTypes.UPLOAD, analyticsLocation: null, analyticsLocations: null, analyticsProperties: null, largestFileSize: null, appEntryKey: null };
     const obj8 = { section: constants2.FILE_UPLOAD_POPOUT };
     obj7.analyticsLocation = obj8;
     const items4 = [];
@@ -151,6 +151,7 @@ export default function showUploadFileSizeError(arg0) {
     const obj9 = { type: constants3.UPLOAD_ERROR_UPSELL };
     obj7.analyticsProperties = obj9;
     obj7.largestFileSize = num;
+    obj7.appEntryKey = appEntryKey;
     const result = obj13.handleShowUpsellAlert(obj7);
     const arraySpreadResult2 = HermesBuiltin.arraySpread(analyticsLocations, 0);
   }

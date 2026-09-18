@@ -1,10 +1,10 @@
-// === Module 15066: AuthorizedAppPermissionsSetting ===
+// === Module 15160: AuthorizedAppPermissionsSetting ===
 
-// Module 15066 (AuthorizedAppPermissionsSetting)
+// Module 15160 (AuthorizedAppPermissionsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 8111 */;
-import SettingBuilders from "SettingBuilders" /* 11622 */;
+import SettingsConstants from "SettingsConstants" /* 8194 */;
+import SettingBuilders from "SettingBuilders" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

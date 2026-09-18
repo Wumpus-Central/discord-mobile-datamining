@@ -1,31 +1,31 @@
-// === Module 10092: MessageManager ===
+// === Module 10186: MessageManager ===
 
-// Module 10092 (MessageManager)
+// Module 10186 (MessageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
-import matchPathCompat from "matchPathCompat" /* 4466 */;
-import Client from "Client" /* 4570 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4984 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 5360 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7396 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7570 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8523 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 10093 */;
-import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 10094 */;
+import matchPathCompat from "matchPathCompat" /* 4548 */;
+import Client from "Client" /* 4652 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 5442 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7478 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7652 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8606 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 10187 */;
+import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 10188 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4656 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5365 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 7394 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4738 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 7476 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import ReadStateStore from "ReadStateStore" /* 4655 */;
+import ReadStateStore from "ReadStateStore" /* 4737 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4461 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7232 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
 
 require = fn;
 function fetchMessages(arg0) {

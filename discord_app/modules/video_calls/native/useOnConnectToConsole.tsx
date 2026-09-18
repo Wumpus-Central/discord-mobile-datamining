@@ -1,11 +1,11 @@
-// === Module 9370: useOnConnectToConsole ===
+// === Module 9454: useOnConnectToConsole ===
 
-// Module 9370 (useOnConnectToConsole)
+// Module 9454 (useOnConnectToConsole)
 import dismissible_content from "dismissible_content" /* 1944 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4460 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9371 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9407 */;
-import beginConsoleTransfer from "beginConsoleTransfer" /* 9601 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9455 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9491 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 9685 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

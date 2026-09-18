@@ -1,6 +1,6 @@
-// === Module 13954: visibleInlineChannels ===
+// === Module 14048: visibleInlineChannels ===
 
-// Module 13954 (visibleInlineChannels)
+// Module 14048 (visibleInlineChannels)
 import size from "module_2" /* 2 */;
 
 const map = new Map();

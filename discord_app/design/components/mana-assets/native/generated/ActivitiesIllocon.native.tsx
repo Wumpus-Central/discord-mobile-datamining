@@ -1,9 +1,9 @@
-// === Module 5823: ActivitiesIllocon ===
+// === Module 5905: ActivitiesIllocon ===
 
-// Module 5823 (ActivitiesIllocon)
+// Module 5905 (ActivitiesIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef5824 from "module_5824" /* 5824 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef5906 from "module_5906" /* 5906 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const ActivitiesIllocon = function ActivitiesIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5824 };
+  const obj2 = { uri: _modDef5906 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

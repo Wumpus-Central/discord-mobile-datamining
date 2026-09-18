@@ -1,6 +1,6 @@
-// === Module 4525: GuildThemePreviewStore ===
+// === Module 4607: GuildThemePreviewStore ===
 
-// Module 4525 (GuildThemePreviewStore)
+// Module 4607 (GuildThemePreviewStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -21,7 +21,7 @@ function handleEnd() {
   }
   return flag;
 }
-const GuildThemePreviewConstants = fn(4526);
+const GuildThemePreviewConstants = fn(4608);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
 const timeout = new fn(1953).Timeout();
 let closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
@@ -130,7 +130,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: tmp, customUserThemeSettings: "a" };
+      const obj2 = { presetId: tmp, customUserThemeSettings: "Array" };
       const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {

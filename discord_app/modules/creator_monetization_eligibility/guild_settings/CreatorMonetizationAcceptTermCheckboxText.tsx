@@ -1,6 +1,6 @@
-// === Module 17989: CreatorMonetizationAcceptTermCheckboxText ===
+// === Module 18083: CreatorMonetizationAcceptTermCheckboxText ===
 
-// Module 17989 (CreatorMonetizationAcceptTermCheckboxText)
+// Module 18083 (CreatorMonetizationAcceptTermCheckboxText)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;

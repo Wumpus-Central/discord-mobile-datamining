@@ -1,6 +1,6 @@
-// === Module 7103: ProfilePendingImageTypes ===
+// === Module 7185: ProfilePendingImageTypes ===
 
-// Module 7103 (ProfilePendingImageTypes)
+// Module 7185 (ProfilePendingImageTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/profile_customization/ProfilePendingImageTypes.tsx");

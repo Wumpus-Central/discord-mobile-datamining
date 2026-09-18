@@ -1,9 +1,9 @@
-// === Module 11831: ForwardingAnalyticsUtils ===
+// === Module 11922: ForwardingAnalyticsUtils ===
 
-// Module 11831 (ForwardingAnalyticsUtils)
+// Module 11922 (ForwardingAnalyticsUtils)
 import _mod12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4820 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 

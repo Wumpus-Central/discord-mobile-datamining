@@ -1,8 +1,8 @@
-// === Module 7517: GuildBoostPurchasingUtils ===
+// === Module 7599: GuildBoostPurchasingUtils ===
 
-// Module 7517 (GuildBoostPurchasingUtils)
+// Module 7599 (GuildBoostPurchasingUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 4303 */;
+import SubscriptionStore from "SubscriptionStore" /* 4386 */;
 
 const require = fn;
 let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
@@ -66,8 +66,8 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
                 const intl = closure_1_0(1115).intl;
                 obj2.title = intl.string(closure_1_0(1115).t["8P7MX0"]);
                 obj2.body = body;
-                closure_1_1(4985).show(obj2);
-                const obj = closure_1_1(4985);
+                closure_1_1(5067).show(obj2);
+                const obj = closure_1_1(5067);
                 closure_1_1(1241).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
               })(externalManagementMessage, closure_130_0);
             } else {
@@ -137,10 +137,10 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(4297).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(4297);
-                      num3 = numPremiumGuildSubscriptions + c1(4297).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(4297);
+                      const numPremiumGuildSubscriptions = closure_0(4380).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(4380);
+                      num3 = numPremiumGuildSubscriptions + c1(4380).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(4380);
                     }
                     tmp = sum > num3;
                   }

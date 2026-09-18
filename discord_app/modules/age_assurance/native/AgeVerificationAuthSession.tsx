@@ -1,9 +1,9 @@
-// === Module 8575: AgeVerificationAuthSession ===
+// === Module 8658: AgeVerificationAuthSession ===
 
-// Module 8575 (AgeVerificationAuthSession)
+// Module 8658 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4606 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4688 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

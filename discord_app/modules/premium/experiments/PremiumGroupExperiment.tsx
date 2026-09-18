@@ -1,6 +1,6 @@
-// === Module 9026: PremiumGroupExperiment ===
+// === Module 9110: PremiumGroupExperiment ===
 
-// Module 9026 (PremiumGroupExperiment)
+// Module 9110 (PremiumGroupExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

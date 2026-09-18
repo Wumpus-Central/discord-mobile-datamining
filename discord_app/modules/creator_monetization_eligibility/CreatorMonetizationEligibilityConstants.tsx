@@ -1,6 +1,6 @@
-// === Module 17957: CreatorMonetizationEligibilityConstants ===
+// === Module 18051: CreatorMonetizationEligibilityConstants ===
 
-// Module 17957 (CreatorMonetizationEligibilityConstants)
+// Module 18051 (CreatorMonetizationEligibilityConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/CreatorMonetizationEligibilityConstants.tsx");

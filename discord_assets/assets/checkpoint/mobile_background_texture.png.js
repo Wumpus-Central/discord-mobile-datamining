@@ -1,6 +1,6 @@
-// === Module 15813: ? ===
+// === Module 15908: ? ===
 
-// Module 15813
+// Module 15908
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/mobile_background_texture.png.js");

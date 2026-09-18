@@ -1,6 +1,6 @@
-// === Module 9287: TransientKeyStore ===
+// === Module 9371: TransientKeyStore ===
 
-// Module 9287 (TransientKeyStore)
+// Module 9371 (TransientKeyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

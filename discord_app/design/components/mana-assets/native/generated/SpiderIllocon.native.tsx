@@ -1,9 +1,9 @@
-// === Module 6591: SpiderIllocon ===
+// === Module 6673: SpiderIllocon ===
 
-// Module 6591 (SpiderIllocon)
+// Module 6673 (SpiderIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6592 from "module_6592" /* 6592 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6674 from "module_6674" /* 6674 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const SpiderIllocon = function SpiderIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6592 };
+  const obj2 = { uri: _modDef6674 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

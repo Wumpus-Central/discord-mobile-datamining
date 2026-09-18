@@ -1,11 +1,11 @@
-// === Module 10301: notificationSettingsGuildFlagUtils ===
+// === Module 10395: notificationSettingsGuildFlagUtils ===
 
-// Module 10301 (notificationSettingsGuildFlagUtils)
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4824 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7228 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7233 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10296 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4821 */;
+// Module 10395 (notificationSettingsGuildFlagUtils)
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4906 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7310 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7315 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10390 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
 
 const require = globalThis.__r;
 

@@ -1,9 +1,9 @@
-// === Module 5598: SKUStore ===
+// === Module 5680: SKUStore ===
 
-// Module 5598 (SKUStore)
+// Module 5680 (SKUStore)
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SKURecord from "SKURecord" /* 5599 */;
+import SKURecord from "SKURecord" /* 5681 */;
 import LocaleStore from "LocaleStore" /* 2026 */;
 
 function addSku(sku) {

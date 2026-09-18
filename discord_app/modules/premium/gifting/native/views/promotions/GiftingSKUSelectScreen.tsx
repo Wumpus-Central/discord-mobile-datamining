@@ -1,13 +1,13 @@
-// === Module 11201: GiftingSKUSelectScreen ===
+// === Module 11294: GiftingSKUSelectScreen ===
 
-// Module 11201 (GiftingSKUSelectScreen)
+// Module 11294 (GiftingSKUSelectScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import _modDef2461 from "module_2461" /* 2461 */;
-import Text_Text from "Text/Text" /* 4636 */;
-import components_Button_Button from "components/Button/Button" /* 5062 */;
-import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11202 */;
+import _modDef2544 from "module_2544" /* 2544 */;
+import Text_Text from "Text/Text" /* 4718 */;
+import components_Button_Button from "components/Button/Button" /* 5144 */;
+import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11295 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, contentContainer: null, header: null, subtitle: null, buttonContainer: null, headerContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.contentContainer = { display: "flex", flexDirection: "column", padding: nativeDefault.space.PX_24 };
@@ -89,7 +89,7 @@ export default function GiftingSKUSelectScreen(rewardsToDisplay) {
   const items3 = [React5(Text_Text.Text, obj4), ];
   const obj5 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = util.intl;
-  obj5.children = intl2.string(_modDef2461.zprqn1);
+  obj5.children = intl2.string(_modDef2544.zprqn1);
   items3[1] = React5(Text_Text.Text, obj5);
   obj3.children = items3;
   const items4 = [React6(hasOwnProperty, obj3), React5(GiftingSKUCardsGridDefault, { rewardsToDisplay: rewardsToDisplay.allRewards, claimableRewards, onSelect: callback1, highlightedSkuId })];

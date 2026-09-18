@@ -1,9 +1,9 @@
-// === Module 6497: RocketshipSpotIllustration ===
+// === Module 6579: RocketshipSpotIllustration ===
 
-// Module 6497 (RocketshipSpotIllustration)
+// Module 6579 (RocketshipSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5675 */;
-import _modDef6498 from "module_6498" /* 6498 */;
+import FastImageDefault from "FastImage" /* 5757 */;
+import _modDef6580 from "module_6580" /* 6580 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const RocketshipSpotIllustration = function RocketshipSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6498 };
+  const obj2 = { uri: _modDef6580 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

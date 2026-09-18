@@ -1,19 +1,19 @@
-// === Module 16991: MemberVerificationScreen ===
+// === Module 17131: MemberVerificationScreen ===
 
-// Module 16991 (MemberVerificationScreen)
+// Module 17131 (MemberVerificationScreen)
 import nativeDefault from "native" /* 576 */;
 import router_utilsAll from "router_utils" /* 1101 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4464 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4497 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5615 */;
-import MemberVerificationModalDefault from "MemberVerificationModal" /* 5659 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5665 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5666 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4546 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4579 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5697 */;
+import MemberVerificationModalDefault from "MemberVerificationModal" /* 5741 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5747 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5748 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2013 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4462 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4544 */;
 
 require = fn;
 function Loading() {
@@ -96,10 +96,10 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ ME: closure_9, Routes: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4640);
+const createStyles = fn(4722);
 let obj2 = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
-const makeAuthenticated = fn(16992);
+const makeAuthenticated = fn(17132);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
   navigation = navigation.navigation;
   guildId = navigation.route.params.guildId;

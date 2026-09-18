@@ -1,21 +1,21 @@
-// === Module 5094: MarkupChannelMentionRule ===
+// === Module 5176: MarkupChannelMentionRule ===
 
-// Module 5094 (MarkupChannelMentionRule)
+// Module 5176 (MarkupChannelMentionRule)
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import StringUtils from "StringUtils" /* 1926 */;
-import _modDef4336 from "module_4336" /* 4336 */;
-import ChannelUtils from "ChannelUtils" /* 4785 */;
-import useChannelName from "useChannelName" /* 4793 */;
-import LinkUtils from "LinkUtils" /* 4794 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5093 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5095 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 5096 */;
+import _modDef2075 from "module_2075" /* 2075 */;
+import ChannelUtils from "ChannelUtils" /* 4867 */;
+import useChannelName from "useChannelName" /* 4875 */;
+import LinkUtils from "LinkUtils" /* 4876 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5175 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5177 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 5178 */;
 import GatedChannelStore from "GatedChannelStore" /* 2014 */;
 import ChannelStore from "ChannelStore" /* 1958 */;
 import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4278 */;
-import RelationshipStore from "RelationshipStore" /* 4288 */;
+import PermissionStore from "PermissionStore" /* 4361 */;
+import RelationshipStore from "RelationshipStore" /* 4371 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -125,7 +125,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, combined1) {
           obj4.content = items3;
           let obj11 = obj4;
         } else if (null != combined1) {
-          const obj9 = { type: "link", content: null, target: null, title: "call" };
+          const obj9 = { type: "link", content: null, target: null, title: "accessible" };
           const obj10 = { type: "text", content: combined1 };
           const items4 = [obj10];
           obj9.content = items4;
@@ -326,7 +326,7 @@ let obj2 = {
   }
 };
 obj.channelOrMessageUrl = {
-  order: _modDef4336.defaultRules.url.order - 0.5,
+  order: _modDef2075.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
@@ -350,7 +350,7 @@ obj.channelOrMessageUrl = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "call" };
+      const obj = { type: "link", content: null, target: null, title: "accessible" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -378,7 +378,7 @@ obj.channelOrMessageUrl = {
   }
 };
 let obj3 = {
-  order: _modDef4336.defaultRules.url.order - 0.5,
+  order: _modDef2075.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
@@ -402,7 +402,7 @@ let obj3 = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "call" };
+      const obj = { type: "link", content: null, target: null, title: "accessible" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -430,7 +430,7 @@ let obj3 = {
   }
 };
 obj.mediaPostLink = {
-  order: _modDef4336.defaultRules.url.order - 0.5,
+  order: _modDef2075.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;
@@ -469,7 +469,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "call" };
+    const obj = { type: "link", content: null, target: tmp, title: "accessible" };
     const items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

@@ -1,10 +1,10 @@
-// === Module 7759: AppDatabaseManager ===
+// === Module 7841: AppDatabaseManager ===
 
-// Module 7759 (AppDatabaseManager)
+// Module 7841 (AppDatabaseManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Dispatcher from "Dispatcher" /* 573 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2004 */;
-import actions2 from "actions" /* 7760 */;
+import actions2 from "actions" /* 7842 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 

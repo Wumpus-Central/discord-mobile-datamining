@@ -1,7 +1,7 @@
-// === Module 11965: UserSettingsExperimentsUtils ===
+// === Module 12056: UserSettingsExperimentsUtils ===
 
-// Module 11965 (UserSettingsExperimentsUtils)
-import flattenDefault from "flatten" /* 4749 */;
+// Module 12056 (UserSettingsExperimentsUtils)
+import flattenDefault from "flatten" /* 4831 */;
 import size from "module_2" /* 2 */;
 
 function matchesDeep(item10014, item10021) {

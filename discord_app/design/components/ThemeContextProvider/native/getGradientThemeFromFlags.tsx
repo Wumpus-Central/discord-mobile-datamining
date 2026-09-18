@@ -1,7 +1,7 @@
-// === Module 4349: getGradientThemeFromFlags ===
+// === Module 4431: getGradientThemeFromFlags ===
 
-// Module 4349 (getGradientThemeFromFlags)
-import native from "native" /* 4350 */;
+// Module 4431 (getGradientThemeFromFlags)
+import native from "native" /* 4432 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");

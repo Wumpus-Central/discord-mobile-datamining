@@ -1,6 +1,6 @@
-// === Module 9373: XboxLinkConstants ===
+// === Module 9457: XboxLinkConstants ===
 
-// Module 9373 (XboxLinkConstants)
+// Module 9457 (XboxLinkConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkConstants.tsx");

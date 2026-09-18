@@ -1,9 +1,9 @@
-// === Module 15504: EmojiSkullIcon ===
+// === Module 15599: EmojiSkullIcon ===
 
-// Module 15504 (EmojiSkullIcon)
+// Module 15599 (EmojiSkullIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4340 */;
-import _mod15505 from "module_15505" /* 15505 */;
+import BaseIconImage from "BaseIconImage" /* 4422 */;
+import _mod15600 from "module_15600" /* 15600 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const EmojiSkullIcon = function EmojiSkullIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15505, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15600, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

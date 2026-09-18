@@ -1,6 +1,6 @@
-// === Module 7342: SocialLayerStorefrontStore ===
+// === Module 7424: SocialLayerStorefrontStore ===
 
-// Module 7342 (SocialLayerStorefrontStore)
+// Module 7424 (SocialLayerStorefrontStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import LocaleStore from "LocaleStore" /* 2026 */;

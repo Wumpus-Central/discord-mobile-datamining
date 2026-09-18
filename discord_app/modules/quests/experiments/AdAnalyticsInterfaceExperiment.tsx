@@ -1,6 +1,6 @@
-// === Module 7843: AdAnalyticsInterfaceExperiment ===
+// === Module 7925: AdAnalyticsInterfaceExperiment ===
 
-// Module 7843 (AdAnalyticsInterfaceExperiment)
+// Module 7925 (AdAnalyticsInterfaceExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

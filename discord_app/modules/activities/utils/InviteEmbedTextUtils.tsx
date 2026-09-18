@@ -1,9 +1,9 @@
-// === Module 13387: InviteEmbedTextUtils ===
+// === Module 13478: InviteEmbedTextUtils ===
 
-// Module 13387 (InviteEmbedTextUtils)
+// Module 13478 (InviteEmbedTextUtils)
 import util from "util" /* 1115 */;
-import _modDef2883 from "module_2883" /* 2883 */;
-import NicknameUtils from "NicknameUtils" /* 4792 */;
+import _modDef2966 from "module_2966" /* 2966 */;
+import NicknameUtils from "NicknameUtils" /* 4874 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -72,7 +72,7 @@ export const getHeaderText = function getHeaderText(name, type5, arg2) {
     return stringResult;
   } else if (ActivityActionTypes.STREAM_REQUEST === type5) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2883.DKHhec);
+    return intl2.string(_modDef2966.DKHhec);
   } else {
     const JOIN_REQUEST = ActivityActionTypes.JOIN_REQUEST;
     const intl = util.intl;
@@ -82,11 +82,11 @@ export const getHeaderText = function getHeaderText(name, type5, arg2) {
 export const getRequestToStreamText = function getRequestToStreamText(author, guild_id, id) {
   if (author.author.id === id) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef2883["8B3U5O"]);
+    let stringResult = intl2.string(_modDef2966["8B3U5O"]);
   } else {
     const intl = util.intl;
     const obj = { username: NicknameUtils.getName(guild_id.guild_id, guild_id.id, author.author) };
-    stringResult = intl.formatToPlainString(_modDef2883["d/qbC0"], obj);
+    stringResult = intl.formatToPlainString(_modDef2966["d/qbC0"], obj);
   }
   return stringResult;
 };
@@ -103,11 +103,11 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
         if (ActivityActionTypes.STREAM_REQUEST === type) {
           if (activity.author.id === id2) {
             const intl2 = util.intl;
-            let stringResult = intl2.string(_modDef2883["8B3U5O"]);
+            let stringResult = intl2.string(_modDef2966["8B3U5O"]);
           } else {
             const intl = util.intl;
             const obj = { username: NicknameUtils.getName(guild_id.guild_id, guild_id.id, activity.author) };
-            stringResult = intl.formatToPlainString(_modDef2883["d/qbC0"], obj);
+            stringResult = intl.formatToPlainString(_modDef2966["d/qbC0"], obj);
           }
           return stringResult;
         } else {

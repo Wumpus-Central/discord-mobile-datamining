@@ -1,6 +1,6 @@
-// === Module 11457: QuestHomeHeroCta ===
+// === Module 11555: QuestHomeHeroCta ===
 
-// Module 11457 (QuestHomeHeroCta)
+// Module 11555 (QuestHomeHeroCta)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
