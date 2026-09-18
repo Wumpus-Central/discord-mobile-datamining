@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "436501dcf3af209f85edbd0cde1cf184",
-  name: "ic_vr_headset_24px",
+  hash: "4e9d569d897ff379f07644deddf6baf5",
+  name: "ScreenXIcon",
   type: "png",
 });

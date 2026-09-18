@@ -1,42 +1,82 @@
 // _runtime/metro/03810__.js
-import translateSeconds from "../03811_translateSeconds.js";
-import 03812__ from "03812__.js";
-import 03813__ from "03813__.js";
-import date_mod from "03814__.js";
-import date_mod from "03815__.js";
+import _typeof_mod from "03811__.js";
+import module_3813_mod from "03813__.js";
 
-if (!translateSeconds) {
-  const obj = { default: translateSeconds };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = translateSeconds;
+  tmp3 = _typeof;
 }
-if (!module_3812) {
-  const obj2 = { default: module_3812 };
+_typeof = tmp3;
+let module_3813 = module_3813_mod;
+if (!module_3813) {
+  const obj2 = { default: module_3813 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_3812;
+  tmp5 = module_3813;
 }
-if (!module_3813) {
-  const obj3 = { default: module_3813 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3813;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+module_3813 = tmp5;
+const dependencyMap = ["\u043D\u0435\u0434\u0435\u043B\u044F", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u044F\u0434\u0430", "\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A", "\u043F\u0435\u0442\u044A\u043A", "\u0441\u044A\u0431\u043E\u0442\u0430"];
+let closure_3 = {
+  lastWeek: function lastWeekFormatToken(arg0, arg1, arg2) {
+    const defaultResult = _typeof.default(arg0);
+    const uTCDay = defaultResult.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_3813.default(defaultResult, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'във ${tmp2}`;
+        let text1 = `'във ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (6 !== uTCDay) {
+            let text2 = `${"'\u043C\u0438\u043D\u0430\u043B\u0438\u044F " + tmp2} в' p`;
+          }
+          return text2;
+        }
+      }
+      text2 = `${"'\u043C\u0438\u043D\u0430\u043B\u0430\u0442\u0430 " + tmp2} в' p`;
+    }
+  },
+  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
+  today: "'\u0434\u043D\u0435\u0441 \u0432' p",
+  tomorrow: "'\u0443\u0442\u0440\u0435 \u0432' p",
+  nextWeek: function nextWeekFormatToken(arg0, arg1, arg2) {
+    const defaultResult = _typeof.default(arg0);
+    const uTCDay = defaultResult.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_3813.default(defaultResult, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'във ${tmp2}`;
+        let text1 = `'във ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (6 !== uTCDay) {
+            let text2 = `${"'\u0441\u043B\u0435\u0434\u0432\u0430\u0449\u0438\u044F " + tmp2} в' p`;
+          }
+          return text2;
+        }
+      }
+      text2 = `${"'\u0441\u043B\u0435\u0434\u0432\u0430\u0449\u0430\u0442\u0430 " + tmp2} в' p`;
+    }
+  },
+  other: "P"
+};
 
-export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_3[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
+};
 export default exports.default;

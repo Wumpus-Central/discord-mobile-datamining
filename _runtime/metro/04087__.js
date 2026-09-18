@@ -1,15 +1,15 @@
 // _runtime/metro/04087__.js
-import module_4079_mod from "04079__.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import _typeof_mod from "03811__.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-let module_4079 = module_4079_mod;
-if (!module_4079) {
-  const obj = { default: module_4079 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4079;
+  tmp3 = _typeof;
 }
-module_4079 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMonth(arg0) {
+export default function getMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4079.default(Date.now(), arg0);
+  return _typeof.default(arg0).getMonth();
 };
 export default exports.default;

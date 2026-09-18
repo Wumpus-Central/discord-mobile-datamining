@@ -1,55 +1,42 @@
 // _runtime/metro/03911__.js
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import 03912__ from "03912__.js";
+import 03913__ from "03913__.js";
+import dayAndTimeWithAdjective from "../03914_dayAndTimeWithAdjective.js";
+import date_mod from "03915__.js";
+import date_mod from "03916__.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+if (!module_3912) {
+  const obj = { default: module_3912 };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = module_3912;
 }
-requiredArgs = tmp3;
+if (!module_3913) {
+  const obj2 = { default: module_3913 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_3913;
+}
+if (!dayAndTimeWithAdjective) {
+  const obj3 = { default: dayAndTimeWithAdjective };
+  let tmp7 = obj3;
+} else {
+  tmp7 = dayAndTimeWithAdjective;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function isDate(arg0) {
-  requiredArgs.default(1, arguments);
-  let tmp2 = arg0 instanceof Date;
-  if (!tmp2) {
-    const tmp4 = "object" === _typeof(arg0);
-    if (!tmp4) {
-      tmp2 = tmp4;
-    } else {
-      const _Object = Object;
-      let str2 = Object.prototype.toString;
-      const call = str2.call;
-      str2 = "[object Date]";
-      const tmp5 = typeof call === "unknown" ? str2() : call(arg0);
-    }
-  }
-  return tmp2;
-};
+export default { code: "pl", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

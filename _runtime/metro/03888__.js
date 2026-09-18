@@ -1,60 +1,23 @@
 // _runtime/metro/03888__.js
-import module_3732_mod from "03732__.js";
-import _typeof_mod from "03728__.js";
-import startOfISOWeekYear_mod from "../03889_startOfISOWeekYear.js";
-import differenceInCalendarDays_mod from "../03890_differenceInCalendarDays.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+let closure_0 = { lessThanXSeconds: { one: "1\uCD08 \uBBF8\uB9CC", other: "{{count}}\uCD08 \uBBF8\uB9CC" }, xSeconds: { one: "1\uCD08", other: "{{count}}\uCD08" }, halfAMinute: "30\uCD08", lessThanXMinutes: { one: "1\uBD84 \uBBF8\uB9CC", other: "{{count}}\uBD84 \uBBF8\uB9CC" }, xMinutes: { one: "1\uBD84", other: "{{count}}\uBD84" }, aboutXHours: { one: "\uC57D 1\uC2DC\uAC04", other: "\uC57D {{count}}\uC2DC\uAC04" }, xHours: { one: "1\uC2DC\uAC04", other: "{{count}}\uC2DC\uAC04" }, xDays: { one: "1\uC77C", other: "{{count}}\uC77C" }, aboutXWeeks: { one: "\uC57D 1\uC8FC", other: "\uC57D {{count}}\uC8FC" }, xWeeks: { one: "1\uC8FC", other: "{{count}}\uC8FC" }, aboutXMonths: { one: "\uC57D 1\uAC1C\uC6D4", other: "\uC57D {{count}}\uAC1C\uC6D4" }, xMonths: { one: "1\uAC1C\uC6D4", other: "{{count}}\uAC1C\uC6D4" }, aboutXYears: { one: "\uC57D 1\uB144", other: "\uC57D {{count}}\uB144" }, xYears: { one: "1\uB144", other: "{{count}}\uB144" }, overXYears: { one: "1\uB144 \uC774\uC0C1", other: "{{count}}\uB144 \uC774\uC0C1" }, almostXYears: { one: "\uAC70\uC758 1\uB144", other: "\uAC70\uC758 {{count}}\uB144" } };
 
-let module_3732 = module_3732_mod;
-if (!module_3732) {
-  const obj = { default: module_3732 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3732;
-}
-module_3732 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let startOfISOWeekYear = startOfISOWeekYear_mod;
-if (!startOfISOWeekYear) {
-  const obj3 = { default: startOfISOWeekYear };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfISOWeekYear;
-}
-startOfISOWeekYear = tmp7;
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  const obj4 = { default: differenceInCalendarDays };
-  let tmp9 = obj4;
-} else {
-  tmp9 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp9;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj5 = { default: requiredArgs };
-  let tmp11 = obj5;
-} else {
-  tmp11 = requiredArgs;
-}
-requiredArgs = tmp11;
-
-export default function setISOWeekYear(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = module_3732.default(arg1);
-  const date = new Date(0);
-  date.setFullYear(defaultResult2, 0, 4);
-  date.setHours(0, 0, 0, 0);
-  const defaultResult4 = startOfISOWeekYear.default(date);
-  defaultResult4.setDate(defaultResult4.getDate() + differenceInCalendarDays.default(defaultResult1, startOfISOWeekYear.default(defaultResult1)));
-  return defaultResult4;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} 전`;
+        }
+        text = `${tmp} 후`;
+      }
+    }
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    one = tmp.other.replace("{{count}}", arg1.toString());
+  }
 };
 export default exports.default;

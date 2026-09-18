@@ -1,4 +1,6 @@
 // _runtime/metro/10736__.js
+import repeatedTimeunitPattern from "../10675_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10682_AbstractParserWithWordBoundaryChecking.js";
 import _mod10737 from "10737__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -6,7 +8,7 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKMonthNameLittleEndianParser = require;
+const FRWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +27,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKMonthNameLittleEndianParser {
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(?:ce)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10737.WEEKDAY_DICTIONARY) +
+    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(dernier|prochain)\\s*)?(?=\\W|\\d|$)",
+  "i",
+);
+class FRWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKMonthNameLittleEndianParser);
+    tmp = c2(this, FRWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(UKMonthNameLittleEndianParser);
+    obj = closure_4(FRWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,64 +53,35 @@ class UKMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKMonthNameLittleEndianParser, _mod10737.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(FRWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(?:\u0437|\u0456\u0437)?\\s*(" +
-      UKMonthNameLittleEndianParser(10735).ORDINAL_NUMBER_PATTERN +
-      ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" +
-      UKMonthNameLittleEndianParser(10735).ORDINAL_NUMBER_PATTERN +
-      "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" +
-      UKMonthNameLittleEndianParser(10581).matchAnyPattern(UKMonthNameLittleEndianParser(10735).MONTH_DICTIONARY) +
-      ")(?:(?:-|\\/|,?\\s{0,3})(" +
-      UKMonthNameLittleEndianParser(10735).YEAR_PATTERN +
-      "(?![^\\s]\\d)))?"
-    );
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = UKMonthNameLittleEndianParser(10735).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = UKMonthNameLittleEndianParser(10735).parseOrdinalNumberPattern(index[1]);
-      if (result > 31) {
-        index.index = index.index + index[1].length;
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const tmp4 = FRWeekdayParser(10737).WEEKDAY_DICTIONARY[formatted];
+      if (undefined === tmp4) {
         return null;
       } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", result);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", UKMonthNameLittleEndianParser(10735).parseYearPattern(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply(
-            "year",
-            UKMonthNameLittleEndianParser(10582).findYearClosestToRef(
-              createParsingResult.reference.instant,
-              result,
-              tmp4,
-            ),
-          );
+        const formatted1 = arg1[2] || "".toLowerCase();
+        let str4 = "last";
+        if ("dernier" != formatted1) {
+          str4 = null;
+          if ("prochain" == formatted1) {
+            str4 = "next";
+          }
         }
-        if (index[2]) {
-          const start3 = parsingResult.start;
-          const result1 = UKMonthNameLittleEndianParser(10735).parseOrdinalNumberPattern(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-        }
-        return parsingResult;
+        return FRWeekdayParser(10702).createParsingComponentsAtWeekday(reference.reference, tmp4, str4);
       }
     },
   },
 ];
 
-export default _createClass(UKMonthNameLittleEndianParser, items);
+export default _createClass(FRWeekdayParser, items);

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 33,
+  httpServerLocation: "/assets/modules/quests/images",
+  width: 608,
+  height: 608,
   scales: [2, 3],
-  hash: "68d0a7491ea9de9245e6ac89adfb6384",
-  name: "img_tier_0_error_mobile",
+  hash: "6936c050862daceed7175a327466cd4a",
+  name: "quests_embed_mobile_missing",
   type: "png",
 });

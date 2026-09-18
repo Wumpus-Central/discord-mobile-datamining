@@ -1,11 +1,7 @@
 // _runtime/metro/14264__.js
-import registerAsset from "01121__.js";
+import _mod14253 from "14253__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "76c09ebc2fd9700ae36ec8729cee1e9d",
-  name: "NotificationsTab",
-  type: "lottie",
-});
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod14253(arg0, arg2);
+  return obj.intersects(new _mod14253(arg1, arg2), arg2);
+};

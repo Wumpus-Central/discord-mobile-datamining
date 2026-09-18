@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
   width: 120,
-  height: 100,
-  scales: [1, 2, 3],
-  hash: "0abf9581567470a391d7233deb0a4631",
-  name: "img_remote_auth_loaded",
+  height: 120,
+  scales: [1],
+  hash: "b269fec2e8135bbc2e2d49cb182b352b",
+  name: "amanda",
   type: "png",
 });

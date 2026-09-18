@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/PastelIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/oauth2",
+  width: 92,
+  height: 92,
   scales: [2, 3],
-  hash: "3abe689118b6dfa647c87ebe65954c60",
-  name: "PastelIcon",
+  hash: "118e914321321b15506a73d46c214571",
+  name: "failure-header",
   type: "png",
 });

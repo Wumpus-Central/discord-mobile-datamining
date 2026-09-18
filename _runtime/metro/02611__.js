@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25zL3Byb2ZpbGVfdXBkYXRlcy9zZW5kZXI=",
+  httpServerLocation: "/assets/modules/premium/file_upload",
   scales: [1],
-  hash: "6a927b9f1dc449b0f81228d43552412f",
-  name: "ko.messages.6a927b9f1dc449b0f81228d43552412f.compiled.messages",
+  hash: "23b8cc9c9f2f7ce0243fa024f7324767",
+  name: "NitroFileUpload.compiled.messages",
   type: "jsona",
 });

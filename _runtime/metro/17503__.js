@@ -1,8 +1,13 @@
 // _runtime/metro/17503__.js
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "ko",
-  pluralRuleFunction(arg0, arg1) {
-    return "other";
-  },
+import registerAsset from "01121__.js";
+
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/voice_panel/native/images",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3, 4],
+  hash: "2e77386663ba77387d021543bdafafef",
+  name: "airplay",
+  type: "png",
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "ko-KP", parentLocale: "ko" });

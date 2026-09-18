@@ -1,13 +1,22 @@
 // _runtime/metro/05386__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "5e997bb5d78793341cb727497a38fe6f",
-  name: "img_account_sync_bluesky_light_and_dark",
-  type: "svg",
-});
+export default {
+  USE_FILE: true,
+  USE_JFIF: true,
+  USE_PNG_FILE: true,
+  USE_EXIF: true,
+  USE_IPTC: true,
+  USE_XMP: true,
+  USE_ICC: true,
+  USE_MPF: true,
+  USE_PHOTOSHOP: true,
+  USE_THUMBNAIL: true,
+  USE_TIFF: true,
+  USE_JPEG: true,
+  USE_PNG: true,
+  USE_HEIC: true,
+  USE_AVIF: true,
+  USE_WEBP: true,
+  USE_GIF: true,
+  USE_MAKER_NOTES: true,
+};

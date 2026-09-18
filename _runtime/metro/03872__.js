@@ -1,12 +1,34 @@
 // _runtime/metro/03872__.js
-import 02031__ from "02031__.js";
+let c0 = ["vas\u00E1rnap", "h\u00E9tf\u0151n", "kedden", "szerd\u00E1n", "cs\u00FCt\u00F6rt\u00F6k\u00F6n", "p\u00E9nteken", "szombaton"];
+const obj = {
+  lastWeek: (arg0) => {
+    let str = "'m\u00FAlt' ";
+    if (c0) {
+      str = "";
+    }
+    const combined = "".concat(str, "'");
+    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
+  },
+  yesterday: "'tegnap' p'-kor'",
+  today: "'ma' p'-kor'",
+  tomorrow: "'holnap' p'-kor'",
+  nextWeek: (arg0) => {
+    let str = "'m\u00FAlt' ";
+    if (c0) {
+      str = "";
+    }
+    const combined = "".concat(str, "'");
+    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
+  },
+  other: "P"
+};
+c0 = true;
 
-if (!module_2031) {
-  const obj2 = { default: module_2031 };
-  let obj = obj2;
-} else {
-  obj = module_2031;
-}
-
-export default { date: obj.default({ formats: { full: "EEEE, do MMMM y '\u0440.'", long: "do MMMM y '\u0440.'", medium: "d MMM y '\u0440.'", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u043E' {{time}}", long: "{{date}} '\u043E' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default function formatRelative(arg0, arg1) {
+  let tmpResult = tmp;
+  if (typeof obj[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
+};
 export default exports.default;

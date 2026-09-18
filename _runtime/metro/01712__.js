@@ -92,7 +92,7 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "APPLICATION_FETCH",
+      startTimestamp: "B_e_found",
       reduceMotion: null,
     };
     let num = obj.velocity;

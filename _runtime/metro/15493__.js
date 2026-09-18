@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "fbee7c9b6ebaa77bbc9a6cc9164a2ec7",
-  name: "EmojiFaceWithSpiralEyesIcon",
+  httpServerLocation: "/assets/images/native/avatars",
+  width: 161,
+  height: 160,
+  scales: [1],
+  hash: "a65b20898883190dcbc92bb129f3d9b7",
+  name: "wumpus_1",
   type: "png",
 });

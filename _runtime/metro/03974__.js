@@ -1,12 +1,14 @@
 // _runtime/metro/03974__.js
-import code from "02028__.js";
 
-if (!code) {
-  const obj = { default: code };
-  let tmp3 = obj;
-} else {
-  tmp3 = code;
-}
-
-export default tmp3.default;
+export default function getTimezoneOffsetInMilliseconds(getFullYear) {
+  const fullYear = getFullYear.getFullYear();
+  const month = getFullYear.getMonth();
+  const hours = getFullYear.getHours();
+  const minutes = getFullYear.getMinutes();
+  const seconds = getFullYear.getSeconds();
+  const date1 = new Date(Date.UTC(fullYear, month, getFullYear.getDate(), hours, minutes, seconds, getFullYear.getMilliseconds()));
+  date1.setUTCFullYear(getFullYear.getFullYear());
+  const time = getFullYear.getTime();
+  return time - date1.getTime();
+};
 export default exports.default;

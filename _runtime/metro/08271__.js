@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b5a936051680509c0100afebb2debea8",
-  name: "ShieldUserIcon",
+  hash: "3eb74a78606f69449db155f70f2ac217",
+  name: "NitroWheelIcon",
   type: "png",
 });

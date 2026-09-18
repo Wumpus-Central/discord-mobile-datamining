@@ -1,105 +1,28 @@
 // _runtime/metro/04160__.js
-import subDays_mod from "../04099_subDays.js";
-import subMonths_mod from "../04161_subMonths.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
-import module_3732_mod from "03732__.js";
+import startOfISOWeekYear_mod from "../03972_startOfISOWeekYear.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let subDays = subDays_mod;
-if (!subDays) {
-  const obj = { default: subDays };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = subDays;
+  tmp3 = startOfISOWeekYear;
 }
-subDays = tmp3;
-let subMonths = subMonths_mod;
-if (!subMonths) {
-  const obj2 = { default: subMonths };
-  let tmp5 = obj2;
-} else {
-  tmp5 = subMonths;
-}
-subMonths = tmp5;
+startOfISOWeekYear = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
-let module_3732 = module_3732_mod;
-if (!module_3732) {
-  const obj4 = { default: module_3732 };
-  let tmp9 = obj4;
-} else {
-  tmp9 = module_3732;
-}
-module_3732 = tmp9;
+requiredArgs = tmp5;
 
-export default function sub(arg0, years) {
+export default function isSameISOWeekYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  if (years) {
-    if ("object" === _typeof(years)) {
-      let num = 0;
-      if (years.years) {
-        num = module_3732.default(years.years);
-      }
-      let num2 = 0;
-      if (years.months) {
-        num2 = module_3732.default(years.months);
-      }
-      let num3 = 0;
-      if (years.weeks) {
-        num3 = module_3732.default(years.weeks);
-      }
-      let num4 = 0;
-      if (years.days) {
-        num4 = module_3732.default(years.days);
-      }
-      let num5 = 0;
-      if (years.hours) {
-        num5 = module_3732.default(years.hours);
-      }
-      let num6 = 0;
-      if (years.minutes) {
-        num6 = module_3732.default(years.minutes);
-      }
-      let num7 = 0;
-      if (years.seconds) {
-        num7 = module_3732.default(years.seconds);
-      }
-      const _Date = Date;
-      const sum = num7 + 60 * (num6 + 60 * num5);
-      const date = new Date(subDays.default(subMonths.default(arg0, num2 + 12 * num), num4 + 7 * num3).getTime() - 1000 * sum);
-      return date;
-    }
-  }
-  return new Date(NaN);
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

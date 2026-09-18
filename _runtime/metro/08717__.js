@@ -1,8 +1,83 @@
 // _runtime/metro/08717__.js
-import _mod26 from "00026__.js";
-import 00065__ from "00065__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8713 from "08713__.js";
+import _modDef8718 from "08718__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGSvgView", validAttributes: { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: _mod26.colorAttribute, pointerEvents: true, hitSlop: true } };
+const Circle = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Circle {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, Circle);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Circle);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Circle, _modDef8713);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const obj = {};
+    ({ cx, cy, r } = props);
+    const merged = Object.assign(Circle(8704).extract(this, props));
+    obj.cx = cx;
+    obj.cy = cy;
+    obj.r = r;
+    const obj2 = Circle(8704);
+    const obj3 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8718, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
+  },
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
-export default module_65.get("RNSVGSvgView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

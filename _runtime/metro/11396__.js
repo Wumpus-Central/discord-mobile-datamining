@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "8d2a9da7873a6a1912be7bfb3d52eaf6",
-  name: "SpoilerIcon",
+  httpServerLocation: "/assets/images/native/wumpus",
+  width: 84,
+  height: 66,
+  scales: [1],
+  hash: "6220c6fc32c3a2a05a977c59f0c7790d",
+  name: "wumpus-ash",
   type: "png",
 });

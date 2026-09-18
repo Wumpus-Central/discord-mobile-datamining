@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 277,
+  height: 44,
   scales: [2, 3],
-  hash: "9dd37f954b23d7c3c7ed4428be93436f",
-  name: "ClydeIcon",
+  hash: "80b2b0d70a370a3545b5c6b85cfa62d7",
+  name: "img_boost_activated_border",
   type: "png",
 });

@@ -1,13 +1,9 @@
 // _runtime/metro/05121__.js
-import registerAsset from "01121__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "45e56b0ad20f9774b74dbe6cbb00fca0",
-  name: "GroupIcon",
-  type: "png",
-});
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
+
+export default module_65.get("RNSScreenFooter", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

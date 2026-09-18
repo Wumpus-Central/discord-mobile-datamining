@@ -1,7 +1,12 @@
 // _runtime/metro/06842__.js
-import noop from "00019__.js";
+const fn = function o() {
 
-({ useEffect, useRef } = noop);
-new Map();
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
 
-export function useDetectorAttachmentGuard(tmp8Result5) {}
+export () => {
+
+}
+export const workletNoop = fn;

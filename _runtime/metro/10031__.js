@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "811fb35960f597c4ee3417f16bd2f9e6",
-  name: "messages",
+  hash: "08fd133b0b292a14ea2a09a50dd4618e",
+  name: "CalendarIcon",
   type: "png",
 });

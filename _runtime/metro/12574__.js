@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "0cbd606a7d77f46a42c156cab0771b02",
-  name: "ic_mention_24px",
+  httpServerLocation: "/assets/modules/create_guild/native/images",
+  width: 48,
+  height: 48,
+  scales: [2, 3],
+  hash: "cae160e8dcd3fb84e6eda225bda4b4a6",
+  name: "img_clubs",
   type: "png",
 });

@@ -1,13 +1,20 @@
 // _runtime/metro/05410__.js
-import registerAsset from "01121__.js";
+import _mod5408 from "05408__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "322f5aec10ee0e2c3d6aad9844b5f00f",
-  name: "img_account_sync_facebook_light_and_dark",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+const obj = {
+  1: "InteroperabilityIndex",
+  2: null,
+  4096: "RelatedImageFileFormat",
+  4097: "RelatedImageWidth",
+  4098: "RelatedImageHeight",
+};
+obj[2] = {
+  name: "InteroperabilityVersion",
+  description(value) {
+    return _mod5408.getStringValue(value);
+  },
+};
+
+export default obj;

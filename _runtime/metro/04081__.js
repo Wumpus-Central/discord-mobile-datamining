@@ -1,15 +1,15 @@
 // _runtime/metro/04081__.js
-import startOfSecond_mod from "../04082_startOfSecond.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import _typeof_mod from "03811__.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-let startOfSecond = startOfSecond_mod;
-if (!startOfSecond) {
-  const obj = { default: startOfSecond };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfSecond;
+  tmp3 = _typeof;
 }
-startOfSecond = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,10 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameSecond(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfSecond.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfSecond.default(arg1).getTime();
+export default function getHours(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getHours();
 };
 export default exports.default;

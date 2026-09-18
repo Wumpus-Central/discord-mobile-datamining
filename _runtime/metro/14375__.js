@@ -1,19 +1,11 @@
 // _runtime/metro/14375__.js
-import _mod14365 from "14365__.js";
-import BestAvailableLocale from "../14368_BestAvailableLocale.js";
+import registerAsset from "01121__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {
-  const items = [];
-  for (let num = 0; num < arg1.length; num = num + 1) {
-    let str = arg1[num];
-    let replaced = str.replace(_mod14365.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
-    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
-    if (BestAvailableLocaleResult) {
-      let arr = items.push(BestAvailableLocaleResult);
-    }
-  }
-  return items;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "5bcd891e95d07edbfb45ee3ed99361d8",
+  name: "NitroGem15",
+  type: "lottie",
+});

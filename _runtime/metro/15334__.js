@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 87,
-  height: 87,
-  scales: [2, 3],
-  hash: "d299e9311da17e9393089ebfa8d667b1",
-  name: "resubscribed_alert_header",
+  httpServerLocation: "/assets/modules/quests/native/images",
+  width: 375,
+  height: 58,
+  scales: [1, 2, 3],
+  hash: "e5d497e242dfffadb8102108e8df2b1a",
+  name: "clouds_background",
   type: "png",
 });

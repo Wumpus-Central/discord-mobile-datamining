@@ -1,11 +1,28 @@
 // _runtime/metro/02041__.js
-import registerAsset from "01121__.js";
-
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/ZGVzaWdu",
-  scales: [1],
-  hash: "72a624908b343db34ae78e6d520bec11",
-  name: "cs.messages.72a624908b343db34ae78e6d520bec11.compiled.messages",
-  type: "jsona",
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "cs",
+  pluralRuleFunction(arg0, arg1) {
+    const parts = String(arg0).split(".");
+    [tmp2, tmp3] = parts;
+    let str2 = "other";
+    if (!arg1) {
+      if (1 != arg0) {
+        if (tmp2 >= 2) {
+          if (tmp2 <= 4) {
+            let str4 = "few";
+          }
+          let str3 = str4;
+        }
+        let str5 = "many";
+        if (!tmp3) {
+          str5 = "other";
+        }
+        str4 = str5;
+      } else {
+        str3 = "one";
+      }
+      str2 = str3;
+    }
+    return str2;
+  },
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1785b591bc534f1d0463ddef745bdb5c",
-  name: "CalendarMinusIcon",
+  hash: "5d10367ba9fc709d8c368aae16aadbae",
+  name: "RemixIcon",
   type: "png",
 });

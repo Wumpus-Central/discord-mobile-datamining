@@ -1,14 +1,12 @@
 // _runtime/metro/10768__.js
-import repeatedTimeunitPattern from "../10581_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10588_AbstractParserWithWordBoundaryChecking.js";
-import _mod10769 from "10769__.js";
+import AbstractParserWithWordBoundaryChecking from "../10682_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const SVWeekdayParser = require;
+const NLTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,18 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:p\u00E5\\s*?)?(?:(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10769.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*vecka)?(?=\\W|$)",
-  "i",
-);
-class SVWeekdayParser {
+class NLTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, SVWeekdayParser);
+    tmp = c2(this, NLTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(SVWeekdayParser);
+    obj = closure_4(NLTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,10 +45,14 @@ class SVWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SVWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
+    const regExp = new RegExp(
+      "(?:binnen|in|binnen de|voor)\\s*(" + NLTimeUnitWithinFormatParser(10769).TIME_UNITS_PATTERN + ")(?=\\W|$)",
+      "i",
+    );
     return regExp;
   },
 };
@@ -65,29 +61,13 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
-      }
-      if (!str2) {
-        str2 = "";
-      }
-      const str3 = str2.toLowerCase();
-      let str4 = "last";
-      if (!str3.match(/förra|senaste/)) {
-        str4 = null;
-        if (str3.match(/nästa|kommande/)) {
-          str4 = "next";
-        }
-      }
-      return SVWeekdayParser(10608).createParsingComponentsAtWeekday(
+      const ParsingComponents = NLTimeUnitWithinFormatParser(10678).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
         reference.reference,
-        SVWeekdayParser(10769).WEEKDAY_DICTIONARY[formatted],
-        str4,
+        NLTimeUnitWithinFormatParser(10769).parseDuration(arg1[1]),
       );
     },
   },
 ];
 
-export default _createClass(SVWeekdayParser, items);
+export default _createClass(NLTimeUnitWithinFormatParser, items);

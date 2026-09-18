@@ -1,15 +1,15 @@
 // _runtime/metro/04090__.js
-import module_4076_mod from "04076__.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import _typeof_mod from "03811__.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-let module_4076 = module_4076_mod;
-if (!module_4076) {
-  const obj = { default: module_4076 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4076;
+  tmp3 = _typeof;
 }
-module_4076 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisWeek(arg0, arg1) {
+export default function getTime(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4076.default(arg0, Date.now(), arg1);
+  return _typeof.default(arg0).getTime();
 };
 export default exports.default;

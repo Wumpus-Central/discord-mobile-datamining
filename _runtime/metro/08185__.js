@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/premium_group/images",
-  width: 107.5,
-  height: 107,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "a5d02f8d3612a7fc7609c190b11244f3",
-  name: "PremiumGroupEmbedImage",
+  hash: "a9da9676c404d3305c620820281d0a06",
+  name: "PencilIcon",
   type: "png",
 });

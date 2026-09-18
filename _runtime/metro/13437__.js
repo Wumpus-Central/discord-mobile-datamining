@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "6fb23e8fddb36af1d7c8748104537e96",
-  name: "VideoDenyIcon",
+  httpServerLocation: "/assets/images/native/gifting",
+  width: 120,
+  height: 125,
+  scales: [1, 2, 3],
+  hash: "c43124de927c4f7db7d60a63938625a8",
+  name: "wumpus_cup_premium120",
   type: "png",
 });

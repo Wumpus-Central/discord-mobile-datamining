@@ -1,13 +1,5 @@
 // _runtime/metro/05394__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "e99a6a1cd140c0c8eecfa7ce5bbe308d",
-  name: "img_account_sync_skype_light_and_dark",
-  type: "png",
-});
+export const get64BitValue = function get64BitValue(getUint32, sum4) {
+  return getUint32.getUint32(sum4 + 4);
+};

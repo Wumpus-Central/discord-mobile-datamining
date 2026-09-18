@@ -1,15 +1,15 @@
 // _runtime/metro/04078__.js
-import startOfMinute_mod from "../03937_startOfMinute.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import _typeof_mod from "03811__.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-let startOfMinute = startOfMinute_mod;
-if (!startOfMinute) {
-  const obj = { default: startOfMinute };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfMinute;
+  tmp3 = _typeof;
 }
-startOfMinute = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,10 +19,19 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameMinute(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfMinute.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfMinute.default(arg1).getTime();
+export default function isLeapYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const fullYear = _typeof.default(arg0).getFullYear();
+  const result = fullYear % 400;
+  let tmp4 = result === 0;
+  if (result !== 0) {
+    const result1 = fullYear % 4;
+    let tmp6 = result1 === 0;
+    if (result1 === 0) {
+      tmp6 = fullYear % 100 !== 0;
+    }
+    tmp4 = tmp6;
+  }
+  return tmp4;
 };
 export default exports.default;

@@ -1,11 +1,12 @@
 // _runtime/metro/06958__.js
-import cancelAnimation from "../01637_cancelAnimation.js";
+import ComposedGestureName from "../06907_ComposedGestureName.js";
+import _mod6956 from "06956__.js";
 
-const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
-const module_6951 = fn(6951);
-const memoResult = fn(19).memo(
-  module_6951.createBottomSheetScrollableComponent(fn(6739).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent),
-);
-memoResult.displayName = "BottomSheetSectionList";
+require = arg1;
+const dependencyMap = arg6;
 
-export default memoResult;
+export const useSimultaneousGestures = function useSimultaneousGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
+  return _mod6956.useComposedGesture.apply(items1);
+};

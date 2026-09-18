@@ -1,76 +1,62 @@
 // _runtime/metro/06892__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import RNGestureHandlerModuleDefault from "../06877_RNGestureHandlerModule.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class LongPressGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, LongPressGesture);
-    tmp2 = c2;
-    obj = c2(LongPressGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "LongPressGestureHandler";
-    result = tmp3Result.shouldCancelWhenOutside(true);
-    return tmp3Result;
-  }
-}
-_classCallCheck = LongPressGesture;
-_inherits(LongPressGesture, fn(6787).BaseGesture);
-const entry = {
-  key: "minDuration",
-  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
-    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-    return this;
+const require = arg1;
+importDefault = fn;
+let dependencyMap = arg6;
+let obj = {
+  createGestureHandler(Handler, handlerTag, config) {
+    _require = Handler;
+    closure_1 = handlerTag;
+    dependencyMap = config;
+    const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+      let obj2 = closure_2;
+      if (!closure_2) {
+        obj2 = {};
+      }
+      RNGestureHandlerModuleDefault.createGestureHandler(closure_0, closure_1, obj2);
+    });
   },
+  setGestureHandlerConfig(handlerTag, result) {
+    _require = handlerTag;
+    closure_1 = result;
+    result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+      result = RNGestureHandlerModuleDefault.setGestureHandlerConfig(closure_0, closure_1);
+    });
+  },
+  updateGestureHandlerConfig: null,
+  dropGestureHandler: null,
+  configureRelations: null,
+  installUIRuntimeBindings: null,
 };
-const items = [
-  entry,
-  {
-    key: "maxDistance",
-    value: function maxDistance(maxDist) {
-      this.config.maxDist = maxDist;
-      return this;
-    },
-  },
-  {
-    key: "numberOfPointers",
-    value: function numberOfPointers(numberOfPointers) {
-      this.config.numberOfPointers = numberOfPointers;
-      return this;
-    },
-  },
-];
+fn = function n(arg0, arg1) {
+  const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
+  RNGestureHandlerModuleDefault.flushOperations();
+};
+fn.__closure = {
+  updateGestureHandlerConfig: fn(6877).updateGestureHandlerConfig,
+  flushOperations: fn(6877).flushOperations,
+};
+fn.__workletHash = 12442858879797;
+fn.__initData = {
+  code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}",
+};
+obj.updateGestureHandlerConfig = fn;
+obj.dropGestureHandler = function dropGestureHandler(handlerTag) {
+  _require = handlerTag;
+  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+    RNGestureHandlerModuleDefault.dropGestureHandler(closure_0);
+  });
+};
+obj.configureRelations = function configureRelations(arg0, arg1) {
+  _require = arg0;
+  closure_1 = arg1;
+  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
+    RNGestureHandlerModuleDefault.configureRelations(closure_0, closure_1);
+  });
+};
+obj.installUIRuntimeBindings = function installUIRuntimeBindings() {
+  return RNGestureHandlerModuleDefault.installUIRuntimeBindings();
+};
 
-export const LongPressGesture = _createClass(LongPressGesture, items);
+export const NativeProxy = obj;

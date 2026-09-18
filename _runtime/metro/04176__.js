@@ -1,12 +1,26 @@
 // _runtime/metro/04176__.js
-import 02031__ from "02031__.js";
+import module_3992_mod from "03992__.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-if (!module_2031) {
-  const obj2 = { default: module_2031 };
-  let obj = obj2;
+let module_3992 = module_3992_mod;
+if (!module_3992) {
+  const obj = { default: module_3992 };
+  let tmp3 = obj;
 } else {
-  obj = module_2031;
+  tmp3 = module_3992;
 }
+module_3992 = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default { date: obj.default({ formats: { full: "EEEE, 'ng\u00E0y' d MMMM 'n\u0103m' y", long: "'ng\u00E0y' d MMMM 'n\u0103m' y", medium: "d MMM 'n\u0103m' y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function isToday(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_3992.default(arg0, Date.now());
+};
 export default exports.default;

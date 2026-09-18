@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "8fce658b14b12e381e1ecc554a57f171",
-  name: "img_roblox_dark",
+  hash: "e9fce92f06bbfad622591815c7f5f9ac",
+  name: "img_account_sync_twitch_white",
   type: "png",
 });

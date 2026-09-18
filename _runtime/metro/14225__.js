@@ -1,13 +1,16 @@
 // _runtime/metro/14225__.js
-import registerAsset from "01121__.js";
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/status",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "82f333ceda03bd515ab62e8f0d1ea043",
-  name: "StatusOnline",
-  type: "png",
-});
+export default (arg0) => {
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
+    }
+    let tmp2 = tmp;
+  } else {
+    tmp2 = closure_1;
+  }
+  return tmp2;
+};

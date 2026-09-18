@@ -1,41 +1,28 @@
 // _runtime/metro/06999__.js
-import _mod7000 from "07000__.js";
+import _mod19 from "00019__.js";
+import _mod6843 from "06843__.js";
 
-function _get() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect2 = Reflect;
-    if (Reflect.get) {
-      const _Reflect = Reflect;
-      exports = get.bind();
-    }
-    module.exports = exports;
-    const apply = exports.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
-    } else {
-      applyArgumentsResult = apply(null, arguments);
-    }
-    return applyArgumentsResult;
-  }
-  exports = (arg0, arg1, arg2) => {
-    const tmp = _mod7000(arg0, arg1);
-    if (tmp) {
-      const _Object = Object;
-      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
-      if (iter.get) {
-        let tmp3 = arg2;
-        const get = iter.get;
-        const call = get.call;
-        if (arguments.length < 3) {
-          tmp3 = arg0;
+const useLayoutEffect = _mod19.useLayoutEffect;
+
+export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (closure_0.current) {
+          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof closure_0.current.getBoundingClientRect === "function") {
+              const current2 = closure_0.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = closure_0.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
         }
-        typeof call === "unknown" ? get() : call(tmp3);
-      } else {
-        return iter.value;
       }
-    }
-  };
-}
-let exports = _get;
-
-export default _get;
+    });
+  }
+  obj = _mod6843;
+};

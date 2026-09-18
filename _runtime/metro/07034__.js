@@ -1,39 +1,19 @@
 // _runtime/metro/07034__.js
-import _mod6986 from "06986__.js";
-import _slicedToArray from "06968__.js";
+import _mod19 from "00019__.js";
+import _mod6825 from "06825__.js";
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+_mod19.useCallback;
 
-export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _mod6986.useLayoutState(0);
-  React4(() => {
-    let tmpResult = closure_0;
-    if (typeof closure_0 === "function") {
-      tmpResult = tmp();
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod6825.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
     }
-    closure_2.current = tmpResult;
-    if (closure_1 != null) {
-      tmp3();
-    }
-  }, arg1);
-  const items = [tmp3];
-  const items1 = [
-    tmp.current,
-    React3((fn, arg1) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
-        tmp = fn(ref.current);
-      }
-      if (tmp !== ref.current) {
-        tmp2.current = tmp;
-        arg1((arg0) => arg0 + 1, arg1);
-      }
-    }, items),
-  ];
-  return items1;
+  }, items);
+  return obj2;
 };

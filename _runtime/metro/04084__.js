@@ -1,26 +1,38 @@
 // _runtime/metro/04084__.js
-import module_4073_mod from "04073__.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import startOfISOWeekYear_mod from "../03972_startOfISOWeekYear.js";
+import module_3979_mod from "03979__.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-let module_4073 = module_4073_mod;
-if (!module_4073) {
-  const obj = { default: module_4073 };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4073;
+  tmp3 = startOfISOWeekYear;
 }
-module_4073 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+startOfISOWeekYear = tmp3;
+let module_3979 = module_3979_mod;
+if (!module_3979) {
+  const obj2 = { default: module_3979 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_3979;
 }
-requiredArgs = tmp5;
+module_3979 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let c3 = 604800000;
 
-export default function isThisHour(arg0) {
+export default function getISOWeeksInYear(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4073.default(Date.now(), arg0);
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const defaultResult2 = startOfISOWeekYear.default(module_3979.default(defaultResult1, 60));
+  return Math.round((startOfISOWeekYear.default(module_3979.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
 };
 export default exports.default;

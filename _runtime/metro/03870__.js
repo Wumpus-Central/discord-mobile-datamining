@@ -1,42 +1,38 @@
 // _runtime/metro/03870__.js
-import 03871__ from "03871__.js";
-import 03872__ from "03872__.js";
-import 03873__ from "03873__.js";
-import date_mod from "04172__.js";
-import date_mod from "04173__.js";
+let closure_0 = { about: "k\u00F6r\u00FClbel\u00FCl", over: "t\u00F6bb mint", almost: "majdnem", lessthan: "kevesebb mint" };
+let closure_1 = { xseconds: " m\u00E1sodperc", halfaminute: "f\u00E9l perc", xminutes: " perc", xhours: " \u00F3ra", xdays: " nap", xweeks: " h\u00E9t", xmonths: " h\u00F3nap", xyears: " \u00E9v" };
+let closure_2 = { xseconds: { "-1": " m\u00E1sodperccel ezel\u0151tt", 1: " m\u00E1sodperc m\u00FAlva", 0: " m\u00E1sodperce" }, halfaminute: { "-1": "f\u00E9l perccel ezel\u0151tt", 1: "f\u00E9l perc m\u00FAlva", 0: "f\u00E9l perce" }, xminutes: { "-1": " perccel ezel\u0151tt", 1: " perc m\u00FAlva", 0: " perce" }, xhours: { "-1": " \u00F3r\u00E1val ezel\u0151tt", 1: " \u00F3ra m\u00FAlva", 0: " \u00F3r\u00E1ja" }, xdays: { "-1": " nappal ezel\u0151tt", 1: " nap m\u00FAlva", 0: " napja" }, xweeks: { "-1": " h\u00E9ttel ezel\u0151tt", 1: " h\u00E9t m\u00FAlva", 0: " hete" }, xmonths: { "-1": " h\u00F3nappal ezel\u0151tt", 1: " h\u00F3nap m\u00FAlva", 0: " h\u00F3napja" }, xyears: { "-1": " \u00E9vvel ezel\u0151tt", 1: " \u00E9v m\u00FAlva", 0: " \u00E9ve" } };
 
-if (!module_3871) {
-  const obj = { default: module_3871 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3871;
-}
-if (!module_3872) {
-  const obj2 = { default: module_3872 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3872;
-}
-if (!module_3873) {
-  const obj3 = { default: module_3873 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3873;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function formatDistance(str, arg1, addSuffix) {
+  const match = str.match(/about|over|almost|lessthan/i);
+  if (match) {
+    str = str.replace(match[0], "");
+  }
+  addSuffix = undefined;
+  if (null != addSuffix) {
+    addSuffix = addSuffix.addSuffix;
+  }
+  const formatted = str.toLowerCase();
+  let num;
+  if (null != addSuffix) {
+    num = addSuffix.comparison;
+  }
+  if (!num) {
+    num = 0;
+  }
+  if (true === addSuffix) {
+    let tmp5 = closure_2[formatted][num];
+  } else {
+    tmp5 = closure_1[formatted];
+  }
+  let sum = tmp5;
+  if ("halfaminute" !== formatted) {
+    sum = arg1 + tmp5;
+  }
+  let text = sum;
+  if (match) {
+    text = `${closure_0[str3.toLowerCase(str3)]} ${tmp7}`;
+  }
+  return text;
+};
 export default exports.default;

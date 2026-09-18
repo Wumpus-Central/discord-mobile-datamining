@@ -1,124 +1,84 @@
 // _runtime/metro/10756__.js
-import AbstractTimeExpressionParser from "../10595_AbstractTimeExpressionParser.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
 
-const ENTimeExpressionParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export const parseYear = function parseYear(match) {
+  if (match.match(/^[0-9]{1,4}$/)) {
+    const _parseInt3 = parseInt;
+    const parsed = parseInt(match);
+    let sum = parsed;
+    if (parsed < 100) {
+      let num3 = 2000;
+      if (parsed > 50) {
+        num3 = 1900;
+      }
+      sum = parsed + num3;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class ENTimeExpressionParser {
-  constructor(arg0) {
-    self = this;
-    tmp = c2(this, ENTimeExpressionParser);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeExpressionParser);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    return tmp3(self, constructResult);
+    return sum;
+  } else if (match.match(/a\.?\s*c\.?/i)) {
+    const _parseInt2 = parseInt;
+    return -parseInt(match.replace(/a\.?\s*c\.?/i, ""));
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(match);
   }
-}
-_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
-const entry = {
-  key: "followingPhase",
-  value: function followingPhase() {
-    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|\\?)\\s*";
-  },
 };
-let items = [
-  entry,
-  {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:alle|dalle)\\s*)??";
-    },
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:o\\W*in punto|alle\\s*sera|in\\s*del\\s*(?:mattina|pomeriggio)))?(?!/)(?=\\W|$)";
-    },
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = hasOwnProperty(
-        _getPrototypeOf(ENTimeExpressionParser.prototype),
-        "extractPrimaryTimeComponents",
-        this,
-      );
-      dependencyMap = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => closure_1.apply(self, items);
-      }
-      const items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("sera")) {
-          value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", ENTimeExpressionParser(10575).Meridiem.PM);
-            }
-          }
-          if (value < 6) {
-            fnResult.assign("meridiem", ENTimeExpressionParser(10575).Meridiem.AM);
-          }
-        }
-        const first1 = arg1[0];
-        if (first1.endsWith("pomeriggio")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(10575).Meridiem.PM);
-          value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
-          }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        }
-        const first2 = arg1[0];
-        if (first2.endsWith("mattina")) {
-          fnResult.assign("meridiem", ENTimeExpressionParser(10575).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
-          }
-        }
-      }
-      return fnResult;
-    },
-  },
-];
-
-export default _createClass(ENTimeExpressionParser, items);
+export const WEEKDAY_DICTIONARY = {
+  domingo: 0,
+  dom: 0,
+  segunda: 1,
+  "segunda-feira": 1,
+  seg: 1,
+  terça: 2,
+  "terça-feira": 2,
+  ter: 2,
+  quarta: 3,
+  "quarta-feira": 3,
+  qua: 3,
+  quinta: 4,
+  "quinta-feira": 4,
+  qui: 4,
+  sexta: 5,
+  "sexta-feira": 5,
+  sex: 5,
+  sábado: 6,
+  sabado: 6,
+  sab: 6,
+};
+export const MONTH_DICTIONARY = {
+  janeiro: 1,
+  jan: 1,
+  "jan.": 1,
+  fevereiro: 2,
+  fev: 2,
+  "fev.": 2,
+  março: 3,
+  mar: 3,
+  "mar.": 3,
+  abril: 4,
+  abr: 4,
+  "abr.": 4,
+  maio: 5,
+  mai: 5,
+  "mai.": 5,
+  junho: 6,
+  jun: 6,
+  "jun.": 6,
+  julho: 7,
+  jul: 7,
+  "jul.": 7,
+  agosto: 8,
+  ago: 8,
+  "ago.": 8,
+  setembro: 9,
+  set: 9,
+  "set.": 9,
+  outubro: 10,
+  out: 10,
+  "out.": 10,
+  novembro: 11,
+  nov: 11,
+  "nov.": 11,
+  dezembro: 12,
+  dez: 12,
+  "dez.": 12,
+};
+export const YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";

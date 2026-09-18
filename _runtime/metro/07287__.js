@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 80,
+  httpServerLocation: "/assets/modules/guild_member_verification/images",
+  width: 88,
   height: 80,
-  scales: [2, 3],
-  hash: "f949eef54936cb2056a4a93d768a87c3",
-  name: "img_nitro_tier_0_icon_80px",
+  scales: [1, 2, 3],
+  hash: "c8acaccaced63579ec708b5154ef923d",
+  name: "updateAppIcon",
   type: "png",
 });

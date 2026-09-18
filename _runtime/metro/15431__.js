@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0071b2f7df228b871ee979869dc2eb38",
-  name: "CircleMinusIcon-primary",
+  hash: "edefaa7b105418ac79e91df5e7252965",
+  name: "ic_forward_chevron",
   type: "png",
 });

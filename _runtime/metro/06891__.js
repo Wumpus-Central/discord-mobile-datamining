@@ -1,68 +1,61 @@
 // _runtime/metro/06891__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import cancelAnimation from "../01637_cancelAnimation.js";
+import reactNativeWorkletsCompat from "../../discord_app/modules/gesture_handlers/native/reactNativeWorkletsCompat.js";
+import tagMessage from "../06853_tagMessage.js";
+import ghQueueMicrotask from "../06880_ghQueueMicrotask.js";
+import _mod6892 from "06892__.js";
 
-function _isNativeReflectConstruct() {
+try {
+  const _module = cancelAnimation;
   try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+    const _module1 = reactNativeWorkletsCompat;
+    if (_module1 != null) {
+      const fn = function t() {};
+      fn.__closure = {};
+      fn.__workletHash = 1792171573139;
+      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
+      _module1.scheduleOnUI(fn);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
+    const _module2 = ghQueueMicrotask;
+    _module2.ghQueueMicrotask(() => {
+      const NativeProxy = _mod6892.NativeProxy;
+      if (!NativeProxy.installUIRuntimeBindings()) {
+        const _console = console;
+        console.warn(
+          tagMessage.tagMessage(
+            "Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues.",
+          ),
+        );
+        const tmpResult = tagMessage;
+      }
+    });
+    let useSharedValue;
+    if (_module != null) {
+      useSharedValue = _module.useSharedValue;
+    }
+    let setGestureState = undefined === _module;
+    if (!setGestureState) {
+      setGestureState = _module.setGestureState;
+    }
+    if (!setGestureState) {
+      const fn2 = function o() {
+        console.warn(
+          tagMessage.tagMessage(
+            "Please use newer version of react-native-reanimated in order to control state of the gestures.",
+          ),
+        );
+      };
+      const obj = { tagMessage: tagMessage.tagMessage };
+      fn2.__closure = obj;
+      fn2.__workletHash = 3596069664305;
+      fn2.__initData = {
+        code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}",
+      };
+      _module.setGestureState = fn2;
+      const obj2 = {
+        code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}",
+      };
+    }
+    exports.Reanimated = _module;
   } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class FlingGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, FlingGesture);
-    tmp2 = c2;
-    obj = c2(FlingGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "FlingGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = FlingGesture;
-_inherits(FlingGesture, fn(6787).BaseGesture);
-const entry = {
-  key: "numberOfPointers",
-  value: function numberOfPointers(numberOfPointers) {
-    this.config.numberOfPointers = numberOfPointers;
-    return this;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "direction",
-    value: function direction(dependencyMap) {
-      this.config.direction = dependencyMap;
-      return this;
-    },
-  },
-];
-
-export const FlingGesture = _createClass(FlingGesture, items);
+} catch (err) {}

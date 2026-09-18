@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
+  httpServerLocation: "/assets/modules/vibegrations/intl",
   scales: [1],
-  hash: "0d8e0aca892829464e76fe45a7c4fe19",
-  name: "nl.messages.0d8e0aca892829464e76fe45a7c4fe19.compiled.messages",
+  hash: "1d411283d5aa37c46aee01abae8b9c82",
+  name: "VibegrationsUntranslated.compiled.messages",
   type: "jsona",
 });

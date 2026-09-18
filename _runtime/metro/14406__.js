@@ -1,23 +1,11 @@
 // _runtime/metro/14406__.js
+import registerAsset from "01121__.js";
 
-export const collations = [
-  "big5han",
-  "compat",
-  "dict",
-  "direct",
-  "ducet",
-  "emoji",
-  "eor",
-  "gb2312",
-  "phonebk",
-  "phonetic",
-  "pinyin",
-  "reformed",
-  "search",
-  "searchjl",
-  "standard",
-  "stroke",
-  "trad",
-  "unihan",
-  "zhuyin",
-];
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/intl/messages",
+  scales: [1],
+  hash: "1423f8b5a8dd93562c540fb8771f0f9e",
+  name: "untranslated.compiled.messages",
+  type: "jsona",
+});

@@ -1,18 +1,21 @@
 // _runtime/metro/13058__.js
+import _mod13057 from "13057__.js";
+import _mod13059 from "13059__.js";
 
-export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
-  let tmp;
-  if (undefined !== arg0) {
-    if (arg0 < 400) {
-      let str2;
-      if (arg0 >= 500) {
-        str2 = "error";
-      }
-      let str = str2;
-    } else {
-      str = "warning";
-    }
-    tmp = str;
+require = arg1;
+const dependencyMap = arg6;
+
+export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod13057.getSentryCarrier(mainCarrier);
+  if (sentryCarrier.acs) {
+    let acs = sentryCarrier.acs;
+  } else {
+    acs = _mod13059.getStackAsyncContextStrategy();
+    const tmpResult = _mod13059;
   }
-  return tmp;
+  return acs;
+};
+export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
+  const mainCarrier = _mod13057.getMainCarrier();
+  _mod13057.getSentryCarrier(mainCarrier).acs = acs;
 };

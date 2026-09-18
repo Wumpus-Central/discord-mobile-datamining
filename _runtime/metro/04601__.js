@@ -1,13 +1,16 @@
 // _runtime/metro/04601__.js
-import registerAsset from "01121__.js";
+import _mod19 from "00019__.js";
+import _mod4598 from "04598__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "dd2bf1474590dee83bbb5fea2b4f182c",
-  name: "CircleCheckIcon-primary",
-  type: "png",
-});
+const useContext = _mod19.useContext;
+
+export const usePortalState = (name) => {
+  const tmp = useContext(_mod4598.PortalStateContext);
+  if (null === tmp) {
+    const _Error = Error;
+    const error = new Error("'PortalStateContext' cannot be null, please add 'PortalProvider' to the root component.");
+    throw error;
+  } else {
+    return tmp[name] || [];
+  }
+};

@@ -1,13 +1,85 @@
 // _runtime/metro/08777__.js
-import registerAsset from "01121__.js";
+import _modDef8713 from "08713__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "c08dbe4e409a6c5d300d5c847a8685e2",
-  name: "ic_stage_channel_24px",
-  type: "png",
-});
+const Polygon = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+const jsx = fn(21).jsx;
+class Polygon {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Polygon);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(Polygon);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polygon(8778)(points) + "z";
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
+  }
+}
+_inherits(Polygon, _modDef8713);
+const entry = {
+  key: "render",
+  value: function render() {
+    const props = this.props;
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polygon(8778)(points) + "z";
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polygon(8773), { ref: this.refMethod, d: null });
+  },
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(Polygon, items);
+importDefaultResultResult.displayName = "Polygon";
+importDefaultResultResult.defaultProps = { points: "" };
+
+export default importDefaultResultResult;

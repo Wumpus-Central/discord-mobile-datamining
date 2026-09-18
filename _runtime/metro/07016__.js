@@ -1,137 +1,81 @@
 // _runtime/metro/07016__.js
-import _mod7013 from "07013__.js";
-import noop from "00019__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import value22 from "../06821_value2.js";
+import _mod7017 from "07017__.js";
+import noop_mod from "00019__.js";
 
-({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-
-export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
-  closure_0 = recyclerViewManager;
-  closure_1 = arg1;
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(Date.now());
-  const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = _mod7013.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  let num = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num = recyclerViewManager.getWindowSize().height;
-  }
-  let num2 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num2 = recyclerViewManager.getChildContainerDimensions().height;
-  }
-  let num3 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num3 = recyclerViewManager.getWindowSize().width;
-  }
-  let num4 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num4 = recyclerViewManager.getChildContainerDimensions().width;
-  }
-  const items = [recyclerViewManager];
-  const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
-  const checkBounds = React2(() => {
-    closure_5.current = Date.now();
-    const props = closure_0.props;
-    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } =
-      props);
-    let num;
-    if (maintainVisibleContentPosition != null) {
-      num = maintainVisibleContentPosition.autoscrollToBottomThreshold;
-    }
-    if (num == null) {
-      num = -1;
-    }
-    if (closure_0.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = closure_0.getAbsoluteLastScrollOffset();
-      const size = closure_0.getChildContainerDimensions();
-      const size2 = closure_0.getWindowSize();
-      const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + closure_0.firstItemOffset;
-      if (tmp3 > 0) {
-        if (onEndReached) {
-          if (onEndReachedThreshold == null) {
-            onEndReachedThreshold = 0.5;
-          }
-          const _Math = Math;
-          const result = onEndReachedThreshold * tmp3;
-          const tmp6 = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result;
-          let tmp7 = tmp6;
-          if (tmp6) {
-            tmp7 = !ref.current;
-          }
-          if (tmp7) {
-            ref.current = true;
-            onEndReached();
-          }
-          ref.current = tmp6;
-        }
-        if (onStartReached) {
-          if (onStartReachedThreshold == null) {
-            onStartReachedThreshold = 0.2;
-          }
-          let tmp13 = tmp12;
-          if (absoluteLastScrollOffset <= onStartReachedThreshold * tmp3) {
-            tmp13 = !ref2.current;
-          }
-          if (tmp13) {
-            ref2.current = true;
-            onStartReached();
-          }
-          ref2.current = absoluteLastScrollOffset <= onStartReachedThreshold * tmp3;
-        }
-        if (!tmp2) {
-          if (num >= 0) {
-            const _Math2 = Math;
-            const result1 = num * tmp3;
-            closure_4.current = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result1;
-          }
-        }
-      }
-    }
-  }, items);
-  const tmp2 = React2(() => {
-    let current = props.isOffsetProjectionEnabled;
-    if (current) {
-      current = ref3.current;
-    }
-    if (current) {
-      ref3.current = false;
-      _requestAnimationFrame(() => {
-        const maintainVisibleContentPosition = props.props.maintainVisibleContentPosition;
-        let flag;
-        if (maintainVisibleContentPosition != null) {
-          flag = maintainVisibleContentPosition.animateAutoScrollToBottom;
-        }
-        if (flag == null) {
-          flag = true;
-        }
-        const current = ref.current;
-        if (current != null) {
-          if (flag) {
-            flag = !props.ignoreScrollEvents;
-          }
-          const obj = { animated: flag };
-          current.scrollToEnd(obj);
-        }
-      });
-    }
-  }, items1);
-  closure_7 = tmp2;
-  const items2 = [data];
-  React4(() => {
-    closure_2.current = false;
-  }, items2);
-  const items3 = [data, tmp2, num, num3];
-  React3(() => {
-    closure_7();
-  }, items3);
-  const items4 = [num2, num4, recyclerViewManager.firstItemOffset, tmp2];
-  React3(() => {
-    if (Date.now() - ref4.current >= 100) {
-      closure_7();
-    }
-  }, items4);
-  return { checkBounds };
+let noop = noop_mod;
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+const __initData = {
+  code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}",
 };
+const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
+  animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
+  let num = animatedFooterPosition.bottomInset;
+  if (num === undefined) {
+    num = 0;
+  }
+  const style = animatedFooterPosition.style;
+  const children = animatedFooterPosition.children;
+  let animatedStyle;
+  const tmp = animatedStyle(null);
+  const bottomSheetInternal = animatedFooterPosition(style[2]).useBottomSheetInternal();
+  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  let obj = animatedFooterPosition(style[2]);
+  const tmp2 = style;
+  const fn = function c() {
+    value = animatedFooterPosition.get();
+    value2 = animatedKeyboardState.get();
+    let diff = value;
+    if (value2 !== value22.KEYBOARD_STATE.SHOWN) {
+      diff = value - num;
+    }
+    const obj = { transform: null };
+    const items = [{ translateY: Math.max(0, diff) }];
+    obj.transform = items;
+    return obj;
+  };
+  const obj2 = animatedFooterPosition(style[3]);
+  fn.__closure = {
+    animatedFooterPosition,
+    animatedKeyboardState,
+    KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE,
+    bottomInset: num,
+  };
+  fn.__workletHash = 5322275157644;
+  fn.__initData = __initData;
+  let items = [num, animatedKeyboardState, animatedFooterPosition];
+  animatedStyle = obj2.useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  const items2 = [animatedFooterHeight];
+  const obj3 = {
+    animatedFooterPosition,
+    animatedKeyboardState,
+    KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE,
+    bottomInset: num,
+  };
+  const items3 = [animatedFooterHeight];
+  const tmp5 = animatedKeyboardState(() => {
+    const items = [_mod7017.styles.container, style, animatedStyle];
+    return items;
+  }, items1);
+  const tmp6 = animatedFooterHeight((nativeEvent) => {
+    const result = animatedFooterHeight.set(nativeEvent.nativeEvent.layout.height);
+  }, items2);
+  const tmp7 = animatedFooterHeight((height) => {
+    const result = animatedFooterHeight.set(height.height);
+  }, items3);
+  const boundingClientRect = animatedFooterPosition(style[2]).useBoundingClientRect(tmp, tmp7);
+  let tmp9 = null;
+  if (null !== children) {
+    const obj5 = { ref: tmp, onLayout: tmp6, style: tmp5, children };
+    tmp9 = jsx(num(tmp2[3]).View, { ref: tmp, onLayout: tmp6, style: tmp5, children });
+  }
+  return tmp9;
+});
+memoResult.displayName = "BottomSheetFooter";
+
+export const BottomSheetFooter = memoResult;

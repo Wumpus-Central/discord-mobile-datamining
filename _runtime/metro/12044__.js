@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/safety_hub/images",
-  width: 350,
-  height: 350,
-  scales: [1],
-  hash: "ebaa362a049339e084011170417c750e",
-  name: "video_light",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "b62bcdbe576aad312fb756c1125d76bb",
+  name: "ic_upload",
   type: "png",
 });

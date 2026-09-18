@@ -1,66 +1,30 @@
 // _runtime/metro/03873__.js
-import _mod3874 from "03874__.js";
-import module_3730_mod from "03730__.js";
+import 02117__ from "02117__.js";
 
-let module_3730 = module_3730_mod;
-if (!module_3730) {
-  const obj = { default: module_3730 };
-  let tmp3 = obj;
+if (!module_2117) {
+  const obj2 = { default: module_2117 };
+  let obj = obj2;
 } else {
-  tmp3 = module_3730;
+  obj = module_2117;
 }
-module_3730 = tmp3;
-const dependencyMap = ["\u043D\u0435\u0434\u0456\u043B\u044E", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E", "\u0441\u0443\u0431\u043E\u0442\u0443"];
-let closure_4 = {
-  lastWeek: function lastWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = _mod3874.toDate(arg0);
-    const uTCDay = toDateResult.getUTCDay();
-    if (module_3730.default(toDateResult, arg1, arg2)) {
-      let text = `${"'\u0443 " + tmp2} о' p`;
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (5 !== uTCDay) {
-            if (6 !== uTCDay) {
-              text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0438\u0439 " + tmp2} о' p`;
-            }
-          }
-        }
-      }
-      text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0443 " + tmp2} о' p`;
-    }
-    return text;
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + ".";
   },
-  yesterday: "'\u0432\u0447\u043E\u0440\u0430 \u043E' p",
-  today: "'\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043E' p",
-  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u043E' p",
-  nextWeek: function nextWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = _mod3874.toDate(arg0);
-    const uTCDay = toDateResult.getUTCDay();
-    if (module_3730.default(toDateResult, arg1, arg2)) {
-      let text = `${"'\u0443 " + tmp2} о' p`;
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (5 !== uTCDay) {
-            if (6 !== uTCDay) {
-              text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 " + tmp2} о' p`;
-            }
-          }
-        }
-      }
-      text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 " + tmp2} о' p`;
-    }
-    return text;
-  },
-  other: "P"
+  era: obj.default({ values: { narrow: ["ie.", "isz."], abbreviated: ["i. e.", "i. sz."], wide: ["Krisztus el\u0151tt", "id\u0151sz\u00E1m\u00EDt\u00E1sunk szerint"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1.", "2.", "3.", "4."], abbreviated: ["1. n.\u00E9v", "2. n.\u00E9v", "3. n.\u00E9v", "4. n.\u00E9v"], wide: ["1. negyed\u00E9v", "2. negyed\u00E9v", "3. negyed\u00E9v", "4. negyed\u00E9v"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
+    },
+    formattingValues: { narrow: ["I.", "II.", "III.", "IV."], abbreviated: ["I. n.\u00E9v", "II. n.\u00E9v", "III. n.\u00E9v", "IV. n.\u00E9v"], wide: ["I. negyed\u00E9v", "II. negyed\u00E9v", "III. negyed\u00E9v", "IV. negyed\u00E9v"] },
+    defaultFormattingWidth: "wide"
+  }),
+  month: obj.default({ values: { narrow: ["J", "F", "M", "\u00C1", "M", "J", "J", "A", "Sz", "O", "N", "D"], abbreviated: ["jan.", "febr.", "m\u00E1rc.", "\u00E1pr.", "m\u00E1j.", "j\u00FAn.", "j\u00FAl.", "aug.", "szept.", "okt.", "nov.", "dec."], wide: ["janu\u00E1r", "febru\u00E1r", "m\u00E1rcius", "\u00E1prilis", "m\u00E1jus", "j\u00FAnius", "j\u00FAlius", "augusztus", "szeptember", "okt\u00F3ber", "november", "december"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["V", "H", "K", "Sz", "Cs", "P", "Sz"], short: ["V", "H", "K", "Sze", "Cs", "P", "Szo"], abbreviated: ["V", "H", "K", "Sze", "Cs", "P", "Szo"], wide: ["vas\u00E1rnap", "h\u00E9tf\u0151", "kedd", "szerda", "cs\u00FCt\u00F6rt\u00F6k", "p\u00E9ntek", "szombat"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "du.", evening: "este", night: "\u00E9jjel" }, abbreviated: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "du.", evening: "este", night: "\u00E9jjel" }, wide: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "d\u00E9lut\u00E1n", evening: "este", night: "\u00E9jjel" } }, defaultWidth: "wide" })
 };
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_4[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
-};
+export default date;
 export default exports.default;

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_identity/images",
+  width: 295,
+  height: 190,
   scales: [2, 3],
-  hash: "9efbede8b87c94f401364acf34876922",
-  name: "HammerIcon",
+  hash: "977038e35a08043eb799ac3c20093988",
+  name: "guild_identity_education_dark",
   type: "png",
 });

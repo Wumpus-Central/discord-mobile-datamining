@@ -1,13 +1,30 @@
 // _runtime/metro/08558__.js
-import registerAsset from "01121__.js";
+import colorPropType from "../08546_colorPropType.js";
+import _mod8554 from "08554__.js";
+import merged12 from "../08555_merged1.js";
+import merged22 from "../08556_merged2.js";
+import emptyFunction_mod from "04551__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 88,
-  height: 80,
-  scales: [2, 3],
-  hash: "cdacc9b330d74f767eb28d253e6930f0",
-  name: "stage-sparkles",
-  type: "png",
-});
+const obj = {};
+const size = Object.assign(_mod8554);
+const merged1 = Object.assign(merged12);
+const merged2 = Object.assign(merged22);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["center", "contain", "cover", "repeat", "stretch"]);
+let emptyFunction = emptyFunction_mod;
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderWidth = emptyFunction.number;
+obj.borderRadius = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.overflow = emptyFunction.oneOf(["visible", "hidden"]);
+obj.tintColor = colorPropType;
+obj.opacity = emptyFunction.number;
+obj.overlayColor = emptyFunction.string;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
+
+export default obj;

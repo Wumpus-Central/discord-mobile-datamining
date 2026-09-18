@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "9710a1ee79723d3b78a21470e6bc1f77",
-  name: "ShieldIcon",
+  hash: "17353b23aadfbe0d3f7b9982ef6491bf",
+  name: "img_nitro_file_upload",
   type: "png",
 });

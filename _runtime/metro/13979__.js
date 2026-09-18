@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/oauth2",
-  width: 375,
-  height: 812,
-  scales: [2, 3],
-  hash: "9f0466452ea774e0a27ad50f4f806303",
-  name: "background",
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 120,
+  height: 120,
+  scales: [1],
+  hash: "94bb0fdcfba6a856a1567cdd4f281049",
+  name: "mallow",
   type: "png",
 });

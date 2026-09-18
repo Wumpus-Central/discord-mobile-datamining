@@ -1,49 +1,13 @@
 // _runtime/metro/10654__.js
-import alphaNum from "../10651_alphaNum.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import registerAsset from "01121__.js";
 
-const JPWeekdayParser = require;
-const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
-const regExp = new RegExp(
-  "((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" + keys.join("|") + ")(?:\u66DC\u65E5|\u66DC)",
-  "i",
-);
-class JPWeekdayParser {
-  constructor() {
-    tmp = c2(this, JPWeekdayParser);
-    return;
-  }
-}
-const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "extract",
-    value: function extract(reference, groups) {
-      const tmp3 = JPWeekdayParser(10651).WEEKDAY_OFFSET[groups.groups.weekday];
-      if (undefined === tmp3) {
-        return null;
-      } else {
-        let str2 = "last";
-        if (!groups.groups.prefix || "".match(/前の/)) {
-          str2 = "next";
-          if (!str.match(/次の/)) {
-            str2 = null;
-            if (str.match(/今週/)) {
-              str2 = "this";
-            }
-          }
-        }
-        return JPWeekdayParser(10608).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
-      }
-    },
-  },
-];
-
-export default _createClass(JPWeekdayParser, items);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/stickers/native/images",
+  width: 250,
+  height: 120,
+  scales: [2, 3],
+  hash: "97335968179b868ec33c96b39450902f",
+  name: "img_premium_canvas_mobile",
+  type: "png",
+});

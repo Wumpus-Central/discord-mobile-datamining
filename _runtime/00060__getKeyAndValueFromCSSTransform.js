@@ -52,7 +52,7 @@ export default function processTransform(str) {
                 let entry2 = { key: tmp3, value: Number(match2[1]) };
                 entry1 = entry2;
               } else {
-                let entry3 = { key: tmp3, value: "a" };
+                let entry3 = { key: tmp3, value: "Array" };
                 entry1 = entry3;
               }
             }

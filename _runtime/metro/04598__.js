@@ -1,13 +1,8 @@
 // _runtime/metro/04598__.js
-import registerAsset from "01121__.js";
+import _mod19 from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "11be77dcd70d75753c8cf2c079b0771e",
-  name: "TrashIcon",
-  type: "png",
-});
+const createContext = _mod19.createContext;
+const context = createContext(null);
+
+export const PortalStateContext = context;
+export const PortalDispatchContext = createContext(null);

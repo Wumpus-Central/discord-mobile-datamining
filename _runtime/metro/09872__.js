@@ -1,40 +1,13 @@
 // _runtime/metro/09872__.js
-import _mod9873 from "09873__.js";
-import get_ActivityIndicator from "00017__.js";
+import registerAsset from "01121__.js";
 
-({
-  NativeModules: c3,
-  Platform,
-  TurboModuleRegistry: closure_4,
-  requireNativeComponent: hasOwnProperty,
-} = get_ActivityIndicator);
-
-export const getNativeComponent = () => {
-  try {
-    return hasOwnProperty("RNDatePicker");
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod9873.getInstallationErrorMessage());
-    }
-  }
-};
-export const getNativeModule = () => {
-  try {
-    if (React4) {
-      RNDatePicker = React4.get("RNDatePicker");
-    } else {
-      RNDatePicker = RNDatePicker.RNDatePicker;
-    }
-    return RNDatePicker;
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod9873.getInstallationErrorMessage());
-    }
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "c798cdd6cfa2489cf860b2f5f03c8c4f",
+  name: "ic_mic_muted_24px",
+  type: "png",
+});

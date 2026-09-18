@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 500,
-  height: 500,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "537a5a5a0fd47a14c531a6a53114ce50",
-  name: "img_account_sync_crunchyroll_white",
+  hash: "07d32c275cec4eea23627ed6a4c37375",
+  name: "img_account_sync_league_of_legends_light_and_dark",
   type: "svg",
 });

@@ -1,21 +1,50 @@
 // _runtime/metro/06998__.js
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import noop from "00019__.js";
 
-export default _getPrototypeOf;
+const require = globalThis.__r;
+
+({ useEffect: c2, useRef: c3 } = noop);
+
+export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
+  }
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("cancelAnimation").makeMutable(obj2);
+        let obj = require("cancelAnimation");
+      } else {
+        mutable = require("cancelAnimation").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("cancelAnimation");
+      }
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
+    }
+  }
+  closure_2(
+    () => () => {
+      if (ref.current) {
+        ref(dependencyMap[1]).cancelAnimation(tmp.current);
+        const obj = ref(dependencyMap[1]);
+      }
+    },
+    [],
+  );
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
+};

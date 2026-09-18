@@ -1,6 +1,14 @@
 // _runtime/metro/06957__.js
-import _mod17 from "00017__.js";
+import ComposedGestureName from "../06907_ComposedGestureName.js";
+import _mod6956 from "06956__.js";
 
-const StyleSheet = _mod17.StyleSheet;
+require = arg1;
+const dependencyMap = arg6;
 
-export const styles = StyleSheet.create({ container: { flex: 1, overflow: "visible" } });
+export const useExclusiveGestures = function useExclusiveGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Exclusive, ...items];
+  const applyResult = _mod6956.useComposedGesture.apply(items1);
+  applyResult.type = ComposedGestureName.ComposedGestureName.Exclusive;
+  return applyResult;
+};

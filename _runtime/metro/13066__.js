@@ -1,66 +1,69 @@
 // _runtime/metro/13066__.js
-import stackParserFromStackParserOptions from "../12951_stackParserFromStackParserOptions.js";
-import _mod12954 from "12954__.js";
-import _mod13064 from "13064__.js";
+import _mod13040 from "13040__.js";
+import _mod13045 from "13045__.js";
+import _mod13057 from "13057__.js";
+import _mod13058 from "13058__.js";
+import ScopeClass from "../13060_ScopeClass.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
-  let replaced;
-  if (str) {
-    replaced = str.replace(/^file:\/\//, "");
-  }
-  let sum;
-  if (location.location.columnNumber) {
-    sum = location.location.columnNumber + 1;
-  }
-  let sum1;
-  if (location.location.lineNumber) {
-    sum1 = location.location.lineNumber + 1;
-  }
-  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
-  const obj = _mod12954;
-  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-  obj2.colno = sum;
-  obj2.lineno = sum1;
-  let filenameIsInAppResult;
-  if (replaced) {
-    filenameIsInAppResult = _mod13064.filenameIsInApp(replaced);
-    const tmp4Result = _mod13064;
-  }
-  obj2.in_app = filenameIsInAppResult;
-  return obj.dropUndefinedKeys(obj2);
+export const getClient = function getClient() {
+  const mainCarrier = _mod13057.getMainCarrier();
+  const asyncContextStrategy = _mod13058.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
 };
-export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
-  const timerId = setInterval(() => {
-    const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
+export const getCurrentScope = function getCurrentScope() {
+  const mainCarrier = _mod13057.getMainCarrier();
+  const asyncContextStrategy = _mod13058.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+};
+export const getGlobalScope = function getGlobalScope() {
+  return _mod13040.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getIsolationScope = function getIsolationScope() {
+  const mainCarrier = _mod13057.getMainCarrier();
+  const asyncContextStrategy = _mod13058.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+};
+export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod13045.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+};
+export const withIsolationScope = function withIsolationScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod13057.getMainCarrier();
+  const asyncContextStrategy = _mod13058.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
     if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
     }
+    return result;
+  } else {
+    return asyncContextStrategy.withIsolationScope(items[0]);
+  }
+};
+export const withScope = function withScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod13057.getMainCarrier();
+  const asyncContextStrategy = _mod13058.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
     if (tmp2) {
-      c4 = true;
-      if (closure_5) {
-        closure_2();
-      }
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
     }
-    if (timeMs < closure_0 + closure_1) {
-      c4 = false;
-    }
-  }, 20);
-  return {
-    poll() {
-      navigation.reset();
-    },
-    enabled(arg0) {
-      closure_5 = arg0;
-    },
-  };
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
+  }
 };

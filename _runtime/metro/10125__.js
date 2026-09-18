@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "c9f854c83b9079fe0ab040df65e3caf2",
-  name: "nav_header_disconnect",
+  hash: "811fb35960f597c4ee3417f16bd2f9e6",
+  name: "messages",
   type: "png",
 });

@@ -1,54 +1,44 @@
 // _runtime/metro/03967__.js
-import _typeof_mod from "03728__.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
-import startOfUTCISOWeek_mod from "../03965_startOfUTCISOWeek.js";
+import module_3815_mod from "03815__.js";
+import module_3968_mod from "03968__.js";
+import module_3971_mod from "03971__.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_3815 = module_3815_mod;
+if (!module_3815) {
+  const obj = { default: module_3815 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3815;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_3815 = tmp3;
+let module_3968 = module_3968_mod;
+if (!module_3968) {
+  const obj2 = { default: module_3968 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_3968;
 }
-requiredArgs = tmp5;
-let startOfUTCISOWeek = startOfUTCISOWeek_mod;
-if (!startOfUTCISOWeek) {
-  const obj3 = { default: startOfUTCISOWeek };
+module_3968 = tmp5;
+let module_3971 = module_3971_mod;
+if (!module_3971) {
+  const obj3 = { default: module_3971 };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfUTCISOWeek;
+  tmp7 = module_3971;
 }
-startOfUTCISOWeek = tmp7;
+module_3971 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function getUTCISOWeekYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const uTCFullYear = defaultResult1.getUTCFullYear();
-  const date = new Date(0);
-  date.setUTCFullYear(uTCFullYear + 1, 0, 4);
-  date.setUTCHours(0, 0, 0, 0);
-  const date1 = new Date(0);
-  date1.setUTCFullYear(uTCFullYear, 0, 4);
-  date1.setUTCHours(0, 0, 0, 0);
-  const defaultResult2 = startOfUTCISOWeek.default(date);
-  const time = defaultResult1.getTime();
-  if (time >= defaultResult2.getTime()) {
-    let sum = uTCFullYear + 1;
-  } else {
-    const time1 = defaultResult1.getTime();
-    sum = uTCFullYear;
-    if (time1 < defaultResult3.getTime()) {
-      sum = uTCFullYear - 1;
-    }
-  }
-  return sum;
+export default function addISOWeekYears(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_3971.default(arg0, module_3968.default(arg0) + module_3815.default(arg1));
 };
 export default exports.default;

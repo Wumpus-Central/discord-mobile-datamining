@@ -1,40 +1,17 @@
 // _runtime/metro/14543__.js
+import _mod14534 from "14534__.js";
+import _mod14542 from "14542__.js";
+import _mod14544 from "14544__.js";
+import _mod14545 from "14545__.js";
 
-export default () => (startTimer) => {
-  closure_0 = startTimer;
-  startTimer = startTimer.startTimer;
-  return {
-    features: {
-      benchmark(title) {
-        const items = [];
-        closure_2 = items();
-        function step(title) {
-          let num = 0;
-          if (0 !== items.length) {
-            num = items[items.length - 1].time;
-          }
-          const tmp = closure_2();
-          items.push({ title, time: tmp, delta: tmp - num });
-          const obj = { title, time: tmp, delta: tmp - num };
-        }
-        items.push({ title, time: 0, delta: 0 });
-        function stop(title) {
-          if (typeof step === "function") {
-            let num = 0;
-            if (0 !== items.length) {
-              num = items[items.length - 1].time;
-            }
-            const tmp3 = closure_2();
-            const obj = { title, time: tmp3, delta: tmp3 - num };
-            items.push(obj);
-            const obj2 = { title, steps: items };
-            title.send("benchmark.report", obj2);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        return { step, stop, last: stop };
-      },
-    },
-  };
-};
+export default _mod14534
+  ? (arg0) => typeof arg0 === "symbol"
+  : (arg0) => {
+      const tmp3 = _mod14544("Symbol");
+      let tmpResultResult = _mod14542(tmp3);
+      if (tmpResultResult) {
+        tmpResultResult = _mod14545(tmp3.prototype, Object(arg0));
+        const tmpResult = _mod14545;
+      }
+      return tmpResultResult;
+    };

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 12,
+  height: 12,
   scales: [2, 3],
-  hash: "b001972a2062de923c0ef45fb0f2ab23",
-  name: "VideoIcon",
+  hash: "b28329d7d2ebd0b330f6112973e5d746",
+  name: "ic_sparkle",
   type: "png",
 });

@@ -1,13 +1,3 @@
 // _runtime/metro/10113__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "4f5dc667b92ff05a99d9028260a9bf5b",
-  name: "ImageSparkleIcon",
-  type: "png",
-});
+export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };

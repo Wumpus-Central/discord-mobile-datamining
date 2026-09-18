@@ -1,9 +1,17 @@
 // _runtime/metro/05039__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import _mod5022 from "05022__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenFooter", validAttributes: {} };
-
-export default module_65.get("RNSScreenFooter", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
+  let tmp = _mod5022(arg1);
+  if (tmp) {
+    tmp = "[[Enumerable]]" in arg1;
+  }
+  if (tmp) {
+    tmp = "[[Configurable]]" in arg1;
+  }
+  if (tmp) {
+    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
+    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
+  }
+  return tmp;
+}

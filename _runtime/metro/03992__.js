@@ -1,45 +1,28 @@
 // _runtime/metro/03992__.js
-import _typeof_mod from "03728__.js";
-import startOfYear_mod from "../03947_startOfYear.js";
-import differenceInCalendarDays_mod from "../03890_differenceInCalendarDays.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import startOfDay_mod from "../03975_startOfDay.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfDay = startOfDay_mod;
+if (!startOfDay) {
+  const obj = { default: startOfDay };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfDay;
 }
-_typeof = tmp3;
-let startOfYear = startOfYear_mod;
-if (!startOfYear) {
-  const obj2 = { default: startOfYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfYear;
-}
-startOfYear = tmp5;
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  const obj3 = { default: differenceInCalendarDays };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp7;
+startOfDay = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function getDayOfYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
+export default function isSameDay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfDay.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfDay.default(arg1).getTime();
 };
 export default exports.default;

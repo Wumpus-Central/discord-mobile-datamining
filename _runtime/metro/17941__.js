@@ -1,12 +1,13 @@
 // _runtime/metro/17941__.js
+import registerAsset from "01121__.js";
 
-export default function basePropertyOf(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    let tmp2;
-    if (null != closure_0) {
-      tmp2 = tmp[arg0];
-    }
-    return tmp2;
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f8d71a087b50ca9ab07431463764cd8d",
+  name: "ic_sync_24px",
+  type: "png",
+});

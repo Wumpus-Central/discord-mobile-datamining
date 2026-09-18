@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/billing/native/images",
-  width: 223,
-  height: 128.5,
+  httpServerLocation: "/assets/images/channel_following/dark",
+  width: 280,
+  height: 120,
   scales: [2, 3],
-  hash: "f5aa8d22ffc464d3c9704d96fbbd1afa",
-  name: "blocked-purchases-dark",
+  hash: "9c2cfd53ed0ab3abd70ee33b26a982e5",
+  name: "channel_following_success_2",
   type: "png",
 });

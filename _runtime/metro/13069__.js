@@ -1,6 +1,9 @@
 // _runtime/metro/13069__.js
+import errorCallback from "../13035_errorCallback.js";
 
-export const escapeStringForRegex = function escapeStringForRegex(str) {
-  str = str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
-  return str.replace(/-/g, "\\x2d");
+require = arg1;
+const dependencyMap = arg6;
+
+export const addTracingExtensions = function addTracingExtensions() {
+  const result = errorCallback.registerSpanErrorInstrumentation();
 };

@@ -1,42 +1,38 @@
 // _runtime/metro/04180__.js
-import 04181__ from "04181__.js";
-import 04182__ from "04182__.js";
-import 04183__ from "04183__.js";
-import date_mod from "04184__.js";
-import date_mod from "04185__.js";
+import _typeof_mod from "03811__.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
-if (!module_4181) {
-  const obj = { default: module_4181 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4181;
+  tmp3 = _typeof;
 }
-if (!module_4182) {
-  const obj2 = { default: module_4182 };
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4182;
+  tmp5 = requiredArgs;
 }
-if (!module_4183) {
-  const obj3 = { default: module_4183 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4183;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp5;
 
-export default { code: "zh-CN", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function isWithinInterval(arg0, start) {
+  requiredArgs.default(2, arguments);
+  const time = _typeof.default(arg0).getTime();
+  const defaultResult1 = _typeof.default(arg0);
+  const time1 = _typeof.default(start.start).getTime();
+  const defaultResult2 = _typeof.default(start.start);
+  const time2 = _typeof.default(start.end).getTime();
+  if (time1 <= time2) {
+    return time >= time1 && time <= time2;
+  } else {
+    const _RangeError = RangeError;
+    const rangeError = new RangeError("Invalid interval");
+    throw rangeError;
+  }
+  const defaultResult3 = _typeof.default(start.end);
+};
 export default exports.default;

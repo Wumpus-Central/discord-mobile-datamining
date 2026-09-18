@@ -1,12 +1,12 @@
 // _runtime/metro/10762__.js
-import AbstractParserWithWordBoundaryChecking from "../10588_AbstractParserWithWordBoundaryChecking.js";
+import AbstractParserWithWordBoundaryChecking from "../10682_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ITCasualTimeParser = require;
+const PTCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,13 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const re6 = /(?:questo|questa)?\s{0,3}(mattina|pomeriggio|sera|notte|mezzanotte|mezzogiorno)(?=\W|$)/i;
-class ITCasualTimeParser {
+class PTCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, ITCasualTimeParser);
+    tmp = c2(this, PTCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(ITCasualTimeParser);
+    obj = closure_4(PTCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -46,11 +45,11 @@ class ITCasualTimeParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ITCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(PTCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return re6;
+    return /(?:esta\s*)?(manha|manhã|tarde|meia-noite|meio-dia|noite)(?=\W|$)/i;
   },
 };
 const items = [
@@ -61,36 +60,36 @@ const items = [
       refDate = refDate.refDate;
       const parsingComponents = refDate.createParsingComponents();
       const formatted = arg1[1].toLowerCase();
-      if ("pomeriggio" === formatted) {
-        parsingComponents.imply("meridiem", ITCasualTimeParser(10575).Meridiem.PM);
+      if ("tarde" === formatted) {
+        parsingComponents.imply("meridiem", PTCasualTimeParser(10680).Meridiem.PM);
         parsingComponents.imply("hour", 15);
+      } else if ("noite" === formatted) {
+        parsingComponents.imply("meridiem", PTCasualTimeParser(10680).Meridiem.PM);
+        parsingComponents.imply("hour", 22);
       } else {
-        if ("sera" !== formatted) {
-          if ("notte" !== formatted) {
-            if ("mezzanotte" === formatted) {
+        if ("manha" !== formatted) {
+          if ("manh\u00E3" !== formatted) {
+            if ("meia-noite" === formatted) {
               const _Date = Date;
               const date = new Date(refDate.getTime());
               date.setDate(date.getDate() + 1);
-              ITCasualTimeParser(10587).assignSimilarDate(parsingComponents, date);
-              ITCasualTimeParser(10587).implySimilarTime(parsingComponents, date);
+              PTCasualTimeParser(10681).assignSimilarDate(parsingComponents, date);
+              PTCasualTimeParser(10681).implySimilarTime(parsingComponents, date);
               parsingComponents.imply("hour", 0);
               parsingComponents.imply("minute", 0);
               parsingComponents.imply("second", 0);
-            } else if ("mattina" === formatted) {
-              parsingComponents.imply("meridiem", ITCasualTimeParser(10575).Meridiem.AM);
-              parsingComponents.imply("hour", 6);
-            } else if ("mezzogiorno" === formatted) {
-              parsingComponents.imply("meridiem", ITCasualTimeParser(10575).Meridiem.AM);
+            } else if ("meio-dia" === formatted) {
+              parsingComponents.imply("meridiem", PTCasualTimeParser(10680).Meridiem.AM);
               parsingComponents.imply("hour", 12);
             }
           }
         }
-        parsingComponents.imply("meridiem", ITCasualTimeParser(10575).Meridiem.PM);
-        parsingComponents.imply("hour", 20);
+        parsingComponents.imply("meridiem", PTCasualTimeParser(10680).Meridiem.AM);
+        parsingComponents.imply("hour", 6);
       }
       return parsingComponents;
     },
   },
 ];
 
-export default _createClass(ITCasualTimeParser, items);
+export default _createClass(PTCasualTimeParser, items);

@@ -1,183 +1,135 @@
 // _runtime/metro/06994__.js
-import _modDef6978 from "06978__.js";
-import _classCallCheck from "06977__.js";
+import _mod19 from "00019__.js";
+import value22 from "../06821_value2.js";
+import get_ActivityIndicator from "00017__.js";
 
-const ViewabilityHelper = arg1;
-class ViewabilityHelper {
-  constructor(arg0, arg1) {
-    tmp = c2(this, ViewabilityHelper);
-    this.possiblyViewableIndices = [];
-    this.hasInteracted = false;
-    this.viewableIndices = [];
-    this.lastReportedViewableIndices = [];
-    set = new Set();
-    this.timers = set;
-    this.viewabilityConfig = global;
-    this.viewableIndicesChanged = arg1;
-    return;
-  }
-}
-const entry = {
-  key: "dispose",
-  value: function dispose() {
-    const timers = this.timers;
-    const item = timers.forEach(clearTimeout);
-  },
+const useEffect = _mod19.useEffect;
+({ Keyboard: c3, Platform } = get_ActivityIndicator);
+const keyboardDidShow = "keyboardDidShow";
+const keyboardDidHide = "keyboardDidHide";
+let closure_6 = {
+  code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}",
 };
-const items = [
-  entry,
-  {
-    key: "updateViewableItems",
-    value: function updateViewableItems(arg0, arg1, arg2, arg3, arg4, possiblyViewableIndices) {
-      const self = this;
-      closure_1 = arg0;
-      closure_2 = arg1;
-      closure_3 = arg2;
-      closure_4 = arg3;
-      closure_5 = arg4;
-      if (undefined !== possiblyViewableIndices) {
-        self.possiblyViewableIndices = possiblyViewableIndices;
-      }
-      let viewabilityConfig = self.viewabilityConfig;
-      let prop;
-      if (viewabilityConfig != null) {
-        prop = viewabilityConfig.itemVisiblePercentThreshold;
-      }
-      if (null !== prop) {
-        let viewabilityConfig2 = self.viewabilityConfig;
-        let prop1;
-        if (viewabilityConfig2 != null) {
-          prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
-        }
-        if (undefined !== prop1) {
-          const viewabilityConfig3 = self.viewabilityConfig;
-          let prop2;
-          if (viewabilityConfig3 != null) {
-            prop2 = viewabilityConfig3.viewAreaCoveragePercentThreshold;
-          }
-          if (null !== prop2) {
-            const viewabilityConfig4 = self.viewabilityConfig;
-            let prop3;
-            if (viewabilityConfig4 != null) {
-              prop3 = viewabilityConfig4.viewAreaCoveragePercentThreshold;
-            }
-            if (undefined !== prop3) {
-              const _Error = Error;
-              const error = new Error(
-                ViewabilityHelper(6965).ErrorMessages.multipleViewabilityThresholdTypesNotSupported,
-              );
-              throw error;
-            }
-          }
-        }
-      }
-      const viewabilityConfig5 = self.viewabilityConfig;
-      let waitForInteraction;
-      if (viewabilityConfig5 != null) {
-        waitForInteraction = viewabilityConfig5.waitForInteraction;
-      }
-      if (!waitForInteraction) {
-        const prop4 = self.possiblyViewableIndices;
-        const found = prop4.filter((item) => {
-          const viewabilityConfig = self.viewabilityConfig;
-          let prop;
-          if (viewabilityConfig != null) {
-            prop = viewabilityConfig.viewAreaCoveragePercentThreshold;
-          }
-          const viewabilityConfig2 = self.viewabilityConfig;
-          let prop1;
-          if (viewabilityConfig2 != null) {
-            prop1 = viewabilityConfig2.itemVisiblePercentThreshold;
-          }
-          return self.isItemViewable(item, closure_1, closure_2, closure_3, closure_4, prop, prop1, closure_5);
-        });
-        self.viewableIndices = found;
-        const viewabilityConfig6 = self.viewabilityConfig;
-        let num;
-        if (viewabilityConfig6 != null) {
-          num = viewabilityConfig6.minimumViewTime;
-        }
-        if (num == null) {
-          num = 250;
-        }
-        if (num > 0) {
-          const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => {
-            const timers = self.timers;
-            timers.delete(timerId);
-            const result = self.checkViewableIndicesChanges(found);
-          }, num);
-          let timers = self.timers;
-          timers.add(timerId);
-        } else {
-          let result = self.checkViewableIndicesChanges(found);
-        }
-      }
-    },
-  },
-  {
-    key: "checkViewableIndicesChanges",
-    value: function checkViewableIndicesChanges(found) {
-      const self = this;
-      found = found.filter((item) => {
-        const viewableIndices = self.viewableIndices;
-        return viewableIndices.includes(item);
-      });
-      const found1 = found.filter((item) => {
-        const lastReportedViewableIndices = self.lastReportedViewableIndices;
-        return !lastReportedViewableIndices.includes(item);
-      });
-      const prop = this.lastReportedViewableIndices;
-      const found2 = prop.filter((item) => !found.includes(item));
-      if (tmp) {
-        self.lastReportedViewableIndices = found;
-        const result = self.viewableIndicesChanged(found, found1, found2);
-      }
-    },
-  },
-  {
-    key: "clearLastReportedViewableIndices",
-    value: function clearLastReportedViewableIndices() {
-      this.lastReportedViewableIndices = [];
-    },
-  },
-  {
-    key: "isItemViewable",
-    value: function isItemViewable(item, arg1, arg2, arg3, width, prop, prop1, fn) {
-      const size = fn(item);
-      if (undefined === size) {
-        return false;
-      } else {
-        const diff = (arg1 ? size.x : size.y) - arg2;
-        const tmp3 = arg1 ? size.width : size.height;
-        if (arg1) {
-          width = width.width;
-        } else {
-          width = width.height - arg3;
-        }
-        const _Math = Math;
-        const _Math2 = Math;
-        const bound = Math.min(diff + tmp3, width);
-        const diff1 = bound - Math.max(diff, 0);
-        if (diff1 === tmp3) {
-          return true;
-        } else if (0 === diff1) {
-          return false;
-        } else {
-          if (null != prop) {
-            let result = 0.01 * prop;
-          } else {
-            let num2 = prop1;
-            if (prop1 == null) {
-              num2 = 0;
-            }
-            result = 0.01 * num2;
-          }
-          return (null != prop ? diff1 / width : diff1 / tmp3) >= result;
-        }
-      }
-    },
-  },
-];
+let closure_7 = {
+  code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}",
+};
+const __initData = {
+  code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}",
+};
 
-export default _modDef6978(ViewabilityHelper, items);
+export const useKeyboard = (includeBottomOffset) => {
+  includeBottomOffset = includeBottomOffset.includeBottomOffset;
+  let shouldHandleKeyboardEvents;
+  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
+  let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(
+    includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED,
+  );
+  const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
+  const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
+  const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
+  const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
+  const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const fn = function v(value, arg1, value2, value3, arg4) {
+    value = arg1;
+    if (value === value22.KEYBOARD_STATE.SHOWN) {
+      if (!shouldHandleKeyboardEvents.value) {
+        const items = [value, value, value2, value3];
+        sharedValue5.value = items;
+      }
+    }
+    if (value !== value22.KEYBOARD_STATE.SHOWN) {
+      value = height.value;
+    }
+    height.value = value;
+    let tmp5 = arg4;
+    if (arg4) {
+      tmp5 = includeBottomOffset;
+    }
+    if (tmp5) {
+      height.value = height.value + arg4;
+    }
+    animationDuration.value = value2;
+    animationEasing.value = value3;
+    state.value = value;
+    sharedValue5.value = [];
+  };
+  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  fn.__closure = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
+  fn.__workletHash = 7905199978020;
+  fn.__initData = sharedValue5;
+  const workletCallback = obj7.useWorkletCallback(fn, []);
+  let items = [workletCallback];
+  state(() => {
+    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      ({ duration, easing } = endCoordinates);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN,
+        endCoordinates.endCoordinates.height,
+        duration,
+        easing,
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).SCREEN_HEIGHT -
+          endCoordinates.endCoordinates.height -
+          endCoordinates.endCoordinates.screenY,
+      );
+    });
+    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN,
+        endCoordinates.endCoordinates.height,
+        endCoordinates.duration,
+        endCoordinates.easing,
+      );
+    });
+    return () => {
+      closure_0.remove();
+      closure_1.remove();
+    };
+  }, items);
+  const obj8 = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
+  const fn2 = function b() {
+    return shouldHandleKeyboardEvents.value;
+  };
+  fn2.__closure = { shouldHandleKeyboardEvents };
+  fn2.__workletHash = 11615500623565;
+  fn2.__initData = workletCallback;
+  const fn3 = function y(arg0) {
+    let tmp = arg0;
+    value = sharedValue5.value;
+    if (arg0) {
+      tmp = value.length > 0;
+    }
+    if (tmp) {
+      workletCallback(value[0], value[1], value[2], value[3]);
+    }
+  };
+  fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
+  fn3.__workletHash = 16636741173520;
+  fn3.__initData = __initData;
+  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
+  return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
+};

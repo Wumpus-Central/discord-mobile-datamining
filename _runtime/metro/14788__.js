@@ -1,13 +1,16 @@
 // _runtime/metro/14788__.js
-import registerAsset from "01121__.js";
+import _modDef14784 from "14784__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/mfa/native/images",
-  width: 762,
-  height: 525,
-  scales: [1],
-  hash: "685e4a9eb5133a148de7ce27d400a483",
-  name: "img_register_header",
-  type: "png",
-});
+export default function useReanimatedHeaderHeight() {
+  const context = noop.useContext(_modDef14784);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error(
+      "Couldn't find the header height using Reanimated. Are you inside a screen in a navigator with a header and your NavigationContainer is wrapped in ReanimatedScreenProvider?",
+    );
+    throw error;
+  } else {
+    return context;
+  }
+}

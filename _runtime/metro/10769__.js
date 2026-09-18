@@ -1,6 +1,6 @@
 // _runtime/metro/10769__.js
-import repeatedTimeunitPattern from "../10581_repeatedTimeunitPattern.js";
-import findMostLikelyADYear from "../10582_findMostLikelyADYear.js";
+import repeatedTimeunitPattern from "../10675_repeatedTimeunitPattern.js";
+import findMostLikelyADYear from "../10676_findMostLikelyADYear.js";
 
 const combined =
   "(" +
@@ -9,95 +9,118 @@ const combined =
   repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) +
   ")\\s{0,5}";
 const regExp = new RegExp(combined, "i");
-const combined1 =
-  "(" +
-  exports.NUMBER_PATTERN +
-  ")\\s{0,5}(" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_NO_ABBR_DICTIONARY) +
-  ")\\s{0,5}";
 
+export const parseNumberPattern = function parseNumberPattern(str) {
+  str = str.toLowerCase();
+  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
+    let num = exports.INTEGER_WORD_DICTIONARY[str];
+  } else {
+    num = 2;
+    if ("paar" !== str) {
+      let num3 = 0.5;
+      if ("half" !== str) {
+        num3 = 0.5;
+        if (!str.match(/halve?/)) {
+          const _parseFloat = parseFloat;
+          num3 = parseFloat(str.replace(",", "."));
+        }
+      }
+      num = num3;
+    }
+  }
+  return num;
+};
+export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str) {
+  str = str.toLowerCase();
+  if (undefined !== exports.ORDINAL_WORD_DICTIONARY[str]) {
+    return exports.ORDINAL_WORD_DICTIONARY[str];
+  } else {
+    const _parseInt = parseInt;
+    return parseInt(str.replace(/(?:ste|de)$/i, ""));
+  }
+};
+export const parseYear = function parseYear(match) {
+  if (obj.test(match)) {
+    const _parseInt3 = parseInt;
+    return -parseInt(match.replace(/voor Christus/i, ""));
+  } else {
+    if (obj2.test(match)) {
+      const _parseInt2 = parseInt;
+      return parseInt(match.replace(/na Christus/i, ""));
+    } else {
+      const _parseInt = parseInt;
+      const parsed = parseInt(match);
+      return findMostLikelyADYear.findMostLikelyADYear(parsed);
+    }
+    obj2 = /na Christus/i;
+  }
+  obj = /voor Christus/i;
+};
 export const parseDuration = function parseDuration(arg0) {
   let str = arg0;
   const obj = {};
   let match = regExp.exec(arg0);
   while (match) {
     let str2 = match[1];
-    let formatted = str2.toLowerCase();
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-      let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
+    let str3 = str2.toLowerCase();
+    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
+      let num = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
-      let _parseInt = parseInt;
-      parsed = parseInt(formatted);
+      num = 2;
+      if ("paar" !== str3) {
+        let num2 = 0.5;
+        if ("half" !== str3) {
+          num2 = 0.5;
+          if (!str3.match(/halve?/)) {
+            let _parseFloat = parseFloat;
+            num2 = parseFloat(str3.replace(",", "."));
+          }
+        }
+        num = num2;
+      }
     }
-    let str3 = match[2];
-    obj[exports.TIME_UNIT_DICTIONARY[str3.toLowerCase(str3)]] = parsed;
+    let str4 = match[2];
+    obj[exports.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
     let substr = str.substring(match[0].length);
     match = regExp.exec(substr);
     str = substr;
   }
   return obj;
 };
-export const parseNumberPattern = function parseNumberPattern(match) {
-  const formatted = match.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-    let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
-  } else {
-    const _parseInt = parseInt;
-    parsed = parseInt(formatted);
-  }
-  return parsed;
-};
-export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(match) {
-  const formatted = match.toLowerCase();
-  if (undefined !== exports.ORDINAL_NUMBER_DICTIONARY[formatted]) {
-    return exports.ORDINAL_NUMBER_DICTIONARY[formatted];
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(formatted);
-  }
-};
-export const parseYear = function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt2 = parseInt;
-    const parsed = parseInt(match);
-    let findMostLikelyADYearResult = parsed;
-    if (parsed < 100) {
-      findMostLikelyADYearResult = findMostLikelyADYear.findMostLikelyADYear(parsed);
-    }
-    return findMostLikelyADYearResult;
-  } else {
-    const formatted = match.toLowerCase();
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-      return exports.INTEGER_WORD_DICTIONARY[formatted];
-    } else {
-      const _parseInt = parseInt;
-      return parseInt(match);
-    }
-  }
-  obj = /\d+/;
-};
 export const WEEKDAY_DICTIONARY = {
-  söndag: 0,
-  sön: 0,
-  so: 0,
-  måndag: 1,
-  mån: 1,
-  må: 1,
-  tisdag: 2,
-  tis: 2,
-  ti: 2,
-  onsdag: 3,
-  ons: 3,
-  on: 3,
-  torsdag: 4,
-  tors: 4,
-  to: 4,
-  fredag: 5,
-  fre: 5,
-  fr: 5,
-  lördag: 6,
-  lör: 6,
-  lö: 6,
+  zondag: 0,
+  zon: 0,
+  "zon.": 0,
+  zo: 0,
+  "zo.": 0,
+  maandag: 1,
+  ma: 1,
+  "ma.": 1,
+  dinsdag: 2,
+  din: 2,
+  "din.": 2,
+  di: 2,
+  "di.": 2,
+  woensdag: 3,
+  woe: 3,
+  "woe.": 3,
+  wo: 3,
+  "wo.": 3,
+  donderdag: 4,
+  dond: 4,
+  "dond.": 4,
+  do: 4,
+  "do.": 4,
+  vrijdag: 5,
+  vrij: 5,
+  "vrij.": 5,
+  vr: 5,
+  "vr.": 5,
+  zaterdag: 6,
+  zat: 6,
+  "zat.": 6,
+  za: 6,
+  "za.": 6,
 };
 export const MONTH_DICTIONARY = {
   januari: 1,
@@ -106,26 +129,29 @@ export const MONTH_DICTIONARY = {
   februari: 2,
   feb: 2,
   "feb.": 2,
-  mars: 3,
+  maart: 3,
   mar: 3,
   "mar.": 3,
+  mrt: 3,
+  "mrt.": 3,
   april: 4,
   apr: 4,
   "apr.": 4,
-  maj: 5,
+  mei: 5,
   juni: 6,
   jun: 6,
   "jun.": 6,
   juli: 7,
   jul: 7,
   "jul.": 7,
-  augusti: 8,
+  augustus: 8,
   aug: 8,
   "aug.": 8,
   september: 9,
   sep: 9,
   "sep.": 9,
   sept: 9,
+  "sept.": 9,
   oktober: 10,
   okt: 10,
   "okt.": 10,
@@ -136,112 +162,84 @@ export const MONTH_DICTIONARY = {
   dec: 12,
   "dec.": 12,
 };
-export const ORDINAL_NUMBER_DICTIONARY = {
-  första: 1,
-  andra: 2,
-  tredje: 3,
-  fjärde: 4,
-  femte: 5,
-  sjätte: 6,
-  sjunde: 7,
-  åttonde: 8,
-  nionde: 9,
-  tionde: 10,
-  elfte: 11,
-  tolfte: 12,
-  trettonde: 13,
-  fjortonde: 14,
-  femtonde: 15,
-  sextonde: 16,
-  sjuttonde: 17,
-  artonde: 18,
-  nittonde: 19,
-  tjugonde: 20,
-  tjugoförsta: 21,
-  tjugoandra: 22,
-  tjugotredje: 23,
-  tjugofjärde: 24,
-  tjugofemte: 25,
-  tjugosjätte: 26,
-  tjugosjunde: 27,
-  tjugoåttonde: 28,
-  tjugonionde: 29,
-  trettionde: 30,
-  trettioförsta: 31,
-};
 export const INTEGER_WORD_DICTIONARY = {
-  en: 1,
-  ett: 1,
-  två: 2,
-  tre: 3,
-  fyra: 4,
-  fem: 5,
-  sex: 6,
-  sju: 7,
-  åtta: 8,
-  nio: 9,
-  tio: 10,
-  elva: 11,
-  tolv: 12,
-  tretton: 13,
-  fjorton: 14,
-  femton: 15,
-  sexton: 16,
-  sjutton: 17,
-  arton: 18,
-  nitton: 19,
-  tjugo: 20,
-  trettiо: 30,
-  fyrtio: 40,
-  femtio: 50,
-  sextio: 60,
-  sjuttio: 70,
-  åttio: 80,
-  nittio: 90,
-  hundra: 100,
-  tusen: 1000,
+  een: 1,
+  twee: 2,
+  drie: 3,
+  vier: 4,
+  vijf: 5,
+  zes: 6,
+  zeven: 7,
+  acht: 8,
+  negen: 9,
+  tien: 10,
+  elf: 11,
+  twaalf: 12,
+};
+export const ORDINAL_WORD_DICTIONARY = {
+  eerste: 1,
+  tweede: 2,
+  derde: 3,
+  vierde: 4,
+  vijfde: 5,
+  zesde: 6,
+  zevende: 7,
+  achtste: 8,
+  negende: 9,
+  tiende: 10,
+  elfde: 11,
+  twaalfde: 12,
+  dertiende: 13,
+  veertiende: 14,
+  vijftiende: 15,
+  zestiende: 16,
+  zeventiende: 17,
+  achttiende: 18,
+  negentiende: 19,
+  twintigste: 20,
+  eenentwintigste: 21,
+  tweeëntwintigste: 22,
+  drieentwintigste: 23,
+  vierentwintigste: 24,
+  vijfentwintigste: 25,
+  zesentwintigste: 26,
+  zevenentwintigste: 27,
+  achtentwintig: 28,
+  negenentwintig: 29,
+  dertigste: 30,
+  eenendertigste: 31,
 };
 export const TIME_UNIT_DICTIONARY = {
-  sek: "second",
-  sekund: "second",
-  sekunder: "second",
+  sec: "second",
+  second: "second",
+  seconden: "second",
   min: "minute",
-  minut: "minute",
-  minuter: "minute",
-  tim: "hour",
-  timme: "hour",
-  timmar: "hour",
+  mins: "minute",
+  minute: "minute",
+  minuut: "minute",
+  minuten: "minute",
+  minuutje: "minute",
+  h: "hour",
+  hr: "hour",
+  hrs: "hour",
+  uur: "hour",
+  u: "hour",
+  uren: "hour",
   dag: "day",
-  dagar: "day",
-  vecka: "week",
-  veckor: "week",
-  mån: "month",
-  månad: "month",
-  månader: "month",
-  år: "year",
-  kvartаl: "quarter",
-  kvartal: "quarter",
-};
-export const TIME_UNIT_NO_ABBR_DICTIONARY = {
-  sekund: "second",
-  sekunder: "second",
-  minut: "minute",
-  minuter: "minute",
-  timme: "hour",
-  timmar: "hour",
-  dag: "day",
-  dagar: "day",
-  vecka: "week",
-  veckor: "week",
-  månad: "month",
-  månader: "month",
-  år: "year",
-  kvartal: "quarter",
+  dagen: "day",
+  week: "week",
+  weken: "week",
+  maand: "month",
+  maanden: "month",
+  jaar: "year",
+  jr: "year",
+  jaren: "year",
 };
 export const NUMBER_PATTERN =
-  "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|\\d+)";
+  "(?:" +
+  repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) +
+  "|[0-9]+|[0-9]+[\\.,][0-9]+|halve?|half|paar)";
 export const ORDINAL_NUMBER_PATTERN =
-  "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_NUMBER_DICTIONARY) + "|\\d{1,2}(?:e|:e))";
-export const TIME_UNIT_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);
-export const TIME_UNITS_NO_ABBR_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined1);
+  "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_WORD_DICTIONARY) + "|[0-9]{1,2}(?:ste|de)?)";
+export const YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s*(?:voor Christus|na Christus)|[1-2][0-9]{3}|[5-9][0-9])";
+export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("(?:(?:binnen|in)\\s*)?", combined);

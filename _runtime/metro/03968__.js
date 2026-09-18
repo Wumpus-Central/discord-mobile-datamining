@@ -1,8 +1,7 @@
 // _runtime/metro/03968__.js
-import _typeof_mod from "03728__.js";
-import startOfUTCWeek_mod from "../03731_startOfUTCWeek.js";
-import startOfUTCWeekYear_mod from "../03969_startOfUTCWeekYear.js";
-import requiredArgs_mod from "../03729_requiredArgs.js";
+import _typeof_mod from "03811__.js";
+import startOfISOWeek_mod from "../03969_startOfISOWeek.js";
+import requiredArgs_mod from "../03812_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -12,37 +11,44 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj2 = { default: startOfUTCWeek };
+let startOfISOWeek = startOfISOWeek_mod;
+if (!startOfISOWeek) {
+  const obj2 = { default: startOfISOWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfUTCWeek;
+  tmp5 = startOfISOWeek;
 }
-startOfUTCWeek = tmp5;
-let startOfUTCWeekYear = startOfUTCWeekYear_mod;
-if (!startOfUTCWeekYear) {
-  const obj3 = { default: startOfUTCWeekYear };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfUTCWeekYear;
-}
-startOfUTCWeekYear = tmp7;
+startOfISOWeek = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp7;
 
-export default function getUTCWeek(arg0, arg1) {
+export default function getISOWeekYear(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const time = startOfUTCWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfUTCWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfUTCWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
+  const fullYear = defaultResult1.getFullYear();
+  const date = new Date(0);
+  date.setFullYear(fullYear + 1, 0, 4);
+  date.setHours(0, 0, 0, 0);
+  const date1 = new Date(0);
+  date1.setFullYear(fullYear, 0, 4);
+  date1.setHours(0, 0, 0, 0);
+  const defaultResult2 = startOfISOWeek.default(date);
+  const time = defaultResult1.getTime();
+  if (time >= defaultResult2.getTime()) {
+    let sum = fullYear + 1;
+  } else {
+    const time1 = defaultResult1.getTime();
+    sum = fullYear;
+    if (time1 < defaultResult3.getTime()) {
+      sum = fullYear - 1;
+    }
+  }
+  return sum;
 };
 export default exports.default;

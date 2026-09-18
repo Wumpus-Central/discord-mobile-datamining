@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
+  httpServerLocation: "/assets/modules/guild_templates/native/images",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "1e7b4b86ff7b632a5724a01e406c1753",
-  name: "img_subheader_error_mobile",
+  hash: "10db56263423f61f9d871a4581be001b",
+  name: "ic_guild_template",
   type: "png",
 });

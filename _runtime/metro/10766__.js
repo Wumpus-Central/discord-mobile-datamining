@@ -1,12 +1,13 @@
 // _runtime/metro/10766__.js
-import Filter from "../10600_Filter.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import AbstractParserWithWordBoundaryChecking from "../10682_AbstractParserWithWordBoundaryChecking.js";
+import now from "../10699_now.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENMergeRelativeDateRefiner = require;
+let self = this;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,87 +26,127 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class ENMergeRelativeDateRefiner {
-  constructor() {
-    self = this;
-    tmp = c2(this, ENMergeRelativeDateRefiner);
-    tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeDateRefiner);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(ENMergeRelativeDateRefiner, Filter.MergingRefiner);
-const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*$/i;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, text, start) {
-      let match = str.match(this.patternBetween());
-      if (match) {
-        const tmp4 = null != text.text.match(/\s+(prima|dal)$/i);
-        let tmp5 = !tmp4;
-        if (!tmp4) {
-          tmp5 = null == text.text.match(/\s+(dopo|dal|fino)$/i);
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function o(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
         }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          start = start.start;
-          value = start.get("day");
-          if (value) {
-            const start2 = start.start;
-            value = start2.get("month");
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
           }
-          if (value) {
-            const start3 = start.start;
-            value = start3.get("year");
-          }
-          tmp6 = value;
         }
-        match = tmp6;
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    class NLCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, NLCasualDateParser);
+        tmp2 = c2;
+        obj = c2(NLCasualDateParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
       }
-      return match;
-    },
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = ENMergeRelativeDateRefiner(10750).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/\s+(prima|dal)$/i)) {
-        reverseDurationResult = ENMergeRelativeDateRefiner(10583).reverseDuration(parseDurationResult);
-      }
-      const ParsingComponents = ENMergeRelativeDateRefiner(10584).ParsingComponents;
-      const ReferenceWithTimezone = ENMergeRelativeDateRefiner(10584).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(
-        ReferenceWithTimezone.fromDate(start.date()),
-        reverseDurationResult,
-      );
-      return new ENMergeRelativeDateRefiner(10584).ParsingResult(
-        start.reference,
-        text.index,
-        "" + text.text + arg0 + start.text,
-        relativeFromReference,
-      );
-    },
-  },
-];
-
-export default _createClass(ENMergeRelativeDateRefiner, items);
+    }
+    _classCallCheck = NLCasualDateParser;
+    _inherits(NLCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+        return /(nu|vandaag|morgen|morgend|gisteren)(?=\W|$)/i;
+      },
+    };
+    let items = [entry];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+        const formatted = arg1[0].toLowerCase();
+        if ("nu" === formatted) {
+          return closure_7.now(reference.reference);
+        } else if ("vandaag" === formatted) {
+          return closure_7.today(reference.reference);
+        } else {
+          if ("morgen" !== formatted) {
+            if ("morgend" !== formatted) {
+              if ("gisteren" === formatted) {
+                return closure_7.yesterday(reference.reference);
+              } else {
+                return tmp2;
+              }
+            }
+          }
+          return closure_7.tomorrow(reference.reference);
+        }
+      },
+    };
+    items[1] = entry1;
+    exports.default = _createClass(NLCasualDateParser, items);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}
