@@ -1,60 +1,46 @@
 // === Module 5019: ? ===
 
 // Module 5019
-import get_synchronousScreenUpdatesEnabled from "get synchronousScreenUpdatesEnabled" /* 4999 */;
-import noop from "module_19" /* 19 */;
+import _mod5020 from "module_5020" /* 5020 */;
+import DefinePropertyOrThrow from "DefinePropertyOrThrow" /* 5021 */;
 
-require = arg1;
-let context = noop.createContext({ topAlreadyApplied: false, leftDisabled: false, rightDisabled: false, bottomDisabled: false });
+const tmp = _mod5020("%Reflect.construct%", true);
+let closure_0 = tmp;
+try {
+  const obj = {
+    () => {
 
-export const EdgeInsetApplicationContext = context;
-export const useEdgeInsetApplication = function useEdgeInsetApplication(arg0, flag, flag2, flag3, flag4) {
-  context = noop.useContext(context);
-  const topAlreadyApplied = context.topAlreadyApplied;
-  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
-  const experiment = get_synchronousScreenUpdatesEnabled.featureFlags.experiment;
-  flag = undefined;
-  if (experiment != null) {
-    flag = experiment.androidLegacyTopInsetBehavior;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  let tmp2 = flag;
-  if (!flag) {
-    let tmp3 = !topAlreadyApplied;
-    if (!topAlreadyApplied) {
-      tmp3 = arg0;
-    }
-    tmp2 = tmp3;
-  }
-  closure_1 = tmp2;
-  let tmp4 = tmp2;
-  if (tmp2) {
-    tmp4 = !flag;
-  }
-  if (!leftDisabled) {
-    leftDisabled = flag2;
-  }
-  if (!rightDisabled) {
-    rightDisabled = flag3;
-  }
-  if (!bottomDisabled) {
-    bottomDisabled = flag4;
-  }
-  const items = [topAlreadyApplied, tmp2, leftDisabled, rightDisabled, bottomDisabled];
-  return {
-    appliesTopInset: tmp4,
-    consumeLeftInset: !leftDisabled,
-    consumeRightInset: !rightDisabled,
-    consumeBottomInset: !bottomDisabled,
-    useLegacyBehavior: flag,
-    nextContextValue: noop.useMemo(() => {
-      let tmp = topAlreadyApplied;
-      if (!topAlreadyApplied) {
-        tmp = closure_1;
       }
-      return { topAlreadyApplied: tmp, leftDisabled, rightDisabled, bottomDisabled };
-    }, items)
   };
-};
+  DefinePropertyOrThrow({}, "", obj);
+  let tmp4 = DefinePropertyOrThrow;
+  if (tmp4) {
+    if (tmp) {
+      let closure_1 = {};
+      const obj3 = {
+        () => {
+                throw closure_1;
+              },
+        "[[Enumerable]]": true
+      };
+      tmp4({}, "length", obj3);
+      module.exports = function IsConstructor(arg0) {
+        try {
+          closure_0(arg0, obj2);
+        } catch (tmp5) {
+          return tmp5 === closure_1;
+        }
+      };
+      const obj2 = {};
+    }
+  }
+  module.exports = function IsConstructor(fn) {
+    let prototype = typeof fn === "function";
+    if (typeof fn === "function") {
+      prototype = fn.prototype;
+    }
+    return prototype;
+  };
+} catch (err) {
+  tmp4 = null;
+}

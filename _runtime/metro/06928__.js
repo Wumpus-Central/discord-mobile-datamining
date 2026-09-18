@@ -1,8 +1,7 @@
 // === Module 6928: ? ===
 
 // Module 6928
-import _mod17 from "module_17" /* 17 */;
 
-const StyleSheet = _mod17.StyleSheet;
+export function useNativeGestureRole(arg0, children) {
 
-export const styles = StyleSheet.create({ container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } });
+}

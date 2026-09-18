@@ -1,7 +1,8 @@
 // === Module 18038: ? ===
 
 // Module 18038
-import registerAsset from "module_1121" /* 1121 */;
+const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "924c2fd8a6878b0bc9ad00c273667c49", name: "ic_select_all_24px", type: "png" });
+export default function hasUnicode(arg0) {
+  return regex.test(arg0);
+};

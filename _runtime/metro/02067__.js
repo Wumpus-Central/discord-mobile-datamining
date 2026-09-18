@@ -1,7 +1,39 @@
 // === Module 2067: ? ===
 
 // Module 2067
-import registerAsset from "module_1121" /* 1121 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/ZGVzaWdu", scales: [1], hash: "59a6eb673f6e3238f18a491df61645c9", name: "vi.messages.59a6eb673f6e3238f18a491df61645c9.compiled.messages", type: "jsona" });
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "hi",
+  pluralRuleFunction(arg0, arg1) {
+    if (arg1) {
+      let str3 = "one";
+      if (1 != arg0) {
+        let str5 = "two";
+        if (2 != arg0) {
+          str5 = "two";
+          if (3 != arg0) {
+            let str6 = "few";
+            if (4 != arg0) {
+              let str7 = "other";
+              if (6 == arg0) {
+                str7 = "many";
+              }
+              str6 = str7;
+            }
+            str5 = str6;
+          }
+        }
+        str3 = str5;
+      }
+      let str2 = str3;
+    } else {
+      str2 = "other";
+      if (arg0 >= 0) {
+        str2 = "other";
+        if (arg0 <= 1) {
+          str2 = "one";
+        }
+      }
+    }
+    return str2;
+  }
+});

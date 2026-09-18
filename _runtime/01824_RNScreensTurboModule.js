@@ -24,7 +24,7 @@ if (!RNScreensTurboModule) {
     logger.warn("RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.");
     return c0;
   };
-  const obj5 = { logger: _mod1641.logger, defaultReturnValue: "a" };
+  const obj5 = { logger: _mod1641.logger, defaultReturnValue: "Array" };
   fn2.__closure = obj5;
   fn2.__workletHash = 6450550757460;
   fn2.__initData = obj;
@@ -35,7 +35,7 @@ if (!RNScreensTurboModule) {
     logger.warn("RNScreensTurboModule has not been found. Check that you have installed `react-native-screens@3.30.0` or newer in your project and rebuilt your app.");
     return c0;
   };
-  const obj6 = { logger: _mod1641.logger, defaultReturnValue: "a" };
+  const obj6 = { logger: _mod1641.logger, defaultReturnValue: "Array" };
   fn3.__closure = obj6;
   fn3.__workletHash = 6450550757460;
   fn3.__initData = obj;

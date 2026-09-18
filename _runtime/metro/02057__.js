@@ -1,7 +1,47 @@
 // === Module 2057: ? ===
 
 // Module 2057
-import registerAsset from "module_1121" /* 1121 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/ZGVzaWdu", scales: [1], hash: "46f394fc74cb8e26f279e0957da0d651", name: "nl.messages.46f394fc74cb8e26f279e0957da0d651.compiled.messages", type: "jsona" });
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "pl",
+  pluralRuleFunction(arg0, arg1) {
+    const parts = String(arg0).split(".");
+    [arr, tmp2] = parts;
+    const substr = arr.slice(-1);
+    const substr1 = arr.slice(-2);
+    let str2 = "other";
+    if (!arg1) {
+      if (1 != arg0) {
+        if (!tmp2) {
+          if (substr >= 2) {
+            if (substr <= 4) {
+              let str5 = "few";
+              if (substr1 >= 12) {
+                str5 = "few";
+              }
+            }
+            let str3 = str5;
+          }
+        }
+        if (!tmp2) {
+          if (1 != arr) {
+            if (0 != substr) {
+              str5 = str6;
+            }
+          }
+          str6 = "many";
+        }
+        str6 = "other";
+        if (!tmp2) {
+          str6 = "other";
+          if (substr1 >= 12) {
+            str6 = "other";
+          }
+        }
+      } else {
+        str3 = "one";
+      }
+      str2 = str3;
+    }
+    return str2;
+  }
+});

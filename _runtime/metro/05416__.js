@@ -1,7 +1,40 @@
 // === Module 5416: ? ===
 
 // Module 5416
-import registerAsset from "module_1121" /* 1121 */;
+import _modDef5417 from "module_5417" /* 5417 */;
 
+importDefault = arg2;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "51c56027f271f175240f0fff23cdb627", name: "img_account_sync_twitter_light_and_dark", type: "svg" });
+export default {
+  decode(arg0, buffer) {
+    value = _modDef5417.get();
+    if (undefined !== value) {
+      if (undefined !== arg0) {
+        try {
+          const decoder = new value(arg0);
+          const _DataView = DataView;
+          if (buffer instanceof DataView) {
+            buffer = buffer.buffer;
+          } else {
+            const _Uint8Array = Uint8Array;
+            buffer = Uint8Array.from(buffer);
+          }
+          decoder.decode(buffer);
+        } catch (err) {
+        }
+      }
+    }
+    const mapped = buffer.map((item) => String.fromCharCode(item));
+    return (function decodeAsciiValue(arg0) {
+      try {
+        const _decodeURIComponent = decodeURIComponent;
+        const _escape = escape;
+        return decodeURIComponent(escape(arg0));
+      } catch (err) {
+        return tmp;
+      }
+    })(mapped.join(""));
+  },
+  TAG_HEADER_SIZE: 5
+};

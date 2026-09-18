@@ -1,7 +1,5 @@
 // === Module 8557: ? ===
 
 // Module 8557
-import registerAsset from "module_1121" /* 1121 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stage_channels/native/images", width: 33, height: 32, scales: [1, 2, 3], hash: "981aef55993c2a089b56e9b3e929139e", name: "ic_stage_channel_32px", type: "png" });
+export default { DeprecatedAccessibilityRoles: ["none", "button", "togglebutton", "link", "search", "image", "keyboardkey", "text", "adjustable", "imagebutton", "header", "summary", "alert", "checkbox", "combobox", "menu", "menubar", "menuitem", "progressbar", "radio", "radiogroup", "scrollbar", "spinbutton", "switch", "tab", "tablist", "timer", "toolbar"] };

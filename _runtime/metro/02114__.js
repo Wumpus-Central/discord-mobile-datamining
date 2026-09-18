@@ -1,7 +1,23 @@
 // === Module 2114: ? ===
 
 // Module 2114
-import registerAsset from "module_1121" /* 1121 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy92aXJ0dWFsX2N1cnJlbmN5L3dlYi9vcmJfd2FsbGV0L21lc3NhZ2Vz", scales: [1], hash: "4d32c1ef6f13773fba3503576ced7c89", name: "hi.messages.4d32c1ef6f13773fba3503576ced7c89.compiled.messages", type: "jsona" });
+export default function buildFormatLongFn(arg0) {
+  closure_0 = arg0;
+  return () => {
+    if (arguments.length > 0) {
+      if (undefined !== arguments[0]) {
+        let first = arguments[0];
+      }
+      if (first.width) {
+        const _String = String;
+        let defaultWidth = String(first.width);
+      } else {
+        defaultWidth = closure_0.defaultWidth;
+      }
+      return closure_0.formats[defaultWidth] || closure_0.formats[closure_0.defaultWidth];
+    }
+    first = {};
+  };
+};
+export default exports.default;

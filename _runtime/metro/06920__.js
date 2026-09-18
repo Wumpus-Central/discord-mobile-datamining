@@ -1,29 +1,124 @@
 // === Module 6920: ? ===
 
 // Module 6920
-import cancelAnimation from "cancelAnimation" /* 1637 */;
-import value2 from "value2" /* 6739 */;
-import _mod6743 from "module_6743" /* 6743 */;
-import BottomSheetContext from "BottomSheetContext" /* 6749 */;
-import noop from "module_19" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import noop_mod from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const jsx = fn(21).jsx;
+let noop = noop_mod;
+({ useCallback: closure_0, useEffect: closure_1, useMemo: c2, useRef: c3 } = noop);
+let noop = noop_mod;
+({ Keyboard: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = jsxProd.jsx;
+let c7 = 0;
+let closure_8 = [];
+let c9 = false;
+const context = noop.createContext(null);
+const logicalResponder = StyleSheet.create({ logicalResponder: { display: "contents" } });
 
 export default function _default(children) {
-  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
-  if (useGestureEventsHandlersDefault === undefined) {
-    useGestureEventsHandlersDefault = _mod6743.useGestureEventsHandlersDefault;
+  const keyboardShouldPersistTaps = children.keyboardShouldPersistTaps;
+  const tmp = closure_3(false);
+  const isRNGHResponderEvent = tmp;
+  let items = [tmp, keyboardShouldPersistTaps];
+  isRNGHResponderEvent(() => {
+    sum = sum + 1;
+    if (1 >= sum) {
+      let addListener;
+      if (closure_1_4 != null) {
+        addListener = closure_1_4.addListener;
+      }
+      if (null != addListener) {
+        const metrics = closure_1_4.metrics;
+        let height;
+        if (metrics != null) {
+          const metricsResult = metrics();
+          if (metricsResult != null) {
+            height = metricsResult.height;
+          }
+        }
+        let tmp5 = null != height;
+        if (tmp5) {
+          tmp5 = height > 0;
+        }
+        function setVisible(endCoordinates) {
+          endCoordinates = endCoordinates.endCoordinates;
+          let height;
+          if (endCoordinates != null) {
+            height = endCoordinates.height;
+          }
+          let tmp2 = null != height;
+          if (tmp2) {
+            tmp2 = height > 0;
+          }
+          c9 = tmp2;
+        }
+        closure_9 = tmp5;
+        items = [
+          closure_1_4.addListener("keyboardDidShow", setVisible),
+          closure_1_4.addListener("keyboardWillShow", setVisible),
+          closure_1_4.addListener("keyboardDidHide", () => {
+                c9 = false;
+              })
+        ];
+      }
+    }
+    return () => {
+      (function unsubscribeFromKeyboardVisibility() {
+        diff = diff - 1;
+        if (0 >= diff) {
+          for (const item10008 of closure_8) {
+            let removeResult = item10008.remove();
+            continue;
+          }
+          closure_8 = [];
+          c9 = false;
+        }
+      })();
+    };
+  }, []);
+  const items1 = [keyboardShouldPersistTaps];
+  let tmp2 = closure_2(() => ({ isRNGHResponderEvent, keyboardShouldPersistTaps }), items);
+  const obj = { value: tmp2, children: null };
+  const tmp4 = keyboardShouldPersistTaps(() => {
+    closure_1.current = false;
+    return false;
+  }, []);
+  obj.children = <closure_5 collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
+    closure_1.current = false;
+    return false;
+  }, [])} onStartShouldSetResponder={keyboardShouldPersistTaps(() => {
+    let current = "handled" === keyboardShouldPersistTaps;
+    if (current) {
+      current = isRNGHResponderEvent.current;
+    }
+    isRNGHResponderEvent.current = false;
+    return current;
+  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{children.children}</closure_5>;
+  return <context value={tmp2}>{null}</context>;
+};
+export const JSResponderContext = context;
+export const updateResponderEventValue = function updateResponderEventValue(isRNGHResponderEvent, current) {
+  isRNGHResponderEvent = undefined;
+  if (isRNGHResponderEvent != null) {
+    isRNGHResponderEvent = isRNGHResponderEvent.isRNGHResponderEvent;
   }
-  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
-  const bottomSheetInternal = _mod6743.useBottomSheetInternal();
-  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
-  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
-  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
-  const gestureHandler = _mod6743.useGestureHandler(value2.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const gestureHandler1 = _mod6743.useGestureHandler(value2.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const items = [gestureHandler, gestureHandler1, sharedValue];
-  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
-  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+  if (isRNGHResponderEvent) {
+    isRNGHResponderEvent.current = current;
+  }
+};
+export const isKeyboardDismissingTap = function isKeyboardDismissingTap(keyboardShouldPersistTaps) {
+  if (null == keyboardShouldPersistTaps) {
+    return false;
+  } else {
+    keyboardShouldPersistTaps = keyboardShouldPersistTaps.keyboardShouldPersistTaps;
+    let tmp = !keyboardShouldPersistTaps;
+    if (keyboardShouldPersistTaps) {
+      tmp = "never" === keyboardShouldPersistTaps;
+    }
+    if (tmp) {
+      tmp = c9;
+    }
+    return tmp;
+  }
 };

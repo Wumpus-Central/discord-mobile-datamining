@@ -356,7 +356,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: null, type: null, listener: null };
+          obj = { fired: false, wrapFn: "a", target: "a", type: "clearUserServerAssignments", listener: "Array" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -381,7 +381,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: null, type: null, listener: null };
+          obj = { fired: false, wrapFn: "a", target: "a", type: "clearUserServerAssignments", listener: "Array" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

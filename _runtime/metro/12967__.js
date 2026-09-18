@@ -1,23 +1,7 @@
 // === Module 12967: ? ===
 
 // Module 12967
-import _mod12966 from "module_12966" /* 12966 */;
-import _mod12968 from "module_12968" /* 12968 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
-  const sentryCarrier = _mod12966.getSentryCarrier(mainCarrier);
-  if (sentryCarrier.acs) {
-    let acs = sentryCarrier.acs;
-  } else {
-    acs = _mod12968.getStackAsyncContextStrategy();
-    const tmpResult = _mod12968;
-  }
-  return acs;
-};
-export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
-  const mainCarrier = _mod12966.getMainCarrier();
-  _mod12966.getSentryCarrier(mainCarrier).acs = acs;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 48, height: 48, scales: [1, 2, 3], hash: "079f1f5099b5396d01af5ed23e7bac76", name: "ic_invites_disabled", type: "png" });

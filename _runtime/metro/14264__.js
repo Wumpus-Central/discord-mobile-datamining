@@ -1,7 +1,10 @@
 // === Module 14264: ? ===
 
 // Module 14264
-import registerAsset from "module_1121" /* 1121 */;
+import _mod14253 from "module_14253" /* 14253 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "76c09ebc2fd9700ae36ec8729cee1e9d", name: "NotificationsTab", type: "lottie" });
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod14253(arg0, arg2);
+  return obj.intersects(new _mod14253(arg1, arg2), arg2);
+};

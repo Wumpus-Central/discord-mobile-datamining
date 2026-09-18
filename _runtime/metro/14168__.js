@@ -1,7 +1,7 @@
 // === Module 14168: ? ===
 
 // Module 14168
-import _mod14166 from "module_14166" /* 14166 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default (arg0, arg1, arg2) => _mod14166(arg0, arg1, "<", arg2);
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 160, scales: [1], hash: "b002cec8fdbd5414b4068fe272d35071", name: "phibi_1", type: "png" });

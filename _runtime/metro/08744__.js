@@ -1,7 +1,9 @@
 // === Module 8744: ? ===
 
 // Module 8744
-import registerAsset from "module_1121" /* 1121 */;
+import module_65 from "module_65" /* 65 */;
 
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeFlood", validAttributes: { x: true, y: true, width: true, height: true, result: true, floodColor: true, floodOpacity: true } };
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ef2e4520c6c90d142994f338601f4002", name: "WarningIcon", type: "png" });
+export default module_65.get("RNSVGFeFlood", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,141 +1,205 @@
 // === Module 6970: ? ===
 
 // Module 6970
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
 
-export default function _iterableToArrayLimit(iterable, arg1) {
-  let tmp7 = null;
-  if (null != iterable) {
-    const _Symbol = Symbol;
-    let prop = typeof Symbol !== "undefined";
-    if (typeof Symbol !== "undefined") {
-      const _Symbol2 = Symbol;
-      prop = iterable[Symbol.iterator];
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (!prop) {
-      prop = iterable[Symbol.iterator];
-    }
-    tmp7 = prop;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  if (null != tmp7) {
-    let flag2 = false;
-    try {
-      const items = [];
-      try {
-        const call = tmp10.call;
-        if (typeof call === "unknown") {
-          let iter = tmp10();
-        } else {
-          iter = call(iterable);
-        }
-        const next = iter.next;
-        if (0 === arg1) {
-          const _Object = Object;
-          if (Object(obj2) !== obj2) {
-            try {
-              if (flag2) {
-                throw tmp6;
-              }
-            } catch (tmp23) {
-              if (tmp2) {
-                throw tmp;
-              } else {
-                throw tmp23;
-              }
-            }
-          } else {
-            let flag3 = false;
-          }
-        } else {
-          const call3 = next.call;
-          if (typeof call3 === "unknown") {
-            let iter2 = next();
-          } else {
-            iter2 = call3(obj2);
-          }
-          const done = iter2.done;
-          flag3 = done;
-          if (!done) {
-            items.push(iter3.value);
-            if (items.length !== arg1) {
-              while (true) {
-                let flag4 = true;
-                let call2 = next.call;
-                if (typeof call2 === "unknown") {
-                  let iter4 = next();
-                } else {
-                  iter4 = call2(obj2);
-                }
-                let done2 = iter4.done;
-                flag3 = done2;
-                if (done2) {
-                  break;
-                } else {
-                  let arr3 = items.push(iter5.value);
-                  if (items.length !== arg1) {
-                    continue;
-                  } else {
-                    break;
-                  }
-                  break;
-                }
-              }
-            }
-          }
-        }
-        try {
-          if (!flag3) {
-            if (null != obj2.return) {
-              const returnResult = obj2.return();
-              const _Object2 = Object;
-              if (Object(returnResult) !== returnResult) {
-                if (flag2) {
-                  throw tmp6;
-                }
-              }
-            }
-          }
-          if (flag2) {
-            throw tmp6;
-          } else {
-            return items;
-          }
-        } catch (tmp35) {
-          if (tmp2) {
-            throw tmp;
-          } else {
-            throw tmp35;
-          }
-        }
-      } catch (tmp6) {
-        flag2 = true;
-      }
-    } catch (tmp38) {
-      try {
-        if (!tmp4) {
-          if (tmp5 != obj.return) {
-            const returnResult1 = obj.return();
-            const _Object3 = Object;
-            if (Object(returnResult1) !== returnResult1) {
-              if (tmp2) {
-                throw tmp;
-              } else {
-                return tmp3;
-              }
-            }
-          }
-        }
-        if (tmp2) {
-          throw tmp;
-        } else {
-          throw tmp38;
-        }
-      } catch (tmp47) {
-        if (tmp2) {
-          throw tmp;
-        } else {
-          throw tmp47;
-        }
-      }
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(translationX, translationX2) {
+  if (undefined === translationX2) {
+    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
+  } else {
+    obj = { changeX: translationX.translationX - translationX2.translationX, changeY: translationX.translationY - translationX2.translationY };
+  }
+  const merged = Object.assign(translationX);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 1947784830943;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}" };
+class PanGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, PanGesture);
+    tmp2 = c2;
+    obj = c2(PanGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
     }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "PanGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = PanGesture;
+_inherits(PanGesture, fn(6869).ContinousBaseGesture);
+const entry = {
+  key: "activeOffsetY",
+  value: function activeOffsetY(items) {
+    const self = this;
+    if (Array.isArray(items)) {
+      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items;
+    } else if (items < 0) {
+      self.config.activeOffsetYStart = items;
+    } else {
+      self.config.activeOffsetYEnd = items;
+    }
+    return self;
   }
 };
+let items = [
+  entry,
+  {
+    key: "activeOffsetX",
+    value: function activeOffsetX(items) {
+      const self = this;
+      if (Array.isArray(items)) {
+        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items;
+      } else if (items < 0) {
+        self.config.activeOffsetXStart = items;
+      } else {
+        self.config.activeOffsetXEnd = items;
+      }
+      return self;
+    }
+  },
+  {
+    key: "failOffsetY",
+    value: function failOffsetY(GestureDetector) {
+      const self = this;
+      if (Array.isArray(GestureDetector)) {
+        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = GestureDetector;
+      } else if (GestureDetector < 0) {
+        self.config.failOffsetYStart = GestureDetector;
+      } else {
+        self.config.failOffsetYEnd = GestureDetector;
+      }
+      return self;
+    }
+  },
+  {
+    key: "failOffsetX",
+    value: function failOffsetX(items1) {
+      const self = this;
+      if (Array.isArray(items1)) {
+        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items1;
+      } else if (items1 < 0) {
+        self.config.failOffsetXStart = items1;
+      } else {
+        self.config.failOffsetXEnd = items1;
+      }
+      return self;
+    }
+  },
+  {
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    }
+  },
+  {
+    key: "maxPointers",
+    value: function maxPointers(maxPointers) {
+      this.config.maxPointers = maxPointers;
+      return this;
+    }
+  },
+  {
+    key: "minDistance",
+    value: function minDistance(minDist) {
+      this.config.minDist = minDist;
+      return this;
+    }
+  },
+  {
+    key: "minVelocity",
+    value: function minVelocity(minVelocity) {
+      this.config.minVelocity = minVelocity;
+      return this;
+    }
+  },
+  {
+    key: "minVelocityX",
+    value: function minVelocityX(minVelocityX) {
+      this.config.minVelocityX = minVelocityX;
+      return this;
+    }
+  },
+  {
+    key: "minVelocityY",
+    value: function minVelocityY(minVelocityY) {
+      this.config.minVelocityY = minVelocityY;
+      return this;
+    }
+  },
+  {
+    key: "averageTouches",
+    value: function averageTouches(avgTouches) {
+      this.config.avgTouches = avgTouches;
+      return this;
+    }
+  },
+  {
+    key: "enableTrackpadTwoFingerGesture",
+    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
+      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
+      return this;
+    }
+  },
+  {
+    key: "activateAfterLongPress",
+    value: function activateAfterLongPress(activateAfterLongPress) {
+      this.config.activateAfterLongPress = activateAfterLongPress;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    }
+  }
+];
+
+export const PanGesture = _createClass(PanGesture, items);

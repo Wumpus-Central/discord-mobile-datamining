@@ -1,8 +1,7 @@
 // === Module 8465: ? ===
 
 // Module 8465
-import emptyFunction from "module_4469" /* 4469 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const rect = { top: emptyFunction.number, left: emptyFunction.number, bottom: emptyFunction.number, right: emptyFunction.number };
 
-export default emptyFunction.shape(rect);
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 160, height: 160, scales: [2, 3], hash: "abf5b4249ea38c96687799aa130b2321", name: "img_no_results_darker", type: "png" });

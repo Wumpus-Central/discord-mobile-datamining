@@ -1,9 +1,7 @@
 // === Module 6883: ? ===
 
 // Module 6883
-import module_65 from "module_65" /* 65 */;
+import _mod17 from "module_17" /* 17 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { moduleId: true, unstable_forceActive: true } };
 
-export default module_65.get("RNGestureHandlerRootView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default _mod17.findNodeHandle;

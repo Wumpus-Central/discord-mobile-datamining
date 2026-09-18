@@ -1,7 +1,33 @@
 // === Module 13113: ? ===
 
 // Module 13113
-import registerAsset from "module_1121" /* 1121 */;
+import setupIntegration from "module_13095" /* 13095 */;
 
+const weakMap = new WeakMap();
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_viewer/native/images", width: 24, height: 24, scales: [2, 3], hash: "05e33949de588de2bb105d38c549ac02", name: "ic_eye_hidden", type: "png" });
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function() {
+        const items = [...arguments];
+        const originalFunction = closure_1_0(13045).getOriginalFunction(this);
+        const obj = closure_1_0(13045);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
+        }
+        return toString.apply(self, items);
+      };
+    } catch (err) {
+    }
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
+  }
+}));

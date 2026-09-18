@@ -1,42 +1,223 @@
 // === Module 2033: ? ===
 
 // Module 2033
-import module_2034 from "module_2034" /* 2034 */;
+import extend from "extend" /* 2035 */;
+import SyntaxError from "SyntaxError" /* 2036 */;
+import StringFormat from "StringFormat" /* 2038 */;
+import defineProperty_mod from "defineProperty" /* 2034 */;
+import "defineProperty";
 
-if (!module_2034) {
-  const obj2 = { default: module_2034 };
-  let obj = obj2;
-} else {
-  obj = module_2034;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    const NumberResult = Number(arg0);
-    const result = NumberResult % 100;
-    if (20 < result) {
-      const result1 = result % 10;
-      if (1 === result1) {
-        return NumberResult + "st";
-      } else if (2 === result1) {
-        return NumberResult + "nd";
-      } else if (3 === result1) {
-        return NumberResult + "rd";
+class MessageFormat {
+  constructor(arg0, arg1, arg2) {
+    __parseResult = global;
+    if (typeof global === "string") {
+      tmp3 = MessageFormat;
+      __parseResult = MessageFormat.__parse(global);
+    }
+    if (__parseResult) {
+      str = "messageFormatPattern";
+      if ("messageFormatPattern" === __parseResult.type) {
+        self = this;
+        tmp4 = require;
+        tmp5 = importDefault;
+        tmp6 = MessageFormat;
+        _mergeFormatsResult = this._mergeFormats(MessageFormat.formats, importDefault);
+        tmp8 = closure_0;
+        tmp9 = closure_1;
+        obj = closure_0(closure_1[0]);
+        obj1 = { value: null };
+        obj1.value = this._resolveLocale(require);
+        str2 = "_locale";
+        definePropertyResult = obj.defineProperty(this, "_locale", obj1);
+        self2 = this;
+        tmp11 = __parseResult;
+        tmp12 = require;
+        tmp13 = _mergeFormatsResult;
+        closure_0 = this._compilePattern(__parseResult, require, _mergeFormatsResult, this._findPluralRuleFunction(this._locale));
+        self = this;
+        this.format = (arg0) => self._format(closure_0, arg0);
+        return;
       }
     }
-    return NumberResult + "th";
-  },
-  era: obj.default({ values: { narrow: ["B", "A"], abbreviated: ["BC", "AD"], wide: ["Before Christ", "Anno Domini"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+    typeError = new TypeError("A message must be provided as a String or AST.");
+    throw typeError;
+  }
+  resolvedOptions() {
+    obj = { locale: this._locale };
+    return obj;
+  }
+  _compilePattern(arg0, arg1, arg2, arg3) {
+    _default = new closure_0(closure_1[2]).default(require, importDefault, importAll);
+    return _default.compile(global);
+  }
+  _findPluralRuleFunction(arg0) {
+    __localeData__ = MessageFormat.__localeData__;
+    tmp = __localeData__[global.toLowerCase(global)];
+    if (tmp) {
+      tmp2 = tmp;
+      while (!tmp.pluralRuleFunction) {
+        parentLocale = tmp.parentLocale;
+        if (parentLocale) {
+          str = tmp.parentLocale;
+          parentLocale = __localeData__[str.toLowerCase(str)];
+        }
+        tmp = parentLocale;
+      }
+      return tmp.pluralRuleFunction;
     }
-  }),
-  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], wide: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["S", "M", "T", "W", "T", "F", "S"], short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"], abbreviated: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], wide: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mi", noon: "n", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" }, abbreviated: { am: "AM", pm: "PM", midnight: "midnight", noon: "noon", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnight", noon: "noon", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mi", noon: "n", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" }, abbreviated: { am: "AM", pm: "PM", midnight: "midnight", noon: "noon", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnight", noon: "noon", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" } }, defaultFormattingWidth: "wide" })
-};
+    error = new Error("Locale data added to IntlMessageFormat is missing a `pluralRuleFunction` for :" + global);
+    throw error;
+  }
+  _format(arg0, arg1) {
+    self = this;
+    length = global.length;
+    num = 0;
+    str = "";
+    str2 = "";
+    if (0 < length) {
+      while (true) {
+        obj = global[num];
+        tmp = str;
+        tmp2 = num;
+        if (typeof obj !== "string") {
+          id = obj.id;
+          if (!require) {
+            break;
+          } else {
+            tmp3 = closure_0;
+            tmp4 = closure_1;
+            hop = closure_0(closure_1[3]).hop;
+            call = hop.call;
+            if (!(typeof call === "unknown" ? hop(id) : call(require, id))) {
+              break;
+            } else {
+              tmp10 = require[id];
+              if (obj.options) {
+                text = `${tmp12(obj.getOption(tmp10), require)}`;
+              } else {
+                text = `${obj.format(tmp10)}`;
+              }
+            }
+          }
+        } else {
+          text = str + obj;
+        }
+        num = num + 1;
+        str = text;
+        str2 = text;
+      }
+      tmp5 = globalThis;
+      _Error = Error;
+      str3 = "A value must be provided for: ";
+      tmp6 = new.target;
+      tmp7 = new.target;
+      error = new Error("A value must be provided for: " + id);
+      tmp9 = error;
+      throw error;
+    }
+    return str2;
+  }
+  _mergeFormats(arg0, arg1) {
+    obj = {};
+    for (const key10006 in arg0) {
+      tmp7 = key10006;
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      hop2 = closure_0(closure_1[3]).hop;
+      call2 = hop2.call;
+      if (typeof call2 === "unknown") {
+        hop2Result = hop2(key10006);
+      } else {
+        hop2Result = call2(arg0, key10006);
+      }
+      if (!hop2Result) {
+        continue;
+      } else {
+        tmp8Result = tmp8(tmp9[0]);
+        objCreateResult = tmp8Result.objCreate(arg0[key10006]);
+        obj[key10006] = objCreateResult;
+        tmp3 = arg1;
+        if (!arg1) {
+          if (!arg1) {
+            continue;
+          } else {
+            tmp8Result1 = tmp8(tmp9[3]);
+            extendResult = tmp8Result1.extend(objCreateResult, arg1[key10006]);
+            continue;
+          }
+          continue;
+        } else {
+          hop = tmp8(tmp9[3]).hop;
+          call = hop.call;
+          if (typeof call === "unknown") {
+            hopResult = hop(key10006);
+          } else {
+            hopResult = call(arg1, key10006);
+          }
+          tmp5 = hopResult;
+        }
+      }
+      continue;
+    }
+    return obj;
+  }
+  _resolveLocale(arg0) {
+    items1 = global;
+    if (typeof global === "string") {
+      items = [];
+      items[0] = global;
+      items1 = items;
+    }
+    if (!items1) {
+      items1 = [];
+    }
+    combined = items1.concat(MessageFormat.defaultLocale);
+    length = combined.length;
+    num = 0;
+    if (0 < length) {
+      while (true) {
+        str = combined[num];
+        str2 = str.toLowerCase();
+        parts = str2.split("-");
+        tmp2 = num;
+        if (parts.length) {
+          tmp3 = tmp[parts.join(parts, "-")];
+          while (!tmp3) {
+            arr1 = parts.pop();
+            continue;
+          }
+          return tmp3.locale;
+        }
+        num = num + 1;
+      }
+    }
+    arr5 = combined.pop();
+    error = new Error("No locale data has been added to IntlMessageFormat for: " + combined.join(", ") + ", or the default locale: " + arr5);
+    throw error;
+  }
+}
+let defineProperty = defineProperty_mod;
+let obj = { enumerable: true, value: { number: { currency: { style: "currency" }, percent: { style: "percent" } }, date: { short: { month: "numeric", day: "numeric", year: "2-digit" }, medium: { month: "short", day: "numeric", year: "numeric" }, long: { month: "long", day: "numeric", year: "numeric" }, full: { weekday: "long", month: "long", day: "numeric", year: "numeric" } }, time: { short: { hour: "numeric", minute: "numeric" }, medium: { hour: "numeric", minute: "numeric", second: "numeric" }, long: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" }, full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" } } } };
+defineProperty.defineProperty(MessageFormat, "formats", obj);
+const obj3 = { value: null };
+let defineProperty = defineProperty_mod;
+obj3.value = defineProperty.objCreate(null);
+defineProperty.defineProperty(MessageFormat, "__localeData__", obj3);
+let defineProperty = defineProperty_mod;
+defineProperty.defineProperty(MessageFormat, "__addLocaleData", {
+  value(locale) {
+    if (locale) {
+      if (locale.locale) {
+        MessageFormat.__localeData__[locale.locale.toLowerCase()] = locale;
+      }
+    }
+    const error = new Error("Locale data provided to IntlMessageFormat is missing a `locale` property");
+    throw error;
+  }
+});
+let defineProperty = defineProperty_mod;
+defineProperty.defineProperty(MessageFormat, "__parse", { value: SyntaxError.default.parse });
+let defineProperty = defineProperty_mod;
+defineProperty.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "ip" });
 
-export default date;
-export default exports.default;
+export default MessageFormat;

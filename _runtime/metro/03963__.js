@@ -1,8 +1,8 @@
 // === Module 3963: ? ===
 
 // Module 3963
-import _typeof_mod from "module_3728" /* 3728 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import _typeof_mod from "module_3811" /* 3811 */;
+import requiredArgs_mod from "requiredArgs" /* 3812 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -20,14 +20,9 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let c2 = 86400000;
 
-export default function getUTCDayOfYear(arg0) {
+export default function isSunday(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  defaultResult1.setUTCMonth(0, 1);
-  defaultResult1.setUTCHours(0, 0, 0, 0);
-  return Math.floor((time - defaultResult1.getTime()) / c2) + 1;
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

@@ -1,7 +1,7 @@
 // === Module 14262: ? ===
 
 // Module 14262
-import registerAsset from "module_1121" /* 1121 */;
+import _mod14261 from "module_14261" /* 14261 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "42c5142fba4f2f3f3d86c5b7ea6fd4ac", name: "YouTab", type: "lottie" });
+export default (arg0, arg1, arg2) => _mod14261(arg0, arg1, ">", arg2);

@@ -1,7 +1,24 @@
 // === Module 5398: ? ===
 
 // Module 5398
-import registerAsset from "module_1121" /* 1121 */;
+import _mod5383 from "module_5383" /* 5383 */;
 
+require = arg1;
+const dependencyMap = arg6;
+let c2 = 0;
+let c3 = "<?xpacket begin";
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "6dfdeab813b7b4024164980d2fd4bf7a", name: "img_account_sync_league_of_legends_light_and_dark", type: "png" });
+export default {
+  isXMLFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5383.getStringFromDataView(dataView, c2, length.length) === length;
+    }
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    const xmpChunks = [];
+    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
+    return { xmpChunks };
+  }
+};

@@ -1,7 +1,18 @@
 // === Module 4601: ? ===
 
 // Module 4601
-import registerAsset from "module_1121" /* 1121 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod4598 from "module_4598" /* 4598 */;
 
+const useContext = _mod19.useContext;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "dd2bf1474590dee83bbb5fea2b4f182c", name: "CircleCheckIcon-primary", type: "png" });
+export const usePortalState = (name) => {
+  const tmp = useContext(_mod4598.PortalStateContext);
+  if (null === tmp) {
+    const _Error = Error;
+    const error = new Error("'PortalStateContext' cannot be null, please add 'PortalProvider' to the root component.");
+    throw error;
+  } else {
+    return tmp[name] || [];
+  }
+};

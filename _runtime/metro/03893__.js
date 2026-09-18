@@ -1,38 +1,44 @@
 // === Module 3893: ? ===
 
 // Module 3893
-import module_3732_mod from "module_3732" /* 3732 */;
-import module_3883_mod from "module_3883" /* 3883 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import translateSeconds from "translateSeconds" /* 3894 */;
+import module_3895 from "module_3895" /* 3895 */;
+import module_3896 from "module_3896" /* 3896 */;
+import date_mod from "module_3897" /* 3897 */;
+import date_mod from "module_3898" /* 3898 */;
 
-let module_3732 = module_3732_mod;
-if (!module_3732) {
-  const obj = { default: module_3732 };
+if (!translateSeconds) {
+  const obj = { default: translateSeconds };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3732;
+  tmp3 = translateSeconds;
 }
-module_3732 = tmp3;
-let module_3883 = module_3883_mod;
-if (!module_3883) {
-  const obj2 = { default: module_3883 };
+if (!module_3895) {
+  const obj2 = { default: module_3895 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_3883;
+  tmp5 = module_3895;
 }
-module_3883 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+if (!module_3896) {
+  const obj3 = { default: module_3896 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_3896;
 }
-requiredArgs = tmp7;
-let c3 = 60000;
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function addMinutes(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_3883.default(interval, module_3732.default(arg1) * c3);
-};
+export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

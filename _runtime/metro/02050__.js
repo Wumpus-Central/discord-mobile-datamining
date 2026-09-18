@@ -1,7 +1,22 @@
 // === Module 2050: ? ===
 
 // Module 2050
-import registerAsset from "module_1121" /* 1121 */;
-
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/ZGVzaWdu", scales: [1], hash: "4e38679998c1804e72a225e19a578c05", name: "hi.messages.4e38679998c1804e72a225e19a578c05.compiled.messages", type: "jsona" });
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "hu",
+  pluralRuleFunction(arg0, arg1) {
+    if (arg1) {
+      if (1 == arg0) {
+        let str2 = "one";
+      } else {
+        str2 = "other";
+      }
+      let str = str2;
+    } else {
+      str = "other";
+      if (1 == arg0) {
+        str = "one";
+      }
+    }
+    return str;
+  }
+});

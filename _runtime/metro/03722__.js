@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_channel_apps", scales: [1], hash: "3f0bebcb3d9b49b71bd5a1c0cee8f16f", name: "VoiceChannelApps.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb25uZWN0ZWRfZGV2aWNlcw==", scales: [1], hash: "37a0adad10e0b2fe77537090b6fe4878", name: "hr.messages.37a0adad10e0b2fe77537090b6fe4878.compiled.messages", type: "jsona" });

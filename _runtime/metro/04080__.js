@@ -1,30 +1,19 @@
 // === Module 4080: ? ===
 
 // Module 4080
-import startOfQuarter_mod from "startOfQuarter" /* 3940 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import _mod3816 from "module_3816" /* 3816 */;
+import assign_mod from "assign" /* 4061 */;
 
-let startOfQuarter = startOfQuarter_mod;
-if (!startOfQuarter) {
-  const obj = { default: startOfQuarter };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfQuarter;
+  tmp3 = assign;
 }
-startOfQuarter = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function isSameQuarter(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfQuarter.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfQuarter.default(arg1).getTime();
+export default function getDefaultOptions() {
+  return assign.default({}, _mod3816.getDefaultOptions());
 };
 export default exports.default;

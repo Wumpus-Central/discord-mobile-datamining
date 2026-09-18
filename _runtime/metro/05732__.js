@@ -1,55 +1,83 @@
 // === Module 5732: ? ===
 
 // Module 5732
-import hsl from "hsl" /* 5730 */;
-
-
-export default (arg0) => {
-  const obj = {};
-  const keys = Object.keys(hsl);
-  for (let num = 0; num < length; num = num + 1) {
-    obj[keys[num]] = { distance: -1, parent: null };
-  }
-  const items = [arg0];
-  obj[arg0].distance = 0;
-  while (items.length) {
-    let arr = items.pop();
-    let _Object = Object;
-    let keys1 = Object.keys(hsl[arr]);
-    let length2 = keys1.length;
-    for (let num2 = 0; num2 < length2; num2 = num2 + 1) {
-      let tmp4 = keys1[num2];
-      let tmp5 = obj[tmp4];
-      if (-1 === tmp5.distance) {
-        tmp5.distance = obj[arr].distance + 1;
-        tmp5.parent = arr;
-        let arr2 = items.unshift(tmp4);
-      }
+exports.exports.parse = (arg0) => {
+  const match = /^(?:(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))$|^((?:[a-z]{2,3}(?:(?:-[a-z]{3}){1,3})?)|[a-z]{4}|[a-z]{5,8})(?:-([a-z]{4}))?(?:-([a-z]{2}|\d{3}))?((?:-(?:[\da-z]{5,8}|\d[\da-z]{3}))*)?((?:-[\da-wy-z](?:-[\da-z]{2,8})+)*)?(-x(?:-[\da-z]{1,8})+)?$|^(x(?:-[\da-z]{1,8})+)$/i.exec(arg0);
+  if (match) {
+    match.shift();
+    let items = [];
+    let arr2 = null;
+    if (match[2]) {
+      const parts = match[2].split("-");
+      arr2 = parts.shift();
+      items = parts;
     }
-  }
-  const obj2 = {};
-  const keys2 = Object.keys(obj);
-  for (let num3 = 0; num3 < length3; num3 = num3 + 1) {
-    let tmp8 = keys2[num3];
-    if (null !== obj[tmp8].parent) {
-      let items1 = [obj[tmp8].parent, tmp8];
-      let fn = hsl[obj[tmp8].parent][tmp8];
-      let parent3 = obj[tmp8].parent;
-      let tmp13 = fn;
-      if (obj[parent3].parent) {
-        do {
-          let arr3 = items1.unshift(obj[parent3].parent);
-          closure_0 = hsl[obj[parent3].parent][parent3];
-          fn = (arg0) => fn(closure_0(arg0));
-          let parent = obj[parent3].parent;
-          parent3 = parent;
-          tmp13 = fn;
-          parent2 = obj[parent].parent;
-        } while (parent2);
-      }
-      tmp13.conversion = items1;
-      obj2[tmp8] = tmp13;
+    let items1 = [];
+    if (match[5]) {
+      const parts1 = match[5].split("-");
+      parts1.shift();
+      items1 = parts1;
     }
+    const items2 = [];
+    if (match[6]) {
+      const parts2 = match[6].split("-");
+      parts2.shift();
+      let items3 = [];
+      let tmp6 = items3;
+      let tmp7;
+      while (parts2.length) {
+        let arr5 = parts2.shift();
+        if (1 === arr5.length) {
+          let items4 = items3;
+          let tmp11 = arr5;
+          if (tmp5) {
+            let obj2 = { singleton: tmp5, extension: items3 };
+            let arr6 = items2.push(obj2);
+            items4 = [];
+            tmp11 = arr5;
+          }
+        } else {
+          let arr7 = items3.push(arr5);
+          items4 = items3;
+          tmp11 = tmp5;
+        }
+        items3 = items4;
+        tmp5 = tmp11;
+        tmp6 = items4;
+        tmp7 = tmp11;
+      }
+      const obj3 = { singleton: tmp7, extension: tmp6 };
+      items2.push(obj3);
+    }
+    let items5 = [];
+    if (match[7]) {
+      const parts3 = match[7].split("-");
+      parts3.shift();
+      parts3.shift();
+      items5 = parts3;
+    }
+    let items6 = [];
+    if (match[8]) {
+      const parts4 = match[8].split("-");
+      parts4.shift();
+      items6 = parts4;
+    }
+    const obj4 = { language: null, script: null, region: null, variant: null, extension: null, privateuse: null };
+    const obj5 = { language: arr2, extlang: items };
+    obj4.language = obj5;
+    obj4.script = match[3] || null;
+    const obj6 = { langtag: null, privateuse: null, grandfathered: null };
+    obj4.region = match[4] || null;
+    obj4.variant = items1;
+    obj4.extension = items2;
+    obj4.privateuse = items5;
+    obj6.langtag = obj4;
+    obj6.privateuse = items6;
+    const obj7 = { irregular: match[0] || null, regular: match[1] || null };
+    obj6.grandfathered = obj7;
+    return obj6;
+  } else {
+    return null;
   }
-  return obj2;
+  const obj = /^(?:(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))$|^((?:[a-z]{2,3}(?:(?:-[a-z]{3}){1,3})?)|[a-z]{4}|[a-z]{5,8})(?:-([a-z]{4}))?(?:-([a-z]{2}|\d{3}))?((?:-(?:[\da-z]{5,8}|\d[\da-z]{3}))*)?((?:-[\da-wy-z](?:-[\da-z]{2,8})+)*)?(-x(?:-[\da-z]{1,8})+)?$|^(x(?:-[\da-z]{1,8})+)$/i;
 };

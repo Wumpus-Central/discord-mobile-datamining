@@ -1,30 +1,7 @@
 // === Module 4673: ? ===
 
 // Module 4673
-import baseIteratee from "baseIteratee" /* 584 */;
-import _mod4674 from "module_4674" /* 4674 */;
-import baseFindIndex from "baseFindIndex" /* 4676 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default function findLastIndex(arg0, arg1, arg2) {
-  let num = 0;
-  if (null != arg0) {
-    num = arg0.length;
-  }
-  if (num) {
-    const diff = num - 1;
-    if (undefined === arg2) {
-      return baseFindIndex(arg0, baseIteratee(arg1, 3), diff, true);
-    } else {
-      let sum = _mod4674(arg2);
-      if (arg2 < 0) {
-        sum = num + sum;
-        let tmp7 = max(sum, 0);
-      } else {
-        tmp7 = min(sum, num - 1);
-      }
-    }
-  } else {
-    return -1;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5a0d5d16e378eea1c4baa447014a7b8d", name: "CheckmarkLargeIcon", type: "png" });

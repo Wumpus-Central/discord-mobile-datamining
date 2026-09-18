@@ -1,254 +1,127 @@
 // === Module 4067: ? ===
 
 // Module 4067
-import Parser2 from "Parser" /* 4034 */;
+import _typeof_mod from "module_3811" /* 3811 */;
+import module_3993_mod from "module_3993" /* 3993 */;
+import module_4054_mod from "module_4054" /* 4054 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
 }
-function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-  _setPrototypeOf = Object.setPrototypeOf;
-  if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-      ISOTimezoneWithZParser.__proto__ = Parser;
-      return ISOTimezoneWithZParser;
-    };
-  }
-  return _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+_typeof = tmp3;
+let module_3993 = module_3993_mod;
+if (!module_3993) {
+  const obj2 = { default: module_3993 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_3993;
 }
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    _getPrototypeOf = Object.getPrototypeOf;
-  } else {
-    _getPrototypeOf = function _getPrototypeOf(arg0) {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  return _getPrototypeOf(arg0);
+module_3993 = tmp5;
+let module_4054 = module_4054_mod;
+if (!module_4054) {
+  const obj3 = { default: module_4054 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4054;
 }
-const Parser = Parser2.Parser;
-let _createSuperInternal;
-class ISOTimezoneWithZParser {
-  constructor() {
-    if (this instanceof closure_1) {
-      length = arguments.length;
-      _Array = Array;
-      tmp6 = new.target;
-      tmp7 = new.target;
-      tmp8 = length;
-      array = new Array(length);
-      tmp10 = array;
-      num = 0;
-      num2 = 1;
-      if (0 < length) {
-        do {
-          array[num] = arguments[num];
-          num = num + 1;
-        } while (num < length);
-      }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
-      items = [];
-      items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
-      tmp13 = undefined === applyResult;
-      if (tmp13) {
-        _ReferenceError2 = ReferenceError;
-        tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
-        tmp21 = new.target;
-        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        tmp23 = referenceError;
-        throw referenceError;
-      } else {
-        str2 = "priority";
-        if ("priority" in applyResult) {
-          _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
-        } else {
-          num3 = 10;
-          applyResult.priority = 10;
-        }
-        if (tmp13) {
-          _ReferenceError = ReferenceError;
-          tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
-          tmp17 = new.target;
-          referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-          tmp19 = referenceError1;
-          throw referenceError1;
-        } else {
-          items1 = ["t", "T", "x"];
-          str3 = "incompatibleTokens";
-          if ("incompatibleTokens" in applyResult) {
-            _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj.value = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
-          } else {
-            applyResult.incompatibleTokens = items1;
-          }
-          return applyResult;
-        }
-      }
-    } else {
-      _TypeError = TypeError;
-      tmp2 = new.target;
-      str = "Cannot call a class as a function";
-      tmp3 = new.target;
-      typeError = new TypeError("Cannot call a class as a function");
-      tmp5 = typeError;
-      throw typeError;
-    }
-  }
-}
-let dependencyMap = ISOTimezoneWithZParser;
-if (typeof Parser !== "function") {
-  if (null !== Parser) {
-    let _TypeError = TypeError;
-    let typeError = new TypeError("Super expression must either be null or a function");
+module_4054 = tmp7;
+
+export default function formatISO9075(arg0, format) {
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat2 = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
     throw typeError;
-  }
-}
-let prototype = Parser;
-if (Parser) {
-  prototype = Parser.prototype;
-}
-ISOTimezoneWithZParser.prototype = Object.create(prototype, { constructor: { value: ISOTimezoneWithZParser, writable: true, configurable: true } });
-if (Parser) {
-  _setPrototypeOf(ISOTimezoneWithZParser, Parser);
-}
-let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect3 = Reflect;
-    if (Reflect.construct) {
-      const _Reflect = Reflect;
-      if (Reflect.construct.sham) {
-        return false;
-      } else {
-        const _Proxy = Proxy;
-        if (typeof Proxy === "function") {
-          return true;
-        } else {
-          try {
-            const _Boolean = Boolean;
-            const call = valueOf.call;
-            const _Reflect2 = Reflect;
-            const _Boolean2 = Boolean;
-            if (typeof call === "unknown") {
-              valueOf();
-            } else {
-              call(constructResult);
-            }
-            return true;
-          } catch (err) {
-            return false;
+  } else {
+    const defaultResult = _typeof.default(arg0);
+    if (module_3993.default(defaultResult)) {
+      format = undefined;
+      if (null != format) {
+        format = format.format;
+      }
+      let str3 = "extended";
+      if (null !== format) {
+        str3 = "extended";
+        if (undefined !== format) {
+          str3 = format;
+        }
+      }
+      const StringResult = String(str3);
+      let representation;
+      if (null != format) {
+        representation = format.representation;
+      }
+      let str5 = "complete";
+      if (null !== representation) {
+        str5 = "complete";
+        if (undefined !== representation) {
+          str5 = representation;
+        }
+      }
+      const StringResult1 = String(str5);
+      if ("extended" !== StringResult) {
+        if ("basic" !== StringResult) {
+          const _RangeError3 = RangeError;
+          const rangeError = new RangeError("format must be 'extended' or 'basic'");
+          throw rangeError;
+        }
+      }
+      if ("date" !== StringResult1) {
+        if ("time" !== StringResult1) {
+          if ("complete" !== StringResult1) {
+            const _RangeError2 = RangeError;
+            const rangeError1 = new RangeError("representation must be 'date', 'time', or 'complete'");
+            throw rangeError1;
           }
         }
       }
-    }
-  }
-  return false;
-})();
-_createSuperInternal = function _createSuperInternal() {
-  const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
-    const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-  } else {
-    constructResult = obj(...arguments);
-  }
-  if (!constructResult) {
-    let tmp8 = self;
-    if (undefined === self) {
-      const _ReferenceError = ReferenceError;
-      const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      throw referenceError;
-    }
-  } else {
-    tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
-      tmp8 = constructResult;
-    }
-  }
-  return tmp8;
-};
-const entry = {
-  key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("X" === arg1) {
-      return _createSuperInternal(4036).parseTimezonePattern(_createSuperInternal(4037).timezonePatterns.basicOptionalMinutes, arg0);
-    } else if ("XX" === arg1) {
-      return _createSuperInternal(4036).parseTimezonePattern(_createSuperInternal(4037).timezonePatterns.basic, arg0);
-    } else if ("XXXX" === arg1) {
-      return _createSuperInternal(4036).parseTimezonePattern(_createSuperInternal(4037).timezonePatterns.basicOptionalSeconds, arg0);
-    } else if ("XXXXX" === arg1) {
-      return _createSuperInternal(4036).parseTimezonePattern(_createSuperInternal(4037).timezonePatterns.extendedOptionalSeconds, arg0);
-    } else {
-      return _createSuperInternal(4036).parseTimezonePattern(_createSuperInternal(4037).timezonePatterns.extended, arg0);
-    }
-  }
-};
-let items = [
-  entry,
-  {
-    key: "set",
-    value: function set(getTime, timestampIsSet, arg2) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
+      let str10 = "";
+      if ("extended" === StringResult) {
+        str10 = "-";
       }
-      return date;
+      let str11 = "";
+      if ("extended" === StringResult) {
+        str11 = ":";
+      }
+      let str13 = "";
+      if ("time" !== StringResult1) {
+        const defaultResult1 = module_4054.default(defaultResult.getDate(), 2);
+        const concat3 = "".concat;
+        const combined = "".concat(module_4054.default(defaultResult.getFullYear(), 4));
+        const combined1 = combined.concat(str10);
+        const combined2 = combined1.concat(module_4054.default(defaultResult.getMonth() + 1, 2));
+        const combined3 = combined2.concat(str10);
+        str13 = combined3.concat(defaultResult1);
+        const defaultResult2 = module_4054.default(defaultResult.getMonth() + 1, 2);
+      }
+      let combined10 = str13;
+      if ("date" !== StringResult1) {
+        const defaultResult3 = module_4054.default(defaultResult.getHours(), 2);
+        let str14 = " ";
+        const defaultResult4 = module_4054.default(defaultResult.getMinutes(), 2);
+        if ("" === str13) {
+          str14 = "";
+        }
+        const concat = "".concat;
+        const combined4 = "".concat(str13);
+        const combined5 = combined4.concat(str14);
+        const combined6 = combined5.concat(defaultResult3);
+        const combined7 = combined6.concat(str11);
+        const combined8 = combined7.concat(defaultResult4);
+        const combined9 = combined8.concat(str11);
+        combined10 = combined9.concat(module_4054.default(defaultResult.getSeconds(), 2));
+        const defaultResult5 = module_4054.default(defaultResult.getSeconds(), 2);
+      }
+      return combined10;
+    } else {
+      const _RangeError = RangeError;
+      const rangeError2 = new RangeError("Invalid time value");
+      throw rangeError2;
     }
   }
-];
-if (0 < items.length) {
-  do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
-    if (!flag) {
-      flag = false;
-    }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
-    }
-    let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
-    num = num + 1;
-  } while (num < items.length);
-}
-
-export { ISOTimezoneWithZParser };
+};
+export default exports.default;

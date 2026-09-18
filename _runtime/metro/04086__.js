@@ -1,17 +1,17 @@
 // === Module 4086: ? ===
 
 // Module 4086
-import module_4078_mod from "module_4078" /* 4078 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import _typeof_mod from "module_3811" /* 3811 */;
+import requiredArgs_mod from "requiredArgs" /* 3812 */;
 
-let module_4078 = module_4078_mod;
-if (!module_4078) {
-  const obj = { default: module_4078 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4078;
+  tmp3 = _typeof;
 }
-module_4078 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMinute(arg0) {
+export default function getMinutes(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4078.default(Date.now(), arg0);
+  return _typeof.default(arg0).getMinutes();
 };
 export default exports.default;

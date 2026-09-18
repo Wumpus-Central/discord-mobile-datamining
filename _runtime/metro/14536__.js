@@ -1,34 +1,48 @@
 // === Module 14536: ? ===
 
 // Module 14536
-let closure_0 = { url: "http://localhost:8081" };
+import _mod14516 from "module_14516" /* 14516 */;
+import _mod14537 from "module_14537" /* 14537 */;
 
-export default () => {
-  if (arg0 === undefined) {
-    let obj = {};
+let tmp = _mod14516.process && _mod14516.process.versions;
+if (!tmp) {
+  tmp = _mod14516.Deno && _mod14516.Deno.version;
+  const tmp2 = _mod14516.Deno && _mod14516.Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
+  } else {
+    num3 = 1;
   }
-  return () => {
-    url = Object.assign({}, url, obj);
-    obj = {
-      onCommand(type) {
-        if ("editor.open" === type.type) {
-          const payload = type.payload;
-          let num = payload.lineNumber;
-          const _HermesInternal = HermesInternal;
-          obj = { file: payload.file, lineNumber: null };
-          const combined = "" + url.url + "/open-stack-frame";
-          if (!num) {
-            num = 1;
-          }
-          obj.lineNumber = num;
-          const _fetch = fetch;
-          const request = { method: "POST", body: null };
-          const _JSON = JSON;
-          request.body = JSON.stringify(obj);
-          const response = fetch(combined, request);
-        }
-      }
-    };
-    return obj;
-  };
-};
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = _mod14537;
+}
+if (_module) {
+  const match = _mod14537.match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+}
+if (_module) {
+  _module = _mod14537.match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+}
+if (_module) {
+  tmp3 = +tmp4[1];
+}
+
+export default tmp3;

@@ -1,16 +1,15 @@
 // === Module 10761: ? ===
 
 // Module 10761
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10588 */;
-import now from "now" /* 10605 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10682 */;
+import now from "now" /* 10699 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 let self = this;
-const ITCasualDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,6 +29,8 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -45,7 +46,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      fn = function c(arg0) {
+      fn = function u(arg0) {
         fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -92,16 +93,15 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    let closure_9 = fn(now);
-    const re10 = /(ora|oggi|stasera|questa sera|domani|dmn|ieri\s*sera)(?=\W|$)/i;
-    class ITCasualDateParser {
+    let closure_7 = fn(now);
+    class PTCasualDateParser {
       constructor() {
         self = this;
-        tmp = c2(this, ITCasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(ITCasualDateParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
+        tmp = closure_0(this, PTCasualDateParser);
+        tmp2 = c2;
+        obj = c2(PTCasualDateParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
           tmp7 = globalThis;
           _Reflect = Reflect;
           tmp8 = arguments;
@@ -114,54 +114,39 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _inherits(ITCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    _classCallCheck = PTCasualDateParser;
+    _inherits(PTCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
     const entry = {
       key: "innerPattern",
       value: function innerPattern(arg0) {
-            return re10;
+            return /(agora|hoje|amanha|amanhã|ontem)(?=\W|$)/i;
           }
     };
     let items = [entry, ];
     const entry1 = {
       key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-            refDate = refDate.refDate;
-            const str2 = arg1[0].toLowerCase();
-            const parsingComponents = refDate.createParsingComponents();
-            if ("ora" === str2) {
-              return closure_9.now(refDate.reference);
-            } else if ("oggi" === str2) {
-              return closure_9.today(refDate.reference);
-            } else if ("ieri" === str2) {
-              return closure_9.yesterday(refDate.reference);
+      value: function innerExtract(reference, arg1) {
+            const formatted = arg1[0].toLowerCase();
+            if ("agora" === formatted) {
+              return closure_7.now(reference.reference);
+            } else if ("hoje" === formatted) {
+              return closure_7.today(reference.reference);
             } else {
-              if ("domani" !== str2) {
-                if ("dmn" !== str2) {
-                  if ("stasera" !== str2) {
-                    if ("questa sera" !== str2) {
-                      if (str2.match(/ieri\s*sera/)) {
-                        let tmp = refDate;
-                        if (refDate.getHours() > 6) {
-                          const _Date = Date;
-                          const date = new Date(refDate.getTime());
-                          date.setDate(date.getDate() - 1);
-                          tmp = date;
-                        }
-                        ITCasualDateParser(10587).assignSimilarDate(parsingComponents, tmp);
-                        parsingComponents.imply("hour", 0);
-                      }
-                      return parsingComponents;
-                    }
+              if ("amanha" !== formatted) {
+                if ("amanh\u00E3" !== formatted) {
+                  if ("ontem" === formatted) {
+                    return closure_7.yesterday(reference.reference);
+                  } else {
+                    return tmp2;
                   }
-                  return closure_9.tonight(refDate.reference);
                 }
               }
-              return closure_9.tomorrow(refDate.reference);
+              return closure_7.tomorrow(reference.reference);
             }
           }
     };
     items[1] = entry1;
-    exports.default = _createClass(ITCasualDateParser, items);
+    exports.default = _createClass(PTCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

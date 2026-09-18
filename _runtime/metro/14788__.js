@@ -1,7 +1,17 @@
 // === Module 14788: ? ===
 
 // Module 14788
-import registerAsset from "module_1121" /* 1121 */;
+import _modDef14784 from "module_14784" /* 14784 */;
+import noop from "module_19" /* 19 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/mfa/native/images", width: 762, height: 525, scales: [1], hash: "685e4a9eb5133a148de7ce27d400a483", name: "img_register_header", type: "png" });
+export default function useReanimatedHeaderHeight() {
+  const context = noop.useContext(_modDef14784);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height using Reanimated. Are you inside a screen in a navigator with a header and your NavigationContainer is wrapped in ReanimatedScreenProvider?");
+    throw error;
+  } else {
+    return context;
+  }
+};

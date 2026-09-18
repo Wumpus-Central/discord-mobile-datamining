@@ -1,17 +1,17 @@
 // === Module 4085: ? ===
 
 // Module 4085
-import module_4075_mod from "module_4075" /* 4075 */;
-import requiredArgs_mod from "requiredArgs" /* 3729 */;
+import _typeof_mod from "module_3811" /* 3811 */;
+import requiredArgs_mod from "requiredArgs" /* 3812 */;
 
-let module_4075 = module_4075_mod;
-if (!module_4075) {
-  const obj = { default: module_4075 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4075;
+  tmp3 = _typeof;
 }
-module_4075 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisISOWeek(arg0) {
+export default function getMilliseconds(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4075.default(arg0, Date.now());
+  return _typeof.default(arg0).getMilliseconds();
 };
 export default exports.default;

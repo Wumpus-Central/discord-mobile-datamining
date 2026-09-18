@@ -1,25 +1,7 @@
 // === Module 17492: ? ===
 
 // Module 17492
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "da",
-  pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
-    const first = parts[0];
-    if (arg1) {
-      let str3 = "other";
-    } else {
-      str3 = "one";
-      if (1 != arg0) {
-        if (!tmp3) {
-          str3 = "one";
-          if (0 != first) {
-            str3 = "one";
-          }
-        }
-      }
-    }
-    return str3;
-  }
-});
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "da-GL", parentLocale: "da" });
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "e3c5c9128e3b6990fd3bdb33f2f889a0", name: "ic_gear", type: "png" });
