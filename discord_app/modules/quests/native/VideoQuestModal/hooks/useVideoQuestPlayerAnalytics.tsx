@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoQuestPlayerAnalytics.tsx
-import QuestTypes from "../../../QuestTypes.tsx";
 import MonitoringAgentDefault from "../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import QuestTypes from "../../../QuestTypes.tsx";
 import DiscordVideoPlayerTypes from "../../../../../../discord_common/js/packages/video-player/DiscordVideoPlayerTypes.tsx";
 import AnalyticsActions from "../../../lib/analytics/AnalyticsActions.tsx";
 import VideoQuestUtils from "../../../utils/VideoQuestUtils.tsx";

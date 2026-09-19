@@ -2,7 +2,7 @@
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import Constants2 from "../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -18,7 +18,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
   const obj2 = { type };
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(11123, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(11136, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (View) => {
           const obj = {};
@@ -34,5 +34,6 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
         };
       });
     },
+    isDismissable: false,
   });
 };

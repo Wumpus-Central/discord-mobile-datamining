@@ -2,13 +2,13 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3064 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3066 from "../../age_assurance/ManualReview.messages.js";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import SafetyHubModels from "../SafetyHubModels.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import AutomatedUnderageAppealModalActionCreatorsDefault from "../AutomatedUnderageAppealModalActionCreators.native.tsx";
@@ -71,7 +71,7 @@ function ClassificationHeader(classificationTypeText) {
       return intl.format(util.t["39jfOz"], obj2);
     }
   }, items);
-  obj.children = closure_13(classificationTypeText(4718).Text, {
+  obj.children = closure_13(classificationTypeText(4752).Text, {
     variant: "text-lg/normal",
     style: tmp.headerText,
     color: "mobile-text-heading-primary",
@@ -160,7 +160,7 @@ function ManualReviewDecidedUnderageActionsTaken() {
   obj3.style = items1;
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3064.rn3Gto);
+  obj4.children = intl2.string(_modDef3066.rn3Gto);
   obj3.children = map1(BulletRow, obj4);
   items[1] = map1(React4, obj3);
   obj.children = items;
@@ -185,7 +185,7 @@ function ManualReviewDecidedUnderageGuidance() {
   obj3.style = items1;
   const obj4 = { large: true, children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3064["yV/t/V"]);
+  obj4.children = intl2.string(_modDef3066["yV/t/V"]);
   obj3.children = map1(BulletRow, obj4);
   items[1] = map1(React4, obj3);
   obj.children = items;
@@ -222,7 +222,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj2.style = items;
   const obj3 = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj3.children = closure_13(policyExplainerLink(9640).ShieldIcon, {
+  obj3.children = closure_13(policyExplainerLink(9515).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });
@@ -233,7 +233,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj6.children = intl.format(policyExplainerLink(1115).t.zxUdpj, {
     classificationDescription: classificationDescription.classificationTypeText,
   });
-  obj5.children = closure_13(policyExplainerLink(4718).Text, obj6);
+  obj5.children = closure_13(policyExplainerLink(4752).Text, obj6);
   items1[1] = closure_13(closure_4, obj5);
   obj2.children = items1;
   obj.children = closure_14(tmp2, obj2);
@@ -295,7 +295,7 @@ function ManualReviewDecidedUnderageFooter(arg0) {
   ({ tosLink, communityGuidelinesLink } = arg0);
   const obj = { variant: "text-sm/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3064.vPOpia, { tosLink, communityGuidelinesLink });
+  obj.children = intl.format(_modDef3066.vPOpia, { tosLink, communityGuidelinesLink });
   return map1(Text_Text.Text, obj);
 }
 function ManualReviewDecidedUnderageView() {
@@ -322,7 +322,7 @@ function ClassificationDetailFooter(onClose) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8652);
+const SafetyHubConstants = fn(8690);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
   SafetyHubAnalyticsActions: c10,
@@ -331,7 +331,7 @@ const SafetyHubConstants = fn(8652);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   container: null,

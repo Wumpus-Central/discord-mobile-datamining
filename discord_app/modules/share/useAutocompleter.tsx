@@ -10,7 +10,7 @@ export default function useAutocompleter(searchOptions) {
   searchOptions = searchOptions.searchOptions;
   dependencyMap = undefined;
   [tmp2, c1] = noop.useState({ results: [], query: "" });
-  const tmp3 = searchOptions(5768)(() => {
+  const tmp3 = searchOptions(5810)(() => {
     const obj = new sortByMatchScoreDefault((results, query) => {
       closure_1_1({ results, query });
     });

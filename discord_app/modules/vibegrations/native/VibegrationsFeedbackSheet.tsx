@@ -37,15 +37,15 @@ export default function VibegrationsFeedbackSheet(projectId) {
     trackReport: null,
   };
   const intl = projectId(1115).intl;
-  obj.headerLabel = intl.string(promptCount(3676).W7Sdp4);
+  obj.headerLabel = intl.string(promptCount(3678).W7Sdp4);
   const intl2 = projectId(1115).intl;
-  obj.ratingBody = intl2.string(promptCount(3676).dXJed8);
+  obj.ratingBody = intl2.string(promptCount(3678).dXJed8);
   const intl3 = projectId(1115).intl;
-  obj.categoriesHeader = intl3.string(promptCount(3676).kLHFxL);
+  obj.categoriesHeader = intl3.string(promptCount(3678).kLHFxL);
   obj.optionsTree = memo;
-  obj.trackOpen = projectId(16916).trackVibegrationsFeedbackOpened;
+  obj.trackOpen = projectId(16991).trackVibegrationsFeedbackOpened;
   obj.trackReport = callback;
-  return jsx(promptCount(16922), {
+  return jsx(promptCount(16997), {
     headerLabel: null,
     ratingBody: null,
     categoriesHeader: null,

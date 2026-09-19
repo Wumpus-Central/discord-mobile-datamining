@@ -6,8 +6,8 @@ import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import FramesStore from "../../FramesStore.tsx";
 
 const require = fn;
-const asLaunched = fn(9749).asLaunched;
-const ActivityPanelModes = fn(9743).ActivityPanelModes;
+const asLaunched = fn(9313).asLaunched;
+const ActivityPanelModes = fn(9314).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelController.tsx");
@@ -51,7 +51,7 @@ export default function FramePanelController(children) {
     }
   }, items1);
   let obj = mainFrameId(504);
-  return jsx(mainFrameId(17382).BaseActivityPanelController, {
+  return jsx(mainFrameId(17459).BaseActivityPanelController, {
     context: FramePanelStateContextDefault,
     orientationLockStateForApp,
     mode,

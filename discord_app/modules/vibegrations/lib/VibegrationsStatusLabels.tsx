@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/VibegrationsStatusLabels.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsTypes from "../VibegrationsTypes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -21,7 +21,7 @@ function thinkingLabel(restoring) {
   if (tmp) {
     tmp = "end" !== activity.phase;
   }
-  const tmp2 = _modDef3676;
+  const tmp2 = _modDef3678;
   if (flag2) {
     let ivvYHP = tmp2.ivvYHP;
   } else if (flag) {
@@ -40,13 +40,13 @@ export const INDICATOR_PASS_STAGGER_MS = 1800;
 export const connectionLabel = function connectionLabel(stateFromStores6) {
   if ("connecting" === stateFromStores6) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3676.W7oyuf);
+    return intl3.string(_modDef3678.W7oyuf);
   } else if ("closed" === stateFromStores6) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3676["yBmS+I"]);
+    return intl2.string(_modDef3678["yBmS+I"]);
   } else if ("failed" === stateFromStores6) {
     const intl = util.intl;
-    return intl.string(_modDef3676.eE60xI);
+    return intl.string(_modDef3678.eE60xI);
   }
 };
 export { thinkingLabel };
@@ -58,9 +58,9 @@ export const runesUsedLabels = function runesUsedLabels(projectUsage) {
   const runesFromUsdResult = VibegrationsTypes.runesFromUsd(projectUsage.cost_usd);
   const obj2 = { text: null, aria: null };
   const intl = util.intl;
-  obj2.text = intl.formatToPlainString(_modDef3676["4PFO2p"], { runes: runesFromUsdResult.toLocaleString() });
+  obj2.text = intl.formatToPlainString(_modDef3678["4PFO2p"], { runes: runesFromUsdResult.toLocaleString() });
   const intl2 = util.intl;
-  obj2.aria = intl2.formatToPlainString(_modDef3676["7SZZvj"], {
+  obj2.aria = intl2.formatToPlainString(_modDef3678["7SZZvj"], {
     runes: runesFromUsdResult,
     turns: projectUsage.turns,
   });

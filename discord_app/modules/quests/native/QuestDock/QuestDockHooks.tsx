@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -25,9 +25,9 @@ import QuestDockStore from "QuestDockStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(5614);
+const QuestConstants = fn(5656);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: metroRequire, QuestDockMode: closure_7 } = QuestConstants);
-const QuestDockConstants = fn(15301);
+const QuestDockConstants = fn(15356);
 ({
   QUEST_DOCK_CLOSED_HEIGHT: closure_8,
   QUEST_DOCK_COLLAPSED_HEIGHT: closure_9,
@@ -227,17 +227,17 @@ export const useQuestDockExternalOffset = function useQuestDockExternalOffset() 
 };
 export const useQuestDockDismissalReset = function useQuestDockDismissalReset() {
   setRestingQuestDockMode = noop.useContext(
-    setRestingQuestDockMode(15305).QuestDockExternalCoordinationContext,
+    setRestingQuestDockMode(15360).QuestDockExternalCoordinationContext,
   ).setRestingQuestDockMode;
   const activeQuestDockMode = noop.useContext(
-    setRestingQuestDockMode(15302).QuestDockGestureContext,
+    setRestingQuestDockMode(15357).QuestDockGestureContext,
   ).activeQuestDockMode;
   const items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = noop.useEffect(() => {
     let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(15300).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(15300);
+      isSoftDismissedResult = setRestingQuestDockMode(15355).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = setRestingQuestDockMode(15355);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(constants.COLLAPSED);
@@ -245,8 +245,8 @@ export const useQuestDockDismissalReset = function useQuestDockDismissalReset() 
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(15300).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(15300);
+        isSoftDismissedResult = setRestingQuestDockMode(15355).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = setRestingQuestDockMode(15355);
       }
       if (!isSoftDismissedResult) {
         closure_0(constants.COLLAPSED);
@@ -310,7 +310,7 @@ export const useActionSheetPressHandler = function useActionSheetPressHandler(qu
     }
     obj2 = AdAnalyticsInterfaceExperiment;
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15309, dependencyMap.paths),
+      asyncRequireImpl(15364, dependencyMap.paths),
       "QuestDockContextMenuActionSheet",
       { creative, impressionId: tmp7 },
     );

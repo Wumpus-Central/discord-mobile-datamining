@@ -1,12 +1,12 @@
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategories.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Portal from "../../../../../_runtime/04595_Portal.js";
+import Portal from "../../../../../_runtime/04629_Portal.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

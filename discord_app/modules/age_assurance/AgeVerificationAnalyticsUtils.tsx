@@ -13,7 +13,7 @@ export const AgeVerificationModalEntryPoint = {
   NSFW_AGE_GATE: "nsfw_age_gate",
   OBSCURED_MEDIA: "obscured_media",
   SYSTEM_DM_RETRY_BUTTON: "system_dm_retry_button",
-  SYSTEM_DM_MANUAL_REVIEW: "system_dm_manual_review",
+  MANUAL_REVIEW: "manual_review",
   DEV_TOOLS_QUICK_ACTIONS: "dev_tools_quick_actions",
   SENSITIVE_MEDIA_FILTER_SETTINGS: "sensitive_media_filter_settings",
   SENSITIVE_MEDIA_LEARN_MORE: "sensitive_media_learn_more",
@@ -61,7 +61,7 @@ export const AgeVerificationDmCta = {
   CONNECT_TO_TEEN: "connect_to_teen",
   MANUAL_REVIEW: "manual_review",
 };
-export const NsfwSpaceWarningModalType = fn(8646).NsfwSpaceWarningModalType;
+export const NsfwSpaceWarningModalType = fn(8684).NsfwSpaceWarningModalType;
 export const NsfwSpaceWarningModalCta = {
   NSFW_CHANNEL_AGREE_CTA: "nsfw_channel_agree_cta",
   NSFW_CHANNEL_DISAGREE_CTA: "nsfw_channel_disagree_cta",

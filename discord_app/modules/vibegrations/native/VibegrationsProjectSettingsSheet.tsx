@@ -192,7 +192,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsProjectSettingsSheet = "VibegrationsProjectSettingsSheet";
 VibegrationsCollaboratorRolesSheet = "VibegrationsCollaboratorRolesSheet";
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = {
   content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   roleLabel: null,
@@ -215,7 +215,7 @@ obj2.roleListFooter = {
   backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_15 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };

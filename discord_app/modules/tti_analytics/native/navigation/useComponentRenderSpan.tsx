@@ -2,6 +2,7 @@
 import LoggerDefault from "../../../debug/Logger.tsx";
 import NavigationSpanTypes from "NavigationSpanTypes.tsx";
 import NavigationSpanTrackerDefault from "NavigationSpanTracker.tsx";
+import NavigationTTIRegionDebugState from "debug/NavigationTTIRegionDebugState.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -11,9 +12,10 @@ let closure_4 = new LoggerDefault("NavTTISurface");
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/useComponentRenderSpan.tsx");
 
-export const useComponentRenderSpan = function useComponentRenderSpan(name) {
-  _require = name;
-  const navTTISurface = require("NavTTISurfaceContext").useNavTTISurface();
+export const useNavigationTTIRegionMeasurement = function useNavigationTTIRegionMeasurement(exclude, name) {
+  _require = exclude;
+  const spanComponent = name;
+  navTTISurface = require("NavTTISurfaceContext").useNavTTISurface();
   let str;
   if (navTTISurface != null) {
     str = navTTISurface.navigationKey;
@@ -35,18 +37,14 @@ export const useComponentRenderSpan = function useComponentRenderSpan(name) {
   if (flag == null) {
     flag = false;
   }
-  closure_129_0 = name;
-  closure_129_1 = str;
-  closure_129_2 = activeTraceId;
-  closure_129_3 = flag;
-  closure_129_4 = noop.useRef(null);
-  closure_129_5 = noop.useRef(null);
-  closure_129_6 = noop.useRef(null);
-  closure_129_7 = noop.useRef(null);
-  closure_129_8 = noop.useRef(str);
-  closure_129_9 = noop.useRef(false);
-  const items = [name];
-  const callback = noop.useCallback((traceId, endMonotonicMs, arg2, arg3, measurementSource) => {
+  str.useRef(null);
+  str.useRef(null);
+  str.useRef(null);
+  str.useRef(null);
+  str.useRef(str);
+  str.useRef(false);
+  const items = [name, exclude];
+  const callback = str.useCallback((traceId, endMonotonicMs, arg2, arg3, measurementSource) => {
     let isFiniteResult = arg2 > 0 && arg3 > 0;
     if (isFiniteResult) {
       const _Number = Number;
@@ -57,41 +55,59 @@ export const useComponentRenderSpan = function useComponentRenderSpan(name) {
       isFiniteResult = Number.isFinite(arg3);
     }
     if (isFiniteResult) {
-      current = ref2.current;
+      const current = ref3.current;
       traceId = undefined;
       if (current != null) {
         traceId = current.traceId;
       }
       if (traceId !== traceId) {
-        const obj3 = { spanComponent, endMonotonicMs, measurementSource };
-        if (obj2.recordComponentSpan(traceId, obj3)) {
-          const obj4 = { traceId, source: measurementSource };
-          ref2.current = obj4;
+        if ("include" === closure_0) {
+          const obj5 = { spanComponent, endMonotonicMs, measurementSource };
+          if (obj4.recordComponentSpan(traceId, obj5)) {
+            const obj6 = { traceId, source: measurementSource };
+            ref3.current = obj6;
+          }
+          obj4 = NavigationSpanTrackerDefault;
+        } else {
+          const activeTraceElapsedMs = NavigationSpanTrackerDefault.getActiveTraceElapsedMs(traceId, endMonotonicMs);
+          if (null != activeTraceElapsedMs) {
+            const result = NavigationTTIRegionDebugState.recordNavigationTTIRegionDebugMeasurement(
+              traceId,
+              spanComponent,
+              activeTraceElapsedMs,
+            );
+          }
         }
-        obj2 = NavigationSpanTrackerDefault;
       } else {
+        let tmp12 = "include" === closure_0;
         if (tmp12) {
-          const result = NavigationSpanTrackerDefault.recordLateComponentLayout(traceId, spanComponent, endMonotonicMs);
+          tmp12 = measurementSource === NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT;
         }
-        tmp12 =
-          measurementSource === NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT &&
-          current.source !== measurementSource;
+        if (tmp12) {
+          tmp12 = current.source !== NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT;
+        }
+        if (tmp12) {
+          const result1 = NavigationSpanTrackerDefault.recordLateComponentLayout(
+            traceId,
+            spanComponent,
+            endMonotonicMs,
+          );
+        }
       }
     }
   }, items);
-  closure_129_10 = callback;
   const items1 = [activeTraceId, flag, str];
-  const layoutEffect = noop.useLayoutEffect(() => {
-    if (ref3.current !== dependencyMap) {
-      ref.current = null;
+  const layoutEffect = str.useLayoutEffect(() => {
+    if (ref4.current !== activeTraceId) {
+      closure_7.current = null;
     }
-    ref3.current = dependencyMap;
-    ref4.current = navTTISurface;
-    ref5.current = current;
+    ref4.current = activeTraceId;
+    closure_10.current = str;
+    closure_11.current = flag;
   }, items1);
   const items2 = [callback];
   const items3 = [activeTraceId, flag, str, callback];
-  const onLayout = noop.useCallback((nativeEvent) => {
+  const onLayout = str.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
     ({ width, height } = layout);
     let isFiniteResult = width > 0 && height > 0;
@@ -104,74 +120,63 @@ export const useComponentRenderSpan = function useComponentRenderSpan(name) {
       isFiniteResult = Number.isFinite(height);
     }
     if (isFiniteResult) {
-      const size = { navigationKey: ref4.current, width: null, height: null };
+      const size = { navigationKey: ref5.current, width: null, height: null };
       ({ width: obj.width, height: obj.height } = layout);
-      logger.current = size;
+      closure_6.current = size;
     }
-    current = ref3.current;
+    const current = ref4.current;
     if (null != current) {
-      if (ref5.current) {
+      if (ref6.current) {
         const _performance = performance;
         ({ width: width2, height: height2 } = layout);
-        closure_1_10(
-          current,
-          performance.now(),
-          width2,
-          height2,
-          NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT,
-        );
+        callback(current, performance.now(), width2, height2, NavigationSpanTypes.ComponentMeasurementSource.ON_LAYOUT);
         const nowResult = performance.now();
       } else if (isFiniteResult) {
         const size1 = { traceId: current, width: null, height: null };
         ({ width: obj2.width, height: obj2.height } = layout);
-        ref.current = size1;
+        closure_7.current = size1;
       }
     }
   }, items2);
-  const effect = noop.useEffect(() => {
-    if (closure_3) {
-      if (null != closure_2) {
-        const current2 = ref2.current;
+  const effect = str.useEffect(() => {
+    if (flag) {
+      if (null != activeTraceId) {
+        const current2 = ref3.current;
         let traceId;
         if (current2 != null) {
           traceId = current2.traceId;
         }
-        if (traceId !== tmp) {
-          const current3 = ref.current;
+        if (traceId !== activeTraceId) {
+          const current3 = ref2.current;
           let traceId1;
           if (current3 != null) {
             traceId1 = current3.traceId;
           }
-          if (traceId1 !== tmp) {
-            current = logger.current;
+          if (traceId1 !== activeTraceId) {
+            const current = ref.current;
             if (null != current) {
-              if (current.navigationKey === CACHED_PREVIOUS_DESTINATION) {
-                CACHED_PREVIOUS_DESTINATION = spanComponent(16793).ComponentMeasurementSource.CACHED_SAME_DESTINATION;
+              if (current.navigationKey === str) {
+                let CACHED_PREVIOUS_DESTINATION = exclude(navTTISurface[3]).ComponentMeasurementSource
+                  .CACHED_SAME_DESTINATION;
               } else {
-                CACHED_PREVIOUS_DESTINATION =
-                  spanComponent(16793).ComponentMeasurementSource.CACHED_PREVIOUS_DESTINATION;
+                CACHED_PREVIOUS_DESTINATION = exclude(navTTISurface[3]).ComponentMeasurementSource
+                  .CACHED_PREVIOUS_DESTINATION;
               }
               const _requestAnimationFrame = requestAnimationFrame;
               closure_2 = requestAnimationFrame(() => {
-                closure_2_10(
-                  dependencyMap,
-                  performance.now(),
-                  current.width,
-                  current.height,
-                  CACHED_PREVIOUS_DESTINATION,
-                );
+                callback(activeTraceId, performance.now(), current.width, current.height, CACHED_PREVIOUS_DESTINATION);
               });
               return () => cancelAnimationFrame(closure_2);
             }
           } else {
             const _performance = performance;
             ({ width, height } = current3);
-            closure_10(
-              tmp,
+            callback(
+              activeTraceId,
               performance.now(),
               width,
               height,
-              spanComponent(16793).ComponentMeasurementSource.ON_LAYOUT,
+              exclude(navTTISurface[3]).ComponentMeasurementSource.ON_LAYOUT,
             );
             const nowResult = performance.now();
           }
@@ -179,12 +184,18 @@ export const useComponentRenderSpan = function useComponentRenderSpan(name) {
       }
     }
   }, items3);
-  const items4 = [name, navTTISurface];
-  const effect1 = noop.useEffect(() => {
-    if (null == navTTISurface) {
+  const items4 = [navTTISurface, name, exclude];
+  const effect1 = str.useEffect(() => {
+    let tmp = "include" === closure_0;
+    if (tmp) {
+      tmp = null == navTTISurface;
+    }
+    if (tmp) {
       const _HermesInternal = HermesInternal;
-      logger.warn("" + closure_0 + " has no NavTTISurfaceProvider; measurement is disabled.");
+      activeTraceId.warn("" + closure_1 + " has no NavTTISurfaceProvider; measurement is disabled.");
     }
   }, items4);
-  return { onLayout };
+  if ("include" === exclude) {
+    return { onLayout };
+  }
 };

@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef5767 from "../../../../../_runtime/metro/05767__.js";
+import _modDef5809 from "../../../../../_runtime/metro/05809__.js";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ import GuildRoleMemberCountStore from "../../GuildRoleMemberCountStore.tsx";
 
 require = fn;
 function onMembersLoadFail() {
-  const obj2 = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef5767, content: null };
+  const obj2 = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef5809, content: null };
   const intl = util.intl;
   obj2.content = intl.string(util.t.fEptJP);
   ToastActionCreatorsDefault.open(obj2);
@@ -22,7 +22,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   containerSearchBar: null,
@@ -115,8 +115,8 @@ export default function GuildSettingsRoleMembers(guild) {
           const obj2 = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
           const intl = name(1115).intl;
           obj2.content = intl.string(name(1115).t.fEptJP);
-          obj2.icon = found(5767);
-          found(4420).open(obj2);
+          obj2.icon = found(5809);
+          found(4454).open(obj2);
         });
       };
       obj2.confirmColor = guild(locked[16]).ButtonColors.RED;
@@ -133,7 +133,7 @@ export default function GuildSettingsRoleMembers(guild) {
       location_section: "Members",
     });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(17958, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
+    obj2.openLazy(asyncRequireImpl(18038, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
       guild,
       role,
     });

@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import common_AlertDefault from "../../components_native/common/Alert.tsx";
@@ -25,6 +25,7 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
     onConfirm: null,
     onCancel: null,
     confirmColor: null,
+    isDismissable: false,
   };
   const intl = util.intl;
   obj4.title = intl.string(util.t["66tnno"]);
@@ -41,7 +42,7 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12690, dependencyMap.paths), "SpamMessageHamActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12699, dependencyMap.paths), "SpamMessageHamActionSheet", {
     channel,
     onConfirm,
     onCancel,

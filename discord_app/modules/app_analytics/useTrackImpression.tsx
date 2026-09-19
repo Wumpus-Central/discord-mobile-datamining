@@ -4,7 +4,7 @@ import AnalyticsUtils2 from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import _modDef1331 from "../../../_runtime/metro/01331__.js";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
-import uniqueIdDefault from "../../../_runtime/04926_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/04960_uniqueId.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -89,7 +89,7 @@ export default function useTrackImpression(current, arg1) {
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5161)(() => {
+  obj(5203)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1331(ref.current, current);
       if (!tmp6) {

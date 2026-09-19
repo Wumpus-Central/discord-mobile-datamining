@@ -21,8 +21,8 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
     items1,
   );
   let obj = require("initialize");
-  const canEveryoneRoleResult = stateFromStores(4366).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(4366);
+  const canEveryoneRoleResult = stateFromStores(4400).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(4400);
   [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
   dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

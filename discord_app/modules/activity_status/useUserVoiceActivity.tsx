@@ -73,7 +73,7 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
 }
 const Permissions = fn(1085).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "PX_16", voiceChannel: "accessible" });
+let closure_7 = Object.freeze({ voiceState: "a", voiceChannel: "isArray" });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/useUserVoiceActivity.tsx");
 

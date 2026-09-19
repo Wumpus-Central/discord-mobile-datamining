@@ -6,8 +6,8 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import utils from "../../../content_inventory/utils.tsx";
 import TrophyIcon from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
-import FireIcon from "../../../../design/components/Icon/native/redesign/generated/FireIcon.tsx";
 import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import FireIcon from "../../../../design/components/Icon/native/redesign/generated/FireIcon.tsx";
 import RetryIcon from "../../../../design/components/Icon/native/redesign/generated/RetryIcon.tsx";
 import TimerIcon from "../../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
 import NewUserIcon from "../../../../design/components/Icon/native/redesign/generated/NewUserIcon.tsx";
@@ -86,7 +86,7 @@ let obj2 = {
   icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
 };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;

@@ -51,20 +51,20 @@ export default function useActivityShelfItemsSorting(arg0) {
       let label_type;
       if (embeddedActivityConfig != null) {
         const obj = items(1364);
-        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(9648)(undefined, obj.getOS(obj))];
+        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(9523)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = closure_1(9648);
+        const tmp5 = closure_1(9523);
       }
       let tmp8 = null != label_type;
       if (tmp8) {
         tmp8 =
-          label_type === items(1895).EmbeddedActivityLabelTypes.NEW ||
-          label_type === items(1895).EmbeddedActivityLabelTypes.UPDATED;
+          label_type === items(1978).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items(1978).EmbeddedActivityLabelTypes.UPDATED;
         const tmp11 =
-          label_type === items(1895).EmbeddedActivityLabelTypes.NEW ||
-          label_type === items(1895).EmbeddedActivityLabelTypes.UPDATED;
+          label_type === items(1978).EmbeddedActivityLabelTypes.NEW ||
+          label_type === items(1978).EmbeddedActivityLabelTypes.UPDATED;
       }
       return tmp8;
     });

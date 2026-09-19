@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import NavigatorConstants from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
@@ -110,7 +110,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(18055, dependencyMap.paths),
+      asyncRequireImpl(18134, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -180,7 +180,7 @@ function StartEarningButton(isTermsAccepted) {
     const intl = tmp5(tmp3[10]).intl;
     obj9.text = intl.string(tmp5(tmp3[10]).t.NL5ZNS);
     const obj10 = {
-      source: require("../../../../../../_runtime/metro/09870__.js"),
+      source: require("../../../../../../_runtime/metro/09712__.js"),
       color: require("native").unsafe_rawColors.WHITE,
       size: tmp5(tmp3[21]).Icon.Sizes.SMALL_20,
     };
@@ -255,12 +255,12 @@ class MarketingSections {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const React6 = fn(15414).CREATOR_REVENUE_PORTAL_URL;
+const React6 = fn(15469).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
-const constants = fn(18051).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(18130).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },

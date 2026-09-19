@@ -1,9 +1,9 @@
 // discord_app/modules/vibegrations/lib/VibegrationsPreviewMode.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const obj = { frame: _modDef3676.TI6dfu, widget: _modDef3676.zshJSX, bot: _modDef3676.bBkuBd };
+const obj = { frame: _modDef3678.TI6dfu, widget: _modDef3678.zshJSX, bot: _modDef3678.bBkuBd };
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPreviewMode.tsx");
 
 export const VIBEGRATIONS_PREVIEW_MODE_ORDER = ["frame", "widget", "bot"];

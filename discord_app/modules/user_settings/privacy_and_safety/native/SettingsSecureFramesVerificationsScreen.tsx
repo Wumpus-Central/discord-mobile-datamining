@@ -25,11 +25,11 @@ function VerificationListItem(userId) {
   obj.subLabel = memo;
   obj.start = start;
   obj.end = end;
-  obj.trailing = jsx(userId(5292).PressableHighlight, {
+  obj.trailing = jsx(userId(5334).PressableHighlight, {
     onPress: callback,
-    children: jsx(userId(5850).XSmallIcon, {}),
+    children: jsx(userId(5892).XSmallIcon, {}),
   });
-  return jsx(userId(5775).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
+  return jsx(userId(5817).TableRow, { label: null, subLabel: null, start: null, end: null, trailing: null });
 }
 function SectionListItem(children) {
   const tmp = closure_7();
@@ -74,17 +74,17 @@ function ClearVerificationsListFooter(userId) {
   const obj2 = { variant: "text-md/semibold", color: "text-feedback-critical", children: null };
   const intl = userId(1115).intl;
   obj2.children = intl.string(userId(1115).t["2xL5lu"]);
-  obj.label = jsx(userId(4718).Text, { variant: "text-md/semibold", color: "text-feedback-critical", children: null });
+  obj.label = jsx(userId(4752).Text, { variant: "text-md/semibold", color: "text-feedback-critical", children: null });
   const obj3 = { variant: "text-xs/medium", color: "text-subtle", children: null };
   const intl2 = userId(1115).intl;
   obj3.children = intl2.string(userId(1115).t.kgAfXN);
-  obj.subLabel = jsx(userId(4718).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
+  obj.subLabel = jsx(userId(4752).Text, { variant: "text-xs/medium", color: "text-subtle", children: null });
   obj.onPress = callback;
-  return jsx(userId(5775).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
+  return jsx(userId(5817).TableRow, { label: null, subLabel: null, onPress: null, start: true, end: true });
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles({
   list: { flexGrow: 1 },
   listContent: { paddingVertical: 32, paddingHorizontal: 16 },
@@ -99,14 +99,14 @@ let result = size.fileFinishedImporting(
 
 export default function SettingsSecureFramesVerificationsScreen() {
   const tmp = closure_7();
-  userId = userId(7190).useSettingNavigationRoute().params.userId;
-  let obj = userId(7190);
+  userId = userId(7234).useSettingNavigationRoute().params.userId;
+  let obj = userId(7234);
   const navigation = userId(1484).useNavigation();
   const obj2 = userId(1484);
   let items = [UserStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => UserStore.getUser(userId));
   const obj3 = userId(504);
-  dependencyMap = navigation(4566).getFormattedName(stateFromStores, false);
+  dependencyMap = navigation(4600).getFormattedName(stateFromStores, false);
   const layoutEffect = secureFramesUserVerifiedKeys.useLayoutEffect(() => {
     let obj = { title: null, headerTitle: null };
     let intl = util.intl;
@@ -120,8 +120,8 @@ export default function SettingsSecureFramesVerificationsScreen() {
     };
     navigation.setOptions(obj);
   });
-  const obj4 = navigation(4566);
-  secureFramesUserVerifiedKeys = userId(16094).useSecureFramesUserVerifiedKeys(userId);
+  const obj4 = navigation(4600);
+  secureFramesUserVerifiedKeys = userId(16170).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -156,13 +156,13 @@ export default function SettingsSecureFramesVerificationsScreen() {
     contentContainerStyle: tmp.listContent,
     ListFooterComponent: null,
   };
-  const obj5 = userId(16094);
+  const obj5 = userId(16170);
   obj7.ListFooterComponent = (
     <View style={tmp.listFooter}>
       <ClearVerificationsListFooter userId={userId} />
     </View>
   );
-  obj6.children = jsx(userId(8957).FlashList, {
+  obj6.children = jsx(userId(8996).FlashList, {
     keyExtractor,
     getItemType,
     renderItem,

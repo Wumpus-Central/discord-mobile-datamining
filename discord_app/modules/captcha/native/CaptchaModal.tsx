@@ -2,11 +2,11 @@
 import util from "../../../intl/index.native.tsx";
 import Link from "../../../../_runtime/01485_Link.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import SharedCaptchaUtils from "../SharedCaptchaUtils.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import native from "../../../design/assets/native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import SharedCaptchaUtils from "../SharedCaptchaUtils.tsx";
 import RegistrationUtils from "../../auth/native/RegistrationUtils.tsx";
 import CaptchaUtilsDefault from "../../../utils/native/CaptchaUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,12 +14,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(16195).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(16196);
+let closure_6 = fn(16271).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(16272);
 ({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_11 = createStyles.createStyles((arg0) => {
   let num = 8;
   if (arg0) {
@@ -45,7 +45,7 @@ export default function CaptchaModal(arg0) {
     rqtoken: closure_6,
     userflow: closure_7,
   } = arg0);
-  const tmp2 = closure_11(onReject(7138)());
+  const tmp2 = closure_11(onReject(7182)());
   const navigation = Link.useNavigation();
   const items = [navigation];
   const memo = noop.useMemo(() => {
@@ -66,7 +66,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  closure_9 = onReject(17618)({ onReject, analyticsType: memo });
+  closure_9 = onReject(17695)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);

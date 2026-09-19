@@ -188,5 +188,7 @@ export const MessageTypes = {
   [67]: "FRIEND_REQUEST_ACCEPTED",
   MEDIA_MENTION_MESSAGE: 68,
   [68]: "MEDIA_MENTION_MESSAGE",
+  GUILD_SPACE_MESSAGE: 69,
+  [69]: "GUILD_SPACE_MESSAGE",
 };
 export const MessageTypesSets = obj;

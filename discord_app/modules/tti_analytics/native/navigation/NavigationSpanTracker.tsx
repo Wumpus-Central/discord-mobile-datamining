@@ -2,15 +2,18 @@
 import LoggerDefault from "../../../debug/Logger.tsx";
 import v1 from "../../../../../_runtime/01255_v1.js";
 import NavigationSpanTypes from "NavigationSpanTypes.tsx";
+import NavigationTTIDebugFreeze from "debug/NavigationTTIDebugFreeze.tsx";
 
 require = fn;
 let obj = new LoggerDefault("NavTTI");
 obj.enableNativeLogger(true);
 class NavigationSpanTracker {
   constructor() {
-    merged = Object.assign({ active: null, lastBundle: null, listenersBySurface: null });
+    merged = Object.assign({ active: null, lastBundle: null, listenersBySurface: null, debugBundleListeners: null });
     map = new Map();
     merged[2] = map;
+    set = new Set();
+    merged[3] = set;
     return merged;
   }
 }
@@ -30,6 +33,20 @@ prototype["getActiveTraceId"] = function getActiveTraceId(definition, navigation
     }
     return traceId;
   }
+};
+prototype["getActiveTraceElapsedMs"] = function getActiveTraceElapsedMs(traceId, endMonotonicMs) {
+  const active = this.active;
+  traceId = undefined;
+  if (active != null) {
+    traceId = active.traceId;
+  }
+  let bound = null;
+  if (traceId === traceId) {
+    const _Math = Math;
+    const _Math2 = Math;
+    bound = Math.max(0, Math.round(endMonotonicMs - this.active.startMonotonicMs));
+  }
+  return bound;
 };
 prototype["subscribe"] = function subscribe(definition, destinationKey, arg2) {
   const self = this;
@@ -57,6 +74,26 @@ prototype["subscribe"] = function subscribe(definition, destinationKey, arg2) {
         listenersBySurface.delete(surfaceKey);
       }
     }
+  };
+};
+prototype["subscribeDebugBundle"] = function subscribeDebugBundle(arg0) {
+  const self = this;
+  closure_0 = arg0;
+  let tmp = 0 === this.debugBundleListeners.size;
+  if (tmp) {
+    tmp = null != self.active;
+  }
+  let debugBundleListeners = self.debugBundleListeners;
+  debugBundleListeners.add(arg0);
+  if (tmp) {
+    tmp = null != self.active;
+  }
+  if (tmp) {
+    self.lastBundle = self.buildBundle(self.active, false, null);
+  }
+  return () => {
+    const debugBundleListeners = self.debugBundleListeners;
+    debugBundleListeners.delete(closure_0);
   };
 };
 prototype["beginNavigation"] = function beginNavigation(definition) {
@@ -89,8 +126,15 @@ prototype["beginNavigation"] = function beginNavigation(definition) {
   active.deadlineTimer = setTimeout(() => self.flush("deadline_exceeded"), 30000);
   self.active = active;
   self.publishTraceState();
+  const traceId = self.active.traceId;
+  const result = NavigationTTIDebugFreeze.emitNavigationTTIDebugCheckpoint(
+    { kind: "milestone", name: "time_start", traceId, destinationKey: self.active.destinationKey },
+    () => self.logActiveBundle(traceId),
+  );
 };
 prototype["recordComponentSpan"] = function recordComponentSpan(trace_id, endMonotonicMs) {
+  const self = this;
+  closure_0 = trace_id;
   const active = this.active;
   let traceId;
   if (active != null) {
@@ -117,9 +161,32 @@ prototype["recordComponentSpan"] = function recordComponentSpan(trace_id, endMon
         lateLayoutMs: null,
       };
       components.push(obj);
-      if (tmp6) {
+      if (tmp7) {
         const obj3 = { spanComponent: endMonotonicMs.spanComponent, atMs: bound };
         active.firstPaint = obj3;
+      }
+      self.publishDebugBundle();
+      function logActiveBundle() {
+        return self.logActiveBundle(closure_0);
+      }
+      const tmp2 = null == active.firstPaint;
+      tmp7 = null == active.firstPaint || bound < active.firstPaint.atMs;
+      const obj4 = {
+        kind: "component",
+        spanComponent: endMonotonicMs.spanComponent,
+        traceId: trace_id,
+        destinationKey: active.destinationKey,
+      };
+      const result = NavigationTTIDebugFreeze.emitNavigationTTIDebugCheckpoint(obj4, logActiveBundle);
+      if (tmp2) {
+        const obj5 = {
+          kind: "milestone",
+          name: "first_paint",
+          traceId: trace_id,
+          destinationKey: active.destinationKey,
+        };
+        const result1 = NavigationTTIDebugFreeze.emitNavigationTTIDebugCheckpoint(obj5, logActiveBundle);
+        const tmp4Result2 = NavigationTTIDebugFreeze;
       }
       return true;
     } else {
@@ -163,11 +230,49 @@ prototype["recordLateComponentLayout"] = function recordLateComponentLayout(trac
   }
   return false;
 };
+prototype["publishDebugBundle"] = function publishDebugBundle() {
+  const self = this;
+  let tmp = null != this.active;
+  if (tmp) {
+    tmp = 0 !== self.debugBundleListeners.size;
+  }
+  if (tmp) {
+    self.lastBundle = self.buildBundle(self.active, false, null);
+    self.notifyDebugBundle();
+  }
+};
+prototype["logActiveBundle"] = function logActiveBundle(arg0) {
+  const self = this;
+  const active = this.active;
+  let traceId;
+  if (active != null) {
+    traceId = active.traceId;
+  }
+  if (traceId === arg0) {
+    const bundle = self.buildBundle(active, false, null);
+    obj = {};
+    const merged = Object.assign(bundle.navigation.spanTtiProperties);
+    const firstPaint = bundle.firstPaint;
+    let spanComponent;
+    if (firstPaint != null) {
+      spanComponent = firstPaint.spanComponent;
+    }
+    if (spanComponent == null) {
+      spanComponent = null;
+    }
+    obj.first_paint_component = spanComponent;
+    ({ settled: obj.settled, components: obj.components } = bundle);
+    const json = JSON.stringify(obj);
+    obj.info(json);
+    return json;
+  }
+};
 prototype["publishTraceState"] = function publishTraceState() {
   const self = this;
   if (null != this.active) {
     self.lastBundle = self.buildBundle(self.active, false, null);
     self.notifySurface(self.active.definition, self.active.destinationKey);
+    self.notifyDebugBundle();
   }
 };
 prototype["flush"] = function flush(arg0) {
@@ -194,42 +299,23 @@ prototype["flush"] = function flush(arg0) {
     }
     const bundle = self.buildBundle(active, true, INTERRUPTED);
     self.lastBundle = bundle;
-    const spanTtiProperties = bundle.navigation.spanTtiProperties;
-    const obj2 = {
-      trace_id: bundle.navigation.spanTtiProperties.trace_id,
-      first_paint_ms: spanTtiProperties.first_paint_ms,
-      first_paint_component: null,
-      to_channel_id: null,
-      end_ms: null,
-      span_status: null,
-      warm_message_cache: null,
-      components: null,
-    };
+    const obj3 = {};
+    const merged = Object.assign(bundle.navigation.spanTtiProperties);
     const firstPaint = bundle.firstPaint;
     let spanComponent;
-    ({ to_channel_id, end_ms, span_status, warm_message_cache } = spanTtiProperties);
     if (firstPaint != null) {
       spanComponent = firstPaint.spanComponent;
     }
     if (spanComponent == null) {
       spanComponent = null;
     }
-    obj2.first_paint_component = spanComponent;
-    obj2.to_channel_id = to_channel_id;
-    obj2.end_ms = end_ms;
-    obj2.span_status = span_status;
-    obj2.warm_message_cache = warm_message_cache;
-    const components = bundle.components;
-    obj2.components = components.map((span_name) => ({
-      span_name: span_name.span_name,
-      end_ms: span_name.end_ms,
-      measurement_source: span_name.measurementSource,
-      late_layout_ms: span_name.lateLayoutMs,
-    }));
-    obj.info(JSON.stringify(obj2));
+    obj3.first_paint_component = spanComponent;
+    ({ settled: obj2.settled, components: obj2.components } = bundle);
+    obj.info(JSON.stringify(obj3));
     if (flag) {
       self.notifySurface(active.definition, active.destinationKey);
     }
+    self.notifyDebugBundle();
   }
 };
 prototype["getSurfaceKey"] = function getSurfaceKey(definition, destinationKey) {
@@ -243,6 +329,12 @@ prototype["notifySurface"] = function notifySurface(definition, destinationKey) 
       let item10013Result = item10013();
       continue;
     }
+  }
+};
+prototype["notifyDebugBundle"] = function notifyDebugBundle() {
+  for (const item10006 of tmp) {
+    let item10006Result = item10006();
+    continue;
   }
 };
 prototype["buildBundle"] = function buildBundle(active, settled, INTERRUPTED) {
@@ -287,8 +379,10 @@ prototype["buildBundle"] = function buildBundle(active, settled, INTERRUPTED) {
   obj2.components = items;
   return obj2;
 };
-let merged = Object.assign({ active: null, lastBundle: null, listenersBySurface: null });
+let merged = Object.assign({ active: null, lastBundle: null, listenersBySurface: null, debugBundleListeners: null });
 merged[2] = new Map();
+let map = new Map();
+merged[3] = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTracker.tsx");
 

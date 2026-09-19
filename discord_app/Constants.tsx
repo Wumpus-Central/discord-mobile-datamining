@@ -1523,8 +1523,6 @@ const frozen2 = Object.freeze({
   HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",
   HUB_EMAIL_VERIFY_CODE: "/guilds/automations/email-domain-lookup/verify-code",
   PROMOTIONS: "/promotions",
-  GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY:
-    "/users/@me/gifting-promotion-summer-2026-gogo-campaign-eligibility",
   CLAIMED_OUTBOUND_PROMOTION_CODES: "/users/@me/outbound-promotions/codes",
   CLAIM_OUTBOUND_PROMOTION_CODE(arg0) {
     return "/outbound-promotions/" + arg0 + "/claim";
@@ -3552,8 +3550,6 @@ const obj2 = {
   HUB_EMAIL_VERIFY: "/guilds/automations/email-domain-lookup/verify",
   HUB_EMAIL_VERIFY_CODE: "/guilds/automations/email-domain-lookup/verify-code",
   PROMOTIONS: "/promotions",
-  GIFTING_PROMOTION_SUMMER_2026_GOGO_CAMPAIGN_ELIGIBILITY:
-    "/users/@me/gifting-promotion-summer-2026-gogo-campaign-eligibility",
   CLAIMED_OUTBOUND_PROMOTION_CODES: "/users/@me/outbound-promotions/codes",
   CLAIM_OUTBOUND_PROMOTION_CODE(arg0) {
     return "/outbound-promotions/" + arg0 + "/claim";
@@ -7778,6 +7774,7 @@ export const AnalyticEvents = {
   GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL_CTA_CLICKED: "gift_card_redemption_succeeded_modal_cta_clicked",
   GIFT_CARD_WALLET_CONSUMED: "gift_card_wallet_consumed",
   ORBS_ENTRYPOINT_CLICKED: "orbs_entrypoint_clicked",
+  ORB_WALLET_VIEWED: "orb_wallet_viewed",
   PAYMENT_SOURCE_CREATION_FAILED: "payment_source_creation_failed",
   PREMIUM_UPGRADE_STARTED: "premium_upgrade_started",
   PREMIUM_RESUBSCRIBE_FLOW_STARTED: "premium_resubscribe_flow_started",
@@ -8649,6 +8646,7 @@ export const AnalyticEvents = {
   DETECTABLE_GAME_SEARCHED_BATCHED: "detectable_game_searched_batched",
   DM_PROFILE_TOGGLED: "dm_profile_toggled",
   USER_PROFILE_WISHLIST_ACTION: "user_profile_wishlist_action",
+  USER_PROFILE_EMBED_RENDER_FAILED: "user_profile_embed_render_failed",
   USER_PROFILE_LINK_EMBED_SENT: "user_profile_link_embed_sent",
   WISHLIST_UPDATED: "wishlist_updated",
   WISHLIST_ITEM_CLICKED: "wishlist_item_clicked",
@@ -9481,7 +9479,6 @@ export const HelpdeskArticles = {
   VOICE_CONNECTION_ERRORS: "115001310031",
   NO_INPUT_DETECTED: "214925018",
   OVERLAY_INTRODUCTION: "217659737",
-  PERMISSIONS_LOCKOUT: "218449248",
   SETTING_UP_TWO_FACTOR: "219576828",
   WEBHOOKS_INTRODUCTION: "228383668",
   QUICK_SWITCHER_TUTORIAL: "115000070311",

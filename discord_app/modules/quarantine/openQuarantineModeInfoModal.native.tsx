@@ -27,6 +27,7 @@ export default function openQuarantineModeInfoModal() {
         };
       });
     },
+    isDismissable: false,
   });
   const obj2 = {
     importer() {
@@ -38,5 +39,6 @@ export default function openQuarantineModeInfoModal() {
         };
       });
     },
+    isDismissable: false,
   };
 }

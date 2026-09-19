@@ -16,19 +16,19 @@ function handlePress() {
   obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open(obj2);
 }
-const UnreadSetting = fn(4904).UnreadSetting;
+const UnreadSetting = fn(4938).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   container: {
-    marginVertical: fn(10361).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = {
-  marginVertical: fn(10361).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

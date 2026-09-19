@@ -15,8 +15,8 @@ import SwipeToMemberListUtils from "../sidebar/member_list/SwipeToMemberListUtil
 import useSearchContext from "../../../search/native/hooks/useSearchContext.tsx";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
 import search_tracking_TrackingDefault from "../../../search/native/tracking/Tracking.tsx";
-import IconActionButtonDefault from "../shared_components/IconActionButton.tsx";
 import restartVibegrationsAppFramesDefault from "../../../vibegrations/native/restartVibegrationsAppFrames.tsx";
+import IconActionButtonDefault from "../shared_components/IconActionButton.tsx";
 import VibegrationsAppChannelActionCreators from "../../../vibegrations/actions/VibegrationsAppChannelActionCreators.tsx";
 import ConversationCoachmark from "../../../conversations/components/native/ConversationCoachmark.tsx";
 import PrivateChannelButtonsDefault from "header/PrivateChannelButtons.tsx";
@@ -356,7 +356,7 @@ function WrappedChannelNavButtons(channelId) {
   ({ screenIndex, showCreateThread } = channelId);
   const items = [ChannelStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  channelId(4933);
+  channelId(4966);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;
@@ -371,15 +371,15 @@ function WrappedChannelNavButtons(channelId) {
   return tmp4;
 }
 const View = fn(17).View;
-const THREADED_CHANNEL_TYPES = fn(1962).THREADED_CHANNEL_TYPES;
-let closure_9 = fn(8081).setIsChannelDetailsSearchActive;
+const THREADED_CHANNEL_TYPES = fn(2045).THREADED_CHANNEL_TYPES;
+let closure_9 = fn(8119).setIsChannelDetailsSearchActive;
 const Constants = fn(1074);
 ({ ChannelTypes: c10, ChannelTypesSets: closure_11, ComponentActions: closure_12 } = Constants);
-let closure_13 = fn(8082).SearchEntrypointAnalyticsLocations;
+let closure_13 = fn(8120).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createElement = fn(19).createElement;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_17 = createStyles.createStyles({
   actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" },
 });
@@ -418,7 +418,7 @@ export default function ChannelActions(channelId) {
   const obj3 = { style: containerStyle, children: null };
   if (obj2.useHasForumSearchQuery(channelId)) {
     const obj4 = { channelId };
-    let tmp4Result = closure_14(tmp(13504).ForumChannelCloseSearchButton, obj4);
+    let tmp4Result = closure_14(tmp(13559).ForumChannelCloseSearchButton, obj4);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

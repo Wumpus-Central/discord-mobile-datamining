@@ -5,11 +5,11 @@ import KeyboardManagerUtilsAll from "../../../utils/native/KeyboardManagerUtils.
 import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
-import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
 import AVError from "../../errors/av_errors/AVError.tsx";
-import _modDef9349 from "../../../../_runtime/metro/09349__.js";
-import _modDef9350 from "../../../../_runtime/metro/09350__.js";
-import _modDef9351 from "../../../../_runtime/metro/09351__.js";
+import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
+import _modDef9930 from "../../../../_runtime/metro/09930__.js";
+import _modDef9931 from "../../../../_runtime/metro/09931__.js";
+import _modDef9932 from "../../../../_runtime/metro/09932__.js";
 import useIsVideoModeDefault from "../../video_calls/native/useIsVideoMode.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -128,7 +128,7 @@ let closure_16 = async function _handleToggleVideo(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const NativePermissionTypes = fn(4932).NativePermissionTypes;
+const NativePermissionTypes = fn(4965).NativePermissionTypes;
 let apply = apply_mod;
 let closure_17 = apply.debounce((arg0) => {
   const AudioRoutePicker = NativeModules.AudioRoutePicker;
@@ -141,11 +141,11 @@ let closure_18 = apply.debounce((fn) => {
   fn();
 }, 1);
 const audioDeviceToIconMap = {
-  EARPIECE: _modDef9349,
-  BLUETOOTH_HEADSET: _modDef9350,
-  WIRED_HEADSET: _modDef9351,
-  SPEAKERPHONE: _modDef9351,
-  INVALID: _modDef9351,
+  EARPIECE: _modDef9930,
+  BLUETOOTH_HEADSET: _modDef9931,
+  WIRED_HEADSET: _modDef9932,
+  SPEAKERPHONE: _modDef9932,
+  INVALID: _modDef9932,
 };
 const constants = {
   TYPE_UNKNOWN: 0,
@@ -354,7 +354,7 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid()
         AudioRouteStore,
       ];
       const stateFromStoresObject = isEnabled(504).useStateFromStoresObject(items, () => {
-        isVideoMode = isEnabled(9703).isVideoMode(
+        isVideoMode = isEnabled(10060).isVideoMode(
           ChannelStore,
           SelectedChannelStore,
           ApplicationStreamingStore,
@@ -362,8 +362,8 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid()
           MediaEngineStore,
         );
         currentRouteType = currentRouteType.getCurrentRouteType();
-        isEnabled = currentRouteType === isEnabled(9322).RouteTypes.SPEAKER;
-        const isBluetoothRoute = currentRouteType === isEnabled(9322).RouteTypes.BLUETOOTH;
+        isEnabled = currentRouteType === isEnabled(9905).RouteTypes.SPEAKER;
+        const isBluetoothRoute = currentRouteType === isEnabled(9905).RouteTypes.BLUETOOTH;
         if (!isEnabled) {
           isEnabled = isBluetoothRoute;
         }
@@ -398,7 +398,7 @@ export const useMaskedSpeakerStates = PlatformUtils.isAndroid()
       return {
         isAudioRouteEnabled,
         toggleAudio: callback,
-        routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9350 : 9351),
+        routeSource: isVideoMode(stateFromStoresObject.isBluetoothRoute ? 9931 : 9932),
       };
     };
 export const useImmediateMaskedSpeakerStates = () => {
@@ -431,5 +431,5 @@ export const useImmediateMaskedSpeakerStates = () => {
     closure_3(closure_1);
   }, items2);
   const obj = require("initialize");
-  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9350 : 9351) };
+  return { isAudioRouteEnabled, toggleAudio: callback, routeSource: importDefault(tmp6 ? 9931 : 9932) };
 };

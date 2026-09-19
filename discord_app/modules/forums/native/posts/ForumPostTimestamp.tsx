@@ -4,9 +4,9 @@ import ForumHooks from "../../ForumHooks.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useForumChannelStore = fn(12243).useForumChannelStore;
+const useForumChannelStore = fn(12252).useForumChannelStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");

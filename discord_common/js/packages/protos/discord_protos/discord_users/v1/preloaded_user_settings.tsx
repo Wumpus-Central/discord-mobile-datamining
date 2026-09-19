@@ -2866,7 +2866,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(arr) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "r" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "Array" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -5211,7 +5211,7 @@ class PrivacySettings$Type extends MessageType20 {
         return require("wrappers").BoolValue;
       },
     };
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -5409,22 +5409,31 @@ class PrivacySettings$Type extends MessageType20 {
         return items;
       },
     };
-    obj1 = { no: 33, name: "hide_friend_request_notes", kind: "message", T: null };
+    items[30] = {
+      no: 33,
+      name: "hide_friend_request_notes",
+      kind: "message",
+      T() {
+        return require("wrappers").BoolValue;
+      },
+    };
+    obj1 = { no: 34, name: "ad_topic_opt_outs", kind: "enum", repeat: 1, T: null };
     class T {
       constructor() {
-        return closure_1_0(closure_1_1[4]).BoolValue;
+        items = ["discord_protos.discord_users.v1.AdTopic"];
+        items[1] = closure_1_15;
+        items[2] = "AD_TOPIC_";
+        return items;
       }
     }
     obj1.T = T;
-    items[30] = obj1;
-    items[31] = {
-      no: 34,
-      name: "ad_topic_opt_outs",
-      kind: "enum",
-      repeat: 1,
+    items[31] = obj1;
+    items[32] = {
+      no: 35,
+      name: "swp_message_promotion_opted_out",
+      kind: "message",
       T() {
-        const items = ["discord_protos.discord_users.v1.AdTopic", obj15, "AD_TOPIC_"];
-        return items;
+        return require("wrappers").BoolValue;
       },
     };
     tmp1 = new tmp("discord_protos.discord_users.v1.PrivacySettings", items, T);
@@ -5849,6 +5858,20 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(
     }
     const joined24 = tag.join();
     const tagResult31 = tag.tag(34, _mod1187.WireType.LengthDelimited);
+  }
+  if (allowActivityPartyPrivacyFriends.swpMessagePromotionOptedOut) {
+    const BoolValue19 = wrappers.BoolValue;
+    const tagResult32 = tag.tag(35, _mod1187.WireType.LengthDelimited);
+    const joined25 = BoolValue19.internalBinaryWrite(
+      allowActivityPartyPrivacyFriends.swpMessagePromotionOptedOut,
+      tag.tag(35, _mod1187.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult20 = BoolValue19.internalBinaryWrite(
+      allowActivityPartyPrivacyFriends.swpMessagePromotionOptedOut,
+      tag.tag(35, _mod1187.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

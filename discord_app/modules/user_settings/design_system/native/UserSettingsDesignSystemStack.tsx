@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { padding: 16, flex: 1, alignItems: "center" },
   block: {

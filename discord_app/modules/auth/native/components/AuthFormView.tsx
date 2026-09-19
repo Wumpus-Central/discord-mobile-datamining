@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },

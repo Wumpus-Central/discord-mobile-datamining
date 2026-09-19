@@ -34,7 +34,7 @@ function FractionalStar(fillAmount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = {
   row: { flexDirection: "row", alignItems: "center", gap: 2 },
   star: null,

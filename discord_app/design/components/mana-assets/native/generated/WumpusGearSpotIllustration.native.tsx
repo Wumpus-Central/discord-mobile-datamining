@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/WumpusGearSpotIllustration.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6778 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WumpusGearSpotIllustration-2x.png.js";
+import _modDef6822 from "../../../../../../discord_assets/assets/mana/asset-library/generated/WumpusGearSpotIllustration-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const WumpusGearSpotIllustration = function WumpusGearSpotIllustration(wi
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6778 };
+  const obj2 = { uri: _modDef6822 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

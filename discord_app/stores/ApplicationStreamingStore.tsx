@@ -2,7 +2,7 @@
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
-import asyncRequireImpl from "../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/01980_asyncRequireImpl.js";
 import StreamKeyUtils from "../modules/go_live/utils/StreamKeyUtils.tsx";
 import StreamPermissionUtils from "../modules/go_live/utils/StreamPermissionUtils.tsx";
 import canSpectateDefault from "../modules/go_live/utils/canSpectate.tsx";
@@ -53,7 +53,7 @@ const Constants = fn(1074);
   NULL_STRING_GUILD_ID: closure_21,
   BasicPermissions: closure_22,
 } = Constants);
-const StreamTypes = fn(4764).StreamTypes;
+const StreamTypes = fn(4798).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -700,7 +700,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(4774);
+    const obj = sourceId(4808);
     const encodeStreamKeyResult = obj.encodeStreamKey({
       streamType,
       guildId,
@@ -792,11 +792,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
         FAILED = constants.FAILED;
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         guildId = StreamKeyUtils.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(14039, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(14093, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(14039, dependencyMap.paths);
+        const promise = asyncRequireImpl(14093, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

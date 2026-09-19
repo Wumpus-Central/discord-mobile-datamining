@@ -7,8 +7,8 @@ import AlertModal from "../../../../design/components/AlertModal/native/AlertMod
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import AuthenticationActionCreatorsDefault from "../../../../actions/AuthenticationActionCreators.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import DoorExitIcon from "../../../../design/components/Icon/native/redesign/generated/DoorExitIcon.tsx";
 import PushNotificationDefault from "../../../../lib/pushnotification/PushNotification.tsx";
+import DoorExitIcon from "../../../../design/components/Icon/native/redesign/generated/DoorExitIcon.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

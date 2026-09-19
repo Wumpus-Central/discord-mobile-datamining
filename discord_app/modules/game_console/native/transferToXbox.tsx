@@ -110,6 +110,7 @@ let closure_8 = async function _transferToXbox(arg0) {
               };
             });
           },
+          isDismissable: false,
         };
         c4 = 3;
         const obj18 = { value: closure_130_1(closure_130_3[8]).openLazy(obj17), done: true };

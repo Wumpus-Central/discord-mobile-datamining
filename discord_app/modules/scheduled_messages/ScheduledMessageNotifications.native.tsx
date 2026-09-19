@@ -55,7 +55,14 @@ export const handleScheduleMessageError = function handleScheduleMessageError(bo
       openScheduledMessagesLimitUpsellDefault(items);
       const tmp11Result = openScheduledMessagesLimitUpsellDefault;
     } else {
-      const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
+      const obj2 = {
+        title: null,
+        body: null,
+        confirmText: null,
+        cancelText: null,
+        onCancel: null,
+        isDismissable: false,
+      };
       const intl2 = util.intl;
       obj2.title = intl2.string(util.t.RLdUVh);
       const intl3 = util.intl;

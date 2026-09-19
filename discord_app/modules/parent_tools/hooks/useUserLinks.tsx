@@ -7,7 +7,7 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FamilyCenterConstants = fn(7734);
+const FamilyCenterConstants = fn(7778);
 ({
   ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER: metroRequire,
   FAMILY_CENTER_REQUEST_QR_CODE_URL: closure_7,
@@ -205,7 +205,7 @@ export const useUserQRLinkUrl = function useUserQRLinkUrl() {
 export const useHasMaxConnections = function useHasMaxConnections() {
   const ACTIVE = constants.ACTIVE;
   let stateFromStores;
-  const tmp = stateFromStores(8884)();
+  const tmp = stateFromStores(8923)();
   const items = [FamilyCenterStore];
   stateFromStores = ACTIVE(563).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];
@@ -307,8 +307,8 @@ export const useActivityWindowTimeStamp = function useActivityWindowTimeStamp(ac
   if (null != stateFromStores) {
     const _Date = Date;
     const date = new Date(stateFromStores);
-    result = tmp(7788).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
-    const tmpResult = tmp(7788);
+    result = tmp(7832).formatUserActivityTimestamp(date.getTime(), () => closure_0, 7);
+    const tmpResult = tmp(7832);
   }
   return result;
 };
@@ -322,8 +322,8 @@ export const useLinkTimestampText = function useLinkTimestampText(id, status) {
     return null;
   } else {
     const _Date = Date;
-    tmp(7788).formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
-    const tmpResult = tmp(7788);
+    tmp(7832).formatLinkTimestamp(Date.parse(stateFromStores), status === constants.PENDING ? closure_10 : closure_6);
+    const tmpResult = tmp(7832);
   }
   const obj = require("useStateFromStores");
   tmp = _require;

@@ -18,7 +18,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(1962).createChannelRecordFromServer;
+let closure_6 = fn(2045).createChannelRecordFromServer;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_9,
@@ -590,8 +590,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7519).checkGuildTemplateDirty(closure_128_2);
-        name(7519);
+        const result = name(7563).checkGuildTemplateDirty(closure_128_2);
+        name(7563);
       }
       return closure_128_1;
     })();

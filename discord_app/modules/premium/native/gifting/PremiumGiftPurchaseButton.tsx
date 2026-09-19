@@ -4,7 +4,6 @@ import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import PremiumGiftModal from "PremiumGiftModal.tsx";
 import PremiumAnalyticsUtils from "../PremiumAnalyticsUtils.tsx";
-import PremiumGiftingGogoPromotionExperimentDefault from "../../gifting/experiments/PremiumGiftingGogoPromotionExperiment.tsx";
 import useShouldShowGiftingPromotionDecoDefault from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
@@ -16,7 +15,7 @@ get_ActivityIndicator = fn(17);
 let HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = { container: null, selectedRewardRow: null, promoDetails: null, previewDetails: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -60,14 +59,14 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   const tmp3 = closure_11(useSafeAreaInsetsKeyboardAwareDefault().insets.bottom);
   importDefault = defaultSelection(1484).useNavigation();
   let obj = defaultSelection(1484);
-  const nativeGiftContext = defaultSelection(10942).useNativeGiftContext();
+  const nativeGiftContext = defaultSelection(10958).useNativeGiftContext();
   ({ onPurchase: c2, isPurchasing, allRewards: c3, claimableRewards } = nativeGiftContext);
   const selectedGiftingPromotionReward = nativeGiftContext.selectedGiftingPromotionReward;
   const setSelectedGiftingPromotionReward = nativeGiftContext.setSelectedGiftingPromotionReward;
   ({ setCurrentAnalyticsStep: c7, productId } = nativeGiftContext);
-  let obj2 = defaultSelection(10942);
-  const canPurchaseIAP = defaultSelection(11301).useCanPurchaseIAP(productId);
-  const obj3 = defaultSelection(11301);
+  let obj2 = defaultSelection(10958);
+  const canPurchaseIAP = defaultSelection(11314).useCanPurchaseIAP(productId);
+  const obj3 = defaultSelection(11314);
   let items = [c7];
   const stateFromStores = defaultSelection(504).useStateFromStores(items, () => {
     const marketingComponentByType = _undefined2.getMarketingComponentByType(
@@ -98,16 +97,14 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
     tmp11 = null == selectedGiftingPromotionReward;
   }
   closure_10 = tmp11;
-  const obj4 = defaultSelection(504);
-  const config = PremiumGiftingGogoPromotionExperimentDefault.useConfig({ location: "PremiumGiftPurchaseButton" });
-  const GiftingBadgeExperiment = tmp4(10986).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp4(10999).GiftingBadgeExperiment;
   let enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftPurchaseButton" }).enabled;
-  const tmpResult = PremiumGiftingGogoPromotionExperimentDefault;
+  const obj4 = defaultSelection(504);
   let items1 = [setSelectedGiftingPromotionReward];
   const stateFromStoresObject = defaultSelection(504).useStateFromStoresObject(items1, () => ({
-    nextTier: setSelectedGiftingPromotionReward.getNextTier(defaultSelection(_undefined[18]).BadgeId.GIFTING),
+    nextTier: setSelectedGiftingPromotionReward.getNextTier(defaultSelection(_undefined[16]).BadgeId.GIFTING),
     giftsToNextTier: setSelectedGiftingPromotionReward.getRemainingToNextTier(
-      defaultSelection(_undefined[18]).BadgeId.GIFTING,
+      defaultSelection(_undefined[16]).BadgeId.GIFTING,
     ),
   }));
   ({ nextTier, giftsToNextTier } = stateFromStoresObject);
@@ -120,7 +117,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
     str = "";
   }
   const items2 = [tmp9, claimableRewards, setSelectedGiftingPromotionReward];
-  const isGiftingBadgeComplexArtEnabled = defaultSelection(10990).useIsGiftingBadgeComplexArtEnabled(
+  const isGiftingBadgeComplexArtEnabled = defaultSelection(11003).useIsGiftingBadgeComplexArtEnabled(
     `PremiumGiftPurchaseButton${str}`,
   );
   const effect = noop.useEffect(() => {
@@ -128,11 +125,11 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
       setSelectedGiftingPromotionReward(claimableRewards[0]);
     }
   }, items2);
-  const tmp4Result5 = defaultSelection(10990);
-  const product = defaultSelection(11296).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
-  let tmp16 = null != product;
-  if (tmp16) {
-    tmp16 = product.items.length > 0;
+  const tmp4Result5 = defaultSelection(11003);
+  const product = defaultSelection(11309).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
+  let tmp15 = null != product;
+  if (tmp15) {
+    tmp15 = product.items.length > 0;
   }
   const intl = tmp4(1115).intl;
   const string = intl.string;
@@ -146,110 +143,90 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   if (tmp11) {
     str2 = "primary";
   }
-  const tmp4Result6 = defaultSelection(11296);
-  let asset;
+  defaultSelection(11012);
   if (stateFromStores != null) {
-    asset = stateFromStores.asset;
+    const asset = stateFromStores.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl = defaultSelection(10999).useThemeAndReducedMotionAwareAssetUrl(asset);
   const obj5 = { style: tmp3.container, children: null };
-  if (tmp10) {
-    if (config.enabled) {
-      if (selectedGiftingPromotionReward === tmp4(10981).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID) {
-        const obj6 = {
-          style: tmp3.promoDetails,
-          imageUrl: themeAndReducedMotionAwareAssetUrl,
-          title: null,
-          subtitle: null,
-        };
-        const intl6 = tmp4(1115).intl;
-        obj6.title = intl6.string(tmp(2544)["P+DDLh"]);
-        const intl7 = tmp4(1115).intl;
-        obj6.subtitle = intl7.string(tmp(2544).dOZh6X);
-        let tmp23Result = closure_9(tmp(11001), obj6);
-        const tmpResult5 = tmp(11001);
-      }
-      const items3 = [tmp23Result, ,];
-      let tmp34 = !tmp11;
-      if (!tmp11) {
-        const obj7 = { variant: "text-sm/normal", children: null };
-        const intl8 = tmp4(1115).intl;
-        const obj8 = { paidURL: tmp(2025).getArticleURL(HelpdeskArticles.PAID_TERMS) };
-        obj7.children = intl8.format(tmp4(1115).t.hYoGUM, obj8);
-        tmp34 = closure_9(tmp4(4718).Text, obj7);
-        const tmpResult6 = tmp(2025);
-      }
-      items3[1] = tmp34;
-      const obj9 = { loading: isPurchasing, variant: str2, text: stringResult, disabled: null, onPress: null };
-      let tmp38 = !canPurchaseIAP;
-      if (canPurchaseIAP) {
-        tmp38 = isPurchasing;
-      }
-      obj9.disabled = tmp38;
-      let fn;
-      if (!isPurchasing) {
-        fn = () => {
-          ChatInputUtils.dismissKeyboard();
-          if (closure_10) {
-            if (closure_8) {
-              if (closure_8) {
-                _undefined2(PremiumAnalyticsUtils.PaymentFlowStep.REWARD_SKU_SELECT);
-                const obj2 = {
-                  defaultHighlightedReward: defaultSelection,
-                  allRewards: null,
-                  claimableRewards: null,
-                  onSelect: null,
-                };
-                let items = c3;
-                if (c3 == null) {
-                  items = [];
-                }
-                obj2.allRewards = items;
-                let items1 = claimableRewards;
-                if (claimableRewards == null) {
-                  items1 = [];
-                }
-                obj2.claimableRewards = items1;
-                obj2.onSelect = function onSelect(arg0) {
-                  setSelectedGiftingPromotionReward(arg0);
-                  navigation.navigate(defaultSelection(10905).PremiumGiftScreens.CUSTOMIZATION);
-                };
-                navigation.navigate(PremiumGiftModal.PremiumGiftScreens.REWARD_SELECT, obj2);
-              }
-            }
-          }
-          _undefined(() => {
-            navigation.navigate(defaultSelection(10905).PremiumGiftScreens.SUCCESS);
-          });
-        };
-      }
-      obj9.onPress = fn;
-      items3[2] = closure_9(tmp4(5144).Button, obj9);
-      obj5.children = items3;
-      return tmp20(tmp21, obj5);
-    }
-  }
   if (tmp11) {
     if (tmp8) {
-      const obj10 = {
+      const obj6 = {
         style: tmp3.promoDetails,
-        imageUrl: themeAndReducedMotionAwareAssetUrl,
+        imageUrl: tmp18,
         title: null,
         subtitle: null,
         subtitleColor: "text-strong",
       };
       const intl4 = tmp4(1115).intl;
-      obj10.title = intl4.string(tmp4(1115).t.Ve9Ge6);
+      obj6.title = intl4.string(tmp4(1115).t.Ve9Ge6);
       const intl5 = tmp4(1115).intl;
-      obj10.subtitle = intl5.string(tmp(2544).ivpn6G);
-      tmp23Result = closure_9(tmp(11001), obj10);
-      const tmpResult7 = tmp(11001);
+      obj6.subtitle = intl5.string(tmp(2546).ivpn6G);
+      let tmp22Result = closure_9(tmp(11014), obj6);
+      const tmpResult = tmp(11014);
     }
+    const items3 = [tmp22Result, ,];
+    let tmp31 = !tmp11;
+    if (!tmp11) {
+      const obj7 = { variant: "text-sm/normal", children: null };
+      const intl6 = tmp4(1115).intl;
+      const obj8 = { paidURL: tmp(2108).getArticleURL(HelpdeskArticles.PAID_TERMS) };
+      obj7.children = intl6.format(tmp4(1115).t.hYoGUM, obj8);
+      tmp31 = closure_9(tmp4(4752).Text, obj7);
+      const tmpResult3 = tmp(2108);
+    }
+    items3[1] = tmp31;
+    const obj9 = { loading: isPurchasing, variant: str2, text: stringResult, disabled: null, onPress: null };
+    let tmp35 = !canPurchaseIAP;
+    if (canPurchaseIAP) {
+      tmp35 = isPurchasing;
+    }
+    obj9.disabled = tmp35;
+    let fn;
+    if (!isPurchasing) {
+      fn = () => {
+        ChatInputUtils.dismissKeyboard();
+        if (closure_10) {
+          if (closure_8) {
+            if (closure_8) {
+              _undefined2(PremiumAnalyticsUtils.PaymentFlowStep.REWARD_SKU_SELECT);
+              const obj2 = {
+                defaultHighlightedReward: defaultSelection,
+                allRewards: null,
+                claimableRewards: null,
+                onSelect: null,
+              };
+              let items = c3;
+              if (c3 == null) {
+                items = [];
+              }
+              obj2.allRewards = items;
+              let items1 = claimableRewards;
+              if (claimableRewards == null) {
+                items1 = [];
+              }
+              obj2.claimableRewards = items1;
+              obj2.onSelect = function onSelect(arg0) {
+                setSelectedGiftingPromotionReward(arg0);
+                navigation.navigate(defaultSelection(10921).PremiumGiftScreens.CUSTOMIZATION);
+              };
+              navigation.navigate(PremiumGiftModal.PremiumGiftScreens.REWARD_SELECT, obj2);
+            }
+          }
+        }
+        _undefined(() => {
+          navigation.navigate(defaultSelection(10921).PremiumGiftScreens.SUCCESS);
+        });
+      };
+    }
+    obj9.onPress = fn;
+    items3[2] = closure_9(tmp4(5186).Button, obj9);
+    obj5.children = items3;
+    return tmp19(tmp20, obj5);
   }
-  if (tmp16) {
+  if (tmp15) {
     if (tmp10) {
       if (null != selectedGiftingPromotionReward) {
-        const obj11 = {
+        const obj10 = {
           style: null,
           onPress: null,
           disabled: null,
@@ -259,8 +236,8 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
         };
         const items4 = [,];
         ({ selectedRewardRow: arr4[0], promoDetails: arr4[1] } = tmp3);
-        obj11.style = items4;
-        obj11.onPress = function onPress() {
+        obj10.style = items4;
+        obj10.onPress = function onPress() {
           let tmp = selectedGiftingPromotionReward;
           if (closure_8) {
             _undefined2(PremiumAnalyticsUtils.PaymentFlowStep.REWARD_SKU_SELECT);
@@ -280,51 +257,51 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
             obj.claimableRewards = items1;
             obj.onSelect = function onSelect(arg0) {
               setSelectedGiftingPromotionReward(arg0);
-              navigation.navigate(defaultSelection(10905).PremiumGiftScreens.CUSTOMIZATION);
+              navigation.navigate(defaultSelection(10921).PremiumGiftScreens.CUSTOMIZATION);
             };
             navigation.navigate(PremiumGiftModal.PremiumGiftScreens.REWARD_SELECT, obj);
           }
         };
-        obj11.disabled = tmp9;
-        obj11.accessibilityRole = "button";
+        obj10.disabled = tmp9;
+        obj10.accessibilityRole = "button";
         let stringResult1;
         if (!tmp9) {
           const intl2 = tmp4(1115).intl;
           stringResult1 = intl2.string(tmp4(1115).t.bt75uw);
         }
-        obj11.accessibilityLabel = stringResult1;
-        const obj12 = { style: tmp3.previewDetails, product, title: null, subtitle: null };
+        obj10.accessibilityLabel = stringResult1;
+        const obj11 = { style: tmp3.previewDetails, product, title: null, subtitle: null };
         const intl3 = tmp4(1115).intl;
-        obj12.title = intl3.string(tmp4(1115).t.Rh4oem);
+        obj11.title = intl3.string(tmp4(1115).t.Rh4oem);
         let name;
         if (product != null) {
           name = product.name;
         }
-        obj12.subtitle = name;
-        const items5 = [closure_9(tmp4(11001).PremiumGiftPromotionCollectibleRewardDetails, obj12)];
-        let tmp27Result = !tmp9;
+        obj11.subtitle = name;
+        const items5 = [closure_9(tmp4(11014).PremiumGiftPromotionCollectibleRewardDetails, obj11)];
+        let tmp26Result = !tmp9;
         if (!tmp9) {
-          tmp27Result = tmp27(tmp4(10491).PencilIcon, { size: "sm" });
+          tmp26Result = tmp26(tmp4(10507).PencilIcon, { size: "sm" });
         }
-        items5[1] = tmp27Result;
-        obj11.children = items5;
-        tmp23Result = tmp20(claimableRewards, obj11);
+        items5[1] = tmp26Result;
+        obj10.children = items5;
+        tmp22Result = tmp19(claimableRewards, obj10);
       }
     }
   }
-  tmp23Result = null;
+  tmp22Result = null;
   if (enabled) {
-    const obj13 = { giftsToNextTier, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
+    const obj12 = { giftsToNextTier, nextTierName: null, nextTierIcon: null, analyticsLocation: null };
     let str3 = nextTier.name;
     if (str3 == null) {
       str3 = "";
     }
-    obj13.nextTierName = str3;
-    const tmp23 = closure_9;
-    const tmpResult8 = tmp(11004);
-    obj13.nextTierIcon = tmp4(10990).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
-    obj13.analyticsLocation = tmp(7378).PREMIUM_GIFT_CUSTOMIZATION;
-    tmp23Result = tmp23(tmpResult8, obj13);
-    const tmp4Result8 = tmp4(10990);
+    obj12.nextTierName = str3;
+    const tmp22 = closure_9;
+    const tmpResult4 = tmp(11017);
+    obj12.nextTierIcon = tmp4(11003).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
+    obj12.analyticsLocation = tmp(7422).PREMIUM_GIFT_CUSTOMIZATION;
+    tmp22Result = tmp22(tmpResult4, obj12);
+    const tmp4Result8 = tmp4(11003);
   }
 }

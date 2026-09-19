@@ -64,8 +64,8 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     errorCallbacks: [],
     loaded: false,
     loading: "accessible",
-    triggeredMigrations: false,
-    offlineEditDataVersion: false,
+    triggeredMigrations: null,
+    offlineEditDataVersion: null,
   };
   return obj;
 };

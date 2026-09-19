@@ -1,6 +1,6 @@
 // discord_app/modules/frames/native/FrameWebView.tsx
-import FramesActionCreatorsDefault from "../FramesActionCreators.native.tsx";
 import FramesNativeManagerDefault from "FramesNativeManager.tsx";
+import FramesActionCreatorsDefault from "../FramesActionCreators.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;

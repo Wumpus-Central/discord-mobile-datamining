@@ -1,7 +1,7 @@
 // discord_app/modules/oauth2/native/authorizeCallback.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import URLUtilsDefault from "../../../utils/URLUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import BrowserManager from "../../links/native/BrowserManager.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -26,7 +26,7 @@ export default function authorizeCallback(arg0) {
         if (null != pathname) {
           if (null != pathname.match(re5)) {
             const obj3 = { application: tmp, guild: tmp2 };
-            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9824, dependencyMap.paths), obj3, React3);
+            ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9323, dependencyMap.paths), obj3, React3);
             const tmp8Result4 = ModalActionCreatorsDefault;
           } else if (null != pathname.match(re6)) {
             if (!canceled) {
@@ -49,8 +49,8 @@ export default function authorizeCallback(arg0) {
                 str1 = str5;
               }
               const obj4 = { error: str1 };
-              tmp8Result5.pushLazy(asyncRequireImpl(9487, dependencyMap.paths), obj4, React4);
-              const tmp17 = asyncRequireImpl(9487, dependencyMap.paths);
+              tmp8Result5.pushLazy(asyncRequireImpl(9321, dependencyMap.paths), obj4, React4);
+              const tmp17 = asyncRequireImpl(9321, dependencyMap.paths);
             }
           }
         }
@@ -68,6 +68,6 @@ export default function authorizeCallback(arg0) {
     LinkingDefault.openURL(_location, SAFARI);
     const tmp8Result6 = LinkingDefault;
   } else if (!canceled) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9487, dependencyMap.paths), undefined, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9321, dependencyMap.paths), undefined, React4);
   }
 }

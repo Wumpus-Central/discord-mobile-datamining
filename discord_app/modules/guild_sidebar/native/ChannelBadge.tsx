@@ -1,6 +1,6 @@
 // discord_app/modules/guild_sidebar/native/ChannelBadge.tsx
 import useStateFromStores from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import NumberUtils from "../../../utils/NumberUtils.tsx";
+import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import NewBadgeDefault from "../../channel_list_v2/native/components/NewBadge.tsx";
 import MentionsBadgeDefault from "MentionsBadge.tsx";
@@ -10,7 +10,7 @@ import LocaleStore from "../../user_settings/LocaleStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");

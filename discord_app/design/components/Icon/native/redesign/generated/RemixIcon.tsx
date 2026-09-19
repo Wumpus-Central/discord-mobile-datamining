@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/RemixIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod16876 from "../../../../../../../_runtime/metro/16876__.js";
+import _mod16943 from "../../../../../../../_runtime/metro/16943__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const RemixIcon = function RemixIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16876, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16943, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -28,16 +28,16 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
       if (requestToSpeakTimestamp.suppress) {
         if (null != channelId) {
           if (userId !== id.getId()) {
-            if (closure_6.can(userId(1966).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
+            if (closure_6.can(userId(2049).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(17801).sendStageRequestToSpeakEphemeralMessage(
+                  const result = userId(17881).sendStageRequestToSpeakEphemeralMessage(
                     channelId,
                     user,
                     requestToSpeakTimestamp,
                   );
-                  const tmp11Result = userId(17801);
+                  const tmp11Result = userId(17881);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -52,8 +52,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  closure_1(7652).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = closure_1(7652);
+                  closure_1(7696).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(7696);
                 }
               }
             }

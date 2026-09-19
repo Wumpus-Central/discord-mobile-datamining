@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { container: { flex: 1 }, visualEffectView: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -50,7 +50,7 @@ export default function VoiceActionSheet(channel) {
     let obj3 = { children: null };
     const obj4 = { channel };
     obj3.children = closure_6(NUFVoiceChannelsTemplateDefault, obj4);
-    let children = closure_6(tmp5(7393).ActionSheet, obj3);
+    let children = closure_6(tmp5(7437).ActionSheet, obj3);
     let tmp8 = closure_6;
   } else if (stateFromStores) {
     const obj5 = { children: null };
@@ -59,7 +59,7 @@ export default function VoiceActionSheet(channel) {
     const obj7 = { channel };
     items2[1] = closure_6(VoiceEmptyStateDefault, obj7);
     obj5.children = items2;
-    children = closure_7(tmp5(7393).ActionSheet, obj5);
+    children = closure_7(tmp5(7437).ActionSheet, obj5);
     tmp8 = closure_6;
   } else {
     tmp8 = closure_6;
@@ -71,9 +71,9 @@ export default function VoiceActionSheet(channel) {
     items3[1] = closure_6(VoiceMemberListDefault, obj11);
     obj9.children = items3;
     obj8.children = closure_7(closure_4, obj9);
-    children = closure_6(tmp5(7393).ActionSheet, obj8);
+    children = closure_6(tmp5(7437).ActionSheet, obj8);
   }
-  return tmp8(channel(7358).AnalyticsLocationProvider, {
+  return tmp8(channel(7402).AnalyticsLocationProvider, {
     value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations,
     children,
   });

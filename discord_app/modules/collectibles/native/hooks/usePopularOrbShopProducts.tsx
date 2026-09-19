@@ -73,7 +73,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                   colors: [],
                   themes: [],
                   orbs_eligible: true,
-                  currency: _true(15280).CollectibleSearchCurrencyFilter.ORBS,
+                  currency: _true(15335).CollectibleSearchCurrencyFilter.ORBS,
                   offset: 0,
                   limit: 10,
                   sort_type,
@@ -82,7 +82,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(15279).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(15334).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {

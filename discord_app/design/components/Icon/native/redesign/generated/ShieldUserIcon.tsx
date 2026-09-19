@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod8353 from "../../../../../../../_runtime/metro/08353__.js";
+import _mod8391 from "../../../../../../../_runtime/metro/08391__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ export const ShieldUserIcon = function ShieldUserIcon(tmp2Result) {
   const merged = Object.assign(tmp2Result, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
   return jsx(BaseIconImage.BaseIconImage, {
-    source: _mod8353,
+    source: _mod8391,
     color: INTERACTIVE_ICON_DEFAULT,
     style: tmp2Result.style,
   });

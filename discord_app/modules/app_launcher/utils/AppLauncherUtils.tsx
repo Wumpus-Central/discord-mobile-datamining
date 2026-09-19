@@ -63,8 +63,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const BuiltInSectionId = fn(5168).BuiltInSectionId;
-const MessageSendLocation = fn(4715).MessageSendLocation;
+const BuiltInSectionId = fn(5210).BuiltInSectionId;
+const MessageSendLocation = fn(4749).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -193,7 +193,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
         } else if (1 === tmp7) {
           maxSizeCallback = 0;
           closure_129_2 = commandTargetId;
-          const obj7 = { title: null, body: null, confirmText: null, onConfirm: null };
+          const obj7 = { title: null, body: null, confirmText: null, onConfirm: null, isDismissable: false };
           const intl = closure_0(context[8]).intl;
           obj7.title = intl.string(closure_0(context[8]).t["aHO//m"]);
           const intl2 = closure_0(context[8]).intl;

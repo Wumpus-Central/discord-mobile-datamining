@@ -1,6 +1,6 @@
 // discord_common/js/packages/time-utils/TimeUtils.tsx
 import u from "../performance-utils/index.js";
-import findLastIndexDefault from "../../../../_runtime/04753_findLastIndex.js";
+import findLastIndexDefault from "../../../../_runtime/04787_findLastIndex.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -15,7 +15,7 @@ function sleep(asMilliseconds) {
     const timerId = setTimeout(() => closure_0(), asMillisecondsResult);
   });
 }
-const tryCatch = fn(4752);
+const tryCatch = fn(4786);
 let c4 = 3600000;
 function now() {
   const _performance = u.performance;
@@ -591,7 +591,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   importDefault = arg1;
   const tmp2 = findLastIndexDefault(
     items,
-    (unit) => f79843(unit.unit),
+    (unit) => f80131(unit.unit),
     items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === obj.NONE;
@@ -607,7 +607,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = items.find((unit) => f79843(unit.unit));
+    const found = items.find((unit) => f80131(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -633,10 +633,10 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj2;
   } else {
     closure_0 = rounded;
-    const f79843 = (dependencyMap) => closure_0.includes(dependencyMap);
-    const tmp12 = f79843(4753)(
+    const f80131 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const tmp12 = f80131(4787)(
       items,
-      (unit) => f79843(unit.unit),
+      (unit) => f80131(unit.unit),
       items.findIndex((max) => {
         max = max.max;
         let tmp = max.unit === obj.NONE;
@@ -652,7 +652,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = items.find((unit) => f79843(unit.unit));
+      const found = items.find((unit) => f80131(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

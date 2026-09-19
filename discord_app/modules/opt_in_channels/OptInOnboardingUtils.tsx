@@ -41,10 +41,10 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   const obj2 = GuildOnboardingActionCreatorsDefault;
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
-let GuildChannelStore = fn(2013);
+let GuildChannelStore = fn(2096);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_4, GUILD_VOCAL_CHANNELS_KEY: hasOwnProperty } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const GuildMemberFlags = fn(4348).GuildMemberFlags;
+const GuildMemberFlags = fn(4382).GuildMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 

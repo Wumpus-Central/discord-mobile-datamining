@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -20,7 +20,7 @@ export default {
       AnalyticsUtilsDefault.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
     }
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(5792, dependencyMap.paths),
+      asyncRequireImpl(5834, dependencyMap.paths),
       { isChangeEmail: flag },
       EMAIL_VERIFICATION_MODAL_KEY,
     );

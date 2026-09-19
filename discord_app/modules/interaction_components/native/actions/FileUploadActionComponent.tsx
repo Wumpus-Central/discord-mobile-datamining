@@ -99,11 +99,11 @@ function File(upload) {
   return React7(TableRow.TableRow, obj);
 }
 const View = fn(17).View;
-const DraftType = fn(5063).DraftType;
+const DraftType = fn(5105).DraftType;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/actions/FileUploadActionComponent.tsx");
@@ -134,15 +134,12 @@ export default function FileUploadActionComponent(maxValues) {
   const validateFilenames = fileTypeFiltering.validateFilenames;
   showInvalidFileTypeAlert = fileTypeFiltering.showInvalidFileTypeAlert;
   const mediaFilesAllowed = fileTypeFiltering.mediaFilesAllowed;
-  const tmpResult6 = require("FileTypeFiltering");
-  const kestrelConfig = require("KestrelExperiment").getKestrelConfig({ location: "native.FileUploadActionComponent" });
-  const tmpResult7 = require("KestrelExperiment");
-  const tmpResult8 = require("KestrelExperiment");
-  const effectiveKestrelLimit = tmpResult8.getEffectiveKestrelLimit(
-    kestrelConfig,
+  const tmpResult5 = require("FileTypeFiltering");
+  const tmpResult6 = require("UploadLimits");
+  const effectiveUploadLimit = tmpResult6.getEffectiveUploadLimit(
     require("FileUtils").maxFileSize(stateFromStores.guild_id),
   );
-  const tmpResult9 = require("FileUtils");
+  const tmpResult7 = require("FileUtils");
   const fileUploadComponentState = require("useFileUploadComponentState").useFileUploadComponentState(maxValues);
   const uploadIds = fileUploadComponentState.uploadIds;
   const setUploadIds = fileUploadComponentState.setUploadIds;
@@ -156,11 +153,11 @@ export default function FileUploadActionComponent(maxValues) {
   if (first != null) {
     type = first.type;
   }
-  let tmp17;
+  let tmp16;
   if (type === require("Server").ComponentType.LABEL) {
-    tmp17 = first;
+    tmp16 = first;
   }
-  channelId(customId[18])(null != tmp17, "FileUploadActionComponent must be used within a label Component");
+  channelId(customId[18])(null != tmp16, "FileUploadActionComponent must be used within a label Component");
   _require = stateFromStores(function* (arg0) {
     if (c8 === 2) {
       c8 = 3;
@@ -278,7 +275,7 @@ export default function FileUploadActionComponent(maxValues) {
     allowedExtensions.length,
     validateFilenames,
     setUploadIds,
-    effectiveKestrelLimit,
+    effectiveUploadLimit,
     showInvalidFileTypeAlert,
     customId,
     channelId,
@@ -316,9 +313,9 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10879).hideMediaKeyboardActionSheet();
+        return InteractionModal(10895).hideMediaKeyboardActionSheet();
       },
-      onRestoreKeyboard: effectiveKestrelLimit,
+      onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
         callback(arg0);
       },
@@ -349,7 +346,7 @@ export default function FileUploadActionComponent(maxValues) {
           const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
           if (item.isIncluded) {
             const found = currentUploads.find((item) =>
-              InteractionModal(5305).doesImageMatchUpload(item.node.image, item),
+              InteractionModal(5347).doesImageMatchUpload(item.node.image, item),
             );
             if (null != found) {
               callback1(found.id);
@@ -370,9 +367,9 @@ export default function FileUploadActionComponent(maxValues) {
           obj.handleViewAllDialog(obj2);
         },
         onManageLimited() {
-          obj = InteractionModal(10878);
+          obj = InteractionModal(10894);
           const result = obj.handleLimitedPickerDialog({
-            onDismissKeyboard: InteractionModal(10879).hideMediaKeyboardActionSheet,
+            onDismissKeyboard: InteractionModal(10895).hideMediaKeyboardActionSheet,
             onRestoreKeyboard,
           });
         },
@@ -393,36 +390,36 @@ export default function FileUploadActionComponent(maxValues) {
   if (1 === maxValues) {
     if (1 === currentUploads.length) {
       let obj2 = { upload: currentUploads[0], handleRemoveFile: callback1 };
-      let tmp22Result = uploadIds(File, obj2);
+      let tmp21Result = uploadIds(File, obj2);
     }
-    return tmp22Result;
+    return tmp21Result;
   }
   let obj3 = { spacing: channelId(customId[34]).space.PX_12, children: null };
   if (uploadIds.length >= maxValues) {
-    let tmp26 = uploadIds(callback1, {});
-    let tmp25 = uploadIds;
+    let tmp25 = uploadIds(callback1, {});
+    let tmp24 = uploadIds;
   } else {
     let obj4 = {
       openFilePicker: callback2,
       minValues: maxValues.minValues,
       maxValues,
       types: fileTypeFiltering.typesFormattedString,
-      maxSizeBytes: effectiveKestrelLimit,
+      maxSizeBytes: effectiveUploadLimit,
     };
-    tmp25 = uploadIds;
-    tmp26 = uploadIds(callback, obj4);
+    tmp24 = uploadIds;
+    tmp25 = uploadIds(callback, obj4);
   }
-  const items4 = [tmp26];
-  let tmp25Result = currentUploads.length > 0;
-  if (tmp25Result) {
+  const items4 = [tmp25];
+  let tmp24Result = currentUploads.length > 0;
+  if (tmp24Result) {
     let obj5 = {
       hasIcons: true,
       children: currentUploads.map((upload) => React7(File, { upload, handleRemoveFile: callback1 }, upload.id)),
     };
-    tmp25Result = tmp25(tmp(tmp2[35]).TableRowGroup, obj5);
+    tmp24Result = tmp24(tmp(tmp2[35]).TableRowGroup, obj5);
   }
-  items4[1] = tmp25Result;
+  items4[1] = tmp24Result;
   obj3.children = items4;
-  tmp22Result = setUploadIds(tmp(tmp2[33]).Stack, obj3);
-  const tmpResult10 = require("useFileUploadComponentState");
+  tmp21Result = setUploadIds(tmp(tmp2[33]).Stack, obj3);
+  const tmpResult8 = require("useFileUploadComponentState");
 }

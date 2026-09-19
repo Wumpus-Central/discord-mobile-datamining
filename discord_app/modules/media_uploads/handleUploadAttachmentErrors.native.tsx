@@ -2,7 +2,7 @@
 import util from "../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import FileUtils from "../../utils/FileUtils.tsx";
-import KestrelExperiment from "experiments/KestrelExperiment.tsx";
+import UploadLimits from "UploadLimits.tsx";
 import showUploadFileSizeErrorDefault from "native/showUploadFileSizeError.tsx";
 import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert.tsx";
 import Constants from "../../Constants.tsx";
@@ -16,9 +16,6 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
   if (undefined === code) {
     return false;
   } else if (code === constants.ENTITY_TOO_LARGE) {
-    const kestrelConfig = KestrelExperiment.getKestrelConfig({
-      location: "native.handleUploadMessageAttachmentsErrors",
-    });
     const maxFileSizeResult = FileUtils.maxFileSize(guildId);
     const obj4 = {
       file: tmp,
@@ -29,8 +26,8 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
       errorReason: null,
       appEntryKey: null,
     };
-    const tmp28 = showUploadFileSizeErrorDefault;
-    obj4.maxSize = KestrelExperiment.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+    const tmp27 = showUploadFileSizeErrorDefault;
+    obj4.maxSize = UploadLimits.getEffectiveUploadLimit(maxFileSizeResult);
     obj4.baseMaxSize = maxFileSizeResult;
     obj4.guildId = guildId;
     obj4.analyticsLocations = tmp2;
@@ -40,7 +37,7 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     }
     obj4.errorReason = type;
     obj4.appEntryKey = tmp3;
-    tmp28(obj4);
+    tmp27(obj4);
     return true;
   } else if (code === constants.TOO_MANY_ATTACHMENTS) {
     const obj6 = { title: null, body: null };
@@ -60,12 +57,12 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     AlertActionCreatorsDefault.show(obj9);
     return true;
   } else if (code === constants.INVALID_FILE_ASSET) {
-    const obj12 = { title: null, body: null };
+    const obj11 = { title: null, body: null };
     const intl = util.intl;
-    obj12.title = intl.string(util.t.B3vFdU);
+    obj11.title = intl.string(util.t.B3vFdU);
     const intl2 = util.intl;
-    obj12.body = intl2.string(util.t.zMEjJg);
-    AlertActionCreatorsDefault.show(obj12);
+    obj11.body = intl2.string(util.t.zMEjJg);
+    AlertActionCreatorsDefault.show(obj11);
     return true;
   } else {
     const attachmentUploadAbortAlertContent = getAttachmentUploadAbortAlert.getAttachmentUploadAbortAlertContent(code);

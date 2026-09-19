@@ -5,7 +5,7 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05156_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05198_LinearGradient.js";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
@@ -20,7 +20,7 @@ const Constants = fn(1074);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   regularMetadataContainer: null,
   assetName: null,

@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/lib/VibegrationsCreateErrors.tsx
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AbortCodes = Constants.AbortCodes;
@@ -59,12 +59,12 @@ export const getVibegrationsCreateErrorMessage = function getVibegrationsCreateE
   }
   if ("project_limit" === str) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3676.Asusmn);
+    return intl3.string(_modDef3678.Asusmn);
   } else if ("rate_limited" === str) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3676.DT6qly);
+    return intl2.string(_modDef3678.DT6qly);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3676.KKkp5Y);
+    return intl.string(_modDef3678.KKkp5Y);
   }
 };

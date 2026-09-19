@@ -3,8 +3,8 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../../discord_common/js/packages/design/native.tsx";
 import useAlertStore from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import StreamPermissionUtils from "../../../../go_live/utils/StreamPermissionUtils.tsx";
-import CallsUtils from "../../../../voice_calls/native/CallsUtils.tsx";
 import openIgnoreThermalStateAlert from "../../../../activities/native/openIgnoreThermalStateAlert.tsx";
+import CallsUtils from "../../../../voice_calls/native/CallsUtils.tsx";
 import VideoIcon from "../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import VideoSlashIcon2 from "../../../../../design/components/Icon/native/redesign/generated/VideoSlashIcon.tsx";
 import VoicePanelVideoGuardErrorAlert from "../../alerts/VoicePanelVideoGuardErrorAlert.tsx";
@@ -40,7 +40,7 @@ function VideoButtonRive(arg0) {
   return <View style={{ width: 24, height: 24, pointerEvents: "none" }}>{null}</View>;
 }
 const View = fn(17).View;
-const Features = fn(4747).Features;
+const Features = fn(4781).Features;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelVideoButton.tsx");

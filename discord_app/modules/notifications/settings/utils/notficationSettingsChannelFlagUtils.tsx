@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4904).UnreadSetting;
+const UnreadSetting = fn(4938).UnreadSetting;
 const constants = fn(1084).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/utils/notficationSettingsChannelFlagUtils.tsx");

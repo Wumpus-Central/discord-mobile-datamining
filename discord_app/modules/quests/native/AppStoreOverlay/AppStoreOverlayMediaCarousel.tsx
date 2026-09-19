@@ -169,7 +169,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   carousel: { marginHorizontal: -nativeDefault.space.PX_16 },
   carouselContent: null,

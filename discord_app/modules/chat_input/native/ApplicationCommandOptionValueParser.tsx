@@ -41,7 +41,7 @@ function getChannels(getGuildId, arr) {
     }
     tmp2 = null == arr || arr.includes(getGuildId.type);
     return guildId(12)(items).map((id) => {
-      const obj = { id: id.id, text: closure_0(4875).computeChannelName(id, UserStore, RelationshipStore) };
+      const obj = { id: id.id, text: closure_0(4909).computeChannelName(id, UserStore, RelationshipStore) };
       return obj;
     });
   } else {
@@ -77,8 +77,8 @@ function getChannels(getGuildId, arr) {
     });
   }
 }
-let closure_6 = fn(1962).isGuildSelectableChannelType;
-const ChannelAutocompleteConstants = fn(5169);
+let closure_6 = fn(2045).isGuildSelectableChannelType;
+const ChannelAutocompleteConstants = fn(5211);
 ({ MENTION_SENTINEL: closure_12, CHANNEL_SENTINEL: map1 } = ChannelAutocompleteConstants);
 function matchPrefix(arg0, arg1, arg2) {}
 const prototype = function ApplicationCommandOptionValueParser(channel) {
@@ -154,7 +154,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
       obj = closure_1;
     }
-    if (type.type === channel(1895).ApplicationCommandOptionType.USER) {
+    if (type.type === channel(1978).ApplicationCommandOptionType.USER) {
       const matchUserResult = matchUser();
       if (null != matchUserResult) {
         return matchUserResult;
@@ -210,13 +210,13 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    if (type.type === channel(1895).ApplicationCommandOptionType.ROLE) {
+    if (type.type === channel(1978).ApplicationCommandOptionType.ROLE) {
       const matchRoleResult = matchRole();
       if (null != matchRoleResult) {
         return matchRoleResult;
       }
     }
-    if (type.type === channel(1895).ApplicationCommandOptionType.CHANNEL) {
+    if (type.type === channel(1978).ApplicationCommandOptionType.CHANNEL) {
       arr7 = closure_2_13;
       if (typeof matchPrefix === "function") {
         let firstResult = null;
@@ -243,7 +243,7 @@ const prototype = function ApplicationCommandOptionValueParser(channel) {
       }
       obj8 = getChannels(obj.channel, type.channelTypes);
     }
-    if (type.type === channel(1895).ApplicationCommandOptionType.MENTIONABLE) {
+    if (type.type === channel(1978).ApplicationCommandOptionType.MENTIONABLE) {
       const matchRoleResult1 = matchRole();
       if (null != matchRoleResult1) {
         return matchRoleResult1;
@@ -405,7 +405,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           }
           obj = closure_1;
         }
-        if (type.type === channel(1895).ApplicationCommandOptionType.USER) {
+        if (type.type === channel(1978).ApplicationCommandOptionType.USER) {
           const matchUserResult = matchUser();
           if (null != matchUserResult) {
             return matchUserResult;
@@ -461,13 +461,13 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (type.type === channel(1895).ApplicationCommandOptionType.ROLE) {
+        if (type.type === channel(1978).ApplicationCommandOptionType.ROLE) {
           const matchRoleResult = matchRole();
           if (null != matchRoleResult) {
             return matchRoleResult;
           }
         }
-        if (type.type === channel(1895).ApplicationCommandOptionType.CHANNEL) {
+        if (type.type === channel(1978).ApplicationCommandOptionType.CHANNEL) {
           arr7 = closure_2_13;
           if (typeof matchPrefix === "function") {
             let firstResult = null;
@@ -494,7 +494,7 @@ export const useApplicationCommandOptionValueParser = function useApplicationCom
           }
           obj8 = getChannels(obj.channel, type.channelTypes);
         }
-        if (type.type === channel(1895).ApplicationCommandOptionType.MENTIONABLE) {
+        if (type.type === channel(1978).ApplicationCommandOptionType.MENTIONABLE) {
           const matchRoleResult1 = matchRole();
           if (null != matchRoleResult1) {
             return matchRoleResult1;

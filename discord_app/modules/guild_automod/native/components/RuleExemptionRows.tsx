@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/native/components/RuleExemptionRows.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -9,7 +9,7 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const AutomodTriggerType = fn(12106).AutomodTriggerType;
+const AutomodTriggerType = fn(12115).AutomodTriggerType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const size = fn(2);
@@ -82,7 +82,7 @@ export default function RuleExemptionRows(rule) {
   obj4.label = intl3.string(rule(exemptRoles[7]).t["LPJmL/"]);
   obj4.trailing = closure_8(rule(exemptRoles[11]).TableRow.TrailingText, { text: stateFromStores });
   obj4.onPress = function onPress() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17881, dependencyMap.paths), "AutomodExemptRoles", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17961, dependencyMap.paths), "AutomodExemptRoles", {
       guildId: rule.guildId,
       exemptRoles,
       onSave(exemptRoles) {
@@ -104,7 +104,7 @@ export default function RuleExemptionRows(rule) {
     const obj8 = { text: stateFromStores1 };
     obj6.trailing = closure_8(tmp2(tmp3[11]).TableRow.TrailingText, obj8);
     obj6.onPress = function onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17883, dependencyMap.paths), "AutomodExemptChannels", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17963, dependencyMap.paths), "AutomodExemptChannels", {
         guildId: rule.guildId,
         exemptChannels,
         onSave(exemptChannels) {

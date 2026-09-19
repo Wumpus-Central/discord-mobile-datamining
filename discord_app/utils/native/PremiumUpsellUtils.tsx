@@ -1,16 +1,16 @@
 // discord_app/utils/native/PremiumUpsellUtils.tsx
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import PremiumUtils from "../PremiumUtils.tsx";
 import ChatInputUtils from "ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef9552 from "../../../_runtime/metro/09552__.js";
-import _modDef9553 from "../../../_runtime/metro/09553__.js";
-import _modDef9554 from "../../../_runtime/metro/09554__.js";
-import _modDef9555 from "../../../_runtime/metro/09555__.js";
-import _modDef9556 from "../../../_runtime/metro/09556__.js";
-import _modDef9557 from "../../../_runtime/metro/09557__.js";
+import _modDef9427 from "../../../_runtime/metro/09427__.js";
+import _modDef9428 from "../../../_runtime/metro/09428__.js";
+import _modDef9429 from "../../../_runtime/metro/09429__.js";
+import _modDef9430 from "../../../_runtime/metro/09430__.js";
+import _modDef9431 from "../../../_runtime/metro/09431__.js";
+import _modDef9432 from "../../../_runtime/metro/09432__.js";
 import PremiumFeaturesCards from "../../modules/user_settings/premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../components_native/premium/openPremiumModal.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -207,7 +207,7 @@ export default {
       if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
         let obj = {
           importer() {
-            return asyncRequireImpl(9560, dependencyMap.paths).then((result) => {
+            return asyncRequireImpl(9435, dependencyMap.paths).then((result) => {
               closure_0 = result.default;
               return (arg0) => {
                 const obj = {};
@@ -237,7 +237,7 @@ export default {
 export const getUpsellItems = function getUpsellItems() {
   const obj = {
     key: constants3.GLOBAL_EMOJI,
-    image: _modDef9552,
+    image: _modDef9427,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -251,7 +251,7 @@ export const getUpsellItems = function getUpsellItems() {
   const items = [obj, , , , ,];
   const obj2 = {
     key: constants3.ANIMATED_EMOJI,
-    image: _modDef9553,
+    image: _modDef9428,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -265,7 +265,7 @@ export const getUpsellItems = function getUpsellItems() {
   items[1] = obj2;
   const obj3 = {
     key: constants3.ANIMATED_AVATAR,
-    image: _modDef9554,
+    image: _modDef9429,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -277,7 +277,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl9 = util.intl;
   obj3.description = intl9.format(util.t["Tso/Fn"], {});
   items[2] = obj3;
-  const obj4 = { key: constants3.UPLOAD, image: _modDef9555, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = { key: constants3.UPLOAD, image: _modDef9430, activeTitle: null, passiveTitle: null, description: null };
   const intl10 = util.intl;
   obj4.activeTitle = intl10.string(util.t["1EOZqw"]);
   const intl11 = util.intl;
@@ -289,7 +289,7 @@ export const getUpsellItems = function getUpsellItems() {
   obj5.maxUploadPremium = PremiumUtils.getMaxFileSizeForPremiumType(React7.TIER_2);
   obj4.description = intl12.format(util.t.DUT5IC, obj5);
   items[3] = obj4;
-  const obj7 = { key: constants3.BADGE, image: _modDef9556, activeTitle: null, passiveTitle: null, description: null };
+  const obj7 = { key: constants3.BADGE, image: _modDef9431, activeTitle: null, passiveTitle: null, description: null };
   const intl14 = util.intl;
   obj7.activeTitle = intl14.string(util.t["602BK4"]);
   const intl15 = util.intl;
@@ -299,7 +299,7 @@ export const getUpsellItems = function getUpsellItems() {
   items[4] = obj7;
   const obj8 = {
     key: constants3.APP_ICONS,
-    image: _modDef9557,
+    image: _modDef9432,
     activeTitle: null,
     passiveTitle: null,
     description: null,

@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/CouchSpotIllustration.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6068 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CouchSpotIllustration-2x.png.js";
+import _modDef6112 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CouchSpotIllustration-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const CouchSpotIllustration = function CouchSpotIllustration(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6068 };
+  const obj2 = { uri: _modDef6112 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

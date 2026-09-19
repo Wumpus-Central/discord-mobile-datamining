@@ -1,4 +1,5 @@
 // discord_app/modules/voice_panel/VoicePanelManager.native.tsx
+import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import VoicePanelStore from "VoicePanelStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
@@ -10,9 +11,18 @@ const prototype = function VoicePanelManager() {
       const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
         const state = VoicePanelStore.getState();
-        const channels = state.channels;
-        if (!channels.has(channelId)) {
-          state.openChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
+        let isGuildStageVoiceResult;
+        if (channel != null) {
+          isGuildStageVoiceResult = channel.isGuildStageVoice();
+        }
+        if (isGuildStageVoiceResult) {
+          state.closeChannel(channelId);
+        } else {
+          const channels = state.channels;
+          if (!channels.has(channelId)) {
+            state.openChannel(channelId);
+          }
         }
       }
     },
@@ -20,9 +30,18 @@ const prototype = function VoicePanelManager() {
       const channelId = RTCConnectionStore.getChannelId();
       if (null != channelId) {
         const state = VoicePanelStore.getState();
-        const channels = state.channels;
-        if (!channels.has(channelId)) {
-          state.openChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
+        let isGuildStageVoiceResult;
+        if (channel != null) {
+          isGuildStageVoiceResult = channel.isGuildStageVoice();
+        }
+        if (isGuildStageVoiceResult) {
+          state.closeChannel(channelId);
+        } else {
+          const channels = state.channels;
+          if (!channels.has(channelId)) {
+            state.openChannel(channelId);
+          }
         }
       }
     },

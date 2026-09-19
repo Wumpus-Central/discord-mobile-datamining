@@ -1,7 +1,7 @@
 // discord_app/modules/activate_device/useDeviceCodeAuthorizeCallback.tsx
 import ConnectedAccountsActionCreatorsDefault from "../../actions/ConnectedAccountsActionCreators.tsx";
-import TwoWayLinkType from "../../../discord_common/js/shared/shared-constants/TwoWayLinkType.tsx";
 import oauth2_actions from "../oauth2/actions.tsx";
+import TwoWayLinkType from "../../../discord_common/js/shared/shared-constants/TwoWayLinkType.tsx";
 import ActivateDeviceUtils from "ActivateDeviceUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";

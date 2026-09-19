@@ -139,7 +139,7 @@ const View = fn(17).View;
 fn(1074).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   container: { paddingVertical: nativeDefault.space.PX_8 },
   headerContainer: null,
@@ -150,14 +150,14 @@ let obj3 = { paddingVertical: nativeDefault.space.PX_8 };
 obj.headerContainer = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(10611).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10627).GIF_PICKER_GUTTER_SPACING,
 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10611).GIF_PICKER_GUTTER_SPACING };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: fn(10627).GIF_PICKER_GUTTER_SPACING };
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6815).InputHeights.MD,
+  height: fn(6859).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -174,7 +174,7 @@ let obj5 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6815).InputHeights.MD,
+  height: fn(6859).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,

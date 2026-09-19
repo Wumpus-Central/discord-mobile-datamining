@@ -1,18 +1,18 @@
 // discord_app/modules/vibegrations/native/VibegrationsChannelRow.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import router_utils from "../../routing/router_utils.tsx";
-import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
 import BaseChannelItemDefault from "../../guild_sidebar/native/BaseChannelItem.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Routes = fn(1074).Routes;
-const StaticChannelRoute = fn(1965).StaticChannelRoute;
+const StaticChannelRoute = fn(2048).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: {
-    marginVertical: fn(10361).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -29,10 +29,10 @@ export default function VibegrationsChannelRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.VIBEGRATIONS));
   }, items);
   if (true === selected) {
-    let DEFAULT = id(12622).ChannelModes.SELECTED;
+    let DEFAULT = id(12631).ChannelModes.SELECTED;
     let tmp5 = id;
   } else {
-    DEFAULT = id(12622).ChannelModes.DEFAULT;
+    DEFAULT = id(12631).ChannelModes.DEFAULT;
     tmp5 = id;
   }
   const obj = {
@@ -47,15 +47,15 @@ export default function VibegrationsChannelRow(selected) {
   };
   const tmp = closure_7();
   const intl = tmp5(1115).intl;
-  obj.accessibilityLabel = intl.string(_modDef3676.Xmvb23);
+  obj.accessibilityLabel = intl.string(_modDef3678.Xmvb23);
   obj.accessibilityState = { selected };
   obj.mode = DEFAULT;
   const obj2 = { name: null, mode: null };
   const intl2 = tmp5(1115).intl;
-  obj2.name = intl2.string(_modDef3676.Xmvb23);
+  obj2.name = intl2.string(_modDef3678.Xmvb23);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp5(12622).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(12622).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10393).MagicWandIcon });
+  obj.name = jsx(tmp5(12631).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(12631).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10407).MagicWandIcon });
   return (
     <tmp8
       onPress={callback}

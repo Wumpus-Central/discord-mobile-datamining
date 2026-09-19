@@ -25,9 +25,9 @@ let obj2 = {
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "call",
-  source: "NRU",
-  incrementableActions: "BottomSheetModalInternalProvider",
+  hasMediaOptions: "PX_16",
+  source: null,
+  incrementableActions: null,
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

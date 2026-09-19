@@ -93,7 +93,7 @@ function dismissOutboundPromotionNotice() {
   const lastDismissedOutboundPromotionStartDate = PromotionsStore.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
     const PreloadedUserSettingsActionCreators =
-      lastDismissedOutboundPromotionStartDate(1941).PreloadedUserSettingsActionCreators;
+      lastDismissedOutboundPromotionStartDate(2024).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "userContent",
       async (arg0) => {
@@ -102,7 +102,7 @@ function dismissOutboundPromotionNotice() {
           value: lastDismissedOutboundPromotionStartDate,
         });
       },
-      lastDismissedOutboundPromotionStartDate(1941).UserSettingsDelay.INFREQUENT_USER_ACTION,
+      lastDismissedOutboundPromotionStartDate(2024).UserSettingsDelay.INFREQUENT_USER_ACTION,
     );
   }
 }

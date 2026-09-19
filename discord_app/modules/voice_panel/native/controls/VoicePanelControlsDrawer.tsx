@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import Suspender from "../../../../../_runtime/05097_Suspender.js";
+import Suspender from "../../../../../_runtime/05139_Suspender.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
@@ -23,11 +23,11 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12515);
+const VoicePanelConstants = fn(12524);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_11 = createStyles.createStyles(obj);
 const memoResult = noop.memo((shown) => {

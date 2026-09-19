@@ -51,7 +51,7 @@ export const useKeyboardTypeSharedValue = function useKeyboardTypeSharedValue() 
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = tmp(1481).DEFAULT_APP_ENTRY_KEY;
   }
-  const obj2 = appEntryKey(4458);
+  const obj2 = appEntryKey(4492);
   sharedValue = obj2.useSharedValue(sharedValue(1482).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType);
   const items = [appEntryKey, sharedValue];
   const effect = noop.useEffect(
@@ -77,7 +77,7 @@ export const useKeyboardWillOpenSharedValue = function useKeyboardWillOpenShared
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = tmp(1481).DEFAULT_APP_ENTRY_KEY;
   }
-  const obj2 = appEntryKey(4458);
+  const obj2 = appEntryKey(4492);
   sharedValue = obj2.useSharedValue(
     true ===
       sharedValue(1482).getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[

@@ -54,7 +54,7 @@ const View = fn(17).View;
 const AppStates = fn(1074).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = {
   height: 8,
@@ -270,13 +270,13 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return tmp7;
   };
-  let obj3 = stateFromStores(4458);
+  let obj3 = stateFromStores(4492);
   fn.__closure = {
     useReducedMotion: stateFromStores,
-    withRepeat: stateFromStores(4458).withRepeat,
-    withSequence: stateFromStores(4458).withSequence,
-    withTiming: stateFromStores(4723).withTiming,
-    Easing: stateFromStores(4458).Easing,
+    withRepeat: stateFromStores(4492).withRepeat,
+    withSequence: stateFromStores(4492).withSequence,
+    withTiming: stateFromStores(4757).withTiming,
+    Easing: stateFromStores(4492).Easing,
   };
   fn.__workletHash = 17454673879926;
   fn.__initData = __initData;
@@ -289,13 +289,13 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1115).intl;
   obj7.children = intl.string(stateFromStores(1115).t.JwIJMV);
-  items3[1] = closure_13(stateFromStores(4718).Text, obj7);
+  items3[1] = closure_13(stateFromStores(4752).Text, obj7);
   obj5.children = items3;
   const tmp8 = closure_14(View, obj5);
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(5292).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(5334).PressableOpacity, obj8);
   }
   return tmp7Result;
 };

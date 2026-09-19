@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import _modDef2318 from "../MobileGoLiveActionSheet.messages.js";
 import BaseIconImage from "../../../design/components/Icon/native/BaseIconImage.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -12,12 +12,12 @@ import StreamActionCreators from "../../../actions/StreamActionCreators.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
 import TableRadioRow from "../../../design/components/TableRow/native/TableRadioRow.native.tsx";
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
-import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
+import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
-import _modDef10208 from "../../../../_runtime/metro/10208__.js";
+import _modDef10220 from "../../../../_runtime/metro/10220__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -30,12 +30,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 const getStreamSettingsForPresetDefault = getStreamSettingsForPreset;
 
 require = fn;
-let ApplicationStreamPresets = fn(4769).ApplicationStreamPresets;
+let ApplicationStreamPresets = fn(4803).ApplicationStreamPresets;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(4747).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4781).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   wrapper: { gap: nativeDefault.space.PX_24 },
   header: { textAlign: "center" },
@@ -233,7 +233,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         obj10.children = intl5.string(_modDef2318.nMcXo1);
         const items = [closure_2_14(Text_Text.Text, obj10)];
         const tmp8Result = NativeViewDefault;
-        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef10208, size: "xs" });
+        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef10220, size: "xs" });
         obj9.children = items;
         obj8.label = __initData(tmp8Result, obj9);
         if (null != maxSettingsForPreset2) {
@@ -337,5 +337,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(10197, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(10209, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 };

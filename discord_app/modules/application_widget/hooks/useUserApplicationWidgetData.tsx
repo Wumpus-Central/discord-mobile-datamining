@@ -12,8 +12,8 @@ import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-fn(9261).FetchState;
-const FetchState = fn(9264).FetchState;
+fn(9300).FetchState;
+const FetchState = fn(9303).FetchState;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/hooks/useUserApplicationWidgetData.tsx");
 

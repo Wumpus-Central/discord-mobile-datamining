@@ -1,7 +1,7 @@
 // discord_app/design/components/Pile/native/PileOverflow.native.tsx
 import useStateFromStores from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import NumberUtils from "../../../../utils/NumberUtils.tsx";
+import NumberUtils from "../../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: {
     alignItems: "center",

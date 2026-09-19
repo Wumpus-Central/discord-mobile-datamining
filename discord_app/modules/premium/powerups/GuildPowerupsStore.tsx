@@ -66,7 +66,7 @@ function calculateAppliedBoosts(guildId) {
   }
   return sum;
 }
-const GuildPowerupsConstants = fn(4611);
+const GuildPowerupsConstants = fn(4645);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: c2, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } =
   GuildPowerupsConstants);
 const Constants = fn(1074);

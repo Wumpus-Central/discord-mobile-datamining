@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import ExperimentStore from "../../experiments/ExperimentStore.tsx";
 
 require = fn;
-const isGuildOwner = fn(1976).isGuildOwner;
+const isGuildOwner = fn(2059).isGuildOwner;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx",
@@ -34,15 +34,15 @@ export default {
             isUserInCreatorMonetizationEligibleCountry: null,
             shouldRestrictUpdatingRoleSubscriptionSettings: null,
           };
-          const obj = closure_1_0(7456);
+          const obj = closure_1_0(7500);
           obj2.isUserInCreatorMonetizationEligibleCountry =
-            closure_1_0(7457).isUserInCreatorMonetizationEligibleCountry();
-          const obj3 = closure_1_0(7457);
+            closure_1_0(7501).isUserInCreatorMonetizationEligibleCountry();
+          const obj3 = closure_1_0(7501);
           obj2.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(
-            4354,
+            4388,
           ).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
           result = obj.canSeeGuildRoleSubscriptionSettings(obj2);
-          const obj4 = closure_1_0(4354);
+          const obj4 = closure_1_0(4388);
         }
         return result;
       },

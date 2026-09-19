@@ -219,7 +219,7 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(1941).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(2024).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -288,7 +288,7 @@ export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGui
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(1941).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(2024).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {

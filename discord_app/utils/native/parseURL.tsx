@@ -6,14 +6,14 @@ import URLUtilsDefault from "../URLUtils.tsx";
 import UrlDefault from "../../../_runtime/01368_Url.js";
 import _modDef1472 from "../../../_runtime/metro/01472__.js";
 import MetaQuestUtils from "../../modules/device/MetaQuestUtils.android.tsx";
-import _modDef2075 from "../../../_runtime/metro/02075__.js";
+import _modDef1929 from "../../../_runtime/metro/01929__.js";
 import findCodedLinks from "../../modules/coded_links/findCodedLinks.tsx";
 import CodedLink from "../../modules/coded_links/CodedLink.tsx";
 import LinkUtils from "../../modules/links/LinkUtils.tsx";
 import GiftCodeUtils from "../GiftCodeUtils.tsx";
 import MobileWebRedirectCheckoutUtils from "../../modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx";
-import SecureFramesDeeplinkExperiment from "../../modules/rtc/SecureFramesDeeplinkExperiment.tsx";
 import Authorize from "../../modules/oauth2/Authorize.tsx";
+import SecureFramesDeeplinkExperiment from "../../modules/rtc/SecureFramesDeeplinkExperiment.tsx";
 import useVirtualCurrencyMobileEnabled from "../../modules/virtual_currency/hooks/native/useVirtualCurrencyMobileEnabled.tsx";
 import QRLoginUtils from "../../modules/remote_auth/QRLoginUtils.tsx";
 import urlPartToSettingsEnumDefault from "../../modules/guild_settings/urlPartToSettingsEnum.tsx";
@@ -50,8 +50,8 @@ const Constants = fn(1074);
 } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const UPDATE_CONFIG = fn(4703).UPDATE_CONFIG;
-const PaymentConstants = fn(4704);
+const UPDATE_CONFIG = fn(4737).UPDATE_CONFIG;
+const PaymentConstants = fn(4738);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_11, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } =
   PaymentConstants);
 const re13 = /feature\/([\w-]+)/;
@@ -79,7 +79,7 @@ export default function parseURL(ctaLink) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const sanitizeUrlResult = _modDef2075.sanitizeUrl(ctaLink);
+  const sanitizeUrlResult = _modDef1929.sanitizeUrl(ctaLink);
   if (null == sanitizeUrlResult) {
     const obj3 = { payload: null };
     const obj4 = { type: React5.NONE };

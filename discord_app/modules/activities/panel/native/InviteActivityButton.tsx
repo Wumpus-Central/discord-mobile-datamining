@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/InviteActivityButton.tsx
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import getCurrentUserPresenceActivityDefault from "../../utils/getCurrentUserPresenceActivity.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -26,12 +26,12 @@ export default noop.memo(function InviteActivityButton(applicationId) {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(17402, dependencyMap.paths),
+          asyncRequireImpl(17479, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           { activity: stateFromStores },
         );
       },
-      icon: stateFromStores(10275),
+      icon: stateFromStores(10287),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",
@@ -43,16 +43,16 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     obj2.text = intl.string(tmp(1115).t["OzOM/q"]);
     const intl2 = tmp(1115).intl;
     obj2.accessibilityLabel = intl2.string(tmp(1115).t["OzOM/q"]);
-    tmp4 = jsx(tmp(5144).Button, {
+    tmp4 = jsx(tmp(5186).Button, {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(17402, dependencyMap.paths),
+          asyncRequireImpl(17479, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           { activity: stateFromStores },
         );
       },
-      icon: stateFromStores(10275),
+      icon: stateFromStores(10287),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",

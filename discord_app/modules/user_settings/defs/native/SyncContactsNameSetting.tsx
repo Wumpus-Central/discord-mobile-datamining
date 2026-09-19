@@ -2,7 +2,7 @@
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
@@ -21,7 +21,7 @@ const pressable = SettingBuilders.createPressable({
       type: "Change Name",
       location: { page: "User Settings" },
     });
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15063, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15117, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {

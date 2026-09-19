@@ -23,7 +23,7 @@ export default function useEmojiPickerSearchState(channel, arg1, intention, bypa
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(1941).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(2024).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);

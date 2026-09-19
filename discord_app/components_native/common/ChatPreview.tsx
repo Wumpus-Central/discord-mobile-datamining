@@ -39,11 +39,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8152);
+const RowGeneratorConstants = fn(8190);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -284,9 +284,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flex",
           shouldInitialScroll: "Array",
-          animated: 0,
-          scrollPosition: 2,
-          focusTargetId: 0,
+          animated: "2026-05-bounty-stale-refresh-quest-home",
+          scrollPosition: "user",
+          focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -318,7 +318,7 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          applyArgumentsResult(4733).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(4767).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -351,14 +351,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(4733).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(4733);
+            applyArgumentsResult(4767).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(4767);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "asc",
-        selectedChannelId: "asc",
-        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
+        messageChannel: "https://support.discord.com/hc/articles/14155060633623",
+        selectedChannelId: "https://support.discord.com/hc/articles/14155043715735",
+        tapLinkData: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -629,18 +629,18 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4432).ThemeContext;
+ChatPreviewBase.contextType = fn(4466).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
 
 export const ChatPreview = function ChatPreview(channelId) {
   channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(1936).InlineAttachmentMedia;
+  const InlineAttachmentMedia = channelId(2019).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(1936).InlineEmbedMedia;
+  const InlineEmbedMedia = channelId(2019).InlineEmbedMedia;
   const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(1936).RenderEmbeds;
+  const RenderEmbeds = channelId(2019).RenderEmbeds;
   const setting2 = RenderEmbeds.useSetting();
   const items = [AccessibilityStore];
   const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
@@ -648,10 +648,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7525).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7525);
-  const isChannelContentGated = channelId(4933).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4933);
+  const isChannelSpoilerGated = channelId(7569).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7569);
+  const isChannelContentGated = channelId(4966).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4966);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

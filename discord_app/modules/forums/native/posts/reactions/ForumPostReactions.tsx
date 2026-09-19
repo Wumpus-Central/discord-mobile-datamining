@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles({
   reactionButtonContainer: { marginEnd: 8 },
   actionBarReaction: { marginEnd: 4 },
@@ -24,12 +24,12 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
   ({ parentChannel, firstMessage, containerWidth, containerStyle } = thread);
   const tmp = closure_6();
   dependencyMap = tmp;
-  const disableReactionCreates = reactionContainerStyle(11566)(thread).disableReactionCreates;
+  const disableReactionCreates = reactionContainerStyle(11575)(thread).disableReactionCreates;
   let num = 28;
   if (disableReactionCreates) {
     num = 0;
   }
-  const maxPossibleForumPostReactions = thread(8090).useMaxPossibleForumPostReactions({
+  const maxPossibleForumPostReactions = thread(8128).useMaxPossibleForumPostReactions({
     containerWidth: containerWidth - num,
     reactionEmojiWidth: 46,
     digitWidth: 7.5,
@@ -57,13 +57,13 @@ export const MaxForumPostReactions = function MaxForumPostReactions(thread) {
     let tmp8 = additionalReactionCount > 0;
     if (tmp8) {
       const obj4 = { count: additionalReactionCount, containerStyle: reactionContainerStyle, threadId: thread.id };
-      tmp8 = closure_4(tmp3(10459).AdditionalReactionCount, obj4);
+      tmp8 = closure_4(tmp3(10475).AdditionalReactionCount, obj4);
     }
     items1[1] = tmp8;
     let tmp10 = !disableReactionCreates;
     if (!disableReactionCreates) {
       const obj5 = { containerStyle: reactionContainerStyle, threadId: thread.id };
-      tmp10 = closure_4(tmp3(10459).AddReactionButton, obj5);
+      tmp10 = closure_4(tmp3(10475).AddReactionButton, obj5);
     }
     items1[2] = tmp10;
     obj3.children = items1;
@@ -79,14 +79,14 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
   ({ parentChannel, firstMessage, containerStyle } = thread);
   const tmp = closure_6();
   dependencyMap = tmp;
-  const disableReactionCreates = reactionContainerStyle(11566)(thread).disableReactionCreates;
+  const disableReactionCreates = reactionContainerStyle(11575)(thread).disableReactionCreates;
   const obj2 = { message: firstMessage, parentChannel, sorted: false, count: null };
   let num = 2;
   if (disableReactionCreates) {
     num = 3;
   }
   obj2.count = num;
-  const someForumPostReactions = thread(8090).useSomeForumPostReactions(obj2);
+  const someForumPostReactions = thread(8128).useSomeForumPostReactions(obj2);
   ({ reactions, additionalNonUniqueReactionCount } = someForumPostReactions);
   if (0 !== reactions.length) {
     const obj3 = { style: null, children: null };
@@ -111,7 +111,7 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
       const items2 = [tmp.actionBarReaction, reactionContainerStyle];
       obj4.containerStyle = items2;
       obj4.threadId = thread.id;
-      tmp8 = closure_4(tmp3(10459).AdditionalReactionCount, obj4);
+      tmp8 = closure_4(tmp3(10475).AdditionalReactionCount, obj4);
     }
     items1[1] = tmp8;
     let tmp10 = !disableReactionCreates;
@@ -120,7 +120,7 @@ export const ForumPostActionBarReactions = function ForumPostActionBarReactions(
       const items3 = [tmp.actionBarReaction, reactionContainerStyle];
       obj5.containerStyle = items3;
       obj5.threadId = thread.id;
-      tmp10 = closure_4(tmp3(10459).AddReactionButton, obj5);
+      tmp10 = closure_4(tmp3(10475).AddReactionButton, obj5);
     }
     items1[2] = tmp10;
     obj3.children = items1;

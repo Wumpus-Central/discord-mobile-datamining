@@ -1,69 +1,35 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx
-import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../../../utils/PlatformUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05156_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05198_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import openPremiumUpsellActionSheet from "../utils/openPremiumUpsellActionSheet.tsx";
 import showForLaterModal from "../../../../saved_messages/native/showForLaterModal.tsx";
 import SavedMessagesTypes from "../../../../saved_messages/SavedMessagesTypes.tsx";
 import APNGPlayer from "../../../../image/native/APNGPlayer.android.tsx";
-import UserSettingsActionCreatorsDefault from "../../../../../actions/UserSettingsActionCreators.tsx";
-import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
-import UnsyncedUserSettingsStore from "../../../../user_settings/UnsyncedUserSettingsStore.tsx";
 import SelectedGuildStore from "../../../../../stores/SelectedGuildStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-function AlwaysCompressImagesSwitch(isKestrelTreatment) {
-  const tmp = closure_25();
-  const items = [UnsyncedUserSettingsStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
-  const callback = noop.useCallback((dataSavingMode) => {
-    const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({ dataSavingMode });
-  }, []);
-  let tmp6 = null;
-  if (_slicedToArray(noop.useState(!stateFromStores), 1)[0]) {
-    tmp6 = null;
-    if (!isKestrelTreatment.isKestrelTreatment) {
-      const obj2 = { style: tmp.compressionContainer, children: null };
-      const obj3 = { start: true, end: true, label: null, value: null, onValueChange: null, subLabel: null };
-      const intl = util.intl;
-      obj3.label = intl.string(util.t.ix8XIj);
-      obj3.value = stateFromStores;
-      obj3.onValueChange = callback;
-      const obj4 = { style: tmp.compressionHint, variant: "text-xs/normal", children: null };
-      const intl2 = util.intl;
-      obj4.children = intl2.string(util.t["wC0+Ph"]);
-      obj3.subLabel = __initData2(Text_Text.Text, obj4);
-      obj2.children = __initData2(TableSwitchRow.TableSwitchRow, obj3);
-      tmp6 = __initData2(View, obj2);
-    }
-  }
-  return tmp6;
-}
 function PremiumUpsellImage(arg0) {
   ({ image, style, useReducedMotion } = arg0);
   if (obj.isAndroid()) {
     if (!useReducedMotion) {
       if (null != image.uri) {
         const obj2 = { url: image.uri, style, autoplay: true };
-        let tmp5 = __initData2(APNGPlayer.APNGPlayer, obj2);
+        let tmp5 = closure_1_19(APNGPlayer.APNGPlayer, obj2);
       }
       return tmp5;
     }
   }
-  tmp5 = __initData2(FastImageDefault, {
+  tmp5 = closure_1_19(FastImageDefault, {
     source: image,
     resizeMode: "contain",
     style,
@@ -77,7 +43,7 @@ function PremiumUpsellHero(arg0) {
   ({ pageConfig, styles, useReducedMotion } = arg0);
   if (null != pageConfig.illustration) {
     const obj2 = { style: styles.hero, children: pageConfig.illustration };
-    let tmp13 = __initData2(View, obj2);
+    let tmp13 = closure_1_19(View, obj2);
   } else {
     tmp13 = null;
     if (null != pageConfig.image) {
@@ -95,16 +61,16 @@ function PremiumUpsellHero(arg0) {
         ({ hero: arr2[0], image: arr2[1], imageInGradientBackground: arr2[2] } = styles);
         obj5.style = items;
         obj5.useReducedMotion = useReducedMotion;
-        obj4.children = __initData2(PremiumUpsellImage, obj5);
-        obj3.children = __initData2(LinearGradientDefault, obj4);
-        let tmp3 = __initData2(View, obj3);
+        obj4.children = closure_1_19(PremiumUpsellImage, obj5);
+        obj3.children = closure_1_19(LinearGradientDefault, obj4);
+        let tmp3 = closure_1_19(View, obj3);
       } else {
         const obj = { image: pageConfig.image, style: null, useReducedMotion: null };
         const items1 = [,];
         ({ hero: arr[0], image: arr[1] } = styles);
         obj.style = items1;
         obj.useReducedMotion = useReducedMotion;
-        tmp3 = __initData2(PremiumUpsellImage, obj);
+        tmp3 = closure_1_19(PremiumUpsellImage, obj);
       }
     }
   }
@@ -112,21 +78,16 @@ function PremiumUpsellHero(arg0) {
 }
 const View = fn(17).View;
 const PremiumConstants = fn(1374);
-({ PremiumSubscriptionSKUs: closure_11, PremiumTypes: closure_12, PremiumUpsellTypes: map1 } = PremiumConstants);
+({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const Constants = fn(1074);
-({
-  AnalyticEvents: closure_14,
-  AnalyticsPages: closure_15,
-  HelpdeskArticles: closure_16,
-  ThemeTypes: closure_17,
-} = Constants);
-const ApplicationStreamFPS = fn(4769).ApplicationStreamFPS;
-const SavedMessagesConstants = fn(8055);
-({ SAVED_BOOKMARKS_MAX: closure_19, SAVED_REMINDERS_MAX: closure_20 } = SavedMessagesConstants);
-const premiumMax = fn(8049).MAX_SCHEDULED_MESSAGES_PER_USER;
+({ AnalyticEvents: closure_12, AnalyticsPages: map1, ThemeTypes: closure_14 } = Constants);
+const ApplicationStreamFPS = fn(4803).ApplicationStreamFPS;
+const SavedMessagesConstants = fn(8093);
+({ SAVED_BOOKMARKS_MAX: closure_16, SAVED_REMINDERS_MAX: closure_17 } = SavedMessagesConstants);
+const premiumMax = fn(8087).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
-({ jsx: closure_22, Fragment: closure_23, jsxs: closure_24 } = jsxProd);
-const createStyles = fn(4722);
+({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
+const createStyles = fn(4756);
 let obj2 = {
   hero: { alignSelf: "center", marginTop: nativeDefault.space.PX_16 },
   image: { width: 240, height: 144 },
@@ -135,8 +96,6 @@ let obj2 = {
   description: null,
   textContainer: null,
   buttonContainer: null,
-  compressionContainer: null,
-  compressionHint: null,
   imageGradientBackgroundContainer: null,
   imageGradientBackground: null,
   imageInGradientBackground: null,
@@ -157,24 +116,21 @@ let obj5 = {
   gap: nativeDefault.space.PX_8,
 };
 obj2.buttonContainer = { marginTop: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_8 };
-let obj6 = { marginTop: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_8 };
-obj2.compressionContainer = { marginTop: nativeDefault.space.PX_24 };
-obj2.compressionHint = { marginTop: 2 };
 obj2.imageGradientBackgroundContainer = {
   display: "flex",
   width: "100%",
   justifyContent: "center",
   alignItems: "center",
 };
-let obj7 = { marginTop: nativeDefault.space.PX_24 };
+let obj6 = { marginTop: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_8 };
 obj2.imageGradientBackground = {
   width: "100%",
   marginHorizontal: nativeDefault.space.PX_16,
   borderRadius: nativeDefault.space.PX_12,
 };
-let obj8 = { width: "100%", marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.space.PX_12 };
+let obj7 = { width: "100%", marginHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.space.PX_12 };
 obj2.imageInGradientBackground = { marginTop: nativeDefault.space.PX_32, marginBottom: nativeDefault.space.PX_32 };
-let closure_25 = createStyles.createStyles(obj2);
+let closure_22 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellActionSheet.tsx");
 
@@ -187,86 +143,78 @@ export default function PremiumUpsellActionSheet(onDismiss) {
   let analyticsLocations2;
   let useTier0UpsellContent;
   let onViewAllPerks;
-  noop = undefined;
-  const tmp = closure_25();
+  let upsellType;
+  const tmp = closure_22();
   const tmp3 = useTier0UpsellContent;
   const items = [UserStore];
   const stateFromStores = legacyProps(useTier0UpsellContent[40]).useStateFromStores(items, () =>
     currentUser.getCurrentUser(),
   );
-  analyticsLocations2 = analyticsLocations2(useTier0UpsellContent[48])(analyticsLocations).analyticsLocations;
+  analyticsLocations2 = analyticsLocations2(useTier0UpsellContent[41])(analyticsLocations).analyticsLocations;
   let obj = legacyProps(useTier0UpsellContent[40]);
   let initialUpsellKey;
   if (legacyProps != null) {
     initialUpsellKey = legacyProps.initialUpsellKey;
   }
   if (initialUpsellKey == null) {
-    initialUpsellKey = legacyProps(tmp3[50]).getUpsellType(featureName);
-    const tmp2Result = legacyProps(tmp3[50]);
+    initialUpsellKey = legacyProps(tmp3[43]).getUpsellType(featureName);
+    const tmp2Result = legacyProps(tmp3[43]);
   }
-  const premiumUpsellConfig = legacyProps(useTier0UpsellContent[49]).usePremiumUpsellConfig(
+  const premiumUpsellConfig = legacyProps(useTier0UpsellContent[42]).usePremiumUpsellConfig(
     initialUpsellKey,
     analyticsLocations2,
   );
   useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   onViewAllPerks = premiumUpsellConfig.onViewAllPerks;
-  let obj2 = legacyProps(useTier0UpsellContent[49]);
+  let obj2 = legacyProps(useTier0UpsellContent[42]);
   const tmp6 = analyticsLocations;
   const items1 = [ThemeStore];
   const stateFromStores1 = legacyProps(tmp3[40]).useStateFromStores(items1, () => theme.theme);
-  const tmp2Result15 = legacyProps(tmp3[40]);
+  const tmp2Result14 = legacyProps(tmp3[40]);
   const items2 = [SelectedGuildStore];
   const stateFromStores2 = legacyProps(tmp3[40]).useStateFromStores(items2, () => guildId.getGuildId());
-  const tmp12 = useTier0UpsellContent ? closure_12.TIER_0 : closure_12.TIER_2;
-  const tmp2Result16 = legacyProps(tmp3[40]);
-  const token = legacyProps(tmp3[16]).useToken(tmp5(tmp3[15]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START);
-  const tmp2Result17 = legacyProps(tmp3[16]);
+  const tmp12 = useTier0UpsellContent ? closure_10.TIER_0 : closure_10.TIER_2;
+  const tmp2Result15 = legacyProps(tmp3[40]);
+  const token = legacyProps(tmp3[14]).useToken(tmp5(tmp3[13]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_START);
+  const tmp2Result16 = legacyProps(tmp3[14]);
   let str = "dark";
-  const token1 = legacyProps(tmp3[16]).useToken(tmp5(tmp3[15]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END);
+  const token1 = legacyProps(tmp3[14]).useToken(tmp5(tmp3[13]).colors.EXPRESSIVE_GRADIENT_NITRO_GREEN_END);
   if (stateFromStores1 === constants4.LIGHT) {
     str = "light";
   }
-  const tmp2Result18 = legacyProps(tmp3[16]);
-  const premiumTypeDisplayName = legacyProps(tmp3[17]).getPremiumTypeDisplayName(tmp12);
-  let kestrelConfig;
-  if (featureName === legacyProps(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
-    kestrelConfig = legacyProps(tmp3[19]).getKestrelConfig({ location: "native.PremiumUpsellActionSheet" });
-    const tmp2Result20 = legacyProps(tmp3[19]);
+  const tmp2Result17 = legacyProps(tmp3[14]);
+  const premiumTypeDisplayName = legacyProps(tmp3[15]).getPremiumTypeDisplayName(tmp12);
+  let effectiveUploadLimit;
+  if (featureName === legacyProps(tmp3[16]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
+    const tmp2Result19 = legacyProps(tmp3[17]);
+    effectiveUploadLimit = tmp2Result19.getEffectiveUploadLimit(legacyProps(tmp3[18]).maxFileSize(stateFromStores2));
+    const tmp2Result20 = legacyProps(tmp3[18]);
   }
-  let effectiveKestrelLimit;
-  if (null != kestrelConfig) {
-    const tmp2Result21 = legacyProps(tmp3[19]);
-    effectiveKestrelLimit = tmp2Result21.getEffectiveKestrelLimit(
-      kestrelConfig,
-      legacyProps(tmp3[20]).maxFileSize(stateFromStores2),
-    );
-    const tmp2Result22 = legacyProps(tmp3[20]);
+  const tmp17 = subfeatureName === legacyProps(tmp3[19]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
+  closure_129_0 = tmp17;
+  if (subfeatureName === legacyProps(tmp3[19]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
+    const forLaterLimit = legacyProps(tmp3[20]).getForLaterLimit("native.PremiumUpsellActionSheet", tmp17);
+    const tmp2Result21 = legacyProps(tmp3[20]);
   }
-  const tmp18 = subfeatureName === legacyProps(tmp3[21]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
-  closure_129_0 = tmp18;
-  if (subfeatureName === legacyProps(tmp3[21]).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
-    const forLaterLimit = legacyProps(tmp3[22]).getForLaterLimit("native.PremiumUpsellActionSheet", tmp18);
-    const tmp2Result23 = legacyProps(tmp3[22]);
-  }
-  const tmp20 = tmp18 ? closure_20 : closure_19;
-  const tmp2Result19 = legacyProps(tmp3[17]);
-  let tmp21;
-  if (tmp2Result24.getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet")) {
-    tmp21 = closure_22(legacyProps(tmp3[24]).ReactionsSpotIllustration, { width: 198, height: 132, accessible: false });
+  const tmp19 = tmp17 ? closure_17 : closure_16;
+  const tmp2Result18 = legacyProps(tmp3[15]);
+  let tmp20;
+  if (tmp2Result22.getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet")) {
+    tmp20 = closure_19(legacyProps(tmp3[22]).ReactionsSpotIllustration, { width: 198, height: 132, accessible: false });
   }
   let obj3 = {};
   const obj4 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
-  const intl = legacyProps(tmp3[25]).intl;
-  obj4.title = intl.string(legacyProps(tmp3[25]).t.jGDYF0);
-  const intl2 = legacyProps(tmp3[25]).intl;
-  obj4.description = intl2.formatToPlainString(legacyProps(tmp3[25]).t["fc+8uy"], {
+  const intl = legacyProps(tmp3[23]).intl;
+  obj4.title = intl.string(legacyProps(tmp3[23]).t.jGDYF0);
+  const intl2 = legacyProps(tmp3[23]).intl;
+  obj4.description = intl2.formatToPlainString(legacyProps(tmp3[23]).t["fc+8uy"], {
     nitroTierName: premiumTypeDisplayName,
   });
   obj4.analyticsPage = constants3.PREMIUM_UPSELL_SOUNDBOARD_EVERYWHERE;
   obj4.upsellType = constants.SOUNDBOARD_EVERYWHERE_UPSELL;
-  tmp2Result24 = legacyProps(tmp3[23]);
+  tmp2Result22 = legacyProps(tmp3[21]);
   obj4.image = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_" + str + ".png" };
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE] = obj4;
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE] = obj4;
   const obj6 = {
     title: null,
     description: null,
@@ -275,73 +223,47 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     image: null,
     illustration: null,
   };
-  const intl3 = legacyProps(tmp3[25]).intl;
-  obj6.title = intl3.string(legacyProps(tmp3[25]).t.zY5PPb);
-  const intl4 = legacyProps(tmp3[25]).intl;
-  obj6.description = intl4.formatToPlainString(legacyProps(tmp3[25]).t["uukIF/"], {
+  const intl3 = legacyProps(tmp3[23]).intl;
+  obj6.title = intl3.string(legacyProps(tmp3[23]).t.zY5PPb);
+  const intl4 = legacyProps(tmp3[23]).intl;
+  obj6.description = intl4.formatToPlainString(legacyProps(tmp3[23]).t["uukIF/"], {
     nitroTierName: premiumTypeDisplayName,
   });
   obj6.analyticsPage = constants3.PREMIUM_UPSELL_EMOJI_EVERYWHERE;
   obj6.upsellType = constants.EMOJI_EVERYWHERE_UPSELL;
   const obj5 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_" + str + ".png" };
   obj6.image = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
-  obj6.illustration = tmp21;
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.EMOJIS_EVERYWHERE] = obj6;
+  obj6.illustration = tmp20;
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.EMOJIS_EVERYWHERE] = obj6;
   const obj8 = { title: null, description: null, analyticsPage: null, upsellType: null, illustration: null };
-  const intl5 = legacyProps(tmp3[25]).intl;
-  obj8.title = intl5.string(legacyProps(tmp3[25]).t.Eukdgl);
-  const intl6 = legacyProps(tmp3[25]).intl;
-  obj8.description = intl6.string(legacyProps(tmp3[25]).t.sMmd7s);
+  const intl5 = legacyProps(tmp3[23]).intl;
+  obj8.title = intl5.string(legacyProps(tmp3[23]).t.Eukdgl);
+  const intl6 = legacyProps(tmp3[23]).intl;
+  obj8.description = intl6.string(legacyProps(tmp3[23]).t.sMmd7s);
   obj8.analyticsPage = constants3.PREMIUM_UPSELL_STICKERS_EVERYWHERE;
   obj8.upsellType = constants.STICKERS_EVERYWHERE_UPSELL;
-  obj8.illustration = closure_22(legacyProps(tmp3[24]).StickersSpotIllustration, {
+  obj8.illustration = closure_19(legacyProps(tmp3[22]).StickersSpotIllustration, {
     width: 235,
     height: 132,
     accessible: false,
   });
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.STICKERS_EVERYWHERE] = obj8;
-  const obj9 = {
-    title: null,
-    showBetaBadge: null,
-    isKestrelRaisedCap: null,
-    description: null,
-    analyticsPage: null,
-    upsellType: null,
-    image: null,
-  };
-  const intl7 = legacyProps(tmp3[25]).intl;
-  obj9.title = intl7.string(legacyProps(tmp3[25]).t["G+pngo"]);
-  let enabled;
-  if (kestrelConfig != null) {
-    enabled = kestrelConfig.enabled;
-  }
-  obj9.showBetaBadge = true === enabled && true !== kestrelConfig.isGA;
-  let enabled1;
-  if (kestrelConfig != null) {
-    enabled1 = kestrelConfig.enabled;
-  }
-  obj9.isKestrelRaisedCap = true === enabled1;
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.STICKERS_EVERYWHERE] = obj8;
+  const obj9 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
+  const intl7 = legacyProps(tmp3[23]).intl;
+  obj9.title = intl7.string(legacyProps(tmp3[23]).t["G+pngo"]);
+  const obj10 = { children: null };
   const obj7 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
-  const obj10 = { guildId: stateFromStores2, maxSize: effectiveKestrelLimit, hideLearnMore: null, onClick: null };
-  let isGA;
-  if (kestrelConfig != null) {
-    isGA = kestrelConfig.isGA;
-  }
-  const tmp2Result25 = legacyProps(tmp3[20]);
-  obj10.hideLearnMore = true === isGA;
-  obj10.onClick = function onClick() {
-    const obj = analyticsLocations2(useTier0UpsellContent[26]);
-    obj.openURL(analyticsLocations2(useTier0UpsellContent[27]).getArticleURL(constants.NITRO_FAQ));
-  };
-  obj9.description = closure_22(closure_23, {
-    children: legacyProps(tmp3[20]).fileUploadLimitRoadblockDescription(obj10),
+  obj10.children = legacyProps(tmp3[18]).fileUploadLimitRoadblockDescription({
+    guildId: stateFromStores2,
+    maxSize: effectiveUploadLimit,
   });
+  obj9.description = closure_19(closure_20, obj10);
   obj9.analyticsPage = constants3.PREMIUM_UPSELL_FILE_UPLOAD;
   obj9.upsellType = constants.LARGER_FILE_UPLOAD_UPSELL;
-  const obj11 = { children: legacyProps(tmp3[20]).fileUploadLimitRoadblockDescription(obj10) };
+  const tmp2Result23 = legacyProps(tmp3[18]);
   obj9.image = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_" + str + "_v2.png" };
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE] = obj9;
-  const obj13 = {
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE] = obj9;
+  const obj12 = {
     title: null,
     description: null,
     analyticsPage: null,
@@ -349,46 +271,46 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     image: null,
     illustration: null,
   };
-  const intl8 = legacyProps(tmp3[25]).intl;
-  obj13.title = intl8.string(legacyProps(tmp3[25]).t.SI7R9I);
-  const intl9 = legacyProps(tmp3[25]).intl;
-  obj13.description = intl9.formatToPlainString(legacyProps(tmp3[25]).t.uGkSY2, {
+  const intl8 = legacyProps(tmp3[23]).intl;
+  obj12.title = intl8.string(legacyProps(tmp3[23]).t.SI7R9I);
+  const intl9 = legacyProps(tmp3[23]).intl;
+  obj12.description = intl9.formatToPlainString(legacyProps(tmp3[23]).t.uGkSY2, {
     nitroTierName: premiumTypeDisplayName,
   });
-  obj13.analyticsPage = constants3.PREMIUM_UPSELL_ANIMATED_EMOJI;
-  obj13.upsellType = constants.ANIMATED_EMOJI_UPSELL;
-  const obj12 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_" + str + "_v2.png" };
-  obj13.image = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
-  obj13.illustration = tmp21;
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.ANIMATED_EMOJIS] = obj13;
+  obj12.analyticsPage = constants3.PREMIUM_UPSELL_ANIMATED_EMOJI;
+  obj12.upsellType = constants.ANIMATED_EMOJI_UPSELL;
+  const obj11 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_" + str + "_v2.png" };
+  obj12.image = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
+  obj12.illustration = tmp20;
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.ANIMATED_EMOJIS] = obj12;
+  const obj14 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
+  const intl10 = legacyProps(tmp3[23]).intl;
+  obj14.title = intl10.string(legacyProps(tmp3[23]).t.p0I2Bk);
+  const intl11 = legacyProps(tmp3[23]).intl;
+  obj14.description = intl11.string(legacyProps(tmp3[23]).t.jBqF2k);
+  obj14.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
+  obj14.upsellType = constants.CLIENT_THEMES_UPSELL;
+  obj14.image = analyticsLocations2(tmp3[24]);
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.CLIENT_THEMES] = obj14;
   const obj15 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
-  const intl10 = legacyProps(tmp3[25]).intl;
-  obj15.title = intl10.string(legacyProps(tmp3[25]).t.p0I2Bk);
-  const intl11 = legacyProps(tmp3[25]).intl;
-  obj15.description = intl11.string(legacyProps(tmp3[25]).t.jBqF2k);
-  obj15.analyticsPage = constants3.PREMIUM_UPSELL_CLIENT_THEMES;
-  obj15.upsellType = constants.CLIENT_THEMES_UPSELL;
-  obj15.image = analyticsLocations2(tmp3[28]);
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.CLIENT_THEMES] = obj15;
-  const obj16 = { title: null, description: null, analyticsPage: null, upsellType: null, image: null };
-  const intl12 = legacyProps(tmp3[25]).intl;
-  obj16.title = intl12.string(legacyProps(tmp3[25]).t.TYFwcy);
-  const intl13 = legacyProps(tmp3[25]).intl;
-  obj16.description = intl13.string(legacyProps(tmp3[25]).t.HDt8ip);
-  obj16.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
-  obj16.upsellType = constants.APP_ICON_UPSELL;
-  obj16.image = analyticsLocations2(tmp3[29]);
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.APP_ICONS] = obj16;
+  const intl12 = legacyProps(tmp3[23]).intl;
+  obj15.title = intl12.string(legacyProps(tmp3[23]).t.TYFwcy);
+  const intl13 = legacyProps(tmp3[23]).intl;
+  obj15.description = intl13.string(legacyProps(tmp3[23]).t.HDt8ip);
+  obj15.analyticsPage = constants3.PREMIUM_UPSELL_APP_ICONS;
+  obj15.upsellType = constants.APP_ICON_UPSELL;
+  obj15.image = analyticsLocations2(tmp3[25]);
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.APP_ICONS] = obj15;
   if (null == forLaterLimit) {
-    const intl15 = legacyProps(tmp3[25]).intl;
-    let stringResult = intl15.string(legacyProps(tmp3[25]).t.YXk6N7);
+    const intl15 = legacyProps(tmp3[23]).intl;
+    let stringResult = intl15.string(legacyProps(tmp3[23]).t.YXk6N7);
   } else {
-    const intl14 = legacyProps(tmp3[25]).intl;
-    const t = legacyProps(tmp3[25]).t;
-    const obj17 = { premiumMax: tmp20 };
-    stringResult = intl14.formatToPlainString(tmp18 ? t["cpj9o/"] : t.Oxm3Sq, obj17);
+    const intl14 = legacyProps(tmp3[23]).intl;
+    const t = legacyProps(tmp3[23]).t;
+    const obj16 = { premiumMax: tmp19 };
+    stringResult = intl14.formatToPlainString(tmp17 ? t["cpj9o/"] : t.Oxm3Sq, obj16);
   }
-  const obj18 = {
+  const obj17 = {
     title: stringResult,
     showBetaBadge: true,
     description: null,
@@ -397,15 +319,15 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     image: null,
   };
   if (null == forLaterLimit) {
-    const intl17 = legacyProps(tmp3[25]).intl;
-    let stringResult1 = intl17.string(legacyProps(tmp3[25]).t["m/HzW8"]);
+    const intl17 = legacyProps(tmp3[23]).intl;
+    let stringResult1 = intl17.string(legacyProps(tmp3[23]).t["m/HzW8"]);
   } else {
-    const intl16 = legacyProps(tmp3[25]).intl;
-    const t2 = legacyProps(tmp3[25]).t;
-    const obj19 = { children: null };
-    const obj20 = {
+    const intl16 = legacyProps(tmp3[23]).intl;
+    const t2 = legacyProps(tmp3[23]).t;
+    const obj18 = { children: null };
+    const obj19 = {
       max: forLaterLimit,
-      premiumMax: tmp20,
+      premiumMax: tmp19,
       onClick() {
         ActionSheetActionCreatorsDefault.hideActionSheet(openPremiumUpsellActionSheet.PREMIUM_UPSELL_ACTION_SHEET_KEY);
         const SavedMessageSortTypes = SavedMessagesTypes.SavedMessageSortTypes;
@@ -414,15 +336,15 @@ export default function PremiumUpsellActionSheet(onDismiss) {
         );
       },
     };
-    obj19.children = intl16.format(tmp18 ? t2.NRF0Wh : t2.o5OLyw, obj20);
-    stringResult1 = closure_22(closure_23, obj19);
+    obj18.children = intl16.format(tmp17 ? t2.NRF0Wh : t2.o5OLyw, obj19);
+    stringResult1 = closure_19(closure_20, obj18);
   }
-  obj18.description = stringResult1;
-  obj18.analyticsPage = constants3.PREMIUM_UPSELL_FOR_LATER;
-  obj18.upsellType = constants.FOR_LATER_MODAL_UPSELL;
-  obj18.image = analyticsLocations2(tmp18 ? tmp3[34] : tmp3[35]);
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.SAVED_MESSAGES] = obj18;
-  const obj21 = {
+  obj17.description = stringResult1;
+  obj17.analyticsPage = constants3.PREMIUM_UPSELL_FOR_LATER;
+  obj17.upsellType = constants.FOR_LATER_MODAL_UPSELL;
+  obj17.image = analyticsLocations2(tmp17 ? tmp3[30] : tmp3[31]);
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.SAVED_MESSAGES] = obj17;
+  const obj20 = {
     title: null,
     showBetaBadge: true,
     description: null,
@@ -430,26 +352,26 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     upsellType: null,
     image: null,
   };
-  const intl18 = legacyProps(tmp3[25]).intl;
-  obj21.title = intl18.formatToPlainString(legacyProps(tmp3[25]).t.GNoaxo, { premiumMax });
-  const obj23 = { children: null };
-  const intl19 = legacyProps(tmp3[25]).intl;
-  obj23.children = intl19.format(legacyProps(tmp3[25]).t["1kFyto"], {
+  const intl18 = legacyProps(tmp3[23]).intl;
+  obj20.title = intl18.formatToPlainString(legacyProps(tmp3[23]).t.GNoaxo, { premiumMax });
+  const obj22 = { children: null };
+  const intl19 = legacyProps(tmp3[23]).intl;
+  obj22.children = intl19.format(legacyProps(tmp3[23]).t["1kFyto"], {
     premiumMax,
     onClick() {
-      analyticsLocations2(useTier0UpsellContent[30]).hideActionSheet(
-        legacyProps(useTier0UpsellContent[31]).PREMIUM_UPSELL_ACTION_SHEET_KEY,
+      analyticsLocations2(useTier0UpsellContent[26]).hideActionSheet(
+        legacyProps(useTier0UpsellContent[27]).PREMIUM_UPSELL_ACTION_SHEET_KEY,
       );
-      const obj = analyticsLocations2(useTier0UpsellContent[30]);
-      const result = legacyProps(useTier0UpsellContent[36]).showScheduledMessagesModal();
+      const obj = analyticsLocations2(useTier0UpsellContent[26]);
+      const result = legacyProps(useTier0UpsellContent[32]).showScheduledMessagesModal();
     },
   });
-  obj21.description = closure_22(closure_23, obj23);
-  obj21.analyticsPage = constants3.PREMIUM_UPSELL_SCHEDULED_MESSAGES;
-  obj21.upsellType = constants.SCHEDULED_MESSAGES_MODAL_UPSELL;
-  obj21.image = analyticsLocations2(tmp3[37]);
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.SCHEDULED_MESSAGES] = obj21;
-  const obj25 = {
+  obj20.description = closure_19(closure_20, obj22);
+  obj20.analyticsPage = constants3.PREMIUM_UPSELL_SCHEDULED_MESSAGES;
+  obj20.upsellType = constants.SCHEDULED_MESSAGES_MODAL_UPSELL;
+  obj20.image = analyticsLocations2(tmp3[33]);
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.SCHEDULED_MESSAGES] = obj20;
+  const obj24 = {
     title: null,
     description: null,
     analyticsPage: null,
@@ -457,52 +379,52 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     image: null,
     imageGradientBackground: null,
   };
-  const intl20 = legacyProps(tmp3[25]).intl;
-  obj25.title = intl20.string(legacyProps(tmp3[25]).t.ETZQx5);
-  const intl21 = legacyProps(tmp3[25]).intl;
-  obj25.description = intl21.formatToPlainString(legacyProps(tmp3[25]).t["4nlpei"], {
+  const intl20 = legacyProps(tmp3[23]).intl;
+  obj24.title = intl20.string(legacyProps(tmp3[23]).t.ETZQx5);
+  const intl21 = legacyProps(tmp3[23]).intl;
+  obj24.description = intl21.formatToPlainString(legacyProps(tmp3[23]).t["4nlpei"], {
     fps: ApplicationStreamFPS.FPS_60,
   });
-  obj25.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
-  obj25.upsellType = constants.STREAM_QUALITY_UPSELL;
-  obj25.image = analyticsLocations2(tmp3[38]);
-  const obj27 = {
+  obj24.analyticsPage = constants3.PREMIUM_UPSELL_STREAM_HIGH_QUALITY;
+  obj24.upsellType = constants.STREAM_QUALITY_UPSELL;
+  obj24.image = analyticsLocations2(tmp3[34]);
+  const obj26 = {
     colors: null,
-    start: legacyProps(tmp3[39]).HorizontalGradient.START,
-    end: legacyProps(tmp3[39]).HorizontalGradient.END,
+    start: legacyProps(tmp3[35]).HorizontalGradient.START,
+    end: legacyProps(tmp3[35]).HorizontalGradient.END,
   };
   const items3 = [token, token1];
-  obj27.colors = items3;
-  obj25.imageGradientBackground = obj27;
-  obj3[legacyProps(tmp3[18]).EntitlementFeatureNames.STREAM_HIGH_QUALITY] = obj25;
-  noop = tmp32;
-  const obj14 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
-  const obj22 = { premiumMax };
-  const obj24 = {
+  obj26.colors = items3;
+  obj24.imageGradientBackground = obj26;
+  obj3[legacyProps(tmp3[16]).EntitlementFeatureNames.STREAM_HIGH_QUALITY] = obj24;
+  upsellType = tmp28;
+  const obj13 = { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" };
+  const obj21 = { premiumMax };
+  const obj23 = {
     premiumMax,
     onClick() {
-      analyticsLocations2(useTier0UpsellContent[30]).hideActionSheet(
-        legacyProps(useTier0UpsellContent[31]).PREMIUM_UPSELL_ACTION_SHEET_KEY,
+      analyticsLocations2(useTier0UpsellContent[26]).hideActionSheet(
+        legacyProps(useTier0UpsellContent[27]).PREMIUM_UPSELL_ACTION_SHEET_KEY,
       );
-      const obj = analyticsLocations2(useTier0UpsellContent[30]);
-      const result = legacyProps(useTier0UpsellContent[36]).showScheduledMessagesModal();
+      const obj = analyticsLocations2(useTier0UpsellContent[26]);
+      const result = legacyProps(useTier0UpsellContent[32]).showScheduledMessagesModal();
     },
   };
-  const obj26 = { fps: ApplicationStreamFPS.FPS_60 };
+  const obj25 = { fps: ApplicationStreamFPS.FPS_60 };
   const items4 = [AccessibilityStore];
   const stateFromStores3 = legacyProps(tmp3[40]).useStateFromStores(items4, () => useReducedMotion.useReducedMotion);
-  const tmp2Result26 = legacyProps(tmp3[40]);
+  const tmp2Result24 = legacyProps(tmp3[40]);
   let mobileEmojiPickerUpsellRestyleEnabledForFeature = legacyProps(
-    tmp3[23],
+    tmp3[21],
   ).getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet");
   if (!mobileEmojiPickerUpsellRestyleEnabledForFeature) {
     mobileEmojiPickerUpsellRestyleEnabledForFeature = legacyProps(
-      tmp3[51],
+      tmp3[44],
     ).getMobileStickerPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet");
-    const tmp2Result28 = legacyProps(tmp3[51]);
+    const tmp2Result26 = legacyProps(tmp3[44]);
   }
   const items5 = [obj3[featureName], analyticsLocations2, useTier0UpsellContent, legacyProps];
-  const effect = noop.useEffect(() => {
+  const effect = onViewAllPerks.useEffect(() => {
     let analyticsProperties;
     if (legacyProps != null) {
       analyticsProperties = legacyProps.analyticsProperties;
@@ -517,71 +439,63 @@ export default function PremiumUpsellActionSheet(onDismiss) {
     obj2.location = location;
     obj2.location_stack = analyticsLocations2;
     const obj = AnalyticsUtilsDefault;
-    obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(
-      useTier0UpsellContent ? closure_2_11.TIER_0 : closure_2_11.TIER_2,
-    );
+    obj2.sku_id = PremiumUtils.castPremiumSubscriptionAsSkuId(useTier0UpsellContent ? React7.TIER_0 : React7.TIER_2);
     obj.track(constants2.PREMIUM_UPSELL_VIEWED, obj2);
   }, items5);
-  const tmp36 = analyticsLocations2(tmp3[53])(
+  const tmp32 = analyticsLocations2(tmp3[46])(
     useTier0UpsellContent,
     onViewAllPerks,
     obj3[featureName].analyticsPage,
     undefined,
     tmp6,
   );
-  const loading = tmp36.loading;
+  const loading = tmp32.loading;
   [][0] = onViewAllPerks;
-  let tmp25Result4 = null;
+  let tmp24Result2 = null;
   if (null != obj3[featureName]) {
-    const obj28 = { startExpanded: true, onDismiss: onDismiss.onDismiss, children: null };
-    const obj29 = { pageConfig: tmp32, styles: tmp, useReducedMotion: stateFromStores3 };
-    const items6 = [closure_22(PremiumUpsellHero, obj29), , ,];
-    const obj30 = { style: tmp.textContainer, children: null };
-    let tmp25Result = null;
-    if (true === tmp32.showBetaBadge) {
-      const obj31 = { size: legacyProps(tmp3[56]).BetaSizes.SMALL, gradient: true, style: tmp.betaTag };
-      tmp25Result = closure_22(tmp5(tmp3[56]), obj31);
-      const tmp5Result = tmp5(tmp3[56]);
+    const obj27 = { startExpanded: true, onDismiss: onDismiss.onDismiss, children: null };
+    const obj28 = { pageConfig: tmp28, styles: tmp, useReducedMotion: stateFromStores3 };
+    const items6 = [closure_19(PremiumUpsellHero, obj28), ,];
+    const obj29 = { style: tmp.textContainer, children: null };
+    let tmp24Result = null;
+    if (true === tmp28.showBetaBadge) {
+      const obj30 = { size: legacyProps(tmp3[49]).BetaSizes.SMALL, gradient: true, style: tmp.betaTag };
+      tmp24Result = closure_19(tmp5(tmp3[49]), obj30);
+      const tmp5Result = tmp5(tmp3[49]);
     }
-    const items7 = [tmp25Result, ,];
-    const obj32 = {
+    const items7 = [tmp24Result, ,];
+    const obj31 = {
       style: tmp.text,
       variant: "heading-lg/extrabold",
       accessibilityRole: "header",
-      children: tmp32.title,
+      children: tmp28.title,
     };
-    items7[1] = closure_22(legacyProps(tmp3[43]).Text, obj32);
-    const obj33 = { style: null, variant: "text-sm/normal", children: null };
+    items7[1] = closure_19(legacyProps(tmp3[50]).Text, obj31);
+    const obj32 = { style: null, variant: "text-sm/normal", children: null };
     const items8 = [,];
     ({ text: arr9[0], description: arr9[1] } = tmp);
-    obj33.style = items8;
-    obj33.children = tmp32.description;
-    items7[2] = closure_22(legacyProps(tmp3[43]).Text, obj33);
-    obj30.children = items7;
-    items6[1] = closure_24(View, obj30);
-    let tmp25Result3 = null;
-    if (featureName === legacyProps(tmp3[18]).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
-      const obj34 = { isKestrelTreatment: true === tmp32.isKestrelRaisedCap };
-      tmp25Result3 = closure_22(AlwaysCompressImagesSwitch, obj34);
-    }
-    items6[2] = tmp25Result3;
-    const obj35 = { style: tmp.buttonContainer, children: null };
-    const obj36 = { loading, onPress: null, text: null, icon: null, variant: null };
+    obj32.style = items8;
+    obj32.children = tmp28.description;
+    items7[2] = closure_19(legacyProps(tmp3[50]).Text, obj32);
+    obj29.children = items7;
+    items6[1] = closure_21(upsellType, obj29);
+    const obj33 = { style: tmp.buttonContainer, children: null };
+    const obj34 = { loading, onPress: null, text: null, icon: null, variant: null };
     let onPress = null;
     if (!loading) {
-      onPress = tmp36.onPress;
+      onPress = tmp32.onPress;
     }
-    obj36.onPress = onPress;
-    const intl22 = legacyProps(tmp3[25]).intl;
+    obj34.onPress = onPress;
+    const intl22 = legacyProps(tmp3[23]).intl;
     const string = intl22.string;
-    const t3 = legacyProps(tmp3[25]).t;
+    const t3 = legacyProps(tmp3[23]).t;
     if (useTier0UpsellContent) {
       let stringResult2 = string(t3.cM8bbx);
     } else {
       stringResult2 = string(t3["8x0jKT"]);
     }
-    obj36.text = stringResult2;
-    obj36.icon = tmp5(tmp3[58]);
+    obj34.text = stringResult2;
+    obj34.icon = tmp5(tmp3[52]);
     let str3 = "primary";
     if (mobileEmojiPickerUpsellRestyleEnabledForFeature) {
       let str4 = "experimental_premium-primary";
@@ -590,19 +504,19 @@ export default function PremiumUpsellActionSheet(onDismiss) {
       }
       str3 = str4;
     }
-    const obj37 = { children: null };
-    obj36.variant = str3;
-    const items9 = [closure_22(legacyProps(tmp3[57]).Button, obj36)];
-    const obj38 = { variant: "secondary", text: null, onPress: null };
-    const intl23 = legacyProps(tmp3[25]).intl;
-    obj38.text = intl23.string(legacyProps(tmp3[25]).t.PcTCB7);
-    obj38.onPress = tmp37;
-    items9[1] = closure_22(legacyProps(tmp3[57]).Button, obj38);
-    obj35.children = items9;
-    items6[3] = closure_24(View, obj35);
-    obj37.children = items6;
-    obj28.children = closure_24(View, obj37);
-    tmp25Result4 = closure_22(legacyProps(tmp3[55]).ActionSheet, obj28);
+    const obj35 = { children: null };
+    obj34.variant = str3;
+    const items9 = [closure_19(legacyProps(tmp3[51]).Button, obj34)];
+    const obj36 = { variant: "secondary", text: null, onPress: null };
+    const intl23 = legacyProps(tmp3[23]).intl;
+    obj36.text = intl23.string(legacyProps(tmp3[23]).t.PcTCB7);
+    obj36.onPress = tmp33;
+    items9[1] = closure_19(legacyProps(tmp3[51]).Button, obj36);
+    obj33.children = items9;
+    items6[2] = closure_21(upsellType, obj33);
+    obj35.children = items6;
+    obj27.children = closure_21(upsellType, obj35);
+    tmp24Result2 = closure_19(legacyProps(tmp3[48]).ActionSheet, obj27);
   }
-  return tmp25Result4;
+  return tmp24Result2;
 }

@@ -2,7 +2,7 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserCircleIcon from "../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx";
 import AppLauncherOptionIconDefault from "../../base_components/AppLauncherOptionIcon.tsx";
@@ -53,7 +53,7 @@ function MentionableIcon(mentionable) {
 }
 const StatusTypes = fn(1085).StatusTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -144,7 +144,7 @@ export default function AppLauncherMentionableOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12422, dependencyMap.paths),
+      asyncRequireImpl(12431, dependencyMap.paths),
       AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY,
       {
         option,

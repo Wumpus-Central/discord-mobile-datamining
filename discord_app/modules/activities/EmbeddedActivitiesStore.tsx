@@ -4,17 +4,17 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import Server from "../../flow/Server.tsx";
 import embeddedActivityLocationUtils from "utils/embeddedActivityLocationUtils.tsx";
 import ApplicationCommandTypes from "../application_commands/ApplicationCommandTypes.tsx";
+import getURLForApplicationDefault from "getURLForApplication.tsx";
 import getPlatformDefault from "utils/getPlatform.tsx";
 import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment.tsx";
 import ContentClassificationReference from "../content_classification/ContentClassificationReference.tsx";
-import getURLForApplicationDefault from "getURLForApplication.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const isVoiceEmbeddedActivityDefault = combined(9776);
+const isVoiceEmbeddedActivityDefault = combined(9613);
 require = fn;
 function participantFromServer(userId) {
   return { userId: userId.user_id, sessionId: userId.session_id, nonce: userId.nonce };
@@ -25,7 +25,7 @@ function updateEmbeddedActivities(content_classification) {
   let combined = importDefault;
   const tmp3 = getURLForApplicationDefault(application_id);
   if (null != tmp3) {
-    const embeddedActivityLocationChannelId = application_id(4351).getEmbeddedActivityLocationChannelId(_location);
+    const embeddedActivityLocationChannelId = application_id(4385).getEmbeddedActivityLocationChannelId(_location);
     if (null != embeddedActivityLocationChannelId) {
       value = map2.get(embeddedActivityLocationChannelId);
       items = undefined;
@@ -52,7 +52,7 @@ function updateEmbeddedActivities(content_classification) {
     if (found1 != null) {
       const sessionId = found1.sessionId;
     }
-    mapped.some((item) => application_id(14194).isActivityParticipantCurrentUserCurrentSession(item));
+    mapped.some((item) => application_id(14248).isActivityParticipantCurrentUserCurrentSession(item));
     const value9 = map.get(application_id);
     let tmp12 = embeddedActivityLocationChannelId;
     if (embeddedActivityLocationChannelId == null) {
@@ -134,7 +134,7 @@ function updateEmbeddedActivities(content_classification) {
               }
             }
             value11.upsert(application_id, _location.id, tmp61);
-            const embeddedActivityLocationChannelId1 = application_id(4351).getEmbeddedActivityLocationChannelId(_location);
+            const embeddedActivityLocationChannelId1 = application_id(4385).getEmbeddedActivityLocationChannelId(_location);
             if (null != embeddedActivityLocationChannelId1) {
               let value12 = map2.get(embeddedActivityLocationChannelId1);
               if (null == value12) {
@@ -148,7 +148,7 @@ function updateEmbeddedActivities(content_classification) {
                 }
               }
               value12.upsert(application_id, _location.id, tmp61);
-              let str5 = application_id(4351).getEmbeddedActivityLocationGuildId(_location);
+              let str5 = application_id(4385).getEmbeddedActivityLocationGuildId(_location);
               if (str5 == null) {
                 str5 = "0";
               }
@@ -164,9 +164,9 @@ function updateEmbeddedActivities(content_classification) {
                 }
               }
               value13.upsert(application_id, _location.id, tmp61);
-              const tmp76Result4 = application_id(4351);
+              const tmp76Result4 = application_id(4385);
             }
-            const tmp76Result = application_id(4351);
+            const tmp76Result = application_id(4385);
           } else {
             const _Array = Array;
             Array.from(value9.userIds);
@@ -195,7 +195,7 @@ function updateEmbeddedActivities(content_classification) {
               id1 = value14.location.id;
             }
             if (id1 !== _location.id) {
-              const embeddedActivityLocationChannelId2 = application_id(4351).getEmbeddedActivityLocationChannelId(_location);
+              const embeddedActivityLocationChannelId2 = application_id(4385).getEmbeddedActivityLocationChannelId(_location);
               const channel = ChannelStore.getChannel(embeddedActivityLocationChannelId2);
               if (channel != null) {
                 const guildId = channel.getGuildId();
@@ -224,7 +224,7 @@ function updateEmbeddedActivities(content_classification) {
                 const ComponentDispatch2 = application_id(1110).ComponentDispatch;
                 const obj8 = { location: _location, applicationId: application_id, isFirstActivityInChannel: 0 === arr2.length, isStart: tmp78, participants: mapped, embeddedActivity: obj7, inviterUserId };
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj8);
-                application_id(9782);
+                application_id(9637);
                 if (true === renderInFramePool) {
                   let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
                   const _HermesInternal2 = HermesInternal;
@@ -247,7 +247,7 @@ function updateEmbeddedActivities(content_classification) {
                 const combinedResult = DispatcherDefault;
                 const tmp41 = 0 === arr2.length;
               }
-              const tmp76Result5 = application_id(4351);
+              const tmp76Result5 = application_id(4385);
             }
           }
         }
@@ -260,10 +260,10 @@ function updateEmbeddedActivities(content_classification) {
       const _HermesInternal3 = HermesInternal;
       map4.delete("" + application_id + ":" + tmp59);
     }
-    const obj19 = application_id(4351);
+    const obj19 = application_id(4385);
   }
 }
-const ActivityPanelConstants = fn(9743);
+const ActivityPanelConstants = fn(9314);
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 const FocusedActivityLayouts = ActivityPanelConstants.FocusedActivityLayouts;
 const Constants = fn(1074);
@@ -360,7 +360,7 @@ const map11 = new Map();
 let c29;
 let PIP = ActivityPanelModes.DISCONNECTED;
 let focusedActivityLayout = FocusedActivityLayouts.RESIZABLE;
-let layout = fn(1921).ActivityPopoutWindowLayouts.NORMAL;
+let layout = fn(2004).ActivityPopoutWindowLayouts.NORMAL;
 const PersistedStore = initializeDefault.PersistedStore;
 class EmbeddedActivitiesStoreClass extends PersistedStore {
 }

@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/voice/VibegrationsVoiceSessionCoordinator.tsx
-import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
 import RPCErrorDefault from "../../rpc/RPCError.tsx";
+import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
 import SpatialAudioForVoiceExperimentDefault from "../../voice_panel/SpatialAudioForVoiceExperiment.tsx";
 import validateEmbeddedAppFrameDefault from "../../rpc/helpers/validateEmbeddedAppFrame.tsx";
 import FrameVisibilityStore from "../../frames/FrameVisibilityStore.tsx";
@@ -13,7 +13,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 let obj2 = fn;
 const RPCErrors = fn(1074).RPCErrors;
-const Constants = fn(4747);
+const Constants = fn(4781);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 class VibegrationsVoiceSessionCoordinator {
@@ -331,7 +331,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14680).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(14735).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

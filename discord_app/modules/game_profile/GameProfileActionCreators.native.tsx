@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/GameProfileActionCreators.native.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -21,7 +21,7 @@ export default {
     );
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(8912, dependencyMap.paths),
+      asyncRequireImpl(8951, dependencyMap.paths),
       "game-profile-" + gameId,
       { gameId, source, sourceUserId },
       stackingBehavior,
@@ -32,7 +32,7 @@ export default {
     ({ source, initialScrollOffset } = gameId);
     DispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(8912, dependencyMap.paths), "game-profile-" + gameId, {
+    obj2.openLazy(asyncRequireImpl(8951, dependencyMap.paths), "game-profile-" + gameId, {
       gameId,
       source,
       initialScrollOffset,

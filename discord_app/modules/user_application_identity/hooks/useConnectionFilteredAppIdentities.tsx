@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(1922).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
+let closure_3 = fn(2005).APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx",

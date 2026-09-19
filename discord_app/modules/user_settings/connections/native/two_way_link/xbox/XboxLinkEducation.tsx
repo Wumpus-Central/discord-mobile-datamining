@@ -5,7 +5,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef9502 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef9366 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_9 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -27,7 +27,7 @@ export default function XboxLinkEducation(onClose) {
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
-  const items = [React5(React4, { source: noop.useMemo(() => ({ uri: _modDef9502 }), []), style: tmp.image }), ,];
+  const items = [React5(React4, { source: noop.useMemo(() => ({ uri: _modDef9366 }), []), style: tmp.image }), ,];
   const obj6 = {
     variant: "heading-xl/bold",
     color: "mobile-text-heading-primary",

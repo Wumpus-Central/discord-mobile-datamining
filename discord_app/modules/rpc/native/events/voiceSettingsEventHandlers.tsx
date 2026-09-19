@@ -5,6 +5,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/native/events/voiceSettingsEventHandlers.tsx");
 
 export const voiceSettingsEventHandlers = VoiceSettingsEventsFactory(
-  fn(9806).getDeprecatedVoiceSettings,
-  fn(9806).getVoiceSettings,
+  fn(9584).getDeprecatedVoiceSettings,
+  fn(9584).getVoiceSettings,
 );

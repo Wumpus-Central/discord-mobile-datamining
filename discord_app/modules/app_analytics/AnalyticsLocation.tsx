@@ -171,7 +171,6 @@ export default {
   PRESENCE_ACTIVITY_TILE: "presence activity tile",
   ACTIVITY_UPSELL: "activity upsell",
   ACTIVITY_VOICE_CONTROLS_TOGGLE: "activity voice controls toggle",
-  RICH_PRESENCE_INVITE_COMPOSER_BANNER: "rich presence invite composer banner",
   INSTANT_INVITE_MODAL: "instant invite modal",
   IMAGE_CROPPING_MODAL: "image cropping modal",
   GIF_PICKER: "gif picker",

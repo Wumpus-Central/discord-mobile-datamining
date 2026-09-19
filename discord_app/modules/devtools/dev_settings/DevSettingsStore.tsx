@@ -37,6 +37,10 @@ const obj2 = {
     category: obj.OVERLAYS,
   },
   analytics_debugger: { label: "Enable analytics debugger view", category: obj.OVERLAYS },
+  navigation_tti_visualizer: {
+    label: "Show Navigation TTI included, excluded, and mixed regions with their measured times",
+    category: obj.OVERLAYS,
+  },
   idle_status_indicator: { label: "Enable idle status indicator", category: obj.OVERLAYS },
   highlight_mana_text: {
     label:

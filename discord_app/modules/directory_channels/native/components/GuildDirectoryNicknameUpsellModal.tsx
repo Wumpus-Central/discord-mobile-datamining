@@ -146,12 +146,12 @@ function GuildDirectoryNicknameUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(12893).GuildPrompts;
+const GuildPrompts = fn(12902).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
-  container: { flex: 1, flexGrow: 2, marginTop: fn(5852).NAV_BAR_HEIGHT },
+  container: { flex: 1, flexGrow: 2, marginTop: fn(5894).NAV_BAR_HEIGHT },
   guildIcon: { alignSelf: "center", marginTop: 16 },
   title: { marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center" },
@@ -161,7 +161,7 @@ let obj2 = {
   redesignGrowSpacing: null,
   redesignButtonContainer: null,
 };
-let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5852).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, flexGrow: 2, marginTop: fn(5894).NAV_BAR_HEIGHT };
 obj2.redesignTextInput = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.redesignGrowSpacing = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };

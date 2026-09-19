@@ -4,13 +4,13 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import MonitoringAgentDefault from "../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import useSortedSpamMessageRequestsDefault from "../../hooks/useSortedSpamMessageRequests.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const MessageRequestEmptyDefault = tmp2(17267);
+const MessageRequestEmptyDefault = tmp2(17344);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -203,7 +203,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -267,10 +267,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  dependencyMap = goToMessageRequestPreview(17266).useSpamMessageRequestCount();
+  dependencyMap = goToMessageRequestPreview(17343).useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj = goToMessageRequestPreview(17266);
-  const hasSingleMessageRequest = goToMessageRequestPreview(17264).useListHasSingleSpamMessageRequest();
+  let obj = goToMessageRequestPreview(17343);
+  const hasSingleMessageRequest = goToMessageRequestPreview(17341).useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
     const obj2 = { num_spam_message_requests };
@@ -329,5 +329,5 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     obj4.data = items;
     return closure_8(closure_6, obj4);
   }
-  let obj2 = goToMessageRequestPreview(17264);
+  let obj2 = goToMessageRequestPreview(17341);
 }

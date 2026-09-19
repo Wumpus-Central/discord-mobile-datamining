@@ -1,5 +1,5 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default {
   open(channel) {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(12544, dependencyMap.paths),
+      asyncRequireImpl(12553, dependencyMap.paths),
       { channel: channel.channel },
       GUILD_DIRECTORY_SEARCH_MODAL_KEY,
     );

@@ -1,5 +1,5 @@
 // discord_app/actions/native/BoostingActionCreators.tsx
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../ModalActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("actions/native/BoostingActionCreators
 
 export const openApplyBoostModal = function openApplyBoostModal(guildId) {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(5605, dependencyMap.paths),
+    asyncRequireImpl(5647, dependencyMap.paths),
     { guildId },
     PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY,
   );
@@ -16,7 +16,7 @@ export const openApplyBoostModal = function openApplyBoostModal(guildId) {
 export const openTransferModal = function openTransferModal(arg0) {
   ({ guildBoostSlots, guildId, intent, onResult } = arg0);
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(5605, dependencyMap.paths),
+    asyncRequireImpl(5647, dependencyMap.paths),
     { guildId, guildBoostSlots, intent, onResult },
     PREMIUM_GUILD_SUBSCRIBE_MODAL_KEY,
   );

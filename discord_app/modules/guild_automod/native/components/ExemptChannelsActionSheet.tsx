@@ -85,7 +85,7 @@ export default function ExemptChannelsActionSheet(guildId) {
   obj3.renderLabel = getChannelOptionName;
   obj3.renderIcon = callback;
   obj3.onSave = onSave;
-  return jsx(stateFromStores(17882), {
+  return jsx(stateFromStores(17962), {
     title: null,
     searchPlaceholder: null,
     listId: "automod-exempt-channels",

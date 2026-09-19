@@ -2,15 +2,15 @@
 import Storage3 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
 import FeedbackUtils from "../../feedback/FeedbackUtils.tsx";
 import VibegrationsChatStore from "../stores/VibegrationsChatStore.tsx";
 import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 
 require = fn;
-const turnSettled = fn(16850).turnSettled;
+const turnSettled = fn(13360).turnSettled;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11866);
+const Constants = fn(11875);
 ({
   FeedbackCategory: closure_7,
   FeedbackOptionVariant: closure_8,
@@ -65,27 +65,27 @@ export const vibegrationsFeedbackSection = function vibegrationsFeedbackSection(
     freeformConfig: null,
   };
   const intl = util.intl;
-  obj.problemsHeader = intl.string(_modDef3676.kLHFxL);
+  obj.problemsHeader = intl.string(_modDef3678.kLHFxL);
   const obj2 = { value: constants4.NOT_WHAT_I_WANTED, variant: constants2.UNSPECIFIED, label: null };
   const intl2 = util.intl;
-  obj2.label = intl2.string(_modDef3676.UJLIUY);
+  obj2.label = intl2.string(_modDef3678.UJLIUY);
   const items = [obj2, , ,];
   const obj3 = { value: constants4.TOO_SLOW, variant: constants2.UNSPECIFIED, label: null };
   const intl3 = util.intl;
-  obj3.label = intl3.string(_modDef3676.FVQz1w);
+  obj3.label = intl3.string(_modDef3678.FVQz1w);
   items[1] = obj3;
   const obj4 = { value: constants4.APP_DIDNT_WORK, variant: constants2.UNSPECIFIED, label: null };
   const intl4 = util.intl;
-  obj4.label = intl4.string(_modDef3676["4AdY23"]);
+  obj4.label = intl4.string(_modDef3678["4AdY23"]);
   items[2] = obj4;
   const obj5 = { value: constants4.DIDNT_KNOW_WHAT_TO_ASK_FOR, variant: constants2.UNSPECIFIED, label: null };
   const intl5 = util.intl;
-  obj5.label = intl5.string(_modDef3676["u/juX1"]);
+  obj5.label = intl5.string(_modDef3678["u/juX1"]);
   items[3] = obj5;
   obj.problemOptions = items;
   const obj6 = { value: constants4.FREEFORM, label: null };
   const intl6 = util.intl;
-  obj6.label = intl6.string(_modDef3676["8Ee6yW"]);
+  obj6.label = intl6.string(_modDef3678["8Ee6yW"]);
   obj.freeformConfig = obj6;
   return obj;
 };

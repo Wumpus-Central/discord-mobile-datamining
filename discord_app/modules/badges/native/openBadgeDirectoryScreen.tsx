@@ -1,5 +1,5 @@
 // discord_app/modules/badges/native/openBadgeDirectoryScreen.tsx
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -13,7 +13,7 @@ export const openBadgeDirectoryScreen = function openBadgeDirectoryScreen(arg0) 
     obj = {};
   }
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(11447, dependencyMap.paths),
+    asyncRequireImpl(11459, dependencyMap.paths),
     { targetUserId: obj.targetUserId },
     c3,
   );

@@ -124,14 +124,14 @@ const DebugLogCategory = fn(1074).DebugLogCategory;
 const jsx = fn(21).jsx;
 const module_560 = fn(560);
 let closure_7 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.aY1OH2);
   },
   parent: null,
-  IconComponent: fn(4676).CircleInformationIcon,
+  IconComponent: fn(4710).CircleInformationIcon,
   onPress: function handleUploadDebugLogSettingPress() {
     const self = this;
     const apply = closure_8.apply;

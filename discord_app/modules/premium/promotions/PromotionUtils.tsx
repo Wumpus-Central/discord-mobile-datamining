@@ -131,7 +131,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
 const PromotionFlags = fn(1374).PromotionFlags;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
-const ActivityPlatform = fn(1921).ActivityPlatform;
+const ActivityPlatform = fn(2004).ActivityPlatform;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");
 

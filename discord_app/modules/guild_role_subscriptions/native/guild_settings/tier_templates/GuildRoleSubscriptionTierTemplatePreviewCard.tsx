@@ -3,12 +3,12 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import useTypeConsolidationTextTransform from "../../../../design/useTypeConsolidationTextTransform.tsx";
-import _modDef7354 from "../../../../../../_runtime/metro/07354__.js";
+import _modDef7398 from "../../../../../../_runtime/metro/07398__.js";
 import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -91,7 +91,7 @@ function ViewEntireTemplateFooter() {
   obj2.children = items;
   const items1 = [closure_1_10(timestampProducer, obj2)];
   const obj5 = { children: null };
-  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7354, style: null };
+  const obj6 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7398, style: null };
   const obj7 = { transform: null };
   const items2 = [{ rotate: "180deg" }];
   obj7.transform = items2;
@@ -107,7 +107,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: {
     padding: 16,
@@ -236,7 +236,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     if (closure_7) {
       const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(18157, dependencyMap.paths),
+        asyncRequireImpl(18236, dependencyMap.paths),
         "TierTemplatePriceReselectionCard",
         obj2,
       );
@@ -258,7 +258,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   const obj7 = {
     style: tmp.contentContainer,
     onPress() {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18153, dependencyMap.paths), "TierTemplateCard", {
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18232, dependencyMap.paths), "TierTemplateCard", {
         template,
         guildId,
         handleSelectTemplateInPreview: callback1,

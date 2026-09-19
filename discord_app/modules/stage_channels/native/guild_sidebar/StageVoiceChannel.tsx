@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
+import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import useShowMemberVerificationGate from "../../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import StageMediaHooks from "../../StageMediaHooks.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
-import StageChannelModalActionCreators from "../../StageChannelModalActionCreators.tsx";
 import openChannelLongPressActionSheet from "../../../channel/native/openChannelLongPressActionSheet.tsx";
 import ChannelItemDefault from "../../../guild_sidebar/native/ChannelItem.tsx";
 import VoiceUsersDefault from "../../../guild_sidebar/native/VoiceUsers.tsx";
@@ -21,22 +21,22 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(4746).NO_VOICE_STATES;
+const NO_VOICE_STATES = fn(4780).NO_VOICE_STATES;
 const Constants = fn(1074);
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   voiceStates: { marginLeft: 36, marginBottom: 8 },
   container: {
-    marginVertical: fn(10361).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_16 = createStyles.createStyles(obj);
 let obj3 = {
-  marginVertical: fn(10361).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -79,9 +79,9 @@ export default noop.memo((channel) => {
     arr3 = NO_VOICE_STATES;
   }
   let obj = channel(504);
-  const stageParticipantsCount = channel(5601).useStageParticipantsCount(
+  const stageParticipantsCount = channel(5643).useStageParticipantsCount(
     channel.id,
-    tmp2(5595).StageChannelParticipantNamedIndex.AUDIENCE,
+    tmp2(5637).StageChannelParticipantNamedIndex.AUDIENCE,
   );
   const sum = stageParticipantsCount + arr3.length;
   const items2 = [channel];
@@ -95,18 +95,18 @@ export default noop.memo((channel) => {
       obj = useShowMemberVerificationGate;
     }
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
-    StageChannelModalActionCreators.connectAndOpen(channel);
+    PrivateChannelCallUtils.openGuildVoiceModal(channel, "Channel List");
   }, items2);
   const callback1 = noop.useCallback(() => {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
-  const tmp2Result = channel(5601);
-  const isConnectedToVoiceChannel = channel(9709).useIsConnectedToVoiceChannel(channel);
+  const tmp2Result = channel(5643);
+  const isConnectedToVoiceChannel = channel(9643).useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;
   }
-  const tmp2Result2 = channel(9709);
+  const tmp2Result2 = channel(9643);
   const intl = tmp2(1115).intl;
   const tmp5Result = ChannelItemDefault;
   if (null != channel.userLimit) {
@@ -123,7 +123,7 @@ export default noop.memo((channel) => {
       accessibilityHint: null,
     };
     const intl3 = tmp2(1115).intl;
-    obj4.accessibilityHint = intl3.string(tmp2(1115).t["9C444m"]);
+    obj4.accessibilityHint = intl3.string(tmp2(1115).t.g6pBAk);
     const merged = Object.assign(obj4);
     obj3.onPress = callback;
     obj3.onLongPress = callback1;

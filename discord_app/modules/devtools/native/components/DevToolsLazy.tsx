@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/native/components/DevToolsLazy.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import DeveloperExperimentStore from "../../../../stores/DeveloperExperimentStore.tsx";
 import DevToolsSettingsStore from "../../DevToolsSettingsStore.tsx";
@@ -11,11 +11,11 @@ const jsx = fn(21).jsx;
 let items = [
   {
     input: "o",
-    modifierFlags: fn(5140).KeyModifierFlags.keyModifierControl,
+    modifierFlags: fn(5182).KeyModifierFlags.keyModifierControl,
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      asyncRequireImpl(14798, dependencyMap.paths).then((navigateToDevTools) => {
+      asyncRequireImpl(14852, dependencyMap.paths).then((navigateToDevTools) => {
         navigateToDevTools.navigateToDevTools();
       });
       return true;
@@ -44,10 +44,10 @@ export default function DevToolsLazy() {
     obj = PlatformUtils;
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(5140).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(5182).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(16174).default, {});
+      return jsx(tmp(16250).default, {});
     }
   }
   return null;

@@ -68,7 +68,7 @@ function useChangelog(changelogId, stateFromStores) {
   }
   return obj4;
 }
-const ChangelogLoadState = fn(2011).ChangelogLoadState;
+const ChangelogLoadState = fn(2094).ChangelogLoadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/useCurrentChangelog.tsx");
 

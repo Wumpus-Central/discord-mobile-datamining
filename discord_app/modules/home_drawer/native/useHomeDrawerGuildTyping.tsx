@@ -20,8 +20,8 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-const isThread = fn(1962).isThread;
-let obj = { typingChannelId: "Array", typingChannelName: "isArray", typingUserIds: [] };
+const isThread = fn(2045).isThread;
+let obj = { typingChannelId: "Array", typingChannelName: "accessible", typingUserIds: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 

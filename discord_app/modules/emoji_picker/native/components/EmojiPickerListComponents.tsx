@@ -3,17 +3,17 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef8386 from "../../../../../_runtime/metro/08386__.js";
+import _modDef8424 from "../../../../../_runtime/metro/08424__.js";
 import PremiumUpsellGradientBackground from "../../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(10531);
+const EmojiPickerListConstants = fn(10547);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   section: {
     justifyContent: "center",
@@ -57,7 +57,7 @@ const obj4 = {
 const memoResult = noop.memo(() => {
   const tmp = closure_6();
   const obj = { style: tmp.nsfwContainer, children: null };
-  const items = [React4(native.Icon, { source: _modDef8386, size: native.Icon.Sizes.SMALL })];
+  const items = [React4(native.Icon, { source: _modDef8424, size: native.Icon.Sizes.SMALL })];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.SLzV5z);

@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1885 from "../../../../_runtime/metro/01885__.js";
+import _modDef1968 from "../../../../_runtime/metro/01968__.js";
 import Server from "../../../flow/Server.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const AppLauncherNativeConstants = fn(1483);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const BuiltInSectionId = fn(5168).BuiltInSectionId;
+const BuiltInSectionId = fn(5210).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
@@ -248,7 +248,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1885;
+    let applicationIconSource = _modDef1968;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {

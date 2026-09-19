@@ -115,9 +115,12 @@ export const isVibegrationsGuildEligible = function isVibegrationsGuildEligible(
   }
   return result;
 };
-export const eligibleVibegrationsGuilds = function eligibleVibegrationsGuilds(arr, arg1) {
-  closure_0 = arg1;
-  const found = arr.filter((guildId) => {
+export const eligibleVibegrationsGuilds = function eligibleVibegrationsGuilds(
+  guildsArray,
+  useIsOwnedVibegrationsApplication,
+) {
+  closure_0 = useIsOwnedVibegrationsApplication;
+  const found = guildsArray.filter((guildId) => {
     let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location: _location });
     if (result) {
       const features = guildId.features;
@@ -137,14 +140,16 @@ export const eligibleVibegrationsGuilds = function eligibleVibegrationsGuilds(ar
     return num;
   });
 };
-export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsWorkspaceGuildId(location) {
+export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsWorkspaceGuildId(
+  VibegrationsCustomWidgetSheet,
+) {
   const guildId = SelectedGuildStore.getGuildId();
   let guild = null;
   if (null != guildId) {
     guild = GuildStore.getGuild(guildId);
   }
   if (null != guild) {
-    const obj2 = { guildId: guild.id, location };
+    const obj2 = { guildId: guild.id, location: VibegrationsCustomWidgetSheet };
     let result = require("VibegrationsGuildExperiment").isVibegrationsGuildEnabled(obj2);
     if (result) {
       let features = guild.features;
@@ -156,7 +161,7 @@ export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsW
     return id;
   }
   const guildsArray = GuildStore.getGuildsArray();
-  _require = location;
+  _require = VibegrationsCustomWidgetSheet;
   const found = guildsArray.filter((guildId) => {
     let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location: _location });
     if (result) {

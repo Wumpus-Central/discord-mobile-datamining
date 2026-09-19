@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: {
     borderTopWidth: 1,

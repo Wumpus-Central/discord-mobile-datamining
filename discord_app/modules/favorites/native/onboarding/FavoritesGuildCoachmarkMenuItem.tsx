@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3322 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3324 from "../../intl/FavoritesGuild.messages.js";
 import LayerScope from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import FavoriteStore from "../../FavoriteStore.tsx";
@@ -39,11 +39,11 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       description: null,
       onDismiss: null,
       renderImgComponent: "r",
-      buttonLabel: "M7 14v1h2v-1H7ZM7 12H6v1h1v-1ZM6 11H5v1h1v-1Z",
+      buttonLabel: "M13 6V4h-1V1h-1v1h-1v1H9v1H8v1H3v1H2v2H1v4h1v1h1v1h1v1h8v-1h1v-1h1V6h-1Z",
       onButtonPress: null,
     };
     const intl = util.intl;
-    const tmp4 = _modDef3322;
+    const tmp4 = _modDef3324;
     if (stateFromStores) {
       let TWuDTt = tmp4.TWuDTt;
       let tmp6 = importDefault;
@@ -53,10 +53,10 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
     }
     obj.title = intl.string(TWuDTt);
     const intl2 = util.intl;
-    obj.description = intl2.string(tmp6(3322).Ztl9ht);
+    obj.description = intl2.string(tmp6(3324).Ztl9ht);
     obj.onDismiss = onDismiss;
     const intl3 = util.intl;
-    obj.buttonLabel = intl3.string(tmp6(3322)["+h9aza"]);
+    obj.buttonLabel = intl3.string(tmp6(3324)["+h9aza"]);
     obj.onButtonPress = callback1;
     return obj;
   }, items3);
@@ -64,7 +64,7 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   const coachmark = stateFromStores(markPopoverAsDismissed[10]).useCoachmark(targetRef, memo);
   return null;
 }
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [, ,];
 ({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = fn(1074).ChannelTypes);

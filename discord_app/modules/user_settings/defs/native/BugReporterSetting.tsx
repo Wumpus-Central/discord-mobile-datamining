@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import BugReporterExperimentDefault from "../../../bug_reporter/BugReporterExperiment.tsx";
 import BugReportStore from "../../../bug_reporter/BugReportStore.tsx";
@@ -9,18 +9,18 @@ require = fn;
 function useBugReporterExperimentSettingPredicate() {
   return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(15970).BugIcon,
+  IconComponent: fn(16046).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10425, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10441, dependencyMap.paths));
     }
   },
   withArrow: true,

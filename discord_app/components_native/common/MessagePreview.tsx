@@ -34,7 +34,7 @@ export default function MessagePreview(channelId) {
     },
     [],
   );
-  return jsx(onBeforeJumpToMessage(13498).ChatPreview, {
+  return jsx(onBeforeJumpToMessage(13554).ChatPreview, {
     channelId: channelId.channelId,
     messages: stateFromStoresObject.messages,
     jumpToChatProps: memo,

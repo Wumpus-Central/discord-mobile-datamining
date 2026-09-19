@@ -74,9 +74,9 @@ export const acquireVibegrationsControlLease = function acquireVibegrationsContr
   return release;
 };
 export const CONTROL_OPERATION_IDLE_MS = 20000;
-export const beginVibegrationsControlOperation = function beginVibegrationsControlOperation(projectId) {
-  closure_0 = projectId;
-  value = map1.get(projectId);
+export const beginVibegrationsControlOperation = function beginVibegrationsControlOperation(TableRowGroup) {
+  closure_0 = TableRowGroup;
+  value = map1.get(TableRowGroup);
   const timerId = setTimeout(() => {
     value = map1.get(closure_0);
     if (null != value) {
@@ -89,11 +89,11 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
   if (null != value) {
     let _clearTimeout = clearTimeout;
     clearTimeout(value.timer);
-    closure_130_0 = projectId;
+    closure_130_0 = TableRowGroup;
     closure_130_1 = undefined;
     closure_130_2 = undefined;
     closure_130_3 = undefined;
-    let value3 = map.get(projectId);
+    let value3 = map.get(TableRowGroup);
     if (value3 == null) {
       const obj2 = { holders: 0, timers: null };
       const _Set2 = Set;
@@ -119,7 +119,7 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
         }
       }
     };
-    const result = map.set(projectId, value3);
+    const result = map.set(TableRowGroup, value3);
     closure_130_2 = false;
     const _setTimeout2 = setTimeout;
     const timerId1 = setTimeout(() => {
@@ -144,13 +144,13 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
     emit();
     value.release();
     const obj3 = { release: release2, timer: timerId };
-    const result1 = map1.set(projectId, obj3);
+    const result1 = map1.set(TableRowGroup, obj3);
   } else {
-    closure_129_0 = projectId;
+    closure_129_0 = TableRowGroup;
     closure_129_1 = undefined;
     closure_129_2 = undefined;
     closure_129_3 = undefined;
-    let value4 = map.get(projectId);
+    let value4 = map.get(TableRowGroup);
     if (value4 == null) {
       const obj4 = { holders: 0, timers: null };
       const _Set = Set;
@@ -177,7 +177,7 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
         }
       }
     }
-    const result2 = map.set(projectId, value4);
+    const result2 = map.set(TableRowGroup, value4);
     closure_129_2 = false;
     const _setTimeout = setTimeout;
     const timerId2 = setTimeout(() => {
@@ -202,13 +202,13 @@ export const beginVibegrationsControlOperation = function beginVibegrationsContr
     emit();
     obj6.release = release;
     obj6.timer = timerId;
-    const result3 = map1.set(projectId, obj6);
+    const result3 = map1.set(TableRowGroup, obj6);
   }
 };
-export const endVibegrationsControlOperation = function endVibegrationsControlOperation(projectId) {
-  value = map1.get(projectId);
+export const endVibegrationsControlOperation = function endVibegrationsControlOperation(openResult) {
+  value = map1.get(openResult);
   if (null != value) {
-    map1.delete(projectId);
+    map1.delete(openResult);
     const _clearTimeout = clearTimeout;
     clearTimeout(value.timer);
     value.release();
@@ -234,8 +234,8 @@ export const releaseVibegrationsControlLeases = function releaseVibegrationsCont
     emit();
   }
 };
-export const isVibegrationsControlActive = function isVibegrationsControlActive(arg0) {
-  value = map.get(arg0);
+export const isVibegrationsControlActive = function isVibegrationsControlActive(openResult) {
+  value = map.get(openResult);
   let num;
   if (value != null) {
     num = value.holders;

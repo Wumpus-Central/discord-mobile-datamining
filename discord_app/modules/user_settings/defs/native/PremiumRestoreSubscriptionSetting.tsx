@@ -8,14 +8,14 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(8900).NitroWheelIcon,
+  IconComponent: fn(8939).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then(
@@ -55,6 +55,7 @@ const pressable = SettingBuilders.createPressable({
           };
         });
       },
+      isDismissable: false,
     });
   },
   withArrow: true,

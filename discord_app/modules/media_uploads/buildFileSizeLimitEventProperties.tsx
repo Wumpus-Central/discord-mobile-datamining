@@ -14,7 +14,6 @@ export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEven
     postCompressionAggregateSize,
     attachmentMimeTypes,
     errorType,
-    kestrelVariant,
   } = arg0);
   if (undefined !== channelId) {
     const obj2 = { channel_id: channelId };
@@ -39,6 +38,5 @@ export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEven
   obj3.post_compression_aggregate_file_size = postCompressionAggregateSize;
   obj3.attachment_mimetypes = attachmentMimeTypes;
   obj3.error_type = errorType;
-  obj3.kestrel_variant = kestrelVariant;
   return obj3;
 };

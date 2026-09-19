@@ -21,7 +21,7 @@ function ConfirmActivityGateContent(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = {
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertBodyText: {
@@ -48,6 +48,7 @@ export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(
     onConfirm: null,
     onCancel: null,
     confirmColor: null,
+    isDismissable: false,
   };
   const intl2 = util.intl;
   obj3.title = intl2.string(util.t.SSDPOF);

@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/FamilyCenterDataConfirmation.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2480 from "../FamilyCenter.messages.js";
+import _modDef2482 from "../FamilyCenter.messages.js";
 import UserPlusIcon from "../../../design/components/Icon/native/redesign/generated/UserPlusIcon.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -56,146 +56,146 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterDataConfirmation() {
   const intl = util.intl;
   const intl2 = util.intl;
-  const stringResult = intl.string(_modDef2480.CI1Env);
+  const stringResult = intl.string(_modDef2482.CI1Env);
   const intl3 = util.intl;
-  const stringResult1 = intl2.string(_modDef2480["ksze+o"]);
-  const stringResult2 = intl3.string(_modDef2480["n73g+V"]);
+  const stringResult1 = intl2.string(_modDef2482["ksze+o"]);
+  const stringResult2 = intl3.string(_modDef2482["n73g+V"]);
   const intl4 = util.intl;
   const obj = useAgeSpecificText;
   const intl5 = util.intl;
-  const ageSpecificText = obj.useAgeSpecificText(intl4.string(_modDef2480["5x3taM"]), intl5.string(_modDef2480.WZwGFX));
-  const stringResult3 = intl4.string(_modDef2480["5x3taM"]);
+  const ageSpecificText = obj.useAgeSpecificText(intl4.string(_modDef2482["5x3taM"]), intl5.string(_modDef2482.WZwGFX));
+  const stringResult3 = intl4.string(_modDef2482["5x3taM"]);
   const intl6 = util.intl;
   const obj2 = useAgeSpecificText;
   const intl7 = util.intl;
-  const ageSpecificText1 = obj2.useAgeSpecificText(intl6.string(_modDef2480.FcKkcr), intl7.string(_modDef2480.PQtDFk));
-  const stringResult4 = intl6.string(_modDef2480.FcKkcr);
+  const ageSpecificText1 = obj2.useAgeSpecificText(intl6.string(_modDef2482.FcKkcr), intl7.string(_modDef2482.PQtDFk));
+  const stringResult4 = intl6.string(_modDef2482.FcKkcr);
   const intl8 = util.intl;
   const obj3 = useAgeSpecificText;
   const intl9 = util.intl;
   const ageSpecificText2 = obj3.useAgeSpecificText(
-    intl8.string(_modDef2480["dES/2r"]),
-    intl9.string(_modDef2480.ep6mdN),
+    intl8.string(_modDef2482["dES/2r"]),
+    intl9.string(_modDef2482.ep6mdN),
   );
-  const stringResult5 = intl8.string(_modDef2480["dES/2r"]);
+  const stringResult5 = intl8.string(_modDef2482["dES/2r"]);
   const intl10 = util.intl;
   const obj4 = useAgeSpecificText;
   const intl11 = util.intl;
   const ageSpecificText3 = obj4.useAgeSpecificText(
-    intl10.string(_modDef2480.GWPcQg),
-    intl11.string(_modDef2480.yFnKIg),
+    intl10.string(_modDef2482.GWPcQg),
+    intl11.string(_modDef2482.yFnKIg),
   );
-  const stringResult6 = intl10.string(_modDef2480.GWPcQg);
+  const stringResult6 = intl10.string(_modDef2482.GWPcQg);
   const intl12 = util.intl;
   const obj5 = useAgeSpecificText;
   const intl13 = util.intl;
   const ageSpecificText4 = obj5.useAgeSpecificText(
-    intl12.string(_modDef2480["30+sih"]),
-    intl13.string(_modDef2480["0cuLn1"]),
+    intl12.string(_modDef2482["30+sih"]),
+    intl13.string(_modDef2482["0cuLn1"]),
   );
-  const stringResult7 = intl12.string(_modDef2480["30+sih"]);
+  const stringResult7 = intl12.string(_modDef2482["30+sih"]);
   const intl14 = util.intl;
   const obj6 = useAgeSpecificText;
   const intl15 = util.intl;
   const ageSpecificText5 = obj6.useAgeSpecificText(
-    intl14.string(_modDef2480.tHTyRh),
-    intl15.string(_modDef2480.TeNlMb),
+    intl14.string(_modDef2482.tHTyRh),
+    intl15.string(_modDef2482.TeNlMb),
   );
-  const stringResult8 = intl14.string(_modDef2480.tHTyRh);
+  const stringResult8 = intl14.string(_modDef2482.tHTyRh);
   const intl16 = util.intl;
   const obj7 = useAgeSpecificText;
   const intl17 = util.intl;
   const ageSpecificText6 = obj7.useAgeSpecificText(
-    intl16.string(_modDef2480.PfveQ6),
-    intl17.string(_modDef2480["f7ofm/"]),
+    intl16.string(_modDef2482.PfveQ6),
+    intl17.string(_modDef2482["f7ofm/"]),
   );
-  const stringResult9 = intl16.string(_modDef2480.PfveQ6);
+  const stringResult9 = intl16.string(_modDef2482.PfveQ6);
   const intl18 = util.intl;
   const obj8 = useAgeSpecificText;
   const intl19 = util.intl;
   const ageSpecificText7 = obj8.useAgeSpecificText(
-    intl18.string(_modDef2480.MKeCj3),
-    intl19.string(_modDef2480.HdcGGl),
+    intl18.string(_modDef2482.MKeCj3),
+    intl19.string(_modDef2482.HdcGGl),
   );
-  const stringResult10 = intl18.string(_modDef2480.MKeCj3);
+  const stringResult10 = intl18.string(_modDef2482.MKeCj3);
   const intl20 = util.intl;
   const obj9 = useAgeSpecificText;
   const intl21 = util.intl;
   const ageSpecificText8 = obj9.useAgeSpecificText(
-    intl20.string(_modDef2480.wZejZr),
-    intl21.string(_modDef2480.tdgcf1),
+    intl20.string(_modDef2482.wZejZr),
+    intl21.string(_modDef2482.tdgcf1),
   );
-  const stringResult11 = intl20.string(_modDef2480.wZejZr);
+  const stringResult11 = intl20.string(_modDef2482.wZejZr);
   const intl22 = util.intl;
   const obj10 = useAgeSpecificText;
   const intl23 = util.intl;
   const ageSpecificText9 = obj10.useAgeSpecificText(
-    intl22.string(_modDef2480.ASf7XN),
-    intl23.string(_modDef2480["82y87X"]),
+    intl22.string(_modDef2482.ASf7XN),
+    intl23.string(_modDef2482["82y87X"]),
   );
-  const stringResult12 = intl22.string(_modDef2480.ASf7XN);
+  const stringResult12 = intl22.string(_modDef2482.ASf7XN);
   const intl24 = util.intl;
   const obj11 = useAgeSpecificText;
   const intl25 = util.intl;
   const obj12 = { header: null, description: null, IconComponent: null };
   const ageSpecificText10 = obj11.useAgeSpecificText(
-    intl24.string(_modDef2480["0QDVFN"]),
-    intl25.string(_modDef2480["1xBHHV"]),
+    intl24.string(_modDef2482["0QDVFN"]),
+    intl25.string(_modDef2482["1xBHHV"]),
   );
   const intl26 = util.intl;
-  obj12.header = intl26.string(_modDef2480["/zMYZX"]);
+  obj12.header = intl26.string(_modDef2482["/zMYZX"]);
   obj12.description = ageSpecificText;
   obj12.IconComponent = UserPlusIcon.UserPlusIcon;
   const items = [obj12, , , , , ,];
   const obj13 = { header: null, description: null, IconComponent: null };
   const intl27 = util.intl;
-  obj13.header = intl27.string(_modDef2480["44NEx6"]);
+  obj13.header = intl27.string(_modDef2482["44NEx6"]);
   obj13.description = ageSpecificText1;
   obj13.IconComponent = ServerIcon.ServerIcon;
   items[1] = obj13;
   const obj14 = { header: null, description: null, IconComponent: null };
   const intl28 = util.intl;
-  obj14.header = intl28.string(_modDef2480["Z3G+8h"]);
+  obj14.header = intl28.string(_modDef2482["Z3G+8h"]);
   const intl29 = util.intl;
-  obj14.description = intl29.string(_modDef2480.KBgArX);
+  obj14.description = intl29.string(_modDef2482.KBgArX);
   obj14.IconComponent = ForumIcon.ForumIcon;
   items[2] = obj14;
   const obj15 = { header: null, description: null, IconComponent: null };
   const intl30 = util.intl;
-  obj15.header = intl30.string(_modDef2480.GNs2ZH);
+  obj15.header = intl30.string(_modDef2482.GNs2ZH);
   const intl31 = util.intl;
-  obj15.description = intl31.string(_modDef2480.Ief2xc);
+  obj15.description = intl31.string(_modDef2482.Ief2xc);
   obj15.IconComponent = PhoneIcon.PhoneIcon;
   items[3] = obj15;
   const obj16 = { header: null, description: null, IconComponent: null };
   const intl32 = util.intl;
-  obj16.header = intl32.string(_modDef2480.PjM3r5);
+  obj16.header = intl32.string(_modDef2482.PjM3r5);
   obj16.description = ageSpecificText2;
   obj16.IconComponent = CreditCardIcon.CreditCardIcon;
   items[4] = obj16;
   const obj17 = { header: null, description: null, IconComponent: null };
   const intl33 = util.intl;
-  obj17.header = intl33.string(_modDef2480.Fv3n8L);
+  obj17.header = intl33.string(_modDef2482.Fv3n8L);
   obj17.description = ageSpecificText3;
   obj17.IconComponent = GiftIcon.GiftIcon;
   items[5] = obj17;
-  const stringResult13 = intl24.string(_modDef2480["0QDVFN"]);
+  const stringResult13 = intl24.string(_modDef2482["0QDVFN"]);
   items[6] = { header: ageSpecificText4, description: ageSpecificText5, IconComponent: FlagIcon.FlagIcon };
   const obj19 = { header: null, description: null, IconComponent: null };
   const intl34 = util.intl;
-  obj19.header = intl34.string(_modDef2480.kyT6pZ);
+  obj19.header = intl34.string(_modDef2482.kyT6pZ);
   obj19.description = ageSpecificText6;
   obj19.IconComponent = ClockIcon.ClockIcon;
   const items1 = [obj19, ,];
   const obj20 = { header: null, description: null, IconComponent: null };
   const intl35 = util.intl;
-  obj20.header = intl35.string(_modDef2480["52ld7c"]);
+  obj20.header = intl35.string(_modDef2482["52ld7c"]);
   obj20.description = ageSpecificText7;
   obj20.IconComponent = PiggyBankIcon.PiggyBankIcon;
   items1[1] = obj20;
   const obj21 = { header: null, description: null, IconComponent: null };
   const intl36 = util.intl;
-  obj21.header = intl36.string(_modDef2480.UCuHM8);
+  obj21.header = intl36.string(_modDef2482.UCuHM8);
   obj21.description = ageSpecificText8;
   obj21.IconComponent = SettingsIcon.SettingsIcon;
   items1[2] = obj21;

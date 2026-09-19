@@ -1,6 +1,7 @@
 // discord_app/lib/uploader/UploadTargets.tsx
 import UploadUtils from "../../utils/UploadUtils.tsx";
 import FileUtilsAll from "../../utils/FileUtils.tsx";
+import UploadLimits from "../../modules/media_uploads/UploadLimits.tsx";
 import GuildProductAttachmentUploadTargetDefault from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
 import ICYMIAttachmentUploadTargetDefault from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -18,11 +19,12 @@ prototype["getDeleteUploadURL"] = function getDeleteUploadURL(arg0) {
 };
 prototype["getMaxFileSize"] = function getMaxFileSize(arg0) {
   const basicChannel = ChannelStore.getBasicChannel(arg0);
+  const obj = UploadLimits;
   let guild_id;
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  return FileUtilsAll.maxFileSize(guild_id);
+  return obj.getEffectiveUploadLimit(FileUtilsAll.maxFileSize(guild_id));
 };
 prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return timestampProducer;

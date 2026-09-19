@@ -38,6 +38,12 @@ const obj = {
     },
     neverLoadBeforeConnectionOpen: true,
   },
+  AutomodRemovedContentManager: {
+    actions: ["AUTO_MODERATION_CONTENT_DELETED"],
+    inlineRequire() {
+      return require("AutomodRemovedContentManager").default;
+    },
+  },
   AppStoreOverlayTelemetryManager: {
     actions: ["APP_STATE_UPDATE"],
     inlineRequire() {

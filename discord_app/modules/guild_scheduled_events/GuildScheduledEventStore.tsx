@@ -173,7 +173,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-const GuildScheduledEventsConstants = fn(1964);
+const GuildScheduledEventsConstants = fn(2047);
 ({
   GuildScheduledEventStatus: closure_4,
   GuildScheduledEventStatusDone: hasOwnProperty,
@@ -202,7 +202,7 @@ const StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   },
 };
-const secondaryIndexMap = new fn(4357).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(4391).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   const items = [guild_id];
   if (null != entity_id) {

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef10640 from "../../../../../_runtime/metro/10640__.js";
+import _modDef10656 from "../../../../../_runtime/metro/10656__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -33,7 +33,7 @@ function VideoUploadQualityNitroUpsell() {
     const obj6 = { style: tmp3.cardContent, children: null };
     const obj7 = {
       style: tmp3.cardIcon,
-      source: _modDef10640,
+      source: _modDef10656,
       size: tmp(1177).Icon.Sizes.SMALL,
       color: nativeDefault.unsafe_rawColors.PRIMARY_400,
     };
@@ -47,21 +47,21 @@ function VideoUploadQualityNitroUpsell() {
       },
     };
     obj8.children = intl2.format(tmp(1115).t.uW1zul, obj9);
-    items2[1] = closure_9(tmp(4718).Text, obj8);
+    items2[1] = closure_9(tmp(4752).Text, obj8);
     obj6.children = items2;
     obj5.children = closure_10(View, obj6);
-    obj4.children = closure_9(tmp(5777).Card, obj5);
+    obj4.children = closure_9(tmp(5819).Card, obj5);
     tmp7Result = closure_9(View, obj4);
   }
   children[1] = tmp7Result;
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(8194).MobileUserSettings;
+const MobileUserSettings = fn(8232).MobileUserSettings;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   card: {
     marginTop: 8,

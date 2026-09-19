@@ -25,12 +25,12 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      const tmpResult = tmp(9910);
+      const tmpResult = tmp(9752);
       let _Date = Date;
-      let rRule = tmp(9910).getRRule(byWeekday);
+      let rRule = tmp(9752).getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);
       const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-      const tmpResult2 = tmp(9910);
+      const tmpResult2 = tmp(9752);
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     recurrenceStartTimes = tmp14[0];

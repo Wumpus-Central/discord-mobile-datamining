@@ -55,9 +55,9 @@ function loadThread(channelId) {
       } else {
         const _location = location;
         let obj2 = { path: null, exact: true };
-        const RouteParam = tmp13(4561).RouteParam;
-        const tmp13Result = tmp13(4548);
-        const RouteParam2 = tmp13(4561).RouteParam;
+        const RouteParam = tmp13(4595).RouteParam;
+        const tmp13Result = tmp13(4582);
+        const RouteParam2 = tmp13(4595).RouteParam;
         obj2.path = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj2);
         const HTTP = tmp13(1271).HTTP;
@@ -105,11 +105,11 @@ function loadThread(channelId) {
     }
   }
 }
-const ChannelRecord = fn(1962);
+const ChannelRecord = fn(2045);
 ({ createChannelRecordFromServer: closure_4, THREAD_CHANNEL_TYPES: hasOwnProperty } = ChannelRecord);
 const Constants = fn(1074);
 ({ Endpoints: closure_8, Routes: closure_9 } = Constants);
-const isStaticChannelRoute = fn(1965).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2048).isStaticChannelRoute;
 const dependencyMap = {};
 let c12 = false;
 const size = fn(2);
@@ -133,7 +133,7 @@ export default {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
-        if (nextResult !== items1(7417).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(7461).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (!isStaticChannelRoute(tmp9)) {
             if (null == ChannelStore.getChannel(tmp9)) {
               let tmp18 = dependencyMap[tmp9];

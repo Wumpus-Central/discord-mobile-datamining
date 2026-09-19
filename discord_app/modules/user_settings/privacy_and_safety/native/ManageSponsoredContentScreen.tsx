@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(1936).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(2019).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
@@ -32,7 +32,7 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7396).TableSwitchRow, obj);
+  return closure_5(adTopic(7440).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -42,7 +42,7 @@ let obj = {};
 obj[fn(1186).AdTopic.REAL_MONEY_GAMING] = _modDef2154.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj3 = {
   content: {
     paddingHorizontal: nativeDefault.space.PX_16,

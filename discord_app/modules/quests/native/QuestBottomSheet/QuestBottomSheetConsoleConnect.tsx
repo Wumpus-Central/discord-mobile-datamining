@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetConsoleConnect.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
@@ -86,7 +86,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -104,19 +104,19 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15326, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15381, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(11729).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(11729);
-  closure_4 = quest(12016).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(12016);
-  const impressionId = quest(11732).useQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(11736).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(11736);
+  closure_4 = quest(12025).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(12025);
+  const impressionId = quest(11739).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj3 = quest(11732);
+  let obj3 = quest(11739);
   return openQuestBottomSheet(NonInlineConsoleConnection, {
     consoles: xboxAndPlaystationAccounts.useMemo(
       () =>

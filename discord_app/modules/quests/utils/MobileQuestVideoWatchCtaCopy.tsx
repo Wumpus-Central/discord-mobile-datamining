@@ -5,8 +5,8 @@ import QuestTaskUtils from "QuestTaskUtils.tsx";
 import VQRemainingTimeTruncationExperimentDefault from "../experiments/VQRemainingTimeTruncationExperiment.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
-  const time = QuestTaskUtils.getRemainingTaskTime(questTaskDetails);
+function formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress, truncate) {
+  const time = QuestTaskUtils.getRemainingTaskTime(watchVideoTaskDetailsFromProgress);
   let num = 60;
   truncate = 60 * time.minutes + time.seconds;
   let truncate1;
@@ -36,18 +36,33 @@ const result = size.fileFinishedImporting("modules/quests/utils/MobileQuestVideo
 
 export { formatWatchRemainingDurationShort };
 export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(questTaskDetails) {
+  VQRemainingTimeTruncationExperimentDefault;
   if (questTaskDetails.percentComplete > 0) {
-    const intl = util.intl;
-    const obj = { durationShort: formatWatchRemainingDurationShort(questTaskDetails) };
-    return intl.formatToPlainString(util.t["pF/deA"], obj);
-  } else {
-    const obj3 = { location: QuestsExperimentLocations.QUESTS_CARD };
     const intl2 = util.intl;
-    const obj4 = { durationShort: null };
-    const obj5 = { truncate: VQRemainingTimeTruncationExperimentDefault.getConfig(obj3).truncateMoreThanSeconds };
-    obj4.durationShort = formatWatchRemainingDurationShort(questTaskDetails, obj5);
-    return intl2.formatToPlainString(util.t.CHrvqg, obj4);
+    const obj2 = { durationShort: formatWatchRemainingDurationShort(questTaskDetails) };
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t["pF/deA"], obj2);
+  } else {
+    const intl = util.intl;
+    const obj = { durationShort: null };
+    const obj3 = { truncate: tmp3 };
+    obj.durationShort = formatWatchRemainingDurationShort(questTaskDetails, obj3);
+    formatToPlainStringResult = intl.formatToPlainString(util.t.CHrvqg, obj);
   }
+  return formatToPlainStringResult;
+};
+export const getBountyWatchCtaText = function getBountyWatchCtaText(watchVideoTaskDetailsFromProgress) {
+  if (watchVideoTaskDetailsFromProgress.percentComplete > 0) {
+    const intl2 = util.intl;
+    const obj2 = { durationShort: formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress) };
+    let formatToPlainStringResult = intl2.formatToPlainString(util.t["pF/deA"], obj2);
+  } else {
+    const intl = util.intl;
+    const obj = { durationShort: null };
+    const obj3 = { truncate: null };
+    obj.durationShort = formatWatchRemainingDurationShort(watchVideoTaskDetailsFromProgress, obj3);
+    formatToPlainStringResult = intl.formatToPlainString(util.t.CHrvqg, obj);
+  }
+  return formatToPlainStringResult;
 };
 export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWatchCtaAccessibilityLabel(
   questTaskDetails,

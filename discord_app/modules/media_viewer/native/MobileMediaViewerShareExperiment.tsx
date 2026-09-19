@@ -20,3 +20,8 @@ export const getMobileMediaViewerShareExperimentEnabled = function getMobileMedi
 ) {
   return apexExperiment.getConfig({ location: shareMediaSource }).enabled;
 };
+export const useMobileMediaViewerShareExperimentEnabled = function useMobileMediaViewerShareExperimentEnabled(
+  mediaViewerCopyLink,
+) {
+  return apexExperiment.useConfig({ location: mediaViewerCopyLink }).enabled;
+};

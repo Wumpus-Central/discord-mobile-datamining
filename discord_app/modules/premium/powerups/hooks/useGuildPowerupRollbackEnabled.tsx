@@ -1,27 +1,32 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import FileUpload250MbPowerupExperiment from "../experiments/FileUpload250MbPowerupExperiment.tsx";
+import ServerThemeExperiment from "../experiments/ServerThemeExperiment.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackEnabled.tsx");
 
-export default function useGuildPowerupRollbackEnabled(guildId, skuId, location) {
-  const fileUpload250MbPowerupRollbackEnabled =
-    FileUpload250MbPowerupExperiment.useFileUpload250MbPowerupRollbackEnabled(guildId, location);
-  return skuId.skuId === Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID && fileUpload250MbPowerupRollbackEnabled;
+export default function useGuildPowerupRollbackEnabled(guildId, skuId, useGuildPowerupNewPerkMarketingVersion) {
+  const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(
+    guildId,
+    useGuildPowerupNewPerkMarketingVersion,
+  );
+  return skuId.skuId === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID && serverThemeRollbackEnabled;
 }
+export const isGuildPowerupRollbackEnabledForSku = function isGuildPowerupRollbackEnabledForSku(arg0, arg1) {
+  return arg0 === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID && arg1;
+};
 export const isGuildPowerupRollbackEnabled = function isGuildPowerupRollbackEnabled(
   guildId,
   skuId,
   maybeGetPerkPurchaseablePopoutDCF,
 ) {
-  let fileUpload250MbPowerupRollbackEnabled = skuId.skuId === Powerups.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID;
-  if (fileUpload250MbPowerupRollbackEnabled) {
-    fileUpload250MbPowerupRollbackEnabled = FileUpload250MbPowerupExperiment.getFileUpload250MbPowerupRollbackEnabled(
+  let serverThemeRollbackEnabled = skuId.skuId === Powerups.GUILD_POWERUP_GUILD_THEME_SKU_ID;
+  if (serverThemeRollbackEnabled) {
+    serverThemeRollbackEnabled = ServerThemeExperiment.getServerThemeRollbackEnabled(
       guildId,
       maybeGetPerkPurchaseablePopoutDCF,
     );
-    const tmpResult = FileUpload250MbPowerupExperiment;
+    const tmpResult = ServerThemeExperiment;
   }
-  return fileUpload250MbPowerupRollbackEnabled;
+  return serverThemeRollbackEnabled;
 };

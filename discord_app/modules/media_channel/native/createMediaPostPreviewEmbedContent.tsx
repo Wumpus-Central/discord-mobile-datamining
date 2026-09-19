@@ -106,7 +106,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13490)).uri;
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13546)).uri;
               obj5.footer = formatToPartsResult;
               obj5.ctaButtonColor = tmp11;
               return obj5;

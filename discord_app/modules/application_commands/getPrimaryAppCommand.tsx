@@ -102,12 +102,12 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
     allowApplicationState: true,
   }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(9528);
+let ApplicationCommandIndexStore = fn(9403);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } =
   ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [fn(1895).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1978).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/getPrimaryAppCommand.tsx");
 

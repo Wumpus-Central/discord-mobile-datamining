@@ -232,17 +232,17 @@ function shouldShowInRecents(guild, record, initializationData) {
     return false;
   }
 }
-const ChannelRecord = fn(1962);
+const ChannelRecord = fn(2045);
 ({
   ChannelRecordBase: closure_14,
   isGuildReadableType: closure_15,
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7730).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7774).ChannelListGuildActionRow;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_30, GuildFeatures: items } = Constants);
-const ChannelFlags = fn(1965).ChannelFlags;
+const ChannelFlags = fn(2048).ChannelFlags;
 const Permissions = fn(1085).Permissions;
 let c34 = "placeholder-channel-id";
 const __initData13 = {
@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "asc",
+      version: "https://support.discord.com/hc/articles/14155060633623",
     });
     merged.id = global;
     obj = closure_25;

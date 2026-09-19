@@ -13,7 +13,7 @@ import BountiesModalTypes from "../BountiesModal/BountiesModalTypes.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5614).QuestDockMode;
+const QuestDockMode = fn(5656).QuestDockMode;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
@@ -41,7 +41,7 @@ export default noop.memo(function QuestDockBountyBody() {
     } else {
       const obj = MobileQuestVideoWatchCtaCopy;
       const obj3 = { progressSeconds: 0, targetSeconds: num };
-      stringResult = obj.getVideoQuestWatchCtaText(QuestTaskUtils.getWatchVideoTaskDetailsFromProgress(obj3));
+      stringResult = obj.getBountyWatchCtaText(QuestTaskUtils.getWatchVideoTaskDetailsFromProgress(obj3));
     }
     return stringResult;
   }, items);

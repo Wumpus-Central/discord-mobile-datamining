@@ -3,7 +3,7 @@ import _mod17 from "../../../_runtime/metro/00017__.js";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const AppStates = Constants.AppStates;

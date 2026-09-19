@@ -19,7 +19,7 @@ let closure_6 = AppLauncherNativeConstants.FLASH_LIST_ITEM_IMPRESSION_VIEWABILIT
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = { bottom: 4 };
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: {
     height: "100%",
@@ -59,8 +59,8 @@ let obj4 = {
 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
 let size = {
-  width: fn(12373).BACK_BUTTON_SIZE,
-  height: fn(12373).BACK_BUTTON_SIZE,
+  width: fn(12382).BACK_BUTTON_SIZE,
+  height: fn(12382).BACK_BUTTON_SIZE,
   alignItems: "center",
   justifyContent: "center",
 };

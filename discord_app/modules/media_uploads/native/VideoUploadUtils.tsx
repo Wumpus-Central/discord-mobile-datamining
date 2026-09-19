@@ -106,10 +106,15 @@ export const calculateTargetDimensions = function calculateTargetDimensions(vide
   size.height = sum1;
   return size;
 };
-export const canSkipVideoTranscode = function canSkipVideoTranscode(targetResolution, videoMetadata, fileSize, arg3) {
+export const canSkipVideoTranscode = function canSkipVideoTranscode(
+  targetResolution,
+  videoMetadata,
+  fileSize,
+  effectiveUploadLimit,
+) {
   if (null != fileSize) {
-    if (null != arg3) {
-      if (fileSize > arg3) {
+    if (null != effectiveUploadLimit) {
+      if (fileSize > effectiveUploadLimit) {
         return false;
       }
     }

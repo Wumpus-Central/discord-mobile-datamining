@@ -1,8 +1,8 @@
 // discord_app/modules/activities/handlePressJoinActivity.tsx
 import util from "../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
-import getEmbeddedActivityJoinability from "utils/getEmbeddedActivityJoinability.tsx";
 import showActivitiesInvalidPermissionsAlert from "../voice_calls/showActivitiesInvalidPermissionsAlert.tsx";
+import getEmbeddedActivityJoinability from "utils/getEmbeddedActivityJoinability.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";

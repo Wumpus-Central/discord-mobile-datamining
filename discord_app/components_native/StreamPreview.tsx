@@ -3,8 +3,8 @@ import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import util from "../intl/index.native.tsx";
 import Pressables from "../design/void/Pressables/native/Pressables.tsx";
-import _modDef10304 from "../../_runtime/metro/10304__.js";
-import _modDef10305 from "../../_runtime/metro/10305__.js";
+import _modDef10316 from "../../_runtime/metro/10316__.js";
+import _modDef10317 from "../../_runtime/metro/10317__.js";
 import useFetchStreamPreviewDefault from "../modules/go_live/useFetchStreamPreview.tsx";
 import noop from "../../_runtime/metro/00019__.js";
 import ThemeStore from "../modules/user_settings/ThemeStore.tsx";
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = { wrapper: null, text: null, fallbackImage: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -39,16 +39,16 @@ DefaultFallback.prototype["render"] = function render() {
   const obj = { style: tmp.wrapper, children: null };
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = _modDef10304;
+    let tmp6Result = _modDef10316;
   } else {
-    tmp6Result = _modDef10305;
+    tmp6Result = _modDef10317;
   }
   obj2.source = tmp6Result;
   obj.children = timestampProducer(React3, obj2);
   return timestampProducer(React4, obj);
 };
-DefaultFallback.contextType = fn(4432).ThemeContext;
-createStyles = fn(4722);
+DefaultFallback.contextType = fn(4466).ThemeContext;
+createStyles = fn(4756);
 const obj6 = { touchable: null, imageContainer: null, image: null };
 let size = {
   flex: 1,
@@ -133,7 +133,7 @@ StreamPreview.prototype["render"] = function render() {
   }
   tmp8 = renderFallbackResult1;
 };
-StreamPreview.contextType = fn(4432).ThemeContext;
+StreamPreview.contextType = fn(4466).ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };

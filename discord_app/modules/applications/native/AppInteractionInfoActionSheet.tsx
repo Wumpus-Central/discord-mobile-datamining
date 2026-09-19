@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_10 = createStyles.createStyles({
   itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" },
   itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 },
@@ -34,7 +34,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata != null) {
     tmp5 =
       interactionMetadata.authorizing_integration_owners[
-        message(undefined, 9483).ApplicationIntegrationType.USER_INSTALL
+        message(undefined, 9317).ApplicationIntegrationType.USER_INSTALL
       ];
   }
   dependencyMap = tmp5;
@@ -43,7 +43,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata2 != null) {
     tmp7 =
       interactionMetadata2.authorizing_integration_owners[
-        message(undefined, 9483).ApplicationIntegrationType.GUILD_INSTALL
+        message(undefined, 9317).ApplicationIntegrationType.GUILD_INSTALL
       ];
   }
   noop = tmp7;
@@ -85,21 +85,21 @@ export default function AppInteractionInfoActionSheet(message) {
   }
   if (null != stateFromStores1) {
     const obj5 = { style: tmp.itemContainer, children: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(5754).GuildIconSizes.SMALL_32 };
-    const items5 = [closure_8(onBack(5754), obj6)];
+    const obj6 = { guild: stateFromStores1, size: tmp10(5796).GuildIconSizes.SMALL_32 };
+    const items5 = [closure_8(onBack(5796), obj6)];
     const obj7 = { style: tmp.itemLabel, children: null };
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
-    const items6 = [closure_8(tmp10(4718).Text, obj8)];
+    const items6 = [closure_8(tmp10(4752).Text, obj8)];
     const obj9 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl2 = tmp10(1115).intl;
     const obj10 = { application: message.author.username };
     obj9.children = intl2.format(tmp10(1115).t.ShLXXB, obj10);
-    items6[1] = closure_8(tmp10(4718).Text, obj9);
+    items6[1] = closure_8(tmp10(4752).Text, obj9);
     obj7.children = items6;
     items5[1] = closure_9(id, obj7);
     obj5.children = items5;
     let tmp26 = closure_9(id, obj5);
-    const tmp2Result = onBack(5754);
+    const tmp2Result = onBack(5796);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
@@ -118,17 +118,17 @@ export default function AppInteractionInfoActionSheet(message) {
         color: "mobile-text-heading-primary",
         children: stateFromStores.username,
       };
-      const items8 = [closure_8(tmp10(4718).Text, obj15)];
+      const items8 = [closure_8(tmp10(4752).Text, obj15)];
       const obj16 = { variant: "text-xs/medium", color: "text-subtle", children: null };
       const intl = tmp10(1115).intl;
       const obj17 = { application: message.author.username };
       obj16.children = intl.format(tmp10(1115).t.ShLXXB, obj17);
-      items8[1] = closure_8(tmp10(4718).Text, obj16);
+      items8[1] = closure_8(tmp10(4752).Text, obj16);
       obj14.children = items8;
       items7[1] = closure_9(id, obj14);
       obj12.children = items7;
       obj11.children = closure_9(id, obj12);
-      tmp26 = closure_8(tmp10(5292).PressableOpacity, obj11);
+      tmp26 = closure_8(tmp10(5334).PressableOpacity, obj11);
     }
   }
   const obj18 = { header: memo, bodyStyles: { paddingBottom: onBack(1612)().bottom }, children: null };
@@ -146,18 +146,18 @@ export default function AppInteractionInfoActionSheet(message) {
     const items10 = [closure_8(tmp10(1177).Avatar, obj21)];
     const obj22 = { style: tmp.itemLabel, children: null };
     const obj23 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp15.username };
-    const items11 = [closure_8(tmp10(4718).Text, obj23)];
+    const items11 = [closure_8(tmp10(4752).Text, obj23)];
     const obj24 = { variant: "text-xs/medium", color: "text-subtle", children: null };
     const intl3 = tmp10(1115).intl;
     obj24.children = intl3.string(tmp10(1115).t["04gxNg"]);
-    items11[1] = closure_8(tmp10(4718).Text, obj24);
+    items11[1] = closure_8(tmp10(4752).Text, obj24);
     obj22.children = items11;
     items10[1] = closure_9(id, obj22);
     obj20.children = items10;
     obj19.children = closure_9(id, obj20);
-    tmp32 = closure_8(tmp10(5292).PressableOpacity, obj19);
+    tmp32 = closure_8(tmp10(5334).PressableOpacity, obj19);
   }
   items9[1] = tmp32;
   obj18.children = items9;
-  return closure_9(message(7346).BottomSheet, obj18);
+  return closure_9(message(7390).BottomSheet, obj18);
 }

@@ -180,7 +180,7 @@ let closure_6 = identity.createWithEqualityFn(function initState() {
   return obj;
 });
 let closure_7 = false;
-const batchInvocationManager = new fn(1953).BatchInvocationManager(
+const batchInvocationManager = new fn(2036).BatchInvocationManager(
   (arg0) => {
     const resolved = Promise.resolve(arg0);
     return resolved.then((result) => {

@@ -22,7 +22,7 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(1921);
+const Constants = fn(2004);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
 const ApplicationTypes = fn(1349).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };

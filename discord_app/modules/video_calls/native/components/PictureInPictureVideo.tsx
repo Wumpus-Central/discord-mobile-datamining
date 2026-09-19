@@ -3,10 +3,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
+import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
 import useShouldForcePipOrientation from "useShouldForcePipOrientation.tsx";
 import usePipDimensionsDefault from "usePipDimensions.tsx";
 import useIsViewingActivity from "../../../activities/native/useIsViewingActivity.tsx";
-import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -25,12 +25,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9705);
+const ChannelCallStore = fn(9639);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(4743).ParticipantTypes;
+const ParticipantTypes = fn(4777).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   elevationShadow: null,
   background: null,

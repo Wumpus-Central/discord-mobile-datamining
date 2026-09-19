@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx
 import util from "../../intl/index.native.tsx";
 import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef2480 from "FamilyCenter.messages.js";
+import _modDef2482 from "FamilyCenter.messages.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function setsEqual(set, set2) {
@@ -25,13 +25,13 @@ function formatDays(days) {
   set = new Set(days);
   if (setsEqual(set, set2)) {
     const intl3 = util.intl;
-    return intl3.string(_modDef2480.bPjqd1);
+    return intl3.string(_modDef2482.bPjqd1);
   } else if (setsEqual(set, set)) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2480["4dr9L9"]);
+    return intl2.string(_modDef2482["4dr9L9"]);
   } else if (setsEqual(set, set1)) {
     const intl = util.intl;
-    return intl.string(_modDef2480["6lTTJ+"]);
+    return intl.string(_modDef2482["6lTTJ+"]);
   } else {
     const _Intl = Intl;
     const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { weekday: "short" });
@@ -102,7 +102,7 @@ export const formatDuration = function formatDuration(arg0) {
   const result = arg0 / 60;
   const intl = util.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const tmp3 = _modDef2480;
+  const tmp3 = _modDef2482;
   if (isIntegerResult) {
     const obj2 = { hours: result };
     let formatToPlainStringResult = formatToPlainString(tmp3.hFDcmZ, obj2);
@@ -133,9 +133,9 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       const endTime2 = startTime.endTime;
       const formatResult = dateTimeFormat.format(date);
       if (60 * startTime2.hours + startTime2.minutes > 60 * endTime2.hours + endTime2.minutes) {
-        let OxveI8 = _modDef2480.OxveI8;
+        let OxveI8 = _modDef2482.OxveI8;
       } else {
-        OxveI8 = _modDef2480["ERTn+E"];
+        OxveI8 = _modDef2482["ERTn+E"];
       }
       const intl = util.intl;
       const obj = { days: tmp5, startTime: formatResult, endTime: dateTimeFormat1.format(date1) };

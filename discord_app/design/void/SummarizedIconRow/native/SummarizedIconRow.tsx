@@ -23,7 +23,7 @@ function OverflowSquircle(arg0) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center" },
   iconWrapper: { alignItems: "center", justifyContent: "center" },

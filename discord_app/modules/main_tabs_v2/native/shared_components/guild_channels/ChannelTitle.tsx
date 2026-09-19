@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const UnreadSetting = fn(4904).UnreadSetting;
+const UnreadSetting = fn(4938).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_5 = createStyles.createStyleProperties({
   muted: nativeDefault.colors.TEXT_MUTED,
   normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT,

@@ -77,8 +77,9 @@ function handleConnectionOpen() {
     ChannelMessagesDefault.commit(mutate.mutate({ ready: false, loadingMore: false }));
   });
   set.clear();
+  map.clear();
 }
-let closure_30 = async function _addPushNotificationMessageIfNotCached(arg0, arg1, arg2) {
+let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg1, arg2) {
   closure_0 = arg0;
   let id = arg1;
   closure_2 = arg2;
@@ -149,7 +150,7 @@ let closure_30 = async function _addPushNotificationMessageIfNotCached(arg0, arg
           c7 = 3;
           return { value: "HermesInternal", done: null };
         }
-        closure_132_27.log(
+        closure_132_28.log(
           "Push notification message not in cache, adding directly",
           closure_131_1.id,
           closure_131_1.channel_id,
@@ -157,7 +158,7 @@ let closure_30 = async function _addPushNotificationMessageIfNotCached(arg0, arg
         orCreate = closure_132_1(closure_132_2[19]).getOrCreate(closure_131_0);
         const obj2 = closure_132_1(closure_132_2[19]);
         closure_132_1(closure_132_2[19]).commit(orCreate.receivePushNotification(closure_131_1, closure_131_2));
-        closure_132_34.emitChange();
+        closure_132_35.emitChange();
         c7 = 3;
         const obj3 = closure_132_1(closure_132_2[19]);
       } catch (tmp27) {
@@ -375,8 +376,9 @@ const Constants = fn(1074);
   Permissions: closure_25,
 } = Constants);
 const set = new Set();
+const map = new Map();
 const logger = new LoggerDefault("MessageStore");
-let c28 = false;
+let c29 = false;
 const Store = initializeDefault.Store;
 class MessageStore extends Store {}
 const prototype = MessageStore.prototype;
@@ -419,6 +421,9 @@ prototype["getMessages"] = function getMessages(arg0) {
 prototype["getMessage"] = function getMessage(arg0, arg1) {
   const orCreate = ChannelMessagesDefault.getOrCreate(arg0);
   return orCreate.get(arg1);
+};
+prototype["getAutomodRemovalNotice"] = function getAutomodRemovalNotice(id) {
+  return map.get(id);
 };
 prototype["getLastEditableMessage"] = function getLastEditableMessage(id) {
   id = UserStore.getCurrentUser();
@@ -549,7 +554,7 @@ prototype["hasCurrentUserSentWaveBlockingMessage"] = function hasCurrentUserSent
   );
 };
 prototype["hasCurrentUserSentMessageSinceAppStart"] = function hasCurrentUserSentMessageSinceAppStart() {
-  return c28;
+  return c29;
 };
 MessageStore.displayName = "MessageStore";
 const messageStore = new MessageStore(DispatcherDefault, {
@@ -823,7 +828,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
       if (tmp3Result.isIOSPushNotificationRawPayloadFixExperimentEnabled()) {
         (function addPushNotificationMessageIfNotCached() {
           const self = this;
-          const apply = closure_1_30.apply;
+          const apply = closure_1_31.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
@@ -913,6 +918,41 @@ const messageStore = new MessageStore(DispatcherDefault, {
     return false;
   },
   MESSAGE_SEND_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
+  AUTO_MODERATION_CONTENT_DELETED: function handleAutomodContentDeleted(message) {
+    message = message.message;
+    if (null != message) {
+      if (null == message.thread) {
+        const channel_id = message.channel_id;
+        const orCreate = ChannelMessagesDefault.getOrCreate(channel_id);
+        let ready = orCreate.ready;
+        if (ready) {
+          const hasItem = orCreate.has(message.id);
+          let tmp3 = !hasItem;
+          let obj = orCreate;
+          if (!hasItem) {
+            const receiveMessageResult = orCreate.receiveMessage(
+              message,
+              true === DimensionStore.isAtBottom(channel_id),
+            );
+            tmp3 = !receiveMessageResult.has(message.id);
+            obj = receiveMessageResult;
+          }
+          if (!tmp3) {
+            const updateResult = obj.update(message.id, (set) =>
+              set.set("flags", FlagUtils.addFlag(set.flags, constants.EPHEMERAL)),
+            );
+            ChannelMessagesDefault.commit(updateResult);
+            const result = map.set(message.id, tmp);
+            const tmp11Result = ChannelMessagesDefault;
+          }
+          ready = !tmp3;
+          const tmp5 = !tmp3;
+        }
+        return ready;
+      }
+    }
+    return false;
+  },
   MESSAGE_EDIT_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     const id = message.message.id;
@@ -963,9 +1003,17 @@ const messageStore = new MessageStore(DispatcherDefault, {
   },
   MESSAGE_DELETE: function handleMessageDelete(id) {
     id = id.id;
-    const orCreate = ChannelMessagesDefault.getOrCreate(id.channelId);
+    ({ channelId, local } = id);
+    const orCreate = ChannelMessagesDefault.getOrCreate(channelId);
     if (null != orCreate) {
       if (orCreate.has(id)) {
+        if (map.has(id)) {
+          if (true !== local) {
+            return false;
+          } else {
+            map.delete(id);
+          }
+        }
         if (orCreate.revealedMessageId !== id) {
           value = orCreate.get(id);
           if (null != value) {
@@ -1012,7 +1060,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(5442).getOrCreate(ids.channelId);
+    const orCreate = mutation(5484).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -1061,14 +1109,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(5442).commit(tmp3);
+        tmp(5484).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(5442);
+        const tmpResult2 = tmp(5484);
       }
     }
-    let obj = mutation(5442);
+    let obj = mutation(5484);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);
@@ -1252,7 +1300,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
     message = message.message;
     const currentUser = UserStore.getCurrentUser();
     if (tmp2) {
-      c28 = true;
+      c29 = true;
     }
   },
 });

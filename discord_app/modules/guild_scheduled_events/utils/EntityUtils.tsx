@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/utils/EntityUtils.tsx
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-const GuildScheduledEventsConstants = fn(1964);
+const GuildScheduledEventsConstants = fn(2047);
 ({ GuildScheduledEventEntityTypes: closure_1, EntityChannelTypes: c2 } = GuildScheduledEventsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/EntityUtils.tsx");

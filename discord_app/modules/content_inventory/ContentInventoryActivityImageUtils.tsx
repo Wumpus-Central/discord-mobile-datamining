@@ -207,7 +207,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "PX_16", smallImage: "accessible" };
+    return { largeImage: "a", smallImage: "isArray" };
   } else {
     let large_image;
     if (activity != null) {

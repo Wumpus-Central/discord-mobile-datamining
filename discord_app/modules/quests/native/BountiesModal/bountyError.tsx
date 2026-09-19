@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/bountyError.tsx
 import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5767 from "../../../../../_runtime/metro/05767__.js";
+import _modDef5809 from "../../../../../_runtime/metro/05809__.js";
 import BountiesModalConstants from "BountiesModalConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -23,7 +23,7 @@ export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErr
       if (null != message1) {
         let message = code.message;
       }
-      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef5767, toastDurationMs };
+      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef5809, toastDurationMs };
       obj.open(obj2);
     }
   }

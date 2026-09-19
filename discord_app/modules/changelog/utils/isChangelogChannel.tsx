@@ -1,7 +1,7 @@
 // discord_app/modules/changelog/utils/isChangelogChannel.tsx
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
-const SYSTEM_UPDATES_USER_ID = fn(2011).SYSTEM_UPDATES_USER_ID;
+const SYSTEM_UPDATES_USER_ID = fn(2094).SYSTEM_UPDATES_USER_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/utils/isChangelogChannel.tsx");
 

@@ -5,7 +5,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06848_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06892_LegacyBaseButton.js";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -24,11 +24,11 @@ function ContextMenuBackdrop(onDismiss) {
     obj.opacity = spring.withSpring(value, ContextMenuConstants.CONTEXT_MENU_SPRING);
     return obj;
   };
-  let obj = visible(4458);
+  let obj = visible(4492);
   fn.__closure = {
-    withSpring: visible(5143).withSpring,
+    withSpring: visible(5185).withSpring,
     visible,
-    CONTEXT_MENU_SPRING: visible(8137).CONTEXT_MENU_SPRING,
+    CONTEXT_MENU_SPRING: visible(8175).CONTEXT_MENU_SPRING,
   };
   fn.__workletHash = 6862317967896;
   fn.__initData = __initData2;
@@ -41,9 +41,9 @@ function ContextMenuBackdrop(onDismiss) {
     accessibilityLabel: null,
   };
   const obj2 = {
-    withSpring: visible(5143).withSpring,
+    withSpring: visible(5185).withSpring,
     visible,
-    CONTEXT_MENU_SPRING: visible(8137).CONTEXT_MENU_SPRING,
+    CONTEXT_MENU_SPRING: visible(8175).CONTEXT_MENU_SPRING,
   };
   const obj4 = visible(1364);
   const intl = visible(1115).intl;
@@ -55,13 +55,13 @@ function ContextMenuBackdrop(onDismiss) {
     stringResult = string(t.xs0juG);
   }
   obj3.accessibilityLabel = stringResult;
-  return closure_6(visible(5130).Backdrop, obj3);
+  return closure_6(visible(5172).Backdrop, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = { container: null, titleContainer: null, divider: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.container = {
@@ -70,7 +70,7 @@ obj2.container = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(8137).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(8175).CONTEXT_MENU_MIN_WIDTH,
 };
 let obj3 = {
   position: "absolute",
@@ -78,12 +78,12 @@ let obj3 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(8137).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(8175).CONTEXT_MENU_MIN_WIDTH,
 };
-obj2.titleContainer = { padding: fn(8137).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(8137).CONTEXT_MENU_ITEM_PADDING };
+obj2.titleContainer = { padding: fn(8175).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(8175).CONTEXT_MENU_ITEM_PADDING };
 obj2.divider = {
-  borderBottomWidth: fn(8137).CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomWidth: fn(8175).CONTEXT_MENU_DIVIDER_HEIGHT,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let closure_9 = createStyles.createStyles(obj2);
@@ -99,7 +99,7 @@ let closure_12 = {
 let closure_13 = {
   code: "function ContextMenuPopoutNativeTsx4(){const{state,runOnJS,requestClose}=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;runOnJS(requestClose)(isDismiss);}",
 };
-createStyles = fn(4722);
+createStyles = fn(4756);
 let obj7 = { accessibleDismiss: null };
 let obj8 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
@@ -120,6 +120,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   let sharedValue;
   let diff2;
   __initData = undefined;
+  let callback1;
   ({ x, positionX } = menu);
   const positionY = menu.positionY;
   const height = menu.height;
@@ -149,7 +150,6 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   ({ top, bottom } = cleanUp(positionX[9])({ includeKeyboardHeight: true }).insets);
   let obj3 = { ignoreKeyboard: null };
   let obj = transitionState(positionX[7]);
-  const tmp6 = cleanUp;
   let tmp7 = cleanUp(positionX[10]);
   obj3.ignoreKeyboard = transitionState(positionX[11]).isAndroid();
   const size = tmp7(obj3);
@@ -310,13 +310,17 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     const rounded = Math.round(nativeEvent.nativeEvent.layout.height);
     __initData(rounded >= Math.round(diff2));
   }, items3);
-  const items5 = [requestClose];
-  const callback1 = obj2.useCallback(() => {
+  callback1 = obj2.useCallback(() => {
     requestClose(true);
   }, items4);
+  const items5 = [requestClose];
   const callback2 = obj2.useCallback(() => {
     requestClose(false);
   }, items5);
+  cleanUp(positionX[15])(() => {
+    callback1();
+    return true;
+  });
   const items6 = [requestClose(ContextMenuBackdrop, { onPress: callback1, visible: sharedValue })];
   const obj6 = { gesture: memo, children: null };
   const obj7 = {
@@ -329,7 +333,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
   };
   const items7 = [tmp5.container, obj4, animatedStyle];
   obj7.style = items7;
-  let tmp20Result = null;
+  let tmp21Result = null;
   if (null != title) {
     const obj8 = { children: null };
     const obj9 = { style: tmp5.titleContainer, children: null };
@@ -339,13 +343,13 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
       accessibilityRole: "header",
       children: title,
     };
-    obj9.children = tmp22(transitionState(tmp2[15]).Text, obj10);
-    const items8 = [tmp22(state, obj9), tmp22(ContextMenuDivider, {})];
+    obj9.children = tmp23(transitionState(tmp2[16]).Text, obj10);
+    const items8 = [tmp23(state, obj9), tmp23(ContextMenuDivider, {})];
     obj8.children = items8;
-    tmp20Result = tmp20(tmp21, obj8);
+    tmp21Result = tmp21(tmp22, obj8);
   }
   const obj11 = { children: null };
-  const items9 = [tmp20Result];
+  const items9 = [tmp21Result];
   closure_129_0 = items;
   closure_129_1 = title;
   closure_129_2 = state;
@@ -395,7 +399,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     };
     obj.variant = variant;
     obj.accessibilityRole = accessibilityRole;
-    const tmp2Result = requestClose(transitionState(positionX[16]).ContextMenuItem, obj, "" + label + "-" + index);
+    const tmp2Result = requestClose(transitionState(positionX[17]).ContextMenuItem, obj, "" + label + "-" + index);
     let tmp7 = tmp2Result;
     if (height.includes(index)) {
       const obj2 = { children: null };
@@ -407,7 +411,7 @@ export const ContextMenuPopout = function ContextMenuPopout(cleanUp) {
     return tmp7;
   });
   obj7.children = items9;
-  obj6.children = sharedValue(tmp6(positionX[7]).ScrollView, obj7);
+  obj6.children = sharedValue(cleanUp(positionX[7]).ScrollView, obj7);
   items6[1] = requestClose(transitionState(positionX[14]).GestureDetector, obj6);
   obj11.children = items6;
   return sharedValue(onClose, obj11);

@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/native/AgeVerificationOtherWindowScreen.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3032 from "../AgeAssurance.messages.js";
+import _modDef3034 from "../AgeAssurance.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import MobilePhoneIcon from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
@@ -12,7 +12,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_5 = createStyles.createStyles({
   container: { flex: 1, alignSelf: "stretch" },
   text: { textAlign: "center" },
@@ -29,7 +29,7 @@ export default function AgeVerificationOtherWindowScreen(copy) {
   }
   if (title == null) {
     const intl = util.intl;
-    title = intl.string(_modDef3032.MLPgsX);
+    title = intl.string(_modDef3034.MLPgsX);
   }
   let description;
   if (copy != null) {
@@ -37,7 +37,7 @@ export default function AgeVerificationOtherWindowScreen(copy) {
   }
   if (description == null) {
     const intl2 = util.intl;
-    description = intl2.string(_modDef3032.VcZF1q);
+    description = intl2.string(_modDef3034.VcZF1q);
   }
   const obj = { children: null };
   const obj2 = { children: null };

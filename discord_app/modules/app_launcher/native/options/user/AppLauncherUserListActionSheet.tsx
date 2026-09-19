@@ -17,7 +17,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
   };
   const items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(12409).AppLauncherList, {
+  return jsx(onPressRow(12418).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {
@@ -30,7 +30,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
 const DEFAULT_CONTENT_PADDING = fn(1483).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles({
   emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 },
 });

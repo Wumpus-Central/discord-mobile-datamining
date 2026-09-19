@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_3 = createStyles.createStyles({
   button: { width: 40, height: 40, alignItems: "center", justifyContent: "center" },
 });
@@ -13,7 +13,15 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsHeaderIconButton.tsx");
 
 export default noop.forwardRef((arg0, ref) => {
-  ({ IconComponent, onPress, accessibilityLabel, accessibilityActions, onAccessibilityAction } = arg0);
+  ({
+    IconComponent,
+    onPress,
+    accessibilityLabel,
+    accessibilityActions,
+    onAccessibilityAction,
+    accessibilityState,
+    disabled,
+  } = arg0);
   const tmp = closure_3();
   return jsx(Pressables.PressableOpacity, {
     ref,
@@ -21,6 +29,8 @@ export default noop.forwardRef((arg0, ref) => {
     accessibilityLabel,
     accessibilityActions,
     onAccessibilityAction,
+    accessibilityState,
+    disabled,
     onPress,
     activeOpacity: 0.6,
     androidRippleConfig,

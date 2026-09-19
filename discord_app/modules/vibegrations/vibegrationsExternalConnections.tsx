@@ -36,10 +36,10 @@ let set = new Set([
 const result = size.fileFinishedImporting("modules/vibegrations/vibegrationsExternalConnections.tsx");
 
 export { externalConnectionOffer };
-export const externalConnectionOffers = function externalConnectionOffers(arg0) {
+export const externalConnectionOffers = function externalConnectionOffers(stateFromStores) {
   const items = [];
   set = new Set();
-  const iter = arg0[Symbol.iterator]();
+  const iter = stateFromStores[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -59,24 +59,24 @@ export const externalConnectionOffers = function externalConnectionOffers(arg0) 
   }
   return items;
 };
-export const beginExternalAuthorization = function beginExternalAuthorization(has, arg1) {
-  if (has.has(arg1)) {
+export const beginExternalAuthorization = function beginExternalAuthorization(current, type) {
+  if (current.has(type)) {
     return null;
   } else {
     const _Set = Set;
-    set = new Set(has);
-    set.add(arg1);
+    set = new Set(current);
+    set.add(type);
     return set;
   }
 };
-export const endExternalAuthorization = function endExternalAuthorization(has, arg1) {
-  if (has.has(arg1)) {
+export const endExternalAuthorization = function endExternalAuthorization(current, arg1) {
+  if (current.has(arg1)) {
     const _Set = Set;
-    set = new Set(has);
+    set = new Set(current);
     set.delete(arg1);
     return set;
   } else {
-    return has;
+    return current;
   }
 };
 export const externalAuthErrorCode = function externalAuthErrorCode(error) {
@@ -123,9 +123,9 @@ export const externalAuthErrorFor = function externalAuthErrorFor(status, arg1) 
     return "not_declared";
   }
 };
-export function externalAuthErrorCopy(arg0) {
+export function externalAuthErrorCopy(error) {
   let str = "generic";
-  if ("not_configured" === arg0) {
+  if ("not_configured" === error) {
     str = "setup";
   }
   return str;

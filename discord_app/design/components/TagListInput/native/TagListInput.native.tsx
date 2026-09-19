@@ -6,8 +6,8 @@ import ReanimatedRexportDefault from "../../../../modules/reanimated/ReanimatedR
 import Text_Text from "../../Text/native/Text.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05156_LinearGradient.js";
-import _modDef5834 from "../../../../../_runtime/metro/05834__.js";
+import LinearGradientDefault from "../../../../../_runtime/05198_LinearGradient.js";
+import _modDef5876 from "../../../../../_runtime/metro/05876__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let closure_10 = createStyles.createStyles(() => {
   const obj = {
     placeholder: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },
@@ -67,7 +67,7 @@ let closure_10 = createStyles.createStyles(() => {
 let closure_11 = { x: 0, y: 0.5 };
 let closure_12 = { x: 1, y: 0.5 };
 let closure_13 = ["transparent", "black"];
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { fill: { flex: 1 }, mask: null, leadingFade: null, leadingCover: null, maskRemainder: null };
   const obj2 = {};
@@ -392,7 +392,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       obj2.children = items2;
       obj.maskElement = React7(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = React6(_modDef5834, obj);
+      tmp = React6(_modDef5876, obj);
     }
     return tmp;
   }, items5);

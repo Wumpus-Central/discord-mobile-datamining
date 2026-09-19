@@ -9,6 +9,9 @@ import IOSPushNotificationRawPayloadFixExperiment from "../modules/notifications
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+function isPending(state) {
+  return state.state === constants.SENDING || state.state === tmp.SEND_FAILED;
+}
 function mergeMessage(self, id) {
   let messageRecord = self.get(id.id);
   if (null != messageRecord) {
@@ -1054,10 +1057,10 @@ prototype2["mergeDelta"] = function mergeDelta() {
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = items.map((item) => set(4945).createMessageRecord(item));
+    const mapped = items.map((item) => set(4978).createMessageRecord(item));
     const combined = found.concat(
       mapped,
-      items1.map((item) => set(4945).createMessageRecord(item)),
+      items1.map((item) => set(4978).createMessageRecord(item)),
     );
     _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
@@ -1243,7 +1246,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     if (id === id1) {
       if (null != nonce.nonce) {
         if (value.id === nonce.nonce) {
-          const messageRecord = messageRecord1(4945).createMessageRecord(nonce);
+          const messageRecord = messageRecord1(4978).createMessageRecord(nonce);
           if (null != value.interactionData) {
             messageRecord.interactionData = value.interactionData;
           }
@@ -1258,38 +1261,47 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
     }
     return self;
   } else {
-    messageRecord1 = messageRecord1(4945).createMessageRecord(nonce);
+    messageRecord1 = messageRecord1(4978).createMessageRecord(nonce);
     const lastResult = self.last();
     if (null != lastResult) {
-      if (obj2.compare(nonce.id, lastResult.id) < 0) {
-        if (tmp8Result.getConfig({ location: "receiveMessage" }).enabled) {
-          let mutation = self.mutate((_map) => {
-            _map._map[messageRecord1.id] = messageRecord1;
-            if (null != _map._map[messageRecord1.id]) {
-              ({ _array: _array2, _array } = _map);
-              _array[_array2.indexOf(tmp2)] = messageRecord1;
-            } else {
-              SortedArrayUtilsAll.insert(_map._array, messageRecord1, (id, id2) =>
-                closure_1_1(closure_1_3[5]).compare(id.id, id2.id),
-              );
-            }
-          }, true);
+      if (obj5.compare(nonce.id, lastResult.id) < 0) {
+        let tmp8 = messageRecord1.state === constants.SENDING;
+        if (!tmp8) {
+          tmp8 = messageRecord1.state === tmp18.SEND_FAILED;
         }
-        if (flag) {
-          let truncateTopResult = mutation.truncateTop(closure_4, false);
-        } else {
-          truncateTopResult = mutation;
-          if (self.length > closure_5) {
-            truncateTopResult = mutation.truncateBottom(closure_4, false);
+        if (!tmp8) {
+          const _array = self._array;
+          if (!_array.some(isPending)) {
+            if (tmp16Result.getConfig({ location: "receiveMessage" }).enabled) {
+              let mutation = self.mutate((_map) => {
+                _map._map[messageRecord1.id] = messageRecord1;
+                if (null != _map._map[messageRecord1.id]) {
+                  ({ _array: _array2, _array } = _map);
+                  _array[_array2.indexOf(tmp2)] = messageRecord1;
+                } else {
+                  SortedArrayUtilsAll.insert(_map._array, messageRecord1, (id, id2) =>
+                    closure_1_1(closure_1_3[5]).compare(id.id, id2.id),
+                  );
+                }
+              }, true);
+            }
+            if (flag) {
+              let truncateTopResult = mutation.truncateTop(closure_4, false);
+            } else {
+              truncateTopResult = mutation;
+              if (self.length > closure_5) {
+                truncateTopResult = mutation.truncateBottom(closure_4, false);
+              }
+            }
+            return truncateTopResult;
           }
         }
-        return truncateTopResult;
       }
-      obj2 = SnowflakeUtilsDefault;
+      obj5 = SnowflakeUtilsDefault;
     }
     const items = [messageRecord1];
     mutation = self.merge(items);
-    let obj = messageRecord1(4945);
+    let obj = messageRecord1(4978);
   }
 };
 prototype2["receivePushNotification"] = function receivePushNotification(message, isConnectedResult) {
@@ -1434,7 +1446,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = id(4652).JumpType.ANIMATED;
+        jumpType = id(4686).JumpType.ANIMATED;
       }
       let obj2 = {
         ready: true,
@@ -1625,19 +1637,22 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(5446).requireSortedDescending(messages);
+  const result = reversed(5488).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
   const found = _array.filter((item) => !reversed.some((id) => id.id === item.id));
-  let item = found.forEach((item) =>
+  const found1 = found.filter((state) => !(state.state === constants.SENDING || state.state === tmp.SEND_FAILED));
+  let item = found1.forEach((item) =>
     SortedArrayUtilsAll.insert(reversed, item, (id, id2) => self(closure_1_3[5]).compare(id.id, id2.id)),
   );
+  const items = [...found.filter(isPending)];
+  reversed.push.apply(items);
   let cached = !stale;
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(5446);
+  const obj = reversed(5488);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {

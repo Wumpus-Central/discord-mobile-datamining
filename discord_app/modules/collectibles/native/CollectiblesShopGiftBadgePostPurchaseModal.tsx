@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2576 from "../../premium/gifting/GiftingBadge.messages.js";
+import _modDef2578 from "../../premium/gifting/GiftingBadge.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = { header: null, closeButton: null, closeIcon: null };
   const rect = {
@@ -83,7 +83,7 @@ export default function CollectiblesShopGiftBadgePostPurchaseModal(currentProgre
     children: null,
   };
   const intl2 = util.intl;
-  obj5.children = intl2.string(_modDef2576.roVAey);
+  obj5.children = intl2.string(_modDef2578.roVAey);
   items[1] = timestampProducer(Text_Text.Text, obj5);
   obj2.children = items;
   const items1 = [

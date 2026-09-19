@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -38,20 +38,20 @@ export default function GuildScheduledEventPreview(event) {
     return null;
   } else {
     const obj2 = { style: tmp.container, children: null };
-    const tmp2Result = tmp2(4571);
+    const tmp2Result = tmp2(4605);
     const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     const intl = tmp2(1115).intl;
     obj3.children = intl.string(tmp2(1115).t.SDTOL7);
-    const items1 = [closure_5(tmp2(4718).Text, obj3)];
+    const items1 = [closure_5(tmp2(4752).Text, obj3)];
     const obj4 = { style: null, children: null };
     const items2 = [tmp.itemContainer];
-    const obj5 = { borderColor: tmp2(4571).hexWithOpacity(tmp.borderColor.color, 0.08) };
+    const obj5 = { borderColor: tmp2(4605).hexWithOpacity(tmp.borderColor.color, 0.08) };
     items2[1] = obj5;
     obj4.style = items2;
     const obj6 = { style: tmp.guildInfo, children: null };
     const obj7 = { guild: stateFromStores, size: null, selected: false };
-    const hexWithOpacityResult = tmp2(4571).hexWithOpacity(tmp.borderColor.color, 0.08);
-    obj7.size = tmp2(5754).GuildIconSizes.XXSMALL;
+    const hexWithOpacityResult = tmp2(4605).hexWithOpacity(tmp.borderColor.color, 0.08);
+    obj7.size = tmp2(5796).GuildIconSizes.XXSMALL;
     const items3 = [closure_5(GuildIconDefault, obj7)];
     const obj8 = {
       style: tmp.guildName,
@@ -59,7 +59,7 @@ export default function GuildScheduledEventPreview(event) {
       color: "text-default",
       children: stateFromStores.name,
     };
-    items3[1] = closure_5(tmp2(4718).Text, obj8);
+    items3[1] = closure_5(tmp2(4752).Text, obj8);
     obj6.children = items3;
     const items4 = [closure_6(View, obj6)];
     const obj9 = {
@@ -68,7 +68,7 @@ export default function GuildScheduledEventPreview(event) {
       color: "mobile-text-heading-primary",
       children: event.name,
     };
-    items4[1] = closure_5(tmp2(4718).Text, obj9);
+    items4[1] = closure_5(tmp2(4752).Text, obj9);
     obj4.children = items4;
     items1[1] = closure_6(View, obj4);
     obj2.children = items1;

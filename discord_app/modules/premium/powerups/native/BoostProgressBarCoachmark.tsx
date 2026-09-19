@@ -1,14 +1,14 @@
 // discord_app/modules/premium/powerups/native/BoostProgressBarCoachmark.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2512 from "../GuildPowerups.messages.js";
+import _modDef2514 from "../GuildPowerups.messages.js";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/BoostProgressBarCoachmark.tsx");
@@ -43,9 +43,9 @@ export default function BoostProgressBarCoachmark(guild) {
       onButtonPress: null,
     };
     const intl = util.intl;
-    obj.title = intl.string(_modDef2512.uwV2dH);
+    obj.title = intl.string(_modDef2514.uwV2dH);
     const intl2 = util.intl;
-    obj.description = intl2.string(_modDef2512.MIwlcR);
+    obj.description = intl2.string(_modDef2514.MIwlcR);
     obj.onDismiss = onDismiss;
     obj.renderImgComponent = function renderImgComponent() {
       return (
@@ -59,6 +59,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(11380).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(11392).useCoachmark(guild.targetRef, memo);
   return null;
 }

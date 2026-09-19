@@ -38,6 +38,7 @@ import AnniversaryTier9Badge from "../components/mana-assets/native/generated/An
 import ApiIllocon from "../components/mana-assets/native/generated/ApiIllocon.native.tsx";
 import AppleIllocon from "../components/mana-assets/native/generated/AppleIllocon.native.tsx";
 import AppsButtonSpotIllustration from "../components/mana-assets/native/generated/AppsButtonSpotIllustration.native.tsx";
+import AutoClipsConsentAbstractUI from "../components/mana-assets/native/generated/AutoClipsConsentAbstractUI.native.tsx";
 import AvatarCamExample from "../components/mana-assets/native/generated/AvatarCamExample.native.tsx";
 import AvatarCapExample from "../components/mana-assets/native/generated/AvatarCapExample.native.tsx";
 import AvatarClydeExample from "../components/mana-assets/native/generated/AvatarClydeExample.native.tsx";
@@ -502,6 +503,7 @@ export const AnniversaryTier9Badge = AnniversaryTier9Badge.AnniversaryTier9Badge
 export const ApiIllocon = ApiIllocon.ApiIllocon;
 export const AppleIllocon = AppleIllocon.AppleIllocon;
 export const AppsButtonSpotIllustration = AppsButtonSpotIllustration.AppsButtonSpotIllustration;
+export const AutoClipsConsentAbstractUI = AutoClipsConsentAbstractUI.AutoClipsConsentAbstractUI;
 export const AvatarCamExample = AvatarCamExample.AvatarCamExample;
 export const AvatarCapExample = AvatarCapExample.AvatarCapExample;
 export const AvatarClydeExample = AvatarClydeExample.AvatarClydeExample;

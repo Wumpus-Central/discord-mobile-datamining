@@ -9,10 +9,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = {
     bodyContainer: {
@@ -73,8 +73,6 @@ export default function PremiumGiftSuccess() {
     }
     return id;
   });
-  const obj3 = require("initialize");
-  const config = require("PremiumGiftingGogoPromotionExperiment").useConfig({ location: "PremiumGiftSuccess" });
   const items1 = [tmp8, tmp7, stateFromStores];
   const effect = noop.useEffect(() => {
     let tmp = null != reminderNotice && null != reminderNotice.reminderNotice && closure_1;
@@ -91,44 +89,27 @@ export default function PremiumGiftSuccess() {
     }
   }, items1);
   if (null == recipientUser) {
-    const obj5 = { giftCodeRecord };
-    let tmp14 = closure_7(tmp(tmp2[18]), obj5);
-    let tmp13 = closure_7;
+    const obj4 = { giftCodeRecord };
+    let tmp13 = closure_7(tmp(tmp2[16]), obj4);
+    let tmp12 = closure_7;
   } else {
-    tmp13 = closure_7;
-    tmp14 = closure_7(tmp(tmp2[19]), {});
-  }
-  if (tmp8) {
-    if (config.enabled) {
-      if (
-        selectedGiftingPromotionReward ===
-        require("GiftingPromotionRewardSKUIds").GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID
-      ) {
-        let code;
-        if (null == recipientUser) {
-          code = giftCodeRecord.code;
-        }
-        const obj6 = { giftCode: code };
-        let tmp13Result = tmp13(tmp(tmp2[20]), obj6);
-        const tmpResult = tmp(tmp2[20]);
-      }
-      const obj7 = { children: null };
-      const obj8 = { style: tmp3.bodyContainer, children: tmp14 };
-      const items2 = [tmp13(View, obj8)];
-      const obj9 = { style: tmp3.actionContainer, children: tmp13Result };
-      items2[1] = tmp13(View, obj9);
-      obj7.children = items2;
-      return closure_9(closure_8, obj7);
-    }
+    tmp12 = closure_7;
+    tmp13 = closure_7(tmp(tmp2[17]), {});
   }
   if (null != getOrFetchPurchase) {
-    const obj10 = { purchase: getOrFetchPurchase };
-    tmp13Result = tmp13(tmp(tmp2[21]), obj10);
+    const obj5 = { purchase: getOrFetchPurchase };
+    let tmp12Result = tmp12(tmp(tmp2[18]), obj5);
   } else if (null == recipientUser) {
-    const obj11 = { giftCodeRecord };
-    tmp13Result = tmp13(tmp4(tmp2[18]).PremiumGiftSuccessActions, obj11);
+    const obj6 = { giftCodeRecord };
+    tmp12Result = tmp12(tmp4(tmp2[16]).PremiumGiftSuccessActions, obj6);
   } else {
-    tmp13Result = tmp13(tmp4(tmp2[19]).PremiumGiftDMSuccessActions, {});
+    tmp12Result = tmp12(tmp4(tmp2[17]).PremiumGiftDMSuccessActions, {});
   }
-  const obj4 = require("PremiumGiftingGogoPromotionExperiment");
+  const obj7 = { children: null };
+  const items2 = [
+    tmp12(View, { style: tmp3.bodyContainer, children: tmp13 }),
+    tmp12(View, { style: tmp3.actionContainer, children: tmp12Result }),
+  ];
+  obj7.children = items2;
+  return closure_9(closure_8, obj7);
 }

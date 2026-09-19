@@ -118,10 +118,10 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       let obj31 = require;
       let tmp35 = dependencyMap;
       if (StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM === type) {
-        if (collectibles.subtype === obj31(9029).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER) {
+        if (collectibles.subtype === obj31(9068).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER) {
           const obj7 = {
-            type: obj31(9029).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
-            subtype: obj31(9029).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER,
+            type: obj31(9068).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
+            subtype: obj31(9068).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER,
             collectionId: collectibles.collection_id,
             shopHome: null,
             indexPage: null,
@@ -241,7 +241,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           collectibles.helpCenter = tmp35;
           obj7.shared = collectibles;
         }
-      } else if (obj31(9029).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
+      } else if (obj31(9068).StorefrontPromotionCollectiblesType.TARGETED_OFFER === type) {
         const reward = collectibles.reward;
         let nagbar;
         if (reward != tmp14) {
@@ -278,13 +278,13 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           if (tmp14 == offer_notice) {
             if (tmp14 == tmp39) {
               if (tmp14 == flavor) {
-                const obj33 = { type: obj31(9029).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+                const obj33 = { type: obj31(9068).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
                 let obj34 = obj33;
               }
             }
           }
         }
-        obj34 = { type: obj31(9029).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+        obj34 = { type: obj31(9068).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
         let tmp41;
         if (tmp14 != nagbar) {
           const header_text = nagbar.header_text;

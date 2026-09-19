@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/tryLaunchAsFrame.tsx
-import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
+import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(9749).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9313).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

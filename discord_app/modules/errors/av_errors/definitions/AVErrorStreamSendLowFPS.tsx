@@ -1,8 +1,8 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx
 import DurationsDefault from "../../../../utils/Durations.tsx";
 import StreamKeyUtils from "../../../go_live/utils/StreamKeyUtils.tsx";
-import StreamQualityUtils from "../../../../utils/StreamQualityUtils.tsx";
 import AVError from "../AVError.tsx";
+import StreamQualityUtils from "../../../../utils/StreamQualityUtils.tsx";
 import AVErrorContext from "../AVErrorContext.tsx";
 import AVErrorUtils from "../AVErrorUtils.tsx";
 import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 },
   gifContainer: { flexDirection: "column", alignItems: "center" },

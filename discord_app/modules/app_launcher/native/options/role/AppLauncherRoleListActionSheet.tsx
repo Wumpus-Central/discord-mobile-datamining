@@ -90,7 +90,7 @@ class RoleRow {
     return tmp7(guildRole(closure_3[11]).TableRow, obj1, guildRole.id);
   }
 }
-const isEveryoneRole = fn(2017).isEveryoneRole;
+const isEveryoneRole = fn(2100).isEveryoneRole;
 const DEFAULT_ROLE_COLOR_HEX = fn(1074).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

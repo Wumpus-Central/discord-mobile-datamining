@@ -9,8 +9,8 @@ const prototype = function PreviewFrameCallTimeout(arg0, timeoutMs) {
 class prototype extends Error {}
 const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPreviewCall.tsx");
 
-export const previewCallTypes = function previewCallTypes(arg0) {
-  const combined = "vibegrations-" + arg0;
+export const previewCallTypes = function previewCallTypes(control) {
+  const combined = "vibegrations-" + control;
   return { request: combined, result: "" + combined + "-result", ack: "" + combined + "-ack" };
 };
 export const isResultEnvelope = function isResultEnvelope(parsed, ack, id) {
@@ -47,3 +47,5 @@ export const PREVIEW_FRAME_WAIT_MS = 6000;
 export const CONTROL_RETRY_MS = 400;
 export const CAPTURE_NOW_ACCEPT_TIMEOUT_MS = 8000;
 export const CAPTURE_NOW_RETRY_MS = 400;
+export const INSPECT_TIMEOUT_MS = 1500;
+export const INSPECT_ANSWER_TIMEOUT_MS = 5500;

@@ -2,16 +2,16 @@
 import util from "../../intl/index.native.tsx";
 import TimeUtils from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import notification_center_getTimestampString from "../notification_center/getTimestampString.tsx";
-import _modDef8374 from "../../../discord_assets/assets/checkpoint/card-plant.png.js";
-import _modDef8375 from "../../../discord_assets/assets/checkpoint/card-donut.png.js";
-import _modDef8376 from "../../../discord_assets/assets/checkpoint/card-capybara.png.js";
-import _modDef8377 from "../../../discord_assets/assets/checkpoint/card-disco.png.js";
-import _modDef8378 from "../../../discord_assets/assets/checkpoint/card-origami.png.js";
-import _modDef8379 from "../../../discord_assets/assets/checkpoint/card-snail.png.js";
-import _modDef8380 from "../../../discord_assets/assets/checkpoint/card-duck.png.js";
-import _modDef8381 from "../../../discord_assets/assets/checkpoint/card-banana.png.js";
-import _modDef8382 from "../../../discord_assets/assets/checkpoint/card-cat.png.js";
-import _modDef8383 from "../../../discord_assets/assets/checkpoint/card-cassette.png.js";
+import _modDef8412 from "../../../discord_assets/assets/checkpoint/card-plant.png.js";
+import _modDef8413 from "../../../discord_assets/assets/checkpoint/card-donut.png.js";
+import _modDef8414 from "../../../discord_assets/assets/checkpoint/card-capybara.png.js";
+import _modDef8415 from "../../../discord_assets/assets/checkpoint/card-disco.png.js";
+import _modDef8416 from "../../../discord_assets/assets/checkpoint/card-origami.png.js";
+import _modDef8417 from "../../../discord_assets/assets/checkpoint/card-snail.png.js";
+import _modDef8418 from "../../../discord_assets/assets/checkpoint/card-duck.png.js";
+import _modDef8419 from "../../../discord_assets/assets/checkpoint/card-banana.png.js";
+import _modDef8420 from "../../../discord_assets/assets/checkpoint/card-cat.png.js";
+import _modDef8421 from "../../../discord_assets/assets/checkpoint/card-cassette.png.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const items = [TimeUtils.TimeUnits.HOURS, TimeUtils.TimeUnits.MINUTES];
@@ -41,25 +41,25 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return _modDef8374;
+    return _modDef8412;
   } else if (1 === cardId) {
-    return _modDef8375;
+    return _modDef8413;
   } else if (2 === cardId) {
-    return _modDef8376;
+    return _modDef8414;
   } else if (3 === cardId) {
-    return _modDef8377;
+    return _modDef8415;
   } else if (4 === cardId) {
-    return _modDef8378;
+    return _modDef8416;
   } else if (5 === cardId) {
-    return _modDef8379;
+    return _modDef8417;
   } else if (6 === cardId) {
-    return _modDef8380;
+    return _modDef8418;
   } else if (7 === cardId) {
-    return _modDef8381;
+    return _modDef8419;
   } else if (8 === cardId) {
-    return _modDef8382;
+    return _modDef8420;
   } else {
-    return _modDef8383;
+    return _modDef8421;
   }
 };
 export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(arg0) {

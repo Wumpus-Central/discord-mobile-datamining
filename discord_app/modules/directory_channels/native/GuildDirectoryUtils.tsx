@@ -24,6 +24,7 @@ let closure_6 = async function _onAddDirectoryGuildEntry() {
         };
       });
     },
+    isDismissable: false,
   });
   await "HermesInternal";
   closure_1 = tmp2;

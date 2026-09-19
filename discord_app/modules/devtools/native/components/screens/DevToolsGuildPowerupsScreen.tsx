@@ -4,7 +4,7 @@ import HTTPUtils from "../../../../../../discord_common/js/packages/http-utils/H
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import UserSettingsProtoActionCreators from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef4314 from "../../../../../../_runtime/metro/04314__.js";
+import _modDef4348 from "../../../../../../_runtime/metro/04348__.js";
 import TableSwitchRow from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import GuildDismissibleContentUtils from "../../../../guild_dismissible_content/GuildDismissibleContentUtils.tsx";
 import toggleDismissibleContentDismissStateDefault from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
@@ -59,8 +59,8 @@ let closure_22 = async function _setWarningBoosts(arg0) {
           const obj6 = { applied_boost_ids: importDefault.map((id) => id.id), ends_at: null };
           let addResult = null;
           if (!closure_2) {
-            addResult = _modDef4314().add(1, "day");
-            const obj4 = _modDef4314();
+            addResult = _modDef4348().add(1, "day");
+            const obj4 = _modDef4348();
           }
           obj6.ends_at = addResult;
           request.body = obj6;
@@ -169,11 +169,11 @@ function GuildDCSwitchRow(dc) {
       const result2 = GuildDismissibleContentUtils.unmarkContentAsDismissed(dc, guildId);
     }
   }, items);
-  return closure_18(dc(7396).TableSwitchRow, { label: closure_15(dc), value: dc.isDismissed, onValueChange: callback });
+  return closure_18(dc(7440).TableSwitchRow, { label: closure_15(dc), value: dc.isDismissed, onValueChange: callback });
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DevToolsGuildPowerupsConstants = fn(15934);
+const DevToolsGuildPowerupsConstants = fn(16010);
 ({
   GUILD_DCS: closure_11,
   SERVER_TAG_GUILD_DCS: closure_12,
@@ -185,7 +185,7 @@ const DevToolsGuildPowerupsConstants = fn(15934);
 const Endpoints = fn(1074).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   scrollContainer: null,
@@ -250,7 +250,7 @@ export default function DevToolsGuildPowerupsScreen() {
     const items4 = [,];
     ({ container: arr7[0], noGuildContainer: arr7[1] } = tmp);
     obj5.style = items4;
-    obj5.children = closure_18(tmp5(4718).Text, {
+    obj5.children = closure_18(tmp5(4752).Text, {
       variant: "heading-md/semibold",
       color: "text-muted",
       children: "No guild selected",
@@ -275,8 +275,8 @@ export default function DevToolsGuildPowerupsScreen() {
         return stateFromStores(closure_2[15]).guildPowerupsResetNotifications();
       },
     };
-    obj8.children = closure_18(tmp5(5775).TableRow, obj9);
-    const items6 = [closure_18(tmp5(5857).TableRowGroup, obj8), , , , , ,];
+    obj8.children = closure_18(tmp5(5817).TableRow, obj9);
+    const items6 = [closure_18(tmp5(5899).TableRowGroup, obj8), , , , , ,];
     const obj10 = { title: "Warning State", hasIcons: false, children: null };
     const obj11 = {
       label: "Set Half Boosts expiring in 1 day",
@@ -284,22 +284,22 @@ export default function DevToolsGuildPowerupsScreen() {
         return setWarningBoosts(stateFromStores, closure_2.slice(Math.floor(closure_2.length / 2)), false);
       },
     };
-    const items7 = [closure_18(tmp5(5775).TableRow, obj11)];
+    const items7 = [closure_18(tmp5(5817).TableRow, obj11)];
     const obj12 = {
       label: "Reset End Date",
       onPress() {
         return setWarningBoosts(stateFromStores, closure_2, true);
       },
     };
-    items7[1] = closure_18(tmp5(5775).TableRow, obj12);
+    items7[1] = closure_18(tmp5(5817).TableRow, obj12);
     obj10.children = items7;
-    items6[1] = closure_19(tmp5(5857).TableRowGroup, obj10);
+    items6[1] = closure_19(tmp5(5899).TableRowGroup, obj10);
     const obj13 = {
       title: "User Level DCs",
       hasIcons: false,
       children: closure_13.map((dc) => closure_1_18(UserDCSwitchRow, { dc }, dc)),
     };
-    items6[2] = closure_18(tmp5(5857).TableRowGroup, obj13);
+    items6[2] = closure_18(tmp5(5899).TableRowGroup, obj13);
     const obj14 = {
       title: "Guild Level DCs",
       hasIcons: false,
@@ -311,7 +311,7 @@ export default function DevToolsGuildPowerupsScreen() {
         ),
       ),
     };
-    items6[3] = closure_18(tmp5(5857).TableRowGroup, obj14);
+    items6[3] = closure_18(tmp5(5899).TableRowGroup, obj14);
     const obj15 = {
       title: "Server Tag Guild Level DCs",
       hasIcons: false,
@@ -323,13 +323,13 @@ export default function DevToolsGuildPowerupsScreen() {
         ),
       ),
     };
-    items6[4] = closure_18(tmp5(5857).TableRowGroup, obj15);
+    items6[4] = closure_18(tmp5(5899).TableRowGroup, obj15);
     const obj16 = {
       title: "Vanity URL Powerup DCs",
       hasIcons: false,
       children: closure_14.map((dc) => closure_1_18(UserDCSwitchRow, { dc }, dc)),
     };
-    items6[5] = closure_18(tmp5(5857).TableRowGroup, obj16);
+    items6[5] = closure_18(tmp5(5899).TableRowGroup, obj16);
     const obj17 = { title: "System Messages", hasIcons: false, children: null };
     const obj18 = {
       label: "Send Powerups System Message",
@@ -346,8 +346,8 @@ export default function DevToolsGuildPowerupsScreen() {
         })(stateFromStores);
       },
     };
-    obj17.children = closure_18(tmp5(5775).TableRow, obj18);
-    items6[6] = closure_18(tmp5(5857).TableRowGroup, obj17);
+    obj17.children = closure_18(tmp5(5817).TableRow, obj18);
+    items6[6] = closure_18(tmp5(5899).TableRowGroup, obj17);
     obj6.children = items6;
     tmp16Result = closure_19(closure_5, obj6);
   }

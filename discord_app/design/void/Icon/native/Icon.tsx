@@ -15,7 +15,7 @@ const IconSizes = {
   REFRESH_SMALL_16: "refreshSmall16",
   SMALL_14: "small14",
 };
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_5 = createStyles.createStyles(() => {
   obj = { iconColor: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
   return obj;

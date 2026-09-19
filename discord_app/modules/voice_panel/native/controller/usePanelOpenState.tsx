@@ -8,7 +8,7 @@ import VoicePanelStore from "../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(12515).VoicePanelModes;
+const VoicePanelModes = fn(12524).VoicePanelModes;
 const Constants = fn(1074);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = {
@@ -89,16 +89,16 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  [first, closure_6] = doCloseChannel.useState(() => closure_1(13031).getHistory().location.pathname);
+  [first, closure_6] = doCloseChannel.useState(() => closure_1(13040).getHistory().location.pathname);
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = closure_1(13031).addRouteChangeListener((pathname) => {
+    closure_0 = closure_1(13040).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_6(tmp);
         const obj2 = { path: null };
-        const RouteParam = closure_0(4561).RouteParam;
-        const obj = closure_0(4548);
-        const RouteParam2 = closure_0(4561).RouteParam;
+        const RouteParam = closure_0(4595).RouteParam;
+        const obj = closure_0(4582);
+        const RouteParam2 = closure_0(4595).RouteParam;
         obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
         const matchPathResult = obj.matchPath(pathname.pathname, obj2);
         const guildIdResult = RouteParam.guildId();
@@ -108,10 +108,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            closure_1(9746)();
+            closure_1(9571)();
           }
         }
-        obj3 = closure_0(13024);
+        obj3 = closure_0(13033);
       }
     });
     return () => {

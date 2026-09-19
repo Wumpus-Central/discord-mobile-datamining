@@ -1,7 +1,7 @@
 // discord_app/actions/native/AlertActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import useAlertStore from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -22,7 +22,7 @@ export default {
     }
     let flag2 = hideActionSheet.isDismissable;
     if (flag2 === undefined) {
-      flag2 = false;
+      flag2 = true;
     }
     return hideActionSheet.importer().then((alert) => {
       if (flag) {
@@ -44,7 +44,11 @@ export default {
     if (flag === undefined) {
       flag = true;
     }
-    ({ isDismissable, confirmText } = hideActionSheet);
+    let flag2 = hideActionSheet.isDismissable;
+    if (flag2 === undefined) {
+      flag2 = true;
+    }
+    let confirmText = hideActionSheet.confirmText;
     if (confirmText === undefined) {
       const intl = confirmText(1115).intl;
       confirmText = intl.string(confirmText(1115).t.BddRzS);
@@ -60,7 +64,7 @@ export default {
     let obj = {};
     let merged1 = Object.assign(merged);
     obj.confirmText = confirmText;
-    obj.isDismissable = isDismissable;
+    obj.isDismissable = flag2;
     ({ body, confirmText: confirmText2 } = obj);
     let tmp5 = null != body && typeof body !== "string";
     if (tmp5) {
@@ -122,12 +126,12 @@ export default {
     }
     if (!tmp7) {
       if (flag) {
-        merged(4689).hideActionSheet();
-        const obj4 = merged(4689);
+        merged(4723).hideActionSheet();
+        const obj4 = merged(4723);
       }
       if (null != c6) {
-        confirmText(5068).dismissAlert(c6);
-        const obj5 = confirmText(5068);
+        confirmText(5110).dismissAlert(c6);
+        const obj5 = confirmText(5110);
       }
       merged(573).dispatch({ type: "ALERT_CLOSE" });
       closure_7 = tmp27 + 1;
@@ -137,14 +141,14 @@ export default {
       ({ cancelText, onConfirm: c3, onCancel: c4 } = merged);
       c5 = false;
       ({ title, body: body2, children, confirmColor } = merged);
-      const obj7 = confirmText(5068);
+      const obj7 = confirmText(5110);
       const obj3 = { title, content: body2, extraContent: children, actions: null };
       const obj8 = { variant: null, text: null, onPress: null };
       const obj6 = merged(573);
       const tmp29 = confirmText;
       const tmp31 = c5;
       const tmp32 = c4;
-      obj8.variant = confirmText(5163).getAlertButtonVariant(confirmColor);
+      obj8.variant = confirmText(5205).getAlertButtonVariant(confirmColor);
       obj8.text = confirmText;
       obj8.onPress = function onPress() {
         c5 = true;
@@ -152,7 +156,7 @@ export default {
           tmp();
         }
       };
-      const items = [c3(confirmText(5072).AlertActionButton, obj8)];
+      const items = [c3(confirmText(5114).AlertActionButton, obj8)];
       let tmp30Result = null;
       if (null != cancelText) {
         const obj9 = {
@@ -165,16 +169,16 @@ export default {
             }
           },
         };
-        tmp30Result = tmp30(tmp29(5072).AlertActionButton, obj9);
+        tmp30Result = tmp30(tmp29(5114).AlertActionButton, obj9);
       }
       const obj11 = { children: null };
       items[1] = tmp30Result;
       obj11.children = items;
       obj3.actions = tmp31(tmp32, obj11);
-      const obj12 = { dismissable: true === isDismissable };
+      const obj12 = { dismissable: flag2 };
       obj7.openAlert(
         text,
-        c3(confirmText(5072).AlertModal, obj3),
+        c3(confirmText(5114).AlertModal, obj3),
         () => {
           if (!c5) {
             if (c4 != null) {
@@ -187,17 +191,17 @@ export default {
         },
         obj12,
       );
-      const obj10 = confirmText(5163);
+      const obj10 = confirmText(5205);
     } else {
       if (null != c6) {
-        confirmText(5068).dismissAlert(c6);
+        confirmText(5110).dismissAlert(c6);
         c6 = null;
-        const obj2 = confirmText(5068);
+        const obj2 = confirmText(5110);
       }
       const self = this;
       const obj13 = {
         importer() {
-          return asyncRequireImpl(5163, dependencyMap.paths).then((result) => {
+          return asyncRequireImpl(5205, dependencyMap.paths).then((result) => {
             closure_0 = result.default;
             return (arg0) => {
               const obj = {};
@@ -209,7 +213,7 @@ export default {
           });
         },
         hideActionSheet: flag,
-        isDismissable,
+        isDismissable: flag2,
       };
       this.openLazy(obj13);
     }

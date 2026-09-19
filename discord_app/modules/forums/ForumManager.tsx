@@ -4,7 +4,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const isStaticChannelRoute = fn(1965).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2048).isStaticChannelRoute;
 class ForumManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

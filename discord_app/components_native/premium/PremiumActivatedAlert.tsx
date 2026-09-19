@@ -5,30 +5,30 @@ import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import shared from "../../design/shared.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
 import common_AlertDefault from "../common/Alert.tsx";
-import _modDef8287 from "../../../_runtime/metro/08287__.js";
-import _modDef9623 from "../../../_runtime/metro/09623__.js";
-import _modDef10953 from "../../../_runtime/metro/10953__.js";
-import _modDef10954 from "../../../_runtime/metro/10954__.js";
-import _modDef10955 from "../../../_runtime/metro/10955__.js";
-import _modDef10956 from "../../../_runtime/metro/10956__.js";
-import _modDef10957 from "../../../_runtime/metro/10957__.js";
-import _modDef10958 from "../../../_runtime/metro/10958__.js";
-import _modDef10959 from "../../../_runtime/metro/10959__.js";
-import _modDef10960 from "../../../_runtime/metro/10960__.js";
-import _modDef10961 from "../../../_runtime/metro/10961__.js";
-import _modDef10962 from "../../../_runtime/metro/10962__.js";
-import _modDef10963 from "../../../_runtime/metro/10963__.js";
-import _modDef10964 from "../../../_runtime/metro/10964__.js";
-import _modDef10965 from "../../../_runtime/metro/10965__.js";
-import _modDef10966 from "../../../_runtime/metro/10966__.js";
-import _modDef10967 from "../../../_runtime/metro/10967__.js";
-import _modDef10968 from "../../../_runtime/metro/10968__.js";
+import _modDef8325 from "../../../_runtime/metro/08325__.js";
+import _modDef9498 from "../../../_runtime/metro/09498__.js";
 import _modDef10969 from "../../../_runtime/metro/10969__.js";
 import _modDef10970 from "../../../_runtime/metro/10970__.js";
 import _modDef10971 from "../../../_runtime/metro/10971__.js";
 import _modDef10972 from "../../../_runtime/metro/10972__.js";
 import _modDef10973 from "../../../_runtime/metro/10973__.js";
 import _modDef10974 from "../../../_runtime/metro/10974__.js";
+import _modDef10975 from "../../../_runtime/metro/10975__.js";
+import _modDef10976 from "../../../_runtime/metro/10976__.js";
+import _modDef10977 from "../../../_runtime/metro/10977__.js";
+import _modDef10978 from "../../../_runtime/metro/10978__.js";
+import _modDef10979 from "../../../_runtime/metro/10979__.js";
+import _modDef10980 from "../../../_runtime/metro/10980__.js";
+import _modDef10981 from "../../../_runtime/metro/10981__.js";
+import _modDef10982 from "../../../_runtime/metro/10982__.js";
+import _modDef10983 from "../../../_runtime/metro/10983__.js";
+import _modDef10984 from "../../../_runtime/metro/10984__.js";
+import _modDef10985 from "../../../_runtime/metro/10985__.js";
+import _modDef10986 from "../../../_runtime/metro/10986__.js";
+import _modDef10987 from "../../../_runtime/metro/10987__.js";
+import _modDef10988 from "../../../_runtime/metro/10988__.js";
+import _modDef10989 from "../../../_runtime/metro/10989__.js";
+import _modDef10990 from "../../../_runtime/metro/10990__.js";
 import ShineAnimationDefault from "ShineAnimation.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -38,7 +38,7 @@ get_ActivityIndicator = fn(17);
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = {
   alert: { overflow: "hidden", paddingBottom: 24 },
   header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" },
@@ -50,11 +50,11 @@ let obj2 = {
     lineHeight: 16,
     textAlign: "center",
     marginTop: 20,
-    color: fn(5611).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+    color: fn(5653).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
   },
 };
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_10 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.TIER_0 === arg0) {
     const obj2 = { headerImage: { marginLeft: -27, width: 88, top: 18 } };
@@ -73,7 +73,7 @@ let closure_10 = createStyles.createStyles((arg0) => {
     return obj;
   }
 });
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_11 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.BUNDLE === arg0) {
     const obj2 = { animation: { borderRadius: 6 } };
@@ -141,48 +141,48 @@ export default function PremiumActivatedAlert(onClose) {
   obj6.style = tmp.alert;
   const obj7 = { style: tmp.header, source: null, children: null };
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result10 = _modDef10953;
+    let tmp4Result10 = _modDef10969;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result10 = _modDef10954;
+    tmp4Result10 = _modDef10970;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result10 = _modDef10955;
+    tmp4Result10 = _modDef10971;
   } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-    tmp4Result10 = _modDef10956;
+    tmp4Result10 = _modDef10972;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result10 = _modDef10957;
+    tmp4Result10 = _modDef10973;
   }
   obj7.source = tmp4Result10;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result11 = _modDef10962;
+    let tmp4Result11 = _modDef10978;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result11 = _modDef10963;
+    tmp4Result11 = _modDef10979;
   } else {
     if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
       if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
         if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result11 = _modDef10964;
+          tmp4Result11 = _modDef10980;
         }
       }
     }
-    tmp4Result11 = _modDef8287;
+    tmp4Result11 = _modDef8325;
   }
   const items = [React5(React3, { source: tmp4Result11, style: tmp9.logo }), ,];
   let tmp16Result = null;
   if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-    const obj9 = { source: _modDef10974, style: tmp.logoPlusPremiumGuild };
+    const obj9 = { source: _modDef10990, style: tmp.logoPlusPremiumGuild };
     tmp16Result = React5(React3, obj9);
   }
   items[1] = tmp16Result;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result12 = _modDef9623;
+    let tmp4Result12 = _modDef9498;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result12 = _modDef10958;
+    tmp4Result12 = _modDef10974;
   } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-    tmp4Result12 = _modDef10959;
+    tmp4Result12 = _modDef10975;
   } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-    tmp4Result12 = _modDef10960;
+    tmp4Result12 = _modDef10976;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-    tmp4Result12 = _modDef10961;
+    tmp4Result12 = _modDef10977;
   }
   const obj10 = { source: tmp4Result12, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
@@ -195,38 +195,38 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp4Result = common_AlertDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result14 = _modDef10965;
+      let tmp4Result14 = _modDef10981;
     } else {
-      tmp4Result14 = _modDef10966;
+      tmp4Result14 = _modDef10982;
     }
     tmp7Result = shared;
   } else {
     if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
       if (tmp7Result5.isThemeDark(tmp6)) {
-        let tmp4Result15 = _modDef10967;
+        let tmp4Result15 = _modDef10983;
       } else {
-        tmp4Result15 = _modDef10968;
+        tmp4Result15 = _modDef10984;
       }
       let tmp4Result18 = tmp4Result15;
       tmp7Result5 = shared;
     } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
       if (tmp7Result6.isThemeDark(tmp6)) {
-        let tmp4Result16 = _modDef10969;
+        let tmp4Result16 = _modDef10985;
       } else {
-        tmp4Result16 = _modDef10970;
+        tmp4Result16 = _modDef10986;
       }
       tmp4Result18 = tmp4Result16;
       tmp7Result6 = shared;
     } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
       if (tmp7Result7.isThemeDark(tmp6)) {
-        let tmp4Result17 = _modDef10971;
+        let tmp4Result17 = _modDef10987;
       } else {
-        tmp4Result17 = _modDef10972;
+        tmp4Result17 = _modDef10988;
       }
       tmp4Result18 = tmp4Result17;
       tmp7Result7 = shared;
     } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result18 = _modDef10973;
+      tmp4Result18 = _modDef10989;
     }
     const obj12 = { source: tmp4Result18, style: tmp11.animation };
     const items3 = [React5(tmp4Result13, obj12)];

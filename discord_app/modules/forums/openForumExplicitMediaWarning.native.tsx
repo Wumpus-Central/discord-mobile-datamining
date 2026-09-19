@@ -1,6 +1,6 @@
 // discord_app/modules/forums/openForumExplicitMediaWarning.native.tsx
 import jsxProd from "../../../_runtime/react/00021_jsxProd.js";
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -12,7 +12,7 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
   importDefault = arg1;
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(9633, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(9508, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -23,5 +23,6 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
         };
       });
     },
+    isDismissable: false,
   });
 }

@@ -7,13 +7,13 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(4743).ParticipantTypes;
+const ParticipantTypes = fn(4777).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let obj = { FULL: 212, [212]: "FULL", HALF: 112, [112]: "HALF", THIRD: 112, [112]: "THIRD" };
 const result = obj.FULL * 1.7777777777777777;
 const result1 = obj.HALF * 1.7777777777777777;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { marginHorizontal: 4, marginVertical: 4, alignItems: "center", flex: 1 },
   full: { height: obj.FULL },
@@ -45,7 +45,7 @@ let obj5 = {
   backgroundColor: null,
   borderRadius: 6,
 };
-const ColorUtils = fn(4571);
+const ColorUtils = fn(4605);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj2.nameplateContainer = obj5;
 let obj4 = {

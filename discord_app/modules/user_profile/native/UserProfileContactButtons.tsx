@@ -43,19 +43,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8420).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8458).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7358)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7402)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8420);
+  let obj = user(8458);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(13309).useGameFriendsForUser(user.id);
-  const tmp3Result = user(13309);
+  const gameFriendsForUser = user(13354).useGameFriendsForUser(user.id);
+  const tmp3Result = user(13354);
   const items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(4566).useName(user);
+  userDisplayName = tmp(4600).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -64,9 +64,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13374).UserClockIcon;
+          let UserPlusIcon = tmp3(13430).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4658).UserPlusIcon;
+          UserPlusIcon = tmp3(4692).UserPlusIcon;
         }
         const intl = tmp3(1115).intl;
         const string = intl.string;
@@ -117,7 +117,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 },
   flexGrow: { flex: 1 },
@@ -146,6 +146,7 @@ export default function UserProfileContactButtons(user) {
     trackUserProfileAction({ action: "VOICE_CALL" });
     navigateToLastChannelDefault();
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
+    ModalActionCreatorsDefault.popAll();
   });
   onPress = tmp6.handlePress;
   ({ text, inCall, accessibilityHint } = tmp6);

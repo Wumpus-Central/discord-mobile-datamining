@@ -91,8 +91,8 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
       colorString: null,
       colorStrings: null,
       colorRoleId: "call",
-      hoistRoleId: "width",
-      iconRoleId: "channel",
+      hoistRoleId: "np",
+      iconRoleId: "fileFinishedImporting",
       highestRoleId: "accessible",
     };
   } else {

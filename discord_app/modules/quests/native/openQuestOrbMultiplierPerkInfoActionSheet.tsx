@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/openQuestOrbMultiplierPerkInfoActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/quests/native/openQuestOrbMul
 
 export default function openQuestOrbMultiplierPerkInfoActionSheet(multiplier, orbMultiplierEligibility) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(15373, dependencyMap.paths),
+    asyncRequireImpl(15428, dependencyMap.paths),
     "QuestOrbMultiplierPerkInfoActionSheet",
     { multiplier, orbMultiplierEligibility },
   );

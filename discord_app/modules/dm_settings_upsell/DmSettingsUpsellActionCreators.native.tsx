@@ -1,6 +1,6 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellActionCreators.native.tsx
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import asyncRequireImpl from "../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import DmSettingsUpsellUtils from "DmSettingsUpsellUtils.tsx";
 import DmSettingsUpsellConstants from "DmSettingsUpsellConstants.tsx";
@@ -22,7 +22,7 @@ export default {
       }
     }
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17674, dependencyMap.paths),
+      asyncRequireImpl(17754, dependencyMap.paths),
       "dm_settings_upsell_modal",
       { guildId },
     );

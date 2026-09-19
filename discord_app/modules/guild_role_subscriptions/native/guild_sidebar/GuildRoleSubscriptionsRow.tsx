@@ -1,20 +1,20 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsRow.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import router_utils from "../../../routing/router_utils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BaseChannelItemDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
-import _modDef13021 from "../../../../../_runtime/metro/13021__.js";
+import _modDef13030 from "../../../../../_runtime/metro/13030__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Routes = fn(1074).Routes;
-const StaticChannelRoute = fn(1965).StaticChannelRoute;
+const StaticChannelRoute = fn(2048).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: {
-    marginVertical: fn(10361).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -35,14 +35,14 @@ export default function GuildRoleSubscriptionsRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
   }, items);
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16463, dependencyMap.paths), c1, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16539, dependencyMap.paths), c1, {
       guildId: id,
       onClose() {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);
       },
     });
   }, items1);
-  const ChannelModes = id(12622).ChannelModes;
+  const ChannelModes = id(12631).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -70,8 +70,8 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1115).intl;
   obj2.name = intl2.string(tmp6(1115).t["KzCF/6"]);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp6(12622).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp6(12622).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef13021 });
+  obj.name = jsx(tmp6(12631).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp6(12631).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef13030 });
   return (
     <tmp8
       onPress={callback}

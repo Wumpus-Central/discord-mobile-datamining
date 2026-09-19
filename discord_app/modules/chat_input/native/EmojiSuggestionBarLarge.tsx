@@ -96,9 +96,9 @@ function renderEmojiSuggestionBarLargeItem(key, arg1, transitionState, cleanUp) 
   return <EmojiSuggestionBarLargeAnimated key={key} />;
 }
 const View = fn(17).View;
-const IMAGE_SIZE = fn(10531).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10547).IMAGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { containerLargeWrapper: { overflow: "hidden" }, containerLarge: null, emptySlot: null };
   let str = "space-between";

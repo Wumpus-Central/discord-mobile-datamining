@@ -1,5 +1,5 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleCreateModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting(
 export default {
   open() {
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(17951, dependencyMap.paths),
+      asyncRequireImpl(18031, dependencyMap.paths),
       undefined,
       GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY,
     );

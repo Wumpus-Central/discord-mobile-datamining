@@ -7,12 +7,12 @@ import v1 from "../../../../_runtime/01255_v1.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import EmbeddedActivitiesActionCreators from "../EmbeddedActivitiesActionCreators.tsx";
 import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import getPostMessageJavaScriptDefault from "getPostMessageJavaScript.tsx";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
 import WebViewPostMessageTransportDefault from "../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
-import _modDef9814 from "../../../../_runtime/metro/09814__.js";
+import EmbeddedActivitiesActionCreators from "../EmbeddedActivitiesActionCreators.tsx";
+import _modDef9620 from "../../../../_runtime/metro/09620__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
@@ -47,11 +47,11 @@ let closure_14 = async function _postMessageToWebView(arg0) {
   }
   return value;
 };
-let closure_7 = fn(1921).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+let closure_7 = fn(2004).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, ComponentActions: closure_9 } = Constants);
-const TransportTypes = fn(4626).TransportTypes;
-const WebView = fn(8530);
+const TransportTypes = fn(4660).TransportTypes;
+const WebView = fn(8568);
 const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
 const PlatformUtils = fn(1364);
 let nativeEventEmitter = null;
@@ -267,7 +267,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   };
   const intl = util.intl;
   obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef9814;
+  obj2.icon = _modDef9620;
   ToastActionCreatorsDefault.open(obj2);
 };
 prototype["releaseWebView"] = function releaseWebView() {

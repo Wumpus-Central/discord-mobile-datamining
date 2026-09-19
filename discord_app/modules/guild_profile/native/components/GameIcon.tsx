@@ -3,14 +3,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Pressables = FireIcon(5292);
-const FireIcon2 = FireIcon(9436);
+const Pressables = FireIcon(5334);
+const FireIcon2 = FireIcon(10024);
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
 let size = {
   width: 32,

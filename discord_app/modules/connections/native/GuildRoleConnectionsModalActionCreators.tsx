@@ -1,5 +1,5 @@
 // discord_app/modules/connections/native/GuildRoleConnectionsModalActionCreators.tsx
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/connections/native/GuildRoleC
 export const openGuildRoleConnectionsModal = function openGuildRoleConnectionsModal(guildId) {
   const onClose = guildId.onClose;
   ModalActionCreatorsDefault.pushLazy(
-    onClose(1897)(11810, dependencyMap.paths),
+    onClose(1980)(11819, dependencyMap.paths),
     {
       guildId: guildId.guildId,
       onClose() {
@@ -33,7 +33,7 @@ export const openGuildRoleConnectionsConnectAccountModal = function openGuildRol
 ) {
   const obj = ActionSheetActionCreatorsDefault;
   obj.openLazy(
-    asyncRequireImpl(11802, dependencyMap.paths),
+    asyncRequireImpl(11811, dependencyMap.paths),
     "GuildRoleConnectionsConnectAccountsActionSheet-" + verificationRole.id,
     { role: verificationRole, guildId },
   );

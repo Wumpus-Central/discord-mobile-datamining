@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx
-import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import MonitoringAgentDefault from "../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import VideoQuestUtils from "../../utils/VideoQuestUtils.tsx";
 import AdsVideoTypes from "../AdsVideoTypes.tsx";

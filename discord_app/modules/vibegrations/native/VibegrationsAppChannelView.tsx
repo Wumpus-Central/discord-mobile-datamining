@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsAppChannelView.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import FramesNativeManagerDefault from "../../frames/native/FramesNativeManager.tsx";
+import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../frames/FramesStore.tsx";
@@ -12,11 +12,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FramesConstants = fn(9749);
+const FramesConstants = fn(9313);
 ({ EmbeddedSurfaceType: closure_9, FrameLayoutModes: c10, isLaunched: closure_11 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_14 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { flex: 1, paddingBottom },

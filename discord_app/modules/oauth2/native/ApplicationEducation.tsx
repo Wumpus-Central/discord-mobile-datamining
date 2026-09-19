@@ -5,8 +5,8 @@ import FriendsIcon from "../../../design/components/Icon/native/redesign/generat
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import OAuth2Scopes from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import useIsSocialLayerParentApplicationDefault from "../../applications/useIsSocialLayerParentApplication.tsx";
+import GameControllerIcon from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import ChatSmileIcon from "../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
 import AuthorizeFormSeparator from "AuthorizeFormSeparator.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -32,7 +32,7 @@ const View = fn(17).View;
 const MAX_FRIENDS = fn(1074).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   applicationEducation: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 12 },

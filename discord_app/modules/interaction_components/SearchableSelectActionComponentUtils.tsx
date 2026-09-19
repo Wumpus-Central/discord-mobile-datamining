@@ -43,10 +43,10 @@ export const queryMentionables = function queryMentionables(type, query, channel
       checkRecentlyTalkedOnEmptyQuery: false,
       limit: 15,
     };
-    const obj = channel(5612);
-    ({ users, roles } = channel(5612).queryMentionResults(obj2));
+    const obj = channel(5654);
+    ({ users, roles } = channel(5654).queryMentionResults(obj2));
     const items = [];
-    const queryMentionResultsResult = channel(5612).queryMentionResults(obj2);
+    const queryMentionResultsResult = channel(5654).queryMentionResults(obj2);
     HermesBuiltin.arraySpread(
       roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
       HermesBuiltin.arraySpread(
@@ -97,7 +97,7 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
   );
   const defaultValues = selectActionComponent.defaultValues;
   let channelTypes;
-  if (selectActionComponent.type === channelTypes(1895).ComponentType.CHANNEL_SELECT) {
+  if (selectActionComponent.type === channelTypes(1978).ComponentType.CHANNEL_SELECT) {
     channelTypes = selectActionComponent.channelTypes;
   }
   if (channelTypes === undefined) {
@@ -172,17 +172,17 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type !== channelTypes(1895).ComponentType.USER_SELECT) {
+  if (type !== channelTypes(1978).ComponentType.USER_SELECT) {
     let type1;
     if (interactionComponentState != null) {
       type1 = interactionComponentState.type;
     }
-    if (type1 !== tmp2(1895).ComponentType.ROLE_SELECT) {
+    if (type1 !== tmp2(1978).ComponentType.ROLE_SELECT) {
       let type2;
       if (interactionComponentState != null) {
         type2 = interactionComponentState.type;
       }
-      if (type2 !== tmp2(1895).ComponentType.MENTIONABLE_SELECT) {
+      if (type2 !== tmp2(1978).ComponentType.MENTIONABLE_SELECT) {
         let type3;
         if (interactionComponentState != null) {
           type3 = interactionComponentState.type;

@@ -13,12 +13,12 @@ function announceActioned(intl) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_5 = createStyles.createStyles(() => ({
   container: { overflow: "hidden" },
   actionStatus: { position: "absolute" },
 }));
-let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(4718).Text);
+let closure_7 = ReanimatedRexport.createAnimatedComponent(fn(4752).Text);
 const __initData = {
   code: "function ActionStatusSubLabelTsx1(){const{hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};}",
 };
@@ -37,6 +37,7 @@ const __initData5 = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
 
+export const ACTION_STATUS_SUB_LABEL_LINE_HEIGHT = 16;
 export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   let num = lineHeight.lineHeight;
   if (num === undefined) {
@@ -55,48 +56,37 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   const fontScale = num(actionStatusAccessibilityLabel[6]).useFontScale();
   const tmp3 = fontScale();
   let obj = num(actionStatusAccessibilityLabel[6]);
-  class L {
-    constructor() {
-      tmp = closure_4;
-      if (closure_4) {
-        tmp2 = actioned;
-        tmp = !actioned.get();
-      }
-      result = c0 * closure_5;
-      result1 = result;
-      if (tmp) {
-        num = 2;
-        result1 = 2 * result;
-      }
-      withTimingResult = result1;
-      if (animate) {
-        obj = actioned;
-        withTimingResult = result1;
-        if (actioned.get()) {
-          tmp6 = closure_0;
-          tmp7 = closure_2;
-          obj2 = closure_0(closure_2[7]);
-          obj3 = closure_0(closure_2[4]);
-          num2 = 0;
-          if (obj.get()) {
-            num2 = 1;
-          }
-          result2 = result;
-          if (tmp) {
-            num3 = 2;
-            result2 = 2 * result;
-          }
-          items = [,];
-          items[0] = result2;
-          items[1] = result;
-          withTimingResult = obj2.withTiming(obj3.interpolate(num2, [0, 1], items));
-        }
-      }
-      return { height: withTimingResult };
+  const fn = function x() {
+    let tmp = closure_4;
+    if (closure_4) {
+      tmp = !actioned.get();
     }
-  }
+    const result = num * fontScale;
+    let result1 = result;
+    if (tmp) {
+      result1 = 2 * result;
+    }
+    let height = result1;
+    if (animate) {
+      height = result1;
+      if (actioned.get()) {
+        const obj2 = timing;
+        let num2 = 0;
+        if (actioned.get()) {
+          num2 = 1;
+        }
+        let result2 = result;
+        if (tmp) {
+          result2 = 2 * result;
+        }
+        const items = [result2, result];
+        height = obj2.withTiming(ReanimatedRexport2.interpolate(num2, [0, 1], items));
+      }
+    }
+    return { height };
+  };
   let obj2 = num(actionStatusAccessibilityLabel[4]);
-  L.__closure = {
+  fn.__closure = {
     hasSecondLine: tmp,
     actioned,
     lineHeight: num,
@@ -105,9 +95,9 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
     withTiming: num(actionStatusAccessibilityLabel[7]).withTiming,
     interpolate: num(actionStatusAccessibilityLabel[4]).interpolate,
   };
-  L.__workletHash = 14210085997091;
-  L.__initData = __initData;
-  const animatedStyle = obj2.useAnimatedStyle(L);
+  fn.__workletHash = 14210085997091;
+  fn.__initData = __initData;
+  const animatedStyle = obj2.useAnimatedStyle(fn);
   let obj3 = {
     hasSecondLine: tmp,
     actioned,
@@ -117,7 +107,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
     withTiming: num(actionStatusAccessibilityLabel[7]).withTiming,
     interpolate: num(actionStatusAccessibilityLabel[4]).interpolate,
   };
-  const fn = function y() {
+  const fn2 = function y() {
     num = 0;
     if (actioned.get()) {
       num = num * fontScale;
@@ -138,7 +128,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
     return obj4;
   };
   let obj4 = num(actionStatusAccessibilityLabel[4]);
-  fn.__closure = {
+  fn2.__closure = {
     actioned,
     lineHeight: num,
     fontScale,
@@ -146,9 +136,9 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
     withTiming: num(actionStatusAccessibilityLabel[7]).withTiming,
     interpolate: num(actionStatusAccessibilityLabel[4]).interpolate,
   };
-  fn.__workletHash = 1040596522101;
-  fn.__initData = __initData2;
-  const animatedStyle1 = obj4.useAnimatedStyle(fn);
+  fn2.__workletHash = 1040596522101;
+  fn2.__initData = __initData2;
+  const animatedStyle1 = obj4.useAnimatedStyle(fn2);
   let obj5 = {
     actioned,
     lineHeight: num,
@@ -235,7 +225,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   Y.__closure = { actioned };
   Y.__workletHash = 9609826744629;
   Y.__initData = __initData4;
-  const fn2 = function v(arg0, arg1) {
+  const fn3 = function v(arg0, arg1) {
     let tmp = arg0;
     if (arg0) {
       tmp = false === arg1;
@@ -248,14 +238,14 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
     }
   };
   const obj8 = num(actionStatusAccessibilityLabel[4]);
-  fn2.__closure = {
+  fn3.__closure = {
     actionStatusAccessibilityLabel,
     runOnJS: num(actionStatusAccessibilityLabel[4]).runOnJS,
     announceActioned,
   };
-  fn2.__workletHash = 14141240445417;
-  fn2.__initData = __initData5;
-  const animatedReaction = obj8.useAnimatedReaction(Y, fn2);
+  fn3.__workletHash = 14141240445417;
+  fn3.__initData = __initData5;
+  const animatedReaction = obj8.useAnimatedReaction(Y, fn3);
   const obj10 = { style: null, children: null };
   let items = [tmp3.container, animatedStyle];
   obj10.style = items;

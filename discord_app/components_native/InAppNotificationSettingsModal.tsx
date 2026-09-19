@@ -30,7 +30,7 @@ function ConnectedInAppNotificationSettingsScreen(channel) {
     }),
   });
 }
-const isMultiUserDM = fn(1962).isMultiUserDM;
+const isMultiUserDM = fn(2045).isMultiUserDM;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
@@ -141,11 +141,11 @@ export default noop.memo((channelId) => {
         obj.title = intl.string(channelId(1115).t.h850Ss);
         let channelName = null;
         if (null != closure_0) {
-          const tmp3Result = channelId(4875);
+          const tmp3Result = channelId(4909);
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(5794).NavigatorHeader, obj);
+        return closure_2_11(channelId(5836).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -155,5 +155,5 @@ export default noop.memo((channelId) => {
     obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
     return obj;
   }, items);
-  return closure_11(channelId(7196).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(7240).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });

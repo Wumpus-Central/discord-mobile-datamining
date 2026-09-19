@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 let jsx = fn(21).jsx;
 const constants = { METHOD_SELECT: "METHOD_SELECT", VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = {
   headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
 };

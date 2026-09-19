@@ -273,7 +273,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined,
   });
-  const favoritesCategories = favoriteChannels(10465).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(10481).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -625,12 +625,12 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
   };
 }
-const ChannelRecord = fn(1962);
+const ChannelRecord = fn(2045);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: c10 } = ChannelRecord);
-let closure_19 = fn(4360).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(1971);
+let closure_19 = fn(4394).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(2054);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(7730).ChannelListChannelNoticeRow;
+const constants = fn(7774).ChannelListChannelNoticeRow;
 const Permissions = fn(1085).Permissions;
 let items = [
   EmbeddedActivitiesStore,

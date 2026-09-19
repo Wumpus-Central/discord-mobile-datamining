@@ -1,12 +1,12 @@
 // discord_app/modules/group_dm/native/openGroupDMNitroCapLimitSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/group_dm/native/openGroupDMNitroCapLimitSheet.tsx");
 
 export default function openGroupDMNitroCapLimitSheet(location) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11836, dependencyMap.paths), "GroupDMNitroCapLimitSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11845, dependencyMap.paths), "GroupDMNitroCapLimitSheet", {
     location,
   });
 }

@@ -15,7 +15,15 @@ export default function confirmActivityChangeModal(name, channel, onConfirm, onC
   if (null != channel) {
     str = useChannelName.computeChannelName(channel, UserStore, RelationshipStore);
   }
-  const obj3 = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
+  const obj3 = {
+    title: null,
+    cancelText: null,
+    confirmText: null,
+    onConfirm: null,
+    onCancel: null,
+    body: null,
+    isDismissable: false,
+  };
   const intl = util.intl;
   obj3.title = intl.string(util.t.XkIWkk);
   const intl2 = util.intl;

@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresGuildScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ChannelListState from "../../../guild_sidebar/ChannelListState.tsx";
@@ -121,7 +121,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: {
     flex: 1,
@@ -192,9 +192,9 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   const items2 = [ICYMIStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
   const tmp2Result = navigation(504);
-  const numberToCustomScoreResult = navigation(8582).numberToCustomScore(stateFromStores1);
+  const numberToCustomScoreResult = navigation(8620).numberToCustomScore(stateFromStores1);
   noop = numberToCustomScoreResult;
-  const tmp2Result3 = navigation(8582);
+  const tmp2Result3 = navigation(8620);
   const items3 = [ChannelListStore];
   guildChannels = navigation(504).useStateFromStoresObject(items3, () =>
     ChannelListStore.getGuild(guildId),
@@ -314,6 +314,6 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   obj4.renderItem = callback;
   obj4.data = memo;
   obj4.keyExtractor = keyExtractor;
-  obj3.children = closure_11(navigation(8957).AnimatedFlashList, obj4);
+  obj3.children = closure_11(navigation(8996).AnimatedFlashList, obj4);
   return closure_11(guildChannels, obj3);
 }

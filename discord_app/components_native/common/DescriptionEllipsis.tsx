@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_1, jsxs: c2 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { topicEllipsis: null, topicEllipsisDot: null };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,

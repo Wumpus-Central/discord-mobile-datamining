@@ -60,7 +60,7 @@ let items3 = [SurveyStore];
 obj3.stores = items3;
 items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj4 = { alertWrapper: null, alertContentWrapper: null };
 let obj6 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -175,8 +175,8 @@ AlertWrapper.prototype["render"] = function render() {
   obj2.children = closure_1_14(KeyboardAwareViewDefault, obj3);
   return map1(Dialog.Dialog, obj2);
 };
-AlertWrapper.contextType = fn(4432).ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "isArray", renderKey: "accessible", props: "ty" });
+AlertWrapper.contextType = fn(4466).ThemeContext;
+let closure_18 = Object.freeze({ renderAlert: "getChannel", renderKey: "call", props: "right" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -208,7 +208,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "isArray", renderKey: "accessible", props: "ty" };
+        return { renderAlert: "getChannel", renderKey: "call", props: "right" };
       }
     }
   });

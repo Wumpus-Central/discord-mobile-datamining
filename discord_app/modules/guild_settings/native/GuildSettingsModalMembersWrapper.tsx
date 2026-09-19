@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSe
 export default noop.memo((guildId) => {
   guildId = guildId.guildId;
   return jsx(
-    importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16832 : 16834),
+    importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 16912 : 16914),
     { guildId },
   );
 });

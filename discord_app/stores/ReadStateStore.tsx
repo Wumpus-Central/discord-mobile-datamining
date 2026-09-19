@@ -6,7 +6,7 @@ import DurationsDefault from "../utils/Durations.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import AppStateStore from "native/AppStateStore.tsx";
-import asyncRequireImpl from "../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/01980_asyncRequireImpl.js";
 import TypeUtils from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
 import ThreadActionUtils from "../modules/threads/ThreadActionUtils.tsx";
 import BasicPermissionUtilsDefault from "../utils/BasicPermissionUtils.tsx";
@@ -488,9 +488,9 @@ function mergeForGuild(guild) {
   }
   const value3 = obj.get(guild.id, tmp3.GUILD_HOME);
   const obj4 = id(11);
-  const tmp12 = id(4314);
-  const tmp12Result = id(4314)(Date.now());
-  value3.lastMessageId = obj4.fromTimestamp(id(4314)(Date.now()).subtract(24, "h").valueOf());
+  const tmp12 = id(4348);
+  const tmp12Result = id(4348)(Date.now());
+  value3.lastMessageId = obj4.fromTimestamp(id(4348)(Date.now()).subtract(24, "h").valueOf());
   guild = GuildStore.getGuild(guild.id);
   if (null != guild) {
     let prop2;
@@ -503,7 +503,7 @@ function mergeForGuild(guild) {
       value4.lastMessageId = prop2;
     }
   }
-  const subtractResult = id(4314)(Date.now()).subtract(24, "h");
+  const subtractResult = id(4348)(Date.now()).subtract(24, "h");
 }
 function mergeRelationships(relationships) {
   const currentUser = UserStore.getCurrentUser();
@@ -715,25 +715,25 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(7722).isEventUpcoming;
-const ChannelRecord = fn(1962);
+const isEventUpcoming = fn(7766).isEventUpcoming;
+const ChannelRecord = fn(2045);
 ({ isReadableType: closure_17, isThread: closure_18, isPrivate: closure_19, ALL_CHANNEL_TYPES: closure_20, THREAD_CHANNEL_TYPES: closure_21 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_36, AnalyticsObjects: closure_37, AnalyticsSections: closure_38, Endpoints: closure_39, ChannelLayouts: closure_40, OverlayWidgets, CURRENT_APP_CONTEXT: closure_41, ChannelTypes: closure_42, BasicPermissions } = Constants);
 ({ Permissions: closure_44, MessageTypes: closure_45, RelationshipTypes: closure_46, ChannelTypesSets: closure_47, UserNotificationSettings: closure_48, MessageTypesSets: closure_49, AppStates: closure_50 } = Constants);
-const ActivityPanelConstants = fn(9743);
+const ActivityPanelConstants = fn(9314);
 ({ ActivityPanelModes: closure_51, FocusedActivityLayouts: closure_52 } = ActivityPanelConstants);
-const ChannelConstants = fn(1965);
+const ChannelConstants = fn(2048);
 ({ ChannelFlags: closure_53, isStaticChannelRoute: closure_54 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(1964).GuildScheduledEventStatus;
-const ReadStateTypes = fn(4904).ReadStateTypes;
+const GuildScheduledEventStatus = fn(2047).GuildScheduledEventStatus;
+const ReadStateTypes = fn(4938).ReadStateTypes;
 const ThreadMemberFlags = fn(1114).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 function isOverlayChannelVisible() {
   return false;
 }
-if (fn(14043).OVERLAY_SUPPORTED) {
-  isOverlayChannelVisible = fn(14044).isOverlayChannelVisible;
+if (fn(14097).OVERLAY_SUPPORTED) {
+  isOverlayChannelVisible = fn(14098).isOverlayChannelVisible;
 }
 function handleMessageDelete(channelId) {
   value = ReadState.get(channelId.channelId);
@@ -1944,14 +1944,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(14047, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(14101, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(14047, dependencyMap.paths);
+          const promise = asyncRequireImpl(14101, dependencyMap.paths);
         }
       }
     });
@@ -3574,7 +3574,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "bindOpenRoleSubscriptionOverview", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "PX_16", isExplicitUserAction: "SET_ICYMI_FILTERS", trackAnalytics: null });
     });
     if (context === closure_1_41) {
       const push = navigation.push;

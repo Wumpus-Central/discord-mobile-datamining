@@ -1,5 +1,5 @@
 // discord_app/modules/forums/native/composer/ForumComposerModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import tracking_Tracking from "../../tracking/Tracking.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -25,7 +25,7 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
     location: guildId.analyticsLocationObject,
   };
   tmp4 = null != guildId.isEdit && guildId.isEdit;
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10493, dependencyMap.paths), guildId, c3);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10509, dependencyMap.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;

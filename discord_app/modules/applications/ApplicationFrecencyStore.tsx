@@ -28,7 +28,7 @@ function handleUserSettingsProtoStoreChange() {
   );
 }
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-let items = [fn(1895).ApplicationCommandType.CHAT, fn(1895).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1978).ApplicationCommandType.CHAT, fn(1978).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 let global = { pendingUsages: [] };
 let obj = {
   computeBonus() {

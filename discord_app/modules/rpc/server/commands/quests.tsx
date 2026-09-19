@@ -2,9 +2,9 @@
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import QuestTaskUtils from "../../../quests/utils/QuestTaskUtils.tsx";
-import QuestMatchingUtils from "../../../quests/utils/QuestMatchingUtils.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
+import QuestMatchingUtils from "../../../quests/utils/QuestMatchingUtils.tsx";
 import QuestStore from "../../../quests/QuestStore.tsx";
 
 require = fn;
@@ -12,7 +12,7 @@ const Constants = fn(1074);
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
 obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = {
-  scope: fn(8571).OAuth2Scopes.IDENTIFY,
+  scope: fn(8609).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -48,7 +48,7 @@ obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = {
   },
 };
 let obj2 = {
-  scope: fn(8571).OAuth2Scopes.IDENTIFY,
+  scope: fn(8609).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -84,7 +84,7 @@ let obj2 = {
   },
 };
 obj[RPCCommands.QUEST_START_TIMER] = {
-  scope: fn(8571).OAuth2Scopes.IDENTIFY,
+  scope: fn(8609).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -123,7 +123,7 @@ obj[RPCCommands.QUEST_START_TIMER] = {
   },
 };
 let obj3 = {
-  scope: fn(8571).OAuth2Scopes.IDENTIFY,
+  scope: fn(8609).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -162,7 +162,7 @@ let obj3 = {
   },
 };
 obj[RPCCommands.GET_QUEST] = {
-  scope: fn(8571).OAuth2Scopes.IDENTIFY,
+  scope: fn(8609).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const result = RPCHelpers.validatePostMessageTransport(socket.transport);

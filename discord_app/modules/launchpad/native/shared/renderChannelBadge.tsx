@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/shared/renderChannelBadge.tsx
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import NumberUtils from "../../../../utils/NumberUtils.tsx";
+import NumberUtils from "../../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import NewBadgeDefault from "../../../channel_list_v2/native/components/NewBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

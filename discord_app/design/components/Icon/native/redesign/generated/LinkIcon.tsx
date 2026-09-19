@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/LinkIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod4665 from "../../../../../../../_runtime/metro/04665__.js";
+import _mod4699 from "../../../../../../../_runtime/metro/04699__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const LinkIcon = function LinkIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4665, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4699, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

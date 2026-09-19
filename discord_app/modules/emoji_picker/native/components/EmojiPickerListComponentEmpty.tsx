@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06820_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06864_BottomSheetModal.js";
 import SearchEmpty from "../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   emptyStateContainer: { padding: 0, flex: 1 },
   emptyStateBody: { color: nativeDefault.colors.TEXT_SUBTLE },

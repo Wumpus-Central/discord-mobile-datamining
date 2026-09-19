@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/native/GuildTag.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildTagUtils from "../GuildTagUtils.tsx";
@@ -11,10 +11,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(8163).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8201).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   container: {
     flexDirection: "row",

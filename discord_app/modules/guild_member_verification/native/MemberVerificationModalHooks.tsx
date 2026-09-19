@@ -7,7 +7,7 @@ import InitialMemberVerificationStore from "InitialMemberVerificationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const setInitialVerification = fn(5745).setInitialVerification;
+const setInitialVerification = fn(5787).setInitialVerification;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 

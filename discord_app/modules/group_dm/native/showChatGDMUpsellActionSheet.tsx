@@ -1,5 +1,5 @@
 // discord_app/modules/group_dm/native/showChatGDMUpsellActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/group_dm/native/showChatGDMUp
 
 export default function showChatGDMUpsellActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11843, dependencyMap.paths),
+    asyncRequireImpl(11852, dependencyMap.paths),
     "ChatGDMUpsellActionSheet",
     arg0,
   );

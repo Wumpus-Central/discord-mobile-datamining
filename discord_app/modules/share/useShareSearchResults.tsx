@@ -8,7 +8,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import FrecencyStore from "../../stores/FrecencyStore.tsx";
 
 require = fn;
-const ALLOWED_TYPES = fn(11234).ALLOWED_TYPES;
+const ALLOWED_TYPES = fn(11247).ALLOWED_TYPES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 

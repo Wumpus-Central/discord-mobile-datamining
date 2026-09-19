@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/SpeakerSpotIllustration.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6672 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpeakerSpotIllustration-2x.png.js";
+import _modDef6716 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SpeakerSpotIllustration-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const SpeakerSpotIllustration = function SpeakerSpotIllustration(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef6672 };
+  const obj2 = { uri: _modDef6716 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

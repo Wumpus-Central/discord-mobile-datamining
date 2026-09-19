@@ -143,6 +143,17 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(DispatcherDefault,
   },
   MESSAGE_SEND_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   MESSAGE_EDIT_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
+  AUTO_MODERATION_CONTENT_DELETED: function handleAutomodContentDeleted(message) {
+    message = message.message;
+    let flag = null != message;
+    if (flag) {
+      const obj = { id: message.id, messageData: "PX_16", isBlockedEdit: null, errorMessage: tmp };
+      closure_8[message.id] = obj;
+      closure_9 = closure_9 + 1;
+      flag = true;
+    }
+    return flag;
+  },
   REMOVE_AUTOMOD_MESSAGE_NOTICE: function handleMessageNoticeRemove(arg0) {
     if (null != automodFailedMessages[arg0.messageId]) {
       delete tmp[tmp2];

@@ -616,7 +616,8 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
                     return closure_3_21(closure_0, obj);
                   };
                 });
-              }
+              },
+              isDismissable: false
             });
           });
           c3 = 3;
@@ -732,14 +733,14 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
 let closure_3 = ["succeededOnlyFields"];
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const PremiumPlanPurchasedStore = fn(7617);
+const PremiumPlanPurchasedStore = fn(7661);
 ({ setPaymentSuccess: closure_7, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
-const useGPlayAnalyticsStore = fn(9606).useGPlayAnalyticsStore;
-let Constants = fn(7434);
+const useGPlayAnalyticsStore = fn(9481).useGPlayAnalyticsStore;
+let Constants = fn(7478);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
-const OrderStatus = fn(4704).OrderStatus;
+const OrderStatus = fn(4738).OrderStatus;
 const SubscriptionPlanInfo = fn(1374).SubscriptionPlanInfo;
 const jsx = fn(21).jsx;
 let closure_22 = new LoggerDefault("GPlayManager.android");
@@ -750,7 +751,7 @@ let closure_26 = null;
 let closure_27 = null;
 let closure_28 = null;
 let closure_29 = null;
-const items = [fn(7436).ProductIds.PREMIUM_TIER_2_MONTHLY];
+const items = [fn(7480).ProductIds.PREMIUM_TIER_2_MONTHLY];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gplay/native/GPlayManager.android.tsx");
 

@@ -7,10 +7,10 @@ import utils_AvatarUtils from "native/AvatarUtils.tsx";
 import ImageLoaderUtils from "../modules/image_upload/ImageLoaderUtils.tsx";
 import _modDef1472 from "../../_runtime/metro/01472__.js";
 import ForceSdrEmojisStickersExperiment from "../modules/image_upload/ForceSdrEmojisStickersExperiment.tsx";
-import NumberUtils from "NumberUtils.tsx";
+import NumberUtils from "../../discord_common/js/shared/utils/NumberUtils.tsx";
 import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import CollectiblesAssetUtils from "../modules/collectibles/utils/CollectiblesAssetUtils.tsx";
-import _modDef1885 from "../../_runtime/metro/01885__.js";
+import _modDef1968 from "../../_runtime/metro/01968__.js";
 import Constants from "../Constants.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
@@ -442,7 +442,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp18;
     if (fallbackAvatar) {
-      tmp18 = _modDef1885;
+      tmp18 = _modDef1968;
     }
     return tmp18;
   }

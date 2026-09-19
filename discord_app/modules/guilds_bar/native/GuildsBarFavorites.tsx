@@ -6,11 +6,11 @@ import FavoriteStore from "../../favorites/FavoriteStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const FAVORITES = fn(1074).FAVORITES;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = "more-options";
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { anchor: null };
 let size = {
   position: "absolute",
@@ -25,23 +25,23 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFavorites.tsx");
 
 export default noop.memo(function GuildsBarFavorites() {
-  let obj = shouldShowPopover(16551);
-  const guildsBarAnimatedWrapperStyles = shouldShowPopover(16551).useGuildsBarAnimatedWrapperStyles();
-  const isFavoritesGuildSelected = shouldShowPopover(10465).useIsFavoritesGuildSelected();
-  let obj2 = shouldShowPopover(10465);
+  let obj = shouldShowPopover(16627);
+  const guildsBarAnimatedWrapperStyles = shouldShowPopover(16627).useGuildsBarAnimatedWrapperStyles();
+  const isFavoritesGuildSelected = shouldShowPopover(10481).useIsFavoritesGuildSelected();
+  let obj2 = shouldShowPopover(10481);
   let items = [FavoriteStore];
   const stateFromStores = shouldShowPopover(504).useStateFromStores(items, () =>
     favoriteChannels.getFavoriteChannels(),
   );
   const obj3 = shouldShowPopover(504);
   const tmp5 = markPopoverAsDismissed;
-  ({ badge, unread } = markPopoverAsDismissed(16569)(stateFromStores));
-  const tmp6 = markPopoverAsDismissed(16569)(stateFromStores);
-  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16554)({ mentionCount: badge }));
+  ({ badge, unread } = markPopoverAsDismissed(16645)(stateFromStores));
+  const tmp6 = markPopoverAsDismissed(16645)(stateFromStores);
+  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16630)({ mentionCount: badge }));
   const ref = noop.useRef(null);
-  const tmp7 = markPopoverAsDismissed(16554)({ mentionCount: badge });
+  const tmp7 = markPopoverAsDismissed(16630)({ mentionCount: badge });
   const tmp9 = closure_11();
-  const favoritesIntroPopover = shouldShowPopover(10479).useFavoritesIntroPopover();
+  const favoritesIntroPopover = shouldShowPopover(10495).useFavoritesIntroPopover();
   shouldShowPopover = favoritesIntroPopover.shouldShowPopover;
   markPopoverAsDismissed = favoritesIntroPopover.markPopoverAsDismissed;
   const items1 = [shouldShowPopover, markPopoverAsDismissed];
@@ -51,7 +51,7 @@ export default noop.memo(function GuildsBarFavorites() {
         if (shouldShowPopover) {
           closure_1_1(constants.TAKE_ACTION);
         }
-        markPopoverAsDismissed(16566)(FAVORITES);
+        markPopoverAsDismissed(16642)(FAVORITES);
       },
       onLongPress() {
         markPopoverAsDismissed(dependencyMap[15])();
@@ -84,27 +84,27 @@ export default noop.memo(function GuildsBarFavorites() {
     config: memo,
     accessibilityActions,
     onAccessibilityAction,
-    label: "MEDIA_ENGINE_INTERACTION_REQUIRED",
-    externalChildren: false,
-    expandedChildren: "AUDIO_SET_KRISP_MODEL_OVERRIDE",
-    children: null,
+    label: "text-md/bold",
+    externalChildren: "text-overlay-light",
+    expandedChildren: null,
+    children: "heading-lg/semibold",
   };
-  const obj4 = shouldShowPopover(10479);
+  const obj4 = shouldShowPopover(10495);
   let intl = shouldShowPopover(1115).intl;
   obj5.label = intl.string(shouldShowPopover(1115).t.wMWyci);
   obj5.externalChildren = badge2;
-  obj5.expandedChildren = closure_8(shouldShowPopover(16570).HomeDrawerFavoritesRowExpandedChildren, {});
+  obj5.expandedChildren = closure_8(shouldShowPopover(16646).HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = markPopoverAsDismissed(576).colors;
-  obj5.children = closure_8(shouldShowPopover(10476).StarIcon, {
+  obj5.children = closure_8(shouldShowPopover(10492).StarIcon, {
     color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
   const children = [
-    closure_8(markPopoverAsDismissed(16551), obj5),
+    closure_8(markPopoverAsDismissed(16627), obj5),
     closure_8(View, { ref, style: tmp9.anchor, pointerEvents: "none", collapsable: false }),
   ];
   if (shouldShowPopover) {
     const obj8 = { targetRef: ref, markAsDismissed: markPopoverAsDismissed };
-    shouldShowPopover = closure_8(tmp5(16571), obj8);
+    shouldShowPopover = closure_8(tmp5(16647), obj8);
   }
   children[2] = shouldShowPopover;
   return closure_9(View, { children });

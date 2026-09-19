@@ -6,9 +6,9 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 const require = fn;
-const SoundboardStyleConstants = fn(17437);
+const SoundboardStyleConstants = fn(17514);
 ({ SOUNDS_PER_ROW: closure_7, SOUND_ROW_PADDING: closure_8 } = SoundboardStyleConstants);
-const ACTION_SHEET_MAX_WIDTH = fn(7347).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7391).ACTION_SHEET_MAX_WIDTH;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
 
@@ -52,11 +52,11 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
               const obj4 = { value, done: true };
               return obj4;
             } else if (c0) {
-              const FrecencyUserSettingsActionCreators = shouldFetch(1941).FrecencyUserSettingsActionCreators;
+              const FrecencyUserSettingsActionCreators = shouldFetch(2024).FrecencyUserSettingsActionCreators;
               const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
               c1 = 1;
               c0 = 1;
-              const obj5 = { value: shouldFetch(7534).maybeFetchSoundboardSounds(), done: false };
+              const obj5 = { value: shouldFetch(7578).maybeFetchSoundboardSounds(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {

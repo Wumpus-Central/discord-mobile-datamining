@@ -215,17 +215,17 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
   }
 }
 const View = fn(17).View;
-const GuildsNodeType = fn(5608).GuildsNodeType;
-const GuildsBarConstants = fn(16539);
+const GuildsNodeType = fn(5650).GuildsNodeType;
+const GuildsBarConstants = fn(16615);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11, GUILD_LIST_WIDTH } = GuildsBarConstants);
-const YouBarConstants = fn(15304);
+const YouBarConstants = fn(15359);
 ({ YOU_BAR_HEIGHT: closure_12, YOU_BAR_MARGIN: map1 } = YouBarConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_15 = createStyles.createStyles({
   wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH },
 });
-let closure_17 = { beforeItem: "PX_16", afterItem: "accessible" };
+let closure_17 = { beforeItem: "a", afterItem: "isArray" };
 let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
 const __initData = {
   code: "function GuildsBarUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}",

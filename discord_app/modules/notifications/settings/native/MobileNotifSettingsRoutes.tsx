@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2806 from "../../NotificationSettings.messages.js";
+import _modDef2808 from "../../NotificationSettings.messages.js";
 import BellIcon from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
 import notifications_NotificationSettingsUtils from "../../NotificationSettingsUtils.tsx";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
@@ -33,7 +33,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj3 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2806.S5cB9e);
+    return intl.string(_modDef2808.S5cB9e);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -58,7 +58,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj5 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2806["UzRF+8"]);
+    return intl.string(_modDef2808["UzRF+8"]);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -83,7 +83,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj7 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2806.zRKbpz);
+    return intl.string(_modDef2808.zRKbpz);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -108,7 +108,7 @@ let SettingBuilders = SettingBuilders_mod;
 const obj9 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2806.q5M7HV);
+    return intl.string(_modDef2808.q5M7HV);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {

@@ -1,22 +1,22 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalServerTagCustomize.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
 import GuildProfileActionCreators from "../../guild_profile/GuildProfileActionCreators.tsx";
+import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildSettingsStore from "../GuildSettingsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(9303).GuildProfileFetchStatus;
-const BADGES = fn(8163).BADGES;
+let GuildProfileFetchStatus = fn(9834).GuildProfileFetchStatus;
+const BADGES = fn(8201).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { flex: 1 },
   containerContent: { paddingTop: 16, paddingHorizontal: PX_16 },

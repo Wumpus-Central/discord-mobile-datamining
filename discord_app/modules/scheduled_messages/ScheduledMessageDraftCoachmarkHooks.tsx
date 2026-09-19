@@ -7,8 +7,8 @@ import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import DraftStore from "../../stores/DraftStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
-let closure_7 = fn(1944).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
+let closure_7 = fn(2027).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageDraftCoachmarkHooks.tsx");
 
@@ -19,9 +19,9 @@ export const useScheduledMessageDraftCoachmarkState = function useScheduledMessa
   let first;
   let connected;
   let isCoachmarkVisible;
-  let result = channel(4542).useIsDismissibleContentDismissed_UNSAFE(closure_7);
+  let result = channel(4576).useIsDismissibleContentDismissed_UNSAFE(closure_7);
   dependencyMap = result;
-  let obj = channel(4542);
+  let obj = channel(4576);
   const items = [isCoachmarkVisible];
   const stateFromStores = channel(504).useStateFromStores(
     items,

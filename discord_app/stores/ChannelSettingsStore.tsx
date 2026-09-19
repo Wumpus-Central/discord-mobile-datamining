@@ -7,7 +7,7 @@ import ChannelRecord from "../records/ChannelRecord.tsx";
 import ThreadSortOrder from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ForumLayout from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
 import GuildRecordUtils from "../utils/GuildRecordUtils.tsx";
-import _modDef4314 from "../../_runtime/metro/04314__.js";
+import _modDef4348 from "../../_runtime/metro/04348__.js";
 import ReactionUtils from "../modules/reactions/ReactionUtils.tsx";
 import UnicodeEmojisDefault from "../modules/emojis/UnicodeEmojis.tsx";
 import InviteRecord from "../records/InviteRecord.tsx";
@@ -110,7 +110,7 @@ function _createInvite(code) {
   }
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
-  obj.createdAt = _modDef4314(code.created_at);
+  obj.createdAt = _modDef4348(code.created_at);
   ({ type: obj.type, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }

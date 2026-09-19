@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting(
 );
 
 export const useIsMobileGameCollectionExperimentEnabled = function useIsMobileGameCollectionExperimentEnabled(
-  UserProfileWidgetsBoard,
+  UserProfileContent,
 ) {
-  return closure_0.useConfig({ location: UserProfileWidgetsBoard }).enabled;
+  return closure_0.useConfig({ location: UserProfileContent }).enabled;
 };

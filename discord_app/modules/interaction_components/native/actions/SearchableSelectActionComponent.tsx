@@ -1,6 +1,6 @@
 // discord_app/modules/interaction_components/native/actions/SearchableSelectActionComponent.tsx
 import Server from "../../../../flow/Server.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import SearchableSelectActionComponentUtils from "../../SearchableSelectActionComponentUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -120,16 +120,16 @@ export default function SearchableSelectActionComponent(defaultValues) {
           const obj2 = { selectionActionComponent: defaultValues };
           const combined = "ChannelSelectComponentActionSheet:" + customId;
           const merged = Object.assign(obj4);
-          obj3.openLazy(asyncRequireImpl(12070, dependencyMap.paths), combined, obj2);
-          const tmp14 = asyncRequireImpl(12070, dependencyMap.paths);
+          obj3.openLazy(asyncRequireImpl(12079, dependencyMap.paths), combined, obj2);
+          const tmp14 = asyncRequireImpl(12079, dependencyMap.paths);
         } else {
           const _HermesInternal = HermesInternal;
           const obj = ActionSheetActionCreatorsDefault;
           obj4 = { selectionActionComponent: defaultValues };
           const combined1 = "MentionableSelectComponentActionSheet:" + customId;
           const merged1 = Object.assign(obj4);
-          obj.openLazy(asyncRequireImpl(12066, dependencyMap.paths), combined1, obj4);
-          const tmp5 = asyncRequireImpl(12066, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(12075, dependencyMap.paths), combined1, obj4);
+          const tmp5 = asyncRequireImpl(12075, dependencyMap.paths);
         }
       };
       return <tmp4Result2 model={null} onTap={null} />;

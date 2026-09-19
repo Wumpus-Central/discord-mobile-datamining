@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileOverflowMenu.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -12,8 +12,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import SafetyToastsActionCreatorsDefault from "../../safety_common/SafetyToastsActionCreators.native.tsx";
 import ReportModals from "../../in_app_reports/ReportModals.tsx";
-import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
 import CallActionCreatorsDefault from "../../../actions/CallActionCreators.tsx";
+import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
 import UserProfileAlertUtils from "UserProfileAlertUtils.tsx";
 import openUserContextMenuCommandsDefault from "openUserContextMenuCommands.tsx";
 import GuildInviteUtils from "../../instant_invite/native/GuildInviteUtils.tsx";
@@ -28,7 +28,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(7404).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7448).UserProfileThemeTypes;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_11,
@@ -37,8 +37,8 @@ const Constants = fn(1074);
   NOOP: closure_14,
   RelationshipTypes: closure_15,
 } = Constants);
-const ParticipantTypes = fn(4743).ParticipantTypes;
-const RestrictionConfirmationConstants = fn(11634);
+const ParticipantTypes = fn(4777).ParticipantTypes;
+const RestrictionConfirmationConstants = fn(11643);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_17, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_18 } =
   RestrictionConfirmationConstants);
 const jsxProd = fn(21);
@@ -333,8 +333,8 @@ export default function UserProfileOverflowMenu(user) {
             obj2.channelId = id;
             obj2.onSuccess = onSuccess;
             obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-            obj.openLazy(asyncRequireImpl(11635, dependencyMap.paths), closure_2_17, obj2, "stack");
-            const tmp3 = asyncRequireImpl(11635, dependencyMap.paths);
+            obj.openLazy(asyncRequireImpl(11644, dependencyMap.paths), closure_2_17, obj2, "stack");
+            const tmp3 = asyncRequireImpl(11644, dependencyMap.paths);
           };
           push(obj14);
           if (result) {
@@ -397,8 +397,8 @@ export default function UserProfileOverflowMenu(user) {
           obj3.channelId = id;
           obj3.onSuccess = onSuccess;
           obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION;
-          obj2.openLazy(asyncRequireImpl(11636, dependencyMap.paths), collapsedCategories, obj3, "stack");
-          const tmp4 = asyncRequireImpl(11636, dependencyMap.paths);
+          obj2.openLazy(asyncRequireImpl(11645, dependencyMap.paths), collapsedCategories, obj3, "stack");
+          const tmp4 = asyncRequireImpl(11645, dependencyMap.paths);
         };
         items7.push(obj18);
       }
@@ -415,7 +415,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
           trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13364, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13420, dependencyMap.paths), {
             userId: id,
             showUserProfile,
           });

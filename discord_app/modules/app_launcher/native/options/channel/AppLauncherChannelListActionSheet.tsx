@@ -70,7 +70,7 @@ function ChannelListItem(arg0) {
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { channelIconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 const React7 = createStyles.createStyles(obj2);
 const size = fn(2);

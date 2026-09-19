@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { flex: 0, alignSelf: "stretch", marginBottom: 16, paddingHorizontal: 16 },
   title: { lineHeight: 16, marginBottom: 8 },
@@ -91,7 +91,7 @@ export default function Breadcrumbs(element) {
         const intl = require("util").intl;
         const string = intl.string;
         if (hasItem) {
-          prop = tmp7(2612)["6mx/DP"];
+          prop = tmp7(2614)["6mx/DP"];
           let stringResult = string(prop);
         } else {
           stringResult = string(tmp12(1115).t["+3V9Tp"]);

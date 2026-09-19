@@ -477,6 +477,7 @@ let closure_28 = async function _trackAppUIViewed() {
                 };
               });
             },
+            isDismissable: false,
           };
           closure_132_1(closure_132_2[27]).openLazy(obj14);
           const obj6 = closure_132_1(closure_132_2[27]);
@@ -602,8 +603,8 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7867).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(1965).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7905).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(2048).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1255);
 const load_id = v1.v4();

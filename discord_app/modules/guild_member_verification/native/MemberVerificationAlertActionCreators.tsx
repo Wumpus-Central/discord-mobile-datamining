@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationAlertActionCreators.tsx
 import util from "../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -19,7 +19,7 @@ export const openMemberVerificationSuccessAlert = function openMemberVerificatio
   const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(5698, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(5740, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -29,7 +29,8 @@ export const openMemberVerificationSuccessAlert = function openMemberVerificatio
           return <closure_0 />;
         };
       });
-    }
+    },
+    isDismissable: false
   });
 };
 export const openMemberVerificationPendingAlert = function openMemberVerificationPendingAlert(guildId, arg1) {
@@ -38,7 +39,7 @@ export const openMemberVerificationPendingAlert = function openMemberVerificatio
   const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
   actions_AlertActionCreatorsDefault.openLazy({
     importer() {
-      return asyncRequireImpl(5706, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(5748, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -54,7 +55,8 @@ export const openMemberVerificationPendingAlert = function openMemberVerificatio
           return <closure_0 />;
         };
       });
-    }
+    },
+    isDismissable: false
   });
 };
 export const openMemberVerificationCancelPendingAlert = function openMemberVerificationCancelPendingAlert(arg0) {
@@ -80,7 +82,8 @@ export const openMemberVerificationCancelPendingAlert = function openMemberVerif
           return closure_3_4(closure_0, obj);
         };
       });
-    }
+    },
+    isDismissable: false
   });
 };
 export const openMemberVerificationRejectedAlert = function openMemberVerificationRejectedAlert(canWithdraw) {
@@ -122,7 +125,8 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
                   return closure_3_4(closure_0, obj);
                 };
               });
-            }
+            },
+          isDismissable: false
         };
         actions_AlertActionCreatorsDefault.openLazy(obj5);
       } else {
@@ -139,9 +143,9 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
   dependencyMap = jsx(components_Button_Button.Button, obj);
   let result = onPress(1875).dismissGlobalKeyboard();
   let obj3 = onPress(1875);
-  onClose(5067).openLazy({
+  onClose(5109).openLazy({
     importer() {
-      return asyncRequireImpl(5714, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(5756, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -158,12 +162,13 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
           return <closure_0 />;
         };
       });
-    }
+    },
+    isDismissable: false
   });
-  let obj4 = onClose(5067);
+  let obj4 = onClose(5109);
   let obj5 = {
     importer() {
-      return asyncRequireImpl(5714, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(5756, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -180,7 +185,8 @@ export const openMemberVerificationRejectedAlert = function openMemberVerificati
           return <closure_0 />;
         };
       });
-    }
+    },
+    isDismissable: false
   };
 };
 export const openMemberVerificationUpdateAlert = function openMemberVerificationUpdateAlert() {
@@ -194,7 +200,8 @@ export const openMemberVerificationUpdateAlert = function openMemberVerification
           return closure_2_4(closure_0, {});
         };
       });
-    }
+    },
+    isDismissable: false
   });
 };
 export function closeMemberVerificationAlert(arg0) {
@@ -213,7 +220,7 @@ export const openMemberVerificationIncompleteAlert = function openMemberVerifica
   actions_AlertActionCreatorsDefault.openLazy({
     isDismissable: true,
     importer() {
-      return asyncRequireImpl(7288, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(7332, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

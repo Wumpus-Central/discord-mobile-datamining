@@ -8,7 +8,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4611);
+const GuildPowerupsConstants = fn(4645);
 ({
   GuildPowerupNewPerkMarketingVersion: hasOwnProperty,
   NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: metroRequire,
@@ -44,10 +44,21 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId, stateFro
     "useGuildPowerupNewPerkMarketingVersion",
   );
   const obj3 = require("ServerThemeExperiment");
+  const serverThemeUserEnabled = require("ServerThemeUserExperiment").useServerThemeUserEnabled(
+    "useGuildPowerupNewPerkMarketingVersion",
+  );
+  const obj4 = require("ServerThemeUserExperiment");
+  const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(
+    guildId,
+    "useGuildPowerupNewPerkMarketingVersion",
+  );
   if (serverThemeEnabled) {
-    serverThemeEnabled = obj4.useServerThemeUserEnabled("useGuildPowerupNewPerkMarketingVersion");
+    serverThemeEnabled = serverThemeUserEnabled;
   }
-  obj4 = require("ServerThemeUserExperiment");
+  if (serverThemeEnabled) {
+    serverThemeEnabled = !serverThemeRollbackEnabled;
+  }
+  const obj5 = require("ServerThemeExperiment");
   const items1 = [serverThemeEnabled, tmp4];
   const stateFromStores1 = tmp(504).useStateFromStores(items1, () =>
     PermissionStore.can(constants2.MANAGE_GUILD, GuildStore.getGuild(closure_0)),

@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/AvatarCapExample.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef5944 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
+import _modDef5988 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -29,7 +29,7 @@ export const AvatarCapExample = function AvatarCapExample(width) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  const obj2 = { uri: _modDef5944 };
+  const obj2 = { uri: _modDef5988 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

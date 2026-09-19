@@ -3,17 +3,15 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import KeyboardUIStore from "../../keyboard/native/KeyboardUIStore.native.tsx";
 import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import useKeyboardType from "../../keyboard/native/useKeyboardType.tsx";
-import ContextMenuState from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function handleBackPress() {
-  ContextMenuState.hideContextMenu();
   const keyboardType = useKeyboardType.getKeyboardType();
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
-    const obj3 = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
-    KeyboardUIStore.setKeyboardType(obj3);
+    const obj2 = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
+    KeyboardUIStore.setKeyboardType(obj2);
     flag = true;
     const tmpResult = KeyboardUIStore;
   }

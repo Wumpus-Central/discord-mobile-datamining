@@ -1,7 +1,7 @@
 // discord_app/modules/frames/FramesActionCreators.shared.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import EmbeddedActivitiesActionCreators from "../activities/EmbeddedActivitiesActionCreators.tsx";
 import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
+import EmbeddedActivitiesActionCreators from "../activities/EmbeddedActivitiesActionCreators.tsx";
 import getFramesManagerDefault from "utils/getFramesManager.native.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import FramesStore from "FramesStore.tsx";
@@ -398,7 +398,7 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(9749);
+const FramesConstants = fn(9313);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
@@ -406,7 +406,7 @@ const FramesConstants = fn(9749);
   getFrameIntentForSurface: closure_8,
   makeFrameId: closure_9,
 } = FramesConstants);
-const ActivityPanelModes = fn(9743).ActivityPanelModes;
+const ActivityPanelModes = fn(9314).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 

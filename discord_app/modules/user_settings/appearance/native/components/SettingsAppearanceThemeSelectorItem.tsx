@@ -10,7 +10,7 @@ import useA11yRolesNative from "../../../../../../discord_common/js/packages/des
 import utils_ColorDefault from "../../../../../utils/Color.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ThemedGradient from "../../../../client_themes/native/ThemedGradient.tsx";
-import _modDef15485 from "../../../../../../_runtime/metro/15485__.js";
+import _modDef15540 from "../../../../../../_runtime/metro/15540__.js";
 import SynchronizeIconNativeDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../ThemeStore.tsx";
@@ -38,7 +38,7 @@ function GradientThemeBackground(arg0) {
   obj4.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj4)];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef15485, style: tmp4.lock };
+    const obj6 = { source: _modDef15540, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -97,7 +97,7 @@ function CustomThemeBackground(arg0) {
   obj4.customTheme = item;
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj4)];
   if (isThemeLocked) {
-    const obj6 = { source: _modDef15485, style: tmp4.lock };
+    const obj6 = { source: _modDef15540, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj6);
   }
   items1[1] = isThemeLocked;
@@ -108,7 +108,7 @@ const View = fn(17).View;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = {
   rippleColor: { color: nativeDefault.unsafe_rawColors.TRANSPARENT },
   themeSelectorItemContainer: {
@@ -134,7 +134,7 @@ let size = {
 };
 obj2.newRedCircle = size;
 let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     themeSelectorGradientBackground: { justifyContent: "center", width: "100%", height: "100%" },

@@ -4,8 +4,8 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import StreamActionCreators from "../../../../../actions/StreamActionCreators.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../../actions/ChannelRTCActionCreators.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
-import ChannelRTCParticipants from "../../../../calls/ChannelRTCParticipants.tsx";
 import EmbeddedActivitiesNativeManagerDefault from "../../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
+import ChannelRTCParticipants from "../../../../calls/ChannelRTCParticipants.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../../activities/EmbeddedActivitiesStore.tsx";
@@ -15,10 +15,10 @@ import VoicePanelStore from "../../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(12515).VoicePanelModes;
+const VoicePanelModes = fn(12524).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT },
   icon: null,

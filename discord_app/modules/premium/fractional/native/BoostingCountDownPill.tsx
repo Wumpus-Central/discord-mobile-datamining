@@ -1,7 +1,7 @@
 // discord_app/modules/premium/fractional/native/BoostingCountDownPill.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import get_ActivityIndicator from "../../../../../_runtime/metro/00017__.js";
@@ -14,7 +14,7 @@ function handlePress() {
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
   obj2.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(13721, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
+  obj.openLazy(asyncRequireImpl(13776, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

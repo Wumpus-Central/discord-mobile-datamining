@@ -98,9 +98,9 @@ function RTCDebugGeneral() {
   }
   const obj5 = { title: "general", children: null };
   const obj6 = { obj: null };
-  const tmp4 = channelId(4875)(stateFromStores1);
+  const tmp4 = channelId(4909)(stateFromStores1);
   obj4.name = name;
-  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(4875)(stateFromStores1) } };
+  obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(4909)(stateFromStores1) } };
   obj5.children = closure_14(ObjectKV, obj6);
   return closure_14(Section, obj5);
 }
@@ -150,15 +150,15 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(4747).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4781).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {}
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(4571);
+const ColorUtils = fn(4605);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };
@@ -241,7 +241,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = closure_18();
   const effect = noop.useEffect(() => {
     RTCDebugActionCreatorsAll.open();
-    return () => closure_1_1(573).wait(closure_1_2(10283).close);
+    return () => closure_1_1(573).wait(closure_1_2(10295).close);
   }, []);
   const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
   const items = [tmp.container, style];

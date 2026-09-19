@@ -9,11 +9,11 @@ import useAllowFriendsFromMutualGuildsOnly from "../../content_and_social/useAll
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16112);
+const UserSettingsSafetySelectedGuildStore = fn(16188);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11715).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11714);
+let closure_6 = fn(11724).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+const SettingBuilders = fn(11723);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -51,7 +51,7 @@ const toggle = SettingBuilders.createToggle({
       return stringResult;
     }
   },
-  parent: fn(8194).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8232).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
@@ -74,6 +74,7 @@ const toggle = SettingBuilders.createToggle({
         confirmColor: null,
         onConfirm: null,
         onCancel: null,
+        isDismissable: false,
       };
       const intl = require("util").intl;
       obj2.title = intl.string(require("util").t.Hq4ApA);

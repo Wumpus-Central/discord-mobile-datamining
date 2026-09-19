@@ -2,11 +2,11 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import ChannelCallModalDefault from "../../../video_calls/native/components/ChannelCallModal.tsx";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import useCanSpeakInChannelDefault from "../../../stage_channels/useCanSpeakInChannel.tsx";
 import useIsInvitedToSpeakDefault from "../../../stage_channels/useIsInvitedToSpeak.tsx";
+import useVoiceStateForRemoteSessionDefault from "../../../game_console/hooks/useVoiceStateForRemoteSession.tsx";
 import GlobalStageChannelStatusDefault from "../../../stage_channels/native/components/GlobalStageChannelStatus.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -18,11 +18,11 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9925).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(9767).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -107,8 +107,8 @@ export default function ConnectivityGlobalStatusContent() {
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4579).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(4579);
+    isScreenLandscape = tmp5(4613).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(4613);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1364).isAndroid();

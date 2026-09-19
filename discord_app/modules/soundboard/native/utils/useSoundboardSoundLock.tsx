@@ -4,7 +4,7 @@ import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import openPremiumUpsellActionSheetDefault from "../../../premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
-import _modDef10314 from "../../../../../_runtime/metro/10314__.js";
+import _modDef10326 from "../../../../../_runtime/metro/10326__.js";
 import SoundboardSoundPreviewMenuExperiment2 from "../../experiments/SoundboardSoundPreviewMenuExperiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -12,7 +12,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5184).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5226).DEFAULT_SOUND_GUILD_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
 

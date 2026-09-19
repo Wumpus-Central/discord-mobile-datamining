@@ -1,6 +1,7 @@
 // discord_app/modules/application_commands/executeCommand.tsx
 import UploadUtils from "../../utils/UploadUtils.tsx";
 import FileUtils from "../../utils/FileUtils.tsx";
+import UploadLimits from "../media_uploads/UploadLimits.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import MessageQueue from "../../lib/MessageQueue.tsx";
 import InteractionActionCreatorsAll from "../interactions/InteractionActionCreators.tsx";
@@ -841,8 +842,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(7955).createNonce();
-      let obj2 = onMessageSuccess(7955);
+      nonce = onMessageSuccess(7993).createNonce();
+      let obj2 = onMessageSuccess(7993);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -858,7 +859,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
     const obj7 = {
-      interactionType: onMessageSuccess(1895).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(1978).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
@@ -918,8 +919,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(8036).MessageDataType.COMMAND, message };
-    message(8036).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(8074).MessageDataType.COMMAND, message };
+    message(8074).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -940,7 +941,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[26]);
     });
-    const obj6 = message(8036);
+    const obj6 = message(8074);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -1277,7 +1278,7 @@ let closure_24 = async function _stageAttachments(arg0) {
           closure_132_0 = closure_0;
           closure_132_1 = closure_1;
           closure_132_2 = dependencyMap;
-          closure_132_3 = undefined;
+          let effectiveUploadLimit;
           let maxTotalAttachmentSize;
           closure_132_6 = undefined;
           let totalSize;
@@ -1289,16 +1290,17 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1115).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(8347);
-            obj2.maxSize = closure_0(5303).sizeString(dependencyMap);
+            const obj = closure_2(8385);
+            obj2.maxSize = closure_0(5345).sizeString(dependencyMap);
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1115).t.fxEKdS, obj2),
             );
-            const obj3 = closure_0(5303);
+            const obj3 = closure_0(5345);
           };
-          closure_132_3 = FileUtils.maxFileSize(closure_2);
+          const obj11 = UploadLimits;
+          effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
           maxTotalAttachmentSize = UploadUtils.getMaxTotalAttachmentSize({
             location: "executeCommand.stageAttachments",
           });
@@ -1320,12 +1322,12 @@ let closure_24 = async function _stageAttachments(arg0) {
           totalSize = closure_132_6.totalSize;
           closure_132_8 = closure_132_6.largestUploadedFileSize;
           const _Math = Math;
-          if (closure_132_8 <= Math.max(closure_132_3, closure_133_15)) {
+          if (closure_132_8 <= Math.max(effectiveUploadLimit, closure_133_15)) {
             if (totalSize <= maxTotalAttachmentSize) {
               c6 = 1;
               c7 = 4;
               c8 = 1;
-              const obj7 = { value: closure_133_1(closure_133_3[34])(closure_132_0), done: false };
+              const obj7 = { value: closure_133_1(closure_133_3[35])(closure_132_0), done: false };
               return obj7;
             }
           }
@@ -1336,12 +1338,12 @@ let closure_24 = async function _stageAttachments(arg0) {
       } else {
         if (2 === tmp8) {
           c6 = 0;
-          let intl = closure_133_0(closure_133_3[33]).intl;
+          let intl = closure_133_0(closure_133_3[34]).intl;
           const obj8 = { count: closure_132_0.length };
           closure_133_2(closure_133_3[24]).setFailed(
             closure_132_1,
             undefined,
-            intl.formatToPlainString(closure_133_0(closure_133_3[33]).t["9h1/1p"], obj8),
+            intl.formatToPlainString(closure_133_0(closure_133_3[34]).t["9h1/1p"], obj8),
           );
           closure_133_22(closure_132_0, true);
           c7 = 3;
@@ -1400,7 +1402,7 @@ const Constants = fn(1074);
   MessageTypes: map1,
   NON_USER_BOT_DISCRIMINATOR: closure_14,
 } = Constants);
-let closure_15 = fn(4715).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(4749).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

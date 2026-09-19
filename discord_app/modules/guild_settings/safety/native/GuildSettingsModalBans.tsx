@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalBans.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/05687_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/05729_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchField: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj2.searchField = { paddingVertical: nativeDefault.space.PX_16 };

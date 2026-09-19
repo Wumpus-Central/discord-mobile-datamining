@@ -3,9 +3,9 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
-import _modDef3676 from "../intl/VibegrationsUntranslated.messages.js";
-import SoundUtils from "../../sound_playback/SoundUtils.tsx";
+import _modDef3678 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsPlatformUtilsDefault from "../lib/VibegrationsPlatformUtils.native.tsx";
+import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import FamilyCenterStore from "../../parent_tools/FamilyCenterStore.tsx";
@@ -389,7 +389,7 @@ function recordThinkingTransition(projectId) {
                     if ("terminal_error" !== tmp47.kind) {
                       if ("preview_ready" === tmp47.kind) {
                         let intl = util.intl;
-                        content = intl.string(_modDef3676["78YNh7"]);
+                        content = intl.string(_modDef3678["78YNh7"]);
                       } else {
                         diff3 = diff3 - 1;
                         content = null;
@@ -549,7 +549,7 @@ let closure_4 = ["disposition"];
 let closure_5 = ["disposition"];
 const Constants = fn(1074);
 ({ Routes: closure_14, StatusTypes: closure_15 } = Constants);
-const StaticChannelRoute = fn(1965).StaticChannelRoute;
+const StaticChannelRoute = fn(2048).StaticChannelRoute;
 const bit_message1 = "bit_message1";
 let set = new Set(["reply", "plan_proposed", "terminal_error"]);
 const map = new Map();
@@ -1090,7 +1090,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
                   const items = [];
                   const obj2 = { type: "step", kind: "terminal_error", message: null };
                   const intl = util.intl;
-                  obj2.message = intl.string(_modDef3676["wjWm+/"]);
+                  obj2.message = intl.string(_modDef3678["wjWm+/"]);
                   items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                   obj.steps = items;
                   tmp2 = obj;

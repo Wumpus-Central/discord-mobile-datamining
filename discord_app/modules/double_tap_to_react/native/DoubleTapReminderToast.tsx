@@ -24,9 +24,9 @@ function DoubleTapReminderContent(emoji) {
   });
   return jsx(Text_Text.Text, { variant: "text-sm/normal", style: closure_5().toastText, children: null });
 }
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { toastText: { marginRight: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_8 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -39,20 +39,20 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       require("dismissible_content").DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
     )
   ) {
-    const DoubleTapReactionEmoji = tmp(1936).DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = tmp(2019).DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
     let flag = setting.disableDoubleTap;
     if (flag == null) {
       flag = false;
     }
-    const result = tmp(8187).disambiguatedEmojiFromSettingsValue(setting);
+    const result = tmp(8225).disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      areEmojisEqualResult = tmp(8187).areEmojisEqual(result, emoji);
-      const tmpResult3 = tmp(8187);
+      areEmojisEqualResult = tmp(8225).areEmojisEqual(result, emoji);
+      const tmpResult3 = tmp(8225);
     }
     if (areEmojisEqualResult) {
       const obj2 = {
@@ -67,13 +67,13 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       };
       ToastActionCreatorsDefault.open(obj2);
       const obj3 = { dismissAction: ContentDismissActionType.AUTO_DISMISS, forceTrack: true };
-      const result1 = tmp(4542).UNSAFE_markDismissibleContentAsDismissed(
-        tmp(1944).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
+      const result1 = tmp(4576).UNSAFE_markDismissibleContentAsDismissed(
+        tmp(2027).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER,
         obj3,
       );
-      const tmpResult4 = tmp(4542);
+      const tmpResult4 = tmp(4576);
     }
-    const tmpResult = tmp(8187);
+    const tmpResult = tmp(8225);
   }
   obj = require("DismissibleContentUnsafeUtils");
 };

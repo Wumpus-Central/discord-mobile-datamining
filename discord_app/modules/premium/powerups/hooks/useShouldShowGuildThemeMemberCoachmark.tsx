@@ -19,23 +19,30 @@ export default function useShouldShowGuildThemeMemberCoachmark(guildId) {
   const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled(
     "useShouldShowGuildThemeMemberCoachmark",
   );
-  const tmp4 = useIsGuildThemePerkEnabledDefault(guildId);
+  const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(
+    guildId,
+    "useShouldShowGuildThemeMemberCoachmark",
+  );
+  const tmp5 = useIsGuildThemePerkEnabledDefault(guildId);
   const isLoading = useGuildPowerupsBoostCountDefault(guildId).isLoading;
-  let tmp7 = !isLoading;
+  let tmp8 = !isLoading;
   if (!isLoading) {
     if (serverThemeEnabled) {
       serverThemeEnabled = serverThemeUserEnabled;
     }
     if (serverThemeEnabled) {
-      serverThemeEnabled = tmp6 < closure_3;
+      serverThemeEnabled = !serverThemeRollbackEnabled;
     }
     if (serverThemeEnabled) {
-      serverThemeEnabled = !tmp4;
+      serverThemeEnabled = tmp7 < closure_3;
+    }
+    if (serverThemeEnabled) {
+      serverThemeEnabled = !tmp5;
     }
     if (serverThemeEnabled) {
       serverThemeEnabled = false === tmp;
     }
-    tmp7 = serverThemeEnabled;
+    tmp8 = serverThemeEnabled;
   }
-  return tmp7;
+  return tmp8;
 }

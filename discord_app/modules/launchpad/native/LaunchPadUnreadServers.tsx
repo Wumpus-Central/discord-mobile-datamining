@@ -26,7 +26,7 @@ get_ActivityIndicator = fn(17);
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   listWrapper: { marginTop: 8 },
   list: { marginBottom: 4, flexShrink: 0 },
@@ -59,7 +59,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
   const callback1 = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
-  obj.children = closure_10(onGuildSelect(17351), {
+  obj.children = closure_10(onGuildSelect(17428), {
     size: 48,
     borderRadius: 16,
     guildId,

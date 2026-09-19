@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

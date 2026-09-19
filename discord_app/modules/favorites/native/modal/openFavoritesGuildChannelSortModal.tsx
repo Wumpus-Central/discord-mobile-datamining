@@ -1,5 +1,5 @@
 // discord_app/modules/favorites/native/modal/openFavoritesGuildChannelSortModal.tsx
-import asyncRequireImpl from "../../../../../_runtime/01897_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/modal/openFa
 
 export default function openFavoritesGuildChannelSortModal() {
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(16399, dependencyMap.paths),
+    asyncRequireImpl(16475, dependencyMap.paths),
     undefined,
     FavoritesGuildChannelSortModal,
   );

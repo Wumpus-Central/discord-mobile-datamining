@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef8852 from "../../../../../_runtime/metro/08852__.js";
-import _modDef9870 from "../../../../../_runtime/metro/09870__.js";
-import _modDef9871 from "../../../../../_runtime/metro/09871__.js";
-import _modDef9872 from "../../../../../_runtime/metro/09872__.js";
-import _modDef9873 from "../../../../../_runtime/metro/09873__.js";
+import _modDef8891 from "../../../../../_runtime/metro/08891__.js";
+import _modDef9712 from "../../../../../_runtime/metro/09712__.js";
+import _modDef9713 from "../../../../../_runtime/metro/09713__.js";
+import _modDef9714 from "../../../../../_runtime/metro/09714__.js";
+import _modDef9715 from "../../../../../_runtime/metro/09715__.js";
 import mediaEngineContextFromParticipantTypeDefault from "../../../calls/mediaEngineContextFromParticipantType.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -18,13 +18,13 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(9869).clearVoiceChannelEffectForUser;
+let closure_7 = fn(9711).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1074).VideoToggleState;
-const ParticipantTypes = fn(4743).ParticipantTypes;
-const MediaEngineContextTypes = fn(4747).MediaEngineContextTypes;
+const ParticipantTypes = fn(4777).ParticipantTypes;
+const MediaEngineContextTypes = fn(4781).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   container: {
     flex: 1,
@@ -42,7 +42,7 @@ let obj = {
   labelText: null,
 };
 let obj4 = { backgroundColor: null, alignItems: "center", height: 24 };
-let ColorUtils = fn(4571);
+let ColorUtils = fn(4605);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj.autoDisabledVideo = obj4;
 let obj3 = {
@@ -72,7 +72,7 @@ let size = {
   justifyContent: "center",
   alignItems: "center",
 };
-ColorUtils = fn(4571);
+ColorUtils = fn(4605);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 size.borderRadius = nativeDefault.radii.md;
 obj.statusWrapper = size;
@@ -165,7 +165,7 @@ let closure_18 = noop.memo((guildId) => {
       const items = [,];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
       obj2.style = items;
-      const obj3 = { source: _modDef9870, size: native.Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef9712, size: native.Icon.Sizes.SMALL, disableColor: true };
       const items1 = [closure_2_14(native.Icon, obj3)];
       const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
       const intl = util.intl;
@@ -206,11 +206,11 @@ let closure_19 = noop.memo((userId) => {
   );
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = _modDef8852;
+    let tmp6 = _modDef8891;
   } else if (deafened) {
-    tmp6 = _modDef9871;
+    tmp6 = _modDef9713;
   } else if (muted) {
-    tmp6 = _modDef9872;
+    tmp6 = _modDef9714;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -221,7 +221,7 @@ let closure_19 = noop.memo((userId) => {
       const obj2 = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj2.style = items2;
-      const obj3 = { source: _modDef9873, size: tmp2(1177).Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef9715, size: tmp2(1177).Icon.Sizes.SMALL, disableColor: true };
       obj2.children = closure_14(tmp2(1177).Icon, obj3);
       tmp14 = closure_14(View, obj2);
     }
@@ -240,7 +240,7 @@ let closure_19 = noop.memo((userId) => {
         source: tmp6,
         size: tmp2(1177).Icon.Sizes.SMALL,
         color: nativeDefault.unsafe_rawColors.WHITE,
-        disableColor: tmp6 === _modDef8852,
+        disableColor: tmp6 === _modDef8891,
       };
       obj5.children = closure_14(tmp2(1177).Icon, obj6);
       tmp19Result = closure_14(View, obj5);
@@ -366,7 +366,8 @@ export default function UserTile(participant) {
   const Gesture = tmp15(tmp8[31]).Gesture;
   const tmp21 = onSingleTap(onDoubleTap[30])({ onDoubleTapStart: callback1, onSingleTapStart: callback });
   const LongPressResult = Gesture.LongPress();
-  const minDurationResult = Gesture.LongPress().onStart(callback2).minDuration(800);
+  const runOnJSResult = Gesture.LongPress().runOnJS(true);
+  const minDurationResult = Gesture.LongPress().runOnJS(true).onStart(callback2).minDuration(800);
   let result = minDurationResult;
   if (null != swipeDismissRef) {
     result = minDurationResult.requireExternalGestureToFail(swipeDismissRef);

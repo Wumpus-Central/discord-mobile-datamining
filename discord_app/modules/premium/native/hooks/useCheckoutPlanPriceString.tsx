@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const useNativeCheckoutStore = fn(7620).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7664).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
 

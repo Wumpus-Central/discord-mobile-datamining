@@ -13,7 +13,7 @@ function getItemKey(key) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { overlayView: null, wrapperView: null };
 const obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -68,16 +68,6 @@ export const ContextMenuContainer = function ContextMenuContainer() {
   onDismiss = noop.useCallback(() => {
     requestClose(true);
   }, items1);
-  let ignoreKeyboardHide;
-  let obj = require("ContextMenuState");
-  const tmp2 = _require;
-  if (activeContextMenu != null) {
-    ignoreKeyboardHide = activeContextMenu.ignoreKeyboardHide;
-  }
-  requestClose(onDismiss[7])(() => {
-    callback();
-    return true;
-  }, true === ignoreKeyboardHide);
   const items2 = [onDismiss, ,];
   ({ overlayView: arr3[1], wrapperView: arr3[2] } = tmp);
   const callback1 = noop.useCallback((children, arg1) => {
@@ -98,5 +88,5 @@ export const ContextMenuContainer = function ContextMenuContainer() {
     );
     return jsx(OverlayViewDefault, { style: closure_0.overlayView, children: null });
   }, items2);
-  return jsx(tmp2(onDismiss[10]).TransitionGroup, { wrapChildren: callback1, items: tmp5, renderItem, getItemKey });
+  return jsx(require("native").TransitionGroup, { wrapChildren: callback1, items: tmp5, renderItem, getItemKey });
 };

@@ -1,47 +1,54 @@
 // discord_app/modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx
+import util from "../../../intl/index.native.tsx";
+import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx");
 
-export default function VoicePanelSpoilerAlert(channelId) {
-  channelId = channelId.channelId;
-  closure_1 = channelId(5072).useDismissModalCallback();
+export default function VoicePanelSpoilerAlert(arg0) {
+  ({ channelId: require, onConnect: importDefault } = arg0);
+  dependencyMap = AlertModal.useDismissModalCallback();
   const obj2 = { title: null, content: null, actions: null };
-  const intl = channelId(1115).intl;
-  obj2.title = intl.string(channelId(1115).t["q38/ae"]);
-  const intl2 = channelId(1115).intl;
-  obj2.content = intl2.string(channelId(1115).t["2fDWXK"]);
+  const intl = util.intl;
+  obj2.title = intl.string(util.t["q38/ae"]);
+  const intl2 = util.intl;
+  obj2.content = intl2.string(util.t["2fDWXK"]);
   const obj3 = { children: null };
   const obj4 = {
     variant: "primary",
     onPress() {
-      GuildActionCreatorsDefault.spoilerAgree(channelId);
-      const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channelId);
-      closure_1();
+      GuildActionCreatorsDefault.spoilerAgree(require);
+      if (null != closure_1_1) {
+        closure_1_1();
+      } else {
+        const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(require);
+        const tmpResult = SelectedChannelActionCreatorsDefault;
+      }
+      closure_2();
     },
     text: null,
   };
-  const intl3 = channelId(1115).intl;
-  obj4.text = intl3.string(channelId(1115).t.p89ACt);
-  const items = [closure_3(channelId(5072).AlertActionButton, obj4, "confirm")];
+  const intl3 = util.intl;
+  obj4.text = intl3.string(util.t.p89ACt);
+  const items = [closure_3(AlertModal.AlertActionButton, obj4, "confirm")];
   const obj5 = {
     variant: "secondary",
     onPress() {
-      closure_1();
+      closure_2();
     },
     text: null,
   };
-  const intl4 = channelId(1115).intl;
-  obj5.text = intl4.string(channelId(1115).t["/g10LC"]);
-  items[1] = closure_3(channelId(5072).AlertActionButton, obj5, "cancel");
+  const intl4 = util.intl;
+  obj5.text = intl4.string(util.t["/g10LC"]);
+  items[1] = closure_3(AlertModal.AlertActionButton, obj5, "cancel");
   obj3.children = items;
-  obj2.actions = closure_4(channelId(5072).AlertActions, obj3);
-  return closure_3(channelId(5072).AlertModal, obj2);
+  obj2.actions = closure_4(AlertModal.AlertActions, obj3);
+  return closure_3(AlertModal.AlertModal, obj2);
 }
 export const VOICE_PANEL_SPOILER_KEY = "voice-panel-spoiler";

@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef4314 from "../../../_runtime/metro/04314__.js";
+import _modDef4348 from "../../../_runtime/metro/04348__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx";
 import getTimestampStringDefault from "getTimestampString.tsx";
@@ -130,8 +130,8 @@ export const useLastMessageTimestamp = function useLastMessageTimestamp(thread) 
   }
   let valueOfResult = null;
   if (null != createTimestamp) {
-    valueOfResult = _modDef4314(createTimestamp).valueOf();
-    const obj3 = _modDef4314(createTimestamp);
+    valueOfResult = _modDef4348(createTimestamp).valueOf();
+    const obj3 = _modDef4348(createTimestamp);
   }
   if (extractTimestampResult == null) {
     extractTimestampResult = valueOfResult;

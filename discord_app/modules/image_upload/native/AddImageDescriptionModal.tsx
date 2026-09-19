@@ -68,9 +68,9 @@ function AddDescription(id) {
             const obj2 = {};
             const merged = Object.assign(dependencyMap);
             obj2.description = ref.current;
-            id(9545).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-            const obj = id(9545);
-            id(11491).close();
+            id(9420).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+            const obj = id(9420);
+            id(11503).close();
           },
         );
         let merged = Object.assign(arg0);
@@ -119,10 +119,10 @@ function AddDescription(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(5063).DraftType;
+const DraftType = fn(5105).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   imageContainer: null,

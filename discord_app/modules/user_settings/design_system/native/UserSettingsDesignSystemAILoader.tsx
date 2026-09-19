@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_6 = createStyles.createStyles({
   container: { padding: 16 },
   row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },

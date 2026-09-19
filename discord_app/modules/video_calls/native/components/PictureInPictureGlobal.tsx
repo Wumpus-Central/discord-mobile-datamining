@@ -6,8 +6,8 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import ChannelRTCParticipants from "../../../calls/ChannelRTCParticipants.tsx";
-import PictureInPictureDefault from "PictureInPicture.tsx";
 import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
+import PictureInPictureDefault from "PictureInPicture.tsx";
 import getPIPBottomOffsetForPIPMode from "../../../panels/morphable/native/getPIPBottomOffsetForPIPMode.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -21,13 +21,13 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9723).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9653).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1074).PictureInPicturePositions;
-const ParticipantTypes = fn(4743).ParticipantTypes;
+const ParticipantTypes = fn(4777).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,

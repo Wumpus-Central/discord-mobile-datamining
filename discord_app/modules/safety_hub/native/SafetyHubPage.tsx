@@ -4,15 +4,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import asyncRequireImpl from "../../../../_runtime/01897_asyncRequireImpl.js";
-import _modDef3064 from "../../age_assurance/ManualReview.messages.js";
+import asyncRequireImpl from "../../../../_runtime/01980_asyncRequireImpl.js";
+import _modDef3066 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import ManualReviewActionCreators from "../../age_assurance/ManualReviewActionCreators.tsx";
 import SafetyHubActionCreatorsAll from "../SafetyHubActionCreators.tsx";
 import AutomatedUnderageAppealModalActionCreatorsDefault from "../AutomatedUnderageAppealModalActionCreators.native.tsx";
@@ -56,19 +55,30 @@ function AgeCheckLoadingBanner() {
   return closure_1_12(native.HelpMessage, obj2);
 }
 function ManualOrAutomatedReviewBanner() {
-  const obj = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
+  _require = closure_22();
+  const obj = { messageType: require("native").HelpMessageTypes.ERROR, button: null, children: null };
   const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-  const intl = util.intl;
-  obj2.text = intl.string(util.t.IcA9iD);
+  const intl = require("util").intl;
+  obj2.text = intl.string(require("util").t.IcA9iD);
   obj2.onPress = handleRetryClick;
-  obj.button = closure_1_12(components_Button_Button.Button, obj2);
-  const intl2 = util.intl;
-  obj.children = intl2.format(_modDef3064.vPoM8y, {
+  obj.button = closure_12(require("components/Button/Button").Button, obj2);
+  const intl2 = require("util").intl;
+  obj.children = intl2.format(_modDef3066.vPoM8y, {
     manualReviewHook(children, arg1) {
-      return closure_1_12(Text_Text.Text, { onPress, variant: "text-sm/normal", color: "text-link", children }, arg1);
+      return closure_2_12(
+        Text_Text.Text,
+        {
+          onPress: handleManualReviewClick,
+          style: link.link,
+          variant: "text-sm/normal",
+          color: "text-default",
+          children,
+        },
+        arg1,
+      );
     },
   });
-  return closure_1_12(native.HelpMessage, obj);
+  return closure_12(require("native").HelpMessage, obj);
 }
 function ManualReviewBanner() {
   const availableAgeVerificationMethods = useAvailableAgeVerificationMethods.useAvailableAgeVerificationMethods();
@@ -78,7 +88,7 @@ function ManualReviewBanner() {
   } else {
     if (null != methods) {
       if (0 !== methods.length) {
-        if (methods.every((method) => method.method === user.AgeAssuranceMethod.GOOGLE_WALLET)) {
+        if (methods.every((method) => method.method === require("user").AgeAssuranceMethod.GOOGLE_WALLET)) {
           tmp5Result = closure_1_12(ManualOrAutomatedReviewBanner, {});
         } else {
           tmp5Result = closure_1_12(RetryBanner, {});
@@ -112,7 +122,7 @@ function AutomatedUnderageAppealStatus() {
     const intl6 = util.intl;
     const obj3 = {
       loginHook(children) {
-        return closure_1_12(Text_Text.Text, {
+        return closure_1_12(require("Text/Text").Text, {
           variant: "text-sm/medium",
           color: "text-link",
           onPress() {
@@ -160,19 +170,21 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8652).AgeCheckStatus;
+const AgeCheckStatus = fn(8690).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
   body: null,
+  link: null,
 };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
 obj2.body = { gap: nativeDefault.space.PX_8 };
+obj2.link = { textDecorationLine: "underline" };
 let closure_22 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
@@ -204,7 +216,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14987, dependencyMap.paths),
+          asyncRequireImpl(15041, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );
