@@ -4,12 +4,12 @@
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const FRSpecificTimeExpressionParser = require;
-const regExp = new RegExp("(^|\\s|T)(?:(?:[\u00E0a])\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
-const regExp1 = new RegExp("^\\s*(\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
-class FRSpecificTimeExpressionParser {
+const DESpecificTimeExpressionParser = require;
+const regExp = new RegExp("(^|\\s|T)(?:(?:um|von)\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)", "i");
+const regExp1 = new RegExp("^\\s*(\\-|\\\u2013|\\~|\\\u301C|bis(?:\\s+um)?|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s)?)?(?:\\s*Uhr)?(?:\\s*(morgens|vormittags|nachmittags|abends|nachts|am\\s+(?:Morgen|Vormittag|Nachmittag|Abend)|in\\s+der\\s+Nacht))?(?=\\W|$)", "i");
+class DESpecificTimeExpressionParser {
   constructor() {
-    tmp = c2(this, FRSpecificTimeExpressionParser);
+    tmp = c2(this, DESpecificTimeExpressionParser);
     return;
   }
 }
@@ -31,12 +31,12 @@ const items = [
         return null;
       } else {
         const start = parsingResult.start;
-        parsingResult.start = FRSpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
+        parsingResult.start = DESpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
         if (parsingResult.start) {
           const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
           if (match) {
             const start2 = parsingResult.start;
-            parsingResult.end = FRSpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
+            parsingResult.end = DESpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
             if (parsingResult.end) {
               parsingResult.text = parsingResult.text + match[0];
             }
@@ -64,44 +64,55 @@ const entry1 = {
       if (parsed <= 24) {
         let PM1 = null;
         if (parsed >= 12) {
-          PM1 = FRSpecificTimeExpressionParser(10680).Meridiem.PM;
+          PM1 = DESpecificTimeExpressionParser(10696).Meridiem.PM;
         }
-        let PM = PM1;
-        let tmp5 = parsed;
+        let tmp5 = PM1;
+        let tmp6 = parsed;
         if (null != arg1[5]) {
           if (parsed > 12) {
             return null;
           } else {
-            const formatted = arg1[5][0].toLowerCase();
-            let tmp8 = parsed;
-            if ("a" == formatted) {
+            const str8 = arg1[5].toLowerCase();
+            let tmp9 = parsed;
+            if (str8.match(/morgen|vormittag/)) {
               let num2 = parsed;
               if (12 == parsed) {
                 num2 = 0;
               }
-              tmp8 = num2;
-              PM1 = FRSpecificTimeExpressionParser(10680).Meridiem.AM;
+              tmp9 = num2;
+              PM1 = DESpecificTimeExpressionParser(10696).Meridiem.AM;
             }
-            PM = PM1;
-            tmp5 = tmp8;
-            if ("p" == formatted) {
-              let sum = tmp8;
-              if (12 != tmp8) {
-                sum = tmp8 + 12;
+            let tmp10 = tmp9;
+            if (str8.match(/nachmittag|abend/)) {
+              let sum = tmp9;
+              if (12 != tmp9) {
+                sum = tmp9 + 12;
               }
-              tmp5 = sum;
-              PM = FRSpecificTimeExpressionParser(10680).Meridiem.PM;
+              tmp10 = sum;
+              PM1 = DESpecificTimeExpressionParser(10696).Meridiem.PM;
+            }
+            tmp5 = PM1;
+            tmp6 = tmp10;
+            if (str8.match(/nacht/)) {
+              if (12 == tmp10) {
+                let PM = DESpecificTimeExpressionParser(10696).Meridiem.AM;
+              } else if (tmp10 < 6) {
+                PM = DESpecificTimeExpressionParser(10696).Meridiem.AM;
+              } else {
+                PM = DESpecificTimeExpressionParser(10696).Meridiem.PM;
+                const num4 = tmp10 + 12;
+              }
             }
           }
         }
-        assign.assign("hour", tmp5);
+        assign.assign("hour", tmp6);
         assign.assign("minute", num);
-        if (null !== PM) {
-          assign.assign("meridiem", PM);
-        } else if (tmp5 < 12) {
-          assign.imply("meridiem", FRSpecificTimeExpressionParser(10680).Meridiem.AM);
+        if (null !== tmp5) {
+          assign.assign("meridiem", tmp5);
+        } else if (tmp6 < 12) {
+          assign.imply("meridiem", DESpecificTimeExpressionParser(10696).Meridiem.AM);
         } else {
-          assign.imply("meridiem", FRSpecificTimeExpressionParser(10680).Meridiem.PM);
+          assign.imply("meridiem", DESpecificTimeExpressionParser(10696).Meridiem.PM);
         }
         if (null != arg1[4]) {
           const _parseInt2 = parseInt;
@@ -120,4 +131,4 @@ const entry1 = {
 };
 const items1 = [entry1];
 
-export default _createClass(FRSpecificTimeExpressionParser, items, items1);
+export default _createClass(DESpecificTimeExpressionParser, items, items1);

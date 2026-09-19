@@ -1,17 +1,17 @@
 // === Module 4098: ? ===
 
 // Module 4098
-import _typeof_mod from "module_3811" /* 3811 */;
-import requiredArgs_mod from "requiredArgs" /* 3812 */;
+import module_4096_mod from "module_4096" /* 4096 */;
+import requiredArgs_mod from "requiredArgs" /* 3846 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4096 = module_4096_mod;
+if (!module_4096) {
+  const obj = { default: module_4096 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4096;
 }
-_typeof = tmp3;
+module_4096 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getYear(arg0) {
+export default function formatDistanceToNowStrict(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getFullYear();
+  return module_4096.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

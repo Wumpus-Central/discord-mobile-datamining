@@ -1,73 +1,86 @@
 // === Module 3946: ? ===
 
 // Module 3946
-import module_2119 from "module_2119" /* 2119 */;
-import module_2120 from "module_2120" /* 2120 */;
+const obj = { lessThanXSeconds: { one: { regular: "mniej ni\u017C sekunda", past: "mniej ni\u017C sekund\u0119", future: "mniej ni\u017C sekund\u0119" }, twoFour: "mniej ni\u017C {{count}} sekundy", other: "mniej ni\u017C {{count}} sekund" }, xSeconds: { one: { regular: "sekunda", past: "sekund\u0119", future: "sekund\u0119" }, twoFour: "{{count}} sekundy", other: "{{count}} sekund" }, halfAMinute: { one: "p\u00F3\u0142 minuty", twoFour: "p\u00F3\u0142 minuty", other: "p\u00F3\u0142 minuty" }, lessThanXMinutes: { one: { regular: "mniej ni\u017C minuta", past: "mniej ni\u017C minut\u0119", future: "mniej ni\u017C minut\u0119" }, twoFour: "mniej ni\u017C {{count}} minuty", other: "mniej ni\u017C {{count}} minut" }, xMinutes: { one: { regular: "minuta", past: "minut\u0119", future: "minut\u0119" }, twoFour: "{{count}} minuty", other: "{{count}} minut" }, aboutXHours: { one: { regular: "oko\u0142o godziny", past: "oko\u0142o godziny", future: "oko\u0142o godzin\u0119" }, twoFour: "oko\u0142o {{count}} godziny", other: "oko\u0142o {{count}} godzin" }, xHours: { one: { regular: "godzina", past: "godzin\u0119", future: "godzin\u0119" }, twoFour: "{{count}} godziny", other: "{{count}} godzin" }, xDays: { one: { regular: "dzie\u0144", past: "dzie\u0144", future: "1 dzie\u0144" }, twoFour: "{{count}} dni", other: "{{count}} dni" }, aboutXWeeks: { one: "oko\u0142o tygodnia", twoFour: "oko\u0142o {{count}} tygodni", other: "oko\u0142o {{count}} tygodni" }, xWeeks: { one: "tydzie\u0144", twoFour: "{{count}} tygodnie", other: "{{count}} tygodni" }, aboutXMonths: { one: "oko\u0142o miesi\u0105c", twoFour: "oko\u0142o {{count}} miesi\u0105ce", other: "oko\u0142o {{count}} miesi\u0119cy" }, xMonths: { one: "miesi\u0105c", twoFour: "{{count}} miesi\u0105ce", other: "{{count}} miesi\u0119cy" }, aboutXYears: { one: "oko\u0142o rok", twoFour: "oko\u0142o {{count}} lata", other: "oko\u0142o {{count}} lat" }, xYears: { one: "rok", twoFour: "{{count}} lata", other: "{{count}} lat" }, overXYears: { one: "ponad rok", twoFour: "ponad {{count}} lata", other: "ponad {{count}} lat" }, almostXYears: { one: "prawie rok", twoFour: "prawie {{count}} lata", other: "prawie {{count}} lat" } };
 
-if (!module_2119) {
-  const obj2 = { default: module_2119 };
-  let obj = obj2;
-} else {
-  obj = module_2119;
-}
-if (!module_2120) {
-  const obj4 = { default: module_2120 };
-  let obj3 = obj4;
-} else {
-  obj3 = module_2120;
-}
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^\d+/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+export default function formatDistance(arg0, arg1, addSuffix) {
+  let replaced = arg1;
+  let replace = obj[arg0];
+  if (null != addSuffix) {
+    if (addSuffix.addSuffix) {
+      if (!addSuffix.comparison) {
+        if (1 === replaced) {
+          let other2 = replace.one;
+        } else {
+          const result = replaced % 100;
+          if (result <= 20) {
+            if (10 < result) {
+              other2 = replace.other;
+            }
+          }
+          const result1 = result % 10;
+          if (2 <= result1) {
+            if (result1 <= 4) {
+              other2 = replace.twoFour;
+            }
+          }
+          other2 = replace.other;
+        }
+        let past = other2;
+        if (typeof other2 !== "string") {
+          past = other2.past;
+        }
+        const _String = String;
+        let text = `${tmp6("{{count}}", String(tmp))} temu`;
+      }
+      if (1 === replaced) {
+        let other3 = replace.one;
+      } else {
+        const result2 = replaced % 100;
+        if (result2 <= 20) {
+          if (10 < result2) {
+            other3 = replace.other;
+          }
+        }
+        const result3 = result2 % 10;
+        if (2 <= result3) {
+          if (result3 <= 4) {
+            other3 = replace.twoFour;
+          }
+        }
+        other3 = replace.other;
+      }
+      let str4 = other3;
+      if (typeof other3 !== "string") {
+        str4 = other3.future;
+      }
+      replace = str4.replace;
+      const _String2 = String;
+      replaced = replace("{{count}}", String(replaced));
+      text = `za ${tmp}`;
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-const obj6 = { matchPatterns: { narrow: /^([bB]|[aA]|คศ)/i, abbreviated: /^([bB]\.?\s?[cC]\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?|ค\.?ศ\.?)/i, wide: /^(ก่อนคริสตกาล|คริสต์ศักราช|คริสตกาล)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^[bB]/i, /^(^[aA]|ค\.?ศ\.?|คริสตกาล|คริสต์ศักราช|)/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^ไตรมาส(ที่)? ?[1234]/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
   }
+  if (1 === replaced) {
+    let other = replace.one;
+  } else {
+    const result4 = replaced % 100;
+    if (result4 <= 20) {
+      if (10 < result4) {
+        other = replace.other;
+      }
+    }
+    const result5 = result4 % 10;
+    if (2 <= result5) {
+      if (result5 <= 4) {
+        other = replace.twoFour;
+      }
+    }
+    other = replace.other;
+  }
+  let str = other;
+  if (typeof other !== "string") {
+    str = other.regular;
+  }
+  return str.replace("{{count}}", String(replaced));
 };
-const obj9 = { any: null };
-const items1 = [/(1|แรก|หนึ่ง)/i, /(2|สอง)/i, /(3|สาม)/i, /(4|สี่)/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?)/i, abbreviated: /^(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?')/i, wide: /^(มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { wide: null, any: null };
-const items2 = [/^มก/i, /^กุม/i, /^มี/i, /^เม/i, /^พฤษ/i, /^มิ/i, /^กรก/i, /^ส/i, /^กัน/i, /^ต/i, /^พฤศ/i, /^ธ/i];
-obj11.wide = items2;
-const items3 = [/^ม\.?ค\.?/i, /^ก\.?พ\.?/i, /^มี\.?ค\.?/i, /^เม\.?ย\.?/i, /^พ\.?ค\.?/i, /^มิ\.?ย\.?/i, /^ก\.?ค\.?/i, /^ส\.?ค\.?/i, /^ก\.?ย\.?/i, /^ต\.?ค\.?/i, /^พ\.?ย\.?/i, /^ธ\.?ค\.?/i];
-obj11.any = items3;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i, short: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i, abbreviated: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i, wide: /^(อาทิตย์|จันทร์|อังคาร|พุธ|พฤหัสบดี|ศุกร์|เสาร์)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { wide: null, any: null };
-const items4 = [/^อา/i, /^จั/i, /^อั/i, /^พุธ/i, /^พฤ/i, /^ศ/i, /^เส/i];
-obj13.wide = items4;
-const items5 = [/^อา/i, /^จ/i, /^อ/i, /^พ(?!ฤ)/i, /^พฤ/i, /^ศ/i, /^ส/i];
-obj13.any = items5;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { any: /^(ก่อนเที่ยง|หลังเที่ยง|เที่ยงคืน|เที่ยง|(ตอน.*?)?.*(เที่ยง|เช้า|บ่าย|เย็น|กลางคืน))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^ก่อนเที่ยง/i, pm: /^หลังเที่ยง/i, midnight: /^เที่ยงคืน/i, noon: /^เที่ยง/i, morning: /เช้า/i, afternoon: /บ่าย/i, evening: /เย็น/i, night: /กลางคืน/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
-
-export default date;
 export default exports.default;

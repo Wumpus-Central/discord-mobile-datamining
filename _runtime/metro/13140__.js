@@ -1,102 +1,309 @@
 // === Module 13140: ? ===
 
 // Module 13140
-import _mod13045 from "module_13045" /* 13045 */;
-import _slicedToArray from "module_32" /* 32 */;
-
-let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
-
-export const getBucketKey = function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const entries = Object.entries(_mod13045.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries.sort((arg0, arg1) => {
-    const first = arg0[0];
-    return first.localeCompare(arg1[0]);
-  });
-};
-export const sanitizeMetricKey = function sanitizeMetricKey(str) {
-  return str.replace(/[^\w\-.]+/gi, "_");
-};
-export const sanitizeTags = function sanitizeTags(tags) {
-  let obj = {};
-  for (const key10007 in arg0) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10007);
-    } else {
-      hasOwnPropertyResult = call(arg0, key10007);
-    }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      let _String = String;
-      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
-      obj[replaced] = items.reduce((acc, item) => acc + (function getCharOrReplacement(item) {
-        const obj = dependencyMap[Symbol.iterator]();
-        while (obj !== undefined) {
-          let tmp4 = closure_1_2(tmp2, 2);
-          if (item === tmp4[0]) {
-            obj.return();
-            return tmp5;
-          }
-        }
-        return item;
-      })(item), "");
-      continue;
-    }
-    continue;
-  }
-  return obj;
-};
-export const sanitizeUnit = function sanitizeUnit(none) {
-  return none.replace(/[^\w]+/gi, "_");
-};
-export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
+function resolve() {
+  let tmp17;
+  const items = [...arguments];
+  let diff = items.length - 1;
+  let flag = false;
   let str = "";
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let _Object = Object;
-    let entries = Object.entries(nextResult.tags);
-    let arr2 = entries;
-    let str2 = "";
-    if (entries.length > 0) {
-      let mapped = arr2.map((item) => {
-        [tmp, tmp2] = item;
-        return "" + tmp + ":" + tmp2;
-      });
-      let _HermesInternal = HermesInternal;
-      str2 = "|#" + mapped.join(",");
+  let flag2 = false;
+  let str2 = "";
+  if (-1 <= diff) {
+    while (true) {
+      let tmp3 = flag;
+      let str3 = "/";
+      if (0 <= diff) {
+        str3 = items[diff];
+      }
+      let combined = str;
+      if (str3) {
+        let _HermesInternal = HermesInternal;
+        combined = "" + str3 + "/" + str;
+        tmp3 = "/" === str3.charAt(0);
+      }
+      let diff1 = diff - 1;
+      flag2 = tmp3;
+      str2 = combined;
+      if (-1 > diff1) {
+        break;
+      } else {
+        diff = diff1;
+        flag = tmp3;
+        str = combined;
+        str2 = combined;
+        flag2 = tmp3;
+        if (tmp3) {
+          break;
+        }
+      }
     }
-    let _HermesInternal2 = HermesInternal;
-    let str3 = "";
-    let str4 = "@";
-    let str5 = ":";
-    let str6 = "|";
-    let str7 = "|T";
-    let str8 = "\n";
-    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
-    continue;
   }
-  return str;
-};
-export const simpleHash = function simpleHash(item) {
-  let length;
+  let str4 = "";
+  if (flag2) {
+    str4 = "/";
+  }
+  const parts = str2.split("/");
+  const found = parts.filter((item) => item);
+  let diff2 = found.length - 1;
   let num = 0;
   let num2 = 0;
-  let num3 = 0;
-  if (0 < item.length) {
+  if (0 <= diff2) {
     do {
-      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
-      num2 = sum & sum;
-      num = num + 1;
-      num3 = num2;
-      length = item.length;
-    } while (num < length);
+      let tmp8 = found[diff2];
+      if ("." === tmp8) {
+        let spliceResult = found.splice(diff2, 1);
+        let sum = num;
+      } else if (".." === tmp8) {
+        let spliceResult1 = found.splice(diff2, 1);
+        sum = num + 1;
+      } else {
+        sum = num;
+        if (num) {
+          let spliceResult2 = found.splice(diff2, 1);
+          sum = num - 1;
+        }
+      }
+      diff2 = diff2 - 1;
+      num = sum;
+      num2 = sum;
+    } while (0 <= diff2);
   }
-  return num3 >>> 0;
+  if (!flag2) {
+    let diff3 = num2 - 1;
+    if (num2) {
+      do {
+        let arr = found.unshift("..");
+        tmp17 = diff3;
+        diff3 = diff3 - 1;
+      } while (tmp17);
+    }
+  }
+  return str4 + found.join("/") || ".";
+}
+function normalizePath(str) {
+  let tmp14;
+  const substr = str.slice(-1);
+  const parts = str.split("/");
+  const found = parts.filter((item) => item);
+  let diff = found.length - 1;
+  let num = 0;
+  let num2 = 0;
+  if (0 <= diff) {
+    do {
+      let tmp4 = found[diff];
+      if ("." === tmp4) {
+        let spliceResult = found.splice(diff, 1);
+        let sum = num;
+      } else if (".." === tmp4) {
+        let spliceResult1 = found.splice(diff, 1);
+        sum = num + 1;
+      } else {
+        sum = num;
+        if (num) {
+          let spliceResult2 = found.splice(diff, 1);
+          sum = num - 1;
+        }
+      }
+      diff = diff - 1;
+      num = sum;
+      num2 = sum;
+    } while (0 <= diff);
+  }
+  const tmp11 = "/" === str.charAt(0);
+  if (!tmp11) {
+    let diff1 = num2 - 1;
+    if (num2) {
+      do {
+        let arr = found.unshift("..");
+        tmp14 = diff1;
+        diff1 = diff1 - 1;
+      } while (tmp14);
+    }
+  }
+  str = found.join("/");
+  let tmp15 = str;
+  if (!str) {
+    tmp15 = tmp11;
+  }
+  if (!tmp15) {
+    str = ".";
+  }
+  let tmp16 = str;
+  if (str) {
+    tmp16 = "/" === substr;
+  }
+  let text = str;
+  if (tmp16) {
+    text = `${str}/`;
+  }
+  let str2 = "";
+  if (tmp11) {
+    str2 = "/";
+  }
+  return str2 + text;
+}
+const re0 = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
+
+export const basename = function basename(arr, arg1) {
+  let combined = arr;
+  if (arr.length > 1024) {
+    const _HermesInternal = HermesInternal;
+    combined = "<truncated>" + arr.slice(-1024);
+  }
+  const match = re0.exec(combined);
+  if (match) {
+    let substr = match.slice(1);
+  } else {
+    substr = [];
+  }
+  let tmp3 = arg1;
+  if (arg1) {
+    tmp3 = arr3.slice(-1 * arg1.length) === arg1;
+  }
+  let substr1 = arr3;
+  if (tmp3) {
+    substr1 = arr3.slice(0, arr3.length - arg1.length);
+  }
+  return substr1;
 };
+export const dirname = function dirname(arr) {
+  let combined = arr;
+  if (arr.length > 1024) {
+    const _HermesInternal = HermesInternal;
+    combined = "<truncated>" + arr.slice(-1024);
+  }
+  const match = re0.exec(combined);
+  if (match) {
+    let substr = match.slice(1);
+  } else {
+    substr = [];
+  }
+  if (substr[0] || "") {
+    let substr1 = arr3;
+    if (arr3) {
+      substr1 = arr3.slice(0, arr3.length - 1);
+    }
+    let str2 = tmp3 + substr1;
+  } else {
+    str2 = ".";
+  }
+  return str2;
+};
+export const isAbsolute = function isAbsolute(str) {
+  return "/" === str.charAt(0);
+};
+export const join = function join() {
+  const items = [...arguments];
+  return normalizePath(items.join("/"));
+};
+export { normalizePath };
+export const relative = function relative(root, replaced) {
+  let length;
+  const arr = resolve(root);
+  const str = resolve(root).slice(1);
+  const arr2 = resolve(replaced);
+  const parts = str.split("/");
+  let num = 0;
+  if (0 < parts.length) {
+    let num2 = 0;
+    num = 0;
+    if ("" === parts[0]) {
+      const sum = num2 + 1;
+      num = sum;
+      while (sum < parts.length) {
+        num2 = sum;
+        num = sum;
+        if ("" !== parts[sum]) {
+          break;
+        }
+      }
+    }
+  }
+  const diff = parts.length - 1;
+  let tmp3 = diff;
+  if (0 <= diff) {
+    let tmp4 = diff;
+    tmp3 = diff;
+    if ("" === parts[diff]) {
+      const diff1 = tmp4 - 1;
+      tmp3 = diff1;
+      while (0 <= diff1) {
+        tmp4 = diff1;
+        tmp3 = diff1;
+        if ("" !== parts[diff1]) {
+          break;
+        }
+      }
+    }
+  }
+  if (tmp3 < num) {
+    let items = [];
+  } else {
+    items = parts.slice(num, tmp3 - num + 1);
+  }
+  const parts1 = resolve(replaced).slice(1).split("/");
+  let num3 = 0;
+  if (0 < parts1.length) {
+    let num4 = 0;
+    num3 = 0;
+    if ("" === parts1[0]) {
+      const sum1 = num4 + 1;
+      num3 = sum1;
+      while (sum1 < parts1.length) {
+        num4 = sum1;
+        num3 = sum1;
+        if ("" !== parts1[sum1]) {
+          break;
+        }
+      }
+    }
+  }
+  const diff2 = parts1.length - 1;
+  let tmp8 = diff2;
+  if (0 <= diff2) {
+    let tmp9 = diff2;
+    tmp8 = diff2;
+    if ("" === parts1[diff2]) {
+      const diff3 = tmp9 - 1;
+      tmp8 = diff3;
+      while (0 <= diff3) {
+        tmp9 = diff3;
+        tmp8 = diff3;
+        if ("" !== parts1[diff3]) {
+          break;
+        }
+      }
+    }
+  }
+  if (tmp8 < num3) {
+    let items1 = [];
+  } else {
+    items1 = parts1.slice(num3, tmp8 - num3 + 1);
+  }
+  const bound = Math.min(items.length, items1.length);
+  let num5 = 0;
+  let tmp12 = bound;
+  if (0 < bound) {
+    tmp12 = num5;
+    while (items[num5] === items1[num5]) {
+      num5 = num5 + 1;
+      tmp12 = bound;
+      if (num5 >= bound) {
+        break;
+      }
+    }
+  }
+  const items2 = [];
+  let sum2 = tmp12;
+  if (tmp12 < items.length) {
+    do {
+      let arr3 = items2.push("..");
+      sum2 = sum2 + 1;
+      length = items.length;
+    } while (sum2 < length);
+  }
+  const combined = items2.concat(items1.slice(tmp12));
+  return combined.join("/");
+};
+export { resolve };

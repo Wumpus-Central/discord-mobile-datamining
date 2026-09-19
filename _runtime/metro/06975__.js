@@ -1,106 +1,72 @@
 // === Module 6975: ? ===
 
 // Module 6975
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+import handlerIDToTag from "handlerIDToTag" /* 6896 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6923 */;
+import _mod6936 from "module_6936" /* 6936 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6960 */;
+import noop from "module_19" /* 19 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(force, force2) {
-  if (undefined === force2) {
-    const obj2 = { forceChange: force.force };
-    let obj = obj2;
+const require = globalThis.__r;
+
+({ useEffect: c2, useMemo: c3 } = noop);
+
+export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
+  _require = Fling;
+  dependencyMap = clonedAndRemappedConfig;
+  const tmp2 = jsEventHandler(() => type(config[1]).getNextHandlerTag(), []);
+  const handlerTag = tmp2;
+  if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => config.disableReanimated, [])) {
+    const _Error2 = Error;
+    const error = new Error(require("tagMessage").tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
+    throw error;
   } else {
-    obj = { forceChange: force.force - force2.force };
-  }
-  const merged = Object.assign(force);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11365193947542;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}" };
-class ForceTouchGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, ForceTouchGesture);
-    tmp2 = c2;
-    obj = c2(ForceTouchGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
+    const gestureCallbacks = require("module_6976").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
+    jsEventHandler = gestureCallbacks.jsEventHandler;
+    const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
+    const animatedEventHandler = gestureCallbacks.animatedEventHandler;
+    if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
+      if (!reanimatedEventHandler) {
+        const _Error = Error;
+        const error1 = new Error(require("tagMessage").tagMessage("Failed to create reanimated event handlers."));
+        throw error1;
+      }
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "ForceTouchGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = ForceTouchGesture;
-_inherits(ForceTouchGesture, fn(6869).ContinousBaseGesture);
-const entry = {
-  key: "minForce",
-  value: function minForce(minForce) {
-    this.config.minForce = minForce;
-    return this;
+    const items = [tmp2, , , ];
+    ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
+    const tmpResult = tmp(() => DEFAULT_PROPS_TRANSFORMER.prepareRelations({ simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block }, closure_2), items);
+    const gestureRelations = tmpResult;
+    const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
+    const tmpResult2 = tmp(() => {
+      const obj = { handlerTag, type, config, detectorCallbacks: { jsEventHandler, animatedEventHandler, reanimatedEventHandler }, gestureRelations };
+      return obj;
+    }, items1);
+    closure_7 = tmpResult2;
+    const items2 = [Fling, tmp2];
+    handlerTag(() => {
+      let NativeProxy = _mod6936.NativeProxy;
+      NativeProxy.createGestureHandler(closure_0, closure_2, {});
+      let result = transformIntoHandlerTags.scheduleFlushOperations();
+      return () => {
+        const NativeProxy = closure_0(6936).NativeProxy;
+        NativeProxy.dropGestureHandler(handlerTag);
+        const result = closure_0(6923).scheduleFlushOperations();
+      };
+    }, items2);
+    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult2];
+    handlerTag(() => {
+      const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
+      const NativeProxy = _mod6936.NativeProxy;
+      const result1 = NativeProxy.setGestureHandlerConfig(closure_2, result);
+      const result2 = transformIntoHandlerTags.scheduleFlushOperations();
+      DEFAULT_PROPS_TRANSFORMER.bindSharedValues(dependencyMap, closure_2);
+      handlerIDToTag.registerGesture(closure_2, closure_7);
+      return () => {
+        closure_0(6960).unbindSharedValues(dependencyMap, handlerTag);
+        const obj = closure_0(6960);
+        closure_0(6896).unregisterGesture(handlerTag);
+      };
+    }, items3);
+    return tmpResult2;
   }
 };
-let items = [
-  entry,
-  {
-    key: "maxForce",
-    value: function maxForce(maxForce) {
-      this.config.maxForce = maxForce;
-      return this;
-    }
-  },
-  {
-    key: "feedbackOnActivation",
-    value: function feedbackOnActivation(feedbackOnActivation) {
-      this.config.feedbackOnActivation = feedbackOnActivation;
-      return this;
-    }
-  },
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
-    }
-  }
-];
-
-export const ForceTouchGesture = _createClass(ForceTouchGesture, items);

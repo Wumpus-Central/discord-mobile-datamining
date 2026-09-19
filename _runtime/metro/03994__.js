@@ -1,57 +1,57 @@
 // === Module 3994: ? ===
 
 // Module 3994
-import requiredArgs_mod from "requiredArgs" /* 3812 */;
+import module_3849_mod from "module_3849" /* 3849 */;
+import _typeof_mod from "module_3845" /* 3845 */;
+import requiredArgs_mod from "requiredArgs" /* 3846 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+let module_3849 = module_3849_mod;
+if (!module_3849) {
+  const obj = { default: module_3849 };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = module_3849;
 }
-requiredArgs = tmp3;
+module_3849 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isDate(arg0) {
-  requiredArgs.default(1, arguments);
-  let tmp2 = arg0 instanceof Date;
-  if (!tmp2) {
-    const tmp4 = "object" === _typeof(arg0);
-    if (!tmp4) {
-      tmp2 = tmp4;
-    } else {
-      const _Object = Object;
-      let str2 = Object.prototype.toString;
-      const call = str2.call;
-      str2 = "[object Date]";
-      const tmp5 = typeof call === "unknown" ? str2() : call(arg0);
+export default function addMonths(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(interval);
+  const defaultResult2 = module_3849.default(arg1);
+  if (isNaN(defaultResult2)) {
+    const _Date2 = Date;
+    const date = new Date(NaN);
+    return date;
+  } else if (defaultResult2) {
+    const date1 = defaultResult1.getDate();
+    const _Date = Date;
+    const date2 = new Date(defaultResult1.getTime());
+    date2.setMonth(defaultResult1.getMonth() + defaultResult2 + 1, 0);
+    let tmp8 = date2;
+    if (date1 < date2.getDate()) {
+      const fullYear = date2.getFullYear();
+      defaultResult1.setFullYear(fullYear, date2.getMonth(), date1);
+      tmp8 = defaultResult1;
     }
+    return tmp8;
+  } else {
+    return defaultResult1;
   }
-  return tmp2;
 };
 export default exports.default;

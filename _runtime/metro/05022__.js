@@ -1,41 +1,30 @@
 // === Module 5022: ? ===
 
 // Module 5022
-import _mod1282 from "module_1282" /* 1282 */;
-import _mod1314 from "module_1314" /* 1314 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1315 */;
+import _mod1445 from "module_1445" /* 1445 */;
 
-let closure_2 = Object.assign({ "[[Configurable]]": true, "[[Enumerable]]": true, "[[Get]]": true, "[[Set]]": true, "[[Value]]": true, "[[Writable]]": true });
+let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1445();
 
-export default function isPropertyDescriptor(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      for (const key10001 in arg0) {
-        if (!_mod1314(arg0, key10001)) {
-          continue;
-        } else if (closure_2[key10001]) {
-          continue;
-        } else {
-          let flag = false;
-          return false;
-        }
-        continue;
-      }
-      let tmp4 = _mod1314(obj, "[[Value]]");
-      if (!tmp4) {
-        tmp4 = _mod1314(obj, "[[Writable]]");
-      }
-      let tmp5 = _mod1314(obj, "[[Get]]");
-      if (!tmp5) {
-        tmp5 = _mod1314(obj, "[[Set]]");
-      }
-      if (tmp4) {
-        if (tmp5) {
-          const tmp8 = new _mod1282("Property Descriptors may not be both accessor and data descriptors");
-          throw tmp8;
-        }
-      }
-      return true;
-    }
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
-  return false;
+  if (!tmp) {
+    return tmp;
+  } else if (closure_2) {
+    let tmp4 = (function tryDateGetDayCall(arg0) {
+      try {
+        closure_1_0(arg0);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    })(obj);
+  } else {
+    tmp4 = "[object Date]" === closure_1(obj);
+  }
 };

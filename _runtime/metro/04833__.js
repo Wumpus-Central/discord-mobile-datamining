@@ -1,26 +1,16 @@
 // === Module 4833: ? ===
 
 // Module 4833
-import _mod514 from "module_514" /* 514 */;
-import _mod523 from "module_523" /* 523 */;
-import baseIsArguments from "baseIsArguments" /* 533 */;
+import _mod545 from "module_545" /* 545 */;
+import object from "object" /* 4834 */;
+import _mod4835 from "module_4835" /* 4835 */;
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
 
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
+export default function initCloneObject(arg0) {
+  if (typeof arg0.constructor === "function") {
+    if (!_mod545(arg0)) {
+      object(_mod4835(arg0));
     }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
-    }
-    tmp3 = tmp5;
+    return {};
   }
-  return tmp3;
 };

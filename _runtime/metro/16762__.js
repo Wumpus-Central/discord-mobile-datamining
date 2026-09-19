@@ -1,7 +1,7 @@
 // === Module 16762: ? ===
 
 // Module 16762
-import _mod17 from "module_17" /* 17 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default _mod17.NativeModules.RNViewShot;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/notification_center/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "6840fde776aba6730d4f566b68c449e7", name: "ic_highlight", type: "png" });

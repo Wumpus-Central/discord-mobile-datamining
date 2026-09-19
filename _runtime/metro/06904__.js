@@ -1,132 +1,96 @@
 // === Module 6904: ? ===
 
 // Module 6904
-import ComposedGestureName from "ComposedGestureName" /* 6907 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6916 */;
-import _mod6920 from "module_6920" /* 6920 */;
-import _slicedToArray from "module_32" /* 32 */;
+import GestureDetectorType from "GestureDetectorType" /* 6905 */;
+import NativeDetector2 from "NativeDetector" /* 6947 */;
+import VirtualDetector from "VirtualDetector" /* 6971 */;
+import transformLongPressProps from "transformLongPressProps" /* 6973 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-function isSupportedGesture(gestures) {
-  if (obj.isComposedGesture(gestures)) {
-    gestures = gestures.gestures;
-    return gestures.some(isSupportedGesture);
-  } else {
-    const type = gestures.type;
-    if (ComposedGestureName.SingleGestureName.Tap !== type) {
-      if (ComposedGestureName.SingleGestureName.LongPress !== type) {
-        if (ComposedGestureName.SingleGestureName.Fling !== type) {
-          if (ComposedGestureName.SingleGestureName.Native !== type) {
-            if (ComposedGestureName.SingleGestureName.Hover !== type) {
-              return false;
-            }
-          }
-        }
-      }
-    }
-    return true;
-  }
-  obj = DEFAULT_PROPS_TRANSFORMER;
-}
-const noop = fn(19);
-({ use: c3, useCallback: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useState: closure_7 } = noop);
-let closure_8 = fn(6905).SHARED_VALUE_OFFSET + 0.5;
-let closure_10 = { code: "function pnpm_useJSResponderHandlerTs1(sharedValues,id,notify){const{runOnJS}=this.__closure;const listener=runOnJS(notify);for(const sharedValue of sharedValues){sharedValue.addListener(id,listener);}}" };
-let closure_11 = { code: "function pnpm_useJSResponderHandlerTs2(sharedValues,id){for(const sharedValue of sharedValues){sharedValue.removeListener(id);}}" };
+let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
+const useEffect = fn(19).useEffect;
+const jsx = fn(21).jsx;
 
-export const useJSResponderHandler = function useJSResponderHandler(gesture) {
-  _require = gesture;
-  let tmp = closure_3(require("module_6920").JSResponderContext);
-  dependencyMap = tmp;
-  const tmp2 = _slicedToArray(closure_7(0), 2);
-  _slicedToArray = tmp2[1];
-  const tmp3 = closure_6(null);
-  closure_3 = tmp3;
-  if (null === tmp3.current) {
-    closure_8 = tmp5 + 1;
-    tmp3.current = +closure_8;
+export default function createNativeWrapper(displayName, arg1) {
+  _require = displayName;
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
   }
-  const items = [gesture];
-  closure_5(() => {
-    const Reanimated = gesture(6891).Reanimated;
-    const enabledSharedValues = gesture(6905).getEnabledSharedValues(Reanimated);
-    if (undefined !== Reanimated) {
-      if (0 !== enabledSharedValues.length) {
-        const current = runOnJS.current;
-        if (null !== current) {
-          runOnJS = Reanimated.runOnJS;
-          const fn = function o(arg0, arg1, arg2) {
-            const iter = arg0[Symbol.iterator]();
-            const tmp = runOnJS(arg2);
-            while (iter !== undefined) {
-              let addListenerResult = nextResult.addListener(arg1, tmp);
-              continue;
-            }
-          };
-          const obj2 = { runOnJS };
-          fn.__closure = obj2;
-          fn.__workletHash = 3030529712101;
-          fn.__initData = __initData;
-          const fn2 = function l(arg0, arg1) {
-            const iter = arg0[Symbol.iterator]();
-            while (iter !== undefined) {
-              let removeListenerResult = nextResult.removeListener(arg1);
-              continue;
-            }
-          };
-          fn2.__closure = {};
-          fn2.__workletHash = 3663767498079;
-          fn2.__initData = __initData2;
-          Reanimated.runOnUI(fn)(enabledSharedValues, current, () => {
-            current((arg0) => arg0 + 1);
-          });
-          return () => {
-            Reanimated.runOnUI(fn2)(enabledSharedValues, current);
-          };
-        }
+  let Native = Intercepting;
+  if (Intercepting === undefined) {
+    Native = require("GestureDetectorType").GestureDetectorType.Native;
+  }
+  let str;
+  if (displayName != null) {
+    str = displayName.displayName;
+  }
+  if (!str) {
+    let name;
+    if (displayName != null) {
+      const render = displayName.render;
+      if (render != null) {
+        name = render.name;
       }
     }
-    const obj = gesture(6905);
-  }, items);
-  const items1 = [tmp2[0], gesture];
-  const tmp7 = closure_4(() => {
-    let some = closure_0;
-    const isGestureEnabledResult = DEFAULT_PROPS_TRANSFORMER.isGestureEnabled(closure_0);
-    if (!isGestureEnabledResult) {
-      return isGestureEnabledResult;
-    } else {
-      if (tmpResult.isComposedGesture(some)) {
-        const gestures = some.gestures;
-        some = gestures.some;
-        let flag = some(isSupportedGesture);
-      } else {
-        const type = some.type;
-        if (ComposedGestureName.SingleGestureName.Tap !== type) {
-          if (ComposedGestureName.SingleGestureName.LongPress !== type) {
-            if (ComposedGestureName.SingleGestureName.Fling !== type) {
-              if (ComposedGestureName.SingleGestureName.Native !== type) {
-                flag = false;
-              }
-            }
-          }
-        }
+    str = name;
+  }
+  if (!str) {
+    let tmp4 = typeof displayName === "string";
+    if (typeof displayName === "string") {
+      tmp4 = displayName;
+    }
+    str = tmp4;
+  }
+  if (!str) {
+    str = "ComponentWrapper";
+  }
+  class ComponentWrapper {
+    constructor(arg0) {
+      closure_0 = displayName;
+      onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      keys = Object.keys(closure_3(displayName, closure_2));
+      obj = { gestureHandlerProps: null, childProps: null };
+      obj1 = {};
+      merged = Object.assign(closure_1);
+      obj.gestureHandlerProps = obj1;
+      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
+      reduced = keys.reduce(() => { ... }, obj);
+      ({ gestureHandlerProps, childProps } = reduced);
+      if (undefined === gestureHandlerProps.disableReanimated) {
         flag = true;
+        gestureHandlerProps.disableReanimated = true;
       }
-      tmpResult = DEFAULT_PROPS_TRANSFORMER;
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      obj3 = closure_0(closure_1[5]);
+      nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
+      closure_2 = nativeGesture;
+      items = [, ];
+      items[0] = nativeGesture;
+      items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
+      tmp6 = useEffect(() => { ... }, items);
+      tmp7 = Native;
+      if (Native === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
+        NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
+      } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
+        NativeDetector = tmp3(tmp4[6]).VirtualDetector;
+      } else {
+        NativeDetector = tmp3(tmp4[7]).NativeDetector;
+      }
+      obj6 = { gesture: nativeGesture, children: null };
+      obj7 = {};
+      merged1 = Object.assign(childProps);
+      obj7.ref = displayName.ref;
+      obj6.children = jsx(closure_0, obj7);
+      return jsx(NativeDetector, obj6);
     }
-  }, items1);
-  closure_4 = tmp7;
-  const items2 = [tmp, tmp7];
-  let handleStartShouldSetResponder = closure_4(() => {
-    if (closure_4()) {
-      const result = _mod6920.updateResponderEventValue(closure_1, true);
-    }
-    return false;
-  }, items2);
-  if (null == tmp) {
-    handleStartShouldSetResponder = () => false;
   }
-  return { handleStartShouldSetResponder };
+  ComponentWrapper.displayName = str;
+  return ComponentWrapper;
 };

@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/user_settings", width: 152, height: 123, scales: [2, 3], hash: "0669c0bbd186eac68c76b3fb934f05f4", name: "crunchyroll_connect", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9710a1ee79723d3b78a21470e6bc1f77", name: "ShieldIcon", type: "png" });

@@ -1,8 +1,7 @@
 // === Module 7010: ? ===
 
 // Module 7010
-import _mod17 from "module_17" /* 17 */;
+import _modDef7011 from "module_7011" /* 7011 */;
 
-const StyleSheet = _mod17.StyleSheet;
 
-export const styles = StyleSheet.create({ container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } });
+export default _modDef7011;

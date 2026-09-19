@@ -1,7 +1,13 @@
 // === Module 7123: ? ===
 
 // Module 7123
-import _modDef7124 from "module_7124" /* 7124 */;
 
-
-export default _modDef7124;
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
+  }
+};

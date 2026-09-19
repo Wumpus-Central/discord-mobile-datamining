@@ -1,23 +1,7 @@
 // === Module 8325: ? ===
 
 // Module 8325
-import reviveBigInts from "reviveBigInts" /* 8326 */;
-import DiscordMarkdownDefault from "DiscordMarkdown" /* 8327 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const obj = reviveBigInts;
-  let json;
-  if (null != arg1) {
-    const _JSON = JSON;
-    json = JSON.stringify(arg1);
-  }
-  return obj.decodeAstJson(DiscordMarkdownDefault.parseToAstString(arg0, json, arg2));
-};
-export const unparse = function unparse(arg0) {
-  const obj = DiscordMarkdownDefault;
-  return obj.unparseFromAstString(reviveBigInts.encodeAstJson(arg0));
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 300, height: 122, scales: [2, 3], hash: "ced54d2b1068855a4a9d8181be71ee66", name: "img_discord_nitro_logo_left", type: "png" });

@@ -1,10 +1,14 @@
 // === Module 14581: ? ===
 
 // Module 14581
-import _mod14559 from "module_14559" /* 14559 */;
-import _mod14560 from "module_14560" /* 14560 */;
+import _mod14582 from "module_14582" /* 14582 */;
 
 
-export default Object.keys || (function keys(arg0) {
-  return _mod14560(arg0, _mod14559);
-});
+export default (arg0) => {
+  if (_mod14582(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

@@ -1,0 +1,7 @@
+// === Module 3482: ? ===
+
+// Module 3482
+import registerAsset from "module_1121" /* 1121 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJ0bmVyX3BlcmtzL3hib3gvcGFydG5lcl9wYXNz", scales: [1], hash: "7775cb3be989a3cfa80f02a7574fe7a5", name: "zh-TW.messages.7775cb3be989a3cfa80f02a7574fe7a5.compiled.messages", type: "jsona" });

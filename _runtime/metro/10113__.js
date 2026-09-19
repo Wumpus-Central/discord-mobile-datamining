@@ -1,5 +1,7 @@
 // === Module 10113: ? ===
 
 // Module 10113
+import registerAsset from "module_1121" /* 1121 */;
 
-export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "59ef37b759831ec882fc480e1d1185da", name: "ic_share_ios", type: "png" });

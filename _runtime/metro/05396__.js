@@ -1,107 +1,106 @@
 // === Module 5396: ? ===
 
 // Module 5396
-import _mod5383 from "module_5383" /* 5383 */;
-import _modDef5386 from "module_5386" /* 5386 */;
+import _mod5397 from "module_5397" /* 5397 */;
 
+const _mod5398 = tmp5(5398);
 require = arg1;
-importDefault = arg2;
 const dependencyMap = arg6;
 
-export default {
-  isWebpFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod5383.getStringFromDataView(dataView, 0, 4) === "RIFF";
+export const detectFile = function detectFile(uint8Array, chunkSize) {
+  if (chunkSize) {
+    const _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty("chunkSize");
+    } else {
+      hasOwnPropertyResult = call(chunkSize, "chunkSize");
     }
-    if (tmp) {
-      tmp = _mod5383.getStringFromDataView(dataView, 8, 4) === "WEBP";
-    }
-    return tmp;
-  },
-  findOffsets(byteLength) {
-    let flag = false;
-    let num = 12;
-    let hasAppMarkers = false;
-    let vp8xChunkOffset;
-    let iccChunks;
-    let xmpChunks;
-    let tiffHeaderOffset;
-    if (20 < byteLength.byteLength) {
-      while (true) {
-        let obj = _mod5383;
-        let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
-        let uint32 = byteLength.getUint32(num + 4, true);
-        let flag3 = flag;
-        if (_modDef5386.USE_EXIF) {
-          if ("EXIF" === stringFromDataView) {
-            let tmp9Result = _mod5383;
-            let sum = num + 8;
-            let sum1 = sum;
-            if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
-              sum1 = sum + 6;
-            }
-            let tmp22 = sum1;
-            flag3 = true;
-            let sum4 = tmp;
-            let tmp20 = tmp2;
-            let tmp21 = tmp3;
-            let sum2 = uint32;
-            if (uint32 % 2 !== 0) {
-              sum2 = uint32 + 1;
-            }
-            let sum3 = num + (8 + sum2);
-            flag = flag3;
-            num = sum3;
-            tmp = sum4;
-            tmp2 = tmp20;
-            tmp3 = tmp21;
-            let tmp4 = tmp22;
-            hasAppMarkers = flag3;
-            vp8xChunkOffset = sum4;
-            iccChunks = tmp20;
-            xmpChunks = tmp21;
-            tiffHeaderOffset = tmp22;
-            if (sum3 + 8 >= byteLength.byteLength) {
-              break;
-            }
-          }
-        }
-        if (_modDef5386.USE_XMP) {
-          if ("XMP " === stringFromDataView) {
-            let obj2 = { dataOffset: num + 8, length: uint32 };
-            let items = [obj2];
-            flag3 = true;
-            sum4 = tmp;
-            tmp20 = tmp2;
-            tmp21 = items;
-            tmp22 = tmp4;
-          }
-        }
-        if (_modDef5386.USE_ICC) {
-          if ("ICCP" === stringFromDataView) {
-            let obj3 = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
-            let items1 = [obj3];
-            flag3 = true;
-            sum4 = tmp;
-            tmp20 = items1;
-            tmp21 = tmp3;
-            tmp22 = tmp4;
-          }
-        }
-        sum4 = tmp;
-        tmp20 = tmp2;
-        tmp21 = tmp3;
-        tmp22 = tmp4;
-        if ("VP8X" === stringFromDataView) {
-          sum4 = num + 8;
-          flag3 = true;
-          tmp20 = tmp2;
-          tmp21 = tmp3;
-          tmp22 = tmp4;
+    if (hasOwnPropertyResult) {
+      chunkSize = undefined;
+      if (null != chunkSize) {
+        chunkSize = chunkSize.chunkSize;
+      }
+      let num2 = 0;
+      if (null !== chunkSize) {
+        num2 = 0;
+        if (undefined !== chunkSize) {
+          num2 = chunkSize;
         }
       }
+      if (num2 <= 0) {
+        const _RangeError = RangeError;
+        const rangeError = new RangeError("chunkSize must be bigger than zero");
+        throw rangeError;
+      }
     }
-    return { hasAppMarkers, tiffHeaderOffset, xmpChunks, iccChunks, vp8xChunkOffset };
+  }
+  let num3;
+  if (null != chunkSize) {
+    num3 = chunkSize.chunkSize;
+  }
+  if (!num3) {
+    num3 = 64;
+  }
+  const fileChunk = _mod5397.getFileChunk(uint8Array, num3);
+  if (0 !== fileChunk.length) {
+    const items = [];
+    const items1 = [];
+    for (const key10027 in _mod5398.FileTypes) {
+      let _Object4 = Object;
+      let call2 = hasOwnProperty2.call;
+      let tmp23 = require;
+      let FileTypes5 = _mod5398.FileTypes;
+      if (typeof call2 === "unknown") {
+        let hasOwnProperty2Result = hasOwnProperty2(key10027);
+      } else {
+        hasOwnProperty2Result = call2(FileTypes5, key10027);
+      }
+      if (!hasOwnProperty2Result) {
+        continue;
+      } else {
+        let FileTypes = tmp23(5398).FileTypes;
+        let signaturesByName = FileTypes.getSignaturesByName(key10027);
+        let FileTypes2 = tmp23(5398).FileTypes;
+        let detectbBySignaturesResult = FileTypes2.detectbBySignatures(fileChunk, signaturesByName);
+        if (!detectbBySignaturesResult) {
+          continue;
+        } else {
+          let FileTypes3 = tmp23(5398).FileTypes;
+          let infoByName = FileTypes3.getInfoByName(key10027);
+          let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = tmp23(5398).FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+          if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(infoByName.extension)) {
+            let arr = items1.push(infoByName.extension);
+          }
+          let obj = { extension: null, mimeType: null, description: null, signature: null };
+          ({ extension: obj.extension, mimeType: obj.mimeType, description: obj.description } = infoByName);
+          let _Object2 = Object;
+          let _Object3 = Object;
+          let obj2 = { sequence: null };
+          let sequence = detectbBySignaturesResult.sequence;
+          let merged = Object.assign({}, detectbBySignaturesResult);
+          obj2.sequence = sequence.map((item) => item.toString(16));
+          obj.signature = Object.assign(merged, obj2);
+          let arr2 = items.push(obj);
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    if (0 !== items.length) {
+      if (1 === items.length) {
+        if (0 === items1.length) {
+          return items[0];
+        }
+      }
+      const FileTypes4 = _mod5398.FileTypes;
+      const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
+      require = result;
+      if (result) {
+        return items.find((extension) => extension.extension === result);
+      }
+    }
   }
 };

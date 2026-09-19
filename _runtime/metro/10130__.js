@@ -1,7 +1,7 @@
 // === Module 10130: ? ===
 
 // Module 10130
-import registerAsset from "module_1121" /* 1121 */;
+import _mod10131 from "module_10131" /* 10131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "032ba055130436392254ce3ba39e9456", name: "gmail", type: "png" });
+export default _mod10131();

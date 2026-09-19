@@ -1,0 +1,65 @@
+// === Module 8837: RNSVGCircle ===
+
+// Module 8837 (RNSVGCircle)
+import _modDef8739 from "module_8739" /* 8739 */;
+import _modDef8750 from "module_8750" /* 8750 */;
+import _modDef8756 from "module_8756" /* 8756 */;
+import _modDef8758 from "module_8758" /* 8758 */;
+import _modDef8760 from "module_8760" /* 8760 */;
+import _modDef8762 from "module_8762" /* 8762 */;
+import _modDef8764 from "module_8764" /* 8764 */;
+import _modDef8768 from "module_8768" /* 8768 */;
+import _modDef8771 from "module_8771" /* 8771 */;
+import _modDef8778 from "module_8778" /* 8778 */;
+import _modDef8780 from "module_8780" /* 8780 */;
+import _modDef8782 from "module_8782" /* 8782 */;
+import _modDef8784 from "module_8784" /* 8784 */;
+import _modDef8795 from "module_8795" /* 8795 */;
+import _modDef8797 from "module_8797" /* 8797 */;
+import _modDef8799 from "module_8799" /* 8799 */;
+import _modDef8801 from "module_8801" /* 8801 */;
+import _modDef8803 from "module_8803" /* 8803 */;
+import _modDef8807 from "module_8807" /* 8807 */;
+import _modDef8810 from "module_8810" /* 8810 */;
+import _modDef8812 from "module_8812" /* 8812 */;
+import _modDef8814 from "module_8814" /* 8814 */;
+import _modDef8819 from "module_8819" /* 8819 */;
+import _modDef8821 from "module_8821" /* 8821 */;
+import _modDef8824 from "module_8824" /* 8824 */;
+import _modDef8827 from "module_8827" /* 8827 */;
+import _modDef8828 from "module_8828" /* 8828 */;
+import _modDef8830 from "module_8830" /* 8830 */;
+import _modDef8832 from "module_8832" /* 8832 */;
+import _modDef8838 from "module_8838" /* 8838 */;
+
+
+export const RNSVGCircle = _modDef8756;
+export const RNSVGClipPath = _modDef8758;
+export const RNSVGDefs = _modDef8760;
+export const RNSVGEllipse = _modDef8762;
+export const RNSVGForeignObject = _modDef8797;
+export const RNSVGGroup = _modDef8750;
+export const RNSVGImage = _modDef8799;
+export const RNSVGLinearGradient = _modDef8803;
+export const RNSVGLine = _modDef8801;
+export const RNSVGMarker = _modDef8807;
+export const RNSVGMask = _modDef8810;
+export const RNSVGPath = _modDef8812;
+export const RNSVGPattern = _modDef8814;
+export const RNSVGRadialGradient = _modDef8819;
+export const RNSVGRect = _modDef8821;
+export const RNSVGSvgAndroid = _modDef8739;
+export const RNSVGSvgIOS = _modDef8838;
+export const RNSVGSymbol = _modDef8824;
+export const RNSVGText = _modDef8828;
+export const RNSVGTextPath = _modDef8830;
+export const RNSVGTSpan = _modDef8827;
+export const RNSVGUse = _modDef8832;
+export const RNSVGFilter = _modDef8795;
+export const RNSVGFeBlend = _modDef8764;
+export const RNSVGFeColorMatrix = _modDef8768;
+export const RNSVGFeComposite = _modDef8771;
+export const RNSVGFeFlood = _modDef8782;
+export const RNSVGFeGaussianBlur = _modDef8778;
+export const RNSVGFeMerge = _modDef8784;
+export const RNSVGFeOffset = _modDef8780;

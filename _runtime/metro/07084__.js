@@ -1,19 +1,11 @@
 // === Module 7084: ? ===
 
 // Module 7084
-function _setPrototypeOf(arg0, arg1) {
-  if (Object.setPrototypeOf) {
-    const _Object = Object;
-    exports = setPrototypeOf.bind();
-  } else {
-    exports = (arg0, arg1) => {
-      arg0.__proto__ = arg1;
-      return arg0;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0, arg1);
-}
-let exports = _setPrototypeOf;
+import cancelAnimation from "cancelAnimation" /* 1637 */;
 
-export default _setPrototypeOf;
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
+const module_7077 = fn(7077);
+const memoResult = fn(19).memo(module_7077.createBottomSheetScrollableComponent(fn(6865).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent));
+memoResult.displayName = "BottomSheetSectionList";
+
+export default memoResult;

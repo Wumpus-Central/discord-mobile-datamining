@@ -1,231 +1,40 @@
 // === Module 13083: ? ===
 
 // Module 13083
-import _mod13040 from "module_13040" /* 13040 */;
-import _mod13045 from "module_13045" /* 13045 */;
-import _mod13084 from "module_13084" /* 13084 */;
-import _mod13086 from "module_13086" /* 13086 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod13055 from "module_13055" /* 13055 */;
 
-function forEachEnvelopeItem(arg0, fn) {
-  for (const item10007 of tmp) {
-    if (arg1(item10007, item10007[0].type)) {
-      obj.return();
-      let flag = true;
-      return true;
-    }
-  }
-  return false;
-}
-let closure_4 = { session: "session", sessions: "session", attachment: "attachment", transaction: "transaction", event: "error", client_report: "internal", user_report: "default", profile: "profile", profile_chunk: "profile", replay_event: "replay", replay_recording: "replay", check_in: "monitor", feedback: "feedback", span: "span", statsd: "metric_bucket", raw_security: "security" };
+require = arg1;
+const dependencyMap = arg6;
 
-export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
-  const tmp = _slicedToArray(arg0, 2);
-  const items = [tmp[0], ];
-  const items1 = [];
-  items1[HermesBuiltin.arraySpread(tmp[1], 0)] = arg1;
-  items[1] = items1;
-  return items;
-};
-export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
-  if (typeof data.data === "string") {
-    data = data.data;
-    let __SENTRY__ = require;
-    let encodePolyfill = dependencyMap;
-    if (!_mod13040.GLOBAL_OBJ.__SENTRY__) {
-      const _TextEncoder = TextEncoder;
-      const encoder = new TextEncoder();
-      let encodeResult = encoder.encode(data);
-    }
-    __SENTRY__ = __SENTRY__(13040).GLOBAL_OBJ.__SENTRY__;
-    encodePolyfill = __SENTRY__.encodePolyfill;
-    encodeResult = encodePolyfill(data);
-  } else {
-    const data1 = data.data;
-    const obj3 = { type: "attachment", length: data1.length, filename: null, content_type: null, attachment_type: null };
-    ({ filename: obj2.filename, contentType: obj2.content_type, attachmentType: obj2.attachment_type } = data);
-    const items = [_mod13045.dropUndefinedKeys(obj3), data1];
-    return items;
+export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {
+
+    };
   }
-};
-export function createEnvelope(eventEnvelopeHeaders) {
-  let items = items1;
-  if (items1 === undefined) {
-    items = [];
-  }
-  items1 = [eventEnvelopeHeaders, items];
-  return items1;
-}
-export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, arg2, url) {
-  const obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
-  let tmp2 = sdk;
-  if (sdk) {
-    const obj2 = { sdk };
-    tmp2 = obj2;
-  }
-  const merged = Object.assign(tmp2);
-  let tmp4 = arg2 && url;
-  if (tmp4) {
-    const obj3 = { dsn: _mod13086.dsnToString(url) };
-    tmp4 = obj3;
-  }
-  const merged1 = Object.assign(tmp4);
-  let tmp8 = tmp;
-  if (event_id.sdkProcessingMetadata && event_id.sdkProcessingMetadata.dynamicSamplingContext) {
-    const obj4 = { trace: null };
-    const obj6 = {};
-    const merged2 = Object.assign(tmp);
-    obj4.trace = _mod13045.dropUndefinedKeys(obj6);
-    tmp8 = obj4;
-  }
-  const merged3 = Object.assign(tmp8);
-  return obj;
-};
-export function createSpanEnvelopeItem(arg0) {
-  const items = [{ type: "span" }, arg0];
-  return items;
-}
-export const envelopeContainsItemType = function envelopeContainsItemType(arg0, arg1) {
-  closure_0 = arg1;
-  return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
-};
-export const envelopeItemTypeToDataCategory = function envelopeItemTypeToDataCategory(arg0) {
-  return closure_4[arg0];
-};
-export { forEachEnvelopeItem };
-export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelopeHeader(sdk) {
-  if (sdk) {
-    if (sdk.sdk) {
-      const obj = { name: null, version: null };
-      ({ name: obj.name, version: obj.version } = sdk.sdk);
-      return obj;
-    }
-  }
-};
-export const parseEnvelope = function parseEnvelope(arr) {
-  if (typeof arr !== "string") {
-    function readJson() {
-      let length = closure_0.indexOf(10);
-      if (length < 0) {
-        length = closure_0.length;
-      }
-      const subarrayResult = closure_0.subarray(0, length);
-      closure_0 = closure_0.subarray(length + 1);
-      if (_mod13040.GLOBAL_OBJ.__SENTRY__) {
-        if (_mod13040.GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
-          const __SENTRY__ = _mod13040.GLOBAL_OBJ.__SENTRY__;
-          let decodePolyfillResult = __SENTRY__.decodePolyfill(subarrayResult);
-        }
-        return JSON.parse(decodePolyfillResult);
-      }
-      const decoder = new TextDecoder();
-      decodePolyfillResult = decoder.decode(subarrayResult);
-    }
-    _require = arr;
-    const items = [];
-    const json = readJson();
-    while (_require.length) {
-      let json1 = readJson();
-      let length;
-      if (typeof json1.length === "number") {
-        length = json1.length;
-      }
-      let items1 = [json1, ];
-      if (length) {
-        let subarrayResult = require("Discord");
-        _require = _require.subarray(length + 1);
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then((result) => {
+          closure_1();
+          return result;
+        }, (arg0) => {
+          closure_0(arg0);
+          closure_1();
+          throw arg0;
+        });
       } else {
-        subarrayResult = readJson();
+        fn();
+        return promise;
       }
-      items1[1] = subarrayResult;
-      arr = items.push(items1);
-    }
-    const items2 = [json, items];
-    return items2;
-  } else {
-    let __SENTRY__ = _require;
-    let encodePolyfill = dependencyMap;
-    if (!require("module_13040").GLOBAL_OBJ.__SENTRY__) {
-      const _TextEncoder = TextEncoder;
-      const encoder = new TextEncoder();
-      let encodeResult = encoder.encode(arr);
-    }
-    __SENTRY__ = __SENTRY__(13040).GLOBAL_OBJ.__SENTRY__;
-    encodePolyfill = __SENTRY__.encodePolyfill;
-    encodeResult = encodePolyfill(arr);
+      obj = _mod13055;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
   }
-};
-export const serializeEnvelope = function serializeEnvelope(dependencyMap) {
-  function append(json) {
-    if (typeof sum === "string") {
-      if (typeof json === "string") {
-        sum = arr + json;
-      } else {
-        if (_mod13040.GLOBAL_OBJ.__SENTRY__) {
-          if (_mod13040.GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
-            const __SENTRY__2 = _mod13040.GLOBAL_OBJ.__SENTRY__;
-            let encodePolyfillResult = __SENTRY__2.encodePolyfill(arr);
-          }
-          sum = [encodePolyfillResult, json];
-        }
-        const _TextEncoder2 = TextEncoder;
-        const encoder2 = new TextEncoder();
-        encodePolyfillResult = encoder2.encode(arr);
-      }
-    } else if (typeof json !== "string") {
-      arr.push(json);
-    } else {
-      let __SENTRY__ = require;
-      let encodePolyfill = dependencyMap;
-      if (!_mod13040.GLOBAL_OBJ.__SENTRY__) {
-        const _TextEncoder = TextEncoder;
-        const encoder = new TextEncoder();
-        let encodeResult = encoder.encode(json);
-      }
-      __SENTRY__ = __SENTRY__(13040).GLOBAL_OBJ.__SENTRY__;
-      encodePolyfill = __SENTRY__.encodePolyfill;
-      encodeResult = encodePolyfill(json);
-    }
-  }
-  const tmp4 = _slicedToArray(dependencyMap, 2);
-  const require = JSON.stringify(tmp4[0]);
-  if (tmp5 === undefined) {
-    let tmp22 = require;
-    if (typeof require !== "string") {
-      tmp22 = (function concatBuffers(arr) {
-        const uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
-        let num = 0;
-        const iter = arr[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let result = uint8Array.set(nextResult, num);
-          num = num + nextResult.length;
-          continue;
-        }
-        return uint8Array;
-      })(tmp21);
-    }
-    return tmp22;
-  } else {
-    const tmp8 = _slicedToArray(tmp6, 2);
-    const _JSON = JSON;
-    const _HermesInternal = HermesInternal;
-    append("\n" + JSON.stringify(tmp8[0]) + "\n");
-    if (typeof tmp8[1] !== "string") {
-      const _Uint8Array = Uint8Array;
-      if (!(tmp10 instanceof Uint8Array)) {
-        try {
-          const _JSON2 = JSON;
-          let json = JSON.stringify(tmp10);
-          append(json);
-        } catch (err) {
-          const _JSON3 = tmp2.JSON;
-          const normalizer = _mod13084;
-          json = _JSON3.stringify(normalizer.normalize(tmp3));
-        }
-      }
-    }
-    append(tmp8[1]);
-  }
-  tmp5 = tmp4[1][Symbol.iterator]();
 };

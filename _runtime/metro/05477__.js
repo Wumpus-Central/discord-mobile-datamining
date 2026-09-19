@@ -1,7 +1,44 @@
 // === Module 5477: ? ===
 
 // Module 5477
-import registerAsset from "module_1121" /* 1121 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
+let closure_2 = [6, 7, 99];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "353a91a70e129c6496d346cd0dd42f3d", name: "img_account_sync_skype_white", type: "png" });
+export default {
+  get(buffer, Compression, arg2) {
+    let prop = Compression;
+    if (Compression) {
+      let hasItem = undefined === Compression.Compression;
+      if (!hasItem) {
+        hasItem = closure_2.includes(Compression.Compression.value);
+      }
+      prop = hasItem;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormat;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormat.value;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormatLength;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormatLength.value;
+    }
+    if (prop) {
+      Compression.type = "image/jpeg";
+      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
+      buffer = buffer.buffer;
+      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
+      require("module_5425").deferInit(Compression, "base64", function() {
+        return require("module_5425").getBase64Image(this.image);
+      });
+      const obj = require("module_5425");
+    }
+    return Compression;
+  }
+};

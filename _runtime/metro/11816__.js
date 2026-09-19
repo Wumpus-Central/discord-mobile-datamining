@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images", width: 54, height: 54, scales: [1], hash: "9a03a674792f2187c83109744abce109", name: "connections-profile-steam-dota2", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "a22308efe22f297561f3f188b87b515b", name: "ic_flower_star_24px", type: "png" });

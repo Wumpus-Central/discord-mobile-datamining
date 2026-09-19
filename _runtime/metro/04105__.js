@@ -1,30 +1,196 @@
 // === Module 4105: ? ===
 
 // Module 4105
-import _typeof_mod from "module_3811" /* 3811 */;
-import requiredArgs_mod from "requiredArgs" /* 3812 */;
+import _mod3850 from "module_3850" /* 3850 */;
+import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 4007 */;
+import format_mod from "module_4077" /* 4077 */;
+import code_mod from "module_4091" /* 4091 */;
+import subMilliseconds_mod from "subMilliseconds" /* 4078 */;
+import _typeof_mod from "module_3845" /* 3845 */;
+import module_4008_mod from "module_4008" /* 4008 */;
+import requiredArgs_mod from "requiredArgs" /* 3846 */;
+import module_3849_mod from "module_3849" /* 3849 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let differenceInCalendarDays = differenceInCalendarDays_mod;
+if (!differenceInCalendarDays) {
+  let obj = { default: differenceInCalendarDays };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = differenceInCalendarDays;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+differenceInCalendarDays = tmp3;
+let format = format_mod;
+if (!format) {
+  let obj2 = { default: format };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = format;
 }
-requiredArgs = tmp5;
+format = tmp5;
+let code = code_mod;
+if (!code) {
+  const obj3 = { default: code };
+  let tmp7 = obj3;
+} else {
+  tmp7 = code;
+}
+code = tmp7;
+let subMilliseconds = subMilliseconds_mod;
+if (!subMilliseconds) {
+  const obj4 = { default: subMilliseconds };
+  let tmp9 = obj4;
+} else {
+  tmp9 = subMilliseconds;
+}
+subMilliseconds = tmp9;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj5 = { default: _typeof };
+  let tmp11 = obj5;
+} else {
+  tmp11 = _typeof;
+}
+_typeof = tmp11;
+let module_4008 = module_4008_mod;
+if (!module_4008) {
+  const obj6 = { default: module_4008 };
+  let tmp13 = obj6;
+} else {
+  tmp13 = module_4008;
+}
+module_4008 = tmp13;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj7 = { default: requiredArgs };
+  let tmp15 = obj7;
+} else {
+  tmp15 = requiredArgs;
+}
+requiredArgs = tmp15;
+let module_3849 = module_3849_mod;
+if (!module_3849) {
+  const obj8 = { default: module_3849 };
+  let tmp17 = obj8;
+} else {
+  tmp17 = module_3849;
+}
+module_3849 = tmp17;
 
-export default function isAfter(arg0, arg1) {
+export default function formatRelative(arg0, arg1, locale) {
   requiredArgs.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time > _typeof.default(arg1).getTime();
+  const defaultResult2 = _typeof.default(arg1);
+  const defaultOptions = _mod3850.getDefaultOptions();
+  let locale1;
+  if (null != locale) {
+    locale1 = locale.locale;
+  }
+  if (null === locale1) {
+    locale1 = defaultOptions.locale;
+  }
+  if (null === locale1) {
+    locale1 = code.default;
+  }
+  let weekStartsOn;
+  if (null != locale) {
+    weekStartsOn = locale.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != locale) {
+      locale = locale.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
+            }
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn1;
+  }
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn2;
+  }
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
+  }
+  const defaultResult3 = module_3849.default(num);
+  if (locale1.localize) {
+    if (locale1.formatLong) {
+      if (locale1.formatRelative) {
+        const defaultResult4 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
+        const _isNaN = isNaN;
+        if (isNaN(defaultResult4)) {
+          const _RangeError4 = RangeError;
+          const rangeError = new RangeError("Invalid time value");
+          throw rangeError;
+        } else {
+          let str4 = "other";
+          let str5 = "other";
+          if (defaultResult4 >= -6) {
+            let str6 = "lastWeek";
+            if (defaultResult4 >= -1) {
+              let str7 = "yesterday";
+              if (defaultResult4 >= 0) {
+                let str8 = "today";
+                if (defaultResult4 >= 1) {
+                  let str9 = "tomorrow";
+                  if (defaultResult4 >= 2) {
+                    if (defaultResult4 < 7) {
+                      str4 = "nextWeek";
+                    }
+                    str9 = str4;
+                  }
+                  str8 = str9;
+                }
+                str7 = str8;
+              }
+              str6 = str7;
+            }
+            str5 = str6;
+          }
+          const defaultResult5 = subMilliseconds.default(defaultResult1, module_4008.default(defaultResult1));
+          const obj = { locale: locale1, weekStartsOn: defaultResult3 };
+          const obj2 = { locale: locale1, weekStartsOn: defaultResult3 };
+          return format.default(defaultResult1, locale1.formatRelative(str5, defaultResult5, subMilliseconds.default(defaultResult2, module_4008.default(defaultResult2)), obj), obj2);
+        }
+      } else {
+        const _RangeError3 = RangeError;
+        const rangeError1 = new RangeError("locale must contain formatRelative property");
+        throw rangeError1;
+      }
+    } else {
+      const _RangeError2 = RangeError;
+      const rangeError2 = new RangeError("locale must contain formatLong property");
+      throw rangeError2;
+    }
+  } else {
+    const _RangeError = RangeError;
+    const rangeError3 = new RangeError("locale must contain localize property");
+    throw rangeError3;
+  }
 };
 export default exports.default;

@@ -1,334 +1,296 @@
 // === Module 7025: ? ===
 
 // Module 7025
-import normalizeSnapPoint from "normalizeSnapPoint" /* 6837 */;
-import id from "id" /* 7027 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop_mod from "module_19" /* 19 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-require = fn;
-let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
-let noop = fn(19);
-({ useCallback: metroRequire, useImperativeHandle: closure_7, useMemo: closure_8, useRef: closure_9, useState: c10, createElement: closure_11, forwardRef, memo } = noop);
-let noop = noop_mod;
+const GenericTouchable = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const Animated = fn(17).Animated;
 const jsx = fn(21).jsx;
-let closure_14 = { mount: false, data: "PX_16" };
-const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1) {
-  _require = arg1;
-  name = name.name;
-  let DEFAULT_STACK_BEHAVIOR = name.stackBehavior;
-  if (undefined === DEFAULT_STACK_BEHAVIOR) {
-    DEFAULT_STACK_BEHAVIOR = require("DEFAULT_STACK_BEHAVIOR").DEFAULT_STACK_BEHAVIOR;
-  }
-  let DEFAULT_ENABLE_DISMISS_ON_CLOSE = name.enableDismissOnClose;
-  if (undefined === DEFAULT_ENABLE_DISMISS_ON_CLOSE) {
-    DEFAULT_ENABLE_DISMISS_ON_CLOSE = require("DEFAULT_STACK_BEHAVIOR").DEFAULT_ENABLE_DISMISS_ON_CLOSE;
-  }
-  const onDismiss = name.onDismiss;
-  const onAnimate = name.onAnimate;
-  const index = name.index;
-  let num = 0;
-  if (undefined !== index) {
-    num = index;
-  }
-  let enablePanDownToClose = name.enablePanDownToClose;
-  let tmp5 = undefined === enablePanDownToClose;
-  if (!tmp5) {
-    tmp5 = enablePanDownToClose;
-  }
-  enablePanDownToClose = tmp5;
-  const animateOnMount = name.animateOnMount;
-  let Fragment = name.containerComponent;
-  if (undefined === Fragment) {
-    Fragment = willUnmountSheet.Fragment;
-  }
-  const onChange = name.onChange;
-  const children = name.children;
-  const tmp8 = onAnimate(name, DEFAULT_ENABLE_DISMISS_ON_CLOSE);
-  const tmp9 = onDismiss(mountSheet(closure_14), 2);
-  const first = tmp9[0];
-  const mount = first.mount;
-  closure_9 = tmp9[1];
-  const bottomSheetModalInternal = require("module_6825").useBottomSheetModalInternal();
-  ({ hostName, mountSheet } = bottomSheetModalInternal);
-  const unmountSheet = bottomSheetModalInternal.unmountSheet;
-  willUnmountSheet = bottomSheetModalInternal.willUnmountSheet;
-  ({ containerHeight, containerOffset } = bottomSheetModalInternal);
-  let obj = require("module_6825");
-  const tmp11 = _require;
-  const removePortal = require("Portal").usePortal(hostName).removePortal;
-  const tmp15 = closure_9(null);
-  closure_14 = tmp15;
-  let num2 = -1;
-  if (!(undefined === animateOnMount || animateOnMount)) {
-    num2 = num;
-  }
-  closure_9(num2);
-  closure_9(null);
-  closure_9(-1);
-  closure_18 = tmp14(false);
-  closure_9(false);
-  const tmp14Result = closure_9(false);
-  tmp14Result.current = mount;
-  let items = [name];
-  const tmp17 = onChange(() => {
-    let combined = name;
-    if (!name) {
-      const _HermesInternal = HermesInternal;
-      combined = "bottom-sheet-modal-" + id.id();
+const TOUCHABLE_STATE = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
+class GenericTouchable {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, GenericTouchable);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(GenericTouchable);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
     }
-    return combined;
-  }, items);
-  closure_21 = tmp17;
-  function resetVariables() {
-    normalizeSnapPoint.print({ component: memoResult.name, method: resetVariables.name });
-    closure_15.current = -1;
-    closure_17.current = -1;
-    closure_18.current = false;
-    closure_20.current = false;
-    closure_19.current = false;
-  }
-  const tmp18 = num(resetVariables, []);
-  closure_22 = tmp18;
-  let items1 = [tmp17, tmp18, unmountSheet, removePortal, onDismiss];
-  const tmp19 = num(function unmount() {
-    closure_22();
-    unmountSheet(closure_21);
-    removePortal(closure_21);
-    if (ref5.current) {
-      closure_9(closure_14);
-    }
-    if (onDismiss) {
-      onDismiss();
-    }
-  }, items1);
-  closure_23 = tmp19;
-  let snapToIndex = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        snapToIndex = current.snapToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let snapToPosition = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        snapToPosition = current.snapToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let setToIndex = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        setToIndex = current.setToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let setToPosition = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        setToPosition = current.setToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let expand = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        expand = current.expand;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let collapse = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        collapse = current.collapse;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let close = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        close = current.close;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let forceClose = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        forceClose = current.forceClose;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  const items2 = [tmp17, DEFAULT_STACK_BEHAVIOR, mountSheet];
-  const present = num(function handlePresent(data) {
-    const animationFrame = requestAnimationFrame(() => {
-      closure_9({ mount: true, data });
-      mountSheet(closure_21, data, DEFAULT_STACK_BEHAVIOR);
-    });
-  }, items2);
-  const items3 = [willUnmountSheet, tmp19, tmp17, tmp5];
-  const dismiss = num(function handleDismiss(arg0) {
-    let tmp3 = -1 !== ref.current;
-    if (!tmp3) {
-      tmp3 = false !== closure_18.current;
-    }
-    if (!tmp3) {
-      tmp3 = tmp;
-    }
-    if (tmp3) {
-      if (tmp) {
-        willUnmountSheet(closure_21);
-        closure_19.current = true;
-        const current = closure_14.current;
-        if (current != null) {
-          current.forceClose(arg0);
-        }
-      } else if (closure_18.current) {
-        closure_23();
-      }
-    }
-  }, items3);
-  const items4 = [num];
-  const minimize = num(function handleMinimize() {
-    if (!closure_18.current) {
-      tmp.current = true;
-      if (-1 === ref.current) {
-        closure_17.current = num;
-      } else {
-        closure_17.current = tmp2.current;
-      }
-      const current = closure_14.current;
-      if (current != null) {
-        current.close();
-      }
-    }
-  }, items4);
-  const restore = num(function handleRestore() {
-    let current = closure_18.current;
-    if (current) {
-      current = !ref4.current;
-    }
-    if (current) {
-      closure_18.current = false;
-      const current2 = closure_14.current;
-      if (current2 != null) {
-        current2.snapToIndex(ref3.current);
-      }
-    }
-  }, []);
-  const items5 = [tmp17, tmp19, willUnmountSheet];
-  const obj2 = require("Portal");
-  const tmp21 = num(function handlePortalRender(fn) {
-    if (ref5.current) {
-      fn();
-    }
-  }, []);
-  const items6 = [onChange];
-  const items7 = [onAnimate];
-  const tmp20 = num(function handlePortalOnUnmount() {
-    let tmp = -1 === ref.current;
-    if (tmp) {
-      tmp = false === closure_18.current;
-    }
-    if (!tmp) {
-      closure_20.current = false;
-      closure_19.current = true;
-      if (closure_18.current) {
-        closure_23();
-      } else {
-        willUnmountSheet(closure_21);
-        const current = closure_14.current;
-        if (current != null) {
-          current.close();
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.longPressDetected = false;
+    tmp3Result.pointerInside = true;
+    tmp3Result.STATE = closure_8.UNDETERMINED;
+    tmp3Result.onGestureEvent = (nativeEvent) => {
+      const pointerInside = nativeEvent.nativeEvent.pointerInside;
+      if (closure_0.pointerInside !== pointerInside) {
+        if (pointerInside) {
+          closure_0.onMoveIn();
+        } else {
+          closure_0.onMoveOut();
         }
       }
-    }
-  }, items5);
-  const items8 = [DEFAULT_ENABLE_DISMISS_ON_CLOSE, tmp19];
-  const tmp22 = num(function handleBottomSheetOnChange(current, arg1, arg2) {
-    closure_15.current = current;
-    closure_16.current = null;
-    if (onChange) {
-      tmp(current, arg1, arg2);
-    }
-  }, items6);
-  const tmp23 = num((arg0, current, arg2, arg3, arg4) => {
-    closure_16.current = current;
-    if (onAnimate) {
-      tmp(arg0, current, arg2, arg3, arg4);
-    }
-  }, items7);
-  enablePanDownToClose(arg1, () => ({ snapToIndex, snapToPosition, setToIndex, setToPosition, expand, collapse, close, forceClose, dismiss, present, minimize, restore }));
-  let tmp27Result2 = null;
-  if (mount) {
-    const obj3 = { name: tmp17, hostName, handleOnMount: tmp21, handleOnUpdate: tmp21, handleOnUnmount: tmp20, children: null };
-    const obj4 = {};
-    const merged = Object.assign(tmp8);
-    obj4.ref = tmp15;
-    obj4.key = tmp17;
-    obj4.index = num;
-    obj4.snapPoints = name.snapPoints;
-    obj4.enablePanDownToClose = tmp5;
-    obj4.animateOnMount = tmp6;
-    obj4.containerHeight = containerHeight;
-    obj4.containerOffset = containerOffset;
-    obj4.onChange = tmp22;
-    obj4.onClose = tmp24;
-    obj4.onAnimate = tmp23;
-    obj4.$modal = true;
-    let tmp27Result = children;
-    if (typeof children === "function") {
-      const obj5 = { data: first.data };
-      tmp27Result = tmp27(children, obj5);
-    }
-    const obj6 = { children: unmountSheet(name(tmp12[9]), obj4, tmp27Result) };
-    obj3.children = removePortal(Fragment, obj6, tmp17);
-    tmp27Result2 = tmp27(tmp11(tmp12[6]).Portal, obj3, tmp17);
-    const tmp30 = name(tmp12[9]);
+      closure_0.pointerInside = pointerInside;
+    };
+    tmp3Result.onHandlerStateChange = (nativeEvent) => {
+      const state = nativeEvent.nativeEvent.state;
+      if (state !== GenericTouchable(6898).State.CANCELLED) {
+        if (state !== GenericTouchable(6898).State.FAILED) {
+          if (state === GenericTouchable(6898).State.BEGAN) {
+            if (closure_0.STATE === closure_0.UNDETERMINED) {
+              closure_0.handlePressIn();
+            }
+          }
+          if (state === GenericTouchable(6898).State.END) {
+            const longPressDetected = closure_0.longPressDetected;
+            let tmp5 = !longPressDetected;
+            if (!longPressDetected) {
+              tmp5 = closure_0.STATE !== closure_0.MOVED_OUTSIDE;
+            }
+            if (tmp5) {
+              tmp5 = undefined === closure_0.pressOutTimeout;
+            }
+            const result = closure_0.handleGoToUndetermined();
+            if (tmp5) {
+              const props = closure_0.props;
+              const onPress = props.onPress;
+              if (onPress != null) {
+                onPress();
+              }
+            }
+          }
+        }
+      }
+      closure_0.moveToState(closure_0.UNDETERMINED);
+    };
+    tmp3Result.onLongPressDetected = () => {
+      closure_0.longPressDetected = true;
+      const props = closure_0.props;
+      const onLongPress = props.onLongPress;
+      if (onLongPress != null) {
+        onLongPress();
+      }
+    };
+    return tmp3Result;
   }
-  return tmp27Result2;
-}));
-memoResult.displayName = "BottomSheetModal";
+}
+_inherits(GenericTouchable, fn(19).Component);
+const entry = {
+  key: "handlePressIn",
+  value: function handlePressIn() {
+    const self = this;
+    if (this.props.delayPressIn) {
+      const _setTimeout = setTimeout;
+      self.pressInTimeout = setTimeout(() => {
+        self.moveToState(obj.BEGAN);
+        self.pressInTimeout = undefined;
+      }, self.props.delayPressIn);
+    } else {
+      self.moveToState(obj.BEGAN);
+    }
+    if (self.props.onLongPress) {
+      const _setTimeout2 = setTimeout;
+      self.longPressTimeout = setTimeout(self.onLongPressDetected, (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0));
+      const tmp4 = self.props.delayPressIn || 0;
+      const tmp5 = self.props.delayLongPress || 0;
+    }
+  }
+};
+let items = [
+  entry,
+  {
+    key: "handleMoveOutside",
+    value: function handleMoveOutside() {
+      const self = this;
+      if (this.props.delayPressOut) {
+        let pressOutTimeout = self.pressOutTimeout;
+        if (!pressOutTimeout) {
+          const _setTimeout = setTimeout;
+          pressOutTimeout = setTimeout(() => {
+            self.moveToState(obj.MOVED_OUTSIDE);
+            self.pressOutTimeout = undefined;
+          }, self.props.delayPressOut);
+        }
+        self.pressOutTimeout = pressOutTimeout;
+      } else {
+        self.moveToState(obj.MOVED_OUTSIDE);
+      }
+    }
+  },
+  {
+    key: "handleGoToUndetermined",
+    value: function handleGoToUndetermined() {
+      const self = this;
+      clearTimeout(this.pressOutTimeout);
+      if (this.props.delayPressOut) {
+        const _setTimeout = setTimeout;
+        self.pressOutTimeout = setTimeout(() => {
+          if (self.STATE === self.UNDETERMINED) {
+            self.moveToState(self.BEGAN);
+          }
+          self.moveToState(self.UNDETERMINED);
+          self.pressOutTimeout = undefined;
+        }, self.props.delayPressOut);
+      } else {
+        if (self.STATE === obj.UNDETERMINED) {
+          self.moveToState(obj.BEGAN);
+        }
+        self.moveToState(obj.UNDETERMINED);
+      }
+    }
+  },
+  {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.reset();
+    }
+  },
+  {
+    key: "reset",
+    value: function reset() {
+      const obj = { longPressDetected: false, pointerInside: true };
+      clearTimeout(obj.pressInTimeout);
+      clearTimeout(obj.pressOutTimeout);
+      clearTimeout(obj.longPressTimeout);
+      obj.pressOutTimeout = undefined;
+      obj.longPressTimeout = undefined;
+      obj.pressInTimeout = undefined;
+    }
+  },
+  {
+    key: "moveToState",
+    value: function moveToState(BEGAN) {
+      const self = this;
+      if (BEGAN !== this.STATE) {
+        if (BEGAN === obj.BEGAN) {
+          const props3 = self.props;
+          const onPressIn = props3.onPressIn;
+          if (onPressIn != null) {
+            onPressIn();
+          }
+        } else if (BEGAN === obj.MOVED_OUTSIDE) {
+          const props2 = self.props;
+          const onPressOut2 = props2.onPressOut;
+          if (onPressOut2 != null) {
+            onPressOut2();
+          }
+        } else if (BEGAN === obj.UNDETERMINED) {
+          self.reset();
+          if (self.STATE === obj.BEGAN) {
+            const props = self.props;
+            const onPressOut = props.onPressOut;
+            if (onPressOut != null) {
+              onPressOut();
+            }
+          }
+        }
+        const props4 = self.props;
+        const onStateChange = props4.onStateChange;
+        if (onStateChange != null) {
+          onStateChange(self.STATE, BEGAN);
+        }
+        self.STATE = BEGAN;
+      }
+    }
+  },
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.reset();
+    }
+  },
+  {
+    key: "onMoveIn",
+    value: function onMoveIn() {
+      const self = this;
+      if (this.STATE === obj.MOVED_OUTSIDE) {
+        self.moveToState(tmp.BEGAN);
+      }
+    }
+  },
+  {
+    key: "onMoveOut",
+    value: function onMoveOut() {
+      const self = this;
+      clearTimeout(this.longPressTimeout);
+      this.longPressTimeout = undefined;
+      if (this.STATE === obj.BEGAN) {
+        self.handleMoveOutside();
+      }
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      if (typeof this.props.hitSlop === "number") {
+        const rect = { top: self.props.hitSlop, left: self.props.hitSlop, bottom: self.props.hitSlop, right: self.props.hitSlop };
+        let hitSlop = rect;
+      } else {
+        hitSlop = self.props.hitSlop;
+      }
+      const obj2 = { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null };
+      let onHandlerStateChange;
+      if (!self.props.disabled) {
+        onHandlerStateChange = self.onHandlerStateChange;
+      }
+      obj2.onHandlerStateChange = onHandlerStateChange;
+      obj2.onGestureEvent = self.onGestureEvent;
+      obj2.hitSlop = hitSlop;
+      obj2.userSelect = self.props.userSelect;
+      obj2.shouldActivateOnStart = self.props.shouldActivateOnStart;
+      obj2.disallowInterruption = self.props.disallowInterruption;
+      obj2.testID = self.props.testID;
+      let flag = self.props.touchSoundDisabled;
+      if (flag == null) {
+        flag = false;
+      }
+      obj2.touchSoundDisabled = flag;
+      obj2.enabled = !self.props.disabled;
+      const merged = Object.assign(self.props.extraButtonProps);
+      const obj3 = {};
+      const merged1 = Object.assign({ accessible: false !== self.props.accessible, accessibilityLabel: self.props.accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityRole: self.props.accessibilityRole, accessibilityState: self.props.accessibilityState, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, nativeID: self.props.nativeID, onLayout: self.props.onLayout });
+      obj3.style = self.props.style;
+      obj3.children = self.props.children;
+      obj2.children = <Animated.View />;
+      return jsx(GenericTouchable(7005).LegacyBaseButton, { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null });
+    }
+  }
+];
+const importDefaultResultResult = _createClass(GenericTouchable, items);
+importDefaultResultResult.defaultProps = { delayLongPress: 600, extraButtonProps: { rippleColor: "transparent", exclusive: true } };
 
-export default memoResult;
+export default importDefaultResultResult;
+export { TOUCHABLE_STATE };

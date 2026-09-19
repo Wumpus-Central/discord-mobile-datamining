@@ -1,29 +1,33 @@
 // === Module 7101: ? ===
 
 // Module 7101
-import noop from "module_19" /* 19 */;
 
-
-export const isComponentClass = (renderScrollComponent) => {
-  let BooleanResult = typeof renderScrollComponent === "function";
-  if (typeof renderScrollComponent === "function") {
-    const prototype = renderScrollComponent.prototype;
-    let isReactComponent;
-    if (prototype != null) {
-      isReactComponent = prototype.isReactComponent;
+export default function _objectWithoutPropertiesLoose(obj, arr) {
+  if (null == obj) {
+    return {};
+  } else {
+    obj = {};
+    for (const key10007 in arg0) {
+      hasOwnProperty = {}.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
+      } else {
+        hasOwnPropertyResult = call(arg0, key10007);
+      }
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        if (-1 !== arg1.indexOf(key10007)) {
+          continue;
+        } else {
+          obj[key10007] = arg0[key10007];
+          continue;
+        }
+        continue;
+      }
+      continue;
     }
-    BooleanResult = Boolean(isReactComponent);
+    return obj;
   }
-  return BooleanResult;
-};
-export const getValidComponent = (backdropComponent1) => {
-  let tmp = backdropComponent1;
-  if (!noop.isValidElement(backdropComponent1)) {
-    let element = null;
-    if (null != backdropComponent1) {
-      element = <backdropComponent1 />;
-    }
-    tmp = element;
-  }
-  return tmp;
 };

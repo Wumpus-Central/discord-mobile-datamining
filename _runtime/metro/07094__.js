@@ -1,18 +1,12 @@
 // === Module 7094: ? ===
 
 // Module 7094
-import noop from "module_19" /* 19 */;
+import _mod7095 from "module_7095" /* 7095 */;
+import _mod7096 from "module_7096" /* 7096 */;
+import _mod7097 from "module_7097" /* 7097 */;
+import _mod7099 from "module_7099" /* 7099 */;
 
-({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
 
-export const useUnmountFlag = () => {
-  const tmp = React(false);
-  closure_0 = tmp;
-  framebus(() => {
-    closure_0.current = false;
-    return () => {
-      closure_1_0.current = true;
-    };
-  }, []);
-  return tmp;
+export default function _slicedToArray(arg0, arg1) {
+  return _mod7095(arg0) || _mod7096(arg0, arg1) || _mod7097(arg0, arg1) || _mod7099();
 };

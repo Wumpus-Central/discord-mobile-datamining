@@ -1,14 +1,8 @@
 // === Module 7061: ? ===
 
 // Module 7061
-import _mod7062 from "module_7062" /* 7062 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default function toPropertyKey(arg0) {
-  const tmp = _mod7062(arg0, "string");
-  let text = tmp;
-  if ("symbol" != obj.default(tmp)) {
-    text = `${tmp}`;
-  }
-  return text;
-};
+export const styles = StyleSheet.create({ container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" } });

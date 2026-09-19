@@ -1,12 +1,35 @@
 // === Module 10747: ? ===
 
 // Module 10747
-import now from "now" /* 10699 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10698 */;
+import now from "now" /* 10715 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const self = this;
-const JPCasualDateParser = require;
+let self = this;
+const FRCasualDateParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -22,7 +45,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      fn = function t(arg0) {
+      fn = function c(arg0) {
         fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -69,78 +92,67 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    let closure_6 = fn(now);
-    const re7 = /今日|きょう|本日|ほんじつ|昨日|きのう|明日|あした|今夜|こんや|今夕|こんゆう|今晩|こんばん|今朝|けさ/i;
-    class JPCasualDateParser {
+    let closure_9 = fn(now);
+    class FRCasualDateParser {
       constructor() {
-        tmp = closure_3(this, JPCasualDateParser);
-        return;
+        self = this;
+        tmp = c2(this, FRCasualDateParser);
+        tmp2 = closure_4;
+        obj = closure_4(FRCasualDateParser);
+        tmp3 = closure_3;
+        if (hasOwnProperty()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
       }
     }
+    _inherits(FRCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
     const entry = {
-      key: "pattern",
-      value: function pattern() {
-            return re7;
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+            return /(maintenant|aujourd'hui|demain|hier|cette\s*nuit|la\s*veille)(?=\W|$)/i;
           }
     };
     let items = [entry, ];
     const entry1 = {
-      key: "extract",
-      value: function extract(createParsingComponents, arg1) {
-            const first = arg1[0];
-            if ("\u304D\u3087\u3046" === first) {
-              let str6 = "\u4ECA\u65E5";
-            } else if ("\u307B\u3093\u3058\u3064" === first) {
-              str6 = "\u672C\u65E5";
-            } else if ("\u304D\u306E\u3046" === first) {
-              str6 = "\u6628\u65E5";
-            } else if ("\u3042\u3057\u305F" === first) {
-              str6 = "\u660E\u65E5";
-            } else if ("\u3053\u3093\u3084" === first) {
-              str6 = "\u4ECA\u591C";
-            } else if ("\u3053\u3093\u3086\u3046" === first) {
-              str6 = "\u4ECA\u5915";
-            } else if ("\u3053\u3093\u3070\u3093" === first) {
-              str6 = "\u4ECA\u6669";
+      key: "innerExtract",
+      value: function innerExtract(refDate, arg1) {
+            refDate = refDate.refDate;
+            const str2 = arg1[0].toLowerCase();
+            const parsingComponents = refDate.createParsingComponents();
+            if ("maintenant" === str2) {
+              return closure_9.now(refDate.reference);
+            } else if ("aujourd'hui" === str2) {
+              return closure_9.today(refDate.reference);
+            } else if ("hier" === str2) {
+              return closure_9.yesterday(refDate.reference);
+            } else if ("demain" === str2) {
+              return closure_9.tomorrow(refDate.reference);
             } else {
-              str6 = "\u4ECA\u671D";
-              if ("\u3051\u3055" !== first) {
-                str6 = first;
+              if (str2.match(/cette\s*nuit/)) {
+                FRCasualDateParser(10697).assignSimilarDate(parsingComponents, refDate);
+                parsingComponents.imply("hour", 22);
+                parsingComponents.imply("meridiem", FRCasualDateParser(10696).Meridiem.PM);
+              } else if (str2.match(/la\s*veille/)) {
+                const _Date = Date;
+                const date = new Date(refDate.getTime());
+                date.setDate(date.getDate() - 1);
+                FRCasualDateParser(10697).assignSimilarDate(parsingComponents, date);
+                parsingComponents.imply("hour", 0);
               }
-            }
-            const parsingComponents = createParsingComponents.createParsingComponents();
-            if ("\u6628\u65E5" === str6) {
-              return closure_6.yesterday(createParsingComponents.reference);
-            } else if ("\u660E\u65E5" === str6) {
-              return closure_6.tomorrow(createParsingComponents.reference);
-            } else {
-              if ("\u672C\u65E5" !== str6) {
-                if ("\u4ECA\u65E5" !== str6) {
-                  if ("\u4ECA\u591C" != str6) {
-                    if ("\u4ECA\u5915" != str6) {
-                      if ("\u4ECA\u6669" != str6) {
-                        if (str6.match("\u4ECA\u671D")) {
-                          parsingComponents.imply("hour", 6);
-                          parsingComponents.assign("meridiem", JPCasualDateParser(10680).Meridiem.AM);
-                        }
-                      }
-                      const refDate = createParsingComponents.refDate;
-                      parsingComponents.assign("day", refDate.getDate());
-                      parsingComponents.assign("month", refDate.getMonth() + 1);
-                      parsingComponents.assign("year", refDate.getFullYear());
-                      return parsingComponents;
-                    }
-                  }
-                  parsingComponents.imply("hour", 22);
-                  parsingComponents.assign("meridiem", JPCasualDateParser(10680).Meridiem.PM);
-                }
-              }
-              return closure_6.today(createParsingComponents.reference);
+              return parsingComponents;
             }
           }
     };
     items[1] = entry1;
-    exports.default = _createClass(JPCasualDateParser, items);
+    exports.default = _createClass(FRCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

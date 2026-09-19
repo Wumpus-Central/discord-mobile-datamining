@@ -1,15 +1,12 @@
 // === Module 6887: ? ===
 
 // Module 6887
-import get_ActivityIndicator from "module_17" /* 17 */;
+const global = arg0;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let PlatformConstants;
-if (NativeModules != null) {
-  PlatformConstants = NativeModules.PlatformConstants;
-}
-if (PlatformConstants == null) {
-  PlatformConstants = get_ActivityIndicator.Platform.constants;
-}
-
-export default PlatformConstants;
+export const isFabricInstalled = function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
+};

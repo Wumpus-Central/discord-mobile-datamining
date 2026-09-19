@@ -1,21 +1,96 @@
 // === Module 6930: ? ===
 
 // Module 6930
-import ComposedGestureName from "ComposedGestureName" /* 6907 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6916 */;
-import _mod6931 from "module_6931" /* 6931 */;
+import _modDef6919 from "module_6919" /* 6919 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+import PlatformConstants from "module_6931" /* 6931 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const items = [["maxDistance", "maxDist"], ["maxDuration", "maxDurationMs"], ["maxDelay", "maxDelayMs"]];
-const map = new Map(items);
-let closure_3 = {};
-
-export const useTapGesture = function useTapGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_3;
+const ForceTouchFallback = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
-  return _mod6931.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+}
+class ForceTouchFallback {
+  constructor() {
+    self = this;
+    tmp = c2(this, ForceTouchFallback);
+    tmp2 = closure_4;
+    obj = closure_4(ForceTouchFallback);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ForceTouchFallback, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    console.warn(ForceTouchFallback(6897).tagMessage("ForceTouchGestureHandler is not available on this platform. Please use ForceTouchGestureHandler.forceTouchAvailable to conditionally render other components that would provide a fallback behavior specific to your usecase"));
+  }
 };
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      return this.props.children;
+    }
+  }
+];
+let importDefaultResultResult = _createClass(ForceTouchFallback, items);
+importDefaultResultResult.forceTouchAvailable = false;
+let forceTouchAvailable;
+if (PlatformConstants != null) {
+  forceTouchAvailable = PlatformConstants.forceTouchAvailable;
+}
+const items1 = ["minForce", "maxForce", "feedbackOnActivation"];
+if (forceTouchAvailable) {
+  let obj = { name: "ForceTouchGestureHandler", allowedProps: null, config: null };
+  const items2 = [];
+  HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(fn(6917).baseGestureHandlerProps, 0));
+  obj.allowedProps = items2;
+  obj.config = {};
+  importDefaultResultResult = _modDef6919(obj);
+  const importDefaultResult4 = _modDef6919;
+}
+let flag;
+if (PlatformConstants != null) {
+  flag = PlatformConstants.forceTouchAvailable;
+}
+if (!flag) {
+  flag = false;
+}
+importDefaultResultResult.forceTouchAvailable = flag;
+
+export const forceTouchGestureHandlerProps = items1;
+export const forceTouchHandlerName = "ForceTouchGestureHandler";
+export const ForceTouchGestureHandler = importDefaultResultResult;

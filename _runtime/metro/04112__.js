@@ -1,9 +1,8 @@
 // === Module 4112: ? ===
 
 // Module 4112
-import _typeof_mod from "module_4113" /* 4113 */;
-import module_3993_mod from "module_3993" /* 3993 */;
-import requiredArgs_mod from "requiredArgs" /* 3812 */;
+import _typeof_mod from "module_3845" /* 3845 */;
+import requiredArgs_mod from "requiredArgs" /* 3846 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -13,25 +12,28 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_3993 = module_3993_mod;
-if (!module_3993) {
-  const obj2 = { default: module_3993 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3993;
-}
-module_3993 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isMatch(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  return module_3993.default(_typeof.default(arg0, arg1, new Date(), arg2));
+export default function isLeapYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const fullYear = _typeof.default(arg0).getFullYear();
+  const result = fullYear % 400;
+  let tmp4 = result === 0;
+  if (result !== 0) {
+    const result1 = fullYear % 4;
+    let tmp6 = result1 === 0;
+    if (result1 === 0) {
+      tmp6 = fullYear % 100 !== 0;
+    }
+    tmp4 = tmp6;
+  }
+  return tmp4;
 };
 export default exports.default;

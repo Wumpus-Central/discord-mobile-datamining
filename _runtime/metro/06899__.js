@@ -1,181 +1,149 @@
 // === Module 6899: ? ===
 
 // Module 6899
-import tagMessage from "tagMessage" /* 6853 */;
-import _mod6854 from "module_6854" /* 6854 */;
-import _mod6855 from "module_6855" /* 6855 */;
-import TouchEventType from "TouchEventType" /* 6856 */;
-import _mod6869 from "module_6869" /* 6869 */;
+import tagMessage from "tagMessage" /* 6897 */;
+import _mod6898 from "module_6898" /* 6898 */;
 
 require = fn;
 const dependencyMap = arg6;
-function getHandler(arg0, onBegin) {
-  if (_mod6869.CALLBACK_TYPE.BEGAN === arg0) {
-    return onBegin.onBegin;
-  } else if (_mod6869.CALLBACK_TYPE.START === arg0) {
-    return onBegin.onStart;
-  } else if (_mod6869.CALLBACK_TYPE.UPDATE === arg0) {
-    return onBegin.onUpdate;
-  } else if (_mod6869.CALLBACK_TYPE.CHANGE === arg0) {
-    return onBegin.onChange;
-  } else if (_mod6869.CALLBACK_TYPE.END === arg0) {
-    return onBegin.onEnd;
-  } else if (_mod6869.CALLBACK_TYPE.FINALIZE === arg0) {
-    return onBegin.onFinalize;
-  } else if (_mod6869.CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
-    return onBegin.onTouchesDown;
-  } else if (_mod6869.CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
-    return onBegin.onTouchesMove;
-  } else if (_mod6869.CALLBACK_TYPE.TOUCHES_UP === arg0) {
-    return onBegin.onTouchesUp;
-  } else if (_mod6869.CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
-    return onBegin.onTouchesCancelled;
-  }
-}
-getHandler.__closure = { CALLBACK_TYPE: fn(6869).CALLBACK_TYPE };
-getHandler.__workletHash = 611602598219;
-getHandler.__initData = { code: "function getHandler_Pnpm_useAnimatedGestureTs1(type,gesture){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return gesture.onBegin;case CALLBACK_TYPE.START:return gesture.onStart;case CALLBACK_TYPE.UPDATE:return gesture.onUpdate;case CALLBACK_TYPE.CHANGE:return gesture.onChange;case CALLBACK_TYPE.END:return gesture.onEnd;case CALLBACK_TYPE.FINALIZE:return gesture.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return gesture.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return gesture.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return gesture.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return gesture.onTouchesCancelled;}}" };
-function touchEventTypeToCallbackType(arg0) {
-  if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
-    return _mod6869.CALLBACK_TYPE.TOUCHES_DOWN;
-  } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === arg0) {
-    return _mod6869.CALLBACK_TYPE.TOUCHES_MOVE;
-  } else if (TouchEventType.TouchEventType.TOUCHES_UP === arg0) {
-    return _mod6869.CALLBACK_TYPE.TOUCHES_UP;
-  } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === arg0) {
-    return _mod6869.CALLBACK_TYPE.TOUCHES_CANCEL;
+let wrappedSetGestureState = function t(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
   } else {
-    return _mod6869.CALLBACK_TYPE.UNDEFINED;
-  }
-}
-let obj = { CALLBACK_TYPE: fn(6869).CALLBACK_TYPE };
-touchEventTypeToCallbackType.__closure = { TouchEventType: fn(6856).TouchEventType, CALLBACK_TYPE: fn(6869).CALLBACK_TYPE };
-touchEventTypeToCallbackType.__workletHash = 12322546845125;
-touchEventTypeToCallbackType.__initData = { code: "function touchEventTypeToCallbackType_Pnpm_useAnimatedGestureTs2(eventType){const{TouchEventType,CALLBACK_TYPE}=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CALLBACK_TYPE.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CALLBACK_TYPE.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CALLBACK_TYPE.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CALLBACK_TYPE.TOUCHES_CANCEL;}return CALLBACK_TYPE.UNDEFINED;}" };
-function runWorklet(END, arg1, handlerTag) {
-  const substr = [...arguments].slice();
-  const tmp2 = getHandler(END, arg1);
-  if (arg1.isWorklet[END]) {
-    if (tmp2 != null) {
-      const items = [handlerTag];
-      HermesBuiltin.arraySpread(substr, 1);
-      HermesBuiltin.apply(items, undefined);
-    }
-  } else if (tmp2) {
-    const _console = console;
-    console.warn(tagMessage.tagMessage("Animated gesture callback must be a worklet"));
-  }
-}
-const obj2 = { TouchEventType: fn(6856).TouchEventType, CALLBACK_TYPE: fn(6869).CALLBACK_TYPE };
-runWorklet.__closure = { getHandler, tagMessage: fn(6853).tagMessage };
-runWorklet.__workletHash = 6506685255530;
-runWorklet.__initData = { code: "function runWorklet_Pnpm_useAnimatedGestureTs3(type,gesture,event,...args){const{getHandler,tagMessage}=this.__closure;const handler=getHandler(type,gesture);if(gesture.isWorklet[type]){handler===null||handler===void 0||handler(event,...args);}else if(handler){console.warn(tagMessage('Animated gesture callback must be a worklet'));}}" };
-function isStateChangeEvent(oldState) {
-  return null != oldState.oldState;
-}
-isStateChangeEvent.__closure = {};
-isStateChangeEvent.__workletHash = 8201524245094;
-isStateChangeEvent.__initData = { code: "function isStateChangeEvent_Pnpm_useAnimatedGestureTs4(event){return event.oldState!=null;}" };
-function isTouchEvent(eventType) {
-  return null != eventType.eventType;
-}
-isTouchEvent.__closure = {};
-isTouchEvent.__workletHash = 6575076970903;
-isTouchEvent.__initData = { code: "function isTouchEvent_Pnpm_useAnimatedGestureTs5(event){return event.eventType!=null;}" };
-const __initData = { code: "function pnpm_useAnimatedGestureTs6(event){const{sharedHandlersCallbacks,isStateChangeEvent,State,runWorklet,CALLBACK_TYPE,lastUpdateEvent,isTouchEvent,stateControllers,GestureStateManager,TouchEventType,touchEventTypeToCallbackType}=this.__closure;const currentCallback=sharedHandlersCallbacks.value;if(!currentCallback){return;}for(let i=0;i<currentCallback.length;i++){const gesture=currentCallback[i];if(event.handlerTag!==gesture.handlerTag){continue;}if(isStateChangeEvent(event)){if(event.oldState===State.UNDETERMINED&&event.state===State.BEGAN){runWorklet(CALLBACK_TYPE.BEGAN,gesture,event);}else if((event.oldState===State.BEGAN||event.oldState===State.UNDETERMINED)&&event.state===State.ACTIVE){runWorklet(CALLBACK_TYPE.START,gesture,event);lastUpdateEvent.value[gesture.handlerTag]=undefined;}else if(event.oldState!==event.state&&event.state===State.END){if(event.oldState===State.ACTIVE){runWorklet(CALLBACK_TYPE.END,gesture,event,true);}runWorklet(CALLBACK_TYPE.FINALIZE,gesture,event,true);}else if((event.state===State.FAILED||event.state===State.CANCELLED)&&event.state!==event.oldState){if(event.oldState===State.ACTIVE){runWorklet(CALLBACK_TYPE.END,gesture,event,false);}runWorklet(CALLBACK_TYPE.FINALIZE,gesture,event,false);}}else if(isTouchEvent(event)){if(!stateControllers[i]||stateControllers[i].handlerTag!==event.handlerTag){stateControllers[i]=GestureStateManager.create(event.handlerTag);}if(event.eventType!==TouchEventType.UNDETERMINED){runWorklet(touchEventTypeToCallbackType(event.eventType),gesture,event,stateControllers[i]);}}else{runWorklet(CALLBACK_TYPE.UPDATE,gesture,event);if(gesture.onChange&&gesture.changeEventCalculator){var _gesture$changeEventC;runWorklet(CALLBACK_TYPE.CHANGE,gesture,(_gesture$changeEventC=gesture.changeEventCalculator)===null||_gesture$changeEventC===void 0?void 0:_gesture$changeEventC.call(gesture,event,lastUpdateEvent.value[gesture.handlerTag]));lastUpdateEvent.value[gesture.handlerTag]=event;}}}}" };
-
-export const useAnimatedGesture = function useAnimatedGesture(current2, needsToReattachResult) {
-  if (sharedValue(sharedValue1[3]).Reanimated) {
-    const Reanimated = tmp(tmp2[3]).Reanimated;
-    sharedValue = Reanimated.useSharedValue(null);
-    const Reanimated2 = tmp(tmp2[3]).Reanimated;
-    sharedValue1 = Reanimated2.useSharedValue([]);
-    const items = [];
-    const fn = function s(handlerTag) {
-      value = sharedValue.value;
-      if (value) {
-        for (let num = 0; num < value.length; num = num + 1) {
-          let tmp2 = value[num];
-          if (handlerTag.handlerTag === tmp2.handlerTag) {
-            if (typeof isStateChangeEvent === "function") {
-              if (null != handlerTag.oldState) {
-                if (handlerTag.oldState === _mod6854.State.UNDETERMINED) {
-                  if (handlerTag.state === _mod6854.State.BEGAN) {
-                    let tmp38 = runWorklet(_mod6869.CALLBACK_TYPE.BEGAN, tmp2, handlerTag);
-                  }
-                }
-                if (handlerTag.oldState === _mod6854.State.BEGAN) {
-                  if (handlerTag.state === _mod6854.State.ACTIVE) {
-                    let tmp18 = runWorklet(_mod6869.CALLBACK_TYPE.START, tmp2, handlerTag);
-                    sharedValue1.value[tmp2.handlerTag] = undefined;
-                  }
-                }
-                if (handlerTag.oldState !== handlerTag.state) {
-                  if (handlerTag.state === _mod6854.State.END) {
-                    if (handlerTag.oldState === _mod6854.State.ACTIVE) {
-                      let flag3 = true;
-                      let tmp32 = runWorklet(_mod6869.CALLBACK_TYPE.END, tmp2, handlerTag, true);
-                    }
-                    let flag4 = true;
-                    let tmp36 = runWorklet(_mod6869.CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, true);
-                  }
-                }
-                let tmp20 = handlerTag.state !== _mod6854.State.FAILED;
-                if (tmp20) {
-                  tmp20 = handlerTag.state !== _mod6854.State.CANCELLED;
-                }
-                if (!tmp20) {
-                  tmp20 = handlerTag.state === handlerTag.oldState;
-                }
-                if (!tmp20) {
-                  if (handlerTag.oldState === _mod6854.State.ACTIVE) {
-                    let flag = false;
-                    let tmp24 = runWorklet(_mod6869.CALLBACK_TYPE.END, tmp2, handlerTag, false);
-                  }
-                  let flag2 = false;
-                  let tmp28 = runWorklet(_mod6869.CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, false);
-                }
-              } else if (typeof isTouchEvent === "function") {
-                if (null != handlerTag.eventType) {
-                  let tmp10 = items[num] && items[num].handlerTag === handlerTag.handlerTag;
-                  if (!tmp10) {
-                    let GestureStateManager = _mod6855.GestureStateManager;
-                    items[num] = GestureStateManager.create(handlerTag.handlerTag);
-                  }
-                  if (handlerTag.eventType !== TouchEventType.TouchEventType.UNDETERMINED) {
-                    let tmp49 = runWorklet(touchEventTypeToCallbackType(handlerTag.eventType), tmp2, handlerTag, items[num]);
-                  }
-                } else {
-                  let tmp44 = runWorklet(_mod6869.CALLBACK_TYPE.UPDATE, tmp2, handlerTag);
-                  let tmp4 = tmp2.onChange && tmp2.changeEventCalculator;
-                  if (tmp4) {
-                    let changeEventCalculator = tmp2.changeEventCalculator;
-                    let result;
-                    if (changeEventCalculator != null) {
-                      result = changeEventCalculator(handlerTag, sharedValue1.value[tmp2.handlerTag]);
-                    }
-                    let tmp41Result = runWorklet(_mod6869.CALLBACK_TYPE.CHANGE, tmp2, result);
-                    sharedValue1.value[tmp2.handlerTag] = handlerTag;
-                  }
-                }
-              } else {
-                let str2 = "Trying to call a non-function";
-                throw new TypeError("Trying to call a non-function");
-              }
-            } else {
-              let str = "Trying to call a non-function";
-              throw new TypeError("Trying to call a non-function");
-            }
-          }
-        }
-      }
-    };
-    const obj = { sharedHandlersCallbacks: sharedValue, isStateChangeEvent, State: tmp(tmp2[4]).State, runWorklet, CALLBACK_TYPE: tmp(tmp2[0]).CALLBACK_TYPE, lastUpdateEvent: sharedValue1, isTouchEvent, stateControllers: items, GestureStateManager: tmp(tmp2[5]).GestureStateManager, TouchEventType: tmp(tmp2[1]).TouchEventType, touchEventTypeToCallbackType };
-    fn.__closure = obj;
-    fn.__workletHash = 11751547526080;
-    fn.__initData = __initData;
-    const Reanimated3 = tmp(tmp2[3]).Reanimated;
-    current2.animatedEventHandler = Reanimated3.useEvent(fn, ["onGestureHandlerStateChange", "onGestureHandlerEvent"], needsToReattachResult);
-    current2.animatedHandlers = sharedValue;
+    const _Error = Error;
+    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    throw error;
   }
 };
+wrappedSetGestureState.__closure = { tagMessage: fn(6897).tagMessage };
+wrappedSetGestureState.__workletHash = 727405139747;
+wrappedSetGestureState.__initData = { code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}" };
+const __initData = { code: "function pnpm_gestureStateManagerTs3(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.BEGAN);}" };
+const __initData2 = { code: "function pnpm_gestureStateManagerTs4(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.ACTIVE);}" };
+const __initData3 = { code: "function pnpm_gestureStateManagerTs5(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.FAILED);}" };
+const __initData4 = { code: "function pnpm_gestureStateManagerTs6(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.END);}" };
+let obj2 = { create: null };
+function create(handlerTag) {
+  _require = handlerTag;
+  const obj = { handlerTag, begin: null, activate: null, fail: null, end: null };
+  const wrappedSetGestureState = function p() {
+    const BEGAN = _mod6898.State.BEGAN;
+    if (typeof fn === "function") {
+      const _globalThis = globalThis;
+      const _globalThis2 = globalThis;
+      if (globalThis._setGestureStateSync) {
+        _globalThis2._setGestureStateSync(closure_0, BEGAN);
+      } else if (_globalThis2._setGestureStateAsync) {
+        const _globalThis3 = globalThis;
+        const result = globalThis._setGestureStateAsync(closure_0, BEGAN);
+      } else {
+        const _Error = Error;
+        const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+        throw error;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  };
+  wrappedSetGestureState.__closure = { wrappedSetGestureState, handlerTag, State: require("module_6898").State };
+  wrappedSetGestureState.__workletHash = 15218261064802;
+  wrappedSetGestureState.__initData = __initData;
+  obj.begin = wrappedSetGestureState;
+  const fn2 = function c() {
+    const ACTIVE = _mod6898.State.ACTIVE;
+    if (typeof fn === "function") {
+      const _globalThis = globalThis;
+      const _globalThis2 = globalThis;
+      if (globalThis._setGestureStateSync) {
+        _globalThis2._setGestureStateSync(closure_0, ACTIVE);
+      } else if (_globalThis2._setGestureStateAsync) {
+        const _globalThis3 = globalThis;
+        const result = globalThis._setGestureStateAsync(closure_0, ACTIVE);
+      } else {
+        const _Error = Error;
+        const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+        throw error;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  };
+  const obj2 = { wrappedSetGestureState, handlerTag, State: require("module_6898").State };
+  fn2.__closure = { wrappedSetGestureState, handlerTag, State: require("module_6898").State };
+  fn2.__workletHash = 4587865373510;
+  fn2.__initData = __initData2;
+  obj.activate = fn2;
+  class S {
+    constructor() {
+      tmp = closure_0;
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      FAILED = closure_0(closure_1[1]).State.FAILED;
+      if (typeof t === "function") {
+        tmp4 = globalThis;
+        _globalThis = globalThis;
+        _globalThis2 = globalThis;
+        if (globalThis._setGestureStateSync) {
+          _setGestureStateSyncResult = _globalThis2._setGestureStateSync(tmp, FAILED);
+        } else if (_globalThis2._setGestureStateAsync) {
+          _globalThis3 = globalThis;
+          result = globalThis._setGestureStateAsync(tmp, FAILED);
+        } else {
+          _Error = Error;
+          tmp2Result = tmp2(tmp3[0]);
+          str = "Failed to set gesture state";
+          tmp5 = new.target;
+          tmp6 = new.target;
+          error = new Error(tmp2Result.tagMessage("Failed to set gesture state"));
+          tmp8 = error;
+          throw error;
+        }
+        return;
+      } else {
+        str2 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+  }
+  const obj3 = { wrappedSetGestureState, handlerTag, State: require("module_6898").State };
+  S.__closure = { wrappedSetGestureState, handlerTag, State: require("module_6898").State };
+  S.__workletHash = 12634480855880;
+  S.__initData = __initData3;
+  obj.fail = S;
+  const fn3 = function s() {
+    const END = _mod6898.State.END;
+    if (typeof fn === "function") {
+      const _globalThis = globalThis;
+      const _globalThis2 = globalThis;
+      if (globalThis._setGestureStateSync) {
+        _globalThis2._setGestureStateSync(closure_0, END);
+      } else if (_globalThis2._setGestureStateAsync) {
+        const _globalThis3 = globalThis;
+        const result = globalThis._setGestureStateAsync(closure_0, END);
+      } else {
+        const _Error = Error;
+        const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+        throw error;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  };
+  const obj4 = { wrappedSetGestureState, handlerTag, State: require("module_6898").State };
+  fn3.__closure = { wrappedSetGestureState, handlerTag, State: require("module_6898").State };
+  fn3.__workletHash = 6198601582791;
+  fn3.__initData = __initData4;
+  obj.end = fn3;
+  return obj;
+}
+let obj = { tagMessage: fn(6897).tagMessage };
+create.__closure = { wrappedSetGestureState, State: fn(6898).State };
+create.__workletHash = 1974124167608;
+create.__initData = { code: "function create_Pnpm_gestureStateManagerTs2(handlerTag){const{wrappedSetGestureState,State}=this.__closure;return{handlerTag:handlerTag,begin:function(){'worklet';wrappedSetGestureState(handlerTag,State.BEGAN);},activate:function(){'worklet';wrappedSetGestureState(handlerTag,State.ACTIVE);},fail:function(){'worklet';wrappedSetGestureState(handlerTag,State.FAILED);},end:function(){'worklet';wrappedSetGestureState(handlerTag,State.END);}};}" };
+obj2.create = create;
+
+export const GestureStateManager = obj2;

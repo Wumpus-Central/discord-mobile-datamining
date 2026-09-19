@@ -1,7 +1,14 @@
 // === Module 18114: ? ===
 
 // Module 18114
-import registerAsset from "module_1121" /* 1121 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "4e2695064a96facdf08d029a4fb1d275", name: "ic_add_perk_24px", type: "png" });
+export default function basePropertyOf(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    let tmp2;
+    if (null != closure_0) {
+      tmp2 = tmp[arg0];
+    }
+    return tmp2;
+  };
+};

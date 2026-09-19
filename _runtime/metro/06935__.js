@@ -1,94 +1,55 @@
 // === Module 6935: ? ===
 
 // Module 6935
-import _mod6891 from "module_6891" /* 6891 */;
-import eventHandler from "eventHandler" /* 6934 */;
-import noop from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1637 */;
+import reactNativeWorkletsCompat from "reactNativeWorkletsCompat" /* 4491 */;
+import tagMessage from "tagMessage" /* 6897 */;
+import ghQueueMicrotask from "ghQueueMicrotask" /* 6924 */;
+import _mod6936 from "module_6936" /* 6936 */;
 
-const require = globalThis.__r;
+try {
+  const _module = cancelAnimation;
+  try {
+    const _module1 = reactNativeWorkletsCompat;
+    if (_module1 != null) {
+      const fn = function t() {
 
-({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
-let closure_5 = ["onGestureHandlerReanimatedEvent", "onGestureHandlerReanimatedStateChange", "onGestureHandlerReanimatedTouchEvent"];
-const onUpdate = function n() {
-
-};
-onUpdate.__closure = {};
-onUpdate.__workletHash = 763644533783;
-onUpdate.__initData = { code: "function pnpm_useReanimatedEventHandlerTs1(){}" };
-let Reanimated = _mod6891.Reanimated;
-let mutable;
-if (Reanimated != null) {
-  mutable = Reanimated.makeMutable({});
-}
-function deleteHandlerEventEntry(arg0) {
-  delete tmp2[tmp];
-}
-deleteHandlerEventEntry.__closure = { lastUpdateEventMap: mutable };
-deleteHandlerEventEntry.__workletHash = 8348834805583;
-deleteHandlerEventEntry.__initData = { code: "function deleteHandlerEventEntry_Pnpm_useReanimatedEventHandlerTs2(handlerTag){const{lastUpdateEventMap}=this.__closure;delete lastUpdateEventMap.value[handlerTag];}" };
-const __initData = { code: "function pnpm_useReanimatedEventHandlerTs3(event){const{lastUpdateEventMap,eventHandler,handlerTag,workletizedHandlers,changeEventCalculator,fillInDefaultValues}=this.__closure;let context=lastUpdateEventMap.value[event.handlerTag];if(context===undefined){context={lastUpdateEvent:undefined};lastUpdateEventMap.value[event.handlerTag]=context;}eventHandler(handlerTag,event,workletizedHandlers,changeEventCalculator,context,false,fillInDefaultValues);}" };
-
-export const useReanimatedEventHandler = function useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, changeEventCalculator, fillInDefaultValues) {
-  _require = handlerTag;
-  dependencyMap = memoizedGestureCallbacks;
-  closure_2 = changeEventCalculator;
-  closure_3 = fillInDefaultValues;
-  const items = [memoizedGestureCallbacks];
-  let tmp = closure_3(() => {
-    const Reanimated = _mod6891.Reanimated;
-    let isWorkletFunctionResult;
-    if (Reanimated != null) {
-      isWorkletFunctionResult = Reanimated.isWorkletFunction(memoizedGestureCallbacks.onUpdate);
+      };
+      fn.__closure = {};
+      fn.__workletHash = 1792171573139;
+      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
+      _module1.scheduleOnUI(fn);
     }
-    if (isWorkletFunctionResult) {
-      let obj = memoizedGestureCallbacks;
-    } else {
-      obj = {};
-      const merged = Object.assign(memoizedGestureCallbacks);
-      obj.onUpdate = onUpdate;
-    }
-    return obj;
-  }, items);
-  closure_4 = tmp;
-  const fn = function h(handlerTag) {
-    let tmp = mutable.value[handlerTag.handlerTag];
-    if (undefined === tmp) {
-      const obj = { lastUpdateEvent: "r" };
-      iter.value[handlerTag.handlerTag] = obj;
-      tmp = obj;
-    }
-    eventHandler.eventHandler(closure_0, handlerTag, closure_4, closure_2, tmp, false, closure_3);
-  };
-  fn.__closure = { lastUpdateEventMap: mutable, eventHandler: require("eventHandler").eventHandler, handlerTag, workletizedHandlers: tmp, changeEventCalculator, fillInDefaultValues };
-  fn.__workletHash = 3272953373395;
-  fn.__initData = __initData;
-  const tmp2 = closure_4(handlerTag);
-  closure_5 = tmp2;
-  const items1 = [handlerTag];
-  closure_2(() => {
-    closure_5.current = current;
-    return () => {
-      const Reanimated = closure_0(closure_1[1]).Reanimated;
-      if (Reanimated != null) {
-        const runOnUI = Reanimated.runOnUI;
-        if (runOnUI != null) {
-          runOnUI(deleteHandlerEventEntry)(current);
-        }
+    const _module2 = ghQueueMicrotask;
+    _module2.ghQueueMicrotask(() => {
+      const NativeProxy = _mod6936.NativeProxy;
+      if (!NativeProxy.installUIRuntimeBindings()) {
+        const _console = console;
+        console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
+        const tmpResult = tagMessage;
       }
-    };
-  }, items1);
-  let Reanimated = require("module_6891").Reanimated;
-  let event;
-  if (Reanimated != null) {
-    let tmp5 = tmp2.current !== handlerTag;
-    if (!tmp5) {
-      let doDependenciesDiffer;
-      if (handler != null) {
-        doDependenciesDiffer = handler.doDependenciesDiffer;
-      }
-      tmp5 = doDependenciesDiffer;
+    });
+    let useSharedValue;
+    if (_module != null) {
+      useSharedValue = _module.useSharedValue;
     }
-    event = Reanimated.useEvent(fn, closure_5, tmp5);
+    let setGestureState = undefined === _module;
+    if (!setGestureState) {
+      setGestureState = _module.setGestureState;
+    }
+    if (!setGestureState) {
+      const fn2 = function o() {
+        console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
+      };
+      const obj = { tagMessage: tagMessage.tagMessage };
+      fn2.__closure = obj;
+      fn2.__workletHash = 3596069664305;
+      fn2.__initData = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
+      _module.setGestureState = fn2;
+      const obj2 = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
+    }
+    exports.Reanimated = _module;
+  } catch (err) {
   }
-  return event;
-};
+} catch (err) {
+}

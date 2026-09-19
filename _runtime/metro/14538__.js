@@ -1,18 +1,49 @@
 // === Module 14538: ? ===
 
 // Module 14538
-import _mod14523 from "module_14523" /* 14523 */;
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 14539 */;
+import compareKV from "compareKV" /* 14540 */;
+import likelySubtags from "likelySubtags" /* 14543 */;
+import _mod14544 from "module_14544" /* 14544 */;
+import e_mod from "e" /* 1161 */;
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod14523(1.toString);
+const require = globalThis.__r;
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod14544, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
+
+export const getCanonicalLocales = function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
+    }
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_14542").parseUnicodeLocaleId(arr3[num3])));
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
   }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
+  return items;
 };
+export const isStructurallyValidLanguageTag = require("module_14542").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("module_14542").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("module_14542").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("module_14542").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("module_14542").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("module_14542").parseUnicodeLocaleId;

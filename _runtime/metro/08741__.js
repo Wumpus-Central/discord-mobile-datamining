@@ -2,15 +2,17 @@
 
 // Module 8741
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8728 from "module_8728" /* 8728 */;
-import _modDef8742 from "module_8742" /* 8742 */;
+import appendTransformPropsDefault from "appendTransformProps" /* 8735 */;
+import extractPropsDefault from "extractProps" /* 8742 */;
+import _modDef8750 from "module_8750" /* 8750 */;
+import _modDef8751 from "module_8751" /* 8751 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const FeOffset = fn;
+const G = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,52 +34,84 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeOffset {
+class G {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, G);
+    items1 = [...items];
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeOffset);
+    obj = hasOwnProperty(G);
     tmp3 = closure_4;
     if (closure_7()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(matrix);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeOffset, _modDef8728);
+_inherits(G, _modDef8751);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const merged = Object.assign(this.props);
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
+    const props = this.props;
+    const propsAndStylesResult = G(8742).propsAndStyles(props);
+    const tmp5 = extractPropsDefault(propsAndStylesResult, this);
+    const obj = G(8742);
+    const extractFontResult = G(8749).extractFont(propsAndStylesResult);
+    if (typeof hasProps === "function") {
+      const keys = Object.keys();
+      if (keys !== undefined) {
+        let flag = true;
+        if (flag) {
+          tmp5.font = extractFontResult;
+        }
+        const obj3 = {
+          ref(arg0) {
+                return self.refMethod(arg0);
+              }
+        };
+        const merged = Object.assign(tmp5);
+        obj3.children = props.children;
+        return jsx(_modDef8750, {
+          ref(arg0) {
+                return self.refMethod(arg0);
+              }
+        });
       }
-    };
-    const merged1 = Object.assign(FeOffset(8727).extractFilter(this.props));
-    const obj2 = FeOffset(8727);
-    const merged2 = Object.assign(FeOffset(8727).extractIn(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+      flag = false;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+    const obj2 = G(8749);
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
-importDefaultResultResult.defaultProps = obj;
+let items = [entry];
+const importDefaultResultResult = _createClass(G, items);
+importDefaultResultResult.displayName = "G";
+function hasProps(arg0) {
+
+}
 
 export default importDefaultResultResult;

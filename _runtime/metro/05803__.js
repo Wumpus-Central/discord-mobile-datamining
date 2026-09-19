@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_iqayz3cfoulxkcongcso6mwcxy/node_modules/@react-navigation/elements/lib/module/assets", width: 50, height: 85, scales: [1], hash: "0a328cd9c1afd0afe8e3b1ec5165b1b4", name: "back-icon-mask", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "e4080f713973c251e1438e7043339acb", name: "ic_verified_guild_icon_green_24px", type: "png" });

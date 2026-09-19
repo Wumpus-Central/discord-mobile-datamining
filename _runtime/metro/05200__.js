@@ -1,7 +1,14 @@
 // === Module 5200: ? ===
 
 // Module 5200
-import registerAsset from "module_1121" /* 1121 */;
+import _modDef5201 from "module_5201" /* 5201 */;
 
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8aacc7898585bec38aca6cf682c01533", name: "FolderIcon", type: "png" });
+for (const key10016 in require("module_5201")) {
+  arg5[key10016] = require("module_5201")[key10016];
+  continue;
+}
+
+export default _modDef5201;
+export const LinearGradient = _modDef5201;

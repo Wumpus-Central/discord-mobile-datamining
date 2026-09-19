@@ -1,7 +1,7 @@
 // === Module 4150: ? ===
 
 // Module 4150
-import Parser2 from "Parser" /* 4117 */;
+import Parser2 from "Parser" /* 4151 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
+function _setPrototypeOf(EraParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-      ISOTimezoneWithZParser.__proto__ = Parser;
-      return ISOTimezoneWithZParser;
+    _setPrototypeOf = function _setPrototypeOf(EraParser, Parser) {
+      EraParser.__proto__ = Parser;
+      return EraParser;
     };
   }
-  return _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  return _setPrototypeOf(EraParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,10 +55,10 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 const Parser = Parser2.Parser;
-let _createSuperInternal;
-class ISOTimezoneWithZParser {
+let closure_129_0;
+class EraParser {
   constructor() {
-    if (this instanceof closure_1) {
+    if (this instanceof _setPrototypeOf) {
       length = arguments.length;
       _Array = Array;
       tmp6 = new.target;
@@ -74,11 +74,11 @@ class ISOTimezoneWithZParser {
           num = num + 1;
         } while (num < length);
       }
-      tmp11 = _createSuperInternal;
-      call = _createSuperInternal.call;
+      tmp11 = _typeof;
+      call = _typeof.call;
       items = [];
       items[0] = tmp;
-      applyResult = call.apply(_createSuperInternal, items.concat(array));
+      applyResult = call.apply(_typeof, items.concat(array));
       tmp13 = undefined === applyResult;
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
@@ -92,10 +92,10 @@ class ISOTimezoneWithZParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 140, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 10;
-          applyResult.priority = 10;
+          num3 = 140;
+          applyResult.priority = 140;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +106,7 @@ class ISOTimezoneWithZParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T", "x"];
+          items1 = ["R", "u", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +130,7 @@ class ISOTimezoneWithZParser {
     }
   }
 }
-let dependencyMap = ISOTimezoneWithZParser;
+let closure_129_1 = EraParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,12 +142,13 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-ISOTimezoneWithZParser.prototype = Object.create(prototype, { constructor: { value: ISOTimezoneWithZParser, writable: true, configurable: true } });
+EraParser.prototype = Object.create(prototype, { constructor: { value: EraParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  _setPrototypeOf(EraParser, Parser);
 }
+_typeof = EraParser;
 let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
+_setPrototypeOf = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -179,10 +180,10 @@ dependencyMap = (function _isNativeReflectConstruct() {
   }
   return false;
 })();
-_createSuperInternal = function _createSuperInternal() {
+closure_129_0 = function _createSuperInternal() {
   const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
-  if (closure_1) {
+  const obj = _getPrototypeOf(_typeof);
+  if (_setPrototypeOf) {
     const _Reflect = Reflect;
     let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
   } else {
@@ -205,31 +206,30 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("X" === arg1) {
-      return _createSuperInternal(4119).parseTimezonePattern(_createSuperInternal(4120).timezonePatterns.basicOptionalMinutes, arg0);
-    } else if ("XX" === arg1) {
-      return _createSuperInternal(4119).parseTimezonePattern(_createSuperInternal(4120).timezonePatterns.basic, arg0);
-    } else if ("XXXX" === arg1) {
-      return _createSuperInternal(4119).parseTimezonePattern(_createSuperInternal(4120).timezonePatterns.basicOptionalSeconds, arg0);
-    } else if ("XXXXX" === arg1) {
-      return _createSuperInternal(4119).parseTimezonePattern(_createSuperInternal(4120).timezonePatterns.extendedOptionalSeconds, arg0);
-    } else {
-      return _createSuperInternal(4119).parseTimezonePattern(_createSuperInternal(4120).timezonePatterns.extended, arg0);
+  value: function parse(arg0, arg1, era) {
+    if ("G" !== arg1) {
+      if ("GG" !== arg1) {
+        if ("GGG" !== arg1) {
+          if ("GGGGG" === arg1) {
+            return era.era(arg0, { width: "narrow" });
+          } else {
+            return era.era(arg0, { width: "wide" }) || era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
+          }
+        }
+      }
     }
+    return era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
   }
 };
 let items = [
   entry,
   {
     key: "set",
-    value: function set(getTime, timestampIsSet, arg2) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
-      }
-      return date;
+    value: function set(setUTCFullYear, arg1, era) {
+      arg1.era = era;
+      setUTCFullYear.setUTCFullYear(era, 0, 1);
+      setUTCFullYear.setUTCHours(0, 0, 0, 0);
+      return setUTCFullYear;
     }
   }
 ];
@@ -251,4 +251,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ISOTimezoneWithZParser };
+export { EraParser };

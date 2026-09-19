@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 128, height: 128, scales: [1], hash: "1301559e28a24a2331fbb1cb62dbbbc5", name: "img_meta_quest_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "604528a3bb006839cd94a191736eec62", name: "img_account_sync_epic_dark_and_white", type: "svg" });

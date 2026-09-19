@@ -295,7 +295,7 @@ let closure_8 = async function _instrumentStream(arg0) {
               closure_146_7 = undefined;
               let value4;
               closure_146_9 = undefined;
-              const obj5 = { eventTypes: [], responseTexts: [], finishReasons: [], responseId: "", responseModel: "", responseTimestamp: 0, promptTokens: "r", completionTokens: "w", totalTokens: "formatToPlainString", chatCompletionToolCalls: {}, responsesApiToolCalls: [] };
+              const obj5 = { eventTypes: [], responseTexts: [], finishReasons: [], responseId: "", responseModel: "", responseTimestamp: 0, promptTokens: "r", completionTokens: "sa", totalTokens: "isArray", chatCompletionToolCalls: {}, responsesApiToolCalls: [] };
               closure_146_2 = obj5;
               closure_146_4 = false;
               closure_146_5 = false;

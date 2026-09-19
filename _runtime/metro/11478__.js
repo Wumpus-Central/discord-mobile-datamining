@@ -1,8 +1,7 @@
 // === Module 11478: ? ===
 
 // Module 11478
-import _mod17 from "module_17" /* 17 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "eac553938fe05ac1b820e85a05890a1f", name: "SlashBoxIcon", type: "png" });

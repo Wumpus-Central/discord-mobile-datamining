@@ -1,7 +1,11 @@
 // === Module 14296: ? ===
 
 // Module 14296
-import registerAsset from "module_1121" /* 1121 */;
+import _mod14279 from "module_14279" /* 14279 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "727899a26eec90f323c88c339b15535a", name: "ic_radio_square_24px", type: "png" });
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod14279(arg0, arg2);
+  const tmp = new _mod14279(arg1, arg2);
+  return obj.compare(tmp) || obj.compareBuild(tmp);
+};

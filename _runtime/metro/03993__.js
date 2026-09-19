@@ -1,14 +1,18 @@
 // === Module 3993: ? ===
 
 // Module 3993
-import _typeof_mod from "module_3994" /* 3994 */;
-import _typeof_mod from "module_3811" /* 3811 */;
-import requiredArgs_mod from "requiredArgs" /* 3812 */;
+import module_3849_mod from "module_3849" /* 3849 */;
+import _typeof_mod from "module_3845" /* 3845 */;
+import requiredArgs_mod from "requiredArgs" /* 3846 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_3849 = module_3849_mod;
+if (!module_3849) {
+  const obj = { default: module_3849 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3849;
 }
+module_3849 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -26,13 +30,19 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
+export default function addDays(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = module_3849.default(arg1);
+  if (isNaN(defaultResult2)) {
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else if (defaultResult2) {
+    defaultResult1.setDate(defaultResult1.getDate() + defaultResult2);
+    return defaultResult1;
+  } else {
+    return defaultResult1;
   }
-  return !isNaN(Number(_typeof.default(num)));
 };
 export default exports.default;

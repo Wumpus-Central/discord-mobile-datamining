@@ -1,22 +1,15 @@
 // === Module 5000: ? ===
 
 // Module 5000
-import _mod1313 from "module_1313" /* 1313 */;
+import requirePromise from "requirePromise" /* 4999 */;
+import _mod5001 from "module_5001" /* 5001 */;
 
 
-export default function isFinite(num) {
-  let tmp = typeof num === "number";
-  if (typeof num !== "number") {
-    tmp = typeof num === "bigint";
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
+  } else {
+    allSettled = _mod5001;
   }
-  if (tmp) {
-    tmp = !_mod1313(num);
-  }
-  if (tmp) {
-    tmp = num !== Infinity;
-  }
-  if (tmp) {
-    tmp = num !== -Infinity;
-  }
-  return tmp;
+  return allSettled;
 };

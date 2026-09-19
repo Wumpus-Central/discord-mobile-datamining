@@ -1,19 +1,33 @@
 // === Module 4080: ? ===
 
 // Module 4080
-import _mod3816 from "module_3816" /* 3816 */;
-import assign_mod from "assign" /* 4061 */;
+import _typeof_mod from "module_3845" /* 3845 */;
+import requiredArgs_mod from "requiredArgs" /* 3846 */;
 
-let assign = assign_mod;
-if (!assign) {
-  const obj = { default: assign };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = assign;
+  tmp3 = _typeof;
 }
-assign = tmp3;
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+let c2 = 86400000;
 
-export default function getDefaultOptions() {
-  return assign.default({}, _mod3816.getDefaultOptions());
+export default function getUTCDayOfYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  defaultResult1.setUTCMonth(0, 1);
+  defaultResult1.setUTCHours(0, 0, 0, 0);
+  return Math.floor((time - defaultResult1.getTime()) / c2) + 1;
 };
 export default exports.default;

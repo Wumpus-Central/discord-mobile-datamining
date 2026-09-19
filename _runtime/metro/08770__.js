@@ -2,16 +2,15 @@
 
 // Module 8770
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8713 from "module_8713" /* 8713 */;
-import unitsDefault from "units" /* 8767 */;
-import _modDef8772 from "module_8772" /* 8772 */;
+import _modDef8766 from "module_8766" /* 8766 */;
+import _modDef8771 from "module_8771" /* 8771 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Mask = fn;
+const FeComposite = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -33,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Mask {
+class FeComposite {
   constructor() {
     self = this;
-    tmp = closure_3(this, Mask);
+    tmp = closure_3(this, FeComposite);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Mask);
+    obj = hasOwnProperty(FeComposite);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -53,55 +52,33 @@ class Mask {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Mask, _modDef8713);
+_inherits(FeComposite, _modDef8766);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    ({ maskUnits, maskContentUnits, style } = props);
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
-    let num = 0;
-    if (undefined !== maskUnits) {
-      num = unitsDefault[maskUnits];
-    }
-    size.maskUnits = num;
-    let num2 = 1;
-    if (undefined !== maskContentUnits) {
-      num2 = unitsDefault[maskContentUnits];
-    }
-    size.maskContentUnits = num2;
-    let str;
-    if (props != null) {
-      str = props.maskType;
-    }
-    if (!str) {
-      let maskType;
-      if (style != null) {
-        maskType = style.maskType;
-      }
-      str = maskType;
-    }
-    if (!str) {
-      str = "luminance";
-    }
-    size.maskType = Mask(8771).maskType[str];
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(Mask(8704).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return <tmp8 ref={function ref(arg0) {
+    const merged = Object.assign(FeComposite(8765).extractFilter(this.props));
+    const obj2 = FeComposite(8765);
+    const merged1 = Object.assign(FeComposite(8765).extractFeComposite(this.props));
+    return <tmp ref={function ref(arg0) {
       return self.refMethod(arg0);
     }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Mask, items);
-importDefaultResultResult.displayName = "Mask";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

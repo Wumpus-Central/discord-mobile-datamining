@@ -1,80 +1,217 @@
 // === Module 14515: ? ===
 
 // Module 14515
-import _mod14516 from "module_14516" /* 14516 */;
-import _mod14517 from "module_14517" /* 14517 */;
-import _mod14518 from "module_14518" /* 14518 */;
-import _mod14555 from "module_14555" /* 14555 */;
-import _mod14556 from "module_14556" /* 14556 */;
-import _mod14572 from "module_14572" /* 14572 */;
-import _mod14573 from "module_14573" /* 14573 */;
+import e from "e" /* 1161 */;
+import data from "data" /* 14516 */;
+import regions from "regions" /* 14517 */;
 
-
-export default (dontCallGetSet, obj) => {
-  ({ target, global: _global, stat } = dontCallGetSet);
-  const tmp3 = _mod14516;
-  if (_global) {
-    let prototype = tmp3;
-  } else {
-    let tmp4 = tmp3[target];
-    if (stat) {
-      if (!tmp4) {
-        tmp4 = _mod14517(target, {});
-      }
-      prototype = tmp4;
-    } else {
-      prototype = tmp4;
-      if (tmp4) {
-        prototype = _mod14516[target].prototype;
-      }
-    }
-  }
-  if (prototype) {
-    for (const key10024 in arg1) {
-      let tmp21 = arg1[key10024];
-      if (arg0.dontCallGetSet) {
-        obj = _mod14518;
-        let iter = obj.f(prototype, key10024);
-        value = iter;
-        if (iter) {
-          value = iter.value;
-        }
-        let tmp7 = value;
+require = arg1;
+const dependencyMap = arg6;
+function isMatched(region, str, arg2) {
+  const parts = str.split("-");
+  [tmp2, tmp3, arr] = parts;
+  if (arr) {
+    if ("$" === arr[0]) {
+      const slice = arr.slice;
+      if ("!" !== arr[1]) {
+        let arr2 = arg2[slice(arr, 1)];
       } else {
-        tmp7 = prototype[key10024];
+        arr2 = arg2[slice(arr, 2)];
       }
-      let sum = key10024;
-      let tmp12 = _mod14555;
-      if (!_global) {
-        let str4 = "#";
-        if (stat) {
-          str4 = ".";
+      const mapped = arr2.map((item) => {
+        let tmp = regions.regions[item];
+        if (!tmp) {
+          const items = [item];
+          tmp = items;
         }
-        sum = target + str4 + key10024;
+        return tmp;
+      });
+      const reduced = mapped.reduce((acc, item) => {
+        const obj = e;
+        return obj.__spreadArray(e.__spreadArray([], acc, true), item, true);
+      }, []);
+      let str4 = region.region;
+      if (!str4) {
+        str4 = "";
       }
-      if (!tmp12(sum, arg0.forced)) {
-        if (undefined !== tmp7) {
-          if (typeof tmp21 === typeof tmp7) {
-            continue;
-          } else {
-            let tmp22 = _mod14556(tmp21, tmp7);
-          }
-        }
-        continue;
-      }
-      let sham = arg0.sham;
-      if (!sham) {
-        let sham2 = tmp7;
-        if (tmp7) {
-          sham2 = tmp7.sham;
-        }
-        sham = sham2;
-      }
-      if (sham) {
-        let tmp14 = _mod14572(tmp21, "sham", true);
-      }
-      let tmp19 = _mod14573(prototype, key10024, tmp21, arg0);
-      continue;
+      let tmp4 = reduced.indexOf(str4) > -1 === tmp7;
     }
+    if (tmp4) {
+      const script = region.script;
+      let tmp8 = !script;
+      if (script) {
+        tmp8 = "*" === tmp3 || tmp3 === region.script;
+        const tmp9 = "*" === tmp3 || tmp3 === region.script;
+      }
+      tmp4 = tmp8;
+    }
+    if (tmp4) {
+      const language = region.language;
+      let tmp10 = !language;
+      if (language) {
+        tmp10 = "*" === tmp2 || tmp2 === region.language;
+        const tmp11 = "*" === tmp2 || tmp2 === region.language;
+      }
+      tmp4 = tmp10;
+    }
+    return tmp4;
+  }
+  region = region.region;
+  tmp4 = !region;
+  if (region) {
+    tmp4 = "*" === arr || arr === region.region;
+    const tmp5 = "*" === arr || arr === region.region;
+  }
+}
+function findMatchingDistanceForLSR(arg0, arg1, matches) {
+  let tmp;
+  matches = matches.matches;
+  let num = 0;
+  if (0 < matches.length) {
+    while (true) {
+      tmp = matches[num];
+      let tmp2Result = isMatched(arg0, tmp.desired, matches.matchVariables);
+      if (tmp2Result) {
+        tmp2Result = isMatched(arg1, tmp.supported, matches.matchVariables);
+      }
+      let tmp5 = tmp.oneway || tmp2Result;
+      if (!tmp5) {
+        let tmp6 = isMatched(arg0, tmp.supported, matches.matchVariables) && isMatched(arg1, tmp.desired, matches.matchVariables);
+        tmp2Result = tmp6;
+      }
+      if (tmp2Result) {
+        break;
+      } else {
+        num = num + 1;
+      }
+    }
+    const result = 10 * tmp.distance;
+    const paradigmLocales = matches.paradigmLocales;
+    const items = [, , ];
+    ({ language: arr3[0], script: arr3[1], region: arr3[2] } = arg0);
+    const _Boolean = Boolean;
+    const found = items.filter(Boolean);
+    const paradigmLocales1 = matches.paradigmLocales;
+    const items1 = [, , ];
+    ({ language: arr5[0], script: arr5[1], region: arr5[2] } = arg1);
+    const _Boolean2 = Boolean;
+    const found1 = items1.filter(Boolean);
+    let diff = result;
+    if (tmp10 !== paradigmLocales1.indexOf(found1.join("-")) > -1) {
+      diff = result - 1;
+    }
+    return diff;
+  }
+  const error = new Error("No matching distance found");
+  throw error;
+}
+function findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) {
+  locale = new Intl.Locale(matchedDesiredLocale);
+  const maximizeResult = locale.maximize();
+  const locale1 = new Intl.Locale(matchedSupportedLocale);
+  const maximizeResult1 = locale1.maximize();
+  const obj = { language: maximizeResult.language, script: maximizeResult.script || "", region: maximizeResult.region || "" };
+  const obj2 = { language: maximizeResult1.language, script: maximizeResult1.script || "", region: maximizeResult1.region || "" };
+  let tmp3 = obj3;
+  if (!obj3) {
+    let first = data.data.supplemental.languageMatching["written-new"][0];
+    let paradigmLocales;
+    if (null !== first) {
+      if (undefined !== first) {
+        paradigmLocales = first.paradigmLocales;
+      }
+    }
+    let parts;
+    if (null !== paradigmLocales) {
+      if (undefined !== paradigmLocales) {
+        parts = paradigmLocales._locales.split(" ");
+      }
+    }
+    const prop = data.data.supplemental.languageMatching["written-new"];
+    let substr = prop.slice(1, 5);
+    const prop1 = data.data.supplemental.languageMatching["written-new"];
+    const substr1 = prop1.slice(5);
+    obj3 = {
+      matches: substr1.map((item) => {
+          const first = Object.keys(item)[0];
+          return { supported: first, desired: item[first]._desired, distance: +item[first]._distance, oneway: "true" === item[first].oneway };
+        }, {}),
+      matchVariables: substr.reduce((acc, item) => {
+          const first = Object.keys(item)[0];
+          const substr = first.slice(1);
+          acc[substr] = item[first]._value.split("+");
+          return acc;
+        }, {}),
+      paradigmLocales: null
+    };
+    const tmp4Result = e;
+    const tmp4Result2 = e;
+    obj3.paradigmLocales = tmp4Result.__spreadArray(e.__spreadArray([], parts, true), parts.map((item) => {
+      locale = new Intl.Locale(item.replace(/_/g, "-"));
+      return locale.maximize().toString();
+    }), true);
+    tmp3 = obj3;
+    const __spreadArrayResult = e.__spreadArray([], parts, true);
+  }
+  let num3 = 0;
+  if (obj.language !== obj2.language) {
+    const obj4 = { language: maximizeResult.language, script: "", region: "" };
+    const obj5 = { language: maximizeResult1.language, script: "", region: "" };
+    num3 = findMatchingDistanceForLSR(obj4, obj5, tmp3);
+  }
+  let sum = num3;
+  if (obj.script !== obj2.script) {
+    const obj6 = { language: maximizeResult.language, script: obj.script, region: "" };
+    const obj7 = { language: maximizeResult1.language, script: obj2.script, region: "" };
+    sum = num3 + findMatchingDistanceForLSR(obj6, obj7, tmp3);
+  }
+  let sum1 = sum;
+  if (obj.region !== obj2.region) {
+    sum1 = sum + findMatchingDistanceForLSR(obj, obj2, tmp3);
+  }
+  return sum1;
+}
+let c3 = 838;
+
+export const invariant = function invariant(arg0, arg1, arg2) {
+  let _Error = arg2;
+  if (undefined === arg2) {
+    _Error = Error;
+  }
+  if (!arg0) {
+    const _Error1 = new _Error(arg1);
+    throw _Error1;
   }
 };
+export { findMatchingDistance };
+export const findBestMatch = function findBestMatch(arr, arg1, arg2) {
+  closure_0 = arg1;
+  let tmp = arg2;
+  if (undefined === arg2) {
+    tmp = c3;
+  }
+  let Infinity = Infinity;
+  const obj = { matchedDesiredLocale: "", distances: {} };
+  let item = arr.forEach((item, index) => {
+    const matchedDesiredLocale = item;
+    closure_1 = index;
+    if (!obj.distances[item]) {
+      obj.distances[item] = {};
+    }
+    item = matchedDesiredLocale.forEach((matchedSupportedLocale) => {
+      const sum = findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) + 40 * closure_1;
+      obj.distances[matchedDesiredLocale][matchedSupportedLocale] = sum;
+      if (sum < Infinity) {
+        Infinity = sum;
+        obj.matchedDesiredLocale = matchedDesiredLocale;
+        obj.matchedSupportedLocale = matchedSupportedLocale;
+      }
+    });
+  });
+  if (Infinity >= tmp) {
+    obj.matchedDesiredLocale = undefined;
+    obj.matchedSupportedLocale = undefined;
+  }
+  return obj;
+};
+export const UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;

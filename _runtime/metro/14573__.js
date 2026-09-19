@@ -1,49 +1,31 @@
 // === Module 14573: ? ===
 
 // Module 14573
-import _mod14517 from "module_14517" /* 14517 */;
-import _mod14542 from "module_14542" /* 14542 */;
-import _mod14570 from "module_14570" /* 14570 */;
 import _mod14574 from "module_14574" /* 14574 */;
+import _mod14576 from "module_14576" /* 14576 */;
+import text from "text" /* 14583 */;
+import _mod14594 from "module_14594" /* 14594 */;
+import _mod14604 from "module_14604" /* 14604 */;
+import _mod14606 from "module_14606" /* 14606 */;
+import _mod14608 from "module_14608" /* 14608 */;
+import _mod14609 from "module_14609" /* 14609 */;
 
-
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod14542(value)) {
-    _mod14574(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
+if (!_mod14574) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod14576(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod14606) {
+      if (_mod14594(tmp3, tmp4)) {
+        const tmpResult = _mod14608;
+        return tmpResult(!_mod14604(_mod14609.f, tmp3, tmp4), tmp3[tmp4]);
+      }
     } else {
-      _mod14517(arg1, value);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {
       }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod14570.f(arg0, arg1, obj2);
-        const tmp3Result = _mod14570;
-      }
-    } catch (err) {
     }
-  }
-  return arg0;
-};
+  };
+}
+
+export const f = getOwnPropertyDescriptor;

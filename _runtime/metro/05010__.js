@@ -1,17 +1,46 @@
 // === Module 5010: ? ===
 
 // Module 5010
-import _mod1281 from "module_1281" /* 1281 */;
-import callBoundIntrinsic from "callBoundIntrinsic" /* 1315 */;
 
-const tmp = _mod1281("%Array%");
-const isArray = tmp.isArray;
-let tmp2 = !isArray;
-if (!isArray) {
-  tmp2 = callBoundIntrinsic("Object.prototype.toString");
-}
-let closure_0 = tmp2;
-
-export default tmp.isArray || (function IsArray(arg0) {
-  return "[object Array]" === closure_0(arg0);
-});
+export default function properlyBoxed(call) {
+  c0 = true;
+  closure_1 = true;
+  if (typeof call === "function") {
+    try {
+      call = call.call;
+      const fn = (arg0, arg1, obj) => {
+        if (typeof obj !== "object") {
+          c0 = false;
+        }
+      };
+      if (typeof call === "unknown") {
+        call(fn);
+      } else {
+        call("f", fn);
+      }
+      const call2 = call.call;
+      const items = [null];
+      const fn2 = function() {
+        closure_1 = typeof this === "string";
+      };
+      if (typeof call2 === "unknown") {
+        call(fn2, "x");
+      } else {
+        call2(items, fn2, "x");
+      }
+      let flag = false;
+      let tmp3 = !flag;
+      if (!flag) {
+        tmp3 = c0;
+      }
+      if (tmp3) {
+        tmp3 = closure_1;
+      }
+      return tmp3;
+    } catch (err) {
+      flag = true;
+    }
+  } else {
+    return false;
+  }
+};

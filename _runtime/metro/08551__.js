@@ -1,90 +1,39 @@
 // === Module 8551: ? ===
 
 // Module 8551
-const require = globalThis.__r;
+import processColor from "processColor" /* 50 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-function flattenStyle(obj) {
-  if (null !== obj) {
-    if (typeof obj === "object") {
-      const _Array = Array;
-      if (Array.isArray(obj)) {
-        obj = {};
-        for (let num3 = 0; num3 < length; num3 = num3 + 1) {
-          let tmp3 = flattenStyle(obj[num3]);
-          if (tmp3) {
-            for (const key10019 in tmp3) {
-              obj[key10019] = tmp3[key10019];
-              continue;
-            }
-          }
-        }
-        return obj;
-      } else {
-        return obj;
-      }
-    }
-  }
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSlider", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } }, directEventTypes: { topRNCSliderSlidingStart: { registrationName: "onRNCSliderSlidingStart" }, topRNCSliderSlidingComplete: { registrationName: "onRNCSliderSlidingComplete" } }, validAttributes: null };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
 }
+const obj3 = { accessibilityUnits: true, accessibilityIncrements: true, disabled: true, inverted: true, vertical: true, tapToSeek: true, maximumTrackImage: { process: resolveAssetSource }, maximumTrackTintColor: { process: processColor.default }, maximumValue: true, minimumTrackImage: null, minimumTrackTintColor: null, minimumValue: true, step: true, testID: true, thumbImage: null, thumbTintColor: null, thumbSize: true, trackImage: null, value: true, lowerLimit: true, upperLimit: true };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.minimumTrackImage = { process: resolveAssetSource };
+const obj2 = { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } };
+const obj4 = { process: processColor.default };
+obj3.minimumTrackTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.thumbImage = { process: resolveAssetSource };
+const obj5 = { process: processColor.default };
+obj3.thumbTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.trackImage = { process: resolveAssetSource };
+__INTERNAL_VIEW_CONFIG.validAttributes = Object.assign(obj3, weakSet.ConditionallyIgnoredEventHandlers({ onChange: true, onRNCSliderSlidingStart: true, onRNCSliderSlidingComplete: true, onRNCSliderValueChange: true }));
 
-export default function DeprecatedStyleSheetPropType(arg0) {
-  _require = require("deprecatedCreateStrictShapeTypeChecker")(arg0);
-  return (arg0, arg1, arg2, arg3) => {
-    const substr = [...arguments].slice();
-    if (arg0[arg1]) {
-      let tmp4;
-      if (null !== arg0[arg1]) {
-        if (typeof arr === "object") {
-          const _Array = Array;
-          tmp4 = arr;
-          if (Array.isArray(arr)) {
-            const obj = {};
-            let num3 = 0;
-            tmp4 = obj;
-            if (0 < arr.length) {
-              do {
-                let arr2 = arr[num3];
-                let tmp6;
-                if (null !== arr2) {
-                  if (typeof arr2 === "object") {
-                    let _Array2 = Array;
-                    tmp6 = arr2;
-                    if (Array.isArray(arr2)) {
-                      let obj2 = {};
-                      let length2 = arr2.length;
-                      let num4 = 0;
-                      tmp6 = obj2;
-                      if (0 < length2) {
-                        do {
-                          let tmp8 = flattenStyle(arr2[num4]);
-                          if (tmp8) {
-                            for (const key10029 in tmp8) {
-                              obj2[key10029] = tmp8[key10029];
-                              continue;
-                            }
-                          }
-                          num4 = num4 + 1;
-                          tmp6 = obj2;
-                        } while (num4 < length2);
-                      }
-                    }
-                  }
-                }
-                if (tmp6) {
-                  for (const key10032 in tmp6) {
-                    obj[key10032] = tmp6[key10032];
-                    continue;
-                  }
-                }
-                num3 = num3 + 1;
-                tmp4 = obj;
-              } while (num3 < length);
-            }
-          }
-        }
-      }
-      const obj3 = {};
-      obj3[arg1] = tmp4;
-    }
-    return closure_0(arg1, arg2, arg3, ...substr);
-  };
-};
+export { __INTERNAL_VIEW_CONFIG };
+export default module_65.get("RNCSlider", () => obj);

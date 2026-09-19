@@ -1,24 +1,36 @@
 // === Module 7114: ? ===
 
 // Module 7114
+import RecyclerViewManager from "RecyclerViewManager" /* 7115 */;
+import _slicedToArray from "module_7094" /* 7094 */;
 
-export const useDataMultiplier = function useDataMultiplier(arg0, arg1) {
-  const array = new Array(arg1);
-  let flag = false;
-  if (typeof arg0[0] === "object") {
-    flag = true;
-  }
-  for (let num = 0; num < arg1; num = num + 1) {
-    let tmp3 = arg0[num % tmp];
-    if (flag) {
-      let obj = {};
-      let merged = Object.assign(tmp3);
-      let tmp5 = obj;
-    } else {
-      tmp5 = tmp3;
-    }
-    array[num] = tmp5;
-  }
-  const items = [array];
-  return items;
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+
+export const useRecyclerViewManager = (data) => {
+  let recyclerViewManager = velocityTracker(closure_5(() => {
+    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
+    return recyclerViewManager;
+  }), 1)[0];
+  velocityTracker = velocityTracker(closure_5(() => {
+    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
+    return velocityTracker;
+  }), 1)[0];
+  const items = [data];
+  closure_4(() => {
+    recyclerViewManager.updateProps(closure_0);
+  }, items);
+  const items1 = [data.data];
+  closure_4(() => {
+    recyclerViewManager.processDataUpdate();
+  }, items1);
+  closure_3(() => {
+    recyclerViewManager.restoreIfNeeded();
+    return () => {
+      recyclerViewManager.dispose();
+      velocityTracker.cleanUp();
+    };
+  }, []);
+  return { recyclerViewManager, velocityTracker };
 };
