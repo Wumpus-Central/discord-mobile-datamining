@@ -1,12 +1,12 @@
-// === Module 8959: GameProfileStoreLinks ===
+// === Module 8998: GameProfileStoreLinks ===
 
-// Module 8959 (GameProfileStoreLinks)
+// Module 8998 (GameProfileStoreLinks)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4417 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4689 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8914 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8941 */;
+import LinkingDefault from "Linking" /* 4451 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8953 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8980 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
@@ -30,7 +30,7 @@ function WebsiteGameStoreLinkButton(data) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flexDirection: "column", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

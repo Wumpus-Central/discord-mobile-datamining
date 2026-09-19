@@ -1,9 +1,9 @@
-// === Module 6165: ExperimentalDuckTypingBubbleAbstractUI ===
+// === Module 6209: ExperimentalDuckTypingBubbleAbstractUI ===
 
-// Module 6165 (ExperimentalDuckTypingBubbleAbstractUI)
+// Module 6209 (ExperimentalDuckTypingBubbleAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6166 from "module_6166" /* 6166 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6210 from "module_6210" /* 6210 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ExperimentalDuckTypingBubbleAbstractUI = function ExperimentalDuckT
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6166 };
+  const obj2 = { uri: _modDef6210 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

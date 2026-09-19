@@ -1,8 +1,8 @@
-// === Module 13496: ConversationFocusScreen ===
+// === Module 13552: ConversationFocusScreen ===
 
-// Module 13496 (ConversationFocusScreen)
+// Module 13552 (ConversationFocusScreen)
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7794 */;
+import ConversationsStore from "ConversationsStore" /* 7838 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -41,5 +41,5 @@ export default function ConversationFocusScreen() {
     return obj2;
   }, items3);
   ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
-  return jsx(conversationId(13497), { channelId, conversationId, messages, fullyHydrated, isFullFetchPending, startMessageId });
+  return jsx(conversationId(13553), { channelId, conversationId, messages, fullyHydrated, isFullFetchPending, startMessageId });
 };

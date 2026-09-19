@@ -1,28 +1,28 @@
-// === Module 15159: UserSettingsAuthedApp ===
+// === Module 15213: UserSettingsAuthedApp ===
 
-// Module 15159 (UserSettingsAuthedApp)
+// Module 15213 (UserSettingsAuthedApp)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Link from "Link" /* 1485 */;
-import RootNavigationRef from "RootNavigationRef" /* 4580 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4676 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import useAlertStore from "useAlertStore" /* 5068 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7186 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7191 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7310 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7315 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7366 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8602 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9753 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12839 */;
+import RootNavigationRef from "RootNavigationRef" /* 4614 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4710 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import useAlertStore from "useAlertStore" /* 5110 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7230 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7235 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7354 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7359 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7410 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8640 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9575 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 12848 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7303 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7347 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 
 require = fn;
 function WarningLabel(children) {
@@ -55,11 +55,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(11166).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(11634).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(11179).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(11643).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: { marginTop: nativeDefault.space.PX_12, display: "flex", flexDirection: "row" }, warningIcon: null };
 let size = { width: 16, height: 16, marginRight: 8, color: nativeDefault.colors.TEXT_MUTED };
 obj2.warningIcon = size;

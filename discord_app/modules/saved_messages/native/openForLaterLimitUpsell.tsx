@@ -1,9 +1,9 @@
-// === Module 11948: openForLaterLimitUpsell ===
+// === Module 11957: openForLaterLimitUpsell ===
 
-// Module 11948 (openForLaterLimitUpsell)
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8053 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8056 */;
-import PremiumUpsellSubfeatureNames2 from "PremiumUpsellSubfeatureNames" /* 8057 */;
+// Module 11957 (openForLaterLimitUpsell)
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8091 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8094 */;
+import PremiumUpsellSubfeatureNames2 from "PremiumUpsellSubfeatureNames" /* 8095 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/saved_messages/native/openForLaterLimitUpsell.tsx");

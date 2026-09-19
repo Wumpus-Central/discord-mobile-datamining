@@ -1,9 +1,9 @@
-// === Module 1912: VoiceEngine ===
+// === Module 1995: VoiceEngine ===
 
-// Module 1912 (VoiceEngine)
+// Module 1995 (VoiceEngine)
 import logger_Logger from "logger/Logger" /* 4 */;
 import _mod17 from "module_17" /* 17 */;
-import VoiceEngineModule from "VoiceEngineModule" /* 1913 */;
+import VoiceEngineModule from "VoiceEngineModule" /* 1996 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

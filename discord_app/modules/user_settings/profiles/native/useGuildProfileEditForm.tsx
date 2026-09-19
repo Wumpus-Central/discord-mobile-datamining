@@ -1,18 +1,18 @@
-// === Module 14862: useGuildProfileEditForm ===
+// === Module 14916: useGuildProfileEditForm ===
 
-// Module 14862 (useGuildProfileEditForm)
+// Module 14916 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8390 */;
-import UserProfileStore from "UserProfileStore" /* 7817 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import SortedGuildStore from "SortedGuildStore" /* 5608 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8428 */;
+import UserProfileStore from "UserProfileStore" /* 7855 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import SortedGuildStore from "SortedGuildStore" /* 5650 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8390).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8428).IGNORE_GUILD_IDS;
 const FormStates = fn(1074).FormStates;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useGuildProfileEditForm.tsx");
@@ -64,7 +64,7 @@ export default function useGuildProfileEditForm() {
   const merged1 = Object.assign(stateFromStoresObject.errors);
   const memo = pendingThemeColors.useMemo(() => {
     const delayedCall = new stateFromStores(pendingNickname[11]).DelayedCall(200, () => {
-      pendingAvatar(573).wait(stateFromStores(9448).resetAllPending);
+      pendingAvatar(573).wait(stateFromStores(10036).resetAllPending);
     });
     return delayedCall;
   }, []);

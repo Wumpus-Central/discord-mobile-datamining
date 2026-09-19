@@ -1,10 +1,10 @@
-// === Module 1917: GameStore ===
+// === Module 2000: GameStore ===
 
-// Module 1917 (GameStore)
+// Module 2000 (GameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import GameRecord from "GameRecord" /* 1918 */;
+import GameRecord from "GameRecord" /* 2001 */;
 
 function createGamesFromMessage(referenced_message) {
   closure_0 = false;

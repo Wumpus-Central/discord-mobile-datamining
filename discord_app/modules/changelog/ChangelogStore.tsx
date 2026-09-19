@@ -1,11 +1,11 @@
-// === Module 4736: ChangelogStore ===
+// === Module 4770: ChangelogStore ===
 
-// Module 4736 (ChangelogStore)
+// Module 4770 (ChangelogStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserSettings from "UserSettings" /* 1936 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import UserSettings from "UserSettings" /* 2019 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
 require = fn;
@@ -13,7 +13,7 @@ function handleUserSettingsProtoStoreChange() {
   const LastReceivedChangelogId = UserSettings.LastReceivedChangelogId;
   const setting = LastReceivedChangelogId.getSetting();
 }
-const ChangelogConstants = fn(2011);
+const ChangelogConstants = fn(2094);
 ({ AssetType: closure_4, ChangelogLoadState: hasOwnProperty } = ChangelogConstants);
 const dependencyMap = {};
 const loadedChangelogs = {};

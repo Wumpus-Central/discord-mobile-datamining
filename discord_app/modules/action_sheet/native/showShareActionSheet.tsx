@@ -1,10 +1,10 @@
-// === Module 8593: showShareActionSheet ===
+// === Module 8631: showShareActionSheet ===
 
-// Module 8593 (showShareActionSheet)
+// Module 8631 (showShareActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8594 */;
-import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8595 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8632 */;
+import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8633 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import size from "module_2" /* 2 */;
 
@@ -19,15 +19,15 @@ if (PlatformUtils.isAndroid()) {
 }
 let result = size.fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");
 
-export const showShareActionSheet = function showShareActionSheet(source, PREMIUM_GIFT_SUCCESS_MODAL) {
+export const showShareActionSheet = function showShareActionSheet(source, SECURE_FRAMES_STREAM_BOTTOM_SHEET) {
   _require = source;
-  let tmp = PREMIUM_GIFT_SUCCESS_MODAL;
-  importDefault = PREMIUM_GIFT_SUCCESS_MODAL;
+  let tmp = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
+  importDefault = SECURE_FRAMES_STREAM_BOTTOM_SHEET;
   if (null != source.source) {
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "PX_16", mediaStagingOptions: "accessible" };
+    mediaShareParams = { mediaFallbackUrl: "a", mediaStagingOptions: "isArray" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {
@@ -36,7 +36,7 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
   if (null != mediaStagingOptions) {
     let obj = {
       onCancel() {
-          return PREMIUM_GIFT_SUCCESS_MODAL(fn[2]).cancelPendingShare();
+          return SECURE_FRAMES_STREAM_BOTTOM_SHEET(fn[2]).cancelPendingShare();
         }
     };
     fn = require("showSharePreparingModal").showSharePreparingModal(obj);

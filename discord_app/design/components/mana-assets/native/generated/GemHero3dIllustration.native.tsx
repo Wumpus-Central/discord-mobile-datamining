@@ -1,9 +1,9 @@
-// === Module 6287: GemHero3dIllustration ===
+// === Module 6331: GemHero3dIllustration ===
 
-// Module 6287 (GemHero3dIllustration)
+// Module 6331 (GemHero3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6288 from "module_6288" /* 6288 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6332 from "module_6332" /* 6332 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GemHero3dIllustration = function GemHero3dIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6288 };
+  const obj2 = { uri: _modDef6332 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,10 +1,10 @@
-// === Module 11296: useFetchCollectiblesProduct ===
+// === Module 11309: useFetchCollectiblesProduct ===
 
-// Module 11296 (useFetchCollectiblesProduct)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7737 */;
+// Module 11309 (useFetchCollectiblesProduct)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7781 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 5680 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7738 */;
+import SKUStore from "SKUStore" /* 5722 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
 
 const require = globalThis.__r;
 
@@ -47,7 +47,7 @@ export const useFetchCollectiblesProduct = function useFetchCollectiblesProduct(
     if (product != null) {
       type = product.type;
     }
-    tmp10 = type === tmp(1890).CollectiblesItemType.BUNDLE;
+    tmp10 = type === tmp(1973).CollectiblesItemType.BUNDLE;
   }
   if (tmp10) {
     tmp10 = 0 === product.items.length;

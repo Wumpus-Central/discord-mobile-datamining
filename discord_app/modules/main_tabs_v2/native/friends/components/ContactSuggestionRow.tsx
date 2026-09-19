@@ -1,11 +1,11 @@
-// === Module 17150: ContactSuggestionRow ===
+// === Module 17227: ContactSuggestionRow ===
 
-// Module 17150 (ContactSuggestionRow)
+// Module 17227 (ContactSuggestionRow)
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16301 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16377 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
 const Constants = fn(1074);

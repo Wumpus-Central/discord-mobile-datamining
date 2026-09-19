@@ -1,14 +1,15 @@
-// === Module 10976: GiftingPromotionUtils ===
+// === Module 10992: GiftingPromotionUtils ===
 
-// Module 10976 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 1944 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
-import PremiumGiftingGogoPromotionExperiment2 from "PremiumGiftingGogoPromotionExperiment" /* 10983 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10984 */;
-import MarketingComponentType from "MarketingComponentType" /* 10985 */;
+// Module 10992 (GiftingPromotionUtils)
+import dismissible_content from "dismissible_content" /* 2027 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10997 */;
+import MarketingComponentType from "MarketingComponentType" /* 10998 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10908 */;
+import PromotionsStore from "PromotionsStore" /* 10924 */;
+
+const require = globalThis.__r;
 
 require = fn;
 const SubscriptionPlans = fn(1374).SubscriptionPlans;
@@ -16,19 +17,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchClaimableGiftingPromotionRewardSkuIds() {
-  const tmp = stateFromStoresArray(purchases.useState(), 2);
-  const first = tmp[0];
-  dependencyMap = tmp[1];
-  let items = [hasPreviouslyFetched];
-  stateFromStoresArray = first(504).useStateFromStoresArray(items, () => hasPreviouslyFetched.getGiftPromotionRewardSkuIds());
-  const obj = first(504);
-  const fetchPurchases = first(10977).useFetchPurchases();
+  const tmp = purchases(hasPreviouslyFetched.useState(), 2);
+  _require = tmp[1];
+  const items = [fetchPurchasesError];
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => fetchPurchasesError.getGiftPromotionRewardSkuIds());
+  const obj = require("initialize");
+  const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
-  const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
-  purchases.useRef(false);
+  fetchPurchasesError = fetchPurchases.fetchPurchasesError;
+  hasPreviouslyFetched.useRef(false);
   const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
-  const effect = purchases.useEffect(() => {
+  const effect = hasPreviouslyFetched.useEffect(() => {
     if (hasPreviouslyFetched) {
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
@@ -37,27 +37,13 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
           } else {
             found = [];
           }
-          dependencyMap(found);
+          closure_0(found);
           tmp.current = true;
         }
       }
     }
   }, items1);
-  const someResult = stateFromStoresArray.some((item) => item === first(10981).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
-  const obj3 = first(10977);
-  const fetchSummer2026GogoPromoEligibility = first(10982).useFetchSummer2026GogoPromoEligibility(someResult);
-  const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
-  const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
-  const items2 = [first, isEligible, hasFetched, someResult];
-  return purchases.useMemo(() => {
-    if (someResult) {
-      if (!isEligible) {
-        let items = [];
-      }
-      return items;
-    }
-    items = first;
-  }, items2);
+  return tmp[0];
 };
 export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   const map = new Map();
@@ -77,15 +63,11 @@ export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSk
     tmp3 = arg2.length >= 1;
   }
   let tmp4 = arg1;
-  const PremiumGiftingGogoPromotionExperiment = PremiumGiftingGogoPromotionExperiment2.PremiumGiftingGogoPromotionExperiment;
   if (arg1) {
     tmp4 = hasItem;
   }
   if (tmp4) {
     tmp4 = tmp3;
-  }
-  if (tmp4) {
-    tmp4 = !PremiumGiftingGogoPromotionExperiment.useConfig({ location: "useShouldShowSelectFreeSkuStep" }).enabled;
   }
   return tmp4;
 };

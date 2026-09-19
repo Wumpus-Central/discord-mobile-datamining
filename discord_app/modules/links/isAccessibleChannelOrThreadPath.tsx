@@ -1,12 +1,12 @@
-// === Module 7445: isAccessibleChannelOrThreadPath ===
+// === Module 7489: isAccessibleChannelOrThreadPath ===
 
-// Module 7445 (isAccessibleChannelOrThreadPath)
+// Module 7489 (isAccessibleChannelOrThreadPath)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatedChannelStore from "GatedChannelStore" /* 2014 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7292 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import GatedChannelStore from "GatedChannelStore" /* 2097 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7336 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = fn;
 let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
@@ -240,7 +240,7 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
 };
 const Constants = fn(1074);
 ({ GuildFeatures: closure_9, ME: c10 } = Constants);
-const ChannelConstants = fn(1965);
+const ChannelConstants = fn(2048);
 ({ isStaticChannelRoute: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/isAccessibleChannelOrThreadPath.tsx");

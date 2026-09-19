@@ -1,16 +1,16 @@
-// === Module 9004: CollectiblesShopCardV2 ===
+// === Module 9043: CollectiblesShopCardV2 ===
 
-// Module 9004 (CollectiblesShopCardV2)
+// Module 9043 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import v1 from "v1" /* 1255 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8406 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9007 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8444 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9046 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7738 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
 
 require = fn;
 function CollectiblesShopCardInternalV2(product) {
@@ -297,7 +297,7 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
 let size = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.card = size;

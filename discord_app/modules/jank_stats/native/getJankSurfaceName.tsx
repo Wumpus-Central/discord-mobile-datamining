@@ -1,10 +1,10 @@
-// === Module 16267: getJankSurfaceName ===
+// === Module 16343: getJankSurfaceName ===
 
-// Module 16267 (getJankSurfaceName)
-import useChatLayout from "useChatLayout" /* 4582 */;
-import getJankScreenName from "getJankScreenName" /* 16262 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 16266 */;
-import JankScreenConstants from "JankScreenConstants" /* 16263 */;
+// Module 16343 (getJankSurfaceName)
+import useChatLayout from "useChatLayout" /* 4616 */;
+import getJankScreenName from "getJankScreenName" /* 16338 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 16342 */;
+import JankScreenConstants from "JankScreenConstants" /* 16339 */;
 import size from "module_2" /* 2 */;
 
 ({ CHANNEL_DETAILS_SCREEN: c3, INTERACTION_NONE: closure_4 } = JankScreenConstants);

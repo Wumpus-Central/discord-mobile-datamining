@@ -1,12 +1,12 @@
-// === Module 12607: SearchMemberTabStore ===
+// === Module 12616: SearchMemberTabStore ===
 
-// Module 12607 (SearchMemberTabStore)
+// Module 12616 (SearchMemberTabStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4366 */;
-import GuildUtilsDefault from "GuildUtils" /* 5689 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 10080 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
+import GuildUtilsDefault from "GuildUtils" /* 5731 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 10090 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 const require = fn;
 const Permissions = fn(1074).Permissions;
@@ -161,7 +161,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
             searchGuildMemberTabStoreImpl.emitChange();
           }
         };
-        let items = [obj2(10080).AutocompleterResultTypes.USER];
+        let items = [obj2(10090).AutocompleterResultTypes.USER];
         const tmp42 = new sortByMatchScoreDefault(obj2.onAutocompleterResultsChange, items, 50);
         obj2.autocompleter = tmp42;
         const autocompleter = obj2.autocompleter;

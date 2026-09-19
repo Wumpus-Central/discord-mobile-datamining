@@ -1,9 +1,9 @@
-// === Module 5937: AppleIllocon ===
+// === Module 5979: AppleIllocon ===
 
-// Module 5937 (AppleIllocon)
+// Module 5979 (AppleIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef5938 from "module_5938" /* 5938 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef5980 from "module_5980" /* 5980 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const AppleIllocon = function AppleIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5938 };
+  const obj2 = { uri: _modDef5980 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

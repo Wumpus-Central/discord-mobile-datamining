@@ -1,10 +1,10 @@
-// === Module 16765: ContentInventoryEntryContainer ===
+// === Module 16841: ContentInventoryEntryContainer ===
 
-// Module 16765 (ContentInventoryEntryContainer)
+// Module 16841 (ContentInventoryEntryContainer)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8409 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8583 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8621 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createICYMIStyles = fn(16709);
+const createICYMIStyles = fn(16785);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom, arg1) => {
   let num = 0;
   if (!arg1) {

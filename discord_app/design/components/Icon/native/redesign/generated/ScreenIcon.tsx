@@ -1,9 +1,9 @@
-// === Module 9121: ScreenIcon ===
+// === Module 9160: ScreenIcon ===
 
-// Module 9121 (ScreenIcon)
+// Module 9160 (ScreenIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod9122 from "module_9122" /* 9122 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod9161 from "module_9161" /* 9161 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ScreenIcon = function ScreenIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9122, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9161, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

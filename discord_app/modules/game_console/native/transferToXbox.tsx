@@ -1,7 +1,7 @@
-// === Module 9698: transferToXbox ===
+// === Module 10055: transferToXbox ===
 
-// Module 9698 (transferToXbox)
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9689 */;
+// Module 10055 (transferToXbox)
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 10046 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -111,7 +111,8 @@ let closure_8 = async function _transferToXbox(arg0) {
                       return closure_2_7(closure_0, {});
                     };
                   });
-                }
+                },
+          isDismissable: false
         };
         c4 = 3;
         const obj18 = { value: closure_130_1(closure_130_3[8]).openLazy(obj17), done: true };

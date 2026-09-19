@@ -1,20 +1,20 @@
-// === Module 8839: FormInput ===
+// === Module 8878: FormInput ===
 
-// Module 8839 (FormInput)
+// Module 8878 (FormInput)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import native2 from "native" /* 4432 */;
+import native2 from "native" /* 4466 */;
 import noop from "module_19" /* 19 */;
 
 const native = TextArea(1177);
-const shared = TextArea(4573);
-const RedesignCompat = TextArea(5856);
-const TextInput = TextArea(6799);
-const TextArea2 = TextArea(7281);
+const shared = TextArea(4607);
+const RedesignCompat = TextArea(5898);
+const TextInput = TextArea(6843);
+const TextArea2 = TextArea(7325);
 require = fn;
 const KeyboardThemes = fn(1074).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT }, inputText: null };
 let obj3 = { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj.inputText = { color: nativeDefault.colors.TEXT_DEFAULT };

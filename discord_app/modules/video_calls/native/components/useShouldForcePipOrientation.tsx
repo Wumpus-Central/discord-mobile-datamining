@@ -1,15 +1,15 @@
-// === Module 9727: useShouldForcePipOrientation ===
+// === Module 9657: useShouldForcePipOrientation ===
 
-// Module 9727 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9714 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9728 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4738 */;
+// Module 9657 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9615 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9658 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const OrientationLockState = fn(1921).OrientationLockState;
-const CallConstants = fn(4743);
+const OrientationLockState = fn(2004).OrientationLockState;
+const CallConstants = fn(4777);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -78,17 +78,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_7(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(8564).OrientationType.LANDSCAPE;
+        return tmp2(8602).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(8564).OrientationType;
+    OrientationType = tmp2(8602).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(8564).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(8602).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

@@ -1,0 +1,18 @@
+// === Module 15962: CheckpointNavigation ===
+
+// Module 15962 (CheckpointNavigation)
+import size from "module_2" /* 2 */;
+
+const obj = { HOME: "home", INTRODUCTION: "introduction", VOICE_STATS: "voice_stats", VOICE_GENERAL: "voice_general", VOICE_FACE: "voice_face", MESSAGES_STATS: "messages_stats", MESSAGES_GENERAL: "messages_general", MESSAGES_OUTFIT: "messages_outfit", SERVERS_STATS: "servers_stats", SERVERS_HEADWEAR: "servers_headwear", EMOJI_STATS: "emoji_stats", EMOJI_GENERAL: "emoji_general", EMOJI_SHOES: "emoji_shoes", GAMES_STATS: "games_stats", GAMES_GENERAL: "games_general", GAMES_WEARABLE: "games_wearable", GAME_TIME_STATS: "game_time_stats", GAME_TIME_GENERAL: "game_time_general", GAME_TIME_AURA: "game_time_aura", SQUAD: "squad", SIDEKICK: "sidekick", FINALIZE_CHARACTER: "finalize_character", SUMMARY: "summary", PROFILE_WIDGET: "profile_widget" };
+const obj2 = { IDLE: "idle", INTRODUCTION: "introduction", FACE: "face", OUTFIT: "outfit", HEADWEAR: "headwear", SHOES: "shoes", WEARABLE: "wearable", AURA: "aura", ASSEMBLED: "assembled", FINALIZE: "finalize", SUMMARY: "summary", PROFILE_WIDGET: "profile_widget" };
+const obj3 = { VOICE: "voice", MESSAGES: "messages", SERVERS: "servers", EMOJI: "emoji", GAMES: "games", GAME_TIME: "game_time", SQUAD: "squad", SIDEKICK: "sidekick", SUMMARY: "summary" };
+let closure_0 = { [obj.HOME]: { characterStage: obj2.IDLE }, [obj.INTRODUCTION]: { characterStage: obj2.INTRODUCTION }, [obj.VOICE_STATS]: { characterStage: obj2.FACE, statsScreen: obj3.VOICE }, [obj.VOICE_GENERAL]: { characterStage: obj2.FACE, statsScreen: obj3.VOICE }, [obj.VOICE_FACE]: { characterStage: obj2.FACE }, [obj.MESSAGES_STATS]: { characterStage: obj2.OUTFIT, statsScreen: obj3.MESSAGES }, [obj.MESSAGES_GENERAL]: { characterStage: obj2.OUTFIT, statsScreen: obj3.MESSAGES }, [obj.MESSAGES_OUTFIT]: { characterStage: obj2.OUTFIT }, [obj.SERVERS_STATS]: { characterStage: obj2.HEADWEAR, statsScreen: obj3.SERVERS }, [obj.SERVERS_HEADWEAR]: { characterStage: obj2.HEADWEAR }, [obj.EMOJI_STATS]: { characterStage: obj2.SHOES, statsScreen: obj3.EMOJI }, [obj.EMOJI_GENERAL]: { characterStage: obj2.SHOES, statsScreen: obj3.EMOJI }, [obj.EMOJI_SHOES]: { characterStage: obj2.SHOES }, [obj.GAMES_STATS]: { characterStage: obj2.WEARABLE, statsScreen: obj3.GAMES }, [obj.GAMES_GENERAL]: { characterStage: obj2.WEARABLE, statsScreen: obj3.GAMES }, [obj.GAMES_WEARABLE]: { characterStage: obj2.WEARABLE }, [obj.GAME_TIME_STATS]: { characterStage: obj2.AURA, statsScreen: obj3.GAME_TIME }, [obj.GAME_TIME_GENERAL]: { characterStage: obj2.AURA, statsScreen: obj3.GAME_TIME }, [obj.GAME_TIME_AURA]: { characterStage: obj2.AURA }, [obj.SQUAD]: { characterStage: obj2.ASSEMBLED, statsScreen: obj3.SQUAD }, [obj.SIDEKICK]: { characterStage: obj2.ASSEMBLED, statsScreen: obj3.SIDEKICK }, [obj.FINALIZE_CHARACTER]: { characterStage: obj2.FINALIZE }, [obj.SUMMARY]: { characterStage: obj2.SUMMARY, statsScreen: obj3.SUMMARY }, [obj.PROFILE_WIDGET]: { characterStage: obj2.PROFILE_WIDGET } };
+const result = size.fileFinishedImporting("modules/checkpoint/CheckpointNavigation.tsx");
+
+export const CheckpointFlow = { SHARED_DATA: "shared_data", NO_SHARED_DATA: "no_shared_data" };
+export const CheckpointRoute = obj;
+export const CheckpointCharacterStage = obj2;
+export const CheckpointStatsScreen = obj3;
+export const getCheckpointRoutePresentation = function getCheckpointRoutePresentation(route) {
+  return closure_0[route];
+};

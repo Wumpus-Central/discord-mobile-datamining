@@ -1,85 +1,85 @@
-// === Module 5639: EmojiTermsImporter ===
+// === Module 5681: EmojiTermsImporter ===
 
-// Module 5639 (EmojiTermsImporter)
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
+// Module 5681 (EmojiTermsImporter)
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
 
 export const emojiTermsImporter = {
   bg() {
-    return asyncRequireImpl(5640, dependencyMap.paths);
+    return asyncRequireImpl(5682, dependencyMap.paths);
   },
   cs() {
-    return asyncRequireImpl(5641, dependencyMap.paths);
+    return asyncRequireImpl(5683, dependencyMap.paths);
   },
   da() {
-    return asyncRequireImpl(5642, dependencyMap.paths);
+    return asyncRequireImpl(5684, dependencyMap.paths);
   },
   de() {
-    return asyncRequireImpl(5643, dependencyMap.paths);
+    return asyncRequireImpl(5685, dependencyMap.paths);
   },
   el() {
-    return asyncRequireImpl(5644, dependencyMap.paths);
+    return asyncRequireImpl(5686, dependencyMap.paths);
   },
-  () => asyncRequireImpl(5645, dependencyMap.paths),
-  () => asyncRequireImpl(5646, dependencyMap.paths),
-  () => asyncRequireImpl(5647, dependencyMap.paths),
+  () => asyncRequireImpl(5687, dependencyMap.paths),
+  () => asyncRequireImpl(5688, dependencyMap.paths),
+  () => asyncRequireImpl(5689, dependencyMap.paths),
   fi() {
-    return asyncRequireImpl(5648, dependencyMap.paths);
+    return asyncRequireImpl(5690, dependencyMap.paths);
   },
   fr() {
-    return asyncRequireImpl(5649, dependencyMap.paths);
+    return asyncRequireImpl(5691, dependencyMap.paths);
   },
   hr() {
-    return asyncRequireImpl(5650, dependencyMap.paths);
+    return asyncRequireImpl(5692, dependencyMap.paths);
   },
   hu() {
-    return asyncRequireImpl(5651, dependencyMap.paths);
+    return asyncRequireImpl(5693, dependencyMap.paths);
   },
   it() {
-    return asyncRequireImpl(5652, dependencyMap.paths);
+    return asyncRequireImpl(5694, dependencyMap.paths);
   },
   ja() {
-    return asyncRequireImpl(5653, dependencyMap.paths);
+    return asyncRequireImpl(5695, dependencyMap.paths);
   },
   ko() {
-    return asyncRequireImpl(5654, dependencyMap.paths);
+    return asyncRequireImpl(5696, dependencyMap.paths);
   },
   lt() {
-    return asyncRequireImpl(5655, dependencyMap.paths);
+    return asyncRequireImpl(5697, dependencyMap.paths);
   },
   nl() {
-    return asyncRequireImpl(5656, dependencyMap.paths);
+    return asyncRequireImpl(5698, dependencyMap.paths);
   },
   no() {
-    return asyncRequireImpl(5657, dependencyMap.paths);
+    return asyncRequireImpl(5699, dependencyMap.paths);
   },
   pl() {
-    return asyncRequireImpl(5658, dependencyMap.paths);
+    return asyncRequireImpl(5700, dependencyMap.paths);
   },
-  () => asyncRequireImpl(5659, dependencyMap.paths),
+  () => asyncRequireImpl(5701, dependencyMap.paths),
   ro() {
-    return asyncRequireImpl(5660, dependencyMap.paths);
+    return asyncRequireImpl(5702, dependencyMap.paths);
   },
   ru() {
-    return asyncRequireImpl(5661, dependencyMap.paths);
+    return asyncRequireImpl(5703, dependencyMap.paths);
   },
-  () => asyncRequireImpl(5662, dependencyMap.paths),
+  () => asyncRequireImpl(5704, dependencyMap.paths),
   th() {
-    return asyncRequireImpl(5663, dependencyMap.paths);
+    return asyncRequireImpl(5705, dependencyMap.paths);
   },
   tr() {
-    return asyncRequireImpl(5664, dependencyMap.paths);
+    return asyncRequireImpl(5706, dependencyMap.paths);
   },
   uk() {
-    return asyncRequireImpl(5665, dependencyMap.paths);
+    return asyncRequireImpl(5707, dependencyMap.paths);
   },
   vi() {
-    return asyncRequireImpl(5666, dependencyMap.paths);
+    return asyncRequireImpl(5708, dependencyMap.paths);
   },
-  () => asyncRequireImpl(5667, dependencyMap.paths),
+  () => asyncRequireImpl(5709, dependencyMap.paths),
   hi() {
-    return asyncRequireImpl(5668, dependencyMap.paths);
+    return asyncRequireImpl(5710, dependencyMap.paths);
   }
 };

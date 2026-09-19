@@ -1,6 +1,6 @@
-// === Module 9309: GuildSettingsFetchActionCreators ===
+// === Module 9861: GuildSettingsFetchActionCreators ===
 
-// Module 9309 (GuildSettingsFetchActionCreators)
+// Module 9861 (GuildSettingsFetchActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -37,7 +37,7 @@ let closure_7 = async function _fetchGuildIntegrationsApplications() {
   closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_SETTINGS_LOADED_INTEGRATIONS", guildId: closure_129_0, integrations: closure_129_1 });
   return closure_129_1;
 };
-const BasicApplicationRecord = fn(1919).BasicApplicationRecord;
+const BasicApplicationRecord = fn(2002).BasicApplicationRecord;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsFetchActionCreators.tsx");

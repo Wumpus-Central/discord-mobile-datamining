@@ -1,12 +1,12 @@
-// === Module 4686: BrowserManager ===
+// === Module 4720: BrowserManager ===
 
-// Module 4686 (BrowserManager)
+// Module 4720 (BrowserManager)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import LinkingDefault from "Linking" /* 4417 */;
-import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 4687 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4688 */;
+import LinkingDefault from "Linking" /* 4451 */;
+import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 4721 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4722 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const NativeBrowserManagerModuleDefault = NativeBrowserManagerModule;

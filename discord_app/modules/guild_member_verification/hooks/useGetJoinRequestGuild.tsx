@@ -1,9 +1,9 @@
-// === Module 9449: useGetJoinRequestGuild ===
+// === Module 10037: useGetJoinRequestGuild ===
 
-// Module 9449 (useGetJoinRequestGuild)
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5711 */;
+// Module 10037 (useGetJoinRequestGuild)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5753 */;
 import noop from "module_19" /* 19 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4544 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4578 */;
 
 const require = globalThis.__r;
 

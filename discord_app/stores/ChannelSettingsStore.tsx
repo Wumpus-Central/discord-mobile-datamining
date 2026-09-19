@@ -1,20 +1,20 @@
-// === Module 8864: ChannelSettingsStore ===
+// === Module 8903: ChannelSettingsStore ===
 
-// Module 8864 (ChannelSettingsStore)
+// Module 8903 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadConstants from "ThreadConstants" /* 1114 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import ChannelRecord from "ChannelRecord" /* 1962 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 1967 */;
-import ForumLayout from "ForumLayout" /* 1968 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 1972 */;
-import _modDef4314 from "module_4314" /* 4314 */;
-import ReactionUtils from "ReactionUtils" /* 4373 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4375 */;
-import InviteRecord from "InviteRecord" /* 8612 */;
+import ChannelRecord from "ChannelRecord" /* 2045 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2050 */;
+import ForumLayout from "ForumLayout" /* 2051 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
+import _modDef4348 from "module_4348" /* 4348 */;
+import ReactionUtils from "ReactionUtils" /* 4407 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4409 */;
+import InviteRecord from "InviteRecord" /* 8650 */;
 import UserRecord from "UserRecord" /* 1386 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 import Constants from "Constants" /* 1074 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -99,7 +99,7 @@ function _createInvite(code) {
   }
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
-  obj.createdAt = _modDef4314(code.created_at);
+  obj.createdAt = _modDef4348(code.created_at);
   ({ type: obj.type, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }

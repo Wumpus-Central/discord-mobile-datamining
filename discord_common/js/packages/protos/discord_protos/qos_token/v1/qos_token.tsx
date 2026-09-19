@@ -1,6 +1,6 @@
-// === Module 14414: qos_token ===
+// === Module 14469: qos_token ===
 
-// Module 14414 (qos_token)
+// Module 14469 (qos_token)
 import _mod1187 from "module_1187" /* 1187 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -204,22 +204,26 @@ let closure_3 = tmp4;
 const MessageType3 = fn(1187).MessageType;
 class DerivedQosData$Type extends MessageType3 {
   constructor() {
-    items = [];
+    items = [, , ];
     items[0] = { no: 1, name: "claims", kind: "scalar", T: 12 };
+    items[1] = { no: 2, name: "signature", kind: "scalar", T: 12 };
+    items[2] = { no: 3, name: "key_id", kind: "scalar", T: 13 };
     tmp1 = new tmp("discord_protos.qos_token.v1.DerivedQosData", items, new.target);
     return tmp1;
   }
 }
 const prototype3 = DerivedQosData$Type.prototype;
 prototype3["create"] = function create(arr) {
-  const obj = { claims: null };
+  const obj = { claims: null, signature: null, keyId: 0 };
   const uint8Array = new Uint8Array(0);
   obj.claims = uint8Array;
+  const uint8Array1 = new Uint8Array(0);
+  obj.signature = uint8Array1;
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1187.reflectionMergePartial(this, obj, arr);
-    const tmp2Result = _mod1187;
+    const tmp3Result = _mod1187;
   }
   return obj;
 };
@@ -236,6 +240,10 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.claims = pos.bytes();
+      } else if (2 === tmp5) {
+        obj.signature = pos.bytes();
+      } else if (3 === tmp5) {
+        obj.keyId = pos.uint32();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -268,6 +276,14 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(claims, tag, wr
     tag.tag(1, _mod1187.WireType.LengthDelimited).bytes(claims.claims);
     const tagResult = tag.tag(1, _mod1187.WireType.LengthDelimited);
   }
+  if (claims.signature.length) {
+    tag.tag(2, _mod1187.WireType.LengthDelimited).bytes(claims.signature);
+    const tagResult1 = tag.tag(2, _mod1187.WireType.LengthDelimited);
+  }
+  if (0 !== claims.keyId) {
+    tag.tag(3, _mod1187.WireType.Varint).uint32(claims.keyId);
+    const tagResult2 = tag.tag(3, _mod1187.WireType.Varint);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -278,27 +294,31 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(claims, tag, wr
   }
   return tag;
 };
-const items2 = [{ no: 1, name: "claims", kind: "scalar", T: 12 }];
+const items2 = [{ no: 1, name: "claims", kind: "scalar", T: 12 }, { no: 2, name: "signature", kind: "scalar", T: 12 }, { no: 3, name: "key_id", kind: "scalar", T: 13 }];
 const clientProvidedQosDataType = new ClientProvidedQosData$Type("discord_protos.qos_token.v1.DerivedQosData", items2, tmp3, DerivedQosData$Type, "create", "internalBinaryRead", ClientProvidedQosData$Type, "internalBinaryWrite", items2, undefined, fn, dependencyMap, new.target, defineProperty1, tmp4);
 const MessageType4 = fn(1187).MessageType;
 class Claims$Type extends MessageType4 {
   constructor() {
-    items = [, , ];
+    items = [, , , , ];
     items[0] = { no: 1, name: "user_id", kind: "scalar", T: 6 };
     items[1] = { no: 2, name: "issued_at", kind: "scalar", T: 6 };
     items[2] = { no: 3, name: "is_staff", kind: "scalar", T: 8 };
+    items[3] = { no: 4, name: "auth_token_hash", kind: "scalar", T: 12 };
+    items[4] = { no: 5, name: "expires_at", kind: "scalar", T: 6 };
     tmp1 = new tmp("discord_protos.qos_token.v1.Claims", items, new.target);
     return tmp1;
   }
 }
 const prototype4 = Claims$Type.prototype;
 prototype4["create"] = function create(arr) {
-  const obj = { userId: "0", issuedAt: "0", isStaff: false };
+  const obj = { userId: "0", issuedAt: "0", isStaff: false, authTokenHash: null, expiresAt: "0" };
+  const uint8Array = new Uint8Array(0);
+  obj.authTokenHash = uint8Array;
   const _Object = Object;
   _Object.defineProperty(obj, _mod1187.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
     const result = _mod1187.reflectionMergePartial(this, obj, arr);
-    const tmpResult = _mod1187;
+    const tmp2Result = _mod1187;
   }
   return obj;
 };
@@ -314,13 +334,18 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let str5 = pos.fixed64();
-        obj.userId = str5.toString();
+        let str6 = pos.fixed64();
+        obj.userId = str6.toString();
       } else if (2 === tmp5) {
-        let str4 = pos.fixed64();
-        obj.issuedAt = str4.toString();
+        let str5 = pos.fixed64();
+        obj.issuedAt = str5.toString();
       } else if (3 === tmp5) {
         obj.isStaff = pos.bool();
+      } else if (4 === tmp5) {
+        obj.authTokenHash = pos.bytes();
+      } else if (5 === tmp5) {
+        let str4 = pos.fixed64();
+        obj.expiresAt = str4.toString();
       } else {
         let onRead = readUnknownField.readUnknownField;
         if ("throw" === onRead) {
@@ -361,6 +386,14 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(userId, tag, wr
     tag.tag(3, _mod1187.WireType.Varint).bool(userId.isStaff);
     const tagResult2 = tag.tag(3, _mod1187.WireType.Varint);
   }
+  if (userId.authTokenHash.length) {
+    tag.tag(4, _mod1187.WireType.LengthDelimited).bytes(userId.authTokenHash);
+    const tagResult3 = tag.tag(4, _mod1187.WireType.LengthDelimited);
+  }
+  if ("0" !== userId.expiresAt) {
+    tag.tag(5, _mod1187.WireType.Bit64).fixed64(userId.expiresAt);
+    const tagResult4 = tag.tag(5, _mod1187.WireType.Bit64);
+  }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
@@ -371,7 +404,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(userId, tag, wr
   }
   return tag;
 };
-const items3 = [{ no: 1, name: "user_id", kind: "scalar", T: 6 }, { no: 2, name: "issued_at", kind: "scalar", T: 6 }, { no: 3, name: "is_staff", kind: "scalar", T: 8 }];
+const items3 = [{ no: 1, name: "user_id", kind: "scalar", T: 6 }, { no: 2, name: "issued_at", kind: "scalar", T: 6 }, { no: 3, name: "is_staff", kind: "scalar", T: 8 }, { no: 4, name: "auth_token_hash", kind: "scalar", T: 12 }, { no: 5, name: "expires_at", kind: "scalar", T: 6 }];
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/qos_token/v1/qos_token.tsx");
 

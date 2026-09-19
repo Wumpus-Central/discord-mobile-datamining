@@ -1,9 +1,9 @@
-// === Module 4353: RolePermissionUtils ===
+// === Module 4387: RolePermissionUtils ===
 
-// Module 4353 (RolePermissionUtils)
+// Module 4387 (RolePermissionUtils)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2017 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2100 */;
 import size from "module_2" /* 2 */;
 
 const hasPermission = GuildRoleRecord.hasPermission;

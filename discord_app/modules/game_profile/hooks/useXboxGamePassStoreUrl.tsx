@@ -1,9 +1,9 @@
-// === Module 8923: useXboxGamePassStoreUrl ===
+// === Module 8962: useXboxGamePassStoreUrl ===
 
-// Module 8923 (useXboxGamePassStoreUrl)
+// Module 8962 (useXboxGamePassStoreUrl)
 import Constants from "Constants" /* 1074 */;
-import StringUtils from "StringUtils" /* 1926 */;
-import distributorStoreUrls from "distributorStoreUrls" /* 8916 */;
+import StringUtils from "StringUtils" /* 2009 */;
+import distributorStoreUrls from "distributorStoreUrls" /* 8955 */;
 import size from "module_2" /* 2 */;
 
 const Distributors = Constants.Distributors;

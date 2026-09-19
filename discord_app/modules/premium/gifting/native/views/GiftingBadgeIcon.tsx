@@ -1,6 +1,6 @@
-// === Module 10995: GiftingBadgeIcon ===
+// === Module 11008: GiftingBadgeIcon ===
 
-// Module 10995 (GiftingBadgeIcon)
+// Module 11008 (GiftingBadgeIcon)
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;

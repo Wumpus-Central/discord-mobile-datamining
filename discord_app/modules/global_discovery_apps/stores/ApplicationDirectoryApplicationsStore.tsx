@@ -1,9 +1,9 @@
-// === Module 7360: ApplicationDirectoryApplicationsStore ===
+// === Module 7404: ApplicationDirectoryApplicationsStore ===
 
-// Module 7360 (ApplicationDirectoryApplicationsStore)
+// Module 7404 (ApplicationDirectoryApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ApplicationRecord from "ApplicationRecord" /* 1919 */;
+import ApplicationRecord from "ApplicationRecord" /* 2002 */;
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 obj = {};

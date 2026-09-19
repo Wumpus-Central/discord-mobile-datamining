@@ -1,9 +1,9 @@
-// === Module 12683: useIsMessageRequestRestrictedViewer ===
+// === Module 12692: useIsMessageRequestRestrictedViewer ===
 
-// Module 12683 (useIsMessageRequestRestrictedViewer)
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4935 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5593 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7495 */;
+// Module 12692 (useIsMessageRequestRestrictedViewer)
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4968 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5635 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7539 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");

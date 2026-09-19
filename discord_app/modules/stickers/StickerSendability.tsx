@@ -1,11 +1,11 @@
-// === Module 7533: StickerSendability ===
+// === Module 7577: StickerSendability ===
 
-// Module 7533 (StickerSendability)
-import PermissionUtilsAll from "PermissionUtils" /* 4366 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
-import StickersUtils from "StickersUtils" /* 5061 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import StickersPackStore from "StickersPackStore" /* 5674 */;
+// Module 7577 (StickerSendability)
+import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
+import StickersUtils from "StickersUtils" /* 5103 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import StickersPackStore from "StickersPackStore" /* 5716 */;
 
 require = fn;
 function getStickerSendability(item10030, currentUser, channel) {

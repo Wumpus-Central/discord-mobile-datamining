@@ -1,9 +1,9 @@
-// === Module 4534: TeenScreenTimeRive ===
+// === Module 4568: TeenScreenTimeRive ===
 
-// Module 4534 (TeenScreenTimeRive)
-import BaseRive from "BaseRive" /* 4452 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4507 */;
-import _modDef4535 from "module_4535" /* 4535 */;
+// Module 4568 (TeenScreenTimeRive)
+import BaseRive from "BaseRive" /* 4486 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4541 */;
+import _modDef4569 from "module_4569" /* 4569 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ let closure_8 = noop.forwardRef(function TeenScreenTimeRiveInner(defaultViewMode
   }
   const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   const merged = Object.assign(tmp2);
-  return jsx(BaseRive.BaseRive, { ref, src: _modDef4535, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
+  return jsx(BaseRive.BaseRive, { ref, src: _modDef4569, artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: tmp, stateMachine: defaultViewModelInstance.stateMachine });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/TeenScreenTimeRive.tsx");

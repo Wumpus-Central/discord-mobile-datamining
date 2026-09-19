@@ -1,9 +1,9 @@
-// === Module 7571: canChannelUseSoundboard ===
+// === Module 7615: canChannelUseSoundboard ===
 
-// Module 7571 (canChannelUseSoundboard)
-import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+// Module 7615 (canChannelUseSoundboard)
+import ChannelStore from "ChannelStore" /* 2041 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 
 const require = globalThis.__r;
 

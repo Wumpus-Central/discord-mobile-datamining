@@ -1,22 +1,22 @@
-// === Module 14072: RemoteAuthModal ===
+// === Module 14126: RemoteAuthModal ===
 
-// Module 14072 (RemoteAuthModal)
+// Module 14126 (RemoteAuthModal)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4925 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import ButtonGroup from "ButtonGroup" /* 5603 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5747 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5751 */;
-import _modDef14071 from "module_14071" /* 14071 */;
-import _modDef14073 from "module_14073" /* 14073 */;
-import _modDef14074 from "module_14074" /* 14074 */;
-import _modDef14075 from "module_14075" /* 14075 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import ButtonGroup from "ButtonGroup" /* 5645 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5789 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 5793 */;
+import _modDef14125 from "module_14125" /* 14125 */;
+import _modDef14127 from "module_14127" /* 14127 */;
+import _modDef14128 from "module_14128" /* 14128 */;
+import _modDef14129 from "module_14129" /* 14129 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,10 +35,10 @@ function RemoteAuthBody(remoteAuthFingerprint) {
     HTTP.post(request).then((body) => {
       dependencyMap(body.body.handshake_token);
       closure_1_1(constants.LOADED);
-      const result = remoteAuthFingerprint(5751).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5793).DeprecatedLayoutAnimation();
     }).catch(() => {
       closure_1_1(constants.NOT_FOUND);
-      const result = remoteAuthFingerprint(5751).DeprecatedLayoutAnimation();
+      const result = remoteAuthFingerprint(5793).DeprecatedLayoutAnimation();
     });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -97,7 +97,7 @@ function RemoteAuthLogin(arg0) {
       closure_1_1(constants.NOT_FOUND);
     });
   }, 1000, { leading: true, trailing: false });
-  const items = [closure_9(closure_6, { source: _modDef14074, style: tmp.mainImage }), , , ];
+  const items = [closure_9(closure_6, { source: _modDef14128, style: tmp.mainImage }), , , ];
   const obj4 = { variant: "heading-md/extrabold", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.jD2pqF);
@@ -131,7 +131,7 @@ function RemoteAuthLogin(arg0) {
 function RemoteAuthLoginSucceeded() {
   const tmp = closure_12();
   const obj = { children: null };
-  const items = [React7(timestampProducer, { source: _modDef14075, style: tmp.mainImage }), , , ];
+  const items = [React7(timestampProducer, { source: _modDef14129, style: tmp.mainImage }), , , ];
   const obj3 = { variant: "heading-xl/extrabold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.HbwTOZ);
@@ -179,7 +179,7 @@ get_ActivityIndicator = fn(17);
 const Endpoints = fn(1074).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { background: { width: "100%", height: "100%" }, container: { flex: 1, alignItems: "stretch", alignContent: "center" }, imageStyle: { resizeMode: "cover" }, logo: { position: "absolute", top: 16, alignSelf: "center", width: 32, height: 32 }, mainImage: { marginTop: 16, marginBottom: 32 }, warningCaption: { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 }, caption: { lineHeight: 20, textAlign: "center", marginTop: 8, marginBottom: 32 }, mainCard: null, buttonGroup: null, loadingContainer: null };
 let obj3 = { fontSize: 16, lineHeight: 20, color: nativeDefault.unsafe_rawColors.RED_400, textAlign: "center", marginTop: 8, marginBottom: 32 };
 obj2.mainCard = { display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: "auto", marginBottom: "auto", marginLeft: 16, marginRight: 16, borderRadius: nativeDefault.radii.sm, padding: 16, shadowColor: nativeDefault.colors.BLACK, shadowOpacity: 0.16, shadowRadius: 2, shadowOffset: { height: 2, width: 0 } };
@@ -192,9 +192,9 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 
 export default function RemoteAuth(arg0) {
   const tmp = closure_12();
-  const obj = { source: _modDef14073, imageStyle: null, style: null, children: null };
+  const obj = { source: _modDef14127, imageStyle: null, style: null, children: null };
   ({ imageStyle: obj.imageStyle, background: obj.style } = tmp);
-  const obj2 = { style: null, source: _modDef14071 };
+  const obj2 = { style: null, source: _modDef14125 };
   const items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj2.style = items;
   const items1 = [React7(timestampProducer, obj2), ];

@@ -1,6 +1,6 @@
-// === Module 9749: FramesConstants ===
+// === Module 9313: FramesConstants ===
 
-// Module 9749 (FramesConstants)
+// Module 9313 (FramesConstants)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -57,10 +57,10 @@ export const getChannelIdForSurface = function getChannelIdForSurface(type) {
     }
   }
 };
-export const isLaunched = function isLaunched(item10005) {
+export const isLaunched = function isLaunched(mainFrame) {
   let state;
-  if (item10005 != null) {
-    state = item10005.state;
+  if (mainFrame != null) {
+    state = mainFrame.state;
   }
   return "launched" === state;
 };

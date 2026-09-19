@@ -1,13 +1,13 @@
-// === Module 14747: RpcCommandInterception ===
+// === Module 13183: RpcCommandInterception ===
 
-// Module 14747 (RpcCommandInterception)
+// Module 13183 (RpcCommandInterception)
 import size from "module_2" /* 2 */;
 
 let global = null;
 const result = size.fileFinishedImporting("modules/rpc/RpcCommandInterception.tsx");
 
-export function setRpcCommandInterceptor(arg0) {
-  global = arg0;
+export function setRpcCommandInterceptor(answerFor) {
+  global = answerFor;
 }
 export const interceptRpcCommand = function interceptRpcCommand(framebus) {
   if (null == global) {

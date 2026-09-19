@@ -1,10 +1,10 @@
-// === Module 11708: ActivityLauncherStore ===
+// === Module 11717: ActivityLauncherStore ===
 
-// Module 11708 (ActivityLauncherStore)
+// Module 11717 (ActivityLauncherStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import LocalActivityStore from "LocalActivityStore" /* 9764 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5449 */;
+import LocalActivityStore from "LocalActivityStore" /* 9624 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5491 */;
 
 const require = fn;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {
@@ -31,7 +31,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout = new applicationId(1953).Timeout();
+      const timeout = new applicationId(2036).Timeout();
       timeout.start(c9, () => DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }));
       dependencyMap[applicationId] = timeout;
     } else if (COMPLETE === constants.LOADING) {
@@ -43,7 +43,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout1 = new applicationId(1953).Timeout();
+      const timeout1 = new applicationId(2036).Timeout();
       timeout1.start(num, () => DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }));
       dependencyMap[applicationId] = timeout1;
     }

@@ -1,6 +1,6 @@
-// === Module 6066: ? ===
+// === Module 6110: ? ===
 
-// Module 6066
+// Module 6110
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ControllerSpotIllustration-2x.png.js");

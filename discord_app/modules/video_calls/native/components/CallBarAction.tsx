@@ -1,10 +1,10 @@
-// === Module 9735: CallBarAction ===
+// === Module 9665: CallBarAction ===
 
-// Module 9735 (CallBarAction)
+// Module 9665 (CallBarAction)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import Pressables from "Pressables" /* 5292 */;
-import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 9737 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import Pressables from "Pressables" /* 5334 */;
+import CircleWithCutoutUtils from "CircleWithCutoutUtils" /* 9667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -122,15 +122,15 @@ class ActionButton {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const resetFocusTimer = fn(9705).resetFocusTimer;
+const resetFocusTimer = fn(9639).resetFocusTimer;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const ColorUtils = fn(4571);
+const ColorUtils = fn(4605);
 let closure_9 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 let closure_10 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
 let closure_12 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj3 = { buttonContainer: { position: "absolute" }, iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" }, badge: { backgroundColor: "white", position: "absolute" }, notificationArea: null, notificationText: null, notificationAreaMentioned: null, notificationAreaUnread: null };
 const rect = { position: "absolute", top: -4, right: -4, height: 24, minWidth: 24, paddingHorizontal: 4, borderRadius: 12, borderWidth: 4, borderColor: nativeDefault.unsafe_rawColors.PRIMARY_760, alignItems: "center", justifyContent: "center" };
 obj3.notificationArea = rect;

@@ -1,18 +1,18 @@
-// === Module 12770: GuildBoostingMarketingUtils ===
+// === Module 12779: GuildBoostingMarketingUtils ===
 
-// Module 12770 (GuildBoostingMarketingUtils)
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4615 */;
-import StageIcon from "StageIcon" /* 5266 */;
-import ReactionIcon from "ReactionIcon" /* 8997 */;
-import UploadIcon from "UploadIcon" /* 9609 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9997 */;
-import StickerIcon from "StickerIcon" /* 10357 */;
-import StarIcon from "StarIcon" /* 10476 */;
-import GifIcon from "GifIcon" /* 10623 */;
-import ImagesIcon from "ImagesIcon" /* 11941 */;
-import SoundboardIcon from "SoundboardIcon" /* 12771 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 12773 */;
-import ScreenArrowIcon from "ScreenArrowIcon" /* 12775 */;
+// Module 12779 (GuildBoostingMarketingUtils)
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4649 */;
+import StageIcon from "StageIcon" /* 5308 */;
+import ReactionIcon from "ReactionIcon" /* 9036 */;
+import UploadIcon from "UploadIcon" /* 9484 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9839 */;
+import StickerIcon from "StickerIcon" /* 10369 */;
+import StarIcon from "StarIcon" /* 10492 */;
+import GifIcon from "GifIcon" /* 10639 */;
+import ImagesIcon from "ImagesIcon" /* 11950 */;
+import SoundboardIcon from "SoundboardIcon" /* 12780 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12782 */;
+import ScreenArrowIcon from "ScreenArrowIcon" /* 12784 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");

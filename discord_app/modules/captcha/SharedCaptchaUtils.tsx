@@ -1,8 +1,8 @@
-// === Module 11529: SharedCaptchaUtils ===
+// === Module 5082: SharedCaptchaUtils ===
 
-// Module 11529 (SharedCaptchaUtils)
-import CaptchaConstants from "CaptchaConstants" /* 11531 */;
-import CaptchaStore from "CaptchaStore" /* 11530 */;
+// Module 5082 (SharedCaptchaUtils)
+import CaptchaConstants from "CaptchaConstants" /* 5090 */;
+import CaptchaStore from "CaptchaStore" /* 5083 */;
 import size from "module_2" /* 2 */;
 
 ({ incrementCaptchaServeVolume: closure_0, flushCaptchaServeVolume: closure_1, isCaptchaStoreVolumeEmpty: c2 } = CaptchaStore);

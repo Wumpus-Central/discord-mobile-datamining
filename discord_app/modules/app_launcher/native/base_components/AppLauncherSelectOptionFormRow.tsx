@@ -1,16 +1,16 @@
-// === Module 12418: AppLauncherSelectOptionFormRow ===
+// === Module 12427: AppLauncherSelectOptionFormRow ===
 
-// Module 12418 (AppLauncherSelectOptionFormRow)
+// Module 12427 (AppLauncherSelectOptionFormRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import Form from "Form" /* 8831 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12411 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import Form from "Form" /* 8870 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { formRow: { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", flex: 1 } };
 let closure_4 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -46,7 +46,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
     }
   }
   obj2.subLabel = fn;
-  obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(7338), size: native.IconSizes.SMALL_20 });
+  obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(7382), size: native.IconSizes.SMALL_20 });
   const merged1 = Object.assign(merged);
   return jsx(Form.FormRow, { start: true, end: true, style: null, label: null, subLabel: null, trailing: null });
 };

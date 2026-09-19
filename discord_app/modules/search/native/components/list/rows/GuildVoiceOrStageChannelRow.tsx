@@ -1,16 +1,16 @@
-// === Module 17038: GuildVoiceOrStageChannelRow ===
+// === Module 17114: GuildVoiceOrStageChannelRow ===
 
-// Module 17038 (GuildVoiceOrStageChannelRow)
+// Module 17114 (GuildVoiceOrStageChannelRow)
 import util from "util" /* 1115 */;
-import UserUtilsDefault from "UserUtils" /* 4566 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5601 */;
-import ChannelListLayout from "ChannelListLayout" /* 10364 */;
-import renderChannelBadge from "renderChannelBadge" /* 12534 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 17039 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 17040 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 17042 */;
+import UserUtilsDefault from "UserUtils" /* 4600 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5643 */;
+import ChannelListLayout from "ChannelListLayout" /* 10376 */;
+import renderChannelBadge from "renderChannelBadge" /* 12543 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 17115 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 17116 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 17118 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 1963 */;
+import StageInstanceStore from "StageInstanceStore" /* 2046 */;
 
 require = fn;
 function GuildVoiceChannelSubtitle(channel) {
@@ -156,9 +156,9 @@ function GuildVoiceChannelExtras(arg0) {
   return <View style={tmp.subtitle}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(8083).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(8121).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_8 = createStyles.createStyles({ users: { marginTop: 4 }, subtitle: { marginEnd: 16 }, trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildVoiceOrStageChannelRow.tsx");

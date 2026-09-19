@@ -1,9 +1,9 @@
-// === Module 6481: NitroRubyBadgeLargeBadge ===
+// === Module 6525: NitroRubyBadgeLargeBadge ===
 
-// Module 6481 (NitroRubyBadgeLargeBadge)
+// Module 6525 (NitroRubyBadgeLargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6482 from "module_6482" /* 6482 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6526 from "module_6526" /* 6526 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const NitroRubyBadgeLargeBadge = function NitroRubyBadgeLargeBadge(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6482 };
+  const obj2 = { uri: _modDef6526 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

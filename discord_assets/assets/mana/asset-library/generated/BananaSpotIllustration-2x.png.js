@@ -1,6 +1,6 @@
-// === Module 5980: ? ===
+// === Module 6024: ? ===
 
-// Module 5980
+// Module 6024
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BananaSpotIllustration-2x.png.js");

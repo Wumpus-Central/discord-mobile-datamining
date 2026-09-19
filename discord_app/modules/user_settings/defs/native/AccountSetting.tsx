@@ -1,10 +1,10 @@
-// === Module 14870: AccountSetting ===
+// === Module 14924: AccountSetting ===
 
-// Module 14870 (AccountSetting)
+// Module 14924 (AccountSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import UserCircleIcon from "UserCircleIcon" /* 11167 */;
-import SettingBuilders from "SettingBuilders" /* 11714 */;
+import UserCircleIcon from "UserCircleIcon" /* 11180 */;
+import SettingBuilders from "SettingBuilders" /* 11723 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,17 +1,17 @@
-// === Module 10402: NotificationSettingsMessageNotificationChannelActionSheet ===
+// === Module 10418: NotificationSettingsMessageNotificationChannelActionSheet ===
 
-// Module 10402 (NotificationSettingsMessageNotificationChannelActionSheet)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7310 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7315 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10390 */;
+// Module 10418 (NotificationSettingsMessageNotificationChannelActionSheet)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7354 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7359 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10404 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4903 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
-const UnreadSetting = fn(4904).UnreadSetting;
+const UnreadSetting = fn(4938).UnreadSetting;
 let closure_6 = fn(1084).ChannelNotificationSettingsFlags;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -44,5 +44,5 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(10401), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10417), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 };

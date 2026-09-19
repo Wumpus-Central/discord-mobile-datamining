@@ -1,6 +1,6 @@
-// === Module 5346: GuildProductConstants ===
+// === Module 5389: GuildProductConstants ===
 
-// Module 5346 (GuildProductConstants)
+// Module 5389 (GuildProductConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_products/GuildProductConstants.tsx");

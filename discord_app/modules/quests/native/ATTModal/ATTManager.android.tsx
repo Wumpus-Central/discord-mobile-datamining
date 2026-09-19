@@ -1,9 +1,9 @@
-// === Module 17645: ATTManager ===
+// === Module 17725: ATTManager ===
 
-// Module 17645 (ATTManager)
+// Module 17725 (ATTManager)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import AdUserActionCreators from "AdUserActionCreators" /* 7934 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import AdUserActionCreators from "AdUserActionCreators" /* 7972 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 require = fn;
 class ATTManager extends tmp2 {

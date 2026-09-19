@@ -1,11 +1,11 @@
-// === Module 13941: VoiceChannelBlockedUserStore ===
+// === Module 13995: VoiceChannelBlockedUserStore ===
 
-// Module 13941 (VoiceChannelBlockedUserStore)
+// Module 13995 (VoiceChannelBlockedUserStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager" /* 13942 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager" /* 13996 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 function init() {
   closure_4 = {};

@@ -1,10 +1,10 @@
-// === Module 1906: ZoomedInAnalyticBuilder ===
+// === Module 1989: ZoomedInAnalyticBuilder ===
 
-// Module 1906 (ZoomedInAnalyticBuilder)
+// Module 1989 (ZoomedInAnalyticBuilder)
 import Constants from "Constants" /* 1074 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import GatewaySocketOpcode from "GatewaySocketOpcode" /* 1907 */;
-import RTCControlSocket from "RTCControlSocket" /* 1908 */;
+import GatewaySocketOpcode from "GatewaySocketOpcode" /* 1990 */;
+import RTCControlSocket from "RTCControlSocket" /* 1991 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

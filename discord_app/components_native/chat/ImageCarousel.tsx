@@ -1,25 +1,25 @@
-// === Module 10874: ImageCarousel ===
+// === Module 10890: ImageCarousel ===
 
-// Module 10874 (ImageCarousel)
+// Module 10890 (ImageCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useWindowDimensions from "useWindowDimensions" /* 1478 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4458 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import timing from "timing" /* 4723 */;
-import spring from "spring" /* 5143 */;
-import Upload from "Upload" /* 5297 */;
-import EyeIcon from "EyeIcon" /* 7164 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8475 */;
-import PlayIcon from "PlayIcon" /* 8506 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9545 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10437 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10876 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10878 */;
-import _modDef11497 from "module_11497" /* 11497 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import timing from "timing" /* 4757 */;
+import spring from "spring" /* 5185 */;
+import Upload from "Upload" /* 5339 */;
+import EyeIcon from "EyeIcon" /* 7208 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8513 */;
+import PlayIcon from "PlayIcon" /* 8544 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9420 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10453 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10892 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10894 */;
+import _modDef11509 from "module_11509" /* 11509 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5062 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
 
 require = fn;
 function Tile(onEdit) {
@@ -155,7 +155,7 @@ function Tile(onEdit) {
     let tmp6Result = null;
     if (isThumbnail) {
       const obj2 = { style: tileContainer.footerRightContainer, children: null };
-      const obj3 = { source: _modDef11497, size: native.Icon.Sizes.SMALL_14 };
+      const obj3 = { source: _modDef11509, size: native.Icon.Sizes.SMALL_14 };
       obj2.children = closure_2_11(native.Icon, obj3);
       tmp6Result = closure_2_11(React4, obj2);
     }
@@ -274,14 +274,14 @@ function CustomScrollView(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(5063).DraftType;
-const ImageCarouselConstants = fn(10875);
+const DraftType = fn(5105).DraftType;
+const ImageCarouselConstants = fn(10891);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { container: { width: "100%" }, pressableContainer: { marginHorizontal: 4 }, tileContainer: { position: "relative", minWidth: 60, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: nativeDefault.radii.md - 1 }, decorationsContainer: null, highlightedTileContainer: null, closeButton: null, scrollview: null, closeContainer: null, closeButtonIcon: null, altTagText: null, iconContainer: null, spoilerOverlay: null, footerRightContainer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -376,12 +376,12 @@ export default noop.memo((arg0) => {
   return closure_11(closure_4, obj2);
 });
 export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyle(arg0) {
-  sharedValue = sharedValue(4458).useSharedValue(0);
+  sharedValue = sharedValue(4492).useSharedValue(0);
   const items = [sharedValue, arg0];
   const effect = noop.useEffect(() => {
     const result = onEdit.set(1);
   }, items);
-  const obj = sharedValue(4458);
+  const obj = sharedValue(4492);
   const fn = function o() {
     const obj = { opacity: null, transform: null };
     const obj3 = { duration: 300, easing: null };
@@ -394,8 +394,8 @@ export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyl
     obj.transform = items;
     return obj;
   };
-  const obj2 = sharedValue(4458);
-  fn.__closure = { withTiming: sharedValue(4723).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1177).STANDARD_EASING, withSpring: sharedValue(5143).withSpring };
+  const obj2 = sharedValue(4492);
+  fn.__closure = { withTiming: sharedValue(4757).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1177).STANDARD_EASING, withSpring: sharedValue(5185).withSpring };
   fn.__workletHash = 14458898683767;
   fn.__initData = __initData;
   return obj2.useAnimatedStyle(fn);

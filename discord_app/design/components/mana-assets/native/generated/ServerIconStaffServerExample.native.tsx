@@ -1,9 +1,9 @@
-// === Module 6629: ServerIconStaffServerExample ===
+// === Module 6673: ServerIconStaffServerExample ===
 
-// Module 6629 (ServerIconStaffServerExample)
+// Module 6673 (ServerIconStaffServerExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6630 from "module_6630" /* 6630 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6674 from "module_6674" /* 6674 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerIconStaffServerExample = function ServerIconStaffServerExampl
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6630 };
+  const obj2 = { uri: _modDef6674 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

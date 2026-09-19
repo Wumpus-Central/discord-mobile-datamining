@@ -1,11 +1,11 @@
-// === Module 13931: NoticeStore ===
+// === Module 13985: NoticeStore ===
 
-// Module 13931 (NoticeStore)
+// Module 13985 (NoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef4314 from "module_4314" /* 4314 */;
-import UserOfferStore from "UserOfferStore" /* 7646 */;
+import _modDef4348 from "module_4348" /* 4348 */;
+import UserOfferStore from "UserOfferStore" /* 7690 */;
 
 require = fn;
 function clearDismissUntil(arg0) {
@@ -21,10 +21,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = _modDef4314(value);
+        tmp4 = _modDef4348(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(_modDef4314());
+        return tmp4.isAfter(_modDef4348());
       }
     }
     let tmp6 = null != tmp11;

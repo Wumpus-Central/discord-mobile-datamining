@@ -1,12 +1,12 @@
-// === Module 5760: GuildBadge ===
+// === Module 5802: GuildBadge ===
 
-// Module 5760 (GuildBadge)
+// Module 5802 (GuildBadge)
 import native from "native" /* 1177 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 1972 */;
-import _modDef5761 from "module_5761" /* 5761 */;
-import _modDef5762 from "module_5762" /* 5762 */;
-import _modDef5763 from "module_5763" /* 5763 */;
-import _modDef5764 from "module_5764" /* 5764 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
+import _modDef5803 from "module_5803" /* 5803 */;
+import _modDef5804 from "module_5804" /* 5804 */;
+import _modDef5805 from "module_5805" /* 5805 */;
+import _modDef5806 from "module_5806" /* 5806 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -97,7 +97,7 @@ class GuildBadge {
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsx = fn(21).jsx;
 let obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", PARTNERED_BLACK: 2, [2]: "PARTNERED_BLACK", VERIFIED_BLACK: 3, [3]: "VERIFIED_BLACK", NONE: 4, [4]: "NONE" };
-let obj2 = { [VERIFIED]: _modDef5761, [PARTNERED]: _modDef5762, [VERIFIED_BLACK]: _modDef5763, [PARTNERED_BLACK]: _modDef5764, [obj.NONE]: null };
+let obj2 = { [VERIFIED]: _modDef5803, [PARTNERED]: _modDef5804, [VERIFIED_BLACK]: _modDef5805, [PARTNERED_BLACK]: _modDef5806, [obj.NONE]: null };
 ({ VERIFIED, PARTNERED, VERIFIED_BLACK, PARTNERED_BLACK } = obj);
 GuildBadge.Sizes = fn(1177).Icon.Sizes;
 const size = fn(2);

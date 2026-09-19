@@ -1,10 +1,10 @@
-// === Module 10931: nagbar ===
+// === Module 10947: nagbar ===
 
-// Module 10931 (nagbar)
+// Module 10947 (nagbar)
 import _mod1187 from "module_1187" /* 1187 */;
 import wrappers from "wrappers" /* 1217 */;
-import localized_string from "localized_string" /* 10913 */;
-import help_article from "help_article" /* 10914 */;
+import localized_string from "localized_string" /* 10929 */;
+import help_article from "help_article" /* 10930 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

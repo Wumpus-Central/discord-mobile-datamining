@@ -1,7 +1,7 @@
-// === Module 8601: MediaViewerOverlayButton ===
+// === Module 8639: MediaViewerOverlayButton ===
 
-// Module 8601 (MediaViewerOverlayButton)
-import IconButton from "IconButton" /* 8140 */;
+// Module 8639 (MediaViewerOverlayButton)
+import IconButton from "IconButton" /* 8178 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

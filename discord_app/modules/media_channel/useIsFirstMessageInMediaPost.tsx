@@ -1,8 +1,8 @@
-// === Module 8162: useIsFirstMessageInMediaPost ===
+// === Module 8200: useIsFirstMessageInMediaPost ===
 
-// Module 8162 (useIsFirstMessageInMediaPost)
+// Module 8200 (useIsFirstMessageInMediaPost)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 const require = globalThis.__r;
 

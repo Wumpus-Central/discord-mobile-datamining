@@ -1,6 +1,6 @@
-// === Module 4460: ReanimatedViewNativeComponent ===
+// === Module 4494: ReanimatedViewNativeComponent ===
 
-// Module 4460 (ReanimatedViewNativeComponent)
+// Module 4494 (ReanimatedViewNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

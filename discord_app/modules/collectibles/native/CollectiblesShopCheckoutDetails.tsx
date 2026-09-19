@@ -1,27 +1,27 @@
-// === Module 11264: CollectiblesShopCheckoutDetails ===
+// === Module 11277: CollectiblesShopCheckoutDetails ===
 
-// Module 11264 (CollectiblesShopCheckoutDetails)
+// Module 11277 (CollectiblesShopCheckoutDetails)
 import nativeDefault from "native" /* 576 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
 import util from "util" /* 1115 */;
-import utils from "utils" /* 1887 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7749 */;
-import useShopProductItems from "useShopProductItems" /* 8401 */;
-import useCurrentUser from "useCurrentUser" /* 8408 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8431 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8456 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 9038 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9051 */;
-import NameplateDefault from "Nameplate" /* 9059 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9063 */;
-import _modDef9084 from "module_9084" /* 9084 */;
-import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9085 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9087 */;
-import getProductName from "getProductName" /* 9103 */;
-import _modDef11265 from "module_11265" /* 11265 */;
+import utils from "utils" /* 1970 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7793 */;
+import useShopProductItems from "useShopProductItems" /* 8439 */;
+import useCurrentUser from "useCurrentUser" /* 8446 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8469 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8494 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9077 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9090 */;
+import NameplateDefault from "Nameplate" /* 9098 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9102 */;
+import _modDef9123 from "module_9123" /* 9123 */;
+import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9124 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9126 */;
+import getProductName from "getProductName" /* 9142 */;
+import _modDef11278 from "module_11278" /* 11278 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, alt: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: _modDef11265 };
+    const obj3 = { uri: _modDef11278 };
     obj2.source = obj3;
     obj2.alt = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;
@@ -125,7 +125,7 @@ function CollectibleProductPreviewContent(userAvatarSource) {
     return React5(FractionalNitroCoinIllustration.FractionalNitroCoinIllustration, size);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const obj = { source: null, style: null };
-    const obj2 = { uri: _modDef9084 };
+    const obj2 = { uri: _modDef9123 };
     obj.source = obj2;
     obj.style = tmp.externalProductImage;
     return React5(FastImageDefault, obj);
@@ -243,11 +243,11 @@ function ProductPriceAmountTag(product) {
 }
 const View = fn(17).View;
 const EXTERNAL_PRODUCT_SKU_IDS = fn(1076).EXTERNAL_PRODUCT_SKU_IDS;
-const CollectiblesPreviewConstants = fn(9039);
+const CollectiblesPreviewConstants = fn(9078);
 ({ BUNDLE_PREVIEW_CONFIG: metroRequire, SAMPLE_PROFILE_ASPECT_RATIO } = CollectiblesPreviewConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = { externalProductImage: { width: 45, height: 45 }, bundlePreviewContainer: { alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.xs }, bundlePreviewScale: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, productContainer: null, productDetailsContainer: null, productPreviewContainer: null, productDetails: null, productDetailsTextContainer: null, errorContainer: null };
 let obj3 = { alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: nativeDefault.radii.xs };
 obj2.productContainer = { borderRadius: nativeDefault.radii.lg, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -261,7 +261,7 @@ obj2.productDetailsTextContainer = { gap: nativeDefault.space.PX_4 };
 let obj7 = { gap: nativeDefault.space.PX_4 };
 obj2.errorContainer = { height: 36, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_10 = createStyles.createStyles((arg0) => {
   const colors = nativeDefault.colors;
   if (arg0) {
@@ -271,16 +271,16 @@ let closure_10 = createStyles.createStyles((arg0) => {
     BORDER_FEEDBACK_CRITICAL = colors.BORDER_FEEDBACK_CRITICAL;
     tmp4 = importDefault;
   }
-  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(576).space.PX_16, backgroundColor: "call" } };
+  const obj = { giftProductContainer: { borderWidth: 2, borderColor: BORDER_FEEDBACK_CRITICAL, marginHorizontal: tmp4(576).space.PX_16, backgroundColor: "accessible" } };
   return obj;
 });
-createStyles = fn(4722);
+createStyles = fn(4756);
 const obj11 = { profileEffectContainer: null, profileEffect: null };
 let size = { position: "relative", width: "100%", height: "100%", borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj11.profileEffectContainer = size;
 obj11.profileEffect = { position: "absolute", width: "100%", aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO, top: 0 };
 let closure_11 = createStyles.createStyles(obj11);
-createStyles = fn(4722);
+createStyles = fn(4756);
 const obj12 = { nameplate: null };
 const obj8 = { height: 36, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, borderBottomLeftRadius: nativeDefault.radii.lg, borderBottomRightRadius: nativeDefault.radii.lg };
 obj12.nameplate = { borderRadius: nativeDefault.radii.xs };
@@ -306,7 +306,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   const tmp = closure_9();
   const tmp2 = closure_10(flag);
   const currentUser = useCurrentUser.useCurrentUser();
-  const canUseShopDiscountsResult = flag2(4380).canUseShopDiscounts(currentUser);
+  const canUseShopDiscountsResult = flag2(4414).canUseShopDiscounts(currentUser);
   dependencyMap = canUseShopDiscountsResult;
   const items = [product, flag2, canUseShopDiscountsResult];
   const items1 = [tmp.productContainer, ];
@@ -353,7 +353,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
     const obj6 = { variant: "text-xs/semibold", color: "text-feedback-critical", children: null };
     let intl = tmp3(1115).intl;
     obj6.children = intl.string(tmp3(1115).t["3YfczA"]);
-    obj5.children = closure_7(tmp3(4718).Text, obj6);
+    obj5.children = closure_7(tmp3(4752).Text, obj6);
     flag3 = closure_7(View, obj5);
   }
   items3[1] = flag3;

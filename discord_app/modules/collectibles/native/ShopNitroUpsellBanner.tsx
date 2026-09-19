@@ -1,18 +1,18 @@
-// === Module 16051: ShopNitroUpsellBanner ===
+// === Module 16127: ShopNitroUpsellBanner ===
 
-// Module 16051 (ShopNitroUpsellBanner)
+// Module 16127 (ShopNitroUpsellBanner)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useToken from "useToken" /* 4423 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import Stack_Stack from "Stack/Stack" /* 5142 */;
-import LinearGradientDefault from "LinearGradient" /* 5156 */;
-import Card from "Card" /* 5777 */;
-import XSmallIcon from "XSmallIcon" /* 5850 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10214 */;
+import useToken from "useToken" /* 4457 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import Stack_Stack from "Stack/Stack" /* 5184 */;
+import LinearGradientDefault from "LinearGradient" /* 5198 */;
+import Card from "Card" /* 5819 */;
+import XSmallIcon from "XSmallIcon" /* 5892 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10226 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -84,7 +84,7 @@ class ShopNitroUpsellBanner {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { card: { overflow: "hidden", padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_16, borderWidth: 1 }, borderDark: null, borderLight: null, gradientBackground: null, text: null, closeButton: null };
 let obj3 = { overflow: "hidden", padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_16, borderWidth: 1 };
 obj2.borderDark = { borderColor: nativeDefault.unsafe_rawColors.PRIMARY_660 };

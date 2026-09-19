@@ -1,6 +1,6 @@
-// === Module 9938: TooltipStore ===
+// === Module 9777: TooltipStore ===
 
-// Module 9938 (TooltipStore)
+// Module 9777 (TooltipStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

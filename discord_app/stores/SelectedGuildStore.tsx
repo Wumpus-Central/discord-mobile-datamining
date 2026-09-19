@@ -1,15 +1,15 @@
-// === Module 4543: SelectedGuildStore ===
+// === Module 4577: SelectedGuildStore ===
 
-// Module 4543 (SelectedGuildStore)
+// Module 4577 (SelectedGuildStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1101 */;
-import matchPathCompat from "matchPathCompat" /* 4548 */;
-import RouteUtils from "RouteUtils" /* 4561 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4544 */;
+import matchPathCompat from "matchPathCompat" /* 4582 */;
+import RouteUtils from "RouteUtils" /* 4595 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4578 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4547 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4581 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 require = fn;
 function handleConnectionOpen() {

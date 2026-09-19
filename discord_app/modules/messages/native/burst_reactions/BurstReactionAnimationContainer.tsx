@@ -1,11 +1,11 @@
-// === Module 17293: BurstReactionAnimationContainer ===
+// === Module 17370: BurstReactionAnimationContainer ===
 
-// Module 17293 (BurstReactionAnimationContainer)
+// Module 17370 (BurstReactionAnimationContainer)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
-import native from "native" /* 4432 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import timing from "timing" /* 4723 */;
+import native from "native" /* 4466 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import timing from "timing" /* 4757 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,7 +29,7 @@ function BurstReactionAnimationContainerInner() {
       dependencyMap({ channelId: channelId.channelId, emoji: channelId.emoji, messageId: channelId.messageId });
       closure_1_4(true);
       ref.current = true;
-      const result = handleEffectReceived(4690).triggerHapticFeedback(first(4691).IMPACT_HEAVY);
+      const result = handleEffectReceived(4724).triggerHapticFeedback(first(4725).IMPACT_HEAVY);
     }
     const subscription = first(573).subscribe("BURST_REACTION_EFFECT_SEND", handleEffectReceived);
     return () => {
@@ -73,7 +73,7 @@ function BurstReactionAnimationContainerInner() {
   let tmp8 = null;
   if (null != animationData) {
     let obj3 = { contentTypes: null, children: null };
-    let items = [tmp6(1944).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
+    let items = [tmp6(2027).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS];
     obj3.contentTypes = items;
     obj3.children = function children(markAsDismissed) {
       markAsDismissed = markAsDismissed.markAsDismissed;
@@ -82,7 +82,7 @@ function BurstReactionAnimationContainerInner() {
       const items = [markAsDismissed.fill, closure_7];
       obj2.style = items;
       const obj3 = {
-        activeOpacity: closure_0(7986).BACKDROP_OPACITY,
+        activeOpacity: closure_0(8024).BACKDROP_OPACITY,
         onPress() {
           closure_4(false);
           closure_5.current = false;
@@ -103,17 +103,17 @@ function BurstReactionAnimationContainerInner() {
             ref.current = false;
           }
         };
-        tmpResult = closure_1_8(first(8028), obj7);
+        tmpResult = closure_1_8(first(8066), obj7);
       }
       obj5.children = tmpResult;
       items1[1] = closure_1_8(handleComponentFinish, obj5);
-      let tmp6Result = markAsDismissed.visibleContent === closure_0(1944).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
+      let tmp6Result = markAsDismissed.visibleContent === closure_0(2027).DismissibleContent.SUPER_REACTIONS_MOBILE_FULLSCREEN_TAP_TO_DISMISS;
       if (tmp6Result) {
         const obj8 = { children: null };
         const obj9 = { style: tmp4.dismissTextContainer, variant: "text-sm/medium", children: null };
         const intl = closure_0(1115).intl;
         obj9.children = intl.string(closure_0(1115).t.QpPMih);
-        const items2 = [closure_1_8(closure_0(4718).Text, obj9), ];
+        const items2 = [closure_1_8(closure_0(4752).Text, obj9), ];
         const obj17 = { style: tmp4.dismissTextBackground };
         items2[1] = closure_1_8(handleComponentFinish, obj17);
         obj8.children = items2;
@@ -122,25 +122,25 @@ function BurstReactionAnimationContainerInner() {
       items1[2] = tmp6Result;
       obj3.children = items1;
       obj2.children = closure_1_10(closure_5, obj3);
-      obj.children = closure_1_8(first(4458).View, obj2);
+      obj.children = closure_1_8(first(4492).View, obj2);
       return closure_1_8(closure_0(1177).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10868), obj3);
-    let tmp11 = animationData(10868);
+    tmp8 = closure_8(animationData(10884), obj3);
+    let tmp11 = animationData(10884);
   }
   return tmp8;
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: hasOwnProperty, View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { background: null, fill: null, dismissTextContainer: null, dismissTextBackground: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj3.backgroundColor = nativeDefault.colors.BLACK;
-obj3.opacity = fn(7986).BACKDROP_OPACITY;
+obj3.opacity = fn(8024).BACKDROP_OPACITY;
 obj2.background = obj3;
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);

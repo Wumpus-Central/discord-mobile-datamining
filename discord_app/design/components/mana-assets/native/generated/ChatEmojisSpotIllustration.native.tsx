@@ -1,9 +1,9 @@
-// === Module 6027: ChatEmojisSpotIllustration ===
+// === Module 6071: ChatEmojisSpotIllustration ===
 
-// Module 6027 (ChatEmojisSpotIllustration)
+// Module 6071 (ChatEmojisSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6028 from "module_6028" /* 6028 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6072 from "module_6072" /* 6072 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ChatEmojisSpotIllustration = function ChatEmojisSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6028 };
+  const obj2 = { uri: _modDef6072 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

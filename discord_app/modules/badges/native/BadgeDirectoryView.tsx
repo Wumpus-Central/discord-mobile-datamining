@@ -1,14 +1,14 @@
-// === Module 11448: BadgeDirectoryView ===
+// === Module 11460: BadgeDirectoryView ===
 
-// Module 11448 (BadgeDirectoryView)
+// Module 11460 (BadgeDirectoryView)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8427 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11443 */;
-import BadgeUtils from "BadgeUtils" /* 11450 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8465 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11455 */;
+import BadgeUtils from "BadgeUtils" /* 11462 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8422 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8460 */;
 
 require = fn;
 function BadgeSection(children) {
@@ -44,10 +44,10 @@ function BadgeSection(children) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-let closure_9 = fn(11449).UserProfileEditAutoFocusElement;
+let closure_9 = fn(11461).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: null, centered: null, section: null, grid: null, tile: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_48 };

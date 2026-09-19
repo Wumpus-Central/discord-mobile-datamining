@@ -1,15 +1,15 @@
-// === Module 15231: BountiesScrollVideoItem ===
+// === Module 15285: BountiesScrollVideoItem ===
 
-// Module 15231 (BountiesScrollVideoItem)
-import QuestContent from "QuestContent" /* 5619 */;
-import AdCreativeType from "AdCreativeType" /* 5621 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12020 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15232 */;
+// Module 15285 (BountiesScrollVideoItem)
+import QuestContent from "QuestContent" /* 5661 */;
+import AdCreativeType from "AdCreativeType" /* 5663 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 12029 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15286 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9091 */;
-import BountyStore from "BountyStore" /* 7898 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 9130 */;
+import BountyStore from "BountyStore" /* 7936 */;
 
 require = fn;
 function BountiesScrollVideoItemInner(bounty) {
@@ -38,11 +38,6 @@ function BountiesScrollVideoItemInner(bounty) {
   let flushProgress;
   let handleVideoProgressAnalytics;
   isEndCardVisible = undefined;
-  let handleVideoEnd;
-  let handleVideoPaused;
-  let handleVideoResumed;
-  let onVideoEndForAppStore;
-  let handleVideoPausedForAppStore;
   const items = [width, height];
   const memo = isScrollingInBoundsSharedValue.useMemo(() => {
     const size = { width, height };
@@ -63,9 +58,7 @@ function BountiesScrollVideoItemInner(bounty) {
   let result = 1000 * bounty.rewardTimerSeconds;
   const tmp12 = flushProgress;
   const tmp6 = isActive(isScrollingInBoundsSharedValue.useState(flag), 2);
-  const result1 = bounty(width[10]).canUseBountyVideoEndAppStoreOverlay(bounty);
-  const BountyVideoEndMode = tmp2(tmp3[11]).BountyVideoEndMode;
-  const tmp15 = result1 ? BountyVideoEndMode.APP_STORE_LOOP : BountyVideoEndMode.END_CARD;
+  const bountyVideoEndMode = bounty(width[10]).getBountyVideoEndMode(bounty);
   const ref = isScrollingInBoundsSharedValue.useRef(null);
   closure_129_0 = isActive;
   closure_129_1 = ref;
@@ -92,16 +85,16 @@ function BountiesScrollVideoItemInner(bounty) {
     }
   }, items2);
   const tmp2Result = bounty(width[10]);
-  [tmp20, tmp21] = isActive(isScrollingInBoundsSharedValue.useState(isActive), 2);
+  [tmp19, tmp20] = isActive(isScrollingInBoundsSharedValue.useState(isActive), 2);
   const tmp5Result = isActive(isScrollingInBoundsSharedValue.useState(isActive), 2);
-  [tmp23, tmp24] = isActive(isScrollingInBoundsSharedValue.useState(() => {
+  [tmp22, tmp23] = isActive(isScrollingInBoundsSharedValue.useState(() => {
     let currentBalance = null;
     if (isActive) {
       currentBalance = VirtualCurrencyStore.getCurrentBalance();
     }
     return currentBalance;
   }), 2);
-  VirtualCurrencyStore = tmp24;
+  VirtualCurrencyStore = tmp23;
   const tmp5Result3 = isActive(isScrollingInBoundsSharedValue.useState(() => {
     let currentBalance = null;
     if (isActive) {
@@ -109,13 +102,13 @@ function BountiesScrollVideoItemInner(bounty) {
     }
     return currentBalance;
   }), 2);
-  if (tmp20 !== isActive) {
-    tmp21(isActive);
+  if (tmp19 !== isActive) {
+    tmp20(isActive);
     if (isActive) {
       let currentBalance = VirtualCurrencyStore.getCurrentBalance();
-      tmp24(currentBalance);
-      if (currentBalance !== tmp23) {
-        tmp26((arg0) => arg0 + 1);
+      tmp23(currentBalance);
+      if (currentBalance !== tmp22) {
+        tmp25((arg0) => arg0 + 1);
       }
     }
   }
@@ -151,15 +144,15 @@ function BountiesScrollVideoItemInner(bounty) {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: bounty(tmp27[12]).claimBountyReward(bounty.id, sourceQuestContent), done: false };
+            const obj6 = { value: bounty(tmp27[11]).claimBountyReward(bounty.id, sourceQuestContent), done: false };
             return obj6;
           }
         } else {
           if (1 === tmp7) {
             c3 = 0;
             closure_128_1 = tmp27;
-            const result = bounty(tmp27[13]).openBountyRewardClaimErrorToast(closure_128_1);
-            const obj2 = bounty(tmp27[13]);
+            const result = bounty(tmp27[12]).openBountyRewardClaimErrorToast(closure_128_1);
+            const obj2 = bounty(tmp27[12]);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -199,14 +192,14 @@ function BountiesScrollVideoItemInner(bounty) {
     }
   }), items3);
   const tmp5Result4 = isActive(isScrollingInBoundsSharedValue.useState(0), 2);
-  const bountyVideoProgressPersistence = bounty(width[14]).useBountyVideoProgressPersistence({ bountyId: bounty.id, endMode: tmp15 });
+  const bountyVideoProgressPersistence = bounty(width[13]).useBountyVideoProgressPersistence({ bountyId: bounty.id, endMode: bountyVideoEndMode });
   ({ initialProgress, handleProgress } = bountyVideoProgressPersistence);
   flushProgress = bountyVideoProgressPersistence.flushProgress;
   const items4 = [flushProgress];
   const effect1 = obj.useEffect(() => () => flushProgress(), items4);
-  const obj3 = { bountyId: bounty.id, endMode: tmp15 };
-  const tmp2Result7 = bounty(width[14]);
-  const bountiesModalVideoAnalytics = bounty(width[15]).useBountiesModalVideoAnalytics({ bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, initialPlaybackTimeSec: initialProgress.timestampSec, initialMaxVideoProgressSec: initialProgress.maxTimestampSec, initialVideoDurationSec: initialProgress.duration, wasPreloaded: false, verticalScrollingPosition: index, isActive });
+  const obj3 = { bountyId: bounty.id, endMode: bountyVideoEndMode };
+  const tmp2Result5 = bounty(width[13]);
+  const bountiesModalVideoAnalytics = bounty(width[14]).useBountiesModalVideoAnalytics({ bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, initialPlaybackTimeSec: initialProgress.timestampSec, initialMaxVideoProgressSec: initialProgress.maxTimestampSec, initialVideoDurationSec: initialProgress.duration, wasPreloaded: false, verticalScrollingPosition: index, isActive });
   handleVideoProgressAnalytics = bountiesModalVideoAnalytics.handleVideoProgressAnalytics;
   const items5 = [handleVideoProgressAnalytics, handleProgress];
   ({ handleVideoEndAnalytics, handleVideoLoopedAnalytics, handleVideoPausedAnalytics, handleVideoResumedAnalytics, handleVideoErrorAnalytics, handleLoadStartAnalytics, handleVideoTracksAnalytics, handleReadyForDisplayAnalytics, handleBufferAnalytics } = bountiesModalVideoAnalytics);
@@ -215,67 +208,40 @@ function BountiesScrollVideoItemInner(bounty) {
     handleProgress(arg0, arg1, arg2);
   }, items5);
   let obj4 = { bountyId: bounty.id, sourceQuestContent, rewardDurationMs: result, initialPlaybackTimeSec: initialProgress.timestampSec, initialMaxVideoProgressSec: initialProgress.maxTimestampSec, initialVideoDurationSec: initialProgress.duration, wasPreloaded: false, verticalScrollingPosition: index, isActive };
-  const tmp2Result8 = bounty(width[15]);
-  let obj5 = { endMode: tmp15, rewardDurationMs: result, isCompleted: stateFromStores, onRewardEarned: callback1, onVideoProgress: callback2, onVideoEnd: handleVideoEndAnalytics, onVideoLooped: handleVideoLoopedAnalytics, onVideoPaused: handleVideoPausedAnalytics, onVideoResumed: handleVideoResumedAnalytics, playerRef: ref, initialProgressSec: initialProgress.timestampSec, initialMaxVideoProgressSec: initialProgress.maxTimestampSec, initialVideoDurationSec: null };
+  const tmp2Result6 = bounty(width[14]);
+  let obj5 = { endMode: bountyVideoEndMode, rewardDurationMs: result, isCompleted: stateFromStores, onRewardEarned: callback1, onVideoProgress: callback2, onVideoEnd: handleVideoEndAnalytics, onVideoLooped: handleVideoLoopedAnalytics, onVideoPaused: handleVideoPausedAnalytics, onVideoResumed: handleVideoResumedAnalytics, playerRef: ref, initialProgressSec: initialProgress.timestampSec, initialMaxVideoProgressSec: initialProgress.maxTimestampSec, initialVideoDurationSec: null };
   let duration = null;
   if (initialProgress.duration > 0) {
     duration = initialProgress.duration;
   }
   obj5.initialVideoDurationSec = duration;
-  const bountiesModalTiming = bounty(width[11]).useBountiesModalTiming(obj5);
+  const bountiesModalTiming = bounty(width[15]).useBountiesModalTiming(obj5);
   ({ isCtaVisible, isEndCardVisible } = bountiesModalTiming);
-  handleVideoEnd = bountiesModalTiming.handleVideoEnd;
-  handleVideoPaused = bountiesModalTiming.handleVideoPaused;
-  handleVideoResumed = bountiesModalTiming.handleVideoResumed;
-  ({ handleVideoProgress, showEndCard, rewardRemainingSeconds, rewardTotalSeconds, normalizedProgress } = bountiesModalTiming);
-  const tmp2Result9 = bounty(width[11]);
-  onVideoEndForAppStore = bounty(width[10]).useBountyVideoEndAppStoreOverlay({ bounty, sourceQuestContent, isActive, endMode: tmp15, onOverlayUnavailable: showEndCard }).onVideoEndForAppStore;
-  const tmp2Result10 = bounty(width[10]);
-  const bountyVideoEndAppStoreContext = bounty(width[10]).useBountyVideoEndAppStoreContext();
-  let flag4;
-  if (bountyVideoEndAppStoreContext != null) {
-    flag4 = bountyVideoEndAppStoreContext.isVideoEndAppStoreOverlayVisible;
-  }
-  if (flag4 == null) {
-    flag4 = false;
-  }
-  const tmp2Result11 = bounty(width[10]);
-  handleVideoPausedForAppStore = bounty(width[16]).useBountyPauseAppStoreSheet({ bounty, sourceQuestContent, isActive, playerRef: ref }).handleVideoPausedForAppStore;
-  const items6 = [flushProgress, handleVideoPaused, handleVideoPausedForAppStore];
-  const items7 = [handleVideoResumed];
-  const callback3 = obj.useCallback((arg0) => {
-    handleVideoPaused(arg0);
-    flushProgress();
-    handleVideoPausedForAppStore(arg0);
-  }, items6);
-  const items8 = [handleVideoEnd, onVideoEndForAppStore];
-  const callback4 = obj.useCallback((arg0) => {
-    handleVideoResumed(arg0);
-  }, items7);
-  const callback5 = obj.useCallback(() => {
-    handleVideoEnd();
-    onVideoEndForAppStore();
-  }, items8);
+  ({ handleVideoEnd, handleVideoProgress, handleVideoPaused, handleVideoResumed, showEndCard, rewardRemainingSeconds, rewardTotalSeconds, normalizedProgress } = bountiesModalTiming);
+  const tmp2Result7 = bounty(width[15]);
+  const bountyAppStoreOverlayPlayback = bounty(width[10]).useBountyAppStoreOverlayPlayback({ bounty, sourceQuestContent, isActive, endMode: bountyVideoEndMode, playerRef: ref, handleVideoEnd, handleVideoPaused, handleVideoResumed, showEndCard, onPaused: flushProgress });
+  const isVideoEndAppStoreOverlayVisible = bountyAppStoreOverlayPlayback.isVideoEndAppStoreOverlayVisible;
   let obj6 = { style: memo, children: null };
+  ({ shouldRepeatVideo, handlePaused, handleResumed, handleVideoEndWithAppStore } = bountyAppStoreOverlayPlayback);
   let size = { bounty, sourceQuestContent, isCompleted: stateFromStores, isScrollIndicatorEnabled: flag2, isCtaVisible: null, isEndCardVisible: null, isProgressBarVisible: null, orbsBalance: null, handleVideoEnd: null, handleVideoProgress: null, handleVideoPaused: null, handleVideoResumed: null, handleVideoError: null, onLoadStart: null, onBuffer: null, onFirstFrame: null, onVideoTracks: null, rewardRemainingSeconds: null, rewardTotalSeconds: null, normalizedProgress: null, repeat: null, initialProgress: null, isActive: null, isRecapPageRevealed: null, isScrollingInBoundsSharedValue: null, playerRef: null, onPlayerStateChange: null, balanceWidgetPillResetKey: null, shouldLoadHls: null, width: null, height: null, videoEndPeekScale: null, softDownloadCapsEnabled: null, renderEndCard: null };
   if (isCtaVisible) {
-    isCtaVisible = !flag4;
+    isCtaVisible = !isVideoEndAppStoreOverlayVisible;
   }
   size.isCtaVisible = isCtaVisible;
   size.isEndCardVisible = isEndCardVisible;
-  let tmp45 = !isEndCardVisible;
+  let tmp41 = !isEndCardVisible;
   if (!isEndCardVisible) {
-    tmp45 = !isRecapPageOnTop;
+    tmp41 = !isRecapPageOnTop;
   }
-  if (tmp45) {
-    tmp45 = !flag4;
+  if (tmp41) {
+    tmp41 = !isVideoEndAppStoreOverlayVisible;
   }
-  size.isProgressBarVisible = tmp45;
-  size.orbsBalance = tmp23;
-  size.handleVideoEnd = callback5;
+  size.isProgressBarVisible = tmp41;
+  size.orbsBalance = tmp22;
+  size.handleVideoEnd = handleVideoEndWithAppStore;
   size.handleVideoProgress = handleVideoProgress;
-  size.handleVideoPaused = callback3;
-  size.handleVideoResumed = callback4;
+  size.handleVideoPaused = handlePaused;
+  size.handleVideoResumed = handleResumed;
   size.handleVideoError = handleVideoErrorAnalytics;
   size.onLoadStart = handleLoadStartAnalytics;
   size.onBuffer = handleBufferAnalytics;
@@ -284,7 +250,7 @@ function BountiesScrollVideoItemInner(bounty) {
   size.rewardRemainingSeconds = rewardRemainingSeconds;
   size.rewardTotalSeconds = rewardTotalSeconds;
   size.normalizedProgress = normalizedProgress;
-  size.repeat = tmp15 === bounty(width[11]).BountyVideoEndMode.APP_STORE_LOOP;
+  size.repeat = shouldRepeatVideo;
   size.initialProgress = initialProgress;
   size.isActive = isActive;
   size.isRecapPageRevealed = isRecapPageRevealed;
@@ -305,15 +271,15 @@ function BountiesScrollVideoItemInner(bounty) {
       sourceQuestContent,
       overrideVisibility: isEndCardVisible,
       children() {
-        return handleVideoProgressAnalytics(sourceQuestContent(width[21]), { bounty, visible, isActive, isScrollingInBoundsSharedValue, sourceQuestContent });
+        return handleVideoProgressAnalytics(sourceQuestContent(width[20]), { bounty, visible, isActive, isScrollingInBoundsSharedValue, sourceQuestContent });
       }
     });
   };
-  obj6.children = handleVideoProgressAnalytics(bounty(width[17]).BountyVideo, size);
+  obj6.children = handleVideoProgressAnalytics(bounty(width[16]).BountyVideo, size);
   return handleVideoProgressAnalytics(closure_6, obj6);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5614).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(5656).BOUNTY_ORB_AMOUNT;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
@@ -345,10 +311,10 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (flag3 === undefined) {
     flag3 = false;
   }
-  return jsx(bounty(12020).BillableAdPlacementImpressionTrackerNative, {
+  return jsx(bounty(12029).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5621).AdCreativeType.BOUNTY,
-    questContent: bounty(5619).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5663).AdCreativeType.BOUNTY,
+    questContent: bounty(5661).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

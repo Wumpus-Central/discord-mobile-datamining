@@ -1,12 +1,12 @@
-// === Module 13758: PromotionsHooks ===
+// === Module 13813: PromotionsHooks ===
 
-// Module 13758 (PromotionsHooks)
+// Module 13813 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PromotionUtils from "PromotionUtils" /* 13629 */;
+import PromotionUtils from "PromotionUtils" /* 13684 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import PromotionsStore from "PromotionsStore" /* 10908 */;
+import PromotionsStore from "PromotionsStore" /* 10924 */;
 
 const require = globalThis.__r;
 

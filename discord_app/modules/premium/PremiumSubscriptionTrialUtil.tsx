@@ -1,10 +1,10 @@
-// === Module 8279: PremiumSubscriptionTrialUtil ===
+// === Module 8317: PremiumSubscriptionTrialUtil ===
 
-// Module 8279 (PremiumSubscriptionTrialUtil)
+// Module 8317 (PremiumSubscriptionTrialUtil)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4386 */;
-import UserOfferStore from "UserOfferStore" /* 7646 */;
+import SubscriptionStore from "SubscriptionStore" /* 4420 */;
+import UserOfferStore from "UserOfferStore" /* 7690 */;
 
 require = fn;
 const PremiumConstants = fn(1374);

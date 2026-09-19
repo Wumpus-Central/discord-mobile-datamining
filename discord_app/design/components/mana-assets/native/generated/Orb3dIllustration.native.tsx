@@ -1,9 +1,9 @@
-// === Module 6521: Orb3dIllustration ===
+// === Module 6565: Orb3dIllustration ===
 
-// Module 6521 (Orb3dIllustration)
+// Module 6565 (Orb3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6522 from "module_6522" /* 6522 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6566 from "module_6566" /* 6566 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const Orb3dIllustration = function Orb3dIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6522 };
+  const obj2 = { uri: _modDef6566 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

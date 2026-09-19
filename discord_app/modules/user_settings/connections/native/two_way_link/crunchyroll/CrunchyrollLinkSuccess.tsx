@@ -1,12 +1,12 @@
-// === Module 9516: CrunchyrollLinkSuccess ===
+// === Module 9391: CrunchyrollLinkSuccess ===
 
-// Module 9516 (CrunchyrollLinkSuccess)
+// Module 9391 (CrunchyrollLinkSuccess)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7319 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9464 */;
-import _modDef9517 from "module_9517" /* 9517 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9350 */;
+import _modDef9392 from "module_9392" /* 9392 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
@@ -24,7 +24,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef9517, style: tmp.image }), , ];
+  const items = [hasOwnProperty(React3, { source: _modDef9392, style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.Fnvxvk);

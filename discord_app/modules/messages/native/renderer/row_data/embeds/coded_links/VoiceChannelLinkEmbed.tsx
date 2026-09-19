@@ -1,24 +1,24 @@
-// === Module 13468: VoiceChannelLinkEmbed ===
+// === Module 13524: VoiceChannelLinkEmbed ===
 
-// Module 13468 (VoiceChannelLinkEmbed)
+// Module 13524 (VoiceChannelLinkEmbed)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import useChannelName from "useChannelName" /* 4875 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5197 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8164 */;
+import useChannelName from "useChannelName" /* 4909 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5239 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8202 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Image = fn(17).Image;
-const getGuildAcronym = fn(1976).getGuildAcronym;
+const getGuildAcronym = fn(2059).getGuildAcronym;
 const Permissions = fn(1074).Permissions;
-const InviteTypes = fn(7938).InviteTypes;
+const InviteTypes = fn(7976).InviteTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/VoiceChannelLinkEmbed.tsx");
 

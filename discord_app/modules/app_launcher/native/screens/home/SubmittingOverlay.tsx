@@ -1,12 +1,12 @@
-// === Module 12302: SubmittingOverlay ===
+// === Module 12311: SubmittingOverlay ===
 
-// Module 12302 (SubmittingOverlay)
+// Module 12311 (SubmittingOverlay)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4458 */;
-import spring from "spring" /* 5143 */;
-import springPresets from "springPresets" /* 5147 */;
-import createStyles from "createStyles" /* 4722 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
+import spring from "spring" /* 5185 */;
+import springPresets from "springPresets" /* 5189 */;
+import createStyles from "createStyles" /* 4756 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -32,8 +32,8 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
       return obj1;
     }
   }
-  let obj = submitting(4458);
-  S.__closure = { withSpring: submitting(5143).withSpring, submitting, SUBTLE_SPRING: submitting(5147).SUBTLE_SPRING };
+  let obj = submitting(4492);
+  S.__closure = { withSpring: submitting(5185).withSpring, submitting, SUBTLE_SPRING: submitting(5189).SUBTLE_SPRING };
   S.__workletHash = 492443733468;
   S.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(S);
@@ -41,7 +41,7 @@ export const SubmittingOverlay = function SubmittingOverlay(submitting) {
   const items = [submitting.style, tmp.ellipsis, animatedStyle];
   obj3.style = items;
   if (submitting) {
-    submitting = jsx(tmp2(5160).Ellipsis, { variant: "active", size: "md" });
+    submitting = jsx(tmp2(5202).Ellipsis, { variant: "active", size: "md" });
   }
   obj3.children = submitting;
   return jsx(ReanimatedRexportDefault.View, { style: null, children: null });

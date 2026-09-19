@@ -1,14 +1,14 @@
-// === Module 12689: MessageRequestModalActionCreators ===
+// === Module 12698: MessageRequestModalActionCreators ===
 
-// Module 12689 (MessageRequestModalActionCreators)
+// Module 12698 (MessageRequestModalActionCreators)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
-import common_AlertDefault from "common/Alert" /* 5163 */;
-import MessageRequestConstants from "MessageRequestConstants" /* 12686 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
+import common_AlertDefault from "common/Alert" /* 5205 */;
+import MessageRequestConstants from "MessageRequestConstants" /* 12695 */;
 import size from "module_2" /* 2 */;
 
 const type = MessageRequestConstants.MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL;
@@ -19,7 +19,7 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
   ({ channelId, onConfirm, onCancel } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, channel_id: channelId });
   const obj2 = { type, channel_id: channelId };
-  const obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
+  const obj4 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null, isDismissable: false };
   const intl = util.intl;
   obj4.title = intl.string(util.t["66tnno"]);
   const intl2 = util.intl;
@@ -35,5 +35,5 @@ export const openAcceptMessageRequestConfirmModal = function openAcceptMessageRe
 };
 export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirmationModal(arg0) {
   ({ onConfirm, onCancel, channel } = arg0);
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12690, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12699, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
 };

@@ -1,6 +1,6 @@
-// === Module 14287: VoiceGatewayProtocolVersionExperiment ===
+// === Module 14342: VoiceGatewayProtocolVersionExperiment ===
 
-// Module 14287 (VoiceGatewayProtocolVersionExperiment)
+// Module 14342 (VoiceGatewayProtocolVersionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

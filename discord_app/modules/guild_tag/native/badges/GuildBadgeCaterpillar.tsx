@@ -1,8 +1,8 @@
-// === Module 14165: GuildBadgeCaterpillar ===
+// === Module 14219: GuildBadgeCaterpillar ===
 
-// Module 14165 (GuildBadgeCaterpillar)
-import inlineStyles from "inlineStyles" /* 8689 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 14126 */;
+// Module 14219 (GuildBadgeCaterpillar)
+import inlineStyles from "inlineStyles" /* 8727 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

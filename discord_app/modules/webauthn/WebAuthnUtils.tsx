@@ -1,6 +1,6 @@
-// === Module 6791: WebAuthnUtils ===
+// === Module 6835: WebAuthnUtils ===
 
-// Module 6791 (WebAuthnUtils)
+// Module 6835 (WebAuthnUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");

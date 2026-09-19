@@ -1,6 +1,6 @@
-// === Module 6656: ? ===
+// === Module 6700: ? ===
 
-// Module 6656
+// Module 6700
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SleepingWumpusSpotIllustration-2x.png.js");

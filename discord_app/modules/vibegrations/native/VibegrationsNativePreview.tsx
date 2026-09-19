@@ -1,175 +1,192 @@
-// === Module 16890: VibegrationsNativePreview ===
+// === Module 16957: VibegrationsNativePreview ===
 
-// Module 16890 (VibegrationsNativePreview)
+// Module 16957 (VibegrationsNativePreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3676 from "module_3676" /* 3676 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4735 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import Card from "Card" /* 5777 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7306 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7829 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 9161 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9745 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9816 */;
-import useFrameBySurfaceDefault from "useFrameBySurface" /* 16891 */;
-import useVibegrationsDisallowSwipeExitDefault from "useVibegrationsDisallowSwipeExit" /* 16892 */;
+import _modDef3678 from "module_3678" /* 3678 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import Card from "Card" /* 5819 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7350 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7867 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 9200 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9561 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9570 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9748 */;
+import FramesStore from "FramesStore" /* 9312 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import ReadStateStore from "ReadStateStore" /* 4737 */;
-import AppStateStore from "AppStateStore" /* 1896 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import ReadStateStore from "ReadStateStore" /* 4771 */;
+import AppStateStore from "AppStateStore" /* 1979 */;
 
 require = fn;
 function StatusCard(arg0) {
   ({ title, body, children } = arg0);
-  const tmp = closure_24();
+  const tmp = closure_26();
   const obj = { style: tmp.centered, children: null };
   const obj2 = { variant: "primary", style: tmp.card, children: null };
   const obj3 = { style: tmp.cardBody, children: null };
   const obj4 = { style: tmp.cardCopy, children: null };
-  const items = [__initData2(Text_Text.Text, { variant: "heading-md/semibold", color: "text-default", style: tmp.cardText, children: title }), __initData2(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", style: tmp.cardText, children: body })];
+  const items = [__initData4(Text_Text.Text, { variant: "heading-md/semibold", color: "text-default", style: tmp.cardText, children: title }), __initData4(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", style: tmp.cardText, children: body })];
   obj4.children = items;
-  const items1 = [__initData3(React5, obj4), children];
+  const items1 = [closure_1_25(React5, obj4), children];
   obj3.children = items1;
-  obj2.children = __initData3(React5, obj3);
-  obj.children = __initData2(Card.Card, obj2);
-  return __initData2(React5, obj);
+  obj2.children = closure_1_25(React5, obj3);
+  obj.children = __initData4(Card.Card, obj2);
+  return __initData4(React5, obj);
 }
 class PreviewFrame {
   constructor(arg0) {
     applicationId = global.applicationId;
+    projectId = global.projectId;
     visible = global.visible;
-    closure_1 = undefined;
     closure_2 = undefined;
     closure_3 = undefined;
     closure_4 = undefined;
+    closure_5 = undefined;
     tmp = applicationId;
     tmp2 = closure_2;
-    obj = applicationId(closure_2[16]);
-    vibegrationsControlActive = obj.useVibegrationsControlActive(global.projectId);
-    tmp4 = closure_24();
-    tmp5 = makeFrameId(applicationId, MAIN_SURFACE);
-    closure_1 = tmp5;
-    tmp6 = closure_1;
-    tmp7 = closure_1(closure_2[17])(applicationId, MAIN_SURFACE);
-    closure_2 = tmp7;
-    tmp8 = null;
-    if (null != tmp7) {
-      tmp9 = isLaunched;
-      tmp8 = null;
-      if (isLaunched(tmp7)) {
-        tmp8 = tmp7;
+    obj = applicationId(closure_2[17]);
+    vibegrationsControlActive = obj.useVibegrationsControlActive(projectId);
+    obj2 = closure_4;
+    items = [, ];
+    items[0] = projectId;
+    items[1] = visible;
+    effect = closure_4.useEffect(() => () => closure_2_13(projectId), items);
+    tmp5 = closure_26();
+    tmp6 = makeFrameId(applicationId, MAIN_SURFACE);
+    closure_2 = tmp6;
+    tmp7 = projectId;
+    tmp8 = projectId(closure_2[18])(applicationId, MAIN_SURFACE);
+    closure_3 = tmp8;
+    tmp9 = null;
+    if (null != tmp8) {
+      tmp10 = isLaunched;
+      tmp9 = null;
+      if (isLaunched(tmp8)) {
+        tmp9 = tmp8;
       }
     }
-    tmp10 = closure_3(closure_4.useState(false), 2);
-    first = tmp10[0];
-    closure_3 = first;
-    closure_4 = tmp10[1];
-    items = [, , , ];
-    items[0] = applicationId;
-    items[1] = first;
-    items[2] = tmp7;
-    items[3] = tmp5;
-    effect = closure_4.useEffect(() => {
+    tmp11 = closure_3(obj2.useState(false), 2);
+    first = tmp11[0];
+    closure_4 = first;
+    closure_5 = tmp11[1];
+    items1 = [, , , ];
+    items1[0] = applicationId;
+    items1[1] = first;
+    items1[2] = tmp8;
+    items1[3] = tmp6;
+    effect1 = obj2.useEffect(() => {
       if (!first) {
-        if (null == closure_2) {
+        if (null == closure_3) {
           const mainFrame = FramesStore.getMainFrame();
           if (null != mainFrame) {
             FramesNativeManagerDefault.leaveFrame(mainFrame.id);
           }
           const obj3 = { applicationId, surface };
-          FramesActionCreatorsDefault.launchFrame(obj3).catch(() => closure_1_4(true));
+          FramesActionCreatorsDefault.launchFrame(obj3).catch(() => closure_1_5(true));
           const launchFrameResult = FramesActionCreatorsDefault.launchFrame(obj3);
-          FramesActionCreatorsDefault.demoteMainFrame(closure_1);
+          FramesActionCreatorsDefault.demoteMainFrame(closure_2);
         }
       }
-    }, items);
-    tmp14 = visible;
-    tmp6Result = tmp6(tmp2[19]);
+    }, items1);
+    tmp15 = visible;
+    tmp7Result = tmp7(tmp2[20]);
     if (visible) {
-      tmp14 = null != tmp8;
+      tmp15 = null != tmp9;
     }
-    tmp13Result = tmp6Result(tmp14);
-    if (null != tmp8) {
-      tmp21 = View;
+    tmp14Result = tmp7Result(tmp15);
+    if (null != tmp9) {
+      tmp22 = View;
       obj1 = { style: null, children: null };
-      obj1.style = tmp4.frame;
-      tmp22 = jsx;
-      tmp20 = jsxs;
-      obj9 = { frameId: null, layoutMode: null };
-      obj9.frameId = tmp8.id;
-      tmp23 = FrameLayoutModes;
-      obj9.layoutMode = FrameLayoutModes.FOCUSED;
-      items1 = [, ];
-      items1[0] = jsx(tmp(tmp2[20]).InlineFrameView, obj9);
-      tmp22Result = null;
+      obj1.style = tmp5.frame;
+      tmp23 = jsx;
+      tmp21 = jsxs;
+      obj11 = { frameId: null, layoutMode: null };
+      obj11.frameId = tmp9.id;
+      tmp24 = FrameLayoutModes;
+      obj11.layoutMode = FrameLayoutModes.FOCUSED;
+      items2 = [, , ];
+      items2[0] = jsx(tmp(tmp2[21]).InlineFrameView, obj11);
+      tmp23Result = null;
       if (visible) {
-        tmp22Result = null;
-        if (vibegrationsControlActive) {
-          obj10 = { style: null, pointerEvents: "box-only", accessibilityLiveRegion: "polite", children: null };
-          obj10.style = tmp4.controlOverlay;
-          obj11 = { variant: "text-sm/medium", color: "text-default", style: null, children: null };
-          obj11.style = tmp4.controlText;
-          intl4 = tmp(tmp2[21]).intl;
-          obj11.children = intl4.string(tmp6(tmp2[22]).dIE9zO);
-          obj10.children = tmp22(tmp(tmp2[14]).Text, obj11);
-          tmp22Result = tmp22(tmp21, obj10);
+        tmp23Result = null;
+        if (closure_14(projectId).active) {
+          tmp23Result = null;
+          if (!vibegrationsControlActive) {
+            obj12 = { projectId: null };
+            obj12.projectId = projectId;
+            tmp23Result = tmp23(tmp7(tmp2[22]), obj12);
+          }
         }
       }
-      items1[1] = tmp22Result;
-      obj1.children = items1;
-      tmp20Result = tmp20(tmp21, obj1);
+      items2[1] = tmp23Result;
+      tmp23Result1 = null;
+      if (visible) {
+        tmp23Result1 = null;
+        if (vibegrationsControlActive) {
+          obj13 = { style: null, pointerEvents: "box-only", accessibilityLiveRegion: "polite", children: null };
+          obj13.style = tmp5.controlOverlay;
+          obj14 = { variant: "text-sm/medium", color: "text-default", style: null, children: null };
+          obj14.style = tmp5.controlText;
+          intl4 = tmp(tmp2[23]).intl;
+          obj14.children = intl4.string(tmp7(tmp2[24]).dIE9zO);
+          obj13.children = tmp23(tmp(tmp2[15]).Text, obj14);
+          tmp23Result1 = tmp23(tmp22, obj13);
+        }
+      }
+      items2[2] = tmp23Result1;
+      obj1.children = items2;
+      tmp21Result = tmp21(tmp22, obj1);
     } else {
-      tmp25 = jsx;
+      tmp27 = jsx;
       if (first) {
-        tmp19 = StatusCard;
-        obj12 = { title: null, body: null, children: null };
-        intl = tmp(tmp2[21]).intl;
-        obj12.title = intl.string(tmp6(tmp2[22]).MeLWCr);
-        intl2 = tmp(tmp2[21]).intl;
-        obj12.body = intl2.string(tmp6(tmp2[22])["1RCbQT"]);
-        obj13 = { variant: "primary", size: "sm", text: null, onPress: null };
-        intl3 = tmp(tmp2[21]).intl;
-        obj13.text = intl3.string(tmp6(tmp2[22])["42EdIV"]);
-        obj13.onPress = function onPress() {
-          return closure_4(false);
+        tmp20 = StatusCard;
+        obj15 = { title: null, body: null, children: null };
+        intl = tmp(tmp2[23]).intl;
+        obj15.title = intl.string(tmp7(tmp2[24]).MeLWCr);
+        intl2 = tmp(tmp2[23]).intl;
+        obj15.body = intl2.string(tmp7(tmp2[24])["1RCbQT"]);
+        obj16 = { variant: "primary", size: "sm", text: null, onPress: null };
+        intl3 = tmp(tmp2[23]).intl;
+        obj16.text = intl3.string(tmp7(tmp2[24])["42EdIV"]);
+        obj16.onPress = function onPress() {
+          return closure_5(false);
         };
-        obj12.children = tmp25(tmp(tmp2[23]).Button, obj13);
-        tmp20Result = tmp25(StatusCard, obj12);
+        obj15.children = tmp27(tmp(tmp2[25]).Button, obj16);
+        tmp21Result = tmp27(StatusCard, obj15);
       } else {
-        tmp16 = View;
-        obj14 = { style: null, children: null };
-        obj14.style = tmp4.centered;
-        tmp17 = ActivityIndicator;
-        obj14.children = tmp25(ActivityIndicator, {});
-        tmp20Result = tmp25(View, obj14);
+        tmp17 = View;
+        obj17 = { style: null, children: null };
+        obj17.style = tmp5.centered;
+        tmp18 = closure_5;
+        obj17.children = tmp27(closure_5, {});
+        tmp21Result = tmp27(View, obj17);
       }
     }
-    return tmp20Result;
+    return tmp21Result;
   }
 }
 function PreviewWidget(applicationId) {
   applicationId = applicationId.applicationId;
-  const tmp = closure_24();
+  const tmp = closure_26();
   const items = [AuthenticationStore];
   [][0] = applicationId;
   const stateFromStores = applicationId(504).useStateFromStores(items, () => id.getId());
   if (applicationId.revoked) {
     const obj2 = { title: null, body: null };
     const intl = tmp2(1115).intl;
-    obj2.title = intl.string(_modDef3676.SGHO9K);
+    obj2.title = intl.string(_modDef3678.SGHO9K);
     const intl2 = tmp2(1115).intl;
-    obj2.body = intl2.string(_modDef3676["pV/rS2"]);
-    let tmp6Result = closure_22(StatusCard, obj2);
+    obj2.body = intl2.string(_modDef3678["pV/rS2"]);
+    let tmp6Result = closure_24(StatusCard, obj2);
   } else {
     const obj3 = { contentContainerStyle: tmp.widget, children: null };
     const obj4 = { userId: stateFromStores, widget: tmp5 };
-    obj3.children = closure_22(UserProfileApplicationWidgetCardDefault, obj4);
-    tmp6Result = closure_22(closure_6, obj3);
+    obj3.children = closure_24(UserProfileApplicationWidgetCardDefault, obj4);
+    tmp6Result = closure_24(closure_6, obj3);
   }
   return tmp6Result;
 }
@@ -182,8 +199,8 @@ function PreviewBot(previewApplicationId) {
   let id1;
   let stateFromStores1;
   let stateFromStores2;
-  let tmp = closure_24();
-  const application = id(7359).useApplication(previewApplicationId.previewApplicationId);
+  let tmp = closure_26();
+  const application = id(7403).useApplication(previewApplicationId.previewApplicationId);
   const data = application.data;
   id = undefined;
   if (data != null) {
@@ -195,7 +212,7 @@ function PreviewBot(previewApplicationId) {
   if (id == null) {
     id = null;
   }
-  let obj = id(7359);
+  let obj = id(7403);
   const items = [ChannelStore];
   const items1 = [id];
   stateFromStores = id(504).useStateFromStores(items, () => {
@@ -222,8 +239,8 @@ function PreviewBot(previewApplicationId) {
         if (!closure_3) {
           c0 = false;
           const obj2 = { recipientIds: tmp, navigateToChannel: false };
-          const obj = stateFromStores(4735);
-          stateFromStores(4735).openPrivateChannel(obj2).catch(() => {
+          const obj = stateFromStores(4769);
+          stateFromStores(4769).openPrivateChannel(obj2).catch(() => {
             if (!c0) {
               closure_2(id);
             }
@@ -283,49 +300,51 @@ function PreviewBot(previewApplicationId) {
   if (!application.isLoading) {
     let obj2 = { title: null, body: null, children: null };
     const intl = tmp2(1115).intl;
-    obj2.title = intl.string(stateFromStores(3676).bl4eBc);
+    obj2.title = intl.string(stateFromStores(3678).bl4eBc);
     const intl2 = tmp2(1115).intl;
-    obj2.body = intl2.string(stateFromStores(3676)["4iyrze"]);
+    obj2.body = intl2.string(stateFromStores(3678)["4iyrze"]);
     let tmp19Result = null;
     if (tmp9) {
       const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl3 = tmp2(1115).intl;
       obj4.text = intl3.string(tmp2(1115).t["5911Lb"]);
       obj4.onPress = callback;
-      tmp19Result = closure_22(tmp2(5144).Button, obj4);
+      tmp19Result = closure_24(tmp2(5186).Button, obj4);
     }
     obj2.children = tmp19Result;
-    return closure_22(StatusCard, obj2);
+    return closure_24(StatusCard, obj2);
   }
   if (null == stateFromStores) {
     const obj5 = { style: tmp.centered, children: null };
     tmp = id1;
-    obj5.children = closure_22(id1, {});
-    closure_22(stateFromStores2, obj5);
+    obj5.children = closure_24(id1, {});
+    closure_24(stateFromStores2, obj5);
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: ref, screenIndex: "vibegrations-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_22(stateFromStores(11592), obj7, stateFromStores.id), ];
+    const items8 = [closure_24(stateFromStores(11601), obj7, stateFromStores.id), ];
     let tmp29Result = null;
     if (tmp2Result6.isAndroid()) {
-      tmp29Result = closure_22(tmp2(16899).PortalKeyboardRenderer, { portal: true });
+      tmp29Result = closure_24(tmp2(16968).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp29Result;
     obj6.children = items8;
-    closure_23(stateFromStores2, obj6);
+    closure_25(stateFromStores2, obj6);
     tmp2Result6 = tmp2(1364);
   }
   ref = noop.useRef(null);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const vibegrationsDesignFeedbackStore = fn(16929);
+({ exitVibegrationsDesignFeedback: map1, useVibegrationsDesignFeedback: closure_14 } = vibegrationsDesignFeedbackStore);
 const Constants = fn(1074);
-({ AnalyticsObjects: map1, AnalyticsObjectTypes: closure_14, AnalyticsSections: closure_15, AppStates: closure_16, ME: closure_17 } = Constants);
-const FramesConstants = fn(9749);
-({ FrameLayoutModes: closure_18, isLaunched: closure_19, MAIN_SURFACE: closure_20, makeFrameId: closure_21 } = FramesConstants);
+({ AnalyticsObjects: closure_15, AnalyticsObjectTypes: closure_16, AnalyticsSections: closure_17, AppStates: closure_18, ME: closure_19 } = Constants);
+const FramesConstants = fn(9313);
+({ FrameLayoutModes: closure_20, isLaunched: closure_21, MAIN_SURFACE: closure_22, makeFrameId: closure_23 } = FramesConstants);
 const jsxProd = fn(21);
-({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4722);
+({ jsx: closure_24, jsxs: closure_25 } = jsxProd);
+const createStyles = fn(4756);
 let obj2 = { frame: { flex: 1 }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 }, card: { alignSelf: "stretch" }, cardBody: null, cardCopy: null, cardText: null, widget: null, controlOverlay: null, controlText: null, dm: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24 };
 obj2.cardBody = { padding: nativeDefault.space.PX_16, alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -339,7 +358,7 @@ obj2.controlOverlay = rect;
 let obj6 = { padding: nativeDefault.space.PX_16 };
 obj2.controlText = { textAlign: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_8 };
 obj2.dm = { flex: 1 };
-const __initData4 = createStyles.createStyles(obj2);
+let dependencyMap = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsNativePreview.tsx");
 
@@ -348,45 +367,45 @@ export default function VibegrationsNativePreview(arg0) {
   if (null != permissionsGate) {
     const obj2 = { title: null, body: null, children: null };
     const intl5 = util.intl;
-    obj2.title = intl5.string(_modDef3676.DYwf2n);
+    obj2.title = intl5.string(_modDef3678.DYwf2n);
     const intl6 = util.intl;
-    obj2.body = intl6.string(_modDef3676.WWj3pN);
+    obj2.body = intl6.string(_modDef3678.WWj3pN);
     const obj3 = { variant: "primary", size: "sm", text: null, onPress: null, loading: null };
     const intl7 = util.intl;
-    obj3.text = intl7.string(_modDef3676["CRfE/E"]);
+    obj3.text = intl7.string(_modDef3678["CRfE/E"]);
     ({ onReviewPermissions: obj7.onPress, loading: obj7.loading } = permissionsGate);
-    obj2.children = __initData2(components_Button_Button.Button, obj3);
-    return __initData2(StatusCard, obj2);
+    obj2.children = __initData4(components_Button_Button.Button, obj3);
+    return __initData4(StatusCard, obj2);
   } else if ("frame" === mode) {
     if (tmp3) {
       const obj4 = { applicationId: previewApplicationId, projectId: tmp, visible: true };
-      let tmp14Result = __initData2(PreviewFrame, obj4);
+      let tmp14Result = __initData4(PreviewFrame, obj4);
     } else {
       const obj5 = { title: null, body: null };
       const intl3 = util.intl;
-      obj5.title = intl3.string(_modDef3676.FHOJiH);
+      obj5.title = intl3.string(_modDef3678.FHOJiH);
       const intl4 = util.intl;
-      obj5.body = intl4.string(_modDef3676["1yLQoV"]);
-      tmp14Result = __initData2(StatusCard, obj5);
+      obj5.body = intl4.string(_modDef3678["1yLQoV"]);
+      tmp14Result = __initData4(StatusCard, obj5);
     }
     return tmp14Result;
   } else if ("widget" === mode) {
     let tmp11 = null;
     if (null != widgetApplicationId) {
       const obj6 = { applicationId: widgetApplicationId, revoked: "unavailable-authorization-revoked" === tmp2.profileState };
-      tmp11 = __initData2(PreviewWidget, obj6);
+      tmp11 = __initData4(PreviewWidget, obj6);
     }
     return tmp11;
   } else if ("bot" === mode) {
     const obj13 = { previewApplicationId };
-    return __initData2(PreviewBot, obj13);
+    return __initData4(PreviewBot, obj13);
   } else if (null === mode) {
     const obj = { title: null, body: null };
     const intl = util.intl;
-    obj.title = intl.string(_modDef3676.FHOJiH);
+    obj.title = intl.string(_modDef3678.FHOJiH);
     const intl2 = util.intl;
-    obj.body = intl2.string(_modDef3676["1yLQoV"]);
-    return __initData2(StatusCard, obj);
+    obj.body = intl2.string(_modDef3678["1yLQoV"]);
+    return __initData4(StatusCard, obj);
   }
 };
 export const leaveVibegrationsPreviewFrame = function leaveVibegrationsPreviewFrame(previewAppId) {

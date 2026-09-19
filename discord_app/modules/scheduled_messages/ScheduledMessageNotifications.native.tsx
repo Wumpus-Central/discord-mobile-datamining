@@ -1,15 +1,15 @@
-// === Module 8051: ScheduledMessageNotifications ===
+// === Module 8089: ScheduledMessageNotifications ===
 
-// Module 8051 (ScheduledMessageNotifications)
+// Module 8089 (ScheduledMessageNotifications)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4420 */;
-import ClockIcon from "ClockIcon" /* 4684 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import CircleXIcon from "CircleXIcon" /* 6809 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
-import ScheduledMessageUtils from "ScheduledMessageUtils" /* 8048 */;
-import openScheduledMessagesLimitUpsellDefault from "openScheduledMessagesLimitUpsell" /* 8052 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
+import ClockIcon from "ClockIcon" /* 4718 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import CircleXIcon from "CircleXIcon" /* 6853 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7422 */;
+import ScheduledMessageUtils from "ScheduledMessageUtils" /* 8086 */;
+import openScheduledMessagesLimitUpsellDefault from "openScheduledMessagesLimitUpsell" /* 8090 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -47,7 +47,7 @@ export const handleScheduleMessageError = function handleScheduleMessageError(bo
       openScheduledMessagesLimitUpsellDefault(items);
       const tmp11Result = openScheduledMessagesLimitUpsellDefault;
     } else {
-      const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null };
+      const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
       const intl2 = util.intl;
       obj2.title = intl2.string(util.t.RLdUVh);
       const intl3 = util.intl;

@@ -1,6 +1,6 @@
-// === Module 6742: ? ===
+// === Module 6786: ? ===
 
-// Module 6742
+// Module 6786
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TreasureChestSpotIllustration-2x.png.js");

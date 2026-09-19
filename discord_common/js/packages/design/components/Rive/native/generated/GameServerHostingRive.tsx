@@ -1,8 +1,8 @@
-// === Module 4526: GameServerHostingRive ===
+// === Module 4560: GameServerHostingRive ===
 
-// Module 4526 (GameServerHostingRive)
-import BaseRive from "BaseRive" /* 4452 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4507 */;
+// Module 4560 (GameServerHostingRive)
+import BaseRive from "BaseRive" /* 4486 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4541 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

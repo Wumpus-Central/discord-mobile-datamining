@@ -1,22 +1,23 @@
-// === Module 5307: utils/UploadUtils ===
+// === Module 5349: utils/UploadUtils ===
 
-// Module 5307 (utils/UploadUtils)
+// Module 5349 (utils/UploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1151 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4380 */;
-import Upload from "Upload" /* 5297 */;
-import UploadUtils from "UploadUtils" /* 5298 */;
-import FileUtils from "FileUtils" /* 5303 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5308 */;
-import ImageConversionDecision from "ImageConversionDecision" /* 5328 */;
-import VideoUploadUtils from "VideoUploadUtils" /* 5330 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 5337 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
+import Upload from "Upload" /* 5339 */;
+import UploadUtils from "UploadUtils" /* 5340 */;
+import FileUtils from "FileUtils" /* 5345 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5350 */;
+import ImageConversionDecision from "ImageConversionDecision" /* 5370 */;
+import VideoUploadUtils from "VideoUploadUtils" /* 5372 */;
+import UploadLimits from "UploadLimits" /* 5373 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 5380 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore_mod from "UnsyncedUserSettingsStore" /* 1184 */;
-import NetworkStore from "NetworkStore" /* 4771 */;
+import NetworkStore from "NetworkStore" /* 4805 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -793,22 +794,23 @@ function convertVideo(videoMetadata) {
   const VideoQualityTarget = VideoUploadUtils.VideoQualityTarget;
   const result = VideoQualityTarget.fromCompressionQuality(videoQualitySetting);
   let obj = VideoUploadUtils;
-  const result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, FileUtils.maxFileSize());
+  let obj2 = UploadLimits;
+  const result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, obj2.getEffectiveUploadLimit(FileUtils.maxFileSize()));
   const result2 = VideoUploadUtils.calculateTargetDimensions(videoMetadata, result.targetResolution);
-  let obj7 = {};
+  let obj8 = {};
   const result3 = VideoUploadUtils.calculateOptimalBitrate(videoMetadata, result, VideoUploadUtils.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
   const merged = Object.assign(VideoUploadUtils.DEFAULT_VIDEO_ENCODING_CONFIG);
-  obj7.videoQuality = result;
-  ({ width: obj5.targetWidth, height: obj5.targetHeight } = result2);
-  obj7.targetBitrate = result3;
-  if (obj6.isAndroid()) {
+  obj8.videoQuality = result;
+  ({ width: obj6.targetWidth, height: obj6.targetHeight } = result2);
+  obj8.targetBitrate = result3;
+  if (obj7.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
       let frameRate = Math.min(videoMetadata.frameRate, VideoUploadUtils.DEFAULT_VIDEO_ENCODING_CONFIG.frameRate);
     }
-    obj7.frameRate = frameRate;
-    obj7.skipVideoTranscode = result1;
-    ({ isHDRContent: obj5.createHDR, rotationDegrees: obj5.rotationDegrees } = videoMetadata);
+    obj8.frameRate = frameRate;
+    obj8.skipVideoTranscode = result1;
+    ({ isHDRContent: obj6.createHDR, rotationDegrees: obj6.rotationDegrees } = videoMetadata);
     c7 = 0;
     let promise = new Promise((arg0, arg1) => {
       closure_0 = arg0;
@@ -1110,7 +1112,7 @@ function convertVideo(videoMetadata) {
                     if (0 !== value2) {
                       if (closure_137_0) {
                         c13 = 3;
-                        obj7 = { value: closure_137_0.v, done: true };
+                        const obj7 = { value: closure_137_0.v, done: true };
                         return obj7;
                       } else if (iter7 < 4) {
                         const iter8 = closure_137_1()[isArray.iterator]();
@@ -1154,7 +1156,7 @@ function convertVideo(videoMetadata) {
         }
       };
       function resolveWithConfig(path) {
-        return closure_0({ path, encodingConfig: obj7 });
+        return closure_0({ path, encodingConfig: obj8 });
       }
       const promise = (function findCompatibleConfig() {
         const self = this;
@@ -1182,21 +1184,21 @@ function convertVideo(videoMetadata) {
             isAndroidResult = null != uri.match(/^content:\/\/.+$/i);
           }
           if (isAndroidResult) {
-            const obj3 = { encodingConfig: obj7, compressionQuality, isLowQuality, videoQuality: videoQualitySetting, skipVideoTranscode: result1 };
+            const obj3 = { encodingConfig: obj8, compressionQuality, isLowQuality, videoQuality: videoQualitySetting, skipVideoTranscode: result1 };
             let nextPromise = mediaManager("resolveToMediaFilePath", uri, obj3).then(resolveWithConfig, closure_1);
             const promise4 = mediaManager("resolveToMediaFilePath", uri, obj3);
           } else {
             const isIOSResult1 = PlatformUtils.isIOS();
             if (!isIOSResult1) {
               if (isIOSResult1) {
-                const obj4 = { encodingConfig: obj7, videoQuality: videoQualitySetting, isMov: true, skipVideoTranscode: result1 };
+                const obj4 = { encodingConfig: obj8, videoQuality: videoQualitySetting, isMov: true, skipVideoTranscode: result1 };
                 nextPromise = mediaManager("compressVideo", uri, obj4).then(resolveWithConfig, closure_1);
                 const promise3 = mediaManager("compressVideo", uri, obj4);
               } else {
                 const isIOSResult2 = PlatformUtils.isIOS();
                 if (!isIOSResult2) {
                   if (isIOSResult2) {
-                    const obj5 = { encodingConfig: obj7, videoQuality: videoQualitySetting, skipVideoTranscode: result1 };
+                    const obj5 = { encodingConfig: obj8, videoQuality: videoQualitySetting, skipVideoTranscode: result1 };
                     nextPromise = mediaManager("compressVideo", uri, obj5).then(resolveWithConfig, closure_1);
                     const promise2 = mediaManager("compressVideo", uri, obj5);
                   } else {
@@ -1216,7 +1218,7 @@ function convertVideo(videoMetadata) {
                       isIOSResult = endsWithResult;
                     }
                     if (isIOSResult) {
-                      const obj6 = { encodingConfig: obj7, videoQuality: videoQualitySetting, isMov: null, skipVideoTranscode: null };
+                      const obj6 = { encodingConfig: obj8, videoQuality: videoQualitySetting, isMov: null, skipVideoTranscode: null };
                       const formatted1 = uri.toLowerCase();
                       let endsWithResult1 = formatted1.endsWith("mov");
                       if (!endsWithResult1) {
@@ -1228,7 +1230,7 @@ function convertVideo(videoMetadata) {
                       nextPromise = mediaManager("compressVideo", uri, obj6).then(resolveWithConfig, closure_1);
                       const tmp36Result = mediaManager("compressVideo", uri, obj6);
                     } else {
-                      obj7 = { uri, filename: importDefault };
+                      const obj7 = { uri, filename: importDefault };
                       logger.error("Unsupported video URI format", obj7);
                       const _Error2 = Error;
                       const _HermesInternal = HermesInternal;
@@ -1247,7 +1249,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      const obj8 = { uri, overrideType: "Array" };
+                      obj8 = { uri, overrideType: "Array" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1276,7 +1278,7 @@ function convertVideo(videoMetadata) {
             const tmp12Result = PlatformUtils;
           }
         } else {
-          const obj = { finalConfig: obj7, attempts };
+          const obj = { finalConfig: obj8, attempts };
           logger.error("Could not find compatible encoding configuration after multiple attempts", obj);
           const _Error = Error;
           const error1 = new Error("Could not find compatible encoding configuration after multiple attempts");
@@ -1287,7 +1289,7 @@ function convertVideo(videoMetadata) {
     return promise;
   }
   frameRate = videoMetadata.frameRate;
-  obj6 = PlatformUtils;
+  obj7 = PlatformUtils;
 }
 function buildResolvedUpload(arg0) {
   const self = this;
@@ -1611,11 +1613,11 @@ let closure_38 = async function _processImageOrFileUpload(arg0) {
             tmp51 = !closure_131_11;
           }
           if (tmp51) {
-            useOriginalIfSmaller = closure_132_0(closure_132_2[24]).ADAPTIVE_COMPRESSION_CONFIG.useOriginalIfSmaller;
-            LOW = closure_132_0(closure_132_2[24]).getAdaptiveImageCompressionQuality(closure_131_13, closure_132_0(closure_132_2[24]).ADAPTIVE_COMPRESSION_CONFIG);
+            useOriginalIfSmaller = closure_132_0(closure_132_2[25]).ADAPTIVE_COMPRESSION_CONFIG.useOriginalIfSmaller;
+            LOW = closure_132_0(closure_132_2[25]).getAdaptiveImageCompressionQuality(closure_131_13, closure_132_0(closure_132_2[25]).ADAPTIVE_COMPRESSION_CONFIG);
             const _HermesInternal = HermesInternal;
             closure_132_20.log("Got image compression quality: " + LOW + " for " + closure_131_0 + " with dimensions: " + closure_131_6 + "x" + closure_131_7 + " and useOriginalIfSmaller: " + useOriginalIfSmaller);
-            const obj7 = closure_132_0(closure_132_2[24]);
+            const obj7 = closure_132_0(closure_132_2[25]);
           }
           let isIOSResult = closure_132_0(closure_132_2[13]).isIOS();
           if (isIOSResult) {
@@ -1624,19 +1626,19 @@ let closure_38 = async function _processImageOrFileUpload(arg0) {
           closure_131_16 = isIOSResult;
           closure_131_17 = false;
           if (closure_131_12) {
-            closure_131_18 = closure_132_0(closure_132_2[25]).useMobileLosslessImageUploadV2Experiment({ location: "upload_utils.process_image_upload" });
-            const obj9 = closure_132_0(closure_132_2[25]);
-            let enabled = closure_132_0(closure_132_2[26]).isDiscordFrontendDevelopment();
+            closure_131_18 = closure_132_0(closure_132_2[26]).useMobileLosslessImageUploadV2Experiment({ location: "upload_utils.process_image_upload" });
+            const obj9 = closure_132_0(closure_132_2[26]);
+            let enabled = closure_132_0(closure_132_2[27]).isDiscordFrontendDevelopment();
             if (!enabled) {
               enabled = closure_131_18.enabled;
             }
             closure_131_17 = enabled;
-            const obj10 = closure_132_0(closure_132_2[26]);
+            const obj10 = closure_132_0(closure_132_2[27]);
           }
           enableQualityMetrics = false;
           closure_131_20 = false;
           if (closure_131_12) {
-            const AttachmentQualityMetricsExperiment = closure_132_0(closure_132_2[27]).AttachmentQualityMetricsExperiment;
+            const AttachmentQualityMetricsExperiment = closure_132_0(closure_132_2[28]).AttachmentQualityMetricsExperiment;
             config = AttachmentQualityMetricsExperiment.getConfig({ location: "upload_utils.process_image_upload" });
             enableQualityMetrics = config.enableQualityMetrics;
             closure_131_20 = config.enableOriginDetection;
@@ -1648,14 +1650,14 @@ let closure_38 = async function _processImageOrFileUpload(arg0) {
               if (obj12.isDiscordFrontendDevelopment()) {
                 useJpegliEncoder = true;
               } else {
-                useJpegliEncoder = closure_132_0(closure_132_2[28]).getIosJpegliConfig({ location: "upload_utils.process_image_upload" }).useJpegliEncoder;
-                const obj13 = closure_132_0(closure_132_2[28]);
+                useJpegliEncoder = closure_132_0(closure_132_2[29]).getIosJpegliConfig({ location: "upload_utils.process_image_upload" }).useJpegliEncoder;
+                const obj13 = closure_132_0(closure_132_2[29]);
               }
               if (!closure_131_11) {
                 if (null != closure_131_13.width) {
                   if (null != closure_131_13.height) {
                     if (obj21.getMobileImageEncodingLadderConfig({ location: "upload_utils.process_image_upload" }).useImageEncodingLadder) {
-                      const ImageEncodingLadder = closure_132_0(closure_132_2[24]).ImageEncodingLadder;
+                      const ImageEncodingLadder = closure_132_0(closure_132_2[25]).ImageEncodingLadder;
                       const size1 = { width: closure_131_13.width, height: closure_131_13.height };
                       closure_131_23 = ImageEncodingLadder.selectEncodingConfig(size1);
                       useOriginalIfSmaller = true;
@@ -1663,11 +1665,11 @@ let closure_38 = async function _processImageOrFileUpload(arg0) {
                       targetWidth = closure_131_23.targetWidth;
                       targetHeight = closure_131_23.targetHeight;
                     }
-                    obj21 = closure_132_0(closure_132_2[29]);
+                    obj21 = closure_132_0(closure_132_2[30]);
                   }
                 }
               }
-              obj12 = closure_132_0(closure_132_2[26]);
+              obj12 = closure_132_0(closure_132_2[27]);
             }
           }
           const obj6 = { uri: closure_131_0, filename: closure_131_1, isLowQuality: closure_131_11, compressionQuality: LOW, mobileLosslessImageEnabled: closure_131_17, useEnhancedConversion: closure_131_16, useJpegliEncoder, allowOptimization: closure_131_8, targetWidth, targetHeight };
@@ -1844,8 +1846,8 @@ let closure_39 = async function _tryConvertImage(arg0) {
       closure_131_11 = value;
       let tmp51 = null;
       if (closure_131_11) {
-        tmp51 = { path: closure_131_11, encoderUsed: closure_132_0(closure_132_2[30]).ImageEncoder.NATIVE };
-        { path: closure_131_11, encoderUsed: closure_132_0(closure_132_2[30]).ImageEncoder.NATIVE };
+        tmp51 = { path: closure_131_11, encoderUsed: closure_132_0(closure_132_2[31]).ImageEncoder.NATIVE };
+        { path: closure_131_11, encoderUsed: closure_132_0(closure_132_2[31]).ImageEncoder.NATIVE };
       }
       c8 = 3;
       return { value: tmp51, done: true };
@@ -1896,7 +1898,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
       return { value, done: true };
     } else {
       value.path = value;
-      value.encoderUsed = closure_132_0(closure_132_2[30]).ImageEncoder.PASSTHROUGH;
+      value.encoderUsed = closure_132_0(closure_132_2[31]).ImageEncoder.PASSTHROUGH;
       c5 = 0;
       c8 = 3;
       return { value, done: true };
@@ -1973,7 +1975,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
           } else {
             tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
           }
-          tmpResult = closure_1_0(5328);
+          tmpResult = closure_1_0(5370);
         }
         const obj = closure_1_0(1364);
       })(closure_131_0, closure_131_1)) {
@@ -2450,7 +2452,7 @@ let UnsyncedUserSettingsStore = UnsyncedUserSettingsStore_mod;
 const Constants = fn(1074);
 ({ Base64PNGPrefix: map1, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_15, CompressionQuality: closure_16, Base64WEBPPrefix: closure_17, Base64AVIFPrefix: closure_18, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(4932).NativePermissionTypes;
+const NativePermissionTypes = fn(4965).NativePermissionTypes;
 let closure_20 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2518,8 +2520,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(5328).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(5328).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(5370).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(5370).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

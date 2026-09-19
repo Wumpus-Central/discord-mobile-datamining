@@ -1,8 +1,8 @@
-// === Module 4728: useTypographyVariantRemap ===
+// === Module 4762: useTypographyVariantRemap ===
 
-// Module 4728 (useTypographyVariantRemap)
-import ThemeContext from "ThemeContext" /* 4439 */;
-import typographyVariantRemap from "typographyVariantRemap" /* 4729 */;
+// Module 4762 (useTypographyVariantRemap)
+import ThemeContext from "ThemeContext" /* 4473 */;
+import typographyVariantRemap from "typographyVariantRemap" /* 4763 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");

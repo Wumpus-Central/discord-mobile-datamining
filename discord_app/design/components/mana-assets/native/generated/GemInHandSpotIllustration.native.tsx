@@ -1,9 +1,9 @@
-// === Module 6291: GemInHandSpotIllustration ===
+// === Module 6335: GemInHandSpotIllustration ===
 
-// Module 6291 (GemInHandSpotIllustration)
+// Module 6335 (GemInHandSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6292 from "module_6292" /* 6292 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6336 from "module_6336" /* 6336 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GemInHandSpotIllustration = function GemInHandSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6292 };
+  const obj2 = { uri: _modDef6336 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

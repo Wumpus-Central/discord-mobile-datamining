@@ -1,14 +1,14 @@
-// === Module 8042: UploaderBase ===
+// === Module 8080: UploaderBase ===
 
-// Module 8042 (UploaderBase)
+// Module 8080 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5305 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 5347 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1074).AbortCodes;
-const FileUploadErrorTypes = fn(4715).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4749).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -98,7 +98,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp8 === 3) {
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -108,56 +108,55 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         return { value: "HermesInternal", done: null };
       }
     } else {
-      try {
+      while (true) {
         c9 = 2;
+        let tmp4 = c8;
         if (0 === c8) {
           if (arg0 === 1) {
             c9 = 3;
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            const obj3 = { value, done: true };
+            let obj3 = { value, done: true };
             return obj3;
           } else {
+            constants = tmp4;
             closure_132_0 = undefined;
-            let kestrelConfig;
-            closure_132_2 = undefined;
-            let effectiveKestrelLimit;
-            const first = self.files[0];
+            closure_132_1 = undefined;
+            let maxFileSize;
+            let obj13 = _self(c2[6]);
+            let first = self.files[0];
             let target;
             if (first != null) {
-              const item = first.item;
+              let item = first.item;
               if (item != null) {
                 target = item.target;
               }
             }
-            const uploadTarget = _self(5344).getUploadTarget(target);
+            let uploadTarget = obj13.getUploadTarget(target);
             closure_132_0 = uploadTarget;
             if (self.files.length > uploadTarget.getMaxAttachmentsCount()) {
-              const _HermesInternal2 = HermesInternal;
-              tmp65.log("Too many attachments for " + self.id);
-              const obj4 = { code: tmp6.TOO_MANY_ATTACHMENTS };
-              self._handleError(obj4);
+              let _HermesInternal2 = HermesInternal;
+              let logResult = logger.log("Too many attachments for " + self.id);
+              let obj4 = { code: null };
+              obj4.code = constants.TOO_MANY_ATTACHMENTS;
+              let _handleErrorResult = self._handleError(obj4);
               c9 = 3;
               return { value: false, done: true };
             } else {
-              kestrelConfig = _self(5349).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
-              const _HermesInternal3 = HermesInternal;
-              tmp65.log("compressing files for " + self.id);
-              const files = self.files;
+              let _HermesInternal3 = HermesInternal;
+              let logResult1 = logger.log("compressing files for " + self.id);
+              let files = self.files;
               _self = files[Symbol.iterator]();
-              const obj15 = _self(5349);
             }
-            const obj14 = _self(5344);
           }
-        } else if (1 === tmp9) {
+        } else if (1 === tmp4) {
           c7 = 0;
           _self.return();
-          throw tmp65;
-        } else if (2 === tmp9) {
-          c7 = 1;
-          closure_132_4 = tmp65;
-          closure_133_0._handleException(closure_132_4);
+          throw logger;
+        } else if (2 === tmp4) {
+          closure_132_3 = logger;
+          let _handleExceptionResult = closure_133_0._handleException(closure_132_3);
           c7 = 0;
           _self.return();
           c9 = 3;
@@ -169,37 +168,39 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
           c7 = 0;
           _self.return();
           c9 = 3;
-          const obj5 = { value, done: true };
+          let obj5 = { value, done: true };
           return obj5;
-        } else if (closure_132_2.isCancelled()) {
-          const _HermesInternal = HermesInternal;
-          tmp65.log("compressAndCheckFileSize() file has been cancelled for compression - " + closure_132_2.id);
+        } else if (closure_132_1.isCancelled()) {
+          let _HermesInternal = HermesInternal;
+          let logResult2 = logger.log("compressAndCheckFileSize() file has been cancelled for compression - " + closure_132_1.id);
           c7 = 0;
         } else {
-          const currentSize = closure_132_2.currentSize;
-          dependencyMap = currentSize;
+          let currentSize = closure_132_1.currentSize;
+          c2 = currentSize;
           if (currentSize == null) {
-            dependencyMap = 0;
+            c2 = 0;
           }
-          if (0 === dependencyMap) {
-            const obj6 = { code: tmp6.ENTITY_EMPTY };
-            closure_133_0._handleError(obj6);
+          if (0 === c2) {
+            let obj6 = { code: null };
+            obj6.code = constants.ENTITY_EMPTY;
+            let _handleErrorResult1 = closure_133_0._handleError(obj6);
             c7 = 0;
             _self.return();
             c9 = 3;
             return { value: false, done: true };
           } else {
-            effectiveKestrelLimit = _self(5349).getEffectiveKestrelLimit(kestrelConfig, closure_132_0.getMaxFileSize(closure_132_2.channelId));
-            const currentSize2 = closure_132_2.currentSize;
+            maxFileSize = closure_132_0.getMaxFileSize(closure_132_1.channelId);
+            let currentSize2 = closure_132_1.currentSize;
             c3 = currentSize2;
             if (currentSize2 == null) {
               c3 = 0;
             }
-            if (c3 > effectiveKestrelLimit) {
-              const obj = { code: tmp6.ENTITY_TOO_LARGE, reason: null };
-              const obj7 = { type: tmp4.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE };
+            if (c3 > maxFileSize) {
+              let obj = { code: null, reason: null };
+              obj.code = constants.ENTITY_TOO_LARGE;
+              let obj7 = { type: tmp.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE };
               obj.reason = obj7;
-              closure_133_0._handleError(obj);
+              let _handleErrorResult2 = closure_133_0._handleError(obj);
               c7 = 0;
               _self.return();
               c9 = 3;
@@ -207,37 +208,29 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             } else {
               c7 = 0;
             }
-            const obj13 = _self(5349);
           }
         }
         if (_self === undefined) {
-          let flag = closure_133_0._fileSize() <= closure_132_0.getMaxTotalAttachmentSize();
+          let _fileSizeResult = closure_133_0._fileSize();
+          let flag = _fileSizeResult <= closure_132_0.getMaxTotalAttachmentSize();
           if (!flag) {
-            const obj8 = { code: tmp6.ENTITY_TOO_LARGE, reason: null };
-            const obj9 = { type: tmp4.POSTCOMPRESSION_SUM_TOO_LARGE };
+            let obj8 = { code: null, reason: null };
+            obj8.code = constants.ENTITY_TOO_LARGE;
+            let obj9 = { type: tmp.POSTCOMPRESSION_SUM_TOO_LARGE };
             obj8.reason = obj9;
-            closure_133_0._handleError(obj8);
+            let _handleErrorResult3 = closure_133_0._handleError(obj8);
             flag = false;
           }
           c9 = 3;
-          const obj10 = { value: flag, done: true };
+          let obj10 = { value: flag, done: true };
           return obj10;
         } else {
-          closure_132_2 = tmp46;
+          closure_132_1 = tmp41;
           c7 = 2;
           c8 = 3;
           c9 = 1;
-          const obj11 = { value: closure_132_2.reactNativeCompressAndExtractData(), done: false };
+          let obj11 = { value: closure_132_1.reactNativeCompressAndExtractData(), done: false };
           return obj11;
-        }
-      } catch (tmp65) {
-        if (tmp5 === c7) {
-          c9 = tmp3;
-          throw tmp65;
-        } else if (tmp2 === tmp67) {
-          c8 = tmp2;
-        } else {
-          c8 = tmp;
         }
       }
     }
@@ -364,7 +357,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
                 self._file = obj5;
                 c3 = 1;
                 c4 = 1;
-                const obj6 = { value: itemId(tmp3[9]).cancelGetAttachmentFile(found), done: false };
+                const obj6 = { value: itemId(tmp3[8]).cancelGetAttachmentFile(found), done: false };
                 return obj6;
               }
             }

@@ -1,6 +1,6 @@
-// === Module 7657: SessionHeartbeatScheduler ===
+// === Module 7701: SessionHeartbeatScheduler ===
 
-// Module 7657 (SessionHeartbeatScheduler)
+// Module 7701 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
@@ -8,16 +8,16 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7658 */;
-import SessionRouteUtils2 from "SessionRouteUtils" /* 7659 */;
-import MonotonicClock from "MonotonicClock" /* 7660 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7665 */;
-import SessionUtils from "SessionUtils" /* 7667 */;
+import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7702 */;
+import SessionRouteUtils2 from "SessionRouteUtils" /* 7703 */;
+import MonotonicClock from "MonotonicClock" /* 7704 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7709 */;
+import SessionUtils from "SessionUtils" /* 7711 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 5580 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
+import IdleStore from "IdleStore" /* 5622 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
 
 require = fn;
 function trackHeartbeat() {
@@ -523,9 +523,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7658);
+const SessionForegroundUtils = fn(7702);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7659);
+const SessionRouteUtils = fn(7703);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

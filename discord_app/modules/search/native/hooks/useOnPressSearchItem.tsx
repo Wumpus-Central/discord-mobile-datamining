@@ -1,20 +1,20 @@
-// === Module 17025: useOnPressSearchItem ===
+// === Module 17101: useOnPressSearchItem ===
 
-// Module 17025 (useOnPressSearchItem)
+// Module 17101 (useOnPressSearchItem)
 import util from "util" /* 1115 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import LinkingDefault from "Linking" /* 4417 */;
-import ToastUtils from "ToastUtils" /* 4419 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4735 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8602 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 12581 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12601 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12604 */;
+import LinkingDefault from "Linking" /* 4451 */;
+import ToastUtils from "ToastUtils" /* 4453 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8640 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12590 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12610 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12613 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7790 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import SearchQueryStore from "SearchQueryStore" /* 12582 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7834 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import SearchQueryStore from "SearchQueryStore" /* 12591 */;
 
 const require = globalThis.__r;
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
@@ -44,87 +44,62 @@ function handleVoiceOrStageChannelConnectPress() {
   return applyArgumentsResult;
 }
 let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
-  let guildStageVoice = arg0;
-  c2 = 0;
-  c3 = 0;
-  return (async (arg0) => {
-    if (c3 === 2) {
-      c3 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          c2 = 1;
+          c3 = 1;
+          const obj4 = { value: require("asyncRequireImpl")(paths[28], paths.paths), done: false };
+          return obj4;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c3 = 3;
+        const obj = { value, done: true };
+        return obj;
       } else {
+        value.openGuildVoiceModal(closure_129_0, "Channel List");
+        c3 = 3;
         return { value: "HermesInternal", done: null };
       }
-    } else {
-      try {
-        c3 = 2;
-        if (0 === c2) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_1 = tmp2;
-            closure_129_0 = guildStageVoice;
-            const tmp21 = require("asyncRequireImpl");
-            if (isGuildStageVoiceResult) {
-              c2 = 2;
-              c3 = 1;
-              const obj4 = { value: tmp21(dependencyMap[28], dependencyMap.paths), done: false };
-              return obj4;
-            } else {
-              c2 = 1;
-              c3 = 1;
-              const obj5 = { value: tmp21(dependencyMap[30], dependencyMap.paths), done: false };
-              return obj5;
-            }
-            isGuildStageVoiceResult = guildStageVoice.isGuildStageVoice();
-          }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c3 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              value.openGuildVoiceModal(closure_129_0, "Channel List");
-              c3 = 3;
-            }
-          } else if (arg0 === 1) {
-            c3 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            value.connectAndOpen(closure_129_0);
-          }
-          c3 = 3;
-          const obj = { value, done: true };
-          return obj;
-        }
-      } catch (tmp12) {
-        c3 = tmp;
-        throw tmp12;
-      }
+    } catch (tmp12) {
+      c3 = tmp;
+      throw tmp12;
     }
-  })();
+  }
 };
-const SearchConstants = fn(8083);
+const SearchConstants = fn(8121);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(17026).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(8082).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(17102).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(8120).SearchFilterAddLocations;
 const Constants = fn(1074);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(1965).StaticChannelRoute;
+const StaticChannelRoute = fn(2048).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useOnPressSearchItem.tsx");
 
@@ -509,20 +484,20 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
           if (tmp22Result5.shouldShowMembershipVerificationGate(guildId)) {
             c2 = 1;
             c3 = 1;
-            return { value: searchContext(tmp23[29])(tmp23[35], tmp23.paths), done: false };
+            return { value: searchContext(tmp23[29])(tmp23[34], tmp23.paths), done: false };
           }
-          tmp22Result5 = searchContext(tmp23[34]);
+          tmp22Result5 = searchContext(tmp23[33]);
         }
         if (tmp22Result4.getChannelRoleSubscriptionStatus(guild_id.id).needSubscriptionToAccess) {
           guild_id = guild_id.guild_id;
-          searchContext(tmp23[36]);
-          searchContext(tmp23[36]).transitionTo(closure_1_13.CHANNEL(guild_id, constants.ROLE_SUBSCRIPTIONS));
+          searchContext(tmp23[35]);
+          searchContext(tmp23[35]).transitionTo(closure_1_13.CHANNEL(guild_id, constants.ROLE_SUBSCRIPTIONS));
         } else {
           handleVoiceOrStageChannelConnectPress(guild_id);
         }
-        tmp22Result4 = searchContext(tmp23[33]);
+        tmp22Result4 = searchContext(tmp23[32]);
       }
-      tmp22Result = searchContext(tmp23[32]);
+      tmp22Result = searchContext(tmp23[31]);
     }
     await "HermesInternal";
     if (arg0 !== 2) {
@@ -573,11 +548,11 @@ export const useOnPressSearchHistoryText = function useOnPressSearchHistoryText(
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(12581).delayUntilNavigationComplete(() => {
+      const result = searchContext(12590).delayUntilNavigationComplete(() => {
         obj = SearchPlatformActionCreatorsDefault;
         return obj.addSearchHistoryItem(closure_0, obj);
       });
-      let obj2 = searchContext(12581);
+      let obj2 = searchContext(12590);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

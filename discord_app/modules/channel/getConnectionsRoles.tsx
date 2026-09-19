@@ -1,8 +1,8 @@
-// === Module 5579: getConnectionsRoles ===
+// === Module 5621: getConnectionsRoles ===
 
-// Module 5579 (getConnectionsRoles)
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import GuildStore from "GuildStore" /* 1980 */;
+// Module 5621 (getConnectionsRoles)
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
+import GuildStore from "GuildStore" /* 2063 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 
 const Constants = fn(1074);

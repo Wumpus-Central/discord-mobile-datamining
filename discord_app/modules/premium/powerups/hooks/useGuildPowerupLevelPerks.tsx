@@ -1,14 +1,14 @@
-// === Module 12769: useGuildPowerupLevelPerks ===
+// === Module 12778: useGuildPowerupLevelPerks ===
 
-// Module 12769 (useGuildPowerupLevelPerks)
+// Module 12778 (useGuildPowerupLevelPerks)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import _modDef2512 from "module_2512" /* 2512 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4615 */;
+import _modDef2514 from "module_2514" /* 2514 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4649 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const GUILD_FEATURE_TO_PERK = fn(4611).GUILD_FEATURE_TO_PERK;
+const GUILD_FEATURE_TO_PERK = fn(4645).GUILD_FEATURE_TO_PERK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 
@@ -29,21 +29,21 @@ export default function useGuildPowerupLevelPerks(arg0) {
       const obj = { perkIcon: GuildBoostingUtils.PerkIcons.EMOJI, description: null };
       const intl = util.intl;
       const obj2 = { totalEmojis: closure_0.features.total_emoji_slots, additionalEmojis: closure_0.features.additional_emoji_slots };
-      obj.description = intl.formatToPlainString(_modDef2512["NXvV0+"], obj2);
+      obj.description = intl.formatToPlainString(_modDef2514["NXvV0+"], obj2);
       items.push(obj);
     }
     if (includeStickers) {
       const obj3 = { perkIcon: GuildBoostingUtils.PerkIcons.STICKER, description: null };
       const intl2 = util.intl;
       const obj4 = { totalStickers: closure_0.features.total_sticker_slots, additionalStickers: closure_0.features.additional_sticker_slots };
-      obj3.description = intl2.formatToPlainString(_modDef2512.ZEvvPz, obj4);
+      obj3.description = intl2.formatToPlainString(_modDef2514.ZEvvPz, obj4);
       items.push(obj3);
     }
     if (includeSoundboards) {
       const obj5 = { perkIcon: GuildBoostingUtils.PerkIcons.SOUNDBOARD, description: null };
       const intl3 = util.intl;
       const obj6 = { totalSoundboards: closure_0.features.total_sound_slots, additionalSoundboards: closure_0.features.additional_sound_slots };
-      obj5.description = intl3.formatToPlainString(_modDef2512["s9u/E7"], obj6);
+      obj5.description = intl3.formatToPlainString(_modDef2514["s9u/E7"], obj6);
       items.push(obj5);
     }
     const features = closure_0.features.features;

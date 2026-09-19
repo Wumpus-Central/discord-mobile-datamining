@@ -1,19 +1,19 @@
-// === Module 10081: Autocompleter ===
+// === Module 10091: Autocompleter ===
 
-// Module 10081 (Autocompleter)
+// Module 10091 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import StringUtils from "StringUtils" /* 1926 */;
-import _modDef2075 from "module_2075" /* 2075 */;
-import findCodedLinks from "findCodedLinks" /* 4705 */;
-import CodedLink from "CodedLink" /* 4710 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5612 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5688 */;
-import GuildUtilsDefault from "GuildUtils" /* 5689 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 10084 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 10082 */;
-import LinkRecord from "LinkRecord" /* 10083 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import _modDef1929 from "module_1929" /* 1929 */;
+import StringUtils from "StringUtils" /* 2009 */;
+import findCodedLinks from "findCodedLinks" /* 4739 */;
+import CodedLink from "CodedLink" /* 4744 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5654 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5730 */;
+import GuildUtilsDefault from "GuildUtils" /* 5731 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 10094 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 10092 */;
+import LinkRecord from "LinkRecord" /* 10093 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(2013).GUILD_VOCAL_CHANNELS_KEY;
-fn(5685).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(2096).GUILD_VOCAL_CHANNELS_KEY;
+fn(5727).AutocompleterResultTypes;
 const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
@@ -545,7 +545,7 @@ prototype["queryLink"] = function queryLink(query) {
       const items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef2075.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef1929.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

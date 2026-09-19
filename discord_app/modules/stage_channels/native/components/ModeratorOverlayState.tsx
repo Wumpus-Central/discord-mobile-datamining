@@ -1,7 +1,7 @@
-// === Module 9905: ModeratorOverlayState ===
+// === Module 9747: ModeratorOverlayState ===
 
-// Module 9905 (ModeratorOverlayState)
-import _mod4345 from "module_4345" /* 4345 */;
+// Module 9747 (ModeratorOverlayState)
+import _mod4379 from "module_4379" /* 4379 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/stage_channels/native/compone
 
 export const useModeratorOverlayChannelState = function useModeratorOverlayChannelState(id) {
   closure_0 = id;
-  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4345.shallow);
-  const items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod4345.shallow).has(id), () => closure_1(closure_0)];
+  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4379.shallow);
+  const items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod4379.shallow).has(id), () => closure_1(closure_0)];
   return items;
 };

@@ -1,7 +1,7 @@
-// === Module 1891: constants ===
+// === Module 1974: constants ===
 
-// Module 1891 (constants)
-import types from "types" /* 1892 */;
+// Module 1974 (constants)
+import types from "types" /* 1975 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

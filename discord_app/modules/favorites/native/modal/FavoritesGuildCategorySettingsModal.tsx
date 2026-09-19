@@ -1,14 +1,14 @@
-// === Module 16369: FavoritesGuildCategorySettingsModal ===
+// === Module 16445: FavoritesGuildCategorySettingsModal ===
 
-// Module 16369 (FavoritesGuildCategorySettingsModal)
+// Module 16445 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10464 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10480 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 1961 */;
+import FavoriteStore from "FavoriteStore" /* 2044 */;
 
 require = fn;
 function FavoritesGuildCategorySettings(categoryId) {
@@ -118,10 +118,10 @@ function FavoritesGuildCategorySettings(categoryId) {
   return ref(c5, obj6);
 }
 const ScrollView = fn(17).ScrollView;
-let maxLength = fn(1971).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
+let maxLength = fn(2054).MAX_FAVORITE_CATEGORY_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -132,12 +132,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(11172)().onGoBack;
+  onGoBack = onGoBack(11185)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1115).intl;
   obj.title = intl.string(categoryId(1115).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(11174), obj);
+  return closure_8(onGoBack(11187), obj);
 };

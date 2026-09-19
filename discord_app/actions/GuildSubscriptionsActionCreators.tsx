@@ -1,8 +1,8 @@
-// === Module 7508: GuildSubscriptionsActionCreators ===
+// === Module 7552: GuildSubscriptionsActionCreators ===
 
-// Module 7508 (GuildSubscriptionsActionCreators)
+// Module 7552 (GuildSubscriptionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7482 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7526 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");

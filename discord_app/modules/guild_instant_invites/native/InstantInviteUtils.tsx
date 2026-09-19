@@ -1,13 +1,13 @@
-// === Module 11194: guild_instant_invites/InstantInviteUtils ===
+// === Module 11207: guild_instant_invites/InstantInviteUtils ===
 
-// Module 11194 (guild_instant_invites/InstantInviteUtils)
-import ToastUtils from "ToastUtils" /* 4419 */;
-import ClipboardUtils from "ClipboardUtils" /* 7385 */;
-import getInviteURLDefault from "getInviteURL" /* 7961 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10065 */;
-import _modDef11195 from "module_11195" /* 11195 */;
+// Module 11207 (guild_instant_invites/InstantInviteUtils)
+import ToastUtils from "ToastUtils" /* 4453 */;
+import ClipboardUtils from "ClipboardUtils" /* 7429 */;
+import getInviteURLDefault from "getInviteURL" /* 7999 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10075 */;
+import _modDef11208 from "module_11208" /* 11208 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -29,9 +29,9 @@ export const useInviteActions = function useInviteActions(invite) {
   const obj = { label: null, iconSource: null, action: null };
   let intl = invite(1115).intl;
   obj.label = intl.string(invite(1115).t.RDE0Sc);
-  obj.iconSource = onInviteRevoked(11187).share;
+  obj.iconSource = onInviteRevoked(11200).share;
   obj.action = function action() {
-    _modDef11195(() => {
+    _modDef11208(() => {
       let tmp4;
       if (!closure_1_3) {
         tmp4 = onInviteRevoked(dependencyMap[8])(closure_1_0.code);
@@ -63,7 +63,7 @@ export const useInviteActions = function useInviteActions(invite) {
   let obj2 = { label: null, iconSource: null, action: null };
   const intl2 = invite(1115).intl;
   obj2.label = intl2.string(invite(1115).t.OpuAlK);
-  obj2.iconSource = onInviteRevoked(11187).copy;
+  obj2.iconSource = onInviteRevoked(11200).copy;
   obj2.action = function action() {
     if (c3) {
       const tmpResult = instant_invite_InstantInviteUtils;
@@ -78,7 +78,7 @@ export const useInviteActions = function useInviteActions(invite) {
   let obj3 = { label: null, iconSource: null, variant: "destructive", action: null };
   const intl3 = invite(1115).intl;
   obj3.label = intl3.string(invite(1115).t.v6Yazx);
-  obj3.iconSource = onInviteRevoked(11187).revoke;
+  obj3.iconSource = onInviteRevoked(11200).revoke;
   dependencyMap = asyncGeneratorStep(async () => {
     await v2(tmp24[12]).revokeInvite(invite);
     if (1 === tmp7) {

@@ -1,11 +1,11 @@
-// === Module 5857: TableRowGroup ===
+// === Module 5899: TableRowGroup ===
 
-// Module 5857 (TableRowGroup)
+// Module 5899 (TableRowGroup)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4423 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import TableRowDivider from "TableRowDivider" /* 5772 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 5776 */;
+import useToken from "useToken" /* 4457 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import TableRowDivider from "TableRowDivider" /* 5814 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 5818 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ class TableRowGroupTitle {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flexShrink: 0 }, content: { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 }, title: { marginBottom: 8 }, description: { marginBottom: 8 }, hasTrailingText: null, helperText: null };
 let obj3 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
 obj2.hasTrailingText = { borderBottomLeftRadius: nativeDefault.radii.none, borderBottomRightRadius: nativeDefault.radii.none };

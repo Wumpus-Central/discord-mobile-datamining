@@ -1,6 +1,6 @@
-// === Module 16995: useVibegrationsTraceDetail ===
+// === Module 17071: useVibegrationsTraceDetail ===
 
-// Module 16995 (useVibegrationsTraceDetail)
+// Module 17071 (useVibegrationsTraceDetail)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

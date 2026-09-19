@@ -1,8 +1,8 @@
-// === Module 9777: isActivitySupportedOnClientPlatform ===
+// === Module 9633: isActivitySupportedOnClientPlatform ===
 
-// Module 9777 (isActivitySupportedOnClientPlatform)
+// Module 9633 (isActivitySupportedOnClientPlatform)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import Server from "Server" /* 1895 */;
+import Server from "Server" /* 1978 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");

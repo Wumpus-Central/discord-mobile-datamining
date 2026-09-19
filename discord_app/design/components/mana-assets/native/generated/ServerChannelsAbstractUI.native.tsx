@@ -1,9 +1,9 @@
-// === Module 6609: ServerChannelsAbstractUI ===
+// === Module 6653: ServerChannelsAbstractUI ===
 
-// Module 6609 (ServerChannelsAbstractUI)
+// Module 6653 (ServerChannelsAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6610 from "module_6610" /* 6610 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6654 from "module_6654" /* 6654 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerChannelsAbstractUI = function ServerChannelsAbstractUI(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6610 };
+  const obj2 = { uri: _modDef6654 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

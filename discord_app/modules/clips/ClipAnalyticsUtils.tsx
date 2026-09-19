@@ -1,15 +1,15 @@
-// === Module 7942: ClipAnalyticsUtils ===
+// === Module 7980: ClipAnalyticsUtils ===
 
-// Module 7942 (ClipAnalyticsUtils)
+// Module 7980 (ClipAnalyticsUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4774 */;
-import _modDef4841 from "module_4841" /* 4841 */;
-import VideoQualityStats from "VideoQualityStats" /* 7943 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4768 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4761 */;
-import ClipsStore from "ClipsStore" /* 1915 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4808 */;
+import _modDef4875 from "module_4875" /* 4875 */;
+import VideoQualityStats from "VideoQualityStats" /* 7981 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4802 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4795 */;
+import ClipsStore from "ClipsStore" /* 1998 */;
 
 require = fn;
 function getClipSignalTypes(arg0) {
@@ -139,7 +139,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(5301);
+const ClipsConstants = fn(5343);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -194,10 +194,10 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
 };
 export const getClipContextProperties = function getClipContextProperties() {
   const obj = { clip_runtime, current_clip_session_id: null };
-  const currentClipsSession = ClipsStore.getCurrentClipsSession();
+  const activeClipsSession = ClipsStore.getActiveClipsSession();
   let id;
-  if (currentClipsSession != null) {
-    id = currentClipsSession.id;
+  if (activeClipsSession != null) {
+    id = activeClipsSession.id;
   }
   obj.current_clip_session_id = id;
   return obj;
@@ -232,10 +232,10 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   const obj3 = {};
   const merged = Object.assign({ clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate });
   const obj7 = { clip_runtime, current_clip_session_id: null };
-  const currentClipsSession = ClipsStore.getCurrentClipsSession();
+  const activeClipsSession = ClipsStore.getActiveClipsSession();
   let id;
-  if (currentClipsSession != null) {
-    id = currentClipsSession.id;
+  if (activeClipsSession != null) {
+    id = activeClipsSession.id;
   }
   obj7.current_clip_session_id = id;
   const merged1 = Object.assign(obj7);
@@ -274,7 +274,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef4841(isFavorite, tmp)) {
+    if (!_modDef4875(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -282,7 +282,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef4841(name, tmp5)) {
+    if (!_modDef4875(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -302,7 +302,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef4841(start1, start)) {
+    if (!_modDef4875(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -318,7 +318,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef4841(end1, end)) {
+    if (!_modDef4875(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -334,7 +334,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef4841(applicationAudio1, applicationAudio)) {
+    if (!_modDef4875(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -350,7 +350,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef4841(voiceAudio1, voiceAudio)) {
+    if (!_modDef4875(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -366,7 +366,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef4841(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef4875(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -388,7 +388,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef4841(preset1, preset)) {
+    if (!_modDef4875(preset1, preset)) {
       tmp31 = preset1;
     }
   }
@@ -396,10 +396,10 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const values = Object.values(obj);
   if (!values.every((item) => null == item)) {
     const obj2 = { clip_runtime, current_clip_session_id: null };
-    const currentClipsSession = ClipsStore.getCurrentClipsSession();
+    const activeClipsSession = ClipsStore.getActiveClipsSession();
     let id;
-    if (currentClipsSession != null) {
-      id = currentClipsSession.id;
+    if (activeClipsSession != null) {
+      id = activeClipsSession.id;
     }
     const obj4 = {};
     obj2.current_clip_session_id = id;

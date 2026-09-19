@@ -1,19 +1,19 @@
-// === Module 11578: NewChannelFollower ===
+// === Module 11587: NewChannelFollower ===
 
-// Module 11578 (NewChannelFollower)
+// Module 11587 (NewChannelFollower)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11581 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11584 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11590 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11593 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import SortedGuildStore from "SortedGuildStore" /* 5608 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildChannelStore from "GuildChannelStore" /* 2096 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import SortedGuildStore from "SortedGuildStore" /* 5650 */;
 
 const require = globalThis.__r;
 
@@ -28,13 +28,13 @@ function canFollowIntoChannel(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ImageBackground: metroRequire } = get_ActivityIndicator);
-fn(1962).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-let closure_10 = fn(2013).GUILD_SELECTABLE_CHANNELS_KEY;
+fn(2045).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+let closure_10 = fn(2096).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AbortCodes: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 }, header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 }, headerGuildIcon: { width: 40, marginRight: 16 }, headerChannelContainer: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 }, headerChannel: null, headerChannelIcon: null, ctaHeader: null, ctaSubhead: null, channelIcon: null };
 let obj3 = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 32 };
 obj2.headerChannel = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
@@ -81,9 +81,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("module_11579");
+    let tmp8Result = require("module_11588");
   } else {
-    tmp8Result = require("module_11580");
+    tmp8Result = require("module_11589");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { source: tmp8Result, style: tmp.header, children: null };
@@ -164,8 +164,8 @@ export default function NewChannelFollower(targetChannelId) {
     obj2.onClose = function onClose() {
       closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(asyncRequireImpl(9664, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
-    const tmp = asyncRequireImpl(9664, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(9539, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
+    const tmp = asyncRequireImpl(9539, dependencyMap.paths);
   };
   obj14.children = closure_16(require("TableRow").TableRow, obj15);
   const items6 = [closure_16(require("TableRowGroup").TableRowGroup, obj14), ];

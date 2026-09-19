@@ -1,9 +1,9 @@
-// === Module 6313: GemSpotIllustration ===
+// === Module 6357: GemSpotIllustration ===
 
-// Module 6313 (GemSpotIllustration)
+// Module 6357 (GemSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6314 from "module_6314" /* 6314 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6358 from "module_6358" /* 6358 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GemSpotIllustration = function GemSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6314 };
+  const obj2 = { uri: _modDef6358 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

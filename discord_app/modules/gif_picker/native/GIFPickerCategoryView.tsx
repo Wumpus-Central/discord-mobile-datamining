@@ -1,13 +1,13 @@
-// === Module 10625: GIFPickerCategoryView ===
+// === Module 10641: GIFPickerCategoryView ===
 
-// Module 10625 (GIFPickerCategoryView)
+// Module 10641 (GIFPickerCategoryView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 10004 */;
-import StarIcon from "StarIcon" /* 10476 */;
-import AnalyticsIcon from "AnalyticsIcon" /* 10626 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9846 */;
+import StarIcon from "StarIcon" /* 10492 */;
+import AnalyticsIcon from "AnalyticsIcon" /* 10642 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 fn(1074).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 }, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
 obj2.gifImage = { borderRadius: nativeDefault.radii.xs, flex: 1 };

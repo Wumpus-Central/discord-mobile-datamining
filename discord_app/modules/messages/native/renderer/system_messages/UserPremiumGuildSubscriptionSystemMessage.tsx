@@ -1,11 +1,11 @@
-// === Module 8222: UserPremiumGuildSubscriptionSystemMessage ===
+// === Module 8260: UserPremiumGuildSubscriptionSystemMessage ===
 
-// Module 8222 (UserPremiumGuildSubscriptionSystemMessage)
+// Module 8260 (UserPremiumGuildSubscriptionSystemMessage)
 import util from "util" /* 1115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8179 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8181 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8183 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8223 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8217 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8219 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8221 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8261 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");

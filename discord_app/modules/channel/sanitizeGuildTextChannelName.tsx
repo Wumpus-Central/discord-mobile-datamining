@@ -1,6 +1,6 @@
-// === Module 4877: sanitizeGuildTextChannelName ===
+// === Module 4911: sanitizeGuildTextChannelName ===
 
-// Module 4877 (sanitizeGuildTextChannelName)
+// Module 4911 (sanitizeGuildTextChannelName)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");

@@ -1,12 +1,12 @@
-// === Module 9747: _launchFrame ===
+// === Module 9572: _launchFrame ===
 
-// Module 9747 (_launchFrame)
+// Module 9572 (_launchFrame)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9742 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9751 */;
-import getFramesManagerDefault from "getFramesManager" /* 9815 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 9573 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9592 */;
+import getFramesManagerDefault from "getFramesManager" /* 9622 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9748 */;
+import FramesStore from "FramesStore" /* 9312 */;
 
 require = fn;
 let closure_11 = async function _launchFrame(arg0) {
@@ -320,9 +320,9 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(9749);
+const FramesConstants = fn(9313);
 ({ FrameIntent: hasOwnProperty, FrameLayoutModes: metroRequire, getChannelIdForSurface: closure_7, getFrameIntentForSurface: closure_8, makeFrameId: closure_9 } = FramesConstants);
-const ActivityPanelModes = fn(9743).ActivityPanelModes;
+const ActivityPanelModes = fn(9314).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 

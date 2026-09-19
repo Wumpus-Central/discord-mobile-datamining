@@ -1,6 +1,6 @@
-// === Module 6210: ? ===
+// === Module 6254: ? ===
 
-// Module 6210
+// Module 6254
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDepthTier2SmallBadge-2x.png.js");

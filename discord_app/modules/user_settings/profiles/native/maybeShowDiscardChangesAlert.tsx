@@ -1,8 +1,8 @@
-// === Module 11173: maybeShowDiscardChangesAlert ===
+// === Module 11186: maybeShowDiscardChangesAlert ===
 
-// Module 11173 (maybeShowDiscardChangesAlert)
+// Module 11186 (maybeShowDiscardChangesAlert)
 import util from "util" /* 1115 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     if (onHasEdits != null) {
       onHasEdits();
     }
-    const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+    const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, isDismissable: false };
     const intl = util.intl;
     obj2.title = intl.string(util.t.pvRCSu);
     const intl2 = util.intl;
@@ -32,8 +32,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     obj2.onCancel = function onCancel() {
       onConfirm(dependencyMap[0]).close();
     };
-    let showResult = onConfirm(5067).show(obj2);
-    const obj = onConfirm(5067);
+    let showResult = onConfirm(5109).show(obj2);
+    const obj = onConfirm(5109);
   } else {
     showResult = onConfirm();
   }
@@ -41,7 +41,7 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
 };
 export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   ({ onConfirm, onCancel } = arg0);
-  const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
+  const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, isDismissable: false };
   const intl = util.intl;
   obj2.title = intl.string(util.t.pvRCSu);
   const intl2 = util.intl;

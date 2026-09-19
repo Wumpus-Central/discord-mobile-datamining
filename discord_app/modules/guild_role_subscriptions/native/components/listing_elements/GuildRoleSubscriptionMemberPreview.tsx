@@ -1,17 +1,17 @@
-// === Module 15447: GuildRoleSubscriptionMemberPreview ===
+// === Module 15502: GuildRoleSubscriptionMemberPreview ===
 
-// Module 15447 (GuildRoleSubscriptionMemberPreview)
+// Module 15502 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1092 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4874 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import RoleIconUtils from "RoleIconUtils" /* 7383 */;
-import RoleIconDefault from "RoleIcon" /* 7401 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import RoleIconUtils from "RoleIconUtils" /* 7427 */;
+import RoleIconDefault from "RoleIcon" /* 7445 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: { marginStart: 16 }, contextRow: { flexDirection: "row", alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

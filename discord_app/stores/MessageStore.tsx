@@ -1,38 +1,38 @@
-// === Module 4943: MessageStore ===
+// === Module 4976: MessageStore ===
 
-// Module 4943 (MessageStore)
+// Module 4976 (MessageStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
-import Server from "Server" /* 1895 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 1987 */;
-import ReactionUtils from "ReactionUtils" /* 4373 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4945 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 5442 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5445 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7796 */;
-import MessageQueue from "MessageQueue" /* 8036 */;
-import canEditMessageDefault from "canEditMessage" /* 11988 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13971 */;
+import Server from "Server" /* 1978 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2070 */;
+import ReactionUtils from "ReactionUtils" /* 4407 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4978 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 5484 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5487 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7840 */;
+import MessageQueue from "MessageQueue" /* 8074 */;
+import canEditMessageDefault from "canEditMessage" /* 11997 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 14025 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 2015 */;
-import EphemeralMessageStore from "EphemeralMessageStore" /* 4944 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import ImpersonateStore from "ImpersonateStore" /* 2098 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 4977 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import DimensionStore from "DimensionStore" /* 5441 */;
-import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import DimensionStore from "DimensionStore" /* 5483 */;
+import GuildChannelStore from "GuildChannelStore" /* 2096 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -79,8 +79,9 @@ function handleConnectionOpen() {
     ChannelMessagesDefault.commit(mutate.mutate({ ready: false, loadingMore: false }));
   });
   set.clear();
+  map.clear();
 }
-let closure_30 = async function _addPushNotificationMessageIfNotCached(arg0, arg1, arg2) {
+let closure_31 = async function _addPushNotificationMessageIfNotCached(arg0, arg1, arg2) {
   closure_0 = arg0;
   let id = arg1;
   closure_2 = arg2;
@@ -148,11 +149,11 @@ let closure_30 = async function _addPushNotificationMessageIfNotCached(arg0, arg
           c7 = 3;
           return { value: "HermesInternal", done: null };
         }
-        closure_132_27.log("Push notification message not in cache, adding directly", closure_131_1.id, closure_131_1.channel_id);
+        closure_132_28.log("Push notification message not in cache, adding directly", closure_131_1.id, closure_131_1.channel_id);
         orCreate = closure_132_1(closure_132_2[19]).getOrCreate(closure_131_0);
         const obj2 = closure_132_1(closure_132_2[19]);
         closure_132_1(closure_132_2[19]).commit(orCreate.receivePushNotification(closure_131_1, closure_131_2));
-        closure_132_34.emitChange();
+        closure_132_35.emitChange();
         c7 = 3;
         const obj3 = closure_132_1(closure_132_2[19]);
       } catch (tmp27) {
@@ -353,8 +354,9 @@ function handleMessageSendFailedAutomod(arg0) {
 const Constants = fn(1074);
 ({ BasicPermissions: closure_19, ChannelTypes: closure_20, MessageFlags: closure_21, MessageReferenceTypes: closure_22, MessageStates: closure_23, MessageTypes: closure_24, Permissions: closure_25 } = Constants);
 const set = new Set();
+const map = new Map();
 const logger = new LoggerDefault("MessageStore");
-let c28 = false;
+let c29 = false;
 const Store = initializeDefault.Store;
 class MessageStore extends Store {
 }
@@ -385,6 +387,9 @@ prototype["getMessages"] = function getMessages(arg0) {
 prototype["getMessage"] = function getMessage(arg0, arg1) {
   const orCreate = ChannelMessagesDefault.getOrCreate(arg0);
   return orCreate.get(arg1);
+};
+prototype["getAutomodRemovalNotice"] = function getAutomodRemovalNotice(id) {
+  return map.get(id);
 };
 prototype["getLastEditableMessage"] = function getLastEditableMessage(id) {
   id = UserStore.getCurrentUser();
@@ -509,7 +514,7 @@ prototype["hasCurrentUserSentWaveBlockingMessage"] = function hasCurrentUserSent
   });
 };
 prototype["hasCurrentUserSentMessageSinceAppStart"] = function hasCurrentUserSentMessageSinceAppStart() {
-  return c28;
+  return c29;
 };
 MessageStore.displayName = "MessageStore";
 const messageStore = new MessageStore(DispatcherDefault, {
@@ -733,7 +738,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
       if (tmp3Result.isIOSPushNotificationRawPayloadFixExperimentEnabled()) {
         (function addPushNotificationMessageIfNotCached() {
           const self = this;
-          const apply = closure_1_30.apply;
+          const apply = closure_1_31.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
@@ -820,6 +825,36 @@ const messageStore = new MessageStore(DispatcherDefault, {
     return false;
   },
   MESSAGE_SEND_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
+  AUTO_MODERATION_CONTENT_DELETED: function handleAutomodContentDeleted(message) {
+    message = message.message;
+    if (null != message) {
+      if (null == message.thread) {
+        const channel_id = message.channel_id;
+        const orCreate = ChannelMessagesDefault.getOrCreate(channel_id);
+        let ready = orCreate.ready;
+        if (ready) {
+          const hasItem = orCreate.has(message.id);
+          let tmp3 = !hasItem;
+          let obj = orCreate;
+          if (!hasItem) {
+            const receiveMessageResult = orCreate.receiveMessage(message, true === DimensionStore.isAtBottom(channel_id));
+            tmp3 = !receiveMessageResult.has(message.id);
+            obj = receiveMessageResult;
+          }
+          if (!tmp3) {
+            const updateResult = obj.update(message.id, (set) => set.set("flags", FlagUtils.addFlag(set.flags, constants.EPHEMERAL)));
+            ChannelMessagesDefault.commit(updateResult);
+            const result = map.set(message.id, tmp);
+            const tmp11Result = ChannelMessagesDefault;
+          }
+          ready = !tmp3;
+          const tmp5 = !tmp3;
+        }
+        return ready;
+      }
+    }
+    return false;
+  },
   MESSAGE_EDIT_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     const id = message.message.id;
@@ -863,9 +898,17 @@ const messageStore = new MessageStore(DispatcherDefault, {
   },
   MESSAGE_DELETE: function handleMessageDelete(id) {
     id = id.id;
-    const orCreate = ChannelMessagesDefault.getOrCreate(id.channelId);
+    ({ channelId, local } = id);
+    const orCreate = ChannelMessagesDefault.getOrCreate(channelId);
     if (null != orCreate) {
       if (orCreate.has(id)) {
+        if (map.has(id)) {
+          if (true !== local) {
+            return false;
+          } else {
+            map.delete(id);
+          }
+        }
         if (orCreate.revealedMessageId !== id) {
           value = orCreate.get(id);
           if (null != value) {
@@ -912,7 +955,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    const orCreate = mutation(5442).getOrCreate(ids.channelId);
+    const orCreate = mutation(5484).getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
     } else {
@@ -961,14 +1004,14 @@ const messageStore = new MessageStore(DispatcherDefault, {
           }
           tmpResult = tmp(12);
         }
-        tmp(5442).commit(tmp3);
+        tmp(5484).commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);
         });
-        const tmpResult2 = tmp(5442);
+        const tmpResult2 = tmp(5484);
       }
     }
-    let obj = mutation(5442);
+    let obj = mutation(5484);
   },
   MESSAGE_REVEAL: function handleMessageReveal(arg0) {
     ({ channelId, messageId } = arg0);
@@ -1150,7 +1193,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
     message = message.message;
     const currentUser = UserStore.getCurrentUser();
     if (tmp2) {
-      c28 = true;
+      c29 = true;
     }
   }
 });

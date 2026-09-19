@@ -1,13 +1,13 @@
-// === Module 9119: GameProfileDetails ===
+// === Module 9158: GameProfileDetails ===
 
-// Module 9119 (GameProfileDetails)
+// Module 9158 (GameProfileDetails)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Server from "Server" /* 1895 */;
-import DateUtilsAll from "DateUtils" /* 4404 */;
-import LinkingDefault from "Linking" /* 4417 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import SKUUtils from "SKUUtils" /* 8948 */;
+import Server from "Server" /* 1978 */;
+import DateUtilsAll from "DateUtils" /* 4438 */;
+import LinkingDefault from "Linking" /* 4451 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import SKUUtils from "SKUUtils" /* 8987 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,10 +30,10 @@ function GameProfileWebsiteButton(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8590).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8628).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -130,7 +130,7 @@ export default function GameProfileDetails(game) {
               if (game != null) {
                 const websites = game.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(9127)(item, trackAction(576).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(9166)(item, trackAction(576).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -174,7 +174,7 @@ export default function GameProfileDetails(game) {
                 stringResult = intl8.string(util.t["UxAag+"]);
               }
               const obj7 = { label: stringResult, value: null };
-              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9120).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE }, platform)) };
+              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9159).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE }, platform)) };
               obj7.value = React6(hasOwnProperty, obj8);
               items.push(obj7);
             }

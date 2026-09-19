@@ -1,14 +1,14 @@
-// === Module 9324: AudioManagerStore ===
+// === Module 9907: AudioManagerStore ===
 
-// Module 9324 (AudioManagerStore)
+// Module 9907 (AudioManagerStore)
 import _modDef12 from "module_12" /* 12 */;
 import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import Constants2 from "Constants" /* 4747 */;
-import NativeAudioManagerModuleDefault from "NativeAudioManagerModule" /* 9325 */;
+import Constants2 from "Constants" /* 4781 */;
+import NativeAudioManagerModuleDefault from "NativeAudioManagerModule" /* 9908 */;
 import size from "module_2" /* 2 */;
 
 const NativeAudioManagerModule_mod = NativeAudioManagerModuleDefault;

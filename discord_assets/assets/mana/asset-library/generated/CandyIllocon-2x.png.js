@@ -1,6 +1,6 @@
-// === Module 6018: ? ===
+// === Module 6062: ? ===
 
-// Module 6018
+// Module 6062
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CandyIllocon-2x.png.js");

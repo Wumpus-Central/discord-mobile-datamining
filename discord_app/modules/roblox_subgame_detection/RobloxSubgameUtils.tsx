@@ -1,9 +1,9 @@
-// === Module 4852: RobloxSubgameUtils ===
+// === Module 4886: RobloxSubgameUtils ===
 
-// Module 4852 (RobloxSubgameUtils)
+// Module 4886 (RobloxSubgameUtils)
 import _modDef12 from "module_12" /* 12 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 4853 */;
-import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 4854 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 4887 */;
+import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 4888 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -14,7 +14,7 @@ let closure_7 = async function _openRobloxURLWithRootPlaceId() {
   await closure_130_1(closure_130_2[6])(closure_129_0);
   return value;
 };
-const isDetectionEnabled = fn(1916).isDetectionEnabled;
+const isDetectionEnabled = fn(1999).isDetectionEnabled;
 const Constants = fn(1074);
 ({ DistributorNames: hasOwnProperty, Distributors: metroRequire } = Constants);
 const size = fn(2);
@@ -145,11 +145,11 @@ export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGame
           let tmp9 = require;
         }
         const obj7 = {};
-        obj7[tmp9(4853).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
+        obj7[tmp9(4887).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
         const universeId = subgameInfo.universeId;
         obj.sku = universeId;
         if (null != subgameInfo.placeId) {
-          obj7[tmp9(4853).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
+          obj7[tmp9(4887).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
         }
         const _Object = Object;
         let tmp13;

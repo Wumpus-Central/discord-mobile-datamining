@@ -1,8 +1,8 @@
-// === Module 16089: CollectiblesProgressiveImage ===
+// === Module 16165: CollectiblesProgressiveImage ===
 
-// Module 16089 (CollectiblesProgressiveImage)
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import timing from "timing" /* 4723 */;
+// Module 16165 (CollectiblesProgressiveImage)
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import timing from "timing" /* 4757 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -18,7 +18,7 @@ export const CollectiblesProgressiveImage = function CollectiblesProgressiveImag
   ({ source, style } = arg0);
   let sharedValue;
   const merged = Object.assign(arg0, Object.assign({ source: 0, style: 0 }));
-  sharedValue = sharedValue(4458).useSharedValue(0);
+  sharedValue = sharedValue(4492).useSharedValue(0);
   let obj2 = { style, children: null };
   const obj3 = {};
   const merged1 = Object.assign(merged);

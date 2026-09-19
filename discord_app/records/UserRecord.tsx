@@ -4,8 +4,8 @@
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1882 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1965 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1969 */;
 import Record from "Record" /* 1387 */;
 
 const AvatarUtilsDefault = AvatarUtils;

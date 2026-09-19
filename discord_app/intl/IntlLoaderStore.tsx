@@ -1,13 +1,13 @@
-// === Module 2027: IntlLoaderStore ===
+// === Module 2110: IntlLoaderStore ===
 
-// Module 2027 (IntlLoaderStore)
+// Module 2110 (IntlLoaderStore)
 import util from "util" /* 1115 */;
 import _modDef2111 from "module_2111" /* 2111 */;
-import bg from "bg" /* 3806 */;
-import formatjs from "formatjs" /* 4281 */;
-import moment from "moment" /* 4312 */;
+import bg from "bg" /* 3840 */;
+import formatjs from "formatjs" /* 4315 */;
+import moment from "moment" /* 4346 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import module_2028 from "module_2028" /* 2028 */;
+import module_1882 from "module_1882" /* 1882 */;
 
 require = fn;
 let closure_6 = async function _setAppLocale(arg0) {

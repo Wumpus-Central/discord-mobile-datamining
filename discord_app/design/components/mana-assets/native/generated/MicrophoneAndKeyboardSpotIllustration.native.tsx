@@ -1,9 +1,9 @@
-// === Module 6429: MicrophoneAndKeyboardSpotIllustration ===
+// === Module 6473: MicrophoneAndKeyboardSpotIllustration ===
 
-// Module 6429 (MicrophoneAndKeyboardSpotIllustration)
+// Module 6473 (MicrophoneAndKeyboardSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6430 from "module_6430" /* 6430 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6474 from "module_6474" /* 6474 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const MicrophoneAndKeyboardSpotIllustration = function MicrophoneAndKeybo
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6430 };
+  const obj2 = { uri: _modDef6474 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

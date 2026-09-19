@@ -1,6 +1,6 @@
-// === Module 1929: DOMUtils ===
+// === Module 2012: DOMUtils ===
 
-// Module 1929 (DOMUtils)
+// Module 2012 (DOMUtils)
 import size from "module_2" /* 2 */;
 
 const re0 = /input/i;

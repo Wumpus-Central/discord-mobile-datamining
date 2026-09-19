@@ -1,12 +1,12 @@
-// === Module 17805: SubscriptionManager ===
+// === Module 17885: SubscriptionManager ===
 
-// Module 17805 (SubscriptionManager)
+// Module 17885 (SubscriptionManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
-import BillingInfoStore from "BillingInfoStore" /* 4382 */;
-import SubscriptionStore from "SubscriptionStore" /* 4386 */;
-import EntitlementStore from "EntitlementStore" /* 7590 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import BillingInfoStore from "BillingInfoStore" /* 4416 */;
+import SubscriptionStore from "SubscriptionStore" /* 4420 */;
+import EntitlementStore from "EntitlementStore" /* 7634 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 let require = fn;
 const PremiumConstants = fn(1374);
@@ -57,7 +57,7 @@ const prototype = function SubscriptionManager() {
               if (!isSubscriptionFetching) {
                 c2 = 1;
                 currentUser = 1;
-                const obj6 = { value: tmp2(5046).fetchSubscriptions(), done: false };
+                const obj6 = { value: tmp2(5079).fetchSubscriptions(), done: false };
                 return obj6;
               }
             }
@@ -94,7 +94,7 @@ const prototype = function SubscriptionManager() {
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
-          const obj8 = { value: tmp2(7596).fetchUserEntitlementsForApplication(closure_1_7), done: false };
+          const obj8 = { value: tmp2(7640).fetchUserEntitlementsForApplication(closure_1_7), done: false };
           return obj8;
         }
       } catch (tmp22) {
@@ -213,7 +213,7 @@ const prototype = function SubscriptionManager() {
             applyArgumentsResult = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            const obj6 = { value: applyArgumentsResult(5046).fetchIpCountryCode(), done: false };
+            const obj6 = { value: applyArgumentsResult(5079).fetchIpCountryCode(), done: false };
             return obj6;
           }
         } else {
@@ -228,7 +228,7 @@ const prototype = function SubscriptionManager() {
             } else if (null != ipCountryCode.ipCountryCode) {
               dependencyMap = 2;
               c2 = 1;
-              const obj8 = { value: applyArgumentsResult(5046).fetchPaymentSources(), done: false };
+              const obj8 = { value: applyArgumentsResult(5079).fetchPaymentSources(), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {

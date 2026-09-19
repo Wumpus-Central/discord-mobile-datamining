@@ -1,12 +1,12 @@
-// === Module 15688: SwipeRightToLeftScreen ===
+// === Module 15743: SwipeRightToLeftScreen ===
 
-// Module 15688 (SwipeRightToLeftScreen)
-import SettingBuilders from "SettingBuilders" /* 11714 */;
-import SettingLayoutDefault from "SettingLayout" /* 14904 */;
+// Module 15743 (SwipeRightToLeftScreen)
+import SettingBuilders from "SettingBuilders" /* 11723 */;
+import SettingLayoutDefault from "SettingLayout" /* 14958 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8194).MobileUserSettings;
+const MobileUserSettings = fn(8232).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx");

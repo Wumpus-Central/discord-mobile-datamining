@@ -1,13 +1,13 @@
-// === Module 18135: GuildPremiumRoleSubscribeButton ===
+// === Module 18214: GuildPremiumRoleSubscribeButton ===
 
-// Module 18135 (GuildPremiumRoleSubscribeButton)
+// Module 18214 (GuildPremiumRoleSubscribeButton)
 import util from "util" /* 1115 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 10541 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 10557 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_3 = createStyles.createStyles({ crButton: { marginVertical: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildPremiumRoleSubscribeButton.tsx");

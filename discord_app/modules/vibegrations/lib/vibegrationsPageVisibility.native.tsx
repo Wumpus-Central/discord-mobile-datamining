@@ -1,7 +1,7 @@
-// === Module 16949: vibegrationsPageVisibility ===
+// === Module 17025: vibegrationsPageVisibility ===
 
-// Module 16949 (vibegrationsPageVisibility)
-import AppStateStore from "AppStateStore" /* 1896 */;
+// Module 17025 (vibegrationsPageVisibility)
+import AppStateStore from "AppStateStore" /* 1979 */;
 
 const AppStates = fn(1074).AppStates;
 const size = fn(2);

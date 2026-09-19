@@ -1,6 +1,6 @@
-// === Module 12564: directory_channels/GuildDirectoryUtils ===
+// === Module 12573: directory_channels/GuildDirectoryUtils ===
 
-// Module 12564 (directory_channels/GuildDirectoryUtils)
+// Module 12573 (directory_channels/GuildDirectoryUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,7 +20,8 @@ let closure_6 = async function _onAddDirectoryGuildEntry() {
           return closure_3_5(closure_0, obj);
         };
       });
-    }
+    },
+    isDismissable: false
   });
   await "HermesInternal";
   closure_1 = tmp2;

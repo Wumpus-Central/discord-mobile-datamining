@@ -1,8 +1,8 @@
-// === Module 9867: participantHasVideo ===
+// === Module 9709: participantHasVideo ===
 
-// Module 9867 (participantHasVideo)
+// Module 9709 (participantHasVideo)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 
 const require = globalThis.__r;
 
@@ -53,9 +53,9 @@ function canRenderParticipantVideo(participant) {
   }
   return tmp;
 }
-const CallConstants = fn(4743);
+const CallConstants = fn(4777);
 ({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: metroRequire } = CallConstants);
-const Features = fn(4747).Features;
+const Features = fn(4781).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
 

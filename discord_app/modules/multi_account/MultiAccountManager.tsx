@@ -1,11 +1,11 @@
-// === Module 17742: MultiAccountManager ===
+// === Module 17822: MultiAccountManager ===
 
-// Module 17742 (MultiAccountManager)
+// Module 17822 (MultiAccountManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GatewaySocket from "GatewaySocket" /* 13834 */;
+import GatewaySocket from "GatewaySocket" /* 13889 */;
 import UserStore from "UserStore" /* 1372 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13833 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13888 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 require = fn;
 class MultiAccountManager extends tmp2 {

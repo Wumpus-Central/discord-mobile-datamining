@@ -1,12 +1,12 @@
-// === Module 8290: VoiceSessionUtils ===
+// === Module 8328: VoiceSessionUtils ===
 
-// Module 8290 (VoiceSessionUtils)
-import useMessageAuthor from "useMessageAuthor" /* 4955 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8199 */;
-import maybeSortByProbability from "maybeSortByProbability" /* 8291 */;
+// Module 8328 (VoiceSessionUtils)
+import useMessageAuthor from "useMessageAuthor" /* 4988 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8237 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 8329 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7855 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7893 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

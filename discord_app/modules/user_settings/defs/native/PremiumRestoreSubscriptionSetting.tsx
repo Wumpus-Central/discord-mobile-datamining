@@ -1,23 +1,23 @@
-// === Module 15452: PremiumRestoreSubscriptionSetting ===
+// === Module 15507: PremiumRestoreSubscriptionSetting ===
 
-// Module 15452 (PremiumRestoreSubscriptionSetting)
+// Module 15507 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 7615 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 7659 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(8900).NitroWheelIcon,
+  IconComponent: fn(8939).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then((result) => {
@@ -53,7 +53,8 @@ const pressable = SettingBuilders.createPressable({
             return closure_2_4(closure_0, {});
           };
         });
-      }
+      },
+      isDismissable: false
     });
   },
   withArrow: true,

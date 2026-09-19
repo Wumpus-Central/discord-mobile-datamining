@@ -1,13 +1,13 @@
-// === Module 1950: DismissibleContentShownStateStore ===
+// === Module 2033: DismissibleContentShownStateStore ===
 
-// Module 1950 (DismissibleContentShownStateStore)
+// Module 2033 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1949 */;
-import isActionRequiredDefault from "isActionRequired" /* 1954 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1951 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 2032 */;
+import isActionRequiredDefault from "isActionRequired" /* 2037 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2034 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2035 */;
 
 const require = globalThis.__r;
 
@@ -173,7 +173,7 @@ let closure_6 = identity.createWithEqualityFn(function initState() {
   return obj;
 });
 let closure_7 = false;
-const batchInvocationManager = new fn(1953).BatchInvocationManager((arg0) => {
+const batchInvocationManager = new fn(2036).BatchInvocationManager((arg0) => {
   const resolved = Promise.resolve(arg0);
   return resolved.then((result) => {
     closure_0 = result;

@@ -1,23 +1,23 @@
-// === Module 18125: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 18204: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 18125 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 18204 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7319 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9288 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15436 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 10010 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15491 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5694 */;
+import TextStyles_mod from "TextStyles" /* 5736 */;
 
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { headerContainer: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", paddingBottom: 8, paddingHorizontal: 16 }, headerButtonContainer: { flexDirection: "row", alignSelf: "center", minWidth: 60 }, headerButtonStart: { alignItems: "flex-start" }, headerButtonEnd: { alignItems: "flex-end" }, headerButton: null, disabledButton: null, titleContainer: null, title: null, subtitle: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));

@@ -1,6 +1,6 @@
-// === Module 6754: ? ===
+// === Module 6798: ? ===
 
-// Module 6754
+// Module 6798
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VoiceFiltersSpotIllustration-2x.png.js");

@@ -1,14 +1,14 @@
-// === Module 5790: IdentityVerificationField ===
+// === Module 5832: IdentityVerificationField ===
 
-// Module 5790 (IdentityVerificationField)
+// Module 5832 (IdentityVerificationField)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4546 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4672 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 7154 */;
-import EnvelopeIcon2 from "EnvelopeIcon" /* 7277 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4580 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4706 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 7198 */;
+import EnvelopeIcon2 from "EnvelopeIcon" /* 7321 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -50,7 +50,7 @@ function BaseIdentityVerificationField(icon) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, icon: { marginLeft: 4, marginRight: 8 }, label: { flex: 1, marginLeft: 4, lineHeight: 20 }, verifiedContainer: { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" }, ctaButton: { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

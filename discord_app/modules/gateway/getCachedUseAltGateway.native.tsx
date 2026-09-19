@@ -1,7 +1,7 @@
-// === Module 13840: getCachedUseAltGateway ===
+// === Module 13895: getCachedUseAltGateway ===
 
-// Module 13840 (getCachedUseAltGateway)
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13841 */;
+// Module 13895 (getCachedUseAltGateway)
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13896 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");

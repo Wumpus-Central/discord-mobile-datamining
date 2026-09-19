@@ -1,9 +1,9 @@
-// === Module 9009: CollectiblesWishlistUtils ===
+// === Module 9048: CollectiblesWishlistUtils ===
 
-// Module 9009 (CollectiblesWishlistUtils)
+// Module 9048 (CollectiblesWishlistUtils)
 import util from "util" /* 1115 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7750 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7794 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");

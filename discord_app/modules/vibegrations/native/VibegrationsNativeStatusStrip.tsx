@@ -1,10 +1,10 @@
-// === Module 16973: VibegrationsNativeStatusStrip ===
+// === Module 17049: VibegrationsNativeStatusStrip ===
 
-// Module 16973 (VibegrationsNativeStatusStrip)
+// Module 17049 (VibegrationsNativeStatusStrip)
 import nativeDefault from "native" /* 576 */;
-import _modDef3676 from "module_3676" /* 3676 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4689 */;
-import VibegrationsUsageSheet from "VibegrationsUsageSheet" /* 16974 */;
+import _modDef3678 from "module_3678" /* 3678 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
+import VibegrationsUsageSheet from "VibegrationsUsageSheet" /* 17050 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -61,17 +61,17 @@ function ThinkingIndicator(line) {
     };
   }, []);
   const obj = { style: tmp.indicator, children: null };
-  const items2 = [closure_7(line(14342).AILoader, { size: 10, color: "text-subtle" }), ];
-  const obj2 = { style: tmp.label, children: closure_7(line(14346).AIShimmer, { ref, text, variant: "text-xs/medium", color: "text-subtle", duration: line(16965).INDICATOR_PASS_MS, delay: null }) };
+  const items2 = [closure_7(line(14397).AILoader, { size: 10, color: "text-subtle" }), ];
+  const obj2 = { style: tmp.label, children: closure_7(line(14401).AIShimmer, { ref, text, variant: "text-xs/medium", color: "text-subtle", duration: line(17041).INDICATOR_PASS_MS, delay: null }) };
   items2[1] = closure_7(ref, obj2);
   obj.children = items2;
   return closure_8(ref, obj);
 }
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(14343).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(14398).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_4, minHeight: nativeDefault.space.PX_4 + nativeDefault.space.PX_24 }, activity: null, indicator: null, label: null, runes: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_4, minHeight: nativeDefault.space.PX_4 + nativeDefault.space.PX_24 };
 obj2.activity = { flex: 1, minHeight: nativeDefault.space.PX_16, justifyContent: "center" };
@@ -89,11 +89,11 @@ export default function VibegrationsNativeStatusStrip(projectId) {
   ({ activity, projectUsage, connLabel, thinkingOpen } = projectId);
   ({ thinking, compacting, connFailed, controlling, onToggleThinking } = projectId);
   const tmp = closure_9();
-  const thinkingLineResult = projectId(16965).thinkingLine({ activity, compacting, controlling });
+  const thinkingLineResult = projectId(17041).thinkingLine({ activity, compacting, controlling });
   let runesUsedLabelsResult = null;
   if (null != projectUsage) {
-    runesUsedLabelsResult = tmp2(16965).runesUsedLabels(projectUsage);
-    const tmp2Result = tmp2(16965);
+    runesUsedLabelsResult = tmp2(17041).runesUsedLabels(projectUsage);
+    const tmp2Result = tmp2(17041);
   }
   let tmp6 = null != activity;
   if (tmp6) {
@@ -131,14 +131,14 @@ export default function VibegrationsNativeStatusStrip(projectId) {
     let stringResult;
     if (tmp6) {
       const intl = tmp2(1115).intl;
-      stringResult = intl.string(_modDef3676["0PGVTy"]);
+      stringResult = intl.string(_modDef3678["0PGVTy"]);
     }
     obj4.accessibilityHint = stringResult;
     obj4.disabled = !tmp6;
     obj4.onPress = onToggleThinking;
     const obj6 = { line: thinkingLineResult };
     obj4.children = closure_7(ThinkingIndicator, obj6);
-    tmp10Result = closure_7(tmp2(5292).PressableOpacity, obj4);
+    tmp10Result = closure_7(tmp2(5334).PressableOpacity, obj4);
   }
   obj3.children = tmp10Result;
   const items1 = [closure_7(View, obj3), , ];
@@ -149,18 +149,18 @@ export default function VibegrationsNativeStatusStrip(projectId) {
       str3 = "text-feedback-critical";
     }
     const obj7 = { variant: "text-xs/medium", color: str3, children: connLabel };
-    tmp10Result2 = closure_7(tmp2(4718).Text, obj7);
+    tmp10Result2 = closure_7(tmp2(4752).Text, obj7);
   }
   items1[1] = tmp10Result2;
   let tmp8Result = null;
   if (null != runesUsedLabelsResult) {
     const obj8 = { accessibilityRole: "button", accessibilityLabel: runesUsedLabelsResult.aria, hitSlop: 8, style: tmp.runes, onPress: callback, children: null };
     const obj9 = { variant: "text-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
-    const items2 = [closure_7(tmp2(4718).Text, obj9), ];
+    const items2 = [closure_7(tmp2(4752).Text, obj9), ];
     const obj10 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    items2[1] = closure_7(tmp2(4676).CircleInformationIcon, obj10);
+    items2[1] = closure_7(tmp2(4710).CircleInformationIcon, obj10);
     obj8.children = items2;
-    tmp8Result = closure_8(tmp2(5292).PressableOpacity, obj8);
+    tmp8Result = closure_8(tmp2(5334).PressableOpacity, obj8);
   }
   items1[2] = tmp8Result;
   obj2.children = items1;

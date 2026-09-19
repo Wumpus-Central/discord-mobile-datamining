@@ -1,13 +1,13 @@
-// === Module 5695: transitionToMemberVerification ===
+// === Module 5737: transitionToMemberVerification ===
 
-// Module 5695 (transitionToMemberVerification)
+// Module 5737 (transitionToMemberVerification)
 import router_utils from "router_utils" /* 1101 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4546 */;
-import MemberVerificationRouteExperiment from "MemberVerificationRouteExperiment" /* 5696 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5697 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5739 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4544 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4580 */;
+import MemberVerificationRouteExperiment from "MemberVerificationRouteExperiment" /* 5738 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5739 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5781 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4578 */;
 
 require = fn;
 const Routes = fn(1074).Routes;

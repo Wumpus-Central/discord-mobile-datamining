@@ -1,12 +1,12 @@
-// === Module 18207: AVErrorStreamSendHighPacketLoss ===
+// === Module 18286: AVErrorStreamSendHighPacketLoss ===
 
-// Module 18207 (AVErrorStreamSendHighPacketLoss)
-import StreamKeyUtils from "StreamKeyUtils" /* 4774 */;
-import AVError from "AVError" /* 9348 */;
-import AVErrorContext from "AVErrorContext" /* 18202 */;
-import AVErrorUtils from "AVErrorUtils" /* 18205 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4761 */;
+// Module 18286 (AVErrorStreamSendHighPacketLoss)
+import StreamKeyUtils from "StreamKeyUtils" /* 4808 */;
+import AVError from "AVError" /* 9685 */;
+import AVErrorContext from "AVErrorContext" /* 18281 */;
+import AVErrorUtils from "AVErrorUtils" /* 18284 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4795 */;
 
 require = fn;
 const size = fn(2);

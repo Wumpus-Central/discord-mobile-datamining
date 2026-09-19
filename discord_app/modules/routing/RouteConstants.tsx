@@ -509,8 +509,8 @@ obj.CHANNELS_GAME_SHOP = function CHANNELS_GAME_SHOP(guildId, pageIndex, skuId, 
   }
   return tmp3;
 };
-obj.GAME_SHOP = function GAME_SHOP(arg0, id, slug) {
-  const combined = "/game-shop/" + arg0;
+obj.GAME_SHOP = function GAME_SHOP(guildId, id, slug) {
+  const combined = "/game-shop/" + guildId;
   let tmp2 = combined;
   if (null != id) {
     const _HermesInternal = HermesInternal;

@@ -1,22 +1,22 @@
-// === Module 17374: AppComponents ===
+// === Module 17451: AppComponents ===
 
-// Module 17374 (AppComponents)
-import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4434 */;
-import PortalKeyboard from "PortalKeyboard" /* 4594 */;
-import AlertModal from "AlertModal" /* 5072 */;
-import common_NotificationsDefault from "common/Notifications" /* 10322 */;
-import ContextMenuContainer from "ContextMenuContainer" /* 14386 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 16899 */;
-import MainShared from "MainShared" /* 17289 */;
-import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17305 */;
-import ExternalPipViewDefault from "ExternalPipView" /* 17375 */;
-import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 17381 */;
-import FramePanelContainerDefault from "FramePanelContainer" /* 17414 */;
-import VoicePanelContainerDefault from "VoicePanelContainer" /* 17423 */;
-import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 17596 */;
+// Module 17451 (AppComponents)
+import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4468 */;
+import PortalKeyboard from "PortalKeyboard" /* 4628 */;
+import AlertModal from "AlertModal" /* 5114 */;
+import common_NotificationsDefault from "common/Notifications" /* 10334 */;
+import ContextMenuContainer from "ContextMenuContainer" /* 14441 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 16968 */;
+import MainShared from "MainShared" /* 17366 */;
+import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 17382 */;
+import ExternalPipViewDefault from "ExternalPipView" /* 17452 */;
+import ActivityPanelContainerDefault from "ActivityPanelContainer" /* 17458 */;
+import FramePanelContainerDefault from "FramePanelContainer" /* 17491 */;
+import VoicePanelContainerDefault from "VoicePanelContainer" /* 17500 */;
+import MediaPlaybackPanelContainerDefault from "MediaPlaybackPanelContainer" /* 17673 */;
 import jsxProd from "jsxProd" /* 21 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1364 */;
-import AppFreezer_mod from "AppFreezer" /* 16779 */;
+import AppFreezer_mod from "AppFreezer" /* 16855 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx, jsxs } = jsxProd);

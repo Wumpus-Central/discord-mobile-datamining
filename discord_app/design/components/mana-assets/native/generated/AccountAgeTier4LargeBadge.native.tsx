@@ -1,9 +1,9 @@
-// === Module 5879: AccountAgeTier4LargeBadge ===
+// === Module 5921: AccountAgeTier4LargeBadge ===
 
-// Module 5879 (AccountAgeTier4LargeBadge)
+// Module 5921 (AccountAgeTier4LargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef5880 from "module_5880" /* 5880 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef5922 from "module_5922" /* 5922 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AccountAgeTier4LargeBadge = function AccountAgeTier4LargeBadge(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5880 };
+  const obj2 = { uri: _modDef5922 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

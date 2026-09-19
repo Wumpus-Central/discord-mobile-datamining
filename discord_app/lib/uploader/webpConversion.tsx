@@ -1,6 +1,6 @@
-// === Module 5351: webpConversion ===
+// === Module 5393: webpConversion ===
 
-// Module 5351 (webpConversion)
+// Module 5393 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1240 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

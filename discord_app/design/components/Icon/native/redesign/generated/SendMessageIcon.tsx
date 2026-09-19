@@ -1,9 +1,9 @@
-// === Module 4666: SendMessageIcon ===
+// === Module 4700: SendMessageIcon ===
 
-// Module 4666 (SendMessageIcon)
+// Module 4700 (SendMessageIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod4667 from "module_4667" /* 4667 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod4701 from "module_4701" /* 4701 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const SendMessageIcon = function SendMessageIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4667, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4701, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,13 +1,13 @@
-// === Module 7468: GameInvitesChannelUtils ===
+// === Module 7512: GameInvitesChannelUtils ===
 
-// Module 7468 (GameInvitesChannelUtils)
+// Module 7512 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5678 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7470 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 7500 */;
-import hasFlagDefault from "hasFlag" /* 7509 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5720 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7514 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7544 */;
+import hasFlagDefault from "hasFlag" /* 7553 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 const require = globalThis.__r;
 
@@ -16,8 +16,8 @@ let closure_3 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_7, ActivityTypes: closure_8, MAX_CHANNEL_NAME_LENGTH: closure_9 } = Constants);
-const ChannelFlags = fn(1965).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(7469).MAX_FORUM_POST_TAGS;
+const ChannelFlags = fn(2048).ChannelFlags;
+const MAX_FORUM_POST_TAGS = fn(7513).MAX_FORUM_POST_TAGS;
 let c12 = "No Mic";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_invite_channels/GameInvitesChannelUtils.tsx");

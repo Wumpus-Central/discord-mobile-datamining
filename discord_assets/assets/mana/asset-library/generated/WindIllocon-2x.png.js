@@ -1,6 +1,6 @@
-// === Module 6768: ? ===
+// === Module 6812: ? ===
 
-// Module 6768
+// Module 6812
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WindIllocon-2x.png.js");

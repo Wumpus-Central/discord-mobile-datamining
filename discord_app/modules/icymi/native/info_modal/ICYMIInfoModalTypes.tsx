@@ -1,6 +1,6 @@
-// === Module 16724: ICYMIInfoModalTypes ===
+// === Module 16800: ICYMIInfoModalTypes ===
 
-// Module 16724 (ICYMIInfoModalTypes)
+// Module 16800 (ICYMIInfoModalTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoModalTypes.tsx");

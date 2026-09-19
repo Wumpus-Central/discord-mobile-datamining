@@ -1,21 +1,21 @@
-// === Module 13274: CutoutableAvatarImage ===
+// === Module 13319: CutoutableAvatarImage ===
 
-// Module 13274 (CutoutableAvatarImage)
+// Module 13319 (CutoutableAvatarImage)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import v1 from "v1" /* 1255 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import spring from "spring" /* 5143 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import ClipView from "ClipView" /* 9054 */;
-import getChannelIcon from "getChannelIcon" /* 13276 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 13277 */;
+import spring from "spring" /* 5185 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import ClipView from "ClipView" /* 9093 */;
+import getChannelIcon from "getChannelIcon" /* 13321 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 13322 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
-const inlineStyles = Circle(8689);
-const inlineStylesDefault = tmp9(8689);
+const inlineStyles = Circle(8727);
+const inlineStylesDefault = tmp9(8727);
 require = fn;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
@@ -63,18 +63,18 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
     obj.cutouts = items;
     return obj;
   };
-  obj2 = { cutout, CutoutShape: cutout(9054).CutoutShape, withSpring: cutout(5143).withSpring, CHANNEL_SPRING_CONFIG };
+  obj2 = { cutout, CutoutShape: cutout(9093).CutoutShape, withSpring: cutout(5185).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__closure = obj2;
   fn.__workletHash = 12529564164821;
   fn.__initData = __initData;
-  const animatedProps = cutout(4458).useAnimatedProps(fn);
-  let obj = cutout(4458);
+  const animatedProps = cutout(4492).useAnimatedProps(fn);
+  let obj = cutout(4492);
   const obj3 = { style, animatedProps, children: null };
   const obj4 = { style: null, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true };
   let items = [obj2.image, imageStyle];
   obj4.style = items;
   obj3.children = closure_7(FastImageDefault, obj4);
-  return closure_7(cutout(9054).ClipViewAnimated, obj3);
+  return closure_7(cutout(9093).ClipViewAnimated, obj3);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {
@@ -180,7 +180,7 @@ function CutoutAvatarImage(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(13275).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(13320).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");

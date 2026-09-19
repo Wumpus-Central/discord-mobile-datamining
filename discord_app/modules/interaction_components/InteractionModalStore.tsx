@@ -1,10 +1,10 @@
-// === Module 14616: InteractionModalStore ===
+// === Module 14671: InteractionModalStore ===
 
-// Module 14616 (InteractionModalStore)
+// Module 14671 (InteractionModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7652 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 8347 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7696 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 8385 */;
 
 require = fn;
 const InteractionModalState = { IN_FLIGHT: 0, [0]: "IN_FLIGHT", ERRORED: 1, [1]: "ERRORED", SUCCEEDED: 2, [2]: "SUCCEEDED" };
@@ -51,11 +51,11 @@ const interactionModalStore = new InteractionModalStore(DispatcherDefault, {
     ({ data, preflight } = nonce);
     let startTimeout;
     const interactionType = data.interactionType;
-    if (nonce(1895).InteractionTypes.APPLICATION_COMMAND === interactionType) {
+    if (nonce(1978).InteractionTypes.APPLICATION_COMMAND === interactionType) {
       const messageId = nonce.messageId;
       const channelId = data.channelId;
       return false;
-    } else if (tmp(1895).InteractionTypes.MODAL_SUBMIT === interactionType) {
+    } else if (tmp(1978).InteractionTypes.MODAL_SUBMIT === interactionType) {
       let tmp7 = null == nonce;
       if (!tmp7) {
         tmp7 = IN_FLIGHT === obj.ERRORED;

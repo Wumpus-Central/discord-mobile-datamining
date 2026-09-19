@@ -1,6 +1,6 @@
-// === Module 6815: InputTypes ===
+// === Module 6859: InputTypes ===
 
-// Module 6815 (InputTypes)
+// Module 6859 (InputTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/Input/native/InputTypes.native.tsx");

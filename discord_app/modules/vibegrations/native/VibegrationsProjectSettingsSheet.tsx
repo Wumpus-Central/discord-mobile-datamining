@@ -1,14 +1,14 @@
-// === Module 16879: VibegrationsProjectSettingsSheet ===
+// === Module 16946: VibegrationsProjectSettingsSheet ===
 
-// Module 16879 (VibegrationsProjectSettingsSheet)
+// Module 16946 (VibegrationsProjectSettingsSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4689 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7441 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7485 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16851 */;
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9308 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -80,12 +80,12 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
   let obj2 = { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES };
   const obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: null, footer: null, header: null, children: null };
   const intl2 = guildId(onSave[13]).intl;
-  obj3.dismissAccessibilityLabel = intl2.string(require("module_3676")["9yHiDe"]);
-  let formatToPlainStringResult = intl.formatToPlainString(require("module_3676").eaqbJt, { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES });
-  obj3.footer = closure_10(closure_6, { style: tmp.roleListFooter, children: closure_10(guildId(onSave[16]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_3676").eaqbJt, { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
+  obj3.dismissAccessibilityLabel = intl2.string(require("module_3678")["9yHiDe"]);
+  let formatToPlainStringResult = intl.formatToPlainString(require("module_3678").eaqbJt, { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES });
+  obj3.footer = closure_10(closure_6, { style: tmp.roleListFooter, children: closure_10(guildId(onSave[16]).Text, { variant: "text-xs/normal", color: "text-muted", children: intl.formatToPlainString(require("module_3678").eaqbJt, { count: first.size, max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES }) }) });
   const obj5 = { title: null, trailing: null };
   const intl3 = guildId(onSave[13]).intl;
-  obj5.title = intl3.string(require("module_3676").fqvhf0);
+  obj5.title = intl3.string(require("module_3678").fqvhf0);
   const obj6 = { label: null, onPress: null };
   const intl4 = guildId(onSave[13]).intl;
   obj6.label = intl4.string(guildId(onSave[13]).t.i4jeWR);
@@ -139,7 +139,7 @@ function VibegrationsCollaboratorRolesSheet(guildId) {
           if (tmp3) {
             const intl = guildId(onSave[13]).intl;
             const obj4 = { max: guildId(onSave[11]).MAX_PROJECT_COLLABORATOR_ROLES };
-            formatToPlainStringResult = intl.formatToPlainString(require("module_3676").VPUL05, obj4);
+            formatToPlainStringResult = intl.formatToPlainString(require("module_3678").VPUL05, obj4);
           }
           obj2.accessibilityHint = formatToPlainStringResult;
           obj2.onPress = function onPress(arg0) {
@@ -161,7 +161,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsProjectSettingsSheet = "VibegrationsProjectSettingsSheet";
 VibegrationsCollaboratorRolesSheet = "VibegrationsCollaboratorRolesSheet";
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -172,7 +172,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_15 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };

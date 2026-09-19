@@ -1,23 +1,23 @@
-// === Module 17865: GuildSettingsAutomodRule ===
+// === Module 17945: GuildSettingsAutomodRule ===
 
-// Module 17865 (GuildSettingsAutomodRule)
+// Module 17945 (GuildSettingsAutomodRule)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4419 */;
-import NavigatorHeader from "NavigatorHeader" /* 5794 */;
-import ClipboardUtils from "ClipboardUtils" /* 7385 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 17852 */;
+import ToastUtils from "ToastUtils" /* 4453 */;
+import NavigatorHeader from "NavigatorHeader" /* 5836 */;
+import ClipboardUtils from "ClipboardUtils" /* 7429 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 17932 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useAutomodRulesList = fn(17849).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(17851);
+const useAutomodRulesList = fn(17929).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(17931);
 ({ useAutomodEditingRuleActions: metroRequire, useAutomodEditingRuleState: closure_7 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(12106).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(12115).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = "automod-delete-rule";
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { stack: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -325,20 +325,20 @@ export default function GuildSettingsAutomodRule(guildId) {
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(12111).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(12120).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {
                       v0 = 0;
                       closure_129_0 = closure_3;
-                      const aPIError = new closure_0(4622).APIError(closure_129_0);
+                      const aPIError = new closure_0(4656).APIError(closure_129_0);
                       const anyErrorMessage = aPIError.getAnyErrorMessage();
                       closure_0 = anyErrorMessage;
                       if (anyErrorMessage == null) {
                         const intl = closure_0(1115).intl;
                         closure_0 = intl.string(closure_0(1115).t.fEptJP);
                       }
-                      closure_0(4419).presentError(closure_0);
+                      closure_0(4453).presentError(closure_0);
                       throw closure_129_0;
                     } else if (arg0 === 1) {
                       c6 = 3;

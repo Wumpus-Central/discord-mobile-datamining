@@ -1,7 +1,7 @@
-// === Module 9739: useIsActivitiesAvailableInShelf ===
+// === Module 9669: useIsActivitiesAvailableInShelf ===
 
-// Module 9739 (useIsActivitiesAvailableInShelf)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9742 */;
+// Module 9669 (useIsActivitiesAvailableInShelf)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9592 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

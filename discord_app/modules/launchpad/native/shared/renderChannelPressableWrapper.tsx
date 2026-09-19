@@ -1,7 +1,7 @@
-// === Module 17358: renderChannelPressableWrapper ===
+// === Module 17435: renderChannelPressableWrapper ===
 
-// Module 17358 (renderChannelPressableWrapper)
-import getLayoutStylesDefault from "getLayoutStyles" /* 17046 */;
+// Module 17435 (renderChannelPressableWrapper)
+import getLayoutStylesDefault from "getLayoutStyles" /* 17122 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

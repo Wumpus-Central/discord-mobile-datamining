@@ -1,12 +1,12 @@
-// === Module 7649: ReferralTrialActionCreators ===
+// === Module 7693: ReferralTrialActionCreators ===
 
-// Module 7649 (ReferralTrialActionCreators)
+// Module 7693 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7650 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7694 */;
 import UserRecord from "UserRecord" /* 1386 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 
 require = fn;
 let closure_11 = async function _fetchReferralEligibleUsers() {

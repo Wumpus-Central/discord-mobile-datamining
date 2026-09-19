@@ -1,28 +1,27 @@
-// === Module 9548: showUploadFileSizeError ===
+// === Module 9423: showUploadFileSizeError ===
 
-// Module 9548 (showUploadFileSizeError)
+// Module 9423 (showUploadFileSizeError)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import util from "util" /* 1115 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
-import FileSizeUtils from "FileSizeUtils" /* 4618 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import UploadUtils from "UploadUtils" /* 5298 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5299 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5307 */;
-import KestrelExperiment from "KestrelExperiment" /* 5349 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7378 */;
-import logMessageSendFailure from "logMessageSendFailure" /* 8046 */;
-import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9549 */;
-import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9550 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9551 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1969 */;
+import FileSizeUtils from "FileSizeUtils" /* 4652 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import UploadUtils from "UploadUtils" /* 5340 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5341 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5349 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7422 */;
+import logMessageSendFailure from "logMessageSendFailure" /* 8084 */;
+import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9424 */;
+import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9425 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9426 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(4715).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4749).FileUploadErrorTypes;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
@@ -55,11 +54,9 @@ export default function showUploadFileSizeError(arg0) {
       items1.push(postCompressionSize.preCompressionSize);
     });
   }
-  const kestrelConfig = KestrelExperiment.getKestrelConfig({ location: "native.showUploadFileSizeError" });
-  const tmp2Result11 = KestrelExperiment;
-  const tmp2Result12 = AppAnalyticsUtils;
-  const obj2 = { guildId, channelId: null, userIndividualFileSizeLimit: null, numAttachments: null, preCompressionFileSizes: null, preCompressionAggregateSize: null, postCompressionFileSizes: null, postCompressionAggregateSize: null, attachmentMimeTypes: null, errorType: null, kestrelVariant: null };
-  const tmp2Result13 = buildFileSizeLimitEventProperties;
+  const tmp2Result9 = AppAnalyticsUtils;
+  const obj2 = { guildId, channelId: null, userIndividualFileSizeLimit: null, numAttachments: null, preCompressionFileSizes: null, preCompressionAggregateSize: null, postCompressionFileSizes: null, postCompressionAggregateSize: null, attachmentMimeTypes: null, errorType: null };
+  const tmp2Result10 = buildFileSizeLimitEventProperties;
   obj2.channelId = getUploaderFileSizeMetrics.getUploaderChannelId(file);
   obj2.userIndividualFileSizeLimit = baseMaxSize;
   obj2.numAttachments = file.attachmentsCount;
@@ -73,9 +70,7 @@ export default function showUploadFileSizeError(arg0) {
     ERROR_SOURCE_UNKNOWN = FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN;
   }
   obj2.errorType = ERROR_SOURCE_UNKNOWN;
-  const tmp2Result14 = getUploaderFileSizeMetrics;
-  obj2.kestrelVariant = KestrelExperiment.getKestrelVariantName(kestrelConfig);
-  tmp2Result12.trackWithMetadata(constants.FILE_SIZE_LIMIT_EXCEEDED, tmp2Result13.buildFileSizeLimitEventProperties(obj2));
+  tmp2Result9.trackWithMetadata(constants.FILE_SIZE_LIMIT_EXCEEDED, tmp2Result10.buildFileSizeLimitEventProperties(obj2));
   let num = 0;
   if (!isPremiumExactlyResult) {
     let applyResult = maxSize;
@@ -83,7 +78,7 @@ export default function showUploadFileSizeError(arg0) {
       applyResult = maxSize;
       if (errorReason !== FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN) {
         const _Math = Math;
-        if (errorReason === tmp11.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE) {
+        if (errorReason === tmp10.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE) {
           items1 = items;
         }
         const items3 = [];
@@ -93,50 +88,45 @@ export default function showUploadFileSizeError(arg0) {
     }
     num = applyResult;
   }
-  let tmp21 = isPremiumExactlyResult;
+  let tmp20 = isPremiumExactlyResult;
   if (!isPremiumExactlyResult) {
-    tmp21 = num > NitroFileUploadExperiments.getNitroFileUploadLimitBytes({ location: "native.showUploadFileSizeError" });
-    const tmp2Result16 = NitroFileUploadExperiments;
+    tmp20 = num > NitroFileUploadExperiments.getNitroFileUploadLimitBytes({ location: "native.showUploadFileSizeError" });
+    const tmp2Result12 = NitroFileUploadExperiments;
   }
-  if (!tmp21) {
-    tmp21 = tmp20;
+  if (!tmp20) {
+    tmp20 = tmp19;
   }
-  if (!tmp21) {
-    tmp21 = errorReason === FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN;
+  if (!tmp20) {
+    tmp20 = errorReason === FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN;
   }
-  const tmp2Result15 = KestrelExperiment;
-  const obj3 = { alert_type: tmp21 ? constants.OVER_MAX_SIZE : constants.NITRO_UPSELL, num_attachments: file.attachmentsCount, total_attachment_size: file.currentSize, has_image: file.hasImage, has_video: file.hasVideo, is_premium: isPremiumExactlyResult, image_compression_quality: null, image_compression_setting_enabled: null };
-  const tmp2Result17 = AppAnalyticsUtils;
+  const tmp2Result11 = getUploaderFileSizeMetrics;
+  const obj3 = { alert_type: tmp20 ? constants.OVER_MAX_SIZE : constants.NITRO_UPSELL, num_attachments: file.attachmentsCount, total_attachment_size: file.currentSize, has_image: file.hasImage, has_video: file.hasVideo, is_premium: isPremiumExactlyResult, image_compression_quality: null, image_compression_setting_enabled: null };
+  const tmp2Result13 = AppAnalyticsUtils;
   obj3.image_compression_quality = utils_UploadUtils.getImageCompressionQuality();
   obj3.image_compression_setting_enabled = UnsyncedUserSettingsStore.dataSavingMode;
-  tmp2Result17.trackWithMetadata(constants.FILE_UPLOAD_ALERT_VIEWED, obj3);
-  if (tmp21) {
+  tmp2Result13.trackWithMetadata(constants.FILE_UPLOAD_ALERT_VIEWED, obj3);
+  if (tmp20) {
     if (errorReason === FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN) {
-      const intl4 = util.intl;
-      let stringResult = intl4.string(util.t.B3vFdU);
-      const intl5 = util.intl;
-      let stringResult1 = intl5.string(util.t.zMEjJg);
-    } else {
-      if (kestrelConfig.enabled) {
-        if (!kestrelConfig.isGA) {
-          const intl = util.intl;
-          stringResult = intl.string(util.t.bRYgjH);
-        }
-        const intl3 = util.intl;
-        const formatToPlainString = intl3.formatToPlainString;
-        const t = util.t;
-        if (tmp20) {
-          const obj4 = { maxSize: FileSizeUtils.formatSize(UploadUtils.MAX_TOTAL_ATTACHMENT_SIZE / FileSizeUtils.BYTE_IN_KB, { useKibibytes: true }) };
-          stringResult1 = formatToPlainString(t.tUOJdH, obj4);
-          const tmp2Result19 = FileSizeUtils;
-        } else {
-          const obj5 = { maxSize: FileSizeUtils.formatSize(maxSize / FileSizeUtils.BYTE_IN_KB, { useKibibytes: true }) };
-          stringResult1 = formatToPlainString(t.fxEKdS, obj5);
-          const tmp2Result20 = FileSizeUtils;
-        }
-      }
+      const intl = util.intl;
+      let stringResult = intl.string(util.t.B3vFdU);
       const intl2 = util.intl;
-      stringResult = intl2.string(util.t["/tGlcj"]);
+      let stringResult1 = intl2.string(util.t.zMEjJg);
+    } else {
+      const intl3 = util.intl;
+      const intl4 = util.intl;
+      const formatToPlainString = intl4.formatToPlainString;
+      const t = util.t;
+      if (tmp19) {
+        const obj4 = { maxSize: FileSizeUtils.formatSize(UploadUtils.MAX_TOTAL_ATTACHMENT_SIZE / FileSizeUtils.BYTE_IN_KB, { useKibibytes: true }) };
+        stringResult1 = formatToPlainString(t.tUOJdH, obj4);
+        const tmp2Result15 = FileSizeUtils;
+      } else {
+        const obj5 = { maxSize: FileSizeUtils.formatSize(maxSize / FileSizeUtils.BYTE_IN_KB, { useKibibytes: true }) };
+        stringResult1 = formatToPlainString(t.fxEKdS, obj5);
+        const tmp2Result16 = FileSizeUtils;
+      }
+      stringResult = intl3.string(util.t["/tGlcj"]);
+      const stringResult2 = intl3.string(util.t["/tGlcj"]);
     }
     const obj6 = { title: stringResult, body: stringResult1 };
     AlertActionCreatorsDefault.show(obj6);
@@ -145,15 +135,15 @@ export default function showUploadFileSizeError(arg0) {
     const obj8 = { section: constants2.FILE_UPLOAD_POPOUT };
     obj7.analyticsLocation = obj8;
     const items4 = [];
-    const obj13 = PremiumUpsellUtilsDefault;
+    const obj11 = PremiumUpsellUtilsDefault;
     items4[HermesBuiltin.arraySpread(analyticsLocations, 0)] = AnalyticsLocationDefault.FILE_UPLOAD_POPOUT;
     obj7.analyticsLocations = items4;
     const obj9 = { type: constants3.UPLOAD_ERROR_UPSELL };
     obj7.analyticsProperties = obj9;
     obj7.largestFileSize = num;
     obj7.appEntryKey = appEntryKey;
-    const result = obj13.handleShowUpsellAlert(obj7);
+    const result = obj11.handleShowUpsellAlert(obj7);
     const arraySpreadResult2 = HermesBuiltin.arraySpread(analyticsLocations, 0);
   }
-  const tmp2Result18 = utils_UploadUtils;
+  const tmp2Result14 = utils_UploadUtils;
 };

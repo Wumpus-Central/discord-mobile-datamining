@@ -1,11 +1,11 @@
-// === Module 5301: ClipsConstants ===
+// === Module 5343: ClipsConstants ===
 
-// Module 5301 (ClipsConstants)
+// Module 5343 (ClipsConstants)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1091 */;
 
 let obj = {};
-const result = 30 * DurationsDefault.Millis.SECOND;
+let result = 30 * DurationsDefault.Millis.SECOND;
 obj.SECONDS_30 = result;
 obj[result] = "SECONDS_30";
 const MINUTE = DurationsDefault.Millis.MINUTE;
@@ -17,8 +17,9 @@ obj[result1] = "MINUTES_2";
 const result2 = 6 * DurationsDefault.Millis.SECOND;
 const result3 = 60 * DurationsDefault.Millis.SECOND;
 const obj2 = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
-const obj3 = { TEXT: "text" };
+const obj3 = { TEXT: "text", IMAGE: "image" };
 const obj4 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
+const obj6 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
 const result4 = 14 * DurationsDefault.Millis.DAY;
 const size = fn(2);
 const result5 = size.fileFinishedImporting("modules/clips/ClipsConstants.tsx");
@@ -105,12 +106,43 @@ export const getClipCropBounds = function getClipCropBounds(bounds) {
   }
 };
 export const ClipTrackType = obj3;
-export const CLIP_TRACK_COLORS = { [obj3.TEXT]: "#D53FAE" };
+export const CLIP_TRACK_COLORS = { [obj3.TEXT]: "#D53FAE", [obj3.IMAGE]: "#3F7FD5" };
 export const DEFAULT_TRACK_DURATION_SECONDS = 5;
 export const MIN_TRACK_DURATION_SECONDS = 1;
 export const DEFAULT_TRACK_POSITION = { x: 0.5, y: 0.5 };
+export const DEFAULT_TRACK_ROTATION_DEG = 0;
+export const TRACK_ROTATION_STEP_DEG = 15;
+export const snapTrackRotationDeg = function snapTrackRotationDeg(arg0) {
+  const result = (15 * Math.round(arg0 / 15) % 360 + 360) % 360;
+  let diff = result;
+  if (180 < result) {
+    diff = result - 360;
+  }
+  return diff;
+};
 export const TextStrokeWidth = obj4;
 export const TEXT_STROKE_WIDTH_TO_FONT_SIZE_RATIO = { [obj4.NONE]: 0, [obj4.SMALL]: 0.0625, [obj4.MEDIUM]: 0.125, [obj4.LARGE]: 0.25 };
 export const DEFAULT_TEXT_TRACK_STYLE = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: obj4.NONE, strokeColor: "#000000" };
+export const MIN_TEXT_TRACK_FONT_SIZE = 0.015;
+export const MAX_TEXT_TRACK_FONT_SIZE = 0.5;
+export const CLIP_IMAGE_MAX_DIMENSION = 2048;
+export const CLIP_IMAGE_MAX_SOURCE_BYTES = 33554432;
+export const CLIP_IMAGE_MAX_PASSTHROUGH_BYTES = 2097152;
+export const CLIP_IMAGE_ENCODE_MIME_TYPE = "image/webp";
+export const CLIP_IMAGE_ENCODE_QUALITY = 0.92;
+export const CLIP_IMAGE_ACCEPTED_EXTENSIONS = ["png", "jpg", "jpeg", "webp"];
+export const CLIP_IMAGE_ACCEPTED_MIME_TYPES = ["image/png", "image/jpeg", "image/webp"];
+export const DEFAULT_IMAGE_TRACK_WIDTH_FRACTION = 0.35;
+export const MIN_IMAGE_TRACK_WIDTH_FRACTION = 0.02;
+export const MAX_IMAGE_TRACK_WIDTH_FRACTION = 2;
+export const MAX_DEFAULT_IMAGE_TRACK_HEIGHT_FRACTION = 0.5;
+export const getDefaultImageTrackWidthFraction = function getDefaultImageTrackWidthFraction(arg0, arg1) {
+  return Math.max(0.02, Math.min(0.35, 0.5 * arg0 / arg1));
+};
+export const ImageTrackShadow = obj6;
+export const IMAGE_TRACK_SHADOW_TO_WIDTH_RATIO = { [obj6.NONE]: 0, [obj6.SMALL]: 0.02, [obj6.MEDIUM]: 0.05, [obj6.LARGE]: 0.1 };
+export const IMAGE_TRACK_SHADOW_OFFSET_TO_BLUR_RATIO = 0.4;
+export const DEFAULT_IMAGE_TRACK_SHADOW = obj6.NONE;
+export const DEFAULT_IMAGE_TRACK_SHADOW_COLOR = "#000000";
 export const ClipType = { CLIP: "clip", SCREENSHOT: "screenshot", VOICE_CLIP: "voice_clip" };
 export const GameEventType = { UNCLASSIFIED: "unclassified", KILL: "kill", MULTIKILL: "multikill", DEATH: "death", ASSIST: "assist", ITEM: "item", VICTORY: "victory", DEFEAT: "defeat", LEVEL_UP: "level_up", TREASURE: "treasure", OBJECTIVE_KILL: "objective_kill" };

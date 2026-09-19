@@ -1,8 +1,8 @@
-// === Module 12675: ScheduledMessageDraftCoachmark ===
+// === Module 12684: ScheduledMessageDraftCoachmark ===
 
-// Module 12675 (ScheduledMessageDraftCoachmark)
+// Module 12684 (ScheduledMessageDraftCoachmark)
 import util from "util" /* 1115 */;
-import useCoachmark from "useCoachmark" /* 11380 */;
+import useCoachmark from "useCoachmark" /* 11392 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,9 +12,9 @@ function AttachedCoachmark(buttonRef) {
   return null;
 }
 const Image = fn(17).Image;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles({ image: { width: 100, height: 80 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/native/ScheduledMessageDraftCoachmark.tsx");

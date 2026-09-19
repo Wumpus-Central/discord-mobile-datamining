@@ -1,12 +1,12 @@
-// === Module 16520: useShouldRenderChannelList ===
+// === Module 16596: useShouldRenderChannelList ===
 
-// Module 16520 (useShouldRenderChannelList)
+// Module 16596 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import RootNavigationRef from "RootNavigationRef" /* 4580 */;
+import RootNavigationRef from "RootNavigationRef" /* 4614 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7672 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5447 */;
+import CacheStore from "CacheStore" /* 7716 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
 
 require = fn;
 const ComponentActions = fn(1074).ComponentActions;
@@ -52,7 +52,7 @@ export const useShouldRenderChannelList = function useShouldRenderChannelList() 
       let result1 = CacheStore.addReactChangeListener(handleCacheChange);
       let ComponentDispatch = first(1110).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(4580).getRootNavigationRef();
+      let rootNavigationRef = first(4614).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }

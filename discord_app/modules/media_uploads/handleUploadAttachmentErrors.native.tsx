@@ -1,12 +1,12 @@
-// === Module 9547: handleUploadAttachmentErrors ===
+// === Module 9422: handleUploadAttachmentErrors ===
 
-// Module 9547 (handleUploadAttachmentErrors)
+// Module 9422 (handleUploadAttachmentErrors)
 import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import FileUtils from "FileUtils" /* 5303 */;
-import KestrelExperiment from "KestrelExperiment" /* 5349 */;
-import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9548 */;
-import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 9631 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import FileUtils from "FileUtils" /* 5345 */;
+import UploadLimits from "UploadLimits" /* 5373 */;
+import showUploadFileSizeErrorDefault from "showUploadFileSizeError" /* 9423 */;
+import getAttachmentUploadAbortAlert from "getAttachmentUploadAbortAlert" /* 9506 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -18,11 +18,10 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
   if (undefined === code) {
     return false;
   } else if (code === constants.ENTITY_TOO_LARGE) {
-    const kestrelConfig = KestrelExperiment.getKestrelConfig({ location: "native.handleUploadMessageAttachmentsErrors" });
     const maxFileSizeResult = FileUtils.maxFileSize(guildId);
     const obj4 = { file: tmp, maxSize: null, baseMaxSize: null, guildId: null, analyticsLocations: null, errorReason: null, appEntryKey: null };
-    const tmp28 = showUploadFileSizeErrorDefault;
-    obj4.maxSize = KestrelExperiment.getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+    const tmp27 = showUploadFileSizeErrorDefault;
+    obj4.maxSize = UploadLimits.getEffectiveUploadLimit(maxFileSizeResult);
     obj4.baseMaxSize = maxFileSizeResult;
     obj4.guildId = guildId;
     obj4.analyticsLocations = tmp2;
@@ -32,7 +31,7 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     }
     obj4.errorReason = type;
     obj4.appEntryKey = tmp3;
-    tmp28(obj4);
+    tmp27(obj4);
     return true;
   } else if (code === constants.TOO_MANY_ATTACHMENTS) {
     const obj6 = { title: null, body: null };
@@ -52,12 +51,12 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     AlertActionCreatorsDefault.show(obj9);
     return true;
   } else if (code === constants.INVALID_FILE_ASSET) {
-    const obj12 = { title: null, body: null };
+    const obj11 = { title: null, body: null };
     const intl = util.intl;
-    obj12.title = intl.string(util.t.B3vFdU);
+    obj11.title = intl.string(util.t.B3vFdU);
     const intl2 = util.intl;
-    obj12.body = intl2.string(util.t.zMEjJg);
-    AlertActionCreatorsDefault.show(obj12);
+    obj11.body = intl2.string(util.t.zMEjJg);
+    AlertActionCreatorsDefault.show(obj11);
     return true;
   } else {
     const attachmentUploadAbortAlertContent = getAttachmentUploadAbortAlert.getAttachmentUploadAbortAlertContent(code);

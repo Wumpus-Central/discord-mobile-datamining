@@ -1,7 +1,7 @@
-// === Module 7269: ReanimatedNativeView ===
+// === Module 7313: ReanimatedNativeView ===
 
-// Module 7269 (ReanimatedNativeView)
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4459 */;
+// Module 7313 (ReanimatedNativeView)
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4493 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/core/native/ReanimatedNativeView.tsx");

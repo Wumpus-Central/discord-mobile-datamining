@@ -1,6 +1,6 @@
-// === Module 8597: MobileMediaViewerShareExperiment ===
+// === Module 8635: MobileMediaViewerShareExperiment ===
 
-// Module 8597 (MobileMediaViewerShareExperiment)
+// Module 8635 (MobileMediaViewerShareExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
@@ -14,4 +14,7 @@ const result = size.fileFinishedImporting("modules/media_viewer/native/MobileMed
 export const MobileMediaViewerShareExperiment = apexExperiment;
 export const getMobileMediaViewerShareExperimentEnabled = function getMobileMediaViewerShareExperimentEnabled(shareMediaSource) {
   return apexExperiment.getConfig({ location: shareMediaSource }).enabled;
+};
+export const useMobileMediaViewerShareExperimentEnabled = function useMobileMediaViewerShareExperimentEnabled(mediaViewerCopyLink) {
+  return apexExperiment.useConfig({ location: mediaViewerCopyLink }).enabled;
 };

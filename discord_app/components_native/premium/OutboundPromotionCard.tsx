@@ -1,14 +1,14 @@
-// === Module 13760: OutboundPromotionCard ===
+// === Module 13815: OutboundPromotionCard ===
 
-// Module 13760 (OutboundPromotionCard)
+// Module 13815 (OutboundPromotionCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4712 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7345 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7346 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4746 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7389 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7390 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,9 +29,9 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { card: { flex: 1, flexDirection: "column", paddingHorizontal: fn(1074).USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 }, mainContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, textContainer: { flexDirection: "row", flexShrink: 1, alignItems: "center" }, imageContainer: null, image: null, title: null, subText: null, claimButton: null, moreDetails: null, termsAndConditionsText: null, buttonContainer: null };
-let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5611).DARK_BLACK_500_LIGHT_PRIMARY_100 };
+let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5653).DARK_BLACK_500_LIGHT_PRIMARY_100 };
 obj2.imageContainer = size;
 obj2.image = { width: 28, height: 28, resizeMode: "contain" };
 obj2.title = { lineHeight: 20 };
@@ -89,7 +89,8 @@ export default function OutboundPromotionCard(outboundPromotion) {
                 return closure_3_7(closure_0, obj);
               };
             });
-          }
+          },
+        isDismissable: false
       };
       actions_AlertActionCreatorsDefault.openLazy(obj2);
     }

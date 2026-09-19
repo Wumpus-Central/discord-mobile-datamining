@@ -1,9 +1,9 @@
-// === Module 5989: BookIllocon ===
+// === Module 6033: BookIllocon ===
 
-// Module 5989 (BookIllocon)
+// Module 6033 (BookIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef5990 from "module_5990" /* 5990 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6034 from "module_6034" /* 6034 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const BookIllocon = function BookIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5990 };
+  const obj2 = { uri: _modDef6034 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

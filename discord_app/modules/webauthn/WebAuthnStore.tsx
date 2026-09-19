@@ -1,9 +1,9 @@
-// === Module 14872: WebAuthnStore ===
+// === Module 14926: WebAuthnStore ===
 
-// Module 14872 (WebAuthnStore)
+// Module 14926 (WebAuthnStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import Server from "Server" /* 1895 */;
+import Server from "Server" /* 1978 */;
 
 require = fn;
 let c2 = false;

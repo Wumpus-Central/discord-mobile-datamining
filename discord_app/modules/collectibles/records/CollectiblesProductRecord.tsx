@@ -1,13 +1,13 @@
-// === Module 7740: CollectiblesProductRecord ===
+// === Module 7784: CollectiblesProductRecord ===
 
-// Module 7740 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5683 */;
+// Module 7784 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5725 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7741 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7747 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7785 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7791 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7742);
+const CollectiblesItemRecord = fn(7786);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1074);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: "<string:1358954765>", categorySkuId: "<string:302080272>", isCategoryReward: "<string:553783555>", prices: "<string:16732418>", previewAssets: "<string:2991653409>", googleSkuIds: "<string:39911939>", eligibleOffers: "ip", variants: "absolute", bundledProducts: null, isFirstParty: 24 };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "call", items: "<string:2138260118>", categorySkuId: null, isCategoryReward: "sectionEnd", prices: "rankRtcRegions", previewAssets: "lib", googleSkuIds: "GUILD_GETTING_STARTED", eligibleOffers: "ZodBoolean", variants: "ProcessPriority", bundledProducts: "dd", isFirstParty: "updateSeparatorProps" };
               let str;
               if (first != null) {
                 str = first.optionValue;

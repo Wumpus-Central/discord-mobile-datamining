@@ -1,6 +1,6 @@
-// === Module 5279: GameWidgetLimits ===
+// === Module 5321: GameWidgetLimits ===
 
-// Module 5279 (GameWidgetLimits)
+// Module 5321 (GameWidgetLimits)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx");

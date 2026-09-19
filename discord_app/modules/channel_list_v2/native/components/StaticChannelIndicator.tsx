@@ -1,12 +1,12 @@
-// === Module 10405: StaticChannelIndicator ===
+// === Module 10421: StaticChannelIndicator ===
 
-// Module 10405 (StaticChannelIndicator)
+// Module 10421 (StaticChannelIndicator)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4423 */;
-import ReadStateConstants from "ReadStateConstants" /* 4904 */;
+import useToken from "useToken" /* 4457 */;
+import ReadStateConstants from "ReadStateConstants" /* 4938 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 4722 */;
+import createStyles from "createStyles" /* 4756 */;
 import size_mod from "module_2" /* 2 */;
 
 ({ View: c3, StyleSheet } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
-// === Module 9271: UserProfileMobileGameCollectionExperiment ===
+// === Module 13194: UserProfileMobileGameCollectionExperiment ===
 
-// Module 9271 (UserProfileMobileGameCollectionExperiment)
+// Module 13194 (UserProfileMobileGameCollectionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
@@ -11,6 +11,6 @@ obj.variations = obj2;
 let closure_0 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting("modules/user_profile/experiments/UserProfileMobileGameCollectionExperiment.tsx");
 
-export const useIsMobileGameCollectionExperimentEnabled = function useIsMobileGameCollectionExperimentEnabled(UserProfileWidgetsBoard) {
-  return closure_0.useConfig({ location: UserProfileWidgetsBoard }).enabled;
+export const useIsMobileGameCollectionExperimentEnabled = function useIsMobileGameCollectionExperimentEnabled(UserProfileContent) {
+  return closure_0.useConfig({ location: UserProfileContent }).enabled;
 };

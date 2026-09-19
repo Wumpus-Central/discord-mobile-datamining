@@ -1,18 +1,18 @@
-// === Module 5182: SoundboardStore ===
+// === Module 5224: SoundboardStore ===
 
-// Module 5182 (SoundboardStore)
+// Module 5224 (SoundboardStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UserSettings from "UserSettings" /* 1936 */;
-import _modDef4314 from "module_4314" /* 4314 */;
-import FrecencyDefault from "Frecency" /* 4759 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5185 */;
+import UserSettings from "UserSettings" /* 2019 */;
+import _modDef4348 from "module_4348" /* 4348 */;
+import FrecencyDefault from "Frecency" /* 4793 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5227 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import UserStore from "UserStore" /* 1372 */;
-import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5183 */;
+import TopSoundboardSoundStore from "TopSoundboardSoundStore" /* 5225 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -72,7 +72,7 @@ function syncLocalSoundboardMutesFromUserSettings(proto) {
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const SoundboardConstants = fn(5184);
+const SoundboardConstants = fn(5226);
 ({ DEFAULT_SOUND_GUILD_ID: closure_7, EMPTY_SOUND_ID_LIST: closure_8 } = SoundboardConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
@@ -112,7 +112,7 @@ let closure_21 = new FrecencyDefault({
       }
       return num2;
     }
-    obj = _modDef4314();
+    obj = _modDef4348();
   },
   lookupKey(arg0) {
     return arg0;
@@ -445,8 +445,8 @@ const soundboardStore = new SoundboardStore(DispatcherDefault, {
   TOP_SOUNDBOARD_SOUNDS_FETCH_SUCCESS: function handleTopSoundboardSoundsLoaded(topSoundsMetadata) {
     topSoundsMetadata = topSoundsMetadata.topSoundsMetadata;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: null };
-    const obj2 = _modDef4314();
-    obj.topSoundsTTL = _modDef4314().add(1, "days").valueOf();
+    const obj2 = _modDef4348();
+    obj.topSoundsTTL = _modDef4348().add(1, "days").valueOf();
     const result = map1.set(topSoundsMetadata.guildId, obj);
   }
 });

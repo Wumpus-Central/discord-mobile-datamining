@@ -1,9 +1,9 @@
-// === Module 6727: SwordIllocon ===
+// === Module 6771: SwordIllocon ===
 
-// Module 6727 (SwordIllocon)
+// Module 6771 (SwordIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6728 from "module_6728" /* 6728 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6772 from "module_6772" /* 6772 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const SwordIllocon = function SwordIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6728 };
+  const obj2 = { uri: _modDef6772 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

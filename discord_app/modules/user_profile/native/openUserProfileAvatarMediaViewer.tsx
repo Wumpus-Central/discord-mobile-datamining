@@ -1,8 +1,8 @@
-// === Module 8490: openUserProfileAvatarMediaViewer ===
+// === Module 8528: openUserProfileAvatarMediaViewer ===
 
-// Module 8490 (openUserProfileAvatarMediaViewer)
-import openMediaModal from "openMediaModal" /* 8491 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
+// Module 8528 (openUserProfileAvatarMediaViewer)
+import openMediaModal from "openMediaModal" /* 8529 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;
 const AVATAR_MAX_SIZE = fn(1074).AVATAR_MAX_SIZE;

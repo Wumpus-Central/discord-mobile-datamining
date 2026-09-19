@@ -1,22 +1,22 @@
-// === Module 15735: HighlightNotificationsSetting ===
+// === Module 15790: HighlightNotificationsSetting ===
 
-// Module 15735 (HighlightNotificationsSetting)
+// Module 15790 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 require = fn;
 function useHighlightNotifications() {
   const items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-const SettingBuilders = fn(11714);
+const SettingBuilders = fn(11723);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(8194).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8232).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);

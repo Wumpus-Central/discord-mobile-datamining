@@ -1,6 +1,6 @@
-// === Module 15511: getGradientStartPont ===
+// === Module 15566: getGradientStartPont ===
 
-// Module 15511 (getGradientStartPont)
+// Module 15566 (getGradientStartPont)
 import size from "module_2" /* 2 */;
 
 function getHorizontalOrVerticalStartPoint(arg0, arg1, arg2) {

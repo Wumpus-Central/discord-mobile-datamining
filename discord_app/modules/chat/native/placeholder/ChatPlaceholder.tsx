@@ -1,16 +1,16 @@
-// === Module 12880: ChatPlaceholder ===
+// === Module 12889: ChatPlaceholder ===
 
-// Module 12880 (ChatPlaceholder)
+// Module 12889 (ChatPlaceholder)
 import nativeDefault from "native" /* 576 */;
-import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 12882 */;
-import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 12883 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 12891 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 12892 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-let closure_3 = fn(9723).useChatInputContainerHeight;
+let closure_3 = fn(9653).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { placeholder: null };
 const obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

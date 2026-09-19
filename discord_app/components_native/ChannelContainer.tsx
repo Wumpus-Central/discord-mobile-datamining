@@ -1,16 +1,16 @@
-// === Module 10321: ChannelContainer ===
+// === Module 10333: ChannelContainer ===
 
-// Module 10321 (ChannelContainer)
+// Module 10333 (ChannelContainer)
 import initialize from "initialize" /* 504 */;
-import dismissible_content from "dismissible_content" /* 1944 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4542 */;
-import useChatLayoutDefault from "useChatLayout" /* 4582 */;
-import common_NotificationsDefault from "common/Notifications" /* 10322 */;
-import useChannelStylesShared from "useChannelStylesShared" /* 11575 */;
+import dismissible_content from "dismissible_content" /* 2027 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
+import useChatLayoutDefault from "useChatLayout" /* 4616 */;
+import common_NotificationsDefault from "common/Notifications" /* 10334 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 11584 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4362 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import LurkingStore from "LurkingStore" /* 4396 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 
 require = fn;
 function NotificationsContainer() {
@@ -23,10 +23,10 @@ function NotificationsContainer() {
 }
 const View = fn(17).View;
 const ChannelTypes = fn(1074).ChannelTypes;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_12 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, backgroundColor: "transparent", marginTop: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChannelContainer.tsx");
@@ -51,7 +51,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(9831)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(9671)(stateFromStoresObject.voiceChannelId);
   }
   const items1 = [LurkingStore];
   let isPrivateResult = null != channel;
@@ -66,9 +66,9 @@ export const ChannelContainer = function ChannelContainer(children) {
     isPrivateResult = channel.isPrivate();
   }
   dependencyMap = isPrivateResult;
-  const tmp8 = channelId(8504)(isPrivateResult);
+  const tmp8 = channelId(8542)(isPrivateResult);
   noop = tmp8;
-  const tmp9 = channelId(8504)(channelId);
+  const tmp9 = channelId(8542)(channelId);
   closure_4 = tmp9;
   const items2 = [channelId, tmp9, isPrivateResult, tmp8];
   const effect = noop.useEffect(() => {
@@ -104,13 +104,13 @@ export const ChannelContainer = function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj4 = { channel };
-      tmp15 = closure_10(channelId(11576), obj4);
+      tmp15 = closure_10(channelId(11585), obj4);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj5 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(9940), obj5);
+    tmp5 = closure_10(channelId(9779), obj5);
   }
   items3[2] = tmp5;
   obj3.children = items3;

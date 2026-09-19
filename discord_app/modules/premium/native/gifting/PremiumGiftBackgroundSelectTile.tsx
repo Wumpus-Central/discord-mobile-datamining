@@ -1,43 +1,43 @@
-// === Module 11270: PremiumGiftBackgroundSelectTile ===
+// === Module 11283: PremiumGiftBackgroundSelectTile ===
 
-// Module 11270 (PremiumGiftBackgroundSelectTile)
+// Module 11283 (PremiumGiftBackgroundSelectTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef2544 from "module_2544" /* 2544 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef11272 from "module_11272" /* 11272 */;
-import _modDef11273 from "module_11273" /* 11273 */;
-import _modDef11274 from "module_11274" /* 11274 */;
-import _modDef11275 from "module_11275" /* 11275 */;
-import _modDef11276 from "module_11276" /* 11276 */;
-import _modDef11277 from "module_11277" /* 11277 */;
-import _modDef11278 from "module_11278" /* 11278 */;
-import _modDef11279 from "module_11279" /* 11279 */;
-import _modDef11280 from "module_11280" /* 11280 */;
+import _modDef2546 from "module_2546" /* 2546 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef11285 from "module_11285" /* 11285 */;
+import _modDef11286 from "module_11286" /* 11286 */;
+import _modDef11287 from "module_11287" /* 11287 */;
+import _modDef11288 from "module_11288" /* 11288 */;
+import _modDef11289 from "module_11289" /* 11289 */;
+import _modDef11290 from "module_11290" /* 11290 */;
+import _modDef11291 from "module_11291" /* 11291 */;
+import _modDef11292 from "module_11292" /* 11292 */;
+import _modDef11293 from "module_11293" /* 11293 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
 const PremiumGiftStyles = fn(1374).PremiumGiftStyles;
-const GIFT_STYLE_DESCRIPTIONS = fn(11271).GIFT_STYLE_DESCRIPTIONS;
+const GIFT_STYLE_DESCRIPTIONS = fn(11284).GIFT_STYLE_DESCRIPTIONS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const GIFT_STYLE_IMG = { [STANDARD_BOX]: _modDef11272, [CAKE]: _modDef11273, [CHEST]: _modDef11274, [COFFEE]: _modDef11275 };
+const GIFT_STYLE_IMG = { [STANDARD_BOX]: _modDef11285, [CAKE]: _modDef11286, [CHEST]: _modDef11287, [COFFEE]: _modDef11288 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11276 };
+GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = { uri: _modDef11289 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
-let obj2 = { uri: _modDef11276 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11277 };
-let obj3 = { uri: _modDef11277 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11278 };
-let obj4 = { uri: _modDef11278 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11279 };
-const obj5 = { uri: _modDef11279 };
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11280 };
-const createStyles = fn(4722);
+let obj2 = { uri: _modDef11289 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = { uri: _modDef11290 };
+let obj3 = { uri: _modDef11290 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = { uri: _modDef11291 };
+let obj4 = { uri: _modDef11291 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: _modDef11292 };
+const obj5 = { uri: _modDef11292 };
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef11293 };
+const createStyles = fn(4756);
 let closure_9 = createStyles.createStyles((arg0) => {
   const size = { width: 78, height: 44, justifyContent: "center", marginEnd: nativeDefault.space.PX_8, marginStart: null };
   let num = 0;
@@ -64,7 +64,7 @@ export default function GiftBackgroundSelectTile(index) {
     const obj2 = { giftStyle: null };
     const intl2 = util.intl;
     obj2.giftStyle = intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]);
-    obj["aria-label"] = intl.formatToPlainString(_modDef2544["+utqaz"], obj2);
+    obj["aria-label"] = intl.formatToPlainString(_modDef2546["+utqaz"], obj2);
     obj["aria-selected"] = selected;
     obj.style = tmp.container;
     obj.onPress = index.onPress;

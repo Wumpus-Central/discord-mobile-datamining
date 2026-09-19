@@ -1,9 +1,9 @@
-// === Module 6539: PlaneIllocon ===
+// === Module 6583: PlaneIllocon ===
 
-// Module 6539 (PlaneIllocon)
+// Module 6583 (PlaneIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6540 from "module_6540" /* 6540 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6584 from "module_6584" /* 6584 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const PlaneIllocon = function PlaneIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6540 };
+  const obj2 = { uri: _modDef6584 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

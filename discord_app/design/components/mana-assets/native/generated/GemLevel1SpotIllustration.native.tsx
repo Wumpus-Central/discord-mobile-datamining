@@ -1,9 +1,9 @@
-// === Module 6299: GemLevel1SpotIllustration ===
+// === Module 6343: GemLevel1SpotIllustration ===
 
-// Module 6299 (GemLevel1SpotIllustration)
+// Module 6343 (GemLevel1SpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6300 from "module_6300" /* 6300 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6344 from "module_6344" /* 6344 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GemLevel1SpotIllustration = function GemLevel1SpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6300 };
+  const obj2 = { uri: _modDef6344 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

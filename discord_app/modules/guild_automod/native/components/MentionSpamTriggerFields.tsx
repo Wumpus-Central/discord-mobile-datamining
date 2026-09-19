@@ -1,16 +1,16 @@
-// === Module 17867: MentionSpamTriggerFields ===
+// === Module 17947: MentionSpamTriggerFields ===
 
-// Module 17867 (MentionSpamTriggerFields)
+// Module 17947 (MentionSpamTriggerFields)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(12106);
+const Constants = fn(12115);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_9 = createStyles.createStyles({ limitField: { width: 52 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/native/components/MentionSpamTriggerFields.tsx");

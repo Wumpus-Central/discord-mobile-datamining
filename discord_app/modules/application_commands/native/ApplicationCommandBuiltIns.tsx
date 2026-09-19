@@ -1,14 +1,14 @@
-// === Module 9540: application_commands/ApplicationCommandBuiltIns ===
+// === Module 9415: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 9540 (application_commands/ApplicationCommandBuiltIns)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4735 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5066 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7652 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+// Module 9415 (application_commands/ApplicationCommandBuiltIns)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7696 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
-let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(1895).ApplicationCommandType.CHAT, inputType: fn(7719).ApplicationCommandInputType.BUILT_IN, applicationId: fn(5168).BuiltInSectionId.BUILT_IN };
+let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(1978).ApplicationCommandType.CHAT, inputType: fn(7763).ApplicationCommandInputType.BUILT_IN, applicationId: fn(5210).BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;
@@ -30,10 +30,10 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4875).computeChannelName(channel, UserStore, RelationshipStore);
+    const channelName = channel(4909).computeChannelName(channel, UserStore, RelationshipStore);
     const intl5 = channel(1115).intl;
     let obj2 = { name: channelName };
-    const obj5 = channel(4875);
+    const obj5 = channel(4909);
     const intl6 = channel(1115).intl;
     const obj4 = { name: channelName };
     let formatResult = intl6.format(channel(1115).t.SSIVOu, obj4);

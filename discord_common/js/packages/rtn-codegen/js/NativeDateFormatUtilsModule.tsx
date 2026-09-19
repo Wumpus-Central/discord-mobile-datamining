@@ -1,6 +1,6 @@
-// === Module 4408: NativeDateFormatUtilsModule ===
+// === Module 4442: NativeDateFormatUtilsModule ===
 
-// Module 4408 (NativeDateFormatUtilsModule)
+// Module 4442 (NativeDateFormatUtilsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

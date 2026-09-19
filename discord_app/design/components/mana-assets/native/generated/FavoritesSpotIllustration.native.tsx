@@ -1,9 +1,9 @@
-// === Module 6179: FavoritesSpotIllustration ===
+// === Module 6223: FavoritesSpotIllustration ===
 
-// Module 6179 (FavoritesSpotIllustration)
+// Module 6223 (FavoritesSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6180 from "module_6180" /* 6180 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6224 from "module_6224" /* 6224 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const FavoritesSpotIllustration = function FavoritesSpotIllustration(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6180 };
+  const obj2 = { uri: _modDef6224 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,14 +1,14 @@
-// === Module 2015: ImpersonateStore ===
+// === Module 2098: ImpersonateStore ===
 
-// Module 2015 (ImpersonateStore)
+// Module 2098 (ImpersonateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import FunctionUtils from "FunctionUtils" /* 1934 */;
-import ImpersonateTypes from "ImpersonateTypes" /* 2021 */;
-import GuildRoleStore from "GuildRoleStore" /* 2016 */;
-import GuildStore from "GuildStore" /* 1980 */;
+import FunctionUtils from "FunctionUtils" /* 2017 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 2104 */;
+import GuildRoleStore from "GuildRoleStore" /* 2099 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 require = fn;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
@@ -191,7 +191,7 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp6.type === overrides(2021).ImpersonateType.NEW_MEMBER) {
+          if (tmp6.type === overrides(2104).ImpersonateType.NEW_MEMBER) {
             optInChannels = tmp6.optInChannels;
             if (optInChannels == null) {
               const _Set = Set;
@@ -271,7 +271,7 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
         }
         let tmp3 = null != flags;
         if (tmp3) {
-          tmp3 = tmp2.type === guildId(2021).ImpersonateType.NEW_MEMBER;
+          tmp3 = tmp2.type === guildId(2104).ImpersonateType.NEW_MEMBER;
         }
         flag = true;
         if (tmp3) {

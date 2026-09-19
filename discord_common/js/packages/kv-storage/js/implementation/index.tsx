@@ -1,6 +1,6 @@
-// === Module 1989: ? ===
+// === Module 2072: ? ===
 
-// Module 1989
+// Module 2072
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

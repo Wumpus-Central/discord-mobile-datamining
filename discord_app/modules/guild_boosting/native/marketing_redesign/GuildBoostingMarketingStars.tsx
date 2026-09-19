@@ -1,7 +1,7 @@
-// === Module 13781: GuildBoostingMarketingStars ===
+// === Module 13836: GuildBoostingMarketingStars ===
 
-// Module 13781 (GuildBoostingMarketingStars)
-import inlineStyles from "inlineStyles" /* 8689 */;
+// Module 13836 (GuildBoostingMarketingStars)
+import inlineStyles from "inlineStyles" /* 8727 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

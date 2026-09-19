@@ -1,11 +1,11 @@
-// === Module 8098: experiment ===
+// === Module 8136: experiment ===
 
-// Module 8098 (experiment)
+// Module 8136 (experiment)
 import _mod1187 from "module_1187" /* 1187 */;
 import timestamp from "timestamp" /* 1216 */;
 import wrappers from "wrappers" /* 1217 */;
-import rules from "rules" /* 8099 */;
-import lifecycle_plan from "lifecycle_plan" /* 8100 */;
+import rules from "rules" /* 8137 */;
+import lifecycle_plan from "lifecycle_plan" /* 8138 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

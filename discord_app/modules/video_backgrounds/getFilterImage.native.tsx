@@ -1,7 +1,7 @@
-// === Module 9344: getFilterImage ===
+// === Module 9927: getFilterImage ===
 
-// Module 9344 (getFilterImage)
-import VideoBackgroundConstants from "VideoBackgroundConstants" /* 7183 */;
+// Module 9927 (getFilterImage)
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 7227 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = VideoBackgroundConstants.BACKGROUND_REPLACEMENT_SIZE;

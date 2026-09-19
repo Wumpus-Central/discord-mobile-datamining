@@ -1,11 +1,11 @@
-// === Module 13906: OnlineFriendsStore ===
+// === Module 13961: OnlineFriendsStore ===
 
-// Module 13906 (OnlineFriendsStore)
+// Module 13961 (OnlineFriendsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SetUtils from "SetUtils" /* 1975 */;
-import PresenceStore from "PresenceStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import SetUtils from "SetUtils" /* 2058 */;
+import PresenceStore from "PresenceStore" /* 4796 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 
 require = fn;
 function upsert(id) {

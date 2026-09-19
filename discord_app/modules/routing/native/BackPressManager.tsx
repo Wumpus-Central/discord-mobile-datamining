@@ -1,21 +1,19 @@
-// === Module 14659: BackPressManager ===
+// === Module 14714: BackPressManager ===
 
-// Module 14659 (BackPressManager)
+// Module 14714 (BackPressManager)
 import _mod17 from "module_17" /* 17 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
-import useKeyboardType from "useKeyboardType" /* 4590 */;
-import ContextMenuState from "ContextMenuState" /* 8136 */;
-import LifecycleManager from "LifecycleManager" /* 1899 */;
+import useKeyboardType from "useKeyboardType" /* 4624 */;
+import LifecycleManager from "LifecycleManager" /* 1982 */;
 import size from "module_2" /* 2 */;
 
 function handleBackPress() {
-  ContextMenuState.hideContextMenu();
   const keyboardType = useKeyboardType.getKeyboardType();
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
-    const obj3 = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
-    KeyboardUIStore.setKeyboardType(obj3);
+    const obj2 = { type: KeyboardTypes.KeyboardTypes.SYSTEM };
+    KeyboardUIStore.setKeyboardType(obj2);
     flag = true;
     const tmpResult = KeyboardUIStore;
   }

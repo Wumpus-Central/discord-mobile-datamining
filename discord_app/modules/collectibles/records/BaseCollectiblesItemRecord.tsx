@@ -1,6 +1,6 @@
-// === Module 1889: BaseCollectiblesItemRecord ===
+// === Module 1972: BaseCollectiblesItemRecord ===
 
-// Module 1889 (BaseCollectiblesItemRecord)
+// Module 1972 (BaseCollectiblesItemRecord)
 import Record from "Record" /* 1387 */;
 
 const prototype = function BaseCollectiblesItemRecord(skuId) {

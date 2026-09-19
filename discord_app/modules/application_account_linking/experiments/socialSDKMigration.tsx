@@ -1,6 +1,6 @@
-// === Module 1923: socialSDKMigration ===
+// === Module 2006: socialSDKMigration ===
 
-// Module 1923 (socialSDKMigration)
+// Module 2006 (socialSDKMigration)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

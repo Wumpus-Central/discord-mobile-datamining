@@ -1,10 +1,10 @@
-// === Module 15147: UserSettingsFamilyCenterParentalControls ===
+// === Module 15201: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15147 (UserSettingsFamilyCenterParentalControls)
+// Module 15201 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef2480 from "module_2480" /* 2480 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7735 */;
+import _modDef2482 from "module_2482" /* 2482 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7779 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,10 +14,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const FamilyCenterSubPages = fn(7734).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7778).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };
@@ -82,7 +82,7 @@ export default function FamilyCenterParentalControlsSettings() {
       if (null != id) {
         let obj = { title: null, headerRight: null };
         let intl = util.intl;
-        obj.title = intl.string(_modDef2480["1Op+NP"]);
+        obj.title = intl.string(_modDef2482["1Op+NP"]);
         let fn;
         if (!closure_5) {
           fn = (arg0) => {
@@ -100,7 +100,7 @@ export default function FamilyCenterParentalControlsSettings() {
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "PX_16", headerRight: "accessible" });
+    stackNavigation.setOptions({ title: "a", headerRight: "isArray" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[14]).intl;

@@ -1,6 +1,6 @@
-// === Module 12139: ChatListNativeComponent ===
+// === Module 12148: ChatListNativeComponent ===
 
-// Module 12139 (ChatListNativeComponent)
+// Module 12148 (ChatListNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

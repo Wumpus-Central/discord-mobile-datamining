@@ -1,10 +1,10 @@
-// === Module 14768: TouchEventAnalyticsManager ===
+// === Module 14822: TouchEventAnalyticsManager ===
 
-// Module 14768 (TouchEventAnalyticsManager)
-import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1901 */;
-import NativeTouchEventAnalyticsModuleDefault from "NativeTouchEventAnalyticsModule" /* 14769 */;
+// Module 14822 (TouchEventAnalyticsManager)
+import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1984 */;
+import NativeTouchEventAnalyticsModuleDefault from "NativeTouchEventAnalyticsModule" /* 14823 */;
 import UserStore from "UserStore" /* 1372 */;
-import LifecycleManager from "LifecycleManager" /* 1899 */;
+import LifecycleManager from "LifecycleManager" /* 1982 */;
 
 require = fn;
 function updateEnabledState() {

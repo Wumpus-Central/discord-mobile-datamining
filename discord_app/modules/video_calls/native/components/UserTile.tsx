@@ -1,41 +1,41 @@
-// === Module 9868: UserTile ===
+// === Module 9710: UserTile ===
 
-// Module 9868 (UserTile)
+// Module 9710 (UserTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import _modDef8852 from "module_8852" /* 8852 */;
-import _modDef9870 from "module_9870" /* 9870 */;
-import _modDef9871 from "module_9871" /* 9871 */;
-import _modDef9872 from "module_9872" /* 9872 */;
-import _modDef9873 from "module_9873" /* 9873 */;
-import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 9874 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import _modDef8891 from "module_8891" /* 8891 */;
+import _modDef9712 from "module_9712" /* 9712 */;
+import _modDef9713 from "module_9713" /* 9713 */;
+import _modDef9714 from "module_9714" /* 9714 */;
+import _modDef9715 from "module_9715" /* 9715 */;
+import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 9716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 9869 */;
+import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 9711 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import MediaEngineStore from "MediaEngineStore" /* 1909 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(9869).clearVoiceChannelEffectForUser;
+let closure_7 = fn(9711).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1074).VideoToggleState;
-const ParticipantTypes = fn(4743).ParticipantTypes;
-const MediaEngineContextTypes = fn(4747).MediaEngineContextTypes;
+const ParticipantTypes = fn(4777).ParticipantTypes;
+const MediaEngineContextTypes = fn(4781).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { container: { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BLACK }, imageBackground: { flex: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch" }, autoDisabledVideoWrapper: { width: "100%", flexDirection: "row", justifyContent: "center" }, autoDisabledVideo: null, autoDisabledVideoTextWrapper: null, statusWrapper: null, labelText: null };
 let obj4 = { backgroundColor: null, alignItems: "center", height: 24 };
-let ColorUtils = fn(4571);
+let ColorUtils = fn(4605);
 obj4.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj.autoDisabledVideo = obj4;
 let obj3 = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BLACK };
 obj.autoDisabledVideoTextWrapper = { borderRadius: nativeDefault.radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
 let size = { position: "absolute", bottom: 8, right: 8, backgroundColor: null, borderRadius: null, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-ColorUtils = fn(4571);
+ColorUtils = fn(4605);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 size.borderRadius = nativeDefault.radii.md;
 obj.statusWrapper = size;
@@ -104,7 +104,7 @@ let closure_18 = noop.memo((guildId) => {
       const items = [, ];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
       obj2.style = items;
-      const obj3 = { source: _modDef9870, size: native.Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef9712, size: native.Icon.Sizes.SMALL, disableColor: true };
       const items1 = [closure_2_14(native.Icon, obj3), ];
       const obj4 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
       const intl = util.intl;
@@ -134,11 +134,11 @@ let closure_19 = noop.memo((userId) => {
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = _modDef8852;
+    let tmp6 = _modDef8891;
   } else if (deafened) {
-    tmp6 = _modDef9871;
+    tmp6 = _modDef9713;
   } else if (muted) {
-    tmp6 = _modDef9872;
+    tmp6 = _modDef9714;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -149,7 +149,7 @@ let closure_19 = noop.memo((userId) => {
       const obj2 = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj2.style = items2;
-      const obj3 = { source: _modDef9873, size: tmp2(1177).Icon.Sizes.SMALL, disableColor: true };
+      const obj3 = { source: _modDef9715, size: tmp2(1177).Icon.Sizes.SMALL, disableColor: true };
       obj2.children = closure_14(tmp2(1177).Icon, obj3);
       tmp14 = closure_14(View, obj2);
     }
@@ -164,7 +164,7 @@ let closure_19 = noop.memo((userId) => {
       const obj5 = { style: null, children: null };
       items4[2] = obj4;
       obj5.style = items4;
-      const obj6 = { source: tmp6, size: tmp2(1177).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef8852 };
+      const obj6 = { source: tmp6, size: tmp2(1177).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef8891 };
       obj5.children = closure_14(tmp2(1177).Icon, obj6);
       tmp19Result = closure_14(View, obj5);
     }
@@ -282,7 +282,8 @@ export default function UserTile(participant) {
   const Gesture = tmp15(tmp8[31]).Gesture;
   const tmp21 = onSingleTap(onDoubleTap[30])({ onDoubleTapStart: callback1, onSingleTapStart: callback });
   const LongPressResult = Gesture.LongPress();
-  const minDurationResult = Gesture.LongPress().onStart(callback2).minDuration(800);
+  const runOnJSResult = Gesture.LongPress().runOnJS(true);
+  const minDurationResult = Gesture.LongPress().runOnJS(true).onStart(callback2).minDuration(800);
   let result = minDurationResult;
   if (null != swipeDismissRef) {
     result = minDurationResult.requireExternalGestureToFail(swipeDismissRef);

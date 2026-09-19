@@ -1,6 +1,6 @@
-// === Module 6758: ? ===
+// === Module 6802: ? ===
 
-// Module 6758
+// Module 6802
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WaterIllocon-2x.png.js");

@@ -1,17 +1,17 @@
-// === Module 18265: handleAppStateChanged ===
+// === Module 18344: handleAppStateChanged ===
 
-// Module 18265 (handleAppStateChanged)
+// Module 18344 (handleAppStateChanged)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4570 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7671 */;
-import BundleUpdaterActionCreatorsDefault from "BundleUpdaterActionCreators" /* 18264 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4604 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7715 */;
+import BundleUpdaterActionCreatorsDefault from "BundleUpdaterActionCreators" /* 18343 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AppStateStore from "AppStateStore" /* 1896 */;
+import AppStateStore from "AppStateStore" /* 1979 */;
 
 require = fn;
 const Constants = fn(1074);

@@ -1,8 +1,8 @@
-// === Module 8046: logMessageSendFailure ===
+// === Module 8084: logMessageSendFailure ===
 
-// Module 8046 (logMessageSendFailure)
+// Module 8084 (logMessageSendFailure)
 import Constants from "Constants" /* 1074 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

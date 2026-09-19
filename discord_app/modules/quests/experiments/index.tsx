@@ -1,9 +1,9 @@
-// === Module 11735: apexExperiment ===
+// === Module 11742: apexExperiment ===
 
-// Module 11735 (apexExperiment)
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11544 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11545 */;
-import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11736 */;
+// Module 11742 (apexExperiment)
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11553 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11554 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11743 */;
 import ApexExperiment_mod from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

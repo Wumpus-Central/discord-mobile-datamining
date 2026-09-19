@@ -1,6 +1,6 @@
-// === Module 6072: ? ===
+// === Module 6116: ? ===
 
-// Module 6072
+// Module 6116
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CrownIllocon-2x.png.js");

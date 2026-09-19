@@ -1,12 +1,12 @@
-// === Module 16395: useFavoritesGuildHideAction ===
+// === Module 16471: useFavoritesGuildHideAction ===
 
-// Module 16395 (useFavoritesGuildHideAction)
+// Module 16471 (useFavoritesGuildHideAction)
 import router_utils from "router_utils" /* 1101 */;
-import FavoritesUtils from "FavoritesUtils" /* 1983 */;
-import _modDef3322 from "module_3322" /* 3322 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10464 */;
+import FavoritesUtils from "FavoritesUtils" /* 2066 */;
+import _modDef3324 from "module_3324" /* 3324 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10480 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
-  hasAccess = hasAccess(10465).useFavoritesAccess().hasAccess;
+  hasAccess = hasAccess(10481).useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   let obj2 = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
   const callback = noop.useCallback(() => {
@@ -28,7 +28,7 @@ export default function useFavoritesGuildHideAction() {
   }, items);
   const intl = hasAccess(1115).intl;
   if (hasAccess) {
-    let ojM1xJ = _modDef3322["8FO0y9"];
+    let ojM1xJ = _modDef3324["8FO0y9"];
   } else {
     ojM1xJ = tmp(1115).t.ojM1xJ;
   }
@@ -36,7 +36,7 @@ export default function useFavoritesGuildHideAction() {
   let stringResult;
   if (hasAccess) {
     const intl2 = tmp(1115).intl;
-    stringResult = intl2.string(_modDef3322.FaHxWl);
+    stringResult = intl2.string(_modDef3324.FaHxWl);
   }
   obj2.subLabel = stringResult;
   obj2.perform = callback;

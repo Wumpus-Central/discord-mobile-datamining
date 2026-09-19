@@ -1,19 +1,19 @@
-// === Module 13741: GuildBoostingGuildList ===
+// === Module 13796: GuildBoostingGuildList ===
 
-// Module 13741 (GuildBoostingGuildList)
+// Module 13796 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4630 */;
-import useThemeDefault from "useTheme" /* 4656 */;
-import GuildIconDefault from "GuildIcon" /* 5754 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7186 */;
-import transitionToGuild from "transitionToGuild" /* 7538 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9288 */;
-import _modDef10652 from "module_10652" /* 10652 */;
-import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13710 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4664 */;
+import useThemeDefault from "useTheme" /* 4690 */;
+import GuildIconDefault from "GuildIcon" /* 5796 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7230 */;
+import transitionToGuild from "transitionToGuild" /* 7582 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 10010 */;
+import _modDef10668 from "module_10668" /* 10668 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13765 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import SortedGuildStore from "SortedGuildStore" /* 5608 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import SortedGuildStore from "SortedGuildStore" /* 5650 */;
 
 require = fn;
 function GuildBoostingGuildListItem(guildId) {
@@ -40,20 +40,20 @@ function GuildBoostingGuildListItem(guildId) {
     };
     const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
     const tmp2Result = TouchableHitBoxDefault;
-    obj3.size = tmp5(5754).GuildIconSizes.LARGE;
+    obj3.size = tmp5(5796).GuildIconSizes.LARGE;
     obj3.style = tmp.guildIcon;
     const items1 = [closure_8(GuildIconDefault, obj3), , ];
     const obj4 = { style: tmp.guildCardDescription, children: null };
     const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
-    const items2 = [closure_8(tmp5(4718).Text, obj5), ];
+    const items2 = [closure_8(tmp5(4752).Text, obj5), ];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
-    const obj7 = { source: _modDef10652, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
+    const obj7 = { source: _modDef10668, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
     const items3 = [closure_8(closure_4, obj7), ];
     const obj8 = { variant: "text-xs/medium", children: null };
     const intl = tmp5(1115).intl;
     const obj9 = { subscriberCount: tmp8 };
     obj8.children = intl.format(tmp5(1115).t.If4iTS, obj9);
-    items3[1] = closure_8(tmp5(4718).Text, obj8);
+    items3[1] = closure_8(tmp5(4752).Text, obj8);
     obj6.children = items3;
     items2[1] = closure_9(closure_3, obj6);
     obj4.children = items2;
@@ -71,7 +71,7 @@ get_ActivityIndicator = fn(17);
 let closure_7 = fn(1074).NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { guildCard: { padding: 12, paddingLeft: 16, borderRadius: nativeDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, guildIcon: { marginRight: 16 }, guildCardDescription: { flex: 1 }, subscriptionInfo: { flexDirection: "row", alignItems: "center" }, premiumGuildImage: { width: 18, height: 12, marginLeft: -5 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);

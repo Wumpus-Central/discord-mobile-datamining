@@ -1,9 +1,9 @@
-// === Module 16442: LiveChannelNoticesStore ===
+// === Module 16518: LiveChannelNoticesStore ===
 
-// Module 16442 (LiveChannelNoticesStore)
+// Module 16518 (LiveChannelNoticesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1964 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2047 */;
 import size from "module_2" /* 2 */;
 
 const GuildScheduledEventStatus = GuildScheduledEventsConstants.GuildScheduledEventStatus;

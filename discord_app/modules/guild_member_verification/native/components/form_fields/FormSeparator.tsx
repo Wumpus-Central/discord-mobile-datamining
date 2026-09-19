@@ -1,12 +1,12 @@
-// === Module 5765: form_fields/FormSeparator ===
+// === Module 5807: form_fields/FormSeparator ===
 
-// Module 5765 (form_fields/FormSeparator)
+// Module 5807 (form_fields/FormSeparator)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 const obj2 = { separator: { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, marginVertical: 12 } };
 let closure_2 = createStyles.createStyles(obj2);
 const size = fn(2);

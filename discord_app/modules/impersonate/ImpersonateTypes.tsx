@@ -1,6 +1,6 @@
-// === Module 2021: ImpersonateTypes ===
+// === Module 2104: ImpersonateTypes ===
 
-// Module 2021 (ImpersonateTypes)
+// Module 2104 (ImpersonateTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/impersonate/ImpersonateTypes.tsx");

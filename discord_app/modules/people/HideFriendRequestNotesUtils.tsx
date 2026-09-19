@@ -1,8 +1,8 @@
-// === Module 13370: HideFriendRequestNotesUtils ===
+// === Module 13426: HideFriendRequestNotesUtils ===
 
-// Module 13370 (HideFriendRequestNotesUtils)
-import UserSettings from "UserSettings" /* 1936 */;
-import useUserIsTeen from "useUserIsTeen" /* 8882 */;
+// Module 13426 (HideFriendRequestNotesUtils)
+import UserSettings from "UserSettings" /* 2019 */;
+import useUserIsTeen from "useUserIsTeen" /* 8921 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/people/HideFriendRequestNotesUtils.tsx");

@@ -1,18 +1,18 @@
-// === Module 12293: AppLauncherNativeUtils ===
+// === Module 12302: AppLauncherNativeUtils ===
 
-// Module 12293 (AppLauncherNativeUtils)
+// Module 12302 (AppLauncherNativeUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import _modDef1885 from "module_1885" /* 1885 */;
-import Server from "Server" /* 1895 */;
-import HapticUtils from "HapticUtils" /* 4690 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7717 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7719 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7980 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9527 */;
-import FrecencySection from "FrecencySection" /* 12294 */;
+import _modDef1968 from "module_1968" /* 1968 */;
+import Server from "Server" /* 1978 */;
+import HapticUtils from "HapticUtils" /* 4724 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7761 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 8018 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9402 */;
+import FrecencySection from "FrecencySection" /* 12303 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ require = fn;
 const AppLauncherNativeConstants = fn(1483);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const BuiltInSectionId = fn(5168).BuiltInSectionId;
+const BuiltInSectionId = fn(5210).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
@@ -211,7 +211,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1885;
+    let applicationIconSource = _modDef1968;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {

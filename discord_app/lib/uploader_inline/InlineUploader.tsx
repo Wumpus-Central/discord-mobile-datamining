@@ -1,8 +1,8 @@
-// === Module 5338: InlineUploader ===
+// === Module 5381: InlineUploader ===
 
-// Module 5338 (InlineUploader)
-import DiscordMd5Default from "DiscordMd5" /* 5326 */;
-import originalMd5Header from "originalMd5Header" /* 5339 */;
+// Module 5381 (InlineUploader)
+import DiscordMd5Default from "DiscordMd5" /* 5368 */;
+import originalMd5Header from "originalMd5Header" /* 5382 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

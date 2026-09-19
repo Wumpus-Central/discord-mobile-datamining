@@ -1,6 +1,6 @@
-// === Module 16880: VibegrationsRoleIds ===
+// === Module 16947: VibegrationsRoleIds ===
 
-// Module 16880 (VibegrationsRoleIds)
+// Module 16947 (VibegrationsRoleIds)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsRoleIds.tsx");

@@ -1,9 +1,9 @@
-// === Module 5584: StageChannelsConstants ===
+// === Module 5626: StageChannelsConstants ===
 
-// Module 5584 (StageChannelsConstants)
+// Module 5626 (StageChannelsConstants)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2025 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;

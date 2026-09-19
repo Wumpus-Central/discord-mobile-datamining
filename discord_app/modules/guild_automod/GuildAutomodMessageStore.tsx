@@ -1,15 +1,15 @@
-// === Module 8157: GuildAutomodMessageStore ===
+// === Module 8195: GuildAutomodMessageStore ===
 
-// Module 8157 (GuildAutomodMessageStore)
+// Module 8195 (GuildAutomodMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4945 */;
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7704 */;
-import MessageQueue from "MessageQueue" /* 8036 */;
-import AutomodErrorUtils from "AutomodErrorUtils" /* 8158 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import MessageStore from "MessageStore" /* 4943 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4978 */;
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7748 */;
+import MessageQueue from "MessageQueue" /* 8074 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 8196 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import MessageStore from "MessageStore" /* 4976 */;
 
 require = fn;
 function handleMessageSendFailedAutomod(messageData) {
@@ -146,6 +146,17 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(DispatcherDefault,
   },
   MESSAGE_SEND_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
   MESSAGE_EDIT_FAILED_AUTOMOD: handleMessageSendFailedAutomod,
+  AUTO_MODERATION_CONTENT_DELETED: function handleAutomodContentDeleted(message) {
+    message = message.message;
+    let flag = null != message;
+    if (flag) {
+      const obj = { id: message.id, messageData: "PX_16", isBlockedEdit: null, errorMessage: tmp };
+      closure_8[message.id] = obj;
+      closure_9 = closure_9 + 1;
+      flag = true;
+    }
+    return flag;
+  },
   REMOVE_AUTOMOD_MESSAGE_NOTICE: function handleMessageNoticeRemove(arg0) {
     if (null != automodFailedMessages[arg0.messageId]) {
       delete tmp[tmp2];

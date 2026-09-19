@@ -1,9 +1,9 @@
-// === Module 1935: GameDetectionTypes ===
+// === Module 2018: GameDetectionTypes ===
 
-// Module 1935 (GameDetectionTypes)
+// Module 2018 (GameDetectionTypes)
 import Record from "Record" /* 1387 */;
 
-const createExecutable = fn(1919).createExecutable;
+const createExecutable = fn(2002).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
 class DetectableGameRecord extends tmp2 {

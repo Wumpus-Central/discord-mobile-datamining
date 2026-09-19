@@ -1,22 +1,22 @@
-// === Module 12294: FrecencySection ===
+// === Module 12303: FrecencySection ===
 
-// Module 12294 (FrecencySection)
+// Module 12303 (FrecencySection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4458 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import timing from "timing" /* 4723 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4902 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9527 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9647 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11406 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12296 */;
-import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12297 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import timing from "timing" /* 4757 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9402 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9522 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11418 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12305 */;
+import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12306 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1957 */;
-import FrecencySectionStore from "FrecencySectionStore" /* 12295 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import FrecencySectionStore from "FrecencySectionStore" /* 12304 */;
 
 const require = globalThis.__r;
 
@@ -105,7 +105,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12293).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12302).getAppLauncherIconSource(app.section.application);
     let obj = { style: disabled ? tmp.appContainerDisabled : tmp.appContainer, disabled, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     const application = app.section.application;
     let name;
@@ -126,22 +126,22 @@ function FrecentApp(app) {
     let tmp3 = null != appLauncherIconSource;
     if (tmp3) {
       const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-      tmp3 = closure_11(onAppSelected(5757), obj2);
+      tmp3 = closure_11(onAppSelected(5799), obj2);
     }
     const items = [tmp3, ];
     const obj3 = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12302).SubmittingOverlay, obj3);
+    items[1] = closure_11(app(12311).SubmittingOverlay, obj3);
     obj.children = items;
-    return closure_12(app(5292).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(5334).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const FrecencySectionSelection = fn(12295).FrecencySectionSelection;
+const FrecencySectionSelection = fn(12304).FrecencySectionSelection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_16 }, headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, header: null, scrollView: null, scrollViewContentContainer: null, contextMenuIcon: null, appContainer: null, appContainerDisabled: null, commandContainer: null, appIcon: null, loadingCommandIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, submittingOverlay: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

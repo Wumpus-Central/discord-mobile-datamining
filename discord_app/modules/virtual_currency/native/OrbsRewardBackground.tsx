@@ -1,14 +1,14 @@
-// === Module 12026: OrbsRewardBackground ===
+// === Module 12035: OrbsRewardBackground ===
 
-// Module 12026 (OrbsRewardBackground)
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef12027 from "module_12027" /* 12027 */;
+// Module 12035 (OrbsRewardBackground)
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef12036 from "module_12036" /* 12036 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4714 */;
-import AppStateStore from "AppStateStore" /* 1896 */;
+import AccessibilityStore from "AccessibilityStore" /* 4748 */;
+import AppStateStore from "AppStateStore" /* 1979 */;
 
-const _modDef12028 = tmp15(12028);
+const _modDef12037 = tmp15(12037);
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -51,7 +51,7 @@ export const OrbsRewardBackground = function OrbsRewardBackground(arg0) {
   const obj4 = { source: null, style: null, resizeMode: "cover", onLoad: null };
   const obj5 = { uri: null };
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  obj5.uri = _modDef12027;
+  obj5.uri = _modDef12036;
   obj4.source = obj5;
   obj4.style = style;
   obj4.onLoad = callback;
@@ -62,11 +62,11 @@ export const OrbsRewardBackground = function OrbsRewardBackground(arg0) {
   }
   if (tmp14Result) {
     const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-    const obj7 = { uri: _modDef12028 };
+    const obj7 = { uri: _modDef12037 };
     obj6.source = obj7;
     obj6.style = style;
     obj6.onLoad = callback1;
-    tmp14Result = closure_7(onReady(8539).VideoComponent, obj6);
+    tmp14Result = closure_7(onReady(8577).VideoComponent, obj6);
   }
   children[1] = tmp14Result;
   return closure_8(noop.Fragment, { children });

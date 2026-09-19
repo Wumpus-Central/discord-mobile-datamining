@@ -1,9 +1,9 @@
-// === Module 11831: GroupDMNitroUpsellModel ===
+// === Module 11840: GroupDMNitroUpsellModel ===
 
-// Module 11831 (GroupDMNitroUpsellModel)
+// Module 11840 (GroupDMNitroUpsellModel)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1969 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

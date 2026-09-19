@@ -1,9 +1,9 @@
-// === Module 16967: VibegrationsConjureDither ===
+// === Module 17043: VibegrationsConjureDither ===
 
-// Module 16967 (VibegrationsConjureDither)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4458 */;
-import inlineStyles from "inlineStyles" /* 8689 */;
-import _mod16968 from "module_16968" /* 16968 */;
+// Module 17043 (VibegrationsConjureDither)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
+import inlineStyles from "inlineStyles" /* 8727 */;
+import _mod17044 from "module_17044" /* 17044 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ function BandPicture(width) {
   const size1 = { id: "cells-" + combined, patternUnits: "userSpaceOnUse", width: state(height[3]).TILE, height: state(height[3]).TILE, children: null };
   const tmp8 = width(height[4]);
   size1.children = state(height[3]).TILES[band].map((item) => {
-    const size = { x: item.x, y: item.y, width: _mod16968.CELL, height: _mod16968.CELL, rx: _mod16968.CORNER, fill, fillOpacity };
+    const size = { x: item.x, y: item.y, width: _mod17044.CELL, height: _mod17044.CELL, rx: _mod17044.CORNER, fill, fillOpacity };
     return timestampProducer(inlineStyles.Rect, size, "" + item.x + "-" + item.y);
   });
   items = [bound(state(height[4]).Pattern, size1), , , ];
@@ -38,10 +38,10 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod16968;
+    const obj3 = _mod17044;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod16968.blobReach(peak, radius, closure_5 + _mod16968.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod16968.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod17044.blobReach(peak, radius, closure_5 + _mod17044.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod17044.blobReach(peak.peak, peak.radius, bound));
     items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
     obj.children = items;
     return React5(inlineStyles.RadialGradient, obj, index);
@@ -58,7 +58,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result, ];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod16968.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod17044.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {

@@ -1,19 +1,19 @@
-// === Module 16447: GameClaimCoachmark ===
+// === Module 16523: GameClaimCoachmark ===
 
-// Module 16447 (GameClaimCoachmark)
+// Module 16523 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import ButtonConstants from "ButtonConstants" /* 5149 */;
-import Pressables from "Pressables" /* 5292 */;
-import Card from "Card" /* 5777 */;
-import XSmallIcon from "XSmallIcon" /* 5850 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8816 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9158 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10362 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16448 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16449 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import ButtonConstants from "ButtonConstants" /* 5191 */;
+import Pressables from "Pressables" /* 5334 */;
+import Card from "Card" /* 5819 */;
+import XSmallIcon from "XSmallIcon" /* 5892 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8854 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 9197 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10374 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16524 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16525 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,13 +24,13 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ GuildFeatures: hasOwnProperty, RelativeMarketingURLs: metroRequire } = Constants);
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_82 = nativeDefault.space.PX_8;
 let closure_12 = 2 * nativeDefault.space.PX_12;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { card: { padding: nativeDefault.space.PX_12 }, closeButton: null, centeredText: null, body: null, cta: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_12, right: nativeDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj.closeButton = size;
@@ -122,7 +122,7 @@ export default noop.memo((arg0) => {
               require(constants2.TAKE_ACTION);
               v1 = 1;
               v3 = 1;
-              const obj5 = { value: v1(7512).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7516).LoginHandoffSource.GAME_CLAIM), done: false };
+              const obj5 = { value: v1(7556).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7560).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {

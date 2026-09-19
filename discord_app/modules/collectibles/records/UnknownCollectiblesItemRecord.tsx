@@ -1,8 +1,8 @@
-// === Module 7746: UnknownCollectiblesItemRecord ===
+// === Module 7790: UnknownCollectiblesItemRecord ===
 
-// Module 7746 (UnknownCollectiblesItemRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1889 */;
+// Module 7790 (UnknownCollectiblesItemRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1972 */;
 
 require = fn;
 const prototype = function UnknownCollectiblesItemRecord(arg0) {

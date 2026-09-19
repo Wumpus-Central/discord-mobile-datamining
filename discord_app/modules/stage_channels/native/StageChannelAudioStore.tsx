@@ -1,14 +1,14 @@
-// === Module 17496: StageChannelAudioStore ===
+// === Module 17573: StageChannelAudioStore ===
 
-// Module 17496 (StageChannelAudioStore)
+// Module 17573 (StageChannelAudioStore)
 import _mod17 from "module_17" /* 17 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9322 */;
-import DefaultAudioRouteExperimentDefault from "DefaultAudioRouteExperiment" /* 17497 */;
-import AudioRouteStore from "AudioRouteStore" /* 9321 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4745 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9905 */;
+import DefaultAudioRouteExperimentDefault from "DefaultAudioRouteExperiment" /* 17574 */;
+import AudioRouteStore from "AudioRouteStore" /* 9904 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
 import size from "module_2" /* 2 */;
 
 function handleAudioRouteChanged() {

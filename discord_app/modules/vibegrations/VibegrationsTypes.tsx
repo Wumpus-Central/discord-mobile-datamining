@@ -1,6 +1,6 @@
-// === Module 7441: VibegrationsTypes ===
+// === Module 7485: VibegrationsTypes ===
 
-// Module 7441 (VibegrationsTypes)
+// Module 7485 (VibegrationsTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });

@@ -1,6 +1,6 @@
-// === Module 5295: useIsScreenLandscape ===
+// === Module 5337: useIsScreenLandscape ===
 
-// Module 5295 (useIsScreenLandscape)
+// Module 5337 (useIsScreenLandscape)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1481 */;
 import noop from "module_19" /* 19 */;
 import DimensionsStore from "DimensionsStore" /* 1479 */;

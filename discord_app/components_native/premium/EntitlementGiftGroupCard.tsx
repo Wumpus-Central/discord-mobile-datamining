@@ -1,37 +1,37 @@
-// === Module 13766: EntitlementGiftGroupCard ===
+// === Module 13821: EntitlementGiftGroupCard ===
 
-// Module 13766 (EntitlementGiftGroupCard)
+// Module 13821 (EntitlementGiftGroupCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import GameIconDefault from "GameIcon" /* 7368 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7405 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7422 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9066 */;
-import _modDef11276 from "module_11276" /* 11276 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11406 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11682 */;
-import SubscriptionUtils from "SubscriptionUtils" /* 11693 */;
-import _modDef13439 from "module_13439" /* 13439 */;
-import _modDef13440 from "module_13440" /* 13440 */;
-import _modDef13441 from "module_13441" /* 13441 */;
-import _modDef13442 from "module_13442" /* 13442 */;
-import _modDef13443 from "module_13443" /* 13443 */;
-import _modDef13444 from "module_13444" /* 13444 */;
-import _modDef13445 from "module_13445" /* 13445 */;
-import _modDef13446 from "module_13446" /* 13446 */;
-import _modDef13447 from "module_13447" /* 13447 */;
-import _modDef13450 from "module_13450" /* 13450 */;
-import _modDef13451 from "module_13451" /* 13451 */;
-import GiftCodeRowDefault from "GiftCodeRow" /* 13767 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import GameIconDefault from "GameIcon" /* 7412 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 7449 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7466 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9105 */;
+import _modDef11289 from "module_11289" /* 11289 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11418 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11691 */;
+import SubscriptionUtils from "SubscriptionUtils" /* 11702 */;
+import _modDef13495 from "module_13495" /* 13495 */;
+import _modDef13496 from "module_13496" /* 13496 */;
+import _modDef13497 from "module_13497" /* 13497 */;
+import _modDef13498 from "module_13498" /* 13498 */;
+import _modDef13499 from "module_13499" /* 13499 */;
+import _modDef13500 from "module_13500" /* 13500 */;
+import _modDef13501 from "module_13501" /* 13501 */;
+import _modDef13502 from "module_13502" /* 13502 */;
+import _modDef13503 from "module_13503" /* 13503 */;
+import _modDef13506 from "module_13506" /* 13506 */;
+import _modDef13507 from "module_13507" /* 13507 */;
+import GiftCodeRowDefault from "GiftCodeRow" /* 13822 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4950 */;
+import ApplicationStore from "ApplicationStore" /* 4983 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GiftCodeStore from "GiftCodeStore" /* 11681 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4385 */;
-import SKUStore from "SKUStore" /* 5680 */;
+import GiftCodeStore from "GiftCodeStore" /* 11690 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4419 */;
+import SKUStore from "SKUStore" /* 5722 */;
 import initialize from "initialize" /* 504 */;
 
 require = fn;
@@ -41,7 +41,7 @@ const PremiumConstants = fn(1374);
 ({ SubscriptionIntervalTypes: closure_11, PremiumSubscriptionSKUs: closure_12, PremiumGiftStyles: map1 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { giftGroupCard: { overflow: "hidden", marginTop: 8 }, giftGroupCardRefresh: { borderWidth: 1, borderColor: nativeDefault.colors.CARD_BORDER_DEFAULT, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT }, title: null, arrow: null, subtitle: null, titleContainer: null, groupCardHeader: null, groupCardHeaderLegacy: null, rowArrow: null, giftIcon: null, generateGiftRow: null, generateGiftRowLegacy: null, generateGiftRowText: null, generateGiftButton: null, loading: null, generateButtonContainer: null, groupCardHeaderOpen: null, groupCardHeaderOpenRefresh: null, subtitleContainer: null, socialLayerSubtitleContainer: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.CARD_BORDER_DEFAULT, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT };
 obj2.title = { fontSize: 16, lineHeight: 20, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -196,35 +196,35 @@ prototype["renderHeader"] = function renderHeader(source, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef13439;
+    return _modDef13495;
   } else if (constants2.CAKE === giftStyle) {
-    return _modDef13441;
+    return _modDef13497;
   } else if (constants2.CHEST === giftStyle) {
-    return _modDef13442;
+    return _modDef13498;
   } else if (constants2.COFFEE === giftStyle) {
-    return _modDef13440;
+    return _modDef13496;
   } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
-    return _modDef13443;
+    return _modDef13499;
   } else if (constants2.SEASONAL_CAKE === giftStyle) {
-    return _modDef13444;
+    return _modDef13500;
   } else if (constants2.SEASONAL_CHEST === giftStyle) {
-    return _modDef13445;
+    return _modDef13501;
   } else if (constants2.SEASONAL_COFFEE === giftStyle) {
-    return _modDef13446;
+    return _modDef13502;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef11276 };
+    const obj = { uri: _modDef11289 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef13447;
+    return _modDef13503;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef13450;
+    return _modDef13506;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef13451;
+    return _modDef13507;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {
@@ -294,7 +294,7 @@ prototype["render"] = function render() {
     closure_14(closure_4, obj4);
   }
 };
-EntitlementGiftGroupCard.contextType = fn(4432).ThemeContext;
+EntitlementGiftGroupCard.contextType = fn(4466).ThemeContext;
 let items = [AuthenticationStore, SKUStore, ApplicationStore, GiftCodeStore, SubscriptionPlanStore];
 let obj10 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 const size = fn(2);

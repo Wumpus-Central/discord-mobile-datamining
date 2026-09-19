@@ -1,8 +1,8 @@
-// === Module 17814: UserSettingsManager ===
+// === Module 17894: UserSettingsManager ===
 
-// Module 17814 (UserSettingsManager)
-import UserSettings from "UserSettings" /* 1936 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+// Module 17894 (UserSettingsManager)
+import UserSettings from "UserSettings" /* 2019 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 require = fn;
 let c2 = false;
@@ -30,7 +30,7 @@ prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
     const _Date = Date;
     const date = new Date();
     const timezoneOffset = date.getTimezoneOffset();
-    let TimezoneOffset = timezoneOffset(1936).TimezoneOffset;
+    let TimezoneOffset = timezoneOffset(2019).TimezoneOffset;
     if (TimezoneOffset.getSetting() !== timezoneOffset) {
       const _setImmediate = setImmediate;
       setImmediate(() => {

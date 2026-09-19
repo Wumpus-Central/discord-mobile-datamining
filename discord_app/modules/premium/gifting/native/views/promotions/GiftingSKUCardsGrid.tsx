@@ -1,25 +1,25 @@
-// === Module 11295: GiftingSKUCardsGrid ===
+// === Module 11308: GiftingSKUCardsGrid ===
 
-// Module 11295 (GiftingSKUCardsGrid)
+// Module 11308 (GiftingSKUCardsGrid)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4440 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import Pressables from "Pressables" /* 5292 */;
-import useCurrentUser from "useCurrentUser" /* 8408 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9036 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9051 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9065 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11296 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4474 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import Pressables from "Pressables" /* 5334 */;
+import useCurrentUser from "useCurrentUser" /* 8446 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 9075 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9090 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9104 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11309 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7743).isAvatarDecorationRecord;
-const isNameplateRecord = fn(1888).isNameplateRecord;
+const isAvatarDecorationRecord = fn(7787).isAvatarDecorationRecord;
+const isNameplateRecord = fn(1971).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4722);
+let createStyles = fn(4756);
 let obj = { card: null, overlayContainer: null, selected: null, claimed: null, checkmark: null, checkmarkContainer: null, textContainer: null };
 let size = { height: 178, width: 150, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderWidth: 1, borderRadius: nativeDefault.radii.sm, overflow: "hidden", borderColor: nativeDefault.colors.BORDER_SUBTLE, margin: nativeDefault.space.PX_4 };
 obj.card = size;
@@ -102,7 +102,7 @@ let closure_10 = noop.memo((rewardSkuId) => {
     return React6(Pressables.PressableOpacity, obj4);
   }
 });
-createStyles = fn(4722);
+createStyles = fn(4756);
 let closure_11 = createStyles.createStyles({ grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");

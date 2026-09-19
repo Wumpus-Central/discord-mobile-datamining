@@ -1,6 +1,6 @@
-// === Module 5293: StyleSheetUtils ===
+// === Module 5335: StyleSheetUtils ===
 
-// Module 5293 (StyleSheetUtils)
+// Module 5335 (StyleSheetUtils)
 import size from "module_2" /* 2 */;
 
 const obj = { getStyleProp: null };

@@ -1,6 +1,6 @@
-// === Module 6582: ? ===
+// === Module 6626: ? ===
 
-// Module 6582
+// Module 6626
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/RubberDuckSpotIllustration-2x.png.js");

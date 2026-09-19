@@ -1,6 +1,6 @@
-// === Module 2009: deserializeChannels ===
+// === Module 2092: deserializeChannels ===
 
-// Module 2009 (deserializeChannels)
+// Module 2092 (deserializeChannels)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import _slicedToArray from "module_32" /* 32 */;
 

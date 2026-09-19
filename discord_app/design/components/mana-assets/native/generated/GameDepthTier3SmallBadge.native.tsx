@@ -1,9 +1,9 @@
-// === Module 6213: GameDepthTier3SmallBadge ===
+// === Module 6257: GameDepthTier3SmallBadge ===
 
-// Module 6213 (GameDepthTier3SmallBadge)
+// Module 6257 (GameDepthTier3SmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6214 from "module_6214" /* 6214 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6258 from "module_6258" /* 6258 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GameDepthTier3SmallBadge = function GameDepthTier3SmallBadge(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6214 };
+  const obj2 = { uri: _modDef6258 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

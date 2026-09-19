@@ -1,6 +1,6 @@
-// === Module 1901: ZoomedInAnalyticsExperiment ===
+// === Module 1984: ZoomedInAnalyticsExperiment ===
 
-// Module 1901 (ZoomedInAnalyticsExperiment)
+// Module 1984 (ZoomedInAnalyticsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

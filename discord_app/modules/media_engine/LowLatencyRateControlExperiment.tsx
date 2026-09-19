@@ -1,6 +1,6 @@
-// === Module 14221: LowLatencyRateControlExperiment ===
+// === Module 14276: LowLatencyRateControlExperiment ===
 
-// Module 14221 (LowLatencyRateControlExperiment)
+// Module 14276 (LowLatencyRateControlExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const obj = { kind: "user", name: "2025-10-low-latency-rate-control", defaultConfig: { enabled: false }, variations: null };

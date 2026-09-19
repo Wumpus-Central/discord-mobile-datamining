@@ -1,44 +1,44 @@
-// === Module 2030: i18n/i18n ===
+// === Module 1884: i18n/i18n ===
 
-// Module 2030 (i18n/i18n)
+// Module 1884 (i18n/i18n)
 import getSystemLocale from "getSystemLocale" /* 1337 */;
-import _modDef2031 from "module_2031" /* 2031 */;
-import _mod2072 from "module_2072" /* 2072 */;
-import parse from "parse" /* 2073 */;
+import _modDef1885 from "module_1885" /* 1885 */;
+import _mod1926 from "module_1926" /* 1926 */;
+import parse from "parse" /* 1927 */;
 
 require = fn;
-global.IntlMessageFormat = _modDef2031;
-const module_2040 = fn(2040);
-const module_2041 = fn(2041);
-const module_2042 = fn(2042);
-const module_2043 = fn(2043);
-const module_2044 = fn(2044);
-const module_2045 = fn(2045);
-const module_2046 = fn(2046);
-const module_2047 = fn(2047);
-const module_2048 = fn(2048);
-const module_2049 = fn(2049);
-const module_2050 = fn(2050);
-const module_2051 = fn(2051);
-const module_2052 = fn(2052);
-const module_2053 = fn(2053);
-const module_2054 = fn(2054);
-const module_2055 = fn(2055);
-const module_2056 = fn(2056);
-const module_2057 = fn(2057);
-const module_2058 = fn(2058);
-const module_2059 = fn(2059);
-const module_2060 = fn(2060);
-const module_2061 = fn(2061);
-const module_2062 = fn(2062);
-const module_2063 = fn(2063);
-const module_2064 = fn(2064);
-const module_2065 = fn(2065);
-const module_2066 = fn(2066);
-const module_2067 = fn(2067);
+global.IntlMessageFormat = _modDef1885;
+const module_1894 = fn(1894);
+const module_1895 = fn(1895);
+const module_1896 = fn(1896);
+const module_1897 = fn(1897);
+const module_1898 = fn(1898);
+const module_1899 = fn(1899);
+const module_1900 = fn(1900);
+const module_1901 = fn(1901);
+const module_1902 = fn(1902);
+const module_1903 = fn(1903);
+const module_1904 = fn(1904);
+const module_1905 = fn(1905);
+const module_1906 = fn(1906);
+const module_1907 = fn(1907);
+const module_1908 = fn(1908);
+const module_1909 = fn(1909);
+const module_1910 = fn(1910);
+const module_1911 = fn(1911);
+const module_1912 = fn(1912);
+const module_1913 = fn(1913);
+const module_1914 = fn(1914);
+const module_1915 = fn(1915);
+const module_1916 = fn(1916);
+const module_1917 = fn(1917);
+const module_1918 = fn(1918);
+const module_1919 = fn(1919);
+const module_1920 = fn(1920);
+const module_1921 = fn(1921);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(2068);
+  fn(1922);
 }
 const React2 = "en-US";
 class Provider {
@@ -136,10 +136,10 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj3);
     } else {
       try {
-        return self(2073).getMessage(tmp4, locale);
+        return self(1927).getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(2073).getMessage(tmp7, tmp);
+          return self(1927).getMessage(tmp7, tmp);
         } else {
           return "";
         }

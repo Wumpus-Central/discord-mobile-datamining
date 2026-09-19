@@ -1,18 +1,18 @@
-// === Module 16330: HappeningNowCardActivity ===
+// === Module 16406: HappeningNowCardActivity ===
 
-// Module 16330 (HappeningNowCardActivity)
+// Module 16406 (HappeningNowCardActivity)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import ColorUtils from "ColorUtils" /* 4571 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10306 */;
-import useLiveStageData from "useLiveStageData" /* 16328 */;
-import _modDef16331 from "module_16331" /* 16331 */;
-import _modDef16332 from "module_16332" /* 16332 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16339 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import ColorUtils from "ColorUtils" /* 4605 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10318 */;
+import useLiveStageData from "useLiveStageData" /* 16404 */;
+import _modDef16407 from "module_16407" /* 16407 */;
+import _modDef16408 from "module_16408" /* 16408 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16415 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 1963 */;
+import StageInstanceStore from "StageInstanceStore" /* 2046 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -130,10 +130,10 @@ function IconOrPreview(arg0) {
       obj8.style = tmp.cardImageStreamPreview;
       const intl5 = tmp28(1115).intl;
       obj8.ctaText = intl5.string(tmp28(1115).t["7Xq/nV"]);
-      obj3.children = closure_11(tmp2(10303), obj8);
+      obj3.children = closure_11(tmp2(10315), obj8);
       return closure_11(closure_4, obj3);
     } else {
-      if (tmp2(11139)(activity)) {
+      if (tmp2(11152)(activity)) {
         const intl4 = tmp28(1115).intl;
         let stringResult = intl4.string(tmp28(1115).t.rmnkz4);
       } else {
@@ -144,7 +144,7 @@ function IconOrPreview(arg0) {
         if (type === constants2.LISTENING) {
           const intl3 = tmp28(1115).intl;
           stringResult = intl3.string(tmp28(1115).t.kUEnxN);
-        } else if (tmp2(13248)(activity)) {
+        } else if (tmp2(13293)(activity)) {
           const intl2 = tmp28(1115).intl;
           stringResult = intl2.string(tmp28(1115).t.T0uYK9);
         } else {
@@ -161,7 +161,7 @@ function IconOrPreview(arg0) {
       const obj10 = { style: memo, accessibilityLabel: stringResult, children: null };
       const obj11 = { style: tmp35, children: null };
       const obj12 = { style: tmp.cardImageAsset, source: memoizedImageSourceResult };
-      obj11.children = closure_11(tmp2(5757), obj12);
+      obj11.children = closure_11(tmp2(5799), obj12);
       obj10.children = closure_11(closure_4, obj11);
       return closure_11(closure_4, obj10);
     }
@@ -176,7 +176,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result2 = items[userId % items.length];
     } else {
-      tmp2Result2 = tmp2(16341);
+      tmp2Result2 = tmp2(16417);
     }
   }
 }
@@ -198,15 +198,15 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15505);
+const HappeningNowConstants = fn(15560);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1074);
 ({ ActivityTypes: closure_9, AnalyticEvents: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef16331, _modDef16332];
-const createStyles = fn(4722);
+let items = [_modDef16407, _modDef16408];
+const createStyles = fn(4756);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
 obj.cardImageAsset = { flex: 1, width: "100%", borderRadius: nativeDefault.radii.sm - 1 };
@@ -302,11 +302,11 @@ export default noop.memo((userId) => {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(constants3.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(9784, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(9784, dependencyMap.paths);
+      asyncRequireImpl(13178, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(13178, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8409, dependencyMap.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8409, dependencyMap.paths);
+      asyncRequireImpl(8447, dependencyMap.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8447, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

@@ -1,21 +1,21 @@
-// === Module 16501: IAPUpsellActionSheet ===
+// === Module 16577: IAPUpsellActionSheet ===
 
-// Module 16501 (IAPUpsellActionSheet)
+// Module 16577 (IAPUpsellActionSheet)
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
-const StaticChannelRoute = fn(1965).StaticChannelRoute;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const StaticChannelRoute = fn(2048).StaticChannelRoute;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx");
 
 export default function IAPUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
-  const obj = { imageSource: markAsDismissed(16503), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
+  const obj = { imageSource: markAsDismissed(16579), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
   const intl = util.intl;
   obj.header = intl.string(util.t.rBw4cE);
   const intl2 = util.intl;
@@ -27,5 +27,5 @@ export default function IAPUpsellActionSheet(arg0) {
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   obj.markAsDismissed = markAsDismissed;
-  return jsx(markAsDismissed(16502), { imageSource: markAsDismissed(16503), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
+  return jsx(markAsDismissed(16578), { imageSource: markAsDismissed(16579), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
 };

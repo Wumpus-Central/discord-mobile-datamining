@@ -1,19 +1,19 @@
-// === Module 15889: SelectScreen ===
+// === Module 15944: SelectScreen ===
 
-// Module 15889 (SelectScreen)
-import NavigatorConstants from "NavigatorConstants" /* 5852 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7138 */;
-import RowButton from "RowButton" /* 8833 */;
+// Module 15944 (SelectScreen)
+import NavigatorConstants from "NavigatorConstants" /* 5894 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7182 */;
+import RowButton from "RowButton" /* 8872 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SELECT_NAMES = fn(15886).SELECT_NAMES;
+const SELECT_NAMES = fn(15941).SELECT_NAMES;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { container: { marginLeft: 16, marginRight: 16 }, selectContainer: null };
   const NAV_BAR_HEIGHT = NavigatorConstants.NAV_BAR_HEIGHT;

@@ -1,7 +1,7 @@
-// === Module 17630: ManagerRegistry ===
+// === Module 17707: ManagerRegistry ===
 
-// Module 17630 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 18259 */;
+// Module 17707 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 18338 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -39,6 +39,12 @@ const obj = {
       return require("AppIconPremiumManager").default;
     },
     neverLoadBeforeConnectionOpen: true
+  },
+  AutomodRemovedContentManager: {
+    actions: ["AUTO_MODERATION_CONTENT_DELETED"],
+    inlineRequire() {
+      return require("AutomodRemovedContentManager").default;
+    }
   },
   AppStoreOverlayTelemetryManager: {
     actions: ["APP_STATE_UPDATE"],

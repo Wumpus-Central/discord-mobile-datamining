@@ -1,13 +1,13 @@
-// === Module 9293: InAppReportsBlockUserElement ===
+// === Module 13206: InAppReportsBlockUserElement ===
 
-// Module 9293 (InAppReportsBlockUserElement)
-import NicknameUtilsDefault from "NicknameUtils" /* 4874 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4902 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8636 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9280 */;
+// Module 13206 (InAppReportsBlockUserElement)
+import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4936 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8674 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10002 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 
 const require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

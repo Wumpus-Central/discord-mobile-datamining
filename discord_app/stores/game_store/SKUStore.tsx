@@ -1,10 +1,10 @@
-// === Module 5680: SKUStore ===
+// === Module 5722: SKUStore ===
 
-// Module 5680 (SKUStore)
+// Module 5722 (SKUStore)
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SKURecord from "SKURecord" /* 5681 */;
-import LocaleStore from "LocaleStore" /* 2026 */;
+import SKURecord from "SKURecord" /* 5723 */;
+import LocaleStore from "LocaleStore" /* 2109 */;
 
 function addSku(sku) {
   value = map1.get(sku.id);

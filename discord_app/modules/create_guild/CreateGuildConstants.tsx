@@ -1,9 +1,9 @@
-// === Module 12949: create_guild/CreateGuildConstants ===
+// === Module 12958: create_guild/CreateGuildConstants ===
 
-// Module 12949 (create_guild/CreateGuildConstants)
+// Module 12958 (create_guild/CreateGuildConstants)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import util from "util" /* 1115 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4366 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 8293: FriendRequestAcceptedSystemMessage ===
+// === Module 8331: FriendRequestAcceptedSystemMessage ===
 
-// Module 8293 (FriendRequestAcceptedSystemMessage)
+// Module 8331 (FriendRequestAcceptedSystemMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import createStyles from "createStyles" /* 4722 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8165 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8179 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8181 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8183 */;
-import _modDef8294 from "module_8294" /* 8294 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import createStyles from "createStyles" /* 4756 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8203 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8217 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8219 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8221 */;
+import _modDef8332 from "module_8332" /* 8332 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -66,7 +66,7 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
             formatToPartsResult = formatToParts(t.hyPOTm, obj2);
           }
           const obj6 = { content: formatToPartsResult, iconUrl: null, textColor: null };
-          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8294);
+          obj6.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8332);
           obj6.textColor = undefined;
           const merged1 = Object.assign(createCommonMessageDefault(message));
           return obj6;

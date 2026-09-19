@@ -1,26 +1,26 @@
-// === Module 11936: ForwardPreview ===
+// === Module 11945: ForwardPreview ===
 
-// Module 11936 (ForwardPreview)
+// Module 11945 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1477 */;
-import Server from "Server" /* 1895 */;
-import _modDef2998 from "module_2998" /* 2998 */;
-import useThemeDefault from "useTheme" /* 4656 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import ImageIcon from "ImageIcon" /* 5256 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8356 */;
-import CheckpointUtils from "CheckpointUtils" /* 8373 */;
-import ChatItemDefault from "ChatItem" /* 8890 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 8954 */;
-import ClipView from "ClipView" /* 9054 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10355 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11937 */;
-import CheckpointColors from "CheckpointColors" /* 11938 */;
-import MosaicMediaType from "MosaicMediaType" /* 11939 */;
-import ImagesIcon2 from "ImagesIcon" /* 11941 */;
+import Server from "Server" /* 1978 */;
+import _modDef3000 from "module_3000" /* 3000 */;
+import useThemeDefault from "useTheme" /* 4690 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import ImageIcon from "ImageIcon" /* 5298 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8394 */;
+import CheckpointUtils from "CheckpointUtils" /* 8411 */;
+import ChatItemDefault from "ChatItem" /* 8929 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 8993 */;
+import ClipView from "ClipView" /* 9093 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10367 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11946 */;
+import CheckpointColors from "CheckpointColors" /* 11947 */;
+import MosaicMediaType from "MosaicMediaType" /* 11948 */;
+import ImagesIcon2 from "ImagesIcon" /* 11950 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
@@ -35,7 +35,7 @@ function MessagePreview(content) {
     TEXT_SUBTLE = tmp(576).colors.TEXT_SUBTLE;
   }
   const tmp3 = useThemeDefault();
-  const tmp4 = attachmentCount(4722).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+  const tmp4 = attachmentCount(4756).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];
   const callback = noop.useCallback((message) => {
@@ -53,7 +53,7 @@ function MessagePreview(content) {
     return obj;
   }, []);
   const obj2 = { pointerEvents: "none", horizontalOffset: 0, modifyRow: callback, message: null, rowGenerator: null };
-  let obj = attachmentCount(4722);
+  let obj = attachmentCount(4756);
   const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
   obj2.message = message.merge(obj3);
   obj2.rowGenerator = memo;
@@ -63,7 +63,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" }, quote: null, contentWrapper: null, attachmentPreview: null, attachmentPreviewVideo: null, videoThumbnail: null, playIcon: null, attachmentPreviewOverflow: null, overflowCount: null, attachmentRow: null, largeIcon: null };
 let size = { width: 4, height: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: 2 };
 obj2.quote = size;
@@ -241,7 +241,7 @@ export const ForwardPreview = function ForwardPreview(message) {
   if (tmp36Result) {
     const obj22 = { variant: "text-md/medium", children: null };
     const intl5 = util.intl;
-    obj22.children = intl5.string(_modDef2998.goiR2u);
+    obj22.children = intl5.string(_modDef3000.goiR2u);
     tmp36Result = hasOwnProperty(Text_Text.Text, obj22);
   }
   const items6 = [tmp36Result, , ];

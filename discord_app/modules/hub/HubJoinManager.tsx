@@ -1,10 +1,10 @@
-// === Module 12981: HubJoinManager ===
+// === Module 12990: HubJoinManager ===
 
-// Module 12981 (HubJoinManager)
+// Module 12990 (HubJoinManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import transitionToGuild from "transitionToGuild" /* 7538 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import LifecycleManager from "LifecycleManager" /* 1899 */;
+import transitionToGuild from "transitionToGuild" /* 7582 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import LifecycleManager from "LifecycleManager" /* 1982 */;
 
 require = fn;
 const GuildFeatures = fn(1074).GuildFeatures;

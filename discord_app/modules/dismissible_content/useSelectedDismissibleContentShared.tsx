@@ -1,13 +1,13 @@
-// === Module 7587: useSelectedDismissibleContentShared ===
+// === Module 7631: useSelectedDismissibleContentShared ===
 
-// Module 7587 (useSelectedDismissibleContentShared)
+// Module 7631 (useSelectedDismissibleContentShared)
 import noop from "module_19" /* 19 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 1948 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2031 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 
@@ -36,7 +36,7 @@ export const useSelectedDismissibleContentShared = function useSelectedDismissib
       }
       let tmp6 = content !== closure_1_0;
       if (!tmp6) {
-        let result = closure_0(1945).isGuildDismissibleContent(tmp5);
+        let result = closure_0(2028).isGuildDismissibleContent(tmp5);
         if (result) {
           const lastDismissed2 = tmp2.lastDismissed;
           let guildId;
@@ -46,7 +46,7 @@ export const useSelectedDismissibleContentShared = function useSelectedDismissib
           result = guildId !== id;
         }
         tmp6 = result;
-        const obj = closure_0(1945);
+        const obj = closure_0(2028);
       }
       tmp = tmp6;
       tmp2 = lastDismissed;

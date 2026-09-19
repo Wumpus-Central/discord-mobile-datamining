@@ -1,9 +1,9 @@
-// === Module 5708: ClipboardListIcon ===
+// === Module 5750: ClipboardListIcon ===
 
-// Module 5708 (ClipboardListIcon)
+// Module 5750 (ClipboardListIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod5709 from "module_5709" /* 5709 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod5751 from "module_5751" /* 5751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ClipboardListIcon = function ClipboardListIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5709, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5751, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

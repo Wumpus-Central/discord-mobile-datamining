@@ -1,9 +1,9 @@
-// === Module 6561: PsychicIllocon ===
+// === Module 6605: PsychicIllocon ===
 
-// Module 6561 (PsychicIllocon)
+// Module 6605 (PsychicIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6562 from "module_6562" /* 6562 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6606 from "module_6606" /* 6606 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const PsychicIllocon = function PsychicIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6562 };
+  const obj2 = { uri: _modDef6606 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,9 +1,9 @@
-// === Module 9159: QuoteIcon ===
+// === Module 9198: QuoteIcon ===
 
-// Module 9159 (QuoteIcon)
+// Module 9198 (QuoteIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod9160 from "module_9160" /* 9160 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod9199 from "module_9199" /* 9199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const QuoteIcon = function QuoteIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9160, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9199, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

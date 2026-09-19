@@ -1,31 +1,31 @@
-// === Module 8232: AutoModerationActionSystemMessage ===
+// === Module 8270: AutoModerationActionSystemMessage ===
 
-// Module 8232 (AutoModerationActionSystemMessage)
+// Module 8270 (AutoModerationActionSystemMessage)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import _modDef4314 from "module_4314" /* 4314 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4349 */;
-import DateUtils from "DateUtils" /* 4404 */;
-import shared from "shared" /* 4573 */;
-import useChannelName from "useChannelName" /* 4875 */;
-import useMessageAuthor from "useMessageAuthor" /* 4955 */;
-import _modDef6805 from "module_6805" /* 6805 */;
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7704 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8155 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8183 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8210 */;
-import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 8233 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8234 */;
-import _modDef8238 from "module_8238" /* 8238 */;
-import getRoleIcon from "getRoleIcon" /* 8239 */;
+import _modDef4348 from "module_4348" /* 4348 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4383 */;
+import DateUtils from "DateUtils" /* 4438 */;
+import shared from "shared" /* 4607 */;
+import useChannelName from "useChannelName" /* 4909 */;
+import useMessageAuthor from "useMessageAuthor" /* 4988 */;
+import _modDef6849 from "module_6849" /* 6849 */;
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7748 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8193 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8221 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8248 */;
+import AutomodRaidAlertTypes from "AutomodRaidAlertTypes" /* 8271 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8272 */;
+import _modDef8276 from "module_8276" /* 8276 */;
+import getRoleIcon from "getRoleIcon" /* 8277 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -75,8 +75,8 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
           if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.MENTION_RAID === notificationType) {
             let fromNowResult;
             if (null != resolvedReason.raidDatetime) {
-              fromNowResult = _modDef4314(resolvedReason.raidDatetime).fromNow();
-              const obj17 = _modDef4314(resolvedReason.raidDatetime);
+              fromNowResult = _modDef4348(resolvedReason.raidDatetime).fromNow();
+              const obj17 = _modDef4348(resolvedReason.raidDatetime);
             }
             const obj2 = { subtitleLeft: fromNowResult, header: null, headerColor: null, headerIconURL: null, headerIconColor: null, body: null, shouldShowActions: false };
             const intl5 = util.intl;
@@ -84,7 +84,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
             const internal3 = nativeDefault.internal;
             obj2.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal3.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
             const tmpResult35 = RowGeneratorStyleSheet;
-            obj2.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef6805)).uri;
+            obj2.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef6849)).uri;
             const tmpResult36 = AvatarUtils;
             const internal4 = nativeDefault.internal;
             obj2.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal4.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
@@ -139,14 +139,14 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               const internal = nativeDefault.internal;
               obj4.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE));
               const tmpResult41 = RowGeneratorStyleSheet;
-              obj4.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef8238)).uri;
+              obj4.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef8276)).uri;
               const tmpResult42 = AvatarUtils;
               const internal2 = nativeDefault.internal;
               obj4.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal2.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE));
               const intl3 = util.intl;
               obj4.body = intl3.string(util.t["QV/8u5"]);
               const tmpResult43 = RowGeneratorStyleSheet;
-              obj4.subtitleRight = _modDef4314(message.timestamp).fromNow();
+              obj4.subtitleRight = _modDef4348(message.timestamp).fromNow();
               const intl4 = util.intl;
               obj4.subtitleLeft = intl4.string(util.t.qlFrXW);
               obj4.enabledByAvatarURL = ensureAvatarSourceResult.uri;
@@ -163,7 +163,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
               str = "";
               tmp14 = obj4;
               tmp15 = stringResult;
-              const obj16 = _modDef4314(message.timestamp);
+              const obj16 = _modDef4348(message.timestamp);
             }
             guildMemberAvatarSource = author.getAvatarSource(undefined, false, 16);
             tmpResult39 = utils_AvatarUtils;
@@ -174,7 +174,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
             const internal7 = nativeDefault.internal;
             obj5.headerColor = RowGeneratorStyleSheet.processColorOrThrow(internal7.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE));
             const tmpResult44 = RowGeneratorStyleSheet;
-            obj5.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef6805)).uri;
+            obj5.headerIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(_modDef6849)).uri;
             const tmpResult45 = AvatarUtils;
             const internal8 = nativeDefault.internal;
             obj5.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal8.resolveSemanticColor(theme, nativeDefault.colors.TEXT_SUBTLE));
@@ -189,8 +189,8 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       let fromNowResult1;
       if (null != resolvedReason.raidDatetime) {
-        fromNowResult1 = _modDef4314(resolvedReason.raidDatetime).fromNow();
-        const obj22 = _modDef4314(resolvedReason.raidDatetime);
+        fromNowResult1 = _modDef4348(resolvedReason.raidDatetime).fromNow();
+        const obj22 = _modDef4348(resolvedReason.raidDatetime);
       }
       let str2 = "";
       if (null != resolvedReason.raidDatetime) {
@@ -225,7 +225,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       let getRaidAlertResolveCTAText = React4.resolveAssetSource;
       let internal6 = AvatarUtils;
       let intl9 = internal6.makeSource;
-      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8237 : 6805))).uri;
+      obj8.headerIconURL = getRaidAlertResolveCTAText(intl9(importDefault(tmp42 ? 8275 : 6849))).uri;
       const tmpResult47 = RowGeneratorStyleSheet;
       internal6 = nativeDefault.internal;
       obj8.headerIconColor = RowGeneratorStyleSheet.processColorOrThrow(internal6.resolveSemanticColor(theme, nativeDefault.colors.TEXT_FEEDBACK_CRITICAL));
@@ -337,7 +337,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
       }
       obj12.reasonDisplayText = formatToPlainStringResult1;
       const tmpResult56 = DateUtils;
-      obj12.actionsIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(importDefault(result1 ? 8240 : 8241))).uri;
+      obj12.actionsIconURL = React4.resolveAssetSource(AvatarUtils.makeSource(importDefault(result1 ? 8278 : 8279))).uri;
       const intl16 = util.intl;
       const string2 = intl16.string;
       const t3 = util.t;

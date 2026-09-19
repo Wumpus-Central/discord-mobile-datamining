@@ -1,6 +1,6 @@
-// === Module 8453: useProfileFrameLayerAsset ===
+// === Module 8491: useProfileFrameLayerAsset ===
 
-// Module 8453 (useProfileFrameLayerAsset)
+// Module 8491 (useProfileFrameLayerAsset)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,8 +15,8 @@ export default function useProfileFrameLayerAsset(width) {
   width = width.width;
   let collectiblesItemAssetUrl;
   ({ skuId, layer } = width);
-  const obj = collectiblesItemAssetUrl(1884);
-  collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({ skuId, assetFormat: collectiblesItemAssetUrl(1884).CollectiblesItemAssetFormat.STATIC, assetId: layer.id });
+  const obj = collectiblesItemAssetUrl(1967);
+  collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({ skuId, assetFormat: collectiblesItemAssetUrl(1967).CollectiblesItemAssetFormat.STATIC, assetId: layer.id });
   dependencyMap = _slicedToArray(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1];
   const items = [collectiblesItemAssetUrl];
   const effect = noop.useEffect(() => {

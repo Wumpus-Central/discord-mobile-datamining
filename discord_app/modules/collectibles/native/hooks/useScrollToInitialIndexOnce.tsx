@@ -1,6 +1,6 @@
-// === Module 16054: useScrollToInitialIndexOnce ===
+// === Module 16130: useScrollToInitialIndexOnce ===
 
-// Module 16054 (useScrollToInitialIndexOnce)
+// Module 16130 (useScrollToInitialIndexOnce)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

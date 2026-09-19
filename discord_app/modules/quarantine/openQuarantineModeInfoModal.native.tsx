@@ -1,8 +1,8 @@
-// === Module 5692: openQuarantineModeInfoModal ===
+// === Module 5734: openQuarantineModeInfoModal ===
 
-// Module 5692 (openQuarantineModeInfoModal)
-import ChatInputUtils from "ChatInputUtils" /* 4588 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+// Module 5734 (openQuarantineModeInfoModal)
+import ChatInputUtils from "ChatInputUtils" /* 4622 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,8 @@ export default function openQuarantineModeInfoModal() {
           return closure_2_4(closure_0, {});
         };
       });
-    }
+    },
+    isDismissable: false
   });
   const obj2 = {
     importer() {
@@ -39,6 +40,7 @@ export default function openQuarantineModeInfoModal() {
           return closure_2_4(closure_0, {});
         };
       });
-    }
+    },
+    isDismissable: false
   };
 };

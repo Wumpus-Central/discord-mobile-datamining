@@ -1,15 +1,15 @@
-// === Module 1918: GameRecord ===
+// === Module 2001: GameRecord ===
 
-// Module 1918 (GameRecord)
+// Module 2001 (GameRecord)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import Server from "Server" /* 1895 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1925 */;
+import Server from "Server" /* 1978 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2008 */;
 import Record from "Record" /* 1387 */;
-import ApplicationRecord from "ApplicationRecord" /* 1919 */;
+import ApplicationRecord from "ApplicationRecord" /* 2002 */;
 
 require = fn;
-const createExecutable = fn(1919).createExecutable;
+const createExecutable = fn(2002).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {

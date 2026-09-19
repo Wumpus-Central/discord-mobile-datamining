@@ -1,9 +1,9 @@
-// === Module 15897: ClipboardCopyInput ===
+// === Module 15952: ClipboardCopyInput ===
 
-// Module 15897 (ClipboardCopyInput)
+// Module 15952 (ClipboardCopyInput)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1896 */;
+import AppStateStore from "AppStateStore" /* 1979 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const AppStates = fn(1074).AppStates;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_9 = createStyles.createStyles({ inputContainer: { flexDirection: "column", alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mfa/native/components/ClipboardCopyInput.tsx");

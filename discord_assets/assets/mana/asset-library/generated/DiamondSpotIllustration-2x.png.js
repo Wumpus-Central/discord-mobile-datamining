@@ -1,6 +1,6 @@
-// === Module 6096: ? ===
+// === Module 6140: ? ===
 
-// Module 6096
+// Module 6140
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DiamondSpotIllustration-2x.png.js");

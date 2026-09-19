@@ -1,9 +1,9 @@
-// === Module 6175: FamilyShieldSpotIllustration ===
+// === Module 6219: FamilyShieldSpotIllustration ===
 
-// Module 6175 (FamilyShieldSpotIllustration)
+// Module 6219 (FamilyShieldSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef6176 from "module_6176" /* 6176 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef6220 from "module_6220" /* 6220 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const FamilyShieldSpotIllustration = function FamilyShieldSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6176 };
+  const obj2 = { uri: _modDef6220 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

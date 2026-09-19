@@ -1,19 +1,19 @@
-// === Module 13963: PrivateChannelRecipientsInviteStore ===
+// === Module 14017: PrivateChannelRecipientsInviteStore ===
 
-// Module 13963 (PrivateChannelRecipientsInviteStore)
+// Module 14017 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import StringUtils from "StringUtils" /* 1926 */;
-import UserUtilsDefault from "UserUtils" /* 4566 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 10084 */;
-import ExperimentStore from "ExperimentStore" /* 4637 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7855 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import ConsentStore from "ConsentStore" /* 6787 */;
-import FrecencyStore from "FrecencyStore" /* 5679 */;
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import StringUtils from "StringUtils" /* 2009 */;
+import UserUtilsDefault from "UserUtils" /* 4600 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 10094 */;
+import ExperimentStore from "ExperimentStore" /* 4671 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7893 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import ConsentStore from "ConsentStore" /* 6831 */;
+import FrecencyStore from "FrecencyStore" /* 5721 */;
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -219,7 +219,7 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(1962).PrivateChannelRecord;
+const PrivateChannelRecord = fn(2045).PrivateChannelRecord;
 const Constants = fn(1074);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;

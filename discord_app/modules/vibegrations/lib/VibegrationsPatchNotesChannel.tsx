@@ -1,9 +1,9 @@
-// === Module 16909: VibegrationsPatchNotesChannel ===
+// === Module 16980: VibegrationsPatchNotesChannel ===
 
-// Module 16909 (VibegrationsPatchNotesChannel)
+// Module 16980 (VibegrationsPatchNotesChannel)
 import Storage3 from "Storage" /* 510 */;
 import util from "util" /* 1115 */;
-import _modDef3676 from "module_3676" /* 3676 */;
+import _modDef3678 from "module_3678" /* 3678 */;
 import size from "module_2" /* 2 */;
 
 const VibegrationsPatchNotesLastChannels = "VibegrationsPatchNotesLastChannels";
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPa
 export const PLAY_LINE_CHANNEL_PLACEHOLDER = combined;
 export const formatPlaySuffix = function formatPlaySuffix(PLAY_LINE_CHANNEL_PLACEHOLDER) {
   const intl = util.intl;
-  return "\n\n" + intl.formatToPlainString(_modDef3676.bhoZhI, { channel: PLAY_LINE_CHANNEL_PLACEHOLDER });
+  return "\n\n" + intl.formatToPlainString(_modDef3678.bhoZhI, { channel: PLAY_LINE_CHANNEL_PLACEHOLDER });
 };
 export const lastPatchNotesChannel = function lastPatchNotesChannel(guildId) {
   const Storage = Storage3.Storage;

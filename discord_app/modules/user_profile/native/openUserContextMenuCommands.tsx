@@ -1,8 +1,8 @@
-// === Module 13238: openUserContextMenuCommands ===
+// === Module 13283: openUserContextMenuCommands ===
 
-// Module 13238 (openUserContextMenuCommands)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8421 */;
+// Module 13283 (openUserContextMenuCommands)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8459 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/user_profile/native/openUserContextMenuCommands.tsx");
@@ -10,13 +10,13 @@ let result = size.fileFinishedImporting("modules/user_profile/native/openUserCon
 export default function openUserContextMenuCommands(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  const result = analyticsLocations(8421).trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
-  const obj = analyticsLocations(8421);
+  const result = analyticsLocations(8459).trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
+  const obj = analyticsLocations(8459);
   ActionSheetActionCreatorsDefault.hideAllActionSheets();
-  const obj3 = analyticsLocations(4579);
+  const obj3 = analyticsLocations(4613);
   const result1 = obj3.navigateToContextMenuCommands({
     channel: selectedChannel,
-    commandType: analyticsLocations(1895).ApplicationCommandType.USER,
+    commandType: analyticsLocations(1978).ApplicationCommandType.USER,
     commandTargetId: userId,
     onClose: showUserProfile,
     onPressAppCommand() {

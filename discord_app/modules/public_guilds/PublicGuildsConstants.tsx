@@ -1,6 +1,6 @@
-// === Module 8255: PublicGuildsConstants ===
+// === Module 8293: PublicGuildsConstants ===
 
-// Module 8255 (PublicGuildsConstants)
+// Module 8293 (PublicGuildsConstants)
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 import size from "module_2" /* 2 */;

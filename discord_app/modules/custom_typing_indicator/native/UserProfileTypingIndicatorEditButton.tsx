@@ -1,12 +1,12 @@
-// === Module 14855: UserProfileTypingIndicatorEditButton ===
+// === Module 14909: UserProfileTypingIndicatorEditButton ===
 
-// Module 14855 (UserProfileTypingIndicatorEditButton)
+// Module 14909 (UserProfileTypingIndicatorEditButton)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
 fn(19).useCallback;
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const ContentDismissActionType = fn(1955).ContentDismissActionType;
+const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/UserProfileTypingIndicatorEditButton.tsx");
@@ -15,13 +15,13 @@ export default function UserProfileTypingIndicatorEditButton(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
   const nativeStackNavigation = isTryItOut(1484).useNativeStackNavigation();
   let obj = isTryItOut(1484);
-  const currentCustomTypingIndicatorConfig = isTryItOut(12213).useCurrentCustomTypingIndicatorConfig(isTryItOut);
-  const obj2 = isTryItOut(12213);
-  const items = [isTryItOut(1944).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE];
-  const tmp3 = _slicedToArray(isTryItOut(7584).useSelectedDismissibleContent(items, undefined, true), 2);
+  const currentCustomTypingIndicatorConfig = isTryItOut(12222).useCurrentCustomTypingIndicatorConfig(isTryItOut);
+  const obj2 = isTryItOut(12222);
+  const items = [isTryItOut(2027).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE];
+  const tmp3 = _slicedToArray(isTryItOut(7628).useSelectedDismissibleContent(items, undefined, true), 2);
   dependencyMap = tmp4;
   const items1 = [nativeStackNavigation, isTryItOut, tmp3[1]];
-  const obj3 = isTryItOut(7584);
+  const obj3 = isTryItOut(7628);
   const intl = isTryItOut(1115).intl;
   const tmp5 = useCallback(() => {
     let str = "profile_pending";
@@ -37,15 +37,15 @@ export default function UserProfileTypingIndicatorEditButton(isTryItOut) {
     nativeStackNavigation.navigate(UserSettingsSections.TYPING_INDICATOR, obj);
     closure_2(ContentDismissActionType.TAKE_ACTION);
   }, items1);
-  const stringResult = intl.string(isTryItOut(12213).getCustomTypingIndicatorSuggestionMessage(currentCustomTypingIndicatorConfig.typingSuggestion));
+  const stringResult = intl.string(isTryItOut(12222).getCustomTypingIndicatorSuggestionMessage(currentCustomTypingIndicatorConfig.typingSuggestion));
   const obj5 = { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null };
   const intl2 = isTryItOut(1115).intl;
-  obj5.label = intl2.string(nativeStackNavigation(3678)["pT+BVM"]);
-  const obj4 = isTryItOut(12213);
-  obj5.labelTrailing = jsx(isTryItOut(14834).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp3[0] === isTryItOut(1944).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
-  obj5.leading = jsx(nativeStackNavigation(12223), { config: currentCustomTypingIndicatorConfig, size: 24 });
+  obj5.label = intl2.string(nativeStackNavigation(3680)["pT+BVM"]);
+  const obj4 = isTryItOut(12222);
+  obj5.labelTrailing = jsx(isTryItOut(14888).UserProfileEditFormLabelBadges, { showPremiumIcon: true, showNewBadge: tmp3[0] === isTryItOut(2027).DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE });
+  obj5.leading = jsx(nativeStackNavigation(12232), { config: currentCustomTypingIndicatorConfig, size: 24 });
   obj5.buttonText = stringResult;
   obj5.accessibilityValue = { text: stringResult };
   obj5.onPress = tmp5;
-  return jsx(isTryItOut(14834).UserProfileEditFormButton, { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null });
+  return jsx(isTryItOut(14888).UserProfileEditFormButton, { label: null, labelTrailing: null, leading: null, buttonText: null, accessibilityValue: null, onPress: null });
 };

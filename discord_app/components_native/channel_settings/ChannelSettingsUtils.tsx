@@ -1,6 +1,6 @@
-// === Module 17194: ChannelSettingsUtils ===
+// === Module 17271: ChannelSettingsUtils ===
 
-// Module 17194 (ChannelSettingsUtils)
+// Module 17271 (ChannelSettingsUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");

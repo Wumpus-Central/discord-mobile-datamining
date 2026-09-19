@@ -1,16 +1,16 @@
-// === Module 17790: RTCLatencyTestManager ===
+// === Module 17870: RTCLatencyTestManager ===
 
-// Module 17790 (RTCLatencyTestManager)
+// Module 17870 (RTCLatencyTestManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 17791 */;
-import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import RTCRegionStore from "RTCRegionStore" /* 4772 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7314 */;
+import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 17871 */;
+import MediaEngineStore from "MediaEngineStore" /* 1992 */;
+import RTCRegionStore from "RTCRegionStore" /* 4806 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
 
 require = fn;
-const Features = fn(4747).Features;
+const Features = fn(4781).Features;
 const SECOND = DurationsDefault.Millis.SECOND;
 let closure_7 = 30 * DurationsDefault.Millis.SECOND;
 let obj = new LoggerDefault("RTCLatencyTestManager");

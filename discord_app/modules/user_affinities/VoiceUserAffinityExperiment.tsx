@@ -1,6 +1,6 @@
-// === Module 8292: VoiceUserAffinityExperiment ===
+// === Module 8330: VoiceUserAffinityExperiment ===
 
-// Module 8292 (VoiceUserAffinityExperiment)
+// Module 8330 (VoiceUserAffinityExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

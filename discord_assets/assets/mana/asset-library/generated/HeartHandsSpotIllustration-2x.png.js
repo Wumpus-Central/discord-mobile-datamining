@@ -1,6 +1,6 @@
-// === Module 6384: ? ===
+// === Module 6428: ? ===
 
-// Module 6384
+// Module 6428
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeartHandsSpotIllustration-2x.png.js");

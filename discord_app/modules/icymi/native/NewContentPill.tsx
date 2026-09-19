@@ -1,14 +1,14 @@
-// === Module 16778: NewContentPill ===
+// === Module 16854: NewContentPill ===
 
-// Module 16778 (NewContentPill)
+// Module 16854 (NewContentPill)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5143 */;
-import GuildIcon from "GuildIcon" /* 5754 */;
-import ClipView from "ClipView" /* 9054 */;
+import spring from "spring" /* 5185 */;
+import GuildIcon from "GuildIcon" /* 5796 */;
+import ClipView from "ClipView" /* 9093 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import ICYMIStore from "ICYMIStore" /* 8567 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import ICYMIStore from "ICYMIStore" /* 8605 */;
 
 const GuildIconDefault = GuildIcon;
 const ClipViewDefault = ClipView;
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { container: { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, guildIconBG: null, refreshMorePillContainer: null };
 let obj3 = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.guildIconBG = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

@@ -1,9 +1,9 @@
-// === Module 14342: AILoader ===
+// === Module 14397: AILoader ===
 
-// Module 14342 (AILoader)
-import ReanimatedRexport from "ReanimatedRexport" /* 4458 */;
-import timing from "timing" /* 4723 */;
-import AIGlyphText from "AIGlyphText" /* 14344 */;
+// Module 14397 (AILoader)
+import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import timing from "timing" /* 4757 */;
+import AIGlyphText from "AIGlyphText" /* 14399 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function Slot(index) {
   const stagger = index.stagger;
   const tmp = closure_16(size);
   const glyph = tmp;
-  const sharedValue = index(4458).useSharedValue(0);
+  const sharedValue = index(4492).useSharedValue(0);
   let items = [cycle, index, sharedValue, stagger];
   const effect = cycle.useEffect(() => {
     const result = sharedValue.set(0);
@@ -25,7 +25,7 @@ function Slot(index) {
     const result2 = sharedValue.set(obj.withDelay(result1, obj2.withRepeat(obj3.withTiming(1, { duration: cycle, easing: ReanimatedRexport.Easing.linear }, "animate-always"), -1)));
     return () => index(color[5]).cancelAnimation(sharedValue);
   }, items);
-  let obj = index(4458);
+  let obj = index(4492);
   class T {
     constructor() {
       value = closure_6.get();
@@ -60,14 +60,14 @@ function Slot(index) {
   T.__workletHash = 16632594382704;
   T.__initData = __initData;
   const obj4 = { style: tmp.slot, children: null };
-  const animatedStyle = index(4458).useAnimatedStyle(T);
-  let obj2 = index(4458);
+  const animatedStyle = index(4492).useAnimatedStyle(T);
+  let obj2 = index(4492);
   let obj3 = { trackStepAt, progress: sharedValue, size };
-  obj4.children = jsx(size(4458).View, { style: animatedStyle, children: closure_7.map((children) => jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children)) });
+  obj4.children = jsx(size(4492).View, { style: animatedStyle, children: closure_7.map((children) => jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children)) });
   return <stagger style={tmp.slot}>{null}</stagger>;
 }
 const View = fn(17).View;
-const AILoaderConstants = fn(14343);
+const AILoaderConstants = fn(14398);
 ({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_GAP_EM: metroRequire, AI_LOADER_GLYPHS: closure_7, AI_LOADER_REDUCED_MOTION_CYCLE_MS: closure_8, AI_LOADER_REST_FRACTION } = AILoaderConstants);
 ({ AI_LOADER_SLOT_COUNT: c10, AI_LOADER_SLOT_STAGGER_MS: closure_11, AI_LOADER_STEP_FRACTION } = AILoaderConstants);
 const AI_LOADER_TRACK_STEPS = AILoaderConstants.AI_LOADER_TRACK_STEPS;
@@ -84,7 +84,7 @@ function trackStepAt(arg0) {
 trackStepAt.__closure = { AI_LOADER_REST_FRACTION, AI_LOADER_TRACK_STEPS, AI_LOADER_STEP_FRACTION };
 trackStepAt.__workletHash = 2403964493846;
 trackStepAt.__initData = { code: "function trackStepAt_AILoaderNativeTsx1(progress){const{AI_LOADER_REST_FRACTION,AI_LOADER_TRACK_STEPS,AI_LOADER_STEP_FRACTION}=this.__closure;if(progress<AI_LOADER_REST_FRACTION)return AI_LOADER_TRACK_STEPS[0];const step=Math.floor((progress-AI_LOADER_REST_FRACTION)/AI_LOADER_STEP_FRACTION)+1;return AI_LOADER_TRACK_STEPS[Math.min(step,AI_LOADER_TRACK_STEPS.length-1)];}" };
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_16 = createStyles.createStyles((width) => {
   const obj = { loader: { flexDirection: "row", gap: width * timestampProducer }, slot: { width, height: width, overflow: "hidden" }, glyph: { height: width } };
   return obj;
@@ -104,7 +104,7 @@ export const AILoader = noop.memo((size) => {
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(4432).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(4466).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

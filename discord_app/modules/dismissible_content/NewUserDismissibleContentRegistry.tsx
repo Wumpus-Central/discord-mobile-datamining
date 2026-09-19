@@ -1,15 +1,15 @@
-// === Module 4564: NewUserDismissibleContentRegistry ===
+// === Module 4598: NewUserDismissibleContentRegistry ===
 
-// Module 4564 (NewUserDismissibleContentRegistry)
+// Module 4598 (NewUserDismissibleContentRegistry)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 4565 */;
+import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 4599 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 1948 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2031 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const dependencyMap = { [fn(1944).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0, [fn(1944).DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0, [fn(1944).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0, [fn(1944).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0, [fn(1944).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0, [fn(1944).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0, [fn(1944).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0, [fn(1944).DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0, [fn(1944).DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0, [fn(1944).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD]: 0, [fn(1944).DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0, [fn(1944).DismissibleContent.TRIAL_NUX_EMOJI_BUTTON]: 0, [fn(1944).DismissibleContent.TRIAL_NUX_EMOJI_PICKER]: 0, [fn(1944).DismissibleContent.TRIAL_NUX_STREAM_COACH_MARK]: 0, [fn(1944).DismissibleContent.OVERLAY_OOP_SETTINGS_NUX]: 0, [fn(1944).DismissibleContent.OVERLAY_OOP_WELCOME_NUX]: 0, [fn(1944).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0, [fn(1944).DismissibleContent.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0, [fn(1944).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0, [fn(1944).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0, [fn(1944).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0, [fn(1944).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0, [fn(1944).DismissibleContent.NITRO_DROP_REWARD]: 0 };
+const dependencyMap = { [fn(2027).DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0, [fn(2027).DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0, [fn(2027).DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0, [fn(2027).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0, [fn(2027).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0, [fn(2027).DismissibleContent.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0, [fn(2027).DismissibleContent.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0, [fn(2027).DismissibleContent.WHATS_NEW_SERVER_PROFILE_FLIP]: 0, [fn(2027).DismissibleContent.WHATS_NEW_SERVER_PROFILE_BADGE]: 0, [fn(2027).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD]: 0, [fn(2027).DismissibleContent.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0, [fn(2027).DismissibleContent.TRIAL_NUX_EMOJI_BUTTON]: 0, [fn(2027).DismissibleContent.TRIAL_NUX_EMOJI_PICKER]: 0, [fn(2027).DismissibleContent.TRIAL_NUX_STREAM_COACH_MARK]: 0, [fn(2027).DismissibleContent.OVERLAY_OOP_SETTINGS_NUX]: 0, [fn(2027).DismissibleContent.OVERLAY_OOP_WELCOME_NUX]: 0, [fn(2027).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_NUX]: 0, [fn(2027).DismissibleContent.OVERLAY_OOP_WELCOME_SWITCH_FROM_IP_NUX]: 0, [fn(2027).DismissibleContent.OVERLAY_OOP_WELCOME_BACKGROUND_SWITCH_FROM_IP_NUX]: 0, [fn(2027).DismissibleContent.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0, [fn(2027).DismissibleContent.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0, [fn(2027).DismissibleContent.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0, [fn(2027).DismissibleContent.NITRO_DROP_REWARD]: 0 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/NewUserDismissibleContentRegistry.tsx");
 

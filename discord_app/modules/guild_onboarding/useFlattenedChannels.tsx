@@ -1,9 +1,9 @@
-// === Module 7305: useFlattenedChannels ===
+// === Module 7349: useFlattenedChannels ===
 
-// Module 7305 (useFlattenedChannels)
+// Module 7349 (useFlattenedChannels)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
 
 const require = globalThis.__r;
 

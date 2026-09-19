@@ -1,12 +1,12 @@
-// === Module 5062: UploadAttachmentStore ===
+// === Module 5104: UploadAttachmentStore ===
 
-// Module 5062 (UploadAttachmentStore)
+// Module 5104 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import DraftStore from "DraftStore" /* 5063 */;
-import CloudUpload from "CloudUpload" /* 5296 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5305 */;
+import DraftStore from "DraftStore" /* 5105 */;
+import CloudUpload from "CloudUpload" /* 5338 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 5347 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

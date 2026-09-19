@@ -1,27 +1,26 @@
-// === Module 14983: SafetyHubPage ===
+// === Module 15037: SafetyHubPage ===
 
-// Module 14983 (SafetyHubPage)
+// Module 15037 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import user from "user" /* 1380 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1897 */;
-import _modDef3064 from "module_3064" /* 3064 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import components_Button_Button from "components/Button/Button" /* 5144 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6785 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7798 */;
-import MetricEvents from "MetricEvents" /* 7803 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8825 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12125 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12127 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14984 */;
-import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 14985 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
+import _modDef3066 from "module_3066" /* 3066 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5084 */;
+import MetricEvents from "MetricEvents" /* 5089 */;
+import components_Button_Button from "components/Button/Button" /* 5186 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6829 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8864 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12134 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12136 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 15038 */;
+import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 15039 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8663 */;
+import SafetyHubStore from "SafetyHubStore" /* 8701 */;
 
 const require = globalThis.__r;
 
@@ -56,19 +55,20 @@ function AgeCheckLoadingBanner() {
   return closure_1_12(native.HelpMessage, obj2);
 }
 function ManualOrAutomatedReviewBanner() {
-  const obj = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
+  _require = closure_22();
+  const obj = { messageType: require("native").HelpMessageTypes.ERROR, button: null, children: null };
   const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
-  const intl = util.intl;
-  obj2.text = intl.string(util.t.IcA9iD);
+  const intl = require("util").intl;
+  obj2.text = intl.string(require("util").t.IcA9iD);
   obj2.onPress = handleRetryClick;
-  obj.button = closure_1_12(components_Button_Button.Button, obj2);
-  const intl2 = util.intl;
-  obj.children = intl2.format(_modDef3064.vPoM8y, {
+  obj.button = closure_12(require("components/Button/Button").Button, obj2);
+  const intl2 = require("util").intl;
+  obj.children = intl2.format(_modDef3066.vPoM8y, {
     manualReviewHook(children, arg1) {
-      return closure_1_12(Text_Text.Text, { onPress, variant: "text-sm/normal", color: "text-link", children }, arg1);
+      return closure_2_12(Text_Text.Text, { onPress: handleManualReviewClick, style: link.link, variant: "text-sm/normal", color: "text-default", children }, arg1);
     }
   });
-  return closure_1_12(native.HelpMessage, obj);
+  return closure_12(require("native").HelpMessage, obj);
 }
 function ManualReviewBanner() {
   const availableAgeVerificationMethods = useAvailableAgeVerificationMethods.useAvailableAgeVerificationMethods();
@@ -78,7 +78,7 @@ function ManualReviewBanner() {
   } else {
     if (null != methods) {
       if (0 !== methods.length) {
-        if (methods.every((method) => method.method === user.AgeAssuranceMethod.GOOGLE_WALLET)) {
+        if (methods.every((method) => method.method === require("user").AgeAssuranceMethod.GOOGLE_WALLET)) {
           tmp5Result = closure_1_12(ManualOrAutomatedReviewBanner, {});
         } else {
           tmp5Result = closure_1_12(RetryBanner, {});
@@ -112,7 +112,7 @@ function AutomatedUnderageAppealStatus() {
     const intl6 = util.intl;
     const obj3 = {
       loginHook(children) {
-          return closure_1_12(Text_Text.Text, {
+          return closure_1_12(require("Text/Text").Text, {
             variant: "text-sm/medium",
             color: "text-link",
             onPress() {
@@ -160,15 +160,16 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8652).AgeCheckStatus;
+const AgeCheckStatus = fn(8690).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4722);
-let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 }, loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" }, body: null };
+const createStyles = fn(4756);
+let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 }, loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" }, body: null, link: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
 obj2.body = { gap: nativeDefault.space.PX_8 };
+obj2.link = { textDecorationLine: "underline" };
 let closure_22 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
@@ -199,7 +200,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14987, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15041, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

@@ -1,7 +1,7 @@
-// === Module 7664: ClientHeartbeatPiggyback ===
+// === Module 7708: ClientHeartbeatPiggyback ===
 
-// Module 7664 (ClientHeartbeatPiggyback)
-import RunningGameStore from "RunningGameStore" /* 1916 */;
+// Module 7708 (ClientHeartbeatPiggyback)
+import RunningGameStore from "RunningGameStore" /* 1999 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/analytics_sessions/ClientHeartbeatPiggyback.tsx");

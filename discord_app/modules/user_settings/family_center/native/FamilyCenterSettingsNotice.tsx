@@ -1,23 +1,23 @@
-// === Module 15033: FamilyCenterSettingsNotice ===
+// === Module 15087: FamilyCenterSettingsNotice ===
 
-// Module 15033 (FamilyCenterSettingsNotice)
-import _modDef2480 from "module_2480" /* 2480 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4735 */;
-import LayerActionCreators from "LayerActionCreators" /* 7782 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14902 */;
+// Module 15087 (FamilyCenterSettingsNotice)
+import _modDef2482 from "module_2482" /* 2482 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
+import LayerActionCreators from "LayerActionCreators" /* 7826 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SafetySettingsNoticeType = fn(8631).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8669).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  activeLinkUserIds = activeLinkUserIds(8883).useActiveLinkUserIds();
+  activeLinkUserIds = activeLinkUserIds(8922).useActiveLinkUserIds();
   const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
-  let obj = activeLinkUserIds(8883);
-  obj2.label = _modDef2480.i284fU;
+  let obj = activeLinkUserIds(8922);
+  obj2.label = _modDef2482.i284fU;
   obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
   obj2.labelHook = function labelHook() {
     LayerActionCreators.popLayer();

@@ -1,22 +1,22 @@
-// === Module 17234: ChannelSettingsChangeRTCRegion ===
+// === Module 17311: ChannelSettingsChangeRTCRegion ===
 
-// Module 17234 (ChannelSettingsChangeRTCRegion)
+// Module 17311 (ChannelSettingsChangeRTCRegion)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import TableRadioGroup from "TableRadioGroup" /* 5855 */;
-import TableRadioRow from "TableRadioRow" /* 5858 */;
-import Form from "Form" /* 8831 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8863 */;
+import TableRadioGroup from "TableRadioGroup" /* 5897 */;
+import TableRadioRow from "TableRadioRow" /* 5900 */;
+import Form from "Form" /* 8870 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8902 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import RegionStore from "RegionStore" /* 17190 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import RegionStore from "RegionStore" /* 17267 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const AUTOMATIC_RTC_REGION = "AUTOMATIC_RTC_REGION";
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
@@ -79,7 +79,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(8863).updateChannel({ rtcRegion: tmp });
+  self(8902).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     ChannelSettingsActionCreatorsDefault.saveChannel(self.props.channel.id, { rtcRegion });
   });
@@ -104,7 +104,7 @@ prototype["render"] = function render() {
   const tmp = closure_8(this.context);
   return jsx(Form.Form, { style: closure_8(this.context).form, children: this.renderRegions() });
 };
-ChannelSettingsChangeRTCRegion.contextType = fn(4432).ThemeContext;
+ChannelSettingsChangeRTCRegion.contextType = fn(4466).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");
 

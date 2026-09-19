@@ -1,21 +1,21 @@
-// === Module 16599: GuildsBarDirectMessage ===
+// === Module 16675: GuildsBarDirectMessage ===
 
-// Module 16599 (GuildsBarDirectMessage)
+// Module 16675 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 10015 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9866 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5448 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7832 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
+import CallStore from "CallStore" /* 5490 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7870 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { dm: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.dm = size;

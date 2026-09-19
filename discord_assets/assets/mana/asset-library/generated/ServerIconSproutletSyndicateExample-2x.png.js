@@ -1,6 +1,6 @@
-// === Module 6628: ? ===
+// === Module 6672: ? ===
 
-// Module 6628
+// Module 6672
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconSproutletSyndicateExample-2x.png.js");

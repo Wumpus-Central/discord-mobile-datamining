@@ -1,8 +1,8 @@
-// === Module 13335: useUserProfileConnections ===
+// === Module 13391: useUserProfileConnections ===
 
-// Module 13335 (useUserProfileConnections)
+// Module 13391 (useUserProfileConnections)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7817 */;
+import UserProfileStore from "UserProfileStore" /* 7855 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,9 +1,9 @@
-// === Module 13304: PaperPlusIcon ===
+// === Module 13349: PaperPlusIcon ===
 
-// Module 13304 (PaperPlusIcon)
+// Module 13349 (PaperPlusIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod13305 from "module_13305" /* 13305 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod13350 from "module_13350" /* 13350 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PaperPlusIcon = function PaperPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13305, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13350, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

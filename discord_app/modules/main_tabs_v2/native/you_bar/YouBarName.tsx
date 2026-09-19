@@ -1,22 +1,22 @@
-// === Module 16645: YouBarName ===
+// === Module 16721: YouBarName ===
 
-// Module 16645 (YouBarName)
+// Module 16721 (YouBarName)
 import nativeDefault from "native" /* 576 */;
-import GuildTagDefault from "GuildTag" /* 9422 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11126 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11127 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11146 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11406 */;
-import YouBarGuildTagExperiment from "YouBarGuildTagExperiment" /* 16625 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16646 */;
+import GuildTagDefault from "GuildTag" /* 10012 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11139 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11140 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11159 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11418 */;
+import YouBarGuildTagExperiment from "YouBarGuildTagExperiment" /* 16701 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16722 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4744 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import PresenceStore from "PresenceStore" /* 4762 */;
-import RelationshipStore from "RelationshipStore" /* 4371 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5449 */;
-import VoiceStateStore from "VoiceStateStore" /* 4741 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import PresenceStore from "PresenceStore" /* 4796 */;
+import RelationshipStore from "RelationshipStore" /* 4405 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5491 */;
+import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 const require = globalThis.__r;
 
@@ -43,7 +43,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj = { userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, statusRow: { flexDirection: "row", gap: nativeDefault.space.PX_4 }, statusEmoji: { width: 16, height: 16 }, usernameRow: { flexDirection: "row", alignItems: "center", overflow: "visible", gap: 2 }, username: { flexShrink: 1 }, guildTag: { marginLeft: 2, flexShrink: 0 }, statusText: { flexShrink: 1 } };
 let closure_15 = createStyles.createStyles(obj);
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_4 };

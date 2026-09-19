@@ -1,17 +1,17 @@
-// === Module 13393: ProductDetailsActionSheetInfo ===
+// === Module 13449: ProductDetailsActionSheetInfo ===
 
-// Module 13393 (ProductDetailsActionSheetInfo)
+// Module 13449 (ProductDetailsActionSheetInfo)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1890 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7750 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9081 */;
-import useProductDescription from "useProductDescription" /* 13394 */;
-import InlinePriceTagDefault from "InlinePriceTag" /* 13395 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7794 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9120 */;
+import useProductDescription from "useProductDescription" /* 13450 */;
+import InlinePriceTagDefault from "InlinePriceTag" /* 13451 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4722 */;
+import createStyles from "createStyles" /* 4756 */;
 import size from "module_2" /* 2 */;
 
 function ProductNameAndDescription(product) {

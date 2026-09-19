@@ -1,15 +1,15 @@
-// === Module 12346: SearchLocalAndGlobalContentView ===
+// === Module 12355: SearchLocalAndGlobalContentView ===
 
-// Module 12346 (SearchLocalAndGlobalContentView)
+// Module 12355 (SearchLocalAndGlobalContentView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4433 */;
-import TableRow from "TableRow" /* 5775 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7717 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7719 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9647 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12293 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12296 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
+import TableRow from "TableRow" /* 5817 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7761 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9522 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12302 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12305 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,15 +39,15 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(12293).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(12302).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12298), obj2);
+    tmp4 = closure_10(onPressSend(12307), obj2);
   }
-  obj = hasOptions(12293);
-  const tmpResult = hasOptions(12347);
-  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(9647).AppLauncherSectionName.SEARCH });
+  obj = hasOptions(12302);
+  const tmpResult = hasOptions(12356);
+  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(9522).AppLauncherSectionName.SEARCH });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
   let items = [hasOptions];
@@ -69,15 +69,15 @@ function CommandRow(arg0) {
     }
   }, items1);
   const obj4 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(9647).AppLauncherSectionName.SEARCH };
-  obj4.subLabel = hasOptions(9527).getSectionName(application);
+  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(9522).AppLauncherSectionName.SEARCH };
+  obj4.subLabel = hasOptions(9402).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(12347), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return closure_10(hasOptions(5775).TableRow, obj4);
+  obj4.trailing = closure_10(onPressSend(12356), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(5817).TableRow, obj4);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -151,8 +151,8 @@ function CommandsExpandableList(expandedOverride) {
   return closure_10(context(beforeExecuteCommand[30]), { items: items1, expandedOverride: expandedOverride.expanded, showsExpandCTAOverride: false });
 }
 const View = fn(17).View;
-const getSection = fn(9528).getSection;
-const FetchState = fn(12310).FetchState;
+const getSection = fn(9403).getSection;
+const FetchState = fn(12319).FetchState;
 const AppLauncherNativeConstants = fn(1483);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
@@ -164,7 +164,7 @@ const array = new Array(6);
 let closure_17 = array.fill("placeholder");
 const array2 = new Array(3);
 let closure_18 = array2.fill({ type: obj.PLACERHOLDER });
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj3 = { sectionHeader: { marginBottom: 8 }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, loadingCommandAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, divider: null, commandsHeaderContainer: null, commandsCTA: null, commandsCTAUnderlayColor: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj3.loadingCommandAppIcon = size;

@@ -1,20 +1,20 @@
-// === Module 17370: LaunchPadMembers ===
+// === Module 17447: LaunchPadMembers ===
 
-// Module 17370 (LaunchPadMembers)
+// Module 17447 (LaunchPadMembers)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4718 */;
-import GuildChannelUserListDefault from "GuildChannelUserList" /* 11828 */;
-import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12428 */;
-import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 17074 */;
+import Text_Text from "Text/Text" /* 4752 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 11837 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12437 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 17150 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2012 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let closure_7 = createStyles.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
@@ -42,7 +42,7 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: true };
+    return { channelId: "call", type: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000669712902123636 };
   });
   if ("private" === stateFromStoresObject.type) {
     let obj2 = { style: tmp.wrapper, children: null };

@@ -1,9 +1,9 @@
-// === Module 16866: VibegrationsEffortPresets ===
+// === Module 16933: VibegrationsEffortPresets ===
 
-// Module 16866 (VibegrationsEffortPresets)
+// Module 16933 (VibegrationsEffortPresets)
 import util from "util" /* 1115 */;
-import _modDef3676 from "module_3676" /* 3676 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16867 */;
+import _modDef3678 from "module_3678" /* 3678 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16934 */;
 import size from "module_2" /* 2 */;
 
 const items = [
@@ -13,7 +13,7 @@ const items = [
     fast: true,
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3676.Mo0a1m);
+      return intl.string(_modDef3678.Mo0a1m);
     }
   },
   {
@@ -21,7 +21,7 @@ const items = [
     thinking: "high",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3676.dkt78K);
+      return intl.string(_modDef3678.dkt78K);
     }
   },
   {
@@ -29,7 +29,7 @@ const items = [
     thinking: "medium",
     summary() {
       const intl = util.intl;
-      return intl.string(_modDef3676.Ly6zYL);
+      return intl.string(_modDef3678.Ly6zYL);
     }
   }
 ];
@@ -139,7 +139,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (true === fast) {
     const intl = util.intl;
     const _HermesInternal = HermesInternal;
-    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3676.qOoAsd);
+    combined1 = "" + combined + " \u00B7 " + intl.string(_modDef3678.qOoAsd);
   }
   return combined1;
 };

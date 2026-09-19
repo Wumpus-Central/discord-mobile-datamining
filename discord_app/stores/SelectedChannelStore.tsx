@@ -1,21 +1,21 @@
-// === Module 2012: SelectedChannelStore ===
+// === Module 2095: SelectedChannelStore ===
 
-// Module 2012 (SelectedChannelStore)
+// Module 2095 (SelectedChannelStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ChannelConstants from "ChannelConstants" /* 1965 */;
-import ChannelRecord from "ChannelRecord" /* 1962 */;
+import ChannelConstants from "ChannelConstants" /* 2048 */;
+import ChannelRecord from "ChannelRecord" /* 2045 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 1958 */;
-import GuildChannelStore from "GuildChannelStore" /* 2013 */;
-import GuildStore from "GuildStore" /* 1980 */;
-import MediaEngineStore from "MediaEngineStore" /* 1909 */;
-import PermissionStore from "PermissionStore" /* 4361 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4543 */;
+import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildChannelStore from "GuildChannelStore" /* 2096 */;
+import GuildStore from "GuildStore" /* 2063 */;
+import MediaEngineStore from "MediaEngineStore" /* 1992 */;
+import PermissionStore from "PermissionStore" /* 4395 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

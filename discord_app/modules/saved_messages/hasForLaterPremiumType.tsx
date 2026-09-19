@@ -1,8 +1,8 @@
-// === Module 8059: hasForLaterPremiumType ===
+// === Module 8097: hasForLaterPremiumType ===
 
-// Module 8059 (hasForLaterPremiumType)
+// Module 8097 (hasForLaterPremiumType)
 import initialize from "initialize" /* 504 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1886 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1969 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

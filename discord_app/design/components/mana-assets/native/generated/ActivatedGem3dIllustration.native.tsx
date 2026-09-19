@@ -1,9 +1,9 @@
-// === Module 5903: ActivatedGem3dIllustration ===
+// === Module 5945: ActivatedGem3dIllustration ===
 
-// Module 5903 (ActivatedGem3dIllustration)
+// Module 5945 (ActivatedGem3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5757 */;
-import _modDef5904 from "module_5904" /* 5904 */;
+import FastImageDefault from "FastImage" /* 5799 */;
+import _modDef5946 from "module_5946" /* 5946 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ActivatedGem3dIllustration = function ActivatedGem3dIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5904 };
+  const obj2 = { uri: _modDef5946 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

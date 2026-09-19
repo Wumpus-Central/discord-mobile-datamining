@@ -1,6 +1,6 @@
-// === Module 8379: ? ===
+// === Module 8417: ? ===
 
-// Module 8379
+// Module 8417
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-snail.png.js");

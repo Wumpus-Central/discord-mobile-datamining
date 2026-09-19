@@ -1,10 +1,10 @@
-// === Module 11850: AppChannelPermissionUtils ===
+// === Module 11859: AppChannelPermissionUtils ===
 
-// Module 11850 (AppChannelPermissionUtils)
+// Module 11859 (AppChannelPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4368 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 11851 */;
-import ApplicationStore from "ApplicationStore" /* 4950 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4402 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 11860 */;
+import ApplicationStore from "ApplicationStore" /* 4983 */;
 
 require = fn;
 const ChannelTypes = fn(1074).ChannelTypes;

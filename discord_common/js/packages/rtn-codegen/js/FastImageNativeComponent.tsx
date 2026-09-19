@@ -1,6 +1,6 @@
-// === Module 5758: FastImageNativeComponent ===
+// === Module 5800: FastImageNativeComponent ===
 
-// Module 5758 (FastImageNativeComponent)
+// Module 5800 (FastImageNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

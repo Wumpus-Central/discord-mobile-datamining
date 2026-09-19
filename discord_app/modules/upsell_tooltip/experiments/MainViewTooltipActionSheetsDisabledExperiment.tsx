@@ -1,6 +1,6 @@
-// === Module 17329: MainViewTooltipActionSheetsDisabledExperiment ===
+// === Module 17406: MainViewTooltipActionSheetsDisabledExperiment ===
 
-// Module 17329 (MainViewTooltipActionSheetsDisabledExperiment)
+// Module 17406 (MainViewTooltipActionSheetsDisabledExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

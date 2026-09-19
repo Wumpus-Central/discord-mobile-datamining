@@ -1,13 +1,13 @@
-// === Module 7240: AddPhone ===
+// === Module 7284: AddPhone ===
 
-// Module 7240 (AddPhone)
+// Module 7284 (AddPhone)
 import nativeDefault from "native" /* 576 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5067 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7137 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 1952 */;
+import PhoneStore from "PhoneStore" /* 7181 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2035 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ const UserFlags = fn(1074).UserFlags;
 const NOOP_NULL = fn(1085).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4722);
+const createStyles = fn(4756);
 let obj2 = { background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16, flex: 1 }, title: { textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };
@@ -271,7 +271,8 @@ export default function AddPhone(reason) {
                           return closure_3_13(closure_0, obj);
                         };
                       });
-                    }
+                    },
+                isDismissable: false
               };
               actions_AlertActionCreatorsDefault.openLazy(obj3);
             } else if (onDeletePhone != null) {

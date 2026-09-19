@@ -1,7 +1,7 @@
-// === Module 11577: showChannelFollowingActionSheet ===
+// === Module 11586: showChannelFollowingActionSheet ===
 
-// Module 11577 (showChannelFollowingActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4689 */;
+// Module 11586 (showChannelFollowingActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
   _require = id;
   importDefault = guildId;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(require("asyncRequireImpl")(11578, dependencyMap.paths), "NewChannelFollower." + id, {
+  obj.openLazy(require("asyncRequireImpl")(11587, dependencyMap.paths), "NewChannelFollower." + id, {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId,
@@ -54,7 +54,7 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
                   obj.openLazy(closure_2_0(closure_2_2[4])(closure_2_2[3], closure_2_2.paths), "NewChannelFollower." + closure_1_0, { sourceChannelId: closure_1_0, sourceGuildId: closure_1_1, targetChannelId, targetGuildId, reopenActionSheetWithTarget() { ... }, onSuccess() { ... }, onCancel() { ... } });
                 },
                 onSuccess() {
-                  closure_1(dependencyMap[5]).openLazy({ importer() { ... }, hideActionSheet: true });
+                  closure_1(dependencyMap[5]).openLazy({ importer() { ... }, hideActionSheet: true, isDismissable: false });
                 },
                 onCancel() {
                   return closure_1(dependencyMap[2]).hideActionSheet();
@@ -66,7 +66,8 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
                 importer() {
                   return closure_1_0(paths[4])(paths[6], paths.paths).then(() => { ... });
                 },
-                hideActionSheet: true
+                hideActionSheet: true,
+                isDismissable: false
               });
             },
             onCancel() {
@@ -82,7 +83,8 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
                 return () => { ... };
               });
             },
-            hideActionSheet: true
+            hideActionSheet: true,
+            isDismissable: false
           });
         },
         onCancel() {
@@ -101,7 +103,8 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
             };
           });
         },
-        hideActionSheet: true
+        hideActionSheet: true,
+        isDismissable: false
       });
     },
     onCancel() {

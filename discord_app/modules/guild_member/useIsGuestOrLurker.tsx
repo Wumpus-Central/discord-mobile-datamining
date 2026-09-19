@@ -1,8 +1,8 @@
-// === Module 10293: useIsGuestOrLurker ===
+// === Module 10305: useIsGuestOrLurker ===
 
-// Module 10293 (useIsGuestOrLurker)
-import GuildMemberStore from "GuildMemberStore" /* 2022 */;
-import GuildStore from "GuildStore" /* 1980 */;
+// Module 10305 (useIsGuestOrLurker)
+import GuildMemberStore from "GuildMemberStore" /* 2105 */;
+import GuildStore from "GuildStore" /* 2063 */;
 
 const require = globalThis.__r;
 

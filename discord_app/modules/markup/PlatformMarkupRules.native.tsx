@@ -1,18 +1,18 @@
-// === Module 5196: PlatformMarkupRules ===
+// === Module 5238: PlatformMarkupRules ===
 
-// Module 5196 (PlatformMarkupRules)
+// Module 5238 (PlatformMarkupRules)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1925 */;
-import _modDef2075 from "module_2075" /* 2075 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4375 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5175 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5176 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5179 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5197 */;
-import useGameMentionData from "useGameMentionData" /* 5276 */;
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 5291 */;
+import _modDef1929 from "module_1929" /* 1929 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2008 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4409 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5217 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5218 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5221 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5239 */;
+import useGameMentionData from "useGameMentionData" /* 5318 */;
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 5333 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -51,7 +51,7 @@ let obj = {
   silentPrefix: null
 };
 let obj2 = {};
-let merged = Object.assign(_modDef2075.defaultRules.escape);
+let merged = Object.assign(_modDef1929.defaultRules.escape);
 obj2.requiredFirstCharacters = undefined;
 obj2.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;

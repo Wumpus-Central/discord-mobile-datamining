@@ -1,9 +1,9 @@
-// === Module 8040: UploadStore ===
+// === Module 8078: UploadStore ===
 
-// Module 8040 (UploadStore)
+// Module 8078 (UploadStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageStore from "MessageStore" /* 4943 */;
+import MessageStore from "MessageStore" /* 4976 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;

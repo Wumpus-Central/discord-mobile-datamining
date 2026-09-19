@@ -1,9 +1,9 @@
-// === Module 15775: MobilePhoneSettingsIcon ===
+// === Module 15830: MobilePhoneSettingsIcon ===
 
-// Module 15775 (MobilePhoneSettingsIcon)
+// Module 15830 (MobilePhoneSettingsIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4422 */;
-import _mod15776 from "module_15776" /* 15776 */;
+import BaseIconImage from "BaseIconImage" /* 4456 */;
+import _mod15831 from "module_15831" /* 15831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const MobilePhoneSettingsIcon = function MobilePhoneSettingsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15776, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15831, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

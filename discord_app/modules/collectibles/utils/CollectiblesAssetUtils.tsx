@@ -1,8 +1,8 @@
-// === Module 1884: CollectiblesAssetUtils ===
+// === Module 1967: CollectiblesAssetUtils ===
 
-// Module 1884 (CollectiblesAssetUtils)
+// Module 1967 (CollectiblesAssetUtils)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import mappers from "mappers" /* 1883 */;
+import mappers from "mappers" /* 1966 */;
 import size from "module_2" /* 2 */;
 
 let c2 = "media/v1/collectibles-shop";
