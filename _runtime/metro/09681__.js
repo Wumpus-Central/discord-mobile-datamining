@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/user_settings/connections/native/two_way_link/images",
-  width: 18,
-  height: 18.5,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 130,
+  height: 82,
   scales: [2, 3],
-  hash: "84a5f82b0047a661ec45232254da9031",
-  name: "app_installed_check",
+  hash: "3c9f06960d8f7bccd426e0e87c7d7947",
+  name: "screenshare_splash",
   type: "png",
 });

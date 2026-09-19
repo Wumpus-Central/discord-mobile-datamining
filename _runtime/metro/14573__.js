@@ -1,45 +1,28 @@
 // _runtime/metro/14573__.js
-import _mod14517 from "14517__.js";
-import _mod14542 from "14542__.js";
-import _mod14570 from "14570__.js";
 import _mod14574 from "14574__.js";
+import _mod14576 from "14576__.js";
+import text from "../14583_text.js";
+import _mod14594 from "14594__.js";
+import _mod14604 from "14604__.js";
+import _mod14606 from "14606__.js";
+import _mod14608 from "14608__.js";
+import _mod14609 from "14609__.js";
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod14542(value)) {
-    _mod14574(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
+if (!_mod14574) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod14576(arg0);
+    const tmp4 = text(arg1);
+    if (!_mod14606) {
+      if (_mod14594(tmp3, tmp4)) {
+        const tmpResult = _mod14608;
+        return tmpResult(!_mod14604(_mod14609.f, tmp3, tmp4), tmp3[tmp4]);
+      }
     } else {
-      _mod14517(arg1, value);
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {}
     }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
-      }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod14570.f(arg0, arg1, obj2);
-        const tmp3Result = _mod14570;
-      }
-    } catch (err) {}
-  }
-  return arg0;
-};
+  };
+}
+
+export const f = getOwnPropertyDescriptor;

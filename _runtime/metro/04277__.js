@@ -1,35 +1,105 @@
 // _runtime/metro/04277__.js
-import 02117__ from "02117__.js";
+import subDays_mod from "../04216_subDays.js";
+import subMonths_mod from "../04278_subMonths.js";
+import requiredArgs_mod from "../03846_requiredArgs.js";
+import module_3849_mod from "03849__.js";
 
-if (!module_2117) {
-  const obj2 = { default: module_2117 };
-  let obj = obj2;
-} else {
-  obj = module_2117;
-}
-let closure_0 = { locale: { 1: "\u0967", 2: "\u0968", 3: "\u0969", 4: "\u096A", 5: "\u096B", 6: "\u096C", 7: "\u096D", 8: "\u096E", 9: "\u096F", 0: "\u0966" }, number: { "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9", "०": "0" } };
-const date = {
-  ordinalNumber(arg0, arg1) {
-    const str = Number(arg0);
-    return Number(arg0).toString().replace(/\d/g, (arg0) => locale.locale[arg0]);
-  },
-  era: obj.default({ values: { narrow: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u094D\u0935\u0940"], abbreviated: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u094D\u0935\u0940"], wide: ["\u0908\u0938\u093E-\u092A\u0942\u0930\u094D\u0935", "\u0908\u0938\u0935\u0940 \u0938\u0928"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["\u0924\u093F1", "\u0924\u093F2", "\u0924\u093F3", "\u0924\u093F4"], wide: ["\u092A\u0939\u0932\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u0926\u0942\u0938\u0930\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u0924\u0940\u0938\u0930\u0940 \u0924\u093F\u092E\u093E\u0939\u0940", "\u091A\u094C\u0925\u0940 \u0924\u093F\u092E\u093E\u0939\u0940"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
     }
-  }),
-  month: obj.default({ values: { narrow: ["\u091C", "\u092B\u093C", "\u092E\u093E", "\u0905", "\u092E\u0908", "\u091C\u0942", "\u091C\u0941", "\u0905\u0917", "\u0938\u093F", "\u0905\u0915\u094D\u091F\u0942", "\u0928", "\u0926\u093F"], abbreviated: ["\u091C\u0928", "\u092B\u093C\u0930", "\u092E\u093E\u0930\u094D\u091A", "\u0905\u092A\u094D\u0930\u0948\u0932", "\u092E\u0908", "\u091C\u0942\u0928", "\u091C\u0941\u0932", "\u0905\u0917", "\u0938\u093F\u0924", "\u0905\u0915\u094D\u091F\u0942", "\u0928\u0935", "\u0926\u093F\u0938"], wide: ["\u091C\u0928\u0935\u0930\u0940", "\u092B\u093C\u0930\u0935\u0930\u0940", "\u092E\u093E\u0930\u094D\u091A", "\u0905\u092A\u094D\u0930\u0948\u0932", "\u092E\u0908", "\u091C\u0942\u0928", "\u091C\u0941\u0932\u093E\u0908", "\u0905\u0917\u0938\u094D\u0924", "\u0938\u093F\u0924\u0902\u092C\u0930", "\u0905\u0915\u094D\u091F\u0942\u092C\u0930", "\u0928\u0935\u0902\u092C\u0930", "\u0926\u093F\u0938\u0902\u092C\u0930"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["\u0930", "\u0938\u094B", "\u092E\u0902", "\u092C\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], short: ["\u0930", "\u0938\u094B", "\u092E\u0902", "\u092C\u0941", "\u0917\u0941", "\u0936\u0941", "\u0936"], abbreviated: ["\u0930\u0935\u093F", "\u0938\u094B\u092E", "\u092E\u0902\u0917\u0932", "\u092C\u0941\u0927", "\u0917\u0941\u0930\u0941", "\u0936\u0941\u0915\u094D\u0930", "\u0936\u0928\u093F"], wide: ["\u0930\u0935\u093F\u0935\u093E\u0930", "\u0938\u094B\u092E\u0935\u093E\u0930", "\u092E\u0902\u0917\u0932\u0935\u093E\u0930", "\u092C\u0941\u0927\u0935\u093E\u0930", "\u0917\u0941\u0930\u0941\u0935\u093E\u0930", "\u0936\u0941\u0915\u094D\u0930\u0935\u093E\u0930", "\u0936\u0928\u093F\u0935\u093E\u0930"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, abbreviated: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, wide: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, abbreviated: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" }, wide: { am: "\u092A\u0942\u0930\u094D\u0935\u093E\u0939\u094D\u0928", pm: "\u0905\u092A\u0930\u093E\u0939\u094D\u0928", midnight: "\u092E\u0927\u094D\u092F\u0930\u093E\u0924\u094D\u0930\u093F", noon: "\u0926\u094B\u092A\u0939\u0930", morning: "\u0938\u0941\u092C\u0939", afternoon: "\u0926\u094B\u092A\u0939\u0930", evening: "\u0936\u093E\u092E", night: "\u0930\u093E\u0924" } }, defaultFormattingWidth: "wide" })
-};
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let subDays = subDays_mod;
+if (!subDays) {
+  const obj = { default: subDays };
+  let tmp3 = obj;
+} else {
+  tmp3 = subDays;
+}
+subDays = tmp3;
+let subMonths = subMonths_mod;
+if (!subMonths) {
+  const obj2 = { default: subMonths };
+  let tmp5 = obj2;
+} else {
+  tmp5 = subMonths;
+}
+subMonths = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+let module_3849 = module_3849_mod;
+if (!module_3849) {
+  const obj4 = { default: module_3849 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_3849;
+}
+module_3849 = tmp9;
 
-export const localeToNumber = function localeToNumber(arg0) {
-  return Number(arg0.toString().replace(/[१२३४५६७८९०]/g, (arg0) => number.number[arg0]));
+export default function sub(arg0, years) {
+  requiredArgs.default(2, arguments);
+  if (years) {
+    if ("object" === _typeof(years)) {
+      let num = 0;
+      if (years.years) {
+        num = module_3849.default(years.years);
+      }
+      let num2 = 0;
+      if (years.months) {
+        num2 = module_3849.default(years.months);
+      }
+      let num3 = 0;
+      if (years.weeks) {
+        num3 = module_3849.default(years.weeks);
+      }
+      let num4 = 0;
+      if (years.days) {
+        num4 = module_3849.default(years.days);
+      }
+      let num5 = 0;
+      if (years.hours) {
+        num5 = module_3849.default(years.hours);
+      }
+      let num6 = 0;
+      if (years.minutes) {
+        num6 = module_3849.default(years.minutes);
+      }
+      let num7 = 0;
+      if (years.seconds) {
+        num7 = module_3849.default(years.seconds);
+      }
+      const _Date = Date;
+      const sum = num7 + 60 * (num6 + 60 * num5);
+      const date = new Date(subDays.default(subMonths.default(arg0, num2 + 12 * num), num4 + 7 * num3).getTime() - 1000 * sum);
+      return date;
+    }
+  }
+  return new Date(NaN);
 };
-export const numberToLocale = function numberToLocale(arg0) {
-  return arg0.toString().replace(/\d/g, (arg0) => locale.locale[arg0]);
-};
-export default date;
+export default exports.default;

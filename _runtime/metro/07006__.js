@@ -1,58 +1,71 @@
 // _runtime/metro/07006__.js
-import _mod17 from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import _mod7007 from "07007__.js";
-import noop_mod from "00019__.js";
+import nativeViewGestureHandlerProps from "../06934_nativeViewGestureHandlerProps.js";
+import "module_19";
 
-let noop = noop_mod;
-({ useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const Platform = _mod17.Platform;
-const jsx = jsxProd.jsx;
-const __initData = {
-  code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}",
-};
-const memoResult = memo(function BottomSheetBodyComponent(children) {
-  const style = children.style;
-  let View = children.BodyComponent;
-  if (View === undefined) {
-    View = animatedIndex(animatedPosition[3]).View;
+require = fn;
+const noop = fn(19);
+({ useImperativeHandle: c2, useRef: c3 } = noop);
+const jsx = fn(21).jsx;
+let items = [...fn(6934).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
+
+export default function createNativeWrapper(displayName, arg1) {
+  _require = displayName;
+  if (arg1 === undefined) {
+    let obj = {};
   }
-  animatedPosition = undefined;
-  const bottomSheetInternal = style(animatedPosition[4]).useBottomSheetInternal();
-  animatedIndex = bottomSheetInternal.animatedIndex;
-  animatedPosition = bottomSheetInternal.animatedPosition;
-  let obj = style(animatedPosition[4]);
-  const fn = function y() {
-    let num = 1;
-    if (-1 === animatedIndex.get()) {
-      num = 0;
+  let str;
+  if (displayName != null) {
+    str = displayName.displayName;
+  }
+  if (!str) {
+    let name;
+    if (displayName != null) {
+      const render = displayName.render;
+      if (render != null) {
+        name = render.name;
+      }
     }
-    const obj = { opacity: num, transform: null };
-    const items = [{ translateY: animatedPosition.get() }];
-    obj.transform = items;
-    return obj;
-  };
-  fn.__closure = { Platform, animatedIndex, animatedPosition };
-  fn.__workletHash = 5915282482182;
-  fn.__initData = __initData;
-  let items = [animatedPosition, animatedIndex];
-  const animatedStyle = style(animatedPosition[3]).useAnimatedStyle(fn, items);
-  const items1 = [style, animatedStyle];
-  const obj2 = style(animatedPosition[3]);
-  const obj3 = { Platform, animatedIndex, animatedPosition };
-  return (
-    <View
-      style={animatedStyle(() => {
-        const items = [style, _mod7007.styles.container, animatedStyle];
-        return items;
-      }, items1)}
-      collapsable
-    >
-      {children.children}
-    </View>
-  );
-});
-memoResult.displayName = "BottomSheetBody";
-
-export const BottomSheetBody = memoResult;
+    str = name;
+  }
+  if (!str) {
+    let tmp2 = typeof displayName === "string";
+    if (typeof displayName === "string") {
+      tmp2 = displayName;
+    }
+    str = tmp2;
+  }
+  if (!str) {
+    str = "ComponentWrapper";
+  }
+  class ComponentWrapper {
+    constructor(arg0) {
+      closure_0 = displayName;
+      keys = Object.keys(displayName);
+      obj = { gestureHandlerProps: null, childProps: null };
+      obj1 = {};
+      merged = Object.assign(closure_1);
+      obj.gestureHandlerProps = obj1;
+      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
+      reduced = keys.reduce(() => { ... }, obj);
+      ({ gestureHandlerProps, childProps } = reduced);
+      tmp3 = useRef(null);
+      closure_1 = tmp3;
+      tmp4 = useRef(null);
+      closure_2 = tmp4;
+      items = [, ];
+      items[0] = tmp3;
+      items[1] = tmp4;
+      tmp5 = useImperativeHandle(displayName.ref, () => { ... }, items);
+      obj5 = {};
+      merged1 = Object.assign(gestureHandlerProps);
+      obj5.ref = tmp4;
+      obj6 = {};
+      merged2 = Object.assign(childProps);
+      obj6.ref = tmp3;
+      obj5.children = jsx(closure_0, obj6);
+      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj5);
+    }
+  }
+  ComponentWrapper.displayName = str;
+  return ComponentWrapper;
+};

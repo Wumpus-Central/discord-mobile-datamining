@@ -1,15 +1,13 @@
 // _runtime/metro/07215__.js
-import _mod7216 from "07216__.js";
+import registerAsset from "01121__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getDistanceForDirection = function getDistanceForDirection(layout, gestureDirection, arg2) {
-  const invertedMultiplier = _mod7216.getInvertedMultiplier(gestureDirection, arg2);
-  if ("vertical" !== gestureDirection) {
-    if ("vertical-inverted" !== gestureDirection) {
-      return layout.width * invertedMultiplier;
-    }
-  }
-  return layout.height * invertedMultiplier;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/auth/native/images",
+  width: 375,
+  height: 413,
+  scales: [2, 3],
+  hash: "9dd921dedb90562e62ae59d45a63666c",
+  name: "register-background-light",
+  type: "png",
+});

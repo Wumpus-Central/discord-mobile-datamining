@@ -1,49 +1,105 @@
 // _runtime/metro/14629__.js
+import _mod14574 from "14574__.js";
+import _mod14575 from "14575__.js";
+import _mod14578 from "14578__.js";
+import _mod14594 from "14594__.js";
+import _mod14597 from "14597__.js";
+import _mod14631 from "14631__.js";
+import state from "../14632_state.js";
+import prop from "14630__.js";
 
-export default (arg0) => {
-  let map = arg0;
-  if (!arg0) {
-    const _Map = Map;
-    map = new Map();
+let closure_5 = _mod14578("".slice);
+let closure_6 = _mod14578("".replace);
+let closure_7 = _mod14578([].join);
+let closure_8 = _mod14574 && !_mod14575(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+const tmp = _mod14574 && !_mod14575(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+let closure_9 = String(String).split("String");
+const fn = (toString, toString2, arg2) => {
+  let text = toString2;
+  if ("Symbol(" === closure_5(String(toString2), 0, 7)) {
+    text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
   }
-  return {
-    all: map,
-    on(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        value.push(arg1);
-      } else {
-        const items = [arg1];
-        const result = map.set(arg0, items);
-      }
-    },
-    off(arg0, arg1) {
-      value = map.get(arg0);
-      if (value) {
-        if (arg1) {
-          value.splice(value.indexOf(arg1) >>> 0, 1);
-        } else {
-          const result = map.set(arg0, []);
+  let getter = arg2;
+  if (arg2) {
+    getter = arg2.getter;
+  }
+  let text1 = text;
+  if (getter) {
+    text1 = `get ${tmp2}`;
+  }
+  let setter = arg2;
+  if (arg2) {
+    setter = arg2.setter;
+  }
+  let text2 = text1;
+  if (setter) {
+    text2 = `set ${tmp4}`;
+  }
+  const tmp8 = _mod14594(toString, "name");
+  let tmp9 = !tmp8;
+  if (tmp8) {
+    tmp9 = _mod14631.CONFIGURABLE && toString.name !== text2;
+    const tmp10 = _mod14631.CONFIGURABLE && toString.name !== text2;
+  }
+  if (tmp9) {
+    if (_mod14574) {
+      const obj = { value: text2, configurable: true };
+      defineProperty(toString, "name", obj);
+    } else {
+      toString.name = text2;
+    }
+  }
+  let tmp13 = closure_8;
+  if (closure_8) {
+    tmp13 = arg2;
+  }
+  if (tmp13) {
+    tmp13 = _mod14594(arg2, "arity");
+  }
+  if (tmp13) {
+    tmp13 = toString.length !== arg2.arity;
+  }
+  if (tmp13) {
+    const obj2 = { value: arg2.arity };
+    defineProperty(toString, "length", obj2);
+  }
+  try {
+    if (arg2) {
+      if (_mod14594(arg2, "constructor")) {
+        if (arg2.constructor) {
+          if (_mod14574) {
+            defineProperty(toString, "prototype", { writable: false });
+          }
         }
+        const enforceResult = state.enforce(toString);
+        if (!_mod14594(enforceResult, "source")) {
+          let str11 = "";
+          if (typeof text2 === "string") {
+            str11 = text2;
+          }
+          enforceResult.source = closure_7(closure_9, str11);
+        }
+        return toString;
       }
-    },
-    emit(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      value = map.get(arg0);
-      if (value) {
-        const substr = value.slice();
-        const mapped = substr.map((fn) => {
-          fn(closure_1);
-        });
-      }
-      value2 = map.get("*");
-      if (value2) {
-        const substr1 = value2.slice();
-        const mapped1 = substr1.map((fn) => {
-          fn(closure_0, closure_1);
-        });
-      }
-    },
-  };
+    }
+    if (toString.prototype) {
+      toString.prototype = undefined;
+    }
+  } catch (err) {}
 };
+function toString() {
+  const self = this;
+  let source = _mod14597(this);
+  if (source) {
+    source = state.get(self).source;
+    const tmpResult = state;
+  }
+  if (!source) {
+    source = prop(self);
+  }
+  return source;
+}
+fn(toString, "toString");
+Function.prototype.toString = toString;
+
+export default fn;

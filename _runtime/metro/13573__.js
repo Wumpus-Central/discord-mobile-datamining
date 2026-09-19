@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 51,
-  height: 36,
-  scales: [2, 3],
-  hash: "d8a20104f4217083a13e0ca284c4bad2",
-  name: "img_premium_resubscribe_mobile",
+  httpServerLocation: "/assets/modules/main_tabs_v2/native/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3, 4],
+  hash: "61996c8880b718aa494df1b2d4a258fb",
+  name: "arrow-right",
   type: "png",
 });

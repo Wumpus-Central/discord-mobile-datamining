@@ -1,98 +1,146 @@
 // _runtime/metro/10704__.js
+import AbstractTimeExpressionParser from "../10705_AbstractTimeExpressionParser.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-const SlashDateFormatParser = require;
-const regExp = new RegExp(
-  "([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)",
-  "i",
-);
-class SlashDateFormatParser {
+const ENTimeExpressionParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class ENTimeExpressionParser {
   constructor(arg0) {
     self = this;
-    tmp = c2(this, SlashDateFormatParser);
-    num = 2;
-    if (global) {
-      num = 3;
+    tmp = c2(this, ENTimeExpressionParser);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeExpressionParser);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
     }
-    self.groupNumberMonth = num;
-    num2 = 3;
-    if (global) {
-      num2 = 2;
-    }
-    self.groupNumberDay = num2;
-    return;
+    return tmp3(self, constructResult);
   }
 }
+_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
+  key: "followingPhase",
+  value: function followingPhase() {
+    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|until|through|till|\\?)\\s*";
   },
 };
 let items = [
   entry,
   {
-    key: "extract",
-    value: function extract(text, index) {
-      const sum = index.index + index[1].length;
-      const diff = index.index + index[0].length - index[5].length;
-      if (sum > 0) {
-        text.text.substring(0, sum);
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:at|from)\\s*)??";
+    },
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:o\\W*clock|at\\s*night|in\\s*the\\s*(?:morning|afternoon)))?(?!/)(?=\\W|$)";
+    },
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      const self = this;
+      const tmp = hasOwnProperty(
+        _getPrototypeOf(ENTimeExpressionParser.prototype),
+        "extractPrimaryTimeComponents",
+        this,
+      );
+      dependencyMap = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (items) => fn.apply(self, items);
       }
-      if (diff < text.text.length) {
-        text.text.substring(diff);
-      }
-      const str8 = text.text.substring(sum, diff);
-      if (!str8.match(/^\d\.\d$/)) {
-        if (!str8.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/)) {
-          const self = this;
-          const parsingResult = text.createParsingResult(sum, str8);
-          const _parseInt = parseInt;
-          const parsed = parseInt(index[this.groupNumberMonth]);
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(index[this.groupNumberDay]);
-          if (parsed < 1) {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-            if (parsed > 12) {
-              if (parsed1 >= 1) {
-                if (parsed1 <= 12) {
-                  if (parsed <= 31) {
-                    const items = [parsed, parsed1];
-                    [tmp6, tmp7] = items;
-                  }
-                }
-              }
-              return null;
-            }
-          } else {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-          }
-          if (tmp6 >= 1) {
-            if (tmp6 <= 31) {
-              const start3 = parsingResult.start;
-              start3.assign("day", tmp6);
-              const start4 = parsingResult.start;
-              start4.assign("month", tmp7);
-              if (index[4]) {
-                const _parseInt3 = parseInt;
-                const parsed2 = parseInt(index[4]);
-                const start2 = parsingResult.start;
-                start2.assign("year", SlashDateFormatParser(10676).findMostLikelyADYear(parsed2));
-              } else {
-                const start = parsingResult.start;
-                start.imply("year", SlashDateFormatParser(10676).findYearClosestToRef(text.refDate, tmp6, tmp7));
-              }
-              return parsingResult.addTag("parser/SlashDateFormatParser");
+      const items = [arg0, arg1];
+      const fnResult = fn(items);
+      if (fnResult) {
+        const first = arg1[0];
+        if (first.endsWith("night")) {
+          value = fnResult.get("hour");
+          if (value >= 6) {
+            if (value < 12) {
+              fnResult.assign("hour", fnResult.get("hour") + 12);
+              fnResult.assign("meridiem", ENTimeExpressionParser(10696).Meridiem.PM);
             }
           }
-          return null;
+          if (value < 6) {
+            fnResult.assign("meridiem", ENTimeExpressionParser(10696).Meridiem.AM);
+          }
         }
+        const first1 = arg1[0];
+        if (first1.endsWith("afternoon")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(10696).Meridiem.PM);
+          value2 = fnResult.get("hour");
+          let tmp14 = value2 >= 0;
+          if (tmp14) {
+            tmp14 = value2 <= 6;
+          }
+          if (tmp14) {
+            fnResult.assign("hour", fnResult.get("hour") + 12);
+          }
+        }
+        const first2 = arg1[0];
+        if (first2.endsWith("morning")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(10696).Meridiem.AM);
+          if (fnResult.get("hour") < 12) {
+            fnResult.assign("hour", fnResult.get("hour"));
+          }
+        }
+        return fnResult.addTag("parser/ENTimeExpressionParser");
+      } else {
+        return fnResult;
       }
+    },
+  },
+  {
+    key: "extractFollowingTimeComponents",
+    value: function extractFollowingTimeComponents(arg0, arg1, arg2) {
+      const self = this;
+      let fn = hasOwnProperty(
+        _getPrototypeOf(ENTimeExpressionParser.prototype),
+        "extractFollowingTimeComponents",
+        this,
+      );
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1, arg2];
+      const fnResult = fn(items);
+      if (fnResult) {
+        fnResult.addTag("parser/ENTimeExpressionParser");
+      }
+      return fnResult;
     },
   },
 ];
 
-export default _createClass(SlashDateFormatParser, items);
+export default _createClass(ENTimeExpressionParser, items);

@@ -1,235 +1,198 @@
 // _runtime/metro/13059__.js
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import _mod13049 from "13049__.js";
+import _mod13054 from "13054__.js";
+import _mod13057 from "13057__.js";
 
-let AsyncContextStack = require;
-function withScope(arg0) {
-  const mainCarrier = AsyncContextStack(13057).getMainCarrier();
-  const obj = AsyncContextStack(13057);
-  const sentryCarrier = AsyncContextStack(13057).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = AsyncContextStack(13065).getDefaultCurrentScope();
-    const tmpResult = AsyncContextStack(13065);
-    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(13065).getDefaultIsolationScope());
-    const tmpResult2 = AsyncContextStack(13065);
+require = arg1;
+const dependencyMap = arg6;
+const re2 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
+
+export const addContextToFrame = function addContextToFrame(arr, lineno) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = 5;
   }
-  sentryCarrier.stack = stack;
-  return stack.withScope(arg0);
-}
-function withSetScope(scope, arg1) {
-  closure_1 = arg1;
-  const mainCarrier = AsyncContextStack(13057).getMainCarrier();
-  const obj = AsyncContextStack(13057);
-  const sentryCarrier = AsyncContextStack(13057).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = AsyncContextStack(13065).getDefaultCurrentScope();
-    const tmpResult = AsyncContextStack(13065);
-    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(13065).getDefaultIsolationScope());
-    const tmpResult2 = AsyncContextStack(13065);
+  if (undefined !== lineno.lineno) {
+    const _Math2 = Math;
+    const _Math3 = Math;
+    const bound = Math.max(Math.min(length - 1, lineno.lineno - 1), 0);
+    const _Math4 = Math;
+    const substr = arr.slice(Math.max(0, bound - num), bound);
+    lineno.pre_context = substr.map((item) => _mod13057.snipLine(item, 0));
+    const _Math5 = Math;
+    const bound1 = Math.min(length - 1, bound);
+    let num2 = lineno.colno;
+    if (!num2) {
+      num2 = 0;
+    }
+    lineno.context_line = _mod13057.snipLine(arr[bound1], num2);
+    const _Math = Math;
+    const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
+    lineno.post_context = substr1.map((item) => _mod13057.snipLine(item, 0));
   }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    stack.getStackTop().scope = scope;
-    return closure_1(scope);
-  });
-}
-function withIsolationScope(arg0) {
-  AsyncContextStack = arg0;
-  const mainCarrier = AsyncContextStack(13057).getMainCarrier();
-  const obj = AsyncContextStack(13057);
-  const sentryCarrier = AsyncContextStack(13057).getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const defaultCurrentScope = tmp(13065).getDefaultCurrentScope();
-    const tmpResult = tmp(13065);
-    stack = new closure_3(defaultCurrentScope, tmp(13065).getDefaultIsolationScope());
-    const tmpResult2 = tmp(13065);
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    const mainCarrier = AsyncContextStack(13057).getMainCarrier();
-    const obj = AsyncContextStack(13057);
-    const sentryCarrier = AsyncContextStack(13057).getSentryCarrier(mainCarrier);
-    let stack = sentryCarrier.stack;
-    if (!stack) {
-      const defaultCurrentScope = AsyncContextStack(13065).getDefaultCurrentScope();
-      const tmp2Result = AsyncContextStack(13065);
-      stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(13065).getDefaultIsolationScope());
-      const tmp2Result2 = AsyncContextStack(13065);
-    }
-    sentryCarrier.stack = stack;
-    return closure_0(stack.getIsolationScope());
-  });
-}
-class AsyncContextStack {
-  constructor(arg0, arg1) {
-    self = this;
-    scope = global;
-    tmp2 = c2(this, AsyncContextStack);
-    if (!global) {
-      tmp3 = closure_0;
-      tmp4 = closure_1;
-      tmp5 = new.target;
-      tmp6 = new.target;
-      scope = new closure_0(closure_1[2]).Scope();
-    }
-    scope1 = require;
-    if (!require) {
-      tmp8 = closure_0;
-      tmp9 = closure_1;
-      tmp10 = new.target;
-      tmp11 = new.target;
-      scope1 = new closure_0(closure_1[2]).Scope();
-    }
-    items = [];
-    items[0] = { scope };
-    self._stack = items;
-    self._isolationScope = scope1;
-    return;
-  }
-}
-const entry = {
-  key: "withScope",
-  value: function withScope(fn) {
-    const self = this;
-    try {
-      const promise = fn(tmp);
-      if (obj2.isThenable(promise)) {
-        let nextPromise = promise.then(
-          (result) => {
-            self._popScope();
-            return result;
-          },
-          (arg0) => {
-            self._popScope();
-            throw arg0;
-          },
-        );
-      } else {
-        self._popScope();
-        nextPromise = promise;
-      }
-      return nextPromise;
-    } catch (tmp9) {
-      obj._popScope();
-      throw tmp9;
-    }
-  },
 };
-let items = [
-  entry,
-  {
-    key: "getClient",
-    value: function getClient() {
-      return this.getStackTop().client;
-    },
-  },
-  {
-    key: "getScope",
-    value: function getScope() {
-      return this.getStackTop().scope;
-    },
-  },
-  {
-    key: "getIsolationScope",
-    value: function getIsolationScope() {
-      return this._isolationScope;
-    },
-  },
-  {
-    key: "getStackTop",
-    value: function getStackTop() {
-      return this._stack[this._stack.length - 1];
-    },
-  },
-  {
-    key: "_pushScope",
-    value: function _pushScope() {
-      const scope = this.getScope();
-      const cloneResult = scope.clone();
-      const _stack = this._stack;
-      _stack.push({ client: this.getClient(), scope: cloneResult });
-      return cloneResult;
-    },
-  },
-  {
-    key: "_popScope",
-    value: function _popScope() {
-      let arr = this._stack.length > 1;
-      if (arr) {
-        const _stack = this._stack;
-        arr = _stack.pop();
-      }
-      return arr;
-    },
-  },
-];
-const _moduleResult = _createClass(AsyncContextStack, items);
-let c3 = _moduleResult;
-
-export const AsyncContextStack = _moduleResult;
-export function getStackAsyncContextStrategy() {
-  return {
-    withIsolationScope,
-    withScope,
-    withSetScope,
-    withSetIsolationScope(arg0, arg1) {
-      closure_0 = arg1;
-      let mainCarrier = closure_0(13057).getMainCarrier();
-      let obj = closure_0(13057);
-      let sentryCarrier = closure_0(13057).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        let defaultCurrentScope = tmp(13065).getDefaultCurrentScope();
-        const tmpResult = tmp(13065);
-        stack = new closure_3(defaultCurrentScope, tmp(13065).getDefaultIsolationScope());
-        const tmpResult2 = tmp(13065);
-      }
-      sentryCarrier.stack = stack;
-      return stack.withScope(() => {
-        const mainCarrier = AsyncContextStack(13057).getMainCarrier();
-        const obj = AsyncContextStack(13057);
-        const sentryCarrier = AsyncContextStack(13057).getSentryCarrier(mainCarrier);
-        let stack = sentryCarrier.stack;
-        if (!stack) {
-          const defaultCurrentScope = AsyncContextStack(13065).getDefaultCurrentScope();
-          const tmp2Result = AsyncContextStack(13065);
-          stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(13065).getDefaultIsolationScope());
-          const tmp2Result2 = AsyncContextStack(13065);
+export const addExceptionMechanism = function addExceptionMechanism(exception, data) {
+  let first;
+  if (exception.exception) {
+    if (exception.exception.values) {
+      first = exception.exception.values[0];
+    }
+  }
+  if (first) {
+    const mechanism = first.mechanism;
+    const obj = { type: "generic", handled: true };
+    const merged = Object.assign(mechanism);
+    const merged1 = Object.assign(data);
+    first.mechanism = obj;
+    if (data) {
+      if ("data" in data) {
+        data = mechanism;
+        if (mechanism) {
+          data = mechanism.data;
         }
-        sentryCarrier.stack = stack;
-        return closure_0(stack.getIsolationScope());
-      });
-    },
-    getCurrentScope() {
-      const mainCarrier = AsyncContextStack(13057).getMainCarrier();
-      const obj = AsyncContextStack(13057);
-      const sentryCarrier = AsyncContextStack(13057).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const defaultCurrentScope = AsyncContextStack(13065).getDefaultCurrentScope();
-        const tmpResult = AsyncContextStack(13065);
-        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(13065).getDefaultIsolationScope());
-        const tmpResult2 = AsyncContextStack(13065);
+        const obj2 = {};
+        const merged2 = Object.assign(data);
+        const merged3 = Object.assign(data.data);
+        first.mechanism.data = obj2;
       }
-      sentryCarrier.stack = stack;
-      return stack.getScope();
-    },
-    getIsolationScope() {
-      const mainCarrier = AsyncContextStack(13057).getMainCarrier();
-      const obj = AsyncContextStack(13057);
-      const sentryCarrier = AsyncContextStack(13057).getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const defaultCurrentScope = AsyncContextStack(13065).getDefaultCurrentScope();
-        const tmpResult = AsyncContextStack(13065);
-        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(13065).getDefaultIsolationScope());
-        const tmpResult2 = AsyncContextStack(13065);
+    }
+  }
+};
+export const addExceptionTypeValue = function addExceptionTypeValue(exception, arg1, arg2) {
+  const tmp = exception.exception || {};
+  exception.exception = tmp;
+  const tmp2 = tmp.values || [];
+  tmp.values = tmp2;
+  const iter = tmp2[0] || {};
+  tmp2[0] = iter;
+  if (!iter.value) {
+    let str = arg1;
+    if (!arg1) {
+      str = "";
+    }
+    iter.value = str;
+  }
+  if (!iter.type) {
+    let str2 = arg2;
+    if (!arg2) {
+      str2 = "Error";
+    }
+    iter.type = str2;
+  }
+};
+export const arrayify = function arrayify(arg0) {
+  let tmp = arg0;
+  if (!Array.isArray(arg0)) {
+    const items = [arg0];
+    tmp = items;
+  }
+  return tmp;
+};
+export const checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_captured__) {
+  if ((function isAlreadyCaptured(__sentry_captured__) {
+    try {
+      return __sentry_captured__.__sentry_captured__;
+    } catch (err) {
+    }
+  })(__sentry_captured__)) {
+    return true;
+  } else {
+    try {
+      const result = _mod13054.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
+      return false;
+    } catch (err) {
+    }
+  }
+};
+export const getEventDescription = function getEventDescription(exception) {
+  ({ message, event_id } = exception);
+  if (message) {
+    return message;
+  } else {
+    let str;
+    if (exception.exception) {
+      if (exception.exception.values) {
+        str = exception.exception.values[0];
       }
-      sentryCarrier.stack = stack;
-      return stack.getIsolationScope();
-    },
-  };
-}
+    }
+    if (str) {
+      if (!str.type) {
+        let combined = str.type || str.value || event_id || "<unknown>";
+      }
+      const _HermesInternal = HermesInternal;
+      ({ type, value } = str);
+      str = "";
+      combined = "" + type + ": " + value;
+    } else {
+      let str2 = event_id;
+      if (!event_id) {
+        str2 = "<unknown>";
+      }
+      return str2;
+    }
+  }
+};
+export const parseSemver = function parseSemver(str) {
+  const tmp = str.match(re2) || [];
+  str = tmp[1];
+  if (!str) {
+    str = "";
+  }
+  const parsed = parseInt(str, 10);
+  let str2 = tmp[2];
+  if (!str2) {
+    str2 = "";
+  }
+  const parsed1 = parseInt(str2, 10);
+  let str3 = tmp[3];
+  if (!str3) {
+    str3 = "";
+  }
+  const parsed2 = parseInt(str3, 10);
+  const obj = { buildmetadata: tmp[5], major: null, minor: null, patch: null, prerelease: null };
+  let tmp5;
+  if (!isNaN(parsed)) {
+    tmp5 = parsed;
+  }
+  obj.major = tmp5;
+  let tmp6;
+  if (!isNaN(parsed1)) {
+    tmp6 = parsed1;
+  }
+  obj.minor = tmp6;
+  let tmp7;
+  if (!isNaN(parsed2)) {
+    tmp7 = parsed2;
+  }
+  obj.patch = tmp7;
+  obj.prerelease = tmp[4];
+  return obj;
+};
+export const uuid4 = function uuid4() {
+  const GLOBAL_OBJ = _mod13049.GLOBAL_OBJ;
+  const obj = GLOBAL_OBJ.crypto || GLOBAL_OBJ.msCrypto;
+  function getRandomByte() {
+    return 16 * Math.random();
+  }
+  try {
+    if (obj) {
+      if (obj.randomUUID) {
+        return obj.randomUUID().replace(/-/g, "");
+      }
+    }
+    let getRandomValues = obj;
+    if (obj) {
+      getRandomValues = obj.getRandomValues;
+    }
+    if (getRandomValues) {
+      getRandomByte = function getRandomByte() {
+        const uint8Array = new Uint8Array(1);
+        const randomValues = obj.getRandomValues(uint8Array);
+        return uint8Array[0];
+      };
+    }
+    const replace = "10000000100040008000100000000000".replace;
+    return "10000000100040008000100000000000".replace(/[018]/g, (arg0) => arg0 ^ (15 & getRandomByte()) >> arg0 / 4.toString(16));
+  } catch (err) {
+  }
+};

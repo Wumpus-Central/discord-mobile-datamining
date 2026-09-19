@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "805fda450615a79e013d34cae4b4a783",
-  name: "PaintPaletteIcon",
+  hash: "e42f1b42dc7bf4b285d5f4924a46e5c4",
+  name: "TicketIcon",
   type: "png",
 });

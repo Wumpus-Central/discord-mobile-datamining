@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_boosting/native/images",
-  width: 424,
-  height: 254,
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
   scales: [1],
-  hash: "616e0e1297b795db059112c52470eab4",
-  name: "top_perk_streaming_quality",
+  hash: "e2676a24ea3247f11452fad9b442341d",
+  name: "img_wumpus_nitro",
   type: "png",
 });

@@ -1,136 +1,127 @@
 // _runtime/metro/10754__.js
-import _mod10704 from "10704__.js";
-import includeCommonConfiguration from "../10711_includeCommonConfiguration.js";
-import _mod10755 from "10755__.js";
-import _mod10757 from "10757__.js";
-import _mod10758 from "10758__.js";
-import _mod10759 from "10759__.js";
-import _mod10760 from "10760__.js";
-import _mod10761 from "10761__.js";
-import _mod10762 from "10762__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
+const FRSpecificTimeExpressionParser = require;
+const regExp = new RegExp(
+  "(^|\\s|T)(?:(?:[\u00E0a])\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)",
+  "i",
+);
+const regExp1 = new RegExp(
+  "^\\s*(\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)",
+  "i",
+);
+class FRSpecificTimeExpressionParser {
+  constructor() {
+    tmp = c2(this, FRSpecificTimeExpressionParser);
+    return;
   }
-  let flag2 = arg1;
-  if (arg1 === undefined) {
-    flag2 = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new regExp.default(flag2), , ,];
-  const _default = new regExp.default(flag2);
-  items[1] = new _isNativeReflectConstruct.default();
-  const _default1 = new _isNativeReflectConstruct.default();
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default3 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default()];
-  const _default4 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
+const entry = {
+  key: "pattern",
+  value: function pattern(arg0) {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(createParsingResult, index) {
+      const sum = index.index + index[1].length;
+      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
+      if (str2.match(/^\d{4}$/)) {
+        index.index = index.index + index[0].length;
+        return null;
+      } else {
+        const start = parsingResult.start;
+        parsingResult.start = FRSpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
+        if (parsingResult.start) {
+          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
+          if (match) {
+            const start2 = parsingResult.start;
+            parsingResult.end = FRSpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
+            if (parsingResult.end) {
+              parsingResult.text = parsingResult.text + match[0];
+            }
+          }
+          return parsingResult;
+        } else {
+          index.index = index.index + index[0].length;
+          return null;
+        }
+      }
+      str2 = parsingResult.text;
+    },
+  },
+];
+const entry1 = {
+  key: "extractTimeComponent",
+  value: function extractTimeComponent(assign, arg1) {
+    const parsed = parseInt(arg1[2]);
+    let num = 0;
+    if (null != arg1[3]) {
+      const _parseInt = parseInt;
+      num = parseInt(arg1[3]);
     }
-    return tmp;
-  };
-}
-function createCasualConfiguration() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  const tmp = createConfiguration(false, flag);
-  const parsers = tmp.parsers;
-  parsers.push(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.push(new _isNativeReflectConstruct.default());
-  return tmp;
-}
-const regExp = fn(_mod10704);
-fn(_mod10755);
-fn(_mod10757);
-fn(_mod10758);
-fn(_mod10759);
-fn(_mod10760);
-fn(_mod10761);
-const _isNativeReflectConstruct = fn(_mod10762);
-const configuration = createConfiguration(false, true);
-let parsers = configuration.parsers;
-parsers.push(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-let obj = {
-  enumerable: true,
-  get() {
-    return require("10671__.js").Chrono;
+    if (num < 60) {
+      if (parsed <= 24) {
+        let PM1 = null;
+        if (parsed >= 12) {
+          PM1 = FRSpecificTimeExpressionParser(10696).Meridiem.PM;
+        }
+        let PM = PM1;
+        let tmp5 = parsed;
+        if (null != arg1[5]) {
+          if (parsed > 12) {
+            return null;
+          } else {
+            const formatted = arg1[5][0].toLowerCase();
+            let tmp8 = parsed;
+            if ("a" == formatted) {
+              let num2 = parsed;
+              if (12 == parsed) {
+                num2 = 0;
+              }
+              tmp8 = num2;
+              PM1 = FRSpecificTimeExpressionParser(10696).Meridiem.AM;
+            }
+            PM = PM1;
+            tmp5 = tmp8;
+            if ("p" == formatted) {
+              let sum = tmp8;
+              if (12 != tmp8) {
+                sum = tmp8 + 12;
+              }
+              tmp5 = sum;
+              PM = FRSpecificTimeExpressionParser(10696).Meridiem.PM;
+            }
+          }
+        }
+        assign.assign("hour", tmp5);
+        assign.assign("minute", num);
+        if (null !== PM) {
+          assign.assign("meridiem", PM);
+        } else if (tmp5 < 12) {
+          assign.imply("meridiem", FRSpecificTimeExpressionParser(10696).Meridiem.AM);
+        } else {
+          assign.imply("meridiem", FRSpecificTimeExpressionParser(10696).Meridiem.PM);
+        }
+        if (null != arg1[4]) {
+          const _parseInt2 = parseInt;
+          const parsed1 = parseInt(arg1[4]);
+          if (parsed1 >= 60) {
+            return null;
+          } else {
+            assign.assign("second", parsed1);
+          }
+        }
+        return assign;
+      }
+    }
+    return null;
   },
 };
-const obj2 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingResult;
-  },
-};
-const obj3 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingComponents;
-  },
-};
-const obj4 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ReferenceWithTimezone;
-  },
-};
-const obj5 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Meridiem;
-  },
-};
-const obj6 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Weekday;
-  },
-};
-parsers1.push(new _isNativeReflectConstruct.default());
-const chrono = new require("10671__.js").Chrono(configuration);
-const chrono1 = new require("10671__.js").Chrono(createConfiguration(true));
+const items1 = [entry1];
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("10671__.js").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(FRSpecificTimeExpressionParser, items, items1);

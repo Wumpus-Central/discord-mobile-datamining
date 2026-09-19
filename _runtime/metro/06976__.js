@@ -1,68 +1,37 @@
 // _runtime/metro/06976__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import _mod6935 from "06935__.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06960_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6977 from "06977__.js";
+import _mod6979 from "06979__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+require = arg1;
+const dependencyMap = arg6;
+
+export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
+  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
+  let reanimatedEventHandler;
+  if (!disableReanimated.disableReanimated) {
+    const Reanimated = _mod6935.Reanimated;
+    let handler;
+    if (Reanimated != null) {
+      handler = Reanimated.useHandler(memoizedGestureCallbacks);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class NativeGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, NativeGesture);
-    tmp2 = c2;
-    obj = c2(NativeGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
-    return tmp3Result;
+    const tmpResult = _mod6979;
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(
+      handlerTag,
+      memoizedGestureCallbacks,
+      handler,
+      disableReanimated.changeEventCalculator,
+      disableReanimated.fillInDefaultValues,
+    );
   }
-}
-_classCallCheck = NativeGesture;
-_inherits(NativeGesture, fn(6869).BaseGesture);
-const entry = {
-  key: "shouldActivateOnStart",
-  value: function shouldActivateOnStart(shouldActivateOnStart) {
-    this.config.shouldActivateOnStart = shouldActivateOnStart;
-    return this;
-  },
+  let animatedEventHandler;
+  if (disableReanimated.dispatchesAnimatedEvents) {
+    animatedEventHandler = disableReanimated.onUpdate;
+  }
+  return {
+    jsEventHandler: _mod6977.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated),
+    reanimatedEventHandler,
+    animatedEventHandler,
+  };
 };
-const items = [
-  entry,
-  {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
-      return this;
-    },
-  },
-];
-
-export const NativeGesture = _createClass(NativeGesture, items);

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "000feaebcabc55e90b1dcd63e76aa1dd",
-  name: "ShieldLockIcon",
+  hash: "2bb189919203a7299ceda12e2b9f8582",
+  name: "GalaxyIcon",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "11d22afa82357c17306bb835b9fe7074",
-  name: "img_account_sync_x_white",
-  type: "svg",
+  hash: "74748dfcc94ad61e313c4e70aacf64f7",
+  name: "img_account_sync_battlenet_white",
+  type: "png",
 });

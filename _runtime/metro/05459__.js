@@ -1,13 +1,10 @@
 // _runtime/metro/05459__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "2eaff20be2a75be7ccdd4c6f19f0eb36",
-  name: "img_account_sync_youtube_white",
-  type: "png",
-});
+export default {
+  get() {
+    if (typeof TextDecoder !== "undefined") {
+      const _TextDecoder = TextDecoder;
+      return TextDecoder;
+    }
+  },
+};

@@ -1,14 +1,11 @@
 // _runtime/metro/10775__.js
-import repeatedTimeunitPattern from "../10675_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10682_AbstractParserWithWordBoundaryChecking.js";
-import _mod10769 from "10769__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import _mod10709 from "10709__.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLCasualYearMonthDayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,20 +24,31 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "([0-9]{4})[\\.\\/\\s](?:(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10769.MONTH_DICTIONARY) +
-    ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)",
-  "i",
-);
-class NLCasualYearMonthDayParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+class PTMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = c2(this, NLCasualYearMonthDayParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLCasualYearMonthDayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, PTMergeDateRangeRefiner);
+    tmp2 = c2;
+    obj = c2(PTMergeDateRangeRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -53,39 +61,14 @@ class NLCasualYearMonthDayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = PTMergeDateRangeRefiner;
+_inherits(PTMergeDateRangeRefiner, fn(_mod10709).default);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(?:-)\s*$/i;
   },
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(arg1[3]);
-      } else {
-        parsed = NLCasualYearMonthDayParser(10769).MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const date = { day: null, month: null, year: null };
-          const _parseInt3 = parseInt;
-          const parsed1 = parseInt(arg1[1]);
-          date.day = parseInt(arg1[4]);
-          date.month = parsed;
-          date.year = parsed1;
-          return date;
-        }
-      }
-      return null;
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(NLCasualYearMonthDayParser, items);
+export default _createClass(PTMergeDateRangeRefiner, items);

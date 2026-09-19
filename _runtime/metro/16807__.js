@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/icymi/native/images",
+  width: 77,
+  height: 95.5,
   scales: [2, 3],
-  hash: "7b2c77b138d492ded1f4019723f50b05",
-  name: "youtube_icon",
+  hash: "ebbb7db0461de915440e3bdd6a8249c9",
+  name: "flash",
   type: "png",
 });

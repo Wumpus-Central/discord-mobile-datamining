@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/connected_devices",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb25uZWN0ZWRfZGV2aWNlcw==",
   scales: [1],
-  hash: "d3e335e2c62a36a49957029c2e4a670d",
-  name: "DeviceDetected.compiled.messages",
+  hash: "cae447926ba6964f4da2a227e295db0f",
+  name: "zh-CN.messages.cae447926ba6964f4da2a227e295db0f.compiled.messages",
   type: "jsona",
 });

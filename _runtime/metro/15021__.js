@@ -3,11 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 433,
-  height: 231,
-  scales: [2, 3],
-  hash: "a255589f0ef23e06a175ac0fc6767b9f",
-  name: "blocked_darker",
-  type: "png",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
+  scales: [1],
+  hash: "ff2aef31b710a63d637c2bf1999bd23b",
+  name: "zh-TW.messages.ff2aef31b710a63d637c2bf1999bd23b.compiled.messages",
+  type: "jsona",
 });

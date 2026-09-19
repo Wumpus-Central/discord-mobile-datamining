@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f55d97ba12842f12a33d545b3d0fbaea",
-  name: "CrownIcon",
+  hash: "70ec4d21f0658b5914c9170f9e0a91d6",
+  name: "TvIcon",
   type: "png",
 });

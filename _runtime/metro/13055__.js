@@ -1,68 +1,140 @@
 // _runtime/metro/13055__.js
-import _mod13045 from "13045__.js";
-import _slicedToArray from "00032__.js";
-
-const _sentryMetrics = "_sentryMetrics";
-
-export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
-  if (self[_sentryMetrics]) {
-    const obj = {};
-    const tmp3 = tmp[Symbol.iterator]();
-    while (tmp3 !== undefined) {
-      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
-      [tmp9, tmp11] = tmp8;
-      let arr = obj[tmp9];
-      if (!arr) {
-        let items = [];
-        obj[tmp10] = items;
-        arr = items;
-      }
-      let obj2 = _mod13045;
-      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
-      continue;
-    }
-    return obj;
+function isInstanceOf(arg0, arg1) {
+  try {
+    return arg0 instanceof arg1;
+  } catch (err) {
+    return false;
   }
+}
+
+export const isDOMError = function isDOMError(arg0) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMError" + "]";
 };
-export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(
-  activeSpan,
-  metricType,
-  sanitizeMetricKeyResult,
-  min,
-  sanitizeUnitResult,
-  tags,
-  bucketKey,
-) {
-  let obj = activeSpan[_sentryMetrics];
-  if (!obj) {
-    const _Map = Map;
-    const map = new Map();
-    activeSpan[tmp] = map;
-    obj = map;
+export const isDOMException = function isDOMException(arg0) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMException" + "]";
+};
+export const isElement = function isElement(arg0) {
+  let tmp = typeof globalThis.Element !== "undefined";
+  if (typeof globalThis.Element !== "undefined") {
+    tmp = isInstanceOf(arg0, globalThis.Element);
   }
-  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
-  value = obj.get(bucketKey);
-  if (value) {
-    const range = _slicedToArray(value, 2)[1];
-    const items = [combined];
-    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
-    const _Math = Math;
-    range1.min = Math.min(range.min, min);
-    const _Math2 = Math;
-    range1.max = Math.max(range.max, min);
-    const sum = range.count + 1;
-    range.count = sum;
-    range1.count = sum;
-    const sum1 = range.sum + min;
-    range.sum = sum1;
-    range1.sum = sum1;
-    range1.tags = range.tags;
-    items[1] = range1;
-    const result = obj.set(bucketKey, items);
-  } else {
-    const items1 = [combined];
-    const range2 = { min, max: min, count: 1, sum: min, tags };
-    items1[1] = range2;
-    const result1 = obj.set(bucketKey, items1);
+  return tmp;
+};
+export const isError = function isError(originalException) {
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(originalException);
+  if ("[object Error]" !== tmp2) {
+    if ("[object Exception]" !== tmp2) {
+      if ("[object DOMException]" !== tmp2) {
+        if ("[object WebAssembly.Exception]" !== tmp2) {
+          const _Error = Error;
+          return isInstanceOf(originalException, Error);
+        }
+      }
+    }
   }
+  return true;
+};
+export const isErrorEvent = function isErrorEvent(name) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(name)) === "[object " + "ErrorEvent" + "]";
+};
+export const isEvent = function isEvent(type) {
+  let tmp = typeof Event !== "undefined";
+  if (typeof Event !== "undefined") {
+    const _Event = Event;
+    tmp = isInstanceOf(type, Event);
+  }
+  return tmp;
+};
+export { isInstanceOf };
+export const isParameterizedString = function isParameterizedString(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
+  }
+  if (tmp) {
+    tmp = "__sentry_template_string__" in obj;
+  }
+  if (tmp) {
+    tmp = "__sentry_template_values__" in obj;
+  }
+  return tmp;
+};
+export const isPlainObject = function isPlainObject(user) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(user)) === "[object " + "Object" + "]";
+};
+export const isPrimitive = function isPrimitive(obj) {
+  let tmp = null === obj;
+  if (!tmp) {
+    let tmp2 = typeof obj === "object";
+    if (typeof obj === "object") {
+      tmp2 = null !== obj;
+    }
+    if (tmp2) {
+      tmp2 = "__sentry_template_string__" in obj;
+    }
+    if (tmp2) {
+      tmp2 = "__sentry_template_values__" in obj;
+    }
+    tmp = tmp2;
+  }
+  if (!tmp) {
+    let tmp3 = typeof obj !== "object";
+    if (typeof obj !== "object") {
+      tmp3 = typeof obj !== "function";
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
+export const isRegExp = function isRegExp(test) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(test)) === "[object " + "RegExp" + "]";
+};
+export const isString = function isString(body) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(body)) === "[object " + "String" + "]";
+};
+export const isSyntheticEvent = function isSyntheticEvent(arg0) {
+  const call = toString.call;
+  let tmp3 = (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "Object" + "]";
+  if (tmp3) {
+    tmp3 = "nativeEvent" in arg0;
+  }
+  if (tmp3) {
+    tmp3 = "preventDefault" in arg0;
+  }
+  if (tmp3) {
+    tmp3 = "stopPropagation" in arg0;
+  }
+  return tmp3;
+};
+export const isThenable = function isThenable(arg0) {
+  let then = arg0;
+  if (arg0) {
+    then = arg0.then;
+  }
+  if (then) {
+    then = typeof arg0.then === "function";
+  }
+  return Boolean(then);
+};
+export const isVueViewModel = function isVueViewModel(__isVue) {
+  let tmp = typeof __isVue !== "object";
+  if (typeof __isVue === "object") {
+    tmp = null === __isVue;
+  }
+  if (!tmp) {
+    __isVue = __isVue.__isVue;
+    let tmp2 = !__isVue;
+    if (!__isVue) {
+      tmp2 = !__isVue._isVue;
+    }
+    tmp = tmp2;
+  }
+  return !tmp;
 };

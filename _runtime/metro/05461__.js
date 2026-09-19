@@ -1,13 +1,21 @@
 // _runtime/metro/05461__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "8ba3e8ee2991f198308400197cdb28bc",
-  name: "img_account_sync_youtube_white",
-  type: "svg",
-});
+export default {
+  get(arg0) {
+    if (arg0) {
+      return arg0;
+    } else {
+      if (typeof globalThis.DOMParser !== "undefined") {
+        const dOMParser = new globalThis.DOMParser();
+        return dOMParser;
+      } else {
+        try {
+          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
+          const obj = { onError: result.onErrorStopParsing };
+          const dOMParser1 = new result.DOMParser(obj);
+          return dOMParser1;
+        } catch (err) {}
+      }
+    }
+  },
+};

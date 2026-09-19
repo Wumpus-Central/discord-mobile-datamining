@@ -3,11 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 433,
-  height: 231.5,
-  scales: [2, 3],
-  hash: "91d00dd928cdd63a1c9619eb92ec080e",
-  name: "blocked_light",
-  type: "png",
+  httpServerLocation: "/assets/modules/tiny_bronco",
+  scales: [1],
+  hash: "5c67ed1e4e69bc4f4e95419bfe996d67",
+  name: "TinyBronco.compiled.messages",
+  type: "jsona",
 });

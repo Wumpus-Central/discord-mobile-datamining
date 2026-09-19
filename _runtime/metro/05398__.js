@@ -1,22 +1,47 @@
 // _runtime/metro/05398__.js
-import _mod5383 from "05383__.js";
+import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "../05399_FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.js";
+import _mod5411 from "05411__.js";
+import _mod5419 from "05419__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let c2 = 0;
-let c3 = "<?xpacket begin";
-
-export default {
-  isXMLFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod5383.getStringFromDataView(dataView, c2, length.length) === length;
-    }
-    return tmp;
-  },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
-    return { xmpChunks };
-  },
-};
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
+  }
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
+      }
+    };
+  }
+  const _Object2 = Object;
+  fn(FILE_TYPES_REQUIRED_ADDITIONAL_CHECK, exports);
+  fn(_mod5411, exports);
+  fn(_mod5419, exports);
+} else {
+  let _Object = Object;
+}

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "267a8dd66b567343016eb7bda7db7c01",
-  name: "img_account_sync_paypal_white",
+  hash: "e94b8b952ebeea94014c9e671ef91d08",
+  name: "img_account_sync_x_dark",
   type: "png",
 });

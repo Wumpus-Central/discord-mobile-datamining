@@ -1,30 +1,28 @@
 // _runtime/metro/14587__.js
-import _mod17 from "00017__.js";
-import replaceByteInByteSequence from "../14588_replaceByteInByteSequence.js";
+import _mod14571 from "14571__.js";
+import _mod14572 from "14572__.js";
+import _mod14588 from "14588__.js";
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
+let prop = _mod14571["__core-js_shared__"];
+if (!prop) {
+  prop = _mod14572("__core-js_shared__", {});
 }
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
-  }
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
 }
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
-};
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
+let str2 = "global";
+if (_mod14588) {
+  str2 = "pure";
+}
+versions.push({
+  version: "3.41.0",
+  mode: str2,
+  copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)",
+  license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE",
+  source: "https://github.com/zloirock/core-js",
+});
 
-export const URL = replaceByteInByteSequence.URL;
+export default prop;

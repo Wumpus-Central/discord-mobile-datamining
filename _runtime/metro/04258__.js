@@ -1,24 +1,51 @@
 // _runtime/metro/04258__.js
-let closure_0 = { lessThanXSeconds: { one: "d\u01B0\u1EDBi 1 gi\u00E2y", other: "d\u01B0\u1EDBi {{count}} gi\u00E2y" }, xSeconds: { one: "1 gi\u00E2y", other: "{{count}} gi\u00E2y" }, halfAMinute: "n\u1EEDa ph\u00FAt", lessThanXMinutes: { one: "d\u01B0\u1EDBi 1 ph\u00FAt", other: "d\u01B0\u1EDBi {{count}} ph\u00FAt" }, xMinutes: { one: "1 ph\u00FAt", other: "{{count}} ph\u00FAt" }, aboutXHours: { one: "kho\u1EA3ng 1 gi\u1EDD", other: "kho\u1EA3ng {{count}} gi\u1EDD" }, xHours: { one: "1 gi\u1EDD", other: "{{count}} gi\u1EDD" }, xDays: { one: "1 ng\u00E0y", other: "{{count}} ng\u00E0y" }, aboutXWeeks: { one: "kho\u1EA3ng 1 tu\u1EA7n", other: "kho\u1EA3ng {{count}} tu\u1EA7n" }, xWeeks: { one: "1 tu\u1EA7n", other: "{{count}} tu\u1EA7n" }, aboutXMonths: { one: "kho\u1EA3ng 1 th\u00E1ng", other: "kho\u1EA3ng {{count}} th\u00E1ng" }, xMonths: { one: "1 th\u00E1ng", other: "{{count}} th\u00E1ng" }, aboutXYears: { one: "kho\u1EA3ng 1 n\u0103m", other: "kho\u1EA3ng {{count}} n\u0103m" }, xYears: { one: "1 n\u0103m", other: "{{count}} n\u0103m" }, overXYears: { one: "h\u01A1n 1 n\u0103m", other: "h\u01A1n {{count}} n\u0103m" }, almostXYears: { one: "g\u1EA7n 1 n\u0103m", other: "g\u1EA7n {{count}} n\u0103m" } };
+import module_3849_mod from "03849__.js";
+import _typeof_mod from "03845__.js";
+import module_4110_mod from "04110__.js";
+import requiredArgs_mod from "../03846_requiredArgs.js";
 
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} trước`;
-        }
-        text = `${tmp} nữa`;
-      }
-    }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
-  }
+let module_3849 = module_3849_mod;
+if (!module_3849) {
+  const obj = { default: module_3849 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3849;
+}
+module_3849 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let module_4110 = module_4110_mod;
+if (!module_4110) {
+  const obj3 = { default: module_4110 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4110;
+}
+module_4110 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function setMonth(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = module_3849.default(arg1);
+  const fullYear = defaultResult1.getFullYear();
+  const date1 = new Date(0);
+  date1.setFullYear(fullYear, defaultResult2, 15);
+  date1.setHours(0, 0, 0, 0);
+  defaultResult1.setMonth(defaultResult2, Math.min(defaultResult1.getDate(), module_4110.default(date1)));
+  return defaultResult1;
 };
 export default exports.default;

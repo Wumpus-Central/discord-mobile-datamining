@@ -1,12 +1,12 @@
 // _runtime/metro/10832__.js
-import _mod10831 from "10831__.js";
+import _mod10822 from "10822__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UkMonthNameParser = require;
+const RUTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UkMonthNameParser {
+class RUTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, UkMonthNameParser);
+    tmp = c2(this, RUTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UkMonthNameParser);
+    obj = closure_4(RUTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,16 +45,14 @@ class UkMonthNameParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UkMonthNameParser, _mod10831.AbstractParserWithLeftBoundaryChecking);
+_inherits(RUTimeUnitCasualRelativeFormatParser, _mod10822.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
     return (
-      "((?:\u0432|\u0443)\\s*)?(" +
-      UkMonthNameParser(10675).matchAnyPattern(UkMonthNameParser(10829).MONTH_DICTIONARY) +
-      ")\\s*(?:[,-]?\\s*(" +
-      UkMonthNameParser(10829).YEAR_PATTERN +
-      ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)"
+      "(\u044D\u0442\u0438|\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435|\u043F\u0440\u043E\u0448\u043B\u044B\u0435|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0435|\u043F\u043E\u0441\u043B\u0435|\u0441\u043F\u0443\u0441\u0442\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" +
+      RUTimeUnitCasualRelativeFormatParser(10820).TIME_UNITS_PATTERN +
+      ")"
     );
   },
 };
@@ -62,32 +60,19 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const formatted = index[2].toLowerCase();
-      if (index[0].length <= 3) {
-        if (!UkMonthNameParser(10829).FULL_MONTH_NAME_DICTIONARY[formatted]) {
-          return null;
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = RUTimeUnitCasualRelativeFormatParser(10820).parseDuration(arg1[2]);
+      if ("\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0435" !== formatted) {
+        if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0435" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
         }
+        const ParsingComponents = RUTimeUnitCasualRelativeFormatParser(10694).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
-      const start = parsingResult.start;
-      start.imply("day", 1);
-      const tmp9 = UkMonthNameParser(10829).MONTH_DICTIONARY[formatted];
-      const start2 = parsingResult.start;
-      start2.assign("month", tmp9);
-      if (index[3]) {
-        const start4 = parsingResult.start;
-        start4.assign("year", UkMonthNameParser(10829).parseYearPattern(index[3]));
-      } else {
-        const start3 = parsingResult.start;
-        start3.imply(
-          "year",
-          UkMonthNameParser(10676).findYearClosestToRef(createParsingResult.reference.instant, 1, tmp9),
-        );
-      }
-      return parsingResult;
+      reverseDurationResult = RUTimeUnitCasualRelativeFormatParser(10693).reverseDuration(parseDurationResult);
     },
   },
 ];
 
-export default _createClass(UkMonthNameParser, items);
+export default _createClass(RUTimeUnitCasualRelativeFormatParser, items);

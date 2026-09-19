@@ -1,6 +1,14 @@
 // _runtime/metro/14589__.js
-import _mod14590 from "14590__.js";
-import _mod14597 from "14597__.js";
+import prop_mod from "14590__.js";
 
-export const URL = _mod14590;
-export const URLSearchParams = _mod14597;
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
+
+export default prop;

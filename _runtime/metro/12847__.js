@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 240,
-  height: 130,
+  httpServerLocation: "/assets/images/native/chat_sidebar",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "931bea5d9b6a7fc7a53130a431abe666",
-  name: "no_mutual_servers_dark",
+  hash: "c0d7195f1a47742034be311c1f70ceed",
+  name: "ic_settings",
   type: "png",
 });

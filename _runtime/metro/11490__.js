@@ -1,13 +1,6 @@
 // _runtime/metro/11490__.js
-import registerAsset from "01121__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "07355a598097545c3503439dcc045f96",
-  name: "ImageFileIcon",
-  type: "png",
-});
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

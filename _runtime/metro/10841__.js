@@ -1,12 +1,12 @@
 // _runtime/metro/10841__.js
-import _mod10831 from "10831__.js";
+import AbstractParserWithWordBoundaryChecking from "../10698_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKTimeUnitCasualRelativeFormatParser = require;
+const ESCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKTimeUnitCasualRelativeFormatParser {
+class ESCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, ESCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(ESCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,34 +45,46 @@ class UKTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitCasualRelativeFormatParser, _mod10831.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(ESCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(\u0446\u0456|\u043E\u0441\u0442\u0430\u043D\u043D\u0456|\u043C\u0438\u043D\u0443\u043B\u0456|\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0456|\u043F\u0456\u0441\u043B\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" +
-      UKTimeUnitCasualRelativeFormatParser(10829).TIME_UNITS_PATTERN +
-      ")"
-    );
+  key: "innerPattern",
+  value: function innerPattern() {
+    return /(?:esta\s*)?(mañana|tarde|medianoche|mediodia|mediodía|noche)(?=\W|$)/i;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
       const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = UKTimeUnitCasualRelativeFormatParser(10829).parseDuration(arg1[3]);
-      if ("\u043E\u0441\u0442\u0430\u043D\u043D\u0456" !== formatted) {
-        if ("\u043C\u0438\u043D\u0443\u043B\u0456" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = UKTimeUnitCasualRelativeFormatParser(10678).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+      if ("tarde" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10696).Meridiem.PM);
+        parsingComponents.imply("hour", 15);
+      } else if ("noche" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10696).Meridiem.PM);
+        parsingComponents.imply("hour", 22);
+      } else if ("ma\u00F1ana" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10696).Meridiem.AM);
+        parsingComponents.imply("hour", 6);
+      } else if ("medianoche" === formatted) {
+        const _Date = Date;
+        const date = new Date(refDate.getTime());
+        date.setDate(date.getDate() + 1);
+        ESCasualTimeParser(10697).assignSimilarDate(parsingComponents, date);
+        ESCasualTimeParser(10697).implySimilarTime(parsingComponents, date);
+        parsingComponents.imply("hour", 0);
+        parsingComponents.imply("minute", 0);
+        parsingComponents.imply("second", 0);
+      } else if ("mediodia" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10696).Meridiem.AM);
+        parsingComponents.imply("hour", 12);
       }
-      reverseDurationResult = UKTimeUnitCasualRelativeFormatParser(10677).reverseDuration(parseDurationResult);
+      return parsingComponents;
     },
   },
 ];
 
-export default _createClass(UKTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(ESCasualTimeParser, items);

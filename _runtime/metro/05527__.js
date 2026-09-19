@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "083817c43b3689d5baeb4ee0ef9714bc",
-  name: "img_account_sync_epic_light",
+  hash: "b8491165af3ebfd07b4e58fba6104e2b",
+  name: "img_account_sync_steam_white",
   type: "png",
 });

@@ -1,13 +1,8 @@
 // _runtime/metro/01885__.js
-import registerAsset from "01121__.js";
+import MessageFormat from "../01886_MessageFormat.js";
+import 01317__ from "01317__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images",
-  width: 184,
-  height: 184,
-  scales: [1],
-  hash: "0910d1721e6366e2c8c6c1e76a322e5a",
-  name: "no-app-icon",
-  type: "png",
-});
+const _default = MessageFormat.default;
+_default.default = _default;
+
+export default _default;

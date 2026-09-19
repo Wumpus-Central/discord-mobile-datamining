@@ -1,17 +1,19 @@
 // _runtime/metro/07078__.js
-import _mod7063 from "07063__.js";
-import _mod7079 from "07079__.js";
+import _mod19 from "00019__.js";
+import _mod6869 from "06869__.js";
 
-export default function _possibleConstructorReturn(arg0, fn) {
-  if (fn) {
-    _mod7063;
-    return fn;
-  }
-  if (undefined !== fn) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Derived constructors may only return object or undefined");
-    throw typeError;
-  } else {
-    return _mod7079(arg0);
-  }
-}
+_mod19.useCallback;
+
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod6869.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
+    }
+  }, items);
+  return obj2;
+};

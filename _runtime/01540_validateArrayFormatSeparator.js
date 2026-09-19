@@ -793,10 +793,10 @@ export const pick = (arg0, arg1, arg2) => {
   ({ query, fragmentIdentifier } = parseUrlResult);
   return exports.stringifyUrl(request, merged);
 };
-export const exclude = (arg0, arg1, arg2) => {
+export const exclude = (navTTISurface, arg1, arg2) => {
   closure_0 = arg1;
   return exports.pick(
-    arg0,
+    navTTISurface,
     Array.isArray(arg1) ? (arg0) => !closure_0.includes(arg0) : (arg0, arg1) => !closure_0(arg0, arg1),
     arg2,
   );

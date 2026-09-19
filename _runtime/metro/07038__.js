@@ -1,77 +1,135 @@
 // _runtime/metro/07038__.js
-import _mod17 from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import value2 from "../06821_value2.js";
-import LegacyBaseButton from "../06848_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
-import cancelAnimation from "../01637_cancelAnimation.js";
+import _mod19 from "00019__.js";
+import value22 from "../06865_value2.js";
+import get_ActivityIndicator from "00017__.js";
 
-let noop = noop_mod;
-({ useContext: c2, useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-let closure_5 = cancelAnimation.createAnimatedComponent(_mod17.RefreshControl);
-const __initData = {
-  code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}",
+const useEffect = _mod19.useEffect;
+({ Keyboard: c3, Platform } = get_ActivityIndicator);
+const keyboardDidShow = "keyboardDidShow";
+const keyboardDidHide = "keyboardDidHide";
+let closure_6 = {
+  code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}",
 };
-const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
-  ({ onRefresh, scrollableGesture } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ onRefresh: 0, scrollableGesture: 0 }));
-  let iter;
-  const tmp4 = iter(scrollableGesture(6832).BottomSheetDraggableContext);
-  dependencyMap = tmp4;
-  const bottomSheetInternal = scrollableGesture(6825).useBottomSheetInternal();
-  iter = bottomSheetInternal.animatedScrollableState;
-  if (!tmp4) {
-    if (bottomSheetInternal.enableContentPanningGesture) {
-      throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
-    }
-  }
-  const obj = scrollableGesture(6825);
-  const fn = function f() {
-    return { enabled: iter.value === value2.SCROLLABLE_STATE.UNLOCKED };
-  };
-  const tmp2Result = scrollableGesture(1637);
-  fn.__closure = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6821).SCROLLABLE_STATE };
-  fn.__workletHash = 8403038560398;
-  fn.__initData = __initData;
-  let items = [iter.value];
-  const animatedProps = tmp2Result.useAnimatedProps(fn, items);
-  const items1 = [tmp4, scrollableGesture];
-  const tmp7 = closure_3(() => {
-    let result;
-    if (closure_1) {
-      const Gesture = LegacyBaseButton.Gesture;
-      const NativeResult = Gesture.Native();
-      const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
-      const items = [];
-      HermesBuiltin.arraySpread(
-        scrollableGesture.toGestureArray(),
-        HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0),
-      );
-      const arraySpreadResult = HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0);
-      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
-      const applyResult = HermesBuiltin.apply(items, NativeResult);
-    }
-    return result;
-  }, items1);
-  if (tmp7) {
-    const obj3 = { gesture: tmp7, children: null };
-    const obj4 = {};
-    const merged1 = Object.assign(merged);
-    obj4.onRefresh = onRefresh;
-    obj4.animatedProps = animatedProps;
-    obj3.children = <closure_5 />;
-    let tmp8Result = jsx(scrollableGesture(6848).GestureDetector, { gesture: tmp7, children: null });
-  } else {
-    const obj5 = {};
-    const merged2 = Object.assign(merged);
-    obj5.onRefresh = onRefresh;
-    obj5.animatedProps = animatedProps;
-    tmp8Result = <closure_5 />;
-  }
-  return tmp8Result;
-});
-memoResult.displayName = "BottomSheetRefreshControl";
+let closure_7 = {
+  code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}",
+};
+const __initData = {
+  code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}",
+};
 
-export default memoResult;
+export const useKeyboard = (includeBottomOffset) => {
+  includeBottomOffset = includeBottomOffset.includeBottomOffset;
+  let shouldHandleKeyboardEvents;
+  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
+  let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(
+    includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED,
+  );
+  const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
+  const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
+  const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
+  const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
+  const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  const fn = function v(value, arg1, value2, value3, arg4) {
+    value = arg1;
+    if (value === value22.KEYBOARD_STATE.SHOWN) {
+      if (!shouldHandleKeyboardEvents.value) {
+        const items = [value, value, value2, value3];
+        sharedValue5.value = items;
+      }
+    }
+    if (value !== value22.KEYBOARD_STATE.SHOWN) {
+      value = height.value;
+    }
+    height.value = value;
+    let tmp5 = arg4;
+    if (arg4) {
+      tmp5 = includeBottomOffset;
+    }
+    if (tmp5) {
+      height.value = height.value + arg4;
+    }
+    animationDuration.value = value2;
+    animationEasing.value = value3;
+    state.value = value;
+    sharedValue5.value = [];
+  };
+  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+  fn.__closure = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
+  fn.__workletHash = 7905199978020;
+  fn.__initData = sharedValue5;
+  const workletCallback = obj7.useWorkletCallback(fn, []);
+  let items = [workletCallback];
+  state(() => {
+    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      ({ duration, easing } = endCoordinates);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN,
+        endCoordinates.endCoordinates.height,
+        duration,
+        easing,
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).SCREEN_HEIGHT -
+          endCoordinates.endCoordinates.height -
+          endCoordinates.endCoordinates.screenY,
+      );
+    });
+    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
+      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
+        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN,
+        endCoordinates.endCoordinates.height,
+        endCoordinates.duration,
+        endCoordinates.easing,
+      );
+    });
+    return () => {
+      closure_0.remove();
+      closure_1.remove();
+    };
+  }, items);
+  const obj8 = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
+  const fn2 = function b() {
+    return shouldHandleKeyboardEvents.value;
+  };
+  fn2.__closure = { shouldHandleKeyboardEvents };
+  fn2.__workletHash = 11615500623565;
+  fn2.__initData = workletCallback;
+  const fn3 = function y(arg0) {
+    let tmp = arg0;
+    value = sharedValue5.value;
+    if (arg0) {
+      tmp = value.length > 0;
+    }
+    if (tmp) {
+      workletCallback(value[0], value[1], value[2], value[3]);
+    }
+  };
+  fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
+  fn3.__workletHash = 16636741173520;
+  fn3.__initData = __initData;
+  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
+  return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
+};

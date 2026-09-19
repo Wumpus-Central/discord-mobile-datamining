@@ -1,3 +1,29 @@
 // _runtime/metro/14553__.js
+const require = globalThis.__r;
 
-export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedCalendars = function getSupportedCalendars(locale) {
+  _require = locale;
+  const calendars = require("14554__.js").calendars;
+  return calendars.filter((item) =>
+    (function isSupportedCalendar(item, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const concat = "".concat;
+        const combined = "".concat(str, "-u-ca-");
+        const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
+        if ("gregory" === item) {
+          if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
+            return false;
+          }
+        }
+        return true;
+      } catch (err) {}
+    })(item, closure_0),
+  );
+};

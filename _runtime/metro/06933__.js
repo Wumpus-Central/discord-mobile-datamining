@@ -1,37 +1,94 @@
 // _runtime/metro/06933__.js
-import _mod19 from "00019__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-let useMemo = _mod19.useMemo;
-
-export const useGestureEventHandler = function useGestureEventHandler(
-  handlerTag,
-  memoizedGestureCallbacks,
-  disableReanimated,
-) {
-  closure_0 = handlerTag;
-  closure_1 = memoizedGestureCallbacks;
-  useMemo = disableReanimated;
-  const tmp = useMemo(() => ({ lastUpdateEvent: "r" }), []);
-  closure_3 = tmp;
-  const items = [handlerTag, memoizedGestureCallbacks, , , ,];
-  ({
-    changeEventCalculator: arr[2],
-    dispatchesAnimatedEvents: arr[3],
-    fillInDefaultValues: arr[4],
-  } = disableReanimated);
-  items[5] = tmp;
-  return useMemo(
-    () => (arg0) => {
-      closure_0(closure_1[1]).eventHandler(
-        handlerTag,
-        arg0,
-        memoizedGestureCallbacks,
-        disableReanimated.changeEventCalculator,
-        closure_1_3,
-        disableReanimated.dispatchesAnimatedEvents,
-        disableReanimated.fillInDefaultValues,
-      );
-    },
-    items,
-  );
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(arg0, arg1) {
+  if (undefined === arg1) {
+    ({ x: obj2.changeX, y: obj2.changeY } = arg0);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
+  } else {
+    obj = { changeX: arg0.x - arg1.x, changeY: arg0.y - arg1.y };
+  }
+  const merged = Object.assign(arg0);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 2074844346342;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_hoverGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.x,changeY:current.y};}else{changePayload={changeX:current.x-previous.x,changeY:current.y-previous.y};}return{...current,...changePayload};}",
 };
+class HoverGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, HoverGesture);
+    tmp2 = c2;
+    obj = c2(HoverGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "HoverGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = HoverGesture;
+_inherits(HoverGesture, fn(6913).ContinousBaseGesture);
+const entry = {
+  key: "effect",
+  value: function effect(hoverEffect) {
+    this.config.hoverEffect = hoverEffect;
+    return this;
+  },
+};
+let items = [
+  entry,
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    },
+  },
+];
+
+export const HoverEffect = { NONE: 0, [0]: "NONE", LIFT: 1, [1]: "LIFT", HIGHLIGHT: 2, [2]: "HIGHLIGHT" };
+export const hoverGestureHandlerProps = ["hoverEffect"];
+export const HoverGesture = _createClass(HoverGesture, items);

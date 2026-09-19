@@ -1,94 +1,130 @@
 // _runtime/metro/09968__.js
-import noop from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
-import 09966__ from "09966__.js";
+const dependencyMap = [];
+const dependencyMap2 = [];
+let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
 
-({ useCallback: closure_0, useEffect: closure_1, useRef: c2 } = noop);
-({ NativeEventEmitter: c3, Platform } = get_ActivityIndicator);
-const nativeModule = module_9966.getNativeModule();
-
-export const useModal = (props) => {
-  props = props.props;
-  let id = props.id;
-  props = undefined;
-  closure_4 = props(false);
-  const tmp = props();
-  closure_3 = tmp;
-  id(() => {
-    closure_3.current = props;
-  });
-  const current = tmp.current;
-  const items = [id, props];
-  const tmp3 = props((id) => {
-    if (id.id === id) {
-      closure_4.current = true;
-      if (props.onConfirm) {
-        const _Date = Date;
-        const date1 = new Date(date);
-        props.onConfirm(date1);
+export const byteLength = function byteLength(arr) {
+  if (0 < arr.length % 4) {
+    const _Error = Error;
+    const error = new Error("Invalid string. Length must be a multiple of 4");
+    throw error;
+  } else {
+    let index = arr.indexOf("=");
+    if (-1 === index) {
+      index = length;
+    }
+    const items = [index];
+    let num2 = 0;
+    if (index !== length) {
+      num2 = 4 - (index % 4);
+    }
+    items[1] = num2;
+    return (3 * (items[0] + items[1])) / 4 - items[1];
+  }
+};
+export const toByteArray = function toByteArray(arr) {
+  if (0 < arr.length % 4) {
+    const _Error = Error;
+    const error = new Error("Invalid string. Length must be a multiple of 4");
+    throw error;
+  } else {
+    let index = arr.indexOf("=");
+    if (-1 === index) {
+      index = length;
+    }
+    const items = [index];
+    let num = 0;
+    if (index !== length) {
+      num = 4 - (index % 4);
+    }
+    items[1] = num;
+    [tmp2, tmp3] = items;
+    const tmp7 = new closure_2((3 * (tmp2 + tmp3)) / 4 - tmp3);
+    let diff = tmp2;
+    if (tmp3 > 0) {
+      diff = tmp2 - 4;
+    }
+    let num11 = 0;
+    let num12 = 0;
+    let num13 = 0;
+    let num14 = 0;
+    if (0 < diff) {
+      do {
+        let tmp11 = dependencyMap2[arr.charCodeAt(arr, num12)] << 18;
+        let tmp12 = dependencyMap2[arr.charCodeAt(arr, num12 + 1)] << 12;
+        let tmp13 = dependencyMap2[arr.charCodeAt(arr, num12 + 2)] << 6;
+        let tmp14 = tmp11 | tmp12 | tmp13 | dependencyMap2[arr.charCodeAt(arr, num12 + 3)];
+        let sum = num11 + 1;
+        tmp7[num11] = (tmp14 >> 16) & 255;
+        let sum1 = sum + 1;
+        tmp7[sum] = (tmp14 >> 8) & 255;
+        num11 = sum1 + 1;
+        tmp7[sum1] = 255 & tmp14;
+        num12 = num12 + 4;
+        num13 = num11;
+        num14 = num12;
+      } while (num12 < diff);
+    }
+    let sum2 = num13;
+    if (2 === tmp3) {
+      sum2 = num13 + 1;
+      tmp7[num13] =
+        255 &
+        ((dependencyMap2[arr.charCodeAt(arr, num14)] << 2) | (dependencyMap2[arr.charCodeAt(arr, num14 + 1)] >> 4));
+      const tmp19 = dependencyMap2[arr.charCodeAt(arr, num14)] << 2;
+    }
+    if (1 === tmp3) {
+      const tmp21 = dependencyMap2[arr.charCodeAt(arr, num14)] << 10;
+      const tmp23 =
+        tmp21 |
+        (dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4) |
+        (dependencyMap2[arr.charCodeAt(arr, num14 + 2)] >> 2);
+      tmp7[sum2] = (tmp23 >> 8) & 255;
+      tmp7[sum2 + 1] = 255 & tmp23;
+      const tmp22 = dependencyMap2[arr.charCodeAt(arr, num14 + 1)] << 4;
+    }
+    return tmp7;
+  }
+};
+export const fromByteArray = function fromByteArray(uint8Array) {
+  let sum;
+  const result = length % 3;
+  const items = [];
+  const diff = length - result;
+  let num = 0;
+  if (0 < diff) {
+    do {
+      sum = num + 16383;
+      let sum2 = num;
+      let tmp5 = sum;
+      if (diff < sum) {
+        tmp5 = diff;
       }
-    }
-  }, items);
-  closure_6 = tmp3;
-  const items1 = [id, props];
-  const tmp4 = props((id) => {
-    id = undefined;
-    if (id != null) {
-      id = id.id;
-    }
-    if (id === id) {
-      closure_4.current = true;
-      if (props.onCancel) {
-        props.onCancel();
+      let items1 = [];
+      if (sum2 < tmp5) {
+        do {
+          let sum1 =
+            ((uint8Array[sum2] << 16) & 16711680) +
+            ((uint8Array[sum2 + 1] << 8) & 65280) +
+            (255 & uint8Array[sum2 + 2]);
+          let arr = items1.push(
+            dependencyMap[(sum1 >> 18) & 63] +
+              dependencyMap[(sum1 >> 12) & 63] +
+              dependencyMap[(sum1 >> 6) & 63] +
+              dependencyMap[63 & sum1],
+          );
+          sum2 = sum2 + 3;
+        } while (sum2 < tmp5);
       }
-    }
-  }, items1);
-  closure_7 = tmp4;
-  const items2 = [tmp4, tmp3, current, props];
-  id(() => {
-    let flag = false;
-    if (props.modal) {
-      flag = false;
-      if (props.open) {
-        let open;
-        if (current != null) {
-          open = current.open;
-        }
-        flag = !open;
-      }
-    }
-    if (flag) {
-      closure_4.current = false;
-      closure_4.openPicker(props, closure_6, closure_7);
-    }
-  }, items2);
-  const items3 = [current, props];
-  id(() => {
-    let flag = false;
-    if (props.modal) {
-      flag = false;
-      if (!props.open) {
-        let open;
-        if (current != null) {
-          open = current.open;
-        }
-        flag = open && !tmp3;
-        const tmp6 = open && !tmp3;
-      }
-    }
-    if (flag) {
-      closure_4.current = true;
-      closure_4.closePicker();
-    }
-  }, items3);
-  const items4 = [tmp4, tmp3];
-  id(() => {
-    const obj = new React3(closure_4);
-    obj.addListener("onConfirm", closure_6);
-    obj.addListener("onCancel", closure_7);
-    return () => {
-      obj.removeAllListeners("onConfirm");
-      obj.removeAllListeners("onCancel");
-    };
-  }, items4);
+      let arr2 = items.push(items1.join(""));
+      num = sum;
+    } while (sum < diff);
+  }
+  if (1 === result) {
+    items.push(`${closure_0[uint8Array[length - 1] >> 2]}${closure_0[(uint8Array[length - 1] << 4) & 63]}==`);
+  } else if (2 === result) {
+    const sum3 = (uint8Array[length - 2] << 8) + uint8Array[length - 1];
+    items.push(`${closure_0[tmp13 >> 10]}${closure_0[(tmp13 >> 4) & 63]}${closure_0[(tmp13 << 2) & 63]}=`);
+  }
+  return items.join("");
 };

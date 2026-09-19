@@ -1,12 +1,28 @@
 // _runtime/metro/03847__.js
-import 02114__ from "02114__.js";
+import requiredArgs_mod from "../03846_requiredArgs.js";
+import startOfUTCWeek_mod from "../03848_startOfUTCWeek.js";
 
-if (!module_2114) {
-  const obj2 = { default: module_2114 };
-  let obj = obj2;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
 } else {
-  obj = module_2114;
+  tmp3 = requiredArgs;
 }
+requiredArgs = tmp3;
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
+  let tmp5 = obj2;
+} else {
+  tmp5 = startOfUTCWeek;
+}
+startOfUTCWeek = tmp5;
 
-export default { date: obj.default({ formats: { full: "EEEE, d 'de' MMMM 'de' y", long: "d 'de' MMMM 'de' y", medium: "d MMM y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'a las' {{time}}", long: "{{date}} 'a las' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default function isSameUTCWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfUTCWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfUTCWeek.default(arg1, arg2).getTime();
+};
 export default exports.default;

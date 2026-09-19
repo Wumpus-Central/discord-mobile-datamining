@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "85e85e0480cc3ad94f292bfe35b1a958",
-  name: "img_amazon_music",
-  type: "svg",
+  hash: "f0c9d04e77af1368c39d93a975075c0b",
+  name: "img_account_sync_epic_dark_and_white",
+  type: "png",
 });

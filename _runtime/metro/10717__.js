@@ -1,11 +1,14 @@
 // _runtime/metro/10717__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import Filter from "../10694_Filter.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod10690 from "10690__.js";
+import repeatedTimeunitPattern from "../10691_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10698_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,16 +27,20 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class MergeWeekdayComponentRefiner {
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10690.WEEKDAY_DICTIONARY) +
+    "|weekend|weekday)(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)",
+  "i",
+);
+class ENWeekdayParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, MergeWeekdayComponentRefiner);
-    tmp2 = c2;
-    obj = c2(MergeWeekdayComponentRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, ENWeekdayParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENWeekdayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -46,46 +53,64 @@ class MergeWeekdayComponentRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = MergeWeekdayComponentRefiner;
-_inherits(MergeWeekdayComponentRefiner, Filter.MergingRefiner);
+_inherits(ENWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "mergeResults",
-  value: function mergeResults(arg0, index, clone) {
-    const cloneResult = clone.clone();
-    cloneResult.index = index.index;
-    cloneResult.text = index.text + arg0 + cloneResult.text;
-    const start = cloneResult.start;
-    const start2 = index.start;
-    start.assign("weekday", start2.get("weekday"));
-    if (cloneResult.end) {
-      const end = cloneResult.end;
-      const start3 = index.start;
-      end.assign("weekday", start3.get("weekday"));
-    }
-    return cloneResult;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 const items = [
   entry,
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, start, start2) {
-      start = start.start;
-      let result = start.isOnlyWeekdayComponent();
-      if (result) {
-        start2 = start.start;
-        result = !start2.isCertain("hour");
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      let str2 = "last";
+      if ("last" != formatted) {
+        str2 = "last";
+        if ("past" != formatted) {
+          str2 = "next";
+          if ("next" != formatted) {
+            str2 = null;
+            if ("this" == formatted) {
+              str2 = "this";
+            }
+          }
+        }
       }
-      if (result) {
-        const start3 = start2.start;
-        result = start3.isCertain("day");
+      const formatted1 = arg1[2].toLowerCase();
+      if (undefined !== ENWeekdayParser(10690).WEEKDAY_DICTIONARY[formatted1]) {
+        let sum = ENWeekdayParser(10690).WEEKDAY_DICTIONARY[formatted1];
+      } else if ("weekend" == formatted1) {
+        if ("last" == str2) {
+          let SATURDAY = ENWeekdayParser(10696).Weekday.SUNDAY;
+        } else {
+          SATURDAY = ENWeekdayParser(10696).Weekday.SATURDAY;
+        }
+        sum = SATURDAY;
+      } else if ("weekday" != formatted1) {
+        return null;
+      } else {
+        reference = reference.reference;
+        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+        const day = dateWithAdjustedTimezone.getDay();
+        if (day != ENWeekdayParser(10696).Weekday.SUNDAY) {
+          if (day != ENWeekdayParser(10696).Weekday.SATURDAY) {
+            const diff = day - 1;
+            sum = (("last" == str2 ? diff - 1 : diff + 1) % 5) + 1;
+          }
+        }
+        if ("last" == str2) {
+          let MONDAY = ENWeekdayParser(10696).Weekday.FRIDAY;
+        } else {
+          MONDAY = ENWeekdayParser(10696).Weekday.MONDAY;
+        }
+        sum = MONDAY;
       }
-      if (result) {
-        result = null != str.match(/^,?\s*$/);
-      }
-      return result;
+      return ENWeekdayParser(10718).createParsingComponentsAtWeekday(reference.reference, sum, str2);
     },
   },
 ];
 
-export default _createClass(MergeWeekdayComponentRefiner, items);
+export default _createClass(ENWeekdayParser, items);

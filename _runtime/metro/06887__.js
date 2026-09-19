@@ -1,13 +1,10 @@
 // _runtime/metro/06887__.js
-import get_ActivityIndicator from "00017__.js";
+const global = arg0;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let PlatformConstants;
-if (NativeModules != null) {
-  PlatformConstants = NativeModules.PlatformConstants;
-}
-if (PlatformConstants == null) {
-  PlatformConstants = get_ActivityIndicator.Platform.constants;
-}
-
-export default PlatformConstants;
+export const isFabricInstalled = function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
+};

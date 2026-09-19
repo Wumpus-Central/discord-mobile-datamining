@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 161,
-  scales: [1],
-  hash: "39cdeaab77d36adb2361dc5c033acede",
-  name: "locke_2",
+  httpServerLocation: "/assets/images/native/chat_sidebar",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "735f759c8548e858d5ddb5e988a22d5f",
+  name: "ic_notif_off",
   type: "png",
 });

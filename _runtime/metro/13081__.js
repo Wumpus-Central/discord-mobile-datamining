@@ -1,50 +1,99 @@
 // _runtime/metro/13081__.js
-import _mod13039 from "13039__.js";
-import spanTimeInputToSeconds from "../13044_spanTimeInputToSeconds.js";
-import _mod13054 from "13054__.js";
-import _mod13067 from "13067__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const SentryNonRecordingSpan = require;
+class SentryNonRecordingSpan {
+  constructor() {
+    obj = global;
+    if (global === undefined) {
+      obj = {};
+    }
+    self = this;
+    tmp = c2(this, SentryNonRecordingSpan);
+    traceId = obj.traceId;
+    if (!traceId) {
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      obj2 = closure_0(closure_1[2]);
+      traceId = obj2.generateTraceId();
+    }
+    self._traceId = traceId;
+    spanId = obj.spanId;
+    if (!spanId) {
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj3 = closure_0(closure_1[2]);
+      spanId = obj3.generateSpanId();
+    }
+    self._spanId = spanId;
+    return;
+  }
+}
+const entry = {
+  key: "spanContext",
+  value: function spanContext() {
+    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(13053).TRACE_FLAG_NONE };
+  },
+};
+const items = [
+  entry,
+  {
+    key: "end",
+    value: function end(arg0) {},
+  },
+  {
+    key: "setAttribute",
+    value: function setAttribute(arg0, arg1) {
+      return this;
+    },
+  },
+  {
+    key: "setAttributes",
+    value: function setAttributes(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "setStatus",
+    value: function setStatus(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "updateName",
+    value: function updateName(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "isRecording",
+    value: function isRecording() {
+      return false;
+    },
+  },
+  {
+    key: "addEvent",
+    value: function addEvent(arg0, arg1, arg2) {
+      return this;
+    },
+  },
+  {
+    key: "addLink",
+    value: function addLink(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "addLinks",
+    value: function addLinks(arg0) {
+      return this;
+    },
+  },
+  {
+    key: "recordException",
+    value: function recordException(arg0, arg1) {},
+  },
+];
 
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
-  }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod13067.DEBUG_BUILD) {
-      const logger = _mod13039.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
-    }
-    const obj2 = {};
-    obj2[_mod13054.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj2[_mod13054.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj2);
-  }
-};
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[_mod13054.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[_mod13054.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
-        }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
-        }
-      });
-      return obj;
-    }
-  }
-};
+export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);

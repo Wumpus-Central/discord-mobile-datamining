@@ -1,13 +1,7 @@
 // _runtime/metro/07153__.js
-import registerAsset from "01121__.js";
+import _mod17 from "00017__.js";
+import FlashList from "../07092_FlashList.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e37bbde49f12a4469b46214e14dfde4a",
-  name: "KeyIcon",
-  type: "png",
-});
+const Animated = _mod17.Animated;
+
+export default Animated.createAnimatedComponent(FlashList.FlashList);

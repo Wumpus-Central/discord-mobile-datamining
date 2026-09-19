@@ -1,13 +1,11 @@
 // _runtime/metro/08775__.js
-import _modDef8713 from "08713__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const Pattern = importDefault;
+const FeDistantLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,15 +24,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const jsx = fn(21).jsx;
-class Pattern {
+class FeDistantLight {
   constructor() {
     self = this;
-    tmp = c2(this, Pattern);
+    tmp = c2(this, FeDistantLight);
     tmp2 = closure_4;
-    obj = closure_4(Pattern);
+    obj = closure_4(FeDistantLight);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,64 +44,17 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Pattern, _modDef8713);
+_inherits(FeDistantLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ patternTransform, patternUnits, patternContentUnits } = props);
-    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-    if (!patternTransform) {
-      patternTransform = transform;
-    }
-    if (!patternTransform) {
-      patternTransform = props;
-    }
-    const tmp3Result = Pattern(8697)(patternTransform);
-    const size = {
-      x,
-      y,
-      width,
-      height,
-      name: id,
-      matrix: tmp3Result,
-      patternTransform: tmp3Result,
-      patternUnits: null,
-      patternContentUnits: null,
-    };
-    let num = patternUnits;
-    if (patternUnits) {
-      num = Pattern(8767)[patternUnits];
-    }
-    if (!num) {
-      num = 0;
-    }
-    size.patternUnits = num;
-    let num2 = 1;
-    if (patternContentUnits) {
-      num2 = Pattern(8767)[patternContentUnits];
-    }
-    size.patternContentUnits = num2;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const tmp3 = Pattern(8697);
-    const merged = Object.assign(size);
-    const merged1 = Object.assign(Pattern(8702)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Pattern(8776), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const result = FeDistantLight(8743).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(FeDistantLight, items);
+importDefaultResultResult.displayName = "FeDistantLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

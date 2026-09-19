@@ -1,28 +1,12 @@
 // _runtime/metro/06999__.js
-import _mod19 from "00019__.js";
-import _mod6843 from "06843__.js";
+import ComposedGestureName from "../06951_ComposedGestureName.js";
+import _mod7000 from "07000__.js";
 
-const useLayoutEffect = _mod19.useLayoutEffect;
+require = arg1;
+const dependencyMap = arg6;
 
-export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  if (obj.isFabricInstalled()) {
-    useLayoutEffect(() => {
-      if (closure_0) {
-        if (closure_0.current) {
-          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
-            if (typeof closure_0.current.getBoundingClientRect === "function") {
-              const current2 = closure_0.current;
-              closure_1(current2.getBoundingClientRect());
-            }
-          } else {
-            const current = closure_0.current;
-            closure_1(current.unstable_getBoundingClientRect());
-          }
-        }
-      }
-    });
-  }
-  obj = _mod6843;
+export const useCompetingGestures = function useCompetingGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod7000.useComposedGesture.apply(items1);
 };

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "be629a43a1506b7ff0f25b34b78ebb11",
-  name: "img_account_sync_github_light",
+  hash: "353a91a70e129c6496d346cd0dd42f3d",
+  name: "img_account_sync_skype_white",
   type: "png",
 });

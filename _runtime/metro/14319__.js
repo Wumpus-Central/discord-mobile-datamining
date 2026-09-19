@@ -1,13 +1,7 @@
 // _runtime/metro/14319__.js
-import registerAsset from "01121__.js";
+import _mod14308 from "14308__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/status",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "7730e55139737e3f08bf4e9540ae6591",
-  name: "StatusOffline",
-  type: "png",
-});
+export default (arg0, arg1, arg2) => {
+  const obj = new _mod14308(arg0, arg2);
+  return obj.intersects(new _mod14308(arg1, arg2), arg2);
+};

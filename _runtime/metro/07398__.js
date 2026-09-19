@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "8ed6e9444f1466c0eafe89d2eb1484b1",
-  name: "XSmallBoldIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "481d8ce76f3be0e6139166c2fc65af25",
+  name: "ic_arrow_down",
   type: "png",
 });

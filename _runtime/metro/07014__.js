@@ -1,125 +1,207 @@
 // _runtime/metro/07014__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import LegacyBaseButton from "../06848_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-let noop = noop_mod;
-({ useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo((nativeGestureRef) => {
-  nativeGestureRef = nativeGestureRef.nativeGestureRef;
-  const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
-  ({ style, children } = nativeGestureRef);
-  const merged = Object.assign(
-    nativeGestureRef,
-    Object.assign({ nativeGestureRef: 0, refreshControlGestureRef: 0, style: 0, children: 0 }),
-  );
-  let enableContentPanningGesture;
-  const bottomSheetInternal = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetInternal();
-  enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
-  const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
-  const waitFor = bottomSheetInternal.waitFor;
-  const activeOffsetX = bottomSheetInternal.activeOffsetX;
-  const activeOffsetY = bottomSheetInternal.activeOffsetY;
-  const failOffsetX = bottomSheetInternal.failOffsetX;
-  const failOffsetY = bottomSheetInternal.failOffsetY;
-  const obj = nativeGestureRef(enableContentPanningGesture[2]);
-  const contentPanGestureHandler = nativeGestureRef(enableContentPanningGesture[2]).useBottomSheetGestureHandlers()
-    .contentPanGestureHandler;
-  let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
-  const tmp3 = simultaneousHandlers(() => {
-    const items = [];
-    if (nativeGestureRef) {
-      items.push(tmp);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (refreshControlGestureRef) {
-      items.push(tmp3);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(translationX, translationX2) {
+  if (undefined === translationX2) {
+    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
+  } else {
+    obj = {
+      changeX: translationX.translationX - translationX2.translationX,
+      changeY: translationX.translationY - translationX2.translationY,
+    };
+  }
+  const merged = Object.assign(translationX);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 1947784830943;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}",
+};
+class PanGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, PanGesture);
+    tmp2 = c2;
+    obj = c2(PanGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
     }
-    if (simultaneousHandlers) {
-      const _Array = Array;
-      const push = items.push;
-      if (Array.isArray(simultaneousHandlers)) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(simultaneousHandlers, 0);
-        HermesBuiltin.apply(items1, items);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "PanGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = PanGesture;
+_inherits(PanGesture, fn(6913).ContinousBaseGesture);
+const entry = {
+  key: "activeOffsetY",
+  value: function activeOffsetY(items) {
+    const self = this;
+    if (Array.isArray(items)) {
+      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items;
+    } else if (items < 0) {
+      self.config.activeOffsetYStart = items;
+    } else {
+      self.config.activeOffsetYEnd = items;
+    }
+    return self;
+  },
+};
+let items = [
+  entry,
+  {
+    key: "activeOffsetX",
+    value: function activeOffsetX(items) {
+      const self = this;
+      if (Array.isArray(items)) {
+        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items;
+      } else if (items < 0) {
+        self.config.activeOffsetXStart = items;
       } else {
-        push(simultaneousHandlers);
+        self.config.activeOffsetXEnd = items;
       }
-    }
-    return items;
-  }, items);
-  closure_10 = tmp3;
-  let items1 = [
-    activeOffsetX,
-    activeOffsetY,
-    enableContentPanningGesture,
-    failOffsetX,
-    failOffsetY,
-    tmp3,
-    waitFor,
-    ,
-    ,
-    ,
-  ];
-  ({
-    handleOnChange: arr2[7],
-    handleOnEnd: arr2[8],
-    handleOnFinalize: arr2[9],
-    handleOnStart: arr2[10],
-  } = contentPanGestureHandler);
-  const tmp4 = simultaneousHandlers(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const PanResult = Gesture.Pan();
-    const result = Gesture.Pan().enabled(enableContentPanningGesture).shouldCancelWhenOutside(false);
-    const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
-    const runOnJSResult = result.runOnJS(false);
-    const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
-    const onChangeResult = result
-      .runOnJS(false)
-      .onStart(contentPanGestureHandler.handleOnStart)
-      .onChange(contentPanGestureHandler.handleOnChange);
-    const onFinalizeResult = result
-      .runOnJS(false)
-      .onStart(contentPanGestureHandler.handleOnStart)
-      .onChange(contentPanGestureHandler.handleOnChange)
-      .onEnd(contentPanGestureHandler.handleOnEnd)
-      .onFinalize(contentPanGestureHandler.handleOnFinalize);
-    let result1 = onFinalizeResult;
-    if (waitFor) {
-      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
-    }
-    let result2 = result1;
-    if (closure_10) {
-      result2 = result1.simultaneousWithExternalGesture(tmp2);
-    }
-    let activeOffsetXResult = result2;
-    if (activeOffsetX) {
-      activeOffsetXResult = result2.activeOffsetX(tmp3);
-    }
-    let activeOffsetYResult = activeOffsetXResult;
-    if (activeOffsetY) {
-      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
-    }
-    let failOffsetXResult = activeOffsetYResult;
-    if (failOffsetX) {
-      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
-    }
-    let failOffsetYResult = failOffsetXResult;
-    if (failOffsetY) {
-      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
-    }
-    return failOffsetYResult;
-  }, items1);
-  const obj3 = { gesture: tmp4, children: null };
-  const obj4 = { value: tmp4, children: null };
-  const obj5 = { style };
-  const merged1 = Object.assign(merged);
-  obj5.children = children;
-  obj4.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj5);
-  obj3.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj4);
-  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj3);
-});
-memoResult.displayName = "BottomSheetDraggableView";
+      return self;
+    },
+  },
+  {
+    key: "failOffsetY",
+    value: function failOffsetY(GestureDetector) {
+      const self = this;
+      if (Array.isArray(GestureDetector)) {
+        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = GestureDetector;
+      } else if (GestureDetector < 0) {
+        self.config.failOffsetYStart = GestureDetector;
+      } else {
+        self.config.failOffsetYEnd = GestureDetector;
+      }
+      return self;
+    },
+  },
+  {
+    key: "failOffsetX",
+    value: function failOffsetX(items1) {
+      const self = this;
+      if (Array.isArray(items1)) {
+        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items1;
+      } else if (items1 < 0) {
+        self.config.failOffsetXStart = items1;
+      } else {
+        self.config.failOffsetXEnd = items1;
+      }
+      return self;
+    },
+  },
+  {
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    },
+  },
+  {
+    key: "maxPointers",
+    value: function maxPointers(maxPointers) {
+      this.config.maxPointers = maxPointers;
+      return this;
+    },
+  },
+  {
+    key: "minDistance",
+    value: function minDistance(minDist) {
+      this.config.minDist = minDist;
+      return this;
+    },
+  },
+  {
+    key: "minVelocity",
+    value: function minVelocity(minVelocity) {
+      this.config.minVelocity = minVelocity;
+      return this;
+    },
+  },
+  {
+    key: "minVelocityX",
+    value: function minVelocityX(minVelocityX) {
+      this.config.minVelocityX = minVelocityX;
+      return this;
+    },
+  },
+  {
+    key: "minVelocityY",
+    value: function minVelocityY(minVelocityY) {
+      this.config.minVelocityY = minVelocityY;
+      return this;
+    },
+  },
+  {
+    key: "averageTouches",
+    value: function averageTouches(avgTouches) {
+      this.config.avgTouches = avgTouches;
+      return this;
+    },
+  },
+  {
+    key: "enableTrackpadTwoFingerGesture",
+    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
+      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
+      return this;
+    },
+  },
+  {
+    key: "activateAfterLongPress",
+    value: function activateAfterLongPress(activateAfterLongPress) {
+      this.config.activateAfterLongPress = activateAfterLongPress;
+      return this;
+    },
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    },
+  },
+];
 
-export default memoResult;
+export const PanGesture = _createClass(PanGesture, items);

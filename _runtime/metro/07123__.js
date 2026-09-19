@@ -1,4 +1,11 @@
 // _runtime/metro/07123__.js
-import _modDef7124 from "07124__.js";
 
-export default _modDef7124;
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
+  }
+}

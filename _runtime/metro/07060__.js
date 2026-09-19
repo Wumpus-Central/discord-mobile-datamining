@@ -1,39 +1,81 @@
 // _runtime/metro/07060__.js
+import jsxProd from "../react/00021_jsxProd.js";
+import value22 from "../06865_value2.js";
 import _mod7061 from "07061__.js";
+import noop_mod from "00019__.js";
 
-export default function _createClass(arg0, arg1, arg2) {
-  if (arg1) {
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp3 = arg1[num];
-      let flag2 = tmp3.enumerable;
-      if (!flag2) {
-        flag2 = false;
-      }
-      tmp3.enumerable = flag2;
-      tmp3.configurable = true;
-      if ("value" in tmp3) {
-        tmp3.writable = true;
-      }
-      let _Object = Object;
-      let definePropertyResult = Object.defineProperty(tmp, _mod7061(tmp3.key), tmp3);
-    }
+let noop = noop_mod;
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+const __initData = {
+  code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}",
+};
+const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
+  animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
+  let num = animatedFooterPosition.bottomInset;
+  if (num === undefined) {
+    num = 0;
   }
-  if (arg2) {
-    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
-      let tmp9 = arg2[num3];
-      let flag4 = tmp9.enumerable;
-      if (!flag4) {
-        flag4 = false;
-      }
-      tmp9.enumerable = flag4;
-      tmp9.configurable = true;
-      if ("value" in tmp9) {
-        tmp9.writable = true;
-      }
-      let _Object2 = Object;
-      let definePropertyResult1 = Object.defineProperty(arg0, _mod7061(tmp9.key), tmp9);
+  const style = animatedFooterPosition.style;
+  const children = animatedFooterPosition.children;
+  let animatedStyle;
+  const tmp = animatedStyle(null);
+  const bottomSheetInternal = animatedFooterPosition(style[2]).useBottomSheetInternal();
+  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  let obj = animatedFooterPosition(style[2]);
+  const tmp2 = style;
+  const fn = function c() {
+    value = animatedFooterPosition.get();
+    value2 = animatedKeyboardState.get();
+    let diff = value;
+    if (value2 !== value22.KEYBOARD_STATE.SHOWN) {
+      diff = value - num;
     }
+    const obj = { transform: null };
+    const items = [{ translateY: Math.max(0, diff) }];
+    obj.transform = items;
+    return obj;
+  };
+  const obj2 = animatedFooterPosition(style[3]);
+  fn.__closure = {
+    animatedFooterPosition,
+    animatedKeyboardState,
+    KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE,
+    bottomInset: num,
+  };
+  fn.__workletHash = 5322275157644;
+  fn.__initData = __initData;
+  let items = [num, animatedKeyboardState, animatedFooterPosition];
+  animatedStyle = obj2.useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  const items2 = [animatedFooterHeight];
+  const obj3 = {
+    animatedFooterPosition,
+    animatedKeyboardState,
+    KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE,
+    bottomInset: num,
+  };
+  const items3 = [animatedFooterHeight];
+  const tmp5 = animatedKeyboardState(() => {
+    const items = [_mod7061.styles.container, style, animatedStyle];
+    return items;
+  }, items1);
+  const tmp6 = animatedFooterHeight((nativeEvent) => {
+    const result = animatedFooterHeight.set(nativeEvent.nativeEvent.layout.height);
+  }, items2);
+  const tmp7 = animatedFooterHeight((height) => {
+    const result = animatedFooterHeight.set(height.height);
+  }, items3);
+  const boundingClientRect = animatedFooterPosition(style[2]).useBoundingClientRect(tmp, tmp7);
+  let tmp9 = null;
+  if (null !== children) {
+    const obj5 = { ref: tmp, onLayout: tmp6, style: tmp5, children };
+    tmp9 = jsx(num(tmp2[3]).View, { ref: tmp, onLayout: tmp6, style: tmp5, children });
   }
-  Object.defineProperty(arg0, "prototype", { writable: false });
-  return arg0;
-}
+  return tmp9;
+});
+memoResult.displayName = "BottomSheetFooter";
+
+export const BottomSheetFooter = memoResult;

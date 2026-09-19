@@ -1,51 +1,12 @@
 // _runtime/metro/03878__.js
-import module_3813_mod from "03813__.js";
+import 02114__ from "02114__.js";
 
-let module_3813 = module_3813_mod;
-if (!module_3813) {
-  const obj = { default: module_3813 };
-  let tmp3 = obj;
+if (!module_2114) {
+  const obj2 = { default: module_2114 };
+  let obj = obj2;
 } else {
-  tmp3 = module_3813;
+  obj = module_2114;
 }
-module_3813 = tmp3;
-const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
-let closure_2 = {
-  lastWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (module_3813.default(getUTCDay, arg1, arg2)) {
-      let str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica scorsa alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} scorso alle' p`;
-      }
-    }
-    return str;
-  },
-  yesterday: "'ieri alle' p",
-  today: "'oggi alle' p",
-  tomorrow: "'domani alle' p",
-  nextWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (module_3813.default(getUTCDay, arg1, arg2)) {
-      let str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica prossima alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
-      }
-    }
-    return str;
-  },
-  other: "P"
-};
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_2[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
-};
+export default { date: obj.default({ formats: { full: "EEEE, d MMMM yyyy", long: "d MMMM yyyy", medium: "d MMM yyyy", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'at' {{time}}", long: "{{date}} 'at' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

@@ -1,4 +1,4 @@
 // _runtime/metro/14600__.js
-import replaceByteInByteSequence from "../14588_replaceByteInByteSequence.js";
+import _mod14578 from "14578__.js";
 
-export const URLSearchParams = replaceByteInByteSequence.URLSearchParams;
+export default _mod14578({}.isPrototypeOf);

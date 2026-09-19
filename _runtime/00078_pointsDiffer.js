@@ -1,5 +1,5 @@
 // _runtime/00078_pointsDiffer.js
-let closure_0 = { x: "PX_16", y: "accessible" };
+let closure_0 = { x: "a", y: "isArray" };
 
 export default function pointsDiffer(arg0, arg1) {
   let point = arg0;

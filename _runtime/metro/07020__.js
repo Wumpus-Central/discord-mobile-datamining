@@ -1,67 +1,68 @@
 // _runtime/metro/07020__.js
-import _mod7022 from "07022__.js";
-import noop_mod from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
-  style = style.style;
-  const indicatorStyle = style.indicatorStyle;
-  let DEFAULT_ACCESSIBLE = style.accessible;
-  if (DEFAULT_ACCESSIBLE === undefined) {
-    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+class NativeGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, NativeGesture);
+    tmp2 = c2;
+    obj = c2(NativeGesture);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "NativeViewGestureHandler";
+    return tmp3Result;
   }
-  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
-  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
-    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
-  }
-  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
-  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
-    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
-  }
-  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
-  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
-    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
-  }
-  let items = [style];
-  const items1 = [indicatorStyle];
-  const obj = {
-    style: useMemo(() => {
-      const items = [_mod7022.styles.container, React3.flatten(style)];
-      return items;
-    }, items),
-    accessible: null,
-    accessibilityRole: null,
-    accessibilityLabel: null,
-    accessibilityHint: null,
-    collapsable: true,
-    children: null,
-  };
-  const tmp9 = useMemo(() => {
-    const items = [_mod7022.styles.container, React3.flatten(style)];
-    return items;
-  }, items);
-  obj.accessible = DEFAULT_ACCESSIBLE;
-  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
-  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
-  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
-  const items2 = [
-    closure_5(closure_4, {
-      style: useMemo(() => {
-        const items = [_mod7022.styles.indicator, React3.flatten(indicatorStyle)];
-        return items;
-      }, items1),
-    }),
-    style.children,
-  ];
-  obj.children = items2;
-  return closure_6(closure_4, obj);
-});
-memoResult.displayName = "BottomSheetHandle";
+}
+_classCallCheck = NativeGesture;
+_inherits(NativeGesture, fn(6913).BaseGesture);
+const entry = {
+  key: "shouldActivateOnStart",
+  value: function shouldActivateOnStart(shouldActivateOnStart) {
+    this.config.shouldActivateOnStart = shouldActivateOnStart;
+    return this;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "disallowInterruption",
+    value: function disallowInterruption(disallowInterruption) {
+      this.config.disallowInterruption = disallowInterruption;
+      return this;
+    },
+  },
+];
 
-export default memoResult;
+export const NativeGesture = _createClass(NativeGesture, items);

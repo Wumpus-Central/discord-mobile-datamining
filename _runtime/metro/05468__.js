@@ -1,13 +1,45 @@
 // _runtime/metro/05468__.js
-import registerAsset from "01121__.js";
+import _mod5425 from "05425__.js";
+import get0thIfdOffset from "../05445_get0thIfdOffset.js";
+import IFD_TYPE_0TH from "../05446_IFD_TYPE_0TH.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
-  scales: [1],
-  hash: "5e997bb5d78793341cb727497a38fe6f",
-  name: "img_account_sync_bluesky_light_and_dark",
-  type: "svg",
-});
+require = arg1;
+const dependencyMap = arg6;
+
+export default {
+  read(byteLength, sum, arg2, byteOrder, arg4) {
+    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    let tmp6 = ifd;
+    if (ifd.ShotInfo) {
+      value = ifd.ShotInfo.value;
+      const obj2 = {};
+      if (undefined !== value[27]) {
+        const obj3 = { value: value[27], description: null };
+        let str = "None";
+        if (0 !== value[27]) {
+          let str2 = "Rotate 90 CW";
+          if (1 !== tmp7) {
+            let str3 = "Rotate 180";
+            if (2 !== tmp7) {
+              let str4 = "Unknown";
+              if (3 === tmp7) {
+                str4 = "Rotate 270 CW";
+              }
+              str3 = str4;
+            }
+            str2 = str3;
+          }
+          str = str2;
+        }
+        obj3.description = str;
+        obj2.AutoRotate = obj3;
+      }
+      const tmp3Result = _mod5425;
+      delete tmp[tmp2];
+      tmp6 = _mod5425.objectAssign({}, ifd, obj2);
+      const objectAssignResult = _mod5425.objectAssign({}, ifd, obj2);
+    }
+    return tmp6;
+  },
+  SHOT_INFO_AUTO_ROTATE: 27,
+};

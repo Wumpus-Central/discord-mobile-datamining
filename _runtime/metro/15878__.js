@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa6654f8bc64e9c09fd740f0157dd47b",
-  name: "ClipboardCheckIcon",
+  hash: "9e0f7ca920e7d55418409ccf322d663c",
+  name: "BurgerIcon",
   type: "png",
 });

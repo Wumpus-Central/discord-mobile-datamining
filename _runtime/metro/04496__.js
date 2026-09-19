@@ -1,57 +1,53 @@
 // _runtime/metro/04496__.js
-import c from "../04478_c.js";
-import _mod4491 from "04491__.js";
-import _slicedToArray from "00032__.js";
+import _mod17 from "00017__.js";
+import _mod4497 from "04497__.js";
+import _mod4498 from "04498__.js";
 
-const RiveColor2 = tmp(4486);
-require = fn;
-fn(19).useCallback;
-const f31169 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+function getInstalledNitro() {
+  return global.NitroModulesProxy;
+}
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const installedNitro = getInstalledNitro();
+if (null != installedNitro) {
+  let installedNitro1 = installedNitro;
+  if (installedNitro.version !== _mod4497.version) {
+    const _Error2 = Error;
+    const version = installedNitro.version;
+    const _HermesInternal2 = HermesInternal;
+    const error = new Error(
+      "Nitro was installed twice: once with native version " +
+        version +
+        " and once with JS version " +
+        _mod4497.version +
+        ". This usually means react-native-nitro-modules exists multiple times in node_modules (e.g. in monorepos or double-linked setups).",
+    );
+    throw error;
+  }
+} else {
+  try {
+    const enforcing = TurboModuleRegistry.getEnforcing("NitroModules");
+    const installResult = enforcing.install();
+    if (null != installResult) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error1 = new Error("Failed to install Nitro: " + installResult);
+      throw error1;
+    } else {
+      installedNitro1 = getInstalledNitro();
+      if (null == installedNitro1) {
+        const _Error3 = Error;
+        const error2 = new Error("NitroModules was installed, but `global.NitroModulesProxy` was null!");
+        const moduleNotFoundError = new _mod4498.ModuleNotFoundError(error2);
+        throw moduleNotFoundError;
+      }
+    }
+  } catch (tmp13) {
+    const moduleNotFoundError1 = new tmp3(tmp[2]).ModuleNotFoundError(tmp13);
+    throw moduleNotFoundError1;
+  }
+}
 
-export const useRiveColor = function useRiveColor(FillColor, instance) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod4491.useRiveProperty(instance, FillColor, f31169), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
-    }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
-      }
-      tmp6(fromHexStringResult.toInt());
-    };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-  }
-  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj3;
-  tmp11 = obj3;
+export const NitroModules = installedNitro1;
+export const isRuntimeAlive = function isRuntimeAlive() {
+  return null != globalThis.__nitroJsiCache && null != globalThis.__nitroDispatcher;
 };

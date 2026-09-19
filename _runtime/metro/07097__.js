@@ -1,66 +1,30 @@
 // _runtime/metro/07097__.js
-import _mod7095 from "07095__.js";
-import _slicedToArray from "07050__.js";
+import _mod7098 from "07098__.js";
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
-function useOnLoad(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = hasOwnProperty(false);
-  React3(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-    if (isFirstLayoutComplete) {
-      isFirstLayoutComplete = !ref.current;
-    }
-    if (isFirstLayoutComplete) {
-      ref.current = true;
-      f82253();
-    }
-  });
-}
-
-export const useOnListLoad = (recyclerViewManager, onLoad) => {
-  let isFirstLayoutComplete = recyclerViewManager;
-  let f82253 = onLoad;
-  hasOwnProperty(Date.now());
-  [tmp3, closure_3] = timestampProducer(false);
-  const dataLength = recyclerViewManager.getDataLength();
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
-  const requestAnimationFrame = _mod7095.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  const items = [dataLength];
-  React4(() => {
-    closure_2.current = Date.now();
-  }, items);
-  if (typeof useOnLoad === "function") {
-    isFirstLayoutComplete = recyclerViewManager;
-    f82253 = () => {
-      const elapsedTimeInMs = Date.now() - ref.current;
-      requestAnimationFrame(() => {
-        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f82253 != null) {
-          const obj = { elapsedTimeInMs };
-          tmp(obj);
+export default function _unsupportedIterableToArray(str, arg1) {
+  if (str) {
+    if (typeof str === "string") {
+      return _mod7098(str, arg1);
+    } else {
+      const toString = {}.toString;
+      const call = toString.call;
+      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
+      let name = substr;
+      if (tmp3) {
+        name = str.constructor.name;
+      }
+      if ("Map" !== name) {
+        if ("Set" !== name) {
+          if ("Arguments" === name) {
+            let arr2 = _mod7098(str, arg1);
+          }
         }
-        closure_2_3(true);
-      });
-    };
-    hasOwnProperty(false);
-    React3(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-      if (isFirstLayoutComplete) {
-        isFirstLayoutComplete = !ref.current;
+        return arr2;
       }
-      if (isFirstLayoutComplete) {
-        ref.current = true;
-        f82253();
-      }
-    });
-    const obj2 = { isLoaded: tmp3 };
-    return obj2;
-  } else {
-    throw new TypeError("Trying to call a non-function");
+      const _Array = Array;
+      arr2 = Array.from(str);
+      const arr = typeof call === "unknown" ? toString() : call(str);
+      tmp3 = "Object" === substr && "Object".constructor;
+    }
   }
-};
-export { useOnLoad };
+}

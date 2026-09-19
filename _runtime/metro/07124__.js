@@ -1,54 +1,21 @@
 // _runtime/metro/07124__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import _mod6825 from "06825__.js";
-import LegacyBaseButton from "../06848_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
-
-let noop = noop_mod;
-({ useCallback: c2, useEffect: c3 } = noop);
-({ memo, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo(
-  forwardRef((onFocus, ref) => {
-    onFocus = onFocus.onFocus;
-    const onBlur = onFocus.onBlur;
-    const merged = Object.assign(onFocus, Object.assign({ onFocus: 0, onBlur: 0 }));
-    const shouldHandleKeyboardEvents = _mod6825.useBottomSheetInternal().shouldHandleKeyboardEvents;
-    const items = [onFocus, shouldHandleKeyboardEvents];
-    const items1 = [onBlur, shouldHandleKeyboardEvents];
-    const items2 = [shouldHandleKeyboardEvents];
-    const tmp2 = React2((arg0) => {
-      shouldHandleKeyboardEvents.value = true;
-      if (onFocus) {
-        tmp(arg0);
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    exports = getPrototypeOf.bind();
+  } else {
+    exports = (arg0) => {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
       }
-    }, items);
-    React3(
-      () => () => {
-        shouldHandleKeyboardEvents.value = false;
-      },
-      items2,
-    );
-    const tmp3 = React2((arg0) => {
-      shouldHandleKeyboardEvents.value = false;
-      if (onBlur) {
-        tmp(arg0);
-      }
-    }, items1);
-    const merged1 = Object.assign(merged);
-    return jsx(LegacyBaseButton.TextInput, {
-      ref,
-      onFocus: tmp2,
-      onBlur: React2((arg0) => {
-        shouldHandleKeyboardEvents.value = false;
-        if (onBlur) {
-          tmp(arg0);
-        }
-      }, items1),
-    });
-  }),
-);
-memoResult.displayName = "BottomSheetTextInput";
+      return __proto__;
+    };
+  }
+  module.exports = exports;
+  return exports(arg0);
+}
+let exports = _getPrototypeOf;
 
-export default memoResult;
+export default _getPrototypeOf;

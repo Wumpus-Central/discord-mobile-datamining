@@ -1,13 +1,13 @@
 // _runtime/metro/05455__.js
-import registerAsset from "01121__.js";
+const obj = {
+  0: {
+    name: "PentaxVersion",
+    description(join) {
+      return join.join(".");
+    },
+  },
+  5: "PentaxModelID",
+  555: "LevelInfo",
+};
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "e9fce92f06bbfad622591815c7f5f9ac",
-  name: "img_account_sync_twitch_white",
-  type: "png",
-});
+export default obj;

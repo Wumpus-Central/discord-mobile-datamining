@@ -1,8 +1,11 @@
 // _runtime/metro/14581__.js
-import _mod14559 from "14559__.js";
-import _mod14560 from "14560__.js";
+import _mod14582 from "14582__.js";
 
-export default Object.keys ||
-  function keys(arg0) {
-    return _mod14560(arg0, _mod14559);
-  };
+export default (arg0) => {
+  if (_mod14582(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

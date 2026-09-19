@@ -1,6 +1,6 @@
 // _runtime/metro/10811__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10696 from "10696__.js";
+import _mod10709 from "10709__.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -41,12 +41,12 @@ if (!fn) {
     return tmp;
   };
 }
-class RUMergeDateTimeRefiner {
+class ZHHantMergeDateRangeRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, RUMergeDateTimeRefiner);
+    tmp = closure_0(this, ZHHantMergeDateRangeRefiner);
     tmp2 = c2;
-    obj = c2(RUMergeDateTimeRefiner);
+    obj = c2(ZHHantMergeDateRangeRefiner);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -61,15 +61,14 @@ class RUMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = RUMergeDateTimeRefiner;
-_inherits(RUMergeDateTimeRefiner, fn(_mod10696).default);
+_classCallCheck = ZHHantMergeDateRangeRefiner;
+_inherits(ZHHantMergeDateRangeRefiner, fn(_mod10709).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u0432|,|-)?\\s*$");
-    return regExp;
+    return /^\s*(至|到|\-|\~|～|－|ー)\s*$/i;
   },
 };
 const items = [entry];
 
-export default _createClass(RUMergeDateTimeRefiner, items);
+export default _createClass(ZHHantMergeDateRangeRefiner, items);

@@ -1,14 +1,12 @@
 // _runtime/metro/08793__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8713 from "08713__.js";
-import _modDef8794 from "08794__.js";
+import _modDef8766 from "08766__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const Use = fn;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Use {
+class FeTurbulence {
   constructor() {
     self = this;
-    tmp = closure_3(this, Use);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Use);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeTurbulence);
+    tmp2 = closure_4;
+    obj = closure_4(FeTurbulence);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,50 +45,18 @@ class Use {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Use, _modDef8713);
+_inherits(FeTurbulence, _modDef8766);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    let str = props.href;
-    ({ children, x, y, width, height } = props);
-    if (undefined === str) {
-      str = props.xlinkHref;
-    }
-    let match = str;
-    if (str) {
-      match = str.match(Use(8705).idPattern);
-    }
-    let tmp4 = match;
-    if (match) {
-      tmp4 = match[1];
-    }
-    if (!tmp4) {
-      const _console = console;
-      console.warn(`Invalid \`href\` prop for \`Use\` element, expected a href like "#id", but got: "${str}"`);
-    }
-    const size = { href: tmp4, x, y, width, height };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(Use(8704).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = children;
-    return (
-      <tmp7
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const result = FeTurbulence(8743).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Use, items);
-importDefaultResultResult.displayName = "Use";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = _createClass(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

@@ -1,107 +1,85 @@
 // _runtime/metro/04329__.js
-import _mod4314 from "04314__.js";
-
-const fn = function t(moment) {
-  closure_0 = "jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.".split("_");
-  closure_1 = "jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec".split("_");
-  const items = [
-    /^jan/i,
-    /^feb/i,
-    /^(maart|mrt\.?)$/i,
-    /^apr/i,
-    /^mei$/i,
-    /^jun[i.]?$/i,
-    /^jul[i.]?$/i,
-    /^aug/i,
-    /^sep/i,
-    /^okt/i,
-    /^nov/i,
-    /^dec/i,
-  ];
-  const tmp =
-    /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
-  return moment.defineLocale("nl", {
-    months: "januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december".split("_"),
-    monthsShort(arg0, arg1) {
-      if (arg0) {
-        if (obj.test(arg1)) {
-          let tmp3 = closure_1[arg0.month(arg0)];
-        } else {
-          tmp3 = closure_0[arg0.month(arg0)];
-        }
-        obj = /-MMM-/;
-      } else {
-        return closure_0;
-      }
+if (Intl.ListFormat) {
+  const _Intl = Intl;
+  if (typeof Intl.ListFormat.__addLocaleData === "function") {
+    const _Intl2 = Intl;
+    const obj2 = { data: null, locale: "ja" };
+    const obj3 = { conjunction: null, disjunction: null, unit: null };
+    const obj4 = {
+      long: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+    };
+    obj3.conjunction = obj4;
+    const obj5 = {
+      long: {
+        end: "{0}\u3001\u307E\u305F\u306F{1}",
+        middle: "{0}\u3001{1}",
+        pair: "{0}\u307E\u305F\u306F{1}",
+        start: "{0}\u3001{1}",
+      },
+      narrow: {
+        end: "{0}\u3001\u307E\u305F\u306F{1}",
+        middle: "{0}\u3001{1}",
+        pair: "{0}\u307E\u305F\u306F{1}",
+        start: "{0}\u3001{1}",
+      },
+      short: {
+        end: "{0}\u3001\u307E\u305F\u306F{1}",
+        middle: "{0}\u3001{1}",
+        pair: "{0}\u307E\u305F\u306F{1}",
+        start: "{0}\u3001{1}",
+      },
+    };
+    obj3.disjunction = obj5;
+    const obj6 = {
+      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+    };
+    obj3.unit = obj6;
+    obj2.data = obj3;
+    ListFormat.__addLocaleData(obj2);
+  }
+}
+let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
+if (!prop) {
+  prop = [];
+}
+globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
+const obj = {
+  data: {
+    conjunction: {
+      long: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+      narrow: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
+      short: { end: "{0}\u3001{1}", middle: "{0}\u3001{1}", pair: "{0}\u3001{1}", start: "{0}\u3001{1}" },
     },
-    monthsRegex: tmp,
-    monthsShortRegex: tmp,
-    monthsStrictRegex: /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december)/i,
-    monthsShortStrictRegex: /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
-    monthsParse: items,
-    longMonthsParse: items,
-    shortMonthsParse: items,
-    weekdays: "zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag".split("_"),
-    weekdaysShort: "zo._ma._di._wo._do._vr._za.".split("_"),
-    weekdaysMin: "zo_ma_di_wo_do_vr_za".split("_"),
-    weekdaysParseExact: true,
-    longDateFormat: {
-      LT: "HH:mm",
-      LTS: "HH:mm:ss",
-      L: "DD-MM-YYYY",
-      LL: "D MMMM YYYY",
-      LLL: "D MMMM YYYY HH:mm",
-      LLLL: "dddd D MMMM YYYY HH:mm",
+    disjunction: {
+      long: {
+        end: "{0}\u3001\u307E\u305F\u306F{1}",
+        middle: "{0}\u3001{1}",
+        pair: "{0}\u307E\u305F\u306F{1}",
+        start: "{0}\u3001{1}",
+      },
+      narrow: {
+        end: "{0}\u3001\u307E\u305F\u306F{1}",
+        middle: "{0}\u3001{1}",
+        pair: "{0}\u307E\u305F\u306F{1}",
+        start: "{0}\u3001{1}",
+      },
+      short: {
+        end: "{0}\u3001\u307E\u305F\u306F{1}",
+        middle: "{0}\u3001{1}",
+        pair: "{0}\u307E\u305F\u306F{1}",
+        start: "{0}\u3001{1}",
+      },
     },
-    calendar: {
-      sameDay: "[vandaag om] LT",
-      nextDay: "[morgen om] LT",
-      nextWeek: "dddd [om] LT",
-      lastDay: "[gisteren om] LT",
-      lastWeek: "[afgelopen] dddd [om] LT",
-      sameElse: "L",
+    unit: {
+      long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
+      narrow: { end: "{0}{1}", middle: "{0}{1}", pair: "{0}{1}", start: "{0}{1}" },
+      short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" },
     },
-    relativeTime: {
-      future: "over %s",
-      past: "%s geleden",
-      s: "een paar seconden",
-      ss: "%d seconden",
-      m: "\u00E9\u00E9n minuut",
-      mm: "%d minuten",
-      h: "\u00E9\u00E9n uur",
-      hh: "%d uur",
-      d: "\u00E9\u00E9n dag",
-      dd: "%d dagen",
-      w: "\u00E9\u00E9n week",
-      ww: "%d weken",
-      M: "\u00E9\u00E9n maand",
-      MM: "%d maanden",
-      y: "\u00E9\u00E9n jaar",
-      yy: "%d jaar",
-    },
-    dayOfMonthOrdinalParse: /\d{1,2}(ste|de)/,
-    ordinal(arg0) {
-      if (1 !== arg0) {
-        if (8 !== arg0) {
-          let str = "de";
-        }
-        return arg0 + str;
-      }
-      str = "ste";
-    },
-    week: { dow: 1, doy: 4 },
-  });
+  },
+  locale: "ja",
 };
-if (typeof exports === "object") {
-  if (undefined !== module) {
-    if (typeof require === "function") {
-      fn(_mod4314);
-    }
-  }
-}
-if (typeof globalThis.define === "function") {
-  if (globalThis.define.amd) {
-    globalThis.define(["../moment"], fn);
-  }
-}
-fn(this.moment);
+prop.push(obj);

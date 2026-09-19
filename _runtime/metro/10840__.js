@@ -1,12 +1,13 @@
 // _runtime/metro/10840__.js
-import _mod10831 from "10831__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import AbstractParserWithWordBoundaryChecking from "../10698_AbstractParserWithWordBoundaryChecking.js";
+import now from "../10715_now.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKRelativeDateFormatParser = require;
+let self = this;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,92 +26,122 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKRelativeDateFormatParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, UKRelativeDateFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKRelativeDateFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(UKRelativeDateFormatParser, _mod10831.AbstractParserWithLeftRightBoundaryChecking);
-const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430 \u0446\u044C\u043E\u043C\u0443|\u0432 \u0446\u044C\u043E\u043C\u0443|\u0443 \u0446\u044C\u043E\u043C\u0443|\u0446\u044C\u043E\u0433\u043E)\\s*(" +
-      UKRelativeDateFormatParser(10675).matchAnyPattern(UKRelativeDateFormatParser(10829).TIME_UNIT_DICTIONARY) +
-      ")(?=\\s*)"
-    );
-  },
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const formatted1 = arg1[2].toLowerCase();
-      const str3 = UKRelativeDateFormatParser(10829).TIME_UNIT_DICTIONARY[formatted1];
-      if ("\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-        if ("\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-          if ("\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
-            if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != formatted) {
-              if ("\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                if ("\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                  if ("\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
-                    if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != formatted) {
-                      const parsingComponents = createParsingComponents.createParsingComponents();
-                      const _Date = Date;
-                      const instant = createParsingComponents.reference.instant;
-                      const date = new Date(instant.getTime());
-                      if (str3.match(/week/i)) {
-                        date.setDate(date.getDate() - date.getDay());
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.imply("month", date.getMonth() + 1);
-                        parsingComponents.imply("year", date.getFullYear());
-                        const date1 = date.getDate();
-                      } else if (str3.match(/month/i)) {
-                        date.setDate(1);
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.assign("year", date.getFullYear());
-                        parsingComponents.assign("month", date.getMonth() + 1);
-                      } else if (str3.match(/year/i)) {
-                        date.setDate(1);
-                        date.setMonth(0);
-                        parsingComponents.imply("day", date.getDate());
-                        parsingComponents.imply("month", date.getMonth() + 1);
-                        parsingComponents.assign("year", date.getFullYear());
-                      }
-                      return parsingComponents;
-                    }
-                  }
-                }
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function o(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
               }
-              const obj = {};
-              obj[str3] = -1;
-              const ParsingComponents = UKRelativeDateFormatParser(10678).ParsingComponents;
-              return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
             }
           }
         }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    class ESCasualDateParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, ESCasualDateParser);
+        tmp2 = c2;
+        obj = c2(ESCasualDateParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
       }
-      const ParsingComponents2 = UKRelativeDateFormatParser(10678).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
-    },
-  },
-];
-
-export default _createClass(UKRelativeDateFormatParser, items);
+    }
+    _classCallCheck = ESCasualDateParser;
+    _inherits(ESCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+        return /(ahora|hoy|mañana|ayer)(?=\W|$)/i;
+      },
+    };
+    let items = [entry];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+        const formatted = arg1[0].toLowerCase();
+        if ("ahora" === formatted) {
+          return closure_7.now(reference.reference);
+        } else if ("hoy" === formatted) {
+          return closure_7.today(reference.reference);
+        } else if ("ma\u00F1ana" === formatted) {
+          return closure_7.tomorrow(reference.reference);
+        } else if ("ayer" === formatted) {
+          return closure_7.yesterday(reference.reference);
+        } else {
+          return tmp2;
+        }
+      },
+    };
+    items[1] = entry1;
+    exports.default = _createClass(ESCasualDateParser, items);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

@@ -1,31 +1,50 @@
 // _runtime/metro/07046__.js
-import _mod17 from "00017__.js";
+import cancelAnimation from "../01637_cancelAnimation.js";
+import value2 from "../06865_value2.js";
+import _mod6869 from "06869__.js";
+import BottomSheetContext from "../06875_BottomSheetContext.js";
+import noop from "00019__.js";
 
-const Platform = _mod17.Platform;
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
 
-export const isNewArch = function isNewArch() {
-  if (undefined !== c1) {
-    return c1;
-  } else {
-    try {
-      let prop;
-      if (global != null) {
-        prop = global.nativeFabricUIManager;
-      }
-      let flag = Boolean(prop);
-      if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
-      }
-      if (!flag) {
-        flag = Boolean(__turboModuleProxy);
-      }
-      if (!flag) {
-        flag = false;
-      }
-      c1 = flag;
-      return c1;
-    } catch (err) {
-      c1 = true;
-    }
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod6869.useGestureEventsHandlersDefault;
   }
-};
+  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod6869.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod6869.useGestureHandler(
+    value2.GESTURE_SOURCE.CONTENT,
+    animatedContentGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  const gestureHandler1 = _mod6869.useGestureHandler(
+    value2.GESTURE_SOURCE.HANDLE,
+    animatedHandleGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  const items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(
+    () => ({
+      contentPanGestureHandler: gestureHandler,
+      handlePanGestureHandler: gestureHandler1,
+      animatedGestureSource: sharedValue,
+    }),
+    items,
+  );
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+}

@@ -1,15 +1,12 @@
 // _runtime/metro/14579__.js
-import _mod14531 from "14531__.js";
-import _mod14538 from "14538__.js";
+import _mod14575 from "14575__.js";
 
-let closure_2 = _mod14531("keys");
-
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod14538(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
+export default !_mod14575(() => {
+  const fn = () => {};
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
   }
-  return tmp2;
-};
+  return hasOwnPropertyResult;
+});

@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "8e2bbfe1d3e4356ba435a2b178386105",
-  name: "img_account_sync_epic_light",
+  hash: "1008174ea69b007726dfb135130564cc",
+  name: "img_account_sync_steam_white",
   type: "svg",
 });

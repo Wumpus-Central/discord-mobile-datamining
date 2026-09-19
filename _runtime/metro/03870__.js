@@ -1,38 +1,69 @@
 // _runtime/metro/03870__.js
-let closure_0 = { about: "k\u00F6r\u00FClbel\u00FCl", over: "t\u00F6bb mint", almost: "majdnem", lessthan: "kevesebb mint" };
-let closure_1 = { xseconds: " m\u00E1sodperc", halfaminute: "f\u00E9l perc", xminutes: " perc", xhours: " \u00F3ra", xdays: " nap", xweeks: " h\u00E9t", xmonths: " h\u00F3nap", xyears: " \u00E9v" };
-let closure_2 = { xseconds: { "-1": " m\u00E1sodperccel ezel\u0151tt", 1: " m\u00E1sodperc m\u00FAlva", 0: " m\u00E1sodperce" }, halfaminute: { "-1": "f\u00E9l perccel ezel\u0151tt", 1: "f\u00E9l perc m\u00FAlva", 0: "f\u00E9l perce" }, xminutes: { "-1": " perccel ezel\u0151tt", 1: " perc m\u00FAlva", 0: " perce" }, xhours: { "-1": " \u00F3r\u00E1val ezel\u0151tt", 1: " \u00F3ra m\u00FAlva", 0: " \u00F3r\u00E1ja" }, xdays: { "-1": " nappal ezel\u0151tt", 1: " nap m\u00FAlva", 0: " napja" }, xweeks: { "-1": " h\u00E9ttel ezel\u0151tt", 1: " h\u00E9t m\u00FAlva", 0: " hete" }, xmonths: { "-1": " h\u00F3nappal ezel\u0151tt", 1: " h\u00F3nap m\u00FAlva", 0: " h\u00F3napja" }, xyears: { "-1": " \u00E9vvel ezel\u0151tt", 1: " \u00E9v m\u00FAlva", 0: " \u00E9ve" } };
+import 02119__ from "02119__.js";
+import 02120__ from "02120__.js";
 
-export default function formatDistance(str, arg1, addSuffix) {
-  const match = str.match(/about|over|almost|lessthan/i);
-  if (match) {
-    str = str.replace(match[0], "");
-  }
-  addSuffix = undefined;
-  if (null != addSuffix) {
-    addSuffix = addSuffix.addSuffix;
-  }
-  const formatted = str.toLowerCase();
-  let num;
-  if (null != addSuffix) {
-    num = addSuffix.comparison;
-  }
-  if (!num) {
-    num = 0;
-  }
-  if (true === addSuffix) {
-    let tmp5 = closure_2[formatted][num];
-  } else {
-    tmp5 = closure_1[formatted];
-  }
-  let sum = tmp5;
-  if ("halfaminute" !== formatted) {
-    sum = arg1 + tmp5;
-  }
-  let text = sum;
-  if (match) {
-    text = `${closure_0[str3.toLowerCase(str3)]} ${tmp7}`;
-  }
-  return text;
+if (!module_2119) {
+  const obj2 = { default: module_2119 };
+  let obj = obj2;
+} else {
+  obj = module_2119;
+}
+if (!module_2120) {
+  const obj4 = { default: module_2120 };
+  let obj3 = obj4;
+} else {
+  obj3 = module_2120;
+}
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)(\.)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match);
+    }
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
 };
+const obj6 = { matchPatterns: { narrow: /^(v\.? ?Chr\.?|n\.? ?Chr\.?)/i, abbreviated: /^(v\.? ?Chr\.?|n\.? ?Chr\.?)/i, wide: /^(vor Christus|vor unserer Zeitrechnung|nach Christus|unserer Zeitrechnung)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^v/i, /^n/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? Quartal/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(j[aä]n|feb|mär[z]?|apr|mai|jun[i]?|jul[i]?|aug|sep|okt|nov|dez)\.?/i, wide: /^(januar|februar|märz|april|mai|juni|juli|august|september|oktober|november|dezember)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.narrow = items2;
+const items3 = [/^j[aä]/i, /^f/i, /^mär/i, /^ap/i, /^mai/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[smdmf]/i, short: /^(so|mo|di|mi|do|fr|sa)/i, abbreviated: /^(son?|mon?|die?|mit?|don?|fre?|sam?)\.?/i, wide: /^(sonntag|montag|dienstag|mittwoch|donnerstag|freitag|samstag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { any: null };
+const items4 = [/^so/i, /^mo/i, /^di/i, /^mi/i, /^do/i, /^f/i, /^sa/i];
+obj13.any = items4;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(vm\.?|nm\.?|Mitternacht|Mittag|morgens|nachm\.?|abends|nachts)/i, abbreviated: /^(vorm\.?|nachm\.?|Mitternacht|Mittag|morgens|nachm\.?|abends|nachts)/i, wide: /^(vormittags|nachmittags|Mitternacht|Mittag|morgens|nachmittags|abends|nachts)/i }, defaultMatchWidth: "wide", parsePatterns: { any: { am: /^v/i, pm: /^n/i, midnight: /^Mitte/i, noon: /^Mitta/i, morning: /morgens/i, afternoon: /nachmittags/i, evening: /abends/i, night: /nachts/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
 export default exports.default;

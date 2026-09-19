@@ -1,17 +1,21 @@
 // _runtime/metro/06942__.js
-import ComposedGestureName from "../06907_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06916_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod6931 from "06931__.js";
+import _mod19 from "00019__.js";
+import _modDef6927 from "06927__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+_mod19.useCallback;
 
-export const useNativeGesture = function useNativeGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6931.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
+export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  const items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        previousViewTag.previousViewTag = _modDef6927(previousViewTag.viewRef);
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
+      }
+    }
+  }, items);
 };

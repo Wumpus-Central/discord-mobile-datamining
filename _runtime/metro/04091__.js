@@ -1,26 +1,12 @@
 // _runtime/metro/04091__.js
-import module_4090_mod from "04090__.js";
-import requiredArgs_mod from "../03812_requiredArgs.js";
+import code from "02111__.js";
 
-let module_4090 = module_4090_mod;
-if (!module_4090) {
-  const obj = { default: module_4090 };
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4090;
+  tmp3 = code;
 }
-module_4090 = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function getUnixTime(arg0) {
-  requiredArgs.default(1, arguments);
-  return Math.floor(module_4090.default(arg0) / 1000);
-};
+export default tmp3.default;
 export default exports.default;

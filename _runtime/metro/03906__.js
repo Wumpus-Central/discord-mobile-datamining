@@ -1,24 +1,34 @@
 // _runtime/metro/03906__.js
-let closure_0 = { lessThanXSeconds: { one: "mindre enn ett sekund", other: "mindre enn {{count}} sekunder" }, xSeconds: { one: "ett sekund", other: "{{count}} sekunder" }, halfAMinute: "et halvt minutt", lessThanXMinutes: { one: "mindre enn ett minutt", other: "mindre enn {{count}} minutter" }, xMinutes: { one: "ett minutt", other: "{{count}} minutter" }, aboutXHours: { one: "omtrent en time", other: "omtrent {{count}} timer" }, xHours: { one: "en time", other: "{{count}} timer" }, xDays: { one: "en dag", other: "{{count}} dager" }, aboutXWeeks: { one: "omtrent en uke", other: "omtrent {{count}} uker" }, xWeeks: { one: "en uke", other: "{{count}} uker" }, aboutXMonths: { one: "omtrent en m\u00E5ned", other: "omtrent {{count}} m\u00E5neder" }, xMonths: { one: "en m\u00E5ned", other: "{{count}} m\u00E5neder" }, aboutXYears: { one: "omtrent ett \u00E5r", other: "omtrent {{count}} \u00E5r" }, xYears: { one: "ett \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "over ett \u00E5r", other: "over {{count}} \u00E5r" }, almostXYears: { one: "nesten ett \u00E5r", other: "nesten {{count}} \u00E5r" } };
-
-export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof closure_0[arg0] === "string") {
-    let tmp6 = tmp;
-    if (null != addSuffix) {
-      tmp6 = tmp;
-      if (addSuffix.addSuffix) {
-        if (!addSuffix.comparison) {
-          let text = `${tmp} siden`;
-        }
-        text = `om ${tmp}`;
-      }
+let c0 = ["vas\u00E1rnap", "h\u00E9tf\u0151n", "kedden", "szerd\u00E1n", "cs\u00FCt\u00F6rt\u00F6k\u00F6n", "p\u00E9nteken", "szombaton"];
+const obj = {
+  lastWeek: (arg0) => {
+    let str = "'m\u00FAlt' ";
+    if (c0) {
+      str = "";
     }
-    return tmp6;
-  } else if (1 === arg1) {
-    let one = tmp.one;
-  } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
+    const combined = "".concat(str, "'");
+    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
+  },
+  yesterday: "'tegnap' p'-kor'",
+  today: "'ma' p'-kor'",
+  tomorrow: "'holnap' p'-kor'",
+  nextWeek: (arg0) => {
+    let str = "'m\u00FAlt' ";
+    if (c0) {
+      str = "";
+    }
+    const combined = "".concat(str, "'");
+    return combined.concat(_true[arg0.getUTCDay(arg0)], "' p'-kor'");
+  },
+  other: "P"
+};
+c0 = true;
+
+export default function formatRelative(arg0, arg1) {
+  let tmpResult = tmp;
+  if (typeof obj[arg0] === "function") {
+    tmpResult = tmp(arg1);
   }
+  return tmpResult;
 };
 export default exports.default;

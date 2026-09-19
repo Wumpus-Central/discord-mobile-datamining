@@ -1,7 +1,8 @@
 // _runtime/metro/07051__.js
+import _mod17 from "00017__.js";
 
-export default function _arrayWithHoles(arg0) {
-  if (Array.isArray(arg0)) {
-    return arg0;
-  }
-}
+const StyleSheet = _mod17.StyleSheet;
+
+export const styles = StyleSheet.create({
+  container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 },
+});

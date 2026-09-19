@@ -1,44 +1,103 @@
 // _runtime/metro/05019__.js
+import _mod1454 from "01454__.js";
 import _mod5020 from "05020__.js";
-import DefinePropertyOrThrow from "../05021_DefinePropertyOrThrow.js";
+import _mod5021 from "05021__.js";
+import _mod5022 from "05022__.js";
 
-const tmp = _mod5020("%Reflect.construct%", true);
-let closure_0 = tmp;
-try {
-  const obj = {
-    () => {
+let tmp = typeof Symbol === "function";
+if (typeof Symbol === "function") {
+  let _Symbol = Symbol;
+  tmp = typeof Symbol.iterator === "symbol";
+}
+let closure_2 = tmp;
 
-      }
-  };
-  DefinePropertyOrThrow({}, "", obj);
-  let tmp4 = DefinePropertyOrThrow;
-  if (tmp4) {
-    if (tmp) {
-      let closure_1 = {};
-      const obj3 = {
-        () => {
-                throw closure_1;
-              },
-        "[[Enumerable]]": true
-      };
-      tmp4({}, "length", obj3);
-      module.exports = function IsConstructor(arg0) {
-        try {
-          closure_0(arg0, obj2);
-        } catch (tmp5) {
-          return tmp5 === closure_1;
+export default function ToPrimitive(arg0) {
+  let tmp22;
+  if (_mod5020(arg0)) {
+    return arg0;
+  } else {
+    let str2 = "default";
+    if (arguments.length > 1) {
+      const _String = String;
+      let str3 = "string";
+      if (arguments[1] !== String) {
+        const _Number = Number;
+        let str4 = "default";
+        if (arguments[1] === Number) {
+          str4 = "number";
         }
-      };
-      const obj2 = {};
+        str3 = str4;
+      }
+      str2 = str3;
+    }
+    if (!closure_2) {
+      {
+        let tmp16 = "default" === str2;
+        if (tmp16) {
+          tmp16 = _mod5022(arg0) || _mod5021(arg0);
+          const tmp15 = _mod5022(arg0) || _mod5021(arg0);
+        }
+        let str8 = str2;
+        if (tmp16) {
+          str8 = "string";
+        }
+        let str10 = "number";
+        if ("default" !== str8) {
+          str10 = str8;
+        }
+        if (null == arg0) {
+          const _TypeError4 = TypeError;
+          const typeError = new TypeError("Cannot call method on " + arg0);
+          throw typeError;
+        } else {
+          if (typeof str10 === "string") {
+            const arr = "string" === str10 ? ["toString", "valueOf"] : ["valueOf", "toString"];
+            let num2 = 0;
+            if (0 < arr.length) {
+              while (true) {
+                let tmp18 = arg0[arr[num2]];
+                if (_mod1454(tmp18)) {
+                  let call = tmp18.call;
+                  tmp22 = typeof call === "unknown" ? tmp18() : call(arg0);
+                  if (_mod5020(tmp22)) {
+                    break;
+                  }
+                }
+                num2 = num2 + 1;
+              }
+              return tmp22;
+            }
+            const _TypeError2 = TypeError;
+            const typeError1 = new TypeError("No default value");
+            throw typeError1;
+          }
+          const _TypeError3 = TypeError;
+          const typeError2 = new TypeError('hint must be "string" or "number"');
+          throw typeError2;
+        }
+      }
+    } else {
+      const _Symbol = Symbol;
+      if (Symbol.toPrimitive) {
+        const _Symbol3 = Symbol;
+        let tmp8;
+        if (null != arg0[toPrimitive]) {
+          tmp8 = tmp6;
+          if (!_mod1454(tmp6)) {
+            const _TypeError = TypeError;
+            const _String2 = String;
+            const text = `${tmp6} returned for property `;
+            const typeError3 = new TypeError(
+              `${tmp6} returned for property ` + String(toPrimitive) + " of object " + arg0 + " is not a function",
+            );
+            throw typeError3;
+          }
+        }
+        let valueOf = tmp8;
+      } else if (_mod5021(arg0)) {
+        const _Symbol2 = Symbol;
+        valueOf = Symbol.prototype.valueOf;
+      }
     }
   }
-  module.exports = function IsConstructor(fn) {
-    let prototype = typeof fn === "function";
-    if (typeof fn === "function") {
-      prototype = fn.prototype;
-    }
-    return prototype;
-  };
-} catch (err) {
-  tmp4 = null;
 }

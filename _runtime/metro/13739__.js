@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 177.5,
-  height: 112,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 51,
+  height: 13,
   scales: [2, 3],
-  hash: "047720876ededd06daff5402c5798f99",
-  name: "guild_subscription_no_guilds_light",
+  hash: "224e933808a00a22a9d03c8af389d91f",
+  name: "img_logo_basic_small_dark",
   type: "png",
 });

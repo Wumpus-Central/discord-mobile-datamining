@@ -1,43 +1,62 @@
 // _runtime/metro/13146__.js
-import _mod13045 from "13045__.js";
-import _mod13066 from "13066__.js";
+import _mod13048 from "13048__.js";
+import _mod13075 from "13075__.js";
+import _mod13076 from "13076__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const captureFeedback = function captureFeedback(arg0) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  let currentScope = arg2;
-  if (arg2 === undefined) {
-    currentScope = _mod13066.getCurrentScope();
-  }
-  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
-  const obj4 = {
-    feedback: _mod13045.dropUndefinedKeys({
-      contact_email: email,
-      name,
-      message,
-      url,
-      source,
-      associated_event_id: associatedEventId,
-    }),
-  };
-  ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj2.contexts = obj4;
-  obj2.tags = tags;
-  let client = currentScope;
-  if (currentScope) {
-    client = currentScope.getClient();
-  }
-  if (!client) {
-    client = _mod13066.getClient();
-    const tmp3Result = _mod13066;
-  }
-  if (client) {
-    client.emit("beforeSendFeedback", obj2, obj);
-  }
-  return currentScope.captureEvent(obj2, obj);
+export const profiler = {
+  startProfiler() {
+    const client = _mod13075.getClient();
+    if (client) {
+      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
+      if (integrationByName) {
+        if (tmp6) {
+          const _profiler = integrationByName._profiler;
+          _profiler.start();
+        } else if (_mod13076.DEBUG_BUILD) {
+          const logger3 = _mod13048.logger;
+          logger3.warn("Profiler is not available on profiling integration.");
+        }
+        tmp6 =
+          integrationByName &&
+          undefined !== integrationByName._profiler &&
+          typeof integrationByName._profiler.start === "function" &&
+          typeof integrationByName._profiler.stop === "function";
+      } else if (_mod13076.DEBUG_BUILD) {
+        const logger2 = _mod13048.logger;
+        logger2.warn("ProfilingIntegration is not available");
+      }
+    } else if (_mod13076.DEBUG_BUILD) {
+      const logger = _mod13048.logger;
+      logger.warn("No Sentry client available, profiling is not started");
+    }
+  },
+  stopProfiler() {
+    const client = _mod13075.getClient();
+    if (client) {
+      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
+      if (integrationByName) {
+        if (tmp6) {
+          const _profiler = integrationByName._profiler;
+          _profiler.stop();
+        } else if (_mod13076.DEBUG_BUILD) {
+          const logger3 = _mod13048.logger;
+          logger3.warn("Profiler is not available on profiling integration.");
+        }
+        tmp6 =
+          integrationByName &&
+          undefined !== integrationByName._profiler &&
+          typeof integrationByName._profiler.start === "function" &&
+          typeof integrationByName._profiler.stop === "function";
+      } else if (_mod13076.DEBUG_BUILD) {
+        const logger2 = _mod13048.logger;
+        logger2.warn("ProfilingIntegration is not available");
+      }
+    } else if (_mod13076.DEBUG_BUILD) {
+      const logger = _mod13048.logger;
+      logger.warn("No Sentry client available, profiling is not started");
+    }
+  },
 };

@@ -1,12 +1,25 @@
 // _runtime/metro/14578__.js
-import _mod14516 from "14516__.js";
-import all from "14542__.js";
+import module_14579_mod from "14579__.js";
 
-let _moduleResult = all(_mod14516.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod14516.WeakMap));
-  const obj = /native code/;
+const call = prototype.call;
+let module_14579 = module_14579_mod;
+if (module_14579) {
+  const bind = prototype.bind;
+  module_14579 = bind.bind(call, call);
+}
+if (!module_14579) {
+  module_14579 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
 }
 
-export default _moduleResult;
+export default module_14579;

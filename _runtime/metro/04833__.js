@@ -1,24 +1,13 @@
 // _runtime/metro/04833__.js
-import _mod514 from "00514__.js";
-import _mod523 from "00523__.js";
-import baseIsArguments from "../00533_baseIsArguments.js";
+import _mod545 from "00545__.js";
+import object from "../04834_object.js";
+import _mod4835 from "04835__.js";
 
-let isConcatSpreadable;
-if (_mod523) {
-  isConcatSpreadable = _mod523.isConcatSpreadable;
-}
-
-export default function isFlattenable(arg0) {
-  let tmp3 = _mod514(arg0) || baseIsArguments(arg0);
-  if (!tmp3) {
-    let tmp5 = isConcatSpreadable;
-    if (isConcatSpreadable) {
-      tmp5 = arg0;
+export default function initCloneObject(arg0) {
+  if (typeof arg0.constructor === "function") {
+    if (!_mod545(arg0)) {
+      object(_mod4835(arg0));
     }
-    if (tmp5) {
-      tmp5 = arg0[isConcatSpreadable];
-    }
-    tmp3 = tmp5;
+    return {};
   }
-  return tmp3;
 }

@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9vdmVybGF5L3dlYi92Mw==",
+  httpServerLocation: "/assets/modules/report_to_mod",
   scales: [1],
-  hash: "3981f838e2cd134b3838ace8f5df8cda",
-  name: "bg.messages.3981f838e2cd134b3838ace8f5df8cda.compiled.messages",
+  hash: "ec267ac9bfb9116e20a64f6afed5ac84",
+  name: "ReportToMod.compiled.messages",
   type: "jsona",
 });

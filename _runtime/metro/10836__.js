@@ -1,6 +1,6 @@
 // _runtime/metro/10836__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10696 from "10696__.js";
+import AbstractTimeExpressionParser from "../10705_AbstractTimeExpressionParser.js";
 import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -26,27 +26,12 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class UKMergeDateTimeRefiner {
+class ESTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, UKMergeDateTimeRefiner);
+    tmp = closure_0(this, ESTimeExpressionParser);
     tmp2 = c2;
-    obj = c2(UKMergeDateTimeRefiner);
+    obj = c2(ESTimeExpressionParser);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp7 = globalThis;
@@ -61,15 +46,22 @@ class UKMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = UKMergeDateTimeRefiner;
-_inherits(UKMergeDateTimeRefiner, fn(_mod10696).default);
+_classCallCheck = ESTimeExpressionParser;
+_inherits(ESTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u0432|\u0443|\u043E|,|-)?\\s*$");
-    return regExp;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:aslas|deslas|las?|al?|de|del)\\s*)?";
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:l)?|\\?)\\s*";
+    },
+  },
+];
 
-export default _createClass(UKMergeDateTimeRefiner, items);
+export default _createClass(ESTimeExpressionParser, items);

@@ -1,13 +1,42 @@
 // _runtime/metro/05477__.js
-import registerAsset from "01121__.js";
+const require = globalThis.__r;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "353a91a70e129c6496d346cd0dd42f3d",
-  name: "img_account_sync_skype_white",
-  type: "png",
-});
+const require = arg1;
+const dependencyMap = arg6;
+let closure_2 = [6, 7, 99];
+
+export default {
+  get(buffer, Compression, arg2) {
+    let prop = Compression;
+    if (Compression) {
+      let hasItem = undefined === Compression.Compression;
+      if (!hasItem) {
+        hasItem = closure_2.includes(Compression.Compression.value);
+      }
+      prop = hasItem;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormat;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormat.value;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormatLength;
+    }
+    if (prop) {
+      prop = Compression.JPEGInterchangeFormatLength.value;
+    }
+    if (prop) {
+      Compression.type = "image/jpeg";
+      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
+      buffer = buffer.buffer;
+      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
+      require("05425__.js").deferInit(Compression, "base64", function () {
+        return require("05425__.js").getBase64Image(this.image);
+      });
+      const obj = require("05425__.js");
+    }
+    return Compression;
+  },
+};

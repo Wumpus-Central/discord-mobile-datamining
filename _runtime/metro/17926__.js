@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "6d9d454b0d30ca95b55c7977c96de9cb",
-  name: "StickerPlusIcon",
+  hash: "d505051fb36c757db4674831cf82260a",
+  name: "ic_image_upload",
   type: "png",
 });

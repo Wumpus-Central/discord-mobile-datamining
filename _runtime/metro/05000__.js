@@ -1,19 +1,12 @@
 // _runtime/metro/05000__.js
-import _mod1313 from "01313__.js";
+import requirePromise from "../04999_requirePromise.js";
+import _mod5001 from "05001__.js";
 
-export default function isFinite(num) {
-  let tmp = typeof num === "number";
-  if (typeof num !== "number") {
-    tmp = typeof num === "bigint";
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
+  } else {
+    allSettled = _mod5001;
   }
-  if (tmp) {
-    tmp = !_mod1313(num);
-  }
-  if (tmp) {
-    tmp = num !== Infinity;
-  }
-  if (tmp) {
-    tmp = num !== -Infinity;
-  }
-  return tmp;
+  return allSettled;
 }

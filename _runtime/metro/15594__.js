@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ee3c21ba741f207ef04ca582a5f5f8ba",
-  name: "EmojiNerdFaceIcon",
+  hash: "30252dd38aca1d861a91a71b38c8a502",
+  name: "AccessibilityIcon",
   type: "png",
 });

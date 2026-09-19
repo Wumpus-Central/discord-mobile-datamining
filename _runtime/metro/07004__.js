@@ -1,80 +1,105 @@
 // _runtime/metro/07004__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import value2 from "../06821_value2.js";
-import _mod7005 from "07005__.js";
-import noop_mod from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
+import tagMessage from "../06897_tagMessage.js";
+import _mod6898 from "06898__.js";
 
-let noop = noop_mod;
-({ useMemo: c2, useRef: c3 } = noop);
-let noop = noop_mod;
-({ StatusBar: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetHostingContainerComponent(bottomInset) {
-  ({ containerHeight: require, containerOffset: dependencyMap, topInset } = bottomInset);
-  if (topInset === undefined) {
-    topInset = 0;
+require = fn;
+const dependencyMap = arg6;
+const setGestureState = function t(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
+  } else {
+    const _Error = Error;
+    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    throw error;
   }
-  let num = bottomInset.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  let flag = bottomInset.shouldCalculateHeight;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const detached = bottomInset.detached;
-  const style = bottomInset.style;
-  const tmp = num(null);
-  const ref = tmp;
-  let items = [style, detached, topInset, num];
-  const tmp2 = topInset(() => {
-    const items = [style, _mod7005.styles.container];
-    const rect = { top: topInset, bottom: num, overflow: null };
-    let str = "hidden";
-    if (detached) {
-      str = "visible";
+};
+setGestureState.__closure = { tagMessage: fn(6897).tagMessage };
+setGestureState.__workletHash = 727405139747;
+setGestureState.__initData = {
+  code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}",
+};
+const obj2 = { activate: null, fail: null, deactivate: null };
+const fn2 = function _(arg0) {
+  const ACTIVE = _mod6898.State.ACTIVE;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, ACTIVE);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
     }
-    rect.overflow = str;
-    items[2] = rect;
-    return items;
-  }, items);
-  const obj2 = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
-  let stableCallback;
-  if (flag) {
-    stableCallback = obj.useStableCallback(function handleLayoutEvent(nativeEvent) {
-      const height = nativeEvent.nativeEvent.layout.height;
-      height.value = height;
-      const current = ref.current;
-      if (current != null) {
-        current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-          if (value.value) {
-            num = arg5;
-            let num2 = arg5;
-            if (arg5 == null) {
-              num2 = 0;
-            }
-            const rect = { top: num2, left: 0, right: 0, bottom: null };
-            if (num == null) {
-              num = 0;
-            }
-            let num3 = currentHeight.currentHeight;
-            const sum = num + height;
-            if (num3 == null) {
-              num3 = 0;
-            }
-            rect.bottom = Math.max(0, value2.WINDOW_HEIGHT - (sum + num3));
-            tmp.value = rect;
-          }
-        });
-      }
-    });
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  obj2.onLayout = stableCallback;
-  obj2.style = tmp2;
-  obj2.children = bottomInset.children;
-  return ref(style, obj2);
-});
-memoResult.displayName = "BottomSheetHostingContainer";
+};
+const obj = { tagMessage: fn(6897).tagMessage };
+fn2.__closure = { setGestureState, State: fn(6898).State };
+fn2.__workletHash = 14928129771754;
+fn2.__initData = {
+  code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}",
+};
+obj2.activate = fn2;
+const fn3 = function n(arg0) {
+  const FAILED = _mod6898.State.FAILED;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, FAILED);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, FAILED);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+const obj3 = { setGestureState, State: fn(6898).State };
+fn3.__closure = { setGestureState, State: fn(6898).State };
+fn3.__workletHash = 1703030189599;
+fn3.__initData = {
+  code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}",
+};
+obj2.fail = fn3;
+const fn4 = function s(arg0) {
+  const END = _mod6898.State.END;
+  if (typeof fn === "function") {
+    const _globalThis = globalThis;
+    const _globalThis2 = globalThis;
+    if (globalThis._setGestureStateSync) {
+      _globalThis2._setGestureStateSync(arg0, END);
+    } else if (_globalThis2._setGestureStateAsync) {
+      const _globalThis3 = globalThis;
+      const result = globalThis._setGestureStateAsync(arg0, END);
+    } else {
+      const _Error = Error;
+      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+      throw error;
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+const obj4 = { setGestureState, State: fn(6898).State };
+fn4.__closure = { setGestureState, State: fn(6898).State };
+fn4.__workletHash = 5511283927342;
+fn4.__initData = {
+  code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}",
+};
+obj2.deactivate = fn4;
 
-export const BottomSheetHostingContainer = memoResult;
+export const GestureStateManager = obj2;

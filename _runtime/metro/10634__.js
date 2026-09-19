@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "14e9f26f2a47abbd4dc478a8a748d9e9",
-  name: "history",
+  hash: "a31dcad33e17aebec69c2bc953578b8c",
+  name: "ChevronLargeLeftIcon",
   type: "png",
 });
