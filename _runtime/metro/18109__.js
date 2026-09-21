@@ -1,6 +1,13 @@
 // _runtime/metro/18109__.js
-const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+import registerAsset from "01121__.js";
 
-export default function hasUnicodeWord(arg0) {
-  return re0.test(arg0);
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "bfb98edbbbdba844f1779b23cfef0afa",
+  name: "finishing_touches_light",
+  type: "png",
+});

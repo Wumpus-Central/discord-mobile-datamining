@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/avatars",
-  width: 161,
-  height: 160,
-  scales: [1],
-  hash: "539778d237b9fff9f8baff59e260a9fa",
-  name: "breaddog_1",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16.5,
+  scales: [2, 3],
+  hash: "5854380fa0e0fd8bc925e2e46e9e8246",
+  name: "ic_lock_short_16px",
   type: "png",
 });

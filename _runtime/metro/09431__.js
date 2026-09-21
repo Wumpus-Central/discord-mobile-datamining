@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 120,
   height: 80,
   scales: [2, 3],
-  hash: "ff5825c454c175379e6be98cbe46511a",
-  name: "img_nitro_badge",
+  hash: "17353b23aadfbe0d3f7b9982ef6491bf",
+  name: "img_nitro_file_upload",
   type: "png",
 });

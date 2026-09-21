@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 188.5,
-  height: 121,
+  width: 88,
+  height: 106,
   scales: [2, 3],
-  hash: "a1c720960ae9ac46d7d61ad850607231",
-  name: "img_tier_0_clouds_bigger",
+  hash: "acbb98adccf298ebfe7faeca9c938eda",
+  name: "img_tier_0_mobile",
   type: "png",
 });

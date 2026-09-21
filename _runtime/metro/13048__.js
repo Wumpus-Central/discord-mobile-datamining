@@ -1,72 +1,55 @@
 // _runtime/metro/13048__.js
-import GLOBAL_OBJ from "13049__.js";
+import _mod13049 from "13049__.js";
+import _mod13050 from "13050__.js";
+import stackParserFromStackParserOptions from "../13053_stackParserFromStackParserOptions.js";
 
-const require = globalThis.__r;
+require = arg1;
+const dependencyMap = {};
+let closure_3 = {};
 
-function consoleSandbox(fn) {
-  if ("console" in console(13049).GLOBAL_OBJ) {
-    console = tmp(13049).GLOBAL_OBJ.console;
-    dependencyMap = {};
-    const _Object = Object;
-    const keys = Object.keys(obj);
-    const item = keys.forEach((item) => {
-      closure_1[item] = console[item];
-      console[item] = obj[item];
-    });
+export const addHandler = function addHandler(console, errorCallback) {
+  dependencyMap[console] = dependencyMap[console] || [];
+  dependencyMap[console].push(errorCallback);
+  const tmp2 = dependencyMap[console] || [];
+};
+export const maybeInstrument = function maybeInstrument(console, fn) {
+  if (!closure_3[console]) {
+    tmp2[console] = true;
     try {
-      const item1 = keys.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      return fn();
-    } catch (tmp8) {
-      const item2 = arr.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      throw tmp8;
+      fn();
+    } catch (tmp5) {
+      if (_mod13049.DEBUG_BUILD) {
+        const logger = _mod13050.logger;
+        const _HermesInternal = HermesInternal;
+        logger.error("Error while instrumenting " + tmp, tmp5);
+      }
     }
-  } else {
-    return fn();
   }
-  tmp = console;
-}
-let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
-const originalConsoleMethods = {};
-
-export const CONSOLE_LEVELS = items;
-export { consoleSandbox };
-export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
-  _require = false;
-  const obj = {
-    enable() {
-      c0 = true;
-    },
-    disable() {
-      c0 = false;
-    },
-    isEnabled() {
-      return c0;
-    },
-  };
-  const forEach = items.forEach;
-  if (require("13047__.js").DEBUG_BUILD) {
-    const item = forEach((arg0) => {
-      closure_0 = arg0;
-      obj[arg0] = () => {
-        const args = [...arguments];
-        if (args) {
-          consoleSandbox(() => {
-            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
-            items = ["Sentry Logger [" + args + "]:", ...closure_0];
-            _console[args].apply(items);
-          });
+};
+export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
+  const keys = Object.keys(closure_2);
+  const item = keys.forEach((item) => {
+    dependencyMap[item] = undefined;
+  });
+};
+export const triggerHandlers = function triggerHandlers(arg0, arg1) {
+  let tmp8 = arg0;
+  if (arg0) {
+    tmp8 = dependencyMap[arg0];
+  }
+  if (tmp8) {
+    const iter = tmp8[Symbol.iterator]();
+    if (iter !== undefined) {
+      try {
+        tmp15(arg1);
+      } catch (tmp18) {
+        if (_mod13049.DEBUG_BUILD) {
+          const logger = _mod13050.logger;
+          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
+          const tmp19Result = stackParserFromStackParserOptions;
         }
-      };
-    });
-  } else {
-    const item1 = forEach((arg0) => {
-      obj[arg0] = () => {};
-    });
+      }
+    }
+    const nextResult = iter.next();
   }
-  return obj;
-});
-export { originalConsoleMethods };
+};

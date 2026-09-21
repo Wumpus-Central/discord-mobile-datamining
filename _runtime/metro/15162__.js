@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/parent_tools/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "87391322b2483c883b3f5fd1ac4080a9",
-  name: "ic_eye",
+  width: 244,
+  height: 119,
+  scales: [1, 2, 3],
+  hash: "fef47f26495822d9e37d120cd2650e58",
+  name: "family_center_activity_banner_image_teen",
   type: "png",
 });

@@ -1,26 +1,17 @@
 // _runtime/metro/07271__.js
+import _mod17 from "00017__.js";
 
-export const getModalRouteKeys = (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.reduce((arr, key) => {
-    let options;
-    if (closure_0[key.key] != null) {
-      options = tmp.options;
-    }
-    if (options == null) {
-      options = {};
-    }
-    const presentation = options.presentation;
-    let tmp2 = arr.length && !presentation;
-    if (!tmp2) {
-      tmp2 = "modal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "transparentModal" === presentation;
-    }
-    if (tmp2) {
-      arr = arr.push(key.key);
-    }
-    return arr;
-  }, []);
-};
+const constants = _mod17.Platform.constants;
+if (constants != null) {
+  const reactNativeVersion = constants.reactNativeVersion;
+}
+try {
+  let major;
+  if (reactNativeVersion != null) {
+    major = reactNativeVersion.major;
+  }
+  if (0 !== major) {
+    const InteractionManager = _mod17.InteractionManager;
+  }
+  exports.InteractionManager = InteractionManager;
+} catch (err) {}

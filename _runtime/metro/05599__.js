@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 1000,
-  height: 1000,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "4d8e6567a4b7a6a074dee33bdf087deb",
-  name: "img_account_sync_instagram_white",
+  hash: "1c6dca03661172aa5af3340a0d3930a2",
+  name: "img_account_sync_tiktok_light",
   type: "svg",
 });

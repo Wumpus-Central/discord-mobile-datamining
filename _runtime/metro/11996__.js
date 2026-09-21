@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "59c1068002b82917b518f48d03d4151e",
-  name: "BookmarkOutlineIcon",
+  hash: "77e220fd6c1c82f2ff76cc9449534740",
+  name: "StampXIcon",
   type: "png",
 });

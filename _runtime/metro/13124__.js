@@ -1,28 +1,30 @@
 // _runtime/metro/13124__.js
-import eventFromMessage from "../13108_eventFromMessage.js";
-import _mod13125 from "13125__.js";
-import setupIntegration from "13104__.js";
+import setupIntegration from "13106__.js";
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod13125.applyAggregateErrorsToEvent(
-        eventFromMessage.exceptionFromError,
-        options.stackParser,
-        options.maxValueLength,
-        closure_1,
-        closure_0,
-        exception,
-        originalException,
-      );
-    },
-  };
-});
+const weakMap = new WeakMap();
+
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function () {
+        const items = [...arguments];
+        const originalFunction = closure_1_0(13056).getOriginalFunction(this);
+        const obj = closure_1_0(13056);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
+        }
+        return toString.apply(self, items);
+      };
+    } catch (err) {}
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
+  },
+}));

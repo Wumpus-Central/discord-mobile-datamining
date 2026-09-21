@@ -1,27 +1,22 @@
 // _runtime/metro/05433__.js
-import findOffsets from "../05434_findOffsets.js";
-
-require = arg1;
-const dependencyMap = arg6;
 
 export default {
-  isHeicFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
-          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
-    } else {
-      return false;
-    }
-  },
-  findHeicOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
-  },
+  USE_FILE: true,
+  USE_JFIF: true,
+  USE_PNG_FILE: true,
+  USE_EXIF: true,
+  USE_IPTC: true,
+  USE_XMP: true,
+  USE_ICC: true,
+  USE_MPF: true,
+  USE_PHOTOSHOP: true,
+  USE_THUMBNAIL: true,
+  USE_TIFF: true,
+  USE_JPEG: true,
+  USE_PNG: true,
+  USE_HEIC: true,
+  USE_AVIF: true,
+  USE_WEBP: true,
+  USE_GIF: true,
+  USE_MAKER_NOTES: true,
 };

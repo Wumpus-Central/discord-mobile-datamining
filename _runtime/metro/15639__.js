@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "11800cac78ee381d38bd7d0b06eed7b0",
-  name: "EmojiFaceVomitingIcon",
+  hash: "e323f4aa14afd6838a1b0bdf3903e8c5",
+  name: "EmojiCowboyHatFaceIcon",
   type: "png",
 });

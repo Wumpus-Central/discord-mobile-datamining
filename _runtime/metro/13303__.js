@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ad50b5e2cb199dc282a7ce82f2fb5245",
-  name: "FlashIcon",
+  hash: "5caaadc4fb41849c36d80e2425141f40",
+  name: "NewUserIcon",
   type: "png",
 });

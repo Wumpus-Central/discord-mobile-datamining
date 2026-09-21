@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2d4d5e1376e3dc7d0fa68688da698fba",
-  name: "ic_community_guild_badge_light_24px",
+  hash: "ec67305879cbfc8d1c27dd7c85d614f6",
+  name: "ic_community_guild_badge_dark_24px",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 18,
+  height: 18,
   scales: [2, 3],
-  hash: "4231d943574087a463ee922a711ec0bb",
-  name: "ic_mobile_device",
+  hash: "ade8732f10573e5215aa029a138cb853",
+  name: "watch",
   type: "png",
 });

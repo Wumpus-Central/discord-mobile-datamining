@@ -1,7 +1,19 @@
 // _runtime/metro/13076__.js
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import _mod13051 from "13051__.js";
+import ScopeClass from "../13071_ScopeClass.js";
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+require = arg1;
+const dependencyMap = arg6;
+
+export const getDefaultCurrentScope = function getDefaultCurrentScope() {
+  return _mod13051.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getDefaultIsolationScope = function getDefaultIsolationScope() {
+  return _mod13051.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};

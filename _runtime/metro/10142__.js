@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "a07985aa2246ccd4facb50f3c745ccda",
-  name: "twitter",
+  hash: "19a79c674ca352a1b9c59552160bbdc6",
+  name: "telegram",
   type: "png",
 });

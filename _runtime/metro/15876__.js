@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ca990f51cd6cd3877a91c6ff3ddaf3f5",
-  name: "InventoryIcon",
+  hash: "30f38e9cc06345b39ea1b73343d04289",
+  name: "CarIcon",
   type: "png",
 });

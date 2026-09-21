@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b8e06ae6b6de6ac4efb5803ebe56348e",
-  name: "star",
+  hash: "2e0d6978350694e35552111153599c69",
+  name: "BoostTier3Icon",
   type: "png",
 });

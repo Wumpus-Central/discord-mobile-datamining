@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/uikit",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "37c0d54449905a6c09826b9fd26f5470",
-  name: "SettingsIcon",
+  hash: "41a2185564bcd724a593005f71c6117e",
+  name: "ic_settings_grey_24px",
   type: "png",
 });

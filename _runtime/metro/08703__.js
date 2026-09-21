@@ -1,18 +1,7 @@
 // _runtime/metro/08703__.js
-import _mod514 from "00514__.js";
-import baseIteratee from "../00584_baseIteratee.js";
-import arrayAggregator from "../08704_arrayAggregator.js";
-import baseAggregator from "../08705_baseAggregator.js";
+import baseAssignValue from "../00668_baseAssignValue.js";
+import _mod8704 from "08704__.js";
 
-export default function createAggregator(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0, arg1) => {
-    if (_mod514(arg0)) {
-      let tmpResult = arrayAggregator;
-    } else {
-      tmpResult = baseAggregator;
-    }
-    return tmpResult(arg0, closure_0, baseIteratee(arg1, 2), closure_1 ? closure_1() : {});
-  };
-}
+export default _mod8704((arg0, arg1, arg2) => {
+  baseAssignValue(arg0, arg2, arg1);
+});

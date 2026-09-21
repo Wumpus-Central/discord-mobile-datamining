@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/user_settings/connections/native/two_way_link/images",
-  width: 18,
-  height: 18.5,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "84a5f82b0047a661ec45232254da9031",
-  name: "app_installed_check",
+  hash: "4550be26e4ce88ab0a8f2d917df660a6",
+  name: "ic_xbox_24px",
   type: "png",
 });

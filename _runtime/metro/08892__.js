@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  httpServerLocation: "/assets/images/native/icons/voice_calls/dark_theme",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "adb011bbeb7f189fa87848559cc4fbc7",
-  name: "ic_leave_stage",
+  scales: [2, 3],
+  hash: "530ba220f07acfc32feb554b142fc895",
+  name: "voice_bar_mute_on",
   type: "png",
 });

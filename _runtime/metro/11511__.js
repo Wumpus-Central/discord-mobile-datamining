@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "3446a422668528039c87de87a6054a15",
-  name: "KeyboardIcon",
+  hash: "e71bfb9b43d4bbd3706e078113315f40",
+  name: "ic_image",
   type: "png",
 });

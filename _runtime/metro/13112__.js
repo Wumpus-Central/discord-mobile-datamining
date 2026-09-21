@@ -1,78 +1,32 @@
 // _runtime/metro/13112__.js
-import _mod13072 from "13072__.js";
+import _mod13050 from "13050__.js";
+import _mod13077 from "13077__.js";
+import _mod13078 from "13078__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function makePromiseBuffer(bufferSize) {
-  const items = [];
-  return {
-    $: items,
-    add(fn) {
-      let tmp2 = undefined === promise;
-      if (!tmp2) {
-        tmp2 = items.length < tmp;
-      }
-      if (tmp2) {
-        promise = fn();
-        if (-1 === items.indexOf(promise)) {
-          items.push(promise);
-        }
-        promise
-          .then(() => {
-            let first = items.splice(items.indexOf(promise), 1)[0];
-            if (!first) {
-              first = Promise.resolve(undefined);
-            }
-            return first;
-          })
-          .then(null, () => {
-            let first = items.splice(items.indexOf(promise), 1)[0];
-            if (!first) {
-              first = Promise.resolve(undefined);
-            }
-            return first.then(null, () => {});
-          });
-        return promise;
-      } else {
-        const sentryError = new bufferSize(items[1]).SentryError(
-          "Not adding Promise because buffer limit was reached.",
-        );
-        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
-      }
-    },
-    drain(arg0) {
-      bufferSize = arg0;
-      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
-        closure_0 = fn;
-        closure_1 = arg1;
-        length = length.length;
-        if (length) {
-          const _setTimeout = setTimeout;
-          const timeout = setTimeout(() => {
-            let tmp2 = closure_0;
-            if (closure_0) {
-              tmp2 = tmp > 0;
-            }
-            if (tmp2) {
-              closure_0(false);
-            }
-          }, closure_0);
-          const item = arr.forEach((item) => {
-            _mod13072.resolvedSyncPromise(item).then(() => {
-              diff = diff - 1;
-              if (!diff) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(closure_1_3);
-                fn(true);
-              }
-            }, closure_1);
-          });
-        } else {
-          return fn(true);
-        }
-        arr = length;
+export const initAndBind = function initAndBind(arg0, debug) {
+  if (true === debug.debug) {
+    const obj = _mod13050;
+    if (_mod13078.DEBUG_BUILD) {
+      const logger = obj.logger;
+      logger.enable();
+    } else {
+      obj.consoleSandbox(() => {
+        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
       });
-    },
-  };
-}
+    }
+  }
+  const currentScope = _mod13077.getCurrentScope();
+  currentScope.update(debug.initialScope);
+  const obj4 = new arg0(debug);
+  const currentScope1 = _mod13077.getCurrentScope();
+  currentScope1.setClient(obj4);
+  obj4.init();
+  return obj4;
+};
+export const setCurrentClient = function setCurrentClient(arg0) {
+  const currentScope = _mod13077.getCurrentScope();
+  currentScope.setClient(arg0);
+};

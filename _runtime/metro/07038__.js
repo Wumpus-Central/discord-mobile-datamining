@@ -1,135 +1,150 @@
 // _runtime/metro/07038__.js
-import _mod19 from "00019__.js";
-import value22 from "../06865_value2.js";
-import get_ActivityIndicator from "00017__.js";
+import value2 from "../06870_value2.js";
+import LegacyBaseButton from "../06897_LegacyBaseButton.js";
 
-const useEffect = _mod19.useEffect;
-({ Keyboard: c3, Platform } = get_ActivityIndicator);
-const keyboardDidShow = "keyboardDidShow";
-const keyboardDidHide = "keyboardDidHide";
-let closure_6 = {
-  code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}",
+const require = globalThis.__r;
+
+require = arg1;
+let dependencyMap = arg6;
+let __initData = {
+  code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}",
 };
-let closure_7 = {
-  code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}",
+let __initData2 = {
+  code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}",
 };
-const __initData = {
-  code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}",
+let __initData3 = {
+  code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}",
+};
+let __initData4 = {
+  code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}",
 };
 
-export const useKeyboard = (includeBottomOffset) => {
-  includeBottomOffset = includeBottomOffset.includeBottomOffset;
-  let shouldHandleKeyboardEvents;
-  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
-  let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(
-    includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED,
-  );
-  const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
-  const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
-  const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
-  const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
-  const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const fn = function v(value, arg1, value2, value3, arg4) {
-    value = arg1;
-    if (value === value22.KEYBOARD_STATE.SHOWN) {
-      if (!shouldHandleKeyboardEvents.value) {
-        const items = [value, value, value2, value3];
-        sharedValue5.value = items;
+export const useGestureHandler = (
+  CONTENT,
+  animatedContentGestureState,
+  sharedValue,
+  handleOnStart,
+  handleOnChange,
+  handleOnEnd,
+  handleOnFinalize,
+) => {
+  const _require = CONTENT;
+  dependencyMap = animatedContentGestureState;
+  __initData = sharedValue;
+  __initData2 = handleOnStart;
+  __initData3 = handleOnChange;
+  __initData4 = handleOnEnd;
+  const obj = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
+  class R {
+    constructor(arg0) {
+      closure_1.value = closure_0(closure_1[1]).State.BEGAN;
+      closure_2.value = closure_0;
+      tmp = closure_3(closure_0, CONTENT);
+      return;
+    }
+  }
+  const obj2 = require("cancelAnimation");
+  R.__closure = {
+    state: animatedContentGestureState,
+    State: require("LegacyBaseButton").State,
+    gestureSource: sharedValue,
+    source: CONTENT,
+    onStart: handleOnStart,
+  };
+  R.__workletHash = 16113572067379;
+  R.__initData = __initData;
+  const items = [animatedContentGestureState, sharedValue, CONTENT, handleOnStart];
+  obj.handleOnStart = obj2.useWorkletCallback(R, items);
+  const obj3 = {
+    state: animatedContentGestureState,
+    State: require("LegacyBaseButton").State,
+    gestureSource: sharedValue,
+    source: CONTENT,
+    onStart: handleOnStart,
+  };
+  class U {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp2 = CONTENT;
+        tmp3 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp4 = closure_4;
+        tmp5 = closure_4(tmp, CONTENT);
       }
+      return;
     }
-    if (value !== value22.KEYBOARD_STATE.SHOWN) {
-      value = height.value;
-    }
-    height.value = value;
-    let tmp5 = arg4;
-    if (arg4) {
-      tmp5 = includeBottomOffset;
-    }
-    if (tmp5) {
-      height.value = height.value + arg4;
-    }
-    animationDuration.value = value2;
-    animationEasing.value = value3;
-    state.value = value;
-    sharedValue5.value = [];
+  }
+  U.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    onChange: handleOnChange,
   };
-  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  fn.__closure = {
-    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
-    shouldHandleKeyboardEvents,
-    temporaryCachedKeyboardEvent: sharedValue5,
-    keyboardHeight: height,
-    includeBottomOffset,
-    keyboardAnimationDuration: animationDuration,
-    keyboardAnimationEasing: animationEasing,
-    keyboardState: state,
-  };
-  fn.__workletHash = 7905199978020;
-  fn.__initData = sharedValue5;
-  const workletCallback = obj7.useWorkletCallback(fn, []);
-  let items = [workletCallback];
-  state(() => {
-    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
-      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-      ({ duration, easing } = endCoordinates);
-      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
-        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN,
-        endCoordinates.endCoordinates.height,
-        duration,
-        easing,
-        includeBottomOffset(shouldHandleKeyboardEvents[3]).SCREEN_HEIGHT -
-          endCoordinates.endCoordinates.height -
-          endCoordinates.endCoordinates.screenY,
-      );
-    });
-    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
-      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
-        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN,
-        endCoordinates.endCoordinates.height,
-        endCoordinates.duration,
-        endCoordinates.easing,
-      );
-    });
-    return () => {
-      closure_0.remove();
-      closure_1.remove();
-    };
-  }, items);
-  const obj8 = {
-    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
-    shouldHandleKeyboardEvents,
-    temporaryCachedKeyboardEvent: sharedValue5,
-    keyboardHeight: height,
-    includeBottomOffset,
-    keyboardAnimationDuration: animationDuration,
-    keyboardAnimationEasing: animationEasing,
-    keyboardState: state,
-  };
-  const fn2 = function b() {
-    return shouldHandleKeyboardEvents.value;
-  };
-  fn2.__closure = { shouldHandleKeyboardEvents };
-  fn2.__workletHash = 11615500623565;
-  fn2.__initData = workletCallback;
-  const fn3 = function y(arg0) {
-    let tmp = arg0;
-    value = sharedValue5.value;
-    if (arg0) {
-      tmp = value.length > 0;
+  U.__workletHash = 9050442757159;
+  U.__initData = __initData2;
+  const items1 = [animatedContentGestureState, sharedValue, CONTENT, handleOnChange];
+  obj.handleOnChange = require("cancelAnimation").useWorkletCallback(U, items1);
+  const obj4 = require("cancelAnimation");
+  class C {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp3 = CONTENT;
+        tmp4 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp5 = closure_0;
+        tmp6 = closure_1;
+        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
+        tmp7 = closure_5;
+        tmp8 = closure_5(tmp2, CONTENT);
+      }
+      return;
     }
-    if (tmp) {
-      workletCallback(value[0], value[1], value[2], value[3]);
-    }
+  }
+  const obj5 = require("cancelAnimation");
+  C.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("value2").GESTURE_SOURCE,
+    onEnd: handleOnEnd,
   };
-  fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
-  fn3.__workletHash = 16636741173520;
-  fn3.__initData = __initData;
-  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
-  return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
+  C.__workletHash = 10682034812271;
+  C.__initData = __initData3;
+  const items2 = [animatedContentGestureState, sharedValue, CONTENT, handleOnEnd];
+  obj.handleOnEnd = obj5.useWorkletCallback(C, items2);
+  const obj6 = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("value2").GESTURE_SOURCE,
+    onEnd: handleOnEnd,
+  };
+  class T {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp3 = CONTENT;
+        tmp4 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp5 = closure_0;
+        tmp6 = closure_1;
+        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
+        tmp7 = closure_6;
+        tmp8 = closure_6(tmp2, CONTENT);
+      }
+      return;
+    }
+  }
+  const obj7 = require("cancelAnimation");
+  T.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("value2").GESTURE_SOURCE,
+    onFinalize: handleOnFinalize,
+  };
+  T.__workletHash = 9696716573416;
+  T.__initData = __initData4;
+  const items3 = [animatedContentGestureState, sharedValue, CONTENT, handleOnFinalize];
+  obj.handleOnFinalize = obj7.useWorkletCallback(T, items3);
+  return obj;
 };

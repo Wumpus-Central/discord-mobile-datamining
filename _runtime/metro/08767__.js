@@ -1,14 +1,10 @@
 // _runtime/metro/08767__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8766 from "08766__.js";
-import _modDef8768 from "08768__.js";
-import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const FeColorMatrix = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,59 +23,43 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeColorMatrix {
+class FilterPrimitive {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeColorMatrix);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeColorMatrix);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, FilterPrimitive);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(FilterPrimitive);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.root = null;
+    tmp3Result.refMethod = (root) => {
+      closure_0.root = root;
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(arg0);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeColorMatrix, _modDef8766);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(FeColorMatrix(8765).extractFilter(this.props));
-    const obj2 = FeColorMatrix(8765);
-    const merged1 = Object.assign(FeColorMatrix(8765).extractIn(this.props));
-    const obj3 = FeColorMatrix(8765);
-    const merged2 = Object.assign(FeColorMatrix(8765).extractFeColorMatrix(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
-  },
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(FeColorMatrix, items);
-importDefaultResultResult.displayName = "FeColorMatrix";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.type = "matrix";
-obj.values = "";
-importDefaultResultResult.defaultProps = obj;
+_classCallCheck = FilterPrimitive;
+_inherits(FilterPrimitive, fn(19).Component);
+const importDefaultResultResult = _createClass(FilterPrimitive);
+importDefaultResultResult.defaultPrimitiveProps = {};
 
 export default importDefaultResultResult;

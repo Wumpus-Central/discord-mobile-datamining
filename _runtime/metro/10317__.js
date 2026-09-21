@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/application_streaming",
-  width: 310,
-  height: 124,
+  width: 300,
+  height: 120,
   scales: [2, 3],
-  hash: "727e4438447317963db343e286b23476",
-  name: "img_preview_not_available_light",
+  hash: "af3947e9ef22aa54f0b32942d9a564e5",
+  name: "img_preview_not_available_dark",
   type: "png",
 });

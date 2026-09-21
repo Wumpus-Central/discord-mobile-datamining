@@ -1,14 +1,13 @@
 // _runtime/metro/08777__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8766 from "08766__.js";
-import _modDef8778 from "08778__.js";
+import _modDef8767 from "08767__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeGaussianBlur = fn;
+const FeDropShadow = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +26,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeGaussianBlur {
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+class FeDropShadow {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeGaussianBlur);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeGaussianBlur);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeDropShadow);
+    tmp2 = closure_4;
+    obj = closure_4(FeDropShadow);
+    tmp3 = closure_3;
+    if (closure_8()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,37 +48,40 @@ class FeGaussianBlur {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeGaussianBlur, _modDef8766);
+_inherits(FeDropShadow, _modDef8767);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(FeGaussianBlur(8765).extractFilter(this.props));
-    const obj2 = FeGaussianBlur(8765);
-    const merged1 = Object.assign(FeGaussianBlur(8765).extractIn(this.props));
-    const obj3 = FeGaussianBlur(8765);
-    const merged2 = Object.assign(FeGaussianBlur(8765).extractFeGaussianBlur(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const props = this.props;
+    const _in = props.in;
+    let str = "SourceGraphic";
+    if (undefined !== _in) {
+      str = _in;
+    }
+    const obj = { children: null };
+    ({ dx, dy, result } = props);
+    const items = [
+      timestampProducer(FeDropShadow(8778), { in: str, stdDeviation: props.stdDeviation }),
+      timestampProducer(FeDropShadow(8780), { dx, dy, result: "offsetblur" }),
+      timestampProducer(FeDropShadow(8782), {
+        floodColor: self.props.floodColor,
+        floodOpacity: self.props.floodOpacity,
+      }),
+      timestampProducer(FeDropShadow(8771), { in2: "offsetblur", operator: "in" }),
+    ];
+    const obj3 = { result, children: null };
+    const items1 = [timestampProducer(FeDropShadow(8786), {}), timestampProducer(FeDropShadow(8786), { in: str })];
+    obj3.children = items1;
+    items[4] = React5(FeDropShadow(8784), obj3);
+    obj.children = items;
+    return React5(noop.Fragment, obj);
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
-importDefaultResultResult.defaultProps = obj;
+let items = [entry];
+const importDefaultResultResult = _createClass(FeDropShadow, items);
+importDefaultResultResult.displayName = "FeDropShadow";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

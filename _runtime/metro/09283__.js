@@ -1,4 +1,7 @@
 // _runtime/metro/09283__.js
+import _mod9213 from "09213__.js";
+import _mod9217 from "09217__.js";
+
 const require = globalThis.__r;
 
 const self = this;
@@ -52,47 +55,53 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.ZodIssueCode = undefined;
-    exports.$brand = undefined;
-    exports.config = undefined;
-    exports.ZodFirstPartyTypeKind = undefined;
-    exports.setErrorMap = function setErrorMap(customError) {
-      closure_4.config({ customError });
-    };
-    exports.getErrorMap = function getErrorMap() {
-      return closure_4.config().customError;
-    };
-    let closure_4 = fn(require("09212__.js"));
-    exports.ZodIssueCode = {
-      invalid_type: "invalid_type",
-      too_big: "too_big",
-      too_small: "too_small",
-      invalid_format: "invalid_format",
-      not_multiple_of: "not_multiple_of",
-      unrecognized_keys: "unrecognized_keys",
-      invalid_union: "invalid_union",
-      invalid_key: "invalid_key",
-      invalid_element: "invalid_element",
-      invalid_value: "invalid_value",
-      custom: "custom",
-    };
-    const _Object4 = Object;
-    let obj = {
-      enumerable: true,
-      get() {
-        return require("09212__.js").$brand;
-      },
-    };
-    Object.defineProperty(exports, "$brand", obj);
-    const _Object5 = Object;
-    const obj2 = {
-      enumerable: true,
-      get() {
-        return require("09212__.js").config;
-      },
-    };
-    Object.defineProperty(exports, "config", obj2);
-    exports.ZodFirstPartyTypeKind = {};
+    exports.ZodError = undefined;
+    exports.ZodRealError = undefined;
+    const fnResult = fn(_mod9213);
+    let closure_5 = fn(_mod9217);
+    function initializer(prototype, arg1) {
+      _require = prototype;
+      const $ZodError = require("09213__.js").$ZodError;
+      $ZodError.init(prototype, arg1);
+      prototype.name = "ZodError";
+      Object.defineProperties(prototype, {
+        format: {
+          value(arg0) {
+            return fnResult.formatError(closure_0, arg0);
+          },
+        },
+        flatten: {
+          value(arg0) {
+            return fnResult.flattenError(closure_0, arg0);
+          },
+        },
+        addIssue: {
+          value(arg0) {
+            const issues = prototype.issues;
+            issues.push(arg0);
+            prototype.message = JSON.stringify(prototype.issues, closure_5.jsonStringifyReplacer, 2);
+          },
+        },
+        addIssues: {
+          value(arg0) {
+            const issues = prototype.issues;
+            const items = [...arg0];
+            issues.push.apply(items);
+            prototype.message = JSON.stringify(prototype.issues, closure_5.jsonStringifyReplacer, 2);
+          },
+        },
+        isEmpty: {
+          get() {
+            return 0 === prototype.issues.length;
+          },
+        },
+      });
+    }
+    exports.ZodError = fnResult.$constructor("ZodError", initializer);
+    let obj = { Parent: null };
+    const _Error = Error;
+    obj.Parent = Error;
+    exports.ZodRealError = fnResult.$constructor("ZodError", initializer, obj);
   } else {
     const _Object2 = Object;
   }

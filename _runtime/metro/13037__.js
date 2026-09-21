@@ -1,14 +1,12 @@
 // _runtime/metro/13037__.js
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import hasOwnProperty from "00093__possibleConstructorReturn.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
-import emptyFunction from "04585__.js";
 
-let Link = fn;
+const BackButton = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,19 +25,19 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_2 = ["component", "to", "replace"];
+fn(17).BackHandler;
 const jsx = fn(21).jsx;
-class Link {
+class BackButton {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_4(this, Link);
+    tmp = c2(this, BackButton);
     items1 = [...items];
-    tmp2 = metroRequire;
-    obj = metroRequire(Link);
-    tmp3 = hasOwnProperty;
-    if (closure_8()) {
+    tmp2 = closure_4;
+    obj = closure_4(BackButton);
+    tmp3 = closure_3;
+    if (closure_7()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -48,50 +46,45 @@ class Link {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.handlePress = (defaultPrevented, str) => {
-      if (props.props.onPress) {
-        props = tmp.props;
-        props.onPress(defaultPrevented);
+    tmp3Result.handleBack = () => {
+      let flag = 0 !== closure_0.history.index;
+      if (flag) {
+        const history = closure_0.history;
+        history.goBack();
+        flag = true;
       }
-      if (!defaultPrevented.defaultPrevented) {
-        const to = str.to;
-        if (tmp.props.replace) {
-          const replaced = str.replace(to);
-        } else {
-          str.push(to);
-        }
-      }
+      return flag;
     };
     return tmp3Result;
   }
 }
-_inherits(Link, noop.Component);
+_inherits(BackButton, noop.Component);
 const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ component: dependencyMap, to, replace } = props);
-    Link = _objectWithoutProperties(props, self);
-    return jsx(Link(4588).__HistoryContext.Consumer, {
-      children(arg0) {
-        closure_0 = arg0;
-        const obj = {};
-        const merged = Object.assign(closure_0);
-        obj.onPress = function onPress(arg0) {
-          return self.handlePress(arg0, closure_0);
-        };
-        return <closure_1 />;
-      },
-    });
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const listener = BackHandler.addEventListener("hardwareBackPress", this.handleBack);
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Link, items);
-importDefaultResultResult.defaultProps = { component: fn(17).TouchableHighlight, replace: false };
-let obj = { onPress: emptyFunction.func, component: emptyFunction.elementType, replace: emptyFunction.bool, to: null };
-let items1 = [emptyFunction.string, emptyFunction.object];
-obj.to = emptyFunction.oneOfType(items1);
-importDefaultResultResult.propTypes = obj;
+let items = [
+  entry,
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      const removed = BackHandler.removeEventListener("hardwareBackPress", this.handleBack);
+    },
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      return jsx(BackButton(4588).__HistoryContext.Consumer, {
+        children(history) {
+          self.history = history;
+          return self.props.children || null;
+        },
+      });
+    },
+  },
+];
 
-export default importDefaultResultResult;
+export default _createClass(BackButton, items);

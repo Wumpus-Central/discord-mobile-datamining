@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "31757ea45ee4fb60779fd700caf7d93e",
-  name: "ic_nitro_wheel_gradient_purple",
+  hash: "4f5dc667b92ff05a99d9028260a9bf5b",
+  name: "ImageSparkleIcon",
   type: "png",
 });

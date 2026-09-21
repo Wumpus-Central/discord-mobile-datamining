@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 88,
-  height: 80,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 375,
+  height: 212,
   scales: [2, 3],
-  hash: "6d22576d9f7927048034966be0fe9d4c",
-  name: "channel_setup_darker",
+  hash: "032d875e012f721658a4a3ff0300b2d2",
+  name: "intro_header_light",
   type: "png",
 });

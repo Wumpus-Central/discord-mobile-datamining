@@ -1,4 +1,6 @@
 // _runtime/metro/06927__.js
 import _mod17 from "00017__.js";
 
-export default _mod17.findNodeHandle;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+
+export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");

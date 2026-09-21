@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 120,
   height: 80,
   scales: [2, 3],
-  hash: "0e96bcd2b2f1118c31b249938bd6d191",
-  name: "img_nitro_animated_avatar",
+  hash: "8c6e7658ce5157dd6c415ee437c71c87",
+  name: "img_nitro_animated_emoji",
   type: "png",
 });

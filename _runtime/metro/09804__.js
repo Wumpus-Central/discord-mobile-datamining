@@ -1,116 +1,164 @@
 // _runtime/metro/09804__.js
-import _mod17 from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import noop_mod from "00019__.js";
-import module_9805_mod from "09805__.js";
+import colorToHex from "../09809_colorToHex.js";
+import noop from "00019__.js";
 
-const require = globalThis.__r;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Appearance: c2, Platform, Text } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const DatePickerAndroid = fn(9805).DatePickerAndroid;
+function getTheme(arg0) {}
+function getDividerColor(arg0) {}
+function getTextColor(arg0) {}
+function getButtonColor(arg0) {}
+function getTitle(arg0) {}
 
-let noop = noop_mod;
-({ useCallback: c2, useEffect: c3, useRef: closure_4 } = noop);
-let noop = noop_mod;
-const NativeEventEmitter = _mod17.NativeEventEmitter;
-const jsx = jsxProd.jsx;
-let module_9805 = module_9805_mod;
-const nativeComponent = module_9805.getNativeComponent();
-let module_9805 = module_9805_mod;
-const nativeModule = module_9805.getNativeModule();
-const memoResult = noop.memo((date) => {
-  _require = date;
-  const current = closure_4(Math.random().toString()).current;
-  const items = [date, current];
-  let tmp = closure_2((nativeEvent) => {
-    nativeEvent = nativeEvent.nativeEvent;
-    ({ date, id } = nativeEvent);
-    if (null === id) {
-      if (typeof fromIsoWithTimeZoneOffset === "function") {
-        const _Date = Date;
-        const date1 = new Date(date);
-        if (date.onDateChange) {
-          date.onDateChange(date1);
-        }
-        if (date.onDateStringChange) {
-          date.onDateStringChange(tmp);
-        }
+export default noop.memo((theme) => {
+  const obj = {};
+  const merged = Object.assign(theme);
+  colorToHex;
+  if (typeof getTextColor === "function") {
+    if (typeof getTheme === "function") {
+      if (theme.theme) {
+        let str = theme.theme;
       } else {
-        throw new TypeError("Trying to call a non-function");
-      }
-    }
-  }, items);
-  closure_2 = tmp;
-  const items1 = [date, current];
-  const tmp2 = closure_2((nativeEvent) => {
-    nativeEvent = nativeEvent.nativeEvent;
-    const id = nativeEvent.id;
-    let tmp = null !== id;
-    if (tmp) {
-      tmp = id !== current;
-    }
-    if (!tmp) {
-      if (date.onStateChange) {
-        date.onStateChange(nativeEvent.spinnerState);
-      }
-    }
-  }, items1);
-  closure_3 = tmp2;
-  const items2 = [tmp, tmp2];
-  closure_3(() => {
-    const obj = new NativeEventEmitter(closure_8);
-    obj.addListener("dateChange", closure_2);
-    obj.addListener("spinnerStateChange", closure_3);
-    return () => {
-      obj.removeAllListeners("dateChange");
-      obj.removeAllListeners("spinnerStateChange");
-    };
-  }, items2);
-  let obj = {};
-  const merged = Object.assign(date);
-  if (typeof toIsoWithTimeZoneOffset === "function") {
-    let toISOStringResult;
-    if (date) {
-      toISOStringResult = date.toISOString();
-    }
-    obj.date = toISOStringResult;
-    obj.id = current;
-    const minimumDate = date.minimumDate;
-    if (typeof toIsoWithTimeZoneOffset === "function") {
-      let toISOStringResult1;
-      if (minimumDate) {
-        toISOStringResult1 = minimumDate.toISOString();
-      }
-      obj.minimumDate = toISOStringResult1;
-      const maximumDate = date.maximumDate;
-      if (typeof toIsoWithTimeZoneOffset === "function") {
-        let toISOStringResult2;
-        if (maximumDate) {
-          toISOStringResult2 = maximumDate.toISOString();
-        }
-        obj.maximumDate = toISOStringResult2;
-        if (typeof getTimezoneOffsetInMinutes === "function") {
-          let prop;
-          if (null != date.timeZoneOffsetInMinutes) {
-            prop = date.timeZoneOffsetInMinutes;
+        str = "auto";
+        if (React2) {
+          const colorScheme = React2.getColorScheme();
+          let tmp11;
+          if (null !== colorScheme) {
+            tmp11 = colorScheme;
           }
-          obj.timezoneOffsetInMinutes = prop;
-          if (typeof getStyle === "function") {
-            let num = 310;
-            if ("time" === date.mode) {
-              num = 240;
+          str = tmp11;
+        }
+      }
+      let str2 = "white";
+      let str4 = "white";
+      if ("dark" !== str) {
+        let str6;
+        if ("light" === str) {
+          str6 = "black";
+        }
+        str4 = str6;
+      }
+      obj.textColor = tmp7(str4);
+      colorToHex;
+      if (typeof getDividerColor === "function") {
+        if (theme.dividerColor) {
+          let dividerColor = theme.dividerColor;
+        } else if (typeof getTheme === "function") {
+          if (theme.theme) {
+            let str7 = theme.theme;
+          } else {
+            str7 = "auto";
+            if (React2) {
+              const colorScheme1 = React2.getColorScheme();
+              let tmp17;
+              if (null !== colorScheme1) {
+                tmp17 = colorScheme1;
+              }
+              str7 = tmp17;
             }
-            const size = { width: num, height: 180 };
-            const items3 = [size, date.style];
-            obj.style = items3;
-            obj.onChange = tmp;
-            obj.onStateChange = tmp2;
-            const obj2 = { props: obj, id: current };
-            const modal = require("09807__.js").useModal(obj2);
-            let tmp16 = null;
-            if (!date.modal) {
-              const obj4 = {};
-              const merged1 = Object.assign(obj);
-              tmp16 = <closure_7 />;
+          }
+          dividerColor = str2;
+          if ("dark" !== str7) {
+            let str9;
+            if ("light" === str7) {
+              str9 = "black";
             }
-            return tmp16;
+            dividerColor = str9;
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+        obj.dividerColor = tmp13(dividerColor);
+        colorToHex;
+        if (typeof getButtonColor === "function") {
+          if (theme.buttonColor) {
+            str2 = theme.buttonColor;
+          } else if (typeof getTheme === "function") {
+            if (theme.theme) {
+              let str10 = theme.theme;
+            } else {
+              str10 = "auto";
+              if (React2) {
+                const colorScheme2 = React2.getColorScheme();
+                let tmp23;
+                if (null !== colorScheme2) {
+                  tmp23 = colorScheme2;
+                }
+                str10 = tmp23;
+              }
+            }
+            if ("dark" !== str10) {
+              let str12;
+              if ("light" === str10) {
+                str12 = "black";
+              }
+              str2 = str12;
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          obj.buttonColor = tmp19(str2);
+          if (typeof getTheme === "function") {
+            if (theme.theme) {
+              let str13 = theme.theme;
+            } else {
+              str13 = "auto";
+              if (React2) {
+                const colorScheme3 = React2.getColorScheme();
+                let tmp26;
+                if (null !== colorScheme3) {
+                  tmp26 = colorScheme3;
+                }
+                str13 = tmp26;
+              }
+            }
+            obj.theme = str13;
+            if (typeof getTitle === "function") {
+              let title = theme.title;
+              let str14 = "";
+              let str15 = "";
+              if (null !== title) {
+                if (!title) {
+                  let str16 = "Select date";
+                  if ("time" === tmp28) {
+                    str16 = "Select time";
+                  }
+                  title = str16;
+                }
+                str15 = title;
+              }
+              obj.title = str15;
+              let str18 = "Confirm";
+              if (theme.confirmText) {
+                str18 = theme.confirmText;
+              }
+              obj.confirmText = str18;
+              let str19 = "Cancel";
+              if (theme.cancelText) {
+                str19 = theme.cancelText;
+              }
+              obj.cancelText = str19;
+              let num = 1;
+              if (theme.minuteInterval) {
+                num = theme.minuteInterval;
+              }
+              obj.minuteInterval = num;
+              let str20 = "datetime";
+              if (theme.mode) {
+                str20 = theme.mode;
+              }
+              obj.mode = str20;
+              if (null != theme.timeZoneOffsetInMinutes) {
+                str14 = theme.timeZoneOffsetInMinutes.toString();
+              }
+              obj.timeZoneOffsetInMinutes = str14;
+              return <DatePickerAndroid {...obj} />;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -126,12 +174,4 @@ const memoResult = noop.memo((date) => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  const str = Math.random();
 });
-function getStyle(arg0) {}
-function getTimezoneOffsetInMinutes(arg0) {}
-function toIsoWithTimeZoneOffset(arg0) {}
-function fromIsoWithTimeZoneOffset(arg0) {}
-
-export default memoResult;
-export const DatePickerAndroid = memoResult;

@@ -1,137 +1,36 @@
 // _runtime/metro/07142__.js
-import _mod7139 from "07139__.js";
-import noop from "00019__.js";
-
-({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-
-export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
-  closure_0 = recyclerViewManager;
-  closure_1 = arg1;
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(false);
-  hasOwnProperty(Date.now());
-  const data = recyclerViewManager.props.data;
-  const _requestAnimationFrame = _mod7139.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  let num = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num = recyclerViewManager.getWindowSize().height;
-  }
-  let num2 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num2 = recyclerViewManager.getChildContainerDimensions().height;
-  }
-  let num3 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num3 = recyclerViewManager.getWindowSize().width;
-  }
-  let num4 = 0;
-  if (recyclerViewManager.hasLayout()) {
-    num4 = recyclerViewManager.getChildContainerDimensions().width;
-  }
-  const items = [recyclerViewManager];
-  const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
-  const checkBounds = React2(() => {
-    closure_5.current = Date.now();
-    const props = closure_0.props;
-    ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } =
-      props);
-    let num;
-    if (maintainVisibleContentPosition != null) {
-      num = maintainVisibleContentPosition.autoscrollToBottomThreshold;
+function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
+  try {
+    const iter = arg0[arg5](arg6);
+    value = iter.value;
+    if (iter.done) {
+      fn(value);
+    } else {
+      const resolved = Promise.resolve(value);
+      resolved.then(arg3, arg4);
     }
-    if (num == null) {
-      num = -1;
-    }
-    if (closure_0.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = closure_0.getAbsoluteLastScrollOffset();
-      const size = closure_0.getChildContainerDimensions();
-      const size2 = closure_0.getWindowSize();
-      const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + closure_0.firstItemOffset;
-      if (tmp3 > 0) {
-        if (onEndReached) {
-          if (onEndReachedThreshold == null) {
-            onEndReachedThreshold = 0.5;
-          }
-          const _Math = Math;
-          const result = onEndReachedThreshold * tmp3;
-          const tmp6 = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result;
-          let tmp7 = tmp6;
-          if (tmp6) {
-            tmp7 = !ref.current;
-          }
-          if (tmp7) {
-            ref.current = true;
-            onEndReached();
-          }
-          ref.current = tmp6;
-        }
-        if (onStartReached) {
-          if (onStartReachedThreshold == null) {
-            onStartReachedThreshold = 0.2;
-          }
-          let tmp13 = tmp12;
-          if (absoluteLastScrollOffset <= onStartReachedThreshold * tmp3) {
-            tmp13 = !ref2.current;
-          }
-          if (tmp13) {
-            ref2.current = true;
-            onStartReached();
-          }
-          ref2.current = absoluteLastScrollOffset <= onStartReachedThreshold * tmp3;
-        }
-        if (!tmp2) {
-          if (num >= 0) {
-            const _Math2 = Math;
-            const result1 = num * tmp3;
-            closure_4.current = Math.ceil(absoluteLastScrollOffset + tmp3) >= sum - result1;
-          }
-        }
+  } catch (tmp13) {
+    fn2(tmp13);
+  }
+}
+
+export default function _asyncToGenerator(arg0) {
+  closure_0 = arg0;
+  return function () {
+    const self = this;
+    closure_1 = arguments;
+    return new Promise((arg0, arg1) => {
+      _self = arg0;
+      closure_1 = arg1;
+      function _next(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
       }
-    }
-  }, items);
-  const tmp2 = React2(() => {
-    let current = props.isOffsetProjectionEnabled;
-    if (current) {
-      current = ref3.current;
-    }
-    if (current) {
-      ref3.current = false;
-      _requestAnimationFrame(() => {
-        const maintainVisibleContentPosition = props.props.maintainVisibleContentPosition;
-        let flag;
-        if (maintainVisibleContentPosition != null) {
-          flag = maintainVisibleContentPosition.animateAutoScrollToBottom;
-        }
-        if (flag == null) {
-          flag = true;
-        }
-        const current = ref.current;
-        if (current != null) {
-          if (flag) {
-            flag = !props.ignoreScrollEvents;
-          }
-          const obj = { animated: flag };
-          current.scrollToEnd(obj);
-        }
-      });
-    }
-  }, items1);
-  closure_7 = tmp2;
-  const items2 = [data];
-  React4(() => {
-    closure_2.current = false;
-  }, items2);
-  const items3 = [data, tmp2, num, num3];
-  React3(() => {
-    closure_7();
-  }, items3);
-  const items4 = [num2, num4, recyclerViewManager.firstItemOffset, tmp2];
-  React3(() => {
-    if (Date.now() - ref4.current >= 100) {
-      closure_7();
-    }
-  }, items4);
-  return { checkBounds };
-};
+      function _throw(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
+      }
+      const applyResult = _self.apply(self, closure_1);
+      closure_2 = applyResult;
+      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
+    });
+  };
+}

@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/plan_selection",
-  width: 200,
-  height: 90,
+  width: 80,
+  height: 80,
   scales: [1],
-  hash: "d354a91b7a8b3b1cf9e4de447250911f",
-  name: "yearly_upsell_wumpus",
+  hash: "e2676a24ea3247f11452fad9b442341d",
+  name: "img_wumpus_nitro",
   type: "png",
 });

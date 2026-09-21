@@ -1,14 +1,11 @@
 // _runtime/metro/07026__.js
-import _modDef7025 from "07025__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import hasOwnProperty from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const TouchableNativeFeedback = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,91 +24,50 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let closure_2 = ["style"];
-const Platform = fn(17).Platform;
-const jsx = fn(21).jsx;
-class TouchableNativeFeedback {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(arg0, arg1) {
+  return arg0;
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 12945462865583;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}",
+};
+class ManualGesture {
   constructor() {
     self = this;
-    tmp = closure_4(this, TouchableNativeFeedback);
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableNativeFeedback);
-    tmp3 = hasOwnProperty;
-    if (closure_9()) {
-      tmp7 = globalThis;
+    tmp = closure_0(this, ManualGesture);
+    tmp2 = c2;
+    obj = c2(ManualGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.handlerName = "ManualGestureHandler";
+    return tmp3Result;
   }
 }
-_inherits(TouchableNativeFeedback, fn(19).Component);
+_classCallCheck = ManualGesture;
+_inherits(ManualGesture, fn(6918).ContinousBaseGesture);
 const entry = {
-  key: "getExtraButtonProps",
-  value: function getExtraButtonProps() {
-    const obj = {};
-    let rippleRadius = this.props.background;
-    if (!rippleRadius) {
-      obj.foreground = this.props.useForeground;
-      return obj;
-    } else {
-      if ("RippleAndroid" === rippleRadius.type) {
-        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
-      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
-        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
-      }
-      rippleRadius = rippleRadius.rippleRadius;
-      obj.rippleRadius = rippleRadius;
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
     }
+    const items = [arg0];
+    return fn(items);
   },
 };
-const items = [
-  entry,
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let style = props.style;
-      if (undefined === style) {
-        style = {};
-      }
-      const obj = {};
-      const tmp = _objectWithoutProperties(props, closure_2);
-      const merged = Object.assign(tmp);
-      obj.style = style;
-      obj.extraButtonProps = self.getExtraButtonProps();
-      return jsx(TouchableNativeFeedback(7025), {});
-    },
-  },
-];
-const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
-let obj = {};
-let merged = Object.assign(_modDef7025.defaultProps);
-obj.useForeground = true;
-obj.extraButtonProps = { rippleColor: null };
-importDefaultResultResult.defaultProps = obj;
-importDefaultResultResult.SelectableBackground = (rippleRadius) => ({
-  type: "ThemeAttrAndroid",
-  attribute: "selectableItemBackground",
-  rippleRadius,
-});
-importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({
-  type: "ThemeAttrAndroid",
-  attribute: "selectableItemBackgroundBorderless",
-  rippleRadius,
-});
-importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({
-  type: "RippleAndroid",
-  color,
-  borderless,
-  rippleRadius,
-});
-importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
+let items = [entry];
 
-export default importDefaultResultResult;
+export const ManualGesture = _createClass(ManualGesture, items);

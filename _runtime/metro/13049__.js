@@ -1,24 +1,7 @@
 // _runtime/metro/13049__.js
-import _mod13050 from "13050__.js";
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const GLOBAL_OBJ = globalThis;
-export const getGlobalSingleton = function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
-  let tmp = arg2;
-  if (!arg2) {
-    tmp = globalThis;
-  }
-  const tmp2 = tmp.__SENTRY__ || {};
-  tmp.__SENTRY__ = tmp2;
-  const tmp3 = tmp2[_mod13050.SDK_VERSION] || {};
-  tmp2[_mod13050.SDK_VERSION] = tmp3;
-  let tmp4 = tmp3[globalMetricsAggregators];
-  if (!tmp4) {
-    const tmp6 = fn();
-    tmp3[globalMetricsAggregators] = tmp6;
-    tmp4 = tmp6;
-  }
-  return tmp4;
-};
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

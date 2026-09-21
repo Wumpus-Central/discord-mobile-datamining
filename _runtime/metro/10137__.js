@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "cc54bd683628b7a915bf80d8d6517c1e",
-  name: "mail",
+  hash: "1d1181e321dc8059ed1b1ce7cbbde121",
+  name: "ic_chat_bubble_32px",
   type: "png",
 });

@@ -1,17 +1,11 @@
 // _runtime/metro/14598__.js
-import _mod14589 from "14589__.js";
-import _mod14597 from "14597__.js";
-import _mod14599 from "14599__.js";
-import _mod14600 from "14600__.js";
+import _mod14577 from "14577__.js";
 
-export default _mod14589
-  ? (arg0) => typeof arg0 === "symbol"
-  : (arg0) => {
-      const tmp3 = _mod14599("Symbol");
-      let tmpResultResult = _mod14597(tmp3);
-      if (tmpResultResult) {
-        tmpResultResult = _mod14600(tmp3.prototype, Object(arg0));
-        const tmpResult = _mod14600;
-      }
-      return tmpResultResult;
-    };
+const tmp = _mod14577.navigator && _mod14577.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
+
+export default str;

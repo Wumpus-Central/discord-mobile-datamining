@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/guild_sidebar",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ff39eeadf9f2f52f7094ca9f3833e97b",
-  name: "img_guild_folder",
+  hash: "b5a936051680509c0100afebb2debea8",
+  name: "ShieldUserIcon",
   type: "png",
 });

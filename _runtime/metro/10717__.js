@@ -1,14 +1,13 @@
 // _runtime/metro/10717__.js
-import _mod10690 from "10690__.js";
-import repeatedTimeunitPattern from "../10691_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10698_AbstractParserWithWordBoundaryChecking.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import AbstractParserWithWordBoundaryChecking from "../10699_AbstractParserWithWordBoundaryChecking.js";
+import now from "../10716_now.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const ENWeekdayParser = require;
+let self = this;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,90 +26,134 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10690.WEEKDAY_DICTIONARY) +
-    "|weekend|weekday)(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)",
-  "i",
-);
-class ENWeekdayParser {
-  constructor() {
-    self = this;
-    tmp = c2(this, ENWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_inherits(ENWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
-      let str2 = "last";
-      if ("last" != formatted) {
-        str2 = "last";
-        if ("past" != formatted) {
-          str2 = "next";
-          if ("next" != formatted) {
-            str2 = null;
-            if ("this" == formatted) {
-              str2 = "this";
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function c(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
             }
           }
         }
-      }
-      const formatted1 = arg1[2].toLowerCase();
-      if (undefined !== ENWeekdayParser(10690).WEEKDAY_DICTIONARY[formatted1]) {
-        let sum = ENWeekdayParser(10690).WEEKDAY_DICTIONARY[formatted1];
-      } else if ("weekend" == formatted1) {
-        if ("last" == str2) {
-          let SATURDAY = ENWeekdayParser(10696).Weekday.SUNDAY;
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    const re8 = /(?:this)?\s{0,3}(morning|afternoon|evening|night|midnight|midday|noon)(?=\W|$)/i;
+    class ENCasualTimeParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, ENCasualTimeParser);
+        tmp2 = c2;
+        obj = c2(ENCasualTimeParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
         } else {
-          SATURDAY = ENWeekdayParser(10696).Weekday.SATURDAY;
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
         }
-        sum = SATURDAY;
-      } else if ("weekday" != formatted1) {
-        return null;
-      } else {
-        reference = reference.reference;
-        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
-        const day = dateWithAdjustedTimezone.getDay();
-        if (day != ENWeekdayParser(10696).Weekday.SUNDAY) {
-          if (day != ENWeekdayParser(10696).Weekday.SATURDAY) {
-            const diff = day - 1;
-            sum = (("last" == str2 ? diff - 1 : diff + 1) % 5) + 1;
+        return tmp3(self, constructResult);
+      }
+    }
+    _classCallCheck = ENCasualTimeParser;
+    _inherits(ENCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern() {
+        return re8;
+      },
+    };
+    let items = [entry];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+        const formatted = arg1[1].toLowerCase();
+        if ("afternoon" === formatted) {
+          let afternoonResult = closure_7.afternoon(reference.reference);
+        } else {
+          if ("evening" !== formatted) {
+            if ("night" !== formatted) {
+              if ("midnight" === formatted) {
+                afternoonResult = closure_7.midnight(reference.reference);
+              } else if ("morning" === formatted) {
+                afternoonResult = closure_7.morning(reference.reference);
+              } else if ("noon" === formatted) {
+                afternoonResult = closure_7.noon(reference.reference);
+              } else {
+                afternoonResult = null;
+              }
+            }
           }
+          afternoonResult = closure_7.evening(reference.reference);
         }
-        if ("last" == str2) {
-          let MONDAY = ENWeekdayParser(10696).Weekday.FRIDAY;
-        } else {
-          MONDAY = ENWeekdayParser(10696).Weekday.MONDAY;
+        if (afternoonResult) {
+          afternoonResult.addTag("parser/ENCasualTimeParser");
         }
-        sum = MONDAY;
-      }
-      return ENWeekdayParser(10718).createParsingComponentsAtWeekday(reference.reference, sum, str2);
-    },
-  },
-];
-
-export default _createClass(ENWeekdayParser, items);
+        return afternoonResult;
+      },
+    };
+    items[1] = entry1;
+    exports.default = _createClass(ENCasualTimeParser, items);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

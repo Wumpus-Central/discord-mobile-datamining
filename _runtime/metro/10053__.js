@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/game_console/images",
-  width: 126,
-  height: 118,
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "02b1067b85b45dd047c8c944ed8c1d6e",
-  name: "devices_not_found",
+  hash: "238a115f1ad03e07bad0181bb5c110d4",
+  name: "ic_playstation_device_ps5_32px",
   type: "png",
 });

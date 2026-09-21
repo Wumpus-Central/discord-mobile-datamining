@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d54bf56841039bee9b0ab658257be5d8",
-  name: "EmojiZanyFaceIcon",
+  hash: "db35345983d690e62cbfaf36e7ceaebb",
+  name: "EmojiSquintingFaceWithTongueIcon",
   type: "png",
 });

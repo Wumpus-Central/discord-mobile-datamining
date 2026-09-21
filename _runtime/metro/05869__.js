@@ -1,4 +1,9 @@
 // _runtime/metro/05869__.js
-import _mod5870 from "05870__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default _mod5870;
+({ PixelRatio, Platform } = get_ActivityIndicator);
+
+export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
+  ({ width, height } = layout);
+  return 64 + headerStatusBarHeight;
+};

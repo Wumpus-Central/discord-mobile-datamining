@@ -1,2057 +1,491 @@
 // _runtime/metro/14660__.js
-import _slicedToArray from "00032__.js";
-
-function invariant(arg0, arg1) {
-  {
-    const _Error = Error;
+const exports = unsigned_long_long;
+function _(arg0, context) {
+  let str = "Value";
+  if (context) {
+    str = "Value";
+    if (context.context) {
+      str = context.context;
+    }
   }
-  if (!arg0) {
-    const _Error1 = new _Error("Expected locale to not have a Unicode locale extension");
-    throw _Error1;
-  }
+  return "" + str + " " + "is not a view on an DataView object" + ".";
 }
-function isMatched(region, str, arg2) {
-  [tmp2, tmp3, arr] = str.split("-");
-  if (arr) {
-    if ("$" === arr[0]) {
-      const slice = arr.slice;
-      if ("!" !== arr[1]) {
-        let arr2 = arg2[slice(arr, 1)];
-      } else {
-        arr2 = arg2[slice(arr, 2)];
-      }
-      const mapped = arr2.map((item) => {
-        let tmp = obj4[item];
-        if (!tmp) {
-          const items = [item];
-          tmp = items;
-        }
-        return tmp;
-      });
-      const reduced = mapped.reduce((acc, item) => {
-        const items = [...item];
-        return items;
-      }, []);
-      let str4 = region.region;
-      if (!str4) {
-        str4 = "";
-      }
-      let tmp4 = reduced.indexOf(str4) > -1 === tmp7;
+function createIntegerConversion(exponent, unsigned) {
+  unsigned = unsigned.unsigned;
+  closure_2 = !unsigned;
+  if (64 === exponent) {
+    let _Math4 = Math;
+    closure_1 = Math.pow(2, 53) - 1;
+    let num9 = 0;
+    if (!unsigned) {
+      let _Math5 = Math;
+      num9 = 1 - Math.pow(2, 53);
     }
-    if (tmp4) {
-      const script = region.script;
-      let tmp8 = !script;
-      if (script) {
-        tmp8 = "*" === tmp3 || tmp3 === region.script;
-        const tmp9 = "*" === tmp3 || tmp3 === region.script;
-      }
-      tmp4 = tmp8;
-    }
-    if (tmp4) {
-      const language = region.language;
-      let tmp10 = !language;
-      if (language) {
-        tmp10 = "*" === tmp2 || tmp2 === region.language;
-        const tmp11 = "*" === tmp2 || tmp2 === region.language;
-      }
-      tmp4 = tmp10;
-    }
-    return tmp4;
-  }
-  region = region.region;
-  tmp4 = !region;
-  if (region) {
-    tmp4 = "*" === arr || arr === region.region;
-    const tmp5 = "*" === arr || arr === region.region;
-  }
-}
-function serializeLSR(arg0) {
-  const items = [, ,];
-  ({ language: arr[0], script: arr[1], region: arr[2] } = arg0);
-  const found = items.filter(Boolean);
-  return found.join("-");
-}
-function findMatchingDistanceForLSR(arg0, arg1, matchVariables) {
-  const iter = matchVariables.matches[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let tmp3Result = isMatched(arg0, nextResult.desired, matchVariables.matchVariables);
-    if (tmp3Result) {
-      tmp3Result = isMatched(arg1, tmp2.supported, matchVariables.matchVariables);
-    }
-    let tmp6 = tmp3Result;
-    let tmp8 = tmp2.oneway || tmp6;
-    if (!tmp8) {
-      let tmp3Result2 = isMatched(arg0, tmp2.supported, matchVariables.matchVariables);
-      if (tmp3Result2) {
-        tmp3Result2 = isMatched(arg1, tmp2.desired, matchVariables.matchVariables);
-      }
-      tmp6 = tmp3Result2;
-    }
-    if (tmp6) {
-      let result = 10 * nextResult.distance;
-      let paradigmLocales = matchVariables.paradigmLocales;
-      let paradigmLocales1 = matchVariables.paradigmLocales;
-      let tmp15 = paradigmLocales.indexOf(serializeLSR(arg0)) > -1;
-      if (tmp15 !== paradigmLocales1.indexOf(serializeLSR(arg1)) > -1) {
-        let diff = result - 1;
-      } else {
-        diff = result;
-      }
-      iter.return();
-      return diff;
-    }
-  }
-  const error = new Error("No matching distance found");
-  throw error;
-}
-function getFallbackCandidates(arg0) {
-  let str = arg0;
-  const items = [];
-  if (arg0) {
-    items.push(str);
-    const lastIndexOfResult = str.lastIndexOf("-");
-    while (-1 !== lastIndexOfResult) {
-      str = str.substring(0, lastIndexOfResult);
-      if (!str) {
-        break;
-      }
-    }
-  }
-  return items;
-}
-function BestFitMatcher(arr2, arr, fn) {
-  let items = [];
-  const reduced = arr.reduce((acc, item) => {
-    const replaced = item.replace(re3, "");
-    items.push(replaced);
-    acc[replaced] = item;
-    return acc;
-  }, {});
-  const tmp2 = (function findBestMatch(items, arr2) {
-    let tmp24;
-    closure_0 = arr2;
-    let Infinity = Infinity;
-    obj = { matchedDesiredLocale: "", distances: {} };
-    value = closure_11.get(arr2);
-    let mapped = value;
-    let tmp6 = value;
-    if (!value) {
-      mapped = arr2.map((item) => {
-        try {
-          const _Intl = Intl;
-          items = [item];
-          let first = Intl.getCanonicalLocales(items)[0];
-          if (!first) {
-            first = item;
-          }
-          return first;
-        } catch (err) {
-          return tmp;
-        }
-      });
-      const result = closure_11.set(arr2, mapped);
-      tmp6 = mapped;
-    }
-    const set = new Set(tmp6);
-    let num2 = 0;
-    if (0 < items.length) {
-      while (true) {
-        let tmp9 = items[num2];
-        if (set.has(tmp9)) {
-          let result1 = 40 * num2;
-          obj3 = {};
-          obj3[tmp9] = result1;
-          obj.distances[tmp9] = obj3;
-          if (result1 < Infinity) {
-            Infinity = result1;
-            obj.matchedDesiredLocale = tmp9;
-            obj.matchedSupportedLocale = tmp9;
-          }
-          if (0 === num2) {
-            break;
-          }
-        }
-        num2 = num2 + 1;
-      }
-      return obj;
-    }
-    let num3 = 0;
-    if (0 < items.length) {
-      try {
-        let _Intl = Intl;
-        locale = new Intl.Locale(tmp13);
-        const str1 = locale.maximize().toString();
-        if (str1 !== tmp13) {
-          const arr = closure_10(tmp20);
-          let num4 = 0;
-          if (0 < arr.length) {
-            while (true) {
-              let tmp23 = arr2[num4];
-              tmp24 = tmp23;
-              if (tmp23 !== tmp13) {
-                if (set.has(tmp24)) {
-                  break;
-                }
-              }
-              let sum = num4 + 1;
-              num4 = sum;
-            }
-            try {
-              const _Intl2 = Intl;
-              const locale1 = new Intl.Locale(tmp24);
-              if (str2.toString() === tmp20) {
-                let result2 = 40 * num3;
-              } else {
-                result2 = 10 * num4 + 40 * num3;
-              }
-              let sum1 = result2;
-              if (!obj.distances[tmp13]) {
-                obj.distances[tmp13] = {};
-              }
-              obj.distances[tmp13][tmp24] = sum1;
-              if (sum1 < Infinity) {
-                Infinity = sum1;
-                obj.matchedDesiredLocale = tmp13;
-                obj.matchedSupportedLocale = tmp24;
-              }
-              str2 = locale1.maximize();
-            } catch (err) {
-              sum1 = tmp2 * tmp4 + tmp3 * tmp;
-            }
-          }
-        }
-        num3 = num3 + 1;
-        const str = locale.maximize();
-      } catch (err) {}
-    }
-    let matchedSupportedLocale = obj.matchedSupportedLocale;
-    if (matchedSupportedLocale) {
-      matchedSupportedLocale = 0 === Infinity;
-    }
-    if (!matchedSupportedLocale) {
-      Infinity = Infinity;
-      let item = items.forEach((item, index) => {
-        closure_1 = index;
-        if (!obj.distances[item]) {
-          obj.distances[item] = {};
-        }
-        item = mapped.forEach((item, index) => {
-          const sum = closure_3_9(item, item) + 40 * closure_1;
-          obj.distances[item][item[index]] = sum;
-          if (sum < Infinity) {
-            Infinity = sum;
-            obj.matchedDesiredLocale = item;
-            obj.matchedSupportedLocale = tmp;
-          }
-        });
-      });
-      if (Infinity >= num) {
-        obj.matchedDesiredLocale = undefined;
-        obj.matchedSupportedLocale = undefined;
-      }
-    }
-    return obj;
-  })(items, arr2);
-  let prop;
-  if (tmp3) {
-    let tmp6 = reduced[tmp2.matchedDesiredLocale].slice(tmp2.matchedDesiredLocale.length) || undefined;
-    prop = tmp2.matchedSupportedLocale;
-    const tmp4 = reduced[tmp2.matchedDesiredLocale].slice(tmp2.matchedDesiredLocale.length) || undefined;
-  }
-  if (prop) {
-    const obj2 = { locale: prop, extension: tmp4 };
-    obj = obj2;
+    closure_0 = num9;
+  } else if (unsigned) {
+    closure_0 = 0;
+    let _Math3 = Math;
+    closure_1 = Math.pow(2, exponent) - 1;
   } else {
-    obj = { locale: fn() };
+    let _Math = Math;
+    let diff = exponent - 1;
+    closure_0 = -Math.pow(2, diff);
+    let _Math2 = Math;
+    closure_1 = Math.pow(2, diff) - 1;
   }
-  return obj;
-}
-function CanonicalizeUnicodeLocaleId(items) {
-  return Intl.getCanonicalLocales(items)[0];
-}
-function BestAvailableLocale(items, arg1) {
-  value = weakMap1.get(items);
-  if (!value) {
-    const _Set = Set;
-    const set = new Set(items);
-    const result = weakMap1.set(items, set);
-    value = set;
-  }
-  let substr = arg1;
-  while (!value.has(substr)) {
-    let lastIndexOfResult = substr.lastIndexOf("-");
-    if (~lastIndexOfResult) {
-      let tmp9 = lastIndexOfResult >= 2 && "-" === substr[lastIndexOfResult - 2];
-      let diff = lastIndexOfResult;
-      if (tmp9) {
-        diff = lastIndexOfResult - 2;
-      }
-      substr = substr.slice(0, diff);
-      continue;
+  closure_3 = Math.pow(2, exponent);
+  closure_4 = Math.pow(2, exponent - 1);
+  return (arg0, arg1) => {
+    let obj = arg1;
+    if (undefined === arg1) {
+      obj = {};
     }
-  }
-  return substr;
-}
-class ResolveLocale {
-  constructor(arg0, arg1, arg2, arg3, arg4, arg5) {
-    closure_0 = importDefault;
-    if ("lookup" === importDefault.localeMatcher) {
-      tmp4 = globalThis;
-      _Array2 = Array;
-      num2 = 0;
-      tmp3 = (function LookupMatcher(arg0, arg1, fn) {
-        obj = { locale: "" };
-        const iter = arg1[Symbol.iterator]();
-        const str = iter.next();
-        while (iter !== undefined) {
-          let arr = str;
-          let replaced = str.replace(closure_3, "");
-          let tmp2 = replaced;
-          let tmp4 = BestAvailableLocale(arg0, replaced);
-          if (tmp4) {
-            obj.locale = tmp4;
-            if (arr !== tmp2) {
-              obj.extension = arr.slice(replaced.length, arr.length);
-            }
-            iter.return();
-            return obj;
+    let num = 0;
+    if (0 !== +arg0) {
+      num = tmp;
+    }
+    const _Number = Number;
+    if (obj.enforceRange) {
+      if (_Number.isFinite(num)) {
+        const _Math5 = Math;
+        const truncResult = Math.trunc(num);
+        let num11 = 0;
+        if (0 !== truncResult) {
+          num11 = truncResult;
+        }
+        if (num11 >= closure_0) {
+          if (num11 <= closure_1) {
+            return num11;
           }
         }
-        obj.locale = fn();
-        return obj;
-      })(Array.from(global), fn, exports);
+        const _HermesInternal2 = HermesInternal;
+        const combined = "is outside the accepted range of " + closure_0 + " to " + closure_1 + ", inclusive";
+        let str11 = "Value";
+        if (obj) {
+          str11 = "Value";
+          if (obj.context) {
+            str11 = obj.context;
+          }
+        }
+        const _HermesInternal3 = HermesInternal;
+        const typeError = new TypeError("" + str11 + " " + combined + ".");
+        throw typeError;
+      } else {
+        let str2 = "Value";
+        if (obj) {
+          str2 = "Value";
+          if (obj.context) {
+            str2 = obj.context;
+          }
+        }
+        const _HermesInternal = HermesInternal;
+        const typeError1 = new TypeError("" + str2 + " " + "is not a finite number" + ".");
+        throw typeError1;
+      }
     } else {
-      tmp = BestFitMatcher;
-      tmp2 = globalThis;
-      _Array = Array;
-      num = 0;
-      tmp3 = BestFitMatcher(Array.from(global), fn, exports);
-    }
-    locale = tmp3.locale;
-    closure_2 = module[locale];
-    closure_3 = { locale: "en", dataLocale: locale };
-    if (tmp3.extension) {
-      num3 = 0;
-      closure_1 = (function UnicodeExtensionComponents(extension) {
-        let _Error;
-        if (extension === extension.toLowerCase()) {
-          let num = 3;
-          if ("-u-" === extension.slice(0, 3)) {
-            const items = [];
-            const items1 = [];
-            if (num < extension.length) {
-              while (true) {
-                let index = extension.indexOf("-", num);
-                let tmp15 = -1 === index ? length - num : index - num;
-                let substr = extension.slice(num, num + tmp15);
-                _Error = Error;
-                if (2 > tmp15) {
-                  break;
-                } else {
-                  if (undefined === iter) {
-                    if (2 !== tmp15) {
-                      let tmp27 = iter;
-                      if (-1 === items.indexOf(substr)) {
-                        let arr = items.push(substr);
-                        tmp27 = iter;
-                      }
-                      num = num + (tmp15 + 1);
-                      iter = tmp27;
-                    }
-                  }
-                  if (2 === tmp15) {
-                    let entry = { key: substr, value: "" };
-                    tmp27 = entry;
-                    if (
-                      undefined ===
-                      items1.find((key) => {
-                        key = undefined;
-                        if (entry != null) {
-                          key = entry.key;
-                        }
-                        return key.key === key;
-                      })
-                    ) {
-                      let arr2 = items1.push(entry);
-                      tmp27 = entry;
-                    }
-                  } else {
-                    value = undefined;
-                    if (iter != null) {
-                      value = iter.value;
-                    }
-                    if ("" === value) {
-                      iter.value = substr;
-                      tmp27 = iter;
-                    } else if (undefined !== iter) {
-                      iter.value = `${iter.value}-${tmp16}`;
-                      tmp27 = iter;
-                    } else {
-                      let tmp23 = new.target;
-                      let str7 = "Expected keyword to be defined";
-                      let tmp24 = new.target;
-                      let tmp222 = new tmp22("Expected keyword to be defined");
-                      throw tmp222;
-                    }
-                  }
-                }
+      if (!_Number.isNaN(num)) {
+        if (obj.clamp) {
+          const _Math = Math;
+          const _Math2 = Math;
+          const bound = Math.min(Math.max(num, closure_0), closure_1);
+          if (bound > 0) {
+            if (bound % 1 === 0.5) {
+              let num6 = 0;
+              if (0 !== rounded) {
+                num6 = rounded;
               }
-              const _Error1 = new _Error("Expected a subtag to have at least 2 characters");
-              throw _Error1;
             }
-            obj = { attributes: items, keywords: items1 };
-            return obj;
-          } else {
-            const tmp62 = new tmp6("Expected extension to be a Unicode locale extension");
-            throw tmp62;
+            const _Math3 = Math;
+            rounded = Math.floor(bound);
           }
-        } else {
-          const tmp4 = new tmp("Expected extension to be lowercase");
-          throw tmp4;
+          const _Math4 = Math;
+          rounded = Math.round(bound);
         }
-      })(tmp3.extension).keywords;
-    } else {
-      closure_1 = [];
-    }
-    closure_4 = [];
-    tmp5 = importAll[Symbol.iterator]();
-    return;
-  }
-}
-let obj = { supplemental: null };
-let obj2 = { languageMatching: null };
-let obj3 = { "written-new": null };
-let items = [
-  { paradigmLocales: { _locales: "en en_GB es es_419 pt_BR pt_PT" } },
-  { $enUS: { _value: "AS+CA+GU+MH+MP+PH+PR+UM+US+VI" } },
-  { $cnsar: { _value: "HK+MO" } },
-  { $americas: { _value: "019" } },
-  { $maghreb: { _value: "MA+DZ+TN+LY+MR+EH" } },
-  { no: { _desired: "nb", _distance: "1" } },
-  { bs: { _desired: "hr", _distance: "4" } },
-  { bs: { _desired: "sh", _distance: "4" } },
-  { hr: { _desired: "sh", _distance: "4" } },
-  { sr: { _desired: "sh", _distance: "4" } },
-  { aa: { _desired: "ssy", _distance: "4" } },
-  { de: { _desired: "gsw", _distance: "4", _oneway: "true" } },
-  { de: { _desired: "lb", _distance: "4", _oneway: "true" } },
-  { no: { _desired: "da", _distance: "8" } },
-  { nb: { _desired: "da", _distance: "8" } },
-  { ru: { _desired: "ab", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "ach", _distance: "30", _oneway: "true" } },
-  { nl: { _desired: "af", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "ak", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "am", _distance: "30", _oneway: "true" } },
-  { es: { _desired: "ay", _distance: "20", _oneway: "true" } },
-  { ru: { _desired: "az", _distance: "30", _oneway: "true" } },
-  { ur: { _desired: "bal", _distance: "20", _oneway: "true" } },
-  { ru: { _desired: "be", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "bem", _distance: "30", _oneway: "true" } },
-  { hi: { _desired: "bh", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "bn", _distance: "30", _oneway: "true" } },
-  { zh: { _desired: "bo", _distance: "20", _oneway: "true" } },
-  { fr: { _desired: "br", _distance: "20", _oneway: "true" } },
-  { es: { _desired: "ca", _distance: "20", _oneway: "true" } },
-  { fil: { _desired: "ceb", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "chr", _distance: "20", _oneway: "true" } },
-  { ar: { _desired: "ckb", _distance: "30", _oneway: "true" } },
-  { fr: { _desired: "co", _distance: "20", _oneway: "true" } },
-  { fr: { _desired: "crs", _distance: "20", _oneway: "true" } },
-  { sk: { _desired: "cs", _distance: "20" } },
-  { en: { _desired: "cy", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "ee", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "eo", _distance: "30", _oneway: "true" } },
-  { es: { _desired: "eu", _distance: "20", _oneway: "true" } },
-  { da: { _desired: "fo", _distance: "20", _oneway: "true" } },
-  { nl: { _desired: "fy", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "ga", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "gaa", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "gd", _distance: "20", _oneway: "true" } },
-  { es: { _desired: "gl", _distance: "20", _oneway: "true" } },
-  { es: { _desired: "gn", _distance: "20", _oneway: "true" } },
-  { hi: { _desired: "gu", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "ha", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "haw", _distance: "20", _oneway: "true" } },
-  { fr: { _desired: "ht", _distance: "20", _oneway: "true" } },
-  { ru: { _desired: "hy", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "ia", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "ig", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "is", _distance: "20", _oneway: "true" } },
-  { id: { _desired: "jv", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "ka", _distance: "30", _oneway: "true" } },
-  { fr: { _desired: "kg", _distance: "30", _oneway: "true" } },
-  { ru: { _desired: "kk", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "km", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "kn", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "kri", _distance: "30", _oneway: "true" } },
-  { tr: { _desired: "ku", _distance: "30", _oneway: "true" } },
-  { ru: { _desired: "ky", _distance: "30", _oneway: "true" } },
-  { it: { _desired: "la", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "lg", _distance: "30", _oneway: "true" } },
-  { fr: { _desired: "ln", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "lo", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "loz", _distance: "30", _oneway: "true" } },
-  { fr: { _desired: "lua", _distance: "30", _oneway: "true" } },
-  { hi: { _desired: "mai", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "mfe", _distance: "30", _oneway: "true" } },
-  { fr: { _desired: "mg", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "mi", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "ml", _distance: "30", _oneway: "true" } },
-  { ru: { _desired: "mn", _distance: "30", _oneway: "true" } },
-  { hi: { _desired: "mr", _distance: "30", _oneway: "true" } },
-  { id: { _desired: "ms", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "mt", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "my", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "ne", _distance: "30", _oneway: "true" } },
-  { nb: { _desired: "nn", _distance: "20" } },
-  { no: { _desired: "nn", _distance: "20" } },
-  { en: { _desired: "nso", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "ny", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "nyn", _distance: "30", _oneway: "true" } },
-  { fr: { _desired: "oc", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "om", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "or", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "pa", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "pcm", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "ps", _distance: "30", _oneway: "true" } },
-  { es: { _desired: "qu", _distance: "30", _oneway: "true" } },
-  { de: { _desired: "rm", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "rn", _distance: "30", _oneway: "true" } },
-  { fr: { _desired: "rw", _distance: "30", _oneway: "true" } },
-  { hi: { _desired: "sa", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "sd", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "si", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "sn", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "so", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "sq", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "st", _distance: "30", _oneway: "true" } },
-  { id: { _desired: "su", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "sw", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "ta", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "te", _distance: "30", _oneway: "true" } },
-  { ru: { _desired: "tg", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "ti", _distance: "30", _oneway: "true" } },
-  { ru: { _desired: "tk", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "tlh", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "tn", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "to", _distance: "30", _oneway: "true" } },
-  { ru: { _desired: "tt", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "tum", _distance: "30", _oneway: "true" } },
-  { zh: { _desired: "ug", _distance: "20", _oneway: "true" } },
-  { ru: { _desired: "uk", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "ur", _distance: "30", _oneway: "true" } },
-  { ru: { _desired: "uz", _distance: "30", _oneway: "true" } },
-  { fr: { _desired: "wo", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "xh", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "yi", _distance: "30", _oneway: "true" } },
-  { en: { _desired: "yo", _distance: "30", _oneway: "true" } },
-  { zh: { _desired: "za", _distance: "20", _oneway: "true" } },
-  { en: { _desired: "zu", _distance: "30", _oneway: "true" } },
-  { ar: { _desired: "aao", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "abh", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "abv", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "acm", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "acq", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "acw", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "acx", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "acy", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "adf", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "aeb", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "aec", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "afb", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "ajp", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "apc", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "apd", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "arq", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "ars", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "ary", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "arz", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "auz", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "avl", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "ayh", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "ayl", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "ayn", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "ayp", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "bbz", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "pga", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "shu", _distance: "10", _oneway: "true" } },
-  { ar: { _desired: "ssh", _distance: "10", _oneway: "true" } },
-  { az: { _desired: "azb", _distance: "10", _oneway: "true" } },
-  { et: { _desired: "vro", _distance: "10", _oneway: "true" } },
-  { ff: { _desired: "ffm", _distance: "10", _oneway: "true" } },
-  { ff: { _desired: "fub", _distance: "10", _oneway: "true" } },
-  { ff: { _desired: "fue", _distance: "10", _oneway: "true" } },
-  { ff: { _desired: "fuf", _distance: "10", _oneway: "true" } },
-  { ff: { _desired: "fuh", _distance: "10", _oneway: "true" } },
-  { ff: { _desired: "fui", _distance: "10", _oneway: "true" } },
-  { ff: { _desired: "fuq", _distance: "10", _oneway: "true" } },
-  { ff: { _desired: "fuv", _distance: "10", _oneway: "true" } },
-  { gn: { _desired: "gnw", _distance: "10", _oneway: "true" } },
-  { gn: { _desired: "gui", _distance: "10", _oneway: "true" } },
-  { gn: { _desired: "gun", _distance: "10", _oneway: "true" } },
-  { gn: { _desired: "nhd", _distance: "10", _oneway: "true" } },
-  { iu: { _desired: "ikt", _distance: "10", _oneway: "true" } },
-  { kln: { _desired: "enb", _distance: "10", _oneway: "true" } },
-  { kln: { _desired: "eyo", _distance: "10", _oneway: "true" } },
-  { kln: { _desired: "niq", _distance: "10", _oneway: "true" } },
-  { kln: { _desired: "oki", _distance: "10", _oneway: "true" } },
-  { kln: { _desired: "pko", _distance: "10", _oneway: "true" } },
-  { kln: { _desired: "sgc", _distance: "10", _oneway: "true" } },
-  { kln: { _desired: "tec", _distance: "10", _oneway: "true" } },
-  { kln: { _desired: "tuy", _distance: "10", _oneway: "true" } },
-  { kok: { _desired: "gom", _distance: "10", _oneway: "true" } },
-  { kpe: { _desired: "gkp", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "ida", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lkb", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lko", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lks", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lri", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lrm", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lsm", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lto", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lts", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "lwg", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "nle", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "nyd", _distance: "10", _oneway: "true" } },
-  { luy: { _desired: "rag", _distance: "10", _oneway: "true" } },
-  { lv: { _desired: "ltg", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "bhr", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "bjq", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "bmm", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "bzc", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "msh", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "skg", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "tdx", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "tkg", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "txy", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "xmv", _distance: "10", _oneway: "true" } },
-  { mg: { _desired: "xmw", _distance: "10", _oneway: "true" } },
-  { mn: { _desired: "mvf", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "bjn", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "btj", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "bve", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "bvu", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "coa", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "dup", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "hji", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "id", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "jak", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "jax", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "kvb", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "kvr", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "kxd", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "lce", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "lcf", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "liw", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "max", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "meo", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "mfa", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "mfb", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "min", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "mqg", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "msi", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "mui", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "orn", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "ors", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "pel", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "pse", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "tmw", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "urk", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "vkk", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "vkt", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "xmm", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "zlm", _distance: "10", _oneway: "true" } },
-  { ms: { _desired: "zmi", _distance: "10", _oneway: "true" } },
-  { ne: { _desired: "dty", _distance: "10", _oneway: "true" } },
-  { om: { _desired: "gax", _distance: "10", _oneway: "true" } },
-  { om: { _desired: "hae", _distance: "10", _oneway: "true" } },
-  { om: { _desired: "orc", _distance: "10", _oneway: "true" } },
-  { or: { _desired: "spv", _distance: "10", _oneway: "true" } },
-  { ps: { _desired: "pbt", _distance: "10", _oneway: "true" } },
-  { ps: { _desired: "pst", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qub", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qud", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "quf", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qug", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "quh", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "quk", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qul", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qup", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qur", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qus", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "quw", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qux", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "quy", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qva", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvc", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qve", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvh", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvi", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvj", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvl", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvm", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvn", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvo", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvp", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvs", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvw", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qvz", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qwa", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qwc", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qwh", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qws", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxa", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxc", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxh", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxl", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxn", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxo", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxp", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxr", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxt", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxu", _distance: "10", _oneway: "true" } },
-  { qu: { _desired: "qxw", _distance: "10", _oneway: "true" } },
-  { sc: { _desired: "sdc", _distance: "10", _oneway: "true" } },
-  { sc: { _desired: "sdn", _distance: "10", _oneway: "true" } },
-  { sc: { _desired: "sro", _distance: "10", _oneway: "true" } },
-  { sq: { _desired: "aae", _distance: "10", _oneway: "true" } },
-  { sq: { _desired: "aat", _distance: "10", _oneway: "true" } },
-  { sq: { _desired: "aln", _distance: "10", _oneway: "true" } },
-  { syr: { _desired: "aii", _distance: "10", _oneway: "true" } },
-  { uz: { _desired: "uzs", _distance: "10", _oneway: "true" } },
-  { yi: { _desired: "yih", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "cdo", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "cjy", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "cpx", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "czh", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "czo", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "gan", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "hak", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "hsn", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "lzh", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "mnp", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "nan", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "wuu", _distance: "10", _oneway: "true" } },
-  { zh: { _desired: "yue", _distance: "10", _oneway: "true" } },
-  { "*": { _desired: "*", _distance: "80" } },
-  { "en-Latn": { _desired: "am-Ethi", _distance: "10", _oneway: "true" } },
-  { "ru-Cyrl": { _desired: "az-Latn", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "bn-Beng", _distance: "10", _oneway: "true" } },
-  { "zh-Hans": { _desired: "bo-Tibt", _distance: "10", _oneway: "true" } },
-  { "ru-Cyrl": { _desired: "hy-Armn", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "ka-Geor", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "km-Khmr", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "kn-Knda", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "lo-Laoo", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "ml-Mlym", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "my-Mymr", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "ne-Deva", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "or-Orya", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "pa-Guru", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "ps-Arab", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "sd-Arab", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "si-Sinh", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "ta-Taml", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "te-Telu", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "ti-Ethi", _distance: "10", _oneway: "true" } },
-  { "ru-Cyrl": { _desired: "tk-Latn", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "ur-Arab", _distance: "10", _oneway: "true" } },
-  { "ru-Cyrl": { _desired: "uz-Latn", _distance: "10", _oneway: "true" } },
-  { "en-Latn": { _desired: "yi-Hebr", _distance: "10", _oneway: "true" } },
-  { "sr-Cyrl": { _desired: "sr-Latn", _distance: "5" } },
-  { "zh-Hans": { _desired: "za-Latn", _distance: "10", _oneway: "true" } },
-  { "zh-Hans": { _desired: "zh-Hani", _distance: "20", _oneway: "true" } },
-  { "zh-Hant": { _desired: "zh-Hani", _distance: "20", _oneway: "true" } },
-  { "ar-Arab": { _desired: "ar-Latn", _distance: "20", _oneway: "true" } },
-  { "bn-Beng": { _desired: "bn-Latn", _distance: "20", _oneway: "true" } },
-  { "gu-Gujr": { _desired: "gu-Latn", _distance: "20", _oneway: "true" } },
-  { "hi-Deva": { _desired: "hi-Latn", _distance: "20", _oneway: "true" } },
-  { "kn-Knda": { _desired: "kn-Latn", _distance: "20", _oneway: "true" } },
-  { "ml-Mlym": { _desired: "ml-Latn", _distance: "20", _oneway: "true" } },
-  { "mr-Deva": { _desired: "mr-Latn", _distance: "20", _oneway: "true" } },
-  { "ta-Taml": { _desired: "ta-Latn", _distance: "20", _oneway: "true" } },
-  { "te-Telu": { _desired: "te-Latn", _distance: "20", _oneway: "true" } },
-  { "zh-Hans": { _desired: "zh-Latn", _distance: "20", _oneway: "true" } },
-  { "ja-Jpan": { _desired: "ja-Latn", _distance: "5", _oneway: "true" } },
-  { "ja-Jpan": { _desired: "ja-Hani", _distance: "5", _oneway: "true" } },
-  { "ja-Jpan": { _desired: "ja-Hira", _distance: "5", _oneway: "true" } },
-  { "ja-Jpan": { _desired: "ja-Kana", _distance: "5", _oneway: "true" } },
-  { "ja-Jpan": { _desired: "ja-Hrkt", _distance: "5", _oneway: "true" } },
-  { "ja-Hrkt": { _desired: "ja-Hira", _distance: "5", _oneway: "true" } },
-  { "ja-Hrkt": { _desired: "ja-Kana", _distance: "5", _oneway: "true" } },
-  { "ko-Kore": { _desired: "ko-Hani", _distance: "5", _oneway: "true" } },
-  { "ko-Kore": { _desired: "ko-Hang", _distance: "5", _oneway: "true" } },
-  { "ko-Kore": { _desired: "ko-Jamo", _distance: "5", _oneway: "true" } },
-  { "ko-Hang": { _desired: "ko-Jamo", _distance: "5", _oneway: "true" } },
-  { "*-*": { _desired: "*-*", _distance: "50" } },
-  { "ar-*-$maghreb": { _desired: "ar-*-$maghreb", _distance: "4" } },
-  { "ar-*-$!maghreb": { _desired: "ar-*-$!maghreb", _distance: "4" } },
-  { "ar-*-*": { _desired: "ar-*-*", _distance: "5" } },
-  { "en-*-$enUS": { _desired: "en-*-$enUS", _distance: "4" } },
-  { "en-*-GB": { _desired: "en-*-$!enUS", _distance: "3" } },
-  { "en-*-$!enUS": { _desired: "en-*-$!enUS", _distance: "4" } },
-  { "en-*-*": { _desired: "en-*-*", _distance: "5" } },
-  { "es-*-$americas": { _desired: "es-*-$americas", _distance: "4" } },
-  { "es-*-$!americas": { _desired: "es-*-$!americas", _distance: "4" } },
-  { "es-*-*": { _desired: "es-*-*", _distance: "5" } },
-  { "pt-*-$americas": { _desired: "pt-*-$americas", _distance: "4" } },
-  { "pt-*-$!americas": { _desired: "pt-*-$!americas", _distance: "4" } },
-  { "pt-*-*": { _desired: "pt-*-*", _distance: "5" } },
-  { "zh-Hant-$cnsar": { _desired: "zh-Hant-$cnsar", _distance: "4" } },
-  { "zh-Hant-$!cnsar": { _desired: "zh-Hant-$!cnsar", _distance: "4" } },
-  { "zh-Hant-*": { _desired: "zh-Hant-*", _distance: "5" } },
-  { "*-*-*": { _desired: "*-*-*", _distance: "4" } },
-];
-obj3["written-new"] = items;
-obj2.languageMatching = obj3;
-obj.supplemental = obj2;
-let obj4 = {
-  "001": [
-    "001",
-    "001-status-grouping",
-    "002",
-    "005",
-    "009",
-    "011",
-    "013",
-    "014",
-    "015",
-    "017",
-    "018",
-    "019",
-    "021",
-    "029",
-    "030",
-    "034",
-    "035",
-    "039",
-    "053",
-    "054",
-    "057",
-    "061",
-    "142",
-    "143",
-    "145",
-    "150",
-    "151",
-    "154",
-    "155",
-    "AC",
-    "AD",
-    "AE",
-    "AF",
-    "AG",
-    "AI",
-    "AL",
-    "AM",
-    "AO",
-    "AQ",
-    "AR",
-    "AS",
-    "AT",
-    "AU",
-    "AW",
-    "AX",
-    "AZ",
-    "BA",
-    "BB",
-    "BD",
-    "BE",
-    "BF",
-    "BG",
-    "BH",
-    "BI",
-    "BJ",
-    "BL",
-    "BM",
-    "BN",
-    "BO",
-    "BQ",
-    "BR",
-    "BS",
-    "BT",
-    "BV",
-    "BW",
-    "BY",
-    "BZ",
-    "CA",
-    "CC",
-    "CD",
-    "CF",
-    "CG",
-    "CH",
-    "CI",
-    "CK",
-    "CL",
-    "CM",
-    "CN",
-    "CO",
-    "CP",
-    "CQ",
-    "CR",
-    "CU",
-    "CV",
-    "CW",
-    "CX",
-    "CY",
-    "CZ",
-    "DE",
-    "DG",
-    "DJ",
-    "DK",
-    "DM",
-    "DO",
-    "DZ",
-    "EA",
-    "EC",
-    "EE",
-    "EG",
-    "EH",
-    "ER",
-    "ES",
-    "ET",
-    "EU",
-    "EZ",
-    "FI",
-    "FJ",
-    "FK",
-    "FM",
-    "FO",
-    "FR",
-    "GA",
-    "GB",
-    "GD",
-    "GE",
-    "GF",
-    "GG",
-    "GH",
-    "GI",
-    "GL",
-    "GM",
-    "GN",
-    "GP",
-    "GQ",
-    "GR",
-    "GS",
-    "GT",
-    "GU",
-    "GW",
-    "GY",
-    "HK",
-    "HM",
-    "HN",
-    "HR",
-    "HT",
-    "HU",
-    "IC",
-    "ID",
-    "IE",
-    "IL",
-    "IM",
-    "IN",
-    "IO",
-    "IQ",
-    "IR",
-    "IS",
-    "IT",
-    "JE",
-    "JM",
-    "JO",
-    "JP",
-    "KE",
-    "KG",
-    "KH",
-    "KI",
-    "KM",
-    "KN",
-    "KP",
-    "KR",
-    "KW",
-    "KY",
-    "KZ",
-    "LA",
-    "LB",
-    "LC",
-    "LI",
-    "LK",
-    "LR",
-    "LS",
-    "LT",
-    "LU",
-    "LV",
-    "LY",
-    "MA",
-    "MC",
-    "MD",
-    "ME",
-    "MF",
-    "MG",
-    "MH",
-    "MK",
-    "ML",
-    "MM",
-    "MN",
-    "MO",
-    "MP",
-    "MQ",
-    "MR",
-    "MS",
-    "MT",
-    "MU",
-    "MV",
-    "MW",
-    "MX",
-    "MY",
-    "MZ",
-    "NA",
-    "NC",
-    "NE",
-    "NF",
-    "NG",
-    "NI",
-    "NL",
-    "NO",
-    "NP",
-    "NR",
-    "NU",
-    "NZ",
-    "OM",
-    "PA",
-    "PE",
-    "PF",
-    "PG",
-    "PH",
-    "PK",
-    "PL",
-    "PM",
-    "PN",
-    "PR",
-    "PS",
-    "PT",
-    "PW",
-    "PY",
-    "QA",
-    "QO",
-    "RE",
-    "RO",
-    "RS",
-    "RU",
-    "RW",
-    "SA",
-    "SB",
-    "SC",
-    "SD",
-    "SE",
-    "SG",
-    "SH",
-    "SI",
-    "SJ",
-    "SK",
-    "SL",
-    "SM",
-    "SN",
-    "SO",
-    "SR",
-    "SS",
-    "ST",
-    "SV",
-    "SX",
-    "SY",
-    "SZ",
-    "TA",
-    "TC",
-    "TD",
-    "TF",
-    "TG",
-    "TH",
-    "TJ",
-    "TK",
-    "TL",
-    "TM",
-    "TN",
-    "TO",
-    "TR",
-    "TT",
-    "TV",
-    "TW",
-    "TZ",
-    "UA",
-    "UG",
-    "UM",
-    "UN",
-    "US",
-    "UY",
-    "UZ",
-    "VA",
-    "VC",
-    "VE",
-    "VG",
-    "VI",
-    "VN",
-    "VU",
-    "WF",
-    "WS",
-    "XK",
-    "YE",
-    "YT",
-    "ZA",
-    "ZM",
-    "ZW",
-  ],
-  "002": [
-    "002",
-    "002-status-grouping",
-    "011",
-    "014",
-    "015",
-    "017",
-    "018",
-    "202",
-    "AO",
-    "BF",
-    "BI",
-    "BJ",
-    "BW",
-    "CD",
-    "CF",
-    "CG",
-    "CI",
-    "CM",
-    "CV",
-    "DJ",
-    "DZ",
-    "EA",
-    "EG",
-    "EH",
-    "ER",
-    "ET",
-    "GA",
-    "GH",
-    "GM",
-    "GN",
-    "GQ",
-    "GW",
-    "IC",
-    "IO",
-    "KE",
-    "KM",
-    "LR",
-    "LS",
-    "LY",
-    "MA",
-    "MG",
-    "ML",
-    "MR",
-    "MU",
-    "MW",
-    "MZ",
-    "NA",
-    "NE",
-    "NG",
-    "RE",
-    "RW",
-    "SC",
-    "SD",
-    "SH",
-    "SL",
-    "SN",
-    "SO",
-    "SS",
-    "ST",
-    "SZ",
-    "TD",
-    "TF",
-    "TG",
-    "TN",
-    "TZ",
-    "UG",
-    "YT",
-    "ZA",
-    "ZM",
-    "ZW",
-  ],
-  "003": [
-    "003",
-    "013",
-    "021",
-    "029",
-    "AG",
-    "AI",
-    "AW",
-    "BB",
-    "BL",
-    "BM",
-    "BQ",
-    "BS",
-    "BZ",
-    "CA",
-    "CR",
-    "CU",
-    "CW",
-    "DM",
-    "DO",
-    "GD",
-    "GL",
-    "GP",
-    "GT",
-    "HN",
-    "HT",
-    "JM",
-    "KN",
-    "KY",
-    "LC",
-    "MF",
-    "MQ",
-    "MS",
-    "MX",
-    "NI",
-    "PA",
-    "PM",
-    "PR",
-    "SV",
-    "SX",
-    "TC",
-    "TT",
-    "US",
-    "VC",
-    "VG",
-    "VI",
-  ],
-  "005": ["005", "AR", "BO", "BR", "BV", "CL", "CO", "EC", "FK", "GF", "GS", "GY", "PE", "PY", "SR", "UY", "VE"],
-  "009": [
-    "009",
-    "053",
-    "054",
-    "057",
-    "061",
-    "AC",
-    "AQ",
-    "AS",
-    "AU",
-    "CC",
-    "CK",
-    "CP",
-    "CX",
-    "DG",
-    "FJ",
-    "FM",
-    "GU",
-    "HM",
-    "KI",
-    "MH",
-    "MP",
-    "NC",
-    "NF",
-    "NR",
-    "NU",
-    "NZ",
-    "PF",
-    "PG",
-    "PN",
-    "PW",
-    "QO",
-    "SB",
-    "TA",
-    "TK",
-    "TO",
-    "TV",
-    "UM",
-    "VU",
-    "WF",
-    "WS",
-  ],
-  "011": ["011", "BF", "BJ", "CI", "CV", "GH", "GM", "GN", "GW", "LR", "ML", "MR", "NE", "NG", "SH", "SL", "SN", "TG"],
-  "013": ["013", "BZ", "CR", "GT", "HN", "MX", "NI", "PA", "SV"],
-  "014": [
-    "014",
-    "BI",
-    "DJ",
-    "ER",
-    "ET",
-    "IO",
-    "KE",
-    "KM",
-    "MG",
-    "MU",
-    "MW",
-    "MZ",
-    "RE",
-    "RW",
-    "SC",
-    "SO",
-    "SS",
-    "TF",
-    "TZ",
-    "UG",
-    "YT",
-    "ZM",
-    "ZW",
-  ],
-  "015": ["015", "DZ", "EA", "EG", "EH", "IC", "LY", "MA", "SD", "TN"],
-  "017": ["017", "AO", "CD", "CF", "CG", "CM", "GA", "GQ", "ST", "TD"],
-  "018": ["018", "BW", "LS", "NA", "SZ", "ZA"],
-  "019": [
-    "003",
-    "005",
-    "013",
-    "019",
-    "019-status-grouping",
-    "021",
-    "029",
-    "419",
-    "AG",
-    "AI",
-    "AR",
-    "AW",
-    "BB",
-    "BL",
-    "BM",
-    "BO",
-    "BQ",
-    "BR",
-    "BS",
-    "BV",
-    "BZ",
-    "CA",
-    "CL",
-    "CO",
-    "CR",
-    "CU",
-    "CW",
-    "DM",
-    "DO",
-    "EC",
-    "FK",
-    "GD",
-    "GF",
-    "GL",
-    "GP",
-    "GS",
-    "GT",
-    "GY",
-    "HN",
-    "HT",
-    "JM",
-    "KN",
-    "KY",
-    "LC",
-    "MF",
-    "MQ",
-    "MS",
-    "MX",
-    "NI",
-    "PA",
-    "PE",
-    "PM",
-    "PR",
-    "PY",
-    "SR",
-    "SV",
-    "SX",
-    "TC",
-    "TT",
-    "US",
-    "UY",
-    "VC",
-    "VE",
-    "VG",
-    "VI",
-  ],
-  "021": ["021", "BM", "CA", "GL", "PM", "US"],
-  "029": [
-    "029",
-    "AG",
-    "AI",
-    "AW",
-    "BB",
-    "BL",
-    "BQ",
-    "BS",
-    "CU",
-    "CW",
-    "DM",
-    "DO",
-    "GD",
-    "GP",
-    "HT",
-    "JM",
-    "KN",
-    "KY",
-    "LC",
-    "MF",
-    "MQ",
-    "MS",
-    "PR",
-    "SX",
-    "TC",
-    "TT",
-    "VC",
-    "VG",
-    "VI",
-  ],
-  "030": ["030", "CN", "HK", "JP", "KP", "KR", "MN", "MO", "TW"],
-  "034": ["034", "AF", "BD", "BT", "IN", "IR", "LK", "MV", "NP", "PK"],
-  "035": ["035", "BN", "ID", "KH", "LA", "MM", "MY", "PH", "SG", "TH", "TL", "VN"],
-  "039": ["039", "AD", "AL", "BA", "ES", "GI", "GR", "HR", "IT", "ME", "MK", "MT", "PT", "RS", "SI", "SM", "VA", "XK"],
-  "053": ["053", "AU", "CC", "CX", "HM", "NF", "NZ"],
-  "054": ["054", "FJ", "NC", "PG", "SB", "VU"],
-  "057": ["057", "FM", "GU", "KI", "MH", "MP", "NR", "PW", "UM"],
-  "061": ["061", "AS", "CK", "NU", "PF", "PN", "TK", "TO", "TV", "WF", "WS"],
-  142: null,
-  143: null,
-  145: null,
-  150: null,
-  151: null,
-  154: null,
-  155: null,
-  202: null,
-  419: null,
-  EU: null,
-  EZ: null,
-  QO: null,
-  UN: null,
-};
-obj4[142] = [
-  "030",
-  "034",
-  "035",
-  "142",
-  "143",
-  "145",
-  "AE",
-  "AF",
-  "AM",
-  "AZ",
-  "BD",
-  "BH",
-  "BN",
-  "BT",
-  "CN",
-  "CY",
-  "GE",
-  "HK",
-  "ID",
-  "IL",
-  "IN",
-  "IQ",
-  "IR",
-  "JO",
-  "JP",
-  "KG",
-  "KH",
-  "KP",
-  "KR",
-  "KW",
-  "KZ",
-  "LA",
-  "LB",
-  "LK",
-  "MM",
-  "MN",
-  "MO",
-  "MV",
-  "MY",
-  "NP",
-  "OM",
-  "PH",
-  "PK",
-  "PS",
-  "QA",
-  "SA",
-  "SG",
-  "SY",
-  "TH",
-  "TJ",
-  "TL",
-  "TM",
-  "TR",
-  "TW",
-  "UZ",
-  "VN",
-  "YE",
-];
-obj4[143] = ["143", "KG", "KZ", "TJ", "TM", "UZ"];
-obj4[145] = [
-  "145",
-  "AE",
-  "AM",
-  "AZ",
-  "BH",
-  "CY",
-  "GE",
-  "IL",
-  "IQ",
-  "JO",
-  "KW",
-  "LB",
-  "OM",
-  "PS",
-  "QA",
-  "SA",
-  "SY",
-  "TR",
-  "YE",
-];
-obj4[150] = [
-  "039",
-  "150",
-  "151",
-  "154",
-  "155",
-  "AD",
-  "AL",
-  "AT",
-  "AX",
-  "BA",
-  "BE",
-  "BG",
-  "BY",
-  "CH",
-  "CQ",
-  "CZ",
-  "DE",
-  "DK",
-  "EE",
-  "ES",
-  "FI",
-  "FO",
-  "FR",
-  "GB",
-  "GG",
-  "GI",
-  "GR",
-  "HR",
-  "HU",
-  "IE",
-  "IM",
-  "IS",
-  "IT",
-  "JE",
-  "LI",
-  "LT",
-  "LU",
-  "LV",
-  "MC",
-  "MD",
-  "ME",
-  "MK",
-  "MT",
-  "NL",
-  "NO",
-  "PL",
-  "PT",
-  "RO",
-  "RS",
-  "RU",
-  "SE",
-  "SI",
-  "SJ",
-  "SK",
-  "SM",
-  "UA",
-  "VA",
-  "XK",
-];
-obj4[151] = ["151", "BG", "BY", "CZ", "HU", "MD", "PL", "RO", "RU", "SK", "UA"];
-obj4[154] = [
-  "154",
-  "AX",
-  "CQ",
-  "DK",
-  "EE",
-  "FI",
-  "FO",
-  "GB",
-  "GG",
-  "IE",
-  "IM",
-  "IS",
-  "JE",
-  "LT",
-  "LV",
-  "NO",
-  "SE",
-  "SJ",
-];
-obj4[155] = ["155", "AT", "BE", "CH", "DE", "FR", "LI", "LU", "MC", "NL"];
-obj4[202] = [
-  "011",
-  "014",
-  "017",
-  "018",
-  "202",
-  "AO",
-  "BF",
-  "BI",
-  "BJ",
-  "BW",
-  "CD",
-  "CF",
-  "CG",
-  "CI",
-  "CM",
-  "CV",
-  "DJ",
-  "ER",
-  "ET",
-  "GA",
-  "GH",
-  "GM",
-  "GN",
-  "GQ",
-  "GW",
-  "IO",
-  "KE",
-  "KM",
-  "LR",
-  "LS",
-  "MG",
-  "ML",
-  "MR",
-  "MU",
-  "MW",
-  "MZ",
-  "NA",
-  "NE",
-  "NG",
-  "RE",
-  "RW",
-  "SC",
-  "SH",
-  "SL",
-  "SN",
-  "SO",
-  "SS",
-  "ST",
-  "SZ",
-  "TD",
-  "TF",
-  "TG",
-  "TZ",
-  "UG",
-  "YT",
-  "ZA",
-  "ZM",
-  "ZW",
-];
-obj4[419] = [
-  "005",
-  "013",
-  "029",
-  "419",
-  "AG",
-  "AI",
-  "AR",
-  "AW",
-  "BB",
-  "BL",
-  "BO",
-  "BQ",
-  "BR",
-  "BS",
-  "BV",
-  "BZ",
-  "CL",
-  "CO",
-  "CR",
-  "CU",
-  "CW",
-  "DM",
-  "DO",
-  "EC",
-  "FK",
-  "GD",
-  "GF",
-  "GP",
-  "GS",
-  "GT",
-  "GY",
-  "HN",
-  "HT",
-  "JM",
-  "KN",
-  "KY",
-  "LC",
-  "MF",
-  "MQ",
-  "MS",
-  "MX",
-  "NI",
-  "PA",
-  "PE",
-  "PR",
-  "PY",
-  "SR",
-  "SV",
-  "SX",
-  "TC",
-  "TT",
-  "UY",
-  "VC",
-  "VE",
-  "VG",
-  "VI",
-];
-obj4.EU = [
-  "AT",
-  "BE",
-  "BG",
-  "CY",
-  "CZ",
-  "DE",
-  "DK",
-  "EE",
-  "ES",
-  "EU",
-  "FI",
-  "FR",
-  "GR",
-  "HR",
-  "HU",
-  "IE",
-  "IT",
-  "LT",
-  "LU",
-  "LV",
-  "MT",
-  "NL",
-  "PL",
-  "PT",
-  "RO",
-  "SE",
-  "SI",
-  "SK",
-];
-obj4.EZ = [
-  "AT",
-  "BE",
-  "CY",
-  "DE",
-  "EE",
-  "ES",
-  "EZ",
-  "FI",
-  "FR",
-  "GR",
-  "IE",
-  "IT",
-  "LT",
-  "LU",
-  "LV",
-  "MT",
-  "NL",
-  "PT",
-  "SI",
-  "SK",
-];
-obj4.QO = ["AC", "AQ", "CP", "DG", "QO", "TA"];
-obj4.UN = [
-  "AD",
-  "AE",
-  "AF",
-  "AG",
-  "AL",
-  "AM",
-  "AO",
-  "AR",
-  "AT",
-  "AU",
-  "AZ",
-  "BA",
-  "BB",
-  "BD",
-  "BE",
-  "BF",
-  "BG",
-  "BH",
-  "BI",
-  "BJ",
-  "BN",
-  "BO",
-  "BR",
-  "BS",
-  "BT",
-  "BW",
-  "BY",
-  "BZ",
-  "CA",
-  "CD",
-  "CF",
-  "CG",
-  "CH",
-  "CI",
-  "CL",
-  "CM",
-  "CN",
-  "CO",
-  "CR",
-  "CU",
-  "CV",
-  "CY",
-  "CZ",
-  "DE",
-  "DJ",
-  "DK",
-  "DM",
-  "DO",
-  "DZ",
-  "EC",
-  "EE",
-  "EG",
-  "ER",
-  "ES",
-  "ET",
-  "FI",
-  "FJ",
-  "FM",
-  "FR",
-  "GA",
-  "GB",
-  "GD",
-  "GE",
-  "GH",
-  "GM",
-  "GN",
-  "GQ",
-  "GR",
-  "GT",
-  "GW",
-  "GY",
-  "HN",
-  "HR",
-  "HT",
-  "HU",
-  "ID",
-  "IE",
-  "IL",
-  "IN",
-  "IQ",
-  "IR",
-  "IS",
-  "IT",
-  "JM",
-  "JO",
-  "JP",
-  "KE",
-  "KG",
-  "KH",
-  "KI",
-  "KM",
-  "KN",
-  "KP",
-  "KR",
-  "KW",
-  "KZ",
-  "LA",
-  "LB",
-  "LC",
-  "LI",
-  "LK",
-  "LR",
-  "LS",
-  "LT",
-  "LU",
-  "LV",
-  "LY",
-  "MA",
-  "MC",
-  "MD",
-  "ME",
-  "MG",
-  "MH",
-  "MK",
-  "ML",
-  "MM",
-  "MN",
-  "MR",
-  "MT",
-  "MU",
-  "MV",
-  "MW",
-  "MX",
-  "MY",
-  "MZ",
-  "NA",
-  "NE",
-  "NG",
-  "NI",
-  "NL",
-  "NO",
-  "NP",
-  "NR",
-  "NZ",
-  "OM",
-  "PA",
-  "PE",
-  "PG",
-  "PH",
-  "PK",
-  "PL",
-  "PT",
-  "PW",
-  "PY",
-  "QA",
-  "RO",
-  "RS",
-  "RU",
-  "RW",
-  "SA",
-  "SB",
-  "SC",
-  "SD",
-  "SE",
-  "SG",
-  "SI",
-  "SK",
-  "SL",
-  "SM",
-  "SN",
-  "SO",
-  "SR",
-  "SS",
-  "ST",
-  "SV",
-  "SY",
-  "SZ",
-  "TD",
-  "TG",
-  "TH",
-  "TJ",
-  "TL",
-  "TM",
-  "TN",
-  "TO",
-  "TR",
-  "TT",
-  "TV",
-  "TZ",
-  "UA",
-  "UG",
-  "UN",
-  "US",
-  "UY",
-  "UZ",
-  "VC",
-  "VE",
-  "VN",
-  "VU",
-  "WS",
-  "YE",
-  "ZA",
-  "ZM",
-  "ZW",
-];
-const re3 = /-u(?:-[0-9a-z]{2,8})+/gi;
-const monadic = fn(14661);
-let closure_9 = monadic.memoize(
-  function findMatchingDistanceImpl(arg0, arg1) {
-    locale = new Intl.Locale(arg0);
-    const maximizeResult = locale.maximize();
-    const locale1 = new Intl.Locale(arg1);
-    const maximizeResult1 = locale1.maximize();
-    obj = {
-      language: maximizeResult.language,
-      script: maximizeResult.script || "",
-      region: maximizeResult.region || "",
-    };
-    const obj2 = {
-      language: maximizeResult1.language,
-      script: maximizeResult1.script || "",
-      region: maximizeResult1.region || "",
-    };
-    let tmp3 = obj3;
-    if (!obj3) {
-      let first = obj.supplemental.languageMatching["written-new"][0];
-      let parts;
-      if (first != null) {
-        const paradigmLocales = first.paradigmLocales;
-        if (paradigmLocales != null) {
-          parts = paradigmLocales._locales.split(" ");
+        return num6;
+      }
+      const _Number2 = Number;
+      let num7 = 0;
+      if (Number.isFinite(num)) {
+        num7 = 0;
+        if (0 !== num) {
+          const _Math6 = Math;
+          const truncResult1 = Math.trunc(num);
+          let num8 = 0;
+          if (0 !== truncResult1) {
+            num8 = truncResult1;
+          }
+          if (num8 < closure_0) {
+            const result = num8 % closure_3;
+            let num9 = 1;
+            let num10 = 1;
+            if (closure_3 < 0) {
+              num10 = -1;
+            }
+            if (result < 0) {
+              num9 = -1;
+            }
+            let sum = result;
+            if (num10 !== num9) {
+              sum = result + closure_3;
+            }
+            let diff = sum;
+            if (closure_2) {
+              diff = sum;
+              if (sum >= closure_4) {
+                diff = sum - closure_3;
+              }
+            }
+            let tmp8 = diff;
+          } else {
+            tmp8 = num8;
+          }
+          num7 = tmp8;
         }
       }
-      const prop = tmp4.supplemental.languageMatching["written-new"];
-      let substr = prop.slice(1, 5);
-      obj3 = { matches: null, matchVariables: null, paradigmLocales: null };
-      const prop1 = tmp4.supplemental.languageMatching["written-new"];
-      const substr1 = prop1.slice(5);
-      obj3.matches = substr1.map((item) => {
-        const first = Object.keys(item)[0];
-        return {
-          supported: first,
-          desired: item[first]._desired,
-          distance: +item[first]._distance,
-          oneway: "true" === item[first].oneway,
-        };
-      }, {});
-      obj3.matchVariables = substr.reduce((acc, item) => {
-        const first = Object.keys(item)[0];
-        const substr = first.slice(1);
-        acc[substr] = item[first]._value.split("+");
-        return acc;
-      }, {});
-      const items = [];
-      HermesBuiltin.arraySpread(
-        parts.map((item) => {
-          locale = new Intl.Locale(item.replace(/_/g, "-"));
-          return locale.maximize().toString();
-        }),
-        HermesBuiltin.arraySpread(parts, 0),
-      );
-      obj3.paradigmLocales = items;
-      tmp3 = obj3;
-      const arraySpreadResult = HermesBuiltin.arraySpread(parts, 0);
+      num6 = num7;
     }
-    let num4 = 0;
-    if (obj.language !== obj2.language) {
-      obj4 = { language: maximizeResult.language, script: "", region: "" };
-      const obj5 = { language: maximizeResult1.language, script: "", region: "" };
-      num4 = findMatchingDistanceForLSR(obj4, obj5, tmp3);
+  };
+}
+function convertCallbackFunction(binder, localeData) {
+  if (typeof binder !== "function") {
+    let str2 = "Value";
+    if (localeData) {
+      str2 = "Value";
+      if (localeData.context) {
+        str2 = localeData.context;
+      }
     }
-    let sum = num4;
-    if (obj.script !== obj2.script) {
-      const obj6 = { language: maximizeResult.language, script: obj.script, region: "" };
-      const obj7 = { language: maximizeResult1.language, script: obj2.script, region: "" };
-      sum = num4 + findMatchingDistanceForLSR(obj6, obj7, tmp3);
+    const _HermesInternal = HermesInternal;
+    const typeError = new TypeError("" + str2 + " " + "is not a function" + ".");
+    throw typeError;
+  } else {
+    return binder;
+  }
+}
+function isArrayBuffer(arg0) {
+  try {
+    const call = get.call;
+    if (typeof call === "unknown") {
+      get();
+    } else {
+      call(arg0);
     }
-    let sum1 = sum;
-    if (obj.region !== obj2.region) {
-      sum1 = sum + findMatchingDistanceForLSR(obj, obj2, tmp3);
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+unsigned_long_long.any = (arg0) => arg0;
+unsigned_long_long.void = () => {};
+unsigned_long_long.boolean = (arg0) => arg0;
+unsigned_long_long.byte = createIntegerConversion(8, { unsigned: false });
+unsigned_long_long.octet = createIntegerConversion(8, { unsigned: true });
+unsigned_long_long.short = createIntegerConversion(16, { unsigned: false });
+unsigned_long_long["unsigned short"] = createIntegerConversion(16, { unsigned: true });
+unsigned_long_long.long = createIntegerConversion(32, { unsigned: false });
+unsigned_long_long["unsigned long"] = createIntegerConversion(32, { unsigned: true });
+unsigned_long_long["long long"] = createIntegerConversion(64, { unsigned: false });
+unsigned_long_long["unsigned long long"] = createIntegerConversion(64, { unsigned: true });
+unsigned_long_long.double = (arg0, context) => {
+  if (Number.isFinite(+arg0)) {
+    return tmp;
+  } else {
+    let str2 = "Value";
+    if (context) {
+      str2 = "Value";
+      if (context.context) {
+        str2 = context.context;
+      }
     }
-    return sum1;
-  },
-  {
-    serializer(arg0) {
-      return "" + arg0[0] + "|" + arg0[1];
-    },
-  },
-);
-const weakMap = new WeakMap();
-const weakMap1 = new WeakMap();
-
-export const LookupSupportedLocales = function LookupSupportedLocales(arg0, canonicalLocales) {
+    const _HermesInternal = HermesInternal;
+    const typeError = new TypeError("" + str2 + " " + "is not a finite floating-point value" + ".");
+    throw typeError;
+  }
+};
+unsigned_long_long["unrestricted double"] = (arg0) => +arg0;
+unsigned_long_long.float = (arg0, context) => {
+  if (Number.isFinite(+arg0)) {
+    const _Object = Object;
+    if (Object.is(tmp, -0)) {
+      return tmp;
+    } else {
+      const _Math = Math;
+      const froundResult = Math.fround(tmp);
+      const _Number = Number;
+      if (Number.isFinite(froundResult)) {
+        return froundResult;
+      } else {
+        let str8 = "Value";
+        if (context) {
+          str8 = "Value";
+          if (context.context) {
+            str8 = context.context;
+          }
+        }
+        const _HermesInternal2 = HermesInternal;
+        const typeError = new TypeError(
+          "" + str8 + " " + "is outside the range of a single-precision floating-point value" + ".",
+        );
+        throw typeError;
+      }
+    }
+  } else {
+    let str2 = "Value";
+    if (context) {
+      str2 = "Value";
+      if (context.context) {
+        str2 = context.context;
+      }
+    }
+    const _HermesInternal = HermesInternal;
+    const typeError1 = new TypeError("" + str2 + " " + "is not a finite floating-point value" + ".");
+    throw typeError1;
+  }
+};
+unsigned_long_long["unrestricted float"] = (arg0) => {
+  let froundResult = tmp;
+  if (!isNaN(+arg0)) {
+    const _Object = Object;
+    froundResult = tmp;
+    if (!Object.is(tmp, -0)) {
+      const _Math = Math;
+      froundResult = Math.fround(tmp);
+    }
+  }
+  return froundResult;
+};
+unsigned_long_long.DOMString = (item10103, context) => {
+  let obj = context;
+  if (undefined === context) {
+    obj = {};
+  }
+  if (obj.treatNullAsEmptyString) {
+    if (null === item10103) {
+      return "";
+    }
+  }
+  if (typeof item10103 === "symbol") {
+    let str2 = "Value";
+    if (obj) {
+      str2 = "Value";
+      if (obj.context) {
+        str2 = obj.context;
+      }
+    }
+    const _HermesInternal = HermesInternal;
+    const typeError = new TypeError("" + str2 + " " + "is a symbol, which cannot be converted to a string" + ".");
+    throw typeError;
+  } else {
+    const _String = String;
+    return String(item10103);
+  }
+};
+unsigned_long_long.ByteString = (item10103, context) => {
+  const DOMStringResult = exports.DOMString(item10103, context);
+  let num = 0;
+  let codePointAtResult = DOMStringResult.codePointAt(0);
+  if (undefined !== codePointAtResult) {
+    while (codePointAtResult <= 255) {
+      let sum = num + 1;
+      codePointAtResult = DOMStringResult.codePointAt(sum);
+      num = sum;
+    }
+    let str2 = "Value";
+    if (context) {
+      str2 = "Value";
+      if (context.context) {
+        str2 = context.context;
+      }
+    }
+    const _HermesInternal = HermesInternal;
+    const typeError = new TypeError("" + str2 + " " + "is not a valid ByteString" + ".");
+    throw typeError;
+  }
+  return DOMStringResult;
+};
+unsigned_long_long.USVString = (item10103, context) => {
+  const DOMStringResult = exports.DOMString(item10103, context);
   const items = [];
-  const iter = canonicalLocales[Symbol.iterator]();
-  while (iter !== undefined) {
-    let tmp3 = BestAvailableLocale(arg0, str.replace(re3, ""));
-    if (tmp3) {
-      let arr = items.push(tmp4);
+  let num = 0;
+  if (0 < DOMStringResult.length) {
+    while (true) {
+      let charCodeAtResult = DOMStringResult.charCodeAt(num);
+      if (charCodeAtResult >= 55296) {
+        if (charCodeAtResult <= 57343) {
+          if (56320 <= charCodeAtResult) {
+            if (charCodeAtResult <= 57343) {
+              let _String4 = String;
+              let arr = items.push(String.fromCodePoint(65533));
+              let tmp6 = num;
+            }
+          }
+          if (num === length - 1) {
+            let _String3 = String;
+            let arr2 = items.push(String.fromCodePoint(65533));
+            tmp6 = num;
+          } else {
+            let sum = num + 1;
+            let charCodeAtResult1 = DOMStringResult.charCodeAt(sum);
+            if (56320 <= charCodeAtResult1) {
+              if (charCodeAtResult1 <= 57343) {
+                let _String2 = String;
+                let arr7 = items.push(
+                  String.fromCodePoint(65536 + 1024 * (1023 & charCodeAtResult) + (1023 & charCodeAtResult1)),
+                );
+                tmp6 = sum;
+              }
+            }
+            let _String = String;
+            let arr8 = items.push(String.fromCodePoint(65533));
+            tmp6 = num;
+          }
+        }
+        num = tmp6 + 1;
+        if (num >= length) {
+          break;
+        }
+      }
+      let _String5 = String;
+      let arr9 = items.push(String.fromCodePoint(charCodeAtResult));
+      tmp6 = num;
     }
-    continue;
   }
-  return items;
+  return items.join("");
 };
-export { ResolveLocale };
-export const match = function match(items, arg1, arg2, algorithm) {
-  closure_0 = arg2;
-  const canonicalLocales = Intl.getCanonicalLocales(items);
-  let str;
-  if (algorithm != null) {
-    str = algorithm.algorithm;
+unsigned_long_long.object = (arg0, context) => {
+  let str = "Null";
+  if (null !== arg0) {
+    if ("undefined" === typeof arg0) {
+      str = "Undefined";
+    } else if ("boolean" === tmp) {
+      str = "Boolean";
+    } else if ("number" === tmp) {
+      str = "Number";
+    } else if ("string" === tmp) {
+      str = "String";
+    } else {
+      str = "Symbol";
+      if ("symbol" !== tmp) {
+        str = "Object";
+      }
+    }
   }
-  if (!str) {
-    str = "best fit";
+  if ("Object" !== str) {
+    let str8 = "Value";
+    if (context) {
+      str8 = "Value";
+      if (context.context) {
+        str8 = context.context;
+      }
+    }
+    const _HermesInternal = HermesInternal;
+    const typeError = new TypeError("" + str8 + " " + "is not an object" + ".");
+    throw typeError;
+  } else {
+    return arg0;
   }
-  return ResolveLocale(arg1, canonicalLocales, { localeMatcher: str }, [], {}, () => closure_0).locale;
 };
+Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, "byteLength").get;
+unsigned_long_long.ArrayBuffer = (length, arg1) => {
+  if (isArrayBuffer(length)) {
+    return length;
+  } else {
+    let str2 = "Value";
+    if (arg1) {
+      str2 = "Value";
+      if (arg1.context) {
+        str2 = arg1.context;
+      }
+    }
+    const _HermesInternal = HermesInternal;
+    const typeError = new TypeError("" + str2 + " " + "is not a view on an ArrayBuffer object" + ".");
+    throw typeError;
+  }
+};
+const get = Object.getOwnPropertyDescriptor(DataView.prototype, "byteLength").get;
+unsigned_long_long.DataView = (arg0, arg1) => {
+  try {
+    const call = get.call;
+    if (typeof call === "unknown") {
+      get();
+    } else {
+      call(arg0);
+    }
+    return arg0;
+  } catch (err) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError(_("is not a view on an DataView object", arg1));
+    throw typeError;
+  }
+};
+let items = [
+  Int8Array,
+  Int16Array,
+  Int32Array,
+  Uint8Array,
+  Uint16Array,
+  Uint32Array,
+  Uint8ClampedArray,
+  Float32Array,
+  Float64Array,
+];
+const item = items.forEach((name) => {
+  name = name.name;
+  let str = "a";
+  if (obj.test(name)) {
+    str = "an";
+  }
+  exports[name] = (arg0, context) => {
+    if (ArrayBuffer.isView(arg0)) {
+      if (arg0.constructor.name === name) {
+        return arg0;
+      }
+    }
+    const combined = "is not " + str + " " + name + " object";
+    str = "Value";
+    if (context) {
+      str = "Value";
+      if (context.context) {
+        str = context.context;
+      }
+    }
+    const typeError = new TypeError("" + str + " " + combined + ".");
+    throw typeError;
+  };
+});
+unsigned_long_long.ArrayBufferView = (arg0, context) => {
+  if (ArrayBuffer.isView(arg0)) {
+    return arg0;
+  } else {
+    let str2 = "Value";
+    if (context) {
+      str2 = "Value";
+      if (context.context) {
+        str2 = context.context;
+      }
+    }
+    const _HermesInternal = HermesInternal;
+    const typeError = new TypeError("" + str2 + " " + "is not a view on an ArrayBuffer object" + ".");
+    throw typeError;
+  }
+};
+unsigned_long_long.BufferSource = (arg0, context) => {
+  if (!ArrayBuffer.isView(arg0)) {
+    if (!isArrayBuffer(arg0)) {
+      let str2 = "Value";
+      if (context) {
+        str2 = "Value";
+        if (context.context) {
+          str2 = context.context;
+        }
+      }
+      const _HermesInternal = HermesInternal;
+      const typeError = new TypeError("" + str2 + " " + "is not an ArrayBuffer object or a view on one" + ".");
+      throw typeError;
+    }
+  }
+  return arg0;
+};
+unsigned_long_long.DOMTimeStamp = unsigned_long_long["unsigned long long"];
+unsigned_long_long.Function = convertCallbackFunction;
+unsigned_long_long.VoidFunction = convertCallbackFunction;

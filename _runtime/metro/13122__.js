@@ -1,30 +1,14 @@
 // _runtime/metro/13122__.js
-import setupIntegration from "13104__.js";
+import _mod13121 from "13121__.js";
 
-const weakMap = new WeakMap();
+require = arg1;
+const dependencyMap = arg6;
 
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function () {
-        const items = [...arguments];
-        const originalFunction = closure_1_0(13054).getOriginalFunction(this);
-        const obj = closure_1_0(13054);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {}
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
-  },
-}));
+export const getTraceMetaTags = function getTraceMetaTags() {
+  const entries = Object.entries(_mod13121.getTraceData());
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
+  });
+  return mapped.join("\n");
+};

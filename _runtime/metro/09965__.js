@@ -1,13 +1,12 @@
 // _runtime/metro/09965__.js
-import _asyncLoop from "../09960__asyncLoop.js";
-import _mod9966 from "09966__.js";
+import _asyncLoop from "../09961__asyncLoop.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let SHA224 = require;
+const HMAC = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,159 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const uint32Array = new Uint32Array([
-  1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401,
-  607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628,
-  770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711,
-  113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037,
-  2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616,
-  659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424,
-  2428436474, 2756734187, 3204031479, 3329325298,
-]);
-const uint32Array1 = new Uint32Array([
-  1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225,
-]);
-const uint32Array2 = new Uint32Array(64);
-class SHA256 {
-  constructor() {
+class HMAC {
+  constructor(arg0, arg1) {
     self = this;
-    tmp = c2(this, SHA224);
-    items = [64, 32, 8];
-    items[3] = false;
+    tmp = c2(this, HMAC);
     tmp2 = closure_4;
-    obj = closure_4(SHA224);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.A = closure_7[0] | 0;
-    tmp3Result.B = closure_7[1] | 0;
-    tmp3Result.C = closure_7[2] | 0;
-    tmp3Result.D = closure_7[3] | 0;
-    tmp3Result.E = closure_7[4] | 0;
-    tmp3Result.F = closure_7[5] | 0;
-    tmp3Result.G = closure_7[6] | 0;
-    tmp3Result.H = closure_7[7] | 0;
-    return tmp3Result;
-  }
-}
-SHA224 = SHA256;
-_inherits(SHA256, _mod9966.HashMD);
-const entry = {
-  key: "get",
-  value: function get() {
-    const items = [, , , , , , ,];
-    ({ A: arr[0], B: arr[1], C: arr[2], D: arr[3], E: arr[4], F: arr[5], G: arr[6], H: arr[7] } = this);
-    return items;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "set",
-    value: function set(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {},
-  },
-  {
-    key: "process",
-    value: function process(getUint32, sum) {
-      let num2;
-      let tmp22;
-      let tmp23;
-      let tmp24;
-      let tmp25;
-      let tmp26;
-      let tmp27;
-      let tmp28;
-      let tmp29;
-      let num = 0;
-      do {
-        uint32Array2[num] = getUint32.getUint32(sum, false);
-        num = num + 1;
-        sum = sum + 4;
-        num2 = 16;
-      } while (num < 16);
-      do {
-        let tmp4 = uint32Array2[num2 - 15];
-        let tmp5 = uint32Array2[num2 - 2];
-        let rotrResult = SHA224(9960).rotr(tmp4, 7);
-        let tmp9 = rotrResult ^ SHA224(9960).rotr(tmp4, 18) ^ (tmp4 >>> 3);
-        let rotrResult1 = SHA224(9960).rotr(tmp5, 17);
-        uint32Array2[num2] =
-          ((rotrResult1 ^ SHA224(9960).rotr(tmp5, 19) ^ (tmp5 >>> 10)) +
-            uint32Array2[num2 - 7] +
-            tmp9 +
-            uint32Array2[num2 - 16]) |
-          0;
-        num2 = num2 + 1;
-      } while (num2 < 64);
-      const self = this;
-      ({ A, B, C, D, E, F, G, H } = this);
-      let num3 = 0;
-      do {
-        let rotrResult2 = SHA224(9960).rotr(E, 6);
-        let tmp14 = rotrResult2 ^ SHA224(9960).rotr(E, 11);
-        let sum1 = H + (tmp14 ^ SHA224(9960).rotr(E, 25));
-        let tmp18 = (sum1 + SHA224(9966).Chi(E, F, G) + uint32Array[num3] + uint32Array2[num3]) | 0;
-        let rotrResult3 = SHA224(9960).rotr(A, 2);
-        let tmp20 = rotrResult3 ^ SHA224(9960).rotr(A, 13);
-        let tmp21 = tmp20 ^ SHA224(9960).rotr(A, 22);
-        tmp22 = (D + tmp18) | 0;
-        tmp23 = (tmp18 + ((tmp21 + SHA224(9966).Maj(A, B, C)) | 0)) | 0;
-        num3 = num3 + 1;
-        H = G;
-        tmp24 = G;
-        G = F;
-        tmp25 = F;
-        F = E;
-        tmp26 = E;
-        E = tmp22;
-        D = C;
-        tmp27 = C;
-        C = B;
-        tmp28 = B;
-        B = A;
-        tmp29 = A;
-        A = tmp23;
-      } while (num3 < 64);
-      const result = self.set(
-        (tmp23 + self.A) | 0,
-        (tmp29 + self.B) | 0,
-        (tmp28 + self.C) | 0,
-        (tmp27 + self.D) | 0,
-        (tmp22 + self.E) | 0,
-        (tmp26 + self.F) | 0,
-        (tmp25 + self.G) | 0,
-        (tmp24 + self.H) | 0,
-      );
-    },
-  },
-  {
-    key: "roundClean",
-    value: function roundClean() {
-      uint32Array2.fill(0);
-    },
-  },
-  {
-    key: "destroy",
-    value: function destroy() {
-      const result = this.set(0, 0, 0, 0, 0, 0, 0, 0);
-      const buffer = this.buffer;
-      buffer.fill(0);
-    },
-  },
-];
-const _moduleResult = _createClass(SHA256, items);
-class SHA224 {
-  constructor() {
-    self = this;
-    tmp = c2(this, SHA224);
-    tmp2 = closure_4;
-    obj = closure_4(SHA224);
+    obj = closure_4(HMAC);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -188,21 +40,143 @@ class SHA224 {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.A = -1056596264;
-    tmp3Result.B = 914150663;
-    tmp3Result.C = 812702999;
-    tmp3Result.D = -150054599;
-    tmp3Result.E = -4191439;
-    tmp3Result.F = 1750603025;
-    tmp3Result.G = 1694076839;
-    tmp3Result.H = -1090891868;
-    tmp3Result.outputLen = 28;
-    return tmp3Result;
+    tmp3Result.finished = false;
+    tmp3Result.destroyed = false;
+    hashResult = closure_0(closure_1[5]).hash(global);
+    toBytesResult = closure_0(closure_1[6]).toBytes(require);
+    tmp3Result.iHash = global.create();
+    if (typeof tmp3Result.iHash.update !== "function") {
+      tmp13 = globalThis;
+      _Error = Error;
+      tmp14 = new.target;
+      str = "Expected instance of class which extends utils.Hash";
+      tmp15 = new.target;
+      error = new Error("Expected instance of class which extends utils.Hash");
+      tmp17 = error;
+      throw error;
+    } else {
+      tmp3Result.blockLen = tmp3Result.iHash.blockLen;
+      tmp3Result.outputLen = tmp3Result.iHash.outputLen;
+      blockLen = tmp3Result.blockLen;
+      tmp18 = globalThis;
+      _Uint8Array = Uint8Array;
+      tmp19 = new.target;
+      tmp20 = new.target;
+      tmp21 = blockLen;
+      uint8Array = new Uint8Array(blockLen);
+      tmp22 = uint8Array;
+      digestResult = toBytesResult;
+      if (toBytesResult.length > blockLen) {
+        obj1 = global.create();
+        updateResult = obj1.update(toBytesResult);
+        digestResult = updateResult.digest();
+      }
+      result = uint8Array.set(digestResult);
+      num = 0;
+      num2 = 54;
+      num3 = 1;
+      num4 = 0;
+      if (0 < uint8Array.length) {
+        do {
+          uint8Array[num4] = uint8Array[num4] ^ 54;
+          num4 = num4 + 1;
+          length = uint8Array.length;
+        } while (num4 < length);
+      }
+      iHash = tmp3Result.iHash;
+      updateResult1 = iHash.update(uint8Array);
+      tmp3Result.oHash = global.create();
+      num5 = 106;
+      num6 = 0;
+      if (0 < uint8Array.length) {
+        do {
+          uint8Array[num6] = uint8Array[num6] ^ 106;
+          num6 = num6 + 1;
+          length2 = uint8Array.length;
+        } while (num6 < length2);
+      }
+      oHash = tmp3Result.oHash;
+      updateResult2 = oHash.update(uint8Array);
+      fillResult = uint8Array.fill(0);
+      return tmp3Result;
+    }
   }
 }
-_inherits(SHA224, _moduleResult);
-let closure_10 = _createClass(SHA224);
+_inherits(HMAC, _asyncLoop.Hash);
+const entry = {
+  key: "update",
+  value: function update(arg0) {
+    HMAC(9962).exists(this);
+    const iHash = this.iHash;
+    iHash.update(arg0);
+    return this;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "digestInto",
+    value: function digestInto(arg0) {
+      HMAC(9962).exists(this);
+      HMAC(9962).bytes(arg0, this.outputLen);
+      this.finished = true;
+      const iHash = this.iHash;
+      iHash.digestInto(arg0);
+      const oHash = this.oHash;
+      oHash.update(arg0);
+      const oHash2 = this.oHash;
+      oHash2.digestInto(arg0);
+      this.destroy();
+    },
+  },
+  {
+    key: "digest",
+    value: function digest() {
+      const uint8Array = new Uint8Array(this.oHash.outputLen);
+      this.digestInto(uint8Array);
+      return uint8Array;
+    },
+  },
+  {
+    key: "_cloneInto",
+    value: function _cloneInto(arg0) {
+      const self = this;
+      let obj = arg0;
+      if (!arg0) {
+        const _Object = Object;
+        const _Object2 = Object;
+        obj = Object.create(Object.getPrototypeOf(self), {});
+      }
+      ({
+        oHash,
+        iHash,
+        finished: tmp.finished,
+        destroyed: tmp.destroyed,
+        blockLen: tmp.blockLen,
+        outputLen: tmp.outputLen,
+      } = self);
+      obj.oHash = oHash._cloneInto(obj.oHash);
+      obj.iHash = iHash._cloneInto(obj.iHash);
+      return obj;
+    },
+  },
+  {
+    key: "destroy",
+    value: function destroy() {
+      this.destroyed = true;
+      const oHash = this.oHash;
+      oHash.destroy();
+      const iHash = this.iHash;
+      iHash.destroy();
+    },
+  },
+];
+const _moduleResult = _createClass(HMAC, items);
+const metroRequire = _moduleResult;
+exports.hmac.create = (arg0, arg1) => new _moduleResult(arg0, arg1);
 
-export const SHA256 = _moduleResult;
-export const sha256 = _asyncLoop.wrapConstructor(() => new _moduleResult());
-export const sha224 = _asyncLoop.wrapConstructor(() => new closure_10());
+export const HMAC = _moduleResult;
+export const hmac = (arg0, arg1, arg2) => {
+  const obj = new _moduleResult(arg0, arg1);
+  return new _moduleResult(arg0, arg1).update(arg2).digest();
+};

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/HoloWavesIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "88fd60fc6961a4cc52d32c54b3209f38",
-  name: "HoloWavesIcon",
+  hash: "68832d737c55ed046c40e8d11571a54e",
+  name: "CircuitIcon",
   type: "png",
 });

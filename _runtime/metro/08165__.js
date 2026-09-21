@@ -1,41 +1,39 @@
 // _runtime/metro/08165__.js
+import Link from "../01485_Link.js";
+import noop from "00019__.js";
 
-export const getModalRouteKeys = (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.reduce((arr, key) => {
-    let options;
-    if (closure_0[key.key] != null) {
-      options = tmp.options;
+require = arg1;
+
+export const useInvalidPreventRemoveError = function useInvalidPreventRemoveError(descriptors) {
+  const first = Object.keys(Link.usePreventRemoveContext().preventedRoutes)[0];
+  let prop;
+  if (descriptors[first] != null) {
+    const options = tmp2.options;
+    if (options != null) {
+      prop = options.headerBackButtonMenuEnabled;
     }
-    if (options == null) {
-      options = {};
+  }
+  let name;
+  if (descriptors[first] != null) {
+    const route = tmp2.route;
+    if (route != null) {
+      name = route.name;
     }
-    const presentation = options.presentation;
-    let tmp2 = arr.length && !presentation;
-    if (!tmp2) {
-      tmp2 = "modal" === presentation;
+  }
+  const items = [first, prop, name];
+  const effect = noop.useEffect(() => {
+    if (null != first) {
+      if (prop) {
+        const _HermesInternal = HermesInternal;
+        const _console = console;
+        console.error(
+          "The screen " +
+            name +
+            " uses 'usePreventRemove' hook alongside 'headerBackButtonMenuEnabled: true', which is not supported. \n\nConsider removing 'headerBackButtonMenuEnabled: true' from " +
+            name +
+            " screen to get rid of this error.",
+        );
+      }
     }
-    if (!tmp2) {
-      tmp2 = "transparentModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "containedModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "containedTransparentModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "fullScreenModal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "formSheet" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "pageSheet" === presentation;
-    }
-    if (tmp2) {
-      arr = arr.push(key.key);
-    }
-    return arr;
-  }, []);
+  }, items);
 };

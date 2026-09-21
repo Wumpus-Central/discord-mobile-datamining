@@ -52,10 +52,10 @@ function _getGraphQLOperation(operationName) {
       } else {
         const match1 = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
         if (match1) {
-          const obj3 = { operationType: match1[1], operationName: "Array" };
+          const obj3 = { operationType: match1[1], operationName: "y" };
           obj = obj3;
         } else {
-          obj = { operationType: "a", operationName: "isArray" };
+          obj = { operationType: "Array", operationName: "PX_16" };
         }
       }
       let operationName2 = obj.operationName;
@@ -334,10 +334,10 @@ export const parseGraphQLQuery = function parseGraphQLQuery(str) {
   } else {
     const match1 = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
     if (match1) {
-      const obj3 = { operationType: match1[1], operationName: "Array" };
+      const obj3 = { operationType: match1[1], operationName: "y" };
       let obj = obj3;
     } else {
-      obj = { operationType: "a", operationName: "isArray" };
+      obj = { operationType: "Array", operationName: "PX_16" };
     }
     return obj;
   }

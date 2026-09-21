@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 184,
   height: 152,
   scales: [2, 3],
-  hash: "55e19295e229a1848ac31993707c2b78",
-  name: "img_ban",
+  hash: "e53950ae8b4e55a0d929557716fe168b",
+  name: "img_kick_member",
   type: "png",
 });

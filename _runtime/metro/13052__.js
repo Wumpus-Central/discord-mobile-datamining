@@ -1,31 +1,3 @@
 // _runtime/metro/13052__.js
-import _mod13046 from "13046__.js";
-import _mod13049 from "13049__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentUnhandledRejection() {
-  onunhandledrejection = _mod13049.GLOBAL_OBJ.onunhandledrejection;
-  _mod13049.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
-    _mod13046.triggerHandlers("unhandledrejection", arg0);
-    if (!onunhandledrejection) {
-      return !onunhandledrejection;
-    } else {
-      const self = this;
-      const apply = onunhandledrejection.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-    }
-  };
-  _mod13049.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
-}
-let onunhandledrejection = null;
-
-export const addGlobalUnhandledRejectionInstrumentationHandler =
-  function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
-    _mod13046.addHandler("unhandledrejection", errorCallback);
-    _mod13046.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
-  };
+export const SDK_VERSION = "8.55.0";

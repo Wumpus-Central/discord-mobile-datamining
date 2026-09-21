@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/stream_feedback/dark-theme-desaturated",
-  width: 64,
-  height: 64,
-  scales: [2, 3],
-  hash: "3bf80d0ee51953e3bee2dbf2f586efb1",
-  name: "feedback-modal-happy-desaturated",
+  httpServerLocation: "/assets/images/native/stream_feedback",
+  width: 72,
+  height: 72,
+  scales: [1, 2, 3],
+  hash: "8c3b8fc66cebe540d123e4c535f8a6d7",
+  name: "feedback-modal-happy",
   type: "png",
 });

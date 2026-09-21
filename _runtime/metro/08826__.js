@@ -1,17 +1,17 @@
 // _runtime/metro/08826__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import appendTransformPropsDefault from "../08735_appendTransformProps.js";
-import extractPropsDefault from "../08742_extractProps.js";
-import extractFontDefault from "../08749_extractFont.js";
-import _modDef8751 from "08751__.js";
-import _modDef8827 from "08827__.js";
+import appendTransformPropsDefault from "../08736_appendTransformProps.js";
+import extractPropsDefault from "../08743_extractProps.js";
+import extractFontDefault from "../08750_extractFont.js";
+import _modDef8752 from "08752__.js";
+import _modDef8829 from "08829__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const TSpan = fn;
+const Text = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -31,16 +31,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 _possibleConstructorReturnDefault;
+_isNativeReflectConstruct = fn(8827);
 const jsx = fn(21).jsx;
-class TSpan {
+class Text {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_3(this, TSpan);
+    tmp = closure_3(this, Text);
     items1 = [...items];
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(TSpan);
+    obj = hasOwnProperty(Text);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp5 = globalThis;
@@ -52,51 +53,51 @@ class TSpan {
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
+      let tmp = matrix;
+      if (matrix) {
+        tmp = !matrix.matrix;
+      }
+      if (tmp) {
         tmp = appendTransformPropsDefault(matrix);
       }
       if (tmp) {
         matrix.matrix = tmp;
       }
-      const propsAndStylesResult = TSpan(8742).propsAndStyles(matrix);
-      const obj = TSpan(8742);
+      const propsAndStylesResult = Text(8743).propsAndStyles(matrix);
+      const obj = Text(8743);
       const merged = Object.assign(
         propsAndStylesResult,
-        TSpan(8743).pickNotNil(extractFontDefault(propsAndStylesResult, false)),
+        Text(8744).pickNotNil(extractFontDefault(propsAndStylesResult, true)),
       );
       if (closure_0.root) {
         const root = closure_0.root;
         root.setNativeProps(propsAndStylesResult);
       }
-      const obj2 = TSpan(8743);
+      const obj2 = Text(8744);
     };
     return tmp3Result;
   }
 }
-_inherits(TSpan, _modDef8751);
+_inherits(Text, _modDef8752);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = TSpan(8742).propsAndStyles(this.props);
+    const propsAndStylesResult = Text(8743).propsAndStyles(this.props);
     const obj2 = {};
-    const obj = TSpan(8742);
+    const obj = Text(8743);
     const merged = Object.assign(propsAndStylesResult);
     obj2.x = null;
     obj2.y = null;
     const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
+    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
     tmp2Result.ref = this.refMethod;
     const obj3 = {};
     const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef8827, {});
+    return jsx(_modDef8829, {});
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(TSpan, items);
-importDefaultResultResult.displayName = "TSpan";
-const extractFont = fn(8749);
-extractFont.setTSpan(importDefaultResultResult);
+const importDefaultResultResult = _createClass(Text, items);
+importDefaultResultResult.displayName = "Text";
 
 export default importDefaultResultResult;

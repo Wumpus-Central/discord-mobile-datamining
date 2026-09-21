@@ -1,10 +1,29 @@
 // _runtime/metro/07111__.js
-import PlatformConfig2 from "../07109_PlatformConfig.js";
+import _mod7112 from "07112__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = PlatformConfig2.PlatformConfig;
-  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
-};
+export default function toPrimitive(arg0, arg1) {
+  if ("object" == obj.default(arg0)) {
+    if (arg0) {
+      let str = arg1;
+      const _Symbol = Symbol;
+      if (undefined !== arg0[Symbol.toPrimitive]) {
+        const call = tmp4.call;
+        if (!str) {
+          str = "default";
+        }
+        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
+        if ("object" != tmpResult.default(tmp5)) {
+          return tmp5;
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
+          throw typeError;
+        }
+        tmpResult = _mod7112;
+      } else {
+        return "string" === str ? String : Number(arg0);
+      }
+    }
+  }
+  return arg0;
+}

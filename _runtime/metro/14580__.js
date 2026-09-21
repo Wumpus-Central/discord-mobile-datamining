@@ -1,7 +1,12 @@
 // _runtime/metro/14580__.js
-import _mod14578 from "14578__.js";
+import _mod14581 from "14581__.js";
 
-let closure_0 = _mod14578({}.toString);
-let closure_1 = _mod14578("".slice);
-
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default !_mod14581(
+  () =>
+    7 !==
+    Object.defineProperty({}, 1, {
+      get() {
+        return 7;
+      },
+    })[1],
+);

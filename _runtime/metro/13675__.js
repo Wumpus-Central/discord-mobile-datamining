@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "cb2a2e3b1b856419d08252c8139a8321",
-  name: "entrace_sounds",
+  hash: "fac2e3b3b87c5c331642c571eab831c9",
+  name: "sticker",
   type: "png",
 });

@@ -1,45 +1,10 @@
 // _runtime/metro/09215__.js
-import _mod9213 from "09213__.js";
+import _mod9214 from "09214__.js";
 import _mod9216 from "09216__.js";
+import _mod9217 from "09217__.js";
+import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
 
-const self = this;
-function toDotPath(path) {
-  const items = [];
-  const mapped = path.map((key) => {
-    if (typeof key === "object") {
-      key = key.key;
-    }
-    return key;
-  });
-  const iter = mapped[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp3 = nextResult;
-    if (typeof nextResult === "number") {
-      let _HermesInternal3 = HermesInternal;
-      let arr = items.push("[" + tmp3 + "]");
-    } else if (typeof tmp3 === "symbol") {
-      let _JSON2 = JSON;
-      let _String = String;
-      let _HermesInternal2 = HermesInternal;
-      let arr6 = items.push("[" + JSON.stringify(String(tmp3)) + "]");
-    } else {
-      let obj = /[^\w$]/;
-      if (obj.test(tmp3)) {
-        let _JSON = JSON;
-        let _HermesInternal = HermesInternal;
-        let arr7 = items.push("[" + JSON.stringify(tmp3) + "]");
-      } else {
-        if (items.length) {
-          let arr8 = items.push(".");
-        }
-        let arr9 = items.push(tmp3);
-      }
-    }
-    continue;
-  }
-  return items.join("");
-}
+let self = this;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -90,241 +55,559 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.$ZodError = undefined;
-    exports.$ZodRealError = undefined;
-    exports.flattenError = function flattenError(arg0, arg1) {
-      let fn = arg1;
-      if (arg1 === undefined) {
-        fn = function o(message) {
-          return message.message;
-        };
-      }
-      const fieldErrors = {};
-      const formErrors = [];
-      const iter = arg0.issues[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp2 = nextResult;
-        if (nextResult.path.length > 0) {
-          let items1 = fieldErrors[tmp2.path[0]];
-          if (!items1) {
-            items1 = [];
-          }
-          fieldErrors[tmp2.path[0]] = items1;
-          let arr3 = fieldErrors[tmp2.path[0]];
-          let arr = arr3.push(fn(tmp2));
+    exports._parse = undefined;
+    exports.parse = undefined;
+    exports._parseAsync = undefined;
+    exports.parseAsync = undefined;
+    exports._safeParse = undefined;
+    exports.safeParse = undefined;
+    exports._safeParseAsync = undefined;
+    exports.safeParseAsync = undefined;
+    exports._encode = undefined;
+    exports.encode = undefined;
+    exports._decode = undefined;
+    exports.decode = undefined;
+    exports._encodeAsync = undefined;
+    exports.encodeAsync = undefined;
+    exports._decodeAsync = undefined;
+    exports.decodeAsync = undefined;
+    exports._safeEncode = undefined;
+    exports.safeEncode = undefined;
+    exports._safeDecode = undefined;
+    exports.safeDecode = undefined;
+    exports._safeEncodeAsync = undefined;
+    exports.safeEncodeAsync = undefined;
+    exports._safeDecodeAsync = undefined;
+    exports.safeDecodeAsync = undefined;
+    let closure_4 = fn(_mod9214);
+    const fnResult = fn(_mod9216);
+    let hasOwnProperty = fnResult;
+    let closure_6 = fn(_mod9217);
+    exports._parse = (arg0) => {
+      closure_0 = arg0;
+      return (_zod, value, arg2, Err) => {
+        const obj = { async: false };
+        if (arg2) {
+          const _Object = Object;
+          let merged = Object.assign(arg2, obj);
         } else {
-          let arr2 = formErrors.push(fn(tmp2));
+          merged = obj;
         }
-        continue;
-      }
-      return { formErrors, fieldErrors };
+        _zod = _zod._zod;
+        const iter = _zod.run({ value, issues: [] }, merged);
+        if (iter instanceof Promise) {
+          const ZodAsyncError = new closure_4.$ZodAsyncError();
+          throw ZodAsyncError;
+        } else if (iter.issues.length) {
+          Err = undefined;
+          if (Err != null) {
+            Err = Err.Err;
+          }
+          if (Err == null) {
+            Err = closure_0;
+          }
+          const issues = iter.issues;
+          const err = new Err(issues.map((item) => closure_2_6.finalizeIssue(item, merged, closure_2_4.config())));
+          let callee;
+          if (Err != null) {
+            callee = Err.callee;
+          }
+          closure_6.captureStackTrace(err, callee);
+          throw err;
+        } else {
+          return iter.value;
+        }
+        const obj2 = { value, issues: [] };
+      };
     };
-    exports.formatError = function formatError(arg0, arg1) {
-      let fn = arg1;
-      if (arg1 === undefined) {
-        fn = function o(message) {
-          return message.message;
-        };
-      }
-      let obj = { _errors: [] };
-      function processError(arg0) {
-        const iter = arg0.issues[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp2 = nextResult;
-          if ("invalid_union" === nextResult.code) {
-            if (tmp2.errors.length) {
-              let errors = tmp2.errors;
-              let mapped = errors.map((issues) => {
-                processError({ issues });
-              });
-              continue;
-            }
-          }
-          if ("invalid_key" === tmp2.code) {
-            let obj2 = { issues: null };
-            obj2.issues = tmp2.issues;
-            let tmp34 = processError(obj2);
-          } else if ("invalid_element" === tmp2.code) {
-            let obj3 = { issues: null };
-            obj3.issues = tmp2.issues;
-            let tmp31 = processError(obj3);
-          } else if (0 === tmp2.path.length) {
-            let _errors = obj._errors;
-            let arr = _errors.push(fn(tmp2));
-          } else {
-            let tmp21 = obj;
-            let num = 0;
-            if (0 < tmp2.path.length) {
-              do {
-                let tmp7 = tmp2.path[num];
-                if (num === tmp2.path.length - 1) {
-                  let tmp13 = tmp21[tmp7];
-                  if (!tmp13) {
-                    let obj4 = { _errors: [] };
-                    tmp13 = obj4;
-                  }
-                  tmp21[tmp7] = tmp13;
-                  let _errors1 = tmp21[tmp7]._errors;
-                  let arr2 = _errors1.push(fn(tmp2));
-                } else {
-                  let tmp10 = tmp21[tmp7];
-                  if (!tmp10) {
-                    obj = { _errors: [] };
-                    tmp10 = obj;
-                  }
-                  tmp21[tmp7] = tmp10;
-                }
-                tmp21 = tmp21[tmp7];
-                sum = num + 1;
-                num = sum;
-              } while (sum < tmp2.path.length);
-            }
-          }
-        }
-      }
-      processError(arg0);
-      return obj;
-    };
-    exports.treeifyError = function treeifyError(arg0) {
-      let fn = arg1;
-      if (arg1 === undefined) {
-        fn = function o(message) {
-          return message.message;
-        };
-      }
-      let obj = { errors: [] };
-      function processError(arg0) {
-        let items = arg1;
-        if (arg1 === undefined) {
-          items = [];
-        }
-        let properties;
-        items = undefined;
-        function _loop(iter) {
-          if ("invalid_union" === iter.code) {
-            if (iter.errors.length) {
-              const errors = iter.errors;
-              const mapped = errors.map((issues) => {
-                items({ issues }, iter.path);
-              });
-            }
-          }
-          if ("invalid_key" === iter.code) {
-            const obj2 = { issues: iter.issues };
-            processError(obj2, iter.path);
-          } else if ("invalid_element" === iter.code) {
-            const obj3 = { issues: iter.issues };
-            processError(obj3, iter.path);
-          } else {
-            const items1 = [];
-            HermesBuiltin.arraySpread(iter.path, HermesBuiltin.arraySpread(items, 0));
-            if (0 === items1.length) {
-              const errors1 = obj.errors;
-              errors1.push(fn(iter));
-              return 1;
+    exports.parse = exports._parse(fnResult.$ZodRealError);
+    exports._parseAsync = (arg0) => {
+      closure_0 = asyncGeneratorStep(async (arg0, value, arg2, arg3) => {
+        let _zod = arg0;
+        closure_2 = arg2;
+        closure_3 = arg3;
+        c7 = 0;
+        c8 = 0;
+        return (async (arg0, value, arg2, arg3) => {
+          if (c8 === 2) {
+            c8 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
             } else {
-              let tmp10 = obj;
-              let num = 0;
-              if (0 < items1.length) {
-                do {
-                  let tmp = items1[num];
-                  let diff = items1.length - 1;
-                  if (typeof tmp === "string") {
-                    if (tmp10.properties == null) {
-                      tmp10.properties = {};
-                    }
-                    properties = tmp10.properties;
-                    if (properties[tmp] == null) {
-                      let obj4 = { errors: [] };
-                      properties[tmp] = obj4;
-                    }
-                    let tmp6 = tmp10.properties[tmp];
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c8 = 2;
+              if (0 === c7) {
+                if (arg0 === 1) {
+                  c8 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c8 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  closure_6 = tmp4;
+                  closure_5 = tmp4;
+                  closure_133_0 = closure_3;
+                  closure_133_1 = undefined;
+                  closure_133_2 = undefined;
+                  closure_133_3 = undefined;
+                  const obj4 = { async: true };
+                  if (closure_2) {
+                    const _Object = Object;
+                    let merged = Object.assign(tmp39, obj4);
                   } else {
-                    if (tmp10.items == null) {
-                      tmp10.items = [];
-                    }
-                    items = tmp10.items;
-                    if (items[tmp] == null) {
-                      obj = { errors: [] };
-                      items[tmp] = obj;
-                    }
-                    tmp6 = tmp10.items[tmp];
+                    merged = obj4;
                   }
-                  if (num === diff) {
-                    let errors2 = tmp6.errors;
-                    let arr2 = errors2.push(fn(iter));
+                  closure_133_1 = merged;
+                  _zod = _zod._zod;
+                  const obj5 = { value, issues: [] };
+                  closure_133_2 = _zod.run(obj5, merged);
+                  if (closure_133_2 instanceof Promise) {
+                    c7 = 1;
+                    c8 = 1;
+                    const obj6 = { value: closure_133_2, done: false };
+                    return obj6;
                   }
-                  num = num + 1;
-                  tmp10 = tmp6;
-                } while (num < items1.length);
+                }
+              } else if (arg0 === 1) {
+                c8 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c8 = 3;
+                const obj = { value, done: true };
+                return obj;
+              } else {
+                closure_133_2 = value;
               }
+              if (closure_133_2.issues.length) {
+                let Err;
+                if (closure_133_0 != null) {
+                  Err = closure_133_0.Err;
+                }
+                closure_4 = Err;
+                if (Err == null) {
+                  closure_4 = _zod;
+                }
+                const issues = closure_133_2.issues;
+                const tmp24 = new closure_4(issues.map((item) => closure_6.finalizeIssue(item, closure_1_1, closure_4.config())));
+                closure_133_3 = tmp24;
+                let callee;
+                if (closure_133_0 != null) {
+                  callee = closure_133_0.callee;
+                }
+                closure_2_6.captureStackTrace(closure_133_3, callee);
+                throw closure_133_3;
+              } else {
+                c8 = 3;
+                const obj7 = { value: closure_133_2.value, done: true };
+                return obj7;
+              }
+            } catch (tmp32) {
+              c8 = tmp;
+              throw tmp32;
             }
           }
-        }
-        const iter = arg0.issues[Symbol.iterator]();
-        while (iter !== undefined) {
-          let _loopResult = _loop(iter.next());
-          continue;
-        }
-      }
-      processError(arg0);
-      return obj;
-    };
-    exports.toDotPath = toDotPath;
-    exports.prettifyError = function prettifyError(issues) {
-      const items = [];
-      const items1 = [...issues.issues];
-      const sorted = items1.sort((path, path2) => {
-        path = path.path;
-        if (path == null) {
-          path = [];
-        }
-        let path1 = path2.path;
-        if (path1 == null) {
-          path1 = [];
-        }
-        return path.length - path1.length;
+        })();
       });
-      const iter = sorted[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let _HermesInternal = HermesInternal;
-        let tmp3 = nextResult;
-        let arr = items.push("\u2716 " + nextResult.message);
-        let path = nextResult.path;
-        let length;
-        if (path != null) {
-          length = path.length;
+      return function(arg0, arg1, arg2, arg3) {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
         }
-        if (length) {
-          let _HermesInternal2 = HermesInternal;
-          let arr2 = items.push("  \u2192 at " + toDotPath(tmp3.path));
-        }
-        continue;
-      }
-      return items.join("\n");
+        return applyArgumentsResult;
+      };
     };
-    let closure_2 = fn(_mod9216);
-    function initializer(_zod, value) {
-      const message = _zod;
-      _zod.name = "$ZodError";
-      Object.defineProperty(_zod, "_zod", { value: _zod._zod, enumerable: false });
-      Object.defineProperty(_zod, "issues", { value, enumerable: false });
-      _zod.message = JSON.stringify(value, closure_2.jsonStringifyReplacer, 2);
-      Object.defineProperty(_zod, "toString", {
-        value() {
-          return message.message;
-        },
-        enumerable: false,
+    exports.parseAsync = exports._parseAsync(fnResult.$ZodRealError);
+    exports._safeParse = (arg0) => {
+      closure_0 = arg0;
+      return (_zod, value, arg2) => {
+        if (arg2) {
+          const obj2 = {};
+          const merged = Object.assign(arg2);
+          obj2.async = false;
+          let obj = obj2;
+        } else {
+          obj = { async: false };
+        }
+        _zod = _zod._zod;
+        const iter = _zod.run({ value, issues: [] }, obj);
+        if (iter instanceof Promise) {
+          const ZodAsyncError = new closure_4.$ZodAsyncError();
+          throw ZodAsyncError;
+        } else {
+          if (iter.issues.length) {
+            let $ZodError = closure_0;
+            if (closure_0 == null) {
+              $ZodError = fnResult.$ZodError;
+            }
+            const obj4 = { success: false, error: null };
+            const issues = iter.issues;
+            const ZodError = new $ZodError(issues.map((item) => closure_2_6.finalizeIssue(item, obj, closure_2_4.config())));
+            obj4.error = ZodError;
+            let obj5 = obj4;
+          } else {
+            obj5 = { success: true, data: iter.value };
+          }
+          return obj5;
+        }
+        const obj3 = { value, issues: [] };
+      };
+    };
+    exports.safeParse = exports._safeParse(fnResult.$ZodRealError);
+    exports._safeParseAsync = (arg0) => {
+      closure_0 = asyncGeneratorStep(async (arg0, value, arg2) => {
+        let _zod = arg0;
+        closure_2 = arg2;
+        c5 = 0;
+        c6 = 0;
+        return (async (arg0, value, arg2) => {
+          if (c6 === 2) {
+            c6 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj2 = { value, done: true };
+              return obj2;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c6 = 2;
+              if (0 === c5) {
+                if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  const obj3 = { value, done: true };
+                  return obj3;
+                } else {
+                  closure_4 = tmp4;
+                  closure_3 = tmp4;
+                  closure_131_0 = undefined;
+                  closure_131_1 = undefined;
+                  const obj4 = { async: true };
+                  if (closure_2) {
+                    const _Object = Object;
+                    let merged = Object.assign(tmp29, obj4);
+                  } else {
+                    merged = obj4;
+                  }
+                  closure_131_0 = merged;
+                  _zod = _zod._zod;
+                  const obj5 = { value, issues: [] };
+                  closure_131_1 = _zod.run(obj5, merged);
+                  if (closure_131_1 instanceof Promise) {
+                    c5 = 1;
+                    c6 = 1;
+                    const obj6 = { value: closure_131_1, done: false };
+                    return obj6;
+                  }
+                }
+              } else if (arg0 === 1) {
+                c6 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                const obj = { value, done: true };
+                return obj;
+              } else {
+                closure_131_1 = value;
+              }
+              if (closure_131_1.issues.length) {
+                const obj7 = { success: false, error: null };
+                const issues = closure_131_1.issues;
+                const tmp19 = new _zod(issues.map((item) => c6.finalizeIssue(item, _zod, closure_4.config())));
+                obj7.error = tmp19;
+              } else {
+                { success: true, data: null }[1] = closure_131_1.value;
+              }
+              c6 = 3;
+            } catch (tmp22) {
+              c6 = tmp;
+              throw tmp22;
+            }
+          }
+        })();
       });
-    }
-    exports.$ZodError = _mod9213.$constructor("$ZodError", initializer);
-    let obj = { Parent: null };
-    const _Error = Error;
-    obj.Parent = Error;
-    exports.$ZodRealError = _mod9213.$constructor("$ZodError", initializer, obj);
+      return function(arg0, arg1, arg2) {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+    };
+    exports.safeParseAsync = exports._safeParseAsync(fnResult.$ZodRealError);
+    exports._encode = (arg0) => {
+      closure_0 = arg0;
+      return (arg0, arg1, arg2) => {
+        const obj = { direction: "backward" };
+        if (arg2) {
+          const _Object = Object;
+          let merged = Object.assign(arg2, obj);
+        } else {
+          merged = obj;
+        }
+        return exports._parse(closure_0)(arg0, arg1, merged);
+      };
+    };
+    exports.encode = exports._encode(fnResult.$ZodRealError);
+    exports._decode = (arg0) => {
+      closure_0 = arg0;
+      return (arg0, arg1, arg2) => exports._parse(closure_0)(arg0, arg1, arg2);
+    };
+    exports.decode = exports._decode(fnResult.$ZodRealError);
+    exports._encodeAsync = (arg0) => {
+      closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
+        let _parseAsync = arg0;
+        closure_1 = arg1;
+        closure_2 = arg2;
+        c3 = 0;
+        return (async (arg0, value, arg2) => {
+          if (c3 === 2) {
+            c3 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c3 = 2;
+              if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj2 = { value, done: true };
+                return obj2;
+              } else {
+                _parseAsync = { direction: "backward" };
+                if (closure_2) {
+                  const _Object = Object;
+                  let merged = Object.assign(tmp6, _parseAsync);
+                } else {
+                  merged = _parseAsync;
+                }
+                _parseAsync = _parseAsync._parseAsync;
+                _parseAsync(_parseAsync)(_parseAsync, closure_1, merged);
+                c3 = 3;
+              }
+            } catch (tmp12) {
+              c3 = tmp;
+              throw tmp12;
+            }
+          }
+        })();
+      });
+      return function(arg0, arg1, arg2) {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+    };
+    exports.encodeAsync = exports._encodeAsync(fnResult.$ZodRealError);
+    exports._decodeAsync = (arg0) => {
+      closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
+        if (c3 === 2) {
+          c3 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c3 = 2;
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c3 = 3;
+              const obj = { value: closure_0._parseAsync(closure_0)(closure_0, closure_1, closure_2), done: true };
+              return obj;
+            }
+          } catch (tmp9) {
+            c3 = tmp;
+            throw tmp9;
+          }
+        }
+      });
+      return function(arg0, arg1, arg2) {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+    };
+    exports.decodeAsync = exports._decodeAsync(fnResult.$ZodRealError);
+    exports._safeEncode = (arg0) => {
+      closure_0 = arg0;
+      return (arg0, arg1, arg2) => {
+        const obj = { direction: "backward" };
+        if (arg2) {
+          const _Object = Object;
+          let merged = Object.assign(arg2, obj);
+        } else {
+          merged = obj;
+        }
+        return exports._safeParse(closure_0)(arg0, arg1, merged);
+      };
+    };
+    exports.safeEncode = exports._safeEncode(fnResult.$ZodRealError);
+    exports._safeDecode = (arg0) => {
+      closure_0 = arg0;
+      return (arg0, arg1, arg2) => exports._safeParse(closure_0)(arg0, arg1, arg2);
+    };
+    exports.safeDecode = exports._safeDecode(fnResult.$ZodRealError);
+    exports._safeEncodeAsync = (arg0) => {
+      closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
+        let _safeParseAsync = arg0;
+        closure_1 = arg1;
+        closure_2 = arg2;
+        c3 = 0;
+        return (async (arg0, value, arg2) => {
+          if (c3 === 2) {
+            c3 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c3 = 2;
+              if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj2 = { value, done: true };
+                return obj2;
+              } else {
+                _safeParseAsync = { direction: "backward" };
+                if (closure_2) {
+                  const _Object = Object;
+                  let merged = Object.assign(tmp6, _safeParseAsync);
+                } else {
+                  merged = _safeParseAsync;
+                }
+                _safeParseAsync = _safeParseAsync._safeParseAsync;
+                _safeParseAsync(_safeParseAsync)(_safeParseAsync, closure_1, merged);
+                c3 = 3;
+              }
+            } catch (tmp12) {
+              c3 = tmp;
+              throw tmp12;
+            }
+          }
+        })();
+      });
+      return function(arg0, arg1, arg2) {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+    };
+    exports.safeEncodeAsync = exports._safeEncodeAsync(fnResult.$ZodRealError);
+    exports._safeDecodeAsync = (arg0) => {
+      closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
+        if (c3 === 2) {
+          c3 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp3 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c3 = 2;
+            if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              c3 = 3;
+              const obj = { value: closure_0._safeParseAsync(closure_0)(closure_0, closure_1, closure_2), done: true };
+              return obj;
+            }
+          } catch (tmp9) {
+            c3 = tmp;
+            throw tmp9;
+          }
+        }
+      });
+      return function(arg0, arg1, arg2) {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+    };
+    exports.safeDecodeAsync = exports._safeDecodeAsync(fnResult.$ZodRealError);
   } else {
     const _Object2 = Object;
   }
