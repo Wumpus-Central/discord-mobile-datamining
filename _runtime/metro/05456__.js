@@ -1,180 +1,315 @@
 // === Module 5456: ? ===
 
 // Module 5456
-import _modDef5457 from "module_5457" /* 5457 */;
-import _modDef5458 from "module_5458" /* 5458 */;
-
-importDefault = arg2;
-const dependencyMap = arg6;
-function parseTags(byteLength, size, sum, arg3) {
-  let items;
-  let obj4;
-  let tmp = sum;
-  const obj = {};
-  sum = sum + size.size;
-  if (sum < sum) {
-    if (tmp < byteLength.byteLength) {
-      while (true) {
-        let encoding = tmp23;
-        if (byteLength.getUint8(tmp) !== 28) {
-          let obj2 = { tag: null, tagSize: 0 };
-        } else {
-          let uint16 = byteLength.getUint16(tmp + 1);
-          let uint161 = byteLength.getUint16(tmp + 3);
-          if (!arg3) {
-            if (!_modDef5457.iptc[uint16]) {
-              obj2 = { tag: "Array", tagSize: uint161 };
+const obj = {
+  0: {
+    name: "GPSVersionID",
+    description(arg0) {
+      let str = "Unknown";
+      if (2 === arg0[0]) {
+        str = "Unknown";
+        if (2 === arg0[1]) {
+          str = "Unknown";
+          if (0 === arg0[2]) {
+            str = "Unknown";
+            if (0 === arg0[3]) {
+              str = "Version 2.2";
             }
-          }
-          items = [];
-          for (let num = 0; num < uint161; num = num + 1) {
-            let arr = items.push(byteLength.getUint8(tmp6 + num));
-          }
-          let obj3 = { id: uint16, name: null, value: null, description: null };
-          obj4 = _modDef5457.iptc[uint16];
-          if (obj4) {
-            if (typeof obj4 !== "string") {
-              break;
-            } else {
-              let combined = obj4;
-            }
-          } else {
-            let _HermesInternal = HermesInternal;
-            combined = "undefined-" + uint16;
-          }
-          obj3.name = combined;
-          obj3.value = items;
-          obj3.description = getTagDescription(_modDef5457.iptc[uint16], items, obj, encoding);
-          let tmp17 = _modDef5457.iptc[uint16] && _modDef5457.iptc[uint16].repeatable;
-          if (tmp17) {
-            obj3.repeatable = true;
-          }
-          let tmp18 = _modDef5457.iptc[uint16] && undefined !== _modDef5457.iptc[uint16].encoding_name;
-          if (tmp18) {
-            let obj5 = _modDef5457.iptc[uint16];
-            obj3.encoding = obj5.encoding_name(items);
-          }
-          let obj6 = { tag: obj3, tagSize: uint161 };
-          obj2 = obj6;
-        }
-        let tag = obj2.tag;
-        if (null !== tag) {
-          let tmp21 = encoding;
-          if (tag) {
-            if ("encoding" in tag) {
-              encoding = tag.encoding;
-            }
-            if (undefined !== obj[tag.name]) {
-              if (undefined !== tag.repeatable) {
-                let _Array = Array;
-                if (!(obj[tag.name] instanceof Array)) {
-                  let obj7 = { id: obj[tag.name].id, value: obj[tag.name].value, description: obj[tag.name].description };
-                  let items1 = [obj7];
-                  obj[tag.name] = items1;
-                }
-                let arr3 = obj[tag.name];
-                let obj15 = { id: null, value: null, description: null };
-                ({ id: obj8.id, value: obj8.value, description: obj8.description } = tag);
-                let arr2 = arr3.push(obj15);
-                tmp21 = encoding;
-              }
-            }
-            let obj16 = { id: null, value: null, description: null };
-            ({ id: obj9.id, value: obj9.value, description: obj9.description } = tag);
-            obj[tag.name] = obj16;
-            tmp21 = encoding;
-          }
-          let sum1 = tmp + (5 + tmp19);
-          if (sum1 < sum) {
-            tmp23 = tmp21;
-            tmp = sum1;
           }
         }
       }
-      if (typeof obj4.name === "function") {
-        let name = obj4.name(items);
-      } else {
-        name = obj4.name;
+      return str;
+    }
+  },
+  1: {
+    name: "GPSLatitudeRef",
+    description(join) {
+      const joined = join.join("");
+      let str = "North latitude";
+      if ("N" !== joined) {
+        let str2 = "Unknown";
+        if ("S" === joined) {
+          str2 = "South latitude";
+        }
+        str = str2;
       }
+      return str;
     }
-  }
-  return obj;
-}
-function getTagDescription(description, items, arg2, encoding) {
-  if (!(function hasDescriptionProperty(description) {
-    let tmp = description;
-    if (description) {
-      tmp = undefined !== description.description;
-    }
-    return tmp;
-  })(description)) {
-    let decodeResult = items;
-    if ((function tagValueIsText(description, items) {
-      let tmp = description;
-      if (description) {
-        const _Array = Array;
-        tmp = items instanceof Array;
+  },
+  2: { name: "GPSLatitude", description: fn(5455).getCalculatedGpsValue },
+  3: {
+    name: "GPSLongitudeRef",
+    description(join) {
+      const joined = join.join("");
+      let str = "East longitude";
+      if ("E" !== joined) {
+        let str2 = "Unknown";
+        if ("W" === joined) {
+          str2 = "West longitude";
+        }
+        str = str2;
       }
-      return tmp;
-    })(description, items)) {
-      const decoder = _modDef5458;
-      decodeResult = decoder.decode(encoding, items);
+      return str;
     }
-    return decodeResult;
-  } else {
-    try {
-      return description.description(items, arg2);
-    } catch (err) {
-    }
-  }
-}
-
-export default {
-  read(byteLength, sum, arg2) {
-    try {
-      const _Array = Array;
-      if (Array.isArray(byteLength)) {
-        const _DataView = DataView;
-        const _Uint8Array = Uint8Array;
-        const dataView = new DataView(Uint8Array.from(byteLength).buffer);
-        let obj = { size: byteLength.length };
-        return parseTags(dataView, obj, 0, arg2);
-      } else {
-        const tmp5 = (function getNaaResourceBlock(byteLength, sum) {
-          let tmp = sum;
-          if (sum + 12 <= byteLength.byteLength) {
-            while (943868237 === byteLength.getUint32(tmp, false)) {
-              let uint8 = byteLength.getUint8(tmp + 4 + 2);
-              sum = uint8;
-              if (uint8 % 2 === 0) {
-                sum = uint8 + 1;
-              }
-              let sum1 = sum + 1;
-              let obj = { headerSize: 6 + sum1 + 4, type: byteLength.getUint16(tmp + 4), size: byteLength.getUint32(tmp + 4 + 2 + sum1) };
-              if (1028 === obj.type) {
-                let obj2 = { naaBlock: obj, dataOffset: tmp + obj.headerSize };
-                return obj2;
-              } else {
-                let num = 0;
-                let sum2 = obj.headerSize + obj.size;
-                if (obj.size % 2 !== 0) {
-                  num = 1;
-                }
-                let sum3 = tmp + (sum2 + num);
-                tmp = sum3;
-              }
-            }
-            const _Error = Error;
-            const error = new Error("Not an IPTC resource block.");
-            throw error;
+  },
+  4: null,
+  5: null,
+  6: null,
+  7: null,
+  8: "GPSSatellites",
+  9: null,
+  10: null,
+  11: "GPSDOP",
+  12: null,
+  13: "GPSSpeed",
+  14: null,
+  15: "GPSTrack",
+  16: null,
+  17: "GPSImgDirection",
+  18: "GPSMapDatum",
+  19: null,
+  20: null,
+  21: null,
+  22: null,
+  23: null,
+  24: "GPSDestBearing",
+  25: null,
+  26: "GPSDestDistance",
+  27: null,
+  28: null,
+  29: "GPSDateStamp",
+  30: null,
+  31: "GPSHPositioningError"
+};
+const obj2 = {
+  name: "GPSVersionID",
+  description(arg0) {
+    let str = "Unknown";
+    if (2 === arg0[0]) {
+      str = "Unknown";
+      if (2 === arg0[1]) {
+        str = "Unknown";
+        if (0 === arg0[2]) {
+          str = "Unknown";
+          if (0 === arg0[3]) {
+            str = "Version 2.2";
           }
-          const error1 = new Error("No IPTC NAA resource block.");
-          throw error1;
-        })(byteLength, sum);
-        return parseTags(byteLength, tmp5.naaBlock, tmp5.dataOffset, arg2);
+        }
       }
-    } catch (err) {
-      return {};
     }
+    return str;
   }
 };
+const obj3 = { name: "GPSLatitude", description: fn(5455).getCalculatedGpsValue };
+obj[4] = { name: "GPSLongitude", description: fn(5455).getCalculatedGpsValue };
+obj[5] = {
+  name: "GPSAltitudeRef",
+  description(arg0) {
+    let str = "Sea level";
+    if (0 !== arg0) {
+      let str2 = "Unknown";
+      if (1 === arg0) {
+        str2 = "Sea level reference (negative value)";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[6] = {
+  name: "GPSAltitude",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " m";
+  }
+};
+obj[7] = {
+  name: "GPSTimeStamp",
+  description(arr) {
+    const mapped = arr.map((item) => {
+      [tmp, tmp2] = item;
+      const result = tmp / tmp2;
+      let combined = result;
+      if (obj.test("" + result)) {
+        const _HermesInternal = HermesInternal;
+        combined = "0" + result;
+      }
+      return combined;
+    });
+    return mapped.join(":");
+  }
+};
+obj[9] = {
+  name: "GPSStatus",
+  description(join) {
+    const joined = join.join("");
+    let str = "Measurement in progress";
+    if ("A" !== joined) {
+      let str2 = "Unknown";
+      if ("V" === joined) {
+        str2 = "Measurement Interoperability";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[10] = {
+  name: "GPSMeasureMode",
+  description(join) {
+    const joined = join.join("");
+    let str = "2-dimensional measurement";
+    if ("2" !== joined) {
+      let str2 = "Unknown";
+      if ("3" === joined) {
+        str2 = "3-dimensional measurement";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[12] = {
+  name: "GPSSpeedRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "Kilometers per hour";
+    if ("K" !== joined) {
+      let str2 = "Miles per hour";
+      if ("M" !== joined) {
+        let str4 = "Unknown";
+        if ("N" === joined) {
+          str4 = "Knots";
+        }
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[14] = {
+  name: "GPSTrackRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[16] = {
+  name: "GPSImgDirectionRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[19] = {
+  name: "GPSDestLatitudeRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "North latitude";
+    if ("N" !== joined) {
+      let str2 = "Unknown";
+      if ("S" === joined) {
+        str2 = "South latitude";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[20] = {
+  name: "GPSDestLatitude",
+  description(arg0) {
+    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
+  }
+};
+obj[21] = {
+  name: "GPSDestLongitudeRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "East longitude";
+    if ("E" !== joined) {
+      let str2 = "Unknown";
+      if ("W" === joined) {
+        str2 = "West longitude";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[22] = {
+  name: "GPSDestLongitude",
+  description(arg0) {
+    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
+  }
+};
+obj[23] = {
+  name: "GPSDestBearingRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+obj[25] = {
+  name: "GPSDestDistanceRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "Kilometers";
+    if ("K" !== joined) {
+      let str2 = "Miles";
+      if ("M" !== joined) {
+        let str4 = "Unknown";
+        if ("N" === joined) {
+          str4 = "Knots";
+        }
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+const obj4 = { name: "GPSLongitude", description: fn(5455).getCalculatedGpsValue };
+obj[27] = { name: "GPSProcessingMethod", description: fn(5455).getEncodedString };
+const obj5 = { name: "GPSProcessingMethod", description: fn(5455).getEncodedString };
+obj[28] = { name: "GPSAreaInformation", description: fn(5455).getEncodedString };
+obj[30] = {
+  name: "GPSDifferential",
+  description(arg0) {
+    let str = "Measurement without differential correction";
+    if (0 !== arg0) {
+      let str2 = "Unknown";
+      if (1 === arg0) {
+        str2 = "Differential correction applied";
+      }
+      str = str2;
+    }
+    return str;
+  }
+};
+
+export default obj;

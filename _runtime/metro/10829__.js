@@ -1,16 +1,15 @@
 // === Module 10829: ? ===
 
 // Module 10829
-import now from "now" /* 10715 */;
-import _mod10822 from "module_10822" /* 10822 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import now from "now" /* 10716 */;
+import _mod10823 from "module_10823" /* 10823 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 let self = this;
-const RUCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,6 +29,8 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -45,7 +46,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      fn = function c(arg0) {
+      fn = function o(arg0) {
         fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -92,15 +93,15 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    let closure_9 = fn(now);
-    class RUCasualTimeParser {
+    let closure_7 = fn(now);
+    class RUCasualDateParser {
       constructor() {
         self = this;
-        tmp = c2(this, RUCasualTimeParser);
-        tmp2 = closure_4;
-        obj = closure_4(RUCasualTimeParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
+        tmp = closure_0(this, RUCasualDateParser);
+        tmp2 = c2;
+        obj = c2(RUCasualDateParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
           tmp7 = globalThis;
           _Reflect = Reflect;
           tmp8 = arguments;
@@ -113,61 +114,40 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _inherits(RUCasualTimeParser, _mod10822.AbstractParserWithLeftRightBoundaryChecking);
+    _classCallCheck = RUCasualDateParser;
+    _inherits(RUCasualDateParser, _mod10823.AbstractParserWithLeftRightBoundaryChecking);
     const entry = {
       key: "innerPatternString",
       value: function innerPatternString(arg0) {
-            return "(\u0441\u0435\u0439\u0447\u0430\u0441|\u043F\u0440\u043E\u0448\u043B\u044B\u043C\\s*\u0432\u0435\u0447\u0435\u0440\u043E\u043C|\u043F\u0440\u043E\u0448\u043B\u043E\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u0441\u0435\u0433\u043E\u0434\u043D\u044F\\s*\u043D\u043E\u0447\u044C\u044E|\u044D\u0442\u043E\u0439\\s*\u043D\u043E\u0447\u044C\u044E|\u043D\u043E\u0447\u044C\u044E|\u044D\u0442\u0438\u043C \u0443\u0442\u0440\u043E\u043C|\u0443\u0442\u0440\u043E\u043C|\u0443\u0442\u0440\u0430|\u0432\\s*\u043F\u043E\u043B\u0434\u0435\u043D\u044C|\u0432\u0435\u0447\u0435\u0440\u043E\u043C|\u0432\u0435\u0447\u0435\u0440\u0430|\u0432\\s*\u043F\u043E\u043B\u043D\u043E\u0447\u044C)";
+            return "(?:\u0441|\u0441\u043E)?\\s*(\u0441\u0435\u0433\u043E\u0434\u043D\u044F|\u0432\u0447\u0435\u0440\u0430|\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430|\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430|\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430)";
           }
     };
     let items = [entry, ];
     const entry1 = {
       key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-            refDate = refDate.refDate;
-            const str2 = arg1[0].toLowerCase();
-            let parsingComponents = refDate.createParsingComponents();
-            if ("\u0441\u0435\u0439\u0447\u0430\u0441" === str2) {
-              return closure_9.now(refDate.reference);
+      value: function innerExtract(reference, arg1) {
+            const formatted = arg1[1].toLowerCase();
+            if ("\u0441\u0435\u0433\u043E\u0434\u043D\u044F" === formatted) {
+              return closure_7.today(reference.reference);
+            } else if ("\u0432\u0447\u0435\u0440\u0430" === formatted) {
+              return closure_7.yesterday(reference.reference);
+            } else if ("\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+              return closure_7.tomorrow(reference.reference);
+            } else if ("\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+              return closure_7.theDayAfter(reference.reference, 2);
+            } else if ("\u043F\u043E\u0441\u043B\u0435\u043F\u043E\u0441\u043B\u0435\u0437\u0430\u0432\u0442\u0440\u0430" === formatted) {
+              return closure_7.theDayAfter(reference.reference, 3);
+            } else if ("\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
+              return closure_7.theDayBefore(reference.reference, 2);
+            } else if ("\u043F\u043E\u0437\u0430\u043F\u043E\u0437\u0430\u0432\u0447\u0435\u0440\u0430" === formatted) {
+              return closure_7.theDayBefore(reference.reference, 3);
             } else {
-              if ("\u0432\u0435\u0447\u0435\u0440\u043E\u043C" !== str2) {
-                if ("\u0432\u0435\u0447\u0435\u0440\u0430" !== str2) {
-                  if (!str2.endsWith("\u0443\u0442\u0440\u043E\u043C")) {
-                    if (!str2.endsWith("\u0443\u0442\u0440\u0430")) {
-                      if (str2.match(/в\s*полдень/)) {
-                        return closure_9.noon(refDate.reference);
-                      } else if (str2.match(/прошлой\s*ночью/)) {
-                        return closure_9.lastNight(refDate.reference);
-                      } else if (str2.match(/прошлым\s*вечером/)) {
-                        return closure_9.yesterdayEvening(refDate.reference);
-                      } else {
-                        if (str2.match(/следующей\s*ночью/)) {
-                          let num2 = 2;
-                          if (refDate.getHours() < 22) {
-                            num2 = 1;
-                          }
-                          const _Date = Date;
-                          const date = new Date(refDate.getTime());
-                          date.setDate(date.getDate() + num2);
-                          RUCasualTimeParser(10697).assignSimilarDate(parsingComponents, date);
-                          parsingComponents.imply("hour", 0);
-                        }
-                        if (str2.match(/в\s*полночь/)) {
-                          parsingComponents = closure_9.midnight(refDate.reference);
-                        }
-                        return parsingComponents;
-                      }
-                    }
-                  }
-                  return closure_9.morning(refDate.reference);
-                }
-              }
-              return closure_9.evening(refDate.reference);
+              return tmp2;
             }
           }
     };
     items[1] = entry1;
-    exports.default = _createClass(RUCasualTimeParser, items);
+    exports.default = _createClass(RUCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

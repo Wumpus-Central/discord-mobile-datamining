@@ -29,26 +29,27 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-function changeEventCalculator(force, force2) {
-  if (undefined === force2) {
-    const obj2 = { forceChange: force.force };
-    let obj = obj2;
+function changeEventCalculator(translationX, translationX2) {
+  if (undefined === translationX2) {
+    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
   } else {
-    obj = { forceChange: force.force - force2.force };
+    obj = { changeX: translationX.translationX - translationX2.translationX, changeY: translationX.translationY - translationX2.translationY };
   }
-  const merged = Object.assign(force);
+  const merged = Object.assign(translationX);
   const merged1 = Object.assign(obj);
   return {};
 }
 changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11365193947542;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}" };
-class ForceTouchGesture {
+changeEventCalculator.__workletHash = 1947784830943;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}" };
+class PanGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, ForceTouchGesture);
+    tmp = closure_0(this, PanGesture);
     tmp2 = c2;
-    obj = c2(ForceTouchGesture);
+    obj = c2(PanGesture);
     tmp3 = closure_1;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -59,32 +60,130 @@ class ForceTouchGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    tmp3Result.handlerName = "PanGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = ForceTouchGesture;
-_inherits(ForceTouchGesture, fn(6913).ContinousBaseGesture);
+_classCallCheck = PanGesture;
+_inherits(PanGesture, fn(6918).ContinousBaseGesture);
 const entry = {
-  key: "minForce",
-  value: function minForce(minForce) {
-    this.config.minForce = minForce;
-    return this;
+  key: "activeOffsetY",
+  value: function activeOffsetY(items) {
+    const self = this;
+    if (Array.isArray(items)) {
+      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items;
+    } else if (items < 0) {
+      self.config.activeOffsetYStart = items;
+    } else {
+      self.config.activeOffsetYEnd = items;
+    }
+    return self;
   }
 };
 let items = [
   entry,
   {
-    key: "maxForce",
-    value: function maxForce(maxForce) {
-      this.config.maxForce = maxForce;
+    key: "activeOffsetX",
+    value: function activeOffsetX(items) {
+      const self = this;
+      if (Array.isArray(items)) {
+        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items;
+      } else if (items < 0) {
+        self.config.activeOffsetXStart = items;
+      } else {
+        self.config.activeOffsetXEnd = items;
+      }
+      return self;
+    }
+  },
+  {
+    key: "failOffsetY",
+    value: function failOffsetY(GestureDetector) {
+      const self = this;
+      if (Array.isArray(GestureDetector)) {
+        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = GestureDetector;
+      } else if (GestureDetector < 0) {
+        self.config.failOffsetYStart = GestureDetector;
+      } else {
+        self.config.failOffsetYEnd = GestureDetector;
+      }
+      return self;
+    }
+  },
+  {
+    key: "failOffsetX",
+    value: function failOffsetX(items1) {
+      const self = this;
+      if (Array.isArray(items1)) {
+        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items1;
+      } else if (items1 < 0) {
+        self.config.failOffsetXStart = items1;
+      } else {
+        self.config.failOffsetXEnd = items1;
+      }
+      return self;
+    }
+  },
+  {
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
       return this;
     }
   },
   {
-    key: "feedbackOnActivation",
-    value: function feedbackOnActivation(feedbackOnActivation) {
-      this.config.feedbackOnActivation = feedbackOnActivation;
+    key: "maxPointers",
+    value: function maxPointers(maxPointers) {
+      this.config.maxPointers = maxPointers;
+      return this;
+    }
+  },
+  {
+    key: "minDistance",
+    value: function minDistance(minDist) {
+      this.config.minDist = minDist;
+      return this;
+    }
+  },
+  {
+    key: "minVelocity",
+    value: function minVelocity(minVelocity) {
+      this.config.minVelocity = minVelocity;
+      return this;
+    }
+  },
+  {
+    key: "minVelocityX",
+    value: function minVelocityX(minVelocityX) {
+      this.config.minVelocityX = minVelocityX;
+      return this;
+    }
+  },
+  {
+    key: "minVelocityY",
+    value: function minVelocityY(minVelocityY) {
+      this.config.minVelocityY = minVelocityY;
+      return this;
+    }
+  },
+  {
+    key: "averageTouches",
+    value: function averageTouches(avgTouches) {
+      this.config.avgTouches = avgTouches;
+      return this;
+    }
+  },
+  {
+    key: "enableTrackpadTwoFingerGesture",
+    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
+      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
+      return this;
+    }
+  },
+  {
+    key: "activateAfterLongPress",
+    value: function activateAfterLongPress(activateAfterLongPress) {
+      this.config.activateAfterLongPress = activateAfterLongPress;
       return this;
     }
   },
@@ -103,4 +202,4 @@ let items = [
   }
 ];
 
-export const ForceTouchGesture = _createClass(ForceTouchGesture, items);
+export const PanGesture = _createClass(PanGesture, items);

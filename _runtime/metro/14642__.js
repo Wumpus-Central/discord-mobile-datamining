@@ -1,34 +1,10 @@
 // === Module 14642: ? ===
 
 // Module 14642
-import _mod17 from "module_17" /* 17 */;
-import replaceByteInByteSequence from "replaceByteInByteSequence" /* 14643 */;
+import _mod14620 from "module_14620" /* 14620 */;
+import _mod14621 from "module_14621" /* 14621 */;
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
-  }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
-};
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {
 
-};
-
-export const URL = replaceByteInByteSequence.URL;
+export default Object.keys || (function keys(arg0) {
+  return _mod14621(arg0, _mod14620);
+});

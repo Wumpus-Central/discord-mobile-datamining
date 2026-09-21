@@ -1,176 +1,101 @@
 // === Module 6895: ? ===
 
 // Module 6895
-import _mod17 from "module_17" /* 17 */;
-import handlerIDToTag from "handlerIDToTag" /* 6896 */;
-import _mod6898 from "module_6898" /* 6898 */;
-import _mod6899 from "module_6899" /* 6899 */;
-import TouchEventType from "TouchEventType" /* 6900 */;
+import cancelAnimation from "cancelAnimation" /* 1637 */;
 
-function onGestureHandlerEvent(handlerTag) {
-  const findHandlerResult = handlerIDToTag.findHandler(handlerTag.handlerTag);
-  if (findHandlerResult) {
-    if (null != handlerTag.oldState) {
-      if (handlerTag.oldState === _mod6898.State.UNDETERMINED) {
-        if (handlerTag.state === _mod6898.State.BEGAN) {
-          const handlers11 = findHandlerResult.handlers;
-          const onBegin = handlers11.onBegin;
-          if (onBegin != null) {
-            onBegin(handlerTag);
-          }
-        }
-      }
-      if (handlerTag.oldState === _mod6898.State.BEGAN) {
-        if (handlerTag.state === _mod6898.State.ACTIVE) {
-          const handlers6 = findHandlerResult.handlers;
-          const onStart = handlers6.onStart;
-          if (onStart != null) {
-            onStart(handlerTag);
-          }
-          closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
-        }
-      }
-      if (handlerTag.oldState !== handlerTag.state) {
-        if (handlerTag.state === _mod6898.State.END) {
-          if (handlerTag.oldState === _mod6898.State.ACTIVE) {
-            const handlers9 = findHandlerResult.handlers;
-            const onEnd2 = handlers9.onEnd;
-            if (onEnd2 != null) {
-              onEnd2(handlerTag, true);
-            }
-          }
-          const handlers10 = findHandlerResult.handlers;
-          const onFinalize2 = handlers10.onFinalize;
-          if (onFinalize2 != null) {
-            onFinalize2(handlerTag, true);
-          }
-          closure_6[findHandlerResult.handlers.handlerTag] = undefined;
-        }
-      }
-      let tmp18 = handlerTag.state !== _mod6898.State.FAILED;
-      if (tmp18) {
-        tmp18 = handlerTag.state !== _mod6898.State.CANCELLED;
-      }
-      if (!tmp18) {
-        tmp18 = handlerTag.oldState === handlerTag.state;
-      }
-      if (!tmp18) {
-        if (handlerTag.oldState === _mod6898.State.ACTIVE) {
-          const handlers7 = findHandlerResult.handlers;
-          const onEnd = handlers7.onEnd;
-          if (onEnd != null) {
-            onEnd(handlerTag, false);
-          }
-        }
-        const handlers8 = findHandlerResult.handlers;
-        const onFinalize = handlers8.onFinalize;
-        if (onFinalize != null) {
-          onFinalize(handlerTag, false);
-        }
-        map.delete(handlerTag.handlerTag);
-        closure_6[findHandlerResult.handlers.handlerTag] = undefined;
-      }
-    } else if (null != handlerTag.eventType) {
-      if (!map.has(handlerTag.handlerTag)) {
-        const GestureStateManager = _mod6899.GestureStateManager;
-        const result = map.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
-      }
-      value = map.get(handlerTag.handlerTag);
-      const eventType = handlerTag.eventType;
-      if (TouchEventType.TouchEventType.TOUCHES_DOWN === eventType) {
-        const handlers5 = findHandlerResult.handlers;
-        if (handlers5 != null) {
-          const onTouchesDown = handlers5.onTouchesDown;
-          if (onTouchesDown != null) {
-            onTouchesDown(handlerTag, value);
-          }
-        }
-      } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === eventType) {
-        const handlers4 = findHandlerResult.handlers;
-        if (handlers4 != null) {
-          const onTouchesMove = handlers4.onTouchesMove;
-          if (onTouchesMove != null) {
-            onTouchesMove(handlerTag, value);
-          }
-        }
-      } else if (TouchEventType.TouchEventType.TOUCHES_UP === eventType) {
-        const handlers3 = findHandlerResult.handlers;
-        if (handlers3 != null) {
-          const onTouchesUp = handlers3.onTouchesUp;
-          if (onTouchesUp != null) {
-            onTouchesUp(handlerTag, value);
-          }
-        }
-      } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === eventType) {
-        const handlers13 = findHandlerResult.handlers;
-        if (handlers13 != null) {
-          const onTouchesCancelled = handlers13.onTouchesCancelled;
-          if (onTouchesCancelled != null) {
-            onTouchesCancelled(handlerTag, value);
-          }
-        }
-      }
-    } else {
-      const handlers12 = findHandlerResult.handlers;
-      const onUpdate = handlers12.onUpdate;
-      if (onUpdate != null) {
-        onUpdate(handlerTag);
-      }
-      if (tmp9) {
-        const handlers = findHandlerResult.handlers;
-        const onChange = handlers.onChange;
-        if (onChange != null) {
-          const handlers2 = findHandlerResult.handlers;
-          const changeEventCalculator = handlers2.changeEventCalculator;
-          let result1;
-          if (changeEventCalculator != null) {
-            result1 = changeEventCalculator(handlerTag, closure_6[findHandlerResult.handlers.handlerTag]);
-          }
-          onChange(result1);
-        }
-        closure_6[findHandlerResult.handlers.handlerTag] = handlerTag;
-      }
-      tmp9 = findHandlerResult.handlers.onChange && findHandlerResult.handlers.changeEventCalculator;
-    }
-  } else {
-    const result2 = handlerIDToTag.findOldGestureHandler(handlerTag.handlerTag);
-    if (result2) {
-      const obj2 = { nativeEvent: handlerTag };
-      if (null != handlerTag.oldState) {
-        result2.onGestureStateChange(obj2);
-      } else {
-        result2.onGestureEvent(obj2);
-      }
-    }
-    const tmpResult = handlerIDToTag;
-  }
-}
-const DeviceEventEmitter = _mod17.DeviceEventEmitter;
-let closure_3 = null;
-let closure_4 = null;
-const map = new Map();
-let closure_6 = [];
+const require = globalThis.__r;
 
-export { onGestureHandlerEvent };
-export const startListening = function startListening() {
-  if (closure_3) {
-    closure_3.remove();
-    closure_3 = null;
+require = arg1;
+let dependencyMap = arg6;
+let __initData = { code: "function pnpm_useScrollHandlerTs1(event,context){const{handleOnScroll,onScroll,runOnJS}=this.__closure;handleOnScroll(event,context);if(onScroll){runOnJS(onScroll)({nativeEvent:event});}}" };
+let closure_3 = { code: "function pnpm_useScrollHandlerTs2(event,context){const{handleOnBeginDrag,onScrollBeginDrag,runOnJS}=this.__closure;handleOnBeginDrag(event,context);if(onScrollBeginDrag){runOnJS(onScrollBeginDrag)({nativeEvent:event});}}" };
+let closure_4 = { code: "function pnpm_useScrollHandlerTs3(event,context){const{handleOnEndDrag,onScrollEndDrag,runOnJS}=this.__closure;handleOnEndDrag(event,context);if(onScrollEndDrag){runOnJS(onScrollEndDrag)({nativeEvent:event});}}" };
+
+export const useScrollHandler = () => {
+  let useScrollEventsHandlersDefault = scrollEventsHandlersHook;
+  if (scrollEventsHandlersHook === undefined) {
+    useScrollEventsHandlersDefault = require("module_6896").useScrollEventsHandlersDefault;
   }
-  if (closure_4) {
-    closure_4.remove();
-    closure_4 = null;
+  _require = onScroll;
+  dependencyMap = onScrollBeginDrag;
+  __initData = onScrollEndDrag;
+  let workletNoop2;
+  let workletNoop3;
+  const animatedRef = require("cancelAnimation").useAnimatedRef();
+  let obj = require("cancelAnimation");
+  const sharedValue = require("cancelAnimation").useSharedValue(0);
+  const scrollEventsHandlersDefault = useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
+  let workletNoop = scrollEventsHandlersDefault.handleOnScroll;
+  if (undefined === workletNoop) {
+    workletNoop = tmp3(6886).workletNoop;
   }
-  closure_3 = DeviceEventEmitter.addListener("onGestureHandlerEvent", onGestureHandlerEvent);
-  closure_4 = DeviceEventEmitter.addListener("onGestureHandlerStateChange", onGestureHandlerEvent);
-};
-export const stopListening = function stopListening() {
-  if (closure_3) {
-    closure_3.remove();
-    closure_3 = null;
+  workletNoop2 = scrollEventsHandlersDefault.handleOnBeginDrag;
+  if (undefined === workletNoop2) {
+    workletNoop2 = tmp3(6886).workletNoop;
   }
-  if (closure_4) {
-    closure_4.remove();
-    closure_4 = null;
+  workletNoop3 = scrollEventsHandlersDefault.handleOnEndDrag;
+  if (undefined === workletNoop3) {
+    workletNoop3 = tmp3(6886).workletNoop;
   }
+  let workletNoop4 = scrollEventsHandlersDefault.handleOnMomentumEnd;
+  if (undefined === workletNoop4) {
+    workletNoop4 = tmp3(6886).workletNoop;
+  }
+  let workletNoop5 = scrollEventsHandlersDefault.handleOnMomentumBegin;
+  if (undefined === workletNoop5) {
+    workletNoop5 = tmp3(6886).workletNoop;
+  }
+  const obj3 = { scrollHandler: null, scrollableRef: null, scrollableContentOffsetY: null };
+  let obj2 = require("cancelAnimation");
+  const obj4 = { onScroll: null, onBeginDrag: null, onEndDrag: null, onMomentumBegin: null, onMomentumEnd: null };
+  const fn = function v(nativeEvent, arg1) {
+    workletNoop(nativeEvent, arg1);
+    if (closure_0) {
+      const obj2 = { nativeEvent };
+      cancelAnimation.runOnJS(tmp2)(obj2);
+    }
+  };
+  const tmp3Result = require("cancelAnimation");
+  fn.__closure = { handleOnScroll: workletNoop, onScroll, runOnJS: require("cancelAnimation").runOnJS };
+  fn.__workletHash = 13105350120634;
+  fn.__initData = __initData;
+  obj4.onScroll = fn;
+  const fn2 = function _(nativeEvent, arg1) {
+    workletNoop2(nativeEvent, arg1);
+    if (closure_1) {
+      const obj2 = { nativeEvent };
+      cancelAnimation.runOnJS(tmp2)(obj2);
+    }
+  };
+  const obj5 = { handleOnScroll: workletNoop, onScroll, runOnJS: require("cancelAnimation").runOnJS };
+  fn2.__closure = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  fn2.__workletHash = 803385440782;
+  fn2.__initData = workletNoop;
+  obj4.onBeginDrag = fn2;
+  class O {
+    constructor(arg0, arg1) {
+      tmp = workletNoop(scrollEventsHandlersHook, onScroll);
+      if (closure_2) {
+        tmp3 = closure_0;
+        tmp4 = closure_1;
+        obj = closure_0(closure_1[1]);
+        obj1 = { nativeEvent: null };
+        obj1.nativeEvent = scrollEventsHandlersHook;
+        tmp5 = obj.runOnJS(tmp2)(obj1);
+      }
+      return;
+    }
+  }
+  const obj6 = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  O.__closure = { handleOnEndDrag: workletNoop3, onScrollEndDrag, runOnJS: require("cancelAnimation").runOnJS };
+  O.__workletHash = 3274737678599;
+  O.__initData = workletNoop2;
+  obj4.onEndDrag = O;
+  obj4.onMomentumBegin = workletNoop5;
+  obj4.onMomentumEnd = workletNoop4;
+  const items = [workletNoop, workletNoop2, workletNoop3, workletNoop5, workletNoop4, onScroll, onScrollBeginDrag, onScrollEndDrag];
+  obj3.scrollHandler = tmp3Result.useAnimatedScrollHandler(obj4, items);
+  obj3.scrollableRef = animatedRef;
+  obj3.scrollableContentOffsetY = sharedValue;
+  return obj3;
 };

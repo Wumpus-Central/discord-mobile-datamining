@@ -1,130 +1,126 @@
 // === Module 13104: ? ===
 
 // Module 13104
-import _mod13048 from "module_13048" /* 13048 */;
-import _mod13075 from "module_13075" /* 13075 */;
-import _mod13076 from "module_13076" /* 13076 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod13097 from "module_13097" /* 13097 */;
 
-function setupIntegration(on, name, arg2) {
-  closure_0 = on;
-  if (arg2[name.name]) {
-    if (_mod13076.DEBUG_BUILD) {
-      const logger2 = _mod13048.logger;
-      const _HermesInternal2 = HermesInternal;
-      logger2.log("Integration skipped because it was already installed: " + name.name);
-    }
-  } else {
-    arg2[name.name] = name;
-    if (tmp) {
-      name.setupOnce();
-      items.push(name.name);
-    }
-    if (tmp4) {
-      name.setup(on);
-    }
-    if (typeof name.preprocessEvent === "function") {
-      const preprocessEvent = name.preprocessEvent;
-      closure_1 = preprocessEvent.bind(name);
-      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
-    }
-    if (typeof name.processEvent === "function") {
-      const processEvent = name.processEvent;
-      closure_2 = processEvent.bind(name);
-      const _Object = Object;
-      const obj = { id: name.name };
-      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
-    }
-    if (_mod13076.DEBUG_BUILD) {
-      const logger = _mod13048.logger;
+require = arg1;
+const dependencyMap = arg6;
+
+export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
+  let combined1 = tunnel;
+  if (!tunnel) {
+    let str2 = "";
+    if (protocol.protocol) {
       const _HermesInternal = HermesInternal;
-      logger.log("Integration installed: " + name.name);
+      str2 = "" + protocol.protocol + ":";
     }
-    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
-    tmp4 = name.setup && typeof name.setup === "function";
+    let str4 = "";
+    if (protocol.port) {
+      const _HermesInternal2 = HermesInternal;
+      str4 = ":" + protocol.port;
+    }
+    const host = protocol.host;
+    let str6 = "";
+    if (protocol.path) {
+      const _HermesInternal3 = HermesInternal;
+      str6 = "/" + protocol.path;
+    }
+    const _HermesInternal4 = HermesInternal;
+    const _HermesInternal5 = HermesInternal;
+    const obj = { sentry_version: "7" };
+    const combined = "" + "" + str2 + "//" + host + str4 + str6 + "/api/" + protocol.projectId + "/envelope/";
+    if (protocol.publicKey) {
+      obj.sentry_key = protocol.publicKey;
+    }
+    if (name) {
+      const _HermesInternal6 = HermesInternal;
+      obj.sentry_client = "" + name.name + "/" + name.version;
+    }
+    const _URLSearchParams = URLSearchParams;
+    const str13 = new URLSearchParams(obj);
+    const _HermesInternal7 = HermesInternal;
+    combined1 = "" + combined + "?" + str13.toString();
   }
-}
-let items = [];
-
-export const addIntegration = function addIntegration(name) {
-  const client = _mod13075.getClient();
-  if (client) {
-    client.addIntegration(name);
-  } else if (_mod13076.DEBUG_BUILD) {
-    const logger = _mod13048.logger;
-    const _HermesInternal = HermesInternal;
-    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
-  }
+  return combined1;
 };
-export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
-  const iter = arg1[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let obj = nextResult;
-    if (nextResult) {
-      let afterAllSetup = obj.afterAllSetup;
+export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
+  const url = _mod13097.makeDsn(protocol);
+  if (url) {
+    let str = "";
+    if (url.protocol) {
+      const _HermesInternal = HermesInternal;
+      str = "" + url.protocol + ":";
     }
-    if (nextResult) {
-      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    let str3 = "";
+    if (url.port) {
+      const _HermesInternal2 = HermesInternal;
+      str3 = ":" + url.port;
     }
-    continue;
-  }
-};
-export function defineIntegration(arg0) {
-  return arg0;
-}
-export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
-  const arr = defaultIntegrations.defaultIntegrations || [];
-  const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((item) => {
-    item.isDefaultInstance = true;
-  });
-  if (Array.isArray(integrations)) {
-    items = [];
-    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
-    let arr2 = items;
-  } else {
-    arr2 = arr;
-    if (typeof integrations === "function") {
-      const integrationsResult = integrations(arr);
-      const _Array = Array;
-      let tmp2 = integrationsResult;
-      if (!Array.isArray(integrationsResult)) {
-        const items1 = [integrationsResult];
-        tmp2 = items1;
+    const host = url.host;
+    let str5 = "";
+    if (url.path) {
+      const _HermesInternal3 = HermesInternal;
+      str5 = "/" + url.path;
+    }
+    const _HermesInternal4 = HermesInternal;
+    const _HermesInternal5 = HermesInternal;
+    const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
+    const _HermesInternal6 = HermesInternal;
+    let combined1 = "dsn=" + _mod13097.dsnToString(url);
+    let tmp16 = combined1;
+    const keys = Object.keys();
+    if (keys !== undefined) {
+      tmp16 = combined1;
+      while (keys[tmp] !== undefined) {
+        if ("dsn" === tmp19) {
+          continue;
+        } else {
+          combined1 = tmp18;
+          if ("onClose" === tmp19) {
+            continue;
+          } else {
+            if ("user" === tmp19) {
+              user = user.user;
+              combined1 = tmp18;
+              if (!user) {
+                continue;
+              } else {
+                let sum = tmp18;
+                if (user.name) {
+                  let _encodeURIComponent3 = encodeURIComponent;
+                  let _HermesInternal8 = HermesInternal;
+                  sum = tmp18 + "&name=" + encodeURIComponent(user.name);
+                }
+                combined1 = sum;
+                if (!user.email) {
+                  continue;
+                } else {
+                  let _encodeURIComponent4 = encodeURIComponent;
+                  let _HermesInternal9 = HermesInternal;
+                  combined1 = sum + "&email=" + encodeURIComponent(user.email);
+                  continue;
+                }
+                continue;
+              }
+              continue;
+            } else {
+              let _encodeURIComponent = encodeURIComponent;
+              let _encodeURIComponent2 = encodeURIComponent;
+              let encodeURIComponentResult = encodeURIComponent(tmp19);
+              let _HermesInternal7 = HermesInternal;
+              combined1 = tmp18 + "&" + encodeURIComponentResult + "=" + encodeURIComponent(user[tmp19]);
+              continue;
+            }
+            continue;
+          }
+          continue;
+        }
+        continue;
       }
-      arr2 = tmp2;
     }
+    const _HermesInternal10 = HermesInternal;
+    return "" + combined + "?" + tmp16;
+  } else {
+    return "";
   }
-  const item1 = arr2.forEach((name) => {
-    name = name.name;
-    let isDefaultInstance = tmp2;
-    if (obj[name]) {
-      isDefaultInstance = !tmp2.isDefaultInstance;
-    }
-    if (isDefaultInstance) {
-      isDefaultInstance = name.isDefaultInstance;
-    }
-    if (!isDefaultInstance) {
-      obj[name] = name;
-    }
-  });
-  const values = Object.values({});
-  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
-  if (findIndexResult > -1) {
-    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
-  }
-  return values;
-};
-export const installedIntegrations = items;
-export { setupIntegration };
-export const setupIntegrations = function setupIntegrations(arg0, arr) {
-  closure_0 = arg0;
-  const obj = {};
-  const item = arr.forEach((item) => {
-    if (item) {
-      setupIntegration(closure_0, item, obj);
-    }
-  });
-  return obj;
 };

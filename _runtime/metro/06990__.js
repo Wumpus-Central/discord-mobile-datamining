@@ -1,35 +1,19 @@
 // === Module 6990: ? ===
 
 // Module 6990
-import _mod17 from "module_17" /* 17 */;
+import ComposedGestureName from "ComposedGestureName" /* 6956 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6965 */;
+import _mod6980 from "module_6980" /* 6980 */;
 
-const Platform = _mod17.Platform;
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export const getTVProps = function getTVProps(focusable) {
-  if (Platform.isTV) {
-    let flag = focusable.focusable;
-    if (flag == null) {
-      flag = focusable.isTVSelectable;
-    }
-    if (flag == null) {
-      flag = true;
-    }
-    const obj2 = { isTVSelectable: flag };
-    let obj = obj2;
-  } else {
-    obj = {};
+export const useManualGesture = function useManualGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
   }
-  return obj;
-};
-export const applyRelationProp = function applyRelationProp(arg0, arg1, arg2) {
-  if (arg2) {
-    const _Array = Array;
-    if (Array.isArray(arg2)) {
-      const items = [];
-      HermesBuiltin.arraySpread(arg2, 0);
-      HermesBuiltin.apply(items, arg0);
-    } else {
-      tmp4(arg2);
-    }
-  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6980.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
 };

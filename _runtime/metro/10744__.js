@@ -1,14 +1,16 @@
 // === Module 10744: ? ===
 
 // Module 10744
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10698 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10692 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10699 */;
+import _mod10738 from "module_10738" /* 10738 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const DETimeUnitAgoFormatParser = require;
+const DEMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,28 +30,31 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class DETimeUnitAgoFormatParser {
+const regExp = new RegExp("(?:am\\s*?)?(?:den\\s*?)?([0-9]{1,2})\\.(?:\\s*(?:bis(?:\\s*(?:am|zum))?|\\-|\\\u2013|\\s)\\s*([0-9]{1,2})\\.?)?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10738.MONTH_DICTIONARY) + ")(?:(?:-|/|,?\\s*)(" + _mod10738.YEAR_PATTERN + "(?![^\\s]\\d)))?(?=\\W|$)", "i");
+class DEMonthNameLittleEndianParser {
   constructor() {
     self = this;
-    tmp = c2(this, DETimeUnitAgoFormatParser);
+    tmp = c2(this, DEMonthNameLittleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(DETimeUnitAgoFormatParser);
+    obj = closure_4(DEMonthNameLittleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(DETimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(DEMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    const regExp = new RegExp("(?:\\s*((?:n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?|vor|in)\\s*)?(" + DETimeUnitAgoFormatParser(10737).NUMBER_PATTERN + ")?(?:\\s*(n\u00E4chste|kommende|folgende|letzte|vergangene|vorige|vor(?:her|an)gegangene)(?:s|n|m|r)?)?\\s*(" + DETimeUnitAgoFormatParser(10691).matchAnyPattern(DETimeUnitAgoFormatParser(10737).TIME_UNIT_DICTIONARY) + ")", "i");
     return regExp;
   }
 };
@@ -57,34 +62,37 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      let num = 1;
-      if (arg1[2]) {
-        num = DETimeUnitAgoFormatParser(10737).parseNumberPattern(arg1[2]);
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = DEMonthNameLittleEndianParser(10738).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const parsed = parseInt(index[1]);
+      if (parsed > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", parsed);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", DEMonthNameLittleEndianParser(10738).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply("year", DEMonthNameLittleEndianParser(10693).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
+        }
+        if (index[2]) {
+          const _parseInt = parseInt;
+          const start3 = parsingResult.start;
+          const parsed1 = parseInt(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", parsed1);
+        }
+        return parsingResult;
       }
-      const obj = {};
-      obj[DETimeUnitAgoFormatParser(10737).TIME_UNIT_DICTIONARY[arg1[4].toLowerCase(arg1[4])]] = num;
-      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
-      if (formatted) {
-        let isMatch = /vor/.test(formatted);
-        if (!isMatch) {
-          isMatch = /letzte/.test(formatted);
-          const obj3 = /letzte/;
-        }
-        if (!isMatch) {
-          isMatch = /vergangen/.test(formatted);
-          const obj4 = /vergangen/;
-        }
-        let reverseDurationResult = obj;
-        if (isMatch) {
-          reverseDurationResult = DETimeUnitAgoFormatParser(10693).reverseDuration(obj);
-        }
-        const ParsingComponents = DETimeUnitAgoFormatParser(10694).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
-      const str2 = arg1[1] || arg1[3] || "";
     }
   }
 ];
 
-export default _createClass(DETimeUnitAgoFormatParser, items);
+export default _createClass(DEMonthNameLittleEndianParser, items);

@@ -1,14 +1,14 @@
 // === Module 10842: ? ===
 
 // Module 10842
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10698 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10699 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ESTimeUnitWithinFormatParser = require;
+const ESCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ESTimeUnitWithinFormatParser {
+class ESCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, ESTimeUnitWithinFormatParser);
+    tmp = c2(this, ESCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(ESTimeUnitWithinFormatParser);
+    obj = closure_4(ESCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,23 +48,46 @@ class ESTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ESCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    const regExp = new RegExp("(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(10835).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
-    return regExp;
+    return /(?:esta\s*)?(mañana|tarde|medianoche|mediodia|mediodía|noche)(?=\W|$)/i;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = ESTimeUnitWithinFormatParser(10694).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, ESTimeUnitWithinFormatParser(10835).parseDuration(arg1[1]));
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
+      const formatted = arg1[1].toLowerCase();
+      if ("tarde" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10697).Meridiem.PM);
+        parsingComponents.imply("hour", 15);
+      } else if ("noche" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10697).Meridiem.PM);
+        parsingComponents.imply("hour", 22);
+      } else if ("ma\u00F1ana" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10697).Meridiem.AM);
+        parsingComponents.imply("hour", 6);
+      } else if ("medianoche" === formatted) {
+        const _Date = Date;
+        const date = new Date(refDate.getTime());
+        date.setDate(date.getDate() + 1);
+        ESCasualTimeParser(10698).assignSimilarDate(parsingComponents, date);
+        ESCasualTimeParser(10698).implySimilarTime(parsingComponents, date);
+        parsingComponents.imply("hour", 0);
+        parsingComponents.imply("minute", 0);
+        parsingComponents.imply("second", 0);
+      } else if ("mediodia" === formatted) {
+        parsingComponents.imply("meridiem", ESCasualTimeParser(10697).Meridiem.AM);
+        parsingComponents.imply("hour", 12);
+      }
+      return parsingComponents;
     }
   }
 ];
 
-export default _createClass(ESTimeUnitWithinFormatParser, items);
+export default _createClass(ESCasualTimeParser, items);

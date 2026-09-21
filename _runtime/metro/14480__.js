@@ -1,172 +1,142 @@
 // === Module 14480: ? ===
 
 // Module 14480
-import e from "e" /* 1161 */;
-import monadic from "monadic" /* 14481 */;
+import _mod14481 from "module_14481" /* 14481 */;
+import CanonicalizeTimeZoneName from "CanonicalizeTimeZoneName" /* 14482 */;
+import CoerceOptionsToObject from "CoerceOptionsToObject" /* 14483 */;
+import _mod14484 from "module_14484" /* 14484 */;
+import GetNumberOption from "GetNumberOption" /* 14489 */;
+import GetOption from "GetOption" /* 14491 */;
+import GetOptionsObject from "GetOptionsObject" /* 14492 */;
+import GetStringOrBooleanOption from "GetStringOrBooleanOption" /* 14493 */;
+import IsSanctionedSimpleUnitIdentifier from "IsSanctionedSimpleUnitIdentifier" /* 14494 */;
+import IsValidTimeZoneName from "IsValidTimeZoneName" /* 14495 */;
+import IsWellFormedCurrencyCode from "IsWellFormedCurrencyCode" /* 14496 */;
+import IsWellFormedUnitIdentifier from "IsWellFormedUnitIdentifier" /* 14497 */;
+import ApplyUnsignedRoundingMode from "ApplyUnsignedRoundingMode" /* 14498 */;
+import CollapseNumberRange from "CollapseNumberRange" /* 14499 */;
+import ComputeExponent from "ComputeExponent" /* 14500 */;
+import ComputeExponentForMagnitude from "ComputeExponentForMagnitude" /* 14501 */;
+import FormatNumericToString from "FormatNumericToString" /* 14502 */;
+import GetUnsignedRoundingMode from "GetUnsignedRoundingMode" /* 14503 */;
+import ToRawPrecision from "ToRawPrecision" /* 14504 */;
+import ToRawFixed from "ToRawFixed" /* 14505 */;
+import CurrencyDigits from "CurrencyDigits" /* 14506 */;
+import FormatApproximately from "FormatApproximately" /* 14510 */;
+import FormatNumeric from "FormatNumeric" /* 14511 */;
+import PartitionNumberPattern from "PartitionNumberPattern" /* 14512 */;
+import FormatNumericRange from "FormatNumericRange" /* 14513 */;
+import PartitionNumberRangePattern from "PartitionNumberRangePattern" /* 14514 */;
+import FormatNumericRangeToParts from "FormatNumericRangeToParts" /* 14515 */;
+import FormatNumericToParts from "FormatNumericToParts" /* 14516 */;
+import InitializeNumberFormat from "InitializeNumberFormat" /* 14517 */;
+import SetNumberFormatUnitOptions from "SetNumberFormatUnitOptions" /* 14532 */;
+import SetNumberFormatDigitOptions from "SetNumberFormatDigitOptions" /* 14533 */;
+import PartitionPattern from "PartitionPattern" /* 14534 */;
+import SupportedLocales from "SupportedLocales" /* 14535 */;
+import RangePatternType from "RangePatternType" /* 14537 */;
+import _mod14538 from "module_14538" /* 14538 */;
+import _mod14539 from "module_14539" /* 14539 */;
+import _mod14540 from "module_14540" /* 14540 */;
+import _mod14541 from "module_14541" /* 14541 */;
+import _mod14542 from "module_14542" /* 14542 */;
+import e_mod from "e" /* 1161 */;
 
-function getMultiInternalSlots(get, arg1) {
-  let length;
-  const items = [];
-  let num = 2;
-  if (2 < arguments.length) {
-    do {
-      items[num - 2] = arguments[num];
-      num = num + 1;
-      length = arguments.length;
-    } while (num < length);
-  }
-  value = get.get(arg1);
-  require = value;
-  if (value) {
-    const _Object = Object;
-    return items.reduce((acc, item) => {
-      acc[item] = value[item];
-      return acc;
-    }, Object.create(null));
-  } else {
-    const _TypeError = TypeError;
-    const concat = "".concat;
-    const typeError = new TypeError("".concat(arg1, " InternalSlot has not been initialized"));
-    throw typeError;
-  }
-}
-let obj = { strategy: monadic.strategies.variadic };
-const obj2 = { strategy: monadic.strategies.variadic };
-const obj3 = { strategy: monadic.strategies.variadic };
-const obj4 = { strategy: monadic.strategies.variadic };
+const require = globalThis.__r;
 
-export const repeat = function repeat(str, arg1) {
-  let length;
-  if (typeof str.repeat === "function") {
-    return str.repeat(arg1);
-  } else {
-    const _Array = Array;
-    const arr = new Array(arg1);
-    let num = 0;
-    if (0 < arr.length) {
-      do {
-        arr[num] = str;
-        num = num + 1;
-        length = arr.length;
-      } while (num < length);
-    }
-    return arr.join("");
-  }
-};
-export const setInternalSlot = function setInternalSlot(get, arg1, arg2, arg3) {
-  if (!get.get(arg1)) {
-    const _Object = Object;
-    const result = get.set(arg1, Object.create(null));
-  }
-  get.get(arg1)[arg2] = arg3;
-};
-export const setMultiInternalSlots = function setMultiInternalSlots(get, arg1, arg2) {
-  const keys = Object.keys(arg2);
-  for (let num = 0; num < keys.length; num = num + 1) {
-    let tmp = keys[num];
-    if (!get.get(arg1)) {
-      let _Object = Object;
-      let result = get.set(arg1, Object.create(null));
-    }
-    get.get(arg1)[tmp] = arg2[tmp];
-  }
-};
-export const getInternalSlot = function getInternalSlot(arg0, arg1, arg2) {
-  return getMultiInternalSlots(arg0, arg1, arg2)[arg2];
-};
-export { getMultiInternalSlots };
-export const isLiteralPart = function isLiteralPart(type) {
-  return "literal" === type.type;
-};
-export const defineProperty = function defineProperty(arg0, arg1, value) {
-  Object.defineProperty(arg0, arg1, { configurable: true, enumerable: false, writable: true, value: value.value });
-};
-export const createDataProperty = function createDataProperty(arg0, direction, firstDay) {
-  Object.defineProperty(arg0, direction, { configurable: true, enumerable: true, writable: true, value: firstDay });
-};
-export const invariant = function invariant(arg0, arg1, arg2) {
-  let _Error = arg2;
-  if (undefined === arg2) {
-    _Error = Error;
-  }
-  if (!arg0) {
-    const _Error1 = new _Error(arg1);
-    throw _Error1;
-  }
-};
-export const UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;
-export const createMemoizedNumberFormat = monadic.memoize(() => {
-  let length;
-  const items = [];
-  let num = 0;
-  if (0 < arguments.length) {
-    do {
-      items[num] = arguments[num];
-      num = num + 1;
-      length = arguments.length;
-    } while (num < length);
-  }
-  const bind = NumberFormat.bind;
-  const items1 = [undefined];
-  return new bind.apply(NumberFormat, e.__spreadArray(items1, items, false))();
-}, { strategy: monadic.strategies.variadic });
-export const createMemoizedDateTimeFormat = monadic.memoize(() => {
-  let length;
-  const items = [];
-  let num = 0;
-  if (0 < arguments.length) {
-    do {
-      items[num] = arguments[num];
-      num = num + 1;
-      length = arguments.length;
-    } while (num < length);
-  }
-  const bind = DateTimeFormat.bind;
-  const items1 = [undefined];
-  return new bind.apply(DateTimeFormat, e.__spreadArray(items1, items, false))();
-}, { strategy: monadic.strategies.variadic });
-export const createMemoizedPluralRules = monadic.memoize(() => {
-  let length;
-  const items = [];
-  let num = 0;
-  if (0 < arguments.length) {
-    do {
-      items[num] = arguments[num];
-      num = num + 1;
-      length = arguments.length;
-    } while (num < length);
-  }
-  const bind = PluralRules.bind;
-  const items1 = [undefined];
-  return new bind.apply(PluralRules, e.__spreadArray(items1, items, false))();
-}, { strategy: monadic.strategies.variadic });
-export const createMemoizedLocale = monadic.memoize(() => {
-  let length;
-  const items = [];
-  let num = 0;
-  if (0 < arguments.length) {
-    do {
-      items[num] = arguments[num];
-      num = num + 1;
-      length = arguments.length;
-    } while (num < length);
-  }
-  const bind = Locale.bind;
-  const items1 = [undefined];
-  return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
-}, { strategy: monadic.strategies.variadic });
-export const createMemoizedListFormat = monadic.memoize(() => {
-  let length;
-  const items = [];
-  let num = 0;
-  if (0 < arguments.length) {
-    do {
-      items[num] = arguments[num];
-      num = num + 1;
-      length = arguments.length;
-    } while (num < length);
-  }
-  const bind = ListFormat.bind;
-  const items1 = [undefined];
-  return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
-}, { strategy: monadic.strategies.variadic });
+let e = e_mod;
+e.__exportStar(_mod14481, exports);
+let e = e_mod;
+e.__exportStar(CanonicalizeTimeZoneName, exports);
+let e = e_mod;
+e.__exportStar(CoerceOptionsToObject, exports);
+let e = e_mod;
+e.__exportStar(GetNumberOption, exports);
+let e = e_mod;
+e.__exportStar(GetOption, exports);
+let e = e_mod;
+e.__exportStar(GetOptionsObject, exports);
+let e = e_mod;
+e.__exportStar(GetStringOrBooleanOption, exports);
+let e = e_mod;
+e.__exportStar(IsSanctionedSimpleUnitIdentifier, exports);
+let e = e_mod;
+e.__exportStar(IsValidTimeZoneName, exports);
+let e = e_mod;
+e.__exportStar(IsWellFormedCurrencyCode, exports);
+let e = e_mod;
+e.__exportStar(IsWellFormedUnitIdentifier, exports);
+let e = e_mod;
+e.__exportStar(ApplyUnsignedRoundingMode, exports);
+let e = e_mod;
+e.__exportStar(CollapseNumberRange, exports);
+let e = e_mod;
+e.__exportStar(ComputeExponent, exports);
+let e = e_mod;
+e.__exportStar(ComputeExponentForMagnitude, exports);
+let e = e_mod;
+e.__exportStar(CurrencyDigits, exports);
+let e = e_mod;
+e.__exportStar(FormatApproximately, exports);
+let e = e_mod;
+e.__exportStar(FormatNumeric, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericRange, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericRangeToParts, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericToParts, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericToString, exports);
+let e = e_mod;
+e.__exportStar(GetUnsignedRoundingMode, exports);
+let e = e_mod;
+e.__exportStar(InitializeNumberFormat, exports);
+let e = e_mod;
+e.__exportStar(PartitionNumberPattern, exports);
+let e = e_mod;
+e.__exportStar(PartitionNumberRangePattern, exports);
+let e = e_mod;
+e.__exportStar(SetNumberFormatDigitOptions, exports);
+let e = e_mod;
+e.__exportStar(SetNumberFormatUnitOptions, exports);
+let e = e_mod;
+e.__exportStar(ToRawFixed, exports);
+let e = e_mod;
+e.__exportStar(ToRawPrecision, exports);
+let e = e_mod;
+e.__exportStar(PartitionPattern, exports);
+let e = e_mod;
+e.__exportStar(SupportedLocales, exports);
+let e = e_mod;
+e.__exportStar(_mod14484, exports);
+let e = e_mod;
+e.__exportStar(RangePatternType, exports);
+let e = e_mod;
+e.__exportStar(_mod14538, exports);
+let e = e_mod;
+e.__exportStar(_mod14539, exports);
+let e = e_mod;
+e.__exportStar(_mod14540, exports);
+let e = e_mod;
+e.__exportStar(_mod14541, exports);
+let e = e_mod;
+e.__exportStar(_mod14542, exports);
+
+export const _formatToParts = require("e").__importDefault(require("module_14507")).default;
+export const createDataProperty = require("module_14486").createDataProperty;
+export const defineProperty = require("module_14486").defineProperty;
+export const getInternalSlot = require("module_14486").getInternalSlot;
+export const getMultiInternalSlots = require("module_14486").getMultiInternalSlots;
+export const isLiteralPart = require("module_14486").isLiteralPart;
+export const setInternalSlot = require("module_14486").setInternalSlot;
+export const setMultiInternalSlots = require("module_14486").setMultiInternalSlots;
+export const isMissingLocaleDataError = require("module_14536").isMissingLocaleDataError;
+export const createMemoizedDateTimeFormat = require("module_14486").createMemoizedDateTimeFormat;
+export const createMemoizedListFormat = require("module_14486").createMemoizedListFormat;
+export const createMemoizedLocale = require("module_14486").createMemoizedLocale;
+export const createMemoizedNumberFormat = require("module_14486").createMemoizedNumberFormat;
+export const createMemoizedPluralRules = require("module_14486").createMemoizedPluralRules;
+export const invariant = require("module_14486").invariant;
+export const ZERO = require("TEN").ZERO;
+export const ToIntlMathematicalValue = require("ToIntlMathematicalValue").ToIntlMathematicalValue;

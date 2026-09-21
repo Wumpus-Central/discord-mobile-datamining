@@ -1,173 +1,176 @@
 // === Module 13144: ? ===
 
 // Module 13144
-import errorCallback from "errorCallback" /* 13044 */;
-import _mod13048 from "module_13048" /* 13048 */;
-import _mod13049 from "module_13049" /* 13049 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13053 */;
-import _mod13062 from "module_13062" /* 13062 */;
-import _mod13075 from "module_13075" /* 13075 */;
-import _mod13076 from "module_13076" /* 13076 */;
-import COUNTER_METRIC_TYPE from "COUNTER_METRIC_TYPE" /* 13145 */;
-import __SENTRY_DEBUG__ from "module_13047" /* 13047 */;
+import _mod13057 from "module_13057" /* 13057 */;
+import _mod13059 from "module_13059" /* 13059 */;
+import setupIntegration from "module_13106" /* 13106 */;
 
-const require = globalThis.__r;
+function flattenIssue(path) {
+  const obj = {};
+  const merged = Object.assign(path);
+  let joined;
+  if ("path" in path) {
+    const _Array = Array;
+    if (Array.isArray(path.path)) {
+      path = path.path;
+      joined = path.join(".");
+    }
+  }
+  obj.path = joined;
+  let json;
+  if ("keys" in path) {
+    const _JSON = JSON;
+    json = JSON.stringify(path.keys);
+  }
+  obj.keys = json;
+  let json1;
+  if ("unionErrors" in path) {
+    const _JSON2 = JSON;
+    json1 = JSON.stringify(path.unionErrors);
+  }
+  obj.unionErrors = json1;
+  return obj;
+}
+function flattenIssuePath(arr) {
+  const mapped = arr.map((item) => {
+    let str = "<array>";
+    if (typeof item !== "number") {
+      str = item;
+    }
+    return str;
+  });
+  return mapped.join(".");
+}
+function formatIssueMessage(issues) {
+  const set = new Set();
+  while (tmp !== undefined) {
+    let arr = flattenIssuePath(tmp2.path);
+    if (arr.length > 0) {
+      let addResult = set.add(tmp4);
+    }
+    continue;
+  }
+  const arr2 = Array.from(set);
+  if (0 === arr2.length) {
+    let str4 = "variable";
+    if (issues.issues.length > 0) {
+      const first = issues.issues[0];
+      let tmp10 = undefined !== first;
+      if (tmp10) {
+        tmp10 = "expected" in first;
+      }
+      if (tmp10) {
+        tmp10 = typeof first.expected === "string";
+      }
+      str4 = "variable";
+      if (tmp10) {
+        str4 = first.expected;
+      }
+    }
+    const _HermesInternal2 = HermesInternal;
+    return "Failed to validate " + str4;
+  } else {
+    const _HermesInternal = HermesInternal;
+    return "Failed to validate keys: " + _mod13059.truncate(arr2.join(", "), 100);
+  }
+  tmp = issues.issues[Symbol.iterator]();
+}
+function applyZodErrorsToEvent(arg0, arg1) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = false;
+  }
+  if (exception.exception) {
+    if (exception.exception.values) {
+      if (originalException) {
+        if (originalException.originalException) {
+          if ((function originalExceptionIsZodError(originalException) {
+            let isErrorResult = _mod13057.isError(originalException);
+            if (isErrorResult) {
+              isErrorResult = "ZodError" === originalException.name;
+            }
+            if (isErrorResult) {
+              const _Array = Array;
+              isErrorResult = Array.isArray(originalException.issues);
+            }
+            return isErrorResult;
+          })(originalException.originalException)) {
+            if (0 !== originalException.originalException.issues.length) {
+              try {
+                const issues = originalException.originalException.issues;
+                if (flag) {
+                  let substr = issues;
+                } else {
+                  substr = issues.slice(0, arg0);
+                }
+                const mapped = substr.map(flattenIssue);
+                if (flag) {
+                  let _Array = Array;
+                  if (!Array.isArray(originalException.attachments)) {
+                    originalException.attachments = [];
+                  }
+                  const attachments = originalException.attachments;
+                  const obj = { filename: "zod_issues.json", data: null };
+                  const _JSON = JSON;
+                  const obj2 = { issues: mapped };
+                  obj.data = JSON.stringify(obj2);
+                  attachments.push(obj);
+                }
+                const obj3 = {};
+                const merged = Object.assign(exception);
+                const obj4 = {};
+                const merged1 = Object.assign(exception.exception);
+                const obj5 = {};
+                const merged2 = Object.assign(exception.exception.values[0]);
+                obj5.value = formatIssueMessage(originalException.originalException);
+                const items = [obj5];
+                const values = exception.exception.values;
+                HermesBuiltin.arraySpread(values.slice(1), 1);
+                obj4.values = items;
+                obj3.exception = obj4;
+                const obj6 = {};
+                const merged3 = Object.assign(exception.extra);
+                obj6["zoderror.issues"] = mapped.slice(0, arg0);
+                obj3.extra = obj6;
+                return obj3;
+              } catch (error) {
+                const obj7 = {};
+                const merged4 = Object.assign(tmp);
+                const obj8 = {};
+                const merged5 = Object.assign(tmp.extra);
+                const _Error = Error;
+                let str = "unknown";
+                if (error instanceof Error) {
+                  const _HermesInternal = HermesInternal;
+                  str = "" + error.name + ": " + error.message + "\n" + error.stack;
+                }
+                const obj9 = { message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()", error: str };
+                obj8["zoderrors sentry integration parse error"] = obj9;
+                obj7.extra = obj8;
+                return obj7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return exception;
+}
 
-function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
-  let obj = arg4;
-  if (arg4 === undefined) {
+export { applyZodErrorsToEvent };
+export { flattenIssue };
+export { flattenIssuePath };
+export { formatIssueMessage };
+export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
     obj = {};
   }
-  let client = obj.client;
-  if (!client) {
-    client = _mod13075.getClient();
-  }
-  if (client) {
-    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
-    let rootSpan;
-    if (activeSpan) {
-      rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-      const tmp3Result = spanTimeInputToSeconds;
+  return {
+    name: "ZodErrors",
+    processEvent(arg0, arg1) {
+      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
     }
-    let description = rootSpan;
-    if (rootSpan) {
-      description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
-      const tmp3Result3 = spanTimeInputToSeconds;
-    }
-    ({ unit, tags, timestamp } = obj);
-    const options = client.getOptions();
-    ({ release, environment } = options);
-    const obj4 = {};
-    if (release) {
-      obj4.release = release;
-    }
-    if (environment) {
-      obj4.environment = environment;
-    }
-    if (description) {
-      obj4.transaction = description;
-    }
-    if (_mod13076.DEBUG_BUILD) {
-      const logger = _mod13048.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
-    }
-    const globalSingleton = _mod13049.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(client);
-    if (!value) {
-      const tmp20 = new arg0(client);
-      closure_0 = tmp20;
-      client.on("flush", () => closure_0.flush());
-      client.on("close", () => closure_0.close());
-      const result = globalSingleton.set(client, tmp20);
-      value = tmp20;
-    }
-    const obj5 = {};
-    const merged = Object.assign(obj4);
-    const merged1 = Object.assign(tags);
-    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj5, timestamp);
-    const tmp3Result4 = _mod13049;
-  }
-}
-errorCallback;
-
-export const metrics = {
-  increment(arg0, arg1) {
-    let num = match;
-    if (match === undefined) {
-      num = 1;
-    }
-    let parsed = num;
-    if (typeof num === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(num);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  distribution(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  set(arg0, arg1, parsed, arg3) {
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  gauge(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  timing(arg0, name, fn) {
-    _require = arg0;
-    dependencyMap = name;
-    addToMetricsAggregator = fn;
-    let str = arg3;
-    if (arg3 === undefined) {
-      str = "second";
-    }
-    closure_3 = arg4;
-    c4 = undefined;
-    if (typeof fn === "function") {
-      let timestampInSecondsResult = require("module_13062").timestampInSeconds();
-      c4 = timestampInSecondsResult;
-      let obj = require("module_13062");
-      const obj3 = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
-      return require("module_13082").startSpanManual(obj3, (arg0) => {
-        closure_0 = arg0;
-        return closure_0(name[10]).handleCallbackErrors(() => fn(), () => {
-
-        }, () => {
-          const timestampInSecondsResult = _mod13062.timestampInSeconds();
-          const diff = timestampInSecondsResult - c4;
-          const obj2 = {};
-          const merged = Object.assign(closure_3);
-          obj2.unit = "second";
-          let parsed = diff;
-          if (typeof diff === "string") {
-            const _parseInt = parseInt;
-            parsed = parseInt(diff);
-          }
-          addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj2);
-          closure_0.end(timestampInSecondsResult);
-        });
-      });
-    } else {
-      const obj4 = {};
-      let merged = Object.assign(arg4);
-      obj4.unit = str;
-      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
-      let parsed = fn;
-      if (typeof fn === "string") {
-        let _parseInt = parseInt;
-        parsed = parseInt(fn);
-      }
-      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj4);
-    }
-  },
-  getMetricsAggregatorForClient(on, arg1) {
-    const globalSingleton = _mod13049.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(on);
-    if (value) {
-      return value;
-    } else {
-      const tmp6 = new arg1(on);
-      closure_0 = tmp6;
-      on.on("flush", () => closure_0.flush());
-      on.on("close", () => closure_0.close());
-      const result = globalSingleton.set(on, tmp6);
-      return tmp6;
-    }
-  }
-};
+  };
+});

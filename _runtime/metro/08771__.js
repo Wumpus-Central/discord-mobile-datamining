@@ -1,9 +1,84 @@
 // === Module 8771: ? ===
 
 // Module 8771
-import module_65 from "module_65" /* 65 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8767 from "module_8767" /* 8767 */;
+import _modDef8772 from "module_8772" /* 8772 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeComposite", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, operator1: true, k1: true, k2: true, k3: true, k4: true } };
+const FeComposite = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeComposite {
+  constructor() {
+    self = this;
+    tmp = closure_3(this, FeComposite);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeComposite);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeComposite, _modDef8767);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeComposite(8766).extractFilter(this.props));
+    const obj2 = FeComposite(8766);
+    const merged1 = Object.assign(FeComposite(8766).extractFeComposite(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
+  }
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(FeComposite, items);
+importDefaultResultResult.displayName = "FeComposite";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.k1 = 0;
+obj.k2 = 0;
+obj.k3 = 0;
+obj.k4 = 0;
+importDefaultResultResult.defaultProps = obj;
 
-export default module_65.get("RNSVGFeComposite", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

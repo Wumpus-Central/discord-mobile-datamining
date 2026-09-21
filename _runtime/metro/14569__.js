@@ -1,9 +1,25 @@
 // === Module 14569: ? ===
 
 // Module 14569
-import _mod14635 from "module_14635" /* 14635 */;
-import module_14570 from "module_14570" /* 14570 */;
+const require = globalThis.__r;
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod14635;
-module_14570(obj, { assign: _mod14635 });
+const require = arg1;
+const dependencyMap = arg6;
+
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("module_14570").units;
+  return units.filter((item) => (function isSupported(unit, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
+    }
+    try {
+      const obj = { style: "unit", unit };
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+      return memoizedNumberFormat.resolvedOptions().unit === unit;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
+};

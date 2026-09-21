@@ -1,62 +1,61 @@
 // === Module 13064: ? ===
 
 // Module 13064
-import _mod13054 from "module_13054" /* 13054 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod13051 from "module_13051" /* 13051 */;
 
-const _sentryMetrics = "_sentryMetrics";
-
-export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
-  if (self[_sentryMetrics]) {
-    const obj = {};
-    const tmp3 = tmp[Symbol.iterator]();
-    while (tmp3 !== undefined) {
-      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
-      [tmp9, tmp11] = tmp8;
-      let arr = obj[tmp9];
-      if (!arr) {
-        let items = [];
-        obj[tmp10] = items;
-        arr = items;
-      }
-      let obj2 = _mod13054;
-      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
-      continue;
+function dateTimestampInSeconds() {
+  return Date.now() / 1000;
+}
+let timeOrigin;
+const _performance = _mod13051.GLOBAL_OBJ.performance;
+let fn = dateTimestampInSeconds;
+if (_performance) {
+  fn = dateTimestampInSeconds;
+  if (_performance.now) {
+    const _Date = Date;
+    const timestamp = Date.now();
+    timeOrigin = timestamp - _performance.now();
+    if (null != _performance.timeOrigin) {
+      timeOrigin = _performance.timeOrigin;
     }
-    return obj;
+    fn = () => (timeOrigin + _performance.now()) / 1000;
   }
-};
-export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(activeSpan, metricType, sanitizeMetricKeyResult, min, sanitizeUnitResult, tags, bucketKey) {
-  let obj = activeSpan[_sentryMetrics];
-  if (!obj) {
-    const _Map = Map;
-    const map = new Map();
-    activeSpan[tmp] = map;
-    obj = map;
+}
+const _performance2 = _mod13051.GLOBAL_OBJ.performance;
+if (_performance2) {
+  if (_performance2.now) {
+    const nowResult = _performance2.now();
+    const _Date2 = Date;
+    const timestamp1 = Date.now();
+    let num2 = 3600000;
+    if (_performance2.timeOrigin) {
+      const _Math = Math;
+      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
+    }
+    let timeOrigin2 = _performance2.timing;
+    if (timeOrigin2) {
+      timeOrigin2 = _performance2.timing.navigationStart;
+    }
+    let num3 = 3600000;
+    if (typeof timeOrigin2 === "number") {
+      const _Math2 = Math;
+      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
+    }
+    if (!tmp6) {
+      if (num3 >= 3600000) {
+        exports._browserPerformanceTimeOriginMode = "dateNow";
+      }
+    }
+    if (num2 <= num3) {
+      exports._browserPerformanceTimeOriginMode = "timeOrigin";
+      timeOrigin2 = _performance2.timeOrigin;
+    } else {
+      exports._browserPerformanceTimeOriginMode = "navigationStart";
+    }
+    tmp6 = num2 < 3600000;
   }
-  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
-  value = obj.get(bucketKey);
-  if (value) {
-    const range = _slicedToArray(value, 2)[1];
-    const items = [combined, ];
-    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
-    const _Math = Math;
-    range1.min = Math.min(range.min, min);
-    const _Math2 = Math;
-    range1.max = Math.max(range.max, min);
-    const sum = range.count + 1;
-    range.count = sum;
-    range1.count = sum;
-    const sum1 = range.sum + min;
-    range.sum = sum1;
-    range1.sum = sum1;
-    range1.tags = range.tags;
-    items[1] = range1;
-    const result = obj.set(bucketKey, items);
-  } else {
-    const items1 = [combined, ];
-    const range2 = { min, max: min, count: 1, sum: min, tags };
-    items1[1] = range2;
-    const result1 = obj.set(bucketKey, items1);
-  }
-};
+}
+
+export const _browserPerformanceTimeOriginMode = "none";
+export { dateTimestampInSeconds };
+export const timestampInSeconds = fn;

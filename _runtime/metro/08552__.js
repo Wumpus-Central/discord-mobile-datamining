@@ -1,13 +1,39 @@
 // === Module 8552: ? ===
 
 // Module 8552
-import _mod17 from "module_17" /* 17 */;
+import processColor from "processColor" /* 50 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const obj = { SLIDER_DEFAULT_INITIAL_VALUE: 0, MARGIN_HORIZONTAL_PADDING: 0.05, THUMB_SIZE: 20, STEP_NUMBER_TEXT_FONT_SMALL: 8, STEP_NUMBER_TEXT_FONT_BIG: 12, LIMIT_MIN_VALUE: Number.MIN_SAFE_INTEGER, LIMIT_MAX_VALUE: Number.MAX_SAFE_INTEGER, DEFAULT_STEP_RESOLUTION: null };
-let num = 1000;
-if ("android" === _mod17.Platform.OS) {
-  num = 128;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSlider", bubblingEventTypes: { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } }, directEventTypes: { topRNCSliderSlidingStart: { registrationName: "onRNCSliderSlidingStart" }, topRNCSliderSlidingComplete: { registrationName: "onRNCSliderSlidingComplete" } }, validAttributes: null };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
 }
-obj.DEFAULT_STEP_RESOLUTION = num;
+const obj3 = { accessibilityUnits: true, accessibilityIncrements: true, disabled: true, inverted: true, vertical: true, tapToSeek: true, maximumTrackImage: { process: resolveAssetSource }, maximumTrackTintColor: { process: processColor.default }, maximumValue: true, minimumTrackImage: null, minimumTrackTintColor: null, minimumValue: true, step: true, testID: true, thumbImage: null, thumbTintColor: null, thumbSize: true, trackImage: null, value: true, lowerLimit: true, upperLimit: true };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.minimumTrackImage = { process: resolveAssetSource };
+const obj2 = { topChange: { phasedRegistrationNames: { captured: "onChangeCapture", bubbled: "onChange" } }, topRNCSliderValueChange: { phasedRegistrationNames: { captured: "onRNCSliderValueChangeCapture", bubbled: "onRNCSliderValueChange" } } };
+const obj4 = { process: processColor.default };
+obj3.minimumTrackTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.thumbImage = { process: resolveAssetSource };
+const obj5 = { process: processColor.default };
+obj3.thumbTintColor = { process: processColor.default };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj3.trackImage = { process: resolveAssetSource };
+__INTERNAL_VIEW_CONFIG.validAttributes = Object.assign(obj3, weakSet.ConditionallyIgnoredEventHandlers({ onChange: true, onRNCSliderSlidingStart: true, onRNCSliderSlidingComplete: true, onRNCSliderValueChange: true }));
 
-export const constants = obj;
+export { __INTERNAL_VIEW_CONFIG };
+export default module_65.get("RNCSlider", () => obj);

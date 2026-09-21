@@ -1,84 +1,49 @@
 // === Module 5403: ? ===
 
 // Module 5403
-import _mod5397 from "module_5397" /* 5397 */;
-import _mod5398 from "module_5398" /* 5398 */;
+import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "FILE_TYPES_REQUIRED_ADDITIONAL_CHECK" /* 5404 */;
+import _mod5416 from "module_5416" /* 5416 */;
+import _mod5424 from "module_5424" /* 5424 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const isAVIF = function isAVIF(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod5397.isAvifStringIncluded(fileChunk);
-};
-export const isBMP = function isBMP(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "bmp");
-};
-export const isBPG = function isBPG(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "bpg");
-};
-export const isCR2 = function isCR2(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "cr2");
-};
-export const isEXR = function isEXR(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "exr");
-};
-export const isGIF = function isGIF(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "gif");
-};
-export const isHEIC = function isHEIC(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avif") && _mod5397.isHeicSignatureIncluded(fileChunk);
-};
-export const isICO = function isICO(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ico");
-};
-export const isJPEG = function isJPEG(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "jpeg");
-};
-export const isPBM = function isPBM(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pbm");
-};
-export const isPGM = function isPGM(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "pgm");
-};
-export const isPNG = function isPNG(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "png");
-};
-export const isPPM = function isPPM(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ppm");
-};
-export const isPSD = function isPSD(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "psd");
-};
-export const isWEBP = function isWEBP(fileChunk) {
-  fileChunk = _mod5397.getFileChunk(fileChunk);
-  const FileTypes = _mod5398.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webp");
-};
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
+  }
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
+      }
+    };
+  }
+  const _Object2 = Object;
+  fn(FILE_TYPES_REQUIRED_ADDITIONAL_CHECK, exports);
+  fn(_mod5416, exports);
+  fn(_mod5424, exports);
+} else {
+  let _Object = Object;
+}

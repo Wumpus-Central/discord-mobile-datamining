@@ -1,106 +1,14 @@
 // === Module 8798: ? ===
 
 // Module 8798
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8751 from "module_8751" /* 8751 */;
-import _modDef8799 from "module_8799" /* 8799 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-const SvgImage = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const Image = fn(17).Image;
-const jsx = fn(21).jsx;
-const re9 = /\s+/;
-class SvgImage {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, SvgImage);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(SvgImage);
-    tmp3 = closure_4;
-    if (closure_8()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(SvgImage, _modDef8751);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ preserveAspectRatio, href } = props);
-    ({ x, y, width, height } = props);
-    if (undefined === href) {
-      href = props.xlinkHref;
-    }
-    if (preserveAspectRatio) {
-      let parts = preserveAspectRatio.trim().split(re9);
-      const str = preserveAspectRatio.trim();
-    } else {
-      parts = [];
-    }
-    const size = { x, y, width, height, onLoad: props.onLoad, meetOrSlice: SvgImage(8740).meetOrSliceTypes[tmp3] || 0, align: null, src: null };
-    [tmp2, tmp3] = parts;
-    const tmp6 = SvgImage(8740).meetOrSliceTypes[tmp3] || 0;
-    size.align = SvgImage(8740).alignEnum[tmp2] || "xMidYMid";
-    let assetSource = null;
-    if (href) {
-      let tmp10 = href;
-      if (typeof href === "string") {
-        const obj = { uri: href };
-        tmp10 = obj;
-      }
-      assetSource = Image.resolveAssetSource(tmp10);
-    }
-    size.src = assetSource;
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp7 = SvgImage(8740).alignEnum[tmp2] || "xMidYMid";
-    const merged = Object.assign(SvgImage(8742).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    return <tmp11 ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(SvgImage, items);
-importDefaultResultResult.displayName = "Image";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGForeignObject", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, x: true, y: true, height: true, width: true };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = size;
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGForeignObject", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

@@ -1,81 +1,68 @@
 // === Module 5469: ? ===
 
 // Module 5469
-import _mod5425 from "module_5425" /* 5425 */;
-import _modDef5430 from "module_5430" /* 5430 */;
-import get0thIfdOffset from "get0thIfdOffset" /* 5445 */;
-import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5446 */;
+import _mod5430 from "module_5430" /* 5430 */;
+import _modDef5447 from "module_5447" /* 5447 */;
+import _modDef5470 from "module_5470" /* 5470 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-const MODEL_ID = { K3_III: 78420 };
-let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
+function getTagName(dataView, sum1) {
+  const tmp = _slicedToArray(_mod5430.getPascalStringFromDataView(dataView, sum1), 2);
+  const first = tmp[0];
+  const obj2 = { tagName: tmp[1], tagNameSize: null };
+  let num = 0;
+  const sum = 1 + first;
+  if (first % 2 === 0) {
+    num = 1;
+  }
+  obj2.tagNameSize = sum + num;
+  return obj2;
+}
+let c4 = "8BIM";
+let c5 = 2;
+let c6 = 4;
+({ length, length: closure_7 } = "8BIM");
 
 export default {
-  read(byteLength, arg1, arg2, arg3) {
-    const obj = _modDef5430;
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    let LevelInfo = ifd.PentaxModelID;
-    if (LevelInfo) {
-      LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
-    }
-    if (LevelInfo) {
-      LevelInfo = ifd.LevelInfo;
-    }
-    let tmp10 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
-      const obj3 = {};
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
-        const obj4 = { value: int8, description: null };
-        let str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
+  read(arg0, arg1) {
+    const uint8Array = new Uint8Array(arg0);
+    const dataView = _mod5430.getDataView(uint8Array.buffer);
+    const obj2 = {};
+    let num = 0;
+    if (0 < arg0.length) {
+      const sum = num + React5;
+      const stringFromDataView = _mod5430.getStringFromDataView(dataView, num, React5);
+      const shortAt = _modDef5447.getShortAt(dataView, sum);
+      const sum1 = sum + c5;
+      const tmp15 = getTagName(dataView, sum1);
+      let name = tmp15.tagName;
+      const sum2 = sum1 + tmp15.tagNameSize;
+      const longAt = _modDef5447.getLongAt(dataView, sum2);
+      const sum3 = sum2 + c6;
+      if (stringFromDataView === c4) {
+        const dataView1 = _mod5430.getDataView(dataView.buffer, sum3, longAt);
+        const obj7 = { id: shortAt, value: null };
+        const tmp5Result = _mod5430;
+        obj7.value = _mod5430.getStringFromDataView(dataView1, 0, longAt);
+        if (_modDef5470[shortAt]) {
+          try {
+            obj7.description = _modDef5470[shortAt].description(dataView1);
+            if (!name) {
+              name = _modDef5470[shortAt].name;
             }
-            str = str2;
+            obj2[name] = obj7;
+          } catch (err) {
+            tmp.description = tmp2;
           }
-          str6 = str;
+        } else if (arg1) {
+          const _HermesInternal = HermesInternal;
+          obj2["undefined-" + shortAt] = obj7;
         }
-        obj4.description = str6;
-        obj3.CameraOrientation = obj4;
-        const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef5430.LITTLE_ENDIAN);
-        const obj5 = { value: int16, description: "" + -0.5 * int16 };
-        obj3.RollAngle = obj5;
-        const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef5430.LITTLE_ENDIAN);
-        const obj6 = { value: int161, description: "" + -0.5 * int161 };
-        obj3.PitchAngle = obj6;
+        const tmp5Result2 = _mod5430;
       }
-      const tmp7Result = _mod5425;
-      delete tmp[tmp2];
-      tmp10 = _mod5425.objectAssign({}, ifd, obj3);
-      const objectAssignResult = _mod5425.objectAssign({}, ifd, obj3);
+      num = sum3 + (longAt + longAt % 2);
     }
-    return tmp10;
-  },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID,
-  LIK3III: obj2
+    return obj2;
+  }
 };

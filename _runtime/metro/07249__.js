@@ -1,150 +1,521 @@
 // === Module 7249: ? ===
 
 // Module 7249
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-({ Animated, Platform } = get_ActivityIndicator);
-({ add: closure_0, multiply: closure_1 } = Animated);
-
-export const forUIKit = function forUIKit(arg0) {
-  ({ next, layouts } = arg0);
-  let num = 100;
-  let num2 = 100;
-  ({ current, direction } = arg0);
-  if (layouts.leftLabel) {
-    num2 = (layouts.screen.width - layouts.leftLabel.width) / 2 - 27;
+let StackView = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  if (layouts.title) {
-    num = (layouts.screen.width - layouts.title.width) / 2 - 27;
-  }
-  const result = layouts.screen.width / 4;
-  let num7 = 1;
-  if ("rtl" === direction) {
-    num7 = -1;
-  }
-  const progress = current.progress;
-  let num8 = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num8 = progress2.interpolate(obj);
-  }
-  const tmp2Result = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num8);
-  const obj2 = { leftButtonStyle: null, leftLabelStyle: null, rightButtonStyle: null, titleStyle: null, backgroundStyle: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  obj2.leftButtonStyle = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  const obj4 = { transform: null };
-  const obj5 = { translateX: null };
-  const obj6 = { inputRange: [0, 1, 2], outputRange: null };
-  const items = [num2, 0, -result];
-  obj6.outputRange = items;
-  obj5.translateX = framebus(num7, tmp2Result.interpolate(obj6));
-  const items1 = [obj5];
-  obj4.transform = items1;
-  obj2.leftLabelStyle = obj4;
-  const obj3 = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  obj2.rightButtonStyle = { opacity: tmp2Result.interpolate({ inputRange: [0.3, 1, 1.5], outputRange: [0, 1, 0] }) };
-  const obj8 = { opacity: tmp2Result.interpolate({ inputRange: [0, 0.5, 0.75, 1, 1.5], outputRange: [0, 0, 0.1, 1, 0] }), transform: null };
-  const obj9 = { translateX: null };
-  const obj10 = { inputRange: [0.5, 1, 2], outputRange: null };
-  const items2 = [result, 0, -num];
-  obj10.outputRange = items2;
-  obj9.translateX = framebus(num7, tmp2Result.interpolate(obj10));
-  const items3 = [obj9];
-  obj8.transform = items3;
-  obj2.titleStyle = obj8;
-  const obj11 = { transform: null };
-  const obj12 = { translateX: null };
-  const obj13 = { inputRange: [0, 1, 2], outputRange: null };
-  const items4 = [layouts.screen.width, 0, -layouts.screen.width];
-  obj13.outputRange = items4;
-  obj12.translateX = framebus(num7, tmp2Result.interpolate(obj13));
-  const items5 = [obj12];
-  obj11.transform = items5;
-  obj2.backgroundStyle = obj11;
-  return obj2;
-};
-export const forFade = function forFade(next) {
-  next = next.next;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  const interpolateResult1 = tmpResult.interpolate({ inputRange: [0, 1, 2], outputRange: [0, 1, 0] });
-  const obj2 = { leftButtonStyle: { opacity: interpolateResult1 }, rightButtonStyle: { opacity: interpolateResult1 }, titleStyle: { opacity: interpolateResult1 }, backgroundStyle: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  obj2.backgroundStyle = { opacity: tmpResult.interpolate({ inputRange: [0, 1, 1.9, 2], outputRange: [0, 1, 1, 0] }) };
-  return obj2;
-};
-export const forSlideLeft = function forSlideLeft(next) {
-  next = next.next;
-  const screen = next.layouts.screen;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj2 = { inputRange: [0, 1, 2], outputRange: null };
-  if ("rtl" === next.direction) {
-    const items = [-screen.width, 0, screen.width];
-    let items1 = items;
-  } else {
-    items1 = [screen.width, 0, -screen.width];
-  }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  obj2.outputRange = items1;
-  const items2 = [{ translateX: React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj2) }];
-  return { leftButtonStyle: { transform: items2 }, rightButtonStyle: { transform: items2 }, titleStyle: { transform: items2 }, backgroundStyle: { transform: items2 } };
-};
-export const forSlideRight = function forSlideRight(next) {
-  next = next.next;
-  const screen = next.layouts.screen;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj2 = { inputRange: [0, 1, 2], outputRange: null };
-  if ("rtl" === next.direction) {
-    const items = [screen.width, 0, -screen.width];
-    let items1 = items;
-  } else {
-    items1 = [-screen.width, 0, screen.width];
-  }
-  const tmpResult = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num);
-  obj2.outputRange = items1;
-  const items2 = [{ translateX: React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj2) }];
-  return { leftButtonStyle: { transform: items2 }, rightButtonStyle: { transform: items2 }, titleStyle: { transform: items2 }, backgroundStyle: { transform: items2 } };
-};
-export const forSlideUp = function forSlideUp(next) {
-  next = next.next;
-  const header = next.layouts.header;
-  const progress = next.current.progress;
-  let num = 0;
-  if (next) {
-    const progress2 = next.progress;
-    const obj = { inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" };
-    num = progress2.interpolate(obj);
-  }
-  const obj2 = { translateY: null };
-  const interpolateResult = progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" });
-  const obj3 = { inputRange: [0, 1, 2], outputRange: null };
-  const items = [-header.height, 0, -header.height];
-  obj3.outputRange = items;
-  obj2.translateY = React(progress.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), num).interpolate(obj3);
-  const items1 = [obj2];
-  return { leftButtonStyle: { transform: items1 }, rightButtonStyle: { transform: items1 }, titleStyle: { transform: items1 }, backgroundStyle: { transform: items1 } };
-};
-export function forNoAnimation() {
-  return {};
 }
+let closure_2 = ["state", "descriptors"];
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+let GestureHandlerRootView = fn(7250).GestureHandlerRootView;
+if (GestureHandlerRootView == null) {
+  GestureHandlerRootView = View;
+}
+function isArrayEqual(arg0, arg1) {
+
+}
+class StackView {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_4(this, StackView);
+    items1 = [...items];
+    tmp2 = metroRequire;
+    obj = metroRequire(StackView);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    obj1 = { routes: [], previousState: "y", openingRouteKeys: "y", closingRouteKeys: null, replacingRouteKeys: null, descriptors: true };
+    obj1.openingRouteKeys = [];
+    obj1.closingRouteKeys = [];
+    obj1.replacingRouteKeys = [];
+    obj1.descriptors = {};
+    tmp3Result.state = obj1;
+    tmp3Result.getPreviousRoute = (route) => {
+      route = route.route;
+      c1 = undefined;
+      c2 = undefined;
+      ({ closingRouteKeys: c1, replacingRouteKeys: c2 } = closure_0.state);
+      const routes = closure_0.state.routes;
+      const found = routes.filter((key) => {
+        let tmp = key.key === route.key;
+        if (!tmp) {
+          const hasItem = _undefined.includes(key.key);
+          let tmp4 = !hasItem;
+          if (!hasItem) {
+            tmp4 = !_undefined2.includes(key.key);
+          }
+          tmp = tmp4;
+        }
+        return tmp;
+      });
+      return found[found.findIndex(found, (key) => key.key === route.key) - 1];
+    };
+    tmp3Result.renderHeader = (arg0) => {
+      const merged = Object.assign(arg0);
+      return jsx(closure_0(7253).HeaderContainer, {});
+    };
+    tmp3Result.handleOpenRoute = (route) => {
+      route = route.route;
+      ({ state, navigation } = closure_0.props);
+      ({ closingRouteKeys, replacingRouteKeys } = closure_0.state);
+      if (closingRouteKeys.some((item) => item === route.key)) {
+        if (replacingRouteKeys.every((item) => item !== route.key)) {
+          const routeNames = state.routeNames;
+          if (routeNames.includes(route.name)) {
+            let routes = state.routes;
+            if (!routes.some((key) => key.key === route.key)) {
+              navigation.dispatch((routes) => {
+                routes = routes.routes;
+                const items = [];
+                items[HermesBuiltin.arraySpread(routes.filter((key) => key.key !== key.key), 0)] = route;
+                const CommonActions = key(1485).CommonActions;
+                const obj = {};
+                const merged = Object.assign(routes);
+                obj.routes = items;
+                obj.index = items.length - 1;
+                return CommonActions.reset(obj);
+              });
+            }
+          }
+        }
+      }
+      closure_0.setState((routes) => {
+        closure_0 = routes;
+        routes = routes.routes;
+        const routes1 = routes.routes;
+        const substr = routes1.slice(0, routes.findIndex((key) => key.key === closure_0.key));
+        const found = substr.filter((key) => {
+          const replacingRouteKeys = closure_0.replacingRouteKeys;
+          return replacingRouteKeys.includes(key.key);
+        });
+        const set = new Set(found.map((key) => key.key));
+        const obj = { routes: null, openingRouteKeys: null, closingRouteKeys: null, replacingRouteKeys: null };
+        const routes2 = routes.routes;
+        obj.routes = routes2.filter((key) => !set.has(key.key));
+        const openingRouteKeys = routes.openingRouteKeys;
+        obj.openingRouteKeys = openingRouteKeys.filter((item) => item !== closure_0.key);
+        const closingRouteKeys = routes.closingRouteKeys;
+        obj.closingRouteKeys = closingRouteKeys.filter((item) => item !== closure_0.key);
+        let replacingRouteKeys = routes.replacingRouteKeys;
+        obj.replacingRouteKeys = replacingRouteKeys.filter((item) => !set.has(item));
+        return obj;
+      });
+    };
+    tmp3Result.handleCloseRoute = (route) => {
+      route = route.route;
+      ({ state, navigation } = closure_0.props);
+      let routes = state.routes;
+      if (routes.some((key) => key.key === route.key)) {
+        const obj2 = {};
+        const StackActions = StackView(1485).StackActions;
+        const merged = Object.assign(StackActions.pop());
+        obj2.source = route.key;
+        obj2.target = state.key;
+        navigation.dispatch(obj2);
+      } else {
+        closure_0.setState((routes) => {
+          const obj = { routes: null, openingRouteKeys: null, closingRouteKeys: null };
+          routes = routes.routes;
+          obj.routes = routes.filter((key) => key.key !== route.key);
+          const openingRouteKeys = routes.openingRouteKeys;
+          obj.openingRouteKeys = openingRouteKeys.filter((item) => item !== route.key);
+          const closingRouteKeys = routes.closingRouteKeys;
+          obj.closingRouteKeys = closingRouteKeys.filter((item) => item !== route.key);
+          return obj;
+        });
+      }
+    };
+    tmp3Result.handleTransitionStart = (route, closing) => {
+      const navigation = closure_0.props.navigation;
+      const obj = { type: "transitionStart", data: { closing }, target: route.route.key };
+      return navigation.emit(obj);
+    };
+    tmp3Result.handleTransitionEnd = (route, closing) => {
+      const navigation = closure_0.props.navigation;
+      const obj = { type: "transitionEnd", data: { closing }, target: route.route.key };
+      return navigation.emit(obj);
+    };
+    tmp3Result.handleGestureStart = (route) => {
+      const navigation = closure_0.props.navigation;
+      navigation.emit({ type: "gestureStart", target: route.route.key });
+    };
+    tmp3Result.handleGestureEnd = (route) => {
+      const navigation = closure_0.props.navigation;
+      navigation.emit({ type: "gestureEnd", target: route.route.key });
+    };
+    tmp3Result.handleGestureCancel = (route) => {
+      const navigation = closure_0.props.navigation;
+      navigation.emit({ type: "gestureCancel", target: route.route.key });
+    };
+    return tmp3Result;
+  }
+}
+_inherits(StackView, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    let props = this.props;
+    const state = props.state;
+    closure_2 = _objectWithoutProperties(props, closure_2);
+    ({ routes: _objectWithoutProperties, descriptors: _classCallCheck, openingRouteKeys: closure_5, closingRouteKeys: _getPrototypeOf } = this.state);
+    const preloadedRoutes = state.preloadedRoutes;
+    StackView = preloadedRoutes.reduce((acc, key) => {
+      let describeResult = acc[key.key];
+      if (!describeResult) {
+        const props = self.props;
+        describeResult = props.describe(key, true);
+      }
+      acc[key.key] = describeResult;
+      return acc;
+    }, {});
+    const obj = { style: container.container, children: null };
+    const obj2 = {
+      children: self(StackView(state[13]).SafeAreaInsetsContext.Consumer, {
+        children(arg0) {
+          closure_0 = arg0;
+          return self(closure_0(state[14]).ModalPresentationContext.Consumer, {
+            children(arg0) {
+              closure_0 = arg0;
+              return self(closure_0(state[12]).HeaderShownContext.Consumer, {
+                children(isParentHeaderShown) {
+                  const merged = Object.assign(closure_2);
+                  return jsx(StackView(7259).CardStack, { insets: preloadedDescriptors, isParentHeaderShown, isParentModal: preloadedDescriptors, getPreviousRoute: self.getPreviousRoute, routes, openingRouteKeys, closingRouteKeys, onOpenRoute: self.handleOpenRoute, onCloseRoute: self.handleCloseRoute, onTransitionStart: self.handleTransitionStart, onTransitionEnd: self.handleTransitionEnd, renderHeader: self.renderHeader, state, descriptors, onGestureStart: self.handleGestureStart, onGestureEnd: self.handleGestureEnd, onGestureCancel: self.handleGestureCancel, preloadedDescriptors });
+                }
+              });
+            }
+          });
+        }
+      })
+    };
+    obj.children = self(StackView(state[12]).SafeAreaProviderCompat, obj2);
+    return self(GestureHandlerRootView, obj);
+  }
+};
+let items = [entry];
+const entry1 = {
+  key: "getDerivedStateFromProps",
+  value: function getDerivedStateFromProps(state, previousState) {
+    let arr3 = state;
+    dependencyMap = previousState;
+    const items = [...state.state.preloadedRoutes];
+    const items1 = [];
+    if (previousState.previousState) {
+      HermesBuiltin.arraySpread(previousState.previousState.preloadedRoutes, HermesBuiltin.arraySpread(previousState.previousState.routes, 0));
+      arr3 = items1;
+    } else {
+      arr3 = items1;
+    }
+    const mapped = items.map((key) => key.key);
+    const mapped1 = arr3.map((key) => key.key);
+    if (typeof isArrayEqual === "function") {
+      arr3 = mapped1;
+      if (tmp5) {
+        if (previousState.routes.length) {
+          let routes = previousState.routes;
+          const found = routes.filter((key) => {
+            const closingRouteKeys = previousState.closingRouteKeys;
+            let hasItem = closingRouteKeys.includes(key.key);
+            if (hasItem) {
+              const routes = arr3.state.routes;
+              hasItem = !routes.some((key) => key.key === key.key);
+            }
+            return hasItem;
+          });
+          const routes1 = previousState.routes;
+          const found1 = routes1.filter((key) => {
+            const replacingRouteKeys = previousState.replacingRouteKeys;
+            let hasItem = replacingRouteKeys.includes(key.key);
+            if (hasItem) {
+              const routes = arr3.state.routes;
+              hasItem = !routes.some((key) => key.key === key.key);
+            }
+            return hasItem;
+          });
+          const routes2 = state.state.routes;
+          const substr = routes2.slice();
+          if (found1.length) {
+            const splice3 = substr.splice;
+            const items2 = [substr.length - 1, 0];
+            HermesBuiltin.arraySpread(found1, 2);
+            HermesBuiltin.apply(items2, substr);
+          }
+          if (found.length) {
+            const push = substr.push;
+            const items3 = [];
+            HermesBuiltin.arraySpread(found, 0);
+            HermesBuiltin.apply(items3, substr);
+          }
+          if (typeof isArrayEqual === "function") {
+            let mapped2 = substr;
+            if (!tmp72) {
+              closure_2 = items.reduce((acc, key) => {
+                acc[key.key] = key;
+                return acc;
+              }, {});
+              mapped2 = substr.map((item) => closure_2[item.key] || item);
+            }
+            const items4 = [];
+            HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(mapped2, 0));
+            const obj3 = {
+              routes: mapped2,
+              previousState: state.state,
+              descriptors: items4.reduce((acc, key) => {
+                        let tmp = arr3.descriptors[key.key];
+                        if (!tmp) {
+                          tmp = previousState.descriptors[key.key];
+                        }
+                        acc[key.key] = tmp;
+                        return acc;
+                      }, {})
+            };
+            return obj3;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+      }
+      if (state.state.index < state.state.routes.length - 1) {
+        const routes3 = state.state.routes;
+        let substr1 = routes3.slice(0, state.state.index + 1);
+      } else {
+        substr1 = state.state.routes;
+      }
+      let substr3 = substr1;
+      ({ openingRouteKeys, closingRouteKeys } = previousState);
+      let replacingRouteKeys = previousState.replacingRouteKeys;
+      const found2 = closingRouteKeys.filter((item) => {
+        closure_0 = item;
+        return !substr3.some((key) => key.key === closure_0);
+      });
+      let found9 = found2;
+      const found3 = replacingRouteKeys.filter((item) => {
+        closure_0 = item;
+        return !substr3.some((key) => key.key === closure_0);
+      });
+      let items10 = found3;
+      let tmp6;
+      if (previousState.previousState) {
+        tmp6 = previousState.previousState.routes[previousState.previousState.index];
+      }
+      closure_6 = tmp6;
+      closure_7 = tmp7;
+      function isAnimationEnabled(arg0) {
+
+      }
+      if (tmp6) {
+        if (tmp6.key !== tmp7.key) {
+          if (arr3.some((key) => key.key === closure_7.key)) {
+            if (!substr1.some((key) => key.key === closure_6.key)) {
+              let animation;
+              if ((state.descriptors[tmp6.key] || previousState.descriptors[tmp6.key]) != null) {
+                animation = tmp18.options.animation;
+              }
+              const obj = arr3(7259);
+              let tmp9 = found3;
+              let tmp10 = found2;
+              let found4 = openingRouteKeys;
+              let arr11 = substr1;
+              if (tmp23) {
+                const items5 = [];
+                items5[HermesBuiltin.arraySpread(found2, 0)] = tmp6.key;
+                found9 = items5;
+                found4 = openingRouteKeys.filter((item) => item !== closure_6.key);
+                const found5 = found3.filter((item) => item !== closure_6.key);
+                items10 = found5;
+                const items6 = [];
+                items6[HermesBuiltin.arraySpread(substr1, 0)] = tmp6;
+                substr3 = items6;
+                tmp9 = found5;
+                tmp10 = items5;
+                arr11 = items6;
+              }
+              tmp23 = arr3(7259).getAnimationEnabled(animation) && !found2.includes(tmp6.key);
+            }
+          }
+          let animation1;
+          if ((state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key]) != null) {
+            animation1 = tmp29.options.animation;
+          }
+          tmp9 = found3;
+          tmp10 = found2;
+          found4 = openingRouteKeys;
+          arr11 = substr1;
+          if (obj2.getAnimationEnabled(animation1)) {
+            tmp9 = found3;
+            tmp10 = found2;
+            found4 = openingRouteKeys;
+            arr11 = substr1;
+            if (!openingRouteKeys.includes(tmp7.key)) {
+              const items7 = [];
+              items7[HermesBuiltin.arraySpread(openingRouteKeys, 0)] = tmp7.key;
+              const found6 = found2.filter((item) => item !== closure_7.key);
+              found9 = found6;
+              const found7 = found3.filter((item) => item !== closure_7.key);
+              items10 = found7;
+              tmp9 = found7;
+              tmp10 = found6;
+              found4 = items7;
+              arr11 = substr1;
+              if (!substr1.some((key) => key.key === closure_6.key)) {
+                const found8 = items7.filter((item) => item !== closure_6.key);
+                let str = state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key].options.animationTypeForReplace;
+                if (str == null) {
+                  str = "push";
+                }
+                if ("pop" === str) {
+                  const items8 = [];
+                  items8[HermesBuiltin.arraySpread(found6, 0)] = tmp6.key;
+                  found9 = items8;
+                  found4 = found8.filter((item) => item !== closure_7.key);
+                  const items9 = [];
+                  items9[HermesBuiltin.arraySpread(substr1, 0)] = tmp6;
+                  substr3 = items9;
+                  tmp9 = found7;
+                  tmp10 = items8;
+                  arr11 = items9;
+                } else {
+                  items10 = [];
+                  items10[HermesBuiltin.arraySpread(found7, 0)] = tmp6.key;
+                  found9 = found6.filter((item) => item !== closure_6.key);
+                  const substr2 = substr1.slice();
+                  substr3 = substr2;
+                  substr2.splice(substr2.length - 1, 0, tmp6);
+                  const routes4 = previousState.routes;
+                  const found10 = routes4.filter((key) => {
+                    let hasItem = items10.includes(key.key);
+                    if (hasItem) {
+                      hasItem = !substr3.some((key) => key.key === key.key);
+                    }
+                    return hasItem;
+                  });
+                  tmp9 = items10;
+                  tmp10 = found9;
+                  found4 = found8;
+                  arr11 = substr2;
+                  if (found10.length) {
+                    const splice2 = substr2.splice;
+                    const items11 = [substr2.length - 2, 0];
+                    HermesBuiltin.arraySpread(found10, 2);
+                    HermesBuiltin.apply(items11, substr2);
+                    tmp9 = items10;
+                    tmp10 = found9;
+                    found4 = found8;
+                    arr11 = substr2;
+                  }
+                }
+                const tmp37 = state.descriptors[tmp7.key] || previousState.descriptors[tmp7.key];
+              }
+            }
+          }
+          obj2 = arr3(7259);
+        }
+        if (arr11.length) {
+          const items12 = [];
+          HermesBuiltin.arraySpread(state.state.preloadedRoutes, HermesBuiltin.arraySpread(arr11, 0));
+          const obj4 = {
+            routes: arr11,
+            previousState: state.state,
+            openingRouteKeys: found4,
+            closingRouteKeys: tmp10,
+            replacingRouteKeys: tmp9,
+            descriptors: items12.reduce((acc, key) => {
+                    let tmp = arr3.descriptors[key.key];
+                    if (!tmp) {
+                      tmp = previousState.descriptors[key.key];
+                    }
+                    acc[key.key] = tmp;
+                    return acc;
+                  }, {})
+          };
+          return obj4;
+        } else {
+          const _Error = Error;
+          const error = new Error("There should always be at least one route in the navigation state.");
+          throw error;
+        }
+      }
+      tmp9 = found3;
+      tmp10 = found2;
+      found4 = openingRouteKeys;
+      arr11 = substr1;
+      if (tmp8) {
+        substr3 = substr1.slice();
+        const splice = substr3.splice;
+        const items13 = [substr3.length - 1, 0];
+        const routes5 = previousState.routes;
+        HermesBuiltin.arraySpread(routes5.filter((key) => {
+          if (typeof isAnimationEnabled === "function") {
+            let tmp2 = arr3.descriptors[key];
+            if (!tmp2) {
+              tmp2 = previousState.descriptors[key];
+            }
+            let animation;
+            if (tmp2 != null) {
+              animation = tmp2.options.animation;
+            }
+            let animationEnabled = StackView(7259).getAnimationEnabled(animation);
+            if (animationEnabled) {
+              let hasItem = items10.includes(key);
+              if (!hasItem) {
+                hasItem = found9.includes(key);
+              }
+              animationEnabled = hasItem;
+            }
+            return animationEnabled;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }), 2);
+        HermesBuiltin.apply(items13, substr3);
+        tmp9 = found3;
+        tmp10 = found2;
+        found4 = openingRouteKeys;
+        arr11 = substr3;
+      }
+      tmp5 = mapped.length === mapped1.length && mapped.every((item, index) => Object.is(item, arr3[index]));
+      tmp8 = found3.length || found2.length;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+};
+let items1 = [entry1];
+const container = StyleSheet.create({ container: { flex: 1 } });
+
+export const StackView = _createClass(StackView, items, items1);

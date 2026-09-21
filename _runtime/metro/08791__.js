@@ -1,13 +1,14 @@
 // === Module 8791: ? ===
 
 // Module 8791
+import _modDef8767 from "module_8767" /* 8767 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeSpotLight = fn;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeSpotLight {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = c2(this, FeSpotLight);
+    tmp = c2(this, FeSpecularLighting);
     tmp2 = closure_4;
-    obj = closure_4(FeSpotLight);
+    obj = closure_4(FeSpecularLighting);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -47,17 +48,18 @@ class FeSpotLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeSpotLight, fn(19).Component);
+_inherits(FeSpecularLighting, _modDef8767);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeSpotLight(8743).warnUnimplementedFilter();
+    const result = FeSpecularLighting(8744).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeSpotLight, items);
-importDefaultResultResult.displayName = "FeSpotLight";
+const importDefaultResultResult = _createClass(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

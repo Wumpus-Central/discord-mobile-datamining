@@ -1,7 +1,7 @@
 // === Module 9252: ? ===
 
 // Module 9252
-import _mod9216 from "module_9216" /* 9216 */;
+import _mod9217 from "module_9217" /* 9217 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         const obj = { localeError: null };
-        const obj2 = { string: { unit: "tekens", verb: "heeft" }, file: { unit: "bytes", verb: "heeft" }, array: { unit: "elementen", verb: "heeft" }, set: { unit: "elementen", verb: "heeft" } };
-        closure_1 = { regex: "invoer", email: "emailadres", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO datum en tijd", date: "ISO datum", time: "ISO tijd", duration: "ISO duur", ipv4: "IPv4-adres", ipv6: "IPv6-adres", cidrv4: "IPv4-bereik", cidrv6: "IPv6-bereik", base64: "base64-gecodeerde tekst", base64url: "base64 URL-gecodeerde tekst", json_string: "JSON string", e164: "E.164-nummer", jwt: "JWT", template_literal: "invoer" };
-        closure_2 = { nan: "NaN", number: "getal" };
+        const obj2 = { string: { unit: "aksara", verb: "mempunyai" }, file: { unit: "bait", verb: "mempunyai" }, array: { unit: "elemen", verb: "mempunyai" }, set: { unit: "elemen", verb: "mempunyai" } };
+        closure_1 = { regex: "input", email: "alamat e-mel", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "tarikh masa ISO", date: "tarikh ISO", time: "masa ISO", duration: "tempoh ISO", ipv4: "alamat IPv4", ipv6: "alamat IPv6", cidrv4: "julat IPv4", cidrv6: "julat IPv6", base64: "string dikodkan base64", base64url: "string dikodkan base64url", json_string: "string JSON", e164: "nombor E.164", jwt: "JWT", template_literal: "input" };
+        closure_2 = { nan: "NaN", number: "nombor" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -68,134 +68,114 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp52 = closure_2[parsedTypeResult];
-              if (tmp52 == null) {
-                tmp52 = parsedTypeResult;
+              let tmp47 = closure_2[parsedTypeResult];
+              if (tmp47 == null) {
+                tmp47 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Ongeldige invoer: verwacht instanceof " + code.expected + ", ontving " + tmp52;
+                let combined = "Input tidak sah: dijangka instanceof " + code.expected + ", diterima " + tmp47;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Ongeldige invoer: verwacht " + expected + ", ontving " + tmp52;
+                combined = "Input tidak sah: dijangka " + expected + ", diterima " + tmp47;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Ongeldige invoer: verwacht " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Input tidak sah: dijangka " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Ongeldige optie: verwacht \u00E9\u00E9n van " + closure_2.joinValues(code.values, "|");
+                combined1 = "Pilihan tidak sah: dijangka salah satu daripada " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str34 = "<";
+              let str27 = "<";
               if (code.inclusive) {
-                str34 = "<=";
+                str27 = "<=";
               }
-              let tmp29 = obj2[code.origin];
-              if (tmp29 == null) {
-                tmp29 = null;
+              let tmp25 = obj2[code.origin];
+              if (tmp25 == null) {
+                tmp25 = null;
               }
-              let str35 = "laat";
-              if ("date" !== code.origin) {
-                let str37 = "groot";
-                if ("string" === code.origin) {
-                  str37 = "lang";
+              let str28 = code.origin;
+              if (tmp25) {
+                if (str28 == null) {
+                  str28 = "nilai";
                 }
-                str35 = str37;
-              }
-              let str39 = code.origin;
-              if (tmp29) {
-                if (str39 == null) {
-                  str39 = "waarde";
-                }
+                const verb = tmp25.verb;
                 const str1 = code.maximum.toString();
-                let str47 = tmp29.unit;
-                if (str47 == null) {
-                  str47 = "elementen";
+                let str34 = tmp25.unit;
+                if (str34 == null) {
+                  str34 = "elemen";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Te " + str35 + ": verwacht dat " + str39 + " " + str34 + str1 + " " + str47 + " " + tmp29.verb;
+                let combined2 = "Terlalu besar: dijangka " + str28 + " " + verb + " " + str27 + str1 + " " + str34;
               } else {
-                let str40 = str39;
-                if (str39 == null) {
-                  str40 = "waarde";
+                let str29 = str28;
+                if (str28 == null) {
+                  str29 = "nilai";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Te " + str35 + ": verwacht dat " + str40 + " " + str34 + code.maximum.toString() + " is";
+                combined2 = "Terlalu besar: dijangka " + str29 + " adalah " + str27 + code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str19 = ">";
+              let str17 = ">";
               if (code.inclusive) {
-                str19 = ">=";
+                str17 = ">=";
               }
               let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
-              let str20 = "vroeg";
-              if ("date" !== code.origin) {
-                let str22 = "klein";
-                if ("string" === code.origin) {
-                  str22 = "kort";
-                }
-                str20 = str22;
-              }
-              ({ origin, minimum } = code);
-              const str64 = minimum.toString();
+              const origin = code.origin;
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str64 + " " + tmp15.unit + " " + tmp15.verb;
+                let combined3 = "Terlalu kecil: dijangka " + origin + " " + tmp15.verb + " " + str17 + code.minimum.toString() + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str64 + " is";
+                combined3 = "Terlalu kecil: dijangka " + origin + " adalah " + str17 + code.minimum.toString();
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "Ongeldige tekst: moet met \"" + code.prefix + "\" beginnen";
+                let combined4 = "String tidak sah: mesti bermula dengan \"" + code.prefix + "\"";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "Ongeldige tekst: moet op \"" + code.suffix + "\" eindigen";
+                combined4 = "String tidak sah: mesti berakhir dengan \"" + code.suffix + "\"";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "Ongeldige tekst: moet \"" + code.includes + "\" bevatten";
+                combined4 = "String tidak sah: mesti mengandungi \"" + code.includes + "\"";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Ongeldige tekst: moet overeenkomen met patroon " + code.pattern;
+                combined4 = "String tidak sah: mesti sepadan dengan corak " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Ongeldig: " + format;
+                combined4 = "" + format + " tidak sah";
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Ongeldig getal: moet een veelvoud van " + code.divisor + " zijn";
+              return "Nombor tidak sah: perlu gandaan " + code.divisor;
             case "unrecognized_keys":
-              let str3 = "";
-              if (code.keys.length > 1) {
-                str3 = "s";
-              }
               const _HermesInternal3 = HermesInternal;
-              return "Onbekende key" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Kunci tidak dikenali: " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Ongeldige key in " + code.origin;
+              return "Kunci tidak sah dalam " + code.origin;
             case "invalid_union":
-              return "Ongeldige invoer";
+              return "Input tidak sah";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Ongeldige waarde in " + code.origin;
+              return "Nilai tidak sah dalam " + code.origin;
             default:
-              return "Ongeldige invoer";
+              return "Input tidak sah";
           }
         };
         return obj;
@@ -203,7 +183,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod9216);
+    let closure_2 = fn(_mod9217);
     function error() {
 
     }

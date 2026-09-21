@@ -1,14 +1,13 @@
 // === Module 7002: ? ===
 
 // Module 7002
-import ComposedGestureName from "ComposedGestureName" /* 6951 */;
-import _mod7000 from "module_7000" /* 7000 */;
+const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const useSimultaneousGestures = function useSimultaneousGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
-  return _mod7000.useComposedGesture.apply(items1);
-};
+for (const key10013 in require("module_7003")) {
+  arg5[key10013] = require("module_7003")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

@@ -1,14 +1,15 @@
 // === Module 10722: ? ===
 
 // Module 10722
-import Filter from "Filter" /* 10710 */;
+import _mod10691 from "module_10691" /* 10691 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10699 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMergeRelativeAfterDateRefiner = require;
+const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,59 +29,59 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENMergeRelativeAfterDateRefiner {
+const regExp = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod10691.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+const regExp1 = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod10691.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)", "i");
+class ENTimeUnitCasualRelativeFormatParser {
   constructor() {
+    flag = global;
+    if (global === undefined) {
+      flag = true;
+    }
     self = this;
-    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
+    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeAfterDateRefiner);
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.allowAbbreviations = flag;
+    return tmp3Result;
   }
 }
-_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
+_inherits(ENTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "shouldMergeResults",
-  value: function shouldMergeResults(str, arg1, text) {
-    let match = str.match(/^\s*$/i);
-    if (match) {
-      let tmp4 = null != str.match(/^[+-]/i);
-      if (!tmp4) {
-        tmp4 = null != text.text.match(/^-/i);
-      }
-      match = tmp4;
-    }
-    return match;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.allowAbbreviations ? regExp : regExp1;
   }
 };
 const items = [
   entry,
   {
-    key: "mergeResults",
-    value: function mergeResults(arg0, start, text, arg3) {
-      const parseDurationResult = ENMergeRelativeAfterDateRefiner(10690).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/^-/i)) {
-        reverseDurationResult = ENMergeRelativeAfterDateRefiner(10693).reverseDuration(parseDurationResult);
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10691).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("last" !== formatted) {
+          if ("past" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
+          }
+          const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(10695).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
+        }
+        reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(10694).reverseDuration(parseDurationResult);
+      } else {
+        return null;
       }
-      const ParsingComponents = ENMergeRelativeAfterDateRefiner(10694).ParsingComponents;
-      const ReferenceWithTimezone = ENMergeRelativeAfterDateRefiner(10694).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
-      ({ reference, index } = start);
-      return new ENMergeRelativeAfterDateRefiner(10694).ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
     }
   }
 ];
 
-export default _createClass(ENMergeRelativeAfterDateRefiner, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

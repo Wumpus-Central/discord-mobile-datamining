@@ -1,16 +1,15 @@
 // === Module 10794: ? ===
 
 // Module 10794
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10691 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10698 */;
-import _mod10785 from "module_10785" /* 10785 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10699 */;
+import _mod10786 from "module_10786" /* 10786 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLRelativeDateFormatParser = require;
+const NLTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +29,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(dit|deze|(?:aan)?komend|volgend|afgelopen|vorig)e?\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10785.TIME_UNIT_DICTIONARY) + ")(?=\\s*)(?=\\W|$)", "i");
-class NLRelativeDateFormatParser {
+const regExp = new RegExp("(dit|deze|vorig|afgelopen|(?:aan)?komend|over|\\+|-)e?\\s*(" + _mod10786.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+class NLTimeUnitCasualRelativeFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLRelativeDateFormatParser);
+    tmp = c2(this, NLTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(NLRelativeDateFormatParser);
+    obj = closure_4(NLTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +50,7 @@ class NLRelativeDateFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,51 +61,19 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
+    value: function innerExtract(reference, arg1) {
       const formatted = arg1[1].toLowerCase();
-      const str3 = arg1[2].toLowerCase();
-      const tmp4 = NLRelativeDateFormatParser(10785).TIME_UNIT_DICTIONARY[str3];
-      if ("volgend" != formatted) {
-        if ("komend" != formatted) {
-          if ("aankomend" != formatted) {
-            if ("afgelopen" != formatted) {
-              if ("vorig" != formatted) {
-                const parsingComponents = createParsingComponents.createParsingComponents();
-                const _Date = Date;
-                const instant = createParsingComponents.reference.instant;
-                const date = new Date(instant.getTime());
-                if (str3.match(/week/i)) {
-                  date.setDate(date.getDate() - date.getDay());
-                  parsingComponents.imply("day", date.getDate());
-                  parsingComponents.imply("month", date.getMonth() + 1);
-                  parsingComponents.imply("year", date.getFullYear());
-                  const date1 = date.getDate();
-                } else if (str3.match(/maand/i)) {
-                  date.setDate(1);
-                  parsingComponents.imply("day", date.getDate());
-                  parsingComponents.assign("year", date.getFullYear());
-                  parsingComponents.assign("month", date.getMonth() + 1);
-                } else if (str3.match(/jaar/i)) {
-                  date.setDate(1);
-                  date.setMonth(0);
-                  parsingComponents.imply("day", date.getDate());
-                  parsingComponents.imply("month", date.getMonth() + 1);
-                  parsingComponents.assign("year", date.getFullYear());
-                }
-                return parsingComponents;
-              }
-            }
-            const obj = {};
-            obj[tmp4] = -1;
-            const ParsingComponents = NLRelativeDateFormatParser(10694).ParsingComponents;
-            return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
-          }
+      const parseDurationResult = NLTimeUnitCasualRelativeFormatParser(10786).parseDuration(arg1[2]);
+      if ("vorig" !== formatted) {
+        if ("afgelopen" !== formatted) {
+          let reverseDurationResult = parseDurationResult;
         }
+        const ParsingComponents = NLTimeUnitCasualRelativeFormatParser(10695).ParsingComponents;
+        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      const ParsingComponents2 = NLRelativeDateFormatParser(10694).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp4]: 1 });
+      reverseDurationResult = NLTimeUnitCasualRelativeFormatParser(10694).reverseDuration(parseDurationResult);
     }
   }
 ];
 
-export default _createClass(NLRelativeDateFormatParser, items);
+export default _createClass(NLTimeUnitCasualRelativeFormatParser, items);

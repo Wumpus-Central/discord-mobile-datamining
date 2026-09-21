@@ -1,15 +1,14 @@
 // === Module 8794: ? ===
 
 // Module 8794
-import _modDef8751 from "module_8751" /* 8751 */;
+import _modDef8767 from "module_8767" /* 8767 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Filter = importDefault;
+const FeTurbulence = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Filter {
+class FeTurbulence {
   constructor() {
     self = this;
-    tmp = c2(this, Filter);
+    tmp = c2(this, FeTurbulence);
     tmp2 = closure_4;
-    obj = closure_4(Filter);
+    obj = closure_4(FeTurbulence);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +48,18 @@ class Filter {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Filter, _modDef8751);
+_inherits(FeTurbulence, _modDef8767);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(size);
-    obj.children = this.props.children;
-    return jsx(Filter(8795), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeTurbulence(8744).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+const importDefaultResultResult = _createClass(FeTurbulence, items);
+importDefaultResultResult.displayName = "FeTurbulence";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

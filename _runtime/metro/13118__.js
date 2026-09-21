@@ -1,29 +1,31 @@
 // === Module 13118: ? ===
 
 // Module 13118
-import _mod13050 from "module_13050" /* 13050 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
-  let arr = arg2;
-  if (arg2 === undefined) {
-    const items = [arg1];
-    arr = items;
+export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
   }
-  let str = arg3;
-  if (arg3 === undefined) {
-    str = "npm";
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
   }
-  const tmp = _metadata._metadata || {};
-  if (!tmp.sdk) {
-    const obj = { name: null, packages: null, version: null };
-    const _HermesInternal = HermesInternal;
-    obj.name = "sentry.javascript." + arg1;
-    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod13050.SDK_VERSION }));
-    obj.version = str(13050).SDK_VERSION;
-    tmp.sdk = obj;
+  let tmp2 = dsn && arr.includes(dsn.host);
+  if (!tmp2) {
+    let flag = false;
+    if (tunnel) {
+      let substr = arr;
+      if ("/" === arr[arr.length - 1]) {
+        substr = arr.slice(0, -1);
+      }
+      let substr1 = tunnel;
+      if ("/" === tunnel[tunnel.length - 1]) {
+        substr1 = tunnel.slice(0, -1);
+      }
+      flag = substr === substr1;
+    }
+    tmp2 = flag;
   }
-  _metadata._metadata = tmp;
+  return tmp2;
 };

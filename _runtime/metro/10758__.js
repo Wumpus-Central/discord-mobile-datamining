@@ -1,14 +1,14 @@
 // === Module 10758: ? ===
 
 // Module 10758
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10698 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10699 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FRTimeUnitAgoFormatParser = require;
+const FRTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,28 +28,31 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FRTimeUnitAgoFormatParser {
+class FRTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, FRTimeUnitAgoFormatParser);
+    tmp = c2(this, FRTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(FRTimeUnitAgoFormatParser);
+    obj = closure_4(FRTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(FRTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    const regExp = new RegExp("(?:les?|la|l'|du|des?)\\s*(" + FRTimeUnitAgoFormatParser(10753).NUMBER_PATTERN + ")?(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?\\s*(" + FRTimeUnitAgoFormatParser(10691).matchAnyPattern(FRTimeUnitAgoFormatParser(10753).TIME_UNIT_DICTIONARY) + ")(?:\\s*(prochaine?s?|derni[e\u00E8]re?s?|pass[\u00E9e]e?s?|pr[\u00E9e]c[\u00E9e]dents?|suivante?s?))?", "i");
+    const regExp = new RegExp("(?:dans|en|pour|pendant|de)\\s*(" + FRTimeUnitWithinFormatParser(10754).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
     return regExp;
   }
 };
@@ -58,33 +61,10 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      let num = 1;
-      if (arg1[1]) {
-        num = FRTimeUnitAgoFormatParser(10753).parseNumberPattern(arg1[1]);
-      }
-      const obj = {};
-      obj[FRTimeUnitAgoFormatParser(10753).TIME_UNIT_DICTIONARY[arg1[3].toLowerCase(arg1[3])]] = num;
-      const formatted = arg1[2] || arg1[4] || "".toLowerCase();
-      if (formatted) {
-        let isMatch = /derni[eè]re?s?/.test(formatted);
-        if (!isMatch) {
-          isMatch = /pass[ée]e?s?/.test(formatted);
-          const obj3 = /pass[ée]e?s?/;
-        }
-        if (!isMatch) {
-          isMatch = /pr[ée]c[ée]dents?/.test(formatted);
-          const obj4 = /pr[ée]c[ée]dents?/;
-        }
-        let reverseDurationResult = obj;
-        if (isMatch) {
-          reverseDurationResult = FRTimeUnitAgoFormatParser(10693).reverseDuration(obj);
-        }
-        const ParsingComponents = FRTimeUnitAgoFormatParser(10694).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
-      const str2 = arg1[2] || arg1[4] || "";
+      const ParsingComponents = FRTimeUnitWithinFormatParser(10695).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, FRTimeUnitWithinFormatParser(10754).parseDuration(arg1[1]));
     }
   }
 ];
 
-export default _createClass(FRTimeUnitAgoFormatParser, items);
+export default _createClass(FRTimeUnitWithinFormatParser, items);

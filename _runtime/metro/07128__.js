@@ -1,19 +1,13 @@
 // === Module 7128: ? ===
 
 // Module 7128
-function _setPrototypeOf(arg0, arg1) {
-  if (Object.setPrototypeOf) {
-    const _Object = Object;
-    exports = setPrototypeOf.bind();
-  } else {
-    exports = (arg0, arg1) => {
-      arg0.__proto__ = arg1;
-      return arg0;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0, arg1);
-}
-let exports = _setPrototypeOf;
 
-export default _setPrototypeOf;
+export default function _assertThisInitialized(arg0) {
+  if (undefined === arg0) {
+    const _ReferenceError = ReferenceError;
+    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    throw referenceError;
+  } else {
+    return arg0;
+  }
+};

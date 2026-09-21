@@ -1,11 +1,43 @@
 // === Module 6894: ? ===
 
 // Module 6894
-import _mod6895 from "module_6895" /* 6895 */;
+import normalizeSnapPoint from "normalizeSnapPoint" /* 6886 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
 
-export const initialize = function initialize() {
-  _mod6895.startListening();
+({ useCallback: c2, useEffect: c3 } = noop);
+
+export const useScrollableSetter = (scrollableRef, value, scrollableContentOffsetY, value2) => {
+  _require = scrollableRef;
+  dependencyMap = value;
+  let tmp = focusHook;
+  if (focusHook === undefined) {
+    tmp = value2;
+  }
+  const bottomSheetInternal = require("module_6877").useBottomSheetInternal();
+  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
+  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
+  const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
+  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
+  const setScrollableRef = bottomSheetInternal.setScrollableRef;
+  const removeScrollableRef = bottomSheetInternal.removeScrollableRef;
+  const items = [scrollableRef, value, value2, animatedScrollableType, animatedScrollableContentOffsetY, scrollableContentOffsetY, isScrollableRefreshable, isContentHeightFixed, setScrollableRef, removeScrollableRef];
+  tmp(scrollableContentOffsetY(() => {
+    animatedScrollableContentOffsetY.value = scrollableContentOffsetY.value;
+    animatedScrollableType.value = value;
+    isScrollableRefreshable.value = value2;
+    isContentHeightFixed.value = false;
+    const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
+    if (findNodeHandleResult) {
+      const obj2 = { id: findNodeHandleResult, node: scrollableRef };
+      setScrollableRef(obj2);
+    } else {
+      const _console = console;
+      console.warn("Couldn't find the scrollable node handle id!");
+    }
+    return () => {
+      removeScrollableRef(scrollableRef);
+    };
+  }, items));
 };

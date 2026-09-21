@@ -1,32 +1,33 @@
 // === Module 7106: ? ===
 
 // Module 7106
-import _mod7107 from "module_7107" /* 7107 */;
 
-
-export default function toPrimitive(arg0, arg1) {
-  if ("object" == obj.default(arg0)) {
-    if (arg0) {
-      let str = arg1;
-      const _Symbol = Symbol;
-      if (undefined !== arg0[Symbol.toPrimitive]) {
-        const call = tmp4.call;
-        if (!str) {
-          str = "default";
-        }
-        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
-        if ("object" != tmpResult.default(tmp5)) {
-          return tmp5;
-        } else {
-          const _TypeError = TypeError;
-          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
-          throw typeError;
-        }
-        tmpResult = _mod7107;
+export default function _objectWithoutPropertiesLoose(obj, arr) {
+  if (null == obj) {
+    return {};
+  } else {
+    obj = {};
+    for (const key10007 in arg0) {
+      hasOwnProperty = {}.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(key10007);
       } else {
-        return "string" === str ? String : Number(arg0);
+        hasOwnPropertyResult = call(arg0, key10007);
       }
+      if (!hasOwnPropertyResult) {
+        continue;
+      } else {
+        if (-1 !== arg1.indexOf(key10007)) {
+          continue;
+        } else {
+          obj[key10007] = arg0[key10007];
+          continue;
+        }
+        continue;
+      }
+      continue;
     }
+    return obj;
   }
-  return arg0;
 };

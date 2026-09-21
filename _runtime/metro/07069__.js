@@ -1,334 +1,69 @@
 // === Module 7069: ? ===
 
 // Module 7069
-import normalizeSnapPoint from "normalizeSnapPoint" /* 6881 */;
-import id from "id" /* 7071 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _mod7071 from "module_7071" /* 7071 */;
 import noop_mod from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-require = fn;
-let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
-let noop = fn(19);
-({ useCallback: metroRequire, useImperativeHandle: closure_7, useMemo: closure_8, useRef: closure_9, useState: c10, createElement: closure_11, forwardRef, memo } = noop);
 let noop = noop_mod;
-const jsx = fn(21).jsx;
-let closure_14 = { mount: false, data: "PX_16" };
-const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1) {
-  _require = arg1;
-  name = name.name;
-  let DEFAULT_STACK_BEHAVIOR = name.stackBehavior;
-  if (undefined === DEFAULT_STACK_BEHAVIOR) {
-    DEFAULT_STACK_BEHAVIOR = require("DEFAULT_STACK_BEHAVIOR").DEFAULT_STACK_BEHAVIOR;
+const useMemo = noop.useMemo;
+let noop = noop_mod;
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
+  style = style.style;
+  const indicatorStyle = style.indicatorStyle;
+  let DEFAULT_ACCESSIBLE = style.accessible;
+  if (DEFAULT_ACCESSIBLE === undefined) {
+    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
   }
-  let DEFAULT_ENABLE_DISMISS_ON_CLOSE = name.enableDismissOnClose;
-  if (undefined === DEFAULT_ENABLE_DISMISS_ON_CLOSE) {
-    DEFAULT_ENABLE_DISMISS_ON_CLOSE = require("DEFAULT_STACK_BEHAVIOR").DEFAULT_ENABLE_DISMISS_ON_CLOSE;
+  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
+  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
+    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
   }
-  const onDismiss = name.onDismiss;
-  const onAnimate = name.onAnimate;
-  const index = name.index;
-  let num = 0;
-  if (undefined !== index) {
-    num = index;
+  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
+  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
+    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
   }
-  let enablePanDownToClose = name.enablePanDownToClose;
-  let tmp5 = undefined === enablePanDownToClose;
-  if (!tmp5) {
-    tmp5 = enablePanDownToClose;
+  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
+  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
+    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
   }
-  enablePanDownToClose = tmp5;
-  const animateOnMount = name.animateOnMount;
-  let Fragment = name.containerComponent;
-  if (undefined === Fragment) {
-    Fragment = willUnmountSheet.Fragment;
-  }
-  const onChange = name.onChange;
-  const children = name.children;
-  const tmp8 = onAnimate(name, DEFAULT_ENABLE_DISMISS_ON_CLOSE);
-  const tmp9 = onDismiss(mountSheet(closure_14), 2);
-  const first = tmp9[0];
-  const mount = first.mount;
-  closure_9 = tmp9[1];
-  const bottomSheetModalInternal = require("module_6869").useBottomSheetModalInternal();
-  ({ hostName, mountSheet } = bottomSheetModalInternal);
-  const unmountSheet = bottomSheetModalInternal.unmountSheet;
-  willUnmountSheet = bottomSheetModalInternal.willUnmountSheet;
-  ({ containerHeight, containerOffset } = bottomSheetModalInternal);
-  let obj = require("module_6869");
-  const tmp11 = _require;
-  const removePortal = require("Portal").usePortal(hostName).removePortal;
-  const tmp15 = closure_9(null);
-  closure_14 = tmp15;
-  let num2 = -1;
-  if (!(undefined === animateOnMount || animateOnMount)) {
-    num2 = num;
-  }
-  closure_9(num2);
-  closure_9(null);
-  closure_9(-1);
-  closure_18 = tmp14(false);
-  closure_9(false);
-  const tmp14Result = closure_9(false);
-  tmp14Result.current = mount;
-  let items = [name];
-  const tmp17 = onChange(() => {
-    let combined = name;
-    if (!name) {
-      const _HermesInternal = HermesInternal;
-      combined = "bottom-sheet-modal-" + id.id();
-    }
-    return combined;
+  let items = [style];
+  const items1 = [indicatorStyle];
+  const obj = {
+    style: useMemo(() => {
+      const items = [_mod7071.styles.container, React3.flatten(style)];
+      return items;
+    }, items),
+    accessible: null,
+    accessibilityRole: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    collapsable: true,
+    children: null
+  };
+  const tmp9 = useMemo(() => {
+    const items = [_mod7071.styles.container, React3.flatten(style)];
+    return items;
   }, items);
-  closure_21 = tmp17;
-  function resetVariables() {
-    normalizeSnapPoint.print({ component: memoResult.name, method: resetVariables.name });
-    closure_15.current = -1;
-    closure_17.current = -1;
-    closure_18.current = false;
-    closure_20.current = false;
-    closure_19.current = false;
-  }
-  const tmp18 = num(resetVariables, []);
-  closure_22 = tmp18;
-  let items1 = [tmp17, tmp18, unmountSheet, removePortal, onDismiss];
-  const tmp19 = num(function unmount() {
-    closure_22();
-    unmountSheet(closure_21);
-    removePortal(closure_21);
-    if (ref5.current) {
-      closure_9(closure_14);
-    }
-    if (onDismiss) {
-      onDismiss();
-    }
-  }, items1);
-  closure_23 = tmp19;
-  let snapToIndex = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        snapToIndex = current.snapToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let snapToPosition = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        snapToPosition = current.snapToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let setToIndex = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        setToIndex = current.setToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let setToPosition = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        setToPosition = current.setToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let expand = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        expand = current.expand;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let collapse = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        collapse = current.collapse;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let close = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        close = current.close;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let forceClose = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        forceClose = current.forceClose;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  const items2 = [tmp17, DEFAULT_STACK_BEHAVIOR, mountSheet];
-  const present = num(function handlePresent(data) {
-    const animationFrame = requestAnimationFrame(() => {
-      closure_9({ mount: true, data });
-      mountSheet(closure_21, data, DEFAULT_STACK_BEHAVIOR);
-    });
-  }, items2);
-  const items3 = [willUnmountSheet, tmp19, tmp17, tmp5];
-  const dismiss = num(function handleDismiss(arg0) {
-    let tmp3 = -1 !== ref.current;
-    if (!tmp3) {
-      tmp3 = false !== closure_18.current;
-    }
-    if (!tmp3) {
-      tmp3 = tmp;
-    }
-    if (tmp3) {
-      if (tmp) {
-        willUnmountSheet(closure_21);
-        closure_19.current = true;
-        const current = closure_14.current;
-        if (current != null) {
-          current.forceClose(arg0);
-        }
-      } else if (closure_18.current) {
-        closure_23();
-      }
-    }
-  }, items3);
-  const items4 = [num];
-  const minimize = num(function handleMinimize() {
-    if (!closure_18.current) {
-      tmp.current = true;
-      if (-1 === ref.current) {
-        closure_17.current = num;
-      } else {
-        closure_17.current = tmp2.current;
-      }
-      const current = closure_14.current;
-      if (current != null) {
-        current.close();
-      }
-    }
-  }, items4);
-  const restore = num(function handleRestore() {
-    let current = closure_18.current;
-    if (current) {
-      current = !ref4.current;
-    }
-    if (current) {
-      closure_18.current = false;
-      const current2 = closure_14.current;
-      if (current2 != null) {
-        current2.snapToIndex(ref3.current);
-      }
-    }
-  }, []);
-  const items5 = [tmp17, tmp19, willUnmountSheet];
-  const obj2 = require("Portal");
-  const tmp21 = num(function handlePortalRender(fn) {
-    if (ref5.current) {
-      fn();
-    }
-  }, []);
-  const items6 = [onChange];
-  const items7 = [onAnimate];
-  const tmp20 = num(function handlePortalOnUnmount() {
-    let tmp = -1 === ref.current;
-    if (tmp) {
-      tmp = false === closure_18.current;
-    }
-    if (!tmp) {
-      closure_20.current = false;
-      closure_19.current = true;
-      if (closure_18.current) {
-        closure_23();
-      } else {
-        willUnmountSheet(closure_21);
-        const current = closure_14.current;
-        if (current != null) {
-          current.close();
-        }
-      }
-    }
-  }, items5);
-  const items8 = [DEFAULT_ENABLE_DISMISS_ON_CLOSE, tmp19];
-  const tmp22 = num(function handleBottomSheetOnChange(current, arg1, arg2) {
-    closure_15.current = current;
-    closure_16.current = null;
-    if (onChange) {
-      tmp(current, arg1, arg2);
-    }
-  }, items6);
-  const tmp23 = num((arg0, current, arg2, arg3, arg4) => {
-    closure_16.current = current;
-    if (onAnimate) {
-      tmp(arg0, current, arg2, arg3, arg4);
-    }
-  }, items7);
-  enablePanDownToClose(arg1, () => ({ snapToIndex, snapToPosition, setToIndex, setToPosition, expand, collapse, close, forceClose, dismiss, present, minimize, restore }));
-  let tmp27Result2 = null;
-  if (mount) {
-    const obj3 = { name: tmp17, hostName, handleOnMount: tmp21, handleOnUpdate: tmp21, handleOnUnmount: tmp20, children: null };
-    const obj4 = {};
-    const merged = Object.assign(tmp8);
-    obj4.ref = tmp15;
-    obj4.key = tmp17;
-    obj4.index = num;
-    obj4.snapPoints = name.snapPoints;
-    obj4.enablePanDownToClose = tmp5;
-    obj4.animateOnMount = tmp6;
-    obj4.containerHeight = containerHeight;
-    obj4.containerOffset = containerOffset;
-    obj4.onChange = tmp22;
-    obj4.onClose = tmp24;
-    obj4.onAnimate = tmp23;
-    obj4.$modal = true;
-    let tmp27Result = children;
-    if (typeof children === "function") {
-      const obj5 = { data: first.data };
-      tmp27Result = tmp27(children, obj5);
-    }
-    const obj6 = { children: unmountSheet(name(tmp12[9]), obj4, tmp27Result) };
-    obj3.children = removePortal(Fragment, obj6, tmp17);
-    tmp27Result2 = tmp27(tmp11(tmp12[6]).Portal, obj3, tmp17);
-    const tmp30 = name(tmp12[9]);
-  }
-  return tmp27Result2;
-}));
-memoResult.displayName = "BottomSheetModal";
+  obj.accessible = DEFAULT_ACCESSIBLE;
+  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
+  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
+  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
+  const items2 = [
+    closure_5(closure_4, {
+      style: useMemo(() => {
+        const items = [_mod7071.styles.indicator, React3.flatten(indicatorStyle)];
+        return items;
+      }, items1)
+    }),
+    style.children
+  ];
+  obj.children = items2;
+  return closure_6(closure_4, obj);
+});
+memoResult.displayName = "BottomSheetHandle";
 
 export default memoResult;

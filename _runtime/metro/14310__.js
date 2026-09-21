@@ -1,14 +1,7 @@
 // === Module 14310: ? ===
 
 // Module 14310
-import _mod14308 from "module_14308" /* 14308 */;
+import _mod14299 from "module_14299" /* 14299 */;
 
 
-export default (arg0, arg1, arg2) => {
-  try {
-    const tmp7 = new _mod14308(arg1, arg2);
-    return tmp7.test(arg0);
-  } catch (err) {
-    return false;
-  }
-};
+export default (arg0, arg1, arg2) => _mod14299(arg0, arg1, arg2) <= 0;

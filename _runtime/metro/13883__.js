@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 213.5, height: 19, scales: [2, 3], hash: "5c483e491c3f377ab1cb686f9a6d4d3b", name: "img_subscription_activated_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 203, height: 120, scales: [1, 2, 3], hash: "4cb64ea1ce49f760ec2c14cca07c9930", name: "guild_subscription_removal_dark", type: "png" });

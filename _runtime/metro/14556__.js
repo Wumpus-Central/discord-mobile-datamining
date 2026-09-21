@@ -1,5 +1,10 @@
 // === Module 14556: ? ===
 
 // Module 14556
+const require = globalThis.__r;
 
-export const collations = ["big5han", "compat", "dict", "direct", "ducet", "emoji", "eor", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "search", "searchjl", "standard", "stroke", "trad", "unihan", "zhuyin"];
+const require = arg1;
+const dependencyMap = arg6;
+
+export const shouldPolyfill = require("module_14557").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

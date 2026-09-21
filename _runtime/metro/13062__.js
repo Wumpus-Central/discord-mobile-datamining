@@ -1,61 +1,78 @@
 // === Module 13062: ? ===
 
 // Module 13062
-import _mod13049 from "module_13049" /* 13049 */;
+import generatePropagationContext from "generatePropagationContext" /* 13060 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 13063 */;
 
-function dateTimestampInSeconds() {
-  return Date.now() / 1000;
-}
-let timeOrigin;
-const _performance = _mod13049.GLOBAL_OBJ.performance;
-let fn = dateTimestampInSeconds;
-if (_performance) {
-  fn = dateTimestampInSeconds;
-  if (_performance.now) {
-    const _Date = Date;
-    const timestamp = Date.now();
-    timeOrigin = timestamp - _performance.now();
-    if (null != _performance.timeOrigin) {
-      timeOrigin = _performance.timeOrigin;
-    }
-    fn = () => (timeOrigin + _performance.now()) / 1000;
-  }
-}
-const _performance2 = _mod13049.GLOBAL_OBJ.performance;
-if (_performance2) {
-  if (_performance2.now) {
-    const nowResult = _performance2.now();
-    const _Date2 = Date;
-    const timestamp1 = Date.now();
-    let num2 = 3600000;
-    if (_performance2.timeOrigin) {
-      const _Math = Math;
-      num2 = Math.abs(_performance2.timeOrigin + nowResult - timestamp1);
-    }
-    let timeOrigin2 = _performance2.timing;
-    if (timeOrigin2) {
-      timeOrigin2 = _performance2.timing.navigationStart;
-    }
-    let num3 = 3600000;
-    if (typeof timeOrigin2 === "number") {
-      const _Math2 = Math;
-      num3 = Math.abs(timeOrigin2 + nowResult - timestamp1);
-    }
-    if (!tmp6) {
-      if (num3 >= 3600000) {
-        exports._browserPerformanceTimeOriginMode = "dateNow";
+require = arg1;
+const dependencyMap = arg6;
+const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+
+export const TRACEPARENT_REGEXP = regExp;
+export const extractTraceparentData = function extractTraceparentData(str) {
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
       }
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      return obj;
     }
-    if (num2 <= num3) {
-      exports._browserPerformanceTimeOriginMode = "timeOrigin";
-      timeOrigin2 = _performance2.timeOrigin;
-    } else {
-      exports._browserPerformanceTimeOriginMode = "navigationStart";
-    }
-    tmp6 = num2 < 3600000;
   }
-}
-
-export const _browserPerformanceTimeOriginMode = "none";
-export { dateTimestampInSeconds };
-export const timestampInSeconds = fn;
+};
+export const generateSentryTraceHeader = function generateSentryTraceHeader() {
+  if (traceId === undefined) {
+    traceId = generatePropagationContext.generateTraceId();
+  }
+  if (spanId === undefined) {
+    spanId = generatePropagationContext.generateSpanId();
+  }
+  let str = "";
+  if (undefined !== sampled) {
+    let str2 = "-0";
+    if (sampled) {
+      str2 = "-1";
+    }
+    str = str2;
+  }
+  return "" + traceId + "-" + spanId + str;
+};
+export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
+  let tmp;
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
+      }
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      tmp = obj;
+    }
+  }
+  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
+  if (tmp) {
+    if (tmp.traceId) {
+      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
+      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
+      obj3.spanId = generatePropagationContext.generateSpanId();
+      obj3.sampled = parentSampled;
+      if (!result) {
+        result = {};
+      }
+      obj3.dsc = result;
+      return obj3;
+    }
+  }
+  const obj4 = { traceId: null, spanId: null };
+  obj4.traceId = generatePropagationContext.generateTraceId();
+  const tmp4Result3 = generatePropagationContext;
+  obj4.spanId = generatePropagationContext.generateSpanId();
+  return obj4;
+};

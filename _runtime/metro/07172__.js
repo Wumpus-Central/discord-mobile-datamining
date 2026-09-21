@@ -1,13 +1,7 @@
 // === Module 7172: ? ===
 
 // Module 7172
-import _mod17 from "module_17" /* 17 */;
+import _modDef7173 from "module_7173" /* 7173 */;
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { backdrop: null };
-const obj2 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.backgroundColor = "black";
-obj.backdrop = obj2;
 
-export const styles = StyleSheet.create(obj);
+export default _modDef7173;

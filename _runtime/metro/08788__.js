@@ -1,14 +1,14 @@
 // === Module 8788: ? ===
 
 // Module 8788
-import _modDef8766 from "module_8766" /* 8766 */;
+import _modDef8767 from "module_8767" /* 8767 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeMorphology = arg1;
+const FeImage = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeMorphology {
+class FeImage {
   constructor() {
     self = this;
-    tmp = c2(this, FeMorphology);
+    tmp = c2(this, FeImage);
     tmp2 = closure_4;
-    obj = closure_4(FeMorphology);
+    obj = closure_4(FeImage);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,17 +48,17 @@ class FeMorphology {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeMorphology, _modDef8766);
+_inherits(FeImage, _modDef8767);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeMorphology(8743).warnUnimplementedFilter();
+    const result = FeImage(8744).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeMorphology, items);
-importDefaultResultResult.displayName = "FeMorphology";
+const importDefaultResultResult = _createClass(FeImage, items);
+importDefaultResultResult.displayName = "FeImage";
 const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 

@@ -2,10 +2,11 @@
 
 // Module 10750
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10712 from "module_10712" /* 10712 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10706 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -29,29 +30,14 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class FRMergeDateTimeRefiner {
+class FRTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, FRMergeDateTimeRefiner);
+    tmp = closure_0(this, FRTimeExpressionParser);
     tmp2 = c2;
-    obj = c2(FRMergeDateTimeRefiner);
+    obj = c2(FRTimeExpressionParser);
     tmp3 = closure_1;
-    if (closure_3()) {
+    if (closure_4()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -64,15 +50,38 @@ class FRMergeDateTimeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FRMergeDateTimeRefiner;
-_inherits(FRMergeDateTimeRefiner, fn(_mod10712).default);
+_classCallCheck = FRTimeExpressionParser;
+_inherits(FRTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    const regExp = new RegExp("^\\s*(T|\u00E0|a|au|vers|de|,|-)?\\s*$");
-    return regExp;
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:[\u00E0a])\\s*)?";
   }
 };
-const items = [entry];
+let items = [
+  entry,
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      let fnResult = null;
+      if (!str.match(/^\s*\d{4}\s*$/)) {
+        const self = this;
+        let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "extractPrimaryTimeComponents", this);
+        if (typeof fn === "function") {
+          fn = (items) => fn.apply(self, items);
+        }
+        const items = [arg0, arg1];
+        fnResult = fn(items);
+      }
+      return fnResult;
+    }
+  }
+];
 
-export default _createClass(FRMergeDateTimeRefiner, items);
+export default _createClass(FRTimeExpressionParser, items);

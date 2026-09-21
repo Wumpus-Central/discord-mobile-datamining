@@ -1,9 +1,9 @@
 // === Module 14644: ? ===
 
 // Module 14644
-import _mod14645 from "module_14645" /* 14645 */;
-import _mod14652 from "module_14652" /* 14652 */;
+import _mod17 from "module_17" /* 17 */;
+import setupURLPolyfill_mod from "setupURLPolyfill" /* 14645 */;
 
-
-export const URL = _mod14645;
-export const URLSearchParams = _mod14652;
+const Platform = _mod17.Platform;
+let setupURLPolyfill = setupURLPolyfill_mod;
+setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();

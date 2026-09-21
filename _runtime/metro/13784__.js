@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2e0d6978350694e35552111153599c69", name: "BoostTier3Icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 375, height: 301, scales: [2, 3], hash: "c7a19747ab5ad0f69954f725ac48a489", name: "img_top_pattern_dark", type: "png" });

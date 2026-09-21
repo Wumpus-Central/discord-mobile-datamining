@@ -1,118 +1,13 @@
 // === Module 7041: ? ===
 
 // Module 7041
-import DEFAULT_HANDLE_HEIGHT from "DEFAULT_HANDLE_HEIGHT" /* 6868 */;
-
-const require = globalThis.__r;
-
-require = arg1;
-let dependencyMap = arg6;
-let __initData = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}" };
-let __initData2 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
-
-export const useAnimatedSnapPoints = (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize) => {
-  _require = snapPoints;
-  dependencyMap = derivedValue;
-  __initData = sharedValue1;
-  __initData2 = reactiveSharedValue2;
-  closure_4 = DEFAULT_DYNAMIC_SIZING;
-  closure_5 = maxDynamicContentSize;
-  sharedValue = require("cancelAnimation").useSharedValue(-1);
-  const obj = require("cancelAnimation");
-  class P {
-    constructor() {
-      iter = closure_1;
-      tmp = closure_0;
-      tmp2 = closure_1;
-      if (closure_1.value === closure_0(closure_1[1]).INITIAL_CONTAINER_HEIGHT) {
-        items = [];
-        items[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-        return items;
-      } else {
-        iter3 = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter3;
-          if ("value" in iter3) {
-            value = iter3.value;
-          }
-          items1 = value;
-        } else {
-          items1 = [];
-        }
-        mapped = items1.map(() => { ... });
-        tmp3 = closure_4;
-        if (closure_4) {
-          iter2 = closure_3;
-          if (closure_3.value === tmp(tmp2[1]).INITIAL_HANDLE_HEIGHT) {
-            items2 = [];
-            items2[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-            return items2;
-          } else {
-            iter4 = closure_2;
-            if (closure_2.value === tmp(tmp2[1]).INITIAL_CONTAINER_HEIGHT) {
-              items3 = [];
-              items3[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-              return items3;
-            } else {
-              tmp4 = globalThis;
-              value1 = closure_5;
-              sum = iter4.value + iter2.value;
-              if (undefined === closure_5) {
-                value1 = iter.value;
-              }
-              diff = iter.value - Math.min(sum, value1);
-              if (!mapped.includes(diff)) {
-                arr1 = mapped.push(diff);
-              }
-              sorted = mapped.sort(() => { ... });
-              tmp8 = closure_6;
-              closure_6.value = sorted.indexOf(diff);
-              return sorted;
-            }
-          }
-        } else {
-          return mapped;
-        }
-      }
-    }
-  }
-  const obj2 = require("cancelAnimation");
-  P.__closure = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  P.__workletHash = 15015207820492;
-  P.__initData = __initData;
-  let items = [snapPoints, derivedValue, reactiveSharedValue2, sharedValue1, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize, sharedValue];
-  derivedValue = obj2.useDerivedValue(P, items);
-  const obj3 = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  class N {
-    constructor() {
-      if (closure_4) {
-        flag = true;
-        return true;
-      } else {
-        iter = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter;
-          if ("value" in iter) {
-            value = iter.value;
-          }
-          items = value;
-        } else {
-          items = [];
-        }
-        length = items.length;
-        tmp = !length;
-        if (length) {
-          tmp = !items.find(/* F113163 */ function() { ... });
-        }
-        return !tmp;
-      }
-    }
-  }
-  N.__closure = { enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, snapPoints };
-  N.__workletHash = 4816362093278;
-  N.__initData = __initData2;
-  let items1 = [derivedValue, sharedValue, require("cancelAnimation").useDerivedValue(N)];
-  return items1;
+const fn = function t(arg0, velocityY, substr) {
+  closure_0 = arg0 + 0.2 * velocityY;
+  closure_1 = min.apply(null, substr.map((item) => Math.abs(closure_0 - item)));
+  return substr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
 };
+fn.__closure = {};
+fn.__workletHash = 8913698095371;
+fn.__initData = { code: "function pnpm_snapPointTs1(value,velocity,points){const point=value+0.2*velocity;const deltas=points.map(function(p){return Math.abs(point-p);});const minDelta=Math.min.apply(null,deltas);return points.filter(function(p){return Math.abs(point-p)===minDelta;})[0];}" };
+
+export const snapPoint = fn;

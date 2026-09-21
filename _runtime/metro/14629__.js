@@ -1,112 +1,14 @@
 // === Module 14629: ? ===
 
 // Module 14629
-import _mod14574 from "module_14574" /* 14574 */;
-import _mod14575 from "module_14575" /* 14575 */;
-import _mod14578 from "module_14578" /* 14578 */;
-import _mod14594 from "module_14594" /* 14594 */;
-import _mod14597 from "module_14597" /* 14597 */;
-import _mod14631 from "module_14631" /* 14631 */;
-import state from "state" /* 14632 */;
-import prop from "module_14630" /* 14630 */;
+import _mod14602 from "module_14602" /* 14602 */;
 
-let closure_5 = _mod14578("".slice);
-let closure_6 = _mod14578("".replace);
-let closure_7 = _mod14578([].join);
-let closure_8 = _mod14574 && !_mod14575(() => 8 !== defineProperty(() => {
 
-}, "length", { value: 8 }).length);
-const tmp = _mod14574 && !_mod14575(() => 8 !== defineProperty(() => {
-
-}, "length", { value: 8 }).length);
-let closure_9 = String(String).split("String");
-const fn = (toString, toString2, arg2) => {
-  let text = toString2;
-  if ("Symbol(" === closure_5(String(toString2), 0, 7)) {
-    text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
-  }
-  let getter = arg2;
-  if (arg2) {
-    getter = arg2.getter;
-  }
-  let text1 = text;
-  if (getter) {
-    text1 = `get ${tmp2}`;
-  }
-  let setter = arg2;
-  if (arg2) {
-    setter = arg2.setter;
-  }
-  let text2 = text1;
-  if (setter) {
-    text2 = `set ${tmp4}`;
-  }
-  const tmp8 = _mod14594(toString, "name");
-  let tmp9 = !tmp8;
-  if (tmp8) {
-    tmp9 = _mod14631.CONFIGURABLE && toString.name !== text2;
-    const tmp10 = _mod14631.CONFIGURABLE && toString.name !== text2;
-  }
-  if (tmp9) {
-    if (_mod14574) {
-      const obj = { value: text2, configurable: true };
-      defineProperty(toString, "name", obj);
-    } else {
-      toString.name = text2;
-    }
-  }
-  let tmp13 = closure_8;
-  if (closure_8) {
-    tmp13 = arg2;
-  }
-  if (tmp13) {
-    tmp13 = _mod14594(arg2, "arity");
-  }
-  if (tmp13) {
-    tmp13 = toString.length !== arg2.arity;
-  }
-  if (tmp13) {
-    const obj2 = { value: arg2.arity };
-    defineProperty(toString, "length", obj2);
-  }
-  try {
-    if (arg2) {
-      if (_mod14594(arg2, "constructor")) {
-        if (arg2.constructor) {
-          if (_mod14574) {
-            defineProperty(toString, "prototype", { writable: false });
-          }
-        }
-        const enforceResult = state.enforce(toString);
-        if (!_mod14594(enforceResult, "source")) {
-          let str11 = "";
-          if (typeof text2 === "string") {
-            str11 = text2;
-          }
-          enforceResult.source = closure_7(closure_9, str11);
-        }
-        return toString;
-      }
-    }
-    if (toString.prototype) {
-      toString.prototype = undefined;
-    }
-  } catch (err) {
+export default (arg0) => {
+  if (_mod14602(arg0)) {
+    return arg0;
+  } else {
+    const tmp5 = new TypeError(String(arg0) + " is not an object");
+    throw tmp5;
   }
 };
-function toString() {
-  const self = this;
-  let source = _mod14597(this);
-  if (source) {
-    source = state.get(self).source;
-    const tmpResult = state;
-  }
-  if (!source) {
-    source = prop(self);
-  }
-  return source;
-}
-fn(toString, "toString");
-Function.prototype.toString = toString;
-
-export default fn;

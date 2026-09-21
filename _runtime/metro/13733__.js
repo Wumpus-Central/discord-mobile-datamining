@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 324, height: 187, scales: [2, 3], hash: "c300172c07e69fb8041898afe2aa282d", name: "img_tier_0_marketing_boosting", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 134, height: 56, scales: [2, 3], hash: "5491d41ca2212b1f11c074c452801d84", name: "img_discord_nitro_logo_centered_dark", type: "png" });

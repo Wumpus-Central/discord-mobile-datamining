@@ -1,10 +1,16 @@
 // === Module 14626: ? ===
 
 // Module 14626
-import _mod14574 from "module_14574" /* 14574 */;
-import _mod14575 from "module_14575" /* 14575 */;
+import _mod14627 from "module_14627" /* 14627 */;
 
 
-export default _mod14574 && _mod14575(() => 42 !== Object.defineProperty(() => {
-
-}, "prototype", { value: 42, writable: false }).prototype);
+export default (arg0) => {
+  let num = 0;
+  {
+    num = 0;
+    if (0 !== tmp) {
+      num = _mod14627(tmp);
+    }
+  }
+  return num;
+};

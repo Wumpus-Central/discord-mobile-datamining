@@ -2,4 +2,4 @@
 
 // Module 14588
 
-export default false;
+export default (arg0) => null == arg0;

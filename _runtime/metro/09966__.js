@@ -1,14 +1,15 @@
 // === Module 9966: ? ===
 
 // Module 9966
-import _asyncLoop from "_asyncLoop" /* 9960 */;
+import _asyncLoop from "_asyncLoop" /* 9961 */;
+import _mod9967 from "module_9967" /* 9967 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const HashMD = require;
+let SHA224 = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +29,137 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class HashMD {
-  constructor(arg0, arg1, arg2, arg3) {
+const uint32Array = new Uint32Array([1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424, 2428436474, 2756734187, 3204031479, 3329325298]);
+const uint32Array1 = new Uint32Array([1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225]);
+const uint32Array2 = new Uint32Array(64);
+class SHA256 {
+  constructor() {
     self = this;
-    tmp = c2(this, HashMD);
+    tmp = c2(this, SHA224);
+    items = [64, 32, 8];
+    items[3] = false;
     tmp2 = closure_4;
-    obj = closure_4(HashMD);
+    obj = closure_4(SHA224);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.A = closure_7[0] | 0;
+    tmp3Result.B = closure_7[1] | 0;
+    tmp3Result.C = closure_7[2] | 0;
+    tmp3Result.D = closure_7[3] | 0;
+    tmp3Result.E = closure_7[4] | 0;
+    tmp3Result.F = closure_7[5] | 0;
+    tmp3Result.G = closure_7[6] | 0;
+    tmp3Result.H = closure_7[7] | 0;
+    return tmp3Result;
+  }
+}
+SHA224 = SHA256;
+_inherits(SHA256, _mod9967.HashMD);
+const entry = {
+  key: "get",
+  value: function get() {
+    const items = [, , , , , , , ];
+    ({ A: arr[0], B: arr[1], C: arr[2], D: arr[3], E: arr[4], F: arr[5], G: arr[6], H: arr[7] } = this);
+    return items;
+  }
+};
+let items = [
+  entry,
+  {
+    key: "set",
+    value: function set(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+
+    }
+  },
+  {
+    key: "process",
+    value: function process(getUint32, sum) {
+      let num2;
+      let tmp22;
+      let tmp23;
+      let tmp24;
+      let tmp25;
+      let tmp26;
+      let tmp27;
+      let tmp28;
+      let tmp29;
+      let num = 0;
+      do {
+        uint32Array2[num] = getUint32.getUint32(sum, false);
+        num = num + 1;
+        sum = sum + 4;
+        num2 = 16;
+      } while (num < 16);
+      do {
+        let tmp4 = uint32Array2[num2 - 15];
+        let tmp5 = uint32Array2[num2 - 2];
+        let rotrResult = SHA224(9961).rotr(tmp4, 7);
+        let tmp9 = rotrResult ^ SHA224(9961).rotr(tmp4, 18) ^ tmp4 >>> 3;
+        let rotrResult1 = SHA224(9961).rotr(tmp5, 17);
+        uint32Array2[num2] = (rotrResult1 ^ SHA224(9961).rotr(tmp5, 19) ^ tmp5 >>> 10) + uint32Array2[num2 - 7] + tmp9 + uint32Array2[num2 - 16] | 0;
+        num2 = num2 + 1;
+      } while (num2 < 64);
+      const self = this;
+      ({ A, B, C, D, E, F, G, H } = this);
+      let num3 = 0;
+      do {
+        let rotrResult2 = SHA224(9961).rotr(E, 6);
+        let tmp14 = rotrResult2 ^ SHA224(9961).rotr(E, 11);
+        let sum1 = H + (tmp14 ^ SHA224(9961).rotr(E, 25));
+        let tmp18 = sum1 + SHA224(9967).Chi(E, F, G) + uint32Array[num3] + uint32Array2[num3] | 0;
+        let rotrResult3 = SHA224(9961).rotr(A, 2);
+        let tmp20 = rotrResult3 ^ SHA224(9961).rotr(A, 13);
+        let tmp21 = tmp20 ^ SHA224(9961).rotr(A, 22);
+        tmp22 = D + tmp18 | 0;
+        tmp23 = tmp18 + (tmp21 + SHA224(9967).Maj(A, B, C) | 0) | 0;
+        num3 = num3 + 1;
+        H = G;
+        tmp24 = G;
+        G = F;
+        tmp25 = F;
+        F = E;
+        tmp26 = E;
+        E = tmp22;
+        D = C;
+        tmp27 = C;
+        C = B;
+        tmp28 = B;
+        B = A;
+        tmp29 = A;
+        A = tmp23;
+      } while (num3 < 64);
+      const result = self.set(tmp23 + self.A | 0, tmp29 + self.B | 0, tmp28 + self.C | 0, tmp27 + self.D | 0, tmp22 + self.E | 0, tmp26 + self.F | 0, tmp25 + self.G | 0, tmp24 + self.H | 0);
+    }
+  },
+  {
+    key: "roundClean",
+    value: function roundClean() {
+      uint32Array2.fill(0);
+    }
+  },
+  {
+    key: "destroy",
+    value: function destroy() {
+      const result = this.set(0, 0, 0, 0, 0, 0, 0, 0);
+      const buffer = this.buffer;
+      buffer.fill(0);
+    }
+  }
+];
+const _moduleResult = _createClass(SHA256, items);
+class SHA224 {
+  constructor() {
+    self = this;
+    tmp = c2(this, SHA224);
+    tmp2 = closure_4;
+    obj = closure_4(SHA224);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -43,171 +169,21 @@ class HashMD {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.blockLen = global;
-    tmp3Result.outputLen = require;
-    tmp3Result.padOffset = importDefault;
-    tmp3Result.isLE = importAll;
-    tmp3Result.finished = false;
-    tmp3Result.length = 0;
-    tmp3Result.pos = 0;
-    tmp3Result.destroyed = false;
-    uint8Array = new Uint8Array(global);
-    tmp3Result.buffer = uint8Array;
-    tmp3Result.view = closure_0(closure_1[5]).createView(tmp3Result.buffer);
+    tmp3Result.A = -1056596264;
+    tmp3Result.B = 914150663;
+    tmp3Result.C = 812702999;
+    tmp3Result.D = -150054599;
+    tmp3Result.E = -4191439;
+    tmp3Result.F = 1750603025;
+    tmp3Result.G = 1694076839;
+    tmp3Result.H = -1090891868;
+    tmp3Result.outputLen = 28;
     return tmp3Result;
   }
 }
-_inherits(HashMD, _asyncLoop.Hash);
-const entry = {
-  key: "update",
-  value: function update(B) {
-    let tmp8;
-    const self = this;
-    HashMD(9961).exists(this);
-    ({ buffer, blockLen, view } = this);
-    const toBytesResult = HashMD(9960).toBytes(B);
-    let num = 0;
-    if (0 < toBytesResult.length) {
-      do {
-        let _Math = Math;
-        let bound = Math.min(blockLen - self.pos, length - num);
-        if (bound !== blockLen) {
-          let result = buffer.set(toBytesResult.subarray(num, num + bound), self.pos);
-          self.pos = self.pos + bound;
-          let sum = num + bound;
-          tmp8 = sum;
-          if (self.pos === blockLen) {
-            let processResult = self.process(view, 0);
-            self.pos = 0;
-            tmp8 = sum;
-          }
-        } else {
-          let tmp7 = num;
-          tmp8 = num;
-          if (blockLen <= length - num) {
-            do {
-              let processResult1 = self.process(tmp6, tmp7);
-              let sum1 = tmp7 + blockLen;
-              tmp7 = sum1;
-              tmp8 = sum1;
-              diff = length - sum1;
-            } while (blockLen <= diff);
-          }
-        }
-        num = tmp8;
-      } while (tmp8 < length);
-    }
-    self.length = self.length + toBytesResult.length;
-    self.roundClean();
-    return self;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "digestInto",
-    value: function digestInto(content) {
-      const self = this;
-      HashMD(9961).exists(this);
-      HashMD(9961).output(content, this);
-      this.finished = true;
-      ({ buffer, view, blockLen, isLE } = this);
-      let num = tmp3 + 1;
-      buffer[+this.pos] = 128;
-      const buffer2 = this.buffer;
-      buffer2.subarray(num).fill(0);
-      if (this.padOffset > blockLen - num) {
-        self.process(view, 0);
-        num = 0;
-      }
-      if (num < blockLen) {
-        do {
-          buffer[num] = 0;
-          num = num + 1;
-        } while (num < blockLen);
-      }
-      const diff = blockLen - 8;
-      const BigIntResult = BigInt(8 * self.length);
-      if (typeof view.setBigUint64 === "function") {
-        view.setBigUint64(diff, BigIntResult, isLE);
-      } else {
-        const _BigInt = BigInt;
-        const _BigInt2 = BigInt;
-        const BigIntResult2 = BigInt(4294967295);
-        const _Number = Number;
-        const _Number2 = Number;
-        const BigIntResult1 = BigInt(32);
-        let num2 = 0;
-        const NumberResult = Number(BigIntResult >> BigInt(32) & BigIntResult2);
-        if (isLE) {
-          num2 = 4;
-        }
-        let num3 = 4;
-        if (isLE) {
-          num3 = 0;
-        }
-        view.setUint32(diff + num2, NumberResult, isLE);
-        view.setUint32(diff + num3, Number(BigIntResult & BigIntResult2), isLE);
-        const NumberResult1 = Number(BigIntResult & BigIntResult2);
-      }
-      self.process(view, 0);
-      const view1 = HashMD(9960).createView(content);
-      const outputLen = self.outputLen;
-      if (outputLen % 4) {
-        const _Error2 = Error;
-        const error = new Error("_sha2: outputLen should be aligned to 32bit");
-        throw error;
-      } else {
-        const result = outputLen / 4;
-        value = self.get();
-        if (result > value.length) {
-          const _Error = Error;
-          const error1 = new Error("_sha2: outputLen bigger than state");
-          throw error1;
-        } else {
-          let num5 = 0;
-          if (0 < result) {
-            do {
-              let setUint32Result2 = view1.setUint32(4 * num5, value[num5], isLE);
-              num5 = num5 + 1;
-            } while (num5 < result);
-          }
-        }
-      }
-      const subarrayResult = buffer2.subarray(num);
-    }
-  },
-  {
-    key: "digest",
-    value: function digest() {
-      ({ buffer, outputLen } = this);
-      this.digestInto(buffer);
-      const substr = buffer.slice(0, outputLen);
-      this.destroy();
-      return substr;
-    }
-  },
-  {
-    key: "_cloneInto",
-    value: function _cloneInto(arg0) {
-      const self = this;
-      let constructor = arg0;
-      if (!arg0) {
-        constructor = new self.constructor();
-      }
-      const items = [...self.get()];
-      constructor.set.apply(items);
-      constructor.length = self.length;
-      ({ pos: tmp.pos, finished: tmp.finished, destroyed: tmp.destroyed } = self);
-      if (self.length % self.blockLen) {
-        const buffer = constructor.buffer;
-        const result = buffer.set(tmp5);
-      }
-      return constructor;
-    }
-  }
-];
+_inherits(SHA224, _moduleResult);
+let closure_10 = _createClass(SHA224);
 
-export const Chi = (E, F, G) => E & F ^ ~E & G;
-export const Maj = (A, B, C) => A & B ^ A & C ^ B & C;
-export const HashMD = _createClass(HashMD, items);
+export const SHA256 = _moduleResult;
+export const sha256 = _asyncLoop.wrapConstructor(() => new _moduleResult());
+export const sha224 = _asyncLoop.wrapConstructor(() => new closure_10());

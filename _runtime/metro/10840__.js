@@ -1,15 +1,16 @@
 // === Module 10840: ? ===
 
 // Module 10840
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10698 */;
-import now from "now" /* 10715 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10692 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10699 */;
+import _mod10836 from "module_10836" /* 10836 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let self = this;
+const ESMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,122 +30,69 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let __setModuleDefault = self;
-  if (self) {
-    __setModuleDefault = self.__setModuleDefault;
+const regExp = new RegExp("([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?(?:\\s*(?:desde|de|\\-|\\\u2013|ao?|\\s)\\s*([0-9]{1,2})(?:\u00BA|\u00AA|\u00B0)?)?\\s*(?:de)?\\s*(?:-|/|\\s*(?:de|,)?\\s*)(" + repeatedTimeunitPattern.matchAnyPattern(_mod10836.MONTH_DICTIONARY) + ")(?:\\s*(?:de|,)?\\s*(" + _mod10836.YEAR_PATTERN + "))?(?=\\W|$)", "i");
+class ESMonthNameLittleEndianParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ESMonthNameLittleEndianParser);
+    tmp2 = closure_4;
+    obj = closure_4(ESMonthNameLittleEndianParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
-  if (__setModuleDefault) {
-    let fn = self;
-    if (self) {
-      fn = self.__importStar;
-    }
-    if (!fn) {
-      fn = function o(arg0) {
-        fn = Object.getOwnPropertyNames;
-        if (!fn) {
-          fn = (obj) => {
-            const items = [];
-            for (const key10005 in arg0) {
-              let _Object = Object;
-              hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (typeof call === "unknown") {
-                let hasOwnPropertyResult = hasOwnProperty(key10005);
-              } else {
-                hasOwnPropertyResult = call(arg0, key10005);
-              }
-              if (!hasOwnPropertyResult) {
-                continue;
-              } else {
-                items[items.length] = key10005;
-                continue;
-              }
-              continue;
-            }
-            return items;
-          };
-        }
-        return fn(arg0);
-      };
-      fn = (__esModule) => {
-        if (__esModule) {
-          if (__esModule.__esModule) {
-            return __esModule;
-          }
-        }
-        const obj = {};
-        if (null != __esModule) {
-          const arr = fn(__esModule);
-          for (let num = 0; num < arr.length; num = num + 1) {
-            if ("default" !== arr[num]) {
-              let tmp4 = self2(obj, __esModule, arr[num]);
-            }
-          }
-        }
-        __setModuleDefault(obj, __esModule);
-        return obj;
-      };
-    }
-    const _Object3 = Object;
-    let closure_7 = fn(now);
-    class ESCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = closure_0(this, ESCasualDateParser);
-        tmp2 = c2;
-        obj = c2(ESCasualDateParser);
-        tmp3 = closure_1;
-        if (closure_3()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+}
+_inherits(ESMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = ESMonthNameLittleEndianParser(10836).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const parsed = parseInt(index[1]);
+      if (parsed > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", parsed);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", ESMonthNameLittleEndianParser(10836).parseYear(index[4]));
         } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
+          const start = parsingResult.start;
+          start.imply("year", ESMonthNameLittleEndianParser(10693).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
         }
-        return tmp3(self, constructResult);
+        if (index[2]) {
+          const _parseInt = parseInt;
+          const start3 = parsingResult.start;
+          const parsed1 = parseInt(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", parsed1);
+        }
+        return parsingResult;
       }
     }
-    _classCallCheck = ESCasualDateParser;
-    _inherits(ESCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-            return /(ahora|hoy|mañana|ayer)(?=\W|$)/i;
-          }
-    };
-    let items = [entry, ];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(reference, arg1) {
-            const formatted = arg1[0].toLowerCase();
-            if ("ahora" === formatted) {
-              return closure_7.now(reference.reference);
-            } else if ("hoy" === formatted) {
-              return closure_7.today(reference.reference);
-            } else if ("ma\u00F1ana" === formatted) {
-              return closure_7.tomorrow(reference.reference);
-            } else if ("ayer" === formatted) {
-              return closure_7.yesterday(reference.reference);
-            } else {
-              return tmp2;
-            }
-          }
-    };
-    items[1] = entry1;
-    exports.default = _createClass(ESCasualDateParser, items);
-  } else {
-    const _Object2 = Object;
   }
-} else {
-  let _Object = Object;
-}
+];
+
+export default _createClass(ESMonthNameLittleEndianParser, items);

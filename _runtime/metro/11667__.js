@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d36bc1b1c0c4b7686eb847b7455190cc", name: "EducationIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/self_mod/inappropriate_conversation/images", width: 1125, height: 1320, scales: [1, 2, 3], hash: "b033af5495ac778a49adec13082b9f99", name: "vibing_wumpus_rings", type: "png" });

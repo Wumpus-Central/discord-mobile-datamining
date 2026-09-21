@@ -1,226 +1,178 @@
 // === Module 5470: ? ===
 
 // Module 5470
-import _mod5425 from "module_5425" /* 5425 */;
-import _modDef5430 from "module_5430" /* 5430 */;
-import _modDef5442 from "module_5442" /* 5442 */;
-import get0thIfdOffset from "get0thIfdOffset" /* 5445 */;
-import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5446 */;
+import _mod5430 from "module_5430" /* 5430 */;
+import _modDef5447 from "module_5447" /* 5447 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-let c3 = 16;
-
-export default {
-  read(buffer, c5, arg2) {
-    let iter;
-    const byteOrder = _modDef5430.getByteOrder(buffer, c5);
-    const obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(buffer, IFD_TYPE_0TH.IFD_TYPE_MPF, c5, get0thIfdOffset.get0thIfdOffset(buffer, c5, byteOrder), byteOrder, arg2);
-    if (ifd.MPEntry) {
-      const items = [];
-      const _Math = Math;
-      let num13 = 0;
-      if (0 < Math.ceil(ifd.MPEntry.value.length / c3)) {
-        while (true) {
-          items[num13] = {};
-          value = ifd.MPEntry.value;
-          let result = num13 * c3;
-          let obj4 = _modDef5442;
-          let typeSize = obj4.getTypeSize("LONG");
-          if (byteOrder === _modDef5430.LITTLE_ENDIAN) {
-            let num17 = 0;
-            let num18 = 0;
-            let num19 = 0;
-            if (0 < typeSize) {
-              do {
-                num18 = num18 + (value[result + num17] << 8 * num17);
-                num17 = num17 + 1;
-                num19 = num18;
-              } while (num17 < typeSize);
-            }
-            let num16 = num19;
-          } else {
-            let num14 = 0;
-            let num15 = 0;
-            num16 = 0;
-            if (0 < typeSize) {
-              do {
-                num15 = num15 + (value[result + num14] << 8 * (typeSize - 1 - num14));
-                num14 = num14 + 1;
-                num16 = num15;
-              } while (num14 < typeSize);
-            }
-          }
-          let items1 = [num16 >> 31 & 1, num16 >> 30 & 1, num16 >> 29 & 1];
-          let items2 = [];
-          if (items1[0]) {
-            let arr = items2.push("Dependent Parent Image");
-          }
-          if (items1[1]) {
-            let arr2 = items2.push("Dependent Child Image");
-          }
-          if (items1[2]) {
-            let arr3 = items2.push("Representative Image");
-          }
-          let obj5 = { value: items1, description: null };
-          let tmp14 = items2.join(", ") || "None";
-          obj5.description = tmp14;
-          items[num13].ImageFlags = obj5;
-          let tmp15 = num16 >> 24 & 7;
-          let obj6 = { value: tmp15, description: null };
-          let str11 = "Unknown";
-          if (0 === tmp15) {
-            str11 = "JPEG";
-          }
-          obj6.description = str11;
-          items[num13].ImageFormat = obj6;
-          let tmp16 = 16777215 & num16;
-          let obj7 = { value: tmp16, description: null };
-          let str12 = { 196608: "Baseline MP Primary Image", 65537: "Large Thumbnail (VGA equivalent)", 65538: "Large Thumbnail (Full HD equivalent)", 131073: "Multi-Frame Image (Panorama)", 131074: "Multi-Frame Image (Disparity)", 131075: "Multi-Frame Image (Multi-Angle)", 0: "Undefined" }[tmp16];
-          if (!str12) {
-            str12 = "Unknown";
-          }
-          obj7.description = str12;
-          items[num13].ImageType = obj7;
-          value2 = ifd.MPEntry.value;
-          let sum = num13 * c3 + 4;
-          let obj8 = _modDef5442;
-          let typeSize1 = obj8.getTypeSize("LONG");
-          if (byteOrder === _modDef5430.LITTLE_ENDIAN) {
-            let num23 = 0;
-            let num24 = 0;
-            let num25 = 0;
-            if (0 < typeSize1) {
-              do {
-                num24 = num24 + (value2[sum + num23] << 8 * num23);
-                num23 = num23 + 1;
-                num25 = num24;
-              } while (num23 < typeSize1);
-            }
-            let num22 = num25;
-          } else {
-            let num20 = 0;
-            let num21 = 0;
-            num22 = 0;
-            if (0 < typeSize1) {
-              do {
-                num21 = num21 + (value2[sum + num20] << 8 * (typeSize1 - 1 - num20));
-                num20 = num20 + 1;
-                num22 = num21;
-              } while (num20 < typeSize1);
-            }
-          }
-          let obj9 = { value: num22, description: "" + num22 };
-          items[num13].ImageSize = obj9;
-          iter = ifd.MPEntry;
-          if (0 !== num13) {
-            break;
-          } else {
-            let obj10 = { value: 0, description: "" };
-            items[num13].ImageOffset = obj10;
-            let value3 = ifd.MPEntry.value;
-            let sum1 = num13 * c3 + 12;
-            let obj11 = _modDef5442;
-            let typeSize2 = obj11.getTypeSize("SHORT");
-            if (byteOrder === _modDef5430.LITTLE_ENDIAN) {
-              let num36 = 0;
-              let num37 = 0;
-              let num38 = 0;
-              if (0 < typeSize2) {
-                do {
-                  num37 = num37 + (value3[sum1 + num36] << 8 * num36);
-                  num36 = num36 + 1;
-                  num38 = num37;
-                } while (num36 < typeSize2);
-              }
-              let num35 = num38;
-            } else {
-              let num33 = 0;
-              let num34 = 0;
-              num35 = 0;
-              if (0 < typeSize2) {
-                do {
-                  num34 = num34 + (value3[sum1 + num33] << 8 * (typeSize2 - 1 - num33));
-                  num33 = num33 + 1;
-                  num35 = num34;
-                } while (num33 < typeSize2);
-              }
-            }
-            let obj12 = { value: num35, description: "" + num35 };
-            items[num13].DependentImage1EntryNumber = obj12;
-            let value4 = ifd.MPEntry.value;
-            let sum2 = num13 * c3 + 14;
-            let obj13 = _modDef5442;
-            let typeSize3 = obj13.getTypeSize("SHORT");
-            if (byteOrder === _modDef5430.LITTLE_ENDIAN) {
-              let num42 = 0;
-              let num43 = 0;
-              let num44 = 0;
-              if (0 < typeSize3) {
-                do {
-                  num43 = num43 + (value4[sum2 + num42] << 8 * num42);
-                  num42 = num42 + 1;
-                  num44 = num43;
-                } while (num42 < typeSize3);
-              }
-              let num41 = num44;
-            } else {
-              let num39 = 0;
-              let num40 = 0;
-              num41 = 0;
-              if (0 < typeSize3) {
-                do {
-                  num40 = num40 + (value4[sum2 + num39] << 8 * (typeSize3 - 1 - num39));
-                  num39 = num39 + 1;
-                  num41 = num40;
-                } while (num39 < typeSize3);
-              }
-            }
-            let obj14 = { value: num41, description: "" + num41 };
-            items[num13].DependentImage2EntryNumber = obj14;
-            buffer = buffer.buffer;
-            items[num13].image = buffer.slice(0, num22);
-            let obj15 = _mod5425;
-            let deferInitResult = obj15.deferInit(items[num13], "base64", function() {
-              return _mod5425.getBase64Image(this.image);
-            });
-            num13 = num13 + 1;
-            let _Math2 = Math;
-          }
-        }
-        const value5 = iter.value;
-        const sum3 = num13 * c3 + 8;
-        const typeSize4 = _modDef5442.getTypeSize("LONG");
-        if (byteOrder === _modDef5430.LITTLE_ENDIAN) {
-          let num30 = 0;
-          let num31 = 0;
-          let num32 = 0;
-          if (0 < typeSize4) {
-            do {
-              num31 = num31 + (value5[sum3 + num30] << 8 * num30);
-              num30 = num30 + 1;
-              num32 = num31;
-            } while (num30 < typeSize4);
-          }
-          let num29 = num32;
-        } else {
-          let num27 = 0;
-          let num28 = 0;
-          num29 = 0;
-          if (0 < typeSize4) {
-            do {
-              num28 = num28 + (value5[sum3 + num27] << 8 * (typeSize4 - 1 - num27));
-              num27 = num27 + 1;
-              num29 = num28;
-            } while (num27 < typeSize4);
-          }
-        }
-        const sum4 = num29 + c5;
-      }
-      ifd.Images = items;
+function parseBezierKnot(dataView, arg1) {
+  const items = [];
+  let num = 0;
+  do {
+    let sum = arg1 + num;
+    let obj = _modDef5447;
+    let longAt = obj.getLongAt(dataView, sum);
+    let num2 = -1;
+    if (longAt >>> 31 === 0) {
+      num2 = 1;
     }
-    return ifd;
+    let str = (2130706432 & longAt) >>> 24;
+    let _parseInt = parseInt;
+    let obj2 = _mod5430;
+    let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
+    let obj3 = _mod5430;
+    let text = `${str.toString(2)}.`;
+    let obj4 = _mod5430;
+    let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
+    let tmp2Result = _modDef5447;
+    let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
+    let num3 = -1;
+    if (longAt1 >>> 31 === 0) {
+      num3 = 1;
+    }
+    let str3 = (2130706432 & longAt1) >>> 24;
+    let _parseInt2 = parseInt;
+    let tmp6Result = _mod5430;
+    let str4 = longAt1 & parseInt(tmp6Result.strRepeat("1", 24), 2);
+    let tmp6Result3 = _mod5430;
+    let text1 = `${str3.toString(2)}.`;
+    let tmp6Result4 = _mod5430;
+    let items1 = [num3 * tmp6Result3.parseFloatRadix(`${str3.toString(2)}.` + tmp6Result4.padStart(str4.toString(2), 24, "0"), 2), result];
+    let arr = items.push(items1);
+    num = num + 8;
+  } while (num < 24);
+  return items;
+}
+let obj = { CLOSED_SUBPATH_LENGTH: 0, CLOSED_SUBPATH_BEZIER_LINKED: 1, CLOSED_SUBPATH_BEZIER_UNLINKED: 2, OPEN_SUBPATH_LENGTH: 3, OPEN_SUBPATH_BEZIER_LINKED: 4, OPEN_SUBPATH_BEZIER_UNLINKED: 5, FILL_RULE: 6, CLIPBOARD: 7, INITIAL_FILL_RULE: 8 };
+let obj2 = { 2000: null, 2999: null };
+obj2[2000] = {
+  name: "PathInformation",
+  description: function pathResource(byteLength) {
+    const types = {};
+    const paths = [];
+    for (let num = 0; num < byteLength.byteLength; num = num + 26) {
+      let obj2 = _modDef5447;
+      let shortAt = obj2.getShortAt(byteLength, num);
+      if (dependencyMap[shortAt]) {
+        if (!types[shortAt]) {
+          types[shortAt] = dependencyMap[shortAt].description;
+        }
+        let obj = { type: shortAt, path: null };
+        let obj4 = dependencyMap[shortAt];
+        obj.path = obj4.path(byteLength, num + 2);
+        let arr = paths.push(obj);
+      }
+    }
+    return JSON.stringify({ types, paths });
   }
 };
+obj2[2999] = {
+  name: "ClippingPathName",
+  description(getUint8) {
+    return _slicedToArray(_mod5430.getPascalStringFromDataView(getUint8, 0), 2)[1];
+  }
+};
+const dependencyMap = {
+  [obj.CLOSED_SUBPATH_LENGTH]: {
+    description: "Closed subpath length",
+    path(dataView, sum) {
+      const items = [_modDef5447.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.CLOSED_SUBPATH_BEZIER_LINKED]: { description: "Closed subpath Bezier knot, linked", path: parseBezierKnot },
+  [obj.CLOSED_SUBPATH_BEZIER_UNLINKED]: { description: "Closed subpath Bezier knot, unlinked", path: parseBezierKnot },
+  [obj.OPEN_SUBPATH_LENGTH]: {
+    description: "Open subpath length",
+    path(dataView, sum) {
+      const items = [_modDef5447.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.OPEN_SUBPATH_BEZIER_LINKED]: { description: "Open subpath Bezier knot, linked", path: parseBezierKnot },
+  [obj.OPEN_SUBPATH_BEZIER_UNLINKED]: { description: "Open subpath Bezier knot, unlinked", path: parseBezierKnot },
+  [obj.FILL_RULE]: {
+    description: "Path fill rule",
+    path() {
+      return [];
+    }
+  },
+  [obj.INITIAL_FILL_RULE]: {
+    description: "Initial fill rule",
+    path(dataView, sum) {
+      const items = [_modDef5447.getShortAt(dataView, sum)];
+      return items;
+    }
+  },
+  [obj.CLIPBOARD]: {
+    description: "Clipboard",
+    path: function parseClipboard(dataView, sum) {
+      const longAt = _modDef5447.getLongAt(dataView, sum);
+      let num = -1;
+      let num2 = -1;
+      if (longAt >>> 31 === 0) {
+        num2 = 1;
+      }
+      const str2 = longAt & parseInt(_mod5430.strRepeat("1", 24), 2);
+      const text = `${str.toString(2)}.`;
+      const obj3 = _mod5430;
+      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + _mod5430.padStart(str2.toString(2), 24, "0"), 2), , , ];
+      sum = sum + 4;
+      const longAt1 = _modDef5447.getLongAt(dataView, sum);
+      let num3 = num;
+      if (longAt1 >>> 31 === 0) {
+        num3 = 1;
+      }
+      const tmpResult = _modDef5447;
+      const tmp4Result = _mod5430;
+      const str4 = longAt1 & parseInt(_mod5430.strRepeat("1", 24), 2);
+      const text1 = `${str3.toString(2)}.`;
+      const tmp4Result12 = _mod5430;
+      items[1] = num3 * tmp4Result12.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + _mod5430.padStart(str4.toString(2), 24, "0"), 2);
+      const sum1 = sum + 8;
+      const tmp4Result13 = _mod5430;
+      const longAt2 = _modDef5447.getLongAt(dataView, sum1);
+      let num4 = num;
+      if (longAt2 >>> 31 === 0) {
+        num4 = 1;
+      }
+      const tmpResult4 = _modDef5447;
+      const tmp4Result14 = _mod5430;
+      const str6 = longAt2 & parseInt(_mod5430.strRepeat("1", 24), 2);
+      const text2 = `${str5.toString(2)}.`;
+      const tmp4Result15 = _mod5430;
+      items[2] = num4 * tmp4Result15.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + _mod5430.padStart(str6.toString(2), 24, "0"), 2);
+      const sum2 = sum + 12;
+      const tmp4Result16 = _mod5430;
+      const longAt3 = _modDef5447.getLongAt(dataView, sum2);
+      let num5 = num;
+      if (longAt3 >>> 31 === 0) {
+        num5 = 1;
+      }
+      const tmpResult5 = _modDef5447;
+      const tmp4Result17 = _mod5430;
+      const str8 = longAt3 & parseInt(_mod5430.strRepeat("1", 24), 2);
+      const text3 = `${str7.toString(2)}.`;
+      const tmp4Result18 = _mod5430;
+      items[3] = num5 * tmp4Result18.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + _mod5430.padStart(str8.toString(2), 24, "0"), 2);
+      const items1 = [items, ];
+      const sum3 = sum + 16;
+      const tmp4Result19 = _mod5430;
+      const longAt4 = _modDef5447.getLongAt(dataView, sum3);
+      if (longAt4 >>> 31 === 0) {
+        num = 1;
+      }
+      const tmpResult6 = _modDef5447;
+      const tmp4Result20 = _mod5430;
+      const str10 = longAt4 & parseInt(_mod5430.strRepeat("1", 24), 2);
+      const text4 = `${str9.toString(2)}.`;
+      const tmp4Result21 = _mod5430;
+      items1[1] = num * tmp4Result21.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + _mod5430.padStart(str10.toString(2), 24, "0"), 2);
+      return items1;
+    }
+  }
+};
+
+export default obj2;
+export const PathRecordTypes = obj;

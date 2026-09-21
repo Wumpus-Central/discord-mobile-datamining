@@ -1,7 +1,7 @@
 // === Module 9253: ? ===
 
 // Module 9253
-import _mod9216 from "module_9216" /* 9216 */;
+import _mod9217 from "module_9217" /* 9217 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         const obj = { localeError: null };
-        const obj2 = { string: { unit: "tegn", verb: "\u00E5 ha" }, file: { unit: "bytes", verb: "\u00E5 ha" }, array: { unit: "elementer", verb: "\u00E5 inneholde" }, set: { unit: "elementer", verb: "\u00E5 inneholde" } };
-        closure_1 = { regex: "input", email: "e-postadresse", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO dato- og klokkeslett", date: "ISO-dato", time: "ISO-klokkeslett", duration: "ISO-varighet", ipv4: "IPv4-omr\u00E5de", ipv6: "IPv6-omr\u00E5de", cidrv4: "IPv4-spekter", cidrv6: "IPv6-spekter", base64: "base64-enkodet streng", base64url: "base64url-enkodet streng", json_string: "JSON-streng", e164: "E.164-nummer", jwt: "JWT", template_literal: "input" };
-        closure_2 = { nan: "NaN", number: "tall", array: "liste" };
+        const obj2 = { string: { unit: "tekens", verb: "heeft" }, file: { unit: "bytes", verb: "heeft" }, array: { unit: "elementen", verb: "heeft" }, set: { unit: "elementen", verb: "heeft" } };
+        closure_1 = { regex: "invoer", email: "emailadres", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO datum en tijd", date: "ISO datum", time: "ISO tijd", duration: "ISO duur", ipv4: "IPv4-adres", ipv6: "IPv6-adres", cidrv4: "IPv4-bereik", cidrv6: "IPv6-bereik", base64: "base64-gecodeerde tekst", base64url: "base64 URL-gecodeerde tekst", json_string: "JSON string", e164: "E.164-nummer", jwt: "JWT", template_literal: "invoer" };
+        closure_2 = { nan: "NaN", number: "getal" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -68,118 +68,134 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
-              if (tmp48 == null) {
-                tmp48 = parsedTypeResult;
+              let tmp52 = closure_2[parsedTypeResult];
+              if (tmp52 == null) {
+                tmp52 = parsedTypeResult;
               }
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
-                let combined = "Ugyldig input: forventet instanceof " + code.expected + ", fikk " + tmp48;
+                let combined = "Ongeldige invoer: verwacht instanceof " + code.expected + ", ontving " + tmp52;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined = "Ugyldig input: forventet " + expected + ", fikk " + tmp48;
+                combined = "Ongeldige invoer: verwacht " + expected + ", ontving " + tmp52;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Ugyldig verdi: forventet " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 = "Ongeldige invoer: verwacht " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Ugyldig valg: forventet en av " + closure_2.joinValues(code.values, "|");
+                combined1 = "Ongeldige optie: verwacht \u00E9\u00E9n van " + closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str24 = "<";
+              let str34 = "<";
               if (code.inclusive) {
-                str24 = "<=";
+                str34 = "<=";
               }
-              let tmp27 = obj2[code.origin];
-              if (tmp27 == null) {
-                tmp27 = null;
+              let tmp29 = obj2[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
               }
-              let str25 = code.origin;
-              if (tmp27) {
-                if (str25 == null) {
-                  str25 = "value";
+              let str35 = "laat";
+              if ("date" !== code.origin) {
+                let str37 = "groot";
+                if ("string" === code.origin) {
+                  str37 = "lang";
+                }
+                str35 = str37;
+              }
+              let str39 = code.origin;
+              if (tmp29) {
+                if (str39 == null) {
+                  str39 = "waarde";
                 }
                 const str1 = code.maximum.toString();
-                let str31 = tmp27.unit;
-                if (str31 == null) {
-                  str31 = "elementer";
+                let str47 = tmp29.unit;
+                if (str47 == null) {
+                  str47 = "elementen";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "For stor(t): forventet " + str25 + " til \u00E5 ha " + str24 + str1 + " " + str31;
+                let combined2 = "Te " + str35 + ": verwacht dat " + str39 + " " + str34 + str1 + " " + str47 + " " + tmp29.verb;
               } else {
-                let str26 = str25;
-                if (str25 == null) {
-                  str26 = "value";
+                let str40 = str39;
+                if (str39 == null) {
+                  str40 = "waarde";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "For stor(t): forventet " + str26 + " til \u00E5 ha " + str24 + code.maximum.toString();
+                combined2 = "Te " + str35 + ": verwacht dat " + str40 + " " + str34 + code.maximum.toString() + " is";
               }
               return combined2;
             case "too_small":
-              let str18 = ">";
+              let str19 = ">";
               if (code.inclusive) {
-                str18 = ">=";
+                str19 = ">=";
               }
               let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
+              let str20 = "vroeg";
+              if ("date" !== code.origin) {
+                let str22 = "klein";
+                if ("string" === code.origin) {
+                  str22 = "kort";
+                }
+                str20 = str22;
+              }
               ({ origin, minimum } = code);
-              const str45 = minimum.toString();
+              const str64 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "For lite(n): forventet " + origin + " til \u00E5 ha " + str18 + str45 + " " + tmp15.unit;
+                let combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str64 + " " + tmp15.unit + " " + tmp15.verb;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "For lite(n): forventet " + origin + " til \u00E5 ha " + str18 + str45;
+                combined3 = "Te " + str20 + ": verwacht dat " + origin + " " + str19 + str64 + " is";
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "Ugyldig streng: m\u00E5 starte med \"" + code.prefix + "\"";
+                let combined4 = "Ongeldige tekst: moet met \"" + code.prefix + "\" beginnen";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "Ugyldig streng: m\u00E5 ende med \"" + code.suffix + "\"";
+                combined4 = "Ongeldige tekst: moet op \"" + code.suffix + "\" eindigen";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "Ugyldig streng: m\u00E5 inneholde \"" + code.includes + "\"";
+                combined4 = "Ongeldige tekst: moet \"" + code.includes + "\" bevatten";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Ugyldig streng: m\u00E5 matche m\u00F8nsteret " + code.pattern;
+                combined4 = "Ongeldige tekst: moet overeenkomen met patroon " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "Ugyldig " + format;
+                combined4 = "Ongeldig: " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Ugyldig tall: m\u00E5 v\u00E6re et multiplum av " + code.divisor;
+              return "Ongeldig getal: moet een veelvoud van " + code.divisor + " zijn";
             case "unrecognized_keys":
-              let str3 = "Ukjent n\u00F8kkel";
+              let str3 = "";
               if (code.keys.length > 1) {
-                str3 = "Ukjente n\u00F8kler";
+                str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Onbekende key" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Ugyldig n\u00F8kkel i " + code.origin;
+              return "Ongeldige key in " + code.origin;
             case "invalid_union":
-              return "Ugyldig input";
+              return "Ongeldige invoer";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Ugyldig verdi i " + code.origin;
+              return "Ongeldige waarde in " + code.origin;
             default:
-              return "Ugyldig input";
+              return "Ongeldige invoer";
           }
         };
         return obj;
@@ -187,7 +203,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod9216);
+    let closure_2 = fn(_mod9217);
     function error() {
 
     }

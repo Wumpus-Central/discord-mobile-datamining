@@ -1,16 +1,16 @@
 // === Module 10864: ? ===
 
 // Module 10864
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10691 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10698 */;
-import _mod10860 from "module_10860" /* 10860 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10692 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10699 */;
+import _mod10861 from "module_10861" /* 10861 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENCasualYearMonthDayParser = require;
+const ENMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("([0-9]{4})[\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10860.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
-class ENCasualYearMonthDayParser {
+const regExp = new RegExp("((?:in)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10861.MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + _mod10861.YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)", "i");
+class ENMonthNameParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENCasualYearMonthDayParser);
+    tmp = c2(this, ENMonthNameParser);
     tmp2 = closure_4;
-    obj = closure_4(ENCasualYearMonthDayParser);
+    obj = closure_4(ENMonthNameParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +51,7 @@ class ENCasualYearMonthDayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENCasualYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,28 +62,33 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(arg0, arg1) {
-      if (arg1[3]) {
-        const _parseInt = parseInt;
-        let parsed = parseInt(arg1[3]);
-      } else {
-        parsed = ENCasualYearMonthDayParser(10860).MONTH_DICTIONARY[str.toLowerCase(str)];
-      }
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          const _parseInt2 = parseInt;
-          const date = { day: null, month: null, year: null };
-          const _parseInt3 = parseInt;
-          const parsed1 = parseInt(arg1[1]);
-          date.day = parseInt(arg1[4]);
-          date.month = parsed;
-          date.year = parsed1;
-          return date;
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!ENMonthNameParser(10861).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
         }
       }
-      return null;
+      let str2 = index[1];
+      if (!str2) {
+        str2 = "";
+      }
+      const parsingResult = createParsingResult.createParsingResult(index.index + str2.length, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const tmp9 = ENMonthNameParser(10861).MONTH_DICTIONARY[formatted];
+      const start2 = parsingResult.start;
+      start2.assign("month", tmp9);
+      if (index[3]) {
+        const start4 = parsingResult.start;
+        start4.assign("year", ENMonthNameParser(10861).parseYear(index[3]));
+      } else {
+        const start3 = parsingResult.start;
+        start3.imply("year", ENMonthNameParser(10693).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
+      }
+      return parsingResult;
     }
   }
 ];
 
-export default _createClass(ENCasualYearMonthDayParser, items);
+export default _createClass(ENMonthNameParser, items);

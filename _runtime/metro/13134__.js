@@ -1,38 +1,45 @@
 // === Module 13134: ? ===
 
 // Module 13134
-import _mod13046 from "module_13046" /* 13046 */;
-import _mod13048 from "module_13048" /* 13048 */;
-import _mod13049 from "module_13049" /* 13049 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod13049.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod13048.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(13049).GLOBAL_OBJ.console) {
-        tmp(13054).fill(tmp(13049).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod13048.originalConsoleMethods[level] = arg0;
-          return () => {
-            const items = [...arguments];
-            level(13046).triggerHandlers("console", { args: items, level });
-            const obj3 = level(13048).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(13049).GLOBAL_OBJ.console, items);
-            }
-            const obj = { args: items, level };
-            const obj2 = level(13046);
-          };
-        });
-        const tmpResult = tmp(13054);
+export const parseCookie = function parseCookie(arr) {
+  const obj = {};
+  let num = 0;
+  if (0 < arr.length) {
+    let index = arr.indexOf("=", num);
+    while (-1 !== index) {
+      let length = arr.indexOf(";", num);
+      if (-1 === length) {
+        length = arr.length;
+      } else if (length < index) {
+        let sum = arr.lastIndexOf(";", index - 1) + 1;
+        num = sum;
+        if (sum >= arr.length) {
+          break;
+        }
       }
-    });
+      let str = arr.slice(num, index);
+      let trimmed = str.trim();
+      if (undefined === obj[trimmed]) {
+        let str2 = arr.slice(index + 1, length);
+        let trimmed1 = str2.trim();
+        index = trimmed1;
+        if (34 === trimmed1.charCodeAt(0)) {
+          index = trimmed1.slice(1, -1);
+        }
+        try {
+          let decodeURIComponentResult = index;
+          if (-1 !== index.indexOf("%")) {
+            let _decodeURIComponent = decodeURIComponent;
+            decodeURIComponentResult = decodeURIComponent(index);
+          }
+          obj[trimmed] = decodeURIComponentResult;
+        } catch (err) {
+          obj[trimmed] = index;
+        }
+      }
+      let sum1 = length + 1;
+    }
   }
-}
-
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
-  _mod13046.addHandler("console", errorCallback);
-  _mod13046.maybeInstrument("console", instrumentConsole);
+  return obj;
 };

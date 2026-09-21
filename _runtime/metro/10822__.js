@@ -1,14 +1,14 @@
 // === Module 10822: ? ===
 
 // Module 10822
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10698 */;
+import _mod10823 from "module_10823" /* 10823 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let AbstractParserWithLeftRightBoundaryChecking = require;
+const RUMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class AbstractParserWithLeftBoundaryChecking {
+class RUMonthNameLittleEndianParser {
   constructor() {
     self = this;
-    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp = c2(this, RUMonthNameLittleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    obj = closure_4(RUMonthNameLittleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,61 +48,47 @@ class AbstractParserWithLeftBoundaryChecking {
     return tmp3(self, constructResult);
   }
 }
-AbstractParserWithLeftRightBoundaryChecking = AbstractParserWithLeftBoundaryChecking;
-_inherits(AbstractParserWithLeftBoundaryChecking, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(RUMonthNameLittleEndianParser, _mod10823.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
-  key: "patternLeftBoundary",
-  value: function patternLeftBoundary() {
-    return AbstractParserWithLeftRightBoundaryChecking(10820).REGEX_PARTS.leftBoundary;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(?:\u0441)?\\s*(" + RUMonthNameLittleEndianParser(10821).ORDINAL_NUMBER_PATTERN + ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" + RUMonthNameLittleEndianParser(10821).ORDINAL_NUMBER_PATTERN + "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" + RUMonthNameLittleEndianParser(10692).matchAnyPattern(RUMonthNameLittleEndianParser(10821).MONTH_DICTIONARY) + ")(?:(?:-|\\/|,?\\s{0,3})(" + RUMonthNameLittleEndianParser(10821).YEAR_PATTERN + "(?![^\\s]\\d)))?";
   }
 };
 const items = [
   entry,
   {
-    key: "innerPattern",
-    value: function innerPattern(arg0) {
-      const regExp = new RegExp(this.innerPatternString(arg0), AbstractParserWithLeftRightBoundaryChecking(10820).REGEX_PARTS.flags);
-      return regExp;
-    }
-  },
-  {
-    key: "innerPatternHasChange",
-    value: function innerPatternHasChange(arg0, arg1) {
-      return false;
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = RUMonthNameLittleEndianParser(10821).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = RUMonthNameLittleEndianParser(10821).parseOrdinalNumberPattern(index[1]);
+      if (result > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", result);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", RUMonthNameLittleEndianParser(10821).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply("year", RUMonthNameLittleEndianParser(10693).findYearClosestToRef(createParsingResult.refDate, result, tmp4));
+        }
+        if (index[2]) {
+          const start3 = parsingResult.start;
+          const result1 = RUMonthNameLittleEndianParser(10821).parseOrdinalNumberPattern(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
+        }
+        return parsingResult;
+      }
     }
   }
 ];
-const _moduleResult = _createClass(AbstractParserWithLeftBoundaryChecking, items);
-class AbstractParserWithLeftRightBoundaryChecking {
-  constructor() {
-    self = this;
-    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
-    tmp2 = closure_4;
-    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(AbstractParserWithLeftRightBoundaryChecking, _moduleResult);
-const entry1 = {
-  key: "innerPattern",
-  value: function innerPattern(arg0) {
-    const combined = "" + this.innerPatternString(arg0) + AbstractParserWithLeftRightBoundaryChecking(10820).REGEX_PARTS.rightBoundary;
-    const regExp = new RegExp(combined, AbstractParserWithLeftRightBoundaryChecking(10820).REGEX_PARTS.flags);
-    return regExp;
-  }
-};
-const items1 = [entry1];
 
-export const AbstractParserWithLeftBoundaryChecking = _moduleResult;
-export const AbstractParserWithLeftRightBoundaryChecking = _createClass(AbstractParserWithLeftRightBoundaryChecking, items1);
+export default _createClass(RUMonthNameLittleEndianParser, items);

@@ -1,20 +1,13 @@
 // === Module 8553: ? ===
 
 // Module 8553
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 
-const StyleSheet = get_ActivityIndicator.StyleSheet;
-const obj = { stepNumber: { marginTop: 20, alignItems: "center", position: "absolute" }, sliderMainContainer: { zIndex: 1, width: "100%" }, defaultSlideriOS: { height: 40 }, defaultSlider: {}, stepsIndicator: null, trackMarkContainer: null, thumbImageContainer: null, thumbImage: null, stepIndicatorElement: null, defaultIndicatorMarked: null, defaultIndicatorIdle: null };
-let num = 0;
-if ("ios" === get_ActivityIndicator.Platform.OS) {
-  num = 10;
+const obj = { SLIDER_DEFAULT_INITIAL_VALUE: 0, MARGIN_HORIZONTAL_PADDING: 0.05, THUMB_SIZE: 20, STEP_NUMBER_TEXT_FONT_SMALL: 8, STEP_NUMBER_TEXT_FONT_BIG: 12, LIMIT_MIN_VALUE: Number.MIN_SAFE_INTEGER, LIMIT_MAX_VALUE: Number.MAX_SAFE_INTEGER, DEFAULT_STEP_RESOLUTION: null };
+let num = 1000;
+if ("android" === _mod17.Platform.OS) {
+  num = 128;
 }
-obj.stepsIndicator = { flex: 1, flexDirection: "row", justifyContent: "space-between", top: num, zIndex: 2 };
-obj.trackMarkContainer = { alignItems: "center", alignContent: "center", alignSelf: "center", justifyContent: "center", position: "absolute", zIndex: 3 };
-obj.thumbImageContainer = { position: "absolute", zIndex: 3, justifyContent: "center", alignItems: "center", alignContent: "center" };
-obj.thumbImage = { alignContent: "center", alignItems: "center", position: "absolute" };
-obj.stepIndicatorElement = { alignItems: "center", alignContent: "center" };
-obj.defaultIndicatorMarked = { height: 20, width: 5, backgroundColor: "#CCCCCC" };
-obj.defaultIndicatorIdle = { height: 10, width: 2, backgroundColor: "#C0C0C0" };
+obj.DEFAULT_STEP_RESOLUTION = num;
 
-export const styles = StyleSheet.create(obj);
+export const constants = obj;

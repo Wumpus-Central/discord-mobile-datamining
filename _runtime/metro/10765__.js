@@ -1,14 +1,16 @@
 // === Module 10765: ? ===
 
 // Module 10765
+import alphaNum from "alphaNum" /* 10762 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp("([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))", "i");
-class JPSlashDateFormatParser {
+const JPWeekdayParser = require;
+const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
+const regExp = new RegExp("((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" + keys.join("|") + ")(?:\u66DC\u65E5|\u66DC)", "i");
+class JPWeekdayParser {
   constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
+    tmp = c2(this, JPWeekdayParser);
     return;
   }
 }
@@ -22,32 +24,25 @@ const items = [
   entry,
   {
     key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(10761).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(10761).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(10761).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(10692).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply("year", JPSlashDateFormatParser(10692).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
-              }
-              return parsingComponents;
+    value: function extract(reference, groups) {
+      const tmp3 = JPWeekdayParser(10762).WEEKDAY_OFFSET[groups.groups.weekday];
+      if (undefined === tmp3) {
+        return null;
+      } else {
+        let str2 = "last";
+        if (!groups.groups.prefix || "".match(/前の/)) {
+          str2 = "next";
+          if (!str.match(/次の/)) {
+            str2 = null;
+            if (str.match(/今週/)) {
+              str2 = "this";
             }
           }
-          return null;
         }
+        return JPWeekdayParser(10719).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
       }
-      return null;
     }
   }
 ];
 
-export default _createClass(JPSlashDateFormatParser, items);
+export default _createClass(JPWeekdayParser, items);

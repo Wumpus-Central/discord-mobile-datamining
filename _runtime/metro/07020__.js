@@ -5,6 +5,7 @@ import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
@@ -28,14 +29,28 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class NativeGesture {
+function changeEventCalculator(scale, scale2) {
+  if (undefined === scale2) {
+    const obj2 = { scaleChange: scale.scale };
+    let obj = obj2;
+  } else {
+    obj = { scaleChange: scale.scale / scale2.scale };
+  }
+  const merged = Object.assign(scale);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 9876979738005;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}" };
+class PinchGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, NativeGesture);
+    tmp = closure_0(this, PinchGesture);
     tmp2 = c2;
-    obj = c2(NativeGesture);
+    obj = c2(PinchGesture);
     tmp3 = closure_1;
-    if (closure_3()) {
+    if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
@@ -43,29 +58,25 @@ class NativeGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
+    tmp3Result.handlerName = "PinchGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = NativeGesture;
-_inherits(NativeGesture, fn(6913).BaseGesture);
+_classCallCheck = PinchGesture;
+_inherits(PinchGesture, fn(6918).ContinousBaseGesture);
 const entry = {
-  key: "shouldActivateOnStart",
-  value: function shouldActivateOnStart(shouldActivateOnStart) {
-    this.config.shouldActivateOnStart = shouldActivateOnStart;
-    return this;
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    const items = [arg0];
+    return fn(items);
   }
 };
-const items = [
-  entry,
-  {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
-      return this;
-    }
-  }
-];
+let items = [entry];
 
-export const NativeGesture = _createClass(NativeGesture, items);
+export const PinchGesture = _createClass(PinchGesture, items);

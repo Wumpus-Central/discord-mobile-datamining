@@ -1,15 +1,14 @@
 // === Module 10824: ? ===
 
 // Module 10824
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10705 */;
+import _mod10823 from "module_10823" /* 10823 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RUTimeExpressionParser = require;
+const RUMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,107 +28,60 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUTimeExpressionParser {
-  constructor(arg0) {
+class RUMonthNameParser {
+  constructor() {
     self = this;
-    tmp = c2(this, RUTimeExpressionParser);
-    items = [];
-    items[0] = global;
+    tmp = c2(this, RUMonthNameParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeExpressionParser);
+    obj = closure_4(RUMonthNameParser);
     tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_inherits(RUMonthNameParser, _mod10823.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "patternFlags",
-  value: function patternFlags() {
-    return RUTimeExpressionParser(10820).REGEX_PARTS.flags;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "((?:\u0432)\\s*)?(" + RUMonthNameParser(10692).matchAnyPattern(RUMonthNameParser(10821).MONTH_DICTIONARY) + ")\\s*(?:[,-]?\\s*(" + RUMonthNameParser(10821).YEAR_PATTERN + ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)";
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "primaryPatternLeftBoundary",
-    value: function primaryPatternLeftBoundary() {
-      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
-    }
-  },
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0438|\u043F\u043E|\\?)\\s*";
-    }
-  },
-  {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:\u0432|\u0441)\\s*)??";
-    }
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:\u0443\u0442\u0440\u0430|\u0432\u0435\u0447\u0435\u0440\u0430|\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F))?(?!\\/)" + RUTimeExpressionParser(10820).REGEX_PARTS.rightBoundary;
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = hasOwnProperty(_getPrototypeOf(RUTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
-      dependencyMap = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => closure_1.apply(self, items);
-      }
-      const items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("\u0432\u0435\u0447\u0435\u0440\u0430")) {
-          value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", RUTimeExpressionParser(10696).Meridiem.PM);
-            }
-          }
-          if (value < 6) {
-            fnResult.assign("meridiem", RUTimeExpressionParser(10696).Meridiem.AM);
-          }
-        }
-        const first1 = arg1[0];
-        if (first1.endsWith("\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(10696).Meridiem.PM);
-          value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
-          }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        }
-        const first2 = arg1[0];
-        if (first2.endsWith("\u0443\u0442\u0440\u0430")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(10696).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
-          }
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const formatted = index[2].toLowerCase();
+      if (index[0].length <= 3) {
+        if (!RUMonthNameParser(10821).FULL_MONTH_NAME_DICTIONARY[formatted]) {
+          return null;
         }
       }
-      return fnResult;
+      const parsingResult = createParsingResult.createParsingResult(index.index, index.index + index[0].length);
+      const start = parsingResult.start;
+      start.imply("day", 1);
+      const tmp9 = RUMonthNameParser(10821).MONTH_DICTIONARY[formatted];
+      const start2 = parsingResult.start;
+      start2.assign("month", tmp9);
+      if (index[3]) {
+        const start4 = parsingResult.start;
+        start4.assign("year", RUMonthNameParser(10821).parseYear(index[3]));
+      } else {
+        const start3 = parsingResult.start;
+        start3.imply("year", RUMonthNameParser(10693).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
+      }
+      return parsingResult;
     }
   }
 ];
 
-export default _createClass(RUTimeExpressionParser, items);
+export default _createClass(RUMonthNameParser, items);

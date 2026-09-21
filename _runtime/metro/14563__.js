@@ -1,25 +1,56 @@
 // === Module 14563: ? ===
 
 // Module 14563
-const require = globalThis.__r;
+import _mod14480 from "module_14480" /* 14480 */;
+import currencies2 from "currencies" /* 14564 */;
 
-const require = arg1;
+require = arg1;
 const dependencyMap = arg6;
+function isSupportedCurrency(arr3, locale) {
+  let str = locale;
+  if (undefined === locale) {
+    str = "en";
+  }
+  try {
+    const obj = { style: "currency", currencyDisplay: "name", currency: arr3 };
+    const memoizedNumberFormat = _mod14480.createMemoizedNumberFormat(str, obj);
+    const str2 = memoizedNumberFormat.format(123);
+    if (str2.substring(0, 3) !== arr3) {
+      if (str3.substring(str3.length - 3) !== arr3) {
+        return true;
+      }
+    }
+    return false;
+  } catch (err) {
+  }
+}
 
-export const getSupportedUnits = function getSupportedUnits(locale) {
-  _require = locale;
-  const units = require("module_14564").units;
-  return units.filter((item) => (function isSupported(unit, arg1) {
-    let str = arg1;
-    if (undefined === arg1) {
-      str = "en";
+export const getSupportedCurrencies = function getSupportedCurrencies(locale) {
+  const items = [];
+  const currencies = currencies2.currencies;
+  for (let num = 0; num < currencies.length; num = num + 1) {
+    let arr3 = currencies[num];
+    if (3 === arr3.length) {
+      if (isSupportedCurrency(arr3, locale)) {
+        let arr = items.push(arr3);
+      }
+    } else if (5 === arr3.length) {
+      if ("~" === arr3[3]) {
+        let indexOf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[2]);
+        let indexOf2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[4]);
+        if (index <= index1) {
+          do {
+            let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
+            if (isSupportedCurrency(sum, locale)) {
+              let arr2 = items.push(sum);
+            }
+            index = index + 1;
+          } while (index <= index1);
+        }
+      }
     }
-    try {
-      const obj = { style: "unit", unit };
-      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
-      return memoizedNumberFormat.resolvedOptions().unit === unit;
-    } catch (err) {
-      return false;
-    }
-  })(item, closure_0));
+  }
+  return items;
 };

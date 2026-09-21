@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "cb49d7446dbcac5ce6ba16b6a9b83961", name: "Small", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 244, height: 82, scales: [1, 2, 3], hash: "245663cd177e246da48f58dd5c39e32f", name: "family_center_empty", type: "png" });

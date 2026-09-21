@@ -1,52 +1,39 @@
 // === Module 13090: ? ===
 
 // Module 13090
-import _mod13048 from "module_13048" /* 13048 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 13053 */;
-import _mod13063 from "module_13063" /* 13063 */;
-import _mod13076 from "module_13076" /* 13076 */;
+import _mod13050 from "module_13050" /* 13050 */;
+import _mod13078 from "module_13078" /* 13078 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
-  }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod13076.DEBUG_BUILD) {
-      const logger = _mod13048.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
+export const parseSampleRate = function parseSampleRate(flag) {
+  if (typeof flag === "boolean") {
+    const _Number = Number;
+    return Number(flag);
+  } else {
+    let parsed = flag;
+    if (typeof flag === "string") {
+      const _parseFloat = parseFloat;
+      parsed = parseFloat(flag);
     }
-    const obj2 = {};
-    obj2[_mod13063.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj2[_mod13063.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj2);
-  }
-};
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[_mod13063.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[_mod13063.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
+    if (typeof parsed === "number") {
+      const _isNaN = isNaN;
+      if (!isNaN(parsed)) {
+        if (parsed >= 0) {
+          if (parsed <= 1) {
+            return parsed;
+          }
         }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
-        }
-      });
-      return obj;
+      }
+    }
+    if (_mod13078.DEBUG_BUILD) {
+      const logger = _mod13050.logger;
+      const _JSON = JSON;
+      const json = JSON.stringify(flag);
+      const _JSON2 = JSON;
+      const _HermesInternal = HermesInternal;
+      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
     }
   }
 };

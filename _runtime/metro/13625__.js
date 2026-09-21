@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 51, height: 36, scales: [2, 3], hash: "f2d705f9d582bb6c65065afe8639e152", name: "img_classic_error_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "9bb60b01d276e09f678fc61b96446517", name: "img_boost_subheader_error_mobile", type: "png" });

@@ -1,23 +1,5 @@
 // === Module 14287: ? ===
 
 // Module 14287
-import _mod14279 from "module_14279" /* 14279 */;
 
-
-export default (version, pre, major2, major2, major22) => {
-  let tmp = major22;
-  let tmp2 = major2;
-  if (typeof major2 === "string") {
-    tmp = major2;
-    tmp2 = major2;
-  }
-  try {
-    if (version instanceof _mod14279) {
-      version = version.version;
-    }
-    const tmp72 = new _mod14279(version, tmp3);
-    return tmp72.inc(pre, tmp2, tmp).version;
-  } catch (err) {
-    return null;
-  }
-};
+export default { MAX_LENGTH: 256, MAX_SAFE_COMPONENT_LENGTH: 16, MAX_SAFE_BUILD_LENGTH: 250, MAX_SAFE_INTEGER: Number.MAX_SAFE_INTEGER || 9007199254740991, RELEASE_TYPES: ["major", "premajor", "minor", "preminor", "patch", "prepatch", "prerelease"], SEMVER_SPEC_VERSION: "2.0.0", FLAG_INCLUDE_PRERELEASE: 1, FLAG_LOOSE: 2 };

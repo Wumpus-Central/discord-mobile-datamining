@@ -1,138 +1,38 @@
 // === Module 10770: ? ===
 
 // Module 10770
-import _mod10720 from "module_10720" /* 10720 */;
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10727 */;
-import _mod10771 from "module_10771" /* 10771 */;
-import _mod10773 from "module_10773" /* 10773 */;
-import _mod10774 from "module_10774" /* 10774 */;
-import _mod10775 from "module_10775" /* 10775 */;
-import _mod10776 from "module_10776" /* 10776 */;
-import _mod10777 from "module_10777" /* 10777 */;
-import _mod10778 from "module_10778" /* 10778 */;
+import alphaNum from "alphaNum" /* 10762 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
+const JPWeekdayWithParenthesesParser = require;
+const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
+const regExp = new RegExp("(?:\\(|\\\uFF08)(?<weekday>" + keys.join("|") + ")(?:\\)|\\\uFF09)", "i");
+class JPWeekdayWithParenthesesParser {
+  constructor() {
+    tmp = c2(this, JPWeekdayWithParenthesesParser);
+    return;
   }
-  let flag2 = arg1;
-  if (arg1 === undefined) {
-    flag2 = true;
+}
+const entry = {
+  key: "pattern",
+  value: function pattern() {
+    return regExp;
   }
-  const obj = { parsers: null, refiners: null };
-  const items = [new regExp.default(flag2), , , ];
-  const _default = new regExp.default(flag2);
-  items[1] = new _isNativeReflectConstruct.default();
-  const _default1 = new _isNativeReflectConstruct.default();
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default3 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ];
-  const _default4 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
+};
+const items = [
+  entry,
+  {
+    key: "extract",
+    value: function extract(reference, arg1) {
+      const tmp3 = JPWeekdayWithParenthesesParser(10762).WEEKDAY_OFFSET[arg1.groups.weekday];
+      let parsingComponentsAtWeekday = null;
+      if (undefined !== tmp3) {
+        parsingComponentsAtWeekday = JPWeekdayWithParenthesesParser(10719).createParsingComponentsAtWeekday(reference.reference, tmp3);
+      }
+      return parsingComponentsAtWeekday;
     }
-    return tmp;
-  };
-}
-function createCasualConfiguration() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
   }
-  const tmp = createConfiguration(false, flag);
-  const parsers = tmp.parsers;
-  parsers.push(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.push(new _isNativeReflectConstruct.default());
-  return tmp;
-}
-const regExp = fn(_mod10720);
-fn(_mod10771);
-fn(_mod10773);
-fn(_mod10774);
-fn(_mod10775);
-fn(_mod10776);
-fn(_mod10777);
-const _isNativeReflectConstruct = fn(_mod10778);
-const configuration = createConfiguration(false, true);
-let parsers = configuration.parsers;
-parsers.push(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-let obj = {
-  enumerable: true,
-  get() {
-    return require("module_10687").Chrono;
-  }
-};
-const obj2 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingResult;
-  }
-};
-const obj3 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingComponents;
-  }
-};
-const obj4 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ReferenceWithTimezone;
-  }
-};
-const obj5 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Meridiem;
-  }
-};
-const obj6 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Weekday;
-  }
-};
-parsers1.push(new _isNativeReflectConstruct.default());
-const chrono = new require("module_10687").Chrono(configuration);
-const chrono1 = new require("module_10687").Chrono(createConfiguration(true));
+];
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("module_10687").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(JPWeekdayWithParenthesesParser, items);

@@ -1,15 +1,34 @@
 // === Module 14692: ? ===
 
 // Module 14692
+let closure_0 = { url: "http://localhost:8081" };
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      image(dependencyMap) {
-        const size = { uri: dependencyMap.uri, preview: dependencyMap.preview, filename: dependencyMap.filename, width: dependencyMap.width, height: dependencyMap.height, caption: dependencyMap.caption };
-        return closure_0.send("image", size);
+export default () => {
+  if (arg0 === undefined) {
+    let obj = {};
+  }
+  return () => {
+    url = Object.assign({}, url, obj);
+    obj = {
+      onCommand(type) {
+        if ("editor.open" === type.type) {
+          const payload = type.payload;
+          let num = payload.lineNumber;
+          const _HermesInternal = HermesInternal;
+          obj = { file: payload.file, lineNumber: null };
+          const combined = "" + url.url + "/open-stack-frame";
+          if (!num) {
+            num = 1;
+          }
+          obj.lineNumber = num;
+          const _fetch = fetch;
+          const request = { method: "POST", body: null };
+          const _JSON = JSON;
+          request.body = JSON.stringify(obj);
+          const response = fetch(combined, request);
+        }
       }
-    }
+    };
+    return obj;
   };
 };

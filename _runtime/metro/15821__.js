@@ -1,43 +1,30 @@
 // === Module 15821: ? ===
 
 // Module 15821
-function _extends() {
-  if (Object.assign) {
-    const _Object = Object;
-    exports = assign.bind();
-  } else {
-    exports = (arg0) => {
-      for (let num = 1; num < arguments.length; num = num + 1) {
-        let tmp = arguments[num];
-        for (const key10011 in tmp) {
-          hasOwnProperty = {}.hasOwnProperty;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10011);
-          } else {
-            hasOwnPropertyResult = call(tmp, key10011);
-          }
-          if (!hasOwnPropertyResult) {
-            continue;
-          } else {
-            arg0[key10011] = tmp[key10011];
-            continue;
-          }
-          continue;
-        }
-      }
-      return arg0;
-    };
-  }
-  module.exports = exports;
-  const apply = exports.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(null);
-  } else {
-    applyArgumentsResult = apply(null, arguments);
-  }
-  return applyArgumentsResult;
-}
-let exports = _extends;
+import _regeneratorRuntime2 from "_regeneratorRuntime" /* 15822 */;
+import module_8550 from "module_8550" /* 8550 */;
 
-export default _extends;
+let _regeneratorRuntime = module_8550(_regeneratorRuntime2);
+
+export const getYoutubeMeta = function getYoutubeMeta(arg0) {
+  _regeneratorRuntime = arg0;
+  return _regeneratorRuntime.default.async(async function getYoutubeMeta$(next) {
+    next = next.next;
+    next.prev = next;
+    while (0 !== next) {
+      if (2 === next) {
+        sent = next.sent;
+        next.next = 5;
+        let _default = _regeneratorRuntime.default;
+        return _default.awrap(sent.json());
+      } else if (5 === next) {
+        let str = "return";
+        return next.abrupt("return", next.sent);
+      } else {
+        return next.stop();
+      }
+    }
+    next.next = 2;
+    return _regeneratorRuntime.default.awrap(fetch("https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=" + closure_0 + "&format=json"));
+  }, null, null, null, Promise);
+};
