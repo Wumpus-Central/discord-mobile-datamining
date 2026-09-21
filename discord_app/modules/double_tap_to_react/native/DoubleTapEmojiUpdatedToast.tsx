@@ -1,6 +1,6 @@
-// === Module 11389: DoubleTapEmojiUpdatedToast ===
+// === Module 11391: DoubleTapEmojiUpdatedToast ===
 
-// Module 11389 (DoubleTapEmojiUpdatedToast)
+// Module 11391 (DoubleTapEmojiUpdatedToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;

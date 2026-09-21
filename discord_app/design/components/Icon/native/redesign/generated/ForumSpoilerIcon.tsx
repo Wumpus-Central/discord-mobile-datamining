@@ -1,6 +1,6 @@
-// === Module 5294: ForumSpoilerIcon ===
+// === Module 5301: ForumSpoilerIcon ===
 
-// Module 5294 (ForumSpoilerIcon)
+// Module 5301 (ForumSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5262 from "module_5262" /* 5262 */;

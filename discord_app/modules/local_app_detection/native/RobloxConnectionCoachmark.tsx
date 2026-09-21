@@ -1,6 +1,6 @@
-// === Module 17386: RobloxConnectionCoachmark ===
+// === Module 17397: RobloxConnectionCoachmark ===
 
-// Module 17386 (RobloxConnectionCoachmark)
+// Module 17397 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
@@ -10,16 +10,16 @@ import dismissible_content from "dismissible_content" /* 2027 */;
 import themes from "themes" /* 4464 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import PlatformsDefault from "Platforms" /* 5495 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5618 */;
-import openUserSettings from "openUserSettings" /* 7622 */;
-import inlineStyles from "inlineStyles" /* 8727 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9340 */;
+import PlatformsDefault from "Platforms" /* 5500 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5623 */;
+import openUserSettings from "openUserSettings" /* 7624 */;
+import inlineStyles from "inlineStyles" /* 8728 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5493 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5498 */;
 import UserStore from "UserStore" /* 1372 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13975 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13981 */;
 
 require = fn;
 function RobloxIcon(theme) {
@@ -107,7 +107,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const theme = markAsDismissed(4466).useThemeContext().theme;
   let obj2 = { startExpanded: true, contentStyles: tmp.content, header: null, onDismiss: null, children: null };
   let obj = markAsDismissed(4466);
-  obj2.header = closure_13(markAsDismissed(7389).BottomSheetTitleHeader, { title: null, leading: closure_13(markAsDismissed(7438).ActionSheetCloseButton, { onPress: handleCancel }) });
+  obj2.header = closure_13(markAsDismissed(7394).BottomSheetTitleHeader, { title: null, leading: closure_13(markAsDismissed(7443).ActionSheetCloseButton, { onPress: handleCancel }) });
   obj2.onDismiss = function onDismiss() {
     return markAsDismissed(ContentDismissActionType.DISMISS);
   };
@@ -131,8 +131,8 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const obj10 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1115).intl;
   obj10.text = intl3.string(markAsDismissed(1115).t.ItuabN);
-  let obj3 = { title: null, leading: closure_13(markAsDismissed(7438).ActionSheetCloseButton, { onPress: handleCancel }) };
-  obj10.icon = closure_13(markAsDismissed(13247).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  let obj3 = { title: null, leading: closure_13(markAsDismissed(7443).ActionSheetCloseButton, { onPress: handleCancel }) };
+  obj10.icon = closure_13(markAsDismissed(13249).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj10.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     if (markAsDismissed != null) {
@@ -153,12 +153,12 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   items1[2] = closure_14(markAsDismissed(5184).Stack, obj9);
   obj4.children = items1;
   obj2.children = closure_14(markAsDismissed(5184).Stack, obj4);
-  return closure_13(markAsDismissed(7390).BottomSheet, obj2);
+  return closure_13(markAsDismissed(7395).BottomSheet, obj2);
 };
 export { UnionIcon };
 export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13976).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13982).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

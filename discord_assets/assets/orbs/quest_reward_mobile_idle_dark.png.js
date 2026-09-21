@@ -1,6 +1,6 @@
-// === Module 12032: ? ===
+// === Module 12034: ? ===
 
-// Module 12032
+// Module 12034
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js");

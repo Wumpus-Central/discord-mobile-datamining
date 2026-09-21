@@ -1,6 +1,6 @@
-// === Module 6656: ? ===
+// === Module 6661: ? ===
 
-// Module 6656
+// Module 6661
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerIconBonkBonkExample-2x.png.js");

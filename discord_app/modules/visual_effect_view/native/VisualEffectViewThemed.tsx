@@ -1,6 +1,6 @@
-// === Module 8513: VisualEffectViewThemed ===
+// === Module 8514: VisualEffectViewThemed ===
 
-// Module 8513 (VisualEffectViewThemed)
+// Module 8514 (VisualEffectViewThemed)
 import shared from "shared" /* 4607 */;
 import useThemeDefault from "useTheme" /* 4690 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5174 */;

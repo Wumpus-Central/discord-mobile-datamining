@@ -1,9 +1,9 @@
-// === Module 6165: DollarSignIllocon ===
+// === Module 6170: DollarSignIllocon ===
 
-// Module 6165 (DollarSignIllocon)
+// Module 6170 (DollarSignIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6166 from "module_6166" /* 6166 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6171 from "module_6171" /* 6171 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const DollarSignIllocon = function DollarSignIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6166 };
+  const obj2 = { uri: _modDef6171 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

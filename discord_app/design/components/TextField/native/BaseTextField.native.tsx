@@ -1,12 +1,12 @@
-// === Module 6860: BaseTextField ===
+// === Module 6865: BaseTextField ===
 
-// Module 6860 (BaseTextField)
+// Module 6865 (BaseTextField)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import mergeProps from "mergeProps" /* 4462 */;
 import useFocus from "useFocus" /* 4463 */;
-import InputFieldContainer from "InputFieldContainer" /* 6858 */;
-import NativeTextInput from "NativeTextInput" /* 6861 */;
-import propsForNativeTextInput from "propsForNativeTextInput" /* 7175 */;
+import InputFieldContainer from "InputFieldContainer" /* 6863 */;
+import NativeTextInput from "NativeTextInput" /* 6866 */;
+import propsForNativeTextInput from "propsForNativeTextInput" /* 7180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

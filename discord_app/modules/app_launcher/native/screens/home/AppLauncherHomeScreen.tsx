@@ -1,6 +1,6 @@
-// === Module 12334: AppLauncherHomeScreen ===
+// === Module 12336: AppLauncherHomeScreen ===
 
-// Module 12334 (AppLauncherHomeScreen)
+// Module 12336 (AppLauncherHomeScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -11,38 +11,38 @@ import dismissible_content from "dismissible_content" /* 2027 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7183 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 8122 */;
-import native from "native" /* 9183 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9402 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9522 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9592 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9739 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10371 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11258 */;
-import AppLauncherContext from "AppLauncherContext" /* 11479 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12302 */;
-import FrecencySection from "FrecencySection" /* 12303 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12307 */;
-import ApplicationDirectoryActionCreators from "ApplicationDirectoryActionCreators" /* 12322 */;
-import HeroMedia from "HeroMedia" /* 12335 */;
-import BrokenImageDefault from "BrokenImage" /* 12336 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12337 */;
-import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12339 */;
-import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12350 */;
-import ExpandableList from "ExpandableList" /* 12359 */;
-import InThisServerSection from "InThisServerSection" /* 12361 */;
-import ApplicationDirectoryCollectionType from "ApplicationDirectoryCollectionType" /* 12374 */;
-import ApplicationCollectionFlags from "ApplicationCollectionFlags" /* 12377 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7188 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7765 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 8123 */;
+import native from "native" /* 9184 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9403 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9523 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9593 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9740 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10372 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11259 */;
+import AppLauncherContext from "AppLauncherContext" /* 11481 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12304 */;
+import FrecencySection from "FrecencySection" /* 12305 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 12309 */;
+import ApplicationDirectoryActionCreators from "ApplicationDirectoryActionCreators" /* 12324 */;
+import HeroMedia from "HeroMedia" /* 12337 */;
+import BrokenImageDefault from "BrokenImage" /* 12338 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 12339 */;
+import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12341 */;
+import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 12352 */;
+import ExpandableList from "ExpandableList" /* 12361 */;
+import InThisServerSection from "InThisServerSection" /* 12363 */;
+import ApplicationDirectoryCollectionType from "ApplicationDirectoryCollectionType" /* 12376 */;
+import ApplicationCollectionFlags from "ApplicationCollectionFlags" /* 12379 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
 import DevSettingsStore from "DevSettingsStore" /* 4755 */;
-import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 12324 */;
+import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 12326 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12295 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12297 */;
 
 const EmbeddedActivitiesActionCreatorsAll = EmbeddedActivitiesActionCreators;
 
@@ -164,7 +164,7 @@ function ActivityRow(section) {
   let tmp5 = null != applicationIconSource;
   if (tmp5) {
     const obj3 = { iconSource: applicationIconSource };
-    tmp5 = closure_19(onPress(12307), obj3);
+    tmp5 = closure_19(onPress(12309), obj3);
   }
   const items = [section];
   const items1 = [section, onPress];
@@ -183,7 +183,7 @@ function ActivityRow(section) {
   const callback = noop.useCallback(() => {
     onPress(section);
   }, items1);
-  return closure_19(section(5817).TableRow, { icon: tmp5, label: section.application.name, subLabel: memo, subLabelLineClamp: 1, start: flag, end: flag2, arrow: true, onPress: callback });
+  return closure_19(section(5822).TableRow, { icon: tmp5, label: section.application.name, subLabel: memo, subLabelLineClamp: 1, start: flag, end: flag2, arrow: true, onPress: callback });
 }
 function ActivityItemTuple(arg0) {
   ({ context, sectionName, onPress, usesHandleActivityItemSelected, onActivityItemSelected, shelfItem2, entrypoint, containerWidth } = arg0);
@@ -192,7 +192,7 @@ function ActivityItemTuple(arg0) {
   const items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "a", height: "isArray" };
+      return { width: "Array", height: "PX_16" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c22) };
@@ -327,7 +327,7 @@ function RecommendationItemTuple(isLastTuple) {
   const items1 = [containerWidth, num];
   styles = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "a", height: "isArray" };
+      return { width: "Array", height: "PX_16" };
     } else {
       const tmp6 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - 12 * (2 - 1)) / 2);
       const size = { width: tmp6, height: roundToNearestPixelDefault(tmp6 / c22) };
@@ -490,7 +490,7 @@ function getRecommendationItemsWithViewAll(found1, in_this_server, stringResult)
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(9403);
+const ApplicationCommandIndexStore = fn(9404);
 ({ useContextIndexState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1483);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
@@ -502,7 +502,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 let c22 = 1.7777777777777777;
 let closure_23 = [];
-const APP_LAUNCHER_IN_TEXT = fn(12328).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
+const APP_LAUNCHER_IN_TEXT = fn(12330).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
 const createStyles = fn(4756);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 }, topBackgroundFill: null, sectionHeader: null, list: null, searchBarContainer: null, divider: null, appRowLabelWithPromotedContainer: null, appRowLabelWithPromotedTextContainer: null, promotedLabel: null, activityItemContainer: null, activityImageContainer: null, activityDetailsContainer: null, activityItemTupleContainer: null, activityItemTupleShelfItemContainer: null, activityItemImage: null, submittingOverlay: null };
 let rect = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, position: "absolute", top: -16, left: 0, right: 0, height: 16 };
@@ -751,7 +751,7 @@ export default function AppLauncherHomeScreen(route) {
         if (arr.length % 2 === 1) {
           const obj2 = { type: null, shelfItem1: null, shelfItem2: null, sectionName: "activities", shelfItem1SectionPosition: null, shelfItem2SectionPosition: null, sectionOverallPosition: 0, isLastTuple: false };
           const diff1 = arr.length - 1;
-          obj2.type = tmp8(12339).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj2.type = tmp8(12341).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj2.shelfItem1 = arr[arr.length - 1];
           obj2.shelfItem2 = undefined;
           obj2.shelfItem1SectionPosition = diff1;
@@ -759,7 +759,7 @@ export default function AppLauncherHomeScreen(route) {
           items.push(obj2);
         }
         items[items.length - 1].isLastTuple = true;
-        const obj5 = { type: tmp8(12339).AppLauncherHomeListItemType.SECTION_HEADER, section: null, sectionName: "activities", numItems: null, numVisibleItems: null };
+        const obj5 = { type: tmp8(12341).AppLauncherHomeListItemType.SECTION_HEADER, section: null, sectionName: "activities", numItems: null, numVisibleItems: null };
         const intl = tmp8(1115).intl;
         obj5.section = intl.string(tmp8(1115).t.aeuOoh);
         ({ length: obj3.numItems, length: obj3.numVisibleItems } = arr);
@@ -913,15 +913,15 @@ export default function AppLauncherHomeScreen(route) {
           obj.numVisibleItems = bound;
           items.push(obj);
           const mapped = application_directory_collection_items.map((type, sectionPosition) => {
-            if (type.type === found1(9530).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(9531).ApplicationDirectoryCollectionItemType.APPLICATION) {
               let collectionItemAssetUrl;
               if (tmp4) {
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
-                collectionItemAssetUrl = found1(12375).getCollectionItemAssetUrl({ itemId: null, hash: null });
+                collectionItemAssetUrl = found1(12377).getCollectionItemAssetUrl({ itemId: null, hash: null });
                 const obj = { itemId: null, hash: null };
-                const tmpResult = found1(12375);
+                const tmpResult = found1(12377);
               }
-              const obj3 = { application: type.application, showsPromoted: found1(1385).hasFlag(type.flags, found1(12376).ApplicationCollectionItemFlags.PROMOTED), overrideImageUrl: collectionItemAssetUrl, sectionPosition };
+              const obj3 = { application: type.application, showsPromoted: found1(1385).hasFlag(type.flags, found1(12378).ApplicationCollectionItemFlags.PROMOTED), overrideImageUrl: collectionItemAssetUrl, sectionPosition };
               return obj3;
             }
           });
@@ -941,8 +941,8 @@ export default function AppLauncherHomeScreen(route) {
         } else if (type === ApplicationDirectoryCollectionType.ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
-            if (type.type === found1(9530).ApplicationDirectoryCollectionItemType.APPLICATION) {
-              const obj = { application: type.application, showsPromoted: found1(1385).hasFlag(type.flags, found1(12376).ApplicationCollectionItemFlags.PROMOTED) };
+            if (type.type === found1(9531).ApplicationDirectoryCollectionItemType.APPLICATION) {
+              const obj = { application: type.application, showsPromoted: found1(1385).hasFlag(type.flags, found1(12378).ApplicationCollectionItemFlags.PROMOTED) };
               return obj;
             }
           });
@@ -1321,7 +1321,7 @@ export default function AppLauncherHomeScreen(route) {
       items: memo,
       onAppSelected: callback3,
       onViewAllSelected() {
-          const found = memo.find((type) => type.type === context(12339).AppLauncherHomeListItemType.VIEW_ALL);
+          const found = memo.find((type) => type.type === context(12341).AppLauncherHomeListItemType.VIEW_ALL);
           let mapped;
           if (found != null) {
             const applications = found.applications;
@@ -1330,7 +1330,7 @@ export default function AppLauncherHomeScreen(route) {
             }
           }
           if (null != mapped) {
-            const obj2 = { location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, navigation, context, sectionName: AppLauncherTypes.AppLauncherSectionName.APPS_IN_THIS_SERVER, applications: mapped, sectionItemType: FrecencySection.SectionItemType.APPS, commands: [], sectionDescriptors: mapped.map((item) => context(7761).getApplicationCommandSection(item)), title: null };
+            const obj2 = { location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, navigation, context, sectionName: AppLauncherTypes.AppLauncherSectionName.APPS_IN_THIS_SERVER, applications: mapped, sectionItemType: FrecencySection.SectionItemType.APPS, commands: [], sectionDescriptors: mapped.map((item) => context(7763).getApplicationCommandSection(item)), title: null };
             const intl = util.intl;
             obj2.title = intl.string(util.t.oJyzCu);
             const result = AppLauncherNativeUtils.handleViewAllSelected(obj2);

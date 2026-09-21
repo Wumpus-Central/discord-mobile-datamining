@@ -1,14 +1,14 @@
-// === Module 17286: ChannelSettingsPermissionsOverrides ===
+// === Module 17297: ChannelSettingsPermissionsOverrides ===
 
-// Module 17286 (ChannelSettingsPermissionsOverrides)
+// Module 17297 (ChannelSettingsPermissionsOverrides)
 import nativeDefault from "native" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import util from "util" /* 1115 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2049 */;
 import PermissionUtils from "PermissionUtils" /* 4400 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11859 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 17287 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11861 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 17298 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -290,7 +290,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             };
             const intl = closure_0(1115).intl;
             obj.label = intl.string(closure_0(1115).t.i4jeWR);
-            return closure_2_19(closure_0(8105).HeaderTextButton, obj);
+            return closure_2_19(closure_0(8107).HeaderTextButton, obj);
           }
       };
       navigation.setOptions(obj);
@@ -302,7 +302,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(require("Text/Text").Text, obj5);
   if (fromCreate.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = closure_19(id(11206), obj6);
+    let tmp12Result = closure_19(id(11207), obj6);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -313,7 +313,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       str = "";
     }
     const obj7 = { end: true, label: str, start: true, trailing: tmp13 };
-    tmp12Result = closure_19(tmp2(5817).TableRow, obj7);
+    tmp12Result = closure_19(tmp2(5822).TableRow, obj7);
   }
   let obj8 = { style: tmp.container, contentContainerStyle: null, children: null };
   const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1612)().bottom }];
@@ -343,7 +343,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       children: permissions.map((description, index) => {
         ({ title, flag } = description);
         const tmp = closure_8(flag);
-        const obj = { variant: "text-xs/medium", color: "text-subtle", children: closure_1_0(17291).renderDescription(description.description) };
+        const obj = { variant: "text-xs/medium", color: "text-subtle", children: closure_1_0(17302).renderDescription(description.description) };
         const items = [closure_1_19(closure_1_0(4752).Text, obj), ];
         let tmp5Result = null;
         if (false !== tmp) {
@@ -354,7 +354,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           }
         }
         items[1] = tmp5Result;
-        const obj2 = closure_1_0(17291);
+        const obj2 = closure_1_0(17302);
         const tmp3Result = closure_1_21(closure_1_20, { children: items });
         const tmp6Result = closure_1_0(1364);
         const obj4 = { accessible: closure_1_0(1364).isAndroid() || undefined, disabled: false !== tmp, label: title, subLabel: tmp3Result, trailing: null };
@@ -365,8 +365,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         obj5.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj4.trailing = closure_1_19(id(17292), obj5);
-        return closure_1_19(closure_1_0(5817).TableRow, obj4, "row-" + index);
+        obj4.trailing = closure_1_19(id(17303), obj5);
+        return closure_1_19(closure_1_0(5822).TableRow, obj4, "row-" + index);
       })
     });
     return closure_2_19(React5, obj, "section-" + index);

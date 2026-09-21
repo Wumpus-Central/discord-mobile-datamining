@@ -1,16 +1,16 @@
-// === Module 18229: SelectEmojiRolesActionSheet ===
+// === Module 18240: SelectEmojiRolesActionSheet ===
 
-// Module 18229 (SelectEmojiRolesActionSheet)
+// Module 18240 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5334 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7389 */;
-import ActionSheet from "ActionSheet" /* 7437 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15476 */;
+import Pressables from "Pressables" /* 5339 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7394 */;
+import ActionSheet from "ActionSheet" /* 7442 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15482 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5736 */;
+import TextStyles_mod from "TextStyles" /* 5741 */;
 
 const require = globalThis.__r;
 
@@ -144,6 +144,6 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   };
   const items1 = [subscriptionListingsForGuild.length];
   obj6.sections = items1;
-  obj5.children = closure_6(emoji(7312), obj6);
+  obj5.children = closure_6(emoji(7317), obj6);
   return closure_6(ActionSheet.ActionSheet, obj5);
 };

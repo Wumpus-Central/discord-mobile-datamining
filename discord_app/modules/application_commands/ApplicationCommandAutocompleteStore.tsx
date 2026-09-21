@@ -1,11 +1,11 @@
-// === Module 8019: ApplicationCommandAutocompleteStore ===
+// === Module 8021: ApplicationCommandAutocompleteStore ===
 
-// Module 8019 (ApplicationCommandAutocompleteStore)
+// Module 8021 (ApplicationCommandAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1978 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8020 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8022 */;
 
 require = fn;
 function handleInit() {

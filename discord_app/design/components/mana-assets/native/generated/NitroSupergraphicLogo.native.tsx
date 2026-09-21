@@ -1,11 +1,11 @@
-// === Module 6537: NitroSupergraphicLogo ===
+// === Module 6542: NitroSupergraphicLogo ===
 
-// Module 6537 (NitroSupergraphicLogo)
+// Module 6542 (NitroSupergraphicLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4457 */;
-import _modDef6538 from "module_6538" /* 6538 */;
+import _modDef6543 from "module_6543" /* 6543 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,7 +42,7 @@ export const NitroSupergraphicLogo = function NitroSupergraphicLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6538 };
+  obj4.source = { uri: _modDef6543 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

@@ -1,7 +1,7 @@
-// === Module 10562: getEmojiPickerDataRowPremiumInlineRoadblock ===
+// === Module 10563: getEmojiPickerDataRowPremiumInlineRoadblock ===
 
-// Module 10562 (getEmojiPickerDataRowPremiumInlineRoadblock)
-import useEmojiPickerData from "useEmojiPickerData" /* 10560 */;
+// Module 10563 (getEmojiPickerDataRowPremiumInlineRoadblock)
+import useEmojiPickerData from "useEmojiPickerData" /* 10561 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowPremiumInlineRoadblock.tsx");

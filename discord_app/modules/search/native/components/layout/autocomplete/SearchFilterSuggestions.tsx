@@ -1,13 +1,13 @@
-// === Module 17089: SearchFilterSuggestions ===
+// === Module 17100: SearchFilterSuggestions ===
 
-// Module 17089 (SearchFilterSuggestions)
+// Module 17100 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4466 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import spring from "spring" /* 5185 */;
 import springPresets from "springPresets" /* 5189 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12590 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 17090 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12592 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 17101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -89,7 +89,7 @@ function AnimatedEnterExitContainer(children) {
   return jsx(cleanUp(sharedValue[10]).View, { style, children: children.children });
 }
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(8120).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(8121).SearchFilterAddLocations;
 let jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj = { card: null };

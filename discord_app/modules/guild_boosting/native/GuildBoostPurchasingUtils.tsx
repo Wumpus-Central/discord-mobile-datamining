@@ -1,6 +1,6 @@
-// === Module 7643: GuildBoostPurchasingUtils ===
+// === Module 7645: GuildBoostPurchasingUtils ===
 
-// Module 7643 (GuildBoostPurchasingUtils)
+// Module 7645 (GuildBoostPurchasingUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SubscriptionStore from "SubscriptionStore" /* 4420 */;
 

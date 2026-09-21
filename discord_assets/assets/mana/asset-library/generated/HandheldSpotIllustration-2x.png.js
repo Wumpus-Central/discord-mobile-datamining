@@ -1,6 +1,6 @@
-// === Module 6418: ? ===
+// === Module 6423: ? ===
 
-// Module 6418
+// Module 6423
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HandheldSpotIllustration-2x.png.js");

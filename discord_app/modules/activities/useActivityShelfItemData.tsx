@@ -1,7 +1,7 @@
-// === Module 17596: useActivityShelfItemData ===
+// === Module 17607: useActivityShelfItemData ===
 
-// Module 17596 (useActivityShelfItemData)
-import useActivityShelfItemsDefault from "useActivityShelfItems" /* 12290 */;
+// Module 17607 (useActivityShelfItemData)
+import useActivityShelfItemsDefault from "useActivityShelfItems" /* 12292 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

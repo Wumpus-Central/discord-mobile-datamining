@@ -1,14 +1,14 @@
-// === Module 17455: ExternalPipViewVideo ===
+// === Module 17466: ExternalPipViewVideo ===
 
-// Module 17455 (ExternalPipViewVideo)
+// Module 17466 (ExternalPipViewVideo)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4710 */;
-import StreamEnded from "StreamEnded" /* 9687 */;
-import ExternalPipDefault from "ExternalPip" /* 9696 */;
-import VideoActionCreators from "VideoActionCreators" /* 17456 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 17457 */;
+import StreamEnded from "StreamEnded" /* 9688 */;
+import ExternalPipDefault from "ExternalPip" /* 9697 */;
+import VideoActionCreators from "VideoActionCreators" /* 17467 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 17468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
@@ -63,7 +63,7 @@ function ExternalPipViewVideoStream(streamId) {
   first = 300;
   _slicedToArray = undefined;
   noop = undefined;
-  const surfaceDirectRendererExperiment = streamId(9691).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
+  const surfaceDirectRendererExperiment = streamId(9692).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
   [first, _slicedToArray] = noop.useState(undefined);
   const tmp4 = _slicedToArray(noop.useState(false), 2);
   noop = tmp4[1];
@@ -95,7 +95,7 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items2);
-  let obj = streamId(9691);
+  let obj = streamId(9692);
   const token = streamId(4457).useToken(first(576).colors.TEXT_FEEDBACK_INFO);
   value = closure_7.get();
   _slicedToArray = value;
@@ -107,7 +107,7 @@ function ExternalPipViewVideoStream(streamId) {
       VideoActionCreators.updateVideoSize(tmp, size, 1);
     }
   }, items3);
-  const children = [closure_11(first(9702), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
+  const children = [closure_11(first(9703), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: callback, onLayout: callback1 }), ];
   let tmp14Result = null;
   if (null == first) {
     tmp14Result = null;

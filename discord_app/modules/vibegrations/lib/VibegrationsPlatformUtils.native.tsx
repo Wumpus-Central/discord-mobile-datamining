@@ -1,18 +1,18 @@
-// === Module 9311: VibegrationsPlatformUtils ===
+// === Module 9312: VibegrationsPlatformUtils ===
 
-// Module 9311 (VibegrationsPlatformUtils)
+// Module 9312 (VibegrationsPlatformUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9317 */;
-import ApplicationUtils from "ApplicationUtils" /* 9318 */;
-import PushNotificationDefault from "PushNotification" /* 9556 */;
-import vibegrationsPreviewCall from "vibegrationsPreviewCall" /* 9560 */;
-import vibegrationsPreviewControlLease from "vibegrationsPreviewControlLease" /* 13181 */;
-import vibegrationsPreviewNativeSurfaces from "vibegrationsPreviewNativeSurfaces" /* 13182 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13185 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9318 */;
+import ApplicationUtils from "ApplicationUtils" /* 9319 */;
+import PushNotificationDefault from "PushNotification" /* 9557 */;
+import vibegrationsPreviewCall from "vibegrationsPreviewCall" /* 9561 */;
+import vibegrationsPreviewControlLease from "vibegrationsPreviewControlLease" /* 13183 */;
+import vibegrationsPreviewNativeSurfaces from "vibegrationsPreviewNativeSurfaces" /* 13184 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13187 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9312 */;
+import FramesStore from "FramesStore" /* 9313 */;
 import AppStateStore from "AppStateStore" /* 1979 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9308 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9309 */;
 
 require = fn;
 function previewFrameIdentity(arg0) {
@@ -277,7 +277,7 @@ let closure_18 = async function _relayPreviewCapture(arg0) {
             const obj8 = { value: { status: "unavailable" }, done: true };
             return obj8;
           } else if (null == closure_132_2) {
-            let obj9 = { uploadToken: "Array" };
+            let obj9 = { uploadToken: "r" };
           } else {
             c8 = 2;
             c9 = 1;
@@ -613,12 +613,12 @@ let closure_21 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const FramesConstants = fn(9313);
+const FramesConstants = fn(9314);
 ({ isLaunched: closure_8, MAIN_SURFACE: closure_9, makeFrameId: c10 } = FramesConstants);
-const LocalNotificationTypes = fn(9316).LocalNotificationTypes;
-let items = [fn(8609).OAuth2Scopes.BOT, fn(8609).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const LocalNotificationTypes = fn(9317).LocalNotificationTypes;
+let items = [fn(8610).OAuth2Scopes.BOT, fn(8610).OAuth2Scopes.APPLICATIONS_COMMANDS];
 let c19 = 0;
-const vibegrationsPreviewOperationSurfaces = fn(13184);
+const vibegrationsPreviewOperationSurfaces = fn(13186);
 let closure_22 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;

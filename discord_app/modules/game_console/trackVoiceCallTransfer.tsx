@@ -1,6 +1,6 @@
-// === Module 10049: trackVoiceCallTransfer ===
+// === Module 10050: trackVoiceCallTransfer ===
 
-// Module 10049 (trackVoiceCallTransfer)
+// Module 10050 (trackVoiceCallTransfer)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;

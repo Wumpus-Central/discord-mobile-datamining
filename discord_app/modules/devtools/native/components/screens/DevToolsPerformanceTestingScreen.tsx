@@ -1,9 +1,9 @@
-// === Module 16033: DevToolsPerformanceTestingScreen ===
+// === Module 16039: DevToolsPerformanceTestingScreen ===
 
-// Module 16033 (DevToolsPerformanceTestingScreen)
+// Module 16039 (DevToolsPerformanceTestingScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14852 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14858 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -28,9 +28,9 @@ export default noop.memo(function DevToolsPerformanceTestingScreen() {
   const entries = Object.entries(require("DevToolsScreens").PerformanceTestingScreens);
   obj4.children = entries.map((item) => {
     [tmp, ] = item;
-    return jsx(screenKey(5817).TableRow, {
+    return jsx(screenKey(5822).TableRow, {
       label: tmp2,
-      icon: jsx(screenKey(5817).TableRow.Icon, { IconComponent: tmp3 }),
+      icon: jsx(screenKey(5822).TableRow.Icon, { IconComponent: tmp3 }),
       arrow: true,
       onPress() {
         if (null != screenKey.push) {

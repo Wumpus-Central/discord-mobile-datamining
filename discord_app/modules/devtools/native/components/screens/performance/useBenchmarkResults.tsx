@@ -1,6 +1,6 @@
-// === Module 16041: useBenchmarkResults ===
+// === Module 16047: useBenchmarkResults ===
 
-// Module 16041 (useBenchmarkResults)
+// Module 16047 (useBenchmarkResults)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

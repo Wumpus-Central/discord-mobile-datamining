@@ -1,6 +1,6 @@
-// === Module 5336: ThemedGradient ===
+// === Module 5341: ThemedGradient ===
 
-// Module 5336 (ThemedGradient)
+// Module 5341 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1230 */;

@@ -1,13 +1,13 @@
-// === Module 9111: PremiumFeaturesBackground ===
+// === Module 9112: PremiumFeaturesBackground ===
 
-// Module 9111 (PremiumFeaturesBackground)
+// Module 9112 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const Gradients = fn(7672).Gradients;
+const Gradients = fn(7674).Gradients;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);

@@ -1,16 +1,16 @@
-// === Module 14230: GuildActionSheetHeader ===
+// === Module 14236: GuildActionSheetHeader ===
 
-// Module 14230 (GuildActionSheetHeader)
+// Module 14236 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 576 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
-import _modDef9023 from "module_9023" /* 9023 */;
-import _modDef9026 from "module_9026" /* 9026 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 14232 */;
+import _modDef9024 from "module_9024" /* 9024 */;
+import _modDef9027 from "module_9027" /* 9027 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 14238 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 14231 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 14237 */;
 import GuildStore from "GuildStore" /* 2063 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7518 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7520 */;
 
 const require = globalThis.__r;
 
@@ -20,12 +20,12 @@ function CommunityPill(guildVisibility) {
   const tmp = closure_12();
   const intl = GlobeEarthIcon(1115).intl;
   importDefault = intl.string(GlobeEarthIcon(1115).t.TME4LJ);
-  let tmp4Result = _modDef9023;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(9022).GuildVisibility.PUBLIC) {
+  let tmp4Result = _modDef9024;
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(9023).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1115).intl;
     importDefault = intl2.string(tmp2(1115).t.op2cJ6);
-    GlobeEarthIcon = tmp2(9167).GlobeEarthIcon;
-    tmp4Result = _modDef9026;
+    GlobeEarthIcon = tmp2(9168).GlobeEarthIcon;
+    tmp4Result = _modDef9027;
   }
   const obj = {
     style: tmp.communityPill,
@@ -41,7 +41,7 @@ function CommunityPill(guildVisibility) {
   obj3.children = intl3.string(GlobeEarthIcon(1115).t.K7iRig);
   items[1] = closure_10(GlobeEarthIcon(4752).Text, obj3);
   obj.children = items;
-  return closure_11(GlobeEarthIcon(5334).PressableOpacity, obj);
+  return closure_11(GlobeEarthIcon(5339).PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);

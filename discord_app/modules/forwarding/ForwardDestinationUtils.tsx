@@ -1,13 +1,13 @@
-// === Module 11934: ForwardDestinationUtils ===
+// === Module 11936: ForwardDestinationUtils ===
 
-// Module 11934 (ForwardDestinationUtils)
+// Module 11936 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import StickersUtils from "StickersUtils" /* 5103 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7922 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 11935 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7924 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 11937 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 5714 */;
+import StickersStore from "StickersStore" /* 5719 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
@@ -24,7 +24,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(11246).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(11247).getChannelIdFromDestinationId);
   found = mapped.find(found(1370).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
@@ -82,8 +82,8 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           }
           let result = tmp12(4968).shouldShowTiggerPawtect();
           if (result) {
-            result = tmp12(5635).isFeatureAgeGated(tmp12(5636).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5635);
+            result = tmp12(5640).isFeatureAgeGated(tmp12(5641).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5640);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {

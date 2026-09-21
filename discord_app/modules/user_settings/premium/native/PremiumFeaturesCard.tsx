@@ -1,30 +1,30 @@
-// === Module 9476: PremiumFeaturesCard ===
+// === Module 9477: PremiumFeaturesCard ===
 
-// Module 9476 (PremiumFeaturesCard)
+// Module 9477 (PremiumFeaturesCard)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3162 from "module_3162" /* 3162 */;
 import PremiumUtils from "PremiumUtils" /* 4414 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7402 */;
-import PriceUtils from "PriceUtils" /* 7474 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7633 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7662 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8307 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9111 */;
-import usePremiumPlanPrice from "usePremiumPlanPrice" /* 9477 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9483 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9494 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9495 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9497 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9504 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7407 */;
+import PriceUtils from "PriceUtils" /* 7479 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7635 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7664 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8308 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9112 */;
+import usePremiumPlanPrice from "usePremiumPlanPrice" /* 9478 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9484 */;
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9495 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9496 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9498 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9505 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4419 */;
 import SubscriptionStore from "SubscriptionStore" /* 4420 */;
-import TextStyles_mod from "TextStyles" /* 5736 */;
+import TextStyles_mod from "TextStyles" /* 5741 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 const usePremiumPlanPriceDefault = usePremiumPlanPrice;
@@ -268,19 +268,19 @@ export default function PremiumFeaturesCard(premiumType) {
   let premiumBundleWithPredicate;
   const tmp3 = closure_22();
   _modDef38(set.has(premiumType), "only Tier 0 and Tier 2 are supported");
-  const premiumTrialOffer = premiumType(7687).usePremiumTrialOffer();
-  const obj = premiumType(7687);
-  const premiumDiscountOffer = premiumType(8318).usePremiumDiscountOffer();
-  const obj2 = premiumType(8318);
-  const activeDiscountInfo = premiumType(8316).useActiveDiscountInfo();
-  const obj3 = premiumType(8316);
+  const premiumTrialOffer = premiumType(7689).usePremiumTrialOffer();
+  const obj = premiumType(7689);
+  const premiumDiscountOffer = premiumType(8319).usePremiumDiscountOffer();
+  const obj2 = premiumType(8319);
+  const activeDiscountInfo = premiumType(8317).useActiveDiscountInfo();
+  const obj3 = premiumType(8317);
   const tmp12 = useFractionalPremiumInfoDefault();
   let subscriptionTrial;
-  const premiumTrialOfferPremiumType = premiumType(7686).usePremiumTrialOfferPremiumType();
+  const premiumTrialOfferPremiumType = premiumType(7688).usePremiumTrialOfferPremiumType();
   if (premiumTrialOffer != null) {
     subscriptionTrial = premiumTrialOffer.subscriptionTrial;
   }
-  const obj4 = premiumType(7686);
+  const obj4 = premiumType(7688);
   let interval;
   if (subscriptionTrial != null) {
     interval = subscriptionTrial.interval;
@@ -336,7 +336,7 @@ export default function PremiumFeaturesCard(premiumType) {
     interval1 = constants.MONTH;
   }
   const tmp23 = usePremiumFeaturesDefault(premiumType, flag, UNSPECIFIED);
-  premiumBundleWithPredicate = premiumType(7649).getPremiumBundleWithPredicate((additionalPlans) => {
+  premiumBundleWithPredicate = premiumType(7651).getPremiumBundleWithPredicate((additionalPlans) => {
     let tmp = 0 === additionalPlans.additionalPlans.length;
     ({ numPremiumGuild, premiumTier, interval } = additionalPlans);
     if (tmp) {
@@ -354,9 +354,9 @@ export default function PremiumFeaturesCard(premiumType) {
     return tmp;
   });
   _modDef38(null != premiumBundleWithPredicate, "could not find a premium item");
-  const tmp8Result12 = premiumType(7649);
+  const tmp8Result12 = premiumType(7651);
   const items3 = [premiumBundleWithPredicate];
-  const discountedPriceString = premiumType(9492).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
+  const discountedPriceString = premiumType(9493).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
   let tmp32 = tmp24;
   if (null != first && stateFromStores && tmp19[1] && !isBoostOnly) {
     let flag4 = false;
@@ -373,12 +373,12 @@ export default function PremiumFeaturesCard(premiumType) {
   }
   const tmp34 = usePremiumPlanPriceDefault(premiumBundleWithPredicate.basePlanId);
   const obj6 = { style: tmp3.containerWrapper, onLayout, children: null };
-  const items4 = [closure_19(premiumType(7678).PremiumPill, { style: tmp3.pill, discountOffer: premiumDiscountOffer, isActiveDiscount: null != activeDiscountInfo, shouldShowDiscountUpsell: null != premiumDiscountOffer && null != discountedPriceString, premiumType, trialOffer: premiumTrialOffer }), ];
+  const items4 = [closure_19(premiumType(7680).PremiumPill, { style: tmp3.pill, discountOffer: premiumDiscountOffer, isActiveDiscount: null != activeDiscountInfo, shouldShowDiscountUpsell: null != premiumDiscountOffer && null != discountedPriceString, premiumType, trialOffer: premiumTrialOffer }), ];
   const obj8 = { premiumType, style, children: null };
   const obj9 = { style: tmp3.card, children: null };
   const obj10 = { style: tmp3.logoContainer, children: null };
   const obj7 = { style: tmp3.pill, discountOffer: premiumDiscountOffer, isActiveDiscount: null != activeDiscountInfo, shouldShowDiscountUpsell: null != premiumDiscountOffer && null != discountedPriceString, premiumType, trialOffer: premiumTrialOffer };
-  const tmp8Result13 = premiumType(9492);
+  const tmp8Result13 = premiumType(9493);
   if (flag3) {
     let tmp37Result = closure_19(PremiumGroupWordmarkDefault, { width: 185, height: 20, alwaysWhite: true });
   } else {
@@ -444,7 +444,7 @@ export default function PremiumFeaturesCard(premiumType) {
         const obj20 = { text: stringResult, icon: null, iconPosition: null, variant: null, size: "md", grow: true, shiny: null, disabled: null, onPress: null };
         if (null != premiumDiscountOffer) {
           const obj21 = { style: tmp3.buttonIcon, color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, size: "sm" };
-          const tmp37Result7 = closure_19(tmp8(8939).NitroWheelIcon, obj21);
+          const tmp37Result7 = closure_19(tmp8(8940).NitroWheelIcon, obj21);
         }
         obj20.icon = tmp37Result7;
         let str;

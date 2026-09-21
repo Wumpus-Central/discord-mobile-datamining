@@ -14,7 +14,7 @@ import GameAnalyticsUtils from "GameAnalyticsUtils" /* 4885 */;
 import getSoundshareAnalyticsContextDefault from "getSoundshareAnalyticsContext" /* 4891 */;
 import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 4892 */;
 import getStreamSourceMetadataDefault from "getStreamSourceMetadata" /* 4896 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7906 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7908 */;
 import ClipsStore from "ClipsStore" /* 1998 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4802 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -690,9 +690,9 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(reason) {
     }
     let obj = { stream_application_name: obj5(4897).default.getApplicationNames() };
     if (self.isOwner) {
-      let obj2 = { clips_enabled: tmp5(13933).isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
+      let obj2 = { clips_enabled: tmp5(13939).isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
       obj3 = obj2;
-      const tmp5Result = tmp5(13933);
+      const tmp5Result = tmp5(13939);
     } else {
       obj3 = {};
     }

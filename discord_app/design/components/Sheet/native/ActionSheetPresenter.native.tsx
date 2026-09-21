@@ -1,6 +1,6 @@
-// === Module 14406: ActionSheetPresenter ===
+// === Module 14412: ActionSheetPresenter ===
 
-// Module 14406 (ActionSheetPresenter)
+// Module 14412 (ActionSheetPresenter)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ let closure_9 = noop.forwardRef((sheetKey, arg1) => {
     ref2.current();
   }, []);
   const obj = { type: sheetKey(1249).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
-  transitionState(9047)(obj);
+  transitionState(9048)(obj);
   const imperativeHandle = registerDismissHandler.useImperativeHandle(arg1, () => ({
     componentDidEnter() {
       closure_1_2("visible");
@@ -57,8 +57,8 @@ let closure_9 = noop.forwardRef((sheetKey, arg1) => {
     return true;
   }, items2);
   transitionState(5181)(callback3);
-  const tmp5 = transitionState(9047);
-  return jsx(transitionState(7392).Provider, { value: memo, children: jsx(sheetKey(5167).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
+  const tmp5 = transitionState(9048);
+  return jsx(transitionState(7397).Provider, { value: memo, children: jsx(sheetKey(5167).Dialog, { dialogKey: sheetKey, onDismiss: callback2, zIndex, children: content }) });
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetPresenter.native.tsx");
@@ -74,5 +74,5 @@ export const ActionSheetPresenter = function ActionSheetPresenter(appEntryKey) {
   const found = stateFromStoresArray.filter((appEntryKey) => appEntryKey.appEntryKey === appEntryKey);
   const mapped = found.map((content) => <closure_1_9 key={content.key} sheetKey={content.key} content={content.content} impressionName={content.impressionName} impressionProperties={content.impressionProperties} zIndex={content.zIndex} />);
   const obj = appEntryKey(504);
-  return jsx(appEntryKey(12675).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(5115).TransitionGroupOverlayView, children: mapped });
+  return jsx(appEntryKey(12677).TransitionGroup, { style: StyleSheet.absoluteFill, component: appEntryKey(5115).TransitionGroupOverlayView, children: mapped });
 };

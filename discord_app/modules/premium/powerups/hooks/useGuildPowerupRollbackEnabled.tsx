@@ -1,6 +1,6 @@
-// === Module 12748: useGuildPowerupRollbackEnabled ===
+// === Module 12750: useGuildPowerupRollbackEnabled ===
 
-// Module 12748 (useGuildPowerupRollbackEnabled)
+// Module 12750 (useGuildPowerupRollbackEnabled)
 import Powerups from "Powerups" /* 4648 */;
 import ServerThemeExperiment from "ServerThemeExperiment" /* 4684 */;
 import size from "module_2" /* 2 */;

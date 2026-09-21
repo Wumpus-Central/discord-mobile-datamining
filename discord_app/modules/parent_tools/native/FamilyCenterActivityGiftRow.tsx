@@ -1,14 +1,14 @@
-// === Module 15177: FamilyCenterActivityGiftRow ===
+// === Module 15183: FamilyCenterActivityGiftRow ===
 
-// Module 15177 (FamilyCenterActivityGiftRow)
+// Module 15183 (FamilyCenterActivityGiftRow)
 import nativeDefault from "native" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8441 */;
-import useSelectedTeenUser from "useSelectedTeenUser" /* 15165 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15174 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 15175 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 15176 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8442 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 15171 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 15180 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 15181 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 15182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

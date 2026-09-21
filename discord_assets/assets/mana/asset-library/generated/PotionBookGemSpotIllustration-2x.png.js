@@ -1,6 +1,6 @@
-// === Module 6588: ? ===
+// === Module 6593: ? ===
 
-// Module 6588
+// Module 6593
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PotionBookGemSpotIllustration-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 17979: AuditLog ===
+// === Module 17990: AuditLog ===
 
-// Module 17979 (AuditLog)
+// Module 17990 (AuditLog)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -10,12 +10,12 @@ import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import PlatformsDefault from "Platforms" /* 5495 */;
-import EmojiDefault from "Emoji" /* 7370 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7408 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
-import AppliedForumTag from "AppliedForumTag" /* 10886 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 17967 */;
+import PlatformsDefault from "Platforms" /* 5500 */;
+import EmojiDefault from "Emoji" /* 7375 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7413 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
+import AppliedForumTag from "AppliedForumTag" /* 10887 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 17978 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UserRecord from "UserRecord" /* 1386 */;
@@ -537,7 +537,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(17971), { action: log.action }), , , ];
+  const items2 = [closure_14(user(17982), { action: log.action }), , , ];
   const obj7 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1115).intl;
   obj7.accessibilityLabel = intl.string(tmp10(1115).t.iXAna6);
@@ -559,7 +559,7 @@ prototype["render"] = function render() {
       if (log.action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            value = tmp18(5495).get(log.options.integration_type);
+            value = tmp18(5500).get(log.options.integration_type);
             if (null != value) {
               const icon = value.icon;
               const tmp9Result = tmp9(4607);
@@ -567,7 +567,7 @@ prototype["render"] = function render() {
               let source = tmp9(1397).makeSource(tmp25);
               const tmp9Result5 = tmp9(1397);
             }
-            const tmp18Result = tmp18(5495);
+            const tmp18Result = tmp18(5500);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -581,7 +581,7 @@ prototype["render"] = function render() {
         obj8.source = source;
         obj8.size = tmp10(1177).AvatarSizes.SMALL;
         obj7.children = closure_14(tmp20, obj8);
-        items2[1] = closure_14(tmp10(5334).PressableOpacity, obj7);
+        items2[1] = closure_14(tmp10(5339).PressableOpacity, obj7);
         obj9 = { accessibilityRole: "button", accessibilityState: null, onPress: null, style: null, disabled: null, children: null };
         const obj10 = { expanded, disabled: !checkChangesToRenderResult };
         obj9.accessibilityState = obj10;
@@ -590,14 +590,14 @@ prototype["render"] = function render() {
         obj9.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj9.children = items3;
-        items2[2] = closure_15(tmp10(5334).PressableOpacity, obj9);
+        items2[2] = closure_15(tmp10(5339).PressableOpacity, obj9);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj11 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj11.style = items4;
           obj11.size = tmp10(1177).Icon.Sizes.CUSTOM;
-          obj11.source = tmp18(14872);
+          obj11.source = tmp18(14878);
           tmp17Result = closure_14(tmp10(1177).Icon, obj11);
         }
         items2[3] = tmp17Result;
@@ -609,7 +609,7 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj4.children = items5;
-        return closure_15(tmp10(5819).Card, obj4);
+        return closure_15(tmp10(5824).Card, obj4);
       }
     }
   }

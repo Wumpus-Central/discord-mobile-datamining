@@ -1,6 +1,6 @@
-// === Module 7670: showCheckoutOrderErrorModal ===
+// === Module 7672: showCheckoutOrderErrorModal ===
 
-// Module 7670 (showCheckoutOrderErrorModal)
+// Module 7672 (showCheckoutOrderErrorModal)
 import util from "util" /* 1115 */;
 import useAlertStore from "useAlertStore" /* 5110 */;
 import AlertModal from "AlertModal" /* 5114 */;

@@ -1,6 +1,6 @@
-// === Module 14353: Ellipsis ===
+// === Module 14359: Ellipsis ===
 
-// Module 14353 (Ellipsis)
+// Module 14359 (Ellipsis)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;

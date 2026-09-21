@@ -1,6 +1,6 @@
-// === Module 13323: UserProfileActivityButtons ===
+// === Module 13325: UserProfileActivityButtons ===
 
-// Module 13323 (UserProfileActivityButtons)
+// Module 13325 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -11,27 +11,27 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4963 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7402 */;
-import isStreamingDefault from "isStreaming" /* 8527 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8663 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9340 */;
-import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 9636 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 12016 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 13324 */;
-import getActivityJoinability from "getActivityJoinability" /* 13325 */;
-import getStreamURLDefault from "getStreamURL" /* 13327 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7407 */;
+import isStreamingDefault from "isStreaming" /* 8528 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8664 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9341 */;
+import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 9637 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 12018 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 13326 */;
+import getActivityJoinability from "getActivityJoinability" /* 13327 */;
+import getStreamURLDefault from "getStreamURL" /* 13329 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5493 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5498 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4675 */;
 import GuildStore from "GuildStore" /* 2063 */;
-import LocalActivityStore from "LocalActivityStore" /* 9624 */;
+import LocalActivityStore from "LocalActivityStore" /* 9625 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5491 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5496 */;
 import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 const require = globalThis.__r;
@@ -40,7 +40,7 @@ const getActivityJoinabilityDefault = getActivityJoinability;
 require = fn;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
-const SpotifyConstants = fn(8610);
+const SpotifyConstants = fn(8611);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
@@ -139,15 +139,15 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(11152)(activity)) {
+  if (sync_id(11153)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
       let obj2 = { platform: activity.name };
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8410), disableColor: true, style: tmp.icon };
-      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8410), disableColor: true, style: tmp.icon });
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8411), disableColor: true, style: tmp.icon };
+      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8411), disableColor: true, style: tmp.icon });
       obj.onPress = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;

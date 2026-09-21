@@ -1,24 +1,24 @@
-// === Module 18023: GuildSettingsModalIntegrationPlatform ===
+// === Module 18034: GuildSettingsModalIntegrationPlatform ===
 
-// Module 18023 (GuildSettingsModalIntegrationPlatform)
+// Module 18034 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import shared from "shared" /* 4607 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import common_AlertDefault from "common/Alert" /* 5205 */;
-import PlatformsDefault from "Platforms" /* 5495 */;
-import TableRow from "TableRow" /* 5817 */;
-import NavigatorHeader from "NavigatorHeader" /* 5836 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
-import TableSwitchRow from "TableSwitchRow" /* 7440 */;
-import HeaderActionButton from "HeaderActionButton" /* 7617 */;
-import openUserSettings from "openUserSettings" /* 7622 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9854 */;
-import IntegrationTypes from "IntegrationTypes" /* 17954 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17984 */;
+import PlatformsDefault from "Platforms" /* 5500 */;
+import TableRow from "TableRow" /* 5822 */;
+import NavigatorHeader from "NavigatorHeader" /* 5841 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
+import TableSwitchRow from "TableSwitchRow" /* 7445 */;
+import HeaderActionButton from "HeaderActionButton" /* 7619 */;
+import openUserSettings from "openUserSettings" /* 7624 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9855 */;
+import IntegrationTypes from "IntegrationTypes" /* 17965 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17995 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9855 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9856 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -205,7 +205,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(5495).get(platformType);
+    value = tmp3(5500).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -268,7 +268,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     items2[1] = closure_11(tmp(4752).Text, obj12);
     obj9.children = items2;
     obj8.children = closure_12(tmp(5184).Stack, obj9);
-    const items3 = [closure_11(tmp(8870).Form, obj8), closure_11(tmp(7280).NavScrim, {})];
+    const items3 = [closure_11(tmp(8871).Form, obj8), closure_11(tmp(7285).NavScrim, {})];
     obj11.children = items3;
     return closure_12(closure_13, obj11);
   }

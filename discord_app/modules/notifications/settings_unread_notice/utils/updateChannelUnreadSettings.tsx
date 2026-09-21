@@ -1,9 +1,9 @@
-// === Module 11680: updateChannelUnreadSettings ===
+// === Module 11682: updateChannelUnreadSettings ===
 
-// Module 11680 (updateChannelUnreadSettings)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7354 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7359 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10404 */;
+// Module 11682 (updateChannelUnreadSettings)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7359 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7364 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10405 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
 
 require = fn;

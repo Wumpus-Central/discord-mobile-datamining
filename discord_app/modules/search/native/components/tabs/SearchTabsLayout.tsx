@@ -1,21 +1,21 @@
-// === Module 17096: SearchTabsLayout ===
+// === Module 17107: SearchTabsLayout ===
 
-// Module 17096 (SearchTabsLayout)
+// Module 17107 (SearchTabsLayout)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6892 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12590 */;
-import SearchUtils from "SearchUtils" /* 12592 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12599 */;
-import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12600 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12610 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12611 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12613 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17097 */;
-import SearchTabsPageDefault from "SearchTabsPage" /* 17098 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6897 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12592 */;
+import SearchUtils from "SearchUtils" /* 12594 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12601 */;
+import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12602 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12612 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12613 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12615 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 17108 */;
+import SearchTabsPageDefault from "SearchTabsPage" /* 17109 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 7521 */;
-import SearchQueryStore from "SearchQueryStore" /* 12591 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12614 */;
+import SearchMessageStore from "SearchMessageStore" /* 7523 */;
+import SearchQueryStore from "SearchQueryStore" /* 12593 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12616 */;
 
 require = fn;
 function NoSearchResultsScreen(searchContext) {
@@ -30,7 +30,7 @@ function NoSearchResultsScreen(searchContext) {
   return closure_12(pages_ErrorScreenDefault, obj);
 }
 const View = fn(17).View;
-const SearchConstants = fn(8121);
+const SearchConstants = fn(8122);
 ({ MESSAGE_SEARCH_RESULT_TABS_SET: closure_8, SEARCH_MESSAGE_TAB_SENTINEL: closure_9, SearchTabs: c10 } = SearchConstants);
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
@@ -257,12 +257,12 @@ export default function ConnectedSearchTabsLayout(width) {
   const items2 = [candidateTabs];
   const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
-  const autoSearchGuildChannelTab = searchContext(17184).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
-  const obj3 = searchContext(17184);
-  const autoSearchMembersTab = searchContext(17185).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
-  const obj4 = searchContext(17185);
-  const autoSearchPeopleTab = searchContext(17186).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(17186);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(17187).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
+  const autoSearchGuildChannelTab = searchContext(17195).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
+  const obj3 = searchContext(17195);
+  const autoSearchMembersTab = searchContext(17196).useAutoSearchMembersTab(searchContext, !memo.has(constants.MEMBERS));
+  const obj4 = searchContext(17196);
+  const autoSearchPeopleTab = searchContext(17197).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(17197);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(17198).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
   return closure_12(closure_21, { searchContext, visibleTabs, visibleTabCounts, width: width.width });
 };

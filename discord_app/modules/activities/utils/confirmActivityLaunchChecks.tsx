@@ -1,6 +1,6 @@
-// === Module 9602: confirmActivityLaunchChecks ===
+// === Module 9603: confirmActivityLaunchChecks ===
 
-// Module 9602 (confirmActivityLaunchChecks)
+// Module 9603 (confirmActivityLaunchChecks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
@@ -176,7 +176,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(9605)(tmp, channel, () => {
+                  shouldClosePopout(9606)(tmp, channel, () => {
                     value(c2[10])().leaveActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
                     closure_0(true);
                   }, () => closure_0(false));

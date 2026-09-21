@@ -1,13 +1,13 @@
-// === Module 12361: InThisServerSection ===
+// === Module 12363: InThisServerSection ===
 
-// Module 12361 (InThisServerSection)
+// Module 12363 (InThisServerSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import Pressables from "Pressables" /* 5334 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9522 */;
-import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12339 */;
+import Pressables from "Pressables" /* 5339 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9523 */;
+import AppLauncherHomeTypes from "AppLauncherHomeTypes" /* 12341 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   const tmp = closure_7();
   const application = onAppSelected.appItem.application;
-  const appLauncherIconSource = onAppSelected(12302).getAppLauncherIconSource(application);
+  const appLauncherIconSource = onAppSelected(12304).getAppLauncherIconSource(application);
   const obj2 = {
     accessible: true,
     accessibilityLabel: application.name,
@@ -36,11 +36,11 @@ function AppInThisServer(onAppSelected) {
   let tmp6 = null;
   if (null != appLauncherIconSource) {
     const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-    tmp6 = closure_5(application(12307), obj3);
+    tmp6 = closure_5(application(12309), obj3);
   }
   const items = [tmp6, closure_5(onAppSelected(4752).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name })];
   obj2.children = items;
-  return closure_6(onAppSelected(9183).PressableScale, obj2, application.id);
+  return closure_6(onAppSelected(9184).PressableScale, obj2, application.id);
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
-// === Module 9909: useChannelVideoLimit ===
+// === Module 9910: useChannelVideoLimit ===
 
-// Module 9909 (useChannelVideoLimit)
+// Module 9910 (useChannelVideoLimit)
 import GuildStore from "GuildStore" /* 2063 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4780 */;
 

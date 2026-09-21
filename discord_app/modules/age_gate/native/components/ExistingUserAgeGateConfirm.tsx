@@ -1,6 +1,6 @@
-// === Module 17717: ExistingUserAgeGateConfirm ===
+// === Module 17728: ExistingUserAgeGateConfirm ===
 
-// Module 17717 (ExistingUserAgeGateConfirm)
+// Module 17728 (ExistingUserAgeGateConfirm)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -72,5 +72,5 @@ export default function ExistingUserAgeGateConfirm(age) {
   obj7.children = closure_8(onConfirm(5186).Button, obj8);
   items[2] = closure_8(View, obj7);
   obj2.children = items;
-  return closure_9(onConfirm(7363).SafeAreaPaddingView, obj2);
+  return closure_9(onConfirm(7368).SafeAreaPaddingView, obj2);
 };

@@ -1,13 +1,13 @@
-// === Module 7507: GuildOfficialMessageUtils ===
+// === Module 7509: GuildOfficialMessageUtils ===
 
-// Module 7507 (GuildOfficialMessageUtils)
+// Module 7509 (GuildOfficialMessageUtils)
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import ColorUtils from "ColorUtils" /* 4605 */;
 import shared from "shared" /* 4607 */;
-import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7508 */;
-import ThreadHooks from "ThreadHooks" /* 7509 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7510 */;
+import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7510 */;
+import ThreadHooks from "ThreadHooks" /* 7511 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7512 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 

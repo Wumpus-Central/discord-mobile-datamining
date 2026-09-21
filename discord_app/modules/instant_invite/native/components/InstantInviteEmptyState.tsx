@@ -1,12 +1,12 @@
-// === Module 10108: InstantInviteEmptyState ===
+// === Module 10109: InstantInviteEmptyState ===
 
-// Module 10108 (InstantInviteEmptyState)
+// Module 10109 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 576 */;
-import FreeFormTextInputDefault from "FreeFormTextInput" /* 7177 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10077 */;
-import _modDef10109 from "module_10109" /* 10109 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 7182 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10078 */;
+import _modDef10110 from "module_10110" /* 10110 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 10076 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 10077 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -28,7 +28,7 @@ export default function _default(link) {
   const items = [CreateInviteModalStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => inviteSettings.getInviteSettings());
   const obj2 = { style: tmp.container, children: null };
-  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef10109, title: null, body: null };
+  const obj3 = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef10110, title: null, body: null };
   const intl = stateFromStores(1115).intl;
   obj3.title = intl.string(stateFromStores(1115).t.tQc0l8);
   const intl2 = stateFromStores(1115).intl;
@@ -49,8 +49,8 @@ export default function _default(link) {
   obj6.accessibilityLabel = intl3.string(stateFromStores(1115).t["3D5yo/"]);
   obj6.onPress = onPressSettings;
   obj6.style = tmp.settingsButton;
-  obj6.children = closure_5(stateFromStores(7620).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(5334).PressableOpacity, obj6);
+  obj6.children = closure_5(stateFromStores(7622).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(5339).PressableOpacity, obj6);
   obj4.children = items2;
   items1[1] = closure_6(View, obj4);
   const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };

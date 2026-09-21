@@ -1,13 +1,13 @@
-// === Module 15314: BountiesScrollEndCard ===
+// === Module 15320: BountiesScrollEndCard ===
 
-// Module 15314 (BountiesScrollEndCard)
+// Module 15320 (BountiesScrollEndCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4757 */;
 import timingPresets from "timingPresets" /* 4760 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10225 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15280 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15281 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10226 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15286 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15287 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
@@ -51,11 +51,11 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const obj6 = { style: null, pointerEvents: "box-none", children: null };
   const items2 = [tmp.overlayContent, animatedStyle];
   obj6.style = items2;
-  const items3 = [closure_8(isScrollingInBoundsSharedValue(15315), { bounty, sourceQuestContent, disabled: !isActive }), ];
+  const items3 = [closure_8(isScrollingInBoundsSharedValue(15321), { bounty, sourceQuestContent, disabled: !isActive }), ];
   const obj8 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: closure_8(isScrollingInBoundsSharedValue(15317), {
+    children: closure_8(isScrollingInBoundsSharedValue(15323), {
       bounty,
       visible,
       sourceQuestContent,
@@ -74,7 +74,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5656).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5661).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4756);

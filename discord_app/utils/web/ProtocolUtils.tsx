@@ -1,6 +1,6 @@
-// === Module 13230: ProtocolUtils ===
+// === Module 13232: ProtocolUtils ===
 
-// Module 13230 (ProtocolUtils)
+// Module 13232 (ProtocolUtils)
 import _modDef5078 from "module_5078" /* 5078 */;
 
 const os = _modDef5078.os;

@@ -1,9 +1,9 @@
-// === Module 15031: AgeGroupConfirmAccountStatusSetting ===
+// === Module 15037: AgeGroupConfirmAccountStatusSetting ===
 
-// Module 15031 (AgeGroupConfirmAccountStatusSetting)
-import SettingsConstants from "SettingsConstants" /* 8232 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 15026 */;
-import SettingBuilders from "SettingBuilders" /* 11723 */;
+// Module 15037 (AgeGroupConfirmAccountStatusSetting)
+import SettingsConstants from "SettingsConstants" /* 8233 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 15032 */;
+import SettingBuilders from "SettingBuilders" /* 11725 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

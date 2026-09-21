@@ -1,6 +1,6 @@
-// === Module 10569: EmojiPickerRowViewNativeComponent ===
+// === Module 10570: EmojiPickerRowViewNativeComponent ===
 
-// Module 10569 (EmojiPickerRowViewNativeComponent)
+// Module 10570 (EmojiPickerRowViewNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

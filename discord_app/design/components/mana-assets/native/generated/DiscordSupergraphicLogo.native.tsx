@@ -1,11 +1,11 @@
-// === Module 6147: DiscordSupergraphicLogo ===
+// === Module 6152: DiscordSupergraphicLogo ===
 
-// Module 6147 (DiscordSupergraphicLogo)
+// Module 6152 (DiscordSupergraphicLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4457 */;
-import _modDef6148 from "module_6148" /* 6148 */;
+import _modDef6153 from "module_6153" /* 6153 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,7 +42,7 @@ export const DiscordSupergraphicLogo = function DiscordSupergraphicLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6148 };
+  obj4.source = { uri: _modDef6153 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

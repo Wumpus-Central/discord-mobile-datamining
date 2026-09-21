@@ -1,6 +1,6 @@
-// === Module 5317: AppsIcon ===
+// === Module 5278: AppsIcon ===
 
-// Module 5317 (AppsIcon)
+// Module 5278 (AppsIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5244 from "module_5244" /* 5244 */;

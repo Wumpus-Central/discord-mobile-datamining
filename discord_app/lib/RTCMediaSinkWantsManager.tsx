@@ -1,14 +1,14 @@
-// === Module 14067: RTCMediaSinkWantsManager ===
+// === Module 14073: RTCMediaSinkWantsManager ===
 
-// Module 14067 (RTCMediaSinkWantsManager)
+// Module 14073 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4811 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9695 */;
-import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 14068 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9696 */;
+import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 14074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4814 */;

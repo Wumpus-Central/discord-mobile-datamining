@@ -1,6 +1,6 @@
-// === Module 15422: QuestDockBlurredContentBackground ===
+// === Module 15428: QuestDockBlurredContentBackground ===
 
-// Module 15422 (QuestDockBlurredContentBackground)
+// Module 15428 (QuestDockBlurredContentBackground)
 import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 5173 */;
 import noop from "module_19" /* 19 */;
 

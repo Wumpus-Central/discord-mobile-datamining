@@ -1,10 +1,10 @@
-// === Module 6847: CircleErrorIcon ===
+// === Module 6852: CircleErrorIcon ===
 
-// Module 6847 (CircleErrorIcon)
+// Module 6852 (CircleErrorIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod6848 from "module_6848" /* 6848 */;
-import _mod6849 from "module_6849" /* 6849 */;
+import _mod6853 from "module_6853" /* 6853 */;
+import _mod6854 from "module_6854" /* 6854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,8 +26,8 @@ export const CircleErrorIcon = function CircleErrorIcon(color) {
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod6848, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod6849, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod6853, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod6854, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

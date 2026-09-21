@@ -1,6 +1,6 @@
-// === Module 5645: ButtonGroup ===
+// === Module 5650: ButtonGroup ===
 
-// Module 5645 (ButtonGroup)
+// Module 5650 (ButtonGroup)
 import Stack_Stack from "Stack/Stack" /* 5184 */;
 import noop from "module_19" /* 19 */;
 

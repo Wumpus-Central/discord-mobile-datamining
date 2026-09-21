@@ -1,19 +1,19 @@
-// === Module 13796: GuildBoostingGuildList ===
+// === Module 13802: GuildBoostingGuildList ===
 
-// Module 13796 (GuildBoostingGuildList)
+// Module 13802 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4664 */;
 import useThemeDefault from "useTheme" /* 4690 */;
-import GuildIconDefault from "GuildIcon" /* 5796 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7230 */;
-import transitionToGuild from "transitionToGuild" /* 7582 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 10010 */;
-import _modDef10668 from "module_10668" /* 10668 */;
-import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13765 */;
+import GuildIconDefault from "GuildIcon" /* 5801 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7235 */;
+import transitionToGuild from "transitionToGuild" /* 7584 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 10011 */;
+import _modDef10669 from "module_10669" /* 10669 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13771 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
-import SortedGuildStore from "SortedGuildStore" /* 5650 */;
+import SortedGuildStore from "SortedGuildStore" /* 5655 */;
 
 require = fn;
 function GuildBoostingGuildListItem(guildId) {
@@ -40,14 +40,14 @@ function GuildBoostingGuildListItem(guildId) {
     };
     const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
     const tmp2Result = TouchableHitBoxDefault;
-    obj3.size = tmp5(5796).GuildIconSizes.LARGE;
+    obj3.size = tmp5(5801).GuildIconSizes.LARGE;
     obj3.style = tmp.guildIcon;
     const items1 = [closure_8(GuildIconDefault, obj3), , ];
     const obj4 = { style: tmp.guildCardDescription, children: null };
     const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
     const items2 = [closure_8(tmp5(4752).Text, obj5), ];
     const obj6 = { style: tmp.subscriptionInfo, children: null };
-    const obj7 = { source: _modDef10668, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
+    const obj7 = { source: _modDef10669, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
     const items3 = [closure_8(closure_4, obj7), ];
     const obj8 = { variant: "text-xs/medium", children: null };
     const intl = tmp5(1115).intl;

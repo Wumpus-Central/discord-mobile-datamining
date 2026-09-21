@@ -1,8 +1,8 @@
-// === Module 16904: HomeWelcomeMessage ===
+// === Module 16910: HomeWelcomeMessage ===
 
-// Module 16904 (HomeWelcomeMessage)
+// Module 16910 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 576 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8455 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8456 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import UserStore from "UserStore" /* 1372 */;

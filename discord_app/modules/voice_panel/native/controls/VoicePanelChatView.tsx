@@ -1,21 +1,21 @@
-// === Module 12521: VoicePanelChatView ===
+// === Module 12523: VoicePanelChatView ===
 
-// Module 12521 (VoicePanelChatView)
+// Module 12523 (VoicePanelChatView)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import _modDef4709 from "module_4709" /* 4709 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4957 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5336 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7313 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 12519 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12523 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5341 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7318 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 12521 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12525 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(12522).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(12524).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1074);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);

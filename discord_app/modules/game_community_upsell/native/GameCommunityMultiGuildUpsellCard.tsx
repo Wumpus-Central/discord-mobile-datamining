@@ -1,11 +1,11 @@
-// === Module 16601: GameCommunityMultiGuildUpsellCard ===
+// === Module 16607: GameCommunityMultiGuildUpsellCard ===
 
-// Module 16601 (GameCommunityMultiGuildUpsellCard)
+// Module 16607 (GameCommunityMultiGuildUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
-import transitionToGuild from "transitionToGuild" /* 7582 */;
+import transitionToGuild from "transitionToGuild" /* 7584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

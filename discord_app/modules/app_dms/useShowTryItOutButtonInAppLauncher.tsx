@@ -1,9 +1,9 @@
-// === Module 12395: useShowTryItOutButtonInAppLauncher ===
+// === Module 12397: useShowTryItOutButtonInAppLauncher ===
 
-// Module 12395 (useShowTryItOutButtonInAppLauncher)
-import canLaunchFrame from "canLaunchFrame" /* 9593 */;
-import getPrimaryAppCommand from "getPrimaryAppCommand" /* 9600 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12396 */;
+// Module 12397 (useShowTryItOutButtonInAppLauncher)
+import canLaunchFrame from "canLaunchFrame" /* 9594 */;
+import getPrimaryAppCommand from "getPrimaryAppCommand" /* 9601 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12398 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");

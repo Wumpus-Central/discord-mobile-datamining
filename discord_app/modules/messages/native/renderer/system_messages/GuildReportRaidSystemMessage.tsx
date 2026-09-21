@@ -1,15 +1,15 @@
-// === Module 8297: GuildReportRaidSystemMessage ===
+// === Module 8298: GuildReportRaidSystemMessage ===
 
-// Module 8297 (GuildReportRaidSystemMessage)
+// Module 8298 (GuildReportRaidSystemMessage)
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8210 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8217 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8219 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8221 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8290 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8291 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8211 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8218 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8220 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8222 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8291 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8292 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildStore from "GuildStore" /* 2063 */;
 

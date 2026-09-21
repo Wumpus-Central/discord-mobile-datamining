@@ -1,6 +1,6 @@
-// === Module 10404: notificationSettingsFlagUtils ===
+// === Module 10405: notificationSettingsFlagUtils ===
 
-// Module 10404 (notificationSettingsFlagUtils)
+// Module 10405 (notificationSettingsFlagUtils)
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
 import size from "module_2" /* 2 */;

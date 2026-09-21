@@ -1,15 +1,15 @@
-// === Module 16967: VibegrationsDesignRemarkSheet ===
+// === Module 16975: VibegrationsDesignRemarkSheet ===
 
-// Module 16967 (VibegrationsDesignRemarkSheet)
+// Module 16975 (VibegrationsDesignRemarkSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16930 */;
+import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16936 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const sendUserMessage = fn(13359).sendUserMessage;
+const sendUserMessage = fn(13361).sendUserMessage;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const VibegrationsDesignRemarkSheet = "VibegrationsDesignRemarkSheet";

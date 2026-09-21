@@ -1,12 +1,12 @@
-// === Module 15425: PremiumRewardGradient ===
+// === Module 15431: PremiumRewardGradient ===
 
-// Module 15425 (PremiumRewardGradient)
+// Module 15431 (PremiumRewardGradient)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4457 */;
 import design_shared from "design/shared" /* 4608 */;
 import useThemeDefault from "useTheme" /* 4690 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import _modDef5876 from "module_5876" /* 5876 */;
+import _modDef5881 from "module_5881" /* 5881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -67,7 +67,7 @@ function PremiumRewardGlowGradient(arg0) {
   }
   const obj5 = { style: items2, maskElement: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: ["transparent", "black"], start: start2, end: end2 }), children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: memo, start, end }) };
   items2[1] = glowLight;
-  const items3 = [timestampProducer(_modDef5876, obj5), children];
+  const items3 = [timestampProducer(_modDef5881, obj5), children];
   obj4.children = items3;
   return React5(hasOwnProperty, obj4);
 }

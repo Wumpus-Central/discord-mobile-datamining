@@ -1,11 +1,11 @@
-// === Module 11944: ShareFooterLayout ===
+// === Module 11946: ShareFooterLayout ===
 
-// Module 11944 (ShareFooterLayout)
+// Module 11946 (ShareFooterLayout)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
 import spring from "spring" /* 5185 */;
 import springPresets from "springPresets" /* 5189 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7221 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 7226 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

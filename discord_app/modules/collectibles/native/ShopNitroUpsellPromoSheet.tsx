@@ -1,17 +1,17 @@
-// === Module 16128: ShopNitroUpsellPromoSheet ===
+// === Module 16134: ShopNitroUpsellPromoSheet ===
 
-// Module 16128 (ShopNitroUpsellPromoSheet)
+// Module 16134 (ShopNitroUpsellPromoSheet)
 import util from "util" /* 1115 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import ButtonGroup from "ButtonGroup" /* 5645 */;
-import native from "native" /* 5904 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7402 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8094 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9426 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10222 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10223 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10226 */;
-import PromoSheet from "PromoSheet" /* 10487 */;
+import ButtonGroup from "ButtonGroup" /* 5650 */;
+import native from "native" /* 5909 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7407 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8096 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9427 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 10223 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 10224 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10227 */;
+import PromoSheet from "PromoSheet" /* 10488 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

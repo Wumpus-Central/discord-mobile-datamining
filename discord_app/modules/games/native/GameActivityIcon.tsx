@@ -1,12 +1,12 @@
-// === Module 10011: GameActivityIcon ===
+// === Module 10012: GameActivityIcon ===
 
-// Module 10011 (GameActivityIcon)
+// Module 10012 (GameActivityIcon)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import native from "native" /* 4466 */;
 import shared from "shared" /* 4607 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8839 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8840 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

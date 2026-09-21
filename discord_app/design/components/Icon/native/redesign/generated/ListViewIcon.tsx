@@ -1,9 +1,9 @@
-// === Module 7333: ListViewIcon ===
+// === Module 7338: ListViewIcon ===
 
-// Module 7333 (ListViewIcon)
+// Module 7338 (ListViewIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod7334 from "module_7334" /* 7334 */;
+import _mod7339 from "module_7339" /* 7339 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ListViewIcon = function ListViewIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7334, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7339, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

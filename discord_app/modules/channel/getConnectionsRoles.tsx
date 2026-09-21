@@ -1,6 +1,6 @@
-// === Module 5621: getConnectionsRoles ===
+// === Module 5626: getConnectionsRoles ===
 
-// Module 5621 (getConnectionsRoles)
+// Module 5626 (getConnectionsRoles)
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;

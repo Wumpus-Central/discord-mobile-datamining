@@ -1,6 +1,6 @@
-// === Module 11261: ModalActionButton ===
+// === Module 11262: ModalActionButton ===
 
-// Module 11261 (ModalActionButton)
+// Module 11262 (ModalActionButton)
 import components_Button_Button from "components/Button/Button" /* 5186 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,11 +1,11 @@
-// === Module 10570: EmojiPickerPremiumSearchUpsell ===
+// === Module 10571: EmojiPickerPremiumSearchUpsell ===
 
-// Module 10570 (EmojiPickerPremiumSearchUpsell)
+// Module 10571 (EmojiPickerPremiumSearchUpsell)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9475 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9505 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9476 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9506 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 

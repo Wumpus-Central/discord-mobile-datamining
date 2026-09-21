@@ -1,6 +1,6 @@
-// === Module 5355: NativePermissionStore ===
+// === Module 5360: NativePermissionStore ===
 
-// Module 5355 (NativePermissionStore)
+// Module 5360 (NativePermissionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;

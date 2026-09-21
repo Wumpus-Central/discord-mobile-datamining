@@ -1,11 +1,11 @@
-// === Module 12237: ScheduledMessageDraftCoachmarkHooks ===
+// === Module 12239: ScheduledMessageDraftCoachmarkHooks ===
 
-// Module 12237 (ScheduledMessageDraftCoachmarkHooks)
+// Module 12239 (ScheduledMessageDraftCoachmarkHooks)
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2029 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5494 */;
 import DraftStore from "DraftStore" /* 5105 */;
 
 require = fn;

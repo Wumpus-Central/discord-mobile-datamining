@@ -1,6 +1,6 @@
-// === Module 9117: WishlistButton ===
+// === Module 9118: WishlistButton ===
 
-// Module 9117 (WishlistButton)
+// Module 9118 (WishlistButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
@@ -8,7 +8,7 @@ import native from "native" /* 4466 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import spring from "spring" /* 5185 */;
 import springPresets from "springPresets" /* 5189 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 9048 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 9049 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

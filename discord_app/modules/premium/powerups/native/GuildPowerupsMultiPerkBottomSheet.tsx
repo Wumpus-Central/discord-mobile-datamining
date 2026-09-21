@@ -1,6 +1,6 @@
-// === Module 12799: GuildPowerupsMultiPerkBottomSheet ===
+// === Module 12801: GuildPowerupsMultiPerkBottomSheet ===
 
-// Module 12799 (GuildPowerupsMultiPerkBottomSheet)
+// Module 12801 (GuildPowerupsMultiPerkBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
@@ -12,18 +12,18 @@ import themes from "themes" /* 4464 */;
 import useThemeDefault from "useTheme" /* 4690 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12748 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12752 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12765 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12771 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12772 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12775 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12776 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12786 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12787 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 12791 */;
-import useGuildPowerupColorConfigDefault from "useGuildPowerupColorConfig" /* 12800 */;
-import usePowerupGroupConfigDefault from "usePowerupGroupConfig" /* 12801 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12750 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12754 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12767 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12773 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12774 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12777 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12778 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12788 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12789 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 12793 */;
+import useGuildPowerupColorConfigDefault from "useGuildPowerupColorConfig" /* 12802 */;
+import usePowerupGroupConfigDefault from "usePowerupGroupConfig" /* 12803 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles_mod from "createStyles" /* 4756 */;
 import size from "module_2" /* 2 */;
@@ -192,12 +192,12 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
     obj2.contentContainerStyle = obj3;
     ({ title: obj4.title, description: obj4.description } = tmp4);
-    const items = [closure_4(tmp2(12804), { title: null, description: null }), , ];
+    const items = [closure_4(tmp2(12806), { title: null, description: null }), , ];
     let tmp6Result = null != tmp4.disabledReason;
     if (tmp6Result) {
       const obj6 = { style: tmp.disabledReasonContainer, children: null };
       const obj7 = { text: tmp4.disabledReason };
-      obj6.children = closure_4(tmp2(12797), obj7);
+      obj6.children = closure_4(tmp2(12799), obj7);
       tmp6Result = closure_4(View, obj6);
     }
     items[1] = tmp6Result;
@@ -206,8 +206,8 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     obj13.children = powerups.map((powerup) => React4(GuildPowerupsMultiPerkCard, { guildId, powerup, forceStaticImage: forceStaticImages.forceStaticImages }, powerup.skuId));
     items[2] = closure_4(View, obj13);
     obj2.children = items;
-    obj.children = closure_5(guildId(6864).BottomSheetScrollView, obj2);
-    tmp6Result2 = closure_4(guildId(7390).BottomSheet, obj);
+    obj.children = closure_5(guildId(6869).BottomSheetScrollView, obj2);
+    tmp6Result2 = closure_4(guildId(7395).BottomSheet, obj);
     const obj5 = { title: null, description: null };
   }
   return tmp6Result2;

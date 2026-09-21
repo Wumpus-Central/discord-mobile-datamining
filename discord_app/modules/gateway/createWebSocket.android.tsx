@@ -1,6 +1,6 @@
-// === Module 13892: createWebSocket ===
+// === Module 13898: createWebSocket ===
 
-// Module 13892 (createWebSocket)
+// Module 13898 (createWebSocket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");

@@ -1,6 +1,6 @@
-// === Module 7640: EntitlementActionCreators ===
+// === Module 7642: EntitlementActionCreators ===
 
-// Module 7640 (EntitlementActionCreators)
+// Module 7642 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

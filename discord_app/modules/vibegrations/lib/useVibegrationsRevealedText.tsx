@@ -1,8 +1,8 @@
-// === Module 17023: useVibegrationsRevealedText ===
+// === Module 17031: useVibegrationsRevealedText ===
 
-// Module 17023 (useVibegrationsRevealedText)
-import VibegrationsStreamReveal from "VibegrationsStreamReveal" /* 17024 */;
-import vibegrationsPageVisibility from "vibegrationsPageVisibility" /* 17025 */;
+// Module 17031 (useVibegrationsRevealedText)
+import VibegrationsStreamReveal from "VibegrationsStreamReveal" /* 17032 */;
+import vibegrationsPageVisibility from "vibegrationsPageVisibility" /* 17033 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
@@ -100,7 +100,7 @@ export const useVibegrationsRevealedText = function useVibegrationsRevealedText(
             const obj2 = { target, length: target.length };
             dependencyMap(obj2);
           }
-          obj = closure_0(17025);
+          obj = closure_0(17033);
         }
         obj = vibegrationsPageVisibility;
         return vibegrationsPageVisibility.subscribePageVisibility(flushIfHidden);
@@ -122,8 +122,8 @@ export const useVibegrationsRevealedText = function useVibegrationsRevealedText(
     obj5 = { target: source, length: null };
     if (streaming) {
       ({ target, length } = tmp2);
-      let length2 = target(17024).reconcileRevealedLength(target, source, length);
-      const targetResult = target(17024);
+      let length2 = target(17032).reconcileRevealedLength(target, source, length);
+      const targetResult = target(17032);
     } else {
       length2 = source.length;
     }

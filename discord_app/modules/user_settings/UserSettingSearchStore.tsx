@@ -1,6 +1,6 @@
-// === Module 14960: UserSettingSearchStore ===
+// === Module 14966: UserSettingSearchStore ===
 
-// Module 14960 (UserSettingSearchStore)
+// Module 14966 (UserSettingSearchStore)
 import ZustandStore from "ZustandStore" /* 4626 */;
 import size from "module_2" /* 2 */;
 

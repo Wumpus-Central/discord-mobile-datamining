@@ -1,10 +1,10 @@
-// === Module 12622: SearchButton ===
+// === Module 12624: SearchButton ===
 
-// Module 12622 (SearchButton)
+// Module 12624 (SearchButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7291 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7296 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

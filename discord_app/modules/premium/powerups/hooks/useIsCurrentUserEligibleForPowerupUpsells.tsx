@@ -1,8 +1,8 @@
-// === Module 16500: useIsCurrentUserEligibleForPowerupUpsells ===
+// === Module 16506: useIsCurrentUserEligibleForPowerupUpsells ===
 
-// Module 16500 (useIsCurrentUserEligibleForPowerupUpsells)
+// Module 16506 (useIsCurrentUserEligibleForPowerupUpsells)
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import SortedGuildStore from "SortedGuildStore" /* 5650 */;
+import SortedGuildStore from "SortedGuildStore" /* 5655 */;
 import UserStore from "UserStore" /* 1372 */;
 import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4650 */;
 

@@ -1,6 +1,6 @@
-// === Module 7737: MemberSafetyElasticSearchQueryTypes ===
+// === Module 7739: MemberSafetyElasticSearchQueryTypes ===
 
-// Module 7737 (MemberSafetyElasticSearchQueryTypes)
+// Module 7739 (MemberSafetyElasticSearchQueryTypes)
 import DurationsDefault from "Durations" /* 1091 */;
 
 const result = 2 * DurationsDefault.Millis.DAY;

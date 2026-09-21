@@ -1,9 +1,9 @@
-// === Module 12639: ChannelAutocompleteEmojiUpsell ===
+// === Module 12641: ChannelAutocompleteEmojiUpsell ===
 
-// Module 12639 (ChannelAutocompleteEmojiUpsell)
+// Module 12641 (ChannelAutocompleteEmojiUpsell)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import FastImageDefault from "FastImage" /* 5799 */;
+import FastImageDefault from "FastImage" /* 5804 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,12 +1,12 @@
-// === Module 16428: MessagesItemEmptyState ===
+// === Module 16434: MessagesItemEmptyState ===
 
-// Module 16428 (MessagesItemEmptyState)
+// Module 16434 (MessagesItemEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import RootNavigationRef from "RootNavigationRef" /* 4614 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import _modDef16387 from "module_16387" /* 16387 */;
+import _modDef16393 from "module_16393" /* 16393 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ export default noop.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj3.source = _modDef16387;
+  obj3.source = _modDef16393;
   obj3.style = tmp.image;
   obj2.children = timestampProducer(React4, obj3);
   const items = [timestampProducer(hasOwnProperty, obj2), , , ];

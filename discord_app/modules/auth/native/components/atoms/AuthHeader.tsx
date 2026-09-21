@@ -1,10 +1,10 @@
-// === Module 7212: AuthHeader ===
+// === Module 7217: AuthHeader ===
 
-// Module 7212 (AuthHeader)
+// Module 7217 (AuthHeader)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5736 */;
+import TextStyles from "TextStyles" /* 5741 */;
 
 require = fn;
 const jsx = fn(21).jsx;

@@ -1,6 +1,6 @@
-// === Module 6380: ? ===
+// === Module 6385: ? ===
 
-// Module 6380
+// Module 6385
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GiftCardTwoLeft3dIllustration-2x.png.js");

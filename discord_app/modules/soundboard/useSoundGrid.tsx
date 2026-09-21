@@ -1,11 +1,11 @@
-// === Module 17515: useSoundGrid ===
+// === Module 17526: useSoundGrid ===
 
-// Module 17515 (useSoundGrid)
+// Module 17526 (useSoundGrid)
 import GuildBoostingUtils from "GuildBoostingUtils" /* 4649 */;
 import SoundboardTypes from "SoundboardTypes" /* 5232 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9758 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 17516 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17519 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9759 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 17527 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17530 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;

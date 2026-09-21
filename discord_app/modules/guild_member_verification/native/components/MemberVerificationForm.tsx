@@ -1,17 +1,17 @@
-// === Module 5808: MemberVerificationForm ===
+// === Module 5813: MemberVerificationForm ===
 
-// Module 5808 (MemberVerificationForm)
+// Module 5813 (MemberVerificationForm)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4580 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5784 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5789 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(5784).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(5789).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1074).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -63,7 +63,7 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
                   const intl = closure_1_0(1115).intl;
                   obj2.content = intl.string(closure_1_0(1115).t.StC497);
-                  obj2.icon = closure_1_1(5809);
+                  obj2.icon = closure_1_1(5814);
                   closure_1_1(4454).open(obj2);
                 })();
                 c6 = 3;

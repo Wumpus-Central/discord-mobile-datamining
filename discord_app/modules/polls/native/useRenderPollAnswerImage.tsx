@@ -1,10 +1,10 @@
-// === Module 12477: useRenderPollAnswerImage ===
+// === Module 12479: useRenderPollAnswerImage ===
 
-// Module 12477 (useRenderPollAnswerImage)
+// Module 12479 (useRenderPollAnswerImage)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import EmojiTypes from "EmojiTypes" /* 4412 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import EmojiDefault from "Emoji" /* 7370 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import EmojiDefault from "Emoji" /* 7375 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;

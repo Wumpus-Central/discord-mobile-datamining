@@ -1,10 +1,10 @@
-// === Module 8516: VideoBackground ===
+// === Module 8517: VideoBackground ===
 
-// Module 8516 (VideoBackground)
+// Module 8517 (VideoBackground)
 import native from "native" /* 1177 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8518 */;
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 8519 */;
+import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8519 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 8520 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import apply from "module_12" /* 12 */;
@@ -18,11 +18,11 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8517)();
+  const tmp5 = first(8518)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8518).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(8519).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
     hexToRgbResult = require("ColorUtils").hexToRgb(tmp3(576).unsafe_rawColors.PRIMARY_800);
@@ -50,7 +50,7 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(8518).cachedDominantColors[closure_1_0] = obj;
+            first(8519).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         }).catch(NOOP);
@@ -59,7 +59,7 @@ function useDominantRGBFromImage(arg0, arg1) {
             const obj = { r: null, g: null, b: null };
             [obj.r, obj.g, obj.b] = closure_3(result[0], 3);
             closure_1_3(obj);
-            first(8518).cachedDominantColors[closure_1_0] = obj;
+            first(8519).cachedDominantColors[closure_1_0] = obj;
             const tmp3 = closure_3(result[0], 3);
           }
         });

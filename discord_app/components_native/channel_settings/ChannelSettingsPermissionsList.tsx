@@ -1,9 +1,9 @@
-// === Module 17285: ChannelSettingsPermissionsList ===
+// === Module 17296: ChannelSettingsPermissionsList ===
 
-// Module 17285 (ChannelSettingsPermissionsList)
+// Module 17296 (ChannelSettingsPermissionsList)
 import nativeDefault from "native" /* 576 */;
 import Server from "Server" /* 1978 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5729 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5734 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;

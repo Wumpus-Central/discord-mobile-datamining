@@ -1,9 +1,9 @@
-// === Module 17612: GameTagChiplet ===
+// === Module 17623: GameTagChiplet ===
 
-// Module 17612 (GameTagChiplet)
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8945 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8956 */;
-import GuildTag from "GuildTag" /* 10012 */;
+// Module 17623 (GameTagChiplet)
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8946 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8957 */;
+import GuildTag from "GuildTag" /* 10013 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

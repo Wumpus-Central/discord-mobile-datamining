@@ -1,9 +1,9 @@
-// === Module 8153: PaperIcon ===
+// === Module 8154: PaperIcon ===
 
-// Module 8153 (PaperIcon)
+// Module 8154 (PaperIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod8154 from "module_8154" /* 8154 */;
+import _mod8155 from "module_8155" /* 8155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PaperIcon = function PaperIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8154, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8155, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,15 +1,15 @@
-// === Module 14118: AddFriendById ===
+// === Module 14124: AddFriendById ===
 
-// Module 14118 (AddFriendById)
+// Module 14124 (AddFriendById)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ToastUtils from "ToastUtils" /* 4453 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import TextField from "TextField" /* 6850 */;
-import FriendsUtils from "FriendsUtils" /* 10006 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 14119 */;
+import TextField from "TextField" /* 6855 */;
+import FriendsUtils from "FriendsUtils" /* 10007 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 14125 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -131,21 +131,21 @@ export default noop.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(10006).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(10007).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
       } else {
         let obj4 = { status: constants.LOADING };
         closure_6(obj4);
-        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(10002).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(10003).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(10002);
-        ref(10002).sendRequest(obj6).then(() => {
+        const obj5 = ref(10003);
+        ref(10003).sendRequest(obj6).then(() => {
           const obj = { validatedText: "", hint: null };
           const intl = util.intl;
           obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -199,9 +199,9 @@ export default noop.forwardRef((arg0, ref) => {
           }
           closure_6(obj3);
         });
-        const sendRequestResult = ref(10002).sendRequest(obj6);
+        const sendRequestResult = ref(10003).sendRequest(obj6);
       }
-      let obj = sourcePage(10006);
+      let obj = sourcePage(10007);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText } = arg0);
@@ -339,7 +339,7 @@ export default noop.forwardRef((arg0, ref) => {
       }
     }
     obj10.status = str2;
-    items8[1] = closure_9(sourcePage(7325).TextArea, obj10);
+    items8[1] = closure_9(sourcePage(7330).TextArea, obj10);
     if (first1.status !== constants2.ERROR) {
       const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
       let intl2 = sourcePage(1115).intl;

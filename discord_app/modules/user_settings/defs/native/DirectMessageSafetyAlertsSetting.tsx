@@ -1,14 +1,14 @@
-// === Module 15106: DirectMessageSafetyAlertsSetting ===
+// === Module 15112: DirectMessageSafetyAlertsSetting ===
 
-// Module 15106 (DirectMessageSafetyAlertsSetting)
+// Module 15112 (DirectMessageSafetyAlertsSetting)
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 8232 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11233 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11235 */;
-import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 11236 */;
-import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 12130 */;
-import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 15107 */;
-import SettingBuilders from "SettingBuilders" /* 11723 */;
+import SettingsConstants from "SettingsConstants" /* 8233 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 11234 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 11236 */;
+import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 11237 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 12132 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 15113 */;
+import SettingBuilders from "SettingBuilders" /* 11725 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

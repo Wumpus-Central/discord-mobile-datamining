@@ -1,13 +1,13 @@
-// === Module 15062: TwoFASetupSuccess ===
+// === Module 15068: TwoFASetupSuccess ===
 
-// Module 15062 (TwoFASetupSuccess)
+// Module 15068 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 15053 */;
-import _mod15063 from "module_15063" /* 15063 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 15059 */;
+import _mod15069 from "module_15069" /* 15069 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -82,7 +82,7 @@ export default function TwoFASetupSuccess() {
               const intl = setRegistering(1115).intl;
               c5 = 3;
               c6 = 1;
-              const obj5 = { value: setRegistering(6833).finishRegisterWebAuthnCredential(intl.string(setRegistering(1115).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
+              const obj5 = { value: setRegistering(6838).finishRegisterWebAuthnCredential(intl.string(setRegistering(1115).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
               return obj5;
             }
           } else {
@@ -94,9 +94,9 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(15052).close();
+              setError(15058).close();
               c4 = 0;
-              const obj = setError(15052);
+              const obj = setError(15058);
             }
             c4 = 0;
             c6 = 3;
@@ -133,7 +133,7 @@ export default function TwoFASetupSuccess() {
   const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , , ];
   let obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  items[1] = closure_8(closure_7, { source: _mod15063, style: tmp.image });
+  items[1] = closure_8(closure_7, { source: _mod15069, style: tmp.image });
   let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);

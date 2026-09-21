@@ -1,6 +1,6 @@
-// === Module 7753: AutomodInteractionCallbackTypeEmbedKeys ===
+// === Module 7755: AutomodInteractionCallbackTypeEmbedKeys ===
 
-// Module 7753 (AutomodInteractionCallbackTypeEmbedKeys)
+// Module 7755 (AutomodInteractionCallbackTypeEmbedKeys)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodInteractionCallbackTypeEmbedKeys.tsx");

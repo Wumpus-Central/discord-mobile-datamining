@@ -1,15 +1,15 @@
-// === Module 12594: SearchAutocompleteStore ===
+// === Module 12596: SearchAutocompleteStore ===
 
-// Module 12594 (SearchAutocompleteStore)
+// Module 12596 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
 import _modDef4875 from "module_4875" /* 4875 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5654 */;
-import GuildUtilsDefault from "GuildUtils" /* 5731 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 10094 */;
-import SearchUtils from "SearchUtils" /* 12592 */;
-import SearchTokens from "SearchTokens" /* 12593 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5659 */;
+import GuildUtilsDefault from "GuildUtils" /* 5736 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 10095 */;
+import SearchUtils from "SearchUtils" /* 12594 */;
+import SearchTokens from "SearchTokens" /* 12595 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import GuildStore from "GuildStore" /* 2063 */;
@@ -219,7 +219,7 @@ function rebuildAutocompleteResults(c13) {
 const Constants = fn(1074);
 ({ SearchPopoutModes: closure_9, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(5727).AutocompleterResultTypes;
+fn(5732).AutocompleterResultTypes;
 let c13 = null;
 let closure_14 = [];
 const map = new Map();

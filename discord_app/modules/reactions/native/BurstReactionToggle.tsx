@@ -1,6 +1,6 @@
-// === Module 11390: BurstReactionToggle ===
+// === Module 11392: BurstReactionToggle ===
 
-// Module 11390 (BurstReactionToggle)
+// Module 11392 (BurstReactionToggle)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,7 +8,7 @@ import useToken from "useToken" /* 4457 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import timing from "timing" /* 4757 */;
 import spring from "spring" /* 5185 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9486 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9487 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
@@ -45,7 +45,7 @@ export default function BurstReactionToggle(arg0) {
     tmp7 = tmp2;
   }
   const ref = noop.useRef(null);
-  importDefault = tmp7(11391)(ref);
+  importDefault = tmp7(11393)(ref);
   closure_129_1 = undefined;
   closure_129_2 = undefined;
   closure_129_3 = undefined;

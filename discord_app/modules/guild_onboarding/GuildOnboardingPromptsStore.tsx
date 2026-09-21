@@ -1,14 +1,14 @@
-// === Module 7340: GuildOnboardingPromptsStore ===
+// === Module 7345: GuildOnboardingPromptsStore ===
 
-// Module 7340 (GuildOnboardingPromptsStore)
+// Module 7345 (GuildOnboardingPromptsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7342 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7347 */;
 import ImpersonateStore from "ImpersonateStore" /* 2098 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7336 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7341 */;
 
 require = fn;
 function handleUpdate(arg0) {
@@ -81,8 +81,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(7336).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(7341).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(7341).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(7346).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

@@ -1,6 +1,6 @@
-// === Module 11364: BalanceCounter ===
+// === Module 11366: BalanceCounter ===
 
-// Module 11364 (BalanceCounter)
+// Module 11366 (BalanceCounter)
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4476 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import spring from "spring" /* 5185 */;

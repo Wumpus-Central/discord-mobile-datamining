@@ -1,14 +1,14 @@
-// === Module 16676: HomeDrawerDM ===
+// === Module 16682: HomeDrawerDM ===
 
-// Module 16676 (HomeDrawerDM)
+// Module 16682 (HomeDrawerDM)
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4619 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import useChannelName from "useChannelName" /* 4909 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 8122 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10364 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10409 */;
-import BellZIcon from "BellZIcon" /* 13590 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15583 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 8123 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10365 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10410 */;
+import BellZIcon from "BellZIcon" /* 13596 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15589 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
@@ -37,9 +37,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   let obj2 = channel(504);
-  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(16677).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(16683).useBaseChannelUnreadBadgeState(channel, false).unread });
   closure_4 = tmp3;
-  const obj3 = channel(16677);
+  const obj3 = channel(16683);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -95,7 +95,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(16639).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(16645).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
 const isMultiUserDM = fn(2045).isMultiUserDM;

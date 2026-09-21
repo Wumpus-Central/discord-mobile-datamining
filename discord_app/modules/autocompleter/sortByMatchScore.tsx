@@ -1,6 +1,6 @@
-// === Module 5730: autocompleter/sortByMatchScore ===
+// === Module 5735: autocompleter/sortByMatchScore ===
 
-// Module 5730 (autocompleter/sortByMatchScore)
+// Module 5735 (autocompleter/sortByMatchScore)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");

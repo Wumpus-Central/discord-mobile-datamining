@@ -1,6 +1,6 @@
-// === Module 9313: FramesConstants ===
+// === Module 9314: FramesConstants ===
 
-// Module 9313 (FramesConstants)
+// Module 9314 (FramesConstants)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

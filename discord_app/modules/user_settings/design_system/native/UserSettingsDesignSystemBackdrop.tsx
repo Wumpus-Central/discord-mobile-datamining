@@ -1,12 +1,12 @@
-// === Module 16101: UserSettingsDesignSystemBackdrop ===
+// === Module 16107: UserSettingsDesignSystemBackdrop ===
 
-// Module 16101 (UserSettingsDesignSystemBackdrop)
+// Module 16107 (UserSettingsDesignSystemBackdrop)
 import Text_Text from "Text/Text" /* 4752 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
 import spring from "spring" /* 5185 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
 import springPresets from "springPresets" /* 5189 */;
-import Card from "Card" /* 5819 */;
+import Card from "Card" /* 5824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -85,7 +85,7 @@ export default function UserSettingsDesignSystemBackdrop() {
     const items3 = ["blur style: ", tmp6];
     obj9.children = items3;
     obj8.children = closure_7(tmp8(4752).Text, obj9);
-    obj7.children = closure_6(tmp8(5819).Card, obj8);
+    obj7.children = closure_6(tmp8(5824).Card, obj8);
     items2[1] = closure_6(closure_5, obj7);
     obj5.children = items2;
     showBackdrop = closure_7(tmp8(5167).Dialog, obj5);

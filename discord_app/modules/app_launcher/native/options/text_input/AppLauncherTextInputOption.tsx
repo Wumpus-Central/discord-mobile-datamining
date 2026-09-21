@@ -1,10 +1,10 @@
-// === Module 12423: AppLauncherTextInputOption ===
+// === Module 12425: AppLauncherTextInputOption ===
 
-// Module 12423 (AppLauncherTextInputOption)
+// Module 12425 (AppLauncherTextInputOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10535 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11386 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10536 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -97,17 +97,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
     }
   }, items2);
-  let obj = onChangeText(11479);
-  const animationDelayedAutoFocus = onChangeText(12420).useAnimationDelayedAutoFocus(autoFocus, () => {
+  let obj = onChangeText(11481);
+  const animationDelayedAutoFocus = onChangeText(12422).useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(9522).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(9523).AppLauncherEntrypoint.VOICE) {
     let TextInput = tmp4(1177).TextInput;
   } else {
-    TextInput = guildId(12424);
+    TextInput = guildId(12426);
   }
   const items3 = [tmp.container, , ];
   if (hasError) {
@@ -149,7 +149,7 @@ export default function AppLauncherTextInputOption(guildId) {
           const result1 = openEmojiPickerActionSheet.openEmojiPickerActionSheet({ pickerIntention: EmojiIntention.CHAT, autoFocus: false, startExpanded: false, onPressEmoji, guildId, onClose });
         }
     };
-    tmp14Result = tmp14(guildId(12425), obj5);
+    tmp14Result = tmp14(guildId(12427), obj5);
   }
   items4[1] = tmp14Result;
   obj3.children = items4;

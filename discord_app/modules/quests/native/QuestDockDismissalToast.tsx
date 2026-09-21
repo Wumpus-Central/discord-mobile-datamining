@@ -1,10 +1,10 @@
-// === Module 15367: QuestDockDismissalToast ===
+// === Module 15373: QuestDockDismissalToast ===
 
-// Module 15367 (QuestDockDismissalToast)
+// Module 15373 (QuestDockDismissalToast)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
-import _modDef12538 from "module_12538" /* 12538 */;
-import _modDef13020 from "module_13020" /* 13020 */;
+import _modDef12540 from "module_12540" /* 12540 */;
+import _modDef13022 from "module_13022" /* 13022 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -14,8 +14,8 @@ function QuestDockDismissalNotification() {
   const intl = require("util").intl;
   obj.children = intl.format(require("util").t.dYE1px, {
     arrowHook() {
-      const obj = { style: closure_0.toastArrowForwardIconContainer, children: <React3 resizeMode="contain" source={_modDef12538} style={closure_0.toastArrowForwardIcon} /> };
-      return <React4 style={closure_0.toastArrowForwardIconContainer}><React3 resizeMode="contain" source={_modDef12538} style={closure_0.toastArrowForwardIcon} /></React4>;
+      const obj = { style: closure_0.toastArrowForwardIconContainer, children: <React3 resizeMode="contain" source={_modDef12540} style={closure_0.toastArrowForwardIcon} /> };
+      return <React4 style={closure_0.toastArrowForwardIconContainer}><React3 resizeMode="contain" source={_modDef12540} style={closure_0.toastArrowForwardIcon} /></React4>;
     }
   });
   return jsx(require("Text/Text").Text, { color: "mobile-text-heading-primary", variant: "text-sm/semibold", children: null });
@@ -37,5 +37,5 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDockDismis
 
 export const displayQuestDismissalToast = function displayQuestDismissalToast() {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "QUEST_BAR_DISMISS_TOAST", content: QuestDockDismissalNotification, icon: _modDef13020, position: "bottom" });
+  obj.open({ key: "QUEST_BAR_DISMISS_TOAST", content: QuestDockDismissalNotification, icon: _modDef13022, position: "bottom" });
 };

@@ -1,11 +1,11 @@
-// === Module 12427: AppLauncherSelectOptionFormRow ===
+// === Module 12429: AppLauncherSelectOptionFormRow ===
 
-// Module 12427 (AppLauncherSelectOptionFormRow)
+// Module 12429 (AppLauncherSelectOptionFormRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import Form from "Form" /* 8870 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12420 */;
+import Form from "Form" /* 8871 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12422 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,7 +46,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
     }
   }
   obj2.subLabel = fn;
-  obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(7382), size: native.IconSizes.SMALL_20 });
+  obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(7387), size: native.IconSizes.SMALL_20 });
   const merged1 = Object.assign(merged);
   return jsx(Form.FormRow, { start: true, end: true, style: null, label: null, subLabel: null, trailing: null });
 };

@@ -1,8 +1,8 @@
-// === Module 17843: NewUserModal ===
+// === Module 17854: NewUserModal ===
 
-// Module 17843 (NewUserModal)
+// Module 17854 (NewUserModal)
 import nativeDefault from "native" /* 576 */;
-import NewUserUtils from "NewUserUtils" /* 17841 */;
+import NewUserUtils from "NewUserUtils" /* 17852 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const NativeStackNavigator = fn(8156);
+const NativeStackNavigator = fn(8157);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 const createStyles = fn(4756);
 let obj3 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" } };
@@ -46,11 +46,11 @@ export default function NewUserModal(arg0) {
       closure_1_4(lastShownStepIndex);
       if (continueNavigation) {
         if (null != ref.current) {
-          closure_0(17841).continueToNextStep(onboardingStepIndex, tmp3.current);
-          const obj2 = closure_0(17841);
+          closure_0(17852).continueToNextStep(onboardingStepIndex, tmp3.current);
+          const obj2 = closure_0(17852);
         }
       }
-      first(4959).popWithKey(closure_0(17842).NEW_USER_MODAL_KEY);
+      first(4959).popWithKey(closure_0(17853).NEW_USER_MODAL_KEY);
       const obj = first(4959);
     });
   }, items);
@@ -97,14 +97,14 @@ export default function NewUserModal(arg0) {
     closure_6(Navigator.Screen, {
       name: "enable-notification",
       getComponent() {
-        return closure_0(16324).RedesignNotificationScreen;
+        return closure_0(16330).RedesignNotificationScreen;
       },
       initialParams: { onComplete }
     }),
     closure_6(Navigator.Screen, {
       name: "choose-avatar",
       getComponent() {
-        return closure_0(17845).default;
+        return closure_0(17856).default;
       },
       options() {
         return {
@@ -120,7 +120,7 @@ export default function NewUserModal(arg0) {
                 }
               }));
             };
-            return closure_6(first(12947), obj);
+            return closure_6(first(12949), obj);
           }
         };
       },
@@ -130,7 +130,7 @@ export default function NewUserModal(arg0) {
       name: "contact-sync",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(12936).ContactSyncOnboardingModal;
+        return closure_0(12938).ContactSyncOnboardingModal;
       },
       initialParams: { onComplete }
     }),
@@ -138,14 +138,14 @@ export default function NewUserModal(arg0) {
       name: "discoverability",
       options: { headerShown: false },
       getComponent() {
-        return closure_0(17846).default;
+        return closure_0(17857).default;
       },
       initialParams: { onComplete }
     }),
     closure_6(Navigator.Screen, {
       name: "connect-guardian",
       getComponent() {
-        return closure_0(17848).default;
+        return closure_0(17859).default;
       },
       initialParams: { onComplete }
     })

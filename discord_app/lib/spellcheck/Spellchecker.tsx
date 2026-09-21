@@ -1,10 +1,10 @@
-// === Module 5772: Spellchecker ===
+// === Module 5777: Spellchecker ===
 
-// Module 5772 (Spellchecker)
+// Module 5777 (Spellchecker)
 import LoggerDefault from "Logger" /* 3 */;
 import DOMUtils from "DOMUtils" /* 2012 */;
-import fallbackLocalesDefault from "fallbackLocales" /* 5773 */;
-import _mod5774 from "module_5774" /* 5774 */;
+import fallbackLocalesDefault from "fallbackLocales" /* 5778 */;
+import _mod5779 from "module_5779" /* 5779 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
@@ -59,7 +59,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod5774;
+      obj = _mod5779;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -222,7 +222,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod5774.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod5779.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {

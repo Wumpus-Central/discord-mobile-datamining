@@ -1,12 +1,12 @@
-// === Module 16181: ManageSponsoredContentScreen ===
+// === Module 16187: ManageSponsoredContentScreen ===
 
-// Module 16181 (ManageSponsoredContentScreen)
+// Module 16187 (ManageSponsoredContentScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2019 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
 import _modDef2154 from "module_2154" /* 2154 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7440).TableSwitchRow, obj);
+  return closure_5(adTopic(7445).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;

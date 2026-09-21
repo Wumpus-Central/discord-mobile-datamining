@@ -1,6 +1,6 @@
-// === Module 9474: Carousel ===
+// === Module 9475: Carousel ===
 
-// Module 9474 (Carousel)
+// Module 9475 (Carousel)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;

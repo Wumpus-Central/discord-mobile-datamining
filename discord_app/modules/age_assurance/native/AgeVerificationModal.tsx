@@ -1,6 +1,6 @@
-// === Module 8699: AgeVerificationModal ===
+// === Module 8700: AgeVerificationModal ===
 
-// Module 8699 (AgeVerificationModal)
+// Module 8700 (AgeVerificationModal)
 import nativeDefault from "native" /* 576 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4613 */;
 import noop from "module_19" /* 19 */;
@@ -53,7 +53,7 @@ function AgeVerifyScreen(uri) {
   }, items2);
   return jsx(onClose(isSuspendedUser[6]), { allowsInlineMediaPlayback: true, javaScriptEnabled: true, source: { uri: uri.webviewUrl }, onMessage: callback2, injectedJavaScript: "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n" });
 }
-let closure_4 = fn(8682).AGE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(8683).AGE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
 const createStyles = fn(4756);

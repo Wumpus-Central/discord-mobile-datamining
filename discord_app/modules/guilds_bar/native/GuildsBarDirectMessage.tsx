@@ -1,14 +1,14 @@
-// === Module 16675: GuildsBarDirectMessage ===
+// === Module 16681: GuildsBarDirectMessage ===
 
-// Module 16675 (GuildsBarDirectMessage)
+// Module 16681 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9866 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9867 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5490 */;
+import CallStore from "CallStore" /* 5495 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7870 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7872 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 

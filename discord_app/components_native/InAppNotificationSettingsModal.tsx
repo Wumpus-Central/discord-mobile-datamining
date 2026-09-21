@@ -1,13 +1,13 @@
-// === Module 10394: InAppNotificationSettingsModal ===
+// === Module 10395: InAppNotificationSettingsModal ===
 
-// Module 10394 (InAppNotificationSettingsModal)
+// Module 10395 (InAppNotificationSettingsModal)
 import util from "util" /* 1115 */;
 import useChannelName from "useChannelName" /* 4909 */;
-import NavigatorHeader from "NavigatorHeader" /* 5836 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7354 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7359 */;
-import Form from "Form" /* 8870 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10395 */;
+import NavigatorHeader from "NavigatorHeader" /* 5841 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7359 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7364 */;
+import Form from "Form" /* 8871 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 10396 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
@@ -147,7 +147,7 @@ export default noop.memo((channelId) => {
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(5836).NavigatorHeader, obj);
+        return closure_2_11(channelId(5841).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -157,5 +157,5 @@ export default noop.memo((channelId) => {
     obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
     return obj;
   }, items);
-  return closure_11(channelId(7240).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(7245).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });

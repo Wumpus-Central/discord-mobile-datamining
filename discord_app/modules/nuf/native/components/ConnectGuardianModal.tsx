@@ -1,6 +1,6 @@
-// === Module 17848: ConnectGuardianModal ===
+// === Module 17859: ConnectGuardianModal ===
 
-// Module 17848 (ConnectGuardianModal)
+// Module 17859 (ConnectGuardianModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const FamilyCenterAction = fn(7778).FamilyCenterAction;
+const FamilyCenterAction = fn(7780).FamilyCenterAction;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4756);
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/Connect
 export default function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  const connectGuardianGate = onComplete(17849).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(17860).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
@@ -56,7 +56,7 @@ export default function ConnectGuardianModal(route) {
     const items1 = [, ];
     ({ container: arr2[0], centered: arr2[1] } = tmp);
     obj2.style = items1;
-    obj2.children = closure_7(tmp4(5789).ActivityIndicator, {});
+    obj2.children = closure_7(tmp4(5794).ActivityIndicator, {});
     let tmp9 = closure_7(View, obj2);
   } else {
     const obj3 = { style: tmp.container, children: null };
@@ -77,7 +77,7 @@ export default function ConnectGuardianModal(route) {
     obj8.children = intl3.string(tmp2(2482).Mi60fm);
     const items4 = [closure_7(tmp4(4752).Text, obj8), ];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(15153).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+    items4[1] = closure_7(tmp4(15159).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
     obj7.children = items4;
     items3[1] = closure_8(View, obj7);
     const obj11 = { style: tmp.grow };

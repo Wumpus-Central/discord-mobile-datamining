@@ -1,6 +1,6 @@
-// === Module 9325: OAuth2AuthorizeModal ===
+// === Module 9326: OAuth2AuthorizeModal ===
 
-// Module 9325 (OAuth2AuthorizeModal)
+// Module 9326 (OAuth2AuthorizeModal)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5185 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(9326)(arg0);
+  const tmp4 = sharedValue(9327)(arg0);
   _require = tmp4;
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
   let obj = require("ReanimatedRexport");
@@ -76,10 +76,10 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj7 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp11Result = closure_5(tmp5(9553).ArrowSmallLeftIcon, obj7);
+    let tmp11Result = closure_5(tmp5(9554).ArrowSmallLeftIcon, obj7);
   } else {
     const obj8 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    tmp11Result = closure_5(tmp5(5892).XSmallIcon, obj8);
+    tmp11Result = closure_5(tmp5(5897).XSmallIcon, obj8);
   }
   obj6.children = tmp11Result;
   const items2 = [closure_5(require("Pressables").PressableOpacity, obj6), , ];
@@ -101,7 +101,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj13.onScroll = callback;
   obj13.centerContent = true;
-  obj12.children = closure_5(sharedValue(9555), obj13);
+  obj12.children = closure_5(sharedValue(9556), obj13);
   items4[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj12);
   obj3.children = items4;
   return closure_6(View, obj3);

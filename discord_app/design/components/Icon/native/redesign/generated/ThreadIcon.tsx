@@ -1,6 +1,6 @@
-// === Module 5284: ThreadIcon ===
+// === Module 5291: ThreadIcon ===
 
-// Module 5284 (ThreadIcon)
+// Module 5291 (ThreadIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5241 from "module_5241" /* 5241 */;

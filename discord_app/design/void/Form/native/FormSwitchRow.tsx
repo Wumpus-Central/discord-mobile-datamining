@@ -1,15 +1,15 @@
-// === Module 8884: FormSwitchRow ===
+// === Module 8885: FormSwitchRow ===
 
-// Module 8884 (FormSwitchRow)
+// Module 8885 (FormSwitchRow)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import RedesignCompat from "RedesignCompat" /* 5898 */;
-import FormRowDefault from "FormRow" /* 7377 */;
-import FormLabelDefault from "FormLabel" /* 7379 */;
-import TableSwitchRow from "TableSwitchRow" /* 7440 */;
+import RedesignCompat from "RedesignCompat" /* 5903 */;
+import FormRowDefault from "FormRow" /* 7382 */;
+import FormLabelDefault from "FormLabel" /* 7384 */;
+import TableSwitchRow from "TableSwitchRow" /* 7445 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const Form_FormSwitchDefault = tmp13(8882);
+const Form_FormSwitchDefault = tmp13(8883);
 require = fn;
 function FormSwitchRow(onValueChange) {
   onValueChange = onValueChange.onValueChange;

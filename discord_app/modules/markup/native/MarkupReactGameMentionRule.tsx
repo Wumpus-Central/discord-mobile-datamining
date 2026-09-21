@@ -1,10 +1,10 @@
-// === Module 14108: MarkupReactGameMentionRule ===
+// === Module 14114: MarkupReactGameMentionRule ===
 
-// Module 14108 (MarkupReactGameMentionRule)
+// Module 14114 (MarkupReactGameMentionRule)
 import nativeDefault from "native" /* 576 */;
-import useGame from "useGame" /* 7549 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8950 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8956 */;
+import useGame from "useGame" /* 7551 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8951 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8957 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

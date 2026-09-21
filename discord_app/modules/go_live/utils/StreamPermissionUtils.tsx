@@ -1,9 +1,9 @@
-// === Module 7960: StreamPermissionUtils ===
+// === Module 7962: StreamPermissionUtils ===
 
-// Module 7960 (StreamPermissionUtils)
+// Module 7962 (StreamPermissionUtils)
 import ChannelUtils from "ChannelUtils" /* 4901 */;
 import AgeGateUtils from "AgeGateUtils" /* 4966 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5628 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5633 */;
 import GameConsoleStore from "GameConsoleStore" /* 4773 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;

@@ -1,8 +1,8 @@
-// === Module 13196: InAppReportsChannelPreview ===
+// === Module 13198: InAppReportsChannelPreview ===
 
-// Module 13196 (InAppReportsChannelPreview)
+// Module 13198 (InAppReportsChannelPreview)
 import nativeDefault from "native" /* 576 */;
-import GuildIconDefault from "GuildIcon" /* 5796 */;
+import GuildIconDefault from "GuildIcon" /* 5801 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
 
@@ -42,7 +42,7 @@ export default function ChannelPreview(stageInstance) {
       const obj6 = { style: tmp.guildInfo, children: null };
       const obj7 = { guild: stateFromStores, size: null, selected: false };
       const hexWithOpacityResult = tmp2(4605).hexWithOpacity(tmp.borderColor.color, 0.08);
-      obj7.size = tmp2(5796).GuildIconSizes.XXSMALL;
+      obj7.size = tmp2(5801).GuildIconSizes.XXSMALL;
       const items3 = [closure_5(GuildIconDefault, obj7), ];
       const obj8 = { style: tmp.guildName, variant: "text-sm/medium", color: "text-default", children: stateFromStores.name };
       items3[1] = closure_5(tmp2(4752).Text, obj8);

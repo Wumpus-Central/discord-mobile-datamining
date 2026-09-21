@@ -1,6 +1,6 @@
-// === Module 6012: ? ===
+// === Module 6017: ? ===
 
-// Module 6012
+// Module 6017
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarSpellcastExample-2x.png.js");

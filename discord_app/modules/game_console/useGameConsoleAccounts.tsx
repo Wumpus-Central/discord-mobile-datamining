@@ -1,9 +1,9 @@
-// === Module 10040: useGameConsoleAccounts ===
+// === Module 10041: useGameConsoleAccounts ===
 
-// Module 10040 (useGameConsoleAccounts)
+// Module 10041 (useGameConsoleAccounts)
 import initialize from "initialize" /* 504 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5493 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5498 */;
 
 require = fn;
 const PlatformTypes = fn(1074).PlatformTypes;

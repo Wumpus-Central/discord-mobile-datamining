@@ -1,7 +1,7 @@
-// === Module 10079: DefaultInviteExpirationExperiments ===
+// === Module 10080: DefaultInviteExpirationExperiments ===
 
-// Module 10079 (DefaultInviteExpirationExperiments)
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10077 */;
+// Module 10080 (DefaultInviteExpirationExperiments)
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 10078 */;
 import GuildStore from "GuildStore" /* 2063 */;
 
 const require = fn;

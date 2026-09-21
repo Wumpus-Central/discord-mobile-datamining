@@ -1,8 +1,8 @@
-// === Module 8077: uploadMessageAttachments ===
+// === Module 8079: uploadMessageAttachments ===
 
-// Module 8077 (uploadMessageAttachments)
+// Module 8079 (uploadMessageAttachments)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UploadStore from "UploadStore" /* 8078 */;
+import UploadStore from "UploadStore" /* 8080 */;
 
 const require = fn;
 let closure_6 = async function _uploadMessageAttachments(arg0) {

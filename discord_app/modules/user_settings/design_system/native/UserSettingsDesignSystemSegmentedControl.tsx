@@ -1,6 +1,6 @@
-// === Module 16083: UserSettingsDesignSystemSegmentedControl ===
+// === Module 16089: UserSettingsDesignSystemSegmentedControl ===
 
-// Module 16083 (UserSettingsDesignSystemSegmentedControl)
+// Module 16089 (UserSettingsDesignSystemSegmentedControl)
 import nativeDefault from "native" /* 576 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
 import Text_Text from "Text/Text" /* 4752 */;

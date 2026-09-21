@@ -1,26 +1,26 @@
-// === Module 16121: CollectiblesShopV2 ===
+// === Module 16127: CollectiblesShopV2 ===
 
-// Module 16121 (CollectiblesShopV2)
+// Module 16127 (CollectiblesShopV2)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import dismissible_content from "dismissible_content" /* 2027 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7829 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8455 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9126 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9479 */;
-import MobileNitroUpsellInShopFeedExperimentDefault from "MobileNitroUpsellInShopFeedExperiment" /* 16126 */;
-import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 16127 */;
-import ShopCategory from "ShopCategory" /* 16129 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 16131 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7831 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8456 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9127 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9480 */;
+import MobileNitroUpsellInShopFeedExperimentDefault from "MobileNitroUpsellInShopFeedExperiment" /* 16132 */;
+import ShopNitroUpsellBanner from "ShopNitroUpsellBanner" /* 16133 */;
+import ShopCategory from "ShopCategory" /* 16135 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 16137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4755 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import UserStore from "UserStore" /* 1372 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7784 */;
 
 require = fn;
 class CollectiblesShopV2 {

@@ -1,6 +1,6 @@
-// === Module 7505: MemberSafetyPermissionsUtils ===
+// === Module 7507: MemberSafetyPermissionsUtils ===
 
-// Module 7505 (MemberSafetyPermissionsUtils)
+// Module 7507 (MemberSafetyPermissionsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GuildStore from "GuildStore" /* 2063 */;

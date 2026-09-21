@@ -1,6 +1,6 @@
-// === Module 9616: VideoStreamStore ===
+// === Module 9617: VideoStreamStore ===
 
-// Module 9616 (VideoStreamStore)
+// Module 9617 (VideoStreamStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;

@@ -1,6 +1,6 @@
-// === Module 17061: VibegrationsHistoryState ===
+// === Module 17069: VibegrationsHistoryState ===
 
-// Module 17061 (VibegrationsHistoryState)
+// Module 17069 (VibegrationsHistoryState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;

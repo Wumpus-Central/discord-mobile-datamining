@@ -1,6 +1,6 @@
-// === Module 12646: ApplicationCommandDiscovery ===
+// === Module 12648: ApplicationCommandDiscovery ===
 
-// Module 12646 (ApplicationCommandDiscovery)
+// Module 12648 (ApplicationCommandDiscovery)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -9,12 +9,12 @@ import Server from "Server" /* 1978 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
 import useFontScale from "useFontScale" /* 5193 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9411 */;
-import _modDef10677 from "module_10677" /* 10677 */;
-import ApplicationSectionHeader from "ApplicationSectionHeader" /* 12648 */;
-import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 12649 */;
-import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 12650 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7765 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9412 */;
+import _modDef10678 from "module_10678" /* 10678 */;
+import ApplicationSectionHeader from "ApplicationSectionHeader" /* 12650 */;
+import ApplicationCommandDiscoveryManager from "ApplicationCommandDiscoveryManager" /* 12651 */;
+import ApplicationCommandsCategoriesDefault from "ApplicationCommandsCategories" /* 12652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,8 +25,8 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, SectionList: closure_7 } = get_ActivityIndicator);
 const ApplicationCommandConstants = fn(5210);
 ({ BuiltInSectionId: closure_8, DISCOVERY_COMMANDS_QUERY_LIMIT: closure_9 } = ApplicationCommandConstants);
-const ITEM_HEIGHT = fn(12647).ITEM_HEIGHT;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10520).AUTOCOMPLETE_ROW_HEIGHT;
+const ITEM_HEIGHT = fn(12649).ITEM_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10521).AUTOCOMPLETE_ROW_HEIGHT;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, SectionListElementType: map1 } = Constants);
 const jsxProd = fn(21);
@@ -67,7 +67,7 @@ export default function ApplicationCommandDiscovery(channel) {
   obj6.applicationCommands = !canOnlyUseTextCommands;
   obj5.filters = obj6;
   obj5.options = { placeholderCount: 3, limit: commandDiscoveryManager, includeFrecency: true };
-  const discovery = channel(9529).useDiscovery(obj5);
+  const discovery = channel(9530).useDiscovery(obj5);
   const sectionDescriptors = discovery.sectionDescriptors;
   ({ activeSections: c11, commandsByActiveSection } = discovery);
   ({ hasMoreAfter: c13, filteredSectionId } = discovery);
@@ -308,7 +308,7 @@ export default function ApplicationCommandDiscovery(channel) {
     const section = item.section;
     let found;
     if (item.inputType === ApplicationCommandTypes.ApplicationCommandInputType.PLACEHOLDER) {
-      return filteredSectionId(onHeightChange(12651), {});
+      return filteredSectionId(onHeightChange(12653), {});
     } else {
       found = sectionDescriptors.find((id) => id.id === item.applicationId);
       const obj = {
@@ -324,7 +324,7 @@ export default function ApplicationCommandDiscovery(channel) {
         showIcon: item.applicationId !== section.section.id,
         guildId: found.guild_id
       };
-      return filteredSectionId(onHeightChange(12652), obj);
+      return filteredSectionId(onHeightChange(12654), obj);
     }
   };
   obj9.renderSectionHeader = function renderSectionHeader(section) {
@@ -332,7 +332,7 @@ export default function ApplicationCommandDiscovery(channel) {
     const children = [closure_2_14(ApplicationSectionHeaderDefault, { section: section.section, guildId: channel.guild_id }, section.section.id), ];
     let tmp3Result = 0 === section.data.length;
     if (tmp3Result) {
-      const obj3 = { lightSource: _modDef10677, darkSource: _modDef10677, body: null, containerStyle: null, imageStyle: null };
+      const obj3 = { lightSource: _modDef10678, darkSource: _modDef10678, body: null, containerStyle: null, imageStyle: null };
       const intl = util.intl;
       const obj5 = { applicationName: section.section.name };
       obj3.body = intl.format(util.t.WoQXT6, obj5);

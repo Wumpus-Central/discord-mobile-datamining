@@ -1,12 +1,12 @@
-// === Module 8291: getTagProperties ===
+// === Module 8292: getTagProperties ===
 
-// Module 8291 (getTagProperties)
+// Module 8292 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1115 */;
 import MessageConstants from "MessageConstants" /* 4749 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8292 */;
-import isCrosspostDefault from "isCrosspost" /* 8294 */;
-import _modDef8296 from "module_8296" /* 8296 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8293 */;
+import isCrosspostDefault from "isCrosspost" /* 8295 */;
+import _modDef8297 from "module_8297" /* 8297 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8296).uri;
+            uri = Image.resolveAssetSource(_modDef8297).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "call", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000012466753010473795, opTagBackgroundColor: -283366797180568400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "applicationId", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: false, opTagBackgroundColor: false };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

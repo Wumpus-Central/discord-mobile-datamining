@@ -1,6 +1,6 @@
-// === Module 12648: ApplicationSectionHeader ===
+// === Module 12650: ApplicationSectionHeader ===
 
-// Module 12648 (ApplicationSectionHeader)
+// Module 12650 (ApplicationSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
@@ -34,7 +34,7 @@ export default function ApplicationSectionHeader(section) {
     }
   });
   const obj = section(504);
-  const applicationCommandsIconSource = section(12482).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12484).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -50,7 +50,7 @@ export default function ApplicationSectionHeader(section) {
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(5799), obj4);
+    tmp9 = closure_5(guildId(5804), obj4);
   }
   const items1 = [tmp9, closure_5(section(4752).Text, { variant: "eyebrow", color: "interactive-text-default", children: name })];
   obj3.children = items1;

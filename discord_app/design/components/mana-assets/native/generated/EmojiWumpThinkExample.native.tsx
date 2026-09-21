@@ -1,9 +1,9 @@
-// === Module 6199: EmojiWumpThinkExample ===
+// === Module 6204: EmojiWumpThinkExample ===
 
-// Module 6199 (EmojiWumpThinkExample)
+// Module 6204 (EmojiWumpThinkExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6200 from "module_6200" /* 6200 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6205 from "module_6205" /* 6205 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiWumpThinkExample = function EmojiWumpThinkExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6200 };
+  const obj2 = { uri: _modDef6205 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

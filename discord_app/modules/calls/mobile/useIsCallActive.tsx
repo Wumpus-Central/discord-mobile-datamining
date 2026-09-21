@@ -1,7 +1,7 @@
-// === Module 8238: useIsCallActive ===
+// === Module 8239: useIsCallActive ===
 
-// Module 8238 (useIsCallActive)
-import CallStore from "CallStore" /* 5490 */;
+// Module 8239 (useIsCallActive)
+import CallStore from "CallStore" /* 5495 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 12831: GuildPowerupsRecentActivitySection ===
+// === Module 12833: GuildPowerupsRecentActivitySection ===
 
-// Module 12831 (GuildPowerupsRecentActivitySection)
+// Module 12833 (GuildPowerupsRecentActivitySection)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
@@ -8,13 +8,13 @@ import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import DateUtils from "DateUtils" /* 4438 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7220 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8218 */;
-import BoostGemIcon from "BoostGemIcon" /* 9488 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12832 */;
-import BoostTier1Icon from "BoostTier1Icon" /* 12834 */;
-import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12836 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12838 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7225 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8219 */;
+import BoostGemIcon from "BoostGemIcon" /* 9489 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12834 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 12836 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12838 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12840 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4756 */;

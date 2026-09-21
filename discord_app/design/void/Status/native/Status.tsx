@@ -1,17 +1,17 @@
-// === Module 14368: Status ===
+// === Module 14374: Status ===
 
-// Module 14368 (Status)
+// Module 14374 (Status)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5185 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 14366 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14367 */;
-import _modDef14369 from "module_14369" /* 14369 */;
-import _modDef14370 from "module_14370" /* 14370 */;
-import _modDef14371 from "module_14371" /* 14371 */;
-import _modDef14372 from "module_14372" /* 14372 */;
-import _modDef14373 from "module_14373" /* 14373 */;
-import _modDef14374 from "module_14374" /* 14374 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 14372 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14373 */;
 import _modDef14375 from "module_14375" /* 14375 */;
+import _modDef14376 from "module_14376" /* 14376 */;
+import _modDef14377 from "module_14377" /* 14377 */;
+import _modDef14378 from "module_14378" /* 14378 */;
+import _modDef14379 from "module_14379" /* 14379 */;
+import _modDef14380 from "module_14380" /* 14380 */;
+import _modDef14381 from "module_14381" /* 14381 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const STATUS_PADDING = fn(1178).STATUS_PADDING;
 const StatusTypes = fn(1074).StatusTypes;
-const ChannelAnimationConstants = fn(13320);
+const ChannelAnimationConstants = fn(13322);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: closure_9, CHANNEL_SPRING_CONFIG: c10 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -81,23 +81,23 @@ export default function Status(isMobileOnline) {
   obj.style = items;
   const obj2 = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = _modDef14369;
+    let tmp4Result = _modDef14375;
   } else if (flag2) {
-    tmp4Result = _modDef14370;
+    tmp4Result = _modDef14376;
   } else if (flag) {
-    tmp4Result = _modDef14371;
+    tmp4Result = _modDef14377;
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef14372;
+    tmp4Result = _modDef14378;
   } else if (StatusTypes.DND === status) {
-    tmp4Result = _modDef14373;
+    tmp4Result = _modDef14379;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef14375;
+        tmp4Result = _modDef14381;
       }
     }
-    tmp4Result = _modDef14374;
+    tmp4Result = _modDef14380;
   }
   obj2.source = tmp4Result;
   obj.children = closure_1_11(React4, obj2);

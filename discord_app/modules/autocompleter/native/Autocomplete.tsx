@@ -1,6 +1,6 @@
-// === Module 12638: Autocomplete ===
+// === Module 12640: Autocomplete ===
 
-// Module 12638 (Autocomplete)
+// Module 12640 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -10,16 +10,16 @@ import Text_Text from "Text/Text" /* 4752 */;
 import useChannelName from "useChannelName" /* 4909 */;
 import TimestampUtils from "TimestampUtils" /* 5234 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5239 */;
-import Pressables from "Pressables" /* 5334 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import TableRow from "TableRow" /* 5817 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 5826 */;
-import _modDef8392 from "module_8392" /* 8392 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8839 */;
-import Form from "Form" /* 8870 */;
-import StickerDefault from "Sticker" /* 10432 */;
-import StickersHooks from "StickersHooks" /* 10645 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12639 */;
+import Pressables from "Pressables" /* 5339 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import TableRow from "TableRow" /* 5822 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 5831 */;
+import _modDef8393 from "module_8393" /* 8393 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8840 */;
+import Form from "Form" /* 8871 */;
+import StickerDefault from "Sticker" /* 10433 */;
+import StickersHooks from "StickersHooks" /* 10646 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12641 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
@@ -36,8 +36,8 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4756);
-let obj2 = { row: { height: fn(10520).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
-let obj3 = { height: fn(10520).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj2 = { row: { height: fn(10521).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
+let obj3 = { height: fn(10521).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.leading = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let obj4 = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.trailing = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
@@ -90,8 +90,8 @@ export default {
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj5.usernameStyle = items1;
-    obj2.trailing = closure_9(guildId(9900), obj5);
-    return closure_9(user(8870).FormRow, obj2);
+    obj2.trailing = closure_9(guildId(9901), obj5);
+    return closure_9(user(8871).FormRow, obj2);
   },
   Global(arg0) {
     ({ text, badge } = arg0);
@@ -136,7 +136,7 @@ export default {
     ({ channel, category } = onPress);
     const tmp = closure_11();
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8392;
+      let channelIconWithGuild = _modDef8393;
     } else {
       channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, tmp2);
     }

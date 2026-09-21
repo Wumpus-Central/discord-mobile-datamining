@@ -1,11 +1,11 @@
-// === Module 8887: FormSliderRow ===
+// === Module 8888: FormSliderRow ===
 
-// Module 8887 (FormSliderRow)
+// Module 8888 (FormSliderRow)
 import Text_Text from "Text/Text" /* 4752 */;
-import Card from "Card" /* 5819 */;
-import RedesignCompat from "RedesignCompat" /* 5898 */;
-import FormRowDefault from "FormRow" /* 7377 */;
-import _modDef8548 from "module_8548" /* 8548 */;
+import Card from "Card" /* 5824 */;
+import RedesignCompat from "RedesignCompat" /* 5903 */;
+import FormRowDefault from "FormRow" /* 7382 */;
+import _modDef8549 from "module_8549" /* 8549 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function FormSliderRow(arg0) {
     const obj5 = {};
     const merged1 = Object.assign(merged);
     obj5.style = tmp5.slider;
-    items1[1] = hasOwnProperty(_modDef8548, obj5);
+    items1[1] = hasOwnProperty(_modDef8549, obj5);
     obj2.children = items1;
     let tmp6Result = timestampProducer(Card.Card, obj2);
   } else {
@@ -41,7 +41,7 @@ export default function FormSliderRow(arg0) {
     const items2 = [hasOwnProperty(FormRowDefault, obj6), ];
     const obj7 = {};
     const merged2 = Object.assign(merged);
-    items2[1] = hasOwnProperty(_modDef8548, obj7);
+    items2[1] = hasOwnProperty(_modDef8549, obj7);
     obj.children = items2;
     tmp6Result = timestampProducer(React5, obj);
   }

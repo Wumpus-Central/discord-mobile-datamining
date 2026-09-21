@@ -1,6 +1,6 @@
-// === Module 14063: canSpectate ===
+// === Module 14069: canSpectate ===
 
-// Module 14063 (canSpectate)
+// Module 14069 (canSpectate)
 import Constants from "Constants" /* 4781 */;
 import size from "module_2" /* 2 */;
 

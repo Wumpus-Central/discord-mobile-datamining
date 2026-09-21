@@ -1,12 +1,12 @@
-// === Module 16111: UserSettingsDesignSystemHaptics ===
+// === Module 16117: UserSettingsDesignSystemHaptics ===
 
-// Module 16111 (UserSettingsDesignSystemHaptics)
+// Module 16117 (UserSettingsDesignSystemHaptics)
 import HapticUtils from "HapticUtils" /* 4724 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4725 */;
 import Patterns from "Patterns" /* 4726 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
-import Card from "Card" /* 5819 */;
+import Card from "Card" /* 5824 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

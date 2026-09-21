@@ -1,9 +1,9 @@
-// === Module 6585: PortalSpotIllustration ===
+// === Module 6590: PortalSpotIllustration ===
 
-// Module 6585 (PortalSpotIllustration)
+// Module 6590 (PortalSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6586 from "module_6586" /* 6586 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6591 from "module_6591" /* 6591 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PortalSpotIllustration = function PortalSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6586 };
+  const obj2 = { uri: _modDef6591 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,6 +1,6 @@
-// === Module 5622: IdleStore ===
+// === Module 5627: IdleStore ===
 
-// Module 5622 (IdleStore)
+// Module 5627 (IdleStore)
 import initializeDefault from "initialize" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -8,7 +8,7 @@ import DurationsDefault from "Durations" /* 1091 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import UserSettings from "UserSettings" /* 2019 */;
 import DiscordNativeDefault from "DiscordNative" /* 4377 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5623 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5628 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

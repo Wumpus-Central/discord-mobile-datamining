@@ -1,21 +1,21 @@
-// === Module 16721: YouBarName ===
+// === Module 16727: YouBarName ===
 
-// Module 16721 (YouBarName)
+// Module 16727 (YouBarName)
 import nativeDefault from "native" /* 576 */;
-import GuildTagDefault from "GuildTag" /* 10012 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11139 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11140 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11159 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11418 */;
-import YouBarGuildTagExperiment from "YouBarGuildTagExperiment" /* 16701 */;
-import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16722 */;
+import GuildTagDefault from "GuildTag" /* 10013 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11140 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11141 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11160 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11420 */;
+import YouBarGuildTagExperiment from "YouBarGuildTagExperiment" /* 16707 */;
+import shouldShowActivityStatusDefault from "shouldShowActivityStatus" /* 16728 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import PresenceStore from "PresenceStore" /* 4796 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5491 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5496 */;
 import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 const require = globalThis.__r;

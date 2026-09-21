@@ -1,8 +1,8 @@
-// === Module 9049: useWishlistNUXActionSheet ===
+// === Module 9050: useWishlistNUXActionSheet ===
 
-// Module 9049 (useWishlistNUXActionSheet)
+// Module 9050 (useWishlistNUXActionSheet)
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7855 */;
+import UserProfileStore from "UserProfileStore" /* 7857 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;

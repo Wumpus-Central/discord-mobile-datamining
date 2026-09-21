@@ -1,6 +1,6 @@
-// === Module 5903: ChangeEmailWarning ===
+// === Module 5908: ChangeEmailWarning ===
 
-// Module 5903 (ChangeEmailWarning)
+// Module 5908 (ChangeEmailWarning)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -10,7 +10,7 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(5896).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const hcArticle = fn(5901).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -38,7 +38,7 @@ export default function ChangeEmailWarning(changeEmailReason) {
   if (null != stateFromStores) {
     const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj4 = { style: tmp.container, children: null };
-    const items2 = [closure_9(tmp2(5904).TrafficConeSpotIllustration, {}), , , ];
+    const items2 = [closure_9(tmp2(5909).TrafficConeSpotIllustration, {}), , , ];
     const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1115).intl;
     obj5.children = intl.string(tmp2(1115).t.hhR7gX);

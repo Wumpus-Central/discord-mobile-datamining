@@ -1,9 +1,9 @@
-// === Module 6103: CompassSpotIllustration ===
+// === Module 6108: CompassSpotIllustration ===
 
-// Module 6103 (CompassSpotIllustration)
+// Module 6108 (CompassSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6104 from "module_6104" /* 6104 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6109 from "module_6109" /* 6109 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CompassSpotIllustration = function CompassSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6104 };
+  const obj2 = { uri: _modDef6109 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

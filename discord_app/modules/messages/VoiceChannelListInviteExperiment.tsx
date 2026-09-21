@@ -1,6 +1,6 @@
-// === Module 11567: VoiceChannelListInviteExperiment ===
+// === Module 11569: VoiceChannelListInviteExperiment ===
 
-// Module 11567 (VoiceChannelListInviteExperiment)
+// Module 11569 (VoiceChannelListInviteExperiment)
 import createExperiment from "module_4669" /* 4669 */;
 import size from "module_2" /* 2 */;
 

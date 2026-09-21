@@ -1,6 +1,6 @@
-// === Module 10907: MediaKeyboardItem ===
+// === Module 10908: MediaKeyboardItem ===
 
-// Module 10907 (MediaKeyboardItem)
+// Module 10908 (MediaKeyboardItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -8,10 +8,10 @@ import useWindowDimensionsDefault from "useWindowDimensions" /* 1478 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4492 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import timing from "timing" /* 4757 */;
-import ImageIcon from "ImageIcon" /* 5298 */;
-import AttachmentIcon from "AttachmentIcon" /* 10367 */;
-import _modDef10655 from "module_10655" /* 10655 */;
-import CameraIcon from "CameraIcon" /* 10912 */;
+import ImageIcon from "ImageIcon" /* 5305 */;
+import AttachmentIcon from "AttachmentIcon" /* 10368 */;
+import _modDef10656 from "module_10656" /* 10656 */;
+import CameraIcon from "CameraIcon" /* 10913 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
 
@@ -24,7 +24,7 @@ function NewCaption(arg0) {
   const obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  const items1 = [React7(native.Icon, { source: _modDef10655, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [React7(native.Icon, { source: _modDef10656, style: tmp.icon }), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj.children = items1;
   return closure_1_10(React4, obj);
 }
@@ -329,7 +329,7 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10908);
+const DeviceConstants = fn(10909);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

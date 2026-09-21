@@ -1,15 +1,15 @@
-// === Module 11367: BalanceWidgetActionSheet ===
+// === Module 11369: BalanceWidgetActionSheet ===
 
-// Module 11367 (BalanceWidgetActionSheet)
+// Module 11369 (BalanceWidgetActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import dismissible_content from "dismissible_content" /* 2027 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
-import _mod11368 from "module_11368" /* 11368 */;
-import _mod11369 from "module_11369" /* 11369 */;
 import _mod11370 from "module_11370" /* 11370 */;
+import _mod11371 from "module_11371" /* 11371 */;
+import _mod11372 from "module_11372" /* 11372 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -68,7 +68,7 @@ export default function _default(balance) {
   const memo = noop.useMemo(() => {
     let tmp = null;
     if (num > 4100) {
-      const obj = { backgroundVideo: _mod11368.default, backgroundImage: _mod11369.default, bannerImage: _mod11370.default, bannerText: null };
+      const obj = { backgroundVideo: _mod11370.default, backgroundImage: _mod11371.default, bannerImage: _mod11372.default, bannerText: null };
       const intl = util.intl;
       obj.bannerText = intl.string(util.t.LaMEFL);
       tmp = obj;

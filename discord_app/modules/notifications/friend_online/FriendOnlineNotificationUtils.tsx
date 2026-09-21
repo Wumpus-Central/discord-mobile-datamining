@@ -1,6 +1,6 @@
-// === Module 15773: FriendOnlineNotificationUtils ===
+// === Module 15779: FriendOnlineNotificationUtils ===
 
-// Module 15773 (FriendOnlineNotificationUtils)
+// Module 15779 (FriendOnlineNotificationUtils)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import UserSettings from "UserSettings" /* 2019 */;

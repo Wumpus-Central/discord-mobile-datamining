@@ -1,7 +1,7 @@
-// === Module 8925: InAppReportsShieldElement ===
+// === Module 8926: InAppReportsShieldElement ===
 
-// Module 8925 (InAppReportsShieldElement)
-import native from "native" /* 5904 */;
+// Module 8926 (InAppReportsShieldElement)
+import native from "native" /* 5909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

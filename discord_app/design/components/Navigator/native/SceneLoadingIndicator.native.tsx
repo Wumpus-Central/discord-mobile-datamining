@@ -1,8 +1,8 @@
-// === Module 7279: SceneLoadingIndicator ===
+// === Module 7284: SceneLoadingIndicator ===
 
-// Module 7279 (SceneLoadingIndicator)
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5789 */;
-import NavScrim from "NavScrim" /* 7280 */;
+// Module 7284 (SceneLoadingIndicator)
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5794 */;
+import NavScrim from "NavScrim" /* 7285 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

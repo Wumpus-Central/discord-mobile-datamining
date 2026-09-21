@@ -1,19 +1,19 @@
-// === Module 17424: LaunchPadPullTab ===
+// === Module 17435: LaunchPadPullTab ===
 
-// Module 17424 (LaunchPadPullTab)
+// Module 17435 (LaunchPadPullTab)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import spring from "spring" /* 5185 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12284 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12286 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const LaunchPadConstants = fn(11719);
+const LaunchPadConstants = fn(11721);
 ({ LAUNCH_PAD_MARGIN: closure_4, LAUNCH_PAD_PULL_TAB_BORDER_RADIUS } = LaunchPadConstants);
 const LAUNCH_PAD_PULL_TAB_HEIGHT = LaunchPadConstants.LAUNCH_PAD_PULL_TAB_HEIGHT;
 ({ LAUNCH_PAD_PULL_TAB_HIT_SLOP: closure_7, LAUNCH_PAD_PULL_TAB_MINIMIZED_OFFSET: closure_8, LAUNCH_PAD_PULL_TAB_SCALE_FACTOR: closure_9, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: c10, LAUNCH_PAD_PULL_TAB_WIDTH, LAUNCH_PAD_SPRING_CONFIG: closure_11 } = LaunchPadConstants);
-const CHAT_INPUT_HEIGHT = fn(12213).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(12215).CHAT_INPUT_HEIGHT;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj = { pullTab: null, pullTabButton: null, pullTabOpened: null, pullTabClosed: null };

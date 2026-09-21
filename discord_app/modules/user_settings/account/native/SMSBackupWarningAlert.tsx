@@ -1,6 +1,6 @@
-// === Module 7317: SMSBackupWarningAlert ===
+// === Module 7322: SMSBackupWarningAlert ===
 
-// Module 7317 (SMSBackupWarningAlert)
+// Module 7322 (SMSBackupWarningAlert)
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
 import common_AlertDefault from "common/Alert" /* 5205 */;
 import noop from "module_19" /* 19 */;

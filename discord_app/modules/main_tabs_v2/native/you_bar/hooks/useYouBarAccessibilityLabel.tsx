@@ -1,18 +1,18 @@
-// === Module 16699: useYouBarAccessibilityLabel ===
+// === Module 16705: useYouBarAccessibilityLabel ===
 
-// Module 16699 (useYouBarAccessibilityLabel)
+// Module 16705 (useYouBarAccessibilityLabel)
 import util from "util" /* 1115 */;
 import UserUtils from "UserUtils" /* 4600 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11139 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 11140 */;
-import isGameActivityDefault from "isGameActivity" /* 11147 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 11149 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 11140 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 11141 */;
+import isGameActivityDefault from "isGameActivity" /* 11148 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 11150 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import PresenceStore from "PresenceStore" /* 4796 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5491 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5496 */;
 import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 
 const require = globalThis.__r;
@@ -51,13 +51,13 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
     if (stateFromStores != null) {
       primaryGuild = stateFromStores.primaryGuild;
     }
-    const userPrimaryGuild = tmp3(8433).getUserPrimaryGuild(primaryGuild);
+    const userPrimaryGuild = tmp3(8434).getUserPrimaryGuild(primaryGuild);
     let tag;
     if (userPrimaryGuild != null) {
       tag = userPrimaryGuild.tag;
     }
     tmp8 = tag;
-    const tmp3Result3 = tmp3(8433);
+    const tmp3Result3 = tmp3(8434);
   }
   tag = tmp8;
   const tmp3Result = require("useGameMentionsAsPlainText");

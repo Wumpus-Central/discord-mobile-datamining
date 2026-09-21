@@ -1,6 +1,6 @@
-// === Module 7417: ConnectionCardView ===
+// === Module 7422: ConnectionCardView ===
 
-// Module 7417 (ConnectionCardView)
+// Module 7422 (ConnectionCardView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4715 */;

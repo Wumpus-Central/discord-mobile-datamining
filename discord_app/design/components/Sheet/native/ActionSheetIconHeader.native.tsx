@@ -1,6 +1,6 @@
-// === Module 11265: ActionSheetIconHeader ===
+// === Module 11267: ActionSheetIconHeader ===
 
-// Module 11265 (ActionSheetIconHeader)
+// Module 11267 (ActionSheetIconHeader)
 import Text_Text from "Text/Text" /* 4752 */;
 import noop from "module_19" /* 19 */;
 

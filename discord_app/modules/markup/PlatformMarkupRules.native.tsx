@@ -11,8 +11,8 @@ import MarkupTextRuleDefault from "MarkupTextRule" /* 5217 */;
 import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5218 */;
 import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5221 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5239 */;
-import useGameMentionData from "useGameMentionData" /* 5318 */;
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 5333 */;
+import useGameMentionData from "useGameMentionData" /* 5323 */;
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 5338 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;

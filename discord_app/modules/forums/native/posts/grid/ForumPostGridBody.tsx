@@ -1,31 +1,31 @@
-// === Module 12257: ForumPostGridBody ===
+// === Module 12259: ForumPostGridBody ===
 
-// Module 12257 (ForumPostGridBody)
+// Module 12259 (ForumPostGridBody)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8140 */;
-import _modDef11509 from "module_11509" /* 11509 */;
-import _modDef12258 from "module_12258" /* 12258 */;
-import _modDef12259 from "module_12259" /* 12259 */;
-import ForumPostMedia from "ForumPostMedia" /* 12260 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8141 */;
+import _modDef11511 from "module_11511" /* 11511 */;
+import _modDef12260 from "module_12260" /* 12260 */;
+import _modDef12261 from "module_12261" /* 12261 */;
+import ForumPostMedia from "ForumPostMedia" /* 12262 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function GIFIcon() {
   const tmp = closure_8();
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12258, disableColor: true, style: closure_8().gifIcon });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12260, disableColor: true, style: closure_8().gifIcon });
 }
 function PlayIcon() {
-  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12259, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12261, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
   const tmp = closure_8();
   const obj = { style: tmp.extraMediaCountContainer, children: null };
-  items = [timestampProducer(native.Icon, { source: _modDef11509, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
-  const obj2 = { source: _modDef11509, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, { source: _modDef11511, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 }), ];
+  const obj2 = { source: _modDef11511, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
   items[1] = timestampProducer(Text_Text.Text, { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount });
   obj.children = items;
   return React5(View, obj);
@@ -84,7 +84,7 @@ export default function ForumPostGridBody(thread) {
   const media = thread.media;
   const tmp = closure_8();
   dependencyMap = tmp;
-  const tmp4 = _slicedToArray(thread(7515).useSomeAppliedTags(thread, 2), 2);
+  const tmp4 = _slicedToArray(thread(7517).useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp13Result = first.length > 0;
   items = [media];
@@ -139,7 +139,7 @@ export default function ForumPostGridBody(thread) {
   if (isMediaPostResult) {
     wideAspectRatioGrid = tmp.wideAspectRatioGrid;
   }
-  let obj = thread(7515);
+  let obj = thread(7517);
   let tmp2 = thread;
   items5[1] = wideAspectRatioGrid;
   const items6 = [
@@ -164,7 +164,7 @@ export default function ForumPostGridBody(thread) {
   if (tmp13Result) {
     const obj4 = { style: tmp.footerLeftContainer, children: null };
     const obj5 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
-    obj4.children = closure_6(tmp2(12264).ForumPostAppliedTagPills, obj5);
+    obj4.children = closure_6(tmp2(12266).ForumPostAppliedTagPills, obj5);
     tmp13Result = closure_6(View, obj4);
   }
   items6[1] = tmp13Result;

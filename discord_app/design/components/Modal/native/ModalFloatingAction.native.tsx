@@ -1,6 +1,6 @@
-// === Module 11260: ModalFloatingAction ===
+// === Module 11261: ModalFloatingAction ===
 
-// Module 11260 (ModalFloatingAction)
+// Module 11261 (ModalFloatingAction)
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import spring from "spring" /* 5185 */;
 import springPresets from "springPresets" /* 5189 */;

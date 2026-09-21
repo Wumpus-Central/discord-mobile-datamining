@@ -1,6 +1,6 @@
-// === Module 14666: NativeSystraceModule ===
+// === Module 14672: NativeSystraceModule ===
 
-// Module 14666 (NativeSystraceModule)
+// Module 14672 (NativeSystraceModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

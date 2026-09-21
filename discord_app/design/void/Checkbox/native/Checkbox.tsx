@@ -1,8 +1,8 @@
-// === Module 14349: Checkbox/Checkbox ===
+// === Module 14355: Checkbox/Checkbox ===
 
-// Module 14349 (Checkbox/Checkbox)
-import _modDef14350 from "module_14350" /* 14350 */;
-import _modDef14351 from "module_14351" /* 14351 */;
+// Module 14355 (Checkbox/Checkbox)
+import _modDef14356 from "module_14356" /* 14356 */;
+import _modDef14357 from "module_14357" /* 14357 */;
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;
@@ -13,10 +13,10 @@ const result = size.fileFinishedImporting("design/void/Checkbox/native/Checkbox.
 export default function Checkbox(style) {
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj.source = _modDef14350;
+    obj.source = _modDef14356;
     let tmp5 = obj;
   } else {
-    obj.source = _modDef14351;
+    obj.source = _modDef14357;
     tmp5 = obj;
   }
   return <Image {...tmp5} />;

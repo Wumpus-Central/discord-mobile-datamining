@@ -1,12 +1,12 @@
-// === Module 17037: VibegrationsSettingsRequestCard ===
+// === Module 17045: VibegrationsSettingsRequestCard ===
 
-// Module 17037 (VibegrationsSettingsRequestCard)
+// Module 17045 (VibegrationsSettingsRequestCard)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16981 */;
+import VibegrationsSettingsSheet from "VibegrationsSettingsSheet" /* 16989 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 13359 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 13361 */;
 
 const VibegrationsSettingsSheetDefault = VibegrationsSettingsSheet;
 

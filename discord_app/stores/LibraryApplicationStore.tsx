@@ -1,12 +1,12 @@
-// === Module 7637: LibraryApplicationStore ===
+// === Module 7639: LibraryApplicationStore ===
 
-// Module 7637 (LibraryApplicationStore)
+// Module 7639 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7639 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7638 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7641 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7640 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;

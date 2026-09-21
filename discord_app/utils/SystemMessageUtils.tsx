@@ -1,18 +1,18 @@
-// === Module 8243: SystemMessageUtils ===
+// === Module 8244: SystemMessageUtils ===
 
-// Module 8243 (SystemMessageUtils)
+// Module 8244 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
 import useChannelName from "useChannelName" /* 4909 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4978 */;
 import useMessageAuthor from "useMessageAuthor" /* 4988 */;
-import MarkupParser from "MarkupParser" /* 8244 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8248 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8249 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8251 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8252 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8253 */;
+import MarkupParser from "MarkupParser" /* 8245 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8249 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8250 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8252 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8253 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8254 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MessageRecord from "MessageRecord" /* 4406 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

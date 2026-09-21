@@ -1,6 +1,6 @@
-// === Module 5721: FrecencyStore ===
+// === Module 5726: FrecencyStore ===
 
-// Module 5721 (FrecencyStore)
+// Module 5726 (FrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

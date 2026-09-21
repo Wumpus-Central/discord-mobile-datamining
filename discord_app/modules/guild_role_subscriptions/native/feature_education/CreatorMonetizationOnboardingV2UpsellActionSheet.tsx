@@ -1,13 +1,13 @@
-// === Module 16580: CreatorMonetizationOnboardingV2UpsellActionSheet ===
+// === Module 16586: CreatorMonetizationOnboardingV2UpsellActionSheet ===
 
-// Module 16580 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+// Module 16586 (CreatorMonetizationOnboardingV2UpsellActionSheet)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7390 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9854 */;
-import _modDef16581 from "module_16581" /* 16581 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7395 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9855 */;
+import _modDef16587 from "module_16587" /* 16587 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16581 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16587 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress() {

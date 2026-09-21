@@ -1,6 +1,6 @@
-// === Module 6772: ? ===
+// === Module 6777: ? ===
 
-// Module 6772
+// Module 6777
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SwordIllocon-2x.png.js");

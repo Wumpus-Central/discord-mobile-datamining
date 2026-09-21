@@ -1,9 +1,9 @@
-// === Module 6669: ServerIconShieldzordExample ===
+// === Module 6674: ServerIconShieldzordExample ===
 
-// Module 6669 (ServerIconShieldzordExample)
+// Module 6674 (ServerIconShieldzordExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6670 from "module_6670" /* 6670 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6675 from "module_6675" /* 6675 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ServerIconShieldzordExample = function ServerIconShieldzordExample(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6670 };
+  const obj2 = { uri: _modDef6675 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

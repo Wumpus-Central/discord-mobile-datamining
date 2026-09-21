@@ -1,11 +1,11 @@
-// === Module 16654: useHomeDrawerGuildTyping ===
+// === Module 16660: useHomeDrawerGuildTyping ===
 
-// Module 16654 (useHomeDrawerGuildTyping)
+// Module 16660 (useHomeDrawerGuildTyping)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4397 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import TypingStore from "TypingStore" /* 12216 */;
+import TypingStore from "TypingStore" /* 12218 */;
 
 const require = globalThis.__r;
 
@@ -18,22 +18,21 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   return result;
 }
 const isThread = fn(2045).isThread;
-let obj = { typingChannelId: "Array", typingChannelName: "accessible", typingUserIds: [] };
+let closure_7 = { typingChannelId: "Array", typingChannelName: "PX_16", typingUserIds: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
   _require = id;
   const isHomeDrawerChannelMuted = require("isHomeDrawerChannelMuted").useIsHomeDrawerChannelMuted();
-  obj = require("isHomeDrawerChannelMuted");
+  const obj = require("isHomeDrawerChannelMuted");
   isHomeDrawerChannelInChannelList = require("isHomeDrawerChannelInChannelList").useIsHomeDrawerChannelInChannelList();
   let obj2 = require("isHomeDrawerChannelInChannelList");
   const items = [TypingStore, ChannelStore, JoinedThreadsStore];
   const items1 = [id, isHomeDrawerChannelMuted, isHomeDrawerChannelInChannelList];
   return require("initialize").useStateFromStores(items, () => {
     const typingUsersByGuild = TypingStore.getTypingUsersByGuild(closure_0);
-    obj = SnowflakeUtilsDefault;
-    const keys = obj.keys(typingUsersByGuild);
+    const keys = SnowflakeUtilsDefault.keys(typingUsersByGuild);
     const found = keys.find((item) => {
       basicChannel = basicChannel.getBasicChannel(item);
       let tmp2 = null != basicChannel;
@@ -54,7 +53,7 @@ export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
       return tmp2;
     });
     if (null == found) {
-      let obj2 = obj;
+      let obj2 = closure_7;
     } else {
       obj2 = { typingChannelId: found, typingChannelName: null, typingUserIds: null };
       const channel = ChannelStore.getChannel(found);

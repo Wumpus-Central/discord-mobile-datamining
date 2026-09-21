@@ -1,6 +1,6 @@
-// === Module 14452: Slider ===
+// === Module 14458: Slider ===
 
-// Module 14452 (Slider)
+// Module 14458 (Slider)
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4724 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4725 */;
@@ -52,7 +52,7 @@ export const Slider = function Slider(step) {
   obj3.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
   obj3.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
   obj3.tapToSeek = true;
-  items1[1] = closure_5(step(8548), obj3);
+  items1[1] = closure_5(step(8549), obj3);
   let tmp8Result = null;
   if (null != endIcon) {
     const obj4 = { style: tmp2.endIcon, children: endIcon };

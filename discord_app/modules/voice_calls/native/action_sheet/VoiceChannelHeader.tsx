@@ -1,20 +1,20 @@
-// === Module 14056: VoiceChannelHeader ===
+// === Module 14062: VoiceChannelHeader ===
 
-// Module 14056 (VoiceChannelHeader)
+// Module 14062 (VoiceChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import useChannelNameDefault from "useChannelName" /* 4909 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5273 */;
-import Pressables from "Pressables" /* 5334 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10075 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10194 */;
-import _modDef10287 from "module_10287" /* 10287 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11839 */;
-import CallStateHooks from "CallStateHooks" /* 14057 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14058 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 14059 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5277 */;
+import Pressables from "Pressables" /* 5339 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10076 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10195 */;
+import _modDef10288 from "module_10288" /* 10288 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11841 */;
+import CallStateHooks from "CallStateHooks" /* 14063 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 14064 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 14065 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
 import GuildStore from "GuildStore" /* 2063 */;
@@ -148,7 +148,7 @@ class VoiceChannelHeader {
   }
 }
 function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10287, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10288, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return closure_1_10(IconButton, obj);

@@ -1,24 +1,24 @@
-// === Module 7516: ReportToModUtils ===
+// === Module 7518: ReportToModUtils ===
 
-// Module 7516 (ReportToModUtils)
+// Module 7518 (ReportToModUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7505 */;
-import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7506 */;
-import ReportUtils from "ReportUtils" /* 7529 */;
-import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7530 */;
-import SelfModUtils from "SelfModUtils" /* 7531 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7532 */;
-import HarmTypeConfiguration from "HarmTypeConfiguration" /* 7535 */;
-import ForumChannelTypes from "ForumChannelTypes" /* 7543 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7517 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7507 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 7508 */;
+import ReportUtils from "ReportUtils" /* 7531 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 7532 */;
+import SelfModUtils from "SelfModUtils" /* 7533 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7534 */;
+import HarmTypeConfiguration from "HarmTypeConfiguration" /* 7537 */;
+import ForumChannelTypes from "ForumChannelTypes" /* 7545 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7519 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import MessageStore from "MessageStore" /* 4976 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const ReportToModPermissions = fn(7528).ReportToModPermissions;
+const ReportToModPermissions = fn(7530).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 

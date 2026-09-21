@@ -1,6 +1,6 @@
-// === Module 15757: SystemNotificationsSetting ===
+// === Module 15763: SystemNotificationsSetting ===
 
-// Module 15757 (SystemNotificationsSetting)
+// Module 15763 (SystemNotificationsSetting)
 import util from "util" /* 1115 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -81,15 +81,15 @@ let closure_9 = async function _handleEnableSystemNotification() {
 const NativeModules = fn(17).NativeModules;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_6 = fn(4965).NotificationAuthorizationStatus;
-const NotificationPermissionConstants = fn(12662);
+const NotificationPermissionConstants = fn(12664);
 ({ EventActionType: closure_7, EventActionLocation: closure_8 } = NotificationPermissionConstants);
-const SettingBuilders = fn(11723);
+const SettingBuilders = fn(11725);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nl2Dqx);
   },
-  parent: fn(8232).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8233).MobileUserSettings.NOTIFICATIONS,
   onPress: function handleEnableSystemNotification() {
     const self = this;
     const apply = closure_9.apply;

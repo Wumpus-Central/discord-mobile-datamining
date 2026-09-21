@@ -1,6 +1,6 @@
-// === Module 10198: MessageManager ===
+// === Module 10199: MessageManager ===
 
-// Module 10198 (MessageManager)
+// Module 10199 (MessageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -10,22 +10,22 @@ import util from "util" /* 1115 */;
 import matchPathCompat from "matchPathCompat" /* 4582 */;
 import Client from "Client" /* 4686 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 5484 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7522 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7696 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8644 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 10199 */;
-import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 10200 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 5489 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7524 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7698 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8645 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 10200 */;
+import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 10201 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 7520 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5494 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 7522 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import ReadStateStore from "ReadStateStore" /* 4771 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7363 */;
 
 require = fn;
 function fetchMessages(arg0) {

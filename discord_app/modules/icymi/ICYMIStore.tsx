@@ -1,28 +1,28 @@
-// === Module 8605: ICYMIStore ===
+// === Module 8606: ICYMIStore ===
 
-// Module 8605 (ICYMIStore)
+// Module 8606 (ICYMIStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import utils from "utils" /* 8403 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8611 */;
-import ICYMITypes from "ICYMITypes" /* 8618 */;
-import ICYMIUtils from "ICYMIUtils" /* 8620 */;
+import utils from "utils" /* 8404 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8612 */;
+import ICYMITypes from "ICYMITypes" /* 8619 */;
+import ICYMIUtils from "ICYMIUtils" /* 8621 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8606 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8607 */;
 import ExperimentStore from "ExperimentStore" /* 4671 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7766 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7768 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8615 */;
+import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8616 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import MessageStore from "MessageStore" /* 4976 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import ReadStateStore from "ReadStateStore" /* 4771 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
-import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8617 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8619 */;
+import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8618 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8620 */;
 
 require = fn;
 function filterStaffGuild(data) {
@@ -589,12 +589,12 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(7766);
+let GuildScheduledEventStore = fn(7768);
 ({ eventScheduledToStartWithin: metroRequire, isGuildEventEnded: closure_7, isGuildScheduledEventActive: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
-const ContentInventoryFeedKey = fn(8628).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8629).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_26 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
@@ -926,7 +926,7 @@ obj = {
     items = items.items;
     let set1;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(8618).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(8619).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set1.has(type.type));
     const found1 = found.filter(filterStaffGuild);
     closure_30 = found1.map((type) => {
@@ -1019,7 +1019,7 @@ obj = {
     });
     const items4 = [...items2];
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(8618).SUPPORTED_ITEM_TYPES);
+    set = new Set(set1(8619).SUPPORTED_ITEM_TYPES);
     [arr9, arr10] = items5;
     let tmp6 = _slicedToArray(items5, 2);
     if (c41) {
@@ -1028,20 +1028,20 @@ obj = {
           if (c38 > 0) {
             c43 = null;
           }
-          const tmp8 = arr11.length > tmp(8618).MIN_ITEMS_FOR_NEW_PILL;
+          const tmp8 = arr11.length > tmp(8619).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp8;
           }
           if (tmp8) {
             const items6 = [];
             HermesBuiltin.arraySpread(arr10, HermesBuiltin.arraySpread(arr9, 0));
-            tmp(8620).hydrateItems(items6, 0, tmp(8618).ICYMI_PAGE_SIZE);
+            tmp(8621).hydrateItems(items6, 0, tmp(8619).ICYMI_PAGE_SIZE);
             if (arr9.length + arr10.length === 0) {
               c54 = true;
             }
-            const tmpResult = tmp(8620);
+            const tmpResult = tmp(8621);
           }
-          const ICYMIAnalytics = tmp(8629).ICYMIAnalytics;
+          const ICYMIAnalytics = tmp(8630).ICYMIAnalytics;
           const obj2 = { newTrackingProps, hasNewContent, unreadFeedItems: arr9, readFeedItems: arr10, homeSessionId: null };
           let str = "background_load";
           if (focused) {

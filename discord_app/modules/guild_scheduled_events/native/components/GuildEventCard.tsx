@@ -1,9 +1,9 @@
-// === Module 10063: GuildEventCard ===
+// === Module 10064: GuildEventCard ===
 
-// Module 10063 (GuildEventCard)
+// Module 10064 (GuildEventCard)
 import nativeDefault from "native" /* 576 */;
-import ButtonGroup from "ButtonGroup" /* 5645 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 9868 */;
+import ButtonGroup from "ButtonGroup" /* 5650 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 9869 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
 
@@ -27,7 +27,7 @@ function GuildEventCardControls(onCloseAction) {
   return React6(ButtonGroup.ButtonGroup, obj2);
 }
 const View = fn(17).View;
-let closure_5 = fn(7766).isGuildScheduledEventActive;
+let closure_5 = fn(7768).isGuildScheduledEventActive;
 fn(2047).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

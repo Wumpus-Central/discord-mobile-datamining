@@ -1,6 +1,6 @@
-// === Module 8859: GoogleWalletExperiment ===
+// === Module 8860: GoogleWalletExperiment ===
 
-// Module 8859 (GoogleWalletExperiment)
+// Module 8860 (GoogleWalletExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 5989: AvatarClydeExample ===
+// === Module 5994: AvatarClydeExample ===
 
-// Module 5989 (AvatarClydeExample)
+// Module 5994 (AvatarClydeExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef5990 from "module_5990" /* 5990 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef5995 from "module_5995" /* 5995 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarClydeExample = function AvatarClydeExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5990 };
+  const obj2 = { uri: _modDef5995 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

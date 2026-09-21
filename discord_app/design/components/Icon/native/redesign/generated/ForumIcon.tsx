@@ -1,6 +1,6 @@
-// === Module 5299: ForumIcon ===
+// === Module 5306: ForumIcon ===
 
-// Module 5299 (ForumIcon)
+// Module 5306 (ForumIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5260 from "module_5260" /* 5260 */;

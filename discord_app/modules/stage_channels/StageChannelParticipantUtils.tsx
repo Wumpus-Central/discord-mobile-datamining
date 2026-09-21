@@ -1,6 +1,6 @@
-// === Module 10180: StageChannelParticipantUtils ===
+// === Module 10181: StageChannelParticipantUtils ===
 
-// Module 10180 (StageChannelParticipantUtils)
+// Module 10181 (StageChannelParticipantUtils)
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
 import UserUtils from "UserUtils" /* 4600 */;

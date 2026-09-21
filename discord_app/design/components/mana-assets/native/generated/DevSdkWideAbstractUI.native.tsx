@@ -1,9 +1,9 @@
-// === Module 6135: DevSdkWideAbstractUI ===
+// === Module 6140: DevSdkWideAbstractUI ===
 
-// Module 6135 (DevSdkWideAbstractUI)
+// Module 6140 (DevSdkWideAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6136 from "module_6136" /* 6136 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6141 from "module_6141" /* 6141 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DevSdkWideAbstractUI = function DevSdkWideAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6136 };
+  const obj2 = { uri: _modDef6141 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

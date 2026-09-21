@@ -1,10 +1,10 @@
-// === Module 11472: BioText ===
+// === Module 11474: BioText ===
 
-// Module 11472 (BioText)
+// Module 11474 (BioText)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import LinkingDefault from "Linking" /* 4451 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 9532 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 9533 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

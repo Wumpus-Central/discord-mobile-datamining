@@ -1,13 +1,13 @@
-// === Module 15934: DevToolsProfilingScreen ===
+// === Module 15940: DevToolsProfilingScreen ===
 
-// Module 15934 (DevToolsProfilingScreen)
+// Module 15940 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
-import TableRow from "TableRow" /* 5817 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
-import ComponentProfiler from "ComponentProfiler" /* 10450 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15935 */;
+import TableRow from "TableRow" /* 5822 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
+import ComponentProfiler from "ComponentProfiler" /* 10451 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15941 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

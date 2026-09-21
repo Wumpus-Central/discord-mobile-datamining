@@ -1,10 +1,10 @@
-// === Module 18372: BackgroundSync ===
+// === Module 18383: BackgroundSync ===
 
-// Module 18372 (BackgroundSync)
+// Module 18383 (BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2087 */;
-import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 17731 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 17742 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5494 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AppStateStore from "AppStateStore" /* 1979 */;
 

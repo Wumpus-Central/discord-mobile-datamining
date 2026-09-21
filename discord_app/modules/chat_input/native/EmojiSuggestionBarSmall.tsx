@@ -1,11 +1,11 @@
-// === Module 12683: EmojiSuggestionBarSmall ===
+// === Module 12685: EmojiSuggestionBarSmall ===
 
-// Module 12683 (EmojiSuggestionBarSmall)
+// Module 12685 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10567 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10586 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12678 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10568 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10587 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12680 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -16,8 +16,8 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: noop, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_7(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(12678).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
-  let obj = displayEmojis(12678);
+  const suggestionBarHeight = displayEmojis(12680).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
+  let obj = displayEmojis(12680);
   class A {
     constructor() {
       obj = { opacity: null };
@@ -55,7 +55,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   return suggestionBarHeight(ReanimatedRexportDefault.View, obj4);
 }
 const jsx = fn(21).jsx;
-const sum = fn(10547).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10548).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
 const createStyles = fn(4756);

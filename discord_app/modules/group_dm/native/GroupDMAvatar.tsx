@@ -1,8 +1,8 @@
-// === Module 11173: GroupDMAvatar ===
+// === Module 11174: GroupDMAvatar ===
 
-// Module 11173 (GroupDMAvatar)
+// Module 11174 (GroupDMAvatar)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ClipView from "ClipView" /* 9093 */;
+import ClipView from "ClipView" /* 9094 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -56,7 +56,7 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
+    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 1, animate: null };
     obj9.cutout = memo1;
     obj9.animate = animate;
     if (null == users) {
@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Load from device" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Gift Recipient ID" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };

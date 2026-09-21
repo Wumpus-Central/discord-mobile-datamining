@@ -1,15 +1,15 @@
-// === Module 12242: ChatInputCommandOptionParser ===
+// === Module 12244: ChatInputCommandOptionParser ===
 
-// Module 12242 (ChatInputCommandOptionParser)
+// Module 12244 (ChatInputCommandOptionParser)
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2008 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4413 */;
 import useChannelName from "useChannelName" /* 4909 */;
-import _modDef8399 from "module_8399" /* 8399 */;
-import ChatInputParser from "ChatInputParser" /* 12243 */;
-import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 12244 */;
+import _modDef8400 from "module_8400" /* 8400 */;
+import ChatInputParser from "ChatInputParser" /* 12245 */;
+import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser" /* 12246 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
-import EmojiStore from "EmojiStore" /* 5671 */;
+import EmojiStore from "EmojiStore" /* 5676 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 
@@ -64,7 +64,7 @@ function buildGameMentionResult(id) {
   let uri = getGameMediaRefURLDefault(id.id, id.icon, { size: 32 });
   const obj = { location: 0, length: map1(id.name).length, icon: null, iconSize: 16, iconCornerRadius: 4, iconSpacing: 4 };
   if (obj2.isNullOrEmpty(uri)) {
-    uri = Image.resolveAssetSource(_modDef8399).uri;
+    uri = Image.resolveAssetSource(_modDef8400).uri;
   }
   obj.icon = uri;
   return obj;

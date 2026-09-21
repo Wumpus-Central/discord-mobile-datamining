@@ -1,22 +1,22 @@
-// === Module 16534: FavoritesGuildSuggestedChannels ===
+// === Module 16540: FavoritesGuildSuggestedChannels ===
 
-// Module 16534 (FavoritesGuildSuggestedChannels)
+// Module 16540 (FavoritesGuildSuggestedChannels)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3324 from "module_3324" /* 3324 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import XSmallIcon from "XSmallIcon" /* 5892 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7289 */;
-import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 16536 */;
-import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 16537 */;
+import XSmallIcon from "XSmallIcon" /* 5897 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7294 */;
+import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 16542 */;
+import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 16543 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(16535);
+const FavoritesGuildSuggestionsStore = fn(16541);
 ({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1074).NOOP;
-let closure_8 = fn(10373).getScaledCategoryRowHeight;
+let closure_8 = fn(10374).getScaledCategoryRowHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGui
 
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = closure_13();
-  const categoryStyles = arr(16439).useCategoryStyles();
+  const categoryStyles = arr(16445).useCategoryStyles();
   arr = closure_5();
   const tmp5 = closure_6();
   importDefault = tmp5;
@@ -53,7 +53,7 @@ export default function FavoritesGuildSuggestedChannels() {
     obj3.name = intl.string(_modDef3324.oHWnLy);
     obj3.styles = categoryStyles;
     obj3.trailingAction = memo;
-    const items2 = [tmp2(16439).renderCategoryItem(obj3), ];
+    const items2 = [tmp2(16445).renderCategoryItem(obj3), ];
     const obj4 = {
       style: tmp.rows,
       children: arr.map((item, index) => {
@@ -64,8 +64,8 @@ export default function FavoritesGuildSuggestedChannels() {
           const intl = util.intl;
           obj3.text = intl.string(util.t.OYkgVk);
           obj3.onPress = function onPress() {
-            const tmp = closure_1(16537);
-            return tmp(arr(11246).getDestinationIdFromResult(closure_0));
+            const tmp = closure_1(16543);
+            return tmp(arr(11247).getDestinationIdFromResult(closure_0));
           };
           obj2.trailing = React7(components_Button_Button.Button, obj3);
           obj.children = React7(SearchableDestinationListRowDefault, obj2);
@@ -75,7 +75,7 @@ export default function FavoritesGuildSuggestedChannels() {
     items2[1] = closure_9(View, obj4);
     obj2.children = items2;
     tmp9 = closure_10(View, obj2);
-    const tmp2Result = tmp2(16439);
+    const tmp2Result = tmp2(16445);
   }
   return tmp9;
 };

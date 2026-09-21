@@ -1,6 +1,6 @@
-// === Module 7766: GuildScheduledEventStore ===
+// === Module 7768: GuildScheduledEventStore ===
 
-// Module 7766 (GuildScheduledEventStore)
+// Module 7768 (GuildScheduledEventStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

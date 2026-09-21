@@ -1,6 +1,6 @@
-// === Module 17229: UsernameSearchScreen ===
+// === Module 17240: UsernameSearchScreen ===
 
-// Module 17229 (UsernameSearchScreen)
+// Module 17240 (UsernameSearchScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ export default function UsernameSearchScreen(navigation) {
   const effect = noop.useEffect(() => {
     ref(1241).track(constants.FRIEND_ADD_VIEWED, { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL });
   }, []);
-  const insets = ref(7221)().insets;
+  const insets = ref(7226)().insets;
   ref = noop.useRef(null);
   const items = [navigation];
   const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", (data) => {
@@ -49,8 +49,8 @@ export default function UsernameSearchScreen(navigation) {
       }
     }
   }), items);
-  const clientThemesOverride = navigation(8114).useClientThemesOverride();
-  let obj = navigation(8114);
+  const clientThemesOverride = navigation(8116).useClientThemesOverride();
+  let obj = navigation(8116);
   let prop = null;
   if (obj2.isIOS()) {
     prop = null;
@@ -66,10 +66,10 @@ export default function UsernameSearchScreen(navigation) {
   const items1 = [tmp.content, clientThemesOverride];
   obj4.style = items1;
   obj2 = navigation(1364);
-  const items2 = [closure_8(ref(5336), { absolute: true }), ];
+  const items2 = [closure_8(ref(5341), { absolute: true }), ];
   const obj5 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, ];
-  const tmp3Result = ref(5790);
+  const tmp3Result = ref(5795);
   items3[2] = { paddingBottom: insets.bottom + ref(576).space.PX_16 };
   obj5.contentContainerStyle = items3;
   const obj7 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
@@ -78,7 +78,7 @@ export default function UsernameSearchScreen(navigation) {
   obj7.headerText = intl.string(navigation(1115).t.YEOwDM);
   obj7.headerTextStyle = tmp.headerText;
   obj7.ref = ref;
-  obj5.children = closure_8(ref(14118), obj7);
+  obj5.children = closure_8(ref(14124), obj7);
   items2[1] = closure_8(closure_4, obj5);
   obj4.children = items2;
   obj3.children = closure_9(tmp3Result, obj4);

@@ -1,6 +1,6 @@
-// === Module 10509: ForumComposerModal ===
+// === Module 10510: ForumComposerModal ===
 
-// Module 10509 (ForumComposerModal)
+// Module 10510 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,15 +8,15 @@ import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8017 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9420 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10508 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8019 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9421 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10509 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9772 */;
+import NativeMenuStore from "NativeMenuStore" /* 9773 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import DraftStore from "DraftStore" /* 5105 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7517 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7519 */;
 
 require = fn;
 const View = fn(17).View;

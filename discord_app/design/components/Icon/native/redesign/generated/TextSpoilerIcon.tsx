@@ -1,6 +1,6 @@
-// === Module 5288: TextSpoilerIcon ===
+// === Module 5295: TextSpoilerIcon ===
 
-// Module 5288 (TextSpoilerIcon)
+// Module 5295 (TextSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5256 from "module_5256" /* 5256 */;

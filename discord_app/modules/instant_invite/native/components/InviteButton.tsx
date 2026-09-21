@@ -1,13 +1,13 @@
-// === Module 10151: InviteButton ===
+// === Module 10152: InviteButton ===
 
-// Module 10151 (InviteButton)
+// Module 10152 (InviteButton)
 import util from "util" /* 1115 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7976).InviteSendStates;
+const InviteSendStates = fn(7978).InviteSendStates;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let closure_5 = createStyles.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });

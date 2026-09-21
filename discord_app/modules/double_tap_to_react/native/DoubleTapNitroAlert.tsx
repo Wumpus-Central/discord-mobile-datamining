@@ -1,17 +1,17 @@
-// === Module 8231: DoubleTapNitroAlert ===
+// === Module 8232: DoubleTapNitroAlert ===
 
-// Module 8231 (DoubleTapNitroAlert)
+// Module 8232 (DoubleTapNitroAlert)
 import util from "util" /* 1115 */;
 import AlertModal from "AlertModal" /* 5114 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6847 */;
-import openUserSettings from "openUserSettings" /* 7622 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6852 */;
+import openUserSettings from "openUserSettings" /* 7624 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NITRO_UPSELL_ALERT_KEY = fn(8226).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(8227).NITRO_UPSELL_ALERT_KEY;
 const UserSettingsSections = fn(1074).UserSettingsSections;
-const MobileUserSettings = fn(8232).MobileUserSettings;
+const MobileUserSettings = fn(8233).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4756);

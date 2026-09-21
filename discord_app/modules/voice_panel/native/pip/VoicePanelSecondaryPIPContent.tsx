@@ -1,17 +1,17 @@
-// === Module 17619: VoicePanelSecondaryPIPContent ===
+// === Module 17630: VoicePanelSecondaryPIPContent ===
 
-// Module 17619 (VoicePanelSecondaryPIPContent)
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11258 */;
-import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17472 */;
+// Module 17630 (VoicePanelSecondaryPIPContent)
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11259 */;
+import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17483 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
-import FramesStore from "FramesStore" /* 9312 */;
+import FramesStore from "FramesStore" /* 9313 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 
 const require = fn;
 const ActivityLayoutMode = fn(2004).ActivityLayoutMode;
-const ActivityPanelModes = fn(9314).ActivityPanelModes;
-const FramesConstants = fn(9313);
+const ActivityPanelModes = fn(9315).ActivityPanelModes;
+const FramesConstants = fn(9314);
 ({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);

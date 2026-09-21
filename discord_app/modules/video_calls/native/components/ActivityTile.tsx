@@ -1,11 +1,11 @@
-// === Module 9718: ActivityTile ===
+// === Module 9719: ActivityTile ===
 
-// Module 9718 (ActivityTile)
+// Module 9719 (ActivityTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import native2 from "native" /* 4466 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9634 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9635 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -64,7 +64,7 @@ function ActivityTileInner(participant) {
               const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(9636)(obj4), done: false };
+              const obj5 = { value: v1(9637)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -74,8 +74,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(9721).setOrientationLockState(closure_128_3);
-          const obj = tmp2(9721);
+          const result = tmp2(9722).setOrientationLockState(closure_128_3);
+          const obj = tmp2(9722);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

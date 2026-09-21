@@ -1,9 +1,9 @@
-// === Module 11978: AppInteractionInfoActionSheet ===
+// === Module 11980: AppInteractionInfoActionSheet ===
 
-// Module 11978 (AppInteractionInfoActionSheet)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
-import UserActionCreators from "UserActionCreators" /* 8449 */;
-import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11979 */;
+// Module 11980 (AppInteractionInfoActionSheet)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
+import UserActionCreators from "UserActionCreators" /* 8450 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11981 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import GuildStore from "GuildStore" /* 2063 */;
@@ -31,13 +31,13 @@ export default function AppInteractionInfoActionSheet(message) {
   let tmp5;
   const memo = noop.useMemo(() => React6(ContextMenuSubmenuActionSheetHeaderDefault, { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9317).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9318).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9317).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9318).ApplicationIntegrationType.GUILD_INSTALL];
   }
   noop = tmp7;
   const interactionMetadata3 = message.interactionMetadata;
@@ -78,8 +78,8 @@ export default function AppInteractionInfoActionSheet(message) {
   }
   if (null != stateFromStores1) {
     const obj5 = { style: tmp.itemContainer, children: null };
-    const obj6 = { guild: stateFromStores1, size: tmp10(5796).GuildIconSizes.SMALL_32 };
-    const items5 = [closure_8(onBack(5796), obj6), ];
+    const obj6 = { guild: stateFromStores1, size: tmp10(5801).GuildIconSizes.SMALL_32 };
+    const items5 = [closure_8(onBack(5801), obj6), ];
     const obj7 = { style: tmp.itemLabel, children: null };
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores1.name };
     const items6 = [closure_8(tmp10(4752).Text, obj8), ];
@@ -92,7 +92,7 @@ export default function AppInteractionInfoActionSheet(message) {
     items5[1] = closure_9(id, obj7);
     obj5.children = items5;
     let tmp26 = closure_9(id, obj5);
-    const tmp2Result = onBack(5796);
+    const tmp2Result = onBack(5801);
   } else {
     tmp26 = null;
     if (null != stateFromStores) {
@@ -117,7 +117,7 @@ export default function AppInteractionInfoActionSheet(message) {
       items7[1] = closure_9(id, obj14);
       obj12.children = items7;
       obj11.children = closure_9(id, obj12);
-      tmp26 = closure_8(tmp10(5334).PressableOpacity, obj11);
+      tmp26 = closure_8(tmp10(5339).PressableOpacity, obj11);
     }
   }
   const obj18 = { header: memo, bodyStyles: { paddingBottom: onBack(1612)().bottom }, children: null };
@@ -144,9 +144,9 @@ export default function AppInteractionInfoActionSheet(message) {
     items10[1] = closure_9(id, obj22);
     obj20.children = items10;
     obj19.children = closure_9(id, obj20);
-    tmp32 = closure_8(tmp10(5334).PressableOpacity, obj19);
+    tmp32 = closure_8(tmp10(5339).PressableOpacity, obj19);
   }
   items9[1] = tmp32;
   obj18.children = items9;
-  return closure_9(message(7390).BottomSheet, obj18);
+  return closure_9(message(7395).BottomSheet, obj18);
 };

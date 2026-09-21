@@ -1,6 +1,6 @@
-// === Module 16656: VoiceSubtitle ===
+// === Module 16662: VoiceSubtitle ===
 
-// Module 16656 (VoiceSubtitle)
+// Module 16662 (VoiceSubtitle)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;

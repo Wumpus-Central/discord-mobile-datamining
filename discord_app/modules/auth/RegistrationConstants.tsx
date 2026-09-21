@@ -1,6 +1,6 @@
-// === Module 16272: RegistrationConstants ===
+// === Module 16278: RegistrationConstants ===
 
-// Module 16272 (RegistrationConstants)
+// Module 16278 (RegistrationConstants)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import size from "module_2" /* 2 */;
 

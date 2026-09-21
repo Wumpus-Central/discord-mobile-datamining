@@ -1,12 +1,12 @@
-// === Module 16231: NotifyFriendsOnComeOnlineSetting ===
+// === Module 16237: NotifyFriendsOnComeOnlineSetting ===
 
-// Module 16231 (NotifyFriendsOnComeOnlineSetting)
+// Module 16237 (NotifyFriendsOnComeOnlineSetting)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2019 */;
 import _modDef2648 from "module_2648" /* 2648 */;
-import SettingsConstants from "SettingsConstants" /* 8232 */;
-import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15773 */;
-import SettingBuilders from "SettingBuilders" /* 11723 */;
+import SettingsConstants from "SettingsConstants" /* 8233 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15779 */;
+import SettingBuilders from "SettingBuilders" /* 11725 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

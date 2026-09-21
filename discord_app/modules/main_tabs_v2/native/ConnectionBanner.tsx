@@ -1,6 +1,6 @@
-// === Module 16729: ConnectionBanner ===
+// === Module 16735: ConnectionBanner ===
 
-// Module 16729 (ConnectionBanner)
+// Module 16735 (ConnectionBanner)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import util from "util" /* 1115 */;
@@ -10,12 +10,12 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import spring from "spring" /* 5185 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import _modDef5876 from "module_5876" /* 5876 */;
-import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 16730 */;
-import ConnectionFineIcon from "ConnectionFineIcon" /* 16732 */;
+import _modDef5881 from "module_5881" /* 5881 */;
+import ConnectionUnknownIcon from "ConnectionUnknownIcon" /* 16736 */;
+import ConnectionFineIcon from "ConnectionFineIcon" /* 16738 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13945 */;
+import ConnectivityIndicatorStateStore from "ConnectivityIndicatorStateStore" /* 13951 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -88,7 +88,7 @@ function BackOnlineGlow(opacity) {
   let obj = token(4457);
   obj3.maskElement = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors, locations, start, end });
   obj3.children = closure_12(LinearGradientDefault, { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 });
-  obj2.children = closure_12(_modDef5876, obj3);
+  obj2.children = closure_12(_modDef5881, obj3);
   return closure_12(ReanimatedRexportDefault.View, obj2);
 }
 function ConnectionBannerInner() {
@@ -178,8 +178,8 @@ function ConnectionBannerInner() {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const constants = fn(13945).ConnectivityIndicatorState;
-const YouBarConstants = fn(15359);
+const constants = fn(13951).ConnectivityIndicatorState;
+const YouBarConstants = fn(15365);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -208,10 +208,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(13946).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(13952).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  let obj = stateFromStores(13946);
+  let obj = stateFromStores(13952);
   const items = [ConnectivityIndicatorStateStore];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
   dependencyMap = noop.useRef(null);

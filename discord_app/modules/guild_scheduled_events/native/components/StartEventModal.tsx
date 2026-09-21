@@ -1,14 +1,14 @@
-// === Module 10064: StartEventModal ===
+// === Module 10065: StartEventModal ===
 
-// Module 10064 (StartEventModal)
+// Module 10065 (StartEventModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
-import Pressables from "Pressables" /* 5334 */;
-import _modDef7329 from "module_7329" /* 7329 */;
-import GuildEventCardDefault from "GuildEventCard" /* 10063 */;
+import Pressables from "Pressables" /* 5339 */;
+import _modDef7334 from "module_7334" /* 7334 */;
+import GuildEventCardDefault from "GuildEventCard" /* 10064 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function NavigationBar(onClose) {
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = closure_1_12(native.Icon, { source: _modDef7329 });
+  obj2.children = closure_1_12(native.Icon, { source: _modDef7334 });
   obj.children = closure_1_12(Pressables.PressableOpacity, obj2);
   return closure_1_12(View, obj);
 }
@@ -49,7 +49,7 @@ class PreviewEventCard {
 const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(2047);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9783).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9784).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const createStyles = fn(4756);

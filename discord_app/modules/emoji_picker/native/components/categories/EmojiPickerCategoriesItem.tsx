@@ -1,6 +1,6 @@
-// === Module 10606: EmojiPickerCategoriesItem ===
+// === Module 10607: EmojiPickerCategoriesItem ===
 
-// Module 10606 (EmojiPickerCategoriesItem)
+// Module 10607 (EmojiPickerCategoriesItem)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import timing from "timing" /* 4757 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let EmojiCategoryTypes = fn(5675).EmojiCategoryTypes;
+let EmojiCategoryTypes = fn(5680).EmojiCategoryTypes;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: closure_7, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);

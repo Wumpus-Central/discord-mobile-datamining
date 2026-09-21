@@ -1,6 +1,6 @@
-// === Module 17310: ChannelSettingsChangeCategory ===
+// === Module 17321: ChannelSettingsChangeCategory ===
 
-// Module 17310 (ChannelSettingsChangeCategory)
+// Module 17321 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,15 +8,15 @@ import Text_Text from "Text/Text" /* 4752 */;
 import useChannelName from "useChannelName" /* 4909 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5732 */;
-import TableRow from "TableRow" /* 5817 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
-import Form from "Form" /* 8870 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5737 */;
+import TableRow from "TableRow" /* 5822 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
+import Form from "Form" /* 8871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7351 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7356 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
@@ -286,7 +286,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1484).useNavigation();
   const obj2 = channelId(1484);
-  const appChannelBotUserId = channelId(11859).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11861).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

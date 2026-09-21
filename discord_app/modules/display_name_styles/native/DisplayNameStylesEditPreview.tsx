@@ -1,6 +1,6 @@
-// === Module 15620: DisplayNameStylesEditPreview ===
+// === Module 15626: DisplayNameStylesEditPreview ===
 
-// Module 15620 (DisplayNameStylesEditPreview)
+// Module 15626 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -9,13 +9,13 @@ import utils from "utils" /* 1970 */;
 import _modDef2872 from "module_2872" /* 2872 */;
 import DateUtils from "DateUtils" /* 4438 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8427 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8434 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 8484 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11159 */;
-import types from "types" /* 11160 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11375 */;
-import NameplatePreview from "NameplatePreview" /* 11484 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8428 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8435 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 8485 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11160 */;
+import types from "types" /* 11161 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11377 */;
+import NameplatePreview from "NameplatePreview" /* 11486 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 

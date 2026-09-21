@@ -1,9 +1,9 @@
-// === Module 6175: EmojiAngryExample ===
+// === Module 6180: EmojiAngryExample ===
 
-// Module 6175 (EmojiAngryExample)
+// Module 6180 (EmojiAngryExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6176 from "module_6176" /* 6176 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6181 from "module_6181" /* 6181 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiAngryExample = function EmojiAngryExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6176 };
+  const obj2 = { uri: _modDef6181 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

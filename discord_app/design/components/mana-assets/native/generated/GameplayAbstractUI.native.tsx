@@ -1,9 +1,9 @@
-// === Module 6329: GameplayAbstractUI ===
+// === Module 6334: GameplayAbstractUI ===
 
-// Module 6329 (GameplayAbstractUI)
+// Module 6334 (GameplayAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6330 from "module_6330" /* 6330 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6335 from "module_6335" /* 6335 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GameplayAbstractUI = function GameplayAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6330 };
+  const obj2 = { uri: _modDef6335 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

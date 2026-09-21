@@ -1,6 +1,6 @@
-// === Module 8397: transformContentInventoryEntryMessageComponent ===
+// === Module 8398: transformContentInventoryEntryMessageComponent ===
 
-// Module 8397 (transformContentInventoryEntryMessageComponent)
+// Module 8398 (transformContentInventoryEntryMessageComponent)
 import _mod17 from "module_17" /* 17 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
@@ -9,17 +9,17 @@ import Constants from "Constants" /* 2004 */;
 import ColorUtils from "ColorUtils" /* 4605 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
 import _modDef5244 from "module_5244" /* 5244 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8398 */;
-import _modDef8399 from "module_8399" /* 8399 */;
-import useAvatarColor from "useAvatarColor" /* 8400 */;
-import useHeroColors from "useHeroColors" /* 8401 */;
-import utils from "utils" /* 8403 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8404 */;
-import _modDef8405 from "module_8405" /* 8405 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8399 */;
+import _modDef8400 from "module_8400" /* 8400 */;
+import useAvatarColor from "useAvatarColor" /* 8401 */;
+import useHeroColors from "useHeroColors" /* 8402 */;
+import utils from "utils" /* 8404 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8405 */;
 import _modDef8406 from "module_8406" /* 8406 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8407 */;
-import _modDef8409 from "module_8409" /* 8409 */;
+import _modDef8407 from "module_8407" /* 8407 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8408 */;
 import _modDef8410 from "module_8410" /* 8410 */;
+import _modDef8411 from "module_8411" /* 8411 */;
 import ApplicationStore from "ApplicationStore" /* 4983 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -46,13 +46,13 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
           iconURL = application.getIconURL(ImageSizes.LARGE);
         }
         if (iconURL == null) {
-          iconURL = Image.resolveAssetSource(_modDef8399).uri;
+          iconURL = Image.resolveAssetSource(_modDef8400).uri;
         }
         let tmp45 = assetImage;
         if (assetImage == null) {
           tmp45 = iconURL;
         }
-        if (tmp45 === Image.resolveAssetSource(_modDef8399).uri) {
+        if (tmp45 === Image.resolveAssetSource(_modDef8400).uri) {
           let tmp47 = items;
         } else {
           if (tmpResult29.hasFetchedColors(tmp45)) {
@@ -87,7 +87,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
             const obj3 = { text: sum };
             items2.push(obj3);
           }
-          const obj4 = { imageUrl: tmp45, title: contentInventoryEntry.extra.media_title, subtitles: items2, gradientColors: tmp47, platformIconUrl: Image.resolveAssetSource(_modDef8409).uri };
+          const obj4 = { imageUrl: tmp45, title: contentInventoryEntry.extra.media_title, subtitles: items2, gradientColors: tmp47, platformIconUrl: Image.resolveAssetSource(_modDef8410).uri };
           tmp49 = obj4;
           const obj33 = /\w+ (\d+), \w+ (\d+)/;
         }
@@ -114,9 +114,9 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
               const items4 = [];
               const intl = util.intl;
               const obj5 = { count };
-              const obj6 = { badgeUrl: Image.resolveAssetSource(_modDef8405).uri, text: intl.formatToPlainString(util.t.HtifnG, obj5) };
+              const obj6 = { badgeUrl: Image.resolveAssetSource(_modDef8406).uri, text: intl.formatToPlainString(util.t.HtifnG, obj5) };
               items4.push(obj6);
-              const obj7 = { imageUrl: image_url2, title: contentInventoryEntry.extra.artist.name, subtitles: items4, gradientColors: items3, platformIconUrl: Image.resolveAssetSource(_modDef8410).uri };
+              const obj7 = { imageUrl: image_url2, title: contentInventoryEntry.extra.artist.name, subtitles: items4, gradientColors: items3, platformIconUrl: Image.resolveAssetSource(_modDef8411).uri };
               tmp30 = obj7;
               const formatToPlainStringResult1 = intl.formatToPlainString(util.t.HtifnG, obj5);
             }
@@ -150,7 +150,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
             const items6 = [obj9];
             obj8.subtitles = items6;
             obj8.gradientColors = items5;
-            obj8.platformIconUrl = Image.resolveAssetSource(_modDef8410).uri;
+            obj8.platformIconUrl = Image.resolveAssetSource(_modDef8411).uri;
             tmp25 = obj8;
             const tmpResult41 = ColorUtils;
           }
@@ -163,9 +163,9 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
         if (null != application1) {
           let uri = application1.getIconURL(ImageSizes.LARGE);
           if (uri == null) {
-            uri = Image.resolveAssetSource(_modDef8399).uri;
+            uri = Image.resolveAssetSource(_modDef8400).uri;
           }
-          if (uri === Image.resolveAssetSource(_modDef8399).uri) {
+          if (uri === Image.resolveAssetSource(_modDef8400).uri) {
             let tmp7 = items;
           } else {
             if (tmpResult42.hasFetchedColors(uri)) {
@@ -229,9 +229,9 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
   if (null != application2) {
     let game_name = application2.getIconURL(ImageSizes.LARGE);
     if (game_name == tmp54) {
-      game_name = Image.resolveAssetSource(_modDef8399).uri;
+      game_name = Image.resolveAssetSource(_modDef8400).uri;
     }
-    if (game_name === Image.resolveAssetSource(_modDef8399).uri) {
+    if (game_name === Image.resolveAssetSource(_modDef8400).uri) {
       let tmp60 = items;
     } else {
       if (tmpResult49.hasFetchedColors(game_name)) {
@@ -260,14 +260,14 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
           const _HermesInternal2 = HermesInternal;
           const obj18 = { badgeUrl: null, text: null };
           const combined = "" + intl2.string(util.t["/50eHi"]) + " - " + intl3.formatToPlainString(util.t.C0AxoR, obj17);
-          obj18.badgeUrl = Image.resolveAssetSource(_modDef8405).uri;
+          obj18.badgeUrl = Image.resolveAssetSource(_modDef8406).uri;
           obj18.text = combined;
           items10.push(obj18);
           const stringResult = intl2.string(util.t["/50eHi"]);
         }
         const tmpResult54 = utils;
       } else {
-        const obj19 = { badgeUrl: Image.resolveAssetSource(_modDef8406).uri };
+        const obj19 = { badgeUrl: Image.resolveAssetSource(_modDef8407).uri };
         const timestamp2 = message.timestamp;
         const time1 = timestamp2.getTime();
         const obj20 = {};

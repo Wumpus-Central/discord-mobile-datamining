@@ -1,6 +1,6 @@
-// === Module 7614: useCustomJoinSound ===
+// === Module 7616: useCustomJoinSound ===
 
-// Module 7614 (useCustomJoinSound)
+// Module 7616 (useCustomJoinSound)
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 
 const require = globalThis.__r;

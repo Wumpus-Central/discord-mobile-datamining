@@ -1,18 +1,18 @@
-// === Module 12308: useActivityShelfItem ===
+// === Module 12310: useActivityShelfItem ===
 
-// Module 12308 (useActivityShelfItem)
+// Module 12310 (useActivityShelfItem)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import Server from "Server" /* 1978 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4385 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7408 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9134 */;
-import getPlatformDefault from "getPlatform" /* 9523 */;
-import canLaunchFrame from "canLaunchFrame" /* 9593 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 9719 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9720 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9739 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12309 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12310 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7413 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9135 */;
+import getPlatformDefault from "getPlatform" /* 9524 */;
+import canLaunchFrame from "canLaunchFrame" /* 9594 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 9720 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9721 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9740 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12311 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
 
@@ -77,8 +77,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(7402)().analyticsLocations;
-  closure_14 = context(9720)();
+  analyticsLocations = context(7407)().analyticsLocations;
+  closure_14 = context(9721)();
   obj = canLaunchFrame;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
@@ -314,7 +314,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(2004).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const MAIN_SURFACE = fn(9313).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9314).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useActivityShelfItem.tsx");

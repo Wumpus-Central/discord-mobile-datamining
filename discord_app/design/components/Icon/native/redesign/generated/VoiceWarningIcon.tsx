@@ -1,6 +1,6 @@
-// === Module 5310: VoiceWarningIcon ===
+// === Module 5317: VoiceWarningIcon ===
 
-// Module 5310 (VoiceWarningIcon)
+// Module 5317 (VoiceWarningIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5252 from "module_5252" /* 5252 */;

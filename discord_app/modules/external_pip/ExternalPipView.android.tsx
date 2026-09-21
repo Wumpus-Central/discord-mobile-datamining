@@ -1,11 +1,11 @@
-// === Module 17452: ExternalPipView ===
+// === Module 17463: ExternalPipView ===
 
-// Module 17452 (ExternalPipView)
-import ExternalPipDefault from "ExternalPip" /* 9696 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17455 */;
+// Module 17463 (ExternalPipView)
+import ExternalPipDefault from "ExternalPip" /* 9697 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17466 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8560 */;
+import AppFreezeStore from "AppFreezeStore" /* 8561 */;
 
 function FreezeAfterLayoutPipView() {
   importDefault = noop.useRef(false);

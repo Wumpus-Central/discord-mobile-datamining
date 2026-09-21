@@ -1,9 +1,9 @@
-// === Module 8110: MaskedBadge ===
+// === Module 8112: MaskedBadge ===
 
-// Module 8110 (MaskedBadge)
+// Module 8112 (MaskedBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import BadgeDefault from "Badge" /* 8111 */;
+import BadgeDefault from "Badge" /* 8113 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

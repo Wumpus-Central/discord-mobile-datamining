@@ -1,6 +1,6 @@
-// === Module 6470: ? ===
+// === Module 6475: ? ===
 
-// Module 6470
+// Module 6475
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MapleIllocon-2x.png.js");

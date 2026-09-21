@@ -1,6 +1,6 @@
-// === Module 12659: FloatingChatInputContainer ===
+// === Module 12661: FloatingChatInputContainer ===
 
-// Module 12659 (FloatingChatInputContainer)
+// Module 12661 (FloatingChatInputContainer)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
 import useKeyboardTypeDefault from "useKeyboardType" /* 4624 */;

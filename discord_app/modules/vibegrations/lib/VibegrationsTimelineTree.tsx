@@ -1,6 +1,6 @@
-// === Module 17026: VibegrationsTimelineTree ===
+// === Module 17034: VibegrationsTimelineTree ===
 
-// Module 17026 (VibegrationsTimelineTree)
+// Module 17034 (VibegrationsTimelineTree)
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -157,6 +157,9 @@ function buildTimelineTree(steps, arg1) {
           }
           if (null != node.todo_id) {
             tmp14Result.todoId = node.todo_id;
+          }
+          if (null != node.tier) {
+            tmp14Result.tier = node.tier;
           }
           if (null != node.detail) {
             ({ detail: tmp19.detail, detail } = node);

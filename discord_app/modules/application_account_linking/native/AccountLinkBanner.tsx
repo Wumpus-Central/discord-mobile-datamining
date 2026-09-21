@@ -1,9 +1,9 @@
-// === Module 16527: AccountLinkBanner ===
+// === Module 16533: AccountLinkBanner ===
 
-// Module 16527 (AccountLinkBanner)
+// Module 16533 (AccountLinkBanner)
 import nativeDefault from "native" /* 576 */;
 import ButtonConstants from "ButtonConstants" /* 5191 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10374 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10375 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -83,8 +83,8 @@ const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(7412).GameIconSizes.NORMAL;
-let closure_14 = fn(7412).GameIconImageSize[NORMAL];
+const NORMAL = fn(7417).GameIconSizes.NORMAL;
+let closure_14 = fn(7417).GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;

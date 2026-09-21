@@ -1,6 +1,6 @@
-// === Module 7824: CollectiblesMarketingsStore ===
+// === Module 7826: CollectiblesMarketingsStore ===
 
-// Module 7824 (CollectiblesMarketingsStore)
+// Module 7826 (CollectiblesMarketingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

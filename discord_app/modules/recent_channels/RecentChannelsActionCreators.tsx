@@ -1,6 +1,6 @@
-// === Module 11809: RecentChannelsActionCreators ===
+// === Module 11811: RecentChannelsActionCreators ===
 
-// Module 11809 (RecentChannelsActionCreators)
+// Module 11811 (RecentChannelsActionCreators)
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2024 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

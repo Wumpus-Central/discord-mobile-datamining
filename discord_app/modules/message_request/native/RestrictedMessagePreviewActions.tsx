@@ -1,14 +1,14 @@
-// === Module 17355: RestrictedMessagePreviewActions ===
+// === Module 17366: RestrictedMessagePreviewActions ===
 
-// Module 17355 (RestrictedMessagePreviewActions)
+// Module 17366 (RestrictedMessagePreviewActions)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import ReportModals from "ReportModals" /* 8906 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10002 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 11131 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12871 */;
+import ReportModals from "ReportModals" /* 8907 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10003 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 11132 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12873 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticsPages: metroRequire, RelationshipTypes: closure_7 } = Constants);
-let closure_8 = fn(11643).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_8 = fn(11645).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4756);
@@ -65,7 +65,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   }, items5);
   const items7 = [user.id];
   const callback4 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11644, dependencyMap.paths), closure_8, { userId: user.id, channelId: channel.id });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11646, dependencyMap.paths), closure_8, { userId: user.id, channelId: channel.id });
   }, items6);
   const items8 = [message, channel.id];
   const callback5 = noop.useCallback(() => {

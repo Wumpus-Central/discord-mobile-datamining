@@ -1,6 +1,6 @@
-// === Module 16273: Welcome ===
+// === Module 16279: Welcome ===
 
-// Module 16273 (Welcome)
+// Module 16279 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 576 */;
@@ -10,21 +10,21 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import Link from "Link" /* 1485 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7183 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7219 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7715 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 12910 */;
-import _modDef13521 from "module_13521" /* 13521 */;
-import _mod14125 from "module_14125" /* 14125 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16270 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7188 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7224 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7717 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 12912 */;
+import _modDef13523 from "module_13523" /* 13523 */;
+import _mod14131 from "module_14131" /* 14131 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16276 */;
 import noop from "module_19" /* 19 */;
-import AgeGateStore from "AgeGateStore" /* 16274 */;
+import AgeGateStore from "AgeGateStore" /* 16280 */;
 import ExperimentStore from "ExperimentStore" /* 4671 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7697 */;
-import MultiAccountStore from "MultiAccountStore" /* 12665 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7699 */;
+import MultiAccountStore from "MultiAccountStore" /* 12667 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import InviteStore from "InviteStore" /* 4740 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 9018 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 9019 */;
 
 const require = globalThis.__r;
 
@@ -46,7 +46,7 @@ function InviteCard(invite) {
       let tmp18 = __initData;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      const obj = { user: null, guildId: "Array" };
+      const obj = { user: null, guildId: "y" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = __initData(native.Avatar, obj);
@@ -58,7 +58,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      const obj4 = { user: null, guildId: "Array" };
+      const obj4 = { user: null, guildId: "y" };
       const tmp33 = new UserRecord(inviter);
       obj4.user = tmp33;
       const intl3 = util.intl;
@@ -90,7 +90,7 @@ function GuildTemplateCard(arg0) {
   const obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  const items1 = [__initData(hasOwnProperty, { source: _modDef13521 }), ];
+  const items1 = [__initData(hasOwnProperty, { source: _modDef13523 }), ];
   const obj3 = { style: tmp.text, children: null };
   const obj4 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl = util.intl;
@@ -114,7 +114,7 @@ function Centerpiece(inlineButtons) {
   const items = [tmp3.centerpieceContainer];
   obj2.style = items;
   const obj3 = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
-  const items1 = [__initData(hasOwnProperty, { style: tmp3.logo, source: _mod14125 }), , ];
+  const items1 = [__initData(hasOwnProperty, { style: tmp3.logo, source: _mod14131 }), , ];
   const obj5 = { style: null, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   const items2 = [tmp3.header, typeConsolidationTextTransform];
   obj5.style = items2;
@@ -159,8 +159,8 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, StorageKeys: closure_15, AuthStates: closure_16, InviteStates: closure_17, ThemeTypes: closure_18 } = Constants);
-const GuildTemplateStates = fn(7566).GuildTemplateStates;
-const InviteTypes = fn(7976).InviteTypes;
+const GuildTemplateStates = fn(7568).GuildTemplateStates;
+const InviteTypes = fn(7978).InviteTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let createStyles = fn(4756);

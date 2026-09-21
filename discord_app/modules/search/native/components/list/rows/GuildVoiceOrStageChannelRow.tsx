@@ -1,14 +1,14 @@
-// === Module 17114: GuildVoiceOrStageChannelRow ===
+// === Module 17125: GuildVoiceOrStageChannelRow ===
 
-// Module 17114 (GuildVoiceOrStageChannelRow)
+// Module 17125 (GuildVoiceOrStageChannelRow)
 import util from "util" /* 1115 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5643 */;
-import ChannelListLayout from "ChannelListLayout" /* 10376 */;
-import renderChannelBadge from "renderChannelBadge" /* 12543 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 17115 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 17116 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 17118 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5648 */;
+import ChannelListLayout from "ChannelListLayout" /* 10377 */;
+import renderChannelBadge from "renderChannelBadge" /* 12545 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 17126 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 17127 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 17129 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 2046 */;
 
@@ -156,7 +156,7 @@ function GuildVoiceChannelExtras(arg0) {
   return <View style={tmp.subtitle}>{null}</View>;
 }
 const View = fn(17).View;
-const layout = fn(8121).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(8122).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let closure_8 = createStyles.createStyles({ users: { marginTop: 4 }, subtitle: { marginEnd: 16 }, trailing: { paddingVertical: 4, alignItems: "center", alignSelf: "center" } });

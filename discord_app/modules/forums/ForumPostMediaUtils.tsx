@@ -1,6 +1,6 @@
-// === Module 8140: ForumPostMediaUtils ===
+// === Module 8141: ForumPostMediaUtils ===
 
-// Module 8140 (ForumPostMediaUtils)
+// Module 8141 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
@@ -9,7 +9,7 @@ import UserSettings from "UserSettings" /* 2019 */;
 import MediaFormatTesters from "MediaFormatTesters" /* 4906 */;
 import InteractionComponentUtils from "InteractionComponentUtils" /* 4980 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7546 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7548 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import MessageStore from "MessageStore" /* 4976 */;
 import UserStore from "UserStore" /* 1372 */;

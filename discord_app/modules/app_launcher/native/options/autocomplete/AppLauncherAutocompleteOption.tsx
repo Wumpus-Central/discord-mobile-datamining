@@ -1,13 +1,13 @@
-// === Module 12421: AppLauncherAutocompleteOption ===
+// === Module 12423: AppLauncherAutocompleteOption ===
 
-// Module 12421 (AppLauncherAutocompleteOption)
+// Module 12423 (AppLauncherAutocompleteOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import Pressables from "Pressables" /* 5334 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12420 */;
+import Pressables from "Pressables" /* 5339 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12422 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
       tmp();
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12422, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12424, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", {
       option,
       initChoice,
       onChoiceSelect(arg0) {

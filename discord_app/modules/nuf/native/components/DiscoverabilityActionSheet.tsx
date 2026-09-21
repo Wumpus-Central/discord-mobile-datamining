@@ -1,12 +1,12 @@
-// === Module 13000: DiscoverabilityActionSheet ===
+// === Module 13002: DiscoverabilityActionSheet ===
 
-// Module 13000 (DiscoverabilityActionSheet)
+// Module 13002 (DiscoverabilityActionSheet)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12928);
+const ContactSyncModalStore = fn(12930);
 ({ useContactSyncModalStore: closure_4, setAllowSync: hasOwnProperty, setAllowPhone: metroRequire, setAllowEmail: closure_7 } = ContactSyncModalStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

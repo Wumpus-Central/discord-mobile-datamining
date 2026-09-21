@@ -1,6 +1,6 @@
-// === Module 8166: ConversationNavigatorUtils ===
+// === Module 8167: ConversationNavigatorUtils ===
 
-// Module 8166 (ConversationNavigatorUtils)
+// Module 8167 (ConversationNavigatorUtils)
 import RootNavigationRef from "RootNavigationRef" /* 4614 */;
 import transitionToChannel from "transitionToChannel" /* 4767 */;
 import size from "module_2" /* 2 */;

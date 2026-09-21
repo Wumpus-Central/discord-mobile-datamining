@@ -1,6 +1,6 @@
-// === Module 10490: FavoritesGuildAnalytics ===
+// === Module 10491: FavoritesGuildAnalytics ===
 
-// Module 10490 (FavoritesGuildAnalytics)
+// Module 10491 (FavoritesGuildAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 

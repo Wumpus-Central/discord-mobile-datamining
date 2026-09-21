@@ -1,6 +1,6 @@
-// === Module 14890: CustomizeBadgesSheet ===
+// === Module 14896: CustomizeBadgesSheet ===
 
-// Module 14890 (CustomizeBadgesSheet)
+// Module 14896 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -11,24 +11,24 @@ import CircleInformationIcon from "CircleInformationIcon" /* 4710 */;
 import HapticUtils from "HapticUtils" /* 4724 */;
 import timing from "timing" /* 4757 */;
 import timingPresets from "timingPresets" /* 4760 */;
-import Card from "Card" /* 5819 */;
-import EyeSlashIcon from "EyeSlashIcon" /* 7206 */;
-import ContextMenu from "ContextMenu" /* 8173 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 8175 */;
-import IconButton from "IconButton" /* 8178 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8459 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8465 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9475 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9505 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11258 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11455 */;
-import BadgeUtils from "BadgeUtils" /* 11462 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13375 */;
-import BadgeGrid from "BadgeGrid" /* 14891 */;
+import Card from "Card" /* 5824 */;
+import EyeSlashIcon from "EyeSlashIcon" /* 7211 */;
+import ContextMenu from "ContextMenu" /* 8174 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 8176 */;
+import IconButton from "IconButton" /* 8179 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8460 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8466 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9476 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9506 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11259 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11457 */;
+import BadgeUtils from "BadgeUtils" /* 11464 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13377 */;
+import BadgeGrid from "BadgeGrid" /* 14897 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8428 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8429 */;
 import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8460 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8461 */;
 
 require = fn;
 function HideBadgeMenu(arg0) {
@@ -110,7 +110,7 @@ get_ActivityIndicator = fn(17);
 ({ Platform, Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: c10, AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
-let closure_13 = fn(7391).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_13 = fn(7396).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -149,7 +149,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj9 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14891).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14891).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14897).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14897).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 let closure_24 = noop.memo((badge) => {

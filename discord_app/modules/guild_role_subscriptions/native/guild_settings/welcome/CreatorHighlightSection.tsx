@@ -1,13 +1,13 @@
-// === Module 18155: CreatorHighlightSection ===
+// === Module 18166: CreatorHighlightSection ===
 
-// Module 18155 (CreatorHighlightSection)
+// Module 18166 (CreatorHighlightSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import LinkingDefault from "Linking" /* 4451 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import _modDef10559 from "module_10559" /* 10559 */;
-import EmojiIconDefault from "EmojiIcon" /* 15504 */;
+import _modDef10560 from "module_10560" /* 10560 */;
+import EmojiIconDefault from "EmojiIcon" /* 15510 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ function GuildServerSubscriberCount(arg0) {
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj.style = items;
-  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10559 }), ];
+  const items1 = [timestampProducer(Text_Text.Text, { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount }), timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10560 }), ];
   const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["3NNXPW"]);
@@ -35,12 +35,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(18156)(guild_id, 3, 60);
+  const tmp6 = guild_id(18167)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18128), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18139), {}) };
     return closure_6(closure_4, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;
@@ -51,7 +51,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj5 = { style: tmp.guildIcon, source: null };
     const obj6 = { uri: guildAvatarUrl };
     obj5.source = obj6;
-    const items1 = [closure_6(tmp5(5799), obj5), ];
+    const items1 = [closure_6(tmp5(5804), obj5), ];
     const obj7 = { style: tmp.cardHeaderContainer, children: null };
     const obj8 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: guildName };
     const items2 = [closure_6(tmp2(4752).Text, obj8), ];

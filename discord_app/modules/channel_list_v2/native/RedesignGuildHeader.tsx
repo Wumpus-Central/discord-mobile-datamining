@@ -1,6 +1,6 @@
-// === Module 16466: RedesignGuildHeader ===
+// === Module 16472: RedesignGuildHeader ===
 
-// Module 16466 (RedesignGuildHeader)
+// Module 16472 (RedesignGuildHeader)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import FavoritesUtils from "FavoritesUtils" /* 2066 */;
@@ -12,14 +12,14 @@ import spring from "spring" /* 5185 */;
 import springPresets from "springPresets" /* 5189 */;
 import ButtonConstants from "ButtonConstants" /* 5191 */;
 import useFontScale from "useFontScale" /* 5193 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5336 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8115 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10374 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11258 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 14170 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16437 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16467 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16468 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5341 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8117 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10375 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11259 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 14176 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16443 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16473 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16474 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import ActionSheetStore from "ActionSheetStore" /* 4447 */;
@@ -172,7 +172,7 @@ function ReanimatedGuildBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(10373);
+const RedesignChannelListConstants = fn(10374);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);

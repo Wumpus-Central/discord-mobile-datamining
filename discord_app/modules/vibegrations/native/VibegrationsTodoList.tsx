@@ -1,12 +1,12 @@
-// === Module 17032: VibegrationsTodoList ===
+// === Module 17040: VibegrationsTodoList ===
 
-// Module 17032 (VibegrationsTodoList)
+// Module 17040 (VibegrationsTodoList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import VibegrationsNativeStatusLine from "VibegrationsNativeStatusLine" /* 17012 */;
-import VibegrationsTodoAgents from "VibegrationsTodoAgents" /* 17031 */;
+import VibegrationsNativeStatusLine from "VibegrationsNativeStatusLine" /* 17020 */;
+import VibegrationsTodoAgents from "VibegrationsTodoAgents" /* 17039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -89,7 +89,7 @@ function TodoMarker(status) {
   let tmp21 = null;
   if ("completed" === status) {
     const obj3 = { size: "xs", color: tmp10(576).colors.CHECKBOX_ICON_ACTIVE };
-    tmp21 = timestampProducer(tmp11(9552).CheckmarkSmallBoldIcon, obj3);
+    tmp21 = timestampProducer(tmp11(9553).CheckmarkSmallBoldIcon, obj3);
   }
   items1[1] = tmp21;
   obj.children = items1;

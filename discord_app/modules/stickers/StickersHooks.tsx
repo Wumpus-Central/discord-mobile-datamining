@@ -1,23 +1,23 @@
-// === Module 10645: StickersHooks ===
+// === Module 10646: StickersHooks ===
 
-// Module 10645 (StickersHooks)
+// Module 10646 (StickersHooks)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2019 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
 import StickersUtils from "StickersUtils" /* 5103 */;
-import StickersTypes from "StickersTypes" /* 5480 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9758 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10629 */;
-import StickersActionCreators from "StickersActionCreators" /* 10646 */;
+import StickersTypes from "StickersTypes" /* 5485 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9759 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10630 */;
+import StickersActionCreators from "StickersActionCreators" /* 10647 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
-import SortedGuildStore from "SortedGuildStore" /* 5650 */;
+import SortedGuildStore from "SortedGuildStore" /* 5655 */;
 import UserStore from "UserStore" /* 1372 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 5713 */;
-import StickersStore from "StickersStore" /* 5714 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 5718 */;
+import StickersStore from "StickersStore" /* 5719 */;
 
 const require = globalThis.__r;
 
@@ -246,7 +246,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         guildId = guildId.getGuildId();
         const tmpResult = collapsedStickersCategories(num[14]);
         let canCreateExpressions = null != guild;
-        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(5480).StickerCategoryTypes.FAVORITE);
+        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(5485).StickerCategoryTypes.FAVORITE);
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
         }
@@ -314,7 +314,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
           rowIndex = rowIndex + 1;
         }
         gridSectionIndex = gridSectionIndex + 1;
-        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(5480).StickerCategoryTypes.RECENT);
+        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(5485).StickerCategoryTypes.RECENT);
       }
       if (null == items) {
         const iter = stickersCategories[Symbol.iterator]();
@@ -368,7 +368,7 @@ export const useFavoriteStickerIds = function useFavoriteStickerIds() {
   return stickerIds;
 };
 export const useFavoriteStickers = function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10629).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10630).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -376,7 +376,7 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10629);
+  const obj = stickerIds(10630);
   const items = [StickersStore];
   const items1 = [stickerIds];
   return stickerIds(504).useStateFromStoresArray(items, () => {
@@ -420,7 +420,7 @@ export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() 
   return keys;
 };
 export const useLatestFrecentStickers = function useLatestFrecentStickers() {
-  const frecencySettings = keys(10629).useFrecencySettings();
+  const frecencySettings = keys(10630).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -439,7 +439,7 @@ export const useLatestFrecentStickers = function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10629);
+  const obj = keys(10630);
   const items = [StickersStore];
   const items1 = [keys];
   return keys(504).useStateFromStoresArray(items, () => {

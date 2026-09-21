@@ -1,6 +1,6 @@
-// === Module 17638: VoicePanelAnimatedButtonWrapper ===
+// === Module 17649: VoicePanelAnimatedButtonWrapper ===
 
-// Module 17638 (VoicePanelAnimatedButtonWrapper)
+// Module 17649 (VoicePanelAnimatedButtonWrapper)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import timing from "timing" /* 4757 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(12524).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(12526).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj2 = { pressableWrapper: { justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.modules.button.BORDER_RADIUS_LG } };

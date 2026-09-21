@@ -1,8 +1,8 @@
-// === Module 7515: ForumTagHooks ===
+// === Module 7517: ForumTagHooks ===
 
-// Module 7515 (ForumTagHooks)
+// Module 7517 (ForumTagHooks)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ReportToModUtils from "ReportToModUtils" /* 7516 */;
+import ReportToModUtils from "ReportToModUtils" /* 7518 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import PermissionStore from "PermissionStore" /* 4395 */;

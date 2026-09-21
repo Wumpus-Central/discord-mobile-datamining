@@ -1,12 +1,12 @@
-// === Module 16968: PortalKeyboardRenderer ===
+// === Module 16976: PortalKeyboardRenderer ===
 
-// Module 16968 (PortalKeyboardRenderer)
+// Module 16976 (PortalKeyboardRenderer)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import native from "native" /* 4466 */;
 import useKeyboardType from "useKeyboardType" /* 4624 */;
 import PortalKeyboardUIStore3 from "PortalKeyboardUIStore" /* 4625 */;
-import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 16969 */;
+import PortalKeyboardRendererComponentDefault from "PortalKeyboardRendererComponent" /* 16977 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1480 */;
 
@@ -125,7 +125,7 @@ export const PortalKeyboardRenderer = function PortalKeyboardRenderer(portal) {
     let tmp10Result = jsx(tmp5(4628).PortalKeyboard, { children: tmp11 });
   } else {
     const obj4 = { value: true, children: tmp11 };
-    tmp10Result = jsx(tmp5(10580).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
+    tmp10Result = jsx(tmp5(10581).PortalKeyboardInModalContext.Provider, { value: true, children: tmp11 });
   }
   return tmp10Result;
 };

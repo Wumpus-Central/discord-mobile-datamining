@@ -1,11 +1,11 @@
-// === Module 14889: UserProfileBadgesEditButton ===
+// === Module 14895: UserProfileBadgesEditButton ===
 
-// Module 14889 (UserProfileBadgesEditButton)
+// Module 14895 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11455 */;
-import BadgeUtils from "BadgeUtils" /* 11462 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11457 */;
+import BadgeUtils from "BadgeUtils" /* 11464 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -57,7 +57,7 @@ export default function UserProfileBadgesEditButton(arg0) {
   closure_5 = tmp8;
   const items2 = [analyticsLocations, tmp8, tmp6[1]];
   onPress = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14890, dependencyMap.paths), "Customize Badges", { analyticsLocations });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14896, dependencyMap.paths), "Customize Badges", { analyticsLocations });
     if (closure_5) {
       closure_4(ContentDismissActionType.TAKE_ACTION);
     }

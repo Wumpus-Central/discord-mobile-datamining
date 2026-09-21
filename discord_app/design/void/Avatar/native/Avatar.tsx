@@ -1,12 +1,12 @@
-// === Module 14377: Avatar ===
+// === Module 14383: Avatar ===
 
-// Module 14377 (Avatar)
+// Module 14383 (Avatar)
 import nativeDefault from "native" /* 576 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8425 */;
-import ClipView from "ClipView" /* 9093 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13319 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 14366 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14367 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8426 */;
+import ClipView from "ClipView" /* 9094 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 13321 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 14372 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 14373 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -304,5 +304,5 @@ export default noop.memo((isMobileOnline) => {
     }
   }
 });
-export const AvatarSizes = fn(13319).AvatarSizes;
+export const AvatarSizes = fn(13321).AvatarSizes;
 export { getStatusSize };

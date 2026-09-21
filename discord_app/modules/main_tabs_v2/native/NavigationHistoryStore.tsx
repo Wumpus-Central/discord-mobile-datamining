@@ -1,6 +1,6 @@
-// === Module 7568: NavigationHistoryStore ===
+// === Module 7570: NavigationHistoryStore ===
 
-// Module 7568 (NavigationHistoryStore)
+// Module 7570 (NavigationHistoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4613 */;

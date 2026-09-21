@@ -1,7 +1,7 @@
-// === Module 8507: useUserProfileGradientColors ===
+// === Module 8508: useUserProfileGradientColors ===
 
-// Module 8507 (useUserProfileGradientColors)
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8497 */;
+// Module 8508 (useUserProfileGradientColors)
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8498 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 

@@ -1,6 +1,6 @@
-// === Module 9086: useClock ===
+// === Module 9087: useClock ===
 
-// Module 9086 (useClock)
+// Module 9087 (useClock)
 import _modDef38 from "module_38" /* 38 */;
 import noop from "module_19" /* 19 */;
 

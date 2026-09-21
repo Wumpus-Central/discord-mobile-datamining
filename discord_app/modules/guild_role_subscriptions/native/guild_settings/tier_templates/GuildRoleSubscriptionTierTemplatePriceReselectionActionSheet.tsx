@@ -1,14 +1,14 @@
-// === Module 18236: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 18247: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 18236 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 18247 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4474 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import PriceUtils from "PriceUtils" /* 7474 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 10010 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15495 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import PriceUtils from "PriceUtils" /* 7479 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 10011 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15501 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ function PriceOptionRow(selected) {
   items[1] = containerSelected;
   const obj3 = { style: tmp.rowStatusIcon, source: null };
   const tmp7 = TouchableHitBoxDefault;
-  obj3.source = importDefault(selected ? 18140 : 16906);
+  obj3.source = importDefault(selected ? 18151 : 16912);
   const items1 = [React7(FastImageDefault, obj3), ];
   const obj4 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = util.intl;

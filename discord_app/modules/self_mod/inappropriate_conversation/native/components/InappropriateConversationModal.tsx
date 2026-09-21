@@ -1,6 +1,6 @@
-// === Module 16030: InappropriateConversationModal ===
+// === Module 16036: InappropriateConversationModal ===
 
-// Module 16030 (InappropriateConversationModal)
+// Module 16036 (InappropriateConversationModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -9,11 +9,11 @@ import UserUtilsDefault from "UserUtils" /* 4600 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import native from "native" /* 5904 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11631 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11632 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11637 */;
-import TakeActionScreenDefault from "TakeActionScreen" /* 16031 */;
+import native from "native" /* 5909 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11633 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11634 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11639 */;
+import TakeActionScreenDefault from "TakeActionScreen" /* 16037 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -96,7 +96,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = closure_15();
   const obj = { style: tmp.container, children: null };
-  const items = [closure_13(trackAnalyticsEvent(5904).SafetyChatSpotIllustration, {}), , ];
+  const items = [closure_13(trackAnalyticsEvent(5909).SafetyChatSpotIllustration, {}), , ];
   const obj2 = { style: tmp.warningText, children: null };
   const obj3 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1115).intl;
@@ -133,7 +133,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
 const useState = fn(19).useState;
 get_ActivityIndicator = fn(17);
 ({ Linking: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const Constants = fn(11624);
+const Constants = fn(11626);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_9, CRISIS_TEXT_LINE_URL: c10, TAKEOVER_MODAL_KEY: closure_11, getInappropriateConversationsSafetyTips: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

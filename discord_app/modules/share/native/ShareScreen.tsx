@@ -1,11 +1,11 @@
-// === Module 14162: ShareScreen ===
+// === Module 14168: ShareScreen ===
 
-// Module 14162 (ShareScreen)
+// Module 14168 (ShareScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import HeaderShared from "HeaderShared" /* 8105 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 14166 */;
-import ShareEmbedDefault from "ShareEmbed" /* 14167 */;
+import HeaderShared from "HeaderShared" /* 8107 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 14172 */;
+import ShareEmbedDefault from "ShareEmbed" /* 14173 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -32,8 +32,8 @@ const ChannelRecord = fn(2045);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11933).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(11121).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11935).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(11122).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 const createStyles = fn(4756);

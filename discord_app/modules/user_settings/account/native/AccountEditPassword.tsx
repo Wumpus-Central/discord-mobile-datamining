@@ -1,8 +1,8 @@
-// === Module 15047: AccountEditPassword ===
+// === Module 15053: AccountEditPassword ===
 
-// Module 15047 (AccountEditPassword)
+// Module 15053 (AccountEditPassword)
 import nativeDefault from "native" /* 576 */;
-import UserSettingsAccountEditPasswordDefault from "UserSettingsAccountEditPassword" /* 15048 */;
+import UserSettingsAccountEditPasswordDefault from "UserSettingsAccountEditPassword" /* 15054 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);

@@ -1,17 +1,17 @@
-// === Module 17295: ChannelSettingsIntegrationsOverview ===
+// === Module 17306: ChannelSettingsIntegrationsOverview ===
 
-// Module 17295 (ChannelSettingsIntegrationsOverview)
+// Module 17306 (ChannelSettingsIntegrationsOverview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import useNavigation from "useNavigation" /* 1484 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
-import TableRow from "TableRow" /* 5817 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
-import Form from "Form" /* 8870 */;
-import WebhookIcon from "WebhookIcon" /* 17190 */;
-import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17296 */;
+import TableRow from "TableRow" /* 5822 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
+import Form from "Form" /* 8871 */;
+import WebhookIcon from "WebhookIcon" /* 17201 */;
+import ChannelsFollowedIcon from "ChannelsFollowedIcon" /* 17307 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 
@@ -25,7 +25,7 @@ function LinkedLobbyFormSection(channel) {
   if (linkedLobby != null) {
     application_id = linkedLobby.application_id;
   }
-  const getOrFetchApplication = channel(7408).useGetOrFetchApplication(application_id);
+  const getOrFetchApplication = channel(7413).useGetOrFetchApplication(application_id);
   let tmp5 = null;
   if (null != getOrFetchApplication) {
     const obj3 = { title: null, hasIcons: true, children: null };
@@ -40,8 +40,8 @@ function LinkedLobbyFormSection(channel) {
     obj4.onPress = function onPress() {
       closure_1.push(ChannelSettingsSections.EDIT_LINKED_LOBBY, { channel, numScreensToPop: 1 });
     };
-    obj3.children = closure_6(tmp(5817).TableRow, obj4);
-    tmp5 = closure_6(tmp(5899).TableRowGroup, obj3);
+    obj3.children = closure_6(tmp(5822).TableRow, obj4);
+    tmp5 = closure_6(tmp(5904).TableRowGroup, obj3);
     const obj11 = { id: null, icon: null };
   }
   return tmp5;

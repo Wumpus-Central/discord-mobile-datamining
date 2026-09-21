@@ -1,13 +1,13 @@
-// === Module 17754: DmSettingsUpsellActionSheet ===
+// === Module 17765: DmSettingsUpsellActionSheet ===
 
-// Module 17754 (DmSettingsUpsellActionSheet)
+// Module 17765 (DmSettingsUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import UserSettings from "UserSettings" /* 2019 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7235 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 14170 */;
-import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 17751 */;
-import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 17755 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7240 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 14176 */;
+import DmSettingsUpsellManager from "DmSettingsUpsellManager" /* 17762 */;
+import DmSettingsUpsellUtils from "DmSettingsUpsellUtils" /* 17766 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
 
@@ -42,7 +42,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
   if (null != stateFromStores) {
     let obj2 = { startExpanded: true, children: null };
     let obj3 = { style: tmp.container, children: null };
-    const obj4 = { source: stateFromStores(11635), style: tmp.headerImage };
+    const obj4 = { source: stateFromStores(11637), style: tmp.headerImage };
     const items2 = [closure_7(closure_5, obj4), , , , , , ];
     const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
     let intl = tmp2(1115).intl;
@@ -59,8 +59,8 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     obj9.children = intl3.string(tmp2(1115).t.KPB2iw);
     const items3 = [closure_7(tmp2(4752).Text, obj9), ];
     const obj10 = { style: tmp.guildInfo, children: null };
-    const obj11 = { guild: stateFromStores, size: tmp2(5796).GuildIconSizes.SMALL_32 };
-    const items4 = [closure_7(stateFromStores(5796), obj11), ];
+    const obj11 = { guild: stateFromStores, size: tmp2(5801).GuildIconSizes.SMALL_32 };
+    const items4 = [closure_7(stateFromStores(5801), obj11), ];
     const obj12 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: stateFromStores.name };
     items4[1] = closure_7(tmp2(4752).Text, obj12);
     obj10.children = items4;
@@ -74,7 +74,7 @@ export default function DmSettingsUpsellActionSheet(guildId) {
           sanitizedRestrictedGuilds.add(guildId);
           const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
           RestrictedGuildIds.updateSetting(Array.from(sanitizedRestrictedGuilds)).then(() => {
-            const obj2 = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: stateFromStores(9620), content: null };
+            const obj2 = { key: "DM_SETTINGS_UPSELL_SUCCESS_TOAST", icon: stateFromStores(9621), content: null };
             const intl = guildId(1115).intl;
             obj2.content = intl.string(guildId(1115).t.rlYD1W);
             stateFromStores(4454).open(obj2);
@@ -115,8 +115,8 @@ export default function DmSettingsUpsellActionSheet(guildId) {
     items2[6] = closure_7(tmp2(4752).Text, obj15);
     obj3.children = items2;
     obj2.children = closure_8(closure_4, obj3);
-    tmp6 = closure_7(tmp2(7437).ActionSheet, obj2);
-    const tmp12 = stateFromStores(5796);
+    tmp6 = closure_7(tmp2(7442).ActionSheet, obj2);
+    const tmp12 = stateFromStores(5801);
   }
   return tmp6;
 };

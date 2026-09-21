@@ -1,6 +1,6 @@
-// === Module 17333: MessageRequestList ===
+// === Module 17344: MessageRequestList ===
 
-// Module 17333 (MessageRequestList)
+// Module 17344 (MessageRequestList)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import transitionToChannel from "transitionToChannel" /* 4767 */;

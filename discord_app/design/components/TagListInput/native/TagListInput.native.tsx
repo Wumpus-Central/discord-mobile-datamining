@@ -1,6 +1,6 @@
-// === Module 9842: TagListInput ===
+// === Module 9843: TagListInput ===
 
-// Module 9842 (TagListInput)
+// Module 9843 (TagListInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 4752 */;
 import spring from "spring" /* 5185 */;
 import springPresets from "springPresets" /* 5189 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import _modDef5876 from "module_5876" /* 5876 */;
+import _modDef5881 from "module_5881" /* 5881 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -360,7 +360,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       obj2.children = items2;
       obj.maskElement = React7(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = React6(_modDef5876, obj);
+      tmp = React6(_modDef5881, obj);
     }
     return tmp;
   }, items5);

@@ -1,6 +1,6 @@
-// === Module 7383: Form/FormRadio ===
+// === Module 7388: Form/FormRadio ===
 
-// Module 7383 (Form/FormRadio)
+// Module 7388 (Form/FormRadio)
 import noop from "module_19" /* 19 */;
 
 const Image = fn(17).Image;
@@ -11,6 +11,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx");
 
 export default function FormRadio(selected) {
-  const obj = { style: closure_4().radio, source: importDefault(selected.selected ? 7384 : 7385) };
-  return <Image style={closure_4().radio} source={importDefault(selected.selected ? 7384 : 7385)} />;
+  const obj = { style: closure_4().radio, source: importDefault(selected.selected ? 7389 : 7390) };
+  return <Image style={closure_4().radio} source={importDefault(selected.selected ? 7389 : 7390)} />;
 };

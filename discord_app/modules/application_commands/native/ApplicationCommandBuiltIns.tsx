@@ -1,14 +1,14 @@
-// === Module 9415: application_commands/ApplicationCommandBuiltIns ===
+// === Module 9416: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 9415 (application_commands/ApplicationCommandBuiltIns)
+// Module 9416 (application_commands/ApplicationCommandBuiltIns)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7696 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7698 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
-let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(1978).ApplicationCommandType.CHAT, inputType: fn(7763).ApplicationCommandInputType.BUILT_IN, applicationId: fn(5210).BuiltInSectionId.BUILT_IN };
+let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: fn(1978).ApplicationCommandType.CHAT, inputType: fn(7765).ApplicationCommandInputType.BUILT_IN, applicationId: fn(5210).BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
     const intl = require("util").intl;

@@ -1,6 +1,6 @@
-// === Module 5281: ExperimentalLfgIcon ===
+// === Module 5288: ExperimentalLfgIcon ===
 
-// Module 5281 (ExperimentalLfgIcon)
+// Module 5288 (ExperimentalLfgIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5271 from "module_5271" /* 5271 */;

@@ -1,16 +1,16 @@
-// === Module 18204: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 18215: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 18204 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 18215 (GuildRoleSubscriptionBenefitModalHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 10010 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15491 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 10011 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15497 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5736 */;
+import TextStyles_mod from "TextStyles" /* 5741 */;
 
 require = fn;
 const View = fn(17).View;

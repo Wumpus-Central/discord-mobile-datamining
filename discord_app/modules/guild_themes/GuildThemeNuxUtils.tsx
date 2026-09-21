@@ -1,6 +1,6 @@
-// === Module 16495: GuildThemeNuxUtils ===
+// === Module 16501: GuildThemeNuxUtils ===
 
-// Module 16495 (GuildThemeNuxUtils)
+// Module 16501 (GuildThemeNuxUtils)
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2024 */;
 import Client from "Client" /* 4686 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

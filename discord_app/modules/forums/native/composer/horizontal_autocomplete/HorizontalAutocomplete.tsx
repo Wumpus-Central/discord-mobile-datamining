@@ -1,6 +1,6 @@
-// === Module 10883: HorizontalAutocomplete ===
+// === Module 10884: HorizontalAutocomplete ===
 
-// Module 10883 (HorizontalAutocomplete)
+// Module 10884 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
@@ -9,17 +9,17 @@ import UserUtilsDefault from "UserUtils" /* 4600 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import timing from "timing" /* 4757 */;
 import useMountEffectDefault from "useMountEffect" /* 5203 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import RoleIconUtils from "RoleIconUtils" /* 7427 */;
-import RoleIconDefault from "RoleIcon" /* 7445 */;
-import _modDef8392 from "module_8392" /* 8392 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import RoleIconUtils from "RoleIconUtils" /* 7432 */;
+import RoleIconDefault from "RoleIcon" /* 7450 */;
+import _modDef8393 from "module_8393" /* 8393 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
-import TextStyles from "TextStyles" /* 5736 */;
+import TextStyles from "TextStyles" /* 5741 */;
 
 require = fn;
 function HorizontalAutocompleteOption(arg0) {
@@ -130,7 +130,7 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8392;
+      let channelIconWithGuild = _modDef8393;
     } else {
       channelIconWithGuild = tmp2(5239).getChannelIconWithGuild(channel, tmp5);
       const tmp2Result = tmp2(5239);

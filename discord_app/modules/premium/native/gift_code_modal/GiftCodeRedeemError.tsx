@@ -1,15 +1,15 @@
-// === Module 11714: GiftCodeRedeemError ===
+// === Module 11716: GiftCodeRedeemError ===
 
-// Module 11714 (GiftCodeRedeemError)
+// Module 11716 (GiftCodeRedeemError)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Link from "Link" /* 1485 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
-import _modDef11715 from "module_11715" /* 11715 */;
-import _modDef11716 from "module_11716" /* 11716 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
+import _modDef11717 from "module_11717" /* 11717 */;
+import _modDef11718 from "module_11718" /* 11718 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,9 +29,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = _modDef11715;
+    let tmp9Result = _modDef11717;
   } else {
-    tmp9Result = _modDef11716;
+    tmp9Result = _modDef11718;
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), , ];
   const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

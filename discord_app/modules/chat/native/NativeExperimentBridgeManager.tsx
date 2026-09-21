@@ -1,17 +1,17 @@
-// === Module 18264: NativeExperimentBridgeManager ===
+// === Module 18275: NativeExperimentBridgeManager ===
 
-// Module 18264 (NativeExperimentBridgeManager)
+// Module 18275 (NativeExperimentBridgeManager)
 import _mod17 from "module_17" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5487 */;
-import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 18265 */;
-import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 18266 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 18267 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5492 */;
+import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 18276 */;
+import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 18277 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 18278 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7363 */;
 import size from "module_2" /* 2 */;
 
 function syncYYTextReplacementExperiment() {

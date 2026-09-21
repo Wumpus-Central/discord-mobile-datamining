@@ -1,7 +1,7 @@
-// === Module 8528: openUserProfileAvatarMediaViewer ===
+// === Module 8529: openUserProfileAvatarMediaViewer ===
 
-// Module 8528 (openUserProfileAvatarMediaViewer)
-import openMediaModal from "openMediaModal" /* 8529 */;
+// Module 8529 (openUserProfileAvatarMediaViewer)
+import openMediaModal from "openMediaModal" /* 8530 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
 require = fn;

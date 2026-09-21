@@ -1,6 +1,6 @@
-// === Module 8950: GameProfileActionCreators ===
+// === Module 8951: GameProfileActionCreators ===
 
-// Module 8950 (GameProfileActionCreators)
+// Module 8951 (GameProfileActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
@@ -16,14 +16,14 @@ export default {
     _modDef38(gameProfileModalChecks.shouldOpenGameProfile, "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?");
     _modDef38(gameProfileModalChecks.gameId === gameId, "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?");
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(8951, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, sourceUserId }, stackingBehavior);
+    obj.openLazy(asyncRequireImpl(8952, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, sourceUserId }, stackingBehavior);
   },
   returnToGameProfile(gameId) {
     gameId = gameId.gameId;
     ({ source, initialScrollOffset } = gameId);
     DispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(8951, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, initialScrollOffset });
+    obj2.openLazy(asyncRequireImpl(8952, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, initialScrollOffset });
   },
   setGameProfilePendingReturn(arg0) {
     ({ gameId, channelId, initialScrollOffset } = arg0);

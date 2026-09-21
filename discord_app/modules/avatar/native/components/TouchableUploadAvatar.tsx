@@ -1,13 +1,13 @@
-// === Module 17839: TouchableUploadAvatar ===
+// === Module 17850: TouchableUploadAvatar ===
 
-// Module 17839 (TouchableUploadAvatar)
+// Module 17850 (TouchableUploadAvatar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5334 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef13024 from "module_13024" /* 13024 */;
-import _modDef14125 from "module_14125" /* 14125 */;
+import Pressables from "Pressables" /* 5339 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef13026 from "module_13026" /* 13026 */;
+import _modDef14131 from "module_14131" /* 14131 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef14125;
+    let tmp3 = _modDef14131;
   } else {
     tmp3 = avatarSource;
   }
@@ -49,7 +49,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
     const items = [React4(FastImageDefault, obj4), ];
     const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
-    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13024, style: tmp.uploadAvatarIcon };
+    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13026, style: tmp.uploadAvatarIcon };
     obj5.children = React4(native.Icon, obj6);
     items[1] = React4(View, obj5);
     obj3.children = items;

@@ -1,18 +1,18 @@
-// === Module 9863: EditGuildEventDetails ===
+// === Module 9864: EditGuildEventDetails ===
 
-// Module 9863 (EditGuildEventDetails)
+// Module 9864 (EditGuildEventDetails)
 import util from "util" /* 1115 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
 import _modDef4348 from "module_4348" /* 4348 */;
-import ScheduleUtils from "ScheduleUtils" /* 9752 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9788 */;
+import ScheduleUtils from "ScheduleUtils" /* 9753 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9789 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(7766).isGuildScheduledEventActive;
+let closure_6 = fn(7768).isGuildScheduledEventActive;
 let constants = fn(2047).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);

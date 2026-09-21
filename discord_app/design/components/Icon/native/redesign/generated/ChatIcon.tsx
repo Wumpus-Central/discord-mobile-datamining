@@ -1,6 +1,6 @@
-// === Module 5282: ChatIcon ===
+// === Module 5289: ChatIcon ===
 
-// Module 5282 (ChatIcon)
+// Module 5289 (ChatIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5259 from "module_5259" /* 5259 */;

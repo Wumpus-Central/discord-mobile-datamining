@@ -1,8 +1,8 @@
-// === Module 16252: VEVOOPropBlurAmount ===
+// === Module 16258: VEVOOPropBlurAmount ===
 
-// Module 16252 (VEVOOPropBlurAmount)
-import FormSwitch from "FormSwitch" /* 7441 */;
-import Form from "Form" /* 8870 */;
+// Module 16258 (VEVOOPropBlurAmount)
+import FormSwitch from "FormSwitch" /* 7446 */;
+import Form from "Form" /* 8871 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -69,7 +69,7 @@ export default noop.memo(function VEVOOPropBlurAmount() {
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(16253), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
+  obj.subLabel = jsx(first(16259), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,

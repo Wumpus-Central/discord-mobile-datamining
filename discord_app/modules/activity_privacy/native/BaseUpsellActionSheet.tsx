@@ -1,12 +1,12 @@
-// === Module 15125: BaseUpsellActionSheet ===
+// === Module 15131: BaseUpsellActionSheet ===
 
-// Module 15125 (BaseUpsellActionSheet)
+// Module 15131 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4715 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import GuildIconDefault from "GuildIcon" /* 5796 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15123 */;
+import GuildIconDefault from "GuildIcon" /* 5801 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 15129 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
 
@@ -20,7 +20,7 @@ function StoreGuildIcon(guildId) {
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = { guild: stateFromStores, size: null };
   const obj = guildId(504);
-  obj2.size = guildId(5796).GuildIconSizes.XSMALL;
+  obj2.size = guildId(5801).GuildIconSizes.XSMALL;
   return closure_7(GuildIconDefault, obj2);
 }
 function GuildCard(guildIds) {
@@ -157,5 +157,5 @@ export default function BaseUpsellActionSheet(toastContent) {
   items1[3] = closure_8(closure_5, obj5);
   obj2.children = items1;
   obj.children = closure_8(closure_5, obj2);
-  return closure_7(toastContent(7390).BottomSheet, obj);
+  return closure_7(toastContent(7395).BottomSheet, obj);
 };

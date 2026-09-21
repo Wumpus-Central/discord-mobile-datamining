@@ -1,9 +1,9 @@
-// === Module 6127: DevIdentityWideAbstractUI ===
+// === Module 6132: DevIdentityWideAbstractUI ===
 
-// Module 6127 (DevIdentityWideAbstractUI)
+// Module 6132 (DevIdentityWideAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6128 from "module_6128" /* 6128 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6133 from "module_6133" /* 6133 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DevIdentityWideAbstractUI = function DevIdentityWideAbstractUI(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6128 };
+  const obj2 = { uri: _modDef6133 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,7 +1,7 @@
-// === Module 14879: useUploadAvatar ===
+// === Module 14885: useUploadAvatar ===
 
-// Module 14879 (useUploadAvatar)
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9426 */;
+// Module 14885 (useUploadAvatar)
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9427 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -66,7 +66,7 @@ export default function useUploadAvatar(guildId) {
             const obj6 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj8 = { value: tmp22(5349).openImagePicker(obj6), done: false };
+            const obj8 = { value: tmp22(5354).openImagePicker(obj6), done: false };
             return obj8;
           }
         } else if (arg0 === 1) {
@@ -100,21 +100,21 @@ export default function useUploadAvatar(guildId) {
           }
           const obj10 = { imageUri: base64, description: null, originalMd5: null };
           tmp22 = tmp2;
-          const obj2 = tmp2(14863);
-          obj10.description = tmp2(8437).generateAvatarDescription();
+          const obj2 = tmp2(14869);
+          obj10.description = tmp2(8438).generateAvatarDescription();
           obj10.originalMd5 = originalMd5;
           closure_128_4 = obj2.createPendingImage(obj10);
           if (closure_129_1) {
-            tmp2(8435).setTryItOutAvatar(closure_128_4);
-            const tmp28Result = tmp2(8435);
+            tmp2(8436).setTryItOutAvatar(closure_128_4);
+            const tmp28Result = tmp2(8436);
           } else {
             const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-            tmp2(8432).setPendingChanges(obj11);
-            const tmp28Result2 = tmp2(8432);
-            const result = tmp2(8434).announcePendingAvatarChange("set");
-            const obj7 = tmp2(8434);
+            tmp2(8433).setPendingChanges(obj11);
+            const tmp28Result2 = tmp2(8433);
+            const result = tmp2(8435).announcePendingAvatarChange("set");
+            const obj7 = tmp2(8435);
           }
-          const obj4 = tmp2(8437);
+          const obj4 = tmp2(8438);
         }
       } catch (tmp38) {
         c3 = tmp;

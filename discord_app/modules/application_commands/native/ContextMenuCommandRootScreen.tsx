@@ -1,10 +1,10 @@
-// === Module 17326: ContextMenuCommandRootScreen ===
+// === Module 17337: ContextMenuCommandRootScreen ===
 
-// Module 17326 (ContextMenuCommandRootScreen)
+// Module 17337 (ContextMenuCommandRootScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import executeCommandDefault from "executeCommand" /* 9524 */;
+import executeCommandDefault from "executeCommand" /* 9525 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;

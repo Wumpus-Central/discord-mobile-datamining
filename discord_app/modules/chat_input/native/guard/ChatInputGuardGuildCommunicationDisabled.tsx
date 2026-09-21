@@ -1,10 +1,10 @@
-// === Module 12713: ChatInputGuardGuildCommunicationDisabled ===
+// === Module 12715: ChatInputGuardGuildCommunicationDisabled ===
 
-// Module 12713 (ChatInputGuardGuildCommunicationDisabled)
+// Module 12715 (ChatInputGuardGuildCommunicationDisabled)
 import util from "util" /* 1115 */;
-import ClockWarningIcon from "ClockWarningIcon" /* 12106 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12700 */;
-import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12714 */;
+import ClockWarningIcon from "ClockWarningIcon" /* 12108 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12702 */;
+import useCommunicationDisabledCountdownCleanup from "useCommunicationDisabledCountdownCleanup" /* 12716 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

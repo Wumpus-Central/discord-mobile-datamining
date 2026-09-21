@@ -1,18 +1,18 @@
-// === Module 16889: GuildRoleSubscriptionPurchaseCard ===
+// === Module 16895: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 16889 (GuildRoleSubscriptionPurchaseCard)
+// Module 16895 (GuildRoleSubscriptionPurchaseCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import BottomSheetModal from "BottomSheetModal" /* 6864 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7219 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7390 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15491 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15501 */;
-import Elements from "Elements" /* 16884 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 16890 */;
+import BottomSheetModal from "BottomSheetModal" /* 6869 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7224 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7395 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15497 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15507 */;
+import Elements from "Elements" /* 16890 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 16896 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

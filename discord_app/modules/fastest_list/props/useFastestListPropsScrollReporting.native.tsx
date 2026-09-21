@@ -1,6 +1,6 @@
-// === Module 7306: useFastestListPropsScrollReporting ===
+// === Module 7311: useFastestListPropsScrollReporting ===
 
-// Module 7306 (useFastestListPropsScrollReporting)
+// Module 7311 (useFastestListPropsScrollReporting)
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 14670: PermissionVADStore ===
+// === Module 14676: PermissionVADStore ===
 
-// Module 14670 (PermissionVADStore)
+// Module 14676 (PermissionVADStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

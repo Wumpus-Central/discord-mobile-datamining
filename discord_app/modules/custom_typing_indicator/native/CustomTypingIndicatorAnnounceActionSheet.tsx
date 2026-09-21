@@ -1,8 +1,8 @@
-// === Module 12220: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 12222: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 12220 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 12222 (CustomTypingIndicatorAnnounceActionSheet)
 import nativeDefault from "native" /* 576 */;
-import openUserSettings from "openUserSettings" /* 7622 */;
+import openUserSettings from "openUserSettings" /* 7624 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   const obj2 = { bottom: true, children: null };
   const obj3 = { style: tmp2.content, children: null };
   const items3 = [
-    closure_7(markAsDismissed(7394).ActionSheetHeaderBar, {
+    closure_7(markAsDismissed(7399).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -80,10 +80,10 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   ({ row: arr5[0], outerRow: arr5[1] } = tmp2);
   obj6.style = items4;
   const obj7 = { name: "Cap", suggestion: markAsDismissed(1380).TypingSuggestion.UNSPECIFIED, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: null, style: null };
-  const items5 = [ref(12223), ref(12224), ref(12223)];
+  const items5 = [ref(12225), ref(12226), ref(12225)];
   obj7.emojiSource = items5;
   obj7.style = tmp2.outerStack;
-  obj6.children = closure_7(ref(12221), obj7);
+  obj6.children = closure_7(ref(12223), obj7);
   const items6 = [closure_7(View, obj6), , ];
   const obj8 = { style: null, children: null };
   const items7 = [, ];
@@ -99,24 +99,24 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
       markAsDismissed(ContentDismissActionType.USER_DISMISS);
     }
   };
-  const tmp6 = ref(12221);
+  const tmp6 = ref(12223);
   obj9.suggestion = markAsDismissed(1380).TypingSuggestion.YAPPING;
   obj9.style = tmp2.innerStack;
-  const items8 = [ref(12225), ref(12226), ref(12225)];
+  const items8 = [ref(12227), ref(12228), ref(12227)];
   obj9.emojiSource = items8;
-  obj8.children = closure_7(ref(12221), obj9);
+  obj8.children = closure_7(ref(12223), obj9);
   items6[1] = closure_7(View, obj8);
   const obj10 = { style: null, children: null };
   const items9 = [, ];
   ({ row: arr10[0], outerRow: arr10[1] } = tmp2);
   obj10.style = items9;
   const obj11 = { name: "Loky", suggestion: null, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, style: null, emojiSource: null };
-  const tmp7 = ref(12221);
+  const tmp7 = ref(12223);
   obj11.suggestion = markAsDismissed(1380).TypingSuggestion.OVERSHARING;
   obj11.style = tmp2.outerStack;
-  const items10 = [ref(12227), ref(12228), ref(12229)];
+  const items10 = [ref(12229), ref(12230), ref(12231)];
   obj11.emojiSource = items10;
-  obj10.children = closure_7(ref(12221), obj11);
+  obj10.children = closure_7(ref(12223), obj11);
   items6[2] = closure_7(View, obj10);
   obj5.children = items6;
   items3[1] = closure_8(View, obj5);
@@ -149,6 +149,6 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
   items3[5] = closure_8(View, obj15);
   obj3.children = items3;
   obj2.children = closure_8(View, obj3);
-  obj.children = closure_7(markAsDismissed(7363).SafeAreaPaddingView, obj2);
-  return closure_7(markAsDismissed(7390).BottomSheet, obj);
+  obj.children = closure_7(markAsDismissed(7368).SafeAreaPaddingView, obj2);
+  return closure_7(markAsDismissed(7395).BottomSheet, obj);
 };

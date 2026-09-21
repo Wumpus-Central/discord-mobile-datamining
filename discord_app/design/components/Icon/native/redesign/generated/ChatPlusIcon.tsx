@@ -1,9 +1,9 @@
-// === Module 11849: ChatPlusIcon ===
+// === Module 11851: ChatPlusIcon ===
 
-// Module 11849 (ChatPlusIcon)
+// Module 11851 (ChatPlusIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod11850 from "module_11850" /* 11850 */;
+import _mod11852 from "module_11852" /* 11852 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ChatPlusIcon = function ChatPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11850, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11852, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

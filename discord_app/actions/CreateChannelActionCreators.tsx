@@ -1,13 +1,13 @@
-// === Module 9820: CreateChannelActionCreators ===
+// === Module 9821: CreateChannelActionCreators ===
 
-// Module 9820 (CreateChannelActionCreators)
+// Module 9821 (CreateChannelActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import TypeUtils from "TypeUtils" /* 2053 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4949 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7354 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7359 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7563 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7359 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7364 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7565 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
 
 require = fn;

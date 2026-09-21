@@ -1,6 +1,6 @@
-// === Module 17770: GuildRoomSpatialAudio ===
+// === Module 17781: GuildRoomSpatialAudio ===
 
-// Module 17770 (GuildRoomSpatialAudio)
+// Module 17781 (GuildRoomSpatialAudio)
 import initialize from "initialize" /* 504 */;
 import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4956 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

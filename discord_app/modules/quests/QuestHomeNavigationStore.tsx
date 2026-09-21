@@ -1,6 +1,6 @@
-// === Module 12019: QuestHomeNavigationStore ===
+// === Module 12021: QuestHomeNavigationStore ===
 
-// Module 12019 (QuestHomeNavigationStore)
+// Module 12021 (QuestHomeNavigationStore)
 import ZustandStore from "ZustandStore" /* 4626 */;
 import size from "module_2" /* 2 */;
 

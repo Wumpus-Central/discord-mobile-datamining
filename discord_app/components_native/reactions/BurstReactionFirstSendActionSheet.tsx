@@ -1,6 +1,6 @@
-// === Module 8063: BurstReactionFirstSendActionSheet ===
+// === Module 8065: BurstReactionFirstSendActionSheet ===
 
-// Module 8063 (BurstReactionFirstSendActionSheet)
+// Module 8065 (BurstReactionFirstSendActionSheet)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -11,11 +11,11 @@ import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 457
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7390 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 8003 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 8024 */;
-import getDeviceSpecificString from "getDeviceSpecificString" /* 8064 */;
-import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 8065 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7395 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8005 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 8026 */;
+import getDeviceSpecificString from "getDeviceSpecificString" /* 8066 */;
+import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 8067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -88,7 +88,7 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.SUPER_REACTIONS_FIRST_SENT);
     const tmp4Result = DismissibleContentUnsafeUtils;
     const obj4 = { channelId, messageId, emoji };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8063, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj4);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8065, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj4);
     const tmpResult2 = ActionSheetActionCreatorsDefault;
   }
   obj2 = DismissibleContentUnsafeUtils;

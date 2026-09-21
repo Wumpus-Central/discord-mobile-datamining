@@ -1,17 +1,17 @@
-// === Module 11629: LikelyAtoWarningBanner ===
+// === Module 11631: LikelyAtoWarningBanner ===
 
-// Module 11629 (LikelyAtoWarningBanner)
+// Module 11631 (LikelyAtoWarningBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import LinkingDefault from "Linking" /* 4451 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8674 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 10397 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11631 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11632 */;
-import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11641 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8675 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 10398 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11633 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11634 */;
+import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems" /* 11643 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -73,7 +73,7 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11636, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11638, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         const items = [closure_1_10(channelId(4752).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title }, index), closure_1_10(channelId(4752).Text, { variant: "text-xs/medium", color: "text-subtle", children: children.description }, index)];
@@ -115,8 +115,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(11178).SafetyWarningTypes;
-const Constants = fn(11630);
+const SafetyWarningTypes = fn(11179).SafetyWarningTypes;
+const Constants = fn(11632);
 ({ getLikelyAtoMoreTips: hasOwnProperty, LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire, LEARN_MORE_HC_ARTICLE: closure_7 } = Constants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const MuteUntilSeconds = fn(1084).MuteUntilSeconds;

@@ -1,6 +1,6 @@
-// === Module 18053: EnhancedRoleColorsSelectStyleModal ===
+// === Module 18064: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 18053 (EnhancedRoleColorsSelectStyleModal)
+// Module 18064 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1115 */;
@@ -10,15 +10,15 @@ import useThemeDefault from "useTheme" /* 4690 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5215 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7389 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7390 */;
-import RowGeneratorDefault from "RowGenerator" /* 8189 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8218 */;
-import _modDef13596 from "module_13596" /* 13596 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 18032 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 18033 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18035 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 18054 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7394 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7395 */;
+import RowGeneratorDefault from "RowGenerator" /* 8190 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8219 */;
+import _modDef13602 from "module_13602" /* 13602 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 18043 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 18044 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18046 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 18065 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4756 */;
@@ -117,7 +117,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
               const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
               message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef13596;
+              message.message.avatarURL = _modDef13602;
             }
           }),
 

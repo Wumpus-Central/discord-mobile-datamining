@@ -1,9 +1,9 @@
-// === Module 7929: appMessageEmbedTrackingConfig ===
+// === Module 7931: appMessageEmbedTrackingConfig ===
 
-// Module 7929 (appMessageEmbedTrackingConfig)
+// Module 7931 (appMessageEmbedTrackingConfig)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const LinkType = fn(7923).LinkType;
+const LinkType = fn(7925).LinkType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 

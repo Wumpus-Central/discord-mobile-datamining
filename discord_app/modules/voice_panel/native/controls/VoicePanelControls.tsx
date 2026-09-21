@@ -1,26 +1,26 @@
-// === Module 17622: VoicePanelControls ===
+// === Module 17633: VoicePanelControls ===
 
-// Module 17622 (VoicePanelControls)
+// Module 17633 (VoicePanelControls)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import native from "native" /* 4466 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import HapticUtils from "HapticUtils" /* 4724 */;
 import spring from "spring" /* 5185 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6892 */;
-import native2 from "native" /* 9183 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9663 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11258 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12528 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12531 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17506 */;
-import useControlsLockDefault from "useControlsLock" /* 17548 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 17623 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17624 */;
-import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17625 */;
-import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17626 */;
-import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17630 */;
-import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17632 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6897 */;
+import native2 from "native" /* 9184 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9664 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11259 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12530 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12533 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17517 */;
+import useControlsLockDefault from "useControlsLock" /* 17559 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17634 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17635 */;
+import VoicePanelControlUtils from "VoicePanelControlUtils" /* 17636 */;
+import useConsoleConnectingInfoDefault from "useConsoleConnectingInfo" /* 17637 */;
+import VoicePanelFloatingCTAContainer from "VoicePanelFloatingCTAContainer" /* 17641 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
@@ -28,11 +28,11 @@ import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12524);
+const VoicePanelConstants = fn(12526);
 ({ UI_SHOW_HIDE_PHYSICS: closure_7, MODE_CHANGE_PHYSICS: closure_8, BORDER_RADIUS_PHYSICS: closure_9, PANEL_CONTROLS_HEIGHT_PHYSICS: c10, VoicePanelModes: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12527);
+const VoicePanelCardConstants = fn(12529);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(12522);
+const VoicePanelControlsConstants = fn(12524);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } = VoicePanelControlsConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_16, ThemeTypes: closure_17 } = Constants);

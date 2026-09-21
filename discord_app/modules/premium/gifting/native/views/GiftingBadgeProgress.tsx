@@ -1,12 +1,12 @@
-// === Module 11298: GiftingBadgeProgress ===
+// === Module 11300: GiftingBadgeProgress ===
 
-// Module 11298 (GiftingBadgeProgress)
+// Module 11300 (GiftingBadgeProgress)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2578 from "module_2578" /* 2578 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11003 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11008 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11004 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11009 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function GiftingBadgeProgressBar(percent) {
   return hasOwnProperty(View, obj);
 }
 const View = fn(17).View;
-let closure_4 = fn(8460).getSingleRequirementThreshold;
+let closure_4 = fn(8461).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4756);

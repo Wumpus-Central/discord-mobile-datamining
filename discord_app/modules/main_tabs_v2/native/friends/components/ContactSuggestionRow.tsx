@@ -1,9 +1,9 @@
-// === Module 17227: ContactSuggestionRow ===
+// === Module 17238: ContactSuggestionRow ===
 
-// Module 17227 (ContactSuggestionRow)
+// Module 17238 (ContactSuggestionRow)
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16377 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16383 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 

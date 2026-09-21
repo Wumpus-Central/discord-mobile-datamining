@@ -1,18 +1,18 @@
-// === Module 11808: OptInChannelsUtils ===
+// === Module 11810: OptInChannelsUtils ===
 
-// Module 11808 (OptInChannelsUtils)
+// Module 11810 (OptInChannelsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import _modDef4348 from "module_4348" /* 4348 */;
 import useChannelName from "useChannelName" /* 4909 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5729 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7350 */;
-import ChannelListState from "ChannelListState" /* 7768 */;
-import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11809 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5734 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7355 */;
+import ChannelListState from "ChannelListState" /* 7770 */;
+import RecentChannelsActionCreators from "RecentChannelsActionCreators" /* 11811 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 7351 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7356 */;
 import ReadStateStore from "ReadStateStore" /* 4771 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -27,7 +27,7 @@ const Constants = fn(1074);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
 const ChannelConstants = fn(2048);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7774).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7776).ChannelListGuildActionRow;
 const ReadStateTypes = fn(4938).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUtils.tsx");

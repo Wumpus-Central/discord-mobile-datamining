@@ -1,6 +1,6 @@
-// === Module 13025: ChannelNavbar ===
+// === Module 13027: ChannelNavbar ===
 
-// Module 13025 (ChannelNavbar)
+// Module 13027 (ChannelNavbar)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -11,17 +11,17 @@ import UserUtilsDefault from "UserUtils" /* 4600 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import useChannelName from "useChannelName" /* 4909 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5239 */;
-import Pressables from "Pressables" /* 5334 */;
-import isStreamingDefault from "isStreaming" /* 8527 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11137 */;
+import Pressables from "Pressables" /* 5339 */;
+import isStreamingDefault from "isStreaming" /* 8528 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11138 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5494 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PresenceStore from "PresenceStore" /* 4796 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
-import TextStyles from "TextStyles" /* 5736 */;
+import TextStyles from "TextStyles" /* 5741 */;
 
 require = fn;
 function ChannelTitleContent(arg0) {
@@ -420,7 +420,7 @@ export const ChannelButtons = function ChannelButtons(buttons) {
       obj.disabled = disabled;
       obj.style = style;
       obj.children = children;
-      const children1 = [closure_16(closure_1(10010), obj), ];
+      const children1 = [closure_16(closure_1(10011), obj), ];
       let tmp3Result = null;
       if (hasActivitiesPrivateChannelTooltip) {
         const obj2 = { contentTypes: null, groupName: null, children: null };
@@ -440,8 +440,8 @@ export const ChannelButtons = function ChannelButtons(buttons) {
           }
           return tmp2;
         };
-        tmp3Result = closure_16(closure_1(10884), obj2);
-        const tmp4Result = closure_1(10884);
+        tmp3Result = closure_16(closure_1(10885), obj2);
+        const tmp4Result = closure_1(10885);
       }
       children1[1] = tmp3Result;
       return closure_17(closure_4, { children: children1 }, index);

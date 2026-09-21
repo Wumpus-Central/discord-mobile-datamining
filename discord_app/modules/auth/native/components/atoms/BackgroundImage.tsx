@@ -1,8 +1,8 @@
-// === Module 7213: BackgroundImage ===
+// === Module 7218: BackgroundImage ===
 
-// Module 7213 (BackgroundImage)
+// Module 7218 (BackgroundImage)
 import shared from "shared" /* 4607 */;
-import _modDef7215 from "module_7215" /* 7215 */;
+import _modDef7220 from "module_7220" /* 7220 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,10 +32,10 @@ export default function BackgroundImage(backgroundImageSource) {
     } else {
       let tmp2 = dependencyMap;
       if (obj2.isThemeDark(closure_2)) {
-        tmp2 = 7214;
+        tmp2 = 7219;
         let tmp4Result = importDefault(tmp2);
       } else {
-        tmp4Result = _modDef7215;
+        tmp4Result = _modDef7220;
       }
       obj2 = shared;
     }

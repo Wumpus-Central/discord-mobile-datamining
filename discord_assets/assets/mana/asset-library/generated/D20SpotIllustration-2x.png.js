@@ -1,6 +1,6 @@
-// === Module 6120: ? ===
+// === Module 6125: ? ===
 
-// Module 6120
+// Module 6125
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/D20SpotIllustration-2x.png.js");

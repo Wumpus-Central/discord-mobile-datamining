@@ -1,6 +1,6 @@
-// === Module 14032: NUFChannelIllustration ===
+// === Module 14038: NUFChannelIllustration ===
 
-// Module 14032 (NUFChannelIllustration)
+// Module 14038 (NUFChannelIllustration)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import Text_Text from "Text/Text" /* 4752 */;
@@ -51,7 +51,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = closure_1_0(1115).intl;
       obj.name = intl2.string(closure_1_0(1115).t["9m/HsX"]);
-      obj.avatar = closure_1_1(14033);
+      obj.avatar = closure_1_1(14039);
       obj.message = intl.string(closure_1_0(1115).t["5alrl0"]);
       items[tmp] = obj;
       return items;
@@ -62,7 +62,7 @@ export default function NUFChannelIllustration() {
       const obj = { name: null, avatar: null, message: null };
       const intl2 = closure_1_0(1115).intl;
       obj.name = intl2.string(closure_1_0(1115).t["AW1kM+"]);
-      obj.avatar = closure_1_1(14034);
+      obj.avatar = closure_1_1(14040);
       obj.message = intl.string(closure_1_0(1115).t["5Oo+vS"]);
       items[tmp] = obj;
       return items;
@@ -98,22 +98,22 @@ export default function NUFChannelIllustration() {
   const obj5 = { style: tmp.container, children: null };
   const obj6 = { source: null, style: null };
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  obj6.source = first(14035);
+  obj6.source = first(14041);
   const items2 = [, ];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
   obj6.style = items2;
   const items3 = [closure_7(closure_6, obj6), , , , , ];
-  const obj7 = { source: first(14036), style: null };
+  const obj7 = { source: first(14042), style: null };
   const items4 = [, ];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
   obj7.style = items4;
   items3[1] = closure_7(closure_6, obj7);
-  const obj8 = { source: first(14037), style: null };
+  const obj8 = { source: first(14043), style: null };
   const items5 = [, ];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
   obj8.style = items5;
   items3[2] = closure_7(closure_6, obj8);
-  const obj9 = { source: first(14038), style: null };
+  const obj9 = { source: first(14044), style: null };
   const items6 = [, ];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
   obj9.style = items6;

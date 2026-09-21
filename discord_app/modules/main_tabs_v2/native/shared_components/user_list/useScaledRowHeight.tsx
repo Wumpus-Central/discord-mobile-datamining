@@ -1,6 +1,6 @@
-// === Module 7289: useScaledRowHeight ===
+// === Module 7294: useScaledRowHeight ===
 
-// Module 7289 (useScaledRowHeight)
+// Module 7294 (useScaledRowHeight)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4457 */;
 import useFontScale from "useFontScale" /* 5193 */;

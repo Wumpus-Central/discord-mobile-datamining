@@ -1,6 +1,6 @@
-// === Module 15328: QuestHomeEmptyState ===
+// === Module 15334: QuestHomeEmptyState ===
 
-// Module 15328 (QuestHomeEmptyState)
+// Module 15334 (QuestHomeEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -8,8 +8,8 @@ import useToken from "useToken" /* 4457 */;
 import useChatLayoutDefault from "useChatLayout" /* 4616 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
-import _modDef15329 from "module_15329" /* 15329 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
+import _modDef15335 from "module_15335" /* 15335 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -55,7 +55,7 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
-    const obj11 = { style: tmp5.emptyImage, source: _modDef15329, resizeMode: "cover" };
+    const obj11 = { style: tmp5.emptyImage, source: _modDef15335, resizeMode: "cover" };
     const items2 = [timestampProducer(React4, obj11), ];
     const obj22 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);

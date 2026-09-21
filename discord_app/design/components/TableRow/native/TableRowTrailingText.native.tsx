@@ -1,6 +1,6 @@
-// === Module 5826: TableRowTrailingText ===
+// === Module 5831: TableRowTrailingText ===
 
-// Module 5826 (TableRowTrailingText)
+// Module 5831 (TableRowTrailingText)
 import Text_Text from "Text/Text" /* 4752 */;
 import noop from "module_19" /* 19 */;
 

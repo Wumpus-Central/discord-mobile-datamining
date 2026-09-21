@@ -1,9 +1,9 @@
-// === Module 10663: StickerOptionsActionSheet ===
+// === Module 10664: StickerOptionsActionSheet ===
 
-// Module 10663 (StickerOptionsActionSheet)
+// Module 10664 (StickerOptionsActionSheet)
 import ToastUtils from "ToastUtils" /* 4453 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import ClipboardUtils from "ClipboardUtils" /* 7429 */;
+import ClipboardUtils from "ClipboardUtils" /* 7434 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function StickerOptionsActionSheet(stickerUrl) {
   const intl = stickerUrl(1115).intl;
   obj3.label = intl.string(stickerUrl(1115).t.B1ubHx);
   obj3.onPress = callback;
-  obj2.children = jsx(stickerUrl(5817).TableRow, { icon: jsx(stickerUrl(4698).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(stickerUrl(5899).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(stickerUrl(7437).ActionSheet, { children: null });
+  obj2.children = jsx(stickerUrl(5822).TableRow, { icon: jsx(stickerUrl(4698).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(stickerUrl(5904).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(stickerUrl(7442).ActionSheet, { children: null });
 };

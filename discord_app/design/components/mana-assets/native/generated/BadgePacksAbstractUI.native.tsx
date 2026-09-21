@@ -1,9 +1,9 @@
-// === Module 6019: BadgePacksAbstractUI ===
+// === Module 6024: BadgePacksAbstractUI ===
 
-// Module 6019 (BadgePacksAbstractUI)
+// Module 6024 (BadgePacksAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6020 from "module_6020" /* 6020 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6025 from "module_6025" /* 6025 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BadgePacksAbstractUI = function BadgePacksAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6020 };
+  const obj2 = { uri: _modDef6025 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

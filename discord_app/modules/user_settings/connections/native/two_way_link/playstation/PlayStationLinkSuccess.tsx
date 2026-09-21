@@ -1,12 +1,12 @@
-// === Module 9381: PlayStationLinkSuccess ===
+// === Module 9382: PlayStationLinkSuccess ===
 
-// Module 9381 (PlayStationLinkSuccess)
+// Module 9382 (PlayStationLinkSuccess)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9350 */;
-import _modDef9366 from "module_9366" /* 9366 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9351 */;
+import _modDef9367 from "module_9367" /* 9367 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9366 }), []), style: tmp.image }), , ];
+  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9367 }), []), style: tmp.image }), , ];
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj5.children = intl.string(util.t.e6SOl0);

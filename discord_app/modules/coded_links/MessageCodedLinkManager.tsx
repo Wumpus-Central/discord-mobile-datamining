@@ -1,13 +1,13 @@
-// === Module 17809: MessageCodedLinkManager ===
+// === Module 17820: MessageCodedLinkManager ===
 
-// Module 17809 (MessageCodedLinkManager)
+// Module 17820 (MessageCodedLinkManager)
 import findCodedLinksDefault from "findCodedLinks" /* 4739 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17817 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17828 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7697 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7699 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import InviteStore from "InviteStore" /* 4740 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7363 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {

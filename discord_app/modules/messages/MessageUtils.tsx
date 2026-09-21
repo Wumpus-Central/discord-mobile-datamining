@@ -1,6 +1,6 @@
-// === Module 10340: MessageUtils ===
+// === Module 10341: MessageUtils ===
 
-// Module 10340 (MessageUtils)
+// Module 10341 (MessageUtils)
 import AgeGateUtils from "AgeGateUtils" /* 4966 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;

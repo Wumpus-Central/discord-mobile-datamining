@@ -1,13 +1,13 @@
-// === Module 16297: RegisterUsernameInput ===
+// === Module 16303: RegisterUsernameInput ===
 
-// Module 16297 (RegisterUsernameInput)
+// Module 16303 (RegisterUsernameInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6847 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14975 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16289 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6852 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14981 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 16295 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -67,7 +67,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(16271);
+const RegistrationUIStore = fn(16277);
 ({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -141,13 +141,13 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14975).NameValidationState.ERROR) {
+  if (type === tmp14(14981).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
-  const items3 = [closure_9(setUsername(6843).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_9(setUsername(6848).TextInput, obj3), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj6.children = items3;
   return closure_10(closure_11, obj6);
 };

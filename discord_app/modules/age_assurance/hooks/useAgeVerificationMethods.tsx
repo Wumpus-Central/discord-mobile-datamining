@@ -1,18 +1,18 @@
-// === Module 8858: useAgeVerificationMethods ===
+// === Module 8859: useAgeVerificationMethods ===
 
-// Module 8858 (useAgeVerificationMethods)
+// Module 8859 (useAgeVerificationMethods)
 import util from "util" /* 1115 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5084 */;
 import MetricEvents from "MetricEvents" /* 5089 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8688 */;
-import GoogleWalletExperiment from "GoogleWalletExperiment" /* 8859 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8689 */;
+import GoogleWalletExperiment from "GoogleWalletExperiment" /* 8860 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 8724 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 8725 */;
 
 require = fn;
-const AgeVerificationConstants = fn(8682);
+const AgeVerificationConstants = fn(8683);
 ({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/hooks/useAgeVerificationMethods.tsx");
@@ -99,8 +99,8 @@ export default function useAgeVerificationMethods(onGoogleWalletSelect) {
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      const obj5 = id(8683);
-                      const result = obj5.trackAgeVerificationModalClicked(id, id(8683).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(8683).AgeVerificationModalCta.METHOD_SELECT, id);
+                      const obj5 = id(8684);
+                      const result = obj5.trackAgeVerificationModalClicked(id, id(8684).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY, id(8684).AgeVerificationModalCta.METHOD_SELECT, id);
                       v1 = 1;
                       c1 = 1;
                       const obj4 = { value: v1(id), done: false };

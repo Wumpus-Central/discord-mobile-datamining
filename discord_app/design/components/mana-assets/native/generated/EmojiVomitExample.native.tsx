@@ -1,9 +1,9 @@
-// === Module 6191: EmojiVomitExample ===
+// === Module 6196: EmojiVomitExample ===
 
-// Module 6191 (EmojiVomitExample)
+// Module 6196 (EmojiVomitExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6192 from "module_6192" /* 6192 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6197 from "module_6197" /* 6197 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiVomitExample = function EmojiVomitExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6192 };
+  const obj2 = { uri: _modDef6197 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

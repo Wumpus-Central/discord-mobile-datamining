@@ -1,11 +1,11 @@
-// === Module 7330: MemberVerificationAlertUpdate ===
+// === Module 7335: MemberVerificationAlertUpdate ===
 
-// Module 7330 (MemberVerificationAlertUpdate)
+// Module 7335 (MemberVerificationAlertUpdate)
 import util from "util" /* 1115 */;
 import LinkingDefault from "Linking" /* 4451 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import common_AlertDefault from "common/Alert" /* 5205 */;
-import _modDef7331 from "module_7331" /* 7331 */;
+import _modDef7336 from "module_7336" /* 7336 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   };
   obj.onCancel = onClose.onClose;
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(Image, { source: _modDef7331, style: tmp.headerImage }), , ];
+  const items = [hasOwnProperty(Image, { source: _modDef7336, style: tmp.headerImage }), , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.kkjNHU);

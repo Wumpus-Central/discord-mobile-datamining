@@ -1,6 +1,6 @@
-// === Module 8010: ThreadMembersStore ===
+// === Module 8012: ThreadMembersStore ===
 
-// Module 8010 (ThreadMembersStore)
+// Module 8012 (ThreadMembersStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

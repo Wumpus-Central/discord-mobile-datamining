@@ -1,13 +1,13 @@
-// === Module 16147: FeaturedCategorySubblock ===
+// === Module 16153: FeaturedCategorySubblock ===
 
-// Module 16147 (FeaturedCategorySubblock)
+// Module 16153 (FeaturedCategorySubblock)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7422 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7781 */;
-import VisibilitySensorDefault from "VisibilitySensor" /* 16142 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7427 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7783 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 16148 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7784 */;
 
 require = fn;
 const Image = fn(17).Image;
@@ -26,9 +26,9 @@ export default function _default(subblock) {
   const tmp = closure_10();
   importDefault = subblock(1484).useNavigation();
   let obj = subblock(1484);
-  dependencyMap = subblock(9046).useCollectiblesAnalyticsContext();
+  dependencyMap = subblock(9047).useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
-  let obj2 = subblock(9046);
+  let obj2 = subblock(9047);
   let items = [CollectiblesCategoryStore];
   const stateFromStores = subblock(504).useStateFromStores(items, () => CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId));
   let obj3 = subblock(504);
@@ -45,8 +45,8 @@ export default function _default(subblock) {
     const _Date = Date;
     date = new Date(unpublishedAt);
   }
-  let obj5 = { onChange: subblock(16135).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
-  let obj4 = subblock(16135);
+  let obj5 = { onChange: subblock(16141).useTrackProductCardImpression(subblock.categoryStoreListingId, "mobile_home", "featured_block").handleCardVisibilityChange, children: null };
+  let obj4 = subblock(16141);
   const obj6 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, activeOpacity: 0.8, androidRippleConfig: null, hitSlop: 8, onPress: null, style: null, children: null };
   const intl = tmp2(1115).intl;
   obj6.accessibilityLabel = intl.formatToPlainString(subblock(1115).t.FNtLb3, { category: subblock.name });
@@ -102,13 +102,13 @@ export default function _default(subblock) {
   }
   const items1 = [tmp11Result, ];
   const obj8 = { radius: nativeDefault.radii.lg };
-  let result = subblock(7794).shouldShowLimitedTimeBadge(date);
+  let result = subblock(7796).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj11 = { style: tmp.limitedTimeBadge };
-    result = closure_8(tmp2(9110).LimitedTimeBadge, obj11);
+    result = closure_8(tmp2(9111).LimitedTimeBadge, obj11);
   }
   items1[1] = result;
   obj6.children = items1;
-  obj5.children = closure_9(subblock(5334).PressableOpacity, obj6);
+  obj5.children = closure_9(subblock(5339).PressableOpacity, obj6);
   return closure_8(tmp12, obj5);
 };

@@ -1,7 +1,7 @@
-// === Module 17272: ThreadAutoArchiveBottomSheet ===
+// === Module 17283: ThreadAutoArchiveBottomSheet ===
 
-// Module 17272 (ThreadAutoArchiveBottomSheet)
-import TableRadioRow from "TableRadioRow" /* 5900 */;
+// Module 17283 (ThreadAutoArchiveBottomSheet)
+import TableRadioRow from "TableRadioRow" /* 5905 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

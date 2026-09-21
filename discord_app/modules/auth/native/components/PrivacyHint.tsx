@@ -1,12 +1,12 @@
-// === Module 16309: PrivacyHint ===
+// === Module 16315: PrivacyHint ===
 
-// Module 16309 (PrivacyHint)
+// Module 16315 (PrivacyHint)
 import util from "util" /* 1115 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4474 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import FormCheckbox from "FormCheckbox" /* 5829 */;
-import Form from "Form" /* 8870 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 16310 */;
+import FormCheckbox from "FormCheckbox" /* 5834 */;
+import Form from "Form" /* 8871 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 16316 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,8 +47,8 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Pressable: closure_4 } = get_ActivityIndicator);
-const usePromoEmailConsentStore = fn(6830).usePromoEmailConsentStore;
-const useRegistrationUIStore = fn(16271).useRegistrationUIStore;
+const usePromoEmailConsentStore = fn(6835).usePromoEmailConsentStore;
+const useRegistrationUIStore = fn(16277).useRegistrationUIStore;
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

@@ -1,6 +1,6 @@
-// === Module 9690: VideoRenderer ===
+// === Module 9691: VideoRenderer ===
 
-// Module 9690 (VideoRenderer)
+// Module 9691 (VideoRenderer)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import useWindowDimensions from "useWindowDimensions" /* 1478 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -35,7 +35,7 @@ export default noop.memo((gestureEnabled) => {
   c9 = undefined;
   let onReady;
   const tmp2 = onReady();
-  const surfaceDirectRendererExperiment = resizeMode(9691).useSurfaceDirectRendererExperiment(userId, { location: "VideoRenderer" });
+  const surfaceDirectRendererExperiment = resizeMode(9692).useSurfaceDirectRendererExperiment(userId, { location: "VideoRenderer" });
   let tmp6 = first1(noop.useState(0), 2);
   let width = tmp6[0];
   dependencyMap = tmp6[1];
@@ -48,10 +48,10 @@ export default noop.memo((gestureEnabled) => {
   const tmp13 = first1(noop.useState(0), 2);
   const first3 = tmp13[0];
   closure_8 = tmp15;
-  let obj = resizeMode(9691);
+  let obj = resizeMode(9692);
   [tmp17, c9] = first1(noop.useState(true), 2);
-  width(9692)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-  onReady = width(9694)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+  width(9693)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+  onReady = width(9695)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
   noop.useRef(null);
   const ref1 = noop.useRef(null);
   ref = noop.useRef({ width: 0, height: 0 });
@@ -138,7 +138,7 @@ export default noop.memo((gestureEnabled) => {
   }, items2);
   const tmp16 = first1(noop.useState(true), 2);
   const items3 = [width, first1, first2, first3, memo];
-  const store = resizeMode(8602).useStore((orientation) => orientation.orientation);
+  const store = resizeMode(8603).useStore((orientation) => orientation.orientation);
   const layoutEffect = noop.useLayoutEffect(() => {
     let isAndroidResult = PlatformUtils.isAndroid();
     if (isAndroidResult) {
@@ -202,10 +202,10 @@ export default noop.memo((gestureEnabled) => {
   }, items9);
   if (tmp17) {
     const obj3 = { animate: true, style: tmp2.spinner };
-    tmp35 = closure_8(tmp18(9699), obj3);
+    tmp35 = closure_8(tmp18(9700), obj3);
   }
-  const tmp37 = store === resizeMode(8602).OrientationType.PORTRAIT;
-  const obj2 = resizeMode(8602);
+  const tmp37 = store === resizeMode(8603).OrientationType.PORTRAIT;
+  const obj2 = resizeMode(8603);
   if (tmp3Result.isAndroid()) {
     const obj4 = { onLayout: callback2, style: null, children: null };
     const items10 = [tmp2.center, closure_6.absoluteFillObject];
@@ -215,10 +215,10 @@ export default noop.memo((gestureEnabled) => {
     let size = { width, height: first1, alignItems: "center", justifyContent: "center" };
     obj6.style = size;
     const obj7 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo2 };
-    const items11 = [closure_8(tmp18(9702), obj7), tmp35];
+    const items11 = [closure_8(tmp18(9703), obj7), tmp35];
     obj6.children = items11;
     obj5.children = c9(first2, obj6);
-    const items12 = [closure_8(tmp18(9700), obj5), ];
+    const items12 = [closure_8(tmp18(9701), obj5), ];
     const obj8 = { style: memo5, children: null };
     let tmp56 = null;
     if (!tmp17) {
@@ -238,14 +238,14 @@ export default noop.memo((gestureEnabled) => {
     items12[1] = closure_8(first2, obj8);
     obj4.children = items12;
     let tmp43Result1 = c9(tmp52, obj4);
-    const tmp18Result = tmp18(9700);
+    const tmp18Result = tmp18(9701);
   } else if (flag) {
     const obj9 = { ref, onLayout: callback2, style: closure_6.absoluteFillObject, contentContainerStyle: memo4, bounces: false, pinchGestureEnabled: !tmp17, maximumZoomScale: 8, minimumZoomScale: 1, showsVerticalScrollIndicator: false, showsHorizontalScrollIndicator: false, scrollEventThrottle: 16, children: null };
     const obj10 = { collapsable: false, style: memo4, onLayout: callback3, children: null };
     const obj11 = { style: memo3, children: null };
     const obj12 = { children: null };
     const obj13 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo1 };
-    obj12.children = closure_8(tmp18(9702), obj13);
+    obj12.children = closure_8(tmp18(9703), obj13);
     const items13 = [closure_8(tmp18(4492).View, obj12), ];
     let tmp48 = null;
     if (tmp37) {
@@ -276,7 +276,7 @@ export default noop.memo((gestureEnabled) => {
     const items16 = [tmp2.center, closure_6.absoluteFillObject];
     obj15.style = items16;
     const obj16 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, streamId, onSize: callback, onReady: callback1, style: memo1 };
-    const items17 = [closure_8(tmp18(9702), obj16), tmp35];
+    const items17 = [closure_8(tmp18(9703), obj16), tmp35];
     obj15.children = items17;
     tmp43Result1 = c9(first2, obj15);
   }

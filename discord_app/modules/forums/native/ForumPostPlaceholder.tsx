@@ -1,6 +1,6 @@
-// === Module 12278: ForumPostPlaceholder ===
+// === Module 12280: ForumPostPlaceholder ===
 
-// Module 12278 (ForumPostPlaceholder)
+// Module 12280 (ForumPostPlaceholder)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import timing from "timing" /* 4757 */;
@@ -52,6 +52,6 @@ export default noop.memo(() => {
   fn.__workletHash = 9488742940898;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  let obj4 = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5819).Card, { variant: "secondary", style: tmp.postPlaceholder }) };
-  return jsx(timingConfig(4492).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5819).Card, { variant: "secondary", style: tmp.postPlaceholder }) });
+  let obj4 = { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5824).Card, { variant: "secondary", style: tmp.postPlaceholder }) };
+  return jsx(timingConfig(4492).View, { style: animatedStyle, pointerEvents: "none", children: jsx(stateFromStores(5824).Card, { variant: "secondary", style: tmp.postPlaceholder }) });
 });

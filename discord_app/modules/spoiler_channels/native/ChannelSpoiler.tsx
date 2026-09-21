@@ -1,12 +1,12 @@
-// === Module 12918: ChannelSpoiler ===
+// === Module 12920: ChannelSpoiler ===
 
-// Module 12918 (ChannelSpoiler)
+// Module 12920 (ChannelSpoiler)
 import nativeDefault from "native" /* 576 */;
 import RootNavigationRef from "RootNavigationRef" /* 4614 */;
 import useChannelNameDefault from "useChannelName" /* 4909 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4957 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5732 */;
-import GatedContentDefault from "GatedContent" /* 12917 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5737 */;
+import GatedContentDefault from "GatedContent" /* 12919 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
@@ -17,7 +17,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12524).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4756);
@@ -45,7 +45,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = noop.useContext(tmp6(12523)).setControlsMode;
+  setControlsMode = noop.useContext(tmp6(12525)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -114,7 +114,7 @@ export default function ChannelSpoiler(channelId) {
         const intl2 = tmp(1115).intl;
         obj13.children = intl2.string(tmp(1115).t["/QvRak"]);
         obj12.children = closure_10(tmp(4752).Text, obj13);
-        tmp24Result = closure_10(tmp(5334).PressableHighlight, obj12);
+        tmp24Result = closure_10(tmp(5339).PressableHighlight, obj12);
       }
       items5[2] = tmp24Result;
       const obj14 = { style: tmp4.divider };

@@ -1,6 +1,6 @@
-// === Module 7775: isOptInEnabled ===
+// === Module 7777: isOptInEnabled ===
 
-// Module 7775 (isOptInEnabled)
+// Module 7777 (isOptInEnabled)
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;

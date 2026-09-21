@@ -1,14 +1,14 @@
-// === Module 15476: GuildRoleSubscriptionsHooks ===
+// === Module 15482: GuildRoleSubscriptionsHooks ===
 
-// Module 15476 (GuildRoleSubscriptionsHooks)
+// Module 15482 (GuildRoleSubscriptionsHooks)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7495 */;
-import useRequestDefault from "useRequest" /* 12454 */;
-import subscriptionUtils from "subscriptionUtils" /* 15478 */;
+import GuildRoleSubscriptionsActionCreatorsAll from "GuildRoleSubscriptionsActionCreators" /* 7497 */;
+import useRequestDefault from "useRequest" /* 12456 */;
+import subscriptionUtils from "subscriptionUtils" /* 15484 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5494 */;
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4389 */;
 
 const require = globalThis.__r;

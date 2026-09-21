@@ -1,15 +1,15 @@
-// === Module 12355: SearchLocalAndGlobalContentView ===
+// === Module 12357: SearchLocalAndGlobalContentView ===
 
-// Module 12355 (SearchLocalAndGlobalContentView)
+// Module 12357 (SearchLocalAndGlobalContentView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
-import TableRow from "TableRow" /* 5817 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7761 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9522 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12302 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12305 */;
+import TableRow from "TableRow" /* 5822 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7763 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7765 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9523 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12304 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12307 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,15 +39,15 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(12302).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(12304).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12307), obj2);
+    tmp4 = closure_10(onPressSend(12309), obj2);
   }
-  obj = hasOptions(12302);
-  const tmpResult = hasOptions(12356);
-  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(9522).AppLauncherSectionName.SEARCH });
+  obj = hasOptions(12304);
+  const tmpResult = hasOptions(12358);
+  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(9523).AppLauncherSectionName.SEARCH });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
   let items = [hasOptions];
@@ -69,15 +69,15 @@ function CommandRow(arg0) {
     }
   }, items1);
   const obj4 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(9522).AppLauncherSectionName.SEARCH };
-  obj4.subLabel = hasOptions(9402).getSectionName(application);
+  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(9523).AppLauncherSectionName.SEARCH };
+  obj4.subLabel = hasOptions(9403).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(12356), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return closure_10(hasOptions(5817).TableRow, obj4);
+  obj4.trailing = closure_10(onPressSend(12358), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(5822).TableRow, obj4);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -151,8 +151,8 @@ function CommandsExpandableList(expandedOverride) {
   return closure_10(context(beforeExecuteCommand[30]), { items: items1, expandedOverride: expandedOverride.expanded, showsExpandCTAOverride: false });
 }
 const View = fn(17).View;
-const getSection = fn(9403).getSection;
-const FetchState = fn(12319).FetchState;
+const getSection = fn(9404).getSection;
+const FetchState = fn(12321).FetchState;
 const AppLauncherNativeConstants = fn(1483);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;

@@ -1,12 +1,12 @@
-// === Module 18025: GuildSettingsModalSecurity ===
+// === Module 18036: GuildSettingsModalSecurity ===
 
-// Module 18025 (GuildSettingsModalSecurity)
+// Module 18036 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 576 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9854 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9855 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import UserStore from "UserStore" /* 1372 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9855 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9856 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -99,7 +99,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   const items5 = [closure_13(closure_4, obj4), ];
   const obj10 = { style: tmp.center, children: null };
   let obj2 = guildId(504);
-  const items6 = [closure_12(closure_5, { source: stateFromStores(15063), style: tmp.image, resizeMode: "contain" }), ];
+  const items6 = [closure_12(closure_5, { source: stateFromStores(15069), style: tmp.image, resizeMode: "contain" }), ];
   const obj12 = { style: tmp.infoWrapper, children: null };
   const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1115).intl;
@@ -109,7 +109,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj10.children = items6;
   items5[1] = closure_13(closure_4, obj10);
   obj3.children = items5;
-  const items7 = [closure_13(closure_4, obj3), closure_12(guildId(7280).NavScrim, {})];
+  const items7 = [closure_13(closure_4, obj3), closure_12(guildId(7285).NavScrim, {})];
   obj9.children = items7;
   return closure_13(closure_14, obj9);
 };

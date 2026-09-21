@@ -1,13 +1,13 @@
-// === Module 5633: StageChannelRoleStore ===
+// === Module 5638: StageChannelRoleStore ===
 
-// Module 5633 (StageChannelRoleStore)
+// Module 5638 (StageChannelRoleStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2049 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4903 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5634 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5639 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;

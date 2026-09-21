@@ -1,6 +1,6 @@
-// === Module 14254: ClipsSession ===
+// === Module 14260: ClipsSession ===
 
-// Module 14254 (ClipsSession)
+// Module 14260 (ClipsSession)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/clips/ClipsSession.tsx");

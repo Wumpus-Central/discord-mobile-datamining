@@ -1,6 +1,6 @@
-// === Module 13263: useMediaModalFooterBackground ===
+// === Module 13265: useMediaModalFooterBackground ===
 
-// Module 13263 (useMediaModalFooterBackground)
+// Module 13265 (useMediaModalFooterBackground)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import useToken from "useToken" /* 4457 */;
@@ -13,5 +13,5 @@ const result = size.fileFinishedImporting("modules/media_viewer/native/component
 export default function useMediaModalFooterBackground() {
   const tmp = _modDef672;
   const tmp2 = _slicedToArray(tmp(useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK)).rgba(), 4);
-  return { mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] }, MediaModalFooterUnderlay: "Array" };
+  return { mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] }, MediaModalFooterUnderlay: "y" };
 };

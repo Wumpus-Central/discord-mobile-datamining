@@ -1,6 +1,6 @@
-// === Module 15030: SettingsAgeGroupResetAlert ===
+// === Module 15036: SettingsAgeGroupResetAlert ===
 
-// Module 15030 (SettingsAgeGroupResetAlert)
+// Module 15036 (SettingsAgeGroupResetAlert)
 import _modDef3034 from "module_3034" /* 3034 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -42,7 +42,7 @@ export default function SettingsAgeGroupResetAlert() {
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(14026).resetAgeVerification(), done: false };
+            const obj6 = { value: tmp3(14032).resetAgeVerification(), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {

@@ -1,6 +1,6 @@
-// === Module 11870: ExecutedApplicationCommandPopout ===
+// === Module 11872: ExecutedApplicationCommandPopout ===
 
-// Module 11870 (ExecutedApplicationCommandPopout)
+// Module 11872 (ExecutedApplicationCommandPopout)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -12,11 +12,11 @@ import UserUtilsDefault from "UserUtils" /* 4600 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import useChannelName from "useChannelName" /* 4909 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
-import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8385 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
-import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 11871 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7765 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8386 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
+import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 11873 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
@@ -25,7 +25,7 @@ import GuildStore from "GuildStore" /* 2063 */;
 import MessageStore from "MessageStore" /* 4976 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9403 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9404 */;
 
 require = fn;
 function getCommandOptionComponents(option) {
@@ -696,7 +696,7 @@ export default function ExecutedCommandPopout(channelId) {
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(7402)(messageId(7422).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7407)(messageId(7427).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -726,6 +726,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = closure_23(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_23(channelId(7390).BottomSheet, obj3);
-  return closure_23(channelId(7402).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_23(channelId(7395).BottomSheet, obj3);
+  return closure_23(channelId(7407).AnalyticsLocationProvider, obj2);
 };

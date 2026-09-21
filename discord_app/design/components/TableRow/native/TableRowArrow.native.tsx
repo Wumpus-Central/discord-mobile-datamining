@@ -1,9 +1,9 @@
-// === Module 5824: TableRowArrow ===
+// === Module 5829: TableRowArrow ===
 
-// Module 5824 (TableRowArrow)
+// Module 5829 (TableRowArrow)
 import nativeDefault from "native" /* 576 */;
 import Icon from "Icon" /* 5188 */;
-import _modDef5825 from "module_5825" /* 5825 */;
+import _modDef5830 from "module_5830" /* 5830 */;
 import noop from "module_19" /* 19 */;
 
 const IconDefault = Icon;
@@ -21,6 +21,6 @@ const result = size.fileFinishedImporting("design/components/TableRow/native/Tab
 
 export const TableRowArrow = function TableRowArrow() {
   const tmp = closure_4();
-  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5825, size: Icon.IconSizes.CUSTOM };
-  return jsx(IconDefault, { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5825, size: Icon.IconSizes.CUSTOM });
+  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5830, size: Icon.IconSizes.CUSTOM };
+  return jsx(IconDefault, { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5830, size: Icon.IconSizes.CUSTOM });
 };

@@ -1,6 +1,6 @@
-// === Module 17152: GroupDMNitroUpsellBanner ===
+// === Module 17163: GroupDMNitroUpsellBanner ===
 
-// Module 17152 (GroupDMNitroUpsellBanner)
+// Module 17163 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
@@ -8,11 +8,11 @@ import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import spring from "spring" /* 5185 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import _modDef8309 from "module_8309" /* 8309 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11840 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11843 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11847 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 17154 */;
+import _modDef8310 from "module_8310" /* 8310 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11842 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11845 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11849 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 17165 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
@@ -149,7 +149,7 @@ function FloatingBanner(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11842).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11844).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -203,7 +203,7 @@ export default function GroupDMNitroUpsellBanner(wrapperStyle) {
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef8309;
+  obj7.icon = _modDef8310;
   obj7.onPress = tmp7Result;
   obj6.trailing = React7(components_Button_Button.Button, obj7);
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

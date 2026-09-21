@@ -1,6 +1,6 @@
-// === Module 7441: FormSwitch ===
+// === Module 7446: FormSwitch ===
 
-// Module 7441 (FormSwitch)
+// Module 7446 (FormSwitch)
 import nativeDefault from "native" /* 576 */;
 import HapticUtils from "HapticUtils" /* 4724 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4725 */;

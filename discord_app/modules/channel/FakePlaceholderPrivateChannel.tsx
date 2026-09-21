@@ -1,6 +1,6 @@
-// === Module 7461: FakePlaceholderPrivateChannel ===
+// === Module 7466: FakePlaceholderPrivateChannel ===
 
-// Module 7461 (FakePlaceholderPrivateChannel)
+// Module 7466 (FakePlaceholderPrivateChannel)
 import Constants from "Constants" /* 1074 */;
 import ChannelRecord from "ChannelRecord" /* 2045 */;
 import size from "module_2" /* 2 */;

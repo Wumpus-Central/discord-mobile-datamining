@@ -1,6 +1,6 @@
-// === Module 9741: useIsStreamFocused ===
+// === Module 9742: useIsStreamFocused ===
 
-// Module 9741 (useIsStreamFocused)
+// Module 9742 (useIsStreamFocused)
 import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
 
 const require = globalThis.__r;

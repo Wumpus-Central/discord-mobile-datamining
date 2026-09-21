@@ -1,9 +1,9 @@
-// === Module 7895: UserSearchUtils ===
+// === Module 7897: UserSearchUtils ===
 
-// Module 7895 (UserSearchUtils)
+// Module 7897 (UserSearchUtils)
 import StringUtils from "StringUtils" /* 2009 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7896 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7898 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 

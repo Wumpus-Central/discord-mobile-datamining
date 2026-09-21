@@ -1,17 +1,17 @@
-// === Module 8105: HeaderShared ===
+// === Module 8107: HeaderShared ===
 
-// Module 8105 (HeaderShared)
+// Module 8107 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import useToken from "useToken" /* 4457 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import Pressables from "Pressables" /* 5334 */;
-import _mod5843 from "module_5843" /* 5843 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8107 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 8112 */;
-import ChannelActionsDefault from "ChannelActions" /* 8117 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13565 */;
+import Pressables from "Pressables" /* 5339 */;
+import _mod5848 from "module_5848" /* 5848 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 8109 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 8114 */;
+import ChannelActionsDefault from "ChannelActions" /* 8119 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13571 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -125,7 +125,7 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(8106).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(8108).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4756);

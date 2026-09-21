@@ -1,19 +1,19 @@
-// === Module 17841: NewUserUtils ===
+// === Module 17852: NewUserUtils ===
 
-// Module 17841 (NewUserUtils)
+// Module 17852 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1101 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import Link from "Link" /* 1485 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4613 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12931 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12934 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12997 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 17842 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12933 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12936 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12999 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 17853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 16283 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5493 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 16289 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5498 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -229,7 +229,7 @@ let closure_18 = async function _getNextOnboardingStep() {
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
-const ContactPermissions = fn(12929).ContactPermissions;
+const ContactPermissions = fn(12931).ContactPermissions;
 let closure_11 = fn(4965).NotificationAuthorizationStatus;
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_13 = asyncGeneratorStep(async () => {
@@ -395,7 +395,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(10075).hasDeferredInvite,
+    shouldShowStep: fn(10076).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

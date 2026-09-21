@@ -1,6 +1,6 @@
-// === Module 7465: GuildSpaceExperiment ===
+// === Module 7470: GuildSpaceExperiment ===
 
-// Module 7465 (GuildSpaceExperiment)
+// Module 7470 (GuildSpaceExperiment)
 import createExperiment from "module_4669" /* 4669 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 6439: HoldingGemSpotIllustration ===
+// === Module 6444: HoldingGemSpotIllustration ===
 
-// Module 6439 (HoldingGemSpotIllustration)
+// Module 6444 (HoldingGemSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6440 from "module_6440" /* 6440 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6445 from "module_6445" /* 6445 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const HoldingGemSpotIllustration = function HoldingGemSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6440 };
+  const obj2 = { uri: _modDef6445 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

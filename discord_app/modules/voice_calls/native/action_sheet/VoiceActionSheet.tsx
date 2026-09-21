@@ -1,15 +1,15 @@
-// === Module 14027: VoiceActionSheet ===
+// === Module 14033: VoiceActionSheet ===
 
-// Module 14027 (VoiceActionSheet)
+// Module 14033 (VoiceActionSheet)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4613 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5174 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7402 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7422 */;
-import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 14028 */;
-import NUFVoiceChannelsTemplateDefault from "NUFVoiceChannelsTemplate" /* 14039 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 14042 */;
-import VoiceEmptyStateDefault from "VoiceEmptyState" /* 14043 */;
-import VoiceMemberListDefault from "VoiceMemberList" /* 14046 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7407 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7427 */;
+import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 14034 */;
+import NUFVoiceChannelsTemplateDefault from "NUFVoiceChannelsTemplate" /* 14045 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 14048 */;
+import VoiceEmptyStateDefault from "VoiceEmptyState" /* 14049 */;
+import VoiceMemberListDefault from "VoiceMemberList" /* 14052 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4780 */;
 
@@ -49,7 +49,7 @@ export default function VoiceActionSheet(channel) {
     let obj3 = { children: null };
     const obj4 = { channel };
     obj3.children = closure_6(NUFVoiceChannelsTemplateDefault, obj4);
-    let children = closure_6(tmp5(7437).ActionSheet, obj3);
+    let children = closure_6(tmp5(7442).ActionSheet, obj3);
     let tmp8 = closure_6;
   } else if (stateFromStores) {
     const obj5 = { children: null };
@@ -58,7 +58,7 @@ export default function VoiceActionSheet(channel) {
     const obj7 = { channel };
     items2[1] = closure_6(VoiceEmptyStateDefault, obj7);
     obj5.children = items2;
-    children = closure_7(tmp5(7437).ActionSheet, obj5);
+    children = closure_7(tmp5(7442).ActionSheet, obj5);
     tmp8 = closure_6;
   } else {
     tmp8 = closure_6;
@@ -70,7 +70,7 @@ export default function VoiceActionSheet(channel) {
     items3[1] = closure_6(VoiceMemberListDefault, obj11);
     obj9.children = items3;
     obj8.children = closure_7(closure_4, obj9);
-    children = closure_6(tmp5(7437).ActionSheet, obj8);
+    children = closure_6(tmp5(7442).ActionSheet, obj8);
   }
-  return tmp8(channel(7402).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(7407).AnalyticsLocationProvider, { value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
 };

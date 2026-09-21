@@ -1,6 +1,6 @@
-// === Module 5309: VoiceLockIcon ===
+// === Module 5316: VoiceLockIcon ===
 
-// Module 5309 (VoiceLockIcon)
+// Module 5316 (VoiceLockIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5251 from "module_5251" /* 5251 */;

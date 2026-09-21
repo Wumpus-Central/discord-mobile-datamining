@@ -1,6 +1,6 @@
-// === Module 9709: participantHasVideo ===
+// === Module 9710: participantHasVideo ===
 
-// Module 9709 (participantHasVideo)
+// Module 9710 (participantHasVideo)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 

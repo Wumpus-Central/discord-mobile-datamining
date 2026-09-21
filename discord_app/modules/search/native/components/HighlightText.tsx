@@ -1,6 +1,6 @@
-// === Module 10381: HighlightText ===
+// === Module 10382: HighlightText ===
 
-// Module 10381 (HighlightText)
+// Module 10382 (HighlightText)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import noop from "module_19" /* 19 */;

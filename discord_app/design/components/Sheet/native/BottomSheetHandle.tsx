@@ -1,6 +1,6 @@
-// === Module 7393: Sheet/BottomSheetHandle ===
+// === Module 7398: Sheet/BottomSheetHandle ===
 
-// Module 7393 (Sheet/BottomSheetHandle)
+// Module 7398 (Sheet/BottomSheetHandle)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

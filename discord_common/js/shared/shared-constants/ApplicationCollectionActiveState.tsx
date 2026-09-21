@@ -1,6 +1,6 @@
-// === Module 12329: ApplicationCollectionActiveState ===
+// === Module 12331: ApplicationCollectionActiveState ===
 
-// Module 12329 (ApplicationCollectionActiveState)
+// Module 12331 (ApplicationCollectionActiveState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionActiveState.tsx");

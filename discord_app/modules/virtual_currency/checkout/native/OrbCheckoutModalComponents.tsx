@@ -1,6 +1,6 @@
-// === Module 13458: OrbCheckoutModalComponents ===
+// === Module 13460: OrbCheckoutModalComponents ===
 
-// Module 13458 (OrbCheckoutModalComponents)
+// Module 13460 (OrbCheckoutModalComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import shared from "shared" /* 4607 */;
@@ -8,13 +8,13 @@ import useThemeDefault from "useTheme" /* 4690 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6847 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7481 */;
-import OrbsIcon from "OrbsIcon" /* 9115 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11277 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11279 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13457 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 13459 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6852 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7486 */;
+import OrbsIcon from "OrbsIcon" /* 9116 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11279 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11281 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13459 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 13461 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -89,7 +89,7 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
   const tmp = closure_8();
-  skuId = skuId(13457).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(13459).useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
   return closure_6(skuId(4752).Text, { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo });

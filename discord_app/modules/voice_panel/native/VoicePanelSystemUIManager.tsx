@@ -1,16 +1,16 @@
-// === Module 17549: VoicePanelSystemUIManager ===
+// === Module 17560: VoicePanelSystemUIManager ===
 
-// Module 17549 (VoicePanelSystemUIManager)
+// Module 17560 (VoicePanelSystemUIManager)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9663 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9664 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
 
 require = fn;
-const VoicePanelModes = fn(12524).VoicePanelModes;
-const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
+const VoicePanelModes = fn(12526).VoicePanelModes;
+const VoicePanelControlsModes = fn(12524).VoicePanelControlsModes;
 const ParticipantTypes = fn(4777).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);

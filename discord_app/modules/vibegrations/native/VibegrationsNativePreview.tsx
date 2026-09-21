@@ -1,21 +1,21 @@
-// === Module 16957: VibegrationsNativePreview ===
+// === Module 16964: VibegrationsNativePreview ===
 
-// Module 16957 (VibegrationsNativePreview)
+// Module 16964 (VibegrationsNativePreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import Card from "Card" /* 5819 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7350 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7867 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 9200 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9561 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9570 */;
+import Card from "Card" /* 5824 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7355 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7869 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 9201 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9562 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9571 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9312 */;
+import FramesStore from "FramesStore" /* 9313 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import ReadStateStore from "ReadStateStore" /* 4771 */;
@@ -200,7 +200,7 @@ function PreviewBot(previewApplicationId) {
   let stateFromStores1;
   let stateFromStores2;
   let tmp = closure_26();
-  const application = id(7403).useApplication(previewApplicationId.previewApplicationId);
+  const application = id(7408).useApplication(previewApplicationId.previewApplicationId);
   const data = application.data;
   id = undefined;
   if (data != null) {
@@ -212,7 +212,7 @@ function PreviewBot(previewApplicationId) {
   if (id == null) {
     id = null;
   }
-  let obj = id(7403);
+  let obj = id(7408);
   const items = [ChannelStore];
   const items1 = [id];
   stateFromStores = id(504).useStateFromStores(items, () => {
@@ -322,10 +322,10 @@ function PreviewBot(previewApplicationId) {
   } else {
     const obj6 = { style: tmp.dm, children: null };
     const obj7 = { guildId, channelId: stateFromStores.id, chatInputRef: ref, screenIndex: "vibegrations-preview", alwaysRespectKeyboard: true, disableGradient: true };
-    const items8 = [closure_24(stateFromStores(11601), obj7, stateFromStores.id), ];
+    const items8 = [closure_24(stateFromStores(11603), obj7, stateFromStores.id), ];
     let tmp29Result = null;
     if (tmp2Result6.isAndroid()) {
-      tmp29Result = closure_24(tmp2(16968).PortalKeyboardRenderer, { portal: true });
+      tmp29Result = closure_24(tmp2(16976).PortalKeyboardRenderer, { portal: true });
     }
     items8[1] = tmp29Result;
     obj6.children = items8;
@@ -336,11 +336,11 @@ function PreviewBot(previewApplicationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const vibegrationsDesignFeedbackStore = fn(16929);
+const vibegrationsDesignFeedbackStore = fn(16935);
 ({ exitVibegrationsDesignFeedback: map1, useVibegrationsDesignFeedback: closure_14 } = vibegrationsDesignFeedbackStore);
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_15, AnalyticsObjectTypes: closure_16, AnalyticsSections: closure_17, AppStates: closure_18, ME: closure_19 } = Constants);
-const FramesConstants = fn(9313);
+const FramesConstants = fn(9314);
 ({ FrameLayoutModes: closure_20, isLaunched: closure_21, MAIN_SURFACE: closure_22, makeFrameId: closure_23 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_24, jsxs: closure_25 } = jsxProd);

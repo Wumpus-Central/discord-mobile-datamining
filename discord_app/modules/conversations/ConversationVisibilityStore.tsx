@@ -1,6 +1,6 @@
-// === Module 7839: ConversationVisibilityStore ===
+// === Module 7841: ConversationVisibilityStore ===
 
-// Module 7839 (ConversationVisibilityStore)
+// Module 7841 (ConversationVisibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

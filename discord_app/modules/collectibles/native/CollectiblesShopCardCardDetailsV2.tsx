@@ -1,6 +1,6 @@
-// === Module 9125: CollectiblesShopCardCardDetailsV2 ===
+// === Module 9126: CollectiblesShopCardCardDetailsV2 ===
 
-// Module 9125 (CollectiblesShopCardCardDetailsV2)
+// Module 9126 (CollectiblesShopCardCardDetailsV2)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
@@ -8,13 +8,13 @@ import useToken from "useToken" /* 4457 */;
 import ColorUtils from "ColorUtils" /* 4605 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7793 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7794 */;
-import useCurrentUser from "useCurrentUser" /* 8446 */;
-import getProductName from "getProductName" /* 9142 */;
-import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 9143 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7795 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7796 */;
+import useCurrentUser from "useCurrentUser" /* 8447 */;
+import getProductName from "getProductName" /* 9143 */;
+import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 9144 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7477 */;
+import IAPStore from "IAPStore" /* 7482 */;
 
 require = fn;
 const View = fn(17).View;

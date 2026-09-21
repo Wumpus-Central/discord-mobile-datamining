@@ -1,23 +1,23 @@
-// === Module 15994: DevToolsRevenuePlaygroundScreen ===
+// === Module 16000: DevToolsRevenuePlaygroundScreen ===
 
-// Module 15994 (DevToolsRevenuePlaygroundScreen)
+// Module 16000 (DevToolsRevenuePlaygroundScreen)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import TableRow from "TableRow" /* 5817 */;
-import TableRowArrow from "TableRowArrow" /* 5824 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7435 */;
-import TableSwitchRow from "TableSwitchRow" /* 7440 */;
-import IAPUtils from "IAPUtils" /* 11314 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 12043 */;
+import TableRow from "TableRow" /* 5822 */;
+import TableRowArrow from "TableRowArrow" /* 5829 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7440 */;
+import TableSwitchRow from "TableSwitchRow" /* 7445 */;
+import IAPUtils from "IAPUtils" /* 11316 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 12045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8335 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7893 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8336 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7895 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
@@ -651,7 +651,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(7687).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(7689).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -665,13 +665,13 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15995, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16001, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   };
-  items = [closure_17(premiumTrialOffer(5817).TableRow, obj2), ];
+  items = [closure_17(premiumTrialOffer(5822).TableRow, obj2), ];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(5817).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5822).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -684,12 +684,12 @@ function TrialOfferSheetExample() {
 
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15995, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16001, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     }
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(5899).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(5904).TableRowGroup, obj3);
 }
 function PremiumToggles() {
   items = [DevSettingsStore];
@@ -702,7 +702,7 @@ function PremiumToggles() {
     hasIcons: false,
     children: stateFromStores.map((item) => {
       [tmp, tmp2, ] = item;
-      return closure_17(closure_0(7440).TableSwitchRow, {
+      return closure_17(closure_0(7445).TableSwitchRow, {
         label: tmp3,
         subLabel: tmp,
         value: tmp2,

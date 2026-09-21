@@ -1,6 +1,6 @@
-// === Module 13255: useMediaItemSpoilerState ===
+// === Module 13257: useMediaItemSpoilerState ===
 
-// Module 13255 (useMediaItemSpoilerState)
+// Module 13257 (useMediaItemSpoilerState)
 import native from "native" /* 1177 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import timing from "timing" /* 4757 */;
@@ -14,8 +14,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
 
 export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index) {
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8534).useMediaItemHasSpoiler(index);
-  let obj = mediaItemHasSpoiler(8534);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8535).useMediaItemHasSpoiler(index);
+  let obj = mediaItemHasSpoiler(8535);
   const tmp = mediaItemHasSpoiler;
   [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   const tmp4 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);

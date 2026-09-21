@@ -1,17 +1,17 @@
-// === Module 14048: VoiceMemberUser ===
+// === Module 14054: VoiceMemberUser ===
 
-// Module 14048 (VoiceMemberUser)
+// Module 14054 (VoiceMemberUser)
 import nativeDefault from "native" /* 576 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4613 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4963 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7978 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 10001 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7980 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 10002 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5490 */;
+import CallStore from "CallStore" /* 5495 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
@@ -43,7 +43,7 @@ function StreamingUserRow(user) {
       labelCallScreen = tmp2.labelCallScreen;
     }
     obj3.style = labelCallScreen;
-    obj2.subLabel = closure_11(tmp3(8870).FormSubLabel, obj3);
+    obj2.subLabel = closure_11(tmp3(8871).FormSubLabel, obj3);
     const items1 = [closure_11(closure_16, obj2), ];
     let tmp10Result = user.id !== AuthenticationStore.getId();
     if (tmp10Result) {
@@ -68,9 +68,9 @@ function StreamingUserRow(user) {
               }
             }
       };
-      obj4.children = closure_11(channel(10314), obj5);
+      obj4.children = closure_11(channel(10315), obj5);
       tmp10Result = closure_11(closure_3, obj4);
-      const tmp20 = channel(10314);
+      const tmp20 = channel(10315);
     }
     const obj6 = { children: null };
     items1[1] = tmp10Result;
@@ -104,7 +104,7 @@ function RingButton(channelId) {
       obj2.children = stringResult;
       tmp4Result = closure_11(tmp5(1177).LegacyText, obj2);
       obj.children = tmp4Result;
-      closure_11(channelId(5334).PressableOpacity, obj);
+      closure_11(channelId(5339).PressableOpacity, obj);
     }
   }
   return tmp3;
@@ -134,7 +134,7 @@ function StopRingButton(channelId) {
       obj2.children = stringResult;
       tmp4Result = closure_11(tmp5(1177).LegacyText, obj2);
       obj.children = tmp4Result;
-      closure_11(channelId(5334).PressableOpacity, obj);
+      closure_11(channelId(5339).PressableOpacity, obj);
     }
   }
   return tmp3;
@@ -177,7 +177,7 @@ let closure_16 = noop.memo((user) => {
   const tmp3 = closure_15();
   const id = AuthenticationStore.getId();
   const obj2 = { userId: user.id };
-  const tmp7 = channel(9617)({ userId: user.id });
+  const tmp7 = channel(9618)({ userId: user.id });
   const items = [ThemeStore];
   const stateFromStores = user(504).useStateFromStores(items, () => theme.theme);
   const obj3 = user(504);
@@ -277,7 +277,7 @@ let closure_16 = noop.memo((user) => {
       const obj8 = { style: tmp2.row, children: null };
       let tmp20Result = null;
       if (user.isSpectating) {
-        const obj9 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(14054), style: tmp19 };
+        const obj9 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(14060), style: tmp19 };
         tmp20Result = closure_11(tmp8(1177).Icon, obj9);
       }
       const items3 = [tmp20Result, , , , ];
@@ -285,7 +285,7 @@ let closure_16 = noop.memo((user) => {
         items3[1] = null;
         let tmp20Result5 = null;
         if (tmp14) {
-          const obj10 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(14051), style: tmp19 };
+          const obj10 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(14057), style: tmp19 };
           tmp20Result5 = closure_11(tmp8(1177).Icon, obj10);
         }
         items3[2] = tmp20Result5;
@@ -301,18 +301,18 @@ let closure_16 = noop.memo((user) => {
           tmp23Result = closure_12(tmp24, obj8);
         } else {
           if (localVideoDisabled) {
-            const obj12 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(14052), style: tmp2.voiceStatusIconMargin, disableColor: true };
+            const obj12 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(14058), style: tmp2.voiceStatusIconMargin, disableColor: true };
             let obj13 = obj12;
           } else {
-            obj13 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(14053), style: tmp19 };
+            obj13 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: channel(14059), style: tmp19 };
           }
           closure_11(tmp8(1177).Icon, obj13);
         }
       } else {
         if (tmp8Result.isThemeDark(stateFromStores)) {
-          let tmp5Result = channel(14049);
+          let tmp5Result = channel(14055);
         } else {
-          tmp5Result = channel(14050);
+          tmp5Result = channel(14056);
         }
         const obj14 = { size: tmp8(1177).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp19.tintColor, disableColor: localMute };
         closure_11(tmp8(1177).Icon, obj14);
@@ -343,10 +343,10 @@ let closure_16 = noop.memo((user) => {
     labelCallScreen = tmp3.labelCallScreen;
   }
   obj18.style = labelCallScreen;
-  obj15.label = closure_11(user(8870).FormRow.Label, obj18);
+  obj15.label = closure_11(user(8871).FormRow.Label, obj18);
   if (localVideoAutoDisabled) {
     const obj19 = { style: tmp2.autoDisabledVideo, children: null };
-    const obj20 = { source: channel(9712), size: tmp8(1177).Icon.Sizes.EXTRA_SMALL, disableColor: true };
+    const obj20 = { source: channel(9713), size: tmp8(1177).Icon.Sizes.EXTRA_SMALL, disableColor: true };
     const items6 = [closure_11(tmp8(1177).Icon, obj20), ];
     const obj21 = { variant: "text-xs/medium", color: "text-default", style: tmp2.autoDisabledVideoLabel, children: null };
     const intl3 = tmp8(1115).intl;
@@ -362,7 +362,7 @@ let closure_16 = noop.memo((user) => {
     }
   }
   obj15.subLabel = stringResult;
-  return closure_11(user(8870).FormRow, obj15);
+  return closure_11(user(8871).FormRow, obj15);
 });
 let obj11 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, lineHeight: 18, marginHorizontal: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 const memoResult = noop.memo(function DisconnectedUserRow(user) {
@@ -392,21 +392,21 @@ const memoResult = noop.memo(function DisconnectedUserRow(user) {
     leading: null,
     trailing: null
   };
-  const canRing = id(9993).useCanRing(id, "DisconnectedUserRow");
+  const canRing = id(9994).useCanRing(id, "DisconnectedUserRow");
   const obj5 = { text: name, style: null };
   let labelCallScreen = null;
   if (isActionSheet) {
     labelCallScreen = tmp.labelCallScreen;
   }
   obj5.style = labelCallScreen;
-  obj4.label = closure_11(id(8870).FormRow.Label, obj5);
-  const obj3 = id(9993);
+  obj4.label = closure_11(id(8871).FormRow.Label, obj5);
+  const obj3 = id(9994);
   obj4.leading = closure_11(id(1177).Avatar, { user: id, guildId: id2.guild_id, size: id(1177).AvatarSizes.REFRESH_MEDIUM_32 });
   if (!canRing) {
     obj4.trailing = null;
     const obj7 = {};
     const merged = Object.assign(obj4);
-    return closure_11(tmp2(8870).FormRow, obj7);
+    return closure_11(tmp2(8871).FormRow, obj7);
   } else {
     const obj8 = { channelId: null, userId: null, isActionSheet: null };
     id2 = id2.id;

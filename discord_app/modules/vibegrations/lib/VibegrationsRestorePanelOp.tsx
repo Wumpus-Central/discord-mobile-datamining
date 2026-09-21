@@ -1,6 +1,6 @@
-// === Module 16985: VibegrationsRestorePanelOp ===
+// === Module 16993: VibegrationsRestorePanelOp ===
 
-// Module 16985 (VibegrationsRestorePanelOp)
+// Module 16993 (VibegrationsRestorePanelOp)
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
 import size from "module_2" /* 2 */;

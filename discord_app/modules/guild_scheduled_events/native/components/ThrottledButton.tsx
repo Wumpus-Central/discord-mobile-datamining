@@ -1,6 +1,6 @@
-// === Module 9874: ThrottledButton ===
+// === Module 9875: ThrottledButton ===
 
-// Module 9874 (ThrottledButton)
+// Module 9875 (ThrottledButton)
 import components_Button_Button from "components/Button/Button" /* 5186 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,11 +1,11 @@
-// === Module 9090: AvatarDecorationSampleV2 ===
+// === Module 9091: AvatarDecorationSampleV2 ===
 
-// Module 9090 (AvatarDecorationSampleV2)
+// Module 9091 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
-import _modDef9091 from "module_9091" /* 9091 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9092 */;
+import _modDef9092 from "module_9092" /* 9092 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef9091;
+    avatarSource = _modDef9092;
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

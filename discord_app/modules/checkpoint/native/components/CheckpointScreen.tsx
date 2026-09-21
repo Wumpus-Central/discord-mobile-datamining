@@ -1,6 +1,6 @@
-// === Module 15970: CheckpointScreen ===
+// === Module 15976: CheckpointScreen ===
 
-// Module 15970 (CheckpointScreen)
+// Module 15976 (CheckpointScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointScreen(children) {
   let insets;
   const tmp = closure_8();
-  insets = insets(7221)().insets;
+  insets = insets(7226)().insets;
   const items = [, , , ];
   ({ bottom: arr[0], left: arr[1], right: arr[2], top: arr[3] } = insets);
   const obj = { style: tmp.container, children: null };

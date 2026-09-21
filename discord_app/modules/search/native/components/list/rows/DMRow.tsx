@@ -1,14 +1,14 @@
-// === Module 17110: DMRow ===
+// === Module 17121: DMRow ===
 
-// Module 17110 (DMRow)
+// Module 17121 (DMRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import UserUtils from "UserUtils" /* 4600 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import BotTagDefault from "BotTag" /* 9551 */;
-import _modDef9840 from "module_9840" /* 9840 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11137 */;
-import _modDef13760 from "module_13760" /* 13760 */;
+import BotTagDefault from "BotTag" /* 9552 */;
+import _modDef9841 from "module_9841" /* 9841 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11138 */;
+import _modDef13766 from "module_13766" /* 13766 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -163,7 +163,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9840, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9841, disableColor: true };
         obj4.children = map1(native.Icon, obj5);
         tmp4Result = map1(timestampProducer, obj4);
       }
@@ -171,7 +171,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13760, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13766, disableColor: true };
         obj6.children = map1(native.Icon, obj7);
         tmp4Result3 = map1(timestampProducer, obj6);
       }

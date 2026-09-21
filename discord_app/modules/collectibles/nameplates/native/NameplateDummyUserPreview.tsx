@@ -1,11 +1,11 @@
-// === Module 9097: NameplateDummyUserPreview ===
+// === Module 9098: NameplateDummyUserPreview ===
 
-// Module 9097 (NameplateDummyUserPreview)
+// Module 9098 (NameplateDummyUserPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import themes from "themes" /* 4464 */;
-import NameplateDefault from "Nameplate" /* 9098 */;
+import NameplateDefault from "Nameplate" /* 9099 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -65,7 +65,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   const items2 = [hasOwnProperty(NameplateDefault, { nameplate, fullOpacity: true, style: tmp3.nameplate, animate }), , ];
   const obj4 = { style: tmp3.avatarContainer, children: null };
   const obj3 = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
-  obj4.children = hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 9100 : 9101), size: NORMAL, "aria-hidden": true, style: tmp3.avatar });
+  obj4.children = hasOwnProperty(native.Avatar, { source: importDefault(stateFromStores ? 9101 : 9102), size: NORMAL, "aria-hidden": true, style: tmp3.avatar });
   items2[1] = hasOwnProperty(View, obj4);
   const obj6 = { style: null };
   const items3 = [tmp3.placeholderBar, { width: hideAvatar.width }];

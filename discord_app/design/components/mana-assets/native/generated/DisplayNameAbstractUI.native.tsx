@@ -1,9 +1,9 @@
-// === Module 6155: DisplayNameAbstractUI ===
+// === Module 6160: DisplayNameAbstractUI ===
 
-// Module 6155 (DisplayNameAbstractUI)
+// Module 6160 (DisplayNameAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6156 from "module_6156" /* 6156 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6161 from "module_6161" /* 6161 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DisplayNameAbstractUI = function DisplayNameAbstractUI(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6156 };
+  const obj2 = { uri: _modDef6161 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

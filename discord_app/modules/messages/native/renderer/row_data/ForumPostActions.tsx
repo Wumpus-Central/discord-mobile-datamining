@@ -1,11 +1,11 @@
-// === Module 8205: ForumPostActions ===
+// === Module 8206: ForumPostActions ===
 
-// Module 8205 (ForumPostActions)
+// Module 8206 (ForumPostActions)
 import Constants from "Constants" /* 1074 */;
 import ReactionUtils from "ReactionUtils" /* 4407 */;
 import _modDef4707 from "module_4707" /* 4707 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8203 */;
-import _modDef8206 from "module_8206" /* 8206 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8204 */;
+import _modDef8207 from "module_8207" /* 8207 */;
 import size from "module_2" /* 2 */;
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -26,7 +26,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: null, displayName: null };
+        const obj4 = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: 100663746, displayName: 1358954929 };
         const obj5 = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj4.src = emojiId(str2[10]).getEmojiURL(obj5);
         const obj6 = emojiId(str2[10]);
@@ -76,13 +76,13 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     let tmp6 = importDefault;
     let tmp8 = require;
   } else {
-    assetUriForEmbed = getAssetUriForEmbed(_modDef8206);
+    assetUriForEmbed = getAssetUriForEmbed(_modDef8207);
     tmp6 = importDefault;
     tmp8 = require;
   }
   if (null != assetUriForEmbed) {
     let stringResult;
-    const assetUriForEmbed1 = tmp8(8203).getAssetUriForEmbed(tmp6(4699));
+    const assetUriForEmbed1 = tmp8(8204).getAssetUriForEmbed(tmp6(4699));
     if (!hasReactions) {
       let emoji;
       if (defaultReaction != null) {
@@ -106,11 +106,11 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       const intl4 = tmp8(1115).intl;
       obj.cta = intl4.string(tmp8(1115).t.C5UQC9);
       const tmp6Result = tmp6(2108);
-      obj.icon = tmp8(8203).getAssetUriForEmbed(tmp6(8207));
-      const tmp8Result3 = tmp8(8203);
-      obj.closeIcon = tmp8(8203).getAssetUriForEmbed(tmp6(7329));
+      obj.icon = tmp8(8204).getAssetUriForEmbed(tmp6(8208));
+      const tmp8Result3 = tmp8(8204);
+      obj.closeIcon = tmp8(8204).getAssetUriForEmbed(tmp6(7334));
       tmp14 = obj;
-      const tmp8Result4 = tmp8(8203);
+      const tmp8Result4 = tmp8(8204);
     }
     const obj4 = { numDisplayedReactions: 3, isFollowing, followIcon: assetUriForEmbed, followLabel: null, shareIcon: null, shareLabel: null, defaultReaction: null, addReactLabel: null, sharePrompt: null };
     const intl5 = tmp8(1115).intl;
@@ -131,7 +131,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     return obj4;
   } else {
     const _HermesInternal = HermesInternal;
-    tmp6(1231).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4707 : 8206));
+    tmp6(1231).captureMessage("Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4707 : 8207));
     const tmp6Result2 = tmp6(1231);
   }
 };

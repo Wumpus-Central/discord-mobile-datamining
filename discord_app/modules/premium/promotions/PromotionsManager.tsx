@@ -1,11 +1,11 @@
-// === Module 17863: PromotionsManager ===
+// === Module 17874: PromotionsManager ===
 
-// Module 17863 (PromotionsManager)
-import PromotionsActionCreators from "PromotionsActionCreators" /* 13682 */;
+// Module 17874 (PromotionsManager)
+import PromotionsActionCreators from "PromotionsActionCreators" /* 13688 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 import SubscriptionStore from "SubscriptionStore" /* 4420 */;
-import PromotionsStore from "PromotionsStore" /* 10924 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
+import PromotionsStore from "PromotionsStore" /* 10925 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7363 */;
 
 require = fn;
 const EntitlementTypes = fn(1074).EntitlementTypes;

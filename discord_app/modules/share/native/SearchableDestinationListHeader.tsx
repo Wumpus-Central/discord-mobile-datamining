@@ -1,12 +1,12 @@
-// === Module 11248: SearchableDestinationListHeader ===
+// === Module 11249: SearchableDestinationListHeader ===
 
-// Module 11248 (SearchableDestinationListHeader)
+// Module 11249 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import NavigatorHeader from "NavigatorHeader" /* 5836 */;
-import _mod5843 from "module_5843" /* 5843 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 7183 */;
-import HeaderShared from "HeaderShared" /* 8105 */;
+import NavigatorHeader from "NavigatorHeader" /* 5841 */;
+import _mod5848 from "module_5848" /* 5848 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 7188 */;
+import HeaderShared from "HeaderShared" /* 8107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,7 +46,7 @@ export default function SearchableDestinationListHeader(arg0) {
     num = 0;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return jsx(_mod5843.Header, {
+  return jsx(_mod5848.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

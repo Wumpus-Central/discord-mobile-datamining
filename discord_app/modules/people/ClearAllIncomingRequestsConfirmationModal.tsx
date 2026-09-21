@@ -1,7 +1,7 @@
-// === Module 10007: ClearAllIncomingRequestsConfirmationModal ===
+// === Module 10008: ClearAllIncomingRequestsConfirmationModal ===
 
-// Module 10007 (ClearAllIncomingRequestsConfirmationModal)
-import people_ClearAllIncomingRequestsConfirmationModal from "people/ClearAllIncomingRequestsConfirmationModal" /* 10008 */;
+// Module 10008 (ClearAllIncomingRequestsConfirmationModal)
+import people_ClearAllIncomingRequestsConfirmationModal from "people/ClearAllIncomingRequestsConfirmationModal" /* 10009 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/people/ClearAllIncomingRequestsConfirmationModal.tsx");

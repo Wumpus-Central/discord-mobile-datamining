@@ -1,6 +1,6 @@
-// === Module 7710: sampleWithUserId ===
+// === Module 7712: sampleWithUserId ===
 
-// Module 7710 (sampleWithUserId)
+// Module 7712 (sampleWithUserId)
 import MurmurHashV3Default from "MurmurHashV3" /* 1240 */;
 import size from "module_2" /* 2 */;
 

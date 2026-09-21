@@ -1,10 +1,10 @@
-// === Module 7282: PhoneVerificationModal ===
+// === Module 7287: PhoneVerificationModal ===
 
-// Module 7282 (PhoneVerificationModal)
-import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 7233 */;
-import AddPhoneDefault from "AddPhone" /* 7284 */;
-import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7285 */;
-import VerifyPhoneDefault from "VerifyPhone" /* 7318 */;
+// Module 7287 (PhoneVerificationModal)
+import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 7238 */;
+import AddPhoneDefault from "AddPhone" /* 7289 */;
+import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7290 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 7323 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const VerificationModalScenes = fn(1074).VerificationModalScenes;
-let closure_5 = fn(7283).PHONE_VERIFICATION_MODAL_KEY;
+let closure_5 = fn(7288).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
@@ -131,7 +131,7 @@ export default function PhoneVerificationModal(onClose) {
                   c4 = 1;
                   c2 = 2;
                   c1 = 1;
-                  const obj5 = { value: v3(7285).addPhone(reason, reason, reason.reason), done: false };
+                  const obj5 = { value: v3(7290).addPhone(reason, reason, reason.reason), done: false };
                   return obj5;
                 }
               } else if (1 === tmp6) {

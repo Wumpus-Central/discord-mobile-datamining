@@ -1,6 +1,6 @@
-// === Module 15037: SafetyHubPage ===
+// === Module 15043: SafetyHubPage ===
 
-// Module 15037 (SafetyHubPage)
+// Module 15043 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -13,14 +13,14 @@ import Text_Text from "Text/Text" /* 4752 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5084 */;
 import MetricEvents from "MetricEvents" /* 5089 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6829 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8864 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12134 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12136 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 15038 */;
-import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 15039 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6834 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8865 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 12136 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 12138 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 15044 */;
+import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 15045 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8701 */;
+import SafetyHubStore from "SafetyHubStore" /* 8702 */;
 
 const require = globalThis.__r;
 
@@ -160,7 +160,7 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8690).AgeCheckStatus;
+const AgeCheckStatus = fn(8691).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -200,7 +200,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15041, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15047, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

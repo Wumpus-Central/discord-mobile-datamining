@@ -1,11 +1,11 @@
-// === Module 14736: validateEmbeddedAppFrame ===
+// === Module 14742: validateEmbeddedAppFrame ===
 
-// Module 14736 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9134 */;
-import RPCErrorDefault from "RPCError" /* 9580 */;
-import RPCHelpers from "RPCHelpers" /* 9585 */;
-import FramesStore from "FramesStore" /* 9312 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14737 */;
+// Module 14742 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9135 */;
+import RPCErrorDefault from "RPCError" /* 9581 */;
+import RPCHelpers from "RPCHelpers" /* 9586 */;
+import FramesStore from "FramesStore" /* 9313 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14743 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -25,7 +25,7 @@ function validateEmbeddedAppFrame(transport) {
           if (constants3.VOICE_CHANNEL !== type) {
             if (constants3.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "a", guildId: "isArray" };
+                let obj5 = { channelId: "Array", guildId: "PX_16" };
               } else {
                 obj5 = null;
               }
@@ -59,7 +59,7 @@ function validateEmbeddedAppFrame(transport) {
 const TransportTypes = fn(4660).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9313);
+const FramesConstants = fn(9314);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");

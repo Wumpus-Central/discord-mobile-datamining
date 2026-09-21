@@ -1,15 +1,14 @@
-// === Module 10968: PremiumActivatedAlert ===
+// === Module 10969: PremiumActivatedAlert ===
 
-// Module 10968 (PremiumActivatedAlert)
+// Module 10969 (PremiumActivatedAlert)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import PremiumUtils from "PremiumUtils" /* 4414 */;
 import shared from "shared" /* 4607 */;
 import useThemeDefault from "useTheme" /* 4690 */;
 import common_AlertDefault from "common/Alert" /* 5205 */;
-import _modDef8325 from "module_8325" /* 8325 */;
-import _modDef9498 from "module_9498" /* 9498 */;
-import _modDef10969 from "module_10969" /* 10969 */;
+import _modDef8326 from "module_8326" /* 8326 */;
+import _modDef9499 from "module_9499" /* 9499 */;
 import _modDef10970 from "module_10970" /* 10970 */;
 import _modDef10971 from "module_10971" /* 10971 */;
 import _modDef10972 from "module_10972" /* 10972 */;
@@ -31,7 +30,8 @@ import _modDef10987 from "module_10987" /* 10987 */;
 import _modDef10988 from "module_10988" /* 10988 */;
 import _modDef10989 from "module_10989" /* 10989 */;
 import _modDef10990 from "module_10990" /* 10990 */;
-import ShineAnimationDefault from "ShineAnimation" /* 10991 */;
+import _modDef10991 from "module_10991" /* 10991 */;
+import ShineAnimationDefault from "ShineAnimation" /* 10992 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let createStyles = fn(4756);
-let obj2 = { alert: { overflow: "hidden", paddingBottom: 24 }, header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" }, headerImage: { position: "absolute", left: "50%" }, body: { paddingHorizontal: 16, marginTop: 40, maxWidth: 300, alignSelf: "center", alignItems: "center" }, logoPlusPremiumGuild: { marginTop: 3, width: 101, height: 19 }, description: { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop: 20, color: fn(5653).DARK_PRIMARY_300_LIGHT_PRIMARY_400 } };
+let obj2 = { alert: { overflow: "hidden", paddingBottom: 24 }, header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" }, headerImage: { position: "absolute", left: "50%" }, body: { paddingHorizontal: 16, marginTop: 40, maxWidth: 300, alignSelf: "center", alignItems: "center" }, logoPlusPremiumGuild: { marginTop: 3, width: 101, height: 19 }, description: { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop: 20, color: fn(5658).DARK_PRIMARY_300_LIGHT_PRIMARY_400 } };
 let closure_9 = createStyles.createStyles(obj2);
 createStyles = fn(4756);
 let closure_10 = createStyles.createStyles((arg0) => {
@@ -130,48 +130,48 @@ export default function PremiumActivatedAlert(onClose) {
   obj6.style = tmp.alert;
   const obj7 = { style: tmp.header, source: null, children: null };
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result10 = _modDef10969;
+    let tmp4Result10 = _modDef10970;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result10 = _modDef10970;
-  } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
     tmp4Result10 = _modDef10971;
-  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
+  } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
     tmp4Result10 = _modDef10972;
-  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
     tmp4Result10 = _modDef10973;
+  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result10 = _modDef10974;
   }
   obj7.source = tmp4Result10;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result11 = _modDef10978;
+    let tmp4Result11 = _modDef10979;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result11 = _modDef10979;
+    tmp4Result11 = _modDef10980;
   } else {
     if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
       if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
         if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-          tmp4Result11 = _modDef10980;
+          tmp4Result11 = _modDef10981;
         }
       }
     }
-    tmp4Result11 = _modDef8325;
+    tmp4Result11 = _modDef8326;
   }
   const items = [React5(React3, { source: tmp4Result11, style: tmp9.logo }), , ];
   let tmp16Result = null;
   if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-    const obj9 = { source: _modDef10990, style: tmp.logoPlusPremiumGuild };
+    const obj9 = { source: _modDef10991, style: tmp.logoPlusPremiumGuild };
     tmp16Result = React5(React3, obj9);
   }
   items[1] = tmp16Result;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-    let tmp4Result12 = _modDef9498;
+    let tmp4Result12 = _modDef9499;
   } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-    tmp4Result12 = _modDef10974;
-  } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
     tmp4Result12 = _modDef10975;
-  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
+  } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
     tmp4Result12 = _modDef10976;
-  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+  } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
     tmp4Result12 = _modDef10977;
+  } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
+    tmp4Result12 = _modDef10978;
   }
   const obj10 = { source: tmp4Result12, style: null };
   const items1 = [tmp10.headerImage, tmp.headerImage];
@@ -184,38 +184,38 @@ export default function PremiumActivatedAlert(onClose) {
   const tmp4Result = common_AlertDefault;
   if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
     if (tmp7Result.isThemeDark(tmp6)) {
-      let tmp4Result14 = _modDef10981;
+      let tmp4Result14 = _modDef10982;
     } else {
-      tmp4Result14 = _modDef10982;
+      tmp4Result14 = _modDef10983;
     }
     tmp7Result = shared;
   } else {
     if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
       if (tmp7Result5.isThemeDark(tmp6)) {
-        let tmp4Result15 = _modDef10983;
+        let tmp4Result15 = _modDef10984;
       } else {
-        tmp4Result15 = _modDef10984;
+        tmp4Result15 = _modDef10985;
       }
       let tmp4Result18 = tmp4Result15;
       tmp7Result5 = shared;
     } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
       if (tmp7Result6.isThemeDark(tmp6)) {
-        let tmp4Result16 = _modDef10985;
+        let tmp4Result16 = _modDef10986;
       } else {
-        tmp4Result16 = _modDef10986;
+        tmp4Result16 = _modDef10987;
       }
       tmp4Result18 = tmp4Result16;
       tmp7Result6 = shared;
     } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
       if (tmp7Result7.isThemeDark(tmp6)) {
-        let tmp4Result17 = _modDef10987;
+        let tmp4Result17 = _modDef10988;
       } else {
-        tmp4Result17 = _modDef10988;
+        tmp4Result17 = _modDef10989;
       }
       tmp4Result18 = tmp4Result17;
       tmp7Result7 = shared;
     } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-      tmp4Result18 = _modDef10989;
+      tmp4Result18 = _modDef10990;
     }
     const obj12 = { source: tmp4Result18, style: tmp11.animation };
     const items3 = [React5(tmp4Result13, obj12), ];

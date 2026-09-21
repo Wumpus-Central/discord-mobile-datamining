@@ -1,6 +1,6 @@
-// === Module 10005: UserLimitedAccessUtils ===
+// === Module 10006: UserLimitedAccessUtils ===
 
-// Module 10005 (UserLimitedAccessUtils)
+// Module 10006 (UserLimitedAccessUtils)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

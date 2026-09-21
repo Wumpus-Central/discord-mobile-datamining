@@ -1,6 +1,6 @@
-// === Module 13570: ChatLoadingIndicator ===
+// === Module 13576: ChatLoadingIndicator ===
 
-// Module 13570 (ChatLoadingIndicator)
+// Module 13576 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
@@ -10,7 +10,7 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5489 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5494 */;
 import MessageStore from "MessageStore" /* 4976 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -281,7 +281,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(5334).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(5339).PressableOpacity, obj8);
   }
   return tmp7Result;
 };

@@ -1,6 +1,6 @@
-// === Module 5749: MemberVerificationAlert ===
+// === Module 5754: MemberVerificationAlert ===
 
-// Module 5749 (MemberVerificationAlert)
+// Module 5754 (MemberVerificationAlert)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import common_AlertDefault from "common/Alert" /* 5205 */;

@@ -1,6 +1,6 @@
-// === Module 13797: PremiumSubscriptionUpsell ===
+// === Module 13803: PremiumSubscriptionUpsell ===
 
-// Module 13797 (PremiumSubscriptionUpsell)
+// Module 13803 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
@@ -11,9 +11,9 @@ import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4706 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9504 */;
-import _modDef13798 from "module_13798" /* 13798 */;
-import _modDef13799 from "module_13799" /* 13799 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9505 */;
+import _modDef13804 from "module_13804" /* 13804 */;
+import _modDef13805 from "module_13805" /* 13805 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -21,7 +21,7 @@ import UserStore from "UserStore" /* 1372 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7672).Gradients;
+const Gradients = fn(7674).Gradients;
 const PremiumConstants = fn(1374);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_9 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -79,9 +79,9 @@ export default function PremiumSubscriptionUpsell(arg0) {
     }
     const items3 = [tmp6Result1, , ];
     const obj10 = { style: tmp.upsellFeatures, children: null };
-    const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13798 };
+    const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13804 };
     const items4 = [closure_1_10(React4, obj11), , ];
-    const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13799 };
+    const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13805 };
     items4[1] = closure_1_10(React4, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj15 = { IconComponent: null, label: null, color: null };

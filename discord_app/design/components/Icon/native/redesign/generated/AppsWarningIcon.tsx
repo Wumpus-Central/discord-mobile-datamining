@@ -1,6 +1,6 @@
-// === Module 5314: AppsWarningIcon ===
+// === Module 5321: AppsWarningIcon ===
 
-// Module 5314 (AppsWarningIcon)
+// Module 5321 (AppsWarningIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5266 from "module_5266" /* 5266 */;

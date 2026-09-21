@@ -1,6 +1,6 @@
-// === Module 17067: VibegrationsTraceDetail ===
+// === Module 17075: VibegrationsTraceDetail ===
 
-// Module 17067 (VibegrationsTraceDetail)
+// Module 17075 (VibegrationsTraceDetail)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;

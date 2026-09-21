@@ -1,9 +1,9 @@
-// === Module 9105: SlayerStorefrontItemCard ===
+// === Module 9106: SlayerStorefrontItemCard ===
 
-// Module 9105 (SlayerStorefrontItemCard)
+// Module 9106 (SlayerStorefrontItemCard)
 import nativeDefault from "native" /* 576 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7466 */;
-import tinycolorDefault from "tinycolor" /* 7792 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7471 */;
+import tinycolorDefault from "tinycolor" /* 7794 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

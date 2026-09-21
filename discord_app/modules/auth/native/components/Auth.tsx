@@ -1,24 +1,24 @@
-// === Module 16268: Auth ===
+// === Module 16274: Auth ===
 
-// Module 16268 (Auth)
+// Module 16274 (Auth)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1626 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7182 */;
-import WideAuthScrollContext from "WideAuthScrollContext" /* 7211 */;
-import BackgroundImageDefault from "BackgroundImage" /* 7213 */;
-import Navigator from "Navigator" /* 7240 */;
-import StackNavigator from "StackNavigator" /* 7242 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 16269 */;
-import RegistrationUtils from "RegistrationUtils" /* 16279 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 16320 */;
-import _mod16321 from "module_16321" /* 16321 */;
-import AuthManagerDefault from "AuthManager" /* 16322 */;
-import useOrientationLockDefault from "useOrientationLock" /* 16326 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7187 */;
+import WideAuthScrollContext from "WideAuthScrollContext" /* 7216 */;
+import BackgroundImageDefault from "BackgroundImage" /* 7218 */;
+import Navigator from "Navigator" /* 7245 */;
+import StackNavigator from "StackNavigator" /* 7247 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 16275 */;
+import RegistrationUtils from "RegistrationUtils" /* 16285 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 16326 */;
+import _mod16327 from "module_16327" /* 16327 */;
+import AuthManagerDefault from "AuthManager" /* 16328 */;
+import useOrientationLockDefault from "useOrientationLock" /* 16332 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12665 */;
+import MultiAccountStore from "MultiAccountStore" /* 12667 */;
 
 require = fn;
 function getInitialAuthRouteStack() {
@@ -62,7 +62,7 @@ function NavigatorWithCaptchaHook() {
     closure_1(false);
   }, []);
   const obj3 = { backgroundImageSource: null, backgroundImageCover: true };
-  obj3.backgroundImageSource = _mod16321;
+  obj3.backgroundImageSource = _mod16327;
   const children = [closure_9(BackgroundImageDefault, obj3), ];
   if (tmp5) {
     const obj5 = { value: tmp11, children: null };
@@ -132,7 +132,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(16270);
+let RegistrationStepsUtils = fn(16276);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {
@@ -185,7 +185,7 @@ const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {
   return items;
 }));
 let num = 540;
-if (fn(7189).hasWebAuthn) {
+if (fn(7194).hasWebAuthn) {
   num = 600;
 }
 let obj = {};
@@ -211,7 +211,7 @@ export default noop.memo(function Auth() {
     AuthManagerDefault.initialize();
     return () => closure_1_1(dependencyMap[23]).terminate();
   }, []);
-  const layoutEffect = noop.useLayoutEffect(() => closure_0(7715).trackAppUIViewed(), []);
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7717).trackAppUIViewed(), []);
   useOrientationLockDefault();
   closure_0 = noop.useRef(undefined);
   return closure_9(context.Provider, { value: noop.useCallback(() => RegistrationUtils.getTrackRegTransition(closure_0), [])(), children: closure_9(NavigatorWithCaptchaHook, {}) });

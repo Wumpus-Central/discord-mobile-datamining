@@ -1,13 +1,13 @@
-// === Module 5735: QuarantineModeInfoAlert ===
+// === Module 5740: QuarantineModeInfoAlert ===
 
-// Module 5735 (QuarantineModeInfoAlert)
+// Module 5740 (QuarantineModeInfoAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import common_AlertDefault from "common/Alert" /* 5205 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5736 */;
+import TextStyles from "TextStyles" /* 5741 */;
 
 require = fn;
 const jsxProd = fn(21);

@@ -1,6 +1,6 @@
-// === Module 5292: ImageWarningIcon ===
+// === Module 5299: ImageWarningIcon ===
 
-// Module 5292 (ImageWarningIcon)
+// Module 5299 (ImageWarningIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5264 from "module_5264" /* 5264 */;

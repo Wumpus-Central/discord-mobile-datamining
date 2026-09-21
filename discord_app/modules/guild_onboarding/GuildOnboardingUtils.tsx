@@ -1,15 +1,15 @@
-// === Module 7346: GuildOnboardingUtils ===
+// === Module 7351: GuildOnboardingUtils ===
 
-// Module 7346 (GuildOnboardingUtils)
+// Module 7351 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
 import StringUtils from "StringUtils" /* 2009 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5273 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 7342 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5277 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 7347 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5493 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5498 */;
 import GuildChannelStore from "GuildChannelStore" /* 2096 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
@@ -80,7 +80,7 @@ function areStatesEqual(arg0, arg1) {
   return tmp;
 }
 let closure_7 = fn(2096).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(7341).OnboardingConnectionType;
+const OnboardingConnectionType = fn(7346).OnboardingConnectionType;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
 const GuildMemberFlags = fn(4382).GuildMemberFlags;

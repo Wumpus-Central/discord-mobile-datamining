@@ -1,6 +1,6 @@
-// === Module 6018: ? ===
+// === Module 6023: ? ===
 
-// Module 6018
+// Module 6023
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BadgeCustomizeAbstractUI-2x.png.js");

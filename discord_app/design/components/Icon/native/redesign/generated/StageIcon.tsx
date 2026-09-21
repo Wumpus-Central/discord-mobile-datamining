@@ -1,6 +1,6 @@
-// === Module 5308: StageIcon ===
+// === Module 5315: StageIcon ===
 
-// Module 5308 (StageIcon)
+// Module 5315 (StageIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5248 from "module_5248" /* 5248 */;

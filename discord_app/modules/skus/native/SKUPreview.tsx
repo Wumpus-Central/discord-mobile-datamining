@@ -1,19 +1,19 @@
-// === Module 9051: SKUPreview ===
+// === Module 9052: SKUPreview ===
 
-// Module 9051 (SKUPreview)
+// Module 9052 (SKUPreview)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
 import useToken from "useToken" /* 4457 */;
 import native from "native" /* 4466 */;
-import useShopProductItems from "useShopProductItems" /* 8439 */;
-import WishlistItemCardBase from "WishlistItemCardBase" /* 9052 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 9077 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9079 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9090 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9102 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9104 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9105 */;
+import useShopProductItems from "useShopProductItems" /* 8440 */;
+import WishlistItemCardBase from "WishlistItemCardBase" /* 9053 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9078 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9080 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9091 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9103 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 9105 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9106 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -129,7 +129,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(9052).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(9053).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);
@@ -185,7 +185,7 @@ class PremiumSKUPreview {
   }
 }
 const View = fn(17).View;
-let closure_5 = fn(7786).transformSKUToCollectiblesItem;
+let closure_5 = fn(7788).transformSKUToCollectiblesItem;
 const SKUProductLines = fn(1074).SKUProductLines;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
@@ -204,7 +204,7 @@ const React6 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(9052).DEFAULT_ITEM_SIZE, height: fn(9052).DEFAULT_ITEM_SIZE };
+let size = { width: fn(9053).DEFAULT_ITEM_SIZE, height: fn(9053).DEFAULT_ITEM_SIZE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 

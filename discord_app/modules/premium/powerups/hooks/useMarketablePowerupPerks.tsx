@@ -1,6 +1,6 @@
-// === Module 13834: useMarketablePowerupPerks ===
+// === Module 13840: useMarketablePowerupPerks ===
 
-// Module 13834 (useMarketablePowerupPerks)
+// Module 13840 (useMarketablePowerupPerks)
 import Powerups from "Powerups" /* 4648 */;
 import noop from "module_19" /* 19 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4644 */;
@@ -29,7 +29,7 @@ export default function useMarketablePowerupPerks(guildId) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12828)(guildId);
+  let tmp2 = stateFromStores(12830)(guildId);
   dependencyMap = tmp2;
   const obj = require("initialize");
   const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(guildId, "useMarketablePowerupPerks");

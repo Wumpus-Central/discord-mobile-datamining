@@ -1,6 +1,6 @@
-// === Module 7395: Sheet/BottomSheetBackdrop ===
+// === Module 7400: Sheet/BottomSheetBackdrop ===
 
-// Module 7395 (Sheet/BottomSheetBackdrop)
+// Module 7400 (Sheet/BottomSheetBackdrop)
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import noop from "module_19" /* 19 */;
 

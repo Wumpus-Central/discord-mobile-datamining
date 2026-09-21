@@ -1,11 +1,11 @@
-// === Module 18328: AgeUpdateFooter ===
+// === Module 18339: AgeUpdateFooter ===
 
-// Module 18328 (AgeUpdateFooter)
+// Module 18339 (AgeUpdateFooter)
 import util from "util" /* 1115 */;
 import _modDef2776 from "module_2776" /* 2776 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8681 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8683 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8682 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8684 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

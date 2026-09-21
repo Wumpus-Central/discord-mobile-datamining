@@ -1,6 +1,6 @@
-// === Module 9585: RPCHelpers ===
+// === Module 9586: RPCHelpers ===
 
-// Module 9585 (RPCHelpers)
+// Module 9586 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
@@ -8,12 +8,12 @@ import UrlDefault from "Url" /* 1368 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4746 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
 import useMessageAuthor from "useMessageAuthor" /* 4988 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7696 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8609 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9315 */;
-import RPCErrorDefault from "RPCError" /* 9580 */;
-import transformUserDefault from "transformUser" /* 9586 */;
-import LeakyBucketDefault from "LeakyBucket" /* 9587 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7698 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8610 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9316 */;
+import RPCErrorDefault from "RPCError" /* 9581 */;
+import transformUserDefault from "transformUser" /* 9587 */;
+import LeakyBucketDefault from "LeakyBucket" /* 9588 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 4983 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;
@@ -408,7 +408,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           const obj = { nick: closure_1(4908).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9586)(user);
+          obj.user = closure_1(9587)(user);
           return obj;
         }
       });

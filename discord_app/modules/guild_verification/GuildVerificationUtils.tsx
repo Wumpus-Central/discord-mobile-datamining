@@ -1,9 +1,9 @@
-// === Module 13226: GuildVerificationUtils ===
+// === Module 13228: GuildVerificationUtils ===
 
-// Module 13226 (GuildVerificationUtils)
+// Module 13228 (GuildVerificationUtils)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4580 */;
-import transitionToMemberVerification from "transitionToMemberVerification" /* 5737 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5781 */;
+import transitionToMemberVerification from "transitionToMemberVerification" /* 5742 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5786 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4578 */;
 
 require = fn;

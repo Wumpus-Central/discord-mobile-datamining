@@ -1,11 +1,11 @@
-// === Module 9328: Authorize ===
+// === Module 9329: Authorize ===
 
-// Module 9328 (Authorize)
+// Module 9329 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
-import keysSorter from "keysSorter" /* 5668 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8609 */;
-import scopes from "scopes" /* 9329 */;
+import keysSorter from "keysSorter" /* 5673 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8610 */;
+import scopes from "scopes" /* 9330 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 

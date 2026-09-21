@@ -1,7 +1,7 @@
-// === Module 13818: useResettingValue ===
+// === Module 13824: useResettingValue ===
 
-// Module 13818 (useResettingValue)
-import useInitialValueDefault from "useInitialValue" /* 5810 */;
+// Module 13824 (useResettingValue)
+import useInitialValueDefault from "useInitialValue" /* 5815 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;

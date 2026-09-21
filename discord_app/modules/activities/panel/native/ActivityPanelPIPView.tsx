@@ -1,6 +1,6 @@
-// === Module 17469: ActivityPanelPIPView ===
+// === Module 17480: ActivityPanelPIPView ===
 
-// Module 17469 (ActivityPanelPIPView)
+// Module 17480 (ActivityPanelPIPView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
@@ -8,13 +8,13 @@ import native2 from "native" /* 4466 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import timing from "timing" /* 4757 */;
 import spring from "spring" /* 5185 */;
-import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9722 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11615 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17467 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17471 */;
+import EmbeddedActivityViewDefault from "EmbeddedActivityView" /* 9723 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11617 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17478 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17482 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9745 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9746 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
 
@@ -255,12 +255,12 @@ class BaseActivityPanelPIPView {
 }
 const View = fn(17).View;
 const ActivityLayoutMode = fn(2004).ActivityLayoutMode;
-const ActivityPanelConstants = fn(9314);
+const ActivityPanelConstants = fn(9315);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({ ActivityPanelModes: closure_11, ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_12, ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14 } = ActivityPanelConstants);
-let closure_15 = fn(17470).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_15 = fn(17481).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1074).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(12525).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(12527).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1177);

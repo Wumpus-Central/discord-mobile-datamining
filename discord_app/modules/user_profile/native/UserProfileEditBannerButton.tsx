@@ -1,12 +1,12 @@
-// === Module 14861: UserProfileEditBannerButton ===
+// === Module 14867: UserProfileEditBannerButton ===
 
-// Module 14861 (UserProfileEditBannerButton)
+// Module 14867 (UserProfileEditBannerButton)
 import nativeDefault from "native" /* 576 */;
-import Pressables from "Pressables" /* 5334 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8498 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 8514 */;
-import PencilIcon from "PencilIcon" /* 10507 */;
+import Pressables from "Pressables" /* 5339 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8499 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8515 */;
+import PencilIcon from "PencilIcon" /* 10508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

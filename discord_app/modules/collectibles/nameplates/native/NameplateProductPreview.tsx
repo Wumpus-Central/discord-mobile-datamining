@@ -1,14 +1,14 @@
-// === Module 13444: NameplateProductPreview ===
+// === Module 13446: NameplateProductPreview ===
 
-// Module 13444 (NameplateProductPreview)
+// Module 13446 (NameplateProductPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import utils from "utils" /* 1970 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import TableRow from "TableRow" /* 5817 */;
-import useShopProductItems from "useShopProductItems" /* 8439 */;
+import TableRow from "TableRow" /* 5822 */;
+import useShopProductItems from "useShopProductItems" /* 8440 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 

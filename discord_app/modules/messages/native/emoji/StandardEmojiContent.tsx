@@ -1,13 +1,13 @@
-// === Module 10588: StandardEmojiContent ===
+// === Module 10589: StandardEmojiContent ===
 
-// Module 10588 (StandardEmojiContent)
+// Module 10589 (StandardEmojiContent)
 import nativeDefault from "native" /* 576 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4409 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4413 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10589 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10594 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import useSharedMessageEmojiStyles from "useSharedMessageEmojiStyles" /* 10590 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10595 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
 

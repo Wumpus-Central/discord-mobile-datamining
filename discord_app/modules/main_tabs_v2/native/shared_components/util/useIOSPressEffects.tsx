@@ -1,6 +1,6 @@
-// === Module 5822: useIOSPressEffects ===
+// === Module 5827: useIOSPressEffects ===
 
-// Module 5822 (useIOSPressEffects)
+// Module 5827 (useIOSPressEffects)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import spring from "spring" /* 5185 */;

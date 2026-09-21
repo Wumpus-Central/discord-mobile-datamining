@@ -1,6 +1,6 @@
-// === Module 8861: ManualReviewDecidedTeenAlertModal ===
+// === Module 8862: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8861 (ManualReviewDecidedTeenAlertModal)
+// Module 8862 (ManualReviewDecidedTeenAlertModal)
 import util from "util" /* 1115 */;
 import _modDef3066 from "module_3066" /* 3066 */;
 import Text_Text from "Text/Text" /* 4752 */;
@@ -8,7 +8,7 @@ import AlertModal from "AlertModal" /* 5114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(8682).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(8683).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
@@ -29,7 +29,7 @@ export default function ManualReviewDecidedTeenAlertModal(teenAgeRange) {
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(8681);
+          const obj = closure_1_1(8682);
           const intl = closure_1_0(1115).intl;
           return obj.openUrl(closure_1_1(2108).getArticleURL(intl.string(closure_1_1(3066).agiNYw)));
         },

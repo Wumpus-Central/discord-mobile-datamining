@@ -1,9 +1,9 @@
-// === Module 16097: UserSettingsDesignSystemCoachmark ===
+// === Module 16103: UserSettingsDesignSystemCoachmark ===
 
-// Module 16097 (UserSettingsDesignSystemCoachmark)
-import _modDef5988 from "module_5988" /* 5988 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
-import LayerScope from "LayerScope" /* 7396 */;
+// Module 16103 (UserSettingsDesignSystemCoachmark)
+import _modDef5993 from "module_5993" /* 5993 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
+import LayerScope from "LayerScope" /* 7401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -53,7 +53,7 @@ function Content() {
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef5988 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef5993 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;

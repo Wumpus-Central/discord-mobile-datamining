@@ -1,6 +1,6 @@
-// === Module 12756: useBoostToUnlockFeaturedPowerup ===
+// === Module 12758: useBoostToUnlockFeaturedPowerup ===
 
-// Module 12756 (useBoostToUnlockFeaturedPowerup)
+// Module 12758 (useBoostToUnlockFeaturedPowerup)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;

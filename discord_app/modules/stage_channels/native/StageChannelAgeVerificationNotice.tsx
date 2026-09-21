@@ -1,15 +1,15 @@
-// === Module 8680: StageChannelAgeVerificationNotice ===
+// === Module 8681: StageChannelAgeVerificationNotice ===
 
-// Module 8680 (StageChannelAgeVerificationNotice)
+// Module 8681 (StageChannelAgeVerificationNotice)
 import nativeDefault from "native" /* 576 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4968 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5634 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5639 */;
 import noop from "module_19" /* 19 */;
 
 const native = Text(1177);
 const CircleInformationIcon = Text(4710);
 const Text_Text = Text(4752);
-const WarningIcon2 = Text(8865);
+const WarningIcon2 = Text(8866);
 require = fn;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
@@ -45,8 +45,8 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
             color: "text-default",
             style: closure_1.linkText,
             onPress() {
-              const obj = closure_1(8681);
-              const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(8683).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
+              const obj = closure_1(8682);
+              const result = obj.showAgeVerificationGetStartedModal({ entryPoint: onConfirmPress(8684).AgeVerificationModalEntryPoint.START_STAGE_PROMPT });
               if (closure_1_0 != null) {
                 closure_1_0();
               }

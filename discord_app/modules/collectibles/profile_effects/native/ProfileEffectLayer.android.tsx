@@ -1,8 +1,8 @@
-// === Module 9087: ProfileEffectLayer ===
+// === Module 9088: ProfileEffectLayer ===
 
-// Module 9087 (ProfileEffectLayer)
-import ProfileEffectUtils from "ProfileEffectUtils" /* 9084 */;
-import APNGPlayer from "APNGPlayer" /* 9088 */;
+// Module 9088 (ProfileEffectLayer)
+import ProfileEffectUtils from "ProfileEffectUtils" /* 9085 */;
+import APNGPlayer from "APNGPlayer" /* 9089 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

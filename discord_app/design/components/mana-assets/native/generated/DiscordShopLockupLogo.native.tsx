@@ -1,11 +1,11 @@
-// === Module 6145: DiscordShopLockupLogo ===
+// === Module 6150: DiscordShopLockupLogo ===
 
-// Module 6145 (DiscordShopLockupLogo)
+// Module 6150 (DiscordShopLockupLogo)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4457 */;
-import _modDef6146 from "module_6146" /* 6146 */;
+import _modDef6151 from "module_6151" /* 6151 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -42,7 +42,7 @@ export const DiscordShopLockupLogo = function DiscordShopLockupLogo(color) {
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
   const obj4 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj4.source = { uri: _modDef6146 };
+  obj4.source = { uri: _modDef6151 };
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size, tmp6];
   obj4.style = items;

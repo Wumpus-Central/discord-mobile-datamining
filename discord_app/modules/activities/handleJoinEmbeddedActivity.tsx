@@ -1,6 +1,6 @@
-// === Module 9636: handleJoinEmbeddedActivity ===
+// === Module 9637: handleJoinEmbeddedActivity ===
 
-// Module 9636 (handleJoinEmbeddedActivity)
+// Module 9637 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 4983 */;
 import ChannelStore from "ChannelStore" /* 2041 */;

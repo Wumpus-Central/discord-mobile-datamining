@@ -1,14 +1,14 @@
-// === Module 9791: EditGuildEventModalNavbar ===
+// === Module 9792: EditGuildEventModalNavbar ===
 
-// Module 9791 (EditGuildEventModalNavbar)
+// Module 9792 (EditGuildEventModalNavbar)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7219 */;
-import _modDef7232 from "module_7232" /* 7232 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
-import HeaderActionButton from "HeaderActionButton" /* 7617 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9788 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 7224 */;
+import _modDef7237 from "module_7237" /* 7237 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
+import HeaderActionButton from "HeaderActionButton" /* 7619 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9789 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ export default function EditGuildEventModalNavbar(screen) {
   const intl2 = util.intl;
   obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj6.onPress = screen.onClose;
-  obj6.source = _modDef7232;
+  obj6.source = _modDef7237;
   obj6.style = tmp.rightButton;
   obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
   items1[2] = hasOwnProperty(View, obj5);

@@ -1,19 +1,19 @@
-// === Module 16514: ChannelsUnreadBars ===
+// === Module 16520: ChannelsUnreadBars ===
 
-// Module 16514 (ChannelsUnreadBars)
+// Module 16520 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import HapticUtils from "HapticUtils" /* 4724 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4725 */;
 import useFontScale from "useFontScale" /* 5193 */;
-import FastList from "FastList" /* 7312 */;
-import ChannelListState from "ChannelListState" /* 7768 */;
+import FastList from "FastList" /* 7317 */;
+import ChannelListState from "ChannelListState" /* 7770 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4397 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7870 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7872 */;
 import ReadStateStore from "ReadStateStore" /* 4771 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
 
@@ -200,7 +200,7 @@ function findNearestUnreadItem(fastList, guildChannels, headerHeight, youBarTota
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const getScaledChannelRowHeight = fn(10373).getScaledChannelRowHeight;
+const getScaledChannelRowHeight = fn(10374).getScaledChannelRowHeight;
 const UnreadSetting = fn(4938).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

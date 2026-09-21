@@ -1,6 +1,6 @@
-// === Module 16126: MobileNitroUpsellInShopFeedExperiment ===
+// === Module 16132: MobileNitroUpsellInShopFeedExperiment ===
 
-// Module 16126 (MobileNitroUpsellInShopFeedExperiment)
+// Module 16132 (MobileNitroUpsellInShopFeedExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 16652: isHomeDrawerChannelInChannelList ===
+// === Module 16658: isHomeDrawerChannelInChannelList ===
 
-// Module 16652 (isHomeDrawerChannelInChannelList)
+// Module 16658 (isHomeDrawerChannelInChannelList)
 import initialize from "initialize" /* 504 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
 

@@ -1,21 +1,21 @@
-// === Module 12380: AppDetailContent ===
+// === Module 12382: AppDetailContent ===
 
-// Module 12380 (AppDetailContent)
+// Module 12382 (AppDetailContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
-import TableRow from "TableRow" /* 5817 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7761 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9402 */;
-import AppLauncherContext from "AppLauncherContext" /* 11479 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12302 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12305 */;
-import CommandRowButtonDefault from "CommandRowButton" /* 12356 */;
-import BillIcon from "BillIcon" /* 12387 */;
-import ShopIcon from "ShopIcon" /* 12389 */;
+import TableRow from "TableRow" /* 5822 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7763 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7765 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9403 */;
+import AppLauncherContext from "AppLauncherContext" /* 11481 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12304 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12307 */;
+import CommandRowButtonDefault from "CommandRowButton" /* 12358 */;
+import BillIcon from "BillIcon" /* 12389 */;
+import ShopIcon from "ShopIcon" /* 12391 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -198,7 +198,7 @@ class CommandRow {
   }
 }
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9403);
+const ApplicationCommandIndexStore = fn(9404);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1483);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
@@ -208,8 +208,8 @@ let closure_12 = fn(5210).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const createStyles = fn(4756);
-let obj2 = { headerSpacer: { height: fn(12381).EXPANDED_HEADER_HEIGHT - fn(12381).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
-let obj3 = { height: fn(12381).EXPANDED_HEADER_HEIGHT - fn(12381).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj2 = { headerSpacer: { height: fn(12383).EXPANDED_HEADER_HEIGHT - fn(12383).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+let obj3 = { height: fn(12383).EXPANDED_HEADER_HEIGHT - fn(12383).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };

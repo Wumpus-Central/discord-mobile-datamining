@@ -1,6 +1,6 @@
-// === Module 9643: VoiceChatHooks ===
+// === Module 9644: VoiceChatHooks ===
 
-// Module 9643 (VoiceChatHooks)
+// Module 9644 (VoiceChatHooks)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import VoiceStateStore from "VoiceStateStore" /* 4775 */;
 

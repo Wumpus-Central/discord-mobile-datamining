@@ -1,10 +1,10 @@
-// === Module 11090: PremiumGiftBackgroundSelect ===
+// === Module 11091: PremiumGiftBackgroundSelect ===
 
-// Module 11090 (PremiumGiftBackgroundSelect)
+// Module 11091 (PremiumGiftBackgroundSelect)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import timing from "timing" /* 4757 */;
-import NativeGiftContext from "NativeGiftContext" /* 10958 */;
+import NativeGiftContext from "NativeGiftContext" /* 10959 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;

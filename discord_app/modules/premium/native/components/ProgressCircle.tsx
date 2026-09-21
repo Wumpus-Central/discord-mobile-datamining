@@ -1,8 +1,8 @@
-// === Module 12842: ProgressCircle ===
+// === Module 12844: ProgressCircle ===
 
-// Module 12842 (ProgressCircle)
+// Module 12844 (ProgressCircle)
 import nativeDefault from "native" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8727 */;
+import inlineStyles from "inlineStyles" /* 8728 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

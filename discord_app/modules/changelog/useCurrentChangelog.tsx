@@ -1,8 +1,8 @@
-// === Module 8349: useCurrentChangelog ===
+// === Module 8350: useCurrentChangelog ===
 
-// Module 8349 (useCurrentChangelog)
+// Module 8350 (useCurrentChangelog)
 import useStateFromStores from "useStateFromStores" /* 563 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8350 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8351 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 import ChangelogStore from "ChangelogStore" /* 4770 */;

@@ -1,6 +1,6 @@
-// === Module 11295: GiftBadgePostPurchase ===
+// === Module 11297: GiftBadgePostPurchase ===
 
-// Module 11295 (GiftBadgePostPurchase)
+// Module 11297 (GiftBadgePostPurchase)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -12,13 +12,13 @@ import HapticUtils from "HapticUtils" /* 4724 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4725 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
-import BadgeId from "BadgeId" /* 8452 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11003 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11008 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11298 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11299 */;
+import BadgeId from "BadgeId" /* 8453 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 11004 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 11009 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11300 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11301 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8460 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8461 */;
 
 require = fn;
 function PostPurchaseFooter(onSendGift) {
@@ -38,7 +38,7 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-  obj2.icon = closure_10(onSendGift(11297).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  obj2.icon = closure_10(onSendGift(11299).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   const intl = onSendGift(1115).intl;
   obj2.text = intl.string(_modDef2578.g86YiI);
   obj2.onPress = callback;
@@ -123,7 +123,7 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj3);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(11296);
+const GiftingBadgeConstants = fn(11298);
 ({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);

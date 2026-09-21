@@ -1,13 +1,13 @@
-// === Module 14227: GuildAntiRaidReportModal ===
+// === Module 14233: GuildAntiRaidReportModal ===
 
-// Module 14227 (GuildAntiRaidReportModal)
+// Module 14233 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import NavigatorHeader from "NavigatorHeader" /* 5836 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
+import NavigatorHeader from "NavigatorHeader" /* 5841 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -75,7 +75,7 @@ function ReportModal(onSubmit) {
   return closure_11(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(14228);
+const GuildReportRaidModalConstants = fn(14234);
 ({ getReportRaidHelpArticleURL: closure_7, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -125,9 +125,9 @@ export default function GuildAntiRaidReportModal(onCloseModal) {
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(12083).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(12083);
-            tmp2(12083).handleReportRaid(guildId);
+            const result = tmp2(12085).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(12085);
+            tmp2(12085).handleReportRaid(guildId);
             const intl = tmp2(1115).intl;
             c1 = 1;
             dependencyMap = 1;

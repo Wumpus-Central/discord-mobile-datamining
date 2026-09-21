@@ -1,6 +1,6 @@
-// === Module 8372: transformNativeMarkupLink ===
+// === Module 8373: transformNativeMarkupLink ===
 
-// Module 8372 (transformNativeMarkupLink)
+// Module 8373 (transformNativeMarkupLink)
 import MarkupTypes from "MarkupTypes" /* 5207 */;
 import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5213 */;
 import size from "module_2" /* 2 */;

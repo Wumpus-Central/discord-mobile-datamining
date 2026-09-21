@@ -1,14 +1,14 @@
-// === Module 11898: PublicGuildAnnouncementProfile ===
+// === Module 11900: PublicGuildAnnouncementProfile ===
 
-// Module 11898 (PublicGuildAnnouncementProfile)
+// Module 11900 (PublicGuildAnnouncementProfile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7390 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8292 */;
-import _modDef11899 from "module_11899" /* 11899 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7395 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8293 */;
+import _modDef11901 from "module_11901" /* 11901 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,7 +35,7 @@ export default function PublicGuildAnnouncementProfile() {
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   const items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11899, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11901, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);

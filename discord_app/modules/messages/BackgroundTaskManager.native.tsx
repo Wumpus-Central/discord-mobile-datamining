@@ -1,9 +1,9 @@
-// === Module 7995: BackgroundTaskManager ===
+// === Module 7997: BackgroundTaskManager ===
 
-// Module 7995 (BackgroundTaskManager)
+// Module 7997 (BackgroundTaskManager)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7996 */;
-import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 7998 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7998 */;
+import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 8000 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

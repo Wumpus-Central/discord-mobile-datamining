@@ -1,12 +1,12 @@
-// === Module 16908: GuildHomeResources ===
+// === Module 16914: GuildHomeResources ===
 
-// Module 16908 (GuildHomeResources)
+// Module 16914 (GuildHomeResources)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7696 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12536 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16902 */;
-import _modDef16910 from "module_16910" /* 16910 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7698 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12538 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16908 */;
+import _modDef16916 from "module_16916" /* 16916 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildChannelStore from "GuildChannelStore" /* 2096 */;
@@ -29,10 +29,10 @@ function ResourceChannelRow(channelId) {
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => MessageStore.getMessages(channelId));
   const firstResult = stateFromStores2.first();
   const obj3 = channelId(504);
-  const forumPostMediaProperties = channelId(8140).useForumPostMediaProperties(firstResult, false);
-  const obj5 = channelId(8140);
+  const forumPostMediaProperties = channelId(8141).useForumPostMediaProperties(firstResult, false);
+  const obj5 = channelId(8141);
   let length;
-  const firstMediaIsEmbed = channelId(8140).useFirstMediaIsEmbed(firstResult, false);
+  const firstMediaIsEmbed = channelId(8141).useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
     length = forumPostMediaProperties.length;
   }
@@ -40,9 +40,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  const obj6 = channelId(8140);
-  let flag = channelId(12260).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16909)(firstResult);
+  const obj6 = channelId(8141);
+  let flag = channelId(12262).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  const tmp11 = stateFromStores(16915)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -114,22 +114,22 @@ function ResourceChannelRow(channelId) {
               if (flag == null) {
                 flag = false;
               }
-              obj17.embedLeftBorderColor = tmp2(8140).getEmbedColor(firstResult, flag);
+              obj17.embedLeftBorderColor = tmp2(8141).getEmbedColor(firstResult, flag);
               let id;
               if (firstResult != null) {
                 id = firstResult.id;
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = closure_12(tmp2(12260).ForumPostMediaThumbnail, obj17);
-              const tmp2Result2 = tmp2(8140);
+              tmp19Result6 = closure_12(tmp2(12262).ForumPostMediaThumbnail, obj17);
+              const tmp2Result2 = tmp2(8141);
             }
           }
         }
       }
       items5[2] = tmp19Result6;
       obj7.children = items5;
-      return closure_13(tmp2(5334).PressableOpacity, obj7);
+      return closure_13(tmp2(5339).PressableOpacity, obj7);
     }
   }
   return null;
@@ -156,7 +156,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1115).intl;
     obj3.children = intl.string(guildId(1115).t.owvC9U);
     const items = [closure_12(guildId(4752).Text, obj3), , ];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef16910 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef16916 };
     items[1] = closure_12(closure_5, obj4);
     const obj5 = {
       onPress() {

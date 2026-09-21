@@ -1,11 +1,11 @@
-// === Module 14401: AIShimmer ===
+// === Module 14407: AIShimmer ===
 
-// Module 14401 (AIShimmer)
+// Module 14407 (AIShimmer)
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import AIShimmerTypes from "AIShimmerTypes" /* 14402 */;
-import waveTransition2 from "waveTransition" /* 14403 */;
-import createWaveTransition from "createWaveTransition" /* 14405 */;
+import AIShimmerTypes from "AIShimmerTypes" /* 14408 */;
+import waveTransition2 from "waveTransition" /* 14409 */;
+import createWaveTransition from "createWaveTransition" /* 14411 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -171,12 +171,12 @@ function ShimmerLayers(pass) {
     return obj2;
   };
   const obj5 = pass(4492);
-  fn.__closure = { animationProgress: animationProgress2, bandEdgesAt: pass(14403).bandEdgesAt, animationWidth: animationWidth2, overshoot: overshoot2, glyphLayerOpacityAt: pass(14403).glyphLayerOpacityAt, easeTail: pass(14403).easeTail };
+  fn.__closure = { animationProgress: animationProgress2, bandEdgesAt: pass(14409).bandEdgesAt, animationWidth: animationWidth2, overshoot: overshoot2, glyphLayerOpacityAt: pass(14409).glyphLayerOpacityAt, easeTail: pass(14409).easeTail };
   fn.__workletHash = 5565898978148;
   fn.__initData = __initData9;
   const derivedValue = obj5.useDerivedValue(fn);
   closure_129_5 = derivedValue;
-  const obj6 = { animationProgress: animationProgress2, bandEdgesAt: pass(14403).bandEdgesAt, animationWidth: animationWidth2, overshoot: overshoot2, glyphLayerOpacityAt: pass(14403).glyphLayerOpacityAt, easeTail: pass(14403).easeTail };
+  const obj6 = { animationProgress: animationProgress2, bandEdgesAt: pass(14409).bandEdgesAt, animationWidth: animationWidth2, overshoot: overshoot2, glyphLayerOpacityAt: pass(14409).glyphLayerOpacityAt, easeTail: pass(14409).easeTail };
   class T {
     constructor() {
       obj = { opacity: closure_1_1.get() };

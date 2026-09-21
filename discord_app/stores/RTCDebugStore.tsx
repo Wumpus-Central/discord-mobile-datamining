@@ -1,9 +1,9 @@
-// === Module 10294: RTCDebugStore ===
+// === Module 10295: RTCDebugStore ===
 
-// Module 10294 (RTCDebugStore)
+// Module 10295 (RTCDebugStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10295 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10296 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -177,7 +177,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "png" };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "getFavorite" };
   let resolution;
   if (found != null) {
     resolution = found.resolution;

@@ -1,6 +1,6 @@
-// === Module 9022: GuildTraits ===
+// === Module 9023: GuildTraits ===
 
-// Module 9022 (GuildTraits)
+// Module 9023 (GuildTraits)
 import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

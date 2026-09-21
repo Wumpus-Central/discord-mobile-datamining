@@ -1,8 +1,8 @@
-// === Module 8522: Banner ===
+// === Module 8523: Banner ===
 
-// Module 8522 (Banner)
+// Module 8523 (Banner)
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import FastImageDefault from "FastImage" /* 5799 */;
+import FastImageDefault from "FastImage" /* 5804 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 8675: SafetyToastsUtils ===
+// === Module 8676: SafetyToastsUtils ===
 
-// Module 8675 (SafetyToastsUtils)
+// Module 8676 (SafetyToastsUtils)
 import util from "util" /* 1115 */;
 import _modDef2614 from "module_2614" /* 2614 */;
 import _modDef3034 from "module_3034" /* 3034 */;
@@ -10,7 +10,7 @@ import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
-const SafetyToastType = fn(8669).SafetyToastType;
+const SafetyToastType = fn(8670).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 

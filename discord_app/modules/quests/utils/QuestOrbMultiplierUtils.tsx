@@ -1,6 +1,6 @@
-// === Module 11554: QuestOrbMultiplierUtils ===
+// === Module 11556: QuestOrbMultiplierUtils ===
 
-// Module 11554 (QuestOrbMultiplierUtils)
+// Module 11556 (QuestOrbMultiplierUtils)
 import PerksStateUtils from "PerksStateUtils" /* 1378 */;
 import user from "user" /* 1380 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;

@@ -1,24 +1,24 @@
-// === Module 8620: ICYMIUtils ===
+// === Module 8621: ICYMIUtils ===
 
-// Module 8620 (ICYMIUtils)
+// Module 8621 (ICYMIUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4978 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8140 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8398 */;
-import ICYMITypes from "ICYMITypes" /* 8618 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8621 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 8622 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8626 */;
-import ICYMIItemTypes from "ICYMIItemTypes" /* 8627 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8141 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8399 */;
+import ICYMITypes from "ICYMITypes" /* 8619 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8622 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 8623 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8627 */;
+import ICYMIItemTypes from "ICYMIItemTypes" /* 8628 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7766 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7768 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import MessageStore from "MessageStore" /* 4976 */;
 import ReadStateStore from "ReadStateStore" /* 4771 */;
-import ICYMIStore from "ICYMIStore" /* 8605 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8619 */;
+import ICYMIStore from "ICYMIStore" /* 8606 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8620 */;
 
 const require = globalThis.__r;
 
@@ -66,10 +66,10 @@ let closure_17 = async function _hydrateItems(arg0) {
           if (0 !== substr.length) {
             const hydratedAttempt = ICYMIActionCreatorsDefault.loadHydratedAttempt(generateHydrationId(closure_1, dependencyMap2));
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(8618).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(8619).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(8618).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(8619).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -105,7 +105,7 @@ let closure_17 = async function _hydrateItems(arg0) {
             });
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(8618).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(8619).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj6 = { messageItems: null, activityItems: null };

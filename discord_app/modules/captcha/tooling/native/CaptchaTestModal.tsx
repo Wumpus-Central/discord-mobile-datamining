@@ -1,9 +1,9 @@
-// === Module 15991: CaptchaTestModal ===
+// === Module 15997: CaptchaTestModal ===
 
-// Module 15991 (CaptchaTestModal)
+// Module 15997 (CaptchaTestModal)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5836 */;
-import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 15993 */;
+import NavigatorHeader from "NavigatorHeader" /* 5841 */;
+import CaptchaTestActionCreators from "CaptchaTestActionCreators" /* 15999 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -172,11 +172,11 @@ obj2.footerButton = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 let closure_9 = createStyles.createStyles(obj2);
-const prop = fn(15992).HCAPTCHA_DIFFICULTY_OPTIONS;
+const prop = fn(15998).HCAPTCHA_DIFFICULTY_OPTIONS;
 const options = prop.map((label) => ({ name: label.label, value: label.value }));
-let items = [fn(15993).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(15993).CaptchaDeciderType.SMITE_RQDATA];
+let items = [fn(15999).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(15999).CaptchaDeciderType.SMITE_RQDATA];
 const set = new Set(items);
-const prop1 = fn(15992).CAPTCHA_DECIDER_TYPE_OPTIONS;
+const prop1 = fn(15998).CAPTCHA_DECIDER_TYPE_OPTIONS;
 const mapped = prop1.map((label) => ({ name: label.label, value: label.value }));
 const options2 = mapped.filter((value) => set.has(value.value));
 const constants = { TEST_CAPTCHA: "TEST_CAPTCHA" };

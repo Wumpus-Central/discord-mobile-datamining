@@ -1,10 +1,10 @@
-// === Module 13439: ProductDetailsActionSheetPreview ===
+// === Module 13441: ProductDetailsActionSheetPreview ===
 
-// Module 13439 (ProductDetailsActionSheetPreview)
+// Module 13441 (ProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
-import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 13440 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 13442 */;
+import BundleProductDetailsActionSheetPreviewDefault from "BundleProductDetailsActionSheetPreview" /* 13442 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13444 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

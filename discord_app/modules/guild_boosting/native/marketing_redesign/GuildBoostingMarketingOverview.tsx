@@ -1,8 +1,8 @@
-// === Module 7624: GuildBoostingMarketingOverview ===
+// === Module 7626: GuildBoostingMarketingOverview ===
 
-// Module 7624 (GuildBoostingMarketingOverview)
+// Module 7626 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7641 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
@@ -80,8 +80,8 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items3);
   const effect1 = obj4.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = guildId(7497).fetchPremiumSubscriptionPlans();
-      const obj = guildId(7497);
+      const premiumSubscriptionPlans = guildId(7499).fetchPremiumSubscriptionPlans();
+      const obj = guildId(7499);
       const paymentSources = guildId(5079).fetchPaymentSources();
     });
   }, []);

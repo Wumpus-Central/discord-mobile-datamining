@@ -1,11 +1,11 @@
-// === Module 17021: VibegrationsNativeMarkdown ===
+// === Module 17029: VibegrationsNativeMarkdown ===
 
-// Module 17021 (VibegrationsNativeMarkdown)
+// Module 17029 (VibegrationsNativeMarkdown)
 import nativeDefault from "native" /* 576 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4746 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import VibegrationsMarkdownBlocks from "VibegrationsMarkdownBlocks" /* 17022 */;
-import useVibegrationsRevealedText from "useVibegrationsRevealedText" /* 17023 */;
+import VibegrationsMarkdownBlocks from "VibegrationsMarkdownBlocks" /* 17030 */;
+import useVibegrationsRevealedText from "useVibegrationsRevealedText" /* 17031 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

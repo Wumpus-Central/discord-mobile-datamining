@@ -1,6 +1,6 @@
-// === Module 16611: FavoritesGuildSidebarHeader ===
+// === Module 16617: FavoritesGuildSidebarHeader ===
 
-// Module 16611 (FavoritesGuildSidebarHeader)
+// Module 16617 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
@@ -8,12 +8,12 @@ import _modDef3324 from "module_3324" /* 3324 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
-import ChatIcon from "ChatIcon" /* 5282 */;
-import TextIcon from "TextIcon" /* 5291 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5312 */;
-import FavoritesHooks from "FavoritesHooks" /* 10481 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10484 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11241 */;
+import ChatIcon from "ChatIcon" /* 5289 */;
+import TextIcon from "TextIcon" /* 5298 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5319 */;
+import FavoritesHooks from "FavoritesHooks" /* 10482 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10485 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 11242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -69,7 +69,7 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16535).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16541).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const createStyles = fn(4756);

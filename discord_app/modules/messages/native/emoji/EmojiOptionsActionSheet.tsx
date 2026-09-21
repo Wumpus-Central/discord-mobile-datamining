@@ -1,9 +1,9 @@
-// === Module 10598: EmojiOptionsActionSheet ===
+// === Module 10599: EmojiOptionsActionSheet ===
 
-// Module 10598 (EmojiOptionsActionSheet)
+// Module 10599 (EmojiOptionsActionSheet)
 import ToastUtils from "ToastUtils" /* 4453 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import ClipboardUtils from "ClipboardUtils" /* 7429 */;
+import ClipboardUtils from "ClipboardUtils" /* 7434 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default function EmojiOptionsActionSheet(emojiSrc) {
   const intl = emojiSrc(1115).intl;
   obj3.label = intl.string(emojiSrc(1115).t.cIoudn);
   obj3.onPress = callback;
-  obj2.children = jsx(emojiSrc(5817).TableRow, { icon: jsx(emojiSrc(4698).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(emojiSrc(5899).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(emojiSrc(7437).ActionSheet, { children: null });
+  obj2.children = jsx(emojiSrc(5822).TableRow, { icon: jsx(emojiSrc(4698).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(emojiSrc(5904).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(emojiSrc(7442).ActionSheet, { children: null });
 };

@@ -1,6 +1,6 @@
-// === Module 7893: UserAffinitiesV2Store ===
+// === Module 7895: UserAffinitiesV2Store ===
 
-// Module 7893 (UserAffinitiesV2Store)
+// Module 7895 (UserAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
@@ -13,7 +13,7 @@ function recomputeAffinities() {
     return items;
   }));
 }
-const USER_AFFINITY_TTL = fn(7894).USER_AFFINITY_TTL;
+const USER_AFFINITY_TTL = fn(7896).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 const frozen = Object.freeze({ userAffinities: [], lastFetched: 0 });

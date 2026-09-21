@@ -1,11 +1,11 @@
-// === Module 17308: IconLabelBlock ===
+// === Module 17319: IconLabelBlock ===
 
-// Module 17308 (IconLabelBlock)
+// Module 17319 (IconLabelBlock)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import shared from "shared" /* 4607 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import IconUploaderDefault from "IconUploader" /* 11191 */;
+import IconUploaderDefault from "IconUploader" /* 11192 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

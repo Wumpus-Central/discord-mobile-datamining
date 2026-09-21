@@ -1,20 +1,20 @@
-// === Module 16355: useHomeDrawerGesture ===
+// === Module 16361: useHomeDrawerGesture ===
 
-// Module 16355 (useHomeDrawerGesture)
+// Module 16361 (useHomeDrawerGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4613 */;
 import HapticUtils from "HapticUtils" /* 4724 */;
 import timing from "timing" /* 4757 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16350 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16356 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16349 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16356 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16355 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16362 */;
 
 require = fn;
-const computeMaxX = fn(16349).computeMaxX;
+const computeMaxX = fn(16355).computeMaxX;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const LaunchPadTypes = fn(11719).LaunchPadTypes;
+const LaunchPadTypes = fn(11721).LaunchPadTypes;
 let c10 = 144;
 let c11 = 96.00000000000001;
 let c12 = 48;
@@ -40,17 +40,17 @@ let closure_31 = { code: "function useHomeDrawerGestureTsx18(event){const{gestur
 let closure_32 = { code: "function useHomeDrawerGestureTsx19(event,manager){const{gestureState,isOpenTarget,ACTIVATION_MIN_DISTANCE,beginDrag}=this.__closure;if(gestureState.get().active)return;const touchX=event.changedTouches[0].absoluteX;const touchY=event.changedTouches[0].absoluteY;const absoluteXDiff=Math.abs(touchX-gestureState.get().initialX);const absoluteYDiff=Math.abs(touchY-gestureState.get().initialY);const isOpen=isOpenTarget.get();if(absoluteYDiff>absoluteXDiff||!isOpen&&touchX<gestureState.get().initialX||isOpen&&touchX>gestureState.get().initialX){manager.fail();return;}if(absoluteXDiff<ACTIVATION_MIN_DISTANCE){return;}beginDrag(touchX);manager.activate();}" };
 let closure_33 = { code: "function useHomeDrawerGestureTsx20(event){const{isPanelTouchActive,dragOffsetX,activationOffsetX,didSettle,didSnapThisGesture,snappedByDrag,hasThrown,flingThrow,withTiming,HOME_DRAWER_FLING_RETURN_TIMING,gestureState,panelX,snapX}=this.__closure;isPanelTouchActive.set(true);dragOffsetX.set(0);activationOffsetX.set(0);didSettle.set(false);didSnapThisGesture.set(false);snappedByDrag.set(false);hasThrown.set(false);flingThrow.set(withTiming(0,HOME_DRAWER_FLING_RETURN_TIMING));gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()+snapX.get()});}" };
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(6892).Gesture;
+let Gesture = fn(6897).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7314);
+let ReanimatedHelperTypes = fn(7319);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7314);
+ReanimatedHelperTypes = fn(7319);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7314);
+ReanimatedHelperTypes = fn(7319);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7314);
+ReanimatedHelperTypes = fn(7319);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);

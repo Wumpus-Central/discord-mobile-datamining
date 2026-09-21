@@ -1,14 +1,14 @@
-// === Module 15185: FamilyCenterLinkingBanner ===
+// === Module 15191: FamilyCenterLinkingBanner ===
 
-// Module 15185 (FamilyCenterLinkingBanner)
+// Module 15191 (FamilyCenterLinkingBanner)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef2482 from "module_2482" /* 2482 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8923 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 12172 */;
-import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15148 */;
-import _modDef15186 from "module_15186" /* 15186 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8924 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 12174 */;
+import FamilyCenterBannerButton from "FamilyCenterBannerButton" /* 15154 */;
+import _modDef15192 from "module_15192" /* 15192 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -103,7 +103,7 @@ export default function FamilyCenterLinkingBanner() {
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { source: null, style: null, resizeMethod: "resize" };
   const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(_modDef2482.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }), intl4.string(_modDef2482.JsAEDi));
-  obj4.source = _modDef15186;
+  obj4.source = _modDef15192;
   obj4.style = tmp.art;
   const items = [hasOwnProperty(React4, obj4), , ];
   const obj5 = { style: tmp.content, children: null };

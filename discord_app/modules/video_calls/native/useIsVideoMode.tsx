@@ -1,6 +1,6 @@
-// === Module 10060: useIsVideoMode ===
+// === Module 10061: useIsVideoMode ===
 
-// Module 10060 (useIsVideoMode)
+// Module 10061 (useIsVideoMode)
 import initialize from "initialize" /* 504 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
 import ChannelStore from "ChannelStore" /* 2041 */;

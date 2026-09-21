@@ -1,7 +1,7 @@
-// === Module 12849: shouldWarnAuthorizedAppTwoWay ===
+// === Module 12851: shouldWarnAuthorizedAppTwoWay ===
 
-// Module 12849 (shouldWarnAuthorizedAppTwoWay)
-import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 9359 */;
+// Module 12851 (shouldWarnAuthorizedAppTwoWay)
+import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 9360 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/shouldWarnAuthorizedAppTwoWay.tsx");

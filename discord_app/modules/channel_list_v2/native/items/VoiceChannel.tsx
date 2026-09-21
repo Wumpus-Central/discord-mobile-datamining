@@ -1,14 +1,14 @@
-// === Module 16568: VoiceChannel ===
+// === Module 16574: VoiceChannel ===
 
-// Module 16568 (VoiceChannel)
+// Module 16574 (VoiceChannel)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9866 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11176 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12310 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9867 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11177 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7767 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7769 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import ReadStateStore from "ReadStateStore" /* 4771 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
@@ -39,7 +39,7 @@ let closure_17 = async function _handleVoiceChannelPress(arg0) {
 };
 const View = fn(17).View;
 const NO_VOICE_STATES = fn(4780).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(10373);
+const RedesignChannelListConstants = fn(10374);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);

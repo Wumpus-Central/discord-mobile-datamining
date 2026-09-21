@@ -1,14 +1,14 @@
-// === Module 11460: BadgeDirectoryView ===
+// === Module 11462: BadgeDirectoryView ===
 
-// Module 11460 (BadgeDirectoryView)
+// Module 11462 (BadgeDirectoryView)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8465 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11455 */;
-import BadgeUtils from "BadgeUtils" /* 11462 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8466 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11457 */;
+import BadgeUtils from "BadgeUtils" /* 11464 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8460 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8461 */;
 
 require = fn;
 function BadgeSection(children) {
@@ -44,7 +44,7 @@ function BadgeSection(children) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-let closure_9 = fn(11461).UserProfileEditAutoFocusElement;
+let closure_9 = fn(11463).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4756);

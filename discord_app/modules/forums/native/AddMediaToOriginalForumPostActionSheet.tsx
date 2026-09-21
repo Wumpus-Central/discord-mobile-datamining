@@ -1,11 +1,11 @@
-// === Module 12249: AddMediaToOriginalForumPostActionSheet ===
+// === Module 12251: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 12249 (AddMediaToOriginalForumPostActionSheet)
+// Module 12251 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5349 */;
-import tracking_Tracking from "tracking/Tracking" /* 8007 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5354 */;
+import tracking_Tracking from "tracking/Tracking" /* 8009 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -72,18 +72,18 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(5345).maxFileSize(id.id);
-            const obj = closure_0(5345);
-            const effectiveUploadLimit = closure_0(5373).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(5350).maxFileSize(id.id);
+            const obj = closure_0(5350);
+            const effectiveUploadLimit = closure_0(5378).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
               closure_1(4723).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(9423)(obj4);
+              closure_1(9424)(obj4);
               const obj3 = closure_1(4723);
             }
-            const obj2 = closure_0(5373);
+            const obj2 = closure_0(5378);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
@@ -91,8 +91,8 @@ let closure_16 = async function _upload2(arg0) {
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9420).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9420);
+            closure_1(9421).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9421);
             closure_1(4723).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
@@ -141,7 +141,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(5340).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(5345).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];

@@ -1,6 +1,6 @@
-// === Module 14944: useAnnounceError ===
+// === Module 14950: useAnnounceError ===
 
-// Module 14944 (useAnnounceError)
+// Module 14950 (useAnnounceError)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
 import noop from "module_19" /* 19 */;
 

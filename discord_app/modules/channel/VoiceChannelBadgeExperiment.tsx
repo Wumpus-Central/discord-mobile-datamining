@@ -1,6 +1,6 @@
-// === Module 13485: VoiceChannelBadgeExperiment ===
+// === Module 13487: VoiceChannelBadgeExperiment ===
 
-// Module 13485 (VoiceChannelBadgeExperiment)
+// Module 13487 (VoiceChannelBadgeExperiment)
 import ExperimentConstants from "ExperimentConstants" /* 4672 */;
 import createExperiment from "module_4669" /* 4669 */;
 import size from "module_2" /* 2 */;

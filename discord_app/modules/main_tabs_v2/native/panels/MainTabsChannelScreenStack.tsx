@@ -1,16 +1,16 @@
-// === Module 16862: MainTabsChannelScreenStack ===
+// === Module 16868: MainTabsChannelScreenStack ===
 
-// Module 16862 (MainTabsChannelScreenStack)
+// Module 16868 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import native from "native" /* 4466 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import useChatLayout from "useChatLayout" /* 4616 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9561 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16330 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16866 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9562 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16336 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 16872 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9312 */;
+import FramesStore from "FramesStore" /* 9313 */;
 
 require = fn;
 function EnabledChannelScreenNavigationTTIVisibility(children) {
@@ -88,10 +88,10 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(8106).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(8108).ONYX_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);
-const FramesConstants = fn(9313);
+const FramesConstants = fn(9314);
 ({ FrameIntent: closure_12, getChannelIdForSurface: map1 } = FramesConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);

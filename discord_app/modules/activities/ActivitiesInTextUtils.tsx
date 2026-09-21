@@ -1,6 +1,6 @@
-// === Module 9599: ActivitiesInTextUtils ===
+// === Module 9600: ActivitiesInTextUtils ===
 
-// Module 9599 (ActivitiesInTextUtils)
+// Module 9600 (ActivitiesInTextUtils)
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import PermissionStore from "PermissionStore" /* 4395 */;

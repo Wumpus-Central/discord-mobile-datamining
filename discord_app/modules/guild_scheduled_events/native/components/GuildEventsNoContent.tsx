@@ -1,11 +1,11 @@
-// === Module 10062: GuildEventsNoContent ===
+// === Module 10063: GuildEventsNoContent ===
 
-// Module 10062 (GuildEventsNoContent)
+// Module 10063 (GuildEventsNoContent)
 import nativeDefault from "native" /* 576 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9854 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9855 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
-import TextStyles from "TextStyles" /* 5736 */;
+import TextStyles from "TextStyles" /* 5741 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -35,9 +35,9 @@ export default function GuildEventsNoContent(guild) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { icon: null, IconComponent: null };
   const obj = guild(504);
-  obj3.icon = onClose(9880);
-  obj3.IconComponent = guild(9882).CalendarIcon;
-  const items2 = [closure_7(onClose(8677), obj3), , , ];
+  obj3.icon = onClose(9881);
+  obj3.IconComponent = guild(9883).CalendarIcon;
+  const items2 = [closure_7(onClose(8678), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guild(1115).intl;
   obj4.children = intl.string(guild(1115).t["WgZ+3D"]);

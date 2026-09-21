@@ -1,9 +1,9 @@
-// === Module 15216: UserSettingsAuthedAppPermissions ===
+// === Module 15222: UserSettingsAuthedAppPermissions ===
 
-// Module 15216 (UserSettingsAuthedAppPermissions)
+// Module 15222 (UserSettingsAuthedAppPermissions)
 import Text_Text from "Text/Text" /* 4752 */;
-import disclosures from "disclosures" /* 9331 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15210 */;
+import disclosures from "disclosures" /* 9332 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15216 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

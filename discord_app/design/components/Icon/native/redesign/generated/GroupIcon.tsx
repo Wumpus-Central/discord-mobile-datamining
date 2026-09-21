@@ -1,6 +1,6 @@
-// === Module 5300: GroupIcon ===
+// === Module 5307: GroupIcon ===
 
-// Module 5300 (GroupIcon)
+// Module 5307 (GroupIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5245 from "module_5245" /* 5245 */;

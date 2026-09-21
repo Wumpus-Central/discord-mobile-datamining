@@ -1,7 +1,7 @@
-// === Module 17317: SearchNavigatorPreviewHeader ===
+// === Module 17328: SearchNavigatorPreviewHeader ===
 
-// Module 17317 (SearchNavigatorPreviewHeader)
-import ChannelHeaderDefault from "ChannelHeader" /* 13565 */;
+// Module 17328 (SearchNavigatorPreviewHeader)
+import ChannelHeaderDefault from "ChannelHeader" /* 13571 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

@@ -1,6 +1,6 @@
-// === Module 17070: VibegrationsTraceSections ===
+// === Module 17078: VibegrationsTraceSections ===
 
-// Module 17070 (VibegrationsTraceSections)
+// Module 17078 (VibegrationsTraceSections)
 import size from "module_2" /* 2 */;
 
 let closure_0 = ["arguments", "result", "usage", "diagnostics"];

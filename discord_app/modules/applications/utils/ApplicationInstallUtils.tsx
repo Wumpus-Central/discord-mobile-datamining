@@ -1,8 +1,8 @@
-// === Module 9531: ApplicationInstallUtils ===
+// === Module 9532: ApplicationInstallUtils ===
 
-// Module 9531 (ApplicationInstallUtils)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9317 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9403 */;
+// Module 9532 (ApplicationInstallUtils)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9318 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9404 */;
 
 require = fn;
 const BuiltInSectionId = fn(5210).BuiltInSectionId;

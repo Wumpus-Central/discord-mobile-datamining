@@ -1,6 +1,6 @@
-// === Module 5302: AnnouncementsWarningIcon ===
+// === Module 5309: AnnouncementsWarningIcon ===
 
-// Module 5302 (AnnouncementsWarningIcon)
+// Module 5309 (AnnouncementsWarningIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5257 from "module_5257" /* 5257 */;

@@ -1,9 +1,9 @@
-// === Module 6461: LongMessageSpotIllustration ===
+// === Module 6466: LongMessageSpotIllustration ===
 
-// Module 6461 (LongMessageSpotIllustration)
+// Module 6466 (LongMessageSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6462 from "module_6462" /* 6462 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6467 from "module_6467" /* 6467 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const LongMessageSpotIllustration = function LongMessageSpotIllustration(
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6462 };
+  const obj2 = { uri: _modDef6467 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

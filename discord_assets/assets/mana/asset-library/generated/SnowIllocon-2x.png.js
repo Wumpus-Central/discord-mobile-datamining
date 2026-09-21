@@ -1,6 +1,6 @@
-// === Module 6706: ? ===
+// === Module 6711: ? ===
 
-// Module 6706
+// Module 6711
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SnowIllocon-2x.png.js");

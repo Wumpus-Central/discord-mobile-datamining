@@ -1,6 +1,6 @@
-// === Module 5283: ThreadLockIcon ===
+// === Module 5290: ThreadLockIcon ===
 
-// Module 5283 (ThreadLockIcon)
+// Module 5290 (ThreadLockIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5240 from "module_5240" /* 5240 */;

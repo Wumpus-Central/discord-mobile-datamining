@@ -1,6 +1,6 @@
-// === Module 5313: HubIcon ===
+// === Module 5320: HubIcon ===
 
-// Module 5313 (HubIcon)
+// Module 5320 (HubIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5250 from "module_5250" /* 5250 */;

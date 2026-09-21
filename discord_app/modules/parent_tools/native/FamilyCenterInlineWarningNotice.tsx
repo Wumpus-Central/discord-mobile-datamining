@@ -1,9 +1,9 @@
-// === Module 15146: FamilyCenterInlineWarningNotice ===
+// === Module 15152: FamilyCenterInlineWarningNotice ===
 
-// Module 15146 (FamilyCenterInlineWarningNotice)
+// Module 15152 (FamilyCenterInlineWarningNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import WarningIcon from "WarningIcon" /* 8865 */;
+import WarningIcon from "WarningIcon" /* 8866 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

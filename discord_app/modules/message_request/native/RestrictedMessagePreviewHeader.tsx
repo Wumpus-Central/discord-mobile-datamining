@@ -1,17 +1,17 @@
-// === Module 17354: RestrictedMessagePreviewHeader ===
+// === Module 17365: RestrictedMessagePreviewHeader ===
 
-// Module 17354 (RestrictedMessagePreviewHeader)
+// Module 17365 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
 import ToastUtils from "ToastUtils" /* 4453 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import ClipboardUtils from "ClipboardUtils" /* 7429 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
+import ClipboardUtils from "ClipboardUtils" /* 7434 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(12695).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(12697).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4756);
@@ -43,13 +43,13 @@ export default function RestrictedMessagePreviewHeader(channel) {
   }, items1);
   let obj3 = { style: tmp.container, children: null };
   const callback2 = userTag.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12852, dependencyMap.paths), "MutualGuildsActionSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12854, dependencyMap.paths), "MutualGuildsActionSheet", {
       user,
       onPressMutualGuild(arg0) {
-        const result = channel(8459).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = channel(8459);
-        channel(7582).transitionToGuild(arg0);
-        const obj2 = channel(7582);
+        const result = channel(8460).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = channel(8460);
+        channel(7584).transitionToGuild(arg0);
+        const obj2 = channel(7584);
         user(4723).hideActionSheet();
         const obj3 = user(4723);
         user(4959).popWithKey(closure_1_5);

@@ -1,10 +1,10 @@
-// === Module 11078: SocialLayerStorefrontBadges ===
+// === Module 11079: SocialLayerStorefrontBadges ===
 
-// Module 11078 (SocialLayerStorefrontBadges)
+// Module 11079 (SocialLayerStorefrontBadges)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import ClydeIcon from "ClydeIcon" /* 11079 */;
+import ClydeIcon from "ClydeIcon" /* 11080 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

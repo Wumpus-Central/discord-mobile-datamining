@@ -1,6 +1,6 @@
-// === Module 13388: UserProfileConnections ===
+// === Module 13390: UserProfileConnections ===
 
-// Module 13388 (UserProfileConnections)
+// Module 13390 (UserProfileConnections)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native2 from "native" /* 1177 */;
@@ -10,15 +10,15 @@ import useToken from "useToken" /* 4457 */;
 import shared from "shared" /* 4607 */;
 import HapticUtils from "HapticUtils" /* 4724 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import TableRow from "TableRow" /* 5817 */;
-import TableRowGroup from "TableRowGroup" /* 5899 */;
-import ClipboardUtils from "ClipboardUtils" /* 7429 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7447 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8640 */;
-import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11824 */;
-import _modDef11829 from "module_11829" /* 11829 */;
-import _modDef11830 from "module_11830" /* 11830 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 13392 */;
+import TableRow from "TableRow" /* 5822 */;
+import TableRowGroup from "TableRowGroup" /* 5904 */;
+import ClipboardUtils from "ClipboardUtils" /* 7434 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7452 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8641 */;
+import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11826 */;
+import _modDef11831 from "module_11831" /* 11831 */;
+import _modDef11832 from "module_11832" /* 11832 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 13394 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 import StreamerModeStore from "StreamerModeStore" /* 4601 */;
@@ -40,10 +40,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     const obj3 = { style: tmp.verifiedIconContainer, children: null };
-    const obj4 = { source: _modDef11829, color: PLATFORM_TWITTER };
+    const obj4 = { source: _modDef11831, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [closure_1_12(native2.Icon, obj4), ];
-    const obj5 = { source: _modDef11830, color: WHITE };
+    const obj5 = { source: _modDef11832, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = closure_1_12(native2.Icon, obj5);
     obj3.children = items;
@@ -53,11 +53,11 @@ function VerifiedIcon(arg0) {
   tmp2Result = shared;
 }
 const View = fn(17).View;
-let Constants = fn(7448);
+let Constants = fn(7453);
 ({ CARD_ROWS_ICON_SIZE: closure_7, CARD_ROWS_ICON_SIZE_VARIANT: closure_8, CARD_PADDING } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_9, PlatformTypes: c10 } = Constants);
-const MetadataFields = fn(5620).MetadataFields;
+const MetadataFields = fn(5625).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 const REFRESH_SMALL_16 = fn(1177).Icon.Sizes.REFRESH_SMALL_16;
@@ -400,7 +400,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(13389)(userId));
+  ({ connections, appIdentities } = theme(13391)(userId));
   if (!stateFromStores) {
     const items2 = [];
     HermesBuiltin.arraySpread(appIdentities.map((application) => {
@@ -415,8 +415,8 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
     obj4.title = intl.string(tmp2(1115).t["3fe7U5"]);
     obj4.titleStyle = tmp.refreshCardTitle;
     const obj5 = { hasIcons: true, children: items2 };
-    obj4.children = closure_12(tmp2(5899).TableRowGroup, obj5);
-    return closure_12(tmp5(7447), obj4);
+    obj4.children = closure_12(tmp2(5904).TableRowGroup, obj5);
+    return closure_12(tmp5(7452), obj4);
   }
   return null;
 };

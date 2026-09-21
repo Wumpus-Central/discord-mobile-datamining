@@ -1,6 +1,6 @@
-// === Module 13865: SubscribeModalConfirmation ===
+// === Module 13871: SubscribeModalConfirmation ===
 
-// Module 13865 (SubscribeModalConfirmation)
+// Module 13871 (SubscribeModalConfirmation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,12 +8,12 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 4649 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import _modDef5809 from "module_5809" /* 5809 */;
-import _modDef13866 from "module_13866" /* 13866 */;
-import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13867 */;
+import _modDef5814 from "module_5814" /* 5814 */;
+import _modDef13872 from "module_13872" /* 13872 */;
+import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13873 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12814 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12816 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4650 */;
 import SubscriptionStore from "SubscriptionStore" /* 4420 */;
@@ -32,7 +32,7 @@ function PendingCancellationWarning(slots) {
     tmp5 = null;
     if (null != stateFromStores) {
       const obj2 = { style: tmp.pendingCancellation, children: null };
-      const obj3 = { style: tmp.pendingCancellationIcon, source: _modDef5809 };
+      const obj3 = { style: tmp.pendingCancellationIcon, source: _modDef5814 };
       const items1 = [closure_1_19(timestampProducer, obj3), ];
       const obj4 = { style: tmp.pendingCancellationMessage, variant: "text-sm/medium", children: null };
       const intl = util.intl;
@@ -50,7 +50,7 @@ function SubscribeConfirmation(arg0) {
   ({ guild, isModifyingSubscription } = arg0);
   const tmp = closure_22();
   const obj = { children: null };
-  const items = [closure_1_19(timestampProducer, { style: tmp.subscribeImage, source: _modDef13866 }), , , , , ];
+  const items = [closure_1_19(timestampProducer, { style: tmp.subscribeImage, source: _modDef13872 }), , , , , ];
   const obj3 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.yTlZV0);
@@ -82,8 +82,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = closure_22();
-  const guildSubscriptionRemovalSource = prop(13876).useGuildSubscriptionRemovalSource();
-  const obj = prop(13876);
+  const guildSubscriptionRemovalSource = prop(13882).useGuildSubscriptionRemovalSource();
+  const obj = prop(13882);
   const items = [GuildStore];
   const stateFromStores = prop(504).useStateFromStores(items, () => {
     const found = prop.find((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription);
@@ -118,7 +118,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10.children = intl3.format(tmp2(1115).t["5zQYEz"], { guildCount: 1 });
     const items2 = [closure_19(tmp2(4752).Text, obj10), , , ];
     const obj11 = { style: tmp.guildPreview, guild: stateFromStores };
-    items2[1] = closure_19(onPremiumGuildSubscribe(13867), obj11);
+    items2[1] = closure_19(onPremiumGuildSubscribe(13873), obj11);
     const obj12 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
     const intl4 = tmp2(1115).intl;
     const obj13 = { slotCount: prop.length };
@@ -132,7 +132,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj14.end = tmp2(1094).HorizontalGradient.END;
     obj14.colors = Gradients.PREMIUM_GUILD;
     const obj15 = { guild };
-    obj14.children = closure_19(onPremiumGuildSubscribe(13867), obj15);
+    obj14.children = closure_19(onPremiumGuildSubscribe(13873), obj15);
     items2[3] = closure_19(onPremiumGuildSubscribe(5198), obj14);
     obj9.children = items2;
     items1[3] = closure_20(closure_7, obj9);
@@ -159,7 +159,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, Image: metroRequire, View: closure_7, ScrollView: closure_8, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, AnalyticsObjects: closure_14, AnalyticsSections: closure_15, GUILD_BOOST_APPLY_COOLDOWN_DAYS: closure_16 } = Constants);
-const Gradients = fn(7672).Gradients;
+const Gradients = fn(7674).Gradients;
 const BoostPurchaseIntent = fn(4645).BoostPurchaseIntent;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);

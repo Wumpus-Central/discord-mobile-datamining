@@ -1,10 +1,10 @@
-// === Module 10054: InfoBox ===
+// === Module 10055: InfoBox ===
 
-// Module 10054 (InfoBox)
+// Module 10055 (InfoBox)
 import nativeDefault from "native" /* 576 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4710 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6847 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6852 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 17196: ChannelDetailsTopic ===
+// === Module 17207: ChannelDetailsTopic ===
 
-// Module 17196 (ChannelDetailsTopic)
+// Module 17207 (ChannelDetailsTopic)
 import UserUtilsDefault from "UserUtils" /* 4600 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4746 */;
 import ChannelUtils from "ChannelUtils" /* 4901 */;
@@ -204,7 +204,7 @@ function GroupDMChannelDetailsTopic(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(11179);
+const ChannelDetailsConstants = fn(11180);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);

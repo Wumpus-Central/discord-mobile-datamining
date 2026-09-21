@@ -1,6 +1,6 @@
-// === Module 5293: ForumWarningIcon ===
+// === Module 5300: ForumWarningIcon ===
 
-// Module 5293 (ForumWarningIcon)
+// Module 5300 (ForumWarningIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5261 from "module_5261" /* 5261 */;

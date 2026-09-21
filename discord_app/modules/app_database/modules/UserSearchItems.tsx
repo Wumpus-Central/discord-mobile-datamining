@@ -1,12 +1,12 @@
-// === Module 7891: UserSearchItems ===
+// === Module 7893: UserSearchItems ===
 
-// Module 7891 (UserSearchItems)
+// Module 7893 (UserSearchItems)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2070 */;
-import UserSearchUtils from "UserSearchUtils" /* 7895 */;
+import UserSearchUtils from "UserSearchUtils" /* 7897 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7892 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7893 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7894 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7895 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 import UserStore from "UserStore" /* 1372 */;
 

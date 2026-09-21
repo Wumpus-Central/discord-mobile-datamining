@@ -1,13 +1,13 @@
-// === Module 9887: GuildScheduledEventDetailsActionSheet ===
+// === Module 9888: GuildScheduledEventDetailsActionSheet ===
 
-// Module 9887 (GuildScheduledEventDetailsActionSheet)
+// Module 9888 (GuildScheduledEventDetailsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9878 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7766 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7768 */;
 
 require = fn;
 const View = fn(17).View;

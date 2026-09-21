@@ -1,8 +1,8 @@
-// === Module 13260: MediaModalOverlayAltText ===
+// === Module 13262: MediaModalOverlayAltText ===
 
-// Module 13260 (MediaModalOverlayAltText)
+// Module 13262 (MediaModalOverlayAltText)
 import nativeDefault from "native" /* 576 */;
-import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11784 */;
+import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11786 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -40,7 +40,7 @@ export default noop.memo(function MediaModalOverlayAltTextButton(description) {
       const intl = tmp3(1115).intl;
       obj2.children = intl.string(tmp3(1115).t.Q5VqrN);
       obj.children = jsx(tmp3(4752).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5334).PressableOpacity, {
+      tmp4 = jsx(tmp3(5339).PressableOpacity, {
         style: tmp2.container,
         onPress() {
               if (str == null) {

@@ -1,6 +1,6 @@
-// === Module 9729: EmbeddedActivityWebView ===
+// === Module 9730: EmbeddedActivityWebView ===
 
-// Module 9729 (EmbeddedActivityWebView)
+// Module 9730 (EmbeddedActivityWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
@@ -10,18 +10,18 @@ import HTTPUtils from "HTTPUtils" /* 1271 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4957 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
-import usePreviousDefault from "usePrevious" /* 8542 */;
-import WebView from "WebView" /* 8568 */;
-import getURLForApplication from "getURLForApplication" /* 9315 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9563 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9575 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9576 */;
-import useStableSafeAreaInsets from "useStableSafeAreaInsets" /* 9732 */;
-import createWebviewHtmlFileDefault from "createWebviewHtmlFile" /* 9735 */;
+import usePreviousDefault from "usePrevious" /* 8543 */;
+import WebView from "WebView" /* 8569 */;
+import getURLForApplication from "getURLForApplication" /* 9316 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9564 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9576 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9577 */;
+import useStableSafeAreaInsets from "useStableSafeAreaInsets" /* 9733 */;
+import createWebviewHtmlFileDefault from "createWebviewHtmlFile" /* 9736 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9133 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9134 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {

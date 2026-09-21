@@ -1,11 +1,11 @@
-// === Module 7400: ConnectionCard ===
+// === Module 7405: ConnectionCard ===
 
-// Module 7400 (ConnectionCard)
-import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 7401 */;
-import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 7418 */;
+// Module 7405 (ConnectionCard)
+import ApplicationConnectionCardDefault from "ApplicationConnectionCard" /* 7406 */;
+import ProviderConnectionCardDefault from "ProviderConnectionCard" /* 7423 */;
 import noop from "module_19" /* 19 */;
 
-const OnboardingConnectionType = fn(7341).OnboardingConnectionType;
+const OnboardingConnectionType = fn(7346).OnboardingConnectionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/ConnectionCard.tsx");

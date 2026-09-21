@@ -1,6 +1,6 @@
-// === Module 9177: GameProfileGameClaimCta ===
+// === Module 9178: GameProfileGameClaimCta ===
 
-// Module 9177 (GameProfileGameClaimCta)
+// Module 9178 (GameProfileGameClaimCta)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,10 +40,10 @@ export default function GameProfileGameClaimCta(trackAction) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            trackAction(v3(8956).GameProfileTrackActionActions.ClaimGame);
+            trackAction(v3(8957).GameProfileTrackActionActions.ClaimGame);
             v1 = 1;
             v3 = 1;
-            const obj4 = { value: v1(7556).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7560).LoginHandoffSource.GAME_CLAIM), done: false };
+            const obj4 = { value: v1(7558).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7562).LoginHandoffSource.GAME_CLAIM), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {

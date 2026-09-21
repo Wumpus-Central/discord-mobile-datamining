@@ -1,6 +1,6 @@
-// === Module 13451: InlinePriceTag ===
+// === Module 13453: InlinePriceTag ===
 
-// Module 13451 (InlinePriceTag)
+// Module 13453 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
@@ -8,19 +8,19 @@ import PlatformUtils from "PlatformUtils" /* 1364 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7793 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7794 */;
-import useCurrentUser from "useCurrentUser" /* 8446 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8939 */;
-import OrbsIcon from "OrbsIcon" /* 9115 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9126 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9139 */;
-import TagIcon from "TagIcon" /* 9140 */;
-import useProductDisableState from "useProductDisableState" /* 9147 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13452 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13453 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7795 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7796 */;
+import useCurrentUser from "useCurrentUser" /* 8447 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8940 */;
+import OrbsIcon from "OrbsIcon" /* 9116 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9127 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9140 */;
+import TagIcon from "TagIcon" /* 9141 */;
+import useProductDisableState from "useProductDisableState" /* 9148 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13454 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13455 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7477 */;
+import IAPStore from "IAPStore" /* 7482 */;
 
 require = fn;
 function PriceTag(accessibilityLabel) {

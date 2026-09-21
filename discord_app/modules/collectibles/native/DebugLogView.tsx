@@ -1,6 +1,6 @@
-// === Module 16161: DebugLogView ===
+// === Module 16167: DebugLogView ===
 
-// Module 16161 (DebugLogView)
+// Module 16167 (DebugLogView)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import DevSettingsStore from "DevSettingsStore" /* 4755 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const CollectiblesDebugStore = fn(7796);
+const CollectiblesDebugStore = fn(7798);
 ({ useCollectiblesDebugStore: closure_7, addDebugLog: closure_8 } = CollectiblesDebugStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_9, jsx: c10 } = jsxProd);

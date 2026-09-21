@@ -1,11 +1,11 @@
-// === Module 18299: AVErrorAnalytics ===
+// === Module 18310: AVErrorAnalytics ===
 
-// Module 18299 (AVErrorAnalytics)
+// Module 18310 (AVErrorAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
 import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4750 */;
-import VideoQualityStats from "VideoQualityStats" /* 7981 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9695 */;
+import VideoQualityStats from "VideoQualityStats" /* 7983 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9696 */;
 import _slicedToArray from "module_32" /* 32 */;
 import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4794 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4802 */;

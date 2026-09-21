@@ -1,23 +1,23 @@
-// === Module 13823: PremiumTierCard ===
+// === Module 13829: PremiumTierCard ===
 
-// Module 13823 (PremiumTierCard)
+// Module 13829 (PremiumTierCard)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import PremiumUtils from "PremiumUtils" /* 4414 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import Card from "Card" /* 5819 */;
-import _modDef8325 from "module_8325" /* 8325 */;
-import _modDef9498 from "module_9498" /* 9498 */;
-import _modDef10974 from "module_10974" /* 10974 */;
+import Card from "Card" /* 5824 */;
+import _modDef8326 from "module_8326" /* 8326 */;
+import _modDef9499 from "module_9499" /* 9499 */;
 import _modDef10975 from "module_10975" /* 10975 */;
-import _modDef13824 from "module_13824" /* 13824 */;
-import _modDef13825 from "module_13825" /* 13825 */;
+import _modDef10976 from "module_10976" /* 10976 */;
+import _modDef13830 from "module_13830" /* 13830 */;
+import _modDef13831 from "module_13831" /* 13831 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const getPremiumGradientColor = fn(7672).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7674).getPremiumGradientColor;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
@@ -44,11 +44,11 @@ export default function _default(premiumType) {
   }
   obj2.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef13824;
+    let tmp5Result = _modDef13830;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef13825;
+    tmp5Result = _modDef13831;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result = _modDef8325;
+    tmp5Result = _modDef8326;
   }
   obj2.source = tmp5Result;
   obj.children = React5(React4, obj2);
@@ -64,11 +64,11 @@ export default function _default(premiumType) {
   const obj4 = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result2 = _modDef9498;
+    let tmp5Result2 = _modDef9499;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result2 = _modDef10974;
-  } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result2 = _modDef10975;
+  } else if (PremiumTypes.TIER_2 === premiumType) {
+    tmp5Result2 = _modDef10976;
   }
   const obj5 = { children: null };
   obj4.source = tmp5Result2;

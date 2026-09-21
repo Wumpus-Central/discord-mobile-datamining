@@ -1,6 +1,6 @@
-// === Module 8903: ChannelSettingsStore ===
+// === Module 8904: ChannelSettingsStore ===
 
-// Module 8903 (ChannelSettingsStore)
+// Module 8904 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadConstants from "ThreadConstants" /* 1114 */;
@@ -12,7 +12,7 @@ import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
 import _modDef4348 from "module_4348" /* 4348 */;
 import ReactionUtils from "ReactionUtils" /* 4407 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4409 */;
-import InviteRecord from "InviteRecord" /* 8650 */;
+import InviteRecord from "InviteRecord" /* 8651 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import Constants from "Constants" /* 1074 */;

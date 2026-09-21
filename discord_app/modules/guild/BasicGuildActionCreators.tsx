@@ -1,11 +1,11 @@
-// === Module 18272: BasicGuildActionCreators ===
+// === Module 18283: BasicGuildActionCreators ===
 
-// Module 18272 (BasicGuildActionCreators)
+// Module 18283 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2063 */;
-import BasicGuildStore from "BasicGuildStore" /* 8212 */;
+import BasicGuildStore from "BasicGuildStore" /* 8213 */;
 
 require = fn;
 let closure_8 = async function _fetchBasicGuild() {

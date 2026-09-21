@@ -1,14 +1,14 @@
-// === Module 10428: MessageNotificationHeader ===
+// === Module 10429: MessageNotificationHeader ===
 
-// Module 10428 (MessageNotificationHeader)
+// Module 10429 (MessageNotificationHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import useChannelName from "useChannelName" /* 4909 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5239 */;
-import ChatIcon2 from "ChatIcon" /* 5282 */;
-import ThreadIcon2 from "ThreadIcon" /* 5284 */;
+import ChatIcon2 from "ChatIcon" /* 5289 */;
+import ThreadIcon2 from "ThreadIcon" /* 5291 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;

@@ -1,8 +1,8 @@
-// === Module 8245: markup/MarkupParser ===
+// === Module 8246: markup/MarkupParser ===
 
-// Module 8245 (markup/MarkupParser)
+// Module 8246 (markup/MarkupParser)
 import _modDef1929 from "module_1929" /* 1929 */;
-import MarkupASTUtils from "MarkupASTUtils" /* 8246 */;
+import MarkupASTUtils from "MarkupASTUtils" /* 8247 */;
 import size from "module_2" /* 2 */;
 
 function saferParse(fn, value, inline, arg3, arg4) {

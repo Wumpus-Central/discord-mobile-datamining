@@ -1,6 +1,6 @@
-// === Module 10065: useStartEvent ===
+// === Module 10066: useStartEvent ===
 
-// Module 10065 (useStartEvent)
+// Module 10066 (useStartEvent)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -86,7 +86,7 @@ export default function useStartEvent() {
               c6 = 1;
               c7 = 3;
               c8 = 1;
-              const obj7 = { value: closure_1(10066).preStartEventActions(closure_131_0, closure_131_3), done: false };
+              const obj7 = { value: closure_1(10067).preStartEventActions(closure_131_0, closure_131_3), done: false };
               return obj7;
             }
           } else {
@@ -111,7 +111,7 @@ export default function useStartEvent() {
               } else {
                 c7 = 4;
                 c8 = 1;
-                const obj10 = { value: closure_1(10066).setEventAsActive(closure_131_0, closure_131_1), done: false };
+                const obj10 = { value: closure_1(10067).setEventAsActive(closure_131_0, closure_131_1), done: false };
                 return obj10;
               }
             } else if (4 === tmp7) {
@@ -126,7 +126,7 @@ export default function useStartEvent() {
               } else {
                 c7 = 5;
                 c8 = 1;
-                const obj13 = { value: closure_0(10067).navigateToEvent(closure_131_0, closure_131_2), done: false };
+                const obj13 = { value: closure_0(10068).navigateToEvent(closure_131_0, closure_131_2), done: false };
                 return obj13;
               }
             } else if (5 === tmp7) {
@@ -141,7 +141,7 @@ export default function useStartEvent() {
               } else {
                 c7 = 6;
                 c8 = 1;
-                const obj15 = { value: closure_0(10067).postStartActions(closure_131_0, closure_131_2), done: false };
+                const obj15 = { value: closure_0(10068).postStartActions(closure_131_0, closure_131_2), done: false };
                 return obj15;
               }
             } else if (arg0 === 1) {

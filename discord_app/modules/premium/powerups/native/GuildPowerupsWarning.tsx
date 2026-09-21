@@ -1,6 +1,6 @@
-// === Module 12812: GuildPowerupsWarning ===
+// === Module 12814: GuildPowerupsWarning ===
 
-// Module 12812 (GuildPowerupsWarning)
+// Module 12814 (GuildPowerupsWarning)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ export default function GuildPowerupsWarning(warnings) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { style: tmp.contentContainer, children: null };
     const obj4 = { color: tmp5(576).colors.TEXT_FEEDBACK_WARNING, size: "md" };
-    let items = [closure_4(tmp2(6847).CircleErrorIcon, obj4), , , ];
+    let items = [closure_4(tmp2(6852).CircleErrorIcon, obj4), , , ];
     const obj5 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp.text, children: tmp7 };
     items[1] = closure_4(tmp2(4752).Text, obj5);
     let str = "text-sm/medium";

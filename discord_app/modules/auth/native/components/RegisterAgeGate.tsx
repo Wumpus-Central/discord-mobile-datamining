@@ -1,21 +1,21 @@
-// === Module 16307: RegisterAgeGate ===
+// === Module 16313: RegisterAgeGate ===
 
-// Module 16307 (RegisterAgeGate)
+// Module 16313 (RegisterAgeGate)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16270 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 16276 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6831 */;
+import ConsentStore from "ConsentStore" /* 6836 */;
 import hooks_mod from "module_4348" /* 4348 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(16271);
+const RegistrationUIStore = fn(16277);
 ({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(16272);
+const RegistrationConstants = fn(16278);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);

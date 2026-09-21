@@ -1,6 +1,6 @@
-// === Module 9624: LocalActivityStore ===
+// === Module 9625: LocalActivityStore ===
 
-// Module 9624 (LocalActivityStore)
+// Module 9625 (LocalActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -8,20 +8,20 @@ import _modDef1331 from "module_1331" /* 1331 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 2019 */;
 import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4886 */;
-import userSettingToActivity from "userSettingToActivity" /* 9629 */;
-import PresenceActivityFiltering from "PresenceActivityFiltering" /* 9630 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 9631 */;
+import userSettingToActivity from "userSettingToActivity" /* 9630 */;
+import PresenceActivityFiltering from "PresenceActivityFiltering" /* 9631 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 9632 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
 import ApplicationStore from "ApplicationStore" /* 4983 */;
 import RunningGameStore from "RunningGameStore" /* 1999 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 9625 */;
-import SpotifyStore from "SpotifyStore" /* 5492 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 9626 */;
+import SpotifyStore from "SpotifyStore" /* 5497 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import DetectableGameStore from "DetectableGameStore" /* 2015 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 9628 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 9629 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
 import SessionsStore from "SessionsStore" /* 4774 */;
 

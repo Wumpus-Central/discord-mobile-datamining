@@ -1,6 +1,6 @@
-// === Module 8696: AgeVerificationAuthSession ===
+// === Module 8697: AgeVerificationAuthSession ===
 
-// Module 8696 (AgeVerificationAuthSession)
+// Module 8697 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4722 */;

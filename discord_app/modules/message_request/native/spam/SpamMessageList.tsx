@@ -1,6 +1,6 @@
-// === Module 17349: SpamMessageList ===
+// === Module 17360: SpamMessageList ===
 
-// Module 17349 (SpamMessageList)
+// Module 17360 (SpamMessageList)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
@@ -9,10 +9,10 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 5084 */;
 import MetricEvents from "MetricEvents" /* 5089 */;
 import useMountEffectDefault from "useMountEffect" /* 5203 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17350 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 17361 */;
 import noop from "module_19" /* 19 */;
 
-const MessageRequestEmptyDefault = tmp2(17344);
+const MessageRequestEmptyDefault = tmp2(17355);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -175,10 +175,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  dependencyMap = goToMessageRequestPreview(17343).useSpamMessageRequestCount();
+  dependencyMap = goToMessageRequestPreview(17354).useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj = goToMessageRequestPreview(17343);
-  const hasSingleMessageRequest = goToMessageRequestPreview(17341).useListHasSingleSpamMessageRequest();
+  let obj = goToMessageRequestPreview(17354);
+  const hasSingleMessageRequest = goToMessageRequestPreview(17352).useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
     const obj2 = { num_spam_message_requests };
@@ -237,5 +237,5 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     obj4.data = items;
     return closure_8(closure_6, obj4);
   }
-  let obj2 = goToMessageRequestPreview(17341);
+  let obj2 = goToMessageRequestPreview(17352);
 };

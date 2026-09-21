@@ -1,24 +1,24 @@
-// === Module 15126: UseDataToImproveDiscordSetting ===
+// === Module 15132: UseDataToImproveDiscordSetting ===
 
-// Module 15126 (UseDataToImproveDiscordSetting)
+// Module 15132 (UseDataToImproveDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
 import common_AlertDefault from "common/Alert" /* 5205 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15096 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 15127 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15128 */;
-import ConsentStore from "ConsentStore" /* 6831 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15102 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 15133 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15134 */;
+import ConsentStore from "ConsentStore" /* 6836 */;
 
 require = fn;
 const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11723);
+const SettingBuilders = fn(11725);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(8232).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8233).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToImproveDiscordSettingValue() {
     const items = [ConsentStore];
     return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.USAGE_STATISTICS));

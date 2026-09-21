@@ -1,6 +1,6 @@
-// === Module 7584: SoundboardUtils ===
+// === Module 7586: SoundboardUtils ===
 
-// Module 7584 (SoundboardUtils)
+// Module 7586 (SoundboardUtils)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -10,10 +10,10 @@ import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
 import UserUtils from "UserUtils" /* 4600 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4936 */;
 import SoundboardTypes from "SoundboardTypes" /* 5232 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7578 */;
-import useMuteStates from "useMuteStates" /* 7585 */;
-import VoiceChannelEffectsActionCreators from "VoiceChannelEffectsActionCreators" /* 7586 */;
-import getCurrentVoiceChannelDefault from "getCurrentVoiceChannel" /* 7613 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7580 */;
+import useMuteStates from "useMuteStates" /* 7587 */;
+import VoiceChannelEffectsActionCreators from "VoiceChannelEffectsActionCreators" /* 7588 */;
+import getCurrentVoiceChannelDefault from "getCurrentVoiceChannel" /* 7615 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
@@ -178,9 +178,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(7578).playSoundLocally(id, sound);
-                  const obj = closure_1_0(7578);
-                  const result = closure_1_0(7586).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(7580).playSoundLocally(id, sound);
+                  const obj = closure_1_0(7580);
+                  const result = closure_1_0(7588).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }

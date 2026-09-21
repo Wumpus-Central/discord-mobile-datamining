@@ -1,24 +1,24 @@
-// === Module 13264: MediaMessagePreview ===
+// === Module 13266: MediaMessagePreview ===
 
-// Module 13264 (MediaMessagePreview)
+// Module 13266 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6892 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8004 */;
-import RowGeneratorDefault from "RowGenerator" /* 8189 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8394 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11516 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11796 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11865 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 13265 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6897 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8006 */;
+import RowGeneratorDefault from "RowGenerator" /* 8190 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8395 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11518 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11798 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11867 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 13267 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7517 */;
-import SearchMessageStore from "SearchMessageStore" /* 7521 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7519 */;
+import SearchMessageStore from "SearchMessageStore" /* 7523 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import MessageStore from "MessageStore" /* 4976 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8630 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8631 */;
 
 require = fn;
 function MeasureMessage(message) {
@@ -291,6 +291,22 @@ export default function MediaMessagePreview(channelId) {
                   onTapMessage();
                 }
               }
+              const result = handleMessagesTapLink.handleMessagesTapLink({
+                allowWithinModal: true,
+                chatInputRef: "Boolean",
+                handleTransitionToThread(arg0, arg1, source) {
+                  channel = channel.getChannel(arg1);
+                  if (null != channel) {
+                    const obj2 = { source, navigationReplace: false };
+                    channelId(onClose[28]).transitionToThread(channel, obj2);
+                    const obj = channelId(onClose[28]);
+                  }
+                },
+                message: stateFromStores1,
+                messageChannel: stateFromStores,
+                selectedChannelId: channelId,
+                tapLinkData: nativeEvent.nativeEvent
+              });
               let obj2 = {
                 allowWithinModal: true,
                 chatInputRef: "Boolean",
@@ -307,7 +323,6 @@ export default function MediaMessagePreview(channelId) {
                 selectedChannelId: channelId,
                 tapLinkData: nativeEvent.nativeEvent
               };
-              const result = handleMessagesTapLink.handleMessagesTapLink(obj2);
             },
         inverted: false
       };

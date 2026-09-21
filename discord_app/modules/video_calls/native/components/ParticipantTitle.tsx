@@ -1,9 +1,9 @@
-// === Module 10322: ParticipantTitle ===
+// === Module 10323: ParticipantTitle ===
 
-// Module 10322 (ParticipantTitle)
+// Module 10323 (ParticipantTitle)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import getParticipantTitleDefault from "getParticipantTitle" /* 10304 */;
+import getParticipantTitleDefault from "getParticipantTitle" /* 10305 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

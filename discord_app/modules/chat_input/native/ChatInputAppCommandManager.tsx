@@ -1,16 +1,16 @@
-// === Module 12657: ChatInputAppCommandManager ===
+// === Module 12659: ChatInputAppCommandManager ===
 
-// Module 12657 (ChatInputAppCommandManager)
+// Module 12659 (ChatInputAppCommandManager)
 import nativeDefault from "native" /* 576 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5322 */;
-import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12242 */;
-import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12658 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 5327 */;
+import ChatInputCommandOptionParser from "ChatInputCommandOptionParser" /* 12244 */;
+import ApplicationCommandManagerDefault from "ApplicationCommandManager" /* 12660 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8019 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 8020 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 8021 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 8022 */;
 import GameStore from "GameStore" /* 2000 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5319 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5324 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

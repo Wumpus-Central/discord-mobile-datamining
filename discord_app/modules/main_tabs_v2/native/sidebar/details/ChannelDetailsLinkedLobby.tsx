@@ -1,9 +1,9 @@
-// === Module 17195: ChannelDetailsLinkedLobby ===
+// === Module 17206: ChannelDetailsLinkedLobby ===
 
-// Module 17195 (ChannelDetailsLinkedLobby)
+// Module 17206 (ChannelDetailsLinkedLobby)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7408 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7413 */;
 import noop from "module_19" /* 19 */;
 
 const util = BPDKoA(1115);

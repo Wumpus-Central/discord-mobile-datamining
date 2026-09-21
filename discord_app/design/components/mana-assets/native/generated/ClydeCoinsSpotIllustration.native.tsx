@@ -1,9 +1,9 @@
-// === Module 6089: ClydeCoinsSpotIllustration ===
+// === Module 6094: ClydeCoinsSpotIllustration ===
 
-// Module 6089 (ClydeCoinsSpotIllustration)
+// Module 6094 (ClydeCoinsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6090 from "module_6090" /* 6090 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6095 from "module_6095" /* 6095 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ClydeCoinsSpotIllustration = function ClydeCoinsSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6090 };
+  const obj2 = { uri: _modDef6095 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

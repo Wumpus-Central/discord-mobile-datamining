@@ -1,22 +1,22 @@
-// === Module 10234: ChannelCallConnectingScreen ===
+// === Module 10235: ChannelCallConnectingScreen ===
 
-// Module 10234 (ChannelCallConnectingScreen)
+// Module 10235 (ChannelCallConnectingScreen)
 import _mod17 from "module_17" /* 17 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1609 */;
 import useThemeDefault from "useTheme" /* 4690 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import useChannelNameDefault from "useChannelName" /* 4909 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5623 */;
-import BottomSheetModal from "BottomSheetModal" /* 6864 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7390 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9910 */;
-import beginConsoleTransfer from "beginConsoleTransfer" /* 10042 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10075 */;
-import UserSettingsVoiceDefault from "UserSettingsVoice" /* 10235 */;
-import VoiceChatHeaderIconDefault from "VoiceChatHeaderIcon" /* 10256 */;
-import _modDef10257 from "module_10257" /* 10257 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 10258 */;
-import coercePlatformTypeToConsoleType from "coercePlatformTypeToConsoleType" /* 10265 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5628 */;
+import BottomSheetModal from "BottomSheetModal" /* 6869 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7395 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9911 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 10043 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10076 */;
+import UserSettingsVoiceDefault from "UserSettingsVoice" /* 10236 */;
+import VoiceChatHeaderIconDefault from "VoiceChatHeaderIcon" /* 10257 */;
+import _modDef10258 from "module_10258" /* 10258 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 10259 */;
+import coercePlatformTypeToConsoleType from "coercePlatformTypeToConsoleType" /* 10266 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4773 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
@@ -124,13 +124,13 @@ function JoinVoiceButton(channel) {
   return closure_12(channel(stateFromStores1[33]).LabeledActionButton, obj3);
 }
 const View = fn(17).View;
-const resetFocus = fn(9639).resetFocus;
+const resetFocus = fn(9640).resetFocus;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const createStyles = fn(4756);
-let obj2 = { spacer: { width: 8 }, actionBarContainer: { paddingHorizontal: 12, paddingTop: 16, justifyContent: "center", alignItems: "flex-start", flexDirection: "row", height: fn(9664).CALL_ACTION_BAR_HEIGHT } };
+let obj2 = { spacer: { width: 8 }, actionBarContainer: { paddingHorizontal: 12, paddingTop: 16, justifyContent: "center", alignItems: "flex-start", flexDirection: "row", height: fn(9665).CALL_ACTION_BAR_HEIGHT } };
 let closure_15 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallConnectingScreen.tsx");
@@ -142,7 +142,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   channel = channel.channel;
   const tmp = closure_15();
   const tmp4 = useChannelNameDefault(channel);
-  const isVoiceChannelLocked = channel(10194).useIsVoiceChannelLocked(channel);
+  const isVoiceChannelLocked = channel(10195).useIsVoiceChannelLocked(channel);
   let fn = null;
   if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
     fn = null;
@@ -153,7 +153,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   const items = [closure_12(View, { style: { width: 4 } }), , , ];
   let tmp9Result = null;
   if (null != fn) {
-    const obj2 = { source: _modDef10257, onPress: fn, accessibilityLabel: null };
+    const obj2 = { source: _modDef10258, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1115).intl;
     const obj3 = { channelName: tmp4 };
     obj2.accessibilityLabel = intl.formatToPlainString(tmp5(1115).t["dHHb/2"], obj3);

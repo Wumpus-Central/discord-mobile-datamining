@@ -1,8 +1,8 @@
-// === Module 15282: useBountyRecurringSwipeUpNux ===
+// === Module 15288: useBountyRecurringSwipeUpNux ===
 
-// Module 15282 (useBountyRecurringSwipeUpNux)
+// Module 15288 (useBountyRecurringSwipeUpNux)
 import dismissible_content from "dismissible_content" /* 2027 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7628 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7630 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

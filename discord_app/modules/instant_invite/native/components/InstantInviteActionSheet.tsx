@@ -1,18 +1,18 @@
-// === Module 10083: InstantInviteActionSheet ===
+// === Module 10084: InstantInviteActionSheet ===
 
-// Module 10083 (InstantInviteActionSheet)
+// Module 10084 (InstantInviteActionSheet)
 import nativeDefault from "native" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 4741 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8447 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10075 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 10084 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 10085 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 10076 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 10085 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 10086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 2046 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 10076 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 10077 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 
@@ -33,7 +33,7 @@ function Loading() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7976).InviteTargetTypes;
+const InviteTargetTypes = fn(7978).InviteTargetTypes;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);

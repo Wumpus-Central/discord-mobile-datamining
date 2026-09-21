@@ -1,6 +1,6 @@
-// === Module 14758: fetchIsLinkTrusted ===
+// === Module 14764: fetchIsLinkTrusted ===
 
-// Module 14758 (fetchIsLinkTrusted)
+// Module 14764 (fetchIsLinkTrusted)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

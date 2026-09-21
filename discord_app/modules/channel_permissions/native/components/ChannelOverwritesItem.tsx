@@ -1,17 +1,17 @@
-// === Module 9838: ChannelOverwritesItem ===
+// === Module 9839: ChannelOverwritesItem ===
 
-// Module 9838 (ChannelOverwritesItem)
+// Module 9839 (ChannelOverwritesItem)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4474 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import AlertModal from "AlertModal" /* 5114 */;
-import TableRow from "TableRow" /* 5817 */;
-import FormCheckbox from "FormCheckbox" /* 5829 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9822 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9839 */;
-import _modDef9840 from "module_9840" /* 9840 */;
+import TableRow from "TableRow" /* 5822 */;
+import FormCheckbox from "FormCheckbox" /* 5834 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9823 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9840 */;
 import _modDef9841 from "module_9841" /* 9841 */;
+import _modDef9842 from "module_9842" /* 9842 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -55,8 +55,8 @@ function RemoveIcon(item) {
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_7(item(6853).CircleXIcon, obj2);
-    tmp3Result = closure_7(item(5334).PressableOpacity, obj);
+    obj.children = closure_7(item(6858).CircleXIcon, obj2);
+    tmp3Result = closure_7(item(5339).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -94,7 +94,7 @@ function MemberItem(arg0) {
   const items1 = [React5(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9840, disableColor: true, style: tmp.ownerIcon };
+    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9841, disableColor: true, style: tmp.ownerIcon };
     tmp4Result = React5(native.Icon, obj3);
   }
   items1[1] = tmp4Result;
@@ -127,7 +127,7 @@ function EmptyRoleItem(item) {
   item = item.item;
   const obj = { icon: null, label: null };
   const tmp = closure_9();
-  obj.icon = React5(native.Icon, { source: _modDef9841, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
+  obj.icon = React5(native.Icon, { source: _modDef9842, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
   obj.label = item.name;
   return React5(TableRow.TableRow, obj);
 }
@@ -173,7 +173,7 @@ class ChannelOverwritesItem {
   }
 }
 const View = fn(17).View;
-const RowType = fn(8671).RowType;
+const RowType = fn(8672).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4756);

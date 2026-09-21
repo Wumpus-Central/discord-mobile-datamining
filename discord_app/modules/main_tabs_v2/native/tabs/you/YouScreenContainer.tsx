@@ -1,18 +1,18 @@
-// === Module 17238: YouScreenContainer ===
+// === Module 17249: YouScreenContainer ===
 
-// Module 17238 (YouScreenContainer)
+// Module 17249 (YouScreenContainer)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16347 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16353 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowDimensionsDefault = tmp(1478);
 const useChatLayoutDefault = tmp(4616);
-const YouScreenDefault = tmp(17239);
+const YouScreenDefault = tmp(17250);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11350).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11352).RootNavigatorScreen;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl }, androidContainer: null, wrapper: null };

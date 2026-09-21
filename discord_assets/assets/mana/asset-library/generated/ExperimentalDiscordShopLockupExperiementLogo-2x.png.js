@@ -1,6 +1,6 @@
-// === Module 6208: ? ===
+// === Module 6213: ? ===
 
-// Module 6208
+// Module 6213
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalDiscordShopLockupExperiementLogo-2x.png.js");

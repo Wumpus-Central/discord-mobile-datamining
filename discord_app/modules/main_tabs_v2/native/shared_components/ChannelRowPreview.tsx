@@ -1,26 +1,26 @@
-// === Module 10364: ChannelRowPreview ===
+// === Module 10365: ChannelRowPreview ===
 
-// Module 10364 (ChannelRowPreview)
+// Module 10365 (ChannelRowPreview)
 import UserSettings from "UserSettings" /* 2019 */;
 import useToken from "useToken" /* 4457 */;
 import LinkIcon from "LinkIcon" /* 4698 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import createStyles from "createStyles" /* 4756 */;
 import useFontScale from "useFontScale" /* 5193 */;
-import ImageIcon from "ImageIcon" /* 5298 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 8123 */;
-import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8125 */;
-import RowGeneratorDefault from "RowGenerator" /* 8189 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8193 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8394 */;
-import MusicIcon from "MusicIcon" /* 10166 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 10349 */;
-import VideoIcon from "VideoIcon" /* 10365 */;
-import AttachmentIcon from "AttachmentIcon" /* 10367 */;
-import StickerIcon from "StickerIcon" /* 10369 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10371 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10374 */;
-import ChannelListLayout from "ChannelListLayout" /* 10376 */;
+import ImageIcon from "ImageIcon" /* 5305 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 8124 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8126 */;
+import RowGeneratorDefault from "RowGenerator" /* 8190 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8194 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8395 */;
+import MusicIcon from "MusicIcon" /* 10167 */;
+import useFormattedMessagePreview from "useFormattedMessagePreview" /* 10350 */;
+import VideoIcon from "VideoIcon" /* 10366 */;
+import AttachmentIcon from "AttachmentIcon" /* 10368 */;
+import StickerIcon from "StickerIcon" /* 10370 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10372 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10375 */;
+import ChannelListLayout from "ChannelListLayout" /* 10377 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4405 */;
 

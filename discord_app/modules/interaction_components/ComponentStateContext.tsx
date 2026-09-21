@@ -1,21 +1,21 @@
-// === Module 8380: ComponentStateContext ===
+// === Module 8381: ComponentStateContext ===
 
-// Module 8380 (ComponentStateContext)
+// Module 8381 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Server from "Server" /* 1978 */;
 import InteractionTypes from "InteractionTypes" /* 4985 */;
 import InteractionComponentTypes from "InteractionComponentTypes" /* 4987 */;
 import useMountEffectDefault from "useMountEffect" /* 5203 */;
-import InteractionUtils from "InteractionUtils" /* 8384 */;
+import InteractionUtils from "InteractionUtils" /* 8385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 8198 */;
+import InteractionStore from "InteractionStore" /* 8199 */;
 import LurkingStore from "LurkingStore" /* 4396 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5625 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5630 */;
 import UserStore from "UserStore" /* 1372 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8381 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8382 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -131,11 +131,11 @@ function useShouldDisableInteractiveComponents(channel_id) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(8234);
-  const isThreadModerator = channel(7509).useIsThreadModerator(channel);
-  const tmpResult = channel(7509);
+  const obj5 = channel(8235);
+  const isThreadModerator = channel(7511).useIsThreadModerator(channel);
+  const tmpResult = channel(7511);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(7509).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7511).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }

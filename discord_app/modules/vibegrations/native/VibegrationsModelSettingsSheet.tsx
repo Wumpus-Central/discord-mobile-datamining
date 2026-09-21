@@ -1,15 +1,15 @@
-// === Module 17053: VibegrationsModelSettingsSheet ===
+// === Module 17061: VibegrationsModelSettingsSheet ===
 
-// Module 17053 (VibegrationsModelSettingsSheet)
+// Module 17061 (VibegrationsModelSettingsSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker" /* 16937 */;
+import VibegrationsEffortPickerDefault from "VibegrationsEffortPicker" /* 16944 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 13359 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 13361 */;
 
 const require = fn;
 const View = fn(17).View;
-const sendModelSettings = fn(13359).sendModelSettings;
+const sendModelSettings = fn(13361).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const size = fn(2);
@@ -37,7 +37,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     const obj5 = { title: null };
     const intl = tmp(1115).intl;
     obj5.title = intl.string(_modDef3678["2NWMqY"]);
-    obj4.header = closure_7(tmp(7389).BottomSheetTitleHeader, obj5);
+    obj4.header = closure_7(tmp(7394).BottomSheetTitleHeader, obj5);
     const obj6 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: null };
     const obj7 = { settings, choices, disabled: tmp5, onChange: tmp6 };
     const items6 = [closure_7(VibegrationsEffortPickerDefault, obj7), ];
@@ -55,7 +55,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     obj6.children = items6;
     obj8.children = closure_8(tmp(5184).Stack, obj6);
     obj4.children = closure_7(View, obj8);
-    return closure_7(tmp(7437).ActionSheet, obj4);
+    return closure_7(tmp(7442).ActionSheet, obj4);
   }
   const obj3 = projectId(504);
 };

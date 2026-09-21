@@ -1,10 +1,10 @@
-// === Module 7381: FormArrow ===
+// === Module 7386: FormArrow ===
 
-// Module 7381 (FormArrow)
+// Module 7386 (FormArrow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import _modDef7382 from "module_7382" /* 7382 */;
+import _modDef7387 from "module_7387" /* 7387 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default function FormArrow(arg0) {
     const obj4 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj4.style = items1;
-    obj4.source = _modDef7382;
+    obj4.source = _modDef7387;
     obj4.size = native.Icon.Sizes.MEDIUM;
     items[1] = React4(native.Icon, obj4);
     obj2.children = items;
@@ -36,7 +36,7 @@ export default function FormArrow(arg0) {
     const obj = { style: null, source: null, size: null };
     const items2 = [tmp.icon, style];
     obj.style = items2;
-    obj.source = _modDef7382;
+    obj.source = _modDef7387;
     obj.size = native.Icon.Sizes.MEDIUM;
     tmp6 = React4(native.Icon, obj);
   }

@@ -1,11 +1,11 @@
-// === Module 16145: CollectiblesShopCardsGrid ===
+// === Module 16151: CollectiblesShopCardsGrid ===
 
-// Module 16145 (CollectiblesShopCardsGrid)
+// Module 16151 (CollectiblesShopCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9043 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9046 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9044 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9047 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7784 */;
 
 require = fn;
 function ShopCardGridItem(index) {
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9043).COLLECTIBLES_SHOP_CARD_GAP } };
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9044).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
@@ -33,14 +33,14 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(16144).useCardLayout();
+  const cardLayout = products(16150).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   const obj2 = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, contentContainerStyle: null, children: null };
-  let obj = products(16144);
-  obj2.contentContainerStyle = { gap: products(9043).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
+  let obj = products(16150);
+  obj2.contentContainerStyle = { gap: products(9044).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
   obj2.children = memo.map((arr, index) => {
     closure_0 = index;
     return cardWidth(muteBundleStaticBackground, {

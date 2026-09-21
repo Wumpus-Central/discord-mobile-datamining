@@ -1,15 +1,15 @@
-// === Module 17630: VoicePanelFloatingCTAContainer ===
+// === Module 17641: VoicePanelFloatingCTAContainer ===
 
-// Module 17630 (VoicePanelFloatingCTAContainer)
+// Module 17641 (VoicePanelFloatingCTAContainer)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4466 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
 import spring from "spring" /* 5185 */;
-import RowButton from "RowButton" /* 8872 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11258 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12438 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12531 */;
-import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17506 */;
+import RowButton from "RowButton" /* 8873 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11259 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12440 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 12533 */;
+import VoicePanelFloatingCTAUtils from "VoicePanelFloatingCTAUtils" /* 17517 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
@@ -114,8 +114,8 @@ class VoicePanelFloatingCTAContainer {
     return tmp12(tmp13, obj9);
   }
 }
-const UI_SHOW_HIDE_PHYSICS = fn(12524).UI_SHOW_HIDE_PHYSICS;
-let CALL_TILE_GUTTER = fn(12527).CALL_TILE_GUTTER;
+const UI_SHOW_HIDE_PHYSICS = fn(12526).UI_SHOW_HIDE_PHYSICS;
+let CALL_TILE_GUTTER = fn(12529).CALL_TILE_GUTTER;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);

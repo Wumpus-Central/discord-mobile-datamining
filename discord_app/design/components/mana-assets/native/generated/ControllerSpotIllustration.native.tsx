@@ -1,9 +1,9 @@
-// === Module 6109: ControllerSpotIllustration ===
+// === Module 6114: ControllerSpotIllustration ===
 
-// Module 6109 (ControllerSpotIllustration)
+// Module 6114 (ControllerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6110 from "module_6110" /* 6110 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6115 from "module_6115" /* 6115 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ControllerSpotIllustration = function ControllerSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6110 };
+  const obj2 = { uri: _modDef6115 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

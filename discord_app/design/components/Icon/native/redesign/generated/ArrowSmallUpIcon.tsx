@@ -1,9 +1,9 @@
-// === Module 16053: ArrowSmallUpIcon ===
+// === Module 16059: ArrowSmallUpIcon ===
 
-// Module 16053 (ArrowSmallUpIcon)
+// Module 16059 (ArrowSmallUpIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod16054 from "module_16054" /* 16054 */;
+import _mod16060 from "module_16060" /* 16060 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ArrowSmallUpIcon = function ArrowSmallUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16054, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16060, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

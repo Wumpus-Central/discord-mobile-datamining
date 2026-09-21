@@ -1,6 +1,6 @@
-// === Module 13032: PanGestureAnimations ===
+// === Module 13034: PanGestureAnimations ===
 
-// Module 13032 (PanGestureAnimations)
+// Module 13034 (PanGestureAnimations)
 import native from "native" /* 1177 */;
 import timing from "timing" /* 4757 */;
 import spring from "spring" /* 5185 */;

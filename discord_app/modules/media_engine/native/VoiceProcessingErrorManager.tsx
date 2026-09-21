@@ -1,7 +1,7 @@
-// === Module 17897: VoiceProcessingErrorManager ===
+// === Module 17908: VoiceProcessingErrorManager ===
 
-// Module 17897 (VoiceProcessingErrorManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
+// Module 17908 (VoiceProcessingErrorManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7363 */;
 
 let require = fn;
 const prototype = function VoiceProcessingErrorManager() {

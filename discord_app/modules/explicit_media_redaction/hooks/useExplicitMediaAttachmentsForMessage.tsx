@@ -1,8 +1,8 @@
-// === Module 11927: useExplicitMediaAttachmentsForMessage ===
+// === Module 11929: useExplicitMediaAttachmentsForMessage ===
 
-// Module 11927 (useExplicitMediaAttachmentsForMessage)
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7532 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7537 */;
+// Module 11929 (useExplicitMediaAttachmentsForMessage)
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7534 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7539 */;
 import MessageStore from "MessageStore" /* 4976 */;
 
 const require = globalThis.__r;

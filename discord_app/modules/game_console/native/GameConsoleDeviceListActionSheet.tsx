@@ -1,14 +1,14 @@
-// === Module 10051: GameConsoleDeviceListActionSheet ===
+// === Module 10052: GameConsoleDeviceListActionSheet ===
 
-// Module 10051 (GameConsoleDeviceListActionSheet)
+// Module 10052 (GameConsoleDeviceListActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7363 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10043 */;
-import _modDef10052 from "module_10052" /* 10052 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10044 */;
 import _modDef10053 from "module_10053" /* 10053 */;
+import _modDef10054 from "module_10054" /* 10054 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,14 +34,14 @@ function TransferFooter(arg0) {
 function DeviceOption(children) {
   const tmp = closure_15();
   const obj = { style: tmp.deviceOption, children: null };
-  const items = [closure_1_12(React6, { style: tmp.deviceIcon, source: _modDef10052 }), closure_1_12(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name })];
+  const items = [closure_1_12(React6, { style: tmp.deviceIcon, source: _modDef10053 }), closure_1_12(Text_Text.Text, { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name })];
   obj.children = items;
   return map1(React5, obj);
 }
 function EmptyState() {
   const tmp = closure_15();
   const obj = { style: tmp.emptyContainer, children: null };
-  const items = [closure_1_12(React6, { source: _modDef10053, style: tmp.emptyArt }), , ];
+  const items = [closure_1_12(React6, { source: _modDef10054, style: tmp.emptyArt }), , ];
   const obj3 = { style: tmp.emptyHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.OkJf1e);
@@ -110,7 +110,7 @@ export default function GameConsoleListActionSheet(arg0) {
             timestampProducer(true);
             v1 = 1;
             dependencyMap = 1;
-            const obj4 = { value: tmp4(10050).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
+            const obj4 = { value: tmp4(10051).transferToPlaystationWithAlert(require, stateFromStores[_slicedToArray], importDefault), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {

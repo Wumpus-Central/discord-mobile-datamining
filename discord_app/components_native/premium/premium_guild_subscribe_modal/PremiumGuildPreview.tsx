@@ -1,20 +1,20 @@
-// === Module 13867: PremiumGuildPreview ===
+// === Module 13873: PremiumGuildPreview ===
 
-// Module 13867 (PremiumGuildPreview)
+// Module 13873 (PremiumGuildPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import shared from "shared" /* 4607 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 4649 */;
-import GuildIcon from "GuildIcon" /* 5796 */;
-import _modDef13868 from "module_13868" /* 13868 */;
-import _modDef13869 from "module_13869" /* 13869 */;
-import _modDef13870 from "module_13870" /* 13870 */;
-import _modDef13871 from "module_13871" /* 13871 */;
-import _modDef13872 from "module_13872" /* 13872 */;
-import _modDef13873 from "module_13873" /* 13873 */;
+import GuildIcon from "GuildIcon" /* 5801 */;
 import _modDef13874 from "module_13874" /* 13874 */;
 import _modDef13875 from "module_13875" /* 13875 */;
+import _modDef13876 from "module_13876" /* 13876 */;
+import _modDef13877 from "module_13877" /* 13877 */;
+import _modDef13878 from "module_13878" /* 13878 */;
+import _modDef13879 from "module_13879" /* 13879 */;
+import _modDef13880 from "module_13880" /* 13880 */;
+import _modDef13881 from "module_13881" /* 13881 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -27,32 +27,32 @@ function PremiumGuildTierPill(arg0) {
   const obj = { style: tmp.tierPill, children: null };
   const obj2 = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp22 = _modDef13869;
-    const tmp21 = _modDef13868;
+    let tmp22 = _modDef13875;
+    const tmp21 = _modDef13874;
     if (obj5.isThemeDark(theme)) {
       tmp22 = tmp21;
     }
     let tmp7 = tmp22;
     obj5 = shared;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp17 = _modDef13871;
-    const tmp16 = _modDef13870;
+    let tmp17 = _modDef13877;
+    const tmp16 = _modDef13876;
     if (obj4.isThemeDark(theme)) {
       tmp17 = tmp16;
     }
     tmp7 = tmp17;
     obj4 = shared;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp12 = _modDef13873;
-    const tmp11 = _modDef13872;
+    let tmp12 = _modDef13879;
+    const tmp11 = _modDef13878;
     if (obj3.isThemeDark(theme)) {
       tmp12 = tmp11;
     }
     tmp7 = tmp12;
     obj3 = shared;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp8 = _modDef13875;
-    const tmp26 = _modDef13874;
+    let tmp8 = _modDef13881;
+    const tmp26 = _modDef13880;
     if (obj8.isThemeDark(theme)) {
       tmp8 = tmp26;
     }
@@ -74,12 +74,12 @@ const jsxProd = fn(21);
 const createStyles = fn(4756);
 let obj2 = { guild: { padding: 16, borderRadius: nativeDefault.radii.xs, flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, guildInfo: { marginLeft: 16 }, guildName: null, tierPill: null, tierPillImage: null, tierPillText: null };
 let obj3 = { padding: 16, borderRadius: nativeDefault.radii.xs, flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5653).DARK_WHITE_500_LIGHT_BLACK_500 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5653).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5658).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5658).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.tierPill = { marginTop: 8, padding: 4, paddingRight: 8, alignSelf: "flex-start", flexDirection: "row", borderRadius: 11, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tierPillImage = { width: 16, height: 16 };
 let obj5 = { marginTop: 8, padding: 4, paddingRight: 8, alignSelf: "flex-start", flexDirection: "row", borderRadius: 11, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5653).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5658).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx");

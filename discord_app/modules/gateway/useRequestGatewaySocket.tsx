@@ -1,8 +1,8 @@
-// === Module 14834: useRequestGatewaySocket ===
+// === Module 14840: useRequestGatewaySocket ===
 
-// Module 14834 (useRequestGatewaySocket)
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7997 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11561 */;
+// Module 14840 (useRequestGatewaySocket)
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7999 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11563 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

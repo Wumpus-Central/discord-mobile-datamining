@@ -1,6 +1,6 @@
-// === Module 11417: UserProfilePrimaryInfo ===
+// === Module 11419: UserProfilePrimaryInfo ===
 
-// Module 11417 (UserProfilePrimaryInfo)
+// Module 11419 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -8,21 +8,21 @@ import StringUtils from "StringUtils" /* 2009 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
 import UserUtilsDefault from "UserUtils" /* 4600 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import Pressables from "Pressables" /* 5334 */;
-import QuestTypes from "QuestTypes" /* 5659 */;
-import openUserSettings from "openUserSettings" /* 7622 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7962 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7963 */;
-import captureAdUserAction from "captureAdUserAction" /* 7964 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7974 */;
-import GuildTagUtils from "GuildTagUtils" /* 8433 */;
-import BadgeId from "BadgeId" /* 8452 */;
-import useBadges from "useBadges" /* 8510 */;
-import BotTagDefault from "BotTag" /* 9551 */;
-import GuildTagDefault from "GuildTag" /* 10012 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11159 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11458 */;
-import BadgeUtils from "BadgeUtils" /* 11462 */;
+import Pressables from "Pressables" /* 5339 */;
+import QuestTypes from "QuestTypes" /* 5664 */;
+import openUserSettings from "openUserSettings" /* 7624 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7964 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7965 */;
+import captureAdUserAction from "captureAdUserAction" /* 7966 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7976 */;
+import GuildTagUtils from "GuildTagUtils" /* 8434 */;
+import BadgeId from "BadgeId" /* 8453 */;
+import useBadges from "useBadges" /* 8511 */;
+import BotTagDefault from "BotTag" /* 9552 */;
+import GuildTagDefault from "GuildTag" /* 10013 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11160 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11460 */;
+import BadgeUtils from "BadgeUtils" /* 11464 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -672,13 +672,13 @@ function GuildTag(style) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8451).getBadgeName;
-let Constants = fn(7448);
+const getBadgeName = fn(8452).getBadgeName;
+let Constants = fn(7453);
 ({ DIVIDER_DOT: closure_8, PROFILE_SIDE_PADDING: closure_9, UserProfileThemeTypes } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_11, UserSettingsSections: closure_12 } = Constants);
-const GuildTagBadgeSize = fn(8201).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8462).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(8202).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8463).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const createStyles = fn(4756);

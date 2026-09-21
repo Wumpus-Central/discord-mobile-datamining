@@ -1,13 +1,13 @@
-// === Module 13254: MediaViewerThumbnails ===
+// === Module 13256: MediaViewerThumbnails ===
 
-// Module 13254 (MediaViewerThumbnails)
+// Module 13256 (MediaViewerThumbnails)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import useToken from "useToken" /* 4457 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4493 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 5174 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13255 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 13257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -39,7 +39,7 @@ function ObscuredView(source) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(8562);
+const Constants = fn(8563);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

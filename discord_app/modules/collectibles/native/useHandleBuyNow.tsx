@@ -1,6 +1,6 @@
-// === Module 13468: useHandleBuyNow ===
+// === Module 13470: useHandleBuyNow ===
 
-// Module 13468 (useHandleBuyNow)
+// Module 13470 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -42,7 +42,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7781).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7783).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -57,7 +57,7 @@ function useHandleBuyNow(product) {
           v1(4723).hideAllActionSheets();
           const obj = v1(4723);
           const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_3 };
-          v1(11343).open(obj8);
+          v1(11345).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

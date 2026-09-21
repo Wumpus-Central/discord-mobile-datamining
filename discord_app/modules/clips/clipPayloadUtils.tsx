@@ -1,12 +1,12 @@
-// === Module 5342: clipPayloadUtils ===
+// === Module 5347: clipPayloadUtils ===
 
-// Module 5342 (clipPayloadUtils)
+// Module 5347 (clipPayloadUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ClipsConstants = fn(5343);
+const ClipsConstants = fn(5348);
 ({ CLIPS_MAX_PARTICIPANTS: closure_4, CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty, ClipSignalTypes: metroRequire, GameEventType: closure_7, CLIP_RUNTIME: closure_8 } = ClipsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const SpeakingFlags = fn(4781).SpeakingFlags;

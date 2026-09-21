@@ -1,6 +1,6 @@
-// === Module 16489: GuildHeaderCoachmarks ===
+// === Module 16495: GuildHeaderCoachmarks ===
 
-// Module 16489 (GuildHeaderCoachmarks)
+// Module 16495 (GuildHeaderCoachmarks)
 import dismissible_content from "dismissible_content" /* 2027 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

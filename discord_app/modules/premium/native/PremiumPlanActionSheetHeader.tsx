@@ -1,19 +1,19 @@
-// === Module 7671: PremiumPlanActionSheetHeader ===
+// === Module 7673: PremiumPlanActionSheetHeader ===
 
-// Module 7671 (PremiumPlanActionSheetHeader)
+// Module 7673 (PremiumPlanActionSheetHeader)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import PremiumUtils from "PremiumUtils" /* 4414 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef7673 from "module_7673" /* 7673 */;
-import _modDef7674 from "module_7674" /* 7674 */;
+import FastImageDefault from "FastImage" /* 5804 */;
 import _modDef7675 from "module_7675" /* 7675 */;
 import _modDef7676 from "module_7676" /* 7676 */;
 import _modDef7677 from "module_7677" /* 7677 */;
-import PremiumPill from "PremiumPill" /* 7678 */;
-import _modDef9498 from "module_9498" /* 9498 */;
-import _modDef9503 from "module_9503" /* 9503 */;
-import _modDef10974 from "module_10974" /* 10974 */;
+import _modDef7678 from "module_7678" /* 7678 */;
+import _modDef7679 from "module_7679" /* 7679 */;
+import PremiumPill from "PremiumPill" /* 7680 */;
+import _modDef9499 from "module_9499" /* 9499 */;
+import _modDef9504 from "module_9504" /* 9504 */;
+import _modDef10975 from "module_10975" /* 10975 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_4, SubscriptionIntervalTypes: hasOwnProperty } = PremiumConstants);
-const getPremiumGradientColor = fn(7672).getPremiumGradientColor;
+const getPremiumGradientColor = fn(7674).getPremiumGradientColor;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4756);
@@ -62,12 +62,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
   const tmp14 = LinearGradientDefault;
   obj2.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
-    let tmp13Result = _modDef7673;
+    let tmp13Result = _modDef7675;
   } else {
     tmp13Result = null;
     if (TIER_0.TIER_1 !== premiumType) {
       if (TIER_0.TIER_2 === premiumType) {
-        tmp13Result = _modDef7674;
+        tmp13Result = _modDef7676;
       }
     }
   }
@@ -75,11 +75,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     const items = [tmp13Result, , ];
     const obj3 = { style: tmp.logoContainer, children: null };
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result8 = _modDef7675;
+      let tmp13Result8 = _modDef7677;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result8 = _modDef7676;
+      tmp13Result8 = _modDef7678;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result8 = _modDef7677;
+      tmp13Result8 = _modDef7679;
     }
     const obj4 = { source: tmp13Result8, resizeMode: "contain" };
     const items1 = [React5(FastImageDefault, obj4), , ];
@@ -99,11 +99,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     items[1] = React6(View, obj3);
     const tmp13Result7 = FastImageDefault;
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result10 = _modDef9498;
+      let tmp13Result10 = _modDef9499;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result10 = _modDef10974;
+      tmp13Result10 = _modDef10975;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result10 = _modDef9503;
+      tmp13Result10 = _modDef9504;
     }
     const obj7 = { source: tmp13Result10, style: null, resizeMode: "contain" };
     const items2 = [tmp.imgWumpus, ];
@@ -123,12 +123,12 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     tmp13Result9 = FastImageDefault;
   } else {
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result12 = _modDef7673;
+      let tmp13Result12 = _modDef7675;
     } else {
       tmp13Result12 = null;
       if (TIER_0.TIER_1 !== premiumType) {
         if (TIER_0.TIER_2 === premiumType) {
-          tmp13Result12 = _modDef7674;
+          tmp13Result12 = _modDef7676;
         }
       }
     }

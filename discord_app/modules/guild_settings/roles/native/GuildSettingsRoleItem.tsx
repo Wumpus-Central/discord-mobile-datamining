@@ -1,8 +1,8 @@
-// === Module 18045: GuildSettingsRoleItem ===
+// === Module 18056: GuildSettingsRoleItem ===
 
-// Module 18045 (GuildSettingsRoleItem)
+// Module 18056 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5732 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5737 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -136,7 +136,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    const obj6 = { value: tmp2(11822).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    const obj6 = { value: tmp2(11824).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj6;
                   }
                 } else if (arg0 === 1) {
@@ -260,7 +260,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
     }
     let tmp24Result = null;
     if (null != prop) {
-      const obj23 = { size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_10559"), "aria-label": null, style: null };
+      const obj23 = { size: tmp5(onMoveUp[25]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_10560"), "aria-label": null, style: null };
       const intl6 = tmp5(onMoveUp[11]).intl;
       obj23["aria-label"] = intl6.string(tmp5(onMoveUp[11]).t.a2Ak8b);
       obj23.style = tmp4.sparkleIcon;

@@ -1,13 +1,13 @@
-// === Module 16575: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 16581: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 16575 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 16581 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7390 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9854 */;
-import _modDef16576 from "module_16576" /* 16576 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7395 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9855 */;
+import _modDef16582 from "module_16582" /* 16582 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null
   };
-  const obj2 = { source: _modDef16576 };
+  const obj2 = { source: _modDef16582 };
   const items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

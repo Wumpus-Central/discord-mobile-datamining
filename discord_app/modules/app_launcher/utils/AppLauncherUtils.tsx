@@ -1,20 +1,20 @@
-// === Module 9402: AppLauncherUtils ===
+// === Module 9403: AppLauncherUtils ===
 
-// Module 9402 (AppLauncherUtils)
+// Module 9403 (AppLauncherUtils)
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import Server from "Server" /* 1978 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7761 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9134 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9522 */;
-import getPlatformDefault from "getPlatform" /* 9523 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9531 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7763 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9135 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9523 */;
+import getPlatformDefault from "getPlatform" /* 9524 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9532 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9403 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9404 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;
-import AppLauncherStore from "AppLauncherStore" /* 9521 */;
+import AppLauncherStore from "AppLauncherStore" /* 9522 */;
 
 const require = globalThis.__r;
 

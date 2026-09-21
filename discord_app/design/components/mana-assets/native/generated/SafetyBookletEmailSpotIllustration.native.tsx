@@ -1,9 +1,9 @@
-// === Module 6629: SafetyBookletEmailSpotIllustration ===
+// === Module 6634: SafetyBookletEmailSpotIllustration ===
 
-// Module 6629 (SafetyBookletEmailSpotIllustration)
+// Module 6634 (SafetyBookletEmailSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6630 from "module_6630" /* 6630 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6635 from "module_6635" /* 6635 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SafetyBookletEmailSpotIllustration = function SafetyBookletEmailSpo
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6630 };
+  const obj2 = { uri: _modDef6635 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,6 +1,6 @@
-// === Module 11954: DestinationFailedAlertModal ===
+// === Module 11956: DestinationFailedAlertModal ===
 
-// Module 11954 (DestinationFailedAlertModal)
+// Module 11956 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -8,7 +8,7 @@ import UserUtilsDefault from "UserUtils" /* 4600 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import useChannelNameDefault from "useChannelName" /* 4909 */;
 import AlertModal from "AlertModal" /* 5114 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11173 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11174 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildStore from "GuildStore" /* 2063 */;
@@ -77,7 +77,7 @@ function FailedChannelRow(channel) {
   const obj2 = { style: tmp.row, children: null };
   const obj = channel(504);
   const tmp3 = useChannelNameDefault(channel);
-  const items1 = [closure_10(channel(11266).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11266).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4752).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
+  const items1 = [closure_10(channel(11268).GuildIconWithChannelType, { "aria-label": "", guild: stateFromStores, channel, size: channel(11268).GuildIconWithChannelTypeSizes.SMALL_32 }), closure_10(channel(4752).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 })];
   obj2.children = items1;
   return closure_11(View, obj2);
 }

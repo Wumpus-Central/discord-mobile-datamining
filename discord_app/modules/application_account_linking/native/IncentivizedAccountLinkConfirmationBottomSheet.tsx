@@ -1,6 +1,6 @@
-// === Module 17399: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 17410: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 17399 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 17410 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -8,12 +8,12 @@ import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
 import LinkingDefault from "Linking" /* 4451 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9089 */;
-import PromoSheet from "PromoSheet" /* 10487 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 13247 */;
-import _modDef16151 from "module_16151" /* 16151 */;
-import _modDef16152 from "module_16152" /* 16152 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 9090 */;
+import PromoSheet from "PromoSheet" /* 10488 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 13249 */;
+import _modDef16157 from "module_16157" /* 16157 */;
+import _modDef16158 from "module_16158" /* 16158 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 
@@ -29,7 +29,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     let obj2 = { source: null, style: null };
-    const obj3 = { uri: _modDef16151 };
+    const obj3 = { uri: _modDef16157 };
     obj2.source = obj3;
     const size = { width: v150, height: v150 };
     obj2.style = size;
@@ -38,16 +38,16 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj4 = { url: _modDef16152, style: null };
+      const obj4 = { url: _modDef16158, style: null };
       const size1 = { width: v150, height: v150 };
       obj4.style = size1;
-      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16152, style: null });
+      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16158, style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
       const tmp4Result = APNGDecorationNativeComponentDefault;
     } else {
       const obj5 = { source: null, resizeMode: "contain", style: null };
-      const obj6 = { uri: _modDef16152 };
+      const obj6 = { uri: _modDef16158 };
       obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
       obj5.style = size2;

@@ -1,8 +1,8 @@
-// === Module 14388: NitroWheel ===
+// === Module 14394: NitroWheel ===
 
-// Module 14388 (NitroWheel)
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef9473 from "module_9473" /* 9473 */;
+// Module 14394 (NitroWheel)
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef9474 from "module_9474" /* 9474 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -10,6 +10,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
 
 export default function NitroWheel(style) {
-  const obj = { source: _modDef9473, style: style.style, resizeMode: "contain" };
-  return jsx(FastImageDefault, { source: _modDef9473, style: style.style, resizeMode: "contain" });
+  const obj = { source: _modDef9474, style: style.style, resizeMode: "contain" };
+  return jsx(FastImageDefault, { source: _modDef9474, style: style.style, resizeMode: "contain" });
 };

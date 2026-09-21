@@ -1,20 +1,20 @@
-// === Module 8009: TrackingUtils ===
+// === Module 8011: TrackingUtils ===
 
-// Module 8009 (TrackingUtils)
+// Module 8011 (TrackingUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2050 */;
-import ForumSessionAnalyticsManagerDefault from "ForumSessionAnalyticsManager" /* 8011 */;
-import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8012 */;
-import ForumPostAnalyticsManagerDefault from "ForumPostAnalyticsManager" /* 8013 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5719 */;
+import ForumSessionAnalyticsManagerDefault from "ForumSessionAnalyticsManager" /* 8013 */;
+import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 8014 */;
+import ForumPostAnalyticsManagerDefault from "ForumPostAnalyticsManager" /* 8015 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5724 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4397 */;
-import ThreadMembersStore from "ThreadMembersStore" /* 8010 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7546 */;
+import ThreadMembersStore from "ThreadMembersStore" /* 8012 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7548 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import DraftStore from "DraftStore" /* 5105 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7517 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7519 */;
 
 require = fn;
 function collectForumAnalyticsMetadata(sessionId) {

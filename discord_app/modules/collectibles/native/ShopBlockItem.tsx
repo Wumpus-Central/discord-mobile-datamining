@@ -1,10 +1,10 @@
-// === Module 16132: ShopBlockItem ===
+// === Module 16138: ShopBlockItem ===
 
-// Module 16132 (ShopBlockItem)
+// Module 16138 (ShopBlockItem)
 import nativeDefault from "native" /* 576 */;
-import ShopBlockType from "ShopBlockType" /* 7812 */;
+import ShopBlockType from "ShopBlockType" /* 7814 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7782 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7784 */;
 
 require = fn;
 const View = fn(17).View;

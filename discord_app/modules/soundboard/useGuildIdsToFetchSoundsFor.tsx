@@ -1,6 +1,6 @@
-// === Module 7580: useGuildIdsToFetchSoundsFor ===
+// === Module 7582: useGuildIdsToFetchSoundsFor ===
 
-// Module 7580 (useGuildIdsToFetchSoundsFor)
+// Module 7582 (useGuildIdsToFetchSoundsFor)
 import _mod19 from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import SoundboardStore from "SoundboardStore" /* 5224 */;

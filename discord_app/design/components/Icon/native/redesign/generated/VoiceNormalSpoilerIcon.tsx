@@ -1,6 +1,6 @@
-// === Module 5311: VoiceNormalSpoilerIcon ===
+// === Module 5318: VoiceNormalSpoilerIcon ===
 
-// Module 5311 (VoiceNormalSpoilerIcon)
+// Module 5318 (VoiceNormalSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5253 from "module_5253" /* 5253 */;

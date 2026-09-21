@@ -1,18 +1,18 @@
-// === Module 13810: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 13816: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 13810 (PremiumPlanSelectYearlyUpsellModal)
+// Module 13816 (PremiumPlanSelectYearlyUpsellModal)
 import common_AlertDefault from "common/Alert" /* 5205 */;
-import TextStylesDefault from "TextStyles" /* 5736 */;
-import _modDef13811 from "module_13811" /* 13811 */;
+import TextStylesDefault from "TextStyles" /* 5741 */;
+import _modDef13817 from "module_13817" /* 13817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
-import IAPStore from "IAPStore" /* 7477 */;
+import IAPStore from "IAPStore" /* 7482 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13801).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13807).usePremiumPlanSelectStore;
 let closure_10 = fn(1374).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -23,9 +23,9 @@ const merged = Object.assign(TextStylesDefault(fn(1085).Fonts.DISPLAY_EXTRABOLD,
 obj3.alignSelf = "center";
 obj3.textAlign = "center";
 obj3.paddingBottom = 8;
-obj3.color = fn(5653).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(5658).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5653).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.description = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: fn(5658).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.upsellButton = { marginBottom: 16 };
 obj2.continueButton = { marginBottom: 4 };
 obj2.cancelButton = { marginTop: 8, marginBottom: 4 };
@@ -43,8 +43,8 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   [tmp4, c3] = noop.useState(null);
   const obj = noop;
   const tmp3 = _slicedToArray(noop.useState(null), 2);
-  const premiumBundledItemsFromProductId = productId(7649).getPremiumBundledItemsFromProductId(productId);
-  const obj2 = productId(7649);
+  const premiumBundledItemsFromProductId = productId(7651).getPremiumBundledItemsFromProductId(productId);
+  const obj2 = productId(7651);
   let items = [LocaleStore];
   const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
   const obj3 = productId(504);
@@ -80,7 +80,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const obj6 = { style: tmp.container, children: null };
     const obj7 = { style: tmp.image, source: null };
     const tmp5Result = productId(1881);
-    obj7.source = _modDef13811;
+    obj7.source = _modDef13817;
     const items2 = [closure_11(closure_5, obj7), , , , , ];
     const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1115).intl;

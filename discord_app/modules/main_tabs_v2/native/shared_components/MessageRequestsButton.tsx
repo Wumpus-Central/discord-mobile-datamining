@@ -1,16 +1,16 @@
-// === Module 16361: MessageRequestsButton ===
+// === Module 16367: MessageRequestsButton ===
 
-// Module 16361 (MessageRequestsButton)
+// Module 16367 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import IconButton from "IconButton" /* 8178 */;
-import _modDef10138 from "module_10138" /* 10138 */;
-import IconActionButton from "IconActionButton" /* 13555 */;
-import _mod16362 from "module_16362" /* 16362 */;
+import IconButton from "IconButton" /* 8179 */;
+import _modDef10139 from "module_10139" /* 10139 */;
+import IconActionButton from "IconActionButton" /* 13561 */;
+import _mod16368 from "module_16368" /* 16368 */;
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 7459 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7460 */;
+import MessageRequestStore from "MessageRequestStore" /* 7464 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7465 */;
 
 const IconActionButtonDefault = IconActionButton;
 
@@ -32,7 +32,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod16362.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod16368.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -82,7 +82,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj3.children = items2;
     return React6(View, obj3);
   } else {
-    const obj6 = { source: _modDef10138, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj6 = { source: _modDef10139, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = util.intl;
     obj6.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str2;

@@ -1,7 +1,7 @@
-// === Module 9124: FractionalNitroCoinIllustration ===
+// === Module 9125: FractionalNitroCoinIllustration ===
 
-// Module 9124 (FractionalNitroCoinIllustration)
-import native from "native" /* 5904 */;
+// Module 9125 (FractionalNitroCoinIllustration)
+import native from "native" /* 5909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 10890: ImageCarousel ===
+// === Module 10891: ImageCarousel ===
 
-// Module 10890 (ImageCarousel)
+// Module 10891 (ImageCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
@@ -9,15 +9,15 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
 import Text_Text from "Text/Text" /* 4752 */;
 import timing from "timing" /* 4757 */;
 import spring from "spring" /* 5185 */;
-import Upload from "Upload" /* 5339 */;
-import EyeIcon from "EyeIcon" /* 7208 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8513 */;
-import PlayIcon from "PlayIcon" /* 8544 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9420 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10453 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10892 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10894 */;
-import _modDef11509 from "module_11509" /* 11509 */;
+import Upload from "Upload" /* 5344 */;
+import EyeIcon from "EyeIcon" /* 7213 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8514 */;
+import PlayIcon from "PlayIcon" /* 8545 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9421 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10454 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10893 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10895 */;
+import _modDef11511 from "module_11511" /* 11511 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
 
@@ -155,7 +155,7 @@ function Tile(onEdit) {
     let tmp6Result = null;
     if (isThumbnail) {
       const obj2 = { style: tileContainer.footerRightContainer, children: null };
-      const obj3 = { source: _modDef11509, size: native.Icon.Sizes.SMALL_14 };
+      const obj3 = { source: _modDef11511, size: native.Icon.Sizes.SMALL_14 };
       obj2.children = closure_2_11(native.Icon, obj3);
       tmp6Result = closure_2_11(React4, obj2);
     }
@@ -275,7 +275,7 @@ function CustomScrollView(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const DraftType = fn(5105).DraftType;
-const ImageCarouselConstants = fn(10891);
+const ImageCarouselConstants = fn(10892);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;

@@ -1,10 +1,10 @@
-// === Module 16935: VibegrationsArchivePicker ===
+// === Module 16942: VibegrationsArchivePicker ===
 
-// Module 16935 (VibegrationsArchivePicker)
+// Module 16942 (VibegrationsArchivePicker)
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7485 */;
-import FilePickerUtils from "FilePickerUtils" /* 11487 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5275 */;
+import FilePickerUtils from "FilePickerUtils" /* 11489 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -95,7 +95,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(13359);
+const VibegrationsConnectionStore = fn(13361);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty, uploadAttachmentBytes: metroRequire } = VibegrationsConnectionStore);
 let closure_7 = ["zip", "tar", "gz", "tgz", "rar"];
 const size = fn(2);

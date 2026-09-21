@@ -1,12 +1,12 @@
-// === Module 15447: QuestDockContentCollapsed ===
+// === Module 15453: QuestDockContentCollapsed ===
 
-// Module 15447 (QuestDockContentCollapsed)
+// Module 15453 (QuestDockContentCollapsed)
 import spring from "spring" /* 5185 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5656).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15356).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5661).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15362).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj = { questDockContentCollapsed: null };
@@ -28,7 +28,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15357).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(15363).QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
   const fn = function l() {
     let num = 1;
@@ -66,5 +66,5 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   const obj4 = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj4.style = items;
-  return jsx(activeQuestDockMode(7313), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(7318), { style: null, animatedProps, children: children.children });
 });

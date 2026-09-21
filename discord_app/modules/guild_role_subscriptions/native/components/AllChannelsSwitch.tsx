@@ -1,15 +1,15 @@
-// === Module 18209: AllChannelsSwitch ===
+// === Module 18220: AllChannelsSwitch ===
 
-// Module 18209 (AllChannelsSwitch)
+// Module 18220 (AllChannelsSwitch)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4474 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 10010 */;
-import _modDef18210 from "module_18210" /* 18210 */;
-import _modDef18211 from "module_18211" /* 18211 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 10011 */;
+import _modDef18221 from "module_18221" /* 18221 */;
+import _modDef18222 from "module_18222" /* 18222 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5736 */;
+import TextStyles_mod from "TextStyles" /* 5741 */;
 
 const require = globalThis.__r;
 
@@ -44,7 +44,7 @@ function Row(arg0) {
   return timestampProducer(tmp6, obj2);
 }
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(15492).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(15498).AllChannelAccessOptions;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -76,7 +76,7 @@ export default function AllChannelsSwitch(style) {
   const obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  const obj2 = { icon: _modDef18210, label: null, selected: null, onPress: null, disabled: null };
+  const obj2 = { icon: _modDef18221, label: null, selected: null, onPress: null, disabled: null };
   const intl = util.intl;
   obj2.label = intl.string(util.t["vs2T+B"]);
   obj2.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
@@ -85,7 +85,7 @@ export default function AllChannelsSwitch(style) {
   };
   obj2.disabled = disabled;
   const items1 = [closure_5(Row, obj2), closure_5(View, { style: tmp.separator }), ];
-  const obj4 = { icon: _modDef18211, label: null, selected: null, onPress: null, disabled: null };
+  const obj4 = { icon: _modDef18222, label: null, selected: null, onPress: null, disabled: null };
   const intl2 = util.intl;
   obj4.label = intl2.string(util.t.l4Tr7X);
   obj4.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;

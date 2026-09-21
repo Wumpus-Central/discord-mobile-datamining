@@ -1,6 +1,6 @@
-// === Module 6716: ? ===
+// === Module 6721: ? ===
 
-// Module 6716
+// Module 6721
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SpeakerSpotIllustration-2x.png.js");

@@ -1,14 +1,14 @@
-// === Module 15567: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 15573: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 15567 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 15573 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 5185 */;
 import springPresets from "springPresets" /* 5189 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9475 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9505 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10225 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9476 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9506 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10226 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
@@ -34,7 +34,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj2 = { theme, ThemeTypes, StyleSheet, withSpring: theme(5185).withSpring, springStandard: theme(5189).springStandard };
-  analyticsLocations = analyticsLocations(7402)(analyticsLocations(7422).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(7407)(analyticsLocations(7427).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   const obj3 = { style: tmp.nitroUpsell, children: null };
   const callback = noop.useCallback(() => {

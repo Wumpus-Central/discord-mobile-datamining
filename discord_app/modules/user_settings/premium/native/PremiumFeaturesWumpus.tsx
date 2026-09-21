@@ -1,8 +1,8 @@
-// === Module 9497: PremiumFeaturesWumpus ===
+// === Module 9498: PremiumFeaturesWumpus ===
 
-// Module 9497 (PremiumFeaturesWumpus)
-import _modDef9498 from "module_9498" /* 9498 */;
-import _modDef9503 from "module_9503" /* 9503 */;
+// Module 9498 (PremiumFeaturesWumpus)
+import _modDef9499 from "module_9499" /* 9499 */;
+import _modDef9504 from "module_9504" /* 9504 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumTypes = fn(1374).PremiumTypes;
@@ -21,24 +21,24 @@ const result = size.fileFinishedImporting("modules/user_settings/premium/native/
 export default function PremiumFeaturesWumpus(premiumType) {
   premiumType = premiumType.premiumType;
   const tmp = closure_7();
-  const tmp2 = premiumType(7183)();
+  const tmp2 = premiumType(7188)();
   dependencyMap = tmp2;
   const items = [premiumType, tmp2];
   const memo = noop.useMemo(() => {
     if (premiumType === PremiumTypes.TIER_0) {
-      const obj2 = { wumpusImageSource: _modDef9498, cloudsImageSource: importDefault(closure_1 ? 9499 : 9500) };
+      const obj2 = { wumpusImageSource: _modDef9499, cloudsImageSource: importDefault(closure_1 ? 9500 : 9501) };
     } else {
       if (closure_1) {
-        let tmp4 = 9501;
+        let tmp4 = 9502;
       } else {
-        tmp4 = 9502;
+        tmp4 = 9503;
       }
-      const obj = { wumpusImageSource: _modDef9503, cloudsImageSource: importDefault(tmp4) };
+      const obj = { wumpusImageSource: _modDef9504, cloudsImageSource: importDefault(tmp4) };
       return obj;
     }
   }, items);
   ({ wumpusImageSource, cloudsImageSource } = memo);
-  const items1 = [closure_4(premiumType(5799), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }), ];
+  const items1 = [closure_4(premiumType(5804), { style: tmp.clouds, resizeMode: "contain", source: cloudsImageSource }), ];
   const items2 = [tmp.wumpus, ];
   let wumpusLeft = premiumType === PremiumTypes.TIER_0;
   if (wumpusLeft) {
@@ -46,7 +46,7 @@ export default function PremiumFeaturesWumpus(premiumType) {
   }
   let obj2 = { children: null };
   items2[1] = wumpusLeft;
-  items1[1] = closure_4(premiumType(5799), { style: items2, resizeMode: "contain", source: wumpusImageSource });
+  items1[1] = closure_4(premiumType(5804), { style: items2, resizeMode: "contain", source: wumpusImageSource });
   obj2.children = items1;
   return closure_6(closure_5, obj2);
 };

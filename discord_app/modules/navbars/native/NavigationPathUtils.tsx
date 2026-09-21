@@ -1,6 +1,6 @@
-// === Module 13026: NavigationPathUtils ===
+// === Module 13028: NavigationPathUtils ===
 
-// Module 13026 (NavigationPathUtils)
+// Module 13028 (NavigationPathUtils)
 import Constants from "Constants" /* 1074 */;
 import _mod4588 from "module_4588" /* 4588 */;
 import size from "module_2" /* 2 */;

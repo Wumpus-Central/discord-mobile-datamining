@@ -1,11 +1,11 @@
-// === Module 9904: AudioRouteStore ===
+// === Module 9905: AudioRouteStore ===
 
-// Module 9904 (AudioRouteStore)
+// Module 9905 (AudioRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9905 */;
-import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 9906 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9906 */;
+import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 9907 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 15283: useBountiesRecapScroll ===
+// === Module 15289: useBountiesRecapScroll ===
 
-// Module 15283 (useBountiesRecapScroll)
+// Module 15289 (useBountiesRecapScroll)
 import noop from "module_19" /* 19 */;
 
 function getRevealProgress(scrollY, c26, height3) {

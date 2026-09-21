@@ -1,7 +1,7 @@
-// === Module 12758: useFeaturedExpiringPowerup ===
+// === Module 12760: useFeaturedExpiringPowerup ===
 
-// Module 12758 (useFeaturedExpiringPowerup)
-import CollectiblesUtils from "CollectiblesUtils" /* 7794 */;
+// Module 12760 (useFeaturedExpiringPowerup)
+import CollectiblesUtils from "CollectiblesUtils" /* 7796 */;
 import noop from "module_19" /* 19 */;
 import GameServerStore from "GameServerStore" /* 4665 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4644 */;

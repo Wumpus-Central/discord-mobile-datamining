@@ -1,6 +1,6 @@
-// === Module 9731: useIframeLifecycle ===
+// === Module 9732: useIframeLifecycle ===
 
-// Module 9731 (useIframeLifecycle)
+// Module 9732 (useIframeLifecycle)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import noop from "module_19" /* 19 */;
 

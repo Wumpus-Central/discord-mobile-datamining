@@ -1,13 +1,13 @@
-// === Module 16914: GuildSettingsModalMembers ===
+// === Module 16920: GuildSettingsModalMembers ===
 
-// Module 16914 (GuildSettingsModalMembers)
+// Module 16920 (GuildSettingsModalMembers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5732 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7505 */;
-import sortByMatchScore from "sortByMatchScore" /* 10090 */;
-import RolePillDefault from "RolePill" /* 11211 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5737 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7507 */;
+import sortByMatchScore from "sortByMatchScore" /* 10091 */;
+import RolePillDefault from "RolePill" /* 11212 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -17,7 +17,7 @@ import GuildRoleStore from "GuildRoleStore" /* 2099 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 import UserStore from "UserStore" /* 1372 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9855 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9856 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
@@ -26,7 +26,7 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(10090).AutocompleterResultTypes.USER];
+let items = [fn(10091).AutocompleterResultTypes.USER];
 const createStyles = fn(4756);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, searchFieldContainer: null, roleList: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
@@ -91,7 +91,7 @@ let closure_20 = noop.memo((guild) => {
     };
     obj4.start = start;
     obj4.end = end;
-    return closure_15(guildMember(11206), obj4);
+    return closure_15(guildMember(11207), obj4);
   }
   const obj = guild(1484);
 });
@@ -261,12 +261,12 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(9897), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(9898), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1115).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1115).t.ogxXGq);
             obj.ref = ref.ref;
             const merged1 = Object.assign(merged);
-            return closure_1_15(closure_1_0(7617).HeaderActionButton, obj);
+            return closure_1_15(closure_1_0(7619).HeaderActionButton, obj);
           }
         });
       }

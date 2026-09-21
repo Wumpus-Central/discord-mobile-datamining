@@ -1,15 +1,15 @@
-// === Module 12482: application_commands/ApplicationCommandUtils ===
+// === Module 12484: application_commands/ApplicationCommandUtils ===
 
-// Module 12482 (application_commands/ApplicationCommandUtils)
+// Module 12484 (application_commands/ApplicationCommandUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import _modDef1968 from "module_1968" /* 1968 */;
 import DraftStore from "DraftStore" /* 5105 */;
 import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5210 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7763 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9420 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10892 */;
-import _modDef12483 from "module_12483" /* 12483 */;
-import _modDef12484 from "module_12484" /* 12484 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7765 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9421 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10893 */;
+import _modDef12485 from "module_12485" /* 12485 */;
+import _modDef12486 from "module_12486" /* 12486 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
 import size from "module_2" /* 2 */;
 
@@ -23,9 +23,9 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12483);
+      return AvatarUtilsDefault.makeSource(_modDef12485);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12484);
+      return AvatarUtilsDefault.makeSource(_modDef12486);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };

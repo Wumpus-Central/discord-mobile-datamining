@@ -1,10 +1,10 @@
-// === Module 12280: openCustomKeyboard ===
+// === Module 12282: openCustomKeyboard ===
 
-// Module 12280 (openCustomKeyboard)
+// Module 12282 (openCustomKeyboard)
 import KeyboardUIStore from "KeyboardUIStore" /* 1482 */;
 import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4625 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7278 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12239 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7283 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 12241 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/keyboard/native/openCustomKeyboard.android.tsx");

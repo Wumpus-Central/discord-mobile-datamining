@@ -1,6 +1,6 @@
-// === Module 5285: FolderIcon ===
+// === Module 5292: FolderIcon ===
 
-// Module 5285 (FolderIcon)
+// Module 5292 (FolderIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5242 from "module_5242" /* 5242 */;

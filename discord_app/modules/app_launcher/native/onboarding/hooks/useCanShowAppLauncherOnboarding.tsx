@@ -1,14 +1,14 @@
-// === Module 12294: useCanShowAppLauncherOnboarding ===
+// === Module 12296: useCanShowAppLauncherOnboarding ===
 
-// Module 12294 (useCanShowAppLauncherOnboarding)
+// Module 12296 (useCanShowAppLauncherOnboarding)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4675 */;
 import UserStore from "UserStore" /* 1372 */;
-import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12295 */;
-import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12296 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12297 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12298 */;
 
 const require = fn;
 const BuiltInSectionId = fn(5210).BuiltInSectionId;
@@ -63,7 +63,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
     items4.push(tmp2(2027).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
   const tmp2Result10 = channelId(504);
-  const tmp2Result11 = channelId(7628);
+  const tmp2Result11 = channelId(7630);
   const items5 = [AppLauncherOnboardingStore];
   const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(), recentApplicationCommandMetadata: AppLauncherOnboardingStore.getRecentApplicationCommandMetadata() }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);

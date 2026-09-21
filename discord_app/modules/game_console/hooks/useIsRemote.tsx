@@ -1,6 +1,6 @@
-// === Module 7511: useIsRemote ===
+// === Module 7513: useIsRemote ===
 
-// Module 7511 (useIsRemote)
+// Module 7513 (useIsRemote)
 import initialize from "initialize" /* 504 */;
 import GameConsoleStore from "GameConsoleStore" /* 4773 */;
 

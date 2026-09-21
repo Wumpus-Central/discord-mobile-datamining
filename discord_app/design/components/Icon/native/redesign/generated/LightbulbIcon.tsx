@@ -1,9 +1,9 @@
-// === Module 16753: LightbulbIcon ===
+// === Module 16759: LightbulbIcon ===
 
-// Module 16753 (LightbulbIcon)
+// Module 16759 (LightbulbIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod16754 from "module_16754" /* 16754 */;
+import _mod16760 from "module_16760" /* 16760 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const LightbulbIcon = function LightbulbIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16754, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16760, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

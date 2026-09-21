@@ -1,9 +1,9 @@
-// === Module 8915: Arrow ===
+// === Module 8916: Arrow ===
 
-// Module 8915 (Arrow)
+// Module 8916 (Arrow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import _modDef8916 from "module_8916" /* 8916 */;
+import _modDef8917 from "module_8917" /* 8917 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,5 +16,5 @@ const result = size.fileFinishedImporting("modules/in_app_reports/native/compone
 
 export default function Arrow() {
   const tmp = closure_4();
-  return jsx(native.Icon, { source: _modDef8916, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
+  return jsx(native.Icon, { source: _modDef8917, size: native.Icon.Sizes.MEDIUM, style: closure_4().tintColor });
 };

@@ -1,6 +1,6 @@
-// === Module 5291: TextIcon ===
+// === Module 5298: TextIcon ===
 
-// Module 5291 (TextIcon)
+// Module 5298 (TextIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5243 from "module_5243" /* 5243 */;

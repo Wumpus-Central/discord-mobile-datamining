@@ -1,9 +1,9 @@
-// === Module 18088: EnableCommunitySharedNavigation ===
+// === Module 18099: EnableCommunitySharedNavigation ===
 
-// Module 18088 (EnableCommunitySharedNavigation)
+// Module 18099 (EnableCommunitySharedNavigation)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9855 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9856 */;
 
 const require = globalThis.__r;
 

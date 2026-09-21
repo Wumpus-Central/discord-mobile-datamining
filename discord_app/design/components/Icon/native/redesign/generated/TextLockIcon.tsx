@@ -1,6 +1,6 @@
-// === Module 5289: TextLockIcon ===
+// === Module 5296: TextLockIcon ===
 
-// Module 5289 (TextLockIcon)
+// Module 5296 (TextLockIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5265 from "module_5265" /* 5265 */;

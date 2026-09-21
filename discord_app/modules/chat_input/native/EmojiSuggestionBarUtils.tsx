@@ -1,6 +1,6 @@
-// === Module 12678: EmojiSuggestionBarUtils ===
+// === Module 12680: EmojiSuggestionBarUtils ===
 
-// Module 12678 (EmojiSuggestionBarUtils)
+// Module 12680 (EmojiSuggestionBarUtils)
 import native from "native" /* 4466 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
 import timing from "timing" /* 4757 */;

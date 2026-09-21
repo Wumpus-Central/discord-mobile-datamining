@@ -1,18 +1,18 @@
-// === Module 15847: ShowDevWidgetSetting ===
+// === Module 15853: ShowDevWidgetSetting ===
 
-// Module 15847 (ShowDevWidgetSetting)
+// Module 15853 (ShowDevWidgetSetting)
 import initialize from "initialize" /* 504 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 15848 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7953 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 15854 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7955 */;
 
 require = fn;
-const SettingBuilders = fn(11723);
+const SettingBuilders = fn(11725);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: fn(15849).StaffBadgeIcon,
+  IconComponent: fn(15855).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
     const result = DevToolsActionCreators.updateDevToolsSettings({ showDevWidget });
   },
@@ -20,7 +20,7 @@ const toggle = SettingBuilders.createToggle({
     const items = [DevToolsSettingsStore];
     return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
   },
-  usePredicate: fn(15114).useStaffOrDeveloperSettingPredicate
+  usePredicate: fn(15120).useStaffOrDeveloperSettingPredicate
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowDevWidgetSetting.tsx");

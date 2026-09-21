@@ -1,9 +1,9 @@
-// === Module 16499: guild_themes/useGuildThemeNuxTrigger ===
+// === Module 16505: guild_themes/useGuildThemeNuxTrigger ===
 
-// Module 16499 (guild_themes/useGuildThemeNuxTrigger)
+// Module 16505 (guild_themes/useGuildThemeNuxTrigger)
 import dismissible_content from "dismissible_content" /* 2027 */;
 import GuildThemeResolver from "GuildThemeResolver" /* 4640 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7628 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7630 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

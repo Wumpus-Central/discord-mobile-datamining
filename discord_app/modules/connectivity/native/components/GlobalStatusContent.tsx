@@ -1,15 +1,15 @@
-// === Module 9773: GlobalStatusContent ===
+// === Module 9774: GlobalStatusContent ===
 
-// Module 9773 (GlobalStatusContent)
+// Module 9774 (GlobalStatusContent)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import useThemeDefault from "useTheme" /* 4690 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9645 */;
-import StatusBarDefault from "StatusBar" /* 9649 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9671 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9765 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9768 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9774 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9646 */;
+import StatusBarDefault from "StatusBar" /* 9650 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9672 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9766 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9769 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9775 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildStore from "GuildStore" /* 2063 */;
@@ -20,7 +20,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9767).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(9768).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

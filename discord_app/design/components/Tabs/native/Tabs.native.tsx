@@ -1,11 +1,11 @@
-// === Module 12865: Tabs/Tabs ===
+// === Module 12867: Tabs/Tabs ===
 
-// Module 12865 (Tabs/Tabs)
+// Module 12867 (Tabs/Tabs)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4492 */;
 import spring from "spring" /* 5185 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6892 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9663 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6897 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9664 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 
@@ -317,7 +317,7 @@ export const Tabs = function Tabs(state) {
         const result = pressed.set(-1);
       };
       obj.variant = variant;
-      return variant(state(12866).TabItem, obj, id);
+      return variant(state(12868).TabItem, obj, id);
     })
   }), items3);
   const memo1 = simultaneousHandlers.useMemo(() => {

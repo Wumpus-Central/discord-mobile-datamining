@@ -1,13 +1,13 @@
-// === Module 9564: FramesManager ===
+// === Module 9565: FramesManager ===
 
-// Module 9564 (FramesManager)
+// Module 9565 (FramesManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import FramesStore from "FramesStore" /* 9312 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7358 */;
+import FramesStore from "FramesStore" /* 9313 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7363 */;
 
 let require = fn;
-const EmbeddedSurfaceType = fn(9313).EmbeddedSurfaceType;
+const EmbeddedSurfaceType = fn(9314).EmbeddedSurfaceType;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire } = Constants);
 const TransportTypes = fn(4660).TransportTypes;
@@ -21,14 +21,14 @@ class FramesManager extends tmp3 {
           },
       FRAME_LAUNCH(arg0) {
             ({ applicationId, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9565).trackFrameSessionStart(applicationId, analyticsContext);
+            const result = applyArgumentsResult(9566).trackFrameSessionStart(applicationId, analyticsContext);
           },
       FRAME_LAUNCH_FAIL(arg0) {
             ({ applicationId, error, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9565).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+            const result = applyArgumentsResult(9566).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(9565).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(9566).trackFrameSessionEnd(applicationId.applicationId);
           },
       VOICE_CHANNEL_SELECT(arg0) {
             const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);

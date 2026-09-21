@@ -1,9 +1,9 @@
-// === Module 6621: RewardsMouseSpotIllustration ===
+// === Module 6626: RewardsMouseSpotIllustration ===
 
-// Module 6621 (RewardsMouseSpotIllustration)
+// Module 6626 (RewardsMouseSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6622 from "module_6622" /* 6622 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6627 from "module_6627" /* 6627 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const RewardsMouseSpotIllustration = function RewardsMouseSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6622 };
+  const obj2 = { uri: _modDef6627 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

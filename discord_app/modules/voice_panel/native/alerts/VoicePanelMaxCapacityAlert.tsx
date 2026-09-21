@@ -1,7 +1,7 @@
-// === Module 17643: VoicePanelMaxCapacityAlert ===
+// === Module 17654: VoicePanelMaxCapacityAlert ===
 
-// Module 17643 (VoicePanelMaxCapacityAlert)
-import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17641 */;
+// Module 17654 (VoicePanelMaxCapacityAlert)
+import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 17652 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 

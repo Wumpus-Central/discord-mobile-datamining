@@ -1,8 +1,8 @@
-// === Module 7484: VibegrationsUtils ===
+// === Module 5274: VibegrationsUtils ===
 
-// Module 7484 (VibegrationsUtils)
-import VibegrationsTypes from "VibegrationsTypes" /* 7485 */;
-import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 7486 */;
+// Module 5274 (VibegrationsUtils)
+import VibegrationsTypes from "VibegrationsTypes" /* 5275 */;
+import VibegrationsGuildExperiment from "VibegrationsGuildExperiment" /* 5276 */;
 import GuildChannelStore_mod from "GuildChannelStore" /* 2096 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;

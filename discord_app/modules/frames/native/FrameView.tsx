@@ -1,13 +1,14 @@
-// === Module 16960: FrameView ===
+// === Module 16967: FrameView ===
 
-// Module 16960 (FrameView)
+// Module 16967 (FrameView)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9561 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16961 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9562 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16968 */;
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation" /* 16973 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9312 */;
+import FramesStore from "FramesStore" /* 9313 */;
 
 require = fn;
 function FrameViewInner(frame) {
@@ -71,7 +72,7 @@ function FrameViewInner(frame) {
   }} applicationId={frame.applicationId} frameId={frame.id} activityUrl={frame.data.url} queryParams={null} onLoadError={null} allowPopups={null} referrerPolicy="origin" isPipOrGridMode={null} webViewKey={null} safeAreasConfig={null} />;
   return jsx(frame(setIsResetting[10]).BaseActivityView, { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null });
 }
-const FramesConstants = fn(9313);
+const FramesConstants = fn(9314);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const ActivityPlatform = fn(2004).ActivityPlatform;
 const jsx = fn(21).jsx;
@@ -92,16 +93,25 @@ const result = size.fileFinishedImporting("modules/frames/native/FrameView.tsx")
 export default memoResult;
 export const InlineFrameView = function InlineFrameView(frameId) {
   frameId = frameId.frameId;
-  let tmp = null;
   const merged = Object.assign(frameId, Object.assign({ frameId: 0 }));
   const items = [FramesStore];
   const items1 = [frameId];
   const stateFromStores = frameId(504).useStateFromStores(items, () => timestampProducer(FramesStore.getFrame(frameId)), items1);
+  let applicationId;
+  const obj = frameId(504);
+  if (stateFromStores != null) {
+    applicationId = stateFromStores.applicationId;
+  }
+  if (applicationId == null) {
+    applicationId = null;
+  }
+  useInlineFrameOAuthNavigationDefault(applicationId);
+  let tmp6 = null;
   if (null != stateFromStores) {
     const obj2 = { frame: stateFromStores };
     const merged1 = Object.assign(merged);
-    tmp = <FrameViewInner frame={stateFromStores} />;
+    tmp6 = <FrameViewInner frame={stateFromStores} />;
   }
-  return tmp;
+  return tmp6;
 };
 export const FrameView = memoResult;

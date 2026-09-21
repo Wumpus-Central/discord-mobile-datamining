@@ -1,6 +1,6 @@
-// === Module 16930: VibegrationsDesignFeedback ===
+// === Module 16936: VibegrationsDesignFeedback ===
 
-// Module 16930 (VibegrationsDesignFeedback)
+// Module 16936 (VibegrationsDesignFeedback)
 import size from "module_2" /* 2 */;
 
 function labelVibegrationsDesignTarget(target) {

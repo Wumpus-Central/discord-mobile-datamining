@@ -1,6 +1,6 @@
-// === Module 16769: ForYouRecentActivitySectionHeader ===
+// === Module 16775: ForYouRecentActivitySectionHeader ===
 
-// Module 16769 (ForYouRecentActivitySectionHeader)
+// Module 16775 (ForYouRecentActivitySectionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Text_Text from "Text/Text" /* 4752 */;

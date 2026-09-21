@@ -1,6 +1,6 @@
-// === Module 6358: ? ===
+// === Module 6363: ? ===
 
-// Module 6358
+// Module 6363
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemSpotIllustration-2x.png.js");

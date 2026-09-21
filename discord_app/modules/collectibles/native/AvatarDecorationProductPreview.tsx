@@ -1,10 +1,10 @@
-// === Module 13443: AvatarDecorationProductPreview ===
+// === Module 13445: AvatarDecorationProductPreview ===
 
-// Module 13443 (AvatarDecorationProductPreview)
+// Module 13445 (AvatarDecorationProductPreview)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useShopProductItems from "useShopProductItems" /* 8439 */;
-import useCurrentUser from "useCurrentUser" /* 8446 */;
+import useShopProductItems from "useShopProductItems" /* 8440 */;
+import useCurrentUser from "useCurrentUser" /* 8447 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

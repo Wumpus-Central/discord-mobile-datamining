@@ -1,11 +1,11 @@
-// === Module 14079: VoiceQuality ===
+// === Module 14085: VoiceQuality ===
 
-// Module 14079 (VoiceQuality)
+// Module 14085 (VoiceQuality)
 import _modDef12 from "module_12" /* 12 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4811 */;
-import Histogram from "Histogram" /* 7982 */;
-import SystemResourcesDefault from "SystemResources" /* 7988 */;
-import NetworkQualityDefault from "NetworkQuality" /* 14080 */;
+import Histogram from "Histogram" /* 7984 */;
+import SystemResourcesDefault from "SystemResources" /* 7990 */;
+import NetworkQualityDefault from "NetworkQuality" /* 14086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4814 */;
 

@@ -1,24 +1,24 @@
-// === Module 16368: MessagesItemChannelContent ===
+// === Module 16374: MessagesItemChannelContent ===
 
-// Module 16368 (MessagesItemChannelContent)
+// Module 16374 (MessagesItemChannelContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import _modDef4348 from "module_4348" /* 4348 */;
 import useThemeDefault from "useTheme" /* 4690 */;
 import useChannelNameDefault from "useChannelName" /* 4909 */;
-import _modDef7207 from "module_7207" /* 7207 */;
-import _modDef8187 from "module_8187" /* 8187 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8644 */;
-import BotTagDefault from "BotTag" /* 9551 */;
-import GuildTagDefault from "GuildTag" /* 10012 */;
-import _modDef10399 from "module_10399" /* 10399 */;
-import ActivityStatusDefault from "ActivityStatus" /* 11137 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11159 */;
-import _modDef11219 from "module_11219" /* 11219 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15583 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16370 */;
-import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16372 */;
+import _modDef7212 from "module_7212" /* 7212 */;
+import _modDef8188 from "module_8188" /* 8188 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8645 */;
+import BotTagDefault from "BotTag" /* 9552 */;
+import GuildTagDefault from "GuildTag" /* 10013 */;
+import _modDef10400 from "module_10400" /* 10400 */;
+import ActivityStatusDefault from "ActivityStatus" /* 11138 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 11160 */;
+import _modDef11220 from "module_11220" /* 11220 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15589 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16376 */;
+import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16378 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4771 */;
 
@@ -27,19 +27,19 @@ function MessagesItemChannelContentIcon(selected) {
   ({ muted, favorite, ignored, blocked } = selected);
   const tmp = closure_11(selected.selected);
   if (blocked) {
-    const obj2 = { source: _modDef8187, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj2 = { source: _modDef8188, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items = [, ];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
     obj2.style = items;
     let tmp2 = timestampProducer(native.Icon, obj2);
   } else if (ignored) {
-    const obj3 = { source: _modDef7207, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj3 = { source: _modDef7212, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items1 = [, ];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
     obj3.style = items1;
     tmp2 = timestampProducer(native.Icon, obj3);
   } else if (muted) {
-    const obj4 = { source: _modDef10399, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj4 = { source: _modDef10400, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj4.style = items2;
@@ -47,7 +47,7 @@ function MessagesItemChannelContentIcon(selected) {
   } else {
     tmp2 = null;
     if (favorite) {
-      const obj = { source: _modDef11219, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+      const obj = { source: _modDef11220, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
       const items3 = [, ];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj.style = items3;
@@ -139,7 +139,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
   const tmpResult = channel(504);
-  const tmpResult3 = channel(16369);
+  const tmpResult3 = channel(16375);
   let id = stateFromStores;
   if (stateFromStores == null) {
     id = channel.id;
@@ -166,7 +166,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
     if (null != channel.recipients) {
       if (channel.recipients.length > 0) {
         const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
-        const EffectDisplayType = tmp(11160).EffectDisplayType;
+        const EffectDisplayType = tmp(11161).EffectDisplayType;
         obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
         obj4 = Object.assign(obj4);
         closure_6(UsernameWithEffectsDefault, obj8);
@@ -250,9 +250,9 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
         str7 = str6;
       }
       obj19.color = str7;
-      obj19.layout = tmp(8122).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      obj19.layout = tmp(8123).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj19.muted = muted;
-      let tmp20Result7 = closure_6(tmp(10364).ChannelRowPreview, obj19);
+      let tmp20Result7 = closure_6(tmp(10365).ChannelRowPreview, obj19);
     } else if (channel.isDM()) {
       const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;

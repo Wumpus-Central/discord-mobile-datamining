@@ -1,6 +1,6 @@
-// === Module 8092: PremiumUpsellActionSheet ===
+// === Module 8094: PremiumUpsellActionSheet ===
 
-// Module 8092 (PremiumUpsellActionSheet)
+// Module 8094 (PremiumUpsellActionSheet)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -8,11 +8,11 @@ import PremiumUtils from "PremiumUtils" /* 4414 */;
 import ChatInputUtils from "ChatInputUtils" /* 4622 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
 import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 8091 */;
-import showForLaterModal from "showForLaterModal" /* 8101 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 8102 */;
-import APNGPlayer from "APNGPlayer" /* 9088 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import openPremiumUpsellActionSheet from "openPremiumUpsellActionSheet" /* 8093 */;
+import showForLaterModal from "showForLaterModal" /* 8103 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 8104 */;
+import APNGPlayer from "APNGPlayer" /* 9089 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
@@ -72,9 +72,9 @@ const PremiumConstants = fn(1374);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsPages: map1, ThemeTypes: closure_14 } = Constants);
 const ApplicationStreamFPS = fn(4803).ApplicationStreamFPS;
-const SavedMessagesConstants = fn(8093);
+const SavedMessagesConstants = fn(8095);
 ({ SAVED_BOOKMARKS_MAX: closure_16, SAVED_REMINDERS_MAX: closure_17 } = SavedMessagesConstants);
-const premiumMax = fn(8087).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(8089).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 const createStyles = fn(4756);

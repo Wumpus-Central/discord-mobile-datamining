@@ -1,6 +1,6 @@
-// === Module 13999: BlockedUserInGdmActionSheet ===
+// === Module 14005: BlockedUserInGdmActionSheet ===
 
-// Module 13999 (BlockedUserInGdmActionSheet)
+// Module 14005 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
@@ -8,8 +8,8 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723
 import Text_Text from "Text/Text" /* 4752 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
-import TableRow from "TableRow" /* 5817 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 14001 */;
+import TableRow from "TableRow" /* 5822 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 14007 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -88,11 +88,11 @@ function UserCalloutAvatars(userIds) {
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_11(tmp(1177).Avatar, obj3);
     } else {
-      tmp6 = closure_11(tmp(12077).UserIcon, {});
+      tmp6 = closure_11(tmp(12079).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1177).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_11(tmp(11173).FacepileGroupDMAvatar, obj4);
+    return closure_11(tmp(11174).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 }
@@ -135,7 +135,7 @@ function BlockedUserInGDMDescription(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SharedSpaceWarningConstants = fn(14000);
+const SharedSpaceWarningConstants = fn(14006);
 ({ BlockWarningEngagements: closure_8, GdmWarningMedium: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

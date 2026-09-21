@@ -1,9 +1,9 @@
-// === Module 6061: CandyIllocon ===
+// === Module 6066: CandyIllocon ===
 
-// Module 6061 (CandyIllocon)
+// Module 6066 (CandyIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6062 from "module_6062" /* 6062 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6067 from "module_6067" /* 6067 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const CandyIllocon = function CandyIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6062 };
+  const obj2 = { uri: _modDef6067 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

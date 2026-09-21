@@ -1,18 +1,18 @@
-// === Module 15813: ChangeLogModal ===
+// === Module 15819: ChangeLogModal ===
 
-// Module 15813 (ChangeLogModal)
+// Module 15819 (ChangeLogModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import NavigatorHeader from "NavigatorHeader" /* 5836 */;
-import Navigator from "Navigator" /* 7240 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8348 */;
-import openMediaModal from "openMediaModal" /* 8529 */;
-import common_VideoDefault from "common/Video" /* 8577 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 10010 */;
-import _modDef10655 from "module_10655" /* 10655 */;
-import _modDef15814 from "module_15814" /* 15814 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import NavigatorHeader from "NavigatorHeader" /* 5841 */;
+import Navigator from "Navigator" /* 7245 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8349 */;
+import openMediaModal from "openMediaModal" /* 8530 */;
+import common_VideoDefault from "common/Video" /* 8578 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 10011 */;
+import _modDef10656 from "module_10656" /* 10656 */;
+import _modDef15820 from "module_15820" /* 15820 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -274,7 +274,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      const items = [closure_7(_modDef15814, obj4), ];
+      const items = [closure_7(_modDef15820, obj4), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj5 = { style: tmp.videoOverlay, source: null };
@@ -305,9 +305,9 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10655, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1177).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10656, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1177).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj9.children = closure_7(TouchableHitBoxDefault, obj10);
-    tmp12Result = closure_7(tmp18(5334).PressableOpacity, obj9);
+    tmp12Result = closure_7(tmp18(5339).PressableOpacity, obj9);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;

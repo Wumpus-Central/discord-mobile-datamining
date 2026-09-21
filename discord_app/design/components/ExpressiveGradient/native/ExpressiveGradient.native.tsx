@@ -1,6 +1,6 @@
-// === Module 10488: ExpressiveGradient ===
+// === Module 10489: ExpressiveGradient ===
 
-// Module 10488 (ExpressiveGradient)
+// Module 10489 (ExpressiveGradient)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import useToken from "useToken" /* 4457 */;

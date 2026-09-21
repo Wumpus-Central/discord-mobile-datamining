@@ -1,14 +1,14 @@
-// === Module 15231: ConnectionsEmptyStateUpsell ===
+// === Module 15237: ConnectionsEmptyStateUpsell ===
 
-// Module 15231 (ConnectionsEmptyStateUpsell)
+// Module 15237 (ConnectionsEmptyStateUpsell)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import shared from "shared" /* 4607 */;
 import Text_Text from "Text/Text" /* 4752 */;
-import Card from "Card" /* 5819 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9340 */;
-import ConnectionsTracking from "ConnectionsTracking" /* 15232 */;
+import Card from "Card" /* 5824 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9341 */;
+import ConnectionsTracking from "ConnectionsTracking" /* 15238 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -71,14 +71,14 @@ let result = size.fileFinishedImporting("modules/user_settings/connections/nativ
 
 export default function ConnectionsEmptyStateUpsell() {
   const tmp = closure_8();
-  emptyStatePlatforms = emptyStatePlatforms(7743).useEmptyStatePlatforms();
+  emptyStatePlatforms = emptyStatePlatforms(7745).useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
   const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
   const items1 = [emptyStatePlatforms];
   const memo1 = noop.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.container, ];
-  const obj = emptyStatePlatforms(7743);
+  const obj = emptyStatePlatforms(7745);
   items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj2.style = items2;
   const obj4 = { style: tmp.content, children: null };

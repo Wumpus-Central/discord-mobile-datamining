@@ -1,12 +1,12 @@
-// === Module 16071: UserSettingsDesignSystemButtonGroup ===
+// === Module 16077: UserSettingsDesignSystemButtonGroup ===
 
-// Module 16071 (UserSettingsDesignSystemButtonGroup)
+// Module 16077 (UserSettingsDesignSystemButtonGroup)
 import Text_Text from "Text/Text" /* 4752 */;
 import Stack_Stack from "Stack/Stack" /* 5184 */;
 import components_Button_Button from "components/Button/Button" /* 5186 */;
-import ButtonGroup from "ButtonGroup" /* 5645 */;
-import _modDef7621 from "module_7621" /* 7621 */;
-import IconButton from "IconButton" /* 8178 */;
+import ButtonGroup from "ButtonGroup" /* 5650 */;
+import _modDef7623 from "module_7623" /* 7623 */;
+import IconButton from "IconButton" /* 8179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -56,7 +56,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
     hasOwnProperty(IconButton.IconButton, {
       accessibilityLabel: "Settings",
       variant: "secondary",
-      icon: _modDef7621,
+      icon: _modDef7623,
       onPress() {
 
       }
@@ -66,7 +66,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj12 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7621,
+    icon: _modDef7623,
     onPress() {
 
     }
@@ -88,7 +88,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items4[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7621,
+    icon: _modDef7623,
     onPress() {
 
     }
@@ -116,7 +116,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj13 = {
     accessibilityLabel: "Settings",
     variant: "secondary",
-    icon: _modDef7621,
+    icon: _modDef7623,
     onPress() {
 
     }
@@ -132,7 +132,7 @@ export default function UserSettingsDesignSystemButtonGroup() {
   items6[1] = hasOwnProperty(IconButton.IconButton, {
     accessibilityLabel: "Cancel",
     variant: "secondary",
-    icon: _modDef7621,
+    icon: _modDef7623,
     onPress() {
 
     }

@@ -1,9 +1,9 @@
-// === Module 7198: MobilePhoneIcon ===
+// === Module 7203: MobilePhoneIcon ===
 
-// Module 7198 (MobilePhoneIcon)
+// Module 7203 (MobilePhoneIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod7199 from "module_7199" /* 7199 */;
+import _mod7204 from "module_7204" /* 7204 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const MobilePhoneIcon = function MobilePhoneIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7199, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7204, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,6 +1,6 @@
-// === Module 13238: SuspiciousDownloadActionSheet ===
+// === Module 13240: SuspiciousDownloadActionSheet ===
 
-// Module 13238 (SuspiciousDownloadActionSheet)
+// Module 13240 (SuspiciousDownloadActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import openURLDefault from "openURL" /* 4445 */;
@@ -24,7 +24,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items;
   const obj3 = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [closure_3(href(5904).TrafficConeSpotIllustration, {}), , ];
+  const items1 = [closure_3(href(5909).TrafficConeSpotIllustration, {}), , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = href(1115).intl;
   obj4.children = intl.string(href(1115).t.XtDo9Z);
@@ -55,5 +55,5 @@ export default function SuspiciousDownloadActionSheet(href) {
   items2[1] = closure_4(href(5184).Stack, obj6);
   obj2.children = items2;
   obj.children = closure_4(href(5184).Stack, obj2);
-  return closure_3(href(7390).BottomSheet, obj);
+  return closure_3(href(7395).BottomSheet, obj);
 };

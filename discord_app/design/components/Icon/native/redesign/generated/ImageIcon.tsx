@@ -1,6 +1,6 @@
-// === Module 5298: ImageIcon ===
+// === Module 5305: ImageIcon ===
 
-// Module 5298 (ImageIcon)
+// Module 5305 (ImageIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4456 */;
 import _mod5263 from "module_5263" /* 5263 */;

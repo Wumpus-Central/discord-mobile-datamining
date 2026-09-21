@@ -1,12 +1,12 @@
-// === Module 16505: useGuildPowerupsCoachmark ===
+// === Module 16511: useGuildPowerupsCoachmark ===
 
-// Module 16505 (useGuildPowerupsCoachmark)
+// Module 16511 (useGuildPowerupsCoachmark)
 import nativeDefault from "native" /* 576 */;
-import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 12772 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12773 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12775 */;
-import _modDef16503 from "module_16503" /* 16503 */;
-import _modDef16507 from "module_16507" /* 16507 */;
+import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 12774 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12775 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12777 */;
+import _modDef16509 from "module_16509" /* 16509 */;
+import _modDef16513 from "module_16513" /* 16513 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import GuildStore from "GuildStore" /* 2063 */;
@@ -163,7 +163,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef16507;
+              let str = _modDef16513;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
               if (str == null) {
@@ -224,7 +224,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           obj12.renderImgComponent = function renderImgComponent() {
             guildPowerupBannerImage = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(found1, stateFromStores1, true);
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef16503;
+              guildPowerupBannerImage = _modDef16509;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             const items = [, ];

@@ -1,10 +1,10 @@
-// === Module 12826: GuildPowerupsGameServerCard ===
+// === Module 12828: GuildPowerupsGameServerCard ===
 
-// Module 12826 (GuildPowerupsGameServerCard)
+// Module 12828 (GuildPowerupsGameServerCard)
 import nativeDefault from "native" /* 576 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12823 */;
-import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12827 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12828 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12825 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12829 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12830 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4748 */;
 import GameServerStore from "GameServerStore" /* 4665 */;

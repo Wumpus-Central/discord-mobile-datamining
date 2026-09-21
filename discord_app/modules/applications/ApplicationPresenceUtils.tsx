@@ -1,6 +1,6 @@
-// === Module 8499: ApplicationPresenceUtils ===
+// === Module 8500: ApplicationPresenceUtils ===
 
-// Module 8499 (ApplicationPresenceUtils)
+// Module 8500 (ApplicationPresenceUtils)
 import ChannelStore from "ChannelStore" /* 2041 */;
 
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 9610: getEmbeddedActivityLaunchability ===
+// === Module 9611: getEmbeddedActivityLaunchability ===
 
-// Module 9610 (getEmbeddedActivityLaunchability)
+// Module 9611 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1115 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9611 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9612 */;
 import ChannelStore from "ChannelStore" /* 2041 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;

@@ -1,9 +1,9 @@
-// === Module 6365: GiftCardAvatar3dIllustration ===
+// === Module 6370: GiftCardAvatar3dIllustration ===
 
-// Module 6365 (GiftCardAvatar3dIllustration)
+// Module 6370 (GiftCardAvatar3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5799 */;
-import _modDef6366 from "module_6366" /* 6366 */;
+import FastImageDefault from "FastImage" /* 5804 */;
+import _modDef6371 from "module_6371" /* 6371 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GiftCardAvatar3dIllustration = function GiftCardAvatar3dIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6366 };
+  const obj2 = { uri: _modDef6371 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

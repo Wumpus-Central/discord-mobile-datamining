@@ -1,7 +1,7 @@
-// === Module 10203: useHasVideoPermission ===
+// === Module 10204: useHasVideoPermission ===
 
-// Module 10203 (useHasVideoPermission)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7960 */;
+// Module 10204 (useHasVideoPermission)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7962 */;
 import GuildStore from "GuildStore" /* 2063 */;
 import PermissionStore from "PermissionStore" /* 4395 */;
 
