@@ -104,7 +104,7 @@ function ProfileEffectSectionPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(8441)(previewSkuId);
+  const tmp2 = purchase(8442)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
@@ -128,7 +128,7 @@ function ProfileEffectSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11374), { user, guildId, profileEffect: memo, maxWidth: 250 })];
+  const items1 = [closure_9(purchase(11376), { user, guildId, profileEffect: memo, maxWidth: 250 })];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj2.colors = items2;
@@ -138,7 +138,7 @@ function ProfileEffectSectionPreview(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileEffectRecord = fn(7788).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7790).isProfileEffectRecord;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -173,13 +173,13 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   if (str == null) {
     str = "";
   }
-  const tmp4Result = isTryItOut(8454)(str);
+  const tmp4Result = isTryItOut(8455)(str);
   dependencyMap = tmp4Result;
   const tmp6 = selectedProfileEffect(memo.useState(currentProfileEffect), 2);
   selectedProfileEffect = tmp6[0];
-  const tmp4 = isTryItOut(8454);
-  let obj = guildId(8438);
-  const analyticsLocations = isTryItOut(7402)(tmp2(7422).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
+  const tmp4 = isTryItOut(8455);
+  let obj = guildId(8439);
+  const analyticsLocations = isTryItOut(7407)(tmp2(7427).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
   const items = [guildId, tmp4Result];
   memo = memo.useMemo(() => {
     const obj = {
@@ -257,7 +257,7 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   };
   let skuId;
   const obj5 = { style: tmp.bounceOffset };
-  const tmp2Result = isTryItOut(7402);
+  const tmp2Result = isTryItOut(7407);
   if (currentProfileEffect != null) {
     skuId = currentProfileEffect.skuId;
   }
@@ -270,9 +270,9 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   obj7.isTryItOut = isTryItOut;
   obj7.onApply = callback1;
   obj7.analyticsLocations = analyticsLocations;
-  obj7.analyticsSource = isTryItOut(7422).EDIT_PROFILE_EFFECT_SHEET;
-  items4[1] = closure_9(isTryItOut(8440), obj7);
+  obj7.analyticsSource = isTryItOut(7427).EDIT_PROFILE_EFFECT_SHEET;
+  items4[1] = closure_9(isTryItOut(8441), obj7);
   obj3.children = items4;
-  obj2.children = closure_10(guildId(7390).BottomSheet, obj3);
-  return closure_9(guildId(7402).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_10(guildId(7395).BottomSheet, obj3);
+  return closure_9(guildId(7407).AnalyticsLocationProvider, obj2);
 }

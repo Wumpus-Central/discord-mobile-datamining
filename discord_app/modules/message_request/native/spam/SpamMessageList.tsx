@@ -10,7 +10,7 @@ import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import useSortedSpamMessageRequestsDefault from "../../hooks/useSortedSpamMessageRequests.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const MessageRequestEmptyDefault = tmp2(17344);
+const MessageRequestEmptyDefault = tmp2(17355);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -267,10 +267,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  dependencyMap = goToMessageRequestPreview(17343).useSpamMessageRequestCount();
+  dependencyMap = goToMessageRequestPreview(17354).useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj = goToMessageRequestPreview(17343);
-  const hasSingleMessageRequest = goToMessageRequestPreview(17341).useListHasSingleSpamMessageRequest();
+  let obj = goToMessageRequestPreview(17354);
+  const hasSingleMessageRequest = goToMessageRequestPreview(17352).useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
     const obj2 = { num_spam_message_requests };
@@ -329,5 +329,5 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     obj4.data = items;
     return closure_8(closure_6, obj4);
   }
-  let obj2 = goToMessageRequestPreview(17341);
+  let obj2 = goToMessageRequestPreview(17352);
 }

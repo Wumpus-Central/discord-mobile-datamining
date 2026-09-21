@@ -56,13 +56,13 @@ export default function VibegrationsThinkingOverlay(projectId) {
   if (tmp6) {
     tmp6 = "end" !== stateFromStores.phase;
   }
-  const text = projectId(17023).useVibegrationsRevealedText(str, { streaming: tmp6 }).text;
+  const text = projectId(17031).useVibegrationsRevealedText(str, { streaming: tmp6 }).text;
   const obj3 = { style: tmp.root, children: null };
   const obj4 = { style: tmp.opaque, children: null };
   const obj5 = { style: tmp.body, children: null };
   const obj6 = { style: tmp.header, children: null };
-  const obj2 = projectId(17023);
-  const items2 = [closure_7(projectId(16753).LightbulbIcon, { size: "xs", color: ref(576).colors.TEXT_BRAND })];
+  const obj2 = projectId(17031);
+  const items2 = [closure_7(projectId(16759).LightbulbIcon, { size: "xs", color: ref(576).colors.TEXT_BRAND })];
   const obj8 = { variant: "text-sm/semibold", color: "text-strong", children: null };
   const intl = tmp3(1115).intl;
   obj8.children = intl.string(ref(3678).ltkR4n);
@@ -85,7 +85,7 @@ export default function VibegrationsThinkingOverlay(projectId) {
       children: null,
     };
     const obj10 = { source: text };
-    obj9.children = closure_7(tmp10(17021), obj10);
+    obj9.children = closure_7(tmp10(17029), obj10);
     let tmp7Result = closure_7(closure_4, obj9);
   } else {
     const obj11 = { variant: "text-sm/normal", color: "text-muted", children: null };
@@ -96,7 +96,7 @@ export default function VibegrationsThinkingOverlay(projectId) {
   const obj7 = { size: "xs", color: ref(576).colors.TEXT_BRAND };
   items3[1] = tmp7Result;
   obj5.children = items3;
-  obj4.children = closure_7(projectId(5819).Card, {
+  obj4.children = closure_7(projectId(5824).Card, {
     variant: "primary",
     shadow: "high",
     children: closure_8(closure_5, obj5),

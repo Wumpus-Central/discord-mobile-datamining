@@ -14,9 +14,9 @@ import UserProfileStore from "../UserProfileStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getWishlistProductLines = fn(9057).getWishlistProductLines;
-let closure_12 = fn(8451).TrackUserProfileWishlistActions;
-const ACTION_SHEET_MAX_WIDTH = fn(7391).ACTION_SHEET_MAX_WIDTH;
+const getWishlistProductLines = fn(9058).getWishlistProductLines;
+let closure_12 = fn(8452).TrackUserProfileWishlistActions;
+const ACTION_SHEET_MAX_WIDTH = fn(7396).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(4756);
@@ -89,18 +89,18 @@ export default function EditWishlistActionSheet(wishlistId) {
   if (analyticsLocations1 == null) {
     analyticsLocations1 = [];
   }
-  analyticsLocations = analyticsContext(7402)(
+  analyticsLocations = analyticsContext(7407)(
     analyticsLocations1,
-    tmp4(7422).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+    tmp4(7427).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
   ).analyticsLocations;
   let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  const tmp5 = analyticsContext(7402);
-  ({ cardWidth: c5, rowWidth } = analyticsContext(13395)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+  const tmp5 = analyticsContext(7407);
+  ({ cardWidth: c5, rowWidth } = analyticsContext(13397)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
   if (null != rowWidth) {
     let obj3 = { width: rowWidth };
     let tmp7 = obj3;
   }
-  let tmp6 = analyticsContext(13395)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+  let tmp6 = analyticsContext(13397)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
   const items1 = [value];
   stateFromStores = wishlistId(504).useStateFromStores(items1, () => WishlistStore.getWishlist(wishlistId));
   const tmp2Result = wishlistId(504);
@@ -185,8 +185,8 @@ export default function EditWishlistActionSheet(wishlistId) {
   obj10.subLabel = intl3.string(wishlistId(1115).t.dw58pE);
   obj10.value = value;
   obj10.onValueChange = callback;
-  obj9.children = closure_14(wishlistId(7440).TableSwitchRow, obj10);
-  obj8.children = closure_14(wishlistId(5899).TableRowGroup, obj9);
+  obj9.children = closure_14(wishlistId(7445).TableSwitchRow, obj10);
+  obj8.children = closure_14(wishlistId(5904).TableRowGroup, obj9);
   const items8 = [closure_14(stateFromStores, obj8)];
   if (stateFromStores1) {
     if (null == stateFromStores) {
@@ -196,7 +196,7 @@ export default function EditWishlistActionSheet(wishlistId) {
     items8[1] = tmp16Result;
     obj6.children = items8;
     obj5.children = closure_15(tmp19, obj6);
-    obj4.children = closure_14(tmp2(6864).BottomSheetScrollView, obj5);
+    obj4.children = closure_14(tmp2(6869).BottomSheetScrollView, obj5);
     return closure_14(tmp4Result, obj4);
   }
   tmp16Result = null;
@@ -258,5 +258,5 @@ export default function EditWishlistActionSheet(wishlistId) {
     });
     tmp16Result = closure_14(tmp19, obj12);
   }
-  tmp4Result = analyticsContext(11416);
+  tmp4Result = analyticsContext(11418);
 }

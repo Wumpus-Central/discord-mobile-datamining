@@ -1024,7 +1024,7 @@ function AnimatedWrapper(children) {
   return windowDimensions(cleanUp(id[52]).GestureDetector, obj10);
 }
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12524);
+const VoicePanelConstants = fn(12526);
 ({
   VoicePanelCTACard: closure_9,
   VoicePanelModes: c10,
@@ -1032,12 +1032,12 @@ const VoicePanelConstants = fn(12524);
   SPEAKING_PHYSICS: closure_12,
   VoicePanelCardItemType: map1,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12522).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17542).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12527).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12524).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17553).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12529).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
 const ParticipantTypes = fn(4777).ParticipantTypes;
-let SCALE_PHYSICS = fn(12525).SCALE_PHYSICS;
+let SCALE_PHYSICS = fn(12527).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let ReanimatedRexport = ReanimatedRexport_mod;
@@ -1406,7 +1406,7 @@ const __initData9 = {
 const __initData10 = {
   code: "function VoicePanelCardTsx12(props,previous){const{cheapWorkletShallowEqual,VoicePanelModes,TransitionStates,sharedVisible,isScrollVisible,runOnJS,cleanUp,id}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{mode:mode,focused:focused,transitionState:transitionState}=props;const isPIPMode=mode===VoicePanelModes.PIP;const manuallyFocusedId=focused===null||focused===void 0?void 0:focused.id;if(previous==null&&transitionState!==TransitionStates.YEETED){sharedVisible.set(1);}else if(transitionState===TransitionStates.YEETED){if(sharedVisible.get()===1&&isScrollVisible.get()){sharedVisible.set(0);}else{runOnJS(cleanUp)();}}else if((previous===null||previous===void 0?void 0:previous.transitionState)===TransitionStates.YEETED){sharedVisible.set(1);}else if(!isPIPMode){if(manuallyFocusedId==null){sharedVisible.set(1);}else{if(manuallyFocusedId!==id){sharedVisible.set(0);}else{sharedVisible.set(1);}}}}",
 };
-let closure_47 = { isSelf: false, hasVideo: false, user: { id: "Array" } };
+let closure_47 = { isSelf: false, hasVideo: false, user: { id: "r" } };
 function layoutTransitionFunction(originX, SUBTLE_SPRING, scale, sharedValue2) {
   if (flag === undefined) {
     flag = false;
@@ -1745,7 +1745,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   const obj13 = {
     isRinging: tmp8,
     avatarURI: "r",
-    avatarDecoration: "flexDirection",
+    avatarDecoration: "Icon",
     layout: layoutTransition,
     layoutPhysics: physics,
   };

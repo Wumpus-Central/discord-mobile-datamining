@@ -4,8 +4,8 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef7371 from "../../../../_runtime/metro/07371__.js";
-import _modDef7372 from "../../../../_runtime/metro/07372__.js";
+import _modDef7376 from "../../../../_runtime/metro/07376__.js";
+import _modDef7377 from "../../../../_runtime/metro/07377__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -31,9 +31,9 @@ export default function Emoji(arg0) {
       if ("" !== uRL) {
         const obj4 = { resizeMode: "contain", style: fastImageStyle, placeholder: null, source: null, onError: null };
         if (tmpResult.isThemeDark(ThemeStore.theme)) {
-          let tmp9Result = _modDef7371;
+          let tmp9Result = _modDef7376;
         } else {
-          tmp9Result = _modDef7372;
+          tmp9Result = _modDef7377;
         }
         obj4.placeholder = tmp9Result;
         const obj5 = { uri: uRL };

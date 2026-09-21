@@ -48,11 +48,11 @@ export default function TieredTenureBadgeCoachmark(arg0) {
   let first;
   dependencyMap = undefined;
   ({ targetRef, badgeId } = arg0);
-  const tieredTenureBadge = tieredTenureBadgeData(7868).getTieredTenureBadge(badgeId);
+  const tieredTenureBadge = tieredTenureBadgeData(7870).getTieredTenureBadge(badgeId);
   tieredTenureBadgeData = null;
   if (null != tieredTenureBadge) {
-    tieredTenureBadgeData = tmp(7868).getTieredTenureBadgeData(tieredTenureBadge);
-    const tmpResult = tmp(7868);
+    tieredTenureBadgeData = tmp(7870).getTieredTenureBadgeData(tieredTenureBadge);
+    const tmpResult = tmp(7870);
   }
   if (null != tieredTenureBadgeData) {
     const items = [tmp(2027).DismissibleContent.TIERED_TENURE_BADGE_COACHMARK];
@@ -60,8 +60,8 @@ export default function TieredTenureBadgeCoachmark(arg0) {
   } else {
     items1 = [];
   }
-  let obj = tieredTenureBadgeData(7868);
-  const tmp5 = _slicedToArray(tieredTenureBadgeData(7628).useSelectedDismissibleContent(items1), 2);
+  let obj = tieredTenureBadgeData(7870);
+  const tmp5 = _slicedToArray(tieredTenureBadgeData(7630).useSelectedDismissibleContent(items1), 2);
   first = tmp5[0];
   dependencyMap = tmp7;
   const items2 = [tmp5[1], first, tieredTenureBadgeData];
@@ -91,13 +91,13 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     };
     obj.onButtonPress = function onButtonPress() {
       dependencyMap(constants2.TAKE_ACTION);
-      tieredTenureBadgeData(7622).openUserSettings({ screen: constants.PREMIUM });
+      tieredTenureBadgeData(7624).openUserSettings({ screen: constants.PREMIUM });
     };
     const intl3 = util.intl;
     obj.buttonLabel = intl3.string(util.t.RzWDqY);
     return obj;
   }, items2);
-  const tmpResult3 = tieredTenureBadgeData(7628);
-  const coachmark = tieredTenureBadgeData(11392).useCoachmark(targetRef, memo);
+  const tmpResult3 = tieredTenureBadgeData(7630);
+  const coachmark = tieredTenureBadgeData(11394).useCoachmark(targetRef, memo);
   return null;
 }

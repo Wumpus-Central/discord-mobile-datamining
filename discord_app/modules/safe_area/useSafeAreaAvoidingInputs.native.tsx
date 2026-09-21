@@ -156,7 +156,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                 if (null != current2) {
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj4 = { value: tmp2(11412).measureViewRefInWindow(found.ref), done: false };
+                  const obj4 = { value: tmp2(11414).measureViewRefInWindow(found.ref), done: false };
                   return obj4;
                 }
               }
@@ -173,7 +173,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
               closure_128_2 = value;
               dependencyMap = 2;
               c3 = 1;
-              const obj6 = { value: tmp2(11412).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
+              const obj6 = { value: tmp2(11414).measureViewRefInView(closure_128_1.ref, closure_128_0), done: false };
               return obj6;
             }
           } else {
@@ -191,7 +191,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                   if (null != closure_128_3) {
                     dependencyMap = 3;
                     c3 = 1;
-                    const obj9 = { value: tmp2(11412).measureViewInWindow(closure_128_0), done: false };
+                    const obj9 = { value: tmp2(11414).measureViewInWindow(closure_128_0), done: false };
                     return obj9;
                   }
                 }

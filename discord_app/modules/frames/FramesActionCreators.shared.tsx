@@ -398,7 +398,7 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(9313);
+const FramesConstants = fn(9314);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
@@ -406,7 +406,7 @@ const FramesConstants = fn(9313);
   getFrameIntentForSurface: closure_8,
   makeFrameId: closure_9,
 } = FramesConstants);
-const ActivityPanelModes = fn(9314).ActivityPanelModes;
+const ActivityPanelModes = fn(9315).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 

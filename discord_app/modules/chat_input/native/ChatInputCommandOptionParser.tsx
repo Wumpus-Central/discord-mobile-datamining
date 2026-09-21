@@ -2,7 +2,7 @@
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import _modDef8399 from "../../../../_runtime/metro/08399__.js";
+import _modDef8400 from "../../../../_runtime/metro/08400__.js";
 import ChatInputParser from "ChatInputParser.tsx";
 import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -69,7 +69,7 @@ function buildGameMentionResult(id) {
     iconSpacing: 4,
   };
   if (obj2.isNullOrEmpty(uri)) {
-    uri = Image.resolveAssetSource(_modDef8399).uri;
+    uri = Image.resolveAssetSource(_modDef8400).uri;
   }
   obj.icon = uri;
   return obj;

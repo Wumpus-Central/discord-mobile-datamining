@@ -11,7 +11,7 @@ import TableRow from "../../../design/components/TableRow/native/TableRow.native
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef8453 from "../../../../_runtime/metro/08453__.js";
+import _modDef8454 from "../../../../_runtime/metro/08454__.js";
 import RelationshipActionCreatorsDefault from "../../../actions/RelationshipActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -38,8 +38,8 @@ function BlockedInformationTable() {
   });
 }
 const View = fn(17).View;
-const UserRemediationAction = fn(10003).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11643);
+const UserRemediationAction = fn(10004).UserRemediationAction;
+const RestrictionConfirmationConstants = fn(11645);
 ({ IGNORE_CONFIRMATION_ACTION_SHEET_KEY: c10, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: closure_11 } =
   RestrictionConfirmationConstants);
 const Constants = fn(1074);
@@ -84,7 +84,7 @@ let closure_16 = createStyles.createStyles(obj);
 let obj8 = { textAlign: "center", marginTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_4 };
 let items = [
   {
-    icon: _modDef8453,
+    icon: _modDef8454,
     text() {
       const intl = util.intl;
       return intl.string(util.t.fjFJFV);
@@ -101,7 +101,7 @@ let items = [
   ,
 ];
 let obj9 = {
-  icon: _modDef8453,
+  icon: _modDef8454,
   text() {
     const intl = util.intl;
     return intl.string(util.t.fjFJFV);
@@ -116,7 +116,7 @@ let obj9 = {
   },
 };
 items[1] = {
-  icon: _modDef8453,
+  icon: _modDef8454,
   text() {
     const intl = util.intl;
     return intl.string(util.t.QCrmqS);
@@ -131,7 +131,7 @@ items[1] = {
   },
 };
 let obj10 = {
-  icon: _modDef8453,
+  icon: _modDef8454,
   text() {
     const intl = util.intl;
     return intl.string(util.t.QCrmqS);
@@ -185,8 +185,8 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
   c5 = undefined;
   const tmp = closure_16();
   const bottom = channelId(1612)().bottom;
-  items = [channelId(7422).IGNORE_CONFIRMATION_ACTION_SHEET];
-  const tmp4 = channelId(7402);
+  items = [channelId(7427).IGNORE_CONFIRMATION_ACTION_SHEET];
+  const tmp4 = channelId(7407);
   [tmp6, c5] = noop.useState(false);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   const items1 = [UserStore];
@@ -253,7 +253,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
     };
     const items8 = [closure_14(tmp7(1177).Avatar, obj9)];
     const obj10 = { style: tmp.avatarIconContainer, children: null };
-    const obj11 = { size: tmp7(1177).Icon.Sizes.MEDIUM, source: tmp2(8187) };
+    const obj11 = { size: tmp7(1177).Icon.Sizes.MEDIUM, source: tmp2(8188) };
     obj10.children = closure_14(tmp7(1177).Icon, obj11);
     items8[1] = closure_14(c5, obj10);
     obj8.children = items8;
@@ -290,7 +290,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
       const intl3 = tmp7(1115).intl;
       obj17.title = intl3.string(tmp7(1115).t["+BJTcB"]);
       const obj18 = { icon: null, label: null, subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
-      const obj19 = { size: tmp7(1177).Icon.Sizes.MEDIUM, source: tmp2(7207) };
+      const obj19 = { size: tmp7(1177).Icon.Sizes.MEDIUM, source: tmp2(7212) };
       obj18.icon = closure_14(tmp7(1177).Icon, obj19);
       const intl4 = tmp7(1115).intl;
       obj18.label = intl4.string(tmp7(1115).t.hC8tcc);
@@ -305,7 +305,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
         });
         const obj2 = { action: UserRemediationAction.GOTO_IGNORE, location: "user-profile-context-menu" };
         const obj3 = ActionSheetActionCreatorsDefault;
-        const tmp2 = asyncRequireImpl(11645, dependencyMap.paths);
+        const tmp2 = asyncRequireImpl(11647, dependencyMap.paths);
         obj3.openLazy(
           tmp2,
           closure_2_10,
@@ -319,8 +319,8 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
           "replaceTopSheet",
         );
       };
-      obj17.children = closure_14(tmp7(5817).TableRow, obj18);
-      obj16.children = closure_14(tmp7(5899).TableRowGroup, obj17);
+      obj17.children = closure_14(tmp7(5822).TableRow, obj18);
+      obj16.children = closure_14(tmp7(5904).TableRowGroup, obj17);
       tmp13Result = closure_14(tmp19, obj16);
     }
     const obj20 = { children: null };
@@ -334,11 +334,11 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
       let obj = RelationshipActionCreatorsDefault;
       const obj2 = { location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET };
       obj.blockUser(userId, { location: AnalyticsLocationDefault.BLOCK_CONFIRMATION_ACTION_SHEET }).then(() => {
-        const result = channelId(8674).showBlockSuccessToast(userId, closure_1_1);
+        const result = channelId(8675).showBlockSuccessToast(userId, closure_1_1);
         if (onSuccess != null) {
           onSuccess();
         }
-        const obj = channelId(8674);
+        const obj = channelId(8675);
         channelId(4723).hideActionSheet();
         const tmpResult = channelId(4723);
       });
@@ -370,9 +370,9 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
     obj21.children = items11;
     items10[3] = closure_15(c5, obj21);
     obj20.children = items10;
-    obj5.children = closure_15(tmp7(6864).BottomSheetScrollView, obj20);
-    obj4.children = closure_14(tmp7(7390).BottomSheet, obj5);
-    tmp13Result2 = closure_14(tmp7(7402).AnalyticsLocationProvider, obj4);
+    obj5.children = closure_15(tmp7(6869).BottomSheetScrollView, obj20);
+    obj4.children = closure_14(tmp7(7395).BottomSheet, obj5);
+    tmp13Result2 = closure_14(tmp7(7407).AnalyticsLocationProvider, obj4);
     let tmp2Result = tmp2(4908);
   }
   return tmp13Result2;

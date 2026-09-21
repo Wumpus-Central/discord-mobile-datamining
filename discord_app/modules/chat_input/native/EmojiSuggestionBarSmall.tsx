@@ -19,13 +19,13 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_7(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(12678).useSuggestionBarHeight(
+  const suggestionBarHeight = displayEmojis(12680).useSuggestionBarHeight(
     transitionState,
     cleanUp,
     CONTAINER_SMALL_WRAPPER_HEIGHT,
     onOccupiedHeightChange,
   );
-  let obj = displayEmojis(12678);
+  let obj = displayEmojis(12680);
   class A {
     constructor() {
       obj = { opacity: null };
@@ -85,7 +85,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   return suggestionBarHeight(ReanimatedRexportDefault.View, obj4);
 }
 const jsx = fn(21).jsx;
-const sum = fn(10547).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10548).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
 const createStyles = fn(4756);

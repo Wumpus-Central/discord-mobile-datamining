@@ -6,8 +6,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef14117 from "../../../../../../../_runtime/metro/14117__.js";
-import _modDef16432 from "../../../../../../../_runtime/metro/16432__.js";
+import _modDef14123 from "../../../../../../../_runtime/metro/14123__.js";
+import _modDef16438 from "../../../../../../../_runtime/metro/16438__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -228,7 +228,7 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13555).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const sum = fn(13561).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
 const createStyles = fn(4756);
 let obj = {
   container: {
@@ -306,7 +306,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   const obj5 = {
     style: tmp.actionIcon,
     variant: "filled",
-    source: _modDef14117,
+    source: _modDef14123,
     onPress: handleShare,
     accessibilityLabel: null,
   };
@@ -314,7 +314,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj5.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [React5(IconActionButtonDefault, obj5)];
   const obj6 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj6.source = _modDef16432;
+  obj6.source = _modDef16438;
   obj6.onPress = handleLink;
   const intl4 = util.intl;
   obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

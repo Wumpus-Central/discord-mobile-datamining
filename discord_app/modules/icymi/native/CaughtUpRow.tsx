@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(4752).Text);
-const createICYMIStyles = fn(16785);
+const createICYMIStyles = fn(16791);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: {
@@ -121,8 +121,8 @@ export default function ExploreServersRow(visible) {
               return obj3;
             } else {
               dependencyMap(true);
-              v1(8621).itemInteracted("caught_up", "caught_up", "press_explore");
-              const obj5 = v1(8621);
+              v1(8622).itemInteracted("caught_up", "caught_up", "press_explore");
+              const obj5 = v1(8622);
               const obj4 = {
                 itemId: "caught_up",
                 itemType: "caught_up",
@@ -133,11 +133,11 @@ export default function ExploreServersRow(visible) {
                   actionDestinationType: null,
                 },
               };
-              v1(8621).feedItemActioned(obj4);
-              const obj6 = v1(8621);
+              v1(8622).feedItemActioned(obj4);
+              const obj6 = v1(8622);
               v1 = 1;
               dependencyMap = 1;
-              const obj7 = { value: tmp4(16802).maybeFetchGuildDiscoveryCategories(), done: false };
+              const obj7 = { value: tmp4(16808).maybeFetchGuildDiscoveryCategories(), done: false };
               return obj7;
             }
           } else if (arg0 === 1) {
@@ -167,9 +167,9 @@ export default function ExploreServersRow(visible) {
     [],
   );
   const callback1 = noop.useCallback(() => {
-    sharedValue(8621).itemInteracted("caught_up", "caught_up", "press_home");
-    const obj = sharedValue(8621);
-    sharedValue(8621).feedItemActioned({
+    sharedValue(8622).itemInteracted("caught_up", "caught_up", "press_home");
+    const obj = sharedValue(8622);
+    sharedValue(8622).feedItemActioned({
       itemId: "caught_up",
       itemType: "caught_up",
       actionParameters: {
@@ -179,7 +179,7 @@ export default function ExploreServersRow(visible) {
         actionDestinationType: "guild_home",
       },
     });
-    const obj2 = sharedValue(8621);
+    const obj2 = sharedValue(8622);
     const rootNavigationRef = visible(4614).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("tabs", { screen: "guilds" });
@@ -323,7 +323,7 @@ export default function ExploreServersRow(visible) {
   const obj11 = { style: tmp.textContainer, children: null };
   const obj12 = {
     style: null,
-    children: closure_7(visible(13302).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }),
+    children: closure_7(visible(13304).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }),
   };
   const items1 = [tmp.iconWrapper, animatedStyle];
   obj12.style = items1;
@@ -356,7 +356,7 @@ export default function ExploreServersRow(visible) {
   obj16.children = items6;
   items5[1] = closure_8(View, obj16);
   obj10.children = items5;
-  const items7 = [closure_8(View, obj10), closure_7(visible(16824).Separator, {})];
+  const items7 = [closure_8(View, obj10), closure_7(visible(16830).Separator, {})];
   const obj19 = { style: tmp.gradient, start: null, end: null, colors: null, pointerEvents: "none" };
   const obj13 = { size: "custom", style: tmp.icon, color: "background-brand" };
   const obj8 = visible(4457);

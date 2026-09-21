@@ -53,7 +53,7 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   });
 }
 let closure_4 = fn(2045).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8006).PAGE_SIZE;
+const PAGE_SIZE = fn(8008).PAGE_SIZE;
 const Constants = fn(1074);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
 const ChannelFlags = fn(2048).ChannelFlags;
@@ -936,14 +936,14 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = tmp4(8021).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
+              const result = tmp4(8023).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
               if (!JoinedThreadsStore.hasJoined(tmp4.id)) {
                 c1 = 1;
                 dependencyMap = 1;
                 const obj5 = { value: self.joinThread(tmp4, "Change Notification Settings"), done: false };
                 return obj5;
               }
-              const obj8 = tmp4(8021);
+              const obj8 = tmp4(8023);
             }
           } else if (arg0 === 1) {
             dependencyMap = 3;

@@ -127,9 +127,9 @@ export default function VibegrationsConjureShimmer(epoch) {
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
     obj8.children = closure_8(width(5198), obj10);
     obj6.children = closure_8(width(4492).View, obj8);
-    obj5.children = closure_8(width(5876), obj6);
+    obj5.children = closure_8(width(5881), obj6);
     tmp14 = closure_8(closure_6, obj5);
-    const tmp18 = width(5876);
+    const tmp18 = width(5881);
   }
   items3[1] = tmp14;
   obj4.children = items3;

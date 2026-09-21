@@ -6,7 +6,7 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const useChannelVideoLimitDefault = tmp2(9909);
+const useChannelVideoLimitDefault = tmp2(9910);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
@@ -26,8 +26,8 @@ export default noop.memo((channel) => {
   importDefault = undefined;
   const tmp = closure_8();
   const tmp4 = useCanSpeakInChannelDefault(channel.id);
-  const isConnectedToVoiceChannel = channel(9643).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(9643);
+  const isConnectedToVoiceChannel = channel(9644).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(9644);
   const items = [GuildStore];
   const items1 = [channel.guild_id];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
@@ -50,9 +50,9 @@ export default noop.memo((channel) => {
     num = 0;
   }
   const obj4 = channel(504);
-  const stageHasMedia = channel(5629).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(5634).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(10270).StreamVolumeItem, {}));
+  items5.push(jsx(channel(10271).StreamVolumeItem, {}));
   if (tmp11) {
     const obj5 = { channel, disabled: null };
     let tmp12 = stateFromStoresArray.length > 0;
@@ -67,13 +67,13 @@ export default noop.memo((channel) => {
       tmp12 = reachedLimit;
     }
     obj5.disabled = tmp12;
-    items5.push(jsx(tmp5(10270).ScreenshareButton, { channel, disabled: null }));
+    items5.push(jsx(tmp5(10271).ScreenshareButton, { channel, disabled: null }));
   }
-  items5.push(jsx(channel(10270).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(10270).DeafenButton, { channel }));
+  items5.push(jsx(channel(10271).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(10271).DeafenButton, { channel }));
   const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
   tmp11 = num > 0 && tmp4;
-  const tmp5Result = channel(5629);
+  const tmp5Result = channel(5634);
   return (
     <View style={tmp.container}>
       {items5.map((children, index) => (

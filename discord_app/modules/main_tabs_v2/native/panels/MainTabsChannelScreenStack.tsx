@@ -89,10 +89,10 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(8106).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(8108).ONYX_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);
-const FramesConstants = fn(9313);
+const FramesConstants = fn(9314);
 ({ FrameIntent: closure_12, getChannelIdForSurface: map1 } = FramesConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);

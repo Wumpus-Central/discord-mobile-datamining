@@ -258,7 +258,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7402)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7407)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -270,7 +270,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5334).PressableOpacity, obj);
+  return closure_12(channel(5339).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);

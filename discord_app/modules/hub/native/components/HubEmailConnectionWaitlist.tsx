@@ -37,13 +37,13 @@ export default function HubEmailConnectionWaitlist(school) {
         const intl = onClose(1115).intl;
         obj.text = intl.string(onClose(1115).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_6(onClose(7617).HeaderActionButton, obj);
+        return closure_2_6(onClose(7619).HeaderActionButton, obj);
       },
     });
   }, items);
   const obj2 = { style: tmp.container, children: null };
   let obj = onClose(1484);
-  const items1 = [closure_6(closure_5, { source: navigation(12986), style: tmp.header }), , ,];
+  const items1 = [closure_6(closure_5, { source: navigation(12988), style: tmp.header }), , ,];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1115).intl;
   obj4.children = intl.string(onClose(1115).t.OaloU5);

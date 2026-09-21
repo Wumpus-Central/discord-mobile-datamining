@@ -562,8 +562,8 @@ function BountiesModalContentWithAppStore(arg0) {
   return closure_16(height(sharedValue[40]).BountyVideoEndAppStoreProvider, obj3);
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5656).QuestsExperimentLocations;
-const BountiesModalConstants = fn(15278);
+const QuestsExperimentLocations = fn(5661).QuestsExperimentLocations;
+const BountiesModalConstants = fn(15284);
 ({ getBountyVideoEndAppStoreSheetHeight: closure_9, getBountyVideoEndPeekTargetScale: c10 } = BountiesModalConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12 } = Constants);

@@ -126,9 +126,9 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const obj7 = { style: tmp.guildInfoContainer, children: null };
   const obj8 = { style: tmp.guildIcon, textStyle: tmp.guildIconText, guild, size: null };
   const tmp4 = stateFromStores(5198);
-  obj8.size = isVisible(5796).GuildIconSizes.LARGE;
+  obj8.size = isVisible(5801).GuildIconSizes.LARGE;
   const items3 = [
-    closure_6(stateFromStores(5796), obj8),
+    closure_6(stateFromStores(5801), obj8),
     closure_6(isVisible(4752).Text, {
       style: tmp.guildName,
       variant: "text-md/bold",
@@ -140,7 +140,7 @@ export default function GuildBoostingMarketingPersistentCta(arg0) {
   const items4 = [closure_7(View, obj7)];
   const obj10 = {
     style: tmp.buttonContainer,
-    children: closure_6(stateFromStores(7642), {
+    children: closure_6(stateFromStores(7644), {
       guild,
       previousGuildSubscriptionSlot,
       useShortenedCTA: true,

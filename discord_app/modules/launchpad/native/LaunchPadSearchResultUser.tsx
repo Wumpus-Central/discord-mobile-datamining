@@ -72,8 +72,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7875).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7875);
+    relativeTimestamp = tmp6(7877).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7877);
   }
   let str = "text-muted";
   if (unread) {
@@ -99,12 +99,12 @@ function UserResult(user) {
     isMobileOnline,
     isVROnline,
     status: null,
-    streaming: "2ef75b8631c2a185c93470ca01c27fd2",
-    style: "ru.messages.2ef75b8631c2a185c93470ca01c27fd2.compiled.messages",
+    streaming: "bae3544a7e40505779f8c52940ffe4fc",
+    style: "lt.messages.bae3544a7e40505779f8c52940ffe4fc.compiled.messages",
     size: "jsona",
-    animate: "USER_APPLICATION_REMOVE",
+    animate: "getDelayFunction",
     typing: null,
-    autoStatusCutout: "text-sm/semibold",
+    autoStatusCutout: "\u{1F36E}",
   };
   let tmp19 = null;
   if (!user.isSystemUser()) {
@@ -152,9 +152,9 @@ function UserResult(user) {
         message: lastMessage,
         color: str,
         muted: flag,
-        layout: tmp6(8122).ChannelListLayoutTypes.COMPACT,
+        layout: tmp6(8123).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(10364).ChannelRowPreview, obj9);
+      tmp14Result = closure_12(tmp6(10365).ChannelRowPreview, obj9);
     }
   }
   const obj10 = { children: null };
@@ -168,7 +168,7 @@ function UserResult(user) {
   items5[2] = renderChannelContentDefault(obj8);
   obj10.children = items5;
   obj5.children = tmp2Result6(closure_14(closure_13, obj10), { fontScale });
-  return tmp2Result5(closure_12(user(5334).PressableHighlight, obj5));
+  return tmp2Result5(closure_12(user(5339).PressableHighlight, obj5));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -186,7 +186,7 @@ function UserResultWithChannel(arg0) {
   const obj4 = {};
   const merged = Object.assign(arg0);
   obj4.channel = channel;
-  obj4.lastMessage = channel(15583)(channel, { unread });
+  obj4.lastMessage = channel(15589)(channel, { unread });
   obj4.unread = unread;
   obj4.mentionCount = mentionCount;
   obj4.muted = stateFromStores;

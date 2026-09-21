@@ -102,7 +102,7 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(13359);
+let VibegrationsConnectionStore = fn(13361);
 ({
   requestProjectRebuild: closure_12,
   sendUserMessage: map1,
@@ -715,9 +715,9 @@ export default function VibegrationsSettingsSheet(projectId) {
                     if (application_id == null) {
                       _null = null;
                     }
-                    _null2(13185)(_null);
+                    _null2(13187)(_null);
                     let prop;
-                    const tmp19 = _null2(13185);
+                    const tmp19 = _null2(13187);
                     if (project2 != null) {
                       prop = project2.preview_application_id;
                     }
@@ -725,8 +725,8 @@ export default function VibegrationsSettingsSheet(projectId) {
                     if (prop == null) {
                       _null2 = null;
                     }
-                    _null2(13185)(_null2);
-                    const tmp27 = _null2(13185);
+                    _null2(13187)(_null2);
+                    const tmp27 = _null2(13187);
                   }
                 }
                 _null2(4723).hideActionSheet(closure_1_20);

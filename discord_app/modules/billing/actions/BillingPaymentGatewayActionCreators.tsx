@@ -588,7 +588,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       if (closure_136_11 == null) {
                         setupIntent = undefined;
                       }
-                      const obj8 = { setupIntent, error: "Array" };
+                      const obj8 = { setupIntent, error: "y" };
                       closure_136_10 = obj8;
                       if (
                         (function shouldRecreateSetupIntentForPaymentElement(error) {

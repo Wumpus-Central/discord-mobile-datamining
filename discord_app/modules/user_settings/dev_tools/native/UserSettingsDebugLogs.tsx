@@ -32,8 +32,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(6859).InputHeights.MD,
-  width: fn(6859).InputHeights.MD,
+  height: fn(6864).InputHeights.MD,
+  width: fn(6864).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };

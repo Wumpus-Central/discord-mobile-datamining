@@ -219,14 +219,14 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   const size = first.size;
   const obj7 = { style: tmp.container, children: null };
   const obj8 = { style: tmp.header, children: null };
-  const formattedSubscriptionPlan = listingId(16884).useFormattedSubscriptionPlan(listingId);
-  const obj6 = listingId(16884);
+  const formattedSubscriptionPlan = listingId(16890).useFormattedSubscriptionPlan(listingId);
+  const obj6 = listingId(16890);
   const tmp11 = guildId;
   if (str == null) {
     str = "";
   }
   const items = [
-    closure_8(guildId(5799), { source: { uri: str }, style: tmp.image }),
+    closure_8(guildId(5804), { source: { uri: str }, style: tmp.image }),
     closure_8(listingId(1177).Spacer, { size: 16 }),
   ];
   const obj10 = { children: null };
@@ -249,7 +249,7 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
   const items2 = [
     closure_9(closure_6, obj8),
     closure_8(listingId(1177).Spacer, { size: 16 }),
-    closure_8(tmp11(16890), { listingId }),
+    closure_8(tmp11(16896), { listingId }),
   ];
   let tmp8Result6 = length > 0 || size > 0 || length2 > 0;
   if (tmp8Result6) {
@@ -316,12 +316,12 @@ export default function GuildRoleSubscriptionPurchasePreviewCard(listingId) {
     const obj44 = { children: null };
     items6[2] = tmp8Result5;
     obj12.children = items6;
-    obj11.children = closure_9(tmp4(10604).GappedList, obj12);
+    obj11.children = closure_9(tmp4(10605).GappedList, obj12);
     items3[1] = closure_8(closure_6, obj11);
     const obj45 = {
       onPress() {
         const obj = ActionSheetActionCreatorsDefault;
-        obj.openLazy(asyncRequireImpl(16889, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
+        obj.openLazy(asyncRequireImpl(16895, dependencyMap.paths), "PurchaseCard:" + listingId, { listingId, guildId });
       },
     };
     items3[2] = closure_8(ShowAllButton, obj45);

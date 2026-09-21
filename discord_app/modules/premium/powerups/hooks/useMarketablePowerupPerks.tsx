@@ -31,7 +31,7 @@ export default function useMarketablePowerupPerks(guildId) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12828)(guildId);
+  let tmp2 = stateFromStores(12830)(guildId);
   dependencyMap = tmp2;
   const obj = require("initialize");
   const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(

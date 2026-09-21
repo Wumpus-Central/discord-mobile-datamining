@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/MenuIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod16158 from "../../../../../../../_runtime/metro/16158__.js";
+import _mod16164 from "../../../../../../../_runtime/metro/16164__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const MenuIcon = function MenuIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16158, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16164, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

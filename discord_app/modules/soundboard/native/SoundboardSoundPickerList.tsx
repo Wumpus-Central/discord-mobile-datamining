@@ -12,10 +12,10 @@ import TrophyIcon from "../../../design/components/Icon/native/redesign/generate
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
 import PremiumUpsellSectionDivider from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
-import chunkDefault from "../../../../_runtime/10602_chunk.js";
-import _modDef10649 from "../../../../_runtime/metro/10649__.js";
+import chunkDefault from "../../../../_runtime/10603_chunk.js";
+import _modDef10650 from "../../../../_runtime/metro/10650__.js";
 import SoundButton from "SoundButton.tsx";
-import _modDef17529 from "../../../../_runtime/metro/17529__.js";
+import _modDef17540 from "../../../../_runtime/metro/17540__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -100,7 +100,7 @@ function SoundPickerButtonRow(row) {
   let obj = row(section[10]);
 }
 const View = fn(17).View;
-const SoundboardStyleConstants = fn(17514);
+const SoundboardStyleConstants = fn(17525);
 ({
   SOUND_ROW_HORIZONTAL_PADDING,
   SOUNDS_PER_ROW: metroRequire,
@@ -367,10 +367,10 @@ export const SoundboardSoundPickerList = noop.memo(function SoundboardSoundPicke
         };
         let tmp8Result = React5(GuildIconDefault, obj3);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
-        const obj4 = { source: _modDef17529, style: currentUser.sectionIcon };
+        const obj4 = { source: _modDef17540, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj4);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
-        const obj5 = { source: _modDef10649, style: currentUser.sectionIcon };
+        const obj5 = { source: _modDef10650, style: currentUser.sectionIcon };
         tmp8Result = React5(native.Icon, obj5);
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
         const obj6 = { style: currentUser.sectionIcon };

@@ -24,5 +24,5 @@ export const TTIFirstContentfulPaint = function TTIFirstContentfulPaint(checkFoc
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
     PostTTIScheduler.notifyAboutTTI();
   }, items);
-  return jsx(checkFocusedScreen(12150).TTIMeasurementView, { onMeasurement });
+  return jsx(checkFocusedScreen(12152).TTIMeasurementView, { onMeasurement });
 };

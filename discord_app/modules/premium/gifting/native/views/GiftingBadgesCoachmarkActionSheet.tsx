@@ -8,7 +8,7 @@ import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocatio
 import BadgeId from "../../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import utils_openGiftModal from "../../../native/utils/openGiftModal.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
-import _modDef17395 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
+import _modDef17406 from "../../../../../../discord_assets/assets/gifting/new_gifting_badges.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
 
@@ -17,11 +17,11 @@ function HasBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ currentTier, giftCount } = markAsDismissed);
   const tmp = closure_10();
-  const isGiftingBadgeComplexArtEnabled = markAsDismissed(11003).useIsGiftingBadgeComplexArtEnabled(
+  const isGiftingBadgeComplexArtEnabled = markAsDismissed(11004).useIsGiftingBadgeComplexArtEnabled(
     "GiftingBadgesCoachmarkActionSheet",
   );
-  let obj = markAsDismissed(11003);
-  const giftingBadgeTierIconUrl = markAsDismissed(11003).getGiftingBadgeTierIconUrl(
+  let obj = markAsDismissed(11004);
+  const giftingBadgeTierIconUrl = markAsDismissed(11004).getGiftingBadgeTierIconUrl(
     currentTier,
     isGiftingBadgeComplexArtEnabled,
   );
@@ -75,7 +75,7 @@ function HasBadgeCoachmark(markAsDismissed) {
   items2[2] = closure_8(closure_5, obj10);
   obj4.children = items2;
   obj3.children = closure_9(closure_5, obj4);
-  return closure_8(markAsDismissed(7390).BottomSheet, obj3);
+  return closure_8(markAsDismissed(7395).BottomSheet, obj3);
 }
 function NewBadgeCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -96,7 +96,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   let obj = { startExpanded: true, onDismiss: callback1, children: null };
   const obj2 = { style: tmp.container, children: null };
   let obj3 = { style: tmp.graphicContainer, children: null };
-  const obj4 = { source: { uri: _modDef17395 }, style: tmp.newBadgeImage };
+  const obj4 = { source: { uri: _modDef17406 }, style: tmp.newBadgeImage };
   obj3.children = closure_8(closure_4, obj4);
   const items2 = [closure_8(closure_5, obj3), ,];
   const obj6 = { style: tmp.textContainer, children: null };
@@ -114,8 +114,8 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj10 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1115).intl;
   obj10.text = intl3.string(_modDef2578.DZnomS);
-  const obj5 = { uri: _modDef17395 };
-  obj10.icon = closure_8(markAsDismissed(11297).GiftIcon, {
+  const obj5 = { uri: _modDef17406 };
+  obj10.icon = closure_8(markAsDismissed(11299).GiftIcon, {
     size: "sm",
     color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
   });
@@ -124,7 +124,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   items2[2] = closure_8(closure_5, obj9);
   obj2.children = items2;
   obj.children = closure_9(closure_5, obj2);
-  return closure_8(markAsDismissed(7390).BottomSheet, obj);
+  return closure_8(markAsDismissed(7395).BottomSheet, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);

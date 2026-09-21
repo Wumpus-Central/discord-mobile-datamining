@@ -116,8 +116,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             isPrivateResult = channel.isPrivate();
           }
           if (isPrivateResult) {
-            tmp3(11130)(channel, closure_129_1).onPress();
-            const obj3 = tmp3(11130)(channel, closure_129_1);
+            tmp3(11131)(channel, closure_129_1).onPress();
+            const obj3 = tmp3(11131)(channel, closure_129_1);
           }
           if (closure_129_2 != null) {
             closure_129_2();

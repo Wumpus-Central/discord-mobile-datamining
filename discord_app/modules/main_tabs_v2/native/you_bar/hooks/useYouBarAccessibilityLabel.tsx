@@ -49,13 +49,13 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
     if (stateFromStores != null) {
       primaryGuild = stateFromStores.primaryGuild;
     }
-    const userPrimaryGuild = tmp3(8433).getUserPrimaryGuild(primaryGuild);
+    const userPrimaryGuild = tmp3(8434).getUserPrimaryGuild(primaryGuild);
     let tag;
     if (userPrimaryGuild != null) {
       tag = userPrimaryGuild.tag;
     }
     tmp8 = tag;
-    const tmp3Result3 = tmp3(8433);
+    const tmp3Result3 = tmp3(8434);
   }
   tag = tmp8;
   const tmp3Result = require("useGameMentionsAsPlainText");

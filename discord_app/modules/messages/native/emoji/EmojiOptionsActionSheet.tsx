@@ -23,7 +23,7 @@ export default function EmojiOptionsActionSheet(emojiSrc) {
   const intl = emojiSrc(1115).intl;
   obj3.label = intl.string(emojiSrc(1115).t.cIoudn);
   obj3.onPress = callback;
-  obj2.children = jsx(emojiSrc(5817).TableRow, { icon: jsx(emojiSrc(4698).LinkIcon, {}), label: null, onPress: null });
-  obj.children = jsx(emojiSrc(5899).TableRowGroup, { hasIcons: true, children: null });
-  return jsx(emojiSrc(7437).ActionSheet, { children: null });
+  obj2.children = jsx(emojiSrc(5822).TableRow, { icon: jsx(emojiSrc(4698).LinkIcon, {}), label: null, onPress: null });
+  obj.children = jsx(emojiSrc(5904).TableRowGroup, { hasIcons: true, children: null });
+  return jsx(emojiSrc(7442).ActionSheet, { children: null });
 }

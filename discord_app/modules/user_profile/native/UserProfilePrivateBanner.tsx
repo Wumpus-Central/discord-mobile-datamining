@@ -22,7 +22,7 @@ let obj2 = {
     paddingHorizontal: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     position: "relative",
-    zIndex: fn(7448).PROFILE_TOP_LAYER_Z_INDEX,
+    zIndex: fn(7453).PROFILE_TOP_LAYER_Z_INDEX,
   },
 };
 let closure_6 = createStyles.createStyles(obj2);

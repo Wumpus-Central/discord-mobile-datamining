@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(12115);
+const Constants = fn(12117);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

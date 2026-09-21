@@ -436,7 +436,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             emoji_name: closure_129_2.name,
             emoji_animated: closure_129_2.animated,
             recommended: closure_129_4.current,
-            location: tmp22(7422).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+            location: tmp22(7427).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
           };
           tmp22(1241).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
           const _setTimeout = setTimeout;

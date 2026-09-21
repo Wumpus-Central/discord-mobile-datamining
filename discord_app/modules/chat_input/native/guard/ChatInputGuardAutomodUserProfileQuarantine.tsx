@@ -54,7 +54,7 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
   }
   const obj3 = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
   const obj2 = guildId(4401);
-  obj3.icon = jsx(guildId(12717).ChatXIcon, {});
+  obj3.icon = jsx(guildId(12719).ChatXIcon, {});
   obj3.message = stringResult1;
   return jsx(ChatInputGuardDefault, {
     type: "simple-action",

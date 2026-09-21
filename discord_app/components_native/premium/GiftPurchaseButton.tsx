@@ -69,7 +69,7 @@ export default function GiftPurchaseButton(style) {
       const premiumTypeFromPlanId = planId(4414).getPremiumTypeFromPlanId(closure_129_0);
       const premiumType = premiumTypeFromPlanId.premiumType;
       const planInterval = premiumTypeFromPlanId.planInterval;
-      planId(10920).openGiftModal({
+      planId(10921).openGiftModal({
         recipientUserId: closure_129_2,
         premiumType,
         planInterval,

@@ -44,8 +44,8 @@ export default function _default() {
   _require = tmp;
   const fetchStickerPacks = require("StickersHooks").useFetchStickerPacks();
   let obj = require("StickersHooks");
-  analyticsLocations = analyticsLocations(7402)(analyticsLocations(7422).EMPTY_STATE).analyticsLocations;
-  const tmp3 = analyticsLocations(7402);
+  analyticsLocations = analyticsLocations(7407)(analyticsLocations(7427).EMPTY_STATE).analyticsLocations;
+  const tmp3 = analyticsLocations(7407);
   const items = [StickersStore];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const mapped = EMPTY_STATE_STICKERS.map((item) => stickerById.getStickerById(item));
@@ -94,7 +94,7 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(5334).PressableOpacity, obj, id);
+      return closure_1_11(sticker(5339).PressableOpacity, obj, id);
     }),
   });
   const obj7 = { style: tmp.premiumButton, children: null };
@@ -116,16 +116,16 @@ export default function _default() {
       if (sticker != null) {
         id = sticker.id;
       }
-      return closure_1_11(sticker(5334).PressableOpacity, obj, id);
+      return closure_1_11(sticker(5339).PressableOpacity, obj, id);
     }),
   };
-  obj9.source = analyticsLocations(9473);
+  obj9.source = analyticsLocations(9474);
   obj9.style = tmp.nitroWheel;
-  obj8.icon = closure_11(analyticsLocations(5799), obj9);
+  obj8.icon = closure_11(analyticsLocations(5804), obj9);
   const intl3 = require("util").intl;
   obj8.text = intl3.string(require("util").t.pj0XBN);
   obj8.onPress = function onPress() {
-    return analyticsLocations(10665)({ section: constants.EXPRESSION_PICKER });
+    return analyticsLocations(10666)({ section: constants.EXPRESSION_PICKER });
   };
   obj7.children = closure_11(require("components/Button/Button").Button, obj8);
   items2[3] = closure_11(View, obj7);

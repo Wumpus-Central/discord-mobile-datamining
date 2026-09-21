@@ -51,7 +51,7 @@ function PreviewProfileTrigger(handlePreviewPress) {
   const intl = tmp2(1115).intl;
   obj3.accessibilityLabel = intl.string(handlePreviewPress(1115).t["3Qcx6K"]);
   const obj2 = handlePreviewPress(4607);
-  obj3.children = closure_13(handlePreviewPress(7208).EyeIcon, {
+  obj3.children = closure_13(handlePreviewPress(7213).EyeIcon, {
     size: "md",
     color: onTrackPress(576).colors.INTERACTIVE_ICON_DEFAULT,
   });
@@ -94,17 +94,17 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  const collectiblesShopProduct = skuId(9152).useCollectiblesShopProduct(skuId, {
+  const collectiblesShopProduct = skuId(9153).useCollectiblesShopProduct(skuId, {
     needsCategory: false,
     seedCategoryStore: true,
   });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  const obj = skuId(9152);
-  const getOrFetchPurchases = skuId(10993).useGetOrFetchPurchases();
+  const obj = skuId(9153);
+  const getOrFetchPurchases = skuId(10994).useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-  const obj2 = skuId(10993);
+  const obj2 = skuId(10994);
   const ref1 = noop.useRef(null);
   const items = [product, skuId, initialVariantIndex];
   if ("ready" === state) {
@@ -139,12 +139,12 @@ function ManagedProductDetailsActionSheetInner(skuId) {
           ref,
           children: closure_13(closure_19, obj3),
         };
-        return closure_13(tmp(7390).BottomSheet, obj4);
+        return closure_13(tmp(7395).BottomSheet, obj4);
       }
     }
   }
   if ("error" === state) {
-    const obj5 = { Illustration: tmp(8500).NoResults, body: null, children: null };
+    const obj5 = { Illustration: tmp(8501).NoResults, body: null, children: null };
     const intl = tmp(1115).intl;
     obj5.body = intl.string(tmp(1115).t.eAn6z2);
     const obj6 = { text: null, onPress: null };
@@ -154,7 +154,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     obj5.children = closure_13(tmp(5186).Button, obj6);
     closure_13(tmp(1177).EmptyState, obj5);
   } else {
-    closure_13(initialVariantIndex(13469), {});
+    closure_13(initialVariantIndex(13471), {});
   }
   ref = noop.useRef(null);
 }

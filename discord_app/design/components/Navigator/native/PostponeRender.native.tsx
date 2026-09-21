@@ -41,7 +41,7 @@ export const PostponeRender = function PostponeRender(children) {
     }
   });
   if (first) {
-    children = jsx(first(7279).SceneLoadingIndicator, {});
+    children = jsx(first(7284).SceneLoadingIndicator, {});
   }
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;

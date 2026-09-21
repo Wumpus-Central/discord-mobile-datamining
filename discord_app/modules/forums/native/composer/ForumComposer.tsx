@@ -131,7 +131,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj6.style = items5;
-      obj6.IconComponent = tmp2(9140).TagIcon;
+      obj6.IconComponent = tmp2(9141).TagIcon;
       obj6.onPress = function onPress() {
         timestampProducer.dismiss();
         const obj2 = {
@@ -161,12 +161,12 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1610).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1610).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11512, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
+        obj.openLazy(asyncRequireImpl(11514, dependencyMap.paths), "ForumPostTagsActionSheet", obj2);
       };
-      tmp10 = closure_29(tmp2(7617).HeaderActionButton, obj6);
+      tmp10 = closure_29(tmp2(7619).HeaderActionButton, obj6);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10516).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10517).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj7 = {
         accessibilityLabel: null,
@@ -178,9 +178,9 @@ function ActionBar(channel) {
       const intl3 = tmp2(1115).intl;
       obj7.accessibilityLabel = intl3.string(tmp2(1115).t.iZ7Mz9);
       obj7.style = tmp.actionButton;
-      obj7.IconComponent = tmp2(9036).ReactionIcon;
+      obj7.IconComponent = tmp2(9037).ReactionIcon;
       obj7.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7617).HeaderActionButton, obj7);
+      tmp18 = closure_29(tmp2(7619).HeaderActionButton, obj7);
     }
     items4[2] = tmp18;
     const obj8 = { style: tmp.postButtonWrapper, children: null };
@@ -198,7 +198,7 @@ function ActionBar(channel) {
     }
     obj9.disabled = submitting;
     const obj10 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj9.icon = closure_29(tmp2(5282).ChatIcon, obj10);
+    obj9.icon = closure_29(tmp2(5289).ChatIcon, obj10);
     obj9.onPress = function onPress() {
       if (canPost) {
         _slicedToArray({});
@@ -218,9 +218,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj11.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11510).KeyboardIcon;
+      let ImageIcon = tmp2(11512).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(5298).ImageIcon;
+      ImageIcon = tmp2(5305).ImageIcon;
     }
     obj11.IconComponent = ImageIcon;
     obj11.onPress = function onPress() {
@@ -232,7 +232,7 @@ function ActionBar(channel) {
       }
       const result1 = tracking_Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7617).HeaderActionButton, obj11);
+    closure_29(tmp2(7619).HeaderActionButton, obj11);
   }
   let obj2 = channel(504);
 }
@@ -245,7 +245,7 @@ get_ActivityIndicator = fn(17);
   View: closure_9,
 } = get_ActivityIndicator);
 const DraftType = fn(5105).DraftType;
-const SlowmodeType = fn(7921).SlowmodeType;
+const SlowmodeType = fn(7923).SlowmodeType;
 let Constants = fn(1074);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(2048).ChannelFlags;

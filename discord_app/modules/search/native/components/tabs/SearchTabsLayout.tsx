@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsLayout.tsx
 import ComponentDispatchUtils from "../../../../../utils/ComponentDispatchUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06892_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06897_LegacyBaseButton.js";
 import SearchPlatformUtilsDefault from "../../SearchPlatformUtils.tsx";
 import SearchUtils from "../../../SearchUtils.tsx";
 import SearchActionCreatorsDefault from "../../../SearchActionCreators.tsx";
@@ -28,7 +28,7 @@ function NoSearchResultsScreen(searchContext) {
   return closure_12(pages_ErrorScreenDefault, obj);
 }
 const View = fn(17).View;
-const SearchConstants = fn(8121);
+const SearchConstants = fn(8122);
 ({
   MESSAGE_SEARCH_RESULT_TABS_SET: closure_8,
   SEARCH_MESSAGE_TAB_SENTINEL: closure_9,
@@ -293,19 +293,19 @@ export default function ConnectedSearchTabsLayout(width) {
   const items2 = [candidateTabs];
   const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
-  const autoSearchGuildChannelTab = searchContext(17184).useAutoSearchGuildChannelTab(
+  const autoSearchGuildChannelTab = searchContext(17195).useAutoSearchGuildChannelTab(
     searchContext,
     !memo.has(constants.GUILD_CHANNELS),
   );
-  const obj3 = searchContext(17184);
-  const autoSearchMembersTab = searchContext(17185).useAutoSearchMembersTab(
+  const obj3 = searchContext(17195);
+  const autoSearchMembersTab = searchContext(17196).useAutoSearchMembersTab(
     searchContext,
     !memo.has(constants.MEMBERS),
   );
-  const obj4 = searchContext(17185);
-  const autoSearchPeopleTab = searchContext(17186).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(17186);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(17187).useAutoTrackSearchTabCountsViewedAnalytics({
+  const obj4 = searchContext(17196);
+  const autoSearchPeopleTab = searchContext(17197).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(17197);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(17198).useAutoTrackSearchTabCountsViewedAnalytics({
     searchContext,
     visibleTabCounts,
     visibleTabs,

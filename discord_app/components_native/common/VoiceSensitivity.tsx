@@ -134,7 +134,7 @@ export default function VoiceSensitivity(auto) {
               c1 = 1;
               c2 = 1;
               const obj4 = {
-                value: onThresholdChange(5350).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                value: onThresholdChange(5355).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                 done: false,
               };
               return obj4;

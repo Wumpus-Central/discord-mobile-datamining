@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import PhoneStore from "../../../phone/PhoneStore.tsx";
 
 require = fn;
-const RegistrationUIStore = fn(16271);
+const RegistrationUIStore = fn(16277);
 ({ setRegistrationErrors: hasOwnProperty, useRegistrationUIStore: metroRequire } = RegistrationUIStore);
 const jsx = fn(21).jsx;
 const size = fn(2);

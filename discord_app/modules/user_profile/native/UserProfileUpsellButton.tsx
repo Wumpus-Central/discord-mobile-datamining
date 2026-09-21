@@ -21,9 +21,9 @@ let result = size.fileFinishedImporting("modules/user_profile/native/UserProfile
 export default function UserProfileUpsellButton(analyticsObject) {
   analyticsObject = analyticsObject.analyticsObject;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7402)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7407)().analyticsLocations;
   const tmp = closure_10();
-  let label = analyticsObject(7686).useNitroTrialCtaOverride("user_profile_upsell_button");
+  let label = analyticsObject(7688).useNitroTrialCtaOverride("user_profile_upsell_button");
   const items = [analyticsLocations, analyticsObject];
   const effect = noop.useEffect(() => {
     const obj2 = {
@@ -55,7 +55,7 @@ export default function UserProfileUpsellButton(analyticsObject) {
     label = intl.string(tmp3(1115).t.pj0XBN);
   }
   obj2.text = label;
-  obj2.icon = jsx(analyticsObject(8939).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
+  obj2.icon = jsx(analyticsObject(8940).NitroWheelIcon, { color: "white", size: "sm", style: tmp.nitroWheel });
   return jsx(analyticsObject(5186).Button, {
     onPress() {
       const obj2 = {

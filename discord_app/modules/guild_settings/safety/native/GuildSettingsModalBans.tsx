@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalBans.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/05729_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/05734_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";

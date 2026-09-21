@@ -136,9 +136,9 @@ export default noop.memo((arg0) => {
               v1 = 1;
               v3 = 1;
               const obj5 = {
-                value: v1(7556).redirectDeveloperPortalWithHandoffToken(
+                value: v1(7558).redirectDeveloperPortalWithHandoffToken(
                   constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY,
-                  v3(7560).LoginHandoffSource.GAME_CLAIM,
+                  v3(7562).LoginHandoffSource.GAME_CLAIM,
                 ),
                 done: false,
               };

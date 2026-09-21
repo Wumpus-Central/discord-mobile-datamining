@@ -113,14 +113,14 @@ let result = size.fileFinishedImporting("modules/user_settings/connections/nativ
 
 export default function ConnectionsEmptyStateUpsell() {
   const tmp = closure_8();
-  emptyStatePlatforms = emptyStatePlatforms(7743).useEmptyStatePlatforms();
+  emptyStatePlatforms = emptyStatePlatforms(7745).useEmptyStatePlatforms();
   const items = [emptyStatePlatforms];
   const memo = noop.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
   const items1 = [emptyStatePlatforms];
   const memo1 = noop.useMemo(() => emptyStatePlatforms.slice(3, 5), items1);
   const obj2 = { style: null, children: null };
   const items2 = [tmp.container];
-  const obj = emptyStatePlatforms(7743);
+  const obj = emptyStatePlatforms(7745);
   items2[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj2.style = items2;
   const obj4 = { style: tmp.content, children: null };

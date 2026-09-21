@@ -11,13 +11,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSwitchClientsRadioGroup.tsx");
 
 export default function YouSwitchClientsRadioGroup() {
-  const memo = noop.useMemo(() => memo(16714).getCurrentVariant(), []);
+  const memo = noop.useMemo(() => memo(16720).getCurrentVariant(), []);
   [arr, importDefault] = noop.useState(null);
   const items = [memo];
   const effect = noop.useEffect(() => {
     if (null != c0) {
       c0 = false;
-      let DISCORD_VARIANT_LIST = memo(16715).DISCORD_VARIANT_LIST;
+      let DISCORD_VARIANT_LIST = memo(16721).DISCORD_VARIANT_LIST;
       const allPromises = Promise.all(
         DISCORD_VARIANT_LIST.map((item) => _true(dependencyMap[3]).isVariantInstalled(item)),
       );
@@ -54,21 +54,21 @@ export default function YouSwitchClientsRadioGroup() {
           children: arr.map((value) => {
             const obj = {
               value,
-              label: memo(16715).DISCORD_VARIANTS[value].label,
-              icon: jsx(memo(11079).ClydeIcon, { color: memo(16715).DISCORD_VARIANTS[value].color }),
+              label: memo(16721).DISCORD_VARIANTS[value].label,
+              icon: jsx(memo(11080).ClydeIcon, { color: memo(16721).DISCORD_VARIANTS[value].color }),
             };
             return jsx(
-              memo(5900).TableRadioRow,
+              memo(5905).TableRadioRow,
               {
                 value,
-                label: memo(16715).DISCORD_VARIANTS[value].label,
-                icon: jsx(memo(11079).ClydeIcon, { color: memo(16715).DISCORD_VARIANTS[value].color }),
+                label: memo(16721).DISCORD_VARIANTS[value].label,
+                icon: jsx(memo(11080).ClydeIcon, { color: memo(16721).DISCORD_VARIANTS[value].color }),
               },
               value,
             );
           }),
         };
-        tmp5 = jsx(memo(5897).TableRadioGroup, {
+        tmp5 = jsx(memo(5902).TableRadioGroup, {
           title: "Switch Clients",
           value: memo,
           onChange: tmp4,
@@ -76,15 +76,15 @@ export default function YouSwitchClientsRadioGroup() {
           children: arr.map((value) => {
             const obj = {
               value,
-              label: memo(16715).DISCORD_VARIANTS[value].label,
-              icon: jsx(memo(11079).ClydeIcon, { color: memo(16715).DISCORD_VARIANTS[value].color }),
+              label: memo(16721).DISCORD_VARIANTS[value].label,
+              icon: jsx(memo(11080).ClydeIcon, { color: memo(16721).DISCORD_VARIANTS[value].color }),
             };
             return jsx(
-              memo(5900).TableRadioRow,
+              memo(5905).TableRadioRow,
               {
                 value,
-                label: memo(16715).DISCORD_VARIANTS[value].label,
-                icon: jsx(memo(11079).ClydeIcon, { color: memo(16715).DISCORD_VARIANTS[value].color }),
+                label: memo(16721).DISCORD_VARIANTS[value].label,
+                icon: jsx(memo(11080).ClydeIcon, { color: memo(16721).DISCORD_VARIANTS[value].color }),
               },
               value,
             );

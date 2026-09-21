@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef10220 from "../../../../_runtime/metro/10220__.js";
+import _modDef10221 from "../../../../_runtime/metro/10221__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef17384 from "../../../../_runtime/metro/17384__.js";
+import _modDef17395 from "../../../../_runtime/metro/17395__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -52,12 +52,12 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   };
   const obj4 = { style: tmp.info, children: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  const items2 = [closure_8(closure_4, { source: _modDef17384, style: tmp.image }), ,];
+  const items2 = [closure_8(closure_4, { source: _modDef17395, style: tmp.image }), ,];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const obj5 = { source: _modDef17384, style: tmp.image };
+  const obj5 = { source: _modDef17395, style: tmp.image };
   const items3 = [
     closure_8(markAsDismissed(1177).Icon, {
-      source: _modDef10220,
+      source: _modDef10221,
       size: markAsDismissed(1177).IconSizes.MEDIUM,
       style: tmp.nitroWheel,
       disableColor: true,
@@ -102,5 +102,5 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   obj10.children = items5;
   items4[1] = closure_9(closure_5, obj10);
   obj3.children = items4;
-  return closure_9(markAsDismissed(7390).BottomSheet, obj3);
+  return closure_9(markAsDismissed(7395).BottomSheet, obj3);
 }

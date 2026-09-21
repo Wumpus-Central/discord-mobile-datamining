@@ -156,13 +156,13 @@ obj2.container = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: fn(5653).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5658).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
 const obj4 = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: fn(5653).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5658).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);

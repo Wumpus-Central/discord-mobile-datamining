@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(13359);
+const VibegrationsConnectionStore = fn(13361);
 ({
   createDatabaseRestorePoint: closure_7,
   fetchDatabaseRestorePoints: closure_8,
@@ -162,7 +162,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
             closure_1_13();
           } else if ("expired" === ok.code) {
             const intl3 = closure_0(1115).intl;
-            const obj = { days: closure_0(16985).RESTORE_WINDOW_DAYS };
+            const obj = { days: closure_0(16993).RESTORE_WINDOW_DAYS };
             closure_1_16(closure_1_3, "danger", intl3.formatToPlainString(installScope(3678).PeVYaC, obj));
             closure_1_13();
           } else if ("unconfirmed" === ok.code) {
@@ -236,7 +236,7 @@ export default function VibegrationsRestorePointsSheet(projectId) {
       str = "VibegrationsRestoreDate";
     }
     obj.openLazy(
-      asyncRequireImpl(9801, dependencyMap.paths),
+      asyncRequireImpl(9802, dependencyMap.paths),
       str,
       { mode, title, startDate, minimumDate: minimumDate[0], maximumDate: minimumDate[1], onSubmit },
       "stack",

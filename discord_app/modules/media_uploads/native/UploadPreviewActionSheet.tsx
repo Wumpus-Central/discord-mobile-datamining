@@ -12,7 +12,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const DraftType = fn(5105).DraftType;
-const ACTION_SHEET_MAX_WIDTH = fn(7391).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7396).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4756);
@@ -132,7 +132,7 @@ export default function UploadPreviewActionSheet(onAdd) {
       })
       .catch((error) => {
         if ("E_PICKER_CANCELLED" !== error.code) {
-          const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6847).CircleErrorIcon, content: error.message };
+          const obj2 = { key: "CROP_ERROR", IconComponent: onAdd(6852).CircleErrorIcon, content: error.message };
           onEdit(4454).open(obj2);
           const obj = onEdit(4454);
         }

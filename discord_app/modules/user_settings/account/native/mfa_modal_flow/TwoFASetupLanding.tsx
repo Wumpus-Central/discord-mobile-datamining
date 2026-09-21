@@ -4,7 +4,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
 import TwoFASetupStyles from "TwoFASetupStyles.tsx";
-import _modDef15058 from "../../../../../../_runtime/metro/15058__.js";
+import _modDef15064 from "../../../../../../_runtime/metro/15064__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -26,7 +26,7 @@ export default function TwoFASetupLanding() {
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { bottom: true, style: tmp.container, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef15058, style: tmp.authIcon }), ,];
+  const items = [hasOwnProperty(React3, { source: _modDef15064, style: tmp.authIcon }), ,];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t["9E74Dx"]);

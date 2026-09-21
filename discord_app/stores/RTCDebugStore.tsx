@@ -200,7 +200,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "png" };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "getFavorite" };
   let resolution;
   if (found != null) {
     resolution = found.resolution;

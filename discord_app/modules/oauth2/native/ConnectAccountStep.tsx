@@ -105,7 +105,7 @@ export default function ConnectAccountStep(clientId) {
     return currentUser;
   });
   const obj2 = clientId(504);
-  value = platformType(5495).get(platformType);
+  value = platformType(5500).get(platformType);
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
@@ -136,7 +136,7 @@ export default function ConnectAccountStep(clientId) {
     const obj9 = { source: applicationIconSource, size: tmp5(1177).AvatarSizes.XLARGE };
     const items4 = [closure_8(tmp5(1177).Avatar, obj9), ,];
     const obj10 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(8180).MoreHorizontalIcon, obj10);
+    items4[1] = closure_8(tmp5(8181).MoreHorizontalIcon, obj10);
     const obj11 = { source: userAvatarSource, size: tmp5(1177).AvatarSizes.XLARGE };
     items4[2] = closure_8(tmp5(1177).Avatar, obj11);
     obj8.children = items4;
@@ -194,7 +194,7 @@ export default function ConnectAccountStep(clientId) {
     const source = tmp5Result.makeSource(tmp5(4607).isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
     const tmp5Result2 = tmp5(4607);
   }
-  const obj3 = platformType(5495);
+  const obj3 = platformType(5500);
 }
 export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
   ({ platformName, connectedAccount } = arg0);

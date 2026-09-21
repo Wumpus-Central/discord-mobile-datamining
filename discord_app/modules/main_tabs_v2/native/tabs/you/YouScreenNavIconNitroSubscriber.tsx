@@ -5,7 +5,7 @@ import ReferralTrialStore from "../../../../premium/ReferralTrialStore.tsx";
 import PremiumNitroNavigationStore from "../../../../user_settings/premium/native/PremiumNitroNavigationStore.tsx";
 
 const require = fn;
-const NitroHomeSectionId = fn(13657).NitroHomeSectionId;
+const NitroHomeSectionId = fn(13663).NitroHomeSectionId;
 const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -19,7 +19,7 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
   if (showReferralNotificationDot) {
     showReferralNotificationDot = obj.useIsEligibleSenderForReferralProgram(!showReferralNotificationDot);
   }
-  obj = onPress(8314);
+  obj = onPress(8315);
   const items = [ReferralTrialStore];
   const items1 = [showReferralNotificationDot];
   const stateFromStores = onPress(504).useStateFromStores(
@@ -38,11 +38,11 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
       }
     }
   }
-  const tmpResult2 = onPress(7628);
+  const tmpResult2 = onPress(7630);
   const tmp5 = _slicedToArray(
     tmpResult2.useSelectedTimeRecurringDismissibleContent(
       prop,
-      { cooldownDurationMs: onPress(17248).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS },
+      { cooldownDurationMs: onPress(17259).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS },
       undefined,
       true,
     ),
@@ -61,13 +61,13 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
     onPress();
   }, items2);
   const obj3 = { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
-  const obj2 = { cooldownDurationMs: onPress(17248).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
-  obj3.IconComponent = onPress(8939).NitroWheelIcon;
+  const obj2 = { cooldownDurationMs: onPress(17259).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
+  obj3.IconComponent = onPress(8940).NitroWheelIcon;
   const intl = tmp(1115).intl;
   obj3.accessibilityLabel = intl.string(onPress(1115).t.Ipxkog);
   obj3.onPress = callback;
   obj3.showRedDot = tmp7;
-  return jsx(showReferralNotificationDot(17250), {
+  return jsx(showReferralNotificationDot(17261), {
     IconComponent: null,
     accessibilityLabel: null,
     onPress: null,

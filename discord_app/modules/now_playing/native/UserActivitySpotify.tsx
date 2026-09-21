@@ -3,13 +3,13 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8410 from "../../../../_runtime/metro/08410__.js";
+import _modDef8411 from "../../../../_runtime/metro/08411__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8610);
+const SpotifyConstants = fn(8611);
 ({
   SPOTIFY_APP_PROTOCOL: metroRequire,
   SpotifyEndpoints: closure_7,
@@ -263,7 +263,7 @@ export const SpotifyPlayButton = function SpotifyPlayButton(activity) {
   activity = activity.activity;
   let obj = { style: activity.style, children: null };
   let obj2 = {
-    icon: closure_9(activity(5186).Button.Icon, { source: _modDef8410 }),
+    icon: closure_9(activity(5186).Button.Icon, { source: _modDef8411 }),
     text: null,
     size: "sm",
     onPress: null,

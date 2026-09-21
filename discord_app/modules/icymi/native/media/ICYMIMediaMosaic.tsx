@@ -90,7 +90,7 @@ function MediaMosaicImage(source) {
   const obj4 = { source: memo, style: null };
   const items2 = [style, tmp.media, dimensions];
   obj4.style = items2;
-  obj3.children = closure_15(imageFinishedLoading(5799), obj4);
+  obj3.children = closure_15(imageFinishedLoading(5804), obj4);
   const items3 = [closure_15(imageFinishedLoading(4492).View, obj3)];
   const obj5 = {
     source,

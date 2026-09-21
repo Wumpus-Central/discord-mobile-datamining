@@ -7,7 +7,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
-import _modDef13001 from "../../../../../_runtime/metro/13001__.js";
+import _modDef13003 from "../../../../../_runtime/metro/13003__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -75,7 +75,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
     paddingHorizontal: nativeDefault.space.PX_16,
   };
   const obj3 = { style: tmp.topContainer };
-  obj6.source = _modDef13001;
+  obj6.source = _modDef13003;
   items[3] = hasOwnProperty(FastImageDefault, obj6);
   const obj7 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;

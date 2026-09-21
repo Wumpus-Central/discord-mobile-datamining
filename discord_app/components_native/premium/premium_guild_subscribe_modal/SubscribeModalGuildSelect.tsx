@@ -10,7 +10,7 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
-let closure_9 = fn(5648).PremiumGuildSubscribeModalScenes;
+let closure_9 = fn(5653).PremiumGuildSubscribeModalScenes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4756);
@@ -21,7 +21,7 @@ let obj2 = {
   guildName: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexGrow: 1, flexShrink: 1 };
-obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(5653).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.guildName = { marginLeft: 32, fontSize: 16, lineHeight: 20, color: fn(5658).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -110,7 +110,7 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   obj4.onClose = actions_BoostingActionCreatorsAll.closeApplyBoostModal;
   const items3 = [closure_10(SearchBarNavDefault, obj4)];
   const obj5 = { style: tmp.guildList, keyboardShouldPersistTaps: "always", children: null };
-  obj5.children = closure_10(guildBoostSlots(7363).SafeAreaPaddingView, {
+  obj5.children = closure_10(guildBoostSlots(7368).SafeAreaPaddingView, {
     bottom: true,
     children: stateFromStoresArray.map((guild) => {
       const obj = {
@@ -137,5 +137,5 @@ export default function SubscribeModalGuildSelect(guildBoostSlots) {
   });
   items3[1] = closure_10(memo, obj5);
   obj3.children = items3;
-  return closure_11(guildBoostSlots(7363).SafeAreaPaddingView, obj3);
+  return closure_11(guildBoostSlots(7368).SafeAreaPaddingView, obj3);
 }

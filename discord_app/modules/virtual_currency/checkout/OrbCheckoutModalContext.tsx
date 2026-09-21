@@ -110,9 +110,9 @@ let obj = {
   analyticsLocations: null,
   analyticsSourceLocation: null,
   isRedeeming: null,
-  orbRedemptionError: 172,
-  orbProductContext: 172,
-  onRedeemVirtualCurrency: "center",
+  orbRedemptionError: "lg",
+  orbProductContext: null,
+  onRedeemVirtualCurrency: true,
 };
 obj.loadId = v1.v4();
 obj.analyticsLocations = [];

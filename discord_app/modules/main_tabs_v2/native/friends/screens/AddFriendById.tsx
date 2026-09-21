@@ -185,7 +185,7 @@ export default noop.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(10006).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(10007).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
@@ -195,7 +195,7 @@ export default noop.forwardRef((arg0, ref) => {
         const obj6 = {
           discordTag: tmp2,
           context: { location: "Search - Add Friend Search" },
-          errorUxConfig: sourcePage(10002).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+          errorUxConfig: sourcePage(10003).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
           note: null,
         };
         let tmp9;
@@ -203,8 +203,8 @@ export default noop.forwardRef((arg0, ref) => {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(10002);
-        ref(10002)
+        const obj5 = ref(10003);
+        ref(10003)
           .sendRequest(obj6)
           .then(
             () => {
@@ -263,9 +263,9 @@ export default noop.forwardRef((arg0, ref) => {
               closure_6(obj3);
             },
           );
-        const sendRequestResult = ref(10002).sendRequest(obj6);
+        const sendRequestResult = ref(10003).sendRequest(obj6);
       }
-      let obj = sourcePage(10006);
+      let obj = sourcePage(10007);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText } = arg0);
@@ -413,7 +413,7 @@ export default noop.forwardRef((arg0, ref) => {
       }
     }
     obj10.status = str2;
-    items8[1] = closure_9(sourcePage(7325).TextArea, obj10);
+    items8[1] = closure_9(sourcePage(7330).TextArea, obj10);
     if (first1.status !== constants2.ERROR) {
       const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
       let intl2 = sourcePage(1115).intl;

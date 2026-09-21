@@ -257,9 +257,9 @@ export default function AppLauncherCommandOption(option) {
             onPress() {
               return onDismiss(name);
             },
-            children: tmp13(tmp2(6853).CircleXIcon, { size: "md" }),
+            children: tmp13(tmp2(6858).CircleXIcon, { size: "md" }),
           };
-          items[1] = tmp13(tmp2(5334).PressableOpacity, obj9);
+          items[1] = tmp13(tmp2(5339).PressableOpacity, obj9);
           obj7.children = items;
           tmp62 = closure_6(View, obj7);
         }

@@ -174,7 +174,7 @@ function getUsersSubtitle(arg0) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(15560);
+const HappeningNowConstants = fn(15566);
 ({
   HappeningNowCardTrackingType: hasOwnProperty,
   HAPPENING_NOW_CONTENT_HEIGHT,
@@ -275,7 +275,7 @@ export default noop.memo((arg0) => {
       destination_channel_id: channel_id,
     });
     const obj2 = { order: index, guild_id, type: constants.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
-    asyncRequireImpl(13178, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(13180, dependencyMap.paths).then((result) => {
       result.default(channel_id, true);
     });
   }, items);

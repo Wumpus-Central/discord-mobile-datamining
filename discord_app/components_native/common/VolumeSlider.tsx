@@ -5,7 +5,7 @@ import PlatformUtils2 from "../../utils/PlatformUtils.tsx";
 import useToken from "../../design/tokens/native/useToken.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _modDef8548 from "../../../_runtime/metro/08548__.js";
+import _modDef8549 from "../../../_runtime/metro/08549__.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -73,7 +73,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   };
   obj = useToken;
   const obj3 = { style: tmp4.leftIcon };
-  const tmp7Result = _modDef8548;
+  const tmp7Result = _modDef8549;
   obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
   obj4.maximumValue = maxVolume;
   obj4.minimumTrackTintColor = minTrackColor;

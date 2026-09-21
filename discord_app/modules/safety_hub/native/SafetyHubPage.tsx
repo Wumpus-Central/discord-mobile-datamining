@@ -170,7 +170,7 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8690).AgeCheckStatus;
+const AgeCheckStatus = fn(8691).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -216,7 +216,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15041, dependencyMap.paths),
+          asyncRequireImpl(15047, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

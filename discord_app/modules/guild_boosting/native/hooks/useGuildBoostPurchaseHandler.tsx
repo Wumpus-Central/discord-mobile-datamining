@@ -41,8 +41,8 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10922).getNewAnalyticsLoadId();
-            const obj7 = args(7645);
+            newAnalyticsLoadId = args(10923).getNewAnalyticsLoadId();
+            const obj7 = args(7647);
             c3 = 1;
             c4 = 1;
             const obj4 = {
@@ -86,7 +86,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(5646).closeApplyBoostModal();
+          args(5651).closeApplyBoostModal();
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

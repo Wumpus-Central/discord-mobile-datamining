@@ -40,7 +40,7 @@ export default function ConfirmEmailChangeStart() {
     let obj3 = { oldEmail: stateFromStores.email };
     let obj4 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj5 = { style: tmp.container, children: null };
-    let obj6 = { style: tmp.image, source: navigation(6839) };
+    let obj6 = { style: tmp.image, source: navigation(6844) };
     const items1 = [closure_10(closure_7, obj6), , ,];
     let obj7 = {
       style: tmp.title,

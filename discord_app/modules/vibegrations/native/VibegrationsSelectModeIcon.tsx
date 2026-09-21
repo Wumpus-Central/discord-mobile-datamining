@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsSelectModeIcon.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../_runtime/08727_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08728_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

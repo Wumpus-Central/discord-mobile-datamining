@@ -84,7 +84,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(10422, dependencyMap.paths),
+        asyncRequireImpl(10423, dependencyMap.paths),
         "MessageUnreadActionSheet",
         { guildId: style.guildId },
       );
@@ -99,7 +99,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).unread,
     onCustomize() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(10424, dependencyMap.paths),
+        asyncRequireImpl(10425, dependencyMap.paths),
         "MessageUnreadActionSheet",
         { channel: style.channel },
       );

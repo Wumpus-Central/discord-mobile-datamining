@@ -15,8 +15,8 @@ const result = size.fileFinishedImporting("modules/safety_flows/native/OverviewS
 
 export default function OverviewScreen() {
   let tmp = closure_6();
-  task = task(18316).useSafetyFlowTask().task;
-  let obj = task(18316);
+  task = task(18327).useSafetyFlowTask().task;
+  let obj = task(18327);
   const navigation = task(1484).useNavigation();
   const items = [task, navigation];
   const callback = noop.useCallback(() => {
@@ -48,14 +48,14 @@ export default function OverviewScreen() {
     const tasks = flow_context.tasks;
     if (tasks != null) {
       mapped = tasks.map((task_type, index) => {
-        const obj = { tip: task(18311).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
-        return closure_1_4(navigation(8853), obj, task_type.task_type);
+        const obj = { tip: task(18322).TASK_TYPE_TO_TITLE[task_type.task_type], index: index + 1 };
+        return closure_1_4(navigation(8854), obj, task_type.task_type);
       });
     }
   }
   const obj7 = { children: null };
   const obj8 = { children: null };
-  const items2 = [closure_4(task(5899).TableRowGroup, { hasIcons: true, children: mapped })];
+  const items2 = [closure_4(task(5904).TableRowGroup, { hasIcons: true, children: mapped })];
   const obj9 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1115).intl;
   obj9.children = intl3.string(navigation(2776)["0TnUrG"]);
@@ -64,16 +64,16 @@ export default function OverviewScreen() {
   items1[2] = closure_5(task(5184).Stack, obj6);
   obj3.children = items1;
   obj8.children = closure_5(task(5184).Stack, obj3);
-  const items3 = [closure_4(task(8693).ModalContent, obj8)];
+  const items3 = [closure_4(task(8694).ModalContent, obj8)];
   const obj10 = { children: null };
-  const items4 = [closure_4(navigation(18318), {})];
+  const items4 = [closure_4(navigation(18329), {})];
   const obj11 = { variant: "primary", text: null, onPress: null };
   const intl4 = tmp2(1115).intl;
   obj11.text = intl4.string(navigation(2776).Ks6opt);
   obj11.onPress = callback;
-  items4[1] = closure_4(task(11261).ModalActionButton, obj11);
+  items4[1] = closure_4(task(11262).ModalActionButton, obj11);
   obj10.children = items4;
-  items3[1] = closure_5(task(12179).ModalFooter, obj10);
+  items3[1] = closure_5(task(12181).ModalFooter, obj10);
   obj7.children = items3;
-  return closure_5(task(8692).ModalScreen, obj7);
+  return closure_5(task(8693).ModalScreen, obj7);
 }

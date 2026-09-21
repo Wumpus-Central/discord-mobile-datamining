@@ -57,10 +57,10 @@ let closure_4 = async function _launchActivityInBotDM(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          const obj6 = { applicationId: closure_129_0, analyticsContext: null };
+          const obj5 = { applicationId: closure_129_0, analyticsContext: null };
           const obj7 = { isStart: true, analyticsLocations: closure_129_2 };
-          obj6.analyticsContext = obj7;
-          if (obj13.tryLaunchAsFrame(obj6)) {
+          obj5.analyticsContext = obj7;
+          if (obj13.tryLaunchAsFrame(obj5)) {
             c4 = 3;
             const obj8 = { value: Promise.resolve(true), done: true };
             return obj8;
@@ -108,9 +108,9 @@ let closure_4 = async function _launchActivityInBotDM(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp12) {
+    } catch (tmp22) {
       c4 = tmp;
-      throw tmp12;
+      throw tmp22;
     }
   }
 };

@@ -39,7 +39,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9910).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9911).setGoLiveSource;
     const obj2 = { desktopSettings: null, qualityOptions: null, context: null };
     const obj3 = { sourceId, sound: soundshareEnabled };
     obj2.desktopSettings = obj3;
@@ -47,7 +47,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj2.qualityOptions = obj4;
     obj2.context = MediaEngineContextTypes.STREAM;
     setGoLiveSource(obj2);
-    const setGoLiveSourceResult = setGoLiveSource(9910);
+    const setGoLiveSourceResult = setGoLiveSource(9911);
   } else {
     const _HermesInternal = HermesInternal;
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");

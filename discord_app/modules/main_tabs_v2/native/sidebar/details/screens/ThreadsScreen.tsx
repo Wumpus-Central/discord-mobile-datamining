@@ -10,7 +10,7 @@ require = fn;
 function ThreadsScreen(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const canStartThread = channel(7509).useCanStartThread(channel);
+  const canStartThread = channel(7511).useCanStartThread(channel);
   const items = [channel];
   const callback = noop.useCallback(() => {
     const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
@@ -28,7 +28,7 @@ function ThreadsScreen(channel) {
   }, []);
   const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
-  let obj = channel(7509);
+  let obj = channel(7511);
   if (canStartThread) {
     tmp10 = callback;
   }

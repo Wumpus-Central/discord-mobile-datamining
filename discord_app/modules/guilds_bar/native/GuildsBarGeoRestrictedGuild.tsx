@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(16615).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(16621).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -38,7 +38,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
   let animatableSourceWithFallback = null;
-  let obj = restrictedGuild(16627);
+  let obj = restrictedGuild(16633);
   const tmp2 = restrictedGuild;
   if (null != restrictedGuild.icon) {
     animatableSourceWithFallback = AvatarUtilsDefault.getAnimatableSourceWithFallback(false, (canAnimate) => {
@@ -75,7 +75,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(16627).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(16633).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),
@@ -88,7 +88,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     expandedChildren: 480,
     children: "center",
   };
-  const guildsBarAnimatedWrapperStyles = restrictedGuild(16627).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = restrictedGuild(16633).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: true,
   });
@@ -106,13 +106,13 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(5796).GuildIconSizes.LARGE,
+      size: tmp2(5801).GuildIconSizes.LARGE,
     };
     tmp8Result = jsx(GuildIconDefault, {
       value: restrictedGuild.name,
       selected: false,
       animate: false,
-      size: tmp2(5796).GuildIconSizes.LARGE,
+      size: tmp2(5801).GuildIconSizes.LARGE,
     });
     const tmp9Result = GuildIconDefault;
   }
@@ -121,7 +121,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     selected: false,
     unread: false,
     circle: false,
-    styles: restrictedGuild(16627).useGuildsBarAnimatedWrapperStyles({
+    styles: restrictedGuild(16633).useGuildsBarAnimatedWrapperStyles({
       disableSelectedColor: true,
       disableBGColor: true,
     }),

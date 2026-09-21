@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06892_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06897_LegacyBaseButton.js";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AppStoreOverlayContent from "../AppStoreOverlay/AppStoreOverlayContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -176,7 +176,7 @@ function BountyVideoEndAppStorePanelInner(metadata) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_BORDER_RADIUS = fn(7391).ACTION_SHEET_BORDER_RADIUS;
+const ACTION_SHEET_BORDER_RADIUS = fn(7396).ACTION_SHEET_BORDER_RADIUS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4756);
@@ -201,7 +201,7 @@ let obj3 = {
   overflow: "hidden",
   flexDirection: "column",
 };
-obj2.scrollContent = { paddingBottom: fn(11755).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(11757).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}",

@@ -1,7 +1,7 @@
 // discord_app/design/components/TableRow/native/TableRowArrow.native.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Icon from "../../../void/Icon/native/Icon.tsx";
-import _modDef5825 from "../../../../../_runtime/metro/05825__.js";
+import _modDef5830 from "../../../../../_runtime/metro/05830__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const IconDefault = Icon;
@@ -24,11 +24,11 @@ const result = size.fileFinishedImporting("design/components/TableRow/native/Tab
 
 export const TableRowArrow = function TableRowArrow() {
   const tmp = closure_4();
-  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5825, size: Icon.IconSizes.CUSTOM };
+  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5830, size: Icon.IconSizes.CUSTOM };
   return jsx(IconDefault, {
     style: tmp.icon,
     color: tmp.iconColor.color,
-    source: _modDef5825,
+    source: _modDef5830,
     size: Icon.IconSizes.CUSTOM,
   });
 };

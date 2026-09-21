@@ -11,7 +11,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _modDef7178 from "../../../../_runtime/metro/07178__.js";
+import _modDef7183 from "../../../../_runtime/metro/07183__.js";
 import maybeShowDiscardChangesAlertDefault from "../../user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx";
 import setCustomStatusDefault from "../setCustomStatus.tsx";
 import removeCustomStatusDefault from "../utils/removeCustomStatus.tsx";
@@ -37,7 +37,7 @@ function ClearInputButton(onPress) {
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_15();
   obj.children = map1(native.Icon, {
-    source: _modDef7178,
+    source: _modDef7183,
     style: closure_15().closeIcon,
     size: native.Icon.Sizes.SMALL,
   });
@@ -308,7 +308,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.onPress = function onPress() {
       ChatInputUtils.dismissKeyboard();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11465, dependencyMap.paths),
+        asyncRequireImpl(11467, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         { initialValue: first2, onChange },
       );
@@ -349,7 +349,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11380).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11382).STATUS_MAX_LENGTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1375).EmojiIntention;
@@ -438,7 +438,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = analyticsLocations(1115).intl;
       obj.title = intl.string(analyticsLocations(1115).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(8105).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(8107).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {
@@ -460,5 +460,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj3 = { height: 56 };
   }
   obj.headerStyle = obj3;
-  return closure_13(analyticsLocations(7240).Navigator, obj);
+  return closure_13(analyticsLocations(7245).Navigator, obj);
 }

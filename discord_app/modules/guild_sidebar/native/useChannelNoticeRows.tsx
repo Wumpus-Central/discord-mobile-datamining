@@ -11,7 +11,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_9 = fn(7774).ChannelListChannelNoticeRow;
+let closure_9 = fn(7776).ChannelListChannelNoticeRow;
 const MFALevels = fn(1074).MFALevels;
 const DismissibleContentConstants = fn(2038);
 ({ ContentDismissActionType: closure_11, DismissibleContentGroupName: closure_12 } = DismissibleContentConstants);

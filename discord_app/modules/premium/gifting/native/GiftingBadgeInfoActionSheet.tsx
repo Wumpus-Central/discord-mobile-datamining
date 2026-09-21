@@ -13,7 +13,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8460).getSingleRequirementThreshold;
+let closure_7 = fn(8461).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -56,7 +56,7 @@ export default function GiftingBadgeInfoActionSheet() {
   _require = tmp;
   let items = [BadgeDirectoryStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
-    badgeById.getBadgeById(closure_0(8452).BadgeId.GIFTING),
+    badgeById.getBadgeById(closure_0(8453).BadgeId.GIFTING),
   );
   let obj = require("initialize");
   const items1 = [AccessibilityStore];

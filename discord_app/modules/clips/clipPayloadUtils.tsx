@@ -4,7 +4,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const ClipsConstants = fn(5343);
+const ClipsConstants = fn(5348);
 ({
   CLIPS_MAX_PARTICIPANTS: closure_4,
   CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty,

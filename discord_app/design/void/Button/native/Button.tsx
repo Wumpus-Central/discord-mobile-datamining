@@ -592,7 +592,7 @@ obj2.buttonOutlined = {
   backgroundColor: "transparent",
   borderWidth: 1,
   borderStyle: "solid",
-  borderColor: fn(5653).BUTTON_OUTLINED_BORDER,
+  borderColor: fn(5658).BUTTON_OUTLINED_BORDER,
 };
 obj2.buttonXsmall = { minHeight: 24 };
 obj2.buttonSmall = { minHeight: 32 };
@@ -602,7 +602,7 @@ const obj33 = {
   backgroundColor: "transparent",
   borderWidth: 1,
   borderStyle: "solid",
-  borderColor: fn(5653).BUTTON_OUTLINED_BORDER,
+  borderColor: fn(5658).BUTTON_OUTLINED_BORDER,
 };
 obj2.text = { color: nativeDefault.colors.WHITE, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
 obj2.textXsmall = { fontSize: 12 };
@@ -625,28 +625,28 @@ const obj39 = { color: nativeDefault.colors.WHITE };
 obj2.textWhite = { color: nativeDefault.colors.WHITE };
 obj2.textFilled = {};
 const obj40 = { color: nativeDefault.colors.WHITE };
-obj2.textOutlined = { color: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.textOutlined = { color: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.faded = { opacity: 0.5 };
-const obj41 = { color: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+const obj41 = { color: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.buttonWhiteDarkDefault = { backgroundColor: nativeDefault.colors.WHITE };
 const obj42 = { backgroundColor: nativeDefault.colors.WHITE };
 obj2.textLink = { color: nativeDefault.colors.TEXT_LINK };
 const obj43 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.buttonPrimaryDefault = { backgroundColor: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-const obj44 = { backgroundColor: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-obj2.buttonPrimaryDarkDefault = { backgroundColor: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-const obj45 = { backgroundColor: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-obj2.buttonGreyDefault = { backgroundColor: fn(5653).DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
-const obj46 = { backgroundColor: fn(5653).DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
-obj2.textPrimary = { color: fn(5653).DARK_PRIMARY_500_LIGHT_PRIMARY_100 };
-const obj47 = { color: fn(5653).DARK_PRIMARY_500_LIGHT_PRIMARY_100 };
-obj2.textTransparent = { color: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-const obj48 = { color: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-obj2.buttonPrimaryDisabled = { backgroundColor: fn(5653).BUTTON_PRIMARY_DISABLED_BACKGROUND };
-const obj49 = { backgroundColor: fn(5653).BUTTON_PRIMARY_DISABLED_BACKGROUND };
-obj2.buttonPrimaryDarkDisabled = { backgroundColor: fn(5653).BUTTON_PRIMARY_DISABLED_BACKGROUND };
-const obj50 = { backgroundColor: fn(5653).BUTTON_PRIMARY_DISABLED_BACKGROUND };
-obj2.buttonGreyDisabled = { backgroundColor: fn(5653).BUTTON_GREY_DISABLED_BACKGROUND };
+obj2.buttonPrimaryDefault = { backgroundColor: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+const obj44 = { backgroundColor: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.buttonPrimaryDarkDefault = { backgroundColor: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+const obj45 = { backgroundColor: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.buttonGreyDefault = { backgroundColor: fn(5658).DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
+const obj46 = { backgroundColor: fn(5658).DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
+obj2.textPrimary = { color: fn(5658).DARK_PRIMARY_500_LIGHT_PRIMARY_100 };
+const obj47 = { color: fn(5658).DARK_PRIMARY_500_LIGHT_PRIMARY_100 };
+obj2.textTransparent = { color: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+const obj48 = { color: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.buttonPrimaryDisabled = { backgroundColor: fn(5658).BUTTON_PRIMARY_DISABLED_BACKGROUND };
+const obj49 = { backgroundColor: fn(5658).BUTTON_PRIMARY_DISABLED_BACKGROUND };
+obj2.buttonPrimaryDarkDisabled = { backgroundColor: fn(5658).BUTTON_PRIMARY_DISABLED_BACKGROUND };
+const obj50 = { backgroundColor: fn(5658).BUTTON_PRIMARY_DISABLED_BACKGROUND };
+obj2.buttonGreyDisabled = { backgroundColor: fn(5658).BUTTON_GREY_DISABLED_BACKGROUND };
 const styles = createStyles.createStyles(obj2);
 const obj52 = { FILLED: "filled", LINK: "link", OUTLINED: "outlined" };
 const obj53 = {

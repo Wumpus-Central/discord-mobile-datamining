@@ -25,7 +25,7 @@ export default function ActivityCardsItem(animatedStyles) {
     showsHorizontalScrollIndicator: false,
     horizontal: true,
   };
-  return jsx(animatedStyles(8996).FlashList, {
+  return jsx(animatedStyles(8997).FlashList, {
     contentContainerStyle: { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
     data: animatedStyles.cards,
     renderItem(item) {

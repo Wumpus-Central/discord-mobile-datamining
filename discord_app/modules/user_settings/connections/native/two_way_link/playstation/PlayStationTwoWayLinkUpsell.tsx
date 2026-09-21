@@ -5,7 +5,7 @@ import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell from "../OneWayToTwoWayLinkUpsell.tsx";
-import _modDef15241 from "../../../../../../../_runtime/metro/15241__.js";
+import _modDef15247 from "../../../../../../../_runtime/metro/15247__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,7 +28,7 @@ export const PlayStationTwoWayLinkUpsell = function PlayStationTwoWayLinkUpsell(
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.lTZBit, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef15241;
+  obj3.source = _modDef15247;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.PS_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

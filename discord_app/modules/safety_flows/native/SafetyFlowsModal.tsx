@@ -12,67 +12,67 @@ export default function SafetyFlowsModal(initialRouteName) {
   setTask = undefined;
   [task, setTask] = noop.useState(initialRouteName.task);
   const items = [task];
-  const navigatorScreens = task(7240).useNavigatorScreens(() => {
+  const navigatorScreens = task(7245).useNavigatorScreens(() => {
     const obj = {
       [closure_1_0(closure_1_2[4]).SafetyFlowScreens.OVERVIEW]: obj2,
       [closure_1_0(closure_1_2[4]).SafetyFlowScreens.ENTER_EMAIL]: obj3,
     };
     const obj4 = {
-      headerLeft: first(5836).getHeaderBackButton(),
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_5(setTask(18321), {});
-      },
-    };
-    obj[first(18311).SafetyFlowScreens.VERIFY_EMAIL] = obj4;
-    obj[first(18311).SafetyFlowScreens.UPDATE_APP] = {
-      headerLeft() {
-        return null;
-      },
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_5(setTask(18323), {});
-      },
-    };
-    obj[first(18311).SafetyFlowScreens.AGE_VERIFICATION] = {
-      headerLeft() {
-        return null;
-      },
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return closure_1_5(setTask(18324), {});
-      },
-    };
-    obj[first(18311).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
-      headerShown: false,
-      customNavbar() {
-        return closure_1_5(task(18325).ParentalConsentConnectionNavbar, {});
-      },
-      render() {
-        return closure_1_5(setTask(18326), {});
-      },
-    };
-    obj[first(18311).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
-      headerShown: false,
-      render() {
-        return closure_1_5(setTask(18331), {});
-      },
-    };
-    obj[first(18311).SafetyFlowScreens.ERROR] = {
-      headerLeft() {
-        return null;
-      },
+      headerLeft: first(5841).getHeaderBackButton(),
       headerTitle() {
         return null;
       },
       render() {
         return closure_1_5(setTask(18332), {});
+      },
+    };
+    obj[first(18322).SafetyFlowScreens.VERIFY_EMAIL] = obj4;
+    obj[first(18322).SafetyFlowScreens.UPDATE_APP] = {
+      headerLeft() {
+        return null;
+      },
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return closure_1_5(setTask(18334), {});
+      },
+    };
+    obj[first(18322).SafetyFlowScreens.AGE_VERIFICATION] = {
+      headerLeft() {
+        return null;
+      },
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return closure_1_5(setTask(18335), {});
+      },
+    };
+    obj[first(18322).SafetyFlowScreens.PARENTAL_CONSENT_CONNECTION] = {
+      headerShown: false,
+      customNavbar() {
+        return closure_1_5(task(18336).ParentalConsentConnectionNavbar, {});
+      },
+      render() {
+        return closure_1_5(setTask(18337), {});
+      },
+    };
+    obj[first(18322).SafetyFlowScreens.APP_STORE_PARENTAL_REVOCATION] = {
+      headerShown: false,
+      render() {
+        return closure_1_5(setTask(18342), {});
+      },
+    };
+    obj[first(18322).SafetyFlowScreens.ERROR] = {
+      headerLeft() {
+        return null;
+      },
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return closure_1_5(setTask(18343), {});
       },
     };
     return obj;
@@ -99,10 +99,10 @@ export default function SafetyFlowsModal(initialRouteName) {
     }
   }, items);
   const memo1 = noop.useMemo(() => ({ task, setTask }), items1);
-  let obj = task(7240);
-  return jsx(task(18316).SafetyFlowTaskContext.Provider, {
+  let obj = task(7245);
+  return jsx(task(18327).SafetyFlowTaskContext.Provider, {
     value: memo1,
-    children: jsx(task(14448).StepModal, {
+    children: jsx(task(14454).StepModal, {
       initialRouteName: initialRouteName.initialScreen,
       screens: navigatorScreens,
       steps: memo,

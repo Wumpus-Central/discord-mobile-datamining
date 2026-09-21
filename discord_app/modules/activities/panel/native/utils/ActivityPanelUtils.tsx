@@ -5,7 +5,7 @@ import isVoiceEmbeddedActivityDefault from "../../../utils/isVoiceEmbeddedActivi
 import EmbeddedActivitiesStore from "../../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(9314).ActivityPanelModes;
+const ActivityPanelModes = fn(9315).ActivityPanelModes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 

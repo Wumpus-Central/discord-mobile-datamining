@@ -94,7 +94,7 @@ function NameplateActionSheetPreview(arg0) {
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_13();
-  const tmp4 = purchase(8441)(previewSkuId);
+  const tmp4 = purchase(8442)(previewSkuId);
   const product = tmp4.product;
   _require = product;
   purchase = tmp4.purchase;
@@ -137,8 +137,8 @@ function NameplateActionSheetPreview(arg0) {
   obj.accessibilityLabel = formatToPlainStringResult;
   const obj3 = { style: tmp.nameplateGradientContainer, children: null };
   const items1 = [
-    closure_10(tmp10(9097).NameplateDummyUserPreview, { width: 100 }),
-    closure_10(tmp10(9097).NameplateDummyUserPreview, { width: 140 }),
+    closure_10(tmp10(9098).NameplateDummyUserPreview, { width: 100 }),
+    closure_10(tmp10(9098).NameplateDummyUserPreview, { width: 140 }),
   ];
   const obj4 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.1 }, end: { x: 0, y: 0.8 }, colors: null };
   const items2 = [tmp.nameplatePreviewGradient.color, "" + tmp.nameplatePreviewGradient.color + "00"];
@@ -147,12 +147,12 @@ function NameplateActionSheetPreview(arg0) {
   obj3.children = items1;
   const items3 = [
     closure_11(View, obj3),
-    closure_10(tmp10(11484).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }),
+    closure_10(tmp10(11486).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }),
   ];
   const obj5 = { style: tmp.nameplateGradientContainer, children: null };
   const items4 = [
-    closure_10(tmp10(9097).NameplateDummyUserPreview, { width: 140 }),
-    closure_10(tmp10(9097).NameplateDummyUserPreview, { width: 100 }),
+    closure_10(tmp10(9098).NameplateDummyUserPreview, { width: 140 }),
+    closure_10(tmp10(9098).NameplateDummyUserPreview, { width: 100 }),
   ];
   const obj6 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.2 }, end: { x: 0, y: 0.9 }, colors: null };
   const tmp2Result = purchase(5198);
@@ -202,13 +202,13 @@ export default function EditNameplateActionSheet(arg0) {
   if (undefined !== first) {
     tmp6 = first;
   }
-  let obj = guildId(8438);
+  let obj = guildId(8439);
   const tmp7 = first;
-  const analyticsLocations = first(7402)(first(7422).EDIT_NAMEPLATE_SHEET).analyticsLocations;
+  const analyticsLocations = first(7407)(first(7427).EDIT_NAMEPLATE_SHEET).analyticsLocations;
   const items = [first, guildId];
   const callback = noop.useCallback(() => {
     const obj = first(1241);
-    obj.track(constants.OPEN_POPOUT, { type: first(7422).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
+    obj.track(constants.OPEN_POPOUT, { type: first(7427).EDIT_NAMEPLATE_SHEET, is_fullscreen: true });
   }, []);
   const callback1 = noop.useCallback((arg0) => {
     const obj2 = { guildId, nameplate: null };
@@ -250,7 +250,7 @@ export default function EditNameplateActionSheet(arg0) {
   };
   let skuId;
   const obj6 = { style: tmp.bounceOffset };
-  const tmp8 = first(7402);
+  const tmp8 = first(7407);
   if (currentNameplate != null) {
     skuId = currentNameplate.skuId;
   }
@@ -262,9 +262,9 @@ export default function EditNameplateActionSheet(arg0) {
   obj8.selectedSkuId = skuId1;
   obj8.onApply = callback1;
   obj8.analyticsLocations = analyticsLocations;
-  obj8.analyticsSource = tmp7(7422).EDIT_NAMEPLATE_SHEET;
-  items2[1] = closure_10(first(8440), obj8);
+  obj8.analyticsSource = tmp7(7427).EDIT_NAMEPLATE_SHEET;
+  items2[1] = closure_10(first(8441), obj8);
   obj4.children = items2;
-  obj3.children = closure_11(guildId(7390).BottomSheet, obj4);
-  return closure_10(guildId(7402).AnalyticsLocationProvider, obj3);
+  obj3.children = closure_11(guildId(7395).BottomSheet, obj4);
+  return closure_10(guildId(7407).AnalyticsLocationProvider, obj3);
 }

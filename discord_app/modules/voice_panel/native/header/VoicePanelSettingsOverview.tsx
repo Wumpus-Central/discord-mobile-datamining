@@ -16,7 +16,7 @@ import TableRowArrow from "../../../../design/components/TableRow/native/TableRo
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef8904 from "../../../../../_runtime/metro/08904__.js";
+import _modDef8905 from "../../../../../_runtime/metro/08905__.js";
 import FormComponents from "../shared/FormComponents.tsx";
 import useIsSecureFramesVerified from "../../../rtc/hooks/useIsSecureFramesVerified.tsx";
 import SecureFramesPlatformUtilsDefault from "../../../rtc/SecureFramesPlatformUtils.native.tsx";
@@ -135,7 +135,7 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = {
     onPress: callback,
-    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8904 }),
+    icon: collapsedCategories(TableRowIcon.TableRowIcon, { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8905 }),
     label: null,
     trailing: null,
   };
@@ -155,7 +155,7 @@ function ActivityDebugToggle() {
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj2.icon = collapsedCategories(TableRowIcon.TableRowIcon, {
     IconComponent: WrenchIcon.WrenchIcon,
-    source: _modDef8904,
+    source: _modDef8905,
   });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -168,7 +168,7 @@ function ActivityDebugToggle() {
 const Constants = fn(1074);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
 const isStreamParticipant = fn(4777).isStreamParticipant;
-let closure_17 = fn(9971).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+let closure_17 = fn(9972).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 const createStyles = fn(4756);
@@ -289,7 +289,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   }, items9);
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17566, dependencyMap.paths), closure_17, { channelId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17577, dependencyMap.paths), closure_17, { channelId });
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

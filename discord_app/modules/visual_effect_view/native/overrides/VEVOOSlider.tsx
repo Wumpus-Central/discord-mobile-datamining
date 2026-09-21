@@ -1,6 +1,6 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOSlider.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef8548 from "../../../../../_runtime/metro/08548__.js";
+import _modDef8549 from "../../../../../_runtime/metro/08549__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;

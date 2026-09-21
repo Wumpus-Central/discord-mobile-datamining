@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06892_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06897_LegacyBaseButton.js";
 import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils.tsx";
 import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

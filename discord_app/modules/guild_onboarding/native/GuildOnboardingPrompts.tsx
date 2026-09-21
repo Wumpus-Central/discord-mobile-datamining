@@ -57,8 +57,8 @@ function BackgroundImageGradient(uri) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const OnboardingPromptType = fn(7341).OnboardingPromptType;
-let closure_15 = fn(7337).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(7346).OnboardingPromptType;
+let closure_15 = fn(7342).GuildOnboardingModalStates;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
@@ -70,7 +70,7 @@ let obj2 = {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5894).NAV_BAR_HEIGHT,
+    marginTop: fn(5899).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -89,7 +89,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5894).NAV_BAR_HEIGHT,
+  marginTop: fn(5899).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };

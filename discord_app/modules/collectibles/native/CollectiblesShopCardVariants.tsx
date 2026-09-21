@@ -102,8 +102,8 @@ export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
   const tmp = closure_6();
-  defaultVariantIndex = defaultVariantIndex(9044).useDefaultVariantIndex(product);
-  const obj = defaultVariantIndex(9044);
+  defaultVariantIndex = defaultVariantIndex(9045).useDefaultVariantIndex(product);
+  const obj = defaultVariantIndex(9045);
   if (obj2.getIsVariantProduct(product)) {
     let num3 = 3;
     if (product.variants.length <= 4) {
@@ -137,5 +137,5 @@ export default noop.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7793);
+  obj2 = defaultVariantIndex(7795);
 });

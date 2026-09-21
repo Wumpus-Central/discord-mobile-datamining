@@ -45,7 +45,7 @@ export default function GIFPickerItemView(onPressGIF) {
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(10638, dependencyMap.paths),
+      asyncRequireImpl(10639, dependencyMap.paths),
       "GIFPickerItemActionSheet",
       { item },
       "stack",

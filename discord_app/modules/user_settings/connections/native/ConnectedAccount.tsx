@@ -15,7 +15,7 @@ import ConnectedAccountsActionCreatorsDefault from "../../../../actions/Connecte
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef7232 from "../../../../../_runtime/metro/07232__.js";
+import _modDef7237 from "../../../../../_runtime/metro/07237__.js";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import InfoBoxDefault from "../../authorized_apps/native/InfoBox.tsx";
 import shouldWarnConnectedAccountTwoWayDefault from "../../../connections/shouldWarnConnectedAccountTwoWay.tsx";
@@ -65,7 +65,7 @@ function Integration(integration) {
     const obj6 = { style: legacyClassComponentStyles.integrationContainerInternal, children: null };
     const obj7 = {
       guild: integration.guild,
-      size: tmp(5796).GuildIconSizes.SMALL,
+      size: tmp(5801).GuildIconSizes.SMALL,
       style: legacyClassComponentStyles.integrationGuildIcon,
     };
     const items4 = [closure_14(GuildIconDefault, obj7), ,];
@@ -132,7 +132,7 @@ const Constants = fn(1074);
   HelpdeskArticles: closure_12,
   Fonts,
 } = Constants);
-const MetadataFields = fn(5620).MetadataFields;
+const MetadataFields = fn(5625).MetadataFields;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const createStyles = fn(4756);
@@ -577,36 +577,36 @@ prototype["renderMetadata"] = function renderMetadata() {
     metadata = {};
   }
   let stringResult = dependencyMap;
-  const createdAtDate = account(5619).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
+  const createdAtDate = account(5624).getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let redditMetadataItems = tmp2(11824).generateRedditMetadataItems(metadata);
-    const tmp2Result = tmp2(11824);
+    let redditMetadataItems = tmp2(11826).generateRedditMetadataItems(metadata);
+    const tmp2Result = tmp2(11826);
   } else if (constants.STEAM === type) {
-    redditMetadataItems = tmp2(11824).generateSteamMetadataItems(metadata);
-    const tmp2Result6 = tmp2(11824);
+    redditMetadataItems = tmp2(11826).generateSteamMetadataItems(metadata);
+    const tmp2Result6 = tmp2(11826);
   } else {
     if (constants.BLUESKY !== type) {
       if (constants.TWITTER !== type) {
         if (constants.MASTODON !== type) {
           if (constants.EBAY === type) {
-            redditMetadataItems = tmp2(11824).generateEbayMetadataItems(metadata);
-            const tmp2Result7 = tmp2(11824);
+            redditMetadataItems = tmp2(11826).generateEbayMetadataItems(metadata);
+            const tmp2Result7 = tmp2(11826);
           } else if (constants.PAYPAL === type) {
-            redditMetadataItems = tmp2(11824).generatePaypalMetadataItems(metadata);
-            const tmp2Result8 = tmp2(11824);
+            redditMetadataItems = tmp2(11826).generatePaypalMetadataItems(metadata);
+            const tmp2Result8 = tmp2(11826);
           } else {
             redditMetadataItems = [];
             if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp2(11824).generateTikTokMetadataItems(metadata);
-              const tmp2Result9 = tmp2(11824);
+              redditMetadataItems = tmp2(11826).generateTikTokMetadataItems(metadata);
+              const tmp2Result9 = tmp2(11826);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11824).generateTwitterMetadataItems(metadata);
-    const tmp2Result10 = tmp2(11824);
+    redditMetadataItems = tmp2(11826).generateTwitterMetadataItems(metadata);
+    const tmp2Result10 = tmp2(11826);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -625,7 +625,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     });
   }
   if (0 === redditMetadataItems.length) {
-    value = self(5495).get(account.type);
+    value = self(5500).get(account.type);
     let hasMetadata;
     if (value != null) {
       hasMetadata = value.hasMetadata;
@@ -679,7 +679,7 @@ prototype["renderMetadata"] = function renderMetadata() {
       obj4.children = items1;
       closure_15(View, obj4);
     }
-    const obj13 = self(5495);
+    const obj13 = self(5500);
   } else {
     const obj12 = {
       accessibilityRole: "button",
@@ -704,19 +704,19 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj12.style = items2;
     const obj14 = { style: tmp.metadataRefreshIcon, size: tmp2(1177).Icon.Sizes.SMALL, source: null };
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp9Result = tmp9(10911);
+      let tmp9Result = tmp9(10912);
     } else {
-      tmp9Result = tmp9(15242);
+      tmp9Result = tmp9(15248);
     }
     obj14.source = tmp9Result;
     obj12.children = closure_14(tmp2(1177).Icon, obj14);
     const obj15 = { style: tmp.metadataContainer, children: null };
     const obj16 = { style: tmp.metadataItemsContainer, children: redditMetadataItems };
-    const items3 = [closure_14(View, obj16), closure_14(tmp2(5334).PressableOpacity, obj12)];
+    const items3 = [closure_14(View, obj16), closure_14(tmp2(5339).PressableOpacity, obj12)];
     obj15.children = items3;
     return closure_15(View, obj15);
   }
-  const obj2 = account(5619);
+  const obj2 = account(5624);
 };
 prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
   let tmp2 = null;
@@ -810,9 +810,9 @@ prototype["render"] = function render() {
   obj7.onPress = self.handleDisconnect;
   obj7.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
   const tmp7Result = closure_1_14(native2.Icon, obj3);
-  obj7.children = closure_1_14(native2.Icon, { style: tmp.deleteConnectionIcon, source: _modDef7232 });
+  obj7.children = closure_1_14(native2.Icon, { style: tmp.deleteConnectionIcon, source: _modDef7237 });
   obj6.children = closure_1_14(Pressables.PressableOpacity, obj7);
-  const obj8 = { style: tmp.deleteConnectionIcon, source: _modDef7232 };
+  const obj8 = { style: tmp.deleteConnectionIcon, source: _modDef7237 };
   const result = self.renderIntegrationsRow();
   const result1 = self.renderFriendSyncCheckRow();
   const result2 = self.renderActivityCheckRow();

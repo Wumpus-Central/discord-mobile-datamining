@@ -6,13 +6,13 @@ import BrowserManager from "../../../links/native/BrowserManager.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const SettingBuilders = fn(11723);
+const SettingBuilders = fn(11725);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(8232).MobileUserSettings.WEB_BROWSER,
+  parent: fn(8233).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };

@@ -68,8 +68,8 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10318)(guildId, channelId, ownerId).previewUrl;
-  const tmp4 = stream(10318);
+  const previewUrl = stream(10319)(guildId, channelId, ownerId).previewUrl;
+  const tmp4 = stream(10319);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
   const stateFromStores = mode(504).useStateFromStores(
@@ -147,7 +147,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     tmp16Result = closure_6(closure_9, obj10);
   }
   obj7.children = tmp16Result;
-  items2[1] = closure_6(stream(7313), obj7);
+  items2[1] = closure_6(stream(7318), obj7);
   obj4.children = items2;
   return closure_7(closure_8, obj4);
 };

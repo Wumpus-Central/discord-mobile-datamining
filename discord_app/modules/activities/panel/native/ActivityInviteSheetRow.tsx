@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const InviteSendStates = fn(7976).InviteSendStates;
+const InviteSendStates = fn(7978).InviteSendStates;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj = { acronym: null };

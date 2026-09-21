@@ -1,7 +1,7 @@
 // discord_app/modules/notification_center/native/NotificationCenterActionButton.tsx
 import util from "../../../intl/index.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8181 from "../../../../_runtime/metro/08181__.js";
+import _modDef8182 from "../../../../_runtime/metro/08182__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ export default function NotificationCenterActionButton() {
   const obj = {
     variant: "tertiary",
     size: "sm",
-    icon: _modDef8181,
+    icon: _modDef8182,
     onPress() {
       return require("ActionSheetActionCreators").openLazy(
         require("asyncRequireImpl")(paths[5], paths.paths),
@@ -30,7 +30,7 @@ export default function NotificationCenterActionButton() {
   return jsx(IconButton.IconButton, {
     variant: "tertiary",
     size: "sm",
-    icon: _modDef8181,
+    icon: _modDef8182,
     onPress() {
       return require("ActionSheetActionCreators").openLazy(
         require("asyncRequireImpl")(paths[5], paths.paths),

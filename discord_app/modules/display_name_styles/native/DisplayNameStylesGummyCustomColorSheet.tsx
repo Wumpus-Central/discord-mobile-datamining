@@ -67,18 +67,18 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   obj6.text = intl2.string(onSelect(1115).t.XqMe3N);
   obj6.onPress = callback1;
   obj5.trailing = closure_7(onSelect(5186).Button, obj6);
-  obj4.header = closure_7(sharedValue(15609), obj5);
+  obj4.header = closure_7(sharedValue(15615), obj5);
   const obj7 = { style: tmp.body, children: null };
   const obj8 = { style: tmp.previewWrapper, children: null };
-  const tmp5 = sharedValue(15609);
+  const tmp5 = sharedValue(15615);
   obj8.children = closure_7(View, {
     style: tmp.preview,
-    children: closure_7(sharedValue(15615), { hue: sharedValue }),
+    children: closure_7(sharedValue(15621), { hue: sharedValue }),
   });
   const items1 = [closure_7(View, obj8)];
   const obj10 = {
     style: tmp.huePickerInset,
-    children: closure_7(sharedValue(14871), {
+    children: closure_7(sharedValue(14877), {
       hue: sharedValue,
       onPanFinalize: callback,
       saturation,
@@ -89,5 +89,5 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   items1[1] = closure_7(View, obj10);
   obj7.children = items1;
   obj4.children = closure_8(View, obj7);
-  return closure_7(onSelect(7390).BottomSheet, obj4);
+  return closure_7(onSelect(7395).BottomSheet, obj4);
 }

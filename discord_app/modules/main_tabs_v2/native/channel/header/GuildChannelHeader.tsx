@@ -66,8 +66,8 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13572);
-    return tmpResult.renderMemberCountText(online, total, flag, tmp(6857).ICON_SIZE[token]);
+    const tmpResult = tmp(13578);
+    return tmpResult.renderMemberCountText(online, total, flag, tmp(6862).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
 }
@@ -101,7 +101,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
   const channel = guild.channel;
   _slicedToArray = undefined;
   const items = [guild(2027).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP];
-  const tmp = _slicedToArray(guild(7628).useSelectedDismissibleContent(items, undefined, true), 2);
+  const tmp = _slicedToArray(guild(7630).useSelectedDismissibleContent(items, undefined, true), 2);
   dependencyMap = tmp2;
   const tmp3 = tmp[0] === guild(2027).DismissibleContent.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP;
   _slicedToArray = tmp3;
@@ -137,8 +137,8 @@ function ChannelLinkedLobbyCoachmark(guild) {
     obj.imgSource = channelIconWithGuild;
     return obj;
   }, items1);
-  let obj = guild(7628);
-  const coachmark = guild(11392).useCoachmark(guild.iconRef, memo);
+  let obj = guild(7630);
+  const coachmark = guild(11394).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;

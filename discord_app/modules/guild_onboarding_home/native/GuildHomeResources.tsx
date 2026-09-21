@@ -4,7 +4,7 @@ import router_utils from "../../routing/router_utils.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
-import _modDef16910 from "../../../../_runtime/metro/16910__.js";
+import _modDef16916 from "../../../../_runtime/metro/16916__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -29,10 +29,10 @@ function ResourceChannelRow(channelId) {
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => MessageStore.getMessages(channelId));
   const firstResult = stateFromStores2.first();
   const obj3 = channelId(504);
-  const forumPostMediaProperties = channelId(8140).useForumPostMediaProperties(firstResult, false);
-  const obj5 = channelId(8140);
+  const forumPostMediaProperties = channelId(8141).useForumPostMediaProperties(firstResult, false);
+  const obj5 = channelId(8141);
   let length;
-  const firstMediaIsEmbed = channelId(8140).useFirstMediaIsEmbed(firstResult, false);
+  const firstMediaIsEmbed = channelId(8141).useFirstMediaIsEmbed(firstResult, false);
   if (forumPostMediaProperties != null) {
     length = forumPostMediaProperties.length;
   }
@@ -40,9 +40,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  const obj6 = channelId(8140);
-  let flag = channelId(12260).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16909)(firstResult);
+  const obj6 = channelId(8141);
+  let flag = channelId(12262).useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
+  const tmp11 = stateFromStores(16915)(firstResult);
   const tmp12 =
     null != stateFromStores &&
     null == stateFromStores2.first() &&
@@ -140,22 +140,22 @@ function ResourceChannelRow(channelId) {
               if (flag == null) {
                 flag = false;
               }
-              obj17.embedLeftBorderColor = tmp2(8140).getEmbedColor(firstResult, flag);
+              obj17.embedLeftBorderColor = tmp2(8141).getEmbedColor(firstResult, flag);
               let id;
               if (firstResult != null) {
                 id = firstResult.id;
               }
               obj17.firstMessageId = id;
               obj17.containerStyle = tmp.thumbnail;
-              tmp19Result6 = closure_12(tmp2(12260).ForumPostMediaThumbnail, obj17);
-              const tmp2Result2 = tmp2(8140);
+              tmp19Result6 = closure_12(tmp2(12262).ForumPostMediaThumbnail, obj17);
+              const tmp2Result2 = tmp2(8141);
             }
           }
         }
       }
       items5[2] = tmp19Result6;
       obj7.children = items5;
-      return closure_13(tmp2(5334).PressableOpacity, obj7);
+      return closure_13(tmp2(5339).PressableOpacity, obj7);
     }
   }
   return null;
@@ -199,7 +199,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1115).intl;
     obj3.children = intl.string(guildId(1115).t.owvC9U);
     const items = [closure_12(guildId(4752).Text, obj3), ,];
-    const obj4 = { style: tmp.emptyStateImage, source: _modDef16910 };
+    const obj4 = { style: tmp.emptyStateImage, source: _modDef16916 };
     items[1] = closure_12(closure_5, obj4);
     const obj5 = {
       onPress() {

@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16581 from "../../../../../_runtime/metro/16581__.js";
+import _modDef16587 from "../../../../../_runtime/metro/16587__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -58,7 +58,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16581 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef16587 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress() {

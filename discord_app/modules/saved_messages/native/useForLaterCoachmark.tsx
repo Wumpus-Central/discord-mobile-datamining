@@ -1,13 +1,13 @@
 // discord_app/modules/saved_messages/native/useForLaterCoachmark.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef13595 from "../../../../_runtime/metro/13595__.js";
+import _modDef13601 from "../../../../_runtime/metro/13601__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function CoachmarkImg() {
-  const obj = { source: _modDef13595, style: closure_9().imageContainer };
-  return <Image source={_modDef13595} style={closure_9().imageContainer} />;
+  const obj = { source: _modDef13601, style: closure_9().imageContainer };
+  return <Image source={_modDef13601} style={closure_9().imageContainer} />;
 }
 const Image = fn(17).Image;
 const ContentDismissActionType = fn(2038).ContentDismissActionType;
@@ -25,8 +25,8 @@ export default function useForLaterCoachmark(targetRef) {
   } else {
     items1 = [];
   }
-  obj = first(8096);
-  const tmp4 = _slicedToArray(first(7628).useSelectedDismissibleContent(items1, undefined, true), 2);
+  obj = first(8098);
+  const tmp4 = _slicedToArray(first(7630).useSelectedDismissibleContent(items1, undefined, true), 2);
   first = tmp4[0];
   closure_1 = tmp6;
   const items2 = [tmp4[1], first];
@@ -52,7 +52,7 @@ export default function useForLaterCoachmark(targetRef) {
     };
     return obj;
   }, items2);
-  const tmpResult = first(7628);
-  const coachmark = first(11392).useCoachmark(targetRef, memo);
+  const tmpResult = first(7630);
+  const coachmark = first(11394).useCoachmark(targetRef, memo);
   return tmp4[1];
 }

@@ -128,7 +128,7 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
   const tmp = closure_8();
-  skuId = skuId(13457).useOrbCheckoutModalContext().skuId;
+  skuId = skuId(13459).useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
   return closure_6(skuId(4752).Text, {

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef10911 from "../../../../_runtime/metro/10911__.js";
+import _modDef10912 from "../../../../_runtime/metro/10912__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,7 +39,7 @@ export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
   const obj = { style: tmp.container, children: null };
   const items = [
     React4(View, { style: tmp.imageContainer }),
-    React4(native.Icon, { source: _modDef10911, style: tmp.icon, color: tmp.icon.color }),
+    React4(native.Icon, { source: _modDef10912, style: tmp.icon, color: tmp.icon.color }),
   ];
   const obj4 = { children: null };
   const obj5 = {

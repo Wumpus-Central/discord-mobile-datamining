@@ -318,8 +318,8 @@ let closure_9 = async function _saveChannel(arg0) {
               tmp5 = isThreadResult;
             }
             if (!tmp5) {
-              const result = closure_1(7563).checkGuildTemplateDirty(guildId);
-              const tmpResult = closure_1(7563);
+              const result = closure_1(7565).checkGuildTemplateDirty(guildId);
+              const tmpResult = closure_1(7565);
             }
             return arg0;
           },

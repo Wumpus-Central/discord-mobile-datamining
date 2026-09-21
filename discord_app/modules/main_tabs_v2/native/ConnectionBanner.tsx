@@ -8,7 +8,7 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import LinearGradientDefault from "../../../../_runtime/05198_LinearGradient.js";
-import _modDef5876 from "../../../../_runtime/metro/05876__.js";
+import _modDef5881 from "../../../../_runtime/metro/05881__.js";
 import ConnectionUnknownIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionUnknownIcon.tsx";
 import ConnectionFineIcon from "../../../design/components/Icon/native/redesign/generated/ConnectionFineIcon.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -92,7 +92,7 @@ function BackOnlineGlow(opacity) {
     start: start2,
     end: end2,
   });
-  obj2.children = closure_12(_modDef5876, obj3);
+  obj2.children = closure_12(_modDef5881, obj3);
   return closure_12(ReanimatedRexportDefault.View, obj2);
 }
 function ConnectionBannerInner() {
@@ -182,8 +182,8 @@ function ConnectionBannerInner() {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const constants = fn(13945).ConnectivityIndicatorState;
-const YouBarConstants = fn(15359);
+const constants = fn(13951).ConnectivityIndicatorState;
+const YouBarConstants = fn(15365);
 const CONNECTION_BANNER_HEIGHT = YouBarConstants.CONNECTION_BANNER_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -234,10 +234,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(13946).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(13952).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
-  let obj = stateFromStores(13946);
+  let obj = stateFromStores(13952);
   const items = [ConnectivityIndicatorStateStore];
   stateFromStores = hidden(504).useStateFromStores(items, () => state.getState());
   dependencyMap = noop.useRef(null);

@@ -82,7 +82,7 @@ export default function _default(feedBlock) {
   const stateFromStores1 = feedBlock(504).useStateFromStores(items1, () =>
     ConsentStore.hasConsented(constants2.PERSONALIZATION),
   );
-  let tmp6 = stateFromStores1(16136)();
+  let tmp6 = stateFromStores1(16142)();
   dependencyMap = tmp6;
   const items2 = [feedBlock.sortedSkuIds, tmp6, stateFromStores1];
   const memo = noop.useMemo(() => {
@@ -113,12 +113,12 @@ export default function _default(feedBlock) {
   }, items2);
   ({ isPersonalized, feedProducts } = memo);
   let obj2 = feedBlock(504);
-  const filteredAndSortedProducts = feedBlock(15336).useFilteredAndSortedProducts({
+  const filteredAndSortedProducts = feedBlock(15342).useFilteredAndSortedProducts({
     products: feedProducts,
     maxProducts: 36,
     screen,
   });
-  const obj3 = feedBlock(15336);
+  const obj3 = feedBlock(15342);
   const items3 = [AccessibilityStore];
   const stateFromStores2 = feedBlock(504).useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
   const obj4 = feedBlock(504);
@@ -131,7 +131,7 @@ export default function _default(feedBlock) {
     stringResult = string(t.ivaAA7);
   }
   const obj5 = {
-    value: stateFromStores1(7402)(stateFromStores1(7422).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations,
+    value: stateFromStores1(7407)(stateFromStores1(7427).COLLECTIBLES_SHOP_POPULAR_PICKS).analyticsLocations,
     children: null,
   };
   const obj6 = { style: feedFooterOrbImage.feedContainer, children: null };
@@ -154,7 +154,7 @@ export default function _default(feedBlock) {
     const intl2 = tmp(1115).intl;
     obj9["aria-label"] = intl2.string(tmp(1115).t.hvVgAZ);
     obj9.children = closure_11(tmp(4710).CircleInformationIcon, { size: "xs" });
-    isPersonalized = closure_11(tmp(5334).PressableOpacity, obj9);
+    isPersonalized = closure_11(tmp(5339).PressableOpacity, obj9);
   }
   function goToShopAll() {
     const obj2 = { analyticsLocations: null, analyticsSource: null, screen: null };
@@ -178,7 +178,7 @@ export default function _default(feedBlock) {
   obj7.children = items5;
   const items6 = [
     closure_12(closure_5, obj7),
-    closure_11(stateFromStores1(16143), {
+    closure_11(stateFromStores1(16149), {
       products: filteredAndSortedProducts,
       loadingCardsNum: 36,
       preferVCPrice,
@@ -204,7 +204,7 @@ export default function _default(feedBlock) {
         importantForAccessibility: "no-hide-descendants",
       };
       const obj15 = { uri: null };
-      tmp5Result = tmp5(16151);
+      tmp5Result = tmp5(16157);
       obj15.uri = tmp5Result;
       obj14.source = obj15;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
@@ -213,14 +213,14 @@ export default function _default(feedBlock) {
     } else {
       if (tmpResult.isAndroid()) {
         const obj16 = {
-          url: tmp5(16152),
+          url: tmp5(16158),
           autoplay: true,
           style: feedFooterOrbImage.feedFooterOrbImage,
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
         };
-        tmp12Result2 = closure_11(tmp5(9089), obj16);
-        const tmp5Result3 = tmp5(9089);
+        tmp12Result2 = closure_11(tmp5(9090), obj16);
+        const tmp5Result3 = tmp5(9090);
       } else {
         const obj17 = {
           source: null,
@@ -230,11 +230,11 @@ export default function _default(feedBlock) {
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
         };
-        const obj18 = { uri: tmp5(16152) };
+        const obj18 = { uri: tmp5(16158) };
         obj17.source = obj18;
         obj17.style = feedFooterOrbImage.feedFooterOrbImage;
-        tmp12Result2 = closure_11(tmp5(5799), obj17);
-        const tmp5Result4 = tmp5(5799);
+        tmp12Result2 = closure_11(tmp5(5804), obj17);
+        const tmp5Result4 = tmp5(5804);
       }
       tmpResult = tmp(1364);
     }
@@ -246,11 +246,11 @@ export default function _default(feedBlock) {
       importantForAccessibility: "no-hide-descendants",
     };
     if (stateFromStores) {
-      obj19.source = tmp(16153);
+      obj19.source = tmp(16159);
       obj19.style = feedFooterOrbImage.feedFooterImage;
       let tmp18 = obj19;
     } else {
-      obj19.source = tmp(16154);
+      obj19.source = tmp(16160);
       obj19.style = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj19;
     }
@@ -259,7 +259,7 @@ export default function _default(feedBlock) {
     items6[2] = closure_12(closure_5, obj11);
     obj6.children = items6;
     obj5.children = closure_12(closure_5, obj6);
-    return closure_11(tmp(7402).AnalyticsLocationProvider, obj5);
+    return closure_11(tmp(7407).AnalyticsLocationProvider, obj5);
   }
-  const tmp10 = stateFromStores1(7402);
+  const tmp10 = stateFromStores1(7407);
 }

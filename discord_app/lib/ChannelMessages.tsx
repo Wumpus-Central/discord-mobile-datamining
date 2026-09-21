@@ -1637,7 +1637,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   const self = this;
-  const result = reversed(5488).requireSortedDescending(messages);
+  const result = reversed(5493).requireSortedDescending(messages);
   const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
@@ -1652,7 +1652,7 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   if (!stale) {
     cached = self.cached;
   }
-  const obj = reversed(5488);
+  const obj = reversed(5493);
   const obj2 = { ready: true, cached: stale, error: false, initialScrollSequenceId: null };
   const initialScrollSequenceId = self.initialScrollSequenceId;
   if (cached) {

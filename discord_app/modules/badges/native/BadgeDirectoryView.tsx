@@ -49,7 +49,7 @@ function BadgeSection(children) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const UserSettingsSections = fn(1074).UserSettingsSections;
-let closure_9 = fn(11461).UserProfileEditAutoFocusElement;
+let closure_9 = fn(11463).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4756);

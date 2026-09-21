@@ -151,7 +151,7 @@ let closure_14 = async function _handleManualReviewCta() {
   }
 };
 const Endpoints = fn(1074).Endpoints;
-const SafetyToastType = fn(8669).SafetyToastType;
+const SafetyToastType = fn(8670).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

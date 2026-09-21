@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticsPages: metroRequire, RelationshipTypes: closure_7 } = Constants);
-let closure_8 = fn(11643).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_8 = fn(11645).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4756);
@@ -70,7 +70,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   }, items5);
   const items7 = [user.id];
   const callback4 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11644, dependencyMap.paths), closure_8, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11646, dependencyMap.paths), closure_8, {
       userId: user.id,
       channelId: channel.id,
     });

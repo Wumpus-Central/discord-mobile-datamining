@@ -25,7 +25,7 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9639);
+const ChannelCallStore = fn(9640);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
 const ParticipantTypes = fn(4777).ParticipantTypes;
 const jsxProd = fn(21);

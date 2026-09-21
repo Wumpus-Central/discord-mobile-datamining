@@ -26,7 +26,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp = closure_7();
-  const bottomSheetRef1 = markAsDismissed(8438).useBottomSheetRef();
+  const bottomSheetRef1 = markAsDismissed(8439).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   const obj2 = {
     ref: bottomSheetRef,
@@ -41,7 +41,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   const obj3 = { children: null };
   const items = [
     closure_5(FastImageDefault, { source: imageSource, style: tmp.image }),
-    closure_5(markAsDismissed(7394).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
+    closure_5(markAsDismissed(7399).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose }),
   ];
   obj3.children = items;
   obj2.header = closure_6(View, obj3);
@@ -64,5 +64,5 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   ];
   obj5.children = items1;
   obj2.children = closure_6(View, obj5);
-  return closure_5(markAsDismissed(7390).BottomSheet, obj2);
+  return closure_5(markAsDismissed(7395).BottomSheet, obj2);
 }

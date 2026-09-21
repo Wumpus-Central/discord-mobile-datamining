@@ -10,7 +10,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8912).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8913).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -177,7 +177,7 @@ export default function InAppReportModal(arg0) {
       const obj6 = {};
       const obj7 = {
         headerRight() {
-          const obj = { source: menu(7232), onPress, accessibilityLabel: null };
+          const obj = { source: menu(7237), onPress, accessibilityLabel: null };
           const intl = util.intl;
           obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
           return addOnCloseCallback(HeaderActionButton2.HeaderActionButton, obj);

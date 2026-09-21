@@ -11,8 +11,8 @@ import HomeDrawerStore from "../../../../home_drawer/native/HomeDrawerStore.tsx"
 require = fn;
 function ContentMaskGradient(offsetX) {
   offsetX = offsetX.offsetX;
-  const guildsBarPullX = offsetX(16355).useHomeDrawerState().guildsBarPullX;
-  let obj = offsetX(16355);
+  const guildsBarPullX = offsetX(16361).useHomeDrawerState().guildsBarPullX;
+  let obj = offsetX(16361);
   const fn = function n() {
     const obj = { transform: null };
     const obj2 = { translateX: roundToNearestPixelDefault(-offsetX - guildsBarPullX.get()) };
@@ -21,14 +21,14 @@ function ContentMaskGradient(offsetX) {
     return obj;
   };
   let obj2 = offsetX(4492);
-  fn.__closure = { roundToNearestPixel: guildsBarPullX(11258), offsetX, guildsBarPullX };
+  fn.__closure = { roundToNearestPixel: guildsBarPullX(11259), offsetX, guildsBarPullX };
   fn.__workletHash = 7539125302557;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const obj4 = {
     pointerEvents: "none",
     style: null,
-    children: closure_9(guildsBarPullX(5336), { absolute: true, tall: true, wide: true, mix: true }),
+    children: closure_9(guildsBarPullX(5341), { absolute: true, tall: true, wide: true, mix: true }),
   };
   let items = [absoluteFill.absoluteFill, animatedStyle];
   obj4.style = items;
@@ -36,19 +36,19 @@ function ContentMaskGradient(offsetX) {
 }
 function HomeDrawerPanelContent() {
   const tmp2 = closure_11();
-  const drawerOpen = ref(16358).useDrawerOpen();
-  let obj = ref(16358);
+  const drawerOpen = ref(16364).useDrawerOpen();
+  let obj = ref(16364);
   const tmp3 = ref;
-  const doesLandOnHomeDrawer = ref(16355).useDoesLandOnHomeDrawer();
+  const doesLandOnHomeDrawer = ref(16361).useDoesLandOnHomeDrawer();
   ref = isClientThemeOrCustomThemeActive.useRef(null);
-  let obj2 = ref(16355);
-  const homeDrawerState = ref(16355).useHomeDrawerState();
+  let obj2 = ref(16361);
+  const homeDrawerState = ref(16361).useHomeDrawerState();
   const panelTranslateX = homeDrawerState.panelTranslateX;
   const tmp9 = HomeDrawerStore((maxX) => maxX.maxX);
   dependencyMap = tmp9;
-  let obj3 = ref(16355);
-  isClientThemeOrCustomThemeActive = ref(8116).useIsClientThemeOrCustomThemeActive();
-  let obj4 = ref(8116);
+  let obj3 = ref(16361);
+  isClientThemeOrCustomThemeActive = ref(8118).useIsClientThemeOrCustomThemeActive();
+  let obj4 = ref(8118);
   const token = ref(4457).useToken(panelTranslateX(576).colors.BACKGROUND_BASE_LOWEST);
   const obj5 = ref(4457);
   const token1 = ref(4457).useToken(panelTranslateX(576).colors.PANEL_BG);
@@ -125,7 +125,7 @@ function HomeDrawerPanelContent() {
   fn2.__closure = {
     interpolate: ref(4492).interpolate,
     panelTranslateX,
-    INITIAL_OPEN_WIDTH: ref(16355).INITIAL_OPEN_WIDTH,
+    INITIAL_OPEN_WIDTH: ref(16361).INITIAL_OPEN_WIDTH,
     Extrapolation: ref(4492).Extrapolation,
     isGradientTheme: isClientThemeOrCustomThemeActive,
     interpolateColor: ref(4492).interpolateColor,
@@ -145,7 +145,7 @@ function HomeDrawerPanelContent() {
     homeDrawerState.guildsBarDrawerStyle,
   ];
   obj12.style = items2;
-  const items3 = [closure_9(panelTranslateX(16616), { enableHome: true }), ,];
+  const items3 = [closure_9(panelTranslateX(16622), { enableHome: true }), ,];
   const obj13 = { style: null, pointerEvents: "none", collapsable: false, children: null };
   const items4 = [tmp2.contentMask, { left: GUILD_LIST_WIDTH }, animatedStyle1];
   obj13.style = items4;
@@ -158,7 +158,7 @@ function HomeDrawerPanelContent() {
   items3[1] = closure_9(panelTranslateX(4492).View, obj13);
   let tmp17Result2 = null;
   if (doesLandOnHomeDrawer) {
-    tmp17Result2 = closure_9(tmp3(12149).TTIFirstContentfulPaint, {
+    tmp17Result2 = closure_9(tmp3(12151).TTIFirstContentfulPaint, {
       label: "home_drawer",
       checkFocusedScreen: "guilds",
     });
@@ -171,7 +171,7 @@ function HomeDrawerPanelContent() {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const DM_WIDTH = fn(1074).DM_WIDTH;
-const GUILD_LIST_WIDTH = fn(16615).GUILD_LIST_WIDTH;
+const GUILD_LIST_WIDTH = fn(16621).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4756);

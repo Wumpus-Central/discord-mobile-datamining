@@ -29,9 +29,9 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
         onEnableMFAClick() {
           closure_1_1(4723).hideActionSheet(closure_1_7);
           const obj = closure_1_1(4723);
-          closure_1_1(9854).close();
-          const obj2 = closure_1_1(9854);
-          onRequireModeratorMFAClick(7622).openUserSettings({ screen: constants.ACCOUNT });
+          closure_1_1(9855).close();
+          const obj2 = closure_1_1(9855);
+          onRequireModeratorMFAClick(7624).openUserSettings({ screen: constants.ACCOUNT });
         },
         onRequireModeratorMFAClick() {
           ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
@@ -53,6 +53,6 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
     items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo),
   });
   obj.children = items1;
-  return closure_6(onRequireModeratorMFAClick(7390).BottomSheet, obj);
+  return closure_6(onRequireModeratorMFAClick(7395).BottomSheet, obj);
 }
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

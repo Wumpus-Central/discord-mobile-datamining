@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const constants = fn(17664).SelfStreamAndVideoAlertType;
+const constants = fn(17675).SelfStreamAndVideoAlertType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4756);

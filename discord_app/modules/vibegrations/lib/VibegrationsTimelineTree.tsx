@@ -196,6 +196,9 @@ function buildTimelineTree(steps, arg1) {
           if (null != node.todo_id) {
             tmp14Result.todoId = node.todo_id;
           }
+          if (null != node.tier) {
+            tmp14Result.tier = node.tier;
+          }
           if (null != node.detail) {
             ({ detail: tmp19.detail, detail } = node);
             tmp14Result.detailDrivenBy = detail.map(() => null);

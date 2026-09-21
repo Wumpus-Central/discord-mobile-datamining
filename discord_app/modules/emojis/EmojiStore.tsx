@@ -94,7 +94,7 @@ let closure_37 = async function _loadSavedEmojis() {
               const obj6 = {
                 value: React(2090).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () =>
-                    closure_2_1(5677).getAsync(closure_1_0),
+                    closure_2_1(5682).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,
@@ -149,7 +149,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let flag = closure_0(5711).canUseRoleSubscriptionIAP(guildId);
+      let flag = closure_0(5716).canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis === "function") {
         if (flag === undefined) {
           flag = false;
@@ -169,7 +169,7 @@ function updateGuildEmoji(guildId) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj = closure_0(5711);
+      obj = closure_0(5716);
     }
   }
 }
@@ -335,7 +335,7 @@ function handleRoleUpdate(guildId) {
 const EmojiConstants = fn(1375);
 ({ EmojiDisabledReasons: closure_17, EmojiIntention: closure_18 } = EmojiConstants);
 const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
-const EmojiCategories = fn(5675).EmojiCategories;
+const EmojiCategories = fn(5680).EmojiCategories;
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 let items = [
   EmojiCategories.TOP_GUILD_EMOJI.toString(),
@@ -394,7 +394,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(item);
       });
       if (!someResult) {
-        let result = emoji(5676).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = emoji(5681).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -403,7 +403,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = emoji(5676);
+        obj = emoji(5681);
       }
       tmp6 = someResult;
     }

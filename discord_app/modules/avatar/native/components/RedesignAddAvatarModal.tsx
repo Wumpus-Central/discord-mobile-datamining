@@ -74,7 +74,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(5349).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(5354).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -90,23 +90,23 @@ export default function RedesignAddAvatarModal(route) {
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(14863);
-              obj11.description = tmp2(8437).generateAvatarDescription();
+              const obj = tmp2(14869);
+              obj11.description = tmp2(8438).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
-              const obj3 = tmp2(8437);
+              const obj3 = tmp2(8438);
             }
             closure_128_1 = pendingImage;
             const obj12 = { avatar: closure_128_1 };
-            tmp2(8432).setPendingChanges(obj12);
-            const obj4 = tmp2(8432);
+            tmp2(8433).setPendingChanges(obj12);
+            const obj4 = tmp2(8433);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";
             }
-            const result = tmp2(8434).announcePendingAvatarChange(str);
+            const result = tmp2(8435).announcePendingAvatarChange(str);
             closure_129_3(undefined);
             c3 = 3;
-            const obj6 = tmp2(8434);
+            const obj6 = tmp2(8435);
           }
           closure_129_1(true);
         }

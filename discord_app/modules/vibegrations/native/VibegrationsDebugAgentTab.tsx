@@ -32,7 +32,7 @@ function ModelCallRow(call) {
   return React6(View, obj2);
 }
 const View = fn(17).View;
-const forceCompaction = fn(13359).forceCompaction;
+const forceCompaction = fn(13361).forceCompaction;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = [];
@@ -161,7 +161,7 @@ export default function VibegrationsDebugAgentTab(projectId) {
     generated_at = null;
   }
   const items12 = [
-    closure_7(tmp2(17062).DebugSnapshotToolbar, { generatedAt: generated_at, fetchState, onRefresh }),
+    closure_7(tmp2(17070).DebugSnapshotToolbar, { generatedAt: generated_at, fetchState, onRefresh }),
     ,
     ,
     ,
@@ -175,34 +175,34 @@ export default function VibegrationsDebugAgentTab(projectId) {
     const obj8 = { children: null };
     const intl3 = tmp2(1115).intl;
     obj8.children = intl3.string(traceVisible(3678).gPabB9);
-    let tmp16Result5 = closure_7(tmp2(17062).DebugNote, obj8);
+    let tmp16Result5 = closure_7(tmp2(17070).DebugNote, obj8);
   } else {
     const obj9 = { label: null, value: null, hint: null };
     const intl35 = tmp2(1115).intl;
     obj9.label = intl35.string(traceVisible(3678)["8MSJDH"]);
-    const tmp2Result = tmp2(17059);
-    obj9.value = tmp2Result.formatCount(tmp2(7485).runesFromUsd(lifetime.cost_usd));
+    const tmp2Result = tmp2(17067);
+    obj9.value = tmp2Result.formatCount(tmp2(5275).runesFromUsd(lifetime.cost_usd));
     const intl36 = tmp2(1115).intl;
     const obj10 = { count: null };
-    const tmp2Result44 = tmp2(7485);
-    obj10.count = tmp2(17059).formatCount(lifetime.turns);
+    const tmp2Result44 = tmp2(5275);
+    obj10.count = tmp2(17067).formatCount(lifetime.turns);
     obj9.hint = intl36.formatToPlainString(traceVisible(3678)["6Z2KhK"], obj10);
-    const items13 = [closure_7(tmp2(17062).DebugStatRow, obj9), , , ,];
+    const items13 = [closure_7(tmp2(17070).DebugStatRow, obj9), , , ,];
     const intl37 = tmp2(1115).intl;
     const orchestrator = lifetime.orchestrator;
-    const tmp2Result45 = tmp2(17059);
+    const tmp2Result45 = tmp2(17067);
     const obj11 = { label: intl37.string(traceVisible(3678).hk4jJr), value: null, hint: null };
     const intl38 = tmp2(1115).intl;
     const obj12 = { count: null };
     const stringResult = intl37.string(traceVisible(3678).hk4jJr);
-    const tmp2Result46 = tmp2(17059);
-    obj12.count = tmp2Result46.formatCount(tmp2(7485).runeCount(orchestrator));
+    const tmp2Result46 = tmp2(17067);
+    obj12.count = tmp2Result46.formatCount(tmp2(5275).runeCount(orchestrator));
     obj11.value = intl38.formatToPlainString(traceVisible(3678).U98VaN, obj12);
-    const tmp2Result47 = tmp2(7485);
-    const formatCountResult = tmp2(17059).formatCount(orchestrator.input_tokens);
-    const tmp2Result48 = tmp2(17059);
-    const tmp2Result49 = tmp2(17059);
-    const formatCountResult1 = tmp2(17059).formatCount(orchestrator.output_tokens);
+    const tmp2Result47 = tmp2(5275);
+    const formatCountResult = tmp2(17067).formatCount(orchestrator.input_tokens);
+    const tmp2Result48 = tmp2(17067);
+    const tmp2Result49 = tmp2(17067);
+    const formatCountResult1 = tmp2(17067).formatCount(orchestrator.output_tokens);
     const _HermesInternal4 = HermesInternal;
     obj11.hint =
       "" +
@@ -210,24 +210,24 @@ export default function VibegrationsDebugAgentTab(projectId) {
       " in \u00B7 " +
       formatCountResult1 +
       " out \u00B7 " +
-      tmp2(17059).formatCount(orchestrator.cache_read_input_tokens) +
+      tmp2(17067).formatCount(orchestrator.cache_read_input_tokens) +
       " cache read";
-    items13[1] = closure_7(tmp2(17062).DebugStatRow, obj11);
+    items13[1] = closure_7(tmp2(17070).DebugStatRow, obj11);
     const intl39 = tmp2(1115).intl;
     const codegen = lifetime.codegen;
-    const tmp2Result50 = tmp2(17059);
+    const tmp2Result50 = tmp2(17067);
     const obj13 = { label: intl39.string(traceVisible(3678).R9aduM), value: null, hint: null };
     const intl40 = tmp2(1115).intl;
     const obj14 = { count: null };
     const stringResult1 = intl39.string(traceVisible(3678).R9aduM);
-    const tmp2Result51 = tmp2(17059);
-    obj14.count = tmp2Result51.formatCount(tmp2(7485).runeCount(codegen));
+    const tmp2Result51 = tmp2(17067);
+    obj14.count = tmp2Result51.formatCount(tmp2(5275).runeCount(codegen));
     obj13.value = intl40.formatToPlainString(traceVisible(3678).U98VaN, obj14);
-    const tmp2Result52 = tmp2(7485);
-    const formatCountResult2 = tmp2(17059).formatCount(codegen.input_tokens);
-    const tmp2Result53 = tmp2(17059);
-    const tmp2Result54 = tmp2(17059);
-    const formatCountResult3 = tmp2(17059).formatCount(codegen.output_tokens);
+    const tmp2Result52 = tmp2(5275);
+    const formatCountResult2 = tmp2(17067).formatCount(codegen.input_tokens);
+    const tmp2Result53 = tmp2(17067);
+    const tmp2Result54 = tmp2(17067);
+    const formatCountResult3 = tmp2(17067).formatCount(codegen.output_tokens);
     const _HermesInternal5 = HermesInternal;
     obj13.hint =
       "" +
@@ -235,25 +235,25 @@ export default function VibegrationsDebugAgentTab(projectId) {
       " in \u00B7 " +
       formatCountResult3 +
       " out \u00B7 " +
-      tmp2(17059).formatCount(codegen.cache_read_input_tokens) +
+      tmp2(17067).formatCount(codegen.cache_read_input_tokens) +
       " cache read";
-    items13[2] = closure_7(tmp2(17062).DebugStatRow, obj13);
+    items13[2] = closure_7(tmp2(17070).DebugStatRow, obj13);
     const intl41 = tmp2(1115).intl;
-    const tmp2Result55 = tmp2(17059);
+    const tmp2Result55 = tmp2(17067);
     const stringResult2 = intl41.string(traceVisible(3678).Tj6b30);
-    const usageOrEmptyResult = tmp2(7485).usageOrEmpty(lifetime.compaction);
+    const usageOrEmptyResult = tmp2(5275).usageOrEmpty(lifetime.compaction);
     const obj15 = { label: stringResult2, value: null, hint: null };
     const intl42 = tmp2(1115).intl;
     const obj16 = { count: null };
-    const tmp2Result56 = tmp2(7485);
-    const tmp2Result57 = tmp2(17059);
-    obj16.count = tmp2Result57.formatCount(tmp2(7485).runeCount(usageOrEmptyResult));
+    const tmp2Result56 = tmp2(5275);
+    const tmp2Result57 = tmp2(17067);
+    obj16.count = tmp2Result57.formatCount(tmp2(5275).runeCount(usageOrEmptyResult));
     obj15.value = intl42.formatToPlainString(traceVisible(3678).U98VaN, obj16);
-    const tmp2Result58 = tmp2(7485);
-    const formatCountResult4 = tmp2(17059).formatCount(usageOrEmptyResult.input_tokens);
-    const tmp2Result59 = tmp2(17059);
-    const tmp2Result60 = tmp2(17059);
-    const formatCountResult5 = tmp2(17059).formatCount(usageOrEmptyResult.output_tokens);
+    const tmp2Result58 = tmp2(5275);
+    const formatCountResult4 = tmp2(17067).formatCount(usageOrEmptyResult.input_tokens);
+    const tmp2Result59 = tmp2(17067);
+    const tmp2Result60 = tmp2(17067);
+    const formatCountResult5 = tmp2(17067).formatCount(usageOrEmptyResult.output_tokens);
     const _HermesInternal6 = HermesInternal;
     obj15.hint =
       "" +
@@ -261,9 +261,9 @@ export default function VibegrationsDebugAgentTab(projectId) {
       " in \u00B7 " +
       formatCountResult5 +
       " out \u00B7 " +
-      tmp2(17059).formatCount(usageOrEmptyResult.cache_read_input_tokens) +
+      tmp2(17067).formatCount(usageOrEmptyResult.cache_read_input_tokens) +
       " cache read";
-    items13[3] = closure_7(tmp2(17062).DebugStatRow, obj15);
+    items13[3] = closure_7(tmp2(17070).DebugStatRow, obj15);
     let outcomes;
     if (status != null) {
       const agent4 = status.agent;
@@ -291,17 +291,17 @@ export default function VibegrationsDebugAgentTab(projectId) {
           return "" + projectId(dependencyMap[9]).formatCount(tmp2) + " " + tmp;
         });
         obj17.value = mapped.join(" \u00B7 ");
-        tmp18Result9 = closure_7(tmp2(17062).DebugStatRow, obj17);
+        tmp18Result9 = closure_7(tmp2(17070).DebugStatRow, obj17);
       }
     }
     const obj18 = { children: null };
     items13[4] = tmp18Result9;
     obj18.children = items13;
     tmp16Result5 = closure_8(closure_9, obj18);
-    const tmp2Result61 = tmp2(17059);
+    const tmp2Result61 = tmp2(17067);
   }
   obj7.children = tmp16Result5;
-  items12[1] = closure_7(tmp2(17062).DebugSection, obj7);
+  items12[1] = closure_7(tmp2(17070).DebugSection, obj7);
   const obj19 = { title: null, children: null };
   const intl4 = tmp2(1115).intl;
   obj19.title = intl4.string(traceVisible(3678).lo4mY6);
@@ -309,7 +309,7 @@ export default function VibegrationsDebugAgentTab(projectId) {
     const obj20 = { children: null };
     const intl5 = tmp2(1115).intl;
     obj20.children = intl5.string(traceVisible(3678).uyPveL);
-    let tmp18Result10 = closure_7(tmp2(17062).DebugNote, obj20);
+    let tmp18Result10 = closure_7(tmp2(17070).DebugNote, obj20);
   } else {
     const intl43 = tmp2(1115).intl;
     const total = stateFromStores.total;
@@ -317,14 +317,14 @@ export default function VibegrationsDebugAgentTab(projectId) {
     const intl44 = tmp2(1115).intl;
     const obj22 = { count: null };
     const stringResult3 = intl43.string(traceVisible(3678)["VwF+oY"]);
-    const tmp2Result62 = tmp2(17059);
-    obj22.count = tmp2Result62.formatCount(tmp2(7485).runeCount(total));
+    const tmp2Result62 = tmp2(17067);
+    obj22.count = tmp2Result62.formatCount(tmp2(5275).runeCount(total));
     obj21.value = intl44.formatToPlainString(traceVisible(3678).U98VaN, obj22);
-    const tmp2Result63 = tmp2(7485);
-    const formatCountResult6 = tmp2(17059).formatCount(total.input_tokens);
-    const tmp2Result64 = tmp2(17059);
-    const tmp2Result65 = tmp2(17059);
-    const formatCountResult7 = tmp2(17059).formatCount(total.output_tokens);
+    const tmp2Result63 = tmp2(5275);
+    const formatCountResult6 = tmp2(17067).formatCount(total.input_tokens);
+    const tmp2Result64 = tmp2(17067);
+    const tmp2Result65 = tmp2(17067);
+    const formatCountResult7 = tmp2(17067).formatCount(total.output_tokens);
     const _HermesInternal7 = HermesInternal;
     obj21.hint =
       "" +
@@ -332,27 +332,27 @@ export default function VibegrationsDebugAgentTab(projectId) {
       " in \u00B7 " +
       formatCountResult7 +
       " out \u00B7 " +
-      tmp2(17059).formatCount(total.cache_read_input_tokens) +
+      tmp2(17067).formatCount(total.cache_read_input_tokens) +
       " cache read";
-    const items14 = [closure_7(tmp2(17062).DebugStatRow, obj21)];
+    const items14 = [closure_7(tmp2(17070).DebugStatRow, obj21)];
     const obj23 = { label: null, value: null };
     const intl45 = tmp2(1115).intl;
     obj23.label = intl45.string(traceVisible(3678)["kILb+R"]);
     let cache_hit_rate = stateFromStores.cache_hit_rate;
     if (cache_hit_rate == null) {
-      cache_hit_rate = tmp2(7485).cacheHitRate(stateFromStores.total);
-      const tmp2Result67 = tmp2(7485);
+      cache_hit_rate = tmp2(5275).cacheHitRate(stateFromStores.total);
+      const tmp2Result67 = tmp2(5275);
     }
     const obj24 = { children: null };
     const _HermesInternal = HermesInternal;
     obj23.value = "" + Math.round(100 * cache_hit_rate) + "%";
-    items14[1] = closure_7(tmp2(17062).DebugStatRow, obj23);
+    items14[1] = closure_7(tmp2(17070).DebugStatRow, obj23);
     obj24.children = items14;
     tmp18Result10 = closure_8(closure_9, obj24);
-    const tmp2Result66 = tmp2(17059);
+    const tmp2Result66 = tmp2(17067);
   }
   obj19.children = tmp18Result10;
-  items12[2] = closure_7(tmp2(17062).DebugSection, obj19);
+  items12[2] = closure_7(tmp2(17070).DebugSection, obj19);
   const obj25 = { title: null, children: null };
   const intl6 = tmp2(1115).intl;
   obj25.title = intl6.string(traceVisible(3678).mn8279);
@@ -364,26 +364,26 @@ export default function VibegrationsDebugAgentTab(projectId) {
       obj27.label = intl9.string(traceVisible(3678).dKFhCg);
       obj27.used = stateFromStores1.tokensAfter;
       obj27.max = promptCeiling;
-      obj27.formatValue = tmp2(17059).formatCount;
-      const items15 = [closure_7(tmp2(17062).DebugMeter, obj27)];
+      obj27.formatValue = tmp2(17067).formatCount;
+      const items15 = [closure_7(tmp2(17070).DebugMeter, obj27)];
       const obj28 = { label: null, value: null, hint: null };
       const intl10 = tmp2(1115).intl;
       obj28.label = intl10.string(traceVisible(3678).ntZb8d);
-      const tmp2Result68 = tmp2(17059);
-      const formatCountResult8 = tmp2(17059).formatCount(stateFromStores1.tokensBefore);
+      const tmp2Result68 = tmp2(17067);
+      const formatCountResult8 = tmp2(17067).formatCount(stateFromStores1.tokensBefore);
       const _HermesInternal2 = HermesInternal;
-      obj28.value = "" + formatCountResult8 + " \u2192 " + tmp2(17059).formatCount(stateFromStores1.tokensAfter);
+      obj28.value = "" + formatCountResult8 + " \u2192 " + tmp2(17067).formatCount(stateFromStores1.tokensAfter);
       const intl11 = tmp2(1115).intl;
       const obj29 = { count: null, time: null };
-      const tmp2Result69 = tmp2(17059);
-      obj29.count = tmp2(17059).formatCount(stateFromStores1.retainedMessages);
-      const tmp2Result70 = tmp2(17059);
-      obj29.time = tmp2(17059).formatObservedAt(stateFromStores1.observedAt);
+      const tmp2Result69 = tmp2(17067);
+      obj29.count = tmp2(17067).formatCount(stateFromStores1.retainedMessages);
+      const tmp2Result70 = tmp2(17067);
+      obj29.time = tmp2(17067).formatObservedAt(stateFromStores1.observedAt);
       obj28.hint = intl11.formatToPlainString(traceVisible(3678).jA05ru, obj29);
-      items15[1] = closure_7(tmp2(17062).DebugStatRow, obj28);
+      items15[1] = closure_7(tmp2(17070).DebugStatRow, obj28);
       obj26.children = items15;
       let tmp18Result17 = closure_8(closure_9, obj26);
-      const tmp2Result71 = tmp2(17059);
+      const tmp2Result71 = tmp2(17067);
     }
     const items16 = [tmp18Result17, ,];
     let tmp18Result11 = null;
@@ -391,17 +391,17 @@ export default function VibegrationsDebugAgentTab(projectId) {
       const obj30 = { label: null, value: null, critical: true, hint: null };
       const intl12 = tmp2(1115).intl;
       obj30.label = intl12.string(traceVisible(3678)["se+2ls"]);
-      const tmp2Result72 = tmp2(17059);
-      const formatCountResult9 = tmp2(17059).formatCount(stateFromStores2.projected);
+      const tmp2Result72 = tmp2(17067);
+      const formatCountResult9 = tmp2(17067).formatCount(stateFromStores2.projected);
       const _HermesInternal3 = HermesInternal;
-      obj30.value = "" + formatCountResult9 + " / " + tmp2(17059).formatCount(stateFromStores2.threshold);
+      obj30.value = "" + formatCountResult9 + " / " + tmp2(17067).formatCount(stateFromStores2.threshold);
       const intl13 = tmp2(1115).intl;
       const obj31 = { time: null };
-      const tmp2Result73 = tmp2(17059);
-      obj31.time = tmp2(17059).formatObservedAt(stateFromStores2.observedAt);
+      const tmp2Result73 = tmp2(17067);
+      obj31.time = tmp2(17067).formatObservedAt(stateFromStores2.observedAt);
       obj30.hint = intl13.formatToPlainString(traceVisible(3678).KHK44U, obj31);
-      tmp18Result11 = closure_7(tmp2(17062).DebugStatRow, obj30);
-      const tmp2Result74 = tmp2(17059);
+      tmp18Result11 = closure_7(tmp2(17070).DebugStatRow, obj30);
+      const tmp2Result74 = tmp2(17067);
     }
     items16[1] = tmp18Result11;
     const obj32 = { style: tmp.forceCompaction, children: null };
@@ -421,7 +421,7 @@ export default function VibegrationsDebugAgentTab(projectId) {
     const obj34 = {
       variant: "text-xs/normal",
       color: str9,
-      children: tmp2(17060).forceCompactionStatus(stateFromStores3),
+      children: tmp2(17068).forceCompactionStatus(stateFromStores3),
     };
     items17[1] = closure_7(tmp2(4752).Text, obj34);
     let pendingTurn;
@@ -447,7 +447,7 @@ export default function VibegrationsDebugAgentTab(projectId) {
     obj32.children = items17;
     items16[2] = closure_8(View, obj32);
     obj25.children = items16;
-    items12[3] = closure_8(tmp2(17062).DebugSection, obj25);
+    items12[3] = closure_8(tmp2(17070).DebugSection, obj25);
     if (traceVisible) {
       items12[4] = null;
       if (null != session) {
@@ -459,37 +459,37 @@ export default function VibegrationsDebugAgentTab(projectId) {
           const obj39 = { label: null, value: null, hint: null };
           const intl19 = tmp2(1115).intl;
           obj39.label = intl19.string(traceVisible(3678)["wt5X/o"]);
-          obj39.value = tmp2(17059).formatObservedAt(session.instance_since);
+          obj39.value = tmp2(17067).formatObservedAt(session.instance_since);
           const intl20 = tmp2(1115).intl;
           obj39.hint = intl20.string(traceVisible(3678).QX2UQC);
-          const items19 = [closure_7(tmp2(17062).DebugStatRow, obj39), , ,];
+          const items19 = [closure_7(tmp2(17070).DebugStatRow, obj39), , ,];
           const obj40 = { label: null, value: null };
           const intl21 = tmp2(1115).intl;
           obj40.label = intl21.string(traceVisible(3678)["4lgurx"]);
-          const tmp2Result76 = tmp2(17059);
-          obj40.value = tmp2(17059).formatCount(session.sockets);
-          items19[1] = closure_7(tmp2(17062).DebugStatRow, obj40);
+          const tmp2Result76 = tmp2(17067);
+          obj40.value = tmp2(17067).formatCount(session.sockets);
+          items19[1] = closure_7(tmp2(17070).DebugStatRow, obj40);
           const obj41 = { label: null, value: null };
           const intl22 = tmp2(1115).intl;
           obj41.label = intl22.string(traceVisible(3678)["a/LXBt"]);
           const intl23 = tmp2(1115).intl;
           const tmp20Result = traceVisible(3678);
           obj41.value = intl23.string(session.turn_inflight ? tmp20Result["9KlveJ"] : tmp20Result["4tYZVa"]);
-          items19[2] = closure_7(tmp2(17062).DebugStatRow, obj41);
+          items19[2] = closure_7(tmp2(17070).DebugStatRow, obj41);
           let tmp18Result12 = null;
           if (session.queued_messages > 0) {
             const obj42 = { label: null, value: null };
             const intl24 = tmp2(1115).intl;
             obj42.label = intl24.string(traceVisible(3678)["/hOBkc"]);
-            obj42.value = tmp2(17059).formatCount(session.queued_messages);
-            tmp18Result12 = closure_7(tmp2(17062).DebugStatRow, obj42);
-            const tmp2Result78 = tmp2(17059);
+            obj42.value = tmp2(17067).formatCount(session.queued_messages);
+            tmp18Result12 = closure_7(tmp2(17070).DebugStatRow, obj42);
+            const tmp2Result78 = tmp2(17067);
           }
           const obj43 = { children: null };
           items19[3] = tmp18Result12;
           obj43.children = items19;
           tmp16Result7 = closure_8(closure_9, obj43);
-          const tmp2Result77 = tmp2(17059);
+          const tmp2Result77 = tmp2(17067);
         }
         const items20 = [tmp16Result7];
         let analytics;
@@ -499,11 +499,11 @@ export default function VibegrationsDebugAgentTab(projectId) {
         let tmp18Result13 = null;
         if (null != analytics) {
           const obj44 = { analytics: status.analytics };
-          tmp18Result13 = closure_7(tmp2(17073).VibegrationsDebugAgentAnalyticsRows, obj44);
+          tmp18Result13 = closure_7(tmp2(17081).VibegrationsDebugAgentAnalyticsRows, obj44);
         }
         items20[1] = tmp18Result13;
         obj38.children = items20;
-        let tmp16Result8 = closure_8(tmp2(17062).DebugSection, obj38);
+        let tmp16Result8 = closure_8(tmp2(17070).DebugSection, obj38);
       } else {
         let analytics1;
         if (status != null) {
@@ -520,53 +520,53 @@ export default function VibegrationsDebugAgentTab(projectId) {
         const obj46 = { label: null, value: null };
         const intl26 = tmp2(1115).intl;
         obj46.label = intl26.string(traceVisible(3678)["5iHZLk"]);
-        obj46.value = tmp2(17059).formatCount(limits.max_iterations);
-        const items21 = [closure_7(tmp2(17062).DebugStatRow, obj46), , , , , ,];
+        obj46.value = tmp2(17067).formatCount(limits.max_iterations);
+        const items21 = [closure_7(tmp2(17070).DebugStatRow, obj46), , , , , ,];
         const obj47 = { label: null, value: null };
         const intl27 = tmp2(1115).intl;
         obj47.label = intl27.string(traceVisible(3678).Rb6m3E);
-        const tmp2Result79 = tmp2(17059);
-        obj47.value = tmp2(17059).formatCount(limits.max_subagent_iterations);
-        items21[1] = closure_7(tmp2(17062).DebugStatRow, obj47);
+        const tmp2Result79 = tmp2(17067);
+        obj47.value = tmp2(17067).formatCount(limits.max_subagent_iterations);
+        items21[1] = closure_7(tmp2(17070).DebugStatRow, obj47);
         const obj48 = { label: null, value: null };
         const intl28 = tmp2(1115).intl;
         obj48.label = intl28.string(traceVisible(3678).WQ9pMe);
         const intl29 = tmp2(1115).intl;
         const obj49 = { count: null };
-        const tmp2Result80 = tmp2(17059);
-        obj49.count = tmp2(17059).formatCount(limits.context_window_tokens);
+        const tmp2Result80 = tmp2(17067);
+        obj49.count = tmp2(17067).formatCount(limits.context_window_tokens);
         obj48.value = intl29.formatToPlainString(traceVisible(3678).U98VaN, obj49);
-        items21[2] = closure_7(tmp2(17062).DebugStatRow, obj48);
+        items21[2] = closure_7(tmp2(17070).DebugStatRow, obj48);
         const obj50 = { label: null, value: null };
         const intl30 = tmp2(1115).intl;
         obj50.label = intl30.string(traceVisible(3678).iEAvzu);
         const intl31 = tmp2(1115).intl;
         const obj51 = { count: null };
-        const tmp2Result81 = tmp2(17059);
-        obj51.count = tmp2(17059).formatCount(limits.per_turn_max_output_tokens);
+        const tmp2Result81 = tmp2(17067);
+        obj51.count = tmp2(17067).formatCount(limits.per_turn_max_output_tokens);
         obj50.value = intl31.formatToPlainString(traceVisible(3678).U98VaN, obj51);
-        items21[3] = closure_7(tmp2(17062).DebugStatRow, obj50);
+        items21[3] = closure_7(tmp2(17070).DebugStatRow, obj50);
         const obj52 = { label: null, value: null };
         const intl32 = tmp2(1115).intl;
         obj52.label = intl32.string(traceVisible(3678)["jbhs+f"]);
-        const tmp2Result82 = tmp2(17059);
-        obj52.value = tmp2(17059).formatCount(limits.max_user_message_chars);
-        items21[4] = closure_7(tmp2(17062).DebugStatRow, obj52);
+        const tmp2Result82 = tmp2(17067);
+        obj52.value = tmp2(17067).formatCount(limits.max_user_message_chars);
+        items21[4] = closure_7(tmp2(17070).DebugStatRow, obj52);
         const obj53 = { label: null, value: null };
         const intl33 = tmp2(1115).intl;
         obj53.label = intl33.string(traceVisible(3678).TOQnq4);
-        const tmp2Result83 = tmp2(17059);
-        obj53.value = tmp2(17059).formatCount(limits.max_build_attempts);
-        items21[5] = closure_7(tmp2(17062).DebugStatRow, obj53);
+        const tmp2Result83 = tmp2(17067);
+        obj53.value = tmp2(17067).formatCount(limits.max_build_attempts);
+        items21[5] = closure_7(tmp2(17070).DebugStatRow, obj53);
         const obj54 = { label: null, value: null };
         const intl34 = tmp2(1115).intl;
         obj54.label = intl34.string(traceVisible(3678).RIDc6D);
-        const tmp2Result84 = tmp2(17059);
-        obj54.value = tmp2(17059).formatCount(limits.max_session_attempts);
-        items21[6] = closure_7(tmp2(17062).DebugStatRow, obj54);
+        const tmp2Result84 = tmp2(17067);
+        obj54.value = tmp2(17067).formatCount(limits.max_session_attempts);
+        items21[6] = closure_7(tmp2(17070).DebugStatRow, obj54);
         obj45.children = items21;
-        tmp16Result9 = closure_8(tmp2(17062).DebugSection, obj45);
-        const tmp2Result85 = tmp2(17059);
+        tmp16Result9 = closure_8(tmp2(17070).DebugSection, obj45);
+        const tmp2Result85 = tmp2(17067);
       }
       items12[6] = tmp16Result9;
       obj6.children = items12;
@@ -579,16 +579,16 @@ export default function VibegrationsDebugAgentTab(projectId) {
         const obj56 = { children: null };
         const intl17 = tmp2(1115).intl;
         obj56.children = intl17.string(traceVisible(3678).j8NMgl);
-        let tmp18Result14 = closure_7(tmp2(17062).DebugNote, obj56);
+        let tmp18Result14 = closure_7(tmp2(17070).DebugNote, obj56);
       } else {
-        const substr = stateFromStores4.slice(-tmp2(17060).MAX_MODEL_CALL_ROWS);
+        const substr = stateFromStores4.slice(-tmp2(17068).MAX_MODEL_CALL_ROWS);
         const reversed = substr.reverse();
         const items22 = [reversed.map((call) => closure_1_7(ModelCallRow, { call }, call.id))];
         let tmp18Result15 = null;
-        if (stateFromStores4.length > tmp2(17060).MAX_MODEL_CALL_ROWS) {
+        if (stateFromStores4.length > tmp2(17068).MAX_MODEL_CALL_ROWS) {
           const obj57 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl16 = tmp2(1115).intl;
-          const obj58 = { shown: tmp2(17060).MAX_MODEL_CALL_ROWS, total: stateFromStores4.length };
+          const obj58 = { shown: tmp2(17068).MAX_MODEL_CALL_ROWS, total: stateFromStores4.length };
           obj57.children = intl16.formatToPlainString(traceVisible(3678)["3hYhpp"], obj58);
           tmp18Result15 = closure_7(tmp2(4752).Text, obj57);
         }
@@ -598,19 +598,19 @@ export default function VibegrationsDebugAgentTab(projectId) {
         tmp18Result14 = closure_8(closure_9, obj59);
       }
       obj55.children = tmp18Result14;
-      closure_7(tmp2(17062).DebugSection, obj55);
+      closure_7(tmp2(17070).DebugSection, obj55);
     }
-    const tmp2Result75 = tmp2(17060);
+    const tmp2Result75 = tmp2(17068);
   }
   if (null != promptCeiling) {
     const intl8 = tmp2(1115).intl;
-    const obj60 = { ceiling: tmp2(17059).formatCount(promptCeiling) };
+    const obj60 = { ceiling: tmp2(17067).formatCount(promptCeiling) };
     let formatToPlainStringResult = intl8.formatToPlainString(traceVisible(3678).LKGmsP, obj60);
-    const tmp2Result86 = tmp2(17059);
+    const tmp2Result86 = tmp2(17067);
   } else {
     const intl7 = tmp2(1115).intl;
     formatToPlainStringResult = intl7.string(traceVisible(3678).gPabB9);
   }
-  tmp18Result17 = closure_7(tmp2(17062).DebugNote, { children: formatToPlainStringResult });
+  tmp18Result17 = closure_7(tmp2(17070).DebugNote, { children: formatToPlainStringResult });
   const obj5 = projectId(504);
 }

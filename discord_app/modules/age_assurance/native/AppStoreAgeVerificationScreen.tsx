@@ -240,13 +240,13 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       callback();
     };
     obj7.children = closure_7(tmp(5186).Button, obj8);
-    items4[1] = closure_7(tmp(5645).ButtonGroup, obj7);
+    items4[1] = closure_7(tmp(5650).ButtonGroup, obj7);
     obj5.children = items4;
     tmp15 = closure_9(closure_8, obj5);
   }
   let obj9 = { children: null };
   let obj2 = modalSessionId(4968);
-  obj9.children = closure_7(modalSessionId(8693).ModalContent, {
+  obj9.children = closure_7(modalSessionId(8694).ModalContent, {
     children: closure_7(modalSessionId(5184).Stack, {
       align: "center",
       justify: "center",
@@ -254,5 +254,5 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       children: tmp15,
     }),
   });
-  return closure_7(modalSessionId(8692).ModalScreen, obj9);
+  return closure_7(modalSessionId(8693).ModalScreen, obj9);
 }

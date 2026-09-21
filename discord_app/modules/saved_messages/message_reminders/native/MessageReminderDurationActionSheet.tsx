@@ -48,8 +48,8 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   if (stateFromStores != null) {
     dueAt = stateFromStores.saveData.dueAt;
   }
-  let obj3 = createReminder(11962);
-  const dueInString = obj3.useDueInString({ dueAt, now: tmp7, type: createReminder(11962).DueInStringTypes.SHORT });
+  let obj3 = createReminder(11964);
+  const dueInString = obj3.useDueInString({ dueAt, now: tmp7, type: createReminder(11964).DueInStringTypes.SHORT });
   dueInText = dueInString.dueInText;
   isOverdue = dueInString.isOverdue;
   const items1 = [onBack, dueInText, isOverdue];
@@ -107,7 +107,7 @@ export default function MessageReminderDurationActionSheet(createReminder) {
     return mapped;
   }, items2);
   const obj5 = { header: memo, bodyStyles: tmp.body, startExpanded: true, children: null };
-  const items3 = [dueInText(createReminder(5899).TableRowGroup, { hasIcons: false, children: memo1 })];
+  const items3 = [dueInText(createReminder(5904).TableRowGroup, { hasIcons: false, children: memo1 })];
   let tmp14Result = null != removeReminder;
   if (tmp14Result) {
     const obj6 = { icon: tmp14(tmp2(4706).CheckmarkLargeIcon, {}), label: null, onPress: null, start: true, end: true };
@@ -117,9 +117,9 @@ export default function MessageReminderDurationActionSheet(createReminder) {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       removeReminder();
     };
-    tmp14Result = tmp14(tmp2(5817).TableRow, obj6, "remove-reminder");
+    tmp14Result = tmp14(tmp2(5822).TableRow, obj6, "remove-reminder");
   }
   items3[1] = tmp14Result;
   obj5.children = items3;
-  return isOverdue(createReminder(7390).BottomSheet, obj5);
+  return isOverdue(createReminder(7395).BottomSheet, obj5);
 }

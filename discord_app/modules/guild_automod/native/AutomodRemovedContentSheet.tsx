@@ -67,7 +67,7 @@ export default function AutomodRemovedContentSheet(action) {
     name = thread.name;
   }
   let obj2 = {
-    header: jsx(message(7389).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+    header: jsx(message(7394).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
     children: null,
   };
   obj.subtitle = name;
@@ -83,8 +83,8 @@ export default function AutomodRemovedContentSheet(action) {
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(7437).ActionSheet, {
-    header: jsx(message(7389).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
+  return jsx(message(7442).ActionSheet, {
+    header: jsx(message(7394).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }),
     children: null,
   });
 }

@@ -3,8 +3,8 @@ import asyncRequireImpl from "../../../../../_runtime/01980_asyncRequireImpl.js"
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUtils.tsx";
 import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
-import _modDef12629 from "../../../../../_runtime/metro/12629__.js";
-import _modDef12630 from "../../../../../_runtime/metro/12630__.js";
+import _modDef12631 from "../../../../../_runtime/metro/12631__.js";
+import _modDef12632 from "../../../../../_runtime/metro/12632__.js";
 import openGuildActionSheetDefault from "../../../guild_action_sheet/native/openGuildActionSheet.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -98,7 +98,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
     const splice = items.splice;
     const obj5 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj5.iconSource = _modDef12630;
+      obj5.iconSource = _modDef12632;
       const intl5 = tmp(1115).intl;
       obj5.label = intl5.string(tmp(1115).t.De0BTC);
       obj5.action = function action() {
@@ -112,12 +112,12 @@ export default function getGuildsBarGuildMenuItems(guildId) {
       };
       splice(1, 0, obj5);
     } else {
-      obj5.iconSource = _modDef12629;
+      obj5.iconSource = _modDef12631;
       const intl4 = tmp(1115).intl;
       obj5.label = intl4.string(tmp(1115).t.vRzp7P);
       obj5.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        obj.openLazy(asyncRequireImpl(10396, dependencyMap.paths), "muteSettings" + guildId, { guildId });
+        obj.openLazy(asyncRequireImpl(10397, dependencyMap.paths), "muteSettings" + guildId, { guildId });
       };
       splice(1, 0, obj5);
     }

@@ -307,7 +307,7 @@ class BaseActivityPanelPIPView {
 }
 const View = fn(17).View;
 const ActivityLayoutMode = fn(2004).ActivityLayoutMode;
-const ActivityPanelConstants = fn(9314);
+const ActivityPanelConstants = fn(9315);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_11,
@@ -315,9 +315,9 @@ let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14,
 } = ActivityPanelConstants);
-let closure_15 = fn(17470).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_15 = fn(17481).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1074).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(12525).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(12527).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1177);

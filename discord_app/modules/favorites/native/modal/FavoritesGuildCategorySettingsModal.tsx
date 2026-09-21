@@ -143,12 +143,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(11185)().onGoBack;
+  onGoBack = onGoBack(11186)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1115).intl;
   obj.title = intl.string(categoryId(1115).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(11187), obj);
+  return closure_8(onGoBack(11188), obj);
 }

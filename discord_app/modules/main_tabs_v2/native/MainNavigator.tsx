@@ -64,7 +64,7 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let animation = fn(16266).StackNavigationAnimationSettings;
+let animation = fn(16272).StackNavigationAnimationSettings;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -114,9 +114,9 @@ function getChannelScreen() {
       },
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(8105).renderHeader };
+      const obj = { headerShown: true, header: styles(8107).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(8105).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(8107).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -197,7 +197,7 @@ export default noop.memo(function StackNavigator() {
               if (closure_1_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(8105).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(8107).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(animation2);
               return { orientation: str, headerShown: false };
             },
@@ -259,9 +259,9 @@ export default noop.memo(function StackNavigator() {
               },
             },
             options(arg0) {
-              const obj = { headerShown: true, header: styles(8105).renderHeader };
+              const obj = { headerShown: true, header: styles(8107).renderHeader };
               ({ navigation, route } = arg0);
-              const merged = Object.assign(styles(8105).getDefaultChannelStackHeaderProps(navigation, route));
+              const merged = Object.assign(styles(8107).getDefaultChannelStackHeaderProps(navigation, route));
               const merged1 = Object.assign(animation2);
               obj.animation = animation;
               return obj;
@@ -282,7 +282,7 @@ export default noop.memo(function StackNavigator() {
         name: "conversations",
         getComponent: getConversationsComponent,
         options() {
-          return stateFromStores(11188)();
+          return stateFromStores(11189)();
         },
       }),
       closure_2_10(closure_16.Screen, { name: "auth", getComponent: getAuthComponent, options }),
@@ -343,7 +343,7 @@ export default noop.memo(function StackNavigator() {
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(stateFromStores(11188)({ presentation: str }));
+        const merged = Object.assign(stateFromStores(11189)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -399,7 +399,7 @@ export default noop.memo(function StackNavigator() {
             if (closure_1_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(8105).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(8107).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(animation2);
             return { orientation: str, headerShown: false };
           },
@@ -461,9 +461,9 @@ export default noop.memo(function StackNavigator() {
             },
           },
           options(arg0) {
-            const obj = { headerShown: true, header: styles(8105).renderHeader };
+            const obj = { headerShown: true, header: styles(8107).renderHeader };
             ({ navigation, route } = arg0);
-            const merged = Object.assign(styles(8105).getDefaultChannelStackHeaderProps(navigation, route));
+            const merged = Object.assign(styles(8107).getDefaultChannelStackHeaderProps(navigation, route));
             const merged1 = Object.assign(animation2);
             obj.animation = animation;
             return obj;
@@ -481,7 +481,7 @@ export default noop.memo(function StackNavigator() {
       name: "conversations",
       getComponent: getConversationsComponent,
       options() {
-        return stateFromStores(11188)();
+        return stateFromStores(11189)();
       },
     };
     const obj8 = { name: "auth", getComponent: getAuthComponent, options };
@@ -505,7 +505,7 @@ export default noop.memo(function StackNavigator() {
     items1[7] = closure_2_10(closure_16.Screen, {
       name: "settings",
       options() {
-        const tmp = stateFromStores(11188);
+        const tmp = stateFromStores(11189);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -522,13 +522,13 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(11188)({ lockOrientation: false });
+        return stateFromStores(11189)({ lockOrientation: false });
       },
     });
     const obj16 = {
       name: "settings",
       options() {
-        const tmp = stateFromStores(11188);
+        const tmp = stateFromStores(11189);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -545,7 +545,7 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(11188)({ lockOrientation: false });
+        return stateFromStores(11189)({ lockOrientation: false });
       },
     };
     tmp5Result = PlatformUtils2;
@@ -585,7 +585,7 @@ export default noop.memo(function StackNavigator() {
           }
           str2 = str3;
         }
-        const merged = Object.assign(stateFromStores(11188)({ presentation: str2 }));
+        const merged = Object.assign(stateFromStores(11189)({ presentation: str2 }));
         return obj;
       },
       getComponent: getModalComponent,

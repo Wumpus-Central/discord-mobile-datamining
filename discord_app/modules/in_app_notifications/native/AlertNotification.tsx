@@ -9,8 +9,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let size = {
-  shape: fn(9093).CutoutShape.RoundedRect,
-  x: fn(5796).ImageSizes[fn(undefined, 5796).GuildIconSizes.NORMAL] - -6 - 24,
+  shape: fn(9094).CutoutShape.RoundedRect,
+  x: fn(5801).ImageSizes[fn(undefined, 5801).GuildIconSizes.NORMAL] - -6 - 24,
   y: -6,
   width: 24,
   height: 24,
@@ -37,7 +37,7 @@ export default function AlertNotification(notification) {
   const channel = notification.channel;
   const guild = notification.guild;
   const tmp = closure_9();
-  const incidentData = channel(10353).useGuildIncidentsState(notification.key).incidentData;
+  const incidentData = channel(10354).useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
     raidDetectedAt = incidentData.raidDetectedAt;
@@ -70,12 +70,12 @@ export default function AlertNotification(notification) {
   const obj4 = { cutouts: null, children: null };
   const items2 = [size];
   obj4.cutouts = items2;
-  let obj = channel(10353);
-  obj4.children = closure_5(guild(5796), { guild, selected: false });
-  const items3 = [closure_5(guild(9093), obj4)];
+  let obj = channel(10354);
+  obj4.children = closure_5(guild(5801), { guild, selected: false });
+  const items3 = [closure_5(guild(9094), obj4)];
   const obj5 = { style: tmp.warningBadge, children: null };
-  const tmp8 = guild(9093);
-  obj5.children = closure_5(channel(8865).WarningIcon, {
+  const tmp8 = guild(9094);
+  obj5.children = closure_5(channel(8866).WarningIcon, {
     style: tmp.warningIcon,
     color: guild(576).colors.ICON_FEEDBACK_WARNING,
   });
@@ -83,8 +83,8 @@ export default function AlertNotification(notification) {
   obj3.children = items3;
   obj2.icon = closure_7(closure_6, obj3);
   obj2.header = memo;
-  obj2.children = closure_5(channel(10362).SystemMessageText, { text: stringResult });
+  obj2.children = closure_5(channel(10363).SystemMessageText, { text: stringResult });
   obj2.onPress = callback;
   obj2.notification = notification;
-  return closure_5(channel(10426).NotificationPressable, obj2);
+  return closure_5(channel(10427).NotificationPressable, obj2);
 }

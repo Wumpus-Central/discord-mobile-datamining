@@ -74,7 +74,7 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(11121).UserRowModes;
+const UserRowModes = fn(11122).UserRowModes;
 const Constants = fn(1074);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -241,7 +241,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "Array" };
+      let obj2 = { accessibilityActions: items, actions: "y" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -415,7 +415,7 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(11130)(channel, false);
+                const obj2 = user(11131)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
@@ -471,7 +471,7 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(11130)(channel, false);
+          const obj2 = user(11131)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
@@ -532,10 +532,10 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8447, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8448, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8447, dependencyMap.paths);
+      const promise = asyncRequireImpl(8448, dependencyMap.paths);
     } else {
       tmp(user);
     }

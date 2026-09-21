@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef17136 from "../../../../_runtime/metro/17136__.js";
+import _modDef17147 from "../../../../_runtime/metro/17147__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -31,7 +31,7 @@ export default function PollBadge(style) {
   const obj = { style: null, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef17136 })];
+  const items1 = [React4(native.Icon, { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef17147 })];
   const obj3 = { style: tmp.text, variant: "text-xs/semibold", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.RgIi2B);

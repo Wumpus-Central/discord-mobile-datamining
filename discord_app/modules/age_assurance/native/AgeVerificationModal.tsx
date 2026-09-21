@@ -59,7 +59,7 @@ function AgeVerifyScreen(uri) {
       "\n  window.addEventListener('message', function(event) {\n    window.ReactNativeWebView.postMessage(event.data);\n  }, true);\n",
   });
 }
-let closure_4 = fn(8682).AGE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(8683).AGE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
 const createStyles = fn(4756);

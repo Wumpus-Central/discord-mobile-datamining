@@ -295,7 +295,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(5334).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(5339).PressableOpacity, obj8);
   }
   return tmp7Result;
 };

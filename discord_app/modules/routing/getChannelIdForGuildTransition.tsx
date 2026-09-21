@@ -1,8 +1,8 @@
 // discord_app/modules/routing/getChannelIdForGuildTransition.tsx
 import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
+import VibegrationsUtils from "../vibegrations/lib/VibegrationsUtils.tsx";
 import OnboardingHomeUtils from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
 import SlayerStorefrontUtils from "../slayer_storefront/SlayerStorefrontUtils.tsx";
-import VibegrationsUtils from "../vibegrations/lib/VibegrationsUtils.tsx";
 import FavoriteStore from "../favorites/FavoriteStore.tsx";
 import GuildOnboardingStore from "../guild_onboarding/GuildOnboardingStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";

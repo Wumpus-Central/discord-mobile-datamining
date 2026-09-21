@@ -10,9 +10,9 @@ import HomeDrawerStore from "HomeDrawerStore.tsx";
 import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 
 require = fn;
-const computeMaxX = fn(16349).computeMaxX;
+const computeMaxX = fn(16355).computeMaxX;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const LaunchPadTypes = fn(11719).LaunchPadTypes;
+const LaunchPadTypes = fn(11721).LaunchPadTypes;
 let c10 = 144;
 let c11 = 96.00000000000001;
 let c12 = 48;
@@ -86,17 +86,17 @@ let obj = {
   guildsBarDrawerStyle: null,
   guildsBarPullX: null,
 };
-let Gesture = fn(6892).Gesture;
+let Gesture = fn(6897).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7314);
+let ReanimatedHelperTypes = fn(7319);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7314);
+ReanimatedHelperTypes = fn(7319);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7314);
+ReanimatedHelperTypes = fn(7319);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7314);
+ReanimatedHelperTypes = fn(7319);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 const size = fn(2);

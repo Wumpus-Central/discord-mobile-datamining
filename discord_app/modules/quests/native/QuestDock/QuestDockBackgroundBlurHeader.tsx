@@ -8,8 +8,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(5656).QuestDockMode;
-const QuestDockConstants = fn(15356);
+const QuestDockMode = fn(5661).QuestDockMode;
+const QuestDockConstants = fn(15362);
 const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = QuestDockConstants.QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 ({
   QUEST_DOCK_CONTENT_BORDER_RADII: closure_9,
@@ -128,7 +128,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
   let token;
   noop = undefined;
   ({ onDisclosurePress, onSubmenuPress } = hideBlurWhenCollapsed);
-  const context = noop.useContext(activeQuestDockMode(15357).QuestDockGestureContext);
+  const context = noop.useContext(activeQuestDockMode(15363).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const questDockWrapperSpecs = context.questDockWrapperSpecs;
   [tmp5, c2] = token(noop.useState(false), 2);
@@ -143,7 +143,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
   }, []);
   const tmp4 = token(noop.useState(false), 2);
   token = activeQuestDockMode(4457).useToken(questDockWrapperSpecs(576).modules.mobile.QUEST_DOCK_BORDER_RADIUS);
-  const tmp9 = questDockWrapperSpecs(15445)(token);
+  const tmp9 = questDockWrapperSpecs(15451)(token);
   noop = tmp9;
   let obj = activeQuestDockMode(4457);
   class Y {
@@ -419,7 +419,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
     QuestDockMode,
     QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
   };
-  const tmp7Result = questDockWrapperSpecs(7313);
+  const tmp7Result = questDockWrapperSpecs(7318);
   if (tmpResult.isAndroid()) {
     if (null != blurHash) {
       const obj17 = {
@@ -428,7 +428,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
         opacityAnimatedStyle: animatedStyle6,
         layoutAnimation: questDockHeaderLayoutAnimation,
       };
-      let tmp24 = closure_12(tmp7(15454), obj17);
+      let tmp24 = closure_12(tmp7(15460), obj17);
       let tmp23 = closure_12;
     }
     const items1 = [tmp24, children];
@@ -438,14 +438,14 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
     obj19.style = items2;
     obj19.layout = questDockHeaderLayoutAnimation;
     const obj20 = { style: animatedStyle1, children: collapsedContent };
-    obj19.children = tmp23(tmp7(7313), obj20);
-    const items3 = [tmp23(tmp7(7313), obj19)];
+    obj19.children = tmp23(tmp7(7318), obj20);
+    const items3 = [tmp23(tmp7(7318), obj19)];
     const obj21 = { animatedProps, style: animatedStyle4, layout: questDockHeaderLayoutAnimation, children: null };
-    const tmp7Result4 = tmp7(7313);
+    const tmp7Result4 = tmp7(7318);
     const obj22 = { style: null, children: null };
     const items4 = [tmp18.expandedContent, animatedStyle3];
     obj22.style = items4;
-    const tmp7Result5 = tmp7(7313);
+    const tmp7Result5 = tmp7(7318);
     if (withPressableDisclosure) {
       const obj23 = { onPress: onDisclosurePress, accessibilityRole: "button", style: null, children: null };
       const items5 = [,];
@@ -457,10 +457,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
       obj25.children = intl2.string(tmp(1115).t.o6FLcF);
       const items6 = [tmp23(tmp(4752).Text, obj25)];
       const obj26 = { color: tmp7(576).colors.INTERACTIVE_TEXT_ACTIVE, style: tmp18.actionDisclosuresIcon };
-      items6[1] = tmp23(tmp(11371).CircleQuestionIcon, obj26);
+      items6[1] = tmp23(tmp(11373).CircleQuestionIcon, obj26);
       obj24.children = items6;
       obj23.children = closure_14(closure_13, obj24);
-      let tmp23Result = tmp23(tmp(5334).PressableOpacity, obj23);
+      let tmp23Result = tmp23(tmp(5339).PressableOpacity, obj23);
     } else {
       const obj27 = { style: null, children: null };
       const items7 = [,];
@@ -472,7 +472,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
       obj27.children = tmp23(tmp(4752).Text, obj28);
       tmp23Result = tmp23(closure_6, obj27);
     }
-    const items8 = [tmp23Result, tmp23(tmp7(15456), {})];
+    const items8 = [tmp23Result, tmp23(tmp7(15462), {})];
     const obj29 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     const string = tmp(1115).intl.string;
     class Y {
@@ -544,10 +544,10 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
     obj29.onPress = onSubmenuPress;
     obj29.style = tmp18.tertiaryContent;
     const obj30 = { color: tmp7(576).colors.INTERACTIVE_TEXT_ACTIVE };
-    obj29.children = tmp23(tmp(8180).MoreHorizontalIcon, obj30);
-    items8[2] = tmp23(tmp(5334).PressableOpacity, obj29);
+    obj29.children = tmp23(tmp(8181).MoreHorizontalIcon, obj30);
+    items8[2] = tmp23(tmp(5339).PressableOpacity, obj29);
     obj22.children = items8;
-    obj21.children = closure_14(tmp7(7313), obj22);
+    obj21.children = closure_14(tmp7(7318), obj22);
     items3[1] = tmp23(tmp7Result5, obj21);
     obj18.children = items3;
     items1[2] = closure_14(closure_6, obj18);
@@ -555,7 +555,7 @@ export default noop.memo(function QuestDockBackgroundBlurHeader(hideBlurWhenColl
     return closure_14(tmp7Result, obj16);
   }
   tmp23 = closure_12;
-  tmp24 = closure_12(tmp7(15422), {
+  tmp24 = closure_12(tmp7(15428), {
     layoutAnimatedStyle: animatedStyle5,
     opacityAnimatedStyle: animatedStyle6,
     layoutAnimation: questDockHeaderLayoutAnimation,

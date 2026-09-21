@@ -14,7 +14,7 @@ const createStyles = fn(4756);
 let obj2 = {
   scrollContainer: { minHeight: "100%" },
   container: { flexGrow: 1, alignItems: "center", justifyContent: "center" },
-  alertContainer: { paddingTop: 80 + fn(5894).NAV_BAR_HEIGHT },
+  alertContainer: { paddingTop: 80 + fn(5899).NAV_BAR_HEIGHT },
   alert: null,
   alertContent: null,
   alertTitle: null,
@@ -23,7 +23,7 @@ let obj2 = {
   primaryButtonContainer: null,
   trailing: null,
 };
-let obj3 = { paddingTop: 80 + fn(5894).NAV_BAR_HEIGHT };
+let obj3 = { paddingTop: 80 + fn(5899).NAV_BAR_HEIGHT };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.alert = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef15486 from "../../../../../_runtime/metro/15486__.js";
+import _modDef15492 from "../../../../../_runtime/metro/15492__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -36,7 +36,7 @@ export default function NavigateForwardButton(arg0) {
       color: "interactive-text-active",
       children: text,
     }),
-    React3(native.Icon, { source: _modDef15486 }),
+    React3(native.Icon, { source: _modDef15492 }),
   ];
   obj.children = items;
   return React4(Pressables.PressableHighlight, obj);

@@ -109,7 +109,7 @@ export default function useScreenshareUtils(arg0) {
         if (tmp11) {
           if (flag) {
             let fn = function l() {
-              return closure_0(10209).showMobileGoLiveActionSheet(closure_1);
+              return closure_0(10210).showMobileGoLiveActionSheet(closure_1);
             };
           } else {
             fn = tmp14;
@@ -122,20 +122,20 @@ export default function useScreenshareUtils(arg0) {
         }
       } else {
         fn = function l() {
-          const obj = closure_0(9685);
-          obj.reportAVError({ type: closure_0(9685).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
-          const obj2 = { type: closure_0(9685).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-          const result = closure_0(9903).showMinOSScreenshareRequirementAlert();
+          const obj = closure_0(9686);
+          obj.reportAVError({ type: closure_0(9686).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
+          const obj2 = { type: closure_0(9686).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
+          const result = closure_0(9904).showMinOSScreenshareRequirementAlert();
         };
       }
       obj.onPress = fn;
       if (obj2.isMetaQuest()) {
-        importDefault(tmp ? 10227 : 10228);
+        importDefault(tmp ? 10228 : 10229);
       } else {
         if (showMobileGoLiveUpsell) {
-          let tmp20 = 10229;
+          let tmp20 = 10230;
         } else {
-          tmp20 = tmp ? 10230 : 10229;
+          tmp20 = tmp ? 10231 : 10230;
         }
         obj.imgSource = importDefault(tmp20);
         return obj;
@@ -171,7 +171,7 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
     if (hasPermission) {
       if (showMobileGoLiveUpsell) {
         let fn = function l() {
-          return closure_0(10209).showMobileGoLiveActionSheet(closure_1);
+          return closure_0(10210).showMobileGoLiveActionSheet(closure_1);
         };
       } else {
         fn = tmp;
@@ -184,10 +184,10 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
     }
   } else {
     fn = function l() {
-      const obj = closure_0(9685);
-      obj.reportAVError({ type: closure_0(9685).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
-      const obj2 = { type: closure_0(9685).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
-      const result = closure_0(9903).showMinOSScreenshareRequirementAlert();
+      const obj = closure_0(9686);
+      obj.reportAVError({ type: closure_0(9686).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id });
+      const obj2 = { type: closure_0(9686).AVError.SCREENSHARE_OS_NOT_SUPPORTED, channelId: closure_0.id };
+      const result = closure_0(9904).showMinOSScreenshareRequirementAlert();
     };
   }
   return fn;

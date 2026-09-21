@@ -4,7 +4,7 @@ import LinearGradientDefault from "../../../../../../_runtime/05198_LinearGradie
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Gradients = fn(7672).Gradients;
+const Gradients = fn(7674).Gradients;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 const obj2 = { gradient: null };

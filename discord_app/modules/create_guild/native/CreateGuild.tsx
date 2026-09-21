@@ -83,7 +83,7 @@ export default function CreateGuild(arg0) {
   }
   obj4.children = customDescription;
   items1[1] = closure_7(isScreenReaderEnabled(4752).Text, obj4);
-  items1[2] = closure_7(ref(12050), {
+  items1[2] = closure_7(ref(12052), {
     iconBackgroundColor: tmp.contentContainer.backgroundColor,
     style: tmp.iconUploader,
     onPress: onIconPress,
@@ -113,7 +113,7 @@ export default function CreateGuild(arg0) {
   }
   let tmp9Result = !!isStaffResult;
   obj6.autoFocus = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(6843).TextInput, obj6);
+  items1[3] = closure_7(isScreenReaderEnabled(6848).TextInput, obj6);
   if (tmp9Result) {
     const obj7 = {
       onValueChange: onStaffOnlyChange,
@@ -125,7 +125,7 @@ export default function CreateGuild(arg0) {
     };
     const intl4 = tmp4(1115).intl;
     obj7.subLabel = intl4.string(tmp4(1115).t.edQ5va);
-    tmp9Result = closure_7(tmp4(7440).TableSwitchRow, obj7);
+    tmp9Result = closure_7(tmp4(7445).TableSwitchRow, obj7);
   }
   items1[4] = tmp9Result;
   const obj8 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -164,8 +164,8 @@ export default function CreateGuild(arg0) {
           message2 = error.message;
         }
         const obj11 = { children: message2 };
-        tmp9Result2 = closure_7(ref(7179), obj11);
-        const tmp12Result = ref(7179);
+        tmp9Result2 = closure_7(ref(7184), obj11);
+        const tmp12Result = ref(7184);
       }
     }
   }

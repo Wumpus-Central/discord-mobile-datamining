@@ -69,9 +69,9 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     nameplateData = user(1970).getNameplateData(nameplate);
     const obj = user(1970);
   }
-  const avatarDecoration = user(8484).useAvatarDecoration(user, guildId);
-  pendingAvatarDecoration = guildId(8427)({ guildId }).pendingAvatarDecoration;
-  const obj2 = user(8484);
+  const avatarDecoration = user(8485).useAvatarDecoration(user, guildId);
+  pendingAvatarDecoration = guildId(8428)({ guildId }).pendingAvatarDecoration;
+  const obj2 = user(8485);
   const items = [AccessibilityStore];
   stateFromStores = user(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj3 = user(504);
@@ -129,7 +129,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     items2,
   );
   const items3 = [
-    closure_7(guildId(9098), { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 }),
+    closure_7(guildId(9099), { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 }),
     closure_7(pendingAvatarDecoration, { style: tmp.avatar, children: memo }),
   ];
   const obj10 = { style: tmp.content, children: null };
@@ -140,12 +140,12 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
       guildId,
       userName: pendingGlobalName,
       variant: "text-md/semibold",
-      effectDisplayType: user(11160).EffectDisplayType.STATIC,
+      effectDisplayType: user(11161).EffectDisplayType.STATIC,
       lineClamp: 1,
       pendingDisplayNameStyles,
     };
-    tmp19Result = closure_7(tmp7(11159), obj11);
-    const tmp7Result = tmp7(11159);
+    tmp19Result = closure_7(tmp7(11160), obj11);
+    const tmp7Result = tmp7(11160);
   }
   const items4 = [tmp19Result];
   let tmp19Result2 = null == tmp15;

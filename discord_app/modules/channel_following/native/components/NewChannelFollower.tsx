@@ -111,9 +111,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("../../../../../_runtime/metro/11588__.js");
+    let tmp8Result = require("../../../../../_runtime/metro/11590__.js");
   } else {
-    tmp8Result = require("../../../../../_runtime/metro/11589__.js");
+    tmp8Result = require("../../../../../_runtime/metro/11591__.js");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { source: tmp8Result, style: tmp.header, children: null };
@@ -202,8 +202,8 @@ export default function NewChannelFollower(targetChannelId) {
     obj2.onClose = function onClose() {
       closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(asyncRequireImpl(9539, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
-    const tmp = asyncRequireImpl(9539, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(9540, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
+    const tmp = asyncRequireImpl(9540, dependencyMap.paths);
   };
   obj14.children = closure_16(require("TableRow").TableRow, obj15);
   const items6 = [closure_16(require("TableRowGroup").TableRowGroup, obj14)];

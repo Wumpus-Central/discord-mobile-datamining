@@ -35,7 +35,7 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let VibegrationsConnectionStore = fn(13359);
+let VibegrationsConnectionStore = fn(13361);
 ({ deleteStagedAttachment: c10, uploadAttachmentBytes: closure_11 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
@@ -499,12 +499,12 @@ export default function VibegrationsNativeComposer(projectId) {
               closure_128_0 = undefined;
               const obj5 = {
                 mediaType: "any",
-                selectionLimit: tmp2(7485).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE,
+                selectionLimit: tmp2(5275).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE,
                 skipProcessing: true,
               };
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(5361).launchImageLibraryAsync(obj5), done: false };
+              const obj6 = { value: tmp5(5366).launchImageLibraryAsync(obj5), done: false };
               return obj6;
             }
           } else if (arg0 === 1) {

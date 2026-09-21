@@ -113,10 +113,10 @@ export default function VibegrationsQuestPromptCard(open) {
     watchableQuestResult = null;
     if (tmp2Result8.hasWatchVideoOnMobileTasks(quest)) {
       const obj3 = { overridden: tmp8, gatesClosed: tmp9 };
-      watchableQuestResult = tmp2(17046).watchableQuest(quest, obj3);
-      const tmp2Result9 = tmp2(17046);
+      watchableQuestResult = tmp2(17054).watchableQuest(quest, obj3);
+      const tmp2Result9 = tmp2(17054);
     }
-    tmp2Result8 = tmp2(7958);
+    tmp2Result8 = tmp2(7960);
   }
   _require = watchableQuestResult;
   const tmp2Result = require("initialize");
@@ -221,7 +221,7 @@ export default function VibegrationsQuestPromptCard(open) {
             } else {
               closure_128_0 = undefined;
               if (null != tmp2) {
-                const QUEST_BAR_MOBILE = tmp2(5659).QuestContent.QUEST_BAR_MOBILE;
+                const QUEST_BAR_MOBILE = tmp2(5664).QuestContent.QUEST_BAR_MOBILE;
                 closure_128_0 = QUEST_BAR_MOBILE;
                 const userStatus = tmp2.userStatus;
                 let enrolledAt;
@@ -230,17 +230,17 @@ export default function VibegrationsQuestPromptCard(open) {
                 }
                 if (null == enrolledAt) {
                   const obj5 = {
-                    questContent: tmp2(5659).QuestContent.QUEST_BAR_MOBILE,
-                    questContentCTA: tmp2(7962).QuestContentCTA.START_QUEST,
+                    questContent: tmp2(5664).QuestContent.QUEST_BAR_MOBILE,
+                    questContentCTA: tmp2(7964).QuestContentCTA.START_QUEST,
                     sourceQuestContent: QUEST_BAR_MOBILE,
                   };
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj6 = { value: tmp2(11540).enrollInQuest(tmp2.id, obj5), done: false };
+                  const obj6 = { value: tmp2(11542).enrollInQuest(tmp2.id, obj5), done: false };
                   return obj6;
                 } else {
                   const obj7 = { questId: tmp2.id, sourceQuestContent: QUEST_BAR_MOBILE };
-                  tmp5(15385)(obj7);
+                  tmp5(15391)(obj7);
                 }
               }
               c3 = 3;
@@ -249,9 +249,9 @@ export default function VibegrationsQuestPromptCard(open) {
             c3 = 3;
             throw value;
           } else if (arg0 !== 2) {
-            if (value.type === tmp2(11540).QuestEnrollmentResultType.SUCCESS) {
+            if (value.type === tmp2(11542).QuestEnrollmentResultType.SUCCESS) {
               const obj8 = { questId: closure_129_0.id, sourceQuestContent: closure_128_0 };
-              tmp5(15385)(obj8);
+              tmp5(15391)(obj8);
             }
           }
           c3 = 3;
@@ -267,10 +267,10 @@ export default function VibegrationsQuestPromptCard(open) {
   );
   if (tmp17) {
     if (null != tmp29) {
-      const tmp2Result13 = tmp2(11546);
+      const tmp2Result13 = tmp2(11548);
       const url = tmp2Result13.getQuestAsset(
         tmp29,
-        tmp2(11546).QuestAssetType.GAME_TILE,
+        tmp2(11548).QuestAssetType.GAME_TILE,
         tmp2(4464).isThemeDark(stateFromStores1) ? ThemeTypes.DARK : ThemeTypes.LIGHT,
       ).url;
       let obj4 = { style: null, pointerEvents: null, children: null };
@@ -327,7 +327,7 @@ export default function VibegrationsQuestPromptCard(open) {
       items8[1] = closure_12(closure_7, obj16);
       obj6.children = items8;
       obj11.children = closure_12(closure_7, obj6);
-      obj5.children = closure_11(tmp2(5819).Card, obj11);
+      obj5.children = closure_11(tmp2(5824).Card, obj11);
       obj4.children = closure_11(closure_7, obj5);
       return closure_11(ReanimatedRexportDefault.View, obj4);
     }

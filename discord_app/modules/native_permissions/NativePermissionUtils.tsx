@@ -3,14 +3,14 @@ import NativePermissionManager_mod from "NativePermissionManager.tsx";
 
 let NativePermissionManager = NativePermissionManager_mod;
 NativePermissionManager = NativePermissionManager.initialize();
-const ProcessArgs = fn(5352).ProcessArgs;
+const ProcessArgs = fn(5357).ProcessArgs;
 if (ProcessArgs.isDiscordTestSet()) {
-  let _default = fn(5353).default;
+  let _default = fn(5358).default;
 } else {
-  _default = fn(5357).default;
+  _default = fn(5362).default;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.tsx");
 
 export default _default;
-export const NativePermissionsRequestOptions = fn(5354).NativePermissionsRequestOptions;
+export const NativePermissionsRequestOptions = fn(5359).NativePermissionsRequestOptions;

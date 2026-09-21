@@ -29,7 +29,7 @@ function GridAvatar(user) {
   obj3.size = size;
   if (undefined !== pendingAvatarSrc) {
     const obj4 = { source: null };
-    const tmp2Result = tmp2(8515);
+    const tmp2Result = tmp2(8516);
     obj4.source = tmp2Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores1);
     const merged = Object.assign(obj3);
     let obj5 = obj4;

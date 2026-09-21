@@ -8,8 +8,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const QuestDockMode = fn(5656).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = fn(15356).QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
+const QuestDockMode = fn(5661).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = fn(15362).QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_32 = nativeDefault.space.PX_32;
@@ -56,14 +56,14 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyHeader.tsx");
 
 export default noop.memo(function QuestDockBountyHeader() {
-  const questDockBounty = activeQuestDockMode(15363).useQuestDockBounty();
+  const questDockBounty = activeQuestDockMode(15369).useQuestDockBounty();
   const tmp4 = closure_9();
   let str = questDockBounty.productName;
   if (str == null) {
     str = "";
   }
-  activeQuestDockMode = noop.useContext(tmp(15357).QuestDockGestureContext).activeQuestDockMode;
-  let obj = activeQuestDockMode(15363);
+  activeQuestDockMode = noop.useContext(tmp(15363).QuestDockGestureContext).activeQuestDockMode;
+  let obj = activeQuestDockMode(15369);
   const fn = function n() {
     let num = 1;
     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
@@ -87,11 +87,11 @@ export default noop.memo(function QuestDockBountyHeader() {
     QuestDockMode,
     QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
   };
-  const bountyCreative = activeQuestDockMode(15363).useBountyCreative(questDockBounty);
-  const tmpResult3 = activeQuestDockMode(15363);
-  const tmpResult4 = activeQuestDockMode(15353);
+  const bountyCreative = activeQuestDockMode(15369).useBountyCreative(questDockBounty);
+  const tmpResult3 = activeQuestDockMode(15369);
+  const tmpResult4 = activeQuestDockMode(15359);
   const obj3 = {
-    onSubmenuPress: activeQuestDockMode(15353).useActionSheetPressHandler(bountyCreative),
+    onSubmenuPress: activeQuestDockMode(15359).useActionSheetPressHandler(bountyCreative),
     hideBlurWhenCollapsed: true,
     children: null,
   };
@@ -103,7 +103,7 @@ export default noop.memo(function QuestDockBountyHeader() {
     children: null,
   };
   let tmp8Result = null != questDockBounty.productIcon;
-  const actionSheetPressHandler = activeQuestDockMode(15353).useActionSheetPressHandler(bountyCreative);
+  const actionSheetPressHandler = activeQuestDockMode(15359).useActionSheetPressHandler(bountyCreative);
   if (tmp8Result) {
     const obj5 = {
       style: tmp4.productIcon,

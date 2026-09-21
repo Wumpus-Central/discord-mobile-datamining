@@ -7,7 +7,7 @@ import Stack_Stack from "../../../../../design/components/Stack/native/Stack.nat
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import types from "../../../../display_name_styles/types.tsx";
 import useDisplayNameStylesEffectConfigs from "../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
-import _mod11166 from "../../../../../utils/native/StringUtils.tsx";
+import _mod11167 from "../../../../../utils/native/StringUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -131,7 +131,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod11166.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod11167.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -311,7 +311,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod11166.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod11167.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

@@ -46,8 +46,8 @@ export default function GuildSelector(disabled) {
       onGuildChange(dependencyMap[6]).hideActionSheet(GuildSelector);
     };
     obj2.selectedItem = selectedGuildId;
-    obj.openLazy(asyncRequireImpl(9539, dependencyMap.paths), GuildSelector, obj2);
-    const tmp = asyncRequireImpl(9539, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(9540, dependencyMap.paths), GuildSelector, obj2);
+    const tmp = asyncRequireImpl(9540, dependencyMap.paths);
   }, items);
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: null };
@@ -72,10 +72,10 @@ export default function GuildSelector(disabled) {
     const intl2 = selectedGuildId(1115).intl;
     name = intl2.string(selectedGuildId(1115).t.oM4E1A);
   }
-  items1[2] = closure_7(selectedGuildId(8870).FormRow, {
+  items1[2] = closure_7(selectedGuildId(8871).FormRow, {
     label: name,
     disabled: disabled.disabled,
-    trailing: closure_7(selectedGuildId(8870).FormRow.Arrow, {}),
+    trailing: closure_7(selectedGuildId(8871).FormRow.Arrow, {}),
     DEPRECATED_style: tmp.select,
     onPress: callback,
   });

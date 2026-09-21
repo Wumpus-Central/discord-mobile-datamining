@@ -3,7 +3,7 @@ import util from "../../../../../intl/index.native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import _modDef7331 from "../../../../../../_runtime/metro/07331__.js";
+import _modDef7336 from "../../../../../../_runtime/metro/07336__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -35,7 +35,7 @@ export default function MemberVerificationAlertUpdate(onClose) {
   };
   obj.onCancel = onClose.onClose;
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(Image, { source: _modDef7331, style: tmp.headerImage }), ,];
+  const items = [hasOwnProperty(Image, { source: _modDef7336, style: tmp.headerImage }), ,];
   const obj3 = {
     style: tmp.header,
     variant: "heading-lg/extrabold",

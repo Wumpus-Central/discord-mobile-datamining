@@ -16,8 +16,8 @@ import GuildOnboardingPromptsStore from "../GuildOnboardingPromptsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const OnboardingConnectionType = fn(7341).OnboardingConnectionType;
-let closure_12 = fn(7337).GuildOnboardingModalStates;
+const OnboardingConnectionType = fn(7346).OnboardingConnectionType;
+let closure_12 = fn(7342).GuildOnboardingModalStates;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -28,7 +28,7 @@ let obj2 = {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5894).NAV_BAR_HEIGHT,
+    marginTop: fn(5899).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -44,7 +44,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5894).NAV_BAR_HEIGHT,
+  marginTop: fn(5899).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };

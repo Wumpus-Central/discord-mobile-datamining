@@ -15,7 +15,7 @@ import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmen
 import AttachmentPreviewDefault from "../../modules/media/native/AttachmentPreview.tsx";
 import showUploadPreviewActionSheetDefault from "../../modules/media_uploads/native/showUploadPreviewActionSheet.tsx";
 import MediaKeyboardUtils from "../../modules/media_keyboard/native/MediaKeyboardUtils.tsx";
-import _modDef11509 from "../../../_runtime/metro/11509__.js";
+import _modDef11511 from "../../../_runtime/metro/11511__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../stores/UploadAttachmentStore.tsx";
 
@@ -170,7 +170,7 @@ function Tile(onEdit) {
     let tmp6Result = null;
     if (isThumbnail) {
       const obj2 = { style: tileContainer.footerRightContainer, children: null };
-      const obj3 = { source: _modDef11509, size: native.Icon.Sizes.SMALL_14 };
+      const obj3 = { source: _modDef11511, size: native.Icon.Sizes.SMALL_14 };
       obj2.children = closure_2_11(native.Icon, obj3);
       tmp6Result = closure_2_11(React4, obj2);
     }
@@ -329,7 +329,7 @@ function CustomScrollView(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const DraftType = fn(5105).DraftType;
-const ImageCarouselConstants = fn(10891);
+const ImageCarouselConstants = fn(10892);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;

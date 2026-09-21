@@ -1,14 +1,14 @@
 // discord_app/modules/user_profile/native/WishlistViewerCoachmark.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef13435 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import _modDef13437 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function CoachmarkImage() {
   const tmp = closure_8();
   const obj = { style: tmp.imageContainer, children: null };
-  const obj2 = { source: { uri: _modDef13435 }, style: tmp.image };
-  obj.children = <hasOwnProperty source={{ uri: _modDef13435 }} style={tmp.image} />;
+  const obj2 = { source: { uri: _modDef13437 }, style: tmp.image };
+  obj.children = <hasOwnProperty source={{ uri: _modDef13437 }} style={tmp.image} />;
   return <React4 style={tmp.imageContainer}>{null}</React4>;
 }
 get_ActivityIndicator = fn(17);

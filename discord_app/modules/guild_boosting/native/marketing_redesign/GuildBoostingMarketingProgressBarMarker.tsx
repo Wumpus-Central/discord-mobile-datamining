@@ -1,9 +1,9 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBarMarker.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import _modDef13841 from "../../../../../_runtime/metro/13841__.js";
-import _modDef13842 from "../../../../../_runtime/metro/13842__.js";
-import _modDef13843 from "../../../../../_runtime/metro/13843__.js";
+import _modDef13847 from "../../../../../_runtime/metro/13847__.js";
+import _modDef13848 from "../../../../../_runtime/metro/13848__.js";
+import _modDef13849 from "../../../../../_runtime/metro/13849__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -102,7 +102,7 @@ const TierMarkerPositions = {
   [BoostedGuildTiers.TIER_2]: 0.6666666666666666,
   [BoostedGuildTiers.TIER_3]: 1,
 };
-let obj2 = { [TIER_1]: _modDef13841, [TIER_2]: _modDef13842, [TIER_3]: _modDef13843 };
+let obj2 = { [TIER_1]: _modDef13847, [TIER_2]: _modDef13848, [TIER_3]: _modDef13849 };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 let createStyles = fn(4756);
 let obj4 = {
@@ -260,7 +260,7 @@ export default function ProgressBarMarker(arg0) {
       tmp20Result = tier !== BoostedGuildTiers.NONE;
     }
     if (tmp20Result) {
-      const obj8 = { source: tmp2(11813), style: tmp.progressBarMarkerUnlockedIcon };
+      const obj8 = { source: tmp2(11815), style: tmp.progressBarMarkerUnlockedIcon };
       tmp20Result = closure_7(closure_5, obj8);
     }
     const items5 = [tmp20Result];

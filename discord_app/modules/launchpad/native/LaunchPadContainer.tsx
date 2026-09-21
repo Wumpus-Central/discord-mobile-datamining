@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const LaunchPadConstants = fn(11719);
+const LaunchPadConstants = fn(11721);
 ({ LAUNCH_PAD_SPRING_CONFIG: closure_4, LaunchPadTypes: hasOwnProperty } = LaunchPadConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -36,11 +36,11 @@ const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadCon
 export default function LaunchPadContainer(children) {
   updaters = undefined;
   const tmp = closure_8();
-  const tmp4 = updaters(11720)();
-  const tmp5 = updaters(17419)();
+  const tmp4 = updaters(11722)();
+  const tmp5 = updaters(17430)();
   const launchPadSharedState = tmp5.launchPadSharedState;
   ({ launchPadPullTabState, launchPadShown, gestureState, updaters } = tmp5);
-  ({ gesture, gestureRef } = updaters(17421)({
+  ({ gesture, gestureRef } = updaters(17432)({
     launchPadType: tmp4,
     launchPadSharedState,
     launchPadPullTabState,
@@ -48,10 +48,10 @@ export default function LaunchPadContainer(children) {
     gestureState,
     updaters,
   }));
-  const tmp7 = updaters(12284)();
+  const tmp7 = updaters(12286)();
   dependencyMap = tmp7;
   const tmp2 = updaters;
-  const tmp6 = updaters(17421)({
+  const tmp6 = updaters(17432)({
     launchPadType: tmp4,
     launchPadSharedState,
     launchPadPullTabState,
@@ -132,11 +132,11 @@ export default function LaunchPadContainer(children) {
       launchPadPullTabState,
       updaters,
     };
-    const tmp10Result = closure_6(tmp2(17422), obj8);
+    const tmp10Result = closure_6(tmp2(17433), obj8);
   }
   items1[1] = tmp10Result;
   obj6.children = items1;
   obj5.children = closure_7(closure_3, obj6);
-  obj4.children = closure_6(launchPadSharedState(6892).GestureDetector, obj5);
-  return closure_6(updaters(16333).Provider, obj4);
+  obj4.children = closure_6(launchPadSharedState(6897).GestureDetector, obj5);
+  return closure_6(updaters(16339).Provider, obj4);
 }

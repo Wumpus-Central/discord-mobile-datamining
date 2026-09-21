@@ -249,8 +249,8 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return closure_1_12(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(9653).useChatShowingAutoComplete;
-const SlowmodeType = fn(7921).SlowmodeType;
+let closure_5 = fn(9654).useChatShowingAutoComplete;
+const SlowmodeType = fn(7923).SlowmodeType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);

@@ -53,7 +53,7 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   };
   items[4] = closure_5(markAsDismissed(5187).BaseTextButton, obj6);
   obj3.children = items;
-  obj2.children = closure_6(markAsDismissed(6864).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(6869).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(7390).BottomSheet, obj);
+  return closure_5(markAsDismissed(7395).BottomSheet, obj);
 }

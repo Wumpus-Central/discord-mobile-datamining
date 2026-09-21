@@ -21,11 +21,11 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: "text-xxs/medium",
-    scrollPosition: "text-subtle",
-    windowSize: 2,
+    listInsets: true,
+    scrollPosition: "text-xs/medium",
+    windowSize: null,
     setStateShallow: null,
-    dropStart: "xs",
+    dropStart: true,
     dropComplete: null,
   };
   let obj2 = require("ReanimatedRexport");
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1248).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
+      dropSpecs(1248).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "padding" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -93,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {

@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileActivityBadges.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import AppsIcon from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import isEmbeddedActivityDefault from "../../activities/utils/isEmbeddedActivity.tsx";
 import utils from "../../content_inventory/utils.tsx";
 import GameControllerIcon2 from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";

@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import _modDef13860 from "../../../../../_runtime/metro/13860__.js";
-import _mod13861 from "../../../../../_runtime/metro/13861__.js";
-import _modDef13862 from "../../../../../_runtime/metro/13862__.js";
+import _modDef13866 from "../../../../../_runtime/metro/13866__.js";
+import _mod13867 from "../../../../../_runtime/metro/13867__.js";
+import _modDef13868 from "../../../../../_runtime/metro/13868__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13860 });
+      return timestampProducer(React3, { style, source: _modDef13866 });
     },
   },
   {
@@ -75,7 +75,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13861, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13867, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return timestampProducer(LottieAnimationViewDefault, obj);
     },
   },
@@ -89,7 +89,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      return timestampProducer(React3, { style, source: _modDef13862 });
+      return timestampProducer(React3, { style, source: _modDef13868 });
     },
   },
 ];

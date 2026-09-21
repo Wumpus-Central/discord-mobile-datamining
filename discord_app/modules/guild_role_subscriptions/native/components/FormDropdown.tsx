@@ -2,18 +2,18 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10196 from "../../../../../_runtime/metro/10196__.js";
-import _modDef14159 from "../../../../../_runtime/metro/14159__.js";
+import _modDef10197 from "../../../../../_runtime/metro/10197__.js";
+import _modDef14165 from "../../../../../_runtime/metro/14165__.js";
 import FormStylesDefault from "FormStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 function LockedIcon() {
-  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef14159 });
+  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef14165 });
 }
 function DropdownIcon() {
-  const obj = { style: null, size: native.Icon.Sizes.MEDIUM, source: _modDef10196 };
+  const obj = { style: null, size: native.Icon.Sizes.MEDIUM, source: _modDef10197 };
   const obj2 = { transform: null };
   const items = [{ rotate: "90deg" }];
   obj2.transform = items;

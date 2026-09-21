@@ -26,7 +26,7 @@ export default function useGameServerPowerupStatus(arg0) {
     },
     items1,
   );
-  const tmp2 = stateFromStores(12811)(arg0);
+  const tmp2 = stateFromStores(12813)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return noop.useMemo(() => {

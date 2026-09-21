@@ -79,7 +79,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let canUnarchiveThread = channel(7509).useCanUnarchiveThread(channel);
+  let canUnarchiveThread = channel(7511).useCanUnarchiveThread(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = {
     lineClamp: 4,
@@ -88,7 +88,7 @@ function ArchivedLockedThreadChatBanner(channel) {
     color: "text-default",
     children: null,
   };
-  let obj = channel(7509);
+  let obj = channel(7511);
   const intl = channel(1115).intl;
   const string = intl.string;
   const t = channel(1115).t;
@@ -133,7 +133,7 @@ function LockedThreadChatBanner(channel) {
     obj2.banner_type = "thread";
     obj.track(constants3.CHANNEL_BANNER_VIEWED, obj2);
   }, items);
-  let isThreadModerator = channel(7509).useIsThreadModerator(channel);
+  let isThreadModerator = channel(7511).useIsThreadModerator(channel);
   let obj2 = { style: tmp.threadBannerContainer, children: null };
   let obj3 = {
     lineClamp: 4,
@@ -142,7 +142,7 @@ function LockedThreadChatBanner(channel) {
     color: "text-default",
     children: null,
   };
-  let obj = channel(7509);
+  let obj = channel(7511);
   const intl = channel(1115).intl;
   const string = intl.string;
   const t = channel(1115).t;
@@ -201,8 +201,8 @@ function NewMessagesChatBar(channel) {
       const obj4 = { count: unreadCount, timestamp: channel.oldestUnreadTimestamp };
       obj3.children = intl.format(ReadStateStore.isEstimated(channel.id) ? t.wvtbbG : t["BctFH/"], obj4);
       obj2.children = closure_12(XSmallBoldIcon(4752).Text, obj3);
-      const items1 = [closure_12(XSmallBoldIcon(5334).PressableOpacity, obj2)];
-      handleScrollToNewMessages = XSmallBoldIcon(5334).PressableOpacity;
+      const items1 = [closure_12(XSmallBoldIcon(5339).PressableOpacity, obj2)];
+      handleScrollToNewMessages = XSmallBoldIcon(5339).PressableOpacity;
       const obj5 = {
         style: stringResult.newMessageBarCloseButton,
         accessibilityRole: "button",
@@ -220,7 +220,7 @@ function NewMessagesChatBar(channel) {
           objectType: constants.ACK_MANUAL,
         });
       };
-      XSmallBoldIcon = XSmallBoldIcon(8230).XSmallBoldIcon;
+      XSmallBoldIcon = XSmallBoldIcon(8231).XSmallBoldIcon;
       const obj6 = { size: "sm", color: null };
       WHITE = nativeDefault.colors.WHITE;
       obj6.color = WHITE;
@@ -235,7 +235,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11682).ChatOverlays;
+const ChatOverlays = fn(11684).ChatOverlays;
 const Constants = fn(1074);
 ({
   AnalyticsObjectTypes: closure_8,

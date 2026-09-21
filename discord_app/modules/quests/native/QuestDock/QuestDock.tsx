@@ -494,7 +494,7 @@ function QuestDockWithEntranceAnimation(arg0) {
     backgroundContent: closure_8,
   } = arg0);
   ({ renderImpressionTracker, trackAssetLoadingFailure } = arg0);
-  const context = noop.useContext(identifierMetricTag(15443));
+  const context = noop.useContext(identifierMetricTag(15449));
   const isRendered = context.isRendered;
   let items = [closure_11];
   const mode = initialize.useStateFromStores(items, () => closure_11.prevRestingQuestDockMode);
@@ -852,11 +852,11 @@ class QuestDockQuestContent {
 }
 function QuestDockBountyContent(bounty) {
   bounty = bounty.bounty;
-  const bountyPreviewImageUrl = bounty(15353).useBountyPreviewImageUrl(bounty);
-  let obj = bounty(15353);
-  const questDockAppThemedBackgroundColor = bounty(15353).useQuestDockAppThemedBackgroundColor();
+  const bountyPreviewImageUrl = bounty(15359).useBountyPreviewImageUrl(bounty);
+  let obj = bounty(15359);
+  const questDockAppThemedBackgroundColor = bounty(15359).useQuestDockAppThemedBackgroundColor();
   const obj3 = { bounty, children: null };
-  const obj2 = bounty(15353);
+  const obj2 = bounty(15359);
   obj3.children = closure_23(QuestDockWithEntranceAnimation, {
     identifierMetricTag: "ad_creative_id:" + bounty.id,
     backgroundImageUrl: bountyPreviewImageUrl,
@@ -896,14 +896,14 @@ function QuestDockBountyContent(bounty) {
       });
     },
   });
-  return closure_23(bounty(15363).QuestDockBountyProvider, obj3);
+  return closure_23(bounty(15369).QuestDockBountyProvider, obj3);
 }
 let closure_3 = ["mode"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, StyleSheet, Pressable: closure_9, Image: c10 } = get_ActivityIndicator);
-const QuestConstants = fn(5656);
+const QuestConstants = fn(5661);
 ({ QuestDockMode: closure_12, QuestsExperimentLocations: map1 } = QuestConstants);
-const QuestDockConstants = fn(15356);
+const QuestDockConstants = fn(15362);
 ({
   QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_14,
   QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_15,

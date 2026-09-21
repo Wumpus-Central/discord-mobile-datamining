@@ -58,7 +58,7 @@ function NotificationWrapper(notification) {
   }
 }
 const StyleSheet = fn(17).StyleSheet;
-const InAppNotificationConstants = fn(10351);
+const InAppNotificationConstants = fn(10352);
 ({
   DEFAULT_ANIMATION_TIMING: closure_7,
   extrapolateConfig: closure_8,

@@ -18,7 +18,7 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const IMAGE_SIZE = fn(10547).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10548).IMAGE_SIZE;
 const Constants = fn(1074);
 ({
   AnalyticsObjects: hasOwnProperty,

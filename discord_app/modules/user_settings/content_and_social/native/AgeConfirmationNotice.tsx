@@ -8,16 +8,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(8669);
+const Constants = fn(8670);
 ({ SafetySettingsNoticeAction: hasOwnProperty, SafetySettingsNoticeType: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/AgeConfirmationNotice.tsx");
 
 export default function AgeConfirmationNotice() {
-  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(7541).useSensitiveContentFilterHelpArticle();
+  sensitiveContentFilterHelpArticle = sensitiveContentFilterHelpArticle(7543).useSensitiveContentFilterHelpArticle();
   const effect = noop.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(14957).trackSafetySettingsNoticeAnalytics(
+    const result = sensitiveContentFilterHelpArticle(14963).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.VIEWED,
     );
@@ -34,14 +34,14 @@ export default function AgeConfirmationNotice() {
   let obj2 = { style: null, children: null };
   const obj3 = { marginBottom: null };
   const callback = noop.useCallback(() => {
-    const obj = onPress(8681);
+    const obj = onPress(8682);
     const result = obj.showAgeVerificationGetStartedModal({
-      entryPoint: sensitiveContentFilterHelpArticle(8683).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+      entryPoint: sensitiveContentFilterHelpArticle(8684).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
     });
     const obj2 = {
-      entryPoint: sensitiveContentFilterHelpArticle(8683).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
+      entryPoint: sensitiveContentFilterHelpArticle(8684).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
     };
-    const result1 = sensitiveContentFilterHelpArticle(14957).trackSafetySettingsNoticeAnalytics(
+    const result1 = sensitiveContentFilterHelpArticle(14963).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.CONFIRM_AGE,
     );

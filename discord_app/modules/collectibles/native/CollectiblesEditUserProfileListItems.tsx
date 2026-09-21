@@ -13,7 +13,7 @@ import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCollectiblesDataDefault from "../hooks/useCollectiblesData.tsx";
 import CollectiblesBadges from "CollectiblesBadges.tsx";
-import _modDef13474 from "../../../../_runtime/metro/13474__.js";
+import _modDef13476 from "../../../../_runtime/metro/13476__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -99,7 +99,7 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   const tmp = closure_9();
   const obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  const items = [React5(native.Icon, { source: _modDef13474, size: native.IconSizes.LARGE })];
+  const items = [React5(native.Icon, { source: _modDef13476, size: native.IconSizes.LARGE })];
   const obj3 = {
     variant: "text-sm/medium",
     color: "mobile-text-heading-primary",
@@ -124,7 +124,7 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
   const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
   let analyticsLocations;
   const tmp2 = closure_9();
-  analyticsLocations = analyticsLocations(7402)(analyticsSource).analyticsLocations;
+  analyticsLocations = analyticsLocations(7407)(analyticsSource).analyticsLocations;
   const items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
@@ -142,7 +142,7 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
   const merged1 = Object.assign(merged);
   const items1 = [
     closure_7(analyticsSource(1177).Icon, {
-      source: analyticsLocations(13475),
+      source: analyticsLocations(13477),
       size: analyticsSource(1177).IconSizes.LARGE,
     }),
     ,
@@ -156,7 +156,7 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
   const intl = analyticsSource(1115).intl;
   obj3.children = intl.string(analyticsSource(1115).t.pWG4ze);
   items1[1] = closure_7(analyticsSource(4752).Text, obj3);
-  items1[2] = closure_7(analyticsSource(9110).NewBadge, { style: tmp2.newIcon });
+  items1[2] = closure_7(analyticsSource(9111).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
 };

@@ -12,14 +12,14 @@ import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceE
 import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8181 from "../../../../_runtime/metro/08181__.js";
+import _modDef8182 from "../../../../_runtime/metro/08182__.js";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import QuestUtils from "QuestUtils.native.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
-import _modDef15413 from "../../../../_runtime/metro/15413__.js";
+import _modDef15419 from "../../../../_runtime/metro/15419__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import QuestStore from "../QuestStore.tsx";
@@ -28,7 +28,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef8181;
+  obj.icon = _modDef8182;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -172,7 +172,7 @@ export default noop.memo((children) => {
     const intl = util.intl;
     obj2.label = intl.string(util.t.GcsZKJ);
     obj2.action = callback2;
-    obj2.iconSource = _modDef15413;
+    obj2.iconSource = _modDef15419;
     items[1] = obj2;
     if (flag) {
       const obj3 = { label: null, IconComponent: null, action: null };

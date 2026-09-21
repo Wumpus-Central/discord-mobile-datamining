@@ -14,7 +14,7 @@ import VibegrationsDebugStore from "../stores/VibegrationsDebugStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const requestDebugStatus = fn(13359).requestDebugStatus;
+const requestDebugStatus = fn(13361).requestDebugStatus;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const createStyles = fn(4756);

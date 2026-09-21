@@ -87,7 +87,7 @@ function TodoMarker(status) {
   let tmp21 = null;
   if ("completed" === status) {
     const obj3 = { size: "xs", color: tmp10(576).colors.CHECKBOX_ICON_ACTIVE };
-    tmp21 = timestampProducer(tmp11(9552).CheckmarkSmallBoldIcon, obj3);
+    tmp21 = timestampProducer(tmp11(9553).CheckmarkSmallBoldIcon, obj3);
   }
   items1[1] = tmp21;
   obj.children = items1;

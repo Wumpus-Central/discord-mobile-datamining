@@ -14,9 +14,9 @@ import openIgnoreThermalStateAlert from "../../../activities/native/openIgnoreTh
 import CallsUtils from "../../../voice_calls/native/CallsUtils.tsx";
 import CameraLottie from "../../../../design/components/LottieIcon/native/generated/CameraLottie.tsx";
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
-import _modDef10231 from "../../../../../_runtime/metro/10231__.js";
 import _modDef10232 from "../../../../../_runtime/metro/10232__.js";
 import _modDef10233 from "../../../../../_runtime/metro/10233__.js";
+import _modDef10234 from "../../../../../_runtime/metro/10234__.js";
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen.tsx";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import DisconnectRemoteButton from "DisconnectRemoteButton.tsx";
@@ -269,7 +269,7 @@ function LeaveActivityButton(isSmallSize) {
     obj2.applicationId = applicationId;
     EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
   };
-  obj.source = _modDef10233;
+  obj.source = _modDef10234;
   obj.isSmallSize = isSmallSize.isSmallSize;
   return __initData(CallBarActionAll.PrimaryActionButton, obj);
 }
@@ -308,8 +308,8 @@ function useActionBarSecondButton(channel) {
 }
 function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
-  const isConnectedToVoiceChannel = channel(9643).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(9643);
+  const isConnectedToVoiceChannel = channel(9644).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(9644);
   const items = [ChannelRTCStore, AuthenticationStore];
   closure_1 = channel(504).useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
@@ -363,7 +363,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4756);
 let obj2 = {
   container: {
-    height: fn(9664).CALL_ACTION_BAR_HEIGHT,
+    height: fn(9665).CALL_ACTION_BAR_HEIGHT,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -371,16 +371,16 @@ let obj2 = {
   containerForFiveButtonLayout: null,
 };
 let obj3 = {
-  height: fn(9664).CALL_ACTION_BAR_HEIGHT,
+  height: fn(9665).CALL_ACTION_BAR_HEIGHT,
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "row",
 };
 obj2.containerForFiveButtonLayout = {
-  height: fn(9664).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
+  height: fn(9665).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT,
   paddingHorizontal: 16,
-  paddingTop: fn(9664).FIVE_BUTTON_CONTAINER_PADDING_TOP,
-  paddingBottom: fn(9664).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
+  paddingTop: fn(9665).FIVE_BUTTON_CONTAINER_PADDING_TOP,
+  paddingBottom: fn(9665).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM,
   justifyContent: "center",
   flexDirection: "row",
 };

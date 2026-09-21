@@ -394,7 +394,7 @@ function BountiesScrollVideoItemInner(bounty) {
   return handleVideoProgressAnalytics(closure_6, obj6);
 }
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5656).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(5661).BOUNTY_ORB_AMOUNT;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollVideoItem.tsx");
@@ -426,10 +426,10 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (flag3 === undefined) {
     flag3 = false;
   }
-  return jsx(bounty(12029).BillableAdPlacementImpressionTrackerNative, {
+  return jsx(bounty(12031).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
-    adCreativeType: bounty(5663).AdCreativeType.BOUNTY,
-    questContent: bounty(5661).QuestContent.VIDEO_MODAL_MOBILE,
+    adCreativeType: bounty(5668).AdCreativeType.BOUNTY,
+    questContent: bounty(5666).QuestContent.VIDEO_MODAL_MOBILE,
     sourceQuestContent,
     overrideVisibility: isActive,
     children() {

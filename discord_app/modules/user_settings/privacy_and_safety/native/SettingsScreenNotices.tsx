@@ -22,20 +22,20 @@ let closure_6 = createStyles.createStyles(obj2);
 const obj5 = { SENSITIVE_CONTENT_FILTERS: null, CONTENT_AND_SOCIAL: null, DATA_AND_PRIVACY: null };
 const obj4 = { marginTop: nativeDefault.space.PX_16 };
 let items = [
-  { order: 100, predicate: fn(7832).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault },
+  { order: 100, predicate: fn(7834).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault },
   ,
   ,
 ];
-const obj6 = { order: 100, predicate: fn(7832).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
+const obj6 = { order: 100, predicate: fn(7834).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
 items[1] = {
   order: 150,
-  predicate: fn(15088).shouldShowTinyBroncoUnconfirmedNotice,
-  Component: fn(15088).ContentFiltersUnconfirmedNotice,
+  predicate: fn(15094).shouldShowTinyBroncoUnconfirmedNotice,
+  Component: fn(15094).ContentFiltersUnconfirmedNotice,
 };
 const obj7 = {
   order: 150,
-  predicate: fn(15088).shouldShowTinyBroncoUnconfirmedNotice,
-  Component: fn(15088).ContentFiltersUnconfirmedNotice,
+  predicate: fn(15094).shouldShowTinyBroncoUnconfirmedNotice,
+  Component: fn(15094).ContentFiltersUnconfirmedNotice,
 };
 items[2] = {
   order: 200,
@@ -75,7 +75,7 @@ items[3] = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(15090).SensitiveContentFiltersTeenNotice,
+  Component: fn(15096).SensitiveContentFiltersTeenNotice,
 };
 obj5.SENSITIVE_CONTENT_FILTERS = items;
 const obj9 = {
@@ -88,12 +88,12 @@ const obj9 = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(15090).SensitiveContentFiltersTeenNotice,
+  Component: fn(15096).SensitiveContentFiltersTeenNotice,
 };
 const items1 = [
-  { order: 100, predicate: fn(7832).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault },
+  { order: 100, predicate: fn(7834).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault },
 ];
-const obj10 = { order: 100, predicate: fn(7832).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
+const obj10 = { order: 100, predicate: fn(7834).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault };
 items1[1] = {
   order: 200,
   predicate() {
@@ -124,7 +124,7 @@ const obj11 = {
   Component: AgeConfirmationNoticeDefault,
 };
 const items2 = [
-  { order: 100, predicate: fn(7832).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault },
+  { order: 100, predicate: fn(7834).isParentallyControlled, Component: FamilyCenterSettingsNoticeDefault },
 ];
 obj5.DATA_AND_PRIVACY = items2;
 const size = fn(2);

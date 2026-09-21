@@ -126,7 +126,7 @@ function ConversationListItemBase(conversation) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7835).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7837).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

@@ -4,7 +4,7 @@ import DurationsDefault from "../../../utils/Durations.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import Constants2 from "../Constants.tsx";
-import _modDef17823 from "../../../../_runtime/metro/17823__.js";
+import _modDef17834 from "../../../../_runtime/metro/17834__.js";
 import Constants from "../../../Constants.tsx";
 import MultiAccountManager from "../MultiAccountManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -21,7 +21,7 @@ let obj = Object.create(
     obj.cancelled = false;
     obj.push = function push() {
       obj = ModalActionCreatorsDefault;
-      obj.pushLazy(obj(1980)(17821, dependencyMap.paths), {}, c7);
+      obj.pushLazy(obj(1980)(17832, dependencyMap.paths), {}, c7);
       if (obj.cancelled) {
         ModalActionCreatorsDefault.popWithKey(c7);
         const tmpResult = ModalActionCreatorsDefault;
@@ -55,7 +55,7 @@ let obj = Object.create(
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(1980)(17821, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(1980)(17832, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
@@ -117,7 +117,7 @@ prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHom
     const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", content: null, icon: null };
     const intl = obj(1115).intl;
     obj2.content = intl.formatToPlainString(obj(1115).t.wx7O3L, { username: user.username });
-    obj2.icon = _modDef17823;
+    obj2.icon = _modDef17834;
     obj.open(obj2);
   }, 100);
 };
@@ -126,7 +126,7 @@ prototype["onSwitchError"] = function onSwitchError() {
   const obj2 = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1115).intl;
   obj2.content = intl.string(obj(1115).t.pqvKWA);
-  obj2.icon = _modDef17823;
+  obj2.icon = _modDef17834;
   obj.open(obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

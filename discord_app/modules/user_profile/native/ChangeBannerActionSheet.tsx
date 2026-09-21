@@ -31,7 +31,7 @@ function ChangeBannerColorRow(user) {
   ({ pendingAccentColor, pendingAvatar } = stateFromStoresObject);
   const obj = require("initialize");
   let pendingAvatarSrc = require("RecentAvatarUtils").getPendingAvatarSrc({ userId: user.id, image: pendingAvatar });
-  const tmp7 = pendingAccentColor(8454)(user.id);
+  const tmp7 = pendingAccentColor(8455)(user.id);
   if (pendingAvatarSrc == null) {
     pendingAvatarSrc = user.getAvatarURL(undefined, 80);
   }
@@ -71,7 +71,7 @@ function ChangeBannerColorRow(user) {
   obj5.text = intl.string(require("util").t.xzNfPz);
   obj4.label = closure_9(require("Form").FormLabel, obj5);
   const obj6 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(14867), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
+  const items2 = [closure_9(pendingAccentColor(14873), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
   const obj8 = {
     style: tmp.selectedColorHex,
     variant: "text-md/medium",
@@ -86,7 +86,7 @@ function ChangeBannerColorRow(user) {
   items2[2] = closure_9(require("native").Icon, {
     style: tmp.rowArrow,
     size: require("native").Icon.Sizes.CUSTOM,
-    source: pendingAccentColor(14872),
+    source: pendingAccentColor(14878),
   });
   obj6.children = items2;
   obj4.trailing = closure_10(View, obj6);
@@ -186,7 +186,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
             const obj4 = tmp5(4723);
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(5349).openImagePicker(closure_1_8), done: false };
+            const obj6 = { value: tmp5(5354).openImagePicker(closure_1_8), done: false };
             return obj6;
           }
         } else if (dependencyMap === 1) {
@@ -202,14 +202,14 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
             const obj8 = {
-              assetOrigin: tmp2(7229).AssetOriginTypes.NEW_ASSET,
+              assetOrigin: tmp2(7234).AssetOriginTypes.NEW_ASSET,
               imageUri: base64,
               description: "",
               originalAsset: "Array",
               originalMd5,
             };
-            closure_129_0(tmp2(14863).createPendingImage(obj8));
-            const obj = tmp2(14863);
+            closure_129_0(tmp2(14869).createPendingImage(obj8));
+            const obj = tmp2(14869);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -275,7 +275,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj9 = { style: tmp.upsellButton, children: null };
     const obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj9.children = closure_9(tmp2(14864), obj10);
+    obj9.children = closure_9(tmp2(14870), obj10);
     tmp4Result6 = closure_9(View, obj9);
   }
   items3[1] = tmp4Result6;

@@ -62,7 +62,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const guild1 = GuildStore.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild1) {
-      const channel = displayNameStylesEnabled(11571)(invite).channel;
+      const channel = displayNameStylesEnabled(11573)(invite).channel;
       tmp = null;
       if (null != channel) {
         tmp = null;
@@ -86,16 +86,16 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
   } else {
     const guild = tmp.guild;
     const channel2 = tmp.channel;
-    ({ colors, baseColors } = displayNameStylesEnabled(8202)(theme));
+    ({ colors, baseColors } = displayNameStylesEnabled(8203)(theme));
     let assetUriForEmbed;
     if (null != guild.icon) {
-      assetUriForEmbed = guild(8203).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
-      let obj2 = guild(8203);
+      assetUriForEmbed = guild(8204).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
+      let obj2 = guild(8204);
     }
     const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channel2.id, guild.id);
     const items = [];
     const tmp39 = displayNameStylesEnabled;
-    const tmp41 = displayNameStylesEnabled(8202)(theme);
+    const tmp41 = displayNameStylesEnabled(8203)(theme);
     HermesBuiltin.arraySpread(
       voiceStatesForChannelAlt.filter((voiceState) => !voiceState.voiceState.selfStream),
       HermesBuiltin.arraySpread(
@@ -189,7 +189,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const tmp30Result = guild(4909);
     const tmp35 = currentClientVoiceChannelId === channel2.id;
     const items1 = [GuildMemberStore];
-    obj5.canBeAccepted = tmp39(11572).canAcceptInvite(items1, invite);
+    obj5.canBeAccepted = tmp39(11574).canAcceptInvite(items1, invite);
     obj5.embedCanBeTapped = true;
     obj5.type = InviteTypes.GUILD;
     obj5.voiceUsers = mapped;
@@ -197,7 +197,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const intl2 = tmp30(1115).intl;
     obj5.emptyStateText = intl2.string(guild(1115).t.zSqdrS);
     const intl3 = tmp30(1115).intl;
-    const tmp39Result = tmp39(11572);
+    const tmp39Result = tmp39(11574);
     obj5.streamingLabel = intl3.string(guild(1115).t.dI3q4h).toUpperCase();
     obj5.voiceHeaderBackgroundColor = colors.voiceHeaderBackgroundColor;
     obj5.reducedMotion = AccessibilityStore.useReducedMotion;

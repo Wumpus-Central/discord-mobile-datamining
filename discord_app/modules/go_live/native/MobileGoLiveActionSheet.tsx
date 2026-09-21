@@ -17,7 +17,7 @@ import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
-import _modDef10220 from "../../../../_runtime/metro/10220__.js";
+import _modDef10221 from "../../../../_runtime/metro/10221__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -233,7 +233,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         obj10.children = intl5.string(_modDef2318.nMcXo1);
         const items = [closure_2_14(Text_Text.Text, obj10)];
         const tmp8Result = NativeViewDefault;
-        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef10220, size: "xs" });
+        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef10221, size: "xs" });
         obj9.children = items;
         obj8.label = __initData(tmp8Result, obj9);
         if (null != maxSettingsForPreset2) {
@@ -337,5 +337,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   const obj = ActionSheetActionCreatorsDefault;
   obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj2.impressionProperties = { location_stack };
-  obj.openLazy(asyncRequireImpl(10209, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
+  obj.openLazy(asyncRequireImpl(10210, dependencyMap.paths), MobileGoLiveActionSheet, obj2);
 };

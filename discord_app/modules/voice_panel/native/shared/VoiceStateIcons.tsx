@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import inlineStyles from "../../../../../_runtime/08727_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08728_inlineStyles.js";
 import VoiceStateIconUtils from "../utils/VoiceStateIconUtils.tsx";
 import HeadphonesDenyIcon from "../../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import MicrophoneSlashIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
-import _modDef9948 from "../../../../../_runtime/metro/09948__.js";
 import _modDef9949 from "../../../../../_runtime/metro/09949__.js";
+import _modDef9950 from "../../../../../_runtime/metro/09950__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -60,7 +60,7 @@ const createStyles = fn(4756);
 let obj = { redTint: { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }, defaultTint: null, noTint: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj.defaultTint = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj.noTint = { tintColor: "Array" };
+obj.noTint = { tintColor: "r" };
 let closure_6 = createStyles.createStyles(obj);
 let obj4 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const memoResult = noop.memo((arg0) => {
@@ -119,7 +119,7 @@ export const VideoIcon = noop.memo((state) => {
   if (VoiceStateIconUtils.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO === state) {
     const obj = {};
     const merged1 = Object.assign(merged);
-    obj.source = _modDef9948;
+    obj.source = _modDef9949;
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
     return React4(native.Icon, obj);
@@ -130,7 +130,7 @@ export const VideoIcon = noop.memo((state) => {
   } else if (VoiceStateIconUtils.VideoIconState.VIDEO_ACTIVE === state) {
     const obj3 = {};
     const merged3 = Object.assign(merged);
-    obj3.source = _modDef9949;
+    obj3.source = _modDef9950;
     return React4(native.Icon, obj3);
   } else {
     GlobalUtils.assertNever(state);

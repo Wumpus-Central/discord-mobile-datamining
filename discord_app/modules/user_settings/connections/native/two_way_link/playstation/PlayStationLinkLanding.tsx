@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef9376 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
+import _modDef9377 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(9374).PlayStationLinkModalScenes;
+let closure_4 = fn(9375).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const createStyles = fn(4756);
@@ -28,19 +28,19 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
     obj.label = intl.string(navigation(1115).t["+eJP7o"]);
     const intl2 = navigation(1115).intl;
     obj.subLabel = intl2.string(navigation(1115).t["+0VIUh"]);
-    obj.icon = navigation(5312).VoiceNormalIcon;
+    obj.icon = navigation(5319).VoiceNormalIcon;
     const items = [obj];
     const obj2 = { label: null, icon: null };
     const intl3 = navigation(1115).intl;
     obj2.label = intl3.string(navigation(1115).t.ZH4QFa);
-    obj2.icon = navigation(9347).GameControllerIcon;
+    obj2.icon = navigation(9348).GameControllerIcon;
     items[1] = obj2;
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef9376 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef9377 }), []);
   const obj3 = {
     platformType: platformType.platformType,
     img: memo1,
@@ -58,7 +58,7 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   obj3.body = intl.format(navigation(1115).t.kqZQNe, { helpdeskArticleUrl: articleURL });
   obj3.onNext = callback;
   obj3.valueProps = memo;
-  return jsx(navigation(9349).TwoWayLinkLanding, {
+  return jsx(navigation(9350).TwoWayLinkLanding, {
     platformType: platformType.platformType,
     img: memo1,
     imgStyle: tmp.image,

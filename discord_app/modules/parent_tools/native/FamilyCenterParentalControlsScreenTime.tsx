@@ -15,12 +15,12 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  const scheduleRuleDateRange = rule(10339).getScheduleRuleDateRange(rule);
-  let obj = rule(10339);
-  const obj2 = rule(10339);
+  const scheduleRuleDateRange = rule(10340).getScheduleRuleDateRange(rule);
+  let obj = rule(10340);
+  const obj2 = rule(10340);
   const obj3 = {
     label: scheduleRuleDateRange,
-    subLabel: rule(10339).formatDays(rule.days),
+    subLabel: rule(10340).formatDays(rule.days),
     trailing: null,
     arrow: null,
     onPress: null,
@@ -49,7 +49,7 @@ function ScheduleRuleRow(rule) {
     };
   }
   obj3.onPress = fn;
-  return closure_5(rule(5817).TableRow, obj3);
+  return closure_5(rule(5822).TableRow, obj3);
 }
 const View = _mod17.View;
 const UserSettingsSections = Constants.UserSettingsSections;

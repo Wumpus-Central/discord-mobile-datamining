@@ -31,7 +31,7 @@ const rect = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: PX_12,
   flexDirection: "row",
-  minHeight: fn(12301).APP_ICON_SIZE + 2 * PX_12 + 4,
+  minHeight: fn(12303).APP_ICON_SIZE + 2 * PX_12 + 4,
   bottom: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
 };
@@ -140,9 +140,9 @@ export default function BannerBase(arg0) {
     withSpring: require("spring").withSpring,
     SPRING_CONFIG,
   };
-  obj10.source = require("../../../../../../_runtime/metro/12313__.js");
+  obj10.source = require("../../../../../../_runtime/metro/12315__.js");
   obj10.autoPlay = !stateFromStores;
-  const items5 = [closure_7(sharedValue(5741), obj10), image];
+  const items5 = [closure_7(sharedValue(5746), obj10), image];
   obj9.children = items5;
   items4[1] = closure_8(View, obj9);
   const obj11 = {

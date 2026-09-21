@@ -43,5 +43,5 @@ export default function MemberVerificationAlertCancelPending(guildId) {
   items1[1] = closure_4(guildId(5186).Button, obj3);
   obj2.children = items1;
   obj.buttons = closure_6(closure_5, obj2);
-  return closure_4(onClose(5749), obj);
+  return closure_4(onClose(5754), obj);
 }

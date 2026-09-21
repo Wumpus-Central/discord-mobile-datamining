@@ -92,7 +92,7 @@ export default function ChannelListPreview(useGradientBackground) {
     showsVerticalScrollIndicator: false,
     importantForAccessibility: "no-hide-descendants",
   };
-  items2[1] = closure_5(animatedStyles(8996).FlashList, obj4);
+  items2[1] = closure_5(animatedStyles(8997).FlashList, obj4);
   items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, {
     visible: isNitroLocked,
     theme: themes[themeIndex],

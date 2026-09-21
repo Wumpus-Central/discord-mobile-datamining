@@ -399,8 +399,8 @@ const isGuildLurker = fn(2059).isGuildLurker;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, Permissions: closure_14, Routes: closure_15 } = Constants);
 const StaticChannelRoute = fn(2048).StaticChannelRoute;
-const GuildOnboardingTab = fn(7341).GuildOnboardingTab;
-let closure_18 = fn(7337).CHANNELS_AND_ROLES_MODAL_KEY;
+const GuildOnboardingTab = fn(7346).GuildOnboardingTab;
+let closure_18 = fn(7342).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");
 

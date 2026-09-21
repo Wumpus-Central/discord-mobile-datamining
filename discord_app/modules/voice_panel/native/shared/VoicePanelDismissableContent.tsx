@@ -7,9 +7,9 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 require = fn;
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequireImpl(17552, dependencyMap.paths);
+  return asyncRequireImpl(17563, dependencyMap.paths);
 }
-const VoicePanelModes = fn(12524).VoicePanelModes;
+const VoicePanelModes = fn(12526).VoicePanelModes;
 const isActivityParticipant = fn(4777).isActivityParticipant;
 const jsx = fn(21).jsx;
 const __initData = {

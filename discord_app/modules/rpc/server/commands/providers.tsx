@@ -34,16 +34,16 @@ obj2 = {
     let obj = require("RPCHelpers");
     let obj2 = require("RPCHelpers");
     const validateApplicationResult = require("RPCHelpers").validateApplication(socket.application);
-    value = connection_redirect(5495).get(provider);
+    value = connection_redirect(5500).get(provider);
     dependencyMap = value;
     if (null == value) {
       const obj4 = { errorCode: constants2.INVALID_PROVIDER };
       const _HermesInternal = HermesInternal;
-      const tmp4Result1 = new tmp4(9580)(obj4, 'Platform not found for provider "' + provider + '"');
+      const tmp4Result1 = new tmp4(9581)(obj4, 'Platform not found for provider "' + provider + '"');
       throw tmp4Result1;
     } else if (provider !== constants.AMAZON_MUSIC) {
       let obj5 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp22 = new tmp4(9580)(obj5, "Command not available for this application");
+      const tmp22 = new tmp4(9581)(obj5, "Command not available for this application");
       throw tmp22;
     } else if (set.has(validateApplicationResult)) {
       _require = asyncGeneratorStep(async (arg0, successRedirect) => {
@@ -103,14 +103,14 @@ obj2 = {
                     closure_130_3 = handleConnectionsUpdate;
                     function handleConnectionsCallbackError() {
                       const obj = { errorCode: closure_3_9.OAUTH2_ERROR };
-                      const tmp = connection_redirect(9580);
+                      const tmp = connection_redirect(9581);
                       successRedirect(
-                        new connection_redirect(9580)(
+                        new connection_redirect(9581)(
                           { errorCode: closure_3_9.OAUTH2_ERROR },
                           'OAuth2 setup for "' + closure_0 + '" failed',
                         ),
                       );
-                      const tmp2 = new connection_redirect(9580)(
+                      const tmp2 = new connection_redirect(9581)(
                         { errorCode: closure_3_9.OAUTH2_ERROR },
                         'OAuth2 setup for "' + closure_0 + '" failed',
                       );
@@ -199,10 +199,10 @@ obj2 = {
       return promise;
     } else {
       let obj6 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp10 = new tmp4(9580)(obj6, "Command not available for this application");
+      const tmp10 = new tmp4(9581)(obj6, "Command not available for this application");
       throw tmp10;
     }
-    let obj3 = connection_redirect(5495);
+    let obj3 = connection_redirect(5500);
   },
 };
 const items1 = [RPC_AUTHENTICATED_SCOPE];

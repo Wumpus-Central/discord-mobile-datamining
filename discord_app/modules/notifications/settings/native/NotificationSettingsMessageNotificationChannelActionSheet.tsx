@@ -54,5 +54,5 @@ export default function NotificationSettingsMessageNotificationChannelActionShee
       NotificationLabel.notifications(message_notifications),
     );
   };
-  return jsx(unread(10417), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(10418), { context: "channel", value: notification, allMessagesSubLabel: null, onChange: null });
 }

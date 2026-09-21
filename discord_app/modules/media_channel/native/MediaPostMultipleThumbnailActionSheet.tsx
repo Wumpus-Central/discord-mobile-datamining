@@ -100,7 +100,7 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   };
   items2[5] = closure_5(markAsDismissed(5186).Button, obj9);
   obj3.children = items2;
-  obj2.children = closure_6(markAsDismissed(6864).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(6869).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(7390).BottomSheet, obj);
+  return closure_5(markAsDismissed(7395).BottomSheet, obj);
 }

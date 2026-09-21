@@ -1,7 +1,7 @@
 // discord_app/modules/emojis/UnicodeEmojis.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import EmojiTypes from "EmojiTypes.tsx";
-import _mod14247 from "../../../_runtime/metro/14247__.js";
+import _mod14253 from "../../../_runtime/metro/14253__.js";
 import defaultImageSrcGenerator from "../../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
 
 const require = globalThis.__r;
@@ -472,7 +472,7 @@ export default {
     hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod14247[key10009];
+      str = _mod14253[key10009];
     }
     let combined = str;
     if (flag) {

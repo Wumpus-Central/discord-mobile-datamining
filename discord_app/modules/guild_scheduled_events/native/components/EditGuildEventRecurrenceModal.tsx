@@ -106,13 +106,13 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
   const tmp2 = useSafeAreaInsetsDefault();
-  const baseScheduleForRecurrence = guildEvent(9752).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj = guildEvent(9752);
-  const scheduleForRecurrenceWithException = guildEvent(9752).getScheduleForRecurrenceWithException(
+  const baseScheduleForRecurrence = guildEvent(9753).getBaseScheduleForRecurrence(recurrenceId, guildEvent);
+  let obj = guildEvent(9753);
+  const scheduleForRecurrenceWithException = guildEvent(9753).getScheduleForRecurrenceWithException(
     baseScheduleForRecurrence,
     tmp3,
   );
-  let obj2 = guildEvent(9752);
+  let obj2 = guildEvent(9753);
   [c5, c6] = noop.useState(scheduleForRecurrenceWithException);
   [first, closure_8] = noop.useState(null);
   const tmp9 = _slicedToArray(
@@ -152,7 +152,7 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   const action = closure_8(guildEvent(5186).Button, obj3);
   let obj5 = {
     style: null,
-    children: closure_8(guildEvent(7240).Navigator, {
+    children: closure_8(guildEvent(7245).Navigator, {
       screens: {
         [closure_11.TIME]: {
           title: "",

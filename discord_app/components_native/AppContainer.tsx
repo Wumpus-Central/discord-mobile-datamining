@@ -19,12 +19,12 @@ import useIsScreenLandscape from "../modules/screen/useIsScreenLandscape.native.
 import useNavigationTheme from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
 import WebViewContext from "../modules/activities/native/WebViewContext.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
-import MemoryRouter from "../../_runtime/13034_MemoryRouter.js";
+import MemoryRouter from "../../_runtime/13036_MemoryRouter.js";
 import RouteManagerDefault from "../modules/routing/RouteManager.tsx";
 import DiscordGestureHandlerRootViewDefault from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
 import getChannelDetailsFromRouteDefault from "../modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx";
 import MainNavigationLoggerDefault from "../modules/main_tabs_v2/helpers/MainNavigationLogger.tsx";
-import ReanimatedScreenProvider from "../../_runtime/14835_ReanimatedScreenProvider.js";
+import ReanimatedScreenProvider from "../../_runtime/14841_ReanimatedScreenProvider.js";
 import RootThemeContextProvider from "../modules/themes/RootThemeContextProvider.native.tsx";
 import AccessibilityPreferencesContextProviderDefault from "../modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx";
 import ErrorBoundaryDefault from "ErrorBoundary.tsx";
@@ -173,7 +173,7 @@ function AppNavigationContainerOrEmpty(arg0) {
   }
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(7568).handleHistoryStoreNavigationChange;
+let closure_7 = fn(7570).handleHistoryStoreNavigationChange;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, Routes: closure_12 } = Constants);
 const isStaticChannelRoute = fn(2048).isStaticChannelRoute;
@@ -191,17 +191,17 @@ let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4492).Reani
 try {
   fn(5116).enableFreeze();
   let obj6 = fn(5116);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(14831).useTrackNavigatorScreenImpression };
-  fn(7276).setDesignConfig(obj8);
+  let obj8 = { useTrackNavigatorScreenImpression: fn(14837).useTrackNavigatorScreenImpression };
+  fn(7281).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = {
     code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}",
   };
-  let obj7 = fn(7276);
+  let obj7 = fn(7281);
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(14834).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(14840).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -228,8 +228,8 @@ try {
       }
       const obj = appEntryKey(1364);
     }, []);
-    let obj = appEntryKey(14834);
-    const riveAppStatePlaybackExperiment = appEntryKey(16264).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(14840);
+    const riveAppStatePlaybackExperiment = appEntryKey(16270).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     let items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

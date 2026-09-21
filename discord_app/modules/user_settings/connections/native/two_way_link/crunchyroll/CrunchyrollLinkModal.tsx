@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkModal.tsx
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef7232 from "../../../../../../../_runtime/metro/07232__.js";
+import _modDef7237 from "../../../../../../../_runtime/metro/07237__.js";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators.tsx";
 import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 function CloseButton() {
   const obj = {
-    source: _modDef7232,
+    source: _modDef7237,
     onPress() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
@@ -19,14 +19,14 @@ function CloseButton() {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef7232,
+    source: _modDef7237,
     onPress() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null,
   });
 }
-const constants = fn(9385).CrunchyrollLinkModalScenes;
+const constants = fn(9386).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -36,11 +36,11 @@ const result = size.fileFinishedImporting(
 
 export default function CrunchyrollLinkModal(locationStack) {
   let twoWayLinkStyles;
-  twoWayLinkStyles = twoWayLinkStyles(9350).useTwoWayLinkStyles();
+  twoWayLinkStyles = twoWayLinkStyles(9351).useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => {
     function onClose() {
-      return closure_1_1(9383).hideModal();
+      return closure_1_1(9384).hideModal();
     }
     function blank() {
       return null;
@@ -52,7 +52,7 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerTitle: blank,
         headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(9386), {});
+          return closure_1_6(closure_1_1(9387), {});
         },
       },
       [closure_2_4.PRE_CONNECT]: {
@@ -60,10 +60,10 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerRight: CloseButton,
         headerStyle: twoWayLinkStyles.navHeader,
         headerTitle() {
-          return closure_1_6(onClose(9351).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+          return closure_1_6(onClose(9352).TwoWayLinkStepHeader, { idx: 1, total: 2 });
         },
         render() {
-          return closure_1_6(closure_1_1(9388), {});
+          return closure_1_6(closure_1_1(9389), {});
         },
       },
       [closure_2_4.DISCORD_CONSENT]: {
@@ -71,11 +71,11 @@ export default function CrunchyrollLinkModal(locationStack) {
         headerRight: CloseButton,
         headerStyle: twoWayLinkStyles.navHeader,
         headerTitle() {
-          return closure_1_6(onClose(9351).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+          return closure_1_6(onClose(9352).TwoWayLinkStepHeader, { idx: 2, total: 2 });
         },
         render(arg0) {
           ({ callbackCode, callbackState } = arg0);
-          return closure_1_6(closure_1_1(9390), { callbackCode, callbackState });
+          return closure_1_6(closure_1_1(9391), { callbackCode, callbackState });
         },
       },
       [closure_2_4.SUCCESS]: {
@@ -98,8 +98,8 @@ export default function CrunchyrollLinkModal(locationStack) {
       },
     };
   }, items);
-  const obj = twoWayLinkStyles(9350);
-  const accountLinkStepTracking = twoWayLinkStyles(9371).useAccountLinkStepTracking(
+  const obj = twoWayLinkStyles(9351);
+  const accountLinkStepTracking = twoWayLinkStyles(9372).useAccountLinkStepTracking(
     PlatformTypes.CRUNCHYROLL,
     locationStack.locationStack,
   );
@@ -111,7 +111,7 @@ export default function CrunchyrollLinkModal(locationStack) {
   };
   const intl = twoWayLinkStyles(1115).intl;
   obj3.headerBackTitle = intl.string(twoWayLinkStyles(1115).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(7240).Navigator, {
+  return jsx(twoWayLinkStyles(7245).Navigator, {
     onStateChange: accountLinkStepTracking,
     screens: memo,
     initialRouteName: constants.LANDING,

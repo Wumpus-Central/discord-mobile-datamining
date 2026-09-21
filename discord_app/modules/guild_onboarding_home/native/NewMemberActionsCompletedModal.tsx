@@ -72,7 +72,7 @@ export default function NewMemberActionsCompleted(arg0) {
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => closure_1_1(4959).popWithKey(sharedValue(12537).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => closure_1_1(4959).popWithKey(sharedValue(12539).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);

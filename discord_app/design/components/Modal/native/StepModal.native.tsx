@@ -19,7 +19,7 @@ const rect = {
   top: 0,
   left: 0,
   right: 0,
-  height: fn(5894).NAV_BAR_HEIGHT,
+  height: fn(5899).NAV_BAR_HEIGHT,
 };
 obj2.stepContainer = rect;
 let closure_8 = createStyles.createStyles(obj2);

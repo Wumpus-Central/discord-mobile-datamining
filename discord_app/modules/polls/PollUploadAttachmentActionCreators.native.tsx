@@ -180,7 +180,7 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0) {
   return value;
 };
 const DraftType = fn(5105).DraftType;
-const POLL_ATTACHMENT_FOLDER = fn(8069).POLL_ATTACHMENT_FOLDER;
+const POLL_ATTACHMENT_FOLDER = fn(8071).POLL_ATTACHMENT_FOLDER;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 

@@ -10,10 +10,10 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const util = EUNgko(1115);
 const Text_Text = EUNgko(4752);
-const TableRadioGroup = EUNgko(5897);
-const TableRadioRow = EUNgko(5900);
-const TableSwitchRow = EUNgko(7440);
-const UserSettingsVoice = EUNgko(10235);
+const TableRadioGroup = EUNgko(5902);
+const TableRadioRow = EUNgko(5905);
+const TableSwitchRow = EUNgko(7445);
+const UserSettingsVoice = EUNgko(10236);
 require = fn;
 class VoiceProcessingOptions {
   constructor() {

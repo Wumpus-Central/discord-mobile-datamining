@@ -378,7 +378,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
                       let tmp43 = closure_2_18(favoriteChannels.favoriteChannels);
                       let tmp46 = closure_2_19(favoriteChannels.favoriteChannels, tmp7);
                       flag = true;
-                      let obj3 = closure_0(10490);
+                      let obj3 = closure_0(10491);
                       let type;
                       if (tmp31 != null) {
                         type = tmp31.type;
@@ -402,7 +402,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
                     if (flag) {
                       let BoolValue = closure_0(1217).BoolValue;
                       favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                      let obj4 = closure_0(10490);
+                      let obj4 = closure_0(10491);
                       let str = "auto";
                       let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                     }
@@ -563,7 +563,7 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                   const obj2 = { limit: tmp5, canUpsell: false };
                   let tmp6 = obj2;
                 } else {
-                  const favoritesAccess = closure_0(10481).getFavoritesAccess();
+                  const favoritesAccess = closure_0(10482).getFavoritesAccess();
                   const favoriteLimit = favoritesAccess.favoriteLimit;
                   tmp6 = null;
                   if (favoriteLimit > 0) {
@@ -582,12 +582,12 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                       tmp4Result = closure_1(12);
                     }
                   }
-                  const tmpResult = closure_0(10481);
+                  const tmpResult = closure_0(10482);
                 }
                 if (null != tmp6) {
                   const limit = tmp6.limit;
                   if (tmp6.canUpsell) {
-                    closure_1(10484)(limit);
+                    closure_1(10485)(limit);
                   } else {
                     const obj4 = { title: null, body: null };
                     const intl = closure_0(1115).intl;
@@ -871,7 +871,7 @@ export const setFavoritesAutoAddJoinedThreads = function setFavoritesAutoAddJoin
               tmp7(5108).show(obj);
               const tmp7Result2 = tmp7(5108);
             }
-            str = tmp7(10484)(favoritesAccess);
+            str = tmp7(10485)(favoritesAccess);
             obj5 = _modDef12;
           }
         }

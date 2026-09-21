@@ -43,15 +43,15 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8458).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8459).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7402)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7407)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8458);
+  let obj = user(8459);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(13354).useGameFriendsForUser(user.id);
-  const tmp3Result = user(13354);
+  const gameFriendsForUser = user(13356).useGameFriendsForUser(user.id);
+  const tmp3Result = user(13356);
   const items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
@@ -64,7 +64,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13430).UserClockIcon;
+          let UserPlusIcon = tmp3(13432).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4692).UserPlusIcon;
         }

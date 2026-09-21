@@ -4,16 +4,6 @@ import asyncGeneratorStepDefault from "../../../_runtime/00005_asyncGeneratorSte
 const items = [
   {
     load() {
-      return closure_0(8026);
-    },
-  },
-  {
-    load() {
-      return closure_0(8027);
-    },
-  },
-  {
-    load() {
       return closure_0(8028);
     },
   },
@@ -92,8 +82,6 @@ const items = [
       return closure_0(8043);
     },
   },
-];
-const items1 = [
   {
     load() {
       return closure_0(8044);
@@ -104,6 +92,8 @@ const items1 = [
       return closure_0(8045);
     },
   },
+];
+const items1 = [
   {
     load() {
       return closure_0(8046);
@@ -182,6 +172,16 @@ const items1 = [
   {
     load() {
       return closure_0(8061);
+    },
+  },
+  {
+    load() {
+      return closure_0(8062);
+    },
+  },
+  {
+    load() {
+      return closure_0(8063);
     },
   },
 ];

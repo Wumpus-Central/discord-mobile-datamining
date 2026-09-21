@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const useRegistrationUIStore = fn(16271).useRegistrationUIStore;
+const useRegistrationUIStore = fn(16277).useRegistrationUIStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
 

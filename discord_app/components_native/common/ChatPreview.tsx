@@ -39,7 +39,7 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(8190);
+const RowGeneratorConstants = fn(8191);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -284,7 +284,7 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flex",
           shouldInitialScroll: "Array",
-          animated: "2026-05-bounty-stale-refresh-quest-home",
+          animated: "2026-06-non-friend-messages-requests-in-uk",
           scrollPosition: "user",
           focusTargetId: null,
         };
@@ -648,8 +648,8 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7569).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7569);
+  const isChannelSpoilerGated = channelId(7571).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7571);
   const isChannelContentGated = channelId(4966).useIsChannelContentGated(stateFromStores1);
   const obj4 = channelId(4966);
   const items2 = [ActionSheetStore];

@@ -6,12 +6,12 @@ import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx"
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
-import _modDef9362 from "../../../../../_runtime/metro/09362__.js";
-import _modDef10059 from "../../../../../_runtime/metro/10059__.js";
+import _modDef9363 from "../../../../../_runtime/metro/09363__.js";
+import _modDef10060 from "../../../../../_runtime/metro/10060__.js";
 import TouchableStreamPreviewDefault from "../../../../components_native/TouchableStreamPreview.tsx";
-import _modDef10319 from "../../../../../_runtime/metro/10319__.js";
 import _modDef10320 from "../../../../../_runtime/metro/10320__.js";
 import _modDef10321 from "../../../../../_runtime/metro/10321__.js";
+import _modDef10322 from "../../../../../_runtime/metro/10322__.js";
 import ParticipantTitleDefault from "ParticipantTitle.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -42,17 +42,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10319;
+    let tmp3 = _modDef10320;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10320;
-    } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef9362;
-    } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef10059;
-    } else if (constants2.QUEST === voicePlatform) {
       tmp3 = _modDef10321;
+    } else if (constants2.XBOX === voicePlatform) {
+      tmp3 = _modDef9363;
+    } else if (constants2.PLAYSTATION === voicePlatform) {
+      tmp3 = _modDef10060;
+    } else if (constants2.QUEST === voicePlatform) {
+      tmp3 = _modDef10322;
     }
   }
   let tmp14 = null;
@@ -155,7 +155,7 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9639);
+const ChannelCallStore = fn(9640);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
 const CallConstants = fn(4777);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);

@@ -40,7 +40,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7781).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7783).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -59,7 +59,7 @@ function useHandleBuyNow(product) {
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_3,
           };
-          v1(11343).open(obj8);
+          v1(11345).open(obj8);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }

@@ -37,11 +37,11 @@ export default noop.memo((guildId) => {
     transparentBorder = tmp.transparentBorder;
   }
   const obj2 = { style: null, children: null };
-  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(8114).useClientThemesOverride()];
+  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(8116).useClientThemesOverride()];
   obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(5308).StageIcon;
+      let VoiceNormalIcon = tmp4(5315).StageIcon;
     }
     const obj3 = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
     const items1 = [closure_4(VoiceNormalIcon, obj3)];
@@ -72,7 +72,7 @@ export default noop.memo((guildId) => {
     obj2.children = items1;
     return tmp5(tmp6, obj2);
   }
-  VoiceNormalIcon = tmp4(5312).VoiceNormalIcon;
-  let obj = guildId(8114);
+  VoiceNormalIcon = tmp4(5319).VoiceNormalIcon;
+  let obj = guildId(8116);
 });
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

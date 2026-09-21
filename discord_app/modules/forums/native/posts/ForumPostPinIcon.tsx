@@ -1,7 +1,7 @@
 // discord_app/modules/forums/native/posts/ForumPostPinIcon.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef12255 from "../../../../../_runtime/metro/12255__.js";
+import _modDef12257 from "../../../../../_runtime/metro/12257__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,8 +29,8 @@ const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPost
 
 export default function ForumPostPinIcon(containerStyle) {
   const tmp = closure_5();
-  const obj = { style: null, children: jsx(native.Icon, { source: _modDef12255, style: tmp.pinIcon }) };
+  const obj = { style: null, children: jsx(native.Icon, { source: _modDef12257, style: tmp.pinIcon }) };
   const items = [tmp.pin, containerStyle.containerStyle];
   obj.style = items;
-  return <View style={null}>{jsx(native.Icon, { source: _modDef12255, style: tmp.pinIcon })}</View>;
+  return <View style={null}>{jsx(native.Icon, { source: _modDef12257, style: tmp.pinIcon })}</View>;
 }

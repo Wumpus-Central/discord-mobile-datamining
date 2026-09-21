@@ -21,14 +21,14 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj = {
   container: {
-    marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(10374).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = {
-  marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10374).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

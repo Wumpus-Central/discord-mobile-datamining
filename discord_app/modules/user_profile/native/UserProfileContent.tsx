@@ -64,7 +64,7 @@ function CustomStatusBubble(guildId) {
   let tmp7 = null;
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(11414, dependencyMap.paths),
+      asyncRequireImpl(11416, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -147,7 +147,7 @@ function RemoveGameFriendIconButton(user) {
   const items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13353, dependencyMap.paths),
+      asyncRequireImpl(13355, dependencyMap.paths),
       "UserProfileGameFriendActionSheet",
       { user, guildId, channelId },
       "stack",
@@ -260,13 +260,13 @@ function EditSection(guildId) {
   guildId = guildId.guildId;
   let trackUserProfileAction;
   const tmp = trackUserProfileAction;
-  const tmp3 = trackUserProfileAction(8509)();
-  trackUserProfileAction = guildId(8458).useUserProfileAnalyticsContext().trackUserProfileAction;
-  const obj = guildId(8458);
+  const tmp3 = trackUserProfileAction(8510)();
+  trackUserProfileAction = guildId(8459).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const obj = guildId(8459);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(10033)();
-  closure_3 = trackUserProfileAction(10033)({ guild: stateFromStores });
+  dependencyMap = trackUserProfileAction(10034)();
+  closure_3 = trackUserProfileAction(10034)({ guild: stateFromStores });
   const obj3 = {
     style: tmp3.primaryButtons,
     maxWidth: ACTION_SHEET_MAX_WIDTH,
@@ -275,8 +275,8 @@ function EditSection(guildId) {
   };
   const obj2 = guildId(504);
   const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  const tmp7 = trackUserProfileAction(13287);
-  obj4.icon = closure_20(guildId(10507).PencilIcon, { size: "sm", color: trackUserProfileAction(576).colors.WHITE });
+  const tmp7 = trackUserProfileAction(13289);
+  obj4.icon = closure_20(guildId(10508).PencilIcon, { size: "sm", color: trackUserProfileAction(576).colors.WHITE });
   if (null != stateFromStores) {
     const intl2 = tmp4(1115).intl;
     let stringResult = intl2.string(tmp4(1115).t.HmFaFB);
@@ -296,7 +296,7 @@ function EditSection(guildId) {
   if (null != stateFromStores) {
     const obj6 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj7 = { size: "sm", color: tmp(576).colors.WHITE };
-    obj6.icon = closure_20(tmp4(10507).PencilIcon, obj7);
+    obj6.icon = closure_20(tmp4(10508).PencilIcon, obj7);
     const intl3 = tmp4(1115).intl;
     obj6.text = intl3.string(tmp4(1115).t["PKQB/H"]);
     obj6.onPress = function onPress() {
@@ -344,11 +344,11 @@ function UserProfileActivityTabContainer(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileSections = fn(8451).UserProfileSections;
-const Constants = fn(7448);
+const UserProfileSections = fn(8452).UserProfileSections;
+const Constants = fn(7453);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_15, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_16 } = Constants);
 let RelationshipTypes = fn(1074).RelationshipTypes;
-const ACTION_SHEET_MAX_WIDTH = fn(7391).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7396).ACTION_SHEET_MAX_WIDTH;
 const ContentDismissActionType = fn(2038).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);

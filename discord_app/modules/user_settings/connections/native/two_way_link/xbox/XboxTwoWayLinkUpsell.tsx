@@ -5,7 +5,7 @@ import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell from "../OneWayToTwoWayLinkUpsell.tsx";
-import _modDef15239 from "../../../../../../../_runtime/metro/15239__.js";
+import _modDef15245 from "../../../../../../../_runtime/metro/15245__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -28,7 +28,7 @@ export const XboxTwoWayLinkUpsell = function XboxTwoWayLinkUpsell() {
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef15239;
+  obj3.source = _modDef15245;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

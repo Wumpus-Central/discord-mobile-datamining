@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _modDef10559 from "../../../../../../_runtime/metro/10559__.js";
+import _modDef10560 from "../../../../../../_runtime/metro/10560__.js";
 import EmojiIconDefault from "../../components/EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -28,7 +28,7 @@ function GuildServerSubscriberCount(arg0) {
       size: native.Icon.Sizes.SMALL,
       color: nativeDefault.unsafe_rawColors.WHITE,
       style: tmp.subscriberCountIcon,
-      source: _modDef10559,
+      source: _modDef10560,
     }),
   ];
   const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
@@ -49,12 +49,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(18156)(guild_id, 3, 60);
+  const tmp6 = guild_id(18167)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18128), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18139), {}) };
     return closure_6(closure_4, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;
@@ -65,7 +65,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj5 = { style: tmp.guildIcon, source: null };
     const obj6 = { uri: guildAvatarUrl };
     obj5.source = obj6;
-    const items1 = [closure_6(tmp5(5799), obj5)];
+    const items1 = [closure_6(tmp5(5804), obj5)];
     const obj7 = { style: tmp.cardHeaderContainer, children: null };
     const obj8 = {
       variant: "heading-md/extrabold",

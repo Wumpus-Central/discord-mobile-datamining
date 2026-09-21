@@ -59,8 +59,8 @@ const obj4 = {
 };
 CHANNEL_LIST_STYLES_COMPACT.icon = {
   avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(5796).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(5796).GuildIconSizes.XXSMALL_12,
+  guildIconSize: fn(5801).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(5801).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -71,8 +71,8 @@ CHANNEL_LIST_STYLES_COMPACT.mentionBadge = { position: { top: 28 }, positionThre
 CHANNEL_LIST_STYLES_COMPACT.category = { height: 30, margin: { marginTop: 16 }, text: { size: 14 } };
 const obj5 = {
   avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(5796).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(5796).GuildIconSizes.XXSMALL_12,
+  guildIconSize: fn(5801).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(5801).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -96,7 +96,7 @@ const obj6 = {
   typingIndicator: { position: { top: 20, left: 10 } },
   avatarSize: fn(1177).AvatarSizes.REFRESH_MEDIUM_32,
 };
-obj7.icon = { size: fn(1177).IconSizes.EXTRA_SMALL, gameSize: fn(7412).GameIconSizes.SIZE_24 };
+obj7.icon = { size: fn(1177).IconSizes.EXTRA_SMALL, gameSize: fn(7417).GameIconSizes.SIZE_24 };
 CHANNEL_LIST_STYLES_COMPACT.joinVoiceButton = obj7;
 const obj9 = { left: 38, startAndEndHeight: 15, transform: null, topOffset: -2 };
 const items = [{ translateY: 10 }];
@@ -110,7 +110,7 @@ const obj10 = {
   container: { paddingThread: { paddingLeft: 8 } },
   unreadBadge: { positionThread: { left: 4 } },
 };
-const obj8 = { size: fn(1177).IconSizes.EXTRA_SMALL, gameSize: fn(7412).GameIconSizes.SIZE_24 };
+const obj8 = { size: fn(1177).IconSizes.EXTRA_SMALL, gameSize: fn(7417).GameIconSizes.SIZE_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Compact.tsx",

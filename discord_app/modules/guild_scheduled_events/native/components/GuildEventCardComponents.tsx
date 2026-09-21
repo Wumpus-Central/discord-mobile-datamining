@@ -354,7 +354,7 @@ class GuildEventCardDescription {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-let GuildScheduledEventStore = fn(7766);
+let GuildScheduledEventStore = fn(7768);
 ({ isGuildEventEnded: closure_15, isGuildScheduledEventActive: closure_16 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const constants = fn(2047).GuildScheduledEventEntityTypes;
@@ -465,7 +465,7 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
   event = event.event;
   const tmp3 = useCanInviteForGuildEventDefault(event);
   importDefault = tmp3;
-  dependencyMap = event(9871).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
+  dependencyMap = event(9872).SHARE_EVENT_DETAILS_LINK({ guildId: event.guild_id, guildEventId: event.id });
   const obj3 = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
   const intl = event(1115).intl;
   obj3.accessibilityLabel = "" + intl.string(event(1115).t.RDE0Sc) + ", " + event.name;
@@ -479,8 +479,8 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
       ToastUtils.presentLinkCopied();
     }
   };
-  obj3.icon = importDefault(tmp3 ? 9872 : 4699);
-  return closure_22(event(8178).IconButton, obj3);
+  obj3.icon = importDefault(tmp3 ? 9873 : 4699);
+  return closure_22(event(8179).IconButton, obj3);
 };
 export const GuildEventModeratorAction = function GuildEventModeratorAction(event) {
   event = event.event;
@@ -551,7 +551,7 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
   if (first) {
     let BellIcon = tmp(4706).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(9873).BellIcon;
+    BellIcon = tmp(9874).BellIcon;
   }
   const obj2 = {
     accessibilityRole: "togglebutton",
@@ -984,14 +984,14 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   let tmp7 = stateFromStores(4909)(stateFromStores);
   const obj2 = channel_id(504);
   const tmp6 = stateFromStores;
-  const locationFromEvent = channel_id(9789).getLocationFromEvent(event);
+  const locationFromEvent = channel_id(9790).getLocationFromEvent(event);
   if (null == stateFromStores) {
     if (null == locationFromEvent) {
       return null;
     }
   }
-  const obj3 = channel_id(9789);
-  const eventLocationIconComponent = channel_id(9865).getEventLocationIconComponent(
+  const obj3 = channel_id(9790);
+  const eventLocationIconComponent = channel_id(9866).getEventLocationIconComponent(
     event,
     stateFromStores,
     stateFromStores1,
@@ -1012,7 +1012,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   };
   if (null != stateFromStores) {
     const obj7 = { channel: stateFromStores };
-    let combined = tmp6(9866)(obj7);
+    let combined = tmp6(9867)(obj7);
   } else if (null != locationFromEvent) {
     const intl = tmp2(1115).intl;
     const _HermesInternal = HermesInternal;
@@ -1023,8 +1023,8 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     let result = null;
     if (null != locationFromEvent) {
       const obj8 = { guildId: event.guild_id };
-      result = tmp2(9867).guildEventLocationParser(locationFromEvent, true, obj8);
-      const tmp2Result2 = tmp2(9867);
+      result = tmp2(9868).guildEventLocationParser(locationFromEvent, true, obj8);
+      const tmp2Result2 = tmp2(9868);
     }
     tmp7 = result;
   }
@@ -1045,7 +1045,7 @@ export const GuildEventCardSimpleGuildInfo = function GuildEventCardSimpleGuildI
     const obj2 = { style: null, children: null };
     const items2 = [tmp.guildInfoContainer, style];
     obj2.style = items2;
-    const obj3 = { guild: stateFromStores, size: tmp2(5796).GuildIconSizes.XSMALL_20, style: tmp.guildIcon };
+    const obj3 = { guild: stateFromStores, size: tmp2(5801).GuildIconSizes.XSMALL_20, style: tmp.guildIcon };
     const items3 = [closure_22(GuildIconDefault, obj3)];
     const obj4 = { style: tmp.guildInfo, children: null };
     const obj5 = { variant: "text-sm/semibold", style: textStyle, children: stateFromStores.name };

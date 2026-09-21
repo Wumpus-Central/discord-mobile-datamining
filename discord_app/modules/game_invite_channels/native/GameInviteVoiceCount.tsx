@@ -28,7 +28,7 @@ export default function GameInviteVoiceCount(channel) {
   if (0 !== stateFromStores) {
     const obj2 = { style: tmp.container, children: null };
     const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-    const items2 = [closure_5(tmp2(5312).VoiceNormalIcon, obj3)];
+    const items2 = [closure_5(tmp2(5319).VoiceNormalIcon, obj3)];
     const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
     items2[1] = closure_5(tmp2(4752).Text, obj4);
     obj2.children = items2;

@@ -96,7 +96,7 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp20Result = first2;
   if (first2) {
     const obj5 = { state: segmentedControlState, colors: items1 };
-    tmp20Result = closure_8(tmp18(13010), obj5);
+    tmp20Result = closure_8(tmp18(13012), obj5);
   }
   const obj6 = { children: null };
   const obj7 = { spacing: 24, children: null };

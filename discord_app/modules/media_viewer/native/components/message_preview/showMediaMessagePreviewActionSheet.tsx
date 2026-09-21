@@ -19,7 +19,7 @@ export default function showMediaMessagePreviewActionSheet(message) {
       if (null != user) {
         const obj2 = { channel, message, user, closeMediaModal: message.closeMediaModal };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(13266, dependencyMap.paths),
+          asyncRequireImpl(13268, dependencyMap.paths),
           "MediaMessagePreviewActionSheet",
           obj2,
         );

@@ -12,7 +12,7 @@ const jsx = fn(21).jsx;
 const createStyles = fn(4756);
 let obj2 = {
   container: {
-    marginVertical: fn(10373).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(10374).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -29,10 +29,10 @@ export default function VibegrationsChannelRow(selected) {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.VIBEGRATIONS));
   }, items);
   if (true === selected) {
-    let DEFAULT = id(12631).ChannelModes.SELECTED;
+    let DEFAULT = id(12633).ChannelModes.SELECTED;
     let tmp5 = id;
   } else {
-    DEFAULT = id(12631).ChannelModes.DEFAULT;
+    DEFAULT = id(12633).ChannelModes.DEFAULT;
     tmp5 = id;
   }
   const obj = {
@@ -54,8 +54,8 @@ export default function VibegrationsChannelRow(selected) {
   const intl2 = tmp5(1115).intl;
   obj2.name = intl2.string(_modDef3678.Xmvb23);
   obj2.mode = DEFAULT;
-  obj.name = jsx(tmp5(12631).BaseChannelName, { name: null, mode: null });
-  obj.icon = jsx(tmp5(12631).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10407).MagicWandIcon });
+  obj.name = jsx(tmp5(12633).BaseChannelName, { name: null, mode: null });
+  obj.icon = jsx(tmp5(12633).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(10408).MagicWandIcon });
   return (
     <tmp8
       onPress={callback}

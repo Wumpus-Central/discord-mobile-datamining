@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/ShareUtils.tsx
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef11517 from "../../../../_runtime/metro/11517__.js";
+import _modDef11519 from "../../../../_runtime/metro/11519__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
@@ -59,12 +59,12 @@ let closure_6 = async function _sendShareMessage(arg0) {
               originalUri: uri.uri,
               mimeType: uri.mimeType,
               filename: uri.name,
-              platform: closure_0(5339).UploadPlatform.REACT_NATIVE,
+              platform: closure_0(5344).UploadPlatform.REACT_NATIVE,
               width: uri.width,
               height: uri.height,
               preTranscodeSourceSize: uri.originalSize,
             };
-            const cloudUpload = new closure_0(5338).CloudUpload(size, guildId.id);
+            const cloudUpload = new closure_0(5343).CloudUpload(size, guildId.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -87,10 +87,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
               const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
               closure_1_6.reject(obj);
               const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
-              guildId(9420).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-              const obj3 = guildId(9420);
+              guildId(9421).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+              const obj3 = guildId(9421);
               const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-              guildId(8017).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+              guildId(8019).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
             },
           };
           c4 = 2;
@@ -124,7 +124,7 @@ const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx")
 
 export const showInformationToast = function showInformationToast(intl3) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11517 });
+  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11519 });
 };
 export const sendShareMessage = function sendShareMessage() {
   const self = this;

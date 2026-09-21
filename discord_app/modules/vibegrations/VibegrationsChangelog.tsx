@@ -3,6 +3,67 @@ import size from "../../../_runtime/metro/00002__.js";
 
 const items = [
   {
+    date: "2026-09-20",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Effort is now one three-tier dial that acts as a ceiling: pick Speedrun, Balanced, or Big Brain and everything your project runs stays at or under it.",
+  },
+  {
+    date: "2026-09-20",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Apps that show people now get their real Discord avatars on the first build, and clicking one opens their profile card.",
+  },
+  {
+    date: "2026-09-20",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Apps you build can now ask the AI quick yes/no, pick-one, and rating questions and get confidence-scored answers.",
+  },
+  {
+    date: "2026-09-20",
+    platforms: ["desktop", "mobile"],
+    summary: "Messages sent mid-task route faster: questions, follow-ups, and interrupts respond right away.",
+  },
+  {
+    date: "2026-09-20",
+    platforms: ["desktop", "mobile"],
+    summary: "The rune usage panel now shows Deciding, the quick checks that keep an eye on your builds.",
+  },
+  {
+    date: "2026-09-18",
+    platforms: ["mobile"],
+    summary: "On phones, opening the chat in an app\u2019s channel now marks its messages read.",
+  },
+  {
+    date: "2026-09-18",
+    platforms: ["mobile"],
+    summary: "On phones, hold an app\u2019s channel to find Edit App, which opens it in Conjure.",
+  },
+  {
+    date: "2026-09-18",
+    platforms: ["mobile"],
+    summary: "On phones, an app\u2019s channel wears the app icon in the channel list, as it does on desktop.",
+  },
+  {
+    date: "2026-09-18",
+    platforms: ["mobile"],
+    summary:
+      "On phones, new messages in an app\u2019s channel float over the running app for a moment; tap one to open the chat.",
+  },
+  {
+    date: "2026-09-18",
+    platforms: ["mobile"],
+    summary:
+      "On phones, the chat button in an app\u2019s channel shows a dot when there are new messages, and the count when you were mentioned.",
+  },
+  {
+    date: "2026-09-18",
+    platforms: ["mobile"],
+    summary:
+      "On phones, an app\u2019s sign-in prompt now appears when it asks for one, in its channel and in the builder\u2019s Frame.",
+  },
+  {
     date: "2026-09-18",
     platforms: ["mobile"],
     summary:

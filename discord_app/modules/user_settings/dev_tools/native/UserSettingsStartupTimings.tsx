@@ -108,9 +108,9 @@ export default function UserSettingsStartupTimings() {
             return obj6;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(10449)(closure_128_0);
+            closure_128_1 = tmp5(10450)(closure_128_0);
             const obj7 = { message: closure_128_1 };
-            tmp2(8631).showShareActionSheet(obj7, "Startup Timing");
+            tmp2(8632).showShareActionSheet(obj7, "Startup Timing");
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -278,6 +278,6 @@ export default function UserSettingsStartupTimings() {
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(8996).FlashList, obj5);
+  obj4.children = closure_8(tmp10(8997).FlashList, obj5);
   return closure_8(checked, obj4);
 }

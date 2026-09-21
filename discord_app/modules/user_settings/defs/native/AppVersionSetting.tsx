@@ -5,14 +5,14 @@ import ClientInfoUtils from "../../../../utils/native/ClientInfoUtils.tsx";
 
 require = fn;
 const constants = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11723);
+const SettingBuilders = fn(11725);
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = util.intl;
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(11079).ClydeIcon,
+  IconComponent: fn(11080).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;
@@ -37,7 +37,7 @@ export default SettingBuilders.createStatic({
     return intl.string(util.t.H66MEk);
   },
   parent: null,
-  IconComponent: fn(11079).ClydeIcon,
+  IconComponent: fn(11080).ClydeIcon,
   useTrailing: function useAppVersionSettingTrailing() {
     const clientInfoString = CopyClientInfoSetting.getClientInfoString(closure_3.ReleaseChannel);
     const obj2 = CopyClientInfoSetting;

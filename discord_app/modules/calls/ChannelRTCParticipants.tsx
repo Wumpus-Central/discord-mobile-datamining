@@ -231,11 +231,11 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   }
   return flag;
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f79984) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f80019) {
   const self = this;
-  const userId = f79984;
+  const userId = f80019;
   let flag;
-  if (this.participants[f79984] != null) {
+  if (this.participants[f80019] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -273,10 +273,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f799
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f79991, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f80026, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f79991] != null) {
+  if (this.participants[f80026] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {

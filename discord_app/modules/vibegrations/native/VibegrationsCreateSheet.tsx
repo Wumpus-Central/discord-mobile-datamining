@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(13359);
+const VibegrationsConnectionStore = fn(13361);
 ({
   ensureConnection: closure_7,
   sendUserMessage: closure_8,

@@ -99,7 +99,7 @@ function useFrecentApps(onlyActivityApps) {
     return found2;
   }, items5);
 }
-const FetchState = fn(7347).FetchState;
+const FetchState = fn(7352).FetchState;
 const WATCH_YOUTUBE_PROD_APP_ID = fn(2004).WATCH_YOUTUBE_PROD_APP_ID;
 const ApplicationCommandConstants = fn(5210);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;

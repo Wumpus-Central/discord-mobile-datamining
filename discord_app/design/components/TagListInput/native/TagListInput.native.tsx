@@ -7,7 +7,7 @@ import Text_Text from "../../Text/native/Text.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05198_LinearGradient.js";
-import _modDef5876 from "../../../../../_runtime/metro/05876__.js";
+import _modDef5881 from "../../../../../_runtime/metro/05881__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -392,7 +392,7 @@ export default noop.memo(function TagListInput(accessibilityHint) {
       obj2.children = items2;
       obj.maskElement = React7(hasOwnProperty, obj2);
       obj.children = children;
-      tmp = React6(_modDef5876, obj);
+      tmp = React6(_modDef5881, obj);
     }
     return tmp;
   }, items5);

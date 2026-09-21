@@ -51,7 +51,7 @@ export default function GuildScheduledEventPreview(event) {
     const obj6 = { style: tmp.guildInfo, children: null };
     const obj7 = { guild: stateFromStores, size: null, selected: false };
     const hexWithOpacityResult = tmp2(4605).hexWithOpacity(tmp.borderColor.color, 0.08);
-    obj7.size = tmp2(5796).GuildIconSizes.XXSMALL;
+    obj7.size = tmp2(5801).GuildIconSizes.XXSMALL;
     const items3 = [closure_5(GuildIconDefault, obj7)];
     const obj8 = {
       style: tmp.guildName,

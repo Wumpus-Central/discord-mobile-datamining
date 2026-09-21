@@ -19,7 +19,7 @@ function getTargetCardSize(windowWidth) {
   return Math.max(React6, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(12524);
+const VoicePanelConstants = fn(12526);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({
   BASE_TARGET_CARD_SIZE: closure_8,
@@ -27,7 +27,7 @@ const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
   VoicePanelCTACardDimensions: c10,
   VOICE_PANEL_CHUNK_DIVISOR: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12527);
+const VoicePanelCardConstants = fn(12529);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
 const ParticipantTypes = fn(4777).ParticipantTypes;
 let closure_15 = {

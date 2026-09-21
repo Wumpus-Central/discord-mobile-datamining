@@ -933,7 +933,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     if (getChannel !== closure_131_1) {
                       c5 = 2;
                       set = 1;
-                      const obj5 = { value: getChannel(7403).fetchApplication(closure_131_1), done: false };
+                      const obj5 = { value: getChannel(7408).fetchApplication(closure_131_1), done: false };
                       return obj5;
                     }
                   } else {
@@ -956,7 +956,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                   const intl = applyArgumentsResult(1115).intl;
                   closure_132_1.showLaunchErrorModal(intl.string(applyArgumentsResult(1115).t.UXoQTp));
                 }
-                obj25 = applyArgumentsResult(9611);
+                obj25 = applyArgumentsResult(9612);
               }
             } else {
               if (3 === getChannel) {
@@ -972,11 +972,11 @@ class EmbeddedActivitiesManager extends tmp3 {
                   activityConfigs = closure_131_9.activityConfigs;
                   applications = closure_131_9.applications;
                   const obj9 = { applicationId: closure_131_1, activityConfigs, applications };
-                  if (null == getChannel(9567)(obj9)) {
+                  if (null == getChannel(9568)(obj9)) {
                     const obj11 = { guildId: closure_131_8, force: true };
                     c5 = 4;
                     set = 1;
-                    const obj12 = { value: applyArgumentsResult(9592).fetchShelf(obj11), done: false };
+                    const obj12 = { value: applyArgumentsResult(9593).fetchShelf(obj11), done: false };
                     return obj12;
                   }
                 }
@@ -995,7 +995,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     activityConfigs: closure_131_12.activityConfigs,
                     applications: closure_131_12.applications,
                   };
-                  getChannel(9567)(obj16);
+                  getChannel(9568)(obj16);
                 }
               } else if (5 === getChannel) {
                 if (arg0 === 1) {
@@ -1045,7 +1045,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 obj18.inviterUserId = closure_131_4;
                 c5 = 6;
                 set = 1;
-                const obj20 = { value: applyArgumentsResult(9634).maybeJoinEmbeddedActivity(obj18), done: false };
+                const obj20 = { value: applyArgumentsResult(9635).maybeJoinEmbeddedActivity(obj18), done: false };
                 return obj20;
               } else {
                 const obj21 = {
@@ -1057,7 +1057,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 };
                 c5 = 5;
                 set = 1;
-                const obj22 = { value: getChannel(11771)(obj21), done: false };
+                const obj22 = { value: getChannel(11773)(obj21), done: false };
                 return obj22;
               }
             }
@@ -1078,13 +1078,13 @@ class EmbeddedActivitiesManager extends tmp3 {
               const obj23 = { guildId: closure_131_8 };
               c5 = 3;
               set = 1;
-              const obj24 = { value: applyArgumentsResult(9592).fetchShelf(obj23), done: false };
+              const obj24 = { value: applyArgumentsResult(9593).fetchShelf(obj23), done: false };
               return obj24;
             } else {
               const intl2 = applyArgumentsResult(1115).intl;
               closure_132_1.showLaunchErrorModal(intl2.string(applyArgumentsResult(1115).t.uGDCcw));
             }
-            tmp56 = getChannel(9633);
+            tmp56 = getChannel(9634);
           }
         } catch (tmp89) {
           set = tmp;

@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15359);
+const YouBarConstants = fn(15365);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_BUTTON_HIT_SLOP: closure_7,

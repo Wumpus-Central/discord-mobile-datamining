@@ -32,7 +32,7 @@ function Scope(arg0) {
   };
   if (isFake) {
     const obj3 = { style: tmp.fakeScopeIcon, color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
-    let tmp10Result = React4(tmp6(6853).CircleXIcon, obj3);
+    let tmp10Result = React4(tmp6(6858).CircleXIcon, obj3);
   } else {
     const obj4 = { color: nativeDefault.colors.TEXT_MUTED, size: "refresh_sm" };
     tmp10Result = React4(tmp6(4715).CircleCheckIcon, obj4);
@@ -90,9 +90,9 @@ export default function AuthorizeScopes(accountScopes) {
       PZpY9c = t["1Hz+Sl"];
       tmp5 = tmp15;
     }
-    let hasItem = integrationType === tmp5(9317).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp5(9318).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
-      hasItem = requestedScopes.includes(tmp5(8609).OAuth2Scopes.APPLICATIONS_COMMANDS);
+      hasItem = requestedScopes.includes(tmp5(8610).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
     let obj = { style: tmp.scopesContainer, children: null };
     const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
@@ -103,7 +103,7 @@ export default function AuthorizeScopes(accountScopes) {
     const obj4 = { style: tmp.scopes, children: null };
     const mapped = accountScopes.map((item) => {
       closure_0 = item;
-      const scopeNames = accountScopes(9329).getScopeNames(item, closure_0);
+      const scopeNames = accountScopes(9330).getScopeNames(item, closure_0);
       return scopeNames.map((text, index) => {
         const obj = { text, error: null };
         let tmp3;

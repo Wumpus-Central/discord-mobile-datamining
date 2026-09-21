@@ -472,7 +472,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9586)(user);
+          obj.user = closure_1(9587)(user);
           return obj;
         }
       });

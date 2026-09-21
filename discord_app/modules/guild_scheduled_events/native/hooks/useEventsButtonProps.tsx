@@ -48,7 +48,7 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12627, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, {
+    obj.openLazy(asyncRequireImpl(12629, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, {
       guildId: user.id,
     });
   }, items4);
@@ -60,13 +60,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1115).intl;
     name = intl.string(tmp(1115).t.tlopTM);
   }
-  let mode = tmp(12631).ChannelModes.DEFAULT;
+  let mode = tmp(12633).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12631).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12633).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 }

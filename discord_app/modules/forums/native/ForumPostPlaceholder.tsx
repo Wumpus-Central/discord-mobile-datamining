@@ -70,11 +70,11 @@ export default noop.memo(() => {
   let obj4 = {
     style: animatedStyle,
     pointerEvents: "none",
-    children: jsx(stateFromStores(5819).Card, { variant: "secondary", style: tmp.postPlaceholder }),
+    children: jsx(stateFromStores(5824).Card, { variant: "secondary", style: tmp.postPlaceholder }),
   };
   return jsx(timingConfig(4492).View, {
     style: animatedStyle,
     pointerEvents: "none",
-    children: jsx(stateFromStores(5819).Card, { variant: "secondary", style: tmp.postPlaceholder }),
+    children: jsx(stateFromStores(5824).Card, { variant: "secondary", style: tmp.postPlaceholder }),
   });
 });

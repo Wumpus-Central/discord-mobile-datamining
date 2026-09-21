@@ -17,7 +17,7 @@ let obj2 = {
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 28,
-    backgroundColor: fn(5653).ACTION_BAR_BUTTON_BACKGROUND,
+    backgroundColor: fn(5658).ACTION_BAR_BUTTON_BACKGROUND,
   },
   container: { marginHorizontal: 12 },
   containerWithLabel: { minWidth: "50%", maxWidth: "70%", flexShrink: 1 },
@@ -32,7 +32,7 @@ let obj3 = {
   alignItems: "center",
   justifyContent: "center",
   borderRadius: 28,
-  backgroundColor: fn(5653).ACTION_BAR_BUTTON_BACKGROUND,
+  backgroundColor: fn(5658).ACTION_BAR_BUTTON_BACKGROUND,
 };
 obj2.buttonText = {
   marginStart: 8,

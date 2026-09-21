@@ -236,7 +236,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       fn = () => null;
     }
     const obj3 = { headerLeft: fn, title: null, headerRight: null };
-    value = tmp3(5495).get(platformType);
+    value = tmp3(5500).get(platformType);
     let name;
     if (value != null) {
       name = value.name;
@@ -306,7 +306,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     items2[1] = closure_11(tmp(4752).Text, obj12);
     obj9.children = items2;
     obj8.children = closure_12(tmp(5184).Stack, obj9);
-    const items3 = [closure_11(tmp(8870).Form, obj8), closure_11(tmp(7280).NavScrim, {})];
+    const items3 = [closure_11(tmp(8871).Form, obj8), closure_11(tmp(7285).NavScrim, {})];
     obj11.children = items3;
     return closure_12(closure_13, obj11);
   }

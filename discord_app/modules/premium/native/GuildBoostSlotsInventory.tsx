@@ -9,7 +9,7 @@ import actions_BillingActionCreatorsAll from "../../billing/actions/BillingActio
 import actions_BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
-import _modDef13760 from "../../../../_runtime/metro/13760__.js";
+import _modDef13766 from "../../../../_runtime/metro/13766__.js";
 import SubscriptionPlaceholderPattern from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
@@ -117,7 +117,7 @@ function GuildBoostSlot(guildBoostSlot) {
       const intl2 = guildBoostSlot(1115).intl;
       obj6.children = intl2.string(guildBoostSlot(1115).t.jqqLb6);
       obj5.children = closure_11(guildBoostSlot(4752).Text, obj6);
-      tmp6Result2 = closure_11(guildBoostSlot(5334).PressableOpacity, obj5);
+      tmp6Result2 = closure_11(guildBoostSlot(5339).PressableOpacity, obj5);
     }
     obj3.action = tmp6Result2;
     obj3.isLast = tmp;
@@ -168,7 +168,7 @@ function UnusedGuildBoostSlots(unusedSlots) {
     const intl2 = found(1115).intl;
     obj5.children = intl2.string(found(1115).t["7KyPor"]);
     obj4.children = closure_11(found(4752).Text, obj5);
-    obj2.action = closure_11(found(5334).PressableOpacity, obj4);
+    obj2.action = closure_11(found(5339).PressableOpacity, obj4);
     obj2.isLast = 0 === found.length;
     tmp4 = closure_11(GuildBoostSlotsInventoryRow, obj2);
   }
@@ -210,7 +210,7 @@ function BoostedGuildInfo(guild) {
     };
     const items1 = [closure_1_11(Text_Text.Text, obj5)];
     const obj6 = { style: tmp.guildInfoRowBottom, children: null };
-    const obj7 = { source: _modDef13760, style: tmp.guildInfoRowIcon };
+    const obj7 = { source: _modDef13766, style: tmp.guildInfoRowIcon };
     const items2 = [closure_1_11(timestampProducer, obj7)];
     const obj8 = {
       style: tmp.guildInfoSubscriptionCount,
@@ -268,7 +268,7 @@ function BoostedGuild(arg0) {
     tmp11Result = closure_11(closure_5, obj8);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(13765), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(13771), { guild: stateFromStores, theme: stateFromStores1 });
   obj6.children = items3;
   const items4 = [
     closure_12(closure_5, obj6),

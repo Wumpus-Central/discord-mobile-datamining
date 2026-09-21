@@ -60,7 +60,7 @@ import ActivityLauncherStore from "../../../stores/views/ActivityLauncherStore.t
 import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.tsx";
 
 require = fn;
-const PollsInteractionStore = fn(11688);
+const PollsInteractionStore = fn(11690);
 ({ useChannelPollInteractions: closure_27, useMessagePollInteractions: closure_28 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({

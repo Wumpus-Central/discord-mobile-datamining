@@ -5,13 +5,13 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11723);
+const SettingBuilders = fn(11725);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(8232).MobileUserSettings.APPEARANCE,
+  parent: fn(8233).MobileUserSettings.APPEARANCE,
   useValue: fn(2019).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;

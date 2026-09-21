@@ -45,15 +45,15 @@ let closure_11 = noop.memo((entry) => {
     str = "text-feedback-critical";
   }
   if (expanded) {
-    let ChevronSmallRightIcon = tmp3(11418).ChevronSmallDownIcon;
+    let ChevronSmallRightIcon = tmp3(11420).ChevronSmallDownIcon;
     let tmp6 = tmp3;
   } else {
-    ChevronSmallRightIcon = tmp3(7449).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp3(7454).ChevronSmallRightIcon;
     tmp6 = tmp3;
   }
   const obj = { style: tmp.row, children: null };
   const obj2 = { style: tmp.rowHead, children: null };
-  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(17059).formatClockTime(entry.ts) };
+  const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6(17067).formatClockTime(entry.ts) };
   const items1 = [closure_7(tmp6(4752).Text, obj3), , ,];
   const level = entry.level;
   let str2 = "text-feedback-critical";
@@ -126,13 +126,13 @@ let closure_11 = noop.memo((entry) => {
     obj11.children = items5;
     items4[1] = closure_8(tmp6(4752).Text, obj11);
     obj8.children = items4;
-    items3[1] = closure_8(tmp6(5334).PressableOpacity, obj8);
+    items3[1] = closure_8(tmp6(5339).PressableOpacity, obj8);
     let tmp9Result6 = null;
     if (expanded) {
       const obj13 = { variant: "primary", children: null };
       const obj14 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.pretty };
       obj13.children = closure_7(tmp6(4752).Text, obj14);
-      tmp9Result6 = closure_7(tmp6(5819).Card, obj13);
+      tmp9Result6 = closure_7(tmp6(5824).Card, obj13);
     }
     const obj15 = { children: null };
     items3[2] = tmp9Result6;

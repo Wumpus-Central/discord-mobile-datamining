@@ -62,7 +62,7 @@ function RuleActionRow(onPress) {
   }
 }
 let closure_4 = fn(2096).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(12115).AutomodActionType;
+const AutomodActionType = fn(12117).AutomodActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4756);
@@ -74,7 +74,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(17933).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(17944).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };
@@ -207,7 +207,7 @@ export default function RuleActionRows(rule) {
         actionType,
       );
     });
-    tmp3 = closure_6(tmp(5899).TableRowGroup, obj2);
+    tmp3 = closure_6(tmp(5904).TableRowGroup, obj2);
   }
   return tmp3;
 }

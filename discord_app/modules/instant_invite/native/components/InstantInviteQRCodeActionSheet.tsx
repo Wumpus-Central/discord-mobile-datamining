@@ -84,7 +84,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     if (null != channel2) {
       tmp13 = null;
       if (null != GuildStore.getGuild(channel2.guild_id)) {
-        const obj4 = { guild: GuildStore.getGuild(channel2.guild_id), size: tmp6(5796).GuildIconSizes.LARGE };
+        const obj4 = { guild: GuildStore.getGuild(channel2.guild_id), size: tmp6(5801).GuildIconSizes.LARGE };
         tmp13 = closure_9(GuildIconDefault, obj4);
       }
     }
@@ -104,7 +104,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     }, items1);
     const obj5 = { header: null, children: null };
     const obj6 = { title: stringResult };
-    obj5.header = closure_9(tmp6(7389).BottomSheetTitleHeader, obj6);
+    obj5.header = closure_9(tmp6(7394).BottomSheetTitleHeader, obj6);
     const obj7 = { style: tmp.container, children: null };
     const obj9 = { text: location.link, size: 240, style: tmp.code, accessibilityLabel: null };
     let plainText;
@@ -132,7 +132,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     items3[1] = tmp19Result2;
     obj7.children = items3;
     obj5.children = closure_10(View, obj7);
-    return closure_9(tmp6(7437).ActionSheet, obj5);
+    return closure_9(tmp6(7442).ActionSheet, obj5);
   }
   tmp12 = null;
   if (_location === constants.ADD_FRIENDS_MODAL) {

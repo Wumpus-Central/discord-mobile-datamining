@@ -90,7 +90,7 @@ export default function EditUserProfileAvatar(user) {
       showRemoveAvatar: null,
     };
     let obj = ActionSheetActionCreatorsDefault;
-    const tmp = asyncRequireImpl(14880, dependencyMap.paths);
+    const tmp = asyncRequireImpl(14886, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp, "Change Avatar", obj2);
   }, items);

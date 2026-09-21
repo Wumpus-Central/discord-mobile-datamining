@@ -16,7 +16,7 @@ function HeaderIcon(channel) {
   const items = [GuildStore];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   if (null != stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: tmp2(5796).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: tmp2(5801).GuildIconSizes.XSMALL };
     let tmp6Result = closure_5(GuildIconDefault, obj2);
   } else {
     let isGroupDMResult;
@@ -27,7 +27,7 @@ function HeaderIcon(channel) {
       const obj3 = { channel, size: tmp2(1177).AvatarSizes.XSMALL };
       tmp6Result = closure_5(GroupDMAvatarDefault, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(5282).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: closure_5(tmp2(5289).ChatIcon, { size: "xxs" }) };
       tmp6Result = closure_5(View, obj4);
     }
   }

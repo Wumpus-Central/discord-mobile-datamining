@@ -16,8 +16,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
 
 export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index) {
-  mediaItemHasSpoiler = mediaItemHasSpoiler(8534).useMediaItemHasSpoiler(index);
-  let obj = mediaItemHasSpoiler(8534);
+  mediaItemHasSpoiler = mediaItemHasSpoiler(8535).useMediaItemHasSpoiler(index);
+  let obj = mediaItemHasSpoiler(8535);
   const tmp = mediaItemHasSpoiler;
   [tmp5, dependencyMap] = sharedValue(noop.useState(mediaItemHasSpoiler), 2);
   const tmp4 = sharedValue(noop.useState(mediaItemHasSpoiler), 2);

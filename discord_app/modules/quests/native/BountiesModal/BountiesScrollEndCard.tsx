@@ -62,12 +62,12 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const items2 = [tmp.overlayContent, animatedStyle];
   obj6.style = items2;
   const items3 = [
-    closure_8(isScrollingInBoundsSharedValue(15315), { bounty, sourceQuestContent, disabled: !isActive }),
+    closure_8(isScrollingInBoundsSharedValue(15321), { bounty, sourceQuestContent, disabled: !isActive }),
   ];
   const obj8 = {
     style: tmp.endedCtaButtonsContainer,
     pointerEvents: "box-none",
-    children: closure_8(isScrollingInBoundsSharedValue(15317), {
+    children: closure_8(isScrollingInBoundsSharedValue(15323), {
       bounty,
       visible,
       sourceQuestContent,
@@ -84,7 +84,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5656).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5661).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4756);

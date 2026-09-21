@@ -803,7 +803,7 @@ export default function ExecutedCommandPopout(channelId) {
       const messageInteractionData = InteractionActionCreatorsAll.fetchMessageInteractionData(channelId, messageId);
     }
   }, items1);
-  const obj2 = { value: messageId(7402)(messageId(7422).EXECUTED_COMMAND).analyticsLocations, children: null };
+  const obj2 = { value: messageId(7407)(messageId(7427).EXECUTED_COMMAND).analyticsLocations, children: null };
   const obj3 = { startExpanded: true, bodyStyles: tmp.container, children: null };
   let interactionData1;
   if (stateFromStores != null) {
@@ -833,6 +833,6 @@ export default function ExecutedCommandPopout(channelId) {
     tmp9Result = closure_23(closure_5, obj7);
   }
   obj3.children = tmp9Result;
-  obj2.children = closure_23(channelId(7390).BottomSheet, obj3);
-  return closure_23(channelId(7402).AnalyticsLocationProvider, obj2);
+  obj2.children = closure_23(channelId(7395).BottomSheet, obj3);
+  return closure_23(channelId(7407).AnalyticsLocationProvider, obj2);
 }

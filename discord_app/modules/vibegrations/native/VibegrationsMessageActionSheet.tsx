@@ -36,9 +36,9 @@ function VibegrationsMessageActionSheet(content) {
     const intl2 = tmp4(1115).intl;
     obj2.label = intl2.string(tmp4(1115).t.JrGD7E);
     const obj3 = { IconComponent: tmp4(4702).CopyIcon };
-    obj2.icon = closure_4(tmp4(7439).ActionSheetRow.Icon, obj3);
+    obj2.icon = closure_4(tmp4(7444).ActionSheetRow.Icon, obj3);
     obj2.onPress = callback;
-    tmp3Result = closure_4(tmp4(7439).ActionSheetRow, obj2);
+    tmp3Result = closure_4(tmp4(7444).ActionSheetRow, obj2);
   }
   const items2 = [tmp3Result];
   let tmp3Result2 = null;
@@ -46,14 +46,14 @@ function VibegrationsMessageActionSheet(content) {
     let obj = { label: null, icon: null, onPress: null };
     let intl = tmp4(1115).intl;
     obj.label = intl.string(tmp4(1115).t.iXAna6);
-    let obj4 = { IconComponent: tmp4(12077).UserIcon };
-    obj.icon = closure_4(tmp4(7439).ActionSheetRow.Icon, obj4);
+    let obj4 = { IconComponent: tmp4(12079).UserIcon };
+    obj.icon = closure_4(tmp4(7444).ActionSheetRow.Icon, obj4);
     obj.onPress = callback1;
-    tmp3Result2 = closure_4(tmp4(7439).ActionSheetRow, obj);
+    tmp3Result2 = closure_4(tmp4(7444).ActionSheetRow, obj);
   }
   items2[1] = tmp3Result2;
-  return closure_4(content(7437).ActionSheet, {
-    children: closure_5(content(7439).ActionSheetRow.Group, { hasIcons: true, children: items2 }),
+  return closure_4(content(7442).ActionSheet, {
+    children: closure_5(content(7444).ActionSheetRow.Group, { hasIcons: true, children: items2 }),
   });
 }
 const jsxProd = fn(21);

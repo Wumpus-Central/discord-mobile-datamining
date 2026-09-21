@@ -3,6 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import FramesNativeManagerDefault from "FramesNativeManager.tsx";
 import frames_getDefaultOrientationLockState from "getDefaultOrientationLockState.tsx";
+import useInlineFrameOAuthNavigationDefault from "useInlineFrameOAuthNavigation.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import FramesStore from "../FramesStore.tsx";
@@ -102,7 +103,7 @@ function FrameViewInner(frame) {
     children: null,
   });
 }
-const FramesConstants = fn(9313);
+const FramesConstants = fn(9314);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const ActivityPlatform = fn(2004).ActivityPlatform;
 const jsx = fn(21).jsx;
@@ -123,7 +124,6 @@ const result = size.fileFinishedImporting("modules/frames/native/FrameView.tsx")
 export default memoResult;
 export const InlineFrameView = function InlineFrameView(frameId) {
   frameId = frameId.frameId;
-  let tmp = null;
   const merged = Object.assign(frameId, Object.assign({ frameId: 0 }));
   const items = [FramesStore];
   const items1 = [frameId];
@@ -132,11 +132,21 @@ export const InlineFrameView = function InlineFrameView(frameId) {
     () => timestampProducer(FramesStore.getFrame(frameId)),
     items1,
   );
+  let applicationId;
+  const obj = frameId(504);
+  if (stateFromStores != null) {
+    applicationId = stateFromStores.applicationId;
+  }
+  if (applicationId == null) {
+    applicationId = null;
+  }
+  useInlineFrameOAuthNavigationDefault(applicationId);
+  let tmp6 = null;
   if (null != stateFromStores) {
     const obj2 = { frame: stateFromStores };
     const merged1 = Object.assign(merged);
-    tmp = <FrameViewInner frame={stateFromStores} />;
+    tmp6 = <FrameViewInner frame={stateFromStores} />;
   }
-  return tmp;
+  return tmp6;
 };
 export const FrameView = memoResult;

@@ -9,15 +9,15 @@ import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import LinearGradientDefault from "../../../../../_runtime/05198_LinearGradient.js";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
-import _modDef8896 from "../../../../../_runtime/metro/08896__.js";
-import _modDef8899 from "../../../../../_runtime/metro/08899__.js";
+import _modDef8897 from "../../../../../_runtime/metro/08897__.js";
+import _modDef8900 from "../../../../../_runtime/metro/08900__.js";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef10284 from "../../../../../_runtime/metro/10284__.js";
 import _modDef10285 from "../../../../../_runtime/metro/10285__.js";
 import _modDef10286 from "../../../../../_runtime/metro/10286__.js";
+import _modDef10287 from "../../../../../_runtime/metro/10287__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -306,7 +306,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4756);
 let obj = {
   header: {
-    height: fn(5894).NAV_BAR_HEIGHT,
+    height: fn(5899).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
@@ -332,7 +332,7 @@ obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.
 obj.iconContainer = obj5;
 obj.settingsButton = { marginRight: 4 };
 let obj3 = {
-  height: fn(5894).NAV_BAR_HEIGHT,
+  height: fn(5899).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 12,
@@ -407,7 +407,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
     children: null,
   };
   let obj = channel(504);
-  obj2.source = _modDef10284;
+  obj2.source = _modDef10285;
   const intl = channel(1115).intl;
   obj2.accessibilityLabel = intl.string(channel(1115).t.cpT0Cq);
   obj2.onPress = function onPress() {

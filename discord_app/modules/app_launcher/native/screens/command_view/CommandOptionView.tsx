@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.tsx";
-import _modDef10673 from "../../../../../../_runtime/metro/10673__.js";
+import _modDef10674 from "../../../../../../_runtime/metro/10674__.js";
 import AppLauncherCommandOptionDefault from "../../options/AppLauncherCommandOption.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
@@ -66,7 +66,7 @@ export default function CommandOptionView(option) {
   const ReduceMotion = option(4492).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
   const obj = option(504);
-  const optionEnteringAnimation = option(12412).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(12414).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -93,8 +93,8 @@ export default function CommandOptionView(option) {
     const obj5 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(12412).ExitingAnimation,
-      layout: tmp2(12412).LayoutAnimation,
+      exiting: tmp2(12414).ExitingAnimation,
+      layout: tmp2(12414).LayoutAnimation,
       onLayout(arg0) {
         importDefault(arg0, option);
       },
@@ -149,7 +149,7 @@ export default function CommandOptionView(option) {
         style: tmp.optionErrorContainer,
         children: null,
       };
-      const obj11 = { style: tmp.optionErrorIcon, source: _modDef10673, size: tmp2(1177).IconSizes.REFRESH_SMALL_16 };
+      const obj11 = { style: tmp.optionErrorIcon, source: _modDef10674, size: tmp2(1177).IconSizes.REFRESH_SMALL_16 };
       const items3 = [closure_5(tmp2(1177).Icon, obj11)];
       const obj12 = {
         variant: "text-xs/medium",
@@ -164,10 +164,10 @@ export default function CommandOptionView(option) {
     obj6.children = items2;
     obj5.children = closure_6(View, obj6);
     obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-    obj3.children = closure_5(tmp2(12413).AwaitAnimationContext, obj4);
+    obj3.children = closure_5(tmp2(12415).AwaitAnimationContext, obj4);
     return closure_5(tmp2(4492).LayoutAnimationConfig, obj3);
   } else {
     return null;
   }
-  const tmp2Result = option(12412);
+  const tmp2Result = option(12414);
 }

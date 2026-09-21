@@ -54,31 +54,31 @@ function VCButton(balance) {
   let color;
   const tmp = closure_17();
   noop = tmp;
-  const virtualCurrencyData = balance(13453).useVirtualCurrencyData(product, flag);
+  const virtualCurrencyData = balance(13455).useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj = balance(13453);
-  let isPartiallyOwnedBundle = balance(9147).useProductDisableState(product.skuId).isDisabled;
-  let obj2 = balance(9147);
+  let obj = balance(13455);
+  let isPartiallyOwnedBundle = balance(9148).useProductDisableState(product.skuId).isDisabled;
+  let obj2 = balance(9148);
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = !canAfford;
   }
   if (!isPartiallyOwnedBundle) {
     isPartiallyOwnedBundle = obj3.useProductPurchaseState(product).isPartiallyOwnedBundle;
   }
-  obj3 = balance(9120);
+  obj3 = balance(9121);
   navigation = balance(1484).useNavigation();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const items = [navigation, product, balance, analyticsLocations, stageCollectibleChangeForEditProfile];
   closure_7 = noop.useCallback(() => {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(13456, dependencyMap.paths),
+      asyncRequireImpl(13458, dependencyMap.paths),
       {
         skuId: product.skuId,
         analyticsLocations,
         onCheckoutSuccess(arg0) {
-          const collectiblesPurchases = balance(7781).fetchCollectiblesPurchases();
-          const obj = balance(7781);
+          const collectiblesPurchases = balance(7783).fetchCollectiblesPurchases();
+          const obj = balance(7783);
           product(4959).popWithKey(ORB_CHECKOUT_MODAL);
           if (product.skuId === constants.ORB_PROFILE_BADGE) {
             const obj3 = {
@@ -88,7 +88,7 @@ function VCButton(balance) {
               },
               orbBalancePriorToPurchase,
             };
-            product(4959).pushLazy(balance(1980)(13460, dependencyMap.paths), obj3, modalKey);
+            product(4959).pushLazy(balance(1980)(13462, dependencyMap.paths), obj3, modalKey);
             const tmp4Result = product(4959);
           } else {
             const ALL = balance(1077).FractionalPremiumSKUsSets.ALL;
@@ -118,11 +118,11 @@ function VCButton(balance) {
                 product(4723).hideActionSheet();
               };
               tmp4Result3.openLazy(
-                balance(1980)(13461, dependencyMap.paths),
+                balance(1980)(13463, dependencyMap.paths),
                 "FractionalNitroCollectedActionSheet",
                 obj4,
               );
-              const tmp10 = balance(1980)(13461, dependencyMap.paths);
+              const tmp10 = balance(1980)(13463, dependencyMap.paths);
             } else {
               const obj5 = {
                 product,
@@ -131,8 +131,8 @@ function VCButton(balance) {
                 orbBalancePriorToPurchase,
                 stageCollectibleChangeForEditProfile,
               };
-              product(11343).open(obj5);
-              const tmp4Result4 = product(11343);
+              product(11345).open(obj5);
+              const tmp4Result4 = product(11345);
             }
           }
           const obj2 = product(4959);
@@ -220,7 +220,7 @@ const CollectiblesShopConstants = fn(1076);
 ({ EXTERNAL_PRODUCT_SKU_IDS: closure_7, ShopCtaEnum: closure_8 } = CollectiblesShopConstants);
 const Constants = fn(1074);
 ({ MarketingURLs: closure_9, UserSettingsSections: c10 } = Constants);
-const RootNavigatorScreen = fn(11350).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11352).RootNavigatorScreen;
 const PremiumTypes = fn(1374).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

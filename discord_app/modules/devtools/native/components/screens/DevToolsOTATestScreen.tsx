@@ -143,7 +143,7 @@ export default function DevToolsOTATestScreen() {
             noop(true);
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(12043).verifyOtaFiles(), done: false };
+            const obj5 = { value: tmp5(12045).verifyOtaFiles(), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -192,12 +192,12 @@ export default function DevToolsOTATestScreen() {
   const tmp13 = closure_6;
   const tmp9 = _slicedToArray(noop.useState(false), 2);
   const items = [
-    closure_8(subLabel(5817).TableRow, {
+    closure_8(subLabel(5822).TableRow, {
       label: "Status",
       subLabel: tmp8[0],
-      icon: closure_8(subLabel(15833).WrenchIcon, {}),
+      icon: closure_8(subLabel(15839).WrenchIcon, {}),
     }),
-    closure_8(subLabel(5817).TableRow, {
+    closure_8(subLabel(5822).TableRow, {
       label: "Root Path (tap to copy)",
       subLabel,
       onPress: function copyRootPath() {
@@ -206,7 +206,7 @@ export default function DevToolsOTATestScreen() {
     }),
   ];
   obj2.children = items;
-  const items1 = [closure_9(subLabel(5899).TableRowGroup, obj2), , ,];
+  const items1 = [closure_9(subLabel(5904).TableRowGroup, obj2), , ,];
   let str;
   if (tmp5 != null) {
     str = tmp5.source;
@@ -214,7 +214,7 @@ export default function DevToolsOTATestScreen() {
   if (str == null) {
     str = "Unknown";
   }
-  let obj3 = { label: "Status", subLabel: tmp8[0], icon: closure_8(subLabel(15833).WrenchIcon, {}) };
+  let obj3 = { label: "Status", subLabel: tmp8[0], icon: closure_8(subLabel(15839).WrenchIcon, {}) };
   let obj4 = {
     label: "Root Path (tap to copy)",
     subLabel,
@@ -223,13 +223,13 @@ export default function DevToolsOTATestScreen() {
     },
   };
   const items2 = [
-    closure_8(subLabel(5817).TableRow, {
+    closure_8(subLabel(5822).TableRow, {
       label: "Manifest Source",
       subLabel: str,
-      icon: closure_8(subLabel(15833).WrenchIcon, {}),
+      icon: closure_8(subLabel(15839).WrenchIcon, {}),
     }),
   ];
-  const obj6 = { icon: closure_8(subLabel(8153).PaperIcon, {}), label: null };
+  const obj6 = { icon: closure_8(subLabel(8154).PaperIcon, {}), label: null };
   let str2 = "{}";
   if (null != tmp5) {
     let metadata = tmp5.metadata;
@@ -240,32 +240,32 @@ export default function DevToolsOTATestScreen() {
   }
   let obj7 = { title: "Manifest", hasIcons: true, children: null };
   obj6.label = str2;
-  items2[1] = closure_8(subLabel(5817).TableRow, obj6);
+  items2[1] = closure_8(subLabel(5822).TableRow, obj6);
   obj7.children = items2;
-  items1[1] = closure_9(subLabel(5899).TableRowGroup, obj7);
-  let obj8 = { icon: closure_8(subLabel(15833).WrenchIcon, {}), label: "Is cookie set?", subLabel: null };
+  items1[1] = closure_9(subLabel(5904).TableRowGroup, obj7);
+  let obj8 = { icon: closure_8(subLabel(15839).WrenchIcon, {}), label: "Is cookie set?", subLabel: null };
   let str3 = "Yes";
   if (null == tmp7) {
     str3 = "No";
   }
   obj8.subLabel = str3;
-  const items3 = [closure_8(subLabel(5817).TableRow, obj8)];
+  const items3 = [closure_8(subLabel(5822).TableRow, obj8)];
   let tmp12Result = null != tmp7;
   if (tmp12Result) {
-    const obj9 = { icon: closure_8(tmp15(15833).WrenchIcon, {}), label: null };
+    const obj9 = { icon: closure_8(tmp15(15839).WrenchIcon, {}), label: null };
     const _JSON = JSON;
     obj9.label = JSON.stringify(tmp7, null, 2);
-    tmp12Result = closure_8(tmp15(5817).TableRow, obj9);
+    tmp12Result = closure_8(tmp15(5822).TableRow, obj9);
   }
   items3[1] = tmp12Result;
-  items1[2] = closure_9(subLabel(5899).TableRowGroup, {
+  items1[2] = closure_9(subLabel(5904).TableRowGroup, {
     title: "Build Override Cookie",
     hasIcons: true,
     children: items3,
   });
-  let obj5 = { label: "Manifest Source", subLabel: str, icon: closure_8(subLabel(15833).WrenchIcon, {}) };
+  let obj5 = { label: "Manifest Source", subLabel: str, icon: closure_8(subLabel(15839).WrenchIcon, {}) };
   const items4 = [
-    closure_8(subLabel(5817).TableRow, {
+    closure_8(subLabel(5822).TableRow, {
       label: "Check for Update & Reload",
       icon: closure_8(subLabel(4704).DownloadIcon, {}),
       onPress: BundleUpdaterDefault.checkForUpdateAndReload,
@@ -282,10 +282,10 @@ export default function DevToolsOTATestScreen() {
     icon: closure_8(subLabel(4704).DownloadIcon, {}),
     onPress: BundleUpdaterDefault.checkForUpdateAndReload,
   };
-  items4[1] = closure_8(subLabel(5817).TableRow, {
+  items4[1] = closure_8(subLabel(5822).TableRow, {
     label: "Verify OTA Files",
     subLabel: str4,
-    icon: closure_8(subLabel(15932).ClipboardCheckIcon, {}),
+    icon: closure_8(subLabel(15938).ClipboardCheckIcon, {}),
     onPress: function verifyFiles() {
       const self = this;
       const apply = closure_6.apply;
@@ -299,7 +299,7 @@ export default function DevToolsOTATestScreen() {
     disabled: tmp10,
   });
   obj12.children = items4;
-  items1[3] = closure_9(subLabel(5899).TableRowGroup, obj12);
+  items1[3] = closure_9(subLabel(5904).TableRowGroup, obj12);
   obj11.children = items1;
   obj.children = closure_9(subLabel(5184).Stack, obj11);
   return closure_8(tmp13, obj);

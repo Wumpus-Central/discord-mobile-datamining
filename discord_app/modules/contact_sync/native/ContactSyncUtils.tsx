@@ -111,13 +111,13 @@ let closure_18 = async function _uploadContacts(arg0) {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(12930);
+const ContactSyncPersistedStore = fn(12932);
 ({
   useContactSyncStore: metroRequire,
   clearDismissState: closure_7,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(12929);
+const ContactSyncConstants = fn(12931);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: c10,

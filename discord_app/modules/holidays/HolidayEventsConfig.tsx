@@ -1,8 +1,8 @@
 // discord_app/modules/holidays/HolidayEventsConfig.tsx
 import util from "../../intl/index.native.tsx";
 import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment.tsx";
-import _modDef17777 from "../../../_runtime/metro/17777__.js";
-import _modDef17778 from "../../../_runtime/metro/17778__.js";
+import _modDef17788 from "../../../_runtime/metro/17788__.js";
+import _modDef17789 from "../../../_runtime/metro/17789__.js";
 
 require = fn;
 const obj = {
@@ -16,9 +16,9 @@ const obj = {
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(10159).Soundpacks.HALLOWEEN,
+  soundpack: fn(10160).Soundpacks.HALLOWEEN,
   soundpackLabel: fn(1115).t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef17777, webmLight: _modDef17778 },
+  appSpinnerSources: { webmDark: _modDef17788, webmLight: _modDef17789 },
   coachmarkDismissibleContent: fn(2027).DismissibleContent.HOLIDAY_COACHMARK_WINTER_2025,
   coachmarkBackgroundColor: "#1170ed",
   getLoadingTips() {

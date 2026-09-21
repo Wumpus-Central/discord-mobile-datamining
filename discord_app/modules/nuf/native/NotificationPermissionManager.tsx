@@ -88,7 +88,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj3.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj3.impressionProperties = { action_location: location };
     obj3.location = location;
-    obj2.openLazy(asyncRequireImpl(17851, dependencyMap.paths), closure_2_11, obj3);
+    obj2.openLazy(asyncRequireImpl(17862, dependencyMap.paths), closure_2_11, obj3);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -170,8 +170,8 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const PermissionPromptType = fn(12661).PermissionPromptType;
-const NotificationPermissionConstants = fn(12662);
+const PermissionPromptType = fn(12663).PermissionPromptType;
+const NotificationPermissionConstants = fn(12664);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_11, EventActionLocation: closure_12 } =
   NotificationPermissionConstants);
 const Constants = fn(1074);

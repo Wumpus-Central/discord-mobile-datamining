@@ -28,9 +28,9 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
     items,
   );
   const tmp = closure_7();
-  const modalDismissGuardRefreshControl = insetTop(10579).useModalDismissGuardRefreshControl();
+  const modalDismissGuardRefreshControl = insetTop(10580).useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = insetTop(6864).BottomSheetScrollView;
+    let BottomSheetScrollView = insetTop(6869).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
@@ -53,7 +53,7 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
     emptyStateContainer: obj3.containerStyle,
     emptyStateImage: obj3.imageStyle,
   } = tmp);
-  obj5.source = insetBottom(10677);
+  obj5.source = insetBottom(10678);
   obj5.titleStyle = { marginBottom: 0 };
   obj2.children = jsx(insetTop(1177).RefreshEmptyState, {
     body: null,

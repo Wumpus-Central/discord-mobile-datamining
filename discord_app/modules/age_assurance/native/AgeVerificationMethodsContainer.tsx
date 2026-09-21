@@ -5,8 +5,8 @@ import MetricEvents from "../../../../discord_common/js/shared/shared-constants/
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const VerificationMethod = fn(8682).VerificationMethod;
-const SafetyHubLinks = fn(8690).SafetyHubLinks;
+const VerificationMethod = fn(8683).VerificationMethod;
+const SafetyHubLinks = fn(8691).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4756);
@@ -29,7 +29,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = closure_8();
-  const isSuspendedUser = prop(8689).useIsSuspendedUser();
+  const isSuspendedUser = prop(8690).useIsSuspendedUser();
   const items = [prop];
   const effect = noop.useEffect(() => {
     let someResult;
@@ -55,7 +55,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     if (0 !== prop.length) {
       let mapped = prop.map((label) =>
         closure_1_6(
-          prop(5817).TableRow,
+          prop(5822).TableRow,
           {
             label: label.title,
             subLabel: label.description,
@@ -78,7 +78,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
       const intl4 = tmp2(1115).intl;
       const obj6 = {
         handleOnHelpUrlHook() {
-          modalSessionId(8681).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
+          modalSessionId(8682).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
         },
       };
       obj5.children = intl4.format(modalSessionId(3034).htWh1G, obj6);
@@ -98,10 +98,10 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const obj11 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1115).intl;
   obj11.text = intl3.string(modalSessionId(3034).hDvmYP);
-  obj11.onPress = prop(8688).getAgeVerificationMethods;
+  obj11.onPress = prop(8689).getAgeVerificationMethods;
   obj10.children = closure_6(prop(5186).Button, obj11);
-  items3[1] = closure_6(prop(5645).ButtonGroup, obj10);
+  items3[1] = closure_6(prop(5650).ButtonGroup, obj10);
   obj8.children = items3;
   mapped = closure_7(tmp2(5184).Stack, obj8);
-  const obj = prop(8689);
+  const obj = prop(8690);
 };

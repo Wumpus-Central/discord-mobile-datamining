@@ -65,8 +65,8 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const tmp6 = closure_11();
   const obj2 = markAsDismissed(4607);
   const typeConsolidationTextTransform =
-    markAsDismissed(7219).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
-  const obj3 = markAsDismissed(7219);
+    markAsDismissed(7224).useTypeConsolidationTextTransform("DisplayNameStylesFlywheel");
+  const obj3 = markAsDismissed(7224);
   const items = [UserStore];
   const stateFromStores = markAsDismissed(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj4 = markAsDismissed(504);
@@ -86,8 +86,8 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     openUserSettings.openUserSettings(
       { screen: c2 ? timestampProducer.PROFILE_CUSTOMIZATION : timestampProducer.PROFILE_CUSTOMIZATION_TRY_IT_OUT },
       () => {
-        markAsDismissed(7278).runAfterInteractions(() => {
-          markAsDismissed(7622).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
+        markAsDismissed(7283).runAfterInteractions(() => {
+          markAsDismissed(7624).openUserSettings({ screen: constants.DISPLAY_NAME_STYLES }, () => {
             closure_1_0(constants.TAKE_ACTION);
             const result = closure_2_0(4576).UNSAFE_markDismissibleContentAsDismissed(
               closure_2_0(2027).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK,
@@ -109,7 +109,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj6 = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
   const obj7 = { style: tmp6.content, children: null };
   const items4 = [
-    closure_9(markAsDismissed(7394).ActionSheetHeaderBar, {
+    closure_9(markAsDismissed(7399).ActionSheetHeaderBar, {
       onPress() {
         const current = ref.current;
         if (current != null) {
@@ -125,7 +125,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const obj9 = { style: tmp6.imageContainer, children: null };
   let tmp15Result = enabled;
   if (enabled) {
-    tmp15Result = closure_9(tmp2(5904).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
+    tmp15Result = closure_9(tmp2(5909).DisplayNameStylesV2AbstractUI, { resizeMode: "contain" });
   }
   const items5 = [tmp15Result];
   if (enabled) {
@@ -167,20 +167,20 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
     items4[4] = closure_10(View, obj13);
     obj7.children = items4;
     obj12.children = closure_10(View, obj7);
-    obj6.children = closure_9(tmp2(7363).SafeAreaPaddingView, obj12);
-    return closure_9(tmp2(7390).BottomSheet, obj6);
+    obj6.children = closure_9(tmp2(7368).SafeAreaPaddingView, obj12);
+    return closure_9(tmp2(7395).BottomSheet, obj6);
   } else {
     if (tmp2Result.isIOS()) {
       const obj16 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj17 = { uri: tmp4(17393) };
+      const obj17 = { uri: tmp4(17404) };
       obj16.source = obj17;
       obj16.style = tmp6.image;
       obj16.enableAnimation = !enabled;
-      let tmp15Result2 = closure_9(tmp4(5799), obj16);
-      const tmp4Result = tmp4(5799);
+      let tmp15Result2 = closure_9(tmp4(5804), obj16);
+      const tmp4Result = tmp4(5804);
     } else {
-      const obj18 = { url: tmp4(17393), style: tmp6.image, autoplay: true };
-      tmp15Result2 = closure_9(tmp2(9088).APNGPlayer, obj18);
+      const obj18 = { url: tmp4(17404), style: tmp6.image, autoplay: true };
+      tmp15Result2 = closure_9(tmp2(9089).APNGPlayer, obj18);
     }
     tmp2Result = tmp2(1364);
   }

@@ -178,7 +178,7 @@ function ClassificationDetail(classification) {
   items1[1] = prop;
   let obj4 = {
     onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12131, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12133, dependencyMap.paths), {
         classificationId: id,
         source: React6.StandingTab,
       });
@@ -356,7 +356,7 @@ class SafetyHubViolationsContainer {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8690);
+const SafetyHubConstants = fn(8691);
 ({ SafetyHubAnalyticsActionSource: closure_8, SafetyHubAnalyticsActions: closure_9 } = SafetyHubConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

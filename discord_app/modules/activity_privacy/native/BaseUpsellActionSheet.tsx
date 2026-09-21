@@ -22,7 +22,7 @@ function StoreGuildIcon(guildId) {
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   const obj2 = { guild: stateFromStores, size: null };
   const obj = guildId(504);
-  obj2.size = guildId(5796).GuildIconSizes.XSMALL;
+  obj2.size = guildId(5801).GuildIconSizes.XSMALL;
   return closure_7(GuildIconDefault, obj2);
 }
 function GuildCard(guildIds) {
@@ -224,5 +224,5 @@ export default function BaseUpsellActionSheet(toastContent) {
   items1[3] = closure_8(closure_5, obj5);
   obj2.children = items1;
   obj.children = closure_8(closure_5, obj2);
-  return closure_7(toastContent(7390).BottomSheet, obj);
+  return closure_7(toastContent(7395).BottomSheet, obj);
 }

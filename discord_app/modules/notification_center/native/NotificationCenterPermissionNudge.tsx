@@ -19,7 +19,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   let obj = { style: tmp.container, children: null };
   const obj2 = {
     style: tmp.iconContainer,
-    children: closure_14(onDismiss(10409).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
+    children: closure_14(onDismiss(10410).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
   };
   const items = [closure_14(View, obj2), ,];
   const obj4 = { style: tmp.contentContainer, children: null };
@@ -38,12 +38,12 @@ function NotificationCenterBannerImpl(onDismiss) {
   const intl3 = onDismiss(1115).intl;
   obj9.text = intl3.string(onDismiss(1115).t.a4bgO0);
   obj9.onPress = function onPress() {
-    const pushNotificationPermission = onDismiss(12663).requestPushNotificationPermission(
+    const pushNotificationPermission = onDismiss(12665).requestPushNotificationPermission(
       constants2.ALLOW_TO_REQUEST,
       constants3.NOTIFICATION_CENTER,
       closure_1_8,
     );
-    const obj = onDismiss(12663);
+    const obj = onDismiss(12665);
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
       action: constants4.ACCEPT,
       prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
@@ -68,8 +68,8 @@ function NotificationCenterBannerImpl(onDismiss) {
   };
   const intl4 = onDismiss(1115).intl;
   obj10.accessibilityLabel = intl4.string(onDismiss(1115).t.WAI6xu);
-  obj10.children = closure_14(onDismiss(5892).XSmallIcon, { size: "sm", color: "icon-strong" });
-  items[2] = closure_14(onDismiss(5334).PressableHighlight, obj10);
+  obj10.children = closure_14(onDismiss(5897).XSmallIcon, { size: "sm", color: "icon-strong" });
+  items[2] = closure_14(onDismiss(5339).PressableHighlight, obj10);
   obj.children = items;
   return closure_15(View, obj);
 }
@@ -79,7 +79,7 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(2038).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12662);
+const NotificationPermissionConstants = fn(12664);
 ({
   EventActionType: c10,
   EventActionLocation: closure_11,

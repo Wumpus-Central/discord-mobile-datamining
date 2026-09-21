@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1074);
 ({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7744).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(7746).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -148,7 +148,7 @@ export const useEmptyStatePlatforms = function useEmptyStatePlatforms() {
   closure_129_0 = false;
   let items = [UserStore];
   closure_129_1 = fn(504).useStateFromStores(items, () => currentUser.getCurrentUser());
-  const PlayStationVoiceExperiment = fn(7746).PlayStationVoiceExperiment;
+  const PlayStationVoiceExperiment = fn(7748).PlayStationVoiceExperiment;
   closure_129_2 = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (dependencyMap) => {
     if (dependencyMap.type === PlatformTypes.PLAYSTATION_STAGING) {

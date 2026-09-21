@@ -48,8 +48,8 @@ function ChangeSpendingLimitScreen(teenId) {
   if (null != monthlySpend) {
     formatPriceResult = null;
     if (monthlySpend > 0) {
-      formatPriceResult = tmp2(7474).formatPrice(monthlySpend, tmp5);
-      const tmp2Result = tmp2(7474);
+      formatPriceResult = tmp2(7479).formatPrice(monthlySpend, tmp5);
+      const tmp2Result = tmp2(7479);
     }
   }
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
@@ -112,7 +112,7 @@ function ChangeSpendingLimitScreen(teenId) {
     items[1] = closure_7(tmp2(5184).Stack, obj4);
     obj2.children = items;
     obj8.children = closure_7(tmp2(5184).Stack, obj2);
-    const items3 = [closure_6(tmp2(8693).ModalContent, obj8)];
+    const items3 = [closure_6(tmp2(8694).ModalContent, obj8)];
     if (isClearingCap) {
       const obj9 = { variant: "destructive", text: null, onPress: null, disabled: null, loading: null };
       const intl8 = tmp2(1115).intl;
@@ -143,14 +143,14 @@ function ChangeSpendingLimitScreen(teenId) {
     obj14.onPress = tmp10(4959).pop;
     items4[1] = closure_6(tmp2(5186).Button, obj14);
     obj13.children = items4;
-    obj12.children = closure_7(tmp2(5645).ButtonGroup, obj13);
-    items3[1] = closure_6(tmp2(12179).ModalFooter, obj12);
+    obj12.children = closure_7(tmp2(5650).ButtonGroup, obj13);
+    items3[1] = closure_6(tmp2(12181).ModalFooter, obj12);
     obj11.children = items3;
-    return closure_7(tmp2(8692).ModalScreen, obj11);
+    return closure_7(tmp2(8693).ModalScreen, obj11);
   } else if (isOverspending) {
     const obj15 = { style: formatToPlainStringResult.warningRow, children: null };
     const obj16 = { size: "xs", color: tmp10(576).colors.ICON_FEEDBACK_WARNING };
-    const items5 = [closure_6(tmp2(8865).WarningIcon, obj16)];
+    const items5 = [closure_6(tmp2(8866).WarningIcon, obj16)];
     const obj17 = { variant: "text-sm/normal", style: formatToPlainStringResult.warningText, children: null };
     const intl6 = tmp2(1115).intl;
     const obj18 = { amount: formatPriceResult, date: renewalDate };
@@ -213,5 +213,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1115).intl;
   obj.headerBackTitle = intl.string(teenId(1115).t["13/7kX"]);
-  return closure_6(teenId(11463).Modal, obj);
+  return closure_6(teenId(11465).Modal, obj);
 }

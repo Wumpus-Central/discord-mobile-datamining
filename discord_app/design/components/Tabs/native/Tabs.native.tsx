@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06892_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06897_LegacyBaseButton.js";
 import cheapWorkletShallowEqual from "../../../../modules/reanimated/native/cheapWorkletShallowEqual.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
@@ -421,7 +421,7 @@ export const Tabs = function Tabs(state) {
             const result = pressed.set(-1);
           };
           obj.variant = variant;
-          return variant(state(12866).TabItem, obj, id);
+          return variant(state(12868).TabItem, obj, id);
         }),
       }),
     items3,

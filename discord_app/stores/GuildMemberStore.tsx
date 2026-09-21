@@ -90,10 +90,10 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
     return {
       colorString: null,
       colorStrings: null,
-      colorRoleId: "call",
-      hoistRoleId: "np",
-      iconRoleId: "fileFinishedImporting",
-      highestRoleId: "accessible",
+      colorRoleId: "channel",
+      hoistRoleId: "r",
+      iconRoleId: "count",
+      highestRoleId: "alignItems",
     };
   } else {
     const iter = roles[Symbol.iterator]();

@@ -44,7 +44,7 @@ function SettingsAppearanceChannelListPreviewNitroUpsellComponent(theme) {
     withSpring: theme(5185).withSpring,
     springStandard: theme(5189).springStandard,
   };
-  analyticsLocations = analyticsLocations(7402)(analyticsLocations(7422).CLIENT_THEMES_EDITOR).analyticsLocations;
+  analyticsLocations = analyticsLocations(7407)(analyticsLocations(7427).CLIENT_THEMES_EDITOR).analyticsLocations;
   const items = [analyticsLocations];
   const obj3 = { style: tmp.nitroUpsell, children: null };
   const callback = noop.useCallback(() => {

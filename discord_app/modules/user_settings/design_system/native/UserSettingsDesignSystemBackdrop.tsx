@@ -119,7 +119,7 @@ export default function UserSettingsDesignSystemBackdrop() {
     const items3 = ["blur style: ", tmp6];
     obj9.children = items3;
     obj8.children = closure_7(tmp8(4752).Text, obj9);
-    obj7.children = closure_6(tmp8(5819).Card, obj8);
+    obj7.children = closure_6(tmp8(5824).Card, obj8);
     items2[1] = closure_6(closure_5, obj7);
     obj5.children = items2;
     showBackdrop = closure_7(tmp8(5167).Dialog, obj5);

@@ -68,9 +68,9 @@ function AddDescription(id) {
             const obj2 = {};
             const merged = Object.assign(dependencyMap);
             obj2.description = ref.current;
-            id(9420).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-            const obj = id(9420);
-            id(11503).close();
+            id(9421).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+            const obj = id(9421);
+            id(11505).close();
           },
         );
         let merged = Object.assign(arg0);

@@ -14,7 +14,7 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
   const id = noop.useId();
   const tmp2 = id(4624)();
   dependencyMap = tmp2;
-  let tmp4 = id(6862)({ includeCustomKeyboard: false });
+  let tmp4 = id(6867)({ includeCustomKeyboard: false });
   noop = tmp4;
   let tmp3 = id(1878)();
   const keyboardContextForType = messagesRef(4624).useKeyboardContextForType(messagesRef(1610).KeyboardTypes.SYSTEM);
@@ -58,11 +58,11 @@ export default noop.memo(function InlinePortalKeyboard(messagesRef) {
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
                 const result1 = DCDChatManager3.customKeyboardWillShow(
                   tmp38,
-                  messagesRef(11617).getKeyboardActionSheetHeight().minimum,
+                  messagesRef(11619).getKeyboardActionSheetHeight().minimum,
                   0.25,
                   7,
                 );
-                const obj3 = messagesRef(11617);
+                const obj3 = messagesRef(11619);
               }
             }
           }

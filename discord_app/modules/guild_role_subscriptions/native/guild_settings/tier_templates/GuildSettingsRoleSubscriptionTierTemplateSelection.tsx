@@ -49,7 +49,7 @@ function TierTemplatesRenderer(groupListingId) {
           obj.style = size;
           return closure_1_14(closure_1_8, obj);
         };
-        obj.snapToInterval = guildId(18231).CARD_WIDTH + v16;
+        obj.snapToInterval = guildId(18242).CARD_WIDTH + v16;
         obj.renderItem = function renderItem(template) {
           return closure_2_14(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
             template: template.item,
@@ -211,7 +211,7 @@ get_ActivityIndicator = fn(17);
   View: closure_8,
   FlatList: closure_9,
 } = get_ActivityIndicator);
-const usePriceTiers = fn(18177).usePriceTiers;
+const usePriceTiers = fn(18188).usePriceTiers;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, GuildSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);

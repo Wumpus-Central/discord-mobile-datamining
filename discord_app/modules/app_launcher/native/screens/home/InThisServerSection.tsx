@@ -13,7 +13,7 @@ function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   const tmp = closure_7();
   const application = onAppSelected.appItem.application;
-  const appLauncherIconSource = onAppSelected(12302).getAppLauncherIconSource(application);
+  const appLauncherIconSource = onAppSelected(12304).getAppLauncherIconSource(application);
   const obj2 = {
     accessible: true,
     accessibilityLabel: application.name,
@@ -34,7 +34,7 @@ function AppInThisServer(onAppSelected) {
   let tmp6 = null;
   if (null != appLauncherIconSource) {
     const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-    tmp6 = closure_5(application(12307), obj3);
+    tmp6 = closure_5(application(12309), obj3);
   }
   const items = [
     tmp6,
@@ -46,7 +46,7 @@ function AppInThisServer(onAppSelected) {
     }),
   ];
   obj2.children = items;
-  return closure_6(onAppSelected(9183).PressableScale, obj2, application.id);
+  return closure_6(onAppSelected(9184).PressableScale, obj2, application.id);
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);

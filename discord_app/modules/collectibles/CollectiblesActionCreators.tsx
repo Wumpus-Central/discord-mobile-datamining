@@ -1051,15 +1051,15 @@ let closure_30 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
     }
   }
 };
-const addDebugLog = fn(7796).addDebugLog;
-let closure_10 = fn(7799).CollectiblesCategoriesRecord;
-let closure_11 = fn(7803).CollectiblesMarketingsRecord;
-let closure_14 = fn(7810).CollectiblesShopHomeRecord;
+const addDebugLog = fn(7798).addDebugLog;
+let closure_10 = fn(7801).CollectiblesCategoriesRecord;
+let closure_11 = fn(7805).CollectiblesMarketingsRecord;
+let closure_14 = fn(7812).CollectiblesShopHomeRecord;
 const constants = fn(1076).CollectiblesMobileShopScreen;
 const Constants = fn(1074);
 ({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = Constants);
-const CollectiblesMarketingsStore = fn(7824);
-const CollectiblesShopHomeStore = fn(7825);
+const CollectiblesMarketingsStore = fn(7826);
+const CollectiblesShopHomeStore = fn(7827);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 

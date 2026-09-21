@@ -82,7 +82,7 @@ export default function NewTermsModal() {
   const memo = noop.useMemo(() => action.getAction(), []);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
-  memo(5842).useNavigatorBackPressHandler(memo(5181).BackPressHandler.minimize);
+  memo(5847).useNavigatorBackPressHandler(memo(5181).BackPressHandler.minimize);
   dependencyMap = noop.useCallback(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {
@@ -138,7 +138,7 @@ export default function NewTermsModal() {
     [],
   );
   const obj2 = { type: null, name: null, properties: null };
-  let obj = memo(5842);
+  let obj = memo(5847);
   obj2.type = memo(1249).ImpressionTypes.VIEW;
   obj2.name = memo(1249).ImpressionNames.USER_AGREEMENTS;
   obj2.properties = { required_action: memo };
@@ -216,15 +216,15 @@ export default function NewTermsModal() {
     const obj21 = { top };
     items4[1] = obj21;
     obj20.style = items4;
-    obj20.source = tmp2(9897);
+    obj20.source = tmp2(9898);
     obj20.color = tmp.navbarRight.tintColor;
     obj20.onPress = handleMoreActions;
     const intl9 = tmp6(1115).intl;
     obj20.accessibilityLabel = intl9.string(tmp6(1115).t["UKOtz+"]);
-    items3[2] = closure_12(tmp2(10010), obj20);
+    items3[2] = closure_12(tmp2(10011), obj20);
     obj3.children = items3;
     tmp10 = closure_13(closure_6, obj3);
-    const tmp2Result = tmp2(10010);
+    const tmp2Result = tmp2(10011);
   }
   return tmp10;
 }

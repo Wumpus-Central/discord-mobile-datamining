@@ -11,7 +11,7 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_8 = fn(7766).isGuildScheduledEventActive;
+let closure_8 = fn(7768).isGuildScheduledEventActive;
 const GuildScheduledEventsConstants = fn(2047);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
@@ -124,7 +124,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(guild(1115).t.q91szp));
               throw error1;
             }
-            obj = guild(9789);
+            obj = guild(9790);
           }
           if (null == tmp) {
             if (entityType !== constants.EXTERNAL) {
@@ -162,7 +162,7 @@ export default function EditGuildEventWhere(guild) {
       entityType: guildEvent.entityType,
       onChange(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "Array" };
+        const obj = { entityType, scheduledEndTime: "y" };
         if (entityType === constants.EXTERNAL) {
           let obj2 = _modDef4348(guildEvent.scheduledStartTime);
           if (obj2 == null) {
@@ -183,7 +183,7 @@ export default function EditGuildEventWhere(guild) {
     entityType: guildEvent.entityType,
     onChange(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "y" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef4348(guildEvent.scheduledStartTime);
         if (obj2 == null) {

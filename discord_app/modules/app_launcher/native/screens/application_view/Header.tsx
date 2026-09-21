@@ -105,8 +105,8 @@ export default function Header(application) {
   const tmp3 = closure_12();
   let appLauncherIconSource = null;
   if (null != application) {
-    appLauncherIconSource = tmp(12302).getAppLauncherIconSource(application);
-    const tmpResult = tmp(12302);
+    appLauncherIconSource = tmp(12304).getAppLauncherIconSource(application);
+    const tmpResult = tmp(12304);
   }
   let obj = application(504);
   let str = application(4457).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
@@ -125,7 +125,7 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     let obj2 = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_8(tmp5(12307), obj2);
+    let tmp12 = closure_8(tmp5(12309), obj2);
     let tmp13 = closure_8;
   } else {
     let obj3 = { style: tmp3.loadingIcon };
@@ -196,16 +196,16 @@ export default function Header(application) {
   let str2 = "";
   const animatedStyle3 = tmpResult13.useAnimatedStyle(fn4);
   if (null != application) {
-    str2 = tmp(9402).getSectionName(application);
-    const tmpResult14 = tmp(9402);
+    str2 = tmp(9403).getSectionName(application);
+    const tmpResult14 = tmp(9403);
   }
   let hasApplicationFlagResult = null != application;
   if (hasApplicationFlagResult) {
     hasApplicationFlagResult = "flags" in application;
   }
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = tmp(9134).hasApplicationFlag(application, constants2.EMBEDDED);
-    const tmpResult15 = tmp(9134);
+    hasApplicationFlagResult = tmp(9135).hasApplicationFlag(application, constants2.EMBEDDED);
+    const tmpResult15 = tmp(9135);
   }
   dependencyMap = hasApplicationFlagResult;
   id = UserStore.getCurrentUser();
@@ -285,13 +285,13 @@ export default function Header(application) {
       };
       const intl = tmp(1115).intl;
       obj15.accessibilityLabel = intl.string(tmp(1115).t.XWDihq);
-      const items7 = [tmp13(tmp(8178).IconButton, obj15)];
+      const items7 = [tmp13(tmp(8179).IconButton, obj15)];
       const obj16 = { application, onAddAppMenuClick };
-      items7[1] = tmp13(tmp5(12384), obj16);
+      items7[1] = tmp13(tmp5(12386), obj16);
       obj14.children = items7;
       tmp22Result = closure_9(tmp23, obj14);
     }
-    tmpResult16 = tmp(9402);
+    tmpResult16 = tmp(9403);
   }
   items3[2] = tmp22Result;
   obj8.children = items3;

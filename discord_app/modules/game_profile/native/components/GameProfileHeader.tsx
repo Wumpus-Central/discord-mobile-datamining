@@ -40,7 +40,7 @@ obj2.headerContent = {
   gap: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "flex-end",
-  maxWidth: fn(8984).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8985).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };
@@ -50,7 +50,7 @@ let obj4 = {
   gap: nativeDefault.space.PX_12,
   flexDirection: "row",
   alignItems: "flex-end",
-  maxWidth: fn(8984).MOBILE_GAME_PROFILE_MAX_WIDTH,
+  maxWidth: fn(8985).MOBILE_GAME_PROFILE_MAX_WIDTH,
   alignSelf: "center",
   width: "100%",
 };

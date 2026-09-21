@@ -6,7 +6,7 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6830);
+const PromoEmailConsentStore = fn(6835);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -43,7 +43,7 @@ export default function PromotionalEmailCheckBox(style) {
     };
     obj3.style = tmp.checkboxRow;
     const obj4 = { checked: tmp3 };
-    const items = [closure_6(tmp4(5829).FormCheckbox, obj4)];
+    const items = [closure_6(tmp4(5834).FormCheckbox, obj4)];
     const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
     const intl2 = tmp4(1115).intl;
     obj5.children = intl2.string(tmp4(1115).t.ylFCLt);

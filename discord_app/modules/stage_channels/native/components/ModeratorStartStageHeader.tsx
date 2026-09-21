@@ -10,7 +10,7 @@ const jsxProd = fn(21);
 const createStyles = fn(4756);
 let obj = {
   header: {
-    height: fn(5894).NAV_BAR_HEIGHT,
+    height: fn(5899).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 8,
@@ -20,7 +20,7 @@ let obj = {
 };
 let closure_6 = createStyles.createStyles(obj);
 const obj3 = {
-  height: fn(5894).NAV_BAR_HEIGHT,
+  height: fn(5899).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 8,

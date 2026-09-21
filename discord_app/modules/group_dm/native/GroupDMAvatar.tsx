@@ -66,7 +66,7 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
+    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 1, animate: null };
     obj9.cutout = memo1;
     obj9.animate = animate;
     if (null == users) {
@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Load from device",
+      animate: "Gift Recipient ID",
     };
     obj12.animate = animate;
     if (null == users) {

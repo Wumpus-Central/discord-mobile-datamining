@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06892_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06897_LegacyBaseButton.js";
 import useGetOrFetchApplicationsDefault from "../../../applications/useGetOrFetchApplications.tsx";
 import BlurVisualEffectViewDefault from "BlurVisualEffectView.tsx";
 import InviteActivityButtonDefault from "InviteActivityButton.tsx";
@@ -78,7 +78,7 @@ function useBaseActivityPanelHeaderContent(landscape) {
   const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = noop.useCallback(fn, items2);
   const obj3 = {
-    mode: landscape(17473).MorphablePanelModes.PANEL,
+    mode: landscape(17484).MorphablePanelModes.PANEL,
     panGestureEnabled: true,
     pipState,
     swipeRequiresPop: true,
@@ -86,7 +86,7 @@ function useBaseActivityPanelHeaderContent(landscape) {
     onPanMinimizeGestureEnd: callback,
     disableHorizontalSafeAreas: true,
   };
-  obj2.gesture = setMode(17473)(obj3);
+  obj2.gesture = setMode(17484)(obj3);
   obj2.headerWrapperStyles = memo;
   obj2.headerStyles = memo1;
   obj2.styles = tmp;
@@ -134,7 +134,7 @@ class BaseActivityPanelContent {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(9314);
+const ActivityPanelConstants = fn(9315);
 ({
   ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9,
@@ -266,7 +266,7 @@ export default noop.memo(() => {
   let wrapperDimensions;
   const tmp2 = closure_14();
   const headerContainer = tmp2;
-  const context = noop.useContext(wrapperDimensions(17467));
+  const context = noop.useContext(wrapperDimensions(17478));
   wrapperDimensions = context.wrapperDimensions;
   let items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);

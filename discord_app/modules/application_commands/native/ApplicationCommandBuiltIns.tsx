@@ -11,7 +11,7 @@ let obj = {
   untranslatedName: "leave",
   displayName: "leave",
   type: fn(1978).ApplicationCommandType.CHAT,
-  inputType: fn(7763).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(7765).ApplicationCommandInputType.BUILT_IN,
   applicationId: fn(5210).BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj, "untranslatedDescription", {

@@ -15,7 +15,7 @@ let obj2 = {
     paddingHorizontal: 16,
     overflow: "hidden",
     height: 64,
-    paddingVertical: fn(8121).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(8122).SEARCH_ROW_TAP_STATE_PADDING,
     alignItems: "center",
   },
   avatar: null,

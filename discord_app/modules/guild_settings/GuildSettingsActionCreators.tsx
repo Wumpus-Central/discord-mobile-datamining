@@ -278,7 +278,7 @@ let body = {
     obj(573).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(573);
-    const obj6 = obj(5381);
+    const obj6 = obj(5386);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,

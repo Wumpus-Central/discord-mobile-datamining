@@ -3,7 +3,7 @@ import util from "../../intl/index.native.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
-import _modDef11192 from "../../../_runtime/metro/11192__.js";
+import _modDef11193 from "../../../_runtime/metro/11193__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -128,7 +128,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp7];
   let tmp16 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef11192 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef11193 };
     tmp16 = closure_8(closure_6, obj5);
   }
   items1[1] = tmp16;

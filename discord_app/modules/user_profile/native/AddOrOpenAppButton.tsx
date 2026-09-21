@@ -37,7 +37,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8854).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(8855).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -80,7 +80,7 @@ function AddAppButton(application) {
       icon: null,
     });
   }
-  PlusSmallIcon = application(9145).PlusSmallIcon;
+  PlusSmallIcon = application(9146).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -139,7 +139,7 @@ function OpenAppButton(profileApplication) {
               if (application1 == null) {
                 c3 = 1;
                 c4 = 1;
-                const obj7 = { value: tmp2(7403).fetchApplication(profileApplication.id), done: false };
+                const obj7 = { value: tmp2(7408).fetchApplication(profileApplication.id), done: false };
                 return obj7;
               } else {
                 closure_129_1 = closure_0;
@@ -215,7 +215,7 @@ function OpenAppButton(profileApplication) {
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const getSection = fn(9403).getSection;
+const getSection = fn(9404).getSection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const AppLauncherRouteName = fn(1483).AppLauncherRouteName;
 const jsx = fn(21).jsx;

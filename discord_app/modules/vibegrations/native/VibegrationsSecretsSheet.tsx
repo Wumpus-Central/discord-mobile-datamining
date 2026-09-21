@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(13359);
+const VibegrationsConnectionStore = fn(13361);
 ({ sendUserMessage: closure_7, submitProjectSecrets: closure_8 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

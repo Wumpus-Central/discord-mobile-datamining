@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
-import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
+import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import ImagePickerUtils from "../../../image/native/ImagePickerUtils.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import PollsIcon from "../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
@@ -17,7 +17,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChatInputConstants = fn(12213);
+const ChatInputConstants = fn(12215);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

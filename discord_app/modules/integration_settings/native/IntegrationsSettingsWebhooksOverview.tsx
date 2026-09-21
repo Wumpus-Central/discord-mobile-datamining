@@ -245,7 +245,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    const obj2 = { Illustration: webhookType(17303).WebhookEmpty, title: null };
+    const obj2 = { Illustration: webhookType(17314).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1115).intl;
       dkHRkE = webhookType(1115).t.dkHRkE;
@@ -276,7 +276,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       }),
     };
     const obj4 = { children: null };
-    items[2] = closure_18(webhookType(5899).TableRowGroup, obj3);
+    items[2] = closure_18(webhookType(5904).TableRowGroup, obj3);
     obj4.children = items;
     return closure_20(closure_19, obj4);
   }

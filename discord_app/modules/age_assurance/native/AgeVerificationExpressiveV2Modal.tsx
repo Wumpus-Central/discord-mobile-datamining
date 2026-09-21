@@ -422,7 +422,7 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(8682).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(8683).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

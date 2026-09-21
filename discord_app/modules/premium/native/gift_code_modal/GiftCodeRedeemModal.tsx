@@ -11,7 +11,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 const jsx = fn(21).jsx;
 const GiftCodeModalScreens = { START: "giftcode-start", SUCCESS: "giftcode-success", ERROR: "giftcode-error" };
-const NavigatorHeader = fn(5836);
+const NavigatorHeader = fn(5841);
 const headerTitle = NavigatorHeader.getHeaderNoTitle();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemModal.tsx");
@@ -33,7 +33,7 @@ export default function GiftCodeRedeemModal(code) {
     let items2 = obj;
     const obj4 = {
       headerTitle,
-      headerLeft: tmp2(5836).getHeaderCloseButton(() => ModalActionCreatorsDefault.pop()),
+      headerLeft: tmp2(5841).getHeaderCloseButton(() => ModalActionCreatorsDefault.pop()),
       render(arg0) {
         const obj = {};
         const merged = Object.assign(arg0);
@@ -43,8 +43,8 @@ export default function GiftCodeRedeemModal(code) {
     };
     obj3[obj.START] = obj4;
     const obj5 = { headerTitle, headerLeft: null, render: null };
-    const tmp2Result = tmp2(5836);
-    obj5.headerLeft = tmp2(5836).getHeaderCloseButton(() => ModalActionCreatorsDefault.pop());
+    const tmp2Result = tmp2(5841);
+    obj5.headerLeft = tmp2(5841).getHeaderCloseButton(() => ModalActionCreatorsDefault.pop());
     obj5.render = function render(arg0) {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -53,8 +53,8 @@ export default function GiftCodeRedeemModal(code) {
     };
     obj3[obj.SUCCESS] = obj5;
     const obj6 = { headerTitle, headerLeft: null, render: null };
-    const tmp2Result3 = tmp2(5836);
-    obj6.headerLeft = tmp2(5836).getHeaderCloseButton(() => ModalActionCreatorsDefault.pop());
+    const tmp2Result3 = tmp2(5841);
+    obj6.headerLeft = tmp2(5841).getHeaderCloseButton(() => ModalActionCreatorsDefault.pop());
     obj6.render = function render(arg0) {
       const merged = Object.assign(arg0);
       return jsx(GiftCodeRedeemErrorDefault, {});
@@ -79,9 +79,9 @@ export default function GiftCodeRedeemModal(code) {
         items3 = [obj10];
       }
       obj7.initialRouteStack = items3;
-      jsx(tmp2(7240).Navigator, { screens: obj3, initialRouteStack: null });
+      jsx(tmp2(7245).Navigator, { screens: obj3, initialRouteStack: null });
     }
-    const tmp2Result4 = tmp2(5836);
+    const tmp2Result4 = tmp2(5841);
   }
   const obj2 = code(504);
 }

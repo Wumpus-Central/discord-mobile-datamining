@@ -8,7 +8,7 @@ import ConsentStore from "../../../stores/ConsentStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const resetRegistration = fn(16271).resetRegistration;
+const resetRegistration = fn(16277).resetRegistration;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 

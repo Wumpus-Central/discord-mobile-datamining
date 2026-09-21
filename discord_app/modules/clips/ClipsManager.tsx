@@ -21,7 +21,7 @@ const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
 const getSystemAnalyticsInfo = fn(4801).getSystemAnalyticsInfo;
-const ClipsConstants = fn(5343);
+const ClipsConstants = fn(5348);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_11,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12,

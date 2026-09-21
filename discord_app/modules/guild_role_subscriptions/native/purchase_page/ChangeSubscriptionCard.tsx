@@ -72,13 +72,13 @@ export default function ChangeSubscriptionCard(activeSubscription) {
     const intl4 = tmp6(1115).intl;
     obj11.text = intl4.string(tmp6(1115).t.UwHVxr);
     obj11.onPress = function onPress() {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16892, dependencyMap.paths), {
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(16898, dependencyMap.paths), {
         subscriptionId: activeSubscription.id,
       });
       const obj2 = { subscriptionId: activeSubscription.id };
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    items3[1] = closure_7(tmp6(16884).ArrowButton, obj11);
+    items3[1] = closure_7(tmp6(16890).ArrowButton, obj11);
     obj10.children = items3;
     tmp7Result = closure_8(closure_9, obj10);
   }
@@ -91,5 +91,5 @@ export default function ChangeSubscriptionCard(activeSubscription) {
   const obj9 = { emphasisHook };
   items1[3] = tmp7Result;
   obj4.children = items1;
-  return closure_7(activeSubscription(7390).BottomSheet, { startExpanded: true, children: closure_8(View, obj4) });
+  return closure_7(activeSubscription(7395).BottomSheet, { startExpanded: true, children: closure_8(View, obj4) });
 }

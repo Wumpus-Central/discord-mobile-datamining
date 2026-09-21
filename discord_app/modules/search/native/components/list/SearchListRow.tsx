@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const paddingVertical = fn(8121).SEARCH_ROW_TAP_STATE_PADDING;
+const paddingVertical = fn(8122).SEARCH_ROW_TAP_STATE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4756);

@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const PlatformUtils = APNGPlayer(1364);
-const APNGPlayer2 = APNGPlayer(9088);
+const APNGPlayer2 = APNGPlayer(9089);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;

@@ -10,12 +10,12 @@ import GuildRoleRecordUtilsAll from "../../../utils/GuildRoleRecordUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import FreeFormInputGroupDefault from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
-import _modDef9797 from "../../../../_runtime/metro/09797__.js";
+import _modDef9798 from "../../../../_runtime/metro/09798__.js";
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import InvalidLink from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import GuildIconUploaderDefault from "../../guild/native/GuildIconUploader.tsx";
-import _modDef12055 from "../../../../_runtime/metro/12055__.js";
-import _modDef12056 from "../../../../_runtime/metro/12056__.js";
+import _modDef12057 from "../../../../_runtime/metro/12057__.js";
+import _modDef12058 from "../../../../_runtime/metro/12058__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../rebrand/native/TextStyles.tsx";
 
@@ -31,7 +31,7 @@ function GuildTemplateResolved(guildTemplate) {
   const errors = guildTemplate.errors;
   ({ createServer, name, setName, icon, chooseIcon } = guildTemplate);
   const tmp = closure_14();
-  const typeConsolidationTextTransform = guildTemplate(7219).useTypeConsolidationTextTransform("AcceptGuildTemplate");
+  const typeConsolidationTextTransform = guildTemplate(7224).useTypeConsolidationTextTransform("AcceptGuildTemplate");
   _modDef38(null != guildTemplate, "guild template cannot be null");
   _modDef38(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
   const roles = guildTemplate.serializedSourceGuild.roles;
@@ -80,7 +80,7 @@ function GuildTemplateResolved(guildTemplate) {
     autoCorrect: false,
     returnKeyType: "done",
   };
-  const obj = guildTemplate(7219);
+  const obj = guildTemplate(7224);
   const obj4 = {
     style: tmp.description,
     variant: "text-lg/medium",
@@ -204,11 +204,11 @@ function Channels(channels) {
         items[1] = channelCategoryIcon;
         const type = children.type;
         if (isGuildVocalChannelType(type)) {
-          let tmp10Result = _modDef9797;
+          let tmp10Result = _modDef9798;
         } else if (type === constants2.GUILD_CATEGORY) {
-          tmp10Result = _modDef12055;
+          tmp10Result = _modDef12057;
         } else {
-          tmp10Result = _modDef12056;
+          tmp10Result = _modDef12058;
         }
         obj2.source = tmp10Result;
         const items1 = [closure_2_11(native.Icon, obj2)];
@@ -256,7 +256,7 @@ const isGuildVocalChannelType = fn(2045).isGuildVocalChannelType;
 const isEveryoneRole = fn(2100).isEveryoneRole;
 const Constants = fn(1074);
 ({ MarketingURLs: closure_8, Fonts, ChannelTypes: closure_9 } = Constants);
-const GuildTemplateStates = fn(7566).GuildTemplateStates;
+const GuildTemplateStates = fn(7568).GuildTemplateStates;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const createStyles = fn(4756);

@@ -8,7 +8,7 @@ const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7402)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7407)().analyticsLocations;
   let obj = {
     icon: jsx(userRecord(1177).Avatar, {
       source: userRecord.getAvatarSource(undefined),
@@ -66,7 +66,7 @@ function IgnoredUserRow(userRecord) {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
   obj.trailing = jsx(userRecord(5186).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5817).TableRow, {
+  return jsx(userRecord(5822).TableRow, {
     icon: jsx(userRecord(1177).Avatar, {
       source: userRecord.getAvatarSource(undefined),
       size: userRecord(1177).AvatarSizes.REFRESH_MEDIUM_32,

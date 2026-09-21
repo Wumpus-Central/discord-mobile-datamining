@@ -276,8 +276,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp34;
                   }
-                  const parsed = tmp3(7916).parse(found, combined);
-                  const tmp31Result = tmp3(7696);
+                  const parsed = tmp3(7918).parse(found, combined);
+                  const tmp31Result = tmp3(7698);
                   const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;
@@ -306,10 +306,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = guildId(16980).rememberPatchNotesChannel(closure_129_0, closure_129_17.id);
+                const result = guildId(16988).rememberPatchNotesChannel(closure_129_0, closure_129_17.id);
                 closure_129_20();
                 dependencyMap = 0;
-                const obj = guildId(16980);
+                const obj = guildId(16988);
               }
             }
             const _Error = Error;

@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/getApplicationFromMessage.tsx
 import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 
-const SpotifyApplication = fn(13530).SpotifyApplication;
-const isSpotifyParty = fn(8610).isSpotifyParty;
+const SpotifyApplication = fn(13532).SpotifyApplication;
+const isSpotifyParty = fn(8611).isSpotifyParty;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");
 

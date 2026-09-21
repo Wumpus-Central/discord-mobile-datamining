@@ -4,8 +4,6 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
-import _modDef7590 from "../../../_runtime/metro/07590__.js";
-import _modDef7591 from "../../../_runtime/metro/07591__.js";
 import _modDef7592 from "../../../_runtime/metro/07592__.js";
 import _modDef7593 from "../../../_runtime/metro/07593__.js";
 import _modDef7594 from "../../../_runtime/metro/07594__.js";
@@ -26,16 +24,16 @@ import _modDef7608 from "../../../_runtime/metro/07608__.js";
 import _modDef7609 from "../../../_runtime/metro/07609__.js";
 import _modDef7610 from "../../../_runtime/metro/07610__.js";
 import _modDef7611 from "../../../_runtime/metro/07611__.js";
+import _modDef7612 from "../../../_runtime/metro/07612__.js";
+import _modDef7613 from "../../../_runtime/metro/07613__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import apply from "../../../_runtime/metro/00012__.js";
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(7588);
+const VoiceChannelEffectsConstants = fn(7590);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef7590];
+const items = [_modDef7592];
 const items1 = [
-  _modDef7591,
-  _modDef7592,
   _modDef7593,
   _modDef7594,
   _modDef7595,
@@ -55,6 +53,8 @@ const items1 = [
   _modDef7609,
   _modDef7610,
   _modDef7611,
+  _modDef7612,
+  _modDef7613,
 ];
 const AnimationTypeToAnimations = {
   [VoiceChannelEffectAnimationType.BASIC]: items,

@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7178 from "../../../../_runtime/metro/07178__.js";
+import _modDef7183 from "../../../../_runtime/metro/07183__.js";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageTypes.tsx";
 import ScheduledMessagesUtils from "../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
@@ -51,7 +51,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
   obj6.children = closure_1_12(native.Icon, {
-    source: _modDef7178,
+    source: _modDef7183,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
@@ -387,14 +387,14 @@ function ChatInputEditBar(onCancelEditing) {
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = closure_1_12(Text_Text.Text, obj3);
   obj4.children = closure_1_12(native.Icon, {
-    source: _modDef7178,
+    source: _modDef7183,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   const items = [tmp8];
-  const obj5 = { source: _modDef7178, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef7183, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, {
     style: tmp.floatingRightActions,
     children: closure_1_12(Pressables.PressableOpacity, obj4),
@@ -447,14 +447,14 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj6.onPress = onCancelScheduling;
   const tmp8 = closure_1_12(Pressables.PressableOpacity, obj3);
   obj6.children = closure_1_12(native.Icon, {
-    source: _modDef7178,
+    source: _modDef7183,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj8 = { style: tmp.contextBarRow, children: null };
   const obj9 = { children: null };
   const items = [tmp8];
-  const obj7 = { source: _modDef7178, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj7 = { source: _modDef7183, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, {
     style: tmp.floatingRightActions,
     children: closure_1_12(Pressables.PressableOpacity, obj6),

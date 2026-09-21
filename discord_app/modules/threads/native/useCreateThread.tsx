@@ -26,7 +26,7 @@ export default function useCreateThread(arg0) {
     useDefaultThreadName,
   } = arg0);
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  return analyticsLocations(9418).useCreateThreadCommon({
+  return analyticsLocations(9419).useCreateThreadCommon({
     parentChannel,
     parentMessageId,
     threadSettings,
@@ -58,7 +58,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
   const threadSettings = parentChannel.threadSettings;
   let analyticsLocations;
   ({ appliedTags, onThreadCreated } = parentChannel);
-  analyticsLocations = analyticsLocations(7402)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7407)().analyticsLocations;
   _require = asyncGeneratorStep(async (arg0) => {
     const guildId = arg0;
     c2 = 0;
@@ -66,11 +66,11 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
     return (async (arg0) => {
       analyticsLocations = tmp4;
       closure_129_0 = guildId;
-      const obj7 = new analyticsLocations(8079)();
+      const obj7 = new analyticsLocations(8081)();
       closure_129_1 = obj7;
-      const maxFileSizeResult = guildId(5345).maxFileSize(guildId.getGuildId());
+      const maxFileSizeResult = guildId(5350).maxFileSize(guildId.getGuildId());
       closure_129_2 = maxFileSizeResult;
-      const effectiveUploadLimit = guildId(5373).getEffectiveUploadLimit(maxFileSizeResult);
+      const effectiveUploadLimit = guildId(5378).getEffectiveUploadLimit(maxFileSizeResult);
       obj7.on("progress", (currentSize) => {
         if (currentSize.currentSize > closure_1_3) {
           analyticsLocations.cancel();
@@ -80,13 +80,13 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
             draftType: FirstThreadMessage.FirstThreadMessage,
             resetState: true,
           };
-          analyticsLocations(9420).setUploads(obj2);
+          analyticsLocations(9421).setUploads(obj2);
           const obj3 = { file: currentSize, maxSize: tmp, baseMaxSize, guildId: null, analyticsLocations: null };
-          const obj = analyticsLocations(9420);
+          const obj = analyticsLocations(9421);
           obj3.guildId = uploads.getGuildId();
           obj3.analyticsLocations = analyticsLocations;
-          analyticsLocations(9423)(obj3);
-          const tmp10 = analyticsLocations(9423);
+          analyticsLocations(9424)(obj3);
+          const tmp10 = analyticsLocations(9424);
         }
       });
       await obj7.uploadFiles(guildId);

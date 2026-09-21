@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06892_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06897_LegacyBaseButton.js";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";
@@ -365,6 +365,22 @@ export default function MediaMessagePreview(channelId) {
               onTapMessage();
             }
           }
+          const result = handleMessagesTapLink.handleMessagesTapLink({
+            allowWithinModal: true,
+            chatInputRef: "Boolean",
+            handleTransitionToThread(arg0, arg1, source) {
+              channel = channel.getChannel(arg1);
+              if (null != channel) {
+                const obj2 = { source, navigationReplace: false };
+                channelId(onClose[28]).transitionToThread(channel, obj2);
+                const obj = channelId(onClose[28]);
+              }
+            },
+            message: stateFromStores1,
+            messageChannel: stateFromStores,
+            selectedChannelId: channelId,
+            tapLinkData: nativeEvent.nativeEvent,
+          });
           let obj2 = {
             allowWithinModal: true,
             chatInputRef: "Boolean",
@@ -381,7 +397,6 @@ export default function MediaMessagePreview(channelId) {
             selectedChannelId: channelId,
             tapLinkData: nativeEvent.nativeEvent,
           };
-          const result = handleMessagesTapLink.handleMessagesTapLink(obj2);
         },
         inverted: false,
       };

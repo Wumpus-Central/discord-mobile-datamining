@@ -58,7 +58,7 @@ function SuggestionRow(suggestion) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SuggestedFriendSource = fn(12950).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12952).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4756);
@@ -66,7 +66,7 @@ let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-    paddingTop: fn(5894).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(5899).NAV_BAR_HEIGHT + 32,
     justifyContent: "center",
   },
   header: null,
@@ -81,7 +81,7 @@ let obj2 = {
 let obj3 = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
-  paddingTop: fn(5894).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5899).NAV_BAR_HEIGHT + 32,
   justifyContent: "center",
 };
 obj2.header = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
@@ -223,7 +223,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj7.contentContainerStyle = { paddingHorizontal: onSubmit(576).space.PX_16, paddingBottom: sum1 };
   obj7.data = memo;
   obj7.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(8996).FlashList, obj7), ,];
+  const items5 = [closure_8(friendSuggestions(8997).FlashList, obj7), ,];
   const obj9 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   let obj8 = { paddingHorizontal: onSubmit(576).space.PX_16, paddingBottom: sum1 };
   obj9.start = friendSuggestions(1094).VerticalGradient.START;

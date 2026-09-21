@@ -9,13 +9,13 @@ import ActivityPrivacyMatchingExperiment from "../../../activity_privacy/Activit
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11723);
+const SettingBuilders = fn(11725);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(8232).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8233).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
     return ActivityPrivacyMatchingExperiment.useIsInActivityPrivacyCopyExperiment(
       "ActivityPrivacyDefaultSharingSetting",
@@ -73,7 +73,7 @@ const radio = SettingBuilders.createRadio({
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj2.settingName = activityRestrictionSettingName;
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16229, dependencyMap.paths),
+          asyncRequireImpl(16235, dependencyMap.paths),
           "ActivityPrivacyUpsellActionSheet",
           obj2,
         );

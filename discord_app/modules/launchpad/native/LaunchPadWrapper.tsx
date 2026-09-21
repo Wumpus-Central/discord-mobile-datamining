@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
   TouchableOpacity: closure_7,
   StyleSheet: closure_8,
 } = get_ActivityIndicator);
-const LaunchPadTypes = fn(11719).LaunchPadTypes;
+const LaunchPadTypes = fn(11721).LaunchPadTypes;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11 } = Constants);
 const jsxProd = fn(21);

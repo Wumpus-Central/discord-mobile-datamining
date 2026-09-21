@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15359);
+const YouBarConstants = fn(15365);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7,
@@ -76,12 +76,12 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
     if (null != name) {
       let obj3 = { style: tmp.youButton, children: null };
       const obj5 = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
-      const items2 = [closure_9(tmp9(16720), obj5)];
+      const items2 = [closure_9(tmp9(16726), obj5)];
       const obj6 = { style: null, children: null };
       const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
       obj6.style = items3;
       const obj7 = { userId: stateFromStores.id, username: name };
-      obj6.children = closure_9(tmp9(16721), obj7);
+      obj6.children = closure_9(tmp9(16727), obj7);
       items2[1] = closure_9(tmp9(4492).View, obj6);
       obj3.children = items2;
     }
@@ -90,7 +90,7 @@ export default noop.memo(function YouBarUser(isQuestRendered) {
   const obj8 = { style: null, children: null };
   const items4 = [tmp.youButton];
   obj8.style = items4;
-  const items5 = [closure_9(sharedValue(16719), { isLarge: !isQuestRendered })];
+  const items5 = [closure_9(sharedValue(16725), { isLarge: !isQuestRendered })];
   const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
   const items6 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
   obj9.style = items6;

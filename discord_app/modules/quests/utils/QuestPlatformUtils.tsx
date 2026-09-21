@@ -153,7 +153,7 @@ function openAppStoreOrUrl(link) {
                     closure_0(
                       constants.QUEST_APP_STORE_OVERLAY_CLOSED,
                       str,
-                      closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                      closure_0(7954).AppStoreOverlayVariant.NATIVE,
                       arg0,
                     );
                     const ComponentDispatch = closure_0(1110).ComponentDispatch;
@@ -170,9 +170,9 @@ function openAppStoreOrUrl(link) {
                           return closure_1_0(
                             arg0,
                             str,
-                            closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                            closure_0(7954).AppStoreOverlayVariant.NATIVE,
                             arg1,
-                            closure_0(7952).AppStoreOverlaySurfaces.MAIN_CTA,
+                            closure_0(7954).AppStoreOverlaySurfaces.MAIN_CTA,
                           );
                         },
                       };
@@ -180,14 +180,14 @@ function openAppStoreOrUrl(link) {
                       closure_0(
                         constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED,
                         str,
-                        closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                        closure_0(7954).AppStoreOverlayVariant.NATIVE,
                       );
                     } else {
                       closure_1_1();
                       closure_0(
                         constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                         str,
-                        closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                        closure_0(7954).AppStoreOverlayVariant.NATIVE,
                       );
                       const ComponentDispatch = closure_0(1110).ComponentDispatch;
                       ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -199,7 +199,7 @@ function openAppStoreOrUrl(link) {
                     closure_0(
                       constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                       str,
-                      closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                      closure_0(7954).AppStoreOverlayVariant.NATIVE,
                     );
                     const ComponentDispatch = closure_0(1110).ComponentDispatch;
                     ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -224,7 +224,7 @@ function openAppStoreOrUrl(link) {
                     closure_0(
                       constants.QUEST_APP_STORE_OVERLAY_CLOSED,
                       str,
-                      closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                      closure_0(7954).AppStoreOverlayVariant.NATIVE,
                       arg0,
                     );
                     const ComponentDispatch = closure_0(1110).ComponentDispatch;
@@ -241,9 +241,9 @@ function openAppStoreOrUrl(link) {
                           return closure_1_0(
                             arg0,
                             str,
-                            closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                            closure_0(7954).AppStoreOverlayVariant.NATIVE,
                             arg1,
-                            closure_0(7952).AppStoreOverlaySurfaces.MAIN_CTA,
+                            closure_0(7954).AppStoreOverlaySurfaces.MAIN_CTA,
                           );
                         },
                       };
@@ -251,14 +251,14 @@ function openAppStoreOrUrl(link) {
                       closure_0(
                         constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED,
                         str,
-                        closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                        closure_0(7954).AppStoreOverlayVariant.NATIVE,
                       );
                     } else {
                       closure_1_1();
                       closure_0(
                         constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                         str,
-                        closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                        closure_0(7954).AppStoreOverlayVariant.NATIVE,
                       );
                       const ComponentDispatch = closure_0(1110).ComponentDispatch;
                       ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -270,7 +270,7 @@ function openAppStoreOrUrl(link) {
                     closure_0(
                       constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                       str,
-                      closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                      closure_0(7954).AppStoreOverlayVariant.NATIVE,
                     );
                     const ComponentDispatch = closure_0(1110).ComponentDispatch;
                     ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -295,7 +295,7 @@ function openAppStoreOrUrl(link) {
                   closure_0(
                     constants.QUEST_APP_STORE_OVERLAY_CLOSED,
                     str,
-                    closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                    closure_0(7954).AppStoreOverlayVariant.NATIVE,
                     arg0,
                   );
                   const ComponentDispatch = closure_0(1110).ComponentDispatch;
@@ -312,9 +312,9 @@ function openAppStoreOrUrl(link) {
                         return closure_1_0(
                           arg0,
                           str,
-                          closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                          closure_0(7954).AppStoreOverlayVariant.NATIVE,
                           arg1,
-                          closure_0(7952).AppStoreOverlaySurfaces.MAIN_CTA,
+                          closure_0(7954).AppStoreOverlaySurfaces.MAIN_CTA,
                         );
                       },
                     };
@@ -322,14 +322,14 @@ function openAppStoreOrUrl(link) {
                     closure_0(
                       constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED,
                       str,
-                      closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                      closure_0(7954).AppStoreOverlayVariant.NATIVE,
                     );
                   } else {
                     closure_1_1();
                     closure_0(
                       constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                       str,
-                      closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                      closure_0(7954).AppStoreOverlayVariant.NATIVE,
                     );
                     const ComponentDispatch = closure_0(1110).ComponentDispatch;
                     ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -341,7 +341,7 @@ function openAppStoreOrUrl(link) {
                   closure_0(
                     constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                     str,
-                    closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                    closure_0(7954).AppStoreOverlayVariant.NATIVE,
                   );
                   const ComponentDispatch = closure_0(1110).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -364,7 +364,7 @@ function openAppStoreOrUrl(link) {
                 closure_0(
                   constants.QUEST_APP_STORE_OVERLAY_CLOSED,
                   str,
-                  closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                  closure_0(7954).AppStoreOverlayVariant.NATIVE,
                   arg0,
                 );
                 const ComponentDispatch = closure_0(1110).ComponentDispatch;
@@ -381,9 +381,9 @@ function openAppStoreOrUrl(link) {
                       return closure_1_0(
                         arg0,
                         str,
-                        closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                        closure_0(7954).AppStoreOverlayVariant.NATIVE,
                         arg1,
-                        closure_0(7952).AppStoreOverlaySurfaces.MAIN_CTA,
+                        closure_0(7954).AppStoreOverlaySurfaces.MAIN_CTA,
                       );
                     },
                   };
@@ -391,14 +391,14 @@ function openAppStoreOrUrl(link) {
                   closure_0(
                     constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED,
                     str,
-                    closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                    closure_0(7954).AppStoreOverlayVariant.NATIVE,
                   );
                 } else {
                   closure_1_1();
                   closure_0(
                     constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                     str,
-                    closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                    closure_0(7954).AppStoreOverlayVariant.NATIVE,
                   );
                   const ComponentDispatch = closure_0(1110).ComponentDispatch;
                   ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -410,7 +410,7 @@ function openAppStoreOrUrl(link) {
                 closure_0(
                   constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                   str,
-                  closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                  closure_0(7954).AppStoreOverlayVariant.NATIVE,
                 );
                 const ComponentDispatch = closure_0(1110).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -423,9 +423,9 @@ function openAppStoreOrUrl(link) {
                     return closure_1_0(
                       arg0,
                       str,
-                      closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                      closure_0(7954).AppStoreOverlayVariant.NATIVE,
                       arg1,
-                      closure_0(7952).AppStoreOverlaySurfaces.MAIN_CTA,
+                      closure_0(7954).AppStoreOverlaySurfaces.MAIN_CTA,
                     );
                   },
                 };
@@ -433,14 +433,14 @@ function openAppStoreOrUrl(link) {
                 closure_0(
                   constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED,
                   str,
-                  closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                  closure_0(7954).AppStoreOverlayVariant.NATIVE,
                 );
               } else {
                 closure_1_1();
                 closure_0(
                   constants.QUEST_APP_STORE_OVERLAY_OPEN_FAILED,
                   str,
-                  closure_0(7952).AppStoreOverlayVariant.NATIVE,
+                  closure_0(7954).AppStoreOverlayVariant.NATIVE,
                 );
                 const ComponentDispatch = closure_0(1110).ComponentDispatch;
                 ComponentDispatch.dispatch(constants2.QUEST_APP_STORE_OVERLAY_FINISHED);
@@ -492,12 +492,12 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   }
   if (
     obj.shouldMigrateToAdAnalyticsInterface(
-      adContentId(7963).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL,
+      adContentId(7965).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL,
       "open_ad_game_link_directly",
     )
   ) {
     const obj2 = {
-      type: tmp2(7974).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA,
+      type: tmp2(7976).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA,
       adCreativeType,
       adCreativeId: adContentId,
       questContentCTA: null,
@@ -513,8 +513,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
       position: obj5.questContentPosition,
       impressionId: obj5.impressionId,
     } = impressionId);
-    tmp2(7964).captureAdUserAction(obj2);
-    const tmp2Result = tmp2(7964);
+    tmp2(7966).captureAdUserAction(obj2);
+    const tmp2Result = tmp2(7966);
   } else {
     const obj4 = {
       adContentId,
@@ -532,8 +532,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
       impressionId: obj3.impressionId,
       sourceQuestContent: obj3.sourceQuestContent,
     } = impressionId);
-    const result = tmp2(7952).trackAdContentClicked(obj4);
-    const tmp2Result3 = tmp2(7952);
+    const result = tmp2(7954).trackAdContentClicked(obj4);
+    const tmp2Result3 = tmp2(7954);
   }
   const ComponentDispatch = tmp2(1110).ComponentDispatch;
   ComponentDispatch.dispatch(constants.QUEST_GAME_LINK_OPENED);
@@ -545,15 +545,15 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
-    iosAttributionClickFramework = tmp2(11741).getIosAttributionClickFramework(
+    iosAttributionClickFramework = tmp2(11743).getIosAttributionClickFramework(
       null != iosAppId,
       impressionId.sourceQuestContent,
       adContentId,
     );
-    const tmp2Result4 = tmp2(11741);
+    const tmp2Result4 = tmp2(11743);
   }
   let fn;
-  obj = adContentId(7963);
+  obj = adContentId(7965);
   if (null != iosAttributionClickFramework) {
     if (null != impressionId) {
       fn = () => IosAttributionImpressionRegistry.getStoreKitCredential({ impressionId });

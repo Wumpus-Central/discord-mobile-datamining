@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod12489 from "../../../../../../../_runtime/metro/12489__.js";
+import _mod12491 from "../../../../../../../_runtime/metro/12491__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ThreadPlusIcon = function ThreadPlusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12489, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12491, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

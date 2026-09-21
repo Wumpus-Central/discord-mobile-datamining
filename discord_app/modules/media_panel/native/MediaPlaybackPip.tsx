@@ -66,7 +66,7 @@ function MediaInfo(message) {
           if (contentMessage.attachments.length > 0) {
             str2 = "";
             if (null != activeMediaPlayerSource.attachmentIndex) {
-              str2 = tmp4(8536)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
+              str2 = tmp4(8537)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
             }
           }
         }
@@ -93,7 +93,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj6 = { style: { flex: 1 }, children: null };
           const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(17678).Marquee, obj7)];
+          const items3 = [closure_15(tmp2(17689).Marquee, obj7)];
           const obj8 = {
             start: { x: 0, y: 0 },
             end: { x: 1, y: 0 },
@@ -180,7 +180,7 @@ function PiPControls(message) {
   const obj3 = { style: null, children: null };
   const items1 = [tmp.pipControls, animatedStyle];
   obj3.style = items1;
-  const items2 = [closure_15(message(9183).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
+  const items2 = [closure_15(message(9184).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
   const obj4 = {
     disabled: !visible,
     style: null,
@@ -188,7 +188,7 @@ function PiPControls(message) {
     accessible: true,
     accessibilityRole: "button",
     accessibilityLabel: stringResult,
-    children: closure_15(message(5840).ArrowLargeLeftIcon, { size: "sm" }),
+    children: closure_15(message(5845).ArrowLargeLeftIcon, { size: "sm" }),
   };
   const items3 = [,];
   ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
@@ -214,7 +214,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17542).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17553).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const createStyles = fn(4756);

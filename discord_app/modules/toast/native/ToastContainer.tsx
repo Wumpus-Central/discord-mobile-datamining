@@ -181,7 +181,7 @@ let obj = {
     alignSelf: "center",
     flexDirection: "row",
     justifyContent: "center",
-    shadowColor: fn(5653).TOAST_CONTAINER_SHADOW_COLOR,
+    shadowColor: fn(5658).TOAST_CONTAINER_SHADOW_COLOR,
   },
 };
 let closure_7 = createStyles.createStyles(obj);
@@ -201,7 +201,7 @@ let obj3 = {
   alignSelf: "center",
   flexDirection: "row",
   justifyContent: "center",
-  shadowColor: fn(5653).TOAST_CONTAINER_SHADOW_COLOR,
+  shadowColor: fn(5658).TOAST_CONTAINER_SHADOW_COLOR,
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/toast/native/ToastContainer.tsx");

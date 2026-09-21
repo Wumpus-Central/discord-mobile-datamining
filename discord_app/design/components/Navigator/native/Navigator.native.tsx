@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.tsx";
 import Link from "../../../../../_runtime/01485_Link.js";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod5843 from "../../../../../_runtime/metro/05843__.js";
+import _mod5848 from "../../../../../_runtime/metro/05848__.js";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
-import StackNavigator from "../../../../../_runtime/07242_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07247_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -293,7 +293,7 @@ function WrappedNavigationStack(arg0) {
     onStateChange: null,
     children: null,
   });
-  obj4.children = jsx(_mod5843.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj4.children = jsx(_mod5848.HeaderBackContext.Provider, { value: "Array", children: 0 });
   return jsx(Link.NavigationIndependentTree, { children: null });
 }
 get_ActivityIndicator = fn(17);

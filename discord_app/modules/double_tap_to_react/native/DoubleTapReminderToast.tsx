@@ -45,14 +45,14 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
     if (flag == null) {
       flag = false;
     }
-    const result = tmp(8225).disambiguatedEmojiFromSettingsValue(setting);
+    const result = tmp(8226).disambiguatedEmojiFromSettingsValue(setting);
     let areEmojisEqualResult = !flag;
     if (!flag) {
       areEmojisEqualResult = null != result;
     }
     if (areEmojisEqualResult) {
-      areEmojisEqualResult = tmp(8225).areEmojisEqual(result, emoji);
-      const tmpResult3 = tmp(8225);
+      areEmojisEqualResult = tmp(8226).areEmojisEqual(result, emoji);
+      const tmpResult3 = tmp(8226);
     }
     if (areEmojisEqualResult) {
       const obj2 = {
@@ -73,7 +73,7 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       );
       const tmpResult4 = tmp(4576);
     }
-    const tmpResult = tmp(8225);
+    const tmpResult = tmp(8226);
   }
   obj = require("DismissibleContentUnsafeUtils");
 };

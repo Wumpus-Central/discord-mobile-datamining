@@ -18,7 +18,7 @@ let obj = {
   container: {
     flexDirection: "row",
     alignItems: "center",
-    height: fn(5894).NAV_BAR_HEIGHT,
+    height: fn(5899).NAV_BAR_HEIGHT,
     paddingHorizontal: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -31,7 +31,7 @@ let obj = {
 let obj3 = {
   flexDirection: "row",
   alignItems: "center",
-  height: fn(5894).NAV_BAR_HEIGHT,
+  height: fn(5899).NAV_BAR_HEIGHT,
   paddingHorizontal: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   borderBottomWidth: StyleSheet.hairlineWidth,

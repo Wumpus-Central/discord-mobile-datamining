@@ -1,10 +1,10 @@
 // discord_app/modules/markup_v2/native/parseNativeMarkup.tsx
-import _mod8363 from "../../../../_runtime/metro/08363__.js";
+import _mod8364 from "../../../../_runtime/metro/08364__.js";
 import transformNativeMarkupNode from "transformNativeMarkupNode.tsx";
 import apply from "../../../../_runtime/metro/00012__.js";
 
 require = fn;
-let closure_2 = apply.once(() => _mod8363.parse);
+let closure_2 = apply.once(() => _mod8364.parse);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/markup_v2/native/parseNativeMarkup.tsx");
 

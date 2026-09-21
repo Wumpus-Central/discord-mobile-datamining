@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const Text_Text = tmp3(4752);
 const Stack_Stack = tmp3(5184);
-const Pressables = tmp3(5334);
+const Pressables = tmp3(5339);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);

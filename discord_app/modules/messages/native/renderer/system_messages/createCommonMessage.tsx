@@ -4,8 +4,8 @@ import DateUtils from "../../../../../utils/DateUtils.tsx";
 import ColorUtils from "../../../../../utils/ColorUtils.tsx";
 import shared from "../../../../../design/shared.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
-import _modDef8222 from "../../../../../../_runtime/metro/08222__.js";
 import _modDef8223 from "../../../../../../_runtime/metro/08223__.js";
+import _modDef8224 from "../../../../../../_runtime/metro/08224__.js";
 import MessageAccessibilityActions from "../../MessageAccessibilityActions.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
@@ -50,8 +50,8 @@ export default function createCommonMessage(reactions) {
   obj.dark = shared.isThemeDark(theme);
   obj.highlightColor = tmp.highlightColor;
   obj.reactions = reactions.reactions;
-  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8222);
-  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8223);
+  obj.swipeToReplyIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8223);
+  obj.swipeToEditIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8224);
   obj.accessibilityActions = MessageAccessibilityActions.createMessageAccessibilityActions(message, channel);
   return obj;
 }

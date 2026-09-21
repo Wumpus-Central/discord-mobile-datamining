@@ -215,7 +215,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj8.onSubmitEditing = callback2;
-  items5[1] = closure_6(clarification(6843).TextInput, obj8);
+  items5[1] = closure_6(clarification(6848).TextInput, obj8);
   obj6.children = items5;
   items4[3] = closure_7(closure_5, obj6);
   obj2.children = items4;

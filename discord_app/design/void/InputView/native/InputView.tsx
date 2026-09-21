@@ -67,7 +67,7 @@ obj2.inputView = {
   paddingTop: 0,
   textAlignVertical: "top",
   flex: 1,
-  color: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
+  color: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
 };
 obj2.inputViewBorder = { marginTop: 8, height: 2 };
 let obj5 = {
@@ -76,7 +76,7 @@ let obj5 = {
   paddingTop: 0,
   textAlignVertical: "top",
   flex: 1,
-  color: fn(5653).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
+  color: fn(5658).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
 };
 obj2.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
@@ -85,9 +85,9 @@ let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.charactersLength = {
   alignSelf: "flex-end",
   fontFamily: Fonts.CODE_BOLD,
-  color: fn(5653).DARK_PRIMARY_400_LIGHT_PRIMARY_300,
+  color: fn(5658).DARK_PRIMARY_400_LIGHT_PRIMARY_300,
 };
-let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5653).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5658).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.clearButton = { position: "absolute", right: 6 };
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };

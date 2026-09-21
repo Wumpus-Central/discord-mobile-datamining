@@ -8,10 +8,10 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAutomodRulesList = fn(17929).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(17931);
+const useAutomodRulesList = fn(17940).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(17942);
 ({ useAutomodEditingRuleActions: metroRequire, useAutomodEditingRuleState: closure_7 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(12115).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(12117).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let c12 = "automod-delete-rule";
@@ -339,7 +339,7 @@ export default function GuildSettingsAutomodRule(guildId) {
                         let v0 = 1;
                         c5 = 2;
                         c6 = 1;
-                        const obj6 = { value: closure_0(12120).deleteAutomodRule(id, closure_0), done: false };
+                        const obj6 = { value: closure_0(12122).deleteAutomodRule(id, closure_0), done: false };
                         return obj6;
                       }
                     } else if (1 === tmp7) {

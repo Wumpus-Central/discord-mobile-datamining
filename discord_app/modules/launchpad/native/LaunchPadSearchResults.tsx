@@ -126,7 +126,7 @@ let closure_14 = noop.memo((guild) => {
   items4[2] = renderChannelContentDefault(obj8);
   obj5.children = items4;
   obj4.children = tmp8(closure_11(closure_10, obj5), { fontScale });
-  return tmp7(closure_9(guild(5334).PressableHighlight, obj4));
+  return tmp7(closure_9(guild(5339).PressableHighlight, obj4));
 });
 let closure_16 = noop.memo((arg0) => {
   ({ name, onPress, note } = arg0);

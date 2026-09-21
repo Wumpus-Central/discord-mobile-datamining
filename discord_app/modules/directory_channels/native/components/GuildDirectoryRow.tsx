@@ -260,5 +260,5 @@ export default noop.memo(function GuildDirectoryRow(entry) {
   items7[3] = closure_10(entry(5186).Button, obj22);
   obj5.children = items7;
   obj4.children = closure_12(View, obj5);
-  return closure_10(entry(5819).Card, obj4);
+  return closure_10(entry(5824).Card, obj4);
 });

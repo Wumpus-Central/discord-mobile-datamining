@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef14044 from "../../../../../_runtime/metro/14044__.js";
+import _modDef14050 from "../../../../../_runtime/metro/14050__.js";
 import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles_mod from "../../../rebrand/native/TextStyles.tsx";
@@ -54,8 +54,8 @@ export default function VoiceEmptyState(channel) {
   obj4.title = intl.string(util.t["/HABZo"]);
   const intl2 = util.intl;
   obj4.body = intl2.string(util.t["5Jy2FY"]);
-  obj4.lightSource = _modDef14044;
-  obj4.darkSource = _modDef14044;
+  obj4.lightSource = _modDef14050;
+  obj4.darkSource = _modDef14050;
   ({ emptyTitle: obj3.titleStyle, emptyBody: obj3.bodyStyle } = tmp);
   obj4.imageStyle = { marginBottom: 16, marginTop: 20 };
   const items1 = [

@@ -133,7 +133,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7440).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7445).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -187,7 +187,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(18062).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(18073).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -195,9 +195,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let obj = metadataField(18062);
-  const tmpResult = metadataField(18062);
-  str1 = metadataField(18062).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(18073);
+  const tmpResult = metadataField(18073);
+  str1 = metadataField(18073).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -328,9 +328,9 @@ function NumericalConfigRule(existingPendingConfiguration) {
         _slicedToArray(tmp3, num);
       },
     };
-    return onInputValueChange(metadataField(7440).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(7445).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(18062).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(18073).displayedValueFor(value, realizedOperatorForResult);
 }
 function BlueskyMetadataRules(arg0) {
   ({ configMetadataMap, onConfigurationChange, locked } = arg0);
@@ -858,7 +858,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1074).PlatformTypes;
-const Constants = fn(5620);
+const Constants = fn(5625);
 ({
   MetadataFields: closure_7,
   OperatorTypes: closure_8,

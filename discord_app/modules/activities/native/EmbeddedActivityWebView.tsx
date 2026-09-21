@@ -9,7 +9,7 @@ import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCreators.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import usePreviousDefault from "../../../hooks/usePrevious.tsx";
-import WebView from "../../../../_runtime/08568_WebView.js";
+import WebView from "../../../../_runtime/08569_WebView.js";
 import getURLForApplication from "../getURLForApplication.tsx";
 import getPostMessageJavaScriptDefault from "getPostMessageJavaScript.tsx";
 import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager.tsx";

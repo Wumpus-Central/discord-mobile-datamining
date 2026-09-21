@@ -1247,7 +1247,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "Array" };
+                      obj8 = { uri, overrideType: "y" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1266,7 +1266,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "Array" };
+                  const obj9 = { uri, overrideType: "y" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }
@@ -1973,7 +1973,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
           } else {
             tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
           }
-          tmpResult = closure_1_0(5370);
+          tmpResult = closure_1_0(5375);
         }
         const obj = closure_1_0(1364);
       })(closure_131_0, closure_131_1)) {
@@ -2518,8 +2518,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(5370).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(5370).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(5375).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(5375).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

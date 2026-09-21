@@ -15,11 +15,11 @@ import BundleSampleV2Default from "BundleSampleV2.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef9123 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import _modDef9124 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import getProductName from "../utils/getProductName.tsx";
-import _modDef11278 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
+import _modDef11280 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -30,7 +30,7 @@ function ProfileEffectAssetPreview(item) {
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: null };
     const obj2 = { source: null, alt: null, style: null, resizeMode: "cover" };
-    const obj3 = { uri: _modDef11278 };
+    const obj3 = { uri: _modDef11280 };
     obj2.source = obj3;
     obj2.alt = tmp4.accessibilityLabel;
     obj2.style = tmp.profileEffect;
@@ -153,7 +153,7 @@ function CollectibleProductPreviewContent(userAvatarSource) {
     return React5(FractionalNitroCoinIllustration.FractionalNitroCoinIllustration, size);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const obj = { source: null, style: null };
-    const obj2 = { uri: _modDef9123 };
+    const obj2 = { uri: _modDef9124 };
     obj.source = obj2;
     obj.style = tmp.externalProductImage;
     return React5(FastImageDefault, obj);
@@ -280,7 +280,7 @@ function ProductPriceAmountTag(product) {
 }
 const View = fn(17).View;
 const EXTERNAL_PRODUCT_SKU_IDS = fn(1076).EXTERNAL_PRODUCT_SKU_IDS;
-const CollectiblesPreviewConstants = fn(9078);
+const CollectiblesPreviewConstants = fn(9079);
 ({ BUNDLE_PREVIEW_CONFIG: metroRequire, SAMPLE_PROFILE_ASPECT_RATIO } = CollectiblesPreviewConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

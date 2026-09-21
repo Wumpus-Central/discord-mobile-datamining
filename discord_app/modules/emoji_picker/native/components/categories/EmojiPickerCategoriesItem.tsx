@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let EmojiCategoryTypes = fn(5675).EmojiCategoryTypes;
+let EmojiCategoryTypes = fn(5680).EmojiCategoryTypes;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: closure_7, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);

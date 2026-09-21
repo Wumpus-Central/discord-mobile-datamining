@@ -9,9 +9,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodStore = fn(17929);
+const AutomodStore = fn(17940);
 ({ useAutomodRulesList: closure_4, useSyncAutomodRulesEffect: hasOwnProperty } = AutomodStore);
-let closure_6 = fn(17931).useAutomodEditingRuleState;
+let closure_6 = fn(17942).useAutomodEditingRuleState;
 const Constants = fn(1074);
 ({ GuildSettingsSections: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsxProd = fn(21);

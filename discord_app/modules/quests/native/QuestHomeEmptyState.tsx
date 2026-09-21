@@ -7,7 +7,7 @@ import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../_runtime/05198_LinearGradient.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef15329 from "../../../../_runtime/metro/15329__.js";
+import _modDef15335 from "../../../../_runtime/metro/15335__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -83,7 +83,7 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
-    const obj11 = { style: tmp5.emptyImage, source: _modDef15329, resizeMode: "cover" };
+    const obj11 = { style: tmp5.emptyImage, source: _modDef15335, resizeMode: "cover" };
     const items2 = [timestampProducer(React4, obj11)];
     const obj22 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);

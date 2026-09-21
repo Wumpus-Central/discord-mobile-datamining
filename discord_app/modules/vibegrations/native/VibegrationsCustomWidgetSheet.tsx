@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(13359);
+const VibegrationsConnectionStore = fn(13361);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8 } = VibegrationsConnectionStore);
 const Routes = fn(1074).Routes;
 const StaticChannelRoute = fn(2048).StaticChannelRoute;
@@ -27,7 +27,7 @@ export default function VibegrationsCustomWidgetSheet() {
   const tmp4 = _slicedToArray(memo.useState(null), 2);
   [tmp7, asyncGeneratorStep] = memo.useState(false);
   _slicedToArray = memo.useRef(false);
-  memo = memo.useMemo(() => first(7484).resolveVibegrationsWorkspaceGuildId("VibegrationsCustomWidgetSheet"), []);
+  memo = memo.useMemo(() => first(5274).resolveVibegrationsWorkspaceGuildId("VibegrationsCustomWidgetSheet"), []);
   const callback = memo.useCallback((arg0) => {
     closure_1(arg0);
     dependencyMap(null);
@@ -151,7 +151,7 @@ export default function VibegrationsCustomWidgetSheet() {
   let obj2 = { title: null };
   let intl = value(1115).intl;
   obj2.title = intl.string(_modDef3678["27bu14"]);
-  obj.header = closure_11(value(7389).BottomSheetTitleHeader, obj2);
+  obj.header = closure_11(value(7394).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
   const obj4 = {
     label: null,
@@ -172,9 +172,9 @@ export default function VibegrationsCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(13357).VIBEGRATIONS_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(13359).VIBEGRATIONS_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
-  const items1 = [closure_11(value(7325).TextArea, obj4)];
+  const items1 = [closure_11(value(7330).TextArea, obj4)];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp12(1115).intl;
   obj5.text = intl5.string(_modDef3678["f/Jz/R"]);
@@ -184,6 +184,6 @@ export default function VibegrationsCustomWidgetSheet() {
   items1[1] = closure_11(value(5186).Button, obj5);
   obj3.children = items1;
   obj.children = closure_12(View, obj3);
-  return closure_11(value(7437).ActionSheet, obj);
+  return closure_11(value(7442).ActionSheet, obj);
 }
 export const VIBEGRATIONS_CUSTOM_WIDGET_SHEET_KEY = "VibegrationsCustomWidgetSheet";

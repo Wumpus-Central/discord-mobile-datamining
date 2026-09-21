@@ -179,9 +179,9 @@ let closure_17 = async function _maybePlayCustomJoinSound(arg0) {
               tmp23 = null;
               if (closure_130_16(closure_129_1)) {
                 (function playCustomJoinSound(sound, id) {
-                  closure_1_0(7578).playSoundLocally(id, sound);
-                  const obj = closure_1_0(7578);
-                  const result = closure_1_0(7586).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
+                  closure_1_0(7580).playSoundLocally(id, sound);
+                  const obj = closure_1_0(7580);
+                  const result = closure_1_0(7588).sendVoiceChannelCustomCallSoundEffect(id, sound, false);
                 })(sound, closure_129_1.id);
               }
             }

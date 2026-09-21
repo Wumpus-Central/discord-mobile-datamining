@@ -48,7 +48,7 @@ export default function ExemptRolesActionSheet(guildId) {
   obj2.getSearchText = getRoleName;
   obj2.renderLabel = renderRoleName;
   obj2.onSave = onSave;
-  return jsx(stateFromStores(17962), {
+  return jsx(stateFromStores(17973), {
     title: null,
     searchPlaceholder: null,
     listId: "automod-exempt-roles",

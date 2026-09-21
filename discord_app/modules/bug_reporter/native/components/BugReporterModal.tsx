@@ -84,7 +84,7 @@ class BugCreateScreen {
               dependencyMap = 1;
               c3 = 1;
               const obj5 = {
-                value: tmp5(5361).launchImageLibraryAsync({
+                value: tmp5(5366).launchImageLibraryAsync({
                   mediaType: "any",
                   includeBase64: false,
                   selectionLimit: 1,
@@ -109,10 +109,10 @@ class BugCreateScreen {
               const merged = Object.assign(closure_128_1);
               obj6.uri = closure_128_1.uri;
               obj6.originalUri = closure_128_1.uri;
-              obj6.platform = tmp2(5339).UploadPlatform.REACT_NATIVE;
+              obj6.platform = tmp2(5344).UploadPlatform.REACT_NATIVE;
               obj6.filename = closure_128_1.fileName;
               closure_128_2 = obj6;
-              const tmp34 = new tmp5(5339)(closure_128_2);
+              const tmp34 = new tmp5(5344)(closure_128_2);
               closure_128_3 = tmp34;
               closure_129_23.current = closure_129_7.length;
               closure_129_8((arg0) => {
@@ -327,7 +327,7 @@ class BugCreateScreen {
                                 closure_131_3.succeed();
                                 const obj5 = {
                                   key: "BUG_REPORT_BUG_SUBMITTED",
-                                  icon: closure_2_1(9620),
+                                  icon: closure_2_1(9621),
                                   content: null,
                                   toastDurationMs: null,
                                 };
@@ -339,7 +339,7 @@ class BugCreateScreen {
                               } else {
                                 const obj7 = {
                                   key: "BUG_REPORT_FAILED_TO_SUBMIT",
-                                  icon: closure_2_1(7232),
+                                  icon: closure_2_1(7237),
                                   content: null,
                                 };
                                 const intl = closure_2_0(1115).intl;
@@ -391,7 +391,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         const obj11 = {
-                          value: closure_2_0(10443).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(10444).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj11;
@@ -414,7 +414,7 @@ class BugCreateScreen {
                   if (first5) {
                     let obj5 = {
                       key: "BUG_REPORT_SUBMITTING_BUG",
-                      icon: screenshot(7232),
+                      icon: screenshot(7237),
                       content: null,
                       toastDurationMs: null,
                     };
@@ -430,7 +430,7 @@ class BugCreateScreen {
                 } else {
                   callback(true);
                   if (null == priority) {
-                    let obj7 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(7232), content: null };
+                    let obj7 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(7237), content: null };
                     let intl = handleSubmit(1115).intl;
                     obj7.content = intl.string(handleSubmit(1115).t["4t1o0u"]);
                     screenshot(4454).open(obj7);
@@ -441,7 +441,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(10442).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(10443).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -796,7 +796,7 @@ class BugCreateScreen {
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
         return ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(10468, dependencyMap.paths),
+          asyncRequireImpl(10469, dependencyMap.paths),
           "BugReporterFeatureActionSheet",
           { features: null != first7 ? first7.features : [], feature: first8, setFeature },
         );
@@ -884,6 +884,6 @@ export default function BugReportModal(screenshotUri) {
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(7240).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(7245).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 }
 export { BugCreateScreen };

@@ -65,7 +65,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(16271);
+const RegistrationUIStore = fn(16277);
 ({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
@@ -158,14 +158,14 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14975).NameValidationState.ERROR) {
+  if (type === tmp14(14981).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
   const items3 = [
-    closure_9(setUsername(6843).TextInput, obj3),
+    closure_9(setUsername(6848).TextInput, obj3),
     closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] }),
   ];
   obj6.children = items3;

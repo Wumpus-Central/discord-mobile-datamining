@@ -68,7 +68,7 @@ function ExternalPipViewVideoStream(streamId) {
   first = 300;
   _slicedToArray = undefined;
   noop = undefined;
-  const surfaceDirectRendererExperiment = streamId(9691).useSurfaceDirectRendererExperiment(streamId.userId, {
+  const surfaceDirectRendererExperiment = streamId(9692).useSurfaceDirectRendererExperiment(streamId.userId, {
     location: "ExternalPipViewVideoStream",
   });
   [first, _slicedToArray] = noop.useState(undefined);
@@ -102,7 +102,7 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items2);
-  let obj = streamId(9691);
+  let obj = streamId(9692);
   const token = streamId(4457).useToken(first(576).colors.TEXT_FEEDBACK_INFO);
   value = closure_7.get();
   _slicedToArray = value;
@@ -115,7 +115,7 @@ function ExternalPipViewVideoStream(streamId) {
     }
   }, items3);
   const children = [
-    closure_11(first(9702), {
+    closure_11(first(9703), {
       useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
       style: memo,
       streamId,

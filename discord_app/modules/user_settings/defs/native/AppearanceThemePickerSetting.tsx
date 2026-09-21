@@ -4,18 +4,18 @@ import util from "../../../../intl/index.native.tsx";
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11723);
+const SettingBuilders = fn(11725);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Ksh3ik);
   },
-  parent: fn(8232).MobileUserSettings.APPEARANCE,
+  parent: fn(8233).MobileUserSettings.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
     const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
-  useTrailing: fn(15525).useAppearanceSettingTrailing,
+  useTrailing: fn(15531).useAppearanceSettingTrailing,
   screen: {
     route: fn(1074).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

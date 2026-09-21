@@ -90,7 +90,7 @@ export default noop.memo(function MessagesHeader(height) {
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj2 = { withSpring: height(5185).withSpring, scrollPosition };
-  const isHomeDrawerEnabled = height(16355).useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = height(16361).useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
     if (rootNavigationRef != null) {
@@ -123,10 +123,10 @@ export default noop.memo(function MessagesHeader(height) {
       }
     }
   }, []);
-  let obj3 = height(16355);
+  let obj3 = height(16361);
   const obj4 = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-  const tmp12 = scrollPosition(5837)("bespoke");
-  obj4.icon = closure_6(height(11215).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
+  const tmp12 = scrollPosition(5842)("bespoke");
+  obj4.icon = closure_6(height(11216).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
   const intl = height(1115).intl;
   obj4.accessibilityLabel = intl.string(height(1115).t.jD1qzM);
   obj4.onPress = callback3;
@@ -154,14 +154,14 @@ export default noop.memo(function MessagesHeader(height) {
     onPress: callback2,
     variant: "secondary",
     size: "sm",
-    icon: scrollPosition(7292),
+    icon: scrollPosition(7297),
     accessibilityLabel: null,
   };
   const intl3 = tmp3(1115).intl;
   obj9.accessibilityLabel = intl3.string(height(1115).t["5h0QOP"]);
   const items2 = [
-    closure_6(height(8178).IconButton, obj9),
-    closure_6(scrollPosition(16361), { noMargin: true, onPress: callback, alternateVariant: true }),
+    closure_6(height(8179).IconButton, obj9),
+    closure_6(scrollPosition(16367), { noMargin: true, onPress: callback, alternateVariant: true }),
     ,
   ];
   const obj10 = {
@@ -177,7 +177,7 @@ export default noop.memo(function MessagesHeader(height) {
   const intl4 = tmp3(1115).intl;
   obj10.text = intl4.string(height(1115).t.zIJnA6);
   items2[2] = closure_6(height(5186).Button, obj10);
-  items2[3] = closure_6(height(8178).IconButton, obj4);
+  items2[3] = closure_6(height(8179).IconButton, obj4);
   obj8.children = items2;
   items1[1] = closure_7(closure_4, obj8);
   const obj11 = { style: null };

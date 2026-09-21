@@ -37,7 +37,7 @@ export const openSocialLayerStorefrontProductDetailsModal = function openSocialL
   merged,
 ) {
   const socialLayerStorefrontConfig = SocialLayerStorefrontActionCreators.fetchSocialLayerStorefrontConfig();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11060, dependencyMap.paths), merged, c5, {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11061, dependencyMap.paths), merged, c5, {
     presentation: "modal",
   });
 };
@@ -46,7 +46,7 @@ export const closeSocialLayerStorefrontProductDetailsModal = function closeSocia
 };
 export const openSocialLayerStorefrontGiftModal = function openSocialLayerStorefrontGiftModal(skuId) {
   if (obj.isSocialLayerStorefrontGiftingSupported()) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11085, dependencyMap.paths), skuId, c6);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11086, dependencyMap.paths), skuId, c6);
     const tmp3Result = ModalActionCreatorsDefault;
   } else {
     value = SKUStore.get(skuId.skuId);
@@ -68,7 +68,7 @@ export const openSocialLayerStorefrontProductSelfPurchaseSuccessModal =
     closure_0 = arg0;
     return actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return asyncRequireImpl(11272, dependencyMap.paths).then(
+        return asyncRequireImpl(11274, dependencyMap.paths).then(
           (SocialLayerStorefrontProductSelfPurchaseSuccessModal) => {
             closure_0 =
               SocialLayerStorefrontProductSelfPurchaseSuccessModal.SocialLayerStorefrontProductSelfPurchaseSuccessModal;
@@ -88,7 +88,7 @@ export const openSocialLayerStorefrontProductGiftPurchaseSuccessModal =
     closure_0 = arg0;
     return actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return asyncRequireImpl(11272, dependencyMap.paths).then(
+        return asyncRequireImpl(11274, dependencyMap.paths).then(
           (SocialLayerStorefrontProductGiftPurchaseSuccessModal) => {
             closure_0 =
               SocialLayerStorefrontProductGiftPurchaseSuccessModal.SocialLayerStorefrontProductGiftPurchaseSuccessModal;

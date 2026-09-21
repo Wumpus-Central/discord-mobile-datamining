@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsConjureDither.android.tsx
 import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
-import inlineStyles from "../../../../_runtime/08727_inlineStyles.js";
-import _mod17044 from "../../../../_runtime/metro/17044__.js";
+import inlineStyles from "../../../../_runtime/08728_inlineStyles.js";
+import _mod17052 from "../../../../_runtime/metro/17052__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -29,9 +29,9 @@ function BandPicture(width) {
     const size = {
       x: item.x,
       y: item.y,
-      width: _mod17044.CELL,
-      height: _mod17044.CELL,
-      rx: _mod17044.CORNER,
+      width: _mod17052.CELL,
+      height: _mod17052.CELL,
+      rx: _mod17052.CORNER,
       fill,
       fillOpacity,
     };
@@ -53,10 +53,10 @@ function BandPicture(width) {
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod17044;
+    const obj3 = _mod17052;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod17044.blobReach(peak, radius, closure_5 + _mod17044.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod17044.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod17052.blobReach(peak, radius, closure_5 + _mod17052.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod17052.blobReach(peak.peak, peak.radius, bound));
     items = [
       timestampProducer(inlineStyles.Stop, obj2),
       timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 }),
@@ -82,7 +82,7 @@ function BandPicture(width) {
   const items2 = [tmp9Result];
   const BLOBS1 = tmp(tmp2[3]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod17044.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod17052.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {

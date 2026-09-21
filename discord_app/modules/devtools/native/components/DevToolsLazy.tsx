@@ -15,7 +15,7 @@ let items = [
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      asyncRequireImpl(14852, dependencyMap.paths).then((navigateToDevTools) => {
+      asyncRequireImpl(14858, dependencyMap.paths).then((navigateToDevTools) => {
         navigateToDevTools.navigateToDevTools();
       });
       return true;
@@ -47,7 +47,7 @@ export default function DevToolsLazy() {
   const keyCommands = stateFromStores(5182).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(16250).default, {});
+      return jsx(tmp(16256).default, {});
     }
   }
   return null;

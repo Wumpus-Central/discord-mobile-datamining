@@ -7,7 +7,7 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(10301);
+const StageChannelListStore = fn(10302);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -76,7 +76,7 @@ export default noop.memo((channel) => {
         return items;
       },
       items1,
-      channel(5644).isVersionEqual,
+      channel(5649).isVersionEqual,
     ),
     1,
   )[0];
@@ -110,7 +110,7 @@ export default noop.memo((channel) => {
       items2[1] = closure_8(View, obj6);
       obj3.children = items2;
       obj2.children = closure_9(View, obj3);
-      tmp5 = closure_8(tmp2(5334).PressableOpacity, obj2);
+      tmp5 = closure_8(tmp2(5339).PressableOpacity, obj2);
     }
   }
   return tmp5;

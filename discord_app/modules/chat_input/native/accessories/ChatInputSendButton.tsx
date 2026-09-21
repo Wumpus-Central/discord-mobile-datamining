@@ -39,7 +39,7 @@ function FloatingSlot(arg0) {
   return jsx(ReanimatedRexportDefault.View, { style: null, children });
 }
 const View = fn(17).View;
-let closure_8 = fn(12213).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(12215).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = {
   BUTTON_SEND: "send-button",
@@ -182,7 +182,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
     obj7.style = size;
     if (canSendVoiceMessage) {
       const obj8 = { disabled: stateFromStores1, channelId: channel.id };
-      let tmp15Result = jsx(onSendMessage(12506), { disabled: stateFromStores1, channelId: channel.id });
+      let tmp15Result = jsx(onSendMessage(12508), { disabled: stateFromStores1, channelId: channel.id });
     } else {
       const obj9 = {
         active: true,
@@ -200,7 +200,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
       obj9.accessibilityLabel = intl.string(tmp(1115).t.TXNS7S);
       obj9.onPress = onSendMessage;
       obj9.disabled = !tmp12;
-      tmp15Result = jsx(onSendMessage(12490), {
+      tmp15Result = jsx(onSendMessage(12492), {
         active: true,
         style: null,
         activeStyle: null,
@@ -210,7 +210,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
         onPress: null,
         disabled: null,
       });
-      const tmp3Result = onSendMessage(12490);
+      const tmp3Result = onSendMessage(12492);
     }
     obj7.children = tmp15Result;
     return <canSendVoiceMessage style={null}>{null}</canSendVoiceMessage>;

@@ -34,27 +34,27 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const obj5 = { guild: stateFromStores, size: null };
   const obj2 = guildId(504);
   const tmp8 = stateFromStores1;
-  obj5.size = guildId(5796).GuildIconSizes.LARGE;
-  obj4.children = closure_7(stateFromStores1(5796), obj5);
+  obj5.size = guildId(5801).GuildIconSizes.LARGE;
+  obj4.children = closure_7(stateFromStores1(5801), obj5);
   obj3.leading = closure_7(View, obj4);
   const intl = guildId(1115).intl;
   obj3.title = intl.string(guildId(1115).t.tlopTM);
-  const items2 = [closure_7(guildId(7389).BottomSheetTitleHeader, obj3), ,];
+  const items2 = [closure_7(guildId(7394).BottomSheetTitleHeader, obj3), ,];
   const obj6 = { leading: null, label: null, onPress: null };
-  const tmp9 = stateFromStores1(5796);
-  obj6.leading = closure_7(guildId(1177).Icon, { source: stateFromStores1(12628) });
+  const tmp9 = stateFromStores1(5801);
+  obj6.leading = closure_7(guildId(1177).Icon, { source: stateFromStores1(12630) });
   const obj8 = { text: null };
   const intl2 = guildId(1115).intl;
   obj8.text = intl2.string(guildId(1115).t.e6RscS);
-  obj6.label = closure_7(guildId(8870).FormLabel, obj8);
+  obj6.label = closure_7(guildId(8871).FormLabel, obj8);
   obj6.onPress = function onPress() {
     ReadStateActionCreators.ackGuildFeature(guildId, ReadStateTypes.GUILD_EVENT);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items2[1] = closure_7(guildId(8870).FormRow, obj6);
+  items2[1] = closure_7(guildId(8871).FormRow, obj6);
   const obj9 = { leading: null, label: null, onPress: null };
-  const obj7 = { source: stateFromStores1(12628) };
-  obj9.leading = closure_7(guildId(1177).Icon, { source: tmp8(stateFromStores1 ? 12629 : 12630) });
+  const obj7 = { source: stateFromStores1(12630) };
+  obj9.leading = closure_7(guildId(1177).Icon, { source: tmp8(stateFromStores1 ? 12631 : 12632) });
   const intl3 = tmp2(1115).intl;
   const string = intl3.string;
   const t = tmp2(1115).t;
@@ -64,7 +64,7 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
     stringResult = string(t.ONG3Yz);
   }
   const obj11 = { children: null };
-  obj9.label = closure_7(guildId(8870).FormLabel, { text: stringResult });
+  obj9.label = closure_7(guildId(8871).FormLabel, { text: stringResult });
   obj9.onPress = function onPress() {
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
@@ -73,7 +73,7 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
       NotificationLabel.mutedEvents(!stateFromStores1),
     );
   };
-  items2[2] = closure_7(guildId(8870).FormRow, obj9);
+  items2[2] = closure_7(guildId(8871).FormRow, obj9);
   obj11.children = items2;
-  return closure_8(guildId(7437).ActionSheet, obj11);
+  return closure_8(guildId(7442).ActionSheet, obj11);
 }

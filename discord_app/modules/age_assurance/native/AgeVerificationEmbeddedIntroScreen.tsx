@@ -22,7 +22,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   ({ onClose, modalSessionId, classificationId } = arg0);
   const tmp = closure_7();
   const items = [navigation];
-  const isSuspendedUser = navigation(8689).useIsSuspendedUser();
+  const isSuspendedUser = navigation(8690).useIsSuspendedUser();
   const callback = noop.useCallback(() => {
     navigation.navigate(AgeVerificationGetStartedModal.AgeVerificationGetStartedModalScenes.GOOGLE_WALLET_VERIFICATION);
   }, items);
@@ -30,7 +30,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   const obj3 = { children: null };
   const obj4 = { align: "center", justify: "center", spacing: 24, children: null };
   const obj5 = { align: "center", justify: "center", spacing: 16, children: null };
-  const items1 = [closure_5(navigation(5904).ShieldSpotIllustration, { height: 100, width: 177 })];
+  const items1 = [closure_5(navigation(5909).ShieldSpotIllustration, { height: 100, width: 177 })];
   const obj6 = { align: "center", justify: "center", spacing: 8, children: null };
   const obj7 = {
     accessibilityRole: "header",
@@ -38,7 +38,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
     color: "mobile-text-heading-primary",
     children: null,
   };
-  let obj = navigation(8689);
+  let obj = navigation(8690);
   obj7.children = navigation(4968).getAgeVerificationGetStartedTitle(entryPoint);
   const items2 = [closure_5(navigation(4752).Text, obj7)];
   const obj9 = { variant: "text-md/medium", color: "text-strong", style: tmp.header, children: null };
@@ -50,7 +50,7 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   obj5.children = items1;
   const items3 = [
     closure_6(navigation(5184).Stack, obj5),
-    closure_5(navigation(8860).AgeVerificationMethodsContainer, {
+    closure_5(navigation(8861).AgeVerificationMethodsContainer, {
       ageVerificationMethods: useAgeVerificationMethodsDefault({
         onClose,
         classificationId,
@@ -71,6 +71,6 @@ export default function AgeVerificationEmbeddedIntroScreen(arg0) {
   });
   items4[1] = closure_5(navigation(4752).Text, obj11);
   obj3.children = items4;
-  obj2.children = closure_6(navigation(8693).ModalContent, obj3);
-  return closure_5(navigation(8692).ModalScreen, obj2);
+  obj2.children = closure_6(navigation(8694).ModalContent, obj3);
+  return closure_5(navigation(8693).ModalScreen, obj2);
 }

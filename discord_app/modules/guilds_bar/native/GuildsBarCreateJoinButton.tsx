@@ -110,10 +110,10 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarCrea
 
 export default noop.memo(function GuildsBarCreateJoinButton() {
   const tmp = closure_13();
-  let obj = enabled(16627);
-  const GameCommunityAddServerEntryExperiment = enabled(13978).GameCommunityAddServerEntryExperiment;
+  let obj = enabled(16633);
+  const GameCommunityAddServerEntryExperiment = enabled(13984).GameCommunityAddServerEntryExperiment;
   enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
-  const guildsBarAnimatedWrapperStyles = enabled(16627).useGuildsBarAnimatedWrapperStyles();
+  const guildsBarAnimatedWrapperStyles = enabled(16633).useGuildsBarAnimatedWrapperStyles();
   const items = [SelectedGuildStore];
   let stateFromStores = enabled;
   if (enabled) {
@@ -152,15 +152,15 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     overState: "y",
     config: memo,
     label: null,
-    expandedChildren: "guilds-bar-drag-preview",
+    expandedChildren: "control-secondary-text-default",
     children: null,
   };
   obj2 = enabled(504);
   const intl = tmp2(1115).intl;
   obj4.label = intl.string(enabled(1115).t.l5WIbf);
-  obj4.expandedChildren = jsx(enabled(16687).HomeDrawerAddServerRowExpandedChildren, {});
+  obj4.expandedChildren = jsx(enabled(16693).HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
-  obj4.children = jsx(enabled(11468).CirclePlusIcon, {
+  obj4.children = jsx(enabled(11470).CirclePlusIcon, {
     size: "md",
     color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
   });
@@ -172,7 +172,7 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     overState: "y",
     config: memo,
     label: null,
-    expandedChildren: "guilds-bar-drag-preview",
+    expandedChildren: "control-secondary-text-default",
     children: null,
   });
   return <View style={tmp.stretch}>{null}</View>;
