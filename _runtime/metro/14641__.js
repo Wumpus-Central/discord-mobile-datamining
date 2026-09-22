@@ -1,42 +1,112 @@
 // === Module 14641: ? ===
 
 // Module 14641
-import _mod14580 from "module_14580" /* 14580 */;
-import _mod14581 from "module_14581" /* 14581 */;
-import _mod14583 from "module_14583" /* 14583 */;
-import _mod14584 from "module_14584" /* 14584 */;
-import _mod14601 from "module_14601" /* 14601 */;
-import _mod14610 from "module_14610" /* 14610 */;
-import _mod14630 from "module_14630" /* 14630 */;
-import _mod14642 from "module_14642" /* 14642 */;
+import _mod14586 from "module_14586" /* 14586 */;
+import _mod14587 from "module_14587" /* 14587 */;
+import _mod14590 from "module_14590" /* 14590 */;
+import _mod14606 from "module_14606" /* 14606 */;
+import _mod14609 from "module_14609" /* 14609 */;
+import _mod14643 from "module_14643" /* 14643 */;
+import state from "state" /* 14644 */;
+import prop from "module_14642" /* 14642 */;
 
-let closure_4 = _mod14584([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod14601(arg0);
-    const f = _mod14630.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod14583(arguments[num]);
-      if (f) {
-        let tmp8 = _mod14642(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
-      } else {
-        arr = _mod14642(tmp5);
-      }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod14580;
-        if (tmp12) {
-          tmp12 = !_mod14610(tmp2, tmp5, tmp9);
+let closure_5 = _mod14590("".slice);
+let closure_6 = _mod14590("".replace);
+let closure_7 = _mod14590([].join);
+let closure_8 = _mod14586 && !_mod14587(() => 8 !== defineProperty(() => {
+
+}, "length", { value: 8 }).length);
+const tmp = _mod14586 && !_mod14587(() => 8 !== defineProperty(() => {
+
+}, "length", { value: 8 }).length);
+let closure_9 = String(String).split("String");
+const fn = (toString, toString2, arg2) => {
+  let text = toString2;
+  if ("Symbol(" === closure_5(String(toString2), 0, 7)) {
+    text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
+  }
+  let getter = arg2;
+  if (arg2) {
+    getter = arg2.getter;
+  }
+  let text1 = text;
+  if (getter) {
+    text1 = `get ${tmp2}`;
+  }
+  let setter = arg2;
+  if (arg2) {
+    setter = arg2.setter;
+  }
+  let text2 = text1;
+  if (setter) {
+    text2 = `set ${tmp4}`;
+  }
+  const tmp8 = _mod14606(toString, "name");
+  let tmp9 = !tmp8;
+  if (tmp8) {
+    tmp9 = _mod14643.CONFIGURABLE && toString.name !== text2;
+    const tmp10 = _mod14643.CONFIGURABLE && toString.name !== text2;
+  }
+  if (tmp9) {
+    if (_mod14586) {
+      const obj = { value: text2, configurable: true };
+      defineProperty(toString, "name", obj);
+    } else {
+      toString.name = text2;
+    }
+  }
+  let tmp13 = closure_8;
+  if (closure_8) {
+    tmp13 = arg2;
+  }
+  if (tmp13) {
+    tmp13 = _mod14606(arg2, "arity");
+  }
+  if (tmp13) {
+    tmp13 = toString.length !== arg2.arity;
+  }
+  if (tmp13) {
+    const obj2 = { value: arg2.arity };
+    defineProperty(toString, "length", obj2);
+  }
+  try {
+    if (arg2) {
+      if (_mod14606(arg2, "constructor")) {
+        if (arg2.constructor) {
+          if (_mod14586) {
+            defineProperty(toString, "prototype", { writable: false });
+          }
         }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
+        const enforceResult = state.enforce(toString);
+        if (!_mod14606(enforceResult, "source")) {
+          let str11 = "";
+          if (typeof text2 === "string") {
+            str11 = text2;
+          }
+          enforceResult.source = closure_7(closure_9, str11);
         }
+        return toString;
       }
     }
-    return tmp;
-  };
+    if (toString.prototype) {
+      toString.prototype = undefined;
+    }
+  } catch (err) {
+  }
+};
+function toString() {
+  const self = this;
+  let source = _mod14609(this);
+  if (source) {
+    source = state.get(self).source;
+    const tmpResult = state;
+  }
+  if (!source) {
+    source = prop(self);
+  }
+  return source;
 }
+fn(toString, "toString");
+Function.prototype.toString = toString;
 
-export default assign;
+export default fn;

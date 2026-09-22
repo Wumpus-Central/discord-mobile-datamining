@@ -1,13 +1,14 @@
 // === Module 10763: ? ===
 
 // Module 10763
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10710 from "module_10710" /* 10710 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10705 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const FRTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,51 +28,41 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class JPMergeDateRangeRefiner {
+class FRTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, JPMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(JPMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
+    tmp = c2(this, FRTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(FRTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = JPMergeDateRangeRefiner;
-_inherits(JPMergeDateRangeRefiner, fn(_mod10710).default);
+_inherits(FRTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(から|－|ー|-|～|~)\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp("il y a\\s*(" + FRTimeUnitAgoFormatParser(10760).TIME_UNITS_PATTERN + ")(?=(?:\\W|$))", "i");
+    return regExp;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = FRTimeUnitAgoFormatParser(10760).parseDuration(arg1[1]);
+      const ParsingComponents = FRTimeUnitAgoFormatParser(10701).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, FRTimeUnitAgoFormatParser(10700).reverseDuration(FRTimeUnitAgoFormatParser(10760).parseDuration(arg1[1])));
+    }
+  }
+];
 
-export default _createClass(JPMergeDateRangeRefiner, items);
+export default _createClass(FRTimeUnitAgoFormatParser, items);

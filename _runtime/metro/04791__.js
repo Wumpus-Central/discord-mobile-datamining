@@ -1,26 +1,19 @@
 // === Module 4791: ? ===
 
 // Module 4791
-import _mod552 from "module_552" /* 552 */;
+import _mod4792 from "module_4792" /* 4792 */;
 
 
-export default function toFinite(arg0) {
-  if (arg0) {
-    const tmp3 = _mod552(arg0);
-    if (tmp3 !== Infinity) {
-      if (tmp3 !== -Infinity) {
-      }
+export default function toInteger(arg0) {
+  const tmp = _mod4792(arg0);
+  const result = tmp % 1;
+  let num = 0;
+  if (tmp == tmp) {
+    let diff = tmp;
+    if (result) {
+      diff = tmp - result;
     }
-    let num6 = 1;
-    if (tmp3 < 0) {
-      num6 = -1;
-    }
-    const num4 = 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 * num6;
-  } else {
-    let num = 0;
-    if (0 === arg0) {
-      num = arg0;
-    }
-    return num;
+    num = diff;
   }
+  return num;
 };

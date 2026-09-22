@@ -1,44 +1,80 @@
 // === Module 4526: ? ===
 
 // Module 4526
-import noop from "module_19" /* 19 */;
+import _mod4527 from "module_4527" /* 4527 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-({ useRef: closure_0, useEffect: closure_1 } = noop);
-let deps = Symbol("UNINITIALIZED");
+require = fn;
+const noop = fn(19);
+({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 
-export const useDisposableMemo = function useDisposableMemo(fn2, _temp, items, current2) {
-  const obj = { value: "r", deps, pendingDisposal: null };
-  const tmp2 = React(obj);
-  closure_0 = tmp2;
-  const obj2 = React(_temp);
-  obj2.current = _temp;
-  const tmp3 = React(current2);
-  deps = tmp3;
-  tmp3.current = current2;
-  if (tmp2.current.deps === deps) {
-    if (tmp2.current.deps !== deps) {
-      if (tmp3.current) {
-        tmp3.current.current = undefined;
+export const useRiveProperty = function useRiveProperty(instance, FillColor, f31308) {
+  closure_0 = instance;
+  closure_1 = FillColor;
+  closure_2 = f31308;
+  let tmp = hasOwnProperty(undefined);
+  const items = [instance, FillColor];
+  const disposableMemo = _mod4527.useDisposableMemo(() => {
+    if (closure_0) {
+      return closure_2(tmp, closure_1);
+    }
+  }, (dispose) => {
+    let disposeResult;
+    if (dispose != null) {
+      disposeResult = dispose.dispose();
+    }
+    return disposeResult;
+  }, items, tmp);
+  [first, closure_6] = timestampProducer(undefined);
+  const tmp5 = _slicedToArray(timestampProducer(null), 2);
+  closure_7 = tmp5[1];
+  const items1 = [FillColor, instance];
+  React4(() => {
+    closure_7(null);
+  }, items1);
+  const items2 = [instance, disposableMemo, FillColor];
+  React4(() => {
+    let tmp = closure_0;
+    if (closure_0) {
+      tmp = !disposableMemo;
+    }
+    if (tmp) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error = new Error("Property \"" + closure_1 + "\" not found in the ViewModel instance");
+      closure_7(error);
+    }
+  }, items2);
+  const items3 = [disposableMemo];
+  React4(() => {
+    if (disposableMemo) {
+      closure_6(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
+        closure_1_6(arg0);
+      });
+      return () => {
+        try {
+          closure_0();
+        } catch (err) {
+        }
+      };
+    }
+  }, items3);
+  const items4 = [disposableMemo, first];
+  const items5 = [
+    first,
+    React3((fn) => {
+      const current = ref.current;
+      if (current) {
+        let tmp2 = fn;
+        if (typeof fn === "function") {
+          tmp2 = fn(first);
+        }
+        current.value = tmp2;
       }
-      try {
-        obj2.current(tmp2.current.value);
-      } catch (err) {
-      }
-    }
-    const obj3 = { value: fn2(), deps: items, pendingDisposal: null };
-    tmp2.current = obj3;
-    if (tmp3.current) {
-      tmp3.current.current = tmp2.current.value;
-    }
-  }
-  framebus(() => () => {
-    if (ref3.current) {
-      ref3.current.current = undefined;
-    }
-    try {
-      ref2.current(ref.current.value);
-    } catch (err) {
-    }
-  }, []);
-  return tmp2.current.value;
+    }, items4),
+    tmp5[0],
+    disposableMemo
+  ];
+  return items5;
 };

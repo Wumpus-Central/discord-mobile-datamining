@@ -1,7 +1,13 @@
 // === Module 5048: ? ===
 
 // Module 5048
-import _mod1290 from "module_1290" /* 1290 */;
+let setPrototypeOf = typeof Reflect !== "undefined";
+if (typeof Reflect !== "undefined") {
+  const _Reflect = Reflect;
+  setPrototypeOf = Reflect.setPrototypeOf;
+}
+if (!setPrototypeOf) {
+  setPrototypeOf = null;
+}
 
-
-export default _mod1290.setPrototypeOf || null;
+export default setPrototypeOf;

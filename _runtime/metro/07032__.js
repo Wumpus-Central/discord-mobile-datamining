@@ -1,16 +1,14 @@
 // === Module 7032: ? ===
 
 // Module 7032
-import _modDef7030 from "module_7030" /* 7030 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import metroRequire from "_possibleConstructorReturn" /* 93 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TouchableOpacity = fn;
+const GenericTouchable = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,21 +28,20 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_3 = ["style"];
-get_ActivityIndicator = fn(17);
-({ Animated: closure_8, Easing: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
+const Animated = fn(17).Animated;
 const jsx = fn(21).jsx;
-class TouchableOpacity {
+const TOUCHABLE_STATE = { UNDETERMINED: 0, BEGAN: 1, MOVED_OUTSIDE: 2 };
+class GenericTouchable {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = hasOwnProperty(this, TouchableOpacity);
+    tmp = c2(this, GenericTouchable);
     items1 = [...items];
-    tmp2 = closure_7;
-    obj = closure_7(TouchableOpacity);
-    tmp3 = metroRequire;
-    if (closure_13()) {
+    tmp2 = closure_4;
+    obj = closure_4(GenericTouchable);
+    tmp3 = closure_3;
+    if (closure_7()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
@@ -53,70 +50,247 @@ class TouchableOpacity {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.getChildStyleOpacityWithDefault = () => {
-      const tmp = closure_2_10.flatten(closure_0.props.style) || {};
-      let num = 1;
-      if (null != tmp.opacity) {
-        const opacity = tmp.opacity;
-        num = opacity.valueOf();
-      }
-      return num;
-    };
-    value = new closure_8.Value(tmp3Result.getChildStyleOpacityWithDefault());
-    tmp3Result.opacity = value;
-    tmp3Result.setOpacityTo = (toValue, duration) => {
-      const obj = { toValue, duration, easing: React7.inOut(React7.quad), useNativeDriver: null };
-      let flag = closure_0.props.useNativeAnimations;
-      if (flag == null) {
-        flag = true;
-      }
-      obj.useNativeDriver = flag;
-      React6.timing(closure_0.opacity, obj).start();
-      const timingResult = React6.timing(closure_0.opacity, obj);
-    };
-    tmp3Result.onStateChange = (arg0, arg1) => {
-      if (arg1 === TouchableOpacity(7030).TOUCHABLE_STATE.BEGAN) {
-        closure_0.setOpacityTo(closure_0.props.activeOpacity, 0);
-      } else {
-        if (!tmp3) {
-          closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
+    tmp3Result.longPressDetected = false;
+    tmp3Result.pointerInside = true;
+    tmp3Result.STATE = closure_8.UNDETERMINED;
+    tmp3Result.onGestureEvent = (nativeEvent) => {
+      const pointerInside = nativeEvent.nativeEvent.pointerInside;
+      if (closure_0.pointerInside !== pointerInside) {
+        if (pointerInside) {
+          closure_0.onMoveIn();
+        } else {
+          closure_0.onMoveOut();
         }
-        tmp3 = arg1 !== TouchableOpacity(7030).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableOpacity(7030).TOUCHABLE_STATE.MOVED_OUTSIDE;
+      }
+      closure_0.pointerInside = pointerInside;
+    };
+    tmp3Result.onHandlerStateChange = (nativeEvent) => {
+      const state = nativeEvent.nativeEvent.state;
+      if (state !== GenericTouchable(6905).State.CANCELLED) {
+        if (state !== GenericTouchable(6905).State.FAILED) {
+          if (state === GenericTouchable(6905).State.BEGAN) {
+            if (closure_0.STATE === closure_0.UNDETERMINED) {
+              closure_0.handlePressIn();
+            }
+          }
+          if (state === GenericTouchable(6905).State.END) {
+            const longPressDetected = closure_0.longPressDetected;
+            let tmp5 = !longPressDetected;
+            if (!longPressDetected) {
+              tmp5 = closure_0.STATE !== closure_0.MOVED_OUTSIDE;
+            }
+            if (tmp5) {
+              tmp5 = undefined === closure_0.pressOutTimeout;
+            }
+            const result = closure_0.handleGoToUndetermined();
+            if (tmp5) {
+              const props = closure_0.props;
+              const onPress = props.onPress;
+              if (onPress != null) {
+                onPress();
+              }
+            }
+          }
+        }
+      }
+      closure_0.moveToState(closure_0.UNDETERMINED);
+    };
+    tmp3Result.onLongPressDetected = () => {
+      closure_0.longPressDetected = true;
+      const props = closure_0.props;
+      const onLongPress = props.onLongPress;
+      if (onLongPress != null) {
+        onLongPress();
       }
     };
     return tmp3Result;
   }
 }
-_inherits(TouchableOpacity, fn(19).Component);
+_inherits(GenericTouchable, fn(19).Component);
 const entry = {
-  key: "render",
-  value: function render() {
+  key: "handlePressIn",
+  value: function handlePressIn() {
     const self = this;
-    const props = this.props;
-    let style = props.style;
-    if (undefined === style) {
-      style = {};
-    }
-    const obj = {};
-    const tmp = _objectWithoutProperties(props, closure_3);
-    const merged = Object.assign(tmp);
-    const items = [style, { opacity: self.opacity }];
-    obj.style = items;
-    obj.onStateChange = self.onStateChange;
-    if (self.props.children) {
-      let children = self.props.children;
+    if (this.props.delayPressIn) {
+      const _setTimeout = setTimeout;
+      self.pressInTimeout = setTimeout(() => {
+        self.moveToState(obj.BEGAN);
+        self.pressInTimeout = undefined;
+      }, self.props.delayPressIn);
     } else {
-      children = <closure_1_11 />;
+      self.moveToState(obj.BEGAN);
     }
-    obj.children = children;
-    return jsx(_modDef7030, {});
+    if (self.props.onLongPress) {
+      const _setTimeout2 = setTimeout;
+      self.longPressTimeout = setTimeout(self.onLongPressDetected, (self.props.delayPressIn || 0) + (self.props.delayLongPress || 0));
+      const tmp4 = self.props.delayPressIn || 0;
+      const tmp5 = self.props.delayLongPress || 0;
+    }
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(TouchableOpacity, items);
-let obj = {};
-let merged = Object.assign(_modDef7030.defaultProps);
-obj.activeOpacity = 0.2;
-importDefaultResultResult.defaultProps = obj;
+let items = [
+  entry,
+  {
+    key: "handleMoveOutside",
+    value: function handleMoveOutside() {
+      const self = this;
+      if (this.props.delayPressOut) {
+        let pressOutTimeout = self.pressOutTimeout;
+        if (!pressOutTimeout) {
+          const _setTimeout = setTimeout;
+          pressOutTimeout = setTimeout(() => {
+            self.moveToState(obj.MOVED_OUTSIDE);
+            self.pressOutTimeout = undefined;
+          }, self.props.delayPressOut);
+        }
+        self.pressOutTimeout = pressOutTimeout;
+      } else {
+        self.moveToState(obj.MOVED_OUTSIDE);
+      }
+    }
+  },
+  {
+    key: "handleGoToUndetermined",
+    value: function handleGoToUndetermined() {
+      const self = this;
+      clearTimeout(this.pressOutTimeout);
+      if (this.props.delayPressOut) {
+        const _setTimeout = setTimeout;
+        self.pressOutTimeout = setTimeout(() => {
+          if (self.STATE === self.UNDETERMINED) {
+            self.moveToState(self.BEGAN);
+          }
+          self.moveToState(self.UNDETERMINED);
+          self.pressOutTimeout = undefined;
+        }, self.props.delayPressOut);
+      } else {
+        if (self.STATE === obj.UNDETERMINED) {
+          self.moveToState(obj.BEGAN);
+        }
+        self.moveToState(obj.UNDETERMINED);
+      }
+    }
+  },
+  {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.reset();
+    }
+  },
+  {
+    key: "reset",
+    value: function reset() {
+      const obj = { longPressDetected: false, pointerInside: true };
+      clearTimeout(obj.pressInTimeout);
+      clearTimeout(obj.pressOutTimeout);
+      clearTimeout(obj.longPressTimeout);
+      obj.pressOutTimeout = undefined;
+      obj.longPressTimeout = undefined;
+      obj.pressInTimeout = undefined;
+    }
+  },
+  {
+    key: "moveToState",
+    value: function moveToState(BEGAN) {
+      const self = this;
+      if (BEGAN !== this.STATE) {
+        if (BEGAN === obj.BEGAN) {
+          const props3 = self.props;
+          const onPressIn = props3.onPressIn;
+          if (onPressIn != null) {
+            onPressIn();
+          }
+        } else if (BEGAN === obj.MOVED_OUTSIDE) {
+          const props2 = self.props;
+          const onPressOut2 = props2.onPressOut;
+          if (onPressOut2 != null) {
+            onPressOut2();
+          }
+        } else if (BEGAN === obj.UNDETERMINED) {
+          self.reset();
+          if (self.STATE === obj.BEGAN) {
+            const props = self.props;
+            const onPressOut = props.onPressOut;
+            if (onPressOut != null) {
+              onPressOut();
+            }
+          }
+        }
+        const props4 = self.props;
+        const onStateChange = props4.onStateChange;
+        if (onStateChange != null) {
+          onStateChange(self.STATE, BEGAN);
+        }
+        self.STATE = BEGAN;
+      }
+    }
+  },
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.reset();
+    }
+  },
+  {
+    key: "onMoveIn",
+    value: function onMoveIn() {
+      const self = this;
+      if (this.STATE === obj.MOVED_OUTSIDE) {
+        self.moveToState(tmp.BEGAN);
+      }
+    }
+  },
+  {
+    key: "onMoveOut",
+    value: function onMoveOut() {
+      const self = this;
+      clearTimeout(this.longPressTimeout);
+      this.longPressTimeout = undefined;
+      if (this.STATE === obj.BEGAN) {
+        self.handleMoveOutside();
+      }
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      if (typeof this.props.hitSlop === "number") {
+        const rect = { top: self.props.hitSlop, left: self.props.hitSlop, bottom: self.props.hitSlop, right: self.props.hitSlop };
+        let hitSlop = rect;
+      } else {
+        hitSlop = self.props.hitSlop;
+      }
+      const obj2 = { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null };
+      let onHandlerStateChange;
+      if (!self.props.disabled) {
+        onHandlerStateChange = self.onHandlerStateChange;
+      }
+      obj2.onHandlerStateChange = onHandlerStateChange;
+      obj2.onGestureEvent = self.onGestureEvent;
+      obj2.hitSlop = hitSlop;
+      obj2.userSelect = self.props.userSelect;
+      obj2.shouldActivateOnStart = self.props.shouldActivateOnStart;
+      obj2.disallowInterruption = self.props.disallowInterruption;
+      obj2.testID = self.props.testID;
+      let flag = self.props.touchSoundDisabled;
+      if (flag == null) {
+        flag = false;
+      }
+      obj2.touchSoundDisabled = flag;
+      obj2.enabled = !self.props.disabled;
+      const merged = Object.assign(self.props.extraButtonProps);
+      const obj3 = {};
+      const merged1 = Object.assign({ accessible: false !== self.props.accessible, accessibilityLabel: self.props.accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityRole: self.props.accessibilityRole, accessibilityState: self.props.accessibilityState, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, nativeID: self.props.nativeID, onLayout: self.props.onLayout });
+      obj3.style = self.props.style;
+      obj3.children = self.props.children;
+      obj2.children = <Animated.View />;
+      return jsx(GenericTouchable(7012).LegacyBaseButton, { style: self.props.containerStyle, onHandlerStateChange: null, onGestureEvent: null, hitSlop: null, userSelect: null, shouldActivateOnStart: null, disallowInterruption: null, testID: null, touchSoundDisabled: null, enabled: null });
+    }
+  }
+];
+const importDefaultResultResult = _createClass(GenericTouchable, items);
+importDefaultResultResult.defaultProps = { delayLongPress: 600, extraButtonProps: { rippleColor: "transparent", exclusive: true } };
 
 export default importDefaultResultResult;
+export { TOUCHABLE_STATE };

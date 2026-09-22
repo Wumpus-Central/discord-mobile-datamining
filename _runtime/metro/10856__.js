@@ -1,14 +1,15 @@
 // === Module 10856: ? ===
 
 // Module 10856
-import _mod10848 from "module_10848" /* 10848 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10712 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKWeekdayParser = require;
+const UKTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,78 +29,109 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKWeekdayParser {
-  constructor() {
+class UKTimeExpressionParser {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, UKWeekdayParser);
+    tmp = c2(this, UKTimeExpressionParser);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(UKWeekdayParser);
+    obj = closure_4(UKTimeExpressionParser);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    if (metroRequire()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKWeekdayParser, _mod10848.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(UKTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:\u0443\\s*?)?(?:(\u0446\u0435\u0439|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043C\u0438\u043D\u0443\u043B\u0438\u0439|\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u0456\u0439|\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u044C\u043E\u0433\u043E|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443)\\s*)?(" + UKWeekdayParser(10692).matchAnyPattern(UKWeekdayParser(10846).WEEKDAY_DICTIONARY) + ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*(\u043D\u0430|\u0443|\u0432)\\s*(\u0446\u044C\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443)\\s*\u0442\u0438\u0436\u043D\u0456)?";
+  key: "patternFlags",
+  value: function patternFlags() {
+    return UKTimeExpressionParser(10852).REGEX_PARTS.flags;
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      let str = arg1[1];
-      if (!str) {
-        str = arg1[3];
+    key: "primaryPatternLeftBoundary",
+    value: function primaryPatternLeftBoundary() {
+      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
+    }
+  },
+  {
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0456|\u043F\u043E|\\?)\\s*";
+    }
+  },
+  {
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:\u0432|\u0443|\u043E|\u043E\u0431|\u0437|\u0456\u0437|\u0432\u0456\u0434)\\s*)??";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:\u0440\u0430\u043D\u043A\u0443|\u0432\u0435\u0447\u043E\u0440\u0430|\u043F\u043E \u043E\u0431\u0456\u0434\u0456|\u043F\u0456\u0441\u043B\u044F \u043E\u0431\u0456\u0434\u0443))?(?!\\/)" + UKTimeExpressionParser(10852).REGEX_PARTS.rightBoundary;
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      const self = this;
+      const tmp = hasOwnProperty(_getPrototypeOf(UKTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+      dependencyMap = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (items) => closure_1.apply(self, items);
       }
-      if (!str) {
-        str = "";
-      }
-      const toLocaleLowerCaseResult1 = str.toLocaleLowerCase();
-      let str2 = "last";
-      if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
-        str2 = "last";
-        if ("\u043C\u0438\u043D\u0443\u043B\u0438\u0439" != toLocaleLowerCaseResult1) {
-          str2 = "last";
-          if ("\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u0456\u0439" != toLocaleLowerCaseResult1) {
-            str2 = "last";
-            if ("\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u044C\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
-              str2 = "next";
-              if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
-                str2 = "next";
-                if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439" != toLocaleLowerCaseResult1) {
-                  let tmp5 = "\u0446\u0435\u0439" != toLocaleLowerCaseResult1;
-                  if (tmp5) {
-                    tmp5 = "\u0446\u044C\u043E\u0433\u043E" != toLocaleLowerCaseResult1;
-                  }
-                  if (tmp5) {
-                    tmp5 = "\u0446\u044C\u043E\u043C\u0443" != toLocaleLowerCaseResult1;
-                  }
-                  str2 = null;
-                  if (!tmp5) {
-                    str2 = "this";
-                  }
-                }
-              }
+      const items = [arg0, arg1];
+      const fnResult = fn(items);
+      if (fnResult) {
+        const first = arg1[0];
+        if (first.endsWith("\u0432\u0435\u0447\u043E\u0440\u0430")) {
+          value = fnResult.get("hour");
+          if (value >= 6) {
+            if (value < 12) {
+              fnResult.assign("hour", fnResult.get("hour") + 12);
+              fnResult.assign("meridiem", UKTimeExpressionParser(10703).Meridiem.PM);
             }
+          }
+          if (value < 6) {
+            fnResult.assign("meridiem", UKTimeExpressionParser(10703).Meridiem.AM);
+          }
+        }
+        const first1 = arg1[0];
+        if (first1.endsWith("\u043F\u043E \u043E\u0431\u0456\u0434\u0456")) {
+          fnResult.assign("meridiem", UKTimeExpressionParser(10703).Meridiem.PM);
+          value2 = fnResult.get("hour");
+          let tmp14 = value2 >= 0;
+          if (tmp14) {
+            tmp14 = value2 <= 6;
+          }
+          if (tmp14) {
+            fnResult.assign("hour", fnResult.get("hour") + 12);
+          }
+        } else {
+          const first2 = arg1[0];
+        }
+        const first3 = arg1[0];
+        if (first3.endsWith("\u0440\u0430\u043D\u043A\u0443")) {
+          fnResult.assign("meridiem", UKTimeExpressionParser(10703).Meridiem.AM);
+          if (fnResult.get("hour") < 12) {
+            fnResult.assign("hour", fnResult.get("hour"));
           }
         }
       }
-      return UKWeekdayParser(10719).createParsingComponentsAtWeekday(reference.reference, UKWeekdayParser(10846).WEEKDAY_DICTIONARY[arg1[2].toLocaleLowerCase()], str2);
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(UKWeekdayParser, items);
+export default _createClass(UKTimeExpressionParser, items);

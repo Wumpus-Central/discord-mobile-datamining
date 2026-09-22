@@ -74,7 +74,7 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
                     closure_131_2 = undefined;
                     c6 = 1;
                     c7 = 1;
-                    return { value: "PX_16", done: true };
+                    return { value: "flex", done: true };
                   }
                 } else if (1 === tmp5) {
                   if (arg0 === 1) {

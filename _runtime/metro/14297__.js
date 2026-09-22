@@ -1,7 +1,14 @@
 // === Module 14297: ? ===
 
 // Module 14297
-import _mod14285 from "module_14285" /* 14285 */;
+import _mod14290 from "module_14290" /* 14290 */;
 
 
-export default (arg0, arg1) => new _mod14285(arg0, arg1).patch;
+export default (arg0, arg1) => {
+  const tmp = _mod14290(arg0, arg1);
+  let version = null;
+  if (tmp) {
+    version = tmp.version;
+  }
+  return version;
+};

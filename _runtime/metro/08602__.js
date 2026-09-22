@@ -1,5 +1,8 @@
 // === Module 8602: ? ===
 
 // Module 8602
+import emptyFunction from "module_4586" /* 4586 */;
 
-export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+const point = { x: emptyFunction.number, y: emptyFunction.number };
+
+export default emptyFunction.shape(point);

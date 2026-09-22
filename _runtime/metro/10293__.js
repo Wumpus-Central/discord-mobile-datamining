@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 20, height: 20, scales: [2, 3], hash: "680bf4fd0485a160338f41e352ddc0a6", name: "grid", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_home/native/images", width: 24, height: 24, scales: [2, 3], hash: "993926a8b2d3f46d31ad06ea07adc917", name: "ic_feed_more", type: "png" });

@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/AngryIcon", width: 60, height: 60, scales: [2, 3], hash: "f576bb59fd8aa7b768b785da00a17a1a", name: "AngryIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CherryBlossomIcon", width: 60, height: 60, scales: [2, 3], hash: "0958a3140b1354fdc2a2c5ce3e4f3233", name: "CherryBlossomIcon", type: "png" });

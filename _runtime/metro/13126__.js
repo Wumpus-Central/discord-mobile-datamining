@@ -1,23 +1,16 @@
 // === Module 13126: ? ===
 
 // Module 13126
-import eventFromMessage from "eventFromMessage" /* 13110 */;
-import _mod13127 from "module_13127" /* 13127 */;
-import setupIntegration from "module_13106" /* 13106 */;
+import _mod13125 from "module_13125" /* 13125 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod13127.applyAggregateErrorsToEvent(eventFromMessage.exceptionFromError, options.stackParser, options.maxValueLength, closure_1, closure_0, exception, originalException);
-    }
-  };
-});
+export const getTraceMetaTags = function getTraceMetaTags() {
+  const entries = Object.entries(_mod13125.getTraceData());
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
+  });
+  return mapped.join("\n");
+};

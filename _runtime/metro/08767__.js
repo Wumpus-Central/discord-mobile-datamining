@@ -1,68 +1,13 @@
 // === Module 8767: ? ===
 
 // Module 8767
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _createClass from "_createClass" /* 42 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod26 from "module_26" /* 26 */;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class FilterPrimitive {
-  constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, FilterPrimitive);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FilterPrimitive);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items1);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.root = null;
-    tmp3Result.refMethod = (root) => {
-      closure_0.root = root;
-    };
-    tmp3Result.setNativeProps = (arg0) => {
-      root = root.root;
-      if (root != null) {
-        root.setNativeProps(arg0);
-      }
-    };
-    return tmp3Result;
-  }
-}
-_classCallCheck = FilterPrimitive;
-_inherits(FilterPrimitive, fn(19).Component);
-const importDefaultResultResult = _createClass(FilterPrimitive);
-importDefaultResultResult.defaultPrimitiveProps = {};
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGEllipse", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, cx: true, cy: true, rx: true, ry: true };
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGEllipse", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

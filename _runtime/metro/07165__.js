@@ -1,41 +1,24 @@
 // === Module 7165: ? ===
 
 // Module 7165
-import _mod7117 from "module_7117" /* 7117 */;
-import _slicedToArray from "module_7099" /* 7099 */;
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-
-export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _mod7117.useLayoutState(0);
-  React4(() => {
-    let tmpResult = closure_0;
-    if (typeof closure_0 === "function") {
-      tmpResult = tmp();
+export const useDataMultiplier = function useDataMultiplier(arg0, arg1) {
+  const array = new Array(arg1);
+  let flag = false;
+  if (typeof arg0[0] === "object") {
+    flag = true;
+  }
+  for (let num = 0; num < arg1; num = num + 1) {
+    let tmp3 = arg0[num % tmp];
+    if (flag) {
+      let obj = {};
+      let merged = Object.assign(tmp3);
+      let tmp5 = obj;
+    } else {
+      tmp5 = tmp3;
     }
-    closure_2.current = tmpResult;
-    if (closure_1 != null) {
-      tmp3();
-    }
-  }, arg1);
-  const items = [tmp3];
-  const items1 = [
-    tmp.current,
-    React3((fn, arg1) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
-        tmp = fn(ref.current);
-      }
-      if (tmp !== ref.current) {
-        tmp2.current = tmp;
-        arg1((arg0) => arg0 + 1, arg1);
-      }
-    }, items)
-  ];
-  return items1;
+    array[num] = tmp5;
+  }
+  const items = [array];
+  return items;
 };

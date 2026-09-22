@@ -1,80 +1,86 @@
 // === Module 10729: ? ===
 
 // Module 10729
+import Filter from "Filter" /* 10717 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const ExtractTimezoneAbbrRefiner = require;
-const regExp = new RegExp("^\\s*,?\\s*\\(?([A-Z]{2,4})\\)?(?=\\W|$)", "i");
-class ExtractTimezoneAbbrRefiner {
-  constructor(arg0) {
-    tmp = c2(this, ExtractTimezoneAbbrRefiner);
-    this.timezoneOverrides = global;
-    return;
+const ENMergeRelativeAfterDateRefiner = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-const entry = {
-  key: "refine",
-  value: function refine(option, arr) {
-    let self = this;
-    let timezones = option.option.timezones;
-    if (null === timezones) {
-      timezones = {};
+class ENMergeRelativeAfterDateRefiner {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(ENMergeRelativeAfterDateRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    const item = arr.forEach((item) => {
-      const match = regExp.exec(option.text.substring(item.index + item.text.length));
-      if (match) {
-        const formatted = match[1].toUpperCase();
-        const start = item.start;
-        let refDate = start.date();
-        if (null === refDate) {
-          refDate = item.refDate;
-        }
-        if (null === refDate) {
-          const _Date = Date;
-          refDate = new Date();
-        }
-        const _Object = Object;
-        const _Object2 = Object;
-        const merged = Object.assign(Object.assign({}, self.timezoneOverrides), timezones);
-        const toTimezoneOffsetResult = ExtractTimezoneAbbrRefiner(10696).toTimezoneOffset(formatted, refDate, merged);
-        self = toTimezoneOffsetResult;
-        if (null != toTimezoneOffsetResult) {
-          option.debug(() => {
-            console.log("Extracting timezone: '" + formatted + "' into: " + toTimezoneOffsetResult + " for: " + item.start);
-          });
-          const start6 = item.start;
-          value = start6.get("timezoneOffset");
-          if (null !== value) {
-            if (toTimezoneOffsetResult != value) {
-              const start2 = item.start;
-            }
-          }
-          const start3 = item.start;
-          if (!tmp14) {
-            item.text = item.text + match[0];
-            const start4 = item.start;
-            if (!start4.isCertain("timezoneOffset")) {
-              const start5 = item.start;
-              start5.assign("timezoneOffset", toTimezoneOffsetResult);
-            }
-            let isCertainResult = null == item.end;
-            if (!isCertainResult) {
-              const end = item.end;
-              isCertainResult = end.isCertain("timezoneOffset");
-            }
-            if (!isCertainResult) {
-              const end2 = item.end;
-              end2.assign("timezoneOffset", toTimezoneOffsetResult);
-            }
-          }
-          tmp14 = start3.isOnlyDate() && formatted != match[1];
-        }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
+const entry = {
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, arg1, text) {
+    let match = str.match(/^\s*$/i);
+    if (match) {
+      let tmp4 = null != str.match(/^[+-]/i);
+      if (!tmp4) {
+        tmp4 = null != text.text.match(/^-/i);
       }
-    });
-    return arr;
+      match = tmp4;
+    }
+    return match;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, text, arg3) {
+      const parseDurationResult = ENMergeRelativeAfterDateRefiner(10697).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/^-/i)) {
+        reverseDurationResult = ENMergeRelativeAfterDateRefiner(10700).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = ENMergeRelativeAfterDateRefiner(10701).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeAfterDateRefiner(10701).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      ({ reference, index } = start);
+      return new ENMergeRelativeAfterDateRefiner(10701).ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
+    }
+  }
+];
 
-export default _createClass(ExtractTimezoneAbbrRefiner, items);
+export default _createClass(ENMergeRelativeAfterDateRefiner, items);

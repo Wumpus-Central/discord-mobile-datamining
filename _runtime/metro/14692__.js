@@ -1,34 +1,19 @@
 // === Module 14692: ? ===
 
 // Module 14692
-let closure_0 = { url: "http://localhost:8081" };
+import _mod14693 from "module_14693" /* 14693 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-export default () => {
-  if (arg0 === undefined) {
-    let obj = {};
+
+export default function getReactNativeDimensions() {
+  try {
+    const Dimensions = get_ActivityIndicator.Dimensions;
+    try {
+      const Dimensions2 = get_ActivityIndicator.Dimensions;
+      value = Dimensions2.get("window");
+      return _mod14693.getReactNativeDimensionsWithDimensions(tmp2, value);
+    } catch (err) {
+    }
+  } catch (err) {
   }
-  return () => {
-    url = Object.assign({}, url, obj);
-    obj = {
-      onCommand(type) {
-        if ("editor.open" === type.type) {
-          const payload = type.payload;
-          let num = payload.lineNumber;
-          const _HermesInternal = HermesInternal;
-          obj = { file: payload.file, lineNumber: null };
-          const combined = "" + url.url + "/open-stack-frame";
-          if (!num) {
-            num = 1;
-          }
-          obj.lineNumber = num;
-          const _fetch = fetch;
-          const request = { method: "POST", body: null };
-          const _JSON = JSON;
-          request.body = JSON.stringify(obj);
-          const response = fetch(combined, request);
-        }
-      }
-    };
-    return obj;
-  };
 };

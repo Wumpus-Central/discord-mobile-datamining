@@ -1,26 +1,23 @@
 // === Module 6949: ? ===
 
 // Module 6949
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef6934 from "module_6934" /* 6934 */;
 
-let tmp3 = typeof window === "undefined";
-if (typeof window !== "undefined") {
-  const _window2 = window;
-  tmp3 = undefined === window.document;
-}
-if (!tmp3) {
-  const _window = window;
-  tmp3 = undefined === window.document.createElement;
-}
-let tmp4 = typeof navigator !== "undefined";
-if (typeof navigator !== "undefined") {
-  const _navigator = navigator;
-  tmp4 = "ReactNative" === navigator.product;
-}
-if (tmp3) {
-  if (!tmp4) {
-    let useLayoutEffect = noop.useEffect;
-  }
-  exports.useIsomorphicLayoutEffect = useLayoutEffect;
-}
-useLayoutEffect = noop.useLayoutEffect;
+_mod19.useCallback;
+
+export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
+  const previousViewTag = current;
+  const items = [current, detectorUpdater];
+  return useCallback((viewRef) => {
+    if (null !== viewRef) {
+      previousViewTag.viewRef = viewRef;
+      if (-1 === previousViewTag.previousViewTag) {
+        previousViewTag.previousViewTag = _modDef6934(previousViewTag.viewRef);
+      }
+      if (!previousViewTag.firstRender) {
+        detectorUpdater(true);
+      }
+    }
+  }, items);
+};

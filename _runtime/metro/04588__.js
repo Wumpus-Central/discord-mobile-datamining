@@ -1,7 +1,5 @@
 // === Module 4588: ? ===
 
 // Module 4588
-import _mod4589 from "module_4589" /* 4589 */;
 
-
-export default _mod4589;
+export default "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";

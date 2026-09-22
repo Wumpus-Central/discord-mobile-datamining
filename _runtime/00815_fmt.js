@@ -12,7 +12,7 @@ export const debug = function debug(message, attributes) {
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "debug", message, attributes, severityNumber: "accessible" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "debug", message, attributes, severityNumber: "padding" }, obj.scope);
 };
 export const error = function error(message, attributes) {
   let obj = arg2;
@@ -33,14 +33,14 @@ export const info = function info(message, attributes) {
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "info", message, attributes, severityNumber: "accessible" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "info", message, attributes, severityNumber: "padding" }, obj.scope);
 };
 export const trace = function trace(message, attributes) {
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "trace", message, attributes, severityNumber: "accessible" }, obj.scope);
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "trace", message, attributes, severityNumber: "padding" }, obj.scope);
 };
 export const warn = function warn(message, attributes) {
   let obj = arg2;

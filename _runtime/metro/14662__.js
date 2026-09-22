@@ -1,47 +1,69 @@
 // === Module 14662: ? ===
 
 // Module 14662
-import _typeof from "module_14663" /* 14663 */;
 
-if (_typeof) {
-  if (typeof _typeof === "object") {
-    let _default = _typeof;
-  }
-  let obj = globalThis;
-  const _Intl = Intl;
-  if (typeof Intl === "undefined") {
-    if (undefined !== global) {
-      obj = { PluralRules: _default.default };
-      global.Intl = obj;
-      _default = _default.default;
-      _default.polyfill = true;
-    } else {
-      const _window = window;
-      if (typeof window === "undefined") {
-        const self = this;
-        const obj2 = { PluralRules: _default.default };
-        this.Intl = obj2;
-      }
+export default {
+  isASCIIDigit(decodeResult) {
+    let tmp = decodeResult >= 48;
+    if (tmp) {
+      tmp = decodeResult <= 57;
     }
-    obj = { PluralRules: _default.default };
-    obj.window.Intl = obj;
-  } else {
-    const _Intl5 = Intl;
-    if (Intl.PluralRules) {
-      const _Intl2 = Intl;
-      if (Intl.PluralRules.prototype.selectRange) {
-        const items = ["en", "es", "ru", "zh"];
-        const _Intl4 = Intl;
-        if (PluralRules.supportedLocalesOf(items).length < items.length) {
-          const _Intl6 = Intl;
-          Intl.PluralRules = _default.default;
-          _default.default.polyfill = true;
-        }
-      }
+    return tmp;
+  },
+  isASCIIAlpha(input) {
+    let tmp = input >= 65;
+    if (tmp) {
+      tmp = input <= 90;
     }
-    const _Intl3 = Intl;
-    Intl.PluralRules = _default.default;
-    _default.default.polyfill = true;
+    if (!tmp) {
+      let tmp2 = input >= 97;
+      if (tmp2) {
+        tmp2 = input <= 122;
+      }
+      tmp = tmp2;
+    }
+    return tmp;
+  },
+  isASCIIAlphanumeric(arg0) {
+    let tmp = arg0 >= 65;
+    if (tmp) {
+      tmp = arg0 <= 90;
+    }
+    if (!tmp) {
+      let tmp2 = arg0 >= 97;
+      if (tmp2) {
+        tmp2 = arg0 <= 122;
+      }
+      tmp = tmp2;
+    }
+    if (!tmp) {
+      let tmp3 = arg0 >= 48;
+      if (tmp3) {
+        tmp3 = arg0 <= 57;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
+  },
+  isASCIIHex(decodeResult) {
+    let tmp = decodeResult >= 48;
+    if (tmp) {
+      tmp = decodeResult <= 57;
+    }
+    if (!tmp) {
+      let tmp2 = decodeResult >= 65;
+      if (tmp2) {
+        tmp2 = decodeResult <= 70;
+      }
+      tmp = tmp2;
+    }
+    if (!tmp) {
+      let tmp3 = decodeResult >= 97;
+      if (tmp3) {
+        tmp3 = decodeResult <= 102;
+      }
+      tmp = tmp3;
+    }
+    return tmp;
   }
-}
-_default = { default: _typeof };
+};

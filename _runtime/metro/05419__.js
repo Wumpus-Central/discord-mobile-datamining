@@ -2,9 +2,6 @@
 
 // Module 5419
 import _mod5420 from "module_5420" /* 5420 */;
-import _mod5421 from "module_5421" /* 5421 */;
-import _mod5422 from "module_5422" /* 5422 */;
-import _mod5423 from "module_5423" /* 5423 */;
 
 const self = this;
 let self2 = this;
@@ -43,9 +40,6 @@ if (self2) {
   }
   const _Object2 = Object;
   fn(_mod5420, exports);
-  fn(_mod5421, exports);
-  fn(_mod5422, exports);
-  fn(_mod5423, exports);
 } else {
   let _Object = Object;
 }

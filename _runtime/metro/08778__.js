@@ -1,16 +1,14 @@
 // === Module 8778: ? ===
 
 // Module 8778
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8767 from "module_8767" /* 8767 */;
-import _modDef8779 from "module_8779" /* 8779 */;
+import _modDef8771 from "module_8771" /* 8771 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const FeGaussianBlur = fn;
+const FeDiffuseLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeGaussianBlur {
+class FeDiffuseLighting {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeGaussianBlur);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeGaussianBlur);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeDiffuseLighting);
+    tmp2 = closure_4;
+    obj = closure_4(FeDiffuseLighting);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,33 +48,18 @@ class FeGaussianBlur {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeGaussianBlur, _modDef8767);
+_inherits(FeDiffuseLighting, _modDef8771);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(FeGaussianBlur(8766).extractFilter(this.props));
-    const obj2 = FeGaussianBlur(8766);
-    const merged1 = Object.assign(FeGaussianBlur(8766).extractIn(this.props));
-    const obj3 = FeGaussianBlur(8766);
-    const merged2 = Object.assign(FeGaussianBlur(8766).extractFeGaussianBlur(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const result = FeDiffuseLighting(8748).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(FeDiffuseLighting, items);
+importDefaultResultResult.displayName = "FeDiffuseLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

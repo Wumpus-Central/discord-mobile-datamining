@@ -1,393 +1,605 @@
 // === Module 10128: ? ===
 
 // Module 10128
-import _mod10124 from "module_10124" /* 10124 */;
-import QRPolynomial from "QRPolynomial" /* 10129 */;
-import array2 from "array2" /* 10130 */;
+import QR8bitByte from "QR8bitByte" /* 10129 */;
+import QRRSBlock from "QRRSBlock" /* 10131 */;
+import QRBitBuffer from "QRBitBuffer" /* 10133 */;
+import _mod10134 from "module_10134" /* 10134 */;
+import QRPolynomial from "QRPolynomial" /* 10135 */;
 
-const exports = {
-  PATTERN_POSITION_TABLE: null,
-  G15: 1335,
-  G18: 7973,
-  G15_MASK: 21522,
-  getBCHTypeInfo(arg0) {
-    let diff;
-    let tmp2 = obj;
-    const bCHDigit = obj.getBCHDigit(tmp);
-    let tmp4 = tmp;
-    let tmp5 = tmp;
-    if (bCHDigit - obj.getBCHDigit(obj.G15) >= 0) {
-      do {
-        let bCHDigit1 = obj.getBCHDigit(tmp4);
-        let tmp8 = tmp4 ^ obj.G15 << bCHDigit1 - obj.getBCHDigit(obj.G15);
-        let bCHDigit2 = obj.getBCHDigit(tmp8);
-        tmp4 = tmp8;
-        tmp5 = tmp8;
-        tmp2 = obj;
-        diff = bCHDigit2 - obj.getBCHDigit(obj.G15);
-      } while (diff >= 0);
+class QRCode {
+  constructor(arg0, arg1) {
+    return;
+  }
+}
+const prototype = QRCode.prototype;
+prototype.addData = function(arg0) {
+  const dataList = this.dataList;
+  dataList.push(new QR8bitByte(arg0));
+  this.dataCache = null;
+};
+prototype.isDark = function(arg0, arg1) {
+  if (arg0 >= 0) {
+    const self = this;
+    if (this.moduleCount > arg0) {
+      if (arg1 >= 0) {
+        if (self.moduleCount > arg1) {
+          return self.modules[arg0][arg1];
+        }
+      }
     }
-    return (arg0 << 10 | tmp5) ^ tmp2.G15_MASK;
-  },
-  getBCHTypeNumber(typeNumber) {
-    let diff;
-    const bCHDigit = obj.getBCHDigit(tmp);
-    let tmp3 = tmp;
-    let tmp4 = tmp;
-    if (bCHDigit - obj.getBCHDigit(obj.G18) >= 0) {
-      do {
-        let bCHDigit1 = obj.getBCHDigit(tmp3);
-        let tmp7 = tmp3 ^ obj.G18 << bCHDigit1 - obj.getBCHDigit(obj.G18);
-        let bCHDigit2 = obj.getBCHDigit(tmp7);
-        tmp3 = tmp7;
-        tmp4 = tmp7;
-        diff = bCHDigit2 - obj.getBCHDigit(obj.G18);
-      } while (diff >= 0);
-    }
-    return typeNumber << 12 | tmp4;
-  },
-  getBCHDigit(G15) {
-    let tmp = G15;
-    let num = 0;
-    let num2 = 0;
-    if (0 != G15) {
-      do {
+  }
+  const error = new Error(arg0 + "," + arg1);
+  throw error;
+};
+prototype.getModuleCount = function() {
+  return this.moduleCount;
+};
+prototype.make = function() {
+  let tmp13;
+  const self = this;
+  let num = 1;
+  if (this.typeNumber < 1) {
+    while (true) {
+      let obj = QRRSBlock;
+      let rSBlocks = obj.getRSBlocks(num, self.errorCorrectLevel);
+      let tmp3 = new.target;
+      let tmp4 = new.target;
+      let obj2 = new QRBitBuffer();
+      let num2 = 0;
+      let num3 = 0;
+      let num4 = 0;
+      if (0 < rSBlocks.length) {
+        do {
+          num3 = num3 + rSBlocks[num2].dataCount;
+          num2 = num2 + 1;
+          num4 = num3;
+          length = rSBlocks.length;
+        } while (num2 < length);
+      }
+      let num5 = 0;
+      if (0 < self.dataList.length) {
+        do {
+          let obj3 = self.dataList[num5];
+          let putResult = obj2.put(obj3.mode, 4);
+          let length1 = obj3.getLength();
+          let obj4 = _mod10134;
+          let putResult1 = obj2.put(length1, obj4.getLengthInBits(obj3.mode, num));
+          let writeResult = obj3.write(obj2);
+          num5 = num5 + 1;
+          length2 = self.dataList.length;
+        } while (num5 < length2);
+      }
+      tmp13 = num;
+      if (obj2.getLengthInBits() <= 8 * num4) {
+        break;
+      } else {
         num = num + 1;
-        tmp = tmp >>> 1;
-        num2 = num;
-      } while (0 !== tmp);
+        tmp13 = num;
+        if (num >= 40) {
+          break;
+        }
+      }
     }
-    return num2;
-  },
-  getPatternPosition(typeNumber) {
-    return obj.PATTERN_POSITION_TABLE[typeNumber - 1];
-  },
-  getMask(arg0, arg1, diff3) {
-    if (0 === arg0) {
-      return (arg1 + diff3) % 2 === 0;
-    } else if (1 === arg0) {
-      return arg1 % 2 === 0;
-    } else if (2 === arg0) {
-      return diff3 % 3 === 0;
-    } else if (3 === arg0) {
-      return (arg1 + diff3) % 3 === 0;
-    } else if (4 === arg0) {
-      const _Math = Math;
-      const _Math2 = Math;
-      const rounded = Math.floor(arg1 / 2);
-      return (rounded + Math.floor(diff3 / 3)) % 2 === 0;
-    } else if (5 === arg0) {
-      return arg1 * diff3 % 2 + arg1 * diff3 % 3 === 0;
-    } else if (6 === arg0) {
-      return (arg1 * diff3 % 2 + arg1 * diff3 % 3) % 2 === 0;
-    } else if (7 === arg0) {
-      return (arg1 * diff3 % 3 + (arg1 + diff3) % 2) % 2 === 0;
-    } else {
-      const _Error = Error;
-      const error = new Error("bad maskPattern:" + arg0);
-      throw error;
-    }
-  },
-  getErrorCorrectPolynomial(diff) {
-    const tmp = new QRPolynomial([1], 0);
-    let multiplyResult = tmp;
-    let num = 0;
-    let tmp2 = tmp;
-    if (0 < diff) {
-      do {
-        let tmp5 = QRPolynomial;
-        let obj2 = array2;
-        let items = [1, obj2.gexp(num)];
-        let tmp6 = new.target;
-        let tmp7 = new.target;
-        let tmp52 = new tmp5(items, 0);
-        multiplyResult = multiplyResult.multiply(tmp52);
-        num = num + 1;
-        tmp2 = multiplyResult;
-      } while (num < diff);
-    }
-    return tmp2;
-  },
-  getLengthInBits(arg0, arg1) {
-    if (1 <= arg1) {
-      if (arg1 < 10) {
-        if (_mod10124.MODE_NUMBER === arg0) {
-          return 10;
-        } else if (_mod10124.MODE_ALPHA_NUM === arg0) {
-          return 9;
-        } else {
-          if (_mod10124.MODE_8BIT_BYTE !== arg0) {
-            if (_mod10124.MODE_KANJI !== arg0) {
-              const _Error4 = Error;
-              const error = new Error("mode:" + arg0);
-              throw error;
-            }
+    self.typeNumber = tmp13;
+  }
+  const impl = self.makeImpl(false, self.getBestMaskPattern());
+};
+prototype.makeImpl = function(arg0, arg1) {
+  const self = this;
+  this.moduleCount = 4 * this.typeNumber + 17;
+  const array = new Array(this.moduleCount);
+  this.modules = array;
+  let num = 0;
+  if (0 < this.moduleCount) {
+    do {
+      let _Array = Array;
+      let tmp2 = new.target;
+      let tmp3 = new.target;
+      let array2 = new Array(self.moduleCount);
+      self.modules[num] = array2;
+      let num2 = 0;
+      if (0 < self.moduleCount) {
+        do {
+          self.modules[num][num2] = null;
+          num2 = num2 + 1;
+          moduleCount = self.moduleCount;
+        } while (num2 < moduleCount);
+      }
+      num = num + 1;
+    } while (num < self.moduleCount);
+  }
+  const result = self.setupPositionProbePattern(0, 0);
+  const result1 = self.setupPositionProbePattern(self.moduleCount - 7, 0);
+  const result2 = self.setupPositionProbePattern(0, self.moduleCount - 7);
+  const result3 = self.setupPositionAdjustPattern();
+  self.setupTimingPattern();
+  self.setupTypeInfo(arg0, arg1);
+  if (self.typeNumber >= 7) {
+    self.setupTypeNumber(arg0);
+  }
+  if (null == self.dataCache) {
+    self.dataCache = QRCode.createData(self.typeNumber, self.errorCorrectLevel, self.dataList);
+  }
+  self.mapData(self.dataCache, arg1);
+};
+prototype.setupPositionProbePattern = function(arg0, arg1) {
+  const self = this;
+  let num = -1;
+  do {
+    if (arg0 + num > -1) {
+      let num2 = -1;
+      if (self.moduleCount > arg0 + num) {
+        do {
+          let tmp2 = arg1 + num2 <= -1;
+          if (!tmp2) {
+            tmp2 = self.moduleCount <= arg1 + num2;
           }
-          return 8;
-        }
-      }
-    }
-    if (arg1 < 27) {
-      if (_mod10124.MODE_NUMBER === arg0) {
-        return 12;
-      } else if (_mod10124.MODE_ALPHA_NUM === arg0) {
-        return 11;
-      } else if (_mod10124.MODE_8BIT_BYTE === arg0) {
-        return 16;
-      } else if (_mod10124.MODE_KANJI === arg0) {
-        return 10;
-      } else {
-        const _Error3 = Error;
-        const error1 = new Error("mode:" + arg0);
-        throw error1;
-      }
-    } else if (arg1 < 41) {
-      if (_mod10124.MODE_NUMBER === arg0) {
-        return 14;
-      } else if (_mod10124.MODE_ALPHA_NUM === arg0) {
-        return 13;
-      } else if (_mod10124.MODE_8BIT_BYTE === arg0) {
-        return 16;
-      } else if (_mod10124.MODE_KANJI === arg0) {
-        return 12;
-      } else {
-        const _Error2 = Error;
-        const error2 = new Error("mode:" + arg0);
-        throw error2;
-      }
-    } else {
-      const _Error = Error;
-      const error3 = new Error("type:" + arg1);
-      throw error3;
-    }
-  },
-  getLostPoint(self) {
-    let sum4;
-    const moduleCount = self.getModuleCount();
-    let num = 0;
-    let num2 = 0;
-    let num3 = 0;
-    if (0 < moduleCount) {
-      do {
-        let tmp3 = num2;
-        let num4 = 0;
-        let tmp4 = num2;
-        if (0 < moduleCount) {
-          let num5 = -1;
-          let num6 = 0;
-          do {
-            do {
-              let sum = num + num5;
-              let tmp11 = num6;
-              if (sum >= 0) {
-                let num7 = -1;
-                let tmp13 = num6;
-                tmp11 = num6;
-                if (moduleCount > sum) {
-                  do {
-                    let sum1 = num4 + num7;
-                    let tmp15 = sum1 < 0;
-                    if (sum1 >= 0) {
-                      tmp15 = moduleCount <= sum1;
-                    }
-                    if (!tmp15) {
-                      let tmp18 = tmp12;
-                      if (0 === num5) {
-                        tmp18 = 0 === num7;
-                      }
-                      tmp15 = tmp18;
-                    }
-                    let tmp19 = tmp13;
-                    if (!tmp15) {
-                      let sum2 = tmp13;
-                      if (tmp5 == self.isDark(sum, sum1)) {
-                        sum2 = tmp13 + 1;
-                      }
-                      tmp19 = sum2;
-                    }
-                    num7 = num7 + 1;
-                    tmp13 = tmp19;
-                    tmp11 = tmp19;
-                  } while (num7 <= 1);
-                }
+          if (!tmp2) {
+            let tmp5 = tmp15;
+            let sum = arg1 + num2;
+            if (0 <= num) {
+              tmp5 = tmp14;
+            }
+            if (tmp5) {
+              let tmp6 = 0 === num2;
+              if (0 !== num2) {
+                tmp6 = 6 === num2;
               }
-              num5 = num5 + 1;
-              num6 = tmp11;
-            } while (num5 <= 1);
-            let sum3 = tmp3;
-            if (5 < tmp11) {
-              sum3 = tmp3 + (3 + tmp11 - 5);
+              tmp5 = tmp6;
             }
-            num4 = num4 + 1;
-            tmp3 = sum3;
-            tmp4 = sum3;
-          } while (num4 < moduleCount);
-        }
-        num = num + 1;
-        num2 = tmp4;
-        num3 = tmp4;
-      } while (num < moduleCount);
+            if (!tmp5) {
+              let tmp7 = 0 <= num2;
+              if (0 <= num2) {
+                tmp7 = num2 <= 6;
+              }
+              if (tmp7) {
+                let tmp8 = tmp13;
+                if (0 !== num) {
+                  tmp8 = tmp12;
+                }
+                tmp7 = tmp8;
+              }
+              tmp5 = tmp7;
+            }
+            if (!tmp5) {
+              let tmp9 = tmp11;
+              if (2 <= num) {
+                tmp9 = tmp10;
+              }
+              if (tmp9) {
+                tmp9 = 2 <= num2;
+              }
+              if (tmp9) {
+                tmp9 = num2 <= 4;
+              }
+              tmp5 = tmp9;
+            }
+            self.modules[arg0 + num][sum] = tmp5;
+          }
+          num2 = num2 + 1;
+        } while (num2 <= 7);
+      }
     }
-    let tmp22 = num3;
-    let num8 = 0;
-    let tmp23 = num3;
-    if (0 < moduleCount - 1) {
-      do {
-        sum4 = num8 + 1;
-        let tmp26 = tmp22;
-        let num9 = 0;
-        let tmp27 = tmp22;
-        if (0 < moduleCount - 1) {
-          do {
-            let num10 = 0;
-            if (self.isDark(num8, num9)) {
-              num10 = 1;
-            }
-            let sum5 = num10;
-            if (self.isDark(sum4, num9)) {
-              sum5 = num10 + 1;
-            }
-            sum6 = num9 + 1;
-            let sum7 = sum5;
-            if (self.isDark(num8, sum6)) {
-              sum7 = sum5 + 1;
-            }
-            let sum8 = sum7;
-            if (self.isDark(sum4, sum6)) {
-              sum8 = sum7 + 1;
-            }
-            let tmp34 = 0 !== sum8;
-            if (0 !== sum8) {
-              tmp34 = 4 !== sum8;
-            }
-            let sum9 = tmp26;
-            if (!tmp34) {
-              sum9 = tmp26 + 3;
-            }
-            tmp26 = sum9;
-            tmp27 = sum9;
-            num9 = sum6;
-          } while (sum6 < moduleCount - 1);
-        }
-        tmp22 = tmp27;
-        tmp23 = tmp27;
-        num8 = sum4;
-      } while (sum4 < moduleCount - 1);
+    num = num + 1;
+  } while (num <= 7);
+};
+prototype.getBestMaskPattern = function() {
+  let tmp7;
+  const self = this;
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  do {
+    let impl = self.makeImpl(true, num);
+    let obj = _mod10134;
+    let lostPoint = obj.getLostPoint(self);
+    let tmp5 = 0 === num;
+    tmp7 = num2;
+    let tmp8 = num3;
+    if (0 !== num) {
+      tmp5 = tmp8 > lostPoint;
     }
-    let tmp36 = tmp23;
-    let num11 = 0;
-    let tmp37 = tmp23;
-    if (0 < moduleCount) {
-      do {
-        let tmp39 = tmp36;
-        let num12 = 0;
-        let tmp40 = tmp36;
-        if (0 < moduleCount - 6) {
-          do {
-            let isDarkResult = self.isDark(num11, num12);
-            if (isDarkResult) {
-              isDarkResult = !self.isDark(num11, num12 + 1);
-            }
-            if (isDarkResult) {
-              isDarkResult = self.isDark(num11, num12 + 2);
-            }
-            if (isDarkResult) {
-              isDarkResult = self.isDark(num11, num12 + 3);
-            }
-            if (isDarkResult) {
-              isDarkResult = self.isDark(num11, num12 + 4);
-            }
-            if (isDarkResult) {
-              isDarkResult = !self.isDark(num11, num12 + 5);
-            }
-            if (isDarkResult) {
-              isDarkResult = self.isDark(num11, num12 + 6);
-            }
-            let sum10 = tmp39;
-            if (isDarkResult) {
-              sum10 = tmp39 + 40;
-            }
-            num12 = num12 + 1;
-            tmp39 = sum10;
-            tmp40 = sum10;
-          } while (num12 < moduleCount - 6);
-        }
-        num11 = num11 + 1;
-        tmp36 = tmp40;
-        tmp37 = tmp40;
-      } while (num11 < moduleCount);
+    if (tmp5) {
+      tmp7 = num;
+      tmp8 = lostPoint;
     }
-    let tmp45 = tmp37;
-    let num13 = 0;
-    let tmp46 = tmp37;
-    if (0 < moduleCount) {
-      do {
-        let tmp48 = tmp45;
-        let num14 = 0;
-        let tmp49 = tmp45;
-        if (0 < moduleCount - 6) {
-          do {
-            let isDarkResult1 = self.isDark(num14, num13);
-            if (isDarkResult1) {
-              isDarkResult1 = !self.isDark(num14 + 1, num13);
-            }
-            if (isDarkResult1) {
-              isDarkResult1 = self.isDark(num14 + 2, num13);
-            }
-            if (isDarkResult1) {
-              isDarkResult1 = self.isDark(num14 + 3, num13);
-            }
-            if (isDarkResult1) {
-              isDarkResult1 = self.isDark(num14 + 4, num13);
-            }
-            if (isDarkResult1) {
-              isDarkResult1 = !self.isDark(num14 + 5, num13);
-            }
-            if (isDarkResult1) {
-              isDarkResult1 = self.isDark(num14 + 6, num13);
-            }
-            let sum11 = tmp48;
-            if (isDarkResult1) {
-              sum11 = tmp48 + 40;
-            }
-            num14 = num14 + 1;
-            tmp48 = sum11;
-            tmp49 = sum11;
-          } while (num14 < moduleCount - 6);
+    num = num + 1;
+    num3 = tmp8;
+    num2 = tmp7;
+  } while (num < 8);
+  return tmp7;
+};
+prototype.createMovieClip = function(createEmptyMovieClip, arg1, arg2) {
+  const self = this;
+  const emptyMovieClip = createEmptyMovieClip.createEmptyMovieClip(arg1, arg2);
+  this.make();
+  let num = 0;
+  if (0 < this.modules.length) {
+    do {
+      let tmp2 = num;
+      let sum = tmp2 + 1;
+      for (let num2 = 0; num2 < self.modules[num].length; num2 = num2 + 1) {
+        if (self.modules[num][num2]) {
+          let tmp6 = num2;
+          let beginFillResult = emptyMovieClip.beginFill(0, 100);
+          let moveToResult = emptyMovieClip.moveTo(tmp6, tmp2);
+          let sum1 = tmp6 + 1;
+          let lineToResult = emptyMovieClip.lineTo(sum1, tmp2);
+          let lineToResult1 = emptyMovieClip.lineTo(sum1, sum);
+          let lineToResult2 = emptyMovieClip.lineTo(tmp6, sum);
+          let endFillResult = emptyMovieClip.endFill();
         }
-        num13 = num13 + 1;
-        tmp45 = tmp49;
-        tmp46 = tmp49;
-      } while (num13 < moduleCount);
-    }
-    let num15 = 0;
-    let num16 = 0;
-    let num17 = 0;
-    if (0 < moduleCount) {
-      do {
-        let tmp54 = num15;
-        let num18 = 0;
-        let tmp56 = num15;
-        if (0 < moduleCount) {
-          do {
-            let sum12 = tmp54;
-            if (self.isDark(num18, num16)) {
-              sum12 = tmp54 + 1;
-            }
-            num18 = num18 + 1;
-            tmp54 = sum12;
-            tmp56 = sum12;
-          } while (num18 < moduleCount);
-        }
-        num16 = num16 + 1;
-        num15 = tmp56;
-        num17 = tmp56;
-      } while (num16 < moduleCount);
-    }
-    return tmp46 + 10 * (Math.abs(100 * num17 / moduleCount / moduleCount - 50) / 5);
+      }
+      num = num + 1;
+    } while (num < self.modules.length);
+  }
+  return emptyMovieClip;
+};
+prototype.setupTimingPattern = function() {
+  const self = this;
+  let num = 8;
+  if (8 < this.moduleCount - 8) {
+    do {
+      if (null == self.modules[num][6]) {
+        self.modules[num][6] = num % 2 === 0;
+      }
+      num = num + 1;
+    } while (num < self.moduleCount - 8);
+  }
+  let num2 = 8;
+  if (8 < self.moduleCount - 8) {
+    do {
+      if (null == self.modules[6][num2]) {
+        self.modules[6][num2] = num2 % 2 === 0;
+      }
+      num2 = num2 + 1;
+    } while (num2 < self.moduleCount - 8);
   }
 };
-let items = [[], [6, 18], [6, 22], [6, 26], [6, 30], [6, 34], [6, 22, 38], [6, 24, 42], [6, 26, 46], [6, 28, 50], [6, 30, 54], [6, 32, 58], [6, 34, 62], [6, 26, 46, 66], [6, 26, 48, 70], [6, 26, 50, 74], [6, 30, 54, 78], [6, 30, 56, 82], [6, 30, 58, 86], [6, 34, 62, 90], [6, 28, 50, 72, 94], [6, 26, 50, 74, 98], [6, 30, 54, 78, 102], [6, 28, 54, 80, 106], [6, 32, 58, 84, 110], [6, 30, 58, 86, 114], [6, 34, 62, 90, 118], [6, 26, 50, 74, 98, 122], [6, 30, 54, 78, 102, 126], [6, 26, 52, 78, 104, 130], [6, 30, 56, 82, 108, 134], [6, 34, 60, 86, 112, 138], [6, 30, 58, 86, 114, 142], [6, 34, 62, 90, 118, 146], [6, 30, 54, 78, 102, 126, 150], [6, 24, 50, 76, 102, 128, 154], [6, 28, 54, 80, 106, 132, 158], [6, 32, 58, 84, 110, 136, 162], [6, 26, 54, 82, 110, 138, 166], [6, 30, 58, 86, 114, 142, 170]];
+prototype.setupPositionAdjustPattern = function() {
+  const self = this;
+  const patternPosition = _mod10134.getPatternPosition(this.typeNumber);
+  for (let num = 0; num < patternPosition.length; num = num + 1) {
+    for (let num2 = 0; num2 < patternPosition.length; num2 = num2 + 1) {
+      let tmp2 = patternPosition[num];
+      let tmp3 = patternPosition[num2];
+      let num3 = -2;
+      if (null == self.modules[tmp2][tmp3]) {
+        let num4 = -2;
+        do {
+          do {
+            let tmp11 = tmp7;
+            let sum = tmp3 + num4;
+            if (-2 !== num3) {
+              tmp11 = tmp6;
+            }
+            if (!tmp11) {
+              tmp11 = -2 === num4;
+            }
+            if (!tmp11) {
+              tmp11 = 2 === num4;
+            }
+            if (!tmp11) {
+              let tmp12 = tmp5;
+              if (0 === num3) {
+                tmp12 = 0 === num4;
+              }
+              tmp11 = tmp12;
+            }
+            self.modules[tmp2 + num3][sum] = tmp11;
+            num4 = num4 + 1;
+          } while (num4 <= 2);
+          num3 = num3 + 1;
+        } while (num3 <= 2);
+      }
+    }
+  }
+};
+prototype.setupTypeNumber = function(arg0) {
+  let num2;
+  const self = this;
+  const bCHTypeNumber = _mod10134.getBCHTypeNumber(this.typeNumber);
+  let num = 0;
+  do {
+    let tmp2 = !arg0;
+    if (!arg0) {
+      tmp2 = 1 === (bCHTypeNumber >> num & 1);
+    }
+    let _Math = Math;
+    self.modules[Math.floor(Math, num / 3)][num % 3 + self.moduleCount - 8 - 3] = tmp2;
+    num = num + 1;
+    num2 = 0;
+  } while (num < 18);
+  do {
+    let tmp4 = !arg0;
+    if (!arg0) {
+      tmp4 = 1 === (bCHTypeNumber >> num2 & 1);
+    }
+    let _Math2 = Math;
+    self.modules[num2 % 3 + self.moduleCount - 8 - 3][Math.floor(num2 / 3)] = tmp4;
+    num2 = num2 + 1;
+  } while (num2 < 18);
+};
+prototype.setupTypeInfo = function(arg0, arg1) {
+  let num2;
+  const self = this;
+  const bCHTypeInfo = _mod10134.getBCHTypeInfo(this.errorCorrectLevel << 3 | arg1);
+  let num = 0;
+  do {
+    let tmp3 = !arg0;
+    if (!arg0) {
+      tmp3 = 1 === (bCHTypeInfo >> num & 1);
+    }
+    if (num < 6) {
+      self.modules[num][8] = tmp3;
+    } else if (num < 8) {
+      self.modules[num + 1][8] = tmp3;
+    } else {
+      self.modules[self.moduleCount - 15 + num][8] = tmp3;
+    }
+    num = num + 1;
+    num2 = 0;
+  } while (num < 15);
+  do {
+    let tmp5 = !arg0;
+    if (!arg0) {
+      tmp5 = 1 === (bCHTypeInfo >> num2 & 1);
+    }
+    if (num2 < 8) {
+      self.modules[8][self.moduleCount - num2 - 1] = tmp5;
+    } else if (num2 < 9) {
+      self.modules[8][15 - num2 - 1 + 1] = tmp5;
+    } else {
+      self.modules[8][15 - num2 - 1] = tmp5;
+    }
+    num2 = num2 + 1;
+  } while (num2 < 15);
+  self.modules[self.moduleCount - 8][8] = !arg0;
+};
+prototype.mapData = function(arg0, arg1) {
+  const self = this;
+  const diff = this.moduleCount - 1;
+  const diff1 = this.moduleCount - 1;
+  if (0 < diff1) {
+    while (true) {
+      let tmp8 = num;
+      let tmp9 = num2;
+      let tmp10 = diff;
+      let diff2 = diff1;
+      if (6 === diff1) {
+        diff2 = diff1 - 1;
+        tmp8 = num;
+        tmp9 = num2;
+        tmp10 = diff;
+      }
+      let tmp13 = tmp8;
+      let tmp14 = tmp9;
+      let num4 = 0;
+      while (true) {
+        do {
+          let diff3 = diff2 - num4;
+          let sum = tmp13;
+          let num5 = tmp14;
+          if (null == self.modules[tmp10][diff3]) {
+            let flag = false;
+            if (tmp13 < arg0.length) {
+              flag = 1 === (arg0[tmp13] >>> tmp14 & 1);
+            }
+            let obj = _mod10134;
+            let tmp23 = flag;
+            if (obj.getMask(arg1, tmp10, diff3)) {
+              tmp23 = !flag;
+            }
+            self.modules[tmp10][diff3] = tmp23;
+            num5 = tmp14 - 1;
+            sum = tmp13;
+            if (-1 === num5) {
+              sum = tmp13 + 1;
+              num5 = 7;
+            }
+          }
+          num4 = num4 + 1;
+          tmp13 = sum;
+          tmp14 = num5;
+        } while (num4 < 2);
+        let sum1 = tmp10 + num3;
+        if (sum1 < 0) {
+          break;
+        } else {
+          tmp8 = sum;
+          tmp9 = num5;
+          tmp10 = sum1;
+          if (self.moduleCount <= sum1) {
+            break;
+          }
+        }
+      }
+    }
+  }
+};
+QRCode.PAD0 = 236;
+QRCode.PAD1 = 17;
+QRCode.createData = (arg0, arg1, arg2) => {
+  let length;
+  let length2;
+  let result1;
+  const rSBlocks = QRRSBlock.getRSBlocks(arg0, arg1);
+  const obj2 = new QRBitBuffer();
+  let num = 0;
+  if (0 < arg2.length) {
+    do {
+      let obj3 = arg2[num];
+      let putResult = obj2.put(obj3.mode, 4);
+      let length1 = obj3.getLength();
+      let obj4 = _mod10134;
+      let putResult1 = obj2.put(length1, obj4.getLengthInBits(obj3.mode, arg0));
+      let writeResult = obj3.write(obj2);
+      num = num + 1;
+      length = arg2.length;
+    } while (num < length);
+  }
+  let num2 = 0;
+  let num3 = 0;
+  let num4 = 0;
+  if (0 < rSBlocks.length) {
+    do {
+      num2 = num2 + rSBlocks[num3].dataCount;
+      num3 = num3 + 1;
+      num4 = num2;
+      length2 = rSBlocks.length;
+    } while (num3 < length2);
+  }
+  const result = 8 * num4;
+  if (obj2.getLengthInBits() > result) {
+    const _Error = Error;
+    const error = new Error("code length overflow. (" + obj2.getLengthInBits() + ">" + result + ")");
+    throw error;
+  } else {
+    if (obj2.getLengthInBits() + 4 <= result) {
+      obj2.put(0, 4);
+    }
+    if (obj2.getLengthInBits() % 8 !== 0) {
+      do {
+        let putBitResult = obj2.putBit(false);
+        result1 = obj2.getLengthInBits() % 8;
+      } while (result1 !== 0);
+    }
+    if (obj2.getLengthInBits() < result) {
+      obj2.put(QRCode.PAD0, 8);
+      if (obj2.getLengthInBits() < result) {
+        obj2.put(QRCode.PAD1, 8);
+        while (obj2.getLengthInBits() < result) {
+          let putResult5 = obj2.put(QRCode.PAD0, 8);
+          if (obj2.getLengthInBits() >= result) {
+            break;
+          }
+        }
+      }
+    }
+    return QRCode.createBytes(obj2, rSBlocks);
+  }
+};
+QRCode.createBytes = (arg0, arg1) => {
+  let length2;
+  const array = new Array(arg1.length);
+  const array5 = new Array(arg1.length);
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  let num4 = 0;
+  let num5 = 0;
+  let num6 = 0;
+  if (0 < arg1.length) {
+    do {
+      let dataCount = arg1[num].dataCount;
+      let diff = arg1[num].totalCount - dataCount;
+      let _Math = Math;
+      let bound = Math.max(num3, dataCount);
+      let _Math2 = Math;
+      let bound1 = Math.max(num2, diff);
+      let _Array = Array;
+      let tmp6 = new.target;
+      let tmp7 = new.target;
+      let array6 = new Array(dataCount);
+      array[num] = array6;
+      let num7 = 0;
+      if (0 < array[num].length) {
+        do {
+          array[num][num7] = 255 & arg0.buffer[num7 + num4];
+          num7 = num7 + 1;
+          length = array[num].length;
+        } while (num7 < length);
+      }
+      let sum = num4 + dataCount;
+      let obj = _mod10134;
+      let errorCorrectPolynomial = obj.getErrorCorrectPolynomial(diff);
+      let tmp16 = QRPolynomial;
+      let tmp17 = new.target;
+      let tmp18 = new.target;
+      let tmp162 = new tmp16(array[num], errorCorrectPolynomial.getLength() - 1);
+      let modResult = tmp162.mod(errorCorrectPolynomial);
+      let _Array2 = Array;
+      let tmp20 = new.target;
+      let tmp21 = new.target;
+      let array7 = new Array(errorCorrectPolynomial.getLength() - 1);
+      array5[num] = array7;
+      for (let num8 = 0; num8 < array5[num].length; num8 = num8 + 1) {
+        let diff1 = num8 + modResult.getLength() - array5[num].length;
+        let num9 = 0;
+        if (0 <= diff1) {
+          num9 = modResult.get(diff1);
+        }
+        array5[num][num8] = num9;
+      }
+      num = num + 1;
+      num2 = bound1;
+      num3 = bound;
+      num4 = sum;
+      num5 = bound1;
+      num6 = bound;
+    } while (num < arg1.length);
+  }
+  let num10 = 0;
+  let num11 = 0;
+  let num12 = 0;
+  if (0 < arg1.length) {
+    do {
+      num10 = num10 + arg1[num11].totalCount;
+      num11 = num11 + 1;
+      num12 = num10;
+      length2 = arg1.length;
+    } while (num11 < length2);
+  }
+  const array8 = new Array(num12);
+  let num13 = 0;
+  let num14 = 0;
+  let num15 = 0;
+  if (0 < num6) {
+    do {
+      let tmp27 = num13;
+      let num16 = 0;
+      let tmp29 = num13;
+      if (0 < arg1.length) {
+        do {
+          let sum1 = tmp27;
+          if (num14 < array[num16].length) {
+            sum1 = tmp27 + 1;
+            array8[tmp27] = array[num16][num14];
+          }
+          num16 = num16 + 1;
+          tmp27 = sum1;
+          tmp29 = sum1;
+        } while (num16 < arg1.length);
+      }
+      num14 = num14 + 1;
+      num13 = tmp29;
+      num15 = tmp29;
+    } while (num14 < num6);
+  }
+  let num17 = 0;
+  if (0 < num5) {
+    do {
+      let tmp33 = num15;
+      let num18 = 0;
+      let tmp35 = num15;
+      if (0 < arg1.length) {
+        do {
+          let sum2 = tmp33;
+          if (num17 < array5[num18].length) {
+            sum2 = tmp33 + 1;
+            array8[tmp33] = array5[num18][num17];
+          }
+          num18 = num18 + 1;
+          tmp33 = sum2;
+          tmp35 = sum2;
+        } while (num18 < arg1.length);
+      }
+      num17 = num17 + 1;
+      num15 = tmp35;
+    } while (num17 < num5);
+  }
+  return array8;
+};
 
-export const PATTERN_POSITION_TABLE = items;
-export default exports;
+export default QRCode;

@@ -3,7 +3,7 @@
 // Module 8765
 import module_65 from "module_65" /* 65 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeBlend", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, in2: true, mode: true } };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGDefs", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true } };
 
-export default module_65.get("RNSVGFeBlend", () => obj);
+export default module_65.get("RNSVGDefs", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

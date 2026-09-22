@@ -1,5 +1,42 @@
 // === Module 14647: ? ===
 
 // Module 14647
+import _mod14586 from "module_14586" /* 14586 */;
+import _mod14587 from "module_14587" /* 14587 */;
+import _mod14589 from "module_14589" /* 14589 */;
+import _mod14590 from "module_14590" /* 14590 */;
+import _mod14607 from "module_14607" /* 14607 */;
+import _mod14616 from "module_14616" /* 14616 */;
+import _mod14636 from "module_14636" /* 14636 */;
+import _mod14648 from "module_14648" /* 14648 */;
 
-export default { name: "react-native-url-polyfill", version: "2.0.0", description: "A lightweight and trustworthy URL polyfill for React Native", keywords: ["URL", "URLSearchParams", "polyfill", "react native", "whatwg-url"], bugs: { url: "https://github.com/charpeni/react-native-url-polyfill/issues" }, homepage: "https://github.com/charpeni/react-native-url-polyfill", readme: "https://github.com/charpeni/react-native-url-polyfill#readme", repository: { type: "git", url: "https://github.com/charpeni/react-native-url-polyfill.git" }, main: "index.js", types: "index.d.ts", scripts: { test: "jest", lint: "eslint .", prepare: "husky install", "bundle-size": "node scripts/bundle-size" }, author: "Nicolas Charpentier <nicolas.charpentier079@gmail.com>", license: "MIT", dependencies: { "whatwg-url-without-unicode": "8.0.0-3" }, devDependencies: { "@react-native-community/eslint-config": "3.2.0", detox: "20.9.1", eslint: "8.44.0", "eslint-plugin-prettier": "4.2.1", husky: "8.0.3", jest: "29.5.0", "lint-staged": "13.2.3", "metro-react-native-babel-preset": "0.76.7", nanoid: "3.3.6", prettier: "2.8.8", react: "18.2.0", "react-native": "0.72.1", "react-native-bundle-scale": "1.1.0", typescript: "5.1.6" }, peerDependencies: { "react-native": "*" }, jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] }, "lint-staged": { "*.js": ["eslint --fix"] } };
+let closure_4 = _mod14590([].concat);
+if (!assign) {
+  assign = function assign(arg0, arg1) {
+    const tmp = _mod14607(arg0);
+    const f = _mod14636.f;
+    for (let num = 1; length > num; num = num + 1) {
+      let tmp5 = _mod14589(arguments[num]);
+      if (f) {
+        let tmp8 = _mod14648(tmp5);
+        let arr = closure_4(tmp8, f(tmp5));
+      } else {
+        arr = _mod14648(tmp5);
+      }
+      let length2 = arr.length;
+      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
+        let tmp9 = arr[num2];
+        let tmp12 = _mod14586;
+        if (tmp12) {
+          tmp12 = !_mod14616(tmp2, tmp5, tmp9);
+        }
+        if (!tmp12) {
+          tmp[tmp9] = tmp5[tmp9];
+        }
+      }
+    }
+    return tmp;
+  };
+}
+
+export default assign;

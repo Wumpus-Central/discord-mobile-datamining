@@ -1,16 +1,16 @@
 // === Module 7031: ? ===
 
 // Module 7031
-import _modDef7030 from "module_7030" /* 7030 */;
+import _modDef7032 from "module_7032" /* 7032 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import metroRequire from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const TouchableNativeFeedback = importDefault;
+const TouchableHighlight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,50 +30,82 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_2 = ["style"];
-const Platform = fn(17).Platform;
+let closure_3 = ["style"];
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_9, View: c10 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-class TouchableNativeFeedback {
-  constructor() {
+class TouchableHighlight {
+  constructor(arg0) {
     self = this;
-    tmp = closure_4(this, TouchableNativeFeedback);
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableNativeFeedback);
-    tmp3 = hasOwnProperty;
-    if (closure_9()) {
-      tmp7 = globalThis;
+    tmp = hasOwnProperty(this, TouchableHighlight);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_7;
+    obj = closure_7(TouchableHighlight);
+    tmp3 = metroRequire;
+    if (closure_12()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.showUnderlay = () => {
+      if (closure_0.hasPressHandler()) {
+        const obj2 = { extraChildStyle: null, extraUnderlayStyle: null };
+        const obj3 = { opacity: closure_0.props.activeOpacity };
+        obj2.extraChildStyle = obj3;
+        const obj4 = { backgroundColor: closure_0.props.underlayColor };
+        obj2.extraUnderlayStyle = obj4;
+        closure_0.setState(obj2);
+        const props = closure_0.props;
+        const onShowUnderlay = props.onShowUnderlay;
+        if (onShowUnderlay != null) {
+          onShowUnderlay();
+        }
+      }
+    };
+    tmp3Result.hasPressHandler = () => closure_0.props.onPress || closure_0.props.onPressIn || closure_0.props.onPressOut || closure_0.props.onLongPress;
+    tmp3Result.hideUnderlay = () => {
+      closure_0.setState({ extraChildStyle: null, extraUnderlayStyle: null });
+      const props = closure_0.props;
+      const onHideUnderlay = props.onHideUnderlay;
+      if (onHideUnderlay != null) {
+        onHideUnderlay();
+      }
+    };
+    tmp3Result.onStateChange = (arg0, arg1) => {
+      if (arg1 === TouchableHighlight(7032).TOUCHABLE_STATE.BEGAN) {
+        closure_0.showUnderlay();
+      } else {
+        if (!tmp3) {
+          closure_0.hideUnderlay();
+        }
+        tmp3 = arg1 !== TouchableHighlight(7032).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableHighlight(7032).TOUCHABLE_STATE.MOVED_OUTSIDE;
+      }
+    };
+    tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
+    return tmp3Result;
   }
 }
-_inherits(TouchableNativeFeedback, fn(19).Component);
+_inherits(TouchableHighlight, fn(19).Component);
 const entry = {
-  key: "getExtraButtonProps",
-  value: function getExtraButtonProps() {
-    const obj = {};
-    let rippleRadius = this.props.background;
-    if (!rippleRadius) {
-      obj.foreground = this.props.useForeground;
-      return obj;
+  key: "renderChildren",
+  value: function renderChildren() {
+    const self = this;
+    if (this.props.children) {
+      const Children = noop.Children;
+      const onlyResult = Children.only(self.props.children);
+      const obj = { style: React7.compose(onlyResult.props.style, self.state.extraChildStyle) };
+      return noop.cloneElement(onlyResult, obj);
     } else {
-      if ("RippleAndroid" === rippleRadius.type) {
-        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
-      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
-        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
-      }
-      rippleRadius = rippleRadius.rippleRadius;
-      obj.rippleRadius = rippleRadius;
+      return <closure_1_10 />;
     }
   }
 };
-const items = [
+let items = [
   entry,
   {
     key: "render",
@@ -85,23 +117,22 @@ const items = [
         style = {};
       }
       const obj = {};
-      const tmp = _objectWithoutProperties(props, closure_2);
+      const tmp = _objectWithoutProperties(props, closure_3);
       const merged = Object.assign(tmp);
-      obj.style = style;
-      obj.extraButtonProps = self.getExtraButtonProps();
-      return jsx(TouchableNativeFeedback(7030), {});
+      const items = [style, self.state.extraUnderlayStyle];
+      obj.style = items;
+      obj.onStateChange = self.onStateChange;
+      obj.children = self.renderChildren();
+      return jsx(_modDef7032, {});
     }
   }
 ];
-const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+const importDefaultResultResult = _createClass(TouchableHighlight, items);
 let obj = {};
-let merged = Object.assign(_modDef7030.defaultProps);
-obj.useForeground = true;
-obj.extraButtonProps = { rippleColor: null };
+let merged = Object.assign(_modDef7032.defaultProps);
+obj.activeOpacity = 0.85;
+obj.delayPressOut = 100;
+obj.underlayColor = "black";
 importDefaultResultResult.defaultProps = obj;
-importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
-importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
-importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
-importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
 
 export default importDefaultResultResult;

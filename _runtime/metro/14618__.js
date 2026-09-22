@@ -1,20 +1,17 @@
 // === Module 14618: ? ===
 
 // Module 14618
-import _mod14584 from "module_14584" /* 14584 */;
-import _mod14605 from "module_14605" /* 14605 */;
-import f2 from "f" /* 14619 */;
-import _mod14629 from "module_14629" /* 14629 */;
-import _mod14630 from "module_14630" /* 14630 */;
+import _mod14587 from "module_14587" /* 14587 */;
+import element from "element" /* 14619 */;
+import getOwnPropertyDescriptor from "module_14586" /* 14586 */;
 
-let closure_2 = _mod14584([].concat);
+let tmp2 = !getOwnPropertyDescriptor;
+if (!getOwnPropertyDescriptor) {
+  tmp2 = !_mod14587(() => 7 !== Object.defineProperty(element("div"), "a", {
+    get() {
+      return 7;
+    }
+  }).a);
+}
 
-export default _mod14605("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f2.f(_mod14629(arg0));
-  const f = _mod14630.f;
-  let tmp2 = fResult;
-  if (f) {
-    tmp2 = closure_2(fResult, f(arg0));
-  }
-  return tmp2;
-});
+export default tmp2;

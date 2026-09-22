@@ -545,7 +545,7 @@ export const useAnimatedStyle = function useAnimatedStyle(fn, items, arg2, arg3)
     obj.remoteState = tmp10(tmp11[9]).makeShareable(obj5);
     const tmp10Result4 = tmp10(tmp11[9]);
     obj.viewDescriptors = tmp10(tmp11[10]).makeViewDescriptorsSet();
-    obj.styleUpdaterContainer = { current: "r" };
+    obj.styleUpdaterContainer = { current: "max" };
     tmp2.current = obj;
     const tmp10Result5 = tmp10(tmp11[10]);
   }

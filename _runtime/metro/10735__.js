@@ -1,158 +1,80 @@
 // === Module 10735: ? ===
 
 // Module 10735
-import _mod10721 from "module_10721" /* 10721 */;
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10728 */;
-import _mod10733 from "module_10733" /* 10733 */;
-import _mod10736 from "module_10736" /* 10736 */;
-import _mod10737 from "module_10737" /* 10737 */;
-import _mod10739 from "module_10739" /* 10739 */;
-import _mod10740 from "module_10740" /* 10740 */;
-import _mod10741 from "module_10741" /* 10741 */;
-import _mod10742 from "module_10742" /* 10742 */;
-import _mod10743 from "module_10743" /* 10743 */;
-import _mod10744 from "module_10744" /* 10744 */;
-import _mod10745 from "module_10745" /* 10745 */;
-import _mod10746 from "module_10746" /* 10746 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
+const ExtractTimezoneAbbrRefiner = require;
+const regExp = new RegExp("^\\s*,?\\s*\\(?([A-Z]{2,4})\\)?(?=\\W|$)", "i");
+class ExtractTimezoneAbbrRefiner {
+  constructor(arg0) {
+    tmp = c2(this, ExtractTimezoneAbbrRefiner);
+    this.timezoneOverrides = global;
+    return;
   }
-  let flag2 = arg1;
-  if (arg1 === undefined) {
-    flag2 = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new _isNativeReflectConstruct.default(), , , , , , ];
-  const _default = new _isNativeReflectConstruct.default();
-  items[1] = new regExp.default(flag2);
-  const _default1 = new regExp.default(flag2);
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new regExp.default();
-  const _default3 = new regExp.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  const _default4 = new _isNativeReflectConstruct.default();
-  items[5] = new _isNativeReflectConstruct.default();
-  const _default5 = new _isNativeReflectConstruct.default();
-  items[6] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default6 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ];
-  const _default7 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
 }
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
+const entry = {
+  key: "refine",
+  value: function refine(option, arr) {
+    let self = this;
+    let timezones = option.option.timezones;
+    if (null === timezones) {
+      timezones = {};
     }
-    return tmp;
-  };
-}
-function createCasualConfiguration() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
-  }
-  const tmp = createConfiguration(false, flag);
-  const parsers = tmp.parsers;
-  parsers.unshift(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.unshift(new _isNativeReflectConstruct.default());
-  const parsers2 = tmp.parsers;
-  const _default1 = new _isNativeReflectConstruct.default();
-  parsers2.unshift(new _isNativeReflectConstruct.default());
-  return tmp;
-}
-fn(_mod10721);
-fn(_mod10733);
-fn(_mod10736);
-fn(_mod10737);
-const regExp = fn(_mod10739);
-fn(_mod10740);
-fn(_mod10741);
-fn(_mod10742);
-fn(_mod10743);
-fn(_mod10744);
-fn(_mod10745);
-const _isNativeReflectConstruct = fn(_mod10746);
-const configuration = createConfiguration(false, true);
-let parsers = configuration.parsers;
-parsers.unshift(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-let obj = {
-  enumerable: true,
-  get() {
-    return require("module_10688").Chrono;
-  }
-};
-const obj2 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingResult;
-  }
-};
-const obj3 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingComponents;
-  }
-};
-const obj4 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+    const item = arr.forEach((item) => {
+      const match = regExp.exec(option.text.substring(item.index + item.text.length));
+      if (match) {
+        const formatted = match[1].toUpperCase();
+        const start = item.start;
+        let refDate = start.date();
+        if (null === refDate) {
+          refDate = item.refDate;
+        }
+        if (null === refDate) {
+          const _Date = Date;
+          refDate = new Date();
+        }
+        const _Object = Object;
+        const _Object2 = Object;
+        const merged = Object.assign(Object.assign({}, self.timezoneOverrides), timezones);
+        const toTimezoneOffsetResult = ExtractTimezoneAbbrRefiner(10702).toTimezoneOffset(formatted, refDate, merged);
+        self = toTimezoneOffsetResult;
+        if (null != toTimezoneOffsetResult) {
+          option.debug(() => {
+            console.log("Extracting timezone: '" + formatted + "' into: " + toTimezoneOffsetResult + " for: " + item.start);
+          });
+          const start6 = item.start;
+          value = start6.get("timezoneOffset");
+          if (null !== value) {
+            if (toTimezoneOffsetResult != value) {
+              const start2 = item.start;
+            }
+          }
+          const start3 = item.start;
+          if (!tmp14) {
+            item.text = item.text + match[0];
+            const start4 = item.start;
+            if (!start4.isCertain("timezoneOffset")) {
+              const start5 = item.start;
+              start5.assign("timezoneOffset", toTimezoneOffsetResult);
+            }
+            let isCertainResult = null == item.end;
+            if (!isCertainResult) {
+              const end = item.end;
+              isCertainResult = end.isCertain("timezoneOffset");
+            }
+            if (!isCertainResult) {
+              const end2 = item.end;
+              end2.assign("timezoneOffset", toTimezoneOffsetResult);
+            }
+          }
+          tmp14 = start3.isOnlyDate() && formatted != match[1];
+        }
+      }
+    });
+    return arr;
   }
 };
-const obj5 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Meridiem;
-  }
-};
-const obj6 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Weekday;
-  }
-};
-parsers1.unshift(new _isNativeReflectConstruct.default());
-let parsers2 = configuration.parsers;
-let _default1 = new _isNativeReflectConstruct.default();
-parsers2.unshift(new _isNativeReflectConstruct.default());
-const chrono = new require("module_10688").Chrono(configuration);
-const chrono1 = new require("module_10688").Chrono(createConfiguration(true));
+const items = [entry];
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("module_10688").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(ExtractTimezoneAbbrRefiner, items);

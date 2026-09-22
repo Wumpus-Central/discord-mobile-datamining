@@ -1,8 +1,15 @@
 // === Module 18129: ? ===
 
 // Module 18129
-const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
+import _mod18130 from "module_18130" /* 18130 */;
+import capitalize from "capitalize" /* 18138 */;
 
-export default function hasUnicode(arg0) {
-  return regex.test(arg0);
-};
+
+export default _mod18130((arg0, str, arg2) => {
+  const formatted = str.toLowerCase();
+  let tmp2 = formatted;
+  if (arg2) {
+    tmp2 = capitalize(formatted);
+  }
+  return arg0 + tmp2;
+});

@@ -1,13 +1,49 @@
 // === Module 4497: ? ===
 
 // Module 4497
-const require = globalThis.__r;
+import _mod17 from "module_17" /* 17 */;
+import _mod4498 from "module_4498" /* 4498 */;
+import _mod4499 from "module_4499" /* 4499 */;
 
-const obj = { name: "react-native-nitro-modules", version: "0.35.4", description: "Insanely fast native C++, Swift or Kotlin modules with a statically compiled binding layer to JSI.", main: "lib/commonjs/index", module: "lib/module/index", types: "lib/typescript/index.d.ts", "react-native": "src/index", source: "src/index", files: ["src", "!src/__tests__", "react-native.config.js", "lib", "android/build.gradle", "android/gradle.properties", "android/fix-prefab.gradle", "android/CMakeLists.txt", "android/src/", "ios/", "cpp/", "app.plugin.js", "*.podspec", "nitro_pod_utils.rb", "README.md"], keywords: ["react-native", "nitro", "ios", "android", "visionOS", "tvOS", "macOS", "cpp", "framework", "react", "swift", "native", "modules", "fast", "jsi", "turbo", "scaffold", "template", "views"], repository: { type: "git", url: "git+https://github.com/mrousavy/nitro.git" }, author: "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy)", license: "MIT", bugs: { url: "https://github.com/mrousavy/nitro/issues" }, homepage: "https://github.com/mrousavy/nitro#readme", publishConfig: { registry: "https://registry.npmjs.org/" }, scripts: { "write-native-version": "version=$(node -p \"require('./package.json').version\") && sed -i '' \"s/#define NITRO_VERSION \\\".*\\\"/#define NITRO_VERSION \\\"$version\\\"/\" ./cpp/utils/NitroDefines.hpp", postversion: "bun run write-native-version", build: "rm -rf lib && bun typecheck && bob build", typecheck: "tsc --noEmit", lint: "eslint \"**/*.{js,ts,tsx}\" --fix", "lint-ci": "eslint \"**/*.{js,ts,tsx}\" -f @jamesacarr/github-actions", test: "jest", clean: "rm -rf android/build node_modules/**/android/build lib", release: "release-it" }, devDependencies: { "@types/jest": "*", "@types/react": "*", jest: "*", react: "19.2.0", "react-native": "0.83.0", "react-native-builder-bob": "^0.37.0", "react-native-worklets": "^0.7.2" }, peerDependencies: { react: "*", "react-native": "*" }, codegenConfig: { name: "NitroModulesSpec", type: "modules", jsSrcsDir: "./src", android: { javaPackageName: "com.margelo.nitro" } }, jest: { preset: "react-native", modulePathIgnorePatterns: ["<rootDir>/example/node_modules", "<rootDir>/lib/"] }, "release-it": { npm: { publish: true }, git: false, github: { release: false }, hooks: { "before:init": "bun typecheck && bun lint", "after:bump": "bun run build" } }, "react-native-builder-bob": null };
-const obj2 = { source: "src", output: "lib", targets: null };
-const items = ["typescript", { project: "tsconfig.build.json" }];
-const items1 = ["commonjs", "module", items];
-obj2.targets = items1;
-obj["react-native-builder-bob"] = obj2;
+function getInstalledNitro() {
+  return global.NitroModulesProxy;
+}
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
+const installedNitro = getInstalledNitro();
+if (null != installedNitro) {
+  let installedNitro1 = installedNitro;
+  if (installedNitro.version !== _mod4498.version) {
+    const _Error2 = Error;
+    const version = installedNitro.version;
+    const _HermesInternal2 = HermesInternal;
+    const error = new Error("Nitro was installed twice: once with native version " + version + " and once with JS version " + _mod4498.version + ". This usually means react-native-nitro-modules exists multiple times in node_modules (e.g. in monorepos or double-linked setups).");
+    throw error;
+  }
+} else {
+  try {
+    const enforcing = TurboModuleRegistry.getEnforcing("NitroModules");
+    const installResult = enforcing.install();
+    if (null != installResult) {
+      const _Error = Error;
+      const _HermesInternal = HermesInternal;
+      const error1 = new Error("Failed to install Nitro: " + installResult);
+      throw error1;
+    } else {
+      installedNitro1 = getInstalledNitro();
+      if (null == installedNitro1) {
+        const _Error3 = Error;
+        const error2 = new Error("NitroModules was installed, but `global.NitroModulesProxy` was null!");
+        const moduleNotFoundError = new _mod4499.ModuleNotFoundError(error2);
+        throw moduleNotFoundError;
+      }
+    }
+  } catch (tmp13) {
+    const moduleNotFoundError1 = new tmp3(tmp[2]).ModuleNotFoundError(tmp13);
+    throw moduleNotFoundError1;
+  }
+}
 
-export default obj;
+export const NitroModules = installedNitro1;
+export const isRuntimeAlive = function isRuntimeAlive() {
+  return null != globalThis.__nitroJsiCache && null != globalThis.__nitroDispatcher;
+};

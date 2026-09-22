@@ -1,59 +1,30 @@
 // === Module 4530: ? ===
 
 // Module 4530
-import c from "c" /* 4512 */;
-import _mod4525 from "module_4525" /* 4525 */;
+import c from "c" /* 4513 */;
+import _mod4526 from "module_4526" /* 4526 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-const RiveColor2 = tmp(4520);
-require = fn;
-fn(19).useCallback;
-const f31289 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+require = arg1;
+function getEnumProperty(enumProperty, arg1) {
+  return enumProperty.enumProperty(arg1);
+}
 
-export const useRiveColor = function useRiveColor(FillColor, instance) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod4525.useRiveProperty(instance, FillColor, f31289), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
-    }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
+export const useRiveEnum = function useRiveEnum(FillColor, instance) {
+  const cResult = c.c(4);
+  [tmp3, tmp4, tmp5] = _mod4526.useRiveProperty(instance, FillColor, getEnumProperty);
+  if (cResult[0] === tmp5) {
+    if (cResult[1] === tmp4) {
+      if (cResult[2] === tmp3) {
+        let tmp6 = cResult[3];
       }
-      tmp6(fromHexStringResult.toInt());
-    };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
+      return tmp6;
     }
   }
-  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj3;
-  tmp11 = obj3;
+  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
+  cResult[0] = tmp5;
+  cResult[1] = tmp4;
+  cResult[2] = tmp3;
+  cResult[3] = obj3;
+  tmp6 = obj3;
 };

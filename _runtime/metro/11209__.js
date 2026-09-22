@@ -1,8 +1,7 @@
 // === Module 11209: ? ===
 
 // Module 11209
-import baseRest from "baseRest" /* 8656 */;
-import baseDelay from "baseDelay" /* 11210 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default baseRest((arg0, arg1) => baseDelay(arg0, 1, arg1));
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 24, height: 24, scales: [2, 3], hash: "ff0787bdfe8164338278d2c417e963a2", name: "share-android", type: "png" });

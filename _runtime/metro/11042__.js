@@ -1,121 +1,56 @@
 // === Module 11042: ? ===
 
 // Module 11042
-import _mod19 from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1637 */;
+import SINGLE_ITEM from "SINGLE_ITEM" /* 11028 */;
 
-const useMemo = _mod19.useMemo;
-let closure_3 = { code: "function pnpm_usePanGestureProxyTs1(e){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);}" };
-let closure_4 = { code: "function pnpm_usePanGestureProxyTs2(e){const{onGestureStart,userDefinedConflictGestures}=this.__closure;onGestureStart(e);if(userDefinedConflictGestures.onStart)userDefinedConflictGestures.onStart(e);}" };
-let closure_5 = { code: "function pnpm_usePanGestureProxyTs3(e){const{onGestureUpdate,userDefinedConflictGestures}=this.__closure;onGestureUpdate(e);if(userDefinedConflictGestures.onUpdate)userDefinedConflictGestures.onUpdate(e);}" };
-let closure_6 = { code: "function pnpm_usePanGestureProxyTs4(e,success){const{onGestureEnd,userDefinedConflictGestures}=this.__closure;onGestureEnd(e,success);if(userDefinedConflictGestures.onEnd)userDefinedConflictGestures.onEnd(e,success);}" };
-let closure_7 = { code: "function pnpm_usePanGestureProxyTs5(e,success){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onFinalize)userDefinedConflictGestures.onFinalize(e,success);}" };
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = { code: "function pnpm_useOnProgressChangeTs1(){const{offsetX}=this.__closure;return offsetX.value;}" };
+let closure_3 = { code: "function pnpm_useOnProgressChangeTs2(_value){const{computedOffsetXValueWithAutoFillData,rawDataLength,size,autoFillData,loop,onProgressChange,isFunc,runOnJS}=this.__closure;let value=computedOffsetXValueWithAutoFillData({value:_value,rawDataLength:rawDataLength,size:size,autoFillData:autoFillData,loop:loop});if(!loop){value=Math.max(-((rawDataLength-1)*size),Math.min(value,0));}let absoluteProgress=Math.abs(value/size);if(value>0)absoluteProgress=rawDataLength-absoluteProgress;if(onProgressChange){if(isFunc)runOnJS(onProgressChange)(value,absoluteProgress);else onProgressChange.value=absoluteProgress;}}" };
 
-export const usePanGestureProxy = (onConfigurePanGesture) => {
-  onConfigurePanGesture = onConfigurePanGesture.onConfigurePanGesture;
-  const onGestureStart = onConfigurePanGesture.onGestureStart;
-  const onGestureUpdate = onConfigurePanGesture.onGestureUpdate;
-  const onGestureEnd = onConfigurePanGesture.onGestureEnd;
-  let options = onConfigurePanGesture.options;
-  if (undefined === options) {
-    options = {};
-  }
-  const items = [onGestureStart, onGestureUpdate, onGestureEnd, onConfigurePanGesture];
-  const tmp = onGestureUpdate(() => {
-    const Gesture = onConfigurePanGesture(onGestureStart[1]).Gesture;
-    const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
-    onConfigurePanGesture = withTestIdResult;
-    const userDefinedConflictGestures = { onBegin: "Array", onStart: "call", onUpdate: "channel", onEnd: "pos", onFinalize: "padding" };
-    withTestIdResult.onBegin = (onBegin) => {
-      obj.onBegin = onBegin;
-      return withTestIdResult;
-    };
-    withTestIdResult.onStart = (onStart) => {
-      obj.onStart = onStart;
-      return withTestIdResult;
-    };
-    withTestIdResult.onUpdate = (onUpdate) => {
-      obj.onUpdate = onUpdate;
-      return withTestIdResult;
-    };
-    withTestIdResult.onEnd = (onEnd) => {
-      obj.onEnd = onEnd;
-      return withTestIdResult;
-    };
-    withTestIdResult.onFinalize = (onFinalize) => {
-      obj.onFinalize = onFinalize;
-      return withTestIdResult;
-    };
-    ({ onBegin, onStart, onUpdate, onEnd, onFinalize } = withTestIdResult);
-    if (onConfigurePanGesture) {
-      onConfigurePanGesture(withTestIdResult);
+export const useOnProgressChange = function useOnProgressChange(autoFillData) {
+  autoFillData = autoFillData.autoFillData;
+  const loop = autoFillData.loop;
+  const offsetX = autoFillData.offsetX;
+  const size = autoFillData.size;
+  const rawDataLength = autoFillData.rawDataLength;
+  const onProgressChange = autoFillData.onProgressChange;
+  closure_6 = tmp;
+  const fn = function n() {
+    return offsetX.value;
+  };
+  fn.__closure = { offsetX };
+  fn.__workletHash = 355184931449;
+  fn.__initData = offsetX;
+  const fn2 = function u(value) {
+    const result = SINGLE_ITEM.computedOffsetXValueWithAutoFillData({ value, rawDataLength, size, autoFillData, loop });
+    let bound = result;
+    if (!loop) {
+      const _Math = Math;
+      const _Math2 = Math;
+      const result1 = -rawDataLength - 1 * size;
+      bound = Math.max(result1, Math.min(result, 0));
     }
-    withTestIdResult.onBegin = onBegin;
-    withTestIdResult.onStart = onStart;
-    withTestIdResult.onUpdate = onUpdate;
-    withTestIdResult.onEnd = onEnd;
-    withTestIdResult.onFinalize = onFinalize;
-    class C {
-      constructor(arg0) {
-        obj = closure_1;
-        if (closure_1.onBegin) {
-          tmp = arg0;
-          onBeginResult = obj.onBegin(arg0);
-        }
-        return;
+    const absolute = Math.abs(bound / size);
+    let diff = absolute;
+    if (bound > 0) {
+      diff = rawDataLength - absolute;
+    }
+    if (onProgressChange) {
+      if (closure_6) {
+        cancelAnimation.runOnJS(onProgressChange)(bound, diff);
+        const tmpResult = cancelAnimation;
+      } else {
+        onProgressChange.value = diff;
       }
     }
-    C.__closure = { userDefinedConflictGestures };
-    C.__workletHash = 7286111968229;
-    C.__initData = onGestureEnd;
-    const PanResult = Gesture.Pan();
-    class D {
-      constructor(arg0) {
-        tmp = onGestureStart(arg0);
-        obj = closure_1;
-        if (closure_1.onStart) {
-          onStartResult = obj.onStart(arg0);
-        }
-        return;
-      }
-    }
-    D.__closure = { onGestureStart: userDefinedConflictGestures, userDefinedConflictGestures };
-    D.__workletHash = 2969501037173;
-    D.__initData = __initData;
-    const obj2 = { onGestureStart: userDefinedConflictGestures, userDefinedConflictGestures };
-    const onBeginResult = withTestIdResult.onBegin(C);
-    const fn = function p(arg0) {
-      onGestureUpdate(arg0);
-      if (obj.onUpdate) {
-        obj.onUpdate(arg0);
-      }
-    };
-    fn.__closure = { onGestureUpdate, userDefinedConflictGestures };
-    fn.__workletHash = 14406733755860;
-    fn.__initData = __initData2;
-    const obj3 = { onGestureUpdate, userDefinedConflictGestures };
-    const onStartResult = withTestIdResult.onBegin(C).onStart(D);
-    const fn2 = function c(arg0, arg1) {
-      onGestureEnd(arg0, arg1);
-      if (obj.onEnd) {
-        obj.onEnd(arg0, arg1);
-      }
-    };
-    fn2.__closure = { onGestureEnd, userDefinedConflictGestures };
-    fn2.__workletHash = 3800149117372;
-    fn2.__initData = __initData3;
-    const obj4 = { onGestureEnd, userDefinedConflictGestures };
-    const onUpdateResult = withTestIdResult.onBegin(C).onStart(D).onUpdate(fn);
-    const fn3 = function e(arg0, arg1) {
-      if (obj.onFinalize) {
-        obj.onFinalize(arg0, arg1);
-      }
-    };
-    fn3.__closure = { userDefinedConflictGestures };
-    fn3.__workletHash = 16525776198753;
-    fn3.__initData = __initData4;
-    withTestIdResult.onBegin(C).onStart(D).onUpdate(fn).onEnd(fn2).onFinalize(fn3);
-    return withTestIdResult;
-  }, items);
-  const updateGestureConfig = onConfigurePanGesture(onGestureStart[2]).useUpdateGestureConfig(tmp, options);
-  return tmp;
+    const obj2 = { value, rawDataLength, size, autoFillData, loop };
+  };
+  let obj = autoFillData(loop[0]);
+  fn2.__closure = { computedOffsetXValueWithAutoFillData: autoFillData(loop[1]).computedOffsetXValueWithAutoFillData, rawDataLength, size, autoFillData, loop, onProgressChange, isFunc: typeof onProgressChange === "function", runOnJS: autoFillData(loop[0]).runOnJS };
+  fn2.__workletHash = 12473781608319;
+  fn2.__initData = size;
+  const items = [loop, autoFillData, rawDataLength, onProgressChange, size];
+  const animatedReaction = obj.useAnimatedReaction(fn, fn2, items);
 };

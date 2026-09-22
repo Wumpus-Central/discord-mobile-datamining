@@ -1,23 +1,18 @@
 // === Module 14605: ? ===
 
 // Module 14605
-import _mod14577 from "module_14577" /* 14577 */;
-import _mod14603 from "module_14603" /* 14603 */;
+import _mod14590 from "module_14590" /* 14590 */;
 
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod14590(1.toString);
 
-export default (arg0, arg1) => {
-  if (arguments.length < 2) {
-    const tmp7 = _mod14577[arg0];
-    let tmp8;
-    if (_mod14603(tmp7)) {
-      tmp8 = tmp7;
-    }
-    let tmp3 = tmp8;
-  } else {
-    tmp3 = _mod14577[arg0];
-    if (tmp3) {
-      tmp3 = _mod14577[arg0][arg1];
-    }
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
   }
-  return tmp3;
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
 };

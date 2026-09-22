@@ -1,18 +1,28 @@
 // === Module 7278: ? ===
 
 // Module 7278
-import CardAnimationContext from "CardAnimationContext" /* 7272 */;
-import noop from "module_19" /* 19 */;
 
-require = arg1;
-
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
-  }
+export const getModalRouteKeys = (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.reduce((arr, key) => {
+    let options;
+    if (closure_0[key.key] != null) {
+      options = tmp.options;
+    }
+    if (options == null) {
+      options = {};
+    }
+    const presentation = options.presentation;
+    let tmp2 = arr.length && !presentation;
+    if (!tmp2) {
+      tmp2 = "modal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "transparentModal" === presentation;
+    }
+    if (tmp2) {
+      arr = arr.push(key.key);
+    }
+    return arr;
+  }, []);
 };

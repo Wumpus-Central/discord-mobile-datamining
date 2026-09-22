@@ -1,68 +1,47 @@
 // === Module 13168: ? ===
 
 // Module 13168
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 13053 */;
-import _mod13056 from "module_13056" /* 13056 */;
-import _mod13166 from "module_13166" /* 13166 */;
+import _mod13169 from "module_13169" /* 13169 */;
 
 require = arg1;
+const module = arg4;
 const dependencyMap = arg6;
+function dynamicRequire(require, arg1) {
+  return require.require(arg1);
+}
 
-export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
-  let replaced;
-  if (str) {
-    replaced = str.replace(/^file:\/\//, "");
-  }
-  let sum;
-  if (location.location.columnNumber) {
-    sum = location.location.columnNumber + 1;
-  }
-  let sum1;
-  if (location.location.lineNumber) {
-    sum1 = location.location.lineNumber + 1;
-  }
-  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
-  const obj = _mod13056;
-  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-  obj2.colno = sum;
-  obj2.lineno = sum1;
-  let filenameIsInAppResult;
-  if (replaced) {
-    filenameIsInAppResult = _mod13166.filenameIsInApp(replaced);
-    const tmp4Result = _mod13166;
-  }
-  obj2.in_app = filenameIsInAppResult;
-  return obj.dropUndefinedKeys(obj2);
-};
-export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
-  const timerId = setInterval(() => {
-    const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
-    if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
+export { dynamicRequire };
+export const isNodeEnv = function isNodeEnv() {
+  const isBrowserBundleResult = _mod13169.isBrowserBundle();
+  if (isBrowserBundleResult) {
+    return !isBrowserBundleResult;
+  } else {
+    const _Object = Object;
+    const call = toString.call;
+    const _process = process;
+    let str = 0;
+    if (typeof process !== "undefined") {
+      str = process;
     }
-    if (tmp2) {
-      c4 = true;
-      if (closure_5) {
-        closure_2();
+    str = "[object process]";
+    const tmp3 = typeof call === "unknown" ? toString() : call(str);
+  }
+};
+export const loadModule = function loadModule(arg0) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    tmp = module;
+  }
+  try {
+    let tmp3 = dynamicRequire(tmp, arg0);
+    if (!tmp3) {
+      try {
+        const _HermesInternal = HermesInternal;
+        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
+      } catch (err) {
       }
     }
-    if (timeMs < closure_0 + closure_1) {
-      c4 = false;
-    }
-  }, 20);
-  return {
-    poll() {
-      navigation.reset();
-    },
-    enabled(arg0) {
-      closure_5 = arg0;
-    }
-  };
+    return tmp3;
+  } catch (err) {
+  }
 };
