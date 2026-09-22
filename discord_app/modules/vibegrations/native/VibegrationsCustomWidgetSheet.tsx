@@ -1,6 +1,6 @@
-// === Module 13360: VibegrationsCustomWidgetSheet ===
+// === Module 13365: VibegrationsCustomWidgetSheet ===
 
-// Module 13360 (VibegrationsCustomWidgetSheet)
+// Module 13365 (VibegrationsCustomWidgetSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef3678 from "module_3678" /* 3678 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -9,14 +9,14 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(13361);
+const VibegrationsConnectionStore = fn(13366);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8 } = VibegrationsConnectionStore);
 const Routes = fn(1074).Routes;
-const StaticChannelRoute = fn(2048).StaticChannelRoute;
+const StaticChannelRoute = fn(2049).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const VibegrationsCustomWidgetSheet = "VibegrationsCustomWidgetSheet";
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { body: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_14 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function VibegrationsCustomWidgetSheet() {
   const tmp4 = _slicedToArray(memo.useState(null), 2);
   [tmp7, asyncGeneratorStep] = memo.useState(false);
   _slicedToArray = memo.useRef(false);
-  memo = memo.useMemo(() => first(5274).resolveVibegrationsWorkspaceGuildId("VibegrationsCustomWidgetSheet"), []);
+  memo = memo.useMemo(() => first(5276).resolveVibegrationsWorkspaceGuildId("VibegrationsCustomWidgetSheet"), []);
   const callback = memo.useCallback((arg0) => {
     closure_1(arg0);
     dependencyMap(null);
@@ -66,9 +66,9 @@ export default function VibegrationsCustomWidgetSheet() {
             closure_128_2 = function open(arg0) {
               closure_0(1101).transitionTo(closure_2_9.CHANNEL(closure_1_5, constants.VIBEGRATIONS, arg0));
               const obj = closure_0(1101);
-              closure_1(4723).hideActionSheet(closure_2_13);
-              const obj2 = closure_1(4723);
-              closure_1(4723).hideAllActionSheets();
+              closure_1(4724).hideActionSheet(closure_2_13);
+              const obj2 = closure_1(4724);
+              closure_1(4724).hideAllActionSheets();
             };
             const trimmed = first.trim();
             closure_128_0 = trimmed;
@@ -150,7 +150,7 @@ export default function VibegrationsCustomWidgetSheet() {
   let obj2 = { title: null };
   let intl = value(1115).intl;
   obj2.title = intl.string(_modDef3678["27bu14"]);
-  obj.header = closure_11(value(7394).BottomSheetTitleHeader, obj2);
+  obj.header = closure_11(value(7396).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
   const obj4 = { label: null, placeholder: null, description: null, errorMessage: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = value(1115).intl;
@@ -162,18 +162,18 @@ export default function VibegrationsCustomWidgetSheet() {
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(13359).VIBEGRATIONS_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(13364).VIBEGRATIONS_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
-  const items1 = [closure_11(value(7330).TextArea, obj4), ];
+  const items1 = [closure_11(value(7332).TextArea, obj4), ];
   let obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp12(1115).intl;
   obj5.text = intl5.string(_modDef3678["f/Jz/R"]);
   obj5.onPress = callback1;
   obj5.loading = tmp7;
   obj5.disabled = null == memo;
-  items1[1] = closure_11(value(5186).Button, obj5);
+  items1[1] = closure_11(value(5187).Button, obj5);
   obj3.children = items1;
   obj.children = closure_12(View, obj3);
-  return closure_11(value(7442).ActionSheet, obj);
+  return closure_11(value(7444).ActionSheet, obj);
 };
 export const VIBEGRATIONS_CUSTOM_WIDGET_SHEET_KEY = "VibegrationsCustomWidgetSheet";

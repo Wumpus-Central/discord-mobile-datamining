@@ -1,23 +1,23 @@
-// === Module 7954: AnalyticsActions ===
+// === Module 7957: AnalyticsActions ===
 
-// Module 7954 (AnalyticsActions)
+// Module 7957 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4936 */;
-import QuestTypes from "QuestTypes" /* 5664 */;
-import AdCreativeType from "AdCreativeType" /* 5668 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7703 */;
-import QuestDataUtils from "QuestDataUtils" /* 7935 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7957 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7958 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7960 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7964 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7965 */;
-import captureAdUserAction from "captureAdUserAction" /* 7966 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7976 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4937 */;
+import QuestTypes from "QuestTypes" /* 5666 */;
+import AdCreativeType from "AdCreativeType" /* 5670 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7706 */;
+import QuestDataUtils from "QuestDataUtils" /* 7938 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7960 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7961 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7963 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7967 */;
+import captureAdUserAction from "captureAdUserAction" /* 7968 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7978 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7979 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7955 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7958 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
-import QuestStore from "QuestStore" /* 7939 */;
+import QuestStore from "QuestStore" /* 7942 */;
 
 require = fn;
 function trackQuestEvent(sourceQuestContent) {
@@ -86,6 +86,25 @@ function trackQuestEvent(sourceQuestContent) {
       }
     }
     tmp24Result7 = QuestDataUtils;
+  }
+}
+function captureAppStoreOverlaySurfaceClickForMigration(overlaySurface, arg1, arg2) {
+  if (obj.MAIN_CTA === overlaySurface) {
+    const obj2 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, questContentCTA: AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_GAME_LINK };
+    const merged = Object.assign(arg2);
+    const merged1 = Object.assign(arg1);
+    captureAdUserAction.captureAdUserAction(obj2);
+  } else if (tmp.RATING_STAT === overlaySurface) {
+    obj = captureAdUserAction;
+    const obj4 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, questContentCTA: AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_REVIEWS };
+    const merged2 = Object.assign(arg2);
+    const merged3 = Object.assign(arg1);
+    obj.captureAdUserAction(obj4);
+  } else if (tmp.SEE_MORE === overlaySurface) {
+    const obj6 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL, questContentCTA: AnalyticsTypes.QuestContentCTA.EXPAND };
+    const merged4 = Object.assign(arg2);
+    const merged5 = Object.assign(arg1);
+    captureAdUserAction.captureAdUserAction(obj6);
   }
 }
 function trackAdContentEvent(sourceQuestContent) {
@@ -170,7 +189,7 @@ function trackAdContentEvent(sourceQuestContent) {
 }
 function getCommonClickEventProperties() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -178,7 +197,7 @@ function getCommonClickEventProperties() {
   }
   return applyArgumentsResult;
 }
-let closure_13 = async function _getCommonClickEventProperties(arg0) {
+let closure_14 = async function _getCommonClickEventProperties(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -215,7 +234,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
           closure_130_6 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -282,7 +301,7 @@ let closure_13 = async function _getCommonClickEventProperties(arg0) {
 };
 function trackQuestContentClicked() {
   const self = this;
-  const apply = closure_15.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -290,12 +309,12 @@ function trackQuestContentClicked() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _trackQuestContentClicked() {
+let closure_16 = async function _trackQuestContentClicked() {
   const adTrafficMetadataSealed = closure_134_0(closure_134_2[7]).getAdTrafficMetadataSealed(closure_135_8, closure_135_0);
   set = closure_134_9;
   const obj6 = { questId: closure_135_0, event: closure_134_7.QUEST_CONTENT_CLICKED };
   const properties = {};
-  await closure_134_12({ questContent: closure_135_1, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, questContentCTA: closure_135_2, impressionId: closure_135_5, clickId: closure_135_6 });
+  await closure_134_13({ questContent: closure_135_1, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, questContentCTA: closure_135_2, impressionId: closure_135_5, clickId: closure_135_6 });
   const merged = Object.assign(value);
   const adMetadataSealed = closure_134_0(closure_134_2[7]).getAdMetadataSealed(closure_135_8);
   let metadata_sealed = adMetadataSealed;
@@ -327,11 +346,11 @@ let closure_15 = async function _trackQuestContentClicked() {
   await "HermesInternal";
   closure_7 = tmp2;
   ({ questId: closure_135_0, questContent: closure_135_1, questContentCTA: closure_135_2, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, impressionId: closure_135_5, clickId: closure_135_6, trackGuildAndChannelMetadata: closure_135_7, sourceQuestContent: closure_135_8 } = closure_0);
-  return "PX_16";
+  return "flex";
 };
 function trackAdContentClicked() {
   const self = this;
-  const apply = closure_17.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -339,10 +358,10 @@ function trackAdContentClicked() {
   }
   return applyArgumentsResult;
 }
-let closure_17 = async function _trackAdContentClicked() {
-  dependencyMap = closure_131_11;
+let closure_18 = async function _trackAdContentClicked() {
+  dependencyMap = closure_131_12;
   const obj5 = { adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, event: closure_131_7.QUEST_CONTENT_CLICKED };
-  await closure_131_12({ questContent: closure_132_3, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, questContentCTA: closure_132_4, impressionId: closure_132_7 });
+  await closure_131_13({ questContent: closure_132_3, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, questContentCTA: closure_132_4, impressionId: closure_132_7 });
   obj5.properties = value;
   obj5.trackGuildAndChannelMetadata = closure_132_8;
   obj5.shouldExtendSession = closure_131_0(closure_131_2[7]).isBillableQuestContent(closure_132_3);
@@ -351,13 +370,13 @@ let closure_17 = async function _trackAdContentClicked() {
   await "HermesInternal";
   closure_4 = tmp2;
   ({ adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, questContent: closure_132_3, questContentCTA: closure_132_4, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, impressionId: closure_132_7, trackGuildAndChannelMetadata: closure_132_8, sourceQuestContent: closure_132_9 } = closure_0);
-  return "PX_16";
+  return "flex";
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const items = [, , ];
 ({ QUEST_CONTENT_VIEWED: arr[0], QUEST_CONTENT_ENGAGED_VIEWED: arr[1], QUEST_CONTENT_CLICKED: arr[2] } = AnalyticEvents);
 let set = new Set(items);
-const AppStoreOverlaySurfaces = { MAIN_CTA: "main_cta", RATING_STAT: "rating_stat" };
+const AppStoreOverlaySurfaces = { MAIN_CTA: "main_cta", RATING_STAT: "rating_stat", SEE_MORE: "see_more" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsActions.tsx");
 
@@ -420,39 +439,126 @@ export const trackAppStoreOverlayEvent = function trackAppStoreOverlayEvent(arg0
 export const trackAppStoreOverlaySurfaceClickedForQuest = function trackAppStoreOverlaySurfaceClickedForQuest(arg0) {
   ({ questId, trackingCtx, overlaySurface } = arg0);
   if (obj.MAIN_CTA === overlaySurface) {
-    let GAME_STORE_OPEN_REVIEWS = AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_GAME_LINK;
+    let EXPAND = AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_GAME_LINK;
   } else if (tmp.RATING_STAT === overlaySurface) {
-    GAME_STORE_OPEN_REVIEWS = AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_REVIEWS;
+    EXPAND = AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_REVIEWS;
+  } else if (tmp.SEE_MORE === overlaySurface) {
+    EXPAND = AnalyticsTypes.QuestContentCTA.EXPAND;
   }
   obj = AdAnalyticsInterfaceExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "app_store_overlay_surface_click")) {
-    const obj3 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: questId, questContentCTA: GAME_STORE_OPEN_REVIEWS, surfaceId: QuestTypes.QuestContent.CUSTOM_APP_STORE_OVERLAY, sourceQuestContent: null, questContentPosition: null, impressionId: null };
-    ({ sourceQuestContent: obj4.sourceQuestContent, position: obj4.questContentPosition, impressionId: obj4.impressionId } = trackingCtx);
-    captureAdUserAction.captureAdUserAction(obj3);
-    const tmp6Result = captureAdUserAction;
+    const obj4 = { surfaceId: QuestTypes.QuestContent.CUSTOM_APP_STORE_OVERLAY, sourceQuestContent: null, questContentPosition: null, impressionId: null };
+    ({ sourceQuestContent: obj3.sourceQuestContent, position: obj3.questContentPosition, impressionId: obj3.impressionId } = trackingCtx);
+    const obj7 = { adCreativeType: AdCreativeType.AdCreativeType.QUEST, adCreativeId: questId };
+    captureAppStoreOverlaySurfaceClickForMigration(overlaySurface, obj4, obj7);
   } else {
-    const obj6 = { questId, questContent: QuestTypes.QuestContent.CUSTOM_APP_STORE_OVERLAY, questContentCTA: GAME_STORE_OPEN_REVIEWS, questContentPosition: null, impressionId: null, sourceQuestContent: null };
+    const obj8 = { questId, questContent: QuestTypes.QuestContent.CUSTOM_APP_STORE_OVERLAY, questContentCTA: EXPAND, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     ({ position: obj2.questContentPosition, impressionId: obj2.impressionId, sourceQuestContent: obj2.sourceQuestContent } = trackingCtx);
-    trackQuestContentClicked(obj6);
+    trackQuestContentClicked(obj8);
   }
 };
-export const trackAppStoreOverlaySurfaceClickedForAdContent = function trackAppStoreOverlaySurfaceClickedForAdContent(arg0) {
-  ({ adContentId, adCreativeType, trackingCtx, overlaySurface, relatedQuestId } = arg0);
+export const AppStoreOverlayCarouselTypes = { MEDIA: "media", STATS: "stats" };
+export const getAppStoreOverlayStoreAppIds = function getAppStoreOverlayStoreAppIds(appId) {
+  appId = appId.appId;
+  let tmp;
+  if ("ios" === appId.platform) {
+    tmp = appId;
+  }
+  obj = { iosAppId: tmp, androidAppId: null };
+  let tmp2;
+  if ("android" === appId.platform) {
+    tmp2 = appId;
+  }
+  obj.androidAppId = tmp2;
+  return obj;
+};
+export const trackAppStoreOverlayCarouselScroll = function trackAppStoreOverlayCarouselScroll(arg0) {
+  ({ questId, adContentId, iosAppId, androidAppId } = arg0);
+  ({ carouselType, scrollingDirection, carouselPosition, carouselSize } = arg0);
+  if (questId == null) {
+    questId = null;
+  }
+  const obj2 = { quest_id: questId, ad_content_id: null, ios_app_id: null, android_app_id: null, carousel_type: null, scrolling_direction: null, carousel_position: null, carousel_size: null };
+  if (adContentId == null) {
+    adContentId = null;
+  }
+  obj2.ad_content_id = adContentId;
+  if (iosAppId == null) {
+    iosAppId = null;
+  }
+  obj2.ios_app_id = iosAppId;
+  if (androidAppId == null) {
+    androidAppId = null;
+  }
+  obj2.android_app_id = androidAppId;
+  obj2.carousel_type = carouselType;
+  obj2.scrolling_direction = scrollingDirection;
+  obj2.carousel_position = carouselPosition;
+  obj2.carousel_size = carouselSize;
+  AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_APP_STORE_OVERLAY_CAROUSEL_SCROLL, obj2);
+};
+export function createAppStoreOverlayCarouselScrollTracker(arg0, appId) {
+  closure_0 = arg0;
+  return (arg0) => {
+    obj = {};
+    const merged = Object.assign(closure_0);
+    appId = appId.appId;
+    let tmp3;
+    if ("ios" === appId.platform) {
+      tmp3 = appId;
+    }
+    const obj2 = { iosAppId: tmp3, androidAppId: null };
+    let tmp4;
+    if ("android" === appId.platform) {
+      tmp4 = appId;
+    }
+    obj2.androidAppId = tmp4;
+    const merged1 = Object.assign(obj2);
+    const merged2 = Object.assign(arg0);
+    ({ questId, adContentId, iosAppId, androidAppId } = obj);
+    ({ carouselType, scrollingDirection, carouselPosition, carouselSize } = obj);
+    if (questId == null) {
+      questId = null;
+    }
+    const obj4 = { quest_id: questId, ad_content_id: null, ios_app_id: null, android_app_id: null, carousel_type: null, scrolling_direction: null, carousel_position: null, carousel_size: null };
+    if (adContentId == null) {
+      adContentId = null;
+    }
+    obj4.ad_content_id = adContentId;
+    if (iosAppId == null) {
+      iosAppId = null;
+    }
+    obj4.ios_app_id = iosAppId;
+    if (androidAppId == null) {
+      androidAppId = null;
+    }
+    obj4.android_app_id = androidAppId;
+    obj4.carousel_type = carouselType;
+    obj4.scrolling_direction = scrollingDirection;
+    obj4.carousel_position = carouselPosition;
+    obj4.carousel_size = carouselSize;
+    AnalyticsUtilsDefault.track(AnalyticEvents.QUEST_APP_STORE_OVERLAY_CAROUSEL_SCROLL, obj4);
+  };
+}
+export const trackAppStoreOverlaySurfaceClickedForAdContent = function trackAppStoreOverlaySurfaceClickedForAdContent(relatedQuestId) {
+  ({ adContentId, adCreativeType, trackingCtx, overlaySurface } = relatedQuestId);
   if (obj.MAIN_CTA === overlaySurface) {
-    let GAME_STORE_OPEN_REVIEWS = AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_GAME_LINK;
+    let EXPAND = AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_GAME_LINK;
   } else if (tmp.RATING_STAT === overlaySurface) {
-    GAME_STORE_OPEN_REVIEWS = AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_REVIEWS;
+    EXPAND = AnalyticsTypes.QuestContentCTA.GAME_STORE_OPEN_REVIEWS;
+  } else if (tmp.SEE_MORE === overlaySurface) {
+    EXPAND = AnalyticsTypes.QuestContentCTA.EXPAND;
   }
   obj = AdAnalyticsInterfaceExperiment;
   if (obj.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "app_store_overlay_surface_click")) {
-    const obj3 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, adCreativeType, adCreativeId: adContentId, questContentCTA: GAME_STORE_OPEN_REVIEWS, surfaceId: QuestTypes.QuestContent.CUSTOM_APP_STORE_OVERLAY, sourceQuestContent: null, questContentPosition: null, impressionId: null };
-    ({ sourceQuestContent: obj4.sourceQuestContent, position: obj4.questContentPosition, impressionId: obj4.impressionId } = trackingCtx);
-    captureAdUserAction.captureAdUserAction(obj3);
-    const tmp6Result = captureAdUserAction;
+    const obj4 = { surfaceId: QuestTypes.QuestContent.CUSTOM_APP_STORE_OVERLAY, sourceQuestContent: null, questContentPosition: null, impressionId: null };
+    ({ sourceQuestContent: obj3.sourceQuestContent, position: obj3.questContentPosition, impressionId: obj3.impressionId } = trackingCtx);
+    const obj7 = { adCreativeType, adCreativeId: adContentId };
+    captureAppStoreOverlaySurfaceClickForMigration(overlaySurface, obj4, obj7);
   } else {
-    const obj6 = { adContentId, relatedQuestId, adCreativeType, questContent: QuestTypes.QuestContent.CUSTOM_APP_STORE_OVERLAY, questContentCTA: GAME_STORE_OPEN_REVIEWS, questContentPosition: null, impressionId: null, sourceQuestContent: null };
+    const obj8 = { adContentId, relatedQuestId: relatedQuestId.relatedQuestId, adCreativeType, questContent: QuestTypes.QuestContent.CUSTOM_APP_STORE_OVERLAY, questContentCTA: EXPAND, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     ({ position: obj2.questContentPosition, impressionId: obj2.impressionId, sourceQuestContent: obj2.sourceQuestContent } = trackingCtx);
-    trackAdContentClicked(obj6);
+    trackAdContentClicked(obj8);
   }
 };
 export const trackAdContentAppStoreOverlayEvent = function trackAdContentAppStoreOverlayEvent(arg0) {

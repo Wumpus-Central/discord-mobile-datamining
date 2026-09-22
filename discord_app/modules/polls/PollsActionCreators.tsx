@@ -1,18 +1,18 @@
-// === Module 11967: PollsActionCreators ===
+// === Module 11971: PollsActionCreators ===
 
-// Module 11967 (PollsActionCreators)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4936 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5108 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5737 */;
-import PollInteractionUtilsAll from "PollInteractionUtils" /* 11968 */;
+// Module 11971 (PollsActionCreators)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4937 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5109 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5739 */;
+import PollInteractionUtilsAll from "PollInteractionUtils" /* 11972 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4396 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7835 */;
+import LurkingStore from "LurkingStore" /* 4397 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7838 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5630 */;
-import MessageStore from "MessageStore" /* 4976 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5104 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5632 */;
+import MessageStore from "MessageStore" /* 4977 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5105 */;
 
 const require = fn;
 function getPollVoteEventProperties(answers, set) {
@@ -169,7 +169,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           let obj3 = { id, name: id };
           obj2.emoji = obj3;
           obj2.userId = userId;
-          obj2.reactionType = channelId(8005).ReactionTypes.VOTE;
+          obj2.reactionType = channelId(8008).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj2);
           continue;
         }
@@ -192,7 +192,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
   await "HermesInternal";
   closure_2 = tmp2;
   ({ channelId: closure_130_0, messageId: closure_130_1, answerIds: closure_130_2 } = channelId);
-  return "PX_16";
+  return "flex";
 };
 function handlePollSubmitVote() {
   const self = this;
@@ -240,7 +240,7 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
           closure_132_5 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -426,7 +426,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
           let channel;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -520,7 +520,7 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1, type: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -679,7 +679,7 @@ let closure_28 = async function _createPoll(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -704,7 +704,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11973).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(11977).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -740,7 +740,7 @@ let closure_28 = async function _createPoll(arg0) {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-                      const obj = guildId(9423);
+                      const obj = guildId(9429);
                       const result = obj.handleUploadMessageAttachmentsErrors({ file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason });
                     }
           };
@@ -826,10 +826,10 @@ let closure_29 = async function _endPollEarly(arg0) {
   await "HermesInternal";
   closure_1 = tmp2;
   ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
-  return "PX_16";
+  return "flex";
 };
-const DraftType = fn(5105).DraftType;
-const PollsInteractionStore = fn(11690);
+const DraftType = fn(5106).DraftType;
+const PollsInteractionStore = fn(11694);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

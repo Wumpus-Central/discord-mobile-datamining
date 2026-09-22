@@ -1,10 +1,10 @@
-// === Module 18256: useInviteAssignableRoles ===
+// === Module 18269: useInviteAssignableRoles ===
 
-// Module 18256 (useInviteAssignableRoles)
-import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
+// Module 18269 (useInviteAssignableRoles)
+import PermissionUtilsAll from "PermissionUtils" /* 4401 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

@@ -1,9 +1,9 @@
-// === Module 6488: MoonIllocon ===
+// === Module 6490: MoonIllocon ===
 
-// Module 6488 (MoonIllocon)
+// Module 6490 (MoonIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef6489 from "module_6489" /* 6489 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef6491 from "module_6491" /* 6491 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const MoonIllocon = function MoonIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6489 };
+  const obj2 = { uri: _modDef6491 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

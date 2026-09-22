@@ -1,16 +1,16 @@
-// === Module 14818: SoundboardManager ===
+// === Module 14824: SoundboardManager ===
 
-// Module 14818 (SoundboardManager)
+// Module 14824 (SoundboardManager)
 import LoggerDefault from "Logger" /* 3 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7580 */;
-import SoundUtils from "SoundUtils" /* 10158 */;
-import getVolumeForSoundDefault from "getVolumeForSound" /* 14820 */;
-import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 14821 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7583 */;
+import SoundUtils from "SoundUtils" /* 10164 */;
+import getVolumeForSoundDefault from "getVolumeForSound" /* 14826 */;
+import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 14827 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
-import SoundboardStore from "SoundboardStore" /* 5224 */;
-import BaseSoundboardManager from "BaseSoundboardManager" /* 14819 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
+import SoundboardStore from "SoundboardStore" /* 5225 */;
+import BaseSoundboardManager from "BaseSoundboardManager" /* 14825 */;
 
 require = fn;
 let map = new Map();
@@ -76,7 +76,7 @@ const prototype = function SoundboardManager() {
     }
     await "HermesInternal";
     ({ sound: closure_129_0, soundKey: closure_129_1, soundId: closure_129_2, userId: closure_129_3 } = applyArgumentsResult);
-    return "PX_16";
+    return "flex";
   });
   applyArgumentsResult._playSoundWithListener = function() {
     const self = this;

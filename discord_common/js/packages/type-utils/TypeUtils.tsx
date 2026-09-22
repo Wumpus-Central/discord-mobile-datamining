@@ -1,6 +1,6 @@
-// === Module 2053: TypeUtils ===
+// === Module 2054: TypeUtils ===
 
-// Module 2053 (TypeUtils)
+// Module 2054 (TypeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/type-utils/TypeUtils.tsx");

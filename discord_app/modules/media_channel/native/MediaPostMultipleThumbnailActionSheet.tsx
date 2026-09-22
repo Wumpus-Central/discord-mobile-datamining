@@ -1,16 +1,16 @@
-// === Module 10523: MediaPostMultipleThumbnailActionSheet ===
+// === Module 10529: MediaPostMultipleThumbnailActionSheet ===
 
-// Module 10523 (MediaPostMultipleThumbnailActionSheet)
+// Module 10529 (MediaPostMultipleThumbnailActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 }, topContainer: null, setAsThumbnailContainer: null, contentContainer: null, title: null, description: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
 obj2.topContainer = { flex: 1, width: "100%", paddingVertical: 40, paddingHorizontal: 12, backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.sm };
@@ -42,19 +42,19 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1115).intl;
   obj6.children = intl.string(markAsDismissed(1115).t.ews2pj);
-  const items1 = [closure_5(markAsDismissed(4752).Text, obj6), closure_5(markAsDismissed(1177).Checkbox, { selected: true })];
+  const items1 = [closure_5(markAsDismissed(4753).Text, obj6), closure_5(markAsDismissed(1177).Checkbox, { selected: true })];
   obj5.children = items1;
   obj4.children = closure_6(View, obj5);
   const items2 = [closure_5(View, obj4), , , , , ];
   const obj7 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl2 = markAsDismissed(1115).intl;
   obj7.children = intl2.string(markAsDismissed(1115).t.WJisip);
-  items2[1] = closure_5(markAsDismissed(4752).Text, obj7);
+  items2[1] = closure_5(markAsDismissed(4753).Text, obj7);
   items2[2] = closure_5(markAsDismissed(1177).Spacer, { size: 12 });
   const obj8 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl3 = markAsDismissed(1115).intl;
   obj8.children = intl3.string(markAsDismissed(1115).t.X6ZH6d);
-  items2[3] = closure_5(markAsDismissed(4752).Text, obj8);
+  items2[3] = closure_5(markAsDismissed(4753).Text, obj8);
   items2[4] = closure_5(markAsDismissed(1177).Spacer, { size: 48 });
   const obj9 = { text: null, grow: true, onPress: null };
   const intl4 = markAsDismissed(1115).intl;
@@ -62,9 +62,9 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   obj9.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items2[5] = closure_5(markAsDismissed(5186).Button, obj9);
+  items2[5] = closure_5(markAsDismissed(5187).Button, obj9);
   obj3.children = items2;
-  obj2.children = closure_6(markAsDismissed(6869).BottomSheetScrollView, obj3);
+  obj2.children = closure_6(markAsDismissed(6871).BottomSheetScrollView, obj3);
   obj.children = closure_5(View, obj2);
-  return closure_5(markAsDismissed(7395).BottomSheet, obj);
+  return closure_5(markAsDismissed(7397).BottomSheet, obj);
 };

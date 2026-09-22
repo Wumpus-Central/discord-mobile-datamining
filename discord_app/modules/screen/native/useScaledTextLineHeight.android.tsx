@@ -1,9 +1,9 @@
-// === Module 10375: useScaledTextLineHeight ===
+// === Module 10381: useScaledTextLineHeight ===
 
-// Module 10375 (useScaledTextLineHeight)
-import Text_Text from "Text/Text" /* 4752 */;
-import useFontScale from "useFontScale" /* 5193 */;
-import NativeFontModuleDefault from "NativeFontModule" /* 10376 */;
+// Module 10381 (useScaledTextLineHeight)
+import Text_Text from "Text/Text" /* 4753 */;
+import useFontScale from "useFontScale" /* 5194 */;
+import NativeFontModuleDefault from "NativeFontModule" /* 10382 */;
 import size from "module_2" /* 2 */;
 
 const map = new Map();

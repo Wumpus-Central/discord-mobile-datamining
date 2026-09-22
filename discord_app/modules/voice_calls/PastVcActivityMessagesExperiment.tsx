@@ -1,8 +1,8 @@
-// === Module 17757: PastVcActivityMessagesExperiment ===
+// === Module 17769: PastVcActivityMessagesExperiment ===
 
-// Module 17757 (PastVcActivityMessagesExperiment)
-import ExperimentConstants from "ExperimentConstants" /* 4672 */;
-import createExperiment from "module_4669" /* 4669 */;
+// Module 17769 (PastVcActivityMessagesExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4673 */;
+import createExperiment from "module_4670" /* 4670 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2026-02_past_vc_activity_messages", label: "Past VC Activity Messages", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, defaultConfig: { enabled: false }, treatments: null };

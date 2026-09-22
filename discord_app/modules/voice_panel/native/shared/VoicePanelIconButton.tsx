@@ -1,8 +1,8 @@
-// === Module 17498: VoicePanelIconButton ===
+// === Module 17510: VoicePanelIconButton ===
 
-// Module 17498 (VoicePanelIconButton)
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7318 */;
-import IconButton from "IconButton" /* 8179 */;
+// Module 17510 (VoicePanelIconButton)
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7320 */;
+import IconButton from "IconButton" /* 8183 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

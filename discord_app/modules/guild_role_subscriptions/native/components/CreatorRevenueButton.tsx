@@ -1,11 +1,11 @@
-// === Module 10558: CreatorRevenueButton ===
+// === Module 10564: CreatorRevenueButton ===
 
-// Module 10558 (CreatorRevenueButton)
-import ShinyButtonDefault from "ShinyButton" /* 10559 */;
+// Module 10564 (CreatorRevenueButton)
+import ShinyButtonDefault from "ShinyButton" /* 10565 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_3 = createStyles.createStyles({ container: { borderRadius: 3 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/CreatorRevenueButton.tsx");

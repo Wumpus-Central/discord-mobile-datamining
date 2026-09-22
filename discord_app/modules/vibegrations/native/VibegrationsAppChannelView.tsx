@@ -1,27 +1,28 @@
-// === Module 17083: VibegrationsAppChannelView ===
+// === Module 17095: VibegrationsAppChannelView ===
 
-// Module 17083 (VibegrationsAppChannelView)
+// Module 17095 (VibegrationsAppChannelView)
 import nativeDefault from "native" /* 576 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7698 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9562 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9571 */;
-import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13562 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7701 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9320 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9577 */;
+import VibegrationsAppChannelActionCreators from "VibegrationsAppChannelActionCreators" /* 13570 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9313 */;
-import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 13558 */;
+import FramesStore from "FramesStore" /* 9318 */;
+import VibegrationsAppChannelsStore from "VibegrationsAppChannelsStore" /* 13566 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FramesConstants = fn(9314);
-({ EmbeddedSurfaceType: closure_9, FrameLayoutModes: c10, isLaunched: closure_11 } = FramesConstants);
+const FramesConstants = fn(9319);
+({ FrameLayoutModes: closure_9, isLaunched: c10 } = FramesConstants);
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4756);
-let closure_14 = createStyles.createStyles((paddingBottom) => {
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4757);
+let closure_13 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { flex: 1, paddingBottom }, centered: { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_12 }, copy: null };
   const obj2 = { flex: 1, paddingBottom };
   const obj3 = { flex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_12 };
@@ -42,7 +43,7 @@ export default function VibegrationsAppChannelView(channel) {
   let id2;
   let tmp = importDefault;
   let tmp2 = guild_id;
-  let items3 = closure_14(require("useSystemKeyboardHeight")());
+  let items3 = closure_13(require("useSystemKeyboardHeight")());
   let tmp3 = id;
   let result = id(guild_id[10]).vibegrationsAppIdFromTopic(id.topic);
   importDefault = result;
@@ -51,13 +52,13 @@ export default function VibegrationsAppChannelView(channel) {
   first = tmp5[0];
   noop = tmp5[1];
   const items = [id.id, guild_id];
-  const memo = noop.useMemo(() => ({ type: constants.APP_CHANNEL, channelId: id.id, guildId: guild_id }), items);
-  const tmp8 = tmp(tmp2[11])(result, memo);
+  const memo = noop.useMemo(() => ({ type: EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL, channelId: id.id, guildId: guild_id }), items);
+  const tmp8 = tmp(tmp2[12])(result, memo);
   id = tmp8;
   let id1 = null;
   if (null != tmp8) {
     id1 = null;
-    if (closure_11(tmp8)) {
+    if (closure_10(tmp8)) {
       id1 = tmp8;
     }
   }
@@ -97,11 +98,11 @@ export default function VibegrationsAppChannelView(channel) {
       isChatOpenResult = ref2.isChatOpen(ref2.current);
     }
     if (!isChatOpenResult) {
-      c1(guild_id[12]).leaveFrame(ref.current);
-      const obj = c1(guild_id[12]);
+      c1(guild_id[13]).leaveFrame(ref.current);
+      const obj = c1(guild_id[13]);
     }
   }, []);
-  tmp(tmp2[14])(null != id1);
+  tmp(tmp2[15])(null != id1);
   id2 = id.id;
   [][0] = id2;
   const callback = obj2.useCallback(() => closure_4(false), []);
@@ -112,39 +113,39 @@ export default function VibegrationsAppChannelView(channel) {
     const obj4 = { frameId: null, layoutMode: null };
     id1 = id1.id;
     obj4.frameId = id1;
-    obj4.layoutMode = constants2.FOCUSED;
-    tmp3 = closure_12(tmp3(tmp2[17]).InlineFrameView, obj4);
+    obj4.layoutMode = id2.FOCUSED;
+    tmp3 = closure_11(tmp3(tmp2[18]).InlineFrameView, obj4);
     items3 = [tmp3, ];
-    tmp = tmp(tmp2[18]);
+    tmp = tmp(tmp2[19]);
     const obj5 = { channelId: null, onOpenChat: null };
     id = id.id;
     obj5.channelId = id;
     obj5.onOpenChat = tmp16;
-    tmp2 = closure_12(tmp, obj5);
+    tmp2 = closure_11(tmp, obj5);
     items3[1] = tmp2;
     obj3.children = items3;
-    let tmp20 = closure_13(id, obj3);
+    let tmp20 = closure_12(id, obj3);
   } else if (first) {
     const obj6 = { style: items3.centered, children: null };
     const obj7 = { style: items3.copy, children: null };
     const obj8 = { variant: "heading-lg/bold", color: "text-default", children: id.name };
-    const items4 = [closure_12(tmp3(tmp2[19]).Text, obj8), ];
+    const items4 = [closure_11(tmp3(tmp2[20]).Text, obj8), ];
     const obj9 = { variant: "text-md/normal", color: "text-muted", children: null };
-    const intl = tmp3(tmp2[20]).intl;
-    obj9.children = intl.string(tmp(tmp2[21]).QM4w4h);
-    items4[1] = closure_12(tmp3(tmp2[19]).Text, obj9);
+    const intl = tmp3(tmp2[21]).intl;
+    obj9.children = intl.string(tmp(tmp2[22]).QM4w4h);
+    items4[1] = closure_11(tmp3(tmp2[20]).Text, obj9);
     obj7.children = items4;
-    const items5 = [closure_13(id, obj7), ];
+    const items5 = [closure_12(id, obj7), ];
     const obj10 = { variant: "primary", text: null, onPress: null };
-    const intl2 = tmp3(tmp2[20]).intl;
-    obj10.text = intl2.string(tmp(tmp2[21]).jLMpUv);
+    const intl2 = tmp3(tmp2[21]).intl;
+    obj10.text = intl2.string(tmp(tmp2[22]).jLMpUv);
     obj10.onPress = callback;
-    items5[1] = closure_12(tmp3(tmp2[22]).Button, obj10);
+    items5[1] = closure_11(tmp3(tmp2[23]).Button, obj10);
     obj6.children = items5;
-    tmp20 = closure_13(id, obj6);
+    tmp20 = closure_12(id, obj6);
   } else {
-    const obj11 = { style: items3.centered, children: closure_12(memo, {}) };
-    tmp20 = closure_12(id, obj11);
+    const obj11 = { style: items3.centered, children: closure_11(memo, {}) };
+    tmp20 = closure_11(id, obj11);
   }
   let obj = id(guild_id[10]);
 };

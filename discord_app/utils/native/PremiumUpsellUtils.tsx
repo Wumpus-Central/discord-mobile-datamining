@@ -1,20 +1,20 @@
-// === Module 9427: PremiumUpsellUtils ===
+// === Module 9433: PremiumUpsellUtils ===
 
-// Module 9427 (PremiumUpsellUtils)
+// Module 9433 (PremiumUpsellUtils)
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import PremiumUtils from "PremiumUtils" /* 4414 */;
-import ChatInputUtils from "ChatInputUtils" /* 4622 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import _modDef9428 from "module_9428" /* 9428 */;
-import _modDef9429 from "module_9429" /* 9429 */;
-import _modDef9430 from "module_9430" /* 9430 */;
-import _modDef9431 from "module_9431" /* 9431 */;
-import _modDef9432 from "module_9432" /* 9432 */;
-import _modDef9433 from "module_9433" /* 9433 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9476 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9506 */;
+import PremiumUtils from "PremiumUtils" /* 4415 */;
+import ChatInputUtils from "ChatInputUtils" /* 4623 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
+import _modDef9434 from "module_9434" /* 9434 */;
+import _modDef9435 from "module_9435" /* 9435 */;
+import _modDef9436 from "module_9436" /* 9436 */;
+import _modDef9437 from "module_9437" /* 9437 */;
+import _modDef9438 from "module_9438" /* 9438 */;
+import _modDef9439 from "module_9439" /* 9439 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9482 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9512 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -84,7 +84,7 @@ function usePremiumUpsellConfig(upsellType, analyticsLocations, analyticsLocatio
     }
     AnalyticsUtilsDefault.track(constants.PREMIUM_PROMOTION_OPENED, { location: _location });
     const obj2 = { location: _location };
-    ActionSheetActionCreatorsDefault.hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideAllActionSheets();
     const obj4 = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
     const obj6 = {};
     const merged = Object.assign(_location);
@@ -209,7 +209,7 @@ export default {
       if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
         let obj = {
           importer() {
-                return asyncRequireImpl(9436, dependencyMap.paths).then((result) => {
+                return asyncRequireImpl(9442, dependencyMap.paths).then((result) => {
                   closure_0 = result.default;
                   return (arg0) => {
                     const obj = {};
@@ -237,7 +237,7 @@ export default {
   usePremiumUpsellConfig
 };
 export const getUpsellItems = function getUpsellItems() {
-  const obj = { key: constants3.GLOBAL_EMOJI, image: _modDef9428, activeTitle: null, passiveTitle: null, description: null };
+  const obj = { key: constants3.GLOBAL_EMOJI, image: _modDef9434, activeTitle: null, passiveTitle: null, description: null };
   const intl = util.intl;
   obj.activeTitle = intl.string(util.t.gKtr8N);
   const intl2 = util.intl;
@@ -245,7 +245,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl3 = util.intl;
   obj.description = intl3.format(util.t.rf7Ixp, {});
   const items = [obj, , , , , ];
-  const obj2 = { key: constants3.ANIMATED_EMOJI, image: _modDef9429, activeTitle: null, passiveTitle: null, description: null };
+  const obj2 = { key: constants3.ANIMATED_EMOJI, image: _modDef9435, activeTitle: null, passiveTitle: null, description: null };
   const intl4 = util.intl;
   obj2.activeTitle = intl4.string(util.t.F6rmyq);
   const intl5 = util.intl;
@@ -253,7 +253,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl6 = util.intl;
   obj2.description = intl6.format(util.t.JxTzzb, {});
   items[1] = obj2;
-  const obj3 = { key: constants3.ANIMATED_AVATAR, image: _modDef9430, activeTitle: null, passiveTitle: null, description: null };
+  const obj3 = { key: constants3.ANIMATED_AVATAR, image: _modDef9436, activeTitle: null, passiveTitle: null, description: null };
   const intl7 = util.intl;
   obj3.activeTitle = intl7.string(util.t["tQh+gF"]);
   const intl8 = util.intl;
@@ -261,7 +261,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl9 = util.intl;
   obj3.description = intl9.format(util.t["Tso/Fn"], {});
   items[2] = obj3;
-  const obj4 = { key: constants3.UPLOAD, image: _modDef9431, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = { key: constants3.UPLOAD, image: _modDef9437, activeTitle: null, passiveTitle: null, description: null };
   const intl10 = util.intl;
   obj4.activeTitle = intl10.string(util.t["1EOZqw"]);
   const intl11 = util.intl;
@@ -273,7 +273,7 @@ export const getUpsellItems = function getUpsellItems() {
   obj5.maxUploadPremium = PremiumUtils.getMaxFileSizeForPremiumType(React7.TIER_2);
   obj4.description = intl12.format(util.t.DUT5IC, obj5);
   items[3] = obj4;
-  const obj7 = { key: constants3.BADGE, image: _modDef9432, activeTitle: null, passiveTitle: null, description: null };
+  const obj7 = { key: constants3.BADGE, image: _modDef9438, activeTitle: null, passiveTitle: null, description: null };
   const intl14 = util.intl;
   obj7.activeTitle = intl14.string(util.t["602BK4"]);
   const intl15 = util.intl;
@@ -281,7 +281,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl16 = util.intl;
   obj7.description = intl16.format(util.t["p7i+li"], {});
   items[4] = obj7;
-  const obj8 = { key: constants3.APP_ICONS, image: _modDef9433, activeTitle: null, passiveTitle: null, description: null };
+  const obj8 = { key: constants3.APP_ICONS, image: _modDef9439, activeTitle: null, passiveTitle: null, description: null };
   const intl17 = util.intl;
   obj8.activeTitle = intl17.string(util.t["1B1Cyn"]);
   const intl18 = util.intl;

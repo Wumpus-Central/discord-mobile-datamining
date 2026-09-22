@@ -1,13 +1,13 @@
-// === Module 16579: SectionFooterHelpers ===
+// === Module 16590: SectionFooterHelpers ===
 
-// Module 16579 (SectionFooterHelpers)
-import FavoritesUtils from "FavoritesUtils" /* 2066 */;
-import ChannelListState from "ChannelListState" /* 7770 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 7362 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
+// Module 16590 (SectionFooterHelpers)
+import FavoritesUtils from "FavoritesUtils" /* 2067 */;
+import ChannelListState from "ChannelListState" /* 7773 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7364 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
 
 require = fn;
-const ChannelListGuildActionRow = fn(7776).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7779).ChannelListGuildActionRow;
 const Permissions = fn(1074).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");

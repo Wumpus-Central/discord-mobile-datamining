@@ -1,6 +1,6 @@
-// === Module 6487: ? ===
+// === Module 6489: ? ===
 
-// Module 6487
+// Module 6489
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MoneyBagIllocon-2x.png.js");

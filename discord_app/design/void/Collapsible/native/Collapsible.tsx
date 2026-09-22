@@ -1,8 +1,8 @@
-// === Module 14365: Collapsible ===
+// === Module 14371: Collapsible ===
 
-// Module 14365 (Collapsible)
+// Module 14371 (Collapsible)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 5185 */;
+import spring from "spring" /* 5186 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const EXPAND_SPRING = { stiffness: 150, overshootClamping: true };
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 const obj2 = { collapsible: { position: "relative", overflow: "hidden" }, collapsibleContent: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function CollapsibleTsx1(){const{withSpring,totalHeight,EXPAND_SPRING}=this.__closure;return{height:withSpring(totalHeight,EXPAND_SPRING)};}" };

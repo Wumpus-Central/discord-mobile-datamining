@@ -1,9 +1,9 @@
-// === Module 6578: PaintIllocon ===
+// === Module 6580: PaintIllocon ===
 
-// Module 6578 (PaintIllocon)
+// Module 6580 (PaintIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef6579 from "module_6579" /* 6579 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef6581 from "module_6581" /* 6581 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const PaintIllocon = function PaintIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6579 };
+  const obj2 = { uri: _modDef6581 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,7 +1,7 @@
-// === Module 16592: useIsEligibleForTierTemplateUpsell ===
+// === Module 16603: useIsEligibleForTierTemplateUpsell ===
 
-// Module 16592 (useIsEligibleForTierTemplateUpsell)
-import GuildStore from "GuildStore" /* 2063 */;
+// Module 16603 (useIsEligibleForTierTemplateUpsell)
+import GuildStore from "GuildStore" /* 2064 */;
 
 const require = globalThis.__r;
 

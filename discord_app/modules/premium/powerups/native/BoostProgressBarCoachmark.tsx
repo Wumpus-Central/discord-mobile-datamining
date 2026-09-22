@@ -1,16 +1,16 @@
-// === Module 16507: BoostProgressBarCoachmark ===
+// === Module 16518: BoostProgressBarCoachmark ===
 
-// Module 16507 (BoostProgressBarCoachmark)
+// Module 16518 (BoostProgressBarCoachmark)
 import util from "util" /* 1115 */;
 import _modDef2514 from "module_2514" /* 2514 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9855 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9861 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/native/BoostProgressBarCoachmark.tsx");
@@ -46,6 +46,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(11394).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(11398).useCoachmark(guild.targetRef, memo);
   return null;
 };

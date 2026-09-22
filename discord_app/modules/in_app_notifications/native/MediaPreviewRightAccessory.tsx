@@ -1,29 +1,29 @@
-// === Module 10431: MediaPreviewRightAccessory ===
+// === Module 10437: MediaPreviewRightAccessory ===
 
-// Module 10431 (MediaPreviewRightAccessory)
+// Module 10437 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1477 */;
-import useToken from "useToken" /* 4457 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5174 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5299 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import EyeIcon from "EyeIcon" /* 7213 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7534 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7539 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7842 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8394 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 8536 */;
-import PlayIcon from "PlayIcon" /* 8545 */;
-import common_VideoDefault from "common/Video" /* 8578 */;
-import ClipView from "ClipView" /* 9094 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10387 */;
-import useContentHarmTypes from "useContentHarmTypes" /* 10432 */;
-import StickerDefault from "Sticker" /* 10433 */;
+import useToken from "useToken" /* 4458 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5175 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5301 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import EyeIcon from "EyeIcon" /* 7215 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7536 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7541 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7845 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8398 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8540 */;
+import PlayIcon from "PlayIcon" /* 8549 */;
+import common_VideoDefault from "common/Video" /* 8582 */;
+import ClipView from "ClipView" /* 9099 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10393 */;
+import useContentHarmTypes from "useContentHarmTypes" /* 10438 */;
+import StickerDefault from "Sticker" /* 10439 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4748 */;
+import AccessibilityStore from "AccessibilityStore" /* 4749 */;
 
 const ClipViewDefault = ClipView;
 
@@ -250,18 +250,18 @@ get_ActivityIndicator = fn(17);
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(4756);
+let createStyles = fn(4757);
 let obj2 = { badge: null, icon: null };
 let size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.xs, width: 16, height: 16, position: "absolute", bottom: 4, left: 4 };
 obj2.badge = size;
 obj2.icon = { width: 10, height: 10 };
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj3 = { badge: null };
 let size1 = { width: 20, height: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", position: "absolute", right: -5, top: -5 };
 obj3.badge = size1;
 let closure_12 = createStyles.createStyles(obj3);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj5 = { mediaThumbnailContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, mediaThumbnail: { width: "100%", height: "100%" }, iconContainer: null, obscureBackground: null, spoilerIconContainer: null, spoilerPill: null };
 let obj6 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj5.iconContainer = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.sm };
@@ -277,11 +277,11 @@ obj5.spoilerIconContainer = obj10;
 let obj8 = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.sm };
 obj5.spoilerPill = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
 let closure_13 = createStyles.createStyles(obj5);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
-createStyles = fn(4756);
+createStyles = fn(4757);
 let obj11 = { padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(10352).RIGHT_ACCESSORY_LEFT_MARGIN } });
+let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(10358).RIGHT_ACCESSORY_LEFT_MARGIN } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

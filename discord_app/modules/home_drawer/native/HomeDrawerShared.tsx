@@ -1,12 +1,12 @@
-// === Module 16645: HomeDrawerShared ===
+// === Module 16656: HomeDrawerShared ===
 
-// Module 16645 (HomeDrawerShared)
+// Module 16656 (HomeDrawerShared)
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: closure_1, jsx: c2 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_3 = createStyles.createStyles({ container: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 }, titleContainer: { flex: 1, flexDirection: "column", justifyContent: "center", gap: 2 }, rightContainer: { overflow: "hidden" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerShared.tsx");

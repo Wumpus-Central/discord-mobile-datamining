@@ -1,12 +1,12 @@
-// === Module 15030: AccountAgeGroupAdultSetting ===
+// === Module 15037: AccountAgeGroupAdultSetting ===
 
-// Module 15030 (AccountAgeGroupAdultSetting)
+// Module 15037 (AccountAgeGroupAdultSetting)
 import util from "util" /* 1115 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4968 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5640 */;
-import SettingsConstants from "SettingsConstants" /* 8233 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14957 */;
-import SettingBuilders from "SettingBuilders" /* 11725 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4969 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5642 */;
+import SettingsConstants from "SettingsConstants" /* 8237 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14964 */;
+import SettingBuilders from "SettingBuilders" /* 11729 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

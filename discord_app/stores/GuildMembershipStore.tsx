@@ -1,6 +1,6 @@
-// === Module 2043: GuildMembershipStore ===
+// === Module 2044: GuildMembershipStore ===
 
-// Module 2043 (GuildMembershipStore)
+// Module 2044 (GuildMembershipStore)
 import initializeDefault from "initialize" /* 504 */;
 import Dispatcher2 from "Dispatcher" /* 573 */;
 

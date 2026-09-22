@@ -1,9 +1,9 @@
-// === Module 7589: VoiceChannelEffectsPersistedStore ===
+// === Module 7592: VoiceChannelEffectsPersistedStore ===
 
-// Module 7589 (VoiceChannelEffectsPersistedStore)
+// Module 7592 (VoiceChannelEffectsPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VoiceChannelEffectsConstants from "VoiceChannelEffectsConstants" /* 7590 */;
+import VoiceChannelEffectsConstants from "VoiceChannelEffectsConstants" /* 7593 */;
 import size from "module_2" /* 2 */;
 
 const constants = VoiceChannelEffectsConstants.VoiceChannelEffectAnimationType;

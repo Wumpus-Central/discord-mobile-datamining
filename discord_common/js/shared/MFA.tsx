@@ -1,6 +1,6 @@
-// === Module 15957: MFA ===
+// === Module 15969: MFA ===
 
-// Module 15957 (MFA)
+// Module 15969 (MFA)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -53,7 +53,7 @@ let closure_4 = async function _finishMFACheck(arg0) {
           closure_130_3 = num7;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

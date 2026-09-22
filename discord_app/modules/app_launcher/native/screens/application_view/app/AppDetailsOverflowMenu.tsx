@@ -1,8 +1,8 @@
-// === Module 12386: AppDetailsOverflowMenu ===
+// === Module 12390: AppDetailsOverflowMenu ===
 
-// Module 12386 (AppDetailsOverflowMenu)
-import ToastUtils from "ToastUtils" /* 4453 */;
-import ClipboardUtils from "ClipboardUtils" /* 7434 */;
+// Module 12390 (AppDetailsOverflowMenu)
+import ToastUtils from "ToastUtils" /* 4454 */;
+import ClipboardUtils from "ClipboardUtils" /* 7436 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

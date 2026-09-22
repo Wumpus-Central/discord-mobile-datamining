@@ -1,6 +1,6 @@
-// === Module 6331: ? ===
+// === Module 6333: ? ===
 
-// Module 6331
+// Module 6333
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameServerAbstractUI-2x.png.js");

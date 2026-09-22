@@ -1,6 +1,6 @@
-// === Module 6793: ? ===
+// === Module 6795: ? ===
 
-// Module 6793
+// Module 6795
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TrophyIllocon-2x.png.js");

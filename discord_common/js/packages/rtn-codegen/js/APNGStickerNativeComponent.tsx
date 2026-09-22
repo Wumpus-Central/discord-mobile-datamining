@@ -1,6 +1,6 @@
-// === Module 10435: APNGStickerNativeComponent ===
+// === Module 10441: APNGStickerNativeComponent ===
 
-// Module 10435 (APNGStickerNativeComponent)
+// Module 10441 (APNGStickerNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

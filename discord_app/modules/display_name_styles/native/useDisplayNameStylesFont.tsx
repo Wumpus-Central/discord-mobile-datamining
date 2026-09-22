@@ -1,10 +1,10 @@
-// === Module 9996: useDisplayNameStylesFont ===
+// === Module 10002: useDisplayNameStylesFont ===
 
-// Module 9996 (useDisplayNameStylesFont)
+// Module 10002 (useDisplayNameStylesFont)
 import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1390 */;
 import DisplayNameFont from "DisplayNameFont" /* 1392 */;
-import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 4990 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9997 */;
+import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 4991 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 10003 */;
 import size from "module_2" /* 2 */;
 
 const FLYWHEEL_FONTS = DisplayNameStylesConstants.FLYWHEEL_FONTS;

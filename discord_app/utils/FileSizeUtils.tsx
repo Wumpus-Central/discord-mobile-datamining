@@ -1,6 +1,6 @@
-// === Module 4652: FileSizeUtils ===
+// === Module 4653: FileSizeUtils ===
 
-// Module 4652 (FileSizeUtils)
+// Module 4653 (FileSizeUtils)
 import util from "util" /* 1115 */;
 import size from "module_2" /* 2 */;
 

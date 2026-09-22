@@ -1,13 +1,13 @@
-// === Module 11799: handleMessagesTapChannel ===
+// === Module 11803: handleMessagesTapChannel ===
 
-// Module 11799 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7583 */;
+// Module 11803 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7586 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
-import GuildStore from "GuildStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
+import GuildStore from "GuildStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -132,7 +132,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
           let role;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -366,13 +366,13 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
     }
   }
 };
-const isGuildVocalChannelType = fn(2045).isGuildVocalChannelType;
-const isGuildLurker = fn(2059).isGuildLurker;
+const isGuildVocalChannelType = fn(2046).isGuildVocalChannelType;
+const isGuildLurker = fn(2060).isGuildLurker;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, Permissions: closure_14, Routes: closure_15 } = Constants);
-const StaticChannelRoute = fn(2048).StaticChannelRoute;
-const GuildOnboardingTab = fn(7346).GuildOnboardingTab;
-let closure_18 = fn(7342).CHANNELS_AND_ROLES_MODAL_KEY;
+const StaticChannelRoute = fn(2049).StaticChannelRoute;
+const GuildOnboardingTab = fn(7348).GuildOnboardingTab;
+let closure_18 = fn(7344).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");
 

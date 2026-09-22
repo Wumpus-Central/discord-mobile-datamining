@@ -1,11 +1,11 @@
-// === Module 14020: PermissionSpeakStore ===
+// === Module 14028: PermissionSpeakStore ===
 
-// Module 14020 (PermissionSpeakStore)
+// Module 14028 (PermissionSpeakStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
+import GuildStore from "GuildStore" /* 2064 */;
 
 require = fn;
 const hideSuppressWarning = "hideSuppressWarning";

@@ -1,9 +1,9 @@
-// === Module 15850: CacheActionCreators ===
+// === Module 15862: CacheActionCreators ===
 
-// Module 15850 (CacheActionCreators)
+// Module 15862 (CacheActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CacheStore from "CacheStore" /* 7718 */;
+import CacheStore from "CacheStore" /* 7721 */;
 
 let closure_5 = async function _writeCaches() {
   if (1 === tmp5) {
@@ -46,9 +46,9 @@ let closure_5 = async function _writeCaches() {
     flag = false;
   }
   closure_129_0 = flag;
-  return "PX_16";
+  return "flex";
 };
-const ChannelLoader = fn(2041).ChannelLoader;
+const ChannelLoader = fn(2042).ChannelLoader;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/cache/CacheActionCreators.tsx");
 

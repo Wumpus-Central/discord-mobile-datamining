@@ -1,16 +1,16 @@
-// === Module 13840: useMarketablePowerupPerks ===
+// === Module 13848: useMarketablePowerupPerks ===
 
-// Module 13840 (useMarketablePowerupPerks)
-import Powerups from "Powerups" /* 4648 */;
+// Module 13848 (useMarketablePowerupPerks)
+import Powerups from "Powerups" /* 4649 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4644 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4645 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4645);
+const GuildPowerupsConstants = fn(4646);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
-let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(4648).VANITY_URL_POWERUP_SKU_ID];
+let items = [...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET), ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET), fn(4649).VANITY_URL_POWERUP_SKU_ID];
 let set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx");
@@ -29,7 +29,7 @@ export default function useMarketablePowerupPerks(guildId) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12830)(guildId);
+  let tmp2 = stateFromStores(12834)(guildId);
   dependencyMap = tmp2;
   const obj = require("initialize");
   const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(guildId, "useMarketablePowerupPerks");

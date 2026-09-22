@@ -1,9 +1,9 @@
-// === Module 14396: Atoms ===
+// === Module 14402: Atoms ===
 
-// Module 14396 (Atoms)
+// Module 14402 (Atoms)
 import _mod17 from "module_17" /* 17 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8890 */;
-import native from "native" /* 14397 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8895 */;
+import native from "native" /* 14403 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");

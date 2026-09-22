@@ -1,8 +1,8 @@
-// === Module 12340: useViewableAppLauncherHomeItems ===
+// === Module 12344: useViewableAppLauncherHomeItems ===
 
-// Module 12340 (useViewableAppLauncherHomeItems)
+// Module 12344 (useViewableAppLauncherHomeItems)
 import noop from "module_19" /* 19 */;
-import AppLauncherStore from "AppLauncherStore" /* 9522 */;
+import AppLauncherStore from "AppLauncherStore" /* 9528 */;
 
 const require = fn;
 const size = fn(2);

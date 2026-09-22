@@ -1,16 +1,16 @@
-// === Module 11078: SKUActionCreators ===
+// === Module 11084: SKUActionCreators ===
 
-// Module 11078 (SKUActionCreators)
+// Module 11084 (SKUActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import BillingUtils from "BillingUtils" /* 4429 */;
-import StoreUtils from "StoreUtils" /* 4997 */;
-import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5097 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7830 */;
-import TestModeUtils from "TestModeUtils" /* 9133 */;
+import BillingUtils from "BillingUtils" /* 4430 */;
+import StoreUtils from "StoreUtils" /* 4998 */;
+import PurchaseTokenUtils from "PurchaseTokenUtils" /* 5098 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7833 */;
+import TestModeUtils from "TestModeUtils" /* 9138 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9066 */;
-import SKUStore from "SKUStore" /* 5727 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9071 */;
+import SKUStore from "SKUStore" /* 5729 */;
 
 require = fn;
 let closure_8 = async function _fetchSKU() {
@@ -246,7 +246,7 @@ let closure_10 = async function _fetchTestSKUsForApplication(arg0) {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -332,7 +332,7 @@ let closure_11 = async function _previewPurchaseSku(arg0) {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

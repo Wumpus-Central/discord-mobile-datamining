@@ -1,25 +1,25 @@
-// === Module 11640: WasThisHelpfulSection ===
+// === Module 11644: WasThisHelpfulSection ===
 
-// Module 11640 (WasThisHelpfulSection)
+// Module 11644 (WasThisHelpfulSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
-import _modDef9515 from "module_9515" /* 9515 */;
-import ShieldIcon from "ShieldIcon" /* 9516 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11633 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11634 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
+import _modDef9521 from "module_9521" /* 9521 */;
+import ShieldIcon from "ShieldIcon" /* 9522 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11637 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11638 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11179 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 11185 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(11179).SafetyWarningFeedbackTypes;
-const Constants = fn(11626);
+let closure_7 = fn(11185).SafetyWarningFeedbackTypes;
+const Constants = fn(11630);
 ({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, TOAST_SHIELD_ICON_COLOR: closure_9, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { container: { flexDirection: "column", alignItems: "center" }, buttonsContainer: { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, buttonsBackground: null, buttonsBackgroundInactive: null, buttonsBackgroundActive: null, buttonIconInactive: null, buttonIconActive: null, toastContainer: null };
 let size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
 obj2.buttonsBackground = size;
@@ -66,7 +66,7 @@ export default function WasThisHelpfulSection(channelId) {
     const obj3 = { key: feedbackType === constants.UPVOTE ? closure_2_10 : React6, content: null, icon: null, IconComponent: null, iconColor: null, containerStyle: null, recolorLegacyIcon: true };
     const intl = util.intl;
     obj3.content = intl.string(util.t["gd/Yqs"]);
-    obj3.icon = _modDef9515;
+    obj3.icon = _modDef9521;
     obj3.IconComponent = ShieldIcon.ShieldIcon;
     obj3.iconColor = iconColor;
     obj3.containerStyle = toastContainer.toastContainer;

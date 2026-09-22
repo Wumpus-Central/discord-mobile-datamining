@@ -1,19 +1,19 @@
-// === Module 17206: ChannelDetailsLinkedLobby ===
+// === Module 17218: ChannelDetailsLinkedLobby ===
 
-// Module 17206 (ChannelDetailsLinkedLobby)
+// Module 17218 (ChannelDetailsLinkedLobby)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7413 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7415 */;
 import noop from "module_19" /* 19 */;
 
 const util = BPDKoA(1115);
-const Text_Text = BPDKoA(4752);
+const Text_Text = BPDKoA(4753);
 require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;

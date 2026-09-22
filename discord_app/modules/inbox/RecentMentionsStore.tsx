@@ -1,23 +1,23 @@
-// === Module 7873: RecentMentionsStore ===
+// === Module 7876: RecentMentionsStore ===
 
-// Module 7873 (RecentMentionsStore)
+// Module 7876 (RecentMentionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import TimeUtils from "TimeUtils" /* 4785 */;
-import AgeGateUtils from "AgeGateUtils" /* 4966 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4978 */;
-import isMessageMentioned from "isMessageMentioned" /* 4993 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7512 */;
-import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7874 */;
-import MessageRecord from "MessageRecord" /* 4406 */;
+import TimeUtils from "TimeUtils" /* 4786 */;
+import AgeGateUtils from "AgeGateUtils" /* 4967 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4979 */;
+import isMessageMentioned from "isMessageMentioned" /* 4994 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7514 */;
+import shouldRemoveSelfMentionDefault from "shouldRemoveSelfMention" /* 7877 */;
+import MessageRecord from "MessageRecord" /* 4407 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
-import MessageStore from "MessageStore" /* 4976 */;
-import ReadStateStore from "ReadStateStore" /* 4771 */;
-import RelationshipStore from "RelationshipStore" /* 4405 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4937 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
+import MessageStore from "MessageStore" /* 4977 */;
+import ReadStateStore from "ReadStateStore" /* 4772 */;
+import RelationshipStore from "RelationshipStore" /* 4406 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4938 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const isMessageMentionedDefault = isMessageMentioned;

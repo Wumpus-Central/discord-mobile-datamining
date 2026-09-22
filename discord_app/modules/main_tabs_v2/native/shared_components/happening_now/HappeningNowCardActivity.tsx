@@ -1,18 +1,18 @@
-// === Module 16412: HappeningNowCardActivity ===
+// === Module 16423: HappeningNowCardActivity ===
 
-// Module 16412 (HappeningNowCardActivity)
+// Module 16423 (HappeningNowCardActivity)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1980 */;
-import ColorUtils from "ColorUtils" /* 4605 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10319 */;
-import useLiveStageData from "useLiveStageData" /* 16410 */;
-import _modDef16413 from "module_16413" /* 16413 */;
-import _modDef16414 from "module_16414" /* 16414 */;
-import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16421 */;
+import ColorUtils from "ColorUtils" /* 4606 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10325 */;
+import useLiveStageData from "useLiveStageData" /* 16421 */;
+import _modDef16424 from "module_16424" /* 16424 */;
+import _modDef16425 from "module_16425" /* 16425 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 16432 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 2046 */;
+import StageInstanceStore from "StageInstanceStore" /* 2047 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -130,10 +130,10 @@ function IconOrPreview(arg0) {
       obj8.style = tmp.cardImageStreamPreview;
       const intl5 = tmp28(1115).intl;
       obj8.ctaText = intl5.string(tmp28(1115).t["7Xq/nV"]);
-      obj3.children = closure_11(tmp2(10316), obj8);
+      obj3.children = closure_11(tmp2(10322), obj8);
       return closure_11(closure_4, obj3);
     } else {
-      if (tmp2(11153)(activity)) {
+      if (tmp2(11159)(activity)) {
         const intl4 = tmp28(1115).intl;
         let stringResult = intl4.string(tmp28(1115).t.rmnkz4);
       } else {
@@ -144,7 +144,7 @@ function IconOrPreview(arg0) {
         if (type === constants2.LISTENING) {
           const intl3 = tmp28(1115).intl;
           stringResult = intl3.string(tmp28(1115).t.kUEnxN);
-        } else if (tmp2(13295)(activity)) {
+        } else if (tmp2(13300)(activity)) {
           const intl2 = tmp28(1115).intl;
           stringResult = intl2.string(tmp28(1115).t.T0uYK9);
         } else {
@@ -161,7 +161,7 @@ function IconOrPreview(arg0) {
       const obj10 = { style: memo, accessibilityLabel: stringResult, children: null };
       const obj11 = { style: tmp35, children: null };
       const obj12 = { style: tmp.cardImageAsset, source: memoizedImageSourceResult };
-      obj11.children = closure_11(tmp2(5804), obj12);
+      obj11.children = closure_11(tmp2(5806), obj12);
       obj10.children = closure_11(closure_4, obj11);
       return closure_11(closure_4, obj10);
     }
@@ -176,7 +176,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       let tmp2Result2 = items[userId % items.length];
     } else {
-      tmp2Result2 = tmp2(16423);
+      tmp2Result2 = tmp2(16434);
     }
   }
 }
@@ -198,15 +198,15 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15566);
+const HappeningNowConstants = fn(15577);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HappeningNowConstants);
 const Constants = fn(1074);
 ({ ActivityTypes: closure_9, AnalyticEvents: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef16413, _modDef16414];
-const createStyles = fn(4756);
+let items = [_modDef16424, _modDef16425];
+const createStyles = fn(4757);
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 }, cardAvatar: { marginBottom: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" }, cardImageStream: { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" }, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
 let obj3 = { backgroundColor: nativeDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: nativeDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
 obj.cardImageAsset = { flex: 1, width: "100%", borderRadius: nativeDefault.radii.sm - 1 };
@@ -302,11 +302,11 @@ export default noop.memo((userId) => {
     obj2.destination_channel_id = channelId;
     AnalyticsUtilsDefault.track(constants3.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stream) {
-      asyncRequireImpl(13180, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(13180, dependencyMap.paths);
+      asyncRequireImpl(13184, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(13184, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8448, dependencyMap.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8448, dependencyMap.paths);
+      asyncRequireImpl(8452, dependencyMap.paths).then((result) => result.default({ userId, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8452, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

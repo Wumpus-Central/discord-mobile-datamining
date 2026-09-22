@@ -1,6 +1,6 @@
-// === Module 11523: ReactionToProfileExperiment ===
+// === Module 11527: ReactionToProfileExperiment ===
 
-// Module 11523 (ReactionToProfileExperiment)
+// Module 11527 (ReactionToProfileExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const obj = { kind: "user", name: "2026-07-mobile-reaction-to-profile", defaultConfig: { reactionToProfileEnabled: false }, variations: null };

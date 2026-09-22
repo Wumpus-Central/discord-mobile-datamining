@@ -1,11 +1,11 @@
-// === Module 17081: VibegrationsDebugAnalytics ===
+// === Module 17093: VibegrationsDebugAnalytics ===
 
-// Module 17081 (VibegrationsDebugAnalytics)
+// Module 17093 (VibegrationsDebugAnalytics)
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 17067 */;
-import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 17068 */;
-import VibegrationsDebugPrimitives from "VibegrationsDebugPrimitives" /* 17070 */;
+import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 17079 */;
+import VibegrationsDebugLabels from "VibegrationsDebugLabels" /* 17080 */;
+import VibegrationsDebugPrimitives from "VibegrationsDebugPrimitives" /* 17082 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

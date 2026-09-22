@@ -1,8 +1,8 @@
-// === Module 10598: getEmojiPopoutMessage ===
+// === Module 10604: getEmojiPopoutMessage ===
 
-// Module 10598 (getEmojiPopoutMessage)
+// Module 10604 (getEmojiPopoutMessage)
 import util from "util" /* 1115 */;
-import ExpressionSourceRecord from "ExpressionSourceRecord" /* 5802 */;
+import ExpressionSourceRecord from "ExpressionSourceRecord" /* 5804 */;
 import size from "module_2" /* 2 */;
 
 const EmojiSourceDataTypes = ExpressionSourceRecord.EmojiSourceDataTypes;

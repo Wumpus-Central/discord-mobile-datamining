@@ -1,15 +1,15 @@
-// === Module 7185: Login ===
+// === Module 7187: Login ===
 
-// Module 7185 (Login)
+// Module 7187 (Login)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
-import Pressables from "Pressables" /* 5339 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5364 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5110 */;
+import Pressables from "Pressables" /* 5341 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5366 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7186 */;
+import PhoneStore from "PhoneStore" /* 7188 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -55,7 +55,7 @@ const View = fn(17).View;
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;
@@ -255,7 +255,7 @@ export default function Login(isMultiAccount) {
             let authenticationErrorsFromV6OrEarlierAPIError;
             c7 = 1;
             c8 = 1;
-            return { value: "PX_16", done: true };
+            return { value: "flex", done: true };
           }
         } else if (1 === tmp7) {
           if (isMultiAccount === 1) {

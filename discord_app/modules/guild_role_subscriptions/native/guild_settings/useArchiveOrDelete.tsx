@@ -1,9 +1,9 @@
-// === Module 18196: useArchiveOrDelete ===
+// === Module 18208: useArchiveOrDelete ===
 
-// Module 18196 (useArchiveOrDelete)
+// Module 18208 (useArchiveOrDelete)
 import util from "util" /* 1115 */;
-import ToastUtilsAll from "ToastUtils" /* 4453 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15497 */;
+import ToastUtilsAll from "ToastUtils" /* 4454 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15508 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -48,7 +48,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId,
             const obj4 = { title, body, confirmText, confirmColor: tmp2(1177).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj5 = { value: v2(5109).confirm(obj4), done: false };
+            const obj5 = { value: v2(5110).confirm(obj4), done: false };
             return obj5;
           }
         } else {

@@ -1,9 +1,9 @@
-// === Module 10946: premium_tab_tooltip ===
+// === Module 10952: premium_tab_tooltip ===
 
-// Module 10946 (premium_tab_tooltip)
+// Module 10952 (premium_tab_tooltip)
 import _mod1187 from "module_1187" /* 1187 */;
-import localized_string from "localized_string" /* 10930 */;
-import theme_aware_asset from "theme_aware_asset" /* 10940 */;
+import localized_string from "localized_string" /* 10936 */;
+import theme_aware_asset from "theme_aware_asset" /* 10946 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

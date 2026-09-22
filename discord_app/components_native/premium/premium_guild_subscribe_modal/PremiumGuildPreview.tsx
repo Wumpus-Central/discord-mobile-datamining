@@ -1,20 +1,20 @@
-// === Module 13873: PremiumGuildPreview ===
+// === Module 13881: PremiumGuildPreview ===
 
-// Module 13873 (PremiumGuildPreview)
+// Module 13881 (PremiumGuildPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import shared from "shared" /* 4607 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4649 */;
-import GuildIcon from "GuildIcon" /* 5801 */;
-import _modDef13874 from "module_13874" /* 13874 */;
-import _modDef13875 from "module_13875" /* 13875 */;
-import _modDef13876 from "module_13876" /* 13876 */;
-import _modDef13877 from "module_13877" /* 13877 */;
-import _modDef13878 from "module_13878" /* 13878 */;
-import _modDef13879 from "module_13879" /* 13879 */;
-import _modDef13880 from "module_13880" /* 13880 */;
-import _modDef13881 from "module_13881" /* 13881 */;
+import shared from "shared" /* 4608 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4650 */;
+import GuildIcon from "GuildIcon" /* 5803 */;
+import _modDef13882 from "module_13882" /* 13882 */;
+import _modDef13883 from "module_13883" /* 13883 */;
+import _modDef13884 from "module_13884" /* 13884 */;
+import _modDef13885 from "module_13885" /* 13885 */;
+import _modDef13886 from "module_13886" /* 13886 */;
+import _modDef13887 from "module_13887" /* 13887 */;
+import _modDef13888 from "module_13888" /* 13888 */;
+import _modDef13889 from "module_13889" /* 13889 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -27,32 +27,32 @@ function PremiumGuildTierPill(arg0) {
   const obj = { style: tmp.tierPill, children: null };
   const obj2 = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp22 = _modDef13875;
-    const tmp21 = _modDef13874;
+    let tmp22 = _modDef13883;
+    const tmp21 = _modDef13882;
     if (obj5.isThemeDark(theme)) {
       tmp22 = tmp21;
     }
     let tmp7 = tmp22;
     obj5 = shared;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp17 = _modDef13877;
-    const tmp16 = _modDef13876;
+    let tmp17 = _modDef13885;
+    const tmp16 = _modDef13884;
     if (obj4.isThemeDark(theme)) {
       tmp17 = tmp16;
     }
     tmp7 = tmp17;
     obj4 = shared;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp12 = _modDef13879;
-    const tmp11 = _modDef13878;
+    let tmp12 = _modDef13887;
+    const tmp11 = _modDef13886;
     if (obj3.isThemeDark(theme)) {
       tmp12 = tmp11;
     }
     tmp7 = tmp12;
     obj3 = shared;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp8 = _modDef13881;
-    const tmp26 = _modDef13880;
+    let tmp8 = _modDef13889;
+    const tmp26 = _modDef13888;
     if (obj8.isThemeDark(theme)) {
       tmp8 = tmp26;
     }
@@ -71,15 +71,15 @@ get_ActivityIndicator = fn(17);
 const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { guild: { padding: 16, borderRadius: nativeDefault.radii.xs, flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, guildInfo: { marginLeft: 16 }, guildName: null, tierPill: null, tierPillImage: null, tierPillText: null };
 let obj3 = { padding: 16, borderRadius: nativeDefault.radii.xs, flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
-obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5658).DARK_WHITE_500_LIGHT_BLACK_500 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5658).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5660).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5660).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.tierPill = { marginTop: 8, padding: 4, paddingRight: 8, alignSelf: "flex-start", flexDirection: "row", borderRadius: 11, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.tierPillImage = { width: 16, height: 16 };
 let obj5 = { marginTop: 8, padding: 4, paddingRight: 8, alignSelf: "flex-start", flexDirection: "row", borderRadius: 11, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5658).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5660).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx");

@@ -1,6 +1,6 @@
-// === Module 14105: networkAwareRetry ===
+// === Module 14112: networkAwareRetry ===
 
-// Module 14105 (networkAwareRetry)
+// Module 14112 (networkAwareRetry)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -78,7 +78,7 @@ let closure_5 = async function _networkAwareRetry(arg0) {
     num14 = 3;
   }
   closure_130_1 = num14;
-  return "PX_16";
+  return "flex";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/network/networkAwareRetry.tsx");

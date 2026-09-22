@@ -1,7 +1,7 @@
-// === Module 8531: useMediaViewerSources ===
+// === Module 8535: useMediaViewerSources ===
 
-// Module 8531 (useMediaViewerSources)
-import ZustandStore from "ZustandStore" /* 4626 */;
+// Module 8535 (useMediaViewerSources)
+import ZustandStore from "ZustandStore" /* 4627 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => {

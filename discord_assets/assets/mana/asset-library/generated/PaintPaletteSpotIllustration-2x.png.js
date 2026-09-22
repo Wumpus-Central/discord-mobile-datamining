@@ -1,6 +1,6 @@
-// === Module 6581: ? ===
+// === Module 6583: ? ===
 
-// Module 6581
+// Module 6583
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PaintPaletteSpotIllustration-2x.png.js");

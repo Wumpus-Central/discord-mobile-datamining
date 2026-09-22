@@ -1,25 +1,25 @@
-// === Module 7857: UserProfileStore ===
+// === Module 7860: UserProfileStore ===
 
-// Module 7857 (UserProfileStore)
+// Module 7860 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
-import Timers from "Timers" /* 2036 */;
-import WidgetType from "WidgetType" /* 7858 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7859 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7865 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7866 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7869 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7870 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7871 */;
+import Timers from "Timers" /* 2037 */;
+import WidgetType from "WidgetType" /* 7861 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7862 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7868 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7869 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7872 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7873 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7874 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 import UserRecord from "UserRecord" /* 1386 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
-import PresenceStore from "PresenceStore" /* 4796 */;
-import SortedGuildStore from "SortedGuildStore" /* 5655 */;
+import PresenceStore from "PresenceStore" /* 4797 */;
+import SortedGuildStore from "SortedGuildStore" /* 5657 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -50,12 +50,12 @@ function createUserWidgetFromServer(data) {
               if (null != id.id) {
                 tmp = null;
                 if (null != id.file_id) {
-                  obj = { status: "saved", id: null, fileId: null, gameId: null, title: null, tags: null, localClipId: null, videoURL: null, thumbnailURL: null };
+                  obj = { status: "saved", id: null, fileId: null, gameId: null, title: null, tags: null, localClipId: null, videoURL: null, thumbnailURL: null, spritesheetImageURL: null, spritesheetVttURL: null };
                   ({ id: obj.id, file_id: obj.fileId, game_id: obj.gameId, title } = id);
                   obj.title = title;
                   ({ tags: obj.tags, local_clip_id } = id);
                   obj.localClipId = local_clip_id;
-                  ({ video_url: obj.videoURL, thumbnail_url: obj.thumbnailURL } = id);
+                  ({ video_url: obj.videoURL, thumbnail_url: obj.thumbnailURL, spritesheet_image_url: obj.spritesheetImageURL, spritesheet_vtt_url: obj.spritesheetVttURL } = id);
                   tmp = obj;
                 }
               }

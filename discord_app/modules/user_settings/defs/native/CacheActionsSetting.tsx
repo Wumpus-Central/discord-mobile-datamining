@@ -1,27 +1,27 @@
-// === Module 15846: CacheActionsSetting ===
+// === Module 15858: CacheActionsSetting ===
 
-// Module 15846 (CacheActionsSetting)
+// Module 15858 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 2019 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4710 */;
-import BrowserManager from "BrowserManager" /* 4720 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5794 */;
-import TableRow from "TableRow" /* 5822 */;
-import TableRowGroup from "TableRowGroup" /* 5904 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7394 */;
-import ActionSheet from "ActionSheet" /* 7442 */;
-import FileIcon from "FileIcon" /* 10390 */;
-import FileUpIcon from "FileUpIcon" /* 15815 */;
-import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 15847 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 15848 */;
-import CacheActionCreators from "CacheActionCreators" /* 15850 */;
-import FileWarningIcon from "FileWarningIcon" /* 15851 */;
+import UserSettings from "UserSettings" /* 2020 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4711 */;
+import BrowserManager from "BrowserManager" /* 4721 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5796 */;
+import TableRow from "TableRow" /* 5824 */;
+import TableRowGroup from "TableRowGroup" /* 5906 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
+import ActionSheet from "ActionSheet" /* 7444 */;
+import FileIcon from "FileIcon" /* 10396 */;
+import FileUpIcon from "FileUpIcon" /* 15827 */;
+import CacheActionsDiskUsageSection from "CacheActionsDiskUsageSection" /* 15859 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 15860 */;
+import CacheActionCreators from "CacheActionCreators" /* 15862 */;
+import FileWarningIcon from "FileWarningIcon" /* 15863 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5494 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5496 */;
 
 const CacheActionsDiskUsageSectionDefault = CacheActionsDiskUsageSection;
 
@@ -204,14 +204,14 @@ const useState = fn(19).useState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-const SettingBuilders = fn(11725);
+const SettingBuilders = fn(11729);
 const pressable = SettingBuilders.createPressable({
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15851).FileWarningIcon,
+  IconComponent: fn(15863).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: CacheActionsActionSheet }), CacheActionsActionSheet);
   },

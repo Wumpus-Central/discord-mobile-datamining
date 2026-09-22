@@ -1,10 +1,10 @@
-// === Module 4773: GameConsoleStore ===
+// === Module 4774: GameConsoleStore ===
 
-// Module 4773 (GameConsoleStore)
+// Module 4774 (GameConsoleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SessionsStore from "SessionsStore" /* 4774 */;
-import VoiceStateStore from "VoiceStateStore" /* 4775 */;
+import SessionsStore from "SessionsStore" /* 4775 */;
+import VoiceStateStore from "VoiceStateStore" /* 4776 */;
 
 let c2 = null;
 let obj = null;

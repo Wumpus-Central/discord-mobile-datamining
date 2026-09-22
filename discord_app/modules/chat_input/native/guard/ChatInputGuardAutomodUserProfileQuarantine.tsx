@@ -1,9 +1,9 @@
-// === Module 12718: ChatInputGuardAutomodUserProfileQuarantine ===
+// === Module 12722: ChatInputGuardAutomodUserProfileQuarantine ===
 
-// Module 12718 (ChatInputGuardAutomodUserProfileQuarantine)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4401 */;
-import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 12116 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12702 */;
+// Module 12722 (ChatInputGuardAutomodUserProfileQuarantine)
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4402 */;
+import GuildAutomodActionActionCreators from "GuildAutomodActionActionCreators" /* 12120 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12706 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
@@ -33,7 +33,7 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
     const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
   }, items2);
   const obj = guildId(504);
-  const automodReason = guildId(4401).getAutomodReason(stateFromStores);
+  const automodReason = guildId(4402).getAutomodReason(stateFromStores);
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
     const intl2 = tmp(1115).intl;
     let stringResult = intl2.string(tmp(1115).t.Viksoo);
@@ -49,8 +49,8 @@ export default noop.memo(function ChatInputGuardAutomodUserProfileQuarantine(gui
     stringResult1 = intl3.string(tmp(1115).t["8HW7r9"]);
   }
   const obj3 = { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null };
-  const obj2 = guildId(4401);
-  obj3.icon = jsx(guildId(12719).ChatXIcon, {});
+  const obj2 = guildId(4402);
+  obj3.icon = jsx(guildId(12723).ChatXIcon, {});
   obj3.message = stringResult1;
   return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });

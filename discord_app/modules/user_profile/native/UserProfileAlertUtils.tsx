@@ -1,13 +1,13 @@
-// === Module 12873: UserProfileAlertUtils ===
+// === Module 12877: UserProfileAlertUtils ===
 
-// Module 12873 (UserProfileAlertUtils)
-import useAlertStore from "useAlertStore" /* 5110 */;
-import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 12874 */;
-import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 12875 */;
-import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 12876 */;
-import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 12877 */;
-import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 12878 */;
-import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 12879 */;
+// Module 12877 (UserProfileAlertUtils)
+import useAlertStore from "useAlertStore" /* 5111 */;
+import UserProfileConfirmCancelFriendRequestDefault from "UserProfileConfirmCancelFriendRequest" /* 12878 */;
+import UserProfileConfirmRemoveFriendDefault from "UserProfileConfirmRemoveFriend" /* 12879 */;
+import UserProfileConfirmRemoveGameFriendDefault from "UserProfileConfirmRemoveGameFriend" /* 12880 */;
+import UserProfileConfirmVideoUnstableConnectionDefault from "UserProfileConfirmVideoUnstableConnection" /* 12881 */;
+import UserProfileAlertUserReportedDefault from "UserProfileAlertUserReported" /* 12882 */;
+import UserProfileConfirmThreadRemoveDefault from "UserProfileConfirmThreadRemove" /* 12883 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

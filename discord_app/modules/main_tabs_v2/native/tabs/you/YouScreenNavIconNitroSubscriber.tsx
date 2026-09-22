@@ -1,14 +1,14 @@
-// === Module 17264: YouScreenNavIconNitroSubscriber ===
+// === Module 17271: YouScreenNavIconNitroSubscriber ===
 
-// Module 17264 (YouScreenNavIconNitroSubscriber)
+// Module 17271 (YouScreenNavIconNitroSubscriber)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7694 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 13663 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7697 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 13671 */;
 
 const require = fn;
-const NitroHomeSectionId = fn(13663).NitroHomeSectionId;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const NitroHomeSectionId = fn(13671).NitroHomeSectionId;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIconNitroSubscriber.tsx");
@@ -21,7 +21,7 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
   if (showReferralNotificationDot) {
     showReferralNotificationDot = obj.useIsEligibleSenderForReferralProgram(!showReferralNotificationDot);
   }
-  obj = onPress(8315);
+  obj = onPress(8319);
   const items = [ReferralTrialStore];
   const items1 = [showReferralNotificationDot];
   const stateFromStores = onPress(504).useStateFromStores(items, () => ReferralTrialStore.getReferralsRemaining({ bypassFetch: !showReferralNotificationDot }), items1);
@@ -32,14 +32,14 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
     if (null != stateFromStores) {
       prop = null;
       if (stateFromStores > 0) {
-        prop = tmp(2027).DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION;
+        prop = tmp(2028).DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION;
       }
     }
   }
-  const tmpResult2 = onPress(7630);
-  const tmp5 = _slicedToArray(tmpResult2.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: onPress(17259).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS }, undefined, true), 2);
+  const tmpResult2 = onPress(7633);
+  const tmp5 = _slicedToArray(tmpResult2.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: onPress(17266).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS }, undefined, true), 2);
   dependencyMap = tmp6;
-  const tmp7 = tmp5[0] === onPress(2027).DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION;
+  const tmp7 = tmp5[0] === onPress(2028).DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION;
   _slicedToArray = tmp7;
   const items2 = [tmp7, tmp5[1], onPress];
   const callback = noop.useCallback(() => {
@@ -51,11 +51,11 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
     onPress();
   }, items2);
   const obj3 = { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null };
-  const obj2 = { cooldownDurationMs: onPress(17259).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
-  obj3.IconComponent = onPress(8940).NitroWheelIcon;
+  const obj2 = { cooldownDurationMs: onPress(17266).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
+  obj3.IconComponent = onPress(8945).NitroWheelIcon;
   const intl = tmp(1115).intl;
   obj3.accessibilityLabel = intl.string(onPress(1115).t.Ipxkog);
   obj3.onPress = callback;
   obj3.showRedDot = tmp7;
-  return jsx(showReferralNotificationDot(17261), { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null });
+  return jsx(showReferralNotificationDot(17268), { IconComponent: null, accessibilityLabel: null, onPress: null, showRedDot: null });
 });

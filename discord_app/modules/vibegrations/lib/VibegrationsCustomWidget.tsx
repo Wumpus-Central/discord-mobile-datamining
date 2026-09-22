@@ -1,7 +1,7 @@
-// === Module 13359: VibegrationsCustomWidget ===
+// === Module 13364: VibegrationsCustomWidget ===
 
-// Module 13359 (VibegrationsCustomWidget)
-import GuildStore from "GuildStore" /* 2063 */;
+// Module 13364 (VibegrationsCustomWidget)
+import GuildStore from "GuildStore" /* 2064 */;
 
 const require = globalThis.__r;
 

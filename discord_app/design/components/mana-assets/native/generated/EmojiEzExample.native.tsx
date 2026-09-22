@@ -1,9 +1,9 @@
-// === Module 6188: EmojiEzExample ===
+// === Module 6190: EmojiEzExample ===
 
-// Module 6188 (EmojiEzExample)
+// Module 6190 (EmojiEzExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef6189 from "module_6189" /* 6189 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef6191 from "module_6191" /* 6191 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiEzExample = function EmojiEzExample(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6189 };
+  const obj2 = { uri: _modDef6191 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

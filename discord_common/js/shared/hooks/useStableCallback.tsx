@@ -1,6 +1,6 @@
-// === Module 7208: hooks/useStableCallback ===
+// === Module 7210: hooks/useStableCallback ===
 
-// Module 7208 (hooks/useStableCallback)
+// Module 7210 (hooks/useStableCallback)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 17414: NitroFileUploadAnnouncementPromoSheet ===
+// === Module 17426: NitroFileUploadAnnouncementPromoSheet ===
 
-// Module 17414 (NitroFileUploadAnnouncementPromoSheet)
+// Module 17426 (NitroFileUploadAnnouncementPromoSheet)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,9 +8,9 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

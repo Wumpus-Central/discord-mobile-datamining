@@ -19,9 +19,9 @@ import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4384 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4385 */;
 import ImpersonateStore from "ImpersonateStore" /* 2098 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 import size from "module_2" /* 2 */;
 
 function trackCommunicationDisabled(guildId, tmp10Result) {
@@ -89,7 +89,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "channel", hoistRoleId: "r", iconRoleId: "count", highestRoleId: "alignItems" };
+    return { colorString: null, colorStrings: null, colorRoleId: "category", hoistRoleId: "replace", iconRoleId: "fileFinishedImporting", highestRoleId: "padding" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {

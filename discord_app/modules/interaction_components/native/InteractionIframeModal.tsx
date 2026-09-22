@@ -1,10 +1,10 @@
-// === Module 17808: InteractionIframeModal ===
+// === Module 17820: InteractionIframeModal ===
 
-// Module 17808 (InteractionIframeModal)
+// Module 17820 (InteractionIframeModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17809 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17821 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1349).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -63,8 +63,8 @@ export default function InteractionIframeModal(children) {
       allowPopups: null,
       referrerPolicy: "origin",
       isPipOrGridMode: false,
-      webViewKey: "PX_16",
-      ignoreSilentHardwareSwitch: "fr-CA"
+      webViewKey: "flex",
+      ignoreSilentHardwareSwitch: "en-CC"
     };
     ({ channel_id: obj2.channelId, guild_id: obj2.guildId } = queryParams);
     obj3.activityUrl = iframeModalState.iframeUrl;

@@ -1,7 +1,7 @@
-// === Module 15104: ParentalControlledUserSettingsDefinitions ===
+// === Module 15111: ParentalControlledUserSettingsDefinitions ===
 
-// Module 15104 (ParentalControlledUserSettingsDefinitions)
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7782 */;
+// Module 15111 (ParentalControlledUserSettingsDefinitions)
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7785 */;
 
 const require = fn;
 const size = fn(2);

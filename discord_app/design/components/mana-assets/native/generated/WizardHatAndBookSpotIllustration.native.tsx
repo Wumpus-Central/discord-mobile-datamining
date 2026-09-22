@@ -1,9 +1,9 @@
-// === Module 6818: WizardHatAndBookSpotIllustration ===
+// === Module 6820: WizardHatAndBookSpotIllustration ===
 
-// Module 6818 (WizardHatAndBookSpotIllustration)
+// Module 6820 (WizardHatAndBookSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef6819 from "module_6819" /* 6819 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef6821 from "module_6821" /* 6821 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WizardHatAndBookSpotIllustration = function WizardHatAndBookSpotIll
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6819 };
+  const obj2 = { uri: _modDef6821 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,9 +1,9 @@
-// === Module 15887: PawPrintIcon ===
+// === Module 15899: PawPrintIcon ===
 
-// Module 15887 (PawPrintIcon)
+// Module 15899 (PawPrintIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod15888 from "module_15888" /* 15888 */;
+import BaseIconImage from "BaseIconImage" /* 4457 */;
+import _mod15900 from "module_15900" /* 15900 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PawPrintIcon = function PawPrintIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15888, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15900, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

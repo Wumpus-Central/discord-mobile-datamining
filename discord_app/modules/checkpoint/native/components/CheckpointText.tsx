@@ -1,9 +1,9 @@
-// === Module 15977: CheckpointText ===
+// === Module 15989: CheckpointText ===
 
-// Module 15977 (CheckpointText)
+// Module 15989 (CheckpointText)
 import jsxProd from "jsxProd" /* 21 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import CheckpointConstants from "CheckpointConstants" /* 4981 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import CheckpointConstants from "CheckpointConstants" /* 4982 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;

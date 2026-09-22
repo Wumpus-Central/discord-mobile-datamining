@@ -1,6 +1,6 @@
-// === Module 8087: ScheduledMessageActionCreators ===
+// === Module 8090: ScheduledMessageActionCreators ===
 
-// Module 8087 (ScheduledMessageActionCreators)
+// Module 8090 (ScheduledMessageActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -42,7 +42,7 @@ let closure_8 = async function _createScheduledMessage(arg0) {
           closure_131_4 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -160,7 +160,7 @@ let closure_9 = async function _updateScheduledMessage(arg0) {
           closure_131_9 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -470,7 +470,7 @@ let closure_13 = async function _fetchScheduledMessages() {
 };
 const Constants = fn(1074);
 ({ Endpoints: hasOwnProperty, MessageFlags: metroRequire } = Constants);
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
 

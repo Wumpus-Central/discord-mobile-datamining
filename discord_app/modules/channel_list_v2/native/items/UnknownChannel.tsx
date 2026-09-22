@@ -1,13 +1,13 @@
-// === Module 16563: UnknownChannel ===
+// === Module 16574: UnknownChannel ===
 
-// Module 16563 (UnknownChannel)
+// Module 16574 (UnknownChannel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4710 */;
-import useChannelNameDefault from "useChannelName" /* 4909 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11177 */;
-import ChannelItemDefault from "ChannelItem" /* 16455 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4711 */;
+import useChannelNameDefault from "useChannelName" /* 4910 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 11183 */;
+import ChannelItemDefault from "ChannelItem" /* 16466 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,12 +18,12 @@ function handlePress() {
   obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open(obj2);
 }
-const UnreadSetting = fn(4938).UnreadSetting;
+const UnreadSetting = fn(4939).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
-let obj = { container: { marginVertical: fn(10374).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4757);
+let obj = { container: { marginVertical: fn(10380).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj);
-const obj3 = { marginVertical: fn(10374).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+const obj3 = { marginVertical: fn(10380).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 

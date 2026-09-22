@@ -1,10 +1,10 @@
-// === Module 15632: CustomTypingIndicatorAnimationPickerSheet ===
+// === Module 15644: CustomTypingIndicatorAnimationPickerSheet ===
 
-// Module 15632 (CustomTypingIndicatorAnimationPickerSheet)
+// Module 15644 (CustomTypingIndicatorAnimationPickerSheet)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import Stack_Stack from "Stack/Stack" /* 5184 */;
-import Card from "Card" /* 5824 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import Stack_Stack from "Stack/Stack" /* 5185 */;
+import Card from "Card" /* 5826 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -32,7 +32,7 @@ function MotionOptionButton(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, previewRow: null, optionCard: null, optionCardSelected: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.previewRow = { alignSelf: "center", paddingVertical: nativeDefault.space.PX_24 };
@@ -73,7 +73,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
   const obj7 = { config: null, size: 54 };
   const obj8 = { emojis, animation, typingSuggestion: onChange(1380).TypingSuggestion.UNSPECIFIED };
   obj7.config = obj8;
-  obj6.children = closure_6(animation(12234), obj7);
+  obj6.children = closure_6(animation(12238), obj7);
   const items1 = [closure_6(View, obj6), ];
   const obj9 = { spacing: 8, children: null };
   const items2 = [items.slice(0, 2), items.slice(2, 4)];
@@ -90,7 +90,7 @@ export default function CustomTypingIndicatorAnimationPickerSheet(onChange) {
       }
     }, label.label))
   }, index));
-  items1[1] = closure_6(onChange(5184).Stack, obj9);
+  items1[1] = closure_6(onChange(5185).Stack, obj9);
   obj5.children = items1;
-  return closure_7(onChange(7442).ActionSheet, obj5);
+  return closure_7(onChange(7444).ActionSheet, obj5);
 };

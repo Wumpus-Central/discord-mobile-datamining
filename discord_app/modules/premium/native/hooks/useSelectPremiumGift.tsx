@@ -1,6 +1,6 @@
-// === Module 11002: useSelectPremiumGift ===
+// === Module 11008: useSelectPremiumGift ===
 
-// Module 11002 (useSelectPremiumGift)
+// Module 11008 (useSelectPremiumGift)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

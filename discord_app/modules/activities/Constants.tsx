@@ -3,6 +3,7 @@
 // Module 2004 (Constants)
 import Constants from "Constants" /* 1074 */;
 import Server from "Server" /* 1978 */;
+import ActivityApplications from "ActivityApplications" /* 2005 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
@@ -34,7 +35,7 @@ export const WATCH_YOUTUBE_DEV_APP_ID = "880218832743055411";
 export const WATCH_YOUTUBE_QA_APP_ID = "1050941315912835122";
 export const PUTT_PARTY_DEV_APP_ID = "910224161476083792";
 export const PUTT_PARTY_QA_APP_ID = "945748195256979606";
-export const JAM_SPACE_APPLICATION_ID = "1070087967294631976";
+export const JAM_SPACE_APPLICATION_ID = ActivityApplications.JAM_SPACE_APPLICATION_ID;
 export const GARTIC_PHONE_APPLICATION_ID = "1007373802981822582";
 export const GARTIC_PHONE_DEV_APPLICATION_ID = "1067803140071620628";
 export const COLOR_TOGETHER_APPLICATION_ID = "1039835161136746497";

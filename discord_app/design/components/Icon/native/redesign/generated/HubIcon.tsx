@@ -1,9 +1,9 @@
-// === Module 5320: HubIcon ===
+// === Module 5322: HubIcon ===
 
-// Module 5320 (HubIcon)
+// Module 5322 (HubIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod5250 from "module_5250" /* 5250 */;
+import BaseIconImage from "BaseIconImage" /* 4457 */;
+import _mod5252 from "module_5252" /* 5252 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const HubIcon = function HubIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5250, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5252, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

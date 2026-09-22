@@ -1,17 +1,17 @@
-// === Module 17507: FramePanelFocusedView ===
+// === Module 17519: FramePanelFocusedView ===
 
-// Module 17507 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9571 */;
-import FrameViewDefault from "FrameView" /* 16967 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 17486 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17504 */;
+// Module 17519 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9577 */;
+import FrameViewDefault from "FrameView" /* 16979 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 17498 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17516 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9313 */;
+import FramesStore from "FramesStore" /* 9318 */;
 
 require = fn;
-const FramesConstants = fn(9314);
+const FramesConstants = fn(9319);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
-const ActivityPanelModes = fn(9315).ActivityPanelModes;
+const ActivityPanelModes = fn(9321).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelFocusedView.tsx");

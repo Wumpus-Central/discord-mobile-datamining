@@ -1,32 +1,32 @@
-// === Module 16987: VibegrationsPublishNotesSheet ===
+// === Module 16999: VibegrationsPublishNotesSheet ===
 
-// Module 16987 (VibegrationsPublishNotesSheet)
+// Module 16999 (VibegrationsPublishNotesSheet)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5274 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11593 */;
-import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 16988 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5276 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11597 */;
+import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 17000 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 2096 */;
-import GuildStore from "GuildStore" /* 2063 */;
-import RelationshipStore from "RelationshipStore" /* 4405 */;
+import GuildChannelStore from "GuildChannelStore" /* 4394 */;
+import GuildStore from "GuildStore" /* 2064 */;
+import RelationshipStore from "RelationshipStore" /* 4406 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(2096).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_9 = fn(4394).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
-const MessageSendLocation = fn(4749).MessageSendLocation;
+const MessageSendLocation = fn(4750).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_18 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, notesSection: null, statusRow: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -258,8 +258,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + trimmed + tmp34;
                 }
-                const parsed = tmp3(7918).parse(found, combined);
-                const tmp31Result = tmp3(7698);
+                const parsed = tmp3(7921).parse(found, combined);
+                const tmp31Result = tmp3(7701);
                 const obj5 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
@@ -288,10 +288,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = guildId(16988).rememberPatchNotesChannel(closure_129_0, closure_129_17.id);
+              const result = guildId(17000).rememberPatchNotesChannel(closure_129_0, closure_129_17.id);
               closure_129_20();
               dependencyMap = 0;
-              const obj = guildId(16988);
+              const obj = guildId(17000);
             }
           }
           const _Error = Error;

@@ -1,15 +1,15 @@
-// === Module 4576: DismissibleContentUnsafeUtils ===
+// === Module 4577: DismissibleContentUnsafeUtils ===
 
-// Module 4576 (DismissibleContentUnsafeUtils)
+// Module 4577 (DismissibleContentUnsafeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2026 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 2028 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2029 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4598 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2027 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 2029 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2030 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4599 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
 
 const require = globalThis.__r;
 
@@ -159,7 +159,7 @@ let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0) {
           closure_130_1 = obj6;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -211,7 +211,7 @@ let closure_8 = async function _UNSAFE_markSingleUseGuildDismissibleContentAsDis
     obj6 = {};
   }
   closure_131_2 = obj6;
-  return "PX_16";
+  return "flex";
 };
 let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentAsDismissed(arg0) {
   if (c6 === 2) {

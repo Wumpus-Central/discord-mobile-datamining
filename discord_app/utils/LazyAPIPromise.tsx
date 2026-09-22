@@ -1,6 +1,6 @@
-// === Module 9786: LazyAPIPromise ===
+// === Module 9792: LazyAPIPromise ===
 
-// Module 9786 (LazyAPIPromise)
+// Module 9792 (LazyAPIPromise)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

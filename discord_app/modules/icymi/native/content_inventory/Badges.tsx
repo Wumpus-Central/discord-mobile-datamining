@@ -1,20 +1,20 @@
-// === Module 13301: Badges ===
+// === Module 13306: Badges ===
 
-// Module 13301 (Badges)
+// Module 13306 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import utils from "utils" /* 8404 */;
-import TrophyIcon from "TrophyIcon" /* 8991 */;
-import GameControllerIcon from "GameControllerIcon" /* 9348 */;
-import FireIcon from "FireIcon" /* 10025 */;
-import RetryIcon from "RetryIcon" /* 10437 */;
-import TimerIcon from "TimerIcon" /* 11856 */;
-import NewUserIcon from "NewUserIcon" /* 13302 */;
-import FlashIcon from "FlashIcon" /* 13304 */;
-import TrendingType from "TrendingType" /* 13306 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import utils from "utils" /* 8408 */;
+import TrophyIcon from "TrophyIcon" /* 8996 */;
+import GameControllerIcon from "GameControllerIcon" /* 9354 */;
+import FireIcon from "FireIcon" /* 10031 */;
+import RetryIcon from "RetryIcon" /* 10443 */;
+import TimerIcon from "TimerIcon" /* 11860 */;
+import NewUserIcon from "NewUserIcon" /* 13307 */;
+import FlashIcon from "FlashIcon" /* 13309 */;
+import TrendingType from "TrendingType" /* 13311 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2109 */;
 
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 let obj = { overlay: { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY }, "user-profile": null };
 let obj2 = { text: "content-inventory-overlay-text-secondary", icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;

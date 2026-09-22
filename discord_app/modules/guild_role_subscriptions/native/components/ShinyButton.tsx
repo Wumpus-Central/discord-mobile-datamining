@@ -1,15 +1,15 @@
-// === Module 10559: ShinyButton ===
+// === Module 10565: ShinyButton ===
 
-// Module 10559 (ShinyButton)
+// Module 10565 (ShinyButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import BaseTextButton from "BaseTextButton" /* 5187 */;
-import _modDef10560 from "module_10560" /* 10560 */;
+import BaseTextButton from "BaseTextButton" /* 5188 */;
+import _modDef10566 from "module_10566" /* 10566 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { container: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT }, sparkleIcon: null, disabled: null };
 const obj3 = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT };
 obj2.sparkleIcon = { marginRight: 4, tintColor: nativeDefault.colors.WHITE };
@@ -32,14 +32,14 @@ export default function ShinyButton(style) {
   obj.pillStyle = items;
   let tmp3Result;
   if (!loading) {
-    const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10560, style: null };
+    const obj2 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10566, style: null };
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
       disabled = tmp2.disabled;
     }
     items1[1] = disabled;
     obj2.style = items1;
-    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10560, style: null });
+    tmp3Result = jsx(native.Icon, { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef10566, style: null });
   }
   obj.icon = tmp3Result;
   const merged1 = Object.assign(merged);

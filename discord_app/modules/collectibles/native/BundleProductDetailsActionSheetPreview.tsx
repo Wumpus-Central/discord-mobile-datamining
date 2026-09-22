@@ -1,12 +1,13 @@
-// === Module 13442: BundleProductDetailsActionSheetPreview ===
+// === Module 13448: BundleProductDetailsActionSheetPreview ===
 
-// Module 13442 (BundleProductDetailsActionSheetPreview)
+// Module 13448 (BundleProductDetailsActionSheetPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6897 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7796 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 13444 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6899 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7799 */;
+import useShopProductItems from "useShopProductItems" /* 8444 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13450 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -17,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { previewContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, bundleThumbnail: null, selectedRing: null, bundleThumbnailRow: null, bundleContainer: null, bundleInfoContainer: null };
 let size = { width: 56, height: 56, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, overflow: "hidden" };
 obj2.bundleThumbnail = size;
@@ -112,32 +113,36 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   [num, tmp3] = React5(0);
   const tmp2 = _slicedToArray(React5(0), 2);
   ({ items, bundledProducts } = product);
-  if (product.skuId !== tmp4[0]) {
-    tmp5(product.skuId);
+  [tmp5, tmp6] = React5(product.skuId);
+  const tmp4 = _slicedToArray(React5(product.skuId), 2);
+  const shopProductItems = useShopProductItems.useShopProductItems(product);
+  ({ firstAvatarDecoration, firstProfileFrame, firstProfileEffect } = shopProductItems);
+  if (product.skuId !== tmp5) {
+    tmp6(product.skuId);
     tmp3(0);
   }
-  closure_1 = tmp8;
+  closure_1 = tmp12;
   const items1 = [items[num], onActiveItemChange];
   hasOwnProperty(() => {
     if (onActiveItemChange != null) {
       tmp(closure_1);
     }
   }, items1);
-  let tmp10;
+  let tmp14;
   if (bundledProducts != null) {
-    tmp10 = bundledProducts[num];
+    tmp14 = bundledProducts[num];
   }
   let name;
-  if (tmp10 != null) {
-    name = tmp10.name;
+  if (tmp14 != null) {
+    name = tmp14.name;
   }
   if (name == null) {
-    name = tmp8.skuId;
+    name = tmp12.skuId;
   }
-  tmp4 = _slicedToArray(React5(product.skuId), 2);
-  const collectibleTypeLabel = CollectiblesUtils.getCollectibleTypeLabel(tmp8.type);
+  const collectibleTypeLabel = CollectiblesUtils.getCollectibleTypeLabel(tmp12.type);
   const items2 = [items[num]];
   const obj2 = { style: tmp.previewContainer, children: null };
+  const tmp7Result = CollectiblesUtils;
   const items3 = [
     closure_1_12(IndividualProductPreview.IndividualProductPreview, {
       product: timestampProducer(() => {
@@ -147,6 +152,9 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
         return obj;
       }, items2),
       width,
+      avatarDecorationOverride: firstAvatarDecoration,
+      profileFrameOverride: firstProfileFrame,
+      profileEffectOverride: firstProfileEffect,
       handlePreviewPress,
       onTrackPress
     }),
@@ -164,14 +172,14 @@ export default function BundleProductDetailsActionSheetPreview(arg0) {
   const obj8 = { style: tmp.bundleInfoContainer, children: null };
   const items6 = [closure_1_12(closure_16, { items, bundledProducts, activeIndex: num, onSelect: tmp3, onTrackPress }), ];
   const items7 = [name, ];
-  let tmp18Result = null != collectibleTypeLabel;
-  if (tmp18Result) {
+  let tmp20Result = null != collectibleTypeLabel;
+  if (tmp20Result) {
     const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
     obj9.children = " - " + collectibleTypeLabel;
-    tmp18Result = closure_1_12(Text_Text.Text, obj9);
+    tmp20Result = closure_1_12(Text_Text.Text, obj9);
   }
-  items7[1] = tmp18Result;
+  items7[1] = tmp20Result;
   items6[1] = map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items7 });
   obj8.children = items6;
   items5[1] = map1(closure_1_10, obj8);

@@ -1,10 +1,10 @@
-// === Module 12542: MemberActionUtils ===
+// === Module 12546: MemberActionUtils ===
 
-// Module 12542 (MemberActionUtils)
-import useIsNewMemberDefault from "useIsNewMember" /* 7468 */;
+// Module 12546 (MemberActionUtils)
+import useIsNewMemberDefault from "useIsNewMember" /* 7470 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4943 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4944 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4944 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4945 */;
 
 const require = globalThis.__r;
 

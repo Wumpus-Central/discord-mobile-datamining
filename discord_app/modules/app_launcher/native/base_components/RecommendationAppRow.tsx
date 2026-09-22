@@ -1,8 +1,8 @@
-// === Module 12346: RecommendationAppRow ===
+// === Module 12350: RecommendationAppRow ===
 
-// Module 12346 (RecommendationAppRow)
+// Module 12350 (RecommendationAppRow)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import AppLauncherHomeScreen from "AppLauncherHomeScreen" /* 12336 */;
+import AppLauncherHomeScreen from "AppLauncherHomeScreen" /* 12340 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

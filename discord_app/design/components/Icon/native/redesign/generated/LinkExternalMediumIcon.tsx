@@ -1,9 +1,9 @@
-// === Module 13215: LinkExternalMediumIcon ===
+// === Module 13219: LinkExternalMediumIcon ===
 
-// Module 13215 (LinkExternalMediumIcon)
+// Module 13219 (LinkExternalMediumIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod13216 from "module_13216" /* 13216 */;
+import BaseIconImage from "BaseIconImage" /* 4457 */;
+import _mod13220 from "module_13220" /* 13220 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const LinkExternalMediumIcon = function LinkExternalMediumIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13216, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13220, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

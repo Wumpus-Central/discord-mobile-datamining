@@ -1,9 +1,9 @@
-// === Module 13520: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 13528: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 13520 (useEmbeddedActivityParticipantAvatarUris)
+// Module 13528 (useEmbeddedActivityParticipantAvatarUris)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

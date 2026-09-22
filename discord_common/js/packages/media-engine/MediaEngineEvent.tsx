@@ -1,6 +1,6 @@
-// === Module 4884: MediaEngineEvent ===
+// === Module 4885: MediaEngineEvent ===
 
-// Module 4884 (MediaEngineEvent)
+// Module 4885 (MediaEngineEvent)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaEngineEvent.tsx");

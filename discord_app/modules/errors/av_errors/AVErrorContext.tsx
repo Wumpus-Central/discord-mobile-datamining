@@ -1,12 +1,12 @@
-// === Module 18292: AVErrorContext ===
+// === Module 18305: AVErrorContext ===
 
-// Module 18292 (AVErrorContext)
-import StreamKeyUtils from "StreamKeyUtils" /* 4808 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4811 */;
+// Module 18305 (AVErrorContext)
+import StreamKeyUtils from "StreamKeyUtils" /* 4809 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4812 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4795 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4780 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4796 */;
 
 require = fn;
 const size = fn(2);

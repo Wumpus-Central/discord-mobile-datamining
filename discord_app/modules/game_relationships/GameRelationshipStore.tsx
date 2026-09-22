@@ -1,9 +1,9 @@
-// === Module 7894: GameRelationshipStore ===
+// === Module 7897: GameRelationshipStore ===
 
-// Module 7894 (GameRelationshipStore)
+// Module 7897 (GameRelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import RelationshipStore from "RelationshipStore" /* 4405 */;
+import RelationshipStore from "RelationshipStore" /* 4406 */;
 
 function recountRelationshipTypes() {
   c0 = 0;

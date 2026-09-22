@@ -1,6 +1,6 @@
-// === Module 11578: parseReactionPermissions ===
+// === Module 11582: parseReactionPermissions ===
 
-// Module 11578 (parseReactionPermissions)
+// Module 11582 (parseReactionPermissions)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");

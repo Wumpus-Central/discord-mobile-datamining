@@ -1,51 +1,51 @@
-// === Module 17674: VoicePanelVoiceControlsButtons ===
+// === Module 17686: VoicePanelVoiceControlsButtons ===
 
-// Module 17674 (VoicePanelVoiceControlsButtons)
+// Module 17686 (VoicePanelVoiceControlsButtons)
 import initialize from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4957 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5109 */;
-import TableRow from "TableRow" /* 5822 */;
-import TableRowIcon from "TableRowIcon" /* 5828 */;
-import TableRowArrow from "TableRowArrow" /* 5829 */;
-import TableRowGroup from "TableRowGroup" /* 5904 */;
-import TableSwitchRow from "TableSwitchRow" /* 7445 */;
-import _modDef8905 from "module_8905" /* 8905 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9576 */;
-import CallsUtils from "CallsUtils" /* 9904 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9911 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 9934 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9943 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 10041 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 10235 */;
-import VolumeSliderDefault from "VolumeSlider" /* 10243 */;
-import _modDef10258 from "module_10258" /* 10258 */;
-import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10274 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10289 */;
-import _modDef11636 from "module_11636" /* 11636 */;
-import SoundboardIcon from "SoundboardIcon" /* 12782 */;
-import useInviteMembersCallback from "useInviteMembersCallback" /* 17520 */;
-import useCanInviteMembers from "useCanInviteMembers" /* 17566 */;
-import _modDef17580 from "module_17580" /* 17580 */;
-import _modDef17581 from "module_17581" /* 17581 */;
-import useSoundboardConfigDefault from "useSoundboardConfig" /* 17663 */;
-import useHideSelfVideoDefault from "useHideSelfVideo" /* 17677 */;
-import ChannelCallUtils from "ChannelCallUtils" /* 17678 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4958 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5110 */;
+import TableRow from "TableRow" /* 5824 */;
+import TableRowIcon from "TableRowIcon" /* 5830 */;
+import TableRowArrow from "TableRowArrow" /* 5831 */;
+import TableRowGroup from "TableRowGroup" /* 5906 */;
+import TableSwitchRow from "TableSwitchRow" /* 7447 */;
+import _modDef8910 from "module_8910" /* 8910 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9582 */;
+import CallsUtils from "CallsUtils" /* 9910 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9917 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9940 */;
+import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9949 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 10047 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 10241 */;
+import VolumeSliderDefault from "VolumeSlider" /* 10249 */;
+import _modDef10264 from "module_10264" /* 10264 */;
+import useMuteAwareLocalVolumeDefault from "useMuteAwareLocalVolume" /* 10280 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10295 */;
+import _modDef11640 from "module_11640" /* 11640 */;
+import SoundboardIcon from "SoundboardIcon" /* 12786 */;
+import useInviteMembersCallback from "useInviteMembersCallback" /* 17532 */;
+import useCanInviteMembers from "useCanInviteMembers" /* 17577 */;
+import _modDef17591 from "module_17591" /* 17591 */;
+import _modDef17592 from "module_17592" /* 17592 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 17675 */;
+import useHideSelfVideoDefault from "useHideSelfVideo" /* 17689 */;
+import ChannelCallUtils from "ChannelCallUtils" /* 17690 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4772 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4773 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9655 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4778 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9661 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4779 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import VoiceStateStore from "VoiceStateStore" /* 4775 */;
+import VoiceStateStore from "VoiceStateStore" /* 4776 */;
 
 const require = globalThis.__r;
 
@@ -174,8 +174,8 @@ function toggleDeaf() {
 }
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, PlatformTypes: closure_14 } = Constants);
-let closure_15 = fn(17675).SelfStreamAndVideoAlertType;
-const MediaEngineContextTypes = fn(4781).MediaEngineContextTypes;
+let closure_15 = fn(17687).SelfStreamAndVideoAlertType;
+const MediaEngineContextTypes = fn(4782).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControlsButtons.tsx");
@@ -197,7 +197,7 @@ export { GameConsoleAccountButton };
 export const ActivitiesButton = function ActivitiesButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = noop.useContext(dismissPanel(12525)).dismissPanel;
+  dismissPanel = noop.useContext(dismissPanel(12529)).dismissPanel;
   const items = [dismissPanel, openTab];
   const callback = noop.useCallback(() => {
     dismissPanel();
@@ -205,15 +205,15 @@ export const ActivitiesButton = function ActivitiesButton(openTab) {
       closure_1_0({ tab: "app_launcher", source: openTab(dependencyMap[28]).VoicePanelTabAnalyticsSources.VOICE_CONTROLS });
     }, 200);
   }, items);
-  const obj = { onPress: callback, icon: jsx(openTab(5828).TableRowIcon, { IconComponent: openTab(5278).AppsIcon }), label: null };
+  const obj = { onPress: callback, icon: jsx(openTab(5830).TableRowIcon, { IconComponent: openTab(5280).AppsIcon }), label: null };
   const intl = openTab(1115).intl;
   obj.label = intl.string(openTab(1115).t.aeuOoh);
-  return jsx(openTab(5822).TableRow, { onPress: callback, icon: jsx(openTab(5828).TableRowIcon, { IconComponent: openTab(5278).AppsIcon }), label: null });
+  return jsx(openTab(5824).TableRow, { onPress: callback, icon: jsx(openTab(5830).TableRowIcon, { IconComponent: openTab(5280).AppsIcon }), label: null });
 };
 export const ChatButton = function ChatButton(openTab) {
   openTab = openTab.openTab;
   let dismissPanel;
-  dismissPanel = noop.useContext(dismissPanel(12525)).dismissPanel;
+  dismissPanel = noop.useContext(dismissPanel(12529)).dismissPanel;
   const items = [dismissPanel, openTab];
   const callback = noop.useCallback(() => {
     dismissPanel();
@@ -221,10 +221,10 @@ export const ChatButton = function ChatButton(openTab) {
       closure_1_0({ tab: "chat", source: openTab(dependencyMap[28]).VoicePanelTabAnalyticsSources.VOICE_CONTROLS });
     }, 200);
   }, items);
-  const obj = { onPress: callback, icon: jsx(openTab(5828).TableRowIcon, { IconComponent: openTab(5289).ChatIcon }), label: null };
+  const obj = { onPress: callback, icon: jsx(openTab(5830).TableRowIcon, { IconComponent: openTab(5291).ChatIcon }), label: null };
   const intl = openTab(1115).intl;
   obj.label = intl.string(openTab(1115).t["5KxXrK"]);
-  return jsx(openTab(5822).TableRow, { onPress: callback, icon: jsx(openTab(5828).TableRowIcon, { IconComponent: openTab(5289).ChatIcon }), label: null });
+  return jsx(openTab(5824).TableRow, { onPress: callback, icon: jsx(openTab(5830).TableRowIcon, { IconComponent: openTab(5291).ChatIcon }), label: null });
 };
 export const SoundboardButton = function SoundboardButton(channel) {
   let tmp8 = null;
@@ -243,7 +243,7 @@ export const SoundboardButton = function SoundboardButton(channel) {
 };
 export const ScreenshareButton = function ScreenshareButton(channel) {
   let isActive;
-  const tmp = isActive(10209)(channel.channel);
+  const tmp = isActive(10215)(channel.channel);
   const onPress = tmp.onPress;
   isActive = tmp.isActive;
   const items = [isActive, onPress];
@@ -252,7 +252,7 @@ export const ScreenshareButton = function ScreenshareButton(channel) {
     AnalyticsUtilsDefault.track(constants.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, { source: "voice controls", was_active: isActive });
     onPress();
   }, items);
-  return jsx(onPress(5822).TableRow, { disabled: !isFeatureEnabled, onPress: callback, icon: jsx(onPress(5828).TableRowIcon, { source: imgSource }), label: text });
+  return jsx(onPress(5824).TableRow, { disabled: !isFeatureEnabled, onPress: callback, icon: jsx(onPress(5830).TableRowIcon, { source: imgSource }), label: text });
 };
 export const StreamVolumeItem = function StreamVolumeItem() {
   const items = [ApplicationStreamingStore, AuthenticationStore];
@@ -297,7 +297,7 @@ export const DeafenSwitch = function DeafenSwitch() {
   const items = [MediaEngineStore];
   const stateFromStores = initialize.useStateFromStores(items, () => selfDeaf.isSelfDeaf());
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef17581 });
+  obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: HeadphonesSlashIcon.HeadphonesSlashIcon, source: _modDef17592 });
   const intl = util.intl;
   obj2.accessibilityHint = intl.string(util.t.wjcRFX);
   obj2.value = stateFromStores;
@@ -341,8 +341,8 @@ export const InviteButton = function InviteButton(channel) {
       tmp8 = null;
       if (channel.connected) {
         const obj2 = { onPress: tmp7, icon: null, label: null, trailing: null };
-        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef10258 };
-        obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef10258 });
+        const obj3 = { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef10264 };
+        obj2.icon = jsx(TableRowIcon.TableRowIcon, { IconComponent: GroupPlusIcon.GroupPlusIcon, source: _modDef10264 });
         const intl = util.intl;
         obj2.label = intl.string(util.t["f1+QIK"]);
         obj2.trailing = jsx(TableRowArrow.TableRowArrow, {});
@@ -362,7 +362,7 @@ export const HideNonVideoParticipants = function HideNonVideoParticipants(channe
   }, items1);
   const obj2 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
   const obj = channelId(504);
-  obj2.icon = jsx(channelId(5828).TableRowIcon, { IconComponent: channelId(10366).VideoIcon, source: stateFromStores(10208) });
+  obj2.icon = jsx(channelId(5830).TableRowIcon, { IconComponent: channelId(10372).VideoIcon, source: stateFromStores(10214) });
   const intl = channelId(1115).intl;
   obj2.accessibilityHint = intl.string(channelId(1115).t.ZMTRyc);
   obj2.value = stateFromStores;
@@ -371,7 +371,7 @@ export const HideNonVideoParticipants = function HideNonVideoParticipants(channe
   obj2.label = intl2.string(channelId(1115).t.ZMTRyc);
   const intl3 = channelId(1115).intl;
   obj2.subLabel = intl3.string(channelId(1115).t.MlpCFS);
-  return jsx(channelId(7445).TableSwitchRow, { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null });
+  return jsx(channelId(7447).TableSwitchRow, { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null });
 };
 export const HideSelfVideo = function HideSelfVideo() {
   const tmp3 = _slicedToArray(useHideSelfVideoDefault(AuthenticationStore.getId()), 3);
@@ -382,14 +382,14 @@ export const HideSelfVideo = function HideSelfVideo() {
   let tmp6 = null;
   if (tmp3[0]) {
     let obj2 = { icon: null, value: null, onValueChange: null, label: null };
-    const obj3 = { IconComponent: tmp5(9491).UserSquareIcon };
-    obj2.icon = jsx(tmp5(5828).TableRowIcon, { IconComponent: tmp5(9491).UserSquareIcon });
+    const obj3 = { IconComponent: tmp5(9497).UserSquareIcon };
+    obj2.icon = jsx(tmp5(5830).TableRowIcon, { IconComponent: tmp5(9497).UserSquareIcon });
     obj2.value = !tmp4;
     obj2.onValueChange = function onValueChange() {
       if (!paths) {
         if (!VIDEO) {
           VIDEO = constants.VIDEO;
-          const f121823 = () => f121823(!VIDEO);
+          const f121922 = () => f121922(!VIDEO);
           const obj2 = {
             importer() {
                   return VIDEO(paths[16])(paths[15], paths.paths).then((result) => {
@@ -412,12 +412,12 @@ export const HideSelfVideo = function HideSelfVideo() {
     };
     const intl = tmp5(1115).intl;
     obj2.label = intl.string(tmp5(1115).t.MH8ESU);
-    tmp6 = jsx(tmp5(7445).TableSwitchRow, { icon: null, value: null, onValueChange: null, label: null });
+    tmp6 = jsx(tmp5(7447).TableSwitchRow, { icon: null, value: null, onValueChange: null, label: null });
   }
   return tmp6;
 };
 export const LeaveActivitiesButton = function LeaveActivitiesButton() {
-  const obj = { icon: jsx(TableRowIcon.TableRowIcon, { source: _modDef11636 }), label: null, onPress: null };
+  const obj = { icon: jsx(TableRowIcon.TableRowIcon, { source: _modDef11640 }), label: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["R/FK4A"]);
   obj.onPress = function onPress() {
@@ -434,7 +434,7 @@ export const LeaveActivitiesButton = function LeaveActivitiesButton() {
     obj2.applicationId = applicationId;
     EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
   };
-  return jsx(TableRow.TableRow, { icon: jsx(TableRowIcon.TableRowIcon, { source: _modDef11636 }), label: null, onPress: null });
+  return jsx(TableRow.TableRow, { icon: jsx(TableRowIcon.TableRowIcon, { source: _modDef11640 }), label: null, onPress: null });
 };
 export const ShareActivityLogsButton = function ShareActivityLogsButton() {
   const shareActivityLogsResult = ChannelCallUtils.shareActivityLogs();
@@ -451,7 +451,7 @@ export const ToggleShowActivitiesDebugOverlay = function ToggleShowActivitiesDeb
   const items = [ChannelCallLifecycleStore];
   const stateFromStores = initialize.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const obj2 = { icon: null, value: null, onValueChange: null, label: null };
-  obj2.icon = jsx(TableRowIcon.TableRowIcon, { source: _modDef8905 });
+  obj2.icon = jsx(TableRowIcon.TableRowIcon, { source: _modDef8910 });
   obj2.value = stateFromStores;
   obj2.onValueChange = function onValueChange(visible) {
     DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY", visible });
@@ -466,13 +466,13 @@ export const VoiceSettingsButton = function VoiceSettingsButton(guildId) {
   const callback = noop.useCallback(() => {
     const result = ChannelCallConnectingScreen.showVoiceSettingsActionSheet(guildId);
   }, items);
-  const obj = { onPress: callback, icon: jsx(guildId(5828).TableRowIcon, { IconComponent: guildId(7622).SettingsIcon, source: _modDef17580 }), label: null, subLabel: null, trailing: null };
+  const obj = { onPress: callback, icon: jsx(guildId(5830).TableRowIcon, { IconComponent: guildId(7625).SettingsIcon, source: _modDef17591 }), label: null, subLabel: null, trailing: null };
   const intl = guildId(1115).intl;
   obj.label = intl.string(guildId(1115).t.NiTd0e);
   const intl2 = guildId(1115).intl;
   obj.subLabel = intl2.string(guildId(1115).t["16SG+O"]);
-  obj.trailing = jsx(guildId(5829).TableRowArrow, {});
-  return jsx(guildId(5822).TableRow, { onPress: callback, icon: jsx(guildId(5828).TableRowIcon, { IconComponent: guildId(7622).SettingsIcon, source: _modDef17580 }), label: null, subLabel: null, trailing: null });
+  obj.trailing = jsx(guildId(5831).TableRowArrow, {});
+  return jsx(guildId(5824).TableRow, { onPress: callback, icon: jsx(guildId(5830).TableRowIcon, { IconComponent: guildId(7625).SettingsIcon, source: _modDef17591 }), label: null, subLabel: null, trailing: null });
 };
 export const ReportStreamIssueButton = function ReportStreamIssueButton(stream) {
   const reportStreamIssueResult = ChannelCallUtils.reportStreamIssue(stream.stream);

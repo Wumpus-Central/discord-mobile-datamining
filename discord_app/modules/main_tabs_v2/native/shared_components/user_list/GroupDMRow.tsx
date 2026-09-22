@@ -1,17 +1,17 @@
-// === Module 11173: GroupDMRow ===
+// === Module 11179: GroupDMRow ===
 
-// Module 11173 (GroupDMRow)
+// Module 11179 (GroupDMRow)
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import useChannelNameDefault from "useChannelName" /* 4909 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5821 */;
-import TableRow from "TableRow" /* 5822 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 11174 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 11175 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import useChannelNameDefault from "useChannelName" /* 4910 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5823 */;
+import TableRow from "TableRow" /* 5824 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 11180 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 11181 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UserRowModes = fn(11122).UserRowModes;
+const UserRowModes = fn(11128).UserRowModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");

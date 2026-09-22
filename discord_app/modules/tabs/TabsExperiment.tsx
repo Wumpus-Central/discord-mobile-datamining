@@ -1,6 +1,6 @@
-// === Module 11257: TabsExperiment ===
+// === Module 11263: TabsExperiment ===
 
-// Module 11257 (TabsExperiment)
+// Module 11263 (TabsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

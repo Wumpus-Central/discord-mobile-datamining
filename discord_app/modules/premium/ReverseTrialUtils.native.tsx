@@ -1,6 +1,6 @@
-// === Module 8324: ReverseTrialUtils ===
+// === Module 8328: ReverseTrialUtils ===
 
-// Module 8324 (ReverseTrialUtils)
+// Module 8328 (ReverseTrialUtils)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1372 */;
 

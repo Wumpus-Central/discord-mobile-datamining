@@ -1,6 +1,6 @@
-// === Module 6221: ? ===
+// === Module 6223: ? ===
 
-// Module 6221
+// Module 6223
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ExperimentalMarvelRivalsWidgetAbstractUI-2x.png.js");

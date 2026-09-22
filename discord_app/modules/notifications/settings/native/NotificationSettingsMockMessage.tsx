@@ -1,9 +1,9 @@
-// === Module 10415: NotificationSettingsMockMessage ===
+// === Module 10421: NotificationSettingsMockMessage ===
 
-// Module 10415 (NotificationSettingsMockMessage)
+// Module 10421 (NotificationSettingsMockMessage)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4757 */;
-import timingPresets from "timingPresets" /* 4760 */;
+import timing from "timing" /* 4758 */;
+import timingPresets from "timingPresets" /* 4761 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserNotificationSettings = fn(1074).UserNotificationSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, padding: 16 }, cardContent: { display: "flex", flexDirection: "row" }, cardMessage: { marginLeft: 12, maxWidth: 240 }, overlay: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.overlay = rect;
@@ -28,12 +28,12 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
-  let str = sharedValue(4600).getName(stateFromStores);
+  let str = sharedValue(4601).getName(stateFromStores);
   if (str == null) {
     str = "Roka";
   }
   _require = tmp7;
-  const obj2 = sharedValue(4600);
+  const obj2 = sharedValue(4601);
   let num = 0;
   if (notificationSetting.notificationSetting === UserNotificationSettings.NO_MESSAGES) {
     num = 0.8;
@@ -55,7 +55,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     const obj4 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl = tmp2(1115).intl;
     obj4.children = intl.string(tmp2(1115).t.WYyzI5);
-    let tmp11 = closure_7(tmp2(4752).Text, obj4);
+    let tmp11 = closure_7(tmp2(4753).Text, obj4);
     let tmp12 = closure_7;
   } else {
     const obj5 = { children: null };
@@ -63,11 +63,11 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
     const obj7 = { variant: "text-sm/normal", color: "text-link", children: null };
     const items1 = ["@", str, " "];
     obj7.children = items1;
-    const items2 = [closure_8(tmp2(4752).Text, obj7), ];
+    const items2 = [closure_8(tmp2(4753).Text, obj7), ];
     const intl3 = tmp2(1115).intl;
     items2[1] = intl3.string(tmp2(1115).t.WYyzI5);
     obj6.children = items2;
-    obj5.children = closure_8(tmp2(4752).Text, obj6);
+    obj5.children = closure_8(tmp2(4753).Text, obj6);
     tmp11 = closure_7(View, obj5);
     tmp12 = closure_7;
   }
@@ -83,7 +83,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj9 = { style: tmp.cardContent, children: null };
   const obj10 = { children: null };
   const obj3 = { withTiming: require("timing").withTiming, opacity: sharedValue, timingStandard: require("timingPresets").timingStandard };
-  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(10416), size: require("native").AvatarSizes.LARGE_48 });
+  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(10422), size: require("native").AvatarSizes.LARGE_48 });
   const items4 = [tmp12(View, obj10), ];
   const obj12 = { style: tmp.cardMessage, children: null };
   const obj13 = { variant: "text-sm/semibold", children: null };
@@ -97,7 +97,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj14 = { style: null };
   const items7 = [animatedStyle, tmp.overlay];
   obj14.style = items7;
-  items6[1] = tmp12(sharedValue(4492).View, obj14);
+  items6[1] = tmp12(sharedValue(4493).View, obj14);
   obj8.children = items6;
   return closure_8(View, obj8);
 };

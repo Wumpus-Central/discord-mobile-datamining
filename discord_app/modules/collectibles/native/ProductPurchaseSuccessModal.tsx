@@ -1,21 +1,21 @@
-// === Module 11346: ProductPurchaseSuccessModal ===
+// === Module 11352: ProductPurchaseSuccessModal ===
 
-// Module 11346 (ProductPurchaseSuccessModal)
+// Module 11352 (ProductPurchaseSuccessModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
-import HapticUtils from "HapticUtils" /* 4724 */;
-import timing from "timing" /* 4757 */;
-import spring from "spring" /* 5185 */;
-import _mod5848 from "module_5848" /* 5848 */;
-import XSmallIcon from "XSmallIcon" /* 5897 */;
-import tinycolorDefault from "tinycolor" /* 7794 */;
-import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11345 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
+import HapticUtils from "HapticUtils" /* 4725 */;
+import timing from "timing" /* 4758 */;
+import spring from "spring" /* 5186 */;
+import _mod5850 from "module_5850" /* 5850 */;
+import XSmallIcon from "XSmallIcon" /* 5899 */;
+import tinycolorDefault from "tinycolor" /* 7797 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11351 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4748 */;
+import AccessibilityStore from "AccessibilityStore" /* 4749 */;
 
 const require = globalThis.__r;
 
@@ -43,7 +43,7 @@ function CancelButton(arg0) {
   };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
-  return closure_12(_mod5848.HeaderBackButton, obj);
+  return closure_12(_mod5850.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
@@ -95,10 +95,10 @@ const Constants = fn(1074);
 ({ Orientation: c10, VerticalGradient: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let createStyles = fn(4756);
+let createStyles = fn(4757);
 let obj2 = { closeButtonIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY } };
 let closure_15 = createStyles.createStyles(obj2);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let closure_16 = createStyles.createStyles((arg0) => {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -182,7 +182,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   let callback;
   dependencyMap = undefined;
   const currentUser = require("useCurrentUser").useCurrentUser();
-  const backgroundColors = callback(11347)(product.styles).backgroundColors;
+  const backgroundColors = callback(11353)(product.styles).backgroundColors;
   let tertiary;
   if (backgroundColors != null) {
     tertiary = backgroundColors.tertiary;
@@ -221,7 +221,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   const tmp2Result = require("useToken");
   const avatarDecorationPreviewSizes = require("useAvatarDecorationPreviewSizes").useAvatarDecorationPreviewSizes();
   ({ avatarSize, avatarDecorationSize } = avatarDecorationPreviewSizes);
-  const tmp2Result14 = require("useAvatarDecorationPreviewSizes");
+  const tmp2Result13 = require("useAvatarDecorationPreviewSizes");
   let items1 = [AccessibilityStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let tmp12 = product.type === tmp2(1973).CollectiblesItemType.PROFILE_EFFECT;
@@ -230,10 +230,10 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
   }
   closure_129_0 = stateFromStores;
   closure_129_1 = tmp12;
-  const tmp2Result15 = require("initialize");
+  const tmp2Result14 = require("initialize");
   const sharedValue = require("ReanimatedRexport").useSharedValue(0);
   closure_129_2 = sharedValue;
-  const tmp2Result16 = require("ReanimatedRexport");
+  const tmp2Result15 = require("ReanimatedRexport");
   const sharedValue1 = require("ReanimatedRexport").useSharedValue(0);
   closure_129_3 = sharedValue1;
   const items2 = [sharedValue, stateFromStores, sharedValue1];
@@ -251,7 +251,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     }
     const result1 = _slicedToArray.set(num3);
   }, items2);
-  const tmp2Result17 = require("ReanimatedRexport");
+  const tmp2Result16 = require("ReanimatedRexport");
   const fn = function l() {
     const obj = { opacity: ReanimatedRexport.interpolate(_undefined.get(), [0, 1], [0.1, 1]), transform: null };
     let num = 0;
@@ -266,11 +266,11 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     obj.transform = items1;
     return obj;
   };
-  const tmp2Result18 = require("ReanimatedRexport");
+  const tmp2Result17 = require("ReanimatedRexport");
   fn.__closure = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue, isProfilePreview: tmp12 };
   fn.__workletHash = 15385317790278;
   fn.__initData = __initData;
-  const animatedStyle = tmp2Result18.useAnimatedStyle(fn);
+  const animatedStyle = tmp2Result17.useAnimatedStyle(fn);
   let obj2 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue, isProfilePreview: tmp12 };
   const fn2 = function n() {
     const obj = { opacity: ReanimatedRexport.interpolate(_undefined.get(), [0, 1], [0, 1]), transform: null };
@@ -280,44 +280,42 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     obj.transform = items;
     return obj;
   };
-  const tmp2Result19 = require("ReanimatedRexport");
+  const tmp2Result18 = require("ReanimatedRexport");
   fn2.__closure = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
   fn2.__workletHash = 4517716462039;
   fn2.__initData = __initData2;
-  const animatedStyle1 = tmp2Result19.useAnimatedStyle(fn2);
+  const animatedStyle1 = tmp2Result18.useAnimatedStyle(fn2);
   let obj3 = { interpolate: require("ReanimatedRexport").interpolate, springInput: sharedValue };
   const fn3 = function s() {
     const obj = { opacity: ReanimatedRexport.interpolate(_slicedToArray.get(), [0, 1], [0.5, 0]) };
     return obj;
   };
-  const tmp2Result20 = require("ReanimatedRexport");
+  const tmp2Result19 = require("ReanimatedRexport");
   fn3.__closure = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
   fn3.__workletHash = 6018737312;
   fn3.__initData = __initData3;
-  const animatedStyle2 = tmp2Result20.useAnimatedStyle(fn3);
+  const animatedStyle2 = tmp2Result19.useAnimatedStyle(fn3);
   const obj5 = { interpolate: require("ReanimatedRexport").interpolate, linearInput: sharedValue1 };
   const category = require("useFetchCollectiblesProductCategory").useFetchCollectiblesProductCategory(product.skuId).category;
   if (category != null) {
     const mobileBgUrl = category.mobileBgUrl;
   }
-  const tmp2Result21 = require("useFetchCollectiblesProductCategory");
+  const tmp2Result20 = require("useFetchCollectiblesProductCategory");
   const handleUseNow1 = require("useHandleUseNow").useHandleUseNow({ product, onSuccess, stageCollectibleChangeForEditProfile: stageCollectibleChangeForEditProfile.stageCollectibleChangeForEditProfile });
   const isApplying = handleUseNow1.isApplying;
   ({ handleUseNow, canUseNow, handleEditProfile } = handleUseNow1);
   const avatarSource = currentUser.getAvatarSource(undefined, false, avatarSize);
-  const tmp2Result22 = require("useHandleUseNow");
+  const tmp2Result21 = require("useHandleUseNow");
   const effect2 = noop.useEffect(() => {
     ref(_undefined[28]).lockOrientation(constants.PORTRAIT);
     return () => {
       const result = ref(_undefined[28]).restoreDefaultOrientation();
     };
   }, []);
-  const tmp2Result23 = require("useFetchVirtualCurrencyBalance");
-  const previewCollectibleProduct = require("usePreviewCollectiblesProduct").usePreviewCollectibleProduct(product, true);
-  const tmp2Result24 = require("usePreviewCollectiblesProduct");
+  const tmp2Result22 = require("useFetchVirtualCurrencyBalance");
   const shopProductItems = require("useShopProductItems").useShopProductItems(product);
-  const tmp2Result25 = require("useShopProductItems");
-  [tmp25, c2] = noop.useState();
+  const tmp2Result23 = require("useShopProductItems");
+  [tmp24, c2] = noop.useState();
   const obj6 = { style: tmp6.root, id: product.skuId, children: null };
   if (useCategoryImage) {
     if (null != mobileBgUrl) {
@@ -325,11 +323,11 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const obj8 = { uri: mobileBgUrl };
       obj7.source = obj8;
       obj7.style = tmp6.imageBackground;
-      let tmp29 = closure_12(closure_6, obj7);
+      let tmp28 = closure_12(closure_6, obj7);
+      let tmp29 = closure_12;
       let tmp30 = closure_12;
-      let tmp31 = closure_12;
     }
-    const items3 = [tmp29, , ];
+    const items3 = [tmp28, , ];
     const items4 = [tmp6.main, ];
     let str;
     if (useCategoryImage) {
@@ -342,11 +340,11 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     const obj10 = { style: tmp6.header, children: null };
     const obj11 = { style: tmp6.headerLeading, children: null };
     if (showOrbBalancePill) {
-      const obj12 = { initialRenderedBalance: prop, balance: tmp2Result23.useFetchVirtualCurrencyBalance().balance };
-      showOrbBalancePill = tmp31(tmp2(11358).BalanceWidgetPill, obj12);
+      const obj12 = { initialRenderedBalance: prop, balance: tmp2Result22.useFetchVirtualCurrencyBalance().balance };
+      showOrbBalancePill = tmp30(tmp2(11362).BalanceWidgetPill, obj12);
     }
     obj11.children = showOrbBalancePill;
-    const items5 = [tmp31(closure_8, obj11), ];
+    const items5 = [tmp30(closure_8, obj11), ];
     let toHexStringResult;
     if (backgroundColors != null) {
       const label = backgroundColors.label;
@@ -356,7 +354,7 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       toHexStringResult = token;
     }
     const obj13 = { tintColor: toHexStringResult, onCancel };
-    items5[1] = tmp31(CancelButton, obj13);
+    items5[1] = tmp30(CancelButton, obj13);
     obj10.children = items5;
     const items6 = [closure_13(closure_8, obj10), , ];
     const obj14 = { style: { flex: 1 }, contentContainerStyle: tmp6.body, alwaysBounceVertical: false, children: null };
@@ -365,35 +363,35 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
     obj15.style = items7;
     const type = product.type;
     if (tmp2(1973).CollectiblesItemType.BUNDLE === type) {
-      const obj16 = { style: tmp6.previewBundle, onLayout: tmp26, children: null };
-      let tmp30Result = null != tmp25;
-      if (tmp30Result) {
+      const obj16 = { style: tmp6.previewBundle, onLayout: tmp25, children: null };
+      let tmp29Result = null != tmp24;
+      if (tmp29Result) {
         const obj17 = { deco: null, pfx: null, nameplate: null, previewAssets: null, disableStaticBackground: true, size: "large", targetSize: null };
-        ({ firstAvatarDecoration: obj35.deco, firstProfileEffect: obj35.pfx, firstNameplate: obj35.nameplate } = shopProductItems);
+        ({ firstAvatarDecoration: obj34.deco, firstProfileEffect: obj34.pfx, firstNameplate: obj34.nameplate } = shopProductItems);
         obj17.previewAssets = product.previewAssets;
-        obj17.targetSize = tmp25;
-        tmp30Result = tmp30(tmp4(9078), obj17);
+        obj17.targetSize = tmp24;
+        tmp29Result = tmp29(tmp4(9083), obj17);
       }
-      obj16.children = tmp30Result;
-      let tmp30Result2 = tmp30(closure_8, obj16);
+      obj16.children = tmp29Result;
+      let tmp29Result2 = tmp29(closure_8, obj16);
     } else if (tmp2(1973).CollectiblesItemType.AVATAR_DECORATION === type) {
       const obj18 = { item: _slicedToArray(product.items, 1)[0], size: avatarDecorationSize, avatarSource, animate: !stateFromStores };
-      tmp30Result2 = tmp30(tmp4(9091), obj18);
+      tmp29Result2 = tmp29(tmp4(9096), obj18);
     } else if (tmp2(1973).CollectiblesItemType.PROFILE_EFFECT === type) {
       const obj19 = { user: currentUser, profileEffect: product.items[0] };
-      tmp30Result2 = tmp30(tmp4(11376), obj19);
+      tmp29Result2 = tmp29(tmp4(11380), obj19);
     } else if (tmp2(1973).CollectiblesItemType.PROFILE_FRAME === type) {
       const obj20 = { user: currentUser, profileFrame: product.items[0] };
-      tmp30Result2 = tmp30(tmp4(11485), obj20);
+      tmp29Result2 = tmp29(tmp4(11489), obj20);
     } else {
-      tmp30Result2 = null;
+      tmp29Result2 = null;
       if (tmp2(1973).CollectiblesItemType.NAMEPLATE === type) {
         const obj21 = { user: currentUser, nameplate: product.items[0], animate: true };
-        tmp30Result2 = tmp30(tmp2(11486).NameplatePreview, obj21);
+        tmp29Result2 = tmp29(tmp2(11490).NameplatePreview, obj21);
       }
     }
-    obj15.children = tmp30Result2;
-    const items8 = [tmp31(tmp4(4492).View, obj15), ];
+    obj15.children = tmp29Result2;
+    const items8 = [tmp30(tmp4(4493).View, obj15), ];
     const obj22 = { style: null, children: null };
     const items9 = [tmp6.messages, animatedStyle1];
     obj22.style = items9;
@@ -404,9 +402,9 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl3 = tmp2(1115).intl;
       const obj24 = { itemName: product.name };
       obj23.children = intl3.format(tmp2(1115).t.YNaxMp, obj24);
-      const items10 = [tmp31(tmp2(4752).Text, obj23), ];
+      const items10 = [tmp30(tmp2(4753).Text, obj23), ];
       const obj25 = { variant: "text-md/medium", color: "text-overlay-light", style: tmp6.title, children: null };
-      let result = tmp2(7796).isPremiumCollectiblesProduct(product);
+      let result = tmp2(7799).isPremiumCollectiblesProduct(product);
       const intl4 = tmp2(1115).intl;
       const format = intl4.format;
       const t = tmp2(1115).t;
@@ -419,13 +417,13 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       }
       const obj28 = { children: null };
       obj25.children = formatResult;
-      items10[1] = tmp31(tmp2(4752).Text, obj25);
+      items10[1] = tmp30(tmp2(4753).Text, obj25);
       obj28.children = items10;
       renderMessagesResult = closure_13(closure_14, obj28);
-      const tmp2Result26 = tmp2(7796);
+      const tmp2Result24 = tmp2(7799);
     }
     obj22.children = renderMessagesResult;
-    items8[1] = tmp31(tmp4(4492).View, obj22);
+    items8[1] = tmp30(tmp4(4493).View, obj22);
     obj14.children = items8;
     items6[1] = closure_13(closure_7, obj14);
     const obj29 = { style: tmp6.footer, children: null };
@@ -440,20 +438,20 @@ export default function ProductPurchaseSuccessModal(stageCollectibleChangeForEdi
       const intl = tmp2(1115).intl;
       obj32.text = intl.string(tmp2(1115).t["2p2aYz"]);
     }
-    obj30.children = tmp31(tmp2(5186).Button, obj32);
-    obj29.children = tmp31(closure_8, obj30);
-    items6[2] = tmp31(closure_8, obj29);
+    obj30.children = tmp30(tmp2(5187).Button, obj32);
+    obj29.children = tmp30(closure_8, obj30);
+    items6[2] = tmp30(closure_8, obj29);
     rect.children = items6;
-    items3[1] = closure_13(tmp2(7368).SafeAreaPaddingView, rect);
+    items3[1] = closure_13(tmp2(7370).SafeAreaPaddingView, rect);
     const obj33 = { style: null, pointerEvents: "none" };
     const items11 = [tmp6.curtain, animatedStyle2];
     obj33.style = items11;
-    items3[2] = tmp31(tmp4(4492).View, obj33);
+    items3[2] = tmp30(tmp4(4493).View, obj33);
     obj6.children = items3;
     return closure_13(closure_8, obj6);
   }
-  tmp29 = closure_12(ProductPurchaseGradientBackground, { product });
+  tmp28 = closure_12(ProductPurchaseGradientBackground, { product });
+  tmp29 = closure_12;
   tmp30 = closure_12;
-  tmp31 = closure_12;
-  const tmp24 = _slicedToArray(noop.useState(), 2);
+  const tmp23 = _slicedToArray(noop.useState(), 2);
 };

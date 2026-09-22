@@ -1,15 +1,15 @@
-// === Module 4413: EmojiUtils ===
+// === Module 4414: EmojiUtils ===
 
-// Module 4413 (EmojiUtils)
+// Module 4414 (EmojiUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import ImageUtils from "ImageUtils" /* 1475 */;
 import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4388 */;
-import EmojiTypes from "EmojiTypes" /* 4412 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4414 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5681 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 8025 */;
+import EmojiTypes from "EmojiTypes" /* 4413 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4415 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5683 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 8028 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -131,7 +131,7 @@ let closure_19 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(2045);
+const ChannelRecord = fn(2046);
 ({ isGuildTextChannelType: closure_4, isGuildVocalChannelType: hasOwnProperty } = ChannelRecord);
 const Permissions = fn(1074).Permissions;
 const EmojiConstants = fn(1375);

@@ -1,26 +1,25 @@
-// === Module 2095: SelectedChannelStore ===
+// === Module 2096: SelectedChannelStore ===
 
-// Module 2095 (SelectedChannelStore)
+// Module 2096 (SelectedChannelStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import router_utils from "router_utils" /* 1101 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ChannelConstants from "ChannelConstants" /* 2048 */;
-import ChannelRecord from "ChannelRecord" /* 2045 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4614 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7559 */;
+import GatedChannelStore from "GatedChannelStore" /* 2097 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildChannelStore from "GuildChannelStore" /* 2096 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
+import GuildChannelStore from "GuildChannelStore" /* 4394 */;
+import GuildStore from "GuildStore" /* 2064 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4577 */;
-import Constants from "Constants" /* 1074 */;
-import size from "module_2" /* 2 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4578 */;
 
-const require = globalThis.__r;
-
+require = fn;
 function handleConnectionOpen(sessionId) {
   sessionId = sessionId.sessionId;
   if (null != selectedVoiceChannelId) {
@@ -83,7 +82,7 @@ function handleConnectionOpen(sessionId) {
             channel = channel.getChannel(tmp);
             let tmp4 = null != channel;
             if (tmp4) {
-              tmp4 = closure_1_11(channel.type);
+              tmp4 = closure_1_12(channel.type);
             }
             if (channel != null) {
               const guildId = channel.getGuildId();
@@ -145,32 +144,79 @@ function handleConnectionOpen(sessionId) {
     });
   }
 }
-function navigateAwayFromChannel(id, guild_id) {
+function navigateAwayFromChannel(id, guild_id, id2) {
+  let flag = hasItem;
+  if (hasItem === undefined) {
+    flag = false;
+  }
+  let flag2 = arg4;
+  if (arg4 === undefined) {
+    flag2 = true;
+  }
   set.delete(id);
-  let tmp2 = guild_id;
+  let tmp4 = guild_id;
   if (null == guild_id) {
     const guildId = SelectedGuildStore.getGuildId();
     const _String = String;
-    tmp2 = guild_id;
+    tmp4 = guild_id;
     if (selectedChannelIds[String(undefined, guildId)] === id) {
-      tmp2 = guildId;
+      tmp4 = guildId;
     }
   }
-  const guild = GuildStore.getGuild(tmp2);
-  let flag = false;
+  let tmp9 = null;
+  if (null != GuildStore.getGuild(tmp4)) {
+    tmp9 = tmp4;
+  }
+  let flag3 = false;
   if (selectedVoiceChannelId === id) {
     selectedVoiceChannelId = null;
-    flag = true;
+    flag3 = true;
   }
-  if (flag) {
+  const StringResult = String(tmp9);
+  if (!flag) {
+    id = undefined;
+    if (null != StringResult) {
+      const defaultChannel = GuildChannelStore.getDefaultChannel(StringResult);
+      if (null != defaultChannel) {
+        id = defaultChannel.id;
+      }
+    }
+    let tmp11 = id;
+  } else {
+    tmp11 = id2;
+  }
+  if (selectedChannelIds[StringResult] === id) {
+    selectedChannelIds[StringResult] = tmp11;
+    flag3 = true;
+  }
+  let tmp16 = null != tmp9;
+  if (tmp16) {
+    tmp16 = mostRecentSelectedTextChannelIds[tmp9] === id;
+  }
+  if (tmp16) {
+    delete tmp[tmp2];
+    flag3 = true;
+  }
+  let tmp19 = SelectedGuildStore.getGuildId() === tmp9;
+  if (tmp19) {
+    let tmp20 = flag2;
+    if (tmp20) {
+      tmp20 = NavigationRouteUtils.getSelectedChannelFromRoute() === id;
+    }
+    tmp19 = tmp20;
+  }
+  if (tmp19) {
+    router_utils.replaceWith(__initData4.CHANNEL(tmp4, tmp11));
+  }
+  if (flag3) {
     const Storage = Storage3.Storage;
-    const obj = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
+    const obj2 = { selectedChannelId, selectedVoiceChannelId, lastChannelFollowingDestination, lastConnectedTime, selectedChannelIds, mostRecentSelectedTextChannelIds, knownThreadIds: null };
     const values = _modDef12(selectedChannelIds).values();
-    const obj2 = _modDef12(selectedChannelIds);
+    const obj3 = _modDef12(selectedChannelIds);
     const combined = values.concat(_modDef12.values(mostRecentSelectedTextChannelIds));
     const found = combined.filter(GlobalUtils.isNotNullish);
     const uniqResult = found.uniq();
-    obj.knownThreadIds = found.uniq().filter((item) => {
+    obj2.knownThreadIds = found.uniq().filter((item) => {
       basicChannel = basicChannel.getBasicChannel(item);
       let hasItem = set2.has(item);
       if (!hasItem) {
@@ -182,7 +228,7 @@ function navigateAwayFromChannel(id, guild_id) {
       }
       return hasItem;
     }).value();
-    const result = Storage.set(SelectedChannelStore, obj);
+    const result = Storage.set(SelectedChannelStore, obj2);
     const iter = found.uniq().filter((item) => {
       basicChannel = basicChannel.getBasicChannel(item);
       let hasItem = set2.has(item);
@@ -197,13 +243,79 @@ function navigateAwayFromChannel(id, guild_id) {
     });
   }
 }
-function handleChannelDelete(arg0) {
-  ({ type, channel } = arg0);
-  navigateAwayFromChannel(channel.id, channel.guild_id, channel.parent_id);
+function handleChannelDelete(channel) {
+  channel = channel.channel;
+  navigateAwayFromChannel(channel.id, channel.guild_id, channel.parent_id, "THREAD_DELETE" === channel.type);
 }
-({ isGuildTextChannelType: closure_11, THREAD_CHANNEL_TYPES: closure_12 } = ChannelRecord);
-({ ChannelTypes: closure_20, ME: closure_21, Permissions: closure_22, Routes } = Constants);
-const isGuildHomeChannel = ChannelConstants.isGuildHomeChannel;
+function navigateAwayIfInaccessible(nextResult) {
+  let result = nextResult.isScheduledForDeletion();
+  if (!result) {
+    result = !isAccessibleNonStaticChannelPathDefault(nextResult);
+  }
+  if (result) {
+    const hasItem = set.has(nextResult.type);
+    let channel = null;
+    if (hasItem) {
+      channel = ChannelStore.getChannel(nextResult.parent_id);
+    }
+    let id = null;
+    if (null != channel) {
+      let result1 = channel.isScheduledForDeletion();
+      if (!result1) {
+        result1 = !isAccessibleNonStaticChannelPathDefault(channel);
+      }
+      id = null;
+      if (!result1) {
+        id = channel.id;
+      }
+    }
+    navigateAwayFromChannel(nextResult.id, nextResult.guild_id, id, hasItem, false);
+    return true;
+  } else {
+    return false;
+  }
+}
+function navigateAwayFromSelectedIfInaccessible(guildId) {
+  const channel = ChannelStore.getChannel(selectedChannelIds[String(undefined, guildId)]);
+  let tmp = null != channel;
+  if (tmp) {
+    let result = channel.isScheduledForDeletion();
+    if (!result) {
+      result = !isAccessibleNonStaticChannelPathDefault(channel);
+    }
+    let flag = false;
+    if (result) {
+      const hasItem = set.has(channel.type);
+      let channel1 = null;
+      if (hasItem) {
+        channel1 = ChannelStore.getChannel(channel.parent_id);
+      }
+      let id = null;
+      if (null != channel1) {
+        let result1 = channel1.isScheduledForDeletion();
+        if (!result1) {
+          result1 = !isAccessibleNonStaticChannelPathDefault(channel1);
+        }
+        id = null;
+        if (!result1) {
+          id = channel1.id;
+        }
+      }
+      navigateAwayFromChannel(channel.id, channel.guild_id, id, hasItem, false);
+      flag = true;
+    }
+    tmp = flag;
+  }
+  return tmp;
+}
+function handleGuildRoleChange(guildId) {
+  return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
+}
+const ChannelRecord = fn(2046);
+({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
+const Constants = fn(1074);
+({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
+const isGuildHomeChannel = fn(2049).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -238,7 +350,7 @@ prototype["initialize"] = function initialize() {
     }
     return tmp;
   });
-  this.waitFor(AuthenticationStore, ChannelStore, GuildChannelStore, GuildStore, MediaEngineStore, PermissionStore, SelectedGuildStore);
+  this.waitFor(AuthenticationStore, ChannelStore, GatedChannelStore, GuildChannelStore, GuildStore, MediaEngineStore, PermissionStore, SelectedGuildStore);
 };
 prototype["getChannelId"] = function getChannelId(arg0) {
   let flag = arg1;
@@ -247,7 +359,7 @@ prototype["getChannelId"] = function getChannelId(arg0) {
   }
   let guildId = arg0;
   let tmp2 = null;
-  if (arg0 !== __initData) {
+  if (arg0 !== __initData2) {
     if (guildId == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
@@ -320,17 +432,17 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(selectedChannelId) {
     ({ sessionId: c4, selectedVoiceChannelId: c8 } = selectedChannelId);
-    closure_25 = {};
-    closure_26 = {};
+    closure_27 = {};
+    closure_28 = {};
     selectedChannelId = selectedChannelId.selectedChannelId;
-    ({ selectedChannelId: closure_25[selectedChannelId.selectedGuildId], selectedGuildId } = selectedChannelId);
+    ({ selectedChannelId: closure_27[selectedChannelId.selectedGuildId], selectedGuildId } = selectedChannelId);
     if (null != selectedGuildId) {
       if (null != tmp) {
         if (mostRecentSelectedTextChannelIds[selectedGuildId] !== tmp) {
           let channel = ChannelStore.getChannel(tmp);
           let tmp4 = null != channel;
           if (tmp4) {
-            tmp4 = closure_11(channel.type);
+            tmp4 = closure_12(channel.type);
           }
           if (channel != null) {
             let guildId = channel.getGuildId();
@@ -347,7 +459,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
     }
     c0 = false;
     const guildsArray = GuildStore.getGuildsArray();
-    _modDef12.each(closure_25, (channelId, arg1) => {
+    _modDef12.each(closure_27, (channelId, arg1) => {
       let tmp4 = null != channelId;
       if (tmp4) {
         let hasChannelResult = ChannelStore.hasChannel(channelId);
@@ -391,7 +503,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
               channel = channel.getChannel(tmp);
               let tmp4 = null != channel;
               if (tmp4) {
-                tmp4 = closure_1_11(channel.type);
+                tmp4 = closure_1_12(channel.type);
               }
               if (channel != null) {
                 const guildId = channel.getGuildId();
@@ -450,7 +562,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const channel = ChannelStore.getChannel(channelId);
             let tmp10 = null != channel;
             if (tmp10) {
-              tmp10 = closure_1_11(channel.type);
+              tmp10 = closure_1_12(channel.type);
             }
             if (channel != null) {
               const guildId1 = channel.getGuildId();
@@ -469,7 +581,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
       if (selectedChannelIds[String(undefined, guildId)] !== channelId) {
         const _String2 = String;
         const _String3 = String;
-        closure_26[String(guildId)] = selectedChannelIds[String(undefined, guildId)];
+        closure_28[String(guildId)] = selectedChannelIds[String(undefined, guildId)];
         const _String4 = String;
         selectedChannelIds[String(guildId)] = selectedChannelId;
         const StringResult = String(guildId);
@@ -538,16 +650,26 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
   },
   CHANNEL_DELETE: handleChannelDelete,
   CHANNEL_UPDATES: function handleChannelUpdates(arg0) {
+    set = new Set();
+    let flag = false;
     const iter = arg0.channels[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp = nextResult;
-      if (nextResult.isScheduledForDeletion()) {
-        let hasItem = set.has(tmp.type);
-        let tmp6 = navigateAwayFromChannel(tmp.id, tmp.guild_id, tmp.parent_id);
-      }
+      let tmp3 = nextResult;
+      let tmp5 = navigateAwayIfInaccessible(nextResult) || flag;
+      flag = tmp5;
+      let addResult = set.add(tmp3.guild_id);
       continue;
     }
+    for (const item10029 of set) {
+      let tmp9 = navigateAwayFromSelectedIfInaccessible(item10029);
+      if (!tmp9) {
+        tmp9 = flag;
+      }
+      flag = tmp9;
+      continue;
+    }
+    return flag;
   },
   THREAD_DELETE: handleChannelDelete,
   GUILD_CREATE: function handleGuildCreate(guild) {
@@ -569,7 +691,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const channel = ChannelStore.getChannel(id1);
             let tmp7 = null != channel;
             if (tmp7) {
-              tmp7 = closure_1_11(channel.type);
+              tmp7 = closure_1_12(channel.type);
             }
             if (channel != null) {
               const guildId = channel.getGuildId();
@@ -661,6 +783,15 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
         return hasItem;
       });
     }
+  },
+  GUILD_ROLE_UPDATE: handleGuildRoleChange,
+  GUILD_ROLE_DELETE: handleGuildRoleChange,
+  GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(user) {
+    let tmp = user.user.id === AuthenticationStore.getId();
+    if (tmp) {
+      tmp = navigateAwayFromSelectedIfInaccessible(user.guildId);
+    }
+    return tmp;
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
     channelId = channelId.channelId;
@@ -762,7 +893,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
               }
               return hasItem;
             }).value();
-            const result = Storage.set(closure_1_24, obj);
+            const result = Storage.set(closure_1_26, obj);
           }, 60000);
         }
         const Storage2 = require("Storage").Storage;
@@ -902,16 +1033,17 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
     }
   },
   LOGOUT: function handleLogout() {
-    closure_25 = {};
+    closure_27 = {};
     c6 = null;
     c5 = undefined;
-    closure_27 = {};
+    closure_29 = {};
     closure_7 = {};
     c8 = null;
     const Storage = Storage3.Storage;
     Storage.remove(SelectedChannelStore);
   }
 });
+const size = fn(2);
 let result = size.fileFinishedImporting("stores/SelectedChannelStore.tsx");
 
 export default selectedChannelStore;

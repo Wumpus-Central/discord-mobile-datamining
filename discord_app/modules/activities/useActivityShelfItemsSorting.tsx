@@ -1,6 +1,6 @@
-// === Module 12294: useActivityShelfItemsSorting ===
+// === Module 12298: useActivityShelfItemsSorting ===
 
-// Module 12294 (useActivityShelfItemsSorting)
+// Module 12298 (useActivityShelfItemsSorting)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -52,11 +52,11 @@ export default function useActivityShelfItemsSorting(arg0) {
       let label_type;
       if (embeddedActivityConfig != null) {
         const obj = items(1364);
-        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(9524)(undefined, obj.getOS(obj))];
+        const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(9530)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = closure_1(9524);
+        const tmp5 = closure_1(9530);
       }
       let tmp8 = null != label_type;
       if (tmp8) {

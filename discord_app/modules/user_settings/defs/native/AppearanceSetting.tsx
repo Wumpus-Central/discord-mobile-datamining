@@ -1,13 +1,13 @@
-// === Module 15531: AppearanceSetting ===
+// === Module 15542: AppearanceSetting ===
 
-// Module 15531 (AppearanceSetting)
+// Module 15542 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1228 */;
 import _modDef2712 from "module_2712" /* 2712 */;
-import useThemeDefault from "useTheme" /* 4690 */;
-import useActiveTheme from "useActiveTheme" /* 8118 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4575 */;
+import useThemeDefault from "useTheme" /* 4691 */;
+import useActiveTheme from "useActiveTheme" /* 8121 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4576 */;
 
 require = fn;
 function useAppearanceSettingTrailing() {
@@ -39,14 +39,14 @@ function useAppearanceSettingTrailing() {
   }
 }
 const ActiveThemeType = fn(1185).ActiveThemeType;
-const SettingBuilders = fn(11725);
+const SettingBuilders = fn(11729);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(15532).PaintPaletteIcon,
+  IconComponent: fn(15543).PaintPaletteIcon,
   useTrailing: useAppearanceSettingTrailing,
   screen: {
     route: fn(1074).UserSettingsSections.APPEARANCE,

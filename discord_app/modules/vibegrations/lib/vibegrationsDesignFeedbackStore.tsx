@@ -1,7 +1,7 @@
-// === Module 16935: vibegrationsDesignFeedbackStore ===
+// === Module 16947: vibegrationsDesignFeedbackStore ===
 
-// Module 16935 (vibegrationsDesignFeedbackStore)
-import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16936 */;
+// Module 16947 (vibegrationsDesignFeedbackStore)
+import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16948 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

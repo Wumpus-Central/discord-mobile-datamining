@@ -1,9 +1,9 @@
-// === Module 12497: AppLauncherButtonIcon ===
+// === Module 12501: AppLauncherButtonIcon ===
 
-// Module 12497 (AppLauncherButtonIcon)
+// Module 12501 (AppLauncherButtonIcon)
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
-import AppsIcon from "AppsIcon" /* 5278 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 11216 */;
+import AppsIcon from "AppsIcon" /* 5280 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 11222 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

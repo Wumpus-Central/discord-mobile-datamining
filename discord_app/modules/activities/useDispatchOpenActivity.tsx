@@ -1,6 +1,6 @@
-// === Module 9729: useDispatchOpenActivity ===
+// === Module 9735: useDispatchOpenActivity ===
 
-// Module 9729 (useDispatchOpenActivity)
+// Module 9735 (useDispatchOpenActivity)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
 

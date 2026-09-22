@@ -1,10 +1,10 @@
-// === Module 7563: LurkerActionCreators ===
+// === Module 7566: LurkerActionCreators ===
 
-// Module 7563 (LurkerActionCreators)
+// Module 7566 (LurkerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4779 */;
-import LurkingStore from "LurkingStore" /* 4396 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4780 */;
+import LurkingStore from "LurkingStore" /* 4397 */;
 
 const require = fn;
 function stopLurkingAll() {
@@ -149,7 +149,7 @@ let closure_9 = async function _stopLurking() {
     tmp19 = null;
   }
   closure_129_0 = tmp19;
-  return "PX_16";
+  return "flex";
 };
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);

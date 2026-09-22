@@ -1,6 +1,6 @@
-// === Module 16706: YouBarActivityStatusExperiment ===
+// === Module 16718: YouBarActivityStatusExperiment ===
 
-// Module 16706 (YouBarActivityStatusExperiment)
+// Module 16718 (YouBarActivityStatusExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1435 */;
 
 const tmp2 = apex_ApexExperimentDefault({ name: "2026-05-you-bar-activity-status", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

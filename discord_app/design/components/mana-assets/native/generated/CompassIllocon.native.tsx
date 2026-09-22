@@ -1,9 +1,9 @@
-// === Module 6106: CompassIllocon ===
+// === Module 6108: CompassIllocon ===
 
-// Module 6106 (CompassIllocon)
+// Module 6108 (CompassIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef6107 from "module_6107" /* 6107 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef6109 from "module_6109" /* 6109 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const CompassIllocon = function CompassIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6107 };
+  const obj2 = { uri: _modDef6109 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

@@ -1,11 +1,11 @@
-// === Module 8328: VoiceSessionSystemMessage ===
+// === Module 8332: VoiceSessionSystemMessage ===
 
-// Module 8328 (VoiceSessionSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8218 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8220 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8222 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8238 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+// Module 8332 (VoiceSessionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8222 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8224 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8226 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8242 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 
 const require = globalThis.__r;
 

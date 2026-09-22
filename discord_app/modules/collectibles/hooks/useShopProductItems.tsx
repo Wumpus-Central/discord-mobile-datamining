@@ -1,6 +1,6 @@
-// === Module 8440: useShopProductItems ===
+// === Module 8444: useShopProductItems ===
 
-// Module 8440 (useShopProductItems)
+// Module 8444 (useShopProductItems)
 import util from "util" /* 1115 */;
 import noop from "module_19" /* 19 */;
 
@@ -62,7 +62,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
 
 export { ItemsSortingHat };
-export const getProductItems = function getProductItems(arg0) {
+export const getProductItems = function getProductItems(selectedProduct) {
   if (typeof ItemsSortingHat === "function") {
     const obj = Object.create(ItemsSortingHat.prototype);
     obj.itemsByTypes = obj.sortByTypes(tmp);

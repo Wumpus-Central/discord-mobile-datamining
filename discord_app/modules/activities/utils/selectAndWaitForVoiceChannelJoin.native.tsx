@@ -1,8 +1,8 @@
-// === Module 9615: selectAndWaitForVoiceChannelJoin ===
+// === Module 9621: selectAndWaitForVoiceChannelJoin ===
 
-// Module 9615 (selectAndWaitForVoiceChannelJoin)
+// Module 9621 (selectAndWaitForVoiceChannelJoin)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
 
 let closure_5 = async function _selectAndWaitForVoiceChannelJoin(arg0) {
   if (c6 === 2) {
@@ -41,7 +41,7 @@ let closure_5 = async function _selectAndWaitForVoiceChannelJoin(arg0) {
           closure_129_2 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -1,9 +1,9 @@
-// === Module 8547: PauseIcon ===
+// === Module 8551: PauseIcon ===
 
-// Module 8547 (PauseIcon)
+// Module 8551 (PauseIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod8548 from "module_8548" /* 8548 */;
+import BaseIconImage from "BaseIconImage" /* 4457 */;
+import _mod8552 from "module_8552" /* 8552 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const PauseIcon = function PauseIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8548, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8552, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

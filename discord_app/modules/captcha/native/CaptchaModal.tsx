@@ -1,27 +1,27 @@
-// === Module 17705: CaptchaModal ===
+// === Module 17717: CaptchaModal ===
 
-// Module 17705 (CaptchaModal)
+// Module 17717 (CaptchaModal)
 import util from "util" /* 1115 */;
 import Link from "Link" /* 1485 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5082 */;
-import Stack_Stack from "Stack/Stack" /* 5184 */;
-import components_Button_Button from "components/Button/Button" /* 5186 */;
-import native from "native" /* 5909 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7395 */;
-import RegistrationUtils from "RegistrationUtils" /* 16285 */;
-import CaptchaUtilsDefault from "CaptchaUtils" /* 17707 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5083 */;
+import Stack_Stack from "Stack/Stack" /* 5185 */;
+import components_Button_Button from "components/Button/Button" /* 5187 */;
+import native from "native" /* 5911 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7397 */;
+import RegistrationUtils from "RegistrationUtils" /* 16296 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 17719 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(16277).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(16278);
+let closure_6 = fn(16288).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(16289);
 ({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_11 = createStyles.createStyles((arg0) => {
   let num = 8;
   if (arg0) {
@@ -35,7 +35,7 @@ let result = size.fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx
 export default function CaptchaModal(arg0) {
   ({ onCaptchaVerify: require, onReject } = arg0);
   ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
-  const tmp2 = closure_11(onReject(7187)());
+  const tmp2 = closure_11(onReject(7189)());
   const navigation = Link.useNavigation();
   const items = [navigation];
   const memo = noop.useMemo(() => {
@@ -56,7 +56,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  closure_9 = onReject(17706)({ onReject, analyticsType: memo });
+  closure_9 = onReject(17718)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);

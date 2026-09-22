@@ -1,6 +1,6 @@
-// === Module 6089: ? ===
+// === Module 6091: ? ===
 
-// Module 6089
+// Module 6091
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CloverIllocon-2x.png.js");

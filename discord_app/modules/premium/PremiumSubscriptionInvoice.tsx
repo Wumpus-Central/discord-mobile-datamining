@@ -1,10 +1,10 @@
-// === Module 13656: PremiumSubscriptionInvoice ===
+// === Module 13664: PremiumSubscriptionInvoice ===
 
-// Module 13656 (PremiumSubscriptionInvoice)
+// Module 13664 (PremiumSubscriptionInvoice)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import InvoiceRecord from "InvoiceRecord" /* 4423 */;
+import InvoiceRecord from "InvoiceRecord" /* 4424 */;
 
 const require = fn;
 function createSubscriptionInvoicePreview() {
@@ -64,7 +64,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
           closure_129_11 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -201,7 +201,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
           closure_129_12 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -332,7 +332,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -435,7 +435,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
           closure_129_2 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

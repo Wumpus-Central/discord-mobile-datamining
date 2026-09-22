@@ -1,12 +1,12 @@
-// === Module 16684: GuildsBarSeparator ===
+// === Module 16695: GuildsBarSeparator ===
 
-// Module 16684 (GuildsBarSeparator)
+// Module 16695 (GuildsBarSeparator)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4457 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
-import NativeViewDefault from "NativeView" /* 5806 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7318 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16361 */;
+import useToken from "useToken" /* 4458 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
+import NativeViewDefault from "NativeView" /* 5808 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7320 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16372 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ function GuildsBarHomeDrawerSeparator(guildItemSize) {
   return jsx(ReanimatedNativeViewDefault, { style: null });
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_4 = createStyles.createStyles((width) => {
   const obj = { separator: null };
   const size = { height: 1, width, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, transformOrigin: "0% 50%" };

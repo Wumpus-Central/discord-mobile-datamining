@@ -1,13 +1,15 @@
-// === Module 10993: GiftingPromotionUtils ===
+// === Module 10999: GiftingPromotionUtils ===
 
-// Module 10993 (GiftingPromotionUtils)
-import dismissible_content from "dismissible_content" /* 2027 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10998 */;
-import MarketingComponentType from "MarketingComponentType" /* 10999 */;
+// Module 10999 (GiftingPromotionUtils)
+import util from "util" /* 1115 */;
+import dismissible_content from "dismissible_content" /* 2028 */;
+import _modDef2546 from "module_2546" /* 2546 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4577 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 11004 */;
+import MarketingComponentType from "MarketingComponentType" /* 11005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10925 */;
+import PromotionsStore from "PromotionsStore" /* 10931 */;
 
 const require = globalThis.__r;
 
@@ -17,18 +19,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchClaimableGiftingPromotionRewardSkuIds() {
-  const tmp = purchases(hasPreviouslyFetched.useState(), 2);
+  const tmp = hasPreviouslyFetched(fetchPurchasesError.useState(), 2);
   _require = tmp[1];
-  const items = [fetchPurchasesError];
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => fetchPurchasesError.getGiftPromotionRewardSkuIds());
+  const items = [ref];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => ref.getGiftPromotionRewardSkuIds());
   const obj = require("initialize");
   const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   fetchPurchasesError = fetchPurchases.fetchPurchasesError;
-  hasPreviouslyFetched.useRef(false);
+  const obj2 = require("useFetchCollectiblesCategoriesAndPurchases");
   const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
-  const effect = hasPreviouslyFetched.useEffect(() => {
+  const effect = fetchPurchasesError.useEffect(() => {
     if (hasPreviouslyFetched) {
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
@@ -44,6 +46,24 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
     }
   }, items1);
   return tmp[0];
+};
+export const getGiftingPromotionRewardEarnedSubtitle = function getGiftingPromotionRewardEarnedSubtitle(arg0, arr, arg2) {
+  closure_0 = arg2;
+  if (arr != null) {
+    const found = arr.filter((item) => !closure_0.includes(item));
+  }
+  if (arg0.length > 0) {
+    if (null != found) {
+      if (0 === found.length) {
+        const intl2 = util.intl;
+        const obj = { count: arg0.length };
+        let formatToPlainStringResult = intl2.formatToPlainString(_modDef2546.cMHedL, obj);
+      }
+      return formatToPlainStringResult;
+    }
+  }
+  const intl = util.intl;
+  formatToPlainStringResult = intl.string(_modDef2546["/8znyU"]);
 };
 export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   const map = new Map();

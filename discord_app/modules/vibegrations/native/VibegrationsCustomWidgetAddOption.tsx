@@ -1,24 +1,24 @@
-// === Module 13358: VibegrationsCustomWidgetAddOption ===
+// === Module 13363: VibegrationsCustomWidgetAddOption ===
 
-// Module 13358 (VibegrationsCustomWidgetAddOption)
+// Module 13363 (VibegrationsCustomWidgetAddOption)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import Pressables from "Pressables" /* 5339 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7454 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8510 */;
-import MagicWandIcon from "MagicWandIcon" /* 10408 */;
-import VibegrationsCustomWidget from "VibegrationsCustomWidget" /* 13359 */;
-import VibegrationsCustomWidgetSheet from "VibegrationsCustomWidgetSheet" /* 13360 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import Pressables from "Pressables" /* 5341 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7456 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8514 */;
+import MagicWandIcon from "MagicWandIcon" /* 10414 */;
+import VibegrationsCustomWidget from "VibegrationsCustomWidget" /* 13364 */;
+import VibegrationsCustomWidgetSheet from "VibegrationsCustomWidgetSheet" /* 13365 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_16 }, copy: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_16 };
 obj2.copy = { flex: 1, gap: nativeDefault.space.PX_4 };

@@ -1,25 +1,25 @@
-// === Module 11782: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11786: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11782 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11786 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1115 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _modDef3548 from "module_3548" /* 3548 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7471 */;
-import StorefrontUtils from "StorefrontUtils" /* 7476 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8203 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 11060 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11783 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7473 */;
+import StorefrontUtils from "StorefrontUtils" /* 7478 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8207 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 11066 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11787 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 4983 */;
-import SKUStore from "SKUStore" /* 5727 */;
+import ApplicationStore from "ApplicationStore" /* 4984 */;
+import SKUStore from "SKUStore" /* 5729 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const PaymentGateways = fn(1074).PaymentGateways;
-const InviteTypes = fn(7978).InviteTypes;
+const InviteTypes = fn(7981).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 

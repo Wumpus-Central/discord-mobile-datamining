@@ -1,18 +1,18 @@
-// === Module 8008: ArchivedThreadsStore ===
+// === Module 8011: ArchivedThreadsStore ===
 
-// Module 8008 (ArchivedThreadsStore)
+// Module 8011 (ArchivedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 2050 */;
-import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2052 */;
-import ForumUtils from "ForumUtils" /* 7549 */;
-import tracking_Tracking from "tracking/Tracking" /* 8009 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2051 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2053 */;
+import ForumUtils from "ForumUtils" /* 7551 */;
+import tracking_Tracking from "tracking/Tracking" /* 8012 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
-import ReadStateStore from "ReadStateStore" /* 4771 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4397 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
+import ReadStateStore from "ReadStateStore" /* 4772 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4398 */;
 
 require = fn;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {
@@ -106,14 +106,14 @@ function resortListState(value) {
     const tmp7Result = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
     let iter = mapped.reverse();
-  } else if (sortOrder === sortOrder(2050).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(2051).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(2045).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(2046).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;

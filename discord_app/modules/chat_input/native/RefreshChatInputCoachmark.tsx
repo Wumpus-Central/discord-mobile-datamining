@@ -1,16 +1,16 @@
-// === Module 12238: RefreshChatInputCoachmark ===
+// === Module 12242: RefreshChatInputCoachmark ===
 
-// Module 12238 (RefreshChatInputCoachmark)
+// Module 12242 (RefreshChatInputCoachmark)
 import util from "util" /* 1115 */;
-import native from "native" /* 4466 */;
-import useCoachmark from "useCoachmark" /* 11394 */;
+import native from "native" /* 4467 */;
+import useCoachmark from "useCoachmark" /* 11398 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 
@@ -25,7 +25,7 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
   if (disabled.disabled) {
     let items = [];
   } else {
-    items = [tmp(2027).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
+    items = [tmp(2028).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
   const tmp3 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items), 2);
   _require = tmp4;

@@ -1,10 +1,10 @@
-// === Module 13555: ConversationFocusView ===
+// === Module 13563: ConversationFocusView ===
 
-// Module 13555 (ConversationFocusView)
+// Module 13563 (ConversationFocusView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8153 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8167 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8157 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 8171 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { container: { flex: 1, backgroundColor }, pendingContent: { flex: 1, paddingVertical: nativeDefault.space.PX_24, alignItems: "center", gap: nativeDefault.space.PX_32, backgroundColor } };
   return obj;
@@ -38,15 +38,15 @@ export default function ConversationFocusView(channelId) {
       const result = ConversationsAnalytics.trackFocusModeDismissed(obj);
     }
   }, items);
-  const items1 = [channelId, startMessageId];
-  const items2 = [jumpMessageId, startMessageId, onBeforeJumpToMessage];
+  const items1 = [channelId, conversationId, startMessageId];
+  const items2 = [conversationId, jumpMessageId, startMessageId, onBeforeJumpToMessage];
   const callback1 = startMessageId.useCallback(() => {
     if (null != startMessageId) {
-      const result = ConversationNavigatorUtils.closeConversationsAndJumpToMessage(channelId, tmp);
+      const result = ConversationNavigatorUtils.closeConversationsAndJumpToMessage(channelId, tmp, conversationId);
     }
   }, items1);
   const memo = startMessageId.useMemo(() => {
-    const obj = { jumpToChatText: null, jumpTargetId: null, onBeforeJumpToMessage: null };
+    const obj = { jumpToChatText: null, jumpTargetId: null, onBeforeJumpToMessage: null, conversationId: null };
     const intl = util.intl;
     obj.jumpToChatText = intl.string(util.t["bz/ik0"]);
     let tmp = jumpMessageId;
@@ -55,6 +55,7 @@ export default function ConversationFocusView(channelId) {
     }
     obj.jumpTargetId = tmp;
     obj.onBeforeJumpToMessage = onBeforeJumpToMessage;
+    obj.conversationId = conversationId;
     return obj;
   }, items2);
   if (!fullyHydrated) {

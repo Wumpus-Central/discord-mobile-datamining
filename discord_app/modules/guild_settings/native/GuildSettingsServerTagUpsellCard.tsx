@@ -1,14 +1,14 @@
-// === Module 18021: GuildSettingsServerTagUpsellCard ===
+// === Module 18033: GuildSettingsServerTagUpsellCard ===
 
-// Module 18021 (GuildSettingsServerTagUpsellCard)
+// Module 18033 (GuildSettingsServerTagUpsellCard)
 import nativeDefault from "native" /* 576 */;
-import Powerups from "Powerups" /* 4648 */;
-import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12742 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12774 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12777 */;
+import Powerups from "Powerups" /* 4649 */;
+import LinearGradientDefault from "LinearGradient" /* 5199 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12746 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12778 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12781 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4644 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4645 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ const end = { x: 1, y: 0.5 };
 const colors = ["rgba(88, 101, 242, 0.3)", "rgba(22, 26, 138, 0.3)"];
 const colors2 = ["rgba(151, 151, 159, 0.04)", "rgba(151, 151, 159, 0.04)"];
 let c12 = "#29292D";
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { card: { borderRadius: nativeDefault.radii.xl, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: "#29292D", overflow: "hidden", paddingHorizontal: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_20, paddingBottom: nativeDefault.space.PX_24 }, imageContainer: { height: 104, justifyContent: "center" }, textBlock: { alignItems: "center" }, centerText: { textAlign: "center" }, body: { maxWidth: 320 }, backgroundLayer: StyleSheet.absoluteFillObject, powerupImage: { width: "92%" } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -64,24 +64,24 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   const obj10 = { variant: "heading-xl/semibold", color: "text-strong", style: tmp.centerText, children: null };
   const intl = tmp2(1115).intl;
   obj10.children = intl.string(guildId(1115).t["2QmKZ2"]);
-  const items6 = [closure_6(guildId(4752).Text, obj10), ];
+  const items6 = [closure_6(guildId(4753).Text, obj10), ];
   const obj11 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
   const items7 = [, ];
   ({ centerText: arr8[0], body: arr8[1] } = tmp);
   obj11.style = items7;
   const intl2 = tmp2(1115).intl;
   obj11.children = intl2.string(guildId(1115).t.Tg0fDm);
-  items6[1] = closure_6(guildId(4752).Text, obj11);
+  items6[1] = closure_6(guildId(4753).Text, obj11);
   obj9.children = items6;
-  items5[1] = closure_7(guildId(5184).Stack, obj9);
+  items5[1] = closure_7(guildId(5185).Stack, obj9);
   const obj12 = { variant: "primary", size: "lg", text: null, icon: null, iconPosition: "start", onPress: null };
   const intl3 = tmp2(1115).intl;
   obj12.text = intl3.string(guildId(1115).t.kMRDWs);
-  obj12.icon = closure_6(guildId(16557).BoostTier2Icon, { color: "white" });
+  obj12.icon = closure_6(guildId(16568).BoostTier2Icon, { color: "white" });
   obj12.onPress = guildId.onUnlockPress;
-  items5[2] = closure_6(guildId(5186).Button, obj12);
+  items5[2] = closure_6(guildId(5187).Button, obj12);
   obj6.children = items5;
-  items4[3] = closure_7(guildId(5184).Stack, obj6);
+  items4[3] = closure_7(guildId(5185).Stack, obj6);
   obj2.children = items4;
   return closure_7(closure_4, obj2);
 };

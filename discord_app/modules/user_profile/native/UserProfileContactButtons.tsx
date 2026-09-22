@@ -1,17 +1,17 @@
-// === Module 13431: UserProfileContactButtons ===
+// === Module 13436: UserProfileContactButtons ===
 
-// Module 13431 (UserProfileContactButtons)
+// Module 13436 (UserProfileContactButtons)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
-import components_Button_Button from "components/Button/Button" /* 5186 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10003 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11483 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12873 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 13435 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4770 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4960 */;
+import components_Button_Button from "components/Button/Button" /* 5187 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10009 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11487 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12877 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13440 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4405 */;
+import RelationshipStore from "RelationshipStore" /* 4406 */;
 
 require = fn;
 function FlatFriendButton(label) {
@@ -38,19 +38,19 @@ function FriendRequestButton(user) {
   let stateFromStores;
   let userDisplayName;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const trackUserProfileAction = user(8459).useUserProfileAnalyticsContext().trackUserProfileAction;
+  const trackUserProfileAction = user(8463).useUserProfileAnalyticsContext().trackUserProfileAction;
   if (newestAnalyticsLocation == null) {
-    newestAnalyticsLocation = trackUserProfileAction(7407)().newestAnalyticsLocation;
+    newestAnalyticsLocation = trackUserProfileAction(7409)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let obj = user(8459);
+  let obj = user(8463);
   const tmp = trackUserProfileAction;
-  const gameFriendsForUser = user(13356).useGameFriendsForUser(user.id);
-  const tmp3Result = user(13356);
+  const gameFriendsForUser = user(13361).useGameFriendsForUser(user.id);
+  const tmp3Result = user(13361);
   const items = [userDisplayName];
   stateFromStores = user(504).useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
   const tmp3Result2 = user(504);
-  userDisplayName = tmp(4600).useName(user);
+  userDisplayName = tmp(4601).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -59,9 +59,9 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13432).UserClockIcon;
+          let UserPlusIcon = tmp3(13437).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4692).UserPlusIcon;
+          UserPlusIcon = tmp3(4693).UserPlusIcon;
         }
         const intl = tmp3(1115).intl;
         const string = intl.string;
@@ -112,7 +112,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { threeButtonLayout: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, flexGrow: { flex: 1 }, iconButtonGroup: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.iconButtonGroup = { flexDirection: "row", gap: nativeDefault.space.PX_12 };

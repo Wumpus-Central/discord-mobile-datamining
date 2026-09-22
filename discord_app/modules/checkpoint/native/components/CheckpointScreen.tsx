@@ -1,15 +1,15 @@
-// === Module 15976: CheckpointScreen ===
+// === Module 15988: CheckpointScreen ===
 
-// Module 15976 (CheckpointScreen)
+// Module 15988 (CheckpointScreen)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CHECKPOINT_NAV_HEIGHT = fn(4981).CHECKPOINT_NAV_HEIGHT;
+const CHECKPOINT_NAV_HEIGHT = fn(4982).CHECKPOINT_NAV_HEIGHT;
 const jsx = fn(21).jsx;
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_8 = createStyles.createStyles({ container: { height: "100%", width: "100%" }, scroll: { width: "100%" }, scrollContent: { flexGrow: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/components/CheckpointScreen.tsx");
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/checkpoint/native/components/
 export default function CheckpointScreen(children) {
   let insets;
   const tmp = closure_8();
-  insets = insets(7226)().insets;
+  insets = insets(7228)().insets;
   const items = [, , , ];
   ({ bottom: arr[0], left: arr[1], right: arr[2], top: arr[3] } = insets);
   const obj = { style: tmp.container, children: null };

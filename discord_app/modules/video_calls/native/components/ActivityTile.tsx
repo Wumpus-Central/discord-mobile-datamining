@@ -1,15 +1,15 @@
-// === Module 9719: ActivityTile ===
+// === Module 9725: ActivityTile ===
 
-// Module 9719 (ActivityTile)
+// Module 9725 (ActivityTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import native2 from "native" /* 4466 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9635 */;
+import native2 from "native" /* 4467 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9641 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -64,7 +64,7 @@ function ActivityTileInner(participant) {
               const obj4 = { applicationId: stateFromStores.applicationId, activityChannelId: id.id, locationObject: _location.location, analyticsLocations };
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(9637)(obj4), done: false };
+              const obj5 = { value: v1(9643)(obj4), done: false };
               return obj5;
             } else {
               dependencyMap = 3;
@@ -74,8 +74,8 @@ function ActivityTileInner(participant) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const result = tmp2(9722).setOrientationLockState(closure_128_3);
-          const obj = tmp2(9722);
+          const result = tmp2(9728).setOrientationLockState(closure_128_3);
+          const obj = tmp2(9728);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };
@@ -248,7 +248,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const XSMALL = fn(1177).AvatarSizes.XSMALL;
 const androidRippleConfig = fn(1181).getThemedRippleConfig({ foreground: true });
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { pressableOpacity: null, activityPreview: null, activityViewContainer: null, titleText: null, subtitleText: null, overflow: null, buttonWrapper: null, buttonPill: null };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center" };
 obj2.pressableOpacity = size;

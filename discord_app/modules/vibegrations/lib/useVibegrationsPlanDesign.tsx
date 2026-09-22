@@ -1,10 +1,10 @@
-// === Module 17028: useVibegrationsPlanDesign ===
+// === Module 17040: useVibegrationsPlanDesign ===
 
-// Module 17028 (useVibegrationsPlanDesign)
+// Module 17040 (useVibegrationsPlanDesign)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const VibegrationsConnectionStore = fn(13361);
+const VibegrationsConnectionStore = fn(13366);
 ({ getAttachmentUrl: c2, isAttachmentAvailable: c3 } = VibegrationsConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsPlanDesign.tsx");

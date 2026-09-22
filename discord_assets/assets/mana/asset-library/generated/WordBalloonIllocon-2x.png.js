@@ -1,6 +1,6 @@
-// === Module 6821: ? ===
+// === Module 6823: ? ===
 
-// Module 6821
+// Module 6823
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/WordBalloonIllocon-2x.png.js");

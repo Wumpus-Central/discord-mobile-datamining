@@ -1,6 +1,6 @@
-// === Module 5774: SpellcheckUtils ===
+// === Module 5776: SpellcheckUtils ===
 
-// Module 5774 (SpellcheckUtils)
+// Module 5776 (SpellcheckUtils)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
 import DiscordNativeDefault from "DiscordNative" /* 4377 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -151,7 +151,7 @@ let closure_9 = async function _isMisspelled(arg0) {
           closure_130_2 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -233,7 +233,7 @@ let closure_10 = async function _getCorrections(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -309,7 +309,7 @@ let closure_11 = async function _getCachedMisspelling() {
           let cachedMisspelling;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -409,7 +409,7 @@ let closure_12 = async function _replaceWithCorrection(arg0) {
     }
   }
 };
-fn(5775).addPostConnectionCallback;
+fn(5777).addPostConnectionCallback;
 let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isDesktop();
 if (PlatformUtils) {

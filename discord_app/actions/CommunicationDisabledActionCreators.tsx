@@ -1,6 +1,6 @@
-// === Module 12097: CommunicationDisabledActionCreators ===
+// === Module 12101: CommunicationDisabledActionCreators ===
 
-// Module 12097 (CommunicationDisabledActionCreators)
+// Module 12101 (CommunicationDisabledActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const size = fn(2);

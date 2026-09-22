@@ -1,6 +1,6 @@
-// === Module 13310: isOnMetaQuest ===
+// === Module 13315: isOnMetaQuest ===
 
-// Module 13310 (isOnMetaQuest)
+// Module 13315 (isOnMetaQuest)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

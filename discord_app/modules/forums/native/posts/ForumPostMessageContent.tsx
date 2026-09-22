@@ -1,13 +1,13 @@
-// === Module 12276: ForumPostMessageContent ===
+// === Module 12280: ForumPostMessageContent ===
 
-// Module 12276 (ForumPostMessageContent)
-import Text_Text from "Text/Text" /* 4752 */;
-import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 12277 */;
+// Module 12280 (ForumPostMessageContent)
+import Text_Text from "Text/Text" /* 4753 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 12281 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_4 = createStyles.createStyles({ text: { alignSelf: "flex-start" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");

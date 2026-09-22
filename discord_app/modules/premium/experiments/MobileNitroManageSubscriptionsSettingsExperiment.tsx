@@ -1,6 +1,6 @@
-// === Module 13664: MobileNitroManageSubscriptionsSettingsExperiment ===
+// === Module 13672: MobileNitroManageSubscriptionsSettingsExperiment ===
 
-// Module 13664 (MobileNitroManageSubscriptionsSettingsExperiment)
+// Module 13672 (MobileNitroManageSubscriptionsSettingsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

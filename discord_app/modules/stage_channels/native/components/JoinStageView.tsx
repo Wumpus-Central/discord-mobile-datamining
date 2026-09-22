@@ -1,12 +1,12 @@
-// === Module 10198: JoinStageView ===
+// === Module 10204: JoinStageView ===
 
-// Module 10198 (JoinStageView)
+// Module 10204 (JoinStageView)
 import util from "util" /* 1115 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5642 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5648 */;
-import StageChannelUtils from "StageChannelUtils" /* 8671 */;
-import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 9763 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 10154 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5644 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5650 */;
+import StageChannelUtils from "StageChannelUtils" /* 8675 */;
+import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 9769 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 10160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

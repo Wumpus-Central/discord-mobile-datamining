@@ -1,8 +1,8 @@
-// === Module 12518: trackWaveCtaClicked ===
+// === Module 12522: trackWaveCtaClicked ===
 
-// Module 12518 (trackWaveCtaClicked)
+// Module 12522 (trackWaveCtaClicked)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

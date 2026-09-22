@@ -1,8 +1,8 @@
-// === Module 14776: ApplicationSubscriptionsActionCreators ===
+// === Module 14782: ApplicationSubscriptionsActionCreators ===
 
-// Module 14776 (ApplicationSubscriptionsActionCreators)
+// Module 14782 (ApplicationSubscriptionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ApplicationSubscriptionsHttpApiAll from "ApplicationSubscriptionsHttpApi" /* 9605 */;
+import ApplicationSubscriptionsHttpApiAll from "ApplicationSubscriptionsHttpApi" /* 9611 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function transformSubscriptionListingToSku(id) {
@@ -131,7 +131,7 @@ let closure_12 = async function _fetchSubscriptionListingForPlan(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

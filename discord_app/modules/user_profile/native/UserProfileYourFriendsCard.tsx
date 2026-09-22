@@ -1,12 +1,12 @@
-// === Module 17274: UserProfileYourFriendsCard ===
+// === Module 17286: UserProfileYourFriendsCard ===
 
-// Module 17274 (UserProfileYourFriendsCard)
+// Module 17286 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7895 */;
-import RelationshipStore from "RelationshipStore" /* 4405 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7898 */;
+import RelationshipStore from "RelationshipStore" /* 4406 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_11 = Object.freeze({ direction: fn(1177).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_12 = createStyles.createStyles({ facepile: { flexDirection: "row", alignItems: "center" }, avatars: { flexDirection: "row" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
@@ -40,7 +40,7 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
   let obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(10104).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(10110).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
@@ -79,13 +79,13 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
         const items = [{ translateX: 4 * (first.length - 1 - index) }];
         obj2.transform = items;
         obj.style = obj2;
-        const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: 1 };
+        const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null };
         let tmp3;
         if (index < first.length - 1) {
           tmp3 = closure_2_11;
         }
         obj4.cutout = tmp3;
-        obj.children = jsx(closure_0(1177).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: 1 });
+        obj.children = jsx(closure_0(1177).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null });
         return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
       })}</View>
     };
@@ -95,13 +95,13 @@ export default function UserProfileYourFriendsCard(navigateToFriends) {
       const items = [{ translateX: 4 * (first.length - 1 - index) }];
       obj2.transform = items;
       obj.style = obj2;
-      const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: 1 };
+      const obj4 = { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null };
       let tmp3;
       if (index < first.length - 1) {
         tmp3 = closure_2_11;
       }
       obj4.cutout = tmp3;
-      obj.children = jsx(closure_0(1177).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: 1 });
+      obj.children = jsx(closure_0(1177).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1177).AvatarSizes.XSMALL, cutout: null });
       return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
     })}</View></View>;
   }, items3);

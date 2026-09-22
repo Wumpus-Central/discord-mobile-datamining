@@ -1,7 +1,7 @@
-// === Module 16966: useVibegrationsDisallowSwipeExit ===
+// === Module 16978: useVibegrationsDisallowSwipeExit ===
 
-// Module 16966 (useVibegrationsDisallowSwipeExit)
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16341 */;
+// Module 16978 (useVibegrationsDisallowSwipeExit)
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16352 */;
 import noop from "module_19" /* 19 */;
 
 const MainTabsNavigatorPanelContextDefault = MainTabsNavigatorPanelContext;

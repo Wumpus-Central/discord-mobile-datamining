@@ -1,9 +1,9 @@
-// === Module 12561: useCanManageGuildDirectoryEntry ===
+// === Module 12565: useCanManageGuildDirectoryEntry ===
 
-// Module 12561 (useCanManageGuildDirectoryEntry)
-import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildStore from "GuildStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
+// Module 12565 (useCanManageGuildDirectoryEntry)
+import ChannelStore from "ChannelStore" /* 2042 */;
+import GuildStore from "GuildStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
 
 const require = globalThis.__r;
 

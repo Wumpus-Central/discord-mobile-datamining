@@ -1,10 +1,10 @@
-// === Module 16589: useCanSeeNUFChannelsForGuild ===
+// === Module 16600: useCanSeeNUFChannelsForGuild ===
 
-// Module 16589 (useCanSeeNUFChannelsForGuild)
+// Module 16600 (useCanSeeNUFChannelsForGuild)
 import FlagUtils from "FlagUtils" /* 1385 */;
-import UserUtils from "UserUtils" /* 4600 */;
+import UserUtils from "UserUtils" /* 4601 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;

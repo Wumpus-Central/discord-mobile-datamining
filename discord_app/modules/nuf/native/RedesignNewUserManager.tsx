@@ -1,10 +1,10 @@
-// === Module 17851: RedesignNewUserManager ===
+// === Module 17863: RedesignNewUserManager ===
 
-// Module 17851 (RedesignNewUserManager)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4613 */;
-import ContactSyncModalStore from "ContactSyncModalStore" /* 12930 */;
-import NewUserStore from "NewUserStore" /* 5776 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7363 */;
+// Module 17863 (RedesignNewUserManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4614 */;
+import ContactSyncModalStore from "ContactSyncModalStore" /* 12934 */;
+import NewUserStore from "NewUserStore" /* 5778 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7365 */;
 import size from "module_2" /* 2 */;
 
 ({ initialize: c3, ContactSyncModes: closure_4 } = ContactSyncModalStore);

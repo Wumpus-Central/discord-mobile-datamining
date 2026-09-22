@@ -1,6 +1,6 @@
-// === Module 5959: ? ===
+// === Module 5961: ? ===
 
-// Module 5959
+// Module 5961
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AnimatedAvatarsAbstractUI-2x.png.js");

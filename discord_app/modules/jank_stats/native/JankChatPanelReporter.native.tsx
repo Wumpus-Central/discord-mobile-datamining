@@ -1,7 +1,7 @@
-// === Module 16343: JankChatPanelReporter ===
+// === Module 16354: JankChatPanelReporter ===
 
-// Module 16343 (JankChatPanelReporter)
-import getJankScreenName from "getJankScreenName" /* 16344 */;
+// Module 16354 (JankChatPanelReporter)
+import getJankScreenName from "getJankScreenName" /* 16355 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,6 +22,6 @@ export default function JankChatPanelReporter(channelId) {
     ({ channelId, showCreateThread } = ref.current);
     return getJankScreenName.getChatPanelScreenName(channelId, showCreateThread);
   }, []);
-  const obj = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(16344).getPanelListScreenName };
-  return jsx(showCreateThread(16347), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(16344).getPanelListScreenName });
+  const obj = { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(16355).getPanelListScreenName };
+  return jsx(showCreateThread(16358), { position: translateX, openAt: 0, closedAt: maxWidth, resolveOpenName: callback, resolveClosedName: channelId(16355).getPanelListScreenName });
 };

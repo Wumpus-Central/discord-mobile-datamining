@@ -1,9 +1,9 @@
-// === Module 7914: PoggermodeSettingsStore ===
+// === Module 7917: PoggermodeSettingsStore ===
 
-// Module 7914 (PoggermodeSettingsStore)
+// Module 7917 (PoggermodeSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 7915 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7918 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

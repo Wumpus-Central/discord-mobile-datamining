@@ -1,6 +1,6 @@
-// === Module 2015: DetectableGameStore ===
+// === Module 2016: DetectableGameStore ===
 
-// Module 2015 (DetectableGameStore)
+// Module 2016 (DetectableGameStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
@@ -11,9 +11,9 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import ApplicationConstants from "ApplicationConstants" /* 1349 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import ApplicationRecord from "ApplicationRecord" /* 2002 */;
-import CachedEntriesMapDefault from "CachedEntriesMap" /* 2016 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2018 */;
-import UserSettings from "UserSettings" /* 2019 */;
+import CachedEntriesMapDefault from "CachedEntriesMap" /* 2017 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2019 */;
+import UserSettings from "UserSettings" /* 2020 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 4449: NativeLinkingModule ===
+// === Module 4450: NativeLinkingModule ===
 
-// Module 4449 (NativeLinkingModule)
+// Module 4450 (NativeLinkingModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

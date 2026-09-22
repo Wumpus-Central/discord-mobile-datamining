@@ -1,6 +1,6 @@
-// === Module 5815: useInitialValue ===
+// === Module 5817: useInitialValue ===
 
-// Module 5815 (useInitialValue)
+// Module 5817 (useInitialValue)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

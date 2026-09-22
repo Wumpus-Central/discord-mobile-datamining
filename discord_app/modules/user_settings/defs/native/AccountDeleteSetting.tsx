@@ -1,10 +1,10 @@
-// === Module 15087: AccountDeleteSetting ===
+// === Module 15094: AccountDeleteSetting ===
 
-// Module 15087 (AccountDeleteSetting)
+// Module 15094 (AccountDeleteSetting)
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 8233 */;
-import handleDisableAccountDefault from "handleDisableAccount" /* 15088 */;
-import SettingBuilders from "SettingBuilders" /* 11725 */;
+import SettingsConstants from "SettingsConstants" /* 8237 */;
+import handleDisableAccountDefault from "handleDisableAccount" /* 15095 */;
+import SettingBuilders from "SettingBuilders" /* 11729 */;
 import size from "module_2" /* 2 */;
 
 const pressable = SettingBuilders.createPressable({

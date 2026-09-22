@@ -1,20 +1,20 @@
-// === Module 2029: DismissibleContentUtils ===
+// === Module 2030: DismissibleContentUtils ===
 
-// Module 2029 (DismissibleContentUtils)
+// Module 2030 (DismissibleContentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2024 */;
-import dismissible_content from "dismissible_content" /* 2027 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 2028 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 2032 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 2039 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4598 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10495 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2025 */;
+import dismissible_content from "dismissible_content" /* 2028 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 2029 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 2033 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 2040 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4599 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10501 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2031 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2032 */;
 
 const require = globalThis.__r;
 
@@ -429,13 +429,13 @@ function trackDismissibleContentDismissed(dismissibleContent, guildId) {
   obj2.snowflake_id = snowflakeId;
   AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj2);
 }
-const DCFEventTypes = fn(2030).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(2033);
+const DCFEventTypes = fn(2031).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(2034);
 ({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: c10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let c14 = 2592000000;
-let items = [fn(2027).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(2027).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
+let items = [fn(2028).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(2028).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -557,7 +557,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "PX_16" };
+      return { isDismissed: false, lastDismissedAtMs: "flex" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

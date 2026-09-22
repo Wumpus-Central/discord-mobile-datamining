@@ -1,6 +1,6 @@
-// === Module 16996: vibegrationsProjectMenuItems ===
+// === Module 17008: vibegrationsProjectMenuItems ===
 
-// Module 16996 (vibegrationsProjectMenuItems)
+// Module 17008 (vibegrationsProjectMenuItems)
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
 import size from "module_2" /* 2 */;

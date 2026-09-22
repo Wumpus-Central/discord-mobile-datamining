@@ -1,6 +1,6 @@
-// === Module 14725: NotifSettings ===
+// === Module 14731: NotifSettings ===
 
-// Module 14725 (NotifSettings)
+// Module 14731 (NotifSettings)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/NotifSettings.tsx");

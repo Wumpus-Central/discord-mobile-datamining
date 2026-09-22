@@ -1,8 +1,8 @@
-// === Module 12863: NoMutualFriends ===
+// === Module 12867: NoMutualFriends ===
 
-// Module 12863 (NoMutualFriends)
-import shared from "shared" /* 4607 */;
-import _mod8502 from "module_8502" /* 8502 */;
+// Module 12867 (NoMutualFriends)
+import shared from "shared" /* 4608 */;
+import _mod8506 from "module_8506" /* 8506 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,44 +14,44 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoMutualFriends.tsx");
 
 export const getNoMutualFriendsSource = function getNoMutualFriendsSource(theme) {
-  return _mod8502.getIllustrationSource(theme, {
+  return _mod8506.getIllustrationSource(theme, {
     dark() {
-      return require("module_12864");
+      return require("module_12868");
     },
     darker() {
-      return require("module_12865");
+      return require("module_12869");
     },
     light() {
-      return require("module_12866");
+      return require("module_12870");
     }
   });
 };
 export const useNoMutualFriendsSource = function useNoMutualFriendsSource() {
   const obj = shared;
-  return _mod8502.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8506.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_12864");
+      return require("module_12868");
     },
     darker() {
-      return require("module_12865");
+      return require("module_12869");
     },
     light() {
-      return require("module_12866");
+      return require("module_12870");
     }
   });
 };
 export const NoMutualFriends = function NoMutualFriends(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod8502.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod8506.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_12864");
+      return require("module_12868");
     },
     darker() {
-      return require("module_12865");
+      return require("module_12869");
     },
     light() {
-      return require("module_12866");
+      return require("module_12870");
     }
   });
   const merged = Object.assign(arg0);

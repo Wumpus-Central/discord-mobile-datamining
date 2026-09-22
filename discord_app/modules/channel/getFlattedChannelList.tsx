@@ -1,6 +1,6 @@
-// === Module 7357: getFlattedChannelList ===
+// === Module 7359: getFlattedChannelList ===
 
-// Module 7357 (getFlattedChannelList)
+// Module 7359 (getFlattedChannelList)
 import _modDef12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 12006: getCanJoin ===
+// === Module 12010: getCanJoin ===
 
-// Module 12006 (getCanJoin)
+// Module 12010 (getCanJoin)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import hasFlagDefault from "hasFlag" /* 7555 */;
-import isInviteActiveDefault from "isInviteActive" /* 12007 */;
-import getPartySize from "getPartySize" /* 12008 */;
-import isPartyFull from "isPartyFull" /* 12010 */;
-import getIsInParty from "getIsInParty" /* 12011 */;
-import getIsAskToJoin from "getIsAskToJoin" /* 12012 */;
-import getRemoteJoinableActivityPlatform from "getRemoteJoinableActivityPlatform" /* 12013 */;
+import hasFlagDefault from "hasFlag" /* 7557 */;
+import isInviteActiveDefault from "isInviteActive" /* 12011 */;
+import getPartySize from "getPartySize" /* 12012 */;
+import isPartyFull from "isPartyFull" /* 12014 */;
+import getIsInParty from "getIsInParty" /* 12015 */;
+import getIsAskToJoin from "getIsAskToJoin" /* 12016 */;
+import getRemoteJoinableActivityPlatform from "getRemoteJoinableActivityPlatform" /* 12017 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

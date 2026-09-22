@@ -1,14 +1,14 @@
-// === Module 14744: activityInstanceConnectedParticipants ===
+// === Module 14750: activityInstanceConnectedParticipants ===
 
-// Module 14744 (activityInstanceConnectedParticipants)
-import transformUserDefault from "transformUser" /* 9587 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+// Module 14750 (activityInstanceConnectedParticipants)
+import transformUserDefault from "transformUser" /* 9593 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(4660);
+const Constants = fn(4661);
 let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
 items = [Constants.RPC_AUTHENTICATED_SCOPE];
 const size = fn(2);

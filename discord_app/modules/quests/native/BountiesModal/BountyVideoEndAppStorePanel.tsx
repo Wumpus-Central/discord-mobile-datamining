@@ -1,16 +1,16 @@
-// === Module 15329: BountyVideoEndAppStorePanel ===
+// === Module 15337: BountyVideoEndAppStorePanel ===
 
-// Module 15329 (BountyVideoEndAppStorePanel)
+// Module 15337 (BountyVideoEndAppStorePanel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import openURLDefault from "openURL" /* 4445 */;
-import native from "native" /* 4466 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
-import timing from "timing" /* 4757 */;
-import timingPresets from "timingPresets" /* 4760 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6897 */;
-import AnalyticsActions from "AnalyticsActions" /* 7954 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11753 */;
+import openURLDefault from "openURL" /* 4446 */;
+import native from "native" /* 4467 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
+import timing from "timing" /* 4758 */;
+import timingPresets from "timingPresets" /* 4761 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6899 */;
+import AnalyticsActions from "AnalyticsActions" /* 7957 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11757 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
 
@@ -22,6 +22,7 @@ function BountyVideoEndAppStorePanelInner(metadata) {
   const onDismiss = metadata.onDismiss;
   const onInstallPress = metadata.onInstallPress;
   let sharedValue;
+  ({ onOverlaySurfaceClick, onCarouselScroll } = metadata);
   const tmp = closure_9();
   closure_5 = tmp;
   onDismiss.useRef(false);
@@ -34,7 +35,7 @@ function BountyVideoEndAppStorePanelInner(metadata) {
   }, items);
   const unmountEffect = metadata(revealProgress[8]).useUnmountEffect(onPress);
   let obj = metadata(revealProgress[8]);
-  class H {
+  class A {
     constructor() {
       obj = { transform: null };
       obj1 = { translateY: null };
@@ -51,11 +52,11 @@ function BountyVideoEndAppStorePanelInner(metadata) {
     }
   }
   let obj2 = metadata(revealProgress[9]);
-  H.__closure = { interpolate: metadata(revealProgress[9]).interpolate, revealProgress, sheetHeight, Extrapolation: metadata(revealProgress[9]).Extrapolation };
-  H.__workletHash = 2597568517005;
-  H.__initData = __initData;
+  A.__closure = { interpolate: metadata(revealProgress[9]).interpolate, revealProgress, sheetHeight, Extrapolation: metadata(revealProgress[9]).Extrapolation };
+  A.__workletHash = 2597568517005;
+  A.__initData = __initData;
   let items1 = [metadata.storeUrl, onInstallPress];
-  const animatedStyle = obj2.useAnimatedStyle(H);
+  const animatedStyle = obj2.useAnimatedStyle(A);
   const callback1 = onDismiss.useCallback(() => {
     onInstallPress(AnalyticsActions.AppStoreOverlaySurfaces.MAIN_CTA);
     openURLDefault(metadata.storeUrl);
@@ -123,7 +124,7 @@ function BountyVideoEndAppStorePanelInner(metadata) {
   const items6 = [memo1, animatedStyle];
   obj6.style = items6;
   const obj4 = metadata(revealProgress[9]);
-  const items7 = [onPress(onInstallPress, { style: tmp.scrollBody, contentContainerStyle: tmp.scrollContent, nestedScrollEnabled: true, showsVerticalScrollIndicator: false, keyboardShouldPersistTaps: "handled", children: onPress(metadata(revealProgress[7]).AppStoreOverlayBody, { metadata, onOpenReviews: callback2, onMediaGetGamePress: callback1 }) }), , ];
+  const items7 = [onPress(onInstallPress, { style: tmp.scrollBody, contentContainerStyle: tmp.scrollContent, nestedScrollEnabled: true, showsVerticalScrollIndicator: false, keyboardShouldPersistTaps: "handled", children: onPress(metadata(revealProgress[7]).AppStoreOverlayBody, { metadata, onOpenReviews: callback2, onMediaGetGamePress: callback1, onCarouselScroll, onOverlaySurfaceClick }) }), , ];
   const obj8 = { gesture: memo, children: null };
   const obj9 = { style: tmp.headerGestureTarget, children: onPress(metadata(revealProgress[16]).ActionSheetHeaderBar, { variant: "overlay", style: tmp.headerBar, onPress }) };
   obj8.children = onPress(closure_5, obj9);
@@ -135,13 +136,13 @@ function BountyVideoEndAppStorePanelInner(metadata) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_BORDER_RADIUS = fn(7396).ACTION_SHEET_BORDER_RADIUS;
+const ACTION_SHEET_BORDER_RADIUS = fn(7398).ACTION_SHEET_BORDER_RADIUS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { root: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 10 }, panel: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, overflow: "hidden", flexDirection: "column" }, headerBar: { zIndex: 1 }, headerGestureTarget: { position: "absolute", top: 0, left: 0, right: 0, height: 48, zIndex: 2 }, scrollBody: { flex: 1, minHeight: 0 }, scrollContent: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, overflow: "hidden", flexDirection: "column" };
-obj2.scrollContent = { paddingBottom: fn(11757).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+obj2.scrollContent = { paddingBottom: fn(11761).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}" };
 let closure_11 = { code: "function BountyVideoEndAppStorePanelTsx2(event){const{revealProgress,DISMISS_PROGRESS_THRESHOLD,DISMISS_VELOCITY_THRESHOLD,runOnJS,handleDismiss,withTiming,timingStandard}=this.__closure;if(revealProgress.get()<DISMISS_PROGRESS_THRESHOLD||event.velocityY>DISMISS_VELOCITY_THRESHOLD){runOnJS(handleDismiss)();return;}revealProgress.set(withTiming(1,timingStandard));}" };

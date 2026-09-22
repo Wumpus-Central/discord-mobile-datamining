@@ -1,19 +1,19 @@
-// === Module 10092: Autocompleter ===
+// === Module 10098: Autocompleter ===
 
-// Module 10092 (Autocompleter)
+// Module 10098 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
 import _modDef1929 from "module_1929" /* 1929 */;
-import StringUtils from "StringUtils" /* 2009 */;
-import findCodedLinks from "findCodedLinks" /* 4739 */;
-import CodedLink from "CodedLink" /* 4744 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5659 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5735 */;
-import GuildUtilsDefault from "GuildUtils" /* 5736 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 10095 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 10093 */;
-import LinkRecord from "LinkRecord" /* 10094 */;
-import RelationshipStore from "RelationshipStore" /* 4405 */;
+import StringUtils from "StringUtils" /* 2010 */;
+import findCodedLinks from "findCodedLinks" /* 4740 */;
+import CodedLink from "CodedLink" /* 4745 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5661 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5737 */;
+import GuildUtilsDefault from "GuildUtils" /* 5738 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 10101 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 10099 */;
+import LinkRecord from "LinkRecord" /* 10100 */;
+import RelationshipStore from "RelationshipStore" /* 4406 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const AutocompleteUtilsDefault = AutocompleteUtils;
@@ -27,8 +27,8 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(2096).GUILD_VOCAL_CHANNELS_KEY;
-fn(5732).AutocompleterResultTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4394).GUILD_VOCAL_CHANNELS_KEY;
+fn(5734).AutocompleterResultTypes;
 const React7 = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");

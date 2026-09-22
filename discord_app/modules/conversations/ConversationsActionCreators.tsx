@@ -1,16 +1,16 @@
-// === Module 8151: ConversationsActionCreators ===
+// === Module 8155: ConversationsActionCreators ===
 
-// Module 8151 (ConversationsActionCreators)
+// Module 8155 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 4946 */;
-import SurveyActionTypes from "SurveyActionTypes" /* 4954 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7698 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8153 */;
+import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 4947 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 4955 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7701 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 8157 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7836 */;
-import ConversationsStore from "ConversationsStore" /* 7840 */;
-import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 8152 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7839 */;
+import ConversationsStore from "ConversationsStore" /* 7843 */;
+import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 8156 */;
 
 require = fn;
 let closure_9 = async function _fetchChannelConversations(arg0) {
@@ -114,7 +114,7 @@ let closure_9 = async function _fetchChannelConversations(arg0) {
     }
     closure_132_6 = throwOnError;
     hydrateMessages = hydrateMessages.hydrateMessages;
-    return "PX_16";
+    return "flex";
   })();
   iter.next();
   return iter;
@@ -319,7 +319,7 @@ let closure_12 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(7837).FETCH_LIMIT;
+const FETCH_LIMIT = fn(7840).FETCH_LIMIT;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
@@ -347,27 +347,32 @@ export const fetchConversation = function fetchConversation() {
 export const toggleConversationHighlighting = function toggleConversationHighlighting() {
   DispatcherDefault.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 };
-export const setSelectedConversation = function setSelectedConversation(channelId, arg1, conversationId) {
-  let flag = arg3;
-  if (arg3 === undefined) {
+export const setSelectedConversation = function setSelectedConversation(channelId, conversationId, arg2) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  let flag = obj.shouldJump;
+  if (flag === undefined) {
     flag = true;
   }
-  DispatcherDefault.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId, conversationId });
-  fetchConversationMessages(channelId, conversationId, { includeReactions: true, includeMessageReferences: true });
-  const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
-  if (flag) {
-    let startMessageId;
-    if (conversationMetadata != null) {
-      startMessageId = conversationMetadata.conversation.startMessageId;
+  if (null != conversationId) {
+    const obj2 = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
+    DispatcherDefault.dispatch(obj2);
+    fetchConversationMessages(channelId, conversationId, { includeReactions: true, includeMessageReferences: true });
+    if (flag) {
+      const conversationMetadata = ConversationsStore.getConversationMetadata(channelId, conversationId);
+      let startMessageId;
+      if (conversationMetadata != null) {
+        startMessageId = conversationMetadata.conversation.startMessageId;
+      }
+      if (null != startMessageId) {
+        const obj3 = { channelId, messageId: startMessageId, flash: false };
+        MessageActionCreatorsDefault.jumpToMessage(obj3);
+        const tmp6Result = MessageActionCreatorsDefault;
+      }
     }
-    flag = null != startMessageId;
   }
-  if (flag) {
-    const obj3 = { channelId, messageId: conversationMetadata.conversation.startMessageId, flash: false };
-    MessageActionCreatorsDefault.jumpToMessage(obj3);
-    const tmpResult = MessageActionCreatorsDefault;
-  }
-  const obj2 = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
 };
 export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
   DispatcherDefault.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId });

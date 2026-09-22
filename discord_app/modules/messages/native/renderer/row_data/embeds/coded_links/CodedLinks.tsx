@@ -1,28 +1,29 @@
-// === Module 13510: CodedLinks ===
+// === Module 13518: CodedLinks ===
 
-// Module 13510 (CodedLinks)
+// Module 13518 (CodedLinks)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import CodedLink from "CodedLink" /* 4744 */;
-import ApplicationCodedLink from "ApplicationCodedLink" /* 7926 */;
-import createSocialLayerStorefrontProductDetailsEmbed from "createSocialLayerStorefrontProductDetailsEmbed" /* 11782 */;
-import ExperimentEmbed from "ExperimentEmbed" /* 12061 */;
-import createAppMessageEmbed from "createAppMessageEmbed" /* 12193 */;
-import createActivityMessageEmbed from "createActivityMessageEmbed" /* 13511 */;
-import InviteEmbed from "InviteEmbed" /* 13512 */;
-import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 13517 */;
-import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 13519 */;
-import GuildTemplateEmbed from "GuildTemplateEmbed" /* 13522 */;
-import BuildOverrideEmbed from "BuildOverrideEmbed" /* 13524 */;
-import VoiceChannelLinkEmbed from "VoiceChannelLinkEmbed" /* 13526 */;
-import QuestEmbed from "QuestEmbed" /* 13527 */;
+import CodedLink from "CodedLink" /* 4745 */;
+import ApplicationCodedLink from "ApplicationCodedLink" /* 7929 */;
+import createSocialLayerStorefrontProductDetailsEmbed from "createSocialLayerStorefrontProductDetailsEmbed" /* 11786 */;
+import ExperimentEmbed from "ExperimentEmbed" /* 12065 */;
+import createAppMessageEmbed from "createAppMessageEmbed" /* 12197 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 13242 */;
+import createActivityMessageEmbed from "createActivityMessageEmbed" /* 13519 */;
+import InviteEmbed from "InviteEmbed" /* 13520 */;
+import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 13525 */;
+import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 13527 */;
+import GuildTemplateEmbed from "GuildTemplateEmbed" /* 13530 */;
+import BuildOverrideEmbed from "BuildOverrideEmbed" /* 13532 */;
+import VoiceChannelLinkEmbed from "VoiceChannelLinkEmbed" /* 13534 */;
+import QuestEmbed from "QuestEmbed" /* 13535 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LurkingStore from "LurkingStore" /* 4396 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import LurkingStore from "LurkingStore" /* 4397 */;
+import GuildStore from "GuildStore" /* 2064 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");
+let result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");
 
 export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, message2, channel, forcedTheme) {
   closure_1 = channel;
@@ -42,7 +43,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
               if (null == applicationCodedLinkData) {
                 return null;
               } else {
-                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp34, message, theme };
+                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp27, message, theme };
                 const appLinkGateResult = createAppMessageEmbed.getAppLinkGateResult(obj2);
                 if ("unavailable" === appLinkGateResult.state) {
                   return null;
@@ -93,11 +94,11 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
             isStaffResult = isStaffPersonalResult;
           }
           if (!isStaffResult) {
-            let tmp26 = null != GuildStore.getGuild("943265993613008967");
-            if (tmp26) {
-              tmp26 = !LurkingStore.isLurking("943265993613008967");
+            let tmp19 = null != GuildStore.getGuild("943265993613008967");
+            if (tmp19) {
+              tmp19 = !LurkingStore.isLurking("943265993613008967");
             }
-            isStaffResult = tmp26;
+            isStaffResult = tmp19;
           }
           let buildOverrideEmbed = null;
           if (isStaffResult) {
@@ -141,23 +142,22 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                   }
                 }
               }
-              if (type === CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
-                [tmp13, tmp14] = code.split("-");
-                const tmp12 = _slicedToArray(code.split("-"), 2);
-                const obj7 = { skuId: tmp13, guildOrApplication: null, theme: null };
-                const obj8 = { type: "application", applicationId: tmp14 };
-                obj7.guildOrApplication = obj8;
-                obj7.theme = theme;
-                return createSocialLayerStorefrontProductDetailsEmbed.createSocialLayerStorefrontProductDetailsEmbed(obj7);
-              } else {
-                [tmp8, tmp9] = code.split("-");
-                const tmp7 = _slicedToArray(code.split("-"), 2);
-                const obj9 = { skuId: tmp8, guildOrApplication: null, theme: null };
-                const obj10 = { type: "guild", guildId: tmp9 };
-                obj9.guildOrApplication = obj10;
-                obj9.theme = theme;
-                return createSocialLayerStorefrontProductDetailsEmbed.createSocialLayerStorefrontProductDetailsEmbed(obj9);
+              const result = storefrontCodedLink.parseStorefrontCodedLink(code);
+              if (null != result) {
+                if (result.skuIds.length <= 1) {
+                  const obj7 = { skuId: _slicedToArray(result.skuIds, 1)[0], guildOrApplication: null, theme: null };
+                  if (type === CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+                    const obj8 = { type: "application", applicationId: result.scopeId };
+                    let obj9 = obj8;
+                  } else {
+                    obj9 = { type: "guild", guildId: result.scopeId };
+                  }
+                  obj7.guildOrApplication = obj9;
+                  obj7.theme = theme;
+                  return createSocialLayerStorefrontProductDetailsEmbed.createSocialLayerStorefrontProductDetailsEmbed(obj7);
+                }
               }
+              return null;
             }
           }
           return null;

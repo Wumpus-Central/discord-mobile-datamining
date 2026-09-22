@@ -1,20 +1,20 @@
-// === Module 12310: useActivityShelfItem ===
+// === Module 12314: useActivityShelfItem ===
 
-// Module 12310 (useActivityShelfItem)
+// Module 12314 (useActivityShelfItem)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import Server from "Server" /* 1978 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4385 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7413 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9135 */;
-import getPlatformDefault from "getPlatform" /* 9524 */;
-import canLaunchFrame from "canLaunchFrame" /* 9594 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 9720 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9721 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9740 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12311 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12312 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7415 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9140 */;
+import getPlatformDefault from "getPlatform" /* 9530 */;
+import canLaunchFrame from "canLaunchFrame" /* 9600 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 9726 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9727 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9746 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 12315 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12316 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2040 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2041 */;
 
 require = fn;
 function useActivityAction(applicationId) {
@@ -77,8 +77,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(7407)().analyticsLocations;
-  closure_14 = context(9721)();
+  analyticsLocations = context(7409)().analyticsLocations;
+  closure_14 = context(9727)();
   obj = canLaunchFrame;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
@@ -314,7 +314,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(2004).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const MAIN_SURFACE = fn(9314).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9319).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useActivityShelfItem.tsx");

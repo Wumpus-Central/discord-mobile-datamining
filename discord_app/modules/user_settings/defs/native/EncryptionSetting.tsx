@@ -1,13 +1,13 @@
-// === Module 16173: EncryptionSetting ===
+// === Module 16184: EncryptionSetting ===
 
-// Module 16173 (EncryptionSetting)
+// Module 16184 (EncryptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 16174 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9971 */;
+import useSecureFramesVerifiedUsers from "useSecureFramesVerifiedUsers" /* 16185 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9977 */;
 
 require = fn;
-const SettingBuilders = fn(11725);
+const SettingBuilders = fn(11729);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
@@ -18,7 +18,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.formatToPlainString(util.t["6vrePS"], { count: secureFramesVerifiedUserIds.length });
   },
-  parent: fn(8233).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(8237).MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
     const items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());

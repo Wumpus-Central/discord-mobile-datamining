@@ -1,29 +1,29 @@
-// === Module 9856: GuildSettingsStore ===
+// === Module 9862: GuildSettingsStore ===
 
-// Module 9856 (GuildSettingsStore)
+// Module 9862 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import ChannelRecord from "ChannelRecord" /* 2045 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2055 */;
-import PlainRecord from "PlainRecord" /* 2056 */;
-import GuildRecord from "GuildRecord" /* 2059 */;
+import ChannelRecord from "ChannelRecord" /* 2046 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2056 */;
+import PlainRecord from "PlainRecord" /* 2057 */;
+import GuildRecord from "GuildRecord" /* 2060 */;
 import _modDef4348 from "module_4348" /* 4348 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9857 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9858 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9860 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9861 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9862 */;
-import GuildProfileStore from "GuildProfileStore" /* 9835 */;
-import InviteRecord from "InviteRecord" /* 8651 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9863 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9864 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9866 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9867 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9868 */;
+import GuildProfileStore from "GuildProfileStore" /* 9841 */;
+import InviteRecord from "InviteRecord" /* 8655 */;
 import UserRecord from "UserRecord" /* 1386 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 import UserStore from "UserStore" /* 1372 */;
 import Constants from "Constants" /* 1074 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8294 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8298 */;
 import size from "module_2" /* 2 */;
 
 function handleFormInit(location) {
@@ -36,21 +36,24 @@ function handleFormInit(location) {
     c39 = false;
     c41 = false;
     c43 = null;
-    c45 = null;
-    c46 = 0;
-    c53 = null;
+    settings = null;
+    c47 = null;
+    c48 = 0;
+    c55 = null;
     obj = null;
-    c57 = null;
+    c59 = null;
     c3 = null;
     c4 = null;
     c5 = null;
     NONE = MFALevels.NONE;
-    closure_44 = {};
+    closure_46 = {};
     c11 = undefined;
   } else {
     profile = GuildProfileStore.getProfile(guildId);
     c41 = enabled;
     c43 = channelId;
+    const guildSpaceSettings = guild.guildSpaceSettings;
+    settings = guildSpaceSettings;
     CLOSED = FormStates.OPEN;
     errors = {};
     c38 = null;
@@ -58,7 +61,7 @@ function handleFormInit(location) {
     NONE = guild.mfaLevel;
     obj = obj2;
     c12 = null;
-    closure_44 = {};
+    closure_46 = {};
     location = location.location;
     if (section === constants.TAG) {
       obj = GuildSettingsServerTagUtils;
@@ -154,19 +157,20 @@ let enabled = false;
 let c41 = false;
 let channelId = null;
 let c43 = null;
-let closure_44 = {};
-let c45 = null;
-let c46 = 0;
+let settings = null;
+let closure_46 = {};
+let c47 = null;
+let c48 = 0;
 let NONE = MFALevels.NONE;
 let location = null;
 let obj = { primaryCategoryId: DEFAULT_DISCOVERY_CATEGORY_ID, secondaryCategoryIds: [], keywords: [], emojiDiscoverabilityEnabled: true, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: false, reasonsToJoin: [], socialLinks: [], about: "" };
-let c50 = false;
+let c52 = false;
 let obj2 = obj;
-let c53 = null;
+let c55 = null;
 const bansVersion = 0;
 let guildId = null;
 obj = null;
-let c57 = null;
+let c59 = null;
 const Store = initializeDefault.Store;
 class GuildSettingsStore extends Store {
 }
@@ -188,6 +192,17 @@ prototype["widgetHasChanges"] = function widgetHasChanges() {
   }
   return tmp;
 };
+prototype["guildSpaceSettingsHasChanges"] = function guildSpaceSettingsHasChanges() {
+  enabled = undefined;
+  if (settings != null) {
+    enabled = settings.enabled;
+  }
+  let enabled1;
+  if (settings != null) {
+    enabled1 = settings.enabled;
+  }
+  return enabled !== enabled1;
+};
 prototype["hasChanges"] = function hasChanges() {
   obj = _modDef12;
   const isEqualResult = obj.isEqual(closure_7, guild);
@@ -200,9 +215,12 @@ prototype["hasChanges"] = function hasChanges() {
     widgetHasChangesResult = !_modDef12.isEqual(obj, profile);
     const tmpResult2 = _modDef12;
   }
+  const self = this;
   if (!widgetHasChangesResult) {
-    const self = this;
-    widgetHasChangesResult = this.widgetHasChanges();
+    widgetHasChangesResult = self.widgetHasChanges();
+  }
+  if (!widgetHasChangesResult) {
+    widgetHasChangesResult = self.guildSpaceSettingsHasChanges();
   }
   return widgetHasChangesResult;
 };
@@ -233,7 +251,7 @@ prototype["getGuild"] = function getGuild() {
   return closure_7;
 };
 prototype["getPendingOriginalMd5s"] = function getPendingOriginalMd5s() {
-  return closure_44;
+  return closure_46;
 };
 prototype["getGuildProfile"] = function getGuildProfile() {
   return obj;
@@ -241,11 +259,14 @@ prototype["getGuildProfile"] = function getGuildProfile() {
 prototype["getWidget"] = function getWidget() {
   return { enabled, channelId: _null };
 };
+prototype["getGuildSpaceSettings"] = function getGuildSpaceSettings() {
+  return settings;
+};
 prototype["isSubmitting"] = function isSubmitting() {
   return CLOSED === FormStates.SUBMITTING;
 };
 prototype["isGuildMetadataLoaded"] = function isGuildMetadataLoaded() {
-  return c50;
+  return c52;
 };
 prototype["getErrors"] = function getErrors() {
   return errors;
@@ -267,11 +288,11 @@ prototype["getSlug"] = function getSlug() {
   return c12;
 };
 prototype["getBans"] = function getBans() {
-  const items = [c53, closure_54];
+  const items = [c55, closure_56];
   return items;
 };
 prototype["getProps"] = function getProps() {
-  obj = { submitting: this.isSubmitting(), integrations, section, subsection, errors, guild, bans, bansVersion, invites: obj, selectedRoleId, fetchedEmbed, embedEnabled, embedChannelId: _null, mfaLevel: NONE, searchQuery, vanityURLCode, vanityURLUses, originalGuild: guild, hasChanges: this.hasChanges(), guildMetadata: obj, analyticsLocation: location, isGuildMetadataLoaded, originalProfile: profile, profile: obj };
+  obj = { submitting: this.isSubmitting(), integrations, section, subsection, errors, guild, bans, bansVersion, invites: obj, selectedRoleId, fetchedEmbed, embedEnabled, embedChannelId: _null, guildSpaceSettings: settings, mfaLevel: NONE, searchQuery, vanityURLCode, vanityURLUses, originalGuild: guild, hasChanges: this.hasChanges(), guildMetadata: obj, analyticsLocation: location, isGuildMetadataLoaded, originalProfile: profile, profile: obj };
   return obj;
 };
 GuildSettingsStore.displayName = "GuildSettingsStore";
@@ -289,15 +310,16 @@ obj2 = {
     c39 = false;
     c41 = false;
     c43 = null;
-    c45 = null;
-    c46 = 0;
-    c53 = null;
-    c57 = null;
+    settings = null;
+    c47 = null;
+    c48 = 0;
+    c55 = null;
+    c59 = null;
     c3 = null;
     c4 = null;
     c5 = null;
     NONE = MFALevels.NONE;
-    closure_44 = {};
+    closure_46 = {};
     c11 = undefined;
   },
   GUILD_SETTINGS_UPDATE: function handleUpdate(arg0) {
@@ -324,7 +346,7 @@ obj2 = {
         if (arg0.hasOwnProperty(item10007)) {
           let tmp7 = arg0[closure_34[item10007]];
           if (null != tmp7) {
-            closure_44[item10007] = tmp8;
+            closure_46[item10007] = tmp8;
           } else {
             delete tmp2[tmp];
           }
@@ -364,7 +386,7 @@ obj2 = {
   },
   GUILD_SETTINGS_CANCEL_CHANGES: function handleCancelChanges(guildId) {
     errors = {};
-    closure_44 = {};
+    closure_46 = {};
     guild = GuildStore.getGuild(guildId.guildId);
     if (null != guild) {
       closure_7 = guild;
@@ -380,7 +402,7 @@ obj2 = {
   },
   GUILD_SETTINGS_SUBMIT_SUCCESS: function handleSubmitSuccess(guild) {
     CLOSED = FormStates.OPEN;
-    closure_44 = {};
+    closure_46 = {};
     let tmp = null != guild.guild;
     if (tmp) {
       tmp = null != guild;
@@ -463,32 +485,32 @@ obj2 = {
   },
   GUILD_SETTINGS_LOADED_BANS: function handleLoadedBans(bans) {
     bans = bans.bans;
-    c53 = bans.reduce((set, user) => {
+    c55 = bans.reduce((set, user) => {
       if (tmp) {
         const result = set.set(user.user.id, user);
       }
       return set;
     }, new Map());
-    closure_54 = closure_54 + 1;
+    closure_56 = closure_56 + 1;
   },
   GUILD_SETTINGS_LOADED_BANS_BATCH: function handleLoadedBansBatch(arg0) {
     ({ bans, guildId } = arg0);
     let tmp = guildId === guildId;
     if (tmp) {
-      tmp = null != c53;
+      tmp = null != c55;
     }
     if (!tmp) {
       const _Map = Map;
       const map = new Map();
-      c53 = map;
+      c55 = map;
     }
-    c53 = bans.reduce((set, user) => {
+    c55 = bans.reduce((set, user) => {
       if (tmp) {
         const result = set.set(user.user.id, user);
       }
       return set;
-    }, c53);
-    closure_54 = closure_54 + 1;
+    }, c55);
+    closure_56 = closure_56 + 1;
   },
   GUILD_SETTINGS_LOADED_INVITES: function handleLoadedInvites(invites) {
     invites = invites.invites;
@@ -509,7 +531,7 @@ obj2 = {
     if (code == null) {
       code = null;
     }
-    c45 = code;
+    c47 = code;
     const uses = code.uses;
   },
   GUILD_SETTINGS_SET_MFA_SUCCESS: function handleSetMFALevelSuccess(level) {
@@ -560,7 +582,7 @@ obj2 = {
       if (tmp4) {
         obj = { user, reason: null };
         const result = bans.set(user.id, obj);
-        closure_54 = +closure_54 + 1;
+        closure_56 = +closure_56 + 1;
       }
       tmp2 = tmp4;
     }
@@ -575,7 +597,7 @@ obj2 = {
       }
       if (tmp5) {
         bans.delete(tmp.id);
-        closure_54 = +closure_54 + 1;
+        closure_56 = +closure_56 + 1;
       }
       tmp3 = tmp5;
     }
@@ -714,15 +736,16 @@ obj2 = {
         c39 = false;
         c41 = false;
         c43 = null;
-        c45 = null;
-        c46 = 0;
-        c53 = null;
-        c57 = null;
+        settings = null;
+        c47 = null;
+        c48 = 0;
+        c55 = null;
+        c59 = null;
         c3 = null;
         c4 = null;
         c5 = null;
         NONE = MFALevels.NONE;
-        closure_44 = {};
+        closure_46 = {};
         c11 = undefined;
       }
     }
@@ -848,8 +871,8 @@ obj2 = {
       tmp2 = tmp === guild.id;
     }
     if (tmp2) {
-      if (false === c50) {
-        c50 = true;
+      if (false === c52) {
+        c52 = true;
       }
       let primaryCategoryId = metadata.primaryCategoryId;
       if (primaryCategoryId == null) {
@@ -1033,6 +1056,24 @@ obj2 = {
         c43 = tmp3;
       }
     }
+    return false;
+  },
+  GUILD_SETTINGS_GUILD_SPACE_SETTINGS_UPDATE: function handleGuildSpaceSettingsUpdate(settings) {
+    settings = settings.settings;
+    if (null != guild) {
+      if (guild.id === tmp) {
+        if (null != settings) {
+          obj = {};
+          const merged = Object.assign(settings);
+          const merged1 = Object.assign(settings);
+          settings = obj;
+        }
+      }
+    }
+    return false;
+  },
+  GUILD_SETTINGS_SET_GUILD_SPACE_SETTINGS: function handleSetGuildSpaceSettings(settings) {
+    settings = settings.settings;
     return false;
   }
 };

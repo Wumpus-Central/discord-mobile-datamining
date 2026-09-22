@@ -1,31 +1,31 @@
-// === Module 12965: CreationIntent ===
+// === Module 12969: CreationIntent ===
 
-// Module 12965 (CreationIntent)
+// Module 12969 (CreationIntent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import useNavigation from "useNavigation" /* 1484 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5171 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5180 */;
-import TableRowGroup from "TableRowGroup" /* 5904 */;
-import native from "native" /* 5909 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12936 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5172 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5181 */;
+import TableRowGroup from "TableRowGroup" /* 5906 */;
+import native from "native" /* 5911 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7370 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12940 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7223);
+const CreateGuildConstants = fn(7225);
 ({ CreateGuildModalStates: metroRequire, GuildTemplateTriggers: closure_7, NUXGuildTemplatesAnalytics: closure_8 } = CreateGuildConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsLocations: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4756);
-let obj2 = { contentContainer: { flex: 1, marginTop: fn(5899).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
-let obj3 = { flex: 1, marginTop: fn(5899).NAV_BAR_HEIGHT };
+const createStyles = fn(4757);
+let obj2 = { contentContainer: { flex: 1, marginTop: fn(5901).NAV_BAR_HEIGHT }, scrollContainer: null, headerContainer: null, headerTitle: null, headerDescription: null, sections: null, skipDescription: null };
+let obj3 = { flex: 1, marginTop: fn(5901).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.headerContainer = { alignItems: "center", paddingVertical: 20, paddingHorizontal: 16 };
 obj2.headerTitle = { textAlign: "center", marginBottom: 8 };
@@ -111,7 +111,7 @@ export default function CreationIntent(arg0) {
   const items3 = [closure_12(ref, obj4), , ];
   let obj7 = { style: tmp.sections, children: null };
   const obj8 = { hasIcons: true, children: null };
-  const tmp13 = trigger(12578);
+  const tmp13 = trigger(12582);
   const obj9 = { Icon: null, message: null, onPress: null };
   const tmp14 = native;
   if (closure_14) {
@@ -128,10 +128,10 @@ export default function CreationIntent(arg0) {
     obj10.onPress = function onPress() {
       onPress(true);
     };
-    items4[1] = closure_11(trigger(12578), obj10);
+    items4[1] = closure_11(trigger(12582), obj10);
     obj8.children = items4;
     let tmp16 = obj8;
-    const tmp12Result = trigger(12578);
+    const tmp12Result = trigger(12582);
   } else {
     obj9.Icon = tmp14.WorldIllocon;
     const intl3 = util.intl;
@@ -146,10 +146,10 @@ export default function CreationIntent(arg0) {
     obj11.onPress = function onPress() {
       onPress(false);
     };
-    items5[1] = closure_11(trigger(12578), obj11);
+    items5[1] = closure_11(trigger(12582), obj11);
     obj8.children = items5;
     tmp16 = obj8;
-    const tmp12Result2 = trigger(12578);
+    const tmp12Result2 = trigger(12582);
   }
   obj7.children = closure_12(TableRowGroup.TableRowGroup, tmp16);
   items3[1] = closure_11(ref, obj7);

@@ -1,19 +1,18 @@
-// === Module 16972: getFrameSurfaceQueryParams ===
+// === Module 16984: getFrameSurfaceQueryParams ===
 
-// Module 16972 (getFrameSurfaceQueryParams)
-import FramesConstants from "FramesConstants" /* 9314 */;
+// Module 16984 (getFrameSurfaceQueryParams)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9320 */;
 import size from "module_2" /* 2 */;
 
-const EmbeddedSurfaceType = FramesConstants.EmbeddedSurfaceType;
 const result = size.fileFinishedImporting("modules/frames/utils/getFrameSurfaceQueryParams.tsx");
 
 export default function getFrameSurfaceQueryParams(type) {
   type = type.type;
-  if (EmbeddedSurfaceType.MAIN === type) {
+  if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
     return {};
   } else {
-    if (EmbeddedSurfaceType.APP_CHANNEL !== type) {
-      if (EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
+    if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
+      if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
         return {};
       }
     }

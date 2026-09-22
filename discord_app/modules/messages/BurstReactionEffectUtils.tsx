@@ -1,7 +1,7 @@
-// === Module 8064: BurstReactionEffectUtils ===
+// === Module 8067: BurstReactionEffectUtils ===
 
-// Module 8064 (BurstReactionEffectUtils)
-import ColorUtils from "ColorUtils" /* 4605 */;
+// Module 8067 (BurstReactionEffectUtils)
+import ColorUtils from "ColorUtils" /* 4606 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

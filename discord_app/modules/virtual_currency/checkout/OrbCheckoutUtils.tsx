@@ -1,11 +1,11 @@
-// === Module 7486: OrbCheckoutUtils ===
+// === Module 7488: OrbCheckoutUtils ===
 
-// Module 7486 (OrbCheckoutUtils)
+// Module 7488 (OrbCheckoutUtils)
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
 import util from "util" /* 1115 */;
-import BillingError from "BillingError" /* 4436 */;
-import OrderConstants from "OrderConstants" /* 7487 */;
-import OrderActionCreators from "OrderActionCreators" /* 7488 */;
+import BillingError from "BillingError" /* 4437 */;
+import OrderConstants from "OrderConstants" /* 7489 */;
+import OrderActionCreators from "OrderActionCreators" /* 7490 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -19,20 +19,17 @@ export const getOrbPriceFromPrices = function getOrbPriceFromPrices(prices, memo
     if (null != prices[React4.PREMIUM_TIER_2]) {
       let tmp2 = prices[React4.PREMIUM_TIER_2];
     }
-    let substr;
+    prices = undefined;
     if (tmp2 != null) {
       const countryPrices = tmp2.countryPrices;
       if (countryPrices != null) {
         prices = countryPrices.prices;
-        if (prices != null) {
-          substr = prices.slice(0, 2);
-        }
       }
     }
-    if (substr == null) {
-      substr = [];
+    if (prices == null) {
+      prices = [];
     }
-    let found = substr.find((currency) => currency.currency === constants.DISCORD_ORB);
+    let found = prices.find((currency) => currency.currency === constants.DISCORD_ORB);
     if (found == null) {
       found = null;
     }

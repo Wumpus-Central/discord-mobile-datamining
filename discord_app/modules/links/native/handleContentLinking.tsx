@@ -1,6 +1,6 @@
-// === Module 11836: handleContentLinking ===
+// === Module 11840: handleContentLinking ===
 
-// Module 11836 (handleContentLinking)
+// Module 11840 (handleContentLinking)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -45,7 +45,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
           let skipMessageFetch;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -142,7 +142,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(5775).addPostConnectionCallback;
+fn(5777).addPostConnectionCallback;
 const Routes = fn(1074).Routes;
 let c6 = null;
 const size = fn(2);

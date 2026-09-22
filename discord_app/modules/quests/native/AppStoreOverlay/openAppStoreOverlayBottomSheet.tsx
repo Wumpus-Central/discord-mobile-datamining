@@ -1,9 +1,9 @@
-// === Module 11755: openAppStoreOverlayBottomSheet ===
+// === Module 11759: openAppStoreOverlayBottomSheet ===
 
-// Module 11755 (openAppStoreOverlayBottomSheet)
+// Module 11759 (openAppStoreOverlayBottomSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import AnalyticsActions from "AnalyticsActions" /* 7954 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11752 */;
+import AnalyticsActions from "AnalyticsActions" /* 7957 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11756 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -12,12 +12,14 @@ const require = globalThis.__r;
 ({ AnalyticEvents: c3, ComponentActions: closure_4 } = Constants);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayBottomSheet.tsx");
 
-export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId, arg1, arg2) {
+export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottomSheet(appId, arg1, onOverlaySurfaceClick, trackOverlayCarouselScroll) {
   _require = arg1;
-  importDefault = arg2;
+  importDefault = onOverlaySurfaceClick;
   appId = appId.appId;
   require("ActionSheetActionCreators").openLazy(require("asyncRequireImpl")(appId[2], appId.paths), "QuestAppStoreOverlayBottomSheet", {
     metadata: appId,
+    trackOverlayCarouselScroll,
+    onOverlaySurfaceClick,
     onOpen() {
       closure_0(constants.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, appId, AnalyticsActions.AppStoreOverlayVariant.CUSTOM);
     },

@@ -1,9 +1,9 @@
-// === Module 9836: useGuildProfile ===
+// === Module 9842: useGuildProfile ===
 
-// Module 9836 (useGuildProfile)
+// Module 9842 (useGuildProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 9835 */;
+import GuildProfileStore from "GuildProfileStore" /* 9841 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
             closure_129_0 = flag;
             c3 = 1;
             c4 = 1;
-            return { value: "PX_16", done: true };
+            return { value: "flex", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {

@@ -1,9 +1,9 @@
-// === Module 13187: restartVibegrationsAppFrames ===
+// === Module 13191: restartVibegrationsAppFrames ===
 
-// Module 13187 (restartVibegrationsAppFrames)
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9562 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9571 */;
-import FramesStore from "FramesStore" /* 9313 */;
+// Module 13191 (restartVibegrationsAppFrames)
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9577 */;
+import FramesStore from "FramesStore" /* 9318 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/restartVibegrationsAppFrames.tsx");

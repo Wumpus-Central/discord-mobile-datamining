@@ -1,18 +1,18 @@
-// === Module 14968: SettingRendererUtils ===
+// === Module 14975: SettingRendererUtils ===
 
-// Module 14968 (SettingRendererUtils)
+// Module 14975 (SettingRendererUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1074 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6867 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7235 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7240 */;
-import SettingsConstants from "SettingsConstants" /* 8233 */;
-import SettingHookHarness from "SettingHookHarness" /* 14859 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 14861 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14969 */;
-import SettingRendererConstants from "SettingRendererConstants" /* 11726 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6869 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7237 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7242 */;
+import SettingsConstants from "SettingsConstants" /* 8237 */;
+import SettingHookHarness from "SettingHookHarness" /* 14865 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 14867 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14976 */;
+import SettingRendererConstants from "SettingRendererConstants" /* 11730 */;
 import size from "module_2" /* 2 */;
 
 ({ ListItemType: c3, NodeType: closure_4, SUPPORTED_SEARCH_RESULT_NO_PARENT_RENDERER_TYPES: hasOwnProperty } = SettingRendererConstants);
@@ -30,7 +30,7 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
         const timerId = setTimeout(() => {
           UserSettingsModalActionCreatorsDefault.setSection(closure_1_1.route);
           const obj3 = { destinationPane: closure_1_1.route, source: { page: constants.USER_SETTINGS } };
-          const result = navigation(7240).trackUserSettingsPaneViewed(obj3);
+          const result = navigation(7242).trackUserSettingsPaneViewed(obj3);
           navigation.navigate(closure_1_1.route);
         }, 100);
         const tmpResult3 = KeyboardManagerUtils;
@@ -59,7 +59,7 @@ export const getSettingTitle = function getSettingTitle(id) {
   return cachedSettingTitle;
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
-  const entries = Object.entries(items(14861).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14867).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
@@ -80,7 +80,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
   set = new Set();
-  const entries = Object.entries(items(14861).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14867).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     if (tmp2.type === constants2.ROUTE) {
@@ -95,7 +95,7 @@ export const getSettingScreens = function getSettingScreens() {
 };
 export const getDesignSystemScreens = function getDesignSystemScreens() {
   let items = [];
-  const entries = Object.entries(items(14861).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14867).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     [tmp, tmp2] = item;
     let tmp3 = tmp2.type === constants2.ROUTE;

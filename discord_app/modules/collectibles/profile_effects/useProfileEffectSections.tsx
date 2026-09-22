@@ -1,11 +1,11 @@
-// === Module 14904: useProfileEffectSections ===
+// === Module 14910: useProfileEffectSections ===
 
-// Module 14904 (useProfileEffectSections)
+// Module 14910 (useProfileEffectSections)
 import util from "util" /* 1115 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7796 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7799 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7784 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7799 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7787 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7802 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;

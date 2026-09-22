@@ -1,7 +1,7 @@
-// === Module 16203: useAllowFriendsFromMutualGuildsOnly ===
+// === Module 16214: useAllowFriendsFromMutualGuildsOnly ===
 
-// Module 16203 (useAllowFriendsFromMutualGuildsOnly)
-import UserSettingsUtils from "UserSettingsUtils" /* 7240 */;
+// Module 16214 (useAllowFriendsFromMutualGuildsOnly)
+import UserSettingsUtils from "UserSettingsUtils" /* 7242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx");
 
 export const useAllowFriendsFromMutualGuildsOnly = function useAllowFriendsFromMutualGuildsOnly() {
-  const FriendSourceFlagsSetting = setting(2019).FriendSourceFlagsSetting;
+  const FriendSourceFlagsSetting = setting(2020).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   const memo = noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items);

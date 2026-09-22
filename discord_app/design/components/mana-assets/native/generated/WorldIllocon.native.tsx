@@ -1,9 +1,9 @@
-// === Module 6822: WorldIllocon ===
+// === Module 6824: WorldIllocon ===
 
-// Module 6822 (WorldIllocon)
+// Module 6824 (WorldIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef6823 from "module_6823" /* 6823 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef6825 from "module_6825" /* 6825 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const WorldIllocon = function WorldIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6823 };
+  const obj2 = { uri: _modDef6825 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

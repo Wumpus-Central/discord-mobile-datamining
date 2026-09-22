@@ -1,16 +1,16 @@
-// === Module 15297: useBountyPauseAppStoreSheet ===
+// === Module 15304: useBountyPauseAppStoreSheet ===
 
-// Module 15297 (useBountyPauseAppStoreSheet)
+// Module 15304 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import AdCreativeType from "AdCreativeType" /* 5668 */;
-import AnalyticsActions from "AnalyticsActions" /* 7954 */;
-import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 11546 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15292 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15295 */;
+import AdCreativeType from "AdCreativeType" /* 5670 */;
+import AnalyticsActions from "AnalyticsActions" /* 7957 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 11550 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15299 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15302 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5661).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5663).QuestsExperimentLocations;
 const ComponentActions = fn(1074).ComponentActions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountyPauseAppStoreSheet.tsx");
@@ -70,7 +70,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
     if (directAppStoreLinkFromCta == null) {
       url = tmp3.cta.url;
     }
-    const obj4 = { link: url, directLink: directAppStoreLinkFromCta, inlineStoreParams: null, allowExternalOpen: false, trackOverlayEvent: null, trackOverlaySurfaceClick: null };
+    const obj4 = { link: url, directLink: directAppStoreLinkFromCta, inlineStoreParams: null, allowExternalOpen: false, trackOverlayEvent: null, trackOverlaySurfaceClick: null, appStoreOverlayCarouselScrollContext: null };
     const obj3 = bounty(sourceQuestContent[9]);
     obj4.inlineStoreParams = bounty(sourceQuestContent[9]).getInlineStoreParamsFromCta(trackingCtx.cta);
     obj4.trackOverlayEvent = function trackOverlayEvent(event, inlineStoreAppId, overlayVariant, timeSpentMs, overlaySurface) {
@@ -81,6 +81,7 @@ export const useBountyPauseAppStoreSheet = function useBountyPauseAppStoreSheet(
       trackingCtx = AnalyticsActions;
       return trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, trackingCtx, overlaySurface });
     };
+    obj4.appStoreOverlayCarouselScrollContext = { adContentId: trackingCtx.id };
     const tmpResult = bounty(sourceQuestContent[9]);
     return obj3.openAppStoreOrUrl(obj4).then((result) => {
       if (result) {

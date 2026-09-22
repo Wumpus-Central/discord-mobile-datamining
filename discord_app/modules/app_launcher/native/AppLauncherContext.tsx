@@ -1,9 +1,9 @@
-// === Module 11481: AppLauncherContext ===
+// === Module 11485: AppLauncherContext ===
 
-// Module 11481 (AppLauncherContext)
-import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9523 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11482 */;
+// Module 11485 (AppLauncherContext)
+import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9529 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11486 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

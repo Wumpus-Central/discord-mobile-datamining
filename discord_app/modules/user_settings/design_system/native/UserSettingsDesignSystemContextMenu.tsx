@@ -1,19 +1,19 @@
-// === Module 16093: UserSettingsDesignSystemContextMenu ===
+// === Module 16105: UserSettingsDesignSystemContextMenu ===
 
-// Module 16093 (UserSettingsDesignSystemContextMenu)
+// Module 16105 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
-import _modDef4719 from "module_4719" /* 4719 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import components_Button_Button from "components/Button/Button" /* 5186 */;
-import Card from "Card" /* 5824 */;
-import _modDef7339 from "module_7339" /* 7339 */;
-import _modDef8224 from "module_8224" /* 8224 */;
-import _modDef11519 from "module_11519" /* 11519 */;
-import _modDef11815 from "module_11815" /* 11815 */;
-import _modDef13026 from "module_13026" /* 13026 */;
-import _modDef16094 from "module_16094" /* 16094 */;
-import _modDef16095 from "module_16095" /* 16095 */;
+import _modDef4720 from "module_4720" /* 4720 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import components_Button_Button from "components/Button/Button" /* 5187 */;
+import Card from "Card" /* 5826 */;
+import _modDef7341 from "module_7341" /* 7341 */;
+import _modDef8228 from "module_8228" /* 8228 */;
+import _modDef11523 from "module_11523" /* 11523 */;
+import _modDef11819 from "module_11819" /* 11819 */;
+import _modDef13030 from "module_13030" /* 13030 */;
+import _modDef16106 from "module_16106" /* 16106 */;
+import _modDef16107 from "module_16107" /* 16107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -48,7 +48,7 @@ function DemoContextMenu(align) {
         const obj2 = text(num[13]);
         const obj3 = { length };
         return Array.from({ length }).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 100663746, action: 1358954929 };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "timglas", action: "utrunnet timglas" };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -68,7 +68,7 @@ function DemoContextMenu(align) {
       const _Array2 = Array;
       const obj4 = { length: num };
       mapped = Array.from(obj4).map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 100663746, action: 1358954929 };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "timglas", action: "utrunnet timglas" };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";
@@ -103,9 +103,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let items = [_modDef13026, _modDef7339, _modDef8224, _modDef11519, _modDef4719, _modDef16094, _modDef16095, _modDef11815];
+let items = [_modDef13030, _modDef7341, _modDef8228, _modDef11523, _modDef4720, _modDef16106, _modDef16107, _modDef11819];
 let closure_8 = ["Launch Probe!", "Activate Laser", "Teleport Widget", "Engage Hyperdrive", "Deploy Robots", "Initiate Time Warp", "Beam Up Snacks", "Hack Database", "Trigger Cosmic Boom", "Unleash Space Vortex", "Activate Cloaking Device"];
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { container: { flexDirection: "column", gap: 12, padding: 16 }, card: { gap: 12 }, divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 12 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

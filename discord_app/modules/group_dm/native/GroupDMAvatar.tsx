@@ -1,8 +1,8 @@
-// === Module 11174: GroupDMAvatar ===
+// === Module 11180: GroupDMAvatar ===
 
-// Module 11174 (GroupDMAvatar)
+// Module 11180 (GroupDMAvatar)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ClipView from "ClipView" /* 9094 */;
+import ClipView from "ClipView" /* 9099 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -56,7 +56,7 @@ class FacepileGroupDMAvatar {
     }, items1);
     tmp9 = jsxs;
     tmp10 = View;
-    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 1, animate: null };
+    obj9 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: 0, animate: "absolute" };
     obj9.cutout = memo1;
     obj9.animate = animate;
     if (null == users) {
@@ -70,7 +70,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj11);
     items3 = [, ];
     items3[0] = tmp11(tmp2(tmp3[4]).Avatar, obj9);
-    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Gift Recipient ID" };
+    obj12 = { status, statusSizeOverride: tmp2(tmp3[4]).StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "Clear override" };
     obj12.animate = animate;
     if (null == users) {
       obj13 = { source: null };
@@ -98,7 +98,7 @@ obj[fn(1177).AvatarSizes.REFRESH_MEDIUM_32] = fn(1177).AvatarSizes.XSMALL_20;
 obj[fn(1177).AvatarSizes.XSMALL] = fn(1177).AvatarSizes.SIZE_16;
 obj[fn(1177).AvatarSizes.SIZE_16] = fn(1177).AvatarSizes.XXSMALL_10;
 obj[fn(1177).AvatarSizes.NORMAL] = fn(1177).AvatarSizes.XSMALL;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 const React6 = createStyles.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");

@@ -1,14 +1,14 @@
-// === Module 10031: GuildProfileCTA ===
+// === Module 10037: GuildProfileCTA ===
 
-// Module 10031 (GuildProfileCTA)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4580 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5744 */;
-import GuildProfileTypes from "GuildProfileTypes" /* 5767 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5786 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7583 */;
-import transitionToGuild from "transitionToGuild" /* 7584 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8649 */;
+// Module 10037 (GuildProfileCTA)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4581 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5746 */;
+import GuildProfileTypes from "GuildProfileTypes" /* 5769 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5788 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7586 */;
+import transitionToGuild from "transitionToGuild" /* 7587 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8653 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

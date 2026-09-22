@@ -1,23 +1,23 @@
-// === Module 15400: VideoQuestPlayer ===
+// === Module 15408: VideoQuestPlayer ===
 
-// Module 15400 (VideoQuestPlayer)
+// Module 15408 (VideoQuestPlayer)
 import ClientInfoUtils from "ClientInfoUtils" /* 1363 */;
-import QuestActionCreators from "QuestActionCreators" /* 11542 */;
-import AssetUtils from "AssetUtils" /* 11548 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 11767 */;
-import SimpleMuxWrapper from "SimpleMuxWrapper" /* 15403 */;
-import VideoQuestCaptions from "VideoQuestCaptions" /* 15411 */;
+import QuestActionCreators from "QuestActionCreators" /* 11546 */;
+import AssetUtils from "AssetUtils" /* 11552 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11771 */;
+import SimpleMuxWrapper from "SimpleMuxWrapper" /* 15411 */;
+import VideoQuestCaptions from "VideoQuestCaptions" /* 15419 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7941 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7944 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5661).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5663).QuestsExperimentLocations;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayer.tsx");
 
-export const PlayerState = fn(15292).PlayerState;
+export const PlayerState = fn(15299).PlayerState;
 export const VideoQuestPlayer = noop.memo((onLoad) => {
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;

@@ -1,10 +1,10 @@
-// === Module 14792: voiceChannelChat ===
+// === Module 14798: voiceChannelChat ===
 
-// Module 14792 (voiceChannelChat)
-import Constants2 from "Constants" /* 4660 */;
-import RPCErrorDefault from "RPCError" /* 9581 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9584 */;
-import toggleVoiceChannelChat from "toggleVoiceChannelChat" /* 14793 */;
+// Module 14798 (voiceChannelChat)
+import Constants2 from "Constants" /* 4661 */;
+import RPCErrorDefault from "RPCError" /* 9587 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9590 */;
+import toggleVoiceChannelChat from "toggleVoiceChannelChat" /* 14799 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

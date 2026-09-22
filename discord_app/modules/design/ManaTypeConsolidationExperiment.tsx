@@ -1,6 +1,6 @@
-// === Module 7225: ManaTypeConsolidationExperiment ===
+// === Module 7227: ManaTypeConsolidationExperiment ===
 
-// Module 7225 (ManaTypeConsolidationExperiment)
+// Module 7227 (ManaTypeConsolidationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

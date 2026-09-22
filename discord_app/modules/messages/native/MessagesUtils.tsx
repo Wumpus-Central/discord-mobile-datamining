@@ -1,6 +1,6 @@
-// === Module 11518: messages/MessagesUtils ===
+// === Module 11522: messages/MessagesUtils ===
 
-// Module 11518 (messages/MessagesUtils)
+// Module 11522 (messages/MessagesUtils)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -11,44 +11,44 @@ import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1969 */;
 import Server from "Server" /* 1978 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4383 */;
-import ReactionUtils from "ReactionUtils" /* 4407 */;
-import ToastUtils from "ToastUtils" /* 4453 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4454 */;
-import Client from "Client" /* 4686 */;
-import HapticUtils from "HapticUtils" /* 4724 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4725 */;
-import ChannelUtils from "ChannelUtils" /* 4901 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4906 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4936 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4980 */;
-import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 5268 */;
-import QuestTypes from "QuestTypes" /* 5664 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5786 */;
-import ClipboardUtils from "ClipboardUtils" /* 7434 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7539 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7698 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7763 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 8005 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 8006 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8007 */;
-import tracking_Tracking from "tracking/Tracking" /* 8009 */;
-import _modDef11519 from "module_11519" /* 11519 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11520 */;
-import computeScrollData from "computeScrollData" /* 11536 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11537 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11541 */;
-import QuestActionCreators from "QuestActionCreators" /* 11542 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11567 */;
+import ReactionUtils from "ReactionUtils" /* 4408 */;
+import ToastUtils from "ToastUtils" /* 4454 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4455 */;
+import Client from "Client" /* 4687 */;
+import HapticUtils from "HapticUtils" /* 4725 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4726 */;
+import ChannelUtils from "ChannelUtils" /* 4902 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4907 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4937 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4981 */;
+import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 5270 */;
+import QuestTypes from "QuestTypes" /* 5666 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5788 */;
+import ClipboardUtils from "ClipboardUtils" /* 7436 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7541 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7701 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7766 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 8008 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 8009 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 8010 */;
+import tracking_Tracking from "tracking/Tracking" /* 8012 */;
+import _modDef11523 from "module_11523" /* 11523 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11524 */;
+import computeScrollData from "computeScrollData" /* 11540 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11541 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11545 */;
+import QuestActionCreators from "QuestActionCreators" /* 11546 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11571 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7835 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7838 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5630 */;
-import MessageStore from "MessageStore" /* 4976 */;
-import NetworkStore from "NetworkStore" /* 4805 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
-import ReadStateStore from "ReadStateStore" /* 4771 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5632 */;
+import MessageStore from "MessageStore" /* 4977 */;
+import NetworkStore from "NetworkStore" /* 4806 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
+import ReadStateStore from "ReadStateStore" /* 4772 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -208,8 +208,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9654).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(8191);
+let closure_5 = fn(9660).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(8195);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_17, MessageEmbedTypes: closure_18, MessageTypes: closure_19, Permissions: closure_20, MAX_MESSAGES_PER_CHANNEL: closure_21 } = Constants);
@@ -398,7 +398,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef11519;
+    tmp36Result = _modDef11523;
     obj3.icon = tmp36Result;
     t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();

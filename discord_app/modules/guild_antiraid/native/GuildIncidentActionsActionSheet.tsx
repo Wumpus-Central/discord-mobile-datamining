@@ -1,13 +1,13 @@
-// === Module 12083: GuildIncidentActionsActionSheet ===
+// === Module 12087: GuildIncidentActionsActionSheet ===
 
-// Module 12083 (GuildIncidentActionsActionSheet)
+// Module 12087 (GuildIncidentActionsActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8273 */;
-import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 12085 */;
-import GuildRaidLockdownFeedbackActionSheetDefault from "GuildRaidLockdownFeedbackActionSheet" /* 12086 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8277 */;
+import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 12089 */;
+import GuildRaidLockdownFeedbackActionSheetDefault from "GuildRaidLockdownFeedbackActionSheet" /* 12090 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10337 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10343 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -18,9 +18,9 @@ function DurationSelectionActionSheet(onClose) {
   const obj2 = { title: null };
   const intl = onClose(1115).intl;
   obj2.title = intl.string(onClose(1115).t.vKYZzc);
-  const items = [closure_14(onClose(7394).BottomSheetTitleHeader, obj2), ];
+  const items = [closure_14(onClose(7396).BottomSheetTitleHeader, obj2), ];
   const arr = getTimeframes();
-  items[1] = closure_14(onClose(7444).ActionSheetRow.Group, {
+  items[1] = closure_14(onClose(7446).ActionSheetRow.Group, {
     hasIcons: false,
     children: getTimeframes().map((label) => closure_1_14(onClose(dependencyMap[10]).ActionSheetRow, {
       label: label.label,
@@ -31,16 +31,16 @@ function DurationSelectionActionSheet(onClose) {
     }, label.value))
   });
   obj.children = items;
-  return closure_15(onClose(7442).ActionSheet, obj);
+  return closure_15(onClose(7444).ActionSheet, obj);
 }
-const GuildIncidentsActionSheetStore = fn(12084);
+const GuildIncidentsActionSheetStore = fn(12088);
 ({ resetGuildIncidentsActionSheetStore: hasOwnProperty, setInitialTime: metroRequire, setPauseDms: closure_7, setPauseInvites: closure_8, setTime: closure_9, useGuildIncidentsActionSheetStore: c10 } = GuildIncidentsActionSheetStore);
-const getTimeframes = fn(8274).getTimeframes;
+const getTimeframes = fn(8278).getTimeframes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 const value = createStyles.createStyles({ beta: { marginLeft: -12 } });
 class GuildIncidentActionsActionSheet {
   constructor(arg0) {

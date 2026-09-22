@@ -1,14 +1,14 @@
-// === Module 13373: UserProfileActivityEmptyStates ===
+// === Module 13378: UserProfileActivityEmptyStates ===
 
-// Module 13373 (UserProfileActivityEmptyStates)
+// Module 13378 (UserProfileActivityEmptyStates)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
-import components_Button_Button from "components/Button/Button" /* 5186 */;
-import openUserSettings from "openUserSettings" /* 7624 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4770 */;
+import components_Button_Button from "components/Button/Button" /* 5187 */;
+import openUserSettings from "openUserSettings" /* 7627 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -94,7 +94,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   }
 ];
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = { container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 }, text: null, centeredText: null, buttons: null };
 let obj3 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 };
 obj.text = { gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -108,9 +108,9 @@ const memoResult = noop.memo((user) => {
   let name;
   ({ guildId, channelId } = user);
   const tmp = closure_10();
-  name = name(4908).getName(guildId, channelId, user);
+  name = name(4909).getName(guildId, channelId, user);
   const intl = user(1115).intl;
-  let obj = name(4908);
+  let obj = name(4909);
   items = [user.id];
   let obj2 = {
     heading: intl.formatToPlainString(user(1115).t.sjSitP, { name }),
@@ -133,7 +133,7 @@ const memoResult = noop.memo((user) => {
   const intl2 = user(1115).intl;
   obj4.text = intl2.string(user(1115).t["g33r/P"]);
   obj4.onPress = callback;
-  obj3.children = closure_7(user(5186).Button, obj4);
+  obj3.children = closure_7(user(5187).Button, obj4);
   obj2.children = closure_7(View, obj3);
   return closure_7(EmptyState, obj2);
 });

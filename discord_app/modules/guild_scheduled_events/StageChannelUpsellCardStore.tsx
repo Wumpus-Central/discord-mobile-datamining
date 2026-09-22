@@ -1,9 +1,9 @@
-// === Module 9815: StageChannelUpsellCardStore ===
+// === Module 9821: StageChannelUpsellCardStore ===
 
-// Module 9815 (StageChannelUpsellCardStore)
+// Module 9821 (StageChannelUpsellCardStore)
 import Storage2 from "Storage" /* 510 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2047 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2048 */;
 import _mod4379 from "module_4379" /* 4379 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;

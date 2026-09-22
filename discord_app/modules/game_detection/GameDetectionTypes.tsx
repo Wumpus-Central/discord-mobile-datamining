@@ -1,6 +1,6 @@
-// === Module 2018: GameDetectionTypes ===
+// === Module 2019: GameDetectionTypes ===
 
-// Module 2018 (GameDetectionTypes)
+// Module 2019 (GameDetectionTypes)
 import Record from "Record" /* 1387 */;
 
 const createExecutable = fn(2002).createExecutable;

@@ -1,9 +1,9 @@
-// === Module 6084: ChestOrbSpotIllustration ===
+// === Module 6086: ChestOrbSpotIllustration ===
 
-// Module 6084 (ChestOrbSpotIllustration)
+// Module 6086 (ChestOrbSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef6085 from "module_6085" /* 6085 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef6087 from "module_6087" /* 6087 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ChestOrbSpotIllustration = function ChestOrbSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6085 };
+  const obj2 = { uri: _modDef6087 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

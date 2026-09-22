@@ -1,14 +1,14 @@
-// === Module 16953: VibegrationsProjectSettingsSheet ===
+// === Module 16965: VibegrationsProjectSettingsSheet ===
 
-// Module 16953 (VibegrationsProjectSettingsSheet)
+// Module 16965 (VibegrationsProjectSettingsSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5275 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5277 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9309 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9314 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -161,7 +161,7 @@ const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsProjectSettingsSheet = "VibegrationsProjectSettingsSheet";
 VibegrationsCollaboratorRolesSheet = "VibegrationsCollaboratorRolesSheet";
-let createStyles = fn(4756);
+let createStyles = fn(4757);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -172,7 +172,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(4756);
+createStyles = fn(4757);
 let closure_15 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };

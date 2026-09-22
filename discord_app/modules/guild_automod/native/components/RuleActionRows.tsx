@@ -1,15 +1,15 @@
-// === Module 17968: RuleActionRows ===
+// === Module 17980: RuleActionRows ===
 
-// Module 17968 (RuleActionRows)
+// Module 17980 (RuleActionRows)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import Stack_Stack from "Stack/Stack" /* 5184 */;
-import TableRow from "TableRow" /* 5822 */;
-import FormCheckbox from "FormCheckbox" /* 5834 */;
-import getActionInfo from "getActionInfo" /* 17948 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import Stack_Stack from "Stack/Stack" /* 5185 */;
+import TableRow from "TableRow" /* 5824 */;
+import FormCheckbox from "FormCheckbox" /* 5836 */;
+import getActionInfo from "getActionInfo" /* 17960 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 
 require = fn;
 function RuleActionRow(onPress) {
@@ -54,11 +54,11 @@ function RuleActionRow(onPress) {
     return timestampProducer(TableRow.TableRow, obj2);
   }
 }
-let closure_4 = fn(2096).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(12117).AutomodActionType;
+let closure_4 = fn(4394).GUILD_SELECTABLE_CHANNELS_KEY;
+const AutomodActionType = fn(12121).AutomodActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { subLabel: { marginTop: nativeDefault.space.PX_4 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -67,7 +67,7 @@ const result = size.fileFinishedImporting("modules/guild_automod/native/componen
 export default function RuleActionRows(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
-  const availableActionTypes = rule(17944).getAvailableActionTypes(rule.triggerType);
+  const availableActionTypes = rule(17956).getAvailableActionTypes(rule.triggerType);
   let tmp3 = null;
   if (0 !== availableActionTypes.length) {
     let obj2 = { title: null, hasIcons: true, children: null };
@@ -175,7 +175,7 @@ export default function RuleActionRows(rule) {
         }
       }, actionType);
     });
-    tmp3 = closure_6(tmp(5904).TableRowGroup, obj2);
+    tmp3 = closure_6(tmp(5906).TableRowGroup, obj2);
   }
   return tmp3;
 };

@@ -1,18 +1,18 @@
-// === Module 16653: FavoritesGuildCoachmarkIntro ===
+// === Module 16664: FavoritesGuildCoachmarkIntro ===
 
-// Module 16653 (FavoritesGuildCoachmarkIntro)
+// Module 16664 (FavoritesGuildCoachmarkIntro)
 import util from "util" /* 1115 */;
 import _modDef3324 from "module_3324" /* 3324 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10491 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16648 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10497 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16659 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16624 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16635 */;
 
 require = fn;
 const FAVORITES = fn(1074).FAVORITES;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const __initData = { code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}" };
 const __initData2 = { code: "function FavoritesGuildCoachmarkIntroTsx2(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}" };

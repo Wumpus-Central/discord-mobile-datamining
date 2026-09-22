@@ -1,12 +1,12 @@
-// === Module 8353: utils/ChangeLogUtils ===
+// === Module 8357: utils/ChangeLogUtils ===
 
-// Module 8353 (utils/ChangeLogUtils)
+// Module 8357 (utils/ChangeLogUtils)
 import nativeDefault from "native" /* 576 */;
 import _modDef1929 from "module_1929" /* 1929 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 8354 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 8358 */;
 import noop from "module_19" /* 19 */;
-import CustomMarkup from "CustomMarkup" /* 5206 */;
+import CustomMarkup from "CustomMarkup" /* 5207 */;
 
 require = fn;
 function ChangeLogLink(arg0) {
@@ -112,11 +112,11 @@ function ChangeLogBlockQuote(state) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, image: { alignSelf: "center", flex: 1 }, container: null, text: null };
 const obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5658).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5658).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5660).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5660).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});

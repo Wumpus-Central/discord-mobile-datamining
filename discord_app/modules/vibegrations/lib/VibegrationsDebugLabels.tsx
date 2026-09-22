@@ -1,9 +1,9 @@
-// === Module 17068: VibegrationsDebugLabels ===
+// === Module 17080: VibegrationsDebugLabels ===
 
-// Module 17068 (VibegrationsDebugLabels)
+// Module 17080 (VibegrationsDebugLabels)
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 17067 */;
+import VibegrationsDebugFormat from "VibegrationsDebugFormat" /* 17079 */;
 import size from "module_2" /* 2 */;
 
 const set = new Set(["error", "aborted", "length"]);

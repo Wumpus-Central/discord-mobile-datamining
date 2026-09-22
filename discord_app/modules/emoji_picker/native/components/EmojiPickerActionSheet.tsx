@@ -1,28 +1,28 @@
-// === Module 11389: EmojiPickerActionSheet ===
+// === Module 11393: EmojiPickerActionSheet ===
 
-// Module 11389 (EmojiPickerActionSheet)
+// Module 11393 (EmojiPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import SearchField from "SearchField" /* 7295 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 10543 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11388 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 11390 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 11392 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import SearchField from "SearchField" /* 7297 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10549 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11392 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 11394 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 11396 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(10548).EmojiPickerSource;
+const EmojiPickerSource = fn(10554).EmojiPickerSource;
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
 let EmojiIntention = fn(1375).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { header: { flexDirection: "column" }, searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 }, content: null, background: null, headerText: null, headerSpacer: null, burstReaction: null };
 let obj3 = { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };

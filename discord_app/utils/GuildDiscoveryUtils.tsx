@@ -1,13 +1,13 @@
-// === Module 7583: GuildDiscoveryUtils ===
+// === Module 7586: GuildDiscoveryUtils ===
 
-// Module 7583 (GuildDiscoveryUtils)
+// Module 7586 (GuildDiscoveryUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import _modDef1472 from "module_1472" /* 1472 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4396 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4675 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import LurkingStore from "LurkingStore" /* 4397 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4676 */;
+import GuildStore from "GuildStore" /* 2064 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
@@ -132,7 +132,7 @@ let closure_11 = async function _startLurking(arg0) {
   }
   closure_133_2 = obj5;
   closure_133_3 = closure_3;
-  return "PX_16";
+  return "flex";
 };
 function makeDiscoverableGuild(body) {
   const obj = { id: body.id, name: body.name, description: body.description, splash: body.splash, banner: body.banner, icon: body.icon, features: new Set(body.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: null, preferredLocale: null, discoverySplash: null, emojis: null, emojiCount: null, stickers: null, stickerCount: null, keywords: null };

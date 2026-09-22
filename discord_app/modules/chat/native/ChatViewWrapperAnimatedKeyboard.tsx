@@ -1,17 +1,17 @@
-// === Module 11614: ChatViewWrapperAnimatedKeyboard ===
+// === Module 11618: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 11614 (ChatViewWrapperAnimatedKeyboard)
-import timing from "timing" /* 4757 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5796 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11620 */;
+// Module 11618 (ChatViewWrapperAnimatedKeyboard)
+import timing from "timing" /* 4758 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5798 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 11624 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const Easing = fn(4492).Easing;
-let obj = { duration: fn(4760).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
+const Easing = fn(4493).Easing;
+let obj = { duration: fn(4761).timingStandardDuration, easing: Easing.bezier(0.2, 0, 0, 1) };
 const __initData = { code: "function ChatViewWrapperAnimatedKeyboardTsx1(){const{animatedHeight}=this.__closure;return animatedHeight.get();}" };
 const __initData2 = { code: "function ChatViewWrapperAnimatedKeyboardTsx2(height,heightPrev){const{animatedAdjustedMargin,animatedAdjustedMarginPending}=this.__closure;if(heightPrev==null){return;}if(height<heightPrev){animatedAdjustedMargin.set(height);animatedAdjustedMarginPending.set(-1);}else{animatedAdjustedMarginPending.set(height);}}" };
 const __initData3 = { code: "function ChatViewWrapperAnimatedKeyboardTsx3(){const{animatedAdjustedMargin,withTiming,animatedHeight,INSET_ANIMATION_CONFIG2,animatedAdjustedMarginPending}=this.__closure;return{flex:1,marginTop:animatedAdjustedMargin.get(),transform:[{translateY:withTiming(-animatedHeight.get(),INSET_ANIMATION_CONFIG2,'respect-motion-settings',function(finished){if(!finished){return;}if(animatedAdjustedMarginPending.get()!==-1){animatedAdjustedMargin.set(animatedAdjustedMarginPending.get());animatedAdjustedMarginPending.set(-1);}})}]};}" };

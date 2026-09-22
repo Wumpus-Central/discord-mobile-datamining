@@ -1,6 +1,6 @@
-// === Module 6567: ? ===
+// === Module 6569: ? ===
 
-// Module 6567
+// Module 6569
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWumpusPinkSpotIllustration-2x.png.js");

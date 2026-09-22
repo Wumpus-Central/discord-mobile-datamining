@@ -1,8 +1,8 @@
-// === Module 16530: GameClaimCardStack ===
+// === Module 16541: GameClaimCardStack ===
 
-// Module 16530 (GameClaimCardStack)
+// Module 16541 (GameClaimCardStack)
 import nativeDefault from "native" /* 576 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 9146 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 9151 */;
 import noop from "module_19" /* 19 */;
 import n_mod from "module_672" /* 672 */;
 
@@ -24,7 +24,7 @@ let n = n_mod;
 const hexResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = { container: null, gameCard: null, gameImage: null, addCard: null, addIconWrapper: null };
 const hexResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35).hex();
 obj.container = { flexDirection: "row", alignItems: "flex-start", justifyContent: "center", width: "100%", paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_16 + 4 };

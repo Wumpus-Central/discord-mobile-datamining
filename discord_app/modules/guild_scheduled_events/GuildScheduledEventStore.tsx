@@ -1,6 +1,6 @@
-// === Module 7768: GuildScheduledEventStore ===
+// === Module 7771: GuildScheduledEventStore ===
 
-// Module 7768 (GuildScheduledEventStore)
+// Module 7771 (GuildScheduledEventStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -168,7 +168,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-const GuildScheduledEventsConstants = fn(2047);
+const GuildScheduledEventsConstants = fn(2048);
 ({ GuildScheduledEventStatus: closure_4, GuildScheduledEventStatusDone: hasOwnProperty, GuildScheduledEventUserResponses: metroRequire } = GuildScheduledEventsConstants);
 const StaticGuildEventIndexes = {
   EVENT: "event",

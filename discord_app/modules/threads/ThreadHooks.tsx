@@ -1,17 +1,17 @@
-// === Module 7511: ThreadHooks ===
+// === Module 7513: ThreadHooks ===
 
-// Module 7511 (ThreadHooks)
+// Module 7513 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7512 */;
-import useIsRemoteDefault from "useIsRemote" /* 7513 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7514 */;
+import useIsRemoteDefault from "useIsRemote" /* 7515 */;
 import _slicedToArray from "module_32" /* 32 */;
-import createExperiment from "createExperiment" /* 4670 */;
+import createExperiment from "createExperiment" /* 4671 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5723 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5725 */;
 
 const require = globalThis.__r;
 
@@ -134,7 +134,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(2045).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(2046).THREADED_CHANNEL_TYPES;
 const Constants = fn(1074);
 ({ Permissions: c10, MessageFlags: closure_11, ChannelTypes: closure_12 } = Constants);
 let obj = { id: "2022-07_voice_in_threads", label: "Voice in Threads", kind: "guild", defaultConfig: { enabled: false }, treatments: null };
@@ -526,8 +526,8 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   const tmp3Result = require("GameInvitesChannelUtils");
   let shouldAgeVerifyForAgeGate = require("AgeGateUtils").useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4966).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result4 = tmp3(4966);
+    shouldAgeVerifyForAgeGate = tmp3(4967).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result4 = tmp3(4967);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

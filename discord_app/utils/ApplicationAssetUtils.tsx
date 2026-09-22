@@ -1,13 +1,13 @@
-// === Module 8408: ApplicationAssetUtils ===
+// === Module 8412: ApplicationAssetUtils ===
 
-// Module 8408 (ApplicationAssetUtils)
+// Module 8412 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1431 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8409 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8413 */;
 
 require = fn;
 function updateAssets() {
@@ -315,7 +315,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
     num13 = 1;
   }
   closure_131_2 = num13;
-  return "PX_16";
+  return "flex";
 };
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, PlatformTypes } = Constants);

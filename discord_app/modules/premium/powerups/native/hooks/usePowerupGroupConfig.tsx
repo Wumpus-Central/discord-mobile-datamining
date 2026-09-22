@@ -1,14 +1,14 @@
-// === Module 12803: usePowerupGroupConfig ===
+// === Module 12807: usePowerupGroupConfig ===
 
-// Module 12803 (usePowerupGroupConfig)
+// Module 12807 (usePowerupGroupConfig)
 import util from "util" /* 1115 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import _modDef2514 from "module_2514" /* 2514 */;
-import GuildTagUtils from "GuildTagUtils" /* 8434 */;
-import _modDef12804 from "module_12804" /* 12804 */;
-import _modDef12805 from "module_12805" /* 12805 */;
+import GuildTagUtils from "GuildTagUtils" /* 8438 */;
+import _modDef12808 from "module_12808" /* 12808 */;
+import _modDef12809 from "module_12809" /* 12809 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 
 const require = globalThis.__r;
 
@@ -36,7 +36,7 @@ export default function usePowerupGroupConfig(arg0, arg1) {
       obj2.title = intl.string(_modDef2514.KC9HRW);
       const intl2 = util.intl;
       obj2.description = intl2.string(_modDef2514.GJiSmP);
-      const obj3 = { staticUrl: _modDef12804, animatedUrl: _modDef12805 };
+      const obj3 = { staticUrl: _modDef12808, animatedUrl: _modDef12809 };
       obj2.image = obj3;
       let stringResult;
       if (!stateFromStores) {

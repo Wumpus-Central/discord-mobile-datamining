@@ -1,9 +1,9 @@
-// === Module 8010: ForumSearchStore ===
+// === Module 8013: ForumSearchStore ===
 
-// Module 8010 (ForumSearchStore)
+// Module 8013 (ForumSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 
 const dependencyMap = {};
 const Store = initializeDefault.Store;

@@ -1,9 +1,9 @@
-// === Module 6728: StreamSpotIllustration ===
+// === Module 6730: StreamSpotIllustration ===
 
-// Module 6728 (StreamSpotIllustration)
+// Module 6730 (StreamSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef6729 from "module_6729" /* 6729 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef6731 from "module_6731" /* 6731 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const StreamSpotIllustration = function StreamSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef6729 };
+  const obj2 = { uri: _modDef6731 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

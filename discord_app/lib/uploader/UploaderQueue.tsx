@@ -1,6 +1,6 @@
-// === Module 8084: UploaderQueue ===
+// === Module 8087: UploaderQueue ===
 
-// Module 8084 (UploaderQueue)
+// Module 8087 (UploaderQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

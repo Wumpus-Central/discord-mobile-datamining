@@ -1,6 +1,6 @@
-// === Module 8534: MediaPlayerMuteManager ===
+// === Module 8538: MediaPlayerMuteManager ===
 
-// Module 8534 (MediaPlayerMuteManager)
+// Module 8538 (MediaPlayerMuteManager)
 import get_ActivityIndicator from "module_17" /* 17 */;
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
@@ -10,7 +10,7 @@ const useMediaPlayerMutedStore = module_560.create(() => ({ isMuted: false }));
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaPlayerManager);
 class MediaPlayerMuteManager {
   constructor() {
-    return Object.assign({ muteSubscription: "r" });
+    return Object.assign({ muteSubscription: "max" });
   }
 }
 const prototype = MediaPlayerMuteManager.prototype;
@@ -30,5 +30,5 @@ prototype["terminate"] = function terminate() {
 };
 const result = size.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
 
-export default Object.assign({ muteSubscription: "r" });
+export default Object.assign({ muteSubscription: "max" });
 export { useMediaPlayerMutedStore };

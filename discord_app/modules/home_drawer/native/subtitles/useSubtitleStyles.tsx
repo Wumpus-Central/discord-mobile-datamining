@@ -1,7 +1,7 @@
-// === Module 16664: useSubtitleStyles ===
+// === Module 16675: useSubtitleStyles ===
 
-// Module 16664 (useSubtitleStyles)
-import createStyles from "createStyles" /* 4756 */;
+// Module 16675 (useSubtitleStyles)
+import createStyles from "createStyles" /* 4757 */;
 import size from "module_2" /* 2 */;
 
 const styles = createStyles.createStyles({ subtitleRow: { flexDirection: "row", alignItems: "center" }, subtitleText: { flexShrink: 1 }, channelIcon: { marginRight: 2 }, unreadChannelIcon: { marginLeft: 2, marginRight: 2 } });

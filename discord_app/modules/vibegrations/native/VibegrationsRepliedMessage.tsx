@@ -1,10 +1,10 @@
-// === Module 17022: VibegrationsRepliedMessage ===
+// === Module 17034: VibegrationsRepliedMessage ===
 
-// Module 17022 (VibegrationsRepliedMessage)
+// Module 17034 (VibegrationsRepliedMessage)
 import nativeDefault from "native" /* 576 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16936 */;
-import VibegrationsSelectedMentionDefault from "VibegrationsSelectedMention" /* 17027 */;
+import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16948 */;
+import VibegrationsSelectedMentionDefault from "VibegrationsSelectedMention" /* 17039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,10 +12,10 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const diff = fn(17020).MESSAGE_EDGE_INSET + fn(17020).MESSAGE_AVATAR_SIZE / 2 - 1;
-const diff1 = fn(17020).MESSAGE_CONTENT_INSET - 4 - diff;
-const createStyles = fn(4756);
-let obj2 = { root: { marginLeft: diff - fn(17020).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
+const diff = fn(17032).MESSAGE_EDGE_INSET + fn(17032).MESSAGE_AVATAR_SIZE / 2 - 1;
+const diff1 = fn(17032).MESSAGE_CONTENT_INSET - 4 - diff;
+const createStyles = fn(4757);
+let obj2 = { root: { marginLeft: diff - fn(17032).MESSAGE_CONTENT_INSET, paddingLeft: diff1 + 4, height: 20, flexDirection: "row", alignItems: "flex-start" }, spine: null, avatar: null, name: null, content: null };
 const rect = { position: "absolute", left: 0, top: 9, bottom: 0, width: diff1, borderTopWidth: 2, borderLeftWidth: 2, borderColor: nativeDefault.colors.SPINE_DEFAULT, borderTopLeftRadius: Math.round(0.25 * diff1) };
 obj2.spine = rect;
 obj2.avatar = { marginRight: 4 };
@@ -29,9 +29,9 @@ export default function VibegrationsRepliedMessage(replied) {
   replied = replied.replied;
   const onJump = replied.onJump;
   const tmp = closure_8();
-  const messageAuthorUser = replied(17023).useMessageAuthorUser(replied.userId);
-  const obj = replied(17023);
-  let str = replied(4600).useName(messageAuthorUser);
+  const messageAuthorUser = replied(17035).useMessageAuthorUser(replied.userId);
+  const obj = replied(17035);
+  let str = replied(4601).useName(messageAuthorUser);
   if (str == null) {
     str = "";
   }
@@ -44,7 +44,7 @@ export default function VibegrationsRepliedMessage(replied) {
   if (body == null) {
     body = replied.content;
   }
-  const obj2 = replied(4600);
+  const obj2 = replied(4601);
   const trimmed = body.replace(/\s+/g, " ").trim();
   const obj3 = { style: tmp.root, onPress: onJump, disabled: null == onJump, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = tmp2(1115).intl;
@@ -54,11 +54,11 @@ export default function VibegrationsRepliedMessage(replied) {
   if (null != messageAuthorUser) {
     const obj5 = { style: tmp.avatar, children: null };
     const obj6 = { userId: replied.userId, size: tmp2(1177).AvatarSizes.SIZE_16 };
-    obj5.children = closure_6(tmp2(17023).VibegrationsUserAvatar, obj6);
+    obj5.children = closure_6(tmp2(17035).VibegrationsUserAvatar, obj6);
     tmp11Result = closure_6(closure_5, obj5);
   }
   items1[1] = tmp11Result;
-  items1[2] = closure_6(replied(4752).Text, { variant: "text-xs/semibold", color: "text-default", style: tmp.name, lineClamp: 1, children: str });
+  items1[2] = closure_6(replied(4753).Text, { variant: "text-xs/semibold", color: "text-default", style: tmp.name, lineClamp: 1, children: str });
   const obj8 = { variant: "text-xs/medium", color: "interactive-text-default", style: tmp.content, lineClamp: 1, children: null };
   let tmp11Result2 = null;
   if (null != memo) {
@@ -76,7 +76,7 @@ export default function VibegrationsRepliedMessage(replied) {
   items2[1] = str3;
   items2[2] = trimmed;
   obj8.children = items2;
-  items1[3] = closure_7(replied(4752).Text, obj8);
+  items1[3] = closure_7(replied(4753).Text, obj8);
   obj3.children = items1;
   return closure_7(closure_4, obj3);
 };

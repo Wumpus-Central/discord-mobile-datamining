@@ -1,22 +1,21 @@
-// === Module 14073: RTCMediaSinkWantsManager ===
+// === Module 14081: RTCMediaSinkWantsManager ===
 
-// Module 14073 (RTCMediaSinkWantsManager)
+// Module 14081 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4811 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9696 */;
-import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 14074 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4812 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9702 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4814 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4815 */;
 
 require = fn;
 function getDefaultWants(wantsLevel) {
-  const obj = BrowserInvertedWantsExperiment;
-  if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
+  const obj = PlatformUtils;
+  if (obj.isWeb()) {
     const obj2 = {};
     const merged = Object.assign(obj);
     obj3 = obj2;
@@ -26,12 +25,12 @@ function getDefaultWants(wantsLevel) {
   return obj3;
 }
 const VideoToggleState = fn(1074).VideoToggleState;
-const SimulcastOverrideQuality = fn(4781).SimulcastOverrideQuality;
+const SimulcastOverrideQuality = fn(4782).SimulcastOverrideQuality;
 let c7 = 100;
 const DEFAULT_WANTS_DISABLED = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(5077);
+const BrowserUtils = fn(5078);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 let obj3 = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {
@@ -59,7 +58,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
     tmp14 = closure_2;
     tmp12 = c7;
     obj = closure_0(closure_2[6]);
-    if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
+    if (obj.isWeb()) {
       obj1 = {};
       tmp15 = closure_8;
       tmp16 = obj1;
@@ -177,7 +176,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
       const wantsLevel = closure_0.getWantsLevel();
       let tmp5 = getDefaultWants(wantsLevel);
       let tmp9 = tmp5;
-      if (obj2.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.update").invertWants) {
+      if (obj2.isWeb()) {
         closure_0.invertWants(tmp5, wantsLevel);
         let tmp13 = tmp5;
         if (closure_11) {
@@ -188,7 +187,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
         tmp9 = tmp13;
       }
       closure_0.updateOffscreenUsers();
-      obj2 = BrowserInvertedWantsExperiment;
+      obj2 = PlatformUtils;
       let isDesktopResult = PlatformUtils.isDesktop();
       if (isDesktopResult) {
         isDesktopResult = closure_0.isOneToOneCall();
@@ -219,22 +218,22 @@ class RTCMediaSinkWantsManager extends tmp2 {
           }
           let tmp41 = tmp37;
           if (arr2.length > 1) {
-            for (const item10121 of arr2) {
-              if (item10121.quality === c7) {
-                let ssrc2 = item10121.ssrc;
+            for (const item10119 of arr2) {
+              if (item10119.quality === c7) {
+                let ssrc2 = item10119.ssrc;
                 if (tmp41) {
                   tmp5[ssrc2] = tmp53;
-                  ssrc = item10121.ssrc;
+                  ssrc = item10119.ssrc;
                 } else {
                   tmp5[ssrc2] = 0;
                 }
               } else if (tmp41) {
-                tmp5[item10121.ssrc] = 0;
+                tmp5[item10119.ssrc] = 0;
               } else {
                 if (isDesktopResult) {
-                  tmp5[item10121.ssrc] = wantsLevel1;
+                  tmp5[item10119.ssrc] = wantsLevel1;
                 }
-                ssrc = item10121.ssrc;
+                ssrc = item10119.ssrc;
               }
               continue;
             }
@@ -243,24 +242,24 @@ class RTCMediaSinkWantsManager extends tmp2 {
                 flag = true;
                 let items2 = [ssrc];
                 items1 = items2;
-                for (const item10152 of arr2) {
-                  let tmp70 = item10152.ssrc !== ssrc;
+                for (const item10150 of arr2) {
+                  let tmp70 = item10150.ssrc !== ssrc;
                   if (tmp70) {
-                    tmp70 = closure_0.framesReceived[item10152.ssrc];
+                    tmp70 = closure_0.framesReceived[item10150.ssrc];
                   }
                   if (!tmp70) {
                     continue;
                   } else {
-                    if (item10152.quality === c7) {
-                      tmp5[item10152.ssrc] = tmp76;
+                    if (item10150.quality === c7) {
+                      tmp5[item10150.ssrc] = tmp76;
                     } else {
                       let tmp78 = wantsLevel;
                       if (isDesktopResult) {
                         tmp78 = wantsLevel1;
                       }
-                      tmp5[item10152.ssrc] = tmp78;
+                      tmp5[item10150.ssrc] = tmp78;
                     }
-                    let arr = items1.push(item10152.ssrc);
+                    let arr = items1.push(item10150.ssrc);
                   }
                 }
               }
@@ -271,8 +270,8 @@ class RTCMediaSinkWantsManager extends tmp2 {
             tmp5[ssrc] = wantsLevel1;
           }
         } else {
-          for (const item10096 of arr2) {
-            tmp5[item10096.ssrc] = 0;
+          for (const item10094 of arr2) {
+            tmp5[item10094.ssrc] = 0;
             continue;
           }
         }
@@ -287,10 +286,10 @@ class RTCMediaSinkWantsManager extends tmp2 {
           let items3 = [ssrc];
           items1 = items3;
         }
-        for (const item10201 of arr2) {
-          if (!items1.includes(item10201.ssrc)) {
+        for (const item10199 of arr2) {
+          if (!items1.includes(item10199.ssrc)) {
             let framesReceived = closure_0.framesReceived;
-            let ssrc3 = item10201.ssrc;
+            let ssrc3 = item10199.ssrc;
             delete tmp2[tmp];
           }
           continue;
@@ -315,8 +314,8 @@ class RTCMediaSinkWantsManager extends tmp2 {
         tmp5 = tmp9;
       }
       const entries1 = Object.entries(closure_0.audioSsrcs);
-      for (const item10265 of entries1) {
-        let tmp131 = _slicedToArray(item10265, 2);
+      for (const item10263 of entries1) {
+        let tmp131 = _slicedToArray(item10263, 2);
         [tmp132, tmp133] = tmp131;
         connection = closure_0.connection;
         let localMute;
@@ -560,8 +559,8 @@ prototype["reset"] = function reset() {
   this.framesReceived = {};
   this.streamIds = {};
   this.streamPixelCounts = {};
-  const obj = BrowserInvertedWantsExperiment;
-  if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
+  const obj = PlatformUtils;
+  if (obj.isWeb()) {
     const obj2 = {};
     const merged = Object.assign(obj);
     obj3 = obj2;

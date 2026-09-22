@@ -1,15 +1,15 @@
-// === Module 17527: useSoundOrganizer ===
+// === Module 17539: useSoundOrganizer ===
 
-// Module 17527 (useSoundOrganizer)
+// Module 17539 (useSoundOrganizer)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import size from "module_2" /* 2 */;
 
-function sortSoundsOldestToNewestCreationDate(value7) {
+function sortSoundsOldestToNewestCreationDate(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
-  const items = [...value7];
+  const items = [...arg0];
   const sorted = items.sort((soundId, soundId2) => SnowflakeUtilsDefault.compare(soundId.soundId, soundId2.soundId));
   let sorted1 = sorted;
   if (flag) {
@@ -36,6 +36,33 @@ function sortSoundsOldestToNewestCreationDate(value7) {
 const result = size.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
 
 export { sortSoundsOldestToNewestCreationDate };
+export const sortSoundsOldestToNewestFavoriteDate = function sortSoundsOldestToNewestFavoriteDate(arg0) {
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  let sorted = arg0;
+  if (flag) {
+    const items = [];
+    HermesBuiltin.arraySpread(arg0, 0);
+    sorted = items.sort((available, available2) => {
+      if (!available.available) {
+        let num2 = 0;
+        if (!available.available) {
+          num2 = 0;
+          if (available2.available) {
+            num2 = 1;
+          }
+        }
+        let num = num2;
+      } else {
+        num = -1;
+      }
+      return num;
+    });
+  }
+  return sorted;
+};
 export function useSoundOrganizer() {
   return sortSoundsOldestToNewestCreationDate;
 }

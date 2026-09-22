@@ -1,14 +1,14 @@
-// === Module 5764: MemberVerificationActionCreators ===
+// === Module 5766: MemberVerificationActionCreators ===
 
-// Module 5764 (MemberVerificationActionCreators)
+// Module 5766 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4741 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4742 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2098 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import InviteStore from "InviteStore" /* 4740 */;
+import InviteStore from "InviteStore" /* 4741 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -282,7 +282,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           let body;
           c8 = 1;
           c9 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -1,6 +1,6 @@
-// === Module 17047: VibegrationsViewability ===
+// === Module 17059: VibegrationsViewability ===
 
-// Module 17047 (VibegrationsViewability)
+// Module 17059 (VibegrationsViewability)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsViewability.tsx");

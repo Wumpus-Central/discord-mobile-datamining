@@ -1,6 +1,6 @@
-// === Module 8483: ShopThisLookMobileExperiment ===
+// === Module 8487: ShopThisLookMobileExperiment ===
 
-// Module 8483 (ShopThisLookMobileExperiment)
+// Module 8487 (ShopThisLookMobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

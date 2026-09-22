@@ -1,9 +1,10 @@
-// === Module 8865: ManualReviewActionCreators ===
+// === Module 8870: ManualReviewActionCreators ===
 
-// Module 8865 (ManualReviewActionCreators)
+// Module 8870 (ManualReviewActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8690 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8694 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -87,19 +88,26 @@ let closure_14 = async function _handleManualReviewCta() {
               c5 = 1;
               obj8 = SafetyHubUtils;
             } else if (closure_128_0.status === closure_129_7.SUBMITTED) {
-              const result = closure_129_1(closure_129_2[7]).showManualReviewPendingModal();
+              const result = closure_129_1(closure_129_2[8]).showManualReviewPendingModal();
               c3 = 0;
               closure_129_11 = false;
               c5 = 3;
               const obj9 = { value: undefined, done: true };
               return obj9;
             } else if (closure_128_0.status !== closure_129_7.DECIDED_TEEN) {
-              const result1 = closure_129_1(closure_129_2[7]).showManualReviewWebview(closure_128_0.verification_webview_url);
+              const result1 = closure_129_1(closure_129_2[8]).showManualReviewWebview(closure_128_0.verification_webview_url, () => {
+                if (obj.isCurrentUserSuspended()) {
+                  c12 = null;
+                  closure_1_1(dependencyMap[6]).dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" });
+                  const obj2 = closure_1_1(dependencyMap[6]);
+                }
+                obj = closure_1_0(dependencyMap[7]);
+              });
               c3 = 1;
-              const obj3 = closure_129_1(closure_129_2[7]);
+              const obj3 = closure_129_1(closure_129_2[8]);
             }
           }
-          const result2 = closure_129_1(closure_129_2[7]).showManualReviewDecidedTeenModal(closure_128_0.teen_age_range);
+          const result2 = closure_129_1(closure_129_2[8]).showManualReviewDecidedTeenModal(closure_128_0.teen_age_range);
           c3 = 0;
           closure_129_11 = false;
           c5 = 3;
@@ -109,11 +117,11 @@ let closure_14 = async function _handleManualReviewCta() {
       } else if (1 === tmp8) {
         c3 = 0;
         closure_129_11 = false;
-        throw closure_2;
+        throw dependencyMap;
       } else if (2 === tmp8) {
         c3 = 1;
-        closure_129_1(closure_129_2[8]).showFailedToast(closure_129_6.TIGGER_PAWTECT_ERROR);
-        const obj2 = closure_129_1(closure_129_2[8]);
+        closure_129_1(closure_129_2[9]).showFailedToast(closure_129_6.TIGGER_PAWTECT_ERROR);
+        let obj2 = closure_129_1(closure_129_2[9]);
       } else if (arg0 === 1) {
         c5 = 3;
         throw value;
@@ -121,7 +129,7 @@ let closure_14 = async function _handleManualReviewCta() {
         c3 = 0;
         closure_129_11 = false;
         c5 = 3;
-        const obj = { value, done: true };
+        let obj = { value, done: true };
         return obj;
       } else {
         closure_128_0 = value;
@@ -132,7 +140,7 @@ let closure_14 = async function _handleManualReviewCta() {
       c3 = 0;
       closure_129_11 = false;
     } catch (tmp53) {
-      closure_2 = tmp53;
+      dependencyMap = tmp53;
       if (tmp5 === c3) {
         c5 = tmp3;
         throw tmp53;
@@ -145,7 +153,7 @@ let closure_14 = async function _handleManualReviewCta() {
   }
 };
 const Endpoints = fn(1074).Endpoints;
-const SafetyToastType = fn(8670).SafetyToastType;
+const SafetyToastType = fn(8674).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;
@@ -158,6 +166,10 @@ export { ManualReviewStatus };
 export function invalidateManualReviewCache() {
   c12 = null;
 }
+export const invalidateAgeVerificationCaches = function invalidateAgeVerificationCaches() {
+  c12 = null;
+  DispatcherDefault.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" });
+};
 export const handleManualReviewCta = function handleManualReviewCta() {
   const self = this;
   const apply = closure_14.apply;

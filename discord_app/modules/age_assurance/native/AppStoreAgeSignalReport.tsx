@@ -1,19 +1,16 @@
-// === Module 17865: AppStoreAgeSignalReport ===
+// === Module 17877: AppStoreAgeSignalReport ===
 
-// Module 17865 (AppStoreAgeSignalReport)
-import TimeUtils from "TimeUtils" /* 4785 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5640 */;
-import AppStoreAgeSignalSupport from "AppStoreAgeSignalSupport" /* 8711 */;
-import AppStoreAgeSignalAttestation from "AppStoreAgeSignalAttestation" /* 8843 */;
-import AppStoreAgeAssurance from "AppStoreAgeAssurance" /* 8846 */;
+// Module 17877 (AppStoreAgeSignalReport)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
 
-require = fn;
+const require = globalThis.__r;
+
+const require = fn;
 function collectAgeSignal() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -21,7 +18,7 @@ function collectAgeSignal() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _collectAgeSignal() {
+let closure_12 = async function _collectAgeSignal() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -49,10 +46,10 @@ let closure_10 = async function _collectAgeSignal() {
           closure_1 = tmp3;
           closure_0 = tmp7;
           c3 = 1;
-          const obj6 = { firstAgeGate: AppStoreAgeSignalSupport.MIN_AGE_GATE, secondAgeGate: AppStoreAgeSignalSupport.ADULT_AGE_GATE };
+          const obj6 = { firstAgeGate: require("AppStoreAgeSignalSupport").MIN_AGE_GATE, secondAgeGate: require("AppStoreAgeSignalSupport").ADULT_AGE_GATE };
           c4 = 2;
           c5 = 1;
-          const obj7 = { value: AppStoreAgeAssurance.default.getAgeSignals(obj6), done: false };
+          const obj7 = { value: require("AppStoreAgeAssurance").default.getAgeSignals(obj6), done: false };
           return obj7;
         }
       } else if (1 === tmp7) {
@@ -94,17 +91,17 @@ let closure_10 = async function _collectAgeSignal() {
     }
   }
 };
-let closure_11 = async function _performAgeCheck(arg0) {
+let closure_13 = async function _performAgeCheck(arg0) {
   closure_2 = tmp3;
   closure_129_0 = closure_0;
-  const result = AppStoreAgeSignalAttestation.warmAgeSignalAttestation();
+  const result = require("AppStoreAgeSignalAttestation").warmAgeSignalAttestation();
   const items = [collectAgeSignal(), ];
-  items[1] = AppStoreAgeSignalAttestation.getAgeSignalChallenge();
+  items[1] = require("AppStoreAgeSignalAttestation").getAgeSignalChallenge();
   await Promise.all(items);
   if (1 === tmp7) {
     c4 = 0;
-    closure_129_6 = closure_3;
-    closure_130_1(closure_130_2[6]).captureException(closure_129_6, { tags: { source: "parental_consent_manager", step: "perform_age_check" } });
+    closure_129_7 = closure_3;
+    closure_130_1(closure_130_2[6]).captureException(closure_129_7, { tags: { source: "parental_consent_manager", step: "perform_age_check" } });
     c6 = 3;
     closure_130_1(closure_130_2[6]);
   } else if (2 === tmp7) {
@@ -136,22 +133,37 @@ let closure_11 = async function _performAgeCheck(arg0) {
       closure_129_5 = value;
       c5 = 4;
       c6 = 1;
-      return { value: closure_130_0(closure_130_2[9]).submitAgeSignal(closure_129_3, closure_129_5, closure_129_0), done: false };
+      return { value: closure_130_0(closure_130_2[8]).getAppStoreAgeSignalAssertion(closure_129_3, closure_129_0), done: false };
+    }
+  } else if (4 === tmp7) {
+    if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 0;
+      c6 = 3;
+      return { value, done: true };
+    } else {
+      closure_129_6 = value;
+      c5 = 5;
+      c6 = 1;
+      closure_130_0(closure_130_2[9]);
+      return { value: closure_130_0(closure_130_2[9]).submitAgeSignal(closure_129_3, closure_129_5, closure_129_0, "app_start", closure_129_6), done: false };
     }
   } else if (arg0 === 1) {
     c6 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    const obj14 = { platform: null };
-    obj14.platform = closure_130_0(closure_130_2[7]).getNativePlatform();
-    closure_130_1(closure_130_2[10]).track(closure_130_6.PARENTAL_CONSENT_CHECKED, obj14);
+    const obj17 = { platform: null };
+    obj17.platform = closure_130_0(closure_130_2[7]).getNativePlatform();
+    closure_130_1(closure_130_2[10]).track(closure_130_6.PARENTAL_CONSENT_CHECKED, obj17);
     c4 = 0;
     closure_130_0(closure_130_2[7]);
     closure_130_1(closure_130_2[10]);
   }
   return value;
 };
-let closure_12 = async function _settleAppStoreAgeSignalReport() {
+let closure_14 = async function _settleAppStoreAgeSignalReport() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -176,7 +188,7 @@ let closure_12 = async function _settleAppStoreAgeSignalReport() {
           const obj4 = { value, done: true };
           return obj4;
         } else if (null != React6) {
-          const items = [tmp13, TimeUtils.sleep(15000)];
+          const items = [tmp13, require("TimeUtils").sleep(15000)];
           c1 = 1;
           c0 = 1;
           const obj5 = { value: Promise.race(items), done: false };
@@ -200,37 +212,155 @@ let closure_12 = async function _settleAppStoreAgeSignalReport() {
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let c7 = false;
-let closure_8 = null;
+let c8 = null;
+let c9 = null;
+let c10 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalReport.tsx");
 
 export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalReport() {
   c7 = true;
+  const sum = c10 + 1;
+  c10 = sum;
   closure_8 = null;
   let result = null != UserStore.getCurrentUser();
   if (result) {
-    result = AppStoreAgeSignalSupport.isAppStoreAgeSignalSupported();
+    result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
+    let obj = require("AppStoreAgeSignalSupport");
   }
   if (result) {
-    result = RegionalFeatureConfigUtils.shouldCollectAppStoreSignal();
+    result = require("RegionalFeatureConfigUtils").shouldCollectAppStoreSignal();
+    let obj2 = require("RegionalFeatureConfigUtils");
   }
   if (result) {
-    closure_8 = (function performAgeCheck() {
+    _require = !c7;
+    importDefault = sum;
+    closure_3 = async function _run() {
+      if (c5 === 2) {
+        c5 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_1 = tmp3;
+              closure_0 = tmp3;
+              c3 = 1;
+              if (null != dependencyMap) {
+                c4 = 3;
+                c5 = 1;
+                const obj4 = { value: tmp25, done: false };
+                return obj4;
+              }
+            }
+          } else if (1 === tmp7) {
+            c3 = 0;
+            if (c9 === closure_129_4) {
+              c9 = null;
+            }
+            throw closure_2;
+          } else if (2 === tmp7) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              if (c9 === closure_129_4) {
+                c9 = null;
+              }
+              c5 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
+              c3 = 0;
+              if (c9 === closure_129_4) {
+                c9 = null;
+              }
+              c5 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 0;
+            if (c9 === closure_129_4) {
+              c9 = null;
+            }
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else if (closure_129_1 !== closure_1_10) {
+            c3 = 0;
+            if (c9 === closure_129_4) {
+              c9 = null;
+            }
+            c5 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+          c4 = 2;
+          c5 = 1;
+          const obj6 = {
+            value: (function performAgeCheck() {
+                  const self = this;
+                  const apply = closure_1_13.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(closure_129_0),
+            done: false
+          };
+          return obj6;
+        } catch (tmp29) {
+          closure_2 = tmp29;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp29;
+          } else {
+            c4 = tmp;
+          }
+        }
+      }
+    };
+    dependencyMap = closure_9;
+    const tmp9 = (function run() {
       const self = this;
-      const apply = closure_1_11.apply;
+      const apply = closure_3.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    })(!tmp);
+    })();
+    closure_4 = tmp9;
+    closure_9 = tmp9;
+    closure_8 = tmp9;
   }
-  tmp = c7;
 };
 export const settleAppStoreAgeSignalReport = function settleAppStoreAgeSignalReport() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

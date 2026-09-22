@@ -1,6 +1,6 @@
-// === Module 10201: getAdaptiveMessageLimit ===
+// === Module 10207: getAdaptiveMessageLimit ===
 
-// Module 10201 (getAdaptiveMessageLimit)
+// Module 10207 (getAdaptiveMessageLimit)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

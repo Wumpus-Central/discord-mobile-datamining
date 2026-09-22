@@ -1,12 +1,13 @@
-// === Module 14752: getCurrentEmbeddedChannel ===
+// === Module 14758: getCurrentEmbeddedChannel ===
 
-// Module 14752 (getCurrentEmbeddedChannel)
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14748 */;
-import FramesStore from "FramesStore" /* 9313 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+// Module 14758 (getCurrentEmbeddedChannel)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 9320 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14754 */;
+import FramesStore from "FramesStore" /* 9318 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 
-const TransportTypes = fn(4660).TransportTypes;
-const EmbeddedSurfaceType = fn(9314).EmbeddedSurfaceType;
+require = fn;
+const TransportTypes = fn(4661).TransportTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedChannel.tsx");
 
@@ -19,7 +20,7 @@ export default function getCurrentEmbeddedChannel(source) {
     }
     if (null != surface) {
       const type = surface.type;
-      if (EmbeddedSurfaceType.MAIN !== type) {
+      if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN !== type) {
         return ChannelStore.getChannel(surface.channelId);
       }
     } else {

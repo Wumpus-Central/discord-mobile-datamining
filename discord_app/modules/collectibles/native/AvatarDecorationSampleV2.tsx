@@ -1,11 +1,11 @@
-// === Module 9091: AvatarDecorationSampleV2 ===
+// === Module 9096: AvatarDecorationSampleV2 ===
 
-// Module 9091 (AvatarDecorationSampleV2)
+// Module 9096 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1973 */;
-import _modDef9092 from "module_9092" /* 9092 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9093 */;
+import _modDef9097 from "module_9097" /* 9097 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 9098 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.8333333333333334;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
   const size = { position: "absolute", height: arg0 * c8, width: arg0 * c8, borderRadius: arg0 * c8 / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -42,7 +42,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef9092;
+    avatarSource = _modDef9097;
   }
   const obj2 = { children: null };
   obj.source = avatarSource;

@@ -1,18 +1,18 @@
-// === Module 11553: QuestRewardUtils ===
+// === Module 11557: QuestRewardUtils ===
 
-// Module 11553 (QuestRewardUtils)
+// Module 11557 (QuestRewardUtils)
 import util from "util" /* 1115 */;
 import _mod3991 from "module_3991" /* 3991 */;
-import QuestTypes from "QuestTypes" /* 5664 */;
-import QuestDataUtils from "QuestDataUtils" /* 7935 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7944 */;
-import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 11554 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11555 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11556 */;
-import FractionalPremiumUtils from "FractionalPremiumUtils" /* 11557 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11558 */;
-import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 11559 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7784 */;
+import QuestTypes from "QuestTypes" /* 5666 */;
+import QuestDataUtils from "QuestDataUtils" /* 7938 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7947 */;
+import QuestRewardExpirationMode from "QuestRewardExpirationMode" /* 11558 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11559 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11560 */;
+import FractionalPremiumUtils from "FractionalPremiumUtils" /* 11561 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11562 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 11563 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7787 */;
 
 require = fn;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
@@ -75,7 +75,7 @@ function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
     }
   }
 }
-let items = [fn(11554).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(11554).QuestRewardExpirationMode.PREMIUM_PERMANENT];
+let items = [fn(11558).QuestRewardExpirationMode.PREMIUM_EXTENSION, fn(11558).QuestRewardExpirationMode.PREMIUM_PERMANENT];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestRewardUtils.tsx");

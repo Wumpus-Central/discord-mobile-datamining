@@ -1,9 +1,9 @@
-// === Module 8530: openMediaModal ===
+// === Module 8534: openMediaModal ===
 
-// Module 8530 (openMediaModal)
+// Module 8534 (openMediaModal)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 4447 */;
+import ActionSheetStore from "ActionSheetStore" /* 4448 */;
 
 const require = fn;
 let closure_7 = async function _openMediaModal() {
@@ -80,7 +80,7 @@ let closure_7 = async function _openMediaModal() {
   }
   closure_129_6 = openAs;
   closure_129_7 = Object.assign(closure_0, Object.assign({ originViewOrOriginLayout: 0, initialIndex: 0, initialSources: 0, analyticsSource: 0, channelId: 0, onClose: 0, openAs: 0 }));
-  return "PX_16";
+  return "flex";
 };
 const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
 let size = fn(2);

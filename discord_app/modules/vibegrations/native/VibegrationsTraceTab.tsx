@@ -1,21 +1,21 @@
-// === Module 17071: VibegrationsTraceTab ===
+// === Module 17083: VibegrationsTraceTab ===
 
-// Module 17071 (VibegrationsTraceTab)
+// Module 17083 (VibegrationsTraceTab)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import Card from "Card" /* 5824 */;
-import FileManagerUtils from "FileManagerUtils" /* 8474 */;
-import VibegrationsTraceFormat from "VibegrationsTraceFormat" /* 17072 */;
-import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 17073 */;
-import VibegrationsTraceUtils from "VibegrationsTraceUtils" /* 17074 */;
-import VibegrationsTimeFormat from "VibegrationsTimeFormat" /* 17076 */;
-import VibegrationsTraceDetailSheet from "VibegrationsTraceDetailSheet" /* 17077 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import Card from "Card" /* 5826 */;
+import FileManagerUtils from "FileManagerUtils" /* 8478 */;
+import VibegrationsTraceFormat from "VibegrationsTraceFormat" /* 17084 */;
+import vibegrations_VibegrationsTraceFormat from "vibegrations/VibegrationsTraceFormat" /* 17085 */;
+import VibegrationsTraceUtils from "VibegrationsTraceUtils" /* 17086 */;
+import VibegrationsTimeFormat from "VibegrationsTimeFormat" /* 17088 */;
+import VibegrationsTraceDetailSheet from "VibegrationsTraceDetailSheet" /* 17089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9309 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9314 */;
 
 const require = globalThis.__r;
 const VibegrationsTraceDetailSheetDefault = VibegrationsTraceDetailSheet;
@@ -101,7 +101,7 @@ function TraceOverview(arg0) {
   let reduced;
   let tmp = closure_9();
   closure_1 = tmp;
-  dependencyMap = entries(17072).useTraceCategoryFillStyles();
+  dependencyMap = entries(17084).useTraceCategoryFillStyles();
   let items = [entries];
   const memo = reduced.useMemo(() => VibegrationsTraceUtils.traceCategoryTotals(entries), items);
   reduced = memo.reduce((acc, ms) => acc + ms.ms, 0);
@@ -126,7 +126,7 @@ function TraceOverview(arg0) {
   obj3.children = mapped;
   let items1 = [closure_7(View, obj3), ];
   let obj4 = { style: tmp.legend, children: null };
-  const TRACE_CATEGORIES = entries(17074).TRACE_CATEGORIES;
+  const TRACE_CATEGORIES = entries(17086).TRACE_CATEGORIES;
   obj4.children = TRACE_CATEGORIES.map((item) => {
     closure_0 = item;
     const found = memo.find((category) => category.category === closure_0);
@@ -185,7 +185,7 @@ function itemType(kind) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { list: { paddingHorizontal: nativeDefault.space.PX_16 }, header: null, tools: null, search: null, placeholder: null, overview: null, overviewBar: null, legend: null, legendItem: null, swatch: null, groupHead: null, rowSlot: null, rowNested: null, rowBody: null, rowTop: null, rowTitle: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.header = { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };

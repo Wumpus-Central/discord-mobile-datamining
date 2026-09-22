@@ -1,28 +1,28 @@
-// === Module 14990: AccountAgeGroupSetting ===
+// === Module 14997: AccountAgeGroupSetting ===
 
-// Module 14990 (AccountAgeGroupSetting)
+// Module 14997 (AccountAgeGroupSetting)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import dismissible_content from "dismissible_content" /* 2027 */;
-import TableRow from "TableRow" /* 5822 */;
-import SettingsConstants from "SettingsConstants" /* 8233 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14957 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14991 */;
-import TinyBroncoLazy from "TinyBroncoLazy" /* 14992 */;
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14993 */;
+import dismissible_content from "dismissible_content" /* 2028 */;
+import TableRow from "TableRow" /* 5824 */;
+import SettingsConstants from "SettingsConstants" /* 8237 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14964 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 14998 */;
+import TinyBroncoLazy from "TinyBroncoLazy" /* 14999 */;
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 15000 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4756 */;
-import SettingBuilders from "SettingBuilders" /* 11725 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14994 */;
+import createStyles from "createStyles" /* 4757 */;
+import SettingBuilders from "SettingBuilders" /* 11729 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 15001 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const View = _mod17.View;
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { trailing: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, badge: { marginLeft: 0, marginRight: nativeDefault.space.PX_4 } };
+let obj = { trailing: { flexDirection: "row", alignItems: "center", flexShrink: 1 }, badge: { marginLeft: 0, backgroundColor: nativeDefault.colors.BADGE_BACKGROUND_BRAND, marginRight: nativeDefault.space.PX_4, marginBottom: 0 } };
 let closure_6 = createStyles.createStyles(obj);
 let obj3 = {
   useTitle() {

@@ -6,10 +6,9 @@ import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import MediaEngineStore from "MediaEngineStore" /* 1992 */;
 import DiscordNativeDefault from "DiscordNative" /* 4377 */;
-import ClipsSession from "ClipsSession" /* 14260 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 14261 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14263 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14264 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 14267 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14269 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 1999 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -242,11 +241,11 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(5348);
+const ClipsConstants = fn(5350);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire, ClipSaveTypes: closure_7, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
 const Constants = fn(1074);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4803);
+const StreamSettingsConstants = fn(4804);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -266,7 +265,7 @@ const map = new Map();
 map1 = new Map();
 const map2 = new Map();
 let closure_33 = [];
-let obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: { resolution: ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_30, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT }, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "PX_16", showPovClipsInGallery: true };
+let obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: { resolution: ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_30, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT }, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, maxAutoClips: 20, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "flex", showPovClipsInGallery: true };
 obj = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationForDecoupled: null, hardwareClassificationVersion: 0, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ClipsStoreClass extends DeviceSettingsStore {
@@ -312,17 +311,6 @@ prototype["getClipCandidates"] = function getClipCandidates() {
 };
 prototype["getPendingMontageClips"] = function getPendingMontageClips() {
   return closure_20;
-};
-prototype["getClipCandidateById"] = function getClipCandidateById(arg0) {
-  const iter = getKnownSessions()[Symbol.iterator]();
-  const tmp = getKnownSessions();
-  while (iter !== undefined) {
-    let candidate = nextResult.getCandidate(arg0);
-    if (null != candidate) {
-      iter.return();
-      return candidate;
-    }
-  }
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return obj;
@@ -728,13 +716,11 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
       c24 = null;
     }
   },
-  CLIPS_SESSION_START: function handleClipsSessionStart(arg0) {
-    ({ sessionId, gameId } = arg0);
-    if (_null != null) {
-      _null.end();
+  CLIPS_SESSION_START: function handleClipsSessionStart(session) {
+    if (session != null) {
+      session.end();
     }
-    const clipsSession = new ClipsSession.ClipsSession(sessionId, gameId);
-    _null = clipsSession;
+    session = session.session;
   },
   CLIPS_SESSION_STOP: function handleClipsSessionStop() {
     if (null == _null) {
@@ -790,11 +776,7 @@ const clipsStoreClass = new ClipsStoreClass(DispatcherDefault, {
   CLIPS_UPDATE_METADATA: function handleClipMetadataUpdate(clip) {
     clip = clip.clip;
     if (clip.isCandidate) {
-      const tmp5 = getKnownSessions();
-      for (const item10017 of tmp5) {
-        let updateCandidateResult = item10017.updateCandidate(clip);
-        continue;
-      }
+      return false;
     } else {
       closure_18[clip.id] = clip;
       if (null != clip.remoteClipId) {

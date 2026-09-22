@@ -1,6 +1,6 @@
-// === Module 4414: PremiumUtils ===
+// === Module 4415: PremiumUtils ===
 
-// Module 4414 (PremiumUtils)
+// Module 4415 (PremiumUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
@@ -11,23 +11,23 @@ import user2 from "user" /* 1380 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1969 */;
 import _modDef3162 from "module_3162" /* 3162 */;
 import _modDef4348 from "module_4348" /* 4348 */;
-import PremiumSubscription from "PremiumSubscription" /* 4426 */;
-import BillingUtils from "BillingUtils" /* 4429 */;
-import DateUtils from "DateUtils" /* 4438 */;
-import openURLDefault from "openURL" /* 4445 */;
-import FileSizeUtils from "FileSizeUtils" /* 4652 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5346 */;
-import PriceUtils from "PriceUtils" /* 7479 */;
-import CheckoutError from "CheckoutError" /* 11705 */;
-import useFPDurationLeft from "useFPDurationLeft" /* 13726 */;
-import ProductCatalog from "ProductCatalog" /* 14249 */;
+import PremiumSubscription from "PremiumSubscription" /* 4427 */;
+import BillingUtils from "BillingUtils" /* 4430 */;
+import DateUtils from "DateUtils" /* 4439 */;
+import openURLDefault from "openURL" /* 4446 */;
+import FileSizeUtils from "FileSizeUtils" /* 4653 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5348 */;
+import PriceUtils from "PriceUtils" /* 7481 */;
+import CheckoutError from "CheckoutError" /* 11709 */;
+import useFPDurationLeft from "useFPDurationLeft" /* 13734 */;
+import ProductCatalog from "ProductCatalog" /* 14256 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import BillingInfoStore from "BillingInfoStore" /* 4416 */;
-import PaymentSourceStore from "PaymentSourceStore" /* 4417 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4419 */;
-import SubscriptionStore from "SubscriptionStore" /* 4420 */;
+import BillingInfoStore from "BillingInfoStore" /* 4417 */;
+import PaymentSourceStore from "PaymentSourceStore" /* 4418 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4420 */;
+import SubscriptionStore from "SubscriptionStore" /* 4421 */;
 
 require = fn;
 function getPremiumPlanItem(subscription) {
@@ -2107,13 +2107,13 @@ function getDaysRemainingUntilSubscriptionCurrentPeriodEnds(currentPeriodEnd) {
   const date = new Date(currentPeriodEnd.currentPeriodEnd);
   return Math.max(1, Math.ceil(obj.differenceInDays(date, new Date())));
 }
-const isNoneSubscription = fn(4415).isNoneSubscription;
+const isNoneSubscription = fn(4416).isNoneSubscription;
 let Constants = fn(1074);
 ({ InvoiceStatusTypes: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1, SubscriptionStatusTypes: closure_14 } = Constants);
 const PremiumConstants = fn(1374);
 ({ DISCOUNTS: closure_15, ANNUAL_DISCOUNT_PERCENTAGE_FALLBACK: closure_16, DEFAULT_APPLE_GRACE_PERIOD_DAYS: closure_17, DEFAULT_GOOGLE_GRACE_PERIOD_DAYS: closure_18, DEFAULT_MAX_GRACE_PERIOD_DAYS: closure_19, DISCOUNT_DURATION_FALLBACK: closure_20, DISCOUNT_PERCENTAGE_FALLBACK: closure_21, DiscountUserUsageLimitIntervalTypes: closure_22, FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS: closure_23, FractionalPremiumIntervalTypes: closure_24, FractionalPremiumStates: closure_25, MAX_ACCOUNT_HOLD_DAYS: closure_26, MAX_PAYMENT_PROCESSING_TIME_DAYS: closure_27, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_28, PAID_SUBSCRIPTION_MAX_BILLING_RETRY_DAYS: closure_29, PAID_SUBSCRIPTION_MAX_GRACE_PERIOD_DAYS: closure_30, PREMIUM_GUILD_SUBSCRIPTION_PLANS: items, PREMIUM_PLANS: closure_32, PREMIUM_SKU_TO_MONTHLY_PLAN: closure_33, PREMIUM_TIER_2_PLANS: closure_34, PREMIUM_TIER_2_REVERSE_FOLLOWUP_TRIAL_ID: closure_35, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID: closure_36, PREMIUM_TYPE_DISPLAY_NAME: closure_37, PremiumSubscriptionSKUs: closure_38, PremiumTypes: closure_39, PremiumUserLimits: closure_40, SubscriptionIntervalTypes: closure_41, SubscriptionPlanInfo: closure_42, SubscriptionPlans } = PremiumConstants);
 ({ TRIAL_FOR_EVERYONE_OFFER_EXPIRES_APPROACHING_THRESHOLD: closure_44, USER_PREMIUM_OFFER_EXPIRES_APPROACHING_4_DAY_THRESHOLD: closure_45, USER_PREMIUM_OFFER_EXPIRES_APPROACHING_7_DAY_THRESHOLD: closure_46 } = PremiumConstants);
-let closure_47 = fn(4428).getPremiumGroupProductName;
+let closure_47 = fn(4429).getPremiumGroupProductName;
 Constants = fn(1085);
 ({ CurrencyCodes: closure_48, PaymentGatewayToFriendlyName: closure_49, PREPAID_PAYMENT_SOURCES: closure_50 } = Constants);
 const constants9 = { PAYMENT_SOURCE_MANAGEMENT: "https://support.apple.com/HT201266", BILLING_HISTORY: "https://support.apple.com/HT201266", SUBSCRIPTION_MANAGEMENT: "https://support.apple.com/HT202039" };
@@ -2157,7 +2157,7 @@ const frozen = Object.freeze({
       throw error;
     }
   },
-  getUserMaxFileSize: fn(9473).getUserMaxFileSize,
+  getUserMaxFileSize: fn(9479).getUserMaxFileSize,
   getSkuIdForPlan(planId) {
     if (null == dependencyMap2[planId]) {
       const _Error = Error;

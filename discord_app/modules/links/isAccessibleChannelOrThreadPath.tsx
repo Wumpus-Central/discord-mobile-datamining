@@ -1,15 +1,14 @@
-// === Module 7491: isAccessibleChannelOrThreadPath ===
+// === Module 7493: isAccessibleChannelOrThreadPath ===
 
-// Module 7491 (isAccessibleChannelOrThreadPath)
+// Module 7493 (isAccessibleChannelOrThreadPath)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatedChannelStore from "GatedChannelStore" /* 2097 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7341 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7343 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 
 const require = fn;
-let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
+let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -44,7 +43,7 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
           let channel2;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -56,11 +55,11 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            guild = closure_131_8.getGuild(closure_130_0);
-            unsafeMutableRoles = closure_131_7.getUnsafeMutableRoles(closure_130_0);
+            guild = closure_131_7.getGuild(closure_130_0);
+            unsafeMutableRoles = closure_131_6.getUnsafeMutableRoles(closure_130_0);
             if (null == guild) {
-              if (closure_130_0 !== closure_131_10) {
-                if (closure_130_1 !== closure_131_12.GAME_SHOP) {
+              if (closure_130_0 !== closure_131_9) {
+                if (closure_130_1 !== closure_131_11.GAME_SHOP) {
                   c5 = 3;
                   return { value: false, done: true };
                 }
@@ -70,118 +69,118 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
               c5 = 3;
               return { value: true, done: true };
             } else {
-              if (closure_131_11(closure_130_1)) {
-                if (closure_131_12.VIBEGRATIONS === closure_130_1) {
+              if (closure_131_10(closure_130_1)) {
+                if (closure_131_11.VIBEGRATIONS === closure_130_1) {
                   let result = null != guild;
                   if (result) {
-                    result = closure_131_0(closure_131_2[8]).canAccessVibegrations(guild, "isAccessibleChannelOrThreadPath");
-                    const obj34 = closure_131_0(closure_131_2[8]);
+                    result = closure_131_0(closure_131_2[7]).canAccessVibegrations(guild, "isAccessibleChannelOrThreadPath");
+                    const obj33 = closure_131_0(closure_131_2[7]);
                   }
                   c5 = 3;
-                  const obj8 = { value: result, done: true };
-                  return obj8;
-                } else if (closure_131_12.ROLE_SUBSCRIPTIONS === tmp31) {
+                  const obj7 = { value: result, done: true };
+                  return obj7;
+                } else if (closure_131_11.ROLE_SUBSCRIPTIONS === tmp31) {
                   c5 = 3;
-                  const obj10 = { value: closure_131_0(closure_131_2[9]).areRoleSubscriptionsVisibleInGuild(closure_130_0, unsafeMutableRoles), done: true };
-                  return obj10;
-                } else if (closure_131_12.SERVER_MONETIZATION_ONBOARDING === tmp31) {
+                  const obj9 = { value: closure_131_0(closure_131_2[8]).areRoleSubscriptionsVisibleInGuild(closure_130_0, unsafeMutableRoles), done: true };
+                  return obj9;
+                } else if (closure_131_11.SERVER_MONETIZATION_ONBOARDING === tmp31) {
                   let result1 = null != guild;
                   if (result1) {
-                    result1 = closure_131_0(closure_131_2[10]).canUserSeeMonetizationOnboarding(guild);
-                    const obj30 = closure_131_0(closure_131_2[10]);
+                    result1 = closure_131_0(closure_131_2[9]).canUserSeeMonetizationOnboarding(guild);
+                    const obj29 = closure_131_0(closure_131_2[9]);
                   }
                   c5 = 3;
-                  const obj12 = { value: result1, done: true };
-                  return obj12;
-                } else if (closure_131_12.GAME_SHOP === tmp31) {
-                  let obj14 = guild;
+                  const obj11 = { value: result1, done: true };
+                  return obj11;
+                } else if (closure_131_11.GAME_SHOP === tmp31) {
+                  let obj13 = guild;
                   if (guild == null) {
-                    obj14 = { id: closure_130_0, type: "id-only" };
+                    obj13 = { id: closure_130_0, type: "id-only" };
                   }
                   c5 = 3;
-                  const obj15 = { value: closure_131_0(closure_131_2[11]).hasSocialLayerStorefront(obj14), done: true };
-                  return obj15;
-                } else if (closure_131_12.GUILD_SHOP === tmp31) {
+                  const obj14 = { value: closure_131_0(closure_131_2[10]).hasSocialLayerStorefront(obj13), done: true };
+                  return obj14;
+                } else if (closure_131_11.GUILD_SHOP === tmp31) {
                   c5 = 3;
-                  const obj17 = { value: closure_131_0(closure_131_2[12]).isGuildShopVisibleInGuild(guild, unsafeMutableRoles), done: true };
+                  const obj16 = { value: closure_131_0(closure_131_2[11]).isGuildShopVisibleInGuild(guild, unsafeMutableRoles), done: true };
+                  return obj16;
+                } else if (closure_131_11.MEMBER_APPLICATIONS === tmp31) {
+                  c5 = 3;
+                  const obj17 = { value: closure_131_0(closure_131_2[12]).canReviewGuildMemberApplications(closure_130_0), done: true };
                   return obj17;
-                } else if (closure_131_12.MEMBER_APPLICATIONS === tmp31) {
+                } else if (closure_131_11.GUILD_HOME === tmp31) {
                   c5 = 3;
-                  const obj18 = { value: closure_131_0(closure_131_2[13]).canReviewGuildMemberApplications(closure_130_0), done: true };
+                  const obj18 = { value: closure_131_0(closure_131_2[13]).canSeeOnboardingHome(closure_130_0), done: true };
                   return obj18;
-                } else if (closure_131_12.GUILD_HOME === tmp31) {
-                  c5 = 3;
-                  const obj19 = { value: closure_131_0(closure_131_2[14]).canSeeOnboardingHome(closure_130_0), done: true };
-                  return obj19;
-                } else if (closure_131_12.CHANNEL_BROWSER === tmp31) {
+                } else if (closure_131_11.CHANNEL_BROWSER === tmp31) {
                   let hasItem = null != guild;
                   if (hasItem) {
                     const features3 = guild.features;
-                    hasItem = features3.has(closure_131_9.COMMUNITY);
+                    hasItem = features3.has(closure_131_8.COMMUNITY);
                   }
                   c5 = 3;
-                  const obj20 = { value: hasItem, done: true };
-                  return obj20;
-                } else if (closure_131_12.GUILD_ONBOARDING === tmp31) {
+                  const obj19 = { value: hasItem, done: true };
+                  return obj19;
+                } else if (closure_131_11.GUILD_ONBOARDING === tmp31) {
                   c5 = 3;
-                  const obj22 = { value: closure_131_5.shouldShowOnboarding(closure_130_0), done: true };
-                  return obj22;
-                } else if (closure_131_12.CUSTOMIZE_COMMUNITY === tmp31) {
+                  const obj21 = { value: closure_131_4.shouldShowOnboarding(closure_130_0), done: true };
+                  return obj21;
+                } else if (closure_131_11.CUSTOMIZE_COMMUNITY === tmp31) {
                   let hasItem1 = null != guild;
                   if (hasItem1) {
                     const features2 = guild.features;
-                    hasItem1 = features2.has(closure_131_9.COMMUNITY);
+                    hasItem1 = features2.has(closure_131_8.COMMUNITY);
                   }
                   c5 = 3;
-                  const obj24 = { value: hasItem1, done: true };
-                  return obj24;
-                } else if (closure_131_12.MEMBER_SAFETY === tmp31) {
+                  const obj23 = { value: hasItem1, done: true };
+                  return obj23;
+                } else if (closure_131_11.MEMBER_SAFETY === tmp31) {
                   c5 = 3;
-                  const obj26 = { value: closure_131_0(closure_131_2[15]).canAccessMemberSafetyPage(closure_130_0), done: true };
-                  return obj26;
-                } else if (closure_131_12.GUILD_BOOSTS === tmp31) {
+                  const obj25 = { value: closure_131_0(closure_131_2[14]).canAccessMemberSafetyPage(closure_130_0), done: true };
+                  return obj25;
+                } else if (closure_131_11.GUILD_BOOSTS === tmp31) {
                   c5 = 3;
                   return { value: true, done: true };
-                } else if (closure_131_12.REPORT_TO_MOD === tmp31) {
-                  let tmp78 = null != guild;
-                  if (tmp78) {
-                    tmp78 = closure_131_1(closure_131_2[16])(guild);
+                } else if (closure_131_11.REPORT_TO_MOD === tmp31) {
+                  let tmp72 = null != guild;
+                  if (tmp72) {
+                    tmp72 = closure_131_1(closure_131_2[15])(guild);
                   }
                   c5 = 3;
-                  const obj28 = { value: tmp78, done: true };
-                  return obj28;
-                } else if (closure_131_12.GAME_SERVERS === tmp31) {
-                  let gameServerEnabled = closure_131_0(closure_131_2[17]).getGameServerEnabled(closure_130_0, "isAccessibleChannelOrThreadPath");
+                  const obj27 = { value: tmp72, done: true };
+                  return obj27;
+                } else if (closure_131_11.GAME_SERVERS === tmp31) {
+                  let gameServerEnabled = closure_131_0(closure_131_2[16]).getGameServerEnabled(closure_130_0, "isAccessibleChannelOrThreadPath");
                   if (gameServerEnabled) {
                     gameServerEnabled = null != guild;
                   }
                   if (gameServerEnabled) {
                     const features = guild.features;
-                    gameServerEnabled = features.has(closure_131_9.GAME_SERVERS);
+                    gameServerEnabled = features.has(closure_131_8.GAME_SERVERS);
                   }
                   c5 = 3;
-                  const obj29 = { value: gameServerEnabled, done: true };
-                  return obj29;
-                } else if (closure_131_12.GUILD_OFFICIAL_MESSAGES === tmp31) {
+                  const obj28 = { value: gameServerEnabled, done: true };
+                  return obj28;
+                } else if (closure_131_11.GUILD_OFFICIAL_MESSAGES === tmp31) {
                   c5 = 3;
-                  const obj31 = { value: closure_131_0(closure_131_2[18]).isGuildOfficialMessagesEnabled(guild, "isAccessibleChannelOrThreadPath"), done: true };
-                  return obj31;
-                } else if (closure_131_12.GUILD_SPACE === tmp31) {
+                  const obj30 = { value: closure_131_0(closure_131_2[17]).isGuildOfficialMessagesEnabled(guild, "isAccessibleChannelOrThreadPath"), done: true };
+                  return obj30;
+                } else if (closure_131_11.GUILD_SPACE === tmp31) {
                   c5 = 3;
-                  const obj33 = { value: closure_131_0(closure_131_2[19]).canUseGuildSpace(guild, "isAccessibleChannelOrThreadPath"), done: true };
-                  return obj33;
+                  const obj32 = { value: closure_131_0(closure_131_2[18]).canUseGuildSpace(guild, "isAccessibleChannelOrThreadPath"), done: true };
+                  return obj32;
                 } else {
-                  closure_131_0(closure_131_2[20]).assertNever(closure_130_1);
-                  const obj39 = closure_131_0(closure_131_2[20]);
+                  closure_131_0(closure_131_2[19]).assertNever(closure_130_1);
+                  const obj38 = closure_131_0(closure_131_2[19]);
                 }
               }
-              channel2 = closure_131_6.getChannel(closure_130_1);
+              channel2 = closure_131_5.getChannel(closure_130_1);
               let tmp15 = null != channel2;
               if (!tmp15) {
                 c4 = 2;
                 c5 = 1;
-                const obj35 = { value: closure_131_1(closure_131_2[21]).loadThread(closure_130_1), done: false };
-                return obj35;
+                const obj34 = { value: closure_131_1(closure_131_2[20]).loadThread(closure_130_1), done: false };
+                return obj34;
               }
             }
           }
@@ -192,20 +191,20 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj36 = { value, done: true };
-              return obj36;
+              const obj35 = { value, done: true };
+              return obj35;
             } else {
-              const channel = closure_131_6.getChannel(closure_130_1);
+              const channel = closure_131_5.getChannel(closure_130_1);
               channel2 = channel;
               let tmp11 = null == channel;
               if (tmp11) {
-                tmp11 = closure_130_0 === closure_131_10;
+                tmp11 = closure_130_0 === closure_131_9;
               }
               if (tmp11) {
                 c4 = 3;
                 c5 = 1;
-                const obj37 = { value: closure_131_1(closure_131_2[22]).openChannel(closure_130_1), done: false };
-                return obj37;
+                const obj36 = { value: closure_131_1(closure_131_2[21]).openChannel(closure_130_1), done: false };
+                return obj36;
               }
             }
           } else if (arg0 === 1) {
@@ -221,33 +220,28 @@ let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0) {
           tmp15 = null != channel2;
         }
         if (tmp15) {
-          let canViewChannelResult = closure_131_0(closure_131_2[23]).canViewChannel(channel2);
-          if (!canViewChannelResult) {
-            canViewChannelResult = closure_131_4.isChannelGatedAndVisible(closure_130_0, closure_130_1);
-          }
-          tmp15 = canViewChannelResult;
-          const obj7 = closure_131_0(closure_131_2[23]);
+          tmp15 = closure_131_1(closure_131_2[22])(channel2);
         }
         c5 = 3;
-        const obj38 = { value: tmp15, done: true };
-        return obj38;
+        const obj37 = { value: tmp15, done: true };
+        return obj37;
       }
-    } catch (tmp154) {
+    } catch (tmp148) {
       c5 = tmp;
-      throw tmp154;
+      throw tmp148;
     }
   }
 };
 const Constants = fn(1074);
-({ GuildFeatures: closure_9, ME: c10 } = Constants);
-const ChannelConstants = fn(2048);
-({ isStaticChannelRoute: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
+({ GuildFeatures: closure_8, ME: closure_9 } = Constants);
+const ChannelConstants = fn(2049);
+({ isStaticChannelRoute: c10, StaticChannelRoute: closure_11 } = ChannelConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/isAccessibleChannelOrThreadPath.tsx");
 
 export default function isAccessibleChannelOrThreadPath() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,10 +1,10 @@
-// === Module 8396: SuspiciousDownloadUtils ===
+// === Module 8400: SuspiciousDownloadUtils ===
 
-// Module 8396 (SuspiciousDownloadUtils)
+// Module 8400 (SuspiciousDownloadUtils)
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import _modDef8397 from "module_8397" /* 8397 */;
+import _modDef8401 from "module_8401" /* 8401 */;
 
-const set = new Set(_modDef8397);
+const set = new Set(_modDef8401);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj["github.com"] = regExp;

@@ -1,8 +1,8 @@
-// === Module 9910: useChannelVideoLimit ===
+// === Module 9916: useChannelVideoLimit ===
 
-// Module 9910 (useChannelVideoLimit)
-import GuildStore from "GuildStore" /* 2063 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4780 */;
+// Module 9916 (useChannelVideoLimit)
+import GuildStore from "GuildStore" /* 2064 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4781 */;
 
 const require = globalThis.__r;
 

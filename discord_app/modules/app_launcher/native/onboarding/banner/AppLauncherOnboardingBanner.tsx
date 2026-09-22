@@ -1,10 +1,10 @@
-// === Module 12301: AppLauncherOnboardingBanner ===
+// === Module 12305: AppLauncherOnboardingBanner ===
 
-// Module 12301 (AppLauncherOnboardingBanner)
-import dismissible_content from "dismissible_content" /* 2027 */;
-import ActivitiesBannerDefault from "ActivitiesBanner" /* 12302 */;
-import AppsBannerDefault from "AppsBanner" /* 12316 */;
-import BotsBannerDefault from "BotsBanner" /* 12318 */;
+// Module 12305 (AppLauncherOnboardingBanner)
+import dismissible_content from "dismissible_content" /* 2028 */;
+import ActivitiesBannerDefault from "ActivitiesBanner" /* 12306 */;
+import AppsBannerDefault from "AppsBanner" /* 12320 */;
+import BotsBannerDefault from "BotsBanner" /* 12322 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

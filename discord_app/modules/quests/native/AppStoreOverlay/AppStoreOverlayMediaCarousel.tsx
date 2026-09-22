@@ -1,11 +1,14 @@
-// === Module 11761: AppStoreOverlayMediaCarousel ===
+// === Module 11765: AppStoreOverlayMediaCarousel ===
 
-// Module 11761 (AppStoreOverlayMediaCarousel)
+// Module 11765 (AppStoreOverlayMediaCarousel)
 import nativeDefault from "native" /* 576 */;
-import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 11762 */;
-import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 11763 */;
+import AnalyticsActions from "AnalyticsActions" /* 7957 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7967 */;
+import AppStoreOverlayMediaSize from "AppStoreOverlayMediaSize" /* 11766 */;
+import openAppStoreOverlayMediaModal from "openAppStoreOverlayMediaModal" /* 11767 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4748 */;
+import AccessibilityStore from "AccessibilityStore" /* 4749 */;
 
 require = fn;
 function getMeasurableUrl(type) {
@@ -26,13 +29,13 @@ function AppStoreOverlayScreenshotItem(media) {
   const mediaViewerSources = media.mediaViewerSources;
   const recordMediaSize = media.recordMediaSize;
   const onGetGamePress = media.onGetGamePress;
-  const tmp = closure_11();
-  const ref = recordMediaSize.useRef(null);
+  const tmp = closure_14();
+  const ref = onGetGamePress.useRef(null);
   const items = [media.url];
   const items1 = [media.url, recordMediaSize];
-  const memo = recordMediaSize.useMemo(() => AppStoreOverlayMediaSize.getAppStoreOverlayCarouselImageUrl(media.url), items);
+  const memo = onGetGamePress.useMemo(() => AppStoreOverlayMediaSize.getAppStoreOverlayCarouselImageUrl(media.url), items);
   const items2 = [index, mediaViewerSources, onGetGamePress];
-  const callback = recordMediaSize.useCallback((nativeEvent) => {
+  const callback = onGetGamePress.useCallback((nativeEvent) => {
     const mediaSizeFromLoadEvent = AppStoreOverlayMediaSize.getMediaSizeFromLoadEvent(nativeEvent);
     if (null != mediaSizeFromLoadEvent) {
       recordMediaSize(media.url, mediaSizeFromLoadEvent);
@@ -41,7 +44,7 @@ function AppStoreOverlayScreenshotItem(media) {
   let obj = {
     ref,
     style: null,
-    onPress: recordMediaSize.useCallback(() => {
+    onPress: onGetGamePress.useCallback(() => {
       const result = openAppStoreOverlayMediaModal.openAppStoreOverlayMediaModal({ initialSources: mediaViewerSources, initialIndex: index, originViewOrOriginLayout: ref.current, analyticsSource: "quest_app_store_overlay", onGetGamePress });
     }, items2),
     accessibilityLabel: null,
@@ -49,21 +52,22 @@ function AppStoreOverlayScreenshotItem(media) {
   };
   const items3 = [tmp.mediaItem, media.tileSize];
   obj.style = items3;
-  const intl = media(mediaViewerSources[9]).intl;
-  obj.accessibilityLabel = intl.string(media(mediaViewerSources[9]).t.lWDPcO);
-  obj.children = closure_9(index(mediaViewerSources[10]), { source: { uri: memo }, style: tmp.media, resizeMode: "cover", onLoad: callback, accessibilityIgnoresInvertColors: true });
-  return closure_9(onGetGamePress, obj);
+  const intl = media(mediaViewerSources[10]).intl;
+  obj.accessibilityLabel = intl.string(media(mediaViewerSources[10]).t.lWDPcO);
+  obj.children = closure_10(index(mediaViewerSources[11]), { source: { uri: memo }, style: tmp.media, resizeMode: "cover", onLoad: callback, accessibilityIgnoresInvertColors: true });
+  return closure_10(ref, obj);
 }
 function AppStoreOverlayTrailerItem(media) {
   media = media.media;
   const index = media.index;
   const mediaViewerSources = media.mediaViewerSources;
   const onGetGamePress = media.onGetGamePress;
-  const tmp = closure_11();
-  onGetGamePress.useRef(null);
-  const ref = onGetGamePress.useRef(0);
+  let ref;
+  const tmp = closure_14();
+  ref = ref.useRef(null);
+  ref = ref.useRef(0);
   const items = [media.posterUrl];
-  const memo = onGetGamePress.useMemo(() => {
+  const memo = ref.useMemo(() => {
     let appStoreOverlayCarouselImageUrl;
     if (null != media.posterUrl) {
       appStoreOverlayCarouselImageUrl = AppStoreOverlayMediaSize.getAppStoreOverlayCarouselImageUrl(tmp.posterUrl);
@@ -71,19 +75,19 @@ function AppStoreOverlayTrailerItem(media) {
     return appStoreOverlayCarouselImageUrl;
   }, items);
   const items1 = [AccessibilityStore];
-  const stateFromStores = media(mediaViewerSources[11]).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
-  const callback = onGetGamePress.useCallback((current) => {
+  const stateFromStores = media(mediaViewerSources[12]).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
+  const callback = ref.useCallback((current) => {
     closure_5.current = current;
   }, []);
-  let obj = media(mediaViewerSources[11]);
-  const ref1 = onGetGamePress.useRef(media(mediaViewerSources[12]).createVideoControls(NOOP));
+  let obj = media(mediaViewerSources[12]);
+  const ref1 = ref.useRef(media(mediaViewerSources[13]).createVideoControls(NOOP));
   const current = ref1.current;
   const subscribe = current.useSubscribe(callback, NOOP, NOOP);
   const items2 = [index, mediaViewerSources, onGetGamePress];
   const obj3 = {
     ref,
     style: null,
-    onPress: onGetGamePress.useCallback(() => {
+    onPress: ref.useCallback(() => {
       const result = openAppStoreOverlayMediaModal.openAppStoreOverlayMediaModal({ initialSources: mediaViewerSources, initialIndex: index, initialIndexVideoStartTime: ref.current, originViewOrOriginLayout: ref.current, analyticsSource: "quest_app_store_overlay", onGetGamePress });
     }, items2),
     accessibilityLabel: null,
@@ -91,36 +95,37 @@ function AppStoreOverlayTrailerItem(media) {
   };
   const items3 = [tmp.mediaItem, media.tileSize];
   obj3.style = items3;
-  const intl = media(mediaViewerSources[9]).intl;
-  obj3.accessibilityLabel = intl.string(media(mediaViewerSources[9]).t.N0IE3v);
-  const items4 = [closure_9(media(mediaViewerSources[12]).VideoComponent, { style: tmp.media, source: { uri: media.url }, poster: memo, posterResizeMode: "cover", resizeMode: "cover", muted: true, pauseWhileAppInactive: true, paused: stateFromStores, controls: ref1.current }), ];
-  const obj2 = media(mediaViewerSources[12]);
+  const intl = media(mediaViewerSources[10]).intl;
+  obj3.accessibilityLabel = intl.string(media(mediaViewerSources[10]).t.N0IE3v);
+  const items4 = [closure_10(media(mediaViewerSources[13]).VideoComponent, { style: tmp.media, source: { uri: media.url }, poster: memo, posterResizeMode: "cover", resizeMode: "cover", muted: true, pauseWhileAppInactive: true, paused: stateFromStores, controls: ref1.current }), ];
+  const obj2 = media(mediaViewerSources[13]);
   const obj4 = { style: tmp.media, source: { uri: media.url }, poster: memo, posterResizeMode: "cover", resizeMode: "cover", muted: true, pauseWhileAppInactive: true, paused: stateFromStores, controls: ref1.current };
-  items4[1] = closure_9(closure_6, { style: tmp.playIconWrapper, pointerEvents: "none", children: closure_9(media(mediaViewerSources[13]).CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" }) });
+  items4[1] = closure_10(closure_7, { style: tmp.playIconWrapper, pointerEvents: "none", children: closure_10(media(mediaViewerSources[14]).CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" }) });
   obj3.children = items4;
-  return closure_10(ref, obj3);
+  return closure_11(ref, obj3);
 }
 function AppStoreOverlayMediaCarouselItem(arg0) {
   ({ media, index, mediaViewerSources, tileSize, onGetGamePress } = arg0);
   const type = media.type;
   if ("screenshot" === type) {
     const obj2 = { media, index, mediaViewerSources, tileSize, recordMediaSize: tmp, onGetGamePress };
-    return React7(AppStoreOverlayScreenshotItem, obj2);
+    return closure_1_10(AppStoreOverlayScreenshotItem, obj2);
   } else if ("trailer" === type) {
     const obj = { media, index, mediaViewerSources, tileSize, onGetGamePress };
-    return React7(AppStoreOverlayTrailerItem, obj);
+    return closure_1_10(AppStoreOverlayTrailerItem, obj);
   }
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, ScrollView: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: hasOwnProperty, ScrollView: metroRequire, StyleSheet, View: closure_7 } = get_ActivityIndicator);
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4756);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const PX_16 = nativeDefault.space.PX_16;
+const createStyles = fn(4757);
 let obj2 = { carousel: { marginHorizontal: -nativeDefault.space.PX_16 }, carouselContent: null, mediaItem: null, media: null, playIconWrapper: null };
 let obj3 = { marginHorizontal: -nativeDefault.space.PX_16 };
-obj2.carouselContent = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16, alignItems: "center" };
-let obj4 = { gap: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16, alignItems: "center" };
+obj2.carouselContent = { gap: PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16, alignItems: "center" };
+let obj4 = { gap: PX_16, paddingLeft: nativeDefault.space.PX_16, paddingRight: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.mediaItem = { borderRadius: nativeDefault.space.PX_16, overflow: "hidden", backgroundColor: nativeDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.media = {};
@@ -129,25 +134,24 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj7.alignItems = "center";
 obj7.justifyContent = "center";
 obj2.playIconWrapper = obj7;
-let closure_11 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaCarousel.tsx");
 
 export default function AppStoreOverlayMediaCarousel(media) {
   media = media.media;
-  const onGetGamePress = media.onGetGamePress;
-  let sizes;
+  ({ onGetGamePress: importDefault, onCarouselScroll } = media);
   let recordMediaSize;
   const items = [media];
   const memo = recordMediaSize.useMemo(() => {
     const mapped = media.map(getMeasurableUrl);
     return mapped.filter((item) => null != item);
   }, items);
-  const tmp = closure_11();
+  const tmp = closure_14();
   const tmp3 = media;
-  const tmp4 = sizes;
-  const appStoreOverlayMediaSizes = media(sizes[7]).useAppStoreOverlayMediaSizes(memo);
-  sizes = appStoreOverlayMediaSizes.sizes;
+  const tmp4 = onCarouselScroll;
+  const appStoreOverlayMediaSizes = media(onCarouselScroll[8]).useAppStoreOverlayMediaSizes(memo);
+  const sizes = appStoreOverlayMediaSizes.sizes;
   recordMediaSize = appStoreOverlayMediaSizes.recordMediaSize;
   const items1 = [media, sizes];
   const mediaViewerSources = recordMediaSize.useMemo(() => {
@@ -167,7 +171,7 @@ export default function AppStoreOverlayMediaCarousel(media) {
         value = closure_0.get(url);
       }
       if (value == null) {
-        const size = { width: media(sizes[7]).MEDIA_FALLBACK_WIDTH, height: media(sizes[7]).MEDIA_FALLBACK_HEIGHT };
+        const size = { width: media(onCarouselScroll[8]).MEDIA_FALLBACK_WIDTH, height: media(onCarouselScroll[8]).MEDIA_FALLBACK_HEIGHT };
         value = size;
       }
       ({ width, height } = value);
@@ -186,12 +190,118 @@ export default function AppStoreOverlayMediaCarousel(media) {
       return size3;
     });
   }, items1);
-  media(sizes[14]);
-  let tmp8 = null;
+  const items2 = [media, sizes];
+  const memo1 = recordMediaSize.useMemo(() => media.map((type) => {
+    if ("trailer" === type.type) {
+      let posterUrl = type.posterUrl;
+      if (posterUrl == null) {
+        posterUrl = null;
+      }
+      let url = posterUrl;
+    } else {
+      url = type.url;
+    }
+    value = undefined;
+    if (null != url) {
+      value = sizes.get(url);
+    }
+    return media(onCarouselScroll[8]).getMediaTileSize(value).width;
+  }), items2);
+  recordMediaSize.useRef(0);
+  let tmp7 = sizes(recordMediaSize.useState(0), 2);
+  const first = tmp7[0];
+  closure_9 = tmp7[1];
+  const length = media.length;
+  const items3 = [length];
+  const effect = recordMediaSize.useEffect(() => {
+    closure_7.current = 0;
+  }, items3);
+  const items4 = [length, first, memo1, onCarouselScroll];
+  const callback = recordMediaSize.useCallback((nativeEvent) => {
+    closure_9(nativeEvent.nativeEvent.layout.width);
+  }, []);
+  const callback1 = recordMediaSize.useCallback((nativeEvent) => {
+    if (null != onCarouselScroll) {
+      if (length > 1) {
+        if (first > 0) {
+          const x = nativeEvent.nativeEvent.contentOffset.x;
+          let num5 = 0;
+          if (0 !== memo1.length) {
+            num5 = 0;
+            if (first > 0) {
+              let sum1 = PX_16;
+              let num = 0;
+              let num2 = 0;
+              let num3 = 0;
+              let num4 = 0;
+              if (0 < memo1.length) {
+                do {
+                  let sum = sum1 + memo1[num];
+                  let _Math = Math;
+                  let _Math2 = Math;
+                  let _Math3 = Math;
+                  let bound = Math.min(x + first, sum);
+                  let bound1 = Math.max(0, bound - Math.max(x, sum1));
+                  let tmp8 = num2;
+                  let tmp9 = num3;
+                  if (bound1 > num2) {
+                    tmp8 = bound1;
+                    tmp9 = num;
+                  }
+                  sum1 = sum + PX_16;
+                  num = num + 1;
+                  num2 = tmp8;
+                  num3 = tmp9;
+                  num4 = tmp9;
+                } while (num < memo1.length);
+              }
+              num5 = num4;
+            }
+          }
+          const current = ref.current;
+          if (num5 !== current) {
+            let obj = { carouselType: null, scrollingDirection: null, carouselPosition: null, carouselSize: null };
+            let HorizontalScrollingDirection = dependencyMap;
+            obj.carouselType = AnalyticsActions.AppStoreOverlayCarouselTypes.MEDIA;
+            if (num5 > current) {
+              HorizontalScrollingDirection = AnalyticsTypes.HorizontalScrollingDirection;
+              let LEFT = HorizontalScrollingDirection.RIGHT;
+            } else {
+              LEFT = AnalyticsTypes.HorizontalScrollingDirection.LEFT;
+            }
+            obj.scrollingDirection = LEFT;
+            obj.carouselPosition = num5;
+            obj.carouselSize = tmp13;
+            obj = tmp(obj);
+            tmp11.current = num5;
+          }
+        }
+      }
+    }
+  }, items4);
+  const items5 = [callback1];
+  const callback2 = recordMediaSize.useCallback((nativeEvent) => {
+    const velocity = nativeEvent.nativeEvent.velocity;
+    let num;
+    if (velocity != null) {
+      num = velocity.x;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    if (0 === num) {
+      callback1(nativeEvent);
+    }
+  }, items5);
+  media(onCarouselScroll[17]);
+  let tmp15 = null;
   if (0 !== media.length) {
-    const obj2 = { gesture: tmp7, children: null };
-    const obj5 = { horizontal: true, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, children: null };
+    const obj2 = { gesture: tmp14, children: null };
+    const obj5 = { horizontal: true, nestedScrollEnabled: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, onLayout: null, onScrollEndDrag: null, onMomentumScrollEnd: null, children: null };
     ({ carousel: obj3.style, carouselContent: obj3.contentContainerStyle } = tmp);
+    obj5.onLayout = callback;
+    obj5.onScrollEndDrag = callback2;
+    obj5.onMomentumScrollEnd = callback1;
     obj5.children = media.map((media, index) => {
       if ("trailer" === media.type) {
         let posterUrl = media.posterUrl;
@@ -210,10 +320,10 @@ export default function AppStoreOverlayMediaCarousel(media) {
       obj.tileSize = AppStoreOverlayMediaSize.getMediaTileSize(value);
       obj.recordMediaSize = recordMediaSize;
       obj.onGetGamePress = onGetGamePress;
-      return React7(AppStoreOverlayMediaCarouselItem, obj, "" + media.type + "-" + index);
+      return closure_2_10(AppStoreOverlayMediaCarouselItem, obj, "" + media.type + "-" + index);
     });
-    obj2.children = closure_9(closure_5, obj5);
-    tmp8 = closure_9(tmp3(tmp4[14]).GestureDetector, obj2);
+    obj2.children = length(memo1, obj5);
+    tmp15 = length(tmp3(tmp4[17]).GestureDetector, obj2);
   }
-  return tmp8;
+  return tmp15;
 };

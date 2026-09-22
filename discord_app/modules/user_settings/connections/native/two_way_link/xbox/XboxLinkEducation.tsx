@@ -1,13 +1,13 @@
-// === Module 9366: XboxLinkEducation ===
+// === Module 9372: XboxLinkEducation ===
 
-// Module 9366 (XboxLinkEducation)
+// Module 9372 (XboxLinkEducation)
 import util from "util" /* 1115 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2108 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import components_Button_Button from "components/Button/Button" /* 5186 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7368 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9351 */;
-import _modDef9367 from "module_9367" /* 9367 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import components_Button_Button from "components/Button/Button" /* 5187 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7370 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9357 */;
+import _modDef9373 from "module_9373" /* 9373 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_9 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx");
@@ -27,7 +27,7 @@ export default function XboxLinkEducation(onClose) {
   const articleURL = HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
-  const items = [React5(React4, { source: noop.useMemo(() => ({ uri: _modDef9367 }), []), style: tmp.image }), , ];
+  const items = [React5(React4, { source: noop.useMemo(() => ({ uri: _modDef9373 }), []), style: tmp.image }), , ];
   const obj6 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj6.children = intl.string(util.t.jHytat);

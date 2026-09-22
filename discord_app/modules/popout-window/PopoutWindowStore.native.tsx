@@ -1,6 +1,6 @@
-// === Module 4899: PopoutWindowStore ===
+// === Module 4900: PopoutWindowStore ===
 
-// Module 4899 (PopoutWindowStore)
+// Module 4900 (PopoutWindowStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

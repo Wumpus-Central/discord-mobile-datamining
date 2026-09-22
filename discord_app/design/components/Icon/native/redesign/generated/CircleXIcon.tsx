@@ -1,10 +1,10 @@
-// === Module 6858: CircleXIcon ===
+// === Module 6860: CircleXIcon ===
 
-// Module 6858 (CircleXIcon)
+// Module 6860 (CircleXIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod6859 from "module_6859" /* 6859 */;
-import _mod6860 from "module_6860" /* 6860 */;
+import BaseIconImage from "BaseIconImage" /* 4457 */;
+import _mod6861 from "module_6861" /* 6861 */;
+import _mod6862 from "module_6862" /* 6862 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,8 +26,8 @@ export const CircleXIcon = function CircleXIcon(color) {
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod6859, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod6860, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [React4(BaseIconImage.BaseIconImage, { source: _mod6861, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod6862, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

@@ -1,6 +1,6 @@
-// === Module 11151: StatusDisplayTypes ===
+// === Module 11157: StatusDisplayTypes ===
 
-// Module 11151 (StatusDisplayTypes)
+// Module 11157 (StatusDisplayTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx");

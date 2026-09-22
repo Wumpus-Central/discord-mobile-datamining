@@ -1,18 +1,18 @@
-// === Module 11128: UsersFastList ===
+// === Module 11134: UsersFastList ===
 
-// Module 11128 (UsersFastList)
+// Module 11134 (UsersFastList)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import Pressables from "Pressables" /* 5339 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5341 */;
-import TableRow from "TableRow" /* 5822 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 8116 */;
-import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 11129 */;
-import UserRowDefault from "UserRow" /* 11130 */;
-import GroupDMRowDefault from "GroupDMRow" /* 11173 */;
-import ChannelRowDefault from "ChannelRow" /* 11176 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import Pressables from "Pressables" /* 5341 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5343 */;
+import TableRow from "TableRow" /* 5824 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 8119 */;
+import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 11135 */;
+import UserRowDefault from "UserRow" /* 11136 */;
+import GroupDMRowDefault from "GroupDMRow" /* 11179 */;
+import ChannelRowDefault from "ChannelRow" /* 11182 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,11 +34,11 @@ function PlaceholderSection() {
   return React5(View, {});
 }
 const View = fn(17).View;
-const UsersFastListConstants = fn(10471);
+const UsersFastListConstants = fn(10477);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = { sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING }, stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
 let obj3 = { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

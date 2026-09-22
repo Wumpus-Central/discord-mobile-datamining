@@ -1,16 +1,16 @@
-// === Module 16367: MessageRequestsButton ===
+// === Module 16378: MessageRequestsButton ===
 
-// Module 16367 (MessageRequestsButton)
+// Module 16378 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import components_Button_Button from "components/Button/Button" /* 5186 */;
-import IconButton from "IconButton" /* 8179 */;
-import _modDef10139 from "module_10139" /* 10139 */;
-import IconActionButton from "IconActionButton" /* 13561 */;
-import _mod16368 from "module_16368" /* 16368 */;
+import components_Button_Button from "components/Button/Button" /* 5187 */;
+import IconButton from "IconButton" /* 8183 */;
+import _modDef10145 from "module_10145" /* 10145 */;
+import IconActionButton from "IconActionButton" /* 13569 */;
+import _mod16379 from "module_16379" /* 16379 */;
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 7464 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7465 */;
+import MessageRequestStore from "MessageRequestStore" /* 7466 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7467 */;
 
 const IconActionButtonDefault = IconActionButton;
 
@@ -32,12 +32,12 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod16368.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod16379.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_9 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
@@ -82,7 +82,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj3.children = items2;
     return React6(View, obj3);
   } else {
-    const obj6 = { source: _modDef10139, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj6 = { source: _modDef10145, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = util.intl;
     obj6.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str2;

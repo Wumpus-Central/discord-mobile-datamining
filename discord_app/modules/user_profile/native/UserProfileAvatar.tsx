@@ -1,15 +1,15 @@
-// === Module 8525: UserProfileAvatar ===
+// === Module 8529: UserProfileAvatar ===
 
-// Module 8525 (UserProfileAvatar)
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8510 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 8526 */;
-import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8529 */;
+// Module 8529 (UserProfileAvatar)
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8514 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 8530 */;
+import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 8533 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8452).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(7453).AVATAR_SIZE_VARIANT;
+const TrackUserProfileActions = fn(8456).TrackUserProfileActions;
+const AVATAR_SIZE_VARIANT = fn(7455).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const forwardRefResult = noop.forwardRef((backgroundColor, ref) => {

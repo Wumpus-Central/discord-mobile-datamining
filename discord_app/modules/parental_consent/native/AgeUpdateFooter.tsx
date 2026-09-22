@@ -1,16 +1,16 @@
-// === Module 18339: AgeUpdateFooter ===
+// === Module 18352: AgeUpdateFooter ===
 
-// Module 18339 (AgeUpdateFooter)
+// Module 18352 (AgeUpdateFooter)
 import util from "util" /* 1115 */;
 import _modDef2776 from "module_2776" /* 2776 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8682 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8684 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8686 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8688 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_4 = createStyles.createStyles({ text: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");

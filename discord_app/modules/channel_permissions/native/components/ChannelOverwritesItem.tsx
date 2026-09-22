@@ -1,17 +1,17 @@
-// === Module 9839: ChannelOverwritesItem ===
+// === Module 9845: ChannelOverwritesItem ===
 
-// Module 9839 (ChannelOverwritesItem)
+// Module 9845 (ChannelOverwritesItem)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4474 */;
-import Text_Text from "Text/Text" /* 4752 */;
-import AlertModal from "AlertModal" /* 5114 */;
-import TableRow from "TableRow" /* 5822 */;
-import FormCheckbox from "FormCheckbox" /* 5834 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9823 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9840 */;
-import _modDef9841 from "module_9841" /* 9841 */;
-import _modDef9842 from "module_9842" /* 9842 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4475 */;
+import Text_Text from "Text/Text" /* 4753 */;
+import AlertModal from "AlertModal" /* 5115 */;
+import TableRow from "TableRow" /* 5824 */;
+import FormCheckbox from "FormCheckbox" /* 5836 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9829 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9846 */;
+import _modDef9847 from "module_9847" /* 9847 */;
+import _modDef9848 from "module_9848" /* 9848 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -55,8 +55,8 @@ function RemoveIcon(item) {
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_7(item(6858).CircleXIcon, obj2);
-    tmp3Result = closure_7(item(5339).PressableOpacity, obj);
+    obj.children = closure_7(item(6860).CircleXIcon, obj2);
+    tmp3Result = closure_7(item(5341).PressableOpacity, obj);
   }
   return tmp3Result;
 }
@@ -94,7 +94,7 @@ function MemberItem(arg0) {
   const items1 = [React5(Text_Text.Text, obj2), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9841, disableColor: true, style: tmp.ownerIcon };
+    const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9847, disableColor: true, style: tmp.ownerIcon };
     tmp4Result = React5(native.Icon, obj3);
   }
   items1[1] = tmp4Result;
@@ -127,7 +127,7 @@ function EmptyRoleItem(item) {
   item = item.item;
   const obj = { icon: null, label: null };
   const tmp = closure_9();
-  obj.icon = React5(native.Icon, { source: _modDef9842, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
+  obj.icon = React5(native.Icon, { source: _modDef9848, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon });
   obj.label = item.name;
   return React5(TableRow.TableRow, obj);
 }
@@ -173,10 +173,10 @@ class ChannelOverwritesItem {
   }
 }
 const View = fn(17).View;
-const RowType = fn(8672).RowType;
+const RowType = fn(8676).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_9 = createStyles.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_permissions/native/components/ChannelOverwritesItem.tsx");

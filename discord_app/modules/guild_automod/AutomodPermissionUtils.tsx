@@ -1,6 +1,6 @@
-// === Module 4401: AutomodPermissionUtils ===
+// === Module 4402: AutomodPermissionUtils ===
 
-// Module 4401 (AutomodPermissionUtils)
+// Module 4402 (AutomodPermissionUtils)
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
 
 const require = globalThis.__r;

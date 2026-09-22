@@ -1,8 +1,8 @@
-// === Module 18321: openSafetyFlow ===
+// === Module 18334: openSafetyFlow ===
 
-// Module 18321 (openSafetyFlow)
+// Module 18334 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 2035 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2036 */;
 
 const require = fn;
 let closure_6 = async function _openSafetyFlow() {
@@ -42,7 +42,7 @@ let closure_6 = async function _openSafetyFlow() {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else {
         if (1 === tmp7) {

@@ -1,6 +1,6 @@
-// === Module 12695: MessageRequestRestrictionExperiment ===
+// === Module 12699: MessageRequestRestrictionExperiment ===
 
-// Module 12695 (MessageRequestRestrictionExperiment)
+// Module 12699 (MessageRequestRestrictionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 

@@ -2,7 +2,7 @@
 
 // Module 4388 (CreatorMonetizationRestrictionsUtils)
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4389 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 
 const FetchState = fn(4389).FetchState;
 const constants = fn(4390).CreatorMonetizationRestrictions;

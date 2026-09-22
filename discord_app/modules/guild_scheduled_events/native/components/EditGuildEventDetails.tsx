@@ -1,22 +1,22 @@
-// === Module 9864: EditGuildEventDetails ===
+// === Module 9870: EditGuildEventDetails ===
 
-// Module 9864 (EditGuildEventDetails)
+// Module 9870 (EditGuildEventDetails)
 import util from "util" /* 1115 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1875 */;
 import _modDef4348 from "module_4348" /* 4348 */;
-import ScheduleUtils from "ScheduleUtils" /* 9753 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9789 */;
+import ScheduleUtils from "ScheduleUtils" /* 9759 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9795 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(7768).isGuildScheduledEventActive;
-let constants = fn(2047).GuildScheduledEventEntityTypes;
+let closure_6 = fn(7771).isGuildScheduledEventActive;
+let constants = fn(2048).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_11 = createStyles.createStyles({ error: { paddingVertical: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");

@@ -1,22 +1,36 @@
-// === Module 11004: GiftingBadgesUtils ===
+// === Module 11010: GiftingBadgesUtils ===
 
-// Module 11004 (GiftingBadgesUtils)
+// Module 11010 (GiftingBadgesUtils)
 import initialize from "initialize" /* 504 */;
-import dismissible_content from "dismissible_content" /* 2027 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4576 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8461 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 11000 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 11005 */;
-import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 11006 */;
+import util from "util" /* 1115 */;
+import dismissible_content from "dismissible_content" /* 2028 */;
+import _modDef2578 from "module_2578" /* 2578 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4577 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8465 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 11006 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 11011 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 11012 */;
 import UserStore from "UserStore" /* 1372 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = BadgeDirectoryStore.getSingleRequirementThreshold;
+let closure_3 = BadgeDirectoryStore.getSingleRequirementThreshold;
 let result = size.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
+export const getGiftingBadgeAccessibilityLabel = function getGiftingBadgeAccessibilityLabel(name) {
+  let str;
+  const count = closure_3(name);
+  if (name != null) {
+    str = name.name;
+  }
+  if (str == null) {
+    str = "";
+  }
+  const intl = util.intl;
+  return "" + str + ", " + intl.formatToPlainString(_modDef2578.qvx9E4, { count });
+};
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
-  const tmp = closure_2(currentTier);
-  const tmp2 = closure_2(nextTier);
+  const tmp = closure_3(currentTier);
+  const tmp2 = closure_3(nextTier);
   if (null != nextTier) {
     let num6 = 100;
     if (tmp2 > 0) {

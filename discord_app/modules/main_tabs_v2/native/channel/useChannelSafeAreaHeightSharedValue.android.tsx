@@ -1,6 +1,6 @@
-// === Module 11615: useChannelSafeAreaHeightSharedValue ===
+// === Module 11619: useChannelSafeAreaHeightSharedValue ===
 
-// Module 11615 (useChannelSafeAreaHeightSharedValue)
+// Module 11619 (useChannelSafeAreaHeightSharedValue)
 import KeyboardTypes from "KeyboardTypes" /* 1610 */;
 import size from "module_2" /* 2 */;
 

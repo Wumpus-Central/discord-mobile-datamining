@@ -1,6 +1,6 @@
-// === Module 13372: ContentInventoryHttpApi ===
+// === Module 13377: ContentInventoryHttpApi ===
 
-// Module 13372 (ContentInventoryHttpApi)
+// Module 13377 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -42,7 +42,7 @@ let closure_6 = async function _getMyContentInventory(arg0) {
           closure_129_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -307,7 +307,7 @@ let closure_9 = async function _postTrackToContentInventory() {
     }
   })();
 };
-const ContentInventoryFeedKey = fn(8629).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8633).ContentInventoryFeedKey;
 const Endpoints = fn(1074).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");

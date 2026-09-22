@@ -1,12 +1,12 @@
-// === Module 4653: BoostingActionCreators ===
+// === Module 4654: BoostingActionCreators ===
 
-// Module 4653 (BoostingActionCreators)
+// Module 4654 (BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 4654 */;
-import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 4655 */;
-import SubscriptionStore from "SubscriptionStore" /* 4420 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 4655 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 4656 */;
+import SubscriptionStore from "SubscriptionStore" /* 4421 */;
 
 require = fn;
 let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
@@ -50,7 +50,7 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
           closure_130_2 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -131,7 +131,7 @@ let closure_9 = async function _fetchAppliedGuildBoostsForUser() {
           closure_129_1 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -311,7 +311,7 @@ let closure_13 = async function _applyToGuild(arg0) {
           closure_131_5 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

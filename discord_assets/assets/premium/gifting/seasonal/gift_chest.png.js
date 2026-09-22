@@ -1,6 +1,6 @@
-// === Module 11293: ? ===
+// === Module 11299: ? ===
 
-// Module 11293
+// Module 11299
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/gifting/seasonal/gift_chest.png.js");

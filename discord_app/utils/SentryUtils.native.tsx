@@ -210,7 +210,7 @@ export default {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: 8.5 };
+                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: 8 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {

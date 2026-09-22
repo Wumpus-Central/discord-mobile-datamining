@@ -1,11 +1,11 @@
-// === Module 9532: ApplicationInstallUtils ===
+// === Module 9538: ApplicationInstallUtils ===
 
-// Module 9532 (ApplicationInstallUtils)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9318 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9404 */;
+// Module 9538 (ApplicationInstallUtils)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9324 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9410 */;
 
 require = fn;
-const BuiltInSectionId = fn(5210).BuiltInSectionId;
+const BuiltInSectionId = fn(5211).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 

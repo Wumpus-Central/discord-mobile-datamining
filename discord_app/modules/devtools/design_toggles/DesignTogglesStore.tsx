@@ -1,6 +1,6 @@
-// === Module 5844: DesignTogglesStore ===
+// === Module 5846: DesignTogglesStore ===
 
-// Module 5844 (DesignTogglesStore)
+// Module 5846 (DesignTogglesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

@@ -1,12 +1,12 @@
-// === Module 7400: Sheet/BottomSheetBackdrop ===
+// === Module 7402: Sheet/BottomSheetBackdrop ===
 
-// Module 7400 (Sheet/BottomSheetBackdrop)
-import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+// Module 7402 (Sheet/BottomSheetBackdrop)
+import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_4 = createStyles.createStyles({ container: { flex: 1 } });
 let closure_5 = { code: "function BottomSheetBackdropNativeTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
 let closure_6 = { code: "function BottomSheetBackdropNativeTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity}=this.__closure;return{opacity:interpolate(animatedIndex.get(),[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity])};}" };

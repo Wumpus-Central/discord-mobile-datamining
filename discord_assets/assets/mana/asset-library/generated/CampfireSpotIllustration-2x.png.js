@@ -1,6 +1,6 @@
-// === Module 6065: ? ===
+// === Module 6067: ? ===
 
-// Module 6065
+// Module 6067
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/CampfireSpotIllustration-2x.png.js");

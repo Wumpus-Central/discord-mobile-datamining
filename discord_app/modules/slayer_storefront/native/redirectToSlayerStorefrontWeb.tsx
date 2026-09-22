@@ -1,6 +1,6 @@
-// === Module 11065: redirectToSlayerStorefrontWeb ===
+// === Module 11071: redirectToSlayerStorefrontWeb ===
 
-// Module 11065 (redirectToSlayerStorefrontWeb)
+// Module 11071 (redirectToSlayerStorefrontWeb)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -39,7 +39,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "PX_16", done: true };
+          return { value: "flex", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

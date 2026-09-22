@@ -1,10 +1,10 @@
-// === Module 17056: VibegrationsFloatingActivity ===
+// === Module 17068: VibegrationsFloatingActivity ===
 
-// Module 17056 (VibegrationsFloatingActivity)
+// Module 17068 (VibegrationsFloatingActivity)
 import nativeDefault from "native" /* 576 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4492 */;
-import timing from "timing" /* 4757 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4493 */;
+import timing from "timing" /* 4758 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
 const rect = { position: "absolute", left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.root = rect;
@@ -35,13 +35,13 @@ export default function VibegrationsFloatingActivity(arg0) {
   importDefault = undefined;
   ({ onJumpToActivity, bottom, agents } = arg0);
   const tmp = closure_8();
-  sharedValue = sharedValue(4492).useSharedValue(0);
+  sharedValue = sharedValue(4493).useSharedValue(0);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(timing.withTiming(1, { duration: 150 }));
     return () => sharedValue(dependencyMap[6]).cancelAnimation(closure_1_0);
   }, items);
-  const obj = sharedValue(4492);
+  const obj = sharedValue(4493);
   class S {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -51,8 +51,8 @@ export default function VibegrationsFloatingActivity(arg0) {
   S.__closure = { opacity: sharedValue };
   S.__workletHash = 13383549561987;
   S.__initData = __initData;
-  const animatedStyle = sharedValue(4492).useAnimatedStyle(S);
-  const obj2 = sharedValue(4492);
+  const animatedStyle = sharedValue(4493).useAnimatedStyle(S);
+  const obj2 = sharedValue(4493);
   [tmp8, c1] = noop.useState(false);
   const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
   const obj3 = { style: null, pointerEvents: "box-none", children: null };
@@ -64,7 +64,7 @@ export default function VibegrationsFloatingActivity(arg0) {
     if (null != todos) {
       const obj4 = { style: tmp.panel, children: null };
       const obj5 = { todos, agents, announceProgress: false };
-      obj4.children = closure_6(tmp11(17040), obj5);
+      obj4.children = closure_6(tmp11(17052), obj5);
       tmp12 = closure_6(View, obj4);
     }
   }
@@ -75,11 +75,11 @@ export default function VibegrationsFloatingActivity(arg0) {
   obj7.accessibilityLabel = intl.formatToPlainString(_modDef3678.Sk4CzQ, { activity: line });
   obj7.onPress = onJumpToActivity;
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const items3 = [closure_6(sharedValue(10408).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
+  const items3 = [closure_6(sharedValue(10414).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
   const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
-  items3[1] = closure_6(View, { style: tmp.label, children: closure_6(sharedValue(4752).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
+  items3[1] = closure_6(View, { style: tmp.label, children: closure_6(sharedValue(4753).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
   obj7.children = items3;
-  const items4 = [closure_7(sharedValue(5339).PressableOpacity, obj7), ];
+  const items4 = [closure_7(sharedValue(5341).PressableOpacity, obj7), ];
   if (null == todos) {
     items4[1] = null;
     obj6.children = items4;
@@ -95,9 +95,9 @@ export default function VibegrationsFloatingActivity(arg0) {
     obj10.onPress = callback;
     let colors = tmp11(576).colors;
     const obj12 = { size: "xs", color: tmp8 ? colors.TEXT_BRAND : colors.TEXT_MUTED };
-    colors = closure_6(tmp2(5755).ClipboardListIcon, obj12);
+    colors = closure_6(tmp2(5757).ClipboardListIcon, obj12);
     obj10.children = colors;
-    closure_6(tmp2(5339).PressableOpacity, obj10);
+    closure_6(tmp2(5341).PressableOpacity, obj10);
   }
-  const obj9 = { style: tmp.label, children: closure_6(sharedValue(4752).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) };
+  const obj9 = { style: tmp.label, children: closure_6(sharedValue(4753).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) };
 };

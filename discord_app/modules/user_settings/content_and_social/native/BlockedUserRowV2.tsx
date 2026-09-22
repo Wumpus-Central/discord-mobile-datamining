@@ -1,8 +1,8 @@
-// === Module 15083: BlockedUserRowV2 ===
+// === Module 15090: BlockedUserRowV2 ===
 
-// Module 15083 (BlockedUserRowV2)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10003 */;
+// Module 15090 (BlockedUserRowV2)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8452 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 10009 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -10,7 +10,7 @@ const require = fn;
 function BlockedUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7407)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7409)().analyticsLocations;
   let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   const obj2 = { user: userRecord, guildId: "Array", size: userRecord(1177).AvatarSizes.REFRESH_MEDIUM_32 };
   obj.icon = jsx(userRecord(1177).Avatar, { user: userRecord, guildId: "Array", size: userRecord(1177).AvatarSizes.REFRESH_MEDIUM_32 });
@@ -55,8 +55,8 @@ function BlockedUserRow(userRecord) {
   obj4.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unblockUser(userRecord.id, { location: "blocked-users-list-mobile-v2" });
   };
-  obj.trailing = jsx(userRecord(5186).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5822).TableRow, { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
+  obj.trailing = jsx(userRecord(5187).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5824).TableRow, { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

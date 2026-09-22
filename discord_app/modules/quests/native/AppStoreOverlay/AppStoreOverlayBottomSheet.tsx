@@ -1,17 +1,17 @@
-// === Module 11756: AppStoreOverlayBottomSheet ===
+// === Module 11760: AppStoreOverlayBottomSheet ===
 
-// Module 11756 (AppStoreOverlayBottomSheet)
-import openURLDefault from "openURL" /* 4445 */;
-import AnalyticsActions from "AnalyticsActions" /* 7954 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11753 */;
-import AppStoreOverlayBody from "AppStoreOverlayBody" /* 11757 */;
+// Module 11760 (AppStoreOverlayBottomSheet)
+import openURLDefault from "openURL" /* 4446 */;
+import AnalyticsActions from "AnalyticsActions" /* 7957 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11757 */;
+import AppStoreOverlayBody from "AppStoreOverlayBody" /* 11761 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_7 = createStyles.createStyles({ headerBar: { zIndex: 1 }, bodyContainer: { flex: 1, minHeight: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayBottomSheet.tsx");
@@ -23,6 +23,7 @@ export default function AppStoreOverlayBottomSheet(metadata) {
   const onInstallPress = metadata.onInstallPress;
   let first;
   let ref2;
+  ({ trackOverlayCarouselScroll, onOverlaySurfaceClick } = metadata);
   const tmp = ref2();
   const tmp2 = onInstallPress(first.useState(0), 2);
   first = tmp2[0];
@@ -72,7 +73,7 @@ export default function AppStoreOverlayBottomSheet(metadata) {
   const items5 = [closure_5(metadata(onDismiss[12]).ActionSheetHeaderBar, { variant: "overlay", style: tmp.headerBar, onPress: bottomSheetClose }), ];
   const obj2 = metadata(onDismiss[6]);
   const obj4 = { variant: "overlay", style: tmp.headerBar, onPress: bottomSheetClose };
-  items5[1] = closure_5(metadata(onDismiss[13]).BottomSheetScrollView, { style: tmp.bodyContainer, contentContainerStyle: memo, children: closure_5(metadata(onDismiss[10]).AppStoreOverlayBody, { metadata, onOpenReviews: callback2, onMediaGetGamePress: callback1 }) });
+  items5[1] = closure_5(metadata(onDismiss[13]).BottomSheetScrollView, { style: tmp.bodyContainer, contentContainerStyle: memo, children: closure_5(metadata(onDismiss[10]).AppStoreOverlayBody, { metadata, onOpenReviews: callback2, onMediaGetGamePress: callback1, onCarouselScroll: trackOverlayCarouselScroll, onOverlaySurfaceClick }) });
   obj3.children = items5;
   return ref(metadata(onDismiss[11]).BottomSheet, obj3);
 };

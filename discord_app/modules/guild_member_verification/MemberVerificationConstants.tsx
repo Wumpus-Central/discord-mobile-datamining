@@ -1,7 +1,7 @@
-// === Module 5270: MemberVerificationConstants ===
+// === Module 5272: MemberVerificationConstants ===
 
-// Module 5270 (MemberVerificationConstants)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4580 */;
+// Module 5272 (MemberVerificationConstants)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4581 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION }];

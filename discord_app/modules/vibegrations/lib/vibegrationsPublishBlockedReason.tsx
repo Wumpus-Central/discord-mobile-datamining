@@ -1,6 +1,6 @@
-// === Module 16986: vibegrationsPublishBlockedReason ===
+// === Module 16998: vibegrationsPublishBlockedReason ===
 
-// Module 16986 (vibegrationsPublishBlockedReason)
+// Module 16998 (vibegrationsPublishBlockedReason)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPublishBlockedReason.tsx");

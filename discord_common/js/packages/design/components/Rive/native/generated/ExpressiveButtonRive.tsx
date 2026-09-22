@@ -1,8 +1,8 @@
-// === Module 4558: ExpressiveButtonRive ===
+// === Module 4559: ExpressiveButtonRive ===
 
-// Module 4558 (ExpressiveButtonRive)
-import BaseRive from "BaseRive" /* 4486 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4541 */;
+// Module 4559 (ExpressiveButtonRive)
+import BaseRive from "BaseRive" /* 4487 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4542 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,11 +1,11 @@
-// === Module 7626: GuildBoostingMarketingOverview ===
+// === Module 7629: GuildBoostingMarketingOverview ===
 
-// Module 7626 (GuildBoostingMarketingOverview)
+// Module 7629 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7643 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7646 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
@@ -80,9 +80,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items3);
   const effect1 = obj4.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = guildId(7499).fetchPremiumSubscriptionPlans();
-      const obj = guildId(7499);
-      const paymentSources = guildId(5079).fetchPaymentSources();
+      const premiumSubscriptionPlans = guildId(7501).fetchPremiumSubscriptionPlans();
+      const obj = guildId(7501);
+      const paymentSources = guildId(5080).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

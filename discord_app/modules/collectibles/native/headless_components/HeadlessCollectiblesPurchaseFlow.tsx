@@ -1,16 +1,16 @@
-// === Module 13468: HeadlessCollectiblesPurchaseFlow ===
+// === Module 13476: HeadlessCollectiblesPurchaseFlow ===
 
-// Module 13468 (HeadlessCollectiblesPurchaseFlow)
+// Module 13476 (HeadlessCollectiblesPurchaseFlow)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4427 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4723 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8445 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9121 */;
-import ACOMExperiments from "ACOMExperiments" /* 9479 */;
-import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 11066 */;
-import NativePaymentContext from "NativePaymentContext" /* 11084 */;
-import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 11278 */;
-import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13469 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4428 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4724 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8449 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9126 */;
+import ACOMExperiments from "ACOMExperiments" /* 9485 */;
+import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 11072 */;
+import NativePaymentContext from "NativePaymentContext" /* 11090 */;
+import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 11284 */;
+import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13477 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ let result = size.fileFinishedImporting("modules/collectibles/native/headless_co
 
 export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   ({ product, analyticsLocations } = arg0);
-  ({ attempt, onBuy, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
+  ({ attempt, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
   const OTPACOMOrderExperiment = ACOMExperiments.OTPACOMOrderExperiment;
   const isPurchased = useProductPurchaseState.useProductPurchaseState(product).isPurchased;
   const tmp4 = useCollectiblesExternalGatewayFacetDefault(product);
@@ -65,7 +65,7 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   obj4.skuIds = items;
   obj2 = PlatformUtils;
   const obj5 = { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id };
-  obj4.children = jsx(HeadlessCollectiblesPurchaseRunner.HeadlessCollectiblesPurchaseRunner, { product, attempt, analyticsLocations, onBuy, onBuySettled, stageCollectibleChangeForEditProfile });
+  obj4.children = jsx(HeadlessCollectiblesPurchaseRunner.HeadlessCollectiblesPurchaseRunner, { product, attempt, analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile });
   obj3.children = jsx(NativeCheckoutStoreProviderDefault, {
     headless: true,
     paymentGateway: GOOGLE,

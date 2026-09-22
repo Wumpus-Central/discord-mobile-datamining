@@ -1,16 +1,16 @@
-// === Module 13750: usePremiumGroupFeaturesTableCardText ===
+// === Module 13758: usePremiumGroupFeaturesTableCardText ===
 
-// Module 13750 (usePremiumGroupFeaturesTableCardText)
+// Module 13758 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
 import user from "user" /* 1380 */;
 import _modDef3162 from "module_3162" /* 3162 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8308 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13751 */;
-import SubscriptionStore from "SubscriptionStore" /* 4420 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8312 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13759 */;
+import SubscriptionStore from "SubscriptionStore" /* 4421 */;
 
 require = fn;
-const PremiumGroupConstants = fn(4428);
+const PremiumGroupConstants = fn(4429);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");

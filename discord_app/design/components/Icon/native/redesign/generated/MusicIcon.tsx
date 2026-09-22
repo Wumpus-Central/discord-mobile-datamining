@@ -1,9 +1,9 @@
-// === Module 10167: MusicIcon ===
+// === Module 10173: MusicIcon ===
 
-// Module 10167 (MusicIcon)
+// Module 10173 (MusicIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod10168 from "module_10168" /* 10168 */;
+import BaseIconImage from "BaseIconImage" /* 4457 */;
+import _mod10174 from "module_10174" /* 10174 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const MusicIcon = function MusicIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10168, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10174, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

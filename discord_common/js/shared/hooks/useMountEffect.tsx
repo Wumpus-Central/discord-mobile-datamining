@@ -1,6 +1,6 @@
-// === Module 5204: hooks/useMountEffect ===
+// === Module 5205: hooks/useMountEffect ===
 
-// Module 5204 (hooks/useMountEffect)
+// Module 5205 (hooks/useMountEffect)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

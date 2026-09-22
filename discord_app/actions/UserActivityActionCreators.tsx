@@ -1,9 +1,9 @@
-// === Module 12005: UserActivityActionCreators ===
+// === Module 12009: UserActivityActionCreators ===
 
-// Module 12005 (UserActivityActionCreators)
+// Module 12009 (UserActivityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PresenceStore from "PresenceStore" /* 4796 */;
+import PresenceStore from "PresenceStore" /* 4797 */;
 
 const require = globalThis.__r;
 

@@ -1,6 +1,6 @@
-// === Module 17042: VibegrationsClarification ===
+// === Module 17054: VibegrationsClarification ===
 
-// Module 17042 (VibegrationsClarification)
+// Module 17054 (VibegrationsClarification)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsClarification.tsx");

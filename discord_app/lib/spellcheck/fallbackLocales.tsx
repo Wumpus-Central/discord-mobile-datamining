@@ -1,6 +1,6 @@
-// === Module 5778: fallbackLocales ===
+// === Module 5780: fallbackLocales ===
 
-// Module 5778 (fallbackLocales)
+// Module 5780 (fallbackLocales)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/spellcheck/fallbackLocales.tsx");

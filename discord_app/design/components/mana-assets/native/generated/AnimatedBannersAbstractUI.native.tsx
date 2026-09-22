@@ -1,9 +1,9 @@
-// === Module 5960: AnimatedBannersAbstractUI ===
+// === Module 5962: AnimatedBannersAbstractUI ===
 
-// Module 5960 (AnimatedBannersAbstractUI)
+// Module 5962 (AnimatedBannersAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5804 */;
-import _modDef5961 from "module_5961" /* 5961 */;
+import FastImageDefault from "FastImage" /* 5806 */;
+import _modDef5963 from "module_5963" /* 5963 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AnimatedBannersAbstractUI = function AnimatedBannersAbstractUI(widt
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef5961 };
+  const obj2 = { uri: _modDef5963 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

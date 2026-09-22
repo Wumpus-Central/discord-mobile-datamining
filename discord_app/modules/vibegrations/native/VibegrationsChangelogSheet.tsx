@@ -1,13 +1,13 @@
-// === Module 16956: VibegrationsChangelogSheet ===
+// === Module 16968: VibegrationsChangelogSheet ===
 
-// Module 16956 (VibegrationsChangelogSheet)
+// Module 16968 (VibegrationsChangelogSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1612 */;
 import _modDef3678 from "module_3678" /* 3678 */;
 import _modDef4348 from "module_4348" /* 4348 */;
-import DateUtils from "DateUtils" /* 4438 */;
-import Text_Text from "Text/Text" /* 4752 */;
+import DateUtils from "DateUtils" /* 4439 */;
+import Text_Text from "Text/Text" /* 4753 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { entries: { gap: nativeDefault.space.PX_12 }, entry: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.entry = { gap: nativeDefault.space.PX_4 };

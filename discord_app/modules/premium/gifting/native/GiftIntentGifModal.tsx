@@ -1,14 +1,14 @@
-// === Module 12070: GiftIntentGifModal ===
+// === Module 12074: GiftIntentGifModal ===
 
-// Module 12070 (GiftIntentGifModal)
+// Module 12074 (GiftIntentGifModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4959 */;
-import NavigatorHeader from "NavigatorHeader" /* 5841 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4960 */;
+import NavigatorHeader from "NavigatorHeader" /* 5843 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 
 const require = globalThis.__r;
 
@@ -57,7 +57,7 @@ let closure_13 = async function _sendGiftIntentGif(arg0) {
   await closure_130_1(closure_130_2[10]).sendMessage(id, closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_3.url), true, { location: closure_130_9.GIFTING });
   closure_1 = tmp2;
   ({ channel: closure_129_0, giftIntentType: closure_129_1, text: closure_129_2, gif: closure_129_3 } = closure_0);
-  return "PX_16";
+  return "flex";
 };
 function GiftIntentGifModalBody(channelId) {
   channelId = channelId.channelId;
@@ -170,10 +170,10 @@ function GiftIntentGifModalBody(channelId) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const MessageSendLocation = fn(4749).MessageSendLocation;
+const MessageSendLocation = fn(4750).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, messageContainer: null, pickerContainer: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.messageContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };

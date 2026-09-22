@@ -1,22 +1,22 @@
-// === Module 9750: useGuildScheduledEvents ===
+// === Module 9756: useGuildScheduledEvents ===
 
-// Module 9750 (useGuildScheduledEvents)
+// Module 9756 (useGuildScheduledEvents)
 import DurationsDefault from "Durations" /* 1091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
-import GuildStore from "GuildStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7768 */;
-import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9751 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
+import GuildStore from "GuildStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7771 */;
+import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9757 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let GuildScheduledEventStore = fn(7768);
+let GuildScheduledEventStore = fn(7771);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const GuildScheduledEventsConstants = fn(2047);
+const GuildScheduledEventsConstants = fn(2048);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
 const Constants = fn(1074);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = Constants);
@@ -326,11 +326,11 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
   }, items1);
   const items2 = [stateFromStores];
   return noop.useMemo(() => stateFromStores.filter((status) => {
-    const eventSchedule = id(9756).getEventSchedule(status);
+    const eventSchedule = id(9762).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = id(9756);
+    const obj = id(9762);
     let toISOStringResult1;
-    const obj2 = id(9753);
+    const obj2 = id(9759);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

@@ -1,10 +1,10 @@
-// === Module 5720: GuildStickersStore ===
+// === Module 5722: GuildStickersStore ===
 
-// Module 5720 (GuildStickersStore)
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4409 */;
-import StickersTypes from "StickersTypes" /* 5485 */;
+// Module 5722 (GuildStickersStore)
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4410 */;
+import StickersTypes from "StickersTypes" /* 5487 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 2063 */;
+import GuildStore from "GuildStore" /* 2064 */;
 
 require = fn;
 function parseServerGuildSticker(item10023) {
@@ -24,12 +24,12 @@ function parseServerGuildStickers(stickers) {
 }
 function deriveStickerMetadata(arg0, tags) {
   const items = [];
-  const obj = { type: items(5485).StickerMetadataTypes.STICKER_NAME, value: null };
+  const obj = { type: items(5487).StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = tags.name.trim();
   obj.value = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != tags.tags) {
-    const obj2 = { type: tmp(5485).StickerMetadataTypes.TAG, value: null };
+    const obj2 = { type: tmp(5487).StickerMetadataTypes.TAG, value: null };
     const trimmed1 = str.trim();
     obj2.value = trimmed1.toLocaleLowerCase();
     items.push(obj2);
@@ -42,13 +42,13 @@ function deriveStickerMetadata(arg0, tags) {
         tmp5 = "" !== toLocaleLowerCaseResult;
       }
       if (tmp5) {
-        const obj3 = { type: tmp(5485).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
+        const obj3 = { type: tmp(5487).StickerMetadataTypes.GUILD_NAME, value: toLocaleLowerCaseResult };
         items.push(obj3);
       }
     }
     const byName = UnicodeEmojisDefault.getByName(str);
     if (null != byName) {
-      const obj4 = { type: tmp(5485).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
+      const obj4 = { type: tmp(5487).StickerMetadataTypes.CORRELATED_EMOJI, value: byName.surrogates };
       items.push(obj4);
       byName.forEachDiversity((surrogates) => items.push({ type: StickersTypes.StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
     }
@@ -79,8 +79,8 @@ function syncStickers(id, stickers, setPartition) {
     }
   }
 }
-const TypeTag = fn(2057).TypeTag;
-const LibdiscoreStore = fn(2064).LibdiscoreStore;
+const TypeTag = fn(2058).TypeTag;
+const LibdiscoreStore = fn(2065).LibdiscoreStore;
 class GuildStickersStore extends LibdiscoreStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -126,7 +126,7 @@ prototype["stateWrapper"] = function stateWrapper() {
   return this.database;
 };
 GuildStickersStore.displayName = "GuildStickersStore";
-const LibdiscoreBatchStoreRefactorExperiment = fn(2067).LibdiscoreBatchStoreRefactorExperiment;
+const LibdiscoreBatchStoreRefactorExperiment = fn(2068).LibdiscoreBatchStoreRefactorExperiment;
 const guildStickersStore = new GuildStickersStore({
   LOGOUT(arg0, clear) {
     return clear.clear();

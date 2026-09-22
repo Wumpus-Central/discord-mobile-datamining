@@ -1,14 +1,14 @@
-// === Module 9050: useWishlistNUXActionSheet ===
+// === Module 9055: useWishlistNUXActionSheet ===
 
-// Module 9050 (useWishlistNUXActionSheet)
+// Module 9055 (useWishlistNUXActionSheet)
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7857 */;
+import UserProfileStore from "UserProfileStore" /* 7860 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(2038).ContentDismissActionType;
+const ContentDismissActionType = fn(2039).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
@@ -33,7 +33,7 @@ export default function useWishlistNUXActionSheet() {
   }
   let obj3 = require("initialize");
   if (stateFromStores1) {
-    stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(2027).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
+    stateFromStores1 = !tmpResult.useIsDismissibleContentDismissed_UNSAFE(tmp(2028).DismissibleContent.WISHLIST_MOBILE_NUX_ACTION_SHEET);
   }
   tmpResult = require("DismissibleContentUnsafeUtils");
   return {

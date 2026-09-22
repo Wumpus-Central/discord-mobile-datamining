@@ -1,14 +1,14 @@
-// === Module 14464: migration ===
+// === Module 14470: migration ===
 
-// Module 14464 (migration)
+// Module 14470 (migration)
 import nativeDefault from "native" /* 576 */;
 import _modDef1929 from "module_1929" /* 1929 */;
-import LinkingDefault from "Linking" /* 4451 */;
+import LinkingDefault from "Linking" /* 4452 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -46,6 +46,6 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4476).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1177).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4476).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(4477).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1177).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4477).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 };

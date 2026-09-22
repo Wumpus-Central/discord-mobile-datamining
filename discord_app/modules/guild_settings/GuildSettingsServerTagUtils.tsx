@@ -1,10 +1,10 @@
-// === Module 9858: GuildSettingsServerTagUtils ===
+// === Module 9864: GuildSettingsServerTagUtils ===
 
-// Module 9858 (GuildSettingsServerTagUtils)
-import GuildTagUtils from "GuildTagUtils" /* 8434 */;
-import MobileServerTagExperimentDefault from "MobileServerTagExperiment" /* 9859 */;
-import GuildStore from "GuildStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4395 */;
+// Module 9864 (GuildSettingsServerTagUtils)
+import GuildTagUtils from "GuildTagUtils" /* 8438 */;
+import MobileServerTagExperimentDefault from "MobileServerTagExperiment" /* 9865 */;
+import GuildStore from "GuildStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4396 */;
 
 require = fn;
 const Permissions = fn(1074).Permissions;

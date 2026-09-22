@@ -1,6 +1,6 @@
-// === Module 2021: DMSafetyConstants ===
+// === Module 2022: DMSafetyConstants ===
 
-// Module 2021 (DMSafetyConstants)
+// Module 2022 (DMSafetyConstants)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import size from "module_2" /* 2 */;
 

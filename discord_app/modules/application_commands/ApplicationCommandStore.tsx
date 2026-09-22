@@ -1,12 +1,12 @@
-// === Module 8022: ApplicationCommandStore ===
+// === Module 8025: ApplicationCommandStore ===
 
-// Module 8022 (ApplicationCommandStore)
+// Module 8025 (ApplicationCommandStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7763 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7766 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 7522 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 7524 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
 
 require = fn;
 function handleInit() {

@@ -1,13 +1,13 @@
-// === Module 12290: useAppLauncherOnboardingContent ===
+// === Module 12294: useAppLauncherOnboardingContent ===
 
-// Module 12290 (useAppLauncherOnboardingContent)
-import useCanShowAppLauncherOnboardingDefault from "useCanShowAppLauncherOnboarding" /* 12296 */;
+// Module 12294 (useAppLauncherOnboardingContent)
+import useCanShowAppLauncherOnboardingDefault from "useCanShowAppLauncherOnboarding" /* 12300 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9405 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9411 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 
 const require = fn;
-const constants = fn(2038).DismissibleContentGroupName;
+const constants = fn(2039).DismissibleContentGroupName;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx");
 
@@ -19,17 +19,17 @@ export default function useAppLauncherOnboardingContent(channelId) {
   obj.channel = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const tmp3 = useCanShowAppLauncherOnboardingDefault({ channelId });
   if (tmp3.canShowBotsBanner) {
-    items.push(tmp(2027).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+    items.push(tmp(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
   }
   if (tmp3.canShowAppsOrActivitiesBanner) {
     const push = items.push;
-    const DismissibleContent = tmp(2027).DismissibleContent;
+    const DismissibleContent = tmp(2028).DismissibleContent;
     if ((function useHasUsedActivities(channel) {
       channel = channel.channel;
-      let result = channelId(4576).useIsDismissibleContentDismissed_UNSAFE(channelId(2027).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
-      const obj = channelId(4576);
-      const result1 = channelId(4576).useIsDismissibleContentDismissed_UNSAFE(channelId(2027).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
-      const obj2 = channelId(4576);
+      let result = channelId(4577).useIsDismissibleContentDismissed_UNSAFE(channelId(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+      const obj = channelId(4577);
+      const result1 = channelId(4577).useIsDismissibleContentDismissed_UNSAFE(channelId(2028).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+      const obj2 = channelId(4577);
       const items = [ApplicationFrecencyStore];
       const stateFromStores = channelId(504).useStateFromStores(items, () => applicationFrecencyWithoutLoadingLatest.getApplicationFrecencyWithoutLoadingLatest());
       let guild_id;
@@ -42,7 +42,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
         result = result1;
       }
       obj4.fetchesShelf = !result;
-      const activityApplications = channelId(12291).useActivityApplications(obj4);
+      const activityApplications = channelId(12295).useActivityApplications(obj4);
       let flag = false;
       for (const item10042 of activityApplications) {
         if (null != stateFromStores.getEntry(item10042.id)) {
@@ -53,7 +53,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
         let obj5 = { hasUsedActivities: flag };
         return obj5;
       }
-      const tmpResult = channelId(12291);
+      const tmpResult = channelId(12295);
     })(obj).hasUsedActivities) {
       push(DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
     } else {
@@ -61,6 +61,6 @@ export default function useAppLauncherOnboardingContent(channelId) {
     }
   }
   let obj2 = channelId(504);
-  const tmp7 = _slicedToArray(channelId(7630).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
+  const tmp7 = _slicedToArray(channelId(7633).useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
   return { visibleContent: tmp7[0], markAsDismissed: tmp7[1] };
 };

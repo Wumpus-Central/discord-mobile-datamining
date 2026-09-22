@@ -1,23 +1,23 @@
-// === Module 18044: GuildSettingsRolesStore ===
+// === Module 18056: GuildSettingsRolesStore ===
 
-// Module 18044 (GuildSettingsRolesStore)
+// Module 18056 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import PlainRecord from "PlainRecord" /* 2056 */;
+import PlainRecord from "PlainRecord" /* 2057 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2100 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2102 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5215 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12670 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 18039 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 18045 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4401 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5216 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12674 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 18051 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 18057 */;
 import GuildRoleStore from "GuildRoleStore" /* 2099 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9856 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9862 */;
 import Constants from "Constants" /* 1074 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18046 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18058 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

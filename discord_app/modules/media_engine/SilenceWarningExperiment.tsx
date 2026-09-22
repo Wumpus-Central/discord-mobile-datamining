@@ -1,10 +1,10 @@
-// === Module 14343: SilenceWarningExperiment ===
+// === Module 14349: SilenceWarningExperiment ===
 
-// Module 14343 (SilenceWarningExperiment)
+// Module 14349 (SilenceWarningExperiment)
 import ApexExperiment from "ApexExperiment" /* 1434 */;
 import size from "module_2" /* 2 */;
 
-const obj = { resetSilenceWarningOnDeviceChange: false, resetSilenceWarningAfterNMinutes: "PX_16", enableHardwareSilenceWarning: true };
+const obj = { resetSilenceWarningOnDeviceChange: false, resetSilenceWarningAfterNMinutes: "flex", enableHardwareSilenceWarning: true };
 const obj2 = { name: "2026-02-silence-warning-aggression", kind: "user", defaultConfig: obj, variations: null };
 const obj3 = { 1: null, 2: null, 3: null };
 const obj4 = {};

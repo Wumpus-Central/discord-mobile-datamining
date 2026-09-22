@@ -1,12 +1,12 @@
-// === Module 4767: transitionToChannel ===
+// === Module 4768: transitionToChannel ===
 
-// Module 4767 (transitionToChannel)
+// Module 4768 (transitionToChannel)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1101 */;
-import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 4768 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4769 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4957 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 4769 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4770 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4958 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
@@ -86,15 +86,15 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
     }
   }
 };
-export const transitionToMessage = function transitionToMessage(channelId, id, arg2) {
+export const transitionToMessage = function transitionToMessage(channelId, messageId, arg2) {
   const channel = ChannelStore.getChannel(channelId);
   if (null != channel) {
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     const obj3 = { openChannel: true };
     const obj2 = router_utils;
     const merged = Object.assign(arg2);
-    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id), obj3);
-    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, id);
+    obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId), obj3);
+    const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
   }
 };
 export const transitionToStaticChannelRoute = function transitionToStaticChannelRoute(guildId, GUILD_HOME, arg2) {

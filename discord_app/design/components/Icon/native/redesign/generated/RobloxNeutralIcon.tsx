@@ -1,9 +1,9 @@
-// === Module 8969: RobloxNeutralIcon ===
+// === Module 8974: RobloxNeutralIcon ===
 
-// Module 8969 (RobloxNeutralIcon)
+// Module 8974 (RobloxNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4456 */;
-import _mod8970 from "module_8970" /* 8970 */;
+import BaseIconImage from "BaseIconImage" /* 4457 */;
+import _mod8975 from "module_8975" /* 8975 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const RobloxNeutralIcon = function RobloxNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8970, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8975, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

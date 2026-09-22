@@ -1,8 +1,8 @@
-// === Module 2008: getGameMediaRefURL ===
+// === Module 2009: getGameMediaRefURL ===
 
-// Module 2008 (getGameMediaRefURL)
+// Module 2009 (getGameMediaRefURL)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2013 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2014 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");

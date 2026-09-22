@@ -1,6 +1,6 @@
-// === Module 5333: ContentRatingESRBRating ===
+// === Module 5335: ContentRatingESRBRating ===
 
-// Module 5333 (ContentRatingESRBRating)
+// Module 5335 (ContentRatingESRBRating)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([1, 2, 3, 4, 5, 6]), IS_ADULT_ONLY: null };

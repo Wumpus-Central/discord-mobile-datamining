@@ -1,22 +1,22 @@
-// === Module 16989: VibegrationsSettingsSheet ===
+// === Module 17001: VibegrationsSettingsSheet ===
 
-// Module 16989 (VibegrationsSettingsSheet)
+// Module 17001 (VibegrationsSettingsSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4723 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5274 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11593 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4724 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5276 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11597 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 2096 */;
-import GuildStore from "GuildStore" /* 2063 */;
-import RelationshipStore from "RelationshipStore" /* 4405 */;
+import GuildChannelStore from "GuildChannelStore" /* 4394 */;
+import GuildStore from "GuildStore" /* 2064 */;
+import RelationshipStore from "RelationshipStore" /* 4406 */;
 import UserStore from "UserStore" /* 1372 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 13362 */;
-import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 13361 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9309 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 13367 */;
+import VibegrationsConnectionStore_mod from "VibegrationsConnectionStore" /* 13366 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 9314 */;
 
 require = fn;
 function VibegrationsChannelSettingRow(projectId) {
@@ -89,13 +89,13 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(13361);
+let VibegrationsConnectionStore = fn(13366);
 ({ requestProjectRebuild: closure_12, sendUserMessage: map1, submitProjectSettings: closure_14 } = VibegrationsConnectionStore);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const VibegrationsSettingsSheet = "VibegrationsSettingsSheet";
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let closure_21 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom }, section: null, secretRow: null, secretRowInfo: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingBottom };
@@ -618,9 +618,9 @@ export default function VibegrationsSettingsSheet(projectId) {
                   if (application_id == null) {
                     _null = null;
                   }
-                  _null2(13187)(_null);
+                  _null2(13191)(_null);
                   let prop;
-                  const tmp19 = _null2(13187);
+                  const tmp19 = _null2(13191);
                   if (project2 != null) {
                     prop = project2.preview_application_id;
                   }
@@ -628,13 +628,13 @@ export default function VibegrationsSettingsSheet(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(13187)(_null2);
-                  const tmp27 = _null2(13187);
+                  _null2(13191)(_null2);
+                  const tmp27 = _null2(13191);
                 }
               }
-              _null2(4723).hideActionSheet(closure_1_20);
+              _null2(4724).hideActionSheet(closure_1_20);
               c5 = 1;
-              const obj = _null2(4723);
+              const obj = _null2(4724);
             }
             const intl = _null(1115).intl;
             closure_1_13(closure_131_0, intl.string(_null2(3678).gqJFu0));

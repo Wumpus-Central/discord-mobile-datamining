@@ -1,13 +1,13 @@
-// === Module 16944: VibegrationsEffortPicker ===
+// === Module 16956: VibegrationsEffortPicker ===
 
-// Module 16944 (VibegrationsEffortPicker)
+// Module 16956 (VibegrationsEffortPicker)
 import util from "util" /* 1115 */;
 import _modDef3678 from "module_3678" /* 3678 */;
-import TableRadioRow from "TableRadioRow" /* 5905 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7394 */;
-import ActionSheet from "ActionSheet" /* 7442 */;
-import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16940 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16941 */;
+import TableRadioRow from "TableRadioRow" /* 5907 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7396 */;
+import ActionSheet from "ActionSheet" /* 7444 */;
+import VibegrationsEffortPresets from "VibegrationsEffortPresets" /* 16952 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16953 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

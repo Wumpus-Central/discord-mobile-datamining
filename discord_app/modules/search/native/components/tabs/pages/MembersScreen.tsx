@@ -1,22 +1,22 @@
-// === Module 17159: MembersScreen ===
+// === Module 17171: MembersScreen ===
 
-// Module 17159 (MembersScreen)
+// Module 17171 (MembersScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1875 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4467 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11843 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12612 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4401 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4468 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8452 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11847 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12616 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import GuildStore from "GuildStore" /* 2063 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
+import GuildStore from "GuildStore" /* 2064 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
 import UserStore from "UserStore" /* 1372 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 12618 */;
-import SearchQueryStore from "SearchQueryStore" /* 12593 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12622 */;
+import SearchQueryStore from "SearchQueryStore" /* 12597 */;
 
 require = fn;
 function SearchableMembersScreen(searchContext) {
@@ -29,10 +29,10 @@ function SearchableMembersScreen(searchContext) {
   let callback;
   let stateFromStores5;
   let stateFromStores6;
-  const analyticsLocations = guildId(7407)().analyticsLocations;
+  const analyticsLocations = guildId(7409)().analyticsLocations;
   const tmp = closure_21();
-  dependencyMap = searchContext(12594).getSearchContextId(searchContext);
-  let obj = searchContext(12594);
+  dependencyMap = searchContext(12598).getSearchContextId(searchContext);
+  let obj = searchContext(12598);
   let items = [SearchMemberTabStore];
   const stateFromStores = searchContext(563).useStateFromStores(items, () => SearchMemberTabStore.getResults(closure_3));
   closure_129_0 = searchContext;
@@ -53,9 +53,9 @@ function SearchableMembersScreen(searchContext) {
   const items3 = [stateFromStores5];
   stateFromStores2 = searchContext(563).useStateFromStores(items3, () => stateFromStores5.getChannelId());
   const tmp4Result = searchContext(563);
-  fullscreenPlaceholderCount = searchContext(17116).useFullscreenPlaceholderCount({ placeholderHeight, numColumns: 1 });
+  fullscreenPlaceholderCount = searchContext(17128).useFullscreenPlaceholderCount({ placeholderHeight, numColumns: 1 });
   let obj4 = { placeholderHeight, numColumns: 1 };
-  const tmp4Result8 = searchContext(17116);
+  const tmp4Result8 = searchContext(17128);
   const items4 = [callback];
   stateFromStores3 = searchContext(563).useStateFromStores(items4, () => {
     const guild = GuildStore.getGuild(guildId);
@@ -187,21 +187,21 @@ function SearchableMembersScreen(searchContext) {
     return items;
   }, items13);
   const tmp4Result12 = searchContext(563);
-  const contentContainerStyles = searchContext(17160).useContentContainerStyles();
-  const tmp4Result13 = searchContext(17160);
-  const messageTabCountsErrorText = searchContext(17158).useMessageTabCountsErrorText({ searchContext });
+  const contentContainerStyles = searchContext(17172).useContentContainerStyles();
+  const tmp4Result13 = searchContext(17172);
+  const messageTabCountsErrorText = searchContext(17170).useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
     const obj5 = { text: messageTabCountsErrorText };
-    let tmp25 = jsx(tmp2(17108), { text: messageTabCountsErrorText });
+    let tmp25 = jsx(tmp2(17120), { text: messageTabCountsErrorText });
   } else {
     if (stateFromStores5) {
       if (null != stateFromStores4) {
         const obj6 = { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true };
-        tmp25 = jsx(tmp2(11839), { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true });
+        tmp25 = jsx(tmp2(11843), { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true });
       }
     }
     const obj7 = { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo };
-    tmp25 = jsx(tmp2(17120), { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo });
+    tmp25 = jsx(tmp2(17132), { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo });
   }
   return tmp25;
 }
@@ -228,8 +228,8 @@ function ThreadMembersScreen(searchContext) {
   if (!stateFromStores) {
     if (obj2.useStateFromStores(items1, () => SearchQueryStore.isInitialSearchQuery(searchContext) && !SearchQueryStore.isTagsEmpty(searchContext), items2)) {
       const obj3 = { channelId, guildId, onUserPress: tmp(1875).dismissGlobalKeyboard, disableStickySections: true };
-      let tmp7 = jsx(channelId(17161), { channelId, guildId, onUserPress: tmp(1875).dismissGlobalKeyboard, disableStickySections: true });
-      const tmp6 = channelId(17161);
+      let tmp7 = jsx(channelId(17173), { channelId, guildId, onUserPress: tmp(1875).dismissGlobalKeyboard, disableStickySections: true });
+      const tmp6 = channelId(17173);
     }
     return tmp7;
   }
@@ -237,14 +237,14 @@ function ThreadMembersScreen(searchContext) {
   obj2 = searchContext(563);
 }
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(7521).EVERYONE_CHANNEL_ID;
-const SearchConstants = fn(8122);
+const EVERYONE_CHANNEL_ID = fn(7523).EVERYONE_CHANNEL_ID;
+const SearchConstants = fn(8125);
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_14, SearchListItemTypes: closure_15 } = SearchConstants);
-let closure_16 = fn(8121).SearchResultContentEntityTypes;
+let closure_16 = fn(8124).SearchResultContentEntityTypes;
 const Constants = fn(1074);
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_17, RelationshipTypes: closure_18, SearchTypes: closure_19 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj = { container: { flex: 1, flexGrow: 1 }, userList: { backgroundColor: "transparent" }, promoBanner: { paddingTop: nativeDefault.space.PX_24, paddingBottom: 0, paddingHorizontal: 0 } };
 let closure_21 = createStyles.createStyles(obj);
 let obj3 = { paddingTop: nativeDefault.space.PX_24, paddingBottom: 0, paddingHorizontal: 0 };
@@ -255,12 +255,12 @@ export default noop.memo(function MembersScreen(searchContext) {
   searchContext = searchContext.searchContext;
   let stateFromStores;
   let tmp = closure_21();
-  const analyticsLocations = stateFromStores(7407)(stateFromStores(7427).SEARCH_MEMBERS).analyticsLocations;
+  const analyticsLocations = stateFromStores(7409)(stateFromStores(7429).SEARCH_MEMBERS).analyticsLocations;
   let channelId;
   if (searchContext.type === constants3.CHANNEL) {
     channelId = searchContext.channelId;
   }
-  const tmp4 = stateFromStores(7407);
+  const tmp4 = stateFromStores(7409);
   const items = [ChannelStore];
   const items1 = [channelId];
   stateFromStores = channelId(563).useStateFromStores(items, () => {
@@ -310,12 +310,12 @@ export default noop.memo(function MembersScreen(searchContext) {
     let tmp21Result = null;
     if (stateFromStores) {
       const obj7 = { location: "GroupDMDetailsMembers", memberCount: stateFromStores1, recipientLimit: tmp11, wrapperStyle: tmp.promoBanner };
-      tmp21Result = jsx(tmp2(17163), { location: "GroupDMDetailsMembers", memberCount: stateFromStores1, recipientLimit: tmp11, wrapperStyle: tmp.promoBanner });
+      tmp21Result = jsx(tmp2(17175), { location: "GroupDMDetailsMembers", memberCount: stateFromStores1, recipientLimit: tmp11, wrapperStyle: tmp.promoBanner });
     }
     obj6.listHeaderContent = tmp21Result;
-    obj4.children = jsx(tmp2(12439), { channelId: searchContext.channelId, disableStickySections: true, listStyleOverride: tmp.userList, onUserPress: tmp7(1875).dismissGlobalKeyboard, listHeaderContent: null });
+    obj4.children = jsx(tmp2(12443), { channelId: searchContext.channelId, disableStickySections: true, listStyleOverride: tmp.userList, onUserPress: tmp7(1875).dismissGlobalKeyboard, listHeaderContent: null });
     obj3.children = <View style={tmp.container}>{null}</View>;
-    return jsx(tmp7(7407).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
+    return jsx(tmp7(7409).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   } else if (constants3.THREAD === type) {
     const obj8 = { searchContext, channelId: null, guildId: null };
     ({ channelId: obj5.channelId, guildId: obj5.guildId } = searchContext);
@@ -332,7 +332,7 @@ export default noop.memo(function MembersScreen(searchContext) {
     const obj9 = { value: analyticsLocations, children: null };
     const obj16 = { searchContext, guildId: searchContext.guildId };
     obj9.children = <SearchableMembersScreen searchContext={searchContext} guildId={searchContext.guildId} />;
-    return jsx(tmp7(7407).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
+    return jsx(tmp7(7409).AnalyticsLocationProvider, { value: analyticsLocations, children: null });
   }
   const obj2 = channelId(563);
 });

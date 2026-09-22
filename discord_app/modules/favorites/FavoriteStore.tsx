@@ -1,6 +1,6 @@
-// === Module 2044: FavoriteStore ===
+// === Module 2045: FavoriteStore ===
 
-// Module 2044 (FavoriteStore)
+// Module 2045 (FavoriteStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -94,8 +94,8 @@ function initializeFromUserSettings() {
   }
   return flag3;
 }
-const createChannelRecord = fn(2045).createChannelRecord;
-let closure_5 = fn(2054).FAVORITES_UNCATEGORIZED_PARENT_ID;
+const createChannelRecord = fn(2046).createChannelRecord;
+let closure_5 = fn(2055).FAVORITES_UNCATEGORIZED_PARENT_ID;
 const Constants = fn(1074);
 ({ ChannelTypes: metroRequire, FAVORITES: closure_7 } = Constants);
 let closure_12 = false;

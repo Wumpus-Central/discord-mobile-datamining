@@ -1,7 +1,7 @@
-// === Module 11387: removeCustomStatus ===
+// === Module 11391: removeCustomStatus ===
 
-// Module 11387 (removeCustomStatus)
-import setCustomStatusDefault from "setCustomStatus" /* 11385 */;
+// Module 11391 (removeCustomStatus)
+import setCustomStatusDefault from "setCustomStatus" /* 11389 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/custom_status/utils/removeCustomStatus.tsx");

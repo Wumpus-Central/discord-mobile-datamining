@@ -1,28 +1,28 @@
-// === Module 11839: GuildChannelUserList ===
+// === Module 11843: GuildChannelUserList ===
 
-// Module 11839 (GuildChannelUserList)
+// Module 11843 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1115 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4400 */;
-import UserUtilsDefault from "UserUtils" /* 4600 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4908 */;
-import GuildUtilsDefault from "GuildUtils" /* 5736 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8448 */;
-import sortByMatchScore from "sortByMatchScore" /* 10091 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4401 */;
+import UserUtilsDefault from "UserUtils" /* 4601 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4909 */;
+import GuildUtilsDefault from "GuildUtils" /* 5738 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8452 */;
+import sortByMatchScore from "sortByMatchScore" /* 10097 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 7521 */;
-import ChannelStore from "ChannelStore" /* 2041 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 7523 */;
+import ChannelStore from "ChannelStore" /* 2042 */;
 import GuildMemberStore from "GuildMemberStore" /* 2105 */;
-import GuildStore from "GuildStore" /* 2063 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2095 */;
+import GuildStore from "GuildStore" /* 2064 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2096 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7521);
+let ChannelMemberStore = fn(7523);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1074);

@@ -1,14 +1,14 @@
-// === Module 14172: ShareAttachments ===
+// === Module 14179: ShareAttachments ===
 
-// Module 14172 (ShareAttachments)
+// Module 14179 (ShareAttachments)
 import nativeDefault from "native" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4605 */;
-import timing from "timing" /* 4757 */;
-import LinearGradientDefault from "LinearGradient" /* 5198 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5354 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10454 */;
+import ColorUtils from "ColorUtils" /* 4606 */;
+import timing from "timing" /* 4758 */;
+import LinearGradientDefault from "LinearGradient" /* 5199 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5356 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10460 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4492 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4493 */;
 
 const require = globalThis.__r;
 
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
 let GRADIENT_EASING_CONFIG = { duration: 300, easing: fn(1177).STANDARD_EASING };
-const createStyles = fn(4756);
+const createStyles = fn(4757);
 let obj2 = { containerRevamp: { marginHorizontal: -nativeDefault.space.PX_16 }, attachmentPreviewContentContainer: null, attachmentPreviewContentContainerRevamp: null, attachmentPreview: null, leftGradient: null, rightGradient: null, gradient: null };
 let obj4 = { marginHorizontal: -nativeDefault.space.PX_16 };
 obj2.attachmentPreviewContentContainer = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
